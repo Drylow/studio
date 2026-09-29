@@ -249,8 +249,16 @@ def _algrow_call(method, path, fields=None, timeout=60):
         raise TTSError(f"Algrow injoignable : {e}")
 
 
+_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
+
+
+def _open(url, timeout):
+    # le CDN d'Algrow (Cloudflare) refuse le client Python par défaut : on se présente en navigateur
+    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": _UA}), timeout=timeout)
+
+
 def _download(url, dest, timeout=180):
-    with urllib.request.urlopen(url, timeout=timeout) as r, open(dest, "wb") as f:
+    with _open(url, timeout) as r, open(dest, "wb") as f:
         while True:
             b = r.read(1 << 16)
             if not b:
@@ -288,11 +296,7 @@ def _srt_words(srt_text):
     return words
 
 
-def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=None, srt=True, max_wait=1800):
-    """Job Algrow : envoi → attente (polling) → MP3 + timings (SRT si ElevenLabs)."""
-    import time
-    if not voice:
-        raise TTSError("Choisis une voix Algrow (ID de voix).")
+def algrow_fields(text, voice, sub="elevenlabs", model="", speed=1.0, srt=True):
     fields = {"script": text, "voice_id": voice, "provider": sub, "custom_title": "voiceover"}
     if sub == "stealth":
         fields.update({"speaking_rate": f"{max(0.5, min(2.0, float(speed or 1))):.2f}", "temperature": "1.1",
@@ -302,10 +306,52 @@ def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=N
                        "similarity_boost": "0.75", "style": "0.0",
                        "speed": f"{max(0.7, min(1.2, float(speed or 1))):.2f}",
                        "generate_srt": "true" if srt else "false"})
-    job = _algrow_call("POST", "/api/generate-simple", fields)
-    jid = job.get("job_id")
+    return fields
+
+
+def algrow_key(fields):
+    import hashlib
+    return hashlib.sha1(json.dumps(fields, sort_keys=True).encode("utf-8")).hexdigest()
+
+
+ALGROW_CACHE = ".algrow_jobs.json"
+
+
+def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=None, srt=True, max_wait=1800,
+            cache_dir=None):
+    """Job Algrow : envoi → attente (polling) → MP3 + timings (SRT si ElevenLabs)."""
+    import time
+    if not voice:
+        raise TTSError("Choisis une voix Algrow (ID de voix).")
+    fields = algrow_fields(text, voice, sub, model, speed, srt)
+    # Anti double facturation : un job déjà lancé pour EXACTEMENT la même demande est réutilisé
+    # (ex. relance après une coupure réseau ou un plantage pendant le téléchargement).
+    cache = os.path.join(cache_dir or os.path.dirname(os.path.abspath(dest)), ALGROW_CACHE)
+    key = algrow_key(fields)
+    try:
+        with open(cache, "r", encoding="utf-8") as f:
+            known = json.load(f)
+    except (OSError, ValueError):
+        known = {}
+    jid = known.get(key)
+    if jid:
+        try:
+            old = _algrow_call("GET", f"/api/job-status/{jid}")
+            if old.get("status") == "failed":
+                jid = None
+        except TTSError:
+            jid = None
     if not jid:
-        raise TTSError("Algrow : pas de job_id (" + json.dumps(job)[:200] + ")")
+        job = _algrow_call("POST", "/api/generate-simple", fields)
+        jid = job.get("job_id")
+        if not jid:
+            raise TTSError("Algrow : pas de job_id (" + json.dumps(job)[:200] + ")")
+        known[key] = jid
+        try:
+            with open(cache, "w", encoding="utf-8") as f:
+                json.dump(known, f)
+        except OSError:
+            pass
     t0 = time.time()
     while True:
         time.sleep(3)
@@ -322,7 +368,7 @@ def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=N
     _download(st["audio_url"], dest)
     if st.get("transcript_url"):
         try:
-            with urllib.request.urlopen(st["transcript_url"], timeout=60) as r:
+            with _open(st["transcript_url"], 60) as r:
                 return _srt_words(r.read().decode("utf-8", "replace"))
         except Exception:  # noqa: BLE001 — sans SRT on estime puis on recale sur les silences
             return None
@@ -497,7 +543,7 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
                 words = _eleven(chunk, voice, part, model=model or "eleven_multilingual_v2", speed=speed)
             elif provider in ("algrow", "algrow_stealth"):
                 words = _algrow(chunk, voice, part, sub="stealth" if provider == "algrow_stealth" else "elevenlabs",
-                                model=model, speed=speed)
+                                model=model, speed=speed, cache_dir=os.path.dirname(os.path.abspath(dest)))
             else:
                 words = _openai(chunk, voice, part, speed=speed, instructions=instructions)
             dur = media.duration(part)
