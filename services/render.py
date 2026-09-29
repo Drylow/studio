@@ -30,29 +30,38 @@ Cancelled = media.Cancelled  # annulation (bouton Annuler) : tue ffmpeg immédia
 
 # ── Mouvements de caméra ────────────────────────────────────────────────────
 
-def _motion_expr(kind, n, strength):
+def _motion_filter(kind, n, strength):
+    """Mouvement de caméra au sous-pixel (filtre perspective, interpolation bicubique).
+
+    zoompan arrondit le cadrage au pixel entier : l'image reste figée quelques images puis
+    saute → l'écran « tremble ». Ici le cadrage est exact à chaque image : mouvement continu,
+    à vitesse constante (les fondus entre scènes adoucissent déjà les départs)."""
     s = max(0.02, min(0.35, float(strength)))
-    p = f"(on/{max(1, n - 1)})"
-    e = f"({p}*{p}*(3-2*{p}))"                    # ease in-out (smoothstep)
-    cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
-    full = f"{1 + s:.4f}"
+    p = f"(in/{max(1, n - 1)})"
     if kind == "zoom_out":
-        return f"1+{s}*(1-{e})", cx, cy
+        z = f"(1+{s}*(1-{p}))"
+    elif kind.startswith("pan_"):
+        z = f"{1 + s:.4f}"
+    else:
+        z = f"(1+{s}*{p})"
+    hw, hh = f"(W/2/{z})", f"(H/2/{z})"           # demi-taille du cadrage dans l'image source
+    mx, my = f"(W-W/{z})", f"(H-H/{z})"           # marge de déplacement
+    cx, cy = "(W/2)", "(H/2)"
     if kind == "pan_right":
-        return full, f"(iw-iw/zoom)*{e}", cy
-    if kind == "pan_left":
-        return full, f"(iw-iw/zoom)*(1-{e})", cy
-    if kind == "pan_down":
-        return full, cx, f"(ih-ih/zoom)*{e}"
-    if kind == "pan_up":
-        return full, cx, f"(ih-ih/zoom)*(1-{e})"
-    if kind == "zoom_in_tl":   # zoom vers le haut-gauche (tiers)
-        return f"1+{s}*{e}", f"(iw-iw/zoom)*0.33*{e}+({cx})*(1-{e})", f"(ih-ih/zoom)*0.33*{e}+({cy})*(1-{e})"
-    if kind == "zoom_in_br":
-        return f"1+{s}*{e}", f"(iw-iw/zoom)*0.67*{e}+({cx})*(1-{e})", f"(ih-ih/zoom)*0.67*{e}+({cy})*(1-{e})"
-    if kind == "none":
-        return "1", "0", "0"
-    return f"1+{s}*{e}", cx, cy                   # zoom_in (défaut)
+        cx = f"({hw}+{mx}*{p})"
+    elif kind == "pan_left":
+        cx = f"({hw}+{mx}*(1-{p}))"
+    elif kind == "pan_down":
+        cy = f"({hh}+{my}*{p})"
+    elif kind == "pan_up":
+        cy = f"({hh}+{my}*(1-{p}))"
+    elif kind == "zoom_in_tl":                    # glisse doucement vers le tiers haut-gauche
+        cx, cy = f"({hw}+{mx}*(0.5-0.17*{p}))", f"({hh}+{my}*(0.5-0.17*{p}))"
+    elif kind == "zoom_in_br":
+        cx, cy = f"({hw}+{mx}*(0.5+0.17*{p}))", f"({hh}+{my}*(0.5+0.17*{p}))"
+    l, r, t, b = f"{cx}-{hw}", f"{cx}+{hw}", f"{cy}-{hh}", f"{cy}+{hh}"
+    return (f"perspective=x0='{l}':y0='{t}':x1='{r}':y1='{t}':x2='{l}':y2='{b}':x3='{r}':y3='{b}'"
+            f":interpolation=cubic:eval=frame")
 
 
 def pick_motions(count, mode="auto", seed=0):
@@ -80,7 +89,7 @@ def _file_sig(path):
 
 def _clip_key(image, frames, w, h, fps, motion, strength, layout=None, t0=0.0, track=None):
     raw = json.dumps([_file_sig(image), frames, w, h, fps, motion, round(float(strength), 3),
-                      _layout_sig(layout, t0, track)])
+                      _layout_sig(layout, t0, track), "persp1"])
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -194,15 +203,12 @@ def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancel
     # « cover » : l'image est recadrée (jamais déformée) au format de la vidéo, 16:9 comme 9:16
     cover = "scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}"
     iw, ih = (layout["panel"][2], layout["panel"][3]) if layout else (w, h)
-    if motion == "none":  # image fixe : pas besoin de zoompan (bien plus rapide)
-        src = ["-loop", "1", "-framerate", str(fps), "-i", image]
-        scene = cover.format(W=iw, H=ih) + ",setsar=1"
+    src = ["-loop", "1", "-framerate", str(fps), "-i", image]
+    scene = cover.format(W=iw, H=ih) + ",setsar=1"
+    if motion == "none":  # image fixe
         tune = ["-tune", "stillimage"]
     else:
-        z, x, y = _motion_expr(motion, frames, strength)
-        src = ["-i", image]
-        scene = (cover.format(W=iw * 2, H=ih * 2) + ","
-                 f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={iw}x{ih}:fps={fps},setsar=1")
+        scene += "," + _motion_filter(motion, frames, strength)
         tune = []
     if not layout:
         media.run(src + ["-vf", scene + ",format=yuv420p", "-frames:v", str(frames), "-r", str(fps)] + _X264 +
