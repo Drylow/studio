@@ -545,17 +545,17 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
         vmap = f"[{vlabel}]" if (n > 1 or presenter) else "0:v"
     va, vm = n, n + 1  # index des entrées voix / musique
     fade_st = max(0.0, total - 1.5)
+    # normalisation sur la voix seule : sur le mixage, loudnorm remonterait la musique à chaque pause
+    vnorm = "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000," if normalize else ""
     if has_music:
-        graph.append(f"[{va}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad,asplit=2[vo][sc]")
-        graph.append(f"[{vm}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={float(music_volume):.3f}[mu]")
+        graph.append(f"[{va}:a]aformat=sample_rates=48000:channel_layouts=stereo,{vnorm}apad,asplit=2[vo][sc]")
+        graph.append(f"[{vm}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={float(music_volume):.3f},"
+                     f"afade=t=in:d=2[mu]")
         graph.append("[mu][sc]sidechaincompress=threshold=0.02:ratio=9:attack=20:release=450[duck]")
         graph.append("[vo][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[mix]")
     else:
-        graph.append(f"[{va}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad[mix]")
-    chain = "[mix]"
-    if normalize:
-        chain += "loudnorm=I=-14:TP=-1.5:LRA=11,"
-    chain += f"afade=t=out:st={fade_st:.2f}:d=1.5[a]"
+        graph.append(f"[{va}:a]aformat=sample_rates=48000:channel_layouts=stereo,{vnorm}apad[mix]")
+    chain = f"[mix]afade=t=out:st={fade_st:.2f}:d=1.5[a]"
     graph.append(chain)
     copy_video = n == 1 and not ass and not presenter
     if copy_video:

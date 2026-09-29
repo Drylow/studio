@@ -76,7 +76,8 @@ mot de passe boss.
    - Par scène : refaire, éditer le prompt, importer ta propre image, choisir le mouvement de caméra.
 6. **Export.**
    - **MP4 monté** : zoom/pan, fondus, sous-titres karaoké ou phrases, titres de section,
-     musique baissée automatiquement sous la voix, volume normalisé à -14 LUFS.
+     musique baissée automatiquement sous la voix, voix normalisée à -14 LUFS (la musique reste
+     constante, elle ne remonte pas pendant les pauses).
    - **Musique « auto »** : une piste de la bibliothèque par vidéo, très basse, baissée encore sous la
      voix. Si la bibliothèque est vide, 3 ambiances lofi 100 % originales sont générées (aucun
      risque de réclamation Content ID). Tu peux y ajouter des morceaux de la bibliothèque audio de

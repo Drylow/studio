@@ -57,10 +57,11 @@ def generate(key, dest, minutes=2.5):
                 for p, _ in segs:
                     f.write(f"file '{os.path.basename(p)}'\n")
         total = loops * cycle
-        # chaleur : passe-bas, écho doux (pseudo-réverb), souffle vinyle très discret, fondu
+        # chaleur : passe-bas, écho doux (pseudo-réverb), souffle vinyle très discret.
+        # Pas de fondu : le montage boucle la piste, elle doit s'enchaîner sans creux.
         graph = (f"[0:a]lowpass=f=2400,aecho=0.8:0.55:140|290:0.28|0.16,aformat=channel_layouts=stereo[m];"
                  f"[1:a]lowpass=f=1800,volume=0.012[n];[m][n]amix=inputs=2:duration=first:normalize=0,"
-                 f"afade=t=in:d=2,afade=t=out:st={max(0.0, total - 3):.2f}:d=3,loudnorm=I=-20:TP=-2[a]")
+                 f"loudnorm=I=-20:TP=-2[a]")
         media.run(["-f", "concat", "-safe", "0", "-i", "list.txt", "-f", "lavfi", "-i",
                    f"anoisesrc=color=brown:d={total:.2f}:a=0.5", "-filter_complex", graph, "-map", "[a]",
                    "-c:a", "libmp3lame", "-b:a", "160k", os.path.abspath(dest)], cwd=tmpdir)
