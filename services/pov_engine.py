@@ -69,7 +69,8 @@ STYLE_PRESETS = {
                   "simple outfits (green, blue, red, purple, yellow, black) with dark trousers, white mitten hands. "
                   "Detailed, cozy, richly lit realistic backgrounds (living rooms, kitchens, restaurants, city skylines "
                   "at night, streets, parks, courtrooms) with depth, warm lamps, golden hour or neon atmosphere, "
-                  "cinematic composition, characters medium-large in the frame, calm understated facial expressions.",
+                  "cinematic composition, characters medium-large in the frame, calm understated facial expressions. "
+                  "Background people and crowds are the same white round-head figures — never realistic humans.",
     },
     "muted_cinematic": {
         "name": "2D cinématique désaturé (ancien POV Studio)",
@@ -484,6 +485,10 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
     if chars_desc:
         parts.append("CHARACTERS IN THIS IMAGE: " + " | ".join(chars_desc))
     parts.append("ART STYLE: " + (st.get("prompt") or "").strip())
+    parts.append("EVERY person in the image — including background people, crowds, waiters, customers, passers-by, "
+                 "people on screens or in photos — is drawn in exactly the same character design as the main "
+                 "characters (same head shape, face style and proportions). Never draw a realistic or differently "
+                 "styled human.")
     fmt = ("Tall 9:16 vertical frame, full-bleed illustration, main subject centered, no borders, no frame."
            if vertical else "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame.")
     if st.get("no_text", True) and not allow_text:
@@ -1099,7 +1104,7 @@ CAST OF THIS VIDEO (their look is locked by reference images — in the prompt, 
 RULES:
 {direction}- Show the exact moment/idea the narration describes, literally and concretely: subject + action + setting + key props. One clear focal point, readable in 1 second.
 - If the narration talks to "you"/"tu"/"vous" and a protagonist character exists, show that character doing it.
-- "chars" must list EVERY cast member visible in the image, by exact name (aliases → the cast name). Other people (crowds, waiters, strangers) are not cast: describe them briefly in the prompt instead.
+- "chars" must list EVERY cast member visible in the image, by exact name (aliases → the cast name). Other people (crowds, waiters, strangers) are not cast: describe them briefly in the prompt instead, always as the same kind of cartoon figures as the cast (never "realistic people").
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
 - For violence, death or danger: imply it (shadows, aftermath, expressions), never gore. No real celebrities.
