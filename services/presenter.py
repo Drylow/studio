@@ -8,7 +8,8 @@ d'image découpé) :
    à l'horizontale, puis légèrement vers le bas (tapotement). De chaque retouche on ne garde
    que la zone qui a changé (le bras), recollée sur la base → le corps, la tête et les pieds
    restent identiques au pixel près d'une pose à l'autre.
-   Entre deux poses voisines, une image intermédiaire (fondu des deux) adoucit le mouvement.
+   Pour aller d'une pose à une autre, le bras passe par les poses intermédiaires (tenues 2
+   images, « en deux », comme en dessin animé) : pas de fondu, donc jamais de bras fantôme.
 
 2. PISTE — calée sur les mots : double tapotement vers le panneau sur les chiffres clés
    ($, %, nombres), et un geste « regardez ça » de temps en temps quand il parle.
@@ -21,7 +22,7 @@ import random
 import re
 
 POSES = ("A", "mid", "point", "tap")          # du plus levé au plus bas
-BLENDS = (("A", "mid"), ("mid", "point"), ("point", "tap"))
+INBETWEEN = 2 / 30                             # durée d'une pose intermédiaire (2 images à 30 i/s)
 
 KEEP = ("Edit this image. Keep EXACTLY the same character, same head, same face, same body, same legs and feet, same "
         "size and same position in the frame, same colors, same line work and the same transparent background. ONLY "
@@ -133,8 +134,6 @@ def build_pose_rig(base_blob, variants, out_dir):
     frames.setdefault("mid", frames["A"])
     frames.setdefault("point", frames["mid"])
     frames.setdefault("tap", frames["point"])
-    for a, b in BLENDS:  # image de transition (léger « flou de mouvement » dessiné)
-        frames[f"{a}~{b}"] = Image.blend(frames[a], frames[b], 0.5)
 
     crop = None  # recadrage commun : toutes les images restent superposables
     for im in frames.values():
@@ -147,7 +146,7 @@ def build_pose_rig(base_blob, variants, out_dir):
     manifest = {"mode": "poses", "frames": {}, "size": [crop[2] - crop[0], crop[3] - crop[1]],
                 "drawn": sorted(k for k in ("mid", "point", "tap") if variants.get(k))}
     for name, im in frames.items():
-        fn = name.replace("~", "_to_") + ".png"
+        fn = name + ".png"
         im.crop(crop).save(os.path.join(out_dir, fn), "PNG", compress_level=6)
         manifest["frames"][name] = fn
     with open(os.path.join(out_dir, "rig.json"), "w", encoding="utf-8") as f:
@@ -174,19 +173,15 @@ _KEY = re.compile(r"[\d$€£%]")
 
 
 def _path(seq):
-    """Suite de poses → images avec transitions : A→point devient A, A~mid, mid, mid~point, point."""
+    """Suite de poses → le bras passe par les poses intermédiaires : A→point = A, mid, point."""
     order = {p: i for i, p in enumerate(POSES)}
     out = []
     for name, hold in seq:
         if out:
-            prev = out[-1][0]
-            i, j = order[prev], order[name]
+            i, j = order[out[-1][0]], order[name]
             step = 1 if j > i else -1
-            for k in range(i, j, step):
-                if k != i:
-                    out.append((POSES[k], 0.05))  # pose intermédiaire, brève
-                lo, hi = sorted((k, k + step))
-                out.append((f"{POSES[lo]}~{POSES[hi]}", 0.034))  # 1 image de transition
+            for k in range(i + step, j, step):
+                out.append((POSES[k], INBETWEEN))
         out.append((name, hold))
     return out
 
