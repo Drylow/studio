@@ -50,14 +50,15 @@ TOOLS = {
     "pov-studio": {
         "slug": "pov-studio",
         "category": "youtube",
-        "name": "POV STUDIO 2D",
-        "short": "POV Studio 2D",
-        "tag": "// POV",
-        "desc": "Script POV par niveaux → voix off ElevenLabs, images IA par scène, "
-                "montage auto. Inclut Niche Bending (analyse de chaînes virales).",
+        "name": "2D VIDEOS",
+        "short": "2D Videos",
+        "tag": "// 2D",
+        "desc": "Façon TubeGen, 100 % local : titre → script calibré pour ta chaîne (bible de style, "
+                "relecture IA) → voix off → images 2D cohérentes (style + perso de référence) → "
+                "vidéo montée (zooms, sous-titres, musique) ou pack de clips calés pour CapCut.",
         "entry": "pov-studio/index.html",
         "theme": "dark",
-        "needs_render": True,
+        "needs_render": False,
         "accent": "pink",
         "icon": '<path d="M4 5h16v11H4z"/><path d="M8 21h8M12 16v5"/><circle cx="9" cy="10" r="1.6"/>'
                 '<path d="M13 12l2.5-3 2.5 3"/>',

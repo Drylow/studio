@@ -13,6 +13,7 @@ from routes.delamain import delamain_bp
 from routes.youtube import youtube_bp
 from routes.lore import lore_bp
 from routes.worker import worker_bp
+from routes.pov import pov_bp
 from database import init_db, is_blacklisted, is_trusted_device, touch_trusted, log_access_event
 import logging
 import os
@@ -77,6 +78,7 @@ app.register_blueprint(delamain_bp)  # mémoire permanente de Delamain (tableau 
 app.register_blueprint(youtube_bp)   # connexion YouTube OAuth par projet (publication)
 app.register_blueprint(lore_bp)      # pont vers le tool vidéo « Lore » (worker de rendu distant)
 app.register_blueprint(worker_bp)    # worker autonome (produit + poste aux dates du calendrier)
+app.register_blueprint(pov_bp)       # 2D Videos : script → voix → images → montage, 100 % local
 
 
 # --- Gate global ---------------------------------------------------------
