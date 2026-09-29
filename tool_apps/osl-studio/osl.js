@@ -45,8 +45,8 @@ $('#lightbox').onclick = () => $('#lightbox').classList.remove('on');
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#lightbox').classList.remove('on'); closeModal(); } });
 
 // ── État ────────────────────────────────────────────────────────────────────
-const S = {ch: null, projects: [], pollT: null, playing: new Set(), thumbFor: null};
-const JOB = {autopilot: 'Création de la vidéo', script: 'Script', voice: 'Voix off', images: 'Images', render: 'Montage',
+const S = {ch: null, projects: [], pollT: null, playing: new Set(), thumbFor: null, regen: null, usage: null, pubOpen: new Set()};
+const JOB = {autopilot: 'Création de la vidéo', metadata: 'Titre & description', script: 'Script', voice: 'Voix off', images: 'Images', render: 'Montage',
   thumbnails: 'Miniatures', cast: 'Personnages', audit: 'Audit FacelessOS', regen: 'Image'};
 
 // ── Formulaire « Nouvelle vidéo » ──────────────────────────────────────────
@@ -110,6 +110,7 @@ function card(p) {
   const err = st.k === 'err' ? `<div class="perr">${esc(j.error || j.message || 'Erreur')}</div>` : '';
   const thumbs = (p.thumbnails || []).length
     ? `<div class="vthumbs">${p.thumbnails.slice(0, 4).map(t => `<img src="${fileUrl(p.id, t.file)}" data-zoom="${fileUrl(p.id, t.file)}" alt="">`).join('')}</div>` : '';
+  const pub = p.render ? pubPanel(p) : '';
   const acts = [];
   if (p.render) acts.push(`<a class="btn sm primary" href="${fileUrl(p.id, p.render.file, p.render.v, true)}">⬇ Télécharger la vidéo</a>`);
   acts.push(`<button class="btn sm" data-act="thumbs">🖼 Miniatures</button>`);
@@ -124,7 +125,39 @@ function card(p) {
       <div class="vmeta">${meta}</div>
       ${prog}${err}${thumbs}
       <div class="vactions">${acts.join('')}</div>
+      ${pub}
     </div></div>`;
+}
+
+// ── Publication : titre, description, tags, commentaire épinglé à copier ───
+function pubPanel(p) {
+  const md = p.metadata, j = p.job || {}, gen = j.status === 'running' && (j.kind === 'metadata' || (j.message || '').includes('Publication'));
+  const open = S.pubOpen.has(p.id) ? 'open' : '';
+  if (!md || !md.description) {
+    return `<details class="pub" data-pub ${open}><summary>📝 Titre & description YouTube</summary>
+      <div class="pubbody"><div class="hint">${gen ? '<span class="spin" style="display:inline-block;width:12px;height:12px;vertical-align:-2px"></span> Rédaction en cours…' : 'Pas encore générés pour cette vidéo.'}</div>
+      <button class="btn sm primary" data-act="meta" ${gen || j.status === 'running' ? 'disabled' : ''}>📝 Générer titre & description</button></div></details>`;
+  }
+  const tags = (md.tags || []).join(', ');
+  const field = (label, key, value, rows) => `<div class="pubf"><div class="row between"><span class="lbl">${label}</span>
+      <button class="btn xs" data-copy="${key}">📋 Copier</button></div>
+      ${rows ? `<textarea readonly rows="${rows}" data-val="${key}">${esc(value)}</textarea>` : `<input type="text" readonly data-val="${key}" value="${esc(value)}">`}</div>`;
+  const others = (md.titles || []).slice(1).map((t, i) => `<div class="alt"><span>${esc(t)}</span><button class="btn xs" data-copy="alt${i}">📋</button><input type="hidden" data-val="alt${i}" value="${esc(t)}"></div>`).join('');
+  return `<details class="pub" data-pub ${open}><summary>📝 Titre & description YouTube <span class="pill ok" style="margin-left:6px">prêts</span></summary>
+    <div class="pubbody">
+      ${field('Titre', 'title', (md.titles || [p.title])[0])}
+      ${others ? `<div class="pubf"><span class="lbl">Autres idées de titre</span>${others}</div>` : ''}
+      ${field('Description', 'desc', md.description, 9)}
+      ${field(`Tags <span class="faint">(${tags.length}/500 caractères)</span>`, 'tags', tags, 3)}
+      ${md.pinned_comment ? field('Commentaire à épingler', 'pin', md.pinned_comment, 3) : ''}
+      <div class="row"><button class="btn xs ghost" data-act="meta" ${j.status === 'running' ? 'disabled' : ''}>↻ Regénérer</button>
+        <span class="tiny faint">Rédigés avec la skill packaging de FacelessOS, dans le style de tes descriptions.</span></div>
+    </div></details>`;
+}
+async function copyText(text, btn) {
+  try { await navigator.clipboard.writeText(text); }
+  catch (_) { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+  if (btn) { const o = btn.textContent; btn.textContent = '✓ Copié'; setTimeout(() => { btn.textContent = o; }, 1400); }
 }
 
 function renderList() {
@@ -141,8 +174,14 @@ function renderList() {
   keep.forEach((el, id) => { const slot = $(`[data-keep="${id}"]`, list); if (slot) slot.replaceWith(el); });
 }
 
+$('#list').addEventListener('toggle', e => {
+  const d = e.target.closest && e.target.closest('[data-pub]'); if (!d) return;
+  const id = d.closest('.vcard').dataset.id; if (d.open) S.pubOpen.add(id); else S.pubOpen.delete(id);
+}, true);
 $('#list').onclick = async e => {
   const zoom = e.target.closest('[data-zoom]'); if (zoom) { lightbox(zoom.dataset.zoom); return; }
+  const cp = e.target.closest('[data-copy]');
+  if (cp) { const el = cp.closest('.pubbody').querySelector(`[data-val="${cp.dataset.copy}"]`); if (el) copyText(el.value, cp); return; }
   const b = e.target.closest('[data-act]'); if (!b) return;
   const id = b.closest('.vcard').dataset.id, p = S.projects.find(x => x.id === id);
   const act = b.dataset.act;
@@ -150,10 +189,11 @@ $('#list').onclick = async e => {
   e.preventDefault();
   if (act === 'play') { S.playing.add(id); const el = b.closest('.vcard'); el.outerHTML = card(p); return; }
   if (act === 'thumbs') { openThumbs(p); return; }
+  if (act === 'meta') { S.pubOpen.add(id); await guard(() => api('POST', `/projects/${id}/metadata`, {}), 'Rédaction du titre et de la description…'); load(); return; }
   if (act === 'cancel') { if (confirm('Arrêter la fabrication ? Tu pourras la reprendre là où elle s\'est arrêtée.')) { await guard(() => api('POST', `/projects/${id}/cancel`)); load(); } return; }
   if (act === 'resume') { await guard(() => api('POST', `/projects/${id}/autopilot`, {}), 'Reprise lancée'); load(); return; }
   if (act === 'del') {
-    if (!confirm(`Supprimer « ${p.title} » et tous ses fichiers (vidéo, images, voix) ?`)) return;
+    if (!confirm(`Supprimer DÉFINITIVEMENT « ${p.title} » ?\n\nLa vidéo, les images, la voix, les miniatures et le script sont effacés du disque. Impossible d'annuler.`)) return;
     S.playing.delete(id); await guard(() => api('DELETE', `/projects/${id}`)); load();
   }
 };
@@ -251,11 +291,79 @@ function refreshThumbModal() {
   const busyOther = j && j.status === 'running' && j.kind !== 'thumbnails';
   $('#tGo').disabled = run || busyOther; $('#tAuto').disabled = run || busyOther;
   if (busyOther) $('#tState').textContent = 'La vidéo est encore en fabrication : les miniatures se lancent après.';
-  $('#tGrid').innerHTML = (p.thumbnails || []).map(t => `<div class="tshot"><img src="${fileUrl(p.id, t.file)}" data-zoom alt="">
-      <div class="bar"><a class="btn xs" href="${fileUrl(p.id, t.file, 0, true)}">⬇</a></div></div>`).join('')
+  if (!run) S.regen = null;
+  $('#tGrid').innerHTML = (p.thumbnails || []).map(t => `<div class="tshot ${run && S.regen === t.file ? 'busy' : ''}" data-file="${esc(t.file)}">
+      <img src="${fileUrl(p.id, t.file)}" alt="">${run && S.regen === t.file ? '<span class="spin sp"></span>' : ''}
+      <div class="bar"><a class="btn xs" href="${fileUrl(p.id, t.file, 0, true)}" title="Télécharger">⬇</a>
+        <button class="btn xs" data-t="regen" title="Regénérer cette miniature (même prompt, mêmes références)" ${run || busyOther ? 'disabled' : ''}>↻</button>
+        <button class="btn xs danger" data-t="del" title="Supprimer cette miniature" ${run ? 'disabled' : ''}>🗑</button></div></div>`).join('')
     || '<div class="hint">Les miniatures générées apparaîtront ici.</div>';
   $$('#tGrid img').forEach(im => im.onclick = () => lightbox(im.src));
+  $$('#tGrid [data-t]').forEach(b => b.onclick = async () => {
+    const file = b.closest('.tshot').dataset.file;
+    if (b.dataset.t === 'regen') {
+      S.regen = file;
+      const r = await guard(() => api('POST', `/projects/${p.id}/thumbs/regen`, {file}));
+      if (!r) S.regen = null; load(); return;
+    }
+    if (!confirm('Supprimer cette miniature ?')) return;
+    await guard(() => api('POST', `/projects/${p.id}/thumbs/delete`, {file})); load();
+  });
 }
+
+// ── Projets : place disque, alléger, supprimer ─────────────────────────────
+const fmtSize = b => b >= 1e9 ? (b / 1e9).toFixed(2).replace('.', ',') + ' Go' : b >= 1e6 ? Math.round(b / 1e6) + ' Mo'
+  : b > 0 ? Math.max(1, Math.round(b / 1e3)) + ' Ko' : '0';
+const STAGE = {rendered: 'Vidéo prête', storyboard: 'Images faites', voice: 'Voix faite', script: 'Script écrit', idea: 'À faire'};
+function showView(v) {
+  $$('.tab').forEach(t => t.classList.toggle('on', t.dataset.view === v));
+  $('#viewVideos').classList.toggle('hidden', v !== 'videos');
+  $('#viewProjects').classList.toggle('hidden', v !== 'projects');
+  if (v === 'projects') loadUsage();
+}
+$$('.tab').forEach(t => t.onclick = () => showView(t.dataset.view));
+async function loadUsage() {
+  $('#ptable').innerHTML = '<tr class="empty-row"><td><span class="spin" style="display:inline-block"></span></td></tr>';
+  const r = await guard(() => api('GET', `/studio/${STUDIO}/usage`));
+  if (!r) return;
+  S.usage = r.projects;
+  $('#usageTotal').innerHTML = `<b>${fmtSize(r.total)}</b>utilisés par ${r.projects.length} vidéo(s)`;
+  const work = r.projects.reduce((n, p) => n + (p.running ? 0 : p.work), 0);
+  $('#slimAll').disabled = !work; $('#slimAll').textContent = work ? `🧹 Tout alléger (−${fmtSize(work)})` : '🧹 Rien à alléger';
+  $('#ptable').innerHTML = r.projects.length ? `<tr><th>Vidéo</th><th>Créée</th><th>État</th><th>Durée</th><th>Place</th><th></th></tr>`
+    + r.projects.map(p => `<tr data-id="${p.id}">
+      <td class="t">${esc(p.title)}</td>
+      <td class="num faint">${esc(ago(p.created))}</td>
+      <td>${p.running ? '<span class="pill acc">En cours</span>' : `<span class="pill ${p.stage === 'rendered' ? 'ok' : ''}">${STAGE[p.stage] || p.stage}</span>`}</td>
+      <td class="num">${p.duration ? fmtDur(p.duration) : '–'}</td>
+      <td class="num"><b>${fmtSize(p.total)}</b>${p.work ? `<div class="tiny faint">dont ${fmtSize(p.work)} de travail</div>` : ''}</td>
+      <td class="acts">${p.work && !p.running ? `<button class="btn xs" data-pact="slim">🧹 Alléger</button>` : ''}
+        <button class="btn xs danger" data-pact="del" ${p.running ? 'title="Arrête d\'abord la fabrication"' : ''}>🗑 Supprimer</button></td></tr>`).join('')
+    : '<tr class="empty-row"><td>Aucune vidéo.</td></tr>';
+}
+$('#usageRefresh').onclick = loadUsage;
+$('#slimAll').onclick = async e => {
+  const todo = (S.usage || []).filter(p => p.work && !p.running);
+  if (!todo.length || !confirm(`Alléger ${todo.length} vidéo(s) ? Les vidéos finales, images, voix et miniatures restent.`)) return;
+  busy(e.currentTarget, true, 'Nettoyage…');
+  let freed = 0;
+  for (const p of todo) { const r = await guard(() => api('POST', `/projects/${p.id}/slim`)); if (r) freed += r.freed; }
+  busy($('#slimAll'), false); toast(`${fmtSize(freed)} libérés`, 'ok'); loadUsage();
+};
+$('#ptable').onclick = async e => {
+  const b = e.target.closest('[data-pact]'); if (!b) return;
+  const id = b.closest('tr').dataset.id, p = (S.usage || []).find(x => x.id === id);
+  if (b.dataset.pact === 'slim') {
+    busy(b, true, ''); const r = await guard(() => api('POST', `/projects/${id}/slim`));
+    if (r) toast(`${fmtSize(r.freed)} libérés`, 'ok'); loadUsage(); return;
+  }
+  const warn = p.running ? '\n\nElle est en cours de fabrication : elle sera arrêtée.' : '';
+  if (!confirm(`Supprimer DÉFINITIVEMENT « ${p.title} » ?\n\nLa vidéo, les images, la voix, les miniatures et le script sont effacés du disque (${fmtSize(p.total)}). Impossible d'annuler.${warn}`)) return;
+  busy(b, true, '');
+  const r = await guard(() => api('DELETE', `/projects/${id}`));
+  if (r) { S.playing.delete(id); toast(`« ${p.title} » supprimée (${fmtSize(p.total)} libérés)`, 'ok'); }
+  loadUsage(); load();
+};
 
 // ── Démarrage ───────────────────────────────────────────────────────────────
 renderChips(); onMinutes(); load(); credits();

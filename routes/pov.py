@@ -30,6 +30,7 @@
 """
 import io
 import os
+import threading
 import time
 
 from flask import Blueprint, jsonify, request, send_file, send_from_directory, session
@@ -474,8 +475,16 @@ def project(pid):
     if not pr:
         return _err("Projet introuvable.", 404)
     if request.method == "DELETE":
-        store.cancel_job(pid)
+        running = store.cancel_job(pid)
         store.delete_project(pid)
+        if running:  # la tâche annulée peut encore écrire un fichier : on efface à nouveau quand elle s'arrête
+            def sweep():
+                for _ in range(600):
+                    if running.status != "running":
+                        break
+                    time.sleep(1)
+                store.delete_project(pid)
+            threading.Thread(target=sweep, daemon=True).start()
         return jsonify({"ok": True})
     if request.method == "PUT":
         b = _body()
@@ -629,6 +638,59 @@ def thumbs_custom(pid):
     except RuntimeError as e:
         return _err(e, 409)
     return jsonify({"job": job.as_dict()})
+
+
+@pov_bp.route("/api/pov/projects/<pid>/thumbs/regen", methods=["POST"])
+def thumb_regen(pid):
+    if not store.get_project(pid):
+        return _err("Projet introuvable.", 404)
+    f = (_body().get("file") or "").strip()
+    if not f.startswith("thumbs/"):
+        return _err("Miniature inconnue.")
+    try:
+        job = store.start_job(pid, "thumbnails", lambda j: E.job_thumb_regen(j, pid, f))
+    except RuntimeError as e:
+        return _err(e, 409)
+    return jsonify({"job": job.as_dict()})
+
+
+@pov_bp.route("/api/pov/projects/<pid>/thumbs/delete", methods=["POST"])
+def thumb_delete(pid):
+    if not store.get_project(pid):
+        return _err("Projet introuvable.", 404)
+    f = (_body().get("file") or "").strip()
+    if not f.startswith("thumbs/"):
+        return _err("Miniature inconnue.")
+    E.delete_thumb(pid, f)
+    return jsonify({"ok": True})
+
+
+@pov_bp.route("/api/pov/studio/<template>/usage", methods=["GET"])
+def studio_usage(template):
+    """Place prise par chaque vidéo de la chaîne (pour faire le ménage)."""
+    try:
+        ch = E.studio_channel(template)
+    except KeyError:
+        return _err("Studio inconnu.", 404)
+    rows = []
+    for p in store.list_projects():
+        if p.get("channel_id") != ch["id"]:
+            continue
+        job = store.running_job(p["id"])
+        rows.append(dict(store.project_usage(p), id=p["id"], title=p.get("title"), created=p.get("created"),
+                         minutes=p.get("minutes"), stage=E.stage(p), running=bool(job),
+                         duration=(p.get("render") or {}).get("duration")))
+    return jsonify({"projects": rows, "total": sum(r["total"] for r in rows)})
+
+
+@pov_bp.route("/api/pov/projects/<pid>/slim", methods=["POST"])
+def project_slim(pid):
+    pr = store.get_project(pid)
+    if not pr:
+        return _err("Projet introuvable.", 404)
+    if store.running_job(pid):
+        return _err("Une tâche tourne sur cette vidéo : arrête-la d'abord.", 409)
+    return jsonify({"freed": store.slim_project(pr)})
 
 
 @pov_bp.route("/api/pov/youtube-thumb", methods=["GET"])

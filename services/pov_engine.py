@@ -152,6 +152,7 @@ TEMPLATES = {
                  "places and correct cultural details (food, family, customs, words). Stereotypes are affectionate, "
                  "never insulting.",
         "reference_urls": "https://www.youtube.com/watch?v=130HkA6TN8c",
+        "youtube_handle": "@OddlySpecificLives",
         "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
         "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
@@ -263,9 +264,9 @@ def _video_ids(text):
     return list(dict.fromkeys(ids or re.findall(r"\b([A-Za-z0-9_-]{11})\b", text or "")))
 
 
-def _bundled_refs(urls_text):
-    """Transcriptions de référence livrées avec l'app (skills/references/<id>.txt)."""
-    return "\n\n".join(t for t in (FOS.bundled_reference(v) for v in _video_ids(urls_text)) if t)
+def _bundled_refs(urls_text, ext=".txt"):
+    """Transcriptions (ou descriptions) de référence livrées avec l'app (skills/references/<id><ext>)."""
+    return "\n\n".join(t for t in (FOS.bundled_reference(v, ext) for v in _video_ids(urls_text)) if t)
 
 
 def _merge(base, over):
@@ -291,6 +292,8 @@ def new_channel(data=None, template=None):
         "format": t.get("format", "pov_levels"), "niche": t.get("niche", ""), "audience": t.get("audience", ""),
         "tone": t.get("tone", ""), "rules": t.get("rules", ""), "cta": "",
         "reference_urls": t.get("reference_urls", ""), "reference_scripts": _bundled_refs(t.get("reference_urls", "")),
+        "reference_description": _bundled_refs(t.get("reference_urls", ""), ".description.txt"),
+        "youtube_handle": t.get("youtube_handle", ""),
         "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
         "wpm": t.get("wpm", 150), "thumb_style": t.get("thumb_style", ""),
         "thumb_text": t.get("thumb_text", True), "thumb_ref": None,
@@ -322,50 +325,64 @@ PRESETS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 def _apply_preset_images(ch, template):
-    """Images livrées avec un modèle (presets/<modèle>/style.jpg, thumb.jpg) : la chaîne est prête d'emblée."""
+    """Images livrées avec un modèle (presets/<modèle>/style.jpg, thumb.jpg), posées seulement là
+    où la chaîne n'a encore rien : elle est prête d'emblée, et tes propres images ne sont jamais écrasées."""
     d = os.path.join(PRESETS_DIR, template or "")
     for kind, name in (("style", "style.jpg"), ("thumb", "thumb.jpg")):
         path = os.path.join(d, name)
-        if not template or not os.path.isfile(path):
+        has = (ch.get("style") or {}).get("ref") if kind == "style" else ch.get("thumb_ref")
+        if not template or has or not os.path.isfile(path):
             continue
         with open(path, "rb") as f:
             rel = save_channel_image(ch, f.read(), kind)
         if kind == "style":
-            ch["style"]["ref"] = rel
+            ch.setdefault("style", {})["ref"] = rel
         else:
             ch["thumb_ref"] = rel
+
+
+def _refresh_from_template(c, template):
+    """Complète une chaîne de studio avec ce que le modèle a gagné depuis sa création
+    (vidéo de référence, description modèle, handle) sans écraser ce que tu as réglé."""
+    t = TEMPLATES[template]
+    changed = False
+    if not (c.get("reference_scripts") or "").strip() and t.get("reference_urls"):
+        # chaîne d'avant la vidéo de référence : on reprend l'écriture actuelle du modèle
+        c["reference_urls"] = t["reference_urls"]
+        c["reference_scripts"] = _bundled_refs(t["reference_urls"])
+        c["bible"] = t.get("bible") or TEMPLATE_BIBLES.get(template, c.get("bible", ""))
+        c["tone"], c["rules"] = t.get("tone", c.get("tone", "")), t.get("rules", c.get("rules", ""))
+        changed = True
+    if not (c.get("reference_description") or "").strip() and t.get("reference_urls"):
+        c["reference_description"] = _bundled_refs(t["reference_urls"], ".description.txt")
+        changed = changed or bool(c["reference_description"])
+    if not c.get("youtube_handle") and t.get("youtube_handle"):
+        c["youtube_handle"] = t["youtube_handle"]
+        changed = True
+    before = ((c.get("style") or {}).get("ref"), c.get("thumb_ref"))
+    _apply_preset_images(c, template)
+    changed = changed or ((c.get("style") or {}).get("ref"), c.get("thumb_ref")) != before
+    if changed:
+        store.save_channel(c)
+    return c
 
 
 def studio_channel(template):
     """La chaîne d'un studio simplifié (ex. Oddly Specific Lives) : retrouvée par son modèle, créée sinon."""
     if template not in TEMPLATES:
         raise KeyError(template)
-    name = TEMPLATES[template].get("name", "")
+    t = TEMPLATES[template]
+    name = t.get("name", "")
     for c in store.list_channels():
         if c.get("template") == template:
-            return c
-    t = TEMPLATES[template]
+            return _refresh_from_template(c, template)
     for c in store.list_channels():  # chaîne créée avant qu'on mémorise le modèle
         if not c.get("template") and c.get("format") == t.get("format") and \
                 (c.get("name") == name or (c.get("style") or {}).get("preset") == t.get("style")):
             c["template"] = template
-            if not (c.get("reference_scripts") or "").strip() and t.get("reference_urls"):
-                # chaîne d'avant la vidéo de référence : on reprend l'écriture actuelle du modèle
-                c["reference_urls"] = t["reference_urls"]
-                c["reference_scripts"] = _bundled_refs(t["reference_urls"])
-                c["bible"] = t.get("bible") or TEMPLATE_BIBLES.get(template, c.get("bible", ""))
-                c["tone"], c["rules"] = t.get("tone", c.get("tone", "")), t.get("rules", c.get("rules", ""))
             store.save_channel(c)
-            return c
+            return _refresh_from_template(c, template)
     return new_channel({}, template=template)
-
-
-_CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
-              "reference_urls", "bible", "wpm", "default_minutes", "thumb_style", "thumb_text")
-_BOARD_FIELDS = ("theme", "bg_color", "line_color", "major_color", "pattern", "cell", "major_every", "paper",
-                 "panel_width", "border", "border_color", "radius", "shadow", "shadow_color", "shadow_offset",
-                 "presenter_height", "presenter_x", "bob", "animate", "anim", "mascot", "presenter_outline",
-                 "outline_color", "spot", "spot_color")
 
 
 def apply_channel_update(ch, data):
@@ -1671,7 +1688,7 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
         rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}.jpg"
         ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=90)
         return {"file": rel, "text": it.get("text", "") if with_text else "", "prompt": it.get("prompt", ""),
-                "at": store.now()}
+                "at": store.now(), "gen": {"prompt": full, "refs": list(refs)}}
 
     with ThreadPoolExecutor(max_workers=count) as ex:
         for fut in as_completed([ex.submit(one, it) for it in items]):
@@ -1755,7 +1772,8 @@ def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=T
         blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
         rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}_{k}.jpg"
         ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=92)
-        return {"file": rel, "text": "", "prompt": prompt.strip(), "at": store.now(), "custom": True}
+        return {"file": rel, "text": "", "prompt": prompt.strip(), "at": store.now(), "custom": True,
+                "gen": {"prompt": full, "refs": [os.path.relpath(r, d) if r.startswith(d) else r for r in refs]}}
 
     errors = []
     with ThreadPoolExecutor(max_workers=count) as ex:
@@ -1775,6 +1793,54 @@ def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=T
     job.update(1.0, f"{len(results)} miniature(s) prête(s).")
 
 
+def job_thumb_regen(job, pid, file):
+    """Regénère UNE miniature avec le même prompt et les mêmes références ; elle garde sa place."""
+    pr = store.get_project(pid)
+    ch = store.get_channel(pr["channel_id"])
+    thumbs = pr.get("thumbnails") or []
+    old = next((t for t in thumbs if t.get("file") == file), None)
+    if not old:
+        raise RuntimeError("Miniature introuvable.")
+    d = store.project_dir(pid)
+    gen = old.get("gen") or {}
+    full = gen.get("prompt")
+    refs = [r if os.path.isabs(r) else os.path.join(d, r) for r in gen.get("refs") or []]
+    refs = [r for r in refs if os.path.isfile(r)]
+    if not full:  # miniature d'avant la mémorisation : on repart de son prompt + style de la chaîne
+        tr = channel_ref_path(ch, ch.get("thumb_ref"))
+        refs = [tr] if tr and os.path.isfile(tr) else []
+        full = ((("Reference image 1 = THE THUMBNAIL TO MODEL: copy its art style, rendering, outlines, composition "
+                  "and colors; new content as described.\n") if refs else "")
+                + f"YouTube thumbnail, 16:9. {old.get('prompt', '')} " + (ch.get("thumb_style") or ""))
+    job.update(0.1, "Nouvelle version de la miniature…")
+    blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
+    rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}_r.jpg"
+    ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=92)
+
+    def save(x):
+        for t in x.get("thumbnails") or []:
+            if t.get("file") == file:
+                t["file"], t["at"] = rel, store.now()
+                t["gen"] = {"prompt": full, "refs": [os.path.relpath(r, d) if r.startswith(d) else r for r in refs]}
+    store.update_project(pid, save)
+    try:
+        os.remove(os.path.join(d, file))
+    except OSError:
+        pass
+    job.update(1.0, "Miniature regénérée.")
+
+
+def delete_thumb(pid, file):
+    d = store.project_dir(pid)
+
+    def save(x):
+        x["thumbnails"] = [t for t in x.get("thumbnails") or [] if t.get("file") != file]
+    store.update_project(pid, save)
+    path = os.path.normpath(os.path.join(d, file))
+    if path.startswith(os.path.join(d, "thumbs")) and os.path.isfile(path):
+        os.remove(path)
+
+
 def studio_summary(pr):
     """Résumé d'un projet pour le studio simplifié : état, progression, vidéo, miniatures."""
     out = project_summary(pr)
@@ -1785,6 +1851,8 @@ def studio_summary(pr):
     out["thumbnails"] = [{"file": t.get("file"), "at": t.get("at")} for t in pr.get("thumbnails") or [] if t.get("file")]
     rv = pr.get("review") or {}
     out["verdict"] = rv.get("verdict") if rv.get("engine") == "facelessos" else None
+    md = pr.get("metadata") or {}
+    out["metadata"] = {k: md.get(k) for k in ("titles", "description", "tags", "pinned_comment", "at")} if md else None
     return out
 
 
@@ -1802,8 +1870,12 @@ def chapters(pr):
 def job_metadata(job, pid):
     pr = store.get_project(pid)
     ch = store.get_channel(pr["channel_id"])
-    job.update(0.2, "Titres, description et tags…")
-    meta = S.metadata(ch, pr["title"], pr.get("script") or "")
+    job.update(0.2, "Titre, description, tags et commentaire épinglé…")
+    if FOS.available():
+        meta = S.package(ch, pr)
+        meta["at"] = store.now()
+    else:
+        meta = S.metadata(ch, pr["title"], pr.get("script") or "")
     meta["chapters"] = chapters(pr)
     store.update_project(pid, lambda x: x.__setitem__("metadata", meta))
     job.update(1.0, "Métadonnées prêtes.")
@@ -1834,5 +1906,9 @@ def job_autopilot(job, pid, render_video=True):
         job_voice(_Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
     job_images(_Sub(job, 0.35, 0.85, "3/4 Images"), pid)
     if render_video:
-        job_render(_Sub(job, 0.85, 1.0, "4/4 Montage"), pid)
+        job_render(_Sub(job, 0.85, 0.98, "4/4 Montage"), pid)
+        try:  # titre + description prêts à copier ; jamais bloquant pour la vidéo
+            job_metadata(_Sub(job, 0.98, 1.0, "4/4 Publication"), pid)
+        except Exception as e:  # noqa: BLE001
+            job.update(None, f"Vidéo prête (titre/description à regénérer : {str(e)[:80]})")
     job.update(1.0, "Vidéo terminée ✔")

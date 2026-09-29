@@ -58,3 +58,34 @@
 .lightbox { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; background: rgba(2, 3, 8, .92); padding: 20px; cursor: zoom-out; }
 .lightbox.on { display: grid; }
 .lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 10px; }
+
+/* Onglets + projets */
+.top .tabs { margin-left: 10px; }
+.usage-total { text-align: right; font-size: 12.5px; color: var(--s-muted); }
+.usage-total b { display: block; font-family: "PoppinsX", sans-serif; font-size: 22px; color: var(--s-text); }
+.ptable { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ptable th { text-align: left; font-weight: 600; color: var(--s-muted); font-size: 12px; padding: 10px 14px; border-bottom: 1px solid var(--s-line); }
+.ptable td { padding: 10px 14px; border-bottom: 1px solid var(--s-line); vertical-align: middle; }
+.ptable tr:last-child td { border-bottom: 0; }
+.ptable td.t { font-weight: 600; max-width: 360px; overflow-wrap: anywhere; }
+.ptable td.num { white-space: nowrap; }
+.ptable td.acts { text-align: right; white-space: nowrap; }
+.ptable td.acts .btn { margin-left: 6px; }
+.ptable .empty-row td { text-align: center; color: var(--s-muted); padding: 40px; }
+@media (max-width: 720px) { .ptable th:nth-child(2), .ptable td:nth-child(2), .ptable th:nth-child(4), .ptable td:nth-child(4) { display: none; } }
+.tshot.busy::after { content: ""; position: absolute; inset: 0; background: rgba(4, 5, 9, .7); }
+.tshot.busy .sp { position: absolute; top: 50%; left: 50%; margin: -9px 0 0 -9px; z-index: 2; }
+
+/* Publication */
+.pub { border: 1px solid var(--s-line); border-radius: 10px; background: var(--s-bg2); }
+.pub summary { cursor: pointer; padding: 9px 12px; font-weight: 600; font-size: 13px; list-style: none; display: flex; align-items: center; }
+.pub summary::-webkit-details-marker { display: none; }
+.pub summary::before { content: "▸"; margin-right: 8px; color: var(--s-muted); transition: transform .15s; }
+.pub[open] summary::before { transform: rotate(90deg); }
+.pubbody { padding: 4px 12px 12px; display: flex; flex-direction: column; gap: 10px; }
+.pubf { display: flex; flex-direction: column; gap: 5px; }
+.pubf .lbl { font-size: 12px; color: var(--s-muted); font-weight: 600; }
+.pubf textarea, .pubf input[type=text] { width: 100%; font-size: 13px; }
+.pubf .alt { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; padding: 4px 0; }
+.tshot .bar .btn { background: rgba(8, 12, 22, .88); border-color: rgba(255, 255, 255, .2); }
+.tshot .bar .btn.danger { color: var(--s-err); }

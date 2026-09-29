@@ -186,8 +186,55 @@ def update_project(pid, fn):
 
 
 def delete_project(pid):
+    """Supprime TOUT le dossier du projet (vidéo, images, voix, clips, miniatures)."""
     if valid_id(pid) and os.path.isdir(project_dir(pid)):
         shutil.rmtree(project_dir(pid), ignore_errors=True)
+
+
+def dir_size(path):
+    total = 0
+    for root, _, files in os.walk(path):
+        for f in files:
+            try:
+                total += os.path.getsize(os.path.join(root, f))
+            except OSError:
+                pass
+    return total
+
+
+WORK_DIRS = ("render",)  # fichiers de travail recréables (clips intermédiaires du montage)
+
+
+def project_usage(pr):
+    """{total, video, work} en octets : la vidéo finale et les fichiers de travail supprimables."""
+    d = project_dir(pr["id"])
+    video = 0
+    rf = (pr.get("render") or {}).get("file")
+    if rf and os.path.isfile(os.path.join(d, rf)):
+        video = os.path.getsize(os.path.join(d, rf))
+    work = sum(dir_size(os.path.join(d, w)) for w in WORK_DIRS)
+    for f in os.listdir(d) if os.path.isdir(d) else []:
+        if f.endswith(".mp4") and f != rf or f.endswith((".tmp", ".tmp.mp4", ".parts")):
+            work += os.path.getsize(os.path.join(d, f)) if os.path.isfile(os.path.join(d, f)) else 0
+    return {"total": dir_size(d), "video": video, "work": work}
+
+
+def slim_project(pr):
+    """Allège un projet : supprime les clips de travail et les anciens rendus, garde la vidéo finale,
+    les images, la voix, le script et les miniatures (tout reste retouchable). Renvoie les octets libérés."""
+    d = project_dir(pr["id"])
+    before = dir_size(d)
+    for w in WORK_DIRS:
+        shutil.rmtree(os.path.join(d, w), ignore_errors=True)
+    rf = (pr.get("render") or {}).get("file")
+    for f in os.listdir(d) if os.path.isdir(d) else []:
+        path = os.path.join(d, f)
+        if os.path.isfile(path) and (f.endswith(".mp4") and f != rf or f.endswith((".tmp", ".tmp.mp4"))):
+            try:
+                os.remove(path)
+            except OSError:
+                pass
+    return max(0, before - dir_size(d))
 
 
 # ── Musique ─────────────────────────────────────────────────────────────────

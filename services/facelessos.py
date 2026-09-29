@@ -138,9 +138,9 @@ def hard_ban_hits(text):
 
 # ── Références (vidéo modèle de la niche) ──────────────────────────────────
 
-def bundled_reference(video_id):
-    """Transcription fournie avec l'app pour une vidéo de référence (YouTube bloque parfois)."""
-    path = os.path.join(REFS_DIR, f"{video_id}.txt")
+def bundled_reference(video_id, ext=".txt"):
+    """Transcription (ou description, ext=".description.txt") livrée avec l'app pour une vidéo de référence."""
+    path = os.path.join(REFS_DIR, f"{video_id}{ext}")
     if not os.path.isfile(path):
         return ""
     with open(path, encoding="utf-8") as f:

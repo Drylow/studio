@@ -1026,5 +1026,56 @@ SCRIPT (excerpt):
                         model=ai.fast_model())
 
 
+def _fit_tags(tags, limit=500):
+    """Tags dédoublonnés qui tiennent dans le champ YouTube (500 caractères, virgules comprises)."""
+    out, seen = [], set()
+    for t in tags or []:
+        t = re.sub(r"\s+", " ", str(t).replace(",", " ")).strip().lstrip("#")
+        if t and t.lower() not in seen and len(", ".join(out + [t])) <= limit:
+            out.append(t)
+            seen.add(t.lower())
+    return out
+
+
+def package(ch, pr):
+    """Kit de mise en ligne (packaging-skill.md) : titre + idées, description, tags, commentaire épinglé,
+    dans la voix de la chaîne et calé sur la description de la vidéo de référence."""
+    lang = (ch.get("language") or "fr").lower()
+    title = pr.get("title") or ""
+    script = narration(pr.get("script") or "")
+    brief = ((pr.get("review") or {}).get("brief")) or {}
+    skills = "\n\n".join(x for x in (
+        FOS.section("packaging-skill.md", "The upload kit", 2), FOS.section("packaging-skill.md", "Rules", 2),
+        FOS.skill("title-formulas-skill.md"),
+        FOS.section("humanizer-skill.md", "Machine tier")) if x)
+    desc_anchor = (ch.get("reference_description") or "").strip()
+    handle = (ch.get("youtube_handle") or "").strip()
+    prompt = f"""Run the FacelessOS packaging step (skill text below, run it from the open file) on this finished video and return the upload kit as JSON. Language: {lang_label(lang)}.
+
+VIDEO TITLE (chosen by the creator, keep it as option 1 exactly): {title}
+BRIEF: TOPIC = {brief.get('topic', title)} | ANGLE = {brief.get('angle', '')}
+{('WRITTEN-SURFACE ANCHOR — a real published description from this channel. Match its shape, length, line breaks, casing, emoji density, CTA lines and hashtag style:' + chr(10) + '<<<' + chr(10) + desc_anchor + chr(10) + '>>>') if desc_anchor else ''}
+{('Channel handle for a subscribe link (only if the anchor convention uses links): ' + handle) if handle else ''}
+
+Rules for this tool: nothing invented (every claim, name and tag traces to the script); zero slop vocabulary; no em dashes; the description never pastes the hook verbatim and puts the strongest line first (first ~125 characters show before "more"); tags 15-25, comma-free phrases; the pinned comment makes ONE move (a question that drives replies, in the channel's voice), never "thanks for watching". The two extra title options come from two different framework families in title-formulas-skill.md and keep the channel's "POV: ..." pattern when it fits.
+
+SKILLS:
+{skills}
+
+FINISHED SCRIPT:
+{script[:9000]}
+
+Return JSON: {{"titles": ["{title}", "option 2", "option 3"], "why": "one line on the ranking", "description": "the full description, ready to paste, with line breaks and hashtags", "tags": ["..."], "pinned_comment": "..."}}"""
+    data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
+                        model=ai.text_model(), reasoning="medium", timeout=300)
+    titles = [t.strip() for t in data.get("titles") or [] if isinstance(t, str) and t.strip()]
+    if title and (not titles or titles[0] != title):
+        titles = [title] + [t for t in titles if t != title]
+    desc = FOS.mech_fix((data.get("description") or "").strip()).replace(", \n", "\n")
+    return {"titles": titles[:3], "why": data.get("why", ""), "description": desc,
+            "tags": _fit_tags(data.get("tags")), "pinned_comment": FOS.mech_fix((data.get("pinned_comment") or "").strip()),
+            "engine": "facelessos", "at": None}
+
+
 def dumps(o):
     return json.dumps(o, ensure_ascii=False)
