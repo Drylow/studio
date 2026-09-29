@@ -60,6 +60,17 @@ STYLE_PRESETS = {
                   "props, crisp vector look, generous breathing room, no photorealism, no painterly texture, no heavy "
                   "gradients.",
     },
+    "osl_stick": {
+        "name": "Bonhommes blancs POV (Oddly Specific Lives)",
+        "prompt": "2D digital cartoon illustration with clean bold black outlines and soft cel shading. Simple stick-figure-"
+                  "like characters: a large perfectly round plain WHITE head (no nose, no ears), small solid black dot "
+                  "eyes, tiny simple eyebrows and a small simple mouth; women have the same white round head with long "
+                  "straight black hair or a black bun; slim simple bodies in plain solid-colored long-sleeve sweaters or "
+                  "simple outfits (green, blue, red, purple, yellow, black) with dark trousers, white mitten hands. "
+                  "Detailed, cozy, richly lit realistic backgrounds (living rooms, kitchens, restaurants, city skylines "
+                  "at night, streets, parks, courtrooms) with depth, warm lamps, golden hour or neon atmosphere, "
+                  "cinematic composition, characters medium-large in the frame, calm understated facial expressions.",
+    },
     "muted_cinematic": {
         "name": "2D cinématique désaturé (ancien POV Studio)",
         "prompt": "2D digital cartoon animation, flat shading, clean vector-like lines, desaturated muted tones (greys, "
@@ -127,6 +138,40 @@ TEMPLATES = {
         "montage": {"pacing": 4.0, "hook_pacing": 3.0},
         "character": ("Vous", "le spectateur projeté dans le passé : homme ordinaire, vêtements modernes au début puis "
                               "habits d'époque, même visage partout"),
+    },
+    "oddly_specific_en": {
+        "name": "Oddly Specific Lives — POV mariage (EN)", "language": "en", "format": "pov_marry",
+        "niche": "Second-person POV life stories: you marry / fall in love with a woman from a specific culture or with "
+                 "an oddly specific life (Russian, Latina, Indian, British, female Yakuza, serial killer...)",
+        "audience": "Men 18-45 (US, UK, India, worldwide) who love relationship stories, culture shock and dark humor",
+        "tone": "Calm, deadpan second-person narrator ('you'), present tense, dry humor, affectionate culture-shock jokes, "
+                "occasional heartfelt beats. Never mean-spirited.",
+        "rules": "Follow ONE life chronologically from meeting her to old age. Every stage has concrete cultural details "
+                 "(food, family, customs, words) and at least one joke. Stereotypes are affectionate, never insulting.",
+        "style": "osl_stick", "voice": "en-US-AndrewMultilingualNeural", "wpm": 140, "no_text": True,
+        "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
+                     "apartments, kitchens, restaurants, her parents' home, streets and landmarks of her country, "
+                     "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
+                     "understated expressions that sell the joke. Put the cultural details on screen (food, clothes, "
+                     "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
+        "default_minutes": 14,
+        "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
+                    "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.5,
+                    "section_titles": False, "captions": {"mode": "none"}, "layout": "full", "music_volume": 0.08},
+        "character": ("You", "the protagonist ('you'): a simple cartoon man with a large perfectly round plain white head, "
+                             "small black dot eyes, no hair; slim body; plain colored sweater or outfit that fits the "
+                             "scene; same look in every image"),
+        "characters_extra": [("Her", "the woman he loves: same white round head and dot eyes, long straight black hair "
+                                     "(or a bun), clothes that fit her culture and the scene; same look in every image")],
+        "thumb_text": False,
+        "thumb_style": "Vibrant, detailed comic-book cartoon illustration (NOT stick figures): one beautiful stylized "
+                       "woman of the video's nationality / identity, three-quarter body, confident knowing smile, in an "
+                       "iconic outfit of her culture, holding a bouquet of red roses (or the premise's key prop), with a "
+                       "thick white sticker outline around her; behind her the most iconic landmark or setting of her "
+                       "country / world at golden hour or night, with a few small background people; the country's flag "
+                       "as a flat rectangle with a thin black border in the top-left corner (no flag if no country). "
+                       "Warm saturated colors, clean bold outlines, no text.",
+        "bible": "",
     },
     "business_en": {
         "name": "Business Explained — tableau + prof (EN)", "language": "en", "format": "business_explained",
@@ -219,6 +264,7 @@ def new_channel(data=None, template=None):
         "tone": t.get("tone", ""), "rules": t.get("rules", ""), "cta": "", "reference_scripts": "",
         "reference_urls": "", "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
         "wpm": t.get("wpm", 150), "thumb_style": t.get("thumb_style", ""),
+        "thumb_text": t.get("thumb_text", True), "thumb_ref": None,
         "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
                   "no_text": t.get("no_text", True), "direction": t.get("direction", ""),
                   "ref": None, "characters": []},
@@ -232,13 +278,16 @@ def new_channel(data=None, template=None):
         name, desc = t["character"]
         ch["style"]["characters"].append({"id": store.new_id("chr"), "name": name, "description": desc,
                                           "image": None, "always": True})
+    for name, desc in t.get("characters_extra") or []:
+        ch["style"]["characters"].append({"id": store.new_id("chr"), "name": name, "description": desc,
+                                          "image": None, "always": False})
     ch = apply_channel_update(ch, data)
     store.save_channel(ch)
     return ch
 
 
 _CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
-              "reference_urls", "bible", "wpm", "default_minutes", "thumb_style")
+              "reference_urls", "bible", "wpm", "default_minutes", "thumb_style", "thumb_text")
 _BOARD_FIELDS = ("theme", "bg_color", "line_color", "major_color", "pattern", "cell", "major_every", "paper",
                  "panel_width", "border", "border_color", "radius", "shadow", "shadow_color", "shadow_offset",
                  "presenter_height", "presenter_x", "bob", "animate", "anim", "mascot", "presenter_outline",
@@ -287,15 +336,15 @@ def channel_ref_path(ch, rel):
 
 
 def save_channel_image(ch, blob, kind, char_id=None):
-    """kind = 'style' | 'char'. Stocke en PNG borné (1536 px)."""
+    """kind = 'style' | 'thumb' | 'char'. Stocke en PNG borné (1536 px)."""
     from PIL import Image
     im = Image.open(io.BytesIO(blob))
     im = im.convert("RGB")
     im.thumbnail((1536, 1536))
     os.makedirs(os.path.join(store.channel_dir(ch["id"]), "refs"), exist_ok=True)
     stamp = int(time.time() * 1000)
-    if kind == "style":
-        rel = f"refs/style_{stamp}.png"
+    if kind in ("style", "thumb"):
+        rel = f"refs/{kind}_{stamp}.png"
     else:
         rel = f"refs/{char_id}_{stamp}.png"
     im.save(os.path.join(store.channel_dir(ch["id"]), rel), "PNG", optimize=True)
@@ -1265,15 +1314,21 @@ def job_thumbnails(job, pid, idea="", count=2):
     if mascot:
         chars.append("Mascot")
     thumb_style = (ch.get("thumb_style") or "").strip()
-    concept = ai.chat_json(f"""You design YouTube thumbnails for an animated 2D illustration channel ({ch.get('niche', '')}). Characters have clear, expressive faces.
-{('CHANNEL THUMBNAIL STYLE (follow it exactly, it is proven): ' + thumb_style) if thumb_style else ''}
+    with_text = ch.get("thumb_text", True) is not False
+    thumb_ref = channel_ref_path(ch, ch.get("thumb_ref"))
+    thumb_ref = thumb_ref if thumb_ref and os.path.isfile(thumb_ref) else None
+    text_rule = (f"and 2-4 words of huge bold text (in the video's language: {S.lang_label(ch.get('language', 'fr'))})"
+                 + (" (the title text of the style above)" if thumb_style else " placed away from the subject")
+                 if with_text else "and NO text at all (the image alone must create the curiosity)")
+    concept = ai.chat_json(f"""You design YouTube thumbnails for an animated 2D illustration channel ({ch.get('niche', '')}).
+{('CHANNEL THUMBNAIL STYLE (follow it exactly, it is proven): ' + thumb_style) if thumb_style else 'Characters have clear, expressive faces.'}
 Video title: {pr['title']}
 Script excerpt: {S.narration(pr.get('script') or '')[:1200]}
 Recurring characters: {', '.join(chars) or 'none'}
 {('Creator idea: ' + idea) if idea else ''}
 
-Create {count} DIFFERENT thumbnail concepts that maximize CTR: one strong focal subject with a big readable emotion, high contrast, a visual curiosity gap that does NOT repeat the title word for word, and 2-4 words of huge bold text (in the video's language: {S.lang_label(ch.get('language', 'fr'))}){' (the title text of the style above)' if thumb_style else ' placed away from the subject'}.
-Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: composition, subject, expression, props, background, colors, where the text goes", "chars": ["character names visible"]}}]}}""", model=ai.text_model())
+Create {count} DIFFERENT thumbnail concepts that maximize CTR: one strong focal subject with a big readable emotion, high contrast, a visual curiosity gap that does NOT repeat the title word for word, {text_rule}.
+Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prompt": "40-70 words: composition, subject, expression, props, background, colors{', where the text goes' if with_text else ''}", "chars": ["character names visible"]}}]}}""", model=ai.text_model())
     items = (concept.get("thumbs") or [])[:count]
     if not items:
         raise RuntimeError("Aucun concept de miniature renvoyé.")
@@ -1281,12 +1336,23 @@ Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: compos
     done, results = 0, []
 
     def one(it):
-        prompt = (f"YouTube thumbnail. {it.get('prompt', '')} Huge bold clean sans-serif text reading exactly "
-                  f"\"{it.get('text', '')}\" with a thick dark outline, perfectly legible, spelled correctly. "
-                  "Bright, saturated, high contrast, readable at small size.")
+        prompt = f"YouTube thumbnail. {it.get('prompt', '')}"
+        if with_text and it.get("text"):
+            prompt += (f" Huge bold clean sans-serif text reading exactly \"{it.get('text', '')}\" with a thick dark "
+                       "outline, perfectly legible, spelled correctly.")
+        prompt += " Bright, saturated, high contrast, readable at small size."
         if thumb_style:
             prompt += " THUMBNAIL STYLE: " + thumb_style
-        full, refs = build_image_prompt(ch, prompt, scene_chars=it.get("chars") or [], allow_text=True)
+        if thumb_style or thumb_ref:
+            # style de miniature propre à la chaîne (différent du style des images de la vidéo)
+            refs = [thumb_ref] if thumb_ref else []
+            full = (("Reference image 1 = THUMBNAIL STYLE reference: copy its art style, rendering, outlines, "
+                     "composition and color treatment exactly; the subject and setting are new, as described.\n")
+                    if thumb_ref else "") + prompt
+            if not with_text:
+                full += " No text, no letters, no words (a flag is fine)."
+        else:
+            full, refs = build_image_prompt(ch, prompt, scene_chars=it.get("chars") or [], allow_text=with_text)
         if mascot and "Mascot" in (it.get("chars") or []):
             refs = refs + [mascot]
             full = (f"Reference image {len(refs)} = the channel MASCOT: same head, face, colors and outfit "
@@ -1294,7 +1360,8 @@ Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: compos
         blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
         rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}.jpg"
         ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=90)
-        return {"file": rel, "text": it.get("text", ""), "prompt": it.get("prompt", ""), "at": store.now()}
+        return {"file": rel, "text": it.get("text", "") if with_text else "", "prompt": it.get("prompt", ""),
+                "at": store.now()}
 
     with ThreadPoolExecutor(max_workers=count) as ex:
         for fut in as_completed([ex.submit(one, it) for it in items]):

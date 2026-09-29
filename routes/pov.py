@@ -7,8 +7,8 @@
 
   GET/POST          /api/pov/channels            (POST {template?, ...})
   GET/PUT/DELETE    /api/pov/channels/<id>
-  POST   /api/pov/channels/<id>/style-image      multipart file | {generate:true, prompt?}
-  DELETE /api/pov/channels/<id>/style-image
+  POST   /api/pov/channels/<id>/style-image      multipart file | {generate:true, prompt?}  (?kind=thumb :
+  DELETE /api/pov/channels/<id>/style-image      référence de style des miniatures)
   POST   /api/pov/channels/<id>/describe-style   multipart files → prompt de style (vision)
   POST   /api/pov/channels/<id>/characters/<cid>/image   multipart file | {generate:true}
   POST   /api/pov/channels/<id>/presenter        multipart file | {generate:true, extra?} | {rebuild:true}
@@ -207,27 +207,37 @@ def channel(cid):
 
 @pov_bp.route("/api/pov/channels/<cid>/style-image", methods=["POST", "DELETE"])
 def style_image(cid):
+    """Image de référence : ?kind=style (images de la vidéo, défaut) ou ?kind=thumb (miniatures)."""
     ch, err = _channel_or_404(cid)
     if err:
         return err
+    kind = "thumb" if request.args.get("kind") == "thumb" else "style"
     if request.method == "DELETE":
-        ch["style"]["ref"] = None
+        if kind == "thumb":
+            ch["thumb_ref"] = None
+        else:
+            ch["style"]["ref"] = None
         store.save_channel(ch)
         return jsonify(ch)
     try:
         blob = _upload_bytes()
         if blob is None:
+            if kind == "thumb":
+                return _err("Importe une de tes miniatures comme référence.")
             b = _body()
             prompt = (b.get("prompt") or "").strip() or \
                 "A typical scene of this channel with the main character in a characteristic setting."
             ch_noref = dict(ch, style=dict(ch["style"], ref=None))
             full, refs = E.build_image_prompt(ch_noref, prompt)
             blob = ai.generate_image(full, refs=refs)
-        rel = E.save_channel_image(ch, blob, "style")
+        rel = E.save_channel_image(ch, blob, kind)
     except Exception as e:  # noqa: BLE001
         return _err(e, 502)
     ch = store.get_channel(cid)
-    ch["style"]["ref"] = rel
+    if kind == "thumb":
+        ch["thumb_ref"] = rel
+    else:
+        ch["style"]["ref"] = rel
     store.save_channel(ch)
     return jsonify(ch)
 

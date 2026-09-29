@@ -831,7 +831,10 @@ async function viewChannel(cid) {
         <div class="row"><label class="btn sm">📷 Décrire depuis des captures<input type="file" id="stShots" accept="image/*" multiple hidden></label><span class="hint">1 à 4 captures d'une chaîne → l'IA écrit le prompt.</span></div>
         <label class="check"><input type="checkbox" id="stNoText" ${d.style.no_text !== false ? 'checked' : ''}> Interdire le texte dans les images <span class="faint">(décoché = 1 étiquette courte par image : chiffres clés, concepts)</span></label>
         <label class="f"><span class="lbl">Consignes de mise en scène <span class="faint">(pour le directeur artistique IA)</span></span><textarea id="stDir" rows="4" placeholder="Ex : alterner scènes avec persos et schémas (flèches, graphiques)…">${esc(d.style.direction || '')}</textarea></label>
-        <label class="f"><span class="lbl">Style des miniatures</span><textarea id="chThumb" rows="3" placeholder="Fond, typo du titre, expression du perso, flèches…">${esc(d.thumb_style || '')}</textarea></label>
+        <label class="f"><span class="lbl">Style des miniatures <span class="faint">(peut être différent du style de la vidéo)</span></span><textarea id="chThumb" rows="3" placeholder="Fond, perso, drapeau, flèches, typo…">${esc(d.thumb_style || '')}</textarea></label>
+        <label class="check"><input type="checkbox" id="chThumbText" ${d.thumb_text !== false ? 'checked' : ''}> Texte sur les miniatures</label>
+        <div class="row" style="align-items:center">${d.thumb_ref ? `<img src="${chFileUrl(cid, d.thumb_ref)}" style="width:120px;border-radius:8px;border:1px solid var(--s-line)">` : ''}
+          <label class="btn sm">⬆ ${d.thumb_ref ? 'Changer' : 'Importer'} une miniature de référence<input type="file" id="thUp" accept="image/*" hidden></label>${d.thumb_ref ? '<button class="btn sm danger" id="thDel">Retirer</button>' : ''}</div>
       </div>
       <div class="stack">
         <div class="small muted" style="font-weight:600">Image de référence du style <span class="faint">(envoyée à chaque génération → cohérence)</span></div>
@@ -904,7 +907,7 @@ async function viewChannel(cid) {
     d.cta = $('#chCta').value; d.default_minutes = Number($('#chMin').value) || 10; d.wpm = Number($('#chWpm').value) || 150;
     d.reference_urls = $('#chUrls').value; d.reference_scripts = $('#chRefs').value; d.bible = $('#chBibleTxt').value;
     d.style.prompt = $('#stPrompt').value; d.style.preset = $('#stPreset').value; d.style.no_text = $('#stNoText').checked;
-    d.style.direction = $('#stDir').value; d.thumb_style = $('#chThumb').value;
+    d.style.direction = $('#stDir').value; d.thumb_style = $('#chThumb').value; d.thumb_text = $('#chThumbText').checked;
     Object.assign(d.board, {bg_color: $('#bdBg').value, line_color: $('#bdLine').value, border_color: $('#bdBorder').value,
       panel_width: Number($('#bdPw').value), presenter_height: Number($('#bdPh').value), bob: $('#bdBob').checked,
       presenter_outline: Number($('#bdOl').value) || 0, spot: Number($('#bdSpot').value) || 0,
@@ -948,6 +951,8 @@ async function viewChannel(cid) {
   $('#stUp').onchange = async e => { const fd = new FormData(); fd.append('file', e.target.files[0]); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/style-image`, fd), 'Image de style importée')); };
   $('#stGen').onclick = async e => { busy(e.target, true, 'Génération (~30 s)…'); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/style-image`, {generate: true}), 'Image de style générée')); busy(e.target, false); };
   if ($('#stDel')) $('#stDel').onclick = async () => { refresh(await guard(() => api('DELETE', `/channels/${cid}/style-image`))); };
+  $('#thUp').onchange = async e => { const fd = new FormData(); fd.append('file', e.target.files[0]); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/style-image?kind=thumb`, fd), 'Miniature de référence importée')); };
+  if ($('#thDel')) $('#thDel').onclick = async () => { refresh(await guard(() => api('DELETE', `/channels/${cid}/style-image?kind=thumb`))); };
   $('#bdTheme').onchange = e => {
     const t = (S.cfg.board_themes || {})[e.target.value];
     if (t) { const {name, ...vals} = t; Object.assign(d.board, {presenter_outline: 0, spot: 0}, vals, {theme: e.target.value});
