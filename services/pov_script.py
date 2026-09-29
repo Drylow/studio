@@ -10,14 +10,22 @@ Pipeline (chaque étape a son prompt dédié, pas un seul prompt fourre-tout) :
   4. RELECTURE : un « script doctor » note le script et liste les problèmes ;
      seules les sections signalées sont réécrites.
 
+Avec le pack FacelessOS (skills/facelessos), le pipeline suit sa méthode :
+Research (brief) → Brainstorm (3 hooks notés contre la vidéo de référence et les
+dernières vidéos de la chaîne) → Structure (plan + boucles + rotation) → Write
+(ancré sur un extrait VERBATIM de la vidéo de référence) → Greenlight (audit A-E
++ scanner d'origine, en boucle jusqu'à une passe propre).
+
 Les sections sont séparées dans le texte final par des lignes « ## Titre » :
 elles ne sont PAS lues par la voix off mais servent aux titres à l'écran.
 """
 import json
+import os
 import re
 from concurrent.futures import ThreadPoolExecutor
 
 from services import ai
+from services import facelessos as FOS
 
 LANGS = {
     "fr": "French (natural spoken French from France, like a top French YouTuber — not translated English)",
@@ -82,18 +90,17 @@ FORMATS = {
     },
     "pov_marry": {
         "name": "POV: You Marry / Fall in Love With… (vie de couple)",
-        "desc": "« POV: You Marry a Russian Woman », « POV: You Fall in Love with a Female Yakuza » — une vie de couple racontée en « you », du coup de foudre à la fin (façon Oddly Specific Lives).",
-        "heading": "a short time-stamp or event label used for structure only, never spoken (e.g. \"4 months in\", \"The wedding\", \"Her mother visits\")",
-        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it, and delay the label itself (e.g. don't say "Yakuza" before ~2 min).
-- "YOU": an unnamed ordinary Western guy in his 30s (decent job, average apartment, bad at dancing and languages, honest, out of his depth). Most jokes land on him. Give him 1-2 concrete facts early (age 38, a half-finished beer, nine words of Russian). He barely speaks.
-- "HER": competent and specific, never a prop; 2-3 defining behaviors in minute one; later ONE private vulnerability and ONE crisis where she carries you. She has a career and a life she left behind: she chose you, you did not rescue her.
-- HOOK (0:00-1:00, ~5%): place + day + one telling detail (NOT "you meet her at a coffee shop"), her in action, then compress time hard ("3 months later... A year in, you're married."), one dramatic-irony line ("What you don't realize yet is..."), and a first escalating scene with an exact number by 0:45. Danger premises open mid-action with cinematic sensory prose; comedy premises open with a quick meet-cute. End the hook on a deadpan button.
-- STRUCTURE (share of runtime): meet + time sprint (5%) → dramatic-irony thesis + first escalation (3%) → initiation set pieces, one per relative / custom / red flag (25%) → the big set piece at full volume: the wedding in family premises, the discovery in dark premises (20%) → sincere turn near 50% with ONE plain earnest line (or the midpoint twist in thrillers) → living it: move-in, an in-law visit, the first real fight, outside pressure (25%) → her vulnerability or a crisis where she carries you (12%) → reflection + a quiet final two-person scene (12%).
-- VARIANTS: "Fall in Love with..." stops at commitment (no wedding). Family comedies end on the wedding night or run 2-5 years. "Marry a [criminal/dangerous woman]" marries at ~0:20 and then follows a thriller track (paranoia → proof → ally → twist at ~46% → resolution), dry wit early, no jokes after the midpoint, eerie last line.
-- SET PIECE PATTERN: headline sentence ("Then the shoes disappear.") → escalating specifics with exact numbers (47 people, 17 toasts, 300%) → your failed attempt → deadpan button of five words or fewer ("You deploy all nine.") → a small acceptance token ("hermano", "He tries hard. That's enough.").
-- Change life stages with time stamps inside the narration, not headings: "4 months in." "Day 12." "Year two is different." "You're 5 years in now."
-- CALLBACKS: plant three motifs in the first 20% (a relative, a ritual, an object) and pay each one off; return to the opening image in the final 40 seconds.
-- ENDING: a small domestic scene (couch, window, balcony, the Sunday call), one reframing thesis ("You didn't marry an idea."), then 2-4 short sentences. Never summarize the video.""",
+        "desc": "« POV: You Marry a Russian Woman », « POV: You Fall in Love with a Female Yakuza » — une histoire d'amour racontée en « you », de la première rencontre à la dernière scène (façon Oddly Specific Lives).",
+        "heading": "a short time-stamp or event label used for structure only, never spoken (e.g. \"3 weeks later\", \"The rooftop\", \"Her mother's verdict\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it, and delay the label itself for a couple of minutes.
+- "YOU": an unnamed, ordinary guy, out of his depth, honest; he barely speaks and his lines are short. Give him one or two concrete, ordinary worries early (rent, a job, a broken nose).
+- "HER": competent and specific, never a prop. Show who she is through what she does and how others react to her. Later ONE private vulnerability and ONE crisis. She chooses you; you do not rescue her.
+- FOLLOW THE CHANNEL'S REFERENCE ANALYSIS (style bible) for the hook shape, beat map, dialogue density and ending. It is the proven model for this format.
+- Scenes, not summaries: named real places, a time of day, weather or light, one telling physical detail, then short loaded dialogue that carries the turn.
+- Move time inside the narration ("It takes 3 weeks", "Three months in", "Year two is different"), never with headings.
+- Plant 2-3 physical motifs early (an object, a ritual, the city, hands) and pay them off; the last line returns to the opening image.
+- "Marry" titles reach the proposal or wedding by ~60% and then show married life; "Fall in Love" titles stop at commitment. Danger premises keep real stakes; warm culture premises put the stakes in her family, customs and distance.
+- ENDING: a small, quiet two-person scene with 2-4 lines of dialogue, then a last physical image. Never summarize the video.""",
     },
     "business_explained": {
         "name": "How X Actually Makes Money (business expliqué)",
@@ -154,14 +161,20 @@ BANNED = {
            "restez jusqu'à la fin", "attachez vos ceintures", "force est de constater", "en somme"],
 }
 
-UNIVERSAL_RULES = """WRITING RULES (non-negotiable):
+MACHINE_BANS = ("let's dive / dive into, let's break this down, without further ado, let's unpack, let's jump in, "
+                "buckle up, here's the kicker, in today's world / day and age, delve, tapestry, unleash, robust, "
+                "game-changer, evolving / digital / modern / competitive landscape")
+
+UNIVERSAL_RULES = """WRITING RULES (non-negotiable — FacelessOS):
 - This is a VOICEOVER script: write only what the narrator says out loud. No stage directions, no [brackets], no emojis, no markdown, no bullet points, no scene descriptions.
-- Spoken rhythm: mostly short and medium sentences, varied length, one idea per sentence. It must sound natural when read by a text-to-speech voice.
-- The first sentence must hook within 5 seconds: no greeting, no channel name, no "in this video". Open a loop the viewer needs closed.
-- Be SPECIFIC: real names, numbers, procedures, places, sensory details. Vague filler is forbidden. If you state a fact, it must be accurate; never invent statistics — prefer precise but safe phrasing.
-- Retention: every 30-60 seconds give a new reveal, twist, or question. End each section with a reason to keep watching.
-- Never repeat the same idea, sentence opener, or rhetorical device twice in a row. Max one rhetorical question per section.
-- Avoid AI-sounding clichés and these words/phrases: {banned}.
+- Speech, not prose: build every sentence in shapes a narrator actually says. If a VOICE ANCHOR sample is given, it is the reference for sentence shapes: borrow its register, never its content, lines, plot or hooks.
+- Write contractions (it's, don't, you're). NEVER use em dashes or en dashes (use a period, a comma, or the word the dash hides). No curly quotes, no ellipsis character.
+- Sentence one is a jolt, not homework and not a greeting: no "in this video", no channel name. Open a loop the viewer needs closed.
+- Every join between beats reads as "but" or "therefore", never "and then". A rehook or turn every 30-45 seconds, a payoff every 60-90 seconds, and the next question opens within 10 seconds of each payoff.
+- Be SPECIFIC: real names, places, times, sensory details. Real-world facts must be accurate and widely documented; never invent statistics or sources. Story details may be invented when the format is a story.
+- Vary sentence length (short punches between longer flowing sentences), and never repeat the same fact, phrase or opener without adding something new.
+- Never write: {machine}. Also avoid: {banned}.
+- Avoid the AI tells: "No X. No Y. No Z." drumbeats, "Most people..." openers, more than one "it's not X, it's Y" per script, empty emphasis words (powerful, game-changing, transformational), guru lines ("Let that sink in", "Here's the truth no one talks about"), staged candor ("Honestly?"), "-ing" padding clauses, significance inflation ("a pivotal moment"), movie-trailer beats ("One X. Then ten. Then..."), wise-narrator verdicts closing paragraphs.
 - Write numbers the way they are spoken naturally in the target language (digits are fine for years and big numbers)."""
 
 
@@ -174,20 +187,28 @@ def _banned(code):
     return ", ".join(f'"{w}"' for w in words)
 
 
+def voice_anchor(ch):
+    """Extrait parlé VERBATIM de la vidéo de référence (voice anchoring), '' sans référence."""
+    return FOS.anchor(ch.get("reference_scripts") or "")
+
+
 def _channel_block(ch):
     """Contexte de chaîne injecté dans tous les prompts d'écriture."""
     parts = [f"CHANNEL: {ch.get('name') or 'Untitled channel'}"]
     for key, label in (("niche", "Niche"), ("audience", "Target audience"), ("tone", "Narrator & tone"),
-                       ("rules", "Channel rules (must follow)"), ("cta", "Outro call-to-action (use once, at the very end, short)")):
+                       ("rules", "Channel rules (must follow)"), ("cta", "Call-to-action (one, woven in mid-video, short)")):
         if (ch.get(key) or "").strip():
             parts.append(f"{label}: {ch[key].strip()}")
     if (ch.get("bible") or "").strip():
-        parts.append("CHANNEL STYLE BIBLE (derived from the channel's best videos — imitate this voice closely):\n"
-                     + ch["bible"].strip())
-    ref = (ch.get("reference_scripts") or "").strip()
-    if ref:
-        parts.append("REFERENCE EXCERPT (for voice and rhythm ONLY — never copy its content):\n\"\"\"\n"
-                     + ref[:2500] + "\n\"\"\"")
+        parts.append("REFERENCE ANALYSIS / CHANNEL STYLE BIBLE (derived from the reference video of this format — "
+                     "follow its hook shape, beat map, rhythm and ending):\n" + ch["bible"].strip())
+    anc = voice_anchor(ch)
+    if anc:
+        parts.append("VOICE ANCHOR — verbatim spoken narration from the channel's reference video. This is the shape "
+                     "test reference: every sentence you write must use sentence shapes this narrator uses. Borrow "
+                     "the register only; never reuse its plot, lines, images or hooks.\n\"\"\"\n" + anc + "\n\"\"\"")
+    elif not (ch.get("bible") or "").strip():
+        parts.append("No reference video for this format: stay in the channel's narration theme (tone and rules above).")
     return "\n\n".join(parts)
 
 
@@ -203,7 +224,7 @@ def _system(ch):
         "You write in " + lang_label(lang) + ".\n\n"
         + _channel_block(ch) + "\n\n"
         "VIDEO FORMAT: " + fmt["name"] + "\n" + fmt["structure"] + "\n\n"
-        + UNIVERSAL_RULES.format(banned=_banned(lang))
+        + UNIVERSAL_RULES.format(banned=_banned(lang), machine=MACHINE_BANS)
     )
 
 
@@ -215,24 +236,27 @@ def target_words(ch, minutes):
 # ── 1. Bible de chaîne ──────────────────────────────────────────────────────
 
 def build_bible(ch, reference_text):
+    """Analyse de la vidéo de référence (méthode FacelessOS « competitor transcript analysis »)."""
     lang = (ch.get("language") or "fr").lower()
-    prompt = f"""Analyze these reference scripts/transcripts from a successful YouTube channel and write a reusable STYLE BIBLE that another writer can follow to produce new scripts that feel like the same channel.
+    st = FOS.text_stats(reference_text)
+    prompt = f"""Use the FacelessOS methodology to analyze this transcript from a top-performing video of the format this channel makes. Apply the retention mechanics, hook patterns and structure frameworks. Write a REFERENCE ANALYSIS that another writer will follow for every new script of this channel.
 
-Write the bible in {lang_label(lang)}, as concise bullet points (max ~350 words), covering:
-1. Narrator persona & point of view (person, tense, attitude, how it addresses the viewer).
-2. Hook formula used in the first 15 seconds (describe the pattern + 2 short example hooks in that style, on NEW topics).
-3. Structure pattern (sections, how they escalate, typical length of a section).
-4. Sentence rhythm & vocabulary level; recurring devices (callbacks, questions, numbers, humor...).
-5. Transitions between sections (with 2 examples).
-6. How it ends (outro pattern).
-7. What to AVOID to stay on-brand.
-Output ONLY the bible text.
+Measured on the transcript: {st['words']} words, {st['sentences']} sentences, {st['avg']} words per sentence on average, {st['short_pct']}% of sentences of 1-4 words, {st['long_pct']}% of 25+ words, {st['dialogue_lines']} quoted dialogue lines.
 
-REFERENCE:
+Write it in {lang_label(lang)}, max ~500 words, as short labeled paragraphs (FORMAT, HOOK, BEAT MAP, VOICE, DIALOGUE, TRANSITIONS, MOTIFS, ENDING, AVOID):
+1. HOOK: how sentence one lands, what the first ~45 seconds do (context lean, jolt, turn, promise), the word count, when the premise's label is first said.
+2. BEAT MAP: the sections as shares of runtime (0-18%, ...) with what each one does and where the emotional turns are.
+3. VOICE: person, tense, sentence rhythm (use the measured numbers), recurring devices (similes, understatement, numbers), 3-4 short verbatim example shapes quoted from the transcript.
+4. DIALOGUE, TRANSITIONS and time jumps: how they are handled, with short quoted examples.
+5. MOTIFS and CALLBACKS, and how the ending lands.
+6. AVOID: what not to copy. The reference teaches style, never content (no plot, lines or hooks reused), and FacelessOS rules win on any conflict: at most 2 antithesis constructions and 1 aphoristic closer per script, no em dashes, no trailer voice.
+Output ONLY the analysis text.
+
+REFERENCE TRANSCRIPT:
 \"\"\"
-{reference_text[:12000]}
+{reference_text[:14000]}
 \"\"\""""
-    return ai.chat(prompt, model=ai.text_model(), reasoning="medium").strip()
+    return ai.chat(prompt, model=ai.text_model(), reasoning="medium", timeout=300).strip()
 
 
 # ── Idées de vidéos ─────────────────────────────────────────────────────────
@@ -285,40 +309,75 @@ Give {count} concrete channel concepts. Return JSON:
 
 # ── 2. Plan ─────────────────────────────────────────────────────────────────
 
-def outline(ch, title, minutes, notes=""):
+def outline(ch, title, minutes, notes="", brief=None, hook=None, avoid=None):
+    """Plan. Avec FacelessOS : part du brief (STEP 0) et du hook retenu, planifie les boucles,
+    les motifs, le grand payoff annoncé 3 fois et les choix de rotation."""
     words = target_words(ch, minutes)
     fmt = _format(ch)
     n_sections = max(3, min(14, round(words / 190)))
     lang = (ch.get("language") or "fr").lower()
+    fos = ""
+    if brief is not None and FOS.available():
+        hook_block = ("APPROVED HOOK (the video opens with it verbatim; plan the sections that follow it):\n<<<\n"
+                      + hook + "\n>>>") if hook else ""
+        fos = f"""
+RESEARCH BRIEF (STEP 0 — build from it, never contradict it):
+{brief_text(brief)}
+{hook_block}
+
+STRUCTURE REQUIREMENTS (FacelessOS — script-structures, retention-mechanics, outro-psychology):
+- 3-act frame: Departure 15-20%, Initiation 60-70%, Return 15-20%, inside the channel's reference beat map.
+- Dopamine ladder: the hook opens the main question; each section builds anticipation, closes a loop with a non-obvious payoff and opens the next loop within 10 seconds. No loop left open at the end; no loop closes without the next one opening (until the final payoff).
+- The grand payoff is foreshadowed 3 times (the hook, ~30%, ~60%) and lands as the culmination of everything before it.
+- Every join between sections reads as BUT or THEREFORE, never AND THEN. Each paragraph delivers new information, progress, an obstacle or an emotional change.
+- 2-3 physical motifs planted in the first 20% and paid off; the ending returns to the opening image.
+- Ending architecture: the script ends AT the final payoff. No wind-down, no summary, no outro scent.
+- The first sentence after the hook pays or escalates, never orients ("To understand why..." is forbidden before a payoff).
+
+VARIETY ROTATION (variety-rotation-skill.md): pick one option per slot and log it. Adapt each pick to this format's narration (second person, present tense for POV); the options are moves, not lines to paste. Do NOT reuse these picks from the channel's last scripts: {avoid or 'none logged yet'}.
+{_rotation_banks()}
+"""
     prompt = f"""Create the detailed outline of a {minutes}-minute video (≈{words} spoken words in total).
 
 TITLE: {title}
 {('EXTRA INSTRUCTIONS FROM THE CREATOR: ' + notes) if notes else ''}
-
+{fos}
 Plan about {n_sections} sections after the hook (adapt to the format). Section heading style: {fmt['heading']} — headings in {lang_label(lang)}.
-For each section give the beats (the concrete facts, scenes, numbers and twists it will contain — be specific, this is where the research happens) and a word budget. The budgets must add up to ≈{words} words including the hook.
+For each section give the beats (the concrete facts, scenes, numbers and twists it will contain — be specific, this is where the research happens), its emotional beat, the loop it closes and the loop it opens, and a word budget. The budgets must add up to ≈{words} words including the hook.
 
 Return JSON:
 {{
   "title": "final title",
   "hook": {{"beats": ["..."], "target_words": 60}},
-  "sections": [{{"heading": "...", "beats": ["...", "..."], "target_words": 180}}],
-  "ending": "how the last section lands (callback / twist)"
+  "sections": [{{"heading": "...", "beats": ["...", "..."], "emotion": "...", "closes": "loop it pays off", "opens": "loop it opens", "exit": "how it hands off to the next section (rotation pick)", "target_words": 180}}],
+  "promise": "the one promise the hook makes",
+  "payoff": "the grand payoff and where it lands",
+  "foreshadow": ["where and how the payoff is foreshadowed"],
+  "motifs": ["motif: planted where -> paid off where"],
+  "rotation": {{"slot1": "", "slot2": [], "slot4": [], "slot6": [], "slot7": "", "slot8": "", "slot9": ""}},
+  "ending": "how the last section lands (callback / final image)"
 }}"""
     data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
                         model=ai.text_model(), reasoning="medium", timeout=300)
     secs = [s for s in (data.get("sections") or []) if isinstance(s, dict) and s.get("heading")]
     if not secs:
         raise ai.AIError("Le plan renvoyé est vide — relance.")
-    hook = data.get("hook") if isinstance(data.get("hook"), dict) else {"beats": [], "target_words": 60}
+    hook_d = data.get("hook") if isinstance(data.get("hook"), dict) else {"beats": [], "target_words": 60}
+    if hook:
+        hook_d["target_words"] = word_count(hook)
     # budgets recalés pour que leur somme = cible (le modèle arrondit souvent large)
-    raw = [int(hook.get("target_words") or 50)] + [int(x.get("target_words") or 150) for x in secs]
-    scale = words / float(sum(raw) or 1)
-    hook["target_words"] = max(25, round(raw[0] * scale))
+    raw = [int(hook_d.get("target_words") or 50)] + [int(x.get("target_words") or 150) for x in secs]
+    scale = (words - (raw[0] if hook else 0)) / float((sum(raw[1:]) if hook else sum(raw)) or 1)
+    if not hook:
+        hook_d["target_words"] = max(25, round(raw[0] * scale))
     for x, r in zip(secs, raw[1:]):
         x["target_words"] = max(30, round(r * scale))
-    return {"title": data.get("title") or title, "hook": hook, "sections": secs, "ending": data.get("ending", ""),
-            "target_words": words}
+    out = {"title": data.get("title") or title, "hook": hook_d, "sections": secs, "ending": data.get("ending", ""),
+           "target_words": words}
+    for k in ("promise", "payoff", "foreshadow", "motifs", "rotation"):
+        if data.get(k):
+            out[k] = data[k]
+    return out
 
 
 def _outline_text(ol):
@@ -327,6 +386,10 @@ def _outline_text(ol):
         lines.append(f"{i}. {s['heading']} ({s.get('target_words', '?')} words): " + " | ".join(s.get("beats") or []))
     if ol.get("ending"):
         lines.append("ENDING: " + ol["ending"])
+    for k, lab in (("promise", "PROMISE"), ("payoff", "GRAND PAYOFF"), ("foreshadow", "FORESHADOW"), ("motifs", "MOTIFS")):
+        v = ol.get(k)
+        if v:
+            lines.append(f"{lab}: " + (" | ".join(map(str, v)) if isinstance(v, list) else str(v)))
     return "\n".join(lines)
 
 
@@ -360,8 +423,12 @@ def write_section(ch, ol, idx, previous_tail):
         s = ol["sections"][idx]
         last = idx == len(ol["sections"]) - 1
         n = int(s.get("target_words") or 180)
+        extra = "".join(f" {lab}: {s[k]}." for k, lab in (("emotion", "Emotional beat"), ("closes", "Loop it pays off"),
+                                                              ("opens", "Loop it opens"), ("exit", "Hand-off"))
+                        if s.get(k))
         what = (f"section {idx + 1}/{len(ol['sections'])} \"{s['heading']}\". Beats: " + " | ".join(s.get("beats") or [])
-                + f". LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit — pick the strongest beats if they don't all fit)."
+                + "." + extra
+                + f" LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit — pick the strongest beats if they don't all fit)."
                 + (" This is the LAST section: land the ending (" + (ol.get("ending") or "strong final line") + ")."
                    if last else " End with a one-line hook into the next section."))
     if previous_tail:
@@ -444,6 +511,309 @@ def fit_length(ch, parts, budgets, tolerance=0.15):
     return out
 
 
+# ── FacelessOS : Research → Brainstorm → Greenlight ────────────────────────
+
+FORMAT_NOTES = """HOW FACELESSOS APPLIES TO THIS TOOL (read before any check):
+- Output mode = clean TTS prose (Vidrush-like): every word is spoken by an AI voice over AI images. Lines starting with "## " are structure labels, never spoken: ignore them in every check. There are no [VISUAL] cues and there must be no brackets, timestamps or stage directions in the spoken copy.
+- Story formats (POV stories, "your life if", fiction) run in FacelessOS Fiction Mode: invented story events, people and in-story numbers ("It takes 3 weeks", "28 years old") are fiction and are NOT D5 findings. D5 and the verify-or-cut rule apply to real-world claims only (customs, history, places, laws, statistics): each must be accurate and widely documented, otherwise cut or soften it. A real-world statistic that is not common knowledge is a finding.
+- Checks written for documentaries are graded by their intent: C4 (perspective shift) = the viewer's picture of the premise at the end differs from the one they arrived with; E1 "specific sourcing" and "original research" = correct, specific real-world detail beyond the obvious clichés; E1 "human review" scores 0 until the creator edits the script. A check that genuinely cannot apply is N/A, never a failure.
+- The channel's own rules win on channel conventions: if the channel says "no CTA", a missing CTA is not a finding (the ending architecture still applies: end at the final payoff).
+- The reference video is the voice anchor for D1/D4 and the comparison hook for A4 (quote its opening). Shapes it uses pass the shape test, EXCEPT where FacelessOS caps them (D7 thresholds, machine bans, em dashes).
+- Length: the spoken word count must stay within ±20% of the target."""
+
+
+def brief_text(brief):
+    if not brief:
+        return "(no brief)"
+    lines = [f"TOPIC: {brief.get('topic', '')}", f"ANGLE: {brief.get('angle', '')}", "PROOF BANK:"]
+    for it in brief.get("proof_bank") or []:
+        if isinstance(it, dict):
+            lines.append(f"→ {it.get('item', '')} ({it.get('basis', '')})")
+        else:
+            lines.append(f"→ {it}")
+    lines += [f"HOOK DIRECTION: {brief.get('hook_direction', '')}", f"STRUCTURE HINT: {brief.get('structure_hint', '')}"]
+    return "\n".join(lines)
+
+
+def _rotation_banks():
+    txt = FOS.skill("variety-rotation-skill.md")
+    keep = [FOS.section("variety-rotation-skill.md", "Rotation Guardrails")]
+    for h in ("SLOT 1:", "SLOT 2:", "SLOT 4:", "SLOT 6:", "SLOT 7:", "SLOT 8:", "SLOT 9:", "CROSS-SCRIPT RULES"):
+        keep.append(FOS.section("variety-rotation-skill.md", h))
+    return "\n\n".join(k for k in keep if k) if txt else ""
+
+
+def research_brief(ch, title, minutes, notes=""):
+    """STEP 0 (research-and-ideation-skill.md) : le brief à 5 champs, sans navigation web."""
+    parts = [FOS.section("research-and-ideation-skill.md", "Angle mining", 2),
+             FOS.section("research-and-ideation-skill.md", "The verify-or-cut rule", 3),
+             FOS.section("research-and-ideation-skill.md", "The output contract", 2)]
+    prompt = f"""Run the FacelessOS research front-end for this video and produce the five-field brief. The skill text is below; run it from the open file.
+
+VIDEO TITLE: {title}  ({minutes} minutes)
+{('CREATOR NOTES: ' + notes) if notes else ''}
+
+CONSTRAINTS OF THIS TOOL: there is no web browsing here. The PROOF BANK may only hold facts you are certain are accurate and widely documented; give the kind of source that documents each one (e.g. "standard Filipino wedding custom, covered by the Philippine National Commission for Culture and the Arts"). Never guess a number or a source: an uncertain item is cut, not softened into a guess. For story formats (POV stories), the PROOF BANK holds the real-world specifics the story will stand on (customs, rituals, foods, words, places, laws, history of the setting), 6-10 items, and the ANGLE is the story's non-obvious take on the premise (write the default sentence first, run all four frames, keep the winner).
+
+SKILL (research-and-ideation-skill.md):
+{chr(10).join(p for p in parts if p)}
+
+Return JSON:
+{{"default_sentence": "...", "frames": {{"contrarian": "...", "hidden_cost": "...", "untold_story": "...", "mechanism_reveal": "..."}},
+  "topic": "...", "angle": "winning frame + the take", "proof_bank": [{{"item": "...", "basis": "kind of source that documents it"}}],
+  "hook_direction": "which item or story moment leads + the tension it plants", "structure_hint": "..."}}"""
+    data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
+                        model=ai.text_model(), reasoning="medium", timeout=300)
+    if not data.get("angle"):
+        raise ai.AIError("Brief de recherche vide — relance.")
+    return data
+
+
+def _reference_opening(ch, words=110):
+    anc = voice_anchor(ch)
+    if not anc:
+        return ""
+    return " ".join(anc.split("[...]")[0].split()[:words])
+
+
+def hook_options(ch, title, minutes, brief, history=None):
+    """Brainstorm : 3 hooks sur 3 ouvertures différentes, notés contre la référence (A4) et
+    contre les dernières vidéos de la chaîne (diff de bibliothèque) → le meilleur."""
+    total = target_words(ch, minutes)
+    n = max(60, min(130, round(total * 0.06)))
+    past = [h for h in (history or []) if h.get("hook")]
+    past_txt = "\n".join(f'- "{h["title"]}": "{h["hook"]}"' + (f' (rotation: {h["rotation"]})' if h.get("rotation") else "")
+                         for h in past[:3]) or "- (no previous scripts on this channel)"
+    ref = _reference_opening(ch)
+    skills = "\n\n".join(x for x in (
+        FOS.section("faceless-scripts-os-master.md", "CRITICAL: Conversational Flow"),
+        FOS.section("REAL-FACELESS-HOOK-SWIPE.md", "How to use these in v5"),
+        FOS.section("REAL-FACELESS-HOOK-SWIPE.md", "THE 4 HOOK MISTAKES"),
+        FOS.section("greenlight-audit-skill.md", "Group A - Hook"),
+        FOS.section("variety-rotation-skill.md", "SLOT 9:"),
+        FOS.section("voice-anchoring-skill.md", "The four written-not-spoken tells")) if x)
+    prompt = f"""STEP 2 of FacelessOS: write 3 different hooks for this video, grade them, keep the best. Run from the skill text below.
+
+VIDEO TITLE: {title}
+RESEARCH BRIEF:
+{brief_text(brief)}
+
+HOOK LENGTH: {n - 15}-{n + 10} words each (the whole cold open up to its button line).
+COMPARISON HOOK FOR A4 (the proven winner of this format, verbatim — beat it on its own merits, never copy it):
+<<<
+{ref or '(no reference video: grade against the swipe files)'}
+>>>
+CHANNEL-LIBRARY DIFF (variety-rotation guardrail 2): the new hook must open on a DIFFERENT move and a DIFFERENT through-concept than these recent hooks, not just different wording:
+{past_txt}
+
+Rules: each option uses a different opening move and a different hook turn (Slot 9). Sentence one is a jolt that already contains the video's best tension. Speech, not trailer voice: every sentence must be a shape the VOICE ANCHOR narrator uses. No em dashes.
+
+SKILLS:
+{skills}
+
+Return JSON:
+{{"options": [{{"move": "opening move in a few words", "slot9": "e.g. 9C", "text": "the full hook"}}],
+  "grades": [{{"option": 0, "scroll_stop": "yes/no + why", "sayable": "yes/no + why", "beats_reference": "yes/no + why", "differs_from_library": "yes/no"}}],
+  "winner": 0, "why": "one sentence"}}"""
+    data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
+                        model=ai.text_model(), reasoning="high", timeout=360)
+    opts = [o for o in (data.get("options") or []) if isinstance(o, dict) and (o.get("text") or "").strip()]
+    if not opts:
+        raise ai.AIError("Aucun hook proposé — relance.")
+    w = data.get("winner")
+    w = w if isinstance(w, int) and 0 <= w < len(opts) else 0
+    for o in opts:
+        o["text"] = FOS.mech_fix(_clean(o["text"]))
+    return {"options": opts, "grades": data.get("grades") or [], "winner": w, "why": data.get("why", ""),
+            "hook": opts[w]["text"], "slot9": opts[w].get("slot9", ""), "move": opts[w].get("move", "")}
+
+
+def _audit_skills(half):
+    """Texte des skills lu par l'audit (« run from the open file, never from memory »).
+    half = "structure" (groupes A, B, C, E) ou "voice" (groupe D)."""
+    g = "greenlight-audit-skill.md"
+    head = FOS.skill(g).split("## Group A - Hook")[0].strip()
+    if half == "structure":
+        blocks = [(g + " — rules", head), (g + " — Group A", FOS.section(g, "Group A - Hook")),
+                  (g + " — Group B", FOS.section(g, "Group B - Retention")), (g + " — Group C", FOS.section(g, "Group C - Red-Tape")),
+                  (g + " — Group E", FOS.section(g, "Group E - Authenticity")),
+                  ("retention-mechanics-skill.md", FOS.skill("retention-mechanics-skill.md")),
+                  ("faceless-scripts-os-master.md — STEP 4: Transitions & Rehooks",
+                   FOS.section("faceless-scripts-os-master.md", "STEP 4: Transitions")),
+                  ("outro-psychology-skill.md — The Ending Architecture",
+                   FOS.section("outro-psychology-skill.md", "The Ending Architecture"))]
+    else:
+        blocks = [(g + " — rules", head), (g + " — Group D", FOS.section(g, "Group D - Voice + Anti-slop")),
+                  ("humanizer-skill.md", FOS.skill("humanizer-skill.md")),
+                  ("voice-anchoring-skill.md", FOS.skill("voice-anchoring-skill.md")),
+                  ("faceless-scripts-os-master.md — ANTI-AI SLOP CHECKLIST",
+                   FOS.section("faceless-scripts-os-master.md", "ANTI-AI SLOP CHECKLIST"))]
+    return "\n\n".join(f"===== {name} =====\n{txt}" for name, txt in blocks if txt)
+
+
+def _numbered(parts):
+    return "\n\n".join(f"[{i}] {h or 'HOOK'}\n{t}" for i, (h, t) in enumerate(parts))
+
+
+_FIX_SPEC = ('"fixes": [{"n": 1, "check": "e.g. D7", "part": 0, "quote": "exact verbatim text from that part", '
+             '"problem": "what fails and which pass condition", "fix": "precise instruction: register translation, never de-clawing"}]')
+_HALF_SPEC = {
+    "structure": """{"verdict": "PASS" | "FIX-THEN-PASS" | "HOLD",
+  "hold_reason": "only for HOLD: the structural problem editing cannot patch",
+  "A": {"sentence_one": "verbatim", "hook_words": 0, "turn": "But / However / equivalent", "a4": "graded against the quoted reference opening: won / lost / BLOCKED", "result": "clean or finding"},
+  "B": {"loop_ledger": ["question: opens [part] closes [part]"], "result": "clean or finding"},
+  "C": {"result": "clean or finding"},
+  "promise_map": "hook promises X -> paid in part N",
+  "E": {"score": "x/7", "missing": "signals scored 0", "red_flags": 0},
+  """ + _FIX_SPEC + "}",
+    "voice": """{"verdict": "PASS" | "FIX-THEN-PASS",
+  "D": {"anchor": "whose transcript", "shapes_quoted": ["verbatim anchor shape", "..."], "matched_line": "script line = anchor shape", "result": "clean or finding"},
+  "D5": ["each real-world number or claim = its basis, or 'no real-world numbers'"],
+  "D7": {"antithesis": ["\\"instance\\" (part N)"], "aphorisms": ["\\"instance\\" (part N)"], "floor": FLOOR, "result": "N antithesis, M aphoristic closers; threshold ok or finding"},
+  """ + _FIX_SPEC + "}",
+}
+
+
+def _audit_half(ch, half, title, parts, brief, ol, target, words, sc):
+    ref = _reference_opening(ch)
+    groups = "Groups A, B, C and E (Group D runs in a separate pass)" if half == "structure" else \
+             "Group D, checks D1 to D7 (Groups A, B, C and E run in a separate pass)"
+    system = (_system(ch) + "\n\n" + FORMAT_NOTES +
+              "\n\nYou are now running the FacelessOS v5 GREENLIGHT AUDIT on a finished draft. The skill files are below. "
+              "Run every check from this open text, never from memory.\n\n" + _audit_skills(half))
+    extra = (f"A4 COMPARISON HOOK (reference video opening, verbatim): {ref or 'none: A4 = BLOCKED unless the swipe files serve'}\n"
+             f"PLAN PROMISE / PAYOFF: {(ol or {}).get('promise', '')} / {(ol or {}).get('payoff', '')}\n"
+             f"RESEARCH BRIEF:\n{brief_text(brief) if brief else '(none)'}") if half == "structure" else (
+             "SCANNER REPORT (trailer-voice-scan.py, run on this draft — D3: fix every HARD-BAN and mechanical hit on "
+             "sight; judge the shape flags by D1 against the anchor; the D7 ledger must list at least the floor):\n"
+             + FOS.scan_report(sc))
+    prompt = f"""Run {groups} of the greenlight audit on the script below. Collect EVERY finding of these groups in this one run: the loop only converges when a run lists all of them, and a finding skipped now costs a whole extra pass. Evidence bar: every finding QUOTES the exact offending text, copied verbatim from ONE part of the script, and names the check it fails; if you cannot quote failing text, there is no finding. Never manufacture a failure the text does not support, and never rubber-stamp: the fields below are the mandatory artifacts (write each ledger by re-reading the script in this pass, then count).
+
+VIDEO TITLE: {title}
+TARGET: {target} spoken words (script has {words}; ±20% allowed).
+{extra}
+
+SCRIPT (parts numbered [0], [1]...; "HOOK" and headings are labels, not spoken):
+{_numbered(parts)}
+
+Return ONLY JSON:
+{_HALF_SPEC[half].replace("FLOOR", str(len(sc["floor"])))}
+The verdict is PASS only when "fixes" is empty. Number fixes from 1."""
+    msgs = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
+    try:
+        return ai.chat_json(msgs, model=ai.text_model(), reasoning="high", timeout=600, tries=1)
+    except ai.AIError:  # trop long pour le proxy : même audit, raisonnement plus court
+        return ai.chat_json(msgs, model=ai.text_model(), reasoning="medium", timeout=600)
+
+
+def greenlight(ch, title, parts, brief=None, ol=None, minutes=None):
+    """Greenlight audit (groupes A-E + scanner d'origine) → verdict structuré.
+    Deux passes parallèles (structure A/B/C/E, voix D) pour rester sous les délais du proxy."""
+    sc = FOS.scan(parts)
+    words = sum(word_count(t) for _, t in parts)
+    target = (ol or {}).get("target_words") or (target_words(ch, minutes) if minutes else words)
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        futs = {h: ex.submit(_audit_half, ch, h, title, parts, brief, ol, target, words, sc) for h in ("structure", "voice")}
+        halves = {h: f.result() for h, f in futs.items()}
+    data = {}
+    for h in ("structure", "voice"):
+        for k, v in halves[h].items():
+            if k not in ("fixes", "verdict"):
+                data[k] = v
+    hold = halves["structure"].get("verdict") == "HOLD"
+    fixes = []
+    for f in (halves["structure"].get("fixes") or []) + (halves["voice"].get("fixes") or []):
+        if not isinstance(f, dict):
+            continue
+        try:
+            i = int(f.get("part"))
+        except (TypeError, ValueError):
+            continue
+        q = (f.get("quote") or "").strip().strip('"')
+        if not (0 <= i < len(parts)) or not q:
+            continue
+        # règle de preuve : la citation doit exister dans la partie (sinon pas de finding)
+        if _norm_q(q) not in _norm_q(parts[i][1]):
+            hit = [j for j, (_, t) in enumerate(parts) if _norm_q(q) in _norm_q(t)]
+            if not hit:
+                continue
+            i = hit[0]
+        f["part"] = i
+        f["n"] = len(fixes) + 1
+        fixes.append(f)
+    # le scanner est une machine : un HARD-BAN restant est toujours un fix
+    for i, (_, t) in enumerate(parts):
+        for name in FOS.hard_ban_hits(t):
+            if not any(x["part"] == i and "HARD" in (x.get("check") or "").upper() for x in fixes):
+                fixes.append({"n": len(fixes) + 1, "check": "D3 HARD-BAN", "part": i, "quote": "", "problem": name,
+                              "fix": "Remove the machine-banned phrase; say the thing plainly in the anchor's register."})
+    data["fixes"] = fixes
+    data["verdict"] = "HOLD" if hold else ("PASS" if not fixes else "FIX-THEN-PASS")
+    data["scan"] = {k: len(v) for k, v in sc.items()}
+    data["words"] = words
+    return data
+
+
+def _norm_q(t):
+    return re.sub(r"\s+", " ", (t or "").replace("’", "'").replace("“", '"').replace("”", '"')).strip().lower()
+
+
+def apply_fixes(ch, title, parts, fixes, budgets=None):
+    """Applique les fixes numérotés : retouches chirurgicales (le reste reste mot pour mot),
+    réécriture complète de la partie seulement si un fix est structurel."""
+    by_part = {}
+    for f in fixes:
+        by_part.setdefault(f["part"], []).append(f)
+    out = list(parts)
+
+    def fix_one(idx, items):
+        heading, text = parts[idx]
+        n = word_count(text)
+        before = parts[idx - 1][1][-400:] if idx > 0 else ""
+        after = parts[idx + 1][1][:250] if idx + 1 < len(parts) else ""
+        listing = "\n".join(f"Fix {f.get('n', k + 1)} ({f.get('check', '')}): quote «{f.get('quote', '')}» — "
+                            f"{f.get('problem', '')} → {f.get('fix', '')}" for k, f in enumerate(items))
+        prompt = f"""Apply these greenlight fixes to PART [{idx}] ({heading or 'HOOK'}) of the script for "{title}".
+{listing}
+
+Rules (voice-anchoring fix direction): register translation, never de-clawing. The jolt, the proof and the planted tension survive; only the delivery changes. If a fix makes the line weaker, the fix is wrong. Change ONLY what the fixes require: every other sentence stays word for word. No em dashes, contractions on, shapes from the VOICE ANCHOR. Keep the part at {int(n * 0.9)}-{int(n * 1.1)} words.
+Prefer local edits. Return JSON: {{"edits": [{{"old": "exact verbatim substring of the part", "new": "replacement"}}], "rewrite": null}}
+Only if a fix is structural (a flat stretch that needs a new loop, a missing payoff, a promise the part must now pay), return "rewrite": "<the full rewritten part>" instead.
+
+BEFORE: \"\"\"{before}\"\"\"
+PART [{idx}]: \"\"\"{text}\"\"\"
+AFTER: \"\"\"{after}\"\"\""""
+        data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
+                            model=ai.text_model(), reasoning="medium", timeout=300)
+        new = text
+        rw = data.get("rewrite")
+        if isinstance(rw, str) and word_count(rw) >= 0.6 * n:
+            new = _clean(rw)
+        else:
+            for e in data.get("edits") or []:
+                if not isinstance(e, dict) or not e.get("old"):
+                    continue
+                old, rep = e["old"], e.get("new") or ""
+                if old in new:
+                    new = new.replace(old, rep, 1)
+                else:  # tolérance sur les espaces / guillemets
+                    m = re.search(re.escape(_norm_q(old)).replace(r"\ ", r"\s+"), new, flags=re.I)
+                    if m:
+                        new = new[:m.start()] + rep + new[m.end():]
+        return FOS.mech_fix(new)
+
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {idx: ex.submit(fix_one, idx, items) for idx, items in by_part.items()}
+        for idx, fut in futs.items():
+            try:
+                new = fut.result()
+                if word_count(new) >= 0.5 * word_count(parts[idx][1]):
+                    out[idx] = (parts[idx][0], new)
+            except Exception:  # un fix raté ne bloque pas les autres ; l'audit suivant le reverra
+                pass
+    return out
+
+
 # ── Pipeline complet ────────────────────────────────────────────────────────
 
 def compose(parts):
@@ -481,12 +851,16 @@ def word_count(text):
     return len((text or "").split())
 
 
-def generate(ch, title, minutes, notes="", polish=True, progress=None):
-    """Script complet. progress(pct, message, partial_script_or_None)."""
+def generate(ch, title, minutes, notes="", polish=True, progress=None, history=None, rounds=None):
+    """Script complet. progress(pct, message, partial_script_or_None).
+
+    history = dernières vidéos de la chaîne [{title, hook, rotation}] (diff de bibliothèque FacelessOS)."""
     def step(p, m, partial=None):
         if progress:
             progress(p, m, partial)
 
+    if polish and FOS.available():
+        return _generate_fos(ch, title, minutes, notes, step, history or [], rounds)
     step(0.03, "Plan de la vidéo (hook, sections, beats)…")
     ol = outline(ch, title, minutes, notes)
     total = len(ol["sections"]) + 1
@@ -530,6 +904,99 @@ def generate(ch, title, minutes, notes="", polish=True, progress=None):
     step(1.0, "Script prêt.", script)
     return {"title": ol["title"], "outline": ol, "script": script, "review": report,
             "words": word_count(narration(script))}
+
+
+def _write_all(ch, ol, hook, step, p0, p1):
+    parts = [("", hook)] if hook else []
+    tail = hook[-600:] if hook else ""
+    start = 0 if hook else -1
+    n = len(ol["sections"]) - start
+    for k, i in enumerate(range(start, len(ol["sections"]))):
+        label = "le hook" if i < 0 else f"la section {i + 1}/{len(ol['sections'])} — {ol['sections'][i]['heading']}"
+        step(p0 + (p1 - p0) * k / max(1, n), f"[Write] Écriture de {label}…", compose(parts) if parts else None)
+        text = FOS.mech_fix(write_section(ch, ol, i, tail))
+        parts.append(("" if i < 0 else ol["sections"][i]["heading"], text))
+        tail = text[-600:]
+    return parts
+
+
+def _generate_fos(ch, title, minutes, notes, step, history, rounds=None):
+    """Research → Brainstorm → Structure → Write → Greenlight (boucle jusqu'à une passe propre)."""
+    max_rounds = int(rounds or os.getenv("FOS_MAX_ROUNDS") or 3)
+    step(0.02, "[Research] Brief : angle, faits réels, direction du hook…")
+    brief = research_brief(ch, title, minutes, notes)
+    step(0.08, "[Brainstorm] 3 hooks, notés contre la vidéo de référence…")
+    hk = hook_options(ch, title, minutes, brief, history)
+    avoid = "; ".join(f"{h['title']}: {h['rotation']}" for h in history[:3] if h.get("rotation")) or ""
+    step(0.15, "[Structure] Plan, boucles, motifs et rotation…", compose([("", hk["hook"])]))
+    ol = outline(ch, title, minutes, notes, brief=brief, hook=hk["hook"], avoid=avoid)
+    ol.setdefault("rotation", {})
+    if isinstance(ol["rotation"], dict) and hk.get("slot9"):
+        ol["rotation"]["slot9"] = hk["slot9"]
+    parts = _write_all(ch, ol, hk["hook"], step, 0.20, 0.62)
+    budgets = [word_count(hk["hook"])] + [int(x.get("target_words") or 180) for x in ol["sections"]]
+    if abs(sum(word_count(t) for _, t in parts) - sum(budgets)) > 0.15 * sum(budgets):
+        step(0.63, "[Write] Ajustement de la longueur…", compose(parts))
+        parts = [(h, FOS.mech_fix(t)) for h, t in fit_length(ch, parts, budgets)]
+
+    parts, final, runs, verdict = greenlight_loop(ch, ol["title"], parts, brief, ol, minutes, max_rounds, step, 0.65, 0.98)
+    if final == "HOLD":
+        # HOLD : problème de structure → retour au plan (une fois), puis audit complet depuis le début
+        step(0.7, "[Greenlight] HOLD → retour au plan : " + (verdict.get("hold_reason") or "")[:90], compose(parts))
+        ol = outline(ch, title, minutes, (notes + "\n" if notes else "") + "The previous draft was put on HOLD by the "
+                     "greenlight audit: " + (verdict.get("hold_reason") or "") + " Fix this at the outline level.",
+                     brief=brief, hook=hk["hook"], avoid=avoid)
+        parts = _write_all(ch, ol, hk["hook"], step, 0.72, 0.85)
+        parts, final, more, verdict = greenlight_loop(ch, ol["title"], parts, brief, ol, minutes, max_rounds, step,
+                                                      0.86, 0.98)
+        runs += [dict(r, round=len(runs) + r["round"]) for r in more]
+    script = compose(parts)
+    report = {"engine": "facelessos", "verdict": final, "rounds": runs, "block": verdict,
+              "brief": brief, "hooks": {k2: hk[k2] for k2 in ("options", "grades", "winner", "why")},
+              "files_used": FOS.files_used(),
+              # compatibilité avec l'ancien panneau « Relecture IA »
+              "score": None, "issues": [{"part": f["part"], "problem": f"{f.get('check', '')}: {f.get('problem', '')}",
+                                          "fix": f.get("fix", "")} for r in runs for f in r.get("fixes") or []]}
+    step(1.0, f"Script prêt — verdict FacelessOS : {final}.", script)
+    return {"title": ol["title"], "outline": ol, "script": script, "review": report,
+            "words": word_count(narration(script))}
+
+
+def greenlight_loop(ch, title, parts, brief=None, ol=None, minutes=None, rounds=3, step=None, p0=0.0, p1=1.0):
+    """Boucle de convergence : audit complet → fixes → audit complet… jusqu'à PASS (ou `rounds` passes)."""
+    def st(p, m, partial=None):
+        if step:
+            step(p, m, partial)
+    runs, verdict = [], {}
+    for k in range(1, rounds + 1):
+        p = p0 + (p1 - p0) * (k - 1) / rounds
+        st(p, f"[Greenlight] Audit FacelessOS, passe {k} (groupes A-E + scanner)…", compose(parts))
+        try:
+            verdict = greenlight(ch, title, parts, brief, ol, minutes)
+        except Exception as e:
+            runs.append({"round": k, "verdict": "ERROR", "error": str(e)[:300], "fixes": []})
+            break
+        runs.append({"round": k, "verdict": verdict["verdict"], "fixes": verdict["fixes"], "scan": verdict.get("scan"),
+                     "words": verdict.get("words"), "hold_reason": verdict.get("hold_reason", "")})
+        if verdict["verdict"] in ("PASS", "HOLD") or not verdict["fixes"]:
+            break
+        st(p + 0.5 * (p1 - p0) / rounds, f"[Greenlight] {len(verdict['fixes'])} fix(es) à appliquer…", compose(parts))
+        parts = apply_fixes(ch, title, parts, verdict["fixes"])
+    # la passe qui applique des fixes ne s'accorde jamais le PASS : il vient de la passe suivante
+    return parts, (runs[-1]["verdict"] if runs else "ERROR"), runs, verdict
+
+
+def audit_script(ch, title, script_text, minutes=None, rounds=2, progress=None):
+    """Greenlight sur un script existant (collé à la main, réécrit sur consigne…)."""
+    parts = [(h, FOS.mech_fix(t)) for h, t in parse(script_text)]
+    if not parts:
+        raise ai.AIError("Script vide.")
+    parts, final, runs, verdict = greenlight_loop(ch, title, parts, minutes=minutes, rounds=rounds, step=progress)
+    report = {"engine": "facelessos", "verdict": final, "rounds": runs, "block": verdict,
+              "files_used": FOS.files_used(), "score": None,
+              "issues": [{"part": f["part"], "problem": f"{f.get('check', '')}: {f.get('problem', '')}",
+                          "fix": f.get("fix", "")} for r in runs for f in r.get("fixes") or []]}
+    return compose(parts), report
 
 
 def rewrite_selection(ch, script_text, instruction):

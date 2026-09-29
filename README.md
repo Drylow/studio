@@ -34,7 +34,10 @@ mot de passe boss.
 1. **Chaîne.** C'est l'ADN de toutes ses vidéos :
    - langue et niche ;
    - format de script : Every Rank, Your Life If…, Ancient Life, Survie, Every X Explained, Histoire, Top ;
-   - bible de style, tirée de transcriptions de vidéos de référence (lien YouTube ou collage) ;
+   - **vidéo de référence du format** : une vidéo populaire de la niche (lien YouTube ou transcription
+     collée). L'app en tire une analyse FacelessOS (hook, découpage en % de la durée, rythme, dialogues,
+     fin) et garde un extrait mot pour mot de la narration comme « ancre de voix ». Le style est repris,
+     jamais le contenu. Sans référence, le script reste dans le ton de la chaîne ;
    - direction artistique : prompt de style, image de référence, description automatique depuis des captures ;
    - personnages récurrents avec fiche perso ;
    - voix, rythme et montage par défaut.
@@ -47,10 +50,22 @@ mot de passe boss.
    bleu nuit et prof à tête blanche animé.
    L'assistant **🧪 Niche bending** prend un format qui marche et propose des niches transposées
    (moins saturées ou mieux payées), avec des titres. La chaîne se crée d'un clic.
-2. **Script.** Plan (hook, sections, beats, budget de mots), puis écriture section par
-   section, puis relecture par un « script doctor » qui réécrit les passages faibles,
-   puis ajustement de la longueur à la durée cible. Tu peux éditer le script, le faire
-   réécrire avec une consigne, ou restaurer une ancienne version depuis l'historique.
+2. **Script (méthode FacelessOS).** Le pack FacelessOS v5.1 est dans `skills/facelessos/` et ses
+   fichiers sont cités tels quels dans les prompts. Pour le mettre à jour, remplace le contenu du dossier.
+   - **Research** : brief à 5 champs (angle, faits réels vérifiables, direction du hook, structure).
+   - **Brainstorm** : 3 hooks sur 3 ouvertures différentes, notés contre la vidéo de référence et
+     contre les ouvertures des dernières vidéos de la chaîne. Le meilleur est gardé.
+   - **Structure** : plan avec boucles ouvertes/fermées, motifs, grand payoff annoncé 3 fois,
+     choix de rotation (variety-rotation) différents de ceux des derniers scripts.
+   - **Write** : section par section, ancré sur l'extrait de la vidéo de référence.
+   - **Greenlight** : audit A à E (hook, rétention, fil rouge, voix + anti-slop, authenticité)
+     plus le scanner d'origine `trailer-voice-scan.py`. Les fixes sont appliqués, puis l'audit
+     complet repasse, jusqu'à 3 fois (`FOS_MAX_ROUNDS`). Un HOLD renvoie au plan une fois.
+   - Le panneau « Audit FacelessOS » montre le verdict, chaque passe et ses fixes, le brief et
+     les hooks proposés. Le bouton **🛡 Audit FacelessOS** relance la boucle sur un script collé
+     ou retouché.
+   - Tu peux éditer le script, le faire réécrire avec une consigne, ou restaurer une ancienne
+     version depuis l'historique.
 3. **Voix off.**
    - Fournisseurs : **Algrow** (voix ElevenLabs ou modèle Stealth, `ALGROW_API_KEY`), Edge TTS (gratuit),
      ElevenLabs ou OpenAI TTS (avec clé).

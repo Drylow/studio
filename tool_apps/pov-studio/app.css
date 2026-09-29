@@ -163,6 +163,9 @@ input[type=color] { width: 44px; height: 34px; border: 1px solid var(--s-line); 
 .issue b { color: var(--s-warn); font-weight: 600; }
 .issue summary { cursor: pointer; list-style: none; }
 .issue summary::-webkit-details-marker { display: none; }
+.fosl { font-size: 12px; margin-top: 4px; color: var(--s-muted); }
+.fosl b { color: var(--s-text); font-weight: 600; margin-right: 4px; }
+.warnbox { border-color: var(--s-warn); }
 .score { font-family: "PoppinsX", sans-serif; font-size: 30px; font-weight: 800; }
 .hist-item { display: flex; justify-content: space-between; gap: 8px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--s-line); font-size: 12.5px; }
 

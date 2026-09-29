@@ -58,7 +58,7 @@ function busy(btn, on, label) {
 // ── État ────────────────────────────────────────────────────────────────────
 const S = {cfg: null, channels: [], project: null, step: 'script', pollT: null, listT: null, editing: new Set()};
 const STEPS = [['script', 'Script'], ['voice', 'Voix off'], ['storyboard', 'Storyboard'], ['export', 'Montage & export']];
-const JOB_LABEL = {script: 'Écriture du script', rewrite: 'Réécriture', voice: 'Voix off', replan: 'Scènes', cast: 'Personnages', images: 'Images',
+const JOB_LABEL = {script: 'Écriture du script', rewrite: 'Réécriture', audit: 'Audit FacelessOS', voice: 'Voix off', replan: 'Scènes', cast: 'Personnages', images: 'Images',
   regen: 'Image', render: 'Montage MP4', pack: 'Pack montage', metadata: 'Métadonnées', autopilot: 'Autopilot', thumbnails: 'Miniatures'};
 
 async function loadConfig() {
@@ -310,10 +310,35 @@ const savePatch = async patch => {
 };
 
 // ── Étape 1 : Script ────────────────────────────────────────────────────────
+const VERDICT_LABEL = {PASS: 'PASS', 'FIX-THEN-PASS': 'FIX-THEN-PASS', HOLD: 'HOLD', ERROR: 'audit interrompu'};
+function fosCard(rv) {
+  const b = rv.block || {}, rounds = rv.rounds || [], cls = rv.verdict === 'PASS' ? 'ok' : (rv.verdict === 'HOLD' || rv.verdict === 'ERROR' ? 'err' : 'warn');
+  const line = (k, v) => v ? `<div class="fosl"><b>${k}</b> ${esc(typeof v === 'string' ? v : JSON.stringify(v))}</div>` : '';
+  const a = b.A || {}, d = b.D || {}, d7 = b.D7 || {}, e = b.E || {};
+  return `<div class="card"><div class="row between"><div><h3>Audit FacelessOS</h3><div class="tiny faint">${rounds.length} passe(s) greenlight · ${rounds.reduce((n, r) => n + (r.fixes || []).length, 0)} fix(es) appliqué(s)</div></div><span class="pill ${cls}">${esc(VERDICT_LABEL[rv.verdict] || rv.verdict)}</span></div>
+    <div class="stack" style="margin-top:8px;gap:6px">
+      ${rounds.map(r => `<details class="issue"><summary><b>Passe ${r.round} : ${esc(r.verdict)}</b> <span class="faint">· ${(r.fixes || []).length} fix(es)${r.words ? ' · ' + r.words + ' mots' : ''}</span></summary>
+        ${r.hold_reason ? `<div class="muted" style="margin-top:6px">HOLD : ${esc(r.hold_reason)}</div>` : ''}
+        ${(r.fixes || []).map(f => `<div class="muted" style="margin-top:6px"><b>${esc(f.check || '')}</b> ${f.quote ? '« ' + esc(f.quote) + ' » ' : ''}— ${esc(f.problem || '')}<br>→ ${esc(f.fix || '')}</div>`).join('')}
+        ${r.error ? `<div class="muted">${esc(r.error)}</div>` : ''}</details>`).join('')}
+      <details class="issue"><summary><b>Bloc verdict (dernière passe)</b></summary><div style="margin-top:6px">
+        ${line('A Hook', a.sentence_one ? `« ${a.sentence_one} » · ${a.hook_words || '?'} mots · turn : ${a.turn || '?'} · A4 : ${a.a4 || '?'}` : '')}
+        ${line('B Boucles', (b.B || {}).loop_ledger ? (b.B.loop_ledger || []).join(' / ') : '')}
+        ${line('Promesse', b.promise_map)}
+        ${line('D Voix', d.anchor ? `${d.anchor} · ${(d.shapes_quoted || []).map(x => '« ' + x + ' »').join(' ')} · ${d.matched_line || ''}` : '')}
+        ${line('D5 Faits', (b.D5 || []).join(' / '))}
+        ${line('D7', d7.result)}
+        ${line('E Authenticité', e.score ? `${e.score} · ${e.missing || ''}` : '')}
+      </div></details>
+      ${rv.brief ? `<details class="issue"><summary><b>Brief (research)</b></summary><div class="muted" style="margin-top:6px"><b>Angle :</b> ${esc(rv.brief.angle || '')}<br>${(rv.brief.proof_bank || []).map(x => '→ ' + esc(x.item || x) + (x.basis ? ` <span class="faint">(${esc(x.basis)})</span>` : '')).join('<br>')}</div></details>` : ''}
+      ${rv.hooks && (rv.hooks.options || []).length ? `<details class="issue"><summary><b>Hooks proposés</b> <span class="faint">· retenu : n°${(rv.hooks.winner || 0) + 1}</span></summary>${rv.hooks.options.map((o, i) => `<div class="muted" style="margin-top:6px"><b>${i + 1}. ${esc(o.move || '')}</b>${i === rv.hooks.winner ? ' ✓' : ''}<br>${esc(o.text)}</div>`).join('')}${rv.hooks.why ? `<div class="faint tiny" style="margin-top:6px">${esc(rv.hooks.why)}</div>` : ''}</details>` : ''}
+    </div></div>`;
+}
+
 function stepScript() {
   const p = S.project, ch = chById(p.channel_id) || {};
   const wpm = ch.wpm || 150, target = Math.round(p.minutes * wpm);
-  const running = jobRunning() && ['script', 'rewrite', 'autopilot'].includes(p.job.kind);
+  const running = jobRunning() && ['script', 'rewrite', 'audit', 'autopilot'].includes(p.job.kind);
   const rv = p.review;
   $('#stepBody').innerHTML = `
     <div class="split">
@@ -322,6 +347,7 @@ function stepScript() {
           <div class="row between" style="margin-bottom:10px">
             <div class="counter"><span><b id="wc">${p.words_count}</b> / ${target} mots</span><span>≈ <b id="estDur">${fmtDur(p.words_count / wpm * 60)}</b> de voix</span><span id="saveState" class="faint"></span></div>
             <div class="row">
+              <button class="btn sm" id="auditBtn" title="Greenlight FacelessOS en boucle sur le script actuel (après une retouche ou un script collé)">🛡 Audit FacelessOS</button>
               <button class="btn sm" id="genScript">${(p.script || '').trim() ? '↻ Régénérer' : '✨ Écrire le script'}</button>
             </div>
           </div>
@@ -338,7 +364,9 @@ function stepScript() {
             <label class="f"><span class="lbl">Consignes</span><textarea id="notesIn" rows="3" placeholder="Angle, faits, public…">${esc(p.notes || '')}</textarea></label>
             <div class="hint">Format : <b>${esc((S.cfg.formats[ch.format] || {}).name || ch.format || '?')}</b> · débit voix ${wpm} mots/min (calibré automatiquement).</div>
           </div></div>
-        ${rv && (rv.score || (rv.issues || []).length) ? `<div class="card"><div class="row between"><div><h3>Relecture IA</h3><div class="tiny faint">note du 1er jet · ${(rv.issues || []).length} point(s) corrigé(s)</div></div>${rv.score ? `<span class="score">${esc(rv.score)}<span class="small muted">/10</span></span>` : ''}</div>
+        ${!(ch.reference_scripts || '').trim() ? `<div class="card warnbox"><b>Pas de vidéo de référence pour ce format.</b><div class="tiny" style="margin-top:4px">Le script suivra juste le ton de la chaîne. Ajoute une vidéo populaire de la niche dans <a href="#/channel/${ch.id}">Chaîne → Vidéo de référence</a>.</div></div>` : ''}
+        ${rv && rv.engine === 'facelessos' ? fosCard(rv) : ''}
+        ${rv && rv.engine !== 'facelessos' && (rv.score || (rv.issues || []).length) ? `<div class="card"><div class="row between"><div><h3>Relecture IA</h3><div class="tiny faint">note du 1er jet · ${(rv.issues || []).length} point(s) corrigé(s)</div></div>${rv.score ? `<span class="score">${esc(rv.score)}<span class="small muted">/10</span></span>` : ''}</div>
           <div class="stack" style="margin-top:8px;gap:8px">${(rv.issues || []).map(i => `<details class="issue"><summary><b>${esc(i.problem)}</b></summary><div class="muted" style="margin-top:6px">→ corrigé : ${esc(i.fix)}</div></details>`).join('') || '<div class="hint">Aucun problème majeur.</div>'}</div></div>` : ''}
         ${(p.script_history || []).length ? `<div class="card"><h3>Historique</h3><div style="margin-top:6px">${p.script_history.slice().reverse().map((h, ri) => {
           const i = p.script_history.length - 1 - ri;
@@ -362,6 +390,8 @@ function stepScript() {
     await savePatch({minutes: Number($('#minIn').value), notes: $('#notesIn').value});
     action('script', {});
   };
+  $('#auditBtn').disabled = running || !(p.script || '').trim();
+  $('#auditBtn').onclick = () => action('audit', {rounds: 2});
   $('#rwBtn').disabled = running || !(p.script || '').trim();
   $('#rwBtn').onclick = () => { const v = $('#rwIn').value.trim(); if (v) action('rewrite', {instruction: v}); };
   $('#minIn').oninput = e => $('#minOut').textContent = e.target.value + ' min';
@@ -900,12 +930,12 @@ async function viewChannel(cid) {
         <label class="f"><span class="lbl">Débit voix (mots/min)</span><input type="number" id="chWpm" min="90" max="220" value="${d.wpm}"></label></div>
     </div><div class="hint" id="fmtDesc" style="margin-top:10px">${esc((F[d.format] || {}).desc || '')}</div></div>
 
-    <div class="section-title"><span class="n">2</span><h2>Copier le style d'écriture d'une chaîne</h2></div>
-    <div class="card"><div class="sub">Colle 1 à 4 liens de vidéos qui cartonnent (les tiennes ou un concurrent) → transcriptions → l'IA en tire une « bible » de style que chaque script imitera. Si YouTube bloque, colle les scripts à la main.</div>
+    <div class="section-title"><span class="n">2</span><h2>Vidéo de référence du format</h2></div>
+    <div class="card"><div class="sub">Colle le lien d'une vidéo populaire de la niche, du même format (idéalement 1 à 3 du même style) → transcription → analyse FacelessOS (hook, rythme, découpage, dialogues, fin). Chaque script suit cette analyse et s'ancre sur un extrait mot pour mot de la narration : le style est repris, jamais le contenu. Sans référence, le script reste juste dans le ton de la chaîne. Si YouTube bloque, colle la transcription à la main.</div>
       <div class="row nowrap"><input type="text" id="chUrls" placeholder="https://youtu.be/… https://youtube.com/watch?v=…" value="${esc(d.reference_urls || '')}"><button class="btn" id="chFetch">Récupérer</button></div>
       <div class="grid2" style="margin-top:12px">
         <label class="f"><span class="lbl">Scripts / transcriptions de référence <span class="faint" id="refWc"></span></span><textarea id="chRefs" rows="10">${esc(d.reference_scripts)}</textarea></label>
-        <label class="f"><span class="lbl">Bible de la chaîne <button class="btn xs" id="chBible">🧬 Analyser les références</button></span><textarea id="chBibleTxt" rows="10" placeholder="Générée depuis les références, modifiable.">${esc(d.bible)}</textarea></label>
+        <label class="f"><span class="lbl">Analyse de la référence (bible) <button class="btn xs" id="chBible">🧬 Analyser la référence</button></span><textarea id="chBibleTxt" rows="10" placeholder="Générée depuis la transcription, modifiable.">${esc(d.bible)}</textarea></label>
       </div></div>
 
     <div class="section-title"><span class="n">3</span><h2>Direction artistique</h2></div>
@@ -1024,7 +1054,7 @@ async function viewChannel(cid) {
     busy(e.target, true, 'Analyse…'); await save(true);
     const r = await guard(() => api('POST', `/channels/${cid}/bible`, {text: $('#chRefs').value}));
     busy(e.target, false);
-    if (r) { $('#chBibleTxt').value = r.bible; d.bible = r.bible; toast('Bible générée', 'ok'); }
+    if (r) { $('#chBibleTxt').value = r.bible; d.bible = r.bible; toast('Analyse de la référence prête', 'ok'); }
   };
   $('#stShots').onchange = async e => {
     const fd = new FormData(); [...e.target.files].slice(0, 4).forEach(f => fd.append('files', f));

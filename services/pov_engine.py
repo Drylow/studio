@@ -12,6 +12,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from services import ai, board, media, presenter, render, tts
+from services import facelessos as FOS
 from services import pov_script as S
 from services import pov_store as store
 
@@ -145,10 +146,12 @@ TEMPLATES = {
         "niche": "Second-person POV life stories: you marry / fall in love with a woman from a specific culture or with "
                  "an oddly specific life (Russian, Latina, Indian, British, female Yakuza, serial killer...)",
         "audience": "Men 18-45 (US, UK, India, worldwide) who love relationship stories, culture shock and dark humor",
-        "tone": "Calm, deadpan second-person narrator ('you'), present tense, dry humor, affectionate culture-shock jokes, "
-                "occasional heartfelt beats. Never mean-spirited.",
-        "rules": "Follow ONE life chronologically from meeting her to old age. Every stage has concrete cultural details "
-                 "(food, family, customs, words) and at least one joke. Stereotypes are affectionate, never insulting.",
+        "tone": "Calm, intimate second-person narrator ('you'), present tense, literary but always sayable: sensory "
+                "detail, everyday similes, dry understatement, short loaded dialogue. Never mean-spirited.",
+        "rules": "Follow the relationship chronologically, from the first meeting to the quiet final scene. Real, named "
+                 "places and correct cultural details (food, family, customs, words). Stereotypes are affectionate, "
+                 "never insulting.",
+        "reference_urls": "https://www.youtube.com/watch?v=130HkA6TN8c",
         "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
         "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
@@ -231,16 +234,18 @@ TEMPLATES = {
 
 # Bibles de style prêtes à l'emploi (tirées de l'analyse des transcriptions des chaînes de référence).
 TEMPLATE_BIBLES = {
-    "oddly_specific_en": """FORMAT. One continuous narration in second person, present tense, for a 2D stick-figure POV video. Words = minutes x 158. No host, no intro, no "in this video", no spoken chapter titles, no CTA. The title carries the premise, so never restate it and delay the label itself.
-YOU. "You" are an unnamed, ordinary Western guy in his 30s: decent job, average apartment, bad at dancing and languages, honest, out of his depth. Most jokes land on him. Give him 1-2 concrete facts early (age 38, a half-finished beer, 11 words of high-school Spanish).
-HER. Competent and specific, never a prop. Show 2-3 defining behaviors in minute one. Later give her one private vulnerability and one crisis where she carries you. Name her only in family comedies; otherwise "she".
-HOOK (0:00-1:00). Place + day + one telling detail. Her in action. Compress time ("3 months later... A year later, you're married."). One dramatic-irony line ("What you don't realize yet is..."). First escalating scene with an exact number by 0:45. For danger premises, open mid-action and name her world after 2 minutes.
-SET PIECES. Headline sentence ("Then the shoes disappear."), escalating specifics with exact numbers (47 people, 17 toasts, 300%), your failed attempt, a deadpan button of five words or fewer ("You deploy all nine."), then a small acceptance token ("hermano", "He tries hard. That's enough.").
-VOICE. Average 10 words per sentence; about 20% fragments of 1-4 words. "Not X. Y." corrections ("Not invited. Expected."), everyday similes ("like a used car she's considering buying"), lists of three, exact numbers everywhere. Report most speech indirectly; save direct quotes for 3-6 lines that matter. You barely speak.
-TONE CURVE. Front-load comedy (3-4 comedic beats per minute in family comedies). Turn sincere near 50% with one plain line ("You're not losing anything."). Keep the last 12% quiet, with at most one soft joke. Dark premises: dry wit early, pure tension after the midpoint twist, eerie last line. Danger-romance premises: literary noir restraint, short cinematic lines.
-CALLBACKS. Plant three motifs in the first 20% (a relative, a ritual, an object) and pay each off. Return to the opening image in the final 40 seconds.
-ENDING. A small domestic scene (couch, window, balcony, the Sunday call), one reframing thesis ("You didn't marry an idea."), then 2-4 short sentences. Never summarize the video.
-CULTURE. 6-10 correct, researched specifics (ceremony names, dishes, kinship words), each with context; one country only unless the title is a broad label. Aim jokes at your ignorance or at the size of their love (food, guests, hugs, volume) — never at her intelligence, morals, accent, looks, skin, religion, poverty or immigration status. Negative stereotypes only in the mouths of clueless friends, disproved within 60 seconds. Every overwhelming relative gets a scene of acceptance. Rituals and faith are shown as beautiful; your clumsiness is the joke. In crime premises never tie the criminality to her ethnicity.""",
+    "oddly_specific_en": """REFERENCE. Built from the channel's own outlier "POV: You Fall in Love with a Female Yakuza" (117k views, 10:58, 1,759 words, 160 wpm). It teaches the register, pacing and beat map. Never reuse its plot, lines, images or hooks. FacelessOS rules win on any conflict.
+FORMAT. One continuous second-person narration, present tense, chronological. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it. Delay the label itself (the reference names her world only after ~2:45).
+HOOK (first ~110 words, 0:00-0:45). Sentence one puts you and her in the same frame with a jolt ("The first time you see her, you're on your knees, not by choice."). Then one specific place and one wry detail, one sensory paragraph (weather, light, sound), your ordinary worry (rent, a broken nose), the turn ("Then the alley goes quiet."), her entrance shown through its effect on others, her first short line of dialogue, her exit. Button the scene with a one-line irony ("You tell yourself you won't look for her. You look for her.").
+BEAT MAP (share of runtime). First meeting in media res 0-18% → you go looking, learning who she really is through specific facts 18-30% → second meeting: a long dialogue scene where she states the stakes, one small detail makes you fall 30-47% → one-sentence thesis of what this love is 47-50% → accumulating moments in named places, first touch 50-65% → her world intrudes: absence, an injury or crisis, the thing gets named in dialogue 65-75% → "Loving her is..." montage of her specific habits, and what you accept 75-88% → reflection that calls back the first scene, then a final quiet two-person scene and a last image 88-100%.
+VOICE. Calm, intimate, literary but always sayable. ~11 words per sentence (median 9); about one sentence in five is 1-4 words; a long flowing sentence (25+ words) every few lines. Everyday similes ("the way you'd look at a minor inconvenience, a traffic jam, a slow elevator"; "the way you'd choose your steps on ice"). Dry understatement ("running would be undignified"; "It takes 3 weeks, which is embarrassing in retrospect"). Story-scale numbers, few and exact (3 weeks, 28 years old, three organizations, exactly 3 seconds).
+DIALOGUE. ~24 short quoted lines in 11 minutes, all subtext. She speaks in precise, loaded sentences. You say almost nothing ("I understand." "I know." "Nothing. Just you."). Dialogue carries the key turns: the warning, the "why", the naming.
+TIME. Move time inside the narration, never with headings: "It takes 3 weeks", "on a Tuesday night", "Three months in", "for two weeks she's unreachable".
+PLACE. Real, named, drawable places and textures (Shinjuku alley, basement bar in Kabukicho, rooftop above a ramen shop, laundry lines and satellite dishes). The city is a character that closes scenes ("Below you, Tokyo breathes.").
+MOTIFS. Plant 2-3 physical motifs early (rain, hands, the city at night) and pay them off; the last line returns to one of them ("Her hand finds yours in the dark. She doesn't let go. Neither do you.").
+FACELESSOS LIMITS ON THE REFERENCE'S HABITS. Its "Not X, but Y" reframes and verdict lines are the part not to copy: at most 2 antithesis constructions and 1 aphoristic closer per script, never in adjacent paragraphs. Short fragment runs only as a dialogue beat or a real count. No em dashes.
+OTHER PREMISES. Same register for warm culture premises (Korean, Filipina, Russian...): her world = her family, city and customs; the stakes are cultural (the family's verdict, a ritual you must get right, distance, faith), not violence. "Marry" titles must reach the proposal or wedding by ~60% and then show married life; "Fall in Love" titles stop at commitment.
+CULTURE. 6-10 correct, widely documented specifics (ceremony names, dishes, kinship words, places), each shown in a scene with context; one country unless the title is a broad label. Humor aims at your ignorance or at the size of their love, never at her intelligence, morals, accent, looks, skin, religion, poverty or immigration status. Negative stereotypes only in the mouths of clueless outsiders, disproved within 60 seconds. Rituals and faith are shown as beautiful. In crime premises never tie the criminality to her ethnicity.""",
     "business_en": """VOICE. One calm narrator explaining a machine to a smart friend. No greeting, channel name, "in this video" or sponsor. Contractions and plain words. Colder on criminal topics: fewer contractions, no jokes. ~180 spoken words per minute.
 HOOK (first 250-350 words, done by 1:45). Sentence one is either a hard, sourced number that sounds impossible, or a real named person in a named place and year. State the paradox ("if that picture were right, this whole business should be dead"). Name the popular belief and kill it. Say the real answer "has almost nothing to do with" the obvious product. End with "By the end of this, you'll understand..." plus 2-4 open loops, at least one dark or aimed at the viewer.
 MASTER ANALOGY. Within the first two minutes, ONE everyday system (washing machine, ride wristband, vending machine) that maps the whole business. Call back to it 3+ times, "upgrade" it when facts arrive, reuse it in the close.
@@ -252,6 +257,16 @@ RE-HOOKS. Every 2-3 minutes plant a loop ("What comes next is the part that stil
 DARK SIDE. 15-25% on who pays: workers, towns, customers, regulators, all with numbers. State it flatly. Never moralize.
 ENDING. Recap every mechanism in one list ("That is the machine."), return to the opening image or person, widen it to a general law, land a one-sentence kicker. Then: "Tell me where you're watching from in the comments, and if this changed how you see [X], subscribe." Stop.""",
 }
+
+def _video_ids(text):
+    ids = re.findall(r"(?:v=|youtu\.be/|shorts/|embed/)([A-Za-z0-9_-]{11})", text or "")
+    return list(dict.fromkeys(ids or re.findall(r"\b([A-Za-z0-9_-]{11})\b", text or "")))
+
+
+def _bundled_refs(urls_text):
+    """Transcriptions de référence livrées avec l'app (skills/references/<id>.txt)."""
+    return "\n\n".join(t for t in (FOS.bundled_reference(v) for v in _video_ids(urls_text)) if t)
+
 
 def _merge(base, over):
     out = json.loads(json.dumps(base))
@@ -274,8 +289,9 @@ def new_channel(data=None, template=None):
         "id": store.new_id("ch"), "created": store.now(), "updated": store.now(),
         "name": t.get("name", "Nouvelle chaîne"), "language": lang,
         "format": t.get("format", "pov_levels"), "niche": t.get("niche", ""), "audience": t.get("audience", ""),
-        "tone": t.get("tone", ""), "rules": t.get("rules", ""), "cta": "", "reference_scripts": "",
-        "reference_urls": "", "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
+        "tone": t.get("tone", ""), "rules": t.get("rules", ""), "cta": "",
+        "reference_urls": t.get("reference_urls", ""), "reference_scripts": _bundled_refs(t.get("reference_urls", "")),
+        "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
         "wpm": t.get("wpm", 150), "thumb_style": t.get("thumb_style", ""),
         "thumb_text": t.get("thumb_text", True), "thumb_ref": None,
         "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
@@ -390,23 +406,29 @@ def _jpeg(blob, side=1024):
 
 
 def fetch_transcripts(urls_text, limit=4):
-    """Transcriptions YouTube (paquet optionnel youtube-transcript-api)."""
+    """Transcriptions YouTube (youtube-transcript-api). Si YouTube bloque, prend la transcription
+    livrée avec l'app quand elle existe (skills/references/<id>.txt)."""
+    ids = _video_ids(urls_text)[:limit]
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
+        api = YouTubeTranscriptApi()
     except Exception:
-        raise RuntimeError("Installe youtube-transcript-api (pip) ou colle les scripts à la main.")
-    ids = re.findall(r"(?:v=|youtu\.be/|shorts/|embed/)([A-Za-z0-9_-]{11})", urls_text or "")
-    if not ids:
-        ids = re.findall(r"\b([A-Za-z0-9_-]{11})\b", urls_text or "")
-    api = YouTubeTranscriptApi()
+        api = None
     out, errors = [], []
-    for vid in list(dict.fromkeys(ids))[:limit]:
+    for vid in ids:
+        bundled = FOS.bundled_reference(vid)
         try:
+            if api is None:
+                raise RuntimeError("youtube-transcript-api absent")
             tr = api.fetch(vid, languages=["fr", "en", "es", "de", "pt", "it"])
             text = " ".join(s.text.replace("\n", " ") for s in tr.snippets)
-            out.append(f"--- https://youtu.be/{vid} ---\n{text}")
+            # une transcription livrée (ponctuée, en paragraphes) vaut mieux que les sous-titres auto
+            out.append(bundled or f"--- https://youtu.be/{vid} ---\n{text}")
         except Exception as e:  # noqa: BLE001
-            errors.append(f"{vid}: {type(e).__name__}")
+            if bundled:
+                out.append(bundled)
+            else:
+                errors.append(f"{vid}: {type(e).__name__}")
     if not out:
         raise RuntimeError("Aucune transcription récupérée (" + ", ".join(errors or ["lien invalide"]) +
                            "). YouTube bloque parfois : colle le script à la main.")
@@ -748,6 +770,19 @@ def voice_outdated(pr):
 
 # ── Jobs : script ───────────────────────────────────────────────────────────
 
+def channel_history(cid, exclude=None, limit=3):
+    """Dernières vidéos écrites de la chaîne : ouverture + rotation (diff de bibliothèque FacelessOS)."""
+    out = []
+    for p in store.list_projects():
+        if p.get("channel_id") != cid or p.get("id") == exclude:
+            continue
+        text = S.narration(p.get("script") or "")
+        if text:
+            out.append({"title": p.get("title") or "", "hook": " ".join(text.split()[:90]),
+                        "rotation": (p.get("outline") or {}).get("rotation") or ""})
+    return out[:limit]  # list_projects() est déjà trié du plus récent au plus ancien
+
+
 def job_script(job, pid, polish=True):
     pr = store.get_project(pid)
     ch = store.get_channel(pr["channel_id"])
@@ -759,7 +794,8 @@ def job_script(job, pid, polish=True):
         if partial:
             store.update_project(pid, lambda x: x.__setitem__("script_draft", partial))
 
-    res = S.generate(ch, pr["title"], pr["minutes"], pr.get("notes") or "", polish=polish, progress=prog)
+    res = S.generate(ch, pr["title"], pr["minutes"], pr.get("notes") or "", polish=polish, progress=prog,
+                     history=channel_history(ch["id"], exclude=pid))
 
     def save(x):
         push_history(x, "avant régénération")
@@ -786,6 +822,27 @@ def job_rewrite(job, pid, instruction):
         x["script"] = new
     store.update_project(pid, save)
     job.update(1.0, "Script réécrit.")
+
+
+def job_audit(job, pid, rounds=2):
+    """Audit FacelessOS (greenlight en boucle) du script actuel du projet."""
+    pr = store.get_project(pid)
+    ch = store.get_channel(pr["channel_id"])
+    if not (pr.get("script") or "").strip():
+        raise RuntimeError("Pas de script à auditer.")
+    if not FOS.available():
+        raise RuntimeError("Pack FacelessOS introuvable (dossier skills/facelessos).")
+
+    def prog(p, msg, partial):
+        job.update(0.02 + 0.96 * p, msg)
+    script, report = S.audit_script(ch, pr["title"], pr["script"], pr.get("minutes"), rounds=rounds, progress=prog)
+
+    def save(x):
+        push_history(x, "avant audit FacelessOS")
+        x["script"] = script
+        x["review"] = report
+    store.update_project(pid, save)
+    job.update(1.0, f"Audit FacelessOS : {report['verdict']}.")
 
 
 # ── Jobs : voix ─────────────────────────────────────────────────────────────

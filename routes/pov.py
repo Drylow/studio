@@ -540,6 +540,7 @@ _ACTIONS = {
                                                       first_only=bool(b.get("first_only")))),
     "regen": lambda pid, b: (lambda j: E.job_regen(j, pid, int(b.get("i", -1)), b.get("prompt"))),
     "render": lambda pid, b: (lambda j: E.job_render(j, pid)),
+    "audit": lambda pid, b: (lambda j: E.job_audit(j, pid, rounds=int(b.get("rounds") or 2))),
     "pack": lambda pid, b: (lambda j: E.job_pack(j, pid, motion=b.get("motion", "none"))),
     "metadata": lambda pid, b: (lambda j: E.job_metadata(j, pid)),
     "thumbnails": lambda pid, b: (lambda j: E.job_thumbnails(j, pid, (b.get("idea") or "").strip(),
@@ -561,7 +562,7 @@ def project_action(pid, action):
     b = _body()
     if action == "rewrite" and not (b.get("instruction") or "").strip():
         return _err("Consigne vide.")
-    if action in ("script", "rewrite", "cast", "images", "regen", "autopilot", "metadata", "thumbnails") \
+    if action in ("script", "rewrite", "audit", "cast", "images", "regen", "autopilot", "metadata", "thumbnails") \
             and not ai.configured():
         return _err("Proxy IA non configuré (AI_BASE_URL / AI_API_KEY dans le .env).", 503)
     if action in ("voice", "render", "pack", "autopilot") and not media.available():
