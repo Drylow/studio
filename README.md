@@ -126,6 +126,17 @@ de la chaîne sans passer par les étapes.
     Ajoute si tu veux des images de référence (perso, objet, style), un prompt, et choisis de 1 à 4 images.
   - Sans lien ni image, la miniature de référence de la chaîne sert de modèle.
   - **2 idées auto** : l'IA propose elle-même des concepts à partir du script.
+  - Sur chaque miniature : **↻** la regénère (même prompt, mêmes références) à la même place,
+    **🗑** la supprime, **⬇** la télécharge.
+- **📝 Titre & description YouTube** (sous chaque vidéo finie) : générés automatiquement à la fin de
+  la fabrication avec la skill packaging de FacelessOS, dans le style de tes descriptions. On y trouve
+  le titre et 2 autres idées, la description, les tags (dans la limite de 500 caractères de YouTube)
+  et un commentaire à épingler. Chaque champ a son bouton **📋 Copier**, et **↻ Regénérer** refait le tout.
+- **Onglet Projets** : la place prise par chaque vidéo et le total.
+  - **Alléger** supprime les clips de travail du montage. Ils pèsent à peu près autant que la vidéo
+    finale. La vidéo, les images, la voix et les miniatures restent.
+  - **Supprimer** efface tout le dossier de la vidéo, définitivement. Une vidéo en cours est d'abord
+    arrêtée.
 - La chaîne se crée toute seule au premier lancement, à partir du modèle `oddly_specific_en` :
   vidéo de référence, style (`presets/oddly_specific_en/style.jpg`), miniature modèle (`thumb.jpg`),
   voix Algrow et montage.
