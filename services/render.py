@@ -92,7 +92,7 @@ def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=17):
           f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={fps},"
           f"setsar=1,format=yuv420p")
     media.run(["-i", image, "-vf", vf, "-frames:v", str(frames), "-r", str(fps),
-               "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-an", dest])
+               "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-an", dest])
     return dest
 
 
@@ -343,7 +343,7 @@ def _xfade_chain(inputs, durs, t, fps, dest):
         args += ["-i", p]
     graph, out = _xfade_graph(len(inputs), durs, t, fps)
     media.run(args + ["-filter_complex", ";".join(graph), "-map", f"[{out}]",
-                      "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-pix_fmt", "yuv420p", dest])
+                      "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-pix_fmt", "yuv420p", dest])
 
 
 def _rel(path, base):
@@ -414,7 +414,9 @@ _SAFE = re.compile(r"[^A-Za-z0-9._-]+")
 
 
 def safe_name(s, default="video"):
-    s = _SAFE.sub("_", (s or "").strip())[:80].strip("_")
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode("ascii")
+    s = _SAFE.sub("_", s.strip())[:80].strip("_")
     return s or default
 
 

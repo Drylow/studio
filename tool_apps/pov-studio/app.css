@@ -246,3 +246,4 @@ details.adv > summary { cursor: pointer; color: var(--s-muted); font-weight: 700
 .kbd { font-family: ui-monospace, monospace; font-size: 11px; padding: 1px 6px; border-radius: 5px; background: var(--s-panel3); border: 1px solid var(--s-line2); }
 .sub { color: var(--s-muted); font-size: 13px; margin-bottom: 14px; }
 .pthumb .badge .pill { background: rgba(8, 10, 15, .82); backdrop-filter: blur(4px); }
+.side .grid2, .side .grid3 { grid-template-columns: 1fr; }

@@ -78,6 +78,7 @@ window.addEventListener('hashchange', route);
 function stopPolls() { clearTimeout(S.pollT); clearTimeout(S.listT); S.pollT = S.listT = null; }
 async function route() {
   stopPolls();
+  window.onbeforeunload = null;
   closeModal(); closeViewer();
   const parts = (location.hash || '#/projects').slice(2).split('/');
   const tab = {project: 'projects', projects: 'projects', channel: 'channels', channels: 'channels', settings: 'settings'}[parts[0]] || 'projects';
@@ -161,7 +162,18 @@ async function newProjectModal(prefill = {}) {
     </div>
     <div class="foot"><button class="btn ghost" onclick="closeModal()">Annuler</button><button class="btn primary" id="npGo">Créer la vidéo</button></div>`);
   const min = $('#npMin', m), out = $('#npMinOut', m);
-  const setCh = id => { chId = id; $$('#npCh .chip', m).forEach(x => x.classList.toggle('on', x.dataset.id === id)); min.value = chById(id).default_minutes || 10; out.textContent = min.value + ' min'; };
+  const showIdeas = ideas => {
+    const box = $('#npIdeas', m);
+    box.classList.toggle('hidden', !ideas.length);
+    box.innerHTML = ideas.map(i => `<div class="idea" data-t="${esc(i.title)}"><b>${esc(i.title)}</b>${i.angle ? `<span>${esc(i.angle)}</span>` : ''}</div>`).join('');
+    box.onclick = ev => { const it = ev.target.closest('.idea'); if (it) { $('#npTitle', m).value = it.dataset.t; box.classList.add('hidden'); } };
+  };
+  const setCh = id => {
+    chId = id; $$('#npCh .chip', m).forEach(x => x.classList.toggle('on', x.dataset.id === id));
+    min.value = chById(id).default_minutes || 10; out.textContent = min.value + ' min';
+    let saved = []; try { saved = JSON.parse(localStorage.getItem('pov2.ideas.' + id) || '[]'); } catch (e) {}
+    showIdeas(saved.map(t => ({title: t})));
+  };
   setCh(chId);
   min.oninput = () => out.textContent = min.value + ' min';
   $('#npCh', m).onclick = e => { const c = e.target.closest('.chip'); if (c) setCh(c.dataset.id); };
@@ -172,8 +184,7 @@ async function newProjectModal(prefill = {}) {
     box.innerHTML = '<div class="row muted small"><span class="spin"></span>L\'IA cherche des idées adaptées à la chaîne…</div>';
     const r = await guard(() => api('POST', `/channels/${chId}/ideas`, {hint: $('#npTitle', m).value}));
     if (!r) { box.classList.add('hidden'); return; }
-    box.innerHTML = r.ideas.map(i => `<div class="idea" data-t="${esc(i.title)}"><b>${esc(i.title)}</b><span>${esc(i.angle || '')}</span></div>`).join('');
-    box.onclick = ev => { const it = ev.target.closest('.idea'); if (it) { $('#npTitle', m).value = it.dataset.t; box.classList.add('hidden'); } };
+    showIdeas(r.ideas);
   };
   $('#npGo', m).onclick = async ev => {
     const title = $('#npTitle', m).value.trim();
@@ -624,7 +635,8 @@ function montageForm(m, onChange, opts = {}) {
     $('[data-caps]', box).classList.toggle('hidden', c.mode === 'none');
     const pv = $('[data-el=capprev]', box);
     pv.classList.toggle('hidden', c.mode === 'none');
-    const t = c.uppercase ? 'TU AS DIX-HUIT ANS' : 'Tu as dix-huit ans';
+    const base = (opts.lang || 'fr') === 'fr' ? 'Tu as dix-huit ans' : 'You are eighteen now';
+    const t = c.uppercase ? base.toUpperCase() : base;
     const w = t.split(' ');
     pv.style.fontFamily = /Bangers/.test(c.font) ? 'Impact, sans-serif' : '';
     pv.style.color = c.color; pv.style.webkitTextStrokeColor = c.outline;
@@ -686,7 +698,7 @@ async function stepExport() {
     </div>`;
   const music = (await guard(() => api('GET', '/music'))) || {music: []};
   if (S.step !== 'export') return;
-  $('#mform').appendChild(montageForm(m, v => savePatch({montage: v}), {music: music.music}));
+  $('#mform').appendChild(montageForm(m, v => savePatch({montage: v}), {music: music.music, lang: (chById(p.channel_id) || {}).language}));
   const dis = jobRunning();
   $('#renderBtn').disabled = !ready || dis; $('#packBtn').disabled = !ready || dis; $('#metaBtn').disabled = !p.script || dis;
   $('#renderBtn').onclick = () => action('render');
@@ -712,7 +724,7 @@ async function viewChannels() {
   await loadChannels();
   $('#view').innerHTML = `
     <div class="hero"><div><h1>Tes chaînes</h1><p>Chaque chaîne garde son ADN : niche, format de script, bible de style, direction artistique, personnages, voix et montage.</p></div>
-      <button class="btn primary big" onclick="newChannelModal()">＋ Nouvelle chaîne</button></div>
+      <div class="row"><button class="btn big" onclick="nicheBendModal()">🧪 Niche bending</button><button class="btn primary big" onclick="newChannelModal()">＋ Nouvelle chaîne</button></div></div>
     ${S.channels.length ? `<div class="cgrid">${S.channels.map(c => `
       <div class="ccard" onclick="go('#/channel/${c.id}')">
         <div class="cimg">${c.style && c.style.ref ? `<img src="${chFileUrl(c.id, c.style.ref)}">` : ''}</div>
@@ -733,6 +745,40 @@ function newChannelModal() {
     const t = e.target.closest('.tpl'); if (!t) return;
     const ch = await guard(() => api('POST', '/channels', {template: t.dataset.t || null}));
     if (ch) { closeModal(); go('#/channel/' + ch.id); }
+  };
+}
+
+function nicheBendModal() {
+  const m = modal(`<h2>🧪 Niche bending</h2><div class="sub">Garde ce qui marche (format, titres, rythme, style) et transpose-le sur une niche moins saturée ou mieux payée.</div>
+    <div class="stack">
+      <label class="f"><span class="lbl">Format / chaîne qui cartonne</span><textarea id="nbSrc" rows="3" placeholder="Ex : POVrank — « Your Life as Every Rank in North Korea's Army », 2e personne, 8-10 niveaux, cartoon vectoriel, 579K vues"></textarea></label>
+      <div class="grid2"><label class="f"><span class="lbl">Domaine visé (optionnel)</span><input type="text" id="nbTgt" placeholder="finance, médecine, aviation… (vide = l'IA propose)"></label>
+        <label class="f"><span class="lbl">Langue / marché</span><select id="nbLang">${S.cfg.languages.map(l => `<option value="${l}">${l.toUpperCase()}</option>`).join('')}</select></label></div>
+      <div class="row"><button class="btn primary" id="nbGo">Trouver des niches</button></div>
+      <div id="nbOut" class="stack"></div>
+    </div>
+    <div class="foot"><button class="btn ghost" onclick="closeModal()">Fermer</button></div>`, 'wide');
+  const out = $('#nbOut', m);
+  $('#nbGo', m).onclick = async e => {
+    busy(e.target, true, 'Analyse…'); out.innerHTML = '';
+    const r = await guard(() => api('POST', '/nichebend', {source: $('#nbSrc', m).value, target: $('#nbTgt', m).value, language: $('#nbLang', m).value}));
+    busy(e.target, false);
+    if (!r) return;
+    out.innerHTML = r.concepts.map((c, i) => `<div class="card" style="padding:14px">
+      <div class="row between"><div><b style="font-size:15px">${esc(c.name)}</b> <span class="pill ${c.rpm === 'high' ? 'ok' : c.rpm === 'low' ? '' : 'acc'}">RPM ${esc(c.rpm || '?')}</span>
+        <span class="pill">${esc((S.cfg.formats[c.format] || {}).name || c.format)}</span></div>
+        <button class="btn sm primary" data-nb="${i}">Créer cette chaîne</button></div>
+      <div class="small" style="margin-top:6px">${esc(c.niche)}</div>
+      <div class="small muted" style="margin-top:4px">${esc(c.why)}</div>
+      <ul class="small" style="margin:8px 0 0;padding-left:18px">${(c.titles || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>`).join('');
+    out.onclick = async ev => {
+      const b = ev.target.closest('[data-nb]'); if (!b) return;
+      const c = r.concepts[Number(b.dataset.nb)], st = S.cfg.styles[c.style] || S.cfg.styles.rank_vector;
+      const ch = await guard(() => api('POST', '/channels', {name: c.name, language: $('#nbLang', m).value, format: c.format, niche: c.niche,
+        audience: c.audience || '', tone: c.tone || '', rules: '', style: {preset: S.cfg.styles[c.style] ? c.style : 'rank_vector', prompt: st.prompt},
+        voice: {voice: S.cfg.defaults.voice_by_lang[$('#nbLang', m).value] || ''}}), 'Chaîne créée');
+      if (ch) { localStorage.setItem('pov2.ideas.' + ch.id, JSON.stringify(c.titles || [])); closeModal(); go('#/channel/' + ch.id); }
+    };
   };
 }
 
@@ -803,7 +849,7 @@ async function viewChannel(cid) {
   };
   renderChars();
   $('#chVoice').appendChild(voiceForm(d.voice, d.language, v => { d.voice = v; dirty(); }));
-  $('#chMontage').appendChild(montageForm(d.montage, v => { d.montage = v; dirty(); }, {music: music.music}));
+  $('#chMontage').appendChild(montageForm(d.montage, v => { d.montage = v; dirty(); }, {music: music.music, lang: d.language}));
   const outs = () => { $('#paceOut').textContent = Number($('#chPace').value).toFixed(1) + ' s'; $('#hpOut').textContent = Number($('#chHookPace').value).toFixed(1) + ' s'; $('#refWc').textContent = $('#chRefs').value.split(/\s+/).filter(Boolean).length + ' mots'; };
   outs();
   let isDirty = false;

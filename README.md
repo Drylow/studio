@@ -40,6 +40,8 @@ mot de passe boss.
    - voix, rythme et montage par défaut.
 
    Des modèles prêts à l'emploi viennent d'une étude NexLev des chaînes 2D en forte croissance.
+   L'assistant **🧪 Niche bending** prend un format qui marche et propose des niches transposées
+   (moins saturées ou mieux payées), avec des titres. La chaîne se crée d'un clic.
 2. **Script.** Plan (hook, sections, beats, budget de mots), puis écriture section par
    section, puis relecture par un « script doctor » qui réécrit les passages faibles,
    puis ajustement de la longueur à la durée cible. Tu peux éditer le script, le faire
@@ -60,6 +62,7 @@ mot de passe boss.
    - **Pack montage** : ZIP avec un clip par image dont la durée est exactement celle de sa
      phrase, plus la voix, le `.srt` et les timestamps. On glisse le tout dans CapCut ou Premiere
      et c'est calé.
+   - **Miniatures** : 2 variantes dans le style de la chaîne, avec le perso et un texte court en gros.
    - **Métadonnées** : titres, description SEO, tags et chapitres horodatés.
 
 Tout est stocké dans `data/pov/` : chaînes, projets, médias, et `music/` pour tes musiques

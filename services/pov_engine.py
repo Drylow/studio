@@ -629,7 +629,7 @@ def plan_scenes(words, total, sections, m):
             piece.append(w)
             left = len(u) - i - 1
             long_enough = (w["e"] - start) >= per * (0.75 if w["w"][-1:] in ",;:" else 1.0)
-            if long_enough and left >= 2 and len(fine) >= 0:
+            if long_enough and left >= 2:
                 fine.append(piece)
                 piece = []
                 start = w["e"]

@@ -172,6 +172,20 @@ def channels():
     return jsonify({"channels": store.list_channels()})
 
 
+@pov_bp.route("/api/pov/nichebend", methods=["POST"])
+def nichebend():
+    b = _body()
+    source = (b.get("source") or "").strip()
+    if len(source) < 8:
+        return _err("Décris le format ou la chaîne qui marche (ou colle un lien + ce qu'elle fait).")
+    try:
+        concepts = S.niche_bend(source, (b.get("target") or "").strip(), (b.get("language") or "fr").lower(),
+                                style_keys=list(E.STYLE_PRESETS.keys()))
+    except Exception as e:  # noqa: BLE001
+        return _err(e, 502)
+    return jsonify({"concepts": concepts})
+
+
 @pov_bp.route("/api/pov/channels/<cid>", methods=["GET", "PUT", "DELETE"])
 def channel(cid):
     ch, err = _channel_or_404(cid)

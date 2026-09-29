@@ -215,6 +215,38 @@ Return JSON: {{"ideas": [{{"title": "...", "angle": "one sentence: why it will g
     return [i for i in (data.get("ideas") or []) if isinstance(i, dict) and i.get("title")][:count]
 
 
+# ── Niche bending ───────────────────────────────────────────────────────────
+
+def niche_bend(source, target="", language="fr", count=5, style_keys=None):
+    """Transpose un format gagnant vers des niches moins saturées / mieux payées."""
+    fmts = "\n".join(f"- {k}: {v['name']} — {v['desc']}" for k, v in FORMATS.items())
+    styles = ", ".join(style_keys or [])
+    prompt = f"""You are a YouTube niche strategist for faceless 2D-illustrated channels (narration + AI still images, no real animation needed).
+
+WINNING FORMAT / CHANNEL TO BEND (what already works): {source}
+{('TARGET DOMAIN WANTED BY THE CREATOR: ' + target) if target else 'No target domain given: propose the best domains yourself.'}
+LANGUAGE / MARKET: {lang_label(language)}
+
+"Niche bending" = keep the proven packaging (format, title pattern, pacing, visual style) but apply it to a different topic with less competition and/or higher RPM (finance, law, medicine, careers, business, aviation, tech, real estate, psychology, history of X...). Avoid topics that are already saturated with this exact format.
+
+Available script formats (pick one key): 
+{fmts}
+Available visual style keys: {styles}
+
+Give {count} concrete channel concepts. Return JSON:
+{{"concepts": [{{"name": "channel name", "niche": "one sentence", "audience": "who", "format": "<format key>", "style": "<style key>",
+  "tone": "narrator & tone in one sentence", "why": "why it can work: demand, competition, RPM (be honest, say what is uncertain)",
+  "rpm": "low | medium | high", "titles": ["5 video titles following the winning title pattern"]}}]}}"""
+    data = ai.chat_json(prompt, model=ai.text_model(), reasoning="medium", timeout=240)
+    out = []
+    for c in data.get("concepts") or []:
+        if isinstance(c, dict) and c.get("name"):
+            if c.get("format") not in FORMATS:
+                c["format"] = "custom"
+            out.append(c)
+    return out[:count]
+
+
 # ── 2. Plan ─────────────────────────────────────────────────────────────────
 
 def outline(ch, title, minutes, notes=""):
