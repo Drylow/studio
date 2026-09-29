@@ -385,6 +385,15 @@ def studio_channel(template):
     return new_channel({}, template=template)
 
 
+_CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
+              "reference_description", "youtube_handle",
+              "reference_urls", "bible", "wpm", "default_minutes", "thumb_style", "thumb_text")
+_BOARD_FIELDS = ("theme", "bg_color", "line_color", "major_color", "pattern", "cell", "major_every", "paper",
+                 "panel_width", "border", "border_color", "radius", "shadow", "shadow_color", "shadow_offset",
+                 "presenter_height", "presenter_x", "bob", "animate", "anim", "mascot", "presenter_outline",
+                 "outline_color", "spot", "spot_color")
+
+
 def apply_channel_update(ch, data):
     for k in _CH_FIELDS:
         if k in data:

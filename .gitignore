@@ -42,3 +42,6 @@ tmp_thumbtest/
 
 # 2D Videos : projets, médias générés, musiques (local)
 data/
+
+# Package autonome (dossier à double-cliquer)
+dist/
