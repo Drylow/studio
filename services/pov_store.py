@@ -67,15 +67,28 @@ def lock_for(key):
 
 
 def _read_json(path):
+    for attempt in range(10):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except PermissionError:  # remplacement en cours (Windows)
+            time.sleep(0.05 * (attempt + 1))
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def _write_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    tmp = path + ".tmp"
+    tmp = path + ".%d.tmp" % threading.get_ident()
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
+    # Windows : os.replace échoue (WinError 5) si un lecteur / l'antivirus tient le fichier
+    for attempt in range(20):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            time.sleep(0.05 * (attempt + 1))
     os.replace(tmp, path)
 
 
@@ -96,7 +109,8 @@ def list_channels():
         path = channel_path(cid)
         if valid_id(cid) and os.path.isfile(path):
             try:
-                out.append(_read_json(path))
+                with lock_for(cid):
+                    out.append(_read_json(path))
             except Exception:
                 continue
     out.sort(key=lambda c: c.get("created", ""))
@@ -106,7 +120,8 @@ def list_channels():
 def get_channel(cid):
     if not valid_id(cid) or not os.path.isfile(channel_path(cid)):
         return None
-    return _read_json(channel_path(cid))
+    with lock_for(cid):
+        return _read_json(channel_path(cid))
 
 
 def save_channel(ch):
@@ -138,7 +153,8 @@ def list_projects():
         path = project_path(pid)
         if valid_id(pid) and os.path.isfile(path):
             try:
-                out.append(_read_json(path))
+                with lock_for(pid):
+                    out.append(_read_json(path))
             except Exception:
                 continue
     out.sort(key=lambda p: p.get("updated", ""), reverse=True)

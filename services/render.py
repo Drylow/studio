@@ -25,8 +25,7 @@ FONTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 MOTIONS = ["zoom_in", "pan_right", "zoom_out", "pan_left", "zoom_in_tl", "pan_down", "zoom_in_br", "pan_up"]
 
 
-class Cancelled(Exception):
-    pass
+Cancelled = media.Cancelled  # annulation (bouton Annuler) : tue ffmpeg immédiatement
 
 
 # ── Mouvements de caméra ────────────────────────────────────────────────────
@@ -79,21 +78,39 @@ def _clip_key(image, frames, w, h, fps, motion, strength):
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
-def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=17):
+_X264 = ["-c:v", "libx264", "-preset", "veryfast", "-profile:v", "high", "-pix_fmt", "yuv420p"]
+
+
+def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancelled=None):
+    """Clip d'une scène. Même encodeur/profil pour tous les clips → concat sans réencodage sûr."""
+    # « cover » : l'image est recadrée (jamais déformée) au format de la vidéo, 16:9 comme 9:16
+    cover = "scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}"
     if motion == "none":  # image fixe : pas besoin de zoompan (bien plus rapide)
-        vf = (f"scale={w}:{h}:force_original_aspect_ratio=increase:flags=lanczos,crop={w}:{h},"
-              f"setsar=1,format=yuv420p")
+        vf = cover.format(W=w, H=h) + ",setsar=1,format=yuv420p"
         media.run(["-loop", "1", "-framerate", str(fps), "-i", image, "-vf", vf, "-frames:v", str(frames),
-                   "-r", str(fps), "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage",
-                   "-crf", str(crf), "-an", dest])
+                   "-r", str(fps)] + _X264 + ["-tune", "stillimage", "-crf", str(crf), "-an", dest],
+                  cancelled=cancelled)
         return dest
     z, x, y = _motion_expr(motion, frames, strength)
-    vf = (f"scale={w * 2}:{h * 2}:flags=lanczos,"
+    vf = (cover.format(W=w * 2, H=h * 2) + ","
           f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={fps},"
           f"setsar=1,format=yuv420p")
-    media.run(["-i", image, "-vf", vf, "-frames:v", str(frames), "-r", str(fps),
-               "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-an", dest])
+    media.run(["-i", image, "-vf", vf, "-frames:v", str(frames), "-r", str(fps)] + _X264 +
+              ["-crf", str(crf), "-an", dest], cancelled=cancelled)
     return dest
+
+
+def _run_clips(todo, workers, cancelled, on_done):
+    """Rend des clips en parallèle ; en cas d'annulation/erreur, ne lance plus rien et tue le reste."""
+    ex = ThreadPoolExecutor(max_workers=workers)
+    try:
+        futs = {ex.submit(render_clip, *args, cancelled=cancelled): dest for dest, args in todo}
+        for fut in as_completed(futs):
+            fut.result()
+            os.replace(futs[fut] + ".tmp.mp4", futs[fut])
+            on_done()
+    finally:
+        ex.shutdown(wait=True, cancel_futures=True)
 
 
 # ── Sous-titres ASS ─────────────────────────────────────────────────────────
@@ -257,15 +274,13 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     done = len(jobs) - len(todo)
     tick(0.02, f"Animation des scènes ({done}/{len(jobs)} en cache)…")
     if todo:
-        with ThreadPoolExecutor(max_workers=workers) as ex:
-            futs = {ex.submit(render_clip, img, dest + ".tmp.mp4", n, width, height, fps, mv,
-                              motion_strength): (dest,) for (_, img, dest, n, mv) in todo}
-            for fut in as_completed(futs):
-                fut.result()
-                dest = futs[fut][0]
-                os.replace(dest + ".tmp.mp4", dest)
-                done += 1
-                tick(0.02 + 0.68 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
+        def one_done():
+            nonlocal done
+            done += 1
+            tick(0.02 + 0.68 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
+        stop = cancelled or (lambda: False)
+        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 17))
+                    for (_, img, dest, n, mv) in todo], workers, stop, one_done)
     keep = {os.path.basename(j[2]) for j in jobs}
     for f in os.listdir(clips_dir):  # purge des clips obsolètes
         if f not in keep:
@@ -291,7 +306,8 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
         groups = [list(range(i, min(i + batch, len(clip_paths)))) for i in range(0, len(clip_paths), batch)]
         for gi, g in enumerate(groups):
             part = os.path.join(workdir, f"part_{gi:03d}.mp4")
-            _xfade_chain([clip_paths[i] for i in g], [durs[i] for i in g], transition_dur, fps, part)
+            _xfade_chain([clip_paths[i] for i in g], [durs[i] for i in g], transition_dur, fps, part,
+                         cancelled=cancelled)
             inputs.append(part)
             in_durs.append(sum(durs[i] for i in g))
             temp.append(part)
@@ -302,7 +318,7 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     ass = build_ass(words or [], os.path.join(workdir, "captions.ass"), width, height, captions, overlays)
     try:
         _final_pass(workdir, inputs, in_durs, transition_dur, voice_path, out_path, total, ass, music_path,
-                    music_volume, normalize, quality, fps)
+                    music_volume, normalize, quality, fps, cancelled=cancelled)
     finally:
         for t in temp:
             try:
@@ -333,7 +349,7 @@ def _xfade_graph(n, durs, t, fps):
     return graph, prev
 
 
-def _xfade_chain(inputs, durs, t, fps, dest):
+def _xfade_chain(inputs, durs, t, fps, dest, cancelled=None):
     """xfade sur une liste de clips. durs[i] = durée « utile » du clip i (sans recouvrement)."""
     if len(inputs) == 1:
         media.run(["-i", inputs[0], "-c", "copy", dest])
@@ -342,8 +358,10 @@ def _xfade_chain(inputs, durs, t, fps, dest):
     for p in inputs:
         args += ["-i", p]
     graph, out = _xfade_graph(len(inputs), durs, t, fps)
+    # intermédiaire temporaire (réencodé dans la passe finale) : ultrafast, qualité quasi sans perte
     media.run(args + ["-filter_complex", ";".join(graph), "-map", f"[{out}]",
-                      "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-pix_fmt", "yuv420p", dest])
+                      "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-pix_fmt", "yuv420p", dest],
+              cancelled=cancelled)
 
 
 def _rel(path, base):
@@ -354,7 +372,7 @@ def _rel(path, base):
 
 
 def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, music_volume, normalize,
-                quality, fps):
+                quality, fps, cancelled=None):
     args = []
     for v in videos:
         args += ["-i", _rel(v, workdir)]
@@ -395,13 +413,13 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
     if copy_video:
         venc = ["-c:v", "copy"]
     elif quality == "high":
-        venc = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p"]
+        venc = ["-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-crf", "18", "-pix_fmt", "yuv420p"]
     else:
-        venc = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p"]
+        venc = ["-c:v", "libx264", "-preset", "veryfast", "-profile:v", "high", "-crf", "20", "-pix_fmt", "yuv420p"]
     tmp = out_path + ".tmp.mp4"
     media.run(args + ["-filter_complex", ";".join(graph), "-map", vmap, "-map", "[a]"] + venc +
               ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.3f}",
-               "-movflags", "+faststart", os.path.abspath(tmp)], cwd=workdir)
+               "-movflags", "+faststart", os.path.abspath(tmp)], cwd=workdir, cancelled=cancelled)
     os.replace(tmp, out_path)
 
 
@@ -473,14 +491,12 @@ def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=108
     tick(0.02, f"Clips {done}/{len(jobs)}…")
     workers = max(1, min(4, (os.cpu_count() or 2) // 2))
     if todo:
-        with ThreadPoolExecutor(max_workers=workers) as ex:
-            futs = {ex.submit(render_clip, img, dest + ".tmp.mp4", n, width, height, fps, mv,
-                              motion_strength, 18): dest for (img, dest, n, mv) in todo}
-            for fut in as_completed(futs):
-                fut.result()
-                os.replace(futs[fut] + ".tmp.mp4", futs[fut])
-                done += 1
-                tick(0.02 + 0.83 * done / len(jobs), f"Clips {done}/{len(jobs)}")
+        def one_done():
+            nonlocal done
+            done += 1
+            tick(0.02 + 0.83 * done / len(jobs), f"Clips {done}/{len(jobs)}")
+        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 18))
+                    for (img, dest, n, mv) in todo], workers, cancelled or (lambda: False), one_done)
     keep = {os.path.basename(j[1]) for j in jobs}
     for f in os.listdir(cdir):
         if f not in keep:

@@ -281,7 +281,7 @@ def _style_parts(ch, scene_chars=None):
         lines.append(f"Reference image {len(refs)} = ART STYLE reference: copy its rendering, line work, color "
                      "palette and shading exactly. Ignore its content and composition.")
     for c in st.get("characters") or []:
-        if scene_chars is not None and c["name"] not in scene_chars and not c.get("always_ref"):
+        if scene_chars is not None and c["name"] not in scene_chars and not c.get("always"):
             continue
         p = channel_ref_path(ch, c.get("image"))
         if p and os.path.isfile(p):
@@ -291,16 +291,17 @@ def _style_parts(ch, scene_chars=None):
     return lines, refs
 
 
-def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False):
+def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, vertical=False):
     st = ch.get("style") or {}
     lines, refs = _style_parts(ch, scene_chars)
     chars_desc = [f"{c['name']}: {c['description']}" for c in st.get("characters") or []
-                  if c.get("description") and (scene_chars is None or c["name"] in scene_chars)]
+                  if c.get("description") and (scene_chars is None or c["name"] in scene_chars or c.get("always"))]
     parts = lines + ["SCENE: " + scene_prompt.strip()]
     if chars_desc:
         parts.append("CHARACTERS IN THIS IMAGE: " + " | ".join(chars_desc))
     parts.append("ART STYLE: " + (st.get("prompt") or "").strip())
-    fmt = "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame."
+    fmt = ("Tall 9:16 vertical frame, full-bleed illustration, main subject centered, no borders, no frame."
+           if vertical else "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame.")
     if st.get("no_text", True) and not allow_text:
         fmt += " No text, no letters, no words, no captions, no signs with writing, no watermark, no logo."
     parts.append(fmt)
@@ -311,7 +312,7 @@ _MODERATION = ("safety", "moderation", "policy", "content_policy", "rejected", "
 
 
 def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080):
-    full, refs = build_image_prompt(ch, prompt, scene_chars)
+    full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width)
     try:
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     except ai.AIError as e:
@@ -321,7 +322,7 @@ def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=
                        "scene, meaning and composition (imply violence/danger instead of showing it; no gore, no "
                        "nudity, no real public figures). Output only the prompt.\n\n" + prompt,
                        model=ai.fast_model())
-        full, refs = build_image_prompt(ch, safe, scene_chars)
+        full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width)
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     ai.fit_cover(blob, width, height, dest)
     return dest
@@ -390,11 +391,24 @@ def stage(pr):
 
 
 def push_history(pr, label):
-    if (pr.get("script") or "").strip():
-        hist = pr.setdefault("script_history", [])
-        if not hist or hist[-1].get("script") != pr["script"]:
-            hist.append({"at": store.now(), "label": label, "script": pr["script"]})
-            del hist[:-15]
+    """Sauvegarde la version ACTUELLE avant une modification.
+
+    Les éditions manuelles rapprochées (autosave) ne créent qu'une entrée : on garde
+    l'état d'avant la session d'édition, pas une version par frappe."""
+    if not (pr.get("script") or "").strip():
+        return
+    hist = pr.setdefault("script_history", [])
+    if hist and hist[-1].get("script") == pr["script"]:
+        return
+    if label == "édition manuelle" and hist and hist[-1].get("label") == label:
+        try:
+            last = time.mktime(time.strptime(hist[-1]["at"], "%Y-%m-%dT%H:%M:%S"))
+            if time.time() - last < 600:
+                return
+        except (KeyError, ValueError):
+            pass
+    hist.append({"at": store.now(), "label": label, "script": pr["script"]})
+    del hist[:-20]
 
 
 def voice_signature(pr):
@@ -453,50 +467,59 @@ def job_rewrite(job, pid, instruction):
 # ── Jobs : voix ─────────────────────────────────────────────────────────────
 
 def tighten_pauses(src, words, max_pause, dest):
-    """Raccourcit les silences trop longs (> max_pause) et recale les timings."""
+    """Raccourcit les silences trop longs (> max_pause) et recale les timings.
+
+    Découpe à l'ÉCHANTILLON près (WAV) — un filtre ffmpeg sur du MP3 coupe par
+    trames de ~26 ms et ferait dériver sous-titres et coupes au fil de la vidéo."""
+    import wave
     if not words or not max_pause or max_pause <= 0:
         return None
-    total = media.duration(src)
-    cuts = []  # intervalles à supprimer
-    lead = words[0]["s"]
-    if lead > 0.25:
-        cuts.append((0.0, lead - 0.2))
-    for a, b in zip(words, words[1:]):
-        gap = b["s"] - a["e"]
-        if gap > max_pause:
-            cuts.append((a["e"] + max_pause / 2, b["s"] - max_pause / 2))
-    if not cuts:
-        return None
-    keep, t = [], 0.0
-    for a, b in cuts:
-        if a > t:
-            keep.append((t, a))
-        t = b
-    keep.append((t, total))
-    expr = "+".join(f"between(t,{a:.3f},{b:.3f})" for a, b in keep)
-    script = dest + ".filter.txt"
-    with open(script, "w", encoding="utf-8") as f:
-        f.write(f"[0:a]aselect='{expr}',asetpts=N/SR/TB[a]")
+    sr = 44100
+    wav_in, wav_out = dest + ".in.wav", dest + ".out.wav"
+    media.run(["-i", src, "-ac", "1", "-ar", str(sr), "-c:a", "pcm_s16le", wav_in])
     try:
-        media.run(["-i", src, "-filter_complex_script", script, "-map", "[a]", "-ar", "44100", "-ac", "1",
-                   "-c:a", "libmp3lame", "-b:a", "192k", dest])
+        with wave.open(wav_in, "rb") as wi:
+            n_total = wi.getnframes()
+            params = wi.getparams()
+            cuts = []  # (début, fin) en échantillons, à supprimer
+            lead = words[0]["s"]
+            if lead > 0.25:
+                cuts.append((0, int(round((lead - 0.2) * sr))))
+            for x, y in zip(words, words[1:]):
+                if y["s"] - x["e"] > max_pause:
+                    c0 = int(round((x["e"] + max_pause / 2) * sr))
+                    c1 = int(round((y["s"] - max_pause / 2) * sr))
+                    if c1 > c0 and (not cuts or c0 >= cuts[-1][1]):
+                        cuts.append((c0, min(c1, n_total)))
+            if not cuts:
+                return None
+            with wave.open(wav_out, "wb") as wo:
+                wo.setparams(params)
+                pos = 0
+                for c0, c1 in cuts + [(n_total, n_total)]:
+                    if c0 > pos:
+                        wi.setpos(pos)
+                        wo.writeframes(wi.readframes(c0 - pos))
+                    pos = max(pos, c1)
+        media.run(["-i", wav_out, "-c:a", "libmp3lame", "-b:a", "192k", dest])
     finally:
-        try:
-            os.remove(script)
-        except OSError:
-            pass
+        for f in (wav_in, wav_out):
+            try:
+                os.remove(f)
+            except OSError:
+                pass
 
-    def remap(x):
-        removed = 0.0
-        for a, b in cuts:
-            if x >= b:
-                removed += b - a
-            elif x > a:
-                return a - removed
-        return x - removed
-    new_words = [{"w": w["w"], "s": round(remap(w["s"]), 3), "e": round(remap(w["e"]), 3), "t": w.get("t", 0)}
-                 for w in words]
-    return new_words
+    def remap(sec):
+        x = sec * sr
+        removed = 0
+        for c0, c1 in cuts:
+            if x >= c1:
+                removed += c1 - c0
+            elif x > c0:
+                return (c0 - removed) / sr
+        return (x - removed) / sr
+    return [{"w": w["w"], "s": round(remap(w["s"]), 3), "e": round(remap(w["e"]), 3), "t": w.get("t", 0)}
+            for w in words]
 
 
 def job_voice(job, pid):
@@ -512,8 +535,9 @@ def job_voice(job, pid):
 
     def prog(i, n):
         job.update(0.02 + 0.8 * i / max(1, n), f"Voix off {min(i + 1, n)}/{n}…")
-    res = tts.synthesize(text, raw, provider=vs.get("provider", "edge"),
-                         voice=vs.get("voice") or DEFAULT_VOICE_BY_LANG.get(ch.get("language", "fr"), ""),
+    provider = vs.get("provider", "edge")
+    voice = vs.get("voice") or (DEFAULT_VOICE_BY_LANG.get(ch.get("language", "fr"), "") if provider == "edge" else "")
+    res = tts.synthesize(text, raw, provider=provider, voice=voice,
                          speed=vs.get("speed", 1.0), pitch=vs.get("pitch", 0), model=vs.get("model", ""),
                          instructions=vs.get("instructions", ""), progress=prog)
     words = res["words"]
@@ -532,6 +556,9 @@ def job_voice(job, pid):
     duration = media.duration(final)
     with open(os.path.join(d, "words.json"), "w", encoding="utf-8") as f:
         json.dump(words, f, ensure_ascii=False)
+    sections = section_ranges(pr.get("script") or "")  # le script RÉELLEMENT lu (pas une version éditée après)
+    with open(os.path.join(d, "sections.json"), "w", encoding="utf-8") as f:
+        json.dump(sections, f, ensure_ascii=False)
     sig = voice_signature(pr)
 
     old_voice = (pr.get("voice") or {}).get("file")
@@ -540,7 +567,7 @@ def job_voice(job, pid):
         x["voice"] = {"file": vname, "v": stamp, "duration": round(duration, 3),
                       "words": len(words), "sig": sig}
         x["render"] = None
-        _replan(x, words, duration)
+        _replan(x, words, duration, sections)
     store.update_project(pid, save)
     _remove_quiet(d, old_voice if old_voice != vname else None)
     # calibration du débit réel de la voix de la chaîne (sert à viser la bonne durée)
@@ -683,10 +710,19 @@ def plan_scenes(words, total, sections, m):
     return out
 
 
-def _replan(pr, words, duration):
+def load_sections(pid):
+    p = os.path.join(store.project_dir(pid), "sections.json")
+    if not os.path.isfile(p):
+        return None
+    with open(p, "r", encoding="utf-8") as f:
+        return [tuple(x) for x in json.load(f)]
+
+
+def _replan(pr, words, duration, sections=None):
     """Recalcule les scènes après une nouvelle voix. Garde image+prompt des scènes au texte identique."""
     old = {(_norm(s.get("text"))): s for s in pr.get("scenes") or []}
-    sections = section_ranges(pr.get("script") or "")
+    if sections is None:
+        sections = load_sections(pr["id"]) or section_ranges(pr.get("script") or "")
     new = plan_scenes(words, duration, sections, pr.get("montage") or DEFAULT_MONTAGE)
     scenes = []
     for i, sc in enumerate(new):
@@ -762,12 +798,15 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     batches = [todo[i:i + 12] for i in range(0, len(todo), 12)]
     done = 0
     results = {}
-    with ThreadPoolExecutor(max_workers=4) as ex:
+    ex = ThreadPoolExecutor(max_workers=4)
+    try:
         futs = [ex.submit(_prompt_batch, ch, pr, b, pr["scenes"]) for b in batches]
         for fut in as_completed(futs):
             results.update(fut.result())
             done += 1
             job.update(p0 + (p1 - p0) * done / len(batches), f"Prompts d'images {done}/{len(batches)}…")
+    finally:
+        ex.shutdown(wait=False, cancel_futures=True)
 
     def save(x):
         for s in x["scenes"]:
@@ -894,14 +933,17 @@ def job_render(job, pid):
                                  s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
     music = store.music_path(m.get("music")) if m.get("music") else None
     out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
-    res = render.render_video(
-        os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]), os.path.join(d, out_name),
-        width=w, height=h, fps=int(m.get("fps") or 30), motion=m.get("motion", "auto"),
-        motion_strength=float(m.get("motion_strength") or 0.12), transition=m.get("transition", "fade"),
-        transition_dur=float(m.get("transition_dur") or 0.3), words=load_words(pid),
-        captions=m.get("captions") or {"mode": "none"}, overlays=overlays, music_path=music,
-        music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"),
-        progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled)
+    try:
+        res = render.render_video(
+            os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]), os.path.join(d, out_name),
+            width=w, height=h, fps=int(m.get("fps") or 30), motion=m.get("motion", "auto"),
+            motion_strength=float(m.get("motion_strength") or 0.12), transition=m.get("transition", "fade"),
+            transition_dur=float(m.get("transition_dur") or 0.3), words=load_words(pid),
+            captions=m.get("captions") or {"mode": "none"}, overlays=overlays, music_path=music,
+            music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"),
+            progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled)
+    except render.Cancelled:
+        raise store.JobCancelled("Annulé.")
     old = (pr.get("render") or {}).get("file")
 
     def save(x):
@@ -924,11 +966,10 @@ def job_pack(job, pid, motion="none"):
     w, h = dims(pr)
     scenes = [{"image": os.path.join(d, s["image"]), "start": s["start"], "text": s["text"]} for s in pr["scenes"]]
     name = f"{render.safe_name(pr.get('title'))}_pack_montage_{int(time.time()) % 1000000}.zip"
-    res = render.export_pack(os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]),
-                             os.path.join(d, name), width=w, height=h, fps=int(m.get("fps") or 30),
-                             motion=motion or "none", motion_strength=float(m.get("motion_strength") or 0.1),
-                             words=load_words(pid), script_text=pr.get("script") or "", title=pr.get("title", ""),
-                             progress=lambda p, msg: job.update(p * 0.99, msg), cancelled=job.cancelled)
+    try:
+        res = _pack_call(d, scenes, pr, w, h, m, motion, pid, job, name)
+    except render.Cancelled:
+        raise store.JobCancelled("Annulé.")
     old = (pr.get("pack") or {}).get("file")
 
     def save(x):
@@ -937,6 +978,14 @@ def job_pack(job, pid, motion="none"):
     store.update_project(pid, save)
     _remove_quiet(d, old if old != name else None)
     job.update(1.0, f"Pack montage prêt : {res['clips']} clips.")
+
+
+def _pack_call(d, scenes, pr, w, h, m, motion, pid, job, name):
+    return render.export_pack(os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]),
+                             os.path.join(d, name), width=w, height=h, fps=int(m.get("fps") or 30),
+                             motion=motion or "none", motion_strength=float(m.get("motion_strength") or 0.1),
+                             words=load_words(pid), script_text=pr.get("script") or "", title=pr.get("title", ""),
+                             progress=lambda p, msg: job.update(p * 0.99, msg), cancelled=job.cancelled)
 
 
 def job_thumbnails(job, pid, idea="", count=2):

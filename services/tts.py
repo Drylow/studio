@@ -51,11 +51,8 @@ def _env(name, default=""):
 
 
 def _edge_installed():
-    try:
-        import edge_tts  # noqa: F401
-        return True
-    except Exception:
-        return False
+    import importlib.util
+    return importlib.util.find_spec("edge_tts") is not None
 
 
 # ── Découpage du texte ──────────────────────────────────────────────────────
@@ -223,7 +220,8 @@ def align_to_text(words, text):
 
     Edge renvoie les mots sans ponctuation ; on les ré-aligne sur les tokens du
     script (flux de caractères normalisés) pour que les sous-titres gardent
-    virgules/points et que la coupe des lignes tombe au bon endroit."""
+    virgules/points et que la coupe des lignes tombe au bon endroit. Un mot TTS
+    peut couvrir plusieurs tokens (« 10 000 ») et inversement (« jusqu'au »)."""
     tokens = (text or "").split()
     if not words or not tokens:
         return words
@@ -233,21 +231,26 @@ def align_to_text(words, text):
             stream.append(ch)
             owner.append(ti)
     flat = "".join(stream)
-    pos, out = 0, []
+    pos, out, last_t = 0, [], -1
     for w in words:
         n = _norm(w["w"])
         if not n:
             continue
-        idx = flat.find(n, pos, pos + len(n) + 40)
+        idx = flat.find(n, pos, pos + len(n) + 60)
+        if idx == -1:  # décrochage : on cherche plus loin pour se resynchroniser
+            idx = flat.find(n, pos, pos + len(n) + 600)
         if idx == -1:
-            out.append({"w": w["w"], "s": w["s"], "e": w["e"], "_t": out[-1]["_t"] if out else 0, "_x": 1})
+            out.append({"w": w["w"], "s": w["s"], "e": w["e"], "_t": max(last_t, 0), "_x": 1})
             continue
-        ti = owner[idx + len(n) - 1]
+        first, ti = owner[idx], owner[idx + len(n) - 1]
         pos = idx + len(n)
         if out and out[-1].get("_t") == ti and not out[-1].get("_x"):  # même token découpé
             out[-1]["e"] = w["e"]
             continue
-        out.append({"w": tokens[ti], "s": w["s"], "e": w["e"], "_t": ti})
+        first = max(first, last_t + 1)
+        out.append({"w": " ".join(tokens[first:ti + 1]) if first <= ti else tokens[ti],
+                    "s": w["s"], "e": w["e"], "_t": ti})
+        last_t = ti
     for w in out:
         w["t"] = w.pop("_t", 0)  # index du token dans le texte (sert à retrouver les sections)
         w.pop("_x", None)

@@ -79,6 +79,7 @@ function stopPolls() { clearTimeout(S.pollT); clearTimeout(S.listT); S.pollT = S
 async function route() {
   stopPolls();
   window.onbeforeunload = null;
+  $('#view').oninput = null;
   closeModal(); closeViewer();
   const parts = (location.hash || '#/projects').slice(2).split('/');
   const tab = {project: 'projects', projects: 'projects', channel: 'channels', channels: 'channels', settings: 'settings'}[parts[0]] || 'projects';
@@ -250,17 +251,18 @@ function renderProject() {
   ({script: stepScript, voice: stepVoice, storyboard: stepStoryboard, export: stepExport})[S.step]();
 }
 
+const _dismissedJobs = new Set();
 function renderJobBar() {
   const j = S.project.job, el = $('#jobbar');
   if (!el) return;
-  if (!j || (j.status === 'done' && Date.now() - new Date(j.finished).getTime() > 8000) || j.status === 'cancelled') { el.innerHTML = ''; return; }
+  if (!j || _dismissedJobs.has(j.id) || (j.status === 'done' && Date.now() - new Date(j.finished).getTime() > 8000) || j.status === 'cancelled') { el.innerHTML = ''; return; }
   const running = j.status === 'running';
   el.innerHTML = `<div class="jobbar ${j.status === 'error' ? 'error' : ''}">
     ${running ? '<span class="spin"></span>' : (j.status === 'error' ? '⚠️' : '✅')}
     <b class="small" style="white-space:nowrap">${esc(JOB_LABEL[j.kind] || j.kind)}</b>
     <div class="msg ${j.status === 'error' ? '' : 'muted'}" title="${esc(j.error || j.message)}">${esc(j.status === 'error' ? j.error : j.message)}</div>
     ${running ? `<div class="bar"><i style="width:${Math.round(j.progress * 100)}%"></i></div><b class="small">${Math.round(j.progress * 100)}%</b>
-      <button class="btn xs danger" onclick="action('cancel')">Annuler</button>` : `<button class="btn xs ghost" onclick="this.closest('.jobbar').remove()">✕</button>`}
+      <button class="btn xs danger" onclick="action('cancel')">Annuler</button>` : `<button class="btn xs ghost" onclick="_dismissedJobs.add('${esc(j.id)}');this.closest('.jobbar').remove()">✕</button>`}
   </div>`;
 }
 
@@ -396,8 +398,10 @@ function voiceForm(v, lang, onChange) {
     const r = await guard(() => api('GET', `/voices?provider=${v.provider}&lang=${allLangs ? '' : lang}`));
     const list = r ? r.voices : [];
     const featured = new Set((S.cfg.edge_featured || {})[lang] || []);
-    sel.innerHTML = list.map(x => `<option value="${esc(x.id)}">${featured.has(x.id) ? '★ ' : ''}${esc(x.id)}${x.gender ? ' · ' + x.gender : ''}</option>`).join('');
-    if (v.voice && list.some(x => x.id === v.voice)) sel.value = v.voice;
+    const opts = list.map(x => `<option value="${esc(x.id)}">${featured.has(x.id) ? '★ ' : ''}${esc(x.id)}${x.gender ? ' · ' + x.gender : ''}</option>`);
+    if (v.voice && !list.some(x => x.id === v.voice)) opts.unshift(`<option value="${esc(v.voice)}">${esc(v.voice)} (choisie)</option>`);
+    sel.innerHTML = opts.join('');
+    if (v.voice) sel.value = v.voice;
     else if (list.length) { v.voice = sel.value; onChange(v); }
   };
   setSeg();
@@ -870,7 +874,7 @@ async function viewChannel(cid) {
     if (r) { isDirty = false; $('#chSaveState').textContent = '✓ enregistré'; Object.assign(d, clone(r)); await loadChannels(); }
     return r;
   };
-  $('#view').addEventListener('input', e => { if (!e.target.closest('#chVoice,#chMontage')) { dirty(); outs(); } });
+  $('#view').oninput = e => { if (!e.target.closest('#chVoice,#chMontage')) { dirty(); outs(); } };
   $('#chFormat').onchange = e => $('#fmtDesc').textContent = (F[e.target.value] || {}).desc || '';
   $('#stPreset').onchange = e => { if (e.target.value && ST[e.target.value]) $('#stPrompt').value = ST[e.target.value].prompt; dirty(); };
   $('#chSave').onclick = () => save();

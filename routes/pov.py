@@ -392,8 +392,9 @@ def project(pid):
                 hist = x.get("script_history") or []
                 i = int(b["restore"])
                 if 0 <= i < len(hist):
+                    snap = hist[i]["script"]  # lu AVANT push_history (qui peut décaler les index)
                     E.push_history(x, "avant restauration")
-                    x["script"] = hist[i]["script"]
+                    x["script"] = snap
         pr = store.update_project(pid, upd)
     return jsonify(_full(pr))
 

@@ -8,6 +8,8 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
+import time
 
 _FFMPEG = None
 
@@ -47,14 +49,36 @@ def available():
 _NO_WINDOW = 0x08000000 if sys.platform == "win32" else 0  # pas de console qui clignote
 
 
-def run(args, cwd=None, timeout=None):
-    """Lance ffmpeg ; lève MediaError avec la fin de stderr en cas d'échec."""
+class Cancelled(Exception):
+    """Opération ffmpeg interrompue à la demande (bouton Annuler)."""
+
+
+def run(args, cwd=None, timeout=None, cancelled=None):
+    """Lance ffmpeg ; lève MediaError avec la fin de stderr en cas d'échec.
+
+    `cancelled` (callable) est interrogé pendant l'exécution : s'il renvoie True,
+    le process ffmpeg est tué et Cancelled est levée (annulation immédiate)."""
     cmd = [ffmpeg_bin(), "-hide_banner", "-nostdin", "-y"] + list(args)
-    p = subprocess.run(cmd, cwd=cwd, capture_output=True, timeout=timeout,
-                       creationflags=_NO_WINDOW)
-    if p.returncode != 0:
-        tail = p.stderr.decode("utf-8", "replace").strip().splitlines()[-12:]
-        raise MediaError("ffmpeg a échoué:\n" + "\n".join(tail))
+    if cancelled is None:
+        p = subprocess.run(cmd, cwd=cwd, capture_output=True, timeout=timeout, creationflags=_NO_WINDOW)
+        if p.returncode != 0:
+            tail = p.stderr.decode("utf-8", "replace").strip().splitlines()[-12:]
+            raise MediaError("ffmpeg a échoué:\n" + "\n".join(tail))
+        return p
+    # stderr dans un fichier temporaire : pas de pipe plein qui bloquerait ffmpeg
+    with tempfile.TemporaryFile() as err:
+        p = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.DEVNULL, stderr=err, creationflags=_NO_WINDOW)
+        t0 = time.time()
+        while p.poll() is None:
+            if cancelled() or (timeout and time.time() - t0 > timeout):
+                p.kill()
+                p.wait()
+                raise Cancelled("Annulé.")
+            time.sleep(0.25)
+        if p.returncode != 0:
+            err.seek(0)
+            tail = err.read().decode("utf-8", "replace").strip().splitlines()[-12:]
+            raise MediaError("ffmpeg a échoué:\n" + "\n".join(tail))
     return p
 
 
