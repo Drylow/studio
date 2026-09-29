@@ -39,7 +39,12 @@ mot de passe boss.
    - personnages récurrents avec fiche perso ;
    - voix, rythme et montage par défaut.
 
+   - mise en page « tableau » optionnelle avec un prof animé (voir plus bas).
+
    Des modèles prêts à l'emploi viennent d'une étude NexLev des chaînes 2D en forte croissance.
+   Par exemple, **Business Explained** reprend le format de Marcus Explains (« How X Actually Makes
+   Money ») : bible d'écriture tirée de ses transcriptions, persos blancs à tête ronde, fond ardoise
+   bleu nuit et prof à tête blanche animé.
    L'assistant **🧪 Niche bending** prend un format qui marche et propose des niches transposées
    (moins saturées ou mieux payées), avec des titres. La chaîne se crée d'un clic.
 2. **Script.** Plan (hook, sections, beats, budget de mots), puis écriture section par
@@ -64,6 +69,33 @@ mot de passe boss.
      et c'est calé.
    - **Miniatures** : 2 variantes dans le style de la chaîne, avec le perso et un texte court en gros.
    - **Métadonnées** : titres, description SEO, tags et chapitres horodatés.
+
+## Mise en page tableau et prof animé
+
+Réglage par chaîne (section 4 de la fiche chaîne), puis par vidéo dans le montage :
+
+- **Fond** : ardoise bleu nuit, graphite, noir et jaune, cahier jaune, papier millimétré, pois orange,
+  tableau à craie, ou tes propres couleurs. Le fond est dessiné par le code, sans IA.
+- **Panneau** : l'image de la scène est posée au centre avec un contour, des coins arrondis et une ombre.
+  Le zoom lent reste à l'intérieur du panneau.
+- **Prof animé** en bas à gauche, avec une animation 2D pose à pose :
+  - l'IA dessine le prof en pied, baguette levée, sur fond transparent ;
+  - elle redessine ensuite **uniquement son bras** dans 3 positions (mi-hauteur, pointé, tapotement) ;
+  - seule la zone du bras est recollée, donc la tête, le corps et les pieds restent identiques au pixel près ;
+  - une image de transition entre deux poses adoucit le mouvement.
+- **Animation** calée sur la voix off : double tapotement vers le panneau sur les chiffres clés ($, %,
+  nombres), et un geste « regardez ça » de temps en temps quand il parle. Au repos il ne bouge pas.
+- **Pack montage** : chaque clip contient la mise en page et l'animation du prof. Le ZIP inclut aussi le
+  fond et le prof en PNG séparés.
+
+## Quotas du proxy
+
+Les comptes Codex ont chacun une limite d'utilisation sur une fenêtre de quelques heures, et les images
+en consomment beaucoup. Quand **tous** les comptes sont en pause, le proxy répond « model_cooldown » :
+
+- **texte** : l'outil bascule automatiquement sur `AI_TEXT_FALLBACK` (Gemini par défaut) ;
+- **images** : la génération s'arrête proprement avec l'heure de reprise. Ce qui est déjà fait est
+  conservé, et « Générer les images » reprend là où ça s'est arrêté.
 
 Tout est stocké dans `data/pov/` : chaînes, projets, médias, et `music/` pour tes musiques
 de fond. Les générations tournent côté serveur, donc tu peux fermer l'onglet sans rien perdre.

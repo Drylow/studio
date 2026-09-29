@@ -592,6 +592,9 @@ function montageForm(m, onChange, opts = {}) {
   box.className = 'stack';
   const music = opts.music || [];
   box.innerHTML = `
+    <label class="f"><span class="lbl">Mise en page</span><select data-k="layout">
+      <option value="full">Plein écran (l'image remplit la vidéo)</option>
+      <option value="board">Tableau : fond quadrillé + panneau + prof en bas à gauche (16:9)</option></select></label>
     <div class="grid2">
       <label class="f"><span class="lbl">Mouvement de caméra</span><select data-k="motion">
         <option value="auto">Auto (zooms + pans variés)</option><option value="zoom_in">Zoom avant partout</option><option value="none">Aucun (images fixes)</option></select></label>
@@ -628,7 +631,8 @@ function montageForm(m, onChange, opts = {}) {
       <label class="f"><span class="lbl">Durée du hook rapide (s)</span><input type="number" step="5" min="0" data-k="hook_seconds"></label>
     </div></details>`;
   const set = (k, val) => { const el = $(`[data-k="${k}"]`, box); if (el) { if (el.type === 'checkbox') el.checked = !!val; else el.value = val; } };
-  ['motion', 'motion_strength', 'transition', 'transition_dur', 'section_titles', 'music_volume', 'fps', 'quality', 'aspect', 'min_scene', 'max_scene', 'hook_seconds'].forEach(k => set(k, m[k]));
+  if (!m.layout) m.layout = 'full';
+  ['layout', 'motion', 'motion_strength', 'transition', 'transition_dur', 'section_titles', 'music_volume', 'fps', 'quality', 'aspect', 'min_scene', 'max_scene', 'hook_seconds'].forEach(k => set(k, m[k]));
   for (const k of ['font', 'size', 'position', 'color', 'highlight', 'outline', 'uppercase']) { const el = $(`[data-c="${k}"]`, box); if (el.type === 'checkbox') el.checked = !!c[k]; else el.value = c[k]; }
   const outs = () => {
     $('[data-out=ms]', box).textContent = Math.round(m.motion_strength * 100) + '%';
@@ -791,6 +795,8 @@ async function viewChannel(cid) {
   const ch = await api('GET', '/channels/' + cid);
   const d = clone(ch);
   const F = S.cfg.formats, ST = S.cfg.styles;
+  const bd = d.board = Object.assign({bg_color: '#08A8E6', line_color: '#7DEAFF', border_color: '#FFFFFF', panel_width: 0.85,
+    presenter_height: 0.37, bob: true, mascot: '', presenter: null}, d.board || {});
   const music = (await guard(() => api('GET', '/music'))) || {music: []};
   $('#view').innerHTML = `
     <div class="phead"><div class="grow"><input class="title-in" id="chName" value="${esc(d.name)}" style="width:100%"><div class="small muted">Profil de chaîne · utilisé par toutes ses vidéos</div></div>
@@ -823,7 +829,9 @@ async function viewChannel(cid) {
         <label class="f"><span class="lbl">Style de départ</span><select id="stPreset"><option value="">— personnalisé —</option>${Object.entries(ST).map(([k, s]) => `<option value="${k}" ${k === d.style.preset ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
         <label class="f"><span class="lbl">Prompt de style (ajouté à chaque image)</span><textarea id="stPrompt" rows="7">${esc(d.style.prompt)}</textarea></label>
         <div class="row"><label class="btn sm">📷 Décrire depuis des captures<input type="file" id="stShots" accept="image/*" multiple hidden></label><span class="hint">1 à 4 captures d'une chaîne → l'IA écrit le prompt.</span></div>
-        <label class="check"><input type="checkbox" id="stNoText" ${d.style.no_text !== false ? 'checked' : ''}> Interdire le texte dans les images</label>
+        <label class="check"><input type="checkbox" id="stNoText" ${d.style.no_text !== false ? 'checked' : ''}> Interdire le texte dans les images <span class="faint">(décoché = 1 étiquette courte par image : chiffres clés, concepts)</span></label>
+        <label class="f"><span class="lbl">Consignes de mise en scène <span class="faint">(pour le directeur artistique IA)</span></span><textarea id="stDir" rows="4" placeholder="Ex : alterner scènes avec persos et schémas (flèches, graphiques)…">${esc(d.style.direction || '')}</textarea></label>
+        <label class="f"><span class="lbl">Style des miniatures</span><textarea id="chThumb" rows="3" placeholder="Fond, typo du titre, expression du perso, flèches…">${esc(d.thumb_style || '')}</textarea></label>
       </div>
       <div class="stack">
         <div class="small muted" style="font-weight:600">Image de référence du style <span class="faint">(envoyée à chaque génération → cohérence)</span></div>
@@ -832,11 +840,42 @@ async function viewChannel(cid) {
           <button class="btn sm" id="stGen">✨ Générer depuis le prompt</button>${d.style.ref ? '<button class="btn sm danger" id="stDel">Retirer</button>' : ''}</div>
       </div></div></div>
 
-    <div class="section-title"><span class="n">4</span><h2>Personnages récurrents</h2></div>
+
+    <div class="section-title"><span class="n">4</span><h2>Mise en page tableau & prof animé</h2></div>
+    <div class="card"><div class="sub">L'image de chaque scène est posée dans un panneau sur un fond (cahier, papier millimétré, fond sombre…), avec le prof de la chaîne en bas à gauche. Le prof est animé, calé sur la voix off : il tapote le panneau avec sa baguette sur les chiffres clés et fait des gestes quand il parle. Au repos, il ne bouge pas.</div>
+      <label class="check" style="margin-bottom:12px"><input type="checkbox" id="bdOn" ${d.montage.layout === 'board' ? 'checked' : ''}> Utiliser cette mise en page pour les nouvelles vidéos de la chaîne</label>
+      <div class="grid2">
+        <div class="stack">
+          <img class="refimg" id="bdPrev" src="/api/pov/channels/${cid}/board-preview?t=${Date.now()}" alt="Aperçu">
+          <label class="f"><span class="lbl">Fond</span><select id="bdTheme">${Object.entries(S.cfg.board_themes || {}).map(([k, t]) => `<option value="${k}" ${k === bd.theme ? 'selected' : ''}>${esc(t.name)}</option>`).join('')}<option value="custom" ${bd.theme === 'custom' ? 'selected' : ''}>Personnalisé</option></select></label>
+          <details class="adv"><summary>Couleurs et proportions</summary><div class="stack" style="margin-top:8px">
+            <div class="row" style="gap:14px;align-items:flex-end">
+              <label class="f"><span class="lbl">Fond</span><input type="color" id="bdBg" value="${esc(bd.bg_color)}"></label>
+              <label class="f"><span class="lbl">Lignes</span><input type="color" id="bdLine" value="${esc(bd.line_color)}"></label>
+              <label class="f"><span class="lbl">Contour</span><input type="color" id="bdBorder" value="${esc(bd.border_color)}"></label></div>
+            <div class="grid2">
+              <label class="f"><span class="lbl">Largeur du panneau <b id="bdPwOut"></b></span><input type="range" id="bdPw" min="0.7" max="0.95" step="0.01" value="${bd.panel_width}"></label>
+              <label class="f"><span class="lbl">Taille du prof <b id="bdPhOut"></b></span><input type="range" id="bdPh" min="0.2" max="0.55" step="0.01" value="${bd.presenter_height}"></label>
+              <label class="f"><span class="lbl">Contour du prof (px)</span><input type="number" id="bdOl" min="0" max="16" value="${bd.presenter_outline || 0}"></label>
+              <label class="f"><span class="lbl">Halo derrière le prof</span><input type="range" id="bdSpot" min="0" max="0.6" step="0.02" value="${bd.spot || 0}"></label></div>
+            <label class="check small"><input type="checkbox" id="bdBob" ${bd.bob ? 'checked' : ''}> Léger mouvement vertical (respiration)</label></div></details>
+          <div class="row nowrap"><label class="f grow"><span class="lbl">Animation du prof</span><select id="bdAnim">
+              <option value="poses" ${bd.anim !== 'none' ? 'selected' : ''}>Gestes de baguette (bras redessiné par l'IA, ~1 min)</option>
+              <option value="none" ${bd.anim === 'none' ? 'selected' : ''}>Aucune (image fixe)</option></select></label>
+            ${bd.presenter ? '<button class="btn sm" id="bdRebuild" style="align-self:flex-end">↻ Appliquer au prof</button>' : ''}</div>
+        </div>
+        <div class="stack">
+          <div class="presrow">${bd.presenter ? `<img class="presimg" src="${chFileUrl(cid, bd.presenter)}">` : '<div class="refbox presimg">Pas encore de prof</div>'}
+            <div class="stack grow"><label class="f"><span class="lbl">Le prof (mascotte) : description visuelle</span><textarea id="bdMascot" rows="5" placeholder="Ex : un chat noir en costard bleu marine, cravate rouge…">${esc(bd.mascot || '')}</textarea></label>
+              <div class="row"><button class="btn sm" id="bdGen">✨ Générer le prof animé</button><label class="btn sm">⬆ Importer un PNG<input type="file" id="bdUp" accept="image/*" hidden></label>${bd.presenter ? '<button class="btn sm danger" id="bdDel">Retirer</button>' : ''}</div>
+              <div class="hint">L'IA dessine le prof en pied avec sa baguette levée, sur fond transparent, puis redessine uniquement son bras dans 3 positions (mi-hauteur, pointé, tapotement). Les poses s'enchaînent comme dans un dessin animé, calées sur la voix. Relance si la pose ne te plaît pas.</div></div></div>
+          ${bd.rig ? `<div class="rigrow">${['A', 'mid', 'point', 'tap'].map(k => `<img src="${chFileUrl(cid, bd.rig + '/' + k + '.png')}" title="${k}">`).join('')}</div>` : (bd.presenter ? '<div class="hint">Ce prof est une image fixe : choisis « Gestes de baguette » puis « Appliquer au prof ».</div>' : '')}
+        </div></div></div>
+    <div class="section-title"><span class="n">5</span><h2>Personnages récurrents</h2></div>
     <div class="card"><div class="sub">Le protagoniste (« toi ») garde le même visage dans toute la vidéo ; l'âge et la tenue peuvent évoluer selon le script. Génère une fiche perso pour verrouiller son look.</div>
       <div class="stack" id="chars"></div><button class="btn sm" id="addChar" style="margin-top:10px">＋ Ajouter un personnage</button></div>
 
-    <div class="section-title"><span class="n">5</span><h2>Voix & montage par défaut</h2></div>
+    <div class="section-title"><span class="n">6</span><h2>Voix & montage par défaut</h2></div>
     <div class="grid2"><div class="card"><h3>Voix</h3><div id="chVoice" style="margin-top:10px"></div></div>
       <div class="card"><h3>Rythme & montage</h3>
         <div class="grid2" style="margin:10px 0"><label class="f"><span class="lbl">Secondes par image <b id="paceOut"></b></span><input type="range" id="chPace" min="1.8" max="9" step="0.1" value="${d.montage.pacing}"></label>
@@ -854,7 +893,8 @@ async function viewChannel(cid) {
   renderChars();
   $('#chVoice').appendChild(voiceForm(d.voice, d.language, v => { d.voice = v; dirty(); }));
   $('#chMontage').appendChild(montageForm(d.montage, v => { d.montage = v; dirty(); }, {music: music.music, lang: d.language}));
-  const outs = () => { $('#paceOut').textContent = Number($('#chPace').value).toFixed(1) + ' s'; $('#hpOut').textContent = Number($('#chHookPace').value).toFixed(1) + ' s'; $('#refWc').textContent = $('#chRefs').value.split(/\s+/).filter(Boolean).length + ' mots'; };
+  const outs = () => { $('#paceOut').textContent = Number($('#chPace').value).toFixed(1) + ' s'; $('#hpOut').textContent = Number($('#chHookPace').value).toFixed(1) + ' s'; $('#refWc').textContent = $('#chRefs').value.split(/\s+/).filter(Boolean).length + ' mots';
+    $('#bdPwOut').textContent = Math.round($('#bdPw').value * 100) + ' %'; $('#bdPhOut').textContent = Math.round($('#bdPh').value * 100) + ' %'; };
   outs();
   let isDirty = false;
   const dirty = () => { isDirty = true; $('#chSaveState').textContent = 'Modifications non enregistrées'; };
@@ -864,6 +904,12 @@ async function viewChannel(cid) {
     d.cta = $('#chCta').value; d.default_minutes = Number($('#chMin').value) || 10; d.wpm = Number($('#chWpm').value) || 150;
     d.reference_urls = $('#chUrls').value; d.reference_scripts = $('#chRefs').value; d.bible = $('#chBibleTxt').value;
     d.style.prompt = $('#stPrompt').value; d.style.preset = $('#stPreset').value; d.style.no_text = $('#stNoText').checked;
+    d.style.direction = $('#stDir').value; d.thumb_style = $('#chThumb').value;
+    Object.assign(d.board, {bg_color: $('#bdBg').value, line_color: $('#bdLine').value, border_color: $('#bdBorder').value,
+      panel_width: Number($('#bdPw').value), presenter_height: Number($('#bdPh').value), bob: $('#bdBob').checked,
+      presenter_outline: Number($('#bdOl').value) || 0, spot: Number($('#bdSpot').value) || 0,
+      anim: $('#bdAnim').value, animate: $('#bdAnim').value !== 'none', mascot: $('#bdMascot').value});
+    d.montage.layout = $('#bdOn').checked ? 'board' : 'full';
     d.montage.pacing = Number($('#chPace').value); d.montage.hook_pacing = Number($('#chHookPace').value);
     $$('[data-cn]').forEach(el => d.style.characters[el.dataset.cn].name = el.value);
     $$('[data-cd]').forEach(el => d.style.characters[el.dataset.cd].description = el.value);
@@ -871,9 +917,10 @@ async function viewChannel(cid) {
   };
   const save = async (quiet) => {
     const r = await guard(() => api('PUT', '/channels/' + cid, collect()), quiet ? null : 'Chaîne enregistrée');
-    if (r) { isDirty = false; $('#chSaveState').textContent = '✓ enregistré'; Object.assign(d, clone(r)); await loadChannels(); }
+    if (r) { isDirty = false; $('#chSaveState').textContent = '✓ enregistré'; Object.assign(d, clone(r)); Object.assign(bd, r.board || {}); d.board = bd; await loadChannels(); prevBoard(); }
     return r;
   };
+  const prevBoard = () => { const im = $('#bdPrev'); if (im) im.src = `/api/pov/channels/${cid}/board-preview?t=${Date.now()}`; };
   $('#view').oninput = e => { if (!e.target.closest('#chVoice,#chMontage')) { dirty(); outs(); } };
   $('#chFormat').onchange = e => $('#fmtDesc').textContent = (F[e.target.value] || {}).desc || '';
   $('#stPreset').onchange = e => { if (e.target.value && ST[e.target.value]) $('#stPrompt').value = ST[e.target.value].prompt; dirty(); };
@@ -901,6 +948,19 @@ async function viewChannel(cid) {
   $('#stUp').onchange = async e => { const fd = new FormData(); fd.append('file', e.target.files[0]); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/style-image`, fd), 'Image de style importée')); };
   $('#stGen').onclick = async e => { busy(e.target, true, 'Génération (~30 s)…'); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/style-image`, {generate: true}), 'Image de style générée')); busy(e.target, false); };
   if ($('#stDel')) $('#stDel').onclick = async () => { refresh(await guard(() => api('DELETE', `/channels/${cid}/style-image`))); };
+  $('#bdTheme').onchange = e => {
+    const t = (S.cfg.board_themes || {})[e.target.value];
+    if (t) { const {name, ...vals} = t; Object.assign(d.board, {presenter_outline: 0, spot: 0}, vals, {theme: e.target.value});
+      $('#bdBg').value = t.bg_color; $('#bdLine').value = t.line_color; $('#bdBorder').value = t.border_color;
+      $('#bdOl').value = d.board.presenter_outline || 0; $('#bdSpot').value = d.board.spot || 0; }
+    save(true);
+  };
+  ['#bdBg', '#bdLine', '#bdBorder'].forEach(k => $(k).addEventListener('input', () => { d.board.theme = 'custom'; $('#bdTheme').value = 'custom'; }));
+  if ($('#bdRebuild')) $('#bdRebuild').onclick = async e => { busy(e.target, true, $('#bdAnim').value === 'poses' ? 'Poses du bras (~1 min)…' : 'Calcul…'); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/presenter`, {rebuild: true, anim: $('#bdAnim').value}), 'Animation mise à jour')); busy(e.target, false); };
+  $('#bdGen').onclick = async e => { busy(e.target, true, $('#bdAnim').value === 'poses' ? 'Génération du prof + poses (~2 min)…' : 'Génération du prof (~40 s)…'); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/presenter`, {generate: true}), 'Prof généré')); busy(e.target, false); };
+  $('#bdUp').onchange = async e => { const fd = new FormData(); fd.append('file', e.target.files[0]); await save(true); refresh(await guard(() => api('POST', `/channels/${cid}/presenter`, fd), 'Prof importé (fond retiré)')); };
+  if ($('#bdDel')) $('#bdDel').onclick = async () => { refresh(await guard(() => api('DELETE', `/channels/${cid}/presenter`))); };
+  ['#bdBg', '#bdLine', '#bdBorder', '#bdPw', '#bdPh', '#bdOl', '#bdSpot'].forEach(k => $(k).addEventListener('change', debounce(() => save(true), 300)));
   $('#addChar').onclick = () => { collect(); d.style.characters.push({id: null, name: '', description: '', image: null}); renderChars(); dirty(); };
   $('#chars').onclick = async e => {
     const t = e.target;

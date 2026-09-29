@@ -11,7 +11,7 @@ import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from services import ai, media, render, tts
+from services import ai, board, media, presenter, render, tts
 from services import pov_script as S
 from services import pov_store as store
 
@@ -50,6 +50,16 @@ STYLE_PRESETS = {
                   "desaturated palette with warm amber candle / fire light accents, expressive characters, gritty "
                   "historical atmosphere, cinematic composition.",
     },
+    "board_cartoon": {
+        "name": "Cartoon explainer business (Marcus Explains)",
+        "prompt": "Clean modern 2D cartoon illustration in the style of a popular YouTube business-explainer channel: "
+                  "bold smooth black outlines (thicker around characters), flat colors with one soft cel-shading tone, "
+                  "bright natural palette, simple rounded character bodies with white four-finger mitten hands and "
+                  "expressive minimal faces, real-world backgrounds (stores, offices, streets, factories) drawn simpler "
+                  "and lighter with slightly desaturated colors so the characters and key props pop, clear readable "
+                  "props, crisp vector look, generous breathing room, no photorealism, no painterly texture, no heavy "
+                  "gradients.",
+    },
     "muted_cinematic": {
         "name": "2D cinématique désaturé (ancien POV Studio)",
         "prompt": "2D digital cartoon animation, flat shading, clean vector-like lines, desaturated muted tones (greys, "
@@ -64,7 +74,8 @@ DEFAULT_CAPTIONS = {"mode": "karaoke", "font": "Poppins ExtraBold", "size": 64, 
 DEFAULT_MONTAGE = {"pacing": 5.0, "hook_pacing": 3.0, "hook_seconds": 30, "min_scene": 1.6, "max_scene": 9.0,
                    "motion": "auto", "motion_strength": 0.12, "transition": "fade", "transition_dur": 0.3,
                    "captions": DEFAULT_CAPTIONS, "section_titles": True, "music": "", "music_volume": 0.12,
-                   "fps": 30, "quality": "fast", "aspect": "16:9", "pause_max": 0.45}
+                   "fps": 30, "quality": "fast", "aspect": "16:9", "pause_max": 0.45,
+                   "layout": "full"}  # "board" = fond quadrillé + panneau + présentateur (16:9)
 
 DEFAULT_VOICE = {"provider": "edge", "voice": "", "speed": 1.0, "pitch": 0, "model": "", "instructions": ""}
 
@@ -117,6 +128,46 @@ TEMPLATES = {
         "character": ("Vous", "le spectateur projeté dans le passé : homme ordinaire, vêtements modernes au début puis "
                               "habits d'époque, même visage partout"),
     },
+    "business_en": {
+        "name": "Business Explained — tableau + prof (EN)", "language": "en", "format": "business_explained",
+        "niche": "How businesses really make money: hidden business models, margins, markups and the dark side "
+                 "(pawn shops, buffets, dollar stores, casinos, money laundering...)",
+        "audience": "US/UK men and women 18-44 who love insider economics, side-hustle and 'how it really works' content",
+        "tone": "One calm, confident narrator explaining a machine to a smart friend. Conversational (contractions), "
+                "dry one-line humor, colder and fully serious on criminal topics. Never moralizes.",
+        "rules": "Every claim is concrete and sourced in the sentence (institution, year, sample). Only real figures, "
+                 "rounded; otherwise a clearly hypothetical worked example. One master analogy per video, called back "
+                 "3+ times. Three CTAs max: ~6 min, ~16-20 min, end ('Tell me where you're watching from').",
+        "style": "board_cartoon", "voice": "en-US-AndrewMultilingualNeural", "wpm": 165, "no_text": False,
+        "voice_speed": 1.08, "default_minutes": 24,
+        "montage": {"pacing": 6.0, "hook_pacing": 4.5, "hook_seconds": 30, "min_scene": 2.5, "max_scene": 10.0,
+                    "motion": "auto", "motion_strength": 0.05, "transition": "cut", "section_titles": False,
+                    "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.35},
+        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="poses"),
+        "character": ("People", "every person in every image (workers, customers, bosses, criminals, the viewer) "
+                                "is a simple cartoon figure with a large, perfectly round, plain WHITE head (no hair, "
+                                "no ears, no nose), small solid black dot eyes, simple black line eyebrows and mouth, "
+                                "thick black outline, slim simple body, white mitten hands; roles are shown only by "
+                                "clothes and props"),
+        "mascot": "the channel's presenter: a simple cartoon man with a large, perfectly round, plain WHITE head (no "
+                  "hair, no ears, no nose), small solid black dot eyes, simple black eyebrows and a small confident "
+                  "closed smile, thick black outline; slim body in a dark charcoal-grey suit, white shirt, burgundy tie, "
+                  "black shoes, white mitten hands",
+        "direction": "Alternate between (a) character scenes: the white round-headed characters acting out the exact moment "
+                     "in a real place (store, back office, street, bank) and (b) explainer visuals drawn in the same "
+                     "cartoon style: a 3-box flowchart with arrows, a simple bar chart or timeline, a stack of cash "
+                     "next to a tiny coin, a building cut-away, a map with arrows, money flowing through a pipe, a "
+                     "receipt or price tag close-up. Whenever the narration states a key number or concept, put it on "
+                     "screen as ONE bold label (e.g. '8¢ PER $1', 'THE 25% RULE', '$42.7 BILLION').",
+        "thumb_style": "Dark midnight-blue slate background with a subtle dot grid and a few faint white chalk doodles "
+                       "of the setting; a huge heavy black condensed UPPERCASE title of 3-4 words with a thick white outline "
+                       "across the top, underlined by a thick red marker stroke; the channel presenter (white round head, "
+                       "charcoal suit, burgundy tie) center-right with a smug, knowing grin doing the business's key action; 1-2 white "
+                       "round-headed characters on the left reacting (shocked, worried or greedy); the key props of the "
+                       "business in the middle; 4-6 short black labels with white outline and curved black arrows "
+                       "pointing at props, each a number + 1-3 words ('$100K DAILY CASH FLOW', '3% SERVICE CHARGE').",
+        "bible": "",
+    },
     "every_explained_en": {
         "name": "Every X Explained (EN)", "language": "en", "format": "every_explained",
         "niche": "Every X explained: places, eras, phenomena, objects — fast, witty lists",
@@ -129,6 +180,20 @@ TEMPLATES = {
     },
 }
 
+
+# Bibles de style prêtes à l'emploi (tirées de l'analyse des transcriptions des chaînes de référence).
+TEMPLATE_BIBLES = {
+    "business_en": """VOICE. One calm narrator explaining a machine to a smart friend. No greeting, channel name, "in this video" or sponsor. Contractions and plain words. Colder on criminal topics: fewer contractions, no jokes. ~180 spoken words per minute.
+HOOK (first 250-350 words, done by 1:45). Sentence one is either a hard, sourced number that sounds impossible, or a real named person in a named place and year. State the paradox ("if that picture were right, this whole business should be dead"). Name the popular belief and kill it. Say the real answer "has almost nothing to do with" the obvious product. End with "By the end of this, you'll understand..." plus 2-4 open loops, at least one dark or aimed at the viewer.
+MASTER ANALOGY. Within the first two minutes, ONE everyday system (washing machine, ride wristband, vending machine) that maps the whole business. Call back to it 3+ times, "upgrade" it when facts arrive, reuse it in the close.
+STRUCTURE. Simple version → hidden lever → math → twist → origin or case → dark side → the piece that ties it together → callback. Before each pivot, recap the previous points in one list sentence: "Now, if the story ended there..."
+NUMBERS. A specific figure in nearly every paragraph. Name the source inside the sentence: institution, year, sample size. Turn every percentage into a human unit ("for every $1,000... about $2", "1 in 500", "one diner in 20"). Walk through one customer, one plate or one store with round numbers ("Say the buffet charges $20."). Set fines against revenue ("0.028% of revenue... a parking ticket"). Repeat a shocking figure as a fragment: "95%." "Three times."
+STAGING. Drawable beats: objects, routes, company chains, a weekday, a town and its population. Real named people with one-line verbatim quotes; otherwise archetypes ("the grandmother who has soup and a roll"). Put the viewer in the scene: "Walk into a casino with $50,000 in cash..."
+RHYTHM. ~14 words per sentence. A long explanation followed by a 2-5 word punch. "That's not X. That's Y.", triplets ("They have methods. They have infrastructure. They have a fee."), sentences opening with And, But, So or Now. Five rhetorical questions at most, each answered at once. Dry one-line humor.
+RE-HOOKS. Every 2-3 minutes plant a loop ("What comes next is the part that still doesn't make sense."). CTAs at ~6:00 and between 16:00 and 20:00: "If [this changed how you see X], subscribe, because [the next part is where Y]."
+DARK SIDE. 15-25% on who pays: workers, towns, customers, regulators, all with numbers. State it flatly. Never moralize.
+ENDING. Recap every mechanism in one list ("That is the machine."), return to the opening image or person, widen it to a general law, land a one-sentence kicker. Then: "Tell me where you're watching from in the comments, and if this changed how you see [X], subscribe." Stop.""",
+}
 
 def _merge(base, over):
     out = json.loads(json.dumps(base))
@@ -152,12 +217,16 @@ def new_channel(data=None, template=None):
         "name": t.get("name", "Nouvelle chaîne"), "language": lang,
         "format": t.get("format", "pov_levels"), "niche": t.get("niche", ""), "audience": t.get("audience", ""),
         "tone": t.get("tone", ""), "rules": t.get("rules", ""), "cta": "", "reference_scripts": "",
-        "reference_urls": "", "bible": "", "wpm": t.get("wpm", 150),
-        "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"], "no_text": True,
+        "reference_urls": "", "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
+        "wpm": t.get("wpm", 150), "thumb_style": t.get("thumb_style", ""),
+        "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
+                  "no_text": t.get("no_text", True), "direction": t.get("direction", ""),
                   "ref": None, "characters": []},
-        "voice": _merge(DEFAULT_VOICE, {"voice": t.get("voice") or DEFAULT_VOICE_BY_LANG.get(lang, "")}),
+        "voice": _merge(DEFAULT_VOICE, {"voice": t.get("voice") or DEFAULT_VOICE_BY_LANG.get(lang, ""),
+                                        "speed": t.get("voice_speed", 1.0)}),
         "montage": _merge(DEFAULT_MONTAGE, t.get("montage") or {}),
-        "default_minutes": 10,
+        "board": _merge(board.DEFAULT_BOARD, dict(t.get("board") or {}, mascot=t.get("mascot", ""))),
+        "default_minutes": t.get("default_minutes", 10),
     }
     if t.get("character"):
         name, desc = t["character"]
@@ -169,7 +238,11 @@ def new_channel(data=None, template=None):
 
 
 _CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
-              "reference_urls", "bible", "wpm", "default_minutes")
+              "reference_urls", "bible", "wpm", "default_minutes", "thumb_style")
+_BOARD_FIELDS = ("theme", "bg_color", "line_color", "major_color", "pattern", "cell", "major_every", "paper",
+                 "panel_width", "border", "border_color", "radius", "shadow", "shadow_color", "shadow_offset",
+                 "presenter_height", "presenter_x", "bob", "animate", "anim", "mascot", "presenter_outline",
+                 "outline_color", "spot", "spot_color")
 
 
 def apply_channel_update(ch, data):
@@ -178,7 +251,7 @@ def apply_channel_update(ch, data):
             ch[k] = data[k]
     if isinstance(data.get("style"), dict):
         st = data["style"]
-        for k in ("preset", "prompt", "no_text"):
+        for k in ("preset", "prompt", "no_text", "direction"):
             if k in st:
                 ch["style"][k] = st[k]
         if isinstance(st.get("characters"), list):  # nom/description/always (images gérées à part)
@@ -196,6 +269,12 @@ def apply_channel_update(ch, data):
         ch["voice"] = _merge(ch.get("voice") or DEFAULT_VOICE, data["voice"])
     if isinstance(data.get("montage"), dict):
         ch["montage"] = _merge(ch.get("montage") or DEFAULT_MONTAGE, data["montage"])
+    if isinstance(data.get("board"), dict):  # le PNG du présentateur se gère via son endpoint
+        bd = ch.get("board") or dict(board.DEFAULT_BOARD)
+        for k in _BOARD_FIELDS:
+            if k in data["board"]:
+                bd[k] = data["board"][k]
+        ch["board"] = bd
     try:
         ch["wpm"] = max(90, min(220, int(float(ch.get("wpm") or 150))))
     except (TypeError, ValueError):
@@ -291,7 +370,12 @@ def _style_parts(ch, scene_chars=None):
     return lines, refs
 
 
-def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, vertical=False):
+def uses_board(ch_or_pr):
+    """Mise en page tableau active (réglage « montage.layout » de la chaîne ou du projet)."""
+    return ((ch_or_pr or {}).get("montage") or {}).get("layout") == "board"
+
+
+def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, vertical=False, board_layout=False):
     st = ch.get("style") or {}
     lines, refs = _style_parts(ch, scene_chars)
     chars_desc = [f"{c['name']}: {c['description']}" for c in st.get("characters") or []
@@ -304,6 +388,12 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
            if vertical else "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame.")
     if st.get("no_text", True) and not allow_text:
         fmt += " No text, no letters, no words, no captions, no signs with writing, no watermark, no logo."
+    elif not allow_text:
+        fmt += (" Text: ONLY the short label(s) quoted in the scene description, big, bold, uppercase and spelled "
+                "exactly; no other writing, no small unreadable text, no watermark, no logo.")
+    if board_layout and not vertical:
+        fmt += (" Keep the bottom-left corner of the image calm and free of important details (a presenter "
+                "character is overlaid there).")
     parts.append(fmt)
     return "\n".join(p for p in parts if p), refs
 
@@ -311,8 +401,8 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
 _MODERATION = ("safety", "moderation", "policy", "content_policy", "rejected", "not allowed", "violat")
 
 
-def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080):
-    full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width)
+def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080, board_layout=False):
+    full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width, board_layout=board_layout)
     try:
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     except ai.AIError as e:
@@ -322,7 +412,7 @@ def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=
                        "scene, meaning and composition (imply violence/danger instead of showing it; no gore, no "
                        "nudity, no real public figures). Output only the prompt.\n\n" + prompt,
                        model=ai.fast_model())
-        full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width)
+        full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width, board_layout=board_layout)
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     ai.fit_cover(blob, width, height, dest)
     return dest
@@ -337,6 +427,130 @@ def character_sheet(ch, char):
                         "Landscape frame, plain background.")
     blob = ai.generate_image(full, width=1536, height=1024, refs=refs)
     return blob
+
+
+def presenter_image(ch, extra="", anim=None):
+    """Présentateur (prof en bas à gauche) : image de base détourée + son animation."""
+    bd = ch.get("board") or {}
+    mascot = (bd.get("mascot") or "").strip()
+    if not mascot:
+        always = [c for c in (ch.get("style") or {}).get("characters") or [] if c.get("always")]
+        mascot = always[0]["description"] if always else "a friendly simple cartoon teacher"
+    prompt = (presenter.PRESENTER_POSE + f"\nCHARACTER DESIGN: {mascot}."
+              + (f"\n{extra.strip()}" if extra.strip() else "")
+              + "\nART STYLE: " + ((ch.get("style") or {}).get("prompt") or ""))
+    blob = ai.generate_image(prompt, width=1024, height=1536, quality="high", transparent=True)
+    return save_presenter(ch, blob, anim=anim or bd.get("anim") or "poses")
+
+
+def _pad_portrait(blob):
+    """Image importée → toile 2:3 transparente, pieds en bas (format attendu par l'animation)."""
+    from PIL import Image
+    im = Image.open(io.BytesIO(board.cutout(blob))).convert("RGBA")
+    W, H = 1024, 1536
+    s = min((W - 40) / im.width, (H - 30) / im.height)
+    im = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.LANCZOS)
+    canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    canvas.alpha_composite(im, ((W - im.width) // 2, H - 15 - im.height))
+    out = io.BytesIO()
+    canvas.save(out, "PNG")
+    return out.getvalue()
+
+
+def _anim_mode(anim):
+    return "none" if anim == "none" else "poses"  # anciens réglages (stick / full) → poses
+
+
+def save_presenter(ch, blob, anim="poses"):
+    """Enregistre le prof dans refs/rig_<ts>/ (base.png + poses + rig.json).
+
+    anim = « poses » : l'IA redessine le bras dans 3 autres positions (3 retouches en parallèle,
+           ~1 min), recollées au pixel près → gestes de baguette en animation 2D pose à pose ;
+           « none » : image fixe.
+    Renvoie (image_de_repos_rel, dossier_rig_rel | None)."""
+    from PIL import Image
+    im = Image.open(io.BytesIO(blob))
+    lo = im.convert("RGBA").getchannel("A").getextrema()[0]
+    if lo > 250 or im.size != (1024, 1536):  # import : détourage + mise au format
+        blob = _pad_portrait(blob)
+    rel_dir = f"refs/rig_{int(time.time() * 1000)}"
+    out_dir = os.path.join(store.channel_dir(ch["id"]), rel_dir)
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "base.png"), "wb") as f:
+        f.write(blob)
+    try:
+        return _build_anim(out_dir, rel_dir, blob, _anim_mode(anim))
+    except Exception:
+        import shutil
+        shutil.rmtree(out_dir, ignore_errors=True)  # pas de dossier orphelin si l'IA échoue
+        raise
+
+
+def _build_anim(out_dir, rel_dir, blob, anim):
+    if anim == "poses":
+        def edit(k):
+            try:
+                return k, ai.generate_image(presenter.POSE_EDITS[k], width=1024, height=1536, refs=[blob],
+                                            quality="high", transparent=True)
+            except ai.AIError as e:
+                if getattr(e, "status", None) == 4290:  # quota épuisé : on le dit, pas d'échec silencieux
+                    raise
+                return k, None
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            variants = dict(ex.map(edit, list(presenter.POSE_EDITS)))
+        if any(variants.values()):
+            presenter.build_pose_rig(blob, variants, out_dir)
+            return f"{rel_dir}/A.png", rel_dir
+    from PIL import Image  # animation désactivée (ou toutes les retouches ont échoué) : image fixe
+    Image.open(io.BytesIO(board.cutout(blob))).save(os.path.join(out_dir, "static.png"))
+    return f"{rel_dir}/static.png", None
+
+
+def rebuild_presenter(ch, anim):
+    """Change le type d'animation sans redessiner le prof (repart de base.png, nouveau dossier :
+    l'ancien reste valable tant que le nouveau n'est pas prêt)."""
+    bd = board_config(ch)
+    rel_dir = bd.get("rig") or os.path.dirname(bd.get("presenter") or "")
+    out_dir = channel_ref_path(ch, rel_dir) if rel_dir else None
+    base = os.path.join(out_dir, "base.png") if out_dir else None
+    if not base or not os.path.isfile(base):
+        raise RuntimeError("Image de base du prof introuvable : génère ou importe-le à nouveau.")
+    with open(base, "rb") as f:
+        blob = f.read()
+    return save_presenter(ch, blob, anim=_anim_mode(anim))
+
+
+def rig_paths(ch):
+    """(images {clé: chemin absolu}, mode) du prof animé, ou ({}, None)."""
+    bd = board_config(ch)
+    if not bd.get("rig") or not bd.get("animate", True) or bd.get("anim") == "none":
+        return {}, None
+    man = presenter.load_manifest(channel_ref_path(ch, bd["rig"]))
+    return (man["frames"], man["mode"]) if man else ({}, None)
+
+
+def board_config(ch):
+    return _merge(board.DEFAULT_BOARD, (ch or {}).get("board") or {})
+
+
+def board_preview(ch, dest):
+    """Aperçu de la mise en page (fond + image de style ou 1re image dispo + présentateur)."""
+    bd = board_config(ch)
+    scene = channel_ref_path(ch, (ch.get("style") or {}).get("ref"))
+    blank = None
+    if not scene or not os.path.isfile(scene):
+        from PIL import Image
+        blank = scene = dest + ".blank.png"
+        Image.new("RGB", (1920, 1080), (238, 236, 230)).save(scene)
+    pres = channel_ref_path(ch, bd.get("presenter"))
+    tmp = dest + f".{os.getpid()}.{int(time.time() * 1000)}.jpg"
+    try:
+        board.compose_still(bd, scene, pres, tmp, 1920, 1080)
+        os.replace(tmp, dest)
+    finally:
+        if blank and os.path.isfile(blank):
+            os.remove(blank)
+    return dest
 
 
 # ── Projets ─────────────────────────────────────────────────────────────────
@@ -759,6 +973,18 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
         prev = all_scenes[sc["i"] - 1]["text"] if sc["i"] > 0 else ""
         lines.append(f"#{sc['i']} [section: {sc.get('heading') or 'hook'}] (prev: \"{prev[-120:]}\") "
                      f"NARRATION: \"{sc['text']}\"")
+    st = ch.get("style") or {}
+    direction = (st.get("direction") or "").strip()
+    direction = f"- CHANNEL ART DIRECTION: {direction}\n" if direction else ""
+    if st.get("no_text", True):
+        text_rule = "No text or letters in the image."
+    else:
+        text_rule = ("Text: at most ONE short label per image (2-5 words, UPPERCASE, written in quotes in the prompt, "
+                     f"in {S.lang_label(ch.get('language', 'en')).split(' (')[0]}) on a white callout box with a thick "
+                     "black border, a sign or a tag — use it for the key number or concept of the narration. No "
+                     "other writing.")
+    if uses_board(pr):
+        text_rule += " Keep the bottom-left corner calm (a presenter is overlaid there)."
     prompt = f"""You are the art director of a faceless 2D YouTube channel. For each scene below, write the image prompt of the illustration shown while this narration is spoken.
 
 VIDEO: {pr['title']}
@@ -768,12 +994,12 @@ RECURRING CHARACTERS (use their exact name when they appear; mention age/outfit/
 {roster}
 
 RULES:
-- Show the exact moment/idea the narration describes, literally and concretely: subject + action + setting + key props. One clear focal point, readable in 1 second.
+{direction}- Show the exact moment/idea the narration describes, literally and concretely: subject + action + setting + key props. One clear focal point, readable in 1 second.
 - If the narration talks to "you"/"tu"/"vous" and a protagonist character exists, show that character doing it.
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
 - For violence, death or danger: imply it (shadows, aftermath, expressions), never gore. No real celebrities.
-- No text or letters in the image. 25-60 words per prompt, English.
+- {text_rule} 25-60 words per prompt, English.
 
 SCENES:
 {chr(10).join(lines)}
@@ -830,7 +1056,8 @@ def _gen_scene(ch, pr, sc):
     w, h = dims(pr)
     d = store.project_dir(pr["id"])
     rel = f"images/scene_{sc['i']:04d}_{int(time.time() * 1000) % 10**9}.jpg"
-    generate_scene_image(ch, sc["prompt"], os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h)
+    generate_scene_image(ch, sc["prompt"], os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h,
+                         board_layout=uses_board(pr))
     return rel
 
 
@@ -866,6 +1093,7 @@ def job_images(job, pid, only=None, first_only=False):
 
     for s in targets:
         mark(s["i"], status="queued", error=None)
+    quota = None
     job.update(0.12, f"Génération de {total} image(s)…")
     ex = ThreadPoolExecutor(max_workers=_image_workers())
     try:
@@ -876,20 +1104,28 @@ def job_images(job, pid, only=None, first_only=False):
                 rel = fut.result()
                 mark(s["i"], image=rel, status="done", error=None)
                 done += 1
+            except ai.AIError as e:
+                if getattr(e, "status", None) == 4290:  # quota épuisé : on s'arrête net, message clair
+                    for f in futs:
+                        f.cancel()
+                    quota = e
+                    break
+                failed += 1
+                mark(s["i"], status="error", error=str(e)[:300])
             except Exception as e:  # noqa: BLE001
                 failed += 1
                 mark(s["i"], status="error", error=str(e)[:300])
             job.update(0.12 + 0.88 * (done + failed) / total,
                        f"Images {done}/{total}" + (f" · {failed} en échec" if failed else ""))
     except store.JobCancelled:
-        def reset(x):  # les scènes jamais lancées repassent « en attente »
-            for sc in x["scenes"]:
-                if sc.get("status") == "queued":
-                    sc["status"] = "done" if sc.get("image") else "pending"
-        store.update_project(pid, reset)
+        _reset_queued(pid)
         raise
     finally:
         ex.shutdown(wait=False, cancel_futures=True)
+    if quota:
+        _reset_queued(pid)
+        store.update_project(pid, lambda x: x.__setitem__("render", None) if done else None)
+        raise RuntimeError(f"{done} image(s) faite(s) avant l'arrêt. {quota}")
     for rel in old_files:  # anciennes versions remplacées
         try:
             os.remove(os.path.join(store.project_dir(pid), rel))
@@ -899,6 +1135,14 @@ def job_images(job, pid, only=None, first_only=False):
     if failed:
         raise RuntimeError(f"{failed} image(s) en échec — clique « Relancer les échecs ».")
     job.update(1.0, f"{done} image(s) prêtes.")
+
+
+def _reset_queued(pid):
+    def reset(x):  # les scènes jamais lancées repassent « en attente »
+        for sc in x["scenes"]:
+            if sc.get("status") == "queued":
+                sc["status"] = "done" if sc.get("image") else "pending"
+    store.update_project(pid, reset)
 
 
 def job_regen(job, pid, idx, prompt=None):
@@ -932,6 +1176,7 @@ def job_render(job, pid):
                 overlays.append({"start": s["start"] + 0.15, "end": min(s["end"], s["start"] + 2.6) if
                                  s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
     music = store.music_path(m.get("music")) if m.get("music") else None
+    layout = _layout_for(pr, os.path.join(d, "render"), w, h)
     out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
     try:
         res = render.render_video(
@@ -940,7 +1185,7 @@ def job_render(job, pid):
             motion_strength=float(m.get("motion_strength") or 0.12), transition=m.get("transition", "fade"),
             transition_dur=float(m.get("transition_dur") or 0.3), words=load_words(pid),
             captions=m.get("captions") or {"mode": "none"}, overlays=overlays, music_path=music,
-            music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"),
+            music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"), layout=layout,
             progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled)
     except render.Cancelled:
         raise store.JobCancelled("Annulé.")
@@ -951,6 +1196,18 @@ def job_render(job, pid):
     store.update_project(pid, save)
     _remove_quiet(d, old if old != out_name else None)
     job.update(1.0, "Vidéo exportée.")
+
+
+def _layout_for(pr, workdir, w, h, with_presenter=True):
+    """Mise en page tableau pour le rendu (None = plein écran)."""
+    if not uses_board(pr) or h > w:
+        return None
+    ch = store.get_channel(pr["channel_id"]) or {}
+    bd = board_config(ch)
+    os.makedirs(workdir, exist_ok=True)
+    rig, mode = rig_paths(ch) if ch else ({}, None)
+    return render.prepare_layout(workdir, bd, channel_ref_path(ch, bd.get("presenter")) if ch else None, w, h,
+                                 with_presenter=with_presenter, rig=rig, rig_mode=mode or "full")
 
 
 def job_pack(job, pid, motion="none"):
@@ -981,10 +1238,17 @@ def job_pack(job, pid, motion="none"):
 
 
 def _pack_call(d, scenes, pr, w, h, m, motion, pid, job, name):
+    layout = _layout_for(pr, os.path.join(d, "render"), w, h)
+    extras = {}
+    if layout:  # éléments séparés, pour qui veut refaire la mise en page lui-même
+        extras["mise_en_page/fond_quadrille.png"] = layout["bg"]
+        if layout.get("presenter"):
+            extras["mise_en_page/presentateur.png"] = layout["presenter"]
     return render.export_pack(os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]),
                              os.path.join(d, name), width=w, height=h, fps=int(m.get("fps") or 30),
                              motion=motion or "none", motion_strength=float(m.get("motion_strength") or 0.1),
                              words=load_words(pid), script_text=pr.get("script") or "", title=pr.get("title", ""),
+                             layout=layout, extras=extras,
                              progress=lambda p, msg: job.update(p * 0.99, msg), cancelled=job.cancelled)
 
 
@@ -995,13 +1259,20 @@ def job_thumbnails(job, pid, idea="", count=2):
     count = max(1, min(4, int(count or 2)))
     job.update(0.05, "Concepts de miniatures…")
     chars = [c["name"] for c in (ch.get("style") or {}).get("characters") or []]
+    bd = board_config(ch)
+    mascot = channel_ref_path(ch, bd.get("presenter"))
+    mascot = mascot if mascot and os.path.isfile(mascot) else None
+    if mascot:
+        chars.append("Mascot")
+    thumb_style = (ch.get("thumb_style") or "").strip()
     concept = ai.chat_json(f"""You design YouTube thumbnails for an animated 2D illustration channel ({ch.get('niche', '')}). Characters have clear, expressive faces.
+{('CHANNEL THUMBNAIL STYLE (follow it exactly, it is proven): ' + thumb_style) if thumb_style else ''}
 Video title: {pr['title']}
 Script excerpt: {S.narration(pr.get('script') or '')[:1200]}
 Recurring characters: {', '.join(chars) or 'none'}
 {('Creator idea: ' + idea) if idea else ''}
 
-Create {count} DIFFERENT thumbnail concepts that maximize CTR: one strong focal subject with a big readable emotion, high contrast, simple background, a visual curiosity gap that does NOT repeat the title, and 2-4 words of huge bold text (in the video's language: {S.lang_label(ch.get('language', 'fr'))}) placed away from the subject.
+Create {count} DIFFERENT thumbnail concepts that maximize CTR: one strong focal subject with a big readable emotion, high contrast, a visual curiosity gap that does NOT repeat the title word for word, and 2-4 words of huge bold text (in the video's language: {S.lang_label(ch.get('language', 'fr'))}){' (the title text of the style above)' if thumb_style else ' placed away from the subject'}.
 Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: composition, subject, expression, props, background, colors, where the text goes", "chars": ["character names visible"]}}]}}""", model=ai.text_model())
     items = (concept.get("thumbs") or [])[:count]
     if not items:
@@ -1013,7 +1284,13 @@ Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: compos
         prompt = (f"YouTube thumbnail. {it.get('prompt', '')} Huge bold clean sans-serif text reading exactly "
                   f"\"{it.get('text', '')}\" with a thick dark outline, perfectly legible, spelled correctly. "
                   "Bright, saturated, high contrast, readable at small size.")
+        if thumb_style:
+            prompt += " THUMBNAIL STYLE: " + thumb_style
         full, refs = build_image_prompt(ch, prompt, scene_chars=it.get("chars") or [], allow_text=True)
+        if mascot and "Mascot" in (it.get("chars") or []):
+            refs = refs + [mascot]
+            full = (f"Reference image {len(refs)} = the channel MASCOT: same head, face, colors and outfit "
+                    "(expression and pose change as described).\n" + full)
         blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
         rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}.jpg"
         ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=90)

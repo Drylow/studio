@@ -71,32 +71,161 @@ def pick_motions(count, mode="auto", seed=0):
     return out
 
 
-def _clip_key(image, frames, w, h, fps, motion, strength):
-    st = os.stat(image)
-    raw = json.dumps([os.path.basename(image), st.st_size, int(st.st_mtime), frames, w, h, fps,
-                      motion, round(float(strength), 3)])
+def _file_sig(path):
+    if not path or not os.path.isfile(path):
+        return None
+    st = os.stat(path)
+    return [os.path.basename(path), st.st_size, int(st.st_mtime)]
+
+
+def _clip_key(image, frames, w, h, fps, motion, strength, layout=None, t0=0.0, track=None):
+    raw = json.dumps([_file_sig(image), frames, w, h, fps, motion, round(float(strength), 3),
+                      _layout_sig(layout, t0, track)])
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
+
+
+# ── Mise en page « tableau » (fond quadrillé + panneau + présentateur) ─────
+
+def _layout_sig(layout, t0=0.0, track=None):
+    if not layout:
+        return None
+    sig = [_file_sig(layout.get("bg")), _file_sig(layout.get("frame")), list(layout.get("panel") or [])]
+    if layout.get("presenter"):
+        sig += [_file_sig(layout["presenter"]), layout.get("pres_x"), layout.get("pres_y"), bool(layout.get("bob"))]
+        if layout.get("rig"):
+            sig.append(sorted((k, _file_sig(v)) for k, v in layout["rig"].items()))
+        if layout.get("bob"):
+            sig.append(round(float(t0), 3))
+        if track:
+            sig.append(hashlib.sha1(json.dumps(track).encode()).hexdigest()[:12])
+    return sig
+
+
+BOB_AMP, BOB_PERIOD = 4.0, 3.2  # respiration du présentateur (px à 1080p, secondes)
+
+
+def _bob_expr(layout, t0=0.0):
+    y = int(layout["pres_y"])
+    if not layout.get("bob"):
+        return str(y)
+    amp = BOB_AMP * float(layout.get("scale") or 1.0)
+    return f"{y}+{amp:.2f}*sin(2*PI*(t+{float(t0):.4f})/{BOB_PERIOD})"
+
+
+def prepare_layout(workdir, board_cfg, presenter_src, width, height, with_presenter=True, rig=None,
+                   rig_mode="poses"):
+    """Prépare fond, cadre du panneau et présentateur (image fixe ou rig animé) → dict `layout`.
+
+    rig = {"A": chemin, "mid": …, "point": …, "tap": …, "A~mid": …} (poses du prof, même cadrage)."""
+    from PIL import Image
+    from services import board
+    g = board.geometry(board_cfg, width, height)
+    keys = ("bg_color", "line_color", "major_color", "pattern", "cell", "major_every", "paper", "panel_width",
+            "border", "border_color", "radius", "shadow", "shadow_color", "shadow_offset")
+    raw = json.dumps([board_cfg.get(k) for k in keys] + [width, height])
+    tag = hashlib.sha1(raw.encode()).hexdigest()[:10]
+    bg = os.path.join(workdir, f"board_{tag}.png")
+    fr = os.path.join(workdir, f"frame_{tag}.png")
+    if not os.path.isfile(bg):
+        board.make_background(board_cfg, bg + ".tmp.png", width, height)
+        os.replace(bg + ".tmp.png", bg)
+    if not os.path.isfile(fr):
+        board.make_frame(board_cfg, bg, fr + ".tmp.png", width, height)
+        os.replace(fr + ".tmp.png", fr)
+    layout = {"bg": bg, "frame": fr, "panel": list(g["panel"]), "presenter": None, "rig": None,
+              "scale": height / 1080.0}
+    if not with_presenter:
+        return layout
+    ph = g["presenter_h"]
+    ow = int(round(float(board_cfg.get("presenter_outline") or 0) * height / 1080.0))
+    oc = board_cfg.get("outline_color") or "#FFFFFF"
+
+    def scaled(src, name):
+        sig = hashlib.sha1(json.dumps([_file_sig(src), ph, ow, oc]).encode()).hexdigest()[:10]
+        safe = re.sub(r"[^A-Za-z0-9]+", "_", name)
+        dst = os.path.join(workdir, f"presenter_{safe}_{sig}.png")
+        if not os.path.isfile(dst):
+            im = Image.open(src).convert("RGBA")
+            im = im.resize((max(2, round(im.width * ph / im.height)), ph), Image.LANCZOS)
+            if ow:
+                im = board.outline(im, ow, oc)
+            im.save(dst + ".tmp.png", "PNG")
+            os.replace(dst + ".tmp.png", dst)
+        return dst
+
+    frames = {k: scaled(v, k) for k, v in (rig or {}).items() if v and os.path.isfile(v)}
+    if frames.get("A"):
+        layout.update({"presenter": frames["A"], "rig": frames, "rig_mode": rig_mode})
+    elif presenter_src and os.path.isfile(presenter_src):
+        layout["presenter"] = scaled(presenter_src, "static")
+    if layout["presenter"]:
+        shift = ow + 2 if ow else 0  # le contour agrandit l'image : les pieds restent au même endroit
+        layout.update({"pres_x": max(0, g["presenter_x"] - shift), "pres_y": g["presenter_bottom"] - ph - shift,
+                       "bob": bool(board_cfg.get("bob", False))})
+    return layout
+
+
+def presenter_track(layout, words, total, fps, dest, start_f=0, count=None):
+    """Écrit la liste concat (ffmpeg) de l'animation du présentateur ; None si pas de rig."""
+    if not layout or not layout.get("rig"):
+        return None
+    from services import presenter
+    segs = presenter.track_segments(layout.get("rig_mode"), words or [], total, fps)
+    if count is not None:
+        segs = presenter.slice_timeline(segs, start_f, count)
+    base = os.path.dirname(os.path.abspath(dest))
+    paths = {k: os.path.relpath(v, base) if os.path.splitdrive(v)[0] == os.path.splitdrive(base)[0]
+             else os.path.abspath(v) for k, v in layout["rig"].items()}
+    presenter.write_concat(segs, paths, dest, fps)
+    return segs
 
 
 _X264 = ["-c:v", "libx264", "-preset", "veryfast", "-profile:v", "high", "-pix_fmt", "yuv420p"]
 
 
-def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancelled=None):
-    """Clip d'une scène. Même encodeur/profil pour tous les clips → concat sans réencodage sûr."""
+def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancelled=None, layout=None, t0=0.0,
+                track=None):
+    """Clip d'une scène. Même encodeur/profil pour tous les clips → concat sans réencodage sûr.
+
+    layout (mise en page tableau) : la scène est animée DANS le panneau, posée sur le fond, sous
+    le cadre (contour + coins arrondis), avec le présentateur par-dessus si layout["presenter"]
+    (track = liste concat de son animation pour ce clip ; t0 = début du clip dans la vidéo, pour
+    que la respiration soit continue d'un clip à l'autre)."""
     # « cover » : l'image est recadrée (jamais déformée) au format de la vidéo, 16:9 comme 9:16
     cover = "scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}"
+    iw, ih = (layout["panel"][2], layout["panel"][3]) if layout else (w, h)
     if motion == "none":  # image fixe : pas besoin de zoompan (bien plus rapide)
-        vf = cover.format(W=w, H=h) + ",setsar=1,format=yuv420p"
-        media.run(["-loop", "1", "-framerate", str(fps), "-i", image, "-vf", vf, "-frames:v", str(frames),
-                   "-r", str(fps)] + _X264 + ["-tune", "stillimage", "-crf", str(crf), "-an", dest],
-                  cancelled=cancelled)
+        src = ["-loop", "1", "-framerate", str(fps), "-i", image]
+        scene = cover.format(W=iw, H=ih) + ",setsar=1"
+        tune = ["-tune", "stillimage"]
+    else:
+        z, x, y = _motion_expr(motion, frames, strength)
+        src = ["-i", image]
+        scene = (cover.format(W=iw * 2, H=ih * 2) + ","
+                 f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={iw}x{ih}:fps={fps},setsar=1")
+        tune = []
+    if not layout:
+        media.run(src + ["-vf", scene + ",format=yuv420p", "-frames:v", str(frames), "-r", str(fps)] + _X264 +
+                  tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
         return dest
-    z, x, y = _motion_expr(motion, frames, strength)
-    vf = (cover.format(W=w * 2, H=h * 2) + ","
-          f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={fps},"
-          f"setsar=1,format=yuv420p")
-    media.run(["-i", image, "-vf", vf, "-frames:v", str(frames), "-r", str(fps)] + _X264 +
-              ["-crf", str(crf), "-an", dest], cancelled=cancelled)
+    px, py = layout["panel"][0], layout["panel"][1]
+    args = src + ["-loop", "1", "-framerate", str(fps), "-i", layout["bg"]]
+    graph = [f"[0:v]{scene}[p]", "[1:v]setsar=1[b]", f"[b][p]overlay=x={px}:y={py}:shortest=1[bp]"]
+    out, idx = "bp", 2
+    if layout.get("frame"):
+        args += ["-loop", "1", "-framerate", str(fps), "-i", layout["frame"]]
+        graph.append(f"[{out}][{idx}:v]overlay=0:0:shortest=1[bf]")
+        out, idx = "bf", idx + 1
+    if layout.get("presenter"):
+        if track:
+            args += ["-f", "concat", "-safe", "0", "-i", track]
+        else:
+            args += ["-loop", "1", "-framerate", str(fps), "-i", layout["presenter"]]
+        graph.append(f"[{out}][{idx}:v]overlay=x={layout['pres_x']}:y='{_bob_expr(layout, t0)}':eval=frame[bq]")
+        out = "bq"
+    graph.append(f"[{out}]format=yuv420p[v]")
+    media.run(args + ["-filter_complex", ";".join(graph), "-map", "[v]", "-frames:v", str(frames),
+                      "-r", str(fps)] + _X264 + tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
     return dest
 
 
@@ -104,7 +233,7 @@ def _run_clips(todo, workers, cancelled, on_done):
     """Rend des clips en parallèle ; en cas d'annulation/erreur, ne lance plus rien et tue le reste."""
     ex = ThreadPoolExecutor(max_workers=workers)
     try:
-        futs = {ex.submit(render_clip, *args, cancelled=cancelled): dest for dest, args in todo}
+        futs = {ex.submit(render_clip, *args, cancelled=cancelled, **(kw or {})): dest for dest, args, kw in todo}
         for fut in as_completed(futs):
             fut.result()
             os.replace(futs[fut] + ".tmp.mp4", futs[fut])
@@ -238,8 +367,12 @@ def _frames_timeline(scenes, fps, total):
 def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=1080, fps=30,
                  motion="auto", motion_strength=0.12, transition="fade", transition_dur=0.35,
                  words=None, captions=None, overlays=None, music_path=None, music_volume=0.12,
-                 normalize=True, quality="fast", tail=0.6, progress=None, cancelled=None):
-    """Monte la vidéo finale. scenes = [{"image": path, "start": sec}, ...] (triées)."""
+                 normalize=True, quality="fast", tail=0.6, layout=None, progress=None, cancelled=None):
+    """Monte la vidéo finale. scenes = [{"image": path, "start": sec}, ...] (triées).
+
+    layout (voir prepare_layout) : mise en page tableau. Les clips contiennent fond + panneau ;
+    le présentateur est incrusté une seule fois dans la passe finale (mouvement continu,
+    et il reste immobile pendant les fondus entre scènes)."""
     def tick(pct, msg):
         if progress:
             progress(max(0.0, min(1.0, pct)), msg)
@@ -261,11 +394,12 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     clips_dir = os.path.join(workdir, "clips")
     os.makedirs(clips_dir, exist_ok=True)
     motions = pick_motions(len(scenes), motion, seed=len(scenes))
+    clip_layout = dict(layout, presenter=None, rig=None) if layout else None
     jobs = []
     for i, s in enumerate(scenes):
         n = frames[i] + (tf if fade and i < len(scenes) - 1 else 0)
         mv = s.get("motion") or motions[i]
-        key = _clip_key(s["image"], n, width, height, fps, mv, motion_strength)
+        key = _clip_key(s["image"], n, width, height, fps, mv, motion_strength, clip_layout)
         jobs.append((i, s["image"], os.path.join(clips_dir, f"c{i:04d}_{key}.mp4"), n, mv))
 
     # 1) clips (parallèle + cache)
@@ -279,8 +413,8 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
             done += 1
             tick(0.02 + 0.68 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
         stop = cancelled or (lambda: False)
-        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 17))
-                    for (_, img, dest, n, mv) in todo], workers, stop, one_done)
+        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 17),
+                     {"layout": clip_layout}) for (_, img, dest, n, mv) in todo], workers, stop, one_done)
     keep = {os.path.basename(j[2]) for j in jobs}
     for f in os.listdir(clips_dir):  # purge des clips obsolètes
         if f not in keep:
@@ -317,8 +451,13 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     tick(0.86, "Fondus, sous-titres, mixage audio et export…")
     ass = build_ass(words or [], os.path.join(workdir, "captions.ass"), width, height, captions, overlays)
     try:
+        track = None
+        if layout and layout.get("rig"):
+            track = os.path.join(workdir, "presenter_track.txt")
+            presenter_track(layout, words, total, fps, track)
         _final_pass(workdir, inputs, in_durs, transition_dur, voice_path, out_path, total, ass, music_path,
-                    music_volume, normalize, quality, fps, cancelled=cancelled)
+                    music_volume, normalize, quality, fps, cancelled=cancelled,
+                    presenter=layout if layout and layout.get("presenter") else None, track=track)
     finally:
         for t in temp:
             try:
@@ -372,7 +511,7 @@ def _rel(path, base):
 
 
 def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, music_volume, normalize,
-                quality, fps, cancelled=None):
+                quality, fps, cancelled=None, presenter=None, track=None):
     args = []
     for v in videos:
         args += ["-i", _rel(v, workdir)]
@@ -386,6 +525,15 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
     if n > 1:
         xg, vlabel = _xfade_graph(n, vdurs, t, fps)
         graph += xg
+    if presenter:  # présentateur incrusté par-dessus toute la vidéo
+        pi = n + 1 + (1 if has_music else 0)
+        if track:  # animation (bouche, yeux, baguette) calée sur la voix
+            args += ["-f", "concat", "-safe", "0", "-i", _rel(track, workdir)]
+        else:
+            args += ["-loop", "1", "-framerate", str(fps), "-i", _rel(presenter["presenter"], workdir)]
+        graph.append(f"[{vlabel}][{pi}:v]overlay=x={presenter['pres_x']}:y='{_bob_expr(presenter)}'"
+                     f":eval=frame[pv]")
+        vlabel = "pv"
     if ass:
         try:  # chemin relatif = pas d'échappement « C\: » à gérer sous Windows
             fonts = os.path.relpath(FONTS_DIR, workdir).replace("\\", "/")
@@ -394,7 +542,7 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
         graph.append(f"[{vlabel}]ass={os.path.basename(ass)}:fontsdir='{fonts}'[v]")
         vmap = "[v]"
     else:
-        vmap = f"[{vlabel}]" if n > 1 else "0:v"
+        vmap = f"[{vlabel}]" if (n > 1 or presenter) else "0:v"
     va, vm = n, n + 1  # index des entrées voix / musique
     fade_st = max(0.0, total - 1.5)
     if has_music:
@@ -409,7 +557,7 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
         chain += "loudnorm=I=-14:TP=-1.5:LRA=11,"
     chain += f"afade=t=out:st={fade_st:.2f}:d=1.5[a]"
     graph.append(chain)
-    copy_video = n == 1 and not ass
+    copy_video = n == 1 and not ass and not presenter
     if copy_video:
         venc = ["-c:v", "copy"]
     elif quality == "high":
@@ -462,7 +610,8 @@ def build_srt(words, max_words=7, max_chars=42):
 
 
 def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=1080, fps=30, motion="none",
-                motion_strength=0.1, words=None, script_text="", title="", progress=None, cancelled=None):
+                motion_strength=0.1, words=None, script_text="", title="", layout=None, extras=None,
+                progress=None, cancelled=None):
     """ZIP prêt pour CapCut/Premiere : 1 clip MP4 par scène, durée EXACTE de sa phrase.
 
     Les clips mis bout à bout = durée de la voix off, à la frame près → on les glisse
@@ -481,12 +630,30 @@ def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=108
     cdir = os.path.join(workdir, "pack_clips")
     os.makedirs(cdir, exist_ok=True)
     motions = pick_motions(len(scenes), motion, seed=len(scenes))
-    jobs = []
+    segs = None
+    if layout and layout.get("rig"):
+        from services import presenter
+        segs = presenter.track_segments(layout.get("rig_mode"), words or [], total, fps)
+    jobs, t0 = [], 0
     for i, s in enumerate(scenes):
         mv = motions[i] if motion != "none" else "none"
-        key = _clip_key(s["image"], frames[i], width, height, fps, mv, motion_strength)
-        jobs.append((s["image"], os.path.join(cdir, f"p{i:04d}_{key}.mp4"), frames[i], mv))
+        start = t0 / fps
+        sub = None
+        if segs:
+            from services import presenter
+            sub = presenter.slice_timeline(segs, t0, frames[i])
+        key = _clip_key(s["image"], frames[i], width, height, fps, mv, motion_strength, layout, start, sub)
+        jobs.append((s["image"], os.path.join(cdir, f"p{i:04d}_{key}.mp4"), frames[i], mv, start, sub))
+        t0 += frames[i]
     todo = [j for j in jobs if not os.path.isfile(j[1])]
+    tracks = []
+    for j in todo:  # une liste concat par clip (animation du présentateur sur ce morceau)
+        if j[5]:
+            from services import presenter
+            tp = j[1] + ".track.txt"
+            paths = {k: os.path.relpath(v, os.path.dirname(tp)) for k, v in layout["rig"].items()}
+            presenter.write_concat(j[5], paths, tp, fps)
+            tracks.append(tp)
     done = len(jobs) - len(todo)
     tick(0.02, f"Clips {done}/{len(jobs)}…")
     workers = max(1, min(4, (os.cpu_count() or 2) // 2))
@@ -495,8 +662,17 @@ def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=108
             nonlocal done
             done += 1
             tick(0.02 + 0.83 * done / len(jobs), f"Clips {done}/{len(jobs)}")
-        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 18))
-                    for (img, dest, n, mv) in todo], workers, cancelled or (lambda: False), one_done)
+        try:
+            _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 18),
+                         {"layout": layout, "t0": start, "track": dest + ".track.txt" if sub else None})
+                        for (img, dest, n, mv, start, sub) in todo],
+                       workers, cancelled or (lambda: False), one_done)
+        finally:
+            for tp in tracks:
+                try:
+                    os.remove(tp)
+                except OSError:
+                    pass
     keep = {os.path.basename(j[1]) for j in jobs}
     for f in os.listdir(cdir):
         if f not in keep:
@@ -524,13 +700,16 @@ def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=108
               "timestamps.txt = numéro, début → fin, durée et texte de chaque clip.\n")
     tmp = zip_path + ".tmp"
     with zipfile.ZipFile(tmp, "w", compression=zipfile.ZIP_STORED, allowZip64=True) as z:
-        for i, (img, dest, n, mv) in enumerate(jobs):
+        for i, (img, dest, n, mv, _, _) in enumerate(jobs):
             z.write(dest, f"clips/{i + 1:0{pad}d}.mp4")
             z.write(img, f"images/{i + 1:0{pad}d}{os.path.splitext(img)[1]}")
         z.write(voice_path, "voiceover.mp3")
         z.writestr("timestamps.txt", "\n".join(stamps) + "\n")
         z.writestr("subtitles.srt", build_srt(words or []))
         z.writestr("script.txt", script_text or "")
+        for arc, src in (extras or {}).items():  # fond quadrillé, présentateur détouré…
+            if src and os.path.isfile(src):
+                z.write(src, arc)
         z.writestr("LISEZMOI.txt", readme)
     os.replace(tmp, zip_path)
     tick(1.0, "Pack montage prêt.")

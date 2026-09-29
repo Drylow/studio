@@ -11,6 +11,10 @@
   DELETE /api/pov/channels/<id>/style-image
   POST   /api/pov/channels/<id>/describe-style   multipart files → prompt de style (vision)
   POST   /api/pov/channels/<id>/characters/<cid>/image   multipart file | {generate:true}
+  POST   /api/pov/channels/<id>/presenter        multipart file | {generate:true, extra?} | {rebuild:true}
+                                                 (+ anim = poses | none) → prof + poses de baguette
+  DELETE /api/pov/channels/<id>/presenter
+  GET    /api/pov/channels/<id>/board-preview    aperçu JPEG de la mise en page tableau
   POST   /api/pov/channels/<id>/bible            {text?} (sinon reference_scripts)
   POST   /api/pov/channels/<id>/transcripts      {urls}
   POST   /api/pov/channels/<id>/ideas            {hint?}
@@ -72,7 +76,7 @@ def config():
                "fast_model": ai.fast_model(), "image_model": ai.image_model()},
         "tts": tts.provider_status(), "ffmpeg": media.available(),
         "formats": {k: {"name": v["name"], "desc": v["desc"]} for k, v in S.FORMATS.items()},
-        "styles": E.STYLE_PRESETS, "templates": {k: {"name": v["name"], "language": v["language"],
+        "styles": E.STYLE_PRESETS, "board_themes": E.board.THEMES, "templates": {k: {"name": v["name"], "language": v["language"],
                                                     "format": v["format"], "niche": v["niche"]}
                                                 for k, v in E.TEMPLATES.items()},
         "languages": list(S.LANGS.keys()), "fonts": ["Poppins ExtraBold", "Poppins Black", "Poppins",
@@ -270,6 +274,75 @@ def character_image(cid, chid):
             c["image"] = rel
     store.save_channel(ch)
     return jsonify(ch)
+
+
+@pov_bp.route("/api/pov/channels/<cid>/presenter", methods=["POST", "DELETE"])
+def presenter(cid):
+    """Génère (ou importe) le prof + son rig animé. ~1 à 2 min : 1 image + 3 retouches en parallèle."""
+    ch, err = _channel_or_404(cid)
+    if err:
+        return err
+    if request.method == "DELETE":
+        with store.lock_for(cid):
+            ch = store.get_channel(cid)
+            old = E.board_config(ch)
+            ch["board"] = dict(old, presenter=None, rig=None)
+            store.save_channel(ch)
+        _drop_rig(ch, old)
+        return jsonify(ch)
+    b = _body()
+    anim = (request.form.get("anim") or b.get("anim") or E.board_config(ch).get("anim") or "poses")
+    anim = "none" if anim == "none" else "poses"
+    try:
+        blob = _upload_bytes()
+        if blob is not None:
+            rel, rig = E.save_presenter(ch, blob, anim=anim)
+        elif b.get("rebuild"):  # même prof, autre type d'animation
+            rel, rig = E.rebuild_presenter(ch, anim)
+        else:
+            rel, rig = E.presenter_image(ch, b.get("extra") or "", anim=anim)
+    except Exception as e:  # noqa: BLE001
+        return _err(e, 502)
+    with store.lock_for(cid):
+        ch = store.get_channel(cid)
+        old = E.board_config(ch)
+        ch["board"] = dict(old, presenter=rel, rig=rig, anim=anim)
+        store.save_channel(ch)
+    _drop_rig(ch, old, keep=rel)
+    return jsonify(ch)
+
+
+def _drop_rig(ch, old, keep=None):
+    """Supprime l'ancien présentateur (image seule ou dossier du rig)."""
+    import shutil
+    for key in ("rig", "presenter"):
+        rel = old.get(key)
+        if not rel or (keep and keep.startswith(rel.rstrip("/") + "/")) or rel == keep:
+            continue
+        path = E.channel_ref_path(ch, rel)
+        base = os.path.join(store.channel_dir(ch["id"]), "refs")
+        if not path or not os.path.abspath(path).startswith(os.path.abspath(base)):
+            continue
+        try:
+            if os.path.isdir(path):
+                shutil.rmtree(path, ignore_errors=True)
+            elif os.path.isfile(path):
+                os.remove(path)
+        except OSError:
+            pass
+
+
+@pov_bp.route("/api/pov/channels/<cid>/board-preview")
+def board_preview(cid):
+    ch, err = _channel_or_404(cid)
+    if err:
+        return err
+    dest = os.path.join(store.channel_dir(cid), "board_preview.jpg")
+    try:
+        E.board_preview(ch, dest)
+    except Exception as e:  # noqa: BLE001
+        return _err(e, 500)
+    return send_file(dest, mimetype="image/jpeg", max_age=0)
 
 
 @pov_bp.route("/api/pov/channels/<cid>/transcripts", methods=["POST"])

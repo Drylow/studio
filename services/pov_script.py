@@ -80,6 +80,21 @@ FORMATS = {
 - Keep a steady rhythm: similar length per item, no filler, no repetition of sentence openers.
 - End on the strongest item or the modern consequence of the timeline.""",
     },
+    "business_explained": {
+        "name": "How X Actually Makes Money (business expliqué)",
+        "desc": "« How Pawn Shops Actually Make Money », « The Economics of Money Laundering » — le vrai modèle économique caché d'un business (façon Marcus Explains).",
+        "heading": "short chapter title (2-5 words) — used for structure only",
+        "structure": """BUSINESS-MODEL EXPLAINER: one calm narrator explains a money machine to a smart friend. Arc: simple version → hidden levers → the math → twist → origin/famous case → dark side → the piece that ties it together → callback.
+- HOOK (no heading, ~7% of the words, done before 1:45): sentence one is EITHER a hard, sourced number that sounds impossible ("A money launderer charges about 8% on every dirty dollar.") OR a real named person in a named place and year. Then within 20 seconds the contradiction ("if that picture were right, this whole business should be dead"), name the common belief and kill it, say the real answer "has almost nothing to do with" the obvious product (matches the "(It's Not X)" title), one scale number as proof, and end with "By the end of this, you'll understand..." + 2-4 open loops, at least one dark or aimed at the viewer ("...and why the person paying for it is almost certainly you"). No greeting, no channel name, no CTA in the hook.
+- MASTER ANALOGY: within the first two minutes introduce ONE everyday system that maps the whole business (washing machine, theme-park wristband, vending machine). Call back to it 3+ times, "upgrade" it when new facts arrive, reuse it in the ending.
+- SECTIONS in this order (share of the runtime): restatement + master analogy "the simple version" (8%) → core mechanics: 2-3 cost/revenue levers, each with a hard number (14%) → unit math: walk through ONE customer / plate / store / transaction with round numbers ("Say the buffet charges $20."), then scale it up (7%) → short recap + CTA #1 (2%) → the hidden lever(s) most people miss (18%) → the twist: why it's thinner, riskier or weirder than it looks (6%) → origin story or famous case/scandal (7%) → dark side / who really pays: workers, towns, customers, regulators, with numbers, stated flatly, never moralizing (16%) → recap + CTA #2 (2%) → the piece that ties it all together, "here's where it all connects" (8%) → ending (5%).
+- Before each big pivot, recap the previous points in ONE list sentence ("Now, if the story ended there, ... But here's the detail everyone missed."). Plant a re-hook every 2-3 minutes ("What comes next is the part that still doesn't make sense.").
+- NUMBERS in nearly every paragraph. Name the source inside the sentence (institution, year, sample: "A 2025 study of 88 federal cases..."). Only use figures you are confident are real (company filings, government data, well-known studies, press); round them; if unsure, use a clearly hypothetical worked example instead of inventing a statistic. Turn every percentage into a human unit ("for every $1,000... about $2", "one diner in 20"). Put fines next to revenue ("0.028% of revenue. For a business this size, that's a parking ticket."). Repeat a shocking figure as a fragment: "95%." "Three times."
+- STAGING (the video is illustrated scene by scene): write drawable beats — objects, routes, chains of shell companies, a weekday afternoon, a town and its population. Real people get one-line verbatim quotes; otherwise use archetypes ("the grandmother who has soup and a roll"). Put the viewer inside the machine ("Walk into a casino with $50,000 in cash..."). Do not invent named fictional characters.
+- RHYTHM: ~14 words per sentence on average; a long explanation followed by a 2-5 word punch. Triplets ("They have methods. They have infrastructure. They have a fee."), "That's not X. That's Y." (max 3 times), sentences opening with And / But / So / Now. Max ~5 rhetorical questions in the whole video, each answered at once. Humor: dry one-liners only, none on criminal topics.
+- CTA #1 (~6 min) and CTA #2 (~16-20 min): one sentence each, "If this is already changing how you see X, subscribe, because the next part is where Y." Never ask for likes/subs in the first 5 minutes.
+- ENDING: recap every mechanism in one list ("That is the machine."), return to the opening number/person/image, widen it to a general law, land a one-sentence kicker, then "Tell me where you're watching from in the comments, and if this changed how you see X, subscribe." Stop. No "see you next time".""",
+    },
     "story": {
         "name": "Histoire racontée (documentaire narratif)",
         "desc": "Une histoire vraie racontée comme un thriller, avec suspense et rebondissements.",
@@ -111,7 +126,10 @@ BANNED = {
     "en": ["delve", "tapestry", "testament to", "in today's video", "let's dive in", "dive into", "buckle up",
            "game-changer", "unlock", "embark", "journey", "in conclusion", "it's worth noting", "whether you're",
            "imagine a world where", "but here's the thing", "the answer might surprise you", "stay tuned",
-           "smash that like button", "without further ado", "fascinating", "realm", "intricate"],
+           "smash that like button", "without further ado", "fascinating", "realm", "intricate",
+           "welcome back", "deep dive", "let's break it down", "here's the kicker", "plot twist", "fast forward",
+           "little did they know", "studies show", "experts say", "let that sink in", "mind-blowing",
+           "at the end of the day", "navigate the complexities", "landscape", "grab your popcorn"],
     "fr": ["plongeons", "plongez", "dans cette vidéo", "accrochez-vous", "sans plus attendre",
            "il est important de noter", "en conclusion", "incontournable", "fascinant", "un véritable voyage",
            "au cœur de", "n'hésitez pas", "que vous soyez", "imaginez un monde où", "la réponse va vous surprendre",

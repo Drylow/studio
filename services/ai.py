@@ -60,6 +60,15 @@ def image_model():
     return _env("AI_IMAGE_MODEL", "gpt-image-2")
 
 
+def text_fallback():
+    """Modèle texte de secours quand les comptes du modèle principal sont à court de quota
+    (ex. comptes Codex en pause → Gemini). Vide = pas de secours."""
+    return _env("AI_TEXT_FALLBACK", "gemini-3-flash")
+
+
+_cooldown = {}  # modèle → timestamp de fin de pause (quota épuisé), pour basculer sans attendre
+
+
 def configured():
     return bool(base_url() and api_key())
 
@@ -94,6 +103,17 @@ def _post(path, body=None, *, data=None, content_type="application/json", timeou
         except Exception:
             detail = str(e)
         _log(path, e.code, t0)
+        quota = _quota_wait(e.code, detail, e.headers)
+        if quota:  # tous les comptes sont en pause : inutile de réessayer
+            try:
+                info = json.loads(detail).get("error") or {}
+                if info.get("model") and info.get("reset_seconds"):
+                    _cooldown[info["model"]] = time.time() + float(info["reset_seconds"])
+            except (ValueError, AttributeError, TypeError):
+                pass
+            err = AIError(quota)
+            err.status = 4290
+            raise err
         err = AIError(f"IA {e.code}: {detail}")
         err.status = e.code
         raise err
@@ -102,6 +122,39 @@ def _post(path, body=None, *, data=None, content_type="application/json", timeou
         err = AIError(f"IA injoignable: {e}")
         err.status = 0
         raise err
+
+
+def _quota_wait(code, detail, headers=None):
+    """Quota épuisé côté proxy (CLIProxyAPI : « model_cooldown ») → message lisible, sinon None.
+
+    Un 429 passager (rafale) reste retenté normalement ; seul un blocage de plus de 2 min
+    (limite d'utilisation des comptes atteinte) est remonté tel quel à l'utilisateur."""
+    if code != 429:
+        return None
+    secs = None
+    try:
+        e = json.loads(detail).get("error") or {}
+        secs = e.get("reset_seconds")
+        if secs is None and e.get("code") != "model_cooldown" and "usage_limit" not in json.dumps(e):
+            return None
+    except (ValueError, AttributeError):
+        if "usage_limit" not in (detail or "") and "cooldown" not in (detail or ""):
+            return None
+    if secs is None and headers is not None:
+        try:
+            secs = int(headers.get("Retry-After") or 0) or None
+        except (TypeError, ValueError):
+            secs = None
+    if secs is not None and float(secs) < 120:
+        return None
+    if secs:
+        h, m = divmod(int(float(secs)) // 60, 60)
+        when = time.strftime("%H:%M", time.localtime(time.time() + float(secs)))
+        wait = (f"{h} h {m:02d}" if h else f"{m} min") + f" (vers {when})"
+    else:
+        wait = "un moment"
+    return ("Quota IA épuisé : tous les comptes du proxy ont atteint leur limite d'utilisation. "
+            f"Réessaie dans {wait}. Ce qui est déjà fait est conservé.")
 
 
 def _log(path, status, t0):
@@ -133,7 +186,11 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
     """Complétion chat. `messages` = liste OpenAI ou simple str (message user)."""
     if isinstance(messages, str):
         messages = [{"role": "user", "content": messages}]
-    body = {"model": model or text_model(), "messages": messages}
+    model = model or text_model()
+    fb = text_fallback()
+    if fb and fb != model and _cooldown.get(model, 0) > time.time():
+        model = fb  # modèle principal en pause : secours direct (pas 90 s d'attente du proxy)
+    body = {"model": model, "messages": messages}
     if temperature is not None:
         body["temperature"] = temperature
     if max_tokens:
@@ -156,7 +213,15 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
             raise err
         return text
 
-    return _with_retries(once, tries=tries)
+    try:
+        return _with_retries(once, tries=tries)
+    except AIError as e:
+        if getattr(e, "status", None) != 4290 or not fb or body["model"] == fb:
+            raise
+        _log("/chat/completions", f"quota {body['model']} épuisé → secours {fb}", time.time())
+        body["model"] = fb
+        body.pop("reasoning_effort", None)
+        return _with_retries(once, tries=tries)
 
 
 def extract_json(text):
@@ -238,11 +303,12 @@ def _size_for(width, height):
 
 
 def generate_image(prompt, *, width=1920, height=1080, refs=None, model=None,
-                   quality="medium", timeout=300, tries=4):
+                   quality="medium", timeout=300, tries=4, transparent=False):
     """Génère une image et la renvoie en octets (PNG/JPEG bruts du fournisseur).
 
     refs = liste de chemins/octets d'images de référence (style, perso...) →
     endpoint /images/edits (cohérence du style). Sinon /images/generations.
+    transparent = fond transparent (PNG RGBA), pour le présentateur détouré.
     """
     model = model or image_model()
     size = _size_for(width, height)
@@ -254,17 +320,18 @@ def generate_image(prompt, *, width=1920, height=1080, refs=None, model=None,
             with open(r, "rb") as f:
                 ref_blobs.append(f.read())
 
+    fields = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": 1}
+    if transparent:
+        fields.update({"background": "transparent", "output_format": "png"})
+
     def once():
         if ref_blobs:
             files = [("image[]", f"ref_{i}.png", _to_png(b), "image/png")
                      for i, b in enumerate(ref_blobs[:8])]
-            data, ctype = _multipart({"model": model, "prompt": prompt, "size": size,
-                                      "quality": quality, "n": 1}, files)
+            data, ctype = _multipart(fields, files)
             rtype, raw = _post("/images/edits", data=data, content_type=ctype, timeout=timeout)
         else:
-            rtype, raw = _post("/images/generations",
-                               {"model": model, "prompt": prompt, "size": size,
-                                "quality": quality, "n": 1}, timeout=timeout)
+            rtype, raw = _post("/images/generations", fields, timeout=timeout)
         return _decode_image_response(rtype, raw)
 
     return _with_retries(once, tries=tries, base_delay=5.0)
