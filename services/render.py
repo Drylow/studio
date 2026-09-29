@@ -25,19 +25,20 @@ FONTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 MOTIONS = ["zoom_in", "pan_right", "zoom_out", "pan_left", "zoom_in_tl", "pan_down", "zoom_in_br", "pan_up"]
 
 
+FPS_DEFAULT = 30
 Cancelled = media.Cancelled  # annulation (bouton Annuler) : tue ffmpeg immédiatement
 
 
 # ── Mouvements de caméra ────────────────────────────────────────────────────
 
-def _motion_filter(kind, n, strength):
+def _motion_filter(kind, n, strength, offset=0):
     """Mouvement de caméra au sous-pixel (filtre perspective, interpolation bicubique).
 
     zoompan arrondit le cadrage au pixel entier : l'image reste figée quelques images puis
     saute → l'écran « tremble ». Ici le cadrage est exact à chaque image : mouvement continu,
     à vitesse constante (les fondus entre scènes adoucissent déjà les départs)."""
     s = max(0.02, min(0.35, float(strength)))
-    p = f"(in/{max(1, n - 1)})"
+    p = f"((in+{int(offset)})/{max(1, n - 1)})" if offset else f"(in/{max(1, n - 1)})"
     if kind == "zoom_out":
         z = f"(1+{s}*(1-{p}))"
     elif kind.startswith("pan_"):
@@ -60,8 +61,9 @@ def _motion_filter(kind, n, strength):
     elif kind == "zoom_in_br":
         cx, cy = f"({hw}+{mx}*(0.5+0.17*{p}))", f"({hh}+{my}*(0.5+0.17*{p}))"
     l, r, t, b = f"{cx}-{hw}", f"{cx}+{hw}", f"{cy}-{hh}", f"{cy}+{hh}"
+    # bilinéaire : identique à l'œil pour un zoom ≤ 1,35 (PSNR ~39 dB vs bicubique) et ~40 % plus rapide
     return (f"perspective=x0='{l}':y0='{t}':x1='{r}':y1='{t}':x2='{l}':y2='{b}':x3='{r}':y3='{b}'"
-            f":interpolation=cubic:eval=frame")
+            f":interpolation=linear:eval=frame")
 
 
 def pick_motions(count, mode="auto", seed=0):
@@ -87,9 +89,9 @@ def _file_sig(path):
     return [os.path.basename(path), st.st_size, int(st.st_mtime)]
 
 
-def _clip_key(image, frames, w, h, fps, motion, strength, layout=None, t0=0.0, track=None):
+def _clip_key(image, frames, w, h, fps, motion, strength, layout=None, t0=0.0, track=None, extra=None):
     raw = json.dumps([_file_sig(image), frames, w, h, fps, motion, round(float(strength), 3),
-                      _layout_sig(layout, t0, track), "persp1"])
+                      _layout_sig(layout, t0, track), "persp1", extra])
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -192,43 +194,75 @@ def presenter_track(layout, words, total, fps, dest, start_f=0, count=None):
 _X264 = ["-c:v", "libx264", "-preset", "veryfast", "-profile:v", "high", "-pix_fmt", "yuv420p"]
 
 
+def _scene_filter(W, H, motion, n, strength, offset=0, count=None, fps=None):
+    """Image « cover » au format W×H + mouvement de caméra (frames [offset, offset+count[ de son mouvement).
+    fps : cadence déclarée explicitement (xfade exige une cadence constante sur ses deux entrées)."""
+    # l'image est décodée et recadrée UNE fois, puis répétée en mémoire (loop) : pas de décodage / mise à
+    # l'échelle à chaque image
+    f = (f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,"
+         f"loop=loop=-1:size=1,setpts=N/({int(fps or FPS_DEFAULT)}*TB)")
+    if motion != "none":
+        f += "," + _motion_filter(motion, n, strength, offset)
+    f += ",format=yuv420p"
+    if count:
+        f += f",trim=end_frame={int(count)},setpts=PTS-STARTPTS"
+    if fps and count:
+        f += f",settb=AVTB,fps={int(fps)}"
+    return f
+
+
 def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancelled=None, layout=None, t0=0.0,
-                track=None):
+                track=None, motion_frames=None, prev=None):
     """Clip d'une scène. Même encodeur/profil pour tous les clips → concat sans réencodage sûr.
+
+    motion_frames : longueur du mouvement de l'image (≥ frames : le mouvement continue pendant le
+    fondu vers la scène suivante, montré au début du clip suivant).
+    prev = {"image", "motion", "n", "offset", "tf"} : le clip commence par un fondu de tf images
+    depuis la fin du mouvement de la scène précédente → les fondus sont faits ici, en parallèle,
+    et la vidéo finale n'est plus qu'un collage des clips (aucun réencodage).
 
     layout (mise en page tableau) : la scène est animée DANS le panneau, posée sur le fond, sous
     le cadre (contour + coins arrondis), avec le présentateur par-dessus si layout["presenter"]
     (track = liste concat de son animation pour ce clip ; t0 = début du clip dans la vidéo, pour
     que la respiration soit continue d'un clip à l'autre)."""
-    # « cover » : l'image est recadrée (jamais déformée) au format de la vidéo, 16:9 comme 9:16
-    cover = "scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}"
     iw, ih = (layout["panel"][2], layout["panel"][3]) if layout else (w, h)
-    src = ["-loop", "1", "-framerate", str(fps), "-i", image]
-    scene = cover.format(W=iw, H=ih) + ",setsar=1"
-    if motion == "none":  # image fixe
-        tune = ["-tune", "stillimage"]
-    else:
-        scene += "," + _motion_filter(motion, frames, strength)
-        tune = []
-    if not layout:
-        media.run(src + ["-vf", scene + ",format=yuv420p", "-frames:v", str(frames), "-r", str(fps)] + _X264 +
-                  tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
+    n = int(motion_frames or frames)
+    loop = ["-loop", "1", "-framerate", str(fps), "-i"]      # fonds / cadres fixes de la mise en page
+    one = ["-i"]                                            # images de scène : répétées par le filtre loop
+    tune = ["-tune", "stillimage"] if motion == "none" and not prev else []
+    if not layout and not prev:
+        media.run(one + [image, "-vf", _scene_filter(iw, ih, motion, n, strength, fps=fps), "-frames:v", str(frames),
+                         "-r", str(fps)] + _X264 + tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
         return dest
-    px, py = layout["panel"][0], layout["panel"][1]
-    args = src + ["-loop", "1", "-framerate", str(fps), "-i", layout["bg"]]
-    graph = [f"[0:v]{scene}[p]", "[1:v]setsar=1[b]", f"[b][p]overlay=x={px}:y={py}:shortest=1[bp]"]
-    out, idx = "bp", 2
-    if layout.get("frame"):
-        args += ["-loop", "1", "-framerate", str(fps), "-i", layout["frame"]]
-        graph.append(f"[{out}][{idx}:v]overlay=0:0:shortest=1[bf]")
-        out, idx = "bf", idx + 1
-    if layout.get("presenter"):
-        if track:
-            args += ["-f", "concat", "-safe", "0", "-i", track]
-        else:
-            args += ["-loop", "1", "-framerate", str(fps), "-i", layout["presenter"]]
-        graph.append(f"[{out}][{idx}:v]overlay=x={layout['pres_x']}:y='{_bob_expr(layout, t0)}':eval=frame[bq]")
-        out = "bq"
+    args, graph, idx = [], [], 0
+    if prev and int(prev.get("tf") or 0) > 0:
+        tf = int(prev["tf"])
+        args += one + [prev["image"]] + one + [image]
+        graph.append(f"[0:v]{_scene_filter(iw, ih, prev['motion'], prev['n'], strength, prev['offset'], tf, fps)}[pa]")
+        graph.append(f"[1:v]{_scene_filter(iw, ih, motion, n, strength, 0, frames, fps)}[pb]")
+        graph.append(f"[pa][pb]xfade=transition=fade:duration={tf / fps:.4f}:offset=0[p]")
+        idx = 2
+    else:
+        args += one + [image]
+        graph.append(f"[0:v]{_scene_filter(iw, ih, motion, n, strength, fps=fps)}[p]")
+        idx = 1
+    out = "p"
+    if layout:
+        px, py = layout["panel"][0], layout["panel"][1]
+        args += loop + [layout["bg"]]
+        graph += [f"[{idx}:v]setsar=1[b]", f"[b][p]overlay=x={px}:y={py}:shortest=1[bp]"]
+        out, idx = "bp", idx + 1
+        if layout.get("frame"):
+            args += loop + [layout["frame"]]
+            graph.append(f"[{out}][{idx}:v]overlay=0:0:shortest=1[bf]")
+            out, idx = "bf", idx + 1
+        if layout.get("presenter"):
+            if track:
+                args += ["-f", "concat", "-safe", "0", "-i", track]
+            else:
+                args += loop + [layout["presenter"]]
+            graph.append(f"[{out}][{idx}:v]overlay=x={layout['pres_x']}:y='{_bob_expr(layout, t0)}':eval=frame[bq]")
+            out = "bq"
     graph.append(f"[{out}]format=yuv420p[v]")
     media.run(args + ["-filter_complex", ";".join(graph), "-map", "[v]", "-frames:v", str(frames),
                       "-r", str(fps)] + _X264 + tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
@@ -401,26 +435,37 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     os.makedirs(clips_dir, exist_ok=True)
     motions = pick_motions(len(scenes), motion, seed=len(scenes))
     clip_layout = dict(layout, presenter=None, rig=None) if layout else None
+    last = len(scenes) - 1
+    # le mouvement d'une image continue pendant le fondu vers la suivante (montré au début du clip suivant)
+    mlen = [frames[i] + (tf if fade and i < last else 0) for i in range(len(scenes))]
+    crf = 18 if quality == "high" else 20  # les clips SONT la vidéo finale : plus de second encodage
     jobs = []
     for i, s in enumerate(scenes):
-        n = frames[i] + (tf if fade and i < len(scenes) - 1 else 0)
         mv = s.get("motion") or motions[i]
-        key = _clip_key(s["image"], n, width, height, fps, mv, motion_strength, clip_layout)
-        jobs.append((i, s["image"], os.path.join(clips_dir, f"c{i:04d}_{key}.mp4"), n, mv))
+        prev = None
+        if fade and i > 0:
+            ps = scenes[i - 1]
+            prev = {"image": ps["image"], "motion": ps.get("motion") or motions[i - 1], "n": mlen[i - 1],
+                    "offset": frames[i - 1], "tf": max(0, min(tf, frames[i] - 1))}
+        extra = [mlen[i], crf, [_file_sig(prev["image"]), prev["motion"], prev["n"], prev["offset"], prev["tf"]]
+                 if prev else None]
+        key = _clip_key(s["image"], frames[i], width, height, fps, mv, motion_strength, clip_layout, extra=extra)
+        jobs.append((i, s["image"], os.path.join(clips_dir, f"c{i:04d}_{key}.mp4"), frames[i], mv, mlen[i], prev))
 
-    # 1) clips (parallèle + cache)
+    # 1) clips, fondus compris (parallèle + cache)
     todo = [j for j in jobs if not os.path.isfile(j[2])]
-    workers = max(1, min(4, (os.cpu_count() or 2) // 2))
+    workers = max(1, min(6, (os.cpu_count() or 2) // 2))
     done = len(jobs) - len(todo)
     tick(0.02, f"Animation des scènes ({done}/{len(jobs)} en cache)…")
     if todo:
         def one_done():
             nonlocal done
             done += 1
-            tick(0.02 + 0.68 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
+            tick(0.02 + 0.83 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
         stop = cancelled or (lambda: False)
-        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, 17),
-                     {"layout": clip_layout}) for (_, img, dest, n, mv) in todo], workers, stop, one_done)
+        _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, crf),
+                     {"layout": clip_layout, "motion_frames": ml, "prev": pv})
+                    for (_, img, dest, n, mv, ml, pv) in todo], workers, stop, one_done)
     keep = {os.path.basename(j[2]) for j in jobs}
     for f in os.listdir(clips_dir):  # purge des clips obsolètes
         if f not in keep:
@@ -429,32 +474,14 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
             except OSError:
                 pass
 
-    # 2) assemblage — en fondu, l'enchaînement est fait DANS la passe finale (1 encodage de moins)
-    tick(0.72, "Assemblage des scènes…")
-    clip_paths = [j[2] for j in jobs]
-    durs = [f / fps for f in frames]
-    temp, batch = [], 24
-    if not fade:
-        assembled = os.path.join(workdir, "assembled.mp4")
-        _concat_copy(clip_paths, assembled, workdir)
-        inputs, in_durs = [assembled], None
-        temp.append(assembled)
-    elif len(clip_paths) <= batch:
-        inputs, in_durs = clip_paths, durs
-    else:
-        inputs, in_durs = [], []
-        groups = [list(range(i, min(i + batch, len(clip_paths)))) for i in range(0, len(clip_paths), batch)]
-        for gi, g in enumerate(groups):
-            part = os.path.join(workdir, f"part_{gi:03d}.mp4")
-            _xfade_chain([clip_paths[i] for i in g], [durs[i] for i in g], transition_dur, fps, part,
-                         cancelled=cancelled)
-            inputs.append(part)
-            in_durs.append(sum(durs[i] for i in g))
-            temp.append(part)
-            tick(0.72 + 0.12 * (gi + 1) / len(groups), f"Assemblage {gi + 1}/{len(groups)}")
+    # 2) assemblage : simple collage des clips (fondus déjà faits), sans réencodage
+    tick(0.86, "Assemblage des scènes…")
+    assembled = os.path.join(workdir, "assembled.mp4")
+    _concat_copy([j[2] for j in jobs], assembled, workdir)
+    inputs, in_durs, temp = [assembled], None, [assembled]
 
-    # 3) passe finale
-    tick(0.86, "Fondus, sous-titres, mixage audio et export…")
+    # 3) passe finale : mixage audio (+ sous-titres / présentateur s'il y en a)
+    tick(0.9, "Mixage audio et export…")
     ass = build_ass(words or [], os.path.join(workdir, "captions.ass"), width, height, captions, overlays)
     try:
         track = None
@@ -483,32 +510,6 @@ def _concat_copy(paths, dest, workdir):
               cwd=workdir)
 
 
-def _xfade_graph(n, durs, t, fps):
-    """Graphe xfade pour n entrées vidéo (0..n-1). Renvoie (filtres, label de sortie)."""
-    graph = [f"[{i}:v]settb=AVTB,setpts=PTS-STARTPTS,fps={fps}[v{i}]" for i in range(n)]
-    prev, offset = "v0", 0.0
-    for i in range(1, n):
-        offset += durs[i - 1]
-        graph.append(f"[{prev}][v{i}]xfade=transition=fade:duration={t:.3f}:offset={offset:.3f}[x{i}]")
-        prev = f"x{i}"
-    return graph, prev
-
-
-def _xfade_chain(inputs, durs, t, fps, dest, cancelled=None):
-    """xfade sur une liste de clips. durs[i] = durée « utile » du clip i (sans recouvrement)."""
-    if len(inputs) == 1:
-        media.run(["-i", inputs[0], "-c", "copy", dest])
-        return
-    args = []
-    for p in inputs:
-        args += ["-i", p]
-    graph, out = _xfade_graph(len(inputs), durs, t, fps)
-    # intermédiaire temporaire (réencodé dans la passe finale) : ultrafast, qualité quasi sans perte
-    media.run(args + ["-filter_complex", ";".join(graph), "-map", f"[{out}]",
-                      "-c:v", "libx264", "-preset", "ultrafast", "-crf", "14", "-pix_fmt", "yuv420p", dest],
-              cancelled=cancelled)
-
-
 def _rel(path, base):
     try:
         return os.path.relpath(path, base)
@@ -527,10 +528,7 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
     if has_music:
         args += ["-stream_loop", "-1", "-i", os.path.abspath(music)]
     graph = []
-    vlabel = "0:v"
-    if n > 1:
-        xg, vlabel = _xfade_graph(n, vdurs, t, fps)
-        graph += xg
+    vlabel = "0:v"  # une seule vidéo : les clips assemblés (fondus déjà intégrés)
     if presenter:  # présentateur incrusté par-dessus toute la vidéo
         pi = n + 1 + (1 if has_music else 0)
         if track:  # animation (bouche, yeux, baguette) calée sur la voix

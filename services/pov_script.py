@@ -906,17 +906,71 @@ def generate(ch, title, minutes, notes="", polish=True, progress=None, history=N
             "words": word_count(narration(script))}
 
 
+CHUNK_WORDS = 950  # sections écrites par blocs consécutifs (FacelessOS : jamais plus de 3 500 mots d'un coup)
+
+
+def _chunks(ol):
+    """Sections consécutives réparties en blocs équilibrés d'au plus ~CHUNK_WORDS mots."""
+    secs = ol["sections"]
+    total = sum(int(x.get("target_words") or 180) for x in secs)
+    k = max(1, min(len(secs), -(-total // CHUNK_WORDS)))
+    size = -(-len(secs) // k)
+    return [list(range(i, min(i + size, len(secs)))) for i in range(0, len(secs), size)]
+
+
+def write_sections(ch, ol, idxs, previous_tail):
+    """Plusieurs sections consécutives en une seule génération, dans l'ordre, à la suite du texte déjà écrit
+    (même voix d'un bout à l'autre, et 3 à 4 fois moins d'allers-retours avec l'IA)."""
+    if len(idxs) == 1:
+        return [write_section(ch, ol, idxs[0], previous_tail)]
+    last = len(ol["sections"]) - 1
+    specs = []
+    for i in idxs:
+        sec = ol["sections"][i]
+        n = int(sec.get("target_words") or 180)
+        extra = "".join(f" {lab}: {sec[k]}." for k, lab in (("emotion", "Emotional beat"), ("closes", "Loop it pays off"),
+                                                            ("opens", "Loop it opens"), ("exit", "Hand-off")) if sec.get(k))
+        role = (" This is the LAST section of the video: land the ending (" + (ol.get("ending") or "strong final line")
+                + ").") if i == last else (" End with a one-line hook into the next section." if i == idxs[-1] else "")
+        specs.append(f"## {sec['heading']}\nBeats: " + " | ".join(sec.get("beats") or []) + "." + extra
+                     + f" LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit).{role}")
+    context = ("END OF THE PREVIOUS PART (continue seamlessly, do not repeat it):\n<<<\n" + previous_tail + "\n>>>"
+               if previous_tail else "This is the very beginning of the video.")
+    prompt = (f"FULL OUTLINE (for context):\n{_outline_text(ol)}\n\n{context}\n\n"
+              f"Now write these {len(idxs)} consecutive sections, in this order, as one continuous voiceover. Start "
+              "each one with its heading line exactly as written below (the line beginning with \"## \"), then its "
+              "narration only. Respect each length.\n\n" + "\n\n".join(specs))
+    raw = ai.chat([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
+                  model=ai.text_model(), reasoning="medium", timeout=420)
+    texts = [t for t in (_clean(b) for b in re.split(r"(?m)^[ \t]*#{1,3}[ \t]+.*$", raw or "")) if t]
+    if len(texts) != len(idxs) or any(word_count(t) < 0.4 * int(ol["sections"][i].get("target_words") or 180)
+                                      for t, i in zip(texts, idxs)):
+        # découpage inattendu : on repasse section par section plutôt que de mal répartir le texte
+        out, tail = [], previous_tail
+        for i in idxs:
+            out.append(write_section(ch, ol, i, tail))
+            tail = out[-1][-600:]
+        return out
+    return texts
+
+
 def _write_all(ch, ol, hook, step, p0, p1):
     parts = [("", hook)] if hook else []
     tail = hook[-600:] if hook else ""
-    start = 0 if hook else -1
-    n = len(ol["sections"]) - start
-    for k, i in enumerate(range(start, len(ol["sections"]))):
-        label = "le hook" if i < 0 else f"la section {i + 1}/{len(ol['sections'])} — {ol['sections'][i]['heading']}"
-        step(p0 + (p1 - p0) * k / max(1, n), f"[Write] Écriture de {label}…", compose(parts) if parts else None)
-        text = FOS.mech_fix(write_section(ch, ol, i, tail))
-        parts.append(("" if i < 0 else ol["sections"][i]["heading"], text))
-        tail = text[-600:]
+    idx_groups = _chunks(ol)
+    if not hook:
+        idx_groups = [[-1]] + idx_groups
+    for k, idxs in enumerate(idx_groups):
+        names = ", ".join("le hook" if i < 0 else f"{i + 1}" for i in idxs)
+        step(p0 + (p1 - p0) * k / max(1, len(idx_groups)),
+             f"[Write] Écriture des sections {names} / {len(ol['sections'])}…", compose(parts) if parts else None)
+        if idxs == [-1]:
+            texts = [write_section(ch, ol, -1, tail)]
+        else:
+            texts = write_sections(ch, ol, idxs, tail)
+        for i, text in zip(idxs, texts):
+            parts.append(("" if i < 0 else ol["sections"][i]["heading"], FOS.mech_fix(text)))
+        tail = parts[-1][1][-600:]
     return parts
 
 

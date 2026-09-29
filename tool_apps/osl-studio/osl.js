@@ -62,7 +62,7 @@ function onMinutes() {
   renderChips();
   const words = m * (ch.wpm || 158), imgs = Math.ceil(m * 60 / (ch.pacing || 6));
   $('#est').innerHTML = `<span>≈ <b>${nf(words)}</b> mots</span><span>≈ <b>${nf(imgs)}</b> images</span>`
-    + `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span><span>≈ <b>${nf(25 + m * 3)} min</b> de fabrication</span>`;
+    + `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span><span>≈ <b>${nf(12 + m * 1.9)} min</b> de fabrication</span>`;
 }
 $('#minutes').oninput = onMinutes;
 

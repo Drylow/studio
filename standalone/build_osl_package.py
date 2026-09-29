@@ -42,6 +42,8 @@ def build(out, with_env=True):
                 k = ln.split("=", 1)[0].strip()
                 if k in ENV_KEYS and "=" in ln:
                     lines.append(ln.rstrip("\n"))
+    # images générées en parallèle : 12 (26 comptes derrière le proxy) → ~2 fois plus rapide qu'à 6
+    lines = [ln for ln in lines if not ln.startswith("AI_IMAGE_CONCURRENCY=")] + ["AI_IMAGE_CONCURRENCY=12"]
     with open(os.path.join(app, ".env"), "w", encoding="utf-8", newline="\r\n") as fh:
         fh.write("\n".join(lines) + "\n")
     return top

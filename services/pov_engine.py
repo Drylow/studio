@@ -1411,7 +1411,7 @@ def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
 
 def _image_workers():
     try:
-        return max(1, min(16, int(os.getenv("AI_IMAGE_CONCURRENCY", "6"))))
+        return max(1, min(16, int(os.getenv("AI_IMAGE_CONCURRENCY", "12"))))
     except ValueError:
         return 6
 
@@ -1911,7 +1911,15 @@ def job_autopilot(job, pid, render_video=True):
     if not (pr.get("script") or "").strip():
         job_script(_Sub(job, 0.0, 0.25, "1/4 Script"), pid)
     pr = store.get_project(pid)
-    if voice_outdated(pr):
+    need_voice, need_cast = voice_outdated(pr), pr.get("cast") is None
+    if need_voice and need_cast:
+        # voix et casting en même temps : indépendants (la voix fait les scènes, le casting les persos)
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            fv = ex.submit(job_voice, _Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
+            fc = ex.submit(job_cast, _Sub(job, 0.25, 0.35, "2/4 Personnages"), pid)
+            fv.result()
+            fc.result()
+    elif need_voice:
         job_voice(_Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
     job_images(_Sub(job, 0.35, 0.85, "3/4 Images"), pid)
     if render_video:
