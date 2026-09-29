@@ -148,7 +148,8 @@ TEMPLATES = {
                 "occasional heartfelt beats. Never mean-spirited.",
         "rules": "Follow ONE life chronologically from meeting her to old age. Every stage has concrete cultural details "
                  "(food, family, customs, words) and at least one joke. Stereotypes are affectionate, never insulting.",
-        "style": "osl_stick", "voice": "en-US-AndrewMultilingualNeural", "wpm": 140, "no_text": True,
+        "style": "osl_stick", "voice": "en-US-AndrewMultilingualNeural", "wpm": 158, "no_text": True,
+        "voice_speed": 1.06,
         "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
                      "apartments, kitchens, restaurants, her parents' home, streets and landmarks of her country, "
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
@@ -228,6 +229,16 @@ TEMPLATES = {
 
 # Bibles de style prêtes à l'emploi (tirées de l'analyse des transcriptions des chaînes de référence).
 TEMPLATE_BIBLES = {
+    "oddly_specific_en": """FORMAT. One continuous narration in second person, present tense, for a 2D stick-figure POV video. Words = minutes x 158. No host, no intro, no "in this video", no spoken chapter titles, no CTA. The title carries the premise, so never restate it and delay the label itself.
+YOU. "You" are an unnamed, ordinary Western guy in his 30s: decent job, average apartment, bad at dancing and languages, honest, out of his depth. Most jokes land on him. Give him 1-2 concrete facts early (age 38, a half-finished beer, 11 words of high-school Spanish).
+HER. Competent and specific, never a prop. Show 2-3 defining behaviors in minute one. Later give her one private vulnerability and one crisis where she carries you. Name her only in family comedies; otherwise "she".
+HOOK (0:00-1:00). Place + day + one telling detail. Her in action. Compress time ("3 months later... A year later, you're married."). One dramatic-irony line ("What you don't realize yet is..."). First escalating scene with an exact number by 0:45. For danger premises, open mid-action and name her world after 2 minutes.
+SET PIECES. Headline sentence ("Then the shoes disappear."), escalating specifics with exact numbers (47 people, 17 toasts, 300%), your failed attempt, a deadpan button of five words or fewer ("You deploy all nine."), then a small acceptance token ("hermano", "He tries hard. That's enough.").
+VOICE. Average 10 words per sentence; about 20% fragments of 1-4 words. "Not X. Y." corrections ("Not invited. Expected."), everyday similes ("like a used car she's considering buying"), lists of three, exact numbers everywhere. Report most speech indirectly; save direct quotes for 3-6 lines that matter. You barely speak.
+TONE CURVE. Front-load comedy (3-4 comedic beats per minute in family comedies). Turn sincere near 50% with one plain line ("You're not losing anything."). Keep the last 12% quiet, with at most one soft joke. Dark premises: dry wit early, pure tension after the midpoint twist, eerie last line. Danger-romance premises: literary noir restraint, short cinematic lines.
+CALLBACKS. Plant three motifs in the first 20% (a relative, a ritual, an object) and pay each off. Return to the opening image in the final 40 seconds.
+ENDING. A small domestic scene (couch, window, balcony, the Sunday call), one reframing thesis ("You didn't marry an idea."), then 2-4 short sentences. Never summarize the video.
+CULTURE. 6-10 correct, researched specifics (ceremony names, dishes, kinship words), each with context; one country only unless the title is a broad label. Aim jokes at your ignorance or at the size of their love (food, guests, hugs, volume) — never at her intelligence, morals, accent, looks, skin, religion, poverty or immigration status. Negative stereotypes only in the mouths of clueless friends, disproved within 60 seconds. Every overwhelming relative gets a scene of acceptance. Rituals and faith are shown as beautiful; your clumsiness is the joke. In crime premises never tie the criminality to her ethnicity.""",
     "business_en": """VOICE. One calm narrator explaining a machine to a smart friend. No greeting, channel name, "in this video" or sponsor. Contractions and plain words. Colder on criminal topics: fewer contractions, no jokes. ~180 spoken words per minute.
 HOOK (first 250-350 words, done by 1:45). Sentence one is either a hard, sourced number that sounds impossible, or a real named person in a named place and year. State the paradox ("if that picture were right, this whole business should be dead"). Name the popular belief and kill it. Say the real answer "has almost nothing to do with" the obvious product. End with "By the end of this, you'll understand..." plus 2-4 open loops, at least one dark or aimed at the viewer.
 MASTER ANALOGY. Within the first two minutes, ONE everyday system (washing machine, ride wristband, vending machine) that maps the whole business. Call back to it 3+ times, "upgrade" it when facts arrive, reuse it in the close.
@@ -399,23 +410,62 @@ def fetch_transcripts(urls_text, limit=4):
     return "\n\n".join(out), errors
 
 
-def _style_parts(ch, scene_chars=None):
-    """(préfixe de prompt, liste des images de référence) pour une génération."""
+def _norm_name(n):
+    return re.sub(r"\s+", " ", (n or "").strip().lower())
+
+
+def cast_list(ch, pr=None):
+    """Personnages de la vidéo : [{id, name, aliases, description, path, always, source}].
+
+    = persos récurrents de la chaîne + casting du projet (détecté dans le script, façon TubeGen).
+    Un perso du projet qui porte le nom d'un perso de la chaîne le remplace pour cette vidéo
+    (ex. « You » avec une tenue propre à la vidéo)."""
+    out = {}
+    for c in (ch.get("style") or {}).get("characters") or []:
+        out[_norm_name(c["name"])] = {"id": c.get("id"), "name": c["name"], "aliases": [],
+                                      "description": c.get("description") or "",
+                                      "path": channel_ref_path(ch, c.get("image")), "always": bool(c.get("always")),
+                                      "source": "channel"}
+    for c in (pr or {}).get("cast") or []:
+        key = _norm_name(c.get("name"))
+        if not key:
+            continue
+        base = out.get(key) or {}
+        img = os.path.join(store.project_dir(pr["id"]), c["image"]) if c.get("image") else None
+        out[key] = {"id": c.get("id"), "name": c["name"], "aliases": c.get("aliases") or [],
+                    "description": c.get("description") or base.get("description", ""),
+                    "path": img if img and os.path.isfile(img) else base.get("path"),
+                    "always": base.get("always", False), "source": "video"}
+    return list(out.values())
+
+
+def _in_scene(cast, scene_chars):
+    """Persos présents : ceux nommés par la scène (nom ou alias) ; sans info, les persos « toujours là »."""
+    if scene_chars is None:
+        return [c for c in cast if c.get("always")]
+    names = {_norm_name(n) for n in scene_chars}
+    return [c for c in cast if _norm_name(c["name"]) in names or any(_norm_name(a) in names for a in c["aliases"])]
+
+
+MAX_CHAR_REFS = 4
+
+
+def _style_parts(ch, scene_chars=None, cast=None):
+    """(lignes de prompt, images de référence) : style de la chaîne + persos présents dans la scène."""
     st = ch.get("style") or {}
     refs, lines = [], []
     style_ref = channel_ref_path(ch, st.get("ref"))
     if style_ref and os.path.isfile(style_ref):
         refs.append(style_ref)
         lines.append(f"Reference image {len(refs)} = ART STYLE reference: copy its rendering, line work, color "
-                     "palette and shading exactly. Ignore its content and composition.")
-    for c in st.get("characters") or []:
-        if scene_chars is not None and c["name"] not in scene_chars and not c.get("always"):
-            continue
-        p = channel_ref_path(ch, c.get("image"))
-        if p and os.path.isfile(p):
-            refs.append(p)
-            lines.append(f"Reference image {len(refs)} = the character \"{c['name']}\": keep exactly the same face, "
-                         "hair, body proportions and colors (outfit and age may change if the scene says so).")
+                     "palette and shading exactly. Ignore its content, characters and composition.")
+    present = _in_scene(cast if cast is not None else cast_list(ch), scene_chars)
+    for c in present[:MAX_CHAR_REFS]:
+        if c.get("path") and os.path.isfile(c["path"]):
+            refs.append(c["path"])
+            lines.append(f"Reference image {len(refs)} = the character \"{c['name']}\": draw this character with "
+                         "EXACTLY the same head, face, hair, body proportions, colors and outfit (only change the "
+                         "outfit or age if the scene explicitly says so). Same design in every image.")
     return lines, refs
 
 
@@ -424,11 +474,12 @@ def uses_board(ch_or_pr):
     return ((ch_or_pr or {}).get("montage") or {}).get("layout") == "board"
 
 
-def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, vertical=False, board_layout=False):
+def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, vertical=False, board_layout=False,
+                       cast=None):
     st = ch.get("style") or {}
-    lines, refs = _style_parts(ch, scene_chars)
-    chars_desc = [f"{c['name']}: {c['description']}" for c in st.get("characters") or []
-                  if c.get("description") and (scene_chars is None or c["name"] in scene_chars or c.get("always"))]
+    cast = cast if cast is not None else cast_list(ch)
+    lines, refs = _style_parts(ch, scene_chars, cast)
+    chars_desc = [f"{c['name']}: {c['description']}" for c in _in_scene(cast, scene_chars) if c.get("description")]
     parts = lines + ["SCENE: " + scene_prompt.strip()]
     if chars_desc:
         parts.append("CHARACTERS IN THIS IMAGE: " + " | ".join(chars_desc))
@@ -450,8 +501,10 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
 _MODERATION = ("safety", "moderation", "policy", "content_policy", "rejected", "not allowed", "violat")
 
 
-def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080, board_layout=False):
-    full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width, board_layout=board_layout)
+def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=1080, board_layout=False,
+                         cast=None):
+    full, refs = build_image_prompt(ch, prompt, scene_chars, vertical=height > width, board_layout=board_layout,
+                                    cast=cast)
     try:
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     except ai.AIError as e:
@@ -461,7 +514,8 @@ def generate_scene_image(ch, prompt, dest, scene_chars=None, width=1920, height=
                        "scene, meaning and composition (imply violence/danger instead of showing it; no gore, no "
                        "nudity, no real public figures). Output only the prompt.\n\n" + prompt,
                        model=ai.fast_model())
-        full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width, board_layout=board_layout)
+        full, refs = build_image_prompt(ch, safe, scene_chars, vertical=height > width, board_layout=board_layout,
+                                        cast=cast)
         blob = ai.generate_image(full, width=width, height=height, refs=refs)
     ai.fit_cover(blob, width, height, dest)
     return dest
@@ -1014,8 +1068,8 @@ def job_replan(job, pid):
 # ── Prompts d'images ────────────────────────────────────────────────────────
 
 def _prompt_batch(ch, pr, scenes, all_scenes):
-    chars = (ch.get("style") or {}).get("characters") or []
-    roster = "\n".join(f"- {c['name']}: {c.get('description', '')}" for c in chars) or "- (no recurring character)"
+    roster = "\n".join(f"- {c['name']}" + (f" (also called: {', '.join(c['aliases'])})" if c["aliases"] else "")
+                       + f": {c.get('description', '')}" for c in cast_list(ch, pr)) or "- (no recurring character)"
     heads = [h for h, _ in S.parse(pr.get("script") or "") if h]
     lines = []
     for sc in scenes:
@@ -1039,12 +1093,13 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
 VIDEO: {pr['title']}
 CHAPTERS: {' | '.join(heads) if heads else '-'}
 ART STYLE (added automatically, do not repeat it): {(ch.get('style') or {}).get('prompt', '')[:400]}
-RECURRING CHARACTERS (use their exact name when they appear; mention age/outfit/rank if the narration implies it):
+CAST OF THIS VIDEO (their look is locked by reference images — in the prompt, refer to them ONLY by their exact name, do not re-describe their face, hair or default outfit; only mention an outfit or age change when the narration implies it):
 {roster}
 
 RULES:
 {direction}- Show the exact moment/idea the narration describes, literally and concretely: subject + action + setting + key props. One clear focal point, readable in 1 second.
 - If the narration talks to "you"/"tu"/"vous" and a protagonist character exists, show that character doing it.
+- "chars" must list EVERY cast member visible in the image, by exact name (aliases → the cast name). Other people (crowds, waiters, strangers) are not cast: describe them briefly in the prompt instead.
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
 - For violence, death or danger: imply it (shadows, aftermath, expressions), never gore. No real celebrities.
@@ -1053,7 +1108,7 @@ RULES:
 SCENES:
 {chr(10).join(lines)}
 
-Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["names of recurring characters visible, or empty"]}}]}}"""
+Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["exact cast names visible, or empty"]}}]}}"""
     data = ai.chat_json(prompt, model=ai.fast_model(), timeout=240)
     out = {}
     for p in data.get("prompts") or []:
@@ -1092,6 +1147,132 @@ def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     store.update_project(pid, save)
 
 
+# ── Casting de la vidéo (persos consistants, façon TubeGen) ─────────────────
+
+MAX_CAST = 7
+
+
+def detect_cast(ch, pr):
+    """Lit le script → persos récurrents avec un look FIXE pour toute la vidéo."""
+    st = ch.get("style") or {}
+    known = "\n".join(f"- {c['name']}: {c.get('description', '')}" for c in st.get("characters") or []) or "- none"
+    script = S.narration(pr.get("script") or "")
+    prompt = f"""You are the character designer of a faceless 2D YouTube channel. Read this video script and define the CAST: the recurring or visually important characters who will appear in several illustrations (max {MAX_CAST}). Ignore one-off extras and crowds.
+
+VIDEO: {pr.get('title', '')}
+CHANNEL ART STYLE (every character must follow its character design rules): {(st.get('prompt') or '')[:700]}
+CHANNEL RECURRING CHARACTERS (already defined): 
+{known}
+
+For each cast member give:
+- "name": a short unique label used for every scene (e.g. "Her", "Her Father", "Grandma", "Min-jun"). ALWAYS include every channel character who appears in this video (e.g. the protagonist "You"), under their exact channel name, with a video-specific default outfit — so they get a locked look too.
+- "aliases": how the narration refers to them (e.g. ["your wife", "Ji-woo", "she"] — no pronouns alone).
+- "role": one line.
+- "description": a precise, FIXED visual description for the whole video, following the channel's character design (for white round-head stick figures: head is always the same, so identity = hairstyle and hair color, age cues, body type, and a signature default outfit with exact colors, plus 1 accessory). 30-60 words, English, no personality traits.
+
+Return JSON: {{"cast": [{{"name": "...", "aliases": ["..."], "role": "...", "description": "..."}}]}}
+
+SCRIPT:
+\"\"\"
+{script[:14000]}
+\"\"\"
+"""
+    data = ai.chat_json(prompt, model=ai.text_model(), timeout=240)
+    out, seen = [], set()
+    for c in data.get("cast") or []:
+        if not isinstance(c, dict) or not (c.get("name") or "").strip():
+            continue
+        key = _norm_name(c["name"])
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({"id": store.new_id("cst"), "name": c["name"].strip()[:40],
+                    "aliases": [str(a).strip()[:40] for a in (c.get("aliases") or []) if str(a).strip()][:6],
+                    "role": (c.get("role") or "").strip()[:120],
+                    "description": (c.get("description") or "").strip()[:600], "image": None})
+    return out[:MAX_CAST]
+
+
+def character_ref_image(ch, member):
+    """Image de référence d'un perso : en pied, de face, fond uni — dans le style de la chaîne."""
+    prompt = (f"Character reference image of \"{member['name']}\": {member.get('description', '')}. "
+              "Full body, standing, front view, neutral relaxed pose, arms along the body, calm expression, "
+              "centered, plain light grey background, nothing else in the image.")
+    st = ch.get("style") or {}
+    refs, lines = [], []
+    style_ref = channel_ref_path(ch, st.get("ref"))
+    if style_ref and os.path.isfile(style_ref):
+        refs.append(style_ref)
+        lines.append("Reference image 1 = ART STYLE reference: copy its rendering, line work, character design "
+                     "rules, colors and shading exactly. Ignore its content.")
+    full = "\n".join(lines + [prompt, "ART STYLE: " + (st.get("prompt") or ""),
+                              "Tall portrait frame. No text, no letters, no watermark."])
+    return ai.generate_image(full, width=1024, height=1536, refs=refs)
+
+
+def _save_cast_image(pid, cid, blob):
+    from PIL import Image
+    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    im.thumbnail((1024, 1536))
+    rel = f"cast/{cid}_{int(time.time() * 1000) % 10**9}.png"
+    path = os.path.join(store.project_dir(pid), rel)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    im.save(path, "PNG", optimize=True)
+    return rel
+
+
+def set_cast_image(pid, cid, rel):
+    old = []
+
+    def f(x):
+        for c in x.get("cast") or []:
+            if c["id"] == cid:
+                if c.get("image") and c["image"] != rel:
+                    old.append(c["image"])
+                c["image"] = rel
+    store.update_project(pid, f)
+    for r in old:
+        try:
+            os.remove(os.path.join(store.project_dir(pid), r))
+        except OSError:
+            pass
+
+
+def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
+    """Casting : détection des persos dans le script (si besoin) + une image de référence par perso."""
+    pr = store.get_project(pid)
+    ch = store.get_channel(pr["channel_id"])
+    if not (pr.get("script") or "").strip():
+        raise RuntimeError("Écris le script d'abord : les persos sont tirés du script.")
+    if redetect or pr.get("cast") is None:
+        job.update(p0, "Détection des personnages dans le script…")
+        found = detect_cast(ch, pr)
+        prev = {_norm_name(c["name"]): c for c in pr.get("cast") or []}
+        for c in found:  # garde les images déjà validées d'un perso du même nom
+            if _norm_name(c["name"]) in prev and prev[_norm_name(c["name"])].get("image"):
+                c["id"] = prev[_norm_name(c["name"])]["id"]
+                c["image"] = prev[_norm_name(c["name"])]["image"]
+        store.update_project(pid, lambda x: x.__setitem__("cast", found))
+        pr = store.get_project(pid)
+    todo = [c for c in pr.get("cast") or [] if (only and c["id"] in only) or (not only and not c.get("image"))]
+    if not todo:
+        job.update(p1, f"{len(pr.get('cast') or [])} personnage(s) prêts.")
+        return
+    done = 0
+    job.update(p0 + (p1 - p0) * 0.15, f"Images de référence des personnages 0/{len(todo)}…")
+    ex = ThreadPoolExecutor(max_workers=min(len(todo), _image_workers()))
+    try:
+        futs = {ex.submit(character_ref_image, ch, c): c for c in todo}
+        for fut in as_completed(futs):
+            c = futs[fut]
+            set_cast_image(pid, c["id"], _save_cast_image(pid, c["id"], fut.result()))
+            done += 1
+            job.update(p0 + (p1 - p0) * (0.15 + 0.85 * done / len(todo)),
+                       f"Images de référence des personnages {done}/{len(todo)}")
+    finally:
+        ex.shutdown(wait=False, cancel_futures=True)
+
+
 # ── Images ──────────────────────────────────────────────────────────────────
 
 def _image_workers():
@@ -1106,7 +1287,7 @@ def _gen_scene(ch, pr, sc):
     d = store.project_dir(pr["id"])
     rel = f"images/scene_{sc['i']:04d}_{int(time.time() * 1000) % 10**9}.jpg"
     generate_scene_image(ch, sc["prompt"], os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h,
-                         board_layout=uses_board(pr))
+                         board_layout=uses_board(pr), cast=cast_list(ch, pr))
     return rel
 
 
@@ -1116,7 +1297,10 @@ def job_images(job, pid, only=None, first_only=False):
     pr = store.get_project(pid)
     if not pr.get("scenes"):
         raise RuntimeError("Aucune scène : génère la voix off d'abord.")
-    ensure_prompts(job, pid, 0.01, 0.12)
+    pr = store.get_project(pid)
+    if pr.get("cast") is None and any(not (s.get("prompt") or "").strip() for s in pr["scenes"]):
+        job_cast(job, pid, p0=0.01, p1=0.06)  # persos consistants AVANT d'écrire les prompts
+    ensure_prompts(job, pid, 0.06, 0.12)
     pr = store.get_project(pid)
     ch = store.get_channel(pr["channel_id"])
     if only is not None:

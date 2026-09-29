@@ -80,6 +80,21 @@ FORMATS = {
 - Keep a steady rhythm: similar length per item, no filler, no repetition of sentence openers.
 - End on the strongest item or the modern consequence of the timeline.""",
     },
+    "pov_marry": {
+        "name": "POV: You Marry / Fall in Love With… (vie de couple)",
+        "desc": "« POV: You Marry a Russian Woman », « POV: You Fall in Love with a Female Yakuza » — une vie de couple racontée en « you », du coup de foudre à la fin (façon Oddly Specific Lives).",
+        "heading": "a short time-stamp or event label used for structure only, never spoken (e.g. \"4 months in\", \"The wedding\", \"Her mother visits\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it, and delay the label itself (e.g. don't say "Yakuza" before ~2 min).
+- "YOU": an unnamed ordinary Western guy in his 30s (decent job, average apartment, bad at dancing and languages, honest, out of his depth). Most jokes land on him. Give him 1-2 concrete facts early (age 38, a half-finished beer, nine words of Russian). He barely speaks.
+- "HER": competent and specific, never a prop; 2-3 defining behaviors in minute one; later ONE private vulnerability and ONE crisis where she carries you. She has a career and a life she left behind: she chose you, you did not rescue her.
+- HOOK (0:00-1:00, ~5%): place + day + one telling detail (NOT "you meet her at a coffee shop"), her in action, then compress time hard ("3 months later... A year in, you're married."), one dramatic-irony line ("What you don't realize yet is..."), and a first escalating scene with an exact number by 0:45. Danger premises open mid-action with cinematic sensory prose; comedy premises open with a quick meet-cute. End the hook on a deadpan button.
+- STRUCTURE (share of runtime): meet + time sprint (5%) → dramatic-irony thesis + first escalation (3%) → initiation set pieces, one per relative / custom / red flag (25%) → the big set piece at full volume: the wedding in family premises, the discovery in dark premises (20%) → sincere turn near 50% with ONE plain earnest line (or the midpoint twist in thrillers) → living it: move-in, an in-law visit, the first real fight, outside pressure (25%) → her vulnerability or a crisis where she carries you (12%) → reflection + a quiet final two-person scene (12%).
+- VARIANTS: "Fall in Love with..." stops at commitment (no wedding). Family comedies end on the wedding night or run 2-5 years. "Marry a [criminal/dangerous woman]" marries at ~0:20 and then follows a thriller track (paranoia → proof → ally → twist at ~46% → resolution), dry wit early, no jokes after the midpoint, eerie last line.
+- SET PIECE PATTERN: headline sentence ("Then the shoes disappear.") → escalating specifics with exact numbers (47 people, 17 toasts, 300%) → your failed attempt → deadpan button of five words or fewer ("You deploy all nine.") → a small acceptance token ("hermano", "He tries hard. That's enough.").
+- Change life stages with time stamps inside the narration, not headings: "4 months in." "Day 12." "Year two is different." "You're 5 years in now."
+- CALLBACKS: plant three motifs in the first 20% (a relative, a ritual, an object) and pay each one off; return to the opening image in the final 40 seconds.
+- ENDING: a small domestic scene (couch, window, balcony, the Sunday call), one reframing thesis ("You didn't marry an idea."), then 2-4 short sentences. Never summarize the video.""",
+    },
     "business_explained": {
         "name": "How X Actually Makes Money (business expliqué)",
         "desc": "« How Pawn Shops Actually Make Money », « The Economics of Money Laundering » — le vrai modèle économique caché d'un business (façon Marcus Explains).",
@@ -129,7 +144,10 @@ BANNED = {
            "smash that like button", "without further ado", "fascinating", "realm", "intricate",
            "welcome back", "deep dive", "let's break it down", "here's the kicker", "plot twist", "fast forward",
            "little did they know", "studies show", "experts say", "let that sink in", "mind-blowing",
-           "at the end of the day", "navigate the complexities", "landscape", "grab your popcorn"],
+           "at the end of the day", "navigate the complexities", "landscape", "grab your popcorn",
+           "little did you know", "whirlwind romance", "two worlds collide", "clash of cultures",
+           "love knows no borders", "vibrant culture", "your heart skips a beat", "and the rest is history",
+           "happily ever after", "wouldn't have it any other way", "wouldn't change a single thing"],
     "fr": ["plongeons", "plongez", "dans cette vidéo", "accrochez-vous", "sans plus attendre",
            "il est important de noter", "en conclusion", "incontournable", "fascinant", "un véritable voyage",
            "au cœur de", "n'hésitez pas", "que vous soyez", "imaginez un monde où", "la réponse va vous surprendre",

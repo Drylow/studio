@@ -255,3 +255,10 @@ details.adv > summary { cursor: pointer; color: var(--s-muted); font-weight: 700
 .rigrow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
 .rigrow img { width: 100%; aspect-ratio: 2/3; object-fit: contain; border-radius: 8px; border: 1px solid var(--s-line);
   background: repeating-conic-gradient(#2a3140 0% 25%, #1c222e 0% 50%) 50% / 12px 12px; }
+
+.castpanel { margin-bottom: 16px; }
+.castgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.castc { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 10px; border: 1px solid var(--s-line); border-radius: 12px; background: var(--s-bg2); }
+.castimg img, .castimg .refbox { width: 96px; aspect-ratio: 2/3; object-fit: cover; border-radius: 9px; border: 1px solid var(--s-line); cursor: zoom-in; }
+.castc textarea { font-size: 12px; }
+.scard .chars { font-size: 11px; color: var(--s-cyan); cursor: pointer; }

@@ -58,7 +58,7 @@ function busy(btn, on, label) {
 // ── État ────────────────────────────────────────────────────────────────────
 const S = {cfg: null, channels: [], project: null, step: 'script', pollT: null, listT: null, editing: new Set()};
 const STEPS = [['script', 'Script'], ['voice', 'Voix off'], ['storyboard', 'Storyboard'], ['export', 'Montage & export']];
-const JOB_LABEL = {script: 'Écriture du script', rewrite: 'Réécriture', voice: 'Voix off', replan: 'Scènes', images: 'Images',
+const JOB_LABEL = {script: 'Écriture du script', rewrite: 'Réécriture', voice: 'Voix off', replan: 'Scènes', cast: 'Personnages', images: 'Images',
   regen: 'Image', render: 'Montage MP4', pack: 'Pack montage', metadata: 'Métadonnées', autopilot: 'Autopilot', thumbnails: 'Miniatures'};
 
 async function loadConfig() {
@@ -292,7 +292,7 @@ function liveUpdate() {
   if (S.step === 'script' && p.job && ['script', 'rewrite', 'autopilot'].includes(p.job.kind)) {
     const ta = $('#scriptEd'); if (ta && p.script_draft) { ta.value = p.script_draft; ta.scrollTop = ta.scrollHeight; }
   }
-  if (S.step === 'storyboard') renderScenes();
+  if (S.step === 'storyboard') { renderCast(); renderScenes(); }
 }
 async function action(name, body = {}) {
   const p = S.project;
@@ -461,7 +461,7 @@ function stepVoice() {
 function stepStoryboard() {
   const p = S.project, m = p.montage || {};
   const nImg = p.scenes.filter(s => s.image).length, nErr = p.scenes.filter(s => s.status === 'error').length;
-  $('#stepBody').innerHTML = !p.voice ? `<div class="empty"><h2>Génère d'abord la voix off</h2><p>Les scènes sont découpées sur la voix : chaque image tombe pile sur sa phrase.</p>
+  $('#stepBody').innerHTML = `<div id="castPanel"></div>` + (!p.voice ? `<div class="empty"><h2>Génère d'abord la voix off</h2><p>Les scènes sont découpées sur la voix : chaque image tombe pile sur sa phrase.</p>
       <button class="btn primary" onclick="S.step='voice';renderProject()">Aller à la voix off</button></div>` : `
     <div class="toolbar">
       <div class="row"><span class="small muted">Rythme</span>
@@ -475,7 +475,8 @@ function stepStoryboard() {
       <button class="btn primary" id="genAll" ${nImg === p.scenes.length ? 'disabled' : ''}>🎨 Générer ${nImg ? 'les images manquantes' : 'toutes les images'}</button>
     </div>
     <div class="sgrid" id="sgrid"></div>
-    ${nImg === p.scenes.length && p.scenes.length ? `<div class="savebar"><span class="muted small" style="margin-right:auto;align-self:center">Toutes les images sont prêtes.</span><button class="btn primary big" onclick="S.step='export';renderProject()">Suivant : montage →</button></div>` : ''}`;
+    ${nImg === p.scenes.length && p.scenes.length ? `<div class="savebar"><span class="muted small" style="margin-right:auto;align-self:center">Toutes les images sont prêtes.</span><button class="btn primary big" onclick="S.step='export';renderProject()">Suivant : montage →</button></div>` : ''}`);
+  renderCast(true);
   if (!p.voice) return;
   renderScenes(true);
   const dis = jobRunning();
@@ -491,7 +492,74 @@ function stepStoryboard() {
   if ($('#retryErr')) $('#retryErr').onclick = () => action('images', {only: p.scenes.filter(s => s.status === 'error').map(s => s.i)});
   $('#genAll').onclick = () => action('images', {});
 }
-const cardSig = s => JSON.stringify([s.image, s.status, s.prompt, s.start, s.end, s.error, s.motion || '']);
+// ── Personnages de la vidéo (casting consistant, façon TubeGen) ─────────────
+const castSig = p => JSON.stringify([p.cast, (p.job || {}).status === 'running' && (p.job || {}).kind]);
+function castCard(p, c) {
+  const busy = jobRunning() && ['cast', 'images', 'autopilot'].includes(p.job.kind) && !c.image;
+  return `<div class="castc" data-cid="${c.id}">
+    <div class="castimg">${c.image ? `<img src="${fileUrl(p.id, c.image)}" data-cview="${c.id}">` : `<div class="refbox">${busy ? '<span class="spin"></span>' : 'Pas d\'image'}</div>`}</div>
+    <div class="stack" style="gap:6px;min-width:0">
+      <input type="text" data-cf="name" value="${esc(c.name)}" placeholder="Nom (ex : Her, Her Father)">
+      <input type="text" data-cf="aliases" value="${esc((c.aliases || []).join(', '))}" placeholder="Appelé aussi… (your wife, Ji-woo)">
+      <textarea rows="3" data-cf="description" placeholder="Look fixe : cheveux, tenue et couleurs, âge, accessoire">${esc(c.description || '')}</textarea>
+      <div class="row" style="gap:6px"><button class="btn xs" data-cregen="${c.id}" title="Régénérer l'image de référence depuis la description">↻ Image</button>
+        <label class="btn xs">⬆ Importer<input type="file" accept="image/*" data-cup="${c.id}" hidden></label>
+        <button class="btn xs danger" data-cdel="${c.id}">✕</button></div></div></div>`;
+}
+function renderCast(force) {
+  const p = S.project, box = $('#castPanel');
+  if (!box) return;
+  const sig = castSig(p);
+  if (!force && box.dataset.sig === sig) return;
+  if (!force && box.contains(document.activeElement)) return;  // pas d'écrasement pendant la saisie
+  box.dataset.sig = sig;
+  const cast = p.cast || [];
+  const own = new Set(cast.map(c => c.name.trim().toLowerCase()));
+  const chan = (p.channel_cast || []).filter(c => !own.has(c.name.trim().toLowerCase()));
+  const dis = jobRunning() ? 'disabled' : '';
+  box.innerHTML = `<div class="card castpanel"><div class="row" style="margin-bottom:10px">
+      <h3 style="margin:0">👥 Personnages de la vidéo</h3>
+      <span class="hint">Chaque perso a une image de référence envoyée à chaque scène où il apparaît : même look du début à la fin.</span>
+      <div class="grow"></div>
+      <button class="btn sm" id="castDetect" ${dis} ${(p.script || '').trim() ? '' : 'disabled'}>🔍 ${p.cast ? 'Re-détecter' : 'Détecter'} depuis le script</button>
+      ${cast.some(c => !c.image) ? `<button class="btn sm" id="castGen" ${dis}>✨ Images manquantes</button>` : ''}
+      <button class="btn sm" id="castAdd">＋ Ajouter</button></div>
+    ${chan.length ? `<div class="row small muted" style="margin-bottom:8px;gap:8px">Persos de la chaîne : ${chan.map(c => `<span class="pill" title="${esc(c.description)}">${c.image ? `<img src="${chFileUrl(p.channel_id, c.image)}" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:4px">` : ''}${esc(c.name)}</span>`).join('')}</div>` : ''}
+    ${p.cast == null ? '<div class="hint">Pas encore de casting : il sera détecté automatiquement au lancement des images (ou clique « Détecter »).</div>'
+      : `<div class="castgrid">${cast.map(c => castCard(p, c)).join('') || '<div class="hint">Aucun personnage : les scènes n\'auront que les persos de la chaîne.</div>'}</div>`}</div>`;
+  const collect = () => $$('.castc', box).map(el => {
+    const c = (p.cast || []).find(x => x.id === el.dataset.cid) || {id: el.dataset.cid};
+    return {id: c.id, role: c.role || '', name: $('[data-cf=name]', el).value, description: $('[data-cf=description]', el).value,
+      aliases: $('[data-cf=aliases]', el).value.split(',').map(x => x.trim()).filter(Boolean)};
+  });
+  const saveCast = async list => { const r = await savePatch({cast: list}); if (r) renderCast(true); };
+  const autosave = debounce(() => savePatch({cast: collect()}), 900);
+  box.oninput = e => { if (e.target.dataset.cf) autosave(); };
+  if ($('#castDetect', box)) $('#castDetect', box).onclick = () => {
+    if (!p.cast || !p.cast.length || confirm('Re-détecter les persos depuis le script ? (les images des persos au même nom sont gardées)')) action('cast', {redetect: true});
+  };
+  if ($('#castGen', box)) $('#castGen', box).onclick = () => action('cast', {});
+  $('#castAdd', box).onclick = () => saveCast([...collect(), {id: null, name: 'Nouveau perso', aliases: [], description: ''}]);
+  box.onclick = async e => {
+    const t = e.target;
+    if (t.dataset.cregen) { await savePatch({cast: collect()}); action('cast', {only: [t.dataset.cregen]}); }
+    if (t.dataset.cdel && confirm('Retirer ce personnage de la vidéo ?')) saveCast(collect().filter(c => c.id !== t.dataset.cdel));
+    if (t.dataset.cview) window.open(t.src, '_blank');
+  };
+  box.onchange = async e => {
+    const t = e.target; if (!t.dataset.cup) return;
+    await savePatch({cast: collect()});
+    const fd = new FormData(); fd.append('file', t.files[0]);
+    const r = await guard(() => api('POST', `/projects/${p.id}/cast/${t.dataset.cup}/upload`, fd), 'Image du perso importée');
+    if (r) { const job = S.project.job; S.project = r; S.project.job = job; renderCast(true); }
+  };
+}
+function castNames(p) {
+  const names = (p.cast || []).map(c => c.name);
+  for (const c of p.channel_cast || []) if (!names.some(n => n.toLowerCase() === c.name.toLowerCase())) names.push(c.name);
+  return names;
+}
+const cardSig = s => JSON.stringify([s.image, s.status, s.prompt, s.start, s.end, s.error, s.motion || '', s.chars || []]);
 function sceneCard(p, s) {
   const state = s.status === 'queued' || s.status === 'running' ? '<div class="state"><span class="spin"></span>génération…</div>'
     : s.status === 'error' ? '<div class="state" style="color:var(--s-err)">⚠ échec</div>' : (!s.image ? '<div class="state">en attente</div>' : '');
@@ -500,6 +568,7 @@ function sceneCard(p, s) {
       <span class="num">#${s.i + 1}</span><span class="tm">${fmtTs(s.start)} · ${(s.end - s.start).toFixed(1)}s</span></div>
     <div class="body"><div class="txt">« ${esc(s.text)} »</div>
       <div class="prompt" data-edit="${s.i}" title="Cliquer pour éditer le prompt">🎨 ${esc(s.prompt || 'prompt généré automatiquement')}</div>
+      ${(s.chars || []).length ? `<div class="chars" data-edit="${s.i}" title="Persos de la scène (cliquer pour modifier)">👥 ${s.chars.map(esc).join(' · ')}</div>` : ''}
       ${s.error ? `<div class="errtxt">${esc(s.error)}</div>` : ''}
       <div class="acts"><button class="btn xs" data-regen="${s.i}">↻ Refaire</button><button class="btn xs" data-edit="${s.i}">✎ Prompt</button>
         <label class="btn xs">⬆ Mon image<input type="file" accept="image/*" data-up="${s.i}" hidden></label>
@@ -551,13 +620,17 @@ function editPrompt(i) {
   S.editing.add(i);
   const box = document.createElement('div');
   box.className = 'stack';
-  box.innerHTML = `<textarea>${esc(s.prompt || '')}</textarea><div class="row"><button class="btn xs primary">Régénérer avec ce prompt</button><button class="btn xs">Enregistrer</button><button class="btn xs ghost">Annuler</button></div>`;
+  const names = castNames(S.project), cur = new Set((s.chars || []).map(x => x.toLowerCase()));
+  box.innerHTML = `<textarea>${esc(s.prompt || '')}</textarea>
+    ${names.length ? `<div class="row small" style="gap:8px;flex-wrap:wrap">👥 ${names.map(n => `<label class="check small"><input type="checkbox" data-char="${esc(n)}" ${cur.has(n.toLowerCase()) ? 'checked' : ''}> ${esc(n)}</label>`).join('')}</div>` : ''}
+    <div class="row"><button class="btn xs primary">Régénérer</button><button class="btn xs">Enregistrer</button><button class="btn xs ghost">Annuler</button></div>`;
   card.insertBefore(box, card.querySelector('.acts'));
-  const [bGen, bSave, bCancel] = $$('button', box);
+  const [bGen, bSave, bCancel] = $$('.row button', box);
+  const chars = () => $$('[data-char]', box).filter(x => x.checked).map(x => x.dataset.char);
   const done = () => { S.editing.delete(i); const el = $(`.scard[data-i="${i}"]`); if (el) el.outerHTML = sceneCard(S.project, S.project.scenes.find(x => x.i === i)); };
   bCancel.onclick = done;
-  bSave.onclick = async () => { await savePatch({scenes: [{i, prompt: $('textarea', box).value}]}); done(); };
-  bGen.onclick = async () => { S.editing.delete(i); await action('regen', {i, prompt: $('textarea', box).value}); };
+  bSave.onclick = async () => { await savePatch({scenes: [{i, prompt: $('textarea', box).value, chars: chars()}]}); done(); };
+  bGen.onclick = async () => { S.editing.delete(i); await savePatch({scenes: [{i, chars: chars()}]}); await action('regen', {i, prompt: $('textarea', box).value}); };
 }
 
 // Visionneuse plein écran (flèches ← →)

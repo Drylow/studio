@@ -22,7 +22,8 @@
 
   GET/POST          /api/pov/projects
   GET/PUT/DELETE    /api/pov/projects/<id>
-  POST   /api/pov/projects/<id>/<action>          script | rewrite | voice | replan | images |
+  POST   /api/pov/projects/<id>/cast/<cid>/upload  multipart file (image d'un perso de la vidéo)
+  POST   /api/pov/projects/<id>/<action>          script | rewrite | voice | replan | cast | images |
                                                  regen | render | pack | metadata | autopilot | cancel
   POST   /api/pov/projects/<id>/scenes/<i>/upload  multipart file
   GET    /api/pov/projects/<id>/files/<path>
@@ -420,6 +421,9 @@ def _full(pr):
     out["stage"] = E.stage(pr)
     out["voice_outdated"] = bool(pr.get("voice")) and E.voice_outdated(pr)
     out["words_count"] = S.word_count(S.narration(pr.get("script") or ""))
+    ch = store.get_channel(pr.get("channel_id")) or {}
+    out["channel_cast"] = [{"name": c["name"], "description": c.get("description", ""), "image": c.get("image")}
+                           for c in (ch.get("style") or {}).get("characters") or []]
     return out
 
 
@@ -452,6 +456,7 @@ def project(pid):
         return jsonify({"ok": True})
     if request.method == "PUT":
         b = _body()
+        removed = []
 
         def upd(x):
             if "script" in b and b["script"] != x.get("script"):
@@ -463,7 +468,7 @@ def project(pid):
                 x["voice_settings"] = E._merge(x.get("voice_settings") or E.DEFAULT_VOICE, b["voice_settings"])
             if isinstance(b.get("montage"), dict):
                 x["montage"] = E._merge(x.get("montage") or E.DEFAULT_MONTAGE, b["montage"])
-            if isinstance(b.get("scenes"), list):  # prompt / mouvement édités à la main
+            if isinstance(b.get("scenes"), list):  # prompt / mouvement / persos édités à la main
                 by_i = {s["i"]: s for s in x.get("scenes") or []}
                 for s in b["scenes"]:
                     t = by_i.get(s.get("i"))
@@ -471,6 +476,21 @@ def project(pid):
                         for k in ("prompt", "motion"):
                             if k in s:
                                 t[k] = s[k]
+                        if isinstance(s.get("chars"), list):
+                            t["chars"] = [str(c)[:40] for c in s["chars"]][:8]
+            if isinstance(b.get("cast"), list):  # casting édité (noms, alias, descriptions, ajouts, retraits)
+                old = {c["id"]: c for c in x.get("cast") or []}
+                new = []
+                for c in b["cast"][:12]:
+                    base = old.get(c.get("id")) or {"id": store.new_id("cst"), "image": None}
+                    base.update({"name": (c.get("name") or "").strip()[:40] or "Perso",
+                                 "aliases": [str(a).strip()[:40] for a in (c.get("aliases") or []) if str(a).strip()][:6],
+                                 "role": (c.get("role") or "").strip()[:120],
+                                 "description": (c.get("description") or "").strip()[:600]})
+                    new.append(base)
+                keep = {c["id"] for c in new}
+                removed.extend(c.get("image") for c in old.values() if c["id"] not in keep and c.get("image"))
+                x["cast"] = new
             if "restore" in b:
                 hist = x.get("script_history") or []
                 i = int(b["restore"])
@@ -479,6 +499,11 @@ def project(pid):
                     E.push_history(x, "avant restauration")
                     x["script"] = snap
         pr = store.update_project(pid, upd)
+        for rel in removed:  # images des persos retirés
+            try:
+                os.remove(os.path.join(store.project_dir(pid), rel))
+            except OSError:
+                pass
     return jsonify(_full(pr))
 
 
@@ -487,6 +512,7 @@ _ACTIONS = {
     "rewrite": lambda pid, b: (lambda j: E.job_rewrite(j, pid, (b.get("instruction") or "").strip())),
     "voice": lambda pid, b: (lambda j: E.job_voice(j, pid)),
     "replan": lambda pid, b: (lambda j: E.job_replan(j, pid)),
+    "cast": lambda pid, b: (lambda j: E.job_cast(j, pid, redetect=bool(b.get("redetect")), only=b.get("only"))),
     "images": lambda pid, b: (lambda j: E.job_images(j, pid, only=b.get("only"),
                                                       first_only=bool(b.get("first_only")))),
     "regen": lambda pid, b: (lambda j: E.job_regen(j, pid, int(b.get("i", -1)), b.get("prompt"))),
@@ -512,7 +538,7 @@ def project_action(pid, action):
     b = _body()
     if action == "rewrite" and not (b.get("instruction") or "").strip():
         return _err("Consigne vide.")
-    if action in ("script", "rewrite", "images", "regen", "autopilot", "metadata", "thumbnails") \
+    if action in ("script", "rewrite", "cast", "images", "regen", "autopilot", "metadata", "thumbnails") \
             and not ai.configured():
         return _err("Proxy IA non configuré (AI_BASE_URL / AI_API_KEY dans le .env).", 503)
     if action in ("voice", "render", "pack", "autopilot") and not media.available():
@@ -522,6 +548,24 @@ def project_action(pid, action):
     except RuntimeError as e:
         return _err(e, 409)
     return jsonify({"job": job.as_dict()})
+
+
+@pov_bp.route("/api/pov/projects/<pid>/cast/<cid>/upload", methods=["POST"])
+def cast_upload(pid, cid):
+    """Image d'un perso de la vidéo importée à la main (remplace la référence générée)."""
+    pr = store.get_project(pid)
+    if not pr:
+        return _err("Projet introuvable.", 404)
+    if not any(c["id"] == cid for c in pr.get("cast") or []):
+        return _err("Personnage introuvable.", 404)
+    try:
+        blob = _upload_bytes()
+        if not blob:
+            return _err("Aucun fichier.")
+        E.set_cast_image(pid, cid, E._save_cast_image(pid, cid, blob))
+    except Exception as e:  # noqa: BLE001
+        return _err(e)
+    return jsonify(_full(store.get_project(pid)))
 
 
 @pov_bp.route("/api/pov/projects/<pid>/scenes/<int:i>/upload", methods=["POST"])

@@ -213,15 +213,22 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
             raise err
         return text
 
+    use_fb = bool(fb) and fb != body["model"]
+    first = 1 if use_fb else tries  # proxy saturé : 1 tentative sur le modèle principal, puis secours
     try:
-        return _with_retries(once, tries=tries)
+        return _with_retries(once, tries=first)
     except AIError as e:
-        if getattr(e, "status", None) != 4290 or not fb or body["model"] == fb:
-            raise
-        _log("/chat/completions", f"quota {body['model']} épuisé → secours {fb}", time.time())
-        body["model"] = fb
-        body.pop("reasoning_effort", None)
-        return _with_retries(once, tries=tries)
+        st = getattr(e, "status", None)
+        if use_fb and st in (4290, 429):
+            _log("/chat/completions", f"{body['model']} indisponible ({st}) → secours {fb}", time.time())
+            if st == 429:  # 5 min sans insister sur le modèle saturé
+                _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + 300)
+            body["model"] = fb
+            body.pop("reasoning_effort", None)
+            return _with_retries(once, tries=tries)
+        if first < tries and st in _TRANSIENT:
+            return _with_retries(once, tries=tries - first)
+        raise
 
 
 def extract_json(text):

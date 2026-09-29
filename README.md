@@ -55,13 +55,22 @@ mot de passe boss.
    - Fournisseurs : Edge TTS (gratuit), ElevenLabs ou OpenAI TTS (avec clé).
    - Timings mot à mot et raccourcissement des silences.
    - Le débit réel de la voix est mesuré pour mieux viser la durée la fois suivante.
-4. **Storyboard.**
+4. **Personnages de la vidéo** (persos consistants, façon TubeGen).
+   - L'IA lit le script et fixe le casting : toi, elle, son père, sa grand-mère…
+   - Chaque perso reçoit un look fixe (cheveux, tenue, couleurs, âge) et une image de référence
+     dans le style de la chaîne.
+   - À chaque scène, les images des persos présents sont envoyées au générateur. Ils gardent donc
+     le même look du début à la fin.
+   - Dans le storyboard, tu peux modifier la fiche d'un perso, régénérer ou importer son image,
+     en ajouter ou en retirer, et cocher les persos présents dans chaque scène.
+   - Tout se fait automatiquement au lancement des images si tu n'y touches pas.
+5. **Storyboard.**
    - Scènes découpées sur les fins de phrases, avec un rythme réglable et un hook plus rapide.
    - Prompts écrits par un « directeur artistique » IA.
    - Images générées en parallèle, avec l'image de style et la fiche perso en référence.
    - Bouton « Tester le style » pour valider une première image avant tout le lot.
    - Par scène : refaire, éditer le prompt, importer ta propre image, choisir le mouvement de caméra.
-5. **Export.**
+6. **Export.**
    - **MP4 monté** : zoom/pan, fondus, sous-titres karaoké ou phrases, titres de section,
      musique baissée automatiquement sous la voix, volume normalisé à -14 LUFS.
    - **Pack montage** : ZIP avec un clip par image dont la durée est exactement celle de sa
