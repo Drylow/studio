@@ -52,7 +52,11 @@ mot de passe boss.
    puis ajustement de la longueur à la durée cible. Tu peux éditer le script, le faire
    réécrire avec une consigne, ou restaurer une ancienne version depuis l'historique.
 3. **Voix off.**
-   - Fournisseurs : Edge TTS (gratuit), ElevenLabs ou OpenAI TTS (avec clé).
+   - Fournisseurs : **Algrow** (voix ElevenLabs ou modèle Stealth, `ALGROW_API_KEY`), Edge TTS (gratuit),
+     ElevenLabs ou OpenAI TTS (avec clé).
+   - Algrow : les crédits restants s'affichent et « Écouter » joue l'extrait officiel de la voix, sans
+     rien consommer. Les timings viennent du SRT d'alignement (ElevenLabs). Pour Stealth, ils sont
+     estimés puis recalés sur les pauses de la voix.
    - Timings mot à mot et raccourcissement des silences.
    - Le débit réel de la voix est mesuré pour mieux viser la durée la fois suivante.
 4. **Personnages de la vidéo** (persos consistants, façon TubeGen).
@@ -73,6 +77,10 @@ mot de passe boss.
 6. **Export.**
    - **MP4 monté** : zoom/pan, fondus, sous-titres karaoké ou phrases, titres de section,
      musique baissée automatiquement sous la voix, volume normalisé à -14 LUFS.
+   - **Musique « auto »** : une piste de la bibliothèque par vidéo, très basse, baissée encore sous la
+     voix. Si la bibliothèque est vide, 3 ambiances lofi 100 % originales sont générées (aucun
+     risque de réclamation Content ID). Tu peux y ajouter des morceaux de la bibliothèque audio de
+     YouTube Studio.
    - **Pack montage** : ZIP avec un clip par image dont la durée est exactement celle de sa
      phrase, plus la voix, le `.srt` et les timestamps. On glisse le tout dans CapCut ou Premiere
      et c'est calé.

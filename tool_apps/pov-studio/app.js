@@ -380,7 +380,10 @@ function voiceForm(v, lang, onChange) {
     <label class="f"><span class="lbl">Fournisseur</span><div class="seg" data-k="provider">
       <button data-v="edge">Edge (gratuit)</button>
       <button data-v="elevenlabs" ${st.elevenlabs ? '' : 'disabled title="ELEVENLABS_API_KEY absente du .env"'}>ElevenLabs</button>
-      <button data-v="openai" ${st.openai ? '' : 'disabled title="OPENAI_TTS_KEY absente du .env"'}>OpenAI</button></div></label>
+      <button data-v="openai" ${st.openai ? '' : 'disabled title="OPENAI_TTS_KEY absente du .env"'}>OpenAI</button>
+      <button data-v="algrow" ${st.algrow ? '' : 'disabled title="ALGROW_API_KEY absente du .env"'}>Algrow · ElevenLabs</button>
+      <button data-v="algrow_stealth" ${st.algrow_stealth ? '' : 'disabled title="ALGROW_API_KEY absente du .env"'}>Algrow · Stealth</button></div></label>
+    <div class="hint hidden" data-el="credits"></div>
     <label class="f"><span class="lbl">Voix <a href="#" class="small" data-act="all">toutes les langues</a></span><select data-k="voice"></select>
       <input type="text" data-k="voice_custom" placeholder="ID de voix ElevenLabs" class="hidden"></label>
     <label class="f"><span class="lbl">Vitesse <b data-out="speed"></b></span><input type="range" min="0.8" max="1.3" step="0.02" data-k="speed"></label>
@@ -395,10 +398,14 @@ function voiceForm(v, lang, onChange) {
     if (v.provider === 'elevenlabs') { sel.classList.add('hidden'); custom.classList.remove('hidden'); custom.value = v.voice || ''; return; }
     sel.classList.remove('hidden'); custom.classList.add('hidden');
     sel.innerHTML = '<option>Chargement…</option>';
-    const r = await guard(() => api('GET', `/voices?provider=${v.provider}&lang=${allLangs ? '' : lang}`));
+    const algrow = v.provider.startsWith('algrow');
+    const cr = q('[data-el=credits]'); cr.classList.toggle('hidden', !algrow);
+    if (algrow) api('GET', '/algrow/credits').then(c => { cr.textContent = `Crédits Algrow : ${Number(c.elevenlabs || 0).toLocaleString('fr-FR')} caractères ElevenLabs · ${Number(c.stealth || 0).toLocaleString('fr-FR')} Stealth. « Écouter » joue l'extrait officiel de la voix (gratuit).`; }).catch(() => {});
+    const r = await guard(() => api('GET', `/voices?provider=${v.provider}&lang=${allLangs ? '' : lang}&current=${encodeURIComponent(v.voice || '')}`));
     const list = r ? r.voices : [];
+    S.voiceList = list;
     const featured = new Set((S.cfg.edge_featured || {})[lang] || []);
-    const opts = list.map(x => `<option value="${esc(x.id)}">${featured.has(x.id) ? '★ ' : ''}${esc(x.id)}${x.gender ? ' · ' + x.gender : ''}</option>`);
+    const opts = list.map(x => `<option value="${esc(x.id)}">${featured.has(x.id) ? '★ ' : ''}${esc(algrow ? (x.name || x.id) : x.id)}${x.gender ? ' · ' + x.gender : ''}${x.accent ? ' · ' + x.accent : ''}</option>`);
     if (v.voice && !list.some(x => x.id === v.voice)) opts.unshift(`<option value="${esc(v.voice)}">${esc(v.voice)} (choisie)</option>`);
     sel.innerHTML = opts.join('');
     if (v.voice) sel.value = v.voice;
@@ -415,6 +422,11 @@ function voiceForm(v, lang, onChange) {
   q('[data-k=instructions]').onchange = e => { v.instructions = e.target.value; onChange(v); };
   q('[data-act=all]').onclick = e => { e.preventDefault(); allLangs = !allLangs; e.target.textContent = allLangs ? 'langue de la chaîne' : 'toutes les langues'; loadVoices(); };
   q('[data-act=preview]').onclick = async e => {
+    if (v.provider.startsWith('algrow')) {  // extrait officiel : ne consomme aucun crédit
+      const x = (S.voiceList || []).find(y => y.id === v.voice);
+      if (!x || !x.preview_url) return toast('Pas d\'extrait disponible pour cette voix.', 'err');
+      const a = q('[data-el=audio]'); a.src = x.preview_url; a.classList.remove('hidden'); a.play(); return;
+    }
     busy(e.target, true, '');
     const sample = lang === 'fr' ? 'Niveau un. Tu as dix-huit ans, et personne ne t\'a prévenu de ce qui t\'attend.' : 'Level one. You are eighteen years old, and nobody warned you about what comes next.';
     const blob = await guard(() => api('POST', '/voices/preview', {...v, text: sample}));
@@ -691,10 +703,10 @@ function montageForm(m, onChange, opts = {}) {
     <div class="preview-cap" data-el="capprev"></div>
     <h3 style="margin-top:6px">Musique de fond</h3>
     <div class="grid2">
-      <label class="f"><span class="lbl">Piste (baissée automatiquement sous la voix)</span><select data-k="music"><option value="">— Aucune —</option>${music.map(x => `<option ${x === m.music ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></label>
+      <label class="f"><span class="lbl">Piste (baissée automatiquement sous la voix)</span><select data-k="music"><option value="">— Aucune —</option><option value="auto" ${m.music === 'auto' ? 'selected' : ''}>🎲 Auto : une musique de la bibliothèque par vidéo</option>${music.map(x => `<option ${x === m.music ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></label>
       <label class="f"><span class="lbl">Volume <b data-out="mv"></b></span><input type="range" min="0.03" max="0.4" step="0.01" data-k="music_volume"></label>
     </div>
-    <div class="row"><label class="btn sm">⬆ Ajouter une musique<input type="file" accept="audio/*" data-el="mup" hidden></label><span class="hint">Les fichiers vont dans data/pov/music/ (tu peux aussi les copier à la main).</span></div>
+    <div class="row"><label class="btn sm">⬆ Ajouter une musique<input type="file" accept="audio/*" data-el="mup" hidden></label><span class="hint">Mets-y des morceaux sans droits (bibliothèque audio de YouTube Studio = zéro réclamation). Si la bibliothèque est vide, 3 ambiances lofi 100 % originales sont générées automatiquement.</span></div>
     <details class="adv"><summary>Avancé</summary><div class="grid3" style="margin-top:8px">
       <label class="f"><span class="lbl">Images/s</span><select data-k="fps"><option>24</option><option>25</option><option>30</option><option>60</option></select></label>
       <label class="f"><span class="lbl">Qualité</span><select data-k="quality"><option value="fast">Rapide</option><option value="high">Haute</option></select></label>
@@ -735,7 +747,7 @@ function montageForm(m, onChange, opts = {}) {
   $('[data-el=mup]', box).onchange = async e => {
     const fd = new FormData(); fd.append('file', e.target.files[0]);
     const r = await guard(() => api('POST', '/music', fd), 'Musique ajoutée');
-    if (r) { const sel = $('[data-k=music]', box); sel.innerHTML = '<option value="">— Aucune —</option>' + r.music.map(x => `<option>${esc(x)}</option>`).join(''); sel.value = e.target.files[0].name; m.music = sel.value; fire(); }
+    if (r) { const sel = $('[data-k=music]', box); sel.innerHTML = '<option value="">— Aucune —</option><option value="auto">🎲 Auto : une musique de la bibliothèque par vidéo</option>' + r.music.map(x => `<option>${esc(x)}</option>`).join(''); sel.value = e.target.files[0].name; m.music = sel.value; fire(); }
   };
   return box;
 }

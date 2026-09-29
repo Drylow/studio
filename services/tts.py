@@ -4,6 +4,10 @@
   elevenlabs  ELEVENLABS_API_KEY — endpoint /with-timestamps (alignement caractère)
   openai      OPENAI_TTS_KEY (+ OPENAI_TTS_BASE optionnel) — pas de timings :
               estimation proportionnelle aux caractères, phrase par phrase
+  algrow      ALGROW_API_KEY — voix ElevenLabs via Algrow (job asynchrone) ; timings mot à mot
+              tirés du SRT d'alignement (generate_srt, +20 % de caractères)
+  algrow_stealth  ALGROW_API_KEY — modèle « Stealth » d'Algrow (autre réserve de caractères) ;
+              timings estimés puis recalés sur les silences de la voix
 
 synthesize() renvoie {"path", "duration", "words": [{"w","s","e"}]}.
 """
@@ -15,6 +19,7 @@ import re
 import ssl
 import tempfile
 import urllib.error
+import urllib.parse
 import urllib.request
 
 from services import media
@@ -24,7 +29,7 @@ class TTSError(Exception):
     pass
 
 
-PROVIDERS = ("edge", "elevenlabs", "openai")
+PROVIDERS = ("edge", "elevenlabs", "openai", "algrow", "algrow_stealth")
 
 # Voix mises en avant dans l'UI (la liste complète Edge est chargée à la demande).
 EDGE_FEATURED = {
@@ -43,6 +48,8 @@ def provider_status():
         "edge": _edge_installed(),
         "elevenlabs": bool(_env("ELEVENLABS_API_KEY")),
         "openai": bool(_env("OPENAI_TTS_KEY")),
+        "algrow": bool(_env("ALGROW_API_KEY")),
+        "algrow_stealth": bool(_env("ALGROW_API_KEY")),
     }
 
 
@@ -211,6 +218,190 @@ def _openai(text, voice, dest, speed=1.0, instructions=""):
     return None  # pas de timings → estimés après coup
 
 
+# ── Algrow (ElevenLabs / Stealth, jobs asynchrones) ────────────────────────
+
+ALGROW_BASE = "https://api.algrow.online"
+
+
+def _algrow_call(method, path, fields=None, timeout=60):
+    key = _env("ALGROW_API_KEY")
+    if not key:
+        raise TTSError("ALGROW_API_KEY absente du .env.")
+    data, headers = None, {"Authorization": "Bearer " + key, "Accept": "application/json"}
+    if fields is not None:
+        import uuid
+        boundary = "----drylow" + uuid.uuid4().hex
+        parts = []
+        for k, v in fields.items():
+            parts.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n")
+        parts.append(f"--{boundary}--\r\n")
+        data = "".join(parts).encode("utf-8")
+        headers["Content-Type"] = "multipart/form-data; boundary=" + boundary
+    req = urllib.request.Request((_env("ALGROW_BASE") or ALGROW_BASE) + path, data=data, method=method,
+                                 headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:300]
+        raise TTSError(f"Algrow {e.code} : {detail}")
+    except urllib.error.URLError as e:
+        raise TTSError(f"Algrow injoignable : {e}")
+
+
+def _download(url, dest, timeout=180):
+    with urllib.request.urlopen(url, timeout=timeout) as r, open(dest, "wb") as f:
+        while True:
+            b = r.read(1 << 16)
+            if not b:
+                break
+            f.write(b)
+    return dest
+
+
+def _srt_words(srt_text):
+    """SRT → mots avec timings (répartis dans chaque bloc au prorata des caractères)."""
+    def ts(x):
+        h, m, rest = x.strip().split(":")
+        sec, ms = rest.replace(".", ",").split(",")
+        return int(h) * 3600 + int(m) * 60 + int(sec) + int(ms) / 1000.0
+    words = []
+    for block in re.split(r"\n\s*\n", (srt_text or "").replace("\r", "")):
+        lines = [x for x in block.strip().split("\n") if x.strip()]
+        arrow = next((i for i, x in enumerate(lines) if "-->" in x), None)
+        if arrow is None:
+            continue
+        a, b = lines[arrow].split("-->")
+        try:
+            s0, s1 = ts(a), ts(b.split()[0])
+        except (ValueError, IndexError):
+            continue
+        toks = " ".join(lines[arrow + 1:]).split()
+        if not toks:
+            continue
+        total = float(sum(len(t) + 1 for t in toks))
+        t = s0
+        for tok in toks:
+            d = (s1 - s0) * (len(tok) + 1) / total
+            words.append({"w": tok, "s": round(t, 3), "e": round(t + d, 3)})
+            t += d
+    return words
+
+
+def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=None, srt=True, max_wait=1800):
+    """Job Algrow : envoi → attente (polling) → MP3 + timings (SRT si ElevenLabs)."""
+    import time
+    if not voice:
+        raise TTSError("Choisis une voix Algrow (ID de voix).")
+    fields = {"script": text, "voice_id": voice, "provider": sub, "custom_title": "voiceover"}
+    if sub == "stealth":
+        fields.update({"speaking_rate": f"{max(0.5, min(2.0, float(speed or 1))):.2f}", "temperature": "1.1",
+                       "stealth_model": model or "1.5"})
+    else:
+        fields.update({"model_id": model or "eleven_multilingual_v2", "stability": "0.5",
+                       "similarity_boost": "0.75", "style": "0.0",
+                       "speed": f"{max(0.7, min(1.2, float(speed or 1))):.2f}",
+                       "generate_srt": "true" if srt else "false"})
+    job = _algrow_call("POST", "/api/generate-simple", fields)
+    jid = job.get("job_id")
+    if not jid:
+        raise TTSError("Algrow : pas de job_id (" + json.dumps(job)[:200] + ")")
+    t0 = time.time()
+    while True:
+        time.sleep(3)
+        st = _algrow_call("GET", f"/api/job-status/{jid}")
+        status = st.get("status")
+        if status == "completed" and st.get("audio_url"):
+            break
+        if status == "failed":
+            raise TTSError("Algrow : " + (st.get("error_message") or st.get("error") or "échec de la génération"))
+        if time.time() - t0 > max_wait:
+            raise TTSError("Algrow : la génération prend trop de temps (job " + str(jid) + ").")
+        if progress:
+            progress(min(0.9, (time.time() - t0) / 120.0))
+    _download(st["audio_url"], dest)
+    if st.get("transcript_url"):
+        try:
+            with urllib.request.urlopen(st["transcript_url"], timeout=60) as r:
+                return _srt_words(r.read().decode("utf-8", "replace"))
+        except Exception:  # noqa: BLE001 — sans SRT on estime puis on recale sur les silences
+            return None
+    return None
+
+
+def algrow_voices(search="", lang="", stealth=False):
+    if stealth:
+        data = _algrow_call("GET", "/api/voices/stealth")
+        return [{"id": v.get("voice_id"), "name": v.get("name") or v.get("voice_id"), "gender": v.get("gender", ""),
+                 "preview_url": v.get("preview_url")} for v in data.get("voices") or []]
+    q = urllib.parse.urlencode({k: v for k, v in {"search": search, "language": lang, "page_size": 60,
+                                                  "sort": "trending"}.items() if v})
+    data = _algrow_call("GET", "/api/voices?" + q)
+    return [{"id": v.get("voice_id"), "name": v.get("name"), "gender": v.get("gender", ""),
+             "accent": v.get("accent", ""), "preview_url": v.get("preview_url"),
+             "description": v.get("description", "")} for v in data.get("voices") or []]
+
+
+def algrow_credits():
+    return _algrow_call("GET", "/api/credits")
+
+
+# ── Recalage sur les silences (voix sans timings natifs) ────────────────────
+
+def _silences(path, noise="-34dB", min_d=0.14):
+    import subprocess
+    p = subprocess.run([media.ffmpeg_bin(), "-hide_banner", "-nostdin", "-i", path, "-af",
+                        f"silencedetect=noise={noise}:d={min_d}", "-f", "null", "-"],
+                       capture_output=True, creationflags=media._NO_WINDOW)
+    err = p.stderr.decode("utf-8", "replace")
+    starts = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", err)]
+    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", err)]
+    return [(max(0.0, a), b) for a, b in zip(starts, ends)]
+
+
+def snap_to_silences(words, path):
+    """Timings estimés → fins de phrase recalées sur les vraies pauses de la voix.
+
+    Les images changent en fin de phrase : ce recalage suffit à les caler pile sur la voix."""
+    if not words:
+        return words
+    sil = _silences(path)
+    if not sil:
+        return words
+    anchors, last_t, used = [], 0.0, set()
+    for k, w in enumerate(words):
+        if w["w"][-1:] not in ".!?…" or k == len(words) - 1:
+            continue
+        best = None
+        for j, (a, b) in enumerate(sil):
+            if j in used or a <= last_t:
+                continue
+            d = abs(a - w["e"])
+            if d <= 2.5 and (best is None or d < best[0]):
+                best = (d, j)
+        if best:
+            a, b = sil[best[1]]
+            used.add(best[1])
+            anchors.append((k, a, b))
+            last_t = b
+    if not anchors:
+        return words
+    out = [dict(w) for w in words]
+    seg_start_i, seg_start_t = 0, max(0.0, sil[0][1] if sil[0][0] <= 0.05 else 0.0)
+    for k, a, b in anchors + [(len(words) - 1, words[-1]["e"], None)]:
+        seg = out[seg_start_i:k + 1]
+        span = max(0.05, a - seg_start_t)
+        weights = [len(x["w"]) + 1 for x in seg]
+        tot = float(sum(weights))
+        t = seg_start_t
+        for x, wt in zip(seg, weights):
+            d = span * wt / tot
+            x["s"], x["e"] = round(t, 3), round(t + d * 0.92, 3)
+            t += d
+        seg_start_i, seg_start_t = k + 1, (b if b is not None else a)
+    return out
+
+
 def _norm(s):
     return "".join(ch for ch in s.lower() if ch.isalnum())
 
@@ -282,7 +473,7 @@ def estimate_words(text, total):
 
 # ── Point d'entrée ──────────────────────────────────────────────────────────
 
-_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800}
+_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 90000, "algrow_stealth": 40000}
 
 
 def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, model="",
@@ -304,10 +495,18 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
                 words = _edge(chunk, voice, part, speed=speed, pitch=pitch)
             elif provider == "elevenlabs":
                 words = _eleven(chunk, voice, part, model=model or "eleven_multilingual_v2", speed=speed)
+            elif provider in ("algrow", "algrow_stealth"):
+                words = _algrow(chunk, voice, part, sub="stealth" if provider == "algrow_stealth" else "elevenlabs",
+                                model=model, speed=speed)
             else:
                 words = _openai(chunk, voice, part, speed=speed, instructions=instructions)
             dur = media.duration(part)
-            words = align_to_text(words, chunk) if words else estimate_words(chunk, dur)
+            if words:
+                words = align_to_text(words, chunk)
+            else:
+                words = estimate_words(chunk, dur)
+                if provider.startswith("algrow"):  # pas de timings natifs : recalage sur les pauses
+                    words = snap_to_silences(words, part)
             for w in words:
                 all_words.append({"w": w["w"], "s": round(w["s"] + offset, 3), "e": round(w["e"] + offset, 3),
                                   "t": int(w.get("t", 0)) + tok_offset})

@@ -149,8 +149,8 @@ TEMPLATES = {
                 "occasional heartfelt beats. Never mean-spirited.",
         "rules": "Follow ONE life chronologically from meeting her to old age. Every stage has concrete cultural details "
                  "(food, family, customs, words) and at least one joke. Stereotypes are affectionate, never insulting.",
-        "style": "osl_stick", "voice": "en-US-AndrewMultilingualNeural", "wpm": 158, "no_text": True,
-        "voice_speed": 1.06,
+        "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
+        "no_text": True, "voice_speed": 1.0,
         "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
                      "apartments, kitchens, restaurants, her parents' home, streets and landmarks of her country, "
                      "wedding venues, hospitals, parks. Medium and wide shots, characters medium-large, calm or dry "
@@ -158,8 +158,9 @@ TEMPLATES = {
                      "architecture, objects, customs). Night city skylines and warm interiors for emotional beats.",
         "default_minutes": 14,
         "montage": {"pacing": 6.0, "hook_pacing": 6.0, "hook_seconds": 0, "min_scene": 3.0, "max_scene": 11.0,
-                    "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.5,
-                    "section_titles": False, "captions": {"mode": "none"}, "layout": "full", "music_volume": 0.08},
+                    "motion": "zoom_in", "motion_strength": 0.08, "transition": "fade", "transition_dur": 0.4,
+                    "section_titles": False, "captions": {"mode": "none"}, "layout": "full",
+                    "music": "auto", "music_volume": 0.14},
         "character": ("You", "the protagonist ('you'): a simple cartoon man with a large perfectly round plain white head, "
                              "small black dot eyes, no hair; slim body; plain colored sweater or outfit that fits the "
                              "scene; same look in every image"),
@@ -280,7 +281,8 @@ def new_channel(data=None, template=None):
         "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
                   "no_text": t.get("no_text", True), "direction": t.get("direction", ""),
                   "ref": None, "characters": []},
-        "voice": _merge(DEFAULT_VOICE, {"voice": t.get("voice") or DEFAULT_VOICE_BY_LANG.get(lang, ""),
+        "voice": _merge(DEFAULT_VOICE, {"provider": t.get("voice_provider", "edge"),
+                                        "voice": t.get("voice") or DEFAULT_VOICE_BY_LANG.get(lang, ""),
                                         "speed": t.get("voice_speed", 1.0)}),
         "montage": _merge(DEFAULT_MONTAGE, t.get("montage") or {}),
         "board": _merge(board.DEFAULT_BOARD, dict(t.get("board") or {}, mascot=t.get("mascot", ""))),
@@ -1413,7 +1415,7 @@ def job_render(job, pid):
             if s.get("first") and s.get("heading"):
                 overlays.append({"start": s["start"] + 0.15, "end": min(s["end"], s["start"] + 2.6) if
                                  s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
-    music = store.music_path(m.get("music")) if m.get("music") else None
+    music = pick_music(pr, m.get("music"))
     layout = _layout_for(pr, os.path.join(d, "render"), w, h)
     out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
     try:
@@ -1434,6 +1436,24 @@ def job_render(job, pid):
     store.update_project(pid, save)
     _remove_quiet(d, old if old != out_name else None)
     job.update(1.0, "Vidéo exportée.")
+
+
+def pick_music(pr, choice):
+    """Musique de fond : un fichier précis, ou « auto » = une piste de la bibliothèque par vidéo
+    (toujours la même pour un projet donné). Bibliothèque vide → pistes libres générées."""
+    if not choice:
+        return None
+    if choice != "auto":
+        return store.music_path(choice)
+    tracks = store.list_music()
+    if not tracks:
+        from services import music
+        music.ensure_defaults(store.music_dir())
+        tracks = store.list_music()
+    if not tracks:
+        return None
+    k = int(hashlib.sha1(pr["id"].encode()).hexdigest(), 16) % len(tracks)
+    return store.music_path(tracks[k])
 
 
 def _layout_for(pr, workdir, w, h, with_presenter=True):

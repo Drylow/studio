@@ -119,7 +119,30 @@ def voices():
         return jsonify({"voices": vs})
     if provider == "openai":
         return jsonify({"voices": [{"id": v, "name": v} for v in tts.OPENAI_VOICES]})
+    if provider in ("algrow", "algrow_stealth"):
+        key = f"{provider}:{lang}:{request.args.get('search', '')}"
+        try:
+            if key not in _voice_cache:
+                _voice_cache[key] = tts.algrow_voices(request.args.get("search", ""), lang,
+                                                      stealth=provider == "algrow_stealth")
+            vs = list(_voice_cache[key])
+            cur = request.args.get("current", "")
+            if cur and provider == "algrow" and not any(v["id"] == cur for v in vs):
+                vs = tts.algrow_voices(cur, "") + vs  # la voix choisie, même hors du top
+        except Exception as e:  # noqa: BLE001
+            return _err(e, 502)
+        return jsonify({"voices": vs})
     return jsonify({"voices": []})
+
+
+@pov_bp.route("/api/pov/algrow/credits")
+def algrow_credits():
+    try:
+        c = tts.algrow_credits()
+    except Exception as e:  # noqa: BLE001
+        return _err(e, 502)
+    return jsonify({"elevenlabs": (c.get("tts_characters") or {}).get("remaining"),
+                    "stealth": (c.get("stealth_characters") or {}).get("remaining"), "plan": c.get("plan")})
 
 
 @pov_bp.route("/api/pov/voices/preview", methods=["POST"])
