@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings - Explainer Videos</title>
+  <script src="../config.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Explainer Videos"><img src="explainer-videos-logo.webp" alt="Explainer Videos"></a>
+      <a href="index.html">Queue</a>
+      <a href="library.html">Library</a>
+      <a href="settings.html">Settings</a>
+      <a href="activity.html">Activity</a>
+    </nav>
+  </header>
+  <main>
+<section class="workspace">
+  <h1>Settings</h1>
+  <p class="sub">Réglages stockés en local (localStorage). Les clés API des providers viennent de <code>config.js</code>, jamais d'un formulaire.</p>
+
+  <div class="settings-stack">
+    <details class="settings-card" open>
+      <summary><div><h2>Modèles LLM (OpenRouter)</h2><p>Appels directs depuis le navigateur avec la clé de config.js.</p></div></summary>
+      <div class="settings-content">
+        <div class="grid-2">
+          <label>Outline model<select data-setting="outline_model"></select></label>
+          <label>Script model<select data-setting="script_model"></select></label>
+          <label>Visual planning model<select data-setting="visual_planning_model"></select></label>
+          <label>Fallback chat model<select data-setting="chat_model"></select></label>
+        </div>
+      </div>
+    </details>
+
+    <details class="settings-card">
+      <summary><div><h2>Images (Replicate via relais)</h2><p>Icônes pictogrammes, scènes et images composites.</p></div></summary>
+      <div class="settings-content">
+        <div class="grid-2">
+          <label>Icon image model<select data-setting="icon_image_model" data-options="image"></select></label>
+          <label>Scene image model<select data-setting="scene_image_model" data-options="image"></select></label>
+          <label>Edit (composite) model<select data-setting="edit_image_model" data-options="edit"></select></label>
+          <label>Image retry count<input type="number" min="1" max="10" data-setting="image_retry_count"></label>
+        </div>
+      </div>
+    </details>
+
+    <details class="settings-card">
+      <summary><div><h2>Voix off (ElevenLabs direct)</h2><p>Voice ID, modèle et réglages de voix.</p></div></summary>
+      <div class="settings-content">
+        <div class="grid-2">
+          <label>Voice ID<input data-setting="elevenlabs_voice_id" placeholder="ex: 21m00Tcm4TlvDq8ikWAM"></label>
+          <label>TTS model<select data-setting="elevenlabs_model_id" data-options="tts"></select></label>
+          <label>Stability<input type="number" step="0.05" min="0" max="1" data-setting="voice_stability"></label>
+          <label>Similarity boost<input type="number" step="0.05" min="0" max="1" data-setting="voice_similarity"></label>
+          <label>Style<input type="number" step="0.05" min="0" max="1" data-setting="voice_style"></label>
+          <label>Speed<input type="number" step="0.05" min="0.5" max="2" data-setting="voice_speed"></label>
+          <label class="check-row"><input type="checkbox" data-setting="voice_speaker_boost"> Speaker boost</label>
+          <label>Words per minute<input type="number" min="90" max="220" data-setting="words_per_minute"></label>
+        </div>
+      </div>
+    </details>
+
+    <details class="settings-card">
+      <summary><div><h2>Transcription &amp; performance</h2><p>Whisper via le relais Replicate, parallélisme du pipeline.</p></div></summary>
+      <div class="settings-content">
+        <div class="grid-2">
+          <label class="check-row"><input type="checkbox" data-setting="transcription_enabled"> Transcription Whisper (timing précis des segments ; repli texte sinon)</label>
+          <label>Chunks en parallèle<input type="number" min="1" max="6" data-setting="worker_count"></label>
+          <label>Images de segment en parallèle<input type="number" min="1" max="8" data-setting="segment_parallelism"></label>
+        </div>
+      </div>
+    </details>
+
+    <details class="settings-card">
+      <summary><div><h2>Style des frames</h2><p>Grille d'icônes, cadres de chapitre et miniature (rendus par la render API).</p></div></summary>
+      <div class="settings-content">
+        <div class="grid-2">
+          <label>Frame style<select data-setting="frame_style"><option value="round">round</option><option value="square">square</option></select></label>
+          <label>Border width<input type="number" min="0" max="30" data-setting="border_width"></label>
+          <label>Background color<input data-setting="background_color"></label>
+          <label>Border color<input data-setting="border_color"></label>
+          <label>Font color<input data-setting="font_color"></label>
+        </div>
+      </div>
+    </details>
+
+    <details class="settings-card">
+      <summary><div><h2>Prompts</h2><p>Templates des prompts LLM (variables {{exemple}}), identiques au pipeline Python.</p></div></summary>
+      <div class="settings-content" id="promptList"></div>
+    </details>
+
+    <div class="row" style="justify-content:flex-end">
+      <button id="resetBtn" class="danger-text">Réinitialiser tout</button>
+      <button id="saveBtn" class="primary save-settings-button">Save</button>
+    </div>
+  </div>
+</section>
+  </main>
+<script>
+const settings = loadSettings();
+const prompts = loadPrompts();
+
+function fillSelect(select, options, value) {
+  select.innerHTML = options.map(o => {
+    const val = typeof o === 'string' ? o : o.value;
+    const label = typeof o === 'string' ? o : o.label;
+    return `<option value="${escapeAttr(val)}">${escapeHtml(label)}</option>`;
+  }).join('');
+  if (value && ![...select.options].some(opt => opt.value === value)) {
+    select.insertAdjacentHTML('beforeend', `<option value="${escapeAttr(value)}">${escapeHtml(value)}</option>`);
+  }
+  select.value = value;
+}
+
+for (const el of document.querySelectorAll('[data-setting]')) {
+  const key = el.dataset.setting;
+  const value = settings[key];
+  if (el.tagName === 'SELECT') {
+    const kind = el.dataset.options;
+    let options;
+    if (kind === 'image') options = IMAGE_MODELS;
+    else if (kind === 'edit') options = EDIT_MODELS;
+    else if (kind === 'tts') options = ELEVENLABS_TTS_MODELS;
+    else if (el.options.length) { el.value = value; continue; }
+    else options = OPENROUTER_MODELS;
+    fillSelect(el, options, String(value));
+  } else if (el.type === 'checkbox') {
+    el.checked = Boolean(value);
+  } else {
+    el.value = value;
+  }
+}
+
+promptList.innerHTML = Object.keys(prompts).map(key => `
+  <details class="prompt">
+    <summary><b>${escapeHtml(prompts[key].name)}</b><span>${escapeHtml(key)}</span></summary>
+    <textarea rows="14" data-prompt="${escapeAttr(key)}">${escapeHtml(prompts[key].body)}</textarea>
+    <button class="text-btn" type="button" onclick="resetPrompt('${escapeAttr(key)}')">Rétablir le prompt par défaut</button>
+  </details>`).join('');
+
+function resetPrompt(key) {
+  document.querySelector(`[data-prompt="${key}"]`).value = PROMPT_DEFAULTS[key].body;
+}
+
+saveBtn.addEventListener('click', () => {
+  for (const el of document.querySelectorAll('[data-setting]')) {
+    const key = el.dataset.setting;
+    if (el.type === 'checkbox') settings[key] = el.checked;
+    else if (el.type === 'number') settings[key] = Number(el.value);
+    else settings[key] = el.value;
+  }
+  saveSettings(settings);
+  const saved = {};
+  for (const el of document.querySelectorAll('[data-prompt]')) {
+    saved[el.dataset.prompt] = {name: prompts[el.dataset.prompt].name, body: el.value};
+  }
+  savePrompts(saved);
+  saveBtn.textContent = 'Saved ✓';
+  saveBtn.classList.add('is-saved');
+  setTimeout(() => { saveBtn.textContent = 'Save'; saveBtn.classList.remove('is-saved'); }, 1500);
+});
+
+resetBtn.addEventListener('click', () => {
+  if (!confirm('Réinitialiser tous les réglages et prompts ?')) return;
+  localStorage.removeItem('explainer.settings.v1');
+  localStorage.removeItem('explainer.prompts.v1');
+  location.reload();
+});
+</script>
+</body>
+</html>

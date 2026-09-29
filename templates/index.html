@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night City</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cyberpunk.css') }}" />
+  {% include '_head_meta.html' %}
+</head>
+<body>
+
+<div class="layout">
+
+  {% include '_sidebar.html' %}
+
+  <!-- MAIN -->
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-breadcrumb">
+        DRYLOW STUDIO &nbsp;/&nbsp; <span>MAINFRAME</span><span class="topbar-aux">SESSION LIVE</span>
+      </div>
+      <div>
+        <form method="post" action="/lock" style="display:inline;">
+          <button class="btn-ghost" type="submit" title="Verrouiller le terminal">▸ JACK OUT</button>
+        </form>
+      </div>
+    </header>
+
+    <div class="content">
+
+      {% if is_boss %}
+      <div class="hero">
+        <div class="hero-eyebrow">// WAKE UP SAMURAI — NEURAL LINK ÉTABLI</div>
+        <h1 class="hero-title">
+          <div class="line-1">CRÉEZ.</div>
+          <div class="line-2">SANS LIMITES.</div>
+        </h1>
+        <p class="hero-desc">Bienvenue dans Night City, choom. Drylow Studio regroupe ton arsenal de netrunner créatif en un seul deck. Génère vidéos, miniatures et bien plus — rapide comme un Sandevistan, local, sans corpo qui t'espionne.</p>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-item"><div class="stat-val">00</div><div class="stat-label">Daemons actifs</div></div>
+        <div class="stat-item"><div class="stat-val">∞</div><div class="stat-label">Eddies potentiels</div></div>
+        <div class="stat-item"><div class="stat-val">100%</div><div class="stat-label">Off-grid · sans ICE</div></div>
+      </div>
+      {% else %}
+      <!-- Version GUEST : épurée, juste l'essentiel -->
+      <div class="hero" style="margin-bottom:24px;">
+        <h1 class="hero-title" style="font-size:clamp(24px,3.5vw,38px);">
+          <div class="line-1">DRYLOW STUDIO</div>
+        </h1>
+        <p class="hero-desc">Bienvenue. Tes outils de travail sont listés ci-dessous.</p>
+      </div>
+      {% endif %}
+
+      <div class="section-title">// ARSENAL — CATÉGORIES</div>
+
+      <div class="tools-grid">
+        {# ── CATÉGORIES : registre dans routes/tools.py (nav_categories) ──
+           Chaque carte ouvre /category/<slug> qui liste les outils dedans. #}
+        {% if is_boss %}
+        {% for c in nav_categories %}
+        <a class="tool-card {{ c.accent }}" href="/category/{{ c.slug }}">
+          <div class="tool-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">{{ c.icon|safe }}</svg>
+          </div>
+          <div class="tool-card-name">{{ c.name }}</div>
+          <div class="tool-card-desc">{{ c.desc }}</div>
+          <div class="tool-card-count">{{ c.tools|length }} OUTIL{{ 'S' if c.tools|length > 1 else '' }} ▸</div>
+          <div class="tool-card-arrow">↗</div>
+        </a>
+        {% endfor %}
+        {% else %}
+        <div class="placeholder-card">
+          <div class="tool-card-name">OUTILS À VENIR</div>
+          <div class="tool-card-desc">Les outils sont en cours d'installation. Reviens bientôt.</div>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include '_nightcity_hud.html' %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* ══════════════════════════════════════════════════════════════════
+   THÈME NIGHT CITY — stock-footage (Nineveh, React + shadcn/ui)
+   Les couleurs sont des triplets HSL consommés via hsl(var(--x)).
+   On remappe la palette ambre d'origine vers le cyan Night City.
+   ══════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: dark;
+  --background: 225 45% 5% !important;
+  --foreground: 218 100% 95% !important;
+  --card: 230 28% 8% !important;
+  --card-foreground: 218 100% 95% !important;
+  --popover: 230 28% 8% !important;
+  --popover-foreground: 218 100% 95% !important;
+  --primary: 189 100% 50% !important;
+  --primary-foreground: 225 45% 5% !important;
+  --secondary: 227 40% 14% !important;
+  --secondary-foreground: 218 100% 95% !important;
+  --muted: 227 30% 13% !important;
+  --muted-foreground: 222 18% 62% !important;
+  --accent: 189 100% 50% !important;
+  --accent-foreground: 225 45% 5% !important;
+  --destructive: 350 100% 61% !important;
+  --destructive-foreground: 218 100% 95% !important;
+  --border: 189 45% 20% !important;
+  --input: 189 45% 20% !important;
+  --ring: 189 100% 50% !important;
+}
+
+::selection { background: rgba(0, 217, 255, 0.30); color: #fff; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #05070d; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.28);
+  border-radius: 6px;
+  border: 2px solid #05070d;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 217, 255, 0.5); }

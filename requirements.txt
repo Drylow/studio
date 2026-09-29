@@ -1,0 +1,9 @@
+# Dépendances réelles de l'app (les outils sont 100% navigateur → aucune lib
+# vidéo/IA côté serveur). Werkzeug/Jinja2/itsdangerous/click = deps de Flask,
+# installées automatiquement.
+Flask==3.1.3
+Werkzeug==3.1.8
+python-dotenv==1.2.2
+# Optionnel : borne/normalise les logos téléchargés (miniatures). Si absent, le
+# code garde l'image brute → ça marche quand même, juste moins optimisé.
+Pillow>=10.0.0

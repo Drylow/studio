@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2D Videos</title>
+<script src="../config.js"></script>
+<style>
+  :root{
+    --bg:#1c2127; --panel:#242a32; --panel2:#2b323b; --line:#363f4a;
+    --txt:#e6eaf0; --muted:#8893a3; --accent:#6c8cff; --accent2:#4c566a;
+    --ok:#5fd6a0; --err:#ff6b6b; --warn:#e0b15a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+  .apibanner{background:#8a2f2f;color:#fff;font-weight:700;text-align:center;padding:12px 16px;font-size:14px;position:sticky;top:0;z-index:100;border-bottom:1px solid #b34d4d}
+  .wrap{max-width:860px;margin:0 auto;padding:32px 20px 80px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+  .logo{font-weight:800;letter-spacing:3px;font-size:20px}
+  .logo span{color:var(--accent)}
+  .gear{background:var(--panel2);border:1px solid var(--line);color:var(--txt);
+    border-radius:10px;padding:8px 14px;cursor:pointer;font-size:14px}
+  .gear:hover{border-color:var(--accent)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:20px}
+  .cardtitle{display:flex;align-items:center;font-size:15px;font-weight:700;margin-bottom:16px}
+  .stepnum{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--accent);
+    color:#0c1020;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-right:10px;flex-shrink:0}
+  label{display:block;font-size:13px;color:var(--muted);margin:0 0 8px;letter-spacing:.3px}
+  input[type=text],textarea,select{width:100%;background:var(--bg);border:1px solid var(--line);
+    color:var(--txt);border-radius:10px;padding:12px 14px;font-size:15px;font-family:inherit}
+  textarea{min-height:280px;resize:vertical;line-height:1.55}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row>div{flex:1;min-width:200px}
+  .hint{font-size:12px;color:var(--muted);margin-top:6px}
+  .btn{background:var(--accent);color:#0c1020;border:none;border-radius:12px;
+    padding:14px 26px;font-size:15px;font-weight:700;cursor:pointer;transition:.15s}
+  .btn:hover{filter:brightness(1.08)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .btn.ghost{background:var(--panel2);color:var(--txt);border:1px solid var(--line)}
+  .btn.danger{background:transparent;color:var(--err);border:1px solid var(--err)}
+  .actions{display:flex;gap:12px;align-items:center;margin-top:18px}
+  /* style cards */
+  .stylegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+  .stylecard{border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;
+    background:var(--panel2);position:relative;transition:.12s}
+  .stylecard:hover{border-color:var(--accent)}
+  .stylecard.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+  .stylecard .sthumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#161a1f}
+  .stylecard .noref{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;
+    background:#161a1f;color:var(--warn);font-size:12px;text-align:center;padding:8px}
+  .stylecard .sbody{padding:8px 10px 10px}
+  .stylecard .sname{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .stylecard .smeta{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .stylecard .scheck{position:absolute;top:6px;left:6px;background:var(--accent);color:#0c1020;
+    border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+  .stylecard .sedit{position:absolute;top:6px;right:6px;background:rgba(20,24,30,.8);border:1px solid var(--line);
+    color:var(--txt);border-radius:8px;padding:4px 9px;cursor:pointer;font-size:13px}
+  .stylecard .sedit:hover{border-color:var(--accent)}
+  .stylecard.add{display:flex;align-items:center;justify-content:center;min-height:130px;
+    border-style:dashed;color:var(--muted);font-size:14px;font-weight:700;background:transparent}
+  .stylecard.add:hover{color:var(--accent)}
+  /* tools */
+  .toolgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .toolcard{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:12px;
+    padding:14px;background:var(--panel2)}
+  .toolcard .tname{font-size:15px;font-weight:700}
+  .toolcard .tdesc{font-size:12px;color:var(--muted);flex:1;line-height:1.45}
+  .toolcard .btn{padding:9px 16px;font-size:13px;align-self:flex-start}
+  .tooltag{font-size:10px;letter-spacing:.5px;padding:2px 8px;border-radius:999px;background:var(--accent2);color:var(--txt);margin-left:6px;vertical-align:2px}
+  .tooltag.on{background:var(--ok);color:#0c1020}
+  /* steps */
+  .steps{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .chip{padding:6px 14px;border-radius:999px;font-size:13px;background:var(--panel2);
+    border:1px solid var(--line);color:var(--muted)}
+  .chip.active{border-color:var(--accent);color:var(--txt)}
+  .chip.done{border-color:var(--ok);color:var(--ok)}
+  .chip.err{border-color:var(--err);color:var(--err)}
+  .log{background:#161a1f;border:1px solid var(--line);border-radius:10px;padding:14px;
+    font-family:'Cascadia Code',Consolas,monospace;font-size:13px;max-height:240px;overflow:auto}
+  .log div{padding:2px 0;color:var(--muted)}
+  .log div.ok{color:var(--ok)} .log div.err{color:var(--err)}
+  video{width:100%;border-radius:12px;margin-top:8px;background:#000}
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:40}
+  .overlay.show{display:flex}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:26px;max-width:560px;width:100%;max-height:88vh;overflow:auto}
+  .modal h3{margin:0 0 18px}
+  .modal .field{margin-bottom:16px}
+  .badge{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--accent2)}
+  .badge.set{background:var(--ok);color:#0c1020}
+  .badge.req{background:var(--warn);color:#0c1020}
+  .hidden{display:none}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:24px;cursor:zoom-out}
+  .lightbox.show{display:flex}
+  .lightbox img{max-width:96vw;max-height:92vh;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+  .rv{position:fixed;inset:0;background:rgba(10,12,16,.96);display:none;z-index:60}
+  .rv.show{display:flex;align-items:center;justify-content:center}
+  .rv-stage{display:flex;gap:20px;max-width:1500px;width:100%;padding:30px 76px}
+  .rv-imgwrap{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-width:0}
+  .rv-imgwrap img{max-width:100%;max-height:84vh;border-radius:10px}
+  .rv-spin{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);border-radius:10px;font-size:16px;color:#fff}
+  .rv-spin.show{display:flex}
+  .rv-side{width:340px;flex-shrink:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;align-self:center;max-height:84vh;overflow:auto}
+  .rv-meta{font-size:13px;color:var(--muted)}
+  .rv-text{font-size:15px;line-height:1.55;color:var(--txt)}
+  .rv-actions{display:flex;gap:8px}
+  .rv-actions button{flex:1;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--txt);cursor:pointer;font-size:13px}
+  .rv-actions button:hover{border-color:var(--accent)}
+  .rv-actions button:disabled{opacity:.5;cursor:wait}
+  .rv-edit{display:none;flex-direction:column;gap:8px}
+  .rv-edit.open{display:flex}
+  .rv-edit textarea{min-height:150px;background:var(--bg);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:10px;font-size:13px;font-family:inherit}
+  .rv-edit button{background:var(--accent);color:#0c1020;border:none;border-radius:8px;padding:10px;font-weight:700;cursor:pointer}
+  .rv-nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--panel2);border:1px solid var(--line);color:var(--txt);width:50px;height:50px;border-radius:50%;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .rv-nav:hover{border-color:var(--accent)}
+  .rv-prev{left:14px}.rv-next{right:14px}
+  .rv-close{position:absolute;top:16px;right:18px;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;opacity:.7}
+  .rv-close:hover{opacity:1}
+  .pickgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;max-height:58vh;overflow:auto;margin:12px 0}
+  .pickcell{border:1px solid var(--line);border-radius:8px;overflow:hidden;cursor:pointer;background:var(--bg)}
+  .pickcell:hover{border-color:var(--accent)}
+  .pickcell img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .pickcell .n{font-size:11px;color:var(--muted);padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .projrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:var(--panel2)}
+  .projrow .btn{padding:7px 14px;font-size:13px}
+  .projrow .st-final{color:var(--ok)} .projrow .st-draft{color:var(--warn)}
+  .testbox{margin:6px 0 16px;display:flex;flex-direction:column;gap:6px}
+  .testrow{font-size:13px;padding:8px 12px;border-radius:8px;background:#161a1f;border:1px solid var(--line)}
+  .testrow.ok{border-color:var(--ok);color:var(--ok)}
+  .testrow.err{border-color:var(--err);color:var(--err)}
+  .testrow.run{color:var(--muted)}
+  .seg{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px;background:var(--panel2)}
+  .seg-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:14px}
+  .seg-head .lvl{font-weight:700}
+  .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+  .thumbs img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;border:1px solid var(--line);cursor:pointer}
+  .seg .pending{font-size:13px;color:var(--muted)}
+  .imgcard{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg);position:relative}
+  .imgcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;cursor:pointer}
+  .imgcard.busy{opacity:.45}
+  .imgcard .ibtns{display:flex;gap:6px;padding:6px}
+  .imgcard .ibtns button{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:7px;padding:5px;font-size:12px;cursor:pointer}
+  .imgcard .ibtns button:hover{border-color:var(--accent)}
+  .imgcard .pedit{padding:0 6px 6px;display:none}
+  .imgcard .pedit textarea{width:100%;min-height:90px;font-size:12px;background:var(--bg);border:1px solid var(--line);color:var(--txt);border-radius:7px;padding:6px}
+  .imgcard .pedit button{width:100%;margin-top:5px;background:var(--accent);color:#0c1020;border:none;border-radius:7px;padding:6px;font-size:12px;font-weight:700;cursor:pointer}
+  .imgcard .imeta{padding:6px 8px 0;font-size:11px;color:var(--muted);line-height:1.35}
+  .imgspin{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-size:13px;color:#fff;background:rgba(0,0,0,.45)}
+  .imgcard.busy .imgspin{display:flex}
+  .charthumbs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+  .charthumbs img{width:64px;height:64px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+  .refpreview{width:100%;max-width:280px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;margin-bottom:8px;background:#161a1f}
+  .bar{height:10px;background:#161a1f;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:2px 0 6px}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#9ab0ff);transition:width .35s ease}
+  .barpct{font-size:12px;color:var(--muted);margin-bottom:12px;text-align:right}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">2D<span> VIDEOS</span></div>
+    <div style="display:flex;gap:10px">
+      <button class="gear" onclick="openProjects()">📁 Projets</button>
+      <button class="gear" onclick="openSettings()">&#9881; Réglages</button>
+    </div>
+  </header>
+
+  <!-- 1 · STYLE -->
+  <div class="card">
+    <div class="cardtitle"><span class="stepnum">1</span> Choisis ton style (= une chaîne / une niche)</div>
+    <div class="stylegrid" id="styleGrid"></div>
+    <div class="hint" style="margin-top:12px">
+      Un style regroupe : le <b>prompt image</b> (direction artistique), la <b>voix</b> ElevenLabs,
+      l'<b>image de référence du style</b> (obligatoire en mode Replicate) et le(s) <b>personnage(s) de référence</b> (optionnels).
+      Clique ✎ pour modifier un style. Tout est stocké dans ton navigateur (IndexedDB).
+    </div>
+  </div>
+
+  <!-- 2 · SCRIPT -->
+  <div class="card">
+    <div class="cardtitle"><span class="stepnum">2</span> Ton script</div>
+    <div class="field" style="margin-bottom:18px">
+      <label>Titre de la vidéo <span style="color:var(--muted)">(sert au nom du projet)</span></label>
+      <input type="text" id="title" placeholder="POV: tu deviens chirurgien">
+    </div>
+    <div class="field">
+      <label>Ton script <span style="color:var(--muted)">(colle-le ici — les en-têtes « Level 1 / Level 2… » sont retirés de la narration)</span></label>
+      <textarea id="script" placeholder="Level 1, the clean slate&#10;You wake up. You drive to the building...&#10;&#10;Level 2, the operator&#10;..."></textarea>
+      <div class="hint">Astuce : garde des en-têtes du type « Level 1, … », « Stage 2: … » — ils structurent le script mais ne sont pas lus à voix haute.</div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="go" onclick="prepareImages()">▶ Générer les images</button>
+      <span id="status" class="hint"></span>
+    </div>
+  </div>
+
+  <div class="card hidden" id="progressCard">
+    <div class="steps" id="steps">
+      <span class="chip" data-k="voice">Voix off</span>
+      <span class="chip" data-k="structure">Transcription</span>
+      <span class="chip" data-k="images">Images</span>
+      <span class="chip" data-k="render">Montage</span>
+      <span class="chip" data-k="concat">Final</span>
+    </div>
+    <div class="bar"><i id="barFill"></i></div>
+    <div class="barpct" id="barPct">0%</div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <div class="card hidden" id="galleryCard">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <label style="margin:0" id="galleryTitle">Aperçu par segment</label>
+      <button class="btn hidden" id="renderBtn" onclick="renderVideo()">✅ Valider &amp; générer la vidéo</button>
+    </div>
+    <div class="hint hidden" id="reviewHint" style="margin-bottom:12px">Vérifie chaque image. <b>↻</b> régénère, <b>✎</b> édite le prompt puis régénère. Quand c'est bon, valide : le montage ffmpeg est fait par la render API.</div>
+    <div id="gallery"></div>
+  </div>
+
+  <div class="card hidden" id="resultCard">
+    <label>Vidéo finale</label>
+    <video id="player" controls></video>
+    <div class="actions">
+      <a id="dl" class="btn ghost" download="final.mp4">⬇ Télécharger la vidéo</a>
+    </div>
+  </div>
+</div>
+
+<!-- Projets -->
+<div class="overlay" id="projOverlay">
+  <div class="modal">
+    <h3>Projets sauvegardés (dans ce navigateur)</h3>
+    <div id="projList"></div>
+    <div class="actions" style="justify-content:flex-end;margin-top:8px">
+      <button class="btn ghost" onclick="closeProjects()">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<!-- Éditeur de style -->
+<div class="overlay" id="styleOverlay">
+  <div class="modal">
+    <h3 id="stTitle">Style</h3>
+    <div class="field">
+      <label>Nom du style <span style="color:var(--muted)">(ex : « POV Professor », « Histoire dark », « Foot »…)</span></label>
+      <input type="text" id="st_name" placeholder="Nom de la chaîne / niche">
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Voice ID ElevenLabs</label>
+        <input type="text" id="st_voice" placeholder="(voix par défaut si vide)">
+      </div>
+      <div class="field">
+        <label>Modèle voix</label>
+        <input type="text" id="st_vmodel" placeholder="eleven_multilingual_v2">
+      </div>
+    </div>
+    <div class="hint" style="margin:-8px 0 16px">Chaque style peut avoir sa propre voix off.</div>
+
+    <div id="stImagesBox">
+      <div class="field">
+        <label>Image de référence du STYLE <span class="badge req" id="stRefBadge">obligatoire</span></label>
+        <img id="stRefThumb" class="refpreview hidden" alt="">
+        <input type="file" id="st_ref_file" accept="image/png,image/jpeg,image/webp" onchange="pickStyleRef()" style="font-size:13px">
+        <div class="hint" id="stRefMsg">Une image qui montre le rendu visuel voulu (capture d'une vidéo de la chaîne, par ex.). Envoyée à CHAQUE génération pour verrouiller le style.</div>
+      </div>
+      <div class="field">
+        <label>Personnage(s) de référence <span style="color:var(--muted)">(optionnel)</span></label>
+        <div id="stCharThumbs" class="charthumbs"></div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <input type="file" id="st_char_files" accept="image/png,image/jpeg,image/webp" multiple onchange="pickStyleChars()" style="font-size:13px;flex:1">
+          <button class="btn ghost" type="button" onclick="clearStyleChars()" style="padding:6px 12px;font-size:12px">Vider</button>
+        </div>
+        <div class="hint" id="stCharMsg">Si ta niche a un perso récurrent, ajoute 1 à 6 images (face, profil…). Sinon laisse vide.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Prompt image (direction artistique)</label>
+      <textarea id="st_prompt" style="min-height:160px" placeholder="You are an AI image generation prompt engineer for..."></textarea>
+      <div class="hint">Dicte le style des images générées pour cette niche. Le format de sortie JSON est géré automatiquement.</div>
+    </div>
+
+    <div class="actions" style="justify-content:space-between">
+      <button class="btn danger hidden" id="stDeleteBtn" onclick="deleteStyle()">🗑 Supprimer</button>
+      <div style="display:flex;gap:12px;margin-left:auto">
+        <button class="btn ghost" onclick="closeStyleEditor()">Fermer</button>
+        <button class="btn" id="stSaveBtn" onclick="saveStyle()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Agrandissement image (simple, pendant la génération) -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" alt="">
+</div>
+
+<!-- Visualiseur de review (navigation + retry/edit) -->
+<div class="rv" id="reviewer" onclick="if(event.target===this)closeReviewer()">
+  <button class="rv-nav rv-prev" onclick="rvNav(-1)">‹</button>
+  <div class="rv-stage">
+    <div class="rv-imgwrap">
+      <img id="rvImg" alt="">
+      <div class="rv-spin" id="rvSpin">⏳ génération…</div>
+    </div>
+    <div class="rv-side">
+      <div class="rv-meta"><b id="rvCount"></b> · <span id="rvDur"></span></div>
+      <div class="rv-text" id="rvText"></div>
+      <div class="rv-actions">
+        <button onclick="rvRetry(false)">↻ Retry</button>
+        <button id="rvEditBtn" onclick="rvToggleEdit()">✎ Prompt</button>
+        <button onclick="openPicker()">⇄ Remplacer</button>
+      </div>
+      <div class="rv-edit" id="rvEdit">
+        <textarea id="rvPrompt"></textarea>
+        <button onclick="rvRetry(true)">Régénérer avec ce prompt</button>
+      </div>
+    </div>
+  </div>
+  <button class="rv-nav rv-next" onclick="rvNav(1)">›</button>
+  <button class="rv-close" onclick="closeReviewer()">✕</button>
+</div>
+
+<!-- Sélecteur d'images (remplacer) -->
+<div class="overlay" id="picker" style="z-index:70">
+  <div class="modal" style="max-width:760px">
+    <h3>Remplacer par une image du projet</h3>
+    <input type="text" id="pickerSearch" placeholder="Tape un numéro (ex: 42) ou un mot du texte…" oninput="renderPicker()">
+    <div id="pickerGrid" class="pickgrid"></div>
+    <div class="actions" style="justify-content:flex-end">
+      <button class="btn ghost" onclick="closePicker()">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- Réglages -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Réglages</h3>
+    <div class="hint" style="margin:-10px 0 16px">Les <b>clés API</b> viennent de <b>config.js</b> (non éditables ici). La voix, le prompt image et les références se règlent par <b>style</b> (carte ✎ de l'étape 1). Ici : options de génération.</div>
+    <div class="field">
+      <label>Clés (config.js) :
+        ElevenLabs <span id="elBadge" class="badge">absente</span> ·
+        OpenRouter <span id="orBadge" class="badge">absente</span> ·
+        Replicate <span id="rpBadge" class="badge">absente</span> ·
+        Render API <span id="raBadge" class="badge">absente</span>
+      </label>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--line);margin:18px 0">
+    <div class="row">
+      <div class="field">
+        <label>Images</label>
+        <select id="IMAGE_MODE">
+          <option value="placeholder">Placeholder (local, sans clé)</option>
+          <option value="replicate">Replicate / Nano Banana (IA)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Images / segment</label>
+        <input type="text" id="N_IMAGES_PER_CHUNK">
+      </div>
+      <div class="field">
+        <label>Fondu (s)</label>
+        <input type="text" id="IMAGE_FADE" placeholder="0.5">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Durée min / image (s)</label>
+        <input type="text" id="IMG_MIN_SEC" placeholder="3">
+      </div>
+      <div class="field">
+        <label>Durée max / image (s)</label>
+        <input type="text" id="IMG_MAX_SEC" placeholder="15">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--txt)">
+          <input type="checkbox" id="IMG_TIMING" style="width:auto"> Aligner les images sur la voix (STT ElevenLabs)
+        </label>
+      </div>
+      <div class="field">
+        <label>Cible / image (s)</label>
+        <input type="text" id="IMG_TARGET_SEC" placeholder="5.5">
+      </div>
+      <div class="field">
+        <label>Images en parallèle</label>
+        <input type="text" id="IMG_CONCURRENCY" placeholder="4">
+      </div>
+    </div>
+    <div class="hint" style="margin:-8px 0 4px">Aligné : 1 image ≈ 1 phrase, durée réelle (via STT), regroupées pour viser la cible. Décoché : répartition égale, nb d'images borné par min/max. La voix off reste calée.</div>
+    <div class="field" style="margin-top:14px">
+      <label>Modèle LLM (OpenRouter, pour les prompts d'images)</label>
+      <select id="LLM_MODEL">
+        <option value="openai/gpt-5-mini" selected>openai/gpt-5-mini</option>
+        <option value="anthropic/claude-opus-4.6">anthropic/claude-opus-4.6</option>
+        <option value="openai/gpt-5.4-mini">openai/gpt-5.4-mini</option>
+        <option value="anthropic/claude-sonnet-4.5">anthropic/claude-sonnet-4.5</option>
+        <option value="deepseek/deepseek-v4-flash">deepseek/deepseek-v4-flash</option>
+        <option value="moonshotai/kimi-k2.6">moonshotai/kimi-k2.6</option>
+        <option value="google/gemini-3.1-pro-preview">google/gemini-3.1-pro-preview</option>
+        <option value="google/gemini-3.1-flash-lite">google/gemini-3.1-flash-lite</option>
+      </select>
+    </div>
+    <div id="replicateBox" class="hidden">
+      <div class="field">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--txt)">
+          <input type="checkbox" id="CHAR_ROLLING_REF" style="width:auto">
+          Ancre glissante — la 1re image d'un segment guide les suivantes (plus cohérent)
+        </label>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Modèle image (Replicate)</label>
+          <input type="text" id="REPLICATE_MODEL" placeholder="google/nano-banana-2">
+        </div>
+        <div class="field">
+          <label>Résolution</label>
+          <select id="REPLICATE_RESOLUTION">
+            <option value="1K">1K</option>
+            <option value="2K">2K</option>
+            <option value="4K">4K</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="testbox" id="testResults"></div>
+    <div class="actions" style="justify-content:space-between">
+      <button class="btn ghost" id="testBtn" onclick="testKeys()">🔌 Tester les clés</button>
+      <div style="display:flex;gap:12px">
+        <button class="btn ghost" onclick="closeSettings()">Annuler</button>
+        <button class="btn" onclick="saveSettings()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+
+// =================== config.js : render API + clés ===================
+const CFG = window.VIDEO_TOOLS || {};
+const RENDER_API = ((CFG.renderApi)||'').replace(/\/$/, '');
+const RENDER_TOKEN = (CFG.renderToken||'').trim();
+const LLM_BASE = ((CFG.llmBase)||'https://openrouter.ai/api/v1').replace(/\/$/, '');
+const KEYS = CFG.keys || {};
+const EL_KEY = (KEYS.elevenlabs||'').trim();
+const OR_KEY = (KEYS.openrouter||'').trim();
+const RP_KEY = (KEYS.replicate||'').trim();
+const EL_BASE = 'https://api.elevenlabs.io';
+// En-tete jeton render : ajoute X-Render-Token aux appels render API (omis si vide).
+function renderHeaders(extra){
+  const h = Object.assign({}, extra||{});
+  if(RENDER_TOKEN) h['X-Render-Token'] = RENDER_TOKEN;
+  return h;
+}
+const NO_RENDER_MSG = '⚠️ Render API non configurée — renseignez config.js';
+const TTS_MAXCHARS = 5000;
+const PROMPT_BATCH = 25;
+
+function showRenderBanner(){
+  if(RENDER_API) return;
+  if(!document.getElementById('apiBanner')){
+    const d=document.createElement('div');
+    d.id='apiBanner'; d.className='apibanner';
+    d.textContent=NO_RENDER_MSG+' — la génération d\'images Replicate (relais) et le rendu vidéo sont désactivés ; voix off + placeholders fonctionnent.';
+    document.body.prepend(d);
+  }
+}
+
+// =================== Réglages locaux (localStorage) ===================
+const SETTINGS_DEFAULTS = {
+  IMAGE_MODE:'placeholder', N_IMAGES_PER_CHUNK:'6', IMAGE_FADE:'0.5',
+  IMG_MIN_SEC:'3', IMG_MAX_SEC:'15', IMG_TARGET_SEC:'5.5', IMG_CONCURRENCY:'4',
+  IMG_TIMING:'aligned', REPLICATE_MODEL:'google/nano-banana-2', REPLICATE_RESOLUTION:'2K',
+  CHAR_ROLLING_REF:'1', LLM_MODEL:'openai/gpt-5-mini',
+};
+function getSettings(){
+  let s={};
+  try{ s=JSON.parse(localStorage.getItem('pov_settings')||'{}'); }catch(e){}
+  return Object.assign({}, SETTINGS_DEFAULTS, s);
+}
+function setSettings(s){ localStorage.setItem('pov_settings', JSON.stringify(s)); }
+
+// =================== IndexedDB (styles + projets) ===================
+function idb(){
+  return new Promise((res,rej)=>{
+    const r=indexedDB.open('pov-studio',1);
+    r.onupgradeneeded=()=>{
+      const db=r.result;
+      if(!db.objectStoreNames.contains('styles')) db.createObjectStore('styles',{keyPath:'slug'});
+      if(!db.objectStoreNames.contains('projects')) db.createObjectStore('projects',{keyPath:'slug'});
+    };
+    r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+  });
+}
+function tx(db,store,mode,fn){
+  return new Promise((res,rej)=>{
+    const t=db.transaction(store,mode); const rq=fn(t.objectStore(store));
+    t.oncomplete=()=>res(rq&&rq.result); t.onerror=()=>rej(t.error);
+  });
+}
+async function dbPut(store,rec){ return tx(await idb(),store,'readwrite',o=>o.put(rec)); }
+async function dbGet(store,key){ const db=await idb(); return new Promise((res,rej)=>{
+  const rq=db.transaction(store).objectStore(store).get(key);
+  rq.onsuccess=()=>res(rq.result); rq.onerror=()=>rej(rq.error); }); }
+async function dbAll(store){ const db=await idb(); return new Promise((res,rej)=>{
+  const rq=db.transaction(store).objectStore(store).getAll();
+  rq.onsuccess=()=>res(rq.result||[]); rq.onerror=()=>rej(rq.error); }); }
+async function dbDel(store,key){ return tx(await idb(),store,'readwrite',o=>o.delete(key)); }
+
+// =================== Utilitaires ===================
+function slugifyTitle(t){
+  const s=(t||'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'_');
+  return s||'video';
+}
+function blobToDataURI(blob){
+  return new Promise((res,rej)=>{
+    const fr=new FileReader();
+    fr.onload=()=>res(fr.result); fr.onerror=()=>rej(fr.error);
+    fr.readAsDataURL(blob);
+  });
+}
+function audioDuration(blob){
+  return new Promise(res=>{
+    const url=URL.createObjectURL(blob);
+    const a=new Audio(); a.preload='metadata';
+    const fallback = blob.size*8/128000;   // mp3 44.1k 128kbps CBR (sortie ElevenLabs par défaut)
+    a.onloadedmetadata=()=>{ const d=a.duration; URL.revokeObjectURL(url); res(isFinite(d)&&d>0?d:fallback); };
+    a.onerror=()=>{ URL.revokeObjectURL(url); res(fallback); };
+    a.src=url;
+  });
+}
+// URL d'affichage d'une image de projet (blob local sinon URL distante)
+function imgSrc(im){
+  if(im.blob){
+    if(!im._url) im._url=URL.createObjectURL(im.blob);
+    return im._url;
+  }
+  return im.url||'';
+}
+
+// =================== Parsing du script (port de engine.py) ===================
+// Ligne de titre de niveau : "Level one, ...", "Level 3 ...", "Stage two ..."
+const HEAD_LINE = /^\s*(level|stage|phase|chapter|part|round|tier)\s+(\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\b/i;
+function stripHeadings(script){
+  // Retire les lignes de titre de niveau (non lues a voix haute), garde le reste VERBATIM.
+  const out=[];
+  for(const line of (script||'').split(/\r?\n/)){
+    const s=line.trim();
+    if(s && s.length<80 && HEAD_LINE.test(s)) continue;
+    out.push(line);
+  }
+  return out.join('\n').trim();
+}
+function sentences(text){
+  return (text||'').trim().split(/(?<=[.!?…])\s+/).map(s=>s.trim()).filter(Boolean);
+}
+function splitTextForTts(text, maxc){
+  const chunks=[]; let cur='';
+  for(const s of sentences(text)){
+    if(cur && cur.length+s.length+1>maxc){ chunks.push(cur); cur=s; }
+    else cur=(cur+' '+s).trim();
+  }
+  if(cur) chunks.push(cur);
+  const out=[];
+  for(let c of chunks){
+    while(c.length>maxc){ out.push(c.slice(0,maxc)); c=c.slice(maxc); }
+    out.push(c);
+  }
+  return out.length?out:[(text||'').trim()];
+}
+function splitTextEven(text, n){
+  const sents=sentences(text);
+  if(n<=1) return [(text||'').trim()];
+  if(!sents.length) return Array(n).fill('');
+  const total=sents.length;
+  return Array.from({length:n},(_,i)=>
+    sents.slice(Math.floor(i*total/n), Math.floor((i+1)*total/n)).join(' ').trim());
+}
+function imagesForDuration(duration, target, mn, mx){
+  if(!duration || duration<=0) return Math.max(1,target);
+  const nMin=Math.max(1, Math.ceil(duration/mx));
+  const nMax=Math.max(1, Math.floor(duration/mn));
+  return Math.max(1, Math.min(Math.max(target,nMin), nMax));
+}
+// Regroupe les mots STT en scenes (~target s), coupees sur des fins de phrase (port build_scenes)
+function buildScenes(words, total, target, mn, mx){
+  if(!words || !words.length) return null;
+  // 1) phrases (coupe quand un mot finit par . ! ? …)
+  const sents=[]; let cur=[];
+  for(const w of words){
+    cur.push(w);
+    const t=(w.text||'').trim();
+    if(t && '.!?…'.includes(t[t.length-1])){ sents.push(cur); cur=[]; }
+  }
+  if(cur.length) sents.push(cur);
+  const S=sents.map(s=>[s[0].start, s[s.length-1].end,
+    s.map(x=>(x.text||'').trim()).join(' ').trim()]);
+  // 2) regroupement greedy : on ajoute des phrases tant qu'on reste <= cible
+  let scenes=[]; let c=null;
+  for(const [st,en,txt] of S){
+    if(c===null) c=[st,en,txt];
+    else if((en-c[0])<=target){ c[1]=en; c[2]=(c[2]+' '+txt).trim(); }
+    else { scenes.push(c); c=[st,en,txt]; }
+  }
+  if(c) scenes.push(c);
+  if(!scenes.length) return null;
+  // 3) bornes : 1re a 0, derniere a total, contigu
+  scenes[0][0]=0; scenes[scenes.length-1][1]=total;
+  for(let i=1;i<scenes.length;i++) scenes[i][0]=scenes[i-1][1];
+  // 4) decouper les scenes trop longues (> max)
+  let out=[];
+  for(const [st,en,txt] of scenes){
+    const d=en-st;
+    if(d>mx){
+      const parts=Math.ceil(d/mx), pd=d/parts;
+      for(let k=0;k<parts;k++) out.push([st+k*pd, st+(k+1)*pd, txt]);
+    } else out.push([st,en,txt]);
+  }
+  // 5) fusionner les scenes trop courtes (< min)
+  let i=0;
+  while(out.length>1 && i<out.length){
+    if((out[i][1]-out[i][0])<mn){
+      if(i===0){ out[1][0]=out[0][0]; out[1][2]=(out[0][2]+' '+out[1][2]).trim(); out.shift(); }
+      else { out[i-1][1]=out[i][1]; out[i-1][2]=(out[i-1][2]+' '+out[i][2]).trim(); out.splice(i,1); }
+    } else i++;
+  }
+  return out.map(([a,b,t])=>({start:Math.round(a*1000)/1000, end:Math.round(b*1000)/1000,
+    dur:Math.round((b-a)*1000)/1000, text:t}));
+}
+
+// =================== ElevenLabs DIRECT : TTS + STT ===================
+async function ttsOne(text, voiceId, modelId){
+  const r=await fetch(EL_BASE+'/v1/text-to-speech/'+encodeURIComponent(voiceId),{
+    method:'POST',
+    headers:{'xi-api-key':EL_KEY,'accept':'audio/mpeg','content-type':'application/json'},
+    body:JSON.stringify({
+      text, model_id:modelId,
+      voice_settings:{stability:0.5, similarity_boost:0.75, style:0.5, use_speaker_boost:true, speed:1.0},
+    }),
+  });
+  if(r.status!==200) throw new Error('ElevenLabs '+r.status+': '+(await r.text()).slice(0,300));
+  return r.blob();
+}
+async function ttsFull(text, voiceId, modelId, emit){
+  const parts=splitTextForTts(text, TTS_MAXCHARS);
+  const blobs=[]; let total=0;
+  for(let i=0;i<parts.length;i++){
+    if(emit) emit({step:'voice_progress', done:i+1, total:parts.length,
+      msg:`Voix off ${i+1}/${parts.length}...`});
+    const b=await ttsOne(parts[i], voiceId, modelId);
+    total+=await audioDuration(b);
+    blobs.push(b);
+  }
+  return {blob:new Blob(blobs,{type:'audio/mpeg'}), duration:total};
+}
+async function sttWords(blob){
+  const fd=new FormData();
+  fd.append('file', blob, 'voiceover.mp3');
+  fd.append('model_id','scribe_v1');
+  fd.append('timestamps_granularity','word');
+  const r=await fetch(EL_BASE+'/v1/speech-to-text',{method:'POST',headers:{'xi-api-key':EL_KEY},body:fd});
+  if(r.status!==200) throw new Error('ElevenLabs STT '+r.status+': '+(await r.text()).slice(0,200));
+  const words=[];
+  for(const w of ((await r.json()).words||[])){
+    if(w.start==null || w.end==null) continue;
+    const txt=w.text||'';
+    if(!txt.trim()) continue;
+    words.push({text:txt, start:+w.start, end:+w.end});
+  }
+  return words;
+}
+async function planScenes(fullText, voiceBlob, total, st){
+  const mn=+st.IMG_MIN_SEC||3, mx=+st.IMG_MAX_SEC||15, target=+st.IMG_TARGET_SEC||5.5;
+  if(st.IMG_TIMING!=='even'){
+    try{
+      const scenes=buildScenes(await sttWords(voiceBlob), total, target, mn, mx);
+      if(scenes) return scenes;
+    }catch(e){ logLine('STT indisponible ('+(e.message||e)+') — répartition égale.', ''); }
+  }
+  const n=imagesForDuration(total, parseInt(st.N_IMAGES_PER_CHUNK)||6, mn, mx);
+  const per=total/n;
+  const parts=splitTextEven(fullText, n);
+  return Array.from({length:n},(_,i)=>({
+    start:Math.round(i*per*1000)/1000, end:Math.round((i+1)*per*1000)/1000,
+    dur:Math.round(per*1000)/1000, text:parts[i]}));
+}
+
+// =================== LLM (OpenRouter DIRECT) : prompts d'images ===================
+// Direction artistique par défaut (reprise de engine.py IMAGE_STYLE_DEFAULT)
+const IMAGE_STYLE_DEFAULT = `You are an AI image generation prompt engineer. Your task is to generate detailed image prompts for a 2D cartoon animation style featuring a specific reference character.
+
+A reference character image is ALWAYS provided. The character's appearance from the reference must be preserved exactly - do not alter its design, proportions, or clothing.
+
+Art style: 2D digital cartoon animation, flat shading, clean vector-like lines. Desaturated muted tones (greys, slate blues, cool neutrals). Dramatic cinematic lighting (spotlights, harsh fluorescents, window light shafts). Institutional / sterile / lonely environments. Melancholic, introspective, tense mood. Cinematic framing.
+
+For each prompt: reference the character, describe emotion + pose, environment, lighting/color mood, camera angle, then end with "2D cartoon animation style, clean outlines, flat muted color palette, cinematic composition".`;
+
+function buildImageSystem(style, n){
+  const footer = `\n\nYou MUST respond with valid JSON only, no commentary, no markdown. `+
+    `Create exactly ${n} image prompts that follow the script chronologically.\n`+
+    `JSON structure: { "prompts": [ { "image_prompt": "...", "prompt_number": 1 } ] }`;
+  return style.trim()+footer;
+}
+function extractJson(text){
+  text=(text||'').trim().replace(/^```(?:json)?/,'').trim().replace(/```$/,'').trim();
+  try{ return JSON.parse(text); }
+  catch(e){
+    const a=text.indexOf('{'), b=text.lastIndexOf('}');
+    if(a!==-1&&b!==-1) return JSON.parse(text.slice(a,b+1));
+    throw e;
+  }
+}
+async function runLLM(user, system){
+  if(!OR_KEY) throw new Error('Clé OpenRouter manquante — renseignez keys.openrouter dans config.js');
+  const st=getSettings();
+  const messages=[];
+  if(system) messages.push({role:'system', content:system});
+  messages.push({role:'user', content:user});
+  const r=await fetch(`${LLM_BASE}/chat/completions`,{
+    method:'POST',
+    headers:{'Authorization':'Bearer '+OR_KEY,'Content-Type':'application/json'},
+    body:JSON.stringify({model:st.LLM_MODEL||SETTINGS_DEFAULTS.LLM_MODEL, messages}),
+  });
+  if(!r.ok) throw new Error('OpenRouter '+r.status+': '+(await r.text()).slice(0,300));
+  return ((await r.json()).choices[0].message.content||'').trim();
+}
+async function genScenePrompts(sceneTexts, stylePrompt){
+  const n=sceneTexts.length;
+  const sysmsg=buildImageSystem(stylePrompt||IMAGE_STYLE_DEFAULT, n);
+  const numbered=sceneTexts.map((t,i)=>`${i+1}. ${t}`).join('\n');
+  const user='Here are the consecutive scenes of one video segment, one per line, in order. '+
+    `Generate exactly ${n} image prompts, ONE for each scene in the same order `+
+    '(prompt 1 illustrates scene 1, prompt 2 scene 2, etc.). '+
+    'Respond with ONLY the JSON object, no preface, no markdown.\n\n'+
+    `Scenes:\n${numbered}`;
+  const raw=await runLLM(user, sysmsg);
+  let prompts;
+  try{ prompts=extractJson(raw).prompts||[]; }
+  catch(e){ throw new Error('JSON invalide pour les prompts d\'images. Début: '+raw.slice(0,160)); }
+  const out=prompts.map(p=>p.image_prompt||'').slice(0,n);
+  while(out.length<n) out.push(sceneTexts[out.length]);  // securite si le LLM en renvoie moins
+  return out;
+}
+async function genScenePromptsBatched(sceneTexts, emit, stylePrompt){
+  const out=[]; const n=sceneTexts.length;
+  for(let i=0;i<n;i+=PROMPT_BATCH){
+    const grp=sceneTexts.slice(i,i+PROMPT_BATCH);
+    if(emit) emit({step:'prompt_progress', done:Math.min(i+grp.length,n), total:n,
+      msg:`Prompts images ${i+1}-${i+grp.length}/${n}...`});
+    out.push(...await genScenePrompts(grp, stylePrompt));
+  }
+  return out;
+}
+
+// =================== Replicate via le RELAIS de la render API ===================
+const STYLE_IDENTITY='Reproduce EXACTLY the art style of the first reference image: same rendering, same line work, same color palette, same overall look. ';
+const CHAR_IDENTITY='The additional reference image(s) show the recurring main character(s): keep their head shape, proportions, colors and clothing perfectly consistent in every image. ';
+
+async function replicateRun(model, input){
+  if(!RENDER_API) throw new Error(NO_RENDER_MSG);
+  if(!RP_KEY) throw new Error('Clé Replicate manquante — renseignez keys.replicate dans config.js');
+  const r=await fetch(`${RENDER_API}/relay/replicate/v1/models/${model}/predictions`,{
+    method:'POST',
+    headers:renderHeaders({'X-Provider-Key':RP_KEY,'Content-Type':'application/json','Prefer':'wait'}),
+    body:JSON.stringify({input}),
+  });
+  if(r.status!==200 && r.status!==201)
+    throw new Error('Replicate '+r.status+': '+(await r.text()).slice(0,200));
+  let pred=await r.json();
+  for(let i=0;i<120;i++){   // jusqu'a ~10 min
+    if(pred.status==='succeeded') return pred.output;
+    if(pred.status==='failed'||pred.status==='canceled')
+      throw new Error('Replicate '+pred.status+': '+(pred.error||''));
+    await sleep(5000);
+    const g=await fetch(`${RENDER_API}/relay/replicate/v1/predictions/${pred.id}`,{
+      headers:renderHeaders({'X-Provider-Key':RP_KEY})});
+    pred=await g.json();
+  }
+  throw new Error('Replicate: délai dépassé (image non rendue à temps)');
+}
+// refs[0] = image de reference du STYLE (obligatoire), la suite = refs perso. anchor = image_1 du segment.
+async function genOneImage(prompt, refs, anchor, hasChar){
+  const st=getSettings();
+  const image_input=[refs[0]].concat(anchor?[anchor]:[], refs.slice(1)).slice(0,8);
+  const identity=STYLE_IDENTITY+(hasChar?CHAR_IDENTITY:'');
+  const output=await replicateRun(st.REPLICATE_MODEL||'google/nano-banana-2',{
+    prompt: identity+prompt,
+    image_input,
+    aspect_ratio:'16:9',
+    resolution: st.REPLICATE_RESOLUTION||'2K',
+    output_format:'jpg',
+  });
+  const url=Array.isArray(output)?output[0]:output;
+  if(!url) throw new Error('Sortie Replicate vide.');
+  let blob=null;
+  try{ const rr=await fetch(url); if(rr.ok) blob=await rr.blob(); }catch(e){}  // CORS : on garde l'URL
+  return {url, blob};
+}
+// Pool de generation parallele + ancre glissante (port _gen_images_parallel)
+async function genImagesParallel(tasks, refs, rolling, conc, hasChar, onDone){
+  const anchors={};
+  async function work(t, anchor){
+    let last=null;
+    for(let a=0;a<3;a++){   // quelques essais (reseau/5xx)
+      try{
+        t.result=await genOneImage(t.prompt, refs, anchor, hasChar);
+        onDone(t); return;
+      }catch(e){ last=e; await sleep(3000); }
+    }
+    throw new Error(`Image segment ${t.seg} #${t.index} a échoué : ${last&&(last.message||last)}`);
+  }
+  async function pool(items, fn){
+    const q=[...items];
+    await Promise.all(Array.from({length:Math.max(1,Math.min(conc,q.length))},async()=>{
+      while(q.length){ const it=q.shift(); await fn(it); }
+    }));
+  }
+  if(rolling){
+    const firsts=tasks.filter(t=>t.index===1), rest=tasks.filter(t=>t.index!==1);
+    await pool(firsts, async t=>{
+      await work(t,null);
+      anchors[t.seg]=t.result.blob ? await blobToDataURI(t.result.blob) : t.result.url;
+    });
+    await pool(rest, t=>work(t, anchors[t.seg]||null));
+  }else{
+    await pool(tasks, t=>work(t,null));
+  }
+}
+
+// =================== Placeholders (canvas — remplace ffmpeg drawtext) ===================
+const PALETTE=['2b303a','343a40','3b4252','454c5a','2e3440','4c566a'];
+function genPlaceholder(index, label){
+  return new Promise(res=>{
+    const c=document.createElement('canvas'); c.width=1920; c.height=1080;
+    const x=c.getContext('2d');
+    x.fillStyle='#'+PALETTE[(index-1)%PALETTE.length];
+    x.fillRect(0,0,1920,1080);
+    x.fillStyle='rgba(255,255,255,.85)';
+    x.font='46px Arial';
+    x.fillText(`${label}  -  ${index}`, 80, 1080-110);
+    c.toBlob(b=>res(b),'image/jpeg',0.92);
+  });
+}
+
+// =================== STYLES (presets de niche, IndexedDB) ===================
+let styles=[], selectedStyle=localStorage.getItem('pov_style')||'';
+const styleUrlCache={};
+
+function styleBySlug(slug){ return styles.find(s=>s.slug===slug); }
+function styleThumb(s){
+  if(!s.ref) return null;
+  const k=s.slug;
+  if(!styleUrlCache[k]) styleUrlCache[k]=URL.createObjectURL(s.ref);
+  return styleUrlCache[k];
+}
+async function ensureDefaultStyle(){
+  const all=await dbAll('styles');
+  if(all.length) return;
+  await dbPut('styles',{slug:'pov-professor', name:'POV Professor',
+    voice_id:'', voice_model:'', image_prompt:IMAGE_STYLE_DEFAULT, ref:null, characters:[]});
+}
+async function loadStyles(){
+  try{ styles=await dbAll('styles'); }catch(e){ styles=[]; }
+  if(!styleBySlug(selectedStyle)) selectedStyle = styles.length===1 ? styles[0].slug : '';
+  renderStyles(); updateGoState();
+}
+function renderStyles(){
+  $('styleGrid').innerHTML = styles.map(s=>{
+    const thumb=styleThumb(s);
+    return `
+    <div class="stylecard ${s.slug===selectedStyle?'sel':''}" onclick="selectStyle('${s.slug}')">
+      ${thumb
+        ? `<img class="sthumb" src="${thumb}" loading="lazy">`
+        : `<div class="noref">⚠ image de style<br>manquante (requise en mode IA)</div>`}
+      ${s.slug===selectedStyle?'<div class="scheck">✓</div>':''}
+      <button class="sedit" onclick="event.stopPropagation();openStyleEditor('${s.slug}')" title="Modifier le style">✎</button>
+      <div class="sbody">
+        <div class="sname">${escapeHtml(s.name)}</div>
+        <div class="smeta">${s.voice_id?('🎙 '+escapeHtml(s.voice_id.slice(0,12))+'…'):'🎙 voix par défaut'} · 👤 ${(s.characters||[]).length} perso</div>
+      </div>
+    </div>`;}).join('')
+    + `<div class="stylecard add" onclick="openStyleEditor(null)">＋ Nouveau style</div>`;
+}
+function selectStyle(slug){
+  selectedStyle=slug; localStorage.setItem('pov_style',slug);
+  renderStyles(); updateGoState();
+}
+function updateGoState(){
+  const s=styleBySlug(selectedStyle);
+  const st=getSettings();
+  let msg='';
+  if(!styles.length) msg='Crée un style d\'abord (＋ Nouveau style).';
+  else if(!s) msg='⬆ Choisis un style pour générer.';
+  else if(!EL_KEY) msg='⚠️ Clé ElevenLabs manquante (voix off) — renseignez keys.elevenlabs dans config.js.';
+  else if(st.IMAGE_MODE==='replicate' && !s.ref)
+    msg='⚠ Le style « '+s.name+' » n\'a pas d\'image de référence de style (obligatoire en mode IA) — clique ✎ pour l\'ajouter.';
+  else if(st.IMAGE_MODE==='replicate' && !OR_KEY)
+    msg='⚠️ Clé OpenRouter manquante (prompts d\'images) — renseignez keys.openrouter dans config.js.';
+  else if(st.IMAGE_MODE==='replicate' && !RENDER_API)
+    msg=NO_RENDER_MSG+' (les images Replicate passent par le relais).';
+  else if(st.IMAGE_MODE==='replicate' && !RP_KEY)
+    msg='⚠️ Clé Replicate manquante — renseignez keys.replicate dans config.js.';
+  $('go').disabled = !!msg;
+  $('status').textContent = msg || (s ? ('Style sélectionné : '+s.name) : '');
+}
+
+// ---- éditeur de style ----
+let editSlug=null;          // null = mode création
+let editRef=null, editChars=[], editRefDirty=false, editCharsDirty=false;
+function openStyleEditor(slug){
+  editSlug=slug; editRef=null; editChars=[]; editRefDirty=false; editCharsDirty=false;
+  const s = slug ? styleBySlug(slug) : null;
+  $('stTitle').textContent = s ? ('Style — '+s.name) : 'Nouveau style';
+  $('st_name').value = s ? s.name : '';
+  $('st_voice').value = s ? (s.voice_id||'') : '';
+  $('st_vmodel').value = s ? (s.voice_model||'') : '';
+  $('st_prompt').value = s ? (s.image_prompt||'') : IMAGE_STYLE_DEFAULT;
+  $('stDeleteBtn').classList.toggle('hidden', !s);
+  $('stSaveBtn').textContent = s ? 'Enregistrer' : 'Créer le style';
+  $('st_ref_file').value=''; $('st_char_files').value='';
+  if(s){ editRef=s.ref||null; editChars=(s.characters||[]).slice(); }
+  renderStyleImages();
+  $('styleOverlay').classList.add('show');
+}
+function closeStyleEditor(){ $('styleOverlay').classList.remove('show'); loadStyles(); }
+function renderStyleImages(){
+  const t=$('stRefThumb');
+  if(editRef){ t.src=URL.createObjectURL(editRef); t.classList.remove('hidden');
+    $('stRefBadge').textContent='✓ chargée'; $('stRefBadge').className='badge set'; }
+  else { t.classList.add('hidden');
+    $('stRefBadge').textContent='obligatoire'; $('stRefBadge').className='badge req'; }
+  const box=$('stCharThumbs'); box.innerHTML='';
+  editChars.forEach(b=>{ const i=document.createElement('img'); i.src=URL.createObjectURL(b); box.appendChild(i); });
+}
+function pickStyleRef(){
+  const f=$('st_ref_file').files[0]; if(!f) return;
+  editRef=f; editRefDirty=true;
+  renderStyleImages();
+  $('stRefMsg').textContent='✓ Image de style choisie — pense à Enregistrer.';
+}
+function pickStyleChars(){
+  const fs=$('st_char_files').files; if(!fs.length) return;
+  editChars=editChars.concat([...fs].slice(0, 6-editChars.length));
+  editCharsDirty=true;
+  renderStyleImages();
+  $('stCharMsg').textContent='✓ '+editChars.length+' référence(s) perso — pense à Enregistrer.';
+}
+function clearStyleChars(){
+  editChars=[]; editCharsDirty=true;
+  renderStyleImages();
+  $('stCharMsg').textContent='Références perso vidées — pense à Enregistrer.';
+}
+async function saveStyle(){
+  const name=$('st_name').value.trim()||'Nouveau style';
+  let slug=editSlug;
+  if(!slug){
+    slug=slugifyTitle(name).toLowerCase();
+    if(styleBySlug(slug)) slug=slug+'-'+Date.now().toString(36);
+  }
+  const prev=styleBySlug(slug)||{};
+  const rec={
+    slug, name,
+    voice_id:$('st_voice').value.trim(),
+    voice_model:$('st_vmodel').value.trim(),
+    image_prompt:$('st_prompt').value,
+    ref: editRefDirty ? editRef : (prev.ref||null),
+    characters: editCharsDirty ? editChars : (prev.characters||[]),
+  };
+  await dbPut('styles', rec);
+  delete styleUrlCache[slug];
+  if(!editSlug) selectedStyle=slug, localStorage.setItem('pov_style',slug);
+  editSlug=slug;
+  closeStyleEditor();
+}
+async function deleteStyle(){
+  if(!editSlug) return;
+  const s=styleBySlug(editSlug);
+  if(!confirm('Supprimer définitivement le style « '+(s?s.name:editSlug)+' » ?')) return;
+  await dbDel('styles', editSlug);
+  delete styleUrlCache[editSlug];
+  if(selectedStyle===editSlug){ selectedStyle=''; localStorage.removeItem('pov_style'); }
+  editSlug=null;
+  $('styleOverlay').classList.remove('show');
+  loadStyles();
+}
+// Refs envoyees au modele image : [ref STYLE (obligatoire)] + refs perso (port resolve_style_refs)
+async function resolveStyleRefs(style){
+  if(!style.ref)
+    throw new Error(`Le style « ${style.name} » n'a pas d'image de référence de style (obligatoire). Ajoute-la dans l'éditeur de style.`);
+  const refs=[await blobToDataURI(style.ref)];
+  for(const c of (style.characters||[])) refs.push(await blobToDataURI(c));
+  return {refs, hasChar: refs.length>1};
+}
+
+// =================== visionneuses / review ===================
+function openLightbox(url){ $('lightboxImg').src=url; $('lightbox').classList.add('show'); }
+function closeLightbox(){ $('lightbox').classList.remove('show'); $('lightboxImg').src=''; }
+
+let rvList=[], rvPos=0, rvBusy=false;
+function openReviewer(pos){
+  rvList = currentProject ? currentProject.segments.flatMap(s=>s.images.map(im=>({seg:s.seg, im}))) : [];
+  if(!rvList.length) return;
+  rvPos = Math.max(0, Math.min(pos, rvList.length-1));
+  $('reviewer').classList.add('show');
+  rvRender();
+}
+function closeReviewer(){ $('reviewer').classList.remove('show'); }
+function rvRender(){
+  const {im}=rvList[rvPos];
+  $('rvImg').src=imgSrc(im);
+  $('rvCount').textContent=`Image ${rvPos+1}/${rvList.length}`;
+  $('rvDur').textContent=im.dur?im.dur+'s':'';
+  $('rvText').textContent=im.text?('« '+im.text+' »'):'(pas de texte)';
+  $('rvPrompt').value=im.prompt||'';
+  $('rvEdit').classList.remove('open');
+  $('rvSpin').classList.remove('show');
+  $('rvEditBtn').style.display=(currentProject && currentProject.image_mode==='replicate')?'':'none';
+}
+function rvNav(d){ if(rvBusy) return; rvPos=(rvPos+d+rvList.length)%rvList.length; rvRender(); }
+function rvToggleEdit(){ $('rvEdit').classList.toggle('open'); }
+async function rvRetry(useEdited){
+  if(rvBusy) return;
+  const {seg,im}=rvList[rvPos];
+  rvBusy=true; $('rvSpin').classList.add('show');
+  document.querySelectorAll('.rv-actions button, .rv-edit button').forEach(b=>b.disabled=true);
+  try{
+    await regenerateImage(seg, im.index, useEdited?$('rvPrompt').value:null);
+    rvRender();
+    refreshImgCard(seg, im);
+  }catch(e){ logLine('Retry: '+(e.message||e),'err'); }
+  rvBusy=false; $('rvSpin').classList.remove('show');
+  document.querySelectorAll('.rv-actions button, .rv-edit button').forEach(b=>b.disabled=false);
+}
+
+function openPicker(){ $('pickerSearch').value=''; renderPicker(); $('picker').classList.add('show'); $('pickerSearch').focus(); }
+function closePicker(){ $('picker').classList.remove('show'); }
+function renderPicker(){
+  const q=$('pickerSearch').value.trim().toLowerCase();
+  const cur = rvList[rvPos];
+  const rows = rvList.map((x,i)=>({x, num:i+1}))
+    .filter(r=> !q || String(r.num).includes(q) || (r.x.im.text||'').toLowerCase().includes(q));
+  $('pickerGrid').innerHTML = rows.map(r=>`
+    <div class="pickcell" onclick="doReplace(${r.num})" title="${escapeHtml(r.x.im.text||'')}">
+      <img src="${imgSrc(r.x.im)}" loading="lazy">
+      <div class="n">#${r.num}${r.x===cur?' (actuelle)':''} · ${r.x.im.dur||''}s</div>
+    </div>`).join('') || '<div class="hint">Aucun résultat.</div>';
+}
+// Remplace l'image cible par une COPIE d'une autre image du projet (port replace_image)
+async function doReplace(srcNum){
+  const src=rvList[srcNum-1], tgt=rvList[rvPos];
+  closePicker();
+  if(!src || src===tgt) return;
+  tgt.im.blob=src.im.blob||null;
+  tgt.im.url=src.im.url||null;
+  tgt.im._url=null;
+  tgt.im.prompt=src.im.prompt||tgt.im.prompt||'';
+  await dbPut('projects', currentProject);
+  rvRender();
+  refreshImgCard(tgt.seg, tgt.im);
+}
+
+document.addEventListener('keydown', e=>{
+  if($('picker').classList.contains('show')){ if(e.key==='Escape') closePicker(); return; }
+  if($('reviewer').classList.contains('show')){
+    if(e.key==='ArrowLeft') rvNav(-1);
+    else if(e.key==='ArrowRight') rvNav(1);
+    else if(e.key==='Escape') closeReviewer();
+    return;
+  }
+  if(e.key==='Escape'){ closeLightbox(); }
+});
+
+// =================== Réglages (modal) ===================
+function loadConfigUI(){
+  const c=getSettings();
+  $('IMAGE_MODE').value=c.IMAGE_MODE;
+  $('N_IMAGES_PER_CHUNK').value=c.N_IMAGES_PER_CHUNK;
+  $('IMAGE_FADE').value=c.IMAGE_FADE;
+  $('IMG_MIN_SEC').value=c.IMG_MIN_SEC;
+  $('IMG_MAX_SEC').value=c.IMG_MAX_SEC;
+  $('IMG_TARGET_SEC').value=c.IMG_TARGET_SEC;
+  $('IMG_CONCURRENCY').value=c.IMG_CONCURRENCY;
+  $('IMG_TIMING').checked=c.IMG_TIMING!=='even';
+  $('REPLICATE_MODEL').value=c.REPLICATE_MODEL;
+  $('REPLICATE_RESOLUTION').value=c.REPLICATE_RESOLUTION;
+  $('LLM_MODEL').value=c.LLM_MODEL;
+  $('CHAR_ROLLING_REF').checked=c.CHAR_ROLLING_REF==='1';
+  setBadge('elBadge', EL_KEY);
+  setBadge('orBadge', OR_KEY);
+  setBadge('rpBadge', RP_KEY);
+  setBadge('raBadge', RENDER_API);
+  toggleReplicate();
+}
+function setBadge(id,on){
+  const b=$(id); b.textContent=on?'configurée':'absente';
+  b.classList.toggle('set', !!on);
+}
+function toggleReplicate(){
+  $('replicateBox').classList.toggle('hidden', $('IMAGE_MODE').value!=='replicate');
+}
+$('IMAGE_MODE').addEventListener('change', toggleReplicate);
+
+function openSettings(){ loadConfigUI(); $('testResults').innerHTML=''; $('overlay').classList.add('show'); }
+function closeSettings(){ $('overlay').classList.remove('show'); }
+function saveSettings(){
+  const s=getSettings();
+  ['IMAGE_MODE','N_IMAGES_PER_CHUNK','IMAGE_FADE','IMG_MIN_SEC','IMG_MAX_SEC',
+   'IMG_TARGET_SEC','IMG_CONCURRENCY','REPLICATE_MODEL','REPLICATE_RESOLUTION','LLM_MODEL']
+    .forEach(k=>{ s[k]=$(k).value; });
+  s.CHAR_ROLLING_REF=$('CHAR_ROLLING_REF').checked?'1':'0';
+  s.IMG_TIMING=$('IMG_TIMING').checked?'aligned':'even';
+  setSettings(s);
+  closeSettings();
+  updateGoState();
+}
+async function testKeys(){
+  $('testBtn').disabled=true;
+  $('testResults').innerHTML='<div class="testrow run">Test en cours…</div>';
+  const rows=[];
+  // ElevenLabs (direct)
+  if(!EL_KEY) rows.push(['ElevenLabs (voix)',false,'clé absente (config.js)']);
+  else try{
+    const r=await fetch(EL_BASE+'/v1/user',{headers:{'xi-api-key':EL_KEY}});
+    if(r.status===200){
+      let msg='OK';
+      try{ const sub=(await r.json()).subscription||{};
+        if(sub.character_limit!=null) msg=`OK — ${sub.character_count}/${sub.character_limit} caractères ce mois`; }catch(e){}
+      rows.push(['ElevenLabs (voix)',true,msg]);
+    } else rows.push(['ElevenLabs (voix)',false,r.status===401?'clé invalide (401)':('erreur '+r.status)]);
+  }catch(e){ rows.push(['ElevenLabs (voix)',false,'réseau: '+e]); }
+  // OpenRouter (direct)
+  if(!OR_KEY) rows.push(['OpenRouter (LLM)',false,'clé absente (config.js)']);
+  else try{
+    const r=await fetch('https://openrouter.ai/api/v1/key',{headers:{'Authorization':'Bearer '+OR_KEY}});
+    rows.push(['OpenRouter (LLM)', r.status===200, r.status===200?'OK':('erreur '+r.status)]);
+  }catch(e){ rows.push(['OpenRouter (LLM)',false,'réseau: '+e]); }
+  // Replicate (via relais)
+  if(getSettings().IMAGE_MODE==='replicate'){
+    if(!RENDER_API) rows.push(['Replicate (images, via relais)',false,NO_RENDER_MSG]);
+    else if(!RP_KEY) rows.push(['Replicate (images)',false,'clé absente (config.js)']);
+    else try{
+      const r=await fetch(RENDER_API+'/relay/replicate/v1/account',{headers:renderHeaders({'X-Provider-Key':RP_KEY})});
+      if(r.status===200){
+        let msg='OK';
+        try{ msg='OK — compte « '+((await r.json()).username||'')+' »'; }catch(e){}
+        rows.push(['Replicate (images)',true,msg]);
+      } else rows.push(['Replicate (images)',false,'erreur '+r.status]);
+    }catch(e){ rows.push(['Replicate (images)',false,'relais injoignable: '+e]); }
+  }
+  // Render API (joignable ?)
+  if(!RENDER_API) rows.push(['Render API (rendu vidéo)',false,'non configurée (config.js)']);
+  else try{ await fetch(RENDER_API+'/', {method:'GET'}); rows.push(['Render API (rendu vidéo)',true,'joignable']); }
+  catch(e){ rows.push(['Render API (rendu vidéo)',false,'injoignable: '+e]); }
+  $('testResults').innerHTML=rows.map(([n,ok,msg])=>
+    `<div class="testrow ${ok?'ok':'err'}">${ok?'✓':'✗'} <b>${n}</b> — ${escapeHtml(msg)}</div>`).join('');
+  $('testBtn').disabled=false;
+}
+
+// =================== bibliotheque de projets (IndexedDB) ===================
+function openProjects(){ loadProjects(); $('projOverlay').classList.add('show'); }
+function closeProjects(){ $('projOverlay').classList.remove('show'); }
+async function loadProjects(){
+  let projects=[];
+  try{ projects=await dbAll('projects'); }catch(e){ $('projList').innerHTML='<div class="hint">Erreur: '+e+'</div>'; return; }
+  if(!projects.length){ $('projList').innerHTML='<div class="hint">Aucun projet pour l’instant.</div>'; return; }
+  projects.sort((a,b)=>(b.created||0)-(a.created||0));
+  $('projList').innerHTML=projects.map(p=>{
+    const nImg=p.segments.reduce((n,s)=>n+s.images.length,0);
+    return `
+    <div class="projrow">
+      <div>
+        <b>${escapeHtml(p.title)}</b>
+        <div class="hint">${p.segments.length} segment(s) · ${nImg} image(s) ·
+          <span class="${p.rendered?'st-final':'st-draft'}">${p.rendered?'✅ rendu':'🟡 à valider'}</span></div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn" onclick="openProject('${p.slug}')">Ouvrir</button>
+        <button class="btn ghost" onclick="deleteProject('${p.slug}')">🗑</button>
+      </div>
+    </div>`;}).join('');
+}
+async function openProject(slug){
+  const p=await dbGet('projects', slug);
+  if(!p){ alert('Projet introuvable.'); return; }
+  closeProjects();
+  $('progressCard').classList.add('hidden');
+  $('galleryCard').classList.remove('hidden');
+  $('resultCard').classList.add('hidden');
+  $('title').value=p.title||'';
+  if(p.script) $('script').value=p.script;
+  currentProject=p;
+  renderReview();
+  $('status').textContent='Projet chargé : '+p.title;
+  window.scrollTo(0,0);
+}
+async function deleteProject(slug){
+  if(!confirm('Supprimer définitivement ce projet ?')) return;
+  await dbDel('projects', slug);
+  if(currentProject && currentProject.slug===slug) currentProject=null;
+  loadProjects();
+}
+
+// =================== progression ===================
+const chips={};
+document.querySelectorAll('#steps .chip').forEach(c=>chips[c.dataset.k]=c);
+function chip(k,cls){ if(chips[k]){chips[k].className='chip '+cls;} }
+function logLine(msg,cls=''){
+  const d=document.createElement('div'); d.textContent='› '+msg; if(cls)d.className=cls;
+  $('log').appendChild(d); $('log').scrollTop=$('log').scrollHeight;
+}
+function setBar(pct){ pct=Math.max(0,Math.min(100,Math.round(pct))); $('barFill').style.width=pct+'%'; $('barPct').textContent=pct+'%'; }
+
+// ---- apercu live pendant la preparation ----
+function segBlock(level, title){
+  let el=document.getElementById('seg-'+level);
+  if(el) return el;
+  el=document.createElement('div'); el.className='seg'; el.id='seg-'+level;
+  el.innerHTML=`<div class="seg-head"><span class="lvl">${escapeHtml(title||('Segment '+level))}</span></div>
+    <div class="thumbs"></div><div class="pending">Génération des images…</div>`;
+  $('gallery').appendChild(el);
+  return el;
+}
+function addThumb(level, src){
+  const el=segBlock(level); const t=el.querySelector('.thumbs');
+  const i=document.createElement('img'); i.src=src; i.onclick=()=>openLightbox(i.src); t.appendChild(i);
+  const p=el.querySelector('.pending'); if(p) p.remove();
+}
+
+// ---- review editable (apres preparation) ----
+let currentProject=null;
+
+function renderReview(){
+  const p=currentProject;
+  $('gallery').innerHTML=''; let rvIdx=0;
+  p.segments.forEach(seg=>{
+    const block=document.createElement('div'); block.className='seg'; block.id='seg-card-'+seg.seg;
+    block.innerHTML=`<div class="seg-head"><span class="lvl">${escapeHtml(seg.label||('Segment '+seg.seg))}</span><span class="seg-actions"></span></div>`;
+    const grid=document.createElement('div'); grid.className='thumbs'; block.appendChild(grid);
+    seg.images.forEach(im=> grid.appendChild(imgCard(seg.seg, im, p.image_mode, rvIdx++)));
+    $('gallery').appendChild(block);
+  });
+  $('galleryTitle').textContent='Review — '+p.segments.length+' segment(s)';
+  $('reviewHint').classList.remove('hidden');
+  $('renderBtn').classList.remove('hidden');
+  $('galleryCard').classList.remove('hidden');
+}
+function imgCard(segIdx, im, mode, pos){
+  const card=document.createElement('div'); card.className='imgcard'; card.id=`img-${segIdx}-${im.index}`;
+  const editable=(mode==='replicate');
+  const meta=(im.dur?`${im.dur}s`:'')+(im.text?` — « ${escapeHtml(im.text)} »`:'');
+  card.innerHTML=`
+    <img src="${imgSrc(im)}">
+    <div class="imgspin">⏳ génération…</div>
+    ${meta?`<div class="imeta">${meta}</div>`:''}
+    <div class="ibtns">
+      <button onclick="retryImg(${segIdx},${im.index},false)">↻ Retry</button>
+      ${editable?`<button onclick="togglePedit(${segIdx},${im.index})">✎ Prompt</button>`:''}
+    </div>
+    ${editable?`<div class="pedit"><textarea>${escapeHtml(im.prompt)}</textarea><button onclick="retryImg(${segIdx},${im.index},true)">Régénérer avec ce prompt</button></div>`:''}`;
+  card.querySelector('img').onclick=()=>openReviewer(pos);
+  return card;
+}
+function refreshImgCard(segIdx, im){
+  const card=document.getElementById(`img-${segIdx}-${im.index}`);
+  if(!card) return;
+  card.querySelector('img').src=imgSrc(im);
+  const ta=card.querySelector('.pedit textarea'); if(ta) ta.value=im.prompt||'';
+}
+function togglePedit(seg,idx){ const p=document.getElementById(`img-${seg}-${idx}`).querySelector('.pedit'); p.style.display=(p.style.display==='block')?'none':'block'; }
+
+// Regenere UNE image (retry / prompt edite) — port regenerate_image, 100 % local
+async function regenerateImage(segIdx, imgIndex, newPrompt){
+  const p=currentProject;
+  const seg=p.segments.find(s=>s.seg===segIdx);
+  const im=seg && seg.images.find(x=>x.index===imgIndex);
+  if(!im) throw new Error('Image introuvable.');
+  if(p.image_mode==='replicate'){
+    const style=styleBySlug(p.style)|| (await dbGet('styles', p.style));
+    if(!style) throw new Error('Style du projet introuvable.');
+    const {refs,hasChar}=await resolveStyleRefs(style);
+    const st=getSettings();
+    let anchor=null;
+    const first=seg.images.find(x=>x.index===1);
+    if(st.CHAR_ROLLING_REF==='1' && imgIndex!==1 && first && (first.blob||first.url))
+      anchor=first.blob ? await blobToDataURI(first.blob) : first.url;
+    const prompt=(newPrompt||'').trim()||im.prompt;
+    const res=await genOneImage(prompt, refs, anchor, hasChar);
+    im.blob=res.blob; im.url=res.url; im._url=null; im.prompt=prompt;
+  }else{
+    im.blob=await genPlaceholder(imgIndex, seg.label); im.url=null; im._url=null;
+  }
+  await dbPut('projects', p);
+  return im;
+}
+async function retryImg(seg,idx,useEdited){
+  const card=document.getElementById(`img-${seg}-${idx}`);
+  let prompt=null;
+  if(useEdited) prompt=card.querySelector('.pedit textarea').value;
+  card.classList.add('busy');
+  try{
+    const im=await regenerateImage(seg, idx, prompt);
+    refreshImgCard(seg, im);
+  }catch(e){ logLine('Retry: '+(e.message||e),'err'); }
+  card.classList.remove('busy');
+}
+
+// =================== Phase 1 : PREPARER (voix off + images) — tout en local ===================
+async function prepareImages(){
+  const title=$('title').value.trim()||'pov_video';
+  const script=$('script').value;
+  const style=styleBySlug(selectedStyle);
+  const st=getSettings();
+  if(!style){ $('status').textContent='Choisis un style d\'abord.'; return; }
+  if(!script.trim()){ $('status').textContent='Colle un script d\'abord.'; return; }
+  if(!EL_KEY){ $('status').textContent='⚠️ Clé ElevenLabs manquante — renseignez keys.elevenlabs dans config.js.'; return; }
+  if(st.IMAGE_MODE==='replicate'){
+    if(!style.ref){ $('status').textContent='⚠ Ce style n\'a pas d\'image de référence (obligatoire en mode IA).'; return; }
+    if(!OR_KEY){ $('status').textContent='⚠️ Clé OpenRouter manquante — renseignez keys.openrouter dans config.js.'; return; }
+    if(!RENDER_API){ $('status').textContent=NO_RENDER_MSG; return; }
+    if(!RP_KEY){ $('status').textContent='⚠️ Clé Replicate manquante — renseignez keys.replicate dans config.js.'; return; }
+  }
+  $('go').disabled=true; $('status').textContent='Génération en cours…';
+  $('progressCard').classList.remove('hidden'); $('resultCard').classList.add('hidden');
+  $('galleryCard').classList.remove('hidden'); $('gallery').innerHTML='';
+  $('renderBtn').classList.add('hidden'); $('reviewHint').classList.add('hidden');
+  $('galleryTitle').textContent='Aperçu par segment';
+  $('log').innerHTML=''; Object.keys(chips).forEach(k=>chip(k,'')); setBar(0);
+
+  const emit=e=>{
+    if(e.msg) logLine(e.msg, e.status==='done'?'ok':'');
+    if(e.step==='voice_progress'){ chip('voice','active'); if(e.total) setBar(1+4*(e.done/e.total)); }
+    if(e.step==='prompt_progress'){ chip('voice','done'); chip('images','active'); if(e.total) setBar(5+3*(e.done/e.total)); }
+  };
+
+  try{
+    const slug=slugifyTitle(title);
+    logLine(`Script reçu (${script.split(/\s+/).filter(Boolean).length} mots).`,'ok');
+
+    // 1) Narration : on retire SEULEMENT les lignes "Level X", tout le reste verbatim
+    const fullText=stripHeadings(script)||script.trim();
+    const label=title;
+
+    // 2) Voix off complete (reutilisee si narration + voix identiques)
+    chip('voice','active');
+    logLine('Génération de la voix off complète…');
+    const voiceSig=JSON.stringify({voice:style.voice_id||'rU18Fk3uSDhmg5Xh41o4',
+      model:style.voice_model||'eleven_multilingual_v2'});
+    let voiceBlob=null, voiceDuration=0;
+    const existing=await dbGet('projects', slug);
+    if(existing && existing.voice && existing.narration===fullText && existing.voiceSig===voiceSig){
+      voiceBlob=existing.voice; voiceDuration=existing.voiceDuration||await audioDuration(voiceBlob);
+      logLine('Voix off inchangée, réutilisée.','ok');
+    }else{
+      const r=await ttsFull(fullText, style.voice_id||'rU18Fk3uSDhmg5Xh41o4',
+        style.voice_model||'eleven_multilingual_v2', emit);
+      voiceBlob=r.blob; voiceDuration=r.duration;
+    }
+    chip('voice','done'); setBar(5);
+
+    // 3) Transcription -> scenes timees (1 image / phrase, ~cible)
+    chip('structure','active');
+    logLine('Transcription de la voix off (timing des phrases)…');
+    const scenes=await planScenes(fullText, voiceBlob, voiceDuration, st);
+    const aligned=scenes.some(s=>s.text);
+    chip('structure','done');
+    logLine(`${scenes.length} scènes (${aligned?'alignées voix':'réparties'}).`,'ok');
+    setBar(6);
+
+    // 4) Prompts d'images timees (par lots) — OpenRouter direct
+    let prompts;
+    if(st.IMAGE_MODE==='replicate'){
+      emit({step:'prompt_progress', done:0, total:scenes.length, msg:'Génération des prompts d\'images…'});
+      prompts=await genScenePromptsBatched(scenes.map(s=>s.text), emit, style.image_prompt||null);
+    }else{
+      prompts=Array(scenes.length).fill('');
+    }
+
+    // 5) Generation de TOUTES les images en parallele (relais Replicate ou canvas)
+    chip('images','active');
+    const tasks=scenes.map((sc,i)=>({seg:1, index:i+1, prompt:prompts[i], label}));
+    const total=tasks.length;
+    const conc=Math.max(1, parseInt(st.IMG_CONCURRENCY)||4);
+    logLine(`${total} images à générer (${st.IMAGE_MODE==='replicate'?conc+' en parallèle':'placeholders locaux'})…`);
+    let done=0;
+    const onDone=t=>{
+      done++;
+      segBlock(1, label);
+      const src=t.result.blob?URL.createObjectURL(t.result.blob):t.result.url;
+      addThumb(1, src);
+      logLine(`Image ${done}/${total}`);
+      setBar(8+90*(done/total));
+    };
+    if(st.IMAGE_MODE==='replicate'){
+      const {refs,hasChar}=await resolveStyleRefs(style);
+      const rolling=st.CHAR_ROLLING_REF==='1';
+      await genImagesParallel(tasks, refs, rolling, conc, hasChar, onDone);
+    }else{
+      for(const t of tasks){
+        t.result={blob:await genPlaceholder(t.index, label), url:null};
+        onDone(t);
+      }
+    }
+    chip('images','done'); setBar(100);
+
+    // 6) Projet sauvegarde (IndexedDB) + review
+    const images=tasks
+      .sort((a,b)=>a.index-b.index)
+      .map((t,i)=>({index:t.index, prompt:t.prompt, dur:scenes[i].dur, text:scenes[i].text,
+        blob:t.result.blob||null, url:t.result.url||null}));
+    currentProject={
+      slug, title, script, image_mode:st.IMAGE_MODE, style:style.slug,
+      created:Date.now(), narration:fullText, voiceSig, voice:voiceBlob, voiceDuration,
+      rendered:false,
+      segments:[{seg:1, level:1, title:'', label, images}],
+    };
+    await dbPut('projects', currentProject);
+    renderReview();
+    $('status').textContent='Images prêtes — à valider.';
+    logLine('Images prêtes — à valider.','ok');
+  }catch(e){
+    logLine(''+(e.message||e),'err');
+    $('status').textContent='Erreur — voir le journal.';
+  }
+  $('go').disabled=false; updateGoState();
+}
+
+// =================== Phase 2 : RENDRE — manifest → render API ===================
+async function uploadBlob(blob, name){
+  const fd=new FormData();
+  fd.append('file', blob, name);
+  const r=await fetch(RENDER_API+'/uploads',{method:'POST', headers:renderHeaders(), body:fd});
+  if(!r.ok) throw new Error('upload '+r.status+': '+(await r.text()).slice(0,200));
+  return (await r.json()).upload_id;
+}
+async function renderVideo(){
+  const p=currentProject;
+  if(!p) return;
+  if(!RENDER_API){
+    $('status').textContent=NO_RENDER_MSG;
+    logLine(NO_RENDER_MSG,'err');
+    return;
+  }
+  const st=getSettings();
+  $('renderBtn').disabled=true; $('status').textContent='Rendu de la vidéo…';
+  $('progressCard').classList.remove('hidden'); $('resultCard').classList.add('hidden');
+  ['voice','structure','images'].forEach(k=>chip(k,'done')); chip('render','active'); chip('concat','');
+  setBar(0);
+  try{
+    // 1) upload des assets produits dans le navigateur
+    logLine('Upload de la voix off…');
+    const voiceRef='upload:'+await uploadBlob(p.voice, 'voiceover.mp3');
+    const segments=[];
+    let upDone=0; const upTotal=p.segments.reduce((n,s)=>n+s.images.length,0);
+    for(const seg of p.segments){
+      const images=[];
+      for(const im of [...seg.images].sort((a,b)=>a.index-b.index)){
+        let src;
+        if(im.blob){
+          src='upload:'+await uploadBlob(im.blob, `image_${seg.seg}_${im.index}.jpg`);
+        }else if(im.url){
+          src=im.url;   // le serveur telecharge lui-meme les URLs distantes
+        }else{
+          throw new Error(`Image ${seg.seg}#${im.index} sans donnée ni URL.`);
+        }
+        images.push({index:im.index, src, dur:im.dur, text:im.text||''});
+        upDone++; setBar(20*(upDone/upTotal));
+      }
+      segments.push({seg:seg.seg, label:seg.label, voiceover:voiceRef, images});
+    }
+    // 2) manifest → POST /render/pov
+    const manifest={
+      tool:'pov',
+      title:p.title, slug:p.slug,
+      settings:{
+        fps:25, width:1920, height:1080,
+        image_fade:parseFloat(st.IMAGE_FADE)||0.5,
+        render_batch:24,
+        export_clips:false,
+      },
+      segments,
+    };
+    logLine('Envoi du manifest à la render API…');
+    const r=await fetch(RENDER_API+'/render/pov',{
+      method:'POST', headers:renderHeaders({'Content-Type':'application/json'}), body:JSON.stringify(manifest)});
+    if(!r.ok) throw new Error('render/pov '+r.status+': '+(await r.text()).slice(0,300));
+    const {job_id}=await r.json();
+    // 3) polling /jobs/{id}
+    let lastMsg='';
+    for(;;){
+      await sleep(2500);
+      const jr=await fetch(RENDER_API+'/jobs/'+job_id,{headers:renderHeaders()});
+      if(!jr.ok) throw new Error('jobs '+jr.status);
+      const j=await jr.json();
+      if(j.message && j.message!==lastMsg){ logLine(j.message); lastMsg=j.message; }
+      if(typeof j.progress==='number') setBar(20+78*j.progress);
+      if(j.progress>0.85){ chip('render','done'); chip('concat','active'); }
+      if(j.status==='done'){
+        chip('render','done'); chip('concat','done'); setBar(100);
+        const out=RENDER_API+(j.output_url||('/jobs/'+job_id+'/output'));
+        $('player').src=out;
+        $('dl').href=out;
+        $('resultCard').classList.remove('hidden');
+        logLine('Vidéo terminée !','ok');
+        p.rendered=true;
+        await dbPut('projects', p);
+        break;
+      }
+      if(j.status==='error'){
+        chip('concat','err');
+        throw new Error(j.message||'erreur de rendu');
+      }
+    }
+  }catch(e){
+    logLine('Rendu: '+(e.message||e),'err');
+    chip('concat','err');
+    $('status').textContent='Erreur de rendu — voir le journal.';
+  }
+  $('renderBtn').disabled=false;
+}
+
+// =================== init ===================
+showRenderBanner();
+ensureDefaultStyle().then(loadStyles);
+</script>
+</body>
+</html>

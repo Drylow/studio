@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library - Explainer Videos</title>
+  <script src="../config.js"></script>
+  <script src="app.js"></script>
+  <script src="pipeline.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Explainer Videos"><img src="explainer-videos-logo.webp" alt="Explainer Videos"></a>
+      <a href="index.html">Queue</a>
+      <a href="library.html">Library</a>
+      <a href="settings.html">Settings</a>
+      <a href="activity.html">Activity</a>
+    </nav>
+  </header>
+  <main>
+<section class="workspace">
+  <h1>Library</h1>
+  <div class="panel"><input id="search" placeholder="Search projects"><div id="library"></div></div>
+</section>
+  </main>
+<script>
+let projects = [];
+async function loadLibrary() {
+  projects = (await listProjects()).filter(p => p.status === 'done' && p.render && p.render.output_url);
+  render();
+}
+function render() {
+  const q = search.value.toLowerCase();
+  const rows = projects
+    .filter(p => p.title.toLowerCase().includes(q) || p.topic.toLowerCase().includes(q))
+    .map(p => `<article class="library-row">
+      <div><b>${escapeHtml(p.title)}</b><p>${escapeHtml(p.topic)}</p><p class="sub">Terminé ${localTime(p.render.finished_at || p.updated_at)}</p></div>
+      <span class="pill done">done</span>
+      <a href="project.html?id=${encodeURIComponent(p.id)}">Open</a>
+      <a href="${escapeAttr(p.render.output_url)}" download>Download</a>
+    </article>`);
+  library.innerHTML = rows.join('') || '<p>Aucune vidéo terminée pour le moment. Les projets rendus apparaissent ici.</p>';
+}
+search.addEventListener('input', render);
+loadLibrary();
+</script>
+</body>
+</html>

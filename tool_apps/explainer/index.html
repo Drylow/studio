@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Queue - Explainer Videos</title>
+  <script src="../config.js"></script>
+  <script src="app.js"></script>
+  <script src="pipeline.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Explainer Videos"><img src="explainer-videos-logo.webp" alt="Explainer Videos"></a>
+      <a href="index.html">Queue</a>
+      <a href="library.html">Library</a>
+      <a href="settings.html">Settings</a>
+      <a href="activity.html">Activity</a>
+    </nav>
+  </header>
+  <main>
+<section class="workspace two-col">
+  <div>
+    <h1>Ideas Queue</h1>
+    <form class="panel stack" id="ideaForm">
+      <label>Video topic<textarea name="topic" rows="5" placeholder="Every major human organ explained simply" required></textarea></label>
+      <label>Video length <span id="lengthOut" class="right-value">20 minutes</span><input type="range" name="video_length_minutes" min="5" max="120" value="20"></label>
+      <label>Chapters <span id="chaptersOut" class="right-value">Auto</span><input type="range" name="chapterIndex" min="0" max="17" value="0"></label>
+      <div class="grid-3">
+        <label>FPS<select name="fps">
+          <option value="24" selected>24</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+        </select></label>
+        <label>Width<select name="width">
+          <option value="1280">1280</option>
+          <option value="1920" selected>1920</option>
+          <option value="2560">2560</option>
+          <option value="3840">3840</option>
+        </select></label>
+        <label>Height<select name="height">
+          <option value="720">720</option>
+          <option value="1080" selected>1080</option>
+          <option value="1440">1440</option>
+          <option value="2160">2160</option>
+        </select></label>
+      </div>
+      <button class="primary" type="submit">Add idea</button>
+      <p class="note">Tout le pipeline tourne dans cette page (projets stockés en local, dans ce navigateur). Gardez l'onglet projet ouvert pendant une génération.</p>
+    </form>
+    <div class="stats" id="stats"></div>
+  </div>
+  <div>
+    <div class="row between">
+      <h2>Projects</h2>
+    </div>
+    <div id="projects" class="project-list"></div>
+  </div>
+</section>
+  </main>
+<script>
+const validCounts = VALID_CHAPTER_COUNTS;
+const form = document.querySelector('#ideaForm');
+const length = form.video_length_minutes;
+const chapter = form.chapterIndex;
+length.addEventListener('input', () => lengthOut.textContent = `${length.value} minutes`);
+chapter.addEventListener('input', () => chaptersOut.textContent = chapter.value === '0' ? 'Auto' : validCounts[Number(chapter.value)-1]);
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const topic = form.topic.value.trim();
+  if (!topic) return;
+  const idx = Number(chapter.value);
+  await createProject({
+    topic,
+    video_length_minutes: Number(length.value),
+    chapter_count: idx === 0 ? 'auto' : validCounts[idx-1],
+    fps: Number(form.fps.value),
+    width: Number(form.width.value),
+    height: Number(form.height.value),
+  });
+  form.topic.value = '';
+  await loadProjects();
+});
+
+async function loadProjects() {
+  const items = await listProjects();
+  const active = items.filter(p => ['running', 'rendering', 'queued'].includes(p.status)).length;
+  const done = items.filter(p => p.status === 'done').length;
+  stats.innerHTML = `<div><span>Total</span><strong>${items.length}</strong></div><div><span>Active</span><strong>${active}</strong></div><div><span>Done</span><strong>${done}</strong></div>`;
+  projects.innerHTML = items.length
+    ? items.map(projectCard).join('')
+    : '<p>Aucun projet pour le moment. Ajoutez une idée à gauche.</p>';
+}
+
+function projectCard(p) {
+  const download = p.status === 'done' && p.render && p.render.output_url
+    ? `<a href="${escapeAttr(p.render.output_url)}" download>Download</a>` : '';
+  return `<article class="project-card" data-project-id="${escapeAttr(p.id)}">
+    <div class="grow"><h3>${escapeHtml(p.title)}</h3><p>${p.video_length_minutes} min · ${p.width}x${p.height} @ ${p.fps} fps</p><p>${escapeHtml(p.topic)}</p><p class="sub">Créé ${localTime(p.created_at)}${p.current_step ? ' · ' + escapeHtml(p.current_step) : ''}</p></div>
+    <span class="pill ${escapeAttr(p.status)}">${escapeHtml(p.status)}</span>
+    <a href="project.html?id=${encodeURIComponent(p.id)}">Open</a>
+    <a class="text-btn" href="project.html?id=${encodeURIComponent(p.id)}&start=1">Generate</a>
+    ${download}
+    <button class="danger-text" onclick="removeProject('${escapeAttr(p.id)}', '${escapeAttr(p.title)}')">Delete</button>
+  </article>`;
+}
+
+async function removeProject(id, title) {
+  if (!confirm(`Are you sure you want to delete "${title}"?`)) return;
+  await deleteProjectAndData(id);
+  await loadProjects();
+}
+
+loadProjects();
+setInterval(loadProjects, 5000);
+</script>
+</body>
+</html>

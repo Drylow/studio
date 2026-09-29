@@ -1,0 +1,26 @@
+{# Meta SEO + favicon emoji 🌃 partagés par toutes les pages. #}
+<meta name="description" content="Night City Never Sleeps.">
+<meta name="theme-color" content="#010207">
+<meta property="og:title" content="🌃 Night City">
+<meta property="og:description" content="Night City Never Sleeps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://edgerunners.fr/">
+{# Image de partage (Discord/réseaux). Fichier public dans static/ (hors gate).
+   Format conseillé : 1200x630 px. Remplace le fichier pour changer l'image. #}
+<meta property="og:image" content="https://edgerunners.fr/static/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🌃 Night City">
+<meta name="twitter:description" content="Night City Never Sleeps.">
+<meta name="twitter:image" content="https://edgerunners.fr/static/images/og-cover.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌃</text></svg>">
+{# Fond sombre appliqué DÈS le parsing du HTML (avant le téléchargement des CSS
+   externes) → supprime le flash blanc au changement de page (FOUC). #}
+<meta name="color-scheme" content="dark">
+<style>html{background:#03030a;color-scheme:dark}body{background:#03030a}</style>
+{# Polices chargées en PARALLÈLE via <link> (au lieu de @import dans le CSS,
+   qui est bloquant et sériel). preconnect réchauffe la connexion à Google. #}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap">

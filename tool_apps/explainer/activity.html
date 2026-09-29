@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity - Explainer Videos</title>
+  <script src="../config.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Explainer Videos"><img src="explainer-videos-logo.webp" alt="Explainer Videos"></a>
+      <a href="index.html">Queue</a>
+      <a href="library.html">Library</a>
+      <a href="settings.html">Settings</a>
+      <a href="activity.html">Activity</a>
+    </nav>
+  </header>
+  <main>
+<section class="workspace">
+  <div class="row between">
+    <h1>Activity</h1>
+    <button class="danger-text" id="clearBtn">Clear log</button>
+  </div>
+  <p class="sub">Journal local des événements (stocké dans ce navigateur).</p>
+  <div class="panel activity" id="activity"></div>
+</section>
+  </main>
+<script>
+async function loadActivity() {
+  const scrollTop = activity.scrollTop;
+  const events = await listEvents(null, 400);
+  activity.innerHTML = events.map(e => `<div><b>${escapeHtml(e.event)}</b> <span class="sub">${escapeHtml(e.level)} · ${escapeHtml(e.project_id || '')}</span><br><span class="sub">${localTime(e.created_at)}</span><p>${escapeHtml(e.message)}</p></div>`).join('') || '<p>Rien pour le moment.</p>';
+  activity.scrollTop = scrollTop;
+}
+clearBtn.addEventListener('click', async () => { if (confirm('Vider le journal ?')) { await clearEvents(); await loadActivity(); } });
+loadActivity();
+setInterval(loadActivity, 5000);
+</script>
+</body>
+</html>

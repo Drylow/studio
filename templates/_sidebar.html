@@ -1,0 +1,104 @@
+{# ── SIDEBAR COMMUNE ──────────────────────────────────────────────────
+   Utilisée par toutes les pages : {% include '_sidebar.html' %}
+   Variables : active_page ('home'|'projects'|'surveillance'|...),
+               is_boss / role (injectés globalement par app.py).
+   FUTURS TOOLS : ajouter les liens dans la section CYBERDECK // TOOLS
+   ci-dessous (avec {% if is_boss %} si réservé au boss). #}
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-tag">// v2.077 // NIGHT CITY BUILD</div>
+    <div class="logo-name">DRYLOW<br>STUDIO</div>
+    <div class="logo-sub">NIGHT&nbsp;CITY&nbsp;//&nbsp;NETRUNNER</div>
+  </div>
+
+  <nav class="nav-section">
+    <div class="nav-label" style="margin-top:4px;">NEURAL&nbsp;NAV</div>
+
+    <a href="/" class="nav-item {% if active_page == 'home' %}active{% endif %}">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+        <path d="M9 21V12h6v9"/>
+      </svg>
+      Accueil
+      <span class="nav-tag">// HQ</span>
+    </a>
+
+    {% if is_boss %}
+    <div class="nav-label" style="margin-top:16px;">BLACK&nbsp;ICE&nbsp;//&nbsp;ROOT</div>
+    <a href="/surveillance" class="nav-item gold-item {% if active_page == 'surveillance' %}active{% endif %}">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      Surveillance
+      <span class="nav-tag">// ICE</span>
+    </a>
+    {% endif %}
+
+    <div class="nav-label" style="margin-top:16px;">CYBERDECK&nbsp;//&nbsp;TOOLS</div>
+    {# ── CATÉGORIES + outils : registre dans routes/tools.py (nav_categories).
+       Chaque catégorie est cliquable (page dédiée) et liste ses outils en
+       dessous. Boss-only pour l'instant. #}
+    {% if is_boss %}
+    {% for c in nav_categories %}
+    <a href="/category/{{ c.slug }}" class="nav-item nav-cat {% if active_page == 'cat-' + c.slug %}active{% endif %}">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">{{ c.icon|safe }}</svg>
+      {{ c.name }}
+      <span class="nav-tag">{{ c.tools|length }}</span>
+    </a>
+    {% endfor %}
+    {% else %}
+    <span class="nav-item" style="opacity:0.45;cursor:default;pointer-events:none;">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+        <circle cx="12" cy="12" r="4"/>
+      </svg>
+      En implantation…
+      <span class="nav-tag">// SOON</span>
+    </span>
+    {% endif %}
+  </nav>
+
+  <div class="sidebar-footer {% if not is_boss %}no-flair{% endif %}">
+    <div class="status-dot">
+      <div class="dot"></div>
+      NEURAL LINK · ONLINE
+    </div>
+    <span class="clearance-chip {{ 'boss' if is_boss else '' }}">
+      {{ '◆ CLEARANCE · ROOT // BOSS' if is_boss else '◇ CLEARANCE · CREW // GUEST' }}
+    </span>
+  </div>
+</aside>
+
+{# ── NAV MOBILE : injecte un hamburger dans la topbar + un voile, et ouvre/
+   ferme la sidebar en drawer sous 900px. Chargé sur TOUTES les pages (guest
+   inclus) car ce partial est commun. Le CSS (.nc-burger/.nc-scrim) est dans
+   cyberpunk.css et n'est visible qu'en dessous de 900px. #}
+<script>
+(function () {
+  function initNav() {
+    var sidebar = document.querySelector('.sidebar');
+    var topbar = document.querySelector('.topbar');
+    if (!sidebar || !topbar || document.querySelector('.nc-burger')) return;
+
+    var burger = document.createElement('button');
+    burger.className = 'nc-burger';
+    burger.type = 'button';
+    burger.setAttribute('aria-label', 'Menu');
+    burger.innerHTML = '<span></span><span></span><span></span>';
+    topbar.insertBefore(burger, topbar.firstChild);
+
+    var scrim = document.createElement('div');
+    scrim.className = 'nc-scrim';
+    document.body.appendChild(scrim);
+
+    function close() { document.body.classList.remove('nav-open'); }
+    burger.addEventListener('click', function () { document.body.classList.toggle('nav-open'); });
+    scrim.addEventListener('click', close);
+    sidebar.querySelectorAll('a.nav-item').forEach(function (a) { a.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNav);
+  else initNav();
+})();
+</script>

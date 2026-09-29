@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Secrets
+.env
+# Clés API des outils (ne JAMAIS committer en clair). À uploader via FTP en prod.
+tool_apps/config.js
+# Archive de deploy qui embarque .env + config.js
+drylow_deploy.zip
+
+# Local database
+*.db
+
+# Generated media
+static/projects/*
+static/audio/*.mp3
+static/audio/*.zip
+static/videos/*
+static/images/*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+
+# Passenger (o2switch)
+passenger_wsgi.pyc
+stderr.log
+
+# Local logs, temp, deploy snapshots
+*.log
+tmp/
+tmp_thumbtest/
