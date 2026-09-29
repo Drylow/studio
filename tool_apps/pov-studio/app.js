@@ -1141,4 +1141,9 @@ async function viewSettings() {
   };
 }
 
+// ouverture directe d'un projet depuis un studio de chaîne (bouton « Éditeur »)
+try {
+  const open = localStorage.getItem('pov.openProject');
+  if (open) { localStorage.removeItem('pov.openProject'); if (!location.hash) history.replaceState(null, '', '#/project/' + open); }
+} catch (_) { /* stockage indisponible : ouverture normale */ }
 route();

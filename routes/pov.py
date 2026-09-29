@@ -549,6 +549,97 @@ _ACTIONS = {
 }
 
 
+# ── Studio simplifié par chaîne (ex. Oddly Specific Lives) : titre + durée → vidéo ──
+
+@pov_bp.route("/api/pov/studio/<template>", methods=["GET"])
+def studio(template):
+    try:
+        ch = E.studio_channel(template)
+    except KeyError:
+        return _err("Studio inconnu.", 404)
+    prs = [E.studio_summary(p) for p in store.list_projects() if p.get("channel_id") == ch["id"]]
+    mt = ch.get("montage") or {}
+    return jsonify({"channel": {"id": ch["id"], "name": ch.get("name"), "wpm": ch.get("wpm") or 150,
+                                "default_minutes": ch.get("default_minutes") or 10,
+                                "pacing": mt.get("pacing") or 6, "voice_provider": (ch.get("voice") or {}).get("provider"),
+                                "thumb_style": ch.get("thumb_style") or "",
+                                "has_reference": bool((ch.get("reference_scripts") or "").strip())},
+                    "projects": prs})
+
+
+@pov_bp.route("/api/pov/studio/<template>/videos", methods=["POST"])
+def studio_video(template):
+    try:
+        ch = E.studio_channel(template)
+    except KeyError:
+        return _err("Studio inconnu.", 404)
+    b = _body()
+    title = (b.get("title") or "").strip()
+    if len(title) < 4:
+        return _err("Écris le titre de la vidéo.")
+    if not ai.configured():
+        return _err("Proxy IA non configuré (AI_BASE_URL / AI_API_KEY dans le .env).", 503)
+    if not media.available():
+        return _err("ffmpeg introuvable (pip install imageio-ffmpeg).", 503)
+    minutes = max(1.0, min(60.0, float(b.get("minutes") or ch.get("default_minutes") or 10)))
+    pr = E.new_project(ch, title, minutes, (b.get("notes") or "").strip())
+    pr["title_locked"] = True  # le titre choisi reste celui de la vidéo
+    store.save_project(pr)
+    store.start_job(pr["id"], "autopilot", lambda j: E.job_autopilot(j, pr["id"], render_video=True))
+    return jsonify(E.studio_summary(store.get_project(pr["id"])))
+
+
+@pov_bp.route("/api/pov/projects/<pid>/thumbs/custom", methods=["POST"])
+def thumbs_custom(pid):
+    """Miniatures : lien YouTube (sa miniature sert de modèle) et/ou images de référence + prompt, 1 à 4."""
+    pr = store.get_project(pid)
+    if not pr:
+        return _err("Projet introuvable.", 404)
+    prompt = (request.form.get("prompt") or "").strip()
+    if not prompt:
+        return _err("Écris un prompt pour la miniature.")
+    if not ai.configured():
+        return _err("Proxy IA non configuré.", 503)
+    d = os.path.join(store.project_dir(pid), "thumbs", "refs")
+    os.makedirs(d, exist_ok=True)
+    refs = []
+    yt = (request.form.get("youtube_url") or "").strip()
+    if yt:
+        blob = E.youtube_thumbnail(yt)
+        if not blob:
+            return _err("Miniature YouTube introuvable pour ce lien.")
+        path = os.path.join(d, f"yt_{int(time.time() * 1000)}.jpg")
+        with open(path, "wb") as f:
+            f.write(blob)
+        refs.append(path)
+    for i, fs in enumerate(request.files.getlist("files")[:4]):
+        data = fs.read()
+        if not data:
+            continue
+        try:
+            path = os.path.join(d, f"ref_{int(time.time() * 1000)}_{i}.png")
+            E.save_png(data, path)
+        except Exception:  # noqa: BLE001
+            return _err(f"Image illisible : {fs.filename}")
+        refs.append(path)
+    count = max(1, min(4, int(request.form.get("count") or 2)))
+    style = (request.form.get("channel_style") or "1") != "0"
+    try:
+        job = store.start_job(pid, "thumbnails", lambda j: E.job_thumbs_custom(j, pid, prompt, count, refs, style))
+    except RuntimeError as e:
+        return _err(e, 409)
+    return jsonify({"job": job.as_dict()})
+
+
+@pov_bp.route("/api/pov/youtube-thumb", methods=["GET"])
+def youtube_thumb():
+    """Aperçu de la miniature d'une vidéo YouTube (évite les soucis de CORS / cache côté navigateur)."""
+    blob = E.youtube_thumbnail(request.args.get("url") or "")
+    if not blob:
+        return _err("Miniature introuvable.", 404)
+    return send_file(io.BytesIO(blob), mimetype="image/jpeg", max_age=3600)
+
+
 @pov_bp.route("/api/pov/projects/<pid>/<action>", methods=["POST"])
 def project_action(pid, action):
     pr = store.get_project(pid)

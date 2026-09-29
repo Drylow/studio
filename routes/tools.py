@@ -63,6 +63,22 @@ TOOLS = {
         "icon": '<path d="M4 5h16v11H4z"/><path d="M8 21h8M12 16v5"/><circle cx="9" cy="10" r="1.6"/>'
                 '<path d="M13 12l2.5-3 2.5 3"/>',
     },
+    "osl-studio": {
+        "slug": "osl-studio",
+        "category": "youtube",
+        "name": "ODDLY SPECIFIC LIVES",
+        "short": "Oddly Specific Lives",
+        "tag": "// OSL",
+        "desc": "Le studio de la chaîne Oddly Specific Lives : tu mets le titre et la durée → script "
+                "FacelessOS, voix Algrow, persos consistants, images, musique et montage, vidéo prête. "
+                "Miniatures depuis un lien YouTube ou des images de référence.",
+        "entry": "osl-studio/index.html",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "pink",
+        "icon": '<circle cx="12" cy="8" r="4.2"/><path d="M5.5 21c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/>'
+                '<path d="M18.5 3.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
+    },
     "delamain": {
         "slug": "delamain",
         "category": "agent",

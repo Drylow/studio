@@ -311,9 +311,53 @@ def new_channel(data=None, template=None):
     for name, desc in t.get("characters_extra") or []:
         ch["style"]["characters"].append({"id": store.new_id("chr"), "name": name, "description": desc,
                                           "image": None, "always": False})
+    ch["template"] = template or ""
     ch = apply_channel_update(ch, data)
+    _apply_preset_images(ch, template)
     store.save_channel(ch)
     return ch
+
+
+PRESETS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "presets")
+
+
+def _apply_preset_images(ch, template):
+    """Images livrées avec un modèle (presets/<modèle>/style.jpg, thumb.jpg) : la chaîne est prête d'emblée."""
+    d = os.path.join(PRESETS_DIR, template or "")
+    for kind, name in (("style", "style.jpg"), ("thumb", "thumb.jpg")):
+        path = os.path.join(d, name)
+        if not template or not os.path.isfile(path):
+            continue
+        with open(path, "rb") as f:
+            rel = save_channel_image(ch, f.read(), kind)
+        if kind == "style":
+            ch["style"]["ref"] = rel
+        else:
+            ch["thumb_ref"] = rel
+
+
+def studio_channel(template):
+    """La chaîne d'un studio simplifié (ex. Oddly Specific Lives) : retrouvée par son modèle, créée sinon."""
+    if template not in TEMPLATES:
+        raise KeyError(template)
+    name = TEMPLATES[template].get("name", "")
+    for c in store.list_channels():
+        if c.get("template") == template:
+            return c
+    t = TEMPLATES[template]
+    for c in store.list_channels():  # chaîne créée avant qu'on mémorise le modèle
+        if not c.get("template") and c.get("format") == t.get("format") and \
+                (c.get("name") == name or (c.get("style") or {}).get("preset") == t.get("style")):
+            c["template"] = template
+            if not (c.get("reference_scripts") or "").strip() and t.get("reference_urls"):
+                # chaîne d'avant la vidéo de référence : on reprend l'écriture actuelle du modèle
+                c["reference_urls"] = t["reference_urls"]
+                c["reference_scripts"] = _bundled_refs(t["reference_urls"])
+                c["bible"] = t.get("bible") or TEMPLATE_BIBLES.get(template, c.get("bible", ""))
+                c["tone"], c["rules"] = t.get("tone", c.get("tone", "")), t.get("rules", c.get("rules", ""))
+            store.save_channel(c)
+            return c
+    return new_channel({}, template=template)
 
 
 _CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
@@ -1644,6 +1688,104 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
         x["thumbnails"] = (results + (x.get("thumbnails") or []))[:8]
     store.update_project(pid, save)
     job.update(1.0, f"{len(results)} miniature(s) prête(s).")
+
+
+def save_png(blob, path, side=1536):
+    """Image importée → PNG borné (refuse tout ce que Pillow ne sait pas lire)."""
+    from PIL import Image
+    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    im.thumbnail((side, side))
+    im.save(path, "PNG")
+    return path
+
+
+def youtube_thumbnail(url_or_id):
+    """Miniature d'une vidéo YouTube (maxres, sinon hq) → bytes, None si introuvable."""
+    ids = _video_ids(url_or_id)
+    if not ids:
+        return None
+    import urllib.request
+    for q in ("maxresdefault", "sddefault", "hqdefault"):
+        try:
+            req = urllib.request.Request(f"https://img.youtube.com/vi/{ids[0]}/{q}.jpg",
+                                         headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                blob = r.read()
+            if len(blob) > 3000:  # YouTube renvoie une vignette grise de ~1 Ko quand la taille n'existe pas
+                return blob
+        except Exception:  # noqa: BLE001
+            continue
+    return None
+
+
+def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=True):
+    """Miniatures « à la manière de » : 1re référence = la miniature à imiter (lien YouTube ou image),
+    les suivantes = images d'appoint (perso, objet, style) ; 1 à 4 variantes en parallèle."""
+    pr = store.get_project(pid)
+    ch = store.get_channel(pr["channel_id"])
+    count = max(1, min(4, int(count or 1)))
+    refs = [p for p in (ref_files or []) if p and os.path.isfile(p)][:4]
+    thumb_style = (ch.get("thumb_style") or "").strip()
+    if channel_style and not refs:
+        tr = channel_ref_path(ch, ch.get("thumb_ref"))
+        if tr and os.path.isfile(tr):
+            refs = [tr]
+    with_text = ch.get("thumb_text", True) is not False
+    head = []
+    if refs:
+        head.append("Reference image 1 = THE THUMBNAIL TO MODEL: reproduce its composition, framing, art style, "
+                    "rendering, outlines, colors and overall look as closely as possible, with the new content "
+                    "described below.")
+        for i in range(2, len(refs) + 1):
+            head.append(f"Reference image {i} = an extra reference from the creator (a character, object, place "
+                        "or style detail): use it as the prompt describes.")
+    full = "\n".join(head) + ("\n" if head else "") + (
+        f"YouTube thumbnail, 16:9, for the video \"{pr.get('title', '')}\". {prompt.strip()} "
+        "Bright, saturated, high contrast, readable at small size.")
+    if channel_style and thumb_style:
+        full += " CHANNEL THUMBNAIL STYLE: " + thumb_style
+    if not with_text and "text" not in prompt.lower():
+        full += " No text, no letters, no words (a flag is fine)."
+    d = store.project_dir(pid)
+    os.makedirs(os.path.join(d, "thumbs"), exist_ok=True)
+    job.update(0.05, f"Génération de {count} miniature(s)…")
+    results, done = [], 0
+
+    def one(k):
+        blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
+        rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}_{k}.jpg"
+        ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=92)
+        return {"file": rel, "text": "", "prompt": prompt.strip(), "at": store.now(), "custom": True}
+
+    errors = []
+    with ThreadPoolExecutor(max_workers=count) as ex:
+        for fut in as_completed([ex.submit(one, k) for k in range(count)]):
+            try:
+                results.append(fut.result())
+            except Exception as e:  # noqa: BLE001
+                errors.append(str(e)[:160])
+            done += 1
+            job.update(0.05 + 0.95 * done / count, f"Miniatures {done}/{count}")
+    if not results:
+        raise RuntimeError("Aucune miniature générée : " + (errors[0] if errors else "erreur inconnue"))
+
+    def save(x):
+        x["thumbnails"] = (results + (x.get("thumbnails") or []))[:12]
+    store.update_project(pid, save)
+    job.update(1.0, f"{len(results)} miniature(s) prête(s).")
+
+
+def studio_summary(pr):
+    """Résumé d'un projet pour le studio simplifié : état, progression, vidéo, miniatures."""
+    out = project_summary(pr)
+    job = store.running_job(pr["id"]) or store.last_job(pr["id"])
+    out["job"] = job.as_dict() if job else None
+    rd = pr.get("render") or {}
+    out["render"] = {"file": rd.get("file"), "duration": rd.get("duration"), "v": rd.get("v")} if rd.get("file") else None
+    out["thumbnails"] = [{"file": t.get("file"), "at": t.get("at")} for t in pr.get("thumbnails") or [] if t.get("file")]
+    rv = pr.get("review") or {}
+    out["verdict"] = rv.get("verdict") if rv.get("engine") == "facelessos" else None
+    return out
 
 
 def chapters(pr):

@@ -103,6 +103,38 @@ mot de passe boss.
    - **Miniatures** : 2 variantes dans le style de la chaîne, avec le perso et un texte court en gros.
    - **Métadonnées** : titres, description SEO, tags et chapitres horodatés.
 
+## Studio Oddly Specific Lives (titre → vidéo)
+
+Outil **ODDLY SPECIFIC LIVES** dans la barre de gauche : la version simple, pour sortir les vidéos
+de la chaîne sans passer par les étapes.
+
+- **Nouvelle vidéo** : le titre (ex. « POV: You Marry a Japanese Woman ») et la durée (curseur de 3
+  à 30 min, ou les raccourcis 5 / 8 / 10 / 14 / 20 / 25). La durée fixe la longueur du script
+  (158 mots par minute pour la voix de la chaîne). L'estimation affiche les mots, les images, les
+  caractères Algrow et le temps de fabrication.
+- **Créer la vidéo** lance tout, dans l'ordre :
+  1. script FacelessOS calé sur la vidéo de référence ;
+  2. voix Algrow ;
+  3. casting des personnages et images ;
+  4. montage avec zoom doux, fondus et musique libre de droits.
+- Chaque vidéo affiche sa progression. On peut fermer l'onglet, tout tourne côté serveur.
+- Quand c'est fini : lecture dans la page et **Télécharger la vidéo**. Si ça s'arrête (quota, réseau),
+  **Reprendre** repart de l'étape en cours sans refaire ce qui est fait.
+- **✎ Éditeur** ouvre la vidéo dans 2D Videos pour retoucher le script, une image ou le montage.
+- **Miniatures** :
+  - Colle le lien d'une vidéo YouTube : sa miniature sert de modèle (composition, style, couleurs).
+    Ajoute si tu veux des images de référence (perso, objet, style), un prompt, et choisis de 1 à 4 images.
+  - Sans lien ni image, la miniature de référence de la chaîne sert de modèle.
+  - **2 idées auto** : l'IA propose elle-même des concepts à partir du script.
+- La chaîne se crée toute seule au premier lancement, à partir du modèle `oddly_specific_en` :
+  vidéo de référence, style (`presets/oddly_specific_en/style.jpg`), miniature modèle (`thumb.jpg`),
+  voix Algrow et montage.
+
+**Pour une future chaîne** : on crée son modèle dans `services/pov_engine.py` (`TEMPLATES`, avec son
+style d'images, sa voix et sa vidéo de référence), ses images dans `presets/<modèle>/`, puis on
+duplique `tool_apps/osl-studio` (ou on l'ouvre avec `?studio=<modèle>`) et on l'ajoute à
+`routes/tools.py`.
+
 ## Mise en page tableau et prof animé
 
 Réglage par chaîne (section 4 de la fiche chaîne), puis par vidéo dans le montage :
