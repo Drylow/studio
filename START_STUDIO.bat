@@ -19,6 +19,7 @@ echo  // DRYLOW STUDIO — NEURAL LINK EN COURS...
 echo  // http://127.0.0.1:5000
 echo  // Ferme cette fenetre pour eteindre le serveur.
 echo.
-start "" http://127.0.0.1:5000
+rem Ouvre le navigateur seulement quand le serveur repond (sinon : « connexion refusee »).
+start "" /b %PY% open_browser.py
 %PY% -c "from app import app; app.run(host='127.0.0.1', port=5000, debug=True, use_reloader=False, threaded=True)"
 pause
