@@ -291,7 +291,7 @@ def _style_parts(ch, scene_chars=None):
     return lines, refs
 
 
-def build_image_prompt(ch, scene_prompt, scene_chars=None):
+def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False):
     st = ch.get("style") or {}
     lines, refs = _style_parts(ch, scene_chars)
     chars_desc = [f"{c['name']}: {c['description']}" for c in st.get("characters") or []
@@ -301,7 +301,7 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None):
         parts.append("CHARACTERS IN THIS IMAGE: " + " | ".join(chars_desc))
     parts.append("ART STYLE: " + (st.get("prompt") or "").strip())
     fmt = "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame."
-    if st.get("no_text", True):
+    if st.get("no_text", True) and not allow_text:
         fmt += " No text, no letters, no words, no captions, no signs with writing, no watermark, no logo."
     parts.append(fmt)
     return "\n".join(p for p in parts if p), refs
@@ -517,7 +517,9 @@ def job_voice(job, pid):
                          speed=vs.get("speed", 1.0), pitch=vs.get("pitch", 0), model=vs.get("model", ""),
                          instructions=vs.get("instructions", ""), progress=prog)
     words = res["words"]
-    final = os.path.join(d, "voice.mp3")
+    stamp = int(time.time())
+    vname = f"voice_{stamp}.mp3"  # nom versionné : sous Windows on ne peut pas écraser un fichier en lecture
+    final = os.path.join(d, vname)
     pause = float((pr.get("montage") or {}).get("pause_max") or 0)
     job.update(0.85, "Nettoyage des silences…")
     tight = tighten_pauses(raw, words, pause, final) if pause > 0 else None
@@ -532,12 +534,15 @@ def job_voice(job, pid):
         json.dump(words, f, ensure_ascii=False)
     sig = voice_signature(pr)
 
+    old_voice = (pr.get("voice") or {}).get("file")
+
     def save(x):
-        x["voice"] = {"file": "voice.mp3", "v": int(time.time()), "duration": round(duration, 3),
+        x["voice"] = {"file": vname, "v": stamp, "duration": round(duration, 3),
                       "words": len(words), "sig": sig}
         x["render"] = None
         _replan(x, words, duration)
     store.update_project(pid, save)
+    _remove_quiet(d, old_voice if old_voice != vname else None)
     # calibration du débit réel de la voix de la chaîne (sert à viser la bonne durée)
     n = S.word_count(text)
     if n > 120 and duration > 20:
@@ -547,6 +552,16 @@ def job_voice(job, pid):
             ch["wpm"] = int(round(0.5 * float(ch.get("wpm") or measured) + 0.5 * measured))
             store.save_channel(ch)
     job.update(1.0, f"Voix off prête : {duration / 60:.1f} min.")
+
+
+def _remove_quiet(folder, rel):
+    """Supprime un ancien fichier ; ignoré s'il est encore ouvert (lecteur du navigateur sous Windows)."""
+    if not rel:
+        return
+    try:
+        os.remove(os.path.join(folder, rel))
+    except OSError:
+        pass
 
 
 def load_words(pid):
@@ -878,7 +893,7 @@ def job_render(job, pid):
                 overlays.append({"start": s["start"] + 0.15, "end": min(s["end"], s["start"] + 2.6) if
                                  s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
     music = store.music_path(m.get("music")) if m.get("music") else None
-    out_name = render.safe_name(pr.get("title")) + ".mp4"
+    out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
     res = render.render_video(
         os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]), os.path.join(d, out_name),
         width=w, height=h, fps=int(m.get("fps") or 30), motion=m.get("motion", "auto"),
@@ -892,11 +907,7 @@ def job_render(job, pid):
     def save(x):
         x["render"] = {"file": out_name, "v": int(time.time()), "duration": res["duration"], "at": store.now()}
     store.update_project(pid, save)
-    if old and old != out_name:
-        try:
-            os.remove(os.path.join(d, old))
-        except OSError:
-            pass
+    _remove_quiet(d, old if old != out_name else None)
     job.update(1.0, "Vidéo exportée.")
 
 
@@ -912,7 +923,7 @@ def job_pack(job, pid, motion="none"):
     m = pr.get("montage") or DEFAULT_MONTAGE
     w, h = dims(pr)
     scenes = [{"image": os.path.join(d, s["image"]), "start": s["start"], "text": s["text"]} for s in pr["scenes"]]
-    name = render.safe_name(pr.get("title")) + "_pack_montage.zip"
+    name = f"{render.safe_name(pr.get('title'))}_pack_montage_{int(time.time()) % 1000000}.zip"
     res = render.export_pack(os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]),
                              os.path.join(d, name), width=w, height=h, fps=int(m.get("fps") or 30),
                              motion=motion or "none", motion_strength=float(m.get("motion_strength") or 0.1),
@@ -924,12 +935,56 @@ def job_pack(job, pid, motion="none"):
         x["pack"] = {"file": name, "v": int(time.time()), "clips": res["clips"], "motion": motion,
                      "at": store.now()}
     store.update_project(pid, save)
-    if old and old != name:
-        try:
-            os.remove(os.path.join(d, old))
-        except OSError:
-            pass
+    _remove_quiet(d, old if old != name else None)
     job.update(1.0, f"Pack montage prêt : {res['clips']} clips.")
+
+
+def job_thumbnails(job, pid, idea="", count=2):
+    """Miniatures YouTube (style + perso de la chaîne, gros texte court)."""
+    pr = store.get_project(pid)
+    ch = store.get_channel(pr["channel_id"])
+    count = max(1, min(4, int(count or 2)))
+    job.update(0.05, "Concepts de miniatures…")
+    chars = [c["name"] for c in (ch.get("style") or {}).get("characters") or []]
+    concept = ai.chat_json(f"""You design YouTube thumbnails for an animated 2D illustration channel ({ch.get('niche', '')}). Characters have clear, expressive faces.
+Video title: {pr['title']}
+Script excerpt: {S.narration(pr.get('script') or '')[:1200]}
+Recurring characters: {', '.join(chars) or 'none'}
+{('Creator idea: ' + idea) if idea else ''}
+
+Create {count} DIFFERENT thumbnail concepts that maximize CTR: one strong focal subject with a big readable emotion, high contrast, simple background, a visual curiosity gap that does NOT repeat the title, and 2-4 words of huge bold text (in the video's language: {S.lang_label(ch.get('language', 'fr'))}) placed away from the subject.
+Return JSON: {{"thumbs": [{{"text": "SHORT TEXT", "prompt": "40-70 words: composition, subject, expression, props, background, colors, where the text goes", "chars": ["character names visible"]}}]}}""", model=ai.text_model())
+    items = (concept.get("thumbs") or [])[:count]
+    if not items:
+        raise RuntimeError("Aucun concept de miniature renvoyé.")
+    d = store.project_dir(pid)
+    done, results = 0, []
+
+    def one(it):
+        prompt = (f"YouTube thumbnail. {it.get('prompt', '')} Huge bold clean sans-serif text reading exactly "
+                  f"\"{it.get('text', '')}\" with a thick dark outline, perfectly legible, spelled correctly. "
+                  "Bright, saturated, high contrast, readable at small size.")
+        full, refs = build_image_prompt(ch, prompt, scene_chars=it.get("chars") or [], allow_text=True)
+        blob = ai.generate_image(full, width=1920, height=1080, refs=refs, quality="high")
+        rel = f"thumbs/thumb_{int(time.time() * 1000) % 10**9}.jpg"
+        ai.fit_cover(blob, 1280, 720, os.path.join(d, rel), quality=90)
+        return {"file": rel, "text": it.get("text", ""), "prompt": it.get("prompt", ""), "at": store.now()}
+
+    with ThreadPoolExecutor(max_workers=count) as ex:
+        for fut in as_completed([ex.submit(one, it) for it in items]):
+            try:
+                results.append(fut.result())
+            except Exception as e:  # noqa: BLE001
+                job.update(None, f"Une miniature a échoué : {str(e)[:120]}")
+            done += 1
+            job.update(0.1 + 0.9 * done / len(items), f"Miniatures {done}/{len(items)}")
+    if not results:
+        raise RuntimeError("Toutes les miniatures ont échoué.")
+
+    def save(x):
+        x["thumbnails"] = (results + (x.get("thumbnails") or []))[:8]
+    store.update_project(pid, save)
+    job.update(1.0, f"{len(results)} miniature(s) prête(s).")
 
 
 def chapters(pr):

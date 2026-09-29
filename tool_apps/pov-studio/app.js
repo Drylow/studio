@@ -59,7 +59,7 @@ function busy(btn, on, label) {
 const S = {cfg: null, channels: [], project: null, step: 'script', pollT: null, listT: null, editing: new Set()};
 const STEPS = [['script', 'Script'], ['voice', 'Voix off'], ['storyboard', 'Storyboard'], ['export', 'Montage & export']];
 const JOB_LABEL = {script: 'Écriture du script', rewrite: 'Réécriture', voice: 'Voix off', replan: 'Scènes', images: 'Images',
-  regen: 'Image', render: 'Montage MP4', pack: 'Pack montage', metadata: 'Métadonnées', autopilot: 'Autopilot'};
+  regen: 'Image', render: 'Montage MP4', pack: 'Pack montage', metadata: 'Métadonnées', autopilot: 'Autopilot', thumbnails: 'Miniatures'};
 
 async function loadConfig() {
   S.cfg = await api('GET', '/config');
@@ -670,6 +670,13 @@ async function stepExport() {
             <div class="hint" style="margin-top:8px">Contenu : clips/001.mp4…, voiceover.mp3, subtitles.srt, timestamps.txt, script.txt, images/, LISEZMOI.txt</div>` : ''}
         </div>
         <div class="card pad-lg">
+          <div class="row between"><div><h2>Miniatures</h2><div class="sub" style="margin:2px 0 0">Dans le style de la chaîne, avec ton perso et 2-4 mots en gros — pensées pour le CTR.</div></div>
+            <div class="row"><input type="text" id="thIdea" placeholder="Idée (optionnel)" style="width:200px"><button class="btn" id="thBtn" ${p.script ? '' : 'disabled'}>🖼 Générer 2 miniatures</button></div></div>
+          ${(p.thumbnails || []).length ? `<div class="grid2" style="margin-top:14px">${p.thumbnails.map(t => `<div class="stack" style="gap:6px">
+            <img class="refimg" src="${fileUrl(p.id, t.file)}" style="cursor:zoom-in" onclick="window.open(this.src)">
+            <div class="row between"><span class="small muted">« ${esc(t.text)} »</span><a class="btn xs" href="${fileUrl(p.id, t.file)}?dl=1">⬇</a></div></div>`).join('')}</div>` : ''}
+        </div>
+        <div class="card pad-lg">
           <div class="row between"><div><h2>Publication</h2><div class="sub" style="margin:2px 0 0">Titres alternatifs, description SEO, tags et chapitres horodatés.</div></div>
             <button class="btn" id="metaBtn" ${p.script ? '' : 'disabled'}>✍ ${meta ? 'Régénérer' : 'Générer'}</button></div>
           ${meta ? metaHtml(meta) : ''}
@@ -685,6 +692,8 @@ async function stepExport() {
   $('#renderBtn').onclick = () => action('render');
   $('#packBtn').onclick = () => action('pack', {motion: $('#packMotion').value});
   $('#metaBtn').onclick = () => action('metadata');
+  $('#thBtn').disabled = !p.script || dis;
+  $('#thBtn').onclick = () => action('thumbnails', {idea: $('#thIdea').value, count: 2});
   $$('[data-copy]').forEach(b => b.onclick = () => { navigator.clipboard.writeText($('#' + b.dataset.copy).value); toast('Copié', 'ok'); });
 }
 function metaHtml(meta) {

@@ -395,6 +395,8 @@ _ACTIONS = {
     "render": lambda pid, b: (lambda j: E.job_render(j, pid)),
     "pack": lambda pid, b: (lambda j: E.job_pack(j, pid, motion=b.get("motion", "none"))),
     "metadata": lambda pid, b: (lambda j: E.job_metadata(j, pid)),
+    "thumbnails": lambda pid, b: (lambda j: E.job_thumbnails(j, pid, (b.get("idea") or "").strip(),
+                                                              b.get("count", 2))),
     "autopilot": lambda pid, b: (lambda j: E.job_autopilot(j, pid, render_video=b.get("render", True))),
 }
 
@@ -412,7 +414,8 @@ def project_action(pid, action):
     b = _body()
     if action == "rewrite" and not (b.get("instruction") or "").strip():
         return _err("Consigne vide.")
-    if action in ("script", "rewrite", "images", "regen", "autopilot", "metadata") and not ai.configured():
+    if action in ("script", "rewrite", "images", "regen", "autopilot", "metadata", "thumbnails") \
+            and not ai.configured():
         return _err("Proxy IA non configuré (AI_BASE_URL / AI_API_KEY dans le .env).", 503)
     if action in ("voice", "render", "pack", "autopilot") and not media.available():
         return _err("ffmpeg introuvable (pip install imageio-ffmpeg).", 503)
