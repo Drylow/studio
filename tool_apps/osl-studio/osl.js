@@ -62,9 +62,11 @@ function onMinutes() {
   renderChips();
   const words = m * (ch.wpm || 158), imgs = Math.ceil(m * 60 / (ch.pacing || 6));
   $('#est').innerHTML = `<span>≈ <b>${nf(words)}</b> mots</span><span>≈ <b>${nf(imgs)}</b> images</span>`
-    + `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span><span>≈ <b>${nf(12 + m * 1.9)} min</b> de fabrication</span>`;
+    + `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span><span>≈ <b>${nf((fast() ? 6 : 12) + m * (fast() ? 1.6 : 1.9))} min</b> de fabrication</span>`;
 }
+const fast = () => !$('#fast') || $('#fast').checked;
 $('#minutes').oninput = onMinutes;
+$('#fast').onchange = onMinutes;
 
 $('#create').onclick = async e => {
   const title = $('#title').value.trim();
@@ -73,7 +75,7 @@ $('#create').onclick = async e => {
   const running = S.projects.filter(p => p.job && p.job.status === 'running' && p.job.kind === 'autopilot').length;
   if (running && !confirm(`${running} vidéo(s) déjà en cours. En lancer une autre en parallèle ? (les images se partagent le même quota)`)) return;
   busy(e.currentTarget, true, 'Lancement…');
-  const r = await guard(() => api('POST', `/studio/${STUDIO}/videos`, {title, minutes, notes: $('#notes').value.trim()}));
+  const r = await guard(() => api('POST', `/studio/${STUDIO}/videos`, {title, minutes, notes: $('#notes').value.trim(), fast: fast()}));
   busy($('#create'), false);
   if (r) { $('#title').value = ''; $('#notes').value = ''; toast('C\'est parti : la vidéo se fabrique.', 'ok'); await load(); }
 };

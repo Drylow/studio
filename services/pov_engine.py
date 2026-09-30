@@ -865,7 +865,7 @@ def job_script(job, pid, polish=True):
             store.update_project(pid, lambda x: x.__setitem__("script_draft", partial))
 
     res = S.generate(ch, pr["title"], pr["minutes"], pr.get("notes") or "", polish=polish, progress=prog,
-                     history=channel_history(ch["id"], exclude=pid))
+                     history=channel_history(ch["id"], exclude=pid), rounds=pr.get("fos_rounds"))
 
     def save(x):
         push_history(x, "avant régénération")

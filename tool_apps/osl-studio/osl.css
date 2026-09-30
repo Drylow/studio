@@ -89,3 +89,6 @@
 .pubf .alt { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; padding: 4px 0; }
 .tshot .bar .btn { background: rgba(8, 12, 22, .88); border-color: rgba(255, 255, 255, .2); }
 .tshot .bar .btn.danger { color: var(--s-err); }
+
+.fastopt { display: flex; align-items: center; gap: 7px; margin-top: 10px; font-size: 12.5px; cursor: pointer; flex-wrap: wrap; }
+.fastopt input { accent-color: var(--s-accent); }

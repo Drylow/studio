@@ -593,6 +593,8 @@ def studio_video(template):
     minutes = max(1.0, min(60.0, float(b.get("minutes") or ch.get("default_minutes") or 10)))
     pr = E.new_project(ch, title, minutes, (b.get("notes") or "").strip())
     pr["title_locked"] = True  # le titre choisi reste celui de la vidéo
+    # script rapide : 1 passe d'audit FacelessOS (la plus utile) au lieu de 3
+    pr["fos_rounds"] = 1 if b.get("fast", True) else 3
     store.save_project(pr)
     store.start_job(pr["id"], "autopilot", lambda j: E.job_autopilot(j, pr["id"], render_video=True))
     return jsonify(E.studio_summary(store.get_project(pr["id"])))
