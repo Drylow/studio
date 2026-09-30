@@ -237,23 +237,23 @@ TEMPLATES = {
                  "estimate or range. General information, never personal financial or legal advice. Three CTAs max: "
                  "~5 min, ~70%, end.",
         "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
-        "no_text": False, "voice_speed": 1.0,
+        "no_text": True, "voice_speed": 1.0,
         "direction": "Alternate between (a) scenes: the white round-headed people living the moment in real, richly "
                      "lit places (a lawyer's office, a courthouse hallway, a hospital corridor, a kitchen table covered "
                      "in envelopes, a funeral home showroom, a prison visiting room, the back of an ambulance) and (b) "
                      "explainer visuals drawn in the same cartoon style: the growing itemized bill on a long paper "
                      "receipt, a price tag, an invoice with one line circled in red, a bar chart, a pie chart of who "
                      "gets the money, a timeline, a calendar, a stack of cash next to a single coin, a map with a "
-                     "route. When the narration states a key number or term, put it on screen as ONE bold label "
-                     "(e.g. 'RUNNING TOTAL: $14,300', '$0.23/HOUR', 'THE RETAINER'); one label per image at most, "
-                     "correct spelling, no other text. Respectful on death, illness and prison: no blood, no gore, "
-                     "no bodies.",
+                     "route, all without any written numbers or words: the editor adds the numbers, labels, "
+                     "receipts and charts on top as animations, so keep the upper-left and right side of each image "
+                     "calm. Respectful on death, illness and prison: no blood, no gore, no bodies.",
         "default_minutes": 14,
         "montage": {"pacing": 5.5, "hook_pacing": 4.0, "hook_seconds": 30, "min_scene": 2.5, "max_scene": 10.0,
                     "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.3,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
-                    "music": "auto", "music_volume": 0.12},
-        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="stick"),
+                    "music": "auto", "music_volume": 0.12, "director": True},
+        # prof « acteur » : une pose par idée (presets/oddly_expensive_en/poses), choisie par le réalisateur
+        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none"),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
                                 "is a simple cartoon figure with a large, perfectly round, plain WHITE head (no ears, "
                                 "no nose), small solid black dot eyes, simple eyebrows and mouth, thick black outline, "
@@ -447,6 +447,16 @@ def _apply_preset_images(ch, template):
             ch["thumb_ref"] = rel
     rig = os.path.join(d, "presenter")  # prof livré avec le modèle (rig animé déjà construit)
     bd = ch.get("board") or {}
+    pdir = os.path.join(d, "poses")  # bibliothèque de poses du prof (réalisation du montage)
+    if template and not bd.get("poses") and presenter.load_poses(pdir):
+        import shutil
+        rel_p = f"refs/poses_{int(time.time() * 1000)}"
+        shutil.copytree(pdir, os.path.join(store.channel_dir(ch["id"]), rel_p))
+        bd = dict(bd, poses=rel_p)
+        idle = os.path.join(store.channel_dir(ch["id"]), rel_p, "idle.png")
+        if not bd.get("presenter") and os.path.isfile(idle):
+            bd = dict(bd, presenter=f"{rel_p}/idle.png", rig=None, anim="none")
+        ch["board"] = bd
     man = presenter.load_manifest(rig) if template and uses_board(ch) and not bd.get("presenter") else None
     if man:
         import shutil
@@ -473,7 +483,8 @@ def _refresh_from_template(c, template):
     if not c.get("youtube_handle") and t.get("youtube_handle"):
         c["youtube_handle"] = t["youtube_handle"]
         changed = True
-    refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"))
+    refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"),
+                    (c.get("board") or {}).get("poses"))
     before = refs()
     _apply_preset_images(c, template)
     changed = changed or refs() != before
@@ -1698,6 +1709,225 @@ def job_regen(job, pid, idx, prompt=None):
 
 # ── Montage ─────────────────────────────────────────────────────────────────
 
+# ── Réalisation du montage : poses du prof + animations (motion design) ──────
+
+POSE_HINTS = {
+    "idle": "standing relaxed (neutral, rarely)",
+    "explain": "open palm presenting to the right (default while explaining)",
+    "point": "pointing at the board (when the narration refers to what is on screen)",
+    "arms_crossed": "arms crossed, serious (warnings, hard truths)",
+    "think": "hand on chin (questions, 'why', 'what if')",
+    "shrug": "shrug (uncertainty, 'it depends', ranges)",
+    "shocked": "hands on cheeks, mouth open (a shocking number)",
+    "money": "counting cash (payments, fees, who gets paid)",
+    "facepalm": "facepalm (costly mistakes)",
+    "calculator": "looking at a calculator (math, adding up, per hour)",
+    "thumbs_down": "thumbs down (bad deal, worst option)",
+    "wave": "waving (very first scene and very last scene only)",
+    "hold_sign": "holds a blank card: write the key number or 1-3 words on it",
+    "hold_phone": "holds a phone facing the viewer: write a short number or 1-3 words on its screen (apps, online, "
+                  "bank, bills by text)",
+}
+
+FX_GUIDE = """ANIMATION TYPES (at most ONE per scene, JSON objects; "at" = the exact word of THIS scene's narration where it
+appears, usually the number or the keyword):
+- {"type":"label","text":"THE RETAINER","at":"retainer"} : a new term being defined or a lesson title, 1-3 words.
+- {"type":"counter","to":"$61,000","from":"$0","label":"FINAL BILL","at":"61,000"} : one big number said aloud.
+- {"type":"receipt","items":[{"item":"Custody evaluation","amount":"$2,000"}],"total":"$23,200","at":"2,000"} :
+  ONLY when the narration adds a line to the running tab or reads the running total; items = only the line(s)
+  added in this scene (item <= 4 words), total = the running total stated in the narration.
+- {"type":"bars","title":"AVERAGE COST PER PERSON","items":[{"label":"Settled","value":10600,"display":"$10,600"},
+  {"label":"Trial","value":20400,"display":"$20,400"}],"at":"20,400"} : 2-4 amounts being compared.
+- {"type":"split","left":{"title":"SETTLE","value":"$10,600","sub":"per person"},"right":{"title":"TRIAL",
+  "value":"$20,400","sub":"per person"},"at":"trial"} : two options face to face.
+- {"type":"pie","title":"WHO GETS PAID","items":[{"label":"Lawyers","value":21200},...],"at":"lawyers"} : a split
+  of one sum between 2-6 parties, with the real amounts.
+- {"type":"list","title":"HOW PEOPLE PAY LESS","items":["Settle early","Use mediation"],"at":"first"} : a recap
+  or a list of 3-6 short points (<= 5 words each) spread over the next scenes: put it on the scene where the list
+  starts or on the recap sentence.
+- {"type":"timeline","title":"A CONTESTED DIVORCE","items":[{"label":"Month 0","sub":"Lawyers hired"},...],
+  "at":"months"} : steps or durations in time (3-5 steps).
+- {"type":"stamp","text":"NOT INCLUDED","at":"not"} : a verdict of 1-2 words (PAID, DENIED, AVOIDED, NOT
+  INCLUDED, SOLD...). Rare: 5 per video at most."""
+
+
+def _norm_tok(w):
+    return re.sub(r"[^0-9a-z.]", "", (w or "").lower()).strip(".")
+
+
+def _nums(text):
+    return {n.replace(",", "").rstrip(".") for n in re.findall(r"\d[\d,]*(?:\.\d+)?", text or "")}
+
+
+def _fx_numbers(fx):
+    vals = []
+
+    def walk(v):
+        if isinstance(v, dict):
+            for kk, vv in v.items():
+                if kk != "at":
+                    walk(vv)
+        elif isinstance(v, list):
+            for vv in v:
+                walk(vv)
+        elif isinstance(v, (int, float)) and not isinstance(v, bool):
+            vals.append(str(int(v)) if float(v).is_integer() else str(v))
+        elif isinstance(v, str):
+            vals.extend(_nums(v))
+    walk(fx)
+    return vals
+
+
+def plan_montage(ch, pr, words, poses, log=None):
+    """Le réalisateur (IA) : pour chaque scène, la pose du prof (+ texte de sa pancarte) et au plus
+    une animation calée sur un mot. Chiffres vérifiés contre la narration (sinon l'animation saute).
+    → {index_scène: {"pose", "sign", "fx"}}"""
+    scenes = pr.get("scenes") or []
+    narration = " ".join(s.get("text") or "" for s in scenes)
+    allowed = _nums(narration) | _nums(S.narration(pr.get("script") or "")) | {"0"}  # 0 : départ d'un compteur
+    pose_lines = "\n".join(f"- {k}: {v}" for k, v in POSE_HINTS.items() if k in poses)
+    out, total_so_far, last_pose = {}, "", "wave"
+    chunk = 25  # réponses courtes : les très longues se font couper par le proxy
+    for c0 in range(0, len(scenes), chunk):
+        part = scenes[c0:c0 + chunk]
+        rows = "\n".join(f'{s["i"]} [{s["start"]:.1f}-{s["end"]:.1f}s]{" ## " + s["heading"] if s.get("first") and s.get("heading") else ""}: {s.get("text") or ""}'
+                         for s in part)
+        prompt = f"""You are the video editor and motion designer of the faceless YouTube channel "{ch.get('name', '')}"
+({ch.get('niche', '')}). The video is "{pr.get('title', '')}". It is a teacher-style explainer: a cartoon teacher in
+a grey suit stands at the bottom-left of the screen next to a board that shows one illustration per scene.
+Your job: make it lively and clear, like a top explainer channel, WITHOUT clutter.
+
+TEACHER POSES (pick one per scene):
+{pose_lines}
+Rules for poses: match what the sentence does; keep the same pose for 2-3 consecutive scenes while the idea
+continues, then change (never the same pose for more than 4 scenes in a row); use hold_sign / hold_phone about once
+every 8-12 scenes, with "sign" = the key number or 1-3 words of that scene, UPPERCASE, max 14 characters (e.g.
+"$270/HR", "77%", "12-18 MONTHS"). "wave" only for the very first scene of the video and the very last one.
+
+{FX_GUIDE}
+Density: about 55-65% of scenes get an animation; never the same type in 3 consecutive animated scenes (receipt
+excepted when the tab really changes); leave some scenes clean. Every number you write MUST appear exactly in the
+narration (same digits); never compute new numbers, never invent sources. Text is English, short, UPPERCASE for
+titles.
+{('The running tab so far reads: ' + total_so_far) if total_so_far else ''}
+Previous scene pose: {last_pose}.
+
+SCENES (index [time]: narration):
+{rows}
+
+Return JSON: {{"scenes": [{{"i": <index>, "pose": "<pose>", "sign": "", "fx": null or {{...}}}}]}} with one entry
+per scene above, in order."""
+        try:
+            res = ai.chat_json(prompt, model=ai.text_model())
+        except ai.AIError as e:  # un paquet raté : ces scènes gardent un montage simple
+            if log:
+                log(f"scènes {c0}-{c0 + len(part) - 1} sans réalisation ({str(e)[:80]})")
+            continue
+        for e in res.get("scenes") or []:
+            try:
+                i = int(e.get("i"))
+            except (TypeError, ValueError):
+                continue
+            pose = e.get("pose") if e.get("pose") in poses else "explain" if "explain" in poses else "idle"
+            sign = str(e.get("sign") or "").upper().strip()[:16]
+            if pose.startswith("hold_") and (not sign or not _nums(sign) <= allowed):
+                pose, sign = "explain" if "explain" in poses else "idle", ""
+            if not pose.startswith("hold_"):
+                sign = ""
+            fx = e.get("fx") if isinstance(e.get("fx"), dict) else None
+            if fx and (fx.get("type") not in _motion_types() or not set(_fx_numbers(fx)) <= allowed):
+                if log:
+                    log(f"animation écartée (scène {i}) : {json.dumps(fx)[:120]}")
+                fx = None
+            if fx and fx.get("type") == "receipt" and fx.get("total"):
+                total_so_far = str(fx["total"])
+            out[i] = {"pose": pose, "sign": sign, "fx": fx}
+            last_pose = pose
+    return out
+
+
+def _motion_types():
+    from services import motion
+    return motion.TYPES
+
+
+def _fx_time(scene, fx, words):
+    """Instant (s) du mot « at » dans la scène, sinon juste après le début de la scène."""
+    at = _norm_tok((fx or {}).get("at"))
+    t0, t1 = float(scene["start"]), float(scene["end"])
+    if at:
+        for w in words:
+            if t0 - 0.05 <= float(w.get("s", 0)) <= t1 + 0.05:
+                tok = _norm_tok(w.get("w"))
+                if tok and (tok == at or (len(at) > 2 and (at in tok or tok in at))):
+                    return max(t0, float(w["s"]) - 0.1)
+    return t0 + min(0.4, (t1 - t0) * 0.2)
+
+
+def montage_enabled(pr):
+    return bool((pr.get("montage") or {}).get("director"))
+
+
+def channel_poses(ch):
+    """Dossier (absolu) de la bibliothèque de poses du prof de la chaîne, ou None."""
+    rel = board_config(ch).get("poses")
+    d = channel_ref_path(ch, rel) if rel else None
+    return d if d and presenter.load_poses(d) else None
+
+
+def job_montage(job, pid):
+    """Plan de montage : poses du prof + animations, enregistré scène par scène."""
+    pr = store.get_project(pid)
+    ch = project_channel(pr)
+    pd = channel_poses(ch)
+    poses = presenter.load_poses(pd) if pd else {}
+    if not poses:
+        poses = {"idle": {}}
+    job.update(0.05, "Réalisation du montage (poses, animations)…")
+    plan = plan_montage(ch, pr, load_words(pid), poses, log=lambda m: job.update(None, m))
+    words = load_words(pid)
+
+    def save(x):
+        for s in x.get("scenes") or []:
+            e = plan.get(s["i"])
+            if not e:
+                continue
+            s["pose"], s["sign"] = e["pose"], e["sign"]
+            fx = e.get("fx")
+            s["fx"] = dict(fx, t=round(_fx_time(s, fx, words), 3)) if fx else None
+        x["montage_plan"] = {"at": store.now(), "n_fx": sum(1 for e in plan.values() if e.get("fx"))}
+    store.update_project(pid, save)
+    n = sum(1 for e in plan.values() if e.get("fx"))
+    job.update(1.0, f"Montage réalisé : {n} animations, {len(plan)} poses.")
+
+
+def _acting(pr, ch, layout, workdir, w, h):
+    """Prof « acteur » : une pose par scène (plan de montage), avec rebond ; None si pas de poses."""
+    pd = channel_poses(ch)
+    scenes = pr.get("scenes") or []
+    if not pd or not layout or not any(s.get("pose") for s in scenes):
+        return None
+    bd = board_config(ch)
+    g = board.geometry(bd, w, h)
+    keys, texts = [], set()
+    for s in scenes:
+        pose = s.get("pose") or "explain"
+        key = f"{pose}|{s['sign']}" if s.get("sign") and pose.startswith("hold_") else pose
+        if s.get("sign") and pose.startswith("hold_"):
+            texts.add((pose, s["sign"]))
+        keys.append((float(s["start"]), key))
+    frames, left, H = presenter.acting_frames(pd, g["presenter_h"], workdir, texts)
+    if not frames:
+        return None
+    keys = [(t, k if k in frames else (k.split("|")[0] if k.split("|")[0] in frames else "idle")) for t, k in keys]
+    timeline = [keys[0]] + [keys[j] for j in range(1, len(keys)) if keys[j][1] != keys[j - 1][1]]
+    idle = frames.get("idle") or frames.get(keys[0][1])
+    layout = dict(layout, presenter=idle, rig=frames, rig_mode="acting", acting=timeline,
+                  pres_x=max(0, g["presenter_x"] - left), pres_y=g["presenter_bottom"] - H, bob=False)
+    sounds = [(t + 0.02, "pop", 0.22) for t, _ in timeline[1:]]
+    return layout, sounds
+
+
 def job_render(job, pid):
     pr = store.get_project(pid)
     if not pr.get("voice"):
@@ -1718,6 +1948,15 @@ def job_render(job, pid):
                                  s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
     music = pick_music(pr, m.get("music"))
     layout = _layout_for(pr, os.path.join(d, "render"), w, h)
+    fx, sounds = None, []
+    if montage_enabled(pr):
+        fx = [{"scene": k, "t": s["fx"].get("t", s["start"]), "spec": {a: b for a, b in s["fx"].items() if a != "t"}}
+              for k, s in enumerate(pr["scenes"]) if s.get("fx")]
+        acted = _acting(pr, project_channel(pr), layout, os.path.join(d, "render"), w, h)
+        if acted:
+            layout, sounds = acted
+        sounds += [(float(s["start"]) + 0.05, "whoosh", 0.3) for s in pr["scenes"][1:]
+                   if s.get("first") and s.get("heading")]
     out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
     try:
         res = render.render_video(
@@ -1727,7 +1966,8 @@ def job_render(job, pid):
             transition_dur=float(m.get("transition_dur") or 0.3), words=load_words(pid),
             captions=m.get("captions") or {"mode": "none"}, overlays=overlays, music_path=music,
             music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"), layout=layout,
-            progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled)
+            progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled, fx=fx,
+            sfx_events=sounds or None)
     except render.Cancelled:
         raise store.JobCancelled("Annulé.")
     old = (pr.get("render") or {}).get("file")
@@ -2110,6 +2350,12 @@ def job_autopilot(job, pid, render_video=True):
     elif need_voice:
         job_voice(_Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
     job_images(_Sub(job, 0.35, 0.85, "3/4 Images"), pid)
+    pr = store.get_project(pid)
+    if montage_enabled(pr) and not pr.get("montage_plan"):
+        try:  # poses du prof + animations ; sans plan, la vidéo sort quand même (montage simple)
+            job_montage(_Sub(job, 0.85, 0.87, "4/4 Réalisation"), pid)
+        except Exception as e:  # noqa: BLE001
+            job.update(None, f"Réalisation du montage impossible ({str(e)[:80]}) : montage simple.")
     if render_video:
         job_render(_Sub(job, 0.85, 0.98, "4/4 Montage"), pid)
         try:  # titre + description prêts à copier ; jamais bloquant pour la vidéo

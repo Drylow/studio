@@ -651,3 +651,305 @@ def stick_timeline(words, total, fps=30, seed=11, every=(4.0, 7.5)):
             prev, run = name, 1
     out.append((prev, run))
     return out
+
+
+# ── Prof « acteur » : une pose par idée, qui change avec un petit rebond ──────
+# L'IA dessine une bibliothèque de poses du même prof (même costume) ; le réalisateur (plan de
+# montage) choisit la pose de chaque scène ; les poses « qui tiennent » un objet vierge (pancarte,
+# téléphone) reçoivent un texte écrit par le code dans la zone crème de l'objet.
+
+HOLD_COLOR = (255, 246, 216)  # #FFF6D8 : couleur imposée à l'objet vierge, repérée ensuite par le code
+
+_POSE_BASE = ("Edit this image. Redraw THE SAME CHARACTER: the same large round plain white head with the same "
+              "soft grey shading, the same simple face style (small solid black dot eyes, short simple black "
+              "eyebrows, a simple mouth), the same grey three-piece suit, white shirt, black tie, waistcoat buttons, "
+              "the same fan of green dollar bills in the breast pocket, grey trousers, black shoes, white mitten "
+              "hands, same line work, same colors, same proportions and the same size in the frame. Full body from "
+              "head to shoes, feet on the ground, standing slightly turned to the right. NO pointer stick. "
+              "Transparent background, nothing else in the image, no text. POSE: ")
+POSE_PROMPTS = {
+    "idle": "standing relaxed, both hands at his sides, friendly natural closed-mouth smile.",
+    "explain": "one hand raised at shoulder height with the open palm up, presenting something to his right, the "
+               "other arm relaxed, friendly natural smile.",
+    "point": "arm extended to the right at shoulder height, index finger pointing to the right at something "
+             "off-frame, friendly confident expression.",
+    "arms_crossed": "arms crossed over his chest, calm serious expression with a small flat mouth.",
+    "think": "one hand on his chin, thinking, eyes looking up, small neutral mouth.",
+    "shrug": "both hands raised to his sides with the palms up in a shrug, eyebrows raised, small uncertain mouth.",
+    "shocked": "both hands on his cheeks, eyes wide, mouth open in a round O of shock.",
+    "money": "holding a fan of green dollar bills in one hand and counting them with the other hand, pleased smile.",
+    "facepalm": "one hand covering his eyes in a facepalm, the other hand on his hip, disappointed.",
+    "calculator": "holding a big grey pocket calculator in both hands in front of his belly and looking down at it "
+                  "with a worried frown.",
+    "thumbs_down": "one hand giving a thumbs down, the other hand on his hip, unimpressed flat mouth.",
+    "wave": "waving hello with one raised open hand, friendly smile.",
+    "hold_sign": "holding with both hands, in front of his chest, a large blank rectangular card facing the viewer "
+                 "(about as wide as his shoulders). The card is plain flat pale cream color #FFF6D8 with a thick "
+                 "black outline, completely empty, no text, no shading on it. Friendly smile.",
+    "hold_phone": "holding up with one hand, at chest height, a big smartphone facing the viewer. The phone screen "
+                  "is plain flat pale cream color #FFF6D8, completely empty, no text, no icons. Serious expression.",
+}
+
+
+def build_pose_library(base_blob, out_dir, names=None, workers=5, log=print):
+    """Génère les poses (IA, en parallèle) → out_dir/<pose>.png (brutes) ; renvoie {pose: chemin}."""
+    from concurrent.futures import ThreadPoolExecutor
+    from services import ai
+    os.makedirs(out_dir, exist_ok=True)
+    names = names or list(POSE_PROMPTS)
+
+    def one(name):
+        path = os.path.join(out_dir, f"{name}.png")
+        if os.path.isfile(path):
+            return name, path
+        for _ in range(2):
+            try:
+                blob = ai.generate_image(_POSE_BASE + POSE_PROMPTS[name], width=1024, height=1536,
+                                         refs=[base_blob], quality="high", transparent=True)
+            except ai.AIError as e:
+                if getattr(e, "status", None) == 4290:
+                    raise
+                log(f"pose {name} : {str(e)[:100]}")
+                continue
+            with open(path, "wb") as f:
+                f.write(blob)
+            log(f"pose {name} ok")
+            return name, path
+        return name, None
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        return {k: v for k, v in ex.map(one, names) if v}
+
+
+def _white_component_box(im, top_frac=0.45):
+    """Boîte de l'intérieur blanc de la tête (plus grande zone quasi blanche du haut du perso)."""
+    s = 4
+    w, h = max(1, im.width // s), max(1, im.height // s)
+    sm = im.resize((w, h))
+    a = list(sm.getchannel("A").getdata())
+    rgb = list(sm.convert("RGB").getdata())
+    px = [1 if (aa > 200 and min(c) > 215) else 0 for aa, c in zip(a, rgb)]
+    fig = sm.getchannel("A").point(lambda v: 255 if v > 24 else 0).getbbox()
+    if not fig:
+        return None
+    lim = fig[1] + int((fig[3] - fig[1]) * top_frac)
+    seen = bytearray(w * h)
+    best = []
+    for y in range(fig[1], lim):
+        for x in range(w):
+            i = y * w + x
+            if px[i] and not seen[i]:
+                st, pts = [i], []
+                seen[i] = 1
+                while st:
+                    j = st.pop()
+                    pts.append(j)
+                    cx, cy = j % w, j // w
+                    for nx, ny in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+                        if 0 <= nx < w and 0 <= ny < h:
+                            kk = ny * w + nx
+                            if px[kk] and not seen[kk]:
+                                seen[kk] = 1
+                                st.append(kk)
+                if len(pts) > len(best):
+                    best = pts
+    if not best:
+        return None
+    xs, ys = [j % w for j in best], [j // w for j in best]
+    return [min(xs) * s, min(ys) * s, (max(xs) + 1) * s, (max(ys) + 1) * s]
+
+
+def _hold_box(im):
+    """Zone vierge crème (pancarte, écran) d'une pose « qui tient » : boîte intérieure, ou None."""
+    s = 2
+    w, h = max(1, im.width // s), max(1, im.height // s)
+    sm = im.resize((w, h))
+    a = list(sm.getchannel("A").getdata())
+    rgb = list(sm.convert("RGB").getdata())
+    hr, hg, hb = HOLD_COLOR
+    px = [1 if aa > 200 and abs(c[0] - hr) < 22 and abs(c[1] - hg) < 22 and abs(c[2] - hb) < 30 else 0
+          for aa, c in zip(a, rgb)]
+    seen = bytearray(w * h)
+    best = []
+    for i0 in range(w * h):
+        if px[i0] and not seen[i0]:
+            st, pts = [i0], []
+            seen[i0] = 1
+            while st:
+                j = st.pop()
+                pts.append(j)
+                cx, cy = j % w, j // w
+                for nx, ny in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+                    if 0 <= nx < w and 0 <= ny < h:
+                        kk = ny * w + nx
+                        if px[kk] and not seen[kk]:
+                            seen[kk] = 1
+                            st.append(kk)
+            if len(pts) > len(best):
+                best = pts
+    if len(best) < 200:
+        return None
+    xs, ys = sorted(j % w for j in best), sorted(j // w for j in best)
+    q = lambda v, f: v[int(len(v) * f)]  # noqa: E731  (bords robustes : ignore les pixels isolés)
+    return [q(xs, 0.01) * s, q(ys, 0.01) * s, (q(xs, 0.99) + 1) * s, (q(ys, 0.99) + 1) * s]
+
+
+def prepare_poses(raw_dir, out_dir):
+    """Poses brutes (1024×1536, fond transparent) → poses recadrées + poses.json
+    {pose: {file, head: [x0,y0,x1,y1], hold: [x0,y0,x1,y1] | None}} (coordonnées de l'image recadrée)."""
+    from PIL import Image
+    os.makedirs(out_dir, exist_ok=True)
+    meta = {}
+    for f in sorted(os.listdir(raw_dir)):
+        name, ext = os.path.splitext(f)
+        if ext.lower() != ".png" or name not in POSE_PROMPTS:
+            continue
+        im = Image.open(os.path.join(raw_dir, f)).convert("RGBA")
+        im.putalpha(im.getchannel("A").point(lambda a: 0 if a < 16 else a))
+        bb = im.getchannel("A").point(lambda a: 255 if a > 24 else 0).getbbox()
+        if not bb:
+            continue
+        im = im.crop(bb)
+        head = _white_component_box(im)
+        if not head:
+            continue
+        hold = _hold_box(im) if name.startswith("hold_") else None
+        im.save(os.path.join(out_dir, f"{name}.png"), "PNG", optimize=True)
+        meta[name] = {"file": f"{name}.png", "head": head, "hold": hold}
+    with open(os.path.join(out_dir, "poses.json"), "w", encoding="utf-8") as fh:
+        json.dump(meta, fh)
+    return meta
+
+
+def load_poses(pose_dir):
+    try:
+        with open(os.path.join(pose_dir, "poses.json"), "r", encoding="utf-8") as f:
+            meta = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    return {k: dict(v, path=os.path.join(pose_dir, v["file"])) for k, v in meta.items()
+            if os.path.isfile(os.path.join(pose_dir, v["file"]))}
+
+
+POP = (0.86, 0.96, 1.045, 1.06, 1.035, 1.012)  # rebond quand le prof change de pose (1 image chacune)
+
+
+def _sign_text(im, box, text):
+    """Écrit `text` (1 à 2 lignes, noir, gras) centré dans la zone vierge `box` de la pose."""
+    from PIL import ImageDraw, ImageFont
+    x0, y0, x1, y1 = box
+    bw, bh = (x1 - x0) * 0.86, (y1 - y0) * 0.8
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "fonts",
+                        "Poppins-900.ttf")
+    words = text.replace("/", " /").split()
+    options = [[text]]
+    for n in (2, 3):  # découpes en 2 ou 3 lignes (écran de téléphone étroit)
+        if len(words) >= n:
+            k = len(words) / n
+            options.append([" ".join(words[round(i * k):round((i + 1) * k)]).replace(" /", "/")
+                            for i in range(n)])
+    best = None
+    for lines in options:
+        size = int(bh / len(lines) * 0.9)
+        while size > 8:
+            f = ImageFont.truetype(path, size)
+            wmax = max(f.getbbox(ln)[2] - f.getbbox(ln)[0] for ln in lines)
+            if wmax <= bw and size * 1.05 * len(lines) <= bh:
+                break
+            size -= 2
+        if best is None or size > best[0]:
+            best = (size, lines)
+    size, lines = best
+    f = ImageFont.truetype(path, size)
+    d = ImageDraw.Draw(im)
+    cy = (y0 + y1) / 2
+    lh = size * 1.05
+    for i, ln in enumerate(lines):
+        d.text(((x0 + x1) / 2, cy + (i - (len(lines) - 1) / 2) * lh), ln, font=f, fill=(17, 17, 17), anchor="mm")
+    return im
+
+
+def acting_frames(pose_dir, height, workdir, texts=None):
+    """Toutes les images du prof « acteur » à la taille du rendu, sur une toile commune.
+
+    Les poses sont mises à la même échelle (même largeur de tête que la pose « idle », qui fait
+    `height` px de haut), pieds sur la même ligne, tête au même endroit ; chaque pose a ses images
+    de rebond. texts = {(pose, texte)} à écrire sur les pancartes / écrans.
+    → ({clé: chemin}, décalage_x_de_la_toile, hauteur_de_la_toile) ; clés « pose », « pose@k »
+    (rebond), « pose|texte » et « pose|texte@k »."""
+    import hashlib
+    from PIL import Image
+    poses = load_poses(pose_dir)
+    if not poses:
+        return {}, 0, 0
+    ref = poses.get("idle") or next(iter(poses.values()))
+    rim = Image.open(ref["path"])
+    s_ref = height / rim.height
+    head_w = (ref["head"][2] - ref["head"][0]) * s_ref
+    head_cx = (ref["head"][0] + ref["head"][2]) / 2 * s_ref
+    placed = {}
+    for name, p in poses.items():
+        im = Image.open(p["path"]).convert("RGBA")
+        s = head_w / max(1, p["head"][2] - p["head"][0])
+        w, h = max(2, round(im.width * s)), max(2, round(im.height * s))
+        placed[name] = (im.resize((w, h), Image.LANCZOS), s, (p["head"][0] + p["head"][2]) / 2 * s, p)
+    left = max(hc - head_cx for _, _, hc, _ in placed.values())  # toile commune : rien ne dépasse
+    left = max(0.0, left)
+    right = max(im.width - hc + head_cx for im, _, hc, _ in placed.values())
+    W = int(round(left + right)) + 8
+    H = int(max(im.height for im, _, _, _ in placed.values()) * 1.07) + 4  # marge pour le rebond
+    sig = hashlib.sha1(json.dumps([sorted((k, os.path.getsize(v["path"])) for k, v in poses.items()), height,
+                                   sorted(texts or [])]).encode()).hexdigest()[:10]
+    d = os.path.join(workdir, f"acting_{sig}")
+    os.makedirs(d, exist_ok=True)
+    frames = {}
+
+    def emit(key, im, hc):
+        base = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        x = int(round(left + head_cx - hc))
+        base.alpha_composite(im, (x, H - im.height))
+        path = os.path.join(d, key.replace("|", "__").replace("/", "_") + ".png")
+        if not os.path.isfile(path):
+            base.save(path, "PNG", compress_level=3)
+        frames[key] = path
+        fx = x + im.width / 2  # rebond ancré aux pieds
+        for i, sc in enumerate(POP):
+            kpath = os.path.join(d, f"{os.path.basename(path)[:-4]}@{i}.png")
+            if not os.path.isfile(kpath):
+                sw, sh = max(1, round(im.width * sc)), max(1, round(im.height * sc))
+                pim = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                pim.alpha_composite(im.resize((sw, sh), Image.BILINEAR),
+                                    (int(round(fx - sw / 2)), H - sh))
+                pim.save(kpath, "PNG", compress_level=3)
+            frames[f"{key}@{i}"] = kpath
+
+    for name, (im, s, hc, p) in placed.items():
+        emit(name, im, hc)
+    for pose, text in sorted(texts or []):
+        if pose not in placed or not placed[pose][3].get("hold") or not text:
+            continue
+        im, s, hc, p = placed[pose]
+        box = [v * s for v in p["hold"]]
+        emit(f"{pose}|{text}", _sign_text(im.copy(), box, text), hc)
+    return frames, int(round(left)), H
+
+
+def acting_segments(timeline, total, fps=30):
+    """timeline = [(seconde, clé)] (une entrée par changement de pose) → [(clé_image, nb_frames)],
+    avec le rebond au début de chaque nouvelle pose."""
+    fps = int(fps)
+    n = max(1, int(round(total * fps)))
+    marks = sorted((max(0, int(round(t * fps))), k) for t, k in timeline or []) or [(0, "idle")]
+    if marks[0][0] > 0:
+        marks.insert(0, (0, marks[0][1]))
+    out = []
+    for j, (f0, key) in enumerate(marks):
+        f1 = marks[j + 1][0] if j + 1 < len(marks) else n
+        if f1 <= f0:
+            continue
+        pop = len(POP) if (j == 0 or key != marks[j - 1][1]) else 0
+        pop = min(pop, f1 - f0)
+        for i in range(pop):
+            out.append((f"{key}@{i}", 1))
+        if f1 - f0 - pop > 0:
+            out.append((key, f1 - f0 - pop))
+    return out

@@ -453,45 +453,56 @@ def _norm(s):
 
 
 def align_to_text(words, text):
-    """Remplace les mots TTS par les mots du texte d'origine (ponctuation incluse).
+    """Timings de la voix → mots du texte d'origine (ponctuation incluse), dans l'ordre du texte.
 
-    Edge renvoie les mots sans ponctuation ; on les ré-aligne sur les tokens du
-    script (flux de caractères normalisés) pour que les sous-titres gardent
-    virgules/points et que la coupe des lignes tombe au bon endroit. Un mot TTS
-    peut couvrir plusieurs tokens (« 10 000 ») et inversement (« jusqu'au »)."""
+    Les mots de la voix (Edge : mots sans ponctuation ; Algrow : transcription de l'audio, avec ses
+    erreurs, « six hundred… » pour « 673,989 ») sont alignés sur les mots du script par un alignement
+    de séquences (comme un diff). Chaque mot du script reçoit le temps du mot de voix qui lui
+    correspond ; entre deux mots sûrs, les mots restants se partagent le temps au prorata des
+    caractères. On ne cherche jamais un mot court à l'intérieur d'un autre (« is » dans « division »),
+    ce qui décalait tout le texte."""
+    import difflib
     tokens = (text or "").split()
+    words = [w for w in words or [] if _norm(w.get("w", ""))]
     if not words or not tokens:
         return words
-    stream, owner = [], []
-    for ti, tok in enumerate(tokens):
-        for ch in _norm(tok):
-            stream.append(ch)
-            owner.append(ti)
-    flat = "".join(stream)
-    pos, out, last_t = 0, [], -1
-    for w in words:
-        n = _norm(w["w"])
-        if not n:
+    tn = [_norm(t) for t in tokens]
+    wn = [_norm(w["w"]) for w in words]
+    pairs = {}
+    for a, b, size in difflib.SequenceMatcher(None, tn, wn, autojunk=False).get_matching_blocks():
+        for k in range(size):
+            pairs[a + k] = b + k
+    n = len(tokens)
+    s_t, e_t = [None] * n, [None] * n
+    for ti, wi in pairs.items():
+        s_t[ti], e_t[ti] = float(words[wi]["s"]), float(words[wi]["e"])
+    i = 0
+    while i < n:
+        if s_t[i] is not None:
+            i += 1
             continue
-        idx = flat.find(n, pos, pos + len(n) + 60)
-        if idx == -1:  # décrochage : on cherche plus loin pour se resynchroniser
-            idx = flat.find(n, pos, pos + len(n) + 600)
-        if idx == -1:
-            out.append({"w": w["w"], "s": w["s"], "e": w["e"], "_t": max(last_t, 0), "_x": 1})
-            continue
-        first, ti = owner[idx], owner[idx + len(n) - 1]
-        pos = idx + len(n)
-        if out and out[-1].get("_t") == ti and not out[-1].get("_x"):  # même token découpé
-            out[-1]["e"] = w["e"]
-            continue
-        first = max(first, last_t + 1)
-        out.append({"w": " ".join(tokens[first:ti + 1]) if first <= ti else tokens[ti],
-                    "s": w["s"], "e": w["e"], "_t": ti})
-        last_t = ti
-    for w in out:
-        w["t"] = w.pop("_t", 0)  # index du token dans le texte (sert à retrouver les sections)
-        w.pop("_x", None)
-    return out
+        j = i
+        while j < n and s_t[j] is None:
+            j += 1
+        # mots de voix non appariés entre les deux ancres : c'est là que ces mots du script sont dits
+        wa = pairs.get(i - 1, -1) if i > 0 else -1
+        wb = pairs.get(j, len(words)) if j < n else len(words)
+        if wb - wa > 1:
+            t0, t1 = float(words[wa + 1]["s"]), float(words[wb - 1]["e"])
+        else:
+            t0 = e_t[i - 1] if i > 0 else float(words[0]["s"])
+            t1 = s_t[j] if j < n else float(words[-1]["e"])
+        t1 = max(t1, t0 + 0.05 * (j - i))
+        weights = [len(tn[k]) + 1 for k in range(i, j)]
+        tot = float(sum(weights))
+        t = t0
+        for k, wt in zip(range(i, j), weights):
+            d = (t1 - t0) * wt / tot
+            s_t[k], e_t[k] = t, t + d * 0.92
+            t += d
+        i = j
+    return [{"w": tokens[k], "s": round(s_t[k], 3), "e": round(max(e_t[k], s_t[k] + 0.02), 3), "t": k}
+            for k in range(n)]
 
 
 def estimate_words(text, total):
