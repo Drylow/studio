@@ -327,7 +327,7 @@ def presenter(cid):
         return jsonify(ch)
     b = _body()
     anim = (request.form.get("anim") or b.get("anim") or E.board_config(ch).get("anim") or "poses")
-    anim = "none" if anim == "none" else "poses"
+    anim = anim if anim in ("none", "stick") else "poses"
     try:
         blob = _upload_bytes()
         if blob is not None:

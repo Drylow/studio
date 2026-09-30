@@ -253,7 +253,7 @@ TEMPLATES = {
                     "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.3,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
                     "music": "auto", "music_volume": 0.12},
-        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="poses"),
+        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="stick"),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
                                 "is a simple cartoon figure with a large, perfectly round, plain WHITE head (no ears, "
                                 "no nose), small solid black dot eyes, simple eyebrows and mouth, thick black outline, "
@@ -261,15 +261,16 @@ TEMPLATES = {
                                 "props"),
         # le prof (bas gauche) : rig animé livré dans presets/oddly_expensive_en/presenter/
         "mascot": "the channel's teacher: a simple cartoon man with a large, perfectly round, plain WHITE head (no "
-                  "hair, no ears, no nose), small solid black dot eyes under flat black eyebrows, a confident knowing "
-                  "look; a grey three-piece suit (light grey jacket with notched lapels, darker charcoal waistcoat "
+                  "hair, no ears, no nose), small solid black dot eyes under short relaxed black eyebrows, a friendly, natural "
+                  "closed-mouth smile; a grey three-piece suit (light grey jacket with notched lapels, darker charcoal waistcoat "
                   "with black buttons, white shirt, black tie), a fan of green dollar bills sticking out of the "
                   "breast pocket, grey trousers, black shoes, white mitten hands, thick clean black outlines",
         "thumb_text": True,
         "thumb_style": "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On the "
                        "right, the channel's teacher (exactly as in the reference image) pointing his stick at the "
-                       "hero object with a knowing look. Center-left, ONE big hero object that is the video's bill: a "
-                       "long itemized receipt, a hospital invoice, a price tag or a commissary receipt, slightly "
+                       "hero object with a friendly, natural expression. Center-left, ONE big hero object that is "
+                       "the video's bill: a long itemized receipt, a hospital invoice, a price tag or a commissary "
+                       "receipt, slightly "
                        "tilted, with one line circled in red. ONE huge number in heavy condensed bold yellow (#FFD447) "
                        "with a thick black outline (the final total or the most absurd line item, e.g. '$310,000', "
                        "'$0.23/HOUR', '$3,200 FOR 4 MILES'), no other words. One small white round-headed character "
@@ -446,11 +447,12 @@ def _apply_preset_images(ch, template):
             ch["thumb_ref"] = rel
     rig = os.path.join(d, "presenter")  # prof livré avec le modèle (rig animé déjà construit)
     bd = ch.get("board") or {}
-    if template and uses_board(ch) and not bd.get("presenter") and presenter.load_manifest(rig):
+    man = presenter.load_manifest(rig) if template and uses_board(ch) and not bd.get("presenter") else None
+    if man:
         import shutil
         rel_dir = f"refs/rig_{int(time.time() * 1000)}"
         shutil.copytree(rig, os.path.join(store.channel_dir(ch["id"]), rel_dir))
-        ch["board"] = dict(bd, presenter=f"{rel_dir}/A.png", rig=rel_dir, anim="poses")
+        ch["board"] = dict(bd, presenter=f"{rel_dir}/A.png", rig=rel_dir, anim=man["mode"])
 
 
 def _refresh_from_template(c, template):
@@ -823,13 +825,15 @@ def _pad_portrait(blob):
 
 
 def _anim_mode(anim):
-    return "none" if anim == "none" else "poses"  # anciens réglages (stick / full) → poses
+    return anim if anim in ("none", "stick") else "poses"  # anciens réglages (full…) → poses
 
 
 def save_presenter(ch, blob, anim="poses"):
     """Enregistre le prof dans refs/rig_<ts>/ (base.png + poses + rig.json).
 
-    anim = « poses » : l'IA redessine le bras dans 3 autres positions (3 retouches en parallèle,
+    anim = « stick » : un seul dessin du prof ; sa baguette est effacée puis redessinée par le code,
+           et elle pivote dans son poing, de façon fluide (quelques secondes, aucune IA) ;
+           « poses » : l'IA redessine le bras dans 3 autres positions (3 retouches en parallèle,
            ~1 min), recollées au pixel près → gestes de baguette en animation 2D pose à pose ;
            « none » : image fixe.
     Renvoie (image_de_repos_rel, dossier_rig_rel | None)."""
@@ -852,6 +856,8 @@ def save_presenter(ch, blob, anim="poses"):
 
 
 def _build_anim(out_dir, rel_dir, blob, anim):
+    if anim == "stick" and presenter.build_stick_rig(blob, out_dir):
+        return f"{rel_dir}/A.png", rel_dir
     if anim == "poses":
         def edit(k):
             out = None

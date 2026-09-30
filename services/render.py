@@ -164,6 +164,15 @@ def prepare_layout(workdir, board_cfg, presenter_src, width, height, with_presen
             os.replace(dst + ".tmp.png", dst)
         return dst
 
+    if rig_mode == "stick" and rig and rig.get("body") and os.path.isfile(rig["body"]):
+        # un seul dessin du prof + la baguette redessinée à chaque angle (voir presenter.stick_frames)
+        from services import presenter
+        st = presenter.load_stick(os.path.dirname(rig["body"]))
+        if st:
+            frames, top = presenter.stick_frames(rig["body"], st, ph, workdir)
+            layout.update({"presenter": frames["A"], "rig": frames, "rig_mode": "stick",
+                           "pres_x": g["presenter_x"], "pres_y": g["presenter_bottom"] - ph - top, "bob": False})
+            return layout
     frames = {k: scaled(v, k) for k, v in (rig or {}).items() if v and os.path.isfile(v)}
     if frames.get("A"):
         layout.update({"presenter": frames["A"], "rig": frames, "rig_mode": rig_mode})

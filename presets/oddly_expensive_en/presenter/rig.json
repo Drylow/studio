@@ -1,1 +1,1 @@
-{"mode": "poses", "frames": {"A": "A.png", "mid": "mid.png", "tap": "tap.png", "point": "point.png"}, "size": [547, 900], "drawn": ["mid", "tap"]}
+{"mode": "stick", "frames": {"A": "A.png", "body": "body.png"}, "size": [530, 884], "stick": {"pivot": [400.88484256072445, 211.91072130253815], "length": 234.87306540954737, "angle": 58.509655532991765, "half": 3.167191379338695, "outline": 3.5999999999999996, "fill": [193, 144, 96], "light": [214, 182, 151]}}

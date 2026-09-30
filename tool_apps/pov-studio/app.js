@@ -978,7 +978,8 @@ async function viewChannel(cid) {
               <label class="f"><span class="lbl">Halo derrière le prof</span><input type="range" id="bdSpot" min="0" max="0.6" step="0.02" value="${bd.spot || 0}"></label></div>
             <label class="check small"><input type="checkbox" id="bdBob" ${bd.bob ? 'checked' : ''}> Léger mouvement vertical (respiration)</label></div></details>
           <div class="row nowrap"><label class="f grow"><span class="lbl">Animation du prof</span><select id="bdAnim">
-              <option value="poses" ${bd.anim !== 'none' ? 'selected' : ''}>Gestes de baguette (bras redessiné par l'IA, ~1 min)</option>
+              <option value="stick" ${bd.anim === 'stick' ? 'selected' : ''}>Baguette seule qui pivote (fluide, le prof ne bouge pas)</option>
+              <option value="poses" ${bd.anim !== 'none' && bd.anim !== 'stick' ? 'selected' : ''}>Gestes de baguette (bras redessiné par l'IA, ~1 min)</option>
               <option value="none" ${bd.anim === 'none' ? 'selected' : ''}>Aucune (image fixe)</option></select></label>
             ${bd.presenter ? '<button class="btn sm" id="bdRebuild" style="align-self:flex-end">↻ Appliquer au prof</button>' : ''}</div>
         </div>
@@ -986,7 +987,7 @@ async function viewChannel(cid) {
           <div class="presrow">${bd.presenter ? `<img class="presimg" src="${chFileUrl(cid, bd.presenter)}">` : '<div class="refbox presimg">Pas encore de prof</div>'}
             <div class="stack grow"><label class="f"><span class="lbl">Le prof (mascotte) : description visuelle</span><textarea id="bdMascot" rows="5" placeholder="Ex : un chat noir en costard bleu marine, cravate rouge…">${esc(bd.mascot || '')}</textarea></label>
               <div class="row"><button class="btn sm" id="bdGen">✨ Générer le prof animé</button><label class="btn sm">⬆ Importer un PNG<input type="file" id="bdUp" accept="image/*" hidden></label>${bd.presenter ? '<button class="btn sm danger" id="bdDel">Retirer</button>' : ''}</div>
-              <div class="hint">L'IA dessine le prof en pied avec sa baguette levée, sur fond transparent, puis redessine uniquement son bras dans 3 positions (mi-hauteur, pointé, tapotement). Les poses s'enchaînent comme dans un dessin animé, calées sur la voix. Relance si la pose ne te plaît pas.</div></div></div>
+              <div class="hint">L'IA dessine le prof en pied avec sa baguette levée, sur fond transparent. « Baguette seule » : le prof reste une seule image et sa baguette (redessinée par le code) pivote dans son poing, en douceur, et descend vers le panneau sur les chiffres. « Gestes » : l'IA redessine son bras dans 3 positions qui s'enchaînent comme un dessin animé. Relance si la pose ne te plaît pas.</div></div></div>
           ${bd.rig ? `<div class="rigrow">${['A', 'mid', 'point', 'tap'].map(k => `<img src="${chFileUrl(cid, bd.rig + '/' + k + '.png')}" title="${k}">`).join('')}</div>` : (bd.presenter ? '<div class="hint">Ce prof est une image fixe : choisis « Gestes de baguette » puis « Appliquer au prof ».</div>' : '')}
         </div></div></div>
     <div class="section-title"><span class="n">5</span><h2>Personnages récurrents</h2></div>
