@@ -204,7 +204,7 @@ def transform(im, scale=1.0, alpha=1.0, dx=0, dy=0, rot=0.0, pivot=None):
 
 # rythme posé : chaque type se déroule plus ou moins lentement (1 = vitesse de base)
 SLOW = {"label": 1.2, "counter": 1.5, "receipt": 1.6, "bars": 1.9, "pie": 1.6, "list": 2.1, "split": 1.8,
-        "timeline": 1.9, "stamp": 1.0, "title": 1.0, "sheet": 1.0, "intro": 1.0}
+        "timeline": 1.9, "stamp": 1.0, "title": 1.0, "sheet": 1.0, "intro": 1.0, "outro": 1.0}
 
 
 class Fx:
@@ -970,7 +970,75 @@ class Sheet(Fx):
         return im
 
 
-CLASSES = {"sheet": Sheet, "intro": Intro, "title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
+class Outro(Intro):
+    """Outro simple (≈7 s) : fond du tableau, nom de la chaîne en tampon, « THANKS FOR WATCHING »,
+    « SEE YOU ON THE NEXT BILL », bouton SUBSCRIBE cliqué. La moitié droite reste calme (écrans de fin)."""
+    anim_end = 2.9
+    exit = False
+
+    def setup(self):
+        k = self.k
+        self.x, self.y = 0, 0
+        self.w, self.h = int(self.geo["W"]), int(self.geo["H"])
+        self.kicker = (self.spec.get("kicker") or "").upper()[:40]
+        self.line1 = (self.spec.get("line1") or "THANKS FOR WATCHING").upper()[:30]
+        self.line2 = (self.spec.get("line2") or "SEE YOU ON THE NEXT BILL").upper()[:34]
+        self.bg = self.spec.get("bg") or {}
+        self.s1 = fit_size(self.line1, 900, 96 * k, self.w * 0.42)
+        self.s2 = fit_size(self.line2, 900, 58 * k, self.w * 0.42)
+        self._base = None
+        self.sfx = [(0.0, "whoosh", 0.6), (0.25, "stamp", 0.7), (0.6, "pop", 0.6), (1.05, "pop", 0.6),
+                    (1.45, "pop", 0.7), (2.25, "tick", 1.0), (2.35, "ding", 0.8)]
+
+    def frame(self, t):
+        k = self.k
+        out = self._background()
+        p = Pad(self.w, self.h)
+        cx = self.w * 0.39
+        if self.kicker:
+            a = seg(t, 0.2, 0.36)
+            if a > 0:
+                kw = p.tw(self.kicker, 900, 40 * k) + 56 * k
+                sc = 1.5 - 0.5 * ease_out(a)
+                x0, y0 = cx - kw * sc / 2, self.h * 0.2 - 36 * k * sc
+                p.box((x0, y0, x0 + kw * sc, y0 + 72 * k * sc), YELLOW, width=6 * k, radius=12 * k, shadow=8 * k)
+                p.text((cx, y0 + 36 * k * sc), self.kicker, 900, 40 * k * sc, anchor="mm")
+        a1 = seg(t, 0.55, 0.85)
+        if a1 > 0:
+            p.text((cx, self.h * 0.35), self.line1, 900, self.s1 * (0.8 + 0.2 * ease_back(a1)), fill=WHITE,
+                   anchor="mm", stroke=6 * k, stroke_fill=INK)
+        a2 = seg(t, 1.0, 1.3)
+        if a2 > 0:
+            p.text((cx, self.h * 0.46), self.line2, 900, self.s2 * (0.8 + 0.2 * ease_back(a2)), fill=YELLOW,
+                   anchor="mm", stroke=5 * k, stroke_fill=INK)
+        a3 = seg(t, 1.4, 1.7)
+        if a3 > 0:  # bouton S'abonner, cliqué
+            done = t >= 2.3
+            label = "SUBSCRIBED" if done else "SUBSCRIBE"
+            bw, bh = 470 * k, 110 * k
+            sc = (0.6 + 0.4 * ease_back(a3)) * (0.94 if 2.2 <= t < 2.32 else 1.0)
+            x0, y0 = cx - bw * sc / 2, self.h * 0.6 - bh * sc / 2
+            p.box((x0, y0, x0 + bw * sc, y0 + bh * sc), (120, 128, 140) if done else RED, width=6 * k,
+                  radius=22 * k, shadow=9 * k)
+            ls = fit_size(label, 900, 50 * k * sc, bw * sc * (0.7 if done else 0.86))
+            tx = cx - (24 * k if done else 0)
+            p.text((tx, y0 + bh * sc / 2), label, 900, ls, fill=WHITE, anchor="mm")
+            if done:  # coche dessinée (la police n'a pas le symbole)
+                lx = tx + p.tw(label, 900, ls) / 2 + 22 * k
+                ly = y0 + bh * sc / 2
+                p.line([(lx, ly), (lx + 14 * k, ly + 14 * k), (lx + 40 * k, ly - 16 * k)], WHITE, 9 * k)
+            c = seg(t, 1.8, 2.25)  # le curseur arrive puis clique
+            if c > 0:
+                mx = cx + bw * 0.62 - (bw * 0.35) * ease_out(c)
+                my = self.h * 0.6 + bh * 0.9 - (bh * 0.55) * ease_out(c)
+                arrow = [(mx, my), (mx, my + 56 * k), (mx + 15 * k, my + 42 * k), (mx + 27 * k, my + 66 * k),
+                         (mx + 37 * k, my + 61 * k), (mx + 25 * k, my + 38 * k), (mx + 44 * k, my + 38 * k)]
+                p.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in arrow], fill=WHITE, outline=INK, width=int(4 * k * SS))
+        out.alpha_composite(p.image())
+        return out
+
+
+CLASSES = {"outro": Outro, "sheet": Sheet, "intro": Intro, "title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
            "split": Split, "timeline": Timeline, "stamp": Stamp}
 
 

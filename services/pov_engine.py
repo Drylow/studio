@@ -255,7 +255,8 @@ TEMPLATES = {
         "montage": {"pacing": 8.5, "hook_pacing": 6.0, "hook_seconds": 30, "min_scene": 4.5, "max_scene": 15.0,
                     "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
-                    "music": "auto", "music_volume": 0.12, "director": True, "intro": True, "image_qa": True},
+                    "music": "auto", "music_volume": 0.12, "director": True, "intro": True, "outro": True,
+                    "image_qa": True},
         # prof « acteur » : une pose par idée (presets/oddly_expensive_en/poses), choisie par le réalisateur
         "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none", presenter_height=0.5),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
@@ -1862,6 +1863,9 @@ every 8-12 scenes, with "sign" = the key number or 1-3 words of that scene, UPPE
 "$270/HR", "77%", "12-18 MONTHS"). "wave" only for the very first scene of the video and the very last one.
 
 {FX_GUIDE}
+Clarity: text on screen must make sense on its own for a viewer outside the US. Never leave jargon or a vague
+phrase alone on a sheet, list or label: add a 2-4 word gloss (e.g. "One 401(k) (retirement savings)", "3 fights: kids,
+house, retirement", "QDRO (court order to split retirement)").
 Density: about 55-65% of scenes get an animation; never the same type in 3 consecutive animated scenes (receipt
 excepted when the tab really changes); leave some scenes clean. Every number you write MUST appear exactly in the
 narration (same digits); never compute new numbers, never invent sources. Text is English, short, UPPERCASE for
@@ -2049,12 +2053,12 @@ def job_montage(job, pid):
     job.update(1.0, f"Montage réalisé : {n} animations, {len(plan)} poses.")
 
 
-def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None):
+def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None, extra=None):
     """Prof « acteur » : une pose par scène (plan de montage), avec rebond ; None si pas de poses.
     lead = durée de l'intro (le prof salue pendant l'intro, les scènes sont décalées d'autant)."""
     pd = channel_poses(ch)
     scenes = (pr.get("scenes") or []) if scenes is None else scenes
-    if not pd or not layout or not any(s.get("pose") for s in scenes):
+    if not pd or not layout or not (any(s.get("pose") for s in scenes) or extra):
         return None
     bd = board_config(ch)
     g = board.geometry(bd, w, h)
@@ -2067,6 +2071,7 @@ def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None):
         keys.append((float(s["start"]) + lead, key))
     if lead > 0:
         keys.insert(0, (0.0, "wave"))
+    keys += list(extra or [])
     frames, left, H = presenter.acting_frames(pd, g["presenter_h"], workdir, texts)
     if not frames:
         return None
@@ -2080,6 +2085,14 @@ def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None):
 
 
 INTRO_SECONDS = 5.5
+OUTRO_SECONDS = 7.0
+
+
+def outro_spec(pr, ch):
+    bd = board_config(ch)
+    t = title_spec(pr, ch)
+    return {"type": "outro", "kicker": t["kicker"], "line1": "Thanks for watching", "line2": "See you on the next bill",
+            "bg": {"rgb": _hex_rgb(bd.get("bg_color"), [30, 37, 48]), "dot": _hex_rgb(bd.get("line_color"), [44, 53, 66])}}
 
 
 def _hex_rgb(h, default):
@@ -2165,12 +2178,14 @@ def render_inputs(pid, workdir, until=None):
     scenes_src = [s for s in pr["scenes"] if until is None or s["start"] < until]
     t_end = scenes_src[-1]["end"] if until is not None and scenes_src else None
     lead = INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0
+    tail = OUTRO_SECONDS if (m.get("outro") and montage_enabled(pr) and t_end is None) else 0.0
     voice = os.path.join(d, pr["voice"]["file"])
-    if lead or t_end:
+    voice_end = lead + (t_end if t_end is not None else media.duration(voice))
+    if lead or t_end or tail:
         os.makedirs(workdir, exist_ok=True)
-        cut = os.path.join(workdir, f"voice_{int(lead * 1000)}_{int((t_end or 0) * 1000)}.mp3")
+        cut = os.path.join(workdir, f"voice_{int(lead * 1000)}_{int((t_end or 0) * 1000)}_{int(tail * 1000)}.mp3")
         if not os.path.isfile(cut) or os.path.getmtime(cut) < os.path.getmtime(voice):
-            af = [f"adelay={int(lead * 1000)}:all=1"] if lead else []
+            af = ([f"adelay={int(lead * 1000)}:all=1"] if lead else []) + ([f"apad=pad_dur={tail:.3f}"] if tail else [])
             media.run(["-y", "-i", voice] + (["-t", f"{t_end:.3f}"] if t_end else []) +
                       (["-af", ",".join(af)] if af else []) + ["-c:a", "libmp3lame", "-q:a", "2", cut])
         voice = cut
@@ -2201,13 +2216,39 @@ def render_inputs(pid, workdir, until=None):
         if lead:  # intro plein écran dessinée par le code (aucune image de la vidéo derrière)
             scenes.insert(0, {"image": _intro_bg(ch, workdir, w, h), "start": 0.0, "motion": "none", "index": -1})
             fx.insert(0, {"scene": 0, "t": 0.0, "spec": intro_spec(pr, ch)})
-        acted = _acting(pr, ch, layout, workdir, w, h, lead=lead, scenes=scenes_src)
+        if tail:  # outro simple après la dernière phrase
+            scenes.append({"image": _intro_bg(ch, workdir, w, h), "start": voice_end, "motion": "none", "index": -2})
+            fx.append({"scene": len(scenes) - 1, "t": voice_end, "spec": outro_spec(pr, ch)})
+        acted = _acting(pr, ch, layout, workdir, w, h, lead=lead, scenes=scenes_src,
+                        extra=[(voice_end, "wave")] if tail else None)
         if acted:
             layout, sounds = acted
         sounds += [(float(s["start"]) + lead + 0.05, "whoosh", 0.3) for s in scenes_src[1:]
                    if s.get("first") and s.get("heading")]
     return {"scenes": scenes, "voice": voice, "words": words, "overlays": overlays, "layout": layout, "fx": fx,
             "sounds": sounds, "w": w, "h": h, "m": m, "music": pick_music(pr, m.get("music"))}
+
+
+def outro_preview(pid, workdir, out):
+    """Aperçu de l'outro seule (image du prof, musique, bruitages)."""
+    pr = store.get_project(pid)
+    ch = project_channel(pr)
+    m = pr.get("montage") or DEFAULT_MONTAGE
+    w, h = dims(pr)
+    os.makedirs(workdir, exist_ok=True)
+    silent = os.path.join(workdir, "silence.mp3")
+    media.run(["-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-t", f"{OUTRO_SECONDS:.2f}", "-c:a",
+               "libmp3lame", "-q:a", "4", silent])
+    layout = _layout_for(pr, workdir, w, h)
+    acted = _acting(pr, ch, layout, workdir, w, h, scenes=[], extra=[(0.0, "wave")])
+    if acted:
+        layout = acted[0]
+    render.render_video(workdir, [{"image": _intro_bg(ch, workdir, w, h), "start": 0.0, "motion": "none"}], silent,
+                        out, width=w, height=h, fps=30, motion="none", transition="cut", words=[],
+                        captions={"mode": "none"}, music_path=pick_music(pr, m.get("music")),
+                        music_volume=float(m.get("music_volume") or 0.12), layout=layout,
+                        fx=[{"scene": 0, "t": 0.0, "spec": outro_spec(pr, ch)}], tail=0.0)
+    return out
 
 
 def job_render(job, pid):
