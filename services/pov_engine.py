@@ -223,8 +223,10 @@ TEMPLATES = {
                    "placeholder": "The Economics of a Divorce",
                    "sub": "script FacelessOS façon cours (le prof explique la facture poste par poste), voix Algrow, "
                           "prof animé sur le tableau, images, musique et montage.",
-                   "thumb_prompt": "The channel's teacher pointing his stick at a huge itemized bill for \"{title}\", "
-                                   "one line circled in red, and ONE huge yellow number: the final total."},
+                   "thumb_prompt": "A 3-5 word title about \"{title}\" (like 'THE DIVORCE TRAP'); the teacher "
+                                   "at a desk or counter handing over the bill, 1-2 emotional comic characters on "
+                                   "the left, the key props in the middle and 4-6 labels with arrows, each a real "
+                                   "number from the video."},
         "niche": "The real bill of life's biggest and darkest moments (a divorce, dying, prison, having a kid, an "
                  "ambulance ride), explained by a teacher: every line item, who gets paid, and how people pay less",
         "audience": "US adults 25-54 (plus UK, Canada, Australia) who fear big surprise bills and love 'how it really "
@@ -272,14 +274,40 @@ TEMPLATES = {
                   "dollar bills sticking out of the "
                   "breast pocket, grey trousers, black shoes, white mitten hands, thick clean black outlines",
         "thumb_text": True,
-        "thumb_style": "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On the "
-                       "right, the channel's teacher (exactly as in the reference image) pointing his stick at the "
-                       "hero object with a friendly, natural expression. Center-left, ONE big hero object that is "
-                       "the video's bill: a long itemized receipt, a hospital invoice, a price tag or a commissary "
-                       "receipt, slightly tilted, with one line circled in red. ONE huge number in heavy condensed bold yellow (#FFD447) "
-                       "with a thick black outline (the final total or the most absurd line item, e.g. '$310,000', "
-                       "'$0.23/HOUR', '$3,200 FOR 4 MILES'), no other words. One small white round-headed character "
-                       "reacting in shock. Clean bold outlines, high contrast, readable at small size.",
+        # miniatures façon Marcus Explains (validées sur « The Divorce Trap ») ; presets/oddly_expensive_en/thumb.jpg
+        "thumb_rev": 2,
+        "thumb_style": "Bright saturated blue blueprint background with faint white technical grid lines and faint "
+                       "blueprint sketches. A massive heavy condensed UPPERCASE title of 3-5 words in solid black with "
+                       "a thick white outline filling the whole top band edge to edge, with a thick red marker "
+                       "underline under it (e.g. 'THE DIVORCE TRAP', 'THE $61,000 DIVORCE'). Detailed comic-book "
+                       "cartoon art, thick black outlines, cel shading, expressive faces. On the right, the channel's "
+                       "teacher (exactly as in the reference: large round plain white head, grey three-piece suit, "
+                       "dollar bills in the breast pocket, white mitten hands) with a calm, friendly, confident "
+                       "closed-mouth smile (never a smirk), doing the key action of the story (sliding papers across "
+                       "a desk, handing over a bill, ringing up a register). On the left, 1-2 detailed comic "
+                       "characters with normal human faces and strong emotions (a glamorous, attractive woman in a "
+                       "fitted dress, a sweating shocked man). The key props of the story on a desk or counter in "
+                       "the middle. 4-6 short labels in black bold condensed UPPERCASE with a thick white outline, "
+                       "each a real number from the video + 1-2 words ('$270/HR LAWYER', '$16,800 2ND RENT'), each "
+                       "with a hand-drawn black curved arrow pointing at its prop.",
+        "thumb_style_prev": ("Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On "
+                             "the right, the channel's teacher (exactly as in the reference image) pointing his stick "
+                             "at the hero object with a friendly, natural expression. Center-left, ONE big hero object "
+                             "that is the video's bill: a long itemized receipt, a hospital invoice, a price tag or a "
+                             "commissary receipt, slightly tilted, with one line circled in red. ONE huge number in "
+                             "heavy condensed bold yellow (#FFD447) with a thick black outline (the final total or the "
+                             "most absurd line item, e.g. '$310,000', '$0.23/HOUR', '$3,200 FOR 4 MILES'), no other "
+                             "words. One small white round-headed character reacting in shock. Clean bold outlines, "
+                             "high contrast, readable at small size.",
+                             "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On "
+                             "the right, the channel's teacher (exactly as in the reference image) pointing his stick "
+                             "at the hero object with a knowing look. Center-left, ONE big hero object that is the "
+                             "video's bill: a long itemized receipt, a hospital invoice, a price tag or a commissary "
+                             "receipt, slightly tilted, with one line circled in red. ONE huge number in heavy "
+                             "condensed bold yellow (#FFD447) with a thick black outline (the final total or the most "
+                             "absurd line item, e.g. '$310,000', '$0.23/HOUR', '$3,200 FOR 4 MILES'), no other words. "
+                             "One small white round-headed character reacting in shock. Clean bold outlines, high "
+                             "contrast, readable at small size."),
         "bible": "",
     },
     "business_en": {
@@ -407,7 +435,7 @@ def new_channel(data=None, template=None):
         "youtube_handle": t.get("youtube_handle", ""),
         "bible": t.get("bible") or TEMPLATE_BIBLES.get(template or "", ""),
         "wpm": t.get("wpm", 150), "thumb_style": t.get("thumb_style", ""),
-        "thumb_text": t.get("thumb_text", True), "thumb_ref": None,
+        "thumb_text": t.get("thumb_text", True), "thumb_ref": None, "thumb_rev": t.get("thumb_rev", 0),
         "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
                   "no_text": t.get("no_text", True), "direction": t.get("direction", ""),
                   "ref": None, "characters": []},
@@ -487,6 +515,12 @@ def _refresh_from_template(c, template):
         changed = changed or bool(c["reference_description"])
     if not c.get("youtube_handle") and t.get("youtube_handle"):
         c["youtube_handle"] = t["youtube_handle"]
+        changed = True
+    if (c.get("thumb_rev") or 0) < t.get("thumb_rev", 0):
+        # nouveau style de miniature du modèle : appliqué, sauf si tu avais écrit le tien
+        if not (c.get("thumb_style") or "").strip() or c.get("thumb_style") in t.get("thumb_style_prev", ()):
+            c["thumb_style"] = t["thumb_style"]
+        c["thumb_rev"] = t["thumb_rev"]
         changed = True
     refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"),
                     (c.get("board") or {}).get("poses"))
