@@ -147,9 +147,29 @@ de la chaîne sans passer par les étapes.
   voix Algrow et montage.
 
 **Pour une future chaîne** : on crée son modèle dans `services/pov_engine.py` (`TEMPLATES`, avec son
-style d'images, sa voix et sa vidéo de référence), ses images dans `presets/<modèle>/`, puis on
-duplique `tool_apps/osl-studio` (ou on l'ouvre avec `?studio=<modèle>`) et on l'ajoute à
-`routes/tools.py`.
+style d'images, sa voix, sa vidéo de référence et un bloc `studio` : nom, logo, textes), ses images
+dans `presets/<modèle>/`, puis on l'ajoute à `routes/tools.py` avec `"query": "studio=<modèle>"`. Le
+même studio sert toutes les chaînes ; le menu à côté du logo passe de l'une à l'autre.
+
+## Studio Oddly Expensive Lives (« The Economics of… »)
+
+Outil **ODDLY EXPENSIVE LIVES**, ou le menu à côté du logo dans le studio. Même fonctionnement que
+ci-dessus, avec un autre format et une autre mise en page :
+
+- **Format « The Economics of… »** : ce n'est pas une histoire. Le prof de la chaîne explique la vraie
+  facture d'un moment de vie (divorce, décès, prison, enfant, ambulance) comme en cours :
+  - il suit **un cas type** (ex. un couple de l'Ohio, 12 ans de mariage, 2 enfants) ;
+  - chaque leçon ajoute des lignes à la facture, puis il lit le **total en cours** ;
+  - on y trouve qui encaisse, les coûts cachés, pourquoi le système reste cher, et comment les gens paient moins ;
+  - le **total final** est la chute de la vidéo et le chiffre de la miniature.
+- **Mise en page tableau** : fond ardoise à pois, image de la scène dans le panneau, prof animé en bas à
+  gauche (voir plus bas). Les images reprennent les bonhommes à tête ronde blanche d'Oddly Specific
+  Lives et affichent un seul gros libellé chiffré quand la voix donne un chiffre clé.
+- **Le prof** : son image animée se range dans `presets/oddly_expensive_en/presenter/` (rig déjà
+  construit : `A.png`, `mid.png`, `point.png`, `tap.png`, `rig.json`). Elle s'installe toute seule sur
+  la chaîne au lancement. On peut aussi le remplacer dans l'éditeur avancé (fiche chaîne, section 4).
+- **Miniatures** : fond ardoise, le prof qui pointe la facture et **un seul énorme chiffre** jaune
+  (le total ou la ligne la plus absurde), pas le mot du titre.
 
 ## Mise en page tableau et prof animé
 
