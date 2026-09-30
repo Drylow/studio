@@ -92,3 +92,5 @@
 
 .fastopt { display: flex; align-items: center; gap: 7px; margin-top: 10px; font-size: 12.5px; cursor: pointer; flex-wrap: wrap; }
 .fastopt input { accent-color: var(--s-accent); }
+.fmtrow { margin-top: 12px; max-width: 460px; }
+.fmtrow select { width: 100%; }

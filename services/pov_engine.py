@@ -171,6 +171,34 @@ TEMPLATES = {
         "characters_extra": [("Her", "the woman he loves: same white round head and dot eyes, long straight black hair "
                                      "(or a bun), clothes that fit her culture and the scene; same look in every image")],
         "thumb_text": False,
+        # autres formats de la même chaîne : même voix, même style, même narration (choisi d'après le titre)
+        "variants": {"pov_life": {
+            "niche": "Second-person POV life stories: you live an oddly specific life (a job, a world, a status) "
+                     "from the first day to the quiet last scene",
+            "rules": "Follow your life chronologically, from the ordinary before to the quiet final scene. Real, "
+                     "named places and correct insider details (routines, money, tools, words). Honest and human: "
+                     "never glamorize, never mock, never graphic.",
+            "bible_note": "derived from the channel's reference video, a POV love story: follow its narration "
+                          "register, hook mechanics, rhythm, dialogue density and ending shape; its romance beats "
+                          "do not apply",
+            "direction": "Show the story like a sitcom: mostly You (and the few recurring people of your life) in the "
+                         "everyday places of this life: home, workplace, streets, cars, family dinners, offices. Medium "
+                         "and wide shots, characters medium-large, calm or dry understated expressions that sell the "
+                         "joke. Put the specific tools, objects, screens and places of this life on screen. Night city "
+                         "skylines and warm interiors for emotional beats. Everyone dressed normally: nothing "
+                         "suggestive, nothing graphic.",
+            "characters": [("You", "the protagonist ('you'), the person in the title: a simple cartoon figure with a "
+                                   "large perfectly round plain white head, small black dot eyes; hair, body and outfit "
+                                   "follow who the protagonist is in this video; same look in every image")],
+            "thumb_style": "Vibrant, detailed comic-book cartoon illustration (NOT stick figures): the video's "
+                           "protagonist, three-quarter body, confident knowing expression, dressed normally, holding "
+                           "the premise's key prop, with a thick white sticker outline around them; behind them the "
+                           "most iconic setting of this life at golden hour or night, with a few small background "
+                           "people. Warm saturated colors, clean bold outlines, nothing suggestive, no text.",
+        }},
+        "variant_default": "pov_life",
+        "variant_match": r"(?i)\b(marr(y|ies|ied|iage)|wife|husband|fall(s|ing)?\s+in\s+love|date|dating|"
+                         r"girlfriend|boyfriend|bride|wedding|love)\b",
         "thumb_style": "Vibrant, detailed comic-book cartoon illustration (NOT stick figures): one beautiful stylized "
                        "woman of the video's nationality / identity, three-quarter body, confident knowing smile, in an "
                        "iconic outfit of her culture, holding a bouquet of red roses (or the premise's key prop), with a "
@@ -383,6 +411,50 @@ def studio_channel(template):
             store.save_channel(c)
             return _refresh_from_template(c, template)
     return new_channel({}, template=template)
+
+
+def pick_format(ch, title, wanted=None):
+    """Format d'une vidéo de studio : celui demandé, sinon d'après le titre (ex. « Marry » → POV mariage,
+    « Inside the Life of… » → POV vie). None = format de la chaîne."""
+    t = TEMPLATES.get(ch.get("template") or "", {})
+    variants = t.get("variants") or {}
+    if wanted in variants:
+        return wanted
+    if wanted == ch.get("format") or not variants:
+        return None
+    if re.search(t.get("variant_match") or r"$^", title or ""):
+        return None
+    return t.get("variant_default")
+
+
+def studio_formats(ch):
+    """[{key, name}] : le format de la chaîne puis ses variantes (choix « Format » du studio)."""
+    keys = [ch.get("format")] + list((TEMPLATES.get(ch.get("template") or "", {}).get("variants") or {}))
+    return [{"key": k, "name": S.FORMATS[k]["name"]} for k in dict.fromkeys(keys) if k in S.FORMATS]
+
+
+def project_channel(pr):
+    """La chaîne telle que la voit cette vidéo : pr["format"] peut choisir une variante du modèle
+    (autre format, même voix/style). La copie n'est jamais enregistrée."""
+    ch = store.get_channel(pr["channel_id"])
+    fmt = (pr or {}).get("format")
+    if not ch or not fmt or fmt == ch.get("format"):
+        return ch
+    v = ((TEMPLATES.get(ch.get("template") or "", {}).get("variants") or {}).get(fmt)) or {}
+    ch = json.loads(json.dumps(ch))
+    ch["format"] = fmt
+    for k in ("niche", "rules", "tone", "bible_note", "thumb_style"):
+        if v.get(k):
+            ch[k] = v[k]
+    st = ch.setdefault("style", {})
+    if v.get("direction"):
+        st["direction"] = v["direction"]
+    if v.get("characters") is not None:
+        old = {_norm_name(c["name"]): c for c in st.get("characters") or []}
+        st["characters"] = [{"id": (old.get(_norm_name(n)) or {}).get("id") or store.new_id("chr"), "name": n,
+                             "description": d, "image": None, "always": i == 0}
+                            for i, (n, d) in enumerate(v["characters"])]
+    return ch
 
 
 _CH_FIELDS = ("name", "language", "format", "niche", "audience", "tone", "rules", "cta", "reference_scripts",
@@ -855,7 +927,7 @@ def channel_history(cid, exclude=None, limit=3):
 
 def job_script(job, pid, polish=True):
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     if not ch:
         raise RuntimeError("Chaîne introuvable.")
 
@@ -881,7 +953,7 @@ def job_script(job, pid, polish=True):
 
 def job_rewrite(job, pid, instruction):
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     job.update(0.1, "Réécriture du script…")
     new = S.rewrite_selection(ch, pr.get("script") or "", instruction)
     if S.word_count(new) < 20:
@@ -897,7 +969,7 @@ def job_rewrite(job, pid, instruction):
 def job_audit(job, pid, rounds=2):
     """Audit FacelessOS (greenlight en boucle) du script actuel du projet."""
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     if not (pr.get("script") or "").strip():
         raise RuntimeError("Pas de script à auditer.")
     if not FOS.available():
@@ -975,7 +1047,7 @@ def tighten_pauses(src, words, max_pause, dest):
 
 def job_voice(job, pid):
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     text = S.narration(pr.get("script") or "")
     if S.word_count(text) < 5:
         raise RuntimeError("Le script est vide.")
@@ -1255,7 +1327,7 @@ Return JSON: {{"prompts": [{{"i": <scene number>, "prompt": "...", "chars": ["ex
 
 def ensure_prompts(job, pid, p0=0.0, p1=0.2):
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     todo = [s for s in pr["scenes"] if not (s.get("prompt") or "").strip()]
     if not todo:
         return
@@ -1375,7 +1447,7 @@ def set_cast_image(pid, cid, rel):
 def job_cast(job, pid, redetect=False, only=None, p0=0.0, p1=1.0):
     """Casting : détection des persos dans le script (si besoin) + une image de référence par perso."""
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     if not (pr.get("script") or "").strip():
         raise RuntimeError("Écris le script d'abord : les persos sont tirés du script.")
     if redetect or pr.get("cast") is None:
@@ -1436,7 +1508,7 @@ def job_images(job, pid, only=None, first_only=False):
         job_cast(job, pid, p0=0.01, p1=0.06)  # persos consistants AVANT d'écrire les prompts
     ensure_prompts(job, pid, 0.06, 0.12)
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     if only is not None:
         targets = [s for s in pr["scenes"] if s["i"] in set(only)]
     else:
@@ -1587,7 +1659,7 @@ def _layout_for(pr, workdir, w, h, with_presenter=True):
     """Mise en page tableau pour le rendu (None = plein écran)."""
     if not uses_board(pr) or h > w:
         return None
-    ch = store.get_channel(pr["channel_id"]) or {}
+    ch = project_channel(pr) or {}
     bd = board_config(ch)
     os.makedirs(workdir, exist_ok=True)
     rig, mode = rig_paths(ch) if ch else ({}, None)
@@ -1640,7 +1712,7 @@ def _pack_call(d, scenes, pr, w, h, m, motion, pid, job, name):
 def job_thumbnails(job, pid, idea="", count=2):
     """Miniatures YouTube (style + perso de la chaîne, gros texte court)."""
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     count = max(1, min(4, int(count or 2)))
     job.update(0.05, "Concepts de miniatures…")
     chars = [c["name"] for c in (ch.get("style") or {}).get("characters") or []]
@@ -1748,7 +1820,7 @@ def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=T
     """Miniatures « à la manière de » : 1re référence = la miniature à imiter (lien YouTube ou image),
     les suivantes = images d'appoint (perso, objet, style) ; 1 à 4 variantes en parallèle."""
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     count = max(1, min(4, int(count or 1)))
     refs = [p for p in (ref_files or []) if p and os.path.isfile(p)][:4]
     thumb_style = (ch.get("thumb_style") or "").strip()
@@ -1805,7 +1877,7 @@ def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=T
 def job_thumb_regen(job, pid, file):
     """Regénère UNE miniature avec le même prompt et les mêmes références ; elle garde sa place."""
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     thumbs = pr.get("thumbnails") or []
     old = next((t for t in thumbs if t.get("file") == file), None)
     if not old:
@@ -1860,6 +1932,7 @@ def studio_summary(pr):
     out["thumbnails"] = [{"file": t.get("file"), "at": t.get("at")} for t in pr.get("thumbnails") or [] if t.get("file")]
     rv = pr.get("review") or {}
     out["verdict"] = rv.get("verdict") if rv.get("engine") == "facelessos" else None
+    out["format"] = pr.get("format")
     md = pr.get("metadata") or {}
     out["metadata"] = {k: md.get(k) for k in ("titles", "description", "tags", "pinned_comment", "at")} if md else None
     return out
@@ -1878,7 +1951,7 @@ def chapters(pr):
 
 def job_metadata(job, pid):
     pr = store.get_project(pid)
-    ch = store.get_channel(pr["channel_id"])
+    ch = project_channel(pr)
     job.update(0.2, "Titre, description, tags et commentaire épinglé…")
     if FOS.available():
         meta = S.package(ch, pr)

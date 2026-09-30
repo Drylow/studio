@@ -445,7 +445,7 @@ def _full(pr):
     out["stage"] = E.stage(pr)
     out["voice_outdated"] = bool(pr.get("voice")) and E.voice_outdated(pr)
     out["words_count"] = S.word_count(S.narration(pr.get("script") or ""))
-    ch = store.get_channel(pr.get("channel_id")) or {}
+    ch = E.project_channel(pr) or {}
     out["channel_cast"] = [{"name": c["name"], "description": c.get("description", ""), "image": c.get("image")}
                            for c in (ch.get("style") or {}).get("characters") or []]
     return out
@@ -573,7 +573,7 @@ def studio(template):
                                 "pacing": mt.get("pacing") or 6, "voice_provider": (ch.get("voice") or {}).get("provider"),
                                 "thumb_style": ch.get("thumb_style") or "",
                                 "has_reference": bool((ch.get("reference_scripts") or "").strip())},
-                    "projects": prs})
+                    "formats": E.studio_formats(ch), "projects": prs})
 
 
 @pov_bp.route("/api/pov/studio/<template>/videos", methods=["POST"])
@@ -593,6 +593,9 @@ def studio_video(template):
     minutes = max(1.0, min(60.0, float(b.get("minutes") or ch.get("default_minutes") or 10)))
     pr = E.new_project(ch, title, minutes, (b.get("notes") or "").strip())
     pr["title_locked"] = True  # le titre choisi reste celui de la vidéo
+    fmt = E.pick_format(ch, title, b.get("format") or None)  # « Marry… » → POV mariage, sinon POV vie
+    if fmt:
+        pr["format"] = fmt
     # script rapide : 1 passe d'audit FacelessOS (la plus utile) au lieu de 3
     pr["fos_rounds"] = 1 if b.get("fast", True) else 3
     store.save_project(pr)

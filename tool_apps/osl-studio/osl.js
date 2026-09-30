@@ -64,6 +64,7 @@ function onMinutes() {
   $('#est').innerHTML = `<span>≈ <b>${nf(words)}</b> mots</span><span>≈ <b>${nf(imgs)}</b> images</span>`
     + `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span><span>≈ <b>${nf((fast() ? 6 : 12) + m * (fast() ? 1.6 : 1.9))} min</b> de fabrication</span>`;
 }
+const fmtName = k => { const f = k && (S.formats || []).find(x => x.key === k); return f ? f.name.split(' (')[0] : ''; };
 const fast = () => !$('#fast') || $('#fast').checked;
 $('#minutes').oninput = onMinutes;
 $('#fast').onchange = onMinutes;
@@ -75,7 +76,7 @@ $('#create').onclick = async e => {
   const running = S.projects.filter(p => p.job && p.job.status === 'running' && p.job.kind === 'autopilot').length;
   if (running && !confirm(`${running} vidéo(s) déjà en cours. En lancer une autre en parallèle ? (les images se partagent le même quota)`)) return;
   busy(e.currentTarget, true, 'Lancement…');
-  const r = await guard(() => api('POST', `/studio/${STUDIO}/videos`, {title, minutes, notes: $('#notes').value.trim(), fast: fast()}));
+  const r = await guard(() => api('POST', `/studio/${STUDIO}/videos`, {title, minutes, notes: $('#notes').value.trim(), fast: fast(), format: $('#format').value}));
   busy($('#create'), false);
   if (r) { $('#title').value = ''; $('#notes').value = ''; toast('C\'est parti : la vidéo se fabrique.', 'ok'); await load(); }
 };
@@ -102,6 +103,7 @@ function card(p) {
   const meta = [
     `<span class="pill ${st.cls}">${st.k === 'run' ? '<span class="spin" style="width:10px;height:10px"></span>' : ''}${esc(st.label)}</span>`,
     `<span>${esc(p.minutes)} min visées</span>`,
+    fmtName(p.format) ? `<span>${esc(fmtName(p.format))}</span>` : '',
     p.render ? `<span>durée ${fmtDur(p.render.duration)}</span>` : (p.duration ? `<span>voix ${fmtDur(p.duration)}</span>` : ''),
     p.scenes ? `<span>${p.images}/${p.scenes} images</span>` : '',
     p.verdict ? `<span class="pill ${p.verdict === 'PASS' ? 'ok' : 'warn'}" title="Verdict de l'audit FacelessOS du script">FacelessOS ${esc(p.verdict)}</span>` : '',
@@ -206,7 +208,10 @@ async function load() {
   const r = await guard(() => api('GET', `/studio/${STUDIO}`));
   if (r) {
     const first = !S.ch;
-    S.ch = r.channel; S.projects = r.projects;
+    S.ch = r.channel; S.projects = r.projects; S.formats = r.formats || [];
+    if (first && S.formats.length > 1) $('#format').insertAdjacentHTML('beforeend',
+      S.formats.map(f => `<option value="${esc(f.key)}">${esc(f.name)}</option>`).join(''));
+    $('.fmtrow').classList.toggle('hidden', S.formats.length < 2);
     if (first) { $('#minutes').value = Math.min(30, Math.max(3, Math.round(S.ch.default_minutes || 14))); onMinutes(); }
     $('#refHint').innerHTML = S.ch.has_reference ? '✓ Script calé sur la vidéo de référence (Female Yakuza) · audit FacelessOS'
       : '⚠ Pas de vidéo de référence pour cette chaîne.';

@@ -102,6 +102,21 @@ FORMATS = {
 - "Marry" titles reach the proposal or wedding by ~60% and then show married life; "Fall in Love" titles stop at commitment. Danger premises keep real stakes; warm culture premises put the stakes in her family, customs and distance.
 - ENDING: a small, quiet two-person scene with 2-4 lines of dialogue, then a last physical image. Never summarize the video.""",
     },
+    "pov_life": {
+        "name": "Inside the Life of… (POV : tu ES la personne)",
+        "desc": "« Inside The Life Of A Casino Host », « POV: You Become a… » — le spectateur EST la personne du titre, sa vie racontée en « you », des débuts à la dernière scène (façon Oddly Specific Lives).",
+        "heading": "a short time-stamp or event label used for structure only, never spoken (e.g. \"Week one\", \"The first payout\", \"Your mother's call\")",
+        "structure": """ONE continuous second-person narration ("you"), PRESENT TENSE, chronological. No host, no intro, no "in this video", no spoken chapter titles, no CTA, no outro. The title carries the premise: never restate it; let the label land naturally inside a scene within the first minute or two.
+- "YOU" ARE the person in the title: ordinary, specific and honest, with one or two concrete everyday problems at the start (rent, a debt, a dead-end job, a family situation) that explain why you step into this life. You speak little; your lines are short.
+- ARC: the ordinary before and the precise trigger → the first clumsy, small attempt, with a real number → learning how the machine actually works (tools, routines, the people and businesses around you, who takes what cut, the insider words) → the rise, numbers climbing, one scene that shows what the money buys → the hidden costs arriving one by one (privacy, family, relationships, body and mind, the platform or the law) → ONE crisis that forces a choice → the quiet aftermath, where you are now.
+- Insider specificity is the currency: exact routines, tools, fees, percentages, schedules, what people in this life call things, what outsiders get wrong. Only use figures you are confident are realistic, and round them.
+- 3-5 recurring people with fixed roles (a friend, a family member, a manager or colleague, a partner), each shown through what they do and one telling line. They react to you; the story stays yours.
+- FOLLOW THE CHANNEL'S REFERENCE ANALYSIS for narration register, rhythm, hook mechanics, dialogue density and ending shape. Its love-story beats do not apply to this format.
+- Scenes, not summaries: named real places, a time of day, weather or light, one telling physical detail, then short loaded dialogue that carries the turn. Move time inside the narration ("Three weeks in", "By March", "Year two is different"), never with headings.
+- Plant 2-3 physical motifs early (an object, a ritual, a place, a number) and pay them off; the last line returns to the opening image.
+- Honest, human, dry understatement: never glamorize, never moralize. Sensitive lives stay non-graphic: imply, cut away, show the consequences.
+- ENDING: a small, quiet scene with 2-4 lines of dialogue, then a last physical image. Never summarize the video.""",
+    },
     "business_explained": {
         "name": "How X Actually Makes Money (business expliqué)",
         "desc": "« How Pawn Shops Actually Make Money », « The Economics of Money Laundering » — le vrai modèle économique caché d'un business (façon Marcus Explains).",
@@ -200,8 +215,9 @@ def _channel_block(ch):
         if (ch.get(key) or "").strip():
             parts.append(f"{label}: {ch[key].strip()}")
     if (ch.get("bible") or "").strip():
-        parts.append("REFERENCE ANALYSIS / CHANNEL STYLE BIBLE (derived from the reference video of this format — "
-                     "follow its hook shape, beat map, rhythm and ending):\n" + ch["bible"].strip())
+        label = ch.get("bible_note") or ("derived from the reference video of this format — follow its hook shape, "
+                                         "beat map, rhythm and ending")
+        parts.append(f"REFERENCE ANALYSIS / CHANNEL STYLE BIBLE ({label}):\n" + ch["bible"].strip())
     anc = voice_anchor(ch)
     if anc:
         parts.append("VOICE ANCHOR — verbatim spoken narration from the channel's reference video. This is the shape "
