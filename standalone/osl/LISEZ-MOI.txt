@@ -15,3 +15,7 @@
 
 Tes vidéos, images et miniatures sont rangées dans app\data\pov (onglet « Projets » pour faire
 le ménage). Le dossier contient tes clés (fichier app\.env) : ne le partage pas.
+
+MISE À JOUR : décompresse le nouveau zip, puis copie son dossier « Oddly Specific Lives Studio »
+par-dessus l'ancien et accepte de remplacer les fichiers. Tes vidéos (app\data) et l'installation
+(app\runtime) restent en place : pas besoin de tout réinstaller.
