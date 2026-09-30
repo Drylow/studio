@@ -221,8 +221,10 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
         st = getattr(e, "status", None)
         if use_fb and st in (4290, 429):
             _log("/chat/completions", f"{body['model']} indisponible ({st}) → secours {fb}", time.time())
-            if st == 429:  # 5 min sans insister sur le modèle saturé
-                _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + 300)
+            # on n'insiste plus sur le modèle saturé : 5 min (429), 10 min (quota sans heure de reprise ;
+            # sinon chaque appel repayait ~90 s d'attente du proxy avant de basculer sur le secours)
+            pause = 300 if st == 429 else 600
+            _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + pause)
             body["model"] = fb
             body.pop("reasoning_effort", None)
             return _with_retries(once, tries=tries)
