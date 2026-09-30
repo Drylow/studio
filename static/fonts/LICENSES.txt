@@ -1,0 +1,8 @@
+Polices utilisées pour les sous-titres incrustés de 2D Videos (fontsdir ffmpeg/libass)
+et pour l'interface. Toutes sous SIL Open Font License 1.1 — https://openfontlicense.org
+
+- Poppins (700/800/900)  — Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+- Montserrat ExtraBold   — Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+- Bangers                — Copyright 2010 The Bangers Project Authors (https://github.com/googlefonts/bangers)
+
+Source des fichiers : Google Fonts (https://fonts.google.com).

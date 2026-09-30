@@ -50,17 +50,34 @@ TOOLS = {
     "pov-studio": {
         "slug": "pov-studio",
         "category": "youtube",
-        "name": "POV STUDIO 2D",
-        "short": "POV Studio 2D",
-        "tag": "// POV",
-        "desc": "Script POV par niveaux → voix off ElevenLabs, images IA par scène, "
-                "montage auto. Inclut Niche Bending (analyse de chaînes virales).",
+        "name": "2D VIDEOS",
+        "short": "2D Videos",
+        "tag": "// 2D",
+        "desc": "Façon TubeGen, 100 % local : titre → script calibré pour ta chaîne (bible de style, "
+                "relecture IA) → voix off → images 2D cohérentes (style + perso de référence) → "
+                "vidéo montée (zooms, sous-titres, musique) ou pack de clips calés pour CapCut.",
         "entry": "pov-studio/index.html",
         "theme": "dark",
-        "needs_render": True,
+        "needs_render": False,
         "accent": "pink",
         "icon": '<path d="M4 5h16v11H4z"/><path d="M8 21h8M12 16v5"/><circle cx="9" cy="10" r="1.6"/>'
                 '<path d="M13 12l2.5-3 2.5 3"/>',
+    },
+    "osl-studio": {
+        "slug": "osl-studio",
+        "category": "youtube",
+        "name": "ODDLY SPECIFIC LIVES",
+        "short": "Oddly Specific Lives",
+        "tag": "// OSL",
+        "desc": "Le studio de la chaîne Oddly Specific Lives : tu mets le titre et la durée → script "
+                "FacelessOS, voix Algrow, persos consistants, images, musique et montage, vidéo prête. "
+                "Miniatures depuis un lien YouTube ou des images de référence.",
+        "entry": "osl-studio/index.html",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "pink",
+        "icon": '<circle cx="12" cy="8" r="4.2"/><path d="M5.5 21c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/>'
+                '<path d="M18.5 3.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
     },
     "delamain": {
         "slug": "delamain",

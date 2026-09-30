@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oddly Specific Lives</title>
+<link rel="stylesheet" href="../pov-studio/app.css">
+<link rel="stylesheet" href="osl.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">OSL</div><span>Oddly Specific <b>Lives</b></span></div>
+  <nav class="tabs">
+    <div class="tab on" data-view="videos">🎬 Vidéos</div>
+    <div class="tab" data-view="projects">🗂 Projets</div>
+  </nav>
+  <div class="status-dots" id="topInfo"></div>
+  <a class="btn sm ghost" href="/tools/pov-studio" target="_top" title="L'éditeur complet : script, voix, storyboard, montage">Éditeur avancé ↗</a>
+</header>
+
+<main class="osl" id="viewVideos">
+  <section class="card newvid">
+    <h2>Nouvelle vidéo</h2>
+    <div class="sub">Tu mets le titre et la durée. Le studio fait le reste : script FacelessOS (calé sur la vidéo Female Yakuza), voix Algrow, personnages consistants, images, musique et montage.</div>
+    <label class="f"><span class="lbl">Titre</span>
+      <input type="text" id="title" maxlength="140" placeholder="POV: You Marry a Japanese Woman" autocomplete="off"></label>
+    <div class="durrow">
+      <label class="f grow"><span class="lbl">Durée de la vidéo <b id="minOut">14 min</b></span>
+        <input type="range" id="minutes" min="3" max="30" step="1" value="14"></label>
+      <div class="chips" id="chips"></div>
+    </div>
+    <label class="f fmtrow"><span class="lbl">Format</span>
+      <select id="format"><option value="">Auto (d'après le titre)</option></select></label>
+    <div class="est" id="est"></div>
+    <label class="fastopt"><input type="checkbox" id="fast" checked> <b>Script rapide</b> <span class="faint">(1 passe d'audit FacelessOS au lieu de 3 : environ 8 min de gagnées sur une vidéo de 15 min, décoche pour l'audit complet)</span></label>
+    <details class="notes"><summary>Consignes (facultatif)</summary>
+      <textarea id="notes" rows="3" placeholder="Un angle, une ville, un détail à placer… (sinon le studio choisit)"></textarea>
+    </details>
+    <div class="row between" style="margin-top:14px">
+      <div class="hint" id="refHint"></div>
+      <button class="btn primary big" id="create">🎬 Créer la vidéo</button>
+    </div>
+  </section>
+
+  <div class="section-title"><h2>Vidéos</h2><span class="faint small" id="count"></span></div>
+  <section id="list" class="vlist"></section>
+</main>
+
+<main class="osl hidden" id="viewProjects">
+  <section class="card">
+    <div class="row between">
+      <div><h2>Projets</h2><div class="sub" style="margin:0">Chaque vidéo garde ses fichiers sur ton PC. <b>Alléger</b> supprime les fichiers de travail du montage (la vidéo finale, les images, la voix et les miniatures restent). <b>Supprimer</b> efface tout, définitivement.</div></div>
+      <div class="usage-total" id="usageTotal"></div>
+    </div>
+    <div class="row" style="margin-top:12px"><button class="btn sm" id="slimAll">🧹 Tout alléger</button><button class="btn sm ghost" id="usageRefresh">↻ Actualiser</button></div>
+  </section>
+  <section class="card" style="margin-top:14px;padding:0;overflow:hidden"><table class="ptable" id="ptable"></table></section>
+</main>
+
+<div id="modalRoot"></div>
+<div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
+<div class="toast-wrap" id="toasts"></div>
+<script src="osl.js"></script>
+</body>
+</html>
