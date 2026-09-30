@@ -165,11 +165,41 @@ ci-dessus, avec un autre format et une autre mise en page :
 - **Mise en page tableau** : fond ardoise à pois, image de la scène dans le panneau, prof animé en bas à
   gauche (voir plus bas). Les images reprennent les bonhommes à tête ronde blanche d'Oddly Specific
   Lives et affichent un seul gros libellé chiffré quand la voix donne un chiffre clé.
-- **Le prof** : son image animée se range dans `presets/oddly_expensive_en/presenter/` (rig déjà
-  construit : `A.png`, `mid.png`, `point.png`, `tap.png`, `rig.json`). Elle s'installe toute seule sur
-  la chaîne au lancement. On peut aussi le remplacer dans l'éditeur avancé (fiche chaîne, section 4).
+- **Le prof** : sa bibliothèque de poses est dans `presets/oddly_expensive_en/poses/`. Elle
+  s'installe toute seule sur la chaîne au lancement (voir « Montage réalisé » ci-dessous).
 - **Miniatures** : fond ardoise, le prof qui pointe la facture et **un seul énorme chiffre** jaune
   (le total ou la ligne la plus absurde), pas le mot du titre.
+
+### Montage réalisé (motion design)
+
+Pour cette chaîne, une étape **Réalisation** s'ajoute entre les images et le montage :
+
+- **Le réalisateur (IA)** lit chaque scène et choisit :
+  - la **pose du prof** : explique, pointe le tableau, bras croisés, réfléchit, hausse les épaules,
+    choqué, compte ses billets, calculatrice, facepalm, pouce en bas, salut ;
+  - s'il tient une **pancarte** ou un **téléphone**, le texte écrit dessus ;
+  - au plus **une animation**, calée sur le mot prononcé.
+- **Les animations**, dessinées par le code avec des chiffres toujours nets :
+  - mot clé surligné au marqueur ;
+  - compteur qui défile ;
+  - **ticket de caisse** : la ligne s'imprime, le total défile et un cercle rouge l'entoure ;
+  - barres qui poussent ;
+  - anneau « qui touche l'argent » ;
+  - liste cochée ;
+  - comparaison VS ;
+  - frise ;
+  - tampon.
+- **Chiffres vérifiés** : chaque chiffre d'une animation doit être dit tel quel dans la voix off.
+  Sinon, l'animation saute.
+- **Le prof change de pose** avec un petit rebond. Toutes les poses sont à la même échelle (même
+  largeur de tête), il ne saute jamais.
+- **Bruitages** synthétisés, sans droits, mixés sous la voix : pop, whoosh, caisse enregistreuse,
+  tampon, tic du compteur, imprimante, ding.
+- **Des images sans texte** : l'IA d'image ne sait pas écrire les chiffres. C'est le montage qui
+  les pose par-dessus.
+- **Activation** : `"director": true` dans le montage du modèle. Les poses du prof se rangent dans
+  `presets/<modèle>/poses/` (`poses.json` + une image par pose), générées une fois avec
+  `presenter.build_pose_library` puis `presenter.prepare_poses`.
 
 ## Mise en page tableau et prof animé
 
