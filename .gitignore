@@ -45,3 +45,6 @@ data/
 
 # Package autonome (dossier à double-cliquer)
 dist/
+
+# Format Histoire : dépendances Node du moteur Remotion (npm install au 1er rendu)
+history_engine/node_modules/

@@ -1,0 +1,18 @@
+/* History Docs — s'appuie sur ../pov-studio/app.css et ../osl-studio/osl.css ; accent doré. */
+:root { --s-accent: #c9a45a; --s-grad: linear-gradient(135deg, #b8893a, #d9b56a); }
+.top .logo { background: linear-gradient(135deg, #7a5a22, #c9a45a); color: #15130f; }
+.hgrid { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 12px; }
+@media (max-width: 620px) { .hgrid { grid-template-columns: 1fr; } }
+.opts { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--s-muted); }
+.opts label { display: flex; gap: 6px; align-items: center; cursor: pointer; }
+.plan { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 12px; }
+.seg { border: 1px solid var(--s-line); border-radius: 9px; overflow: hidden; background: var(--s-bg2); font-size: 12px; }
+.seg .im { aspect-ratio: 16 / 9; background: #15130f center / cover no-repeat; display: grid; place-items: center;
+  color: #c9a45a; font-size: 22px; cursor: zoom-in; }
+.seg .cap { padding: 6px 8px; color: var(--s-muted); display: flex; justify-content: space-between; gap: 6px; }
+.seg .cap b { color: var(--s-text); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.seg button { border: 0; background: none; color: var(--s-muted); cursor: pointer; font-size: 13px; }
+.seg button:hover { color: var(--s-accent); }
+.script { white-space: pre-wrap; font-size: 13.5px; line-height: 1.55; max-height: 50vh; overflow: auto;
+  background: var(--s-bg2); border: 1px solid var(--s-line); border-radius: 9px; padding: 12px 14px; margin-top: 10px; }
+.steps { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }

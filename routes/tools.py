@@ -79,6 +79,21 @@ TOOLS = {
         "icon": '<circle cx="12" cy="8" r="4.2"/><path d="M5.5 21c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/>'
                 '<path d="M18.5 3.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
     },
+    "history-studio": {
+        "slug": "history-studio",
+        "category": "youtube",
+        "name": "HISTORY DOCS",
+        "short": "History Docs",
+        "tag": "// HIST",
+        "desc": "Documentaires d'histoire façon Dose of History : titre → script immersif, voix Algrow, "
+                "images IA photoréalistes, cartes de bataille animées, itinéraires, fiches perso, stats, "
+                "archives et citations (Remotion), look pellicule. Vidéo montée, 100 % local.",
+        "entry": "history-studio/index.html",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "gold",
+        "icon": '<path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10"/><path d="M2.5 10h19L12 3.5z"/>',
+    },
     "delamain": {
         "slug": "delamain",
         "category": "agent",

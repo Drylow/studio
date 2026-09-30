@@ -151,6 +151,49 @@ style d'images, sa voix et sa vidéo de référence), ses images dans `presets/<
 duplique `tool_apps/osl-studio` (ou on l'ouvre avec `?studio=<modèle>`) et on l'ajoute à
 `routes/tools.py`.
 
+## History Docs (format Histoire)
+
+Outil **HISTORY DOCS** dans la barre de gauche. C'est un format à part des POV : des documentaires
+d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une durée.
+
+**Prérequis en plus :** [Node.js](https://nodejs.org) 18+. Au premier rendu (ou au lancement de
+`START_STUDIO.bat`), les dépendances du moteur d'animation s'installent dans `history_engine/`.
+
+**Le pipeline** (côté serveur, reprise possible à chaque étape) :
+1. **Script** : narration immersive à la 2ᵉ personne (date et lieu, « rien à voir avec les films »),
+   phrases courtes, chiffres et sources réels, 153 mots/min comme la référence
+   (`presets/history_doc/reference_excerpt.txt` sert d'ancre de style).
+2. **Voix off** : Algrow (Timothy, Elliott, Connery) ou Edge gratuit, avec les timings mot à mot.
+3. **Plan visuel** : l'IA choisit ce qu'on voit à chaque phrase. Dans le hook, une image toutes les
+   ~5 s. Ensuite, des images de 12 à 20 s et environ 30 % d'animations calées sur la narration.
+4. **Images** : portraits du casting d'abord, réutilisés comme références pour garder les mêmes
+   visages. Puis plans photoréalistes (tons ocre, lumière dure, 35 mm), terrains vus du ciel,
+   objets d'archive.
+5. **Montage Remotion** (`history_engine/`) : zoom lent sur les images, animations, grain et rayures
+   de pellicule, sous-titres (masqués pendant le hook), nappe musicale sombre et bruitages générés
+   (aucun risque Content ID), mixage final à -14 LUFS.
+
+**Les animations** (templates Remotion, `history_engine/src/templates/`) :
+
+| Template | Ce qu'il montre |
+|---|---|
+| Phrase choc | serif en capitales, mots clés en rouge, flash au moment où le narrateur le dit |
+| Bataille | terrain vu du ciel, blocs d'unités qui manœuvrent, étiquettes, ligne de front, titre et date |
+| Fiche perso | portrait encadré, nom, rôle, 2-3 faits |
+| Comparaison | fiche d'armée puis écran partagé A vs B |
+| Graphique | barres qui montent avec les chiffres qui défilent |
+| Archive | objet ou document encadré façon photo de musée |
+| Itinéraire | ligne dorée tracée de ville en ville (vraies coordonnées), la caméra suit |
+| Citation | citation révélée mot à mot à côté du portrait |
+
+Aperçu et réglage des templates : `cd history_engine && npm run studio` (Remotion Studio).
+Rendu à la main : `node history_engine/render.mjs --project <dossier media> --out video.mp4`.
+Données : `data/history/<id>/` (vidéo finale à la racine, médias et `timeline.json` dans `media/`).
+
+Variables utiles (`.env`) : `REMOTION_CONCURRENCY` (onglets de rendu en parallèle, défaut : moitié des
+cœurs), `REMOTION_BROWSER` (chemin d'un Chrome à utiliser plutôt que celui téléchargé par Remotion),
+`HISTORY_DATA_DIR`.
+
 ## Mise en page tableau et prof animé
 
 Réglage par chaîne (section 4 de la fiche chaîne), puis par vidéo dans le montage :
