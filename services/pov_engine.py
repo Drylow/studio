@@ -1796,7 +1796,8 @@ appears, usually the number or the keyword):
   40s","at":"40s"}],"at":"married"} : a FACT SHEET that REPLACES the illustration for the whole scene, with one dash
   line per characteristic, each appearing when its "at" word is spoken. Use it when the narration of THIS scene lists
   3-6 characteristics or facts of a person, a case, a household or a thing (who they are, what they have). Lines
-  <= 6 words, faithful to the narration, numbers exactly as spoken.
+  <= 6 words, faithful to the narration, numbers exactly as spoken. If the enumeration continues in the NEXT scene,
+  give that scene a sheet with the SAME title and only its new lines: it extends the same sheet on screen.
 - {"type":"list","title":"HOW PEOPLE PAY LESS","items":[{"text":"Settle early","at":"settle"},{"text":"Use
   mediation","at":"mediation"}],"at":"first"} : a recap or a list of 3-6 short points (<= 5 words each) spoken in
   THIS scene, each appearing when its "at" word is spoken.

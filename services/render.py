@@ -427,6 +427,16 @@ def _frames_timeline(scenes, fps, total):
     return out
 
 
+def _same_sheet(a, b):
+    """Deux fiches plein panneau de suite, même titre : la seconde prolonge la première."""
+    from services import motion
+    if not a or not b:
+        return False
+    sa, sb = a["spec"], b["spec"]
+    return (sa.get("type") in motion.FULL_PANEL and sb.get("type") == sa.get("type")
+            and (sa.get("title") or "").strip().upper() == (sb.get("title") or "").strip().upper())
+
+
 MIN_FX = 3.2  # une animation reste au moins ~3 s à l'écran (sinon on n'a pas le temps de la lire)
 
 
@@ -439,6 +449,16 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
     fdir = os.path.join(workdir, "fx")
     os.makedirs(fdir, exist_ok=True)
     state, items, sounds = {}, [], []
+    by_scene = {int(f["scene"]): f for f in fx}
+    chain, rows = {}, {}  # fiche qui s'étend sur plusieurs scènes : 1re scène de la fiche, lignes au total
+    for i in sorted(by_scene):
+        f = by_scene[i]
+        if f["spec"].get("type") in motion.FULL_PANEL:
+            head = i
+            while _same_sheet(by_scene.get(head - 1), by_scene.get(head)):
+                head -= 1
+            chain[i] = head
+            rows[head] = rows.get(head, 0) + len(f["spec"].get("items") or [])
     for f in sorted(fx, key=lambda f: (int(f["scene"]), float(f.get("t") or 0))):
         i = int(f["scene"])
         if not 0 <= i < len(scenes):
@@ -447,6 +467,10 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
         clip_len = frames[i] / fps
         lead_in = tf / fps + 0.08 if i > 0 else 0.0  # après le fondu d'entrée (la 1re scène n'en a pas)
         full = f["spec"].get("type") in motion.FULL_PANEL
+        cont = full and _same_sheet(by_scene.get(i - 1), f)    # suite de la fiche d'avant : dès la 1re image
+        hold = full and _same_sheet(f, by_scene.get(i + 1))    # la fiche continue : pas de fondu de sortie
+        if cont:
+            lead_in = 0.0
         off = lead_in if full else max(lead_in, float(f.get("t") or clip_s) - clip_s)
         # la carte reste jusqu'à la fin de la scène (10 s max ; une fiche plein panneau, toute la scène)
         dur = (clip_len - off - 0.04) if full else min(10.0, clip_len - off - 0.04)
@@ -456,7 +480,8 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
         if dur < 1.5:  # scène trop courte pour une animation lisible
             continue
         before = json.dumps(state, sort_keys=True)
-        spec = dict(f["spec"])
+        spec = dict(f["spec"], _cont=cont, _hold=hold, _rows=rows.get(chain.get(i, i), 0)) if full \
+            else dict(f["spec"])
         if f.get("items_t"):  # lignes calées sur la voix, en secondes depuis l'apparition du fx
             spec["_times"] = [max(0.3, t - (clip_s + off)) for t in f["items_t"]]
         f = dict(f, spec=spec)

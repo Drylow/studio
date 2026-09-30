@@ -212,7 +212,8 @@ class Fx:
     anim_end = 0.5
 
     def __init__(self, spec, geo, state=None):
-        self.spec, self.geo, self.state = spec, geo, state or {}
+        self.spec, self.geo = spec, geo
+        self.state = state if state is not None else {}  # partagé d'un fx à l'autre (ticket, fiche)
         self.k = geo["k"]
         self.sfx = []
         self.slow = SLOW.get((spec or {}).get("type"), 1.0)
@@ -795,8 +796,8 @@ class Intro(Fx):
         self.main = (self.spec.get("main") or "").upper()[:34]
         self.items = [str(i).upper()[:20] for i in self.spec.get("items") or []][:4] or ["THE BILL"]
         self.bg = self.spec.get("bg") or {}
-        self.msize = fit_size(self.main, 900, 170 * k, self.w * 0.5)
-        self.psize = fit_size(self.pre, 900, 66 * k, self.w * 0.46) if self.pre else 0
+        self.msize = fit_size(self.main, 900, 170 * k, self.w * 0.44)
+        self.psize = fit_size(self.pre, 900, 66 * k, self.w * 0.42) if self.pre else 0
         rnd = random.Random(7)
         self.bills = [(rnd.uniform(0, self.w), rnd.uniform(-self.h, 0), rnd.uniform(0.6, 1.2) * k,
                        rnd.uniform(-40, 40), rnd.uniform(-90, 90), rnd.uniform(0.18, 0.32)) for _ in range(22)]
@@ -872,7 +873,7 @@ class Intro(Fx):
             p.text((rx + 34 * k, yy + 70 * k), "TOTAL", 900, 52 * k, anchor="lm")
             p.text((rx + rw - 34 * k, yy + 70 * k), "$???", 900, 58 * k, fill=blink, anchor="rm")
         # nom de la chaîne en tampon, puis titre
-        cx = self.w * 0.37
+        cx = self.w * 0.405  # à droite du prof (en bas à gauche), à gauche du ticket
         if self.kicker and t >= 1.8:
             a = seg(t, 1.8, 1.98)
             kw = p.tw(self.kicker, 900, 44 * k) + 60 * k
@@ -919,24 +920,33 @@ class Sheet(Fx):
             txt = it.get("text") if isinstance(it, dict) else it
             if str(txt or "").strip():
                 items.append(str(txt).strip()[:46])
-        self.items = items[:6]
-        n = max(1, len(self.items))
-        if len(self.times) != len(self.items):
+        n = max(1, len(items))
+        if len(self.times) != len(items):
             self.times = [0.6 + 0.9 * j for j in range(n)]
-        self.times = [max(0.45, t) for t in self.times]
-        self.row = min(110 * k, (self.h - 230 * k) / n)
-        self.size = min(56 * k, self.row * 0.52)
+        # suite de la fiche de la scène d'avant (même titre) : ses lignes restent, les nouvelles s'ajoutent
+        st = self.state.get("sheet") or {}
+        self.cont = bool(self.spec.get("_cont")) and st.get("title") == self.title
+        carry = list(st.get("items") or []) if self.cont else []
+        cap = 8  # lignes visibles au maximum (la police s'adapte)
+        self.state["sheet"] = {"title": self.title, "items": (carry + items)[-cap:]}
+        keep = max(0, min(len(carry), cap - len(items)))
+        self.items = (carry[-keep:] if keep else []) + items[:cap]
+        self.times = [-1.0] * keep + [max(0.2 if self.cont else 0.45, t) for t in self.times][:cap]
+        self.exit = not self.spec.get("_hold")  # la fiche continue à la scène suivante : pas de fondu
+        rows = max(len(self.items), int(self.spec.get("_rows") or 0), 1)  # même hauteur sur toute la fiche
+        self.row = min(110 * k, (self.h - 230 * k) / min(8, rows))
+        self.size = min(60 * k, self.row * 0.56)
         self.anim_end = (self.times[-1] if self.times else 0.6) + 0.45
-        self.sfx = [(0.0, "whoosh", 0.5)] + [(t, "pop", 0.5) for t in self.times]
+        self.sfx = ([] if self.cont else [(0.0, "whoosh", 0.5)]) + [(t, "pop", 0.5) for t in self.times if t >= 0]
 
     def frame(self, t):
         k = self.k
         p = Pad(self.w, self.h)
-        wipe = ease_out(seg(t, 0, 0.4))
+        wipe = 1.0 if self.cont else ease_out(seg(t, 0, 0.4))
         p.box((0, 0, self.w, self.h), PAPER, width=6 * k, radius=16 * k, shadow=0)
         for j in range(len(self.items)):  # lignes de cahier, discrètes
             y = 210 * k + self.row * (j + 1)
-            p.line([(70 * k, y), (self.w - 70 * k, y)], (214, 224, 238), 3 * k)
+            p.line([(290 * k, y), (self.w - 70 * k, y)], (214, 224, 238), 3 * k)
         if self.title:
             ts = fit_size(self.title, 900, 64 * k, self.w * 0.7)
             tw_ = p.tw(self.title, 900, ts)
@@ -950,9 +960,10 @@ class Sheet(Fx):
                 continue
             y = y0 + self.row * (j + 0.5)
             dx = (1 - ease_out(a)) * -50 * k
-            sz = fit_size(it, 800, self.size, self.w - 260 * k)
-            p.text((96 * k + dx, y), "—", 900, sz * 1.05, fill=RED, anchor="lm")
-            p.text((170 * k + dx, y), it, 800, sz, anchor="lm")
+            # lignes décalées à droite : le prof (en bas à gauche) pointe la fiche sans cacher le texte
+            sz = fit_size(it, 800, self.size, self.w - 460 * k)
+            p.text((300 * k + dx, y), "—", 900, sz * 1.05, fill=RED, anchor="lm")
+            p.text((374 * k + dx, y), it, 800, sz, anchor="lm")
         im = p.image()
         if wipe < 1:  # la fiche glisse du haut par-dessus l'image
             im = transform(im, dy=-(1 - wipe) * self.h * 0.35, alpha=seg(t, 0, 0.18))
