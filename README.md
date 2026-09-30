@@ -112,6 +112,11 @@ de la chaîne sans passer par les étapes.
   à 30 min, ou les raccourcis 5 / 8 / 10 / 14 / 20 / 25). La durée fixe la longueur du script
   (158 mots par minute pour la voix de la chaîne). L'estimation affiche les mots, les images, les
   caractères Algrow et le temps de fabrication.
+- **Format** : « Auto » le choisit d'après le titre. Un titre qui parle de mariage ou d'amour
+  (« Marry », « Fall in Love », « Wife »…) prend le format **POV: You Marry**. Les autres
+  (« Inside The Life Of… », « POV: You Become… ») prennent **Inside the Life of** : le spectateur EST
+  la personne du titre, sa vie racontée en « you », avec la même voix, le même style et la même
+  narration que la vidéo de référence. Le menu permet de forcer l'un ou l'autre.
 - **Créer la vidéo** lance tout, dans l'ordre :
   1. script FacelessOS calé sur la vidéo de référence ;
   2. voix Algrow ;
