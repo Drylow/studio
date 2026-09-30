@@ -679,8 +679,9 @@ POSE_PROMPTS = {
     "shocked": "both hands on his cheeks, eyes wide, mouth open in a round O of shock.",
     "money": "holding a fan of green dollar bills in one hand and counting them with the other hand, pleased smile.",
     "facepalm": "one hand covering his eyes in a facepalm, the other hand on his hip, disappointed.",
-    "calculator": "holding a big grey pocket calculator in both hands in front of his belly and looking down at it "
-                  "with a worried frown.",
+    "calculator": "typing on a grey pocket calculator that he holds in one hand at chest height and looks at; the "
+                  "calculator is turned TOWARD HIS FACE, so the viewer sees only its back and thin side edge (its "
+                  "screen and buttons are not visible to the viewer); concentrated, slightly worried expression.",
     "thumbs_down": "one hand giving a thumbs down, the other hand on his hip, unimpressed flat mouth.",
     "wave": "waving hello with one raised open hand, friendly smile.",
     "hold_sign": "holding with both hands, in front of his chest, a large blank rectangular card facing the viewer "
@@ -689,6 +690,33 @@ POSE_PROMPTS = {
     "hold_phone": "holding up with one hand, at chest height, a big smartphone facing the viewer. The phone screen "
                   "is plain flat pale cream color #FFF6D8, completely empty, no text, no icons. Serious expression.",
 }
+
+
+POSE_QA = ("You check one pose drawing of a cartoon presenter for a YouTube channel before it is used. The pose "
+           "should be: {pose}. Look for real mistakes only: an object held upside down or facing the wrong way (e.g. "
+           "a screen facing the viewer while he looks at it), extra or missing fingers, hands or arms, broken or "
+           "twisted limbs, a second character, text or letters anywhere, cropped body, a pose that does not match "
+           "the description. The small fan of green dollar bills in his breast pocket is part of his design (its "
+           "tiny bill markings are fine). Return JSON {{\"ok\": true|false, \"problems\": [\"...\"]}}.")
+
+
+def check_pose(path, name):
+    """Contrôle en vision d'une pose → (ok, [problèmes])."""
+    import base64
+    from PIL import Image
+    from services import ai
+    im = Image.open(path).convert("RGBA")
+    bg = Image.new("RGBA", im.size, (235, 235, 235, 255))
+    bg.alpha_composite(im)
+    bg = bg.convert("RGB")
+    bg.thumbnail((768, 768))
+    buf = io.BytesIO()
+    bg.save(buf, "JPEG", quality=88)
+    content = [{"type": "text", "text": POSE_QA.format(pose=POSE_PROMPTS.get(name, name))},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," +
+                                                    base64.b64encode(buf.getvalue()).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model())
+    return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []]
 
 
 def build_pose_library(base_blob, out_dir, names=None, workers=5, log=print):
@@ -713,6 +741,14 @@ def build_pose_library(base_blob, out_dir, names=None, workers=5, log=print):
                 continue
             with open(path, "wb") as f:
                 f.write(blob)
+            try:
+                ok, problems = check_pose(path, name)
+            except Exception:  # noqa: BLE001  (contrôle indisponible : on garde la pose)
+                ok, problems = True, []
+            if not ok:
+                log(f"pose {name} refusée au contrôle : {'; '.join(problems)[:160]}")
+                os.remove(path)
+                continue
             log(f"pose {name} ok")
             return name, path
         return name, None

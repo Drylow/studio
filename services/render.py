@@ -427,6 +427,9 @@ def _frames_timeline(scenes, fps, total):
     return out
 
 
+MIN_FX = 3.2  # une animation reste au moins ~3 s à l'écran (sinon on n'a pas le temps de la lire)
+
+
 def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, layout):
     """Dessine les animations du montage (services/motion.py) et leurs listes concat par scène.
     → ({scène: [{"track", "x", "y", "sig"}]}, [(seconde, son, gain)])."""
@@ -442,15 +445,22 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
             continue
         clip_s = starts_f[i] / fps
         clip_len = frames[i] / fps
-        off = max(tf / fps + 0.08, float(f.get("t") or clip_s) - clip_s)
-        dur = min(10.0, clip_len - off - 0.04)  # la carte reste jusqu'à la fin de la scène (10 s max)
-        if dur < 1.1:  # trop court à la fin de la scène : on l'avance
-            off = max(tf / fps + 0.08, clip_len - 1.2)
+        lead_in = tf / fps + 0.08 if i > 0 else 0.0  # après le fondu d'entrée (la 1re scène n'en a pas)
+        full = f["spec"].get("type") in motion.FULL_PANEL
+        off = lead_in if full else max(lead_in, float(f.get("t") or clip_s) - clip_s)
+        # la carte reste jusqu'à la fin de la scène (10 s max ; une fiche plein panneau, toute la scène)
+        dur = (clip_len - off - 0.04) if full else min(10.0, clip_len - off - 0.04)
+        if dur < MIN_FX:  # trop court à la fin de la scène : on l'avance pour qu'on ait le temps de le lire
+            off = max(lead_in, clip_len - MIN_FX - 0.04)
             dur = clip_len - off - 0.04
-        if dur < 0.9:
+        if dur < 1.5:  # scène trop courte pour une animation lisible
             continue
         before = json.dumps(state, sort_keys=True)
-        obj = motion.make(f["spec"], geo, state)  # met à jour l'état (ticket de caisse) dans l'ordre
+        spec = dict(f["spec"])
+        if f.get("items_t"):  # lignes calées sur la voix, en secondes depuis l'apparition du fx
+            spec["_times"] = [max(0.3, t - (clip_s + off)) for t in f["items_t"]]
+        f = dict(f, spec=spec)
+        obj = motion.make(spec, geo, state)  # met à jour l'état (ticket de caisse) dans l'ordre
         if not obj:
             continue
         sig = hashlib.sha1(json.dumps([f["spec"], before, round(dur, 3), geo, fps, motion.__file__ and

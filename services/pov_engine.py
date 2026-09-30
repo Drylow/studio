@@ -238,7 +238,10 @@ TEMPLATES = {
                  "~5 min, ~70%, end.",
         "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
-        "direction": "Alternate between (a) scenes: the white round-headed people living the moment in real, richly "
+        "direction": "SIMPLE, READABLE IMAGES: one clear idea per image that literally shows what the sentence says, "
+                     "1-3 characters at most, a few large simple objects, a clean uncluttered background, no small "
+                     "details, nothing weird or illogical. "
+                     "Alternate between (a) scenes: the white round-headed people living the moment in real, richly "
                      "lit places (a lawyer's office, a courthouse hallway, a hospital corridor, a kitchen table covered "
                      "in envelopes, a funeral home showroom, a prison visiting room, the back of an ambulance) and (b) "
                      "explainer visuals drawn in the same cartoon style: the growing itemized bill on a long paper "
@@ -252,7 +255,7 @@ TEMPLATES = {
         "montage": {"pacing": 8.5, "hook_pacing": 6.0, "hook_seconds": 30, "min_scene": 4.5, "max_scene": 15.0,
                     "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
-                    "music": "auto", "music_volume": 0.12, "director": True, "intro": True},
+                    "music": "auto", "music_volume": 0.12, "director": True, "intro": True, "image_qa": True},
         # prof « acteur » : une pose par idée (presets/oddly_expensive_en/poses), choisie par le réalisateur
         "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none", presenter_height=0.5),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
@@ -1176,7 +1179,7 @@ def job_voice(job, pid):
     voice = vs.get("voice") or (DEFAULT_VOICE_BY_LANG.get(ch.get("language", "fr"), "") if provider == "edge" else "")
     res = tts.synthesize(text, raw, provider=provider, voice=voice,
                          speed=vs.get("speed", 1.0), pitch=vs.get("pitch", 0), model=vs.get("model", ""),
-                         instructions=vs.get("instructions", ""), progress=prog)
+                         instructions=vs.get("instructions", ""), progress=prog, lang=ch.get("language"))
     words = res["words"]
     stamp = int(time.time())
     vname = f"voice_{stamp}.mp3"  # nom versionné : sous Windows on ne peut pas écraser un fichier en lecture
@@ -1609,12 +1612,50 @@ def _image_workers():
         return 6
 
 
+IMAGE_QA = """You are the quality checker of a 2D cartoon explainer channel. Look at this generated image for the
+scene below and reject it only for REAL, visible mistakes a viewer would notice:
+- anatomy errors (extra or missing arms, hands or heads, two heads, fused bodies, broken limbs);
+- objects that make no sense or are upside down / facing the wrong way / floating;
+- any readable text, letters or numbers (blank papers and screens are fine){no_text}
+- the image does not show what the narration says, or it is confusing (too many things, no clear subject).
+NARRATION: {text}
+PROMPT: {prompt}
+Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
+
+
+def check_image(path, sc, no_text=True):
+    """Contrôle en vision d'une image de scène → (ok, [problèmes])."""
+    import base64
+    with open(path, "rb") as f:
+        blob = _jpeg(f.read(), side=896)
+    q = IMAGE_QA.format(text=(sc.get("text") or "")[:400], prompt=(sc.get("prompt") or "")[:500],
+                        no_text=";" if no_text else " (ignore this rule: text is allowed on this channel);")
+    content = [{"type": "text", "text": q},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(blob).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=120)
+    return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
+
+
 def _gen_scene(ch, pr, sc):
+    """Image d'une scène, contrôlée en vision (chaîne qui l'active) : refaite une fois si elle a une erreur."""
     w, h = dims(pr)
     d = store.project_dir(pr["id"])
     rel = f"images/scene_{sc['i']:04d}_{int(time.time() * 1000) % 10**9}.jpg"
-    generate_scene_image(ch, sc["prompt"], os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h,
-                         board_layout=uses_board(pr), cast=cast_list(ch, pr))
+    prompt = sc["prompt"]
+    qa = bool((pr.get("montage") or {}).get("image_qa"))
+    no_text = (ch.get("style") or {}).get("no_text", True) is not False
+    for attempt in range(2 if qa else 1):
+        generate_scene_image(ch, prompt, os.path.join(d, rel), scene_chars=sc.get("chars"), width=w, height=h,
+                             board_layout=uses_board(pr), cast=cast_list(ch, pr))
+        if not qa or attempt == 1:
+            break
+        try:
+            ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text)
+        except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
+            break
+        if ok:
+            break
+        prompt = sc["prompt"] + " AVOID these mistakes of a previous attempt: " + "; ".join(problems) + "."
     return rel
 
 
@@ -1630,10 +1671,11 @@ def job_images(job, pid, only=None, first_only=False):
     ensure_prompts(job, pid, 0.06, 0.12)
     pr = store.get_project(pid)
     ch = project_channel(pr)
+    covered = {s["i"] for s in pr["scenes"] if (s.get("fx") or {}).get("type") in _full_panel()}
     if only is not None:
-        targets = [s for s in pr["scenes"] if s["i"] in set(only)]
+        targets = [s for s in pr["scenes"] if s["i"] in set(only) and s["i"] not in covered]
     else:
-        targets = [s for s in pr["scenes"] if not s.get("image")]
+        targets = [s for s in pr["scenes"] if not s.get("image") and s["i"] not in covered]
     if first_only:
         targets = targets[:1]
     if not targets:
@@ -1750,9 +1792,14 @@ appears, usually the number or the keyword):
   "value":"$20,400","sub":"per person"},"at":"trial"} : two options face to face.
 - {"type":"pie","title":"WHO GETS PAID","items":[{"label":"Lawyers","value":21200},...],"at":"lawyers"} : a split
   of one sum between 2-6 parties, with the real amounts.
-- {"type":"list","title":"HOW PEOPLE PAY LESS","items":["Settle early","Use mediation"],"at":"first"} : a recap
-  or a list of 3-6 short points (<= 5 words each) spread over the next scenes: put it on the scene where the list
-  starts or on the recap sentence.
+- {"type":"sheet","title":"THE CASE","items":[{"text":"Married couple in Ohio","at":"Ohio"},{"text":"Both in their
+  40s","at":"40s"}],"at":"married"} : a FACT SHEET that REPLACES the illustration for the whole scene, with one dash
+  line per characteristic, each appearing when its "at" word is spoken. Use it when the narration of THIS scene lists
+  3-6 characteristics or facts of a person, a case, a household or a thing (who they are, what they have). Lines
+  <= 6 words, faithful to the narration, numbers exactly as spoken.
+- {"type":"list","title":"HOW PEOPLE PAY LESS","items":[{"text":"Settle early","at":"settle"},{"text":"Use
+  mediation","at":"mediation"}],"at":"first"} : a recap or a list of 3-6 short points (<= 5 words each) spoken in
+  THIS scene, each appearing when its "at" word is spoken.
 - {"type":"timeline","title":"A CONTESTED DIVORCE","items":[{"label":"Month 0","sub":"Lawyers hired"},...],
   "at":"months"} : steps or durations in time (3-5 steps).
 - {"type":"stamp","text":"NOT INCLUDED","at":"not"} : a verdict of 1-2 words (PAID, DENIED, AVOIDED, NOT
@@ -1845,7 +1892,7 @@ per scene above, in order."""
                 sign = ""
             fx = e.get("fx") if isinstance(e.get("fx"), dict) else None
             pose, sign, fx = _dedupe(pose, sign, fx, poses)
-            ahead = 10 if fx and fx.get("type") in ("list", "timeline") else 3  # une liste se déroule ensuite
+            ahead = 10 if fx and fx.get("type") == "timeline" else 3
             ctx = " ".join(x.get("text") or "" for x in scenes if i - 2 <= x["i"] <= i + ahead) + " " + \
                 heads.get((scenes[i] if 0 <= i < len(scenes) else {}).get("section"), "")  # + titre de sa partie
             if fx and (fx.get("type") not in _motion_types() or not set(_fx_numbers(fx)) <= allowed
@@ -1870,8 +1917,9 @@ def _fx_words(fx):
     t = fx.get("type")
     if t in ("label", "stamp"):
         parts.append(fx.get("text") or "")
-    elif t == "list":
-        parts += [fx.get("title") or ""] + [str(x) for x in fx.get("items") or []]
+    elif t in ("list", "sheet"):
+        parts += [fx.get("title") or ""] + [str(x.get("text") if isinstance(x, dict) else x)
+                                            for x in fx.get("items") or []]
     elif t == "timeline":
         parts += [str((x or {}).get("sub") or "") for x in fx.get("items") or [] if isinstance(x, dict)]
     elif t == "receipt":
@@ -1920,6 +1968,48 @@ def _fx_time(scene, fx, words):
     return t0 + min(0.4, (t1 - t0) * 0.2)
 
 
+def _item_times(scene, fx, words):
+    """Instants (s) où chaque ligne d'une fiche / liste est dite (mot « at » de la ligne), dans l'ordre."""
+    items = [x for x in (fx or {}).get("items") or []]
+    if not items or not any(isinstance(x, dict) and x.get("at") for x in items):
+        return None
+    t0, t1 = float(scene["start"]), float(scene["end"])
+    pool = [w for w in words if t0 - 0.05 <= float(w.get("s", 0)) <= t1 + 0.05]
+    out, pos, last = [], 0, t0 + 0.4
+    for x in items:
+        at = _norm_tok(x.get("at") if isinstance(x, dict) else "")
+        found = None
+        for j in range(pos, len(pool)):
+            tok = _norm_tok(pool[j].get("w"))
+            if at and tok and (tok == at or (len(at) > 2 and (at in tok or tok in at))):
+                found = j
+                break
+        if found is not None:
+            pos = found + 1
+            last = max(last, float(pool[found]["s"]) - 0.1)
+        else:
+            last = last + 0.8
+        out.append(round(min(last, t1 - 0.3), 3))
+    return out
+
+
+def fx_timing(scene, fx, words):
+    """fx + « t » (instant d'apparition) et « item_t » (lignes) — une fiche démarre avec sa scène."""
+    if not fx:
+        return None
+    full = fx.get("type") in _full_panel()
+    out = dict(fx, t=round(float(scene["start"]) if full else _fx_time(scene, fx, words), 3))
+    it = _item_times(scene, fx, words)
+    if it:
+        out["item_t"] = it
+    return out
+
+
+def _full_panel():
+    from services import motion
+    return motion.FULL_PANEL
+
+
 def montage_enabled(pr):
     return bool((pr.get("montage") or {}).get("director"))
 
@@ -1949,8 +2039,9 @@ def job_montage(job, pid):
             if not e:
                 continue
             s["pose"], s["sign"] = e["pose"], e["sign"]
-            fx = e.get("fx")
-            s["fx"] = dict(fx, t=round(_fx_time(s, fx, words), 3)) if fx else None
+            s["fx"] = fx_timing(s, e.get("fx"), words)
+            if s["fx"] and s["fx"]["type"] in _full_panel():
+                s["status"] = "done"  # la fiche remplace l'image : rien à générer
         x["montage_plan"] = {"at": store.now(), "n_fx": sum(1 for e in plan.values() if e.get("fx"))}
     store.update_project(pid, save)
     n = sum(1 for e in plan.values() if e.get("fx"))
@@ -1987,7 +2078,49 @@ def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None):
     return layout, sounds
 
 
-INTRO_SECONDS = 5.0
+INTRO_SECONDS = 5.5
+
+
+def _hex_rgb(h, default):
+    h = (h or "").lstrip("#")
+    try:
+        return [int(h[i:i + 2], 16) for i in (0, 2, 4)] if len(h) == 6 else default
+    except ValueError:
+        return default
+
+
+def intro_items(pr, limit=4):
+    """Lignes de la facture annoncées dans l'intro (montants cachés) : les « Add X, $Y » du script,
+    sinon les lignes des tickets du montage."""
+    names = []
+    for raw in re.findall(r"\b[Aa]dd (?:the |an? )?([A-Za-z][^,.$:]{2,48}?),?\s*\$[\d,]+", pr.get("script") or ""):
+        n = re.split(r"\s+(?:for|of|on|at|to|in)\s+", raw.strip())[0]
+        if len(n) > 20:
+            n = " ".join(n.split()[-2:])
+        names.append(n.upper())
+    if not names:
+        for s in pr.get("scenes") or []:
+            for it in ((s.get("fx") or {}).get("items") or []) if (s.get("fx") or {}).get("type") == "receipt" else []:
+                if isinstance(it, dict) and it.get("item"):
+                    names.append(str(it["item"]).upper()[:20])
+    return list(dict.fromkeys(names))[:limit] or ["THE BILL"]
+
+
+def intro_spec(pr, ch):
+    bd = board_config(ch)
+    return dict(title_spec(pr, ch), type="intro", items=intro_items(pr),
+                bg={"rgb": _hex_rgb(bd.get("bg_color"), [30, 37, 48]), "dot": _hex_rgb(bd.get("line_color"), [44, 53, 66])})
+
+
+def _intro_bg(ch, workdir, w, h):
+    """Image unie (couleur du fond) sous l'intro : aucune image de la vidéo n'y apparaît."""
+    from PIL import Image
+    path = os.path.join(workdir, "intro_bg.png")
+    rgb = tuple(_hex_rgb(board_config(ch).get("bg_color"), [30, 37, 48]))
+    if not os.path.isfile(path):
+        os.makedirs(workdir, exist_ok=True)
+        Image.new("RGB", (w, h), rgb).save(path)
+    return path
 
 
 def title_spec(pr, ch):
@@ -2040,8 +2173,14 @@ def render_inputs(pid, workdir, until=None):
             media.run(["-y", "-i", voice] + (["-t", f"{t_end:.3f}"] if t_end else []) +
                       (["-af", ",".join(af)] if af else []) + ["-c:a", "libmp3lame", "-q:a", "2", cut])
         voice = cut
-    scenes = [{"image": os.path.join(d, s["image"]), "start": s["start"] + lead, "motion": s.get("motion"),
-               "index": s["i"]} for s in scenes_src]
+    scenes, prev_img = [], None
+    for s in scenes_src:  # une fiche plein panneau cache l'image : on garde celle de la scène d'avant
+        img = os.path.join(d, s["image"]) if s.get("image") else None
+        if (s.get("fx") or {}).get("type") in _full_panel() or not img:
+            img = prev_img or img or _intro_bg(ch, workdir, w, h)
+        scenes.append({"image": img, "start": s["start"] + lead, "motion": "none"
+                       if (s.get("fx") or {}).get("type") in _full_panel() else s.get("motion"), "index": s["i"]})
+        prev_img = img
     words = [dict(x, s=x["s"] + lead, e=x["e"] + lead) for x in load_words(pid) if t_end is None or x["s"] < t_end]
     overlays = []
     if m.get("section_titles", True):
@@ -2055,12 +2194,12 @@ def render_inputs(pid, workdir, until=None):
     if montage_enabled(pr):
         off = 1 if lead else 0
         fx = [{"scene": k + off, "t": s["fx"].get("t", s["start"]) + lead,
-               "spec": {a: b for a, b in s["fx"].items() if a != "t"}}
+               "items_t": [t + lead for t in s["fx"].get("item_t") or []],
+               "spec": {a: b for a, b in s["fx"].items() if a not in ("t", "item_t")}}
               for k, s in enumerate(scenes_src) if s.get("fx")]
-        if lead:
-            scenes.insert(0, {"image": ensure_intro_image(pid, ch, w, h), "start": 0.0, "motion": "zoom_in",
-                              "index": -1})
-            fx.insert(0, {"scene": 0, "t": 0.25, "spec": title_spec(pr, ch)})
+        if lead:  # intro plein écran dessinée par le code (aucune image de la vidéo derrière)
+            scenes.insert(0, {"image": _intro_bg(ch, workdir, w, h), "start": 0.0, "motion": "none", "index": -1})
+            fx.insert(0, {"scene": 0, "t": 0.0, "spec": intro_spec(pr, ch)})
         acted = _acting(pr, ch, layout, workdir, w, h, lead=lead, scenes=scenes_src)
         if acted:
             layout, sounds = acted
@@ -2074,7 +2213,8 @@ def job_render(job, pid):
     pr = store.get_project(pid)
     if not pr.get("voice"):
         raise RuntimeError("Pas de voix off.")
-    missing = [s["i"] for s in pr["scenes"] if not s.get("image")]
+    missing = [s["i"] for s in pr["scenes"] if not s.get("image")
+               and (s.get("fx") or {}).get("type") not in _full_panel()]
     if missing:
         raise RuntimeError(f"{len(missing)} scène(s) sans image.")
     d = store.project_dir(pid)
@@ -2472,13 +2612,13 @@ def job_autopilot(job, pid, render_video=True):
             fc.result()
     elif need_voice:
         job_voice(_Sub(job, 0.25, 0.35, "2/4 Voix"), pid)
-    job_images(_Sub(job, 0.35, 0.85, "3/4 Images"), pid)
     pr = store.get_project(pid)
     if montage_enabled(pr) and not pr.get("montage_plan"):
-        try:  # poses du prof + animations ; sans plan, la vidéo sort quand même (montage simple)
-            job_montage(_Sub(job, 0.85, 0.87, "4/4 Réalisation"), pid)
+        try:  # poses du prof + animations, AVANT les images (une fiche remplace l'image de sa scène)
+            job_montage(_Sub(job, 0.35, 0.4, "3/4 Réalisation"), pid)
         except Exception as e:  # noqa: BLE001
             job.update(None, f"Réalisation du montage impossible ({str(e)[:80]}) : montage simple.")
+    job_images(_Sub(job, 0.4, 0.85, "3/4 Images"), pid)
     if render_video:
         job_render(_Sub(job, 0.85, 0.98, "4/4 Montage"), pid)
         try:  # titre + description prêts à copier ; jamais bloquant pour la vidéo

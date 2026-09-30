@@ -365,6 +365,12 @@ def _algrow(text, voice, dest, sub="elevenlabs", model="", speed=1.0, progress=N
             raise TTSError("Algrow : la génération prend trop de temps (job " + str(jid) + ").")
         if progress:
             progress(min(0.9, (time.time() - t0) / 120.0))
+    if srt and sub != "stealth" and not st.get("transcript_url"):
+        # le SRT (alignement forcé) peut arriver un peu après l'audio : on l'attend jusqu'à 2 min
+        t1 = time.time()
+        while time.time() - t1 < 120 and not st.get("transcript_url"):
+            time.sleep(5)
+            st = _algrow_call("GET", f"/api/job-status/{jid}")
     _download(st["audio_url"], dest)
     if st.get("transcript_url"):
         try:
@@ -505,6 +511,104 @@ def align_to_text(words, text):
             for k in range(n)]
 
 
+# ── Nombres dits en toutes lettres (anglais) ─────────────────────────────────
+# Les voix IA lisent parfois mal les chiffres (« 673,989 » → n'importe quoi). On leur envoie donc les
+# nombres écrits en lettres ; le script (chiffres) reste la référence pour l'affichage et le calage.
+
+_ONES = ("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen "
+         "sixteen seventeen eighteen nineteen").split()
+_TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+_SCALES = ((10 ** 12, "trillion"), (10 ** 9, "billion"), (10 ** 6, "million"), (1000, "thousand"))
+
+
+def _int_words(n):
+    if n < 0:
+        return "minus " + _int_words(-n)
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        return _TENS[n // 10] + ("-" + _ONES[n % 10] if n % 10 else "")
+    if n < 1000:
+        rest = n % 100
+        return _ONES[n // 100] + " hundred" + (" " + _int_words(rest) if rest else "")
+    for size, name in _SCALES:
+        if n >= size:
+            rest = n % size
+            return _int_words(n // size) + " " + name + (" " + _int_words(rest) if rest else "")
+    return str(n)
+
+
+_ORD = {"one": "first", "two": "second", "three": "third", "five": "fifth", "eight": "eighth", "nine": "ninth",
+        "twelve": "twelfth"}
+
+
+def _ordinal(n):
+    w = _int_words(n)
+    head, sep, last = w.rpartition("-") if "-" in w.split()[-1] else w.rpartition(" ")
+    last = _ORD.get(last) or (last[:-1] + "ieth" if last.endswith("y") else last + "th")
+    return head + sep + last
+
+
+def _num_words(raw):
+    """« 673,989 » → mots ; « 5.5 » → « five point five »."""
+    raw = raw.replace(",", "")
+    if "." in raw:
+        a, b = raw.split(".", 1)
+        return _int_words(int(a or 0)) + " point " + " ".join(_ONES[int(c)] for c in b if c.isdigit())
+    return _int_words(int(raw))
+
+
+def _year_words(y):
+    if 2000 <= y <= 2009:
+        return _int_words(y)
+    hi, lo = divmod(y, 100)
+    return _int_words(hi) + " " + ("hundred" if lo == 0 else ("oh-" + _ONES[lo]) if lo < 10 else _int_words(lo))
+
+
+_MULT = r"(?:\s*(thousand|million|billion|trillion|k|m|bn|b)\b)?"
+
+
+def speak_numbers(text):
+    """Texte anglais → même texte avec les nombres en toutes lettres (montants, %, années, 401(k)…)."""
+    t = text or ""
+    t = re.sub(r"\b401\s*\(?k\)?", "four-oh-one-k", t, flags=re.I)
+    t = re.sub(r"\b(\d{1,2})0s\b", lambda m: {"1": "tens", "2": "twenties", "3": "thirties", "4": "forties",
+                                               "5": "fifties", "6": "sixties", "7": "seventies", "8": "eighties",
+                                               "9": "nineties"}.get(m.group(1)[-1], m.group(0)) if len(m.group(1)) == 1
+               else m.group(0), t)
+
+    def money(m):
+        raw, mult = m.group(1), (m.group(2) or "").lower()
+        mult = {"k": "thousand", "m": "million", "b": "billion", "bn": "billion"}.get(mult, mult)
+        if mult:
+            return _num_words(raw) + " " + mult + " dollars"
+        v = raw.replace(",", "")
+        if "." in v:
+            d, c = v.split(".", 1)
+            c = (c + "0")[:2]
+            d, c = int(d or 0), int(c)
+            if d == 0:
+                return _int_words(c) + (" cent" if c == 1 else " cents")
+            return (_int_words(d) + (" dollar" if d == 1 else " dollars") +
+                    (" and " + _int_words(c) + (" cent" if c == 1 else " cents") if c else ""))
+        n = int(v)
+        return _int_words(n) + (" dollar" if n == 1 else " dollars")
+    t = re.sub(r"\$\s?(\d[\d,]*(?:\.\d+)?)" + _MULT, money, t, flags=re.I)
+    t = re.sub(r"(\d[\d,]*(?:\.\d+)?)\s?%", lambda m: _num_words(m.group(1)) + " percent", t)
+    t = re.sub(r"\b(1[89]\d\d|20\d\d)\s?[-–]\s?(1[89]\d\d|20\d\d)\b",
+               lambda m: _year_words(int(m.group(1))) + " to " + _year_words(int(m.group(2))), t)
+    t = re.sub(r"(?<![\d,.$])\b(1[89]\d\d|20\d\d)\b(?![,.]\d)", lambda m: _year_words(int(m.group(1))), t)
+    t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: _ordinal(int(m.group(1))), t)
+    t = re.sub(r"/\s?(hour|hr|month|mo|year|yr|day|week|person|mile)\b",
+               lambda m: " per " + {"hr": "hour", "mo": "month", "yr": "year"}.get(m.group(1).lower(), m.group(1)),
+               t, flags=re.I)
+    t = re.sub(r"(?<![\w$])(\d[\d,]*(?:\.\d+)?)" + _MULT,
+               lambda m: _num_words(m.group(1)) + ((" " + {"k": "thousand", "m": "million", "b": "billion",
+                                                            "bn": "billion"}.get(m.group(2).lower(), m.group(2)))
+                                                   if m.group(2) else ""), t)
+    return t
+
+
 def estimate_words(text, total):
     """Timings approximatifs : répartis au prorata des caractères (+ pauses de ponctuation)."""
     tokens = (text or "").split()
@@ -534,8 +638,9 @@ _MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 90000,
 
 
 def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, model="",
-               instructions="", progress=None):
-    """Synthétise tout le texte vers `dest` (mp3) et renvoie durée + timings mot à mot."""
+               instructions="", progress=None, lang=None):
+    """Synthétise tout le texte vers `dest` (mp3) et renvoie durée + timings mot à mot.
+    lang = "en" : les nombres sont envoyés à la voix en toutes lettres (voir speak_numbers)."""
     provider = provider if provider in PROVIDERS else "edge"
     text = re.sub(r"\s+", " ", (text or "").strip())
     if not text:
@@ -548,15 +653,16 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
             if progress:
                 progress(i, len(chunks))
             part = os.path.join(tmpdir, f"part_{i:03d}.mp3")
+            said = speak_numbers(chunk) if (lang or "").lower().startswith("en") else chunk
             if provider == "edge":
-                words = _edge(chunk, voice, part, speed=speed, pitch=pitch)
+                words = _edge(said, voice, part, speed=speed, pitch=pitch)
             elif provider == "elevenlabs":
-                words = _eleven(chunk, voice, part, model=model or "eleven_multilingual_v2", speed=speed)
+                words = _eleven(said, voice, part, model=model or "eleven_multilingual_v2", speed=speed)
             elif provider in ("algrow", "algrow_stealth"):
-                words = _algrow(chunk, voice, part, sub="stealth" if provider == "algrow_stealth" else "elevenlabs",
+                words = _algrow(said, voice, part, sub="stealth" if provider == "algrow_stealth" else "elevenlabs",
                                 model=model, speed=speed, cache_dir=os.path.dirname(os.path.abspath(dest)))
             else:
-                words = _openai(chunk, voice, part, speed=speed, instructions=instructions)
+                words = _openai(said, voice, part, speed=speed, instructions=instructions)
             dur = media.duration(part)
             if words:
                 words = align_to_text(words, chunk)

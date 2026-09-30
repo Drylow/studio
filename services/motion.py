@@ -34,7 +34,8 @@ GREY = (120, 128, 140)
 PALETTE = [(58, 134, 255), (230, 57, 70), (255, 184, 28), (43, 182, 115), (155, 93, 229), (255, 128, 64)]
 SS = 2          # suréchantillonnage des formes (contours lisses)
 EXIT = 0.25     # fondu de sortie (s)
-TYPES = ("label", "counter", "receipt", "bars", "pie", "list", "split", "timeline", "stamp")
+TYPES = ("label", "counter", "receipt", "bars", "pie", "list", "split", "timeline", "stamp", "sheet")
+FULL_PANEL = ("sheet",)  # ces fx remplacent l'image de la scène (pas d'image à générer)
 
 _fonts = {}
 
@@ -203,7 +204,7 @@ def transform(im, scale=1.0, alpha=1.0, dx=0, dy=0, rot=0.0, pivot=None):
 
 # rythme posé : chaque type se déroule plus ou moins lentement (1 = vitesse de base)
 SLOW = {"label": 1.2, "counter": 1.5, "receipt": 1.6, "bars": 1.9, "pie": 1.6, "list": 2.1, "split": 1.8,
-        "timeline": 1.9, "stamp": 1.0, "title": 1.0}
+        "timeline": 1.9, "stamp": 1.0, "title": 1.0, "sheet": 1.0, "intro": 1.0}
 
 
 class Fx:
@@ -215,6 +216,9 @@ class Fx:
         self.k = geo["k"]
         self.sfx = []
         self.slow = SLOW.get((spec or {}).get("type"), 1.0)
+        self.times = [float(x) for x in (spec or {}).get("_times") or []]  # items calés sur la voix (s)
+        if self.times:
+            self.slow = 1.0
         self.setup()
 
     def setup(self):
@@ -558,15 +562,18 @@ class ListFx(Fx):
         k = self.k
         px, py, pw, ph = _panel(self.geo)
         self.title = (self.spec.get("title") or "").upper()[:40]
-        self.items = [str(i)[:60] for i in self.spec.get("items") or [] if str(i).strip()][:6]
+        self.items = [str(i.get("text") if isinstance(i, dict) else i)[:60] for i in self.spec.get("items") or []
+                      if str(i.get("text") if isinstance(i, dict) else i).strip()][:6]
         self.w = int(900 * k)
         self.row = 80 * k
         self.h = int(140 * k + self.row * len(self.items) + 40 * k)
         self.x = int(px + pw * 0.6 - self.w / 2)
         self.y = int(py + ph * 0.46 - self.h / 2)
         self.step = 0.32
-        self.anim_end = 0.3 + self.step * len(self.items) + 0.25
-        self.sfx = [(0.0, "pop", 0.6)] + [(0.3 + self.step * j, "pop", 0.45) for j in range(len(self.items))]
+        if len(self.times) != len(self.items):
+            self.times = [0.3 + self.step * j for j in range(len(self.items))]
+        self.anim_end = (self.times[-1] if self.times else 0.3) + 0.45
+        self.sfx = [(0.0, "pop", 0.6)] + [(t, "pop", 0.45) for t in self.times]
 
     def frame(self, t):
         k = self.k
@@ -577,7 +584,7 @@ class ListFx(Fx):
             p.text((60 * k, 76 * k), self.title, 900, fit_size(self.title, 900, 44 * k, self.w - 140 * k),
                    anchor="lm")
         for j, it in enumerate(self.items):
-            a = seg(t, 0.3 + self.step * j, 0.3 + self.step * j + 0.2)
+            a = seg(t, self.times[j], self.times[j] + 0.3)
             if a <= 0:
                 continue
             y = 140 * k + self.row * j + self.row / 2
@@ -771,7 +778,188 @@ class Title(Fx):
         return transform(im, dx=(1 - a) * -self.w * 0.3, alpha=seg(t, 0, 0.12))
 
 
-CLASSES = {"title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
+class Intro(Fx):
+    """Intro plein écran (≈5 s) : fond du tableau, billets qui tombent, ticket de caisse qui s'imprime
+    avec les lignes de la facture de la vidéo (montants cachés), tampon de la chaîne, titre qui
+    claque, puis tout s'envole. Aucune image de la vidéo derrière."""
+    anim_end = 5.4
+    exit = False  # reste opaque jusqu'au bout : le fondu vers la première scène fait la transition
+
+    def setup(self):
+        import random
+        k = self.k
+        self.x, self.y = 0, 0
+        self.w, self.h = int(self.geo["W"]), int(self.geo["H"])
+        self.kicker = (self.spec.get("kicker") or "").upper()[:40]
+        self.pre = (self.spec.get("pre") or "").upper()[:40]
+        self.main = (self.spec.get("main") or "").upper()[:34]
+        self.items = [str(i).upper()[:20] for i in self.spec.get("items") or []][:4] or ["THE BILL"]
+        self.bg = self.spec.get("bg") or {}
+        self.msize = fit_size(self.main, 900, 170 * k, self.w * 0.5)
+        self.psize = fit_size(self.pre, 900, 66 * k, self.w * 0.46) if self.pre else 0
+        rnd = random.Random(7)
+        self.bills = [(rnd.uniform(0, self.w), rnd.uniform(-self.h, 0), rnd.uniform(0.6, 1.2) * k,
+                       rnd.uniform(-40, 40), rnd.uniform(-90, 90), rnd.uniform(0.18, 0.32)) for _ in range(22)]
+        self._base = None
+        self.sfx = [(0.0, "whoosh", 0.7)] + [(0.7 + 0.28 * j + 0.05 * i, "type", 0.45) for j in range(len(self.items))
+                                             for i in range(4)] + \
+                   [(1.95, "stamp", 0.9), (2.55, "stamp", 0.7), (3.3, "kaching", 0.7), (4.85, "whoosh", 0.8)]
+
+    def _background(self):
+        from PIL import Image, ImageDraw
+        if self._base is None:
+            bgc = tuple(self.bg.get("rgb") or (30, 37, 48))
+            dot = tuple(self.bg.get("dot") or (44, 53, 66))
+            im = Image.new("RGBA", (self.w, self.h), bgc + (255,))
+            d = ImageDraw.Draw(im)
+            step = int(40 * self.k)
+            for yy in range(step // 2, self.h, step):
+                for xx in range(step // 2, self.w, step):
+                    d.ellipse((xx - 2, yy - 2, xx + 2, yy + 2), fill=dot + (255,))
+            self._base = im
+        return self._base.copy()
+
+    def frame(self, t):
+        from PIL import Image
+        k = self.k
+        out = self._background()
+        # billets qui tombent (derrière tout)
+        bills = Pad(self.w, self.h)
+        for bx, by, sc, rot, spin, speed in self.bills:
+            y = by + t * self.h * speed * 1.4
+            if y > self.h + 60 * k:
+                continue
+            a = math.radians(rot + spin * t)
+            bw, bh = 120 * sc, 56 * sc
+            pts = [(-bw / 2, -bh / 2), (bw / 2, -bh / 2), (bw / 2, bh / 2), (-bw / 2, bh / 2)]
+            pts = [(bx + px_ * math.cos(a) - py_ * math.sin(a), y + px_ * math.sin(a) + py_ * math.cos(a))
+                   for px_, py_ in pts]
+            bills.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in pts], fill=(120, 185, 120, 170),
+                            outline=(20, 60, 30, 210), width=int(3 * SS))
+            inner = [(x_ * 0.78 + bx * 0.22, y_ * 0.7 + y * 0.3) for x_, y_ in pts]  # cadre intérieur du billet
+            bills.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in inner], outline=(30, 90, 45, 190), width=int(2 * SS))
+            r = 12 * sc
+            bills.d.ellipse(((bx - r) * SS, (y - r) * SS, (bx + r) * SS, (y + r) * SS), fill=(70, 140, 80, 200),
+                            outline=(20, 60, 30, 210), width=int(2 * SS))
+        out.alpha_composite(bills.image())
+        p = Pad(self.w, self.h)
+        # ticket de caisse (à droite) qui descend puis s'imprime
+        rw, rx = 560 * k, self.w * 0.64
+        drop = ease_out(seg(t, 0.1, 0.6))
+        ry = -700 * k + drop * (170 * k + 700 * k)
+        rows = len(self.items)
+        rh = 170 * k + rows * 70 * k + 150 * k
+        body = [(rx, ry), (rx + rw, ry), (rx + rw, ry + rh)]
+        teeth = 14
+        tw_ = rw / teeth
+        for i in range(teeth):
+            body += [(rx + rw - tw_ * (i + 0.5), ry + rh + 16 * k), (rx + rw - tw_ * (i + 1), ry + rh)]
+        p.d.polygon([((x_ + 12 * k) * SS, (y_ + 12 * k) * SS) for x_, y_ in body], fill=INK)
+        p.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in body], fill=PAPER, outline=INK, width=int(5 * k * SS))
+        p.text((rx + rw / 2, ry + 62 * k), "THE BILL", 900, 52 * k, anchor="mm")
+        yy = ry + 128 * k
+        for j, it in enumerate(self.items):
+            a = seg(t, 0.7 + 0.28 * j, 0.95 + 0.28 * j)
+            if a > 0:
+                n = int(round(len(it) * a))
+                p.text((rx + 34 * k, yy + 35 * k), it[:n], 800, fit_size(it, 800, 36 * k, rw * 0.6), anchor="lm")
+                if a >= 1:
+                    p.text((rx + rw - 34 * k, yy + 35 * k), "$???", 900, 36 * k, fill=GREY, anchor="rm")
+            yy += 70 * k
+        p.line([(rx + 30 * k, yy + 12 * k), (rx + rw - 30 * k, yy + 12 * k)], INK, 4 * k)
+        if t >= 1.9:
+            blink = RED if int((t - 1.9) * 3) % 2 == 0 else INK
+            p.text((rx + 34 * k, yy + 70 * k), "TOTAL", 900, 52 * k, anchor="lm")
+            p.text((rx + rw - 34 * k, yy + 70 * k), "$???", 900, 58 * k, fill=blink, anchor="rm")
+        # nom de la chaîne en tampon, puis titre
+        cx = self.w * 0.37
+        if self.kicker and t >= 1.8:
+            a = seg(t, 1.8, 1.98)
+            kw = p.tw(self.kicker, 900, 44 * k) + 60 * k
+            sc = 1.6 - 0.6 * ease_out(a)
+            x0, y0 = cx - kw * sc / 2, self.h * 0.17 - 40 * k * sc
+            p.box((x0, y0, x0 + kw * sc, y0 + 80 * k * sc), YELLOW, width=6 * k, radius=12 * k, shadow=8 * k)
+            p.text((cx, y0 + 40 * k * sc), self.kicker, 900, 44 * k * sc, anchor="mm")
+        if self.pre:
+            n = int(round(len(self.pre) * seg(t, 2.1, 2.45)))
+            p.text((cx, self.h * 0.31), self.pre[:n], 900, self.psize, fill=WHITE, anchor="mm")
+        if t >= 2.5:
+            a = seg(t, 2.5, 2.7)
+            sc = 1.5 - 0.5 * ease_out(a)
+            p.text((cx, self.h * 0.44), self.main, 900, self.msize * sc, fill=YELLOW, anchor="mm", stroke=9 * k * sc,
+                   stroke_fill=INK)
+            u = ease_out(seg(t, 2.9, 3.3))
+            if u > 0:
+                tw_ = p.tw(self.main, 900, self.msize)
+                p.line([(cx - tw_ / 2, self.h * 0.44 + self.msize * 0.62),
+                        (cx - tw_ / 2 + tw_ * u, self.h * 0.44 + self.msize * 0.58)], RED, 14 * k)
+        im = p.image()
+        out.alpha_composite(im)
+        e = seg(t, 4.8, 5.4)  # sortie : tout grossit et s'efface vers la première scène
+        if e > 0:
+            fg = transform(im, scale=1 + 0.25 * ease_in_out(e), alpha=1 - e)
+            out = self._background()
+            out.alpha_composite(bills.image())
+            out.alpha_composite(fg)
+        return out
+
+
+class Sheet(Fx):
+    """Fiche à tirets qui REMPLACE l'image de la scène : titre surligné, puis une ligne « — … »
+    qui apparaît au moment où la voix la dit (spec["_times"], en secondes depuis le début du fx)."""
+    FULL = True
+
+    def setup(self):
+        k = self.k
+        px, py, pw, ph = _panel(self.geo)
+        self.x, self.y, self.w, self.h = int(px), int(py), int(pw), int(ph)
+        self.title = (self.spec.get("title") or "").upper()[:40]
+        items = []
+        for it in self.spec.get("items") or []:
+            txt = it.get("text") if isinstance(it, dict) else it
+            if str(txt or "").strip():
+                items.append(str(txt).strip()[:46])
+        self.items = items[:6]
+        n = max(1, len(self.items))
+        if len(self.times) != len(self.items):
+            self.times = [0.6 + 0.9 * j for j in range(n)]
+        self.times = [max(0.45, t) for t in self.times]
+        self.row = min(110 * k, (self.h - 230 * k) / n)
+        self.size = min(56 * k, self.row * 0.52)
+        self.anim_end = (self.times[-1] if self.times else 0.6) + 0.45
+        self.sfx = [(0.0, "whoosh", 0.5)] + [(t, "pop", 0.5) for t in self.times]
+
+    def frame(self, t):
+        k = self.k
+        p = Pad(self.w, self.h)
+        wipe = ease_out(seg(t, 0, 0.4))
+        p.box((0, 0, self.w, self.h), PAPER, width=6 * k, radius=16 * k, shadow=0)
+        for j in range(len(self.items)):  # lignes de cahier, discrètes
+            y = 210 * k + self.row * (j + 1)
+            p.line([(70 * k, y), (self.w - 70 * k, y)], (214, 224, 238), 3 * k)
+        if self.title:
+            ts = fit_size(self.title, 900, 64 * k, self.w * 0.7)
+            tw_ = p.tw(self.title, 900, ts)
+            p.box((70 * k, 58 * k, 70 * k + tw_ + 56 * k, 58 * k + ts * 1.5), YELLOW, width=5 * k, radius=10 * k,
+                  shadow=7 * k)
+            p.text((98 * k, 58 * k + ts * 0.75), self.title, 900, ts, anchor="lm")
+        y0 = 210 * k
+        for j, it in enumerate(self.items):
+            a = seg(t, self.times[j], self.times[j] + 0.35)
+            if a <= 0:
+                continue
+            y = y0 + self.row * (j + 0.5)
+            dx = (1 - ease_out(a)) * -50 * k
+            sz = fit_size(it, 800, self.size, self.w - 260 * k)
+            p.text((96 * k + dx, y), "—", 900, sz * 1.05, fill=RED, anchor="lm")
+            p.text((170 * k + dx, y), it, 800, sz, anchor="lm")
+        im = p.image()
+        if wipe < 1:  # la fiche glisse du haut par-dessus l'image
+            im = transform(im, dy=-(1 - wipe) * self.h * 0.35, alpha=seg(t, 0, 0.18))
+        return im
+
+
+CLASSES = {"sheet": Sheet, "intro": Intro, "title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
            "split": Split, "timeline": Timeline, "stamp": Stamp}
 
 
@@ -788,7 +976,8 @@ def render_fx(fx, duration, out_dir, fps=30):
     os.makedirs(out_dir, exist_ok=True)
     fps = int(fps)
     duration = max(0.5, float(duration))
-    anim = min(fx.length, duration - EXIT)
+    tail = EXIT if getattr(fx, "exit", True) else 0.0
+    anim = min(fx.length, duration - tail)
     n_anim = max(1, int(math.ceil(anim * fps)))
     seq = []
     last = None
@@ -801,11 +990,13 @@ def render_fx(fx, duration, out_dir, fps=30):
     final = fx.at(max(fx.length, anim))
     fpath = os.path.join(out_dir, "hold.png")
     final.save(fpath, "PNG", compress_level=1)
-    hold = duration - n_anim / fps - EXIT
+    hold = duration - n_anim / fps - tail
     if hold > 0:
         seq.append((fpath, hold))
     else:
         final = last
+    if not tail:
+        return seq
     n_exit = max(1, int(round(EXIT * fps)))
     for i in range(n_exit):
         a = 1 - (i + 1) / (n_exit + 1)
