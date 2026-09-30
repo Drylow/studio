@@ -153,6 +153,13 @@ TEMPLATES = {
                  "never insulting.",
         "reference_urls": "https://www.youtube.com/watch?v=130HkA6TN8c",
         "youtube_handle": "@OddlySpecificLives",
+        "studio": {"brand": "Oddly Specific Lives", "logo": "OSL", "ref_name": "Female Yakuza",
+                   "placeholder": "POV: You Marry a Japanese Woman",
+                   "sub": "script FacelessOS (calé sur la vidéo Female Yakuza), voix Algrow, personnages consistants, "
+                          "images, musique et montage.",
+                   "thumb_prompt": "A beautiful stylized woman matching the premise of \"{title}\", confident knowing "
+                                   "smile, iconic outfit of her culture, holding a bouquet of red roses, the most "
+                                   "iconic landmark of her country behind her at golden hour."},
         "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
         "direction": "Show the story like a sitcom: mostly You and Her (and her family / friends) in everyday places — "
@@ -206,6 +213,61 @@ TEMPLATES = {
                        "country / world at golden hour or night, with a few small background people; the country's flag "
                        "as a flat rectangle with a thin black border in the top-left corner (no flag if no country). "
                        "Warm saturated colors, clean bold outlines, no text.",
+        "bible": "",
+    },
+    "oddly_expensive_en": {
+        "name": "Oddly Expensive Lives — The Economics of… (EN)", "language": "en", "format": "economics_of",
+        "studio": {"brand": "Oddly Expensive Lives", "logo": "OEL", "ref_name": "",
+                   "placeholder": "The Economics of a Divorce",
+                   "sub": "script FacelessOS façon cours (le prof explique la facture poste par poste), voix Algrow, "
+                          "prof animé sur le tableau, images, musique et montage.",
+                   "thumb_prompt": "The channel's teacher pointing his stick at a huge itemized bill for \"{title}\", "
+                                   "one line circled in red, and ONE huge yellow number: the final total."},
+        "niche": "The real bill of life's biggest and darkest moments (a divorce, dying, prison, having a kid, an "
+                 "ambulance ride), explained by a teacher: every line item, who gets paid, and how people pay less",
+        "audience": "US adults 25-54 (plus UK, Canada, Australia) who fear big surprise bills and love 'how it really "
+                    "works' money content",
+        "tone": "A calm, confident teacher explaining a bill to his class: plain words, contractions, patient, dry "
+                "one-line humor about the system, fully serious on death, illness and prison. Never moralizes, "
+                "never sells.",
+        "rules": "One running tab per video for one typical case, read out after every lesson; the final total is "
+                 "the payoff. Only real, rounded figures with the source named in the sentence, otherwise a stated "
+                 "estimate or range. General information, never personal financial or legal advice. Three CTAs max: "
+                 "~5 min, ~70%, end.",
+        "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
+        "no_text": False, "voice_speed": 1.0,
+        "direction": "Alternate between (a) scenes: the white round-headed people living the moment in real, richly "
+                     "lit places (a lawyer's office, a courthouse hallway, a hospital corridor, a kitchen table covered "
+                     "in envelopes, a funeral home showroom, a prison visiting room, the back of an ambulance) and (b) "
+                     "explainer visuals drawn in the same cartoon style: the growing itemized bill on a long paper "
+                     "receipt, a price tag, an invoice with one line circled in red, a bar chart, a pie chart of who "
+                     "gets the money, a timeline, a calendar, a stack of cash next to a single coin, a map with a "
+                     "route. When the narration states a key number or term, put it on screen as ONE bold label "
+                     "(e.g. 'RUNNING TOTAL: $14,300', '$0.23/HOUR', 'THE RETAINER'); one label per image at most, "
+                     "correct spelling, no other text. Respectful on death, illness and prison: no blood, no gore, "
+                     "no bodies.",
+        "default_minutes": 14,
+        "montage": {"pacing": 5.5, "hook_pacing": 4.0, "hook_seconds": 30, "min_scene": 2.5, "max_scene": 10.0,
+                    "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.3,
+                    "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
+                    "music": "auto", "music_volume": 0.12},
+        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="poses"),
+        "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
+                                "is a simple cartoon figure with a large, perfectly round, plain WHITE head (no ears, "
+                                "no nose), small solid black dot eyes, simple eyebrows and mouth, thick black outline, "
+                                "slim simple body, white mitten hands; roles are shown only by clothes, hair and "
+                                "props"),
+        # le prof (bas gauche) : image envoyée par le créateur → presets/oddly_expensive_en/presenter.png
+        "mascot": "",
+        "thumb_text": True,
+        "thumb_style": "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On the "
+                       "right, the channel's teacher (exactly as in the reference image) pointing his stick at the "
+                       "hero object with a knowing look. Center-left, ONE big hero object that is the video's bill: a "
+                       "long itemized receipt, a hospital invoice, a price tag or a commissary receipt, slightly "
+                       "tilted, with one line circled in red. ONE huge number in heavy condensed bold yellow (#FFD447) "
+                       "with a thick black outline (the final total or the most absurd line item, e.g. '$310,000', "
+                       "'$0.23/HOUR', '$3,200 FOR 4 MILES'), no other words. One small white round-headed character "
+                       "reacting in shock. Clean bold outlines, high contrast, readable at small size.",
         "bible": "",
     },
     "business_en": {
@@ -367,6 +429,13 @@ def _apply_preset_images(ch, template):
             ch.setdefault("style", {})["ref"] = rel
         else:
             ch["thumb_ref"] = rel
+    rig = os.path.join(d, "presenter")  # prof livré avec le modèle (rig animé déjà construit)
+    bd = ch.get("board") or {}
+    if template and uses_board(ch) and not bd.get("presenter") and presenter.load_manifest(rig):
+        import shutil
+        rel_dir = f"refs/rig_{int(time.time() * 1000)}"
+        shutil.copytree(rig, os.path.join(store.channel_dir(ch["id"]), rel_dir))
+        ch["board"] = dict(bd, presenter=f"{rel_dir}/A.png", rig=rel_dir, anim="poses")
 
 
 def _refresh_from_template(c, template):
@@ -387,9 +456,10 @@ def _refresh_from_template(c, template):
     if not c.get("youtube_handle") and t.get("youtube_handle"):
         c["youtube_handle"] = t["youtube_handle"]
         changed = True
-    before = ((c.get("style") or {}).get("ref"), c.get("thumb_ref"))
+    refs = lambda: ((c.get("style") or {}).get("ref"), c.get("thumb_ref"), (c.get("board") or {}).get("presenter"))
+    before = refs()
     _apply_preset_images(c, template)
-    changed = changed or ((c.get("style") or {}).get("ref"), c.get("thumb_ref")) != before
+    changed = changed or refs() != before
     if changed:
         store.save_channel(c)
     return c
@@ -411,6 +481,12 @@ def studio_channel(template):
             store.save_channel(c)
             return _refresh_from_template(c, template)
     return new_channel({}, template=template)
+
+
+def studio_list():
+    """[{key, brand, logo}] : les chaînes qui ont un studio simplifié (sélecteur du studio)."""
+    return [dict(key=k, brand=t["studio"]["brand"], logo=t["studio"]["logo"])
+            for k, t in TEMPLATES.items() if t.get("studio")]
 
 
 def pick_format(ch, title, wanted=None):
@@ -1716,9 +1792,7 @@ def job_thumbnails(job, pid, idea="", count=2):
     count = max(1, min(4, int(count or 2)))
     job.update(0.05, "Concepts de miniatures…")
     chars = [c["name"] for c in (ch.get("style") or {}).get("characters") or []]
-    bd = board_config(ch)
-    mascot = channel_ref_path(ch, bd.get("presenter"))
-    mascot = mascot if mascot and os.path.isfile(mascot) else None
+    mascot = _channel_mascot(ch)
     if mascot:
         chars.append("Mascot")
     thumb_style = (ch.get("thumb_style") or "").strip()
@@ -1761,7 +1835,7 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
                 full += " No text, no letters, no words (a flag is fine)."
         else:
             full, refs = build_image_prompt(ch, prompt, scene_chars=it.get("chars") or [], allow_text=with_text)
-        if mascot and "Mascot" in (it.get("chars") or []):
+        if mascot and ("Mascot" in (it.get("chars") or []) or _thumb_has_teacher(thumb_style)):
             refs = refs + [mascot]
             full = (f"Reference image {len(refs)} = the channel MASCOT: same head, face, colors and outfit "
                     "(expression and pose change as described).\n" + full)
@@ -1786,6 +1860,16 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
         x["thumbnails"] = (results + (x.get("thumbnails") or []))[:8]
     store.update_project(pid, save)
     job.update(1.0, f"{len(results)} miniature(s) prête(s).")
+
+
+def _thumb_has_teacher(thumb_style):
+    """Le style de miniature de la chaîne met son prof / sa mascotte à l'image (ex. Oddly Expensive Lives)."""
+    return bool(re.search(r"(?i)\b(teacher|presenter|mascot)\b", thumb_style or ""))
+
+
+def _channel_mascot(ch):
+    path = channel_ref_path(ch, board_config(ch).get("presenter"))
+    return path if path and os.path.isfile(path) else None
 
 
 def save_png(blob, path, side=1536):
@@ -1842,6 +1926,11 @@ def job_thumbs_custom(job, pid, prompt, count=2, ref_files=None, channel_style=T
         "Bright, saturated, high contrast, readable at small size.")
     if channel_style and thumb_style:
         full += " CHANNEL THUMBNAIL STYLE: " + thumb_style
+    mascot = _channel_mascot(ch) if channel_style and _thumb_has_teacher(thumb_style) else None
+    if mascot and len(refs) < 4:
+        refs = refs + [mascot]
+        full = (f"Reference image {len(refs)} = the channel's TEACHER: same head, face, colors and outfit "
+                "(expression and pose change as described).\n" + full)
     if not with_text and "text" not in prompt.lower():
         full += " No text, no letters, no words (a flag is fine)."
     d = store.project_dir(pid)

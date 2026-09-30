@@ -79,6 +79,22 @@ TOOLS = {
         "icon": '<circle cx="12" cy="8" r="4.2"/><path d="M5.5 21c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/>'
                 '<path d="M18.5 3.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
     },
+    "oel-studio": {
+        "slug": "oel-studio",
+        "category": "youtube",
+        "name": "ODDLY EXPENSIVE LIVES",
+        "short": "Oddly Expensive Lives",
+        "tag": "// OEL",
+        "desc": "Le studio de la chaîne Oddly Expensive Lives : « The Economics of… » expliqué par un prof animé "
+                "sur fond quadrillé. Titre + durée → script façon cours (la facture poste par poste), voix, "
+                "images, musique et montage.",
+        "entry": "osl-studio/index.html",
+        "query": "studio=oddly_expensive_en",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "gold",
+        "icon": '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    },
     "delamain": {
         "slug": "delamain",
         "category": "agent",
@@ -302,7 +318,8 @@ def tool_page(slug):
         "tool_frame.html",
         tool=tool,
         installed=installed,
-        iframe_src=("/toolfiles/" + tool["entry"]) if installed else "",
+        iframe_src=("/toolfiles/" + tool["entry"] + ("?" + tool["query"] if tool.get("query") else ""))
+        if installed else "",
         active_page="tool-" + slug,
     )
 

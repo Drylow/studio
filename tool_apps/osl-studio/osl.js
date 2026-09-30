@@ -1,5 +1,5 @@
 // ============================================================================
-// Oddly Specific Lives — studio simplifié : titre + durée → vidéo finie.
+// Studio simplifié d'une chaîne (Oddly Specific Lives, Oddly Expensive Lives…) : titre + durée → vidéo finie.
 // Tout tourne côté serveur (/api/pov/*) : on peut fermer l'onglet pendant une vidéo.
 // ============================================================================
 'use strict';
@@ -213,13 +213,33 @@ async function load() {
       S.formats.map(f => `<option value="${esc(f.key)}">${esc(f.name)}</option>`).join(''));
     $('.fmtrow').classList.toggle('hidden', S.formats.length < 2);
     if (first) { $('#minutes').value = Math.min(30, Math.max(3, Math.round(S.ch.default_minutes || 14))); onMinutes(); }
-    $('#refHint').innerHTML = S.ch.has_reference ? '✓ Script calé sur la vidéo de référence (Female Yakuza) · audit FacelessOS'
+    if (first) applyUi(r.ui || {}, r.studios || []);
+    const refName = (r.ui || {}).ref_name;
+    $('#refHint').innerHTML = S.ch.has_reference ? `✓ Script calé sur la vidéo de référence${refName ? ` (${esc(refName)})` : ''} · audit FacelessOS`
       : '⚠ Pas de vidéo de référence pour cette chaîne.';
     renderList();
     if (S.thumbFor) refreshThumbModal();
   }
   const running = S.projects.some(p => p.job && p.job.status === 'running');
   S.pollT = setTimeout(load, running ? 3000 : 20000);
+}
+// Nom, logo et textes de la chaîne du studio (?studio=<modèle>) + sélecteur entre les chaînes.
+function applyUi(ui, studios) {
+  S.ui = ui;
+  if (ui.brand) {
+    const words = ui.brand.split(' '), last = words.pop();
+    $('#brandName').innerHTML = `${esc(words.join(' '))} <b>${esc(last)}</b>`;
+    document.title = ui.brand;
+  }
+  if (ui.logo) $('#logo').textContent = ui.logo;
+  if (ui.sub) $('#subText').textContent = ui.sub;
+  if (ui.placeholder) $('#title').placeholder = ui.placeholder;
+  const pick = $('#studioPick');
+  if (studios.length > 1) {
+    pick.innerHTML = studios.map(s => `<option value="${esc(s.key)}"${s.key === STUDIO ? ' selected' : ''}>${esc(s.brand)}</option>`).join('');
+    pick.classList.remove('hidden');
+    pick.onchange = () => { location.search = `?studio=${encodeURIComponent(pick.value)}`; };
+  }
 }
 async function credits() {
   try {
@@ -232,8 +252,8 @@ async function credits() {
 const T = {files: [], yt: ''};
 function closeModal() { $('#modalRoot').innerHTML = ''; S.thumbFor = null; }
 function defaultPrompt(p) {
-  return `A beautiful stylized woman matching the premise of "${p.title}", confident knowing smile, iconic outfit of her culture, `
-    + 'holding a bouquet of red roses, the most iconic landmark of her country behind her at golden hour.';
+  const tpl = (S.ui || {}).thumb_prompt || 'A striking illustration of the premise of "{title}".';
+  return tpl.replace('{title}', p.title);
 }
 function openThumbs(p) {
   S.thumbFor = p.id; T.files = []; T.yt = '';

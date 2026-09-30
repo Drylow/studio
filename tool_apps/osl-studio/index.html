@@ -9,7 +9,8 @@
 </head>
 <body>
 <header class="top">
-  <div class="brand"><div class="logo">OSL</div><span>Oddly Specific <b>Lives</b></span></div>
+  <div class="brand"><div class="logo" id="logo">OSL</div><span id="brandName">Oddly Specific <b>Lives</b></span>
+    <select id="studioPick" class="hidden" title="Changer de chaîne"></select></div>
   <nav class="tabs">
     <div class="tab on" data-view="videos">🎬 Vidéos</div>
     <div class="tab" data-view="projects">🗂 Projets</div>
@@ -21,7 +22,7 @@
 <main class="osl" id="viewVideos">
   <section class="card newvid">
     <h2>Nouvelle vidéo</h2>
-    <div class="sub">Tu mets le titre et la durée. Le studio fait le reste : script FacelessOS (calé sur la vidéo Female Yakuza), voix Algrow, personnages consistants, images, musique et montage.</div>
+    <div class="sub">Tu mets le titre et la durée. Le studio fait le reste : <span id="subText">script FacelessOS (calé sur la vidéo Female Yakuza), voix Algrow, personnages consistants, images, musique et montage.</span></div>
     <label class="f"><span class="lbl">Titre</span>
       <input type="text" id="title" maxlength="140" placeholder="POV: You Marry a Japanese Woman" autocomplete="off"></label>
     <div class="durrow">

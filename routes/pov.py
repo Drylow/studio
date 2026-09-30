@@ -573,6 +573,7 @@ def studio(template):
                                 "pacing": mt.get("pacing") or 6, "voice_provider": (ch.get("voice") or {}).get("provider"),
                                 "thumb_style": ch.get("thumb_style") or "",
                                 "has_reference": bool((ch.get("reference_scripts") or "").strip())},
+                    "ui": E.TEMPLATES[template].get("studio") or {}, "studios": E.studio_list(),
                     "formats": E.studio_formats(ch), "projects": prs})
 
 
