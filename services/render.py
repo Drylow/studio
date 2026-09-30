@@ -443,7 +443,7 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
         clip_s = starts_f[i] / fps
         clip_len = frames[i] / fps
         off = max(tf / fps + 0.08, float(f.get("t") or clip_s) - clip_s)
-        dur = min(6.0, clip_len - off - 0.04)
+        dur = min(10.0, clip_len - off - 0.04)  # la carte reste jusqu'à la fin de la scène (10 s max)
         if dur < 1.1:  # trop court à la fin de la scène : on l'avance
             off = max(tf / fps + 0.08, clip_len - 1.2)
             dur = clip_len - off - 0.04
@@ -456,7 +456,7 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
         sig = hashlib.sha1(json.dumps([f["spec"], before, round(dur, 3), geo, fps, motion.__file__ and
                                        os.path.getmtime(motion.__file__)], sort_keys=True).encode()).hexdigest()[:12]
         items.append((i, off, dur, obj, sig))
-        for t_rel, name, gain in obj.sfx:
+        for t_rel, name, gain in obj.sounds:
             if t_rel < dur - 0.2:
                 sounds.append((clip_s + off + t_rel, name, gain))
 

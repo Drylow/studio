@@ -248,10 +248,11 @@ TEMPLATES = {
                      "receipts and charts on top as animations, so keep the upper-left and right side of each image "
                      "calm. Respectful on death, illness and prison: no blood, no gore, no bodies.",
         "default_minutes": 14,
-        "montage": {"pacing": 5.5, "hook_pacing": 4.0, "hook_seconds": 30, "min_scene": 2.5, "max_scene": 10.0,
-                    "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.3,
+        # rythme posé : le prof prend le temps d'expliquer (scènes de ~8 s, jamais moins de 4,5 s)
+        "montage": {"pacing": 8.5, "hook_pacing": 6.0, "hook_seconds": 30, "min_scene": 4.5, "max_scene": 15.0,
+                    "motion": "zoom_in", "motion_strength": 0.05, "transition": "fade", "transition_dur": 0.4,
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
-                    "music": "auto", "music_volume": 0.12, "director": True},
+                    "music": "auto", "music_volume": 0.12, "director": True, "intro": True},
         # prof « acteur » : une pose par idée (presets/oddly_expensive_en/poses), choisie par le réalisateur
         "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none", presenter_height=0.5),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
@@ -1336,6 +1337,13 @@ def plan_scenes(words, total, sections, m):
                 out[i - 1]["text"] += " " + out[i]["text"]
                 out.pop(i)
                 continue
+            if i > 0:  # seule dans sa partie et trop courte : rattachée à la scène d'avant
+                out[i - 1]["text"] += " " + out[i]["text"]
+                out.pop(i)
+                continue
+            out[i]["text"] += " " + out[i + 1]["text"]
+            out.pop(i + 1)
+            continue
         i += 1
     for i, sc in enumerate(out):
         sc["end"] = out[i + 1]["start"] if i + 1 < len(out) else total
@@ -1949,10 +1957,11 @@ def job_montage(job, pid):
     job.update(1.0, f"Montage réalisé : {n} animations, {len(plan)} poses.")
 
 
-def _acting(pr, ch, layout, workdir, w, h):
-    """Prof « acteur » : une pose par scène (plan de montage), avec rebond ; None si pas de poses."""
+def _acting(pr, ch, layout, workdir, w, h, lead=0.0, scenes=None):
+    """Prof « acteur » : une pose par scène (plan de montage), avec rebond ; None si pas de poses.
+    lead = durée de l'intro (le prof salue pendant l'intro, les scènes sont décalées d'autant)."""
     pd = channel_poses(ch)
-    scenes = pr.get("scenes") or []
+    scenes = (pr.get("scenes") or []) if scenes is None else scenes
     if not pd or not layout or not any(s.get("pose") for s in scenes):
         return None
     bd = board_config(ch)
@@ -1963,7 +1972,9 @@ def _acting(pr, ch, layout, workdir, w, h):
         key = f"{pose}|{s['sign']}" if s.get("sign") and pose.startswith("hold_") else pose
         if s.get("sign") and pose.startswith("hold_"):
             texts.add((pose, s["sign"]))
-        keys.append((float(s["start"]), key))
+        keys.append((float(s["start"]) + lead, key))
+    if lead > 0:
+        keys.insert(0, (0.0, "wave"))
     frames, left, H = presenter.acting_frames(pd, g["presenter_h"], workdir, texts)
     if not frames:
         return None
@@ -1976,6 +1987,89 @@ def _acting(pr, ch, layout, workdir, w, h):
     return layout, sounds
 
 
+INTRO_SECONDS = 5.0
+
+
+def title_spec(pr, ch):
+    """Écran titre de l'intro : « THE ECONOMICS OF » en petit, la suite en énorme."""
+    title = (pr.get("title") or "").strip()
+    m = re.match(r"(?i)^(the economics of|how|why|inside the life of|the real cost of)\s+(.+)$", title)
+    pre, main = (m.group(1), m.group(2)) if m else ("", title)
+    brand = ((TEMPLATES.get(ch.get("template") or "", {}).get("studio") or {}).get("brand")
+             or (ch.get("name") or "").split(" — ")[0])
+    return {"type": "title", "kicker": brand, "pre": pre, "main": main}
+
+
+def ensure_intro_image(pid, ch, w, h):
+    """Image d'ouverture de l'intro (une image IA qui résume le sujet, sans texte), créée une fois."""
+    pr = store.get_project(pid)
+    d = store.project_dir(pid)
+    rel = (pr.get("intro") or {}).get("image")
+    if rel and os.path.isfile(os.path.join(d, rel)):
+        return os.path.join(d, rel)
+    prompt = (f"Wide, inviting establishing shot that sums up the topic \"{pr.get('title', '')}\" at a glance: the "
+              "typical people of this story and the most iconic objects of the topic together in one clear, "
+              "well-lit scene, warm cinematic light, calm open space in the center of the frame.")
+    rel = f"images/intro_{int(time.time())}.jpg"
+    os.makedirs(os.path.join(d, "images"), exist_ok=True)
+    generate_scene_image(ch, prompt, os.path.join(d, rel), width=w, height=h, board_layout=uses_board(pr))
+
+    def save(x):
+        x["intro"] = {"image": rel, "prompt": prompt}
+    store.update_project(pid, save)
+    return os.path.join(d, rel)
+
+
+def render_inputs(pid, workdir, until=None):
+    """Tout ce qu'il faut au montage : scènes (+ intro), voix (décalée par l'intro), mots, animations,
+    bruitages, mise en page du prof. until = secondes de narration à garder (extrait de test)."""
+    pr = store.get_project(pid)
+    d = store.project_dir(pid)
+    m = pr.get("montage") or DEFAULT_MONTAGE
+    w, h = dims(pr)
+    ch = project_channel(pr)
+    scenes_src = [s for s in pr["scenes"] if until is None or s["start"] < until]
+    t_end = scenes_src[-1]["end"] if until is not None and scenes_src else None
+    lead = INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0
+    voice = os.path.join(d, pr["voice"]["file"])
+    if lead or t_end:
+        os.makedirs(workdir, exist_ok=True)
+        cut = os.path.join(workdir, f"voice_{int(lead * 1000)}_{int((t_end or 0) * 1000)}.mp3")
+        if not os.path.isfile(cut) or os.path.getmtime(cut) < os.path.getmtime(voice):
+            af = [f"adelay={int(lead * 1000)}:all=1"] if lead else []
+            media.run(["-y", "-i", voice] + (["-t", f"{t_end:.3f}"] if t_end else []) +
+                      (["-af", ",".join(af)] if af else []) + ["-c:a", "libmp3lame", "-q:a", "2", cut])
+        voice = cut
+    scenes = [{"image": os.path.join(d, s["image"]), "start": s["start"] + lead, "motion": s.get("motion"),
+               "index": s["i"]} for s in scenes_src]
+    words = [dict(x, s=x["s"] + lead, e=x["e"] + lead) for x in load_words(pid) if t_end is None or x["s"] < t_end]
+    overlays = []
+    if m.get("section_titles", True):
+        for s in scenes_src:
+            if s.get("first") and s.get("heading"):
+                a = s["start"] + lead
+                overlays.append({"start": a + 0.15, "end": min(s["end"] + lead, a + 2.6) if
+                                 s["end"] - s["start"] > 1.2 else a + 2.2, "text": s["heading"]})
+    layout = _layout_for(pr, workdir, w, h)
+    fx, sounds = None, []
+    if montage_enabled(pr):
+        off = 1 if lead else 0
+        fx = [{"scene": k + off, "t": s["fx"].get("t", s["start"]) + lead,
+               "spec": {a: b for a, b in s["fx"].items() if a != "t"}}
+              for k, s in enumerate(scenes_src) if s.get("fx")]
+        if lead:
+            scenes.insert(0, {"image": ensure_intro_image(pid, ch, w, h), "start": 0.0, "motion": "zoom_in",
+                              "index": -1})
+            fx.insert(0, {"scene": 0, "t": 0.25, "spec": title_spec(pr, ch)})
+        acted = _acting(pr, ch, layout, workdir, w, h, lead=lead, scenes=scenes_src)
+        if acted:
+            layout, sounds = acted
+        sounds += [(float(s["start"]) + lead + 0.05, "whoosh", 0.3) for s in scenes_src[1:]
+                   if s.get("first") and s.get("heading")]
+    return {"scenes": scenes, "voice": voice, "words": words, "overlays": overlays, "layout": layout, "fx": fx,
+            "sounds": sounds, "w": w, "h": h, "m": m, "music": pick_music(pr, m.get("music"))}
+
+
 def job_render(job, pid):
     pr = store.get_project(pid)
     if not pr.get("voice"):
@@ -1984,38 +2078,19 @@ def job_render(job, pid):
     if missing:
         raise RuntimeError(f"{len(missing)} scène(s) sans image.")
     d = store.project_dir(pid)
-    m = pr.get("montage") or DEFAULT_MONTAGE
-    w, h = dims(pr)
-    scenes = [{"image": os.path.join(d, s["image"]), "start": s["start"], "motion": s.get("motion"),
-               "index": s["i"]} for s in pr["scenes"]]
-    overlays = []
-    if m.get("section_titles", True):
-        for s in pr["scenes"]:
-            if s.get("first") and s.get("heading"):
-                overlays.append({"start": s["start"] + 0.15, "end": min(s["end"], s["start"] + 2.6) if
-                                 s["end"] - s["start"] > 1.2 else s["start"] + 2.2, "text": s["heading"]})
-    music = pick_music(pr, m.get("music"))
-    layout = _layout_for(pr, os.path.join(d, "render"), w, h)
-    fx, sounds = None, []
-    if montage_enabled(pr):
-        fx = [{"scene": k, "t": s["fx"].get("t", s["start"]), "spec": {a: b for a, b in s["fx"].items() if a != "t"}}
-              for k, s in enumerate(pr["scenes"]) if s.get("fx")]
-        acted = _acting(pr, project_channel(pr), layout, os.path.join(d, "render"), w, h)
-        if acted:
-            layout, sounds = acted
-        sounds += [(float(s["start"]) + 0.05, "whoosh", 0.3) for s in pr["scenes"][1:]
-                   if s.get("first") and s.get("heading")]
+    x = render_inputs(pid, os.path.join(d, "render"))
+    m = x["m"]
     out_name = f"{render.safe_name(pr.get('title'))}_{int(time.time()) % 1000000}.mp4"
     try:
         res = render.render_video(
-            os.path.join(d, "render"), scenes, os.path.join(d, pr["voice"]["file"]), os.path.join(d, out_name),
-            width=w, height=h, fps=int(m.get("fps") or 30), motion=m.get("motion", "auto"),
+            os.path.join(d, "render"), x["scenes"], x["voice"], os.path.join(d, out_name),
+            width=x["w"], height=x["h"], fps=int(m.get("fps") or 30), motion=m.get("motion", "auto"),
             motion_strength=float(m.get("motion_strength") or 0.12), transition=m.get("transition", "fade"),
-            transition_dur=float(m.get("transition_dur") or 0.3), words=load_words(pid),
-            captions=m.get("captions") or {"mode": "none"}, overlays=overlays, music_path=music,
-            music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"), layout=layout,
-            progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled, fx=fx,
-            sfx_events=sounds or None)
+            transition_dur=float(m.get("transition_dur") or 0.3), words=x["words"],
+            captions=m.get("captions") or {"mode": "none"}, overlays=x["overlays"], music_path=x["music"],
+            music_volume=float(m.get("music_volume") or 0.12), quality=m.get("quality", "fast"),
+            layout=x["layout"], progress=lambda p, msg: job.update(p * 0.98, msg), cancelled=job.cancelled,
+            fx=x["fx"], sfx_events=x["sounds"] or None)
     except render.Cancelled:
         raise store.JobCancelled("Annulé.")
     old = (pr.get("render") or {}).get("file")

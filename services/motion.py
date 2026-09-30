@@ -201,6 +201,11 @@ def transform(im, scale=1.0, alpha=1.0, dx=0, dy=0, rot=0.0, pivot=None):
 
 # ── les fx ────────────────────────────────────────────────────────────────────
 
+# rythme posé : chaque type se déroule plus ou moins lentement (1 = vitesse de base)
+SLOW = {"label": 1.2, "counter": 1.5, "receipt": 1.6, "bars": 1.9, "pie": 1.6, "list": 2.1, "split": 1.8,
+        "timeline": 1.9, "stamp": 1.0, "title": 1.0}
+
+
 class Fx:
     """Base : taille de la toile, position sur l'image, fin de l'animation, bruitages."""
     anim_end = 0.5
@@ -209,6 +214,7 @@ class Fx:
         self.spec, self.geo, self.state = spec, geo, state or {}
         self.k = geo["k"]
         self.sfx = []
+        self.slow = SLOW.get((spec or {}).get("type"), 1.0)
         self.setup()
 
     def setup(self):
@@ -216,6 +222,18 @@ class Fx:
 
     def frame(self, t):
         raise NotImplementedError
+
+    # temps « réel » (ralenti selon le type)
+    def at(self, t):
+        return self.frame(t / self.slow)
+
+    @property
+    def length(self):
+        return self.anim_end * self.slow
+
+    @property
+    def sounds(self):
+        return [(t * self.slow, n, g) for t, n, g in self.sfx]
 
 
 def _panel(geo):
@@ -705,7 +723,55 @@ class Stamp(Fx):
         return transform(im, scale=s, alpha=seg(t, 0, 0.1) * 0.95, rot=12)
 
 
-CLASSES = {"label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
+class Title(Fx):
+    """Écran titre de l'intro : bandeau papier, nom de la chaîne, titre qui claque, trait rouge."""
+    anim_end = 1.9
+
+    def setup(self):
+        k = self.k
+        px, py, pw, ph = _panel(self.geo)
+        self.kicker = (self.spec.get("kicker") or "").upper()[:40]
+        self.pre = (self.spec.get("pre") or "").upper()[:40]
+        self.main = (self.spec.get("main") or "").upper()[:34]
+        self.w, self.h = int(pw * 0.78), int(430 * k)
+        self.x = int(px + pw * 0.56 - self.w / 2)
+        self.y = int(py + ph * 0.46 - self.h / 2)
+        self.msize = fit_size(self.main, 900, 150 * k, self.w - 140 * k)
+        self.psize = fit_size(self.pre, 900, 58 * k, self.w - 200 * k) if self.pre else 0
+        self.sfx = [(0.0, "whoosh", 0.8), (0.75, "stamp", 0.9), (1.55, "kaching", 0.6)]
+
+    def frame(self, t):
+        k = self.k
+        p = Pad(self.w, self.h)
+        m = 16 * k
+        a = ease_out(seg(t, 0, 0.35))
+        p.box((m, m + 40 * k, self.w - 26 * k, self.h - 26 * k), PAPER, width=6 * k, radius=28 * k, shadow=12 * k)
+        if self.kicker:
+            kw = p.tw(self.kicker, 900, 30 * k) + 44 * k
+            p.box((56 * k, 18 * k, 56 * k + kw, 76 * k), YELLOW, width=5 * k, radius=10 * k, shadow=6 * k)
+            p.text((56 * k + kw / 2, 47 * k), self.kicker, 900, 30 * k, anchor="mm")
+        cx = (self.w - 10 * k) / 2
+        y_pre = 150 * k
+        if self.pre:
+            n = int(round(len(self.pre) * seg(t, 0.3, 0.7)))
+            p.text((cx, y_pre), self.pre[:n], 900, self.psize, fill=GREY, anchor="mm")
+        y_main = 270 * k if self.pre else 225 * k
+        sm = seg(t, 0.72, 0.9)
+        if sm > 0:
+            p.text((cx, y_main), self.main, 900, self.msize, fill=YELLOW, anchor="mm", stroke=7 * k,
+                   stroke_fill=INK)
+        u = ease_out(seg(t, 1.1, 1.5))
+        if u > 0:
+            tw_ = p.tw(self.main, 900, self.msize)
+            x0 = cx - tw_ / 2
+            p.line([(x0, y_main + self.msize * 0.62), (x0 + tw_ * u, y_main + self.msize * 0.58)], RED, 12 * k)
+        im = p.image()
+        if 0 < sm < 1:  # le titre claque : léger zoom sur toute la carte
+            im = transform(im, scale=1 + 0.05 * (1 - ease_out(sm)))
+        return transform(im, dx=(1 - a) * -self.w * 0.3, alpha=seg(t, 0, 0.12))
+
+
+CLASSES = {"title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
            "split": Split, "timeline": Timeline, "stamp": Stamp}
 
 
@@ -722,17 +788,17 @@ def render_fx(fx, duration, out_dir, fps=30):
     os.makedirs(out_dir, exist_ok=True)
     fps = int(fps)
     duration = max(0.5, float(duration))
-    anim = min(fx.anim_end, duration - EXIT)
+    anim = min(fx.length, duration - EXIT)
     n_anim = max(1, int(math.ceil(anim * fps)))
     seq = []
     last = None
     for i in range(n_anim):
-        im = fx.frame(i / fps)
+        im = fx.at(i / fps)
         path = os.path.join(out_dir, f"a{i:04d}.png")
         im.save(path, "PNG", compress_level=1)
         seq.append((path, 1 / fps))
         last = im
-    final = fx.frame(max(fx.anim_end, anim))
+    final = fx.at(max(fx.length, anim))
     fpath = os.path.join(out_dir, "hold.png")
     final.save(fpath, "PNG", compress_level=1)
     hold = duration - n_anim / fps - EXIT
