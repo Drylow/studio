@@ -261,17 +261,17 @@ TEMPLATES = {
                                 "props"),
         # le prof (bas gauche) : rig animé livré dans presets/oddly_expensive_en/presenter/
         "mascot": "the channel's teacher: a simple cartoon man with a large, perfectly round, plain WHITE head (no "
-                  "hair, no ears, no nose), small solid black dot eyes under short relaxed black eyebrows, a friendly, natural "
-                  "closed-mouth smile; a grey three-piece suit (light grey jacket with notched lapels, darker charcoal waistcoat "
-                  "with black buttons, white shirt, black tie), a fan of green dollar bills sticking out of the "
+                  "hair, no ears, no nose), small solid black dot eyes under short relaxed black eyebrows, a "
+                  "friendly, natural closed-mouth smile; a grey three-piece suit (light grey jacket with notched "
+                  "lapels, darker charcoal waistcoat with black buttons, white shirt, black tie), a fan of green "
+                  "dollar bills sticking out of the "
                   "breast pocket, grey trousers, black shoes, white mitten hands, thick clean black outlines",
         "thumb_text": True,
         "thumb_style": "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On the "
                        "right, the channel's teacher (exactly as in the reference image) pointing his stick at the "
                        "hero object with a friendly, natural expression. Center-left, ONE big hero object that is "
                        "the video's bill: a long itemized receipt, a hospital invoice, a price tag or a commissary "
-                       "receipt, slightly "
-                       "tilted, with one line circled in red. ONE huge number in heavy condensed bold yellow (#FFD447) "
+                       "receipt, slightly tilted, with one line circled in red. ONE huge number in heavy condensed bold yellow (#FFD447) "
                        "with a thick black outline (the final total or the most absurd line item, e.g. '$310,000', "
                        "'$0.23/HOUR', '$3,200 FOR 4 MILES'), no other words. One small white round-headed character "
                        "reacting in shock. Clean bold outlines, high contrast, readable at small size.",
