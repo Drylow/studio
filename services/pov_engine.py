@@ -259,8 +259,12 @@ TEMPLATES = {
                                 "no nose), small solid black dot eyes, simple eyebrows and mouth, thick black outline, "
                                 "slim simple body, white mitten hands; roles are shown only by clothes, hair and "
                                 "props"),
-        # le prof (bas gauche) : image envoyée par le créateur → presets/oddly_expensive_en/presenter.png
-        "mascot": "",
+        # le prof (bas gauche) : rig animé livré dans presets/oddly_expensive_en/presenter/
+        "mascot": "the channel's teacher: a simple cartoon man with a large, perfectly round, plain WHITE head (no "
+                  "hair, no ears, no nose), small solid black dot eyes under flat black eyebrows, a confident knowing "
+                  "look; a grey three-piece suit (light grey jacket with notched lapels, darker charcoal waistcoat "
+                  "with black buttons, white shirt, black tie), a fan of green dollar bills sticking out of the "
+                  "breast pocket, grey trousers, black shoes, white mitten hands, thick clean black outlines",
         "thumb_text": True,
         "thumb_style": "Dark midnight-blue slate background with a subtle dot grid, like the channel's board. On the "
                        "right, the channel's teacher (exactly as in the reference image) pointing his stick at the "
@@ -850,13 +854,18 @@ def save_presenter(ch, blob, anim="poses"):
 def _build_anim(out_dir, rel_dir, blob, anim):
     if anim == "poses":
         def edit(k):
-            try:
-                return k, ai.generate_image(presenter.POSE_EDITS[k], width=1024, height=1536, refs=[blob],
+            out = None
+            for _ in range(2):  # 2e essai si l'IA a redessiné tout le perso au lieu du bras
+                try:
+                    out = ai.generate_image(presenter.POSE_EDITS[k], width=1024, height=1536, refs=[blob],
                                             quality="high", transparent=True)
-            except ai.AIError as e:
-                if getattr(e, "status", None) == 4290:  # quota épuisé : on le dit, pas d'échec silencieux
-                    raise
-                return k, None
+                except ai.AIError as e:
+                    if getattr(e, "status", None) == 4290:  # quota épuisé : on le dit, pas d'échec silencieux
+                        raise
+                    return k, None
+                if presenter.pose_ok(blob, out):
+                    return k, out
+            return k, out  # écartée par build_pose_rig : la pose voisine la remplace
         with ThreadPoolExecutor(max_workers=3) as ex:
             variants = dict(ex.map(edit, list(presenter.POSE_EDITS)))
         if any(variants.values()):

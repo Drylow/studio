@@ -117,20 +117,47 @@ def _change_mask(base, var, thresh=56):
     return keep.resize(base.size, Image.BILINEAR).filter(ImageFilter.GaussianBlur(max(2, base.width // 300)))
 
 
+MAX_CHANGE = 0.5  # part du perso qui change : ~0.2 quand seul le bras bouge, >0.8 quand l'IA a tout redessiné
+
+
+def _prepared(base_blob):
+    base = _rgba(base_blob)
+    base.putalpha(base.getchannel("A").point(lambda a: 0 if a < 16 else a))
+    return base
+
+
+def _pose_layer(base, var_blob):
+    """(retouche recalée, masque de ce qui change, part du perso qui change)."""
+    v = _align(base, _rgba(var_blob))
+    v.putalpha(v.getchannel("A").point(lambda a: 0 if a < 16 else a))
+    m = _change_mask(base, v)
+    fig = max(1, base.getchannel("A").point(lambda a: 255 if a > 24 else 0).histogram()[255])
+    return v, m, m.point(lambda a: 255 if a > 0 else 0).histogram()[255] / fig
+
+
+def pose_ok(base_blob, var_blob):
+    """Faux quand l'IA a redessiné tout le perso (autre taille, autre place) au lieu du seul bras :
+    recollée sur la base, une telle retouche laisse un corps fantôme."""
+    return _pose_layer(_prepared(base_blob), var_blob)[2] <= MAX_CHANGE
+
+
 def build_pose_rig(base_blob, variants, out_dir):
     """base + {"mid": blob, "point": blob, "tap": blob} → images alignées (+ transitions) et rig.json.
 
-    Une retouche absente ou ratée est remplacée par la pose voisine : le rig reste utilisable."""
+    Une retouche absente ou ratée (tout le perso redessiné) est remplacée par la pose voisine :
+    le rig reste utilisable."""
     from PIL import Image
-    base = _rgba(base_blob)
-    base.putalpha(base.getchannel("A").point(lambda a: 0 if a < 16 else a))
+    base = _prepared(base_blob)
     frames = {"A": base}
+    drawn = []
     for k in ("mid", "point", "tap"):
         if not variants.get(k):
             continue
-        v = _align(base, _rgba(variants[k]))
-        v.putalpha(v.getchannel("A").point(lambda a: 0 if a < 16 else a))
-        frames[k] = Image.composite(v, base, _change_mask(base, v))
+        v, m, ratio = _pose_layer(base, variants[k])
+        if ratio > MAX_CHANGE:
+            continue
+        frames[k] = Image.composite(v, base, m)
+        drawn.append(k)
     frames.setdefault("mid", frames["A"])
     frames.setdefault("point", frames["mid"])
     frames.setdefault("tap", frames["point"])
@@ -144,7 +171,7 @@ def build_pose_rig(base_blob, variants, out_dir):
     crop = crop or (0, 0, base.width, base.height)
     os.makedirs(out_dir, exist_ok=True)
     manifest = {"mode": "poses", "frames": {}, "size": [crop[2] - crop[0], crop[3] - crop[1]],
-                "drawn": sorted(k for k in ("mid", "point", "tap") if variants.get(k))}
+                "drawn": sorted(drawn)}
     for name, im in frames.items():
         fn = name + ".png"
         im.crop(crop).save(os.path.join(out_dir, fn), "PNG", compress_level=6)
