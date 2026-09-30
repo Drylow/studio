@@ -253,7 +253,7 @@ TEMPLATES = {
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "board", "pause_max": 0.4,
                     "music": "auto", "music_volume": 0.12, "director": True},
         # prof « acteur » : une pose par idée (presets/oddly_expensive_en/poses), choisie par le réalisateur
-        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none"),
+        "board": dict(board.THEMES["slate"], enabled=True, theme="slate", anim="none", presenter_height=0.5),
         "character": ("People", "every person in every image (spouses, lawyers, nurses, clerks, guards, the viewer) "
                                 "is a simple cartoon figure with a large, perfectly round, plain WHITE head (no ears, "
                                 "no nose), small solid black dot eyes, simple eyebrows and mouth, thick black outline, "
@@ -1787,6 +1787,7 @@ def plan_montage(ch, pr, words, poses, log=None):
     allowed = _nums(narration) | _nums(S.narration(pr.get("script") or "")) | {"0"}  # 0 : départ d'un compteur
     pose_lines = "\n".join(f"- {k}: {v}" for k, v in POSE_HINTS.items() if k in poses)
     out, total_so_far, last_pose = {}, "", "wave"
+    heads = {x.get("section"): x.get("heading") or "" for x in scenes if x.get("first")}
     chunk = 25  # réponses courtes : les très longues se font couper par le proxy
     for c0 in range(0, len(scenes), chunk):
         part = scenes[c0:c0 + chunk]
@@ -1835,7 +1836,12 @@ per scene above, in order."""
             if not pose.startswith("hold_"):
                 sign = ""
             fx = e.get("fx") if isinstance(e.get("fx"), dict) else None
-            if fx and (fx.get("type") not in _motion_types() or not set(_fx_numbers(fx)) <= allowed):
+            pose, sign, fx = _dedupe(pose, sign, fx, poses)
+            ahead = 10 if fx and fx.get("type") in ("list", "timeline") else 3  # une liste se déroule ensuite
+            ctx = " ".join(x.get("text") or "" for x in scenes if i - 2 <= x["i"] <= i + ahead) + " " + \
+                heads.get((scenes[i] if 0 <= i < len(scenes) else {}).get("section"), "")  # + titre de sa partie
+            if fx and (fx.get("type") not in _motion_types() or not set(_fx_numbers(fx)) <= allowed
+                       or not _grounded(fx, ctx)):
                 if log:
                     log(f"animation écartée (scène {i}) : {json.dumps(fx)[:120]}")
                 fx = None
@@ -1844,6 +1850,48 @@ per scene above, in order."""
             out[i] = {"pose": pose, "sign": sign, "fx": fx}
             last_pose = pose
     return out
+
+
+_STOP = {"the", "and", "for", "with", "that", "this", "your", "you", "from", "into", "what", "when", "who", "how",
+         "per", "one", "two", "not", "are", "was", "his", "her", "its", "our", "their", "they", "them", "then"}
+
+
+def _fx_words(fx):
+    """Mots porteurs de sens écrits par une animation (titres, étiquettes, lignes)."""
+    parts = []
+    t = fx.get("type")
+    if t in ("label", "stamp"):
+        parts.append(fx.get("text") or "")
+    elif t == "list":
+        parts += [fx.get("title") or ""] + [str(x) for x in fx.get("items") or []]
+    elif t == "timeline":
+        parts += [str((x or {}).get("sub") or "") for x in fx.get("items") or [] if isinstance(x, dict)]
+    elif t == "receipt":
+        parts += [str((x or {}).get("item") or "") for x in fx.get("items") or [] if isinstance(x, dict)]
+    return [w for w in re.findall(r"[a-z]+", " ".join(parts).lower()) if len(w) > 2 and w not in _STOP]
+
+
+def _grounded(fx, context):
+    """Vrai si au moins la moitié des mots de l'animation sont dits autour de la scène (un mot peut
+    être au singulier / pluriel, ou sa racine)."""
+    words = _fx_words(fx)
+    if not words:
+        return True
+    ctx = set(re.findall(r"[a-z]+", (context or "").lower()))
+    stems = {w[:5] for w in ctx if len(w) > 4}
+    hit = sum(1 for w in words if w in ctx or w.rstrip("s") in ctx or (len(w) > 4 and w[:5] in stems)
+              or any(c.startswith(w) for c in ctx))  # pay → paying
+    return hit * 2 >= len(words)
+
+
+def _dedupe(pose, sign, fx, poses):
+    """Pancarte et animation qui montrent la même chose : la pancarte reste si l'animation n'était
+    qu'un chiffre ou un mot (compteur, étiquette, tampon), sinon l'animation reste."""
+    if not (sign and fx and (_nums(sign) & set(_fx_numbers(fx)) or sign.lower() in json.dumps(fx).lower())):
+        return pose, sign, fx
+    if fx.get("type") in ("counter", "label", "stamp"):
+        return pose, sign, None
+    return ("point" if "point" in poses else "explain"), "", fx
 
 
 def _motion_types():
