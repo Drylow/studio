@@ -434,7 +434,7 @@ def write_section(ch, ol, idx, previous_tail):
     if idx < 0:
         n = int(ol["hook"].get("target_words") or 60)
         what = ("the HOOK / cold open (no heading). Beats: " + " | ".join(ol["hook"].get("beats") or [])
-                + f". LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit).")
+                + f". LENGTH: {int(n * 0.85)}-{n} words (hard limit, count them).")
     else:
         s = ol["sections"][idx]
         last = idx == len(ol["sections"]) - 1
@@ -444,7 +444,7 @@ def write_section(ch, ol, idx, previous_tail):
                         if s.get(k))
         what = (f"section {idx + 1}/{len(ol['sections'])} \"{s['heading']}\". Beats: " + " | ".join(s.get("beats") or [])
                 + "." + extra
-                + f" LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit — pick the strongest beats if they don't all fit)."
+                + f" LENGTH: {int(n * 0.85)}-{n} words (hard limit, count them — pick the strongest beats if they don't all fit)."
                 + (" This is the LAST section: land the ending (" + (ol.get("ending") or "strong final line") + ")."
                    if last else " End with a one-line hook into the next section."))
     if previous_tail:
@@ -507,13 +507,15 @@ def fit_part(ch, heading, text, budget):
                           model=ai.text_model(), reasoning="low", timeout=240))
 
 
-def fit_length(ch, parts, budgets, tolerance=0.15):
-    """Si le total s'écarte de >15 % de la cible, recale les parties les plus hors budget."""
+def fit_length(ch, parts, budgets, tolerance=0.15, only_over=False):
+    """Si le total s'écarte de plus de `tolerance` de la cible, recale les parties les plus hors budget
+    (only_over : ne fait que condenser, pour ne pas rouvrir un texte déjà audité)."""
     total, target = sum(len(t.split()) for _, t in parts), sum(budgets)
-    if not target or abs(total - target) <= tolerance * target:
+    if not target or abs(total - target) <= tolerance * target or (only_over and total <= target):
         return parts
     idxs = [i for i, (_, t) in enumerate(parts)
-            if budgets[i] and abs(len(t.split()) - budgets[i]) > max(12, 0.15 * budgets[i])]
+            if budgets[i] and abs(len(t.split()) - budgets[i]) > max(12, min(0.15, tolerance) * budgets[i])
+            and not (only_over and len(t.split()) <= budgets[i])]
     out = list(parts)
     with ThreadPoolExecutor(max_workers=4) as ex:
         futs = {i: ex.submit(fit_part, ch, parts[i][0], parts[i][1], budgets[i]) for i in idxs}
@@ -535,7 +537,7 @@ FORMAT_NOTES = """HOW FACELESSOS APPLIES TO THIS TOOL (read before any check):
 - Checks written for documentaries are graded by their intent: C4 (perspective shift) = the viewer's picture of the premise at the end differs from the one they arrived with; E1 "specific sourcing" and "original research" = correct, specific real-world detail beyond the obvious clichés; E1 "human review" scores 0 until the creator edits the script. A check that genuinely cannot apply is N/A, never a failure.
 - The channel's own rules win on channel conventions: if the channel says "no CTA", a missing CTA is not a finding (the ending architecture still applies: end at the final payoff).
 - The reference video is the voice anchor for D1/D4 and the comparison hook for A4 (quote its opening). Shapes it uses pass the shape test, EXCEPT where FacelessOS caps them (D7 thresholds, machine bans, em dashes).
-- Length: the spoken word count must stay within ±20% of the target."""
+- Length: the spoken word count must stay within ±10% of the target (the creator picked the video's duration). Fixes must not make the script longer: when a fix adds words, cut as many elsewhere in the same part."""
 
 
 def brief_text(brief):
@@ -706,7 +708,7 @@ def _audit_half(ch, half, title, parts, brief, ol, target, words, sc):
     prompt = f"""Run {groups} of the greenlight audit on the script below. Collect EVERY finding of these groups in this one run: the loop only converges when a run lists all of them, and a finding skipped now costs a whole extra pass. Evidence bar: every finding QUOTES the exact offending text, copied verbatim from ONE part of the script, and names the check it fails; if you cannot quote failing text, there is no finding. Never manufacture a failure the text does not support, and never rubber-stamp: the fields below are the mandatory artifacts (write each ledger by re-reading the script in this pass, then count).
 
 VIDEO TITLE: {title}
-TARGET: {target} spoken words (script has {words}; ±20% allowed).
+TARGET: {target} spoken words (script has {words}; ±10% allowed, the creator picked the duration).
 {extra}
 
 SCRIPT (parts numbered [0], [1]...; "HOOK" and headings are labels, not spoken):
@@ -792,7 +794,7 @@ def apply_fixes(ch, title, parts, fixes, budgets=None):
         prompt = f"""Apply these greenlight fixes to PART [{idx}] ({heading or 'HOOK'}) of the script for "{title}".
 {listing}
 
-Rules (voice-anchoring fix direction): register translation, never de-clawing. The jolt, the proof and the planted tension survive; only the delivery changes. If a fix makes the line weaker, the fix is wrong. Change ONLY what the fixes require: every other sentence stays word for word. No em dashes, contractions on, shapes from the VOICE ANCHOR. Keep the part at {int(n * 0.9)}-{int(n * 1.1)} words.
+Rules (voice-anchoring fix direction): register translation, never de-clawing. The jolt, the proof and the planted tension survive; only the delivery changes. If a fix makes the line weaker, the fix is wrong. Change ONLY what the fixes require: every other sentence stays word for word. No em dashes, contractions on, shapes from the VOICE ANCHOR. Keep the part at {int(n * 0.9)}-{n} words (never longer than now).
 Prefer local edits. Return JSON: {{"edits": [{{"old": "exact verbatim substring of the part", "new": "replacement"}}], "rewrite": null}}
 Only if a fix is structural (a flat stretch that needs a new loop, a missing payoff, a promise the part must now pay), return "rewrite": "<the full rewritten part>" instead.
 
@@ -949,7 +951,7 @@ def write_sections(ch, ol, idxs, previous_tail):
         role = (" This is the LAST section of the video: land the ending (" + (ol.get("ending") or "strong final line")
                 + ").") if i == last else (" End with a one-line hook into the next section." if i == idxs[-1] else "")
         specs.append(f"## {sec['heading']}\nBeats: " + " | ".join(sec.get("beats") or []) + "." + extra
-                     + f" LENGTH: {int(n * 0.9)}-{int(n * 1.1)} words (hard limit).{role}")
+                     + f" LENGTH: {int(n * 0.85)}-{n} words (hard limit, count them).{role}")
     context = ("END OF THE PREVIOUS PART (continue seamlessly, do not repeat it):\n<<<\n" + previous_tail + "\n>>>"
                if previous_tail else "This is the very beginning of the video.")
     prompt = (f"FULL OUTLINE (for context):\n{_outline_text(ol)}\n\n{context}\n\n"
@@ -1005,9 +1007,9 @@ def _generate_fos(ch, title, minutes, notes, step, history, rounds=None):
         ol["rotation"]["slot9"] = hk["slot9"]
     parts = _write_all(ch, ol, hk["hook"], step, 0.20, 0.62)
     budgets = [word_count(hk["hook"])] + [int(x.get("target_words") or 180) for x in ol["sections"]]
-    if abs(sum(word_count(t) for _, t in parts) - sum(budgets)) > 0.15 * sum(budgets):
+    if abs(sum(word_count(t) for _, t in parts) - sum(budgets)) > 0.08 * sum(budgets):
         step(0.63, "[Write] Ajustement de la longueur…", compose(parts))
-        parts = [(h, FOS.mech_fix(t)) for h, t in fit_length(ch, parts, budgets)]
+        parts = [(h, FOS.mech_fix(t)) for h, t in fit_length(ch, parts, budgets, tolerance=0.08)]
 
     parts, final, runs, verdict = greenlight_loop(ch, ol["title"], parts, brief, ol, minutes, max_rounds, step, 0.65, 0.98)
     if final == "HOLD":
@@ -1020,6 +1022,11 @@ def _generate_fos(ch, title, minutes, notes, step, history, rounds=None):
         parts, final, more, verdict = greenlight_loop(ch, ol["title"], parts, brief, ol, minutes, max_rounds, step,
                                                       0.86, 0.98)
         runs += [dict(r, round=len(runs) + r["round"]) for r in more]
+    # la durée demandée prime : les fixes de l'audit ne doivent pas rallonger la vidéo de plus de 10 %
+    budgets = [word_count(hk["hook"])] + [int(x.get("target_words") or 180) for x in ol["sections"]]
+    if len(budgets) == len(parts) and sum(word_count(t) for _, t in parts) > 1.10 * sum(budgets):
+        step(0.985, "[Write] Durée : recadrage des parties trop longues…", compose(parts))
+        parts = [(h, FOS.mech_fix(t)) for h, t in fit_length(ch, parts, budgets, tolerance=0.10, only_over=True)]
     script = compose(parts)
     report = {"engine": "facelessos", "verdict": final, "rounds": runs, "block": verdict,
               "brief": brief, "hooks": {k2: hk[k2] for k2 in ("options", "grades", "winner", "why")},
