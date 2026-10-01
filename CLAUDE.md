@@ -21,7 +21,7 @@ pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement p
    chiffre jamais dit, texte bizarre) l'oblige à supprimer une vidéo programmée : c'est arrivé, plus jamais.
 2. **Un lien envoyé = un seul lien, le bon, marqué clairement** (« KIDS CORRIGÉE – à poster »). Ne cite pas
    l'ancien lien dans le même message.
-3. **Secrets** : clés (IA, Algrow) et webhook Discord seulement dans `.env` (ignoré par git). Jamais dans le
+3. **Secrets** : clés (IA, Algrow, ai33pro) et webhook Discord seulement dans `.env` (ignoré par git). Jamais dans le
    code, les commits ou les messages. Avant un push, vérifie qu'aucun secret n'est dans le diff.
 4. Jamais de nom de modèle d'IA dans les commits, le code ou les fichiers du dépôt.
 5. Faits réels uniquement (sources nommées dans la phrase) ; un chiffre incertain est coupé ou présenté
@@ -163,7 +163,7 @@ d'audit en plus ; recherche avec les vraies sources (mémoires du domaine public
 Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
 templates : section History Docs du `README.md`.
 
-- **Pipeline** : script → voix (Algrow, Timothy par défaut) → sous-titres calés par Whisper local sur
+- **Pipeline** : script → voix (ElevenLabs via ai33pro, **Earl** à 0,9 validé par l'utilisateur ; `AI33_API_KEY`) → sous-titres calés par Whisper local sur
   l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits
   du casting d'abord, puis plans avec le portrait en référence) → `build_timeline` → rendu Remotion
   (`history_engine/render.mjs`) → loudnorm -14 LUFS. Projets dans `data/history/<id>/`.

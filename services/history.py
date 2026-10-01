@@ -34,7 +34,7 @@ from services import pov_store as store
 APP_DIR = store.APP_DIR
 ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
 
-DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed": 1.0}  # « Timothy – American Narrator »
+DEFAULT_VOICE = {"provider": "ai33", "voice": "VsVIOTkd9zjLUVaQO9TA", "speed": 0.9}  # « Earl Blackwood » (ElevenLabs via ai33pro), ~150 mots/min
 EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": False, "film": 1.0,
             "music_volume": 0.06, "all_templates": False,
@@ -255,7 +255,7 @@ def job_voice(job, pid):
     d = media_dir(pid)
     os.makedirs(os.path.join(d, "audio"), exist_ok=True)
     dest = os.path.join(d, "audio", "voice.mp3")
-    provider = vs.get("provider", "algrow")
+    provider = vs.get("provider", DEFAULT_VOICE["provider"])
     voice = vs.get("voice") or (EDGE_VOICE if provider == "edge" else "")
     job.update(0.05, f"Voix off ({provider})…")
     res = tts.synthesize(text, dest, provider=provider, voice=voice, speed=vs.get("speed", 1.0),

@@ -8,6 +8,8 @@
               tirés du SRT d'alignement (generate_srt, +20 % de caractères)
   algrow_stealth  ALGROW_API_KEY — modèle « Stealth » d'Algrow (autre réserve de caractères) ;
               timings estimés puis recalés sur les silences de la voix
+  ai33        AI33_API_KEY — voix ElevenLabs via ai33pro (job asynchrone, API v3) ; timings mot à mot
+              tirés de la transcription JSON livrée avec l'audio
 
 synthesize() renvoie {"path", "duration", "words": [{"w","s","e"}]}.
 """
@@ -29,7 +31,7 @@ class TTSError(Exception):
     pass
 
 
-PROVIDERS = ("edge", "elevenlabs", "openai", "algrow", "algrow_stealth")
+PROVIDERS = ("edge", "elevenlabs", "openai", "algrow", "algrow_stealth", "ai33")
 
 # Voix mises en avant dans l'UI (la liste complète Edge est chargée à la demande).
 EDGE_FEATURED = {
@@ -50,6 +52,7 @@ def provider_status():
         "openai": bool(_env("OPENAI_TTS_KEY")),
         "algrow": bool(_env("ALGROW_API_KEY")),
         "algrow_stealth": bool(_env("ALGROW_API_KEY")),
+        "ai33": bool(_env("AI33_API_KEY")),
     }
 
 
@@ -398,6 +401,104 @@ def algrow_credits():
     return _algrow_call("GET", "/api/credits")
 
 
+# ── ai33pro (voix ElevenLabs, job asynchrone, transcription mot à mot) ──────
+
+AI33_BASE = "https://api.ai33.pro"
+AI33_CACHE = ".ai33_jobs.json"
+
+
+def _ai33_call(method, path, fields=None, timeout=60):
+    key = _env("AI33_API_KEY")
+    if not key:
+        raise TTSError("AI33_API_KEY absente du .env.")
+    data, headers = None, {"xi-api-key": key, "Accept": "application/json", "User-Agent": _UA}
+    if fields is not None:
+        import uuid
+        boundary = "----drylow" + uuid.uuid4().hex
+        parts = [f"--{boundary}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n" for k, v in fields.items()]
+        data = ("".join(parts) + f"--{boundary}--\r\n").encode("utf-8")
+        headers["Content-Type"] = "multipart/form-data; boundary=" + boundary
+    req = urllib.request.Request(AI33_BASE + path, data=data, method=method, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise TTSError(f"ai33pro {e.code} : {e.read().decode('utf-8', 'replace')[:300]}")
+    except urllib.error.URLError as e:
+        raise TTSError(f"ai33pro injoignable : {e}")
+
+
+def _ai33(text, voice, dest, speed=1.0, progress=None, max_wait=1800, cache_dir=None):
+    """Job ai33pro (v3) : envoi → attente → MP3 + mots chronométrés (transcription JSON fournie avec l'audio)."""
+    import time
+    if not voice:
+        raise TTSError("Choisis une voix ai33pro (ID de voix ElevenLabs).")
+    fields = {"text": text, "voice_id": voice if "_" in voice[:12] else "elevenlabs_" + voice,
+              "speed": f"{max(0.5, min(1.5, float(speed or 1))):.2f}", "with_transcript": "true"}
+    # même anti double facturation qu'Algrow : une demande identique déjà lancée est reprise
+    cache = os.path.join(cache_dir or os.path.dirname(os.path.abspath(dest)), AI33_CACHE)
+    key = algrow_key(fields)
+    try:
+        with open(cache, "r", encoding="utf-8") as f:
+            known = json.load(f)
+    except (OSError, ValueError):
+        known = {}
+    tid = known.get(key)
+    if tid:
+        try:
+            if _ai33_call("GET", f"/v1/task/{tid}").get("status") == "error":
+                tid = None
+        except TTSError:
+            tid = None
+    if not tid:
+        job = _ai33_call("POST", "/v3/text-to-speech", fields)
+        tid = job.get("task_id")
+        if not tid:
+            raise TTSError("ai33pro : pas de task_id (" + json.dumps(job)[:200] + ")")
+        known[key] = tid
+        try:
+            with open(cache, "w", encoding="utf-8") as f:
+                json.dump(known, f)
+        except OSError:
+            pass
+    t0 = time.time()
+    while True:
+        st = _ai33_call("GET", f"/v1/task/{tid}")
+        if st.get("status") == "done":
+            break
+        if st.get("status") == "error":
+            raise TTSError("ai33pro : " + (st.get("error_message") or "échec de la génération"))
+        if time.time() - t0 > max_wait:
+            raise TTSError(f"ai33pro : la génération prend trop de temps (tâche {tid}).")
+        if progress:
+            progress(min(0.9, (st.get("progress") or 0) / 100.0))
+        time.sleep(4)
+    meta = st.get("metadata") or {}
+    if not meta.get("audio_url"):
+        raise TTSError("ai33pro : tâche terminée sans audio.")
+    _download(meta["audio_url"], dest)
+    try:
+        with _open(meta["json_url"], 60) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        data = data[0] if isinstance(data, list) else data
+        return [{"w": w["text"], "s": round(w["start"], 3), "e": round(w["end"], 3)}
+                for w in data.get("words") or [] if w.get("type") == "word"] or None
+    except Exception:  # noqa: BLE001 — sans transcription on estime puis on recale sur les silences
+        return None
+
+
+def ai33_voices(search="", provider="elevenlabs", lang="en"):
+    q = urllib.parse.urlencode({k: v for k, v in {"provider": provider, "q": search, "language": lang,
+                                                  "page_size": 60}.items() if v})
+    data = _ai33_call("GET", "/v3/voices?" + q)
+    return [{"id": v.get("voice_id"), "name": v.get("name"), "gender": v.get("gender", ""),
+             "preview_url": v.get("preview_url"), "tags": v.get("tags") or []} for v in data.get("data") or []]
+
+
+def ai33_credits():
+    return _ai33_call("GET", "/v1/credits")
+
+
 # ── Recalage sur les silences (voix sans timings natifs) ────────────────────
 
 def _silences(path, noise="-34dB", min_d=0.14):
@@ -634,7 +735,7 @@ def estimate_words(text, total):
 
 # ── Point d'entrée ──────────────────────────────────────────────────────────
 
-_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 90000, "algrow_stealth": 40000}
+_MAX_CHARS = {"edge": 3000, "elevenlabs": 4500, "openai": 3800, "algrow": 90000, "algrow_stealth": 40000, "ai33": 12000}
 
 
 def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, model="",
@@ -661,6 +762,8 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
             elif provider in ("algrow", "algrow_stealth"):
                 words = _algrow(said, voice, part, sub="stealth" if provider == "algrow_stealth" else "elevenlabs",
                                 model=model, speed=speed, cache_dir=os.path.dirname(os.path.abspath(dest)))
+            elif provider == "ai33":
+                words = _ai33(said, voice, part, speed=speed, cache_dir=os.path.dirname(os.path.abspath(dest)))
             else:
                 words = _openai(said, voice, part, speed=speed, instructions=instructions)
             dur = media.duration(part)
@@ -668,7 +771,7 @@ def synthesize(text, dest, *, provider="edge", voice="", speed=1.0, pitch=0, mod
                 words = align_to_text(words, chunk)
             else:
                 words = estimate_words(chunk, dur)
-                if provider.startswith("algrow"):  # pas de timings natifs : recalage sur les pauses
+                if provider.startswith("algrow") or provider == "ai33":  # pas de timings natifs : recalage sur les pauses
                     words = snap_to_silences(words, part)
             for w in words:
                 all_words.append({"w": w["w"], "s": round(w["s"] + offset, 3), "e": round(w["e"] + offset, 3),

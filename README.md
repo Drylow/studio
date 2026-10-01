@@ -228,13 +228,15 @@ d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une dur
 
 **Prérequis en plus :** Node.js 18+. Au premier rendu (ou au lancement de `START_STUDIO.bat`), les
 dépendances du moteur s'installent dans `history_engine/node_modules/`. Mêmes clés que le reste
-(`AI_*`, `ALGROW_API_KEY`).
+(`AI_*`) + `AI33_API_KEY` pour la voix.
 
 **Le pipeline** (côté serveur, chaque étape peut être refaite depuis la fiche de la vidéo) :
 1. **Script** : narration immersive à la 2ᵉ personne (date et lieu, « rien à voir avec les films »),
    phrases courtes, chiffres et sources réels, 153 mots/min comme la référence
    (`presets/history_doc/reference_excerpt.txt` sert d'ancre de style).
-2. **Voix off** : Algrow (Timothy par défaut, Elliott, Connery) ou Edge gratuit.
+2. **Voix off** : ElevenLabs via **ai33pro** (`AI33_API_KEY`, API v3 : tâche puis audio + transcription mot à
+   mot). Par défaut **Earl Blackwood** (conteur US grave) à vitesse 0,9, soit ~150 mots/min comme Dose of
+   History ; Steven, Russ, George au choix. Algrow et Edge restent possibles.
 3. **Plan visuel** : l'IA choisit ce qu'on voit à chaque phrase. Dans le hook, un plan toutes les ~5 s ;
    ensuite des images de 12 à 20 s et quelques animations calées sur la narration (1,5 par minute max).
    Un « monteur image » IA réécrit ensuite la liste des plans pour qu'aucun ne ressemble au précédent
