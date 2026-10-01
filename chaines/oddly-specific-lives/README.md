@@ -55,8 +55,8 @@ Voir [videos/](videos/README.md) pour les scripts, la recherche, la publication 
 | Inside The Life Of An Onlyfans Model | publiée le 30 sept. |
 | POV: You Marry a Polish Woman | livrée (3 miniatures proposées, une retenue) |
 | POV: You Marry a Female Triad Boss | publiée le 1er oct. (4 miniatures proposées, une retenue) |
-| POV: You Marry a Female UFC Fighter | en production, publication le **3 oct.** |
-| POV: You Marry a WNBA Star | en production, publication le **4 oct.** (miniature à faire) |
+| POV: You Marry a Female UFC Fighter | livrée, publication le **3 oct.** |
+| POV: You Marry a WNBA Star | livrée, publication le **4 oct.** |
 
 ## Idées de vidéos (à vérifier avec NexLev avant de lancer)
 

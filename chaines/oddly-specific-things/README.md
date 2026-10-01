@@ -44,8 +44,8 @@ Voir [videos/](videos/README.md).
 | Vidéo | État |
 |---|---|
 | Your Life as a Stolen Phone | livrée (vérifiée) |
-| Your Life as a Stolen Car | vérifiée, prête à envoyer |
-| Your Life as a Stolen Credit Card | en correction : un texte coupé et un logo sur une image, nouveau rendu en cours |
+| Your Life as a Stolen Car | livrée (vérifiée) |
+| Your Life as a Stolen Credit Card | livrée (corrigée : un texte coupé et un logo sur une image) |
 
 ## Idées de vidéos
 
