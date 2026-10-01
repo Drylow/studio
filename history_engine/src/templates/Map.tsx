@@ -142,7 +142,11 @@ export const MapCard: React.FC<MapSeg & {dur: number}> = ({title, subtitle, land
                 style={{
                   position: 'absolute',
                   left: pl.dx ?? 16,
-                  top: pl.dy ?? -16,
+                  top: pl.dy ?? -19,
+                  height: pl.kind === 'battle' ? 44 : 38,
+                  lineHeight: pl.kind === 'battle' ? '44px' : '38px',
+                  padding: '0 9px',
+                  boxSizing: 'border-box',
                   whiteSpace: 'nowrap',
                   fontFamily: pl.kind === 'battle' ? F.title : F.serif,
                   fontWeight: 700,
@@ -150,7 +154,10 @@ export const MapCard: React.FC<MapSeg & {dur: number}> = ({title, subtitle, land
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: pl.kind === 'battle' ? C.red : ink,
-                  textShadow: paper ? '0 0 6px rgba(244,234,210,0.95), 0 0 2px rgba(244,234,210,1)' : '0 0 8px rgba(0,0,0,0.9)',
+                  // petite plaque : le nom reste lisible même s'il frôle une côte ou un fleuve
+                  background: paper ? 'rgba(244,234,210,0.86)' : 'rgba(12,10,8,0.72)',
+                  borderRadius: 3,
+                  border: pl.kind === 'battle' ? `2px solid ${C.red}` : 'none',
                 }}
               >
                 {pl.name}
@@ -168,13 +175,16 @@ export const MapCard: React.FC<MapSeg & {dur: number}> = ({title, subtitle, land
                 top: m.labelAt ? m.labelAt[1] : m.path[0][1] + 26,
                 transform: 'translateX(-50%)',
                 opacity: ramp(frame, m.start * dur + 6, 12),
+                height: 38,
+                lineHeight: '34px',
+                boxSizing: 'border-box',
                 fontFamily: F.label,
                 fontSize: 24,
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 color: '#fff',
                 background: side(m.side),
-                padding: '3px 12px',
+                padding: '0 12px',
                 border: `2px solid ${paper ? '#2a1f16' : '#000'}`,
                 whiteSpace: 'nowrap',
               }}

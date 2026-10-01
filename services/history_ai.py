@@ -88,9 +88,11 @@ _TPL_DOCS = {
     "archive": ('- archive: {"at","type":"archive","title":"OBJECT, PLACE, DATE","search":"2-4 word museum search, e.g. Norman helmet / Bayeux Tapestry",'
                 '"prompt":"museum photograph of the real artifact (used only if no real image is found)","note":"short caption"}'),
     "map": ('- map (movement map on real geography): {"at","type":"map","title":"short title","subtitle":"dates",'
-            '"places":[{"name","lat","lon"}] (real coordinates, 3-8 places),'
-            '"moves":[{"from":"place name","to":"place name","via":["place name"],"side":"a|b","label":"army or leader"}] (1-3 moves, in story order),'
-            '"battle":"place name where they fight (optional)"} — use it whenever armies, fleets or people travel from A to B.'),
+            '"places":[{"name","lat","lon"}] (real coordinates, 3-6 places, never two towns closer than ~40 km),'
+            '"moves":[{"from":"place name","to":"place name","via":["place name"],"side":"a|b","label":"army or leader, max 18 chars"}] '
+            '(1-3 moves, in story order; one move per army: put stopovers in "via" instead of chaining moves of the same side),'
+            '"battle":"place where they fight, named as the battle is known (e.g. Hastings, not the hamlet next to it) (optional)"}'
+            ' — use it whenever armies, fleets or people travel from A to B.'),
     "route": '- route: {"at","type":"route","title":"A to B","subtitle":"campaign name","stops":[{"name","lat","lon"}]} (real coordinates, 3-7 stops)',
     "quote": ('- quote: {"at","type":"quote","text":"the quote exactly as the narrator reads it","author","source":"short attribution, e.g. Livy, Book XXII / attributed","portrait":"cast name or null"}\n'
               '  Start the quote beat on the sentence where the narrator reads the quote.'),

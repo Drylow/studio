@@ -12,6 +12,7 @@ Données : data/history/<id>/ (project.json, media/ = publicDir du rendu, vidéo
 """
 import io
 import json
+import math
 import os
 import re
 import shutil
@@ -258,7 +259,11 @@ def _geo_to_xy(stops):
 
 
 def _build_map(seg, b):
-    """Carte de mouvements : vraies côtes autour des lieux, flèches A → B dans l'ordre, marqueur de bataille."""
+    """Carte de mouvements : vraies côtes autour des lieux, flèches A → B dans l'ordre, marqueur de bataille.
+
+    Mise en page « propre » : les déplacements enchaînés d'un même camp ne font qu'une flèche, la flèche
+    s'arrête avant la ville, les lieux trop proches sont fusionnés, et chaque étiquette est placée là où
+    elle ne touche ni une flèche, ni une autre étiquette, ni le marqueur de bataille, ni le cartouche."""
     pls = []
     for p in b.get("places") or []:
         try:
@@ -273,43 +278,162 @@ def _build_map(seg, b):
         print(f"[map] {e}", flush=True)
         return None
     xy = {k.lower(): v for k, v in geo["xy"].items()}
-    moves = []
-    raw = [m for m in b.get("moves") or [] if isinstance(m, dict)][:3]
-    n = max(1, len(raw))
-    for k, m in enumerate(raw):
+    bat = str(b.get("battle") or "").lower()
+    # 1. trajets (noms → points), puis fusion des trajets enchaînés d'un même camp
+    raw = []
+    for k, m in enumerate([m for m in b.get("moves") or [] if isinstance(m, dict)][:4]):
         names = [m.get("from")] + list(m.get("via") or []) + [m.get("to")]
-        path = [xy[str(x).lower()] for x in names if x and str(x).lower() in xy]
-        if len(path) < 2:
+        names = [str(x).lower() for x in names if x and str(x).lower() in xy]
+        if len(names) < 2:
             continue
+        side = m.get("side") if m.get("side") in ("a", "b") else ("a", "b")[k % 2]
+        if raw and raw[-1]["side"] == side and raw[-1]["names"][-1] == names[0]:
+            raw[-1]["names"] += names[1:]
+            continue
+        raw.append({"names": names, "side": side, "label": str(m.get("label") or "")[:22]})
+    if not raw:
+        return None
+    # 2. lieux : on garde les plus importants quand deux points se touchent presque
+    used = {n for r in raw for n in r["names"]}
+    ends = {r["names"][0] for r in raw} | {r["names"][-1] for r in raw}
+    rank = lambda n: 3 if n == bat else 2 if n in ends else 1 if n in used else 0  # noqa: E731
+    kept = []
+    for p in sorted(pls, key=lambda p: -rank(p["name"].lower())):
+        x, y = geo["xy"][p["name"]]
+        if all(math.hypot(x - k["x"], y - k["y"]) > 46 for k in kept):
+            kept.append({"name": p["name"], "x": x, "y": y, "key": p["name"].lower()})
+    alias = {}
+    named = (str(b.get("title") or "") + " " + str(b.get("subtitle") or "")).lower()
+    for p in pls:  # un lieu fusionné pointe vers le lieu gardé le plus proche
+        x, y = geo["xy"][p["name"]]
+        k = alias[p["name"].lower()] = min(kept, key=lambda k: math.hypot(x - k["x"], y - k["y"]))
+        if k["name"].lower() not in named and p["name"].lower() in named:
+            k["name"] = p["name"]  # « Battle » absorbé par « Hastings » : on affiche le nom qu'on entend
+    n = len(raw)
+    moves = []
+    for k, r in enumerate(raw):
+        pts = []
+        for nm in r["names"]:
+            pt = [alias[nm]["x"], alias[nm]["y"]]
+            if not pts or pts[-1] != pt:
+                pts.append(pt)
+        if len(pts) < 2:
+            continue
+        end_key = alias[r["names"][-1]]["key"]
+        pts = _trim_end(pts, 50 if end_key == bat else 24)  # la pointe s'arrête avant le point / le marqueur
         st = 0.1 + k * (0.6 / n)
-        moves.append({"path": path, "side": m.get("side") if m.get("side") in ("a", "b") else ("a", "b")[k % 2],
-                      "label": str(m.get("label") or "")[:24], "start": round(st, 3), "end": round(st + 0.6 / n * 0.9, 3)})
+        moves.append({"path": [[round(x, 1), round(y, 1)] for x, y in pts], "side": r["side"], "label": r["label"],
+                      "start": round(st, 3), "end": round(st + 0.6 / n * 0.9, 3)})
     if not moves:
         return None
     last = max(mv["end"] for mv in moves)
-    bat = str(b.get("battle") or "").lower()
-    battle = {"x": xy[bat][0], "y": xy[bat][1], "at": round(min(0.9, last + 0.03), 3)} if bat in xy else None
-    places = []
-    for p in pls:
-        x, y = geo["xy"][p["name"]]
-        is_b = p["name"].lower() == bat
-        places.append({"name": p["name"], "x": x, "y": y, "kind": "battle" if is_b else "city",
-                       **({"at": battle["at"]} if is_b and battle else {})})
-    _spread_labels(places)
+    bk = alias[bat] if bat in alias else None
+    battle = {"x": bk["x"], "y": bk["y"], "at": round(min(0.9, last + 0.03), 3)} if bk else None
+    places = [{"name": k["name"], "x": k["x"], "y": k["y"], "kind": "battle" if bk and k is bk else "city",
+               **({"at": battle["at"]} if bk and k is bk else {})} for k in kept]
+    title = str(b.get("title") or "")[:40]
     focus = [battle["x"], battle["y"]] if battle else moves[-1]["path"][-1]
-    seg.update(title=str(b.get("title") or "")[:40], subtitle=str(b.get("subtitle") or "")[:40], land=geo["land"],
+    _layout_map_labels(places, moves, battle, title, focus)
+    seg.update(title=title, subtitle=str(b.get("subtitle") or "")[:40], land=geo["land"],
                rivers=geo["rivers"], places=places, moves=moves, focus=focus, **({"battle": battle} if battle else {}))
     return seg
 
 
-def _spread_labels(places, near=95):
-    """Évite que deux noms de lieux se chevauchent : le plus bas passe dessous, l'autre au-dessus."""
-    for i, a in enumerate(places):
-        for b in places[i + 1:]:
-            if abs(a["x"] - b["x"]) < 260 and abs(a["y"] - b["y"]) < near:
-                low, high = (a, b) if a["y"] >= b["y"] else (b, a)
-                low["dy"] = 12
-                high["dy"] = -40
+def _trim_end(pts, dist):
+    """Recule la fin du tracé de `dist` px le long du dernier segment."""
+    (x0, y0), (x1, y1) = pts[-2], pts[-1]
+    seg = math.hypot(x1 - x0, y1 - y0)
+    if seg <= dist + 8:
+        return pts
+    t = (seg - dist) / seg
+    return pts[:-1] + [[x0 + (x1 - x0) * t, y0 + (y1 - y0) * t]]
+
+
+def _curve_samples(pts, per=16):
+    """Mêmes courbes que le template (Catmull-Rom → Bézier), échantillonnées pour les collisions."""
+    out = [tuple(pts[0])]
+    for i in range(len(pts) - 1):
+        p0, p1, p2, p3 = pts[max(0, i - 1)], pts[i], pts[i + 1], pts[min(len(pts) - 1, i + 2)]
+        c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
+        c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
+        for k in range(1, per + 1):
+            t = k / per
+            u = 1 - t
+            out.append((u ** 3 * p1[0] + 3 * u * u * t * c1[0] + 3 * u * t * t * c2[0] + t ** 3 * p2[0],
+                        u ** 3 * p1[1] + 3 * u * u * t * c1[1] + 3 * u * t * t * c2[1] + t ** 3 * p2[1]))
+    return out
+
+
+def _layout_map_labels(places, moves, battle, title, focus, zoom=1.1):
+    """Place chaque étiquette (lieux puis armées) à l'endroit le plus dégagé parmi plusieurs positions."""
+    W, H = 1920, 1080
+    arrow = [p for m in moves for p in _curve_samples(m["path"])]
+    fx, fy = focus
+
+    def unzoom(b):  # le cartouche et la rose ne zooment pas : on couvre aussi leur emprise en fin de zoom
+        return (min(b[0], fx + (b[0] - fx) / zoom), min(b[1], fy + (b[1] - fy) / zoom),
+                max(b[2], fx + (b[2] - fx) / zoom), max(b[3], fy + (b[3] - fy) / zoom))
+
+    fixed = [unzoom((40, 40, 130 + 31 * len(title), 190)),  # cartouche titre
+             unzoom((1690, 40, 1880, 210))]  # rose des vents
+    bottom = fy + (H - 130 - fy) / zoom  # bande des sous-titres
+    placed = []
+
+    def hits(box, pad):
+        x0, y0, x1, y1 = box
+        return sum(1 for (px, py) in arrow if x0 - pad <= px <= x1 + pad and y0 - pad <= py <= y1 + pad)
+
+    def inter(a, b):
+        return not (a[2] < b[0] or b[2] < a[0] or a[3] < b[1] or b[3] < a[1])
+
+    def score(box, order, own=None):
+        x0, y0, x1, y1 = box
+        sc = hits(box, 14) * 8 + order * 0.6
+        sc += sum(40 for f in fixed + placed if inter(box, f))
+        sc += 100 if (x0 < 24 or y0 < 24 or x1 > W - 24 or y1 > bottom) else 0
+        if battle:
+            cx = min(max(battle["x"], x0), x1)
+            cy = min(max(battle["y"], y0), y1)
+            sc += 60 if math.hypot(cx - battle["x"], cy - battle["y"]) < 58 else 0
+        for p in places:  # ne jamais recouvrir un point de ville
+            if p is not own and x0 - 10 <= p["x"] <= x1 + 10 and y0 - 10 <= p["y"] <= y1 + 10:
+                sc += 30
+        return sc
+
+    def best(cands, w, h, own=None):
+        boxes = [(i, (x, y, x + w, y + h)) for i, (x, y) in enumerate(cands)]
+        i, box = min(boxes, key=lambda ib: score(ib[1], ib[0], own))
+        placed.append(box)
+        return box
+
+    for p in sorted(places, key=lambda p: p["kind"] != "battle"):
+        big = p["kind"] == "battle"
+        w, h = (28 if big else 22) * len(p["name"]) + 18, 44 if big else 38
+        r = 62 if big else 14  # le nom de la bataille se pose hors du marqueur
+        x, y = p["x"], p["y"]
+        cands = [(x + r, y - h / 2), (x - r - w, y - h / 2), (x - w / 2, y - r - h), (x - w / 2, y + r),
+                 (x + r * 0.7, y - r * 0.7 - h), (x + r * 0.7, y + r * 0.7), (x - r * 0.7 - w, y - r * 0.7 - h),
+                 (x - r * 0.7 - w, y + r * 0.7)]
+        box = best(cands, w, h, p)
+        p["dx"], p["dy"] = round(box[0] - x, 1), round(box[1] - y, 1)
+    for m in moves:
+        if not m.get("label"):
+            continue
+        w, h = 16 * len(m["label"]) + 30, 38
+        s = _curve_samples(m["path"])
+        cands = []
+        for f in (0.3, 0.5, 0.7, 0.15, 0.85):
+            i = min(len(s) - 2, max(1, int(f * (len(s) - 1))))
+            (ax, ay), (bx, by) = s[i - 1], s[i + 1]
+            nx, ny = -(by - ay), bx - ax
+            nn = math.hypot(nx, ny) or 1
+            nx, ny = nx / nn, ny / nn
+            off = 24 + w / 2 * abs(nx) + h / 2 * abs(ny)  # boîte posée à côté du trait, jamais dessus
+            for side in (1, -1):
+                cx, cy = s[i][0] + side * nx * off, s[i][1] + side * ny * off
+                cands.append((cx - w / 2, cy - h / 2))
+        box = best(cands, w, h)
+        m["labelAt"] = [round((box[0] + box[2]) / 2, 1), round(box[1], 1)]
 
 
 def _find_phrase(words, phrase, t0, t1):
