@@ -14,7 +14,7 @@ from services import ai
 APP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WPM = 153  # débit mesuré sur la vidéo de référence (5 749 mots / 37 min 41)
 
-TEMPLATES = ("statement", "battle", "character", "compare", "chart", "archive", "route", "quote")
+TEMPLATES = ("statement", "number", "battle", "character", "compare", "chart", "archive", "route", "quote")
 
 
 def _reference():
@@ -70,49 +70,66 @@ def narration(script):
 # ── Plan visuel ─────────────────────────────────────────────────────────────
 
 _TPL_DOCS = {
-    "statement": '- statement: {"at","type":"statement","text":"2-5 WORD PUNCHLINE IN CAPS with 1-2 *accent* words","say":"exact words from the sentence that trigger it"}',
+    "statement": ('- statement: {"at","type":"statement","text":"2-5 WORD PUNCHLINE IN CAPS with 1-2 *accent* words",'
+                  '"kicker":"optional tiny context line (date, place)","say":"exact words from the sentence that trigger it"}'),
+    "number": ('- number: {"at","type":"number","value":47000,"prefix":"","suffix":"","label":"WHAT IT COUNTS (≤5 words)",'
+               '"sub":"optional short context","say":"exact words where the number is spoken"} (one striking figure)'),
     "battle": ('- battle: {"at","type":"battle","title":"Manoeuvre name","subtitle":"Place, date","terrain_prompt":"top-down satellite view of …",\n'
                '  "line":{"y":58,"x1":20,"x2":80} (optional front line),\n'
                '  "units":[{"label","side":"a|b","kind":"infantry|cavalry|archers|chariots|elephants|command","x","y","to":[x,y],"move":[f0,f1],"w","h","trail":true}],\n'
                '  "labels":[{"text","x","y","side":"a|b"}]}\n'
                '  x,y are 0-100 screen percentages (keep 8-92, leave the bottom-left 35% x 25% free for the title). side a = protagonist (blue),\n'
                '  side b = enemy (red). 4-9 units. move = [start,end] fractions of the beat. w,h in px (default 54x30, big formations up to 170x60).'),
-    "character": '- character: {"at","type":"character","name","role","facts":["≤6 words", "≤6 words"],"portrait":"cast name"}',
-    "compare": ('- compare: {"at","type":"compare","left":{"title","stats":["≤5 words" x3],"portrait":"cast name or null"},\n'
-                '  "right":{"title","stats":[...],"portrait":"cast name or null"}}'),
+    "character": '- character: {"at","type":"character","name","role","facts":["≤6 words", "≤6 words", "≤6 words"],"portrait":"cast name"}',
+    "compare": ('- compare (duo — portrait left, portrait right): {"at","type":"compare",'
+                '"left":{"title":"name or side","subtitle":"role","stats":["≤5 words" x2-3],"portrait":"cast name"},\n'
+                '  "right":{"title","subtitle","stats":[...],"portrait":"cast name"}} — two rivals, two leaders, two armies.'),
     "chart": '- chart: {"at","type":"chart","title","subtitle","bars":[{"label","value":number,"side":"a|b|neutral","display":"optional text"}]}',
-    "archive": '- archive: {"at","type":"archive","title":"OBJECT, PLACE, DATE","prompt":"museum photograph of a real artifact …","note":"short caption"}',
+    "archive": ('- archive: {"at","type":"archive","title":"OBJECT, PLACE, DATE","search":"2-4 word museum search, e.g. Norman helmet / Bayeux Tapestry",'
+                '"prompt":"museum photograph of the real artifact (used only if no real image is found)","note":"short caption"}'),
     "route": '- route: {"at","type":"route","title":"A to B","subtitle":"campaign name","stops":[{"name","lat","lon"}]} (real coordinates, 3-7 stops)',
     "quote": ('- quote: {"at","type":"quote","text":"the quote exactly as the narrator reads it","author","source":"short attribution, e.g. Livy, Book XXII / attributed","portrait":"cast name or null"}\n'
               '  Start the quote beat on the sentence where the narrator reads the quote.'),
 }
 
+_SHOT_GUIDE = """IMAGE PROMPTS — write them like a cinematographer's shot list (this decides the whole look of the video):
+- One sentence per shot: SHOT TYPE + LENS, SUBJECT and what they are doing / feeling, KEY PROPS & COSTUME details,
+  SETTING with a foreground / background, TIME OF DAY and LIGHT DIRECTION.
+  e.g. "Close-up, 85mm: a young Saxon housecarl, mud on his cheek, breath visible in the cold, peering over the rim of his
+  round shield at the slope below; spears and banners soft in the background; low dawn sun behind him."
+- Vary the coverage like a film: extreme close-up of eyes, close-up, medium two-shot, over-the-shoulder, low-angle hero shot,
+  wide establishing shot with a lone figure, insert detail (hands, sword hilt, seal, coins), aftermath. Never two similar shots in a row.
+- People: always name the cast member and keep the head fully in frame (never crop at the forehead).
+- Era-accurate everything (armour, weapons, hairstyles, architecture). No text, no modern objects."""
+
 
 def _plan_rules(allowed, max_cards):
     docs = "\n".join(_TPL_DOCS[t] for t in TEMPLATES if t in allowed)
-    return f"""You are the editor of a history documentary in the visual style of "Dose of History": realistic
-photographic stills (like production stills from a historical drama) with a slow Ken Burns zoom, cut hard every
-12-20 seconds, plus a FEW elegant motion-graphics cards. You receive the voice-over split into numbered sentences
-with timestamps. Choose what is on screen for every sentence by returning ordered BEATS.
+    return f"""You are the editor of a history documentary in the visual style of "Dose of History": ultra-realistic
+cinematic stills with a slow Ken Burns zoom, cut hard every 12-20 seconds, plus a FEW elegant motion-graphics cards.
+You receive the voice-over split into numbered sentences with timestamps. Choose what is on screen for every sentence
+by returning ordered BEATS.
 
 A beat starts at sentence index "at" and lasts until the next beat. The first beat has at=0.
 Beat types and their fields:
-- image: {{"at", "type":"image", "prompt", "chars":[cast names visible], "motion":"in|out|left|right|up|down"}}
-  prompt = one concrete, believable shot: framing (close-up / medium / wide), subject, action, era-accurate costume,
-  setting, time of day, natural light. One clear subject; when a person is the subject their whole face is visible.
-  Never text, never modern objects. Avoid words like epic, dramatic, cinematic, glowing.
+- image: {{"at", "type":"image", "prompt", "chars":[cast names visible], "motion":"in|out|left|right",
+  "label":{{"name","role"}} (optional, ONLY the first time a main cast member appears as the subject),
+  "stamp":"PLACE, REGION · DATE" (optional, on establishing shots when the story moves to a new place/date; max 3)}}
+  motion: in/out for shots of people, left/right only for wide landscapes.
 {docs}
 ONLY these card types exist: {", ".join(t for t in TEMPLATES if t in allowed)}. Never invent other types.
+
+{_SHOT_GUIDE}
 
 Also return "cast": the recurring people, each with a fixed look used for every image
 ({{"name","look":"age, face, hair, beard, armour, clothing colours — one sentence"}}).
 
 Pacing rules:
-- HOOK (sentences 0..HOOK_END): a new image every sentence (~5 s): close-ups of faces and calm wide establishing shots, no cards.
+- HOOK (sentences 0..HOOK_END): a new image every sentence (~5 s): faces in close-up and wide establishing shots, no cards.
 - After the hook: images last 2-3 sentences (12-20 s). Images are the default.
-- AT MOST {max_cards} cards in the whole video. A card only when the narration is literally about it
-  (a person introduced → character, a journey → route, a quote read aloud → quote, an artifact or source → archive,
-  a twist or verdict → statement). Never two cards in a row.
+- AT MOST {max_cards} cards in the whole video, of DIFFERENT types (vary them). A card only when the narration is
+  literally about it (two rivals or two armies → compare, a person introduced → character, a striking figure → number,
+  a quote read aloud → quote, an artifact or source → archive, a twist or verdict → statement). Never two cards in a row.
 """
 
 
@@ -132,18 +149,40 @@ def plan_visuals(sentences, duration, hook_end_idx, allowed=None, max_cards=6, r
 
 # ── Style d'image ───────────────────────────────────────────────────────────
 
-STYLE = ("A realistic photograph that looks like a production still from a big-budget historical drama such as HBO's Rome "
-         "or Gladiator. Warm, hazy natural daylight with fine dust in the air, restrained earthy colours (sand, ochre, "
-         "bronze, faded red), realistic skin texture, authentic weathered costumes and armour, an uncluttered composition "
-         "with one clear subject, eye-level camera, 35mm lens, gentle depth of field. When a person is the subject their "
-         "whole head is in frame with some headroom above it. Not a painting, not concept art, not an illustration, not HDR, no orange-teal grade, "
-         "no oversaturated colours, no movie-poster look. No text, no captions, no watermark, no modern objects.")
-PORTRAIT = ("A realistic photographic portrait from a historical drama production, chest-up, looking slightly off camera, "
-            "soft warm window light, plain dark background, natural skin texture, restrained colours. Not a painting. No text.")
+STYLE = ("Ultra-realistic cinematic film still from a high-budget historical epic, shot on an ARRI Alexa with a 50mm "
+         "anamorphic lens. Natural but dramatic light: low golden sun as backlight and rim light, soft fill on the face, "
+         "volumetric haze and dust in the air, real atmospheric depth with the background softly out of focus. Rich warm "
+         "colour grade with amber highlights and deep brown shadows, natural skin tones, slightly muted greens and blues. "
+         "Crisp detail: skin pores, sweat, dirt, weathered leather, dented metal, coarse wool. Strong composition with "
+         "foreground, subject and background layers; the subject's whole head in frame with headroom. Photographic, not "
+         "painterly, no CGI look. No text, no logos, no watermark.")
+PORTRAIT = ("Ultra-realistic cinematic portrait from a high-budget historical epic, chest-up, looking slightly off camera, "
+            "85mm lens, soft warm key light from the side with a gentle rim light, dark smoky background, crisp skin "
+            "texture, era-accurate costume. Photographic, not painterly. No text.")
 ARCHIVE = ("Museum catalogue photograph, neutral grey backdrop, soft studio light, sharp focus, realistic patina, "
            "photographed as a real surviving artifact. No text, no labels.")
 TERRAIN = ("Top-down satellite photograph of real terrain, desaturated grey-brown, subtle relief, dry riverbeds, "
            "no roads, no buildings, no text, no labels, evenly lit.")
+
+
+def pick_archive(candidates, beat):
+    """Choisit parmi des images de musée réelles celle qui correspond vraiment à l'objet (ou aucune).
+
+    candidates = [{"title","date","culture","source"}]. Renvoie l'index retenu ou -1."""
+    if not candidates:
+        return -1
+    lines = "\n".join(f"[{i}] {c.get('title','')} — {c.get('date','')} — {c.get('culture','')} ({c.get('source','')})"
+                       for i, c in enumerate(candidates))
+    prompt = (f"A history documentary needs a real museum image for: \"{beat.get('title','')}\" "
+              f"(search: {beat.get('search','')}; narration context: {beat.get('note','')}).\n"
+              f"Candidates:\n{lines}\n\nPick the candidate that genuinely shows this object or a very close equivalent "
+              "from the same culture and period. If none fits, answer -1. Return JSON only: {\"index\": n}")
+    try:
+        data = ai.chat_json(prompt, model=ai.fast_model(), timeout=120, tries=2)
+        i = int(data.get("index", -1))
+        return i if 0 <= i < len(candidates) else -1
+    except Exception:  # noqa: BLE001 — pas de vérification possible : on préfère l'image IA
+        return -1
 
 
 def cast_look(cast, names):

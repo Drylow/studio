@@ -2,10 +2,12 @@ import React from 'react';
 import {AbsoluteFill, Audio, Sequence, interpolate, staticFile, useVideoConfig} from 'remotion';
 import {Captions} from './components/Captions';
 import {FilmOverlay} from './components/FilmOverlay';
-import {KenBurns, VideoClip} from './components/Media';
+import {ImageShot, VideoClip} from './components/Media';
 import type {Segment, Timeline} from './schema';
 import {Battle} from './templates/Battle';
-import {Archive, Character, Chart, Compare} from './templates/Cards';
+import {Chart} from './templates/Cards';
+import {Archive, BigNumber} from './templates/Extra';
+import {Character, Compare} from './templates/People';
 import {Quote} from './templates/Quote';
 import {Route} from './templates/Route';
 import {Statement} from './templates/Statement';
@@ -14,11 +16,11 @@ import {ensureFonts} from './theme';
 const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
   switch (seg.type) {
     case 'image':
-      return <KenBurns src={seg.src} dur={dur} motion={seg.motion} strength={seg.strength} />;
+      return <ImageShot seg={seg} dur={dur} />;
     case 'video':
       return <VideoClip src={seg.src} />;
     case 'statement':
-      return <Statement text={seg.text} dur={dur} reveal={seg.reveal} />;
+      return <Statement text={seg.text} dur={dur} reveal={seg.reveal} kicker={seg.kicker} />;
     case 'battle':
       return <Battle {...seg} dur={dur} />;
     case 'character':
@@ -31,6 +33,8 @@ const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
       return <Archive {...seg} dur={dur} />;
     case 'route':
       return <Route {...seg} dur={dur} />;
+    case 'number':
+      return <BigNumber {...seg} dur={dur} />;
     case 'quote':
       return <Quote {...seg} dur={dur} />;
     default:

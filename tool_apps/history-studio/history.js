@@ -43,8 +43,8 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#lightb
 
 const S = {cfg: null, projects: [], pollT: null, playing: new Set(), open: null};
 const STEP = {script: 'Script', voice: 'Voix off', plan: 'Plan visuel', images: 'Images', render: 'Montage', done: 'Terminée'};
-const TYPE = {image: ['🖼', 'Image'], statement: ['❝', 'Phrase choc'], battle: ['⚔', 'Bataille'], character: ['👤', 'Fiche perso'],
-  compare: ['⚖', 'Comparaison'], chart: ['📊', 'Graphique'], archive: ['🏺', 'Archive'], route: ['🧭', 'Itinéraire'], quote: ['✒', 'Citation']};
+const TYPE = {image: ['🖼', 'Image'], statement: ['❝', 'Phrase choc'], number: ['🔢', 'Grand chiffre'], battle: ['⚔', 'Bataille'],
+  character: ['👤', 'Fiche perso'], compare: ['⚖', 'Duo (2 portraits)'], chart: ['📊', 'Graphique'], archive: ['🏺', 'Archive'], route: ['🧭', 'Itinéraire'], quote: ['✒', 'Citation']};
 
 // ── Formulaire ─────────────────────────────────────────────────────────────
 const CHIPS = [3, 5, 10, 15, 25, 35];

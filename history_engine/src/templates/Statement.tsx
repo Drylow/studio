@@ -6,7 +6,7 @@ import {C, F} from '../theme';
 /** Phrase choc : « THE STORY *HIDES* THE *TRUTH* » — serif en capitales, mots clés en rouge,
  * flash gris à l'entrée, trait doré qui se dessine sous la phrase, lent élargissement.
  * reveal (s) : la carte reste noire (poussière seule) jusqu'au mot prononcé, puis la phrase claque. */
-export const Statement: React.FC<{text: string; dur: number; reveal?: number}> = ({text, dur, reveal = 0}) => {
+export const Statement: React.FC<{text: string; dur: number; reveal?: number; kicker?: string}> = ({text, dur, reveal = 0, kicker}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const r = Math.max(0, Math.min(dur - 12, Math.round(reveal * fps)));
@@ -14,13 +14,13 @@ export const Statement: React.FC<{text: string; dur: number; reveal?: number}> =
     <AbsoluteFill style={{opacity: outFade(frame, dur, 5)}}>
       <CardBg />
       <Sequence from={r} durationInFrames={Math.max(1, dur - r)}>
-        <StatementText text={text} dur={dur - r} />
+        <StatementText text={text} dur={dur - r} kicker={kicker} />
       </Sequence>
     </AbsoluteFill>
   );
 };
 
-const StatementText: React.FC<{text: string; dur: number}> = ({text, dur}) => {
+const StatementText: React.FC<{text: string; dur: number; kicker?: string}> = ({text, dur, kicker}) => {
   const frame = useCurrentFrame();
   const words = text.split(/\s+/).filter(Boolean);
   const inO = ramp(frame, 1, 9);
@@ -32,6 +32,22 @@ const StatementText: React.FC<{text: string; dur: number}> = ({text, dur}) => {
     <AbsoluteFill>
       <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
         <div style={{transform: `scale(${scale})`, textAlign: 'center', maxWidth: 1400}}>
+          {kicker ? (
+            <div
+              style={{
+                fontFamily: F.serif,
+                fontWeight: 600,
+                fontSize: 28,
+                letterSpacing: '0.34em',
+                textTransform: 'uppercase',
+                color: C.gold,
+                marginBottom: 22,
+                opacity: ramp(frame, 0, 10),
+              }}
+            >
+              {kicker}
+            </div>
+          ) : null}
           <div
             style={{
               fontFamily: F.title,

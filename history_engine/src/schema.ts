@@ -9,6 +9,8 @@ export type ImageSeg = {
   src: string;
   motion?: 'in' | 'out' | 'left' | 'right' | 'up' | 'down';
   strength?: number; // amplitude du zoom (0.06 = +6 %)
+  label?: {name: string; role?: string}; // cartouche nom + rôle (1re apparition d'un personnage)
+  stamp?: string; // tampon lieu · date sur un plan d'ouverture : "HASTINGS, ENGLAND · 14 OCTOBER 1066"
 };
 
 export type VideoSeg = {type: 'video'; src: string};
@@ -17,6 +19,17 @@ export type StatementSeg = {
   type: 'statement';
   text: string; // les mots entre *étoiles* passent en rouge : "THE STORY *HIDES* THE *TRUTH*"
   reveal?: number; // secondes après le début du segment où la phrase apparaît (mot prononcé)
+  kicker?: string; // petite ligne dorée au-dessus (contexte) : "OCTOBER 14, 1066"
+};
+
+export type NumberSeg = {
+  type: 'number';
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  label: string; // "MEN ON THE RIDGE"
+  sub?: string; // petite ligne de contexte / source
+  reveal?: number;
 };
 
 export type Unit = {
@@ -48,9 +61,10 @@ export type CharacterSeg = {
   role?: string;
   image: string;
   facts?: string[];
+  variant?: 'right' | 'left' | 'full'; // portrait à droite, à gauche, ou plein cadre
 };
 
-export type ArmySide = {title: string; image?: string; stats: string[]};
+export type ArmySide = {title: string; subtitle?: string; image?: string; stats: string[]};
 export type CompareSeg = {
   type: 'compare';
   left: ArmySide;
@@ -65,7 +79,14 @@ export type ChartSeg = {
   bars: {label: string; value: number; side?: Side; display?: string}[];
 };
 
-export type ArchiveSeg = {type: 'archive'; title: string; image: string; note?: string};
+export type ArchiveSeg = {
+  type: 'archive';
+  title: string;
+  image: string;
+  note?: string;
+  credit?: string; // "The Met, public domain" / "Wikimedia Commons · CC BY-SA 4.0"
+  tilt?: number; // degrés (variante)
+};
 
 export type RouteSeg = {
   type: 'route';
@@ -94,6 +115,7 @@ export type Segment = {start: number; end: number} & (
   | ArchiveSeg
   | RouteSeg
   | QuoteSeg
+  | NumberSeg
 );
 
 export type Caption = {text: string; start: number; end: number};

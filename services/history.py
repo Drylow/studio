@@ -10,6 +10,7 @@
 
 Données : data/history/<id>/ (project.json, media/ = publicDir du rendu, vidéo finale à la racine).
 """
+import io
 import json
 import os
 import re
@@ -19,7 +20,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from services import ai, media, tts
+from services import align
 from services import history_ai as HA
+from services import history_sources as SRC
 from services import history_audio as HAU
 from services import pov_store as store
 
@@ -28,10 +31,10 @@ ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
 
 DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed": 1.0}  # « Timothy – American Narrator »
 EDGE_VOICE = "en-US-GuyNeural"
-DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": True, "film": 1.0,
+DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": False, "film": 1.0,
             "music_volume": 0.16, "all_templates": False,
-            # animations actives par défaut (bataille, graphique, comparaison, itinéraire : dispo mais coupés)
-            "templates": ["statement", "quote", "character", "archive"],
+            # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
+            "templates": ["statement", "number", "quote", "character", "compare", "archive"],
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
@@ -210,7 +213,10 @@ def job_voice(job, pid):
     job.update(0.05, f"Voix off ({provider})…")
     res = tts.synthesize(text, dest, provider=provider, voice=voice, speed=vs.get("speed", 1.0),
                          progress=lambda i, n: job.update(0.05 + 0.85 * i / max(1, n), f"Voix off {min(i + 1, n)}/{n}…"))
-    words = script_timed_words(text, res["words"])
+    # timings mesurés sur l'audio (Whisper) quand c'est possible : sous-titres calés sur toute la vidéo
+    job.update(0.92, "Calage des sous-titres sur la voix…")
+    heard = align.words_from_audio(dest, pr["options"].get("language", "en")) or res["words"]
+    words = script_timed_words(text, heard)
     with open(os.path.join(project_dir(pid), "words.json"), "w", encoding="utf-8") as f:
         json.dump(words, f)
     hook_n = len(pr["script"]["hook"].split())
@@ -326,6 +332,7 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
     cast = plan.get("cast") or []
     portrait = lambda name: f"images/cast_{HA.slug(name)}.jpg" if name else None  # noqa: E731
     n_img = 0
+    labelled, n_stamps, n_char = set(), 0, 0
     allowed = set(allowed or HA.TEMPLATES)
     n_cards = 0
     for i, b in enumerate(clean):
@@ -348,15 +355,38 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
         seg = {"start": round(start, 3), "end": round(end, 3), "type": t}
         if t == "image":
             in_hook = start < hook_end
+            motion = b.get("motion") if b.get("motion") in ("in", "out", "left", "right") else None
+            if motion in ("left", "right") and b.get("chars"):
+                motion = None  # pas de pan sur un personnage : zoom ancré sur les visages
             seg.update(type="image", src=f"images/shot_{n_img:03d}.jpg",
-                       motion=b.get("motion") or ("in" if n_img % 2 == 0 else "out"),
-                       strength=0.14 if in_hook else 0.07,
+                       motion=motion or ("in" if n_img % 2 == 0 else "out"),
+                       strength=0.12 if in_hook else 0.07,
                        _prompt=b.get("prompt") or "", _chars=b.get("chars") or [])
+            lab = b.get("label")
+            if isinstance(lab, dict) and lab.get("name") and lab["name"].lower() not in labelled:
+                labelled.add(lab["name"].lower())
+                seg["label"] = {"name": lab["name"][:40], "role": (lab.get("role") or "")[:50]}
+            if b.get("stamp") and n_stamps < 3:
+                seg["stamp"] = str(b["stamp"]).upper()[:60]
+                n_stamps += 1
             n_img += 1
         elif t == "statement":
             seg["text"] = (b.get("text") or "").upper()
             at = _find_phrase(words, b.get("say") or b.get("text", "").replace("*", ""), start, end)
             seg["reveal"] = round(max(0.0, (at or start) - start), 3)
+            if b.get("kicker"):
+                seg["kicker"] = str(b["kicker"])[:50]
+        elif t == "number":
+            try:
+                value = float(str(b.get("value", 0)).replace(",", ""))
+            except ValueError:
+                value = 0
+            seg.update(value=int(value) if value == int(value) else value, prefix=b.get("prefix") or "",
+                       suffix=b.get("suffix") or "", label=(b.get("label") or "")[:40], sub=(b.get("sub") or "")[:80])
+            at = _find_phrase(words, b.get("say") or "", start, end)
+            seg["reveal"] = round(max(0.0, (at or start) - start), 3)
+            if not value:
+                seg = {"start": seg["start"], "end": seg["end"], "type": "statement", "text": seg["label"].upper(), "reveal": 0}
         elif t == "battle":
             seg.update(title=b.get("title", ""), subtitle=b.get("subtitle", ""), terrain=f"images/terrain_{i:03d}.jpg",
                        _prompt=b.get("terrain_prompt") or "dry open plain with a river", labels=b.get("labels") or [],
@@ -366,12 +396,14 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
                 seg["line"] = b["line"]
         elif t == "character":
             seg.update(name=b.get("name", ""), role=b.get("role", ""), facts=b.get("facts") or [],
-                       image=portrait(b.get("portrait") or b.get("name")), _cast=b.get("portrait") or b.get("name"))
+                       image=portrait(b.get("portrait") or b.get("name")), _cast=b.get("portrait") or b.get("name"),
+                       variant=("right", "left", "full")[n_char % 3])
+            n_char += 1
         elif t == "compare":
             for side in ("left", "right"):
                 s = b.get(side)
                 if isinstance(s, dict):
-                    seg[side] = {"title": s.get("title", ""), "stats": s.get("stats") or []}
+                    seg[side] = {"title": s.get("title", ""), "subtitle": s.get("subtitle", ""), "stats": s.get("stats") or []}
                     if s.get("portrait"):
                         seg[side]["image"] = portrait(s["portrait"])
                         seg[side]["_cast"] = s["portrait"]
@@ -383,7 +415,8 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
                               **({"display": x["display"]} if x.get("display") else {})} for x in b.get("bars") or []])
         elif t == "archive":
             seg.update(title=b.get("title", ""), note=b.get("note", ""), image=f"images/archive_{i:03d}.jpg",
-                       _prompt=b.get("prompt") or b.get("title", ""))
+                       tilt=(-0.6, 0.7)[i % 2], _prompt=b.get("prompt") or b.get("title", ""),
+                       _search=b.get("search") or b.get("title", ""))
         elif t == "route":
             stops = [s for s in b.get("stops") or [] if "lat" in s and "lon" in s]
             seg.update(title=b.get("title", ""), subtitle=b.get("subtitle", ""), stops=_geo_to_xy(stops) if len(stops) >= 2 else [])
@@ -404,14 +437,14 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
 # durée minimale de chaque carte (s), comme la référence (10-20 s par carte) : l'animation se termine,
 # puis la carte TIENT pendant que la narration continue. Phrase choc : 5 s après son apparition ;
 # citation : 4,5 s après le dernier mot prononcé.
-CARD_MIN = {"statement": 6.0, "character": 11.0, "compare": 13.0, "chart": 11.0, "archive": 9.0, "route": 12.0,
+CARD_MIN = {"statement": 6.0, "number": 7.0, "character": 11.0, "compare": 13.0, "chart": 11.0, "archive": 9.0, "route": 12.0,
             "battle": 15.0, "quote": 9.0}
 MIN_IMAGE = 3.0
 
 
 def _card_need(s):
     want = CARD_MIN.get(s["type"], 0)
-    if s["type"] == "statement":
+    if s["type"] in ("statement", "number"):
         want = max(want, s.get("reveal", 0) + 5.0)
     if s["type"] == "quote" and s.get("words"):
         want = max(want, s["words"][-1] + 4.5)
@@ -442,7 +475,7 @@ def _ensure_card_time(segs):
                 take = min(need, max(0.0, (prv["end"] - prv["start"]) - MIN_IMAGE))
                 prv["end"] = round(prv["end"] - take, 3)
                 s["start"] = round(s["start"] - take, 3)
-                if s["type"] == "statement":
+                if s["type"] in ("statement", "number"):
                     s["reveal"] = round(s.get("reveal", 0) + take, 3)
                 if s.get("words"):
                     s["words"] = [round(t + take, 3) for t in s["words"]]
@@ -506,7 +539,8 @@ def _asset_requests(pr):
         elif s["type"] == "battle":
             reqs.append((s["terrain"], "terrain", s.get("_prompt", ""), []))
         elif s["type"] == "archive":
-            reqs.append((s["image"], "archive", s.get("_prompt", ""), []))
+            reqs.append((s["image"], "archive", s.get("_prompt", ""), [], {"search": s.get("_search", ""),
+                                                                          "title": s.get("title", ""), "note": s.get("note", "")}))
         for side in (s, s.get("left") or {}, s.get("right") or {}):
             if side.get("_cast"):
                 wanted_cast.add(side["_cast"])
@@ -524,19 +558,26 @@ def _missing_assets(pr):
     return [r for r in portraits + reqs if not os.path.isfile(os.path.join(d, r[0]))]
 
 
-def _gen(pr, rel, kind, prompt, chars):
+def _gen(pr, rel, kind, prompt, chars, info=None):
     d = media_dir(pr["id"])
     cast = (pr.get("plan") or {}).get("cast") or []
     look = HA.cast_look(cast, chars)
     if kind == "portrait":
         full = f"{HA.PORTRAIT} {chars[0] if chars else ''}: {prompt}".strip()
-        blob = ai.generate_image(full, width=1024, height=1536)
+        blob = ai.generate_image(full, width=1024, height=1536, quality="high")
         w, h = 900, 1200
     elif kind == "terrain":
         blob = ai.generate_image(f"{HA.TERRAIN} {prompt}")
         w, h = 1920, 1080
     elif kind == "archive":
+        real = SRC.find_real_image(info or {"title": prompt}, HA.pick_archive)
+        if real:  # vraie image de musée : on la garde entière (pas de recadrage), avec son crédit
+            blob, credit = real
+            _save_contained(blob, os.path.join(d, rel))
+            _set_archive_credit(pr["id"], rel, credit)
+            return
         blob = ai.generate_image(f"{HA.ARCHIVE} {prompt}")
+        _set_archive_credit(pr["id"], rel, "Reconstruction (AI)")
         w, h = 1920, 1080
     else:
         refs = [os.path.join(d, f"images/cast_{HA.slug(n)}.jpg") for n in chars]
@@ -544,7 +585,7 @@ def _gen(pr, rel, kind, prompt, chars):
         text = f"{prompt}. {('Characters: ' + look) if look else ''} {HA.STYLE}"
         if refs:
             text += " Keep each character's face, hair and outfit identical to the reference portraits."
-        blob = ai.generate_image(text, refs=refs or None)
+        blob = ai.generate_image(text, refs=refs or None, quality="high")
         w, h = 1920, 1080
     dest = os.path.join(d, rel)
     ai.fit_cover(blob, w, h, dest, anchor_y=0.22 if kind in ("shot", "portrait") else 0.5)
@@ -552,13 +593,28 @@ def _gen(pr, rel, kind, prompt, chars):
         _grade(dest)
 
 
+def _save_contained(blob, dest, max_side=1800):
+    from PIL import Image
+    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    im.thumbnail((max_side, max_side))
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    im.save(dest, "JPEG", quality=92)
+
+
+def _set_archive_credit(pid, rel, credit):
+    def upd(x):
+        for s in (x.get("plan") or {}).get("segments") or []:
+            if s.get("type") == "archive" and s.get("image") == rel:
+                s["credit"] = credit
+    update_project(pid, upd)
+
+
 def _grade(path):
     """Étalonnage commun à tous les plans : couleurs un peu éteintes, contraste doux (look photo de tournage)."""
     try:
         from PIL import Image, ImageEnhance
         im = Image.open(path).convert("RGB")
-        im = ImageEnhance.Color(im).enhance(0.88)
-        im = ImageEnhance.Contrast(im).enhance(0.96)
+        im = ImageEnhance.Color(im).enhance(0.95)
         im.save(path, quality=92)
     except Exception:  # noqa: BLE001 — l'image brute reste utilisable
         pass
@@ -645,7 +701,7 @@ def build_timeline(pr):
     rel = lambda p: os.path.relpath(p, d).replace("\\", "/")  # noqa: E731
     cues = []
     for s in pr["plan"]["segments"]:
-        if s["type"] == "statement":
+        if s["type"] in ("statement", "number"):
             cues.append({"src": rel(sfx["boom"]), "at": round(s["start"] + s.get("reveal", 0), 3), "volume": 0.55})
         elif s["type"] in ("battle", "character", "compare", "chart", "archive", "route", "quote"):
             cues.append({"src": rel(sfx["whoosh"]), "at": s["start"], "volume": 0.3})
