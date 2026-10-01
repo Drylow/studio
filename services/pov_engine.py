@@ -310,6 +310,91 @@ TEMPLATES = {
                              "contrast, readable at small size."),
         "bible": "",
     },
+    "oddly_things_en": {
+        "name": "Oddly Specific Things — Your Life as a… (EN)", "language": "en", "format": "object_journey",
+        "niche": "Second-person POV journeys of objects: you ARE a stolen phone, a stolen car, a stolen bank card, an "
+                 "Amazon return, a donated T-shirt... followed hand to hand through the real hidden economy behind it",
+        "audience": "Men and women 16-44 (US, UK, worldwide) who love 'what really happens to...' stories, hidden "
+                    "economies and true crime told lightly",
+        "tone": "Calm, dry, observant second-person narrator: you are the object. Quiet humor about humans, fully "
+                "serious about the people who lose things. Never glamorizes crime.",
+        "rules": "Follow the object from its first owner to where it really ends up, in the real order of the real "
+                 "supply chain. Real places, methods and prices from research, rounded; typical estimates are said "
+                 "as estimates. Never a how-to.",
+        "reference_urls": "https://www.youtube.com/watch?v=oFKjAJrLims",
+        "youtube_handle": "@OddlySpecificThings",
+        "studio": {"brand": "Oddly Specific Things", "logo": "OST", "ref_name": "Mr. Ranks, Crypto Miner",
+                   "placeholder": "Your Life as a Stolen Phone",
+                   "sub": "script FacelessOS (tu es l'objet, main après main), voix Algrow, objet-personnage "
+                          "consistant, cartes « HAND #n », trajets, musique et montage.",
+                   "thumb_prompt": "The key moment of \"{title}\": the object (with its tiny worried face) in the "
+                                   "hands that take it, on a clean white background, 2 handwritten words, one "
+                                   "black arrow."},
+        "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
+        "no_text": True, "voice_speed": 1.0,
+        "direction": "YOU are the object of the title (the narrator): show it in almost every image, big and easy to "
+                     "spot, in the hands, pockets, bags, boxes, tables, cars and rooms it passes through, its tiny "
+                     "face showing its mood. The people who hold it are the channel's white round-headed figures "
+                     "(roles shown by clothes and props: hoodies, gloves, aprons, suits). Real, richly lit places of "
+                     "each step (a café terrace at night, a back-room repair shop, a warehouse near an airport, a "
+                     "cargo plane hold, a crowded electronics market, a quiet bedroom). Close-ups on hands and on "
+                     "the object, then wide shots of the place. Sometimes a simple explainer visual in the same "
+                     "style (a map with a route, a stack of cash next to the object, a price tag, a box of identical "
+                     "objects). No written words or numbers: the editor adds them as animations. Nothing graphic.",
+        "default_minutes": 14,
+        "montage": {"pacing": 6.5, "hook_pacing": 5.0, "hook_seconds": 30, "min_scene": 3.5, "max_scene": 11.0,
+                    "motion": "zoom_in", "motion_strength": 0.06, "transition": "fade", "transition_dur": 0.4,
+                    "section_titles": False, "captions": {"mode": "none"}, "layout": "full", "pause_max": 0.45,
+                    "music": "auto", "music_volume": 0.13, "director": True, "image_qa": True,
+                    "chapter_cards": True},
+        "character": ("You", "the object of the title, who narrates ('you'): drawn as a cartoon object in the same "
+                             "bold-outline style, with a tiny simple face on its front or screen (two small solid "
+                             "black dot eyes, small eyebrows, a small simple mouth), no arms and no legs; the exact "
+                             "same object, color, case and face in every image; its face shows its mood"),
+        "object_hero": True,  # le perso « You » est un objet (image de référence sans bras ni jambes)
+        # réalisateur du montage : pas de prof, des cartes « HAND #n » posées d'après les titres de partie
+        "director": "It is a second-person POV story told by an object (\"you\" = the object of the title) that "
+                    "passes from hand to hand. Full-screen illustrations, no presenter. Each new hand already gets "
+                    "its own \"HAND #n\" card automatically at the start of its part: never add another animation "
+                    "in those first scenes.",
+        "fx_types": ["counter", "route", "label", "stamp", "list", "timeline", "split", "bars"],
+        "fx_guide": """ANIMATION TYPES (at most ONE per scene, JSON objects; "at" = the exact word of THIS scene's narration where it
+appears, usually the number or the keyword):
+- {"type":"counter","to":"$300","from":"$0","label":"WHAT YOU'RE WORTH NOW","at":"300"} : what the object is
+  worth, paid or sold for at this hand, or one big number said aloud. The value of the object is the video's thread:
+  use it at most hands, label 2-5 words (WHAT YOU'RE WORTH NOW, PAID TO THE THIEF, SOLD FOR, PHONES STOLEN IN 2024).
+- {"type":"route","from":"LONDON","to":"HONG KONG","sub":"6,000 MILES BY AIR","at":"Hong Kong"} : the object
+  travels from one real place to another (street to shop, city to city, country to country); "sub" = how or how
+  far, only if said (optional).
+- {"type":"label","text":"FARADAY BAG","at":"bag"} : a new insider term, tool or place being named, 1-3 words.
+  At most one label every 30 seconds.
+- {"type":"stamp","text":"BLACKLISTED","at":"blacklisted"} : a verdict of 1-2 words (STOLEN, LOCKED, WIPED, SOLD,
+  BLACKLISTED, UNLOCKED, SHIPPED...), shown straight at the bottom of the screen. Rare: 3 per video at most, never
+  two within 2 minutes.
+- {"type":"list","title":"WHAT SHE LOSES","items":[{"text":"Every photo since 2019","at":"photos"}],"at":"first"} :
+  3-6 short points (<= 5 words each) spoken in THIS scene, each appearing when its "at" word is spoken.
+- {"type":"timeline","title":"YOUR FIRST 24 HOURS","items":[{"label":"9:47 PM","sub":"Snatched"},...],
+  "at":"hours"} : steps in time (3-5 steps).
+- {"type":"split","left":{"title":"LOCKED","value":"$300","sub":"sold for parts"},"right":{"title":"UNLOCKED",
+  "value":"$1,000","sub":"sold whole"},"at":"unlocked"} : two options face to face.
+- {"type":"bars","title":"WHO MAKES WHAT","items":[{"label":"Thief","value":300,"display":"£300"},{"label":
+  "Buyer in China","value":4000,"display":"£4,000"}],"at":"4,000"} : 2-4 amounts being compared.""",
+        "thumb_text": True,
+        # miniatures très simples façon Mr. Ranks : fond blanc, un sujet, 2 mots manuscrits noir + rouge, une flèche
+        "thumb_style": "Very simple, clean thumbnail on a flat pure WHITE background with lots of empty white space. "
+                       "On the left 55%, ONE detailed comic-book illustration (thick black outlines, cel shading, "
+                       "dramatic light, expressive) of the video's key moment, cut out on the white background with "
+                       "no frame: the object of the title, drawn as the channel's object character with a tiny simple "
+                       "face (two black dot eyes, small worried mouth) on its front or screen, in the hands of the "
+                       "person who takes it (a hooded figure, a gloved hand, a shady dealer), or the person holding "
+                       "it. On the right, 2-3 words of big casual HANDWRITTEN marker text on two lines (like 'Gone "
+                       "Forever', 'Sold Twice', 'Never Coming Back'): the first word(s) in black, the last word in "
+                       "red, no outline; one thick black hand-drawn curved arrow from the words to the object. Nothing "
+                       "else: no other text, no logo, no border, no background scenery.",
+        "thumb_text_style": "Big casual handwritten marker letters (like a comic marker font), the first word(s) "
+                            "in black and the last word in red, no outline, perfectly legible, spelled exactly.",
+        "bible": "",
+    },
     "business_en": {
         "name": "Business Explained — tableau + prof (EN)", "language": "en", "format": "business_explained",
         "niche": "How businesses really make money: hidden business models, margins, markups and the dark side "
@@ -386,6 +471,16 @@ TEACHING DEVICES. Define each term inside the sentence the first time ("technica
 RE-HOOKS. A section opener every 1.5-2 minutes that pulls the next question forward: "The catch is...", "So who covers the difference?", "The costs that never make the headlines...", "Step back."
 ENDING. Concede the upside first (who it works for), then name exactly where the math breaks. Read the ledger: "Who benefits is reasonably clear... Who carries the risk is just as clear." Then the final itemized bill and total, and a three-sentence kicker that calls back to the opening line. One short CTA, then stop.
 FACELESSOS LIMITS ON THE REFERENCE'S HABITS. Its "isn't X, it's Y" reversals and aphoristic verdicts are capped: at most 2 antithesis constructions and 1 aphoristic closer per script, never in adjacent paragraphs. No em dashes. Every statistic must be real, widely documented and rounded; anything else becomes a stated estimate or range.""",
+    "oddly_things_en": """REFERENCE. Register built from Mr. Ranks' outlier "POV: You're a Crypto Miner Who Starts With One GPU" (263k views on a 26k-sub channel, 28:05, 4,268 words, 152 wpm), a 2D second-person POV story that escalates step by step. It teaches the register, rhythm and pacing. Never reuse its topic, lines or hooks. This channel's twist: "you" are the object in the title, passed from hand to hand. FacelessOS rules win on any conflict.
+VOICE. Second person, present tense, plain spoken English. Short sentences: about 8 words on average, one in four is 1-4 words ("You hesitate." "But it's real."), almost none over 25 words. Lists of three concrete nouns ("Wallet address, mining pool, config file."). Exact small times and amounts ("around 11:40 p.m.", "a few dollars"). Dry understatement about humans and what they care about.
+HOOK (0:00-0:40, ~100 words). Sentence one is the moment you change hands, with a time, a real place and one physical detail of you (battery, fuel, a crack, a sticker). Two lines on the life you were part of a minute ago. Then the promise in plain numbers: how many hands, how many miles, what you'll be worth at the end. No intro, no title restated.
+BEING AN OBJECT. You never move or talk. You perceive: light through fabric, the cold of a car park, the hum of a van, voices that don't know you're listening, your own screen lighting up with a name nobody answers. Feelings come through what you notice, never through stated emotions ("Your screen lights up. Mum. Nobody looks at it."). You know your worth and keep track of it.
+HANDS. Every hand opens on a fresh scene (place, time, light, one sound), then the person through one telling habit or tool (they get roles, never names: "the man with the foil", "the woman at the stall by the escalator"), then what they do with you and how this step of the machine works, then the number: what you're worth here. Close each hand on a one-line pull ("He doesn't keep you long.").
+NUMBERS. Few, exact, spoken naturally, from the research notes only. Big real facts carry their source lightly inside the sentence ("Police in London later said..."). Every hand states your worth; the final worth is compared with your first price in the ending.
+PACING. A small reveal about the hidden machine every 60-90 seconds; a re-hook at every hand-off. Time moves inside the narration ("By Monday", "Six days later", "Somewhere over Russia"), never with headings.
+OWNER CUTAWAYS. Two or three short, quiet moments of the first owner's side, told as what you imagine or overhear. Never mock them.
+ENDING. The last hand is quiet: someone who doesn't know your story uses you for something ordinary; one trace of the first owner is called back; the last image is physical and still.
+AVOID. The reference's tics: "not X, just Y" and "You tell yourself" at most twice each, no fragment drumbeats, at most 2 antithesis constructions and 1 aphoristic closer per script, no em dashes, no CTA, no trailer voice. Never a how-to (no steps to steal, unlock or resell).""",
     "business_en": """VOICE. One calm narrator explaining a machine to a smart friend. No greeting, channel name, "in this video" or sponsor. Contractions and plain words. Colder on criminal topics: fewer contractions, no jokes. ~180 spoken words per minute.
 HOOK (first 250-350 words, done by 1:45). Sentence one is either a hard, sourced number that sounds impossible, or a real named person in a named place and year. State the paradox ("if that picture were right, this whole business should be dead"). Name the popular belief and kill it. Say the real answer "has almost nothing to do with" the obvious product. End with "By the end of this, you'll understand..." plus 2-4 open loops, at least one dark or aimed at the viewer.
 MASTER ANALOGY. Within the first two minutes, ONE everyday system (washing machine, ride wristband, vending machine) that maps the whole business. Call back to it 3+ times, "upgrade" it when facts arrive, reuse it in the close.
@@ -1558,11 +1653,20 @@ SCRIPT:
     return out[:MAX_CAST]
 
 
+def _object_hero(ch):
+    """Le narrateur « You » de cette chaîne est un objet (ex. Oddly Specific Things)."""
+    return bool(TEMPLATES.get((ch or {}).get("template") or "", {}).get("object_hero"))
+
+
 def character_ref_image(ch, member):
     """Image de référence d'un perso : en pied, de face, fond uni — dans le style de la chaîne."""
     prompt = (f"Character reference image of \"{member['name']}\": {member.get('description', '')}. "
               "Full body, standing, front view, neutral relaxed pose, arms along the body, calm expression, "
               "centered, plain light grey background, nothing else in the image.")
+    if _object_hero(ch) and _norm_name(member.get("name")) == "you":  # le narrateur est un objet
+        prompt = (f"Character reference image of \"{member['name']}\": {member.get('description', '')}. "
+                  "The object alone, front view, upright, centered, calm neutral face, no arms, no legs, no hands "
+                  "holding it, plain light grey background, nothing else in the image.")
     st = ch.get("style") or {}
     refs, lines = [], []
     style_ref = channel_ref_path(ch, st.get("ref"))
@@ -1879,6 +1983,18 @@ def plan_montage(ch, pr, words, poses, log=None):
     narration = " ".join(s.get("text") or "" for s in scenes)
     allowed = _nums(narration) | _nums(S.narration(pr.get("script") or "")) | {"0"}  # 0 : départ d'un compteur
     pose_lines = "\n".join(f"- {k}: {v}" for k, v in POSE_HINTS.items() if k in poses)
+    t = TEMPLATES.get(ch.get("template") or "", {})
+    types = set(t.get("fx_types") or _motion_types())
+    brief = t.get("director") or ("It is a teacher-style explainer: a cartoon teacher in a grey suit stands at the "
+                                  "bottom-left of the screen next to a board that shows one illustration per scene.")
+    density = t.get("fx_density") or "about 55-65%"
+    pose_block = f"""TEACHER POSES (pick one per scene):
+{pose_lines}
+Rules for poses: match what the sentence does; keep the same pose for 2-3 consecutive scenes while the idea
+continues, then change (never the same pose for more than 4 scenes in a row); use hold_sign / hold_phone about once
+every 8-12 scenes, with "sign" = the key number or 1-3 words of that scene, UPPERCASE, max 14 characters (e.g.
+"$270/HR", "77%", "12-18 MONTHS"). "wave" only for the very first scene of the video and the very last one.
+""" if len(poses) > 1 else 'No presenter on screen: always return "pose": "idle" and "sign": "".\n'
     out, total_so_far, last_pose = {}, "", "wave"
     heads = {x.get("section"): x.get("heading") or "" for x in scenes if x.get("first")}
     chunk = 25  # réponses courtes : les très longues se font couper par le proxy
@@ -1887,22 +2003,15 @@ def plan_montage(ch, pr, words, poses, log=None):
         rows = "\n".join(f'{s["i"]} [{s["start"]:.1f}-{s["end"]:.1f}s]{" ## " + s["heading"] if s.get("first") and s.get("heading") else ""}: {s.get("text") or ""}'
                          for s in part)
         prompt = f"""You are the video editor and motion designer of the faceless YouTube channel "{ch.get('name', '')}"
-({ch.get('niche', '')}). The video is "{pr.get('title', '')}". It is a teacher-style explainer: a cartoon teacher in
-a grey suit stands at the bottom-left of the screen next to a board that shows one illustration per scene.
-Your job: make it lively and clear, like a top explainer channel, WITHOUT clutter.
+({ch.get('niche', '')}). The video is "{pr.get('title', '')}". {brief}
+Your job: make it lively and clear, like a top channel, WITHOUT clutter.
 
-TEACHER POSES (pick one per scene):
-{pose_lines}
-Rules for poses: match what the sentence does; keep the same pose for 2-3 consecutive scenes while the idea
-continues, then change (never the same pose for more than 4 scenes in a row); use hold_sign / hold_phone about once
-every 8-12 scenes, with "sign" = the key number or 1-3 words of that scene, UPPERCASE, max 14 characters (e.g.
-"$270/HR", "77%", "12-18 MONTHS"). "wave" only for the very first scene of the video and the very last one.
-
-{FX_GUIDE}
+{pose_block}
+{t.get("fx_guide") or FX_GUIDE}
 Clarity: text on screen must make sense on its own for a viewer outside the US. Never leave jargon or a vague
 phrase alone on a sheet, list or label: add a 2-4 word gloss (e.g. "One 401(k) (retirement savings)", "3 fights: kids,
 house, retirement", "QDRO (court order to split retirement)").
-Density: about 55-65% of scenes get an animation; never the same type in 3 consecutive animated scenes (receipt
+Density: {density} of scenes get an animation; never the same type in 3 consecutive animated scenes (receipt
 excepted when the tab really changes); leave some scenes clean. Every number you write MUST appear exactly in the
 narration (same digits); never compute new numbers, never invent sources. Text is English, short, UPPERCASE for
 titles.
@@ -1936,7 +2045,7 @@ per scene above, in order."""
             ahead = 10 if fx and fx.get("type") == "timeline" else 3
             ctx = " ".join(x.get("text") or "" for x in scenes if i - 2 <= x["i"] <= i + ahead) + " " + \
                 heads.get((scenes[i] if 0 <= i < len(scenes) else {}).get("section"), "")  # + titre de sa partie
-            if fx and (fx.get("type") not in _motion_types() or not set(_fx_numbers(fx)) <= allowed
+            if fx and (fx.get("type") not in types or not set(_fx_numbers(fx)) <= allowed
                        or not _grounded(fx, ctx)):
                 if log:
                     log(f"animation écartée (scène {i}) : {json.dumps(fx)[:120]}")
@@ -2077,6 +2186,18 @@ def _full_panel():
     return motion.FULL_PANEL
 
 
+_CHAPTER = re.compile(r"^\s*([A-Za-z]+)\s*#?\s*(\d+)\s*[:.\-\u2013\u2014]\s*(.+?)\s*$")
+
+
+def chapter_card(scene):
+    """Carte de partie d'après le titre de la partie (« Hand 3: The fence » → HAND #3 / THE FENCE),
+    sur la première scène de la partie ; None sinon."""
+    m = _CHAPTER.match(scene.get("heading") or "") if scene.get("first") else None
+    if not m:
+        return None
+    return {"type": "chapter", "kicker": f"{m.group(1).upper()} #{m.group(2)}", "title": m.group(3).upper()[:32]}
+
+
 def montage_enabled(pr):
     return bool((pr.get("montage") or {}).get("director"))
 
@@ -2100,13 +2221,19 @@ def job_montage(job, pid):
     plan = plan_montage(ch, pr, load_words(pid), poses, log=lambda m: job.update(None, m))
     words = load_words(pid)
 
+    cards = bool((pr.get("montage") or {}).get("chapter_cards"))
+
     def save(x):
         for s in x.get("scenes") or []:
             e = plan.get(s["i"])
-            if not e:
+            card = chapter_card(s) if cards else None
+            if not e and not card:
                 continue
-            s["pose"], s["sign"] = e["pose"], e["sign"]
-            s["fx"] = fx_timing(s, e.get("fx"), words)
+            if e:
+                s["pose"], s["sign"] = e["pose"], e["sign"]
+                s["fx"] = fx_timing(s, e.get("fx"), words)
+            if card:  # la carte de partie passe avant l'animation du réalisateur
+                s["fx"] = fx_timing(s, card, words)
             if s["fx"] and s["fx"]["type"] in _full_panel():
                 s["status"] = "done"  # la fiche remplace l'image : rien à générer
         sc = x.get("scenes") or []
@@ -2468,8 +2595,9 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
     def one(it):
         prompt = f"YouTube thumbnail. {it.get('prompt', '')}"
         if with_text and it.get("text"):
-            prompt += (f" Huge bold clean sans-serif text reading exactly \"{it.get('text', '')}\" with a thick dark "
-                       "outline, perfectly legible, spelled correctly.")
+            look = TEMPLATES.get(ch.get("template") or "", {}).get("thumb_text_style") or (
+                "Huge bold clean sans-serif text with a thick dark outline, perfectly legible, spelled correctly.")
+            prompt += f" Text reading exactly \"{it.get('text', '')}\". {look}"
         prompt += " Bright, saturated, high contrast, readable at small size."
         if thumb_style:
             prompt += " THUMBNAIL STYLE: " + thumb_style

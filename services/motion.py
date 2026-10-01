@@ -35,7 +35,8 @@ PALETTE = [(58, 134, 255), (230, 57, 70), (255, 184, 28), (43, 182, 115), (155, 
 SS = 2          # suréchantillonnage des formes (contours lisses)
 EXIT = 0.4      # sortie (s) : fondu adouci, calé sur le fondu entre deux images quand la carte part avec sa scène
 CENTER_Y = 0.46  # hauteur des cartes centrées dans le panneau (un peu au-dessus du milieu)
-TYPES = ("label", "counter", "receipt", "bars", "pie", "list", "split", "timeline", "stamp", "sheet")
+TYPES = ("label", "counter", "receipt", "bars", "pie", "list", "split", "timeline", "stamp", "sheet", "route",
+         "chapter")
 FULL_PANEL = ("sheet",)  # ces fx remplacent l'image de la scène (pas d'image à générer)
 
 _fonts = {}
@@ -205,7 +206,8 @@ def transform(im, scale=1.0, alpha=1.0, dx=0, dy=0, rot=0.0, pivot=None):
 
 # rythme posé : chaque type se déroule plus ou moins lentement (1 = vitesse de base)
 SLOW = {"label": 1.2, "counter": 1.5, "receipt": 1.6, "bars": 1.9, "pie": 1.6, "list": 2.1, "split": 1.8,
-        "timeline": 1.9, "stamp": 1.0, "title": 1.0, "sheet": 1.0, "intro": 1.0, "outro": 1.0}
+        "timeline": 1.9, "stamp": 1.0, "title": 1.0, "sheet": 1.0, "intro": 1.0, "outro": 1.0, "route": 1.5,
+        "chapter": 1.2}
 
 
 class Fx:
@@ -1066,8 +1068,127 @@ class Outro(Intro):
         return out
 
 
+class Chapter(Fx):
+    """Carte de partie, en haut à gauche, façon jeu : pastille jaune « 3 » + « HAND » + « THE FENCE »
+    (posée d'après le titre de partie « Hand 3: The fence »)."""
+    anim_end = 0.75
+
+    def setup(self):
+        k = self.k
+        px, py, pw, ph = _panel(self.geo)
+        kick = (self.spec.get("kicker") or "").upper().strip()
+        m = re.match(r"^(.*?)\s*#?\s*(\d+)$", kick)
+        self.word, self.num = (m.group(1).strip(), m.group(2)) if m else (kick, "")
+        self.title = (self.spec.get("title") or "").upper()[:32]
+        self.d = 150 * k  # pastille
+        self.size = fit_size(self.title, 900, 60 * k, pw * 0.42)
+        self.ksize = 30 * k
+        tw = max(font(900, self.size).getbbox(self.title)[2], font(800, self.ksize).getbbox(self.word)[2])
+        self.w = int(self.d + tw + 110 * k)
+        self.h = int(self.d + 40 * k)
+        self.x, self.y = int(px + 34 * k), int(py + 30 * k)
+        self.sfx = [(0.0, "whoosh", 0.5), (0.22, "pop", 0.8)]
+
+    def frame(self, t):
+        k = self.k
+        p = Pad(self.w, self.h)
+        r = self.d / 2
+        cy = 16 * k + r
+        bx0 = 16 * k + r * 0.6
+        grow = ease_out(seg(t, 0.1, 0.45))
+        bx1 = bx0 + (self.w - 30 * k - bx0) * grow
+        if grow > 0:  # bandeau blanc qui se déroule derrière la pastille
+            p.box((bx0, cy - r * 0.8, bx1, cy + r * 0.8), WHITE, width=5 * k, radius=r * 0.5, shadow=8 * k)
+            tx = 16 * k + self.d + 24 * k
+            n = int(round(len(self.title) * seg(t, 0.3, 0.65)))
+            if self.word:
+                p.text((tx, cy - 22 * k), self.word, 800, self.ksize, fill=GREY, anchor="ls")
+                p.text((tx, cy + 4 * k), self.title[:n], 900, self.size, anchor="lt")
+            else:
+                p.text((tx, cy), self.title[:n], 900, self.size, anchor="lm")
+        a = ease_back(seg(t, 0.0, 0.3))
+        rr = r * max(0.01, a)
+        cx = 16 * k + r
+        p.ellipse((cx - rr + 6 * k, cy - rr + 6 * k, cx + rr + 6 * k, cy + rr + 6 * k), fill=INK)
+        p.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=YELLOW, outline=INK, width=6 * k)
+        if self.num and a > 0.5:
+            p.text((cx, cy + 2 * k), "#" + self.num if len(self.num) < 2 else self.num, 900,
+                   fit_size("#" + self.num, 900, 70 * k * a, rr * 1.45), anchor="mm")
+        im = p.image()
+        return transform(im, dx=-(1 - ease_out(seg(t, 0, 0.3))) * 60 * k, alpha=seg(t, 0, 0.08))
+
+
+class Route(Fx):
+    """Trajet : deux points (départ, arrivée), une ligne pointillée en arc qui se trace avec un petit
+    avion au bout, l'arrivée qui claque ; « sub » = comment ou combien (facultatif)."""
+    anim_end = 1.5
+
+    def setup(self):
+        k = self.k
+        px, py, pw, ph = _panel(self.geo)
+        self.a = (self.spec.get("from") or "").upper()[:24]
+        self.b = (self.spec.get("to") or "").upper()[:24]
+        self.sub = (self.spec.get("sub") or "").upper()[:40]
+        self.w, self.h = int(1120 * k), int((440 if self.sub else 380) * k)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
+        self.p0 = (190 * k, 250 * k)
+        self.p1 = (self.w - 200 * k, 250 * k)
+        self.ctl = ((self.p0[0] + self.p1[0]) / 2, 40 * k)
+        self.lsize = min(fit_size(self.a, 900, 46 * k, 400 * k), fit_size(self.b, 900, 46 * k, 400 * k))
+        self.sfx = [(0.0, "pop", 0.6), (0.3, "whoosh", 0.7), (1.2, "ding", 0.7)]
+
+    def _pt(self, u):
+        (x0, y0), (cx, cy), (x1, y1) = self.p0, self.ctl, self.p1
+        return ((1 - u) ** 2 * x0 + 2 * (1 - u) * u * cx + u * u * x1,
+                (1 - u) ** 2 * y0 + 2 * (1 - u) * u * cy + u * u * y1)
+
+    def _pin(self, p, xy, s, fill):
+        k = self.k
+        x, y = xy
+        r = 20 * k * s
+        if r <= 0:
+            return
+        p.ellipse((x - r + 4 * k, y - r + 4 * k, x + r + 4 * k, y + r + 4 * k), fill=INK)
+        p.ellipse((x - r, y - r, x + r, y + r), fill=fill, outline=INK, width=5 * k)
+
+    def frame(self, t):
+        k = self.k
+        p = Pad(self.w, self.h)
+        m = 16 * k
+        p.box((m, m, self.w - 26 * k, self.h - 26 * k), WHITE, width=5 * k, radius=26 * k, shadow=10 * k)
+        u = ease_in_out(seg(t, 0.3, 1.2))
+        n = 40
+        for j in range(n):  # pointillés jusqu'à la tête de la ligne
+            a0, a1 = j / n, (j + 0.55) / n
+            if a0 >= u:
+                break
+            p.line([self._pt(a0), self._pt(min(a1, u))], INK, 6 * k)
+        self._pin(p, self.p0, ease_back(seg(t, 0.0, 0.25)), BLUE)
+        arrive = seg(t, 1.2, 1.45)
+        if arrive > 0:
+            self._pin(p, self.p1, ease_back(arrive), RED)
+        elif u > 0:  # petit avion (triangle) au bout de la ligne
+            hx, hy = self._pt(u)
+            bx, by = self._pt(max(0.0, u - 0.02))
+            ang = math.atan2(hy - by, hx - bx)
+            pts = [(hx + math.cos(ang) * 26 * k, hy + math.sin(ang) * 26 * k),
+                   (hx + math.cos(ang + 2.5) * 18 * k, hy + math.sin(ang + 2.5) * 18 * k),
+                   (hx + math.cos(ang - 2.5) * 18 * k, hy + math.sin(ang - 2.5) * 18 * k)]
+            p.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in pts], fill=YELLOW, outline=INK, width=int(4 * k * SS))
+        ly = self.p0[1] + 62 * k
+        p.text((self.p0[0], ly), self.a, 900, self.lsize, anchor="mm")
+        if arrive > 0:
+            p.text((self.p1[0], ly), self.b, 900, self.lsize, fill=RED, anchor="mm")
+        if self.sub and t >= 1.2:
+            p.text(((self.w - 10 * k) / 2, ly + 66 * k), self.sub, 800,
+                   fit_size(self.sub, 800, 34 * k, self.w - 160 * k), fill=GREY, anchor="mm")
+        im = p.image()
+        return transform(im, scale=0.8 + 0.2 * ease_back(seg(t, 0, 0.3)), alpha=seg(t, 0, 0.1))
+
+
 CLASSES = {"outro": Outro, "sheet": Sheet, "intro": Intro, "title": Title, "label": Label, "counter": Counter, "receipt": Receipt, "bars": Bars, "pie": Pie, "list": ListFx,
-           "split": Split, "timeline": Timeline, "stamp": Stamp}
+           "split": Split, "timeline": Timeline, "stamp": Stamp, "route": Route, "chapter": Chapter}
 
 
 def make(spec, geo, state=None):

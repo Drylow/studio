@@ -95,6 +95,23 @@ TOOLS = {
         "accent": "gold",
         "icon": '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
     },
+    "ost-studio": {
+        "slug": "ost-studio",
+        "category": "youtube",
+        "name": "ODDLY SPECIFIC THINGS",
+        "short": "Oddly Specific Things",
+        "tag": "// OST",
+        "desc": "Le studio de la chaîne Oddly Specific Things : « Your Life as a Stolen Phone »… tu ES l'objet, "
+                "suivi de main en main. Titre + durée → script FacelessOS, voix, objet-personnage consistant, "
+                "cartes HAND #n, trajets animés, musique et montage. Miniatures simples façon Mr. Ranks.",
+        "entry": "osl-studio/index.html",
+        "query": "studio=oddly_things_en",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "cyan",
+        "icon": '<rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>'
+                '<circle cx="10.3" cy="9" r=".9"/><circle cx="13.7" cy="9" r=".9"/><path d="M10.6 12.2c.8.6 2 .6 2.8 0"/>',
+    },
     "delamain": {
         "slug": "delamain",
         "category": "agent",
