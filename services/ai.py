@@ -366,7 +366,13 @@ def fit_cover(blob, width, height, dest_path, quality=92):
     donc on normalise ici pour que le montage soit toujours propre."""
     if Image is None:
         raise AIError("Pillow manquant : pip install Pillow")
-    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    im = Image.open(io.BytesIO(blob))
+    if im.mode in ("RGBA", "LA", "P"):  # fond transparent (souvent rendu pour « fond blanc ») : posé sur du blanc
+        im = im.convert("RGBA")
+        bg = Image.new("RGBA", im.size, (255, 255, 255, 255))
+        bg.alpha_composite(im)
+        im = bg
+    im = im.convert("RGB")
     sw, sh = im.size
     scale = max(width / sw, height / sh)
     nw, nh = max(width, round(sw * scale)), max(height, round(sh * scale))

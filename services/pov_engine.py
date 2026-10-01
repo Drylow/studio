@@ -380,19 +380,17 @@ appears, usually the number or the keyword):
 - {"type":"bars","title":"WHO MAKES WHAT","items":[{"label":"Thief","value":300,"display":"£300"},{"label":
   "Buyer in China","value":4000,"display":"£4,000"}],"at":"4,000"} : 2-4 amounts being compared.""",
         "thumb_text": True,
-        # miniatures très simples façon Mr. Ranks : fond blanc, un sujet, 2 mots manuscrits noir + rouge, une flèche
-        "thumb_style": "Very simple, clean thumbnail on a flat pure WHITE background with lots of empty white space. "
-                       "On the left 55%, ONE detailed comic-book illustration (thick black outlines, cel shading, "
-                       "dramatic light, expressive) of the video's key moment, cut out on the white background with "
-                       "no frame: the object of the title, drawn as the channel's object character with a tiny simple "
-                       "face (two black dot eyes, small worried mouth) on its front or screen, in the hands of the "
-                       "person who takes it (a hooded figure, a gloved hand, a shady dealer), or the person holding "
-                       "it. On the right, 2-3 words of big casual HANDWRITTEN marker text on two lines (like 'Gone "
-                       "Forever', 'Sold Twice', 'Never Coming Back'): the first word(s) in black, the last word in "
-                       "red, no outline; one thick black hand-drawn curved arrow from the words to the object. Nothing "
-                       "else: no other text, no logo, no border, no background scenery.",
-        "thumb_text_style": "Big casual handwritten marker letters (like a comic marker font), the first word(s) "
-                            "in black and the last word in red, no outline, perfectly legible, spelled exactly.",
+        # miniatures très simples et propres : style 2D de la chaîne, un sujet, beaucoup de blanc, 1-2 mots
+        "thumb_style": "Very simple, clean, polished thumbnail in the channel's own 2D cartoon style (smooth clean black "
+                       "outlines, soft cel shading, simple characters with a large perfectly round plain WHITE head, "
+                       "small black dot eyes, white mitten hands; never gritty, never dark, never realistic). ONE clear "
+                       "subject, big, on a flat pure white or soft light-grey background with lots of empty space, or "
+                       "one simple, softly lit real setting: the object of the title (drawn as a normal, beautiful "
+                       "object, no face) in the hands of the person who takes it, or that person running off with it, "
+                       "or the object on its way between two famous places. Soft vivid colors. Text: 1-2 big words "
+                       "('GONE FOREVER', 'STOLEN') or a short price change ('£300 → £4,000'), nothing else.",
+        "thumb_text_style": "Big clean heavy rounded sans-serif letters, the first word in black and the last word in "
+                            "red, no outline, perfectly legible, spelled exactly.",
         "bible": "",
     },
     "business_en": {
@@ -2607,6 +2605,11 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
             full = (("Reference image 1 = THUMBNAIL STYLE reference: copy its art style, rendering, outlines, "
                      "composition and color treatment exactly; the subject and setting are new, as described.\n")
                     if thumb_ref else "") + prompt
+            art = channel_ref_path(ch, (ch.get("style") or {}).get("ref"))
+            if not thumb_ref and art and os.path.isfile(art):  # pas encore de miniature modèle : le style des images
+                refs = [art]
+                full = ("Reference image 1 = ART STYLE reference: copy its rendering, line work and character "
+                        "design exactly; ignore its content.\n") + prompt
             if not with_text:
                 full += " No text, no letters, no words (a flag is fine)."
         else:
