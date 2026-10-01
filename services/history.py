@@ -34,7 +34,7 @@ ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
 DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed": 1.0}  # « Timothy – American Narrator »
 EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": False, "film": 1.0,
-            "music_volume": 0.16, "all_templates": False,
+            "music_volume": 0.06, "all_templates": False,
             # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
             "templates": ["statement", "number", "map", "quote", "character", "compare", "archive"],
             "image_style": "ink",
@@ -959,7 +959,8 @@ def build_timeline(pr):
     hook_end = pr["voice"].get("hook_end") or 0
     return {
         "duration": round(duration, 3), "fps": 30, "width": 1920, "height": 1080,
-        "voice": pr["voice"]["file"], "music": "audio/music.mp3", "musicVolume": float(opts.get("music_volume", 0.16)),
+        "voice": pr["voice"]["file"], "music": "audio/music.mp3",
+        "musicVolume": float(opts.get("music_volume", DEFAULTS["music_volume"])),
         "sfx": cues, "film": float(opts.get("film", 1.0)),
         "captions": captions_from_words(words) if opts.get("captions", True) else [],
         "captionsFrom": hook_end if opts.get("captions_after_hook", True) else 0,
