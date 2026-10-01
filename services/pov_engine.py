@@ -1850,7 +1850,7 @@ def check_image(path, sc, no_text=True, faceless=False):
                                   else "."))
     content = [{"type": "text", "text": q},
                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(blob).decode()}}]
-    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=120)
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=240)  # proxy lent : 120 s ne suffisait plus
     return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
 
 
