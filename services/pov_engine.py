@@ -704,6 +704,8 @@ def project_channel(pr):
     """La chaîne telle que la voit cette vidéo : pr["format"] peut choisir une variante du modèle
     (autre format, même voix/style). La copie n'est jamais enregistrée."""
     ch = _with_style_rev(store.get_channel(pr["channel_id"]), pr)
+    if ch and faceless_object(ch, pr):  # le narrateur est un objet : il reste un objet dans tous les prompts
+        ch = dict(ch, _object=object_noun(pr))
     fmt = (pr or {}).get("format")
     if not ch or not fmt or fmt == ch.get("format"):
         return ch
@@ -895,7 +897,12 @@ def _style_parts(ch, scene_chars=None, cast=None):
                      "palette and shading exactly. Ignore its content, characters and composition.")
     present = _in_scene(cast if cast is not None else cast_list(ch), scene_chars)
     for c in present[:MAX_CHAR_REFS]:
-        if c.get("path") and os.path.isfile(c["path"]):
+        if c.get("path") and os.path.isfile(c["path"]) and ch.get("_object") and _norm_name(c["name"]) == "you":
+            refs.append(c["path"])
+            lines.append(f"Reference image {len(refs)} = {ch['_object']}, an inanimate OBJECT (not a character): draw this "
+                         "exact object once, same shape, colour, material and wear marks, as a real object at a realistic "
+                         "size, with no face, no eyes, no mouth, no arms and no legs.")
+        elif c.get("path") and os.path.isfile(c["path"]):
             refs.append(c["path"])
             lines.append(f"Reference image {len(refs)} = the character \"{c['name']}\": draw this character with "
                          "EXACTLY the same head, face, hair, body proportions, colors and outfit (only change the "
@@ -913,15 +920,23 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
     st = ch.get("style") or {}
     cast = cast if cast is not None else cast_list(ch)
     lines, refs = _style_parts(ch, scene_chars, cast)
-    chars_desc = [f"{c['name']}: {c['description']}" for c in _in_scene(cast, scene_chars) if c.get("description")]
+    obj = ch.get("_object")
+    chars_desc = [(f"THE OBJECT ({obj}, inanimate, drawn once, no face, no limbs): {c['description']}"
+                   if obj and _norm_name(c["name"]) == "you" else f"{c['name']}: {c['description']}")
+                  for c in _in_scene(cast, scene_chars) if c.get("description")]
     parts = lines + ["SCENE: " + scene_prompt.strip()]
     if chars_desc:
         parts.append("CHARACTERS IN THIS IMAGE: " + " | ".join(chars_desc))
     parts.append("ART STYLE: " + (st.get("prompt") or "").strip())
-    parts.append("EVERY person in the image — including background people, crowds, waiters, customers, passers-by, "
-                 "people on screens or in photos — is drawn in exactly the same character design as the main "
-                 "characters (same head shape, face style and proportions). Never draw a realistic or differently "
-                 "styled human.")
+    if obj:
+        parts.append(f"EVERY person in the image is one of the channel's simple cartoon figures (large round plain white "
+                     f"head, dot eyes, white mitten hands), with exactly two arms and two hands. Never draw a realistic "
+                     f"human. Objects are only objects: {obj} and every other object have no face, eyes, mouth or limbs.")
+    else:
+        parts.append("EVERY person in the image — including background people, crowds, waiters, customers, passers-by, "
+                     "people on screens or in photos — is drawn in exactly the same character design as the main "
+                     "characters (same head shape, face style and proportions). Never draw a realistic or differently "
+                     "styled human.")
     fmt = ("Tall 9:16 vertical frame, full-bleed illustration, main subject centered, no borders, no frame."
            if vertical else "Wide 16:9 landscape frame, full-bleed illustration, no borders, no frame.")
     if st.get("no_text", True) and not allow_text:
@@ -1558,8 +1573,18 @@ def job_replan(job, pid):
 # ── Prompts d'images ────────────────────────────────────────────────────────
 
 def _prompt_batch(ch, pr, scenes, all_scenes):
+    obj = ch.get("_object")
     roster = "\n".join(f"- {c['name']}" + (f" (also called: {', '.join(c['aliases'])})" if c["aliases"] else "")
-                       + f": {c.get('description', '')}" for c in cast_list(ch, pr)) or "- (no recurring character)"
+                       + (f" = THE OBJECT ({obj}), an inanimate object, NOT a character" if obj and _norm_name(c["name"]) == "you"
+                          else "") + f": {c.get('description', '')}" for c in cast_list(ch, pr)) or "- (no recurring character)"
+    you_rule = ('- If the narration talks to "you"/"tu"/"vous" and a protagonist character exists, show that character '
+                'doing it.')
+    if obj:
+        you_rule = f"""- "You" in the narration IS {obj}, an inanimate object. In the prompt NEVER write "You" and never personify it: write "{obj}" with its look from the cast line, and say where it is and what people do TO it (lying on, held in a hand, slid into a pocket, wrapped, scanned, loaded, parked, driven). It never acts, looks, thinks or feels; it has no face, no eyes, no mouth, no arms, no legs. Its situation shows its mood (cracks, a lit or dark screen, a dented panel, a tag, snow on it), and the people around it react.
+- Exactly ONE {obj} in each image, drawn once. Other objects of the same kind must clearly differ (other colour or model). Realistic size next to hands, people and furniture.
+- When the narration is "inside" it or about its parts, show that place directly (the cabin seen from the driver's seat, an open wallet, a card reader slot), never a second copy of {obj} inside it.
+- When the narration is about data, money or paperwork linked to it, show the real-world scene (a person at a laptop whose screen shows blurred rows, a hand holding a receipt, a stack of cash beside {obj}), never cartoon objects with faces.
+- Put "You" in "chars" whenever {obj} is visible, so its reference image is used."""
     heads = [h for h, _ in S.parse(pr.get("script") or "") if h]
     lines = []
     for sc in scenes:
@@ -1588,7 +1613,7 @@ CAST OF THIS VIDEO (their look is locked by reference images — in the prompt, 
 
 RULES:
 {direction}- Show the exact moment/idea the narration describes, literally and concretely: subject + action + setting + key props. One clear focal point, readable in 1 second.
-- If the narration talks to "you"/"tu"/"vous" and a protagonist character exists, show that character doing it.
+{you_rule}
 - "chars" must list EVERY cast member visible in the image, by exact name (aliases → the cast name). Other people (crowds, waiters, strangers) are not cast: describe them briefly in the prompt instead, always as the same kind of cartoon figures as the cast (never "realistic people").
 - Vary the camera across consecutive scenes (wide establishing, medium, close-up on hands/face/object, over-the-shoulder, top-down, low angle). Never the same framing twice in a row.
 - Stay historically / technically accurate (uniforms, tools, places, era).
@@ -1647,6 +1672,10 @@ def detect_cast(ch, pr):
     st = ch.get("style") or {}
     known = "\n".join(f"- {c['name']}: {c.get('description', '')}" for c in st.get("characters") or []) or "- none"
     script = S.narration(pr.get("script") or "")
+    obj = ch.get("_object")
+    obj_rule = (f'"You" is {obj}, an inanimate object, not a person: its description is the exact object only (type and '
+                f'model class, colour, material, case or finish, size, wear marks such as a cracked corner or a dent), '
+                f'never a face, eyes, mouth, arms, legs, clothes or personality.\n\n' if obj else "")
     prompt = f"""You are the character designer of a faceless 2D YouTube channel. Read this video script and define the CAST: the recurring or visually important characters who will appear in several illustrations (max {MAX_CAST}). Ignore one-off extras and crowds.
 
 VIDEO: {pr.get('title', '')}
@@ -1660,7 +1689,7 @@ For each cast member give:
 - "role": one line.
 - "description": a precise, FIXED visual description for the whole video, following the channel's character design (for white round-head stick figures: head is always the same, so identity = hairstyle and hair color, age cues, body type, and a signature default outfit with exact colors, plus 1 accessory). 30-60 words, English, no personality traits.
 
-Return JSON: {{"cast": [{{"name": "...", "aliases": ["..."], "role": "...", "description": "..."}}]}}
+{obj_rule}Return JSON: {{"cast": [{{"name": "...", "aliases": ["..."], "role": "...", "description": "..."}}]}}
 
 SCRIPT:
 \"\"\"
@@ -1792,6 +1821,12 @@ PROMPT: {prompt}
 Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
 
 
+def object_noun(pr):
+    """« Your Life as a Stolen Car » → « the stolen car » : le nom concret de l'objet narrateur pour les prompts."""
+    m = re.match(r"(?i)^\s*your life as (?:an?|the)\s+(.+?)\s*$", (pr or {}).get("title") or "")
+    return "the " + (m.group(1).lower() if m else "object of the title")
+
+
 def faceless_object(ch, pr):
     """Le narrateur est un objet dessiné sans visage (vidéos créées depuis le style_rev du modèle)."""
     rev = TEMPLATES.get((ch or {}).get("template") or "", {}).get("style_rev", 0)
@@ -1805,8 +1840,10 @@ def check_image(path, sc, no_text=True, faceless=False):
         blob = _jpeg(f.read(), side=896)
     q = IMAGE_QA.format(text=(sc.get("text") or "")[:400], prompt=(sc.get("prompt") or "")[:500],
                         no_text=";" if no_text else " (ignore this rule: text is allowed on this channel);",
-                        faceless=(";\n- the narrator object drawn with a face (eyes, a mouth): it must look like a real "
-                                  "object." if faceless else "."))
+                        faceless=(";\n- the narrator object drawn with a face (eyes, a mouth), arms or legs, or turned "
+                                  "into a person: it must look like a real object;\n- the narrator object shown twice, or "
+                                  "drawn inside a copy of itself (a car inside a car);\n- any object with a face." if faceless
+                                  else "."))
     content = [{"type": "text", "text": q},
                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(blob).decode()}}]
     res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=120)
