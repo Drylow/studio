@@ -931,7 +931,8 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
     if obj:
         parts.append(f"EVERY person in the image is one of the channel's simple cartoon figures (large round plain white "
                      f"head, dot eyes, white mitten hands), with exactly two arms and two hands. Never draw a realistic "
-                     f"human. Objects are only objects: {obj} and every other object have no face, eyes, mouth or limbs.")
+                     f"human. Objects are only objects: {obj} and every other object have no face, eyes, mouth or limbs, and "
+                     f"no brand logo or badge.")
     else:
         parts.append("EVERY person in the image — including background people, crowds, waiters, customers, passers-by, "
                      "people on screens or in photos — is drawn in exactly the same character design as the main "
@@ -1725,7 +1726,8 @@ def character_ref_image(ch, member):
     if _object_hero(ch) and _norm_name(member.get("name")) == "you":  # le narrateur est un objet
         prompt = (f"Character reference image of \"{member['name']}\": {member.get('description', '')}. "
                   "The object alone, front view slightly turned, upright, centered, NO face, no eyes, no mouth, "
-                  "no arms, no legs, no hands holding it, plain light grey background, nothing else in the image.")
+                  "no arms, no legs, no hands holding it, no brand logo or badge, plain light grey background, nothing "
+                  "else in the image.")
     st = ch.get("style") or {}
     refs, lines = [], []
     style_ref = channel_ref_path(ch, st.get("ref"))
