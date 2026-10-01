@@ -103,8 +103,11 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 
 ## 8. Git
 
-- Travail sur la branche courante de la session ; **commit + push après chaque changement**. Installer le
-  hook qui pousse tout seul : `cp production/git-post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit`.
+- **`main` est toujours à jour** : on travaille sur la branche de la session, et chaque commit est poussé
+  sur cette branche ET sur `main` (avance rapide). **Commit + push après chaque changement**, sans attendre
+  qu'on le demande. Installer le hook qui le fait tout seul :
+  `cp production/git-post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit`.
+  Si `main` a avancé ailleurs : `git fetch origin main && git merge origin/main` avant de pousser.
 - Messages de commit en anglais, courts, qui disent le « pourquoi ». Ne pas créer de PR sans qu'on le demande.
 
 ## 9. Carte du code
