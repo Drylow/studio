@@ -1,5 +1,6 @@
 // Rendu d'une vidéo du format Histoire.
 //   node render.mjs --project <dossier> [--out video.mp4] [--concurrency 4] [--still 12.5 --still-out f.jpg]
+//   node render.mjs --project <dossier> --chunk-dir <dossier> [--chunk-frames 2700]   (par morceaux, reprise)
 // Le dossier du projet contient timeline.json + ses médias (servi comme publicDir).
 // Chrome : REMOTION_BROWSER (sinon Remotion télécharge chrome-headless-shell au 1er lancement).
 import path from 'node:path';
@@ -33,6 +34,43 @@ if (args.stills !== undefined) {
     say({stage: 'still', t, output});
   }
   say({stage: 'done'});
+} else if (args['chunk-dir']) {
+  // rendu par morceaux, repris là où il s'est arrêté : une vidéo longue survit à un redémarrage de la machine
+  //   --chunk-dir <dossier> [--chunk-frames 2700]  → part_000.mp4… (vidéo sans son) + audio.wav
+  const dir = path.resolve(args['chunk-dir']);
+  fs.mkdirSync(dir, {recursive: true});
+  const total = composition.durationInFrames;
+  const size = parseInt(args['chunk-frames'] || '2700', 10);
+  const n = Math.ceil(total / size);
+  const concurrency = parseInt(args.concurrency || String(Math.max(1, Math.floor(os.cpus().length / 2))), 10);
+  const part = (i) => path.join(dir, `part_${String(i).padStart(3, '0')}.mp4`);
+  for (let i = 0; i < n; i++) {
+    if (fs.existsSync(part(i))) continue;
+    const tmp = part(i).replace('.mp4', '.tmp.mp4');
+    const frameRange = [i * size, Math.min(total, (i + 1) * size) - 1];
+    let last = -1;
+    await renderMedia({
+      composition, serveUrl, codec: 'h264', crf: 23, x264Preset: 'medium', muted: true, frameRange,
+      outputLocation: tmp, inputProps: timeline, browserExecutable, concurrency,
+      onProgress: ({progress}) => {
+        const p = Math.floor(progress * 100);
+        if (p !== last) {
+          last = p;
+          const done = frameRange[0] + progress * (frameRange[1] - frameRange[0] + 1);
+          say({stage: 'render', progress: done / total, renderedFrames: Math.round(done), total, chunk: i + 1, chunks: n});
+        }
+      },
+    });
+    fs.renameSync(tmp, part(i));
+  }
+  const wav = path.join(dir, 'audio.wav');
+  if (!fs.existsSync(wav)) {
+    say({stage: 'audio'});
+    await renderMedia({composition, serveUrl, codec: 'wav', outputLocation: wav + '.tmp.wav', inputProps: timeline,
+      browserExecutable, concurrency});
+    fs.renameSync(wav + '.tmp.wav', wav);
+  }
+  say({stage: 'done', chunks: n});
 } else {
   let last = -1;
   await renderMedia({

@@ -167,6 +167,11 @@ templates : section History Docs du `README.md`.
   l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits
   du casting d'abord, puis plans avec le portrait en référence) → `build_timeline` → rendu Remotion
   (`history_engine/render.mjs`) → loudnorm -14 LUFS. Projets dans `data/history/<id>/`.
+- **Production sans surveillance** (comme §4) : script relu → `python production/history_video.py new
+  work/<chaîne>/<vidéo> <clé> <script.md>` puis `echo "<chaîne>/<vidéo>" >> work/active.txt` (le superviseur
+  lance `history_video.py run` : voix → plan → images → rendu → miniature → Gofile, réessaie si l'IA sature).
+  Le rendu se fait **par morceaux** de 90 s (`render.mjs --chunk-dir`) : un redémarrage reprend au morceau
+  suivant. Une vidéo de 38 min ≈ 4-5 h de rendu sur 4 cœurs.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
   télécharger Chrome) et `REMOTION_CONCURRENCY=4` ; une vidéo de 3-4 min ≈ 15-25 min de rendu.

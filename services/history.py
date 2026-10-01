@@ -10,6 +10,7 @@
 
 Données : data/history/<id>/ (project.json, media/ = publicDir du rendu, vidéo finale à la racine).
 """
+import hashlib
 import io
 import json
 import math
@@ -1080,11 +1081,12 @@ def engine_ready():
     return True, node
 
 
-def _remotion(job, project_media, out_path, p0, p1):
+def _remotion(job, project_media, out_path, p0, p1, extra=()):
     ok, node = engine_ready()
     if not ok:
         raise RuntimeError(node)
-    cmd = [node, os.path.join(ENGINE_DIR, "render.mjs"), "--project", project_media, "--out", out_path]
+    cmd = [node, os.path.join(ENGINE_DIR, "render.mjs"), "--project", project_media] + (
+        ["--out", out_path] if out_path else []) + list(extra)
     conc = os.getenv("REMOTION_CONCURRENCY")
     if conc:
         cmd += ["--concurrency", conc]
@@ -1103,8 +1105,11 @@ def _remotion(job, project_media, out_path, p0, p1):
             if ev.get("stage") == "bundle":
                 job.update(p0, "Préparation du moteur d'animation…")
             elif ev.get("stage") == "render":
+                part = f" (morceau {ev['chunk']}/{ev['chunks']})" if ev.get("chunks") else ""
                 job.update(p0 + (p1 - p0) * float(ev.get("progress") or 0),
-                           f"Rendu {ev.get('renderedFrames', 0)}/{ev.get('total', '?')} images")
+                           f"Rendu {ev.get('renderedFrames', 0)}/{ev.get('total', '?')} images{part}")
+            elif ev.get("stage") == "audio":
+                job.update(p1, "Rendu du son…")
             if job.cancelled():
                 proc.kill()
                 raise store.JobCancelled("Annulé.")
@@ -1115,23 +1120,51 @@ def _remotion(job, project_media, out_path, p0, p1):
         raise RuntimeError("Rendu Remotion en échec :\n" + "\n".join(tail))
 
 
+def _read(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return f.read().strip()
+    except OSError:
+        return ""
+
+
 def job_render(job, pid):
     pr = get_project(pid)
     missing = _missing_assets(pr)
     if missing:
         raise RuntimeError(f"{len(missing)} image(s) manquante(s) : lance d'abord les images.")
-    job.update(0.02, "Musique, bruitages et sous-titres…")
-    tl = build_timeline(pr)
     d = media_dir(pid)
+    # rendu par morceaux (render.mjs --chunk-dir) : après un redémarrage, on reprend au morceau suivant. Les
+    # morceaux ne servent que pour la même timeline (même plan, même voix, mêmes options).
+    chunks = os.path.join(project_dir(pid), "chunks")
+    sig = hashlib.sha1(json.dumps([pr.get("plan"), pr.get("voice"), pr.get("options")], sort_keys=True,
+                                  default=str).encode("utf-8")).hexdigest()
+    saved = os.path.join(chunks, "timeline.json")
+    if _read(os.path.join(chunks, "sig.txt")) == sig and os.path.isfile(saved):
+        job.update(0.02, "Reprise du rendu…")
+        with open(saved, encoding="utf-8") as f:
+            tl = json.load(f)
+    else:
+        shutil.rmtree(chunks, ignore_errors=True)
+        job.update(0.02, "Musique, bruitages et sous-titres…")
+        tl = build_timeline(pr)
+        os.makedirs(chunks)
+        with open(saved, "w", encoding="utf-8") as f:
+            json.dump(tl, f, ensure_ascii=False)
+        with open(os.path.join(chunks, "sig.txt"), "w") as f:
+            f.write(sig)
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
-    raw = os.path.join(project_dir(pid), "render_raw.mp4")
-    _remotion(job, d, raw, 0.05, 0.94)
-    job.update(0.95, "Mixage final (-14 LUFS)…")
+    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", "2700"])
+    job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
+    parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
+    with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
+        f.writelines(f"file '{p}'\n" for p in parts)
     name = f"{HA.slug(pr['title'], 60)}_{int(time.time()) % 1000000}.mp4"
-    media.run(["-i", raw, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k",
-               "-movflags", "+faststart", os.path.join(project_dir(pid), name)])
-    os.remove(raw)
+    media.run(["-f", "concat", "-safe", "0", "-i", os.path.join(chunks, "parts.txt"), "-i", os.path.join(chunks, "audio.wav"),
+               "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac",
+               "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", os.path.join(project_dir(pid), name)])
+    shutil.rmtree(chunks, ignore_errors=True)
     old = (pr.get("render") or {}).get("file")
 
     def save(x):

@@ -62,3 +62,26 @@ def webhook():
     if not url:
         raise SystemExit("Pas de webhook Discord : mets DISCORD_WEBHOOK_URL dans .env")
     return url
+
+
+def gofile_upload(path, link_file, log, tries=6):
+    """Envoie la vidéo sur Gofile (md5 vérifié) ; le lien est gardé dans link_file et jamais redemandé."""
+    import hashlib
+    import json
+    import subprocess
+    if os.path.isfile(link_file):
+        return open(link_file).read().strip()
+    md5 = hashlib.md5(open(path, "rb").read()).hexdigest()
+    for k in range(tries):
+        r = subprocess.run(["curl", "-sS", "--max-time", "1800", "-F", f"file=@{path}",
+                            "https://upload.gofile.io/uploadfile"], capture_output=True, text=True)
+        try:
+            data = json.loads(r.stdout).get("data") or {}
+            if data.get("downloadPage") and data.get("md5", md5) == md5:
+                open(link_file, "w").write(data["downloadPage"])
+                return data["downloadPage"]
+            log("gofile réponse inattendue", r.stdout[:200])
+        except Exception as e:  # noqa: BLE001
+            log("gofile erreur", str(e)[:100], r.stderr[:200])
+        time.sleep(20 * (k + 1))
+    raise SystemExit("Gofile : échec")
