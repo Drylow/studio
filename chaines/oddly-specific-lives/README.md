@@ -23,6 +23,7 @@ Des histoires en POV, à la deuxième personne : « tu » épouses quelqu'un d'u
 - **Miniature pour une vidéo de sport** : la femme dans son décor (cage, parquet…), **sans roses**.
   - En tenue de son sport, ceinture ou trophée **sans logo**, un peu de sueur.
   - Sexy mais athlétique, jamais explicite.
+- **Toujours une femme différente à chaque vidéo** (demande de l'utilisateur) : autre visage, autre couleur de peau, autres cheveux. Le générateur ne doit copier que le style de la miniature de référence, jamais la femme qui est dessus.
 
 ## Règles
 

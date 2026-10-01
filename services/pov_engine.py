@@ -212,7 +212,9 @@ TEMPLATES = {
                        "thick white sticker outline around her; behind her the most iconic landmark or setting of her "
                        "country / world at golden hour or night, with a few small background people; the country's flag "
                        "as a flat rectangle with a thin black border in the top-left corner (no flag if no country). "
-                       "Warm saturated colors, clean bold outlines, no text.",
+                       "Warm saturated colors, clean bold outlines, no text. A NEW woman for every video: her face, "
+                       "skin tone, hair color and hairstyle must differ from any reference image and from the "
+                       "channel's previous thumbnails (never the same woman twice).",
         "bible": "",
     },
     "oddly_expensive_en": {
@@ -2700,7 +2702,8 @@ Return JSON: {{"thumbs": [{{"text": "{'SHORT TEXT' if with_text else ''}", "prom
             # style de miniature propre à la chaîne (différent du style des images de la vidéo)
             refs = [thumb_ref] if thumb_ref else []
             full = (("Reference image 1 = THUMBNAIL STYLE reference: copy its art style, rendering, outlines, "
-                     "composition and color treatment exactly; the subject and setting are new, as described.\n")
+                     "composition and color treatment exactly; the subject and setting are new, as described. "
+                     "Never copy the face, hair or look of a person in the reference: draw new people.\n")
                     if thumb_ref else "") + prompt
             art = channel_ref_path(ch, (ch.get("style") or {}).get("ref"))
             if not thumb_ref and art and os.path.isfile(art):  # pas encore de miniature modèle : le style des images
