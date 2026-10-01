@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>History Docs</title>
+<link rel="stylesheet" href="../pov-studio/app.css">
+<link rel="stylesheet" href="../osl-studio/osl.css">
+<link rel="stylesheet" href="history.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">H</div><span>History <b>Docs</b></span></div>
+  <div class="status-dots" id="topInfo"></div>
+</header>
+
+<main class="osl">
+  <section class="card newvid">
+    <h2>Nouvelle vidéo d'histoire</h2>
+    <div class="sub">Le style « Dose of History » : immersion à la 2<sup>e</sup> personne, images dessinées (ou photoréalistes) avec zoom lent, et quelques animations bien placées (citations synchronisées sur la voix, phrases chocs, grands chiffres, cartes de mouvements, fiches perso, duos de portraits, vraies archives de musée) sur un léger grain papier.</div>
+    <label class="f"><span class="lbl">Titre</span>
+      <input type="text" id="title" maxlength="160" placeholder="How Hannibal Destroyed Rome's Greatest Army at Cannae" autocomplete="off"></label>
+    <div class="durrow">
+      <label class="f grow"><span class="lbl">Durée <b id="minOut">10 min</b></span>
+        <input type="range" id="minutes" min="1" max="40" step="1" value="10"></label>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="hgrid">
+      <label class="f"><span class="lbl">Voix</span><select id="voice"></select></label>
+      <label class="f"><span class="lbl">Style d'image</span><select id="style"></select></label>
+      <label class="f"><span class="lbl">Pellicule / grain</span>
+        <select id="film"><option value="1">Normale</option><option value="0.6">Légère</option><option value="1.4">Forte</option><option value="0">Aucune</option></select></label>
+    </div>
+    <div class="opts">
+      <label><input type="checkbox" id="captions" checked> Sous-titres</label>
+      <label><input type="checkbox" id="afterHook"> Pas de sous-titres pendant le hook</label>
+    </div>
+    <div class="tpls"><span class="lbl">Animations</span><div id="tpls"></div></div>
+    <div class="est" id="est"></div>
+    <details class="notes"><summary>Consignes (facultatif)</summary>
+      <textarea id="notes" rows="3" placeholder="Un angle, une source à citer, un moment à ne pas rater…"></textarea>
+    </details>
+    <div class="row between" style="margin-top:14px">
+      <div class="hint" id="envHint"></div>
+      <button class="btn primary big" id="create">🏛 Créer la vidéo</button>
+    </div>
+  </section>
+
+  <div class="section-title"><h2>Vidéos</h2><span class="faint small" id="count"></span></div>
+  <section id="list" class="vlist"></section>
+</main>
+
+<div id="modalRoot"></div>
+<div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
+<div class="toast-wrap" id="toasts"></div>
+<script src="history.js"></script>
+</body>
+</html>
