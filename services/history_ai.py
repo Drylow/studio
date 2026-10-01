@@ -141,12 +141,19 @@ Pacing rules:
 """
 
 
-def plan_visuals(sentences, duration, hook_end_idx, allowed=None, max_cards=6, require_all=False):
+def plan_visuals(sentences, duration, hook_end_idx, allowed=None, max_cards=6, require_all=False, first=0, cast=None):
+    """first = index global de la 1re phrase (vidéo longue planifiée par morceaux) ; cast = casting déjà fixé."""
     allowed = [t for t in (allowed or TEMPLATES) if t in TEMPLATES]
-    lines = "\n".join(f"[{i}] ({s['start']:.1f}-{s['end']:.1f}s) {s['text']}" for i, s in enumerate(sentences))
+    lines = "\n".join(f"[{first + i}] ({s['start']:.1f}-{s['end']:.1f}s) {s['text']}" for i, s in enumerate(sentences))
     must = ("Use each of these card types exactly once: " + ", ".join(allowed) + ".") if require_all else ""
+    known = ""
+    if cast:
+        known = ("\nThis is one part of a longer video. The cast is already fixed, reuse these exact names and looks "
+                 "(add a new person only if they appear for the first time here): "
+                 + json.dumps(cast, ensure_ascii=False) + "\n")
     prompt = (_plan_rules(allowed, max_cards).replace("HOOK_END", str(hook_end_idx))
-              + f"\nTotal duration: {duration:.1f}s. HOOK_END = sentence {hook_end_idx}. {must}\n\nSentences:\n{lines}\n\n"
+              .replace("The first beat has at=0.", f"The first beat has at={first}.")
+              + f"\nTotal duration: {duration:.1f}s. HOOK_END = sentence {hook_end_idx}. {must}{known}\n\nSentences:\n{lines}\n\n"
               'Return JSON only: {"cast":[...], "beats":[...]}')
     data = ai.chat_json(prompt, model=ai.text_model(), reasoning="high", timeout=400)
     beats = [b for b in data.get("beats") or [] if isinstance(b, dict) and b.get("type")]

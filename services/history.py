@@ -26,6 +26,9 @@ from services import history_ai as HA
 from services import history_geo as GEO
 from services import history_sources as SRC
 from services import history_audio as HAU
+from services import history_channels as HC
+from services import history_thumbs as TH
+from services import pov_script as S
 from services import pov_store as store
 
 APP_DIR = store.APP_DIR
@@ -37,7 +40,7 @@ DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_
             "music_volume": 0.06, "all_templates": False,
             # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
             "templates": ["statement", "number", "map", "quote", "character", "compare", "archive"],
-            "image_style": "ink",
+            "image_style": "ink", "channel": "",
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
@@ -129,21 +132,54 @@ def summary(pr):
             "stage": stage(pr), "duration": (pr.get("voice") or {}).get("duration"),
             "segments": len(segs), "cards": sum(1 for s in segs if s["type"] not in ("image", "video")),
             "images_missing": len(_missing_assets(pr)) if segs else None,
-            "render": pr.get("render"), "job": job.as_dict() if job else None}
+            "render": pr.get("render"), "thumbnail": pr.get("thumbnail"),
+            "channel": (pr.get("options") or {}).get("channel") or "", "job": job.as_dict() if job else None}
 
 
 # ── 1. Script ───────────────────────────────────────────────────────────────
 
 def job_script(job, pid):
     pr = get_project(pid)
-    job.update(0.05, "Écriture du script (style documentaire)…")
-    sc = HA.write_script(pr["title"], pr["minutes"], pr.get("notes", ""), pr["options"].get("language", "en"))
+    key = (pr.get("options") or {}).get("channel")
+    fos = None
+    if HC.channel(key):
+        # chaîne History Docs : FacelessOS (recherche, hooks, plan, rédaction, audit greenlight) avec ses skills
+        job.update(0.01, "FacelessOS : préparation de la chaîne…")
+        res = S.generate(HC.fos_channel(key), pr["title"], pr["minutes"], pr.get("notes", ""),
+                         progress=lambda p, m, _partial=None: job.update(0.02 + 0.96 * p, m), history=_channel_history(key, pid))
+        sc = script_from_fos(res["script"], pr["title"])
+        fos = {"verdict": (res.get("review") or {}).get("verdict"), "rotation": (res.get("outline") or {}).get("rotation"),
+               "files_used": (res.get("review") or {}).get("files_used")}
+    else:
+        job.update(0.05, "Écriture du script (style documentaire)…")
+        sc = HA.write_script(pr["title"], pr["minutes"], pr.get("notes", ""), pr["options"].get("language", "en"))
 
     def save(x):
-        x["script"] = sc
+        x["script"], x["fos"] = sc, fos
         x["voice"] = x["plan"] = x["render"] = None
     update_project(pid, save)
     job.update(1.0, f"Script prêt : {len(HA.narration(sc).split())} mots.")
+
+
+def script_from_fos(text, title):
+    """Texte FacelessOS (hook sans titre, puis « ## chapitre ») → {title, hook, sections} de l'outil."""
+    parts = S.parse(text)
+    hook = parts[0][1] if parts and not parts[0][0] else ""
+    body = parts[1:] if hook else parts
+    sections = [{"heading": h or f"Part {i + 1}", "text": re.sub(r"\s+", " ", t).strip()} for i, (h, t) in enumerate(body)]
+    if not hook and sections:
+        hook = sections.pop(0)["text"]
+    return {"title": title, "hook": re.sub(r"\s+", " ", hook).strip(), "sections": sections}
+
+
+def _channel_history(key, pid):
+    """Les dernières vidéos de la chaîne, pour que FacelessOS fasse tourner les angles (rotation)."""
+    out = []
+    for p in list_projects():
+        if p["id"] != pid and (p.get("options") or {}).get("channel") == key and p.get("script"):
+            out.append({"title": p["title"], "hook": p["script"].get("hook", ""),
+                        "rotation": json.dumps((p.get("fos") or {}).get("rotation") or "")})
+    return out[:3]
 
 
 # ── 2. Voix ─────────────────────────────────────────────────────────────────
@@ -717,8 +753,52 @@ def _diversify(segs, sents, cast, style):
         said = " ".join(x["text"] for x in sents if x["start"] < s["end"] and x["end"] > s["start"]) or \
             " ".join(x["text"] for x in sents if x["start"] <= mid <= x["end"])
         items.append({"i": k, "text": said, "prompt": s.get("_prompt", ""), "chars": s.get("_chars") or []})
-    for s, it in zip(imgs, HA.diversify_shots(items, cast, HA.image_style(style)["name"])):
+    name = HA.image_style(style)["name"]
+    chunks = [items[k:k + 45] for k in range(0, len(items), 45)]  # vidéo longue : le monteur image travaille par lots
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        done = list(ex.map(lambda c: HA.diversify_shots(c, cast, name), chunks))
+    for s, it in zip(imgs, [it for c in done for it in c]):
         s["_prompt"], s["_chars"] = it["prompt"], it["chars"]
+
+
+PLAN_CHUNK = 90  # phrases par appel au-delà desquelles on planifie par morceaux (vidéos longues)
+
+
+def _plan_all(job, sents, duration, hook_idx, allowed, max_cards, require_all=False):
+    """Plan visuel ; une vidéo longue est planifiée par morceaux (le 1er fixe le casting, les autres en parallèle)."""
+    rows = [{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents]
+    if len(rows) <= PLAN_CHUNK * 1.3:
+        return HA.plan_visuals(rows, duration, hook_idx, allowed=allowed, max_cards=max_cards, require_all=require_all)
+    n = -(-len(rows) // PLAN_CHUNK)
+    size = -(-len(rows) // n)
+    bounds = [(k * size, min(len(rows), (k + 1) * size)) for k in range(n)]
+
+    def cards_for(a, b):
+        return max(1, int(round(max_cards * (rows[b - 1]["end"] - rows[a]["start"]) / max(1.0, duration))))
+
+    a, b = bounds[0]
+    job.update(0.12, f"Plan visuel : partie 1/{n}…")
+    head = HA.plan_visuals(rows[a:b], duration, hook_idx, allowed=allowed, max_cards=cards_for(a, b))
+    cast = head["cast"]
+    parts = {0: head}
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {ex.submit(HA.plan_visuals, rows[a:b], duration, -1, allowed, cards_for(a, b), False, a, cast): k
+                for k, (a, b) in enumerate(bounds) if k}
+        for fut in as_completed(futs):
+            parts[futs[fut]] = fut.result()
+            job.update(0.12 + 0.5 * len(parts) / n, f"Plan visuel : {len(parts)}/{n} parties…")
+    beats, names = [], {c.get("name") for c in cast}
+    for k in range(n):
+        lo, hi = bounds[k]
+        part = [x for x in parts[k]["beats"] if lo <= int(x.get("at", lo) or 0) < hi] or parts[k]["beats"][:1]
+        if part and int(part[0].get("at", 0) or 0) != lo:
+            part[0]["at"] = lo
+        beats += part
+        for c in parts[k]["cast"]:
+            if c.get("name") not in names:
+                cast.append(c)
+                names.add(c.get("name"))
+    return {"cast": cast, "beats": beats}
 
 
 def job_plan(job, pid):
@@ -732,8 +812,7 @@ def job_plan(job, pid):
     opts = dict(DEFAULTS, **(pr.get("options") or {}))
     allowed = opts["templates"]
     max_cards = max(2, int(round(duration / 60 * float(opts["cards_per_min"]))))
-    plan = HA.plan_visuals([{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents], duration, hook_idx,
-                           allowed=allowed, max_cards=max_cards, require_all=opts.get("all_templates", False))
+    plan = _plan_all(job, sents, duration, hook_idx, allowed, max_cards, opts.get("all_templates", False))
     segs, cast = build_segments(plan, sents, words, duration, hook_end, allowed=allowed, max_cards=max_cards)
     job.update(0.7, "Monteur image : variété des plans…")
     _diversify(segs, sents, cast, opts.get("image_style"))
@@ -1071,6 +1150,46 @@ class _Sub:
         return self.job.cancelled()
 
 
+THUMB_LOOK = ("YouTube thumbnail composition: ONE strong subject, big and close, dramatic contrast and a vivid splash of "
+              "red; keep the {side} third of the frame calmer (sky, smoke or plain paper) for a title added later.")
+
+
+def job_thumbnail(job, pid):
+    """Miniature : image encre et aquarelle + 2 lignes de texte posées par le code (ligne blanche, ligne rouge)."""
+    pr = get_project(pid)
+    key = (pr.get("options") or {}).get("channel")
+    idea = HC.idea_for(key, pr["title"]) if key else None
+    th = dict(pr.get("thumb") or {})
+    if idea:
+        th = {"text": idea["thumb_text"], "side": idea["thumb_side"], "scene": idea["thumb_scene"],
+              "base": idea["image"], **th}
+    if not th.get("text") or not th.get("scene"):
+        job.update(0.1, "Miniature : texte et scène…")
+        data = ai.chat_json(
+            f'YouTube thumbnail for the history documentary "{pr["title"]}" (channel style: hand-drawn ink and '
+            'watercolour, like Dose of History). Return JSON {"text": ["LINE 1", "LINE 2"], "side": "left|right", '
+            '"scene": "one sentence: the single most striking moment, one big subject, era-accurate"}. The text is 2-4 '
+            'words in total, a hook that adds to the title without repeating it (a number, an age, a verdict), '
+            'line 2 is the punch (shown in red).', model=ai.fast_model(), timeout=120)
+        th.update(text=[str(x) for x in (data.get("text") or [])][:2] or ["THE TRUTH"],
+                  side="left" if data.get("side") == "left" else "right", scene=str(data.get("scene") or pr["title"]))
+    base = th.get("base")
+    if not base or not os.path.isfile(base):
+        job.update(0.3, "Miniature : image…")
+        style = HA.image_style((pr.get("options") or {}).get("image_style"))
+        blob = ai.generate_image(f"{th['scene']} {THUMB_LOOK.format(side=th.get('side', 'right'))} {style['shot']}",
+                                 width=1920, height=1080, quality="high")
+        base = os.path.join(project_dir(pid), "thumbnail_base.jpg")
+        ai.fit_cover(blob, 1280, 720, base)
+    TH.compose(base, th["text"], th.get("side", "right"), os.path.join(project_dir(pid), "thumbnail.jpg"))
+
+    def save(x):
+        x["thumb"] = {k: v for k, v in th.items() if k != "base"}
+        x["thumbnail"] = "thumbnail.jpg"
+    update_project(pid, save)
+    job.update(1.0, "Miniature prête.")
+
+
 def job_autopilot(job, pid):
     steps = [("script", job_script, 0.0, 0.12, "1/5 Script"), ("voice", job_voice, 0.12, 0.22, "2/5 Voix"),
              ("plan", job_plan, 0.22, 0.3, "3/5 Plan visuel"), ("images", job_images, 0.3, 0.7, "4/5 Images"),
@@ -1083,11 +1202,16 @@ def job_autopilot(job, pid):
         if STAGES.index(key) < STAGES.index(cur):
             continue
         fn(_Sub(job, a, b, label), pid)
+    if not get_project(pid).get("thumbnail"):
+        try:
+            job_thumbnail(_Sub(job, 0.99, 1.0, "Miniature"), pid)
+        except Exception as e:  # noqa: BLE001 — la vidéo est faite : une miniature ratée se refait à part
+            print(f"[thumbnail] {e}", flush=True)
     job.update(1.0, "Vidéo terminée ✔")
 
 
 JOBS = {"script": job_script, "voice": job_voice, "plan": job_plan, "images": job_images, "render": job_render,
-        "autopilot": job_autopilot}
+        "thumbnail": job_thumbnail, "autopilot": job_autopilot}
 
 
 def invalidate_from(pid, step):

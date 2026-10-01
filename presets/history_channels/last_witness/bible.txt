@@ -1,0 +1,16 @@
+HOOK: Sentence one lands with immediate second-person sensory placement in the present tense. The first 45 seconds build a fast context lean (time, location), a jolt of scale (an unending line of enemies), a turn challenging popular media myths ("nothing like the movies"), and a promise to reveal the ugly, practical reality behind the battle's core choice. The hook section runs approximately 250 words. The main premise label is introduced early in sentence two.
+
+BEAT MAP: 
+0–18%: Immersion hook, myth-busting promise, and army logistics.
+18–40%: Pre-battle setup, commander profiles, and the night-tent debate. Emotional turn: moving from dread to disciplined resolve through the refusal of a safe shortcut.
+40–70%: Tactical execution, diagonal drift, and counter-weapon mechanics. Emotional turn: terror weapons dismantled by unheroic, mechanical discipline.
+70–90%: Battlefield rift, Parmenion's collapse, and the strategic turn where glory is abandoned to save the army.
+90–100%: Systematic collapse of the opponent, historical aftermath, and takeaway.
+
+VOICE: Present tense, second-person immersion ("you are holding") paired with objective historical narrator commentary. Sentence rhythm averages 13.4 words, balancing sudden short jolts (13% of sentences at 1–4 words) with descriptive structural rolls (13% at 25+ words). Devices lean on extreme understatement, precise grounding numbers, and physical mechanics. Exact verbatim shapes from the text: "It is a horizon.", "That is not what happened.", "I will not steal the victory."
+
+DIALOGUE: Quoted dialogue is avoided entirely (zero dramatized character lines). Historical speeches are summarized for structural substance rather than voice-acted drama: "The substance of it is preserved. And the substance is this." Time jumps and transitions use hard spatial and temporal anchors rather than cinematic wipes ("It is the night before", "Dawn on the 1st of October", "While the horsemen kill each other on the flank").
+
+MOTIFS: Recurring structural motifs contrast Hollywood romanticism against practical mechanics, contrast youthful aggression with older defensive experience, and use logistical facts to dismantle exaggerated propaganda. The ending lands quietly on a single grounded resolution: strategic discipline under pressure matters more than cinematic heroics.
+
+AVOID: Never reuse plot, names, specific historical events, or verbatim phrasing from this script. Do not write in an epic trailer voice, do not use dramatic voice-acted dialogue, and never use em dashes. Follow FacelessOS strict limits: a maximum of two antithesis constructions and exactly one aphoristic closer per script.

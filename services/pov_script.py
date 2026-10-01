@@ -162,6 +162,23 @@ FORMATS = {
 - Honest and dry: never glamorize crime, never mock the victims, no violence beyond what the story strictly needs and nothing graphic.
 - ENDING (last hand): a quiet scene with the person who holds you now, who knows nothing about your past; one trace of the first owner (a photo, a scratch, a name) called back; your final worth next to what you first cost; a last physical image. Never summarize the video.""",
     },
+    "history_doc": {
+        "name": "History documentary (style Dose of History)",
+        "desc": "« The BRUTAL Way … Actually Fought », « They Didn't Just Kill X — The Truth About Y », « X's Final Minutes "
+                "Were Too Brutal for History Books » — documentaire d'histoire immersif, chronologique et sourcé (chaînes "
+                "History Docs : Last Witness, Frontier Blood).",
+        "heading": "short chapter title (2-5 words), structure only, never spoken (e.g. \"The night before\", \"First contact\", "
+                   "\"The last ridge\", \"What the report left out\")",
+        "structure": """IMMERSIVE HISTORY DOCUMENTARY in the register of the reference video: one calm, grave narrator, present tense for the action, plain words, short and long sentences mixed. No host persona, no greeting, no channel name, no "in this video".
+- HOOK (no heading, ~130-190 words, done by ~1:10): sentence one is the exact moment, with the time of day, the date and year, the place, the light or weather. Within the first sentences, restate the title's promise in the narrator's own words ("and you are about to discover the brutal way..., which is nothing like the movies"). Put the viewer physically there in second person ("If you are standing in the front rank..."), with hard numbers (forces, ages, weapons, distances). Name the popular version and say it is wrong. End on the stakes of the next hours.
+- BODY: 7-10 chapters in strict chronological order (the days or hours before, the approach, first contact, the turn, the worst moment, the end, the aftermath, what the record left out). Each chapter: one concrete scene (place, hour, light, sound) → what really happened, with numbers, names, ranks, distances, weapons and tactics explained plainly, so the manoeuvre can be drawn on a map → at least one primary source named inside the sentence (who wrote it, when, how close they were to the events); when sources disagree, say so and give the range → the human cost, stated flatly → a forward hook into the next chapter.
+- SECOND PERSON is a lens, not a character: switch to "you" to place the viewer inside key moments (a rank, a wall, a ridge, a village), then come back to documentary narration. Never invent a named fictional character; real people only, with documented facts and short verbatim quotes from real sources (letters, memoirs, testimony, reports).
+- MYTH VS RECORD: pay off the title's promise 3-5 times with specific contrasts between the popular version (films, paintings, school version) and what the record shows.
+- NUMBERS in nearly every paragraph (forces, casualties, distances, weights, ranges, hours, ages), rounded and taken from the research notes; contested figures are given as a range with who claims them.
+- TONE: grave, vivid, precise. Brutal realities are stated plainly and never relished: no gore for its own sake, no glorifying killing, no mocking anyone; respectful of every people involved, especially Indigenous nations and civilians, whose own accounts are cited as sources, never as colour. No moralizing either.
+- RE-HOOKS every 2-3 minutes ("But the worst part was still two hours away."). At most one short subscribe line, after the 8th minute.
+- ENDING: the aftermath with numbers (dead, wounded, prisoners, what became of the main figures), what the official version left out and how we know (sources, archaeology), a callback to the opening image, one last grave line. Stop. No "see you next time".""",
+    },
     "story": {
         "name": "Histoire racontée (documentaire narratif)",
         "desc": "Une histoire vraie racontée comme un thriller, avec suspense et rebondissements.",

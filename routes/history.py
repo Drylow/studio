@@ -11,6 +11,7 @@ from flask import Blueprint, jsonify, request, send_from_directory, session
 from services import ai, media, tts
 from services import history as H
 from services import history_ai as HA
+from services import history_channels as HC
 from services import pov_store as store
 
 history_bp = Blueprint("history", __name__)
@@ -55,6 +56,9 @@ def config():
     return jsonify({"ai": ai.configured(), "tts": tts.provider_status(), "ffmpeg": media.available(),
                     "node": bool(node), "engine_deps": engine_deps, "voices": VOICES, "defaults": H.DEFAULTS,
                     "styles": [{"key": k, "name": v["name"]} for k, v in HA.IMAGE_STYLES.items()],
+                    "channels": [{"key": k, "name": c["name"], "handle": c["handle"], "minutes": c["minutes"],
+                                  "image_style": c["image_style"], "ideas": [i["title"] for i in HC.ideas(k)]}
+                                 for k, c in HC.CHANNELS.items()],
                     "wpm": 153, "data_dir": H.data_dir()})
 
 

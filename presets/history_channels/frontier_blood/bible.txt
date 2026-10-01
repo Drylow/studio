@@ -1,0 +1,30 @@
+**FORMAT**  
+Historical documentary debunk format. Uses immersive second-person perspective to dismantle pop-culture myths through logistical realism and tactical analysis.
+
+**HOOK**  
+Sentence one lands by dropping the viewer directly into a specific time, place, and sensory scene in present tense ("It is just after sunrise..."). The first ~45 seconds (~180 words) execute a four-part sequence: context lean (331 BCE, Mesopotamia plane), jolt ("nothing like the movies"), turn ("everything is wrong"), and promise (revealing the mechanical reality and the decision that saved the army). The premise label ("Gaugamela") lands in sentence two.
+
+**BEAT MAP**  
+- **0–5% Immersion & Debunk Hook:** Visual setup, scale, myth-busting premise.  
+- **5–18% Context & Army Breakdown:** Background of leaders, logistics over propaganda numbers. *Turn: Realizing the odds are terrible, not miraculous.*  
+- **18–35% The Tactical Dilemma:** The night council, Parmenion’s safe plan versus Alexander’s daylight gamble. *Turn: Understanding the political calculus of refusing a night attack.*  
+- **35–70% The Battle Execution:** The diagonal drift, cavalry engagements, subverting chariot terror. *Turn: Dismantling cinematic panic into mechanical procedure.*  
+- **70–90% The Climax & Pivot:** Breaking the center, pursuing the king, and turning back to save the left wing. *Turn: Personal glory abandoned for army survival.*  
+- **90–100% Resolution:** Re-evaluating legacy through brutal operational reality.
+
+**VOICE**  
+Told in second-person immersion ("you are holding") paired with third-person historical present tense ("Alexander rides the line"). Sentence rhythm averages 13.4 words per sentence, relying on contrast: 13% short punchy statements (1–4 words) balanced by 13% long analytical builds (25+ words). Employs exact numbers, understated horror, and historical demystification.  
+*Verbatim example shapes:*  
+- "The dust has not risen yet."  
+- "It is a horizon."  
+- "That is not what happened."  
+- "They are trapped animals."
+
+**DIALOGUE**  
+Zero quoted dialogue lines are used. Dialogue is handled as reported historical substance rather than theatrical performance (e.g., "According to Arrian... the substance of it is preserved"). Transitions use spatial positioning ("Across the plain...", "On the Macedonian right...") and hard time markers ("It is the night before", "Dawn on the 1st of October").
+
+**MOTIFS**  
+Recurring motifs include "what the movies got wrong," ugly mechanical utility versus dramatic glory, daylight as political proof, and age versus youth. The ending lands by returning to the central question posed in the hook, delivering an un-glamorized operational answer rather than a heroic myth.
+
+**AVOID**  
+Never copy content, names, or narrative plots. Follow FacelessOS hard constraints: no em dashes anywhere in the script, at most 2 antithesis constructions per script, at most 1 aphoristic closer at the very end, and zero cinematic trailer voice. Maintain dry, grounded clarity over hype.
