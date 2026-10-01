@@ -358,6 +358,14 @@ TEMPLATES = {
                     "its own \"HAND #n\" card automatically at the start of its part: never add another animation "
                     "in those first scenes.",
         "fx_types": ["counter", "route", "label", "stamp", "list", "timeline", "split", "bars"],
+        "fx_density": "about 30-40% (a story first: most scenes stay clean, animations only for the numbers, "
+                      "places and insider words that matter)",
+        "fx_rules": "Counters: only a real amount or count said aloud, label = exactly what the narration says "
+                    "(\"A DAY\", never \"TODAY\" if it says a day), \"from\" lower than \"to\". Route: only "
+                    "when the object itself physically travels between two real named places (never a dot on a "
+                    "map, never a person's walk). Label: only a real insider term, tool or place being named "
+                    "(FARADAY BAG, LOST MODE, FREE PORT), never a description of the scene (EMPTY TABLE) and "
+                    "never a phrase with brackets. Never two animations about the same number in a row.",
         "fx_guide": """ANIMATION TYPES (at most ONE per scene, JSON objects; "at" = the exact word of THIS scene's narration where it
 appears, usually the number or the keyword):
 - {"type":"counter","to":"$300","from":"$0","label":"WHAT YOU'RE WORTH NOW","at":"300"} : what the object is
@@ -2009,6 +2017,7 @@ Your job: make it lively and clear, like a top channel, WITHOUT clutter.
 Clarity: text on screen must make sense on its own for a viewer outside the US. Never leave jargon or a vague
 phrase alone on a sheet, list or label: add a 2-4 word gloss (e.g. "One 401(k) (retirement savings)", "3 fights: kids,
 house, retirement", "QDRO (court order to split retirement)").
+{t.get("fx_rules") or ""}
 Density: {density} of scenes get an animation; never the same type in 3 consecutive animated scenes (receipt
 excepted when the tab really changes); leave some scenes clean. Every number you write MUST appear exactly in the
 narration (same digits); never compute new numbers, never invent sources. Text is English, short, UPPERCASE for
@@ -2043,6 +2052,8 @@ per scene above, in order."""
             ahead = 10 if fx and fx.get("type") == "timeline" else 3
             ctx = " ".join(x.get("text") or "" for x in scenes if i - 2 <= x["i"] <= i + ahead) + " " + \
                 heads.get((scenes[i] if 0 <= i < len(scenes) else {}).get("section"), "")  # + titre de sa partie
+            if fx and fx.get("type") == "counter" and str(fx.get("from") or "").strip() == str(fx.get("to") or "").strip():
+                fx = None  # un compteur qui ne compte rien
             if fx and (fx.get("type") not in types or not set(_fx_numbers(fx)) <= allowed
                        or not _grounded(fx, ctx)):
                 if log:
