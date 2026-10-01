@@ -10,3 +10,5 @@ edge-tts>=7.2
 imageio-ffmpeg>=0.5
 # 2D Videos — récupération des transcriptions YouTube (bible de chaîne). Optionnel.
 youtube-transcript-api>=1.2
+# History Docs — sous-titres calés sur la voix (alignement mot à mot local). Optionnel.
+faster-whisper>=1.0
