@@ -2179,11 +2179,20 @@ def intro_items(pr, limit=4):
         if len(n) > 20:
             n = " ".join(n.split()[-2:])
         names.append(n.upper())
-    if not names:
+    if not names:  # lignes des tickets, sans les récapitulatifs (même règle que le ticket à l'écran)
+        from services import motion
+        rows, total = [], None
         for s in pr.get("scenes") or []:
-            for it in ((s.get("fx") or {}).get("items") or []) if (s.get("fx") or {}).get("type") == "receipt" else []:
-                if isinstance(it, dict) and it.get("item"):
-                    names.append(str(it["item"]).upper()[:20])
+            fx = s.get("fx") or {}
+            if fx.get("type") != "receipt":
+                continue
+            asked = [(str(it.get("item") or ""), str(it.get("amount") or "")) for it in fx.get("items") or []
+                     if isinstance(it, dict) and it.get("item")]
+            new = motion.recap_filter(rows, asked, total, str(fx.get("total") or ""))
+            rows += new
+            if new or not asked:  # un simple récapitulatif garde le total du ticket
+                total = str(fx.get("total") or "") or total
+        names = [n.upper()[:20] for n, _ in rows]
     return list(dict.fromkeys(names))[:limit] or ["THE BILL"]
 
 

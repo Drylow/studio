@@ -316,6 +316,29 @@ class Counter(Fx):
         return transform(im, scale=0.6 + 0.4 * ease_back(seg(t, 0, 0.3)), alpha=seg(t, 0, 0.1))
 
 
+def _amount(s):
+    n = parse_number(s or "")
+    return n[1] if n else None
+
+
+def recap_filter(old, asked, old_total, total):
+    """Lignes vraiment nouvelles d'un ticket : un récapitulatif (« les soins, 38 688 $ ; l'hospice, 0 $… »)
+    ne rajoute pas une ligne dont le montant est déjà sur le ticket, sauf si le total annoncé augmente
+    exactement de ce montant (deux postes différents au même prix)."""
+    seen = [_amount(a) for _, a in old]
+    ot, tt = _amount(old_total), _amount(total)
+    out = []
+    for item, amount in asked:
+        v = _amount(amount)
+        if v is not None and v in seen and not (v and ot is not None and tt is not None and abs(ot + v - tt) < 0.5):
+            continue
+        out.append((item, amount))
+        seen.append(v)
+        if ot is not None and v is not None:
+            ot += v
+    return out
+
+
 class Receipt(Fx):
     """Ticket de caisse : garde les lignes des tickets précédents (state["receipt"])."""
 
@@ -324,10 +347,13 @@ class Receipt(Fx):
         px, py, pw, ph = _panel(self.geo)
         st = self.state.setdefault("receipt", {"items": [], "total": None})
         self.old = list(st["items"])
-        self.new = [(str(i.get("item") or "")[:30], str(i.get("amount") or "")) for i in self.spec.get("items") or []
-                    if isinstance(i, dict)]
         self.old_total = st["total"]
         self.total = str(self.spec.get("total") or "")
+        asked = [(str(i.get("item") or "")[:30], str(i.get("amount") or "")) for i in self.spec.get("items") or []
+                 if isinstance(i, dict)]
+        self.new = recap_filter(self.old, asked, self.old_total, self.total)
+        if asked and not self.new and self.old_total:  # simple récapitulatif : le total reste celui du ticket
+            self.total = self.old_total
         st["items"] = self.old + self.new
         st["total"] = self.total or st["total"]
         rows = (self.old + self.new)[-6:]
