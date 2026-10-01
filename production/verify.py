@@ -61,8 +61,9 @@ for k, (at, lab) in enumerate(shots):
     subprocess.run([FF, "-v", "error", "-y", "-ss", f"{at:.2f}", "-i", video, "-frames:v", "1", "-vf", "scale=480:-1", p])
     if os.path.isfile(p):
         im = Image.open(p).convert("RGB")
-        ImageDraw.Draw(im).rectangle((0, 0, 200, 22), fill=(0, 0, 0))
-        ImageDraw.Draw(im).text((4, 4), lab, fill=(255, 255, 0))
+        hh = im.size[1]  # repère en bas à gauche : il ne cache pas les étiquettes du haut
+        ImageDraw.Draw(im).rectangle((0, hh - 22, 200, hh), fill=(0, 0, 0))
+        ImageDraw.Draw(im).text((4, hh - 18), lab, fill=(255, 255, 0))
         frames.append(im)
 for i in range(0, len(frames), 12):
     sheet = Image.new("RGB", (480 * 3, 270 * 4), "white")
