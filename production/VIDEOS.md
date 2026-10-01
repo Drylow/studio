@@ -32,6 +32,6 @@ Idées suivantes : Amazon return, catalytic converter, diamond, donated T-shirt,
 | Inside The Life Of An Onlyfans Model | publiée | 30 sept. |
 | POV: You Marry a Female Triad Boss | publiée | 1er oct. |
 | POV: You Marry a Female UFC Fighter | **livrée** (vérifiée, Discord) — https://gofile.io/d/MSC7DFd0 ; miniature : combattante dans la cage, ceinture en or sans logo, en sueur | **3 oct.** |
-| POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature A : ballon sur le parquet, maillot rouge n° 7 sans logo | **4 oct.** |
+| POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
