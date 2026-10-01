@@ -17,7 +17,7 @@ Idée suivante déjà discutée : la prison (mise de côté).
 
 | Vidéo | État | Miniature |
 |---|---|---|
-| Your Life as a Stolen Phone | rendu en cours, puis vérification + Discord | D « STOLEN » (main gantée qui arrache le téléphone) |
+| Your Life as a Stolen Phone | **livrée** (vérifiée, Discord) — https://gofile.io/d/FWMQaSSh | D « STOLEN » (main gantée qui arrache le téléphone) |
 | Your Life as a Stolen Car | production en cours | « STOLEN » clé de voiture |
 | Your Life as a Stolen Credit Card | production en cours | « STOLEN » carte bleue |
 
