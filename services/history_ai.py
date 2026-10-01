@@ -136,7 +136,7 @@ STYLE = ("A realistic photograph that looks like a production still from a big-b
          "or Gladiator. Warm, hazy natural daylight with fine dust in the air, restrained earthy colours (sand, ochre, "
          "bronze, faded red), realistic skin texture, authentic weathered costumes and armour, an uncluttered composition "
          "with one clear subject, eye-level camera, 35mm lens, gentle depth of field. When a person is the subject their "
-         "whole face is visible. Not a painting, not concept art, not an illustration, not HDR, no orange-teal grade, "
+         "whole head is in frame with some headroom above it. Not a painting, not concept art, not an illustration, not HDR, no orange-teal grade, "
          "no oversaturated colours, no movie-poster look. No text, no captions, no watermark, no modern objects.")
 PORTRAIT = ("A realistic photographic portrait from a historical drama production, chest-up, looking slightly off camera, "
             "soft warm window light, plain dark background, natural skin texture, restrained colours. Not a painting. No text.")

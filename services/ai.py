@@ -361,11 +361,12 @@ def _to_png(blob, max_side=1536):
         return blob
 
 
-def fit_cover(blob, width, height, dest_path, quality=92):
-    """Recadre l'image (cover, centré) au format exact de la vidéo et l'écrit en JPEG.
+def fit_cover(blob, width, height, dest_path, quality=92, anchor_y=0.5):
+    """Recadre l'image (cover) au format exact de la vidéo et l'écrit en JPEG.
 
     Le modèle ne respecte pas toujours le ratio demandé (carré, 3:2, 16:9...),
-    donc on normalise ici pour que le montage soit toujours propre."""
+    donc on normalise ici pour que le montage soit toujours propre. anchor_y < 0.5
+    rogne surtout le bas (garde les têtes dans les plans de personnages)."""
     if Image is None:
         raise AIError("Pillow manquant : pip install Pillow")
     im = Image.open(io.BytesIO(blob)).convert("RGB")
@@ -373,7 +374,7 @@ def fit_cover(blob, width, height, dest_path, quality=92):
     scale = max(width / sw, height / sh)
     nw, nh = max(width, round(sw * scale)), max(height, round(sh * scale))
     im = im.resize((nw, nh), Image.LANCZOS)
-    left, top = (nw - width) // 2, (nh - height) // 2
+    left, top = (nw - width) // 2, int((nh - height) * max(0.0, min(1.0, anchor_y)))
     im = im.crop((left, top, left + width, top + height))
     if os.path.dirname(dest_path):
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)

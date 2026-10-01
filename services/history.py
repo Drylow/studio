@@ -436,7 +436,7 @@ def _gen(pr, rel, kind, prompt, chars):
         blob = ai.generate_image(text, refs=refs or None)
         w, h = 1920, 1080
     dest = os.path.join(d, rel)
-    ai.fit_cover(blob, w, h, dest)
+    ai.fit_cover(blob, w, h, dest, anchor_y=0.22 if kind in ("shot", "portrait") else 0.5)
     if kind in ("shot", "portrait"):
         _grade(dest)
 
