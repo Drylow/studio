@@ -19,7 +19,7 @@
 
 - **Images** : le même univers 2D que les autres chaînes.
   - L'objet est le héros et apparaît sur presque chaque image, à sa taille réelle.
-  - **Depuis le 1er oct. au soir, l'objet n'a plus de visage** (style `ost_clean`, décors épurés), au choix de l'utilisateur. Son humeur se lit dans ce qui lui arrive et sur le visage des gens autour.
+  - **Depuis le 1er oct. au soir, l'objet n'a plus de visage**, au choix de l'utilisateur ; les décors restent ceux de la chaîne (`osl_stick`). Son humeur se lit dans ce qui lui arrive et sur le visage des gens autour.
   - Les trois premières vidéos (téléphone, voiture, carte) ont encore l'objet avec un petit visage.
   - Les gens autour sont les bonshommes à tête ronde blanche. Leur rôle se voit à leurs habits : sweat à capuche, gants, gilet de port…
 - **Voix** : Algrow, 158 mots/min.
