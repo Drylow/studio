@@ -4,6 +4,7 @@ import g0 from '../assets/grain_0.png';
 import g1 from '../assets/grain_1.png';
 import g2 from '../assets/grain_2.png';
 import g3 from '../assets/grain_3.png';
+import {C} from '../theme';
 
 const GRAINS = [g0, g1, g2, g3];
 
@@ -16,6 +17,15 @@ export const FilmOverlay: React.FC<{intensity?: number}> = ({intensity = 1}) => 
   const frame = useCurrentFrame();
   const {width, height} = useVideoConfig();
   if (intensity <= 0) return null;
+  if (C.paper) {
+    // style dessiné : pas de rayures ni de scintillement, juste un grain de papier fixe et un léger vignettage
+    return (
+      <AbsoluteFill style={{pointerEvents: 'none'}}>
+        <Img src={GRAINS[0]} style={{position: 'absolute', inset: 0, width, height, mixBlendMode: 'multiply', opacity: 0.1 * intensity}} />
+        <AbsoluteFill style={{background: 'radial-gradient(ellipse 85% 80% at 50% 50%, rgba(0,0,0,0) 65%, rgba(60,40,20,0.22) 100%)', opacity: intensity}} />
+      </AbsoluteFill>
+    );
+  }
 
   // Grain : 4 textures qui tournent, décalées au hasard à chaque frame.
   const gx = Math.round(random(`gx${frame}`) * 40 - 20);

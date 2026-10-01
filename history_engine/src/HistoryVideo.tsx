@@ -7,11 +7,12 @@ import type {Segment, Timeline} from './schema';
 import {Battle} from './templates/Battle';
 import {Chart} from './templates/Cards';
 import {Archive, BigNumber} from './templates/Extra';
+import {MapCard} from './templates/Map';
 import {Character, Compare} from './templates/People';
 import {Quote} from './templates/Quote';
 import {Route} from './templates/Route';
 import {Statement} from './templates/Statement';
-import {ensureFonts} from './theme';
+import {applyTheme, ensureFonts} from './theme';
 
 const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
   switch (seg.type) {
@@ -33,6 +34,8 @@ const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
       return <Archive {...seg} dur={dur} />;
     case 'route':
       return <Route {...seg} dur={dur} />;
+    case 'map':
+      return <MapCard {...seg} dur={dur} />;
     case 'number':
       return <BigNumber {...seg} dur={dur} />;
     case 'quote':
@@ -43,6 +46,7 @@ const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
 };
 
 export const HistoryVideo: React.FC<Timeline> = (t) => {
+  applyTheme(t.theme);
   ensureFonts();
   const {fps, durationInFrames} = useVideoConfig();
   const f = (s: number) => Math.round(s * fps);
@@ -65,7 +69,7 @@ export const HistoryVideo: React.FC<Timeline> = (t) => {
         );
       })}
       <FilmOverlay intensity={t.film ?? 1} />
-      <Captions items={t.captions ?? []} from={t.captionsFrom ?? 0} mute={t.captionsMute} />
+      <Captions items={t.captions ?? []} from={t.captionsFrom ?? 0} mute={t.captionsMute} band={t.captionsBand} />
       {t.voice ? <Audio src={staticFile(t.voice)} /> : null}
       {t.music ? <Audio src={staticFile(t.music)} volume={musicVolume} loop /> : null}
       {(t.sfx ?? []).map((s, i) => (

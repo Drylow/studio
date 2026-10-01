@@ -58,7 +58,7 @@ const StatementText: React.FC<{text: string; dur: number; kicker?: string}> = ({
               opacity: inO,
               textTransform: 'uppercase',
               lineHeight: 1.15,
-              textShadow: '0 2px 18px rgba(0,0,0,0.6)',
+              textShadow: C.shadow,
             }}
           >
             {words.map((w, i) => {

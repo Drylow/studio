@@ -14,7 +14,7 @@ from services import ai
 APP_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WPM = 153  # débit mesuré sur la vidéo de référence (5 749 mots / 37 min 41)
 
-TEMPLATES = ("statement", "number", "battle", "character", "compare", "chart", "archive", "route", "quote")
+TEMPLATES = ("statement", "number", "map", "battle", "character", "compare", "chart", "archive", "route", "quote")
 
 
 def _reference():
@@ -87,6 +87,10 @@ _TPL_DOCS = {
     "chart": '- chart: {"at","type":"chart","title","subtitle","bars":[{"label","value":number,"side":"a|b|neutral","display":"optional text"}]}',
     "archive": ('- archive: {"at","type":"archive","title":"OBJECT, PLACE, DATE","search":"2-4 word museum search, e.g. Norman helmet / Bayeux Tapestry",'
                 '"prompt":"museum photograph of the real artifact (used only if no real image is found)","note":"short caption"}'),
+    "map": ('- map (movement map on real geography): {"at","type":"map","title":"short title","subtitle":"dates",'
+            '"places":[{"name","lat","lon"}] (real coordinates, 3-8 places),'
+            '"moves":[{"from":"place name","to":"place name","via":["place name"],"side":"a|b","label":"army or leader"}] (1-3 moves, in story order),'
+            '"battle":"place name where they fight (optional)"} — use it whenever armies, fleets or people travel from A to B.'),
     "route": '- route: {"at","type":"route","title":"A to B","subtitle":"campaign name","stops":[{"name","lat","lon"}]} (real coordinates, 3-7 stops)',
     "quote": ('- quote: {"at","type":"quote","text":"the quote exactly as the narrator reads it","author","source":"short attribution, e.g. Livy, Book XXII / attributed","portrait":"cast name or null"}\n'
               '  Start the quote beat on the sentence where the narrator reads the quote.'),
@@ -97,9 +101,11 @@ _SHOT_GUIDE = """IMAGE PROMPTS — write them like a cinematographer's shot list
   SETTING with a foreground / background, TIME OF DAY and LIGHT DIRECTION.
   e.g. "Close-up, 85mm: a young Saxon housecarl, mud on his cheek, breath visible in the cold, peering over the rim of his
   round shield at the slope below; spears and banners soft in the background; low dawn sun behind him."
-- Vary the coverage like a film: extreme close-up of eyes, close-up, medium two-shot, over-the-shoulder, low-angle hero shot,
-  wide establishing shot with a lone figure, insert detail (hands, sword hilt, seal, coins), aftermath. Never two similar shots in a row.
-- People: always name the cast member and keep the head fully in frame (never crop at the forehead).
+- Vary the coverage like a film: extreme close-up of eyes, close-up, low-angle hero shot, wide establishing landscape,
+  aerial view, crowd seen from afar, insert detail (hands, sword hilt, seal, coins, a letter), animals, ships, buildings,
+  camp life, weather, aftermath. Never two similar shots in a row; avoid the cliché of two warriors side by side.
+- At least HALF of the shots have no named character at all (places, objects, crowds, armies from afar, details).
+- At most ONE named cast member per shot; keep the head fully in frame (never crop at the forehead).
 - Era-accurate everything (armour, weapons, hairstyles, architecture). No text, no modern objects."""
 
 
@@ -147,6 +153,47 @@ def plan_visuals(sentences, duration, hook_end_idx, allowed=None, max_cards=6, r
     return {"cast": data.get("cast") or [], "beats": beats}
 
 
+# ── Variété des plans ───────────────────────────────────────────────────────
+
+def diversify_shots(items, cast, style_name):
+    """Monteur image : réécrit la liste de plans pour qu'aucun plan ne ressemble au précédent.
+
+    items = [{"i", "text" (narration du plan), "prompt", "chars"}] → même liste, prompts / persos réécrits."""
+    if len(items) < 3:
+        return items
+    lines = "\n".join(f"[{it['i']}] narration: {it['text'][:220]}\n     current shot: {it['prompt'][:260]}"
+                       f"  | chars: {', '.join(it.get('chars') or []) or '-'}" for it in items)
+    names = ", ".join(c.get("name", "") for c in cast or []) or "none"
+    prompt = f"""You are the picture editor of a history documentary (image style: {style_name}).
+Here is the shot list, in order. Rewrite it so the video NEVER feels repetitive, while each shot still illustrates
+its narration. Rules:
+- Consecutive shots must differ in subject, framing, camera angle and composition. No two shots alike in the whole list.
+- At least half of the shots have NO named character: landscapes, aerial views, armies or crowds from afar, ships,
+  horses, weapons or objects in close-up, letters and seals, buildings, camps, weather, aftermath, daily life details.
+- At most ONE named character per shot (cast: {names}). Never "two warriors side by side looking the same way".
+- Vary time of day, light and colour mood across the list.
+- Each prompt: one sentence, shot type + lens, subject and action, setting with foreground/background, light.
+- Keep chars = the named cast member actually visible (0 or 1 name from the cast).
+
+Shots:
+{lines}
+
+Return JSON only: {{"shots": [{{"i": n, "prompt": "...", "chars": ["..."]}}]}} with exactly the same "i" values."""
+    try:
+        data = ai.chat_json(prompt, model=ai.text_model(), reasoning="medium", timeout=300)
+    except Exception:  # noqa: BLE001 — pas de réécriture possible : on garde la liste telle quelle
+        return items
+    by = {int(x.get("i", -1)): x for x in data.get("shots") or [] if isinstance(x, dict)}
+    out = []
+    for it in items:
+        x = by.get(it["i"])
+        if x and (x.get("prompt") or "").strip():
+            out.append(dict(it, prompt=x["prompt"].strip(), chars=[c for c in (x.get("chars") or [])][:1]))
+        else:
+            out.append(dict(it, chars=(it.get("chars") or [])[:1]))
+    return out
+
+
 # ── Style d'image ───────────────────────────────────────────────────────────
 
 STYLE = ("Ultra-realistic cinematic film still from a high-budget historical epic, shot on an ARRI Alexa with a 50mm "
@@ -160,6 +207,38 @@ STYLE = ("Ultra-realistic cinematic film still from a high-budget historical epi
 PORTRAIT = ("Ultra-realistic cinematic portrait from a high-budget historical epic, chest-up, looking slightly off camera, "
             "85mm lens, soft warm key light from the side with a gentle rim light, dark smoky background, crisp skin "
             "texture, era-accurate costume. Photographic, not painterly. No text.")
+# Styles d'image proposés (le thème des cartes suit : « illustrated » = parchemin, « cinematic » = sombre)
+IMAGE_STYLES = {
+    "ink": {"name": "Illustré — encre & aquarelle", "theme": "illustrated",
+            "shot": ("Hand-drawn historical illustration in ink and watercolour: confident black ink linework with fine "
+                     "cross-hatching, muted earthy washes (ochre, burnt sienna, slate blue, faded crimson) on warm off-white "
+                     "paper with visible grain, like a premium illustrated history book. Expressive faces, era-accurate "
+                     "details, clear composition with depth; whole heads in frame. One single image: no collage, no panels, "
+                     "no border, no text, no signature."),
+            "portrait": ("Hand-drawn ink and watercolour portrait, chest-up, looking slightly off camera, confident ink "
+                         "linework and cross-hatching, muted earthy washes, plain warm paper background. No text.")},
+    "bd": {"name": "BD — ligne claire", "theme": "illustrated",
+           "shot": ("Graphic-novel illustration in the European ligne-claire tradition: bold clean ink outlines, flat "
+                    "cel-shaded colours with dramatic cast shadows, palette of deep teal, ochre, sand and blood red, cinematic "
+                    "framing, premium bande dessinée quality. Expressive faces, era-accurate details; whole heads in frame. "
+                    "One single image: no panels, no speech bubbles, no border, no text."),
+           "portrait": ("Ligne-claire graphic-novel portrait, chest-up, bold clean outlines, flat colours, plain warm "
+                        "background. No text.")},
+    "paint": {"name": "Peinture d'histoire", "theme": "illustrated",
+              "shot": ("Digital painting in the style of 19th-century academic history painting: visible confident brush "
+                       "strokes, rich chiaroscuro, warm glazes, atmospheric depth, museum-quality composition. Expressive "
+                       "faces, era-accurate details; whole heads in frame. One single image: no frame, no text, no signature."),
+              "portrait": ("Academic oil-painting portrait, chest-up, rich chiaroscuro, warm glazes, dark plain background. "
+                           "No text.")},
+    "cinematic": {"name": "Cinéma — photoréaliste", "theme": "cinematic", "shot": STYLE, "portrait": PORTRAIT},
+}
+DEFAULT_STYLE = "ink"
+
+
+def image_style(name):
+    return IMAGE_STYLES.get(name or "", IMAGE_STYLES[DEFAULT_STYLE])
+
+
 ARCHIVE = ("Museum catalogue photograph, neutral grey backdrop, soft studio light, sharp focus, realistic patina, "
            "photographed as a real surviving artifact. No text, no labels.")
 TERRAIN = ("Top-down satellite photograph of real terrain, desaturated grey-brown, subtle relief, dry riverbeds, "

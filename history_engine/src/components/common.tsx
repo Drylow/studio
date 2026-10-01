@@ -1,5 +1,6 @@
 import React from 'react';
-import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, useCurrentFrame} from 'remotion';
+import parchment from '../assets/parchment.jpg';
 import {C} from '../theme';
 
 export const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -19,11 +20,15 @@ export const CardBg: React.FC<{children?: React.ReactNode; brackets?: boolean; t
   tint,
 }) => (
   <AbsoluteFill style={{background: C.bg}}>
-    <AbsoluteFill
-      style={{
-        background: `radial-gradient(ellipse 70% 60% at 50% 45%, ${tint ?? 'rgba(60,52,40,0.55)'} 0%, rgba(0,0,0,0) 70%)`,
-      }}
-    />
+    {C.paper ? (
+      <Img src={parchment} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+    ) : (
+      <AbsoluteFill
+        style={{
+          background: `radial-gradient(ellipse 70% 60% at 50% 45%, ${tint ?? 'rgba(60,52,40,0.55)'} 0%, rgba(0,0,0,0) 70%)`,
+        }}
+      />
+    )}
     {brackets ? <Brackets /> : null}
     {children}
   </AbsoluteFill>
@@ -32,9 +37,9 @@ export const CardBg: React.FC<{children?: React.ReactNode; brackets?: boolean; t
 export const Brackets: React.FC<{inset?: number; size?: number; color?: string}> = ({
   inset = 58,
   size = 26,
-  color = 'rgba(236,227,207,0.28)',
+  color,
 }) => {
-  const s = {position: 'absolute' as const, width: size, height: size, borderColor: color, borderStyle: 'solid'};
+  const s = {position: 'absolute' as const, width: size, height: size, borderColor: color ?? C.bracket, borderStyle: 'solid'};
   return (
     <AbsoluteFill>
       <div style={{...s, left: inset, top: inset, borderWidth: '1.5px 0 0 1.5px'}} />

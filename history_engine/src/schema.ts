@@ -95,6 +95,18 @@ export type RouteSeg = {
   stops: {name: string; x: number; y: number; coords?: string}[];
 };
 
+export type MapSeg = {
+  type: 'map';
+  title: string;
+  subtitle?: string;
+  land: string[]; // tracés SVG des terres (repère 1920x1080), calculés côté Python (Natural Earth)
+  rivers?: string[];
+  places: {name: string; x: number; y: number; kind?: 'city' | 'battle'; at?: number; dx?: number; dy?: number}[];
+  moves: {path: [number, number][]; side?: Side; label?: string; start: number; end: number; labelAt?: [number, number]}[];
+  battle?: {x: number; y: number; at: number};
+  focus?: [number, number]; // point vers lequel la caméra zoome
+};
+
 export type QuoteSeg = {
   type: 'quote';
   text: string;
@@ -116,6 +128,7 @@ export type Segment = {start: number; end: number} & (
   | RouteSeg
   | QuoteSeg
   | NumberSeg
+  | MapSeg
 );
 
 export type Caption = {text: string; start: number; end: number};
@@ -132,6 +145,8 @@ export type Timeline = {
   captions?: Caption[];
   captionsFrom?: number; // pas de sous-titres pendant le hook (comme Dose of History)
   captionsMute?: [number, number][]; // plages sans sous-titres (citations déjà écrites à l'écran)
+  captionsBand?: [number, number][]; // plages où un bandeau sombre renforce les sous-titres (sur les images)
   film?: number; // intensité du look pellicule (0 = off, 1 = défaut)
+  theme?: 'cinematic' | 'illustrated'; // habillage des cartes, assorti au style des images
   segments: Segment[];
 };

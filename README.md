@@ -174,14 +174,21 @@ d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une dur
    de pellicule, sous-titres (masqués pendant le hook), nappe musicale sombre et bruitages générés
    (aucun risque Content ID), mixage final à -14 LUFS.
 
+**Style d'image** (au choix par vidéo) : *Illustré, encre & aquarelle* (défaut), *BD ligne claire*,
+*Peinture d'histoire* ou *Cinéma photoréaliste*. Les cartes animées suivent le style : parchemin et encre
+pour les styles dessinés, charbon et or pour le photoréaliste. Après le plan, un « monteur image » IA
+réécrit la liste des plans pour qu'aucun ne ressemble au précédent : au moins la moitié sans personnage
+nommé (lieux, objets, foules, détails), un seul personnage de référence par plan.
+
 **Les animations** (templates Remotion, `history_engine/src/templates/`). Actives par défaut : phrase choc,
-grand chiffre, citation, fiche perso, duo, archive, avec 1,5 carte par minute au maximum, de types variés.
+grand chiffre, carte, citation, fiche perso, duo, archive, avec 1,5 carte par minute au maximum, de types variés.
 Bataille, graphique et itinéraire existent mais sont décochés (à cocher par vidéo) :
 
 | Template | Ce qu'il montre |
 |---|---|
 | Phrase choc | serif en capitales, mots clés en rouge, petite ligne de contexte, flash au moment où le narrateur le dit |
 | Grand chiffre | « 47 000 » qui défile, légende et source, impact sonore |
+| Carte | vraie géographie (côtes et fleuves Natural Earth), villes, flèches d'armées tracées de A vers B, épées croisées sur la bataille, zoom vers l'action |
 | Fiche perso | 3 variantes : portrait à droite, à gauche ou plein cadre, nom, rôle, faits un par un |
 | Duo | portrait à gauche, portrait à droite (deux rivaux, deux chefs, deux armées), VS au centre |
 | Archive | vraie image de musée (The Met, Wikimedia Commons) choisie et vérifiée par l'IA, avec crédit ; image IA en secours |

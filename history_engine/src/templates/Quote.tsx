@@ -43,7 +43,7 @@ export const Quote: React.FC<QuoteSeg & {dur: number}> = ({text, author, source,
           />
           <AbsoluteFill
             style={{
-              background: `linear-gradient(90deg, ${C.bg} 0%, rgba(28,25,20,0.55) 28%, rgba(28,25,20,0) 58%, rgba(28,25,20,0.2) 100%)`,
+              background: `linear-gradient(90deg, ${C.bg} 0%, rgba(${C.bgRgb},0.55) 28%, rgba(${C.bgRgb},0) 58%, rgba(${C.bgRgb},0.2) 100%)`,
             }}
           />
         </AbsoluteFill>
@@ -75,7 +75,7 @@ export const Quote: React.FC<QuoteSeg & {dur: number}> = ({text, author, source,
           {words.map((w, i) => {
             const t = frame - at[i];
             const o = interpolate(t, [0, 7], [0.14, 1], clamp);
-            const col = interpolateColors(Math.max(0, t), [0, 5, 22], ['#e6c47a', '#e6c47a', C.cream]);
+            const col = interpolateColors(Math.max(0, t), [0, 5, 22], [C.paper ? C.red : '#e6c47a', C.paper ? C.red : '#e6c47a', C.cream]);
             const blur = interpolate(t, [0, 7], [3, 0], clamp);
             const y = interpolate(t, [0, 8], [6, 0], {...clamp, easing: Easing.out(Easing.cubic)});
             return (
@@ -88,7 +88,7 @@ export const Quote: React.FC<QuoteSeg & {dur: number}> = ({text, author, source,
                   color: t < 0 ? C.cream : col,
                   filter: `blur(${blur}px)`,
                   transform: `translateY(${y}px)`,
-                  textShadow: '0 2px 14px rgba(0,0,0,0.55)',
+                  textShadow: C.shadow,
                 }}
               >
                 {w}

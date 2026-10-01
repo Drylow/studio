@@ -44,7 +44,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#lightb
 const S = {cfg: null, projects: [], pollT: null, playing: new Set(), open: null};
 const STEP = {script: 'Script', voice: 'Voix off', plan: 'Plan visuel', images: 'Images', render: 'Montage', done: 'Terminée'};
 const TYPE = {image: ['🖼', 'Image'], statement: ['❝', 'Phrase choc'], number: ['🔢', 'Grand chiffre'], battle: ['⚔', 'Bataille'],
-  character: ['👤', 'Fiche perso'], compare: ['⚖', 'Duo (2 portraits)'], chart: ['📊', 'Graphique'], archive: ['🏺', 'Archive'], route: ['🧭', 'Itinéraire'], quote: ['✒', 'Citation']};
+  character: ['👤', 'Fiche perso'], compare: ['⚖', 'Duo (2 portraits)'], map: ['🗺', 'Carte (mouvements A → B)'], chart: ['📊', 'Graphique'], archive: ['🏺', 'Archive'], route: ['🧭', 'Itinéraire'], quote: ['✒', 'Citation']};
 
 // ── Formulaire ─────────────────────────────────────────────────────────────
 const CHIPS = [3, 5, 10, 15, 25, 35];
@@ -75,7 +75,7 @@ $('#create').onclick = async e => {
   const r = await guard(() => api('POST', '/projects', {
     title, minutes: Number($('#minutes').value), notes: $('#notes').value.trim(), voice: {provider, voice},
     options: {captions: $('#captions').checked, captions_after_hook: $('#afterHook').checked,
-      film: Number($('#film').value), templates: [...document.querySelectorAll('#tpls input:checked')].map(i => i.value)},
+      film: Number($('#film').value), image_style: $('#style').value, templates: [...document.querySelectorAll('#tpls input:checked')].map(i => i.value)},
   }));
   busy($('#create'), false);
   if (r) { $('#title').value = ''; $('#notes').value = ''; toast('C\'est parti : la vidéo se fabrique.', 'ok'); await load(); }
@@ -187,6 +187,7 @@ async function refreshModal() {
   S.cfg = await guard(() => api('GET', '/config'));
   if (S.cfg) {
     $('#voice').innerHTML = S.cfg.voices.map(v => `<option value="${v.provider}|${v.voice}">${esc(v.name)}</option>`).join('');
+    $('#style').innerHTML = (S.cfg.styles || []).map(s => `<option value="${s.key}" ${s.key === S.cfg.defaults.image_style ? 'selected' : ''}>${esc(s.name)}</option>`).join('');
     const on = new Set(S.cfg.defaults.templates || []);
     $('#tpls').innerHTML = Object.entries(TYPE).filter(([k]) => k !== 'image')
       .map(([k, [ic, name]]) => `<label><input type="checkbox" value="${k}" ${on.has(k) ? 'checked' : ''}> ${ic} ${esc(name)}</label>`).join('');

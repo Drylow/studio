@@ -37,7 +37,7 @@ const NameBlock: React.FC<{name: string; role?: string; facts?: string[]; dur: n
           lineHeight: 1.05,
           opacity: ramp(frame, 8, 14),
           transform: `translateY(${interpolate(ramp(frame, 8, 16), [0, 1], [18, 0])}px)`,
-          textShadow: '0 2px 14px rgba(0,0,0,0.6)',
+          textShadow: C.shadow,
         }}
       >
         {name}
@@ -68,7 +68,7 @@ const NameBlock: React.FC<{name: string; role?: string; facts?: string[]; dur: n
               fontFamily: F.serif,
               fontSize: 36,
               fontWeight: 500,
-              color: 'rgba(236,227,207,0.82)',
+              color: C.creamDim,
               opacity: ramp(frame, 30 + i * step, 14),
               transform: `translateX(${interpolate(ramp(frame, 30 + i * step, 14), [0, 1], [align === 'right' ? 14 : -14, 0])}px)`,
             }}
@@ -93,7 +93,7 @@ export const Character: React.FC<CharacterSeg & {dur: number}> = ({name, role, i
         <AbsoluteFill style={{left: '30%', overflow: 'hidden', background: '#000'}}>
           <Img src={staticFile(image)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 18%', transformOrigin: '50% 25%', transform: `scale(${z})`}} />
         </AbsoluteFill>
-        <AbsoluteFill style={{background: `linear-gradient(90deg, ${C.bg} 30%, rgba(28,25,20,0.7) 48%, rgba(28,25,20,0) 72%)`}} />
+        <AbsoluteFill style={{background: `linear-gradient(90deg, ${C.bg} 30%, rgba(${C.bgRgb},0.7) 48%, rgba(${C.bgRgb},0) 72%)`}} />
         <div style={{position: 'absolute', left: 170, bottom: 220, width: 880}}>
           <NameBlock name={name} role={role} facts={facts} dur={dur} />
         </div>

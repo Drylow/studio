@@ -14,10 +14,11 @@ const OUTLINE = (() => {
   return out.join(',');
 })();
 
-export const Captions: React.FC<{items: Caption[]; from?: number; mute?: [number, number][]}> = ({
+export const Captions: React.FC<{items: Caption[]; from?: number; mute?: [number, number][]; band?: [number, number][]}> = ({
   items,
   from = 0,
   mute = [],
+  band,
 }) => {
   const frame = useCurrentFrame();
   const {fps, height} = useVideoConfig();
@@ -26,7 +27,21 @@ export const Captions: React.FC<{items: Caption[]; from?: number; mute?: [number
   const cur = items.find((c) => t >= c.start && t < c.end);
   if (!cur) return null;
   return (
-    <div
+    <>
+      {/* bandeau sombre doux : sous-titres lisibles même sur les images très claires (pas sur les cartes) */}
+      {!band || band.some(([a, b]) => t >= a && t < b) ? (
+      <div
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: Math.round(height * 0.2),
+          background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.38) 55%, rgba(0,0,0,0.55) 100%)',
+        }}
+      />
+      ) : null}
+      <div
       style={{
         position: 'absolute',
         left: 0,
@@ -45,5 +60,6 @@ export const Captions: React.FC<{items: Caption[]; from?: number; mute?: [number
     >
       {cur.text}
     </div>
+    </>
   );
 };

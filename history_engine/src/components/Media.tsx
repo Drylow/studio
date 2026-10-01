@@ -64,7 +64,7 @@ const Stamp: React.FC<{text: string; frame: number; dur: number}> = ({text, fram
   const out = interpolate(frame, [Math.min(dur - 10, 5.5 * 30), Math.min(dur, 6 * 30)], [1, 0], clamp);
   if (frame < start) return null;
   return (
-    <div style={{position: 'absolute', left: 84, top: 78, opacity: out}}>
+    <div style={{position: 'absolute', left: 60, top: 56, opacity: out, padding: '14px 26px 16px', background: 'linear-gradient(90deg, rgba(10,8,6,0.62), rgba(10,8,6,0.35) 75%, rgba(10,8,6,0))'}}>
       <div
         style={{
           fontFamily: F.serif,
@@ -72,14 +72,14 @@ const Stamp: React.FC<{text: string; frame: number; dur: number}> = ({text, fram
           fontSize: 30,
           letterSpacing: '0.28em',
           textTransform: 'uppercase',
-          color: C.cream,
+          color: '#f1e8d4',
           textShadow: '0 2px 12px rgba(0,0,0,0.85)',
         }}
       >
         {text.slice(0, shown)}
         <span style={{opacity: frame % 20 < 10 && shown < text.length ? 1 : 0}}>▍</span>
       </div>
-      <div style={{height: 1.5, width: `${ramp(frame, start + 4, 30) * 100}%`, background: C.gold, marginTop: 10, opacity: 0.8}} />
+      <div style={{height: 1.5, width: `${ramp(frame, start + 4, 30) * 100}%`, background: '#d4ad62', marginTop: 10, opacity: 0.9}} />
     </div>
   );
 };
@@ -102,9 +102,9 @@ const LowerThird: React.FC<{name: string; role?: string; frame: number; dur: num
         gap: 18,
       }}
     >
-      <div style={{width: 3, background: C.gold, transform: `scaleY(${inP})`, transformOrigin: 'top'}} />
-      <div style={{padding: '6px 26px 8px 0', background: 'linear-gradient(90deg, rgba(12,10,8,0.55), rgba(12,10,8,0))'}}>
-        <div style={{fontFamily: F.title, fontSize: 46, color: C.cream, letterSpacing: '0.04em', textShadow: '0 2px 12px rgba(0,0,0,0.8)'}}>
+      <div style={{width: 3, background: '#d4ad62', transform: `scaleY(${inP})`, transformOrigin: 'top'}} />
+      <div style={{padding: '10px 60px 12px 18px', margin: '0 0 0 -18px', background: 'linear-gradient(90deg, rgba(10,8,6,0.72), rgba(10,8,6,0.5) 70%, rgba(10,8,6,0))'}}>
+        <div style={{fontFamily: F.title, fontSize: 46, color: '#f1e8d4', letterSpacing: '0.04em', textShadow: '0 2px 12px rgba(0,0,0,0.8)'}}>
           {name}
         </div>
         {role ? (
@@ -115,7 +115,7 @@ const LowerThird: React.FC<{name: string; role?: string; frame: number; dur: num
               fontSize: 24,
               letterSpacing: '0.26em',
               textTransform: 'uppercase',
-              color: C.gold,
+              color: '#d4ad62',
               marginTop: 2,
               textShadow: '0 2px 10px rgba(0,0,0,0.8)',
             }}

@@ -22,6 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from services import ai, media, tts
 from services import align
 from services import history_ai as HA
+from services import history_geo as GEO
 from services import history_sources as SRC
 from services import history_audio as HAU
 from services import pov_store as store
@@ -34,7 +35,8 @@ EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": False, "film": 1.0,
             "music_volume": 0.16, "all_templates": False,
             # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
-            "templates": ["statement", "number", "quote", "character", "compare", "archive"],
+            "templates": ["statement", "number", "map", "quote", "character", "compare", "archive"],
+            "image_style": "ink",
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
@@ -255,6 +257,61 @@ def _geo_to_xy(stops):
     return out
 
 
+def _build_map(seg, b):
+    """Carte de mouvements : vraies côtes autour des lieux, flèches A → B dans l'ordre, marqueur de bataille."""
+    pls = []
+    for p in b.get("places") or []:
+        try:
+            pls.append({"name": str(p["name"])[:40], "lat": float(p["lat"]), "lon": float(p["lon"])})
+        except (KeyError, TypeError, ValueError):
+            continue
+    if len(pls) < 2:
+        return None
+    try:
+        geo = GEO.build_map(pls)
+    except Exception as e:  # noqa: BLE001 — pas de données géo : la carte devient une phrase choc
+        print(f"[map] {e}", flush=True)
+        return None
+    xy = {k.lower(): v for k, v in geo["xy"].items()}
+    moves = []
+    raw = [m for m in b.get("moves") or [] if isinstance(m, dict)][:3]
+    n = max(1, len(raw))
+    for k, m in enumerate(raw):
+        names = [m.get("from")] + list(m.get("via") or []) + [m.get("to")]
+        path = [xy[str(x).lower()] for x in names if x and str(x).lower() in xy]
+        if len(path) < 2:
+            continue
+        st = 0.1 + k * (0.6 / n)
+        moves.append({"path": path, "side": m.get("side") if m.get("side") in ("a", "b") else ("a", "b")[k % 2],
+                      "label": str(m.get("label") or "")[:24], "start": round(st, 3), "end": round(st + 0.6 / n * 0.9, 3)})
+    if not moves:
+        return None
+    last = max(mv["end"] for mv in moves)
+    bat = str(b.get("battle") or "").lower()
+    battle = {"x": xy[bat][0], "y": xy[bat][1], "at": round(min(0.9, last + 0.03), 3)} if bat in xy else None
+    places = []
+    for p in pls:
+        x, y = geo["xy"][p["name"]]
+        is_b = p["name"].lower() == bat
+        places.append({"name": p["name"], "x": x, "y": y, "kind": "battle" if is_b else "city",
+                       **({"at": battle["at"]} if is_b and battle else {})})
+    _spread_labels(places)
+    focus = [battle["x"], battle["y"]] if battle else moves[-1]["path"][-1]
+    seg.update(title=str(b.get("title") or "")[:40], subtitle=str(b.get("subtitle") or "")[:40], land=geo["land"],
+               rivers=geo["rivers"], places=places, moves=moves, focus=focus, **({"battle": battle} if battle else {}))
+    return seg
+
+
+def _spread_labels(places, near=95):
+    """Évite que deux noms de lieux se chevauchent : le plus bas passe dessous, l'autre au-dessus."""
+    for i, a in enumerate(places):
+        for b in places[i + 1:]:
+            if abs(a["x"] - b["x"]) < 260 and abs(a["y"] - b["y"]) < near:
+                low, high = (a, b) if a["y"] >= b["y"] else (b, a)
+                low["dy"] = 12
+                high["dy"] = -40
+
+
 def _find_phrase(words, phrase, t0, t1):
     """Instant (s) où la phrase est prononcée dans [t0, t1] — révèle la phrase choc au bon mot."""
     toks = [re.sub(r"[^a-z0-9]", "", t.lower()) for t in (phrase or "").split()]
@@ -442,6 +499,9 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
             seg.update(title=b.get("title", ""), note=b.get("note", ""), image=f"images/archive_{i:03d}.jpg",
                        tilt=(-0.6, 0.7)[i % 2], _prompt=b.get("prompt") or b.get("title", ""),
                        _search=b.get("search") or b.get("title", ""))
+        elif t == "map":
+            seg = _build_map(seg, b) or {"start": seg["start"], "end": seg["end"], "type": "statement",
+                                          "text": (b.get("title") or "").upper(), "reveal": 0}
         elif t == "route":
             stops = [s for s in b.get("stops") or [] if "lat" in s and "lon" in s]
             seg.update(title=b.get("title", ""), subtitle=b.get("subtitle", ""), stops=_geo_to_xy(stops) if len(stops) >= 2 else [])
@@ -462,7 +522,7 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
 # durée minimale de chaque carte (s), comme la référence (10-20 s par carte) : l'animation se termine,
 # puis la carte TIENT pendant que la narration continue. Phrase choc : 5 s après son apparition ;
 # citation : 4,5 s après le dernier mot prononcé.
-CARD_MIN = {"statement": 6.0, "number": 7.0, "character": 11.0, "compare": 13.0, "chart": 11.0, "archive": 9.0, "route": 12.0,
+CARD_MIN = {"statement": 6.0, "number": 7.0, "map": 13.0, "character": 11.0, "compare": 13.0, "chart": 11.0, "archive": 9.0, "route": 12.0,
             "battle": 15.0, "quote": 9.0}
 MIN_IMAGE = 3.0
 
@@ -525,6 +585,18 @@ def rebuild_segments(pid):
     return update_project(pid, save)
 
 
+def _diversify(segs, sents, cast, style):
+    imgs = [s for s in segs if s["type"] == "image"]
+    items = []
+    for k, s in enumerate(imgs):
+        mid = (s["start"] + s["end"]) / 2
+        said = " ".join(x["text"] for x in sents if x["start"] < s["end"] and x["end"] > s["start"]) or \
+            " ".join(x["text"] for x in sents if x["start"] <= mid <= x["end"])
+        items.append({"i": k, "text": said, "prompt": s.get("_prompt", ""), "chars": s.get("_chars") or []})
+    for s, it in zip(imgs, HA.diversify_shots(items, cast, HA.image_style(style)["name"])):
+        s["_prompt"], s["_chars"] = it["prompt"], it["chars"]
+
+
 def job_plan(job, pid):
     pr = get_project(pid)
     words = load_words(pid)
@@ -539,6 +611,8 @@ def job_plan(job, pid):
     plan = HA.plan_visuals([{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents], duration, hook_idx,
                            allowed=allowed, max_cards=max_cards, require_all=opts.get("all_templates", False))
     segs, cast = build_segments(plan, sents, words, duration, hook_end, allowed=allowed, max_cards=max_cards)
+    job.update(0.7, "Monteur image : variété des plans…")
+    _diversify(segs, sents, cast, opts.get("image_style"))
 
     def save(x):
         x["plan"] = {"cast": cast, "segments": segs, "beats": plan["beats"]}
@@ -586,9 +660,11 @@ def _missing_assets(pr):
 def _gen(pr, rel, kind, prompt, chars, info=None):
     d = media_dir(pr["id"])
     cast = (pr.get("plan") or {}).get("cast") or []
+    style = HA.image_style((pr.get("options") or {}).get("image_style"))
+    chars = (chars or [])[:1]  # un seul personnage de référence par plan : fini les duos répétés
     look = HA.cast_look(cast, chars)
     if kind == "portrait":
-        full = f"{HA.PORTRAIT} {chars[0] if chars else ''}: {prompt}".strip()
+        full = f"{style['portrait']} {chars[0] if chars else ''}: {prompt}".strip()
         blob = ai.generate_image(full, width=1024, height=1536, quality="high")
         w, h = 900, 1200
     elif kind == "terrain":
@@ -607,9 +683,9 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
     else:
         refs = [os.path.join(d, f"images/cast_{HA.slug(n)}.jpg") for n in chars]
         refs = [r for r in refs if os.path.isfile(r)]
-        text = f"{prompt}. {('Characters: ' + look) if look else ''} {HA.STYLE}"
+        text = f"{prompt}. {('Character: ' + look) if look else ''} {style['shot']}"
         if refs:
-            text += " Keep each character's face, hair and outfit identical to the reference portraits."
+            text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
         blob = ai.generate_image(text, refs=refs or None, quality="high")
         w, h = 1920, 1080
     dest = os.path.join(d, rel)
@@ -728,8 +804,14 @@ def build_timeline(pr):
     for s in pr["plan"]["segments"]:
         if s["type"] in ("statement", "number"):
             cues.append({"src": rel(sfx["boom"]), "at": round(s["start"] + s.get("reveal", 0), 3), "volume": 0.55})
-        elif s["type"] in ("battle", "character", "compare", "chart", "archive", "route", "quote"):
+        elif s["type"] in ("battle", "map", "character", "compare", "chart", "archive", "route", "quote"):
             cues.append({"src": rel(sfx["whoosh"]), "at": s["start"], "volume": 0.3})
+            if s["type"] == "map":
+                dur = s["end"] - s["start"]
+                for mv in s.get("moves") or []:
+                    cues.append({"src": rel(sfx["whoosh"]), "at": round(s["start"] + mv["start"] * dur, 3), "volume": 0.25})
+                if s.get("battle"):
+                    cues.append({"src": rel(sfx["boom"]), "at": round(s["start"] + s["battle"]["at"] * dur, 3), "volume": 0.5})
             if s["type"] == "battle":
                 dur = s["end"] - s["start"]
                 for u in s.get("units") or []:
@@ -744,6 +826,8 @@ def build_timeline(pr):
         "captions": captions_from_words(words) if opts.get("captions", True) else [],
         "captionsFrom": hook_end if opts.get("captions_after_hook", True) else 0,
         "captionsMute": [[s["start"], s["end"]] for s in pr["plan"]["segments"] if s["type"] == "quote"],
+        "captionsBand": [[s["start"], s["end"]] for s in pr["plan"]["segments"] if s["type"] in ("image", "video")],
+        "theme": HA.image_style(opts.get("image_style")).get("theme", "cinematic"),
         "segments": _with_tail([_public(s) for s in pr["plan"]["segments"]], duration),
     }
 

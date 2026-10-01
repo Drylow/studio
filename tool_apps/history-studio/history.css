@@ -1,7 +1,7 @@
 /* History Docs — s'appuie sur ../pov-studio/app.css et ../osl-studio/osl.css ; accent doré. */
 :root { --s-accent: #c9a45a; --s-grad: linear-gradient(135deg, #b8893a, #d9b56a); }
 .top .logo { background: linear-gradient(135deg, #7a5a22, #c9a45a); color: #15130f; }
-.hgrid { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 12px; }
+.hgrid { display: grid; grid-template-columns: 2fr 1.4fr 1fr; gap: 12px; margin-top: 12px; }
 @media (max-width: 620px) { .hgrid { grid-template-columns: 1fr; } }
 .opts { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--s-muted); }
 .opts label { display: flex; gap: 6px; align-items: center; cursor: pointer; }

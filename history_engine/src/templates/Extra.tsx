@@ -16,7 +16,7 @@ export const Archive: React.FC<ArchiveSeg & {dur: number}> = ({title, image, not
           <div style={{fontFamily: F.label, fontSize: 26, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.cream, marginBottom: 12}}>
             {title}
           </div>
-          <div style={{padding: 12, background: '#e7dfcc', boxShadow: '0 24px 60px rgba(0,0,0,0.7)'}}>
+          <div style={{padding: 12, background: C.frame, boxShadow: C.paper ? '0 10px 30px rgba(60,40,20,0.35)' : '0 24px 60px rgba(0,0,0,0.7)', border: C.paper ? '1.5px solid rgba(42,31,22,0.55)' : 'none'}}>
             <div style={{width: 1180, height: 664, overflow: 'hidden', background: '#111'}}>
               <Img
                 src={staticFile(image)}
@@ -24,7 +24,7 @@ export const Archive: React.FC<ArchiveSeg & {dur: number}> = ({title, image, not
                   width: '100%',
                   height: '100%',
                   objectFit: 'contain',
-                  background: 'radial-gradient(ellipse at center, #3a352d 0%, #16130f 100%)',
+                  background: C.paper ? 'radial-gradient(ellipse at center, #efe3c8 0%, #d9c49c 100%)' : 'radial-gradient(ellipse at center, #3a352d 0%, #16130f 100%)',
                   transform: `scale(${interpolate(frame, [0, dur], [1.0, 1.06], clamp)})`,
                 }}
               />
@@ -33,7 +33,7 @@ export const Archive: React.FC<ArchiveSeg & {dur: number}> = ({title, image, not
           <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 12, gap: 30}}>
             <div style={{fontFamily: F.serif, fontStyle: 'italic', fontSize: 26, color: C.creamDim, opacity: ramp(frame, 18, 12)}}>{note}</div>
             {credit ? (
-              <div style={{fontFamily: F.label, fontSize: 17, letterSpacing: '0.06em', color: 'rgba(236,227,207,0.45)', opacity: ramp(frame, 22, 12)}}>
+              <div style={{fontFamily: F.label, fontSize: 17, letterSpacing: '0.06em', color: C.creamDim, opacity: ramp(frame, 22, 12)}}>
                 {credit}
               </div>
             ) : null}
@@ -74,7 +74,7 @@ const NumberInner: React.FC<{value: number; prefix: string; suffix: string; labe
             lineHeight: 1,
             color: C.cream,
             letterSpacing: '0.02em',
-            textShadow: '0 4px 30px rgba(0,0,0,0.6)',
+            textShadow: C.shadow,
             transform: `scale(${interpolate(frame, [0, 60, 400], [0.96, 1, 1.04], clamp)})`,
           }}
         >
