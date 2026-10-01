@@ -5,6 +5,7 @@
 
 Le dossier doit avoir meta.json (écrit au rendu) et thumb_choice.txt (chemin de la miniature choisie).
 Webhook : DISCORD_WEBHOOK_URL dans .env (jamais dans git)."""
+import fcntl
 import json
 import os
 import sys
@@ -12,7 +13,7 @@ import time
 
 import requests
 
-from common import folder, webhook
+from common import WORK, folder, webhook
 from services import pov_engine as E
 
 D = folder(sys.argv[1])
@@ -40,6 +41,11 @@ def post(content, file=None):
         return
     raise RuntimeError("Discord : trop de requêtes")
 
+
+# un paquet à la fois : deux vidéos envoyées en même temps entremêlaient leurs messages sur Discord
+# (titre de l'une, description et tags de l'autre). Le verrou tient jusqu'à la fin du script.
+_lock = open(os.path.join(WORK, "discord.lock"), "w")
+fcntl.flock(_lock, fcntl.LOCK_EX)
 
 title = meta["titles"][0]
 if "--link-only" in sys.argv:
