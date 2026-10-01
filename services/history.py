@@ -272,6 +272,31 @@ def _find_phrase(words, phrase, t0, t1):
     return None
 
 
+# couverture alternative quand un plan du hook dure trop : on découpe en plusieurs plans (~5 s), comme la référence
+_COVERAGE = ("", "Same moment, tighter: extreme close-up of the main subject's face and eyes.",
+             "Same moment from further back: wide shot showing the surroundings and the scale.",
+             "Same moment, low-angle close-up of the main subject.",
+             "Same moment, insert detail: hands, weapons, equipment.")
+
+
+def _split_hook_shot(seg, hook_end, max_len=7.5, target=5.5):
+    if seg["type"] != "image" or seg["start"] >= hook_end or seg["end"] - seg["start"] <= max_len:
+        return [seg]
+    n = min(len(_COVERAGE), int(-(-(seg["end"] - seg["start"]) // target)))
+    step = (seg["end"] - seg["start"]) / n
+    base = seg["src"][:-4]
+    out = []
+    for k in range(n):
+        piece = dict(seg, start=round(seg["start"] + k * step, 3), end=round(seg["start"] + (k + 1) * step, 3),
+                     src=seg["src"] if k == 0 else f"{base}_{k}.jpg", motion=("in", "out")[k % 2],
+                     _prompt=(seg.get("_prompt", "") + " " + _COVERAGE[k]).strip())
+        if k:
+            piece.pop("label", None)
+            piece.pop("stamp", None)
+        out.append(piece)
+    return out
+
+
 def _norm_tok(t):
     return re.sub(r"[^a-z0-9]", "", t.lower())
 
@@ -429,7 +454,7 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
                 seg["words"] = times
             if b.get("portrait"):
                 seg.update(image=portrait(b["portrait"]), _cast=b["portrait"])
-        segs.append(seg)
+        segs.extend(_split_hook_shot(seg, hook_end))
     _ensure_card_time(segs)
     return segs, cast
 
