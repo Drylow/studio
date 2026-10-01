@@ -1,0 +1,13 @@
+# Recherche et consignes — POV: You Marry a Female UFC Fighter
+
+Faits vérifiés et règles données au script.
+
+VERIFIED FACTS about her world (use several, rounded, each inside a scene; never invent other statistics):
+- UFC women's divisions: strawweight (115 pounds), flyweight (125), bantamweight (135). Regular fights are three five-minute rounds; title fights and main events are five rounds.
+- UFC pay is "show and win": a newcomer often starts around $12,000 to show and $12,000 more to win, so a loss pays $12,000 and a win $24,000, before paying coach, gym and manager cuts and taxes. Post-fight bonuses (Performance of the Night, Fight of the Night) are $50,000.
+- The official weigh-in is the day before the fight. During fight week, fighters cut water weight: water loading (up to 8 to 16 liters a day), then low salt, low carbs, saunas and hot baths on weigh-in morning, often dropping 5 to 10 percent of body weight, then rehydrating in the 24 to 36 hours before the fight, entering the cage much heavier than the limit. Severe cuts strain the kidneys.
+- A fight camp usually lasts 8 to 12 weeks: two or three training sessions a day (striking, wrestling, jiu-jitsu, strength), a strict diet, sparring partners, a cornerman team.
+- Many UFC events take place at the UFC Apex in Las Vegas; big numbered events fill arenas around the world.
+STORY SHAPE: "You" are an ordinary guy (early thirties, an accountant who joins a beginners' kickboxing class to get in shape). She is a fictional UFC strawweight, 5'4", calm, polite, terrifyingly precise, who helps coach the beginners' class at her gym. First meeting: she holds the pads for you and says you drop your hands. Her world: fight camp, the weight cut (you see her on weigh-in morning, grey and quiet, in a hotel bathtub), fight week hotels, the walkout, the cage door closing, the show-and-win money that looks big until the cuts and taxes, a loss and a cut eyebrow, the first win bonus, her mother praying through every round, fans online. Marriage by ~60%, then married life: you learn to wrap hands and read a scorecard, she spars in the garage, a title shot, a quiet ending at the kitchen table at 5 a.m., you making her post-weigh-in soup.
+RULES: fictional fighter and fictional opponents (no real fighters, no real event numbers); never sexualize her; fights shown as sport, no gore (a cut, a bruise, an ice pack at most); humor aims at your softness and the absurd rules of her world, never at her body or gender.
+BRANDING: the title says "UFC" (descriptive). Inside the story, say "the UFC" plainly but never describe or imitate its logo, belts or branded gear; call the ring "the cage" most of the time; no real fighters, events or commentators.

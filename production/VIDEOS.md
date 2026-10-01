@@ -1,6 +1,6 @@
 # Journal des vidéos
 
-État au 1er oct. 2026, ~21 h UTC. Mettre à jour à chaque livraison (lien Gofile, envoi Discord, date de publication).
+État au 1er oct. 2026, ~21 h 45 UTC. Mettre à jour à chaque livraison (lien Gofile, envoi Discord, date de publication).
 
 ## Oddly Expensive Lives (`oddly_expensive_en`)
 
@@ -18,8 +18,8 @@ Idée suivante déjà discutée : la prison (mise de côté).
 | Vidéo | État | Miniature |
 |---|---|---|
 | Your Life as a Stolen Phone | **livrée** (vérifiée, Discord) — https://gofile.io/d/FWMQaSSh | D « STOLEN » (main gantée qui arrache le téléphone) |
-| Your Life as a Stolen Car | production en cours | « STOLEN » clé de voiture |
-| Your Life as a Stolen Credit Card | production en cours | « STOLEN » carte bleue |
+| Your Life as a Stolen Car | vérifiée, envoi Discord en attente — https://gofile.io/d/W3RbTNvA | « STOLEN » clé de voiture |
+| Your Life as a Stolen Credit Card | correction (mot coupé à 8:36, logo sur une image à 12:52), nouveau rendu en cours | « STOLEN » carte bleue |
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)
