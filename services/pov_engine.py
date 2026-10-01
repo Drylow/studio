@@ -73,20 +73,6 @@ STYLE_PRESETS = {
                   "cinematic composition, characters medium-large in the frame, calm understated facial expressions. "
                   "Background people and crowds are the same white round-head figures — never realistic humans.",
     },
-    "ost_clean": {
-        "name": "Bonhommes blancs, décors épurés (Oddly Specific Things)",
-        "prompt": "2D digital cartoon illustration with clean bold black outlines and soft cel shading. Simple stick-figure-"
-                  "like characters: a large perfectly round plain WHITE head (no nose, no ears), small solid black dot "
-                  "eyes, tiny simple eyebrows and a small simple mouth; women have the same white round head with long "
-                  "straight black hair or a black bun; slim simple bodies in plain solid-colored long-sleeve sweaters or "
-                  "simple outfits (green, blue, red, purple, yellow, black) with dark trousers, white mitten hands. "
-                  "Clean, simple, readable backgrounds exactly like the reference image: a few well-chosen props, soft "
-                  "natural daylight or warm interior light, gentle balanced colors, uncluttered surfaces, clear depth, one "
-                  "clear focal point; night scenes stay soft and readable (blue dusk, a few warm lights), never murky or "
-                  "neon-saturated. Characters medium size with their whole head inside the frame, calm understated "
-                  "facial expressions. Objects are drawn as real objects at a realistic size, never with a face. "
-                  "Background people and crowds are the same white round-head figures — never realistic humans.",
-    },
     "muted_cinematic": {
         "name": "2D cinématique désaturé (ancien POV Studio)",
         "prompt": "2D digital cartoon animation, flat shading, clean vector-like lines, desaturated muted tones (greys, "
@@ -344,9 +330,9 @@ TEMPLATES = {
                    "thumb_prompt": "The key moment of \"{title}\": the object (a real object, no face) in the "
                                    "hands that take it, on a clean white background, 2 handwritten words, one "
                                    "black arrow."},
-        "style": "ost_clean", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
+        "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
-        "style_rev": 1,  # objet sans visage + décors épurés : appliqué aux vidéos créées après ce changement
+        "style_rev": 1,  # objet sans visage, à taille réelle : appliqué aux vidéos créées après ce changement
         "direction": "YOU are the object of the title (the narrator): show it in almost every image, easy to spot and "
                      "at a realistic size, in the hands, pockets, bags, boxes, tables, cars and rooms it passes "
                      "through. It is a real object with NO face (no eyes, no mouth, never anthropomorphic): its mood "

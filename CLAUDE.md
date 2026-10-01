@@ -48,8 +48,8 @@ style dans `TEMPLATE_BIBLES`, vidéos de référence dans `skills/references/<id
 
 **Oddly Specific Things — images (validé par l'utilisateur, oct. 2026)** : l'objet narrateur (« You ») est un
 **vrai objet sans visage** (ni yeux ni bouche : un smiley sur un téléphone « fait bizarre »), à taille réaliste ;
-son humeur passe par ce qui lui arrive (écran, fissures, sachet alu, carton) et par les visages autour. Décors
-**épurés** et lumineux comme `style.jpg` (preset `ost_clean`), plus de nuits néon chargées. Appliqué via
+son humeur passe par ce qui lui arrive (écran, fissures, sachet alu, carton) et par les visages autour. Le reste
+du style de la chaîne ne change pas (`osl_stick`, décors riches) : c'est l'option qu'il a choisie. Appliqué via
 `style_rev` du modèle : seules les vidéos créées après ce changement le prennent (`_with_style_rev`), une vidéo
 déjà lancée garde son style d'origine. Le contrôle en vision refuse un objet avec un visage.
 
