@@ -2633,10 +2633,12 @@ def studio_summary(pr):
 
 
 def chapters(pr):
+    m = pr.get("montage") or DEFAULT_MONTAGE
+    lead = INTRO_SECONDS if (m.get("intro") and montage_enabled(pr)) else 0.0  # la voix démarre après l'intro
     out = []
     for s in pr.get("scenes") or []:
         if s.get("first"):
-            t = int(s["start"])
+            t = int(s["start"] + (lead if out else 0))
             out.append(f"{t // 60:02d}:{t % 60:02d} {s.get('heading') or ('Intro' if not out else '')}".strip())
     if out and not out[0].startswith("00:00"):
         out.insert(0, "00:00 Intro")
