@@ -122,3 +122,49 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   durées min. des cartes). `services/tts.py` : voix (Algrow). `services/ai.py` : texte + images.
 - `production/` : scripts de production sans surveillance (ce guide). `production/VIDEOS.md` : journal des
   vidéos livrées et en cours — **le tenir à jour** à chaque livraison.
+- **History Docs** (format à part, §10) : `services/history.py` (pipeline + montage), `history_ai.py`
+  (script, plan visuel, styles d'image), `history_geo.py` (cartes), `history_sources.py` (vraies archives),
+  `history_audio.py` (musique + bruitages), `align.py` (Whisper), `routes/history.py`,
+  `tool_apps/history-studio/`, moteur Remotion `history_engine/`.
+
+## 10. History Docs (format Histoire, `/tools/history-studio`)
+
+Documentaires d'histoire façon *Dose of History* (vidéo de référence analysée : narration à la 2ᵉ personne,
+images + quelques animations). Pas de chaîne pour l'instant : on règle le format sur des démos (Hastings,
+Cannae). Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
+templates : section History Docs du `README.md`.
+
+- **Pipeline** : script → voix (Algrow, Timothy par défaut) → sous-titres calés par Whisper local sur
+  l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits
+  du casting d'abord, puis plans avec le portrait en référence) → `build_timeline` → rendu Remotion
+  (`history_engine/render.mjs`) → loudnorm -14 LUFS. Projets dans `data/history/<id>/`.
+- **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
+  `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
+  télécharger Chrome) et `REMOTION_CONCURRENCY=4` ; une vidéo de 3-4 min ≈ 15-25 min de rendu.
+- **Tester sans dépenser** (ni IA ni voix) : écrire un `timeline.json` à la main (contrat dans
+  `history_engine/src/schema.ts`) et sortir des images fixes :
+  `node history_engine/render.mjs --project <dossier> --stills "5,12.5" --stills-dir <dossier>/st`.
+  Toujours **regarder** ces images avant d'annoncer qu'une animation est prête.
+
+Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande) :
+- **Peu d'animations** (1,5 par minute max, types variés). **Bataille, graphique et itinéraire désactivés
+  par défaut** : il n'en veut pas (trop d'animations le gênait). Il **adore les citations** synchronisées
+  mot à mot avec le portrait à droite.
+- Une animation reste à l'écran **jusqu'au bout puis tient** (`CARD_MIN` dans `history.py`) : jamais
+  coupée avant d'être finie.
+- **Style dessiné par défaut** (encre & aquarelle, thème parchemin cohérent dans les animations) ; BD,
+  peinture et photoréaliste au choix. Pas trop sombre (voile léger).
+- **Variété des images** : pas deux chevaliers qui regardent dans le même sens à chaque plan ; au moins la
+  moitié des plans sans personnage, un seul personnage de référence par plan, jamais de collage/split.
+- **Jamais de tête coupée** : recadrage ancré en haut, zooms sans mouvement vertical.
+- **Texte toujours lisible** sur les images claires (plaques sombres, bande sous les sous-titres).
+- **Sous-titres exacts** sur toute la durée (orthographe du script, timings Whisper).
+- **Cartes de mouvements propres** : une seule flèche par armée, la pointe s'arrête avant la ville/le
+  marqueur, lieux trop proches fusionnés, noms placés automatiquement (`_layout_map_labels`) pour
+  qu'aucune flèche, marqueur ou cartouche ne recouvre un texte.
+- Vraies images d'archive (The Met, Wikimedia Commons) quand elles existent, image IA en secours.
+- Rendus envoyés sur **Gofile** (un seul lien, le bon).
+
+Pièges connus : Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
+donc `align.py` télécharge le modèle Whisper par URL directe dans `data/models/` ; les côtes Natural Earth
+(~17 Mo) sont téléchargées une fois dans `data/geo/`.

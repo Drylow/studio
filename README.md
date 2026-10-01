@@ -8,6 +8,7 @@ fait des vidéos faceless en 2D façon TubeGen, entièrement sur ta machine.
 - Python 3.10+
 - Rien d'autre : ffmpeg est fourni par `imageio-ffmpeg`. Pour utiliser un ffmpeg
   à toi, renseigne `FFMPEG_BIN`.
+- Seulement pour **History Docs** : [Node.js](https://nodejs.org) 18+ (moteur d'animation Remotion).
 
 ```bash
 python -m venv venv
@@ -218,6 +219,64 @@ Réglage par chaîne (section 4 de la fiche chaîne), puis par vidéo dans le mo
   nombres), et un geste « regardez ça » de temps en temps quand il parle. Au repos il ne bouge pas.
 - **Pack montage** : chaque clip contient la mise en page et l'animation du prof. Le ZIP inclut aussi le
   fond et le prof en PNG séparés.
+
+## History Docs (format Histoire)
+
+Outil **HISTORY DOCS** (`/tools/history-studio`). C'est un format à part des chaînes 2D : des documentaires
+d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une durée. Code : `services/history*.py`,
+`services/align.py`, `routes/history.py`, `tool_apps/history-studio/`, moteur Remotion dans `history_engine/`.
+
+**Prérequis en plus :** Node.js 18+. Au premier rendu (ou au lancement de `START_STUDIO.bat`), les
+dépendances du moteur s'installent dans `history_engine/node_modules/`. Mêmes clés que le reste
+(`AI_*`, `ALGROW_API_KEY`).
+
+**Le pipeline** (côté serveur, chaque étape peut être refaite depuis la fiche de la vidéo) :
+1. **Script** : narration immersive à la 2ᵉ personne (date et lieu, « rien à voir avec les films »),
+   phrases courtes, chiffres et sources réels, 153 mots/min comme la référence
+   (`presets/history_doc/reference_excerpt.txt` sert d'ancre de style).
+2. **Voix off** : Algrow (Timothy par défaut, Elliott, Connery) ou Edge gratuit.
+3. **Plan visuel** : l'IA choisit ce qu'on voit à chaque phrase. Dans le hook, un plan toutes les ~5 s ;
+   ensuite des images de 12 à 20 s et quelques animations calées sur la narration (1,5 par minute max).
+   Un « monteur image » IA réécrit ensuite la liste des plans pour qu'aucun ne ressemble au précédent
+   (au moins la moitié sans personnage nommé, un seul personnage de référence par plan, jamais de collage).
+4. **Images** (qualité haute) : portraits du casting d'abord, réutilisés comme références pour garder les
+   mêmes visages, puis les plans. Recadrage ancré en haut : jamais de tête coupée.
+5. **Montage Remotion** : zoom lent sur les images, animations, grain papier (ou pellicule), sous-titres,
+   nappe musicale et bruitages générés par ffmpeg (aucun risque Content ID), mixage final à -14 LUFS.
+
+**Style d'image** (au choix par vidéo) : *Illustré, encre & aquarelle* (défaut), *BD ligne claire*,
+*Peinture d'histoire* ou *Cinéma photoréaliste*. Les animations suivent le style : parchemin et encre pour
+les styles dessinés, charbon et or pour le photoréaliste.
+
+**Les animations** (`history_engine/src/templates/`). Actives par défaut : phrase choc, grand chiffre, carte,
+citation, fiche perso, duo, archive. Bataille, graphique et itinéraire existent mais sont décochés (à cocher
+par vidéo) :
+
+| Template | Ce qu'il montre |
+|---|---|
+| Phrase choc | serif en capitales, mots clés en rouge, petite ligne de contexte, flash quand le narrateur le dit |
+| Grand chiffre | « 47 000 » qui défile, légende et source, impact sonore |
+| Carte | vraie géographie (côtes et fleuves Natural Earth), villes, une flèche par armée tracée de A vers B, épées croisées sur la bataille, zoom lent ; les noms sont placés automatiquement pour qu'aucune flèche ni aucun marqueur ne les touche |
+| Fiche perso | portrait à droite, à gauche ou plein cadre, nom, rôle, faits un par un |
+| Duo | portrait à gauche, portrait à droite (deux rivaux, deux chefs), VS au centre |
+| Archive | vraie image de musée (The Met, Wikimedia Commons) choisie et vérifiée par l'IA, avec crédit ; image IA en secours |
+| Citation | chaque mot s'allume quand le narrateur le dit, portrait à droite, auteur et source |
+| Bataille | terrain vu du ciel, blocs d'unités qui manœuvrent (désactivé par défaut) |
+| Graphique | barres qui montent (désactivé par défaut) |
+| Itinéraire | ligne tracée de ville en ville (désactivé par défaut) |
+
+Sur les images : cartouche nom + rôle à la 1re apparition d'un personnage, tampon « LIEU · DATE » sur les
+plans d'ouverture. Zooms ancrés en haut du cadre, sans mouvement vertical.
+
+**Sous-titres** : orthographe du script, timings calés mot à mot sur la voix réelle par Whisper en local
+(`faster-whisper`, modèle `base.en` d'environ 145 Mo téléchargé au premier usage dans `data/models/`).
+Sans ce paquet, on garde les timings du TTS.
+
+Aperçu des templates : `cd history_engine && npm run studio` (Remotion Studio).
+Rendu à la main : `node history_engine/render.mjs --project <dossier media> --out video.mp4`
+(`--stills "5,12.5" --stills-dir <dossier>` pour sortir seulement quelques images JPEG).
+Données : `data/history/<id>/` (vidéo finale à la racine, médias et `timeline.json` dans `media/`).
+Variables optionnelles : voir la section HISTORY DOCS de `.env.example`.
 
 ## Quotas du proxy
 
