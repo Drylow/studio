@@ -1814,7 +1814,9 @@ def _image_workers():
 
 IMAGE_QA = """You are the quality checker of a 2D cartoon explainer channel. Look at this generated image for the
 scene below and reject it only for REAL, visible mistakes a viewer would notice:
-- anatomy errors (extra or missing arms, hands or heads, two heads, fused bodies, broken limbs);
+- anatomy errors: count the arms and hands of EVERY figure, including background people and partly hidden ones;
+  each must have exactly two arms and two hands (a third arm or hand, an arm growing out of another arm, a hand
+  floating alone = reject); also two heads, fused bodies, broken limbs;
 - objects that make no sense or are upside down / facing the wrong way / floating;
 - any readable text, letters or numbers (blank papers and screens are fine){no_text}
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
