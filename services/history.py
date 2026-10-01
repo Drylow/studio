@@ -145,11 +145,19 @@ def job_script(job, pid):
     if HC.channel(key):
         # chaîne History Docs : FacelessOS (recherche, hooks, plan, rédaction, audit greenlight) avec ses skills
         job.update(0.01, "FacelessOS : préparation de la chaîne…")
-        res = S.generate(HC.fos_channel(key), pr["title"], pr["minutes"], pr.get("notes", ""),
-                         progress=lambda p, m, _partial=None: job.update(0.02 + 0.96 * p, m), history=_channel_history(key, pid))
-        sc = script_from_fos(res["script"], pr["title"])
+        fch = HC.fos_channel(key)
+        res = S.generate(fch, pr["title"], pr["minutes"], pr.get("notes", ""),
+                         progress=lambda p, m, _partial=None: job.update(0.02 + 0.78 * p, m), history=_channel_history(key, pid))
+        text, audit = res["script"], None
+        try:  # comme les chaînes 2D : 2 tours d'audit greenlight en plus sur le script fini (redites, slop, rythme)
+            text, audit = S.audit_script(fch, pr["title"], text, pr["minutes"], rounds=2,
+                                         progress=lambda p, m, _partial=None: job.update(0.8 + 0.18 * p, m))
+        except Exception as e:  # noqa: BLE001 — l'audit en plus est un bonus : le script du greenlight reste valable
+            print(f"[audit] {e}", flush=True)
+        sc = script_from_fos(text, pr["title"])
         fos = {"verdict": (res.get("review") or {}).get("verdict"), "rotation": (res.get("outline") or {}).get("rotation"),
-               "files_used": (res.get("review") or {}).get("files_used")}
+               "files_used": (res.get("review") or {}).get("files_used"), "text": text,
+               "audit": (audit or {}).get("verdict") if isinstance(audit, dict) else None}
     else:
         job.update(0.05, "Écriture du script (style documentaire)…")
         sc = HA.write_script(pr["title"], pr["minutes"], pr.get("notes", ""), pr["options"].get("language", "en"))
