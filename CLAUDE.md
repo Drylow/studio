@@ -154,8 +154,13 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 ## 10. History Docs (format Histoire, `/tools/history-studio`)
 
 Documentaires d'histoire façon *Dose of History* (vidéo de référence analysée : narration à la 2ᵉ personne,
-images + quelques animations). Pas de chaîne pour l'instant : on règle le format sur des démos (Hastings,
-Cannae). Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
+images + quelques animations). **Deux chaînes** (fiches et kit YouTube dans `chaines/`) :
+**The Survivor's Account** (`survivors_account`, @SurvivorsAccount : un vrai témoin par vidéo, ses mots cités
+mot pour mot) et **Frontier Blood** (`frontier_blood`, @FrontierBlood : la frontière américaine). Config :
+`services/history_channels.py` + `presets/history_channels/<clé>/` (idées, images de miniature, bible).
+Script : **FacelessOS** (format `history_doc`, référence de voix `skills/references/EDGm3821yE8.txt`) + 2 tours
+d'audit en plus ; recherche avec les vraies sources (mémoires du domaine public) dans les notes.
+Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
 templates : section History Docs du `README.md`.
 
 - **Pipeline** : script → voix (Algrow, Timothy par défaut) → sous-titres calés par Whisper local sur

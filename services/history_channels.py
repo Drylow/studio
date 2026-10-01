@@ -19,10 +19,10 @@ _COMMON_RULES = (
     "civilians, and cite their own accounts. No modern politics.")
 
 CHANNELS = {
-    "last_witness": {
-        "name": "Last Witness",
-        "handle": "@LastWitnessHistory",
-        "tagline": "History, told by the people who were there.",
+    "survivors_account": {
+        "name": "The Survivor's Account",
+        "handle": "@SurvivorsAccount",
+        "tagline": "History, told by the people who lived through it.",
         "niche": ("Famous battles, sieges and disasters told through ONE real eyewitness account (often a teenager or a "
                   "survivor): Gettysburg, Pompeii, Agincourt, the fall of Constantinople, the Titanic, Isandlwana..."),
         "audience": "Men 25-65, US and UK first, who love military history, last stands and 'what it was really like'.",
@@ -46,7 +46,7 @@ CHANNELS = {
     },
     "frontier_blood": {
         "name": "Frontier Blood",
-        "handle": "@FrontierBloodHistory",
+        "handle": "@FrontierBlood",
         "tagline": "The American frontier, without the Hollywood.",
         "niche": ("The American frontier and the wars of the West, 1820-1890: the Alamo, Comanche and Lakota wars, "
                   "Texas Rangers, Adobe Walls, Fetterman, the Wagon Box Fight, Little Bighorn and beyond."),

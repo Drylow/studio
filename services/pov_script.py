@@ -166,7 +166,7 @@ FORMATS = {
         "name": "History documentary (style Dose of History)",
         "desc": "« The BRUTAL Way … Actually Fought », « They Didn't Just Kill X — The Truth About Y », « X's Final Minutes "
                 "Were Too Brutal for History Books » — documentaire d'histoire immersif, chronologique et sourcé (chaînes "
-                "History Docs : Last Witness, Frontier Blood).",
+                "History Docs : The Survivor's Account, Frontier Blood).",
         "heading": "short chapter title (2-5 words), structure only, never spoken (e.g. \"The night before\", \"First contact\", "
                    "\"The last ridge\", \"What the report left out\")",
         "structure": """IMMERSIVE HISTORY DOCUMENTARY in the register of the reference video: one calm, grave narrator, present tense for the action, plain words, short and long sentences mixed. No host persona, no greeting, no channel name, no "in this video".
