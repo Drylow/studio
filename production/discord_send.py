@@ -1,7 +1,7 @@
 """Envoie le paquet de publication d'une vidéo sur Discord : lien vidéo + miniature, titre, description
 (+ chapitres), tags, commentaire épinglé. Marque = nom du studio de la chaîne (Oddly Specific Lives…).
 
-  python production/discord_send.py <folder> <lien_gofile> [--link-only]
+  python production/discord_send.py <folder> <lien_gofile> [--link-only] [--dry-run]
 
 Le dossier doit avoir meta.json (écrit au rendu) et thumb_choice.txt (chemin de la miniature choisie).
 Webhook : DISCORD_WEBHOOK_URL dans .env (jamais dans git)."""
@@ -25,9 +25,17 @@ meta = json.load(open(os.path.join(D, "meta.json")))
 thumb = open(os.path.join(D, "thumb_choice.txt")).read().strip()
 
 
-def post(content, file=None):
-    data = {"content": content, "flags": 4, "allowed_mentions": {"parse": []}}  # 4 = pas d'aperçu de lien
+COLOR = 0xE63946
+EMBED_LIMIT = 5900  # Discord : 6 000 caractères au total pour les embeds d'un message
+
+
+def post(content, embeds=(), file=None):
+    """Un seul message (contenu + embeds + miniature jointe) : un paquet ne peut plus être coupé par un autre."""
+    data = {"content": content, "embeds": list(embeds), "allowed_mentions": {"parse": []}}
     for _ in range(4):
+        if DRY:
+            print(json.dumps(data, ensure_ascii=False, indent=1))
+            return
         if file:
             r = requests.post(URL, data={"payload_json": json.dumps(data)},
                               files={"files[0]": ("miniature.jpg", open(file, "rb"), "image/jpeg")}, timeout=60)
@@ -37,26 +45,42 @@ def post(content, file=None):
             time.sleep(float(r.json().get("retry_after", 1)) + 0.2)
             continue
         r.raise_for_status()
-        time.sleep(0.7)
         return
     raise RuntimeError("Discord : trop de requêtes")
 
 
-# un paquet à la fois : deux vidéos envoyées en même temps entremêlaient leurs messages sur Discord
-# (titre de l'une, description et tags de l'autre). Le verrou tient jusqu'à la fin du script.
+def embed(title, text):
+    return {"title": title, "description": text[:4096], "color": COLOR}
+
+
+def size(e):
+    return len(e.get("title") or "") + len(e.get("description") or "") + sum(
+        len(f["name"]) + len(f["value"]) for f in e.get("fields") or []) + len((e.get("footer") or {}).get("text") or "")
+
+
+DRY = "--dry-run" in sys.argv
+# un paquet à la fois, en plus du message unique (deux scripts lancés ensemble ne se croisent jamais)
 _lock = open(os.path.join(WORK, "discord.lock"), "w")
 fcntl.flock(_lock, fcntl.LOCK_EX)
 
 title = meta["titles"][0]
+head = f"🎬 **{BRAND} — {title}** ✅ vérifiée, à poster\n🔗 **Vidéo** : <{link}>"  # <…> : pas d'aperçu du lien
 if "--link-only" in sys.argv:
-    post(f"🎬 **{BRAND} — {title}**\n🔗 **Vidéo** : {link}")
+    post(head.replace(" ✅ vérifiée, à poster", ""))
     sys.exit()
-post(f"🎬 **{BRAND} — {title}** ✅ vérifiée, à poster\n🔗 **Vidéo** : {link}\n🖼️ Miniature :", thumb)
-post(f"📌 **Titre**\n{title}")
 desc = meta["description"].strip()
 if meta.get("chapters"):
     desc += "\n\nChapters\n" + "\n".join(meta["chapters"])
-post(f"📝 **Description**\n{desc}")
-post(f"🏷️ **Tags**\n{', '.join(meta['tags'])}")
-post(f"💬 **Commentaire épinglé**\n{meta['pinned_comment']}")
+cover = {"title": f"{BRAND} — {title}", "url": link or None, "color": COLOR, "image": {"url": "attachment://miniature.jpg"},
+         "fields": [{"name": "📌 Titre", "value": title[:1024]}]}
+if len(meta["titles"]) > 1:
+    cover["fields"].append({"name": "Autres titres", "value": "\n".join(meta["titles"][1:4])[:1024]})
+blocks = [cover, embed("📝 Description", desc), embed("🏷️ Tags", ", ".join(meta["tags"])),
+          embed("💬 Commentaire épinglé", meta.get("pinned_comment") or "")]
+blocks = [b for b in blocks if b.get("description") or b.get("fields")]
+if sum(size(b) for b in blocks) <= EMBED_LIMIT:
+    post(head, blocks, thumb)
+else:  # description très longue : deux messages à la suite, toujours sous le verrou
+    post(head, blocks[:2], thumb)
+    post(f"🎬 **{title}** (suite)", blocks[2:])
 print("Discord OK")
