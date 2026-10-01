@@ -33,7 +33,8 @@ BLUE = (58, 134, 255)
 GREY = (120, 128, 140)
 PALETTE = [(58, 134, 255), (230, 57, 70), (255, 184, 28), (43, 182, 115), (155, 93, 229), (255, 128, 64)]
 SS = 2          # suréchantillonnage des formes (contours lisses)
-EXIT = 0.25     # fondu de sortie (s)
+EXIT = 0.4      # sortie (s) : fondu adouci, calé sur le fondu entre deux images quand la carte part avec sa scène
+CENTER_Y = 0.46  # hauteur des cartes centrées dans le panneau (un peu au-dessus du milieu)
 TYPES = ("label", "counter", "receipt", "bars", "pie", "list", "split", "timeline", "stamp", "sheet")
 FULL_PANEL = ("sheet",)  # ces fx remplacent l'image de la scène (pas d'image à générer)
 
@@ -291,8 +292,8 @@ class Counter(Fx):
         self.start = fr[1] if fr else 0.0
         self.label = (self.spec.get("label") or "").upper()[:48]
         self.w, self.h = int(800 * k), int(380 * k)
-        self.x = int(px + pw * 0.62 - self.w / 2)
-        self.y = int(py + ph * 0.42 - self.h / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
         final = fmt_number(*self.to)
         self.size = fit_size(final, 900, 150 * k, self.w - 110 * k)
         ticks = [(0.25 + i * 0.07, "tick", 0.5) for i in range(int((1.35 - 0.25) / 0.07))]
@@ -454,8 +455,8 @@ class Bars(Fx):
             self.items.append((str(i.get("label") or "")[:34], v, str(i.get("display") or "")))
         self.title = (self.spec.get("title") or "").upper()[:44]
         self.w, self.h = int(940 * k), int(640 * k)
-        self.x = int(px + pw * 0.6 - self.w / 2)
-        self.y = int(py + ph * 0.47 - self.h / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
         n = max(1, len(self.items))
         self.anim_end = 0.35 + 0.18 * n + 0.55
         self.sfx = [(0.0, "pop", 0.6)] + [(0.35 + 0.18 * j + 0.5, "pop", 0.5) for j in range(n)]
@@ -514,8 +515,8 @@ class Pie(Fx):
         self.items = [(l, v / tot) for l, v in vals]
         self.title = (self.spec.get("title") or "").upper()[:40]
         self.w, self.h = int(940 * k), int(580 * k)
-        self.x = int(px + pw * 0.6 - self.w / 2)
-        self.y = int(py + ph * 0.47 - self.h / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
         self.sfx = [(0.0, "whoosh", 0.5)] + [(0.3 + 0.9 * sum(v for _, v in self.items[:j]), "pop", 0.4)
                                               for j in range(len(self.items))]
 
@@ -568,8 +569,8 @@ class ListFx(Fx):
         self.w = int(900 * k)
         self.row = 80 * k
         self.h = int(140 * k + self.row * len(self.items) + 40 * k)
-        self.x = int(px + pw * 0.6 - self.w / 2)
-        self.y = int(py + ph * 0.46 - self.h / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
         self.step = 0.32
         if len(self.times) != len(self.items):
             self.times = [0.3 + self.step * j for j in range(len(self.items))]
@@ -608,8 +609,8 @@ class Split(Fx):
         self.l = self.spec.get("left") or {}
         self.r = self.spec.get("right") or {}
         self.w, self.h = int(980 * k), int(400 * k)
-        self.x = int(px + pw * 0.58 - self.w / 2)
-        self.y = int(py + ph * 0.46 - self.h / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * CENTER_Y - self.h / 2)
         self.sfx = [(0.0, "pop", 0.6), (0.35, "pop", 0.6), (0.7, "stamp", 0.45)]
 
     def _col(self, p, x0, x1, data, a, col):
@@ -655,7 +656,7 @@ class Timeline(Fx):
         self.items = [i for i in self.spec.get("items") or [] if isinstance(i, dict)][:5]
         self.title = (self.spec.get("title") or "").upper()[:44]
         self.w, self.h = int(1240 * k), int(400 * k)
-        self.x = int(px + pw * 0.56 - self.w / 2)
+        self.x = int(px + pw * 0.5 - self.w / 2)
         self.y = int(py + ph * 0.5 - self.h / 2)
         n = max(1, len(self.items))
         self.draw_end = 0.3 + 0.35 * n
@@ -697,19 +698,20 @@ class Timeline(Fx):
 
 
 class Stamp(Fx):
+    """Tampon bien droit, en bas au centre du panneau (il ne cache pas les visages de l'image)."""
     anim_end = 0.4
 
     def setup(self):
         k = self.k
         px, py, pw, ph = _panel(self.geo)
         self.txt = (self.spec.get("text") or "PAID").upper()[:18]
-        self.size = fit_size(self.txt, "stamp", 110 * k, pw * 0.46)
+        self.size = fit_size(self.txt, "stamp", 84 * k, pw * 0.4)
         tw = font("stamp", self.size).getbbox(self.txt)
         self.tw = tw[2] - tw[0]
-        self.w = int(self.tw + 160 * k)
-        self.h = int(self.w * 0.62)
-        self.x = int(px + pw * 0.6 - self.w / 2)
-        self.y = int(py + ph * 0.42 - self.h / 2)
+        bw, bh = self.tw + 70 * k, self.size * 1.5
+        self.w, self.h = int(bw * 1.45), int(bh * 1.6)  # marge pour l'arrivée (le tampon part plus grand)
+        self.x = int(px + pw * 0.5 - self.w / 2)
+        self.y = int(py + ph * 0.83 - self.h / 2)
         self.sfx = [(0.14, "stamp", 0.9)]
 
     def frame(self, t):
@@ -727,8 +729,8 @@ class Stamp(Fx):
                               8 * k * SS, outline=red, width=int(3 * k * SS))
         p.text((cx, cy + 4 * k), self.txt, "stamp", self.size, fill=red, anchor="mm")
         im = p.image()
-        s = 1.9 - 0.9 * ease_out(seg(t, 0, 0.15))
-        return transform(im, scale=s, alpha=seg(t, 0, 0.1) * 0.95, rot=12)
+        s = 1.4 - 0.4 * ease_out(seg(t, 0, 0.15))
+        return transform(im, scale=s, alpha=seg(t, 0, 0.1) * 0.95)
 
 
 class Title(Fx):
@@ -1047,15 +1049,15 @@ def make(spec, geo, state=None):
     return cls(spec, geo, state) if cls else None
 
 
-def render_fx(fx, duration, out_dir, fps=30):
+def render_fx(fx, duration, out_dir, fps=30, exit_dur=EXIT):
     """Images d'un fx pour `duration` secondes → [(chemin, durée)] (animation, image tenue, sortie).
 
-    La sortie (fondu) occupe les EXIT dernières secondes ; tout est dans une toile de taille fixe
-    (fx.w × fx.h), posée en (fx.x, fx.y) sur l'image."""
+    La sortie (fondu adouci + léger recul) occupe les `exit_dur` dernières secondes ; tout est dans
+    une toile de taille fixe (fx.w × fx.h), posée en (fx.x, fx.y) sur l'image."""
     os.makedirs(out_dir, exist_ok=True)
     fps = int(fps)
     duration = max(0.5, float(duration))
-    tail = EXIT if getattr(fx, "exit", True) else 0.0
+    tail = max(0.1, float(exit_dur)) if getattr(fx, "exit", True) else 0.0
     anim = min(fx.length, duration - tail)
     n_anim = max(1, int(math.ceil(anim * fps)))
     seq = []
@@ -1076,11 +1078,11 @@ def render_fx(fx, duration, out_dir, fps=30):
         final = last
     if not tail:
         return seq
-    n_exit = max(1, int(round(EXIT * fps)))
+    n_exit = max(1, int(round(tail * fps)))
     for i in range(n_exit):
-        a = 1 - (i + 1) / (n_exit + 1)
+        a = 1 - ease_in_out((i + 1) / n_exit)  # la dernière image est vide : rien ne reste après la fin
         path = os.path.join(out_dir, f"x{i:02d}.png")
-        transform(final, scale=1 - 0.04 * (1 - a), alpha=a).save(path, "PNG", compress_level=1)
+        transform(final, scale=1 - 0.05 * (1 - a), alpha=a).save(path, "PNG", compress_level=1)
         seq.append((path, 1 / fps))
     return seq
 
@@ -1093,13 +1095,21 @@ def blank(out_dir, w, h):
     return path
 
 
-def write_track(seq, offset, blank_path, dest):
-    """Liste concat : transparent pendant `offset` s, puis les images du fx."""
+def write_track(seq, offset, blank_path, dest, skip=0.0):
+    """Liste concat : transparent pendant `offset` s, puis les images du fx à partir de `skip` s
+    (suite d'un fx commencé dans la scène d'avant, qui reste à l'écran pendant le changement d'image)."""
     def q(pth):
         return "file '" + os.path.relpath(pth, os.path.dirname(dest)).replace("\\", "/").replace("'", "'\\''") + "'"
     lines = ["ffconcat version 1.0"]
     if offset > 0:
         lines += [q(blank_path), f"duration {offset:.6f}"]
+    if skip > 0:
+        out, t = [], 0.0
+        for path, dur in seq:
+            if t + dur > skip + 1e-6:
+                out.append((path, min(dur, t + dur - skip)))
+            t += dur
+        seq = out
     for path, dur in seq:
         lines += [q(path), f"duration {dur:.6f}"]
     lines.append(q(seq[-1][0] if seq else blank_path))

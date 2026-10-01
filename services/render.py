@@ -437,17 +437,29 @@ def _same_sheet(a, b):
             and (sa.get("title") or "").strip().upper() == (sb.get("title") or "").strip().upper())
 
 
-MIN_FX = 3.2  # une animation reste au moins ~3 s à l'écran (sinon on n'a pas le temps de la lire)
+MIN_FX = 3.2    # une animation reste au moins ~3 s à l'écran (sinon on n'a pas le temps de la lire)
+HOLD_FX = 3.5   # une fois l'animation finie, son résultat reste lisible au moins 3,5 s…
+CARRY_FX = 4.0  # … quitte à rester par-dessus l'image suivante (au plus 4 s après le changement d'image)
+MAX_FX = 12.0   # une carte ne reste jamais plus de 12 s
+SWAP_FX = 0.15  # la carte qui part finit de s'effacer pendant que la suivante arrive
 
 
 def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, layout):
     """Dessine les animations du montage (services/motion.py) et leurs listes concat par scène.
+
+    Une carte n'est plus coupée par le changement d'image : elle reste le temps d'être lue (HOLD_FX
+    après la fin de son animation), par-dessus l'image suivante s'il le faut, et s'efface pendant le
+    fondu entre les deux images ou quand la carte suivante arrive.
     → ({scène: [{"track", "x", "y", "sig"}]}, [(seconde, son, gain)])."""
     from services import motion
     panel = tuple(layout["panel"]) if layout else (0, 0, width, height)
     geo = {"panel": panel, "k": height / 1080.0, "W": width, "H": height}
     fdir = os.path.join(workdir, "fx")
     os.makedirs(fdir, exist_ok=True)
+    xf = tf / fps
+    exit_dur = xf if xf > 0 else motion.EXIT  # la sortie d'une carte dure autant que le fondu d'image
+    clip_at = [(starts_f[c] / fps, (starts_f[c] + frames[c]) / fps) for c in range(len(frames))]
+    end_video = clip_at[-1][1] if clip_at else 0.0
     state, items, sounds = {}, [], []
     by_scene = {int(f["scene"]): f for f in fx}
     chain, rows = {}, {}  # fiche qui s'étend sur plusieurs scènes : 1re scène de la fiche, lignes au total
@@ -459,61 +471,92 @@ def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, l
                 head -= 1
             chain[i] = head
             rows[head] = rows.get(head, 0) + len(f["spec"].get("items") or [])
-    for f in sorted(fx, key=lambda f: (int(f["scene"]), float(f.get("t") or 0))):
+    # 1) instant d'apparition de chaque carte (secondes de la vidéo)
+    timed = []
+    for f in fx:
         i = int(f["scene"])
-        if not 0 <= i < len(scenes):
+        if not 0 <= i < len(scenes) or f["spec"].get("type") not in motion.CLASSES:
             continue
-        clip_s = starts_f[i] / fps
-        clip_len = frames[i] / fps
-        lead_in = tf / fps + 0.08 if i > 0 else 0.0  # après le fondu d'entrée (la 1re scène n'en a pas)
+        clip_s, clip_e = clip_at[i]
+        lead_in = xf + 0.08 if i > 0 else 0.0  # après le fondu d'entrée (la 1re scène n'en a pas)
         full = f["spec"].get("type") in motion.FULL_PANEL
         cont = full and _same_sheet(by_scene.get(i - 1), f)    # suite de la fiche d'avant : dès la 1re image
         hold = full and _same_sheet(f, by_scene.get(i + 1))    # la fiche continue : pas de fondu de sortie
         if cont:
             lead_in = 0.0
         off = lead_in if full else max(lead_in, float(f.get("t") or clip_s) - clip_s)
-        # la carte reste jusqu'à la fin de la scène (10 s max ; une fiche plein panneau, toute la scène)
-        dur = (clip_len - off - 0.04) if full else min(10.0, clip_len - off - 0.04)
-        if dur < MIN_FX:  # trop court à la fin de la scène : on l'avance pour qu'on ait le temps de le lire
-            off = max(lead_in, clip_len - MIN_FX - 0.04)
-            dur = clip_len - off - 0.04
-        if dur < 1.5:  # scène trop courte pour une animation lisible
-            continue
+        off = min(off, max(lead_in, clip_e - clip_s - 0.5))
+        timed.append((clip_s + off, i, f, full, cont, hold))
+    timed.sort(key=lambda x: (x[0], x[1]))
+    # 2) durée à l'écran, puis dessin dans l'ordre (le ticket de caisse se complète d'une carte à l'autre)
+    for n, (start, i, f, full, cont, hold) in enumerate(timed):
+        clip_s, clip_e = clip_at[i]
+        nxt = timed[n + 1][0] if n + 1 < len(timed) else end_video
         before = json.dumps(state, sort_keys=True)
         spec = dict(f["spec"], _cont=cont, _hold=hold, _rows=rows.get(chain.get(i, i), 0)) if full \
             else dict(f["spec"])
         if f.get("items_t"):  # lignes calées sur la voix, en secondes depuis l'apparition du fx
-            spec["_times"] = [max(0.3, t - (clip_s + off)) for t in f["items_t"]]
-        f = dict(f, spec=spec)
+            spec["_times"] = [max(0.3, t - start) for t in f["items_t"]]
         obj = motion.make(spec, geo, state)  # met à jour l'état (ticket de caisse) dans l'ordre
         if not obj:
             continue
-        sig = hashlib.sha1(json.dumps([f["spec"], before, round(dur, 3), geo, fps, motion.__file__ and
-                                       os.path.getmtime(motion.__file__)], sort_keys=True).encode()).hexdigest()[:12]
-        items.append((i, off, dur, obj, sig))
+        if not getattr(obj, "exit", True):  # intro, outro, fiche qui continue : jusqu'au bout de sa scène
+            end = clip_e
+        elif full:  # fiche plein panneau : s'efface pendant le fondu vers l'image suivante
+            end = clip_e + xf
+        else:
+            end = max(min(clip_e, start + MAX_FX), start + max(MIN_FX, obj.length + HOLD_FX))
+            if end >= clip_e - 0.05:
+                end = max(end, clip_e + xf)  # part avec sa scène : s'efface pendant le fondu d'image
+            if 0 < nxt - end < 1.2:
+                end = nxt + SWAP_FX  # la carte suivante arrive juste après : pas de trou d'une fraction de seconde
+            end = min(end, clip_e + CARRY_FX, start + MAX_FX, nxt + SWAP_FX)
+        end = min(end, end_video)
+        dur = end - start
+        if dur < 1.5:  # trop court pour une animation lisible
+            continue
+        sig = hashlib.sha1(json.dumps([f["spec"], before, round(dur, 3), geo, fps, round(exit_dur, 3),
+                                       motion.__file__ and os.path.getmtime(motion.__file__)],
+                                      sort_keys=True).encode()).hexdigest()[:12]
+        # la carte peut déborder sur les scènes suivantes : une liste concat par clip traversé
+        spans = []
+        for c in range(i, len(clip_at)):
+            cs, ce = clip_at[c]
+            if cs >= end - 1e-3:
+                break
+            if ce <= start + 1e-3:
+                continue
+            spans.append((c, max(0.0, start - cs), max(0.0, cs - start)))
+        items.append((spans, dur, obj, sig))
         for t_rel, name, gain in obj.sounds:
             if t_rel < dur - 0.2:
-                sounds.append((clip_s + off + t_rel, name, gain))
+                sounds.append((start + t_rel, name, gain))
 
     def draw(item):
-        i, off, dur, obj, sig = item
+        spans, dur, obj, sig = item
         d = os.path.join(fdir, sig)
         done = os.path.join(d, "seq.json")
         if os.path.isfile(done):
             with open(done, "r", encoding="utf-8") as fh:
                 seq = [(os.path.join(d, p), t) for p, t in json.load(fh)]
         else:
-            seq = motion.render_fx(obj, dur, d, fps)
+            seq = motion.render_fx(obj, dur, d, fps, exit_dur)
             with open(done, "w", encoding="utf-8") as fh:
                 json.dump([(os.path.basename(p), t) for p, t in seq], fh)
         blank = motion.blank(d, obj.w, obj.h)
-        track = motion.write_track(seq, off, blank, os.path.join(d, f"track_{int(off * 1000)}.txt"))
-        return i, {"track": os.path.abspath(track), "x": obj.x, "y": obj.y, "sig": [sig, round(off, 3)]}
+        res = []
+        for c, off, skip in spans:
+            track = motion.write_track(seq, off, blank, os.path.join(d, f"track_{int(off * 1000)}_{int(skip * 1000)}.txt"),
+                                       skip=skip)
+            res.append((c, {"track": os.path.abspath(track), "x": obj.x, "y": obj.y,
+                            "sig": [sig, round(off, 3), round(skip, 3)]}))
+        return res
 
     out = {}
     with ThreadPoolExecutor(max_workers=max(1, min(4, os.cpu_count() or 2))) as ex:
-        for i, entry in ex.map(draw, items):
-            out.setdefault(i, []).append(entry)
+        for res in ex.map(draw, items):  # dans l'ordre d'apparition : la carte suivante passe au-dessus
+            for c, entry in res:
+                out.setdefault(c, []).append(entry)
     return out, sounds
 
 

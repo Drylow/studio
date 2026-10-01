@@ -1817,6 +1817,7 @@ POSE_HINTS = {
 FX_GUIDE = """ANIMATION TYPES (at most ONE per scene, JSON objects; "at" = the exact word of THIS scene's narration where it
 appears, usually the number or the keyword):
 - {"type":"label","text":"THE RETAINER","at":"retainer"} : a new term being defined or a lesson title, 1-3 words.
+  Not too many: at most one label every 30 seconds.
 - {"type":"counter","to":"$61,000","from":"$0","label":"FINAL BILL","at":"61,000"} : one big number said aloud.
 - {"type":"receipt","items":[{"item":"Custody evaluation","amount":"$2,000"}],"total":"$23,200","at":"2,000"} :
   ONLY when the narration adds a line to the running tab or reads the running total; items = only the line(s)
@@ -1839,7 +1840,8 @@ appears, usually the number or the keyword):
 - {"type":"timeline","title":"A CONTESTED DIVORCE","items":[{"label":"Month 0","sub":"Lawyers hired"},...],
   "at":"months"} : steps or durations in time (3-5 steps).
 - {"type":"stamp","text":"NOT INCLUDED","at":"not"} : a verdict of 1-2 words (PAID, DENIED, AVOIDED, NOT
-  INCLUDED, SOLD...). Rare: 5 per video at most."""
+  INCLUDED, SOLD...), shown straight at the bottom of the board. Rare: 3 per video at most, never two within
+  2 minutes, only for a real verdict (never a disclaimer like "general info")."""
 
 
 def _norm_tok(w):
@@ -1989,6 +1991,32 @@ def _dedupe(pose, sign, fx, poses):
     return ("point" if "point" in poses else "explain"), "", fx
 
 
+NOTE_GAP = 25.0   # petites notes (étiquette, tampon) : au moins 25 s entre deux, sinon ça fait notification
+STAMP_GAP = 120.0  # un tampon au plus toutes les 2 min…
+STAMP_MAX = 3      # … et 3 par vidéo
+
+
+def thin_notes(scenes):
+    """Pas trop de petites notes à l'écran : une étiquette ou un tampon trop proche du précédent
+    saute (la scène reste propre). → indices (dans `scenes`) des animations gardées."""
+    keep, last_note, last_stamp, stamps = set(), -1e9, -1e9, 0
+    for k, s in enumerate(scenes):
+        f = s.get("fx")
+        if not f:
+            continue
+        t = float(f.get("t", s.get("start") or 0.0))
+        if f.get("type") in ("label", "stamp"):
+            if t - last_note < NOTE_GAP:
+                continue
+            if f.get("type") == "stamp":
+                if t - last_stamp < STAMP_GAP or stamps >= STAMP_MAX:
+                    continue
+                last_stamp, stamps = t, stamps + 1
+            last_note = t
+        keep.add(k)
+    return keep
+
+
 def _motion_types():
     from services import motion
     return motion.TYPES
@@ -2081,9 +2109,14 @@ def job_montage(job, pid):
             s["fx"] = fx_timing(s, e.get("fx"), words)
             if s["fx"] and s["fx"]["type"] in _full_panel():
                 s["status"] = "done"  # la fiche remplace l'image : rien à générer
-        x["montage_plan"] = {"at": store.now(), "n_fx": sum(1 for e in plan.values() if e.get("fx"))}
+        sc = x.get("scenes") or []
+        keep = thin_notes(sc)
+        for k, s in enumerate(sc):
+            if s.get("fx") and k not in keep:
+                s["fx"] = None
+        x["montage_plan"] = {"at": store.now(), "n_fx": sum(1 for s in sc if s.get("fx"))}
     store.update_project(pid, save)
-    n = sum(1 for e in plan.values() if e.get("fx"))
+    n = sum(1 for s in store.get_project(pid).get("scenes") or [] if s.get("fx"))
     job.update(1.0, f"Montage réalisé : {n} animations, {len(plan)} poses.")
 
 
@@ -2243,10 +2276,11 @@ def render_inputs(pid, workdir, until=None):
     fx, sounds = None, []
     if montage_enabled(pr):
         off = 1 if lead else 0
+        keep = thin_notes(scenes_src)  # aussi pour les plans faits avant cette règle
         fx = [{"scene": k + off, "t": s["fx"].get("t", s["start"]) + lead,
                "items_t": [t + lead for t in s["fx"].get("item_t") or []],
                "spec": {a: b for a, b in s["fx"].items() if a not in ("t", "item_t")}}
-              for k, s in enumerate(scenes_src) if s.get("fx")]
+              for k, s in enumerate(scenes_src) if s.get("fx") and k in keep]
         if lead:  # intro plein écran dessinée par le code (aucune image de la vidéo derrière)
             scenes.insert(0, {"image": _intro_bg(ch, workdir, w, h), "start": 0.0, "motion": "none", "index": -1})
             fx.insert(0, {"scene": 0, "t": 0.0, "spec": intro_spec(pr, ch)})
