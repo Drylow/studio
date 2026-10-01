@@ -18,8 +18,8 @@ Idée suivante déjà discutée : la prison (mise de côté).
 | Vidéo | État | Miniature |
 |---|---|---|
 | Your Life as a Stolen Phone | **livrée** (vérifiée, Discord) — https://gofile.io/d/FWMQaSSh | D « STOLEN » (main gantée qui arrache le téléphone) |
-| Your Life as a Stolen Car | **livrée** (vérifiée, Discord) — https://gofile.io/d/W3RbTNvA | « STOLEN » clé de voiture |
-| Your Life as a Stolen Credit Card | **livrée** (corrigée : mot coupé à 8:36, logo Mastercard à 12:52 ; vérifiée, Discord) — https://gofile.io/d/6Qj38smK | « STOLEN » carte bleue |
+| Your Life as a Stolen Car | **KO, à refaire** (ancien prompting : voiture avec un smiley, voiture dans une voiture) — ne pas poster W3RbTNvA | « STOLEN » clé de voiture |
+| Your Life as a Stolen Credit Card | **KO, à refaire** (ancien prompting : carte avec un visage, perso à trois bras) — ne pas poster 6Qj38smK | « STOLEN » carte bleue |
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)

@@ -58,6 +58,13 @@ son humeur passe par ce qui lui arrive (écran, fissures, sachet alu, carton) et
 du style de la chaîne ne change pas (`osl_stick`, décors riches) : c'est l'option qu'il a choisie. Appliqué via
 `style_rev` du modèle : seules les vidéos créées après ce changement le prennent (`_with_style_rev`), une vidéo
 déjà lancée garde son style d'origine. Le contrôle en vision refuse un objet avec un visage.
+**Dans les prompts, l'objet reste un objet** (sinon : smiley sur la calandre, carte transformée en humain,
+voiture dans une voiture, bras en trop) : le rédacteur de prompts l'appelle par son nom (« the stolen car »,
+`object_noun`), jamais « You » ; il ne fait aucune action (on décrit ce qu'on LUI fait) ; un seul exemplaire
+par image ; « à l'intérieur » = l'habitacle, jamais une 2ᵉ voiture ; les données = une vraie scène (écran
+flou, reçu). Son image de référence est décrite comme un objet, pas comme un personnage. Les persos ont
+deux bras, deux mains. Tout ça dans `pov_engine.py` (`_prompt_batch`, `_style_parts`, `build_image_prompt`,
+`detect_cast`, `check_image`), actif pour les vidéos sans visage (`faceless_object`).
 
 Idées de vidéos : vérifier la demande et la concurrence avec les outils NexLev (youtube_search,
 youtube_channel_outliers sur la chaîne et ses concurrents) avant de proposer. Ce qui marche sur OSL :
@@ -100,6 +107,10 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - Vidéo sur **Gofile** (lien `gofile_link.txt`), paquet sur **Discord** via `production/discord_send.py`
   (lien + miniature, titre, description + chapitres, tags, commentaire épinglé). Webhook :
   `DISCORD_WEBHOOK_URL` dans `.env` (à demander à l'utilisateur, jamais dans git).
+- **Le paquet part en UN seul message à embeds** (couverture + miniature, description + chapitres, tags,
+  commentaire épinglé) et un verrou (`$STUDIO_WORK/discord.lock`) fait passer les envois un par un : avant,
+  deux vidéos envoyées ensemble mélangeaient leurs messages (Credit Card avec la description de Car).
+  Vérifier sans poster : `python production/discord_send.py <dossier> <lien> --dry-run`.
 - Donner aussi le lien dans le chat, avec le titre de la vidéo.
 - Calendrier (oct. 2026) : Oddly Specific Lives MMA le 3 oct., basket le 4 oct. ; d'autres sports ensuite.
 
