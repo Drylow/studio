@@ -46,6 +46,13 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 Références : `presets/<clé>/` (style.jpg = style des images, thumb.jpg = style de miniature), bibles de
 style dans `TEMPLATE_BIBLES`, vidéos de référence dans `skills/references/<id YouTube>.txt`.
 
+**Oddly Specific Things — images (validé par l'utilisateur, oct. 2026)** : l'objet narrateur (« You ») est un
+**vrai objet sans visage** (ni yeux ni bouche : un smiley sur un téléphone « fait bizarre »), à taille réaliste ;
+son humeur passe par ce qui lui arrive (écran, fissures, sachet alu, carton) et par les visages autour. Décors
+**épurés** et lumineux comme `style.jpg` (preset `ost_clean`), plus de nuits néon chargées. Appliqué via
+`style_rev` du modèle : seules les vidéos créées après ce changement le prennent (`_with_style_rev`), une vidéo
+déjà lancée garde son style d'origine. Le contrôle en vision refuse un objet avec un visage.
+
 Idées de vidéos : vérifier la demande et la concurrence avec les outils NexLev (youtube_search,
 youtube_channel_outliers sur la chaîne et ses concurrents) avant de proposer. Ce qui marche sur OSL :
 nationalités (Russian 102k, Latina 85k, Indian 70k) et femmes « dangereuses / hors norme » (Yakuza 117k,

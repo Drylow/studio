@@ -73,6 +73,20 @@ STYLE_PRESETS = {
                   "cinematic composition, characters medium-large in the frame, calm understated facial expressions. "
                   "Background people and crowds are the same white round-head figures — never realistic humans.",
     },
+    "ost_clean": {
+        "name": "Bonhommes blancs, décors épurés (Oddly Specific Things)",
+        "prompt": "2D digital cartoon illustration with clean bold black outlines and soft cel shading. Simple stick-figure-"
+                  "like characters: a large perfectly round plain WHITE head (no nose, no ears), small solid black dot "
+                  "eyes, tiny simple eyebrows and a small simple mouth; women have the same white round head with long "
+                  "straight black hair or a black bun; slim simple bodies in plain solid-colored long-sleeve sweaters or "
+                  "simple outfits (green, blue, red, purple, yellow, black) with dark trousers, white mitten hands. "
+                  "Clean, simple, readable backgrounds exactly like the reference image: a few well-chosen props, soft "
+                  "natural daylight or warm interior light, gentle balanced colors, uncluttered surfaces, clear depth, one "
+                  "clear focal point; night scenes stay soft and readable (blue dusk, a few warm lights), never murky or "
+                  "neon-saturated. Characters medium size with their whole head inside the frame, calm understated "
+                  "facial expressions. Objects are drawn as real objects at a realistic size, never with a face. "
+                  "Background people and crowds are the same white round-head figures — never realistic humans.",
+    },
     "muted_cinematic": {
         "name": "2D cinématique désaturé (ancien POV Studio)",
         "prompt": "2D digital cartoon animation, flat shading, clean vector-like lines, desaturated muted tones (greys, "
@@ -327,14 +341,17 @@ TEMPLATES = {
                    "placeholder": "Your Life as a Stolen Phone",
                    "sub": "script FacelessOS (tu es l'objet, main après main), voix Algrow, objet-personnage "
                           "consistant, cartes « HAND #n », trajets, musique et montage.",
-                   "thumb_prompt": "The key moment of \"{title}\": the object (with its tiny worried face) in the "
+                   "thumb_prompt": "The key moment of \"{title}\": the object (a real object, no face) in the "
                                    "hands that take it, on a clean white background, 2 handwritten words, one "
                                    "black arrow."},
-        "style": "osl_stick", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
+        "style": "ost_clean", "voice_provider": "algrow", "voice": "rU18Fk3uSDhmg5Xh41o4", "wpm": 158,
         "no_text": True, "voice_speed": 1.0,
-        "direction": "YOU are the object of the title (the narrator): show it in almost every image, big and easy to "
-                     "spot, in the hands, pockets, bags, boxes, tables, cars and rooms it passes through, its tiny "
-                     "face showing its mood. The people who hold it are the channel's white round-headed figures "
+        "style_rev": 1,  # objet sans visage + décors épurés : appliqué aux vidéos créées après ce changement
+        "direction": "YOU are the object of the title (the narrator): show it in almost every image, easy to spot and "
+                     "at a realistic size, in the hands, pockets, bags, boxes, tables, cars and rooms it passes "
+                     "through. It is a real object with NO face (no eyes, no mouth, never anthropomorphic): its mood "
+                     "shows through what happens to it (screen lit or dark, cracks, a lock screen, a foil bag, a box) "
+                     "and through the faces of the people around it. The people who hold it are the channel's white round-headed figures "
                      "(roles shown by clothes and props: hoodies, gloves, aprons, suits). Real, richly lit places of "
                      "each step (a café terrace at night, a back-room repair shop, a warehouse near an airport, a "
                      "cargo plane hold, a crowded electronics market, a quiet bedroom). Close-ups on hands and on "
@@ -347,10 +364,10 @@ TEMPLATES = {
                     "section_titles": False, "captions": {"mode": "none"}, "layout": "full", "pause_max": 0.45,
                     "music": "auto", "music_volume": 0.13, "director": True, "image_qa": True,
                     "chapter_cards": True},
-        "character": ("You", "the object of the title, who narrates ('you'): drawn as a cartoon object in the same "
-                             "bold-outline style, with a tiny simple face on its front or screen (two small solid "
-                             "black dot eyes, small eyebrows, a small simple mouth), no arms and no legs; the exact "
-                             "same object, color, case and face in every image; its face shows its mood"),
+        "character": ("You", "the object of the title, who narrates ('you'): drawn as a REAL object in the same "
+                             "bold-outline style, with NO face (no eyes, no mouth), no arms and no legs, never "
+                             "anthropomorphic; the exact same model, color, case and wear marks in every image, at a "
+                             "realistic size compared with hands and people"),
         "object_hero": True,  # le perso « You » est un objet (image de référence sans bras ni jambes)
         # réalisateur du montage : pas de prof, des cartes « HAND #n » posées d'après les titres de partie
         "director": "It is a second-person POV story told by an object (\"you\" = the object of the title) that "
@@ -539,7 +556,7 @@ def new_channel(data=None, template=None):
         "thumb_text": t.get("thumb_text", True), "thumb_ref": None, "thumb_rev": t.get("thumb_rev", 0),
         "style": {"preset": style_key, "prompt": STYLE_PRESETS[style_key]["prompt"],
                   "no_text": t.get("no_text", True), "direction": t.get("direction", ""),
-                  "ref": None, "characters": []},
+                  "ref": None, "characters": [], "rev": t.get("style_rev", 0)},
         "voice": _merge(DEFAULT_VOICE, {"provider": t.get("voice_provider", "edge"),
                                         "voice": t.get("voice") or DEFAULT_VOICE_BY_LANG.get(lang, ""),
                                         "speed": t.get("voice_speed", 1.0)}),
@@ -677,10 +694,28 @@ def studio_formats(ch):
     return [{"key": k, "name": S.FORMATS[k]["name"]} for k in dict.fromkeys(keys) if k in S.FORMATS]
 
 
+def _with_style_rev(ch, pr):
+    """Style révisé du modèle (style_rev) : appliqué aux vidéos créées depuis, jamais à une vidéo déjà en cours
+    (ses images garderaient sinon deux styles). La copie n'est jamais enregistrée."""
+    t = TEMPLATES.get((ch or {}).get("template") or "", {})
+    rev = t.get("style_rev", 0)
+    if not ch or not rev or (pr or {}).get("style_rev", 0) < rev or (ch.get("style") or {}).get("rev", 0) >= rev:
+        return ch
+    ch = json.loads(json.dumps(ch))
+    st = ch.setdefault("style", {})
+    st.update(preset=t["style"], prompt=STYLE_PRESETS[t["style"]]["prompt"], direction=t.get("direction", ""))
+    if t.get("character"):
+        name, desc = t["character"]
+        for c in st.get("characters") or []:
+            if _norm_name(c["name"]) == _norm_name(name):
+                c["description"] = desc
+    return ch
+
+
 def project_channel(pr):
     """La chaîne telle que la voit cette vidéo : pr["format"] peut choisir une variante du modèle
     (autre format, même voix/style). La copie n'est jamais enregistrée."""
-    ch = store.get_channel(pr["channel_id"])
+    ch = _with_style_rev(store.get_channel(pr["channel_id"]), pr)
     fmt = (pr or {}).get("format")
     if not ch or not fmt or fmt == ch.get("format"):
         return ch
@@ -1095,6 +1130,7 @@ def new_project(ch, title, minutes=None, notes=""):
         "voice": None, "scenes": [], "render": None, "metadata": None,
         "voice_settings": json.loads(json.dumps(ch.get("voice") or DEFAULT_VOICE)),
         "montage": json.loads(json.dumps(ch.get("montage") or DEFAULT_MONTAGE)),
+        "style_rev": TEMPLATES.get(ch.get("template") or "", {}).get("style_rev", 0),
     }
     os.makedirs(store.project_dir(pr["id"]), exist_ok=True)
     store.save_project(pr)
@@ -1671,8 +1707,8 @@ def character_ref_image(ch, member):
               "centered, plain light grey background, nothing else in the image.")
     if _object_hero(ch) and _norm_name(member.get("name")) == "you":  # le narrateur est un objet
         prompt = (f"Character reference image of \"{member['name']}\": {member.get('description', '')}. "
-                  "The object alone, front view, upright, centered, calm neutral face, no arms, no legs, no hands "
-                  "holding it, plain light grey background, nothing else in the image.")
+                  "The object alone, front view slightly turned, upright, centered, NO face, no eyes, no mouth, "
+                  "no arms, no legs, no hands holding it, plain light grey background, nothing else in the image.")
     st = ch.get("style") or {}
     refs, lines = [], []
     style_ref = channel_ref_path(ch, st.get("ref"))
@@ -1762,19 +1798,27 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
 - anatomy errors (extra or missing arms, hands or heads, two heads, fused bodies, broken limbs);
 - objects that make no sense or are upside down / facing the wrong way / floating;
 - any readable text, letters or numbers (blank papers and screens are fine){no_text}
-- the image does not show what the narration says, or it is confusing (too many things, no clear subject).
+- the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
 PROMPT: {prompt}
 Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."""
 
 
-def check_image(path, sc, no_text=True):
+def faceless_object(ch, pr):
+    """Le narrateur est un objet dessiné sans visage (vidéos créées depuis le style_rev du modèle)."""
+    rev = TEMPLATES.get((ch or {}).get("template") or "", {}).get("style_rev", 0)
+    return _object_hero(ch) and rev > 0 and (pr or {}).get("style_rev", 0) >= rev
+
+
+def check_image(path, sc, no_text=True, faceless=False):
     """Contrôle en vision d'une image de scène → (ok, [problèmes])."""
     import base64
     with open(path, "rb") as f:
         blob = _jpeg(f.read(), side=896)
     q = IMAGE_QA.format(text=(sc.get("text") or "")[:400], prompt=(sc.get("prompt") or "")[:500],
-                        no_text=";" if no_text else " (ignore this rule: text is allowed on this channel);")
+                        no_text=";" if no_text else " (ignore this rule: text is allowed on this channel);",
+                        faceless=(";\n- the narrator object drawn with a face (eyes, a mouth): it must look like a real "
+                                  "object." if faceless else "."))
     content = [{"type": "text", "text": q},
                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(blob).decode()}}]
     res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=120)
@@ -1795,7 +1839,7 @@ def _gen_scene(ch, pr, sc):
         if not qa or attempt == 1:
             break
         try:
-            ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text)
+            ok, problems = check_image(os.path.join(d, rel), dict(sc, prompt=prompt), no_text, faceless_object(ch, pr))
         except Exception:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             break
         if ok:

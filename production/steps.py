@@ -43,10 +43,11 @@ elif step == "qa":
     pr = store.get_project(pid)
     pd = store.project_dir(pid)
     todo = [s for s in pr["scenes"] if s.get("image") and (s.get("fx") or {}).get("type") != "sheet"]
+    faceless = E.faceless_object(E.project_channel(pr), pr)
 
     def check(s):
         try:
-            ok, pb = E.check_image(os.path.join(pd, s["image"]), s, True)
+            ok, pb = E.check_image(os.path.join(pd, s["image"]), s, True, faceless)
         except Exception as e:  # noqa: BLE001  (contrôle indisponible : on garde l'image)
             return s["i"], True, [f"check failed: {e}"]
         return s["i"], ok, pb
