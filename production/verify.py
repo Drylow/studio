@@ -29,7 +29,7 @@ for f in x["fx"] or []:
         if any(re.search(r"(?i)total", it) for it in sp.get("items") or []):
             problems.append(f"intro : ligne qui ressemble à un total : {sp.get('items')}")
         continue
-    nums = set(E._fx_numbers(sp))
+    nums = set(E._fx_numbers(sp)) if t != "chapter" else set()  # « HAND #3 » vient du titre de partie
     if not nums <= allowed:
         problems.append(f"{f['t']:.1f}s {t} : chiffres jamais dits {sorted(nums - allowed)}")
     if t == "receipt":
