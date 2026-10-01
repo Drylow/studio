@@ -21,7 +21,8 @@ if a.ref and a.edit:
             "outfit, background, colors, style, text) except what is asked. ")
 elif a.ref:
     lead = ("Reference image 1 = THE CHANNEL'S THUMBNAIL STYLE: copy its rendering, outlines, colors, composition "
-            "and text treatment exactly; the subject is new, as described. ")
+            "and text treatment exactly; the subject is new, as described. Never copy the face, hair or look of "
+            "a person in the reference: draw a new person (a different woman for every video). ")
 blob = ai.generate_image(lead + a.prompt + " No logo, no watermark, no border.", width=1920, height=1080,
                          refs=a.ref, quality="high")
 ai.fit_cover(blob, 1280, 720, a.out, quality=92)

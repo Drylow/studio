@@ -23,6 +23,7 @@ Des histoires en POV, à la deuxième personne : « tu » épouses quelqu'un d'u
 - **Miniature pour une vidéo de sport** : la femme dans son décor (cage, parquet…), **sans roses**.
   - En tenue de son sport, ceinture ou trophée **sans logo**, un peu de sueur.
   - Sexy mais athlétique, jamais explicite.
+- **Toujours une femme différente à chaque vidéo** (demande de l'utilisateur) : autre visage, autre couleur de peau, autres cheveux. Le générateur ne doit copier que le style de la miniature de référence, jamais la femme qui est dessus.
 
 ## Règles
 
@@ -55,8 +56,8 @@ Voir [videos/](videos/README.md) pour les scripts, la recherche, la publication 
 | Inside The Life Of An Onlyfans Model | publiée le 30 sept. |
 | POV: You Marry a Polish Woman | livrée (3 miniatures proposées, une retenue) |
 | POV: You Marry a Female Triad Boss | publiée le 1er oct. (4 miniatures proposées, une retenue) |
-| POV: You Marry a Female UFC Fighter | en production, publication le **3 oct.** |
-| POV: You Marry a WNBA Star | en production, publication le **4 oct.** (miniature à faire) |
+| POV: You Marry a Female UFC Fighter | livrée, publication le **3 oct.** |
+| POV: You Marry a WNBA Star | livrée, publication le **4 oct.** |
 
 ## Idées de vidéos (à vérifier avec NexLev avant de lancer)
 
