@@ -2235,6 +2235,8 @@ def job_montage(job, pid):
             if s["fx"] and s["fx"]["type"] in _full_panel():
                 s["status"] = "done"  # la fiche remplace l'image : rien à générer
         sc = x.get("scenes") or []
+        for k, f in check_receipts(sc, allowed_numbers(x)).items():
+            sc[k]["fx"] = f
         keep = thin_notes(sc)
         for k, s in enumerate(sc):
             if s.get("fx") and k not in keep:
@@ -2295,6 +2297,55 @@ def _hex_rgb(h, default):
         return default
 
 
+_TOTAL_ITEM = re.compile(r"(?i)^\s*(running |sub|grand |new |final )?total\b")
+
+
+def _signed_amount(a):
+    from services import motion
+    v = motion._amount(a)
+    return -v if v is not None and re.match(r"^\s*[^\d]*[-\u2212\u2013]", str(a or "")) else v
+
+
+def allowed_numbers(pr):
+    """Chiffres dits dans la vidéo (narration des scènes + script) : seuls ceux-là peuvent s'afficher."""
+    return _nums(" ".join(x.get("text") or "" for x in pr.get("scenes") or [])) | \
+        _nums(S.narration(pr.get("script") or "")) | {"0"}
+
+
+def check_receipts(scenes, allowed=None):
+    """Garde le ticket de caisse juste, dans l'ordre des scènes : une ligne « Running total » n'est pas une
+    ligne de la facture, un total qui ne colle pas aux lignes est recalculé (s'il est dit dans la vidéo),
+    sinon le ticket saute (comparaison à part, ex. le même trajet au tarif Medicare).
+    → {indice dans scenes: fx corrigé, ou None = à retirer}, seulement pour les tickets qui changent."""
+    from services import motion
+    out, rows, total = {}, [], None
+    for k, sc in enumerate(scenes):
+        fx = sc.get("fx") or {}
+        if fx.get("type") != "receipt":
+            continue
+        items = [x for x in fx.get("items") or [] if isinstance(x, dict) and x.get("item")
+                 and not _TOTAL_ITEM.match(str(x.get("item")))]
+        asked = [(str(x.get("item")), str(x.get("amount") or "")) for x in items]
+        new = motion.recap_filter(rows, asked, total, str(fx.get("total") or ""))
+        tv, pv = motion._amount(fx.get("total")), motion._amount(total)
+        fixed = dict(fx, items=items)
+        if new and pv is not None and tv is not None:
+            exp = pv + sum(_signed_amount(a) or 0 for _, a in new)
+            if abs(exp - tv) >= 0.5:
+                if allowed is not None and str(int(round(exp))) not in allowed:
+                    out[k] = None
+                    continue
+                pre = (motion.parse_number(str(fx.get("total"))) or ("$",))[0]
+                fixed["total"] = motion.fmt_number(pre, exp, "", 0, True)
+        elif not new and pv is not None and tv is not None and abs(pv - tv) >= 0.5:
+            fixed["total"] = total  # un récapitulatif relit le ticket tel qu'il est
+        if fixed != fx:
+            out[k] = fixed
+        rows += new
+        total = fixed.get("total") or total
+    return out
+
+
 def intro_items(pr, limit=4):
     """Lignes de la facture annoncées dans l'intro (montants cachés) : les « Add X, $Y » du script,
     sinon les lignes des tickets du montage."""
@@ -2307,8 +2358,11 @@ def intro_items(pr, limit=4):
     if not names:  # lignes des tickets, sans les récapitulatifs (même règle que le ticket à l'écran)
         from services import motion
         rows, total = [], None
-        for s in pr.get("scenes") or []:
-            fx = s.get("fx") or {}
+        sc = pr.get("scenes") or []
+        fixes = check_receipts(sc, allowed_numbers(pr))
+        for k, s in enumerate(sc):
+            fx = fixes.get(k, s.get("fx")) if k in fixes else (s.get("fx") or {})
+            fx = fx or {}
             if fx.get("type") != "receipt":
                 continue
             asked = [(str(it.get("item") or ""), str(it.get("amount") or "")) for it in fx.get("items") or []
@@ -2411,10 +2465,12 @@ def render_inputs(pid, workdir, until=None):
     if montage_enabled(pr):
         off = 1 if lead else 0
         keep = thin_notes(scenes_src)  # aussi pour les plans faits avant cette règle
-        fx = [{"scene": k + off, "t": s["fx"].get("t", s["start"]) + lead,
-               "items_t": [t + lead for t in s["fx"].get("item_t") or []],
-               "spec": {a: b for a, b in s["fx"].items() if a not in ("t", "item_t")}}
-              for k, s in enumerate(scenes_src) if s.get("fx") and k in keep]
+        fixes = check_receipts(pr["scenes"], allowed_numbers(pr))  # idem : tickets justes
+        plan = [fixes[k] if k in fixes else s.get("fx") for k, s in enumerate(scenes_src)]
+        fx = [{"scene": k + off, "t": f.get("t", s["start"]) + lead,
+               "items_t": [t + lead for t in f.get("item_t") or []],
+               "spec": {a: b for a, b in f.items() if a not in ("t", "item_t")}}
+              for k, (s, f) in enumerate(zip(scenes_src, plan)) if f and k in keep]
         if lead:  # intro plein écran dessinée par le code (aucune image de la vidéo derrière)
             scenes.insert(0, {"image": _intro_bg(ch, workdir, w, h), "start": 0.0, "motion": "none", "index": -1})
             fx.insert(0, {"scene": 0, "t": 0.0, "spec": intro_spec(pr, ch)})
