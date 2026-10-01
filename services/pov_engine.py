@@ -932,7 +932,7 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
         parts.append(f"EVERY person in the image is one of the channel's simple cartoon figures (large round plain white "
                      f"head, dot eyes, white mitten hands), with exactly two arms and two hands. Never draw a realistic "
                      f"human. Objects are only objects: {obj} and every other object have no face, eyes, mouth or limbs, and "
-                     f"no brand logo or badge.")
+                     f"no brand logo or badge. One single scene: no split screen, no panels, no inset picture.")
     else:
         parts.append("EVERY person in the image — including background people, crowds, waiters, customers, passers-by, "
                      "people on screens or in photos — is drawn in exactly the same character design as the main "
