@@ -1,0 +1,5 @@
+# Recherche et consignes — Inside The Life Of An Onlyfans Model
+
+Faits vérifiés et règles données au script.
+
+Advertiser-friendly is a hard rule for this video (YouTube monetization): strictly non-explicit. Never describe sexual acts, bodies, nudity, fetishes, 'tips' or what is inside the content: the content itself stays off the page and off screen, like a documentary that cuts away. No links, no promotion of the platform, no leaked-content storyline. You are a young woman (early twenties at the start). The story is about the business and the life around it: the concrete money problem that makes you start, the first months with tiny numbers, how the money really works (the platform keeps 20%, taxes, the agency and the 'chatters' who answer messages in your name, the content calendar, the ring light in the spare room), fake names and privacy, the family and friends who find out, a relationship under strain, the burnout of always being 'on', and a quiet ending. Honest and human: never glamorize, never shame.

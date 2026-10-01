@@ -28,6 +28,8 @@ pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement p
    comme une estimation. Jamais de mode d'emploi pour voler, frauder, contourner un verrou.
 6. Personnes réelles : jamais comme personnages. Marques/ligues (UFC, WNBA…) OK **dans le titre** (usage
    descriptif) mais jamais de logos, ceintures/maillots officiels, vrais joueurs ou événements.
+   Pareil pour les objets : pas de logo Mastercard/Visa, Apple, marque de voiture sur les images (à vérifier sur
+   les planches ; sinon régénérer l'image avec `job_regen` et une consigne « no logos »).
 7. Miniatures « sexy » : femme adulte, tenue de son univers (ex. tenue de combat), jamais explicite ; **jamais
    de sexualisation à côté d'un enfant ou d'un bébé** (refusé net). Trop sexy = risque de restriction d'âge
    YouTube : le dire une fois.
@@ -42,6 +44,10 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 | `oddly_specific_en` | **Oddly Specific Lives** (@OddlySpecificLives) | « POV: You Marry a … / Fall in Love with a … » (`pov_marry`), variante « Inside the Life of » (`pov_life`) | BD colorée : la femme 3/4 corps, contour blanc, monument du pays + drapeau en haut à gauche, bouquet de roses. **Pour un sport : dans son décor (cage, parquet), sans roses**, en tenue de son sport, ceinture/trophée sans logo, un peu de sueur. |
 | `oddly_expensive_en` | **Oddly Expensive Lives** | « The Economics of … » : le prof explique la facture ligne par ligne, ticket de caisse (« running tab ») | façon Marcus : fond plan bleu, gros titre noir contour blanc souligné rouge, le prof à droite, 1-2 humains BD à gauche (**différents à chaque vidéo**), étiquettes chiffrées + flèches |
 | `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN) |
+
+**Dossier `chaines/`** : une fiche par chaîne (concept, style, ce qui marche, idées de vidéos — écrite à la
+main) et, pour chaque vidéo, script, recherche, publication et miniature (générés par
+`python production/export_channels.py` : le relancer après chaque vidéo, puis commit).
 
 Références : `presets/<clé>/` (style.jpg = style des images, thumb.jpg = style de miniature), bibles de
 style dans `TEMPLATE_BIBLES`, vidéos de référence dans `skills/references/<id YouTube>.txt`.
