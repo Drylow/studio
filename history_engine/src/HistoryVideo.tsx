@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, interpolate, staticFile, useVideoConfig} from 'remotion';
 import {Captions} from './components/Captions';
 import {FilmOverlay} from './components/FilmOverlay';
 import {KenBurns, VideoClip} from './components/Media';
@@ -40,8 +40,15 @@ const SegmentView: React.FC<{seg: Segment; dur: number}> = ({seg, dur}) => {
 
 export const HistoryVideo: React.FC<Timeline> = (t) => {
   ensureFonts();
-  const {fps} = useVideoConfig();
+  const {fps, durationInFrames} = useVideoConfig();
   const f = (s: number) => Math.round(s * fps);
+  const mv = t.musicVolume ?? 0.1;
+  // musique : montée douce au début, fondu sur les 2,5 dernières secondes
+  const musicVolume = (fr: number) =>
+    mv * interpolate(fr, [0, fps, durationInFrames - 2.5 * fps, durationInFrames], [0, 1, 1, 0], {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+    });
   return (
     <AbsoluteFill style={{background: '#000'}}>
       {t.segments.map((seg, i) => {
@@ -56,7 +63,7 @@ export const HistoryVideo: React.FC<Timeline> = (t) => {
       <FilmOverlay intensity={t.film ?? 1} />
       <Captions items={t.captions ?? []} from={t.captionsFrom ?? 0} mute={t.captionsMute} />
       {t.voice ? <Audio src={staticFile(t.voice)} /> : null}
-      {t.music ? <Audio src={staticFile(t.music)} volume={t.musicVolume ?? 0.1} loop /> : null}
+      {t.music ? <Audio src={staticFile(t.music)} volume={musicVolume} loop /> : null}
       {(t.sfx ?? []).map((s, i) => (
         <Sequence key={`sfx${i}`} from={f(s.at)} durationInFrames={f(4)}>
           <Audio src={staticFile(s.src)} volume={s.volume ?? 0.5} />

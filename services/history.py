@@ -34,6 +34,7 @@ DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_
             "templates": ["statement", "quote", "character", "archive"],
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
+TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
 
 
 # ── Stockage ────────────────────────────────────────────────────────────────
@@ -319,7 +320,7 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
         clean.append(b)
     if clean and clean[0]["at"] != 0:
         clean[0]["at"] = 0
-    end_total = duration + 0.8
+    end_total = duration + TAIL
     starts = [0.0 if i == 0 else sentences[b["at"]]["start"] for i, b in enumerate(clean)]
     segs = []
     cast = plan.get("cast") or []
@@ -400,37 +401,52 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
     return segs, cast
 
 
-# durée minimale lisible de chaque carte (s) ; une citation dure au moins jusqu'à son dernier mot + 3 s
-CARD_MIN = {"statement": 4.0, "character": 7.0, "compare": 9.0, "chart": 8.0, "archive": 6.5, "route": 9.0,
-            "battle": 11.0, "quote": 7.0}
+# durée minimale de chaque carte (s), comme la référence (10-20 s par carte) : l'animation se termine,
+# puis la carte TIENT pendant que la narration continue. Phrase choc : 5 s après son apparition ;
+# citation : 4,5 s après le dernier mot prononcé.
+CARD_MIN = {"statement": 6.0, "character": 11.0, "compare": 13.0, "chart": 11.0, "archive": 9.0, "route": 12.0,
+            "battle": 15.0, "quote": 9.0}
+MIN_IMAGE = 3.0
+
+
+def _card_need(s):
+    want = CARD_MIN.get(s["type"], 0)
+    if s["type"] == "statement":
+        want = max(want, s.get("reveal", 0) + 5.0)
+    if s["type"] == "quote" and s.get("words"):
+        want = max(want, s["words"][-1] + 4.5)
+    return want - (s["end"] - s["start"])
 
 
 def _ensure_card_time(segs):
-    """Allonge les cartes trop courtes en prenant le temps sur l'image voisine (après, sinon avant)."""
-    for i, s in enumerate(segs):
-        if s["type"] not in CARD_MIN:
-            continue
-        want = CARD_MIN[s["type"]]
-        if s["type"] == "quote" and s.get("words"):
-            want = max(want, s["words"][-1] + 3.0)
-        need = want - (s["end"] - s["start"])
-        if need <= 0:
-            continue
-        nxt = segs[i + 1] if i + 1 < len(segs) else None
-        if nxt and nxt["type"] == "image":
-            take = min(need, max(0.0, (nxt["end"] - nxt["start"]) - 3.0))
-            nxt["start"] = round(nxt["start"] + take, 3)
-            s["end"] = round(s["end"] + take, 3)
-            need -= take
-        prv = segs[i - 1] if i > 0 else None
-        if need > 0 and prv and prv["type"] == "image":
-            take = min(need, max(0.0, (prv["end"] - prv["start"]) - 3.0))
-            prv["end"] = round(prv["end"] - take, 3)
-            s["start"] = round(s["start"] - take, 3)
-            if s["type"] == "statement":
-                s["reveal"] = round(s.get("reveal", 0) + take, 3)
-            if s.get("words"):
-                s["words"] = [round(t + take, 3) for t in s["words"]]
+    """Allonge les cartes trop courtes sur les images qui suivent (une image trop réduite est absorbée,
+    la carte reste alors à l'écran pendant ce passage), puis si besoin sur l'image d'avant."""
+    i = 0
+    while i < len(segs):
+        s = segs[i]
+        if s["type"] in CARD_MIN:
+            need = _card_need(s)
+            while need > 0 and i + 1 < len(segs) and segs[i + 1]["type"] == "image":
+                nxt = segs[i + 1]
+                room = (nxt["end"] - nxt["start"]) - MIN_IMAGE
+                if room >= need:
+                    nxt["start"] = round(nxt["start"] + need, 3)
+                    s["end"] = round(s["end"] + need, 3)
+                    need = 0
+                else:  # image trop courte pour céder ce temps : la carte la recouvre entièrement
+                    s["end"] = nxt["end"]
+                    segs.pop(i + 1)
+                    need = _card_need(s)
+            prv = segs[i - 1] if i > 0 else None
+            if need > 0 and prv and prv["type"] == "image":
+                take = min(need, max(0.0, (prv["end"] - prv["start"]) - MIN_IMAGE))
+                prv["end"] = round(prv["end"] - take, 3)
+                s["start"] = round(s["start"] - take, 3)
+                if s["type"] == "statement":
+                    s["reveal"] = round(s.get("reveal", 0) + take, 3)
+                if s.get("words"):
+                    s["words"] = [round(t + take, 3) for t in s["words"]]
+        i += 1
 
 
 def rebuild_segments(pid):
@@ -620,7 +636,7 @@ def build_timeline(pr):
     d = media_dir(pid)
     words = load_words(pid)
     opts = pr.get("options") or DEFAULTS
-    duration = pr["voice"]["duration"] + 0.8
+    duration = pr["voice"]["duration"] + TAIL
     os.makedirs(os.path.join(d, "audio"), exist_ok=True)
     bed = os.path.join(d, "audio", "music.mp3")
     if not os.path.isfile(bed) or media.duration(bed) < duration - 0.5:
@@ -647,8 +663,15 @@ def build_timeline(pr):
         "captions": captions_from_words(words) if opts.get("captions", True) else [],
         "captionsFrom": hook_end if opts.get("captions_after_hook", True) else 0,
         "captionsMute": [[s["start"], s["end"]] for s in pr["plan"]["segments"] if s["type"] == "quote"],
-        "segments": [_public(s) for s in pr["plan"]["segments"]],
+        "segments": _with_tail([_public(s) for s in pr["plan"]["segments"]], duration),
     }
+
+
+def _with_tail(segs, duration):
+    """La dernière carte / image tient jusqu'au bout (marge après la voix)."""
+    if segs:
+        segs[-1]["end"] = round(max(segs[-1]["end"], duration), 3)
+    return segs
 
 
 def engine_ready():

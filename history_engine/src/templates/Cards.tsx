@@ -91,7 +91,8 @@ export const Character: React.FC<CharacterSeg & {dur: number}> = ({name, role, i
                 fontSize: 34,
                 fontWeight: 500,
                 color: C.creamDim,
-                opacity: ramp(frame, 26 + i * 12, 12),
+                // les faits arrivent un par un, posément, sur le premier tiers de la carte
+                opacity: ramp(frame, 30 + i * Math.max(18, Math.round(dur * 0.1)), 14),
               }}
             >
               <Diamond size={9} filled />
