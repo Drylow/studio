@@ -155,7 +155,8 @@ STYLE = ("Ultra-realistic cinematic film still from a high-budget historical epi
          "colour grade with amber highlights and deep brown shadows, natural skin tones, slightly muted greens and blues. "
          "Crisp detail: skin pores, sweat, dirt, weathered leather, dented metal, coarse wool. Strong composition with "
          "foreground, subject and background layers; the subject's whole head in frame with headroom. Photographic, not "
-         "painterly, no CGI look. No text, no logos, no watermark.")
+         "painterly, no CGI look. One single photograph: no collage, no split screen, no panels, no borders. "
+         "No text, no logos, no watermark.")
 PORTRAIT = ("Ultra-realistic cinematic portrait from a high-budget historical epic, chest-up, looking slightly off camera, "
             "85mm lens, soft warm key light from the side with a gentle rim light, dark smoky background, crisp skin "
             "texture, era-accurate costume. Photographic, not painterly. No text.")
