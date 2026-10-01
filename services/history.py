@@ -30,8 +30,8 @@ DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed":
 EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": True, "film": 1.0,
             "music_volume": 0.16, "all_templates": False,
-            # animations actives (bataille et graphique existent mais sont coupés par défaut)
-            "templates": ["statement", "quote", "character", "archive", "route"],
+            # animations actives par défaut (bataille, graphique, comparaison, itinéraire : dispo mais coupés)
+            "templates": ["statement", "quote", "character", "archive"],
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 
@@ -141,6 +141,49 @@ def job_script(job, pid):
 
 # ── 2. Voix ─────────────────────────────────────────────────────────────────
 
+def script_timed_words(text, asr):
+    """Mots du SCRIPT (orthographe exacte) avec les timings de la voix.
+
+    Alignement de séquence (difflib) entre les tokens du script et les mots entendus par le
+    TTS/la transcription ; les mots non retrouvés sont interpolés entre leurs voisins. Évite les
+    « Hannibal Barsa » quand la transcription Algrow entend mal un nom."""
+    import difflib
+    toks = (text or "").split()
+    if not toks or not asr:
+        return asr
+    na = [re.sub(r"[^a-z0-9]", "", t.lower()) for t in toks]
+    nb = [re.sub(r"[^a-z0-9]", "", w["w"].lower()) for w in asr]
+    times = [None] * len(toks)
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(a=na, b=nb, autojunk=False).get_opcodes():
+        if tag == "equal" or (tag == "replace" and i2 - i1 == j2 - j1):
+            for k in range(i2 - i1):
+                times[i1 + k] = (asr[j1 + k]["s"], asr[j1 + k]["e"])
+        elif tag == "replace" and j2 > j1:  # bloc de longueurs différentes : on répartit la durée
+            s0, e0 = asr[j1]["s"], asr[j2 - 1]["e"]
+            n = i2 - i1
+            for k in range(n):
+                times[i1 + k] = (s0 + (e0 - s0) * k / n, s0 + (e0 - s0) * (k + 1) / n)
+    known = [i for i, t in enumerate(times) if t]
+    if not known:
+        return asr
+    out = []
+    for i, tok in enumerate(toks):
+        t = times[i]
+        if not t:
+            a = max((k for k in known if k < i), default=None)
+            b = min((k for k in known if k > i), default=None)
+            if a is None:
+                t = (times[b][0], times[b][0])
+            elif b is None:
+                t = (times[a][1], times[a][1] + 0.25)
+            else:
+                f = (i - a) / (b - a)
+                st = times[a][1] + (times[b][0] - times[a][1]) * f
+                t = (st, st + 0.2)
+        out.append({"w": tok, "s": round(t[0], 3), "e": round(max(t[1], t[0] + 0.05), 3), "t": i})
+    return out
+
+
 def sentences_from_words(words):
     out, cur = [], []
     for w in words:
@@ -166,7 +209,7 @@ def job_voice(job, pid):
     job.update(0.05, f"Voix off ({provider})…")
     res = tts.synthesize(text, dest, provider=provider, voice=voice, speed=vs.get("speed", 1.0),
                          progress=lambda i, n: job.update(0.05 + 0.85 * i / max(1, n), f"Voix off {min(i + 1, n)}/{n}…"))
-    words = res["words"]
+    words = script_timed_words(text, res["words"])
     with open(os.path.join(project_dir(pid), "words.json"), "w", encoding="utf-8") as f:
         json.dump(words, f)
     hook_n = len(pr["script"]["hook"].split())
@@ -195,12 +238,12 @@ def _geo_to_xy(stops):
     pts = [(float(s.get("lon", 0)), float(s.get("lat", 0))) for s in stops]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     w, h = max(xs) - min(xs) or 1.0, max(ys) - min(ys) or 1.0
-    scale = min(84 / w, 84 / (h * 16 / 9)) if w and h else 1
+    scale = min(76 / w, 48 / (h * 16 / 9)) if w and h else 1
     cx, cy = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
     out = []
     for s, (lon, lat) in zip(stops, pts):
-        out.append({"name": s.get("name", ""), "x": round(50 + (lon - cx) * scale, 2),
-                    "y": round(50 - (lat - cy) * scale * 16 / 9, 2),
+        out.append({"name": s.get("name", ""), "x": round(48 + (lon - cx) * scale, 2),
+                    "y": round(54 - (lat - cy) * scale * 16 / 9, 2),
                     "coords": f"LAT {abs(lat):.2f}° {'N' if lat >= 0 else 'S'} | LNG {abs(lon):.2f}° {'E' if lon >= 0 else 'W'}"})
     return out
 
@@ -353,7 +396,59 @@ def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max
             if b.get("portrait"):
                 seg.update(image=portrait(b["portrait"]), _cast=b["portrait"])
         segs.append(seg)
+    _ensure_card_time(segs)
     return segs, cast
+
+
+# durée minimale lisible de chaque carte (s) ; une citation dure au moins jusqu'à son dernier mot + 3 s
+CARD_MIN = {"statement": 4.0, "character": 7.0, "compare": 9.0, "chart": 8.0, "archive": 6.5, "route": 9.0,
+            "battle": 11.0, "quote": 7.0}
+
+
+def _ensure_card_time(segs):
+    """Allonge les cartes trop courtes en prenant le temps sur l'image voisine (après, sinon avant)."""
+    for i, s in enumerate(segs):
+        if s["type"] not in CARD_MIN:
+            continue
+        want = CARD_MIN[s["type"]]
+        if s["type"] == "quote" and s.get("words"):
+            want = max(want, s["words"][-1] + 3.0)
+        need = want - (s["end"] - s["start"])
+        if need <= 0:
+            continue
+        nxt = segs[i + 1] if i + 1 < len(segs) else None
+        if nxt and nxt["type"] == "image":
+            take = min(need, max(0.0, (nxt["end"] - nxt["start"]) - 3.0))
+            nxt["start"] = round(nxt["start"] + take, 3)
+            s["end"] = round(s["end"] + take, 3)
+            need -= take
+        prv = segs[i - 1] if i > 0 else None
+        if need > 0 and prv and prv["type"] == "image":
+            take = min(need, max(0.0, (prv["end"] - prv["start"]) - 3.0))
+            prv["end"] = round(prv["end"] - take, 3)
+            s["start"] = round(s["start"] - take, 3)
+            if s["type"] == "statement":
+                s["reveal"] = round(s.get("reveal", 0) + take, 3)
+            if s.get("words"):
+                s["words"] = [round(t + take, 3) for t in s["words"]]
+
+
+def rebuild_segments(pid):
+    """Recalcule le montage depuis le plan déjà écrit (aucun appel IA) : timings, durées, mots."""
+    pr = get_project(pid)
+    words = load_words(pid)
+    sents = sentences_from_words(words)
+    opts = dict(DEFAULTS, **(pr.get("options") or {}))
+    duration = pr["voice"]["duration"]
+    max_cards = max(2, int(round(duration / 60 * float(opts["cards_per_min"]))))
+    plan = pr["plan"]
+    segs, cast = build_segments({"beats": plan["beats"], "cast": plan.get("cast") or []}, sents, words, duration,
+                                pr["voice"].get("hook_end") or 0, allowed=opts["templates"], max_cards=max_cards)
+
+    def save(x):
+        x["plan"]["segments"] = segs
+        x["render"] = None
+    return update_project(pid, save)
 
 
 def job_plan(job, pid):

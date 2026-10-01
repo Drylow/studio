@@ -165,15 +165,17 @@ d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une dur
    (`presets/history_doc/reference_excerpt.txt` sert d'ancre de style).
 2. **Voix off** : Algrow (Timothy, Elliott, Connery) ou Edge gratuit, avec les timings mot à mot.
 3. **Plan visuel** : l'IA choisit ce qu'on voit à chaque phrase. Dans le hook, une image toutes les
-   ~5 s. Ensuite, des images de 12 à 20 s et environ 30 % d'animations calées sur la narration.
+   ~5 s. Ensuite, des images de 12 à 20 s et quelques animations calées sur la narration.
 4. **Images** : portraits du casting d'abord, réutilisés comme références pour garder les mêmes
-   visages. Puis plans photoréalistes (tons ocre, lumière dure, 35 mm), terrains vus du ciel,
-   objets d'archive.
+   visages. Puis les plans, façon photo de tournage d'un film historique (lumière naturelle,
+   couleurs sourdes, visages entiers), et les objets d'archive.
 5. **Montage Remotion** (`history_engine/`) : zoom lent sur les images, animations, grain et rayures
    de pellicule, sous-titres (masqués pendant le hook), nappe musicale sombre et bruitages générés
    (aucun risque Content ID), mixage final à -14 LUFS.
 
-**Les animations** (templates Remotion, `history_engine/src/templates/`) :
+**Les animations** (templates Remotion, `history_engine/src/templates/`). Actives par défaut : phrase choc,
+citation, fiche perso, archive, avec 1,5 carte par minute au maximum. Bataille, comparaison, graphique et
+itinéraire existent mais sont décochés (à cocher par vidéo) :
 
 | Template | Ce qu'il montre |
 |---|---|
@@ -184,7 +186,7 @@ d'histoire dans le style de *Dose of History*, à partir d'un titre et d'une dur
 | Graphique | barres qui montent avec les chiffres qui défilent |
 | Archive | objet ou document encadré façon photo de musée |
 | Itinéraire | ligne dorée tracée de ville en ville (vraies coordonnées), la caméra suit |
-| Citation | citation révélée mot à mot à côté du portrait |
+| Citation | chaque mot s'allume quand le narrateur le dit, portrait à droite, auteur et source |
 
 Aperçu et réglage des templates : `cd history_engine && npm run studio` (Remotion Studio).
 Rendu à la main : `node history_engine/render.mjs --project <dossier media> --out video.mp4`.

@@ -26,29 +26,28 @@ export const Quote: React.FC<QuoteSeg & {dur: number}> = ({text, author, source,
 
   return (
     <AbsoluteFill style={{opacity: outFade(frame, dur, 8)}}>
+      <CardBg brackets={false} />
       {image ? (
-        <AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
+        // portrait à droite (visage bien visible), fondu vers la gauche où se pose la citation
+        <AbsoluteFill style={{left: '42%', overflow: 'hidden'}}>
           <Img
             src={staticFile(image)}
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: '70% 30%',
-              transform: `scale(${push}) translateX(${interpolate(frame, [0, dur], [1.2, -1.2], clamp)}%)`,
-              filter: 'brightness(0.78) saturate(0.9)',
+              objectPosition: '50% 22%',
+              transform: `scale(${push}) translateX(${interpolate(frame, [0, dur], [1, -1], clamp)}%)`,
+              filter: 'brightness(0.86) saturate(0.92)',
+            }}
+          />
+          <AbsoluteFill
+            style={{
+              background: `linear-gradient(90deg, ${C.bg} 0%, rgba(28,25,20,0.55) 28%, rgba(28,25,20,0) 58%, rgba(28,25,20,0.2) 100%)`,
             }}
           />
         </AbsoluteFill>
-      ) : (
-        <CardBg brackets={false} />
-      )}
-      <AbsoluteFill
-        style={{
-          background:
-            'linear-gradient(90deg, rgba(12,10,8,0.88) 0%, rgba(12,10,8,0.7) 40%, rgba(12,10,8,0.12) 74%, rgba(12,10,8,0.2) 100%)',
-        }}
-      />
+      ) : null}
       {/* reflet doré qui traverse lentement le plan */}
       <AbsoluteFill
         style={{
