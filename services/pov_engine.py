@@ -322,7 +322,7 @@ TEMPLATES = {
                  "supply chain. Real places, methods and prices from research, rounded; typical estimates are said "
                  "as estimates. Never a how-to.",
         "reference_urls": "https://www.youtube.com/watch?v=oFKjAJrLims",
-        "youtube_handle": "@OddlySpecificThings",
+        "youtube_handle": "@OddlySpecificThingsYT",
         "studio": {"brand": "Oddly Specific Things", "logo": "OST", "ref_name": "Mr. Ranks, Crypto Miner",
                    "placeholder": "Your Life as a Stolen Phone",
                    "sub": "script FacelessOS (tu es l'objet, main après main), voix Algrow, objet-personnage "
