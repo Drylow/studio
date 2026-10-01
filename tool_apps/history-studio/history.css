@@ -16,3 +16,8 @@
 .script { white-space: pre-wrap; font-size: 13.5px; line-height: 1.55; max-height: 50vh; overflow: auto;
   background: var(--s-bg2); border: 1px solid var(--s-line); border-radius: 9px; padding: 12px 14px; margin-top: 10px; }
 .steps { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.tpls { margin-top: 12px; }
+.tpls #tpls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.tpls label { display: flex; gap: 6px; align-items: center; cursor: pointer; font-size: 13px; border: 1px solid var(--s-line2);
+  border-radius: 999px; padding: 4px 11px; color: var(--s-muted); }
+.tpls label:has(input:checked) { color: var(--s-text); border-color: var(--s-accent); }

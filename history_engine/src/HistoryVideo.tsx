@@ -5,7 +5,8 @@ import {FilmOverlay} from './components/FilmOverlay';
 import {KenBurns, VideoClip} from './components/Media';
 import type {Segment, Timeline} from './schema';
 import {Battle} from './templates/Battle';
-import {Archive, Character, Chart, Compare, Quote} from './templates/Cards';
+import {Archive, Character, Chart, Compare} from './templates/Cards';
+import {Quote} from './templates/Quote';
 import {Route} from './templates/Route';
 import {Statement} from './templates/Statement';
 import {ensureFonts} from './theme';
@@ -53,7 +54,7 @@ export const HistoryVideo: React.FC<Timeline> = (t) => {
         );
       })}
       <FilmOverlay intensity={t.film ?? 1} />
-      <Captions items={t.captions ?? []} from={t.captionsFrom ?? 0} />
+      <Captions items={t.captions ?? []} from={t.captionsFrom ?? 0} mute={t.captionsMute} />
       {t.voice ? <Audio src={staticFile(t.voice)} /> : null}
       {t.music ? <Audio src={staticFile(t.music)} volume={t.musicVolume ?? 0.1} loop /> : null}
       {(t.sfx ?? []).map((s, i) => (

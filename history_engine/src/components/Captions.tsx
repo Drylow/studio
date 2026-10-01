@@ -14,11 +14,15 @@ const OUTLINE = (() => {
   return out.join(',');
 })();
 
-export const Captions: React.FC<{items: Caption[]; from?: number}> = ({items, from = 0}) => {
+export const Captions: React.FC<{items: Caption[]; from?: number; mute?: [number, number][]}> = ({
+  items,
+  from = 0,
+  mute = [],
+}) => {
   const frame = useCurrentFrame();
   const {fps, height} = useVideoConfig();
   const t = frame / fps;
-  if (t < from) return null;
+  if (t < from || mute.some(([a, b]) => t >= a && t < b)) return null;
   const cur = items.find((c) => t >= c.start && t < c.end);
   if (!cur) return null;
   return (

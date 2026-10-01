@@ -58,7 +58,7 @@ function onMinutes() {
   $('#minOut').textContent = `${m} min`;
   renderChips();
   const words = m * wpm, secs = m * 60;
-  const imgs = Math.ceil(5 + (secs * 0.7) / 16), cards = Math.ceil((secs * 0.3) / 12);
+  const cards = Math.max(2, Math.round(m * 1.5)), imgs = Math.ceil(5 + (secs - cards * 9) / 16);
   const algrow = String($('#voice').value || '').startsWith('algrow');
   $('#est').innerHTML = `<span>≈ <b>${nf(words)}</b> mots</span><span>≈ <b>${nf(imgs)}</b> images IA</span><span>≈ <b>${nf(cards)}</b> animations</span>`
     + (algrow ? `<span>≈ <b>${nf(words * 5.9)}</b> caractères Algrow</span>` : '')
@@ -75,7 +75,7 @@ $('#create').onclick = async e => {
   const r = await guard(() => api('POST', '/projects', {
     title, minutes: Number($('#minutes').value), notes: $('#notes').value.trim(), voice: {provider, voice},
     options: {captions: $('#captions').checked, captions_after_hook: $('#afterHook').checked,
-      all_templates: $('#allTpl').checked, film: Number($('#film').value)},
+      film: Number($('#film').value), templates: [...document.querySelectorAll('#tpls input:checked')].map(i => i.value)},
   }));
   busy($('#create'), false);
   if (r) { $('#title').value = ''; $('#notes').value = ''; toast('C\'est parti : la vidéo se fabrique.', 'ok'); await load(); }
@@ -187,6 +187,9 @@ async function refreshModal() {
   S.cfg = await guard(() => api('GET', '/config'));
   if (S.cfg) {
     $('#voice').innerHTML = S.cfg.voices.map(v => `<option value="${v.provider}|${v.voice}">${esc(v.name)}</option>`).join('');
+    const on = new Set(S.cfg.defaults.templates || []);
+    $('#tpls').innerHTML = Object.entries(TYPE).filter(([k]) => k !== 'image')
+      .map(([k, [ic, name]]) => `<label><input type="checkbox" value="${k}" ${on.has(k) ? 'checked' : ''}> ${ic} ${esc(name)}</label>`).join('');
     const warn = [];
     if (!S.cfg.ai) warn.push('proxy IA non configuré (.env)');
     if (!S.cfg.node) warn.push('Node.js manquant (rendu Remotion) : installe-le depuis nodejs.org');

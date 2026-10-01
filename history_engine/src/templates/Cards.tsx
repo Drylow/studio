@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {CardBg, Diamond, clamp, outFade, ramp} from '../components/common';
-import type {ArchiveSeg, ArmySide, ChartSeg, CharacterSeg, CompareSeg, QuoteSeg} from '../schema';
+import type {ArchiveSeg, ArmySide, ChartSeg, CharacterSeg, CompareSeg} from '../schema';
 import {C, F, sideColor} from '../theme';
 
 const Framed: React.FC<{src: string; w: number; h: number; dur: number; border?: string}> = ({
@@ -367,57 +367,6 @@ export const Archive: React.FC<ArchiveSeg & {dur: number}> = ({title, image, not
           ) : null}
         </div>
       </AbsoluteFill>
-    </AbsoluteFill>
-  );
-};
-
-/* ───────────── Citation ───────────── */
-export const Quote: React.FC<QuoteSeg & {dur: number}> = ({text, author, image, dur}) => {
-  const frame = useCurrentFrame();
-  const words = text.split(/\s+/);
-  const per = Math.max(1, Math.min(4, (dur * 0.45) / words.length));
-  return (
-    <AbsoluteFill style={{opacity: outFade(frame, dur)}}>
-      <CardBg brackets={false} />
-      {image ? (
-        <AbsoluteFill style={{width: '52%'}}>
-          <Img
-            src={staticFile(image)}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: 'brightness(0.7) sepia(0.2)',
-              transform: `scale(${interpolate(frame, [0, dur], [1.0, 1.06], clamp)})`,
-            }}
-          />
-          <AbsoluteFill style={{background: `linear-gradient(90deg, rgba(21,19,15,0) 40%, ${C.bg} 100%)`}} />
-        </AbsoluteFill>
-      ) : null}
-      <div style={{position: 'absolute', left: image ? '50%' : '18%', right: image ? 150 : '18%', top: 250}}>
-        <div style={{fontFamily: F.title, fontSize: 150, color: C.gold, lineHeight: 0.6, opacity: ramp(frame, 0, 10)}}>“</div>
-        <div style={{fontFamily: F.serif, fontStyle: 'italic', fontWeight: 500, fontSize: 60, lineHeight: 1.25, color: C.cream}}>
-          {words.map((w, i) => (
-            <span key={i} style={{opacity: ramp(frame, 8 + i * per, 8)}}>
-              {w}{' '}
-            </span>
-          ))}
-        </div>
-        <div
-          style={{
-            marginTop: 36,
-            fontFamily: F.serif,
-            fontWeight: 600,
-            fontSize: 30,
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
-            color: C.gold,
-            opacity: ramp(frame, 8 + words.length * per, 12),
-          }}
-        >
-          — {author}
-        </div>
-      </div>
     </AbsoluteFill>
   );
 };

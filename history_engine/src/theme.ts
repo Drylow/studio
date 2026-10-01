@@ -8,7 +8,7 @@ import type {Side} from './schema';
 
 // Palette « documentaire d'histoire » (relevée sur les frames de référence).
 export const C = {
-  bg: '#15130f',
+  bg: '#1c1914',
   bg2: '#1f1b16',
   cream: '#ece3cf',
   creamDim: 'rgba(236,227,207,0.62)',

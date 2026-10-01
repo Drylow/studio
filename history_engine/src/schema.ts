@@ -74,7 +74,14 @@ export type RouteSeg = {
   stops: {name: string; x: number; y: number; coords?: string}[];
 };
 
-export type QuoteSeg = {type: 'quote'; text: string; author: string; image?: string};
+export type QuoteSeg = {
+  type: 'quote';
+  text: string;
+  author: string;
+  source?: string; // ex. « Attributed — Livy, Book XXII »
+  image?: string;
+  words?: number[]; // instant (s, depuis le début du segment) où chaque mot est prononcé
+};
 
 export type Segment = {start: number; end: number} & (
   | ImageSeg
@@ -102,6 +109,7 @@ export type Timeline = {
   sfx?: {src: string; at: number; volume?: number}[];
   captions?: Caption[];
   captionsFrom?: number; // pas de sous-titres pendant le hook (comme Dose of History)
+  captionsMute?: [number, number][]; // plages sans sous-titres (citations déjà écrites à l'écran)
   film?: number; // intensité du look pellicule (0 = off, 1 = défaut)
   segments: Segment[];
 };

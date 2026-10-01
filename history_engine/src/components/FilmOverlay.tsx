@@ -93,7 +93,8 @@ export const FilmOverlay: React.FC<{intensity?: number}> = ({intensity = 1}) => 
     }
   }
 
-  const flicker = (0.015 + random(`fl${frame}`) * 0.045) * intensity;
+  // scintillement très léger, dans les deux sens (jamais d'assombrissement global)
+  const flicker = (random(`fl${frame}`) - 0.5) * 0.03 * intensity;
 
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
@@ -107,7 +108,7 @@ export const FilmOverlay: React.FC<{intensity?: number}> = ({intensity = 1}) => 
             width: width + 60,
             height: height + 60,
             mixBlendMode: 'overlay',
-            opacity: 0.32 * intensity,
+            opacity: 0.16 * intensity,
           }}
         />
       </AbsoluteFill>
@@ -115,11 +116,11 @@ export const FilmOverlay: React.FC<{intensity?: number}> = ({intensity = 1}) => 
       {dust}
       <AbsoluteFill
         style={{
-          background: 'radial-gradient(ellipse 78% 72% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)',
+          background: 'radial-gradient(ellipse 85% 80% at 50% 50%, rgba(0,0,0,0) 62%, rgba(0,0,0,0.26) 100%)',
           opacity: intensity,
         }}
       />
-      <AbsoluteFill style={{background: '#000', opacity: flicker}} />
+      <AbsoluteFill style={{background: flicker > 0 ? '#fff' : '#000', opacity: Math.abs(flicker)}} />
     </AbsoluteFill>
   );
 };

@@ -10,14 +10,14 @@
 </head>
 <body>
 <header class="top">
-  <div class="brand"><div class="logo">HIST</div><span>History <b>Docs</b></span></div>
+  <div class="brand"><div class="logo">H</div><span>History <b>Docs</b></span></div>
   <div class="status-dots" id="topInfo"></div>
 </header>
 
 <main class="osl">
   <section class="card newvid">
     <h2>Nouvelle vidéo d'histoire</h2>
-    <div class="sub">Le style « Dose of History » : immersion à la 2<sup>e</sup> personne, images photoréalistes avec zoom lent, et ~30 % d'animations (batailles, itinéraires, fiches, stats, archives, citations, phrases chocs) sous un grain de pellicule.</div>
+    <div class="sub">Le style « Dose of History » : immersion à la 2<sup>e</sup> personne, images photoréalistes façon tournage avec zoom lent, et quelques animations bien placées (citations synchronisées sur la voix, phrases chocs, fiches perso, itinéraires, archives) sous un léger grain de pellicule.</div>
     <label class="f"><span class="lbl">Titre</span>
       <input type="text" id="title" maxlength="160" placeholder="How Hannibal Destroyed Rome's Greatest Army at Cannae" autocomplete="off"></label>
     <div class="durrow">
@@ -33,8 +33,8 @@
     <div class="opts">
       <label><input type="checkbox" id="captions" checked> Sous-titres</label>
       <label><input type="checkbox" id="afterHook" checked> Pas de sous-titres pendant le hook</label>
-      <label><input type="checkbox" id="allTpl"> Placer chaque type d'animation au moins une fois</label>
     </div>
+    <div class="tpls"><span class="lbl">Animations</span><div id="tpls"></div></div>
     <div class="est" id="est"></div>
     <details class="notes"><summary>Consignes (facultatif)</summary>
       <textarea id="notes" rows="3" placeholder="Un angle, une source à citer, un moment à ne pas rater…"></textarea>

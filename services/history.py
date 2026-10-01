@@ -29,7 +29,10 @@ ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
 DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed": 1.0}  # « Timothy – American Narrator »
 EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": True, "film": 1.0,
-            "music_volume": 0.16, "all_templates": False}
+            "music_volume": 0.16, "all_templates": False,
+            # animations actives (bataille et graphique existent mais sont coupés par défaut)
+            "templates": ["statement", "quote", "character", "archive", "route"],
+            "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 
 
@@ -219,7 +222,49 @@ def _find_phrase(words, phrase, t0, t1):
     return None
 
 
-def build_segments(plan, sentences, words, duration, hook_end):
+def _norm_tok(t):
+    return re.sub(r"[^a-z0-9]", "", t.lower())
+
+
+def _quote_times(words, text, t0, t1):
+    """Instant (s, relatif au segment) où chaque mot de la citation est prononcé, ou None.
+
+    Recherche séquentielle tolérante (mots sautés / ponctuation) ; il faut retrouver au moins 60 %
+    des mots, les autres sont interpolés."""
+    toks = [_norm_tok(w) for w in re.sub(r"^[\"“”«»\s]+|[\"“”«»\s]+$", "", text or "").split()]
+    toks = [t for t in toks if t] if toks else []
+    if not toks:
+        return None
+    ws = [w for w in words if t0 - 0.3 <= w["s"] <= t1 + 0.3]
+    norm = [_norm_tok(w["w"]) for w in ws]
+    best = None
+    for s0 in range(len(ws)):
+        if norm[s0] != toks[0]:
+            continue
+        found, j = [], s0
+        for tk in toks:
+            k = next((k for k in range(j, min(j + 4, len(ws))) if norm[k] == tk), None)
+            found.append(None if k is None else ws[k]["s"])
+            if k is not None:
+                j = k + 1
+        hits = sum(1 for f in found if f is not None)
+        if best is None or hits > best[0]:
+            best = (hits, found)
+    if not best or best[0] < 0.6 * len(toks):
+        return None
+    found = best[1]
+    known = [(i, f) for i, f in enumerate(found) if f is not None]
+    out = []
+    for i, f in enumerate(found):
+        if f is None:
+            a = max((k for k in known if k[0] < i), default=known[0], key=lambda k: k[0])
+            b = min((k for k in known if k[0] > i), default=known[-1], key=lambda k: k[0])
+            f = a[1] if a[0] == b[0] else a[1] + (b[1] - a[1]) * (i - a[0]) / (b[0] - a[0])
+        out.append(round(max(0.0, f - t0), 3))
+    return out
+
+
+def build_segments(plan, sentences, words, duration, hook_end, allowed=None, max_cards=None):
     beats = sorted(plan["beats"], key=lambda b: int(b.get("at", 0) or 0))
     seen, clean = set(), []
     for b in beats:
@@ -237,6 +282,8 @@ def build_segments(plan, sentences, words, duration, hook_end):
     cast = plan.get("cast") or []
     portrait = lambda name: f"images/cast_{HA.slug(name)}.jpg" if name else None  # noqa: E731
     n_img = 0
+    allowed = set(allowed or HA.TEMPLATES)
+    n_cards = 0
     for i, b in enumerate(clean):
         start = starts[i]
         end = starts[i + 1] if i + 1 < len(clean) else end_total
@@ -244,8 +291,18 @@ def build_segments(plan, sentences, words, duration, hook_end):
             segs[-1]["end"] = end
             continue
         t = b["type"]
+        if t != "image":
+            # type coupé, ou budget d'animations dépassé (les citations restent) → image du passage
+            over = max_cards is not None and n_cards >= max_cards and t != "quote"
+            if t not in allowed or over or t not in HA.TEMPLATES:
+                said = " ".join(x["text"] for x in sentences if start - 0.05 <= x["start"] < end)
+                b = {"type": "image", "prompt": b.get("prompt") or f"A believable scene showing: {said}",
+                     "chars": b.get("chars") or ([b["portrait"]] if b.get("portrait") else [])}
+                t = "image"
+            else:
+                n_cards += 1
         seg = {"start": round(start, 3), "end": round(end, 3), "type": t}
-        if t == "image" or t not in HA.TEMPLATES:
+        if t == "image":
             in_hook = start < hook_end
             seg.update(type="image", src=f"images/shot_{n_img:03d}.jpg",
                        motion=b.get("motion") or ("in" if n_img % 2 == 0 else "out"),
@@ -289,7 +346,10 @@ def build_segments(plan, sentences, words, duration, hook_end):
             if len(seg["stops"]) < 2:
                 seg.update(type="statement", text=(b.get("title") or "").upper(), reveal=0)
         elif t == "quote":
-            seg.update(text=b.get("text", ""), author=b.get("author", ""))
+            seg.update(text=b.get("text", ""), author=b.get("author", ""), source=b.get("source", ""))
+            times = _quote_times(words, seg["text"], start, end)
+            if times:
+                seg["words"] = times
             if b.get("portrait"):
                 seg.update(image=portrait(b["portrait"]), _cast=b["portrait"])
         segs.append(seg)
@@ -304,9 +364,12 @@ def job_plan(job, pid):
     hook_end = pr["voice"].get("hook_end") or 20
     hook_idx = max([i for i, s in enumerate(sents) if s["end"] <= hook_end + 0.2] or [0])
     job.update(0.1, "Plan visuel : images, cartes, fiches et animations…")
+    opts = dict(DEFAULTS, **(pr.get("options") or {}))
+    allowed = opts["templates"]
+    max_cards = max(2, int(round(duration / 60 * float(opts["cards_per_min"]))))
     plan = HA.plan_visuals([{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents], duration, hook_idx,
-                           require_all=pr["options"].get("all_templates", False))
-    segs, cast = build_segments(plan, sents, words, duration, hook_end)
+                           allowed=allowed, max_cards=max_cards, require_all=opts.get("all_templates", False))
+    segs, cast = build_segments(plan, sents, words, duration, hook_end, allowed=allowed, max_cards=max_cards)
 
     def save(x):
         x["plan"] = {"cast": cast, "segments": segs, "beats": plan["beats"]}
@@ -372,7 +435,22 @@ def _gen(pr, rel, kind, prompt, chars):
             text += " Keep each character's face, hair and outfit identical to the reference portraits."
         blob = ai.generate_image(text, refs=refs or None)
         w, h = 1920, 1080
-    ai.fit_cover(blob, w, h, os.path.join(d, rel))
+    dest = os.path.join(d, rel)
+    ai.fit_cover(blob, w, h, dest)
+    if kind in ("shot", "portrait"):
+        _grade(dest)
+
+
+def _grade(path):
+    """Étalonnage commun à tous les plans : couleurs un peu éteintes, contraste doux (look photo de tournage)."""
+    try:
+        from PIL import Image, ImageEnhance
+        im = Image.open(path).convert("RGB")
+        im = ImageEnhance.Color(im).enhance(0.88)
+        im = ImageEnhance.Contrast(im).enhance(0.96)
+        im.save(path, quality=92)
+    except Exception:  # noqa: BLE001 — l'image brute reste utilisable
+        pass
 
 
 def job_images(job, pid):
@@ -473,6 +551,7 @@ def build_timeline(pr):
         "sfx": cues, "film": float(opts.get("film", 1.0)),
         "captions": captions_from_words(words) if opts.get("captions", True) else [],
         "captionsFrom": hook_end if opts.get("captions_after_hook", True) else 0,
+        "captionsMute": [[s["start"], s["end"]] for s in pr["plan"]["segments"] if s["type"] == "quote"],
         "segments": [_public(s) for s in pr["plan"]["segments"]],
     }
 
