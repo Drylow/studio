@@ -45,3 +45,6 @@ data/
 
 # Package autonome (dossier à double-cliquer)
 dist/
+
+# Dossier de travail des productions (vidéos, images, logs)
+work/

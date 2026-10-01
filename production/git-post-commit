@@ -1,0 +1,4 @@
+#!/bin/sh
+# Pousse chaque commit sur GitHub tout de suite (en arrière-plan, quelques essais si le réseau coupe).
+branch=$(git rev-parse --abbrev-ref HEAD)
+( for i in 1 2 3 4; do git push -q -u origin "$branch" >/dev/null 2>&1 && exit 0; sleep $((2 * i)); done ) &

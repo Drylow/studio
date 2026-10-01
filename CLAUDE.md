@@ -1,0 +1,121 @@
+# Drylow Studio — guide pour Claude (à lire en entier avant de travailler)
+
+Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en bout : recherche, script,
+voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
+pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
+
+## 1. L'utilisateur et la façon de lui parler
+
+- Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
+  français, simple, court, direct. Pas d'anglais, pas de jargon, pas de pavé.
+- Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». Donne des heures
+  (UTC) et des chiffres concrets (images 86/123, rendu en cours…).
+- Il décide des titres, miniatures et du calendrier ; propose 2-4 options visuelles (planches d'images),
+  recommande-en une, puis applique son choix sans redemander.
+- **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
+  jamais que « c'est local » ou que tu « ne peux pas pousser ».
+
+## 2. Règles absolues
+
+1. **Jamais une vidéo envoyée sans l'avoir vérifiée image par image** (§5). Une erreur à l'écran (ticket faux,
+   chiffre jamais dit, texte bizarre) l'oblige à supprimer une vidéo programmée : c'est arrivé, plus jamais.
+2. **Un lien envoyé = un seul lien, le bon, marqué clairement** (« KIDS CORRIGÉE – à poster »). Ne cite pas
+   l'ancien lien dans le même message.
+3. **Secrets** : clés (IA, Algrow) et webhook Discord seulement dans `.env` (ignoré par git). Jamais dans le
+   code, les commits ou les messages. Avant un push, vérifie qu'aucun secret n'est dans le diff.
+4. Jamais de nom de modèle d'IA dans les commits, le code ou les fichiers du dépôt.
+5. Faits réels uniquement (sources nommées dans la phrase) ; un chiffre incertain est coupé ou présenté
+   comme une estimation. Jamais de mode d'emploi pour voler, frauder, contourner un verrou.
+6. Personnes réelles : jamais comme personnages. Marques/ligues (UFC, WNBA…) OK **dans le titre** (usage
+   descriptif) mais jamais de logos, ceintures/maillots officiels, vrais joueurs ou événements.
+7. Miniatures « sexy » : femme adulte, tenue de son univers (ex. tenue de combat), jamais explicite ; **jamais
+   de sexualisation à côté d'un enfant ou d'un bébé** (refusé net). Trop sexy = risque de restriction d'âge
+   YouTube : le dire une fois.
+
+## 3. Les chaînes (modèles dans `services/pov_engine.py` → `TEMPLATES`)
+
+Les trois chaînes partagent le même style 2D (bonshommes à grosse tête ronde blanche, yeux en points noirs,
+mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/tools/osl-studio?studio=<clé>`.
+
+| Clé | Chaîne | Format | Miniature validée |
+|---|---|---|---|
+| `oddly_specific_en` | **Oddly Specific Lives** (@OddlySpecificLives) | « POV: You Marry a … / Fall in Love with a … » (`pov_marry`), variante « Inside the Life of » (`pov_life`) | BD colorée : la femme 3/4 corps, contour blanc, monument du pays + drapeau en haut à gauche, bouquet de roses. **Pour un sport : dans son décor (cage, parquet), sans roses**, en tenue de son sport, ceinture/trophée sans logo, un peu de sueur. |
+| `oddly_expensive_en` | **Oddly Expensive Lives** | « The Economics of … » : le prof explique la facture ligne par ligne, ticket de caisse (« running tab ») | façon Marcus : fond plan bleu, gros titre noir contour blanc souligné rouge, le prof à droite, 1-2 humains BD à gauche (**différents à chaque vidéo**), étiquettes chiffrées + flèches |
+| `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN) |
+
+Références : `presets/<clé>/` (style.jpg = style des images, thumb.jpg = style de miniature), bibles de
+style dans `TEMPLATE_BIBLES`, vidéos de référence dans `skills/references/<id YouTube>.txt`.
+
+Idées de vidéos : vérifier la demande et la concurrence avec les outils NexLev (youtube_search,
+youtube_channel_outliers sur la chaîne et ses concurrents) avant de proposer. Ce qui marche sur OSL :
+nationalités (Russian 102k, Latina 85k, Indian 70k) et femmes « dangereuses / hors norme » (Yakuza 117k,
+Serial Killer 68k). Sports (UFC, WNBA…) : nouvelle série, nom de la grande ligue dans le titre.
+
+## 4. Produire une vidéo (dossier de travail = `$STUDIO_WORK`, défaut `work/`, ignoré par git)
+
+```bash
+# 0. recherche : faits vérifiés (web), écrits dans work/<chaîne>/<vidéo>/notes.txt
+#    (« VERIFIED FACTS … », puis « STORY SHAPE / RUNNING TAB … », puis « RULES … ») — voir les notes existantes
+python production/new_video.py oddly_things_en work/ost/watch "Your Life as a Stolen Watch"
+echo "ost/watch --gate" >> work/active.txt          # dossier relatif + options de pipeline.py
+production/supervisor.sh                             # en tâche de fond SUIVIE (Bash run_in_background)
+```
+
+`pipeline.py` enchaîne : script FacelessOS + audit → **relecture** (avec `--gate`) → voix, persos, plan de
+montage, images → contrôle images en vision → rendu (un par dossier de chaîne, verrou `render.lock`) →
+Gofile (md5 vérifié) → `verify.py` → **attente de `review_ok`** → paquet Discord. Chaque étape a son log et
+son marqueur (`AUDIT DONE`, `PROD DONE`, `QA DONE`, `RENDER DONE`, `ALL DONE`) : relancer reprend où ça en était.
+
+- **Relire le script** (`script.txt`) : pas de vrais joueurs/équipes, rien de sexualisé, chiffres = notes,
+  pas de phrases méta (« this story is constructed »), titres de parties propres (pour OST : « Hand N: … »
+  donne une carte, les autres parties pas de numéro). Corriger le fichier, puis
+  `python production/steps.py save <dossier>` et `touch <dossier>/script_ok`.
+- **Miniature** : `production/thumb.py` avec la référence de la chaîne, 2-4 variantes en planche, le choix
+  de l'utilisateur va dans `<dossier>/thumb_choice.txt` (chemin absolu).
+- Durée par défaut 14 min. Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
+
+## 5. Vérifier avant d'envoyer (obligatoire)
+
+`verify.py` écrit `check/report.txt` (contrôles automatiques : ticket juste de bout en bout, chiffres
+affichés = chiffres dits, intro) et `check/fx_*.jpg` (une image par animation). **Regarde toutes les
+planches** : intro, tickets (total juste, pas de ligne « Running total »), compteurs, cartes HAND, trajets,
+textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images autour avec ffmpeg
+(`imageio_ffmpeg.get_ffmpeg_exe()`). Seulement ensuite : `touch <dossier>/review_ok`.
+
+## 6. Publication
+
+- Vidéo sur **Gofile** (lien `gofile_link.txt`), paquet sur **Discord** via `production/discord_send.py`
+  (lien + miniature, titre, description + chapitres, tags, commentaire épinglé). Webhook :
+  `DISCORD_WEBHOOK_URL` dans `.env` (à demander à l'utilisateur, jamais dans git).
+- Donner aussi le lien dans le chat, avec le titre de la vidéo.
+- Calendrier (oct. 2026) : Oddly Specific Lives MMA le 3 oct., basket le 4 oct. ; d'autres sports ensuite.
+
+## 7. Environnement cloud : pièges connus
+
+- **La machine redémarre souvent** (toutes les 40 min environ quand la session est inactive) et tue les
+  processus. Toujours lancer `production/supervisor.sh` en tâche de fond suivie ; à la fin de la tâche
+  (redémarrage), relancer `production/resume_all.sh` puis le superviseur. Programmer aussi un rappel
+  (send_later) toutes les ~45 min tant qu'une production tourne.
+- ffmpeg : fourni par `imageio_ffmpeg` (pas dans le PATH).
+- Coupures réseau de l'IA (« IA injoignable ») : les étapes réessaient ; relancer suffit.
+- `pgrep -f motif` se trouve lui-même si le motif est dans ta propre ligne de commande : vérifier les
+  processus avec `pgrep -af` et lire le résultat.
+
+## 8. Git
+
+- Travail sur la branche courante de la session ; **commit + push après chaque changement**. Installer le
+  hook qui pousse tout seul : `cp production/git-post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit`.
+- Messages de commit en anglais, courts, qui disent le « pourquoi ». Ne pas créer de PR sans qu'on le demande.
+
+## 9. Carte du code
+
+- `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
+  casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie
+  `chapter_card`, ticket juste `check_receipts`, rendu, métadonnées, miniatures).
+- `services/pov_script.py` : formats (`FORMATS`), écriture FacelessOS (recherche, hooks, plan, rédaction,
+  audit « greenlight »).
+- `services/motion.py` : animations à l'écran (counter, receipt, label, stamp, list, timeline, bars, pie,
+  split, sheet, route, chapter, intro, outro). `services/render.py` : montage ffmpeg (calques, fondus,
+  durées min. des cartes). `services/tts.py` : voix (Algrow). `services/ai.py` : texte + images.
+- `production/` : scripts de production sans surveillance (ce guide). `production/VIDEOS.md` : journal des
+  vidéos livrées et en cours — **le tenir à jour** à chaque livraison.
