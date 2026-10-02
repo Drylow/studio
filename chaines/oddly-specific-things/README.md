@@ -28,6 +28,9 @@
   - Une main en moufle blanche (manche verte) tient l'objet (sans visage pour les nouvelles vidéos), une main gantée noire l'arrache.
   - Des traits jaunes de choc.
   - Un énorme mot noir arrondi en haut : **STOLEN**.
+  - **Varier l'action d'une vidéo à l'autre** (sinon c'est répétitif) : même style, mais une scène différente
+    à chaque fois (objet arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé
+    resté seul, mis en carton, tir à la corde, grue + conteneur…). Toujours 3-4 variantes en planche au choix.
 
 ## Règles
 
