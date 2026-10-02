@@ -1587,7 +1587,9 @@ def _prompt_batch(ch, pr, scenes, all_scenes):
 - Exactly ONE {obj} in each image, drawn once. Other objects of the same kind must clearly differ (other colour or model). Realistic size next to hands, people and furniture.
 - When the narration is "inside" it or about its parts, show that place directly (the cabin seen from the driver's seat, an open wallet, a card reader slot), never a second copy of {obj} inside it.
 - When the narration is about data, money or paperwork linked to it, show the real-world scene (a person at a laptop whose screen shows blurred rows, a hand holding a receipt, a stack of cash beside {obj}), never cartoon objects with faces.
-- Put "You" in "chars" whenever {obj} is visible, so its reference image is used."""
+- Put "You" in "chars" whenever {obj} is visible, so its reference image is used.
+- Once the narration says {obj} has been cut open, ground, melted, refined or turned into something else (powder, metal, a new part), draw only what it has become and leave "You" out of "chars": the intact {obj} never appears again after that (a brand-new replacement looks new: clean, no dents, no rust).
+- A real person who is only quoted or cited (reporter, expert, prosecutor, defendant, company founder) is never drawn: show the place, the document or the data. No extra onlookers: only the cast members the scene needs."""
     heads = [h for h, _ in S.parse(pr.get("script") or "") if h]
     lines = []
     for sc in scenes:
