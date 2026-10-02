@@ -35,3 +35,15 @@ Idées suivantes : Amazon return, catalytic converter, diamond, donated T-shirt,
 | POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
+
+## The Survivor's Account (History Docs, `survivors_account`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks | **livrée** (vérifiée plan par plan, Discord, 2 oct.) — https://gofile.io/d/XXlkFSbS ; 36 min, voix Earl, rendu RunPod (~2 $) ; miniature « SHE SAW EVERYTHING » | à caler |
+
+## Frontier Blood (History Docs, `frontier_blood`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| How 28 Buffalo Hunters Held Off 700 Warriors at Adobe Walls | script relu (`chaines/frontier-blood/videos/01-adobe-walls/`) ; titre à confirmer (« 700 » est une estimation, le script donne 250-700) | — |

@@ -51,6 +51,12 @@ New long-form history documentary every week.
 - Faits réels ; chiffres contestés donnés en fourchette avec qui les avance. Violence dite sobrement, jamais
   complaisante.
 
+## Vidéos
+
+| Vidéo | État |
+|---|---|
+| What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks ([script et recherche](videos/01-gettysburg-tillie-pierce/)) | livrée le 2 oct. (vérifiée, Discord) |
+
 ## Idées de vidéos (maquette validée)
 
 1. What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks (Tillie Pierce, mémoires de 1889)
