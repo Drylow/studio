@@ -1684,6 +1684,11 @@ CHANNEL ART STYLE (every character must follow its character design rules): {(st
 CHANNEL RECURRING CHARACTERS (already defined): 
 {known}
 
+NEVER cast a real, named person who is only cited as a source (an expert, researcher, official, reporter, prosecutor or
+company founder quoted in the narration, e.g. "Bike Index co-founder Bryan Hance says..."): real people are never drawn
+as characters; scenes about what they said show the data or the place instead. Each cast member must look clearly
+different from every other one (different hair, age and outfit colours), especially two characters of the same gender.
+
 For each cast member give:
 - "name": a short unique label used for every scene (e.g. "Her", "Her Father", "Grandma", "Min-jun"). ALWAYS include every channel character who appears in this video (e.g. the protagonist "You"), under their exact channel name, with a video-specific default outfit — so they get a locked look too.
 - "aliases": how the narration refers to them (e.g. ["your wife", "Ji-woo", "she"] — no pronouns alone).
