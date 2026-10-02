@@ -173,7 +173,10 @@ templates : section History Docs du `README.md`.
   (un plan par vignette) → **attente de `review_ok`** → paquet Discord comme les vidéos POV ; réessaie si l'IA sature).
   Le rendu se fait **par morceaux** de 30 s (`render.mjs --chunk-dir`, `CHUNK_FRAMES`) : un redémarrage reprend
   au morceau suivant. Une vidéo de 38 min ≈ 9 h de rendu sur les 4 cœurs du cloud (≈ 2 images/s) : trop lent,
-  un rendu sur une machine plus grosse est à prévoir.
+  avec `RUNPOD_API_KEY` dans le .env, `services/runpod_render.py` loue des pods CPU RunPod (8 × 32 cœurs par
+  défaut), leur envoie moteur + médias, leur distribue les morceaux par petits lots, rapatrie le résultat et
+  **supprime toujours les pods** (même ceux d'un rendu interrompu, notés dans `chunks/pods.json`).
+  Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
   télécharger Chrome) et `REMOTION_CONCURRENCY=4` ; une vidéo de 3-4 min ≈ 15-25 min de rendu.

@@ -12,7 +12,7 @@ import {renderMedia, renderStill, selectComposition} from '@remotion/renderer';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const args = Object.fromEntries(
-  process.argv.slice(2).reduce((acc, a, i, all) => (a.startsWith('--') ? [...acc, [a.slice(2), all[i + 1]]] : acc), []),
+  process.argv.slice(2).reduce((acc, a, i, all) => (a.startsWith('--') ? [...acc, [a.slice(2), all[i + 1] && !all[i + 1].startsWith('--') ? all[i + 1] : '']] : acc), []),
 );
 const project = path.resolve(args.project || '.');
 const timeline = JSON.parse(fs.readFileSync(path.join(project, args.timeline || 'timeline.json'), 'utf8'));
@@ -44,8 +44,10 @@ if (args.stills !== undefined) {
   const n = Math.ceil(total / size);
   const concurrency = parseInt(args.concurrency || String(Math.max(1, Math.floor(os.cpus().length / 2))), 10);
   const part = (i) => path.join(dir, `part_${String(i).padStart(3, '0')}.mp4`);
+  // --chunks "3,4,9" : seulement ces morceaux (rendu réparti sur plusieurs machines) ; --no-audio / --audio-only
+  const only = args.chunks ? new Set(String(args.chunks).split(',').filter(Boolean).map(Number)) : null;
   for (let i = 0; i < n; i++) {
-    if (fs.existsSync(part(i))) continue;
+    if (args['audio-only'] !== undefined || (only && !only.has(i)) || fs.existsSync(part(i))) continue;
     const tmp = part(i).replace('.mp4', '.tmp.mp4');
     const frameRange = [i * size, Math.min(total, (i + 1) * size) - 1];
     let last = -1;
@@ -64,7 +66,7 @@ if (args.stills !== undefined) {
     fs.renameSync(tmp, part(i));
   }
   const wav = path.join(dir, 'audio.wav');
-  if (!fs.existsSync(wav)) {
+  if (args['no-audio'] === undefined && !fs.existsSync(wav)) {
     say({stage: 'audio'});
     await renderMedia({composition, serveUrl, codec: 'wav', outputLocation: wav + '.tmp.wav', inputProps: timeline,
       browserExecutable, concurrency});

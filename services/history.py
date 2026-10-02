@@ -31,6 +31,7 @@ from services import history_channels as HC
 from services import history_thumbs as TH
 from services import pov_script as S
 from services import pov_store as store
+from services import runpod_render as RR
 
 APP_DIR = store.APP_DIR
 ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
@@ -1203,7 +1204,12 @@ def job_render(job, pid):
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
     size = _read(os.path.join(chunks, "frames.txt")) or "2700"  # un rendu commencé garde sa taille de morceau
-    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size])
+    if RR.available():  # pods RunPod : quelques minutes au lieu de plusieurs heures ; le reste se fait en local
+        try:
+            RR.render(job, d, chunks, int(size), math.ceil(tl["duration"] * tl["fps"]), 0.05, 0.9)
+        except Exception as e:  # noqa: BLE001
+            print(f"[runpod] {e}", flush=True)
+    _remotion(job, d, None, 0.9 if RR.available() else 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size])
     job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
     parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
     with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
