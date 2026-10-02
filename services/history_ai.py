@@ -254,7 +254,7 @@ IMAGE_STYLES = {
                            "No text.")},
     "cinematic": {"name": "Cinéma — photoréaliste", "theme": "cinematic", "shot": STYLE, "portrait": PORTRAIT},
 }
-DEFAULT_STYLE = "ink"
+DEFAULT_STYLE = "paint"
 
 
 def image_style(name):

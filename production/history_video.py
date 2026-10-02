@@ -102,6 +102,12 @@ def package(d, pr, log):
             time.sleep(min(600, 60 * (k + 1)))
     json.dump({"brand": HC.channel(key)["name"], "title": pr["title"]}, open(os.path.join(d, "video.json"), "w"))
     open(os.path.join(d, "thumb_choice.txt"), "w").write(os.path.join(H.project_dir(pr["id"]), pr["thumbnail"]))
+    opts = pr.get("thumb_options") or []
+    if len(opts) > 1:  # toutes les variantes jointes au paquet Discord : l'utilisateur choisit en programmant
+        concepts = (pr.get("thumb") or {}).get("concepts") or []
+        rows = [f"{os.path.join(H.project_dir(pr['id']), rel)}\t{(concepts[k]['text'] if k < len(concepts) else k + 1)}"
+                for k, rel in enumerate(opts)]
+        open(os.path.join(d, "thumb_options.txt"), "w").write("\n".join(rows) + "\n")
 
 
 def sheets(d, pr, video, per=16):

@@ -10,6 +10,7 @@ Webhook : DISCORD_WEBHOOK_URL dans .env (jamais dans git)."""
 import fcntl
 import json
 import os
+import re
 import sys
 import time
 
@@ -27,7 +28,7 @@ meta = json.load(open(os.path.join(D, "meta.json")))
 OPTIONS = os.path.join(D, "thumb_options.txt")
 if os.path.isfile(OPTIONS):  # [(chemin, nom du fichier joint)] : toutes les variantes, numérotées
     rows = [ln.split("\t") for ln in open(OPTIONS).read().splitlines() if ln.strip()][:10]
-    thumbs = [(r[0], f"miniature_{k}_{(r[1] if len(r) > 1 else str(k)).replace(' ', '_')}.jpg")
+    thumbs = [(r[0], f"miniature_{k}_{re.sub(r'[^A-Za-z0-9]+', '_', r[1] if len(r) > 1 else str(k)).strip('_')}.jpg")
               for k, r in enumerate(rows, 1)]
 else:
     thumbs = [(open(os.path.join(D, "thumb_choice.txt")).read().strip(), "miniature.jpg")]

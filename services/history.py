@@ -42,7 +42,7 @@ DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_
             "music_volume": 0.06, "all_templates": False,
             # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
             "templates": ["statement", "number", "map", "quote", "character", "compare", "archive"],
-            "image_style": "ink", "channel": "",
+            "image_style": "paint", "channel": "",
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
@@ -1315,44 +1315,98 @@ class _Sub:
         return self.job.cancelled()
 
 
-THUMB_LOOK = ("YouTube thumbnail composition: ONE strong subject, big and close, dramatic contrast and a vivid splash of "
-              "red; keep the {side} third of the frame calmer (sky, smoke or plain paper) for a title added later.")
+THUMB_LOOK = ("YouTube thumbnail painting in the style of the top history documentary channels: one dramatic scene, "
+              "vivid saturated colours, strong contrast, fire glow, drifting smoke and a dramatic sky; {subject}; the "
+              "action of the story behind. Keep the {corner} corner of the frame calmer (sky or smoke) for a title "
+              "added later. Era-accurate. No text, no letters.")
+CAMEO_LOOK = ("Head-and-shoulders portrait of {who}, as an authentic period portrait from that era (a 19th-century "
+              "engraving or black-and-white photograph for modern times; an engraved portrait or marble bust for "
+              "antiquity), facing the viewer, plain light background, nothing else. No text.")
 
 
-def job_thumbnail(job, pid):
-    """Miniature : image encre et aquarelle + 2 lignes de texte posées par le code (ligne blanche, ligne rouge)."""
+def thumb_concepts(pr, n=3):
+    """n idées de miniature façon Dose of History : scène, personnage face caméra, 2-4 mots (mot fort en rouge),
+    médaillon facultatif d'un acteur clé. Les guillemets sont réservés aux vrais mots du témoin."""
+    script = HA.narration(pr["script"])[:9000]
+    data = ai.chat_json(
+        f'Design {n} different YouTube thumbnails for the history documentary "{pr["title"]}". Study of the most '
+        'viewed thumbnails of the niche (Dose of History): one dramatic painted scene, a person big in the '
+        'foreground looking straight at the viewer, fire, smoke, flags; ONE short line of text of 2-4 words in '
+        'white with the strongest word in red (e.g. BRUTAL FATE, CHILLING DISCOVERY, "I SAW CUSTER DIE"); '
+        'sometimes a black-and-white period portrait of a key person in an oval cameo.\n'
+        'Rules: the text adds to the title without repeating it; put it in quotes ONLY when it is the witness\'s '
+        'real words from the script (copy them); never invent a quote. The scene shows a true moment of the story, '
+        'era-accurate, no gore in close-up. The cameo, when used, is a real person named in the script.\n'
+        'Return JSON only: {"concepts": [{"text": "2-4 WORDS", "red": ["WORD"], "quotes": false, '
+        '"corner": "top-left|top-right|bottom-left|bottom-right", "subject": "who stands big in the foreground '
+        '(age, look, clothes, expression) and on which side", "scene": "one sentence: the moment and the place behind", '
+        '"cameo": "real person + look, or empty"}]}\n\nSCRIPT (excerpt):\n' + script,
+        model=ai.text_model(), timeout=240)
+    out = []
+    for c in (data.get("concepts") or [])[:n]:
+        if isinstance(c, dict) and c.get("text") and c.get("scene"):
+            corner = c.get("corner") if c.get("corner") in ("top-left", "top-right", "bottom-left", "bottom-right") \
+                else "top-right"
+            out.append({"text": str(c["text"]).strip().strip('"“”'), "red": [str(x) for x in c.get("red") or []][:2],
+                        "quotes": bool(c.get("quotes")), "corner": corner, "subject": str(c.get("subject") or ""),
+                        "scene": str(c["scene"]), "cameo": str(c.get("cameo") or "").strip()})
+    if not out:
+        raise ai.AIError("Miniature : aucune idée.")
+    return out
+
+
+def job_thumbnail(job, pid, n=3):
+    """Miniatures (n variantes au choix) : peinture saturée + personnage face caméra + 2-4 mots posés par le code
+    (blanc, mot fort en rouge) + médaillon noir et blanc facultatif. La 1re est la miniature par défaut."""
     pr = get_project(pid)
-    key = (pr.get("options") or {}).get("channel")
-    idea = HC.idea_for(key, pr["title"]) if key else None
-    th = dict(pr.get("thumb") or {})
-    if idea:
-        th = {"text": idea["thumb_text"], "side": idea["thumb_side"], "scene": idea["thumb_scene"],
-              "base": idea["image"], **th}
-    if not th.get("text") or not th.get("scene"):
-        job.update(0.1, "Miniature : texte et scène…")
-        data = ai.chat_json(
-            f'YouTube thumbnail for the history documentary "{pr["title"]}" (channel style: hand-drawn ink and '
-            'watercolour, like Dose of History). Return JSON {"text": ["LINE 1", "LINE 2"], "side": "left|right", '
-            '"scene": "one sentence: the single most striking moment, one big subject, era-accurate"}. The text is 2-4 '
-            'words in total, a hook that adds to the title without repeating it (a number, an age, a verdict), '
-            'line 2 is the punch (shown in red).', model=ai.fast_model(), timeout=120)
-        th.update(text=[str(x) for x in (data.get("text") or [])][:2] or ["THE TRUTH"],
-                  side="left" if data.get("side") == "left" else "right", scene=str(data.get("scene") or pr["title"]))
-    base = th.get("base")
-    if not base or not os.path.isfile(base):
-        job.update(0.3, "Miniature : image…")
-        style = HA.image_style((pr.get("options") or {}).get("image_style"))
-        blob = ai.generate_image(f"{th['scene']} {THUMB_LOOK.format(side=th.get('side', 'right'))} {style['shot']}",
-                                 width=1920, height=1080, quality="high")
-        base = os.path.join(project_dir(pid), "thumbnail_base.jpg")
+    style = HA.image_style((pr.get("options") or {}).get("image_style"))
+    if not pr.get("period") and pr.get("script"):
+        per = HA.period_brief(pr["title"], HA.narration(pr["script"]))
+        update_project(pid, lambda x: x.__setitem__("period", per))
+        pr = get_project(pid)
+    era = _era(pr)
+    job.update(0.05, "Miniatures : idées…")
+    concepts = (pr.get("thumb") or {}).get("concepts") or thumb_concepts(pr, n)
+    update_project(pid, lambda x: x.__setitem__("thumb", {"concepts": concepts}))
+    d = project_dir(pid)
+
+    def make(k_c):
+        k, c = k_c
+        corner = c["corner"].replace("-", " ")
+        blob = ai.generate_image(f"{era} {c['scene']} {THUMB_LOOK.format(subject=c['subject'], corner=corner)} "
+                                 f"{style['shot']}", width=1920, height=1080, quality="high")
+        base = os.path.join(d, f"thumbnail_base_{k}.jpg")
         ai.fit_cover(blob, 1280, 720, base)
-    TH.compose(base, th["text"], th.get("side", "right"), os.path.join(project_dir(pid), "thumbnail.jpg"))
+        cameo = None
+        if c.get("cameo"):
+            try:
+                cameo = os.path.join(d, f"thumbnail_cameo_{k}.jpg")
+                ai.fit_cover(ai.generate_image(CAMEO_LOOK.format(who=c["cameo"]), width=1024, height=1536,
+                                               quality="high"), 768, 1024, cameo)
+            except Exception as e:  # noqa: BLE001 — sans médaillon, la miniature reste bonne
+                print(f"[thumbnail] médaillon : {e}", flush=True)
+                cameo = None
+        side = "left" if c["corner"].endswith("left") else "right"
+        rel = f"thumbnail_{k}.jpg"
+        TH.compose_doh(base, c["text"], c["red"], c["corner"], cameo=cameo, cameo_side=side, quotes=c["quotes"],
+                       dest=os.path.join(d, rel))
+        return rel
+
+    made = []
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        for i, fut in enumerate([ex.submit(make, (k + 1, c)) for k, c in enumerate(concepts)]):
+            try:
+                made.append(fut.result())
+            except Exception as e:  # noqa: BLE001
+                print(f"[thumbnail] variante {i + 1} : {e}", flush=True)
+            job.update(0.1 + 0.9 * (i + 1) / len(concepts), f"Miniatures {len(made)}/{len(concepts)}")
+    if not made:
+        raise ai.AIError("Miniatures : aucune image.")
 
     def save(x):
-        x["thumb"] = {k: v for k, v in th.items() if k != "base"}
-        x["thumbnail"] = "thumbnail.jpg"
+        x["thumbnail"], x["thumb_options"] = made[0], made
     update_project(pid, save)
-    job.update(1.0, "Miniature prête.")
+    job.update(1.0, f"{len(made)} miniature(s) prête(s).")
 
 
 def job_autopilot(job, pid):

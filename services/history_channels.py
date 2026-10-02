@@ -36,7 +36,7 @@ CHANNELS = {
                   "words reached us."),
         "reference": "EDGm3821yE8",
         "minutes": 38,
-        "image_style": "ink",
+        "image_style": "paint",
         "title_formulas": [
             "What a [age]-Year-Old [witness] Saw at [event] Was Too Brutal for Textbooks",
             "The [age]-Year-Old Who [did/watched X] — [His/Her] [letters/diary] Still Exist",
@@ -59,7 +59,7 @@ CHANNELS = {
                   "terrifying than you think', 'N vs M') with specifics."),
         "reference": "EDGm3821yE8",
         "minutes": 38,
-        "image_style": "ink",
+        "image_style": "paint",
         "title_formulas": [
             "They Didn't Just [lose/kill X] — The [Final N Minutes / Truth] Nobody Talks About",
             "[Event] Was More Terrifying Than You Think",
