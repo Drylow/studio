@@ -83,6 +83,7 @@ if (args.stills !== undefined) {
     fs.renameSync(wav + '.tmp.wav', wav);
   }
   say({stage: 'done', chunks: n});
+  process.exit(0); // le navigateur de Remotion peut garder le processus en vie après le dernier morceau
 } else {
   let last = -1;
   await renderMedia({
@@ -106,3 +107,4 @@ if (args.stills !== undefined) {
   });
   say({stage: 'done'});
 }
+process.exit(0);
