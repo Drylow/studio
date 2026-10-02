@@ -1162,6 +1162,9 @@ def _remotion(job, project_media, out_path, p0, p1, extra=()):
         raise RuntimeError("Rendu Remotion en échec :\n" + "\n".join(tail))
 
 
+CHUNK_FRAMES = 900  # 30 s par morceau : un redémarrage de la machine ne perd que quelques minutes de rendu
+
+
 def _read(path):
     try:
         with open(path, encoding="utf-8") as f:
@@ -1195,9 +1198,12 @@ def job_render(job, pid):
             json.dump(tl, f, ensure_ascii=False)
         with open(os.path.join(chunks, "sig.txt"), "w") as f:
             f.write(sig)
+        with open(os.path.join(chunks, "frames.txt"), "w") as f:
+            f.write(str(CHUNK_FRAMES))
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
-    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", "2700"])
+    size = _read(os.path.join(chunks, "frames.txt")) or "2700"  # un rendu commencé garde sa taille de morceau
+    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size])
     job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
     parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
     with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
