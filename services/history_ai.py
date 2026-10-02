@@ -318,6 +318,27 @@ def check_shot(path, period, prompt=""):
     return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
 
 
+FACING_QA = """Look at this illustration. Is there a main person (or a group facing the same way) in it? If so, which way
+are they looking or facing, from the viewer's point of view: "left" (toward the left edge of the image), "right" (toward
+the right edge), or "camera" (toward the viewer)? Return JSON only: {"facing": "left" | "right" | "camera" | "none"}"""
+
+
+def shot_facing(path):
+    """Sens du regard du personnage principal d'un plan : left / right / camera / none."""
+    import base64
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((640, 640))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=82)
+    content = [{"type": "text", "text": FACING_QA},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.fast_model(), timeout=180)
+    f = str(res.get("facing") or "none").lower()
+    return f if f in ("left", "right", "camera", "none") else "none"
+
+
 def cast_look(cast, names):
     by = {(c.get("name") or "").lower(): c for c in cast or []}
     out = []

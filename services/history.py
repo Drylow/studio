@@ -899,7 +899,8 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
     look = HA.cast_look(cast, chars)
     era = _era(pr)
     if kind == "portrait":
-        full = f"{style['portrait']} {chars[0] if chars else ''}: {prompt} {era}".strip()
+        full = (f"{style['portrait']} {chars[0] if chars else ''}: {prompt} {era} Facing the viewer, eyes toward the "
+                f"camera, not in profile.").strip()
         blob = ai.generate_image(full, width=1024, height=1536, quality="high")
         w, h = 900, 1200
     elif kind == "terrain":
@@ -942,6 +943,53 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
     _fit_cover(blob, w, h, dest, anchor_y=0.22 if kind == "portrait" else 0.5)
     if kind == "portrait":
         _grade(dest)
+
+
+def _balance_gaze(job, pid):
+    """Les plans copient le regard du portrait de référence : tout le monde finit par regarder du même côté.
+    On mesure le sens du regard de chaque plan (vision, gardé dans `_facing`) et on retourne en miroir celui qui
+    regarde du même côté que le plan à personnage précédent : les regards alternent. Les vraies archives et les
+    animations ne sont jamais retournées."""
+    from PIL import Image, ImageOps
+    pr = get_project(pid)
+    d = media_dir(pid)
+    shots = [s for s in pr["plan"]["segments"] if s["type"] == "image" and s.get("src")]
+    todo = [s for s in shots if not s.get("_facing")]
+    if todo:
+        job.update(0.99, f"Sens des regards : {len(todo)} plan(s)…")
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            found = dict(zip([s["src"] for s in todo], ex.map(
+                lambda s: _safe(lambda: HA.shot_facing(os.path.join(d, s["src"])), "none"), todo)))
+    else:
+        found = {}
+    last, flips = None, []
+    for s in shots:
+        f = s.get("_facing") or found.get(s["src"], "none")
+        if f in ("left", "right"):
+            if f == last and not s.get("_flipped"):
+                flips.append(s["src"])
+                f = "left" if f == "right" else "right"
+            last = f
+        found[s["src"]] = f
+    for src in flips:
+        path = os.path.join(d, src)
+        ImageOps.mirror(Image.open(path)).save(path, quality=92)
+
+    def save(x):
+        for s in x["plan"]["segments"]:
+            if s.get("src") in found:
+                s["_facing"] = found[s["src"]]
+            if s.get("src") in flips:
+                s["_flipped"] = True
+    update_project(pid, save)
+    return len(flips)
+
+
+def _safe(fn, default):
+    try:
+        return fn()
+    except Exception:  # noqa: BLE001 — contrôle indisponible : on laisse le plan tel quel
+        return default
 
 
 def _fit_cover(blob, width, height, dest, anchor_y=0.5):
@@ -999,6 +1047,7 @@ def job_images(job, pid):
     todo = [r for r in reqs if not os.path.isfile(os.path.join(d, r[0]))]
     total = len(todo_p) + len(todo)
     if not total:
+        _balance_gaze(job, pid)
         job.update(1.0, "Toutes les images sont prêtes.")
         return
     workers = max(1, int(os.getenv("AI_IMAGE_CONCURRENCY") or 6))
@@ -1025,7 +1074,8 @@ def job_images(job, pid):
     run(todo, "Images")
     if errors:
         raise RuntimeError(f"{len(errors)} image(s) en échec (relance pour les refaire) : {errors[0][:200]}")
-    job.update(1.0, f"{total} image(s) générée(s).")
+    flipped = _balance_gaze(job, pid)
+    job.update(1.0, f"{total} image(s) générée(s), {flipped} retournée(s) pour varier les regards.")
 
 
 # ── 5. Rendu ────────────────────────────────────────────────────────────────

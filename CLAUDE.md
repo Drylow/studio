@@ -196,7 +196,10 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
 - **Époque exacte sur chaque image** (`period` du projet, calculée une fois par `period_brief`) + contrôle en
   vision `check_shot` (autre époque, bras en trop, texte, gore en gros plan) : image refaite une fois si ratée.
   Sans ça, Gettysburg avait des tuniques rouges, des shakos, des légionnaires et des casques de 1940.
-- **Variété des images** : pas deux chevaliers qui regardent dans le même sens à chaque plan ; au moins la
+- **Variété des images** : pas deux chevaliers qui regardent dans le même sens à chaque plan (les plans copient
+  le regard du portrait de référence : `_balance_gaze` mesure le sens du regard de chaque plan en vision et
+  retourne en miroir celui qui regarde du même côté que le précédent ; Gettysburg : 86 à droite / 30 à gauche
+  avant, 58 / 58 après) ; au moins la
   moitié des plans sans personnage, un seul personnage de référence par plan, jamais de collage/split.
 - **Jamais de tête coupée** : recadrage ancré en haut, zooms sans mouvement vertical.
 - **Texte toujours lisible** sur les images claires (plaques sombres, bande sous les sous-titres).
