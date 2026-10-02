@@ -222,6 +222,9 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
 - Vraies images d'archive (The Met, Wikimedia Commons) quand elles existent, image IA en secours.
 - Rendus envoyés sur **Gofile** (un seul lien, le bon).
 
-Pièges connus : Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
+Pièges connus : **disque** (allocation fixe ~38 Go) : chaque appel de `render.mjs` copie les médias dans
+`/tmp/remotion-webpack-bundle-*` (~300 Mo) ; il les efface maintenant à la sortie, mais après un redémarrage brutal
+vérifier `df -h /` et supprimer les vieux `/tmp/remotion-webpack-bundle-*` (le 2 oct. : disque plein, rendu en échec).
+Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
 donc `align.py` télécharge le modèle Whisper par URL directe dans `data/models/` ; les côtes Natural Earth
 (~17 Mo) sont téléchargées une fois dans `data/geo/`.
