@@ -167,11 +167,16 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
                     audio_pod = None if audio_pod == pid and not audio_done else audio_pod
                     if st.get("stage") == "failed":
                         print(f"[runpod] {pid} : {st.get('error')} {st.get('log', [])[-2:]}", flush=True)
+                if not busy and not queue and pid != audio_pod and (audio_done or audio_pod):
+                    _delete(pid)  # plus rien à lui donner : on arrête de payer cette machine tout de suite
+                    alive.discard(pid)
+                    continue
                 if not busy:
-                    mine, queue = queue[:batch], queue[batch:]
                     audio = "0"
-                    if not audio_done and audio_pod is None:
-                        audio, audio_pod = ("1" if mine else "only"), pid
+                    if not audio_done and audio_pod is None:  # le son (long) occupe une machine à lui seul
+                        audio, audio_pod, mine = "only", pid, []
+                    else:
+                        mine, queue = queue[:batch], queue[batch:]
                     if mine or audio != "0":
                         requests.post(f"{_url(pid)}/render?chunks={','.join(map(str, mine)) or 'none'}&frames={size}"
                                       f"&audio={audio}&conc={max(1, vcpu * 3 // 4)}", timeout=60)
