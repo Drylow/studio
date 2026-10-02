@@ -18,8 +18,9 @@ Idée suivante déjà discutée : la prison (mise de côté).
 | Vidéo | État | Miniature |
 |---|---|---|
 | Your Life as a Stolen Phone | **livrée** (vérifiée, Discord) — https://gofile.io/d/FWMQaSSh | D « STOLEN » (main gantée qui arrache le téléphone) |
-| Your Life as a Stolen Car | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** (nouveau prompting : objet sans visage) — https://gofile.io/d/8Yh99Wbi (l'ancienne W3RbTNvA est KO : ne pas poster) | « STOLEN » clé de voiture |
-| Your Life as a Stolen Credit Card | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** — https://gofile.io/d/cStfBfSJ (l'ancienne 6Qj38smK est KO : ne pas poster) | « STOLEN » carte bleue |
+| Your Life as a Stolen Car | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** (nouveau prompting : objet sans visage) — https://gofile.io/d/8Yh99Wbi (l'ancienne W3RbTNvA est KO : ne pas poster) | « STOLEN » clé de voiture ; 6 variantes renvoyées sur Discord le 2 oct. (SHIPPED, GONE…) |
+| Your Life as a Stolen Credit Card | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** — https://gofile.io/d/cStfBfSJ (l'ancienne 6Qj38smK est KO : ne pas poster) | « STOLEN » carte bleue ; 6 variantes renvoyées sur Discord le 2 oct. (CLONED, DRAINED…) |
+| Your Life as a Stolen Bike | **vérifiée image par image (3 rendus, 52 images refaites : vrai expert retiré, vendeur en homme, vélo jamais entier dans les cartons…), envoyée sur Discord le 2 oct.** — https://gofile.io/d/A2tC0UxR | 7 variantes jointes au paquet (recommandée : FOR SALE), choix à l'utilisateur |
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)

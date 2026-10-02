@@ -51,6 +51,7 @@ Voir [videos/](videos/README.md).
 | Your Life as a Stolen Phone | livrée (vérifiée) |
 | Your Life as a Stolen Car | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
 | Your Life as a Stolen Credit Card | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
+| Your Life as a Stolen Bike | vérifiée, livrée le 2 oct. |
 
 ## Idées de vidéos
 
@@ -62,7 +63,6 @@ Le format n'existait pas dans la niche 2D : aucune vidéo « your life as a stol
 - Your Life as a Donated T-Shirt (le tri, les ballots, le marché au Ghana ou au Kenya)
 - Your Life as a Stolen Painting
 - Your Life as a Diamond
-- Your Life as a Stolen Bike (en cours)
 - Your Life as a Recycled Phone
 
 Idée écartée par l'utilisateur (2 oct.) : le pot catalytique (Stolen Catalytic Converter), ne plus la proposer.

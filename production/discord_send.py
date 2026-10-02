@@ -4,6 +4,8 @@
   python production/discord_send.py <folder> <lien_gofile> [--link-only] [--dry-run]
 
 Le dossier doit avoir meta.json (écrit au rendu) et thumb_choice.txt (chemin de la miniature choisie).
+Miniature pas encore choisie : thumb_options.txt (une ligne par variante : « chemin<TAB>MOT ») joint toutes les
+variantes au même message (10 max), la première en couverture, pour que l'utilisateur choisisse en programmant.
 Webhook : DISCORD_WEBHOOK_URL dans .env (jamais dans git)."""
 import fcntl
 import json
@@ -22,23 +24,30 @@ URL = webhook() + "?wait=true"
 info = json.load(open(os.path.join(D, "video.json"))) if os.path.isfile(os.path.join(D, "video.json")) else {}
 BRAND = info.get("brand") or ((E.TEMPLATES.get(info.get("template") or "", {}).get("studio") or {}).get("brand")) or "Video"
 meta = json.load(open(os.path.join(D, "meta.json")))
-thumb = open(os.path.join(D, "thumb_choice.txt")).read().strip()
+OPTIONS = os.path.join(D, "thumb_options.txt")
+if os.path.isfile(OPTIONS):  # [(chemin, nom du fichier joint)] : toutes les variantes, numérotées
+    rows = [ln.split("\t") for ln in open(OPTIONS).read().splitlines() if ln.strip()][:10]
+    thumbs = [(r[0], f"miniature_{k}_{(r[1] if len(r) > 1 else str(k)).replace(' ', '_')}.jpg")
+              for k, r in enumerate(rows, 1)]
+else:
+    thumbs = [(open(os.path.join(D, "thumb_choice.txt")).read().strip(), "miniature.jpg")]
 
 
 COLOR = 0xE63946
 EMBED_LIMIT = 5900  # Discord : 6 000 caractères au total pour les embeds d'un message
 
 
-def post(content, embeds=(), file=None):
-    """Un seul message (contenu + embeds + miniature jointe) : un paquet ne peut plus être coupé par un autre."""
+def post(content, embeds=(), files=()):
+    """Un seul message (contenu + embeds + miniatures jointes) : un paquet ne peut plus être coupé par un autre."""
     data = {"content": content, "embeds": list(embeds), "allowed_mentions": {"parse": []}}
     for _ in range(4):
         if DRY:
             print(json.dumps(data, ensure_ascii=False, indent=1))
             return
-        if file:
-            r = requests.post(URL, data={"payload_json": json.dumps(data)},
-                              files={"files[0]": ("miniature.jpg", open(file, "rb"), "image/jpeg")}, timeout=60)
+        if files:
+            r = requests.post(URL, data={"payload_json": json.dumps(data)}, timeout=120,
+                              files={f"files[{k}]": (name, open(path, "rb"), "image/jpeg")
+                                     for k, (path, name) in enumerate(files)})
         else:
             r = requests.post(URL, json=data, timeout=30)
         if r.status_code == 429:
@@ -71,7 +80,9 @@ if "--link-only" in sys.argv:
 desc = meta["description"].strip()
 if meta.get("chapters"):
     desc += "\n\nChapters\n" + "\n".join(meta["chapters"])
-cover = {"title": f"{BRAND} — {title}", "url": link or None, "color": COLOR, "image": {"url": "attachment://miniature.jpg"},
+if len(thumbs) > 1:
+    head += f"\n🖼️ **{len(thumbs)} miniatures au choix** (jointes, numérotées)"
+cover = {"title": f"{BRAND} — {title}", "url": link or None, "color": COLOR, "image": {"url": f"attachment://{thumbs[0][1]}"},
          "fields": [{"name": "📌 Titre", "value": title[:1024]}]}
 if len(meta["titles"]) > 1:
     cover["fields"].append({"name": "Autres titres", "value": "\n".join(meta["titles"][1:4])[:1024]})
@@ -79,8 +90,8 @@ blocks = [cover, embed("📝 Description", desc), embed("🏷️ Tags", ", ".joi
           embed("💬 Commentaire épinglé", meta.get("pinned_comment") or "")]
 blocks = [b for b in blocks if b.get("description") or b.get("fields")]
 if sum(size(b) for b in blocks) <= EMBED_LIMIT:
-    post(head, blocks, thumb)
+    post(head, blocks, thumbs)
 else:  # description très longue : deux messages à la suite, toujours sous le verrou
-    post(head, blocks[:2], thumb)
+    post(head, blocks[:2], thumbs)
     post(f"🎬 **{title}** (suite)", blocks[2:])
 print("Discord OK")
