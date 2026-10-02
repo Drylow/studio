@@ -185,7 +185,9 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None):
         # file d'attente : chaque machine prend un petit lot de morceaux, puis le suivant ; une machine perdue rend son lot
         queue, inflight, fetched, seen = list(todo), {}, {first["id"]} | {w["id"] for w in others}, {}
         got = set(i for i in range(n) if os.path.isfile(part(i)))
-        alive, deadline, batch = {w["id"] for w in workers}, time.time() + 60 * int(os.getenv("RUNPOD_MAX_MIN") or 30), 4
+        # limite de temps : RunPod est payant (RUNPOD_MAX_MIN, 30 min) ; le VPS est gratuit, il continue jusqu'au bout
+        limit = int(os.getenv("RUNPOD_MAX_MIN") or 30) if pods else 240
+        alive, deadline, batch = {w["id"] for w in workers}, time.time() + 60 * limit, 4
         by = {w["id"]: w for w in workers}
         while time.time() < deadline and alive and len(got) < n:
             if stop and stop():
