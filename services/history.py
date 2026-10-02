@@ -815,13 +815,23 @@ def _plan_all(job, sents, duration, hook_idx, allowed, max_cards, require_all=Fa
     def cards_for(a, b):
         return max(1, int(round(max_cards * (rows[b - 1]["end"] - rows[a]["start"]) / max(1.0, duration))))
 
+    def retry(fn, *a, **kw):  # une partie qui tombe sur une coupure réseau réessaie seule (pas tout le plan)
+        for t in range(3):
+            try:
+                return fn(*a, **kw)
+            except Exception as e:  # noqa: BLE001
+                if t == 2:
+                    raise
+                print(f"[plan] partie à refaire : {str(e)[:120]}", flush=True)
+                time.sleep(30 * (t + 1))
+
     a, b = bounds[0]
     job.update(0.12, f"Plan visuel : partie 1/{n}…")
-    head = HA.plan_visuals(rows[a:b], duration, hook_idx, allowed=allowed, max_cards=cards_for(a, b))
+    head = retry(HA.plan_visuals, rows[a:b], duration, hook_idx, allowed=allowed, max_cards=cards_for(a, b))
     cast = head["cast"]
     parts = {0: head}
     with ThreadPoolExecutor(max_workers=4) as ex:
-        futs = {ex.submit(HA.plan_visuals, rows[a:b], duration, -1, allowed, cards_for(a, b), False, a, cast): k
+        futs = {ex.submit(retry, HA.plan_visuals, rows[a:b], duration, -1, allowed, cards_for(a, b), False, a, cast): k
                 for k, (a, b) in enumerate(bounds) if k}
         for fut in as_completed(futs):
             parts[futs[fut]] = fut.result()
