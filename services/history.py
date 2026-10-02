@@ -781,6 +781,22 @@ def _diversify(segs, sents, cast, style):
         done = list(ex.map(lambda c: HA.diversify_shots(c, cast, name), chunks))
     for s, it in zip(imgs, [it for c in done for it in c]):
         s["_prompt"], s["_chars"] = it["prompt"], it["chars"]
+    _vary_gaze(imgs)
+
+
+FACE_CAMERA = " The person faces the camera, eyes looking straight at the viewer."
+
+
+def _vary_gaze(imgs):
+    """Un plan à personnage sur deux regarde la caméra : sinon tout le monde finit de profil, à gauche ou à droite."""
+    k = 0
+    for s in imgs:
+        p = s.get("_prompt") or ""
+        if not s.get("_chars") or FACE_CAMERA in p:
+            continue
+        if k % 2 == 0 and not any(w in p.lower() for w in ("camera", "viewer", "lens")):
+            s["_prompt"] = p.rstrip() + FACE_CAMERA
+        k += 1
 
 
 PLAN_CHUNK = 90  # phrases par appel au-delà desquelles on planifie par morceaux (vidéos longues)
@@ -891,6 +907,10 @@ def _era(pr):
             f"exact time and place; nothing from other eras ({per.get('avoid', '')}).")
 
 
+REALISM = ("Documentary realism: everything at its true real-world size, real physics, the real architecture and "
+           "landscape of this place; nothing oversized, surreal or symbolic.")
+
+
 def _gen(pr, rel, kind, prompt, chars, info=None):
     d = media_dir(pr["id"])
     cast = (pr.get("plan") or {}).get("cast") or []
@@ -922,7 +942,7 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
         avoid = ""
         dest = os.path.join(d, rel)
         for attempt in range(2):  # contrôle en vision (époque, bras en trop, texte) : refaite une fois si ratée
-            text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {style['shot']}{avoid}".strip()
+            text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {REALISM} {style['shot']}{avoid}".strip()
             if refs:
                 text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
             blob = ai.generate_image(text, refs=refs or None, quality="high")

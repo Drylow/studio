@@ -201,6 +201,12 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
   retourne en miroir celui qui regarde du même côté que le précédent ; Gettysburg : 86 à droite / 30 à gauche
   avant, 58 / 58 après) ; au moins la
   moitié des plans sans personnage, un seul personnage de référence par plan, jamais de collage/split.
+- **Regards vers la caméra aussi** (l'utilisateur, 2 oct. : « pourquoi ils regardent que à gauche ou à droite ») :
+  les portraits de référence sont de face, et un plan à personnage sur deux regarde la caméra (`_vary_gaze`).
+- **Pas d'images « goofy »** : réalisme documentaire (`REALISM` dans `history.py`, règles du plan et du monteur
+  image) : objets à leur vraie taille, architecture et paysage du lieu exact (`period_brief` les décrit), rien de
+  surréaliste ; `check_shot` refuse aussi les objets démesurés et les décors d'un autre pays (Gettysburg avait un
+  obus géant dans un mur et une cathédrale gothique).
 - **Jamais de tête coupée** : recadrage ancré en haut, zooms sans mouvement vertical.
 - **Texte toujours lisible** sur les images claires (plaques sombres, bande sous les sous-titres).
 - **Sous-titres exacts** sur toute la durée (orthographe du script, timings Whisper).
