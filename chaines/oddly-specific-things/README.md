@@ -57,13 +57,14 @@ Voir [videos/](videos/README.md).
 Le format n'existait pas dans la niche 2D : aucune vidéo « your life as a stolen phone » trouvée. L'idée de base est de continuer avec des objets qui voyagent loin ou qui changent beaucoup de valeur.
 
 - Your Life as an Amazon Return
-- Your Life as a Stolen Catalytic Converter
 - Your Life as a Fake Designer Bag
 - Your Life as a Counterfeit $100 Bill
 - Your Life as a Donated T-Shirt (le tri, les ballots, le marché au Ghana ou au Kenya)
 - Your Life as a Stolen Painting
 - Your Life as a Diamond
-- Your Life as a Stolen Bike
+- Your Life as a Stolen Bike (en cours)
 - Your Life as a Recycled Phone
+
+Idée écartée par l'utilisateur (2 oct.) : le pot catalytique (Stolen Catalytic Converter), ne plus la proposer.
 
 Le nom de la chaîne a été choisi pour ne pas se limiter aux objets volés.

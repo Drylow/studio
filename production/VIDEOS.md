@@ -23,7 +23,7 @@ Idée suivante déjà discutée : la prison (mise de côté).
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)
-Idées suivantes : Amazon return, catalytic converter, diamond, donated T-shirt, fake designer bag, $100 bill…
+Idées suivantes : Amazon return, diamond, donated T-shirt, fake designer bag, $100 bill…
 
 ## Oddly Specific Lives (`oddly_specific_en`)
 
