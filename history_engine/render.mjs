@@ -60,7 +60,7 @@ if (args.stills !== undefined) {
     const frameRange = [i * size, Math.min(total, (i + 1) * size) - 1];
     let last = -1;
     await renderMedia({
-      composition, serveUrl, codec: 'h264', crf: parseInt(args.crf || '20', 10), x264Preset: args.preset || 'veryfast',
+      composition, serveUrl, codec: 'h264', crf: parseInt(args.crf || '23', 10), x264Preset: args.preset || 'veryfast',
       muted: true, frameRange, outputLocation: tmp, inputProps: timeline, browserExecutable, concurrency,
       ...(args.gl ? {chromiumOptions: {gl: args.gl}} : {}),
       onProgress: ({progress}) => {
