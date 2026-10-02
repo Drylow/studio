@@ -225,3 +225,28 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
 Pièges connus : Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
 donc `align.py` télécharge le modèle Whisper par URL directe dans `data/models/` ; les côtes Natural Earth
 (~17 Mo) sont téléchargées une fois dans `data/geo/`.
+
+## 11. Actu sport (format Fight Night MMA) : `services/newsvid*.py`, `production/news.py`
+
+Un seul outil pour toutes les chaînes d'actu (MMA d'abord, puis boxe, foot…) : config par chaîne dans
+`newsvid.CHANNELS` (nom affiché, couleurs, voix Algrow, sources). Une vidéo = 15-20 min de **vraies interviews
+du jour** (podcasts, conférences, émissions) reliées par une voix off neutre de 2-3 phrases (≈ 20-25 %),
+ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts below ». Format analysé :
+`chaines/_nouvelles/README.md` (référence `skills/references/W7ey58X8lJs*.txt`).
+
+- **YouTube bloque le cloud** (téléchargement vidéo et vite les sous-titres) : dans le cloud on prépare, le **PC
+  de l'utilisateur monte** (`NEWS_PC.bat` = `python production/news.py pc` : git pull, télécharge, voix off,
+  montage, Gofile, **supprime tous les clips** — demande de l'utilisateur —, git push de `result.json` + planches
+  `check/sheet_*.jpg` + `build.log`). Transfert PC → cloud par Gofile/hébergeurs : refusé, ne pas chercher.
+- **Préparer une vidéo (cloud)** : sources trouvées avec NexLev (`youtube_search` upload_date today/week,
+  sort date), **jamais les compilations des concurrents** (Fight Night met de vieux extraits hors contexte : on
+  ne copie pas ça), seulement les originaux (podcast, chaîne du combattant, conférence). Transcriptions NexLev
+  `get_bulk_video_transcripts` (le fichier enregistré) → `news.py new` / `import` (+ meta.json : titre, chaîne,
+  date) → `moments` → `plan --context "faits vérifiés"` → **relire plan.json** → `voice` → `thumb` → commit.
+- **Relire le plan** : chaque voix off colle à son extrait ; pas de mots lus présentés comme dits par la
+  personne citée (le message de Topuria lu sur Flagrant) ; pas d'extrait rejoué d'une autre émission quand
+  l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
+  des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
+  dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **Après le montage PC** : `git pull`, regarder `check/sheet_*.jpg` (+ `build.log`), puis
+  `python production/news.py send <dossier>` (Discord) seulement si tout est bon.

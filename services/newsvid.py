@@ -40,9 +40,14 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
         "search": ["UFC news", "Dana White", "UFC interview"],
-        "sources": ["@UFC", "@MMAFightingonSBN", "@MMAjunkie", "@arielhelwanishow", "@ChaelSonnen",
-                    "@DanielCormier", "@FullSendMMA", "@JREClips", "@FLAGRANTCLIPS", "@MikeBispingOfficial",
-                    "@LukeThomas", "@TheSchmo312", "@JAXXONPODCAST", "@BrendanSchaub"],
+        # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC)
+        "sources": {"UFC": "UCvgfXK4nTYKudb0rFR6noLA", "MMA Fighting": "UC4f1JueVgo5t9HSmobCRPug",
+                    "The Ariel Helwani Show": "UCVOdVp54jLrFhRUm4S29HeA", "Chael Sonnen": "UCRlvF4jIeBWqXJDGNXfPyVw",
+                    "Daniel Cormier": "UC_1TBgZ5FuGSdRlrrnyJU7w", "FLAGRANT": "UC5PstSsGrRwj2o6asQpC4Rg",
+                    "FLAGRANT CLIPS": "UCAjmXPKv1zpYftSDAMeJz8A", "Michael Bisping": "UCDrG2_1TcVkXKXXsD6Kjwig",
+                    "One Night with Steiny": "UCdd7HZYwU1YOE2lILZ5P2VQ", "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA",
+                    "FULL SEND MMA": "UCTvuMRhyrTVgbEdLyymZq8g", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
+                    "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw"},
         "people": "fighters, coaches, managers, promoters and pundits",
     },
     "boxing_en": {
@@ -52,8 +57,7 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["boxing news", "boxing interview", "boxing press conference"],
-        "sources": ["@MatchroomBoxing", "@TopRank", "@IFLTV", "@FightHubTV", "@Seconds_Out", "@DAZNBoxing",
-                    "@BoxingSocial", "@QueensberryPromotions"],
+        "sources": {},  # à remplir (id YouTube) avant de lancer la chaîne : Matchroom, Top Rank, IFL TV, Fight Hub…
         "people": "boxers, trainers, promoters and pundits",
     },
     "football_en": {
@@ -63,15 +67,16 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["press conference football", "Premier League press conference", "football interview"],
-        "sources": ["@SkySportsFootball", "@footballdaily", "@TNTSportsFootball", "@BBCSport", "@ESPNFC",
-                    "@TheOverlap", "@RioFerdinandPresents"],
+        "sources": {},  # à remplir (id YouTube) : Sky Sports, TNT Sports, The Overlap, conférences des clubs…
         "people": "players, managers, agents and pundits",
     },
 }
 
 NARRATION_STYLE = """THE NARRATOR (copied from the reference channel, Fight Night MMA):
-- Every narration block is TWO sentences, 25-45 words, about 11 seconds. Third person, present tense, neutral
-  news register. It names the next speaker in full, says what they talk about, and hands over to the clip.
+- Every narration block is TWO sentences (25-45 words, about 11 s), or THREE when a verified fact from the news
+  context adds real value (a record, a date, a number, what happened in the fight): that added context is what
+  makes the video more than a compilation (YouTube monetization). Third person, present tense, neutral news
+  register. It names the next speaker in full, says what they talk about, and hands over to the clip.
 - Sentence 1: a connector + full name + a reporting verb + the topic. Connectors rotate (never twice in a row):
   "Meanwhile,", "On the other side,", "At the same time,", "Beyond that,", "Adding to that,", "Taking that
   further,", "On a similar note,", "From X's side,", "However,", "That's when", "Then,". Reporting verbs rotate:
@@ -91,6 +96,62 @@ def channel(key):
     if key not in CHANNELS:
         raise KeyError(f"Chaîne d'actu inconnue : {key} (connues : {', '.join(CHANNELS)})")
     return dict(CHANNELS[key], key=key)
+
+
+# ── 0. Les vidéos du jour (flux RSS des chaînes sources : marche dans le cloud comme sur PC) ──
+
+def feed(channel_id):
+    """15 dernières vidéos d'une chaîne : [{id, title, channel, published (ISO), description}]."""
+    import urllib.request
+    import xml.etree.ElementTree as ET
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+    raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20).read()
+    ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015",
+          "m": "http://search.yahoo.com/mrss/"}
+    root = ET.fromstring(raw)
+    name = root.findtext("a:title", default="", namespaces=ns)
+    out = []
+    for e in root.findall("a:entry", ns):
+        out.append({"id": e.findtext("yt:videoId", namespaces=ns), "title": e.findtext("a:title", namespaces=ns),
+                    "channel": name, "published": e.findtext("a:published", namespaces=ns),
+                    "description": (e.findtext("m:group/m:description", default="", namespaces=ns) or "")[:300]})
+    return out
+
+
+def discover(ch, hours=48, log=print):
+    """Vidéos sorties dans les `hours` dernières heures sur les chaînes sources, les plus récentes d'abord."""
+    import datetime
+    from concurrent.futures import ThreadPoolExecutor
+    since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=hours)
+
+    def one(cid):
+        try:
+            return feed(cid)
+        except Exception as e:  # noqa: BLE001
+            log(f"flux {cid} : {str(e)[:80]}")
+            return []
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        rows = [v for vs in ex.map(one, (ch.get("sources") or {}).values()) for v in vs]
+    fresh = [v for v in rows if v["published"] and
+             datetime.datetime.fromisoformat(v["published"].replace("Z", "+00:00")) >= since]
+    fresh.sort(key=lambda v: v["published"], reverse=True)
+    return fresh
+
+
+def stories(ch, videos):
+    """L'IA regroupe les vidéos du jour en histoires et les classe (gros noms, conflit, nouveauté)."""
+    rows = "\n".join(f"{i}. [{v['published'][:16]}] {v['channel']}: {v['title']}" for i, v in enumerate(videos))
+    prompt = f"""You are the editor of a {ch['sport']} news YouTube channel copied from Fight Night MMA (it posts 4-5
+videos a day about the biggest names: feuds, callouts, money, rematches, retirements, controversies).
+Here are the videos published in the last hours by the main {ch['sport']} channels:
+{rows}
+
+Group them into STORIES (one story = one feud or headline, e.g. "Gaethje refuses the Topuria rematch"). Rank the
+stories by how many views a Fight Night style video would get (big names, conflict, money, fresh quotes). For each
+story: "story" (one line), "people" (main names), "videos" (indices of the videos that contain first-hand
+interviews or statements for it; skip pure reaction or compilation videos), "why" (one line).
+Return JSON {{"stories": [...]}} best first, max 8."""
+    return ai.chat_json(prompt, model=ai.text_model(), timeout=240).get("stories") or []
 
 
 # ── Sous-titres des sources ─────────────────────────────────────────────────
@@ -235,6 +296,11 @@ For each passage give:
 - "speaker": who is talking (full real name), deduced from the source and the context; "sure": true only if you
   are certain (the host introduces them, it is their own channel/show, they speak in the first person about
   their own fight…). If several people talk, name the main one;
+- "quoting": if the person talking is READING or QUOTING someone else's words (a social media post, a
+  statement, another interview), the name of the person being quoted, else "". The speaker stays the person
+  actually talking: never present read-out words as spoken by the quoted person;
+- "replay": true if this passage is a clip from ANOTHER show replayed inside this video (a reaction video playing
+  a podcast clip), false if it is this channel's own footage;
 - "summary": one neutral sentence;
 - "quote": the single most clickable sentence of the passage, VERBATIM from the lines (fix only obvious caption
   misspellings of names);
@@ -258,7 +324,8 @@ TRANSCRIPT:
                 continue
             found.append({"source": src["id"], "a": ma, "b": mb, "speaker": str(m.get("speaker") or "").strip(),
                           "sure": bool(m.get("sure")), "summary": str(m.get("summary") or "").strip(),
-                          "quote": str(m.get("quote") or "").strip(), "heat": int(m.get("heat") or 0)})
+                          "quote": str(m.get("quote") or "").strip(), "heat": int(m.get("heat") or 0),
+                          "quoting": str(m.get("quoting") or "").strip(), "replay": bool(m.get("replay"))})
         if b >= len(lines):
             break
     # passages en double (fenêtres qui se chevauchent) : on garde le plus chaud
@@ -309,7 +376,9 @@ def _moment_rows(moms, by_id):
     for k, m in enumerate(moms):
         src = by_id[m["source"]]
         dur = src["lines"][m["b"]]["e"] - src["lines"][m["a"]]["s"]
-        rows.append(f"M{k} | {m['speaker'] or 'unknown'}{'' if m['sure'] else ' (not sure)'} | {dur:.0f}s | heat "
+        flags = (f" (reading {m['quoting']}'s words)" if m.get("quoting") else "") + \
+            (" (REPLAYED from another show: avoid)" if m.get("replay") else "")
+        rows.append(f"M{k} | {m['speaker'] or 'unknown'}{'' if m['sure'] else ' (not sure)'}{flags} | {dur:.0f}s | heat "
                     f"{m['heat']} | source: {src.get('channel', '')} \"{src.get('title', '')[:70]}\" "
                     f"({src.get('date', '?')}) | {m['summary']} | quote: \"{m['quote']}\"")
     return "\n".join(rows)
@@ -336,33 +405,40 @@ BUILD:
 1. "cold_open": 3-5 moments (ids), the hottest lines first, together 45-80 seconds. No narration in the cold open.
    You may trim a long moment for the cold open with "trim": [first_line, last_line] (absolute line numbers
    inside that moment's a-b range).
-2. "blocks": the body, {max(10, target * 60 // 55)}-{max(14, target * 60 // 45)} blocks in story order: each is one
+2. CLIP LENGTH: every clip 15-50 seconds (YouTube monetization: short clips + narration, never long re-uploads).
+   For a longer moment, keep its best part with "trim": [first_line, last_line] (absolute line numbers inside
+   that moment's a-b range, starting and ending on a full sentence).
+3. "blocks": the body, {max(10, target * 60 // 55)}-{max(14, target * 60 // 45)} blocks in story order: each is one
    narration block then one moment. A moment can appear in the cold open AND later in full. Group by storyline
    (e.g. 1. the money and the refusal, 2. the other side answers, 3. what comes next). Prefer moments where the
    speaker is sure. Never use a "not sure" speaker's name in the narration (say "the host", "his coach"…).
+   Never use a moment marked REPLAYED when the original show is among the sources. For a moment where someone
+   reads another person's words, the narration says who reads them ("On Flagrant, the hosts read Topuria's post").
    Total length ≈ {target} minutes (narration ~11 s per block + clip durations).
-3. Narration of each block: follow THE NARRATOR rules below. The narration only introduces what the clip says,
+4. Narration of each block: follow THE NARRATOR rules below. The narration only introduces what the clip says,
    it never contradicts or exaggerates it.
-4. "outro": the last narration block (no clip after it).
-5. "titles": 5 options in the channel's style: a SHORT verbatim quote in quotes + CAPS verbs, e.g.
+5. "outro": the last narration block (no clip after it).
+6. "titles": 5 options in the channel's style: a SHORT verbatim quote in quotes + CAPS verbs, e.g.
    “YOU GOT HUMILIATED!” Justin Gaethje DESTROYS Ilia Topuria For Demanding Rematch!
    Light clickbait only: the quoted part MUST be said (nearly word for word) in one of the clips you used, and
    the rest must be true. Put the best first. 70-100 characters.
-6. "thumb": {{"text": 2-6 words, a real quote from a used clip (caps, may censor swear words like FU**ING),
+7. "thumb": {{"text": 2-6 words, a real quote from a used clip (caps, may censor swear words like FU**ING),
    "highlight": the 1-2 words to color, "people": [the 2 main people, full names], "moment": id of the clip the
    quote comes from}}.
-7. "description" (3 short paragraphs, factual, credits the sources by channel name at the end: "Credits:
+8. "description" (3 short paragraphs, factual, credits the sources by channel name at the end: "Credits:
    ..."), "tags" (15-25), "pinned_comment" (a question to the viewers).
-8. "spelling": a map of caption misspellings → correct spelling for every name seen in the moments
+9. "spelling": a map of caption misspellings → correct spelling for every name seen in the moments
    (e.g. {{"Gachi": "Gaethje", "Tapura": "Topuria"}}).
 
 {NARRATION_STYLE}
 
 Return JSON:
 {{"titles": [...], "thumb": {{...}}, "cold_open": [{{"moment": "M3"}}, {{"moment": "M7", "trim": [120, 131]}}],
-  "blocks": [{{"narration": "...", "moment": "M2"}}], "outro": "...", "description": "...", "tags": [...],
+  "blocks": [{{"narration": "...", "moment": "M2"}}, {{"narration": "...", "moment": "M5", "trim": [40, 52]}}], "outro": "...", "description": "...", "tags": [...],
   "pinned_comment": "...", "spelling": {{...}}}}"""
     plan = ai.chat_json(prompt, model=ai.text_model(), timeout=420)
+    with open(os.path.join(folder, "plan_raw.json"), "w", encoding="utf-8") as f:  # pour remonter le plan sans l'IA
+        json.dump(plan, f, ensure_ascii=False, indent=1)
     return materialize(folder, ch, topic, plan, moms, by_id, log=log)
 
 
@@ -378,18 +454,103 @@ def _fix_spelling(text, spelling):
     return text
 
 
-def clip_spec(src, a, b, spelling, pad_in=0.15, pad_out=0.35):
-    """Extrait = lignes a..b de la source → {video, start, end, subs: [{s, e, t}] relatifs au début}."""
+_SENT_END = re.compile(r"[.?!][\"”’')\]]*$")
+MAX_CLIP = 50.0   # un extrait ne dure jamais plus (monétisation : extraits courts + voix off)
+TEASER = 16.0     # extraits de l'ouverture : la phrase choc seulement
+
+
+def _pieces(lines, a, b):
+    """Lignes a..b → morceaux de phrase horodatés : une ligne est coupée à chaque fin de phrase, l'instant
+    de la coupure est estimé au prorata des caractères (le PC recale ensuite sur le silence le plus proche)."""
+    out = []
+    for i in range(max(0, a), min(len(lines), b + 1)):
+        ln = lines[i]
+        t = ln["t"]
+        dur = max(0.1, ln["e"] - ln["s"])
+        pos = 0
+        for p in re.split(r"(?<=[.?!])\s+(?=[A-Z0-9\"“'])", t):
+            k0 = t.find(p, pos)
+            k1 = k0 + len(p)
+            pos = k1
+            out.append({"s": ln["s"] + dur * k0 / max(1, len(t)), "e": ln["s"] + dur * k1 / max(1, len(t)),
+                        "t": p, "end": bool(_SENT_END.search(p)), "line": i})
+    return out
+
+
+def _quote_piece(pieces, quote):
+    """(premier, dernier) morceau de la citation (alignement mot à mot qui démarre sur son 1er mot), ou None."""
+    q = _words(quote)
+    if not q:
+        return None
+    words = [(w, k) for k, p in enumerate(pieces) for w in _words(p["t"])]
+
+    def same(a, b):
+        return a == b or (len(b) > 4 and a[:4] == b[:4])
+    best, span = 0, None
+    for i in range(len(words)):
+        if not same(words[i][0], q[0]):
+            continue
+        k, hit, last = i, 0, i
+        for w in q:
+            for j in range(k, min(len(words), k + 4)):
+                if same(words[j][0], w):
+                    hit, k, last = hit + 1, j + 1, j
+                    break
+        if hit > best:
+            best, span = hit, (words[i][1], words[last][1])
+    return span if best >= max(1, round(len(q) * 0.6)) else None
+
+
+def _window(pieces, first, last, max_len, anchor=None):
+    """Plus longue suite de phrases entières ≤ max_len qui contient toute la citation `anchor` = (début, fin)."""
+    starts = [k for k in range(first, last + 1) if k == first or pieces[k - 1]["end"]]
+    ends = [k for k in range(first, last + 1) if pieces[k]["end"]] or [last]
+    a0, a1 = anchor if anchor else (None, None)
+    best = None
+    for s in starts:
+        if a0 is not None and s > a0:
+            break
+        for e in ends:
+            if e < s or (a1 is not None and e < a1):
+                continue
+            dur = pieces[e]["e"] - pieces[s]["s"]
+            if dur > max_len:
+                break
+            if best is None or dur > best[2]:
+                best = (s, e, dur)
+    if best is None:  # aucune phrase entière ne tient : la citation seule, coupée à max_len
+        s = a0 if a0 is not None else first
+        e = s
+        while e + 1 <= last and pieces[e + 1]["e"] - pieces[s]["s"] <= max_len:
+            e += 1
+        return s, e
+    return best[0], best[1]
+
+
+def clip_spec(src, a, b, spelling, quote=None, max_len=MAX_CLIP, pad_in=0.15, pad_out=0.35):
+    """Extrait = lignes a..b de la source, recalé sur des phrases entières (jamais « nothing illegal in the »),
+    au plus max_len secondes autour de la citation → {video, start, end, subs: [{s, e, t}] relatifs au début}."""
     lines = src["lines"]
-    start = max(0.0, lines[a]["s"] - pad_in)
-    end = lines[b]["e"] + pad_out
-    subs = []
-    for ln in lines[a:b + 1]:
-        s, e = max(0.0, ln["s"] - start), max(0.0, ln["e"] - start)
-        subs.append({"s": round(s, 2), "e": round(min(e, end - start), 2), "t": _fix_spelling(ln["t"], spelling)})
+    pcs = _pieces(lines, a, min(len(lines) - 1, b + 2))  # 2 lignes de plus pour finir la phrase
+    in_ab = [k for k, p in enumerate(pcs) if p["line"] <= b]
+    first = 0
+    if a > 0 and not _SENT_END.search(lines[a - 1]["t"]):  # la 1re ligne commence au milieu d'une phrase
+        nxt = [k for k in range(1, len(pcs)) if pcs[k - 1]["end"] and pcs[k]["line"] <= a + 1]
+        first = nxt[0] if nxt else 0
+    last = in_ab[-1] if in_ab else len(pcs) - 1
+    while last + 1 < len(pcs) and not pcs[last]["end"] and pcs[last + 1]["line"] <= b + 2:
+        last += 1  # finir la phrase commencée
+    anchor = _quote_piece(pcs[first:last + 1], quote) if quote else None
+    if anchor:
+        anchor = (first + anchor[0], first + anchor[1])
+    s, e = _window(pcs, first, last, max_len, anchor)
+    start = max(0.0, pcs[s]["s"] - pad_in)
+    end = pcs[e]["e"] + pad_out
+    subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2),
+             "t": _fix_spelling(p["t"], spelling)} for p in pcs[s:e + 1]]
     return {"video": src["id"], "start": round(start, 2), "end": round(end, 2),
-            "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""), "channel": src.get("channel") or "",
-            "subs": subs}
+            "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""),
+            "channel": src.get("channel") or "", "subs": subs}
 
 
 def materialize(folder, ch, topic, plan, moms, by_id, log=print):
@@ -400,13 +561,8 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
         k = _mid(ref)
         return moms[k] if k is not None and 0 <= k < len(moms) else None
 
-    segs = []
-    for c in plan.get("cold_open") or []:
-        m = moment(c.get("moment"))
-        if not m:
-            continue
+    def span(m, tr):
         a, b = m["a"], m["b"]
-        tr = c.get("trim")
         if isinstance(tr, list) and len(tr) == 2:
             try:
                 ta, tb = int(tr[0]), int(tr[1])
@@ -414,7 +570,16 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
                     a, b = ta, tb
             except (TypeError, ValueError):
                 pass
-        segs.append(dict(clip_spec(by_id[m["source"]], a, b, spelling), type="clip", full=True,
+        return a, b
+
+    segs = []
+    for c in plan.get("cold_open") or []:
+        m = moment(c.get("moment"))
+        if not m:
+            continue
+        a, b = span(m, c.get("trim"))
+        segs.append(dict(clip_spec(by_id[m["source"]], a, b, spelling, quote=m.get("quote"), max_len=TEASER),
+                         type="clip", full=True,
                          speaker=m["speaker"] if m["sure"] else ""))
     for blk in plan.get("blocks") or []:
         m = moment(blk.get("moment"))
@@ -424,7 +589,8 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
             continue
         if nar:
             segs.append({"type": "narration", "text": nar, "next_video": m["source"]})
-        segs.append(dict(clip_spec(by_id[m["source"]], m["a"], m["b"], spelling), type="clip", full=False,
+        a, b = span(m, blk.get("trim"))
+        segs.append(dict(clip_spec(by_id[m["source"]], a, b, spelling, quote=m.get("quote")), type="clip", full=False,
                          speaker=m["speaker"] if m["sure"] else ""))
     if plan.get("outro"):
         segs.append({"type": "narration", "text": re.sub(r"\s+", " ", plan["outro"]).strip(), "next_video": None,

@@ -3,6 +3,7 @@ title DRYLOW STUDIO // MONTAGE DES VIDEOS D'ACTU
 cd /d "%~dp0"
 rem Monte sur ce PC les videos d'actu sport preparees dans le cloud (news\...\plan.json) :
 rem telecharge les extraits YouTube, monte, envoie sur Gofile, SUPPRIME les clips, renvoie le lien dans git.
+set PYTHONIOENCODING=utf-8
 set PY=python
 if exist "venv\Scripts\python.exe" set PY=venv\Scripts\python.exe
 if exist ".venv\Scripts\python.exe" set PY=.venv\Scripts\python.exe

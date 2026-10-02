@@ -4,6 +4,7 @@ Un dossier par vidéo dans le dépôt : news/<chaîne>/<AAAA-MM-JJ>_<sujet>/ (pl
 planches de contrôle, résultat). Les sous-titres des sources (sources/) restent hors de git.
 
   # dans le cloud (ou sur PC)
+  python production/news.py today mma_en [--hours 48]                            → histoires du jour (RSS + IA)
   python production/news.py new mma_en "Gaethje vs Topuria: the rematch saga"      → crée le dossier
   python production/news.py add <dossier> <id_youtube> [<id> …]                   → sous-titres (yt-dlp, PC)
   python production/news.py import <dossier> <fichier_nexlev.json> [meta.json]    → sous-titres NexLev (cloud)
@@ -60,6 +61,21 @@ def cmd_new(key, topic):
         json.dump({"channel": key, "topic": topic, "created": datetime.datetime.utcnow().isoformat(timespec="minutes")},
                   f, indent=1)
     print(os.path.relpath(d, REPO), "—", ch["name"])
+
+
+def cmd_today(key, hours=48):
+    """Histoires du jour (flux RSS des chaînes sources + classement IA)."""
+    ch = N.channel(key)
+    vids = N.discover(ch, hours)
+    print(f"{len(vids)} vidéos en {hours} h sur {len(ch.get('sources') or {})} chaînes")
+    for k, st in enumerate(N.stories(ch, vids), 1):
+        print(f"\n{k}. {st.get('story')} — {', '.join(st.get('people') or [])}\n   {st.get('why', '')}")
+        for i in st.get("videos") or []:
+            try:
+                v = vids[int(i)]
+            except (ValueError, IndexError, TypeError):
+                continue
+            print(f"   - {v['id']}  {v['published'][:16]}  {v['channel']}: {v['title']}")
 
 
 def cmd_add(job, ids):
@@ -119,24 +135,39 @@ def cmd_plan(job, context=""):
 
 
 def cmd_voice(job):
-    from services import tts
+    """Toute la voix off en UNE fois (Algrow refuse les textes de moins de 200 caractères, et le ton reste
+    le même), puis découpée en narration/nXXX.mp3 au milieu de la pause entre deux passages (timings au mot)."""
+    from services import media, tts
     with open(os.path.join(job, "plan.json"), "r", encoding="utf-8") as f:
         plan = json.load(f)
     d = os.path.join(job, "narration")
     os.makedirs(d, exist_ok=True)
+    todo = [(i, seg["text"]) for i, seg in enumerate(plan["segments"]) if seg["type"] == "narration"]
+    if all(os.path.isfile(os.path.join(d, f"n{i:03d}.mp3")) for i, _ in todo):
+        print("voix off déjà prête")
+        return
     v = plan.get("voice") or {}
-    for i, seg in enumerate(plan["segments"]):
-        if seg["type"] != "narration":
-            continue
+    full = os.path.join(WORK, "news_voice", os.path.basename(job) + ".mp3")
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    res = tts.synthesize("\n\n".join(t for _, t in todo), full, provider=v.get("provider") or "algrow",
+                         voice=v.get("id") or "", lang="en")
+    words = sorted(res["words"], key=lambda w: w["s"])
+    bounds, k = [0.0], 0
+    for _, t in todo[:-1]:
+        k += len(t.split())
+        nxt = next((w for w in words if int(w.get("t", 0)) >= k), None)
+        prv = [w for w in words if int(w.get("t", 0)) < k]
+        if not nxt or not prv:
+            raise SystemExit("découpage de la voix off impossible (timings)")
+        bounds.append((prv[-1]["e"] + nxt["s"]) / 2)
+    bounds.append(res["duration"])
+    for (i, _), a, b in zip(todo, bounds[:-1], bounds[1:]):
         dest = os.path.join(d, f"n{i:03d}.mp3")
-        if os.path.isfile(dest):
-            continue
-        tmp = dest + ".tmp.mp3"
-        tts.synthesize(seg["text"], tmp, provider=v.get("provider") or "algrow", voice=v.get("id") or "", lang="en")
-        from services import media  # mono 96 kb/s : léger dans git, largement assez pour une voix
-        media.run(["-i", tmp, "-ac", "1", "-c:a", "libmp3lame", "-b:a", "96k", dest])
-        os.remove(tmp)
-        print(f"voix {i} ok")
+        media.run(["-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", full, "-af",
+                   "silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+                   "silenceremove=start_periods=1:start_threshold=-45dB,areverse",
+                   "-ac", "1", "-c:a", "libmp3lame", "-b:a", "96k", dest])
+        print(f"voix {i} : {media.duration(dest):.1f} s")
 
 
 def cmd_build(job, upload=True, keep=False):
@@ -171,6 +202,11 @@ def cmd_pc():
             with open(os.path.join(job, "build.log"), "a", encoding="utf-8") as f:
                 f.write(f"ERREUR : {e}\n")
             print("ERREUR :", e)
+        rp = os.path.join(job, "result.json")
+        if os.path.isfile(rp):
+            with open(rp, "r", encoding="utf-8") as f:
+                link = json.load(f).get("link")
+            print(f"\n>>> LIEN DE LA VIDEO : {link or 'envoi Gofile raté (voir build.log)'}\n")
         git("add", "-A", "--", os.path.join(rel, "result.json"), os.path.join(rel, "check"),
             os.path.join(rel, "build.log"))
         git("commit", "-q", "-m", f"News video built on PC: {os.path.basename(job)}")
@@ -218,7 +254,14 @@ def main(argv):
     c, rest = argv[0], argv[1:]
     flags = [a for a in rest if a.startswith("--")]
     args = [a for a in rest if not a.startswith("--")]
-    if c == "new":
+    if c == "today":
+        hrs = 48
+        if "--hours" in rest:
+            k = rest.index("--hours")
+            hrs = int(rest[k + 1])
+            args = [a for a in args if a != rest[k + 1]]
+        cmd_today(args[0] if args else "mma_en", hrs)
+    elif c == "new":
         cmd_new(args[0], " ".join(args[1:]))
     elif c == "add":
         cmd_add(job_path(args[0]), args[1:])

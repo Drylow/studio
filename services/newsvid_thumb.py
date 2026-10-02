@@ -20,6 +20,8 @@ from services import ai
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT = os.path.join(REPO, "static", "fonts", "Anton-Regular.ttf")
 TW, TH = 1280, 720
+# variantes proposées (couleur du trait et des mots mis en avant) ; A = choisie par défaut
+VARIANTS = (("A", "accent2"), ("D", "accent2"), ("E", "accent2"), ("F", "accent"))
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                     "Chrome/128.0 Safari/537.36"}
 
@@ -29,14 +31,68 @@ def _get(url, timeout=20):
 
 
 def bing_images(query, n=12):
-    """URLs d'images (Bing, sans clé)."""
+    """Images (Bing, sans clé) : [{"url", "title", "page"}]."""
+    import html as H
     try:
-        html = _get("https://www.bing.com/images/async?q=" + urllib.parse.quote(query) +
+        page = _get("https://www.bing.com/images/async?q=" + urllib.parse.quote(query) +
                     "&first=0&count=35&mmasync=1").decode("utf-8", "replace")
     except Exception:  # noqa: BLE001
         return []
-    urls = re.findall(r'murl&quot;:&quot;(.*?)&quot;', html)
-    return [u for u in dict.fromkeys(urls) if u.lower().split("?")[0].endswith((".jpg", ".jpeg", ".png", ".webp"))][:n]
+    out, seen = [], set()
+    for raw in re.findall(r'\bm="(\{[^"]*\})"', page):
+        try:
+            m = json.loads(H.unescape(raw))
+        except ValueError:
+            continue
+        u = m.get("murl") or ""
+        if u in seen or not u.lower().split("?")[0].endswith((".jpg", ".jpeg", ".png", ".webp")):
+            continue
+        seen.add(u)
+        out.append({"url": u, "title": m.get("t") or "", "page": m.get("purl") or ""})
+    return out[:n]
+
+
+def names_ok(who, text, others):
+    """Qui est sur la photo ? On ne reconnaît JAMAIS un visage : seul le texte de l'image (adresse, titre,
+    page) compte. Gardée si le nom de famille y est, et qu'aucune autre personne de l'histoire n'y est
+    (« Gaethje vs Holloway » : impossible de savoir lequel des deux est au premier plan)."""
+    t = re.sub(r"[^a-z]+", " ", (text or "").lower())
+    last = who.lower().split()[-1]
+    if f" {last} " not in f" {t} ":
+        return False
+    for o in others:
+        for part in o.lower().split():
+            if len(part) > 3 and part not in who.lower().split() and f" {part} " in f" {t} ":
+                return False
+    if re.search(r"\b(vs|v)\b", t) or re.search(r"alamy|gettyimages|shutterstock|dreamstime|istockphoto|depositphotos",
+                                                 (text or "").lower()):
+        return False
+    return not other_person(who, text)
+
+
+_NOT_NAMES = {"ufc", "mma", "white", "house", "freedom", "hall", "fame", "getty", "images", "las", "vegas", "news",
+              "fight", "night", "press", "conference", "champion", "title", "lightweight", "featherweight", "results",
+              "highlights", "watch", "the", "and", "after", "before", "with", "his", "her", "new", "york", "post",
+              "sports", "live", "video", "photo", "photos", "stock", "picture", "pictures", "octagon", "main", "event",
+              "weigh", "ins", "card", "world", "championship", "media", "day", "open", "workouts", "official", "fan",
+              "fans", "spanish", "spain", "georgia", "georgian", "america", "american", "united", "states", "trump",
+              "donald", "dana", "lincoln", "memorial"}
+
+
+def other_person(who, text):
+    """Vrai si le titre de l'image nomme une AUTRE personne (« Gaethje KOs Dustin Poirier »)."""
+    mine = {w.lower() for w in who.split()}
+    for m in re.finditer(r"\b([A-Z][a-z'’]+)\s+([A-Z][a-z'’]+)\b", text or ""):
+        a, b = m.group(1).lower(), m.group(2).lower()
+        if a in mine or b in mine or a in _NOT_NAMES or b in _NOT_NAMES:
+            continue
+        return True
+    for m in re.finditer(r"\b(?:KOs?|ko's|knocks? out|beats?|defeats?|stops?|against|faces?|versus|with|over)\s+"
+                         r"([A-Z][a-z'’]+)", text or ""):
+        w = m.group(1).lower()
+        if w not in mine and w not in _NOT_NAMES:
+            return True
+    return False
 
 
 def yt_thumb(video_id):
@@ -53,9 +109,10 @@ def yt_thumb(video_id):
 def _load(blob):
     from PIL import Image
     try:
+        from PIL import ImageOps
         im = Image.open(io.BytesIO(blob))
         im.load()
-        return im.convert("RGB")
+        return ImageOps.exif_transpose(im).convert("RGB")  # photos de téléphone : orientation EXIF
     except Exception:  # noqa: BLE001
         return None
 
@@ -67,17 +124,26 @@ def rate(im, who):
     buf = io.BytesIO()
     small.save(buf, "JPEG", quality=85)
     prompt = (f"This photo is meant to show {who} for a sports news YouTube thumbnail. Answer about the image only. "
-              "Is there ONE main person, clearly visible, face large enough and sharp (not tiny, not blurry, not cut "
-              "off), with NO big text, logo overlay, watermark (Getty, Alamy, Shutterstock…), collage or split screen? "
-              "Give the face box of that main person as fractions of the width/height. Score 1-10 for a dramatic, "
-              "expressive thumbnail photo (strong emotion, close framing, good light = high). Return JSON "
-              '{"ok": true|false, "score": n, "face": [x0, y0, x1, y1], "expression": "angry|smiling|serious|shocked|hurt|other"}')
+              "Find the MAIN person (the largest, sharpest face; other people may be in the image). Return JSON: "
+              '{"face": [x0, y0, x1, y1] (that face as fractions of width/height), '
+              '"people": how many people have a clearly visible face in the image, '
+              '"upright": false if the photo is upside down, sideways, or the main person is upside down, '
+              '"clear": true if that face is sharp, not cut off and at least 8% of the image height, '
+              '"watermark": true if a stock-agency watermark (Getty, Alamy, Shutterstock, AP…) is printed over the image, '
+              '"text": true if big text, a title or a logo is printed over the image (YouTube thumbnail, poster, collage), '
+              '"score": 1-10 for a dramatic, expressive thumbnail photo (strong emotion, close framing, good light), '
+              '"expression": "angry|smiling|serious|shocked|hurt|other"}')
     content = [{"type": "text", "text": prompt},
                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," +
                                                     base64.b64encode(buf.getvalue()).decode()}}]
-    try:
-        r = ai.chat_json([{"role": "user", "content": content}], model=ai.fast_model(), timeout=120)
-    except Exception:  # noqa: BLE001
+    r = None
+    for _ in range(3):
+        try:
+            r = ai.chat_json([{"role": "user", "content": content}], model=ai.fast_model(), timeout=120)
+            break
+        except Exception:  # noqa: BLE001  (IA saturée : on réessaie)
+            continue
+    if not r:
         return {"ok": False}
     f = r.get("face")
     if not (isinstance(f, list) and len(f) == 4):
@@ -86,6 +152,12 @@ def rate(im, who):
         r["face"] = [max(0.0, min(1.0, float(v))) for v in f]
     except (TypeError, ValueError):
         return {"ok": False}
+    try:  # une seule personne : avec deux combattants, rien ne dit lequel est au premier plan
+        alone = int(r.get("people") or 0) == 1
+    except (TypeError, ValueError):
+        alone = False
+    r["ok"] = alone and r.get("upright", True) is not False and bool(r.get("clear")) and not r.get("watermark") and not r.get("text") and \
+        r["face"][2] > r["face"][0] and r["face"][3] > r["face"][1]
     return r
 
 
@@ -98,11 +170,14 @@ def candidates(job_dir, plan, who, log=print):
         b = yt_thumb(v)
         if b:
             blobs.append(("yt:" + v, b))
-    for u in bing_images(f"{who} UFC", 10) + bing_images(f"{who} face off", 6):
+    others = set(plan.get("people_all") or [])
+    for x in bing_images(f"{who} UFC", 25) + bing_images(f"{who}", 20):
+        if not names_ok(who, " ".join((x["url"], x["title"], x["page"])), others - {who}):
+            continue
         try:
-            b = _get(u, 15)
+            b = _get(x["url"], 15)
             if len(b) > 20000:
-                blobs.append((u, b))
+                blobs.append((x["url"], b))
         except Exception:  # noqa: BLE001
             continue
     ims = [(src, _load(b)) for src, b in blobs]
@@ -116,6 +191,31 @@ def candidates(job_dir, plan, who, log=print):
     good.sort(key=lambda x: -float(x[2].get("score") or 0))
     log(f"{who} : {len(good)}/{len(rated)} photos utilisables")
     return good
+
+
+def cached_candidates(job_dir, plan, who, log=print):
+    """Photos retenues gardées dans <dossier>/photos/ (refaire une miniature ne relance ni recherche ni vision)."""
+    from PIL import Image
+    d = os.path.join(job_dir, "photos")
+    idx = os.path.join(d, "photos.json")
+    cache = {}
+    if os.path.isfile(idx):
+        with open(idx, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+    if cache.get(who):
+        return [(x["src"], Image.open(os.path.join(d, x["file"])).convert("RGB"), x["rate"]) for x in cache[who]]
+    good = candidates(job_dir, plan, who, log)
+    os.makedirs(d, exist_ok=True)
+    rows = []
+    for k, (src, im, r) in enumerate(good[:4]):
+        fn = f"{re.sub(r'[^a-z0-9]+', '_', who.lower())}_{k}.jpg"
+        im.save(os.path.join(d, fn), quality=92)
+        rows.append({"src": src, "file": fn, "rate": r})
+    if rows:
+        cache[who] = rows
+        with open(idx, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=1)
+    return [(x["src"], Image.open(os.path.join(d, x["file"])).convert("RGB"), x["rate"]) for x in rows]
 
 
 def crop_face(im, face, w, h, zoom=2.6, top=0.32):
@@ -175,9 +275,78 @@ def _text_block(canvas, text, highlight, accent, y_bottom, max_w):
         y += lh
 
 
-def compose(left, right, text, highlight, accent, inset=None, variant="A"):
-    """A = deux photos face à face ; B = deux photos + photo encadrée au centre ; C = un seul visage géant."""
-    from PIL import Image, ImageDraw, ImageFilter
+def _split(canvas, left, right, accent, zigzag=False):
+    """Deux photos face à face, séparées par un trait penché (ou un éclair en zigzag) à la couleur de la chaîne."""
+    from PIL import Image, ImageDraw
+    half = TW // 2 + 60
+    a = _grade(crop_face(left[0], left[1], half, TH))
+    b = _grade(crop_face(right[0], right[1], half, TH))
+    canvas.paste(a, (0, 0))
+    if zigzag:
+        xs = [TW // 2 + 50, TW // 2 - 30, TW // 2 + 40, TW // 2 - 40, TW // 2 + 30, TW // 2 - 50]
+        pts = [(xs[k], k * TH / (len(xs) - 1)) for k in range(len(xs))]
+    else:
+        pts = [(TW // 2 + 40, 0), (TW // 2 - 40, TH)]
+    mask = Image.new("L", (TW, TH), 0)
+    ImageDraw.Draw(mask).polygon(pts + [(TW, TH), (TW, 0)], fill=255)
+    layer = Image.new("RGB", (TW, TH))
+    layer.paste(b, (TW - half, 0))
+    canvas = Image.composite(layer, canvas, mask)
+    d = ImageDraw.Draw(canvas)
+    d.line(pts, fill=(0, 0, 0), width=22, joint="curve")
+    d.line(pts, fill=accent, width=12, joint="curve")
+    return canvas
+
+
+def _ring_inset(canvas, inset, ring=(255, 210, 31)):
+    """Signature « cible » : la photo du combat dans un rond, gros anneau jaune et contour noir."""
+    from PIL import Image, ImageDraw
+    r = 150
+    cx, cy = TW // 2, 40 + r
+    im = _grade(crop_face(inset[0], inset[1], 2 * r, 2 * r, zoom=2.0))
+    m = Image.new("L", (2 * r, 2 * r), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, 2 * r - 1, 2 * r - 1), fill=255)
+    d = ImageDraw.Draw(canvas)
+    d.ellipse((cx - r - 20, cy - r - 20, cx + r + 20, cy + r + 20), fill=(0, 0, 0))
+    d.ellipse((cx - r - 14, cy - r - 14, cx + r + 14, cy + r + 14), fill=ring)
+    canvas.paste(im, (cx - r, cy - r), m)
+    return canvas
+
+
+def _tape(canvas, brand, color=(255, 210, 31)):
+    """Signature « ruban » : bande jaune penchée en haut à gauche avec le nom de la chaîne."""
+    from PIL import Image, ImageDraw, ImageFont
+    band = Image.new("RGBA", (900, 92), color + (255,))
+    d = ImageDraw.Draw(band)
+    f = ImageFont.truetype(FONT, 58)
+    word = (brand or "NEWS").upper() + "  •  "
+    x = 0
+    while x < band.width:
+        d.text((x, 10), word, font=f, fill=(0, 0, 0))
+        x += d.textlength(word, font=f)
+    d.rectangle((0, 0, band.width - 1, 6), fill=(0, 0, 0))
+    d.rectangle((0, band.height - 7, band.width - 1, band.height - 1), fill=(0, 0, 0))
+    band = band.rotate(17, expand=True, resample=Image.BICUBIC)
+    canvas = canvas.convert("RGBA")
+    canvas.alpha_composite(band, (-170, -60))
+    return canvas.convert("RGB")
+
+
+def compose(left, right, text, highlight, accent, inset=None, variant="A", brand=""):
+    """A = deux photos face à face ; B = + photo encadrée (façon concurrent) ; C = un seul visage géant ;
+    D = + photo du combat dans un rond jaune (notre signature) ; E = ruban jaune avec le nom de la chaîne ;
+    F = séparation en éclair + rond jaune."""
+    if variant in ("D", "E", "F"):
+        from PIL import Image
+        canvas = _split(Image.new("RGB", (TW, TH), (8, 8, 10)), left, right, accent, zigzag=variant == "F")
+        canvas = _finish(canvas, accent)
+        if variant in ("D", "F") and inset is not None:
+            canvas = _ring_inset(canvas, inset)
+        if variant == "E":
+            canvas = _tape(canvas, brand)
+        _text_block(canvas, text, highlight, accent, TH - 26, TW - 90)
+        return canvas
+    from PIL import Image, ImageDraw
     canvas = Image.new("RGB", (TW, TH), (8, 8, 10))
     if variant == "C":
         canvas.paste(_grade(crop_face(left[0], left[1], TW, TH, zoom=1.9, top=0.28)), (0, 0))
@@ -193,17 +362,7 @@ def compose(left, right, text, highlight, accent, inset=None, variant="A"):
         canvas = Image.composite(layer, canvas, mask)
         d = ImageDraw.Draw(canvas)
         d.line([(TW // 2 + 40, 0), (TW // 2 - 40, TH)], fill=accent, width=10)
-    # ombre en bas pour la citation
-    grad = Image.new("L", (1, TH))
-    for y in range(TH):
-        grad.putpixel((0, y), int(255 * max(0.0, (y - TH * 0.38) / (TH * 0.62)) ** 1.3))
-    shade = Image.new("RGB", (TW, TH), (0, 0, 0))
-    canvas = Image.composite(shade, canvas, grad.resize((TW, TH)).point(lambda v: int(v * 0.88)))
-    # liseré rouge sur les bords (lueur)
-    glow = Image.new("L", (TW, TH), 0)
-    ImageDraw.Draw(glow).rectangle((0, 0, TW - 1, TH - 1), outline=255, width=26)
-    glow = glow.filter(ImageFilter.GaussianBlur(18))
-    canvas = Image.composite(Image.new("RGB", (TW, TH), accent), canvas, glow.point(lambda v: int(v * 0.6)))
+    canvas = _finish(canvas, accent)
     if variant == "B" and inset is not None:
         iw, ih = 360, 250
         im = _grade(crop_face(inset[0], inset[1], iw, ih, zoom=2.2))
@@ -213,6 +372,21 @@ def compose(left, right, text, highlight, accent, inset=None, variant="A"):
         canvas.paste(im, (x0, y0))
     _text_block(canvas, text, highlight, accent, TH - 26, TW - 90)
     return canvas
+
+
+def _finish(canvas, accent):
+    """Ombre en bas (lisibilité de la citation) + lueur de la couleur de la chaîne sur les bords."""
+    from PIL import Image, ImageDraw, ImageFilter
+    grad = Image.new("L", (1, TH))
+    for y in range(TH):
+        grad.putpixel((0, y), int(255 * max(0.0, (y - TH * 0.38) / (TH * 0.62)) ** 1.3))
+    shade = Image.new("RGB", (TW, TH), (0, 0, 0))
+    canvas = Image.composite(shade, canvas, grad.resize((TW, TH)).point(lambda v: int(v * 0.88)))
+    # liseré rouge sur les bords (lueur)
+    glow = Image.new("L", (TW, TH), 0)
+    ImageDraw.Draw(glow).rectangle((0, 0, TW - 1, TH - 1), outline=255, width=26)
+    glow = glow.filter(ImageFilter.GaussianBlur(18))
+    return Image.composite(Image.new("RGB", (TW, TH), accent), canvas, glow.point(lambda v: int(v * 0.6)))
 
 
 def make(job_dir, log=print):
@@ -225,7 +399,10 @@ def make(job_dir, log=print):
         raise RuntimeError("thumb.people : il faut deux personnes")
     accent = tuple(int((plan.get("accent2") or "#FFD21F").lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
     red = tuple(int((plan.get("accent") or "#E10600").lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
-    pics = {p: candidates(job_dir, plan, p, log) for p in people}
+    names = set(people) | {s.get("speaker") for s in plan["segments"] if s.get("speaker")} | \
+        {v for v in (plan.get("spelling") or {}).values() if len(v.split()) >= 2}
+    plan = dict(plan, people_all=sorted(n for n in names if n))
+    pics = {p: cached_candidates(job_dir, plan, p, log) for p in people}
     for p in people:
         if not pics[p]:
             raise RuntimeError(f"aucune photo utilisable de {p}")
@@ -234,14 +411,15 @@ def make(job_dir, log=print):
     inset = (B[1][1], B[1][2]["face"]) if len(B) > 1 else (A[1][1], A[1][2]["face"]) if len(A) > 1 else None
     text, hl = th.get("text") or "", th.get("highlight") or ""
     out = []
-    for v, col in (("A", accent), ("B", red), ("C", accent)):
-        im = compose(left, right, text, hl, col, inset=inset, variant=v)
+    for v, col in VARIANTS:
+        col = accent if col == "accent2" else red
+        im = compose(left, right, text, hl, col, inset=inset, variant=v, brand=plan.get("brand") or "")
         path = os.path.join(job_dir, f"thumb_{v}.jpg")
         im.save(path, quality=90)
         out.append(path)
-    sheet = Image.new("RGB", (TW * 3 // 2 + 20, TH // 2), (255, 255, 255))
-    for k, p in enumerate(out):
-        sheet.paste(Image.open(p).resize((TW // 2, TH // 2)), (k * (TW // 2 + 10), 0))
+    sheet = Image.new("RGB", (TW + 10, TH + 10), (255, 255, 255))
+    for k, p in enumerate(out[:4]):
+        sheet.paste(Image.open(p).resize((TW // 2, TH // 2)), ((k % 2) * (TW // 2 + 10), (k // 2) * (TH // 2 + 10)))
     sheet.save(os.path.join(job_dir, "thumbs.jpg"), quality=85)
     log("miniatures :", ", ".join(os.path.basename(p) for p in out))
     return out
