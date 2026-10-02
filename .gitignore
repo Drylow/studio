@@ -51,3 +51,5 @@ work/
 
 # History Docs : dépendances Node du moteur Remotion (npm install au 1er lancement)
 history_engine/node_modules/
+news/**/sources/
+news/**/narration/*.tmp.mp3
