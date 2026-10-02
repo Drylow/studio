@@ -282,7 +282,8 @@ def period_brief(title, script_text):
               "period: ONE sentence, max 70 words: exact years and place, then how people look: the uniforms of each "
               "side (colours, headgear, weapons), civilian clothes, buildings and vehicles of that time and place.\n"
               "avoid: ONE line listing the look-alike eras an image model tends to confuse with this one (for example "
-              "British redcoats, Napoleonic shakos, Roman armour, medieval knights, World War helmets), plus modern objects.\n"
+              "British redcoats, Napoleonic shakos, Roman armour, medieval knights, World War helmets), plus symbols that "
+              "did not exist yet (for example a red cross emblem before 1864) and modern objects.\n"
               "Return JSON only: {\"period\": \"...\", \"avoid\": \"...\"}\n\nNARRATION (excerpt):\n"
               + (script_text or "")[:6000])
     data = ai.chat_json(prompt, model=ai.fast_model(), timeout=180, tries=3)
