@@ -2,6 +2,10 @@
 
 Faits vérifiés et règles données au script.
 
+# Recherche et consignes — Your Life as a Stolen Car
+
+Faits vérifiés et règles données au script.
+
 VERIFIED FACTS for this video (use them, rounded; name the source lightly inside the sentence for big facts; do not invent other statistics or sources):
 - Canada's private insurers paid more than $1.5 billion in auto theft claims in 2023, about triple the $556 million a year of 2021 (Insurance Bureau of Canada). Ontario was the first province to pass $1 billion in theft claims; its theft claim costs rose 524% from 2018 to 2023.
 - Many modern SUVs are stolen with a "relay attack": a device fools the car into thinking its own keyless fob is nearby, so it unlocks and starts (Equite Association). Describe it only at that level, never how to do it.

@@ -76,7 +76,7 @@ $('#voice').onchange = onMinutes;
 $('#create').onclick = async e => {
   const title = $('#title').value.trim();
   if (title.length < 4) { toast('Écris le titre de la vidéo.', 'err'); $('#title').focus(); return; }
-  const [provider, voice] = ($('#voice').value || 'algrow|').split('|');
+  const [provider, voice] = ($('#voice').value || 'ai33|').split('|');
   busy(e.currentTarget, true, 'Lancement…');
   const r = await guard(() => api('POST', '/projects', {
     title, minutes: Number($('#minutes').value), notes: $('#notes').value.trim(), voice: {provider, voice},
@@ -204,7 +204,7 @@ async function refreshModal() {
     if (!S.cfg.ai) warn.push('proxy IA non configuré (.env)');
     if (!S.cfg.node) warn.push('Node.js manquant (rendu Remotion) : installe-le depuis nodejs.org');
     else if (!S.cfg.engine_deps) warn.push('moteur d\'animation : les dépendances s\'installeront au 1er rendu');
-    if (!S.cfg.tts.algrow) warn.push('ALGROW_API_KEY absente : choisis une voix Edge');
+    if (!S.cfg.tts.ai33 && !S.cfg.tts.algrow) warn.push('AI33_API_KEY absente : choisis une voix Edge');
     $('#envHint').innerHTML = warn.length ? `⚠ ${esc(warn.join(' · '))}` : '✔ Prêt : IA, voix, ffmpeg et moteur d\'animation.';
     $('#topInfo').innerHTML = `<span class="pill ${S.cfg.ai ? 'ok' : 'err'}">IA</span><span class="pill ${S.cfg.node ? 'ok' : 'err'}">Remotion</span>`
       + `<span class="pill ${S.cfg.ffmpeg ? 'ok' : 'err'}">ffmpeg</span>`;

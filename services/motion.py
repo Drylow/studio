@@ -1135,7 +1135,8 @@ class Route(Fx):
         self.p0 = (190 * k, 250 * k)
         self.p1 = (self.w - 200 * k, 250 * k)
         self.ctl = ((self.p0[0] + self.p1[0]) / 2, 40 * k)
-        self.lsize = min(fit_size(self.a, 900, 46 * k, 400 * k), fit_size(self.b, 900, 46 * k, 400 * k))
+        # chaque nom a sa moitié de carte (noms longs : « CENTRAL NEW JERSEY », « PENNSYLVANIA »)
+        self.lsize = min(fit_size(self.a, 900, 46 * k, 470 * k), fit_size(self.b, 900, 46 * k, 470 * k))
         self.sfx = [(0.0, "pop", 0.6), (0.3, "whoosh", 0.7), (1.2, "ding", 0.7)]
 
     def _pt(self, u):
@@ -1177,9 +1178,14 @@ class Route(Fx):
                    (hx + math.cos(ang - 2.5) * 18 * k, hy + math.sin(ang - 2.5) * 18 * k)]
             p.d.polygon([(x_ * SS, y_ * SS) for x_, y_ in pts], fill=YELLOW, outline=INK, width=int(4 * k * SS))
         ly = self.p0[1] + 62 * k
-        p.text((self.p0[0], ly), self.a, 900, self.lsize, anchor="mm")
+        lo, hi = m + 30 * k, self.w - 56 * k
+
+        def cx(x, s):  # nom centré sous son point, mais jamais coupé par le bord de la carte
+            half = p.tw(s, 900, self.lsize) / 2
+            return min(max(x, lo + half), hi - half)
+        p.text((cx(self.p0[0], self.a), ly), self.a, 900, self.lsize, anchor="mm")
         if arrive > 0:
-            p.text((self.p1[0], ly), self.b, 900, self.lsize, fill=RED, anchor="mm")
+            p.text((cx(self.p1[0], self.b), ly), self.b, 900, self.lsize, fill=RED, anchor="mm")
         if self.sub and t >= 1.2:
             p.text(((self.w - 10 * k) / 2, ly + 66 * k), self.sub, 800,
                    fit_size(self.sub, 800, 34 * k, self.w - 160 * k), fill=GREY, anchor="mm")

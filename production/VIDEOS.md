@@ -18,12 +18,13 @@ Idée suivante déjà discutée : la prison (mise de côté).
 | Vidéo | État | Miniature |
 |---|---|---|
 | Your Life as a Stolen Phone | **livrée** (vérifiée, Discord) — https://gofile.io/d/FWMQaSSh | D « STOLEN » (main gantée qui arrache le téléphone) |
-| Your Life as a Stolen Car | **livrée** (vérifiée, Discord) — https://gofile.io/d/W3RbTNvA | « STOLEN » clé de voiture |
-| Your Life as a Stolen Credit Card | **livrée** (corrigée : mot coupé à 8:36, logo Mastercard à 12:52 ; vérifiée, Discord) — https://gofile.io/d/6Qj38smK | « STOLEN » carte bleue |
+| Your Life as a Stolen Car | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** (nouveau prompting : objet sans visage) — https://gofile.io/d/8Yh99Wbi (l'ancienne W3RbTNvA est KO : ne pas poster) | « STOLEN » clé de voiture ; 6 variantes renvoyées sur Discord le 2 oct. (SHIPPED, GONE…) |
+| Your Life as a Stolen Credit Card | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** — https://gofile.io/d/cStfBfSJ (l'ancienne 6Qj38smK est KO : ne pas poster) | « STOLEN » carte bleue ; 6 variantes renvoyées sur Discord le 2 oct. (CLONED, DRAINED…) |
+| Your Life as a Stolen Bike | **vérifiée image par image (3 rendus, 52 images refaites : vrai expert retiré, vendeur en homme, vélo jamais entier dans les cartons…), envoyée sur Discord le 2 oct.** — https://gofile.io/d/A2tC0UxR | 7 variantes jointes au paquet (recommandée : FOR SALE), choix à l'utilisateur |
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)
-Idées suivantes : Amazon return, catalytic converter, diamond, donated T-shirt, fake designer bag, $100 bill…
+Idées suivantes : Amazon return, diamond, donated T-shirt, fake designer bag, $100 bill…
 
 ## Oddly Specific Lives (`oddly_specific_en`)
 
@@ -35,3 +36,17 @@ Idées suivantes : Amazon return, catalytic converter, diamond, donated T-shirt,
 | POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
+
+## The Survivor's Account (History Docs, `survivors_account`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks | **livrée** (vérifiée plan par plan, Discord, 2 oct.) — https://gofile.io/d/XXlkFSbS ; 36 min, voix Earl, rendu RunPod (~2 $) ; miniature « SHE SAW EVERYTHING » | à caler |
+| Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | en production (`work/sa/gettysburg_v2`) ; 3 miniatures façon Dose of History | — |
+| The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | script relu (`chaines/the-survivors-account/videos/02-pompeii-pliny/`), en production (`work/sa/pompeii`) | — |
+
+## Frontier Blood (History Docs, `frontier_blood`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | en production (`work/fb/adobe_walls`), style peinture d'histoire ; titre « Hundreds » (700 n'est qu'une estimation) | — |

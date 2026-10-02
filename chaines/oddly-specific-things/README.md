@@ -28,6 +28,11 @@
   - Une main en moufle blanche (manche verte) tient l'objet (sans visage pour les nouvelles vidéos), une main gantée noire l'arrache.
   - Des traits jaunes de choc.
   - Un énorme mot noir arrondi en haut : **STOLEN**.
+  - **Varier l'action d'une vidéo à l'autre** (sinon c'est répétitif) : même style, mais une scène différente
+    à chaque fois (objet arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé
+    resté seul, mis en carton, tir à la corde, grue + conteneur…), **et le mot du haut aussi** : un mot-clé de
+    l'histoire au lieu de STOLEN à chaque fois (SNATCHED, SOLD, PRECIOUS, GONE, SHIPPED, FOR SALE, CLONED, DRAINED…).
+    Toujours 3-4 variantes en planche au choix.
 
 ## Règles
 
@@ -44,21 +49,22 @@ Voir [videos/](videos/README.md).
 | Vidéo | État |
 |---|---|
 | Your Life as a Stolen Phone | livrée (vérifiée) |
-| Your Life as a Stolen Car | livrée (vérifiée) |
-| Your Life as a Stolen Credit Card | livrée (corrigée : un texte coupé et un logo sur une image) |
+| Your Life as a Stolen Car | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
+| Your Life as a Stolen Credit Card | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
+| Your Life as a Stolen Bike | vérifiée, livrée le 2 oct. |
 
 ## Idées de vidéos
 
 Le format n'existait pas dans la niche 2D : aucune vidéo « your life as a stolen phone » trouvée. L'idée de base est de continuer avec des objets qui voyagent loin ou qui changent beaucoup de valeur.
 
 - Your Life as an Amazon Return
-- Your Life as a Stolen Catalytic Converter
 - Your Life as a Fake Designer Bag
 - Your Life as a Counterfeit $100 Bill
 - Your Life as a Donated T-Shirt (le tri, les ballots, le marché au Ghana ou au Kenya)
 - Your Life as a Stolen Painting
 - Your Life as a Diamond
-- Your Life as a Stolen Bike
 - Your Life as a Recycled Phone
+
+Idée écartée par l'utilisateur (2 oct.) : le pot catalytique (Stolen Catalytic Converter), ne plus la proposer.
 
 Le nom de la chaîne a été choisi pour ne pas se limiter aux objets volés.

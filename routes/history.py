@@ -17,6 +17,10 @@ from services import pov_store as store
 history_bp = Blueprint("history", __name__)
 
 VOICES = [
+    {"provider": "ai33", "voice": "VsVIOTkd9zjLUVaQO9TA", "speed": 0.9, "name": "Earl — conteur US grave (ElevenLabs via ai33pro)"},
+    {"provider": "ai33", "voice": "VMCgCMbBs53ElBxVD4VB", "speed": 0.9, "name": "Steven — documentaire grave (ElevenLabs via ai33pro)"},
+    {"provider": "ai33", "voice": "t0eCaS57KWbQQc1wRkah", "speed": 0.9, "name": "Russ — narrateur US profond (ElevenLabs via ai33pro)"},
+    {"provider": "ai33", "voice": "JBFqnCBsd6RMkjVDRZzb", "speed": 0.9, "name": "George — conteur britannique (ElevenLabs via ai33pro)"},
     {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "name": "Timothy — narrateur US grave (Algrow)"},
     {"provider": "algrow", "voice": "642gSURPsKb4OdCDpkPc", "name": "Elliott — narrateur britannique (Algrow)"},
     {"provider": "algrow", "voice": "vLZJLcQMJCqxjrHGEVDO", "name": "Connery — documentaire profond (Algrow)"},
@@ -79,7 +83,9 @@ def projects():
     pr = H.new_project(title, minutes, (b.get("notes") or "").strip(), opts)
     v = b.get("voice") or {}
     if v.get("provider") in tts.PROVIDERS:
-        pr["voice_settings"] = {"provider": v["provider"], "voice": v.get("voice", ""), "speed": float(v.get("speed") or 1.0)}
+        known = next((x for x in VOICES if x["provider"] == v["provider"] and x["voice"] == v.get("voice")), {})
+        pr["voice_settings"] = {"provider": v["provider"], "voice": v.get("voice", ""),
+                                "speed": float(v.get("speed") or known.get("speed") or 1.0)}
         H.save_project(pr)
     store.start_job(pr["id"], "autopilot", lambda j: H.job_autopilot(j, pr["id"]))
     return jsonify(H.summary(H.get_project(pr["id"])))

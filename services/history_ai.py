@@ -108,7 +108,15 @@ _SHOT_GUIDE = """IMAGE PROMPTS — write them like a cinematographer's shot list
   camp life, weather, aftermath. Never two similar shots in a row; avoid the cliché of two warriors side by side.
 - At least HALF of the shots have no named character at all (places, objects, crowds, armies from afar, details).
 - At most ONE named cast member per shot; keep the head fully in frame (never crop at the forehead).
-- Era-accurate everything (armour, weapons, hairstyles, architecture). No text, no modern objects."""
+- Era-accurate everything (armour, weapons, hairstyles, architecture). No text, no modern objects.
+- GAZE: whenever a person is the subject, say where they look. About half of the people shots face the camera (eyes
+  straight to the lens, or a three-quarter front view toward the viewer); the others look at something inside the
+  scene. Never everyone in profile, never everyone toward the same side of the frame.
+- DOCUMENTARY REALISM: show only what a photographer standing there could really have taken. Every object at its real
+  size (an artillery shell is the size of a loaf of bread, a bullet the size of a fingertip, a letter fits in a hand),
+  real physics, the real architecture and landscape of that place (a small 1860s American town has brick and wooden
+  houses and plain churches, never a European Gothic cathedral or castle). No giant objects, no surreal or symbolic
+  compositions, no visual metaphors, no impossible camera positions."""
 
 
 def _plan_rules(allowed, max_cards):
@@ -182,6 +190,11 @@ its narration. Rules:
 - At most ONE named character per shot (cast: {names}). Never "two warriors side by side looking the same way".
 - Vary time of day, light and colour mood across the list.
 - Each prompt: one sentence, shot type + lens, subject and action, setting with foreground/background, light.
+  Never write the image style name in a prompt (the style is added later).
+- Gaze: about half of the shots with a person have them facing the camera (eyes to the lens or three-quarter front
+  view); the others look at something in the scene. Never all in profile, never all toward the same side.
+- Documentary realism: every object at its real size, real physics, the real architecture and landscape of the place;
+  no giant objects, no surreal or symbolic compositions, no impossible camera positions.
 - Keep chars = the named cast member actually visible (0 or 1 name from the cast).
 
 Shots:
@@ -213,7 +226,7 @@ STYLE = ("Ultra-realistic cinematic film still from a high-budget historical epi
          "foreground, subject and background layers; the subject's whole head in frame with headroom. Photographic, not "
          "painterly, no CGI look. One single photograph: no collage, no split screen, no panels, no borders. "
          "No text, no logos, no watermark.")
-PORTRAIT = ("Ultra-realistic cinematic portrait from a high-budget historical epic, chest-up, looking slightly off camera, "
+PORTRAIT = ("Ultra-realistic cinematic portrait from a high-budget historical epic, chest-up, facing the camera, eyes looking straight at the viewer, "
             "85mm lens, soft warm key light from the side with a gentle rim light, dark smoky background, crisp skin "
             "texture, era-accurate costume. Photographic, not painterly. No text.")
 # Styles d'image proposés (le thème des cartes suit : « illustrated » = parchemin, « cinematic » = sombre)
@@ -224,7 +237,7 @@ IMAGE_STYLES = {
                      "paper with visible grain, like a premium illustrated history book. Expressive faces, era-accurate "
                      "details, clear composition with depth; whole heads in frame. One single image: no collage, no panels, "
                      "no border, no text, no signature."),
-            "portrait": ("Hand-drawn ink and watercolour portrait, chest-up, looking slightly off camera, confident ink "
+            "portrait": ("Hand-drawn ink and watercolour portrait, chest-up, facing the camera, eyes looking straight at the viewer, confident ink "
                          "linework and cross-hatching, muted earthy washes, plain warm paper background. No text.")},
     "bd": {"name": "BD — ligne claire", "theme": "illustrated",
            "shot": ("Graphic-novel illustration in the European ligne-claire tradition: bold clean ink outlines, flat "
@@ -241,7 +254,7 @@ IMAGE_STYLES = {
                            "No text.")},
     "cinematic": {"name": "Cinéma — photoréaliste", "theme": "cinematic", "shot": STYLE, "portrait": PORTRAIT},
 }
-DEFAULT_STYLE = "ink"
+DEFAULT_STYLE = "paint"
 
 
 def image_style(name):
@@ -272,6 +285,78 @@ def pick_archive(candidates, beat):
         return i if 0 <= i < len(candidates) else -1
     except Exception:  # noqa: BLE001 — pas de vérification possible : on préfère l'image IA
         return -1
+
+
+def period_brief(title, script_text):
+    """L'époque exacte de la vidéo pour les images : sans elle, le modèle d'image mélange les guerres (tuniques
+    rouges, shakos napoléoniens, légionnaires, casques de 1940 à Gettysburg). → {"period", "avoid"}."""
+    prompt = (f"A history documentary titled \"{title}\" will be illustrated shot by shot. From the narration below, "
+              "write the visual period anchor that every image prompt will start with.\n"
+              "period: ONE sentence, max 90 words: exact years and place, then how people look: the uniforms of each "
+              "side (colours, headgear, weapons), civilian clothes, the architecture and landscape of that exact place "
+              "(for example a small 1860s Pennsylvania town: brick and wooden houses, plain churches with modest "
+              "steeples, farm fields and fences), vehicles of that time.\n"
+              "avoid: ONE line listing the look-alike eras an image model tends to confuse with this one (for example "
+              "British redcoats, Napoleonic shakos, Roman armour, medieval knights, World War helmets), plus symbols that "
+              "did not exist yet (for example a red cross emblem before 1864), architecture from other countries (for "
+              "example European Gothic cathedrals or castles in an American town) and modern objects.\n"
+              "Return JSON only: {\"period\": \"...\", \"avoid\": \"...\"}\n\nNARRATION (excerpt):\n"
+              + (script_text or "")[:6000])
+    data = ai.chat_json(prompt, model=ai.fast_model(), timeout=180, tries=3)
+    return {"period": str(data.get("period") or "").strip(), "avoid": str(data.get("avoid") or "").strip()}
+
+
+SHOT_QA = """You check one illustration for a history documentary. Setting: {period}
+What the shot should show: {prompt}
+Return JSON only: {{"ok": true or false, "problems": ["short description of each problem"]}}.
+ok = false ONLY for clear, visible errors:
+- people, uniforms, headgear, flags, weapons, armour, clothes, buildings or vehicles from another era or place than the setting (watch for: {avoid});
+- a person with three arms or hands, two heads, or a melted, duplicated face;
+- readable words, letters or numbers;
+- gore in close-up (exposed organs, severed limbs shown in detail);
+- an absurd, goofy image: an object at an impossible size (a shell or bullet bigger than a person's head, a giant
+  coin or letter), impossible physics, a surreal or symbolic mash-up;
+- architecture or landscape from another country than the setting (for example a European Gothic cathedral or a
+  castle in an American town).
+Small stylistic liberties are fine."""
+
+
+def check_shot(path, period, prompt=""):
+    """Contrôle en vision d'une image de plan → (ok, [problèmes])."""
+    import base64
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((896, 896))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=86)
+    q = SHOT_QA.format(period=(period or {}).get("period", ""), avoid=(period or {}).get("avoid", ""),
+                       prompt=(prompt or "")[:500])
+    content = [{"type": "text", "text": q},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=240)
+    return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
+
+
+FACING_QA = """Look at this illustration. Is there a main person (or a group facing the same way) in it? If so, which way
+are they looking or facing, from the viewer's point of view: "left" (toward the left edge of the image), "right" (toward
+the right edge), or "camera" (toward the viewer)? Return JSON only: {"facing": "left" | "right" | "camera" | "none"}"""
+
+
+def shot_facing(path):
+    """Sens du regard du personnage principal d'un plan : left / right / camera / none."""
+    import base64
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((640, 640))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=82)
+    content = [{"type": "text", "text": FACING_QA},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.fast_model(), timeout=180)
+    f = str(res.get("facing") or "none").lower()
+    return f if f in ("left", "right", "camera", "none") else "none"
 
 
 def cast_look(cast, names):

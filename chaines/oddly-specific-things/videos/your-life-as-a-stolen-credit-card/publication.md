@@ -4,40 +4,40 @@
 
 1. Your Life as a Stolen Credit Card
 2. How Stolen Credit Cards Actually Work
-3. The Dark Side of Gas Pump Skimmers
+3. The Dark Secrets of Gas Pump Skimmers
 
 ## Description
 
-Your card is still in your wallet, but the useful version of it is already gone.
+A stolen credit card can still be in your wallet while the copy is already moving through a market.
 
-This follows a stolen credit card number from a gas pump on Route 1 in Edison, New Jersey, through the quiet chain that turns one morning payment into a copied file, a market listing, a one-dollar test charge, a cloned card, and fuel purchases across New Jersey and Pennsylvania.
+This follows one card number from a gas pump skimmer in Edison, New Jersey, into a batch of stolen data, a one-dollar test charge, a cloned magnetic stripe card, and fuel purchases across New Jersey and Pennsylvania. The plastic never leaves the wallet. The copy does all the damage.
 
 enjoyed this one? more oddly specific lives here: https://www.youtube.com/@OddlySpecificThingsYT?sub_confirmation=1
 
-The story covers gas pump skimmers, stolen card batches, checked card prices around $8 to $17, FTC credit card fraud reports, and the fuel fraud networks that turn card data into diesel and cash.
+The video covers how stolen credit card data gets sorted, priced, checked, cloned, and turned into charges the first owner never made. It also follows the quiet part left behind: the bank text, the normal wallet, and the card that still looks like it works.
 
-#StolenCreditCard #CreditCardFraud #TrueCrimeDocumentary
+#StolenCreditCard #TrueCrime #HiddenEconomy
 
 ## Chapitres
 
 00:00 Intro
-00:36 Hand 1: The owner
-01:29 Hand 2: The skimmer inside the pump
-02:33 Hand 3: The collector
-03:38 The card still behaves
-04:40 Hand 4: The card shop online
-05:46 Hand 5: The tester
-06:46 The 4 a.m. alert
-07:45 Hand 6: The cloner
-09:02 Hand 7: The diesel crew in New Jersey
-10:13 Into Pennsylvania
-11:29 Hand 8: The bank's fraud analyst
-12:36 The owner returns
+00:37 Hand 1: The owner
+01:35 Hand 2: The skimmer inside the pump
+02:40 Hand 3: The collector
+03:47 The card still behaves
+04:49 Hand 4: The card shop online
+06:03 Hand 5: The tester
+07:05 The 4 a.m. alert
+08:02 Hand 6: The cloner
+09:17 Hand 7: The diesel crew in New Jersey
+10:32 Into Pennsylvania
+11:50 Hand 8: The bank's fraud analyst
+13:06 The owner returns
 
 ## Tags
 
-Your Life as a Stolen Credit Card, stolen credit card, credit card fraud, gas pump skimmer, gas station skimmer, card skimming, cloned credit card, fuel fraud, diesel fraud, Edison New Jersey, Route 1 Edison, New Jersey Turnpike, Pennsylvania, hidden economy, true crime documentary, crime explainer, bank fraud, FTC credit card fraud, Nilson Report, stolen card data, stolen card market
+stolen credit card, credit card fraud, gas pump skimmer, card skimming, stolen card data, cloned credit card, magnetic stripe card, Edison New Jersey, New Jersey Turnpike, Pennsylvania, diesel fraud, hidden economy, true crime, fraud documentary, POV story, second person POV, what happens to stolen credit cards, credit card scam, bank fraud, financial crime
 
 ## Commentaire épinglé
 
-If your bank texted you at 4:03 a.m. about a $1 charge, would you wake up enough to answer it?
+If your card was still in your wallet, would you notice the one-dollar test charge in time?

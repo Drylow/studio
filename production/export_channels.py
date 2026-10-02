@@ -68,9 +68,11 @@ def export():
         cslug = SLUGS.get(ch.get("template"))
         if not cslug or not (pr.get("script") or "").strip():
             continue
+        wd = work.get(pid)
+        if wd and os.path.isfile(os.path.join(wd, "ABANDONED")):  # vidéo abandonnée par l'utilisateur
+            continue
         d = os.path.join(OUT, cslug, "videos", slug(pr["title"]))
         os.makedirs(d, exist_ok=True)
-        wd = work.get(pid)
         # script
         open(os.path.join(d, "script.md"), "w").write(f"# {pr['title']}\n\n{pr['script'].strip()}\n")
         # recherche

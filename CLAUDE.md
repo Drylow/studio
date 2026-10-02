@@ -21,7 +21,7 @@ pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement p
    chiffre jamais dit, texte bizarre) l'oblige à supprimer une vidéo programmée : c'est arrivé, plus jamais.
 2. **Un lien envoyé = un seul lien, le bon, marqué clairement** (« KIDS CORRIGÉE – à poster »). Ne cite pas
    l'ancien lien dans le même message.
-3. **Secrets** : clés (IA, Algrow) et webhook Discord seulement dans `.env` (ignoré par git). Jamais dans le
+3. **Secrets** : clés (IA, Algrow, ai33pro) et webhook Discord seulement dans `.env` (ignoré par git). Jamais dans le
    code, les commits ou les messages. Avant un push, vérifie qu'aucun secret n'est dans le diff.
 4. Jamais de nom de modèle d'IA dans les commits, le code ou les fichiers du dépôt.
 5. Faits réels uniquement (sources nommées dans la phrase) ; un chiffre incertain est coupé ou présenté
@@ -43,7 +43,7 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 |---|---|---|---|
 | `oddly_specific_en` | **Oddly Specific Lives** (@OddlySpecificLives) | « POV: You Marry a … / Fall in Love with a … » (`pov_marry`), variante « Inside the Life of » (`pov_life`) | BD colorée : la femme 3/4 corps, contour blanc, monument du pays + drapeau en haut à gauche, bouquet de roses. **Pour un sport : dans son décor (cage, parquet), sans roses**, en tenue de son sport, ceinture/trophée sans logo, un peu de sueur. **Une femme différente à chaque vidéo** (visage, peau, cheveux : jamais la même que la miniature de référence ni qu'une vidéo précédente), bien sexy (jamais explicite). |
 | `oddly_expensive_en` | **Oddly Expensive Lives** | « The Economics of … » : le prof explique la facture ligne par ligne, ticket de caisse (« running tab ») | façon Marcus : fond plan bleu, gros titre noir contour blanc souligné rouge, le prof à droite, 1-2 humains BD à gauche (**différents à chaque vidéo**), étiquettes chiffrées + flèches |
-| `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN) |
+| `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN). **Varier l'action à chaque vidéo** (demande de l'utilisateur : « ça commence à faire répétitif ») : même style, mais une scène différente (arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé vide, mis en carton, tir à la corde, grue + conteneur…) **et le mot du haut** (pas toujours STOLEN : un mot-clé de l'histoire, ex. SNATCHED, SOLD, PRECIOUS, GONE, SHIPPED, FOR SALE, CLONED, DRAINED ; retouche du mot seul : `thumb.py --edit`) ; proposer 3-4 variantes en planche |
 
 **Dossier `chaines/`** : une fiche par chaîne (concept, style, ce qui marche, idées de vidéos — écrite à la
 main) et, pour chaque vidéo, script, recherche, publication et miniature (générés par
@@ -58,6 +58,13 @@ son humeur passe par ce qui lui arrive (écran, fissures, sachet alu, carton) et
 du style de la chaîne ne change pas (`osl_stick`, décors riches) : c'est l'option qu'il a choisie. Appliqué via
 `style_rev` du modèle : seules les vidéos créées après ce changement le prennent (`_with_style_rev`), une vidéo
 déjà lancée garde son style d'origine. Le contrôle en vision refuse un objet avec un visage.
+**Dans les prompts, l'objet reste un objet** (sinon : smiley sur la calandre, carte transformée en humain,
+voiture dans une voiture, bras en trop) : le rédacteur de prompts l'appelle par son nom (« the stolen car »,
+`object_noun`), jamais « You » ; il ne fait aucune action (on décrit ce qu'on LUI fait) ; un seul exemplaire
+par image ; « à l'intérieur » = l'habitacle, jamais une 2ᵉ voiture ; les données = une vraie scène (écran
+flou, reçu). Son image de référence est décrite comme un objet, pas comme un personnage. Les persos ont
+deux bras, deux mains. Tout ça dans `pov_engine.py` (`_prompt_batch`, `_style_parts`, `build_image_prompt`,
+`detect_cast`, `check_image`), actif pour les vidéos sans visage (`faceless_object`).
 
 Idées de vidéos : vérifier la demande et la concurrence avec les outils NexLev (youtube_search,
 youtube_channel_outliers sur la chaîne et ses concurrents) avant de proposer. Ce qui marche sur OSL :
@@ -100,6 +107,10 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - Vidéo sur **Gofile** (lien `gofile_link.txt`), paquet sur **Discord** via `production/discord_send.py`
   (lien + miniature, titre, description + chapitres, tags, commentaire épinglé). Webhook :
   `DISCORD_WEBHOOK_URL` dans `.env` (à demander à l'utilisateur, jamais dans git).
+- **Le paquet part en UN seul message à embeds** (couverture + miniature, description + chapitres, tags,
+  commentaire épinglé) et un verrou (`$STUDIO_WORK/discord.lock`) fait passer les envois un par un : avant,
+  deux vidéos envoyées ensemble mélangeaient leurs messages (Credit Card avec la description de Car).
+  Vérifier sans poster : `python production/discord_send.py <dossier> <lien> --dry-run`.
 - Donner aussi le lien dans le chat, avec le titre de la vidéo.
 - Calendrier (oct. 2026) : Oddly Specific Lives MMA le 3 oct., basket le 4 oct. ; d'autres sports ensuite.
 
@@ -143,14 +154,35 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 ## 10. History Docs (format Histoire, `/tools/history-studio`)
 
 Documentaires d'histoire façon *Dose of History* (vidéo de référence analysée : narration à la 2ᵉ personne,
-images + quelques animations). Pas de chaîne pour l'instant : on règle le format sur des démos (Hastings,
-Cannae). Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
+images + quelques animations). **Deux chaînes** (fiches et kit YouTube dans `chaines/`) :
+**The Survivor's Account** (`survivors_account`, @SurvivorsAccount : un vrai témoin par vidéo, ses mots cités
+mot pour mot) et **Frontier Blood** (`frontier_blood`, @FrontierBlood : la frontière américaine). Config :
+`services/history_channels.py` + `presets/history_channels/<clé>/` (idées, images de miniature, bible).
+Script : **FacelessOS** (format `history_doc`, référence de voix `skills/references/EDGm3821yE8.txt`) + 2 tours
+d'audit en plus ; recherche avec les vraies sources (mémoires du domaine public) dans les notes.
+Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
 templates : section History Docs du `README.md`.
 
-- **Pipeline** : script → voix (Algrow, Timothy par défaut) → sous-titres calés par Whisper local sur
+- **Pipeline** : script → voix (ElevenLabs via ai33pro, **Earl** à 0,9 validé par l'utilisateur ; `AI33_API_KEY`) → sous-titres calés par Whisper local sur
   l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits
   du casting d'abord, puis plans avec le portrait en référence) → `build_timeline` → rendu Remotion
   (`history_engine/render.mjs`) → loudnorm -14 LUFS. Projets dans `data/history/<id>/`.
+- **Production sans surveillance** (comme §4) : script relu → `python production/history_video.py new
+  work/<chaîne>/<vidéo> <clé> <script.md>` puis `echo "<chaîne>/<vidéo>" >> work/active.txt` (le superviseur
+  lance `history_video.py run` : voix → plan → images → rendu → miniature → Gofile → planches `check/sheet_*.jpg`
+  (un plan par vignette) → **attente de `review_ok`** → paquet Discord comme les vidéos POV ; réessaie si l'IA sature).
+  Le rendu se fait **par morceaux** de 30 s (`render.mjs --chunk-dir`, `CHUNK_FRAMES`) : un redémarrage reprend
+  au morceau suivant. **Rendu pas cher** (l'utilisateur : « drain pas ma balance », « 2 $ c'est trop ») : la machine
+  cloud rend gratuitement (≈ 11 images/s sur 4 cœurs, x264 `veryfast` : une vidéo de 36 min ≈ 1 h 40 seule), du dernier
+  morceau au premier, pendant qu'**une seule** machine RunPod de 32 cœurs (`RUNPOD_PODS`, défaut 1) part du premier
+  (`services/runpod_render.py`) ; ils se rejoignent au milieu (marques `claim_XXX.rp/.local`), le son se fait en local.
+  ≈ 0,3-0,5 $ par vidéo au lieu de ~2 $ (avant : 8 machines, surtout payées à démarrer). La machine RunPod est
+  **toujours supprimée** (même après un rendu interrompu, notée dans `chunks/pods.json`).
+  **VPS de l'utilisateur (gratuit, 18 vCPU EPYC, 94 Go)** : prioritaire sur RunPod quand `RENDER_WORKERS` (URL https)
+  et `RENDER_WORKER_TOKEN` sont dans le .env ; installé par `python production/vps_setup.py` → `work/vps_setup.sh`
+  (à lancer en root sur le VPS : Docker + serveur de rendu derrière Caddy, `<ip>.sslip.io`, jeton). Une vidéo à la
+  fois sur le VPS (`work/vps0.lock`) ; une 2e vidéo en même temps prend RunPod (1 machine).
+  Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
   télécharger Chrome) et `REMOTION_CONCURRENCY=4` ; une vidéo de 3-4 min ≈ 15-25 min de rendu.
@@ -167,8 +199,20 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
   coupée avant d'être finie.
 - **Style dessiné par défaut** (encre & aquarelle, thème parchemin cohérent dans les animations) ; BD,
   peinture et photoréaliste au choix. Pas trop sombre (voile léger).
-- **Variété des images** : pas deux chevaliers qui regardent dans le même sens à chaque plan ; au moins la
+- **Époque exacte sur chaque image** (`period` du projet, calculée une fois par `period_brief`) + contrôle en
+  vision `check_shot` (autre époque, bras en trop, texte, gore en gros plan) : image refaite une fois si ratée.
+  Sans ça, Gettysburg avait des tuniques rouges, des shakos, des légionnaires et des casques de 1940.
+- **Variété des images** : pas deux chevaliers qui regardent dans le même sens à chaque plan (les plans copient
+  le regard du portrait de référence : `_balance_gaze` mesure le sens du regard de chaque plan en vision et
+  retourne en miroir celui qui regarde du même côté que le précédent ; Gettysburg : 86 à droite / 30 à gauche
+  avant, 58 / 58 après) ; au moins la
   moitié des plans sans personnage, un seul personnage de référence par plan, jamais de collage/split.
+- **Regards vers la caméra aussi** (l'utilisateur, 2 oct. : « pourquoi ils regardent que à gauche ou à droite ») :
+  les portraits de référence sont de face, et un plan à personnage sur deux regarde la caméra (`_vary_gaze`).
+- **Pas d'images « goofy »** : réalisme documentaire (`REALISM` dans `history.py`, règles du plan et du monteur
+  image) : objets à leur vraie taille, architecture et paysage du lieu exact (`period_brief` les décrit), rien de
+  surréaliste ; `check_shot` refuse aussi les objets démesurés et les décors d'un autre pays (Gettysburg avait un
+  obus géant dans un mur et une cathédrale gothique).
 - **Jamais de tête coupée** : recadrage ancré en haut, zooms sans mouvement vertical.
 - **Texte toujours lisible** sur les images claires (plaques sombres, bande sous les sous-titres).
 - **Sous-titres exacts** sur toute la durée (orthographe du script, timings Whisper).
