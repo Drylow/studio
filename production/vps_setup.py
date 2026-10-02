@@ -3,8 +3,9 @@
   python production/vps_setup.py [sortie.sh]      (défaut : $STUDIO_WORK/vps_setup.sh)
 
 Le script (à lancer en root sur le VPS : bash vps_setup.sh) installe Docker si besoin, lance le serveur de rendu
-(production/runpod_worker.js, dans l'image Playwright : Node + Chromium) derrière Caddy en HTTPS automatique
-(<ip>.sslip.io, ou DOMAIN=… si le VPS a un domaine), protégé par un jeton, puis affiche URL et jeton à mettre dans
+(production/runpod_worker.js, dans l'image Playwright : Node + Chromium) en HTTPS automatique sur <ip>.sslip.io (ou
+DOMAIN=…) : derrière le Traefik de Coolify s'il tient déjà 80/443 (cas du VPS2 de l'utilisateur, labels comme ses
+autres sites), sinon derrière un Caddy à lui ; protégé par un jeton, puis affiche URL et jeton à mettre dans
 le .env : RENDER_WORKERS=<url> et RENDER_WORKER_TOKEN=<jeton> (jamais dans git). Relancer le script met le serveur
 à jour (même jeton, même adresse)."""
 import os
@@ -28,20 +29,33 @@ TOKEN=$(cat "$DIR/token")
 IP=$(curl -fs4 https://api.ipify.org || curl -fs4 https://ifconfig.me)
 HOST=${DOMAIN:-$(echo "$IP" | tr . -).sslip.io}
 command -v docker >/dev/null || curl -fsSL https://get.docker.com | sh
-if ss -ltnp 2>/dev/null | grep -E ':(80|443)\s' | grep -qv docker-proxy; then
-  echo "!! Les ports 80/443 sont déjà pris par un autre logiciel (nginx, apache…) : envoie cette ligne à Claude :"
-  ss -ltnp | grep -E ':(80|443)\s'
-  exit 1
-fi
-command -v ufw >/dev/null && ufw status 2>/dev/null | grep -q active && ufw allow 80/tcp && ufw allow 443/tcp || true
-docker network create drylow >/dev/null 2>&1 || true
 docker rm -f drylow-worker drylow-caddy >/dev/null 2>&1 || true
 docker pull __IMAGE__
-docker run -d --name drylow-worker --restart unless-stopped --network drylow --shm-size=4g \
-  -e WORKER_TOKEN="$TOKEN" -e WORK_DIR=/work -v "$DIR/worker.js:/w.js:ro" -v drylow-work:/work \
-  __IMAGE__ node /w.js
-docker run -d --name drylow-caddy --restart unless-stopped --network drylow -p 80:80 -p 443:443 \
-  -v drylow-caddy:/data caddy:2 caddy reverse-proxy --from "$HOST" --to drylow-worker:8000
+if docker ps --format '{{.Names}}' | grep -qx coolify-proxy; then
+  # Coolify (Traefik) tient déjà 80/443 : le serveur passe par ce Traefik (labels), comme les autres sites du VPS
+  docker run -d --name drylow-worker --restart unless-stopped --network coolify --shm-size=4g \
+    -e WORKER_TOKEN="$TOKEN" -e WORK_DIR=/work -v "$DIR/worker.js:/w.js:ro" -v drylow-work:/work \
+    -l traefik.enable=true \
+    -l "traefik.http.routers.drylow-render.rule=Host(\`$HOST\`)" \
+    -l traefik.http.routers.drylow-render.entrypoints=https \
+    -l traefik.http.routers.drylow-render.tls=true \
+    -l traefik.http.routers.drylow-render.tls.certresolver=letsencrypt \
+    -l traefik.http.services.drylow-render.loadbalancer.server.port=8000 \
+    __IMAGE__ node /w.js
+else
+  if ss -ltn 2>/dev/null | grep -qE ':(80|443)\s' || docker ps --format '{{.Ports}}' | grep -qE ':(80|443)->'; then
+    echo "!! Les ports 80/443 sont déjà pris (nginx, apache, un autre proxy…) : envoie ceci à Claude :"
+    ss -ltnp | grep -E ':(80|443)\s'; docker ps --format '{{.Names}} {{.Ports}}' | grep -E ':(80|443)->'
+    exit 1
+  fi
+  command -v ufw >/dev/null && ufw status 2>/dev/null | grep -q active && ufw allow 80/tcp && ufw allow 443/tcp || true
+  docker network create drylow >/dev/null 2>&1 || true
+  docker run -d --name drylow-worker --restart unless-stopped --network drylow --shm-size=4g \
+    -e WORKER_TOKEN="$TOKEN" -e WORK_DIR=/work -v "$DIR/worker.js:/w.js:ro" -v drylow-work:/work \
+    __IMAGE__ node /w.js
+  docker run -d --name drylow-caddy --restart unless-stopped --network drylow -p 80:80 -p 443:443 \
+    -v drylow-caddy:/data caddy:2 caddy reverse-proxy --from "$HOST" --to drylow-worker:8000
+fi
 echo "Attente du certificat HTTPS…"
 for i in $(seq 1 30); do
   curl -fs -H "X-Worker-Token: $TOKEN" "https://$HOST/status" >/dev/null 2>&1 && break

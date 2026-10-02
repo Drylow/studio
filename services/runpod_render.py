@@ -30,7 +30,7 @@ import requests
 
 API = "https://rest.runpod.io/v1"
 IMAGE = "mcr.microsoft.com/playwright:v1.49.1-noble"  # Node + Chromium headless shell + ses bibliothèques
-PART = 40 * 1024 * 1024  # les proxys refusent les envois trop gros : le paquet part en morceaux
+PART = 16 * 1024 * 1024  # proxys (RunPod, Traefik v3 : 60 s par requête) : le paquet part en petits morceaux
 HERE = os.path.dirname(os.path.abspath(__file__))
 WORKER = os.path.join(os.path.dirname(HERE), "production", "runpod_worker.js")
 ENGINE = os.path.join(os.path.dirname(HERE), "history_engine")
