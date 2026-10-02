@@ -946,7 +946,18 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
             text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {REALISM} {style['shot']}{avoid}".strip()
             if refs:
                 text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
-            blob = ai.generate_image(text, refs=refs or None, quality="high")
+            try:
+                blob = ai.generate_image(text, refs=refs or None, quality="high")
+            except ai.AIError as e:  # refus du filtre de sécurité (blessés, chirurgie…) : suggérer au lieu de montrer
+                if not any(m in str(e).lower() for m in ("safety", "moderation", "policy", "rejected", "violat")):
+                    raise
+                prompt = ai.chat("Rewrite this image prompt for a history documentary so it passes strict image-safety "
+                                 "filters while keeping the same moment, place and composition: imply the violence or "
+                                 "the wounds (covered stretchers, tools, faces, aftermath from afar) instead of showing "
+                                 "them; no blood, no gore, no bodies in close-up. Output only the prompt.\n\n" + prompt,
+                                 model=ai.fast_model())
+                text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {REALISM} {style['shot']}{avoid}".strip()
+                blob = ai.generate_image(text, refs=refs or None, quality="high")
             _fit_cover(blob, 1920, 1080, dest, anchor_y=0.22)
             if attempt or not era:
                 break
