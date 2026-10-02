@@ -1296,22 +1296,28 @@ def job_render(job, pid):
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
     size = _read(os.path.join(chunks, "frames.txt")) or "2700"  # un rendu commencé garde sa taille de morceau
-    # rendu local (gratuit, du dernier morceau au premier) ET, si RUNPOD_API_KEY, une machine RunPod en même temps
-    # (du premier au dernier) : ils se rejoignent au milieu ; la machine est supprimée dès que tout est rendu
+    # Rendu : VPS de l'utilisateur seul quand il est configuré (RR.vps_only) ; sinon rendu local (du dernier morceau au
+    # premier) ET, si RUNPOD_API_KEY, une machine RunPod en même temps (du premier au dernier), qui se rejoignent au
+    # milieu ; la machine RunPod est supprimée dès que tout est rendu
+    for f in os.listdir(chunks):  # marques d'un rendu interrompu
+        if f.startswith("claim_"):
+            os.remove(os.path.join(chunks, f))
     done = threading.Event()
     helper = None
-    if RR.available():
+    total = math.ceil(tl["duration"] * tl["fps"])
+    if RR.vps_only():  # tout sur le VPS (morceaux + son), on attend son tour ; le local ne rattrape qu'une panne
+        try:
+            RR.render(job, d, chunks, int(size), total, 0.05, 0.94, audio=True, wait=True)
+        except Exception as e:  # noqa: BLE001
+            print(f"[render] VPS : {e}", flush=True)
+    elif RR.available():
         def remote():
             try:
-                RR.render(job, d, chunks, int(size), math.ceil(tl["duration"] * tl["fps"]), 0.05, 0.94,
-                          stop=done.is_set)
+                RR.render(job, d, chunks, int(size), total, 0.05, 0.94, stop=done.is_set)
             except Exception as e:  # noqa: BLE001 — sans RunPod, le rendu local fait tout
                 print(f"[runpod] {e}", flush=True)
         helper = threading.Thread(target=remote, daemon=True)
         helper.start()
-    for f in os.listdir(chunks):  # marques d'un rendu interrompu
-        if f.startswith("claim_"):
-            os.remove(os.path.join(chunks, f))
     try:
         if helper:  # 1er passage : le local laisse à RunPod les morceaux qu'il a pris, puis attend qu'il ait fini
             _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse",
@@ -1321,8 +1327,11 @@ def job_render(job, pid):
         done.set()
         if helper:
             helper.join(timeout=300)
-    # ce qui manque encore (machine RunPod perdue…) + le son
-    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse"])
+    # ce qui manque encore (machine perdue…) + le son, en local seulement si besoin
+    n_parts = math.ceil(total / int(size))
+    if not (all(os.path.isfile(os.path.join(chunks, f"part_{i:03d}.mp4")) for i in range(n_parts))
+            and os.path.isfile(os.path.join(chunks, "audio.wav"))):
+        _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse"])
     job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
     parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
     with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:

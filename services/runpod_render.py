@@ -45,6 +45,12 @@ def available():
     return bool(os.getenv("RUNPOD_API_KEY") or _vps_urls())
 
 
+def vps_only():
+    """Tout le rendu (morceaux + son) sur le VPS, la machine cloud ne fait que l'assemblage final (demande de
+    l'utilisateur, 2 oct. : « utilise 100 % le VPS »). RENDER_LOCAL=1 dans le .env remet le rendu local en parallèle."""
+    return bool(_vps_urls()) and os.getenv("RENDER_LOCAL", "0") != "1"
+
+
 def _h():
     return {"Authorization": "Bearer " + os.environ["RUNPOD_API_KEY"], "Content-Type": "application/json"}
 
@@ -104,8 +110,8 @@ def _unclaim(path):
         pass
 
 
-def _lock_vps():
-    """Le VPS libre (verrou non bloquant) : [(worker, fichier verrou)] ; une vidéo à la fois par VPS."""
+def _lock_vps(wait=False, job=None):
+    """Le VPS libre : [(worker, fichier verrou)] ; une vidéo à la fois par VPS. wait=True : on attend son tour."""
     out = []
     token = os.getenv("RENDER_WORKER_TOKEN") or ""
     for k, url in enumerate(_vps_urls()):
@@ -113,8 +119,12 @@ def _lock_vps():
         try:
             fcntl.flock(lk, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except OSError:
-            lk.close()
-            continue
+            if not wait:
+                lk.close()
+                continue
+            if job:
+                job.update(None, "VPS occupé par une autre vidéo : en attente de son tour…")
+            fcntl.flock(lk, fcntl.LOCK_EX)
         w = {"id": f"vps{k}", "url": url, "h": {"X-Worker-Token": token}, "static": True}
         st = _status(w)
         if st is None:
@@ -126,23 +136,26 @@ def _lock_vps():
     return out
 
 
-def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None):
+def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None, audio=False, wait=False):
     """Rend à distance les morceaux absents de `chunks` ; ne lève pas d'erreur si une machine échoue. Les morceaux
     arrivent aussi du rendu local en parallèle : la liste est relue sur le disque. stop() → True : on arrête."""
     n = math.ceil(total / size)
     part = lambda i: os.path.join(chunks, f"part_{i:03d}.mp4")  # noqa: E731
     claim = lambda i, who: os.path.join(chunks, f"claim_{i:03d}.{who}")  # noqa: E731  (voir render.mjs --skip-claimed)
     todo = [i for i in range(n) if not os.path.isfile(part(i))]
-    if not todo:
+    wav = os.path.join(chunks, "audio.wav")
+    need_audio = audio and not os.path.isfile(wav)
+    if not todo and not need_audio:
         return
     record = os.path.join(chunks, "pods.json")
     if os.path.isfile(record) and os.getenv("RUNPOD_API_KEY"):  # pods d'un rendu interrompu : on ne paie pas pour rien
         for pid in json.load(open(record)):
             _delete(pid)
-    vps = _lock_vps()
+    vps = _lock_vps(wait, job)
     workers = [w for w, _ in vps]
     pods = []
-    finished = lambda: bool(stop and stop()) or all(os.path.isfile(part(i)) for i in range(n))  # noqa: E731
+    finished = lambda: bool(stop and stop()) or (all(os.path.isfile(part(i)) for i in range(n))  # noqa: E731
+                                                 and not (audio and not os.path.isfile(wav)))
     try:
         if os.getenv("RUNPOD_API_KEY") and (not workers or os.getenv("RUNPOD_WITH_VPS") == "1"):
             count = max(1, min(int(os.getenv("RUNPOD_PODS") or 1), math.ceil(len(todo) / 3) or 1))
@@ -189,7 +202,8 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None):
         limit = int(os.getenv("RUNPOD_MAX_MIN") or 30) if pods else 240
         alive, deadline, batch = {w["id"] for w in workers}, time.time() + 60 * limit, 4
         by = {w["id"]: w for w in workers}
-        while time.time() < deadline and alive and len(got) < n:
+        audio_by = None  # la machine qui fait le son (une fois les morceaux distribués)
+        while time.time() < deadline and alive and (len(got) < n or (need_audio and not os.path.isfile(wav))):
             if stop and stop():
                 break
             got |= set(i for i in range(n) if os.path.isfile(part(i)))  # morceaux faits en local entre-temps
@@ -217,14 +231,17 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None):
                     continue
                 for f in st.get("files") or []:
                     dest = os.path.join(chunks, f)
-                    if f == "audio.wav" or os.path.isfile(dest):
+                    if os.path.isfile(dest) or (f == "audio.wav" and not need_audio):
                         continue
                     r = requests.get(f"{w['url']}/file/{f}", headers=w["h"], timeout=600)
                     if r.status_code == 200:
                         open(dest + ".dl", "wb").write(r.content)
                         os.replace(dest + ".dl", dest)
-                        got.add(int(f[5:8]))
-                busy = wid in inflight and st.get("stage") not in ("done", "failed")
+                        if f != "audio.wav":
+                            got.add(int(f[5:8]))
+                busy = (wid in inflight or audio_by == wid) and st.get("stage") not in ("done", "failed")
+                if audio_by == wid and not busy:
+                    audio_by = None  # son fini (téléchargé ci-dessus) ou raté : redemandé plus bas si besoin
                 if wid in inflight and not busy:
                     back = [i for i in inflight.pop(wid) if i not in got]
                     for i in back:
@@ -232,7 +249,12 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None):
                     queue[:0] = back
                     if st.get("stage") == "failed":
                         print(f"[render] {wid} : {st.get('error')} {st.get('log', [])[-2:]}", flush=True)
-                if not busy and not queue:
+                if not busy and not queue and need_audio and not os.path.isfile(wav) and audio_by is None:
+                    requests.post(f"{w['url']}/render?chunks=&frames={size}&audio=only&conc={max(1, w['cpus'] * 3 // 4)}",
+                                  headers=w["h"], timeout=60)
+                    audio_by = wid
+                    continue
+                if not busy and not queue and audio_by != wid:
                     if not w["static"]:
                         _delete(wid)  # plus rien à lui donner : on arrête de payer cette machine tout de suite
                     alive.discard(wid)
