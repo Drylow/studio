@@ -5,7 +5,9 @@ rendre lui-même : chaque pod reçoit le moteur + les médias, rend sa liste de 
 morceaux sont rapatriés dans le même dossier ; ce qui manque encore est rendu en local. Les pods sont toujours
 supprimés à la fin (et ceux d'un rendu interrompu, notés dans pods.json, au rendu suivant).
 
-Réglages (.env, facultatifs) : RUNPOD_PODS (8), RUNPOD_VCPU (32), RUNPOD_CPU_FLAVOR (cpu5c), RUNPOD_IMAGE."""
+Réglages (.env, facultatifs) : RUNPOD_PODS (8), RUNPOD_VCPU (32), RUNPOD_CPU_FLAVOR (cpu5c), RUNPOD_IMAGE,
+RUNPOD_MAX_MIN (30 : au-delà, on arrête et le reste se fait en local). Chaque pod se supprime aussi tout seul
+s'il n'est plus piloté pendant 10 min (garde-fou de runpod_worker.js)."""
 import base64
 import io
 import json
@@ -36,11 +38,11 @@ def _url(pod_id):
     return f"https://{pod_id}-8000.proxy.runpod.net"
 
 
-def _create(name, vcpu):
+def _create(name, vcpu, extra_env=None):
     worker = base64.b64encode(open(WORKER, "rb").read()).decode()
     body = {"name": name, "imageName": os.getenv("RUNPOD_IMAGE") or IMAGE, "computeType": "CPU",
             "cpuFlavorIds": [os.getenv("RUNPOD_CPU_FLAVOR") or "cpu5c"], "vcpuCount": vcpu,
-            "containerDiskInGb": 20, "ports": ["8000/http"], "env": {"WORKER_JS": worker},
+            "containerDiskInGb": 20, "ports": ["8000/http"], "env": dict({"WORKER_JS": worker}, **(extra_env or {})),
             "dockerStartCmd": ["bash", "-c", 'echo "$WORKER_JS" | base64 -d > /w.js && node /w.js']}
     r = requests.post(f"{API}/pods", headers=_h(), json=body, timeout=60)
     if r.status_code >= 300:
@@ -115,7 +117,7 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
         queue, inflight, fetched, seen = list(todo), {}, set(), {}
         got = set(i for i in range(n) if os.path.isfile(part(i)))
         audio_done, audio_pod = not need_audio, None
-        alive, deadline, batch = set(pods), time.time() + 2700, 4
+        alive, deadline, batch = set(pods), time.time() + 60 * int(os.getenv("RUNPOD_MAX_MIN") or 30), 4
         while time.time() < deadline and alive and (len(got) < n or not audio_done):
             first = _status(pods[0])
             for pid in list(alive):

@@ -77,7 +77,23 @@ function body(req, dest) {
   });
 }
 
+// Garde-fou : le pod se supprime tout seul s'il n'est plus piloté (machine qui pilote redémarrée) ou trop vieux,
+// avec la clé que RunPod met dans chaque pod (RUNPOD_API_KEY, RUNPOD_POD_ID) : pas de facture qui tourne pour rien.
+let lastSeen = Date.now();
+const born = Date.now();
+const IDLE = Number(process.env.WATCHDOG_IDLE_S || 600) * 1000;
+const LIFE = Number(process.env.WATCHDOG_LIFE_S || 4500) * 1000;
+setInterval(() => {
+  if (Date.now() - lastSeen < IDLE && Date.now() - born < LIFE) return;
+  const id = process.env.RUNPOD_POD_ID;
+  const key = process.env.RUNPOD_API_KEY;
+  if (!id || !key) return;
+  spawn('curl', ['-s', '-X', 'POST', 'https://api.runpod.io/graphql?api_key=' + key, '-H', 'Content-Type: application/json',
+    '-d', JSON.stringify({query: `mutation { podTerminate(input: {podId: "${id}"}) }`})], {stdio: 'ignore'});
+}, 30000);
+
 http.createServer(async (req, res) => {
+  lastSeen = Date.now();
   const u = new URL(req.url, 'http://pod');
   const send = (code, obj) => {
     res.writeHead(code, {'Content-Type': 'application/json'});
