@@ -181,7 +181,9 @@ templates : section History Docs du `README.md`.
   **VPS de l'utilisateur (gratuit, 18 vCPU EPYC, 94 Go)** : prioritaire sur RunPod quand `RENDER_WORKERS` (URL https)
   et `RENDER_WORKER_TOKEN` sont dans le .env ; installé par `python production/vps_setup.py` → `work/vps_setup.sh`
   (à lancer en root sur le VPS : Docker + serveur de rendu derrière Caddy, `<ip>.sslip.io`, jeton). Une vidéo à la
-  fois sur le VPS (`work/vps0.lock`) ; une 2e vidéo en même temps prend RunPod (1 machine).
+  fois sur le VPS (`work/vps0.lock`). **Depuis le 2 oct. (« utilise 100 % le VPS ») : tout le rendu va sur le VPS**
+  (morceaux + son ; `RR.vps_only`), une 2e vidéo attend son tour ; la machine cloud ne fait que l'assemblage final
+  (ffmpeg, -14 LUFS) et ne rend en local que si le VPS tombe. `RENDER_LOCAL=1` remet l'ancien mode mixte.
   Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
