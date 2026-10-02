@@ -178,6 +178,10 @@ templates : section History Docs du `README.md`.
   (`services/runpod_render.py`) ; ils se rejoignent au milieu (marques `claim_XXX.rp/.local`), le son se fait en local.
   ≈ 0,3-0,5 $ par vidéo au lieu de ~2 $ (avant : 8 machines, surtout payées à démarrer). La machine RunPod est
   **toujours supprimée** (même après un rendu interrompu, notée dans `chunks/pods.json`).
+  **VPS de l'utilisateur (gratuit, 18 vCPU EPYC, 94 Go)** : prioritaire sur RunPod quand `RENDER_WORKERS` (URL https)
+  et `RENDER_WORKER_TOKEN` sont dans le .env ; installé par `python production/vps_setup.py` → `work/vps_setup.sh`
+  (à lancer en root sur le VPS : Docker + serveur de rendu derrière Caddy, `<ip>.sslip.io`, jeton). Une vidéo à la
+  fois sur le VPS (`work/vps0.lock`) ; une 2e vidéo en même temps prend RunPod (1 machine).
   Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas

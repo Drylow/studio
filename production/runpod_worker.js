@@ -1,5 +1,6 @@
-// Serveur d'une machine de rendu RunPod (format Histoire). Aucune dépendance : node + tar + curl de l'image.
-// Lancé au démarrage du pod (services/runpod_render.py) ; écoute le port 8000 (proxy https://<pod>-8000.proxy.runpod.net).
+// Serveur d'une machine de rendu (format Histoire) : pod RunPod ou VPS de l'utilisateur (production/vps_setup.sh).
+// Aucune dépendance : node + tar + curl de l'image. Écoute le port 8000 (RunPod : https://<pod>-8000.proxy.runpod.net ;
+// VPS : derrière Caddy en HTTPS). WORKER_TOKEN défini → chaque requête doit porter l'en-tête X-Worker-Token.
 //   PUT  /bundle?part=N     morceau N du paquet (moteur + médias), en .tgz découpé (le proxy limite la taille d'un envoi)
 //   POST /unpack?parts=K    réassemble les K morceaux et décompresse dans /work
 //   POST /fetch?from=URL    récupère le paquet déjà reçu par un autre pod (GET URL/bundle.tgz)
@@ -13,6 +14,7 @@ const path = require('path');
 const {spawn, spawnSync} = require('child_process');
 
 const W = process.env.WORK_DIR || '/work';
+const TOKEN = process.env.WORKER_TOKEN || '';
 const CH = path.join(W, 'chunks');
 const st = {ready: false, stage: 'idle', progress: 0, error: null, log: []};
 fs.mkdirSync(path.join(W, 'parts'), {recursive: true});
@@ -47,6 +49,10 @@ function browser() {
 
 async function unpack(bundle) {
   st.stage = 'unpack';
+  st.ready = false;
+  // machine réutilisée (VPS) : rien de la vidéo précédente ne doit rester (morceaux, images)
+  fs.rmSync(CH, {recursive: true, force: true});
+  fs.rmSync(path.join(W, 'media'), {recursive: true, force: true});
   const code = await run('tar', ['xzf', bundle, '-C', W]);
   if (code !== 0) throw new Error('tar ' + code);
   st.stage = 'npm';
@@ -93,12 +99,13 @@ setInterval(() => {
 }, 30000);
 
 http.createServer(async (req, res) => {
-  lastSeen = Date.now();
   const u = new URL(req.url, 'http://pod');
   const send = (code, obj) => {
     res.writeHead(code, {'Content-Type': 'application/json'});
     res.end(JSON.stringify(obj));
   };
+  if (TOKEN && req.headers['x-worker-token'] !== TOKEN) return send(401, {error: 'token'});
+  lastSeen = Date.now();
   try {
     if (req.method === 'PUT' && u.pathname === '/bundle') {
       await body(req, path.join(W, 'parts', String(Number(u.searchParams.get('part')) || 0).padStart(4, '0')));
@@ -116,7 +123,7 @@ http.createServer(async (req, res) => {
     if (req.method === 'POST' && u.pathname === '/fetch') {
       const bundle = path.join(W, 'bundle.tgz');
       st.stage = 'fetch';
-      run('curl', ['-sfL', '--retry', '5', '-o', bundle, u.searchParams.get('from') + '/bundle.tgz'])
+      run('curl', ['-sfL', '--retry', '5', '-H', 'X-Worker-Token: ' + TOKEN, '-o', bundle, u.searchParams.get('from') + '/bundle.tgz'])
         .then((c) => (c === 0 ? unpack(bundle) : Promise.reject(new Error('curl ' + c))))
         .catch((e) => { st.error = String(e); st.stage = 'failed'; });
       return send(200, {ok: true});
@@ -133,7 +140,7 @@ http.createServer(async (req, res) => {
     }
     if (req.method === 'GET' && u.pathname === '/status') {
       const files = fs.existsSync(CH) ? fs.readdirSync(CH).filter((f) => /^(part_\d{3}\.mp4|audio\.wav)$/.test(f)) : [];
-      return send(200, Object.assign({}, st, {files}));
+      return send(200, Object.assign({}, st, {files, cpus: require('os').cpus().length}));
     }
     if (req.method === 'GET' && u.pathname.startsWith('/file/')) {
       const name = path.basename(u.pathname.slice(6));
