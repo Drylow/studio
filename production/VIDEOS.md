@@ -42,9 +42,11 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks | **livrée** (vérifiée plan par plan, Discord, 2 oct.) — https://gofile.io/d/XXlkFSbS ; 36 min, voix Earl, rendu RunPod (~2 $) ; miniature « SHE SAW EVERYTHING » | à caler |
+| Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | en production (`work/sa/gettysburg_v2`) ; 3 miniatures façon Dose of History | — |
+| The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | script relu (`chaines/the-survivors-account/videos/02-pompeii-pliny/`), en production (`work/sa/pompeii`) | — |
 
 ## Frontier Blood (History Docs, `frontier_blood`)
 
 | Vidéo | État | Publication |
 |---|---|---|
-| How 28 Buffalo Hunters Held Off 700 Warriors at Adobe Walls | script relu (`chaines/frontier-blood/videos/01-adobe-walls/`) ; titre à confirmer (« 700 » est une estimation, le script donne 250-700) | — |
+| How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | en production (`work/fb/adobe_walls`), style peinture d'histoire ; titre « Hundreds » (700 n'est qu'une estimation) | — |
