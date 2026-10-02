@@ -5,7 +5,11 @@ rendre lui-même : chaque pod reçoit le moteur + les médias, rend sa liste de 
 morceaux sont rapatriés dans le même dossier ; ce qui manque encore est rendu en local. Les pods sont toujours
 supprimés à la fin (et ceux d'un rendu interrompu, notés dans pods.json, au rendu suivant).
 
-Réglages (.env, facultatifs) : RUNPOD_PODS (8), RUNPOD_VCPU (32), RUNPOD_CPU_FLAVOR (cpu5c), RUNPOD_IMAGE,
+Coût : le gros du prix venait du démarrage des machines (image, npm, moteur), pas du calcul. Par défaut UNE seule
+machine de 32 cœurs, qui travaille en même temps que le rendu local (history.job_render : RunPod part du premier
+morceau, la machine cloud du dernier) ; le son se fait en local. ≈ 0,3-0,5 $ par vidéo de 36 min au lieu de ~2 $.
+
+Réglages (.env, facultatifs) : RUNPOD_PODS (1), RUNPOD_VCPU (32), RUNPOD_CPU_FLAVOR (cpu5c), RUNPOD_IMAGE,
 RUNPOD_MAX_MIN (30 : au-delà, on arrête et le reste se fait en local). Chaque pod se supprime aussi tout seul
 s'il n'est plus piloté pendant 10 min (garde-fou de runpod_worker.js)."""
 import base64
@@ -86,19 +90,29 @@ def _bundle(media_dir):
     return buf.getvalue()
 
 
-def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
-    """Rend sur RunPod les morceaux absents de `chunks` (et audio.wav) ; ne lève pas d'erreur si un pod échoue."""
+def _unclaim(path):
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+
+
+def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, audio=False, stop=None):
+    """Rend sur RunPod les morceaux absents de `chunks` (et audio.wav si audio=True) ; ne lève pas d'erreur si un pod
+    échoue. Les morceaux peuvent aussi arriver d'ailleurs (rendu local en parallèle) : la liste est relue sur le disque.
+    stop() → True : on arrête et on supprime les machines (le rendu local a fini)."""
     n = math.ceil(total / size)
     part = lambda i: os.path.join(chunks, f"part_{i:03d}.mp4")  # noqa: E731
+    claim = lambda i, who: os.path.join(chunks, f"claim_{i:03d}.{who}")  # noqa: E731  (voir render.mjs --skip-claimed)
     todo = [i for i in range(n) if not os.path.isfile(part(i))]
-    need_audio = not os.path.isfile(os.path.join(chunks, "audio.wav"))
+    need_audio = audio and not os.path.isfile(os.path.join(chunks, "audio.wav"))
     if not todo and not need_audio:
         return
     record = os.path.join(chunks, "pods.json")
     if os.path.isfile(record):  # pods d'un rendu interrompu (redémarrage de la machine) : on ne paie pas pour rien
         for pid in json.load(open(record)):
             _delete(pid)
-    count = max(1, min(int(os.getenv("RUNPOD_PODS") or 8), math.ceil(len(todo) / 3) or 1))
+    count = max(1, min(int(os.getenv("RUNPOD_PODS") or 1), math.ceil(len(todo) / 3) or 1))
     vcpu = int(os.getenv("RUNPOD_VCPU") or 32)
     pods = []
     try:
@@ -115,8 +129,11 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
                 break
             json.dump(pods, open(record, "w"))
         t0 = time.time()
-        while time.time() - t0 < 900 and _status(pods[0]) is None:
+        finished = lambda: (stop and stop()) or all(os.path.isfile(part(i)) for i in range(n))  # noqa: E731
+        while time.time() - t0 < 900 and _status(pods[0]) is None and not finished():
             time.sleep(8)
+        if finished():  # le rendu local a tout fait pendant le démarrage de la machine
+            return
         if _status(pods[0]) is None:
             raise RuntimeError("RunPod : la première machine ne répond pas")
         job.update(p0, "RunPod : envoi des images et du moteur…")
@@ -131,13 +148,20 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
         audio_done, audio_pod = not need_audio, None
         alive, deadline, batch = set(pods), time.time() + 60 * int(os.getenv("RUNPOD_MAX_MIN") or 30), 4
         while time.time() < deadline and alive and (len(got) < n or not audio_done):
+            if stop and stop():
+                break
+            got |= set(i for i in range(n) if os.path.isfile(part(i)))  # morceaux faits en local entre-temps
+            queue = [i for i in queue if i not in got and not os.path.isfile(claim(i, "local"))]
             first = _status(pods[0])
             for pid in list(alive):
                 st = first if pid == pods[0] else _status(pid)
                 if st is None:
                     if time.time() - seen.get(pid, t0) > 900:  # ne répond plus (ou jamais) : abandonné
                         alive.discard(pid)
-                        queue[:0] = [i for i in inflight.pop(pid, []) if i not in got]
+                        back = [i for i in inflight.pop(pid, []) if i not in got]
+                        for i in back:
+                            _unclaim(claim(i, "rp"))
+                        queue[:0] = back
                         audio_pod = None if audio_pod == pid else audio_pod
                     continue
                 seen[pid] = time.time()
@@ -163,7 +187,10 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
                             got.add(int(f[5:8]))
                 busy = pid in inflight and st.get("stage") not in ("done", "failed")
                 if pid in inflight and not busy:
-                    queue[:0] = [i for i in inflight.pop(pid) if i not in got]
+                    back = [i for i in inflight.pop(pid) if i not in got]
+                    for i in back:
+                        _unclaim(claim(i, "rp"))
+                    queue[:0] = back
                     audio_pod = None if audio_pod == pid and not audio_done else audio_pod
                     if st.get("stage") == "failed":
                         print(f"[runpod] {pid} : {st.get('error')} {st.get('log', [])[-2:]}", flush=True)
@@ -177,6 +204,8 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
                         audio, audio_pod, mine = "only", pid, []
                     else:
                         mine, queue = queue[:batch], queue[batch:]
+                        for i in mine:
+                            open(claim(i, "rp"), "w").close()
                     if mine or audio != "0":
                         requests.post(f"{_url(pid)}/render?chunks={','.join(map(str, mine)) or 'none'}&frames={size}"
                                       f"&audio={audio}&conc={max(1, vcpu * 3 // 4)}", timeout=60)
@@ -186,6 +215,9 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
     finally:
         for pid in pods:
             _delete(pid)
+        for f in os.listdir(chunks):
+            if f.endswith(".rp"):
+                _unclaim(os.path.join(chunks, f))
         try:
             os.remove(record)
         except OSError:

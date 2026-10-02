@@ -46,13 +46,21 @@ if (args.stills !== undefined) {
   const part = (i) => path.join(dir, `part_${String(i).padStart(3, '0')}.mp4`);
   // --chunks "3,4,9" : seulement ces morceaux (rendu réparti sur plusieurs machines) ; --no-audio / --audio-only
   const only = args.chunks ? new Set(String(args.chunks).split(',').filter(Boolean).map(Number)) : null;
-  for (let i = 0; i < n; i++) {
+  // --reverse : du dernier morceau au premier (rendu local pendant qu'une machine RunPod part du début)
+  const order = [...Array(n).keys()];
+  if (args.reverse !== undefined) order.reverse();
+  // --skip-claimed : laisse les morceaux qu'une machine RunPod est en train de rendre (claim_XXX.rp) ; les siens sont
+  // signalés par claim_XXX.local pour que RunPod ne les prenne pas
+  const claim = (i, who) => path.join(dir, `claim_${String(i).padStart(3, '0')}.${who}`);
+  for (const i of order) {
     if (args['audio-only'] !== undefined || (only && !only.has(i)) || fs.existsSync(part(i))) continue;
+    if (args['skip-claimed'] !== undefined && fs.existsSync(claim(i, 'rp'))) continue;
+    if (args['skip-claimed'] !== undefined) fs.writeFileSync(claim(i, 'local'), '');
     const tmp = part(i).replace('.mp4', '.tmp.mp4');
     const frameRange = [i * size, Math.min(total, (i + 1) * size) - 1];
     let last = -1;
     await renderMedia({
-      composition, serveUrl, codec: 'h264', crf: parseInt(args.crf || '23', 10), x264Preset: args.preset || 'medium',
+      composition, serveUrl, codec: 'h264', crf: parseInt(args.crf || '20', 10), x264Preset: args.preset || 'veryfast',
       muted: true, frameRange, outputLocation: tmp, inputProps: timeline, browserExecutable, concurrency,
       ...(args.gl ? {chromiumOptions: {gl: args.gl}} : {}),
       onProgress: ({progress}) => {
@@ -65,6 +73,7 @@ if (args.stills !== undefined) {
       },
     });
     fs.renameSync(tmp, part(i));
+    fs.rmSync(claim(i, 'local'), {force: true});
   }
   const wav = path.join(dir, 'audio.wav');
   if (args['no-audio'] === undefined && !fs.existsSync(wav)) {

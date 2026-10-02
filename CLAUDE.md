@@ -172,10 +172,12 @@ templates : section History Docs du `README.md`.
   lance `history_video.py run` : voix → plan → images → rendu → miniature → Gofile → planches `check/sheet_*.jpg`
   (un plan par vignette) → **attente de `review_ok`** → paquet Discord comme les vidéos POV ; réessaie si l'IA sature).
   Le rendu se fait **par morceaux** de 30 s (`render.mjs --chunk-dir`, `CHUNK_FRAMES`) : un redémarrage reprend
-  au morceau suivant. Une vidéo de 38 min ≈ 9 h de rendu sur les 4 cœurs du cloud (≈ 2 images/s) : trop lent,
-  avec `RUNPOD_API_KEY` dans le .env, `services/runpod_render.py` loue des pods CPU RunPod (8 × 32 cœurs par
-  défaut), leur envoie moteur + médias, leur distribue les morceaux par petits lots, rapatrie le résultat et
-  **supprime toujours les pods** (même ceux d'un rendu interrompu, notés dans `chunks/pods.json`).
+  au morceau suivant. **Rendu pas cher** (l'utilisateur : « drain pas ma balance », « 2 $ c'est trop ») : la machine
+  cloud rend gratuitement (≈ 11 images/s sur 4 cœurs, x264 `veryfast` : une vidéo de 36 min ≈ 1 h 40 seule), du dernier
+  morceau au premier, pendant qu'**une seule** machine RunPod de 32 cœurs (`RUNPOD_PODS`, défaut 1) part du premier
+  (`services/runpod_render.py`) ; ils se rejoignent au milieu (marques `claim_XXX.rp/.local`), le son se fait en local.
+  ≈ 0,3-0,5 $ par vidéo au lieu de ~2 $ (avant : 8 machines, surtout payées à démarrer). La machine RunPod est
+  **toujours supprimée** (même après un rendu interrompu, notée dans `chunks/pods.json`).
   Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas

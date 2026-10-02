@@ -18,6 +18,7 @@ import os
 import re
 import shutil
 import subprocess
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -1274,12 +1275,33 @@ def job_render(job, pid):
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
     size = _read(os.path.join(chunks, "frames.txt")) or "2700"  # un rendu commencé garde sa taille de morceau
-    if RR.available():  # pods RunPod : quelques minutes au lieu de plusieurs heures ; le reste se fait en local
-        try:
-            RR.render(job, d, chunks, int(size), math.ceil(tl["duration"] * tl["fps"]), 0.05, 0.9)
-        except Exception as e:  # noqa: BLE001
-            print(f"[runpod] {e}", flush=True)
-    _remotion(job, d, None, 0.9 if RR.available() else 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size])
+    # rendu local (gratuit, du dernier morceau au premier) ET, si RUNPOD_API_KEY, une machine RunPod en même temps
+    # (du premier au dernier) : ils se rejoignent au milieu ; la machine est supprimée dès que tout est rendu
+    done = threading.Event()
+    helper = None
+    if RR.available():
+        def remote():
+            try:
+                RR.render(job, d, chunks, int(size), math.ceil(tl["duration"] * tl["fps"]), 0.05, 0.94,
+                          stop=done.is_set)
+            except Exception as e:  # noqa: BLE001 — sans RunPod, le rendu local fait tout
+                print(f"[runpod] {e}", flush=True)
+        helper = threading.Thread(target=remote, daemon=True)
+        helper.start()
+    for f in os.listdir(chunks):  # marques d'un rendu interrompu
+        if f.startswith("claim_"):
+            os.remove(os.path.join(chunks, f))
+    try:
+        if helper:  # 1er passage : le local laisse à RunPod les morceaux qu'il a pris, puis attend qu'il ait fini
+            _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse",
+                                                 "--skip-claimed", "--no-audio"])
+            helper.join(timeout=1800)
+    finally:
+        done.set()
+        if helper:
+            helper.join(timeout=300)
+    # ce qui manque encore (machine RunPod perdue…) + le son
+    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse"])
     job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
     parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
     with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
