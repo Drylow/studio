@@ -65,17 +65,23 @@ function onMinutes() {
     + `<span>≈ <b>${nf(4 + m * 2.2)} min</b> de fabrication</span>`;
 }
 $('#minutes').oninput = onMinutes;
+function onChannel() {
+  const c = ((S.cfg && S.cfg.channels) || []).find(x => x.key === $('#channel').value);
+  $('#ideas').innerHTML = c ? c.ideas.map(t => `<option value="${esc(t)}"></option>`).join('') : '';
+  if (c) { $('#minutes').value = c.minutes; $('#style').value = c.image_style; onMinutes(); }
+}
+$('#channel').onchange = onChannel;
 $('#voice').onchange = onMinutes;
 
 $('#create').onclick = async e => {
   const title = $('#title').value.trim();
   if (title.length < 4) { toast('Écris le titre de la vidéo.', 'err'); $('#title').focus(); return; }
-  const [provider, voice] = ($('#voice').value || 'algrow|').split('|');
+  const [provider, voice] = ($('#voice').value || 'ai33|').split('|');
   busy(e.currentTarget, true, 'Lancement…');
   const r = await guard(() => api('POST', '/projects', {
     title, minutes: Number($('#minutes').value), notes: $('#notes').value.trim(), voice: {provider, voice},
     options: {captions: $('#captions').checked, captions_after_hook: $('#afterHook').checked,
-      film: Number($('#film').value), image_style: $('#style').value, templates: [...document.querySelectorAll('#tpls input:checked')].map(i => i.value)},
+      film: Number($('#film').value), image_style: $('#style').value, channel: $('#channel').value, templates: [...document.querySelectorAll('#tpls input:checked')].map(i => i.value)},
   }));
   busy($('#create'), false);
   if (r) { $('#title').value = ''; $('#notes').value = ''; toast('C\'est parti : la vidéo se fabrique.', 'ok'); await load(); }
@@ -96,7 +102,7 @@ function card(p) {
   const st = statusOf(p), j = p.job || {}, pct = Math.round((j.progress || 0) * 100);
   const media = S.playing.has(p.id) && p.render
     ? `<video src="${fileUrl(p.id, p.render.file)}" controls autoplay preload="metadata"></video>`
-    : `🏛${p.render ? '<button class="play" data-act="play" title="Regarder">▶</button>' : ''}`;
+    : `${p.thumbnail ? `<img src="${fileUrl(p.id, p.thumbnail)}" alt="">` : '🏛'}${p.render ? '<button class="play" data-act="play" title="Regarder">▶</button>' : ''}`;
   const meta = [
     `<span class="pill ${st.cls}">${st.k === 'run' ? '<span class="spin" style="width:10px;height:10px"></span>' : ''}${esc(st.label)}</span>`,
     `<span>${esc(p.minutes)} min visées</span>`,
@@ -188,6 +194,9 @@ async function refreshModal() {
   if (S.cfg) {
     $('#voice').innerHTML = S.cfg.voices.map(v => `<option value="${v.provider}|${v.voice}">${esc(v.name)}</option>`).join('');
     $('#style').innerHTML = (S.cfg.styles || []).map(s => `<option value="${s.key}" ${s.key === S.cfg.defaults.image_style ? 'selected' : ''}>${esc(s.name)}</option>`).join('');
+    $('#channel').innerHTML = (S.cfg.channels || []).map(c => `<option value="${c.key}">${esc(c.name)} (${esc(c.handle)})</option>`).join('')
+      + '<option value="">Aucune (démo libre, script sans FacelessOS)</option>';
+    onChannel();
     const on = new Set(S.cfg.defaults.templates || []);
     $('#tpls').innerHTML = Object.entries(TYPE).filter(([k]) => k !== 'image')
       .map(([k, [ic, name]]) => `<label><input type="checkbox" value="${k}" ${on.has(k) ? 'checked' : ''}> ${ic} ${esc(name)}</label>`).join('');
@@ -195,7 +204,7 @@ async function refreshModal() {
     if (!S.cfg.ai) warn.push('proxy IA non configuré (.env)');
     if (!S.cfg.node) warn.push('Node.js manquant (rendu Remotion) : installe-le depuis nodejs.org');
     else if (!S.cfg.engine_deps) warn.push('moteur d\'animation : les dépendances s\'installeront au 1er rendu');
-    if (!S.cfg.tts.algrow) warn.push('ALGROW_API_KEY absente : choisis une voix Edge');
+    if (!S.cfg.tts.ai33 && !S.cfg.tts.algrow) warn.push('AI33_API_KEY absente : choisis une voix Edge');
     $('#envHint').innerHTML = warn.length ? `⚠ ${esc(warn.join(' · '))}` : '✔ Prêt : IA, voix, ffmpeg et moteur d\'animation.';
     $('#topInfo').innerHTML = `<span class="pill ${S.cfg.ai ? 'ok' : 'err'}">IA</span><span class="pill ${S.cfg.node ? 'ok' : 'err'}">Remotion</span>`
       + `<span class="pill ${S.cfg.ffmpeg ? 'ok' : 'err'}">ffmpeg</span>`;

@@ -164,6 +164,15 @@ def prepare_layout(workdir, board_cfg, presenter_src, width, height, with_presen
             os.replace(dst + ".tmp.png", dst)
         return dst
 
+    if rig_mode == "stick" and rig and rig.get("body") and os.path.isfile(rig["body"]):
+        # un seul dessin du prof + la baguette redessinée à chaque angle (voir presenter.stick_frames)
+        from services import presenter
+        st = presenter.load_stick(os.path.dirname(rig["body"]))
+        if st:
+            frames, top = presenter.stick_frames(rig["body"], st, ph, workdir)
+            layout.update({"presenter": frames["A"], "rig": frames, "rig_mode": "stick",
+                           "pres_x": g["presenter_x"], "pres_y": g["presenter_bottom"] - ph - top, "bob": False})
+            return layout
     frames = {k: scaled(v, k) for k, v in (rig or {}).items() if v and os.path.isfile(v)}
     if frames.get("A"):
         layout.update({"presenter": frames["A"], "rig": frames, "rig_mode": rig_mode})
@@ -176,12 +185,19 @@ def prepare_layout(workdir, board_cfg, presenter_src, width, height, with_presen
     return layout
 
 
+def _presenter_segs(layout, words, total, fps):
+    from services import presenter
+    if layout.get("rig_mode") == "acting":  # une pose par scène (plan de montage), avec rebond
+        return presenter.acting_segments(layout.get("acting") or [], total, fps)
+    return presenter.track_segments(layout.get("rig_mode"), words or [], total, fps)
+
+
 def presenter_track(layout, words, total, fps, dest, start_f=0, count=None):
     """Écrit la liste concat (ffmpeg) de l'animation du présentateur ; None si pas de rig."""
     if not layout or not layout.get("rig"):
         return None
     from services import presenter
-    segs = presenter.track_segments(layout.get("rig_mode"), words or [], total, fps)
+    segs = _presenter_segs(layout, words, total, fps)
     if count is not None:
         segs = presenter.slice_timeline(segs, start_f, count)
     base = os.path.dirname(os.path.abspath(dest))
@@ -212,7 +228,7 @@ def _scene_filter(W, H, motion, n, strength, offset=0, count=None, fps=None):
 
 
 def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancelled=None, layout=None, t0=0.0,
-                track=None, motion_frames=None, prev=None):
+                track=None, motion_frames=None, prev=None, fx=None):
     """Clip d'une scène. Même encodeur/profil pour tous les clips → concat sans réencodage sûr.
 
     motion_frames : longueur du mouvement de l'image (≥ frames : le mouvement continue pendant le
@@ -224,13 +240,16 @@ def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancel
     layout (mise en page tableau) : la scène est animée DANS le panneau, posée sur le fond, sous
     le cadre (contour + coins arrondis), avec le présentateur par-dessus si layout["presenter"]
     (track = liste concat de son animation pour ce clip ; t0 = début du clip dans la vidéo, pour
-    que la respiration soit continue d'un clip à l'autre)."""
+    que la respiration soit continue d'un clip à l'autre).
+
+    fx = [{"track": liste concat, "x", "y"}] : animations du montage (services/motion.py) incrustées
+    par-dessus le panneau, chacune calée dans le temps par sa liste concat."""
     iw, ih = (layout["panel"][2], layout["panel"][3]) if layout else (w, h)
     n = int(motion_frames or frames)
     loop = ["-loop", "1", "-framerate", str(fps), "-i"]      # fonds / cadres fixes de la mise en page
     one = ["-i"]                                            # images de scène : répétées par le filtre loop
     tune = ["-tune", "stillimage"] if motion == "none" and not prev else []
-    if not layout and not prev:
+    if not layout and not prev and not fx:
         media.run(one + [image, "-vf", _scene_filter(iw, ih, motion, n, strength, fps=fps), "-frames:v", str(frames),
                          "-r", str(fps)] + _X264 + tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
         return dest
@@ -262,7 +281,11 @@ def render_clip(image, dest, frames, w, h, fps, motion, strength, crf=18, cancel
             else:
                 args += loop + [layout["presenter"]]
             graph.append(f"[{out}][{idx}:v]overlay=x={layout['pres_x']}:y='{_bob_expr(layout, t0)}':eval=frame[bq]")
-            out = "bq"
+            out, idx = "bq", idx + 1
+    for j, f in enumerate(fx or []):
+        args += ["-f", "concat", "-safe", "0", "-i", f["track"]]
+        graph.append(f"[{out}][{idx}:v]overlay=x={int(f['x'])}:y={int(f['y'])}:eof_action=pass:format=auto[x{j}]")
+        out, idx = f"x{j}", idx + 1
     graph.append(f"[{out}]format=yuv420p[v]")
     media.run(args + ["-filter_complex", ";".join(graph), "-map", "[v]", "-frames:v", str(frames),
                       "-r", str(fps)] + _X264 + tune + ["-crf", str(crf), "-an", dest], cancelled=cancelled)
@@ -404,15 +427,153 @@ def _frames_timeline(scenes, fps, total):
     return out
 
 
+def _same_sheet(a, b):
+    """Deux fiches plein panneau de suite, même titre : la seconde prolonge la première."""
+    from services import motion
+    if not a or not b:
+        return False
+    sa, sb = a["spec"], b["spec"]
+    return (sa.get("type") in motion.FULL_PANEL and sb.get("type") == sa.get("type")
+            and (sa.get("title") or "").strip().upper() == (sb.get("title") or "").strip().upper())
+
+
+MIN_FX = 3.2    # une animation reste au moins ~3 s à l'écran (sinon on n'a pas le temps de la lire)
+HOLD_FX = 3.5   # une fois l'animation finie, son résultat reste lisible au moins 3,5 s…
+CARRY_FX = 4.0  # … quitte à rester par-dessus l'image suivante (au plus 4 s après le changement d'image)
+MAX_FX = 12.0   # une carte ne reste jamais plus de 12 s
+SWAP_FX = 0.15  # la carte qui part finit de s'effacer pendant que la suivante arrive
+
+
+def _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, layout):
+    """Dessine les animations du montage (services/motion.py) et leurs listes concat par scène.
+
+    Une carte n'est plus coupée par le changement d'image : elle reste le temps d'être lue (HOLD_FX
+    après la fin de son animation), par-dessus l'image suivante s'il le faut, et s'efface pendant le
+    fondu entre les deux images ou quand la carte suivante arrive.
+    → ({scène: [{"track", "x", "y", "sig"}]}, [(seconde, son, gain)])."""
+    from services import motion
+    panel = tuple(layout["panel"]) if layout else (0, 0, width, height)
+    geo = {"panel": panel, "k": height / 1080.0, "W": width, "H": height}
+    fdir = os.path.join(workdir, "fx")
+    os.makedirs(fdir, exist_ok=True)
+    xf = tf / fps
+    exit_dur = xf if xf > 0 else motion.EXIT  # la sortie d'une carte dure autant que le fondu d'image
+    clip_at = [(starts_f[c] / fps, (starts_f[c] + frames[c]) / fps) for c in range(len(frames))]
+    end_video = clip_at[-1][1] if clip_at else 0.0
+    state, items, sounds = {}, [], []
+    by_scene = {int(f["scene"]): f for f in fx}
+    chain, rows = {}, {}  # fiche qui s'étend sur plusieurs scènes : 1re scène de la fiche, lignes au total
+    for i in sorted(by_scene):
+        f = by_scene[i]
+        if f["spec"].get("type") in motion.FULL_PANEL:
+            head = i
+            while _same_sheet(by_scene.get(head - 1), by_scene.get(head)):
+                head -= 1
+            chain[i] = head
+            rows[head] = rows.get(head, 0) + len(f["spec"].get("items") or [])
+    # 1) instant d'apparition de chaque carte (secondes de la vidéo)
+    timed = []
+    for f in fx:
+        i = int(f["scene"])
+        if not 0 <= i < len(scenes) or f["spec"].get("type") not in motion.CLASSES:
+            continue
+        clip_s, clip_e = clip_at[i]
+        lead_in = xf + 0.08 if i > 0 else 0.0  # après le fondu d'entrée (la 1re scène n'en a pas)
+        full = f["spec"].get("type") in motion.FULL_PANEL
+        cont = full and _same_sheet(by_scene.get(i - 1), f)    # suite de la fiche d'avant : dès la 1re image
+        hold = full and _same_sheet(f, by_scene.get(i + 1))    # la fiche continue : pas de fondu de sortie
+        if cont:
+            lead_in = 0.0
+        off = lead_in if full else max(lead_in, float(f.get("t") or clip_s) - clip_s)
+        off = min(off, max(lead_in, clip_e - clip_s - 0.5))
+        timed.append((clip_s + off, i, f, full, cont, hold))
+    timed.sort(key=lambda x: (x[0], x[1]))
+    # 2) durée à l'écran, puis dessin dans l'ordre (le ticket de caisse se complète d'une carte à l'autre)
+    for n, (start, i, f, full, cont, hold) in enumerate(timed):
+        clip_s, clip_e = clip_at[i]
+        nxt = timed[n + 1][0] if n + 1 < len(timed) else end_video
+        before = json.dumps(state, sort_keys=True)
+        spec = dict(f["spec"], _cont=cont, _hold=hold, _rows=rows.get(chain.get(i, i), 0)) if full \
+            else dict(f["spec"])
+        if f.get("items_t"):  # lignes calées sur la voix, en secondes depuis l'apparition du fx
+            spec["_times"] = [max(0.3, t - start) for t in f["items_t"]]
+        obj = motion.make(spec, geo, state)  # met à jour l'état (ticket de caisse) dans l'ordre
+        if not obj:
+            continue
+        if not getattr(obj, "exit", True):  # intro, outro, fiche qui continue : jusqu'au bout de sa scène
+            end = clip_e
+        elif full:  # fiche plein panneau : s'efface pendant le fondu vers l'image suivante
+            end = clip_e + xf
+        else:
+            end = max(min(clip_e, start + MAX_FX), start + max(MIN_FX, obj.length + HOLD_FX))
+            if end >= clip_e - 0.05:
+                end = max(end, clip_e + xf)  # part avec sa scène : s'efface pendant le fondu d'image
+            if 0 < nxt - end < 1.2:
+                end = nxt + SWAP_FX  # la carte suivante arrive juste après : pas de trou d'une fraction de seconde
+            end = min(end, clip_e + CARRY_FX, start + MAX_FX, nxt + SWAP_FX)
+        end = min(end, end_video)
+        dur = end - start
+        if dur < 1.5:  # trop court pour une animation lisible
+            continue
+        sig = hashlib.sha1(json.dumps([f["spec"], before, round(dur, 3), geo, fps, round(exit_dur, 3),
+                                       motion.__file__ and os.path.getmtime(motion.__file__)],
+                                      sort_keys=True).encode()).hexdigest()[:12]
+        # la carte peut déborder sur les scènes suivantes : une liste concat par clip traversé
+        spans = []
+        for c in range(i, len(clip_at)):
+            cs, ce = clip_at[c]
+            if cs >= end - 1e-3:
+                break
+            if ce <= start + 1e-3:
+                continue
+            spans.append((c, max(0.0, start - cs), max(0.0, cs - start)))
+        items.append((spans, dur, obj, sig))
+        for t_rel, name, gain in obj.sounds:
+            if t_rel < dur - 0.2:
+                sounds.append((start + t_rel, name, gain))
+
+    def draw(item):
+        spans, dur, obj, sig = item
+        d = os.path.join(fdir, sig)
+        done = os.path.join(d, "seq.json")
+        if os.path.isfile(done):
+            with open(done, "r", encoding="utf-8") as fh:
+                seq = [(os.path.join(d, p), t) for p, t in json.load(fh)]
+        else:
+            seq = motion.render_fx(obj, dur, d, fps, exit_dur)
+            with open(done, "w", encoding="utf-8") as fh:
+                json.dump([(os.path.basename(p), t) for p, t in seq], fh)
+        blank = motion.blank(d, obj.w, obj.h)
+        res = []
+        for c, off, skip in spans:
+            track = motion.write_track(seq, off, blank, os.path.join(d, f"track_{int(off * 1000)}_{int(skip * 1000)}.txt"),
+                                       skip=skip)
+            res.append((c, {"track": os.path.abspath(track), "x": obj.x, "y": obj.y,
+                            "sig": [sig, round(off, 3), round(skip, 3)]}))
+        return res
+
+    out = {}
+    with ThreadPoolExecutor(max_workers=max(1, min(4, os.cpu_count() or 2))) as ex:
+        for res in ex.map(draw, items):  # dans l'ordre d'apparition : la carte suivante passe au-dessus
+            for c, entry in res:
+                out.setdefault(c, []).append(entry)
+    return out, sounds
+
+
 def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=1080, fps=30,
                  motion="auto", motion_strength=0.12, transition="fade", transition_dur=0.35,
                  words=None, captions=None, overlays=None, music_path=None, music_volume=0.12,
-                 normalize=True, quality="fast", tail=0.6, layout=None, progress=None, cancelled=None):
+                 normalize=True, quality="fast", tail=0.6, layout=None, progress=None, cancelled=None,
+                 fx=None, sfx_events=None):
     """Monte la vidéo finale. scenes = [{"image": path, "start": sec}, ...] (triées).
 
     layout (voir prepare_layout) : mise en page tableau. Les clips contiennent fond + panneau ;
     le présentateur est incrusté une seule fois dans la passe finale (mouvement continu,
-    et il reste immobile pendant les fondus entre scènes)."""
+    et il reste immobile pendant les fondus entre scènes).
+
+    fx = [{"scene": index, "t": seconde, "spec": {...}}] : animations du montage, dessinées puis
+    incrustées dans le clip de leur scène ; leurs bruitages (+ sfx_events = [(seconde, son, gain)])
+    forment une piste mixée sous la voix."""
     def tick(pct, msg):
         if progress:
             progress(max(0.0, min(1.0, pct)), msg)
@@ -434,8 +595,15 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     clips_dir = os.path.join(workdir, "clips")
     os.makedirs(clips_dir, exist_ok=True)
     motions = pick_motions(len(scenes), motion, seed=len(scenes))
-    clip_layout = dict(layout, presenter=None, rig=None) if layout else None
+    clip_layout = dict(layout, presenter=None, rig=None, acting=None) if layout else None
     last = len(scenes) - 1
+    starts_f = [sum(frames[:i]) for i in range(len(scenes))]
+    sounds = list(sfx_events or [])
+    scene_fx = {}
+    if fx:
+        tick(0.01, "Animations du montage…")
+        scene_fx, fx_sounds = _prepare_fx(workdir, fx, scenes, frames, starts_f, fps, tf, width, height, layout)
+        sounds += fx_sounds
     # le mouvement d'une image continue pendant le fondu vers la suivante (montré au début du clip suivant)
     mlen = [frames[i] + (tf if fade and i < last else 0) for i in range(len(scenes))]
     crf = 18 if quality == "high" else 20  # les clips SONT la vidéo finale : plus de second encodage
@@ -448,9 +616,10 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
             prev = {"image": ps["image"], "motion": ps.get("motion") or motions[i - 1], "n": mlen[i - 1],
                     "offset": frames[i - 1], "tf": max(0, min(tf, frames[i] - 1))}
         extra = [mlen[i], crf, [_file_sig(prev["image"]), prev["motion"], prev["n"], prev["offset"], prev["tf"]]
-                 if prev else None]
+                 if prev else None, [f["sig"] for f in scene_fx.get(i, [])]]
         key = _clip_key(s["image"], frames[i], width, height, fps, mv, motion_strength, clip_layout, extra=extra)
-        jobs.append((i, s["image"], os.path.join(clips_dir, f"c{i:04d}_{key}.mp4"), frames[i], mv, mlen[i], prev))
+        jobs.append((i, s["image"], os.path.join(clips_dir, f"c{i:04d}_{key}.mp4"), frames[i], mv, mlen[i], prev,
+                     scene_fx.get(i) or None))
 
     # 1) clips, fondus compris (parallèle + cache)
     todo = [j for j in jobs if not os.path.isfile(j[2])]
@@ -464,8 +633,8 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
             tick(0.02 + 0.83 * done / len(jobs), f"Animation des scènes {done}/{len(jobs)}")
         stop = cancelled or (lambda: False)
         _run_clips([(dest, (img, dest + ".tmp.mp4", n, width, height, fps, mv, motion_strength, crf),
-                     {"layout": clip_layout, "motion_frames": ml, "prev": pv})
-                    for (_, img, dest, n, mv, ml, pv) in todo], workers, stop, one_done)
+                     {"layout": clip_layout, "motion_frames": ml, "prev": pv, "fx": fxs})
+                    for (_, img, dest, n, mv, ml, pv, fxs) in todo], workers, stop, one_done)
     keep = {os.path.basename(j[2]) for j in jobs}
     for f in os.listdir(clips_dir):  # purge des clips obsolètes
         if f not in keep:
@@ -483,6 +652,10 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
     # 3) passe finale : mixage audio (+ sous-titres / présentateur s'il y en a)
     tick(0.9, "Mixage audio et export…")
     ass = build_ass(words or [], os.path.join(workdir, "captions.ass"), width, height, captions, overlays)
+    sfx_path = None
+    if sounds:
+        from services import sfx
+        sfx_path = sfx.build_track(sounds, total, os.path.join(workdir, "sfx.wav"))
     try:
         track = None
         if layout and layout.get("rig"):
@@ -490,7 +663,8 @@ def render_video(workdir, scenes, voice_path, out_path, *, width=1920, height=10
             presenter_track(layout, words, total, fps, track)
         _final_pass(workdir, inputs, in_durs, transition_dur, voice_path, out_path, total, ass, music_path,
                     music_volume, normalize, quality, fps, cancelled=cancelled,
-                    presenter=layout if layout and layout.get("presenter") else None, track=track)
+                    presenter=layout if layout and layout.get("presenter") else None, track=track,
+                    sfx=sfx_path)
     finally:
         for t in temp:
             try:
@@ -518,7 +692,7 @@ def _rel(path, base):
 
 
 def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, music_volume, normalize,
-                quality, fps, cancelled=None, presenter=None, track=None):
+                quality, fps, cancelled=None, presenter=None, track=None, sfx=None, sfx_volume=0.55):
     args = []
     for v in videos:
         args += ["-i", _rel(v, workdir)]
@@ -527,10 +701,14 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
     has_music = bool(music and os.path.isfile(music))
     if has_music:
         args += ["-stream_loop", "-1", "-i", os.path.abspath(music)]
+    has_sfx = bool(sfx and os.path.isfile(sfx))
+    si = n + 1 + (1 if has_music else 0)
+    if has_sfx:
+        args += ["-i", os.path.abspath(sfx)]
     graph = []
     vlabel = "0:v"  # une seule vidéo : les clips assemblés (fondus déjà intégrés)
     if presenter:  # présentateur incrusté par-dessus toute la vidéo
-        pi = n + 1 + (1 if has_music else 0)
+        pi = n + 1 + (1 if has_music else 0) + (1 if has_sfx else 0)
         if track:  # animation (bouche, yeux, baguette) calée sur la voix
             args += ["-f", "concat", "-safe", "0", "-i", _rel(track, workdir)]
         else:
@@ -559,7 +737,12 @@ def _final_pass(workdir, videos, vdurs, t, voice, out_path, total, ass, music, m
         graph.append("[vo][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[mix]")
     else:
         graph.append(f"[{va}:a]aformat=sample_rates=48000:channel_layouts=stereo,{vnorm}apad[mix]")
-    chain = f"[mix]afade=t=out:st={fade_st:.2f}:d=1.5[a]"
+    if has_sfx:  # bruitages sous la voix (après la normalisation de la voix)
+        graph.append(f"[{si}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={float(sfx_volume):.3f}[fx]")
+        graph.append("[mix][fx]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[mix2]")
+        chain = f"[mix2]afade=t=out:st={fade_st:.2f}:d=1.5[a]"
+    else:
+        chain = f"[mix]afade=t=out:st={fade_st:.2f}:d=1.5[a]"
     graph.append(chain)
     copy_video = n == 1 and not ass and not presenter
     if copy_video:
@@ -636,8 +819,7 @@ def export_pack(workdir, scenes, voice_path, zip_path, *, width=1920, height=108
     motions = pick_motions(len(scenes), motion, seed=len(scenes))
     segs = None
     if layout and layout.get("rig"):
-        from services import presenter
-        segs = presenter.track_segments(layout.get("rig_mode"), words or [], total, fps)
+        segs = _presenter_segs(layout, words, total, fps)
     jobs, t0 = [], 0
     for i, s in enumerate(scenes):
         mv = motions[i] if motion != "none" else "none"

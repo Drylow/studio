@@ -10,6 +10,7 @@
 
 Données : data/history/<id>/ (project.json, media/ = publicDir du rendu, vidéo finale à la racine).
 """
+import hashlib
 import io
 import json
 import math
@@ -17,6 +18,7 @@ import os
 import re
 import shutil
 import subprocess
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -26,18 +28,22 @@ from services import history_ai as HA
 from services import history_geo as GEO
 from services import history_sources as SRC
 from services import history_audio as HAU
+from services import history_channels as HC
+from services import history_thumbs as TH
+from services import pov_script as S
 from services import pov_store as store
+from services import runpod_render as RR
 
 APP_DIR = store.APP_DIR
 ENGINE_DIR = os.path.join(APP_DIR, "history_engine")
 
-DEFAULT_VOICE = {"provider": "algrow", "voice": "lfBVYbXnblkOddWFfEIg", "speed": 1.0}  # « Timothy – American Narrator »
+DEFAULT_VOICE = {"provider": "ai33", "voice": "VsVIOTkd9zjLUVaQO9TA", "speed": 0.9}  # « Earl Blackwood » (ElevenLabs via ai33pro), ~150 mots/min
 EDGE_VOICE = "en-US-GuyNeural"
 DEFAULTS = {"minutes": 3.0, "language": "en", "captions": True, "captions_after_hook": False, "film": 1.0,
-            "music_volume": 0.16, "all_templates": False,
+            "music_volume": 0.06, "all_templates": False,
             # animations actives par défaut (bataille, graphique, itinéraire : dispo mais coupés)
             "templates": ["statement", "number", "map", "quote", "character", "compare", "archive"],
-            "image_style": "ink",
+            "image_style": "paint", "channel": "",
             "cards_per_min": 1.5}
 STAGES = ("script", "voice", "plan", "images", "render")
 TAIL = 3.0  # secondes après la dernière phrase : la dernière animation se termine, la musique s'éteint
@@ -129,21 +135,62 @@ def summary(pr):
             "stage": stage(pr), "duration": (pr.get("voice") or {}).get("duration"),
             "segments": len(segs), "cards": sum(1 for s in segs if s["type"] not in ("image", "video")),
             "images_missing": len(_missing_assets(pr)) if segs else None,
-            "render": pr.get("render"), "job": job.as_dict() if job else None}
+            "render": pr.get("render"), "thumbnail": pr.get("thumbnail"),
+            "channel": (pr.get("options") or {}).get("channel") or "", "job": job.as_dict() if job else None}
 
 
 # ── 1. Script ───────────────────────────────────────────────────────────────
 
 def job_script(job, pid):
     pr = get_project(pid)
-    job.update(0.05, "Écriture du script (style documentaire)…")
-    sc = HA.write_script(pr["title"], pr["minutes"], pr.get("notes", ""), pr["options"].get("language", "en"))
+    key = (pr.get("options") or {}).get("channel")
+    fos = None
+    if HC.channel(key):
+        # chaîne History Docs : FacelessOS (recherche, hooks, plan, rédaction, audit greenlight) avec ses skills
+        job.update(0.01, "FacelessOS : préparation de la chaîne…")
+        fch = HC.fos_channel(key)
+        res = S.generate(fch, pr["title"], pr["minutes"], pr.get("notes", ""),
+                         progress=lambda p, m, _partial=None: job.update(0.02 + 0.78 * p, m), history=_channel_history(key, pid))
+        text, audit = res["script"], None
+        try:  # comme les chaînes 2D : 2 tours d'audit greenlight en plus sur le script fini (redites, slop, rythme)
+            text, audit = S.audit_script(fch, pr["title"], text, pr["minutes"], rounds=2,
+                                         progress=lambda p, m, _partial=None: job.update(0.8 + 0.18 * p, m))
+        except Exception as e:  # noqa: BLE001 — l'audit en plus est un bonus : le script du greenlight reste valable
+            print(f"[audit] {e}", flush=True)
+        sc = script_from_fos(text, pr["title"])
+        fos = {"verdict": (res.get("review") or {}).get("verdict"), "rotation": (res.get("outline") or {}).get("rotation"),
+               "files_used": (res.get("review") or {}).get("files_used"), "text": text,
+               "audit": (audit or {}).get("verdict") if isinstance(audit, dict) else None}
+    else:
+        job.update(0.05, "Écriture du script (style documentaire)…")
+        sc = HA.write_script(pr["title"], pr["minutes"], pr.get("notes", ""), pr["options"].get("language", "en"))
 
     def save(x):
-        x["script"] = sc
+        x["script"], x["fos"] = sc, fos
         x["voice"] = x["plan"] = x["render"] = None
     update_project(pid, save)
     job.update(1.0, f"Script prêt : {len(HA.narration(sc).split())} mots.")
+
+
+def script_from_fos(text, title):
+    """Texte FacelessOS (hook sans titre, puis « ## chapitre ») → {title, hook, sections} de l'outil."""
+    parts = S.parse(text)
+    hook = parts[0][1] if parts and not parts[0][0] else ""
+    body = parts[1:] if hook else parts
+    sections = [{"heading": h or f"Part {i + 1}", "text": re.sub(r"\s+", " ", t).strip()} for i, (h, t) in enumerate(body)]
+    if not hook and sections:
+        hook = sections.pop(0)["text"]
+    return {"title": title, "hook": re.sub(r"\s+", " ", hook).strip(), "sections": sections}
+
+
+def _channel_history(key, pid):
+    """Les dernières vidéos de la chaîne, pour que FacelessOS fasse tourner les angles (rotation)."""
+    out = []
+    for p in list_projects():
+        if p["id"] != pid and (p.get("options") or {}).get("channel") == key and p.get("script"):
+            out.append({"title": p["title"], "hook": p["script"].get("hook", ""),
+                        "rotation": json.dumps((p.get("fos") or {}).get("rotation") or "")})
+    return out[:3]
 
 
 # ── 2. Voix ─────────────────────────────────────────────────────────────────
@@ -211,7 +258,7 @@ def job_voice(job, pid):
     d = media_dir(pid)
     os.makedirs(os.path.join(d, "audio"), exist_ok=True)
     dest = os.path.join(d, "audio", "voice.mp3")
-    provider = vs.get("provider", "algrow")
+    provider = vs.get("provider", DEFAULT_VOICE["provider"])
     voice = vs.get("voice") or (EDGE_VOICE if provider == "edge" else "")
     job.update(0.05, f"Voix off ({provider})…")
     res = tts.synthesize(text, dest, provider=provider, voice=voice, speed=vs.get("speed", 1.0),
@@ -231,6 +278,18 @@ def job_voice(job, pid):
         x["plan"] = x["render"] = None
     update_project(pid, save)
     job.update(1.0, f"Voix prête : {res['duration'] / 60:.1f} min.")
+
+
+def chapters(pr):
+    """Chapitres YouTube (« 00:00 Intro », puis un par partie du script) calés sur la voix."""
+    words, sc = load_words(pr["id"]), pr.get("script") or {}
+    out, i = ["00:00 Intro"], len((sc.get("hook") or "").split())
+    for sec in sc.get("sections") or []:
+        if words and i < len(words):
+            t = int(words[i]["s"])
+            out.append(f"{t // 60:02d}:{t % 60:02d} {sec['heading']}")
+        i += len(sec["text"].split())
+    return out
 
 
 def load_words(pid):
@@ -717,8 +776,68 @@ def _diversify(segs, sents, cast, style):
         said = " ".join(x["text"] for x in sents if x["start"] < s["end"] and x["end"] > s["start"]) or \
             " ".join(x["text"] for x in sents if x["start"] <= mid <= x["end"])
         items.append({"i": k, "text": said, "prompt": s.get("_prompt", ""), "chars": s.get("_chars") or []})
-    for s, it in zip(imgs, HA.diversify_shots(items, cast, HA.image_style(style)["name"])):
+    name = HA.image_style(style)["name"]
+    chunks = [items[k:k + 45] for k in range(0, len(items), 45)]  # vidéo longue : le monteur image travaille par lots
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        done = list(ex.map(lambda c: HA.diversify_shots(c, cast, name), chunks))
+    for s, it in zip(imgs, [it for c in done for it in c]):
         s["_prompt"], s["_chars"] = it["prompt"], it["chars"]
+    _vary_gaze(imgs)
+
+
+FACE_CAMERA = " The person faces the camera, eyes looking straight at the viewer."
+
+
+def _vary_gaze(imgs):
+    """Un plan à personnage sur deux regarde la caméra : sinon tout le monde finit de profil, à gauche ou à droite."""
+    k = 0
+    for s in imgs:
+        p = s.get("_prompt") or ""
+        if not s.get("_chars") or FACE_CAMERA in p:
+            continue
+        if k % 2 == 0 and not any(w in p.lower() for w in ("camera", "viewer", "lens")):
+            s["_prompt"] = p.rstrip() + FACE_CAMERA
+        k += 1
+
+
+PLAN_CHUNK = 90  # phrases par appel au-delà desquelles on planifie par morceaux (vidéos longues)
+
+
+def _plan_all(job, sents, duration, hook_idx, allowed, max_cards, require_all=False):
+    """Plan visuel ; une vidéo longue est planifiée par morceaux (le 1er fixe le casting, les autres en parallèle)."""
+    rows = [{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents]
+    if len(rows) <= PLAN_CHUNK * 1.3:
+        return HA.plan_visuals(rows, duration, hook_idx, allowed=allowed, max_cards=max_cards, require_all=require_all)
+    n = -(-len(rows) // PLAN_CHUNK)
+    size = -(-len(rows) // n)
+    bounds = [(k * size, min(len(rows), (k + 1) * size)) for k in range(n)]
+
+    def cards_for(a, b):
+        return max(1, int(round(max_cards * (rows[b - 1]["end"] - rows[a]["start"]) / max(1.0, duration))))
+
+    a, b = bounds[0]
+    job.update(0.12, f"Plan visuel : partie 1/{n}…")
+    head = HA.plan_visuals(rows[a:b], duration, hook_idx, allowed=allowed, max_cards=cards_for(a, b))
+    cast = head["cast"]
+    parts = {0: head}
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {ex.submit(HA.plan_visuals, rows[a:b], duration, -1, allowed, cards_for(a, b), False, a, cast): k
+                for k, (a, b) in enumerate(bounds) if k}
+        for fut in as_completed(futs):
+            parts[futs[fut]] = fut.result()
+            job.update(0.12 + 0.5 * len(parts) / n, f"Plan visuel : {len(parts)}/{n} parties…")
+    beats, names = [], {c.get("name") for c in cast}
+    for k in range(n):
+        lo, hi = bounds[k]
+        part = [x for x in parts[k]["beats"] if lo <= int(x.get("at", lo) or 0) < hi] or parts[k]["beats"][:1]
+        if part and int(part[0].get("at", 0) or 0) != lo:
+            part[0]["at"] = lo
+        beats += part
+        for c in parts[k]["cast"]:
+            if c.get("name") not in names:
+                cast.append(c)
+                names.add(c.get("name"))
+    return {"cast": cast, "beats": beats}
 
 
 def job_plan(job, pid):
@@ -732,8 +851,7 @@ def job_plan(job, pid):
     opts = dict(DEFAULTS, **(pr.get("options") or {}))
     allowed = opts["templates"]
     max_cards = max(2, int(round(duration / 60 * float(opts["cards_per_min"]))))
-    plan = HA.plan_visuals([{"text": s["text"], "start": s["start"], "end": s["end"]} for s in sents], duration, hook_idx,
-                           allowed=allowed, max_cards=max_cards, require_all=opts.get("all_templates", False))
+    plan = _plan_all(job, sents, duration, hook_idx, allowed, max_cards, opts.get("all_templates", False))
     segs, cast = build_segments(plan, sents, words, duration, hook_end, allowed=allowed, max_cards=max_cards)
     job.update(0.7, "Monteur image : variété des plans…")
     _diversify(segs, sents, cast, opts.get("image_style"))
@@ -781,14 +899,29 @@ def _missing_assets(pr):
     return [r for r in portraits + reqs if not os.path.isfile(os.path.join(d, r[0]))]
 
 
+def _era(pr):
+    """Ancre d'époque à mettre en tête de chaque image (calculée une fois, gardée dans le projet)."""
+    per = pr.get("period") or {}
+    if not per.get("period"):
+        return ""
+    return (f"Setting: {per['period']} Every uniform, weapon, flag, garment, building and vehicle belongs to this "
+            f"exact time and place; nothing from other eras ({per.get('avoid', '')}).")
+
+
+REALISM = ("Documentary realism: everything at its true real-world size, real physics, the real architecture and "
+           "landscape of this place; nothing oversized, surreal or symbolic.")
+
+
 def _gen(pr, rel, kind, prompt, chars, info=None):
     d = media_dir(pr["id"])
     cast = (pr.get("plan") or {}).get("cast") or []
     style = HA.image_style((pr.get("options") or {}).get("image_style"))
     chars = (chars or [])[:1]  # un seul personnage de référence par plan : fini les duos répétés
     look = HA.cast_look(cast, chars)
+    era = _era(pr)
     if kind == "portrait":
-        full = f"{style['portrait']} {chars[0] if chars else ''}: {prompt}".strip()
+        full = (f"{style['portrait']} {chars[0] if chars else ''}: {prompt} {era} Facing the viewer, eyes toward the "
+                f"camera, not in profile.").strip()
         blob = ai.generate_image(full, width=1024, height=1536, quality="high")
         w, h = 900, 1200
     elif kind == "terrain":
@@ -801,21 +934,97 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
             _save_contained(blob, os.path.join(d, rel))
             _set_archive_credit(pr["id"], rel, credit)
             return
-        blob = ai.generate_image(f"{HA.ARCHIVE} {prompt}")
+        blob = ai.generate_image(f"{HA.ARCHIVE} {prompt} {era}")
         _set_archive_credit(pr["id"], rel, "Reconstruction (AI)")
         w, h = 1920, 1080
     else:
         refs = [os.path.join(d, f"images/cast_{HA.slug(n)}.jpg") for n in chars]
         refs = [r for r in refs if os.path.isfile(r)]
-        text = f"{prompt}. {('Character: ' + look) if look else ''} {style['shot']}"
-        if refs:
-            text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
-        blob = ai.generate_image(text, refs=refs or None, quality="high")
-        w, h = 1920, 1080
-    dest = os.path.join(d, rel)
-    ai.fit_cover(blob, w, h, dest, anchor_y=0.22 if kind in ("shot", "portrait") else 0.5)
-    if kind in ("shot", "portrait"):
+        avoid = ""
+        dest = os.path.join(d, rel)
+        for attempt in range(2):  # contrôle en vision (époque, bras en trop, texte) : refaite une fois si ratée
+            text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {REALISM} {style['shot']}{avoid}".strip()
+            if refs:
+                text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
+            blob = ai.generate_image(text, refs=refs or None, quality="high")
+            _fit_cover(blob, 1920, 1080, dest, anchor_y=0.22)
+            if attempt or not era:
+                break
+            try:
+                ok, problems = HA.check_shot(dest, pr.get("period"), prompt)
+            except Exception:  # noqa: BLE001 — contrôle indisponible : on garde l'image
+                break
+            if ok:
+                break
+            print(f"[qa] {rel} : {'; '.join(problems)[:200]}", flush=True)
+            avoid = " AVOID these mistakes of a previous attempt: " + "; ".join(problems) + "."
         _grade(dest)
+        return
+    dest = os.path.join(d, rel)
+    _fit_cover(blob, w, h, dest, anchor_y=0.22 if kind == "portrait" else 0.5)
+    if kind == "portrait":
+        _grade(dest)
+
+
+def _balance_gaze(job, pid):
+    """Les plans copient le regard du portrait de référence : tout le monde finit par regarder du même côté.
+    On mesure le sens du regard de chaque plan (vision, gardé dans `_facing`) et on retourne en miroir celui qui
+    regarde du même côté que le plan à personnage précédent : les regards alternent. Les vraies archives et les
+    animations ne sont jamais retournées."""
+    from PIL import Image, ImageOps
+    pr = get_project(pid)
+    d = media_dir(pid)
+    shots = [s for s in pr["plan"]["segments"] if s["type"] == "image" and s.get("src")]
+    todo = [s for s in shots if not s.get("_facing")]
+    if todo:
+        job.update(0.99, f"Sens des regards : {len(todo)} plan(s)…")
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            found = dict(zip([s["src"] for s in todo], ex.map(
+                lambda s: _safe(lambda: HA.shot_facing(os.path.join(d, s["src"])), "none"), todo)))
+    else:
+        found = {}
+    last, flips = None, []
+    for s in shots:
+        f = s.get("_facing") or found.get(s["src"], "none")
+        if f in ("left", "right"):
+            if f == last and not s.get("_flipped"):
+                flips.append(s["src"])
+                f = "left" if f == "right" else "right"
+            last = f
+        found[s["src"]] = f
+    for src in flips:
+        path = os.path.join(d, src)
+        ImageOps.mirror(Image.open(path)).save(path, quality=92)
+
+    def save(x):
+        for s in x["plan"]["segments"]:
+            if s.get("src") in found:
+                s["_facing"] = found[s["src"]]
+            if s.get("src") in flips:
+                s["_flipped"] = True
+    update_project(pid, save)
+    return len(flips)
+
+
+def _safe(fn, default):
+    try:
+        return fn()
+    except Exception:  # noqa: BLE001 — contrôle indisponible : on laisse le plan tel quel
+        return default
+
+
+def _fit_cover(blob, width, height, dest, anchor_y=0.5):
+    """Recadre au format exact (cover). anchor_y < 0.5 rogne surtout le bas : les têtes restent dans le cadre."""
+    from PIL import Image
+    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    sw, sh = im.size
+    scale = max(width / sw, height / sh)
+    nw, nh = max(width, round(sw * scale)), max(height, round(sh * scale))
+    im = im.resize((nw, nh), Image.LANCZOS)
+    left, top = (nw - width) // 2, int((nh - height) * max(0.0, min(1.0, anchor_y)))
+    im = im.crop((left, top, left + width, top + height))
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    im.save(dest, "JPEG", quality=92, optimize=True)
 
 
 def _save_contained(blob, dest, max_side=1800):
@@ -848,12 +1057,18 @@ def _grade(path):
 def job_images(job, pid):
     pr = get_project(pid)
     os.makedirs(os.path.join(media_dir(pid), "images"), exist_ok=True)
+    if not (pr.get("period") or {}).get("period"):
+        job.update(0.01, "Époque exacte pour les images…")
+        per = HA.period_brief(pr["title"], HA.narration(pr["script"]))
+        update_project(pid, lambda x: x.__setitem__("period", per))
+        pr = get_project(pid)
     portraits, reqs = _asset_requests(pr)
     d = media_dir(pid)
     todo_p = [r for r in portraits if not os.path.isfile(os.path.join(d, r[0]))]
     todo = [r for r in reqs if not os.path.isfile(os.path.join(d, r[0]))]
     total = len(todo_p) + len(todo)
     if not total:
+        _balance_gaze(job, pid)
         job.update(1.0, "Toutes les images sont prêtes.")
         return
     workers = max(1, int(os.getenv("AI_IMAGE_CONCURRENCY") or 6))
@@ -880,7 +1095,8 @@ def job_images(job, pid):
     run(todo, "Images")
     if errors:
         raise RuntimeError(f"{len(errors)} image(s) en échec (relance pour les refaire) : {errors[0][:200]}")
-    job.update(1.0, f"{total} image(s) générée(s).")
+    flipped = _balance_gaze(job, pid)
+    job.update(1.0, f"{total} image(s) générée(s), {flipped} retournée(s) pour varier les regards.")
 
 
 # ── 5. Rendu ────────────────────────────────────────────────────────────────
@@ -945,7 +1161,8 @@ def build_timeline(pr):
     hook_end = pr["voice"].get("hook_end") or 0
     return {
         "duration": round(duration, 3), "fps": 30, "width": 1920, "height": 1080,
-        "voice": pr["voice"]["file"], "music": "audio/music.mp3", "musicVolume": float(opts.get("music_volume", 0.16)),
+        "voice": pr["voice"]["file"], "music": "audio/music.mp3",
+        "musicVolume": float(opts.get("music_volume", DEFAULTS["music_volume"])),
         "sfx": cues, "film": float(opts.get("film", 1.0)),
         "captions": captions_from_words(words) if opts.get("captions", True) else [],
         "captionsFrom": hook_end if opts.get("captions_after_hook", True) else 0,
@@ -978,11 +1195,12 @@ def engine_ready():
     return True, node
 
 
-def _remotion(job, project_media, out_path, p0, p1):
+def _remotion(job, project_media, out_path, p0, p1, extra=()):
     ok, node = engine_ready()
     if not ok:
         raise RuntimeError(node)
-    cmd = [node, os.path.join(ENGINE_DIR, "render.mjs"), "--project", project_media, "--out", out_path]
+    cmd = [node, os.path.join(ENGINE_DIR, "render.mjs"), "--project", project_media] + (
+        ["--out", out_path] if out_path else []) + list(extra)
     conc = os.getenv("REMOTION_CONCURRENCY")
     if conc:
         cmd += ["--concurrency", conc]
@@ -1001,8 +1219,11 @@ def _remotion(job, project_media, out_path, p0, p1):
             if ev.get("stage") == "bundle":
                 job.update(p0, "Préparation du moteur d'animation…")
             elif ev.get("stage") == "render":
+                part = f" (morceau {ev['chunk']}/{ev['chunks']})" if ev.get("chunks") else ""
                 job.update(p0 + (p1 - p0) * float(ev.get("progress") or 0),
-                           f"Rendu {ev.get('renderedFrames', 0)}/{ev.get('total', '?')} images")
+                           f"Rendu {ev.get('renderedFrames', 0)}/{ev.get('total', '?')} images{part}")
+            elif ev.get("stage") == "audio":
+                job.update(p1, "Rendu du son…")
             if job.cancelled():
                 proc.kill()
                 raise store.JobCancelled("Annulé.")
@@ -1013,23 +1234,83 @@ def _remotion(job, project_media, out_path, p0, p1):
         raise RuntimeError("Rendu Remotion en échec :\n" + "\n".join(tail))
 
 
+CHUNK_FRAMES = 900  # 30 s par morceau : un redémarrage de la machine ne perd que quelques minutes de rendu
+
+
+def _read(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return f.read().strip()
+    except OSError:
+        return ""
+
+
 def job_render(job, pid):
     pr = get_project(pid)
     missing = _missing_assets(pr)
     if missing:
         raise RuntimeError(f"{len(missing)} image(s) manquante(s) : lance d'abord les images.")
-    job.update(0.02, "Musique, bruitages et sous-titres…")
-    tl = build_timeline(pr)
     d = media_dir(pid)
+    # rendu par morceaux (render.mjs --chunk-dir) : après un redémarrage, on reprend au morceau suivant. Les
+    # morceaux ne servent que pour la même timeline (même plan, même voix, mêmes options).
+    chunks = os.path.join(project_dir(pid), "chunks")
+    sig = hashlib.sha1(json.dumps([pr.get("plan"), pr.get("voice"), pr.get("options")], sort_keys=True,
+                                  default=str).encode("utf-8")).hexdigest()
+    saved = os.path.join(chunks, "timeline.json")
+    if _read(os.path.join(chunks, "sig.txt")) == sig and os.path.isfile(saved):
+        job.update(0.02, "Reprise du rendu…")
+        with open(saved, encoding="utf-8") as f:
+            tl = json.load(f)
+    else:
+        shutil.rmtree(chunks, ignore_errors=True)
+        job.update(0.02, "Musique, bruitages et sous-titres…")
+        tl = build_timeline(pr)
+        os.makedirs(chunks)
+        with open(saved, "w", encoding="utf-8") as f:
+            json.dump(tl, f, ensure_ascii=False)
+        with open(os.path.join(chunks, "sig.txt"), "w") as f:
+            f.write(sig)
+        with open(os.path.join(chunks, "frames.txt"), "w") as f:
+            f.write(str(CHUNK_FRAMES))
     with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump(tl, f, ensure_ascii=False)
-    raw = os.path.join(project_dir(pid), "render_raw.mp4")
-    _remotion(job, d, raw, 0.05, 0.94)
-    job.update(0.95, "Mixage final (-14 LUFS)…")
+    size = _read(os.path.join(chunks, "frames.txt")) or "2700"  # un rendu commencé garde sa taille de morceau
+    # rendu local (gratuit, du dernier morceau au premier) ET, si RUNPOD_API_KEY, une machine RunPod en même temps
+    # (du premier au dernier) : ils se rejoignent au milieu ; la machine est supprimée dès que tout est rendu
+    done = threading.Event()
+    helper = None
+    if RR.available():
+        def remote():
+            try:
+                RR.render(job, d, chunks, int(size), math.ceil(tl["duration"] * tl["fps"]), 0.05, 0.94,
+                          stop=done.is_set)
+            except Exception as e:  # noqa: BLE001 — sans RunPod, le rendu local fait tout
+                print(f"[runpod] {e}", flush=True)
+        helper = threading.Thread(target=remote, daemon=True)
+        helper.start()
+    for f in os.listdir(chunks):  # marques d'un rendu interrompu
+        if f.startswith("claim_"):
+            os.remove(os.path.join(chunks, f))
+    try:
+        if helper:  # 1er passage : le local laisse à RunPod les morceaux qu'il a pris, puis attend qu'il ait fini
+            _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse",
+                                                 "--skip-claimed", "--no-audio"])
+            helper.join(timeout=1800)
+    finally:
+        done.set()
+        if helper:
+            helper.join(timeout=300)
+    # ce qui manque encore (machine RunPod perdue…) + le son
+    _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse"])
+    job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
+    parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
+    with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
+        f.writelines(f"file '{p}'\n" for p in parts)
     name = f"{HA.slug(pr['title'], 60)}_{int(time.time()) % 1000000}.mp4"
-    media.run(["-i", raw, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k",
-               "-movflags", "+faststart", os.path.join(project_dir(pid), name)])
-    os.remove(raw)
+    media.run(["-f", "concat", "-safe", "0", "-i", os.path.join(chunks, "parts.txt"), "-i", os.path.join(chunks, "audio.wav"),
+               "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac",
+               "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", os.path.join(project_dir(pid), name)])
+    shutil.rmtree(chunks, ignore_errors=True)
     old = (pr.get("render") or {}).get("file")
 
     def save(x):
@@ -1056,6 +1337,106 @@ class _Sub:
         return self.job.cancelled()
 
 
+THUMB_LOOK = ("YouTube thumbnail painting in the style of the top history documentary channels: one dramatic scene, "
+              "vivid saturated colours, strong contrast, fire glow, drifting smoke and a dramatic sky; {subject}; the "
+              "action of the story behind. Keep the {corner} corner of the frame calmer (sky or smoke) for a title "
+              "added later. Era-accurate. No text, no letters.")
+CAMEO_LOOK = ("Head-and-shoulders portrait of {who}, as an authentic period portrait from that era (a 19th-century "
+              "engraving or black-and-white photograph for modern times; an engraved portrait or marble bust for "
+              "antiquity), facing the viewer, plain light background, nothing else. No text.")
+
+
+def thumb_concepts(pr, n=3):
+    """n idées de miniature façon Dose of History : scène, personnage face caméra, 2-4 mots (mot fort en rouge),
+    médaillon facultatif d'un acteur clé. Les guillemets sont réservés aux vrais mots du témoin."""
+    script = HA.narration(pr["script"])[:9000]
+    data = ai.chat_json(
+        f'Design {n} different YouTube thumbnails for the history documentary "{pr["title"]}". Study of the most '
+        'viewed thumbnails of the niche (Dose of History): one dramatic painted scene, a person big in the '
+        'foreground looking straight at the viewer, fire, smoke, flags; ONE short line of text of 2-4 words in '
+        'white with the strongest word in red (e.g. BRUTAL FATE, CHILLING DISCOVERY, "I SAW CUSTER DIE"); '
+        'sometimes a black-and-white period portrait of a key person in an oval cameo.\n'
+        'Rules for the text: an emotional hook, never a description or a detail of the plot. Best: 2-3 words. '
+        'Patterns that work: BRUTAL FATE, CHILLING DISCOVERY, WORSE THAN DEATH, SHE SAW EVERYTHING, 28 VS 700, '
+        'NO ONE SURVIVED, HIDDEN TRUTH; one strong word in red (BRUTAL, CHILLING, HORRIFYING, TRUTH, EVERYTHING, a '
+        'number). It adds to the title without repeating it. Put it in quotes ONLY when it is the witness\'s real '
+        'words from the script, copied exactly and very short (2-4 words); never invent a quote. All 3 texts differ.\n'
+        'Rules for the image: a true moment of the story, era-accurate, no gore in close-up; the person in the '
+        'foreground is the witness or the hero of the story. The cameo, used in at most 2 of the 3, is the MOST '
+        'famous real person of the story (the leader, the enemy commander, the famous name in the title), never a '
+        'minor figure.\n'
+        'Return JSON only: {"concepts": [{"text": "2-4 WORDS", "red": ["WORD"], "quotes": false, '
+        '"corner": "top-left|top-right|bottom-left|bottom-right", "subject": "who stands big in the foreground '
+        '(age, look, clothes, expression) and on which side", "scene": "one sentence: the moment and the place behind", '
+        '"cameo": "real person + look, or empty"}]}\n\nSCRIPT (excerpt):\n' + script,
+        model=ai.text_model(), timeout=240)
+    out = []
+    for c in (data.get("concepts") or [])[:n]:
+        if isinstance(c, dict) and c.get("text") and c.get("scene"):
+            corner = c.get("corner") if c.get("corner") in ("top-left", "top-right", "bottom-left", "bottom-right") \
+                else "top-right"
+            out.append({"text": str(c["text"]).strip().strip('"“”'), "red": [str(x) for x in c.get("red") or []][:2],
+                        "quotes": bool(c.get("quotes")), "corner": corner, "subject": str(c.get("subject") or ""),
+                        "scene": str(c["scene"]), "cameo": str(c.get("cameo") or "").strip()})
+    if not out:
+        raise ai.AIError("Miniature : aucune idée.")
+    return out
+
+
+def job_thumbnail(job, pid, n=3):
+    """Miniatures (n variantes au choix) : peinture saturée + personnage face caméra + 2-4 mots posés par le code
+    (blanc, mot fort en rouge) + médaillon noir et blanc facultatif. La 1re est la miniature par défaut."""
+    pr = get_project(pid)
+    style = HA.image_style((pr.get("options") or {}).get("image_style"))
+    if not pr.get("period") and pr.get("script"):
+        per = HA.period_brief(pr["title"], HA.narration(pr["script"]))
+        update_project(pid, lambda x: x.__setitem__("period", per))
+        pr = get_project(pid)
+    era = _era(pr)
+    job.update(0.05, "Miniatures : idées…")
+    concepts = (pr.get("thumb") or {}).get("concepts") or thumb_concepts(pr, n)
+    update_project(pid, lambda x: x.__setitem__("thumb", {"concepts": concepts}))
+    d = project_dir(pid)
+
+    def make(k_c):
+        k, c = k_c
+        corner = c["corner"].replace("-", " ")
+        blob = ai.generate_image(f"{era} {c['scene']} {THUMB_LOOK.format(subject=c['subject'], corner=corner)} "
+                                 f"{style['shot']}", width=1920, height=1080, quality="high")
+        base = os.path.join(d, f"thumbnail_base_{k}.jpg")
+        ai.fit_cover(blob, 1280, 720, base)
+        cameo = None
+        if c.get("cameo"):
+            try:
+                cameo = os.path.join(d, f"thumbnail_cameo_{k}.jpg")
+                ai.fit_cover(ai.generate_image(CAMEO_LOOK.format(who=c["cameo"]), width=1024, height=1536,
+                                               quality="high"), 768, 1024, cameo)
+            except Exception as e:  # noqa: BLE001 — sans médaillon, la miniature reste bonne
+                print(f"[thumbnail] médaillon : {e}", flush=True)
+                cameo = None
+        side = "left" if c["corner"].endswith("left") else "right"
+        rel = f"thumbnail_{k}.jpg"
+        TH.compose_doh(base, c["text"], c["red"], c["corner"], cameo=cameo, cameo_side=side, quotes=c["quotes"],
+                       dest=os.path.join(d, rel))
+        return rel
+
+    made = []
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        for i, fut in enumerate([ex.submit(make, (k + 1, c)) for k, c in enumerate(concepts)]):
+            try:
+                made.append(fut.result())
+            except Exception as e:  # noqa: BLE001
+                print(f"[thumbnail] variante {i + 1} : {e}", flush=True)
+            job.update(0.1 + 0.9 * (i + 1) / len(concepts), f"Miniatures {len(made)}/{len(concepts)}")
+    if not made:
+        raise ai.AIError("Miniatures : aucune image.")
+
+    def save(x):
+        x["thumbnail"], x["thumb_options"] = made[0], made
+    update_project(pid, save)
+    job.update(1.0, f"{len(made)} miniature(s) prête(s).")
+
+
 def job_autopilot(job, pid):
     steps = [("script", job_script, 0.0, 0.12, "1/5 Script"), ("voice", job_voice, 0.12, 0.22, "2/5 Voix"),
              ("plan", job_plan, 0.22, 0.3, "3/5 Plan visuel"), ("images", job_images, 0.3, 0.7, "4/5 Images"),
@@ -1068,11 +1449,16 @@ def job_autopilot(job, pid):
         if STAGES.index(key) < STAGES.index(cur):
             continue
         fn(_Sub(job, a, b, label), pid)
+    if not get_project(pid).get("thumbnail"):
+        try:
+            job_thumbnail(_Sub(job, 0.99, 1.0, "Miniature"), pid)
+        except Exception as e:  # noqa: BLE001 — la vidéo est faite : une miniature ratée se refait à part
+            print(f"[thumbnail] {e}", flush=True)
     job.update(1.0, "Vidéo terminée ✔")
 
 
 JOBS = {"script": job_script, "voice": job_voice, "plan": job_plan, "images": job_images, "render": job_render,
-        "autopilot": job_autopilot}
+        "thumbnail": job_thumbnail, "autopilot": job_autopilot}
 
 
 def invalidate_from(pid, step):

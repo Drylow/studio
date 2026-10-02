@@ -1,0 +1,20 @@
+# Recherche et consignes — Your Life as a Stolen Credit Card
+
+Faits vérifiés et règles données au script.
+
+# Recherche et consignes — Your Life as a Stolen Credit Card
+
+Faits vérifiés et règles données au script.
+
+VERIFIED FACTS for this video (use them, rounded; name the source lightly inside the sentence for big facts; do not invent other statistics or sources):
+- Card fraud losses worldwide were about $33.4 billion in 2024 (Nilson Report); the US makes up about 26% of card spending worldwide but about 42% of card fraud losses.
+- In 2024 the FTC received about 449,000 reports of credit card fraud (new accounts opened or existing ones hijacked), its most common kind of identity theft report.
+- Gas pump skimmers: criminals hide a skimmer inside or over a pump's card reader; one skimmer can store about 1,000 card numbers. Florida police once broke up a skimming ring holding about 36,000 stolen card numbers (13 arrests).
+- Skimmed card data is sold on dark web card shops in batches; studies of these shops put the typical price of one card with its security code at roughly $8 to $17 (NordVPN, Comparitech studies), more for cards with a long validity or a high limit.
+- "Card testing": fraudsters make tiny charges, often 50 cents to $5 (a small online purchase or donation), to check whether a stolen card still works before using it for bigger purchases or reselling it as "checked".
+- Cloned cards: the stolen data is written onto blank cards with a magnetic stripe.
+- 2025 New Jersey case (New Jersey Attorney General): a network used card data stolen with gas pump skimmers to buy diesel fuel with cloned cards across New Jersey, Pennsylvania and other states, then resold the diesel, about $3.4 million in profit.
+- Banks' fraud systems flag unusual patterns (new states, many fuel purchases in a row); the card is frozen, the owner disputes the charges (chargeback), US law and card network zero-liability rules usually mean the owner is reimbursed; the old number is cancelled and a new card is issued.
+STORY SHAPE (constructed example, typical, unnamed people): "you" are a blue credit card belonging to a night-shift nurse in New Jersey. The twist: your plastic body never leaves her wallet; it is your NUMBER, your copy, that travels. Hands, in this real order: Hand 1 the owner (her wallet, the hospital badge next to you, the gas station at 6 a.m. after a shift) → Hand 2 the skimmer inside the pump (you're copied onto a chip with about 1,000 other cards) → Hand 3 the collector who opens the pump weeks later → Hand 4 the card shop online (you're a line in a list, sold for a few dollars) → Hand 5 the tester (a 1 dollar charge on a small website, you pass) → Hand 6 the cloner (your number is written onto a blank white card; now there are two of you) → Hand 7 the diesel crew (your twin fills truck tanks at gas stations in three states; the diesel is resold) → Hand 8 the bank's fraud analyst (the pattern is flagged, you're frozen) → back to Hand 1 (she disputes the charges, gets her money back, and cuts you in half with kitchen scissors; a new card with a new number arrives).
+OWNER CUTAWAYS: the text alert at 4 a.m. about a purchase in Pennsylvania, the call to the bank, the chargeback form, the new card in the mail.
+RULES: describe what happens, never instructions (no steps on how to skim, clone, test or cash out). Never glamorize. No bank or card network brand names.

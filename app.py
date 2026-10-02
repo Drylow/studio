@@ -80,7 +80,7 @@ app.register_blueprint(youtube_bp)   # connexion YouTube OAuth par projet (publi
 app.register_blueprint(lore_bp)      # pont vers le tool vidéo « Lore » (worker de rendu distant)
 app.register_blueprint(worker_bp)    # worker autonome (produit + poste aux dates du calendrier)
 app.register_blueprint(pov_bp)       # 2D Videos : script → voix → images → montage, 100 % local
-app.register_blueprint(history_bp)   # Format Histoire : documentaire + animations Remotion (history_engine/)
+app.register_blueprint(history_bp)   # History Docs : documentaire + animations Remotion (history_engine/)
 
 
 # --- Gate global ---------------------------------------------------------

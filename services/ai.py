@@ -221,10 +221,8 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
         st = getattr(e, "status", None)
         if use_fb and st in (4290, 429):
             _log("/chat/completions", f"{body['model']} indisponible ({st}) → secours {fb}", time.time())
-            # on n'insiste plus sur le modèle saturé : 5 min (429), 10 min (quota sans heure de reprise ;
-            # sinon chaque appel repayait ~90 s d'attente du proxy avant de basculer sur le secours)
-            pause = 300 if st == 429 else 600
-            _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + pause)
+            if st == 429:  # 5 min sans insister sur le modèle saturé
+                _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + 300)
             body["model"] = fb
             body.pop("reasoning_effort", None)
             return _with_retries(once, tries=tries)
@@ -361,20 +359,25 @@ def _to_png(blob, max_side=1536):
         return blob
 
 
-def fit_cover(blob, width, height, dest_path, quality=92, anchor_y=0.5):
-    """Recadre l'image (cover) au format exact de la vidéo et l'écrit en JPEG.
+def fit_cover(blob, width, height, dest_path, quality=92):
+    """Recadre l'image (cover, centré) au format exact de la vidéo et l'écrit en JPEG.
 
     Le modèle ne respecte pas toujours le ratio demandé (carré, 3:2, 16:9...),
-    donc on normalise ici pour que le montage soit toujours propre. anchor_y < 0.5
-    rogne surtout le bas (garde les têtes dans les plans de personnages)."""
+    donc on normalise ici pour que le montage soit toujours propre."""
     if Image is None:
         raise AIError("Pillow manquant : pip install Pillow")
-    im = Image.open(io.BytesIO(blob)).convert("RGB")
+    im = Image.open(io.BytesIO(blob))
+    if im.mode in ("RGBA", "LA", "P"):  # fond transparent (souvent rendu pour « fond blanc ») : posé sur du blanc
+        im = im.convert("RGBA")
+        bg = Image.new("RGBA", im.size, (255, 255, 255, 255))
+        bg.alpha_composite(im)
+        im = bg
+    im = im.convert("RGB")
     sw, sh = im.size
     scale = max(width / sw, height / sh)
     nw, nh = max(width, round(sw * scale)), max(height, round(sh * scale))
     im = im.resize((nw, nh), Image.LANCZOS)
-    left, top = (nw - width) // 2, int((nh - height) * max(0.0, min(1.0, anchor_y)))
+    left, top = (nw - width) // 2, (nh - height) // 2
     im = im.crop((left, top, left + width, top + height))
     if os.path.dirname(dest_path):
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)

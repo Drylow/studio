@@ -79,6 +79,39 @@ TOOLS = {
         "icon": '<circle cx="12" cy="8" r="4.2"/><path d="M5.5 21c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/>'
                 '<path d="M18.5 3.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/>',
     },
+    "oel-studio": {
+        "slug": "oel-studio",
+        "category": "youtube",
+        "name": "ODDLY EXPENSIVE LIVES",
+        "short": "Oddly Expensive Lives",
+        "tag": "// OEL",
+        "desc": "Le studio de la chaîne Oddly Expensive Lives : « The Economics of… » expliqué par un prof animé "
+                "sur fond quadrillé. Titre + durée → script façon cours (la facture poste par poste), voix, "
+                "images, musique et montage.",
+        "entry": "osl-studio/index.html",
+        "query": "studio=oddly_expensive_en",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "gold",
+        "icon": '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    },
+    "ost-studio": {
+        "slug": "ost-studio",
+        "category": "youtube",
+        "name": "ODDLY SPECIFIC THINGS",
+        "short": "Oddly Specific Things",
+        "tag": "// OST",
+        "desc": "Le studio de la chaîne Oddly Specific Things : « Your Life as a Stolen Phone »… tu ES l'objet, "
+                "suivi de main en main. Titre + durée → script FacelessOS, voix, objet-personnage consistant, "
+                "cartes HAND #n, trajets animés, musique et montage. Miniatures simples façon Mr. Ranks.",
+        "entry": "osl-studio/index.html",
+        "query": "studio=oddly_things_en",
+        "theme": "dark",
+        "needs_render": False,
+        "accent": "cyan",
+        "icon": '<rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>'
+                '<circle cx="10.3" cy="9" r=".9"/><circle cx="13.7" cy="9" r=".9"/><path d="M10.6 12.2c.8.6 2 .6 2.8 0"/>',
+    },
     "history-studio": {
         "slug": "history-studio",
         "category": "youtube",
@@ -86,8 +119,9 @@ TOOLS = {
         "short": "History Docs",
         "tag": "// HIST",
         "desc": "Documentaires d'histoire façon Dose of History : titre → script immersif, voix Algrow, "
-                "images IA photoréalistes, cartes de bataille animées, itinéraires, fiches perso, stats, "
-                "archives et citations (Remotion), look pellicule. Vidéo montée, 100 % local.",
+                "images IA dessinées (encre, BD, peinture) ou photoréalistes, citations synchronisées sur la voix "
+                "avec portrait, cartes de mouvements sur vraie géographie, fiches perso, archives de musée "
+                "(Remotion), grain papier. Vidéo montée, 100 % local.",
         "entry": "history-studio/index.html",
         "theme": "dark",
         "needs_render": False,
@@ -317,7 +351,8 @@ def tool_page(slug):
         "tool_frame.html",
         tool=tool,
         installed=installed,
-        iframe_src=("/toolfiles/" + tool["entry"]) if installed else "",
+        iframe_src=("/toolfiles/" + tool["entry"] + ("?" + tool["query"] if tool.get("query") else ""))
+        if installed else "",
         active_page="tool-" + slug,
     )
 

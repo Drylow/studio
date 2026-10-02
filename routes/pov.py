@@ -327,7 +327,7 @@ def presenter(cid):
         return jsonify(ch)
     b = _body()
     anim = (request.form.get("anim") or b.get("anim") or E.board_config(ch).get("anim") or "poses")
-    anim = "none" if anim == "none" else "poses"
+    anim = anim if anim in ("none", "stick") else "poses"
     try:
         blob = _upload_bytes()
         if blob is not None:
@@ -573,6 +573,7 @@ def studio(template):
                                 "pacing": mt.get("pacing") or 6, "voice_provider": (ch.get("voice") or {}).get("provider"),
                                 "thumb_style": ch.get("thumb_style") or "",
                                 "has_reference": bool((ch.get("reference_scripts") or "").strip())},
+                    "ui": E.TEMPLATES[template].get("studio") or {}, "studios": E.studio_list(),
                     "formats": E.studio_formats(ch), "projects": prs})
 
 

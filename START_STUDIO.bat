@@ -13,8 +13,8 @@ rem Dépendances manquantes (2D Videos : voix Edge, ffmpeg embarqué…) → ins
   echo  // Installation des dependances...
   %PY% -m pip install -r requirements.txt
 )
-rem Format Histoire : moteur d'animation Remotion (Node.js requis, dependances installees une fois).
-where node >nul 2>nul || echo  // INFO : Node.js absent - installe-le (nodejs.org) pour le format Histoire.
+rem History Docs : moteur d'animation Remotion (Node.js requis, dependances installees une fois).
+where node >nul 2>nul || echo  // INFO : Node.js absent - installe-le (nodejs.org) pour History Docs.
 where node >nul 2>nul && if not exist "history_engine\node_modules\remotion" (
   echo  // Installation du moteur d'animation Remotion...
   pushd history_engine & call npm install --no-audit --no-fund & popd

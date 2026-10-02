@@ -94,3 +94,6 @@
 .fastopt input { accent-color: var(--s-accent); }
 .fmtrow { margin-top: 12px; max-width: 460px; }
 .fmtrow select { width: 100%; }
+
+#studioPick { margin-left: 10px; max-width: 220px; font-size: 13px; padding: 4px 8px; }
+.top .brand span { white-space: nowrap; }
