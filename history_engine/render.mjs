@@ -52,8 +52,9 @@ if (args.stills !== undefined) {
     const frameRange = [i * size, Math.min(total, (i + 1) * size) - 1];
     let last = -1;
     await renderMedia({
-      composition, serveUrl, codec: 'h264', crf: 23, x264Preset: 'medium', muted: true, frameRange,
-      outputLocation: tmp, inputProps: timeline, browserExecutable, concurrency,
+      composition, serveUrl, codec: 'h264', crf: parseInt(args.crf || '23', 10), x264Preset: args.preset || 'medium',
+      muted: true, frameRange, outputLocation: tmp, inputProps: timeline, browserExecutable, concurrency,
+      ...(args.gl ? {chromiumOptions: {gl: args.gl}} : {}),
       onProgress: ({progress}) => {
         const p = Math.floor(progress * 100);
         if (p !== last) {
