@@ -881,14 +881,24 @@ def _missing_assets(pr):
     return [r for r in portraits + reqs if not os.path.isfile(os.path.join(d, r[0]))]
 
 
+def _era(pr):
+    """Ancre d'époque à mettre en tête de chaque image (calculée une fois, gardée dans le projet)."""
+    per = pr.get("period") or {}
+    if not per.get("period"):
+        return ""
+    return (f"Setting: {per['period']} Every uniform, weapon, flag, garment, building and vehicle belongs to this "
+            f"exact time and place; nothing from other eras ({per.get('avoid', '')}).")
+
+
 def _gen(pr, rel, kind, prompt, chars, info=None):
     d = media_dir(pr["id"])
     cast = (pr.get("plan") or {}).get("cast") or []
     style = HA.image_style((pr.get("options") or {}).get("image_style"))
     chars = (chars or [])[:1]  # un seul personnage de référence par plan : fini les duos répétés
     look = HA.cast_look(cast, chars)
+    era = _era(pr)
     if kind == "portrait":
-        full = f"{style['portrait']} {chars[0] if chars else ''}: {prompt}".strip()
+        full = f"{style['portrait']} {chars[0] if chars else ''}: {prompt} {era}".strip()
         blob = ai.generate_image(full, width=1024, height=1536, quality="high")
         w, h = 900, 1200
     elif kind == "terrain":
@@ -901,20 +911,35 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
             _save_contained(blob, os.path.join(d, rel))
             _set_archive_credit(pr["id"], rel, credit)
             return
-        blob = ai.generate_image(f"{HA.ARCHIVE} {prompt}")
+        blob = ai.generate_image(f"{HA.ARCHIVE} {prompt} {era}")
         _set_archive_credit(pr["id"], rel, "Reconstruction (AI)")
         w, h = 1920, 1080
     else:
         refs = [os.path.join(d, f"images/cast_{HA.slug(n)}.jpg") for n in chars]
         refs = [r for r in refs if os.path.isfile(r)]
-        text = f"{prompt}. {('Character: ' + look) if look else ''} {style['shot']}"
-        if refs:
-            text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
-        blob = ai.generate_image(text, refs=refs or None, quality="high")
-        w, h = 1920, 1080
+        avoid = ""
+        dest = os.path.join(d, rel)
+        for attempt in range(2):  # contrôle en vision (époque, bras en trop, texte) : refaite une fois si ratée
+            text = f"{era} {prompt}. {('Character: ' + look) if look else ''} {style['shot']}{avoid}".strip()
+            if refs:
+                text += " Keep this character's face, hair and outfit identical to the reference portrait, drawn in the same style."
+            blob = ai.generate_image(text, refs=refs or None, quality="high")
+            _fit_cover(blob, 1920, 1080, dest, anchor_y=0.22)
+            if attempt or not era:
+                break
+            try:
+                ok, problems = HA.check_shot(dest, pr.get("period"), prompt)
+            except Exception:  # noqa: BLE001 — contrôle indisponible : on garde l'image
+                break
+            if ok:
+                break
+            print(f"[qa] {rel} : {'; '.join(problems)[:200]}", flush=True)
+            avoid = " AVOID these mistakes of a previous attempt: " + "; ".join(problems) + "."
+        _grade(dest)
+        return
     dest = os.path.join(d, rel)
-    _fit_cover(blob, w, h, dest, anchor_y=0.22 if kind in ("shot", "portrait") else 0.5)
-    if kind in ("shot", "portrait"):
+    _fit_cover(blob, w, h, dest, anchor_y=0.22 if kind == "portrait" else 0.5)
+    if kind == "portrait":
         _grade(dest)
 
 
@@ -962,6 +987,11 @@ def _grade(path):
 def job_images(job, pid):
     pr = get_project(pid)
     os.makedirs(os.path.join(media_dir(pid), "images"), exist_ok=True)
+    if not (pr.get("period") or {}).get("period"):
+        job.update(0.01, "Époque exacte pour les images…")
+        per = HA.period_brief(pr["title"], HA.narration(pr["script"]))
+        update_project(pid, lambda x: x.__setitem__("period", per))
+        pr = get_project(pid)
     portraits, reqs = _asset_requests(pr)
     d = media_dir(pid)
     todo_p = [r for r in portraits if not os.path.isfile(os.path.join(d, r[0]))]

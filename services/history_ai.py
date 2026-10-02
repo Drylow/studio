@@ -274,6 +274,49 @@ def pick_archive(candidates, beat):
         return -1
 
 
+def period_brief(title, script_text):
+    """L'époque exacte de la vidéo pour les images : sans elle, le modèle d'image mélange les guerres (tuniques
+    rouges, shakos napoléoniens, légionnaires, casques de 1940 à Gettysburg). → {"period", "avoid"}."""
+    prompt = (f"A history documentary titled \"{title}\" will be illustrated shot by shot. From the narration below, "
+              "write the visual period anchor that every image prompt will start with.\n"
+              "period: ONE sentence, max 70 words: exact years and place, then how people look: the uniforms of each "
+              "side (colours, headgear, weapons), civilian clothes, buildings and vehicles of that time and place.\n"
+              "avoid: ONE line listing the look-alike eras an image model tends to confuse with this one (for example "
+              "British redcoats, Napoleonic shakos, Roman armour, medieval knights, World War helmets), plus modern objects.\n"
+              "Return JSON only: {\"period\": \"...\", \"avoid\": \"...\"}\n\nNARRATION (excerpt):\n"
+              + (script_text or "")[:6000])
+    data = ai.chat_json(prompt, model=ai.fast_model(), timeout=180, tries=3)
+    return {"period": str(data.get("period") or "").strip(), "avoid": str(data.get("avoid") or "").strip()}
+
+
+SHOT_QA = """You check one illustration for a history documentary. Setting: {period}
+What the shot should show: {prompt}
+Return JSON only: {{"ok": true or false, "problems": ["short description of each problem"]}}.
+ok = false ONLY for clear, visible errors:
+- people, uniforms, headgear, flags, weapons, armour, clothes, buildings or vehicles from another era or place than the setting (watch for: {avoid});
+- a person with three arms or hands, two heads, or a melted, duplicated face;
+- readable words, letters or numbers;
+- gore in close-up (exposed organs, severed limbs shown in detail).
+Small stylistic liberties are fine."""
+
+
+def check_shot(path, period, prompt=""):
+    """Contrôle en vision d'une image de plan → (ok, [problèmes])."""
+    import base64
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((896, 896))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=86)
+    q = SHOT_QA.format(period=(period or {}).get("period", ""), avoid=(period or {}).get("avoid", ""),
+                       prompt=(prompt or "")[:500])
+    content = [{"type": "text", "text": q},
+               {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
+    res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=240)
+    return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
+
+
 def cast_look(cast, names):
     by = {(c.get("name") or "").lower(): c for c in cast or []}
     out = []
