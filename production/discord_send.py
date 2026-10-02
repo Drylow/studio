@@ -20,7 +20,7 @@ D = folder(sys.argv[1])
 link = sys.argv[2] if len(sys.argv) > 2 else ""
 URL = webhook() + "?wait=true"
 info = json.load(open(os.path.join(D, "video.json"))) if os.path.isfile(os.path.join(D, "video.json")) else {}
-BRAND = ((E.TEMPLATES.get(info.get("template") or "", {}).get("studio") or {}).get("brand")) or "Video"
+BRAND = info.get("brand") or ((E.TEMPLATES.get(info.get("template") or "", {}).get("studio") or {}).get("brand")) or "Video"
 meta = json.load(open(os.path.join(D, "meta.json")))
 thumb = open(os.path.join(D, "thumb_choice.txt")).read().strip()
 

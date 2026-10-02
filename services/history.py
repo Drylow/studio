@@ -278,6 +278,18 @@ def job_voice(job, pid):
     job.update(1.0, f"Voix prête : {res['duration'] / 60:.1f} min.")
 
 
+def chapters(pr):
+    """Chapitres YouTube (« 00:00 Intro », puis un par partie du script) calés sur la voix."""
+    words, sc = load_words(pr["id"]), pr.get("script") or {}
+    out, i = ["00:00 Intro"], len((sc.get("hook") or "").split())
+    for sec in sc.get("sections") or []:
+        if words and i < len(words):
+            t = int(words[i]["s"])
+            out.append(f"{t // 60:02d}:{t % 60:02d} {sec['heading']}")
+        i += len(sec["text"].split())
+    return out
+
+
 def load_words(pid):
     try:
         with open(os.path.join(project_dir(pid), "words.json"), encoding="utf-8") as f:
