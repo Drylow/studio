@@ -30,7 +30,9 @@
   - Un énorme mot noir arrondi en haut : **STOLEN**.
   - **Varier l'action d'une vidéo à l'autre** (sinon c'est répétitif) : même style, mais une scène différente
     à chaque fois (objet arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé
-    resté seul, mis en carton, tir à la corde, grue + conteneur…). Toujours 3-4 variantes en planche au choix.
+    resté seul, mis en carton, tir à la corde, grue + conteneur…), **et le mot du haut aussi** : un mot-clé de
+    l'histoire au lieu de STOLEN à chaque fois (SNATCHED, SOLD, PRECIOUS, GONE, SHIPPED, FOR SALE, CLONED, DRAINED…).
+    Toujours 3-4 variantes en planche au choix.
 
 ## Règles
 
