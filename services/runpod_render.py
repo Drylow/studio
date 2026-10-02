@@ -39,15 +39,25 @@ def _url(pod_id):
 
 
 def _create(name, vcpu, extra_env=None):
+    """Un pod CPU ; si le type demandé est épuisé, essaie les autres types (puis moins de cœurs)."""
     worker = base64.b64encode(open(WORKER, "rb").read()).decode()
-    body = {"name": name, "imageName": os.getenv("RUNPOD_IMAGE") or IMAGE, "computeType": "CPU",
-            "cpuFlavorIds": [os.getenv("RUNPOD_CPU_FLAVOR") or "cpu5c"], "vcpuCount": vcpu,
-            "containerDiskInGb": 20, "ports": ["8000/http"], "env": dict({"WORKER_JS": worker}, **(extra_env or {})),
-            "dockerStartCmd": ["bash", "-c", 'echo "$WORKER_JS" | base64 -d > /w.js && node /w.js']}
-    r = requests.post(f"{API}/pods", headers=_h(), json=body, timeout=60)
-    if r.status_code >= 300:
-        raise RuntimeError(f"RunPod {r.status_code} : {r.text[:300]}")
-    return r.json()["id"]
+    flavors = [os.getenv("RUNPOD_CPU_FLAVOR") or "cpu5c"] + ["cpu5c", "cpu3c", "cpu5g", "cpu3g"]
+    last = ""
+    for cores in dict.fromkeys([vcpu, 32, 16]):
+        if cores > vcpu:
+            continue
+        for flavor in dict.fromkeys(flavors):
+            body = {"name": name, "imageName": os.getenv("RUNPOD_IMAGE") or IMAGE, "computeType": "CPU",
+                    "cpuFlavorIds": [flavor], "vcpuCount": cores, "containerDiskInGb": 20, "ports": ["8000/http"],
+                    "env": dict({"WORKER_JS": worker}, **(extra_env or {})),
+                    "dockerStartCmd": ["bash", "-c", 'echo "$WORKER_JS" | base64 -d > /w.js && node /w.js']}
+            r = requests.post(f"{API}/pods", headers=_h(), json=body, timeout=60)
+            if r.status_code < 300:
+                return r.json()["id"], cores
+            last = f"RunPod {r.status_code} : {r.text[:200]}"
+            if "no longer any instances" not in r.text and "available" not in r.text:
+                raise RuntimeError(last)
+    raise RuntimeError(last)
 
 
 def _delete(pod_id):
@@ -95,7 +105,9 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9):
         job.update(p0, f"RunPod : démarrage de {count} machine(s) de {vcpu} cœurs…")
         for k in range(count):
             try:
-                pods.append(_create(f"drylow-render-{k}", vcpu))
+                pid, cores = _create(f"drylow-render-{k}", vcpu)
+                pods.append(pid)
+                vcpu = min(vcpu, cores)
             except RuntimeError as e:
                 print(f"[runpod] {e}", flush=True)
                 if not pods:
