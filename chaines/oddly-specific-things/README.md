@@ -44,8 +44,8 @@ Voir [videos/](videos/README.md).
 | Vidéo | État |
 |---|---|
 | Your Life as a Stolen Phone | livrée (vérifiée) |
-| Your Life as a Stolen Car | **KO, à refaire** avec le nouveau prompting (objet sans visage) |
-| Your Life as a Stolen Credit Card | **KO, à refaire** avec le nouveau prompting (objet sans visage) |
+| Your Life as a Stolen Car | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
+| Your Life as a Stolen Credit Card | refaite avec le nouveau prompting (objet sans visage), vérifiée, livrée le 2 oct. |
 
 ## Idées de vidéos
 

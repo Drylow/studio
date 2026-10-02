@@ -2,6 +2,10 @@
 
 Faits vérifiés et règles données au script.
 
+# Recherche et consignes — Your Life as a Stolen Credit Card
+
+Faits vérifiés et règles données au script.
+
 VERIFIED FACTS for this video (use them, rounded; name the source lightly inside the sentence for big facts; do not invent other statistics or sources):
 - Card fraud losses worldwide were about $33.4 billion in 2024 (Nilson Report); the US makes up about 26% of card spending worldwide but about 42% of card fraud losses.
 - In 2024 the FTC received about 449,000 reports of credit card fraud (new accounts opened or existing ones hijacked), its most common kind of identity theft report.
