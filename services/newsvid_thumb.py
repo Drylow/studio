@@ -21,7 +21,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT = os.path.join(REPO, "static", "fonts", "Anton-Regular.ttf")
 TW, TH = 1280, 720
 # variantes proposées (couleur du trait et des mots mis en avant) ; A = choisie par défaut
-VARIANTS = (("A", "accent2"), ("D", "accent2"), ("E", "accent2"), ("F", "accent"))
+VARIANTS = (("A", "accent2"), ("A", "accent"))  # validée par l'utilisateur : la A (deux photos, citation jaune)
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                     "Chrome/128.0 Safari/537.36"}
 
@@ -54,20 +54,19 @@ def bing_images(query, n=12):
 
 def names_ok(who, text, others):
     """Qui est sur la photo ? On ne reconnaît JAMAIS un visage : seul le texte de l'image (adresse, titre,
-    page) compte. Gardée si le nom de famille y est, et qu'aucune autre personne de l'histoire n'y est
-    (« Gaethje vs Holloway » : impossible de savoir lequel des deux est au premier plan)."""
+    page) compte. Gardée si le nom de famille y est et qu'aucune autre personne de l'histoire n'est citée
+    avant (« Holloway beats Gaethje » : c'est la photo de Holloway). L'utilisateur valide la planche."""
     t = re.sub(r"[^a-z]+", " ", (text or "").lower())
     last = who.lower().split()[-1]
     if f" {last} " not in f" {t} ":
         return False
     for o in others:
-        for part in o.lower().split():
-            if len(part) > 3 and part not in who.lower().split() and f" {part} " in f" {t} ":
-                return False
-    if re.search(r"\b(vs|v)\b", t) or re.search(r"alamy|gettyimages|shutterstock|dreamstime|istockphoto|depositphotos",
-                                                 (text or "").lower()):
-        return False
-    return not other_person(who, text)
+        for part in o.lower().split()[-1:]:  # un autre nom SEUL (sans le nôtre) a déjà été écarté plus haut
+            if len(part) > 3 and part not in who.lower().split() and f" {part} " in f" {t} " and \
+                    t.find(part) < t.find(last):
+                return False  # « Holloway beats Gaethje » : l'autre est cité d'abord, c'est sa photo
+    # les photos de combat (deux combattants) sont les plus fortes : gardées, l'utilisateur valide la planche
+    return not re.search(r"alamy|gettyimages|shutterstock|dreamstime|istockphoto|depositphotos", (text or "").lower())
 
 
 _NOT_NAMES = {"ufc", "mma", "white", "house", "freedom", "hall", "fame", "getty", "images", "las", "vegas", "news",
@@ -152,11 +151,7 @@ def rate(im, who):
         r["face"] = [max(0.0, min(1.0, float(v))) for v in f]
     except (TypeError, ValueError):
         return {"ok": False}
-    try:  # une seule personne : avec deux combattants, rien ne dit lequel est au premier plan
-        alone = int(r.get("people") or 0) == 1
-    except (TypeError, ValueError):
-        alone = False
-    r["ok"] = alone and r.get("upright", True) is not False and bool(r.get("clear")) and not r.get("watermark") and not r.get("text") and \
+    r["ok"] = r.get("upright", True) is not False and bool(r.get("clear")) and not r.get("watermark") and not r.get("text") and \
         r["face"][2] > r["face"][0] and r["face"][3] > r["face"][1]
     return r
 
