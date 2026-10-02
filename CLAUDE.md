@@ -181,7 +181,9 @@ templates : section History Docs du `README.md`.
   **VPS de l'utilisateur (gratuit, 18 vCPU EPYC, 94 Go)** : prioritaire sur RunPod quand `RENDER_WORKERS` (URL https)
   et `RENDER_WORKER_TOKEN` sont dans le .env ; installé par `python production/vps_setup.py` → `work/vps_setup.sh`
   (à lancer en root sur le VPS : Docker + serveur de rendu derrière Caddy, `<ip>.sslip.io`, jeton). Une vidéo à la
-  fois sur le VPS (`work/vps0.lock`) ; une 2e vidéo en même temps prend RunPod (1 machine).
+  fois sur le VPS (`work/vps0.lock`). **Depuis le 2 oct. (« utilise 100 % le VPS ») : tout le rendu va sur le VPS**
+  (morceaux + son ; `RR.vps_only`), une 2e vidéo attend son tour ; la machine cloud ne fait que l'assemblage final
+  (ffmpeg, -14 LUFS) et ne rend en local que si le VPS tombe. `RENDER_LOCAL=1` remet l'ancien mode mixte.
   Serveur des pods : `production/runpod_worker.js`.
 - **Rendu Remotion** : Node 18+ ; `npm install` se fait tout seul au 1er rendu. Dans le cloud :
   `REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` (ne pas
@@ -222,7 +224,10 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
 - Vraies images d'archive (The Met, Wikimedia Commons) quand elles existent, image IA en secours.
 - Rendus envoyés sur **Gofile** (un seul lien, le bon).
 
-Pièges connus : Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
+Pièges connus : **disque** (allocation fixe ~38 Go) : chaque appel de `render.mjs` copie les médias dans
+`/tmp/remotion-webpack-bundle-*` (~300 Mo) ; il les efface maintenant à la sortie, mais après un redémarrage brutal
+vérifier `df -h /` et supprimer les vieux `/tmp/remotion-webpack-bundle-*` (le 2 oct. : disque plein, rendu en échec).
+Wikimedia Commons répond 429 depuis le cloud (marche sur PC) ; l'API Hugging Face aussi,
 donc `align.py` télécharge le modèle Whisper par URL directe dans `data/models/` ; les côtes Natural Earth
 (~17 Mo) sont téléchargées une fois dans `data/geo/`.
 

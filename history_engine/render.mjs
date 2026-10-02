@@ -21,6 +21,10 @@ const say = (o) => process.stdout.write(JSON.stringify(o) + '\n');
 
 say({stage: 'bundle'});
 const serveUrl = await bundle({entryPoint: path.join(here, 'src', 'index.ts'), publicDir: project});
+// le paquet webpack copie tous les médias dans /tmp (~300 Mo par appel) : on l'efface à la sortie, sinon le disque
+// se remplit (66 paquets oubliés ont rempli 23 Go le 2 oct.)
+process.on('exit', () => fs.rmSync(serveUrl, {recursive: true, force: true}));
+for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => process.exit(143));
 const composition = await selectComposition({serveUrl, id: 'History', inputProps: timeline, browserExecutable});
 
 if (args.stills !== undefined) {
@@ -83,6 +87,7 @@ if (args.stills !== undefined) {
     fs.renameSync(wav + '.tmp.wav', wav);
   }
   say({stage: 'done', chunks: n});
+  process.exit(0); // le navigateur de Remotion peut garder le processus en vie après le dernier morceau
 } else {
   let last = -1;
   await renderMedia({
@@ -106,3 +111,4 @@ if (args.stills !== undefined) {
   });
   say({stage: 'done'});
 }
+process.exit(0);
