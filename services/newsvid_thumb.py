@@ -257,7 +257,7 @@ def _text_block(canvas, text, highlight, accent, y_bottom, max_w):
     from PIL import ImageDraw, ImageFont
     words = text.upper().split()
     hl = {w.strip(".,!?\"'“”").upper() for w in re.findall(r"\S+", highlight or "")}
-    lines = [words] if len(" ".join(words)) <= 16 else None
+    lines = [words] if len(" ".join(words)) <= 10 else None  # au-delà : 2 lignes, plus gros et plus haut
     if not lines:
         best = None
         for k in range(1, len(words)):
