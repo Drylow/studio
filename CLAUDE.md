@@ -4,6 +4,11 @@ Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en b
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
 pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
 
+**Reprise sur un autre compte / nouvelle session : lire d'abord `production/REPRISE.md`** (état au 3 oct., ce qui
+est en cours, ce qu'il veut ensuite, comment brancher GitHub, les secrets et NexLev). Au début de chaque session
+cloud : `bash production/session_start.sh` (installe le hook git et recrée `.env` depuis les variables
+d'environnement du compte s'il manque).
+
 ## 1. L'utilisateur et la façon de lui parler
 
 - Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
