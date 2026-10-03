@@ -909,9 +909,36 @@ def _missing_assets(pr):
     return [r for r in portraits + reqs if not os.path.isfile(os.path.join(d, r[0]))]
 
 
-def _era(pr):
+_YEAR = re.compile(r"\b(1[0-9]{3}|20[0-9]{2})s?\b")
+
+
+def _later_year(pr, prompt):
+    """Année d'un plan situé à une autre époque que le récit (fouilles de 1748, moulages de 1863, étude de 2024,
+    l'auteur qui écrit des années plus tard) : écrite en tête du prompt par le plan visuel. None sinon."""
+    story = [int(y) for y in _YEAR.findall((pr.get("period") or {}).get("period", ""))]
+    for y in _YEAR.findall(prompt or ""):
+        y = int(y)
+        if not story or y < min(story) - 3 or y > max(story) + 3:
+            return y
+    return None
+
+
+def _shot_period(pr, prompt=""):
+    """L'époque d'un plan : celle du récit, ou celle de l'année écrite dans le plan (sinon les fouilles de 1748 se
+    retrouvaient pleines de Romains en toge, et l'étude ADN de 2024 avec une scientifique au milieu d'eux)."""
+    y = _later_year(pr, prompt)
+    if y is None:
+        return pr.get("period") or {}
+    story = (pr.get("period") or {}).get("period", "")
+    return {"period": f"The year {y}: people, clothes, tools, buildings and vehicles of {y} only, as described in "
+                      f"the shot.",
+            "avoid": f"anyone dressed from the time of the main story ({story[:120]}), togas, armour, ancient or "
+                     f"period costumes on the people of {y}"}
+
+
+def _era(pr, prompt=""):
     """Ancre d'époque à mettre en tête de chaque image (calculée une fois, gardée dans le projet)."""
-    per = pr.get("period") or {}
+    per = _shot_period(pr, prompt)
     if not per.get("period"):
         return ""
     return (f"Setting: {per['period']} Every uniform, weapon, flag, garment, building and vehicle belongs to this "
@@ -928,7 +955,9 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
     style = HA.image_style((pr.get("options") or {}).get("image_style"))
     chars = (chars or [])[:1]  # un seul personnage de référence par plan : fini les duos répétés
     look = HA.cast_look(cast, chars)
-    era = _era(pr)
+    era = _era(pr) if kind == "portrait" else _era(pr, prompt)
+    if _later_year(pr, prompt) is not None:
+        chars, look = [], ""  # pas de personnage du récit dans un plan d'une autre époque
     if kind == "portrait":
         full = (f"{style['portrait']} {chars[0] if chars else ''}: {prompt} {era} Facing the viewer, eyes toward the "
                 f"camera, not in profile.").strip()
@@ -972,7 +1001,7 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
             if attempt or not era:
                 break
             try:
-                ok, problems = HA.check_shot(dest, pr.get("period"), prompt)
+                ok, problems = HA.check_shot(dest, _shot_period(pr, prompt), prompt)
             except Exception:  # noqa: BLE001 — contrôle indisponible : on garde l'image
                 break
             if ok:

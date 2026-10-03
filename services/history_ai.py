@@ -109,6 +109,10 @@ _SHOT_GUIDE = """IMAGE PROMPTS — write them like a cinematographer's shot list
 - At least HALF of the shots have no named character at all (places, objects, crowds, armies from afar, details).
 - At most ONE named cast member per shot; keep the head fully in frame (never crop at the forehead).
 - Era-accurate everything (armour, weapons, hairstyles, architecture). No text, no modern objects.
+- LATER TIMES: when the narration is about a later time than the story (excavations, a museum, a scientific study,
+  the witness writing years later, a modern debate), the shot shows that later time and its prompt STARTS with the
+  exact year ("In 1748, ...", "In 2024, ..."): only people, clothes and tools of that year, never a character of the
+  main story among them.
 - GAZE: whenever a person is the subject, say where they look. About half of the people shots face the camera (eyes
   straight to the lens, or a three-quarter front view toward the viewer); the others look at something inside the
   scene. Never everyone in profile, never everyone toward the same side of the frame.
@@ -191,6 +195,8 @@ its narration. Rules:
 - Vary time of day, light and colour mood across the list.
 - Each prompt: one sentence, shot type + lens, subject and action, setting with foreground/background, light.
   Never write the image style name in a prompt (the style is added later).
+- Shots about a later time than the story (excavations, studies, the author writing years later) keep their year at
+  the start of the prompt ("In 1863, ...") and show only people of that year.
 - Gaze: about half of the shots with a person have them facing the camera (eyes to the lens or three-quarter front
   view); the others look at something in the scene. Never all in profile, never all toward the same side.
 - Documentary realism: every object at its real size, real physics, the real architecture and landscape of the place;

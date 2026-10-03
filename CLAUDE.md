@@ -215,6 +215,10 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
   image) : objets à leur vraie taille, architecture et paysage du lieu exact (`period_brief` les décrit), rien de
   surréaliste ; `check_shot` refuse aussi les objets démesurés et les décors d'un autre pays (Gettysburg avait un
   obus géant dans un mur et une cathédrale gothique).
+- **Plans d'une autre époque** (fouilles, musée, étude moderne, le témoin qui écrit des années plus tard) : le plan
+  visuel écrit l'année en tête du prompt (« In 1748, … ») et `_shot_period` remplace alors l'ancre d'époque du récit
+  par cette année (génération + contrôle en vision) ; sinon Pompéi avait des Romains en toge aux fouilles de 1748 et
+  à l'étude ADN de 2024.
 - **Jamais de tête coupée** : recadrage ancré en haut, zooms sans mouvement vertical.
 - **Texte toujours lisible** sur les images claires (plaques sombres, bande sous les sous-titres).
 - **Sous-titres exacts** sur toute la durée (orthographe du script, timings Whisper).
