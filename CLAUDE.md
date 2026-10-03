@@ -66,7 +66,7 @@ du style de la chaîne ne change pas (`osl_stick`, décors riches) : c'est l'opt
 déjà lancée garde son style d'origine. Le contrôle en vision refuse un objet avec un visage.
 **Dans les prompts, l'objet reste un objet** (sinon : smiley sur la calandre, carte transformée en humain,
 voiture dans une voiture, bras en trop) : le rédacteur de prompts l'appelle par son nom (« the stolen car »,
-`object_noun`), jamais « You » ; il ne fait aucune action (on décrit ce qu'on LUI fait) ; un seul exemplaire
+`object_noun` ; si le titre ne nomme pas l'objet dessiné : `new_video.py … --object "the air fryer"`), jamais « You » ; il ne fait aucune action (on décrit ce qu'on LUI fait) ; un seul exemplaire
 par image ; « à l'intérieur » = l'habitacle, jamais une 2ᵉ voiture ; les données = une vraie scène (écran
 flou, reçu). Son image de référence est décrite comme un objet, pas comme un personnage. Les persos ont
 deux bras, deux mains. Tout ça dans `pov_engine.py` (`_prompt_batch`, `_style_parts`, `build_image_prompt`,
