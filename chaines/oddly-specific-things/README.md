@@ -55,6 +55,16 @@ Voir [videos/](videos/README.md).
 
 ## Idées de vidéos
 
+**Lot validé par l'utilisateur le 3 oct. (en production)**, pas que des objets volés (« le dernier upload c'était stolen car ») ;
+demande vérifiée avec NexLev :
+- Your Life as an Amazon Return (CNBC 3,3 M / 2,9 M / 3 M vues, CBC 5,1 M) — mot de miniature RETURNED
+- Your Life as Lost Luggage (Austin Evans 767 k, Great Big Story 301 k) — LOST
+- Your Life as a Fake Designer Bag (Business Insider, saisies à JFK : 35 M et 4,9 M) — FAKE
+- Your Life as a Donated T-Shirt (Business Insider, Kantamanto, Ghana : 1,8 M) — DONATED
+- Your Life as a Totaled Car (épaves aux enchères : Samcrac 6,4 M, Donut 3 M) — WRECKED
+
+Autres pistes :
+
 Le format n'existait pas dans la niche 2D : aucune vidéo « your life as a stolen phone » trouvée. L'idée de base est de continuer avec des objets qui voyagent loin ou qui changent beaucoup de valeur.
 
 - Your Life as an Amazon Return
