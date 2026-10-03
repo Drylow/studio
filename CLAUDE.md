@@ -257,22 +257,34 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   date) → `moments` → `plan --context "faits vérifiés"` → **relire plan.json** → `voice` → `thumb` → commit.
 - **Relire le plan** : chaque voix off colle à son extrait ; pas de mots lus présentés comme dits par la
   personne citée (le message de Topuria lu sur Flagrant) ; pas d'extrait rejoué d'une autre émission quand
-  l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
+  l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 60 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
-- **Vrai montage, pas des clips collés** (l'utilisateur, 3 oct. : « si c'est juste coller des clips, ça sert à
-  rien ») : volet penché aux couleurs de la chaîne + whoosh entre chaque partie, logo animé (« CAGE DISPATCH /
-  DAILY MMA NEWS ») après l'ouverture, nom de qui parle (glisse, en haut à gauche du cadre), **citation choc en
-  grand** (Anton, mot fort en jaune, zoom « punch-in » + impact) au moment où elle est dite (`seg["quote"]`, calée
-  par `clip_spec`), voix off : titre de l'info (`headline`) + nom + fil d'actu qui défile (`plan["ticker"]`, écrits
-  par `news.py headlines` : rien que ce que dit la voix off) + b-roll en zoom lent ; rappel d'abonnement une fois.
+- **Montage façon Fight Night MMA (v3, après la critique du 3 oct. : « pas carré », « inspire-toi de lui »)** :
+  ouverture = 2-3 extraits **complets** en plein écran (léger zoom), choisis pour **donner le contexte** (on comprend
+  de qui on parle : le 1er nomme les combattants ; pas un animateur qui parle de gens qu'on ne voit pas). Ensuite les
+  extraits sont **dans un cadre rouge posé sur la même vidéo floutée** (`make_frame`), coupes franches, **aucun
+  bruitage, aucun volet, aucun texte qui surgit au milieu de l'écran** (citation en grand + punch-in : refusés,
+  « c'est affreux »). La phrase forte = **la ligne de sous-titre passe en jaune**. Un extrait ne coupe **jamais avant
+  la fin de la réponse** (`clip_spec` : question → réponse complète, `MAX_CLIP` 60 s, ouverture `TEASER` 40 s).
+  Voix off : sur **photo du combattant dont elle parle** (`photos/photos.json` de la miniature, `photo_still`, zoom lent)
+  sinon images de la vidéo, titre de l'info (`headline`), musique basse ; pas de fil d'actu. Logo animé après
+  l'ouverture, rappel d'abonnement discret une fois. **Sous-titres propres** (`_wrap_subs`) : casse normale (pas de
+  CRIS), sans « um/uh », bégaiements, « [laughter] » ; **« ... » quand une phrase est lâchée puis reprise** ; noms
+  mal transcrits corrigés par `plan["spelling"]` (relire les sous-titres : « Sukian », « Iliotia »…).
+  **Prononciation de la voix off** : `newsvid.PRONOUNCE` (« Gaethje » → « Gay-chee », envoyé à la voix seulement) ;
+  vérifier avec Whisper (`align.words_from_audio`) qu'on entend bien le nom. Refaire la voix = effacer
+  `narration/n*.mp3` puis `news.py voice`.
   **Noms à l'écran = jamais sur la mauvaise personne** (1er montage Gaethje, 3 oct. : « JUSTIN GAETHJE » sur
-  l'animateur) : le nom de qui parle s'affiche pendant SA citation, pas au début de l'extrait ; aucun nom pendant la
-  voix off (le b-roll peut montrer quelqu'un d'autre). **Gros mots** : censurés à l'écran (F***ING, `censor`) et
+  l'animateur) : le nom de qui parle s'affiche pendant SA phrase forte, dans le cadre seulement (plein écran : le
+  crédit suffit) ; aucun nom pendant la voix off. **Gros mots** : censurés à l'écran (F***ING, `censor`) et
   coupés au son dans l'ouverture (pubs coupées si gros mot au début).
   Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
   rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
-  (l'animateur qui relit une vieille interview ≠ le combattant).
+  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** : citation entière visible, assez
+  haut (`_text_block`, bas à TH-52) ; refaire une miniature garde les photos validées (en tête de `photos.json`).
+  Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
+  `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
   (Docker, HTTPS, jeton) installé par une ligne en root sur le VPS : `curl -fsSL
   https://raw.githubusercontent.com/drylow/studio/main/production/vps_news_setup.sh | bash` (script généré par
