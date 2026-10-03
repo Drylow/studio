@@ -16,12 +16,12 @@ import time
 
 import requests
 
-from common import WORK, folder, webhook
+from common import WORK, channel_key, folder, webhook
 from services import pov_engine as E
 
 D = folder(sys.argv[1])
 link = sys.argv[2] if len(sys.argv) > 2 else ""
-URL = webhook() + "?wait=true"
+URL = webhook(channel_key(D)) + "?wait=true"  # salon Discord de la chaîne s'il est configuré
 info = json.load(open(os.path.join(D, "video.json"))) if os.path.isfile(os.path.join(D, "video.json")) else {}
 BRAND = info.get("brand") or ((E.TEMPLATES.get(info.get("template") or "", {}).get("studio") or {}).get("brand")) or "Video"
 meta = json.load(open(os.path.join(D, "meta.json")))
