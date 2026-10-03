@@ -1,4 +1,4 @@
-# Reprise sur un autre compte Claude (état au 3 oct. 2026, 20 h UTC)
+# Reprise sur un autre compte Claude (état au 3 oct. 2026, 23 h 50 heure belge)
 
 L'utilisateur arrive au bout de son usage sur son compte et continue sur **le compte de son pote**, « comme
 si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarrer**. Le guide de travail reste
@@ -25,17 +25,31 @@ si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarre
 5. Rien à refaire côté PC : l'agent « Drylow Actu » du PC et le relais du VPS marchent avec l'URL + le jeton du
    `.env` (mêmes valeurs).
 
-## 2. Ce que l'utilisateur veut maintenant (dans l'ordre)
+## 2. En cours au moment du changement de compte (3 oct., ~23 h 50 heure belge)
 
-1. **Cage Dispatch #2 : Ilia Topuria reprend l'entraînement** (c'est le dernier sujet de Fight Night MMA, la
-   chaîne modèle). À poster **dès qu'elle est prête**. Même chaîne `mma_en`, même montage v3.
-2. Lancer les chaînes **boxe** (`boxing_en`, RING DISPATCH, or #D4A017) et **foot** (`football_en`, PITCH
-   DISPATCH, vert #1DB954) : configs prêtes dans `newsvid.CHANNELS`, **sources vides** (à remplir : chaînes
-   YouTube originales des promoteurs, conférences, podcasts ; jamais des compilations). Vérifier la demande et
-   les concurrents avec NexLev avant.
-3. **Volume avant perfection pour l'actu** (l'utilisateur, 3 oct. : « faut pas que ce soit parfait… dès qu'il va
-   y avoir de l'actualité, il va falloir poster beaucoup, beaucoup ») : vite, mais toujours vérifié (planches,
-   pas de nom sur la mauvaise personne, pas de faux propos).
+Deux vidéos Cage Dispatch en montage sur le PC de l'utilisateur, **toutes les deux en bleu** (thème de la chaîne,
+demandé par l'utilisateur : « on va faire que du bleu »). Il attend les liens pour les poster :
+1. **Gaethje v4** (`news/mma_en/2026-10-02_gaethje-topuria`) : refaite **sans les extraits de One Night with Steiny**
+   (revendication Content ID sur la v3), commence par la voix off + photo, titre « “HE HAS TO BELIEVE THAT I
+   CHEATED!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim! », miniature validée “I BROKE HIS FACE” (bleu
+   clair). Une version rouge a été montée juste avant le passage au bleu : **ne pas l'envoyer** ; la bleue est
+   redéposée automatiquement après (script `requeue` de la session).
+2. **Topuria #2** (`news/mma_en/2026-10-03_topuria-…`) : « “IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN
+   Topuria As Ilia Returns To Training! », ~18 min, miniature validée Tsarukyan + Topuria “IT'S NOT GOING TO HAPPEN”.
+
+Pour chacune : `python production/news.py pc-fetch <dossier> --wait` (en tâche de fond), vérifier `result.json`
+(heure récente, durée ~16 min Gaethje / ~18 min Topuria, cadre **bleu**) puis **toutes** les planches
+`check/sheet_*.jpg` (pas de morceaux de l'ancien style rouge/jaune, pas de Steiny), puis
+`python production/news.py send <dossier> --corrigee` pour Gaethje, `send <dossier>` pour Topuria, et donner le lien.
+Si l'état est encore « claimed » avec l'ancienne vidéo : la redéposer avec `news.py vps <dossier> --pc --no-wait`.
+
+Ensuite, ce qu'il veut :
+1. **Poster vite et beaucoup** dès qu'il y a de l'actu MMA (« faut pas que ce soit parfait… il va falloir poster
+   beaucoup, beaucoup ») : vite, mais toujours vérifié (planches, bon nom sur la bonne personne, vraies citations,
+   sources sans revendication).
+2. Lancer les chaînes **boxe** (`boxing_en`, RING DISPATCH) et **foot** (`football_en`, PITCH DISPATCH) : configs
+   prêtes dans `newsvid.CHANNELS`, **sources vides** (à remplir avec des chaînes sans Content ID, vérifiées avec
+   NexLev `get_content_owner`). Vérifier la demande et les concurrents avec NexLev avant.
 
 En attente d'une réponse de l'utilisateur :
 - **Oddly Specific Lives, sport suivant** : proposé « POV: You Marry a Female Premier League Footballer » (ou
@@ -56,14 +70,19 @@ Tout est dans `CLAUDE.md` §11 ; la chaîne de commandes est en tête de `produc
    validée) → relire les sous-titres (`_wrap_subs` sur chaque extrait, corriger les noms via
    `plan["spelling"]`) → commit.
 3. Montage sur le PC de l'utilisateur : `python production/news.py vps <dossier> --pc --no-wait`, puis
-   `pc-fetch <dossier> --wait` en tâche de fond (le PC passe toutes les 15 min ; montage ≈ 18 min pour 20 min
-   de vidéo ; il faut que son PC soit allumé).
+   `pc-fetch <dossier> --wait` en tâche de fond. Depuis le 3 oct. au soir l'agent du PC **reste à l'écoute** (vérifie
+   le relais toutes les 20 s, enchaîne les vidéos ; mis à jour tout seul par `news.py build` → `update_pc_agent`) ;
+   montage ≈ 18 min pour 20 min de vidéo ; le PC doit être allumé. Chaque montage part d'un dossier neuf (avant : des
+   morceaux d'un vieux montage resté bloqué avaient été recollés dans la vidéo).
 4. Regarder **toutes** les planches `check/sheet_*.jpg` (une image / 10 s), puis
    `python production/news.py send <dossier>` (`--corrigee` si c'est une version refaite) → donner le lien.
 
 Réglages validés par l'utilisateur (v3, après « pas carré ») : voir `CLAUDE.md` §11 « Montage façon Fight
-Night MMA ». Miniature : deux photos face à face (`photos/`), citation énorme blanche + mot fort jaune,
-**texte assez haut, jamais coupé**.
+Night MMA ». **Tout en bleu** (cadre, logo, bandeaux #12A8E0, phrase forte et miniature #40DCF8 = bleu de la
+bannière @CageDispatch). Miniature : deux photos face à face (`photos/`, jamais une photo à plusieurs combattants),
+la citation **entre guillemets**, sur 2 lignes, mot fort en bleu clair, assez haute, jamais coupée. La vidéo
+**commence par la voix off d'intro sur la photo** (plus d'ouverture en extraits). **Droits** : sources seulement
+de chaînes sans Content ID (`newsvid.CLAIMERS` refusées : Steiny, Full Send, UFC, MMA Fighting, Mighty).
 
 Pièges vus le 3 oct. :
 - Le relais peut renvoyer un **vieux build.log** (un ancien agent du PC, endormi pendant un montage, renvoie
@@ -90,4 +109,4 @@ Pièges vus le 3 oct. :
 - Il poste lui-même depuis Discord ; il veut un seul lien, le bon, marqué clairement.
 - Il juge vite sur la 1re minute : l'ouverture doit être claire (on voit de qui on parle), rien qui coupe une
   réponse, pas d'effets « bizarres », texte propre.
-- Il est sur téléphone : réponses courtes, heures UTC, chiffres.
+- Il est sur téléphone : réponses courtes, **jamais d'heure UTC** : « dans 20 min » + heure belge, chiffres.
