@@ -10,9 +10,9 @@ si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarre
    propriétaire du dépôt l'ajoute en collaborateur, ou installe l'app Claude GitHub sur le dépôt). Connexion :
    https://claude.ai/connect-github. Ouvrir la session avec le dépôt `drylow/studio` sélectionné.
 2. **Secrets** (jamais dans git) : dans l'environnement cloud du compte (menu de l'environnement dans la barre
-   de titre de la session → Modifier → variables d'environnement), coller les lignes du `.env` que l'utilisateur
-   a gardé (il l'a reçu en pièce jointe le 3 oct.). Le code lit le `.env` du dépôt s'il existe, sinon les
-   variables d'environnement (`production/session_start.sh` recrée le `.env` depuis l'environnement).
+   de titre de la session → Modifier → variables d'environnement), coller les lignes du `.env` (l'utilisateur a
+   ses clés ; jamais par le chat ni dans git). Le code lit le `.env` du dépôt, que `production/session_start.sh`
+   recrée depuis ces variables.
    Variables : `FLASK_ENV`, `COOKIE_SECURE`, `FLASK_SECRET_KEY`, `ACCESS_PASSWORD`, `BOSS_PASSWORD`,
    `AI_BASE_URL`, `AI_API_KEY`, `AI_TEXT_MODEL`, `AI_FAST_MODEL`, `AI_IMAGE_MODEL`, `AI_IMAGE_CONCURRENCY`,
    `ALGROW_API_KEY` (voix), `DISCORD_WEBHOOK_URL` (paquets), `NEWS_WORKER_URL` + `NEWS_WORKER_TOKEN` (relais du
