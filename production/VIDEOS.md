@@ -56,5 +56,5 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
 | Vidéo | État | Publication |
 |---|---|---|
-| “HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch! | **livrée** (Discord, 3 oct. ~18:20 UTC) — https://gofile.io/d/kP9EQhk2 ; 18 min 37 ; montée par le PC de l'utilisateur (agent + relais du VPS) ; v1 refaite avant envoi (noms sur la mauvaise personne, gros mot écrit en grand et entendu au début) ; miniature A « SHOULD HAVE QUIT » | à caler |
+| “HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch! | **livrée v3 CORRIGÉE** (Discord, 3 oct. 19:33 UTC) — https://gofile.io/d/CRp2y8tX ; 20 min 12 ; montée par le PC de l'utilisateur ; v3 après sa critique de la v2 (ouverture sans contexte, extraits coupés avant la réponse, bruitages, citation en grand au milieu, mauvaise prononciation de Gaethje, sous-titres sales, texte de miniature coupé) : style Fight Night (cadre sur vidéo floutée, phrase forte en jaune dans les sous-titres, photos des combattants sous la voix off) ; miniature A « SHOULD HAVE QUIT » texte remonté | à caler |
 
