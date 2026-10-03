@@ -1835,8 +1835,12 @@ Return JSON {{"ok": true|false, "problems": ["short, concrete problem", ...]}}."
 
 
 def object_noun(pr):
-    """« Your Life as a Stolen Car » → « the stolen car » : le nom concret de l'objet narrateur pour les prompts."""
-    m = re.match(r"(?i)^\s*your life as (?:an?|the)\s+(.+?)\s*$", (pr or {}).get("title") or "")
+    """« Your Life as a Stolen Car » → « the stolen car » : le nom concret de l'objet narrateur pour les prompts.
+    Le projet peut le donner lui-même (object_noun) quand le titre ne nomme pas l'objet dessiné
+    (« Your Life as an Amazon Return » → « the air fryer »)."""
+    if (pr or {}).get("object_noun"):
+        return pr["object_noun"]
+    m = re.match(r"(?i)^\s*your life as (?:(?:an?|the)\s+)?(.+?)\s*$", (pr or {}).get("title") or "")
     return "the " + (m.group(1).lower() if m else "object of the title")
 
 
