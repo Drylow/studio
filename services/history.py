@@ -1255,6 +1255,52 @@ def _remotion(job, project_media, out_path, p0, p1, extra=()):
         raise RuntimeError("Rendu Remotion en échec :\n" + "\n".join(tail))
 
 
+def _mix_audio(tl, media_dir, out_wav):
+    """Le son du film directement avec ffmpeg (≈ 1 min), au lieu du rendu audio Remotion (25-30 min sur la machine
+    cloud) : même mixage que HistoryVideo.tsx — voix, musique en boucle au volume musicVolume (montée sur 1 s,
+    fondu sur les 2,5 dernières), bruitages de 4 s maximum à leur instant et à leur volume."""
+    dur = float(tl["duration"])
+    args, chains, labels = [], [], []
+    mono = {}
+
+    def stereo(path):  # un fichier mono passe à l'identique sur les deux canaux (pas les -3 dB du mixage par défaut)
+        if path not in mono:
+            p = subprocess.run([media.ffmpeg_bin(), "-hide_banner", "-i", path], capture_output=True, text=True,
+                               errors="replace")
+            mono[path] = bool(re.search(r"Audio:.*\bmono\b", p.stderr))
+        return "pan=stereo|c0=c0|c1=c0" if mono[path] else "aformat=channel_layouts=stereo"
+    k = 0
+    if tl.get("voice"):
+        args += ["-i", os.path.join(media_dir, tl["voice"])]
+        chains.append(f"[{k}:a]aresample=48000,{stereo(os.path.join(media_dir, tl['voice']))}[a{k}]")
+        labels.append(f"[a{k}]")
+        k += 1
+    if tl.get("music"):
+        mv = float(tl.get("musicVolume") if tl.get("musicVolume") is not None else 0.1)
+        args += ["-stream_loop", "-1", "-i", os.path.join(media_dir, tl["music"])]
+        chains.append(f"[{k}:a]aresample=48000,{stereo(os.path.join(media_dir, tl['music']))},atrim=0:{dur:.3f},volume={mv},"
+                      f"afade=t=in:d=1,afade=t=out:st={max(0.0, dur - 2.5):.3f}:d=2.5[a{k}]")
+        labels.append(f"[a{k}]")
+        k += 1
+    for sfx in tl.get("sfx") or []:
+        args += ["-i", os.path.join(media_dir, sfx["src"])]
+        delay = int(round(float(sfx["at"]) * 1000))
+        chains.append(f"[{k}:a]aresample=48000,{stereo(os.path.join(media_dir, sfx['src']))},atrim=0:4,"
+                      f"volume={float(sfx.get('volume') if sfx.get('volume') is not None else 0.5)},"
+                      f"adelay={delay}|{delay}[a{k}]")
+        labels.append(f"[a{k}]")
+        k += 1
+    graph = ";".join(chains) + f";{''.join(labels)}amix=inputs={len(labels)}:normalize=0:dropout_transition=0," \
+        f"apad,atrim=0:{dur:.3f}[out]"
+    script = out_wav + ".filter.txt"
+    with open(script, "w", encoding="utf-8") as f:
+        f.write(graph)
+    media.run(args + ["-filter_complex_script", script, "-map", "[out]", "-ar", "48000", "-c:a", "pcm_s16le",
+                      out_wav + ".tmp.wav"])
+    os.replace(out_wav + ".tmp.wav", out_wav)
+    os.remove(script)
+
+
 CHUNK_FRAMES = 900  # 30 s par morceau : un redémarrage de la machine ne perd que quelques minutes de rendu
 
 
@@ -1307,7 +1353,7 @@ def job_render(job, pid):
     total = math.ceil(tl["duration"] * tl["fps"])
     if RR.vps_only():  # tout sur le VPS (morceaux + son), on attend son tour ; le local ne rattrape qu'une panne
         try:
-            RR.render(job, d, chunks, int(size), total, 0.05, 0.94, audio=True, wait=True)
+            RR.render(job, d, chunks, int(size), total, 0.05, 0.94, wait=True)
         except Exception as e:  # noqa: BLE001
             print(f"[render] VPS : {e}", flush=True)
     elif RR.available():
@@ -1327,11 +1373,18 @@ def job_render(job, pid):
         done.set()
         if helper:
             helper.join(timeout=300)
-    # ce qui manque encore (machine perdue…) + le son, en local seulement si besoin
+    # ce qui manque encore (machine perdue…), en local seulement si besoin ; le son est mixé par ffmpeg (≈ 1 min)
     n_parts = math.ceil(total / int(size))
-    if not (all(os.path.isfile(os.path.join(chunks, f"part_{i:03d}.mp4")) for i in range(n_parts))
-            and os.path.isfile(os.path.join(chunks, "audio.wav"))):
-        _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse"])
+    if not all(os.path.isfile(os.path.join(chunks, f"part_{i:03d}.mp4")) for i in range(n_parts)):
+        _remotion(job, d, None, 0.05, 0.94, ["--chunk-dir", chunks, "--chunk-frames", size, "--reverse", "--no-audio"])
+    wav = os.path.join(chunks, "audio.wav")
+    if not os.path.isfile(wav):
+        job.update(0.94, "Mixage du son (voix, musique, bruitages)…")
+        try:
+            _mix_audio(tl, d, wav)
+        except Exception as e:  # noqa: BLE001 — secours : le rendu audio de Remotion (lent mais sûr)
+            print(f"[son] ffmpeg : {e}", flush=True)
+            _remotion(job, d, None, 0.94, 0.95, ["--chunk-dir", chunks, "--chunk-frames", size, "--audio-only"])
     job.update(0.95, "Assemblage et mixage final (-14 LUFS)…")
     parts = sorted(f for f in os.listdir(chunks) if re.fullmatch(r"part_\d{3}\.mp4", f))
     with open(os.path.join(chunks, "parts.txt"), "w", encoding="utf-8") as f:
