@@ -2,7 +2,9 @@
 
 Dossier de travail : $STUDIO_WORK (par défaut <repo>/work, ignoré par git). Les projets du studio vont
 dans $POV_DATA_DIR (par défaut $STUDIO_WORK/prod). Les secrets restent dans .env (jamais dans git)."""
+import json
 import os
+import re
 import sys
 import time
 
@@ -53,8 +55,24 @@ def log_to(d, name):
     return log
 
 
-def webhook():
-    """URL du webhook Discord : DISCORD_WEBHOOK_URL dans .env, sinon $STUDIO_WORK/discord_webhook.txt."""
+def channel_key(d):
+    """Clé de la chaîne d'un dossier de vidéo : fichier « history » (survivors_account…) ou video.json (modèle POV)."""
+    hist = os.path.join(d, "history")
+    if os.path.isfile(hist):
+        return open(hist).read().strip()
+    try:
+        return json.load(open(os.path.join(d, "video.json"))).get("template") or ""
+    except (OSError, ValueError):
+        return ""
+
+
+def webhook(channel=None):
+    """URL du webhook Discord : celui de la chaîne s'il existe (DISCORD_WEBHOOK_<CLÉ>, ex. DISCORD_WEBHOOK_SURVIVORS_ACCOUNT,
+    DISCORD_WEBHOOK_ODDLY_THINGS_EN), sinon DISCORD_WEBHOOK_URL dans .env, sinon $STUDIO_WORK/discord_webhook.txt."""
+    if channel:
+        url = (os.environ.get("DISCORD_WEBHOOK_" + re.sub(r"\W+", "_", channel).upper()) or "").strip()
+        if url:
+            return url
     url = (os.environ.get("DISCORD_WEBHOOK_URL") or "").strip()
     path = os.path.join(WORK, "discord_webhook.txt")
     if not url and os.path.isfile(path):
