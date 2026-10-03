@@ -421,7 +421,7 @@ Return JSON:
   "ending": "how the last section lands (callback / final image)"
 }}"""
     data = ai.chat_json([{"role": "system", "content": _system(ch)}, {"role": "user", "content": prompt}],
-                        model=ai.text_model(), reasoning="medium", timeout=300)
+                        model=ai.text_model(), reasoning="medium", timeout=600)
     secs = [s for s in (data.get("sections") or []) if isinstance(s, dict) and s.get("heading")]
     if not secs:
         raise ai.AIError("Le plan renvoyé est vide — relance.")
