@@ -24,9 +24,12 @@ function note(s) {
   if (st.log.length > 30) st.log.shift();
 }
 
+let current = null; // processus en cours : tué si une nouvelle vidéo arrive (sinon il écrirait dans ses morceaux)
+
 function run(cmd, args, opts = {}) {
   return new Promise((resolve) => {
     const p = spawn(cmd, args, Object.assign({stdio: ['ignore', 'pipe', 'pipe']}, opts));
+    current = p;
     p.stdout.on('data', (d) => {
       for (const line of String(d).split('\n')) {
         if (!line.startsWith('{')) continue;
@@ -38,7 +41,10 @@ function run(cmd, args, opts = {}) {
       }
     });
     p.stderr.on('data', (d) => note(d));
-    p.on('close', (code) => resolve(code));
+    p.on('close', (code) => {
+      if (current === p) current = null;
+      resolve(code);
+    });
   });
 }
 
@@ -48,6 +54,7 @@ function browser() {
 }
 
 async function unpack(bundle) {
+  if (current) current.kill('SIGKILL');
   st.stage = 'unpack';
   st.ready = false;
   // machine réutilisée (VPS) : rien de la vidéo précédente ne doit rester (morceaux, images)
