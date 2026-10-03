@@ -206,20 +206,41 @@ def push_result(rel):
 
 
 def cmd_pc():
-    """PC : récupère les vidéos à monter, les monte, renvoie le résultat (lien + planches) dans git."""
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "yt-dlp[default]"], check=False)
-    r = git("pull", "--ff-only")
-    print(r.stdout.strip() or r.stderr.strip())
+    """PC : récupère les vidéos à monter (marquées `ready` par Claude après relecture), les monte, renvoie le
+    résultat (lien + planches) dans git. Lancé tout seul toutes les 15 min par la tâche planifiée du PC."""
+    ahead = git("rev-list", "--count", "@{u}..HEAD").stdout.strip()
+    if ahead.isdigit() and int(ahead) > 0:  # résultat d'une fois précédente pas encore envoyé (connexion ?)
+        git("pull", "-q", "--rebase", "--autostash")
+        git("push", "-q", "origin", "HEAD")
+    r = git("pull", "-q", "--ff-only")
+    if r.returncode != 0:
+        print(r.stderr.strip()[:300])
+    tries_path = os.path.join(WORK, "news_attempts.json")
+    try:
+        with open(tries_path, "r", encoding="utf-8") as f:
+            tries = json.load(f)
+    except (OSError, ValueError):
+        tries = {}
     todo = []
     for root, dirs, files in os.walk(NEWS):
-        if "plan.json" in files and "result.json" not in files and os.path.isdir(os.path.join(root, "narration")):
-            todo.append(root)
+        if ("plan.json" in files and "ready" in files and "result.json" not in files
+                and os.path.isdir(os.path.join(root, "narration"))):
+            rel = os.path.relpath(root, REPO).replace("\\", "/")
+            if tries.get(rel, 0) < 3:  # 3 échecs : on attend que Claude corrige (build.log est dans git)
+                todo.append(root)
     if not todo:
         print("Rien à monter.")
         return
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "--disable-pip-version-check",
+                    "--no-warn-script-location", "yt-dlp[default]"], check=False)
     for job in sorted(todo):
         rel = os.path.relpath(job, REPO)
+        key = rel.replace("\\", "/")
         print(f"=== {rel}")
+        tries[key] = tries.get(key, 0) + 1
+        os.makedirs(WORK, exist_ok=True)
+        with open(tries_path, "w", encoding="utf-8") as f:
+            json.dump(tries, f)
         try:
             cmd_build(job)
         except Exception as e:  # noqa: BLE001  (le journal part quand même dans git)
