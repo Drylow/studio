@@ -121,7 +121,18 @@
   "Nasardini Mavave": "Nassourdine Imavov",
   "Trevor Wittman": "Trevor Wittman",
   "John Omelly": "Sean O'Malley",
-  "McMaher": "Mick Maynard"
+  "McMaher": "Mick Maynard",
+  "Taporia": "Topuria",
+  "Tapora": "Topuria",
+  "Ilia Tapora": "Ilia Topuria",
+  "Sukian": "Tsarukyan",
+  "Arman Sukian": "Arman Tsarukyan",
+  "Sarukan": "Tsarukyan",
+  "Arman Sarukan": "Arman Tsarukyan",
+  "Surukin": "Tsarukyan",
+  "Gatei": "Gaethje",
+  "Mavave": "Imavov",
+  "Nasardini": "Nassourdine"
  },
  "segments": [
   {
@@ -1223,7 +1234,7 @@
     {
      "s": 32.83,
      "e": 35.12,
-     "t": "The idea that Ilia Taporia, who"
+     "t": "The idea that Ilia Topuria, who"
     },
     {
      "s": 35.12,
@@ -1755,7 +1766,7 @@
     {
      "s": 17.79,
      "e": 19.75,
-     "t": "But depends what what GI is going"
+     "t": "But depends what what Gaethje is going"
     },
     {
      "s": 19.75,
@@ -1765,7 +1776,7 @@
     {
      "s": 20.18,
      "e": 22.07,
-     "t": "Maybe Gi going to say, \"I don't"
+     "t": "Maybe Gaethje going to say, \"I don't"
     },
     {
      "s": 22.07,
@@ -2116,7 +2127,7 @@
     {
      "s": 21.11,
      "e": 22.63,
-     "t": "Sarukan"
+     "t": "Tsarukyan"
     },
     {
      "s": 22.63,
@@ -2126,7 +2137,7 @@
     {
      "s": 24.15,
      "e": 25.91,
-     "t": "Gai in that conversation with Islam as"
+     "t": "Gaethje in that conversation with Islam as"
     },
     {
      "s": 25.91,
@@ -2171,7 +2182,7 @@
     {
      "s": 35.75,
      "e": 36.17,
-     "t": "Gate."
+     "t": "Gaethje."
     },
     {
      "s": 36.26,
@@ -2382,12 +2393,12 @@
     {
      "s": 6.43,
      "e": 8.91,
-     "t": "about the Topuria gate rematch is"
+     "t": "about the Topuria-Gaethje rematch is"
     },
     {
      "s": 8.91,
      "e": 10.99,
-     "t": "because UFC freedom 250 was one of the"
+     "t": "because UFC Freedom 250 was one of the"
     },
     {
      "s": 10.99,
@@ -2560,12 +2571,12 @@
     {
      "s": 19.03,
      "e": 20.55,
-     "t": "Gatei, especially after what he did"
+     "t": "Gaethje, especially after what he did"
     },
     {
      "s": 20.55,
      "e": 23.43,
-     "t": "against Ilia Tapora against Arman Sukian"
+     "t": "against Ilia Topuria against Arman Tsarukyan"
     },
     {
      "s": 23.43,
@@ -2575,7 +2586,7 @@
     {
      "s": 24.12,
      "e": 25.19,
-     "t": "Sure, Surukin will be a"
+     "t": "Sure, Tsarukyan will be a"
     },
     {
      "s": 25.19,
@@ -2605,12 +2616,12 @@
     {
      "s": 33.99,
      "e": 36.47,
-     "t": "Belal Muhammad and maybe even Nasardini"
+     "t": "Belal Muhammad and maybe even Nassourdine"
     },
     {
      "s": 36.47,
      "e": 39.03,
-     "t": "Mavave recently Arman Tsarukyan has made"
+     "t": "Imavov recently Arman Tsarukyan has made"
     },
     {
      "s": 39.03,
@@ -3342,7 +3353,7 @@
     {
      "s": 48.71,
      "e": 50.71,
-     "t": "Kio, you know, it's going to be hard to"
+     "t": "KO, you know, it's going to be hard to"
     },
     {
      "s": 50.71,

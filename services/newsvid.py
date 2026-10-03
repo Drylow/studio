@@ -493,6 +493,24 @@ def _fix_spelling(text, spelling):
     return text
 
 
+def _fix_spelling_lines(texts, spelling):
+    """Comme _fix_spelling, plus les noms coupés entre deux lignes de sous-titres (« Justin | Gatei ») : sans ça,
+    la vidéo Topuria (3 oct.) avait « Gatei », « Sukian », « Mavave » à l'écran malgré la table."""
+    texts = [_fix_spelling(t, spelling) for t in texts]
+    joined = "\x01".join(texts)
+    for wrong, right in (spelling or {}).items():
+        ww, rw = wrong.split(), right.split()
+        if len(ww) < 2 or len(ww) != len(rw) or wrong.lower() == right.lower():
+            continue
+
+        def sub(m, rw=rw):
+            parts = re.split(r"([\s\x01]+)", m.group(0))
+            parts[0::2] = rw
+            return "".join(parts)
+        joined = re.sub(r"\b" + r"[\s\x01]+".join(map(re.escape, ww)) + r"\b", sub, joined, flags=re.I)
+    return joined.split("\x01")
+
+
 _SENT_END = re.compile(r"[.?!][\"”’')\]]*$")
 # Prononciation de la voix off (Algrow lit mal certains noms : « Gaethje » = GAY-chee) : orthographe phonétique
 # envoyée à la voix SEULEMENT (sous-titres, titres et bandeaux gardent la vraie orthographe). Un nom = un mot.
@@ -607,8 +625,8 @@ def clip_spec(src, a, b, spelling, quote=None, max_len=MAX_CLIP, pad_in=0.15, pa
             e += 1
     start = max(0.0, pcs[s]["s"] - pad_in)
     end = pcs[e]["e"] + pad_out
-    subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2),
-             "t": _fix_spelling(p["t"], spelling)} for p in pcs[s:e + 1]]
+    subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2), "t": t}
+            for p, t in zip(pcs[s:e + 1], _fix_spelling_lines([p["t"] for p in pcs[s:e + 1]], spelling))]
     out = {"video": src["id"], "start": round(start, 2), "end": round(end, 2),
            "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""),
            "channel": src.get("channel") or "", "subs": subs}
