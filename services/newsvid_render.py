@@ -121,10 +121,24 @@ def snap(audio, start, end):
         s2 = min((x[1] for x in sil), key=lambda v: abs(v - start)) - 0.06
     sil = silences(audio, end - 0.45, end + 0.9)
     if sil:
-        e2 = min((x[0] for x in sil), key=lambda v: abs(v - end)) + 0.12
+        a, b = min(sil, key=lambda x: abs(x[0] - end))[:2]
+        e2 = a + max(0.12, min(0.6, (b - a) * 0.7))   # respiration après la dernière phrase, sans mordre la suivante
     if e2 - s2 < 2.0:
         return start, end
     return max(0.0, s2), e2
+
+
+# Transitions douces entre les passages (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») :
+# chaque morceau entre et sort en fondu court (image + son), le son plus longuement que l'image.
+FADE_V_IN, FADE_V_OUT, FADE_A_IN, FADE_A_OUT = 0.2, 0.3, 0.15, 0.45
+
+
+def vfades(dur):
+    return f"fade=t=in:st=0:d={FADE_V_IN},fade=t=out:st={max(0.0, dur - FADE_V_OUT):.3f}:d={FADE_V_OUT}"
+
+
+def afades(dur):
+    return f"afade=t=in:st=0:d={FADE_A_IN},afade=t=out:st={max(0.0, dur - FADE_A_OUT):.3f}:d={FADE_A_OUT}"
 
 
 # ── Habillage ───────────────────────────────────────────────────────────────
@@ -484,13 +498,14 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
              f"[s1]scale=480:270:force_original_aspect_ratio=increase,crop=480:270,boxblur=12:2,"
              f"scale={W}:{H},eq=brightness=-0.22:saturation=0.75[bg];"
              f"[s2]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[c];"
-             f"[bg][2:v]overlay=0:0:shortest=1[bf];[bf][c]overlay={x}:{y}[b0];[b0]{sub},format=yuv420p[v];")
+             f"[bg][2:v]overlay=0:0:shortest=1[bf];[bf][c]overlay={x}:{y}[b0];[b0]{sub},format=yuv420p,{vfades(dur)}[v];")
     else:
         zw, zh = int(W * 1.04) // 2 * 2, int(H * 1.04) // 2 * 2
         g = (f"[0:v]fps={FPS},scale={zw}:{zh}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-             f"{sub},format=yuv420p[v];")
+             f"{sub},format=yuv420p,{vfades(dur)}[v];")
     mute = ("volume=0:enable='" + "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in mutes) + "',") if mutes else ""
-    g += f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,aformat=channel_layouts=stereo[a]"
+    g += (f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,{afades(dur)},"
+          f"aformat=channel_layouts=stereo[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
@@ -582,27 +597,30 @@ def render_narration(seg, audio, files, b0, workdir, dest, music, accent, plan, 
                  "-loop", "1", "-framerate", str(FPS), "-i", shade or make_shade(os.path.join(workdir, "shade.png"))]
     g = (pre + f"zoompan=z='1+0.05*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
          f"eq=brightness=-0.08:saturation=0.9[bb];[bb][3:v]overlay=0:0:shortest=1,"
-         f"subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
+         f"subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p,{vfades(dur)}[v];"
          f"[1:a]aresample=48000,loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=0.35[n];"
          f"[2:a]aresample=48000,volume=0.11,afade=t=in:d=0.4[m];"
-         f"[n][m]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
+         f"[n][m]amix=inputs=2:duration=first:normalize=0,aresample=48000,{afades(dur)}[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
 
 
-def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), dur=2.4):
-    """Logo entre l'ouverture et la première voix off : nom de la chaîne + slogan, sur la musique, sans bruitage."""
+def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), dur=4.5):
+    """Logo après la voix off d'intro : nom de la chaîne + slogan, sur la musique, sans bruitage. Reste ~4 s et sort
+    en fondu (l'utilisateur, 4 oct. : « il reste une seconde et après ça coupe »)."""
     bg = make_background(plan, os.path.join(workdir, "bg_plain.png"), box=False)
     brand = _ass_escape((plan.get("brand") or "NEWS").upper())
     slogan = _ass_escape(re.sub(r"^SUBSCRIBE FOR\s+", "", (plan.get("subscribe") or "").upper()))
     ev = [_ev(0.1, dur, "Brand", f"{{\\pos({W // 2},{H // 2 - 30})\\fscx115\\fscy115\\fad(200,0)"
-                                 f"\\t(0,400,\\fscx100\\fscy100)}}{brand}", 2)]
+                                 f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(dur * 1000)},\\fscx106\\fscy106)}}{brand}", 2)]
     if slogan:
         ev.append(_ev(0.5, dur, "Slogan", f"{{\\pos({W // 2},{H // 2 + 260})\\fad(250,0)}}{slogan}", 2))
     ass = _write_ass(os.path.join(workdir, "sting.ass"), _styles(accent, accent2, False), ev)
-    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
-         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3,aformat=channel_layouts=stereo[a]")
+    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p,"
+         f"fade=t=in:st=0:d=0.3,fade=t=out:st={dur - 0.6:.3f}:d=0.6[v];"
+         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3,afade=t=out:st={dur - 0.8:.3f}:d=0.8,"
+         f"aformat=channel_layouts=stereo[a]")
     media.run(["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}", "-i", bg, "-stream_loop", "-1", "-i", music,
                "-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                os.path.basename(dest)], cwd=workdir)

@@ -274,6 +274,9 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   (Helwani/Yahoo et Cormier/The Volume : pas revendiqués jusqu'ici). L'utilisateur voit les revendications dans
   YouTube Studio (vérification des droits à l'envoi) ; une revendication n'est pas un avertissement mais les revenus
   de la vidéo partent au plaignant : on refait la vidéo sans ces extraits.
+- **Transitions douces** (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») : chaque
+  passage entre et sort en fondu court (`vfades`/`afades`), la fin d'un extrait respire jusqu'à 0,6 s dans le silence
+  (`snap`), le logo animé reste 4,5 s et sort en fondu.
 - **Début de vidéo = la voix off d'intro sur la photo** (l'utilisateur, 3 oct. : « au tout début, je veux l'intro avec
   la voix off et la photo ») : plus d'ouverture en extraits plein écran (`materialize` l'ignore sauf `"cold_open": True`
   dans la chaîne) ; les extraits choisis pour l'ouverture vont dans le corps avec leur voix off ; le logo animé passe
