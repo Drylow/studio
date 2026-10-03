@@ -222,6 +222,9 @@ Ce que l'utilisateur a validé (ne pas revenir en arrière sans qu'il le demande
   marqueur, lieux trop proches fusionnés, noms placés automatiquement (`_layout_map_labels`) pour
   qu'aucune flèche, marqueur ou cartouche ne recouvre un texte.
 - Vraies images d'archive (The Met, Wikimedia Commons) quand elles existent, image IA en secours.
+- **Miniatures History** façon Dose of History (`job_thumbnail`, 3 variantes jointes au paquet Discord) : une peinture
+  saturée, un personnage face caméra, 2-3 mots blancs avec le mot fort en rouge. **Jamais de portrait noir et blanc
+  en médaillon** (l'utilisateur, 3 oct. : « tête goofy superposée, on n'en veut pas du tout »).
 - Rendus envoyés sur **Gofile** (un seul lien, le bon).
 
 Pièges connus : **disque** (allocation fixe ~38 Go) : chaque appel de `render.mjs` copie les médias dans

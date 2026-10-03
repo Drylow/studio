@@ -42,11 +42,11 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks | **livrée** (vérifiée plan par plan, Discord, 2 oct.) — https://gofile.io/d/XXlkFSbS ; 36 min, voix Earl, rendu RunPod (~2 $) ; miniature « SHE SAW EVERYTHING » | à caler |
-| Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | en production (`work/sa/gettysburg_v2`) ; 3 miniatures façon Dose of History | — |
+| Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | **livrée** (vérifiée, Discord, 3 oct. 00:24) — https://gofile.io/d/ydAC4RRY ; 30 s d'Adobe Walls mélangées par le VPS (19:30-20:00) repérées à la relecture et refaites avant envoi ; 3 miniatures sans médaillon (BRUTAL FATE, CHILLING TRUTH, SHE SAW EVERYTHING) | à caler |
 | The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | script relu (`chaines/the-survivors-account/videos/02-pompeii-pliny/`), en production (`work/sa/pompeii`) | — |
 
 ## Frontier Blood (History Docs, `frontier_blood`)
 
 | Vidéo | État | Publication |
 |---|---|---|
-| How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | en production (`work/fb/adobe_walls`), style peinture d'histoire ; titre « Hundreds » (700 n'est qu'une estimation) | — |
+| How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | **livrée** (vérifiée, Discord, 3 oct. 00:22) — https://gofile.io/d/vWmECEPV ; miniatures renvoyées sans médaillon (HIDDEN TRUTH, BRUTAL DAWN, WORSE THAN DEATH) | à caler |
