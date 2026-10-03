@@ -36,9 +36,10 @@ def _segment_expr(chord, beat):
     return f"{pad}+0.05*({arp})", dur
 
 
-def generate(key, dest, minutes=2.5):
-    """Génère la piste `key` (MP3) dans dest ; renvoie le chemin."""
-    t = TRACKS[key]
+def generate(key, dest, minutes=2.5, track=None):
+    """Génère la piste `key` (MP3) dans dest ; renvoie le chemin. track = définition hors bibliothèque
+    (mêmes champs que TRACKS), pour une piste propre à un format sans la proposer aux autres chaînes."""
+    t = track or TRACKS[key]
     beat = 60.0 / t["bpm"]
     tmpdir = dest + ".parts"
     os.makedirs(tmpdir, exist_ok=True)
