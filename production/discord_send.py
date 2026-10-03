@@ -1,7 +1,7 @@
 """Envoie le paquet de publication d'une vidéo sur Discord : lien vidéo + miniature, titre, description
 (+ chapitres), tags, commentaire épinglé. Marque = nom du studio de la chaîne (Oddly Specific Lives…).
 
-  python production/discord_send.py <folder> <lien_gofile> [--link-only] [--dry-run]
+  python production/discord_send.py <folder> <lien_gofile> [--link-only | --thumbs-only] [--dry-run]
 
 Le dossier doit avoir meta.json (écrit au rendu) et thumb_choice.txt (chemin de la miniature choisie).
 Miniature pas encore choisie : thumb_options.txt (une ligne par variante : « chemin<TAB>MOT ») joint toutes les
@@ -75,6 +75,9 @@ fcntl.flock(_lock, fcntl.LOCK_EX)
 
 title = meta["titles"][0]
 head = f"🎬 **{BRAND} — {title}** ✅ vérifiée, à poster\n🔗 **Vidéo** : <{link}>"  # <…> : pas d'aperçu du lien
+if "--thumbs-only" in sys.argv:  # miniatures refaites après l'envoi du paquet : seulement les images, sans le reste
+    post(f"🖼️ **{BRAND} — {title}** : miniatures corrigées (remplacent celles du paquet précédent)", files=thumbs)
+    sys.exit()
 if "--link-only" in sys.argv:
     post(head.replace(" ✅ vérifiée, à poster", ""))
     sys.exit()

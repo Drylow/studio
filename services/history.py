@@ -1420,38 +1420,35 @@ class _Sub:
         return self.job.cancelled()
 
 
-THUMB_LOOK = ("YouTube thumbnail painting in the style of the top history documentary channels: one dramatic scene, "
+THUMB_LOOK = ("YouTube thumbnail painting in the style of the top history documentary channels: one single dramatic "
+              "scene (no inset portrait, no cameo, no black-and-white photo, no collage), "
               "vivid saturated colours, strong contrast, fire glow, drifting smoke and a dramatic sky; {subject}; the "
               "action of the story behind. Keep the {corner} corner of the frame calmer (sky or smoke) for a title "
               "added later. Era-accurate. No text, no letters.")
-CAMEO_LOOK = ("Head-and-shoulders portrait of {who}, as an authentic period portrait from that era (a 19th-century "
-              "engraving or black-and-white photograph for modern times; an engraved portrait or marble bust for "
-              "antiquity), facing the viewer, plain light background, nothing else. No text.")
 
 
 def thumb_concepts(pr, n=3):
-    """n idées de miniature façon Dose of History : scène, personnage face caméra, 2-4 mots (mot fort en rouge),
-    médaillon facultatif d'un acteur clé. Les guillemets sont réservés aux vrais mots du témoin."""
+    """n idées de miniature façon Dose of History : scène, personnage face caméra, 2-4 mots (mot fort en rouge).
+    Jamais de médaillon noir et blanc collé sur l'image (l'utilisateur, 3 oct. : « tête goofy, on n'en veut pas »).
+    Les guillemets sont réservés aux vrais mots du témoin."""
     script = HA.narration(pr["script"])[:9000]
     data = ai.chat_json(
         f'Design {n} different YouTube thumbnails for the history documentary "{pr["title"]}". Study of the most '
         'viewed thumbnails of the niche (Dose of History): one dramatic painted scene, a person big in the '
         'foreground looking straight at the viewer, fire, smoke, flags; ONE short line of text of 2-4 words in '
-        'white with the strongest word in red (e.g. BRUTAL FATE, CHILLING DISCOVERY, "I SAW CUSTER DIE"); '
-        'sometimes a black-and-white period portrait of a key person in an oval cameo.\n'
+        'white with the strongest word in red (e.g. BRUTAL FATE, CHILLING DISCOVERY, "I SAW CUSTER DIE"). One '
+        'single painted image: no inset portrait, no cameo, no black-and-white photo, no collage.\n'
         'Rules for the text: an emotional hook, never a description or a detail of the plot. Best: 2-3 words. '
         'Patterns that work: BRUTAL FATE, CHILLING DISCOVERY, WORSE THAN DEATH, SHE SAW EVERYTHING, 28 VS 700, '
         'NO ONE SURVIVED, HIDDEN TRUTH; one strong word in red (BRUTAL, CHILLING, HORRIFYING, TRUTH, EVERYTHING, a '
         'number). It adds to the title without repeating it. Put it in quotes ONLY when it is the witness\'s real '
         'words from the script, copied exactly and very short (2-4 words); never invent a quote. All 3 texts differ.\n'
         'Rules for the image: a true moment of the story, era-accurate, no gore in close-up; the person in the '
-        'foreground is the witness or the hero of the story. The cameo, used in at most 2 of the 3, is the MOST '
-        'famous real person of the story (the leader, the enemy commander, the famous name in the title), never a '
-        'minor figure.\n'
+        'foreground is the witness or the hero of the story.\n'
         'Return JSON only: {"concepts": [{"text": "2-4 WORDS", "red": ["WORD"], "quotes": false, '
         '"corner": "top-left|top-right|bottom-left|bottom-right", "subject": "who stands big in the foreground '
-        '(age, look, clothes, expression) and on which side", "scene": "one sentence: the moment and the place behind", '
-        '"cameo": "real person + look, or empty"}]}\n\nSCRIPT (excerpt):\n' + script,
+        '(age, look, clothes, expression) and on which side", "scene": "one sentence: the moment and the place behind"'
+        '}]}\n\nSCRIPT (excerpt):\n' + script,
         model=ai.text_model(), timeout=240)
     out = []
     for c in (data.get("concepts") or [])[:n]:
@@ -1460,7 +1457,7 @@ def thumb_concepts(pr, n=3):
                 else "top-right"
             out.append({"text": str(c["text"]).strip().strip('"“”'), "red": [str(x) for x in c.get("red") or []][:2],
                         "quotes": bool(c.get("quotes")), "corner": corner, "subject": str(c.get("subject") or ""),
-                        "scene": str(c["scene"]), "cameo": str(c.get("cameo") or "").strip()})
+                        "scene": str(c["scene"])})
     if not out:
         raise ai.AIError("Miniature : aucune idée.")
     return out
@@ -1468,7 +1465,7 @@ def thumb_concepts(pr, n=3):
 
 def job_thumbnail(job, pid, n=3):
     """Miniatures (n variantes au choix) : peinture saturée + personnage face caméra + 2-4 mots posés par le code
-    (blanc, mot fort en rouge) + médaillon noir et blanc facultatif. La 1re est la miniature par défaut."""
+    (blanc, mot fort en rouge), une seule image peinte. La 1re est la miniature par défaut."""
     pr = get_project(pid)
     style = HA.image_style((pr.get("options") or {}).get("image_style"))
     if not pr.get("period") and pr.get("script"):
@@ -1488,19 +1485,8 @@ def job_thumbnail(job, pid, n=3):
                                  f"{style['shot']}", width=1920, height=1080, quality="high")
         base = os.path.join(d, f"thumbnail_base_{k}.jpg")
         ai.fit_cover(blob, 1280, 720, base)
-        cameo = None
-        if c.get("cameo"):
-            try:
-                cameo = os.path.join(d, f"thumbnail_cameo_{k}.jpg")
-                ai.fit_cover(ai.generate_image(CAMEO_LOOK.format(who=c["cameo"]), width=1024, height=1536,
-                                               quality="high"), 768, 1024, cameo)
-            except Exception as e:  # noqa: BLE001 — sans médaillon, la miniature reste bonne
-                print(f"[thumbnail] médaillon : {e}", flush=True)
-                cameo = None
-        side = "left" if c["corner"].endswith("left") else "right"
         rel = f"thumbnail_{k}.jpg"
-        TH.compose_doh(base, c["text"], c["red"], c["corner"], cameo=cameo, cameo_side=side, quotes=c["quotes"],
-                       dest=os.path.join(d, rel))
+        TH.compose_doh(base, c["text"], c["red"], c["corner"], quotes=c["quotes"], dest=os.path.join(d, rel))
         return rel
 
     made = []
