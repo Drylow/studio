@@ -235,6 +235,7 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
                 # secours à court de quota alors que le principal est juste saturé (file d'attente pleine) :
                 # on revient au principal, plus patiemment
                 _log("/chat/completions", f"secours {fb} à court de quota → retour à {main['model']}", time.time())
+                _cooldown[fb] = max(_cooldown.get(fb, 0), time.time() + 3600)  # ne plus y passer pendant 1 h
                 _cooldown.pop(main["model"], None)
                 body.clear()
                 body.update(main)
