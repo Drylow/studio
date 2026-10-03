@@ -57,4 +57,5 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | “I BROKE HIS FACE!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim! (titre choisi par l'utilisateur) | **livrée v4 bleue CORRIGÉE** (Discord, 4 oct. 00:11 heure belge) — https://gofile.io/d/y1fhk7Xj ; 14 min 46 ; refaite sans les extraits de One Night with Steiny (revendication Content ID sur la v3), commence par la voix off + photo, tout en bleu ; miniature “I BROKE HIS FACE” (bleu clair) | à caler |
+| “IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN Topuria As Ilia Returns To Training! | **livrée** (Discord, 4 oct. 00:52 heure belge) — https://gofile.io/d/potc7Pzl ; 18 min 58 ; sources Double Coverage, Sonnen, Helwani, Submission Radio ; 1ère version montée non envoyée (13 noms mal écrits dans les sous-titres, corrigés) ; transitions douces + logo 4,5 s ; miniature Tsarukyan + Topuria “IT'S NOT GOING TO HAPPEN” | à caler |
 
