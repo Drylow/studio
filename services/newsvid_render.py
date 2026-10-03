@@ -194,6 +194,18 @@ def make_swipe(plan, dest):
     return dest
 
 
+def make_shade(dest):
+    """Dégradé noir à gauche (sous le titre de la voix off) : lisible même si le b-roll a ses propres textes."""
+    from PIL import Image
+    a = Image.new("L", (W, 1))
+    a.putdata([int(225 * max(0.0, 1 - x / 1250) ** 1.4) for x in range(W)])
+    a = a.resize((W, H))
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    im.putalpha(a)
+    im.save(dest, "PNG")
+    return dest
+
+
 def _swipe_filter(src, sw, dur, out, first=False):
     """[src][sw] → [out] : volet qui sort (début) et qui entre (fin)."""
     def sm(p):
@@ -489,17 +501,18 @@ def narration_ass(dest, seg, dur, plan, acc, acc2):
 
 
 def render_narration(seg, audio, files, b0, workdir, dest, music, accent, plan, accent2=(255, 210, 31),
-                     swipe=None):
+                     swipe=None, shade=None):
     dur = media.duration(audio) + 0.35
     ass = narration_ass(os.path.join(workdir, os.path.basename(dest) + ".ass"), seg, dur, plan, accent, accent2)
     sfx_wav = sfx_track([(0.0, "whoosh", 0.55)], dur, os.path.join(workdir, os.path.basename(dest) + ".sfx.wav"))
     n = max(1, int(dur * FPS))
     ins = ["-ss", f"{b0:.3f}", "-t", f"{dur:.3f}", "-i", files["v"], "-i", audio,
-           "-stream_loop", "-1", "-i", music, "-i", sfx_wav, "-loop", "1", "-framerate", str(FPS), "-i", swipe]
+           "-stream_loop", "-1", "-i", music, "-i", sfx_wav, "-loop", "1", "-framerate", str(FPS), "-i", swipe,
+           "-loop", "1", "-framerate", str(FPS), "-i", shade or make_shade(os.path.join(workdir, "shade.png"))]
     # b-roll : zoom lent (calculé sur une image 2× plus grande : pas de tremblement), assombri
     g = (f"[0:v]fps={FPS},scale={2 * W}:{2 * H}:force_original_aspect_ratio=increase,crop={2 * W}:{2 * H},setsar=1,"
          f"zoompan=z='1+0.06*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
-         f"eq=brightness=-0.10:saturation=0.8,"
+         f"eq=brightness=-0.10:saturation=0.8[bb];[bb][5:v]overlay=0:0:shortest=1,"
          f"subtitles={os.path.basename(ass)}:fontsdir=fonts[b2];"
          + _swipe_filter("b2", "4:v", dur, "b3") + ";[b3]format=yuv420p[v];"
          f"[1:a]aresample=48000,loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=0.35[n];"
@@ -603,6 +616,7 @@ def build(job_dir, work_root, upload=True, keep=False):
     shutil.copytree(FONTS, os.path.join(work, "fonts"), dirs_exist_ok=True)
     bg = make_background(plan, os.path.join(work, "bg.png"))
     swipe = make_swipe(plan, os.path.join(work, "swipe.png"))
+    shade = make_shade(os.path.join(work, "shade.png"))
     music = os.path.join(work, "music.mp3")
     if not os.path.isfile(music):
         from services import music as M
@@ -657,7 +671,7 @@ def build(job_dir, work_root, upload=True, keep=False):
             if not os.path.isfile(dest):
                 b0 = broll_window(files[ref["video"]], ref["start"], ref["end"], media.duration(voices[i]) + 0.5)
                 render_narration(seg, voices[i], files[ref["video"]], b0, work, dest, music, accent, plan,
-                                 accent2=accent2, swipe=swipe)
+                                 accent2=accent2, swipe=swipe, shade=shade)
         parts.append(dest)
         log(f"segment {i + 1}/{len(segs)} prêt")
     # 4) collage
