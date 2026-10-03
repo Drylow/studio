@@ -56,5 +56,5 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
 | Vidéo | État | Publication |
 |---|---|---|
-| “HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch! | **livrée v3 CORRIGÉE** (Discord, 3 oct. 19:33 UTC) — https://gofile.io/d/CRp2y8tX ; 20 min 12 ; montée par le PC de l'utilisateur ; v3 après sa critique de la v2 (ouverture sans contexte, extraits coupés avant la réponse, bruitages, citation en grand au milieu, mauvaise prononciation de Gaethje, sous-titres sales, texte de miniature coupé) : style Fight Night (cadre sur vidéo floutée, phrase forte en jaune dans les sous-titres, photos des combattants sous la voix off) ; miniature A « SHOULD HAVE QUIT » texte remonté | à caler |
+| “HE HAS TO BELIEVE THAT I CHEATED!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim! | **livrée v4 bleue CORRIGÉE** (Discord, 4 oct. 00:11 heure belge) — https://gofile.io/d/y1fhk7Xj ; 14 min 46 ; refaite sans les extraits de One Night with Steiny (revendication Content ID sur la v3), commence par la voix off + photo, tout en bleu ; miniature “I BROKE HIS FACE” (bleu clair) | à caler |
 
