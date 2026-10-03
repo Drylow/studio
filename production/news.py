@@ -18,6 +18,11 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
                                          Gofile, supprime les clips, git push du résultat et des planches
   python production/news.py build <dossier> [--no-upload] [--keep]
 
+  # sur le VPS de l'utilisateur (production/vps_news_setup.sh) : tout depuis le cloud, rien à faire sur le PC
+  python production/news.py vps-check                 → YouTube laisse-t-il télécharger depuis le VPS ?
+  python production/news.py vps <dossier> [--no-wait] → envoie, monte, rapatrie lien + planches check/
+  python production/news.py vps-fetch <dossier> [--wait]
+
   # dans le cloud, après avoir regardé les planches check/
   python production/news.py send <dossier>                                        → paquet Discord
 """
@@ -28,6 +33,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 
 from common import REPO, WORK
 
@@ -255,6 +261,81 @@ def cmd_pc():
         push_result(rel)
 
 
+VPS_CODE = ["production/news.py", "production/common.py", "services/__init__.py", "services/newsvid.py",
+            "services/newsvid_render.py", "services/media.py", "services/music.py", "services/ai.py", "services/tts.py"]
+
+
+def vps_call(method, path, data=None, timeout=60):
+    """Serveur de montage du VPS (production/news_worker.py) : NEWS_WORKER_URL + NEWS_WORKER_TOKEN dans .env."""
+    import requests
+    url = (os.environ.get("NEWS_WORKER_URL") or "").rstrip("/")
+    tok = os.environ.get("NEWS_WORKER_TOKEN") or ""
+    if not url or not tok:
+        raise SystemExit("NEWS_WORKER_URL / NEWS_WORKER_TOKEN absents du .env (installer : production/vps_news_setup.sh)")
+    return requests.request(method, url + path, data=data, timeout=timeout, headers={"X-Worker-Token": tok})
+
+
+def cmd_vps(job, wait=True, upload=True):
+    """Montage sur le VPS : envoie le code + la vidéo préparée, suit le montage, rapatrie lien et planches."""
+    import io
+    import tarfile
+    name = os.path.basename(job.rstrip("/\\"))
+    buf = io.BytesIO()
+    with tarfile.open(fileobj=buf, mode="w:gz") as t:
+        for rel in VPS_CODE:
+            t.add(os.path.join(REPO, rel), "code/" + rel)
+        t.add(os.path.join(REPO, "static", "fonts"), "code/static/fonts")
+        for f in ("plan.json", "job.json"):
+            if os.path.isfile(os.path.join(job, f)):
+                t.add(os.path.join(job, f), "job/" + f)
+        for f in sorted(glob.glob(os.path.join(job, "narration", "n*.mp3"))):
+            t.add(f, "job/narration/" + os.path.basename(f))
+    r = vps_call("PUT", f"/job?name={name}" + ("" if upload else "&upload=0"), data=buf.getvalue(), timeout=300)
+    if r.status_code != 200:
+        raise SystemExit(f"VPS : {r.status_code} {r.text[:300]}")
+    print(f"envoyé au VPS ({buf.tell() / 1e6:.1f} Mo) : montage lancé")
+    if wait:
+        vps_fetch(job, wait=True)
+
+
+def vps_fetch(job, wait=False):
+    """Attend la fin du montage (si wait) puis rapatrie result.json, build.log et les planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    last = ""
+    while True:
+        s = vps_call("GET", "/status").json()
+        line = (s.get("log") or [""])[-1]
+        if line and line != last:
+            print(line, flush=True)
+            last = line
+        if not (s.get("busy") and s.get("job") == name):
+            break
+        if not wait:
+            print("montage en cours :", s.get("stage"))
+            return None
+        time.sleep(30)
+    for rel in ["result.json", "build.log"] + [f"check/sheet_{k:02d}.jpg" for k in range(1, 40)]:
+        r = vps_call("GET", f"/file?name={name}&path={rel}", timeout=120)
+        if r.status_code != 200:
+            if rel.startswith("check/"):
+                break
+            continue
+        dest = os.path.join(job, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "wb") as f:
+            f.write(r.content)
+    if s.get("error"):
+        print("ERREUR VPS :", s["error"])
+    rp = os.path.join(job, "result.json")
+    if os.path.isfile(rp):
+        with open(rp, "r", encoding="utf-8") as f:
+            res = json.load(f)
+        print(f">>> LIEN DE LA VIDEO : {res.get('link')}  ({res.get('minutes')} min)")
+        return res
+    print("pas de result.json : voir build.log")
+    return None
+
+
 def cmd_send(job):
     """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags."""
     import requests
@@ -326,6 +407,12 @@ def main(argv):
         cmd_build(job_path(args[0]), upload="--no-upload" not in flags, keep="--keep" in flags)
     elif c == "pc":
         cmd_pc()
+    elif c == "vps":
+        cmd_vps(job_path(args[0]), wait="--no-wait" not in flags, upload="--no-upload" not in flags)
+    elif c == "vps-fetch":
+        vps_fetch(job_path(args[0]), wait="--wait" in flags)
+    elif c == "vps-check":
+        print(vps_call("POST", "/ytcheck", timeout=320).json())
     elif c == "send":
         cmd_send(job_path(args[0]))
     else:

@@ -305,8 +305,9 @@ def check_sheets(video, out_dir, every=10, cols=6, rows=5):
             with Image.open(fp) as im:  # fermé tout de suite : Windows refuse d'effacer un fichier ouvert
                 sheet.paste(im, (x, y))
             t = (k + i) * every
-            d.rectangle((x, y, x + 74, y + 22), fill=(0, 0, 0))
-            d.text((x + 4, y + 4), f"{t // 60}:{t % 60:02d}", fill=(255, 255, 0))
+            # heure en bas à droite : le crédit de la source (en haut à gauche) reste visible à la relecture
+            d.rectangle((x + 384 - 50, y + 216 - 20, x + 384, y + 216), fill=(0, 0, 0))
+            d.text((x + 384 - 46, y + 216 - 16), f"{t // 60}:{t % 60:02d}", fill=(255, 255, 0))
         sheet.save(os.path.join(out_dir, f"sheet_{k // per + 1:02d}.jpg"), quality=80)
     shutil.rmtree(tmp, ignore_errors=True)
 

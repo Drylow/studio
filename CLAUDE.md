@@ -260,6 +260,13 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
+  (Docker, HTTPS, jeton) installé par une ligne en root sur le VPS : `curl -fsSL
+  https://raw.githubusercontent.com/drylow/studio/main/production/vps_news_setup.sh | bash` (script généré par
+  `vps_news_setup.py` : le régénérer et committer après chaque changement du serveur). `NEWS_WORKER_URL` +
+  `NEWS_WORKER_TOKEN` dans `.env`. `news.py vps-check` (YouTube accepte-t-il le VPS ?), `news.py vps <dossier>`
+  (envoie code + plan + voix off, suit le montage, rapatrie `result.json`, `build.log`, `check/sheet_*.jpg`).
+  Le VPS efface clips, segments et vidéo après l'envoi Gofile. SSH est fermé depuis le cloud : HTTPS seulement.
 - **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
   (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
   dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le
