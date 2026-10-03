@@ -18,6 +18,16 @@ Chaque requête porte l'en-tête X-Worker-Token (= WORKER_TOKEN).
                                lance le montage (téléchargement, montage, Gofile, puis clips et vidéo supprimés)
   GET  /file?name=NOM&path=P   résultat : result.json, build.log, check/sheet_XX.jpg
   DELETE /job?name=NOM         efface le dossier de la vidéo
+
+Relais vers le PC de l'utilisateur (YouTube bloque ce VPS, pas une connexion de maison) : le cloud dépose la vidéo,
+l'agent du PC (standalone/pc_agent/pc_agent.py, tâche Windows toutes les 15 min) la prend, monte, renvoie le résultat.
+  PUT  /pcjob?name=NOM         dépose le .tgz (même contenu que /job) pour le PC
+  GET  /pc/next                (PC) prochaine vidéo à monter → {name} ou {name: null} ; note l'heure de passage du PC
+  GET  /pc/job?name=NOM        (PC) le .tgz
+  PUT  /pc/result?name=NOM&path=P  (PC) result.json, build.log, check/sheet_XX.jpg
+  POST /pc/done?name=NOM       (PC) fini
+  GET  /pc/state?name=NOM      {state: pending|claimed|done, log, pc_seen}
+  GET  /pc/file?name=NOM&path=P   un fichier renvoyé par le PC
 """
 import io
 import json
@@ -38,6 +48,9 @@ DATA = os.environ.get("DATA_DIR", "/data")
 TOKEN = os.environ.get("WORKER_TOKEN", "")
 JOBS = os.path.join(DATA, "jobs")
 DENO_DIR = os.path.join(DATA, "tools", "deno")
+PC = os.path.join(DATA, "pc")
+RESULT_PATH = re.compile(r"(result\.json|build\.log|worker\.log|check/sheet_\d{2}\.jpg)")
+CLAIM_TIMEOUT = 4 * 3600   # un PC éteint en plein montage : la vidéo est reproposée après 4 h
 MODULES = ["yt-dlp[default]", "imageio-ffmpeg", "Pillow", "python-dotenv", "requests"]
 TEST_VIDEO = "MeFQgiVHNoA"   # vidéo publique courte (son seul, quelques Mo) pour le test YouTube
 # Proxy résidentiel (payé au Go) : seulement pour YouTube. Donné en YTDLP_PROXY ou en HTTPS_PROXY : dans les deux
@@ -123,6 +136,37 @@ def build(name, upload=True):
         st.update(busy=False, stage="done")
 
 
+def pc_state(name, **upd):
+    path = os.path.join(PC, name, "state.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            s = json.load(f)
+    except (OSError, ValueError):
+        s = {}
+    if upd:
+        s.update(upd)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(s, f)
+    return s
+
+
+def pc_next():
+    st["pc_seen"] = time.time()
+    with lock:
+        jobs = []
+        for n in os.listdir(PC) if os.path.isdir(PC) else []:
+            s = pc_state(n)
+            free = s.get("state") == "pending" or (s.get("state") == "claimed"
+                                                   and time.time() - s.get("claimed", 0) > CLAIM_TIMEOUT)
+            if free:
+                jobs.append((s.get("t", 0), n))
+        if not jobs:
+            return None
+        n = sorted(jobs)[0][1]
+        pc_state(n, state="claimed", claimed=time.time())
+        return n
+
+
 def tail(path, n=40):
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
@@ -166,6 +210,24 @@ class H(BaseHTTPRequestHandler):
             out = dict(st, cookies=os.path.isfile(COOKIES),
                        log=tail(os.path.join(jobdir(job), "build.log")) if job else [])
             return self._send(200, out)
+        if path == "/pc/next":
+            return self._send(200, {"name": pc_next()})
+        if path in ("/pc/job", "/pc/state", "/pc/file"):
+            n = self._name(q)
+            if not n or not os.path.isdir(os.path.join(PC, n)):
+                return self._send(404, {"error": "absent"})
+            if path == "/pc/job":
+                with open(os.path.join(PC, n, "job.tgz"), "rb") as fh:
+                    return self._send(200, data=fh.read(), ctype="application/gzip")
+            if path == "/pc/state":
+                return self._send(200, dict(pc_state(n), pc_seen=st.get("pc_seen"),
+                                            log=tail(os.path.join(PC, n, "out", "build.log"))))
+            rel = q.get("path", "")
+            f = os.path.join(PC, n, "out", rel)
+            if not RESULT_PATH.fullmatch(rel) or not os.path.isfile(f):
+                return self._send(404, {"error": "absent"})
+            with open(f, "rb") as fh:
+                return self._send(200, data=fh.read(), ctype="application/octet-stream")
         if path == "/file":
             n, rel = self._name(q), q.get("path", "")
             if not n or not re.fullmatch(r"(result\.json|build\.log|worker\.log|check/sheet_\d{2}\.jpg)", rel):
@@ -180,7 +242,13 @@ class H(BaseHTTPRequestHandler):
     def do_POST(self):
         if not self._auth():
             return
-        path, _ = self._q()
+        path, q = self._q()
+        if path == "/pc/done":
+            n = self._name(q)
+            if not n or not os.path.isdir(os.path.join(PC, n)):
+                return self._send(404, {"error": "absent"})
+            pc_state(n, state="done", done=time.time(), ok=q.get("ok") == "1")
+            return self._send(200, {"ok": True})
         if path == "/ytcheck":
             if st["busy"]:
                 return self._send(409, {"error": "busy"})
@@ -192,6 +260,27 @@ class H(BaseHTTPRequestHandler):
             return
         path, q = self._q()
         n = self._name(q)
+        if path in ("/pcjob", "/pc/result") and n:
+            size = int(self.headers.get("Content-Length") or 0)
+            if size > 200_000_000:
+                return self._send(413, {"error": "trop gros"})
+            raw = self.rfile.read(size)
+            if path == "/pcjob":
+                d = os.path.join(PC, n)
+                shutil.rmtree(d, ignore_errors=True)
+                os.makedirs(d)
+                with open(os.path.join(d, "job.tgz"), "wb") as f:
+                    f.write(raw)
+                pc_state(n, state="pending", t=time.time())
+                return self._send(200, {"ok": True})
+            rel = q.get("path", "")
+            if not RESULT_PATH.fullmatch(rel) or not os.path.isdir(os.path.join(PC, n)):
+                return self._send(400, {"error": "path"})
+            f = os.path.join(PC, n, "out", rel)
+            os.makedirs(os.path.dirname(f), exist_ok=True)
+            with open(f, "wb") as fh:
+                fh.write(raw)
+            return self._send(200, {"ok": True})
         if path != "/job" or not n:
             return self._send(400, {"error": "name"})
         with lock:
@@ -229,6 +318,7 @@ class H(BaseHTTPRequestHandler):
 
 def main():
     os.makedirs(JOBS, exist_ok=True)
+    os.makedirs(PC, exist_ok=True)
     threading.Thread(target=lambda: (setup(), ytcheck()), daemon=True).start()
     ThreadingHTTPServer(("0.0.0.0", int(os.environ.get("PORT", "8000"))), H).serve_forever()
 

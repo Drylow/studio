@@ -59,3 +59,6 @@ news/**/narration/tts_*/
 news/**/photos/
 tools/
 Cage_Dispatch_Montage_PC.zip
+
+standalone/pc_agent/config.json
+standalone/pc_agent/agent.log

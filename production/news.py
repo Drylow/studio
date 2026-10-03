@@ -23,6 +23,9 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
   python production/news.py vps-check                 → YouTube laisse-t-il télécharger depuis le VPS ?
   python production/news.py vps <dossier> [--no-wait] → envoie, monte, rapatrie lien + planches check/
   python production/news.py vps-fetch <dossier> [--wait]
+  python production/news.py vps <dossier> --pc [--no-wait] → montage sur le PC de l'utilisateur (relais du VPS,
+                                                    agent standalone/pc_agent, toutes les 15 min)
+  python production/news.py pc-fetch <dossier> [--wait] → état du montage PC, rapatrie lien + planches
 
   # dans le cloud, après avoir regardé les planches check/
   python production/news.py send <dossier>                                        → paquet Discord
@@ -181,6 +184,8 @@ def cmd_voice(job):
 
 def cmd_build(job, upload=True, keep=False):
     from services import newsvid_render as R
+    if os.environ.get("NEWS_NO_UPLOAD"):  # tests : pas d'envoi sur Gofile
+        upload = False
     res = R.build(job, WORK, upload=upload, keep=keep)
     print(json.dumps(res, indent=1))
     return res
@@ -278,11 +283,10 @@ def vps_call(method, path, data=None, timeout=60):
     return requests.request(method, url + path, data=data, timeout=timeout, headers={"X-Worker-Token": tok})
 
 
-def cmd_vps(job, wait=True, upload=True):
-    """Montage sur le VPS : envoie le code + la vidéo préparée, suit le montage, rapatrie lien et planches."""
+def job_tarball(job):
+    """Le code du montage + la vidéo préparée (plan, voix off), en .tgz : pour le VPS ou le PC."""
     import io
     import tarfile
-    name = os.path.basename(job.rstrip("/\\"))
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w:gz") as t:
         for rel in VPS_CODE:
@@ -293,12 +297,62 @@ def cmd_vps(job, wait=True, upload=True):
                 t.add(os.path.join(job, f), "job/" + f)
         for f in sorted(glob.glob(os.path.join(job, "narration", "n*.mp3"))):
             t.add(f, "job/narration/" + os.path.basename(f))
-    r = vps_call("PUT", f"/job?name={name}" + ("" if upload else "&upload=0"), data=buf.getvalue(), timeout=300)
+    return buf.getvalue()
+
+
+def cmd_vps(job, wait=True, upload=True, pc=False):
+    """Montage sur le VPS (ou, avec pc, sur le PC de l'utilisateur via le relais du VPS) : envoie le code + la
+    vidéo préparée, suit le montage, rapatrie lien et planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    data = job_tarball(job)
+    if pc:
+        r = vps_call("PUT", f"/pcjob?name={name}", data=data, timeout=300)
+    else:
+        r = vps_call("PUT", f"/job?name={name}" + ("" if upload else "&upload=0"), data=data, timeout=300)
     if r.status_code != 200:
         raise SystemExit(f"VPS : {r.status_code} {r.text[:300]}")
-    print(f"envoyé au VPS ({buf.tell() / 1e6:.1f} Mo) : montage lancé")
+    print(f"envoyé ({len(data) / 1e6:.1f} Mo) : " + ("en attente du PC (il passe toutes les 15 min)" if pc
+                                                      else "montage lancé sur le VPS"))
     if wait:
-        vps_fetch(job, wait=True)
+        (pc_fetch if pc else vps_fetch)(job, wait=True)
+
+
+def pc_fetch(job, wait=False):
+    """Vidéo montée par le PC : état, puis rapatrie result.json, build.log et les planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    last = ""
+    while True:
+        s = vps_call("GET", f"/pc/state?name={name}").json()
+        line = (s.get("log") or [""])[-1]
+        if line and line != last:
+            print(line, flush=True)
+            last = line
+        if s.get("state") == "done":
+            break
+        if not wait:
+            seen = s.get("pc_seen")
+            ago = f"il y a {int((time.time() - seen) / 60)} min" if seen else "jamais"
+            print(f"état : {s.get('state')} — dernier passage du PC : {ago}")
+            return None
+        time.sleep(60)
+    for rel in ["result.json", "build.log"] + [f"check/sheet_{k:02d}.jpg" for k in range(1, 40)]:
+        r = vps_call("GET", f"/pc/file?name={name}&path={rel}", timeout=120)
+        if r.status_code != 200:
+            if rel.startswith("check/"):
+                break
+            continue
+        dest = os.path.join(job, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "wb") as f:
+            f.write(r.content)
+    rp = os.path.join(job, "result.json")
+    if os.path.isfile(rp):
+        with open(rp, "r", encoding="utf-8") as f:
+            res = json.load(f)
+        print(f">>> LIEN DE LA VIDEO : {res.get('link')}  ({res.get('minutes')} min)")
+        return res
+    print("pas de result.json : voir build.log")
+    return None
 
 
 def vps_fetch(job, wait=False):
@@ -413,7 +467,10 @@ def main(argv):
     elif c == "pc":
         cmd_pc()
     elif c == "vps":
-        cmd_vps(job_path(args[0]), wait="--no-wait" not in flags, upload="--no-upload" not in flags)
+        cmd_vps(job_path(args[0]), wait="--no-wait" not in flags, upload="--no-upload" not in flags,
+                pc="--pc" in flags)
+    elif c == "pc-fetch":
+        pc_fetch(job_path(args[0]), wait="--wait" in flags)
     elif c == "vps-fetch":
         vps_fetch(job_path(args[0]), wait="--wait" in flags)
     elif c == "vps-check":

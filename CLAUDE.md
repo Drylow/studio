@@ -283,6 +283,14 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   Les IP « ISP » de Decodo (`isp.decodo.com`) sont bloquées elles aussi (testé 3 oct., 5 clients yt-dlp) : essayer le
   pool résidentiel en session sticky, sinon `cookies.txt` d'un compte YouTube **jetable** (risque de blocage du
   compte) : `docker cp cookies.txt drylow-news:/data/cookies.txt`, le serveur le prend tout seul (`--cookies`).
+- **Montage sur le PC de l'utilisateur, sans qu'il fasse rien (choisi le 3 oct. : « utilise mon PC, mais c'est
+  pas à moi de le faire » ; pas de compte Google jetable)** : agent `standalone/pc_agent/` (zip fait par
+  `production/make_pc_agent.py`, avec l'adresse + le jeton du relais : jamais dans git). Installé UNE fois (Installer.bat,
+  il demande son accord « O/N ») : Python embarqué + tâche Windows « Drylow Actu » (pythonw, sans fenêtre, toutes les
+  15 min + à l'ouverture de session ; Desinstaller.bat l'enlève). Le relais = le serveur du VPS (`/pcjob`, `/pc/*`) :
+  `news.py vps <dossier> --pc` dépose, l'agent prend, monte (connexion de maison : YouTube passe), envoie sur Gofile,
+  renvoie build.log au fil de l'eau + result.json + planches, efface tout ; `news.py pc-fetch <dossier> [--wait]`
+  rapatrie (montre aussi l'heure du dernier passage du PC). Vidéo reproposée si le PC s'éteint en plein montage (4 h).
 - **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
   (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
   dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le

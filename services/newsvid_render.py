@@ -81,7 +81,8 @@ def download(video_id, dl_dir, log):
             continue
         for k in range(3):
             r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
-                               capture_output=True, text=True, encoding="utf-8", errors="replace")
+                               capture_output=True, text=True, encoding="utf-8", errors="replace",
+                               creationflags=media._NO_WINDOW)
             have = [f for f in glob.glob(os.path.join(dl_dir, f"{video_id}.{kind}.*")) if not f.endswith(".part")]
             if have:
                 got[kind] = have[0]
@@ -591,7 +592,8 @@ def gofile(path, log):
     md5 = md5.hexdigest()
     for k in range(5):
         r = subprocess.run(["curl", "-sS", "--noproxy", "*", "--max-time", "3600", "-F", f"file=@{path}",
-                            "https://upload.gofile.io/uploadfile"], capture_output=True, text=True)
+                            "https://upload.gofile.io/uploadfile"], capture_output=True, text=True,
+                           creationflags=media._NO_WINDOW)
         try:
             data = json.loads(r.stdout).get("data") or {}
             if data.get("downloadPage") and data.get("md5", md5) == md5:
