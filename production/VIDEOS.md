@@ -51,3 +51,10 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | **livrée** (vérifiée, Discord, 3 oct. 00:22) — https://gofile.io/d/vWmECEPV ; miniatures renvoyées sans médaillon (HIDDEN TRUTH, BRUTAL DAWN, WORSE THAN DEATH) | à caler |
+
+## Cage Dispatch (actu MMA, `news/mma_en/`, outil `production/news.py`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| “HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch! | **livrée** (Discord, 3 oct. ~18:20 UTC) — https://gofile.io/d/kP9EQhk2 ; 18 min 37 ; montée par le PC de l'utilisateur (agent + relais du VPS) ; v1 refaite avant envoi (noms sur la mauvaise personne, gros mot écrit en grand et entendu au début) ; miniature A « SHOULD HAVE QUIT » | à caler |
+
