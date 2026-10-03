@@ -1,0 +1,3389 @@
+{
+ "channel": "mma_en",
+ "brand": "CAGE DISPATCH",
+ "accent": "#E10600",
+ "accent2": "#FFD21F",
+ "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
+ "topic": "Topuria back to training: the comeback, Paddy and the lightweight picture",
+ "voice": {
+  "provider": "algrow",
+  "id": "jvV8uNVYXJa37GHVtjXf"
+ },
+ "titles": [
+  "“IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN Topuria As Ilia Returns To Training!",
+  "“HE IS ONE OF THE BEST IN THE WORLD!” Justin Gaethje On Ilia Topuria's Comeback!",
+  "“NO CHANCE!” Chael Sonnen SHUTS DOWN Ilia Topuria Featherweight Return!",
+  "“PADDY'S A PROBLEM!” Justin Gaethje BREAKS DOWN Topuria vs Pimblett!"
+ ],
+ "title": "“IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN Topuria As Ilia Returns To Training!",
+ "thumb": {
+  "text": "NOT GOING TO HAPPEN",
+  "highlight": "NOT",
+  "people": [
+   "Arman Tsarukyan",
+   "Ilia Topuria"
+  ],
+  "moment": "M21",
+  "checked": true
+ },
+ "description": "Ilia Topuria is back in training after his first professional loss, and the UFC lightweight division is already moving around him. Justin Gaethje is champion, Arman Tsarukyan says he is next, and Paddy Pimblett continues to call for the Topuria fight.\n\nThis episode looks at the comeback options: an immediate Gaethje rematch, a Paddy Pimblett grudge fight, or a more gradual return while Gaethje and Arman sort out the title picture.\n\nCredits: The Ariel Helwani Show, DOUBLE COVERAGE PODCAST, Submission Radio, Chael Sonnen.",
+ "tags": [
+  "Ilia Topuria",
+  "Justin Gaethje",
+  "Arman Tsarukyan",
+  "Paddy Pimblett",
+  "UFC",
+  "MMA",
+  "UFC news",
+  "MMA news",
+  "Topuria training",
+  "Topuria comeback",
+  "Gaethje vs Topuria",
+  "Gaethje vs Arman",
+  "Topuria vs Paddy",
+  "Paddy Pimblett UFC",
+  "UFC lightweight",
+  "lightweight title",
+  "Jon Anik",
+  "Chael Sonnen",
+  "Ariel Helwani",
+  "Cage Dispatch",
+  "UFC 331",
+  "UFC Freedom 250"
+ ],
+ "pinned_comment": "Who should Ilia Topuria fight next: Paddy Pimblett, a gradual comeback opponent, or Justin Gaethje in the rematch?",
+ "spelling": {
+  "Gachi": "Gaethje",
+  "Gaethji": "Gaethje",
+  "Gaethgee": "Gaethje",
+  "Justin Gagey": "Justin Gaethje",
+  "Tapuria": "Topuria",
+  "Topuriaa": "Topuria",
+  "Tuporia": "Topuria",
+  "Ilia Tapura": "Ilia Topuria",
+  "Armen Tsarukian": "Arman Tsarukyan",
+  "Arman Sarukian": "Arman Tsarukyan",
+  "Tsarukian": "Tsarukyan",
+  "Sarukyan": "Tsarukyan",
+  "Paddy Pimblet": "Paddy Pimblett",
+  "Pimblet": "Pimblett",
+  "Pimlet": "Pimblett",
+  "John Anik": "Jon Anik",
+  "Anick": "Anik",
+  "Ariel Hawani": "Ariel Helwani",
+  "Helwaniy": "Helwani",
+  "Chael Sonen": "Chael Sonnen",
+  "Shale Sonnen": "Chael Sonnen",
+  "Islam Makachev": "Islam Makhachev",
+  "Makhacheff": "Makhachev",
+  "Charles Oliviera": "Charles Oliveira",
+  "Olivera": "Oliveira",
+  "Max Halloway": "Max Holloway",
+  "Holloway": "Holloway",
+  "Mauricio Rufi": "Mauricio Ruffy",
+  "Rufi": "Ruffy",
+  "Hamzat Chimaev": "Khamzat Chimaev",
+  "Khamzat Chimayev": "Khamzat Chimaev",
+  "Dana Whyte": "Dana White",
+  "Trevor Whitman": "Trevor Wittman",
+  "Whitman": "Wittman",
+  "Volkanofski": "Volkanovski",
+  "Volkanovskiy": "Volkanovski",
+  "Benoit St Denis": "Benoît Saint Denis",
+  "BSD": "BSD",
+  "Syril Gane": "Ciryl Gane",
+  "Cyril Gane": "Ciryl Gane",
+  "Poatan": "Poatan",
+  "Sean O Malley": "Sean O'Malley",
+  "Omalley": "O'Malley",
+  "Ili Tapori": "Ilia Topuria",
+  "Ilia topodia": "Ilia Topuria",
+  "topodia": "Topuria",
+  "Sargon": "Tsarukyan",
+  "Arman Saran": "Arman Tsarukyan",
+  "Mauricio Houthi": "Mauricio Ruffy",
+  "Justin Gatei": "Justin Gaethje",
+  "Justin Gatechi": "Justin Gaethje",
+  "Justin Gai": "Justin Gaethje",
+  "Justin Gate": "Justin Gaethje",
+  "Iliad": "Ilia",
+  "Ilya": "Ilia",
+  "Ela": "Ilia",
+  "Petty": "Paddy",
+  "Patty": "Paddy",
+  "Tapurya": "Topuria",
+  "Serukian": "Tsarukyan",
+  "Islamic Kashv": "Islam Makhachev",
+  "Kabib Nurmagome": "Khabib Nurmagomedov",
+  "BJ Pan": "BJ Penn",
+  "Morab Dwales Willie": "Merab Dvalishvili",
+  "Balo Muhammad": "Belal Muhammad",
+  "Nasardini Mavave": "Nassourdine Imavov",
+  "Trevor Wittman": "Trevor Wittman",
+  "John Omelly": "Sean O'Malley",
+  "McMaher": "Mick Maynard"
+ },
+ "segments": [
+  {
+   "type": "narration",
+   "text": "Ilia Topuria is back in the gym. After the first loss of his career, against Justin Gaethje at UFC Freedom 250 in June, he has shared new training footage, and the lightweight division is already split on what comes next. Even the man who beat him says Topuria is still one of the best in the world.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "TOPURIA RETURNS TO GYM"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 368.85,
+   "end": 415.99,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.59,
+     "t": "So, when I talk about it, it sounds like"
+    },
+    {
+     "s": 1.59,
+     "e": 3.15,
+     "t": "I'm like talking [ __ ] about him."
+    },
+    {
+     "s": 3.2,
+     "e": 3.43,
+     "t": "He is"
+    },
+    {
+     "s": 3.43,
+     "e": 5.55,
+     "t": "so skilled and whoever fights him next"
+    },
+    {
+     "s": 5.55,
+     "e": 7.39,
+     "t": "is going to be"
+    },
+    {
+     "s": 7.39,
+     "e": 9.23,
+     "t": "If he If he forgets how dangerous this"
+    },
+    {
+     "s": 9.23,
+     "e": 10.31,
+     "t": "sport and how there's a little bit of"
+    },
+    {
+     "s": 10.31,
+     "e": 11.87,
+     "t": "luck and chance, then you know, he's"
+    },
+    {
+     "s": 11.87,
+     "e": 13.31,
+     "t": "going to you know, maybe become and make"
+    },
+    {
+     "s": 13.31,
+     "e": 15.67,
+     "t": "mistakes and you know, not be his best"
+    },
+    {
+     "s": 15.67,
+     "e": 16.84,
+     "t": "or as locked in as he should be."
+    },
+    {
+     "s": 16.88,
+     "e": 16.99,
+     "t": "But"
+    },
+    {
+     "s": 16.99,
+     "e": 18.71,
+     "t": "outside of that, without those mental"
+    },
+    {
+     "s": 18.71,
+     "e": 20.31,
+     "t": "mistakes, you know, he is one of the"
+    },
+    {
+     "s": 20.31,
+     "e": 20.84,
+     "t": "best in the world."
+    },
+    {
+     "s": 20.87,
+     "e": 21.35,
+     "t": "There's no doubt"
+    },
+    {
+     "s": 21.35,
+     "e": 21.68,
+     "t": "about it."
+    },
+    {
+     "s": 21.72,
+     "e": 22.63,
+     "t": "Everything I say that you"
+    },
+    {
+     "s": 22.63,
+     "e": 23.75,
+     "t": "know, I'm never talking [ __ ] about the"
+    },
+    {
+     "s": 23.75,
+     "e": 24.59,
+     "t": "guy cuz he's so good."
+    },
+    {
+     "s": 24.63,
+     "e": 25.31,
+     "t": "I want to see him"
+    },
+    {
+     "s": 25.31,
+     "e": 25.65,
+     "t": "come back."
+    },
+    {
+     "s": 25.68,
+     "e": 26.52,
+     "t": "I want to see him thrive."
+    },
+    {
+     "s": 26.56,
+     "e": 26.59,
+     "t": "I"
+    },
+    {
+     "s": 26.59,
+     "e": 27.33,
+     "t": "want to see him prosper."
+    },
+    {
+     "s": 27.37,
+     "e": 27.83,
+     "t": "The reason that"
+    },
+    {
+     "s": 27.83,
+     "e": 29.99,
+     "t": "my story was so significant and so, you"
+    },
+    {
+     "s": 29.99,
+     "e": 33.55,
+     "t": "know, relative and relatable was because"
+    },
+    {
+     "s": 33.55,
+     "e": 34.99,
+     "t": "I failed, got knocked out by Max"
+    },
+    {
+     "s": 34.99,
+     "e": 36.67,
+     "t": "Holloway, come back, you know, believed"
+    },
+    {
+     "s": 36.67,
+     "e": 38.59,
+     "t": "in myself and came back and you know,"
+    },
+    {
+     "s": 38.59,
+     "e": 40.35,
+     "t": "was able to achieve the championship."
+    },
+    {
+     "s": 40.35,
+     "e": 42.19,
+     "t": "And he has the same opportunity to to"
+    },
+    {
+     "s": 42.19,
+     "e": 43.55,
+     "t": "inspire the world through, you know,"
+    },
+    {
+     "s": 43.55,
+     "e": 44.72,
+     "t": "what he's going to do next."
+    },
+    {
+     "s": 44.76,
+     "e": 45.19,
+     "t": "So, that's"
+    },
+    {
+     "s": 45.19,
+     "e": 46.79,
+     "t": "really what I'm most excited to see."
+    }
+   ],
+   "quote": {
+    "t": "Without those mental mistakes, you know, he is one of the best in the world.",
+    "s": 16.99,
+    "e": 20.84
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "Meanwhile, Justin Gaethje explains what he thinks separated him from Ilia Topuria at UFC Freedom 250 in June 2026. He points to mindset, experience, Trevor Wittman’s game plan, and where he believed Topuria was mentally before the fight.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE EXPLAINS TOPURIA WIN"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 312.89,
+   "end": 348.43,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 2.35,
+     "t": "think that the narrative about you,"
+    },
+    {
+     "s": 2.35,
+     "e": 4.15,
+     "t": "people have said, \"Oh, you don't have"
+    },
+    {
+     "s": 4.15,
+     "e": 4.61,
+     "t": "defense."
+    },
+    {
+     "s": 4.66,
+     "e": 6.43,
+     "t": "Oh, you're just a violent guy.\""
+    },
+    {
+     "s": 6.43,
+     "e": 7.67,
+     "t": "Do you think when guys go in there to"
+    },
+    {
+     "s": 7.67,
+     "e": 9.11,
+     "t": "fight with you, they're just shocked by"
+    },
+    {
+     "s": 9.11,
+     "e": 11.39,
+     "t": "your actual fight IQ and and acumen in"
+    },
+    {
+     "s": 11.39,
+     "e": 11.69,
+     "t": "the"
+    },
+    {
+     "s": 11.51,
+     "e": 12.68,
+     "t": "Uh I mean, I think so."
+    },
+    {
+     "s": 12.73,
+     "e": 13.63,
+     "t": "I I mean, I think"
+    },
+    {
+     "s": 13.63,
+     "e": 15.47,
+     "t": "for the most part, people my my"
+    },
+    {
+     "s": 15.47,
+     "e": 16.51,
+     "t": "opponents give me the credit."
+    },
+    {
+     "s": 16.55,
+     "e": 16.87,
+     "t": "You know,"
+    },
+    {
+     "s": 16.87,
+     "e": 18.47,
+     "t": "it's the it's the fans that don't really"
+    },
+    {
+     "s": 18.47,
+     "e": 20.27,
+     "t": "understand what's actually happening in"
+    },
+    {
+     "s": 20.27,
+     "e": 20.5,
+     "t": "there."
+    },
+    {
+     "s": 20.54,
+     "e": 21.71,
+     "t": "But yeah, I think again, it was"
+    },
+    {
+     "s": 21.71,
+     "e": 23.43,
+     "t": "such a blessing in disguise for me to"
+    },
+    {
+     "s": 23.43,
+     "e": 26.01,
+     "t": "catch Ilia such a vulnerable place."
+    },
+    {
+     "s": 26.09,
+     "e": 26.23,
+     "t": "Uh"
+    },
+    {
+     "s": 26.23,
+     "e": 27.63,
+     "t": "it was a mixture of, you know, my"
+    },
+    {
+     "s": 27.63,
+     "e": 30.43,
+     "t": "mindset, my experience, my coach's game"
+    },
+    {
+     "s": 30.43,
+     "e": 32.99,
+     "t": "plan, and then him being in a bad spot"
+    },
+    {
+     "s": 32.99,
+     "e": 33.4,
+     "t": "mentally."
+    },
+    {
+     "s": 33.45,
+     "e": 34.55,
+     "t": "It's is combination of a"
+    },
+    {
+     "s": 34.55,
+     "e": 35.19,
+     "t": "perfect storm."
+    }
+   ],
+   "quote": {
+    "t": "It was a mixture of, you know, my mindset, my experience, my coach's game plan, and then him being in a bad spot mentally.",
+    "s": 26.23,
+    "e": 33.4
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "On the other side, Justin Gaethje highlights how dangerous Ilia Topuria still looked before they fought at the White House. He says Topuria’s knockouts over Charles Oliveira and Max Holloway forced him to train with urgency every day.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE PRAISES TOPURIA DANGER"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 909.41,
+   "end": 945.47,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 2.19,
+     "t": "Did it help you going to the Ilia fight"
+    },
+    {
+     "s": 2.19,
+     "e": 3.91,
+     "t": "that you had that respect for him and"
+    },
+    {
+     "s": 3.91,
+     "e": 5.19,
+     "t": "knew the kind of ability that he had?"
+    },
+    {
+     "s": 5.19,
+     "e": 6.67,
+     "t": "Cuz we had spoken before, maybe"
+    },
+    {
+     "s": 6.67,
+     "e": 8.03,
+     "t": "respect's not the right word, but you"
+    },
+    {
+     "s": 8.03,
+     "e": 9.71,
+     "t": "were healthily anxious about it and"
+    },
+    {
+     "s": 9.71,
+     "e": 11.03,
+     "t": "understood the danger you were heading"
+    },
+    {
+     "s": 11.03,
+     "e": 11.29,
+     "t": "into."
+    },
+    {
+     "s": 11.34,
+     "e": 13.03,
+     "t": "Cuz you had said the Max Holloway"
+    },
+    {
+     "s": 13.03,
+     "e": 14.63,
+     "t": "fight you had no nerves."
+    },
+    {
+     "s": 14.63,
+     "e": 14.99,
+     "t": "Yeah."
+    },
+    {
+     "s": 14.99,
+     "e": 16.43,
+     "t": "You walked in there and you didn't feel"
+    },
+    {
+     "s": 16.43,
+     "e": 16.73,
+     "t": "it."
+    },
+    {
+     "s": 16.71,
+     "e": 18.47,
+     "t": "Yeah, I mean definitely him beating"
+    },
+    {
+     "s": 18.47,
+     "e": 19.99,
+     "t": "Charles Oliveira, him beating Max"
+    },
+    {
+     "s": 19.99,
+     "e": 20.44,
+     "t": "Holloway."
+    },
+    {
+     "s": 20.49,
+     "e": 21.43,
+     "t": "You know, those two"
+    },
+    {
+     "s": 21.43,
+     "e": 22.91,
+     "t": "performances were definitely at the"
+    },
+    {
+     "s": 22.91,
+     "e": 24.67,
+     "t": "forefront of my mind, especially with"
+    },
+    {
+     "s": 24.67,
+     "e": 26.39,
+     "t": "having two losses to those guys."
+    },
+    {
+     "s": 26.44,
+     "e": 26.55,
+     "t": "So"
+    },
+    {
+     "s": 26.55,
+     "e": 28.11,
+     "t": "yeah, I mean yeah, every day I woke up"
+    },
+    {
+     "s": 28.11,
+     "e": 30.15,
+     "t": "inspired to not let this fool knock me"
+    },
+    {
+     "s": 30.15,
+     "e": 31.91,
+     "t": "out in front of my family."
+    },
+    {
+     "s": 31.97,
+     "e": 32.11,
+     "t": "So"
+    },
+    {
+     "s": 32.11,
+     "e": 32.73,
+     "t": "again, he'll learn."
+    },
+    {
+     "s": 32.76,
+     "e": 33.31,
+     "t": "You know, there's"
+    },
+    {
+     "s": 33.31,
+     "e": 35.07,
+     "t": "mistakes and there's just thoughts you"
+    },
+    {
+     "s": 35.07,
+     "e": 35.71,
+     "t": "can't have."
+    }
+   ],
+   "quote": {
+    "t": "Every day I woke up inspired to not let this fool knock me out in front of my family.",
+    "s": 26.55,
+    "e": 31.91
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "At the same time, Justin Gaethje weighs in on whether Topuria truly belongs at lightweight after moving up as a two-division UFC champion. He defends Topuria’s skill level, but he also questions how long that size equation can hold at 155.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE QUESTIONS TOPURIA SIZE"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 531.85,
+   "end": 571.75,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.35,
+     "t": "You spoke about Ilia's skill, and I'm"
+    },
+    {
+     "s": 1.35,
+     "e": 3.35,
+     "t": "glad you did because the fans of the"
+    },
+    {
+     "s": 3.35,
+     "e": 4.4,
+     "t": "sport are so fickle."
+    },
+    {
+     "s": 4.46,
+     "e": 5.35,
+     "t": "Guys messaging me"
+    },
+    {
+     "s": 5.35,
+     "e": 6.71,
+     "t": "that have never been in a fight, like,"
+    },
+    {
+     "s": 6.71,
+     "e": 8.71,
+     "t": "\"Oh, Ilia is a He quit.\" I'm like, \"Bro,"
+    },
+    {
+     "s": 8.71,
+     "e": 10.71,
+     "t": "you have no idea what you're talking"
+    },
+    {
+     "s": 10.71,
+     "e": 10.85,
+     "t": "about."
+    },
+    {
+     "s": 10.88,
+     "e": 11.63,
+     "t": "You've never been in there.\" The"
+    },
+    {
+     "s": 11.63,
+     "e": 13.39,
+     "t": "fact you would say anything about him is"
+    },
+    {
+     "s": 13.39,
+     "e": 13.71,
+     "t": "Yeah."
+    },
+    {
+     "s": 13.71,
+     "e": 14.02,
+     "t": "insane."
+    },
+    {
+     "s": 14.06,
+     "e": 15.43,
+     "t": "Um, how skilled was he compared"
+    },
+    {
+     "s": 15.43,
+     "e": 17.07,
+     "t": "to your past opponents cuz you fought"
+    },
+    {
+     "s": 17.07,
+     "e": 18.19,
+     "t": "No, I mean, he's world-class."
+    },
+    {
+     "s": 18.19,
+     "e": 19.27,
+     "t": "into the gauntlet."
+    },
+    {
+     "s": 19.27,
+     "e": 20.05,
+     "t": "He is world-class."
+    },
+    {
+     "s": 20.1,
+     "e": 20.79,
+     "t": "There's no doubt"
+    },
+    {
+     "s": 20.79,
+     "e": 21.25,
+     "t": "about it."
+    },
+    {
+     "s": 21.3,
+     "e": 22.47,
+     "t": "These fights are crazy."
+    },
+    {
+     "s": 22.47,
+     "e": 23.87,
+     "t": "They're such a short amount of time, you"
+    },
+    {
+     "s": 23.87,
+     "e": 25.18,
+     "t": "know, 25 minutes in time."
+    },
+    {
+     "s": 25.24,
+     "e": 25.71,
+     "t": "Coming in"
+    },
+    {
+     "s": 25.71,
+     "e": 28.03,
+     "t": "there being perfect is not possible to"
+    },
+    {
+     "s": 28.03,
+     "e": 29.11,
+     "t": "do every single time."
+    },
+    {
+     "s": 29.16,
+     "e": 29.99,
+     "t": "So, this game is"
+    },
+    {
+     "s": 29.99,
+     "e": 30.51,
+     "t": "crazy, bro."
+    },
+    {
+     "s": 30.56,
+     "e": 31.79,
+     "t": "You have no idea how crazy"
+    },
+    {
+     "s": 31.79,
+     "e": 32.45,
+     "t": "this game is."
+    },
+    {
+     "s": 32.5,
+     "e": 33.47,
+     "t": "He is very skilled."
+    },
+    {
+     "s": 33.52,
+     "e": 33.67,
+     "t": "I'm"
+    },
+    {
+     "s": 33.67,
+     "e": 35.75,
+     "t": "not sure he can stay at at lightweight,"
+    },
+    {
+     "s": 35.75,
+     "e": 36.99,
+     "t": "but, you know, we're going to find out."
+    },
+    {
+     "s": 36.99,
+     "e": 37.6,
+     "t": "Time's going to tell."
+    },
+    {
+     "s": 37.63,
+     "e": 38.03,
+     "t": "But, I've been"
+    },
+    {
+     "s": 38.03,
+     "e": 39.55,
+     "t": "trapped My voice is gone."
+    }
+   ],
+   "quote": {
+    "t": "I'm not sure he can stay at at lightweight, but, you know, we're going to find out.",
+    "s": 33.52,
+    "e": 36.99
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "Chael Sonnen is just as clear about where Topuria goes from here. Asked whether Topuria could drop back to featherweight, his answer is an emphatic no.",
+   "next_video": "ibV3cWCSJRU",
+   "headline": "SONNEN RULES OUT FEATHERWEIGHT"
+  },
+  {
+   "video": "ibV3cWCSJRU",
+   "start": 0.0,
+   "end": 44.15,
+   "credit": "Chael Sonnen",
+   "channel": "Chael Sonnen",
+   "subs": [
+    {
+     "s": 0.0,
+     "e": 4.08,
+     "t": "Will Ilia Topuria go back to 145? Listen"
+    },
+    {
+     "s": 4.08,
+     "e": 6.56,
+     "t": "to me very carefully: no."
+    },
+    {
+     "s": 6.56,
+     "e": 8.96,
+     "t": "Please listen to me emphatically as I"
+    },
+    {
+     "s": 8.96,
+     "e": 9.76,
+     "t": "tell you no."
+    },
+    {
+     "s": 9.83,
+     "e": 11.56,
+     "t": "And before you give me all"
+    },
+    {
+     "s": 11.56,
+     "e": 13.92,
+     "t": "the reasons of why it might make sense,"
+    },
+    {
+     "s": 13.92,
+     "e": 15.71,
+     "t": "let me please just stop you."
+    },
+    {
+     "s": 15.77,
+     "e": 15.96,
+     "t": "No."
+    },
+    {
+     "s": 16.02,
+     "e": 16.28,
+     "t": "Now,"
+    },
+    {
+     "s": 16.28,
+     "e": 18.16,
+     "t": "where did this come from?"
+    },
+    {
+     "s": 18.16,
+     "e": 20.64,
+     "t": "Well, it came from Justin Gaethje."
+    },
+    {
+     "s": 20.64,
+     "e": 22.68,
+     "t": "Justin Gaethje said that Ilia is a"
+    },
+    {
+     "s": 22.68,
+     "e": 25.07,
+     "t": "45-pounder and Justin put him over."
+    },
+    {
+     "s": 25.14,
+     "e": 25.28,
+     "t": "He"
+    },
+    {
+     "s": 25.28,
+     "e": 27.04,
+     "t": "said he could beat Volkanovski."
+    },
+    {
+     "s": 27.1,
+     "e": 27.44,
+     "t": "He can"
+    },
+    {
+     "s": 27.44,
+     "e": 28.88,
+     "t": "beat everybody."
+    },
+    {
+     "s": 28.97,
+     "e": 30.6,
+     "t": "He's really good."
+    },
+    {
+     "s": 30.6,
+     "e": 32.28,
+     "t": "But size matters and he's not big enough"
+    },
+    {
+     "s": 32.28,
+     "e": 34.56,
+     "t": "to be"
+    },
+    {
+     "s": 34.56,
+     "e": 35.84,
+     "t": "in the light"
+    },
+    {
+     "s": 35.84,
+     "e": 36.61,
+     "t": "weight category."
+    },
+    {
+     "s": 36.66,
+     "e": 37.76,
+     "t": "All right, the reason I"
+    },
+    {
+     "s": 37.76,
+     "e": 40.72,
+     "t": "so emphatically can tell you no is a a"
+    },
+    {
+     "s": 40.72,
+     "e": 43.8,
+     "t": "fighter will never cut weight to run."
+    }
+   ],
+   "quote": {
+    "t": "Will Ilia Topuria go back to 145 listen to me very carefully no.",
+    "s": 0.0,
+    "e": 6.56
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Chael Sonnen"
+  },
+  {
+   "type": "narration",
+   "text": "Sonnen explains why: in his view, Topuria stays at 155 until he solves the problem there, and would only consider 145 after winning the lightweight belt back.",
+   "next_video": "ibV3cWCSJRU",
+   "headline": "SONNEN SEES TOPURIA STAYING"
+  },
+  {
+   "video": "ibV3cWCSJRU",
+   "start": 66.22,
+   "end": 101.91,
+   "credit": "Chael Sonnen",
+   "channel": "Chael Sonnen",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 0.7,
+     "t": "If Ilia"
+    },
+    {
+     "s": 0.7,
+     "e": 3.42,
+     "t": "ran into a problem at 55, by the own"
+    },
+    {
+     "s": 3.42,
+     "e": 6.5,
+     "t": "standard, his own code that he will live"
+    },
+    {
+     "s": 6.5,
+     "e": 9.9,
+     "t": "and die by, he will stay at 55 until he"
+    },
+    {
+     "s": 9.9,
+     "e": 12.1,
+     "t": "solves that problem."
+    },
+    {
+     "s": 12.1,
+     "e": 14.42,
+     "t": "And the end of his career might come and"
+    },
+    {
+     "s": 14.42,
+     "e": 16.35,
+     "t": "the end of time might come."
+    },
+    {
+     "s": 16.42,
+     "e": 17.06,
+     "t": "That idea"
+    },
+    {
+     "s": 17.06,
+     "e": 20.18,
+     "t": "might not work out."
+    },
+    {
+     "s": 20.18,
+     "e": 22.82,
+     "t": "But he won't run."
+    },
+    {
+     "s": 22.82,
+     "e": 23.78,
+     "t": "No chance."
+    },
+    {
+     "s": 23.87,
+     "e": 26.26,
+     "t": "Could Ilia return to 145?"
+    },
+    {
+     "s": 26.26,
+     "e": 28.78,
+     "t": "Yes."
+    },
+    {
+     "s": 28.9,
+     "e": 30.74,
+     "t": "After he captures the belt at 55."
+    },
+    {
+     "s": 30.8,
+     "e": 31.02,
+     "t": "This"
+    },
+    {
+     "s": 31.02,
+     "e": 32.98,
+     "t": "is something that was very unique about"
+    },
+    {
+     "s": 32.98,
+     "e": 35.34,
+     "t": "Volkanovski."
+    }
+   ],
+   "quote": {
+    "t": "If Ilia ran into a problem at 55, by the own standard, his own code that he will live and die by, he will stay at 55 until he solves that problem.",
+    "s": 0.15,
+    "e": 12.1
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Chael Sonnen"
+  },
+  {
+   "type": "narration",
+   "text": "At the same time, Chael Sonnen agrees with Sean O’Malley’s read on why Topuria lost to Justin Gaethje. Sonnen says inactivity and major life changes mattered because Topuria had not competed for a year before that five-round challenge.",
+   "next_video": "7YxtYLbnFbE",
+   "headline": "SONNEN CITES TOPURIA INACTIVITY"
+  },
+  {
+   "video": "7YxtYLbnFbE",
+   "start": 0.0,
+   "end": 55.63,
+   "credit": "Chael Sonnen",
+   "channel": "Chael Sonnen",
+   "subs": [
+    {
+     "s": 0.0,
+     "e": 1.84,
+     "t": "Sean O'Malley was talking about that fight"
+    },
+    {
+     "s": 1.84,
+     "e": 5.12,
+     "t": "and he said Ilia would have TKO Justin"
+    },
+    {
+     "s": 5.12,
+     "e": 6.64,
+     "t": "Gaethje when he dropped him in the second"
+    },
+    {
+     "s": 6.64,
+     "e": 8.24,
+     "t": "round with the body shot but he needed"
+    },
+    {
+     "s": 8.24,
+     "e": 10.4,
+     "t": "to walk away but Ilia followed him to"
+    },
+    {
+     "s": 10.4,
+     "e": 12.64,
+     "t": "the ground and therefore Justin was able"
+    },
+    {
+     "s": 12.64,
+     "e": 15.52,
+     "t": "to survive and visually it looked as"
+    },
+    {
+     "s": 15.52,
+     "e": 17.04,
+     "t": "though the match should continue and"
+    },
+    {
+     "s": 17.04,
+     "e": 17.79,
+     "t": "Sean's right."
+    },
+    {
+     "s": 17.85,
+     "e": 19.12,
+     "t": "Ilia did not lose that"
+    },
+    {
+     "s": 19.12,
+     "e": 21.76,
+     "t": "fight for any reason greater than he had"
+    },
+    {
+     "s": 21.76,
+     "e": 23.39,
+     "t": "not competed for a year."
+    },
+    {
+     "s": 23.46,
+     "e": 24.0,
+     "t": "He moved"
+    },
+    {
+     "s": 24.0,
+     "e": 26.64,
+     "t": "countries, moved gyms, was not on the"
+    },
+    {
+     "s": 26.64,
+     "e": 28.16,
+     "t": "same performance and training schedule,"
+    },
+    {
+     "s": 28.16,
+     "e": 30.8,
+     "t": "and going 25 minutes was just a few"
+    },
+    {
+     "s": 30.8,
+     "e": 31.46,
+     "t": "minutes too many."
+    },
+    {
+     "s": 31.5,
+     "e": 32.24,
+     "t": "It's the number one"
+    },
+    {
+     "s": 32.24,
+     "e": 32.76,
+     "t": "reason."
+    },
+    {
+     "s": 32.83,
+     "e": 35.12,
+     "t": "The idea that Ilia Taporia, who"
+    },
+    {
+     "s": 35.12,
+     "e": 36.32,
+     "t": "was the number one ranked"
+    },
+    {
+     "s": 36.32,
+     "e": 38.72,
+     "t": "pound-for-pound fighter in the world a"
+    },
+    {
+     "s": 38.72,
+     "e": 40.96,
+     "t": "fight ago, who was the undefeated"
+    },
+    {
+     "s": 40.96,
+     "e": 44.0,
+     "t": "champion of the world a fight ago, who"
+    },
+    {
+     "s": 44.0,
+     "e": 47.44,
+     "t": "is one of the few division champions,"
+    },
+    {
+     "s": 47.44,
+     "e": 49.92,
+     "t": "would have also been the BMF champion."
+    },
+    {
+     "s": 49.92,
+     "e": 52.24,
+     "t": "If it wasn't for paperwork, he beat the"
+    },
+    {
+     "s": 52.24,
+     "e": 52.88,
+     "t": "BMF champion."
+    },
+    {
+     "s": 52.93,
+     "e": 54.16,
+     "t": "There was a clause in the"
+    },
+    {
+     "s": 54.16,
+     "e": 55.28,
+     "t": "and they didn't make it for the title."
+    }
+   ],
+   "quote": {
+    "t": "Ilia did not lose that fight for any reason greater than he had not competed for a year.",
+    "s": 17.85,
+    "e": 23.39
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Chael Sonnen"
+  },
+  {
+   "type": "narration",
+   "text": "Arman Tsarukyan does not count Topuria out after the first loss of his career. He says the setback could make Topuria more motivated, more hungry, and more locked in when he returns.",
+   "next_video": "_tSFcV_6Uc4",
+   "headline": "TSARUKYAN BACKS TOPURIA RESPONSE"
+  },
+  {
+   "video": "_tSFcV_6Uc4",
+   "start": 1312.65,
+   "end": 1332.51,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.59,
+     "t": "You're not leaning in one way or the"
+    },
+    {
+     "s": 1.59,
+     "e": 2.39,
+     "t": "other."
+    },
+    {
+     "s": 2.39,
+     "e": 2.65,
+     "t": "No."
+    },
+    {
+     "s": 2.74,
+     "e": 5.51,
+     "t": "Ilia coming off that loss, maybe"
+    },
+    {
+     "s": 5.51,
+     "e": 7.27,
+     "t": "that,"
+    },
+    {
+     "s": 7.27,
+     "e": 8.79,
+     "t": "you know, that affects his performance."
+    },
+    {
+     "s": 8.79,
+     "e": 9.59,
+     "t": "Maybe he's not the same."
+    },
+    {
+     "s": 9.62,
+     "e": 9.99,
+     "t": "What do you"
+    },
+    {
+     "s": 9.99,
+     "e": 11.51,
+     "t": "think?"
+    },
+    {
+     "s": 11.51,
+     "e": 13.51,
+     "t": "Maybe he's going to be more motivated"
+    },
+    {
+     "s": 13.51,
+     "e": 15.59,
+     "t": "and more hungry and he's going to locked"
+    },
+    {
+     "s": 15.59,
+     "e": 18.47,
+     "t": "in and uh become a way better than he"
+    },
+    {
+     "s": 18.47,
+     "e": 19.51,
+     "t": "was before."
+    }
+   ],
+   "quote": {
+    "t": "Maybe he's going to be more motivated and more hungry and he's going to locked in and become a way better than he was before.",
+    "s": 11.51,
+    "e": 19.51
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Arman Tsarukyan"
+  },
+  {
+   "type": "narration",
+   "text": "Arman Tsarukyan, the No. 1 contender, says the UFC gave him the same message before and after his knockout of Mauricio Ruffy at UFC 331. According to Arman, the promotion is working on his title fight next.",
+   "next_video": "_tSFcV_6Uc4",
+   "headline": "TSARUKYAN SAYS TITLE FIGHT NEXT"
+  },
+  {
+   "video": "_tSFcV_6Uc4",
+   "start": 127.82,
+   "end": 161.23,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.0,
+     "e": 1.86,
+     "t": "When you were at the press"
+    },
+    {
+     "s": 1.86,
+     "e": 3.54,
+     "t": "conference on Saturday, the postfight"
+    },
+    {
+     "s": 3.54,
+     "e": 4.98,
+     "t": "press conference, someone asked you"
+    },
+    {
+     "s": 4.98,
+     "e": 8.1,
+     "t": "about conversations and you said, I just"
+    },
+    {
+     "s": 8.1,
+     "e": 10.42,
+     "t": "had a conversation, but no follow-up was"
+    },
+    {
+     "s": 10.42,
+     "e": 12.34,
+     "t": "asked um when you said that and I was"
+    },
+    {
+     "s": 12.34,
+     "e": 14.42,
+     "t": "curious, what was that conversation"
+    },
+    {
+     "s": 14.42,
+     "e": 14.67,
+     "t": "like?"
+    },
+    {
+     "s": 14.72,
+     "e": 16.26,
+     "t": "In the back, you said you had a"
+    },
+    {
+     "s": 16.26,
+     "e": 17.71,
+     "t": "conversation with the brass."
+    },
+    {
+     "s": 17.76,
+     "e": 18.18,
+     "t": "Did they"
+    },
+    {
+     "s": 18.18,
+     "e": 20.58,
+     "t": "tell you you are next as a result of the"
+    },
+    {
+     "s": 20.58,
+     "e": 22.58,
+     "t": "win?"
+    },
+    {
+     "s": 22.58,
+     "e": 24.98,
+     "t": "Yeah, before fight they told me uh same."
+    },
+    {
+     "s": 24.98,
+     "e": 26.89,
+     "t": "After fight they told me same."
+    },
+    {
+     "s": 26.95,
+     "e": 27.46,
+     "t": "So, they"
+    },
+    {
+     "s": 27.46,
+     "e": 29.78,
+     "t": "were happy with my performance and uh"
+    },
+    {
+     "s": 29.78,
+     "e": 31.62,
+     "t": "they said uh we're going to work on it"
+    },
+    {
+     "s": 31.62,
+     "e": 33.06,
+     "t": "on your title fight."
+    }
+   ],
+   "quote": {
+    "t": "After fight they told me same.",
+    "s": 24.98,
+    "e": 26.89
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Arman Tsarukyan"
+  },
+  {
+   "type": "narration",
+   "text": "On the other side, Arman Tsarukyan lays out why he thinks Gaethje would prefer Ilia Topuria over him. He says Gaethje has already beaten Topuria once, while Arman represents a different challenge at the top of lightweight.",
+   "next_video": "_tSFcV_6Uc4",
+   "headline": "TSARUKYAN QUESTIONS GAETHJE PREFERENCE"
+  },
+  {
+   "video": "_tSFcV_6Uc4",
+   "start": 1144.41,
+   "end": 1202.91,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.11,
+     "t": "Do you think that he has"
+    },
+    {
+     "s": 1.11,
+     "e": 2.07,
+     "t": "any concerns fighting you?"
+    },
+    {
+     "s": 2.11,
+     "e": 2.55,
+     "t": "Do you think"
+    },
+    {
+     "s": 2.55,
+     "e": 5.67,
+     "t": "he'd rather fight someone else?"
+    },
+    {
+     "s": 5.67,
+     "e": 6.59,
+     "t": "Yeah, for sure."
+    },
+    {
+     "s": 6.65,
+     "e": 8.07,
+     "t": "If you tell him like to"
+    },
+    {
+     "s": 8.07,
+     "e": 11.03,
+     "t": "to move up or or do something or leave"
+    },
+    {
+     "s": 11.03,
+     "e": 14.23,
+     "t": "the title and the fight with anybody"
+    },
+    {
+     "s": 14.23,
+     "e": 17.14,
+     "t": "else, he would pick different."
+    },
+    {
+     "s": 17.23,
+     "e": 17.91,
+     "t": "If they"
+    },
+    {
+     "s": 17.91,
+     "e": 20.63,
+     "t": "if they give him the opportunity to pick"
+    },
+    {
+     "s": 20.63,
+     "e": 23.19,
+     "t": "me or he would pick Ilia because he know"
+    },
+    {
+     "s": 23.19,
+     "e": 25.16,
+     "t": "how he already beat him."
+    },
+    {
+     "s": 25.24,
+     "e": 26.47,
+     "t": "He can he knows"
+    },
+    {
+     "s": 26.47,
+     "e": 28.55,
+     "t": "that he can beat him twice"
+    },
+    {
+     "s": 28.55,
+     "e": 29.62,
+     "t": "and he already beat Paddy."
+    },
+    {
+     "s": 29.66,
+     "e": 30.15,
+     "t": "Like there's"
+    },
+    {
+     "s": 30.15,
+     "e": 31.75,
+     "t": "only really like three guys in this"
+    },
+    {
+     "s": 31.75,
+     "e": 33.91,
+     "t": "conversation and he beat two of them."
+    },
+    {
+     "s": 33.91,
+     "e": 34.93,
+     "t": "Yeah."
+    },
+    {
+     "s": 35.14,
+     "e": 35.75,
+     "t": "So,"
+    },
+    {
+     "s": 35.75,
+     "e": 37.03,
+     "t": "he doesn't strike me as that kind of"
+    },
+    {
+     "s": 37.03,
+     "e": 37.21,
+     "t": "guy."
+    },
+    {
+     "s": 37.26,
+     "e": 38.63,
+     "t": "I I I feel like he is going to"
+    },
+    {
+     "s": 38.63,
+     "e": 40.23,
+     "t": "fight you, but I think he's going to ask"
+    },
+    {
+     "s": 40.23,
+     "e": 41.51,
+     "t": "for a lot of money cuz it's the end of"
+    },
+    {
+     "s": 41.51,
+     "e": 42.63,
+     "t": "his run."
+    },
+    {
+     "s": 42.63,
+     "e": 45.91,
+     "t": "Yeah, I'll be happy that I'll be very"
+    },
+    {
+     "s": 45.91,
+     "e": 48.95,
+     "t": "happy to fight him and because I know he"
+    },
+    {
+     "s": 48.95,
+     "e": 50.79,
+     "t": "he has like a couple more fights and"
+    },
+    {
+     "s": 50.79,
+     "e": 52.95,
+     "t": "he's going to retire and uh to have on"
+    },
+    {
+     "s": 52.95,
+     "e": 54.47,
+     "t": "my"
+    },
+    {
+     "s": 54.47,
+     "e": 56.95,
+     "t": "on my win streak his name is good too,"
+    },
+    {
+     "s": 56.95,
+     "e": 58.15,
+     "t": "you know."
+    }
+   ],
+   "quote": {
+    "t": "If they give him the opportunity to pick me or he would pick Ilia because he know how he already beat him.",
+    "s": 17.23,
+    "e": 25.16
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Arman Tsarukyan"
+  },
+  {
+   "type": "narration",
+   "text": "Arman Tsarukyan also expects Topuria's team to push for a title shot first. He says it will not happen, and predicts Topuria fights Paddy Pimblett instead.",
+   "next_video": "_tSFcV_6Uc4",
+   "headline": "TSARUKYAN PREDICTS PIMBLETT FIGHT"
+  },
+  {
+   "video": "_tSFcV_6Uc4",
+   "start": 1084.73,
+   "end": 1133.15,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 0.43,
+     "t": "Okay."
+    },
+    {
+     "s": 0.49,
+     "e": 2.39,
+     "t": "Do you think Ilia and his team are"
+    },
+    {
+     "s": 2.39,
+     "e": 4.71,
+     "t": "going to campaign to try to get the shot"
+    },
+    {
+     "s": 4.71,
+     "e": 7.27,
+     "t": "before you?"
+    },
+    {
+     "s": 7.27,
+     "e": 9.67,
+     "t": "They're going to try, but it's not going"
+    },
+    {
+     "s": 9.67,
+     "e": 11.19,
+     "t": "to happen."
+    },
+    {
+     "s": 11.19,
+     "e": 14.23,
+     "t": "What do you think happens with them?"
+    },
+    {
+     "s": 14.23,
+     "e": 15.35,
+     "t": "They're going to fight with Paddy"
+    },
+    {
+     "s": 15.35,
+     "e": 16.15,
+     "t": "Pimblett."
+    },
+    {
+     "s": 16.15,
+     "e": 17.43,
+     "t": "You think so?"
+    },
+    {
+     "s": 17.43,
+     "e": 17.73,
+     "t": "Yeah."
+    },
+    {
+     "s": 17.79,
+     "e": 19.75,
+     "t": "But depends what what GI is going"
+    },
+    {
+     "s": 19.75,
+     "e": 20.12,
+     "t": "to do."
+    },
+    {
+     "s": 20.18,
+     "e": 22.07,
+     "t": "Maybe Gi going to say, \"I don't"
+    },
+    {
+     "s": 22.07,
+     "e": 23.83,
+     "t": "want to fight anymore."
+    },
+    {
+     "s": 23.91,
+     "e": 24.87,
+     "t": "I'm retired."
+    },
+    {
+     "s": 24.87,
+     "e": 26.23,
+     "t": "So, you never know."
+    },
+    {
+     "s": 26.23,
+     "e": 28.95,
+     "t": "You think Gaethje may consider retirement"
+    },
+    {
+     "s": 28.95,
+     "e": 31.35,
+     "t": "instead of fighting you?"
+    },
+    {
+     "s": 31.35,
+     "e": 33.51,
+     "t": "Either retirement, either uh he's going"
+    },
+    {
+     "s": 33.51,
+     "e": 37.03,
+     "t": "to ask for a big check."
+    },
+    {
+     "s": 37.03,
+     "e": 38.07,
+     "t": "What do you think happens?"
+    },
+    {
+     "s": 38.11,
+     "e": 38.63,
+     "t": "How does this"
+    },
+    {
+     "s": 38.63,
+     "e": 40.95,
+     "t": "play out in your opinion?"
+    },
+    {
+     "s": 40.95,
+     "e": 44.71,
+     "t": "Uh I think they're going to pay him good"
+    },
+    {
+     "s": 44.71,
+     "e": 48.07,
+     "t": "money and he's going to stay."
+    }
+   ],
+   "quote": {
+    "t": "They're going to try, but it's not going to happen.",
+    "s": 7.27,
+    "e": 11.19
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Arman Tsarukyan"
+  },
+  {
+   "type": "narration",
+   "text": "Beyond that, Justin Gaethje reveals the other complication around the lightweight belt right now. He says he is hurt, cannot fight again this year, and expects the next conversation about his future closer to Christmas.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE SAYS HE IS HURT"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 1280.58,
+   "end": 1322.31,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.3,
+     "t": "Um I interviewed Georges"
+    },
+    {
+     "s": 1.3,
+     "e": 1.8,
+     "t": "St-Pierre."
+    },
+    {
+     "s": 1.85,
+     "e": 3.18,
+     "t": "He had kind of a viral clip"
+    },
+    {
+     "s": 3.18,
+     "e": 4.26,
+     "t": "where he said, \"I know people don't want"
+    },
+    {
+     "s": 4.26,
+     "e": 6.5,
+     "t": "to hear this, but Justin, I love you."
+    },
+    {
+     "s": 6.5,
+     "e": 7.42,
+     "t": "You're a great fighter."
+    },
+    {
+     "s": 7.46,
+     "e": 7.86,
+     "t": "You should"
+    },
+    {
+     "s": 7.86,
+     "e": 9.38,
+     "t": "retire.\" Do you listen up when you hear"
+    },
+    {
+     "s": 9.38,
+     "e": 11.02,
+     "t": "stuff like that or or is that ultimately"
+    },
+    {
+     "s": 11.02,
+     "e": 12.1,
+     "t": "just your own decision?"
+    },
+    {
+     "s": 12.1,
+     "e": 13.94,
+     "t": "mean, it's obviously my decision, but"
+    },
+    {
+     "s": 13.94,
+     "e": 15.25,
+     "t": "yeah, I I listen to everything."
+    },
+    {
+     "s": 15.29,
+     "e": 15.58,
+     "t": "Yeah, I"
+    },
+    {
+     "s": 15.58,
+     "e": 16.31,
+     "t": "hear everything."
+    },
+    {
+     "s": 16.35,
+     "e": 17.08,
+     "t": "I read comments."
+    },
+    {
+     "s": 17.13,
+     "e": 17.26,
+     "t": "But"
+    },
+    {
+     "s": 17.26,
+     "e": 18.9,
+     "t": "ultimately, I have a you know, an"
+    },
+    {
+     "s": 18.9,
+     "e": 21.18,
+     "t": "amazing family, parents, siblings."
+    },
+    {
+     "s": 21.25,
+     "e": 21.38,
+     "t": "My"
+    },
+    {
+     "s": 21.38,
+     "e": 23.18,
+     "t": "brother definitely does not want me to"
+    },
+    {
+     "s": 23.18,
+     "e": 23.47,
+     "t": "stop."
+    },
+    {
+     "s": 23.53,
+     "e": 25.38,
+     "t": "My brother is 100% on, you know,"
+    },
+    {
+     "s": 25.38,
+     "e": 27.5,
+     "t": "forward, but yeah, everybody else, we're"
+    },
+    {
+     "s": 27.5,
+     "e": 28.98,
+     "t": "just kind of kind of figuring it out."
+    },
+    {
+     "s": 28.98,
+     "e": 29.89,
+     "t": "They know that I'm hurt right now."
+    },
+    {
+     "s": 29.92,
+     "e": 30.02,
+     "t": "They"
+    },
+    {
+     "s": 30.02,
+     "e": 31.34,
+     "t": "know I can't fight again this year, so"
+    },
+    {
+     "s": 31.34,
+     "e": 32.86,
+     "t": "they kind of just want me to enjoy, you"
+    },
+    {
+     "s": 32.86,
+     "e": 34.62,
+     "t": "know, this, recover, rest, recover,"
+    },
+    {
+     "s": 34.62,
+     "e": 36.1,
+     "t": "enjoy what I have accomplished, and"
+    },
+    {
+     "s": 36.1,
+     "e": 37.3,
+     "t": "then, you know, I think we're all going"
+    },
+    {
+     "s": 37.3,
+     "e": 38.82,
+     "t": "to around Christmas time probably have a"
+    },
+    {
+     "s": 38.82,
+     "e": 39.92,
+     "t": "conversation about what's,"
+    },
+    {
+     "s": 39.92,
+     "e": 40.46,
+     "t": "[clears throat]"
+    },
+    {
+     "s": 40.46,
+     "e": 41.38,
+     "t": "you know, what's next."
+    }
+   ],
+   "quote": {
+    "t": "They know that I'm hurt right now. They know I can't fight again this year, so they kind of just want me to enjoy, you know, this, recover, rest, recover, enjoy what I have accomplished, and then, you know, I think we're all going to around Christmas time probably have a conversation about what's, you know, what's next.",
+    "s": 28.98,
+    "e": 41.38
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "Adding to that, Jon Anik admits the champion’s future may be more uncertain than the division wants to hear. He discusses Gaethje’s legacy through violence and memorable moments, then leaves open the possibility that the Topuria win could be the last one.",
+   "next_video": "VBAVpcLbd9k",
+   "headline": "ANIK QUESTIONS GAETHJE FUTURE"
+  },
+  {
+   "video": "VBAVpcLbd9k",
+   "start": 1498.49,
+   "end": 1535.95,
+   "credit": "Submission Radio",
+   "channel": "Submission Radio",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.51,
+     "t": "I don't know that he's going to be in"
+    },
+    {
+     "s": 1.51,
+     "e": 3.99,
+     "t": "that conversation with Islam Makhachev,"
+    },
+    {
+     "s": 3.99,
+     "e": 6.23,
+     "t": "Khabib Nurmagomedov, and BJ Penn."
+    },
+    {
+     "s": 6.31,
+     "e": 7.19,
+     "t": "I think the"
+    },
+    {
+     "s": 7.19,
+     "e": 8.47,
+     "t": "conversation is always going to be about"
+    },
+    {
+     "s": 8.47,
+     "e": 10.87,
+     "t": "his electricity and his highlight reel."
+    },
+    {
+     "s": 10.87,
+     "e": 12.95,
+     "t": "And maybe that undersells him a little"
+    },
+    {
+     "s": 12.95,
+     "e": 13.85,
+     "t": "bit, you know?"
+    },
+    {
+     "s": 13.91,
+     "e": 15.51,
+     "t": "I mean, my guy DC doesn't"
+    },
+    {
+     "s": 15.51,
+     "e": 17.03,
+     "t": "get the credit in terms of the all-time"
+    },
+    {
+     "s": 17.03,
+     "e": 18.85,
+     "t": "greatness that he deserves, you know?"
+    },
+    {
+     "s": 18.9,
+     "e": 18.95,
+     "t": "I"
+    },
+    {
+     "s": 18.95,
+     "e": 21.11,
+     "t": "just don't know that a win over Arman"
+    },
+    {
+     "s": 21.11,
+     "e": 22.63,
+     "t": "Sarukan"
+    },
+    {
+     "s": 22.63,
+     "e": 24.15,
+     "t": "all of a sudden is going to make Justin"
+    },
+    {
+     "s": 24.15,
+     "e": 25.91,
+     "t": "Gai in that conversation with Islam as"
+    },
+    {
+     "s": 25.91,
+     "e": 27.35,
+     "t": "as one of the greatest lightweights of"
+    },
+    {
+     "s": 27.35,
+     "e": 28.15,
+     "t": "all time."
+    },
+    {
+     "s": 28.24,
+     "e": 30.45,
+     "t": "But uh but we'll see man."
+    },
+    {
+     "s": 30.54,
+     "e": 30.63,
+     "t": "I"
+    },
+    {
+     "s": 30.63,
+     "e": 31.85,
+     "t": "just hope that that fight happens."
+    },
+    {
+     "s": 31.88,
+     "e": 31.99,
+     "t": "You"
+    },
+    {
+     "s": 31.99,
+     "e": 34.63,
+     "t": "know I I still think that uh there's a"
+    },
+    {
+     "s": 34.63,
+     "e": 35.75,
+     "t": "chance we've seen the last of Justin"
+    },
+    {
+     "s": 35.75,
+     "e": 36.17,
+     "t": "Gate."
+    },
+    {
+     "s": 36.26,
+     "e": 37.11,
+     "t": "We'll see."
+    }
+   ],
+   "quote": {
+    "t": "I still think that there's a chance we've seen the last of Justin Gaethje.",
+    "s": 31.99,
+    "e": 35.75
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Jon Anik"
+  },
+  {
+   "type": "narration",
+   "text": "Taking that further, Jon Anik questions what the UFC actually does if Justin Gaethje is willing to continue. He says the promotion likely makes the Arman Tsarukyan fight, while also noting how strongly the betting market already leans.",
+   "next_video": "VBAVpcLbd9k",
+   "headline": "ANIK EXPECTS TSARUKYAN OPTION"
+  },
+  {
+   "video": "VBAVpcLbd9k",
+   "start": 1406.56,
+   "end": 1451.47,
+   "credit": "Submission Radio",
+   "channel": "Submission Radio",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 0.32,
+     "t": "The"
+    },
+    {
+     "s": 0.32,
+     "e": 2.56,
+     "t": "question is, is Justin Gaethje going to"
+    },
+    {
+     "s": 2.56,
+     "e": 4.16,
+     "t": "accept that fight and continue his"
+    },
+    {
+     "s": 4.16,
+     "e": 4.47,
+     "t": "career?"
+    },
+    {
+     "s": 4.51,
+     "e": 5.92,
+     "t": "Is he going to ride off into the"
+    },
+    {
+     "s": 5.92,
+     "e": 6.34,
+     "t": "sunset?"
+    },
+    {
+     "s": 6.39,
+     "e": 8.16,
+     "t": "I felt like there were so many"
+    },
+    {
+     "s": 8.16,
+     "e": 9.92,
+     "t": "question marks on the Ilia Topuria side"
+    },
+    {
+     "s": 9.92,
+     "e": 11.6,
+     "t": "going into the Justin Gaethje fight."
+    },
+    {
+     "s": 11.6,
+     "e": 14.16,
+     "t": "He's 56 limited on lightweight"
+    },
+    {
+     "s": 14.16,
+     "e": 15.76,
+     "t": "experience in the UFC and I thought"
+    },
+    {
+     "s": 15.76,
+     "e": 18.48,
+     "t": "there were a lot of intangible things"
+    },
+    {
+     "s": 18.48,
+     "e": 20.76,
+     "t": "that could favor Gaethje in that fight."
+    },
+    {
+     "s": 20.82,
+     "e": 20.88,
+     "t": "I"
+    },
+    {
+     "s": 20.88,
+     "e": 22.32,
+     "t": "think this is a much harder fight for"
+    },
+    {
+     "s": 22.32,
+     "e": 25.28,
+     "t": "Justin against Arman Tsarukyan, a true"
+    },
+    {
+     "s": 25.28,
+     "e": 28.08,
+     "t": "lightweight by frame by stature who has"
+    },
+    {
+     "s": 28.08,
+     "e": 29.66,
+     "t": "a number of different ways to win."
+    },
+    {
+     "s": 29.7,
+     "e": 29.84,
+     "t": "And"
+    },
+    {
+     "s": 29.84,
+     "e": 31.68,
+     "t": "uh I'm a little surprised that Arman in"
+    },
+    {
+     "s": 31.68,
+     "e": 34.16,
+     "t": "some spots is a minus500"
+    },
+    {
+     "s": 34.16,
+     "e": 35.66,
+     "t": "favorite already."
+    },
+    {
+     "s": 35.75,
+     "e": 37.68,
+     "t": "But no, I think Tsarukyan"
+    },
+    {
+     "s": 37.68,
+     "e": 38.66,
+     "t": "is undeniable."
+    },
+    {
+     "s": 38.73,
+     "e": 40.48,
+     "t": "And uh I believe that the"
+    },
+    {
+     "s": 40.48,
+     "e": 43.2,
+     "t": "UFC will make that fight if Justin Gaethje"
+    },
+    {
+     "s": 43.2,
+     "e": 44.56,
+     "t": "is willing."
+    }
+   ],
+   "quote": {
+    "t": "I believe that the UFC will make that fight if Justin Gaethje is willing.",
+    "s": 38.73,
+    "e": 44.56
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Jon Anik"
+  },
+  {
+   "type": "narration",
+   "text": "However, Jon Anik also keeps the Ilia Topuria rematch in the conversation because of Topuria’s profile. He says the UFC has to consider that option internally, even while acknowledging that Tsarukyan’s latest win makes him deserving.",
+   "next_video": "VBAVpcLbd9k",
+   "headline": "ANIK KEEPS TOPURIA REMATCH ALIVE"
+  },
+  {
+   "video": "VBAVpcLbd9k",
+   "start": 1373.41,
+   "end": 1407.0,
+   "credit": "Submission Radio",
+   "channel": "Submission Radio",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.79,
+     "t": "The reason why and I"
+    },
+    {
+     "s": 1.79,
+     "e": 2.99,
+     "t": "know my words have been a little bit"
+    },
+    {
+     "s": 2.99,
+     "e": 4.83,
+     "t": "framed up and sensationalized but the"
+    },
+    {
+     "s": 4.83,
+     "e": 6.43,
+     "t": "reason why I have been quoted talking"
+    },
+    {
+     "s": 6.43,
+     "e": 8.91,
+     "t": "about the Topuria gate rematch is"
+    },
+    {
+     "s": 8.91,
+     "e": 10.99,
+     "t": "because UFC freedom 250 was one of the"
+    },
+    {
+     "s": 10.99,
+     "e": 12.19,
+     "t": "biggest sporting events in the history"
+    },
+    {
+     "s": 12.19,
+     "e": 14.54,
+     "t": "of the United States of America."
+    },
+    {
+     "s": 14.61,
+     "e": 14.83,
+     "t": "So,"
+    },
+    {
+     "s": 14.83,
+     "e": 16.67,
+     "t": "internally you have to at least kick the"
+    },
+    {
+     "s": 16.67,
+     "e": 18.25,
+     "t": "tires on that rematch."
+    },
+    {
+     "s": 18.32,
+     "e": 19.39,
+     "t": "And by the way,"
+    },
+    {
+     "s": 19.39,
+     "e": 21.07,
+     "t": "even though it was one-sided at times,"
+    },
+    {
+     "s": 21.07,
+     "e": 22.59,
+     "t": "it was also one of the best fights of"
+    },
+    {
+     "s": 22.59,
+     "e": 23.07,
+     "t": "the year."
+    },
+    {
+     "s": 23.12,
+     "e": 24.51,
+     "t": "But Arman Tsarukyan based upon"
+    },
+    {
+     "s": 24.51,
+     "e": 26.03,
+     "t": "what he just did against Mauricio Ruffy"
+    },
+    {
+     "s": 26.03,
+     "e": 27.04,
+     "t": "has made himself undeniable."
+    },
+    {
+     "s": 27.08,
+     "e": 27.47,
+     "t": "And I think"
+    },
+    {
+     "s": 27.47,
+     "e": 29.07,
+     "t": "if you're Dana White, Hunter Campbell,"
+    },
+    {
+     "s": 29.07,
+     "e": 31.63,
+     "t": "Mick Maynard, Sean Shelby, you have to give"
+    },
+    {
+     "s": 31.63,
+     "e": 33.24,
+     "t": "Arman Tsarukyan the title fight."
+    }
+   ],
+   "quote": {
+    "t": "Internally you have to at least kick the tires on that rematch.",
+    "s": 14.83,
+    "e": 18.25
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Jon Anik"
+  },
+  {
+   "type": "narration",
+   "text": "Taking that further, Jon Anik says Arman Tsarukyan has now become extremely hard to ignore for the next lightweight title shot. He still gives Justin Gaethje a legitimate chance, but frames Arman as promotionally undeniable after the Ruffy knockout.",
+   "next_video": "VBAVpcLbd9k",
+   "headline": "ANIK SAYS TSARUKYAN UNDENIABLE"
+  },
+  {
+   "video": "VBAVpcLbd9k",
+   "start": 1328.49,
+   "end": 1373.83,
+   "credit": "Submission Radio",
+   "channel": "Submission Radio",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.67,
+     "t": "We'll see what how Justin Gaethje feels"
+    },
+    {
+     "s": 1.67,
+     "e": 2.0,
+     "t": "about it."
+    },
+    {
+     "s": 2.04,
+     "e": 3.03,
+     "t": "The thing I love about that"
+    },
+    {
+     "s": 3.03,
+     "e": 5.19,
+     "t": "fight is when you break that fight down,"
+    },
+    {
+     "s": 5.19,
+     "e": 6.87,
+     "t": "like you were one of the only guys that"
+    },
+    {
+     "s": 6.87,
+     "e": 8.39,
+     "t": "really gave Justin Gaethje a chance"
+    },
+    {
+     "s": 8.39,
+     "e": 9.53,
+     "t": "against Ilia Topuria."
+    },
+    {
+     "s": 9.59,
+     "e": 10.79,
+     "t": "I feel when we spoke"
+    },
+    {
+     "s": 10.79,
+     "e": 12.55,
+     "t": "about that fight, when I break down the"
+    },
+    {
+     "s": 12.55,
+     "e": 14.79,
+     "t": "Arman Tsarukyan fight, I actually have a"
+    },
+    {
+     "s": 14.79,
+     "e": 17.11,
+     "t": "lot of questions about that fight as"
+    },
+    {
+     "s": 17.11,
+     "e": 17.35,
+     "t": "well."
+    },
+    {
+     "s": 17.4,
+     "e": 19.03,
+     "t": "Like you can't just cut out Justin"
+    },
+    {
+     "s": 19.03,
+     "e": 20.55,
+     "t": "Gatei, especially after what he did"
+    },
+    {
+     "s": 20.55,
+     "e": 23.43,
+     "t": "against Ilia Tapora against Arman Sukian"
+    },
+    {
+     "s": 23.43,
+     "e": 24.08,
+     "t": "in this fight."
+    },
+    {
+     "s": 24.12,
+     "e": 25.19,
+     "t": "Sure, Surukin will be a"
+    },
+    {
+     "s": 25.19,
+     "e": 27.51,
+     "t": "favorite, but I feel like Gaethje still"
+    },
+    {
+     "s": 27.51,
+     "e": 29.43,
+     "t": "has a real shot here to potentially go"
+    },
+    {
+     "s": 29.43,
+     "e": 31.39,
+     "t": "on this crazy run for his legacy."
+    },
+    {
+     "s": 31.45,
+     "e": 31.51,
+     "t": "I"
+    },
+    {
+     "s": 31.51,
+     "e": 33.99,
+     "t": "think not unlike Merab Dvalishvili and"
+    },
+    {
+     "s": 33.99,
+     "e": 36.47,
+     "t": "Belal Muhammad and maybe even Nasardini"
+    },
+    {
+     "s": 36.47,
+     "e": 39.03,
+     "t": "Mavave recently Arman Tsarukyan has made"
+    },
+    {
+     "s": 39.03,
+     "e": 40.87,
+     "t": "himself so undeniable that I think"
+    },
+    {
+     "s": 40.87,
+     "e": 43.51,
+     "t": "promotionally you really can't go in"
+    },
+    {
+     "s": 43.51,
+     "e": 44.99,
+     "t": "another direction."
+    }
+   ],
+   "quote": {
+    "t": "Arman Tsarukyan has made himself so undeniable that I think promotionally you really can't go in another direction.",
+    "s": 36.47,
+    "e": 44.99
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Jon Anik"
+  },
+  {
+   "type": "narration",
+   "text": "Before UFC 331, Chael Sonnen had already made the case for Topuria. He says that with Topuria's credentials as a two-division champion, it is hard to argue he does not deserve to fight for the belt he just held.",
+   "next_video": "-W4USw2G_DI",
+   "headline": "SONNEN MADE TOPURIA CASE"
+  },
+  {
+   "video": "-W4USw2G_DI",
+   "start": 824.42,
+   "end": 882.99,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.1,
+     "t": "That was the original"
+    },
+    {
+     "s": 1.1,
+     "e": 2.78,
+     "t": "plan, only because it's a fresh match"
+    },
+    {
+     "s": 2.78,
+     "e": 2.9,
+     "t": "up."
+    },
+    {
+     "s": 2.94,
+     "e": 4.19,
+     "t": "We we've never seen this before."
+    },
+    {
+     "s": 4.23,
+     "e": 4.3,
+     "t": "We"
+    },
+    {
+     "s": 4.3,
+     "e": 6.66,
+     "t": "saw Arman versus Charles at UFC 300 and"
+    },
+    {
+     "s": 6.66,
+     "e": 8.66,
+     "t": "it was fine, but I want to see something"
+    },
+    {
+     "s": 8.66,
+     "e": 8.83,
+     "t": "fresh."
+    },
+    {
+     "s": 8.86,
+     "e": 9.5,
+     "t": "I want to see something"
+    },
+    {
+     "s": 9.5,
+     "e": 10.59,
+     "t": "different."
+    },
+    {
+     "s": 10.69,
+     "e": 11.34,
+     "t": "Agree?"
+    },
+    {
+     "s": 11.34,
+     "e": 11.66,
+     "t": "Oh yeah."
+    },
+    {
+     "s": 11.7,
+     "e": 12.94,
+     "t": "No, I fully I fully see it that"
+    },
+    {
+     "s": 12.94,
+     "e": 13.29,
+     "t": "same way."
+    },
+    {
+     "s": 13.32,
+     "e": 14.42,
+     "t": "I think that Max would have a"
+    },
+    {
+     "s": 14.42,
+     "e": 15.32,
+     "t": "very good argument."
+    },
+    {
+     "s": 15.36,
+     "e": 16.3,
+     "t": "I think it'd be hard"
+    },
+    {
+     "s": 16.3,
+     "e": 18.06,
+     "t": "to say that even though Max is one and"
+    },
+    {
+     "s": 18.06,
+     "e": 19.66,
+     "t": "one in his last two, the fact that he"
+    },
+    {
+     "s": 19.66,
+     "e": 20.78,
+     "t": "beat"
+    },
+    {
+     "s": 20.78,
+     "e": 22.54,
+     "t": "Justin is enough, but he's not going to"
+    },
+    {
+     "s": 22.54,
+     "e": 23.32,
+     "t": "get that opportunity."
+    },
+    {
+     "s": 23.35,
+     "e": 23.94,
+     "t": "And then you got"
+    },
+    {
+     "s": 23.94,
+     "e": 25.2,
+     "t": "the same thing with Paddy."
+    },
+    {
+     "s": 25.25,
+     "e": 25.82,
+     "t": "Paddy in the"
+    },
+    {
+     "s": 25.82,
+     "e": 28.1,
+     "t": "absence of McGregor and possibly in the"
+    },
+    {
+     "s": 28.1,
+     "e": 30.82,
+     "t": "presence of McGregor is the biggest star"
+    },
+    {
+     "s": 30.82,
+     "e": 33.5,
+     "t": "in the UFC, but we just did that match."
+    },
+    {
+     "s": 33.5,
+     "e": 34.86,
+     "t": "And and the same thing goes, you know,"
+    },
+    {
+     "s": 34.86,
+     "e": 37.05,
+     "t": "to your example about Charles."
+    },
+    {
+     "s": 37.13,
+     "e": 37.78,
+     "t": "So, yeah,"
+    },
+    {
+     "s": 37.78,
+     "e": 39.34,
+     "t": "and the same thing would be said about"
+    },
+    {
+     "s": 39.34,
+     "e": 41.86,
+     "t": "Ilia other than the fact that he was the"
+    },
+    {
+     "s": 41.86,
+     "e": 43.85,
+     "t": "45-lb champion, 55-lb champion."
+    },
+    {
+     "s": 43.92,
+     "e": 44.3,
+     "t": "And if"
+    },
+    {
+     "s": 44.3,
+     "e": 46.26,
+     "t": "it wasn't for paperwork simultaneously,"
+    },
+    {
+     "s": 46.26,
+     "e": 47.7,
+     "t": "he could have been the BMF champion."
+    },
+    {
+     "s": 47.7,
+     "e": 49.82,
+     "t": "Like credential-wise,"
+    },
+    {
+     "s": 49.82,
+     "e": 51.9,
+     "t": "I don't know how anybody could with"
+    },
+    {
+     "s": 51.9,
+     "e": 54.86,
+     "t": "credibility say that Ilia Topuria does"
+    },
+    {
+     "s": 54.86,
+     "e": 56.5,
+     "t": "not deserve to fight for the very belt"
+    },
+    {
+     "s": 56.5,
+     "e": 58.22,
+     "t": "that he just held."
+    }
+   ],
+   "quote": {
+    "t": "I don't know how anybody could with credibility say that Ilia Topuria does not deserve to fight for the very belt that he just held.",
+    "s": 49.82,
+    "e": 58.22
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Chael Sonnen"
+  },
+  {
+   "type": "narration",
+   "text": "However, Paddy Pimblett remains the other major name attached to Ilia Topuria’s comeback. Justin Gaethje weighs in on that matchup and says Paddy becomes difficult to beat when an opponent gives him space to work.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE BREAKS DOWN PIMBLETT"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 952.29,
+   "end": 1012.11,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.91,
+     "t": "I don't understand him because, you"
+    },
+    {
+     "s": 1.91,
+     "e": 3.71,
+     "t": "know, after after fighting him, being in"
+    },
+    {
+     "s": 3.71,
+     "e": 5.43,
+     "t": "a couple grappling situations with him."
+    },
+    {
+     "s": 5.43,
+     "e": 7.71,
+     "t": "My my main goal was do not let him touch"
+    },
+    {
+     "s": 7.71,
+     "e": 8.03,
+     "t": "my head."
+    },
+    {
+     "s": 8.07,
+     "e": 9.15,
+     "t": "Don't let him grab my head."
+    },
+    {
+     "s": 9.19,
+     "e": 9.31,
+     "t": "You"
+    },
+    {
+     "s": 9.31,
+     "e": 11.27,
+     "t": "know, cuz he's definitely got long arms"
+    },
+    {
+     "s": 11.27,
+     "e": 13.27,
+     "t": "and he wraps them around your neck and"
+    },
+    {
+     "s": 13.27,
+     "e": 14.51,
+     "t": "there's a lot of leverage going on in"
+    },
+    {
+     "s": 14.51,
+     "e": 14.74,
+     "t": "there."
+    },
+    {
+     "s": 14.78,
+     "e": 15.95,
+     "t": "So then I never I never thought"
+    },
+    {
+     "s": 15.95,
+     "e": 17.3,
+     "t": "that he was that strong."
+    },
+    {
+     "s": 17.36,
+     "e": 18.03,
+     "t": "I never felt"
+    },
+    {
+     "s": 18.03,
+     "e": 19.87,
+     "t": "that and then to see him do that to BSD"
+    },
+    {
+     "s": 19.87,
+     "e": 20.67,
+     "t": "was was incredible."
+    },
+    {
+     "s": 20.71,
+     "e": 21.47,
+     "t": "To see him do that"
+    },
+    {
+     "s": 21.47,
+     "e": 22.83,
+     "t": "to Michael Chandler even before I fought"
+    },
+    {
+     "s": 22.83,
+     "e": 24.03,
+     "t": "him, I watched Michael Chandler fight"
+    },
+    {
+     "s": 24.03,
+     "e": 25.15,
+     "t": "him and I was like, \"Wow, this kid's got"
+    },
+    {
+     "s": 25.15,
+     "e": 26.25,
+     "t": "to be like incredibly strong."
+    },
+    {
+     "s": 26.29,
+     "e": 26.63,
+     "t": "He's he's"
+    },
+    {
+     "s": 26.63,
+     "e": 28.51,
+     "t": "a big guy.\" And then yeah, I felt I felt"
+    },
+    {
+     "s": 28.51,
+     "e": 29.83,
+     "t": "strong against him, you know, I was big."
+    },
+    {
+     "s": 29.83,
+     "e": 31.15,
+     "t": "I was like, \"I have to get big against"
+    },
+    {
+     "s": 31.15,
+     "e": 32.99,
+     "t": "him.\" So I focused on that and I you"
+    },
+    {
+     "s": 32.99,
+     "e": 34.43,
+     "t": "know, I felt our size was very"
+    },
+    {
+     "s": 34.43,
+     "e": 35.87,
+     "t": "comparable to each other and yeah, I"
+    },
+    {
+     "s": 35.87,
+     "e": 37.31,
+     "t": "didn't feel like he was super strong and"
+    },
+    {
+     "s": 37.31,
+     "e": 38.67,
+     "t": "then I see him do that to BSD and I'm"
+    },
+    {
+     "s": 38.67,
+     "e": 40.19,
+     "t": "like, \"What the [ __ ] is going on?\" And"
+    },
+    {
+     "s": 40.19,
+     "e": 41.07,
+     "t": "so yeah, I don't know."
+    },
+    {
+     "s": 41.11,
+     "e": 41.39,
+     "t": "I don't"
+    },
+    {
+     "s": 41.39,
+     "e": 42.87,
+     "t": "It's your bone density, bro."
+    },
+    {
+     "s": 42.87,
+     "e": 43.79,
+     "t": "No, I truly don't know."
+    },
+    {
+     "s": 43.83,
+     "e": 44.31,
+     "t": "I think he's"
+    },
+    {
+     "s": 44.31,
+     "e": 44.94,
+     "t": "he's so good."
+    },
+    {
+     "s": 44.99,
+     "e": 46.15,
+     "t": "I think I think Paddy is"
+    },
+    {
+     "s": 46.15,
+     "e": 48.59,
+     "t": "his style is so so unique and if you do"
+    },
+    {
+     "s": 48.59,
+     "e": 50.19,
+     "t": "hang out with him and don't pressure"
+    },
+    {
+     "s": 50.19,
+     "e": 51.71,
+     "t": "him, I think he's so hard to hit and"
+    },
+    {
+     "s": 51.71,
+     "e": 53.59,
+     "t": "he's very good at at landing like funky"
+    },
+    {
+     "s": 53.59,
+     "e": 54.19,
+     "t": "ass"
+    },
+    {
+     "s": 54.19,
+     "e": 55.66,
+     "t": "from from crazy angles."
+    },
+    {
+     "s": 55.73,
+     "e": 56.75,
+     "t": "So I think if if"
+    },
+    {
+     "s": 56.75,
+     "e": 58.67,
+     "t": "you fight Paddy with space, I think he's"
+    },
+    {
+     "s": 58.67,
+     "e": 59.47,
+     "t": "he's hard to beat."
+    }
+   ],
+   "quote": {
+    "t": "If you fight Paddy with space, I think he's hard to beat.",
+    "s": 55.73,
+    "e": 59.47
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "Then, Justin Gaethje keeps the Paddy Pimblett fight alive because of the matchup and the history between Paddy and Topuria. He says Paddy is a real problem, and the trash talk makes that pairing even more interesting.",
+   "next_video": "XHpWQ14EQac",
+   "headline": "GAETHJE KEEPS PIMBLETT ALIVE"
+  },
+  {
+   "video": "XHpWQ14EQac",
+   "start": 1036.77,
+   "end": 1054.23,
+   "credit": "DOUBLE COVERAGE PODCAST",
+   "channel": "DOUBLE COVERAGE PODCAST",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.91,
+     "t": "And the the punishment he took against"
+    },
+    {
+     "s": 1.91,
+     "e": 2.27,
+     "t": "you"
+    },
+    {
+     "s": 2.27,
+     "e": 2.57,
+     "t": "Yeah."
+    },
+    {
+     "s": 2.43,
+     "e": 4.19,
+     "t": "continuing over and over and over and"
+    },
+    {
+     "s": 4.19,
+     "e": 5.07,
+     "t": "over and over."
+    },
+    {
+     "s": 5.07,
+     "e": 6.79,
+     "t": "No, Paddy Paddy's a problem."
+    },
+    {
+     "s": 6.85,
+     "e": 7.47,
+     "t": "These kids"
+    },
+    {
+     "s": 7.47,
+     "e": 7.95,
+     "t": "are hungry."
+    },
+    {
+     "s": 7.95,
+     "e": 9.75,
+     "t": "Two special young hungry guys that you"
+    },
+    {
+     "s": 9.75,
+     "e": 10.95,
+     "t": "know he's got to That would be a great"
+    },
+    {
+     "s": 10.95,
+     "e": 12.47,
+     "t": "fight and the trash talk obviously the"
+    },
+    {
+     "s": 12.47,
+     "e": 12.95,
+     "t": "history."
+    },
+    {
+     "s": 12.95,
+     "e": 13.61,
+     "t": "Yeah, I hope they fight."
+    },
+    {
+     "s": 13.63,
+     "e": 13.99,
+     "t": "I think it'll"
+    },
+    {
+     "s": 13.99,
+     "e": 14.43,
+     "t": "be great."
+    },
+    {
+     "s": 14.43,
+     "e": 15.07,
+     "t": "That would be sick."
+    },
+    {
+     "s": 15.07,
+     "e": 16.15,
+     "t": "I think it'll be a great show."
+    },
+    {
+     "s": 16.15,
+     "e": 17.11,
+     "t": "I'll definitely go watch."
+    }
+   ],
+   "quote": {
+    "t": "No, Paddy Paddy's a problem.",
+    "s": 5.07,
+    "e": 6.79
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Justin Gaethje"
+  },
+  {
+   "type": "narration",
+   "text": "On a similar note, Arman Tsarukyan gives his own read on Ilia Topuria versus Paddy Pimblett. He calls it a close fight because Paddy’s chin and cardio could make Topuria’s knockout path harder than expected.",
+   "next_video": "_tSFcV_6Uc4",
+   "headline": "TSARUKYAN SEES CLOSE FIGHT"
+  },
+  {
+   "video": "_tSFcV_6Uc4",
+   "start": 1256.25,
+   "end": 1313.15,
+   "credit": "The Ariel Helwani Show",
+   "channel": "The Ariel Helwani Show",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 1.21,
+     "t": "I like that."
+    },
+    {
+     "s": 1.3,
+     "e": 3.51,
+     "t": "Uh Ilia and uh Paddy, who"
+    },
+    {
+     "s": 3.51,
+     "e": 6.51,
+     "t": "wins?"
+    },
+    {
+     "s": 6.79,
+     "e": 9.43,
+     "t": "Um"
+    },
+    {
+     "s": 9.43,
+     "e": 11.83,
+     "t": "It's hard."
+    },
+    {
+     "s": 11.83,
+     "e": 15.91,
+     "t": "Depends how Ilia is going to look like"
+    },
+    {
+     "s": 15.91,
+     "e": 18.55,
+     "t": "because either he's going to look super"
+    },
+    {
+     "s": 18.55,
+     "e": 18.77,
+     "t": "good."
+    },
+    {
+     "s": 18.81,
+     "e": 20.31,
+     "t": "He knocked out he's going to knock"
+    },
+    {
+     "s": 20.31,
+     "e": 21.23,
+     "t": "out Paddy."
+    },
+    {
+     "s": 21.32,
+     "e": 23.99,
+     "t": "Either he's going to going to"
+    },
+    {
+     "s": 23.99,
+     "e": 31.19,
+     "t": "lose him bad because uh uh uh because he"
+    },
+    {
+     "s": 31.19,
+     "e": 33.35,
+     "t": "has a good chin."
+    },
+    {
+     "s": 33.35,
+     "e": 37.27,
+     "t": "Uh, Paddy has a good chin and uh,"
+    },
+    {
+     "s": 37.27,
+     "e": 39.51,
+     "t": "Topuria"
+    },
+    {
+     "s": 39.51,
+     "e": 43.39,
+     "t": "uh, win by by by"
+    },
+    {
+     "s": 43.59,
+     "e": 48.71,
+     "t": "uh, he he wins usually by knock uh,"
+    },
+    {
+     "s": 48.71,
+     "e": 50.71,
+     "t": "Kio, you know, it's going to be hard to"
+    },
+    {
+     "s": 50.71,
+     "e": 53.75,
+     "t": "knock out Paddy and Paddy has a good"
+    },
+    {
+     "s": 53.75,
+     "e": 54.92,
+     "t": "cardio as well."
+    },
+    {
+     "s": 54.99,
+     "e": 56.55,
+     "t": "So, it's like 50/50."
+    }
+   ],
+   "quote": {
+    "t": "So, it's like 50/50.",
+    "s": 54.99,
+    "e": 56.55
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Arman Tsarukyan"
+  },
+  {
+   "type": "narration",
+   "text": "Gaethje has the belt and the leverage, Tsarukyan has the contender case, and Topuria is back training with Paddy still circling. What happens next could reshape the division. So, drop your thoughts below.",
+   "next_video": null,
+   "outro": true
+  }
+ ],
+ "estimated_minutes": 18.6,
+ "ticker": [
+  "TOPURIA BACK IN TRAINING",
+  "GAETHJE PRAISES TOPURIA SKILLS",
+  "SONNEN RULES OUT 145 RETURN",
+  "TSARUKYAN SAYS TITLE FIGHT NEXT",
+  "GAETHJE HURT UNTIL CHRISTMAS",
+  "ANIK WEIGHS TSARUKYAN SHOT",
+  "PIMBLETT REMAINS TOPURIA OPTION"
+ ]
+}
