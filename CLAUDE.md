@@ -13,8 +13,9 @@ d'environnement du compte s'il manque).
 
 - Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
   français, simple, court, direct. Pas d'anglais, pas de jargon, pas de pavé.
-- Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». Donne des heures
-  (UTC) et des chiffres concrets (images 86/123, rendu en cours…).
+- Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». **Jamais d'heure UTC**
+  (l'utilisateur, 3 oct. : « je comprends rien ») : dis « dans 20 min » + l'heure de **Belgique** (UTC+2 l'été,
+  UTC+1 l'hiver), et des chiffres concrets (images 86/123, rendu en cours…).
 - Il décide des titres, miniatures et du calendrier ; propose 2-4 options visuelles (planches d'images),
   recommande-en une, puis applique son choix sans redemander.
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
