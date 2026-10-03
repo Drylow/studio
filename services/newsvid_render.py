@@ -742,11 +742,11 @@ def build(job_dir, work_root, upload=True, keep=False):
             if parts and not any(p.endswith("sting.mp4") for p in parts):  # fin de l'ouverture : logo animé
                 parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2))
             seg = dict(seg, lower="" if seg.get("outro") else (nxt or {}).get("speaker", ""))
-            who = (nxt or ref).get("speaker") or ""
-            if not photos.get(who):  # un consultant annoncé : la photo du combattant dont parle la voix off
-                text = seg.get("text") or ""
-                hits = [(text.find(n.split()[-1]), n) for n in photos if n.split()[-1] in text]
-                who = min(hits)[1] if hits else who
+            # la photo de la 1re personne dont parle la voix off (sinon celle qui va parler) : l'intro « Ilia Topuria is
+            # back in the gym » montrait Gaethje (qui parle juste après) sous le titre « TOPURIA RETURNS TO GYM »
+            text = seg.get("text") or ""
+            hits = [(text.find(n.split()[-1]), n) for n in photos if n.split()[-1] in text]
+            who = min(hits)[1] if hits else ((nxt or ref).get("speaker") or "")
             still = None
             if photos.get(who):  # la photo de la personne dont parle la voix off (sinon : images de sa vidéo)
                 k = used.get(who, 0)
