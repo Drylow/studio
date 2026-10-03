@@ -43,7 +43,7 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 |---|---|---|
 | What a 15-Year-Old Girl Saw at Gettysburg Was Too Brutal for Textbooks | **livrée** (vérifiée plan par plan, Discord, 2 oct.) — https://gofile.io/d/XXlkFSbS ; 36 min, voix Earl, rendu RunPod (~2 $) ; miniature « SHE SAW EVERYTHING » | à caler |
 | Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | **livrée** (vérifiée, Discord, 3 oct. 00:24) — https://gofile.io/d/ydAC4RRY ; 30 s d'Adobe Walls mélangées par le VPS (19:30-20:00) repérées à la relecture et refaites avant envoi ; 3 miniatures sans médaillon (BRUTAL FATE, CHILLING TRUTH, SHE SAW EVERYTHING) | à caler |
-| The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | script relu (`chaines/the-survivors-account/videos/02-pompeii-pliny/`), en production (`work/sa/pompeii`) | — |
+| The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | **livrée** (vérifiée, Discord, 3 oct.) — https://gofile.io/d/lDhthE4R ; 40 min, rendu 100 % VPS ; 16 plans des fouilles (1738-2024) refaits avant envoi (Romains en toge aux fouilles) ; miniatures CHILLING TRUTH, NO SUN RETURNED, WORSE THAN DEATH | à caler |
 
 ## Frontier Blood (History Docs, `frontier_blood`)
 
