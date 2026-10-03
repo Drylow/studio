@@ -69,3 +69,13 @@ Format copié sur **Fight Night MMA** (@mmafightnightyt : 13,9k abonnés, 8,9M d
 **Titres** : « "CITATION CHOC!" X DESTROYS / FIRES BACK AT Y For … ! » (clickbait léger : la citation doit être vraiment dite).
 
 **Miniature** : vraies photos des combattants, énorme citation blanc/rouge/jaune contour noir, parfois une photo encadrée en vert.
+
+### Noms de chaîne (vérifiés libres sur YouTube le 3 oct. 2026 : @nom inexistant + aucune chaîne à ce nom)
+
+« CAGE REPORT » était déjà pris (@CageReport). Famille conseillée, libre pour les trois sports :
+**Cage Dispatch** (MMA) · **Ring Dispatch** (boxe) · **Pitch Dispatch** (foot).
+Autres noms MMA libres : Cageside Wire (+ Ringside Wire, Pitchside Wire), Cage Ticker, Cage Scoop, Corner Wire.
+Pris : Cage Report, Cage Wire, Cage Brief, Cage Desk, Fight Dispatch (« Fight Dispatch MMA »), Clinch Report,
+Ring Scoop, Ring Rundown. « Octagon » évité : marque déposée de l'UFC.
+Vérifier juste avant de créer la chaîne : `curl -o /dev/null -w '%{http_code}' https://www.youtube.com/@Nom`
+(404 = libre) + recherche NexLev `youtube_search` type channel sur le nom exact.
