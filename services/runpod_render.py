@@ -103,6 +103,9 @@ def _bundle(media_dir):
     return buf.getvalue()
 
 
+BUSY = ("bundle", "render", "audio", "unpack", "npm", "fetch")
+
+
 def _unclaim(path):
     try:
         os.remove(path)
@@ -132,6 +135,15 @@ def _lock_vps(wait=False, job=None):
             lk.close()
             continue
         w["cpus"] = int(st.get("cpus") or 8)
+        # un rendu lancé par une vidéo précédente (boucle arrêtée, machine redémarrée) peut encore tourner sur le
+        # VPS : il écrirait ses morceaux dans le dossier de la vidéo suivante (Gettysburg a reçu un morceau d'Adobe
+        # Walls le 2 oct.). On attend qu'il ait fini avant d'envoyer quoi que ce soit.
+        t0 = time.time()
+        while st and st.get("stage") in BUSY and time.time() - t0 < 1800:
+            if job:
+                job.update(None, "VPS : un rendu précédent se termine…")
+            time.sleep(15)
+            st = _status(w) or st
         out.append((w, lk))
     return out
 
@@ -229,10 +241,13 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None, audi
                         print(f"[render] {wid} : {st.get('error')} {st.get('log', [])[-2:]}", flush=True)
                         alive.discard(wid)
                     continue
+                asked = set(inflight.get(wid) or [])
                 for f in st.get("files") or []:
                     dest = os.path.join(chunks, f)
-                    if os.path.isfile(dest) or (f == "audio.wav" and not need_audio):
+                    if os.path.isfile(dest) or (f == "audio.wav" and not (need_audio and audio_by == wid)):
                         continue
+                    if f != "audio.wav" and int(f[5:8]) not in asked:
+                        continue  # morceau qu'on n'a pas demandé à cette machine : pas le nôtre
                     r = requests.get(f"{w['url']}/file/{f}", headers=w["h"], timeout=600)
                     if r.status_code == 200:
                         open(dest + ".dl", "wb").write(r.content)
@@ -271,7 +286,13 @@ def render(job, media_dir, chunks, size, total, p0=0.05, p1=0.9, stop=None, audi
     finally:
         for pid in pods:
             _delete(pid)
-        for _, lk in vps:
+        for w, lk in vps:  # le VPS n'est libéré qu'une fois ses rendus en cours terminés (sinon : vidéos mélangées)
+            t0 = time.time()
+            while time.time() - t0 < 1800:
+                st = _status(w)
+                if not st or st.get("stage") not in BUSY:
+                    break
+                time.sleep(15)
             lk.close()
         for f in os.listdir(chunks):
             if f.endswith(".rp"):

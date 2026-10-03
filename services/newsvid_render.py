@@ -211,7 +211,7 @@ def _wrap_subs(subs, max_chars=42):
     """Lignes de sous-titres auto (souvent coupées au milieu) → phrases courtes lisibles."""
     out = []
     for s in subs:
-        t = s["t"].strip()
+        t = re.sub(r"\[\s*_+\s*\]", "****", s["t"]).strip()  # gros mot censuré par YouTube : « [ __ ] »
         if not t:
             continue
         if out and len(out[-1]["t"]) + len(t) + 1 <= max_chars and s["s"] - out[-1]["e"] < 0.4 \
