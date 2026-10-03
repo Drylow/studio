@@ -526,7 +526,7 @@ def load_photos(job_dir):
             except (ValueError, SyntaxError):
                 r = {}
             if os.path.isfile(p) and r.get("face") and r.get("clear", True) and not r.get("watermark") \
-                    and not r.get("text"):
+                    and not r.get("text") and int(r.get("people") or 1) <= 2:
                 out.setdefault(name, []).append((p, r["face"]))
     return out
 

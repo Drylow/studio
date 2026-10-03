@@ -21,7 +21,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT = os.path.join(REPO, "static", "fonts", "Anton-Regular.ttf")
 TW, TH = 1280, 720
 # variantes proposées (couleur du trait et des mots mis en avant) ; A = choisie par défaut
-VARIANTS = (("A", "accent2"), ("A", "accent"))  # validée par l'utilisateur : la A (deux photos, citation jaune)
+VARIANTS = (("A", "accent2"),)  # validée par l'utilisateur : la A (deux photos, citation jaune)
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                     "Chrome/128.0 Safari/537.36"}
 
@@ -196,8 +196,9 @@ def candidates(job_dir, plan, who, log=print):
         rated = list(ex.map(one, ims))
     def sharp(im, r):  # le cadrage de la miniature (visage × 2,6 sur 720 px de haut) sans agrandir plus de 1,25×
         return (r["face"][3] - r["face"][1]) * im.height * 2.6 >= TH / 1.25
-    good = [(src, im, r) for src, im, r in rated if r.get("ok") and sharp(im, r)]
-    good.sort(key=lambda x: -float(x[2].get("score") or 0))
+    # photo à plusieurs combattants : la vision peut prendre le mauvais visage (Oliveira pris pour Tsarukyan, 3 oct.)
+    good = [(src, im, r) for src, im, r in rated if r.get("ok") and sharp(im, r) and int(r.get("people") or 1) <= 2]
+    good.sort(key=lambda x: (int(x[2].get("people") or 1) > 1, -float(x[2].get("score") or 0)))
     log(f"{who} : {len(good)}/{len(rated)} photos utilisables")
     return good
 
