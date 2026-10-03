@@ -4,7 +4,7 @@ Installé par production/vps_news_setup.sh (Docker, derrière HTTPS). Aucune dé
 au démarrage il installe yt-dlp, ffmpeg (imageio-ffmpeg), Pillow et le moteur JavaScript deno dans DATA_DIR.
 Chaque requête porte l'en-tête X-Worker-Token (= WORKER_TOKEN).
 
-  GET  /status                 {busy, job, stage, error, youtube, log: fin de build.log}
+  GET  /status                 {busy, job, stage, error, youtube, proxy (oui/non), log: fin de build.log}
   POST /ytcheck                test de téléchargement YouTube depuis ce VPS → {ok, detail}
   PUT  /job?name=NOM[&upload=0] corps = .tgz avec code/ (le code du montage) et job/ (plan.json, narration/,
                                rangé dans jobs/NOM/NOM) :
@@ -33,7 +33,15 @@ JOBS = os.path.join(DATA, "jobs")
 DENO_DIR = os.path.join(DATA, "tools", "deno")
 MODULES = ["yt-dlp[default]", "imageio-ffmpeg", "Pillow", "python-dotenv", "requests"]
 TEST_VIDEO = "MeFQgiVHNoA"   # vidéo publique courte (son seul, quelques Mo) pour le test YouTube
-st = {"busy": False, "job": None, "stage": "starting", "error": None, "youtube": None, "since": time.time()}
+# Proxy résidentiel (payé au Go) : seulement pour YouTube. Donné en YTDLP_PROXY ou en HTTPS_PROXY : dans les deux
+# cas il est retiré de l'environnement général (pip, deno, envoi Gofile de 1 Go ne passent jamais par lui).
+PROXY = (os.environ.get("YTDLP_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or "").strip()
+for _k in ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy", "ALL_PROXY", "all_proxy"):
+    os.environ.pop(_k, None)
+if PROXY:
+    os.environ["YTDLP_PROXY"] = PROXY
+st = {"busy": False, "job": None, "stage": "starting", "error": None, "youtube": None, "since": time.time(),
+      "proxy": bool(PROXY)}
 lock = threading.Lock()
 
 
@@ -63,7 +71,7 @@ def ytcheck():
     shutil.rmtree(tmp, ignore_errors=True)
     os.makedirs(tmp)
     r = subprocess.run([sys.executable, "-m", "yt_dlp", "--no-playlist", "-f", "ba[abr<=80]/ba", "-o", "t.%(ext)s",
-                        f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
+                        *(["--proxy", PROXY] if PROXY else []), f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
                        text=True, encoding="utf-8", errors="replace", timeout=300)
     got = [f for f in os.listdir(tmp) if f.startswith("t.") and not f.endswith(".part")]
     ok = bool(got) and os.path.getsize(os.path.join(tmp, got[0])) > 100_000

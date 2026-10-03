@@ -11,7 +11,7 @@ Installé par production/vps_news_setup.sh (Docker, derrière HTTPS). Aucune dé
 au démarrage il installe yt-dlp, ffmpeg (imageio-ffmpeg), Pillow et le moteur JavaScript deno dans DATA_DIR.
 Chaque requête porte l'en-tête X-Worker-Token (= WORKER_TOKEN).
 
-  GET  /status                 {busy, job, stage, error, youtube, log: fin de build.log}
+  GET  /status                 {busy, job, stage, error, youtube, proxy (oui/non), log: fin de build.log}
   POST /ytcheck                test de téléchargement YouTube depuis ce VPS → {ok, detail}
   PUT  /job?name=NOM[&upload=0] corps = .tgz avec code/ (le code du montage) et job/ (plan.json, narration/,
                                rangé dans jobs/NOM/NOM) :
@@ -40,7 +40,15 @@ JOBS = os.path.join(DATA, "jobs")
 DENO_DIR = os.path.join(DATA, "tools", "deno")
 MODULES = ["yt-dlp[default]", "imageio-ffmpeg", "Pillow", "python-dotenv", "requests"]
 TEST_VIDEO = "MeFQgiVHNoA"   # vidéo publique courte (son seul, quelques Mo) pour le test YouTube
-st = {"busy": False, "job": None, "stage": "starting", "error": None, "youtube": None, "since": time.time()}
+# Proxy résidentiel (payé au Go) : seulement pour YouTube. Donné en YTDLP_PROXY ou en HTTPS_PROXY : dans les deux
+# cas il est retiré de l'environnement général (pip, deno, envoi Gofile de 1 Go ne passent jamais par lui).
+PROXY = (os.environ.get("YTDLP_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or "").strip()
+for _k in ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy", "ALL_PROXY", "all_proxy"):
+    os.environ.pop(_k, None)
+if PROXY:
+    os.environ["YTDLP_PROXY"] = PROXY
+st = {"busy": False, "job": None, "stage": "starting", "error": None, "youtube": None, "since": time.time(),
+      "proxy": bool(PROXY)}
 lock = threading.Lock()
 
 
@@ -70,7 +78,7 @@ def ytcheck():
     shutil.rmtree(tmp, ignore_errors=True)
     os.makedirs(tmp)
     r = subprocess.run([sys.executable, "-m", "yt_dlp", "--no-playlist", "-f", "ba[abr<=80]/ba", "-o", "t.%(ext)s",
-                        f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
+                        *(["--proxy", PROXY] if PROXY else []), f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
                        text=True, encoding="utf-8", errors="replace", timeout=300)
     got = [f for f in os.listdir(tmp) if f.startswith("t.") and not f.endswith(".part")]
     ok = bool(got) and os.path.getsize(os.path.join(tmp, got[0])) > 100_000
@@ -217,6 +225,9 @@ if __name__ == "__main__":
 DRYLOW_NEWS_EOF
 [ -s "$DIR/token" ] || (openssl rand -hex 24 2>/dev/null || head -c 24 /dev/urandom | od -An -tx1 | tr -d ' \n') > "$DIR/token"
 TOKEN=$(cat "$DIR/token")
+# proxy résidentiel pour YouTube seulement (YTDLP_PROXY=http://user:pass@hôte:port bash vps_news_setup.sh) : gardé
+if [ -n "$YTDLP_PROXY" ]; then echo "$YTDLP_PROXY" > "$DIR/proxy"; chmod 600 "$DIR/proxy"; fi
+PROXY=$(cat "$DIR/proxy" 2>/dev/null || true)
 IP=$(curl -fs4 https://api.ipify.org || curl -fs4 https://ifconfig.me)
 HOST=${DOMAIN:-news.$(echo "$IP" | tr . -).sslip.io}
 command -v docker >/dev/null || curl -fsSL https://get.docker.com | sh
@@ -224,7 +235,7 @@ IMAGE=python:3.12-slim
 docker pull -q $IMAGE >/dev/null
 docker rm -f drylow-news >/dev/null 2>&1 || true
 RUN="apt-get update -qq && apt-get install -y -qq --no-install-recommends curl ca-certificates fontconfig >/dev/null && exec python -u /w.py"
-BASE=(-d --name drylow-news --restart unless-stopped -e WORKER_TOKEN="$TOKEN" -e DATA_DIR=/data
+BASE=(-d --name drylow-news --restart unless-stopped -e WORKER_TOKEN="$TOKEN" -e DATA_DIR=/data -e YTDLP_PROXY="$PROXY"
       -v "$DIR/worker.py:/w.py:ro" -v drylow-news:/data)
 if docker ps --format '{{.Names}}' | grep -qx coolify-proxy; then
   # Coolify (Traefik) tient 80/443 : même chemin que les autres sites du VPS

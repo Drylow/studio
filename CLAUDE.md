@@ -276,6 +276,10 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   `NEWS_WORKER_TOKEN` dans `.env`. `news.py vps-check` (YouTube accepte-t-il le VPS ?), `news.py vps <dossier>`
   (envoie code + plan + voix off, suit le montage, rapatrie `result.json`, `build.log`, `check/sheet_*.jpg`).
   Le VPS efface clips, segments et vidéo après l'envoi Gofile. SSH est fermé depuis le cloud : HTTPS seulement.
+  VPS du pote de l'utilisateur (`news.13-140-129-97.sslip.io`, 3 oct.) : YouTube le bloque aussi (« Sign in to
+  confirm you're not a bot ») → proxy résidentiel Decodo (choisi par eux, payé au Go) **pour yt-dlp seulement**
+  (`YTDLP_PROXY`, ou `HTTPS_PROXY` que le serveur retire de l'environnement général : Gofile, pip, deno passent en
+  direct). IP « sticky » obligatoire (les liens vidéo de YouTube sont liés à l'IP). ~1,2 Go par vidéo de 18 min.
 - **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
   (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
   dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le

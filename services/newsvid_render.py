@@ -60,9 +60,11 @@ def header_duration(path):
 # ── Téléchargement ──────────────────────────────────────────────────────────
 
 def ytdlp_args():
+    """yt-dlp ; YTDLP_PROXY (VPS : proxy résidentiel, payé au Go) ne sert qu'à YouTube, jamais à Gofile."""
     from services import newsvid
+    proxy = (os.environ.get("YTDLP_PROXY") or "").strip()
     return [sys.executable, "-m", "yt_dlp", "--no-playlist", "--no-warnings", "--retries", "5",
-            "--fragment-retries", "10", *newsvid.yt_js_args()]
+            "--fragment-retries", "10", *newsvid.yt_js_args(), *(["--proxy", proxy] if proxy else [])]
 
 
 def download(video_id, dl_dir, log):
@@ -586,7 +588,7 @@ def gofile(path, log):
             md5.update(chunk)
     md5 = md5.hexdigest()
     for k in range(5):
-        r = subprocess.run(["curl", "-sS", "--max-time", "3600", "-F", f"file=@{path}",
+        r = subprocess.run(["curl", "-sS", "--noproxy", "*", "--max-time", "3600", "-F", f"file=@{path}",
                             "https://upload.gofile.io/uploadfile"], capture_output=True, text=True)
         try:
             data = json.loads(r.stdout).get("data") or {}

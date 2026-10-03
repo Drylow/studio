@@ -10,7 +10,9 @@ Sur le VPS (root), une ligne :
 Docker (image python:3.12-slim) derrière HTTPS automatique sur news.<ip>.sslip.io (ou DOMAIN=…) : le Traefik de
 Coolify s'il tient 80/443, sinon le Caddy du serveur de rendu (relancé avec les deux adresses), sinon un Caddy à
 lui. Affiche NEWS_WORKER_URL / NEWS_WORKER_TOKEN (pour le .env du cloud, jamais dans git) et le test YouTube.
-Relancer le script met le serveur à jour (même jeton, même adresse)."""
+Relancer le script met le serveur à jour (même jeton, même adresse). YouTube bloque souvent les VPS : proxy
+résidentiel (payé au Go) pour YouTube seulement, une fois : YTDLP_PROXY=http://user:pass@hôte:port devant la ligne
+(…| YTDLP_PROXY=… bash), gardé dans /opt/drylow-news/proxy ; IP fixe (« sticky ») sinon les liens YouTube refusent."""
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -28,6 +30,9 @@ __WORKER__
 DRYLOW_NEWS_EOF
 [ -s "$DIR/token" ] || (openssl rand -hex 24 2>/dev/null || head -c 24 /dev/urandom | od -An -tx1 | tr -d ' \n') > "$DIR/token"
 TOKEN=$(cat "$DIR/token")
+# proxy résidentiel pour YouTube seulement (YTDLP_PROXY=http://user:pass@hôte:port bash vps_news_setup.sh) : gardé
+if [ -n "$YTDLP_PROXY" ]; then echo "$YTDLP_PROXY" > "$DIR/proxy"; chmod 600 "$DIR/proxy"; fi
+PROXY=$(cat "$DIR/proxy" 2>/dev/null || true)
 IP=$(curl -fs4 https://api.ipify.org || curl -fs4 https://ifconfig.me)
 HOST=${DOMAIN:-news.$(echo "$IP" | tr . -).sslip.io}
 command -v docker >/dev/null || curl -fsSL https://get.docker.com | sh
@@ -35,7 +40,7 @@ IMAGE=python:3.12-slim
 docker pull -q $IMAGE >/dev/null
 docker rm -f drylow-news >/dev/null 2>&1 || true
 RUN="apt-get update -qq && apt-get install -y -qq --no-install-recommends curl ca-certificates fontconfig >/dev/null && exec python -u /w.py"
-BASE=(-d --name drylow-news --restart unless-stopped -e WORKER_TOKEN="$TOKEN" -e DATA_DIR=/data
+BASE=(-d --name drylow-news --restart unless-stopped -e WORKER_TOKEN="$TOKEN" -e DATA_DIR=/data -e YTDLP_PROXY="$PROXY"
       -v "$DIR/worker.py:/w.py:ro" -v drylow-news:/data)
 if docker ps --format '{{.Names}}' | grep -qx coolify-proxy; then
   # Coolify (Traefik) tient 80/443 : même chemin que les autres sites du VPS
