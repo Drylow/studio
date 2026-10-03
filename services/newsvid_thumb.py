@@ -411,7 +411,13 @@ def make(job_dir, log=print):
     people = (th.get("people") or [])[:2]
     if len(people) < 2:
         raise RuntimeError("thumb.people : il faut deux personnes")
-    accent = tuple(int((plan.get("accent2") or "#FFD21F").lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    from services import newsvid as N
+    try:
+        tacc = N.channel(plan.get("channel") or "").get("thumb_accent")
+    except (KeyError, ValueError, SystemExit):
+        tacc = None
+    # couleur de la chaîne (l'utilisateur, 3 oct. : « bleu clair dans le thème de @CageDispatch »)
+    accent = tuple(int((tacc or plan.get("accent2") or "#FFD21F").lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
     red = tuple(int((plan.get("accent") or "#E10600").lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
     names = set(people) | {s.get("speaker") for s in plan["segments"] if s.get("speaker")} | \
         {v for v in (plan.get("spelling") or {}).values() if len(v.split()) >= 2}
@@ -424,6 +430,8 @@ def make(job_dir, log=print):
     left, right = (A[0][1], A[0][2]["face"]), (B[0][1], B[0][2]["face"])
     inset = (B[1][1], B[1][2]["face"]) if len(B) > 1 else (A[1][1], A[1][2]["face"]) if len(A) > 1 else None
     text, hl = th.get("text") or "", th.get("highlight") or ""
+    if text and not text.startswith(("“", '"')):
+        text = f"“{text}”"   # c'est une citation : entre guillemets (l'utilisateur, 3 oct.)
     out = []
     for v, col in VARIANTS:
         col = accent if col == "accent2" else red

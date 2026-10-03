@@ -39,6 +39,7 @@ CHANNELS = {
         "accent": "#E10600", "accent2": "#FFD21F",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
+        "thumb_accent": "#40DCF8",  # bleu clair de la bannière @CageDispatch (« DISPATCH ») : mot fort + contour
         "search": ["UFC news", "Dana White", "UFC interview"],
         # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC).
         # Seulement des chaînes SANS revendication automatique (voir CLAIMERS) : vérifié le 3 oct. avec NexLev

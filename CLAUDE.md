@@ -298,8 +298,11 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   coupés au son dans l'ouverture (pubs coupées si gros mot au début).
   Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
   rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
-  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** : citation entière visible, assez
-  haut (`_text_block`, bas à TH-52) ; refaire une miniature garde les photos validées (en tête de `photos.json`).
+  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** (validée 3 oct.) : deux photos face à
+  face, la citation **entre guillemets** (vraiment dite dans la vidéo), sur 2 lignes, grosse, assez haut, jamais coupée ;
+  mot fort + contour en **bleu clair de la chaîne** (`thumb_accent` #40DCF8, bannière @CageDispatch) ; jamais une
+  photo à plusieurs combattants (la vision a pris Oliveira pour Tsarukyan) : regarder qui est sur la photo ; refaire
+  une miniature garde les photos validées (en tête de `photos.json`).
   Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
   `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
