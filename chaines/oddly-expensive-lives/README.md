@@ -48,6 +48,17 @@ Voir [videos/](videos/README.md).
 
 ## Idées de vidéos
 
+**Lot validé par l'utilisateur le 3 oct. (en production).** Repère : Gray Economy (la chaîne de la vidéo de référence,
+créée en juin 2026) fait ses meilleurs scores sur la retraite et la vieillesse aux États-Unis (Never Retiring 140 k,
+Working Instead of Retiring 34 k = 8,5× sa moyenne) : public âgé, bon RPM.
+- The Economics of Retiring With Nothing Saved
+- The Economics of a Nursing Home
+- The Economics of Getting Arrested (CNBC « Who Makes Money From Bail? » 358 k)
+- The Economics of a Wedding (Vox 2,3 M)
+- The Economics of a Car Accident
+
+Autres pistes :
+
 - **The Economics of Going to Prison** : déjà discutée, mise de côté pour l'instant.
 
 Pistes à vérifier avec NexLev, pas encore validées :

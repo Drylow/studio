@@ -36,18 +36,22 @@ CHANNELS = {
     "mma_en": {
         "name": "MMA news (UFC)", "sport": "MMA / UFC", "language": "en",
         "brand": "CAGE DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
-        "accent": "#E10600", "accent2": "#FFD21F",
+        "accent": "#12A8E0", "accent2": "#40DCF8",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
+        "thumb_accent": "#40DCF8",  # bleu clair de la bannière @CageDispatch (« DISPATCH ») : mot fort + contour
         "search": ["UFC news", "Dana White", "UFC interview"],
-        # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC)
-        "sources": {"UFC": "UCvgfXK4nTYKudb0rFR6noLA", "MMA Fighting": "UC4f1JueVgo5t9HSmobCRPug",
-                    "The Ariel Helwani Show": "UCVOdVp54jLrFhRUm4S29HeA", "Chael Sonnen": "UCRlvF4jIeBWqXJDGNXfPyVw",
+        # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC).
+        # Seulement des chaînes SANS revendication automatique (voir CLAIMERS) : vérifié le 3 oct. avec NexLev
+        # get_content_owner (indépendantes = « IVP » ou sans réseau ; Helwani/Yahoo et Cormier/The Volume sont dans un
+        # réseau mais leurs extraits n'ont pas été revendiqués dans la vidéo Gaethje).
+        "sources": {"The Ariel Helwani Show": "UCVOdVp54jLrFhRUm4S29HeA", "Chael Sonnen": "UCRlvF4jIeBWqXJDGNXfPyVw",
                     "Daniel Cormier": "UC_1TBgZ5FuGSdRlrrnyJU7w", "FLAGRANT": "UC5PstSsGrRwj2o6asQpC4Rg",
                     "FLAGRANT CLIPS": "UCAjmXPKv1zpYftSDAMeJz8A", "Michael Bisping": "UCDrG2_1TcVkXKXXsD6Kjwig",
-                    "One Night with Steiny": "UCdd7HZYwU1YOE2lILZ5P2VQ", "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA",
-                    "FULL SEND MMA": "UCTvuMRhyrTVgbEdLyymZq8g", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
-                    "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw"},
+                    "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
+                    "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw", "JRE Clips": "UCnxGkOGNMqQEUMvroOWps6Q",
+                    "PowerfulJRE": "UCzQUP1qoWDoEbmsQxvdjxgQ", "Pound 4 Pound with Kamaru & Henry": "UCpVcPOrB9tWcBGe58FYjOmQ",
+                    "Submission Radio": "UCNrEHIf8QmKK-cAag4YxIXQ", "DOUBLE COVERAGE PODCAST": "UCf1q6dhccWr6eQEcFFnJSbA"},
         "people": "fighters, coaches, managers, promoters and pundits",
     },
     "boxing_en": {
@@ -255,7 +259,34 @@ def load_source(path):
         return json.load(f)
 
 
+# Chaînes qui revendiquent (Content ID) les extraits repris : interdites comme sources. One Night with Steiny a
+# revendiqué 6 passages de la vidéo Gaethje (3 oct., « Shots Studios Affiliate ») ; même réseau = même risque.
+# Avant d'ajouter une nouvelle chaîne source : NexLev get_content_owner(channel_id) → dans un réseau (MCN, média) =
+# risque, à tester sur un seul extrait ; « IVP » ou rien = indépendant, sans Content ID.
+CLAIMERS = {
+    "UCdd7HZYwU1YOE2lILZ5P2VQ": "One Night with Steiny (Shots Studios : revendication du 3 oct.)",
+    "UCTvuMRhyrTVgbEdLyymZq8g": "FULL SEND MMA (Shots Studios)",
+    "UCvgfXK4nTYKudb0rFR6noLA": "UFC (réseau UFC)",
+    "UC4f1JueVgo5t9HSmobCRPug": "MMA Fighting (Vox Media)",
+    "UCk9lx4sKRQCDTyXFaouk_vQ": "Mighty / Demetrious Johnson (Whistle Sports)",
+}
+CLAIMER_NAMES = {"one night with steiny", "full send mma", "full send podcast", "ufc", "mmafightingonsbn",
+                 "mma fighting", "mighty", "nelk", "nelk boys"}
+
+
+def claimer(meta):
+    """Raison du refus si la source vient d'une chaîne qui revendique, sinon ''."""
+    cid = meta.get("channel_id") or meta.get("channelId") or ""
+    if cid in CLAIMERS:
+        return CLAIMERS[cid]
+    name = (meta.get("channel") or "").strip().lower()
+    return f"{meta.get('channel')} (chaîne qui revendique)" if name in CLAIMER_NAMES else ""
+
+
 def save_source(folder, meta, lines):
+    why = claimer(meta)
+    if why:
+        raise ValueError(f"source refusée, revendication Content ID : {why}")
     os.makedirs(os.path.join(folder, "sources"), exist_ok=True)
     src = dict(meta, lines=lines)
     with open(os.path.join(folder, "sources", f"{meta['id']}.json"), "w", encoding="utf-8") as f:
@@ -462,6 +493,24 @@ def _fix_spelling(text, spelling):
     return text
 
 
+def _fix_spelling_lines(texts, spelling):
+    """Comme _fix_spelling, plus les noms coupés entre deux lignes de sous-titres (« Justin | Gatei ») : sans ça,
+    la vidéo Topuria (3 oct.) avait « Gatei », « Sukian », « Mavave » à l'écran malgré la table."""
+    texts = [_fix_spelling(t, spelling) for t in texts]
+    joined = "\x01".join(texts)
+    for wrong, right in (spelling or {}).items():
+        ww, rw = wrong.split(), right.split()
+        if len(ww) < 2 or len(ww) != len(rw) or wrong.lower() == right.lower():
+            continue
+
+        def sub(m, rw=rw):
+            parts = re.split(r"([\s\x01]+)", m.group(0))
+            parts[0::2] = rw
+            return "".join(parts)
+        joined = re.sub(r"\b" + r"[\s\x01]+".join(map(re.escape, ww)) + r"\b", sub, joined, flags=re.I)
+    return joined.split("\x01")
+
+
 _SENT_END = re.compile(r"[.?!][\"”’')\]]*$")
 # Prononciation de la voix off (Algrow lit mal certains noms : « Gaethje » = GAY-chee) : orthographe phonétique
 # envoyée à la voix SEULEMENT (sous-titres, titres et bandeaux gardent la vraie orthographe). Un nom = un mot.
@@ -576,8 +625,8 @@ def clip_spec(src, a, b, spelling, quote=None, max_len=MAX_CLIP, pad_in=0.15, pa
             e += 1
     start = max(0.0, pcs[s]["s"] - pad_in)
     end = pcs[e]["e"] + pad_out
-    subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2),
-             "t": _fix_spelling(p["t"], spelling)} for p in pcs[s:e + 1]]
+    subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2), "t": t}
+            for p, t in zip(pcs[s:e + 1], _fix_spelling_lines([p["t"] for p in pcs[s:e + 1]], spelling))]
     out = {"video": src["id"], "start": round(start, 2), "end": round(end, 2),
            "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""),
            "channel": src.get("channel") or "", "subs": subs}
@@ -634,7 +683,9 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
         return a, b
 
     segs = []
-    for c in plan.get("cold_open") or []:
+    # plus d'ouverture en extraits (l'utilisateur, 3 oct. : « au tout début, je veux l'intro avec la voix off et la
+    # photo ») : la vidéo commence par la 1re voix off ; une chaîne peut la remettre avec "cold_open": True
+    for c in (plan.get("cold_open") or []) if ch.get("cold_open") else []:
         m = moment(c.get("moment"))
         if not m:
             continue

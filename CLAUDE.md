@@ -13,8 +13,9 @@ d'environnement du compte s'il manque).
 
 - Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
   français, simple, court, direct. Pas d'anglais, pas de jargon, pas de pavé.
-- Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». Donne des heures
-  (UTC) et des chiffres concrets (images 86/123, rendu en cours…).
+- Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». **Jamais d'heure UTC**
+  (l'utilisateur, 3 oct. : « je comprends rien ») : dis « dans 20 min » + l'heure de **Belgique** (UTC+2 l'été,
+  UTC+1 l'hiver), et des chiffres concrets (images 86/123, rendu en cours…).
 - Il décide des titres, miniatures et du calendrier ; propose 2-4 options visuelles (planches d'images),
   recommande-en une, puis applique son choix sans redemander.
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
@@ -265,6 +266,21 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 60 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **Droits d'auteur (Content ID)** (3 oct. : « One Night with Steiny » a revendiqué 6 passages de la vidéo Gaethje,
+  réseau Shots Studios) : **jamais de source d'une chaîne qui revendique** (`newsvid.CLAIMERS`, refusées à l'import :
+  Steiny, Full Send MMA, UFC, MMA Fighting/Vox, Mighty/Whistle). Avant d'utiliser une nouvelle chaîne : NexLev
+  `get_content_owner(channel_id)` → « IVP » ou aucun réseau = indépendante, OK (Sonnen, Flagrant, Bisping, Kolos, JRE,
+  Pound 4 Pound, Submission Radio, Luke Thomas, Schaub, Double Coverage) ; dans un réseau (MCN, média) = risque
+  (Helwani/Yahoo et Cormier/The Volume : pas revendiqués jusqu'ici). L'utilisateur voit les revendications dans
+  YouTube Studio (vérification des droits à l'envoi) ; une revendication n'est pas un avertissement mais les revenus
+  de la vidéo partent au plaignant : on refait la vidéo sans ces extraits.
+- **Transitions douces** (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») : chaque
+  passage entre et sort en fondu court (`vfades`/`afades`), la fin d'un extrait respire jusqu'à 0,6 s dans le silence
+  (`snap`), le logo animé reste 4,5 s et sort en fondu.
+- **Début de vidéo = la voix off d'intro sur la photo** (l'utilisateur, 3 oct. : « au tout début, je veux l'intro avec
+  la voix off et la photo ») : plus d'ouverture en extraits plein écran (`materialize` l'ignore sauf `"cold_open": True`
+  dans la chaîne) ; les extraits choisis pour l'ouverture vont dans le corps avec leur voix off ; le logo animé passe
+  entre la voix off d'intro et le 1er extrait.
 - **Montage façon Fight Night MMA (v3, après la critique du 3 oct. : « pas carré », « inspire-toi de lui »)** :
   ouverture = 2-3 extraits **complets** en plein écran (léger zoom), choisis pour **donner le contexte** (on comprend
   de qui on parle : le 1er nomme les combattants ; pas un animateur qui parle de gens qu'on ne voit pas). Ensuite les
@@ -286,8 +302,11 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   coupés au son dans l'ouverture (pubs coupées si gros mot au début).
   Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
   rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
-  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** : citation entière visible, assez
-  haut (`_text_block`, bas à TH-52) ; refaire une miniature garde les photos validées (en tête de `photos.json`).
+  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** (validée 3 oct.) : deux photos face à
+  face, la citation **entre guillemets** (vraiment dite dans la vidéo), sur 2 lignes, grosse, assez haut, jamais coupée ;
+  mot fort + contour en **bleu clair de la chaîne** (`thumb_accent` #40DCF8, bannière @CageDispatch) ; jamais une
+  photo à plusieurs combattants (la vision a pris Oliveira pour Tsarukyan) : regarder qui est sur la photo ; refaire
+  une miniature garde les photos validées (en tête de `photos.json`).
   Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
   `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`

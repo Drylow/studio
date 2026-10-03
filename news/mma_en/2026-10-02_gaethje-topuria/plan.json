@@ -1,8 +1,8 @@
 {
  "channel": "mma_en",
  "brand": "CAGE DISPATCH",
- "accent": "#E10600",
- "accent2": "#FFD21F",
+ "accent": "#12A8E0",
+ "accent2": "#40DCF8",
  "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
  "topic": "Justin Gaethje vs Ilia Topuria: Gaethje refuses the rematch (he says Topuria quit), Topuria's glove-cheating accusation, the money offers, Arman Tsarukyan waiting, Paddy Pimblett, and what the champion does next",
  "voice": {
@@ -10,16 +10,16 @@
   "id": "jvV8uNVYXJa37GHVtjXf"
  },
  "titles": [
-  "“HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch!",
+  "“I BROKE HIS FACE!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim!",
   "“HE HAS TO BELIEVE THAT I CHEATED!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim!",
   "“I’D SEND HIM BACK TO FEATHERWEIGHT!” Paddy Pimblett CALLS OUT Ilia Topuria After Gaethje Loss!",
   "“THERE WAS NOTHING ILLEGAL IN THE GLOVES!” Chael Sonnen ENDS Topuria’s Cheating Claim!",
   "“THERE’S ABSOLUTELY NO WAY HE’S WALKING AWAY!” Ariel Helwani CALLS BS On Gaethje Retirement Talk!"
  ],
- "title": "“HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch!",
+ "title": "“I BROKE HIS FACE!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim!",
  "thumb": {
-  "text": "SHOULD HAVE QUIT",
-  "highlight": "QUIT",
+  "text": "I BROKE HIS FACE",
+  "highlight": "BROKE",
   "people": [
    "Justin Gaethje",
    "Ilia Topuria"
@@ -27,7 +27,7 @@
   "moment": "M2",
   "checked": true
  },
- "description": "Justin Gaethje is refusing an Ilia Topuria rematch after stopping him at UFC Freedom 250, and the fallout now includes Topuria’s glove-check comment, Gaethje’s response, and questions about whether the champion fights again.\n\nArman Tsarukyan is waiting after knocking out Mauricio Ruffy at UFC 331, Paddy Pimblett wants Topuria next, and analysts are split on whether Gaethje returns, retires, or takes the biggest offer available.\n\nCredits: Flagrant Clips, One Night with Steiny, Kolos MMA, Michael Bisping, Daniel Cormier, The Ariel Helwani Show, Chael Sonnen.",
+ "description": "Justin Gaethje is refusing an Ilia Topuria rematch after stopping him at UFC Freedom 250, and the fallout now includes Topuria’s glove-check comment, Gaethje’s response, and questions about whether the champion fights again.\n\nArman Tsarukyan is waiting after knocking out Mauricio Ruffy at UFC 331, Paddy Pimblett wants Topuria next, and analysts are split on whether Gaethje returns, retires, or takes the biggest offer available.\n\nCredits: Flagrant Clips, Kolos MMA, Michael Bisping, Daniel Cormier, The Ariel Helwani Show, Chael Sonnen.",
  "tags": [
   "Justin Gaethje",
   "Ilia Topuria",
@@ -91,6 +91,12 @@
   "MMA fighting": "MMA Fighting"
  },
  "segments": [
+  {
+   "type": "narration",
+   "text": "Justin Gaethje stopped Ilia Topuria at UFC Freedom 250 in June, and now the lightweight champion refuses the rematch and won't say if he fights again. So is the champion really walking away? It starts with Topuria's post about Gaethje's gloves, and Chael Sonnen breaks down what Topuria wrote.",
+   "next_video": "tIDLqjod1Sk",
+   "headline": "GAETHJE REFUSES TOPURIA REMATCH"
+  },
   {
    "video": "tIDLqjod1Sk",
    "start": 71.77,
@@ -235,136 +241,14 @@
     "e": 7.88
    },
    "type": "clip",
-   "full": true,
+   "full": false,
    "speaker": "Chael Sonnen"
   },
   {
-   "video": "hxcJy4hCvqU",
-   "start": 476.57,
-   "end": 515.03,
-   "credit": "Daniel Cormier",
-   "channel": "Daniel Cormier",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 0.97,
-     "t": "It never stops."
-    },
-    {
-     "s": 1.03,
-     "e": 2.35,
-     "t": "Because the way that the"
-    },
-    {
-     "s": 2.35,
-     "e": 5.15,
-     "t": "game works is the champion is supposed"
-    },
-    {
-     "s": 5.15,
-     "e": 8.39,
-     "t": "to go when his time is gone."
-    },
-    {
-     "s": 8.39,
-     "e": 10.11,
-     "t": "When the time is gone, WHEN HIS TIME IS"
-    },
-    {
-     "s": 10.11,
-     "e": 12.31,
-     "t": "OVER, SOMEONE shows that champion the"
-    },
-    {
-     "s": 12.31,
-     "e": 13.43,
-     "t": "door."
-    },
-    {
-     "s": 13.43,
-     "e": 14.87,
-     "t": "But if that champion still seems to have"
-    },
-    {
-     "s": 14.87,
-     "e": 17.05,
-     "t": "fight, money will come to you."
-    },
-    {
-     "s": 17.13,
-     "e": 17.71,
-     "t": "And that"
-    },
-    {
-     "s": 17.71,
-     "e": 19.87,
-     "t": "draw, whether you you do this for money"
-    },
-    {
-     "s": 19.87,
-     "e": 22.75,
-     "t": "or not, that draw is very hard to turn"
-    },
-    {
-     "s": 22.75,
-     "e": 24.99,
-     "t": "away from."
-    },
-    {
-     "s": 24.99,
-     "e": 26.95,
-     "t": "There is no easy option for Justin"
-    },
-    {
-     "s": 26.95,
-     "e": 27.8,
-     "t": "Gaethje."
-    },
-    {
-     "s": 27.91,
-     "e": 30.15,
-     "t": "Cuz even in retiring,"
-    },
-    {
-     "s": 30.15,
-     "e": 30.79,
-     "t": "it's hard."
-    },
-    {
-     "s": 30.86,
-     "e": 32.59,
-     "t": "Even if staying and winning"
-    },
-    {
-     "s": 32.59,
-     "e": 33.75,
-     "t": "again, it's hard."
-    },
-    {
-     "s": 33.81,
-     "e": 35.31,
-     "t": "Because there's always"
-    },
-    {
-     "s": 35.31,
-     "e": 38.11,
-     "t": "going to be a pull to do it again."
-    }
-   ],
-   "quote": {
-    "t": "There is no easy option for Justin Gaethje.",
-    "s": 24.99,
-    "e": 27.8
-   },
-   "type": "clip",
-   "full": true,
-   "speaker": "Daniel Cormier"
-  },
-  {
    "type": "narration",
-   "text": "Justin Gaethje stopped Ilia Topuria at UFC Freedom 250 in June, and now the lightweight champion refuses the rematch and won't say if he fights again. So is the champion really walking away? It starts with Topuria's comment about Gaethje's gloves, and on the Flagrant podcast, Gaethje answers it.",
    "next_video": "MeFQgiVHNoA",
-   "headline": "GAETHJE REFUSES TOPURIA REMATCH"
+   "text": "On the Flagrant podcast, Justin Gaethje answers Topuria's comment about his gloves.",
+   "headline": "GAETHJE ANSWERS GLOVE CLAIM"
   },
   {
    "video": "MeFQgiVHNoA",
@@ -746,170 +630,7 @@
   },
   {
    "type": "narration",
-   "text": "Adding to that, Justin Gaethje doubles down on why he does not believe Ilia Topuria deserves another title shot. He focuses on Topuria’s body breaking down and explains why he sees the finish differently than Topuria does.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE DENIES TOPURIA SHOT"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 393.49,
-   "end": 425.43,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 0.41,
-     "t": "Yeah."
-    },
-    {
-     "s": 0.46,
-     "e": 1.95,
-     "t": "You said you don't think that"
-    },
-    {
-     "s": 1.95,
-     "e": 4.39,
-     "t": "Topuria deserves a rematch with you."
-    },
-    {
-     "s": 4.39,
-     "e": 4.95,
-     "t": "Do you?"
-    },
-    {
-     "s": 4.95,
-     "e": 6.43,
-     "t": "I I personally would rather see you"
-    },
-    {
-     "s": 6.43,
-     "e": 7.67,
-     "t": "fight Arman."
-    },
-    {
-     "s": 7.67,
-     "e": 8.91,
-     "t": "That's not what you asked me."
-    },
-    {
-     "s": 8.91,
-     "e": 9.87,
-     "t": "I know, but they"
-    },
-    {
-     "s": 9.87,
-     "e": 11.15,
-     "t": "Do you think Topuria deserves a rematch?"
-    },
-    {
-     "s": 11.15,
-     "e": 12.15,
-     "t": "I don't think he does."
-    },
-    {
-     "s": 12.15,
-     "e": 12.96,
-     "t": "me a rematch, okay?"
-    },
-    {
-     "s": 13.0,
-     "e": 13.47,
-     "t": "Me neither."
-    },
-    {
-     "s": 13.47,
-     "e": 14.39,
-     "t": "But you think the main reason is cuz he"
-    },
-    {
-     "s": 14.39,
-     "e": 15.71,
-     "t": "just quit on the stool and how it went"
-    },
-    {
-     "s": 15.71,
-     "e": 16.67,
-     "t": "down?"
-    },
-    {
-     "s": 16.67,
-     "e": 17.63,
-     "t": "Do I think that?"
-    },
-    {
-     "s": 17.63,
-     "e": 17.93,
-     "t": "Yeah."
-    },
-    {
-     "s": 17.91,
-     "e": 19.51,
-     "t": "Do you think that?"
-    },
-    {
-     "s": 19.51,
-     "e": 20.95,
-     "t": "There's so much controversy around that"
-    },
-    {
-     "s": 20.95,
-     "e": 22.91,
-     "t": "cuz I've heard people say like"
-    },
-    {
-     "s": 22.91,
-     "e": 24.79,
-     "t": "him quitting on the stool was justified."
-    },
-    {
-     "s": 24.79,
-     "e": 26.07,
-     "t": "Like he couldn't [ __ ] see."
-    },
-    {
-     "s": 26.07,
-     "e": 27.19,
-     "t": "He definitely should have quit on the"
-    },
-    {
-     "s": 27.19,
-     "e": 27.57,
-     "t": "stool."
-    },
-    {
-     "s": 27.63,
-     "e": 29.38,
-     "t": "He didn't quit on the stool."
-    },
-    {
-     "s": 29.44,
-     "e": 29.63,
-     "t": "His"
-    },
-    {
-     "s": 29.63,
-     "e": 31.15,
-     "t": "body was too compromised to continue"
-    },
-    {
-     "s": 31.15,
-     "e": 31.59,
-     "t": "fighting."
-    }
-   ],
-   "quote": {
-    "t": "He definitely should have quit on the stool.",
-    "s": 24.79,
-    "e": 27.57
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
-   "text": "Taking that further, Justin Gaethje lays out what he thinks happened to Ilia Topuria mentally after the loss. He says Topuria built a belief around being unbeatable and now has to rebuild that reality after June.",
+   "text": "Back on Flagrant, Justin Gaethje lays out what he thinks happened to Ilia Topuria mentally after the loss. He says Topuria built a belief around being unbeatable and now has to rebuild that reality after June.",
    "next_video": "MeFQgiVHNoA",
    "headline": "GAETHJE QUESTIONS TOPURIA MENTALITY"
   },
@@ -1353,565 +1074,6 @@
   },
   {
    "type": "narration",
-   "text": "At the same time, Justin Gaethje points toward Arman Tsarukyan as the clear next contender. Tsarukyan knocked out Mauricio Ruffy at UFC 331, but Gaethje says injuries keep him from fighting again this year.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE POINTS TO TSARUKYAN"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 185.01,
-   "end": 221.91,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 2.63,
-     "t": "it's, you know, natural and obvious that"
-    },
-    {
-     "s": 2.63,
-     "e": 4.07,
-     "t": "they're going to, you know,"
-    },
-    {
-     "s": 4.07,
-     "e": 5.59,
-     "t": "try to figure out who the next the next"
-    },
-    {
-     "s": 5.59,
-     "e": 5.83,
-     "t": "guy is."
-    },
-    {
-     "s": 5.87,
-     "e": 6.91,
-     "t": "Arman just had a huge fight, a"
-    },
-    {
-     "s": 6.91,
-     "e": 8.19,
-     "t": "huge finish."
-    },
-    {
-     "s": 8.19,
-     "e": 10.39,
-     "t": "So, I think, you know, obviously he's at"
-    },
-    {
-     "s": 10.39,
-     "e": 12.59,
-     "t": "the forefront of everybody's mind and"
-    },
-    {
-     "s": 12.59,
-     "e": 14.31,
-     "t": "he's clearly the next contender."
-    },
-    {
-     "s": 14.31,
-     "e": 14.83,
-     "t": "Yeah."
-    },
-    {
-     "s": 14.83,
-     "e": 16.87,
-     "t": "If I was able"
-    },
-    {
-     "s": 16.87,
-     "e": 18.91,
-     "t": "and willing to fight this year"
-    },
-    {
-     "s": 18.91,
-     "e": 20.11,
-     "t": "then we would be fighting at the end of"
-    },
-    {
-     "s": 20.11,
-     "e": 20.99,
-     "t": "this year."
-    },
-    {
-     "s": 20.99,
-     "e": 22.78,
-     "t": "Yeah, I saw you say you're 37 now."
-    },
-    {
-     "s": 22.83,
-     "e": 22.99,
-     "t": "You"
-    },
-    {
-     "s": 22.99,
-     "e": 24.79,
-     "t": "have You have a lot of injuries like"
-    },
-    {
-     "s": 24.79,
-     "e": 25.83,
-     "t": "that you want to just recover from."
-    },
-    {
-     "s": 25.83,
-     "e": 27.43,
-     "t": "just have injuries from these last two"
-    },
-    {
-     "s": 27.43,
-     "e": 29.71,
-     "t": "fights that I need to recover from."
-    },
-    {
-     "s": 29.71,
-     "e": 30.11,
-     "t": "Yeah."
-    },
-    {
-     "s": 30.11,
-     "e": 32.71,
-     "t": "Like a deep deep bone bruise in my knee."
-    },
-    {
-     "s": 32.71,
-     "e": 33.43,
-     "t": "Yeah."
-    },
-    {
-     "s": 33.43,
-     "e": 35.04,
-     "t": "So, that's just time."
-    },
-    {
-     "s": 35.12,
-     "e": 36.19,
-     "t": "Why Yeah, just"
-    },
-    {
-     "s": 36.19,
-     "e": 36.55,
-     "t": "time."
-    }
-   ],
-   "quote": {
-    "t": "If I was able and willing to fight this year then we would be fighting at the end of this year.",
-    "s": 14.83,
-    "e": 20.99
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
-   "text": "Then, Justin Gaethje reveals where communication stands with the UFC after winning the belt. He says he has fought twice in six months and shuts down the idea that Arman Tsarukyan can get him in January.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE SHUTS DOWN JANUARY"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 824.05,
-   "end": 868.95,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 3.31,
-     "t": "And then when you become the champ,"
-    },
-    {
-     "s": 3.31,
-     "e": 4.79,
-     "t": "are these guys like are Hunter and Dana"
-    },
-    {
-     "s": 4.79,
-     "e": 6.87,
-     "t": "already hitting you up and talking about"
-    },
-    {
-     "s": 6.87,
-     "e": 8.31,
-     "t": "future stuff and how much of like a"
-    },
-    {
-     "s": 8.31,
-     "e": 9.75,
-     "t": "decision do you have?"
-    },
-    {
-     "s": 9.75,
-     "e": 12.79,
-     "t": "They have not contacted me one time."
-    },
-    {
-     "s": 12.79,
-     "e": 13.55,
-     "t": "Really?"
-    },
-    {
-     "s": 13.55,
-     "e": 14.15,
-     "t": "Mhm."
-    },
-    {
-     "s": 14.15,
-     "e": 16.75,
-     "t": "That's [ __ ] dude, I mean"
-    },
-    {
-     "s": 16.75,
-     "e": 17.25,
-     "t": "They know."
-    },
-    {
-     "s": 17.3,
-     "e": 18.75,
-     "t": "I fought two times this year."
-    },
-    {
-     "s": 18.75,
-     "e": 20.87,
-     "t": "You guys don't understand."
-    },
-    {
-     "s": 20.87,
-     "e": 22.03,
-     "t": "I fought two times this year."
-    },
-    {
-     "s": 22.07,
-     "e": 22.39,
-     "t": "I fought"
-    },
-    {
-     "s": 22.39,
-     "e": 23.91,
-     "t": "in January and June."
-    },
-    {
-     "s": 23.91,
-     "e": 25.63,
-     "t": "Two times [clears throat] in 6 months."
-    },
-    {
-     "s": 25.63,
-     "e": 26.35,
-     "t": "That's [ __ ]"
-    },
-    {
-     "s": 26.35,
-     "e": 29.23,
-     "t": "don't understand what it took for me"
-    },
-    {
-     "s": 29.23,
-     "e": 31.19,
-     "t": "and for my body to get through those"
-    },
-    {
-     "s": 31.19,
-     "e": 32.11,
-     "t": "fights."
-    },
-    {
-     "s": 32.11,
-     "e": 34.19,
-     "t": "I didn't know it was that [ __ ] quick."
-    },
-    {
-     "s": 34.19,
-     "e": 35.47,
-     "t": "Cuz I saw Arman's already talking about"
-    },
-    {
-     "s": 35.47,
-     "e": 36.16,
-     "t": "fighting in January."
-    },
-    {
-     "s": 36.2,
-     "e": 36.79,
-     "t": "Like you can't do"
-    },
-    {
-     "s": 36.79,
-     "e": 37.79,
-     "t": "that."
-    },
-    {
-     "s": 37.79,
-     "e": 39.35,
-     "t": "He can he can fight in January?"
-    },
-    {
-     "s": 39.35,
-     "e": 40.79,
-     "t": "Well, he'd want to fight you."
-    },
-    {
-     "s": 40.79,
-     "e": 42.31,
-     "t": "Oh, he can't fight me in January."
-    },
-    {
-     "s": 42.31,
-     "e": 43.18,
-     "t": "Yeah, he"
-    },
-    {
-     "s": 43.18,
-     "e": 43.48,
-     "t": "[laughter]"
-    },
-    {
-     "s": 43.43,
-     "e": 43.83,
-     "t": "said so."
-    },
-    {
-     "s": 43.83,
-     "e": 44.55,
-     "t": "That's for sure."
-    }
-   ],
-   "quote": {
-    "t": "Oh, he can't fight me in January.",
-    "s": 40.79,
-    "e": 42.31
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
-   "text": "On a similar note, Justin Gaethje discusses the money being thrown around him outside the cage. He talks about corner offers and makes clear that loyalty to his team matters more than a number.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE VALUES TEAM LOYALTY"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 996.53,
-   "end": 1050.99,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 1.95,
-     "t": "He paid 250k to be in his corner,"
-    },
-    {
-     "s": 1.95,
-     "e": 3.11,
-     "t": "allegedly."
-    },
-    {
-     "s": 3.22,
-     "e": 4.15,
-     "t": "So, like"
-    },
-    {
-     "s": 4.15,
-     "e": 5.71,
-     "t": "Not worth it."
-    },
-    {
-     "s": 5.71,
-     "e": 6.87,
-     "t": "For me to walk out with you?"
-    },
-    {
-     "s": 6.87,
-     "e": 8.27,
-     "t": "Not at all."
-    },
-    {
-     "s": 8.27,
-     "e": 9.27,
-     "t": "Half a million."
-    },
-    {
-     "s": 9.27,
-     "e": 10.95,
-     "t": "Nah."
-    },
-    {
-     "s": 10.95,
-     "e": 12.91,
-     "t": "One million dollars."
-    },
-    {
-     "s": 12.91,
-     "e": 14.87,
-     "t": "One million dollars."
-    },
-    {
-     "s": 14.87,
-     "e": 15.87,
-     "t": "I'm in your corner."
-    },
-    {
-     "s": 15.87,
-     "e": 16.84,
-     "t": "I would ponder it."
-    },
-    {
-     "s": 16.89,
-     "e": 17.91,
-     "t": "I'd think about it."
-    },
-    {
-     "s": 17.91,
-     "e": 20.27,
-     "t": "1.1 million, we have a deal right now."
-    },
-    {
-     "s": 20.27,
-     "e": 21.87,
-     "t": "No, we don't have a deal right now."
-    },
-    {
-     "s": 21.87,
-     "e": 22.63,
-     "t": "1.5"
-    },
-    {
-     "s": 22.63,
-     "e": 23.89,
-     "t": "don't make deals like that."
-    },
-    {
-     "s": 23.93,
-     "e": 24.35,
-     "t": "You could"
-    },
-    {
-     "s": 24.35,
-     "e": 25.59,
-     "t": "say 10 100 million right now and I"
-    },
-    {
-     "s": 25.59,
-     "e": 26.31,
-     "t": "wouldn't make that deal."
-    },
-    {
-     "s": 26.31,
-     "e": 27.05,
-     "t": "Holy [ __ ] bro."
-    },
-    {
-     "s": 27.09,
-     "e": 28.11,
-     "t": "Is that just me That's"
-    },
-    {
-     "s": 28.11,
-     "e": 28.83,
-     "t": "not just because of me?"
-    },
-    {
-     "s": 28.83,
-     "e": 29.24,
-     "t": "No, no."
-    },
-    {
-     "s": 29.29,
-     "e": 31.03,
-     "t": "It's cuz I take my job serious"
-    },
-    {
-     "s": 31.03,
-     "e": 32.39,
-     "t": "and"
-    },
-    {
-     "s": 32.39,
-     "e": 33.23,
-     "t": "I have a team."
-    },
-    {
-     "s": 33.23,
-     "e": 33.5,
-     "t": "Yeah."
-    },
-    {
-     "s": 33.56,
-     "e": 35.35,
-     "t": "So, do you think that extra noise"
-    },
-    {
-     "s": 35.35,
-     "e": 37.39,
-     "t": "is just ridiculous and should be"
-    },
-    {
-     "s": 37.39,
-     "e": 38.71,
-     "t": "No, like"
-    },
-    {
-     "s": 38.71,
-     "e": 40.99,
-     "t": "I would I mean, I guess"
-    },
-    {
-     "s": 40.99,
-     "e": 43.03,
-     "t": "I guess if I if if you paid me a million"
-    },
-    {
-     "s": 43.03,
-     "e": 45.43,
-     "t": "dollars to corner me."
-    },
-    {
-     "s": 45.43,
-     "e": 48.23,
-     "t": "I would give Luke $200,000 to sit his"
-    },
-    {
-     "s": 48.23,
-     "e": 49.99,
-     "t": "ass at home and he would love it."
-    },
-    {
-     "s": 49.99,
-     "e": 50.83,
-     "t": "Dude, I'm really"
-    },
-    {
-     "s": 50.83,
-     "e": 51.13,
-     "t": "[laughter]"
-    },
-    {
-     "s": 50.95,
-     "e": 52.95,
-     "t": "I mean, that's what would happen."
-    },
-    {
-     "s": 52.95,
-     "e": 54.11,
-     "t": "Probably."
-    }
-   ],
-   "quote": {
-    "t": "You could say 10 100 million right now and I wouldn't make that deal.",
-    "s": 23.93,
-    "e": 26.31
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
    "text": "However, Ariel Helwani questions whether Justin Gaethje is really ready to walk away from the best position of his career. He points to possible fights with Arman Tsarukyan, Ilia Topuria, and Paddy Pimblett.",
    "next_video": "rXAfnT6la30",
    "headline": "HELWANI QUESTIONS GAETHJE EXIT"
@@ -2080,7 +1242,135 @@
   },
   {
    "type": "narration",
-   "text": "From Daniel Cormier’s side, the biggest money question is complicated by Conor McGregor. Cormier says beating Ilia Topuria may actually push Gaethje away from a McGregor fight, while the champion remains 37 and undecided.",
+   "next_video": "hxcJy4hCvqU",
+   "text": "Daniel Cormier explains why this decision is so hard for a champion like Gaethje. He says the money keeps coming while a champion still has fight left, and that there is no easy option for him.",
+   "headline": "CORMIER: NO EASY OPTION FOR GAETHJE"
+  },
+  {
+   "video": "hxcJy4hCvqU",
+   "start": 476.57,
+   "end": 515.03,
+   "credit": "Daniel Cormier",
+   "channel": "Daniel Cormier",
+   "subs": [
+    {
+     "s": 0.15,
+     "e": 0.97,
+     "t": "It never stops."
+    },
+    {
+     "s": 1.03,
+     "e": 2.35,
+     "t": "Because the way that the"
+    },
+    {
+     "s": 2.35,
+     "e": 5.15,
+     "t": "game works is the champion is supposed"
+    },
+    {
+     "s": 5.15,
+     "e": 8.39,
+     "t": "to go when his time is gone."
+    },
+    {
+     "s": 8.39,
+     "e": 10.11,
+     "t": "When the time is gone, WHEN HIS TIME IS"
+    },
+    {
+     "s": 10.11,
+     "e": 12.31,
+     "t": "OVER, SOMEONE shows that champion the"
+    },
+    {
+     "s": 12.31,
+     "e": 13.43,
+     "t": "door."
+    },
+    {
+     "s": 13.43,
+     "e": 14.87,
+     "t": "But if that champion still seems to have"
+    },
+    {
+     "s": 14.87,
+     "e": 17.05,
+     "t": "fight, money will come to you."
+    },
+    {
+     "s": 17.13,
+     "e": 17.71,
+     "t": "And that"
+    },
+    {
+     "s": 17.71,
+     "e": 19.87,
+     "t": "draw, whether you you do this for money"
+    },
+    {
+     "s": 19.87,
+     "e": 22.75,
+     "t": "or not, that draw is very hard to turn"
+    },
+    {
+     "s": 22.75,
+     "e": 24.99,
+     "t": "away from."
+    },
+    {
+     "s": 24.99,
+     "e": 26.95,
+     "t": "There is no easy option for Justin"
+    },
+    {
+     "s": 26.95,
+     "e": 27.8,
+     "t": "Gaethje."
+    },
+    {
+     "s": 27.91,
+     "e": 30.15,
+     "t": "Cuz even in retiring,"
+    },
+    {
+     "s": 30.15,
+     "e": 30.79,
+     "t": "it's hard."
+    },
+    {
+     "s": 30.86,
+     "e": 32.59,
+     "t": "Even if staying and winning"
+    },
+    {
+     "s": 32.59,
+     "e": 33.75,
+     "t": "again, it's hard."
+    },
+    {
+     "s": 33.81,
+     "e": 35.31,
+     "t": "Because there's always"
+    },
+    {
+     "s": 35.31,
+     "e": 38.11,
+     "t": "going to be a pull to do it again."
+    }
+   ],
+   "quote": {
+    "t": "There is no easy option for Justin Gaethje.",
+    "s": 24.99,
+    "e": 27.8
+   },
+   "type": "clip",
+   "full": false,
+   "speaker": "Daniel Cormier"
+  },
+  {
+   "type": "narration",
+   "text": "Cormier adds that the biggest money question is complicated by Conor McGregor. Cormier says beating Ilia Topuria may actually push Gaethje away from a McGregor fight, while the champion remains 37 and undecided.",
    "next_video": "hxcJy4hCvqU",
    "headline": "CORMIER WEIGHS MCGREGOR QUESTION"
   },
@@ -3241,413 +2531,7 @@
   },
   {
    "type": "narration",
-   "text": "Taking that further, Justin Gaethje explains why he thinks future lightweights will handle Ilia Topuria differently. He argues that opponents will stop walking into Topuria’s punches the same way after seeing the loss.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE SEES TOPURIA ADJUSTMENTS"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 362.13,
-   "end": 393.99,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 1.27,
-     "t": "I know you talked about how you don't"
-    },
-    {
-     "s": 1.27,
-     "e": 3.11,
-     "t": "like to be on the internet for exact"
-    },
-    {
-     "s": 3.11,
-     "e": 4.03,
-     "t": "reasons like this."
-    },
-    {
-     "s": 4.08,
-     "e": 5.11,
-     "t": "Yesterday you talked"
-    },
-    {
-     "s": 5.11,
-     "e": 7.07,
-     "t": "about how you felt like Topuria is like"
-    },
-    {
-     "s": 7.07,
-     "e": 9.31,
-     "t": "too undersized for lightweight."
-    },
-    {
-     "s": 9.31,
-     "e": 10.71,
-     "t": "That's just what I think."
-    },
-    {
-     "s": 10.71,
-     "e": 12.23,
-     "t": "But then I'm telling you that this is"
-    },
-    {
-     "s": 12.23,
-     "e": 13.22,
-     "t": "what the internet says, right?"
-    },
-    {
-     "s": 13.25,
-     "e": 13.55,
-     "t": "They come"
-    },
-    {
-     "s": 13.55,
-     "e": 14.83,
-     "t": "out and they go, \"Well, he was the"
-    },
-    {
-     "s": 14.83,
-     "e": 15.32,
-     "t": "champion."
-    },
-    {
-     "s": 15.38,
-     "e": 16.75,
-     "t": "He beat Charles Oliveira."
-    },
-    {
-     "s": 16.8,
-     "e": 16.91,
-     "t": "He"
-    },
-    {
-     "s": 16.91,
-     "e": 17.59,
-     "t": "beat Max Holloway.\""
-    },
-    {
-     "s": 17.59,
-     "e": 18.03,
-     "t": "True."
-    },
-    {
-     "s": 18.03,
-     "e": 18.55,
-     "t": "Yeah."
-    },
-    {
-     "s": 18.55,
-     "e": 19.23,
-     "t": "True."
-    },
-    {
-     "s": 19.23,
-     "e": 19.79,
-     "t": "So they're"
-    },
-    {
-     "s": 19.79,
-     "e": 20.27,
-     "t": "True."
-    },
-    {
-     "s": 20.27,
-     "e": 21.27,
-     "t": "Their argument is like, \"How is he"
-    },
-    {
-     "s": 21.27,
-     "e": 22.67,
-     "t": "undersized for that division?\""
-    },
-    {
-     "s": 22.67,
-     "e": 23.75,
-     "t": "I just showed you."
-    },
-    {
-     "s": 23.75,
-     "e": 25.03,
-     "t": "Yeah, that's what you felt."
-    },
-    {
-     "s": 25.03,
-     "e": 25.95,
-     "t": "I just showed you."
-    },
-    {
-     "s": 25.95,
-     "e": 26.39,
-     "t": "Yeah."
-    },
-    {
-     "s": 26.39,
-     "e": 27.83,
-     "t": "These guys aren't going to walk into his"
-    },
-    {
-     "s": 27.83,
-     "e": 28.63,
-     "t": "punches anymore."
-    },
-    {
-     "s": 28.63,
-     "e": 29.07,
-     "t": "Right."
-    },
-    {
-     "s": 29.07,
-     "e": 30.63,
-     "t": "Oliveira would not walk into his [ __ ]"
-    },
-    {
-     "s": 30.63,
-     "e": 31.51,
-     "t": "punches again."
-    }
-   ],
-   "quote": {
-    "t": "These guys aren't going to walk into his punches anymore.",
-    "s": 26.39,
-    "e": 28.63
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
-   "text": "Finally, Justin Gaethje lays out the two obvious paths in front of him after winning the lightweight title. He says the choice is retirement or Arman Tsarukyan, but for now he is recovering and enjoying being champion.",
-   "next_video": "2gF-Eks4FTQ",
-   "headline": "GAETHJE FACES TWO PATHS"
-  },
-  {
-   "video": "2gF-Eks4FTQ",
-   "start": 868.45,
-   "end": 922.91,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
-   "subs": [
-    {
-     "s": 0.15,
-     "e": 1.31,
-     "t": "Would you say the two scenarios right"
-    },
-    {
-     "s": 1.31,
-     "e": 2.99,
-     "t": "now are you retired, you just you're a"
-    },
-    {
-     "s": 2.99,
-     "e": 5.07,
-     "t": "champion, just won the White House, or"
-    },
-    {
-     "s": 5.07,
-     "e": 6.55,
-     "t": "you just go and fight Arman, right?"
-    },
-    {
-     "s": 6.55,
-     "e": 7.45,
-     "t": "Um sure, yeah."
-    },
-    {
-     "s": 7.51,
-     "e": 9.11,
-     "t": "I guess if you had to put"
-    },
-    {
-     "s": 9.11,
-     "e": 10.55,
-     "t": "two things on paper, those would be the"
-    },
-    {
-     "s": 10.55,
-     "e": 11.79,
-     "t": "two things that you would put on a piece"
-    },
-    {
-     "s": 11.79,
-     "e": 12.39,
-     "t": "of paper, yeah."
-    },
-    {
-     "s": 12.39,
-     "e": 13.75,
-     "t": "Yeah, but you we know you're like you're"
-    },
-    {
-     "s": 13.75,
-     "e": 14.05,
-     "t": "a fighter."
-    },
-    {
-     "s": 13.99,
-     "e": 15.91,
-     "t": "I'm a one day quarter mile at a time, so"
-    },
-    {
-     "s": 15.91,
-     "e": 17.62,
-     "t": "I truly don't I don't know."
-    },
-    {
-     "s": 17.68,
-     "e": 18.31,
-     "t": "Who knows?"
-    },
-    {
-     "s": 18.31,
-     "e": 18.69,
-     "t": "Yeah."
-    },
-    {
-     "s": 18.76,
-     "e": 19.67,
-     "t": "Did you have"
-    },
-    {
-     "s": 19.67,
-     "e": 20.55,
-     "t": "there's a lot of things that could"
-    },
-    {
-     "s": 20.55,
-     "e": 21.13,
-     "t": "happen."
-    },
-    {
-     "s": 21.21,
-     "e": 22.93,
-     "t": "I could die tomorrow."
-    },
-    {
-     "s": 23.01,
-     "e": 23.59,
-     "t": "None of"
-    },
-    {
-     "s": 23.59,
-     "e": 25.51,
-     "t": "that [ __ ] would happen, so one day at a"
-    },
-    {
-     "s": 25.51,
-     "e": 25.76,
-     "t": "time."
-    },
-    {
-     "s": 25.81,
-     "e": 26.55,
-     "t": "I'm going to be"
-    },
-    {
-     "s": 26.55,
-     "e": 26.99,
-     "t": "you know"
-    },
-    {
-     "s": 26.99,
-     "e": 27.59,
-     "t": "recover my body."
-    },
-    {
-     "s": 27.63,
-     "e": 28.39,
-     "t": "I'm recovering right"
-    },
-    {
-     "s": 28.39,
-     "e": 28.7,
-     "t": "now."
-    },
-    {
-     "s": 28.77,
-     "e": 30.08,
-     "t": "I'm recuperating."
-    },
-    {
-     "s": 30.16,
-     "e": 31.47,
-     "t": "I'm traveling, um"
-    },
-    {
-     "s": 31.47,
-     "e": 35.07,
-     "t": "sharing the feeling that I have and"
-    },
-    {
-     "s": 35.07,
-     "e": 36.75,
-     "t": "energy I have with as many people as I"
-    },
-    {
-     "s": 36.75,
-     "e": 39.23,
-     "t": "can across the world by going to these"
-    },
-    {
-     "s": 39.23,
-     "e": 41.59,
-     "t": "events and interacting with fans and"
-    },
-    {
-     "s": 41.59,
-     "e": 43.95,
-     "t": "going to my family reunion and going"
-    },
-    {
-     "s": 43.95,
-     "e": 45.63,
-     "t": "down to Arizona and"
-    },
-    {
-     "s": 45.63,
-     "e": 47.15,
-     "t": "doing all these different trips, being"
-    },
-    {
-     "s": 47.15,
-     "e": 47.74,
-     "t": "on golf courses."
-    },
-    {
-     "s": 47.78,
-     "e": 48.59,
-     "t": "That's what I'm doing."
-    },
-    {
-     "s": 48.59,
-     "e": 51.31,
-     "t": "It's enjoying being a a champion for now"
-    },
-    {
-     "s": 51.31,
-     "e": 52.91,
-     "t": "and"
-    },
-    {
-     "s": 52.91,
-     "e": 54.11,
-     "t": "we'll see."
-    }
-   ],
-   "quote": {
-    "t": "It's enjoying being a a champion for now and we'll see.",
-    "s": 48.59,
-    "e": 54.11
-   },
-   "type": "clip",
-   "full": false,
-   "speaker": "Justin Gaethje"
-  },
-  {
-   "type": "narration",
-   "text": "Justin Gaethje says Ilia Topuria does not deserve a rematch, while Arman Tsarukyan, Paddy Pimblett, and the money fights all wait for an answer. What happens next could reshape the division. So, drop your thoughts below.",
+   "text": "Gaethje is not interested in a Topuria rematch, Arman Tsarukyan is waiting for his title shot, and Paddy Pimblett wants Topuria next. What happens next could reshape the division. So, drop your thoughts below.",
    "next_video": null,
    "outro": true
   }

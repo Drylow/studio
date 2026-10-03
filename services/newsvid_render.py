@@ -121,10 +121,24 @@ def snap(audio, start, end):
         s2 = min((x[1] for x in sil), key=lambda v: abs(v - start)) - 0.06
     sil = silences(audio, end - 0.45, end + 0.9)
     if sil:
-        e2 = min((x[0] for x in sil), key=lambda v: abs(v - end)) + 0.12
+        a, b = min(sil, key=lambda x: abs(x[0] - end))[:2]
+        e2 = a + max(0.12, min(0.6, (b - a) * 0.7))   # respiration après la dernière phrase, sans mordre la suivante
     if e2 - s2 < 2.0:
         return start, end
     return max(0.0, s2), e2
+
+
+# Transitions douces entre les passages (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») :
+# chaque morceau entre et sort en fondu court (image + son), le son plus longuement que l'image.
+FADE_V_IN, FADE_V_OUT, FADE_A_IN, FADE_A_OUT = 0.2, 0.3, 0.15, 0.45
+
+
+def vfades(dur):
+    return f"fade=t=in:st=0:d={FADE_V_IN},fade=t=out:st={max(0.0, dur - FADE_V_OUT):.3f}:d={FADE_V_OUT}"
+
+
+def afades(dur):
+    return f"afade=t=in:st=0:d={FADE_A_IN},afade=t=out:st={max(0.0, dur - FADE_A_OUT):.3f}:d={FADE_A_OUT}"
 
 
 # ── Habillage ───────────────────────────────────────────────────────────────
@@ -467,6 +481,8 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
                 t = x["s"] + (x["e"] - x["s"]) * (m.start() / max(1, len(x["t"])))
                 mutes.append((max(0.0, t - 0.3), t + 0.5))
     subs = [s for s in _wrap_subs(subs) if s["e"] > s["s"]]
+    if subs and subs[0]["t"][:1].islower():  # la transcription a perdu le début de la phrase (« Do you » …)
+        subs[0] = dict(subs[0], t="..." + subs[0]["t"])
     quote = dict(seg["quote"], s=seg["quote"]["s"] + shift, e=seg["quote"]["e"] + shift) if seg.get("quote") else None
     framed = not seg.get("full")
     ass = os.path.join(workdir, os.path.basename(dest) + ".ass")
@@ -482,13 +498,14 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
              f"[s1]scale=480:270:force_original_aspect_ratio=increase,crop=480:270,boxblur=12:2,"
              f"scale={W}:{H},eq=brightness=-0.22:saturation=0.75[bg];"
              f"[s2]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[c];"
-             f"[bg][2:v]overlay=0:0:shortest=1[bf];[bf][c]overlay={x}:{y}[b0];[b0]{sub},format=yuv420p[v];")
+             f"[bg][2:v]overlay=0:0:shortest=1[bf];[bf][c]overlay={x}:{y}[b0];[b0]{sub},format=yuv420p,{vfades(dur)}[v];")
     else:
         zw, zh = int(W * 1.04) // 2 * 2, int(H * 1.04) // 2 * 2
         g = (f"[0:v]fps={FPS},scale={zw}:{zh}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-             f"{sub},format=yuv420p[v];")
+             f"{sub},format=yuv420p,{vfades(dur)}[v];")
     mute = ("volume=0:enable='" + "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in mutes) + "',") if mutes else ""
-    g += f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,aformat=channel_layouts=stereo[a]"
+    g += (f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,{afades(dur)},"
+          f"aformat=channel_layouts=stereo[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
@@ -524,7 +541,7 @@ def load_photos(job_dir):
             except (ValueError, SyntaxError):
                 r = {}
             if os.path.isfile(p) and r.get("face") and r.get("clear", True) and not r.get("watermark") \
-                    and not r.get("text"):
+                    and not r.get("text") and int(r.get("people") or 1) <= 2:
                 out.setdefault(name, []).append((p, r["face"]))
     return out
 
@@ -580,27 +597,30 @@ def render_narration(seg, audio, files, b0, workdir, dest, music, accent, plan, 
                  "-loop", "1", "-framerate", str(FPS), "-i", shade or make_shade(os.path.join(workdir, "shade.png"))]
     g = (pre + f"zoompan=z='1+0.05*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
          f"eq=brightness=-0.08:saturation=0.9[bb];[bb][3:v]overlay=0:0:shortest=1,"
-         f"subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
+         f"subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p,{vfades(dur)}[v];"
          f"[1:a]aresample=48000,loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=0.35[n];"
          f"[2:a]aresample=48000,volume=0.11,afade=t=in:d=0.4[m];"
-         f"[n][m]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
+         f"[n][m]amix=inputs=2:duration=first:normalize=0,aresample=48000,{afades(dur)}[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
 
 
-def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), dur=2.4):
-    """Logo entre l'ouverture et la première voix off : nom de la chaîne + slogan, sur la musique, sans bruitage."""
+def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), dur=4.5):
+    """Logo après la voix off d'intro : nom de la chaîne + slogan, sur la musique, sans bruitage. Reste ~4 s et sort
+    en fondu (l'utilisateur, 4 oct. : « il reste une seconde et après ça coupe »)."""
     bg = make_background(plan, os.path.join(workdir, "bg_plain.png"), box=False)
     brand = _ass_escape((plan.get("brand") or "NEWS").upper())
     slogan = _ass_escape(re.sub(r"^SUBSCRIBE FOR\s+", "", (plan.get("subscribe") or "").upper()))
     ev = [_ev(0.1, dur, "Brand", f"{{\\pos({W // 2},{H // 2 - 30})\\fscx115\\fscy115\\fad(200,0)"
-                                 f"\\t(0,400,\\fscx100\\fscy100)}}{brand}", 2)]
+                                 f"\\t(0,400,\\fscx100\\fscy100)\\t(400,{int(dur * 1000)},\\fscx106\\fscy106)}}{brand}", 2)]
     if slogan:
         ev.append(_ev(0.5, dur, "Slogan", f"{{\\pos({W // 2},{H // 2 + 260})\\fad(250,0)}}{slogan}", 2))
     ass = _write_ass(os.path.join(workdir, "sting.ass"), _styles(accent, accent2, False), ev)
-    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
-         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3,aformat=channel_layouts=stereo[a]")
+    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p,"
+         f"fade=t=in:st=0:d=0.3,fade=t=out:st={dur - 0.6:.3f}:d=0.6[v];"
+         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3,afade=t=out:st={dur - 0.8:.3f}:d=0.8,"
+         f"aformat=channel_layouts=stereo[a]")
     media.run(["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}", "-i", bg, "-stream_loop", "-1", "-i", music,
                "-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                os.path.basename(dest)], cwd=workdir)
@@ -668,7 +688,10 @@ def build(job_dir, work_root, upload=True, keep=False):
     name = os.path.basename(job_dir.rstrip("/\\"))
     with open(os.path.join(job_dir, "plan.json"), "r", encoding="utf-8") as f:
         plan = json.load(f)
-    work = os.path.join(work_root, "news_build", name)
+    # dossier neuf à chaque montage : des morceaux d'un ancien montage (dossier pas effacé, fichiers bloqués par un
+    # processus resté ouvert) ne doivent jamais être repris (3 oct. : la v4 Gaethje contenait des morceaux de la v2)
+    shutil.rmtree(os.path.join(work_root, "news_build", name), ignore_errors=True)
+    work = os.path.join(work_root, "news_build", f"{name}-{time.strftime('%Y%m%d-%H%M%S')}")
     dl = os.path.join(work, "dl")
     os.makedirs(dl, exist_ok=True)
     log = log_to(os.path.join(job_dir, "build.log"))
@@ -721,6 +744,9 @@ def build(job_dir, work_root, upload=True, keep=False):
                 framed_seen += 1
                 if framed_seen == 2:
                     pill = plan.get("subscribe")
+            if not seg.get("full") and parts and not any(p.endswith("sting.mp4") for p in parts):
+                # sans ouverture en extraits : le logo animé passe entre la voix off d'intro et le 1er extrait
+                parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2))
             if not os.path.isfile(dest):
                 render_clip(seg, files[seg["video"]], frame, work, dest, accent, log, accent2=accent2, pill=pill,
                             brand=(plan.get("brand") or "").upper())
@@ -734,11 +760,11 @@ def build(job_dir, work_root, upload=True, keep=False):
             if parts and not any(p.endswith("sting.mp4") for p in parts):  # fin de l'ouverture : logo animé
                 parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2))
             seg = dict(seg, lower="" if seg.get("outro") else (nxt or {}).get("speaker", ""))
-            who = (nxt or ref).get("speaker") or ""
-            if not photos.get(who):  # un consultant annoncé : la photo du combattant dont parle la voix off
-                text = seg.get("text") or ""
-                hits = [(text.find(n.split()[-1]), n) for n in photos if n.split()[-1] in text]
-                who = min(hits)[1] if hits else who
+            # la photo de la 1re personne dont parle la voix off (sinon celle qui va parler) : l'intro « Ilia Topuria is
+            # back in the gym » montrait Gaethje (qui parle juste après) sous le titre « TOPURIA RETURNS TO GYM »
+            text = seg.get("text") or ""
+            hits = [(text.find(n.split()[-1]), n) for n in photos if n.split()[-1] in text]
+            who = min(hits)[1] if hits else ((nxt or ref).get("speaker") or "")
             still = None
             if photos.get(who):  # la photo de la personne dont parle la voix off (sinon : images de sa vidéo)
                 k = used.get(who, 0)
