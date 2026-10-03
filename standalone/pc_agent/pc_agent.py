@@ -2,9 +2,11 @@
 
 YouTube bloque les serveurs (cloud, VPS) mais pas une connexion de maison. Lancé toutes les 15 min par la tâche
 Windows « Drylow Actu » (installée une fois, avec l'accord de l'utilisateur, par Installer.bat ; Desinstaller.bat
-l'enlève), sans fenêtre (pythonw.exe). À chaque passage : demande au relais (VPS, config.json) s'il y a une vidéo
-à monter ; si oui la télécharge (code du montage + plan + voix off), télécharge les extraits YouTube, monte, envoie
-sur Gofile, renvoie lien + planches de contrôle au relais, puis efface tout (clips, segments, vidéo).
+l'enlève), sans fenêtre (pythonw.exe). Chaque passage reste à l'écoute ~14 min (le suivant prend le relais) : toutes
+les 20 s, demande au relais (VPS, config.json) s'il y a une vidéo à monter ; si oui la télécharge (code du montage +
+plan + voix off), télécharge les extraits YouTube, monte, envoie sur Gofile, renvoie lien + planches de contrôle au
+relais, efface tout (clips, segments, vidéo), puis passe tout de suite à la suivante.
+(Mis à jour par le montage lui-même : news.py build recopie la dernière version de ce fichier.)
 """
 import glob
 import io
@@ -130,28 +132,42 @@ def build(name):
     return ok
 
 
+LISTEN = 14 * 60     # la tâche Windows relance l'agent toutes les 15 min : il écoute jusque-là
+POLL = 20            # secondes entre deux questions au relais
+
+
 def main():
     lock = single_instance()
     if lock is None:
         return
     shutil.rmtree(WORK, ignore_errors=True)        # restes d'un montage coupé (PC éteint) : jamais de clips qui traînent
-    code, body = call("GET", "/pc/next")
-    if code != 200:
-        log("relais injoignable :", code, body[:200])
-        return
-    name = json.loads(body).get("name")
-    if not name:
-        return
-    log(f"{name} : à monter")
-    try:
-        tools()
-        build(name)
-    except Exception as e:  # noqa: BLE001
-        log(f"{name} : ERREUR {e}")
-        call("PUT", f"/pc/result?name={name}&path=build.log", data=f"ERREUR agent PC : {e}\n".encode())
-        call("POST", f"/pc/done?name={name}&ok=0")
-    finally:
-        shutil.rmtree(WORK, ignore_errors=True)    # rien ne reste sur le PC : clips, segments, vidéo, code
+    t0 = time.time()
+    while time.time() - t0 < LISTEN:
+        try:
+            code, body = call("GET", "/pc/next", timeout=30)
+        except (OSError, ValueError) as e:          # réseau coupé : on réessaie au prochain tour
+            log("relais injoignable :", e)
+            time.sleep(POLL)
+            continue
+        if code != 200:
+            log("relais injoignable :", code, body[:200])
+            time.sleep(POLL)
+            continue
+        name = json.loads(body).get("name")
+        if not name:
+            time.sleep(POLL)
+            continue
+        log(f"{name} : à monter")
+        try:
+            tools()
+            build(name)
+        except Exception as e:  # noqa: BLE001
+            log(f"{name} : ERREUR {e}")
+            call("PUT", f"/pc/result?name={name}&path=build.log", data=f"ERREUR agent PC : {e}\n".encode())
+            call("POST", f"/pc/done?name={name}&ok=0")
+        finally:
+            shutil.rmtree(WORK, ignore_errors=True)    # rien ne reste sur le PC : clips, segments, vidéo, code
+        t0 = time.time()                               # après un montage, on réécoute 14 min
 
 
 if __name__ == "__main__":

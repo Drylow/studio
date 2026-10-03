@@ -190,8 +190,33 @@ def cmd_voice(job):
         print(f"voix {i} : {media.duration(dest):.1f} s")
 
 
+def update_pc_agent():
+    """Montage lancé par l'agent du PC (STUDIO_WORK = <agent>/work/build) : recopie la dernière version de
+    pc_agent.py (envoyée avec le code) à côté de config.json ; elle sert dès le passage suivant de la tâche."""
+    sw = os.environ.get("STUDIO_WORK") or ""
+    here = os.path.dirname(os.path.dirname(os.path.abspath(sw))) if sw else ""
+    new = os.path.join(REPO, "standalone", "pc_agent", "pc_agent.py")
+    dest = os.path.join(here, "pc_agent.py")
+    if not (here and os.path.isfile(os.path.join(here, "config.json")) and os.path.isfile(dest) and os.path.isfile(new)):
+        return
+    with open(new, "r", encoding="utf-8") as f:
+        code = f.read()
+    with open(dest, "r", encoding="utf-8") as f:
+        if f.read() == code:
+            return
+    compile(code, dest, "exec")                     # jamais un fichier cassé à la place de l'agent
+    with open(dest + ".new", "w", encoding="utf-8") as f:
+        f.write(code)
+    os.replace(dest + ".new", dest)
+    print("agent du PC mis à jour")
+
+
 def cmd_build(job, upload=True, keep=False):
     from services import newsvid_render as R
+    try:
+        update_pc_agent()
+    except (OSError, SyntaxError) as e:
+        print("mise à jour de l'agent impossible :", e)
     if os.environ.get("NEWS_NO_UPLOAD"):  # tests : pas d'envoi sur Gofile
         upload = False
     res = R.build(job, WORK, upload=upload, keep=keep)
@@ -278,7 +303,7 @@ def cmd_pc():
 
 VPS_CODE = ["production/news.py", "production/common.py", "services/__init__.py", "services/newsvid.py",
             "services/newsvid_render.py", "services/media.py", "services/music.py", "services/ai.py", "services/tts.py",
-            "services/sfx.py"]
+            "services/sfx.py", "standalone/pc_agent/pc_agent.py"]
 
 
 def vps_call(method, path, data=None, timeout=60):
