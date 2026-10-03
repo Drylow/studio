@@ -40,14 +40,17 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
         "search": ["UFC news", "Dana White", "UFC interview"],
-        # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC)
-        "sources": {"UFC": "UCvgfXK4nTYKudb0rFR6noLA", "MMA Fighting": "UC4f1JueVgo5t9HSmobCRPug",
-                    "The Ariel Helwani Show": "UCVOdVp54jLrFhRUm4S29HeA", "Chael Sonnen": "UCRlvF4jIeBWqXJDGNXfPyVw",
+        # chaînes où sortent les interviews (id YouTube : leur flux RSS donne les vidéos du jour, cloud et PC).
+        # Seulement des chaînes SANS revendication automatique (voir CLAIMERS) : vérifié le 3 oct. avec NexLev
+        # get_content_owner (indépendantes = « IVP » ou sans réseau ; Helwani/Yahoo et Cormier/The Volume sont dans un
+        # réseau mais leurs extraits n'ont pas été revendiqués dans la vidéo Gaethje).
+        "sources": {"The Ariel Helwani Show": "UCVOdVp54jLrFhRUm4S29HeA", "Chael Sonnen": "UCRlvF4jIeBWqXJDGNXfPyVw",
                     "Daniel Cormier": "UC_1TBgZ5FuGSdRlrrnyJU7w", "FLAGRANT": "UC5PstSsGrRwj2o6asQpC4Rg",
                     "FLAGRANT CLIPS": "UCAjmXPKv1zpYftSDAMeJz8A", "Michael Bisping": "UCDrG2_1TcVkXKXXsD6Kjwig",
-                    "One Night with Steiny": "UCdd7HZYwU1YOE2lILZ5P2VQ", "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA",
-                    "FULL SEND MMA": "UCTvuMRhyrTVgbEdLyymZq8g", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
-                    "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw"},
+                    "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
+                    "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw", "JRE Clips": "UCnxGkOGNMqQEUMvroOWps6Q",
+                    "PowerfulJRE": "UCzQUP1qoWDoEbmsQxvdjxgQ", "Pound 4 Pound with Kamaru & Henry": "UCpVcPOrB9tWcBGe58FYjOmQ",
+                    "Submission Radio": "UCNrEHIf8QmKK-cAag4YxIXQ", "DOUBLE COVERAGE PODCAST": "UCf1q6dhccWr6eQEcFFnJSbA"},
         "people": "fighters, coaches, managers, promoters and pundits",
     },
     "boxing_en": {
@@ -255,7 +258,34 @@ def load_source(path):
         return json.load(f)
 
 
+# Chaînes qui revendiquent (Content ID) les extraits repris : interdites comme sources. One Night with Steiny a
+# revendiqué 6 passages de la vidéo Gaethje (3 oct., « Shots Studios Affiliate ») ; même réseau = même risque.
+# Avant d'ajouter une nouvelle chaîne source : NexLev get_content_owner(channel_id) → dans un réseau (MCN, média) =
+# risque, à tester sur un seul extrait ; « IVP » ou rien = indépendant, sans Content ID.
+CLAIMERS = {
+    "UCdd7HZYwU1YOE2lILZ5P2VQ": "One Night with Steiny (Shots Studios : revendication du 3 oct.)",
+    "UCTvuMRhyrTVgbEdLyymZq8g": "FULL SEND MMA (Shots Studios)",
+    "UCvgfXK4nTYKudb0rFR6noLA": "UFC (réseau UFC)",
+    "UC4f1JueVgo5t9HSmobCRPug": "MMA Fighting (Vox Media)",
+    "UCk9lx4sKRQCDTyXFaouk_vQ": "Mighty / Demetrious Johnson (Whistle Sports)",
+}
+CLAIMER_NAMES = {"one night with steiny", "full send mma", "full send podcast", "ufc", "mmafightingonsbn",
+                 "mma fighting", "mighty", "nelk", "nelk boys"}
+
+
+def claimer(meta):
+    """Raison du refus si la source vient d'une chaîne qui revendique, sinon ''."""
+    cid = meta.get("channel_id") or meta.get("channelId") or ""
+    if cid in CLAIMERS:
+        return CLAIMERS[cid]
+    name = (meta.get("channel") or "").strip().lower()
+    return f"{meta.get('channel')} (chaîne qui revendique)" if name in CLAIMER_NAMES else ""
+
+
 def save_source(folder, meta, lines):
+    why = claimer(meta)
+    if why:
+        raise ValueError(f"source refusée, revendication Content ID : {why}")
     os.makedirs(os.path.join(folder, "sources"), exist_ok=True)
     src = dict(meta, lines=lines)
     with open(os.path.join(folder, "sources", f"{meta['id']}.json"), "w", encoding="utf-8") as f:

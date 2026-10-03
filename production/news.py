@@ -96,7 +96,11 @@ def cmd_add(job, ids):
         if not lines:
             print(f"{vid} : pas de sous-titres")
             continue
-        N.save_source(job, info, lines)
+        try:
+            N.save_source(job, info, lines)
+        except ValueError as e:
+            print(f"{vid} : {e}")
+            continue
         print(f"{vid} : {len(lines)} lignes — {info.get('title')}")
 
 
@@ -118,7 +122,11 @@ def cmd_import(job, path, meta_path=None):
     for vid, d in items:
         lines = N.lines_from_nexlev(d)
         m = dict(meta.get(vid) or {}, id=vid)
-        N.save_source(job, m, lines)
+        try:
+            N.save_source(job, m, lines)
+        except ValueError as e:
+            print(f"{vid} : {e}")
+            continue
         print(f"{vid} : {len(lines)} lignes — {m.get('title', '')}")
 
 
