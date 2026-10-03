@@ -634,7 +634,9 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
         return a, b
 
     segs = []
-    for c in plan.get("cold_open") or []:
+    # plus d'ouverture en extraits (l'utilisateur, 3 oct. : « au tout début, je veux l'intro avec la voix off et la
+    # photo ») : la vidéo commence par la 1re voix off ; une chaîne peut la remettre avec "cold_open": True
+    for c in (plan.get("cold_open") or []) if ch.get("cold_open") else []:
         m = moment(c.get("moment"))
         if not m:
             continue

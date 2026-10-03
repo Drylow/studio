@@ -467,6 +467,8 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
                 t = x["s"] + (x["e"] - x["s"]) * (m.start() / max(1, len(x["t"])))
                 mutes.append((max(0.0, t - 0.3), t + 0.5))
     subs = [s for s in _wrap_subs(subs) if s["e"] > s["s"]]
+    if subs and subs[0]["t"][:1].islower():  # la transcription a perdu le début de la phrase (« Do you » …)
+        subs[0] = dict(subs[0], t="..." + subs[0]["t"])
     quote = dict(seg["quote"], s=seg["quote"]["s"] + shift, e=seg["quote"]["e"] + shift) if seg.get("quote") else None
     framed = not seg.get("full")
     ass = os.path.join(workdir, os.path.basename(dest) + ".ass")
@@ -721,6 +723,9 @@ def build(job_dir, work_root, upload=True, keep=False):
                 framed_seen += 1
                 if framed_seen == 2:
                     pill = plan.get("subscribe")
+            if not seg.get("full") and parts and not any(p.endswith("sting.mp4") for p in parts):
+                # sans ouverture en extraits : le logo animé passe entre la voix off d'intro et le 1er extrait
+                parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2))
             if not os.path.isfile(dest):
                 render_clip(seg, files[seg["video"]], frame, work, dest, accent, log, accent2=accent2, pill=pill,
                             brand=(plan.get("brand") or "").upper())
