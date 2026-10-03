@@ -670,7 +670,10 @@ def build(job_dir, work_root, upload=True, keep=False):
     name = os.path.basename(job_dir.rstrip("/\\"))
     with open(os.path.join(job_dir, "plan.json"), "r", encoding="utf-8") as f:
         plan = json.load(f)
-    work = os.path.join(work_root, "news_build", name)
+    # dossier neuf à chaque montage : des morceaux d'un ancien montage (dossier pas effacé, fichiers bloqués par un
+    # processus resté ouvert) ne doivent jamais être repris (3 oct. : la v4 Gaethje contenait des morceaux de la v2)
+    shutil.rmtree(os.path.join(work_root, "news_build", name), ignore_errors=True)
+    work = os.path.join(work_root, "news_build", f"{name}-{time.strftime('%Y%m%d-%H%M%S')}")
     dl = os.path.join(work, "dl")
     os.makedirs(dl, exist_ok=True)
     log = log_to(os.path.join(job_dir, "build.log"))
