@@ -28,7 +28,7 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
   python production/news.py pc-fetch <dossier> [--wait] → état du montage PC, rapatrie lien + planches
 
   # dans le cloud, après avoir regardé les planches check/
-  python production/news.py send <dossier>                                        → paquet Discord
+  python production/news.py send <dossier> [--corrigee]                           → paquet Discord
 """
 import datetime
 import glob
@@ -402,8 +402,9 @@ def vps_fetch(job, wait=False):
     return None
 
 
-def cmd_send(job):
-    """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags."""
+def cmd_send(job, corrected=False):
+    """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags.
+    corrected : vidéo refaite après une remarque → marquée « CORRIGÉE – à poster » (l'ancien lien n'est pas cité)."""
     import requests
     from common import webhook
     with open(os.path.join(job, "plan.json"), "r", encoding="utf-8") as f:
@@ -415,7 +416,8 @@ def cmd_send(job):
     thumb = os.path.join(job, "thumb.jpg")
     title = plan.get("title") or (plan.get("titles") or ["?"])[0]
     others = "\n".join(f"• {t}" for t in (plan.get("titles") or [])[1:4])
-    content = (f"🎬 **{plan.get('brand', 'News')} — {title}** ✅ vérifiée, à poster\n"
+    tag = "✅ **CORRIGÉE – à poster**" if corrected else "✅ vérifiée, à poster"
+    content = (f"🎬 **{plan.get('brand', 'News')} — {title}** {tag}\n"
                f"🔗 **Vidéo** : <{res['link']}> ({res.get('minutes', '?')} min)")
     embeds = [{"title": "Titre", "description": title + (f"\n\nAutres titres :\n{others}" if others else ""),
                "color": 0xE10600},
@@ -485,7 +487,7 @@ def main(argv):
     elif c == "vps-check":
         print(vps_call("POST", "/ytcheck", timeout=320).json())
     elif c == "send":
-        cmd_send(job_path(args[0]))
+        cmd_send(job_path(args[0]), corrected="--corrigee" in flags)
     else:
         raise SystemExit(__doc__)
 
