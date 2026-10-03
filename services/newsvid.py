@@ -36,7 +36,7 @@ CHANNELS = {
     "mma_en": {
         "name": "MMA news (UFC)", "sport": "MMA / UFC", "language": "en",
         "brand": "CAGE DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
-        "accent": "#E10600", "accent2": "#FFD21F",
+        "accent": "#12A8E0", "accent2": "#40DCF8",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
         "thumb_accent": "#40DCF8",  # bleu clair de la bannière @CageDispatch (« DISPATCH ») : mot fort + contour
