@@ -2,7 +2,7 @@
 
 pop (un élément apparaît), whoosh (une carte glisse), kaching (caisse enregistreuse : le total
 change), stamp (tampon), tick (compteur qui défile), type (imprimante du ticket), ding (fin d'un
-compteur). build_track() pose ces sons aux bons instants sur une piste mono, mixée ensuite sous
+compteur), hit (impact : citation choc, logo). build_track() pose ces sons aux bons instants sur une piste mono, mixée ensuite sous
 la voix (voir render._final_pass).
 """
 import array
@@ -100,6 +100,20 @@ def _stamp():
     return _norm(out, 0.6)
 
 
+def _hit():
+    """Impact sourd (citation choc, logo) : grave qui tombe + claquement court."""
+    n = int(0.55 * SR)
+    ph, out = 0.0, []
+    for i in range(n):
+        f = 70 * math.exp(-i / (0.12 * SR)) + 38
+        ph += 2 * math.pi * f / SR
+        out.append(math.sin(ph) * math.exp(-i / (0.16 * SR)))
+    snap = _lowpass(_noise(int(0.05 * SR), 13), 3500)
+    for i, v in enumerate(snap):
+        out[i] += 0.7 * v * math.exp(-i / (0.012 * SR))
+    return _norm(out, 0.7)
+
+
 def _tick():
     n = int(0.012 * SR)
     x = _highpass(_noise(n, 5), 2500)
@@ -119,7 +133,7 @@ def _ding():
     return _norm(_bell((1318.5, 1975.5, 2637.0), n, 0.25), 0.4)
 
 
-SOUNDS = {"pop": _pop, "whoosh": _whoosh, "kaching": _kaching, "stamp": _stamp, "tick": _tick,
+SOUNDS = {"pop": _pop, "whoosh": _whoosh, "kaching": _kaching, "stamp": _stamp, "tick": _tick, "hit": _hit,
           "type": _type, "ding": _ding}
 
 

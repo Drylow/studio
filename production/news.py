@@ -10,6 +10,7 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
   python production/news.py import <dossier> <fichier_nexlev.json> [meta.json]    → sous-titres NexLev (cloud)
   python production/news.py moments <dossier>                                     → moments.json (IA)
   python production/news.py plan <dossier> [--context "faits vérifiés"]           → plan.json (IA, citations vérifiées)
+  python production/news.py headlines <dossier>                                  → bandeaux + fil d'actu (IA)
   python production/news.py voice <dossier>                                       → narration/nXXX.mp3 (Algrow)
   python production/news.py thumb <dossier>                                       → miniatures (planche)
 
@@ -137,6 +138,7 @@ def cmd_moments(job):
 def cmd_plan(job, context=""):
     j = job_meta(job)
     plan = N.make_plan(job, N.channel(j["channel"]), j["topic"], context=context or j.get("context", ""))
+    plan = N.headlines(job)
     print(json.dumps({"titles": plan["titles"], "thumb": plan["thumb"], "minutes": plan["estimated_minutes"]},
                      ensure_ascii=False, indent=1))
 
@@ -262,7 +264,8 @@ def cmd_pc():
 
 
 VPS_CODE = ["production/news.py", "production/common.py", "services/__init__.py", "services/newsvid.py",
-            "services/newsvid_render.py", "services/media.py", "services/music.py", "services/ai.py", "services/tts.py"]
+            "services/newsvid_render.py", "services/media.py", "services/music.py", "services/ai.py", "services/tts.py",
+            "services/sfx.py"]
 
 
 def vps_call(method, path, data=None, timeout=60):
@@ -398,6 +401,8 @@ def main(argv):
             ctx = rest[k + 1] if k + 1 < len(rest) else ""
             args = [a for a in args if a != ctx]
         cmd_plan(job_path(args[0]), ctx)
+    elif c == "headlines":
+        N.headlines(job_path(args[0]))
     elif c == "voice":
         cmd_voice(job_path(args[0]))
     elif c == "thumb":

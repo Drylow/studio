@@ -3,6 +3,7 @@
  "brand": "CAGE DISPATCH",
  "accent": "#E10600",
  "accent2": "#FFD21F",
+ "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
  "topic": "Justin Gaethje vs Ilia Topuria: Gaethje refuses the rematch (he says Topuria quit), Topuria's glove-cheating accusation, the money offers, Arman Tsarukyan waiting, Paddy Pimblett, and what the champion does next",
  "voice": {
   "provider": "algrow",
@@ -173,86 +174,71 @@
      "t": "See you soon."
     }
    ],
+   "quote": {
+    "t": "Next time I'll make sure they check Justin's gloves so he doesn't put anything weird on them.",
+    "s": 10.74,
+    "e": 14.55
+   },
    "type": "clip",
    "full": true,
    "speaker": ""
   },
   {
-   "video": "2gF-Eks4FTQ",
-   "start": 406.81,
-   "end": 423.22,
-   "credit": "One Night with Steiny",
-   "channel": "One Night with Steiny",
+   "video": "hxcJy4hCvqU",
+   "start": 489.85,
+   "end": 504.72,
+   "credit": "Daniel Cormier",
+   "channel": "Daniel Cormier",
    "subs": [
     {
      "s": 0.15,
-     "e": 1.07,
-     "t": "But you think the main reason is cuz he"
+     "e": 1.59,
+     "t": "But if that champion still seems to have"
     },
     {
-     "s": 1.07,
-     "e": 2.39,
-     "t": "just quit on the stool and how it went"
+     "s": 1.59,
+     "e": 3.77,
+     "t": "fight, money will come to you."
     },
     {
-     "s": 2.39,
-     "e": 3.35,
-     "t": "down?"
+     "s": 3.85,
+     "e": 4.43,
+     "t": "And that"
     },
     {
-     "s": 3.35,
-     "e": 4.31,
-     "t": "Do I think that?"
+     "s": 4.43,
+     "e": 6.59,
+     "t": "draw, whether you you do this for money"
     },
     {
-     "s": 4.31,
-     "e": 4.61,
-     "t": "Yeah."
+     "s": 6.59,
+     "e": 9.47,
+     "t": "or not, that draw is very hard to turn"
     },
     {
-     "s": 4.59,
-     "e": 6.19,
-     "t": "Do you think that?"
+     "s": 9.47,
+     "e": 11.71,
+     "t": "away from."
     },
     {
-     "s": 6.19,
-     "e": 7.63,
-     "t": "There's so much controversy around that"
+     "s": 11.71,
+     "e": 13.67,
+     "t": "There is no easy option for Justin"
     },
     {
-     "s": 7.63,
-     "e": 9.59,
-     "t": "cuz I've heard people say like"
-    },
-    {
-     "s": 9.59,
-     "e": 11.47,
-     "t": "him quitting on the stool was justified."
-    },
-    {
-     "s": 11.47,
-     "e": 12.75,
-     "t": "Like he couldn't [ __ ] see."
-    },
-    {
-     "s": 12.75,
-     "e": 13.87,
-     "t": "He definitely should have quit on the"
-    },
-    {
-     "s": 13.87,
-     "e": 14.25,
-     "t": "stool."
-    },
-    {
-     "s": 14.31,
-     "e": 16.06,
-     "t": "He didn't quit on the stool."
+     "s": 13.67,
+     "e": 14.52,
+     "t": "Gaethje."
     }
    ],
+   "quote": {
+    "t": "There is no easy option for Justin Gaethje.",
+    "s": 11.71,
+    "e": 14.52
+   },
    "type": "clip",
    "full": true,
-   "speaker": "Justin Gaethje"
+   "speaker": "Daniel Cormier"
   },
   {
    "video": "rXAfnT6la30",
@@ -337,6 +323,11 @@
      "t": "No."
     }
    ],
+   "quote": {
+    "t": "Why are you walking away now? No one believes you.",
+    "s": 12.51,
+    "e": 15.59
+   },
    "type": "clip",
    "full": true,
    "speaker": "Ariel Helwani"
@@ -394,6 +385,11 @@
      "t": "It doesn't work."
     }
    ],
+   "quote": {
+    "t": "What's he got to prove? He beat him.",
+    "s": 4.87,
+    "e": 9.35
+   },
    "type": "clip",
    "full": true,
    "speaker": "Daniel Cormier"
@@ -401,7 +397,8 @@
   {
    "type": "narration",
    "text": "Justin Gaethje stopped Ilia Topuria at UFC Freedom 250 in June, and now the lightweight champion refuses the rematch and won't say if he fights again. So is the champion really walking away? It starts with Topuria's comment about Gaethje's gloves, and on the Flagrant podcast, Gaethje answers it.",
-   "next_video": "MeFQgiVHNoA"
+   "next_video": "MeFQgiVHNoA",
+   "headline": "GAETHJE REFUSES TOPURIA REMATCH"
   },
   {
    "video": "MeFQgiVHNoA",
@@ -486,6 +483,11 @@
      "t": "I broke his face."
     }
    ],
+   "quote": {
+    "t": "He honestly has to believe that I cheated cuz",
+    "s": 8.75,
+    "e": 13.15
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -493,7 +495,8 @@
   {
    "type": "narration",
    "text": "Then, Chael Sonnen weighs in on the glove controversy and the official response around the fight. He says the commission looked into Justin Gaethje’s gloves and explains why the cheating angle did not hold up.",
-   "next_video": "tIDLqjod1Sk"
+   "next_video": "tIDLqjod1Sk",
+   "headline": "SONNEN DISMISSES GLOVE CONTROVERSY"
   },
   {
    "video": "tIDLqjod1Sk",
@@ -673,6 +676,11 @@
      "t": "gloves.\" I Sure."
     }
    ],
+   "quote": {
+    "t": "There was nothing illegal in the gloves.",
+    "s": 42.49,
+    "e": 46.83
+   },
    "type": "clip",
    "full": false,
    "speaker": "Chael Sonnen"
@@ -680,7 +688,8 @@
   {
    "type": "narration",
    "text": "On the other side, Paddy Pimblett weighs in on Ilia Topuria’s accusation against Justin Gaethje. He presents it as an excuse and uses the moment to attack Topuria’s character after the title fight.",
-   "next_video": "-8qg_EnslMg"
+   "next_video": "-8qg_EnslMg",
+   "headline": "PIMBLETT RIPS TOPURIA EXCUSE"
   },
   {
    "video": "-8qg_EnslMg",
@@ -760,6 +769,11 @@
      "t": "just shows what a piece of shit he is."
     }
    ],
+   "quote": {
+    "t": "So for Ilia to try and take that away from him just shows what a piece of shit he is.",
+    "s": 29.96,
+    "e": 35.71
+   },
    "type": "clip",
    "full": false,
    "speaker": "Paddy Pimblett"
@@ -767,7 +781,8 @@
   {
    "type": "narration",
    "text": "Adding to that, Justin Gaethje doubles down on why he does not believe Ilia Topuria deserves another title shot. He focuses on Topuria’s body breaking down and explains why he sees the finish differently than Topuria does.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE DENIES TOPURIA SHOT"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -917,6 +932,11 @@
      "t": "fighting."
     }
    ],
+   "quote": {
+    "t": "He definitely should have quit on the stool.",
+    "s": 24.79,
+    "e": 27.57
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -924,7 +944,8 @@
   {
    "type": "narration",
    "text": "Taking that further, Justin Gaethje lays out what he thinks happened to Ilia Topuria mentally after the loss. He says Topuria built a belief around being unbeatable and now has to rebuild that reality after June.",
-   "next_video": "MeFQgiVHNoA"
+   "next_video": "MeFQgiVHNoA",
+   "headline": "GAETHJE QUESTIONS TOPURIA MENTALITY"
   },
   {
    "video": "MeFQgiVHNoA",
@@ -1079,6 +1100,11 @@
      "t": "having parties, updating bios."
     }
    ],
+   "quote": {
+    "t": "Nobody's fucking unbeatable or invincible.",
+    "s": 43.95,
+    "e": 46.91
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1086,7 +1112,8 @@
   {
    "type": "narration",
    "text": "However, Justin Gaethje admits his own future is still unsettled after becoming UFC lightweight champion at 37. He points to injuries, age, and a career that began in 2008 as reasons he has not decided.",
-   "next_video": "-REPN8XlMV0"
+   "next_video": "-REPN8XlMV0",
+   "headline": "GAETHJE FUTURE STILL UNSETTLED"
   },
   {
    "video": "-REPN8XlMV0",
@@ -1186,6 +1213,11 @@
      "t": "Who knows?"
     }
    ],
+   "quote": {
+    "t": "I am 37 years old. My first fight was 2008. I've had 40 fights, including my amateur fights, so I don't know.",
+    "s": 7.55,
+    "e": 17.71
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1193,7 +1225,8 @@
   {
    "type": "narration",
    "text": "Beyond that, Justin Gaethje rejects the idea that retirement talk is only a negotiation tactic. He says the decision is about his health rather than money, even with major title options still on the table.",
-   "next_video": "-REPN8XlMV0"
+   "next_video": "-REPN8XlMV0",
+   "headline": "GAETHJE SAYS HEALTH FIRST"
   },
   {
    "video": "-REPN8XlMV0",
@@ -1268,6 +1301,11 @@
      "t": "I won't do it."
     }
    ],
+   "quote": {
+    "t": "This has never been about money for me.",
+    "s": 0.15,
+    "e": 1.67
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1275,7 +1313,8 @@
   {
    "type": "narration",
    "text": "At the same time, Justin Gaethje points toward Arman Tsarukyan as the clear next contender. Tsarukyan knocked out Mauricio Ruffy at UFC 331, but Gaethje says injuries keep him from fighting again this year.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE POINTS TO TSARUKYAN"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -1415,6 +1454,11 @@
      "t": "time."
     }
    ],
+   "quote": {
+    "t": "If I was able and willing to fight this year then we would be fighting at the end of this year.",
+    "s": 14.83,
+    "e": 20.99
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1422,7 +1466,8 @@
   {
    "type": "narration",
    "text": "Then, Justin Gaethje reveals where communication stands with the UFC after winning the belt. He says he has fought twice in six months and shuts down the idea that Arman Tsarukyan can get him in January.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE SHUTS DOWN JANUARY"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -1592,6 +1637,11 @@
      "t": "That's for sure."
     }
    ],
+   "quote": {
+    "t": "Oh, he can't fight me in January.",
+    "s": 40.79,
+    "e": 42.31
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1599,7 +1649,8 @@
   {
    "type": "narration",
    "text": "On a similar note, Justin Gaethje discusses the money being thrown around him outside the cage. He talks about corner offers and makes clear that loyalty to his team matters more than a number.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE VALUES TEAM LOYALTY"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -1789,6 +1840,11 @@
      "t": "ass at home and he would love it."
     }
    ],
+   "quote": {
+    "t": "You could say 10 100 million right now and I wouldn't make that deal.",
+    "s": 23.93,
+    "e": 26.31
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -1796,7 +1852,8 @@
   {
    "type": "narration",
    "text": "However, Ariel Helwani questions whether Justin Gaethje is really ready to walk away from the best position of his career. He points to possible fights with Arman Tsarukyan, Ilia Topuria, and Paddy Pimblett.",
-   "next_video": "rXAfnT6la30"
+   "next_video": "rXAfnT6la30",
+   "headline": "HELWANI QUESTIONS GAETHJE EXIT"
   },
   {
    "video": "rXAfnT6la30",
@@ -1951,6 +2008,11 @@
      "t": "second."
     }
    ],
+   "quote": {
+    "t": "There's absolutely no way he's walking away.",
+    "s": 15.99,
+    "e": 20.15
+   },
    "type": "clip",
    "full": false,
    "speaker": "Ariel Helwani"
@@ -1958,7 +2020,8 @@
   {
    "type": "narration",
    "text": "From Daniel Cormier’s side, the biggest money question is complicated by Conor McGregor. Cormier says beating Ilia Topuria may actually push Gaethje away from a McGregor fight, while the champion remains 37 and undecided.",
-   "next_video": "hxcJy4hCvqU"
+   "next_video": "hxcJy4hCvqU",
+   "headline": "CORMIER WEIGHS MCGREGOR QUESTION"
   },
   {
    "video": "hxcJy4hCvqU",
@@ -2093,6 +2156,11 @@
      "t": "been about money with him."
     }
    ],
+   "quote": {
+    "t": "Justin Gaethje beating Ilia Topuria almost guarantees he doesn't get the Conor McGregor fight.",
+    "s": 0.15,
+    "e": 7.95
+   },
    "type": "clip",
    "full": false,
    "speaker": "Daniel Cormier"
@@ -2100,7 +2168,8 @@
   {
    "type": "narration",
    "text": "Adding to that, Daniel Cormier rejects the idea of Justin Gaethje vacating as champion for a money fight. He says the belt changes the equation, even if retirement is still a serious possibility.",
-   "next_video": "hxcJy4hCvqU"
+   "next_video": "hxcJy4hCvqU",
+   "headline": "CORMIER DOUBTS VACATING BELT"
   },
   {
    "video": "hxcJy4hCvqU",
@@ -2265,6 +2334,11 @@
      "t": "Gaethje's got options."
     }
    ],
+   "quote": {
+    "t": "You can't do that.",
+    "s": 29.9,
+    "e": 31.06
+   },
    "type": "clip",
    "full": false,
    "speaker": "Daniel Cormier"
@@ -2272,7 +2346,8 @@
   {
    "type": "narration",
    "text": "At the same time, Chael Sonnen puts Arman Tsarukyan forward as the rightful number one contender. He still says giving Ilia Topuria another title shot would not be unfair, but predicts Gaethje versus Arman next.",
-   "next_video": "Aqcc1eoCrCc"
+   "next_video": "Aqcc1eoCrCc",
+   "headline": "SONNEN PICKS GAETHJE TSARUKYAN"
   },
   {
    "video": "Aqcc1eoCrCc",
@@ -2382,6 +2457,11 @@
      "t": "as Islam has in the history of time."
     }
    ],
+   "quote": {
+    "t": "I do believe that Tsarukyan is going to fight Gaethje next.",
+    "s": 7.93,
+    "e": 13.77
+   },
    "type": "clip",
    "full": false,
    "speaker": "Chael Sonnen"
@@ -2389,7 +2469,8 @@
   {
    "type": "narration",
    "text": "Then, Michael Bisping highlights where he believes the UFC lightweight title picture is going. He predicts an announcement for Justin Gaethje against Arman Tsarukyan before the end of the year, with Paddy Pimblett facing Topuria.",
-   "next_video": "HPC4y4L9cII"
+   "next_video": "HPC4y4L9cII",
+   "headline": "BISPING EXPECTS TITLE ANNOUNCEMENT"
   },
   {
    "video": "HPC4y4L9cII",
@@ -2569,6 +2650,11 @@
      "t": "said?"
     }
    ],
+   "quote": {
+    "t": "I've got a pretty good feeling that within the next couple of months or certainly by the end of the year we will get an announcement that Justin Gaethje will be fighting Arman Tsarukyan for the undisputed lightweight championship of the world.",
+    "s": 30.8,
+    "e": 43.46
+   },
    "type": "clip",
    "full": false,
    "speaker": "Michael Bisping"
@@ -2576,7 +2662,8 @@
   {
    "type": "narration",
    "text": "Meanwhile, Paddy Pimblett keeps himself in the conversation by laying out the fights he wants most. He says he would pick Gaethje for the belt, Topuria for a grudge fight, and Arman Tsarukyan later.",
-   "next_video": "-8qg_EnslMg"
+   "next_video": "-8qg_EnslMg",
+   "headline": "PIMBLETT TARGETS GAETHJE TOPURIA"
   },
   {
    "video": "-8qg_EnslMg",
@@ -2691,6 +2778,11 @@
      "t": "Yeah, I think he's a piece of shit, lad."
     }
    ],
+   "quote": {
+    "t": "At some point I'll fight him, and I'll put him out with a choke or a strike.",
+    "s": 36.01,
+    "e": 40.99
+   },
    "type": "clip",
    "full": false,
    "speaker": "Paddy Pimblett"
@@ -2698,7 +2790,8 @@
   {
    "type": "narration",
    "text": "On the other side, Paddy Pimblett directly calls for Ilia Topuria while saying he has no fight booked. He also floats a TUF season and predicts a quick win if the matchup is made.",
-   "next_video": "-8qg_EnslMg"
+   "next_video": "-8qg_EnslMg",
+   "headline": "PIMBLETT CALLS FOR TOPURIA"
   },
   {
    "video": "-8qg_EnslMg",
@@ -2773,6 +2866,11 @@
      "t": "a very entertaining six weeks, to say the least."
     }
    ],
+   "quote": {
+    "t": "I'd love to fight Ilia Topuria. I'd send him back to featherweight.",
+    "s": 9.83,
+    "e": 14.49
+   },
    "type": "clip",
    "full": false,
    "speaker": "Paddy Pimblett"
@@ -2780,7 +2878,8 @@
   {
    "type": "narration",
    "text": "Beyond that, Justin Gaethje doubles down on his view that Ilia Topuria is not built for lightweight. He names Paddy Pimblett and Arman Tsarukyan while predicting Topuria will not become champion at 155.",
-   "next_video": "MeFQgiVHNoA"
+   "next_video": "MeFQgiVHNoA",
+   "headline": "GAETHJE DOUBTS TOPURIA LIGHTWEIGHT"
   },
   {
    "video": "MeFQgiVHNoA",
@@ -2930,6 +3029,11 @@
      "t": "That's what I felt."
     }
    ],
+   "quote": {
+    "t": "I don't think he'll ever be champion at lightweight.",
+    "s": 6.51,
+    "e": 8.91
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -2937,7 +3041,8 @@
   {
    "type": "narration",
    "text": "Taking that further, Justin Gaethje explains why he thinks future lightweights will handle Ilia Topuria differently. He argues that opponents will stop walking into Topuria’s punches the same way after seeing the loss.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE SEES TOPURIA ADJUSTMENTS"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -3102,6 +3207,11 @@
      "t": "punches again."
     }
    ],
+   "quote": {
+    "t": "These guys aren't going to walk into his punches anymore.",
+    "s": 26.39,
+    "e": 28.63
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -3109,7 +3219,8 @@
   {
    "type": "narration",
    "text": "Finally, Justin Gaethje lays out the two obvious paths in front of him after winning the lightweight title. He says the choice is retirement or Arman Tsarukyan, but for now he is recovering and enjoying being champion.",
-   "next_video": "2gF-Eks4FTQ"
+   "next_video": "2gF-Eks4FTQ",
+   "headline": "GAETHJE FACES TWO PATHS"
   },
   {
    "video": "2gF-Eks4FTQ",
@@ -3304,6 +3415,11 @@
      "t": "we'll see."
     }
    ],
+   "quote": {
+    "t": "It's enjoying being a a champion for now and we'll see.",
+    "s": 42.19,
+    "e": 47.71
+   },
    "type": "clip",
    "full": false,
    "speaker": "Justin Gaethje"
@@ -3315,5 +3431,15 @@
    "outro": true
   }
  ],
- "estimated_minutes": 18.4
+ "estimated_minutes": 18.4,
+ "ticker": [
+  "GAETHJE REFUSES TOPURIA REMATCH",
+  "GLOVE ACCUSATION DOES NOT HOLD",
+  "GAETHJE FUTURE REMAINS UNDECIDED",
+  "TSARUKYAN SEEN AS CONTENDER",
+  "PIMBLETT CALLS OUT TOPURIA",
+  "CORMIER QUESTIONS MCGREGOR PATH",
+  "BISPING EXPECTS GAETHJE TSARUKYAN",
+  "RETIREMENT OR TSARUKYAN NEXT"
+ ]
 }

@@ -260,6 +260,15 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **Vrai montage, pas des clips collés** (l'utilisateur, 3 oct. : « si c'est juste coller des clips, ça sert à
+  rien ») : volet penché aux couleurs de la chaîne + whoosh entre chaque partie, logo animé (« CAGE DISPATCH /
+  DAILY MMA NEWS ») après l'ouverture, nom de qui parle (glisse, en haut à gauche du cadre), **citation choc en
+  grand** (Anton, mot fort en jaune, zoom « punch-in » + impact) au moment où elle est dite (`seg["quote"]`, calée
+  par `clip_spec`), voix off : titre de l'info (`headline`) + nom + fil d'actu qui défile (`plan["ticker"]`, écrits
+  par `news.py headlines` : rien que ce que dit la voix off) + b-roll en zoom lent ; rappel d'abonnement une fois.
+  Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
+  rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
+  (l'animateur qui relit une vieille interview ≠ le combattant).
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
   (Docker, HTTPS, jeton) installé par une ligne en root sur le VPS : `curl -fsSL
   https://raw.githubusercontent.com/drylow/studio/main/production/vps_news_setup.sh | bash` (script généré par
