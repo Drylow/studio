@@ -63,8 +63,10 @@ def ytdlp_args():
     """yt-dlp ; YTDLP_PROXY (VPS : proxy résidentiel, payé au Go) ne sert qu'à YouTube, jamais à Gofile."""
     from services import newsvid
     proxy = (os.environ.get("YTDLP_PROXY") or "").strip()
+    cookies = (os.environ.get("YTDLP_COOKIES") or "").strip()  # cookies.txt d'un compte YouTube (VPS bloqué)
     return [sys.executable, "-m", "yt_dlp", "--no-playlist", "--no-warnings", "--retries", "5",
-            "--fragment-retries", "10", *newsvid.yt_js_args(), *(["--proxy", proxy] if proxy else [])]
+            "--fragment-retries", "10", *newsvid.yt_js_args(), *(["--proxy", proxy] if proxy else []),
+            *(["--cookies", cookies] if cookies and os.path.isfile(cookies) else [])]
 
 
 def download(video_id, dl_dir, log):

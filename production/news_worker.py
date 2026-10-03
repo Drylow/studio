@@ -4,7 +4,7 @@ Installé par production/vps_news_setup.sh (Docker, derrière HTTPS). Aucune dé
 au démarrage il installe yt-dlp, ffmpeg (imageio-ffmpeg), Pillow et le moteur JavaScript deno dans DATA_DIR.
 Chaque requête porte l'en-tête X-Worker-Token (= WORKER_TOKEN).
 
-  GET  /status                 {busy, job, stage, error, youtube, proxy (oui/non), log: fin de build.log}
+  GET  /status                 {busy, job, stage, error, youtube, proxy, cookies (oui/non), log: fin de build.log}
   POST /ytcheck                test de téléchargement YouTube depuis ce VPS → {ok, detail}
   PUT  /job?name=NOM[&upload=0] corps = .tgz avec code/ (le code du montage) et job/ (plan.json, narration/,
                                rangé dans jobs/NOM/NOM) :
@@ -40,6 +40,16 @@ for _k in ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy", "ALL_PROXY"
     os.environ.pop(_k, None)
 if PROXY:
     os.environ["YTDLP_PROXY"] = PROXY
+# cookies.txt d'un compte YouTube (jetable) si YouTube bloque même le proxy : docker cp cookies.txt drylow-news:/data/
+COOKIES = os.environ.get("YTDLP_COOKIES") or os.path.join(DATA, "cookies.txt")
+
+
+def cookie_args():
+    if os.path.isfile(COOKIES):
+        os.environ["YTDLP_COOKIES"] = COOKIES
+        return ["--cookies", COOKIES]
+    os.environ.pop("YTDLP_COOKIES", None)
+    return []
 st = {"busy": False, "job": None, "stage": "starting", "error": None, "youtube": None, "since": time.time(),
       "proxy": bool(PROXY)}
 lock = threading.Lock()
@@ -71,7 +81,8 @@ def ytcheck():
     shutil.rmtree(tmp, ignore_errors=True)
     os.makedirs(tmp)
     r = subprocess.run([sys.executable, "-m", "yt_dlp", "--no-playlist", "-f", "ba[abr<=80]/ba", "-o", "t.%(ext)s",
-                        *(["--proxy", PROXY] if PROXY else []), f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
+                        *(["--proxy", PROXY] if PROXY else []), *cookie_args(),
+                        f"https://www.youtube.com/watch?v={TEST_VIDEO}"], cwd=tmp, env=env(), capture_output=True,
                        text=True, encoding="utf-8", errors="replace", timeout=300)
     got = [f for f in os.listdir(tmp) if f.startswith("t.") and not f.endswith(".part")]
     ok = bool(got) and os.path.getsize(os.path.join(tmp, got[0])) > 100_000
@@ -91,6 +102,7 @@ def build(name, upload=True):
     try:
         setup()
         st.update(stage="build", error=None)
+        cookie_args()  # YTDLP_COOKIES pour le montage si le fichier est là
         p = subprocess.run([sys.executable, os.path.join(d, "code", "production", "news.py"), "build",
                             jobdir(name)] + ([] if upload else ["--no-upload"]), cwd=os.path.join(d, "code"), env=env(), stdout=log,
                            stderr=subprocess.STDOUT)
@@ -144,7 +156,8 @@ class H(BaseHTTPRequestHandler):
         path, q = self._q()
         if path == "/status":
             job = st.get("job")
-            out = dict(st, log=tail(os.path.join(jobdir(job), "build.log")) if job else [])
+            out = dict(st, cookies=os.path.isfile(COOKIES),
+                       log=tail(os.path.join(jobdir(job), "build.log")) if job else [])
             return self._send(200, out)
         if path == "/file":
             n, rel = self._name(q), q.get("path", "")

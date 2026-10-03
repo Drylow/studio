@@ -280,6 +280,9 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   confirm you're not a bot ») → proxy résidentiel Decodo (choisi par eux, payé au Go) **pour yt-dlp seulement**
   (`YTDLP_PROXY`, ou `HTTPS_PROXY` que le serveur retire de l'environnement général : Gofile, pip, deno passent en
   direct). IP « sticky » obligatoire (les liens vidéo de YouTube sont liés à l'IP). ~1,2 Go par vidéo de 18 min.
+  Les IP « ISP » de Decodo (`isp.decodo.com`) sont bloquées elles aussi (testé 3 oct., 5 clients yt-dlp) : essayer le
+  pool résidentiel en session sticky, sinon `cookies.txt` d'un compte YouTube **jetable** (risque de blocage du
+  compte) : `docker cp cookies.txt drylow-news:/data/cookies.txt`, le serveur le prend tout seul (`--cookies`).
 - **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
   (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
   dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le
