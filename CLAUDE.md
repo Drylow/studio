@@ -276,6 +276,20 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   (Helwani/Yahoo et Cormier/The Volume : pas revendiqués jusqu'ici). L'utilisateur voit les revendications dans
   YouTube Studio (vérification des droits à l'envoi) ; une revendication n'est pas un avertissement mais les revenus
   de la vidéo partent au plaignant : on refait la vidéo sans ces extraits.
+- **Sujets chauds automatiques** (l'utilisateur, 4 oct. : « que ça poste tout seul… c'est pas à moi de chercher des
+  sujets » ; il a choisi le 100 % auto vérifié par l'IA) : `production/news_auto.py`. `radar [--sport mma_en]
+  [--dry-run]` lit les flux RSS des chaînes sources (72 h, vues, Shorts écartés) + les chaînes concurrentes (`trend` :
+  Fight Night MMA d'abord, MMA Zone, Full Mount, MMA WORLD, Combat Opinions, MMA Guru, + UFC pour les résultats ; signal
+  seulement, jamais leurs extraits). **On suit les sujets des concurrents** (l'utilisateur, 4 oct. : « leurs vidéos
+  marchent tout le temps, on pourrait faire comme eux ») : leurs sujets aux plus de vues/heure d'abord, avec nos propres
+  extraits ; puis 3 sujets max sur Discord (résumé en français, « Comme : <leur vidéo> », sources, note).
+  Sources boxe (13) et foot (8) vérifiées le 4 oct. (get_content_owner) ; promoteurs, diffuseurs, clubs et réseaux
+  (Studio71, Diagonal View/Sky, Whistle…) dans `CLAIMERS`.
+  `make <id>` fait la vidéo de bout en bout (sous-titres yt-dlp → moments → plan → relecture auto : noms mal écrits +
+  voix off fidèle à l'extrait → voix → miniature → montage → contrôle des planches par l'IA → Discord, « ⚠️ à
+  regarder » si le contrôle voit un vrai problème). **En attente** : le faire tourner tout seul sur le PC (agent qui se
+  met à jour depuis GitHub avec les clés) a été bloqué par la sécurité de Claude (« agent autonome ») ; c'est à
+  l'utilisateur de l'autoriser explicitement. D'ici là : radar et vidéos lancés depuis le cloud quand il le demande.
 - **Transitions douces** (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») : chaque
   passage entre et sort en fondu court (`vfades`/`afades`), la fin d'un extrait respire jusqu'à 0,6 s dans le silence
   (`snap`), le logo animé reste 4,5 s et sort en fondu.
