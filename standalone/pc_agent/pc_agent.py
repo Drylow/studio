@@ -134,6 +134,7 @@ def main():
     lock = single_instance()
     if lock is None:
         return
+    shutil.rmtree(WORK, ignore_errors=True)        # restes d'un montage coupé (PC éteint) : jamais de clips qui traînent
     code, body = call("GET", "/pc/next")
     if code != 200:
         log("relais injoignable :", code, body[:200])

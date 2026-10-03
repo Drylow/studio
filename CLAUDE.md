@@ -294,7 +294,7 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   15 min + à l'ouverture de session ; Desinstaller.bat l'enlève). Le relais = le serveur du VPS (`/pcjob`, `/pc/*`) :
   `news.py vps <dossier> --pc` dépose, l'agent prend, monte (connexion de maison : YouTube passe), envoie sur Gofile,
   renvoie build.log au fil de l'eau + result.json + planches, efface tout ; `news.py pc-fetch <dossier> [--wait]`
-  rapatrie (montre aussi l'heure du dernier passage du PC). Vidéo reproposée si le PC s'éteint en plein montage (4 h).
+  rapatrie (montre aussi l'heure du dernier passage du PC). Montage sans nouvelles depuis 20 min (PC éteint, en veille) : reproposé tout seul ; sinon redéposer avec `vps --pc`.
 - **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
   (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
   dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le

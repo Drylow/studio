@@ -50,7 +50,7 @@ JOBS = os.path.join(DATA, "jobs")
 DENO_DIR = os.path.join(DATA, "tools", "deno")
 PC = os.path.join(DATA, "pc")
 RESULT_PATH = re.compile(r"(result\.json|build\.log|worker\.log|check/sheet_\d{2}\.jpg)")
-CLAIM_TIMEOUT = 4 * 3600   # un PC éteint en plein montage : la vidéo est reproposée après 4 h
+STALL = 20 * 60   # montage sans nouvelles (le PC renvoie build.log chaque minute) depuis 20 min : reproposé
 MODULES = ["yt-dlp[default]", "imageio-ffmpeg", "Pillow", "python-dotenv", "requests"]
 TEST_VIDEO = "MeFQgiVHNoA"   # vidéo publique courte (son seul, quelques Mo) pour le test YouTube
 # Proxy résidentiel (payé au Go) : seulement pour YouTube. Donné en YTDLP_PROXY ou en HTTPS_PROXY : dans les deux
@@ -156,8 +156,8 @@ def pc_next():
         jobs = []
         for n in os.listdir(PC) if os.path.isdir(PC) else []:
             s = pc_state(n)
-            free = s.get("state") == "pending" or (s.get("state") == "claimed"
-                                                   and time.time() - s.get("claimed", 0) > CLAIM_TIMEOUT)
+            last = max(s.get("claimed", 0), s.get("progress", 0))
+            free = s.get("state") == "pending" or (s.get("state") == "claimed" and time.time() - last > STALL)
             if free:
                 jobs.append((s.get("t", 0), n))
         if not jobs:
@@ -280,6 +280,7 @@ class H(BaseHTTPRequestHandler):
             os.makedirs(os.path.dirname(f), exist_ok=True)
             with open(f, "wb") as fh:
                 fh.write(raw)
+            pc_state(n, progress=time.time())
             return self._send(200, {"ok": True})
         if path != "/job" or not n:
             return self._send(400, {"error": "name"})
