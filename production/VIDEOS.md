@@ -56,5 +56,5 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
 | Vidéo | État | Publication |
 |---|---|---|
-| “HE HAS TO BELIEVE THAT I CHEATED!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim! | **livrée v4 bleue CORRIGÉE** (Discord, 4 oct. 00:11 heure belge) — https://gofile.io/d/y1fhk7Xj ; 14 min 46 ; refaite sans les extraits de One Night with Steiny (revendication Content ID sur la v3), commence par la voix off + photo, tout en bleu ; miniature “I BROKE HIS FACE” (bleu clair) | à caler |
+| “I BROKE HIS FACE!” Justin Gaethje FIRES BACK At Ilia Topuria’s Glove Claim! (titre choisi par l'utilisateur) | **livrée v4 bleue CORRIGÉE** (Discord, 4 oct. 00:11 heure belge) — https://gofile.io/d/y1fhk7Xj ; 14 min 46 ; refaite sans les extraits de One Night with Steiny (revendication Content ID sur la v3), commence par la voix off + photo, tout en bleu ; miniature “I BROKE HIS FACE” (bleu clair) | à caler |
 
