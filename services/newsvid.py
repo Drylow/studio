@@ -66,7 +66,7 @@ CHANNELS = {
     "boxing_en": {
         "name": "Boxing news", "sport": "Boxing", "language": "en",
         "brand": "RING DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY BOXING NEWS",
-        "accent": "#D4A017", "accent2": "#FFFFFF",
+        "accent": "#D4A017", "accent2": "#FFC83D", "thumb_accent": "#FFC83D",   # or (cadre) + or clair (phrase forte)
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["boxing news", "boxing interview", "boxing press conference"],
@@ -87,7 +87,7 @@ CHANNELS = {
     "football_en": {
         "name": "Football news", "sport": "Football (soccer)", "language": "en",
         "brand": "PITCH DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY FOOTBALL NEWS",
-        "accent": "#1DB954", "accent2": "#FFFFFF",
+        "accent": "#1DB954", "accent2": "#5CF08A", "thumb_accent": "#5CF08A",   # vert (cadre) + vert clair (phrase forte)
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["press conference football", "Premier League press conference", "football interview"],
@@ -564,7 +564,7 @@ _SENT_END = re.compile(r"[.?!][\"”’')\]]*$")
 # Prononciation de la voix off (Algrow lit mal certains noms : « Gaethje » = GAY-chee) : orthographe phonétique
 # envoyée à la voix SEULEMENT (sous-titres, titres et bandeaux gardent la vraie orthographe). Un nom = un mot.
 PRONOUNCE = {"Gaethje": "Gay-chee", "Cormier": "Kor-mee-ay", "Tsarukyan": "Tsa-roo-kee-an",
-             "Oliveira": "Oli-vay-ra"}
+             "Oliveira": "Oli-vay-ra", "Jorge": "Zhor-zhe", "Jesus": "Zheh-zoosh", "Alalshikh": "Al-ash-sheikh"}
 
 
 def speakable(text):
