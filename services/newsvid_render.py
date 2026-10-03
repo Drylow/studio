@@ -173,32 +173,6 @@ def _logo(d, brand, acc):
     d.text((x1 - tw - 18, y0 + 4), brand, font=f, fill=(255, 255, 255))
 
 
-# ── Transitions : volet penché aux couleurs de la chaîne ────────────────────
-# Chaque segment commence couvert par le volet (qui part vers la droite) et finit couvert (le volet arrive
-# de la gauche) : collés bout à bout, ça fait un « whip » continu d'un segment au suivant, sans fondu à calculer.
-
-SLANT = 240                       # pente du volet (px)
-SW_W = W + 2 * SLANT              # largeur du PNG du volet
-SWIPE_OUT, SWIPE_IN = 0.30, 0.24  # sortie au début du segment / arrivée à la fin (s)
-
-
-def make_swipe(plan, dest):
-    from PIL import Image, ImageDraw, ImageFont
-    acc = _hex(plan.get("accent"))
-    im = Image.new("RGBA", (SW_W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    d.polygon([(SLANT, 0), (SW_W, 0), (SW_W - SLANT, H), (0, H)], fill=acc + (255,))
-    dark = tuple(int(v * 0.55) for v in acc) + (255,)
-    d.polygon([(SLANT, 0), (SLANT + 70, 0), (70, H), (0, H)], fill=dark)                    # bord arrière
-    d.polygon([(SW_W - 46, 0), (SW_W, 0), (SW_W - SLANT, H), (SW_W - SLANT - 46, H)], fill=(255, 255, 255, 255))
-    brand = (plan.get("brand") or "NEWS").upper()
-    f = ImageFont.truetype(os.path.join(FONTS, "Anton-Regular.ttf"), 190)
-    tw = d.textlength(brand, font=f)
-    d.text(((SW_W - tw) / 2, H / 2 - 135), brand, font=f, fill=tuple(int(v * 0.78) for v in acc) + (255,))
-    im.save(dest, "PNG")
-    return dest
-
-
 def make_shade(dest):
     """Dégradé noir à gauche (sous le titre de la voix off) : lisible même si le b-roll a ses propres textes."""
     from PIL import Image
@@ -211,32 +185,7 @@ def make_shade(dest):
     return dest
 
 
-def _swipe_filter(src, sw, dur, out, first=False):
-    """[src][sw] → [out] : volet qui sort (début) et qui entre (fin)."""
-    def sm(p):
-        return f"(({p})*({p})*(3-2*({p})))"
-    t0 = dur - SWIPE_IN
-    p_out = f"min(1,t/{SWIPE_OUT:.3f})"
-    p_in = f"min(1,(t-{t0:.3f})/{SWIPE_IN - 1 / FPS:.3f})"
-    x_out = f"{-SLANT}+{W + SLANT}*{sm(p_out)}"
-    x_in = f"{-SW_W}+{SW_W - SLANT}*{sm(p_in)}"
-    x = f"if(gt(t,{t0:.3f}),{x_in},{W + 10})" if first else \
-        f"if(lt(t,{SWIPE_OUT:.3f}),{x_out},if(gt(t,{t0:.3f}),{x_in},{W + 10}))"
-    en = f"gt(t,{t0:.3f})" if first else f"lt(t,{SWIPE_OUT:.3f})+gt(t,{t0:.3f})"
-    return f"[{src}][{sw}]overlay=x='{x}':y=0:enable='{en}':shortest=1[{out}]"
-
-
 # ── Textes à l'écran (ASS) ──────────────────────────────────────────────────
-
-STOP = set("the a an and or but to of in on at for with is are was were be been it its it's i i'm i'd i'll you "
-           "he she we they him her them his my me our your their that this what who how why when where do does did "
-           "not no so if just like get got going gonna have has had will would should could can there here then "
-           "than now out up down all one about from by as into over".split())
-
-
-TAIL = {"CUZ", "COS", "BECAUSE", "AND", "BUT", "SO", "LIKE", "UM", "UH", "THE", "A", "TO", "OF", "THAT", "YOU",
-        "I", "IT", "BRO", "MAN", "YEAH", "OR"}
-
 
 def _c(rgb):
     return "&H00{:02X}{:02X}{:02X}".format(rgb[2], rgb[1], rgb[0])
@@ -263,28 +212,6 @@ def _wrap(text, n):
     if cur:
         lines.append(cur)
     return lines
-
-
-WEAK = set("believe believes think thinks know knows said say says saying want wants really honestly definitely "
-           "actually literally probably something everything anything nothing people thing things guys going "
-           "gonna gotta should would could".split())
-STRONG = re.compile(r"^(QUIT|CHEAT|ILLEGAL|LIE|LIAR|LYING|RETIR|BEAT|KNOCK|FAKE|EXCUSE|NEVER|DESERVE|SCARED|COWARD|BS|"
-                    r"DONE|WALK|BROKE|DESTROY|FINISH|HUMBL|DISRESPECT|JOKE|CLOWN|DUCK|RUN|BELT|CHAMP|KILL|EMBARRASS)")
-
-
-def _keyword(text):
-    """Le mot fort de la citation (coloré) : mot plein (pas « HONESTLY », « BELIEVE »), bonus aux mots qui
-    claquent (QUIT, CHEATED, ILLEGAL…), léger avantage à la fin de la phrase."""
-    words = re.findall(r"[A-Za-z][A-Za-z'’]+", text)
-    best, score = "", -1.0
-    for k, w in enumerate(words):
-        lw = w.lower()
-        if lw in STOP or lw in WEAK or (lw.endswith("ly") and len(lw) > 4) or len(w) < 3:
-            continue
-        sc = len(w) + 1.0 * k / max(1, len(words)) + (4 if STRONG.match(w.upper()) else 0)
-        if sc >= score:
-            best, score = w, sc
-    return best.upper()
 
 
 def _styles(acc, acc2, framed):
@@ -338,92 +265,184 @@ def censor(text):
     return PROFANITY.sub(lambda m: (m.group(1) or "") + m.group(2)[0] + "*" * (len(m.group(2)) - 1), text)
 
 
-def _quote_text(q, acc2):
-    t = censor(_ass_escape(q)).upper().strip("\"“” ")
-    words = t.split()
-    while (len(words) > 3 and not re.search(r"[.?!]$", words[-1])  # phrase coupée : « … I CHEATED CUZ »
-           and re.sub(r"[^A-Z']", "", words[-1]) in TAIL):
-        words.pop()
-    t = " ".join(words).rstrip(",;:-")
-    n = len(t)
-    size, per = (124, 22) if n <= 50 else (104, 27) if n <= 90 else (86, 33)
-    kw = _keyword(t)
-    lines = []
-    for ln in _wrap(t, per):
-        if kw:
-            colored = f"{{\\c&H{acc2[2]:02X}{acc2[1]:02X}{acc2[0]:02X}&}}{kw}{{\\c&HFFFFFF&}}"
-            ln = re.sub(rf"\b{re.escape(kw)}\b", lambda m: colored, ln, count=1)
-        lines.append(ln)
-    return size, "\\N".join(lines)
+STARTERS = set("what so but and he she they we you it that this like well yeah no because if when why how do did "
+               "is are was were it's that's there's look listen honestly man bro now then you're he's she's they're "
+               "we're what's let's who where there okay right see sure true not absolutely yes oh".split())
+MODALS = {"would", "could", "should", "can", "will", "was", "has", "had"}   # « Gaethje Would do that » : majuscule en trop
+SUBJ_VERB = {"he's", "she's", "it's", "that's", "there's", "what's", "you're", "we're", "they're", "i'm"}
+FILLER = re.compile(r"^(um+|uh+|uhm|erm|hmm+)[,.]?$", re.I)
+NOISE = re.compile(r"^(mhm|mm-?hmm|uh-?huh|hmm+|um+|uh+)[.!?,]*$", re.I)   # sous-titre qui ne dit rien → enlevé
+KEEP_DOUBLE = {"had", "that", "is", "very", "so", "no", "bye"}
 
 
-def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None):
-    """Sous-titres + crédit + nom de qui parle + citation choc en grand (pop) + rappel d'abonnement."""
+def _restarts(t):
+    """Phrase lâchée en route puis reprise (« he's What is he… », « He's I don't know ») → « he's... What is he… »."""
+    words = t.split(" ")
+    for i in range(1, len(words)):
+        w, prev = words[i], words[i - 1]
+        if re.search(r"[.?!,…:;-]$", prev) or not w[:1].isupper():
+            continue
+        if w.lower() in MODALS:
+            words[i] = w.lower()
+            continue
+        if (w != "I" and w.lower().strip(",.?!") in STARTERS) or \
+                (re.match(r"I\b", w) and prev.lower() in SUBJ_VERB):
+            words[i - 1] += "..."
+    return " ".join(words)
+
+
+def _tidy(t):
+    """Sous-titre propre : sans « [laughter] », sans « um/uh » (au milieu d'une phrase → « ... »), sans bégaiement
+    (« you you you do it » → « you do it »)."""
+    t = re.sub(r"\[[^\]]*\]", " ", t)                       # [laughter], [music]… (les « [ __ ] » sont déjà « **** »)
+    words, out, cap = t.split(), [], False
+    for w in words:
+        if FILLER.match(w):
+            if out and not re.search(r"[.?!,…:;-]$", out[-1]):
+                out[-1] += "..."
+            elif not out or re.search(r"[.?!]$", out[-1]):
+                cap = True                                 # « Uh having parties » → « Having parties »
+            continue
+        if out and w.lower().strip(",.?!") == out[-1].lower().rstrip(".…").strip(",?!") \
+                and w.lower().strip(",.?!") not in KEEP_DOUBLE and not re.search(r"[.?!]$", out[-1]):
+            out[-1] = re.sub(r"\.\.\.$", "", out[-1])
+            if out[-1][:1].isupper() and len(out) == 1 or (len(out) > 1 and re.search(r"[.?!]$", out[-2])):
+                w = w[:1].upper() + w[1:]
+            out[-1] = w
+            continue
+        if cap:
+            w, cap = w[:1].upper() + w[1:], False
+        out.append(w)
+    t = " ".join(out)
+    while True:   # « He can he can fight » → « He can fight »
+        t2 = re.sub(r"\b([A-Za-z']+ [A-Za-z']+(?: [A-Za-z']+)?) (\1)\b", r"\1", t, flags=re.I)
+        if t2 == t:
+            break
+        t = t2
+    return re.sub(r"\.\.\.(\.+)", "...", t).strip()
+
+
+KEEP_CAPS = {"UFC", "MMA", "BMF", "TUF", "USA", "PPV", "KO", "TKO", "GOAT", "I", "OK", "TV", "PFL"}
+
+
+NAMES = set()   # noms propres de la vidéo (personnes du plan), remplis par build() : « ILIA TOPURIA » → « Ilia Topuria »
+
+
+def _decaps(subs):
+    """Transcription qui crie (« WHEN HIS TIME IS OVER, SOMEONE ») → casse normale ; les noms propres gardent leur
+    majuscule (noms du plan, ou mots écrits avec une majuscule au milieu d'une phrase ailleurs dans l'extrait).
+    Tout l'extrait d'un bloc : un mot en majuscules en début de ligne n'est pas forcément un début de phrase."""
+    known = {n.lower(): n for n in NAMES}
+    flat = [(k, w) for k, s in enumerate(subs) for w in s["t"].split()]
+    for i, (_, w) in enumerate(flat):
+        core = w.strip(".,?!\"'")
+        if i and core[:1].isupper() and not core.isupper() and not re.search(r"[.?!]$", flat[i - 1][1]) \
+                and core.lower() not in STARTERS:
+            known.setdefault(core.lower(), core)
+    words = [w for _, w in flat]
+    caps = [len(re.sub(r"[^A-Za-z]", "", w)) > 1 and w.isupper() and re.sub(r"[^A-Z]", "", w) not in KEEP_CAPS
+            for w in words]
+    for i, w in enumerate(words):
+        if caps[i] and ((i > 0 and caps[i - 1]) or (i + 1 < len(words) and caps[i + 1])):
+            core = re.sub(r"[^A-Za-z']", "", w).lower()
+            rep = known.get(core, core)
+            if i == 0 or re.search(r"[.?!]$", words[i - 1]):
+                rep = rep[:1].upper() + rep[1:]
+            words[i] = re.sub(r"[A-Za-z']+", lambda m: rep, w, count=1)
+    out = [[] for _ in subs]
+    for (k, _), w in zip(flat, words):
+        out[k].append(w)
+    return [dict(s, t=" ".join(ws)) for s, ws in zip(subs, out)]
+
+
+def _wrap_subs(subs, max_chars=78):
+    """Lignes de sous-titres auto → phrases lisibles (2 lignes max) ; « ... » quand une phrase est lâchée et reprise."""
+    out = []
+    for s in _decaps(subs):
+        t = _tidy(_restarts(censor(s["t"]).strip()))  # gros mots : « **** » / « F*** »
+        if not t or NOISE.match(t):
+            continue
+        if out and re.search(r"[.?!]$", out[-1]["t"]) and t[:1].islower():
+            t = t[:1].upper() + t[1:]                      # « … invincible. » + « having parties » (le « uh » est parti)
+        if out and len(out[-1]["t"]) + len(t) + 1 <= max_chars and s["s"] - out[-1]["e"] < 0.4 \
+                and not re.search(r"[.?!]$", out[-1]["t"]):
+            out[-1] = {"s": out[-1]["s"], "e": s["e"], "t": _tidy(_restarts(out[-1]["t"] + " " + t))}
+        else:
+            out.append(dict(s, t=t))
+    for k in range(len(out) - 1):  # coupure entre deux sous-titres au milieu d'une phrase reprise autrement
+        a, b = out[k]["t"], out[k + 1]["t"]
+        first = b.split()[0] if b.split() else ""
+        if not re.search(r"[.?!,…]$", a) and first[:1].isupper() and first != "I" \
+                and first.lower().strip(",.?!") in STARTERS:
+            out[k]["t"] = a + "..."
+    return out
+
+
+def _sub_text(t, color=None):
+    lines = _wrap(_ass_escape(t), 42)
+    if len(lines) > 2:  # 3 lignes : on resserre en 2 lignes un peu plus longues
+        lines = _wrap(_ass_escape(t), max(42, (len(t) + 1) // 2 + 6))
+    txt = "\\N".join(lines)
+    return (f"{{\\c{color}}}" + txt) if color else txt
+
+
+def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None, brand=""):
+    """Sous-titres (la phrase forte en jaune, rien qui surgit au milieu de l'écran), crédit, nom de qui parle
+    pendant sa phrase forte, rappel d'abonnement discret une fois."""
     x, y, w, h = BOX
     ev = []
     q0 = q1 = None
     if quote and quote.get("t") and quote["e"] > quote["s"]:
-        q0, q1 = max(0.0, quote["s"] - 0.05), min(dur - 0.2, quote["e"] + 0.35)
+        q0, q1 = max(0.0, quote["s"] - 0.05), min(dur - 0.2, quote["e"] + 0.2)
+    yellow = f"&H{acc2[2]:02X}{acc2[1]:02X}{acc2[0]:02X}&"
     for s in subs or []:
         if s["e"] - s["s"] < 0.15:
             continue
-        if q0 is not None and s["s"] < q1 and s["e"] > q0:  # la citation remplace le sous-titre normal
-            continue
-        ev.append(_ev(s["s"], s["e"], "Sub", _ass_escape(s["t"]), 0))
+        hot = q0 is not None and s["s"] < q1 - 0.1 and s["e"] > q0 + 0.1
+        ev.append(_ev(s["s"], s["e"], "Sub", _sub_text(s["t"], yellow if hot else None), 0))
     if credit:
         ev.append(_ev(0, dur, "Credit", f"Credit: {_ass_escape(credit)}"))
-    def free(a, b):  # pas en même temps que la citation (même endroit de l'écran)
-        return q0 is None or b <= q0 or a >= q1
-    if speaker:
-        # le nom s'affiche PENDANT la citation (c'est sûrement elle/lui qui parle à ce moment-là) ; sans citation,
-        # au début. En haut à gauche : jamais sur les sous-titres ni sur la citation.
-        nx, ny = (x + 30, y + 30) if framed else (60, 110)
-        a, b = (q0, min(dur - 0.3, max(q1, q0 + 4.0))) if q0 is not None else (0.35, min(dur - 0.3, 4.6))
+    if brand and not framed:  # plein écran : petit logo en haut à droite (dans le cadre, il est sur le fond)
+        ev.append(_ev(0, dur, "Tag", f"{{\\an9\\pos({W - 44},{34})\\fs56\\fnAnton\\b0}}{_ass_escape(brand)}", 2))
+    if speaker and q0 is not None and framed:  # le nom PENDANT sa phrase forte : c'est sûrement lui/elle à l'écran
+        nx, ny = x + 30, y + 30                    # (plein écran : le crédit le dit déjà, la vidéo a ses propres textes)
+        a, b = q0, min(dur - 0.3, max(q1, q0 + 4.0))
         if b - a >= 1.5:
             ev.append(_name_plate(speaker, nx, ny, a, b, top=True))
-    if q0 is not None:
-        size, txt = _quote_text(quote["t"], acc2)
-        mv = (H - (y + h) + 70) if framed else 150
-        ev.append(_ev(q0, q1, "Quote", f"{{\\fs{size}\\an2\\pos({W // 2},{H - mv})\\fscx135\\fscy135"
-                                       f"\\t(0,150,\\fscx100\\fscy100)\\fad(60,160)}}{txt}", 4))
     pill_at = None
     if pill:
-        cands = [min(6.0, max(1.0, dur - 6)), 1.0, (q1 or 0) + 0.3, dur - 5.0]
-        pill_at = next((a for a in cands if 0.5 <= a <= dur - 4.6 and free(a, a + 4.5)), None)
+        cands = [min(6.0, max(1.0, dur - 6)), 1.0, dur - 5.0]
+        pill_at = next((a for a in cands if 0.5 <= a <= dur - 4.6
+                        and (q0 is None or a + 4.5 <= q0 or a >= q1)), None)
     if pill_at is not None:
         a = pill_at
-        ev.append(_ev(a, a + 4.5, "Pill", f"{{\\an9\\pos({x + w - 30},{y + 30})\\fscx60\\fscy60"
-                                          f"\\t(0,180,\\fscx100\\fscy100)\\fad(0,250)}}{_ass_escape(pill)}", 5))
+        ev.append(_ev(a, a + 4.5, "Pill", f"{{\\an9\\pos({x + w - 30},{y + 30})\\fad(250,250)}}{_ass_escape(pill)}", 5))
     _write_ass(dest, _styles(acc, acc2, framed), ev)
     return pill_at, (q0, q1)
 
 
-def _wrap_subs(subs, max_chars=42):
-    """Lignes de sous-titres auto (souvent coupées au milieu) → phrases courtes lisibles."""
-    out = []
-    for s in subs:
-        t = censor(s["t"]).strip()  # gros mot censuré par YouTube « [ __ ] » ou en clair → « **** » / « F*** »
-        if not t:
-            continue
-        if out and len(out[-1]["t"]) + len(t) + 1 <= max_chars and s["s"] - out[-1]["e"] < 0.4 \
-                and not re.search(r"[.?!]$", out[-1]["t"]):
-            out[-1] = {"s": out[-1]["s"], "e": s["e"], "t": out[-1]["t"] + " " + t}
-        else:
-            out.append(dict(s, t=t))
-    return out
+def make_frame(plan, dest):
+    """Cadre des extraits (style Fight Night) : bord + halo à la couleur de la chaîne + logo, centre transparent ;
+    posé sur la vidéo elle-même floutée."""
+    from PIL import Image, ImageDraw, ImageFilter
+    acc = _hex(plan.get("accent"))
+    x, y, w, h = BOX
+    glow = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(glow).rectangle((x - 16, y - 16, x + w + 16, y + h + 16), fill=150)
+    glow = glow.filter(ImageFilter.GaussianBlur(24))
+    im = Image.new("RGBA", (W, H), acc + (0,))
+    im.putalpha(glow)
+    d = ImageDraw.Draw(im)
+    d.rectangle((x - 8, y - 8, x + w + 7, y + h + 7), fill=acc + (255,))
+    d.rectangle((x, y, x + w - 1, y + h - 1), fill=(0, 0, 0, 0))
+    _logo(d, (plan.get("brand") or "NEWS").upper(), acc)
+    im.save(dest, "PNG")
+    return dest
 
 
-def sfx_track(events, dur, dest):
-    from services import sfx
-    return sfx.build_track(events, dur + 0.5, dest)
-
-
-# ── Segments ────────────────────────────────────────────────────────────────
-
-def render_clip(seg, files, bg, workdir, dest, accent, log, accent2=(255, 210, 31), swipe=None, first=False,
-                pill=None):
-    """Extrait (exact, calé au silence) → mp4 normalisé. Plein écran pour l'ouverture, sinon dans le cadre.
-    Montage : volet de transition, nom de qui parle, citation choc en grand + zoom, rappel d'abonnement."""
+def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210, 31), pill=None, brand=""):
+    """Extrait (exact, calé au silence) → mp4 normalisé, coupes franches, sans bruitage. Ouverture : plein écran,
+    léger zoom ; ensuite : dans le cadre, sur la même vidéo floutée."""
     start, end = snap(files["a"], seg["start"], seg["end"])
     shift = seg["start"] - start
     dur = end - start
@@ -438,43 +457,25 @@ def render_clip(seg, files, bg, workdir, dest, accent, log, accent2=(255, 210, 3
     quote = dict(seg["quote"], s=seg["quote"]["s"] + shift, e=seg["quote"]["e"] + shift) if seg.get("quote") else None
     framed = not seg.get("full")
     ass = os.path.join(workdir, os.path.basename(dest) + ".ass")
-    pill_at, (q0, q1) = clip_ass(ass, subs, framed, seg.get("credit") or "", seg.get("speaker") or "", quote, dur,
-                           accent, accent2, pill=pill)
-    sfx = [(0.0, "whoosh", 0.55)] if not first else []
-    if q0 is not None:
-        sfx.append((q0, "hit", 0.75))
-    if pill_at is not None:
-        sfx.append((pill_at, "pop", 0.5))
-    sfx_wav = sfx_track(sfx, dur, os.path.join(workdir, os.path.basename(dest) + ".sfx.wav"))
+    clip_ass(ass, subs, framed, seg.get("credit") or "", seg.get("speaker") or "", quote, dur, accent, accent2,
+             pill=pill, brand=brand)
     x, y, w, h = BOX
     ins = ["-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["v"],
-           "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["a"], "-i", sfx_wav]
+           "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["a"]]
     sub = f"subtitles={os.path.basename(ass)}:fontsdir=fonts"
-    zoom = f":enable='between(t,{q0:.3f},{q1:.3f})'" if q0 is not None else None
-    cw, ch = (w, h) if framed else (W, H)
     if framed:
-        ins += ["-loop", "1", "-framerate", str(FPS), "-i", bg]
-        g = (f"[0:v]fps={FPS},scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,"
-             f"setsar=1[c];")
-        base = f"[3:v][c1]overlay={x}:{y}:shortest=1[b0];"
-        zx, zy = x, y
+        ins += ["-loop", "1", "-framerate", str(FPS), "-i", frame]
+        g = (f"[0:v]fps={FPS},setsar=1,split[s1][s2];"
+             f"[s1]scale=480:270:force_original_aspect_ratio=increase,crop=480:270,boxblur=12:2,"
+             f"scale={W}:{H},eq=brightness=-0.22:saturation=0.75[bg];"
+             f"[s2]scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2[c];"
+             f"[bg][2:v]overlay=0:0:shortest=1[bf];[bf][c]overlay={x}:{y}[b0];[b0]{sub},format=yuv420p[v];")
     else:
-        g = f"[0:v]fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[c];"
-        base = "[c1]null[b0];"
-        zx, zy = 0, 0
-    if zoom:  # « punch-in » pendant la citation choc
-        zw, zh = int(cw * 1.09) // 2 * 2, int(ch * 1.09) // 2 * 2
-        g += f"[c]split[c1][cz0];[cz0]scale={zw}:{zh},crop={cw}:{ch}[cz];" + base
-        g += f"[b0][cz]overlay={zx}:{zy}{zoom}[b1];[b1]{sub}[b2];"
-    else:
-        g += "[c]null[c1];" + base + f"[b0]{sub}[b2];"
-    sw_idx = 4 if framed else 3
-    ins += ["-loop", "1", "-framerate", str(FPS), "-i", swipe]
-    g += _swipe_filter("b2", f"{sw_idx}:v", dur, "b3", first=first) + ";[b3]format=yuv420p[v];"
+        zw, zh = int(W * 1.04) // 2 * 2, int(H * 1.04) // 2 * 2
+        g = (f"[0:v]fps={FPS},scale={zw}:{zh}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+             f"{sub},format=yuv420p[v];")
     mute = ("volume=0:enable='" + "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in mutes) + "',") if mutes else ""
-    g += (f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[ca];"
-          "[2:a]aresample=48000,aformat=channel_layouts=stereo[fx];"
-          "[ca][fx]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
+    g += f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,aformat=channel_layouts=stereo[a]"
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
@@ -490,8 +491,49 @@ def broll_window(files, near_start, near_end, dur):
     return max(0.0, min(total - dur, near_end + 1))
 
 
+def load_photos(job_dir):
+    """photos/photos.json (fait par la miniature : identité vérifiée par le texte de la source) → {nom: [(chemin,
+    visage)]} ; seulement les photos nettes, sans texte ni filigrane."""
+    import ast
+    path = os.path.join(job_dir, "photos", "photos.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    out = {}
+    for name, items in data.items():
+        for it in items:
+            p = os.path.join(job_dir, "photos", it.get("file", ""))
+            try:
+                r = it.get("rate") or {}
+                r = ast.literal_eval(r) if isinstance(r, str) else r
+            except (ValueError, SyntaxError):
+                r = {}
+            if os.path.isfile(p) and r.get("face") and r.get("clear", True) and not r.get("watermark") \
+                    and not r.get("text"):
+                out.setdefault(name, []).append((p, r["face"]))
+    return out
+
+
+def photo_still(path, face, dest):
+    """Photo → image 3840×2160 cadrée sur le visage (placé à droite du centre, à 35 % de la hauteur) : jamais de
+    tête coupée, la gauche reste libre pour le titre."""
+    from PIL import Image, ImageOps
+    with Image.open(path) as im0:
+        im = ImageOps.exif_transpose(im0).convert("RGB")
+    iw, ih = im.size
+    cx, cy = (face[0] + face[2]) / 2 * iw, (face[1] + face[3]) / 2 * ih
+    cw = min(iw, ih * 16 / 9)
+    ch = cw * 9 / 16
+    x0 = min(max(0, cx - cw * 0.62), iw - cw)
+    y0 = min(max(0, cy - ch * 0.35), ih - ch)
+    im.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((2 * W, 2 * H), Image.LANCZOS).save(dest, quality=92)
+    return dest
+
+
 def narration_ass(dest, seg, dur, plan, acc, acc2):
-    """Voix off : titre de l'info (glisse), nom de qui va parler, fil d'actu qui défile en bas, logo."""
+    """Voix off : titre de l'info (le contexte) + logo ; rien d'autre."""
     ev = []
     brand = (plan.get("brand") or "NEWS").upper()
     ev.append(_ev(0, dur, "Tag", f"{{\\an9\\pos({W - 44},{34})\\fs56\\fnAnton\\b0}}{_ass_escape(brand)}", 2))
@@ -499,67 +541,54 @@ def narration_ass(dest, seg, dur, plan, acc, acc2):
     if head:
         lines = _wrap(_ass_escape(head), 15)[:3]
         y0 = 280 if len(lines) < 3 else 200
-        ev.append(_ev(0.25, dur, "Tag", f"{{\\move(-500,{y0},96,{y0},0,220)}}"
+        ev.append(_ev(0.25, dur, "Tag", f"{{\\pos(96,{y0})\\fad(250,0)}}"
                                         f"{'THE LATEST' if not seg.get('outro') else 'YOUR TAKE'}", 3))
-        ev.append(_ev(0.4, dur, "Head", f"{{\\move(-1400,{y0 + 70},96,{y0 + 70},0,320)}}" + "\\N".join(lines), 3))
-    # pas de bandeau de nom pendant la voix off : le b-roll peut montrer l'animateur et pas la personne nommée
-    # (le titre de l'info dit déjà de qui on parle)
+        ev.append(_ev(0.4, dur, "Head", f"{{\\pos(96,{y0 + 70})\\fad(300,0)}}" + "\\N".join(lines), 3))
     if seg.get("outro") and plan.get("subscribe"):
-        ev.append(_ev(1.0, dur, "Pill", f"{{\\an3\\pos({W - 60},{H - 140})\\fscx60\\fscy60"
-                                        f"\\t(0,180,\\fscx100\\fscy100)}}{_ass_escape(plan['subscribe'])}", 4))
-    tick = [t for t in plan.get("ticker") or [] if t]
-    if tick:  # bandeau noir + étiquette + texte qui défile (180 px/s)
-        yb = H - 76
-        ev.append(_ev(0, dur, "Box", f"{{\\p1\\pos(0,{yb})\\c&H000000&\\alpha&H30&}}m 0 0 l {W} 0 l {W} 76 l 0 76{{\\p0}}", 1))
-        txt = "   •   ".join(_ass_escape(t) for t in tick)
-        txt = (txt + "   •   ") * 3
-        x0, x1 = int(W * 0.35), int(W * 0.35 - 180 * dur)
-        ev.append(_ev(0, dur, "Tick", f"{{\\clip(260,{yb},{W},{H})\\move({x0},{yb + 15},{x1},{yb + 15})}}{txt}", 2))
-        ev.append(_ev(0, dur, "Tag", f"{{\\pos(26,{yb + 14})\\fs38}}LATEST", 3))
+        ev.append(_ev(1.0, dur, "Pill", f"{{\\an3\\pos({W - 60},{H - 120})\\fad(300,0)}}"
+                                        f"{_ass_escape(plan['subscribe'])}", 4))
     return _write_ass(dest, _styles(acc, acc2, False), ev)
 
 
 def render_narration(seg, audio, files, b0, workdir, dest, music, accent, plan, accent2=(255, 210, 31),
-                     swipe=None, shade=None):
+                     shade=None, photo=None):
+    """Voix off sur la photo de la personne dont on parle (zoom lent) ou, à défaut, sur des images muettes de sa
+    vidéo ; musique dessous ; coupes franches, sans bruitage."""
     dur = media.duration(audio) + 0.35
     ass = narration_ass(os.path.join(workdir, os.path.basename(dest) + ".ass"), seg, dur, plan, accent, accent2)
-    sfx_wav = sfx_track([(0.0, "whoosh", 0.55)], dur, os.path.join(workdir, os.path.basename(dest) + ".sfx.wav"))
     n = max(1, int(dur * FPS))
-    ins = ["-ss", f"{b0:.3f}", "-t", f"{dur:.3f}", "-i", files["v"], "-i", audio,
-           "-stream_loop", "-1", "-i", music, "-i", sfx_wav, "-loop", "1", "-framerate", str(FPS), "-i", swipe,
-           "-loop", "1", "-framerate", str(FPS), "-i", shade or make_shade(os.path.join(workdir, "shade.png"))]
-    # b-roll : zoom lent (calculé sur une image 2× plus grande : pas de tremblement), assombri
-    g = (f"[0:v]fps={FPS},scale={2 * W}:{2 * H}:force_original_aspect_ratio=increase,crop={2 * W}:{2 * H},setsar=1,"
-         f"zoompan=z='1+0.06*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
-         f"eq=brightness=-0.10:saturation=0.8[bb];[bb][5:v]overlay=0:0:shortest=1,"
-         f"subtitles={os.path.basename(ass)}:fontsdir=fonts[b2];"
-         + _swipe_filter("b2", "4:v", dur, "b3") + ";[b3]format=yuv420p[v];"
+    if photo:
+        vin = ["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}", "-i", photo]
+        pre = f"[0:v]fps={FPS},setsar=1,"
+    else:
+        vin = ["-ss", f"{b0:.3f}", "-t", f"{dur:.3f}", "-i", files["v"]]
+        pre = f"[0:v]fps={FPS},scale={2 * W}:{2 * H}:force_original_aspect_ratio=increase,crop={2 * W}:{2 * H},setsar=1,"
+    ins = vin + ["-i", audio, "-stream_loop", "-1", "-i", music,
+                 "-loop", "1", "-framerate", str(FPS), "-i", shade or make_shade(os.path.join(workdir, "shade.png"))]
+    g = (pre + f"zoompan=z='1+0.05*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},"
+         f"eq=brightness=-0.08:saturation=0.9[bb];[bb][3:v]overlay=0:0:shortest=1,"
+         f"subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
          f"[1:a]aresample=48000,loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=0.35[n];"
          f"[2:a]aresample=48000,volume=0.11,afade=t=in:d=0.4[m];"
-         f"[3:a]aresample=48000,aformat=channel_layouts=stereo[fx];"
-         f"[n][m][fx]amix=inputs=3:duration=first:normalize=0,aresample=48000[a]")
+         f"[n][m]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                      os.path.basename(dest)], cwd=workdir)
     return dest
 
 
-def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), swipe=None, dur=2.6):
-    """Logo animé entre l'ouverture et la première voix off : nom de la chaîne qui claque + slogan."""
+def render_sting(plan, workdir, dest, music, accent, accent2=(255, 210, 31), dur=2.4):
+    """Logo entre l'ouverture et la première voix off : nom de la chaîne + slogan, sur la musique, sans bruitage."""
     bg = make_background(plan, os.path.join(workdir, "bg_plain.png"), box=False)
     brand = _ass_escape((plan.get("brand") or "NEWS").upper())
     slogan = _ass_escape(re.sub(r"^SUBSCRIBE FOR\s+", "", (plan.get("subscribe") or "").upper()))
-    ev = [_ev(0.15, dur, "Brand", f"{{\\pos({W // 2},{H // 2 - 30})\\fscx170\\fscy170\\blur12"
-                                  f"\\t(0,230,\\fscx100\\fscy100\\blur0)}}{brand}", 2)]
+    ev = [_ev(0.1, dur, "Brand", f"{{\\pos({W // 2},{H // 2 - 30})\\fscx115\\fscy115\\fad(200,0)"
+                                 f"\\t(0,400,\\fscx100\\fscy100)}}{brand}", 2)]
     if slogan:
-        ev.append(_ev(0.55, dur, "Slogan", f"{{\\pos({W // 2},{H // 2 + 260})\\fad(200,0)}}{slogan}", 2))
+        ev.append(_ev(0.5, dur, "Slogan", f"{{\\pos({W // 2},{H // 2 + 260})\\fad(250,0)}}{slogan}", 2))
     ass = _write_ass(os.path.join(workdir, "sting.ass"), _styles(accent, accent2, False), ev)
-    sfx_wav = sfx_track([(0.0, "whoosh", 0.55), (0.15, "hit", 0.9)], dur, os.path.join(workdir, "sting.sfx.wav"))
-    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts[b2];"
-         + _swipe_filter("b2", "3:v", dur, "b3") + ";[b3]format=yuv420p[v];"
-         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3[m];[2:a]aresample=48000,aformat=channel_layouts=stereo[fx];"
-         f"[m][fx]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
+    g = (f"[0:v]fps={FPS},format=rgb24,subtitles={os.path.basename(ass)}:fontsdir=fonts,format=yuv420p[v];"
+         f"[1:a]aresample=48000,volume=0.16,afade=t=in:d=0.3,aformat=channel_layouts=stereo[a]")
     media.run(["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}", "-i", bg, "-stream_loop", "-1", "-i", music,
-               "-i", sfx_wav, "-loop", "1", "-framerate", str(FPS), "-i", swipe,
                "-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
                os.path.basename(dest)], cwd=workdir)
     return dest
@@ -634,9 +663,14 @@ def build(job_dir, work_root, upload=True, keep=False):
     accent = _hex(plan.get("accent"))
     accent2 = _hex(plan.get("accent2"), default=(255, 210, 31))
     shutil.copytree(FONTS, os.path.join(work, "fonts"), dirs_exist_ok=True)
-    bg = make_background(plan, os.path.join(work, "bg.png"))
-    swipe = make_swipe(plan, os.path.join(work, "swipe.png"))
+    frame = make_frame(plan, os.path.join(work, "frame.png"))
     shade = make_shade(os.path.join(work, "shade.png"))
+    photos = load_photos(job_dir)          # {personne: [(photo, visage)]} : voix off sur la personne dont on parle
+    NAMES.clear()
+    for nm in [x.get("speaker") or "" for x in plan["segments"]] + list((plan.get("thumb") or {}).get("people") or []) \
+            + list((plan.get("spelling") or {}).values()):
+        NAMES.update(w for w in str(nm).split() if w[:1].isupper())
+    used = {}
     music = os.path.join(work, "music.mp3")
     if not os.path.isfile(music):
         from services import music as M
@@ -675,8 +709,8 @@ def build(job_dir, work_root, upload=True, keep=False):
                 if framed_seen == 2:
                     pill = plan.get("subscribe")
             if not os.path.isfile(dest):
-                render_clip(seg, files[seg["video"]], bg, work, dest, accent, log, accent2=accent2, swipe=swipe,
-                            first=not parts, pill=pill)
+                render_clip(seg, files[seg["video"]], frame, work, dest, accent, log, accent2=accent2, pill=pill,
+                            brand=(plan.get("brand") or "").upper())
         else:
             nxt = next((s for s in segs[i + 1:] if s["type"] == "clip" and files.get(s["video"])), None)
             if nxt is None and seg.get("next_video") is not None:
@@ -685,13 +719,23 @@ def build(job_dir, work_root, upload=True, keep=False):
             if ref is None:
                 continue
             if parts and not any(p.endswith("sting.mp4") for p in parts):  # fin de l'ouverture : logo animé
-                parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2,
-                                          swipe=swipe))
+                parts.append(render_sting(plan, work, os.path.join(work, "sting.mp4"), music, accent, accent2))
             seg = dict(seg, lower="" if seg.get("outro") else (nxt or {}).get("speaker", ""))
+            who = (nxt or ref).get("speaker") or ""
+            if not photos.get(who):  # un consultant annoncé : la photo du combattant dont parle la voix off
+                text = seg.get("text") or ""
+                hits = [(text.find(n.split()[-1]), n) for n in photos if n.split()[-1] in text]
+                who = min(hits)[1] if hits else who
+            still = None
+            if photos.get(who):  # la photo de la personne dont parle la voix off (sinon : images de sa vidéo)
+                k = used.get(who, 0)
+                used[who] = k + 1
+                p, face = photos[who][k % len(photos[who])]
+                still = photo_still(p, face, os.path.join(work, f"p{i:03d}.jpg"))
             if not os.path.isfile(dest):
                 b0 = broll_window(files[ref["video"]], ref["start"], ref["end"], media.duration(voices[i]) + 0.5)
                 render_narration(seg, voices[i], files[ref["video"]], b0, work, dest, music, accent, plan,
-                                 accent2=accent2, swipe=swipe, shade=shade)
+                                 accent2=accent2, shade=shade, photo=still)
         parts.append(dest)
         log(f"segment {i + 1}/{len(segs)} prêt")
     # 4) collage

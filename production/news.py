@@ -154,7 +154,7 @@ def cmd_voice(job):
         plan = json.load(f)
     d = os.path.join(job, "narration")
     os.makedirs(d, exist_ok=True)
-    todo = [(i, seg["text"]) for i, seg in enumerate(plan["segments"]) if seg["type"] == "narration"]
+    todo = [(i, N.speakable(seg["text"])) for i, seg in enumerate(plan["segments"]) if seg["type"] == "narration"]
     if all(os.path.isfile(os.path.join(d, f"n{i:03d}.mp3")) for i, _ in todo):
         print("voix off déjà prête")
         return
@@ -297,6 +297,15 @@ def job_tarball(job):
                 t.add(os.path.join(job, f), "job/" + f)
         for f in sorted(glob.glob(os.path.join(job, "narration", "n*.mp3"))):
             t.add(f, "job/narration/" + os.path.basename(f))
+        idx = os.path.join(job, "photos", "photos.json")      # photos des combattants (fonds de la voix off)
+        if os.path.isfile(idx):
+            t.add(idx, "job/photos/photos.json")
+            with open(idx, "r", encoding="utf-8") as f:
+                for items in json.load(f).values():
+                    for it in items:
+                        p = os.path.join(job, "photos", it.get("file", ""))
+                        if it.get("file") and os.path.isfile(p):
+                            t.add(p, "job/photos/" + it["file"])
     return buf.getvalue()
 
 
