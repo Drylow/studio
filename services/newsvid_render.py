@@ -77,7 +77,7 @@ def download(video_id, dl_dir, log):
             continue
         for k in range(3):
             r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
-                               capture_output=True, text=True)
+                               capture_output=True, text=True, encoding="utf-8", errors="replace")
             have = [f for f in glob.glob(os.path.join(dl_dir, f"{video_id}.{kind}.*")) if not f.endswith(".part")]
             if have:
                 got[kind] = have[0]
@@ -302,7 +302,8 @@ def check_sheets(video, out_dir, every=10, cols=6, rows=5):
         d = ImageDraw.Draw(sheet)
         for i, fp in enumerate(frames[k:k + per]):
             x, y = (i % cols) * 384, (i // cols) * 216
-            sheet.paste(Image.open(fp), (x, y))
+            with Image.open(fp) as im:  # fermé tout de suite : Windows refuse d'effacer un fichier ouvert
+                sheet.paste(im, (x, y))
             t = (k + i) * every
             d.rectangle((x, y, x + 74, y + 22), fill=(0, 0, 0))
             d.text((x + 4, y + 4), f"{t // 60}:{t % 60:02d}", fill=(255, 255, 0))

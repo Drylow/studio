@@ -260,5 +260,10 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **PC de l'utilisateur = dossier autonome** (son studio PC vient d'un zip, pas de git) : `standalone/news_pc/`
+  (« Monter les videos.bat » + `monter.ps1`), envoyé en zip. Il installe tout dans son dossier (Python embarqué,
+  Git portable, deno), clone le dépôt public dans `studio\`, demande la connexion GitHub au début (pour le push du
+  résultat), puis lance `news.py pc`. Python embarqué = mode isolé : pas de PYTHONIOENCODING, `open()` en cp1252
+  (toujours `encoding="utf-8"`), le dossier du script n'est pas dans sys.path (ajouté dans le `._pth`).
 - **Après le montage PC** : `git pull`, regarder `check/sheet_*.jpg` (+ `build.log`), puis
   `python production/news.py send <dossier>` (Discord) seulement si tout est bon.

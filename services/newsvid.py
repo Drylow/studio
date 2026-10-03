@@ -224,8 +224,11 @@ def yt_js_args():
     import shutil
     local = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools", "deno",
                          "deno.exe" if os.name == "nt" else "deno")
-    if os.path.isfile(local):
-        return ["--js-runtimes", f"deno:{local}"]
+    if os.path.isfile(local):  # dans le PATH (deno est le moteur par défaut de yt-dlp) : pas de « C:\\ » à passer
+        d = os.path.dirname(local)
+        if d not in os.environ.get("PATH", "").split(os.pathsep):
+            os.environ["PATH"] = d + os.pathsep + os.environ.get("PATH", "")
+        return []
     if shutil.which("deno"):
         return []
     if shutil.which("node"):
@@ -236,7 +239,8 @@ def yt_js_args():
 def video_info(video_id):
     """Titre, chaîne, date de sortie, durée (yt-dlp, sur PC)."""
     r = subprocess.run([sys.executable, "-m", "yt_dlp", "-j", "--skip-download", *yt_js_args(),
-                        f"https://www.youtube.com/watch?v={video_id}"], capture_output=True, text=True, timeout=180)
+                        f"https://www.youtube.com/watch?v={video_id}"], capture_output=True, text=True, encoding="utf-8",
+                       errors="replace", timeout=180)
     try:
         d = json.loads(r.stdout)
     except ValueError:

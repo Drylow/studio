@@ -22,6 +22,7 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
   python production/news.py send <dossier>                                        → paquet Discord
 """
 import datetime
+import glob
 import json
 import os
 import re
@@ -178,7 +179,30 @@ def cmd_build(job, upload=True, keep=False):
 
 
 def git(*args, check=False):
-    return subprocess.run(["git", *args], cwd=REPO, capture_output=True, text=True, check=check)
+    return subprocess.run(["git", *args], cwd=REPO, capture_output=True, text=True, encoding="utf-8",
+                          errors="replace", check=check)
+
+
+def push_result(rel):
+    """Renvoie le résultat dans git (lien, planches, journal) ; si le cloud a poussé entre-temps : rebase puis
+    nouvel essai. Ne prend que les planches (jamais les images de travail)."""
+    paths = [os.path.join(rel, "result.json"), os.path.join(rel, "build.log")]
+    paths += [os.path.relpath(p, REPO) for p in glob.glob(os.path.join(REPO, rel, "check", "sheet_*.jpg"))]
+    git("add", "-f", "--", *[p for p in paths if os.path.exists(os.path.join(REPO, p))])
+    git("commit", "-q", "-m", f"News video built on PC: {os.path.basename(rel)}")
+    for k in range(4):
+        p = git("push", "-q", "origin", "HEAD")
+        if p.returncode == 0:
+            print("Planches et lien envoyés à Claude : ok")
+            return True
+        err = p.stderr.strip()
+        if "rejected" in err or "fetch first" in err or "non-fast-forward" in err:
+            git("pull", "-q", "--rebase", "--autostash")
+            continue
+        break
+    print("!! Envoi à Claude raté (connexion GitHub ?) :", err[:300])
+    print("   Donne-lui le lien ci-dessus et glisse les images du dossier check dans le chat.")
+    return False
 
 
 def cmd_pc():
@@ -207,11 +231,7 @@ def cmd_pc():
             with open(rp, "r", encoding="utf-8") as f:
                 link = json.load(f).get("link")
             print(f"\n>>> LIEN DE LA VIDEO : {link or 'envoi Gofile raté (voir build.log)'}\n")
-        git("add", "-A", "--", os.path.join(rel, "result.json"), os.path.join(rel, "check"),
-            os.path.join(rel, "build.log"))
-        git("commit", "-q", "-m", f"News video built on PC: {os.path.basename(job)}")
-        p = git("push", "-q", "origin", "HEAD")
-        print("push :", "ok" if p.returncode == 0 else p.stderr.strip()[:300])
+        push_result(rel)
 
 
 def cmd_send(job):
@@ -243,7 +263,7 @@ def cmd_send(job):
     else:
         r = requests.post(url, json=data, timeout=60)
     r.raise_for_status()
-    with open(os.path.join(job, "discord_done"), "w") as f:
+    with open(os.path.join(job, "discord_done"), "w", encoding="utf-8") as f:
         f.write(res["link"])
     print("Discord : envoyé")
 
@@ -292,4 +312,9 @@ def main(argv):
 
 
 if __name__ == "__main__":
+    for _s in (sys.stdout, sys.stderr):  # Python embarqué (PC) : console en cp1252, pas de plantage sur un accent
+        try:
+            _s.reconfigure(errors="replace")
+        except (AttributeError, ValueError):
+            pass
     main(sys.argv[1:])
