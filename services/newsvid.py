@@ -51,7 +51,16 @@ CHANNELS = {
                     "Luke Thomas": "UC2EuJ9xTs0XkDZI9YGx7QZA", "Thiccc Boy": "UCiE3q35hojEnPEjjCvnwm5A",
                     "Kolos MMA": "UCwwcynlkf66wcexrsH-azkw", "JRE Clips": "UCnxGkOGNMqQEUMvroOWps6Q",
                     "PowerfulJRE": "UCzQUP1qoWDoEbmsQxvdjxgQ", "Pound 4 Pound with Kamaru & Henry": "UCpVcPOrB9tWcBGe58FYjOmQ",
-                    "Submission Radio": "UCNrEHIf8QmKK-cAag4YxIXQ", "DOUBLE COVERAGE PODCAST": "UCf1q6dhccWr6eQEcFFnJSbA"},
+                    "Submission Radio": "UCNrEHIf8QmKK-cAag4YxIXQ", "DOUBLE COVERAGE PODCAST": "UCf1q6dhccWr6eQEcFFnJSbA",
+                    # ajoutées le 4 oct. (get_content_owner : IVP, indépendantes)
+                    "James Lynch": "UCsK80SSNnnGkb2pwPgblMsA", "The Schmo": "UC-muTcRmDEEBTV8F8Fm82pA",
+                    "FREESTYLEBENDER": "UC1oigGPZ4A6atKCnj17ow8Q", "Suga Sean O'Malley": "UC1VIpppddhgA9JpePz0vZbA",
+                    "Morning Kombat": "UC9Qy3sHrr5wil-rkYcmcNcw", "Belal Muhammad": "UCjG7h5vXKXJOyYO172OwSFQ"},
+        # concurrents : seulement pour voir ce qui fait des vues (jamais leurs extraits)
+        "trend": {"Fight Night MMA": "UCvj_b62j6kj9UkVJMiG-nfw", "MMA Zone": "UC-ZfPO20AQzg6hLf9eyuuGw",
+                  "Full Mount MMA": "UCRXsUJyZKyByJixT_7mZ1Xg", "MMA WORLD": "UClkruV5L-hsu20MDYOa1hvw",
+                  "Combat Opinions": "UCKHuKH_GGvWcbiJF4fPn3Hg", "THE MMA GURU": "UCIhQvpinmS8Eq6PrQ021DKQ",
+                  "UFC": "UCvgfXK4nTYKudb0rFR6noLA"},   # UFC : résultats du soir (signal seulement, il revendique)
         "people": "fighters, coaches, managers, promoters and pundits",
     },
     "boxing_en": {
@@ -61,7 +70,18 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["boxing news", "boxing interview", "boxing press conference"],
-        "sources": {},  # à remplir (id YouTube) avant de lancer la chaîne : Matchroom, Top Rank, IFL TV, Fight Hub…
+        # chaînes sans réseau (get_content_owner « IVP », 4 oct.) ; promoteurs, diffuseurs et réseaux (iFL TV, Fight Hub
+        # = Studio71, Seconds Out) écartés. Leurs vidéos montrent parfois des images de combat : garder les gens qui parlent.
+        "sources": {"FightHype": "UCmxZw7N4Jyljr1RbSs4Ymaw", "ESNEWS": "UCI-Oq7oFGakzSzHFlTtsUsQ",
+                    "Boxing News": "UCtl12IM0ii3LB9HTZgeWJmA", "Pro Boxing Fans": "UCCh-tgR7B-1jXvMZOE7ebiQ",
+                    "The Stomping Ground": "UCsN3-5i0AEgXwdjP1RdjUSA", "Boxing King Media": "UCkd7avf-sjVjF-JqoxOt0qA",
+                    "THE FIGHT with Teddy Atlas": "UC7D_b_1q4Dxz9ebeEYVVxWQ", "RING CHAMPS": "UCBX_Qx_Hx5QTuEL72YVyn_A",
+                    "Froch On Fighting": "UCiph-qKawUbG1C0Tl5NRGlw", "Playbook Boxing": "UCyxUYC0-fGU8Qpxlc5c7jag",
+                    "Last Stand Podcast": "UC_P5SbZ50pCyPzvb--iWGpg", "Fight Disciples": "UCNfSq-sz-GfOM9xM3d-upiA",
+                    "Sean Zittel": "UCcK8xvW34oBH7a7onHSPX6A"},
+        "trend": {"AKHi TV": "UCUHpbLNkr4oNpNLweo0a0bQ", "Fight Trends": "UC8wLroF_z-X4D_fLMU-8MtA",
+                  "Boxing HeadquaterZZ": "UCfL_2dJh_PhQ29QDL69gLCw", "Boxing Insider": "UCZ85O5uTe77QH8PSy0U4v8A",
+                  "Fight Reactor": "UC7zaUoS592N75z2WqUBwCmw"},
         "people": "boxers, trainers, promoters and pundits",
     },
     "football_en": {
@@ -71,7 +91,16 @@ CHANNELS = {
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
         "search": ["press conference football", "Premier League press conference", "football interview"],
-        "sources": {},  # à remplir (id YouTube) : Sky Sports, TNT Sports, The Overlap, conférences des clubs…
+        # chaînes sans réseau (4 oct.). Écartées : clubs, ligues, diffuseurs, et les podcasts des réseaux (The Overlap,
+        # United Stand = Diagonal View/Sky ; Rest Is Football ; Obi One = Studio71…). Conférences de presse : aucune source
+        # sûre (images des clubs) → citées par la voix off, extraits pris dans les podcasts ci-dessous.
+        "sources": {"Rio Ferdinand Presents": "UCPAiS32go3-GwTO0kmlVX7g", "Fabrizio Romano": "UCX1em-uaFMS02Rrk_Bowyng",
+                    "Fozcast": "UCXl1paOouBzosrjPxZh2nyA", "The Kick Off": "UCkD-ZOixI0a9FjIExDsHsbg",
+                    "Charles Watts": "UCSYW9MkomBzdzlEtcn8EcGQ", "Business of Sport": "UC9jkoB5oKe1eAGZ5zOW6iZA",
+                    "The Football Terrace": "UCjoj16PAB4l1o8B6I7dgD8Q", "The Anfield Wrap": "UCc5C5dNupCMbyutNatfBujQ"},
+        "trend": {"Goal 90 Extra": "UC2EWbJwhSlbwvy3YsIZbk7g", "Front-Page Football": "UCSjbb17qX1FSn-zosp3NjiQ",
+                  "Match Day Moments": "UClmARU4jb4KEoQWV0KqK-nA", "Dan Lee": "UCHSpkukiU9YNqPiBi29-hIw",
+                  "talkSPORT": "UCWw6scNyopJ0yjMu1SyOEyw"},
         "people": "players, managers, agents and pundits",
     },
 }
@@ -274,6 +303,21 @@ CLAIMERS = {
     "UCvgfXK4nTYKudb0rFR6noLA": "UFC (réseau UFC)",
     "UC4f1JueVgo5t9HSmobCRPug": "MMA Fighting (Vox Media)",
     "UCk9lx4sKRQCDTyXFaouk_vQ": "Mighty / Demetrious Johnson (Whistle Sports)",
+    # vérifiées le 4 oct. (get_content_owner) : promoteurs, diffuseurs, clubs, réseaux qui revendiquent
+    "UCxQfUu6vIJGZDODSwhr0m9w": "MMA Junkie (USA TODAY)",
+    "UCurvRE5fGcdUgCYWgh-BDsg": "DAZN Boxing (DAZN Group)", "UCbzRzJNHx7ZLlJML9BjZQVQ": "Top Rank (Whistle Sports)",
+    "UCWXYAGB9SadlL6p5Bb66wWw": "Premier Boxing Champions (Haymon)", "UC7LReVje9aPB4B6XAsXX8WQ": "Matchroom (promoteur)",
+    "UCP3MOjimNiqqkhBcuXzO0RA": "Queensberry (promoteur)", "UC_JQGBtA7P0RwkRxd7xpJcA": "Sky Sports Boxing",
+    "UCNAf1k0yIjyGu3k9BwAg3lg": "Sky Sports Premier League", "UCVIoIHQIuIL5_ec2W3C9BAw": "talkSPORT Boxing (News UK)",
+    "UCWw6scNyopJ0yjMu1SyOEyw": "talkSPORT (News UK)", "UCG5qGWdu8nIRZqJ_GgDwQ-w": "Premier League",
+    "UC6yW44UGJJBvYTlfC7CRg2Q": "Manchester United", "UCpryVRk_VDudG8SHXgWcG0w": "Arsenal (Whistle Sports)",
+    "UC2scTsYOgxGHx0uEsHFrqfQ": "HaytersTV (Whistle Sports)", "UCET00YnetHT7tOpu12v8jxg": "CBS Sports Golazo",
+    "UC4i_9WvfPRTuRWEaWyfKuFw": "TNT Sports Football", "UCZEOvoFUl6pkx7rts8KKkhw": "Boxing Social (revendique lui-même)",
+    "UCdl_gZZR6BtKi45eHFGAduw": "iFL TV (Studio71)", "UCwdVyruxCCqMR4DtPLhtwlg": "Fight Hub TV (Studio71)",
+    "UCEVVENPnHv-kcp2PqQuJvHg": "Seconds Out (Knockout TV)", "UCT7Mm-aRWBZ1Zd2bIXIEsyg": "ProBox TV (Studio71, promoteur)",
+    "UCjXIw1GlwaY1IzpW_jN9iCQ": "The Overlap (Diagonal View / Sky)", "UCMmVPVb0BwSIOWVeDwlPocQ": "The United Stand (Diagonal View)",
+    "UCFxG3MxHC1ogUglvJeMHmVQ": "That's Football (Diagonal View)", "UCXU3VY1OWFJkufG5W6Gc7yg": "Obi One Podcast (Studio71)",
+    "UCBTy8j2cPy6zw68godcE7MQ": "AFTV (Global Fan Network)",
 }
 CLAIMER_NAMES = {"one night with steiny", "full send mma", "full send podcast", "ufc", "mmafightingonsbn",
                  "mma fighting", "mighty", "nelk", "nelk boys"}

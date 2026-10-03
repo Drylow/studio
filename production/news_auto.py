@@ -38,7 +38,7 @@ from services import newsvid as N
 AUTO = os.path.join(WORK, "auto")
 STATE = os.path.join(AUTO, "state.json")
 RADAR_EVERY = 30 * 60          # secondes entre deux recherches de sujets pour une chaîne
-HOURS = 36                     # fraîcheur des vidéos sources prises en compte
+HOURS = 72                     # vidéos sources prises en compte (les concurrents reprennent souvent des interviews de 2-3 jours)
 MIN_SCORE = 6                  # note de l'IA (vues attendues, 1-10) en dessous de laquelle on ne propose pas
 MAX_PROPOSALS = 3              # sujets max par chaîne et par passage
 NTFY = "https://ntfy.sh"
@@ -113,39 +113,58 @@ def _views(n):
 
 # ── 1. Radar : les sujets chauds ────────────────────────────────────────────
 
+def _per_hour(v):
+    try:
+        t = datetime.datetime.fromisoformat(v["published"].replace("Z", "+00:00"))
+    except (ValueError, AttributeError, KeyError):
+        return 0
+    h = max(0.5, (datetime.datetime.now(datetime.timezone.utc) - t).total_seconds() / 3600)
+    return v.get("views", 0) / h
+
+
 def rank(ch, vids, trend, recent):
     rows = "\n".join(f"[{i}] {_age(v['published'])} ago, {_views(v.get('views', 0))} views, {v['channel']}: {v['title']}"
                      for i, v in enumerate(vids))
-    trows = "\n".join(f"- {_age(v['published'])} ago, {_views(v.get('views', 0))} views, {v['channel']}: {v['title']}"
-                      for v in sorted(trend, key=lambda v: -v.get("views", 0))[:40]) or "-"
+    # les concurrents (Fight Night MMA d'abord) : leurs sujets marchent tout le temps → on suit ce qu'ils postent
+    # (l'utilisateur, 4 oct. : « il faut qu'elle regarde les vidéos qu'elle poste en temps réel… on pourrait faire
+    # comme eux ») ; jamais leurs extraits, seulement le sujet
+    comp = sorted([v for v in trend if not v.get("short")], key=lambda v: -_per_hour(v))[:40]
+    trows = "\n".join(f"- {_age(v['published'])} ago, {_views(v.get('views', 0))} views ({_per_hour(v):.0f}/h), "
+                      f"{v['channel']}: {v['title']}" for v in comp) or "-"
     done = "\n".join(f"- {p['story']} ({_age_ts(p['t'])} ago)" for p in recent) or "-"
-    prompt = f"""You are the editor of "{ch['brand']}", a {ch['sport']} news YouTube channel in the style of Fight Night
-MMA: several videos a day, each built from REAL interview clips of the day (podcasts, interviews, press
-conferences) linked by a neutral narrator. Goal: pick the stories that will get the MOST VIEWS right now.
+    prompt = f"""You are the editor of "{ch['brand']}", a {ch['sport']} news YouTube channel that copies the strategy of
+the most successful daily news channels ({', '.join((ch.get('trend') or {}).keys()) or 'the big news channels'}):
+several videos a day, each built from REAL interview clips of the day linked by a neutral narrator.
+Our rule: their topics are PROVEN to get views, so we cover the same stories as fast as possible, with our own
+first-hand clips. Now: {datetime.datetime.utcnow():%A %Y-%m-%d %H:%M} UTC. Never propose a preview or prediction
+video for an event that has already happened (titles about results, post-fight or octagon interviews mean it is
+over): cover the aftermath instead.
 
-USABLE SOURCE VIDEOS (we may use their clips) — [index] age, views, channel: title
-{rows}
-
-WHAT THE BIG {ch['sport'].upper()} NEWS CHANNELS ARE POSTING (titles + views: what the audience wants right now; we
-never use their clips):
+WHAT THE COMPETITOR NEWS CHANNELS POSTED (most views per hour first; their topics work — we never use their clips):
 {trows}
+
+OUR USABLE SOURCE VIDEOS (we may use their clips) — [index] age, views, channel: title
+{rows}
 
 STORIES ALREADY PROPOSED RECENTLY (never propose them again, unless there is a clearly NEW development; then the
 story line must say what is new):
 {done}
 
-Pick up to 4 stories. A story = one headline (feud, callout, fight booked or cancelled, result fallout, injury,
-retirement, money/contract, controversy) that has FIRST-HAND material in the usable videos (the person involved
-talking, or a strong take from a known fighter/pundit) — enough for a 10-20 minute video (one long podcast or
-interview can be enough; a 1-minute clip alone is not). Skip stories with no usable video.
-"score" 1-10 = expected views: big names, conflict, freshness, and whether the big news channels are covering it.
+Pick up to 4 stories, best first:
+1. FIRST the stories the competitors covered in the last ~24 h with the most views per hour (especially the first
+   channel listed in the editor line), when our usable videos contain first-hand material on the same story (the
+   person involved talking, or a known fighter/pundit giving a strong take). Same angle as their video.
+2. Then other big fresh stories from our usable videos that the competitors have not covered yet (be first).
+A story needs enough material for a 10-20 minute video (one long podcast or interview can be enough; a 1-minute clip
+alone is not). Skip a story with no usable video.
+"score" 1-10 = expected views (competitor views per hour on the same story, big names, conflict, freshness).
 
 Return JSON {{"stories": [{{"story": "the video topic, one line in English",
  "fr": "le sujet en une phrase, en français simple", "why_fr": "pourquoi ça va faire des vues, une phrase en français",
- "people": ["main names"], "videos": [indices of usable videos to use, best first, max 6], "score": 1-10,
- "title_idea": "a YouTube title idea in the channel style (no invented quote)",
- "context": "facts stated in those video titles/descriptions that help the narrator (nothing invented)"}}]}}
-best first."""
+ "copies": "the competitor video title it follows, or empty", "people": ["main names"],
+ "videos": [indices of OUR usable videos to use, best first, max 6], "score": 1-10,
+ "title_idea": "a YouTube title idea in the competitors' style (no invented quote)",
+ "context": "facts stated in those video titles/descriptions that help the narrator (nothing invented)"}}]}}"""
     return ai.chat_json(prompt, model=ai.text_model(), timeout=300).get("stories") or []
 
 
@@ -191,7 +210,7 @@ def radar(sport, dry=False, force=False):
         if all(v["id"] in used for v in picked):       # mêmes vidéos qu'un sujet déjà proposé : pas de doublon
             continue
         p = {"pid": new_id(), "sport": sport, "story": str(s["story"])[:300], "fr": str(s.get("fr") or s["story"])[:300],
-             "why_fr": str(s.get("why_fr") or "")[:300], "people": [str(x) for x in s.get("people") or []][:6],
+             "why_fr": str(s.get("why_fr") or "")[:300], "copies": str(s.get("copies") or "")[:200], "people": [str(x) for x in s.get("people") or []][:6],
              "videos": picked[:6], "score": score, "title_idea": str(s.get("title_idea") or "")[:200],
              "context": str(s.get("context") or "")[:1500], "t": time.time(), "status": "proposed"}
         out.append(p)
@@ -208,7 +227,9 @@ def radar(sport, dry=False, force=False):
             link = go_link(p["pid"])
             go = f"\n\n**[▶️ FAIRE LA VIDÉO]({link})**" if link else f"\n\n(GO : `news_auto.py go {p['pid']}`)"
             embeds.append({"title": f"{k}. {p['fr']}"[:250], "color": COLORS.get(sport, 0x12A8E0),
-                           "description": (f"**Pourquoi** : {p['why_fr']}\n**Idée de titre** : {p['title_idea']}\n"
+                           "description": (f"**Pourquoi** : {p['why_fr']}\n"
+                                           + (f"**Comme** : {p['copies']}\n" if p.get("copies") else "")
+                                           + f"**Idée de titre** : {p['title_idea']}\n"
                                            f"**Sources** :\n{src}{go}")[:4000],
                            "footer": {"text": f"sujet {p['pid']} · note {p['score']:.0f}/10"}})
         discord(f"🔎 **{ch['brand']}** — sujets chauds. Clique sur « Faire la vidéo » (une page de texte s'ouvre : "
