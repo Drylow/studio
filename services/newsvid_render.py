@@ -329,8 +329,17 @@ def _name_plate(name, x, y, a, b, top=False):
     return _ev(a, b, "Name", f"{{{an}\\move({x - 900},{y},{x},{y},0,260)\\fad(0,220)}}{_ass_escape(name.upper())}", 3)
 
 
+PROFANITY = re.compile(r"\b(mother|bull|horse|dip)?(fuck|shit|bitch|cunt|pussy|bastard|asshole)", re.I)
+
+
+def censor(text):
+    """Gros mots écrits à l'écran → « F***ING », « S*** » (monétisation) ; « [ __ ] » de YouTube → « **** »."""
+    text = re.sub(r"\[\s*_+\s*\]", "****", text)
+    return PROFANITY.sub(lambda m: (m.group(1) or "") + m.group(2)[0] + "*" * (len(m.group(2)) - 1), text)
+
+
 def _quote_text(q, acc2):
-    t = _ass_escape(q).upper().strip("\"“” ")
+    t = censor(_ass_escape(q)).upper().strip("\"“” ")
     words = t.split()
     while (len(words) > 3 and not re.search(r"[.?!]$", words[-1])  # phrase coupée : « … I CHEATED CUZ »
            and re.sub(r"[^A-Z']", "", words[-1]) in TAIL):
@@ -366,13 +375,12 @@ def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=No
     def free(a, b):  # pas en même temps que la citation (même endroit de l'écran)
         return q0 is None or b <= q0 or a >= q1
     if speaker:
-        nx, ny = (x + 30, y + 30) if framed else (60, 110)  # en haut à gauche : jamais sur les sous-titres
-        win = [(0.35, min(dur - 0.3, 4.6))]
-        if q0 is not None:
-            win = [(0.35, min(4.6, q0 - 0.05)), (q1 + 0.1, min(dur - 0.3, q1 + 4.0))]
-        win = [(a, b) for a, b in win if b - a >= 1.5 and free(a, b)]
-        if win:
-            ev.append(_name_plate(speaker, nx, ny, *win[0], top=True))
+        # le nom s'affiche PENDANT la citation (c'est sûrement elle/lui qui parle à ce moment-là) ; sans citation,
+        # au début. En haut à gauche : jamais sur les sous-titres ni sur la citation.
+        nx, ny = (x + 30, y + 30) if framed else (60, 110)
+        a, b = (q0, min(dur - 0.3, max(q1, q0 + 4.0))) if q0 is not None else (0.35, min(dur - 0.3, 4.6))
+        if b - a >= 1.5:
+            ev.append(_name_plate(speaker, nx, ny, a, b, top=True))
     if q0 is not None:
         size, txt = _quote_text(quote["t"], acc2)
         mv = (H - (y + h) + 70) if framed else 150
@@ -394,7 +402,7 @@ def _wrap_subs(subs, max_chars=42):
     """Lignes de sous-titres auto (souvent coupées au milieu) → phrases courtes lisibles."""
     out = []
     for s in subs:
-        t = re.sub(r"\[\s*_+\s*\]", "****", s["t"]).strip()  # gros mot censuré par YouTube : « [ __ ] »
+        t = censor(s["t"]).strip()  # gros mot censuré par YouTube « [ __ ] » ou en clair → « **** » / « F*** »
         if not t:
             continue
         if out and len(out[-1]["t"]) + len(t) + 1 <= max_chars and s["s"] - out[-1]["e"] < 0.4 \
@@ -420,6 +428,12 @@ def render_clip(seg, files, bg, workdir, dest, accent, log, accent2=(255, 210, 3
     shift = seg["start"] - start
     dur = end - start
     subs = [{"s": max(0.0, s["s"] + shift), "e": min(dur, s["e"] + shift), "t": s["t"]} for s in seg["subs"]]
+    mutes = []
+    if seg.get("full"):  # ouverture : gros mots coupés au son (estimés dans la ligne de sous-titre)
+        for x in subs:
+            for m in re.finditer(r"\[\s*_+\s*\]|\b(?:mother)?(?:fuck|shit|bitch|cunt)\w*", x["t"], re.I):
+                t = x["s"] + (x["e"] - x["s"]) * (m.start() / max(1, len(x["t"])))
+                mutes.append((max(0.0, t - 0.3), t + 0.5))
     subs = [s for s in _wrap_subs(subs) if s["e"] > s["s"]]
     quote = dict(seg["quote"], s=seg["quote"]["s"] + shift, e=seg["quote"]["e"] + shift) if seg.get("quote") else None
     framed = not seg.get("full")
@@ -457,7 +471,8 @@ def render_clip(seg, files, bg, workdir, dest, accent, log, accent2=(255, 210, 3
     sw_idx = 4 if framed else 3
     ins += ["-loop", "1", "-framerate", str(FPS), "-i", swipe]
     g += _swipe_filter("b2", f"{sw_idx}:v", dur, "b3", first=first) + ";[b3]format=yuv420p[v];"
-    g += ("[1:a]aresample=48000,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[ca];"
+    mute = ("volume=0:enable='" + "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in mutes) + "',") if mutes else ""
+    g += (f"[1:a]aresample=48000,{mute}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[ca];"
           "[2:a]aresample=48000,aformat=channel_layouts=stereo[fx];"
           "[ca][fx]amix=inputs=2:duration=first:normalize=0,aresample=48000[a]")
     media.run(ins + ["-filter_complex", g, "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", *X264, *AAC,
@@ -487,9 +502,8 @@ def narration_ass(dest, seg, dur, plan, acc, acc2):
         ev.append(_ev(0.25, dur, "Tag", f"{{\\move(-500,{y0},96,{y0},0,220)}}"
                                         f"{'THE LATEST' if not seg.get('outro') else 'YOUR TAKE'}", 3))
         ev.append(_ev(0.4, dur, "Head", f"{{\\move(-1400,{y0 + 70},96,{y0 + 70},0,320)}}" + "\\N".join(lines), 3))
-    lower = seg.get("lower") or ""
-    if lower:
-        ev.append(_name_plate(lower, 96, H - 120, 0.6, dur))
+    # pas de bandeau de nom pendant la voix off : le b-roll peut montrer l'animateur et pas la personne nommée
+    # (le titre de l'info dit déjà de qui on parle)
     if seg.get("outro") and plan.get("subscribe"):
         ev.append(_ev(1.0, dur, "Pill", f"{{\\an3\\pos({W - 60},{H - 140})\\fscx60\\fscy60"
                                         f"\\t(0,180,\\fscx100\\fscy100)}}{_ass_escape(plan['subscribe'])}", 4))

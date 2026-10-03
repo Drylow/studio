@@ -266,6 +266,10 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   grand** (Anton, mot fort en jaune, zoom « punch-in » + impact) au moment où elle est dite (`seg["quote"]`, calée
   par `clip_spec`), voix off : titre de l'info (`headline`) + nom + fil d'actu qui défile (`plan["ticker"]`, écrits
   par `news.py headlines` : rien que ce que dit la voix off) + b-roll en zoom lent ; rappel d'abonnement une fois.
+  **Noms à l'écran = jamais sur la mauvaise personne** (1er montage Gaethje, 3 oct. : « JUSTIN GAETHJE » sur
+  l'animateur) : le nom de qui parle s'affiche pendant SA citation, pas au début de l'extrait ; aucun nom pendant la
+  voix off (le b-roll peut montrer quelqu'un d'autre). **Gros mots** : censurés à l'écran (F***ING, `censor`) et
+  coupés au son dans l'ouverture (pubs coupées si gros mot au début).
   Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
   rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
   (l'animateur qui relit une vieille interview ≠ le combattant).
