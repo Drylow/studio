@@ -56,3 +56,4 @@ news/**/narration/*.tmp.mp3
 news/**/narration/.algrow_jobs.json
 news/**/narration/tts_*/
 news/**/photos/
+tools/

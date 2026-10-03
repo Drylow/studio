@@ -183,7 +183,7 @@ def git(*args, check=False):
 
 def cmd_pc():
     """PC : récupère les vidéos à monter, les monte, renvoie le résultat (lien + planches) dans git."""
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "yt-dlp"], check=False)
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "yt-dlp[default]"], check=False)
     r = git("pull", "--ff-only")
     print(r.stdout.strip() or r.stderr.strip())
     todo = []

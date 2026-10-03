@@ -35,7 +35,7 @@ from services import ai
 CHANNELS = {
     "mma_en": {
         "name": "MMA news (UFC)", "sport": "MMA / UFC", "language": "en",
-        "brand": "CAGE REPORT", "handle": "",
+        "brand": "CAGE DISPATCH", "handle": "",
         "accent": "#E10600", "accent2": "#FFD21F",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
@@ -52,7 +52,7 @@ CHANNELS = {
     },
     "boxing_en": {
         "name": "Boxing news", "sport": "Boxing", "language": "en",
-        "brand": "RING REPORT", "handle": "",
+        "brand": "RING DISPATCH", "handle": "",
         "accent": "#D4A017", "accent2": "#FFFFFF",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
@@ -62,7 +62,7 @@ CHANNELS = {
     },
     "football_en": {
         "name": "Football news", "sport": "Football (soccer)", "language": "en",
-        "brand": "PITCH REPORT", "handle": "",
+        "brand": "PITCH DISPATCH", "handle": "",
         "accent": "#1DB954", "accent2": "#FFFFFF",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
@@ -222,6 +222,10 @@ def fetch_captions(video_id, dest_dir):
 def yt_js_args():
     """yt-dlp a besoin d'un moteur JavaScript pour YouTube : deno (par défaut) ou node."""
     import shutil
+    local = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools", "deno",
+                         "deno.exe" if os.name == "nt" else "deno")
+    if os.path.isfile(local):
+        return ["--js-runtimes", f"deno:{local}"]
     if shutil.which("deno"):
         return []
     if shutil.which("node"):

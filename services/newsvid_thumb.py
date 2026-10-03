@@ -94,6 +94,21 @@ def other_person(who, text):
     return False
 
 
+def original(url):
+    """La plus grande version d'une image : sans les paramètres de redimensionnement (?w=1024, ?resize=…),
+    les sites de presse renvoient souvent l'original (Topuria : 1682 px au lieu de 1024)."""
+    best, best_px = None, 0
+    for u in dict.fromkeys([url.split("?")[0], url]):
+        try:
+            b = _get(u, 20)
+        except Exception:  # noqa: BLE001
+            continue
+        im = _load(b) if len(b) > 20000 else None
+        if im and im.width * im.height > best_px:
+            best, best_px = b, im.width * im.height
+    return best
+
+
 def yt_thumb(video_id):
     for q in ("maxresdefault", "hqdefault"):
         try:
@@ -169,12 +184,9 @@ def candidates(job_dir, plan, who, log=print):
     for x in bing_images(f"{who} UFC", 25) + bing_images(f"{who}", 20):
         if not names_ok(who, " ".join((x["url"], x["title"], x["page"])), others - {who}):
             continue
-        try:
-            b = _get(x["url"], 15)
-            if len(b) > 20000:
-                blobs.append((x["url"], b))
-        except Exception:  # noqa: BLE001
-            continue
+        b = original(x["url"])
+        if b:
+            blobs.append((x["url"], b))
     ims = [(src, _load(b)) for src, b in blobs]
     ims = [(src, im) for src, im in ims if im and min(im.size) >= 360]
 
@@ -182,7 +194,9 @@ def candidates(job_dir, plan, who, log=print):
         return x[0], x[1], rate(x[1], who)
     with ThreadPoolExecutor(max_workers=6) as ex:
         rated = list(ex.map(one, ims))
-    good = [(src, im, r) for src, im, r in rated if r.get("ok")]
+    def sharp(im, r):  # le cadrage de la miniature (visage × 2,6 sur 720 px de haut) sans agrandir plus de 1,25×
+        return (r["face"][3] - r["face"][1]) * im.height * 2.6 >= TH / 1.25
+    good = [(src, im, r) for src, im, r in rated if r.get("ok") and sharp(im, r)]
     good.sort(key=lambda x: -float(x[2].get("score") or 0))
     log(f"{who} : {len(good)}/{len(rated)} photos utilisables")
     return good
