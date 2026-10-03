@@ -12,8 +12,7 @@ si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarre
 2. **Secrets** (jamais dans git) : dans l'environnement cloud du compte (menu de l'environnement dans la barre
    de titre de la session → Modifier → variables d'environnement), coller les lignes du `.env` que l'utilisateur
    a gardé (il l'a reçu en pièce jointe le 3 oct.). Le code lit le `.env` du dépôt s'il existe, sinon les
-   variables d'environnement. Au début d'une session, si le `.env` manque, le recréer depuis l'environnement :
-   `printenv | grep -E '^(FLASK_|COOKIE_SECURE|ACCESS_PASSWORD|BOSS_PASSWORD|AI_|ALGROW_|DISCORD_|NEWS_WORKER_|AI33_|RUNPOD_|RENDER_)' > .env`
+   variables d'environnement (`production/session_start.sh` recrée le `.env` depuis l'environnement).
    Variables : `FLASK_ENV`, `COOKIE_SECURE`, `FLASK_SECRET_KEY`, `ACCESS_PASSWORD`, `BOSS_PASSWORD`,
    `AI_BASE_URL`, `AI_API_KEY`, `AI_TEXT_MODEL`, `AI_FAST_MODEL`, `AI_IMAGE_MODEL`, `AI_IMAGE_CONCURRENCY`,
    `ALGROW_API_KEY` (voix), `DISCORD_WEBHOOK_URL` (paquets), `NEWS_WORKER_URL` + `NEWS_WORKER_TOKEN` (relais du
@@ -21,7 +20,8 @@ si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarre
    **Ne jamais demander de coller une clé dans le chat.**
 3. **Connecteur NexLev** (recherche YouTube, transcriptions, analyse de vidéos) : à connecter sur
    https://claude.ai/customize/connectors, puis nouvelle session. Indispensable pour l'actu (sources du jour).
-4. Hook git (commit = push branche + main) : `cp production/git-post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit`.
+4. Au début de chaque session : `bash production/session_start.sh` (hook git commit = push branche + main, et `.env`
+   recréé depuis les variables d'environnement s'il manque).
 5. Rien à refaire côté PC : l'agent « Drylow Actu » du PC et le relais du VPS marchent avec l'URL + le jeton du
    `.env` (mêmes valeurs).
 

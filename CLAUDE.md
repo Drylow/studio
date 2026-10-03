@@ -6,8 +6,8 @@ pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement p
 
 **Reprise sur un autre compte / nouvelle session : lire d'abord `production/REPRISE.md`** (état au 3 oct., ce qui
 est en cours, ce qu'il veut ensuite, comment brancher GitHub, les secrets et NexLev). Au début de chaque session
-cloud, `production/session_start.sh` (hook de `.claude/settings.json`) installe le hook git et recrée `.env`
-depuis les variables d'environnement du compte s'il manque.
+cloud : `bash production/session_start.sh` (installe le hook git et recrée `.env` depuis les variables
+d'environnement du compte s'il manque).
 
 ## 1. L'utilisateur et la façon de lui parler
 

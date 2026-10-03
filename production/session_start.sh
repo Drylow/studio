@@ -1,8 +1,8 @@
 #!/bin/bash
-# Début de session Claude dans le cloud (hook SessionStart de .claude/settings.json) : rend la session prête
+# Début de session Claude dans le cloud (à lancer : bash production/session_start.sh) : rend la session prête
 # comme sur le compte d'origine. Rien sur le PC de l'utilisateur.
 [ "$CLAUDE_CODE_REMOTE" = "true" ] || exit 0
-cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || cd "$(dirname "$0")/.." || exit 0
+cd "$(dirname "$0")/.." || exit 0
 # hook git : chaque commit poussé sur la branche ET main
 if [ -f production/git-post-commit ] && ! cmp -s production/git-post-commit .git/hooks/post-commit; then
   cp production/git-post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit
