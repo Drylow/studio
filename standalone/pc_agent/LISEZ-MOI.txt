@@ -1,0 +1,16 @@
+DRYLOW - MONTAGE AUTOMATIQUE DES VIDEOS D'ACTU (Cage Dispatch...)
+
+Pourquoi : YouTube bloque les serveurs (le cloud de Claude, les VPS) mais pas une connexion de maison.
+Ton PC fait donc uniquement le montage. Claude prepare tout le reste.
+
+A FAIRE UNE SEULE FOIS :
+1. Clic droit sur le zip -> "Extraire tout..." -> Documents (ou Bureau).
+2. Double-clic sur "Installer". Si Windows dit "Windows a protege votre ordinateur" :
+   "Informations complementaires" -> "Executer quand meme".
+3. A la question "Activer le montage automatique ?", tape O puis Entree.
+
+ENSUITE : rien. Quand ton PC est allume, il verifie toutes les 15 minutes s'il y a une video a monter.
+Si oui, il la monte en arriere-plan (sans fenetre), l'envoie sur Gofile et efface tous les clips.
+Claude recoit le lien et les captures, verifie, et envoie le paquet sur Discord.
+
+Pour tout enlever : double-clic sur "Desinstaller", puis supprime le dossier.

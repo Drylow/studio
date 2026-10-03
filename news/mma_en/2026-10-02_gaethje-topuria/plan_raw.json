@@ -1,16 +1,10 @@
 {
  "cold_open": [
   {
-   "moment": "M4"
+   "moment": "M31"
   },
   {
-   "moment": "M2"
-  },
-  {
-   "moment": "M29"
-  },
-  {
-   "moment": "M24"
+   "moment": "M27"
   }
  ],
  "blocks": [
@@ -167,7 +161,12 @@
   "Conner McGregor": "Conor McGregor",
   "Max Halloway": "Max Holloway",
   "Charles Oliviera": "Charles Oliveira",
-  "Dan Hooker": "Dan Hooker"
+  "Dan Hooker": "Dan Hooker",
+  "Sukian": "Tsarukyan",
+  "Iliotia": "Ilia Topuria",
+  "Armen": "Arman",
+  "should Sir be": "should Tsarukyan be",
+  "MMA fighting": "MMA Fighting"
  },
  "outro": "Justin Gaethje says Ilia Topuria does not deserve a rematch, while Arman Tsarukyan, Paddy Pimblett, and the money fights all wait for an answer. What happens next could reshape the division. So, drop your thoughts below."
 }

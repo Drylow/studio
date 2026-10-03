@@ -34,6 +34,7 @@ Idées suivantes : Amazon return, diamond, donated T-shirt, fake designer bag, $
 | POV: You Marry a Female Triad Boss | publiée | 1er oct. |
 | POV: You Marry a Female UFC Fighter | **livrée** (vérifiée, Discord) — https://gofile.io/d/MSC7DFd0 ; miniature : combattante dans la cage, ceinture en or sans logo, en sueur | **3 oct.** |
 | POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
+| POV: You Marry a Female Assassin | **livrée** (vérifiée image par image, Discord, 3 oct. 17:41 UTC) — https://gofile.io/d/sbzA4FiZ ; 15 min 43 ; Londres, Mara + Biscuit, faits réels (étude Birmingham City University 2014) ; 3 images refaites avant envoi (mariage avec un autre couple, appareil photo après « no photos ») ; miniature : planque, mur de cibles, fusil démonté dans la mallette, pistolet à silencieux levé (sans drapeau ni ville) | à caler |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
@@ -50,3 +51,10 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | **livrée** (vérifiée, Discord, 3 oct. 00:22) — https://gofile.io/d/vWmECEPV ; miniatures renvoyées sans médaillon (HIDDEN TRUTH, BRUTAL DAWN, WORSE THAN DEATH) | à caler |
+
+## Cage Dispatch (actu MMA, `news/mma_en/`, outil `production/news.py`)
+
+| Vidéo | État | Publication |
+|---|---|---|
+| “HE SHOULD HAVE QUIT ON THE STOOL!” Justin Gaethje SHUTS DOWN Ilia Topuria Rematch! | **livrée** (Discord, 3 oct. ~18:20 UTC) — https://gofile.io/d/kP9EQhk2 ; 18 min 37 ; montée par le PC de l'utilisateur (agent + relais du VPS) ; v1 refaite avant envoi (noms sur la mauvaise personne, gros mot écrit en grand et entendu au début) ; miniature A « SHOULD HAVE QUIT » | à caler |
+

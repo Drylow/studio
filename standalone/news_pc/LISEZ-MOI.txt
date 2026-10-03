@@ -1,0 +1,15 @@
+MONTAGE DES VIDEOS D'ACTU (Cage Dispatch, et plus tard Ring / Pitch Dispatch)
+
+Claude prepare les videos dans le cloud (plan, voix off, miniature). YouTube interdit au cloud de
+telecharger les extraits : c'est ton PC qui fait le montage, avec ce dossier.
+
+1. Clic droit sur le zip -> "Extraire tout..." -> Bureau.
+2. Double-clic sur "Monter les videos".
+   Si Windows dit "Windows a protege votre ordinateur" : "Informations complementaires" -> "Executer quand meme".
+3. La 1re fois, il installe tout seul ce qu'il faut DANS ce dossier (Python, Git, moteur YouTube) : 5 a 10 min.
+4. Une fenetre GitHub peut s'ouvrir : "Sign in with your browser", connecte-toi (une seule fois).
+5. Laisse tourner (30 min a 1 h par video). A la fin : ">>> LIEN DE LA VIDEO".
+   Les clips telecharges sont supprimes, rien ne reste sur ton PC.
+6. Dis a Claude "c'est fini" : il verifie les captures et envoie le paquet sur Discord.
+
+Pour les videos suivantes : juste le double-clic (etape 2), plus rien a installer.

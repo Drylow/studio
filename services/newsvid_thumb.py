@@ -273,15 +273,19 @@ def _text_block(canvas, text, highlight, accent, y_bottom, max_w):
             break
         size -= 4
     f = ImageFont.truetype(FONT, size)
-    lh = size * 1.02
-    y = y_bottom - lh * len(lines)
-    for ln in lines:
+    sw = max(6, size // 16)
+    # vraie taille des lettres (Anton dépasse sa ligne : avant, le bas du texte sortait de l'image)
+    boxes = [d.textbbox((0, 0), " ".join(ln), font=f, stroke_width=sw) for ln in lines]
+    gap = size * 0.06
+    total = sum(b[3] - b[1] for b in boxes) + gap * (len(lines) - 1)
+    y = y_bottom - total
+    for ln, b in zip(lines, boxes):
         x = (TW - d.textlength(" ".join(ln), font=f)) / 2
         for w in ln:
             col = accent if w.strip(".,!?\"'“”") in hl else (255, 255, 255)
-            d.text((x, y), w, font=f, fill=col, stroke_width=max(6, size // 16), stroke_fill=(0, 0, 0))
+            d.text((x, y - b[1]), w, font=f, fill=col, stroke_width=sw, stroke_fill=(0, 0, 0))
             x += d.textlength(w + " ", font=f)
-        y += lh
+        y += (b[3] - b[1]) + gap
 
 
 def _split(canvas, left, right, accent, zigzag=False):
@@ -353,7 +357,7 @@ def compose(left, right, text, highlight, accent, inset=None, variant="A", brand
             canvas = _ring_inset(canvas, inset)
         if variant == "E":
             canvas = _tape(canvas, brand)
-        _text_block(canvas, text, highlight, accent, TH - 26, TW - 90)
+        _text_block(canvas, text, highlight, accent, TH - 52, TW - 90)
         return canvas
     from PIL import Image, ImageDraw
     canvas = Image.new("RGB", (TW, TH), (8, 8, 10))
@@ -379,7 +383,7 @@ def compose(left, right, text, highlight, accent, inset=None, variant="A", brand
         d = ImageDraw.Draw(canvas)
         d.rectangle((x0 - 8, y0 - 8, x0 + iw + 7, y0 + ih + 7), fill=(30, 220, 60))
         canvas.paste(im, (x0, y0))
-    _text_block(canvas, text, highlight, accent, TH - 26, TW - 90)
+    _text_block(canvas, text, highlight, accent, TH - 52, TW - 90)
     return canvas
 
 

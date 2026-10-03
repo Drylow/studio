@@ -29,7 +29,8 @@ static/images/*
 Thumbs.db
 .idea/
 .vscode/
-.claude/
+.claude/*
+!.claude/skills/
 
 # Passenger (o2switch)
 passenger_wsgi.pyc
@@ -57,3 +58,7 @@ news/**/narration/.algrow_jobs.json
 news/**/narration/tts_*/
 news/**/photos/
 tools/
+Cage_Dispatch_Montage_PC.zip
+
+standalone/pc_agent/config.json
+standalone/pc_agent/agent.log

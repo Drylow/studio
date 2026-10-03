@@ -41,7 +41,7 @@ mains en moufles ; style `osl_stick`) et la même voix Algrow. Studio web : `/to
 
 | Clé | Chaîne | Format | Miniature validée |
 |---|---|---|---|
-| `oddly_specific_en` | **Oddly Specific Lives** (@OddlySpecificLives) | « POV: You Marry a … / Fall in Love with a … » (`pov_marry`), variante « Inside the Life of » (`pov_life`) | BD colorée : la femme 3/4 corps, contour blanc, monument du pays + drapeau en haut à gauche, bouquet de roses. **Pour un sport : dans son décor (cage, parquet), sans roses**, en tenue de son sport, ceinture/trophée sans logo, un peu de sueur. **Une femme différente à chaque vidéo** (visage, peau, cheveux : jamais la même que la miniature de référence ni qu'une vidéo précédente), bien sexy (jamais explicite). |
+| `oddly_specific_en` | **Oddly Specific Lives** (@OddlySpecificLives) | « POV: You Marry a … / Fall in Love with a … » (`pov_marry`), variante « Inside the Life of » (`pov_life`) | BD colorée : la femme 3/4 corps, contour blanc, monument du pays + drapeau en haut à gauche, bouquet de roses. **Pour un sport : dans son décor (cage, parquet), sans roses**, en tenue de son sport, ceinture/trophée sans logo, un peu de sueur. **Une femme différente à chaque vidéo** (visage, peau, cheveux : jamais la même que la miniature de référence ni qu'une vidéo précédente), bien sexy (jamais explicite). **Drapeau + monument seulement pour une nationalité** ; pour un métier (assassin…), tout est dans son monde : décor (planque, armurerie…), ses vrais outils, pas de ville touristique ni de gadget « mignon » (mallette de fusil remplie de roses : refusée, 3 oct.). |
 | `oddly_expensive_en` | **Oddly Expensive Lives** | « The Economics of … » : le prof explique la facture ligne par ligne, ticket de caisse (« running tab ») | façon Marcus : fond plan bleu, gros titre noir contour blanc souligné rouge, le prof à droite, 1-2 humains BD à gauche (**différents à chaque vidéo**), étiquettes chiffrées + flèches |
 | `oddly_things_en` | **Oddly Specific Things** — « Some things live oddly specific lives. » | « Your Life as a Stolen … » (`object_journey`) : TU es l'objet, suivi de main en main (cartes « HAND #n », trajets animés) | très simple (`presets/oddly_things_en/thumb.jpg`) : fond gris clair, une main moufle blanche (manche verte) tient l'objet, une main gantée noire l'arrache, traits jaunes, énorme mot noir arrondi en haut (STOLEN). **Varier l'action à chaque vidéo** (demande de l'utilisateur : « ça commence à faire répétitif ») : même style, mais une scène différente (arraché sous la voiture, pesé contre du cash, pêché dans un portefeuille, cadenas coupé vide, mis en carton, tir à la corde, grue + conteneur…) **et le mot du haut** (pas toujours STOLEN : un mot-clé de l'histoire, ex. SNATCHED, SOLD, PRECIOUS, GONE, SHIPPED, FOR SALE, CLONED, DRAINED ; retouche du mot seul : `thumb.py --edit`) ; proposer 3-4 variantes en planche |
 
@@ -257,8 +257,64 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   date) → `moments` → `plan --context "faits vérifiés"` → **relire plan.json** → `voice` → `thumb` → commit.
 - **Relire le plan** : chaque voix off colle à son extrait ; pas de mots lus présentés comme dits par la
   personne citée (le message de Topuria lu sur Flagrant) ; pas d'extrait rejoué d'une autre émission quand
-  l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
+  l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 60 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
+- **Montage façon Fight Night MMA (v3, après la critique du 3 oct. : « pas carré », « inspire-toi de lui »)** :
+  ouverture = 2-3 extraits **complets** en plein écran (léger zoom), choisis pour **donner le contexte** (on comprend
+  de qui on parle : le 1er nomme les combattants ; pas un animateur qui parle de gens qu'on ne voit pas). Ensuite les
+  extraits sont **dans un cadre rouge posé sur la même vidéo floutée** (`make_frame`), coupes franches, **aucun
+  bruitage, aucun volet, aucun texte qui surgit au milieu de l'écran** (citation en grand + punch-in : refusés,
+  « c'est affreux »). La phrase forte = **la ligne de sous-titre passe en jaune**. Un extrait ne coupe **jamais avant
+  la fin de la réponse** (`clip_spec` : question → réponse complète, `MAX_CLIP` 60 s, ouverture `TEASER` 40 s).
+  Voix off : sur **photo du combattant dont elle parle** (`photos/photos.json` de la miniature, `photo_still`, zoom lent)
+  sinon images de la vidéo, titre de l'info (`headline`), musique basse ; pas de fil d'actu. Logo animé après
+  l'ouverture, rappel d'abonnement discret une fois. **Sous-titres propres** (`_wrap_subs`) : casse normale (pas de
+  CRIS), sans « um/uh », bégaiements, « [laughter] » ; **« ... » quand une phrase est lâchée puis reprise** ; noms
+  mal transcrits corrigés par `plan["spelling"]` (relire les sous-titres : « Sukian », « Iliotia »…).
+  **Prononciation de la voix off** : `newsvid.PRONOUNCE` (« Gaethje » → « Gay-chee », envoyé à la voix seulement) ;
+  vérifier avec Whisper (`align.words_from_audio`) qu'on entend bien le nom. Refaire la voix = effacer
+  `narration/n*.mp3` puis `news.py voice`.
+  **Noms à l'écran = jamais sur la mauvaise personne** (1er montage Gaethje, 3 oct. : « JUSTIN GAETHJE » sur
+  l'animateur) : le nom de qui parle s'affiche pendant SA phrase forte, dans le cadre seulement (plein écran : le
+  crédit suffit) ; aucun nom pendant la voix off. **Gros mots** : censurés à l'écran (F***ING, `censor`) et
+  coupés au son dans l'ouverture (pubs coupées si gros mot au début).
+  Anton s'affiche ~40 % plus petit que sa taille ASS : vérifier les tailles sur des images fixes. L'ouverture ne
+  rejoue jamais un passage du corps (`materialize` le retire) et **vérifier qui parle vraiment** dans un teaser
+  (l'animateur qui relit une vieille interview ≠ le combattant). **Miniature** : citation entière visible, assez
+  haut (`_text_block`, bas à TH-52) ; refaire une miniature garde les photos validées (en tête de `photos.json`).
+  Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
+  `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
+- **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
+  (Docker, HTTPS, jeton) installé par une ligne en root sur le VPS : `curl -fsSL
+  https://raw.githubusercontent.com/drylow/studio/main/production/vps_news_setup.sh | bash` (script généré par
+  `vps_news_setup.py` : le régénérer et committer après chaque changement du serveur). `NEWS_WORKER_URL` +
+  `NEWS_WORKER_TOKEN` dans `.env`. `news.py vps-check` (YouTube accepte-t-il le VPS ?), `news.py vps <dossier>`
+  (envoie code + plan + voix off, suit le montage, rapatrie `result.json`, `build.log`, `check/sheet_*.jpg`).
+  Le VPS efface clips, segments et vidéo après l'envoi Gofile. SSH est fermé depuis le cloud : HTTPS seulement.
+  VPS du pote de l'utilisateur (`news.13-140-129-97.sslip.io`, 3 oct.) : YouTube le bloque aussi (« Sign in to
+  confirm you're not a bot ») → proxy résidentiel Decodo (choisi par eux, payé au Go) **pour yt-dlp seulement**
+  (`YTDLP_PROXY`, ou `HTTPS_PROXY` que le serveur retire de l'environnement général : Gofile, pip, deno passent en
+  direct). IP « sticky » obligatoire (les liens vidéo de YouTube sont liés à l'IP). ~1,2 Go par vidéo de 18 min.
+  Les IP « ISP » de Decodo (`isp.decodo.com`) sont bloquées elles aussi (testé 3 oct., 5 clients yt-dlp) : essayer le
+  pool résidentiel en session sticky, sinon `cookies.txt` d'un compte YouTube **jetable** (risque de blocage du
+  compte) : `docker cp cookies.txt drylow-news:/data/cookies.txt`, le serveur le prend tout seul (`--cookies`).
+- **Montage sur le PC de l'utilisateur, sans qu'il fasse rien (choisi le 3 oct. : « utilise mon PC, mais c'est
+  pas à moi de le faire » ; pas de compte Google jetable)** : agent `standalone/pc_agent/` (zip fait par
+  `production/make_pc_agent.py`, avec l'adresse + le jeton du relais : jamais dans git). Installé UNE fois (Installer.bat,
+  il demande son accord « O/N ») : Python embarqué + tâche Windows « Drylow Actu » (pythonw, sans fenêtre, toutes les
+  15 min + à l'ouverture de session ; Desinstaller.bat l'enlève). Le relais = le serveur du VPS (`/pcjob`, `/pc/*`) :
+  `news.py vps <dossier> --pc` dépose, l'agent prend, monte (connexion de maison : YouTube passe), envoie sur Gofile,
+  renvoie build.log au fil de l'eau + result.json + planches, efface tout ; `news.py pc-fetch <dossier> [--wait]`
+  rapatrie (montre aussi l'heure du dernier passage du PC). Montage sans nouvelles depuis 20 min (PC éteint, en veille) : reproposé tout seul ; sinon redéposer avec `vps --pc`.
+- **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
+  (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
+  dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le
+  résultat. `news.py pc` ne monte que les dossiers `ready`, 3 essais max par vidéo (`work/news_attempts.json`).
+- **Sans Claude sur le PC : dossier autonome** (son studio PC vient d'un zip, pas de git) : `standalone/news_pc/`
+  (« Monter les videos.bat » + `monter.ps1`), envoyé en zip. Il installe tout dans son dossier (Python embarqué,
+  Git portable, deno), clone le dépôt public dans `studio\`, demande la connexion GitHub au début (pour le push du
+  résultat), puis lance `news.py pc`. Python embarqué = mode isolé : pas de PYTHONIOENCODING, `open()` en cp1252
+  (toujours `encoding="utf-8"`), le dossier du script n'est pas dans sys.path (ajouté dans le `._pth`).
 - **Après le montage PC** : `git pull`, regarder `check/sheet_*.jpg` (+ `build.log`), puis
   `python production/news.py send <dossier>` (Discord) seulement si tout est bon.

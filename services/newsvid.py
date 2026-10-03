@@ -35,7 +35,7 @@ from services import ai
 CHANNELS = {
     "mma_en": {
         "name": "MMA news (UFC)", "sport": "MMA / UFC", "language": "en",
-        "brand": "CAGE DISPATCH", "handle": "",
+        "brand": "CAGE DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY MMA NEWS",
         "accent": "#E10600", "accent2": "#FFD21F",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",  # Joe Stokes, présentateur radio US
         "minutes": 18,
@@ -52,7 +52,7 @@ CHANNELS = {
     },
     "boxing_en": {
         "name": "Boxing news", "sport": "Boxing", "language": "en",
-        "brand": "RING DISPATCH", "handle": "",
+        "brand": "RING DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY BOXING NEWS",
         "accent": "#D4A017", "accent2": "#FFFFFF",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
@@ -62,7 +62,7 @@ CHANNELS = {
     },
     "football_en": {
         "name": "Football news", "sport": "Football (soccer)", "language": "en",
-        "brand": "PITCH DISPATCH", "handle": "",
+        "brand": "PITCH DISPATCH", "handle": "", "subscribe": "SUBSCRIBE FOR DAILY FOOTBALL NEWS",
         "accent": "#1DB954", "accent2": "#FFFFFF",
         "voice_provider": "algrow", "voice": "jvV8uNVYXJa37GHVtjXf",
         "minutes": 18,
@@ -224,8 +224,11 @@ def yt_js_args():
     import shutil
     local = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools", "deno",
                          "deno.exe" if os.name == "nt" else "deno")
-    if os.path.isfile(local):
-        return ["--js-runtimes", f"deno:{local}"]
+    if os.path.isfile(local):  # dans le PATH (deno est le moteur par défaut de yt-dlp) : pas de « C:\\ » à passer
+        d = os.path.dirname(local)
+        if d not in os.environ.get("PATH", "").split(os.pathsep):
+            os.environ["PATH"] = d + os.pathsep + os.environ.get("PATH", "")
+        return []
     if shutil.which("deno"):
         return []
     if shutil.which("node"):
@@ -236,7 +239,8 @@ def yt_js_args():
 def video_info(video_id):
     """Titre, chaîne, date de sortie, durée (yt-dlp, sur PC)."""
     r = subprocess.run([sys.executable, "-m", "yt_dlp", "-j", "--skip-download", *yt_js_args(),
-                        f"https://www.youtube.com/watch?v={video_id}"], capture_output=True, text=True, timeout=180)
+                        f"https://www.youtube.com/watch?v={video_id}"], capture_output=True, text=True, encoding="utf-8",
+                       errors="replace", timeout=180)
     try:
         d = json.loads(r.stdout)
     except ValueError:
@@ -459,8 +463,20 @@ def _fix_spelling(text, spelling):
 
 
 _SENT_END = re.compile(r"[.?!][\"”’')\]]*$")
-MAX_CLIP = 50.0   # un extrait ne dure jamais plus (monétisation : extraits courts + voix off)
-TEASER = 16.0     # extraits de l'ouverture : la phrase choc seulement
+# Prononciation de la voix off (Algrow lit mal certains noms : « Gaethje » = GAY-chee) : orthographe phonétique
+# envoyée à la voix SEULEMENT (sous-titres, titres et bandeaux gardent la vraie orthographe). Un nom = un mot.
+PRONOUNCE = {"Gaethje": "Gay-chee", "Cormier": "Kor-mee-ay", "Tsarukyan": "Tsa-roo-kee-an",
+             "Oliveira": "Oli-vay-ra"}
+
+
+def speakable(text):
+    for k, v in PRONOUNCE.items():
+        text = re.sub(rf"\b{k}\b", v, text)
+    return text
+
+
+MAX_CLIP = 60.0   # un extrait ne dure jamais plus (monétisation : extraits courts + voix off)
+TEASER = 40.0     # ouverture (comme Fight Night : 15-40 s) : un échange complet, compréhensible seul
 
 
 def _pieces(lines, a, b):
@@ -535,7 +551,7 @@ def clip_spec(src, a, b, spelling, quote=None, max_len=MAX_CLIP, pad_in=0.15, pa
     """Extrait = lignes a..b de la source, recalé sur des phrases entières (jamais « nothing illegal in the »),
     au plus max_len secondes autour de la citation → {video, start, end, subs: [{s, e, t}] relatifs au début}."""
     lines = src["lines"]
-    pcs = _pieces(lines, a, min(len(lines) - 1, b + 2))  # 2 lignes de plus pour finir la phrase
+    pcs = _pieces(lines, a, min(len(lines) - 1, b + 14))  # de quoi finir la phrase, ou la réponse à une question
     in_ab = [k for k, p in enumerate(pcs) if p["line"] <= b]
     first = 0
     if a > 0 and not _SENT_END.search(lines[a - 1]["t"]):  # la 1re ligne commence au milieu d'une phrase
@@ -548,13 +564,54 @@ def clip_spec(src, a, b, spelling, quote=None, max_len=MAX_CLIP, pad_in=0.15, pa
     if anchor:
         anchor = (first + anchor[0], first + anchor[1])
     s, e = _window(pcs, first, last, max_len, anchor)
+    # un échange complet (l'utilisateur, 3 oct. : « ça coupe avant qu'il réponde ») : jamais finir sur une question,
+    # on garde au moins ~6 s de réponse, en phrases entières
+    lim = max_len + 20
+
+    def fits(k):
+        return k < len(pcs) and pcs[k]["e"] - pcs[s]["s"] <= lim
+    if pcs[e]["t"].rstrip().endswith("?"):
+        q_end = pcs[e]["e"]
+        while fits(e + 1) and (pcs[e]["t"].rstrip().endswith("?") or not pcs[e]["end"] or pcs[e]["e"] - q_end < 6):
+            e += 1
     start = max(0.0, pcs[s]["s"] - pad_in)
     end = pcs[e]["e"] + pad_out
     subs = [{"s": round(max(0.0, p["s"] - start), 2), "e": round(min(p["e"] - start, end - start), 2),
              "t": _fix_spelling(p["t"], spelling)} for p in pcs[s:e + 1]]
-    return {"video": src["id"], "start": round(start, 2), "end": round(end, 2),
-            "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""),
-            "channel": src.get("channel") or "", "subs": subs}
+    out = {"video": src["id"], "start": round(start, 2), "end": round(end, 2),
+           "credit": ("@" + src["handle"].lstrip("@")) if src.get("handle") else (src.get("channel") or ""),
+           "channel": src.get("channel") or "", "subs": subs}
+    if anchor and s <= anchor[0] and anchor[1] <= e:  # la phrase choc : affichée en grand au montage
+        out["quote"] = {"t": _fix_spelling(quote, spelling), "s": round(max(0.0, pcs[anchor[0]]["s"] - start), 2),
+                        "e": round(min(pcs[anchor[1]]["e"] - start, end - start), 2)}
+    return out
+
+
+def headlines(folder, log=print):
+    """Titre court (bandeau à l'écran) pour chaque voix off + le fil d'actu du bas : seulement ce que la voix off
+    dit (pas de nouveau fait). Écrit dans plan.json (seg["headline"], plan["ticker"])."""
+    path = os.path.join(folder, "plan.json")
+    with open(path, "r", encoding="utf-8") as f:
+        plan = json.load(f)
+    nar = [(i, s["text"]) for i, s in enumerate(plan["segments"]) if s["type"] == "narration" and not s.get("outro")]
+    if not nar:
+        return plan
+    prompt = ("You write on-screen headlines for a sports news video. For each voice-over below, write ONE headline "
+              "in ALL CAPS, 2 to 6 words, punchy but strictly true to that voice-over (no fact it does not say, no "
+              "invented quote). Use surnames (e.g. GAETHJE, TOPURIA). Then write 'ticker': 4 to 8 short ALL CAPS "
+              "news lines (3 to 8 words each) summarising the whole video for a scrolling news ticker, same rule.\n"
+              'Answer JSON: {"headlines": [{"i": <index>, "h": "..."}], "ticker": ["..."]}\n\n' +
+              "\n".join(f"[{i}] {t}" for i, t in nar))
+    res = ai.chat_json(prompt, model=ai.text_model(), timeout=240)
+    got = {int(h["i"]): str(h["h"]).strip().upper() for h in res.get("headlines") or [] if str(h.get("i", "")).isdigit()}
+    for i, _ in nar:
+        if got.get(i):
+            plan["segments"][i]["headline"] = got[i][:48]
+    plan["ticker"] = [str(t).strip().upper()[:70] for t in res.get("ticker") or [] if str(t).strip()][:8]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(plan, f, ensure_ascii=False, indent=1)
+    log(f"bandeaux : {len(got)} titres, fil d'actu {len(plan['ticker'])} lignes")
+    return plan
 
 
 def materialize(folder, ch, topic, plan, moms, by_id, log=print):
@@ -596,6 +653,12 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
         a, b = span(m, blk.get("trim"))
         segs.append(dict(clip_spec(by_id[m["source"]], a, b, spelling, quote=m.get("quote")), type="clip", full=False,
                          speaker=m["speaker"] if m["sure"] else ""))
+    # l'ouverture ne rejoue pas un passage du corps (sinon le spectateur l'entend deux fois)
+    body = [x for x in segs if x["type"] == "clip" and not x.get("full")]
+    for c in [x for x in segs if x.get("full")]:
+        if any(b["video"] == c["video"] and b["start"] < c["end"] and c["start"] < b["end"] for b in body):
+            log(f"ouverture : {c['video']} {c['start']}-{c['end']} recoupe un extrait du corps → retiré")
+            segs.remove(c)
     if plan.get("outro"):
         segs.append({"type": "narration", "text": re.sub(r"\s+", " ", plan["outro"]).strip(), "next_video": None,
                      "outro": True})
@@ -626,12 +689,24 @@ def materialize(folder, ch, topic, plan, moms, by_id, log=print):
     else:
         thumb["checked"] = True
     out = {"channel": ch["key"], "brand": ch["brand"], "accent": ch["accent"], "accent2": ch.get("accent2"),
+           "subscribe": ch.get("subscribe") or "SUBSCRIBE FOR DAILY NEWS",
            "topic": topic, "voice": {"provider": ch.get("voice_provider", "algrow"), "id": ch["voice"]},
            "titles": titles, "title": titles[0] if titles else "", "thumb": thumb,
            "description": plan.get("description") or "", "tags": plan.get("tags") or [],
            "pinned_comment": plan.get("pinned_comment") or "", "spelling": spelling, "segments": segs}
     est = sum((s["end"] - s["start"]) if s["type"] == "clip" else len(s["text"].split()) / 2.9 for s in segs)
     out["estimated_minutes"] = round(est / 60, 1)
+    try:  # refaire le plan sans l'IA garde les bandeaux déjà écrits (même voix off → même titre)
+        with open(os.path.join(folder, "plan.json"), "r", encoding="utf-8") as f:
+            old = json.load(f)
+        heads = {x["text"]: x["headline"] for x in old.get("segments", []) if x.get("headline")}
+        for x in segs:
+            if x["type"] == "narration" and heads.get(x["text"]):
+                x["headline"] = heads[x["text"]]
+        if old.get("ticker"):
+            out["ticker"] = old["ticker"]
+    except (OSError, ValueError):
+        pass
     with open(os.path.join(folder, "plan.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     log(f"plan : {len(segs)} segments, ~{out['estimated_minutes']} min, {len(titles)} titres")

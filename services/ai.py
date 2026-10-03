@@ -213,7 +213,8 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
             raise err
         return text
 
-    use_fb = bool(fb) and fb != body["model"]
+    # secours lui-même à court de quota : inutile d'y basculer, on insiste sur le modèle principal
+    use_fb = bool(fb) and fb != body["model"] and _cooldown.get(fb, 0) <= time.time()
     first = 1 if use_fb else tries  # proxy saturé : 1 tentative sur le modèle principal, puis secours
     try:
         return _with_retries(once, tries=first)
@@ -221,11 +222,23 @@ def chat(messages, *, model=None, temperature=None, json_mode=False,
         st = getattr(e, "status", None)
         if use_fb and st in (4290, 429):
             _log("/chat/completions", f"{body['model']} indisponible ({st}) → secours {fb}", time.time())
+            main = dict(body)
             if st == 429:  # 5 min sans insister sur le modèle saturé
                 _cooldown[body["model"]] = max(_cooldown.get(body["model"], 0), time.time() + 300)
             body["model"] = fb
             body.pop("reasoning_effort", None)
-            return _with_retries(once, tries=tries)
+            try:
+                return _with_retries(once, tries=tries)
+            except AIError as e2:
+                if st != 429 or getattr(e2, "status", None) != 4290:
+                    raise
+                # secours à court de quota alors que le principal est juste saturé (file d'attente pleine) :
+                # on revient au principal, plus patiemment
+                _log("/chat/completions", f"secours {fb} à court de quota → retour à {main['model']}", time.time())
+                _cooldown.pop(main["model"], None)
+                body.clear()
+                body.update(main)
+                return _with_retries(once, tries=tries, base_delay=20.0)
         if first < tries and st in _TRANSIENT:
             return _with_retries(once, tries=tries - first)
         raise

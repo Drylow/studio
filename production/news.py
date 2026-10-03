@@ -10,6 +10,7 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
   python production/news.py import <dossier> <fichier_nexlev.json> [meta.json]    → sous-titres NexLev (cloud)
   python production/news.py moments <dossier>                                     → moments.json (IA)
   python production/news.py plan <dossier> [--context "faits vérifiés"]           → plan.json (IA, citations vérifiées)
+  python production/news.py headlines <dossier>                                  → bandeaux + fil d'actu (IA)
   python production/news.py voice <dossier>                                       → narration/nXXX.mp3 (Algrow)
   python production/news.py thumb <dossier>                                       → miniatures (planche)
 
@@ -18,15 +19,25 @@ planches de contrôle, résultat). Les sous-titres des sources (sources/) resten
                                          Gofile, supprime les clips, git push du résultat et des planches
   python production/news.py build <dossier> [--no-upload] [--keep]
 
+  # sur le VPS de l'utilisateur (production/vps_news_setup.sh) : tout depuis le cloud, rien à faire sur le PC
+  python production/news.py vps-check                 → YouTube laisse-t-il télécharger depuis le VPS ?
+  python production/news.py vps <dossier> [--no-wait] → envoie, monte, rapatrie lien + planches check/
+  python production/news.py vps-fetch <dossier> [--wait]
+  python production/news.py vps <dossier> --pc [--no-wait] → montage sur le PC de l'utilisateur (relais du VPS,
+                                                    agent standalone/pc_agent, toutes les 15 min)
+  python production/news.py pc-fetch <dossier> [--wait] → état du montage PC, rapatrie lien + planches
+
   # dans le cloud, après avoir regardé les planches check/
-  python production/news.py send <dossier>                                        → paquet Discord
+  python production/news.py send <dossier> [--corrigee]                           → paquet Discord
 """
 import datetime
+import glob
 import json
 import os
 import re
 import subprocess
 import sys
+import time
 
 from common import REPO, WORK
 
@@ -130,6 +141,7 @@ def cmd_moments(job):
 def cmd_plan(job, context=""):
     j = job_meta(job)
     plan = N.make_plan(job, N.channel(j["channel"]), j["topic"], context=context or j.get("context", ""))
+    plan = N.headlines(job)
     print(json.dumps({"titles": plan["titles"], "thumb": plan["thumb"], "minutes": plan["estimated_minutes"]},
                      ensure_ascii=False, indent=1))
 
@@ -142,7 +154,7 @@ def cmd_voice(job):
         plan = json.load(f)
     d = os.path.join(job, "narration")
     os.makedirs(d, exist_ok=True)
-    todo = [(i, seg["text"]) for i, seg in enumerate(plan["segments"]) if seg["type"] == "narration"]
+    todo = [(i, N.speakable(seg["text"])) for i, seg in enumerate(plan["segments"]) if seg["type"] == "narration"]
     if all(os.path.isfile(os.path.join(d, f"n{i:03d}.mp3")) for i, _ in todo):
         print("voix off déjà prête")
         return
@@ -172,30 +184,76 @@ def cmd_voice(job):
 
 def cmd_build(job, upload=True, keep=False):
     from services import newsvid_render as R
+    if os.environ.get("NEWS_NO_UPLOAD"):  # tests : pas d'envoi sur Gofile
+        upload = False
     res = R.build(job, WORK, upload=upload, keep=keep)
     print(json.dumps(res, indent=1))
     return res
 
 
 def git(*args, check=False):
-    return subprocess.run(["git", *args], cwd=REPO, capture_output=True, text=True, check=check)
+    return subprocess.run(["git", *args], cwd=REPO, capture_output=True, text=True, encoding="utf-8",
+                          errors="replace", check=check)
+
+
+def push_result(rel):
+    """Renvoie le résultat dans git (lien, planches, journal) ; si le cloud a poussé entre-temps : rebase puis
+    nouvel essai. Ne prend que les planches (jamais les images de travail)."""
+    paths = [os.path.join(rel, "result.json"), os.path.join(rel, "build.log")]
+    paths += [os.path.relpath(p, REPO) for p in glob.glob(os.path.join(REPO, rel, "check", "sheet_*.jpg"))]
+    git("add", "-f", "--", *[p for p in paths if os.path.exists(os.path.join(REPO, p))])
+    git("commit", "-q", "-m", f"News video built on PC: {os.path.basename(rel)}")
+    for k in range(4):
+        p = git("push", "-q", "origin", "HEAD")
+        if p.returncode == 0:
+            print("Planches et lien envoyés à Claude : ok")
+            return True
+        err = p.stderr.strip()
+        if "rejected" in err or "fetch first" in err or "non-fast-forward" in err:
+            git("pull", "-q", "--rebase", "--autostash")
+            continue
+        break
+    print("!! Envoi à Claude raté (connexion GitHub ?) :", err[:300])
+    print("   Donne-lui le lien ci-dessus et glisse les images du dossier check dans le chat.")
+    return False
 
 
 def cmd_pc():
-    """PC : récupère les vidéos à monter, les monte, renvoie le résultat (lien + planches) dans git."""
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "yt-dlp[default]"], check=False)
-    r = git("pull", "--ff-only")
-    print(r.stdout.strip() or r.stderr.strip())
+    """PC : récupère les vidéos à monter (marquées `ready` par Claude après relecture), les monte, renvoie le
+    résultat (lien + planches) dans git. Lancé tout seul toutes les 15 min par la tâche planifiée du PC."""
+    ahead = git("rev-list", "--count", "@{u}..HEAD").stdout.strip()
+    if ahead.isdigit() and int(ahead) > 0:  # résultat d'une fois précédente pas encore envoyé (connexion ?)
+        git("pull", "-q", "--rebase", "--autostash")
+        git("push", "-q", "origin", "HEAD")
+    r = git("pull", "-q", "--ff-only")
+    if r.returncode != 0:
+        print(r.stderr.strip()[:300])
+    tries_path = os.path.join(WORK, "news_attempts.json")
+    try:
+        with open(tries_path, "r", encoding="utf-8") as f:
+            tries = json.load(f)
+    except (OSError, ValueError):
+        tries = {}
     todo = []
     for root, dirs, files in os.walk(NEWS):
-        if "plan.json" in files and "result.json" not in files and os.path.isdir(os.path.join(root, "narration")):
-            todo.append(root)
+        if ("plan.json" in files and "ready" in files and "result.json" not in files
+                and os.path.isdir(os.path.join(root, "narration"))):
+            rel = os.path.relpath(root, REPO).replace("\\", "/")
+            if tries.get(rel, 0) < 3:  # 3 échecs : on attend que Claude corrige (build.log est dans git)
+                todo.append(root)
     if not todo:
         print("Rien à monter.")
         return
+    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "--disable-pip-version-check",
+                    "--no-warn-script-location", "yt-dlp[default]"], check=False)
     for job in sorted(todo):
         rel = os.path.relpath(job, REPO)
+        key = rel.replace("\\", "/")
         print(f"=== {rel}")
+        tries[key] = tries.get(key, 0) + 1
+        os.makedirs(WORK, exist_ok=True)
+        with open(tries_path, "w", encoding="utf-8") as f:
+            json.dump(tries, f)
         try:
             cmd_build(job)
         except Exception as e:  # noqa: BLE001  (le journal part quand même dans git)
@@ -207,15 +265,146 @@ def cmd_pc():
             with open(rp, "r", encoding="utf-8") as f:
                 link = json.load(f).get("link")
             print(f"\n>>> LIEN DE LA VIDEO : {link or 'envoi Gofile raté (voir build.log)'}\n")
-        git("add", "-A", "--", os.path.join(rel, "result.json"), os.path.join(rel, "check"),
-            os.path.join(rel, "build.log"))
-        git("commit", "-q", "-m", f"News video built on PC: {os.path.basename(job)}")
-        p = git("push", "-q", "origin", "HEAD")
-        print("push :", "ok" if p.returncode == 0 else p.stderr.strip()[:300])
+        push_result(rel)
 
 
-def cmd_send(job):
-    """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags."""
+VPS_CODE = ["production/news.py", "production/common.py", "services/__init__.py", "services/newsvid.py",
+            "services/newsvid_render.py", "services/media.py", "services/music.py", "services/ai.py", "services/tts.py",
+            "services/sfx.py"]
+
+
+def vps_call(method, path, data=None, timeout=60):
+    """Serveur de montage du VPS (production/news_worker.py) : NEWS_WORKER_URL + NEWS_WORKER_TOKEN dans .env."""
+    import requests
+    url = (os.environ.get("NEWS_WORKER_URL") or "").rstrip("/")
+    tok = os.environ.get("NEWS_WORKER_TOKEN") or ""
+    if not url or not tok:
+        raise SystemExit("NEWS_WORKER_URL / NEWS_WORKER_TOKEN absents du .env (installer : production/vps_news_setup.sh)")
+    return requests.request(method, url + path, data=data, timeout=timeout, headers={"X-Worker-Token": tok})
+
+
+def job_tarball(job):
+    """Le code du montage + la vidéo préparée (plan, voix off), en .tgz : pour le VPS ou le PC."""
+    import io
+    import tarfile
+    buf = io.BytesIO()
+    with tarfile.open(fileobj=buf, mode="w:gz") as t:
+        for rel in VPS_CODE:
+            t.add(os.path.join(REPO, rel), "code/" + rel)
+        t.add(os.path.join(REPO, "static", "fonts"), "code/static/fonts")
+        for f in ("plan.json", "job.json"):
+            if os.path.isfile(os.path.join(job, f)):
+                t.add(os.path.join(job, f), "job/" + f)
+        for f in sorted(glob.glob(os.path.join(job, "narration", "n*.mp3"))):
+            t.add(f, "job/narration/" + os.path.basename(f))
+        idx = os.path.join(job, "photos", "photos.json")      # photos des combattants (fonds de la voix off)
+        if os.path.isfile(idx):
+            t.add(idx, "job/photos/photos.json")
+            with open(idx, "r", encoding="utf-8") as f:
+                for items in json.load(f).values():
+                    for it in items:
+                        p = os.path.join(job, "photos", it.get("file", ""))
+                        if it.get("file") and os.path.isfile(p):
+                            t.add(p, "job/photos/" + it["file"])
+    return buf.getvalue()
+
+
+def cmd_vps(job, wait=True, upload=True, pc=False):
+    """Montage sur le VPS (ou, avec pc, sur le PC de l'utilisateur via le relais du VPS) : envoie le code + la
+    vidéo préparée, suit le montage, rapatrie lien et planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    data = job_tarball(job)
+    if pc:
+        r = vps_call("PUT", f"/pcjob?name={name}", data=data, timeout=300)
+    else:
+        r = vps_call("PUT", f"/job?name={name}" + ("" if upload else "&upload=0"), data=data, timeout=300)
+    if r.status_code != 200:
+        raise SystemExit(f"VPS : {r.status_code} {r.text[:300]}")
+    print(f"envoyé ({len(data) / 1e6:.1f} Mo) : " + ("en attente du PC (il passe toutes les 15 min)" if pc
+                                                      else "montage lancé sur le VPS"))
+    if wait:
+        (pc_fetch if pc else vps_fetch)(job, wait=True)
+
+
+def pc_fetch(job, wait=False):
+    """Vidéo montée par le PC : état, puis rapatrie result.json, build.log et les planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    last = ""
+    while True:
+        s = vps_call("GET", f"/pc/state?name={name}").json()
+        line = (s.get("log") or [""])[-1]
+        if line and line != last:
+            print(line, flush=True)
+            last = line
+        if s.get("state") == "done":
+            break
+        if not wait:
+            seen = s.get("pc_seen")
+            ago = f"il y a {int((time.time() - seen) / 60)} min" if seen else "jamais"
+            print(f"état : {s.get('state')} — dernier passage du PC : {ago}")
+            return None
+        time.sleep(60)
+    for rel in ["result.json", "build.log"] + [f"check/sheet_{k:02d}.jpg" for k in range(1, 40)]:
+        r = vps_call("GET", f"/pc/file?name={name}&path={rel}", timeout=120)
+        if r.status_code != 200:
+            if rel.startswith("check/"):
+                break
+            continue
+        dest = os.path.join(job, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "wb") as f:
+            f.write(r.content)
+    rp = os.path.join(job, "result.json")
+    if os.path.isfile(rp):
+        with open(rp, "r", encoding="utf-8") as f:
+            res = json.load(f)
+        print(f">>> LIEN DE LA VIDEO : {res.get('link')}  ({res.get('minutes')} min)")
+        return res
+    print("pas de result.json : voir build.log")
+    return None
+
+
+def vps_fetch(job, wait=False):
+    """Attend la fin du montage (si wait) puis rapatrie result.json, build.log et les planches."""
+    name = os.path.basename(job.rstrip("/\\"))
+    last = ""
+    while True:
+        s = vps_call("GET", "/status").json()
+        line = (s.get("log") or [""])[-1]
+        if line and line != last:
+            print(line, flush=True)
+            last = line
+        if not (s.get("busy") and s.get("job") == name):
+            break
+        if not wait:
+            print("montage en cours :", s.get("stage"))
+            return None
+        time.sleep(30)
+    for rel in ["result.json", "build.log"] + [f"check/sheet_{k:02d}.jpg" for k in range(1, 40)]:
+        r = vps_call("GET", f"/file?name={name}&path={rel}", timeout=120)
+        if r.status_code != 200:
+            if rel.startswith("check/"):
+                break
+            continue
+        dest = os.path.join(job, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "wb") as f:
+            f.write(r.content)
+    if s.get("error"):
+        print("ERREUR VPS :", s["error"])
+    rp = os.path.join(job, "result.json")
+    if os.path.isfile(rp):
+        with open(rp, "r", encoding="utf-8") as f:
+            res = json.load(f)
+        print(f">>> LIEN DE LA VIDEO : {res.get('link')}  ({res.get('minutes')} min)")
+        return res
+    print("pas de result.json : voir build.log")
+    return None
+
+
+def cmd_send(job, corrected=False):
+    """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags.
+    corrected : vidéo refaite après une remarque → marquée « CORRIGÉE – à poster » (l'ancien lien n'est pas cité)."""
     import requests
     from common import webhook
     with open(os.path.join(job, "plan.json"), "r", encoding="utf-8") as f:
@@ -227,7 +416,8 @@ def cmd_send(job):
     thumb = os.path.join(job, "thumb.jpg")
     title = plan.get("title") or (plan.get("titles") or ["?"])[0]
     others = "\n".join(f"• {t}" for t in (plan.get("titles") or [])[1:4])
-    content = (f"🎬 **{plan.get('brand', 'News')} — {title}** ✅ vérifiée, à poster\n"
+    tag = "✅ **CORRIGÉE – à poster**" if corrected else "✅ vérifiée, à poster"
+    content = (f"🎬 **{plan.get('brand', 'News')} — {title}** {tag}\n"
                f"🔗 **Vidéo** : <{res['link']}> ({res.get('minutes', '?')} min)")
     embeds = [{"title": "Titre", "description": title + (f"\n\nAutres titres :\n{others}" if others else ""),
                "color": 0xE10600},
@@ -243,7 +433,7 @@ def cmd_send(job):
     else:
         r = requests.post(url, json=data, timeout=60)
     r.raise_for_status()
-    with open(os.path.join(job, "discord_done"), "w") as f:
+    with open(os.path.join(job, "discord_done"), "w", encoding="utf-8") as f:
         f.write(res["link"])
     print("Discord : envoyé")
 
@@ -276,6 +466,8 @@ def main(argv):
             ctx = rest[k + 1] if k + 1 < len(rest) else ""
             args = [a for a in args if a != ctx]
         cmd_plan(job_path(args[0]), ctx)
+    elif c == "headlines":
+        N.headlines(job_path(args[0]))
     elif c == "voice":
         cmd_voice(job_path(args[0]))
     elif c == "thumb":
@@ -285,11 +477,25 @@ def main(argv):
         cmd_build(job_path(args[0]), upload="--no-upload" not in flags, keep="--keep" in flags)
     elif c == "pc":
         cmd_pc()
+    elif c == "vps":
+        cmd_vps(job_path(args[0]), wait="--no-wait" not in flags, upload="--no-upload" not in flags,
+                pc="--pc" in flags)
+    elif c == "pc-fetch":
+        pc_fetch(job_path(args[0]), wait="--wait" in flags)
+    elif c == "vps-fetch":
+        vps_fetch(job_path(args[0]), wait="--wait" in flags)
+    elif c == "vps-check":
+        print(vps_call("POST", "/ytcheck", timeout=320).json())
     elif c == "send":
-        cmd_send(job_path(args[0]))
+        cmd_send(job_path(args[0]), corrected="--corrigee" in flags)
     else:
         raise SystemExit(__doc__)
 
 
 if __name__ == "__main__":
+    for _s in (sys.stdout, sys.stderr):  # Python embarqué (PC) : console en cp1252, pas de plantage sur un accent
+        try:
+            _s.reconfigure(errors="replace")
+        except (AttributeError, ValueError):
+            pass
     main(sys.argv[1:])
