@@ -274,6 +274,15 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   (Helwani/Yahoo et Cormier/The Volume : pas revendiqués jusqu'ici). L'utilisateur voit les revendications dans
   YouTube Studio (vérification des droits à l'envoi) ; une revendication n'est pas un avertissement mais les revenus
   de la vidéo partent au plaignant : on refait la vidéo sans ces extraits.
+- **Sujets chauds automatiques** (l'utilisateur, 4 oct. : « que ça poste tout seul… c'est pas à moi de chercher des
+  sujets » ; il a choisi le 100 % auto vérifié par l'IA) : `production/news_auto.py`. `radar [--sport mma_en]
+  [--dry-run]` lit les flux RSS des chaînes sources (vues, Shorts écartés) + les chaînes concurrentes (`trend` dans la
+  config de la chaîne, signal seulement) et l'IA propose 3 sujets max sur Discord (résumé en français, sources, note).
+  `make <id>` fait la vidéo de bout en bout (sous-titres yt-dlp → moments → plan → relecture auto : noms mal écrits +
+  voix off fidèle à l'extrait → voix → miniature → montage → contrôle des planches par l'IA → Discord, « ⚠️ à
+  regarder » si le contrôle voit un vrai problème). **En attente** : le faire tourner tout seul sur le PC (agent qui se
+  met à jour depuis GitHub avec les clés) a été bloqué par la sécurité de Claude (« agent autonome ») ; c'est à
+  l'utilisateur de l'autoriser explicitement. D'ici là : radar et vidéos lancés depuis le cloud quand il le demande.
 - **Transitions douces** (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») : chaque
   passage entre et sort en fondu court (`vfades`/`afades`), la fin d'un extrait respire jusqu'à 0,6 s dans le silence
   (`snap`), le logo animé reste 4,5 s et sort en fondu.

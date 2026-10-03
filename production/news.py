@@ -213,6 +213,8 @@ def update_pc_agent():
 
 def cmd_build(job, upload=True, keep=False):
     from services import newsvid_render as R
+    if os.path.isfile(os.path.join(job, "noop.json")):   # boîte aux lettres du relais (news_auto.py), pas une vidéo
+        return {}
     try:
         update_pc_agent()
     except (OSError, SyntaxError) as e:
@@ -435,9 +437,10 @@ def vps_fetch(job, wait=False):
     return None
 
 
-def cmd_send(job, corrected=False):
+def cmd_send(job, corrected=False, tag=None, note=""):
     """Paquet Discord (après vérification des planches) : lien, miniature, titres, description, tags.
-    corrected : vidéo refaite après une remarque → marquée « CORRIGÉE – à poster » (l'ancien lien n'est pas cité)."""
+    corrected : vidéo refaite après une remarque → marquée « CORRIGÉE – à poster » (l'ancien lien n'est pas cité).
+    tag / note : vidéos du mode auto (news_auto.py) : « ✅ auto, à poster » ou « ⚠️ à regarder » + ce que le contrôle a vu."""
     import requests
     from common import webhook
     with open(os.path.join(job, "plan.json"), "r", encoding="utf-8") as f:
@@ -449,9 +452,9 @@ def cmd_send(job, corrected=False):
     thumb = os.path.join(job, "thumb.jpg")
     title = plan.get("title") or (plan.get("titles") or ["?"])[0]
     others = "\n".join(f"• {t}" for t in (plan.get("titles") or [])[1:4])
-    tag = "✅ **CORRIGÉE – à poster**" if corrected else "✅ vérifiée, à poster"
+    tag = f"**{tag}**" if tag else "✅ **CORRIGÉE – à poster**" if corrected else "✅ vérifiée, à poster"
     content = (f"🎬 **{plan.get('brand', 'News')} — {title}** {tag}\n"
-               f"🔗 **Vidéo** : <{res['link']}> ({res.get('minutes', '?')} min)")
+               f"🔗 **Vidéo** : <{res['link']}> ({res.get('minutes', '?')} min)" + (f"\n{note}" if note else ""))[:1990]
     embeds = [{"title": "Titre", "description": title + (f"\n\nAutres titres :\n{others}" if others else ""),
                "color": 0xE10600},
               {"title": "Description", "description": (plan.get("description") or "")[:4000], "color": 0xE10600},

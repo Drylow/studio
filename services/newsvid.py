@@ -116,14 +116,19 @@ def feed(channel_id):
     name = root.findtext("a:title", default="", namespaces=ns)
     out = []
     for e in root.findall("a:entry", ns):
+        st = e.find("m:group/m:community/m:statistics", ns)
+        link = e.find("a:link", ns)
         out.append({"id": e.findtext("yt:videoId", namespaces=ns), "title": e.findtext("a:title", namespaces=ns),
-                    "channel": name, "published": e.findtext("a:published", namespaces=ns),
+                    "channel": name, "channel_id": channel_id, "published": e.findtext("a:published", namespaces=ns),
+                    "views": int(st.get("views") or 0) if st is not None else 0,
+                    "short": "/shorts/" in (link.get("href") if link is not None else ""),   # YouTube Short : pas une source
                     "description": (e.findtext("m:group/m:description", default="", namespaces=ns) or "")[:300]})
     return out
 
 
-def discover(ch, hours=48, log=print):
-    """Vidéos sorties dans les `hours` dernières heures sur les chaînes sources, les plus récentes d'abord."""
+def discover(ch, hours=48, log=print, key="sources"):
+    """Vidéos sorties dans les `hours` dernières heures sur les chaînes sources (ou `trend` : les concurrents, pour
+    voir ce qui fait des vues), les plus récentes d'abord."""
     import datetime
     from concurrent.futures import ThreadPoolExecutor
     since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=hours)
@@ -135,7 +140,7 @@ def discover(ch, hours=48, log=print):
             log(f"flux {cid} : {str(e)[:80]}")
             return []
     with ThreadPoolExecutor(max_workers=8) as ex:
-        rows = [v for vs in ex.map(one, (ch.get("sources") or {}).values()) for v in vs]
+        rows = [v for vs in ex.map(one, (ch.get(key) or {}).values()) for v in vs]
     fresh = [v for v in rows if v["published"] and
              datetime.datetime.fromisoformat(v["published"].replace("Z", "+00:00")) >= since]
     fresh.sort(key=lambda v: v["published"], reverse=True)
@@ -249,7 +254,7 @@ def video_info(video_id):
         d = json.loads(r.stdout)
     except ValueError:
         return {}
-    return {"id": video_id, "title": d.get("title"), "channel": d.get("channel"),
+    return {"id": video_id, "title": d.get("title"), "channel": d.get("channel"), "channel_id": d.get("channel_id") or "",
             "handle": d.get("uploader_id") or "", "date": d.get("upload_date"), "duration": d.get("duration")}
 
 
