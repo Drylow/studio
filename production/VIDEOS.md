@@ -34,6 +34,7 @@ Idées suivantes : Amazon return, diamond, donated T-shirt, fake designer bag, $
 | POV: You Marry a Female Triad Boss | publiée | 1er oct. |
 | POV: You Marry a Female UFC Fighter | **livrée** (vérifiée, Discord) — https://gofile.io/d/MSC7DFd0 ; miniature : combattante dans la cage, ceinture en or sans logo, en sueur | **3 oct.** |
 | POV: You Marry a WNBA Star | **livrée** (vérifiée, Discord) — https://gofile.io/d/u35duG8B ; miniature refaite (femme différente de l'UFC, plus sexy) : tresses, maillot blanc et turquoise n° 23 sans logo, renvoyée sur Discord | **4 oct.** |
+| POV: You Marry a Female Assassin | **livrée** (vérifiée image par image, Discord, 3 oct. 17:41 UTC) — https://gofile.io/d/sbzA4FiZ ; 15 min 43 ; Londres, Mara + Biscuit, faits réels (étude Birmingham City University 2014) ; 3 images refaites avant envoi (mariage avec un autre couple, appareil photo après « no photos ») ; miniature : planque, mur de cibles, fusil démonté dans la mallette, pistolet à silencieux levé (sans drapeau ni ville) | à caler |
 
 Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
