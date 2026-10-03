@@ -275,12 +275,17 @@ NOISE = re.compile(r"^(mhm|mm-?hmm|uh-?huh|hmm+|um+|uh+)[.!?,]*$", re.I)   # sou
 KEEP_DOUBLE = {"had", "that", "is", "very", "so", "no", "bye"}
 
 
+PUNCT_END = r"[.?!,…:;-][\"”’')]*$"     # « hard." » compte comme une fin de phrase
+SENT_END = r"[.?!][\"”’')]*$"
+DASH = re.compile(r"^[—–-]+[.,]*$|^--+$")
+
+
 def _restarts(t):
     """Phrase lâchée en route puis reprise (« he's What is he… », « He's I don't know ») → « he's... What is he… »."""
     words = t.split(" ")
     for i in range(1, len(words)):
         w, prev = words[i], words[i - 1]
-        if re.search(r"[.?!,…:;-]$", prev) or not w[:1].isupper():
+        if re.search(PUNCT_END, prev) or not w[:1].isupper():
             continue
         if w.lower() in MODALS:
             words[i] = w.lower()
@@ -296,15 +301,23 @@ def _tidy(t):
     (« you you you do it » → « you do it »)."""
     t = re.sub(r"\[[^\]]*\]", " ", t)                       # [laughter], [music]… (les « [ __ ] » sont déjà « **** »)
     words, out, cap = t.split(), [], False
-    for w in words:
-        if FILLER.match(w):
-            if out and not re.search(r"[.?!,…:;-]$", out[-1]):
+    for k, w in enumerate(words):
+        if DASH.match(w) and out and not re.search(PUNCT_END, out[-1]) and k + 1 < len(words) \
+                and words[k + 1][:1].islower():
+            out[-1] += ","                                 # « The Ultimate Fighter — a very… » → virgule
+            continue
+        if FILLER.match(w) or DASH.match(w):              # « um », « — » (phrase coupée) → « ... »
+            if out and not re.search(PUNCT_END, out[-1]):
                 out[-1] += "..."
-            elif not out or re.search(r"[.?!]$", out[-1]):
+            elif not out or re.search(SENT_END, out[-1]):
                 cap = True                                 # « Uh having parties » → « Having parties »
             continue
+        w = re.sub(r"(?<=\w)(?:[—–]|--)+$", "...", w)      # « he thinks— » → « he thinks... »
+        if out and w.lower().startswith(out[-1].lower().rstrip(",") + "'") and not re.search(PUNCT_END, out[-1]):
+            out[-1] = w                                    # « I I'm », « you you're » → « I'm »
+            continue
         if out and w.lower().strip(",.?!") == out[-1].lower().rstrip(".…").strip(",?!") \
-                and w.lower().strip(",.?!") not in KEEP_DOUBLE and not re.search(r"[.?!]$", out[-1]):
+                and w.lower().strip(",.?!") not in KEEP_DOUBLE and not re.search(SENT_END, out[-1]):
             out[-1] = re.sub(r"\.\.\.$", "", out[-1])
             if out[-1][:1].isupper() and len(out) == 1 or (len(out) > 1 and re.search(r"[.?!]$", out[-2])):
                 w = w[:1].upper() + w[1:]
@@ -362,17 +375,17 @@ def _wrap_subs(subs, max_chars=78):
         t = _tidy(_restarts(censor(s["t"]).strip()))  # gros mots : « **** » / « F*** »
         if not t or NOISE.match(t):
             continue
-        if out and re.search(r"[.?!]$", out[-1]["t"]) and t[:1].islower():
+        if out and re.search(SENT_END, out[-1]["t"]) and t[:1].islower():
             t = t[:1].upper() + t[1:]                      # « … invincible. » + « having parties » (le « uh » est parti)
         if out and len(out[-1]["t"]) + len(t) + 1 <= max_chars and s["s"] - out[-1]["e"] < 0.4 \
-                and not re.search(r"[.?!]$", out[-1]["t"]):
+                and not re.search(SENT_END, out[-1]["t"]):
             out[-1] = {"s": out[-1]["s"], "e": s["e"], "t": _tidy(_restarts(out[-1]["t"] + " " + t))}
         else:
             out.append(dict(s, t=t))
     for k in range(len(out) - 1):  # coupure entre deux sous-titres au milieu d'une phrase reprise autrement
         a, b = out[k]["t"], out[k + 1]["t"]
         first = b.split()[0] if b.split() else ""
-        if not re.search(r"[.?!,…]$", a) and first[:1].isupper() and first != "I" \
+        if not re.search(PUNCT_END, a) and first[:1].isupper() and first != "I" \
                 and first.lower().strip(",.?!") in STARTERS:
             out[k]["t"] = a + "..."
     return out
