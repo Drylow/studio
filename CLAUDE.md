@@ -260,7 +260,11 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   l'original est là ; l'ouverture n'utilise pas les extraits du corps ; extraits ≤ 50 s (`MAX_CLIP`), coupés sur
   des phrases entières (`clip_spec`) ; titres = **clickbait léger** : la citation entre guillemets est vraiment
   dite (vérifié par le code, `quote_in`). `plan_raw.json` permet de corriger puis `materialize` sans l'IA.
-- **PC de l'utilisateur = dossier autonome** (son studio PC vient d'un zip, pas de git) : `standalone/news_pc/`
+- **Deux Claude, un dépôt** : le Claude du cloud prépare (même PC éteint) et marque la vidéo prête
+  (`news/<chaîne>/<vidéo>/ready`, après relecture du plan) ; le **Claude du PC** (app Claude Desktop, onglet Code,
+  dossier = clone de `drylow/studio`) monte avec **`/monter`** (`.claude/skills/monter/SKILL.md`) et pousse le
+  résultat. `news.py pc` ne monte que les dossiers `ready`, 3 essais max par vidéo (`work/news_attempts.json`).
+- **Sans Claude sur le PC : dossier autonome** (son studio PC vient d'un zip, pas de git) : `standalone/news_pc/`
   (« Monter les videos.bat » + `monter.ps1`), envoyé en zip. Il installe tout dans son dossier (Python embarqué,
   Git portable, deno), clone le dépôt public dans `studio\`, demande la connexion GitHub au début (pour le push du
   résultat), puis lance `news.py pc`. Python embarqué = mode isolé : pas de PYTHONIOENCODING, `open()` en cp1252

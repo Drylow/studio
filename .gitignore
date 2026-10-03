@@ -29,7 +29,8 @@ static/images/*
 Thumbs.db
 .idea/
 .vscode/
-.claude/
+.claude/*
+!.claude/skills/
 
 # Passenger (o2switch)
 passenger_wsgi.pyc
