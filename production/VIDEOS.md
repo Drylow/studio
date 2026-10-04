@@ -1,6 +1,6 @@
 # Journal des vidéos
 
-État au 1er oct. 2026, ~21 h 55 UTC : tout est livré. Mettre à jour à chaque livraison (lien Gofile, envoi Discord, date de publication).
+État au 4 oct. 2026, ~13 h heure belge : tout est livré. Mettre à jour à chaque livraison (lien Gofile, envoi Discord, date de publication).
 
 ## Oddly Expensive Lives (`oddly_expensive_en`)
 
@@ -10,11 +10,11 @@
 | The Economics of Dying in America | livrée (Discord) | https://gofile.io/d/KCE0o4PZ |
 | The Economics of Having a Kid | livrée, **version corrigée** (ticket de caisse) — l'ancienne a7J8p4bS est fausse | https://gofile.io/d/LWalsRCI |
 | The Economics of an Ambulance Ride | livrée (Discord), vérifiée | https://gofile.io/d/OPhgqlbK |
-| The Economics of a Wedding | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Economics of a Car Accident | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Economics of a Nursing Home | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Economics of Retiring With Nothing Saved | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Economics of Getting Arrested | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
+| The Economics of a Wedding | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/GTLWRLUM (l'ancienne hdhCOEn6 a des erreurs : ne pas poster) | |
+| The Economics of a Car Accident | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/39fxPk2e (l'ancienne d4mO5Vgd a des erreurs : ne pas poster) | |
+| The Economics of a Nursing Home | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/EK7nIFaj (l'ancienne OsTkNTv9 a des erreurs : ne pas poster) | |
+| The Economics of Retiring With Nothing Saved | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/ju2sSJmk (l'ancienne ronqbZRh a des erreurs : ne pas poster) | |
+| The Economics of Getting Arrested | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/4MfGf0ng (l'ancienne NbdoSLr9 a des erreurs : ne pas poster) | |
 
 Idée suivante déjà discutée : la prison (mise de côté).
 
@@ -26,11 +26,11 @@ Idée suivante déjà discutée : la prison (mise de côté).
 | Your Life as a Stolen Car | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** (nouveau prompting : objet sans visage) — https://gofile.io/d/8Yh99Wbi (l'ancienne W3RbTNvA est KO : ne pas poster) | « STOLEN » clé de voiture ; 6 variantes renvoyées sur Discord le 2 oct. (SHIPPED, GONE…) |
 | Your Life as a Stolen Credit Card | **refaite, vérifiée image par image, envoyée sur Discord le 2 oct.** — https://gofile.io/d/cStfBfSJ (l'ancienne 6Qj38smK est KO : ne pas poster) | « STOLEN » carte bleue ; 6 variantes renvoyées sur Discord le 2 oct. (CLONED, DRAINED…) |
 | Your Life as a Stolen Bike | **vérifiée image par image (3 rendus, 52 images refaites : vrai expert retiré, vendeur en homme, vélo jamais entier dans les cartons…), envoyée sur Discord le 2 oct.** — https://gofile.io/d/A2tC0UxR | 7 variantes jointes au paquet (recommandée : FOR SALE), choix à l'utilisateur |
-| Your Life as a Fake Designer Bag | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | 2-3 variantes jointes au paquet |
-| Your Life as an Amazon Return | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | 2-3 variantes jointes au paquet |
-| Your Life as Lost Luggage | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | 2-3 variantes jointes au paquet |
-| Your Life as a Totaled Car | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | 2-3 variantes jointes au paquet |
-| Your Life as a Donated T-Shirt | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | 2-3 variantes jointes au paquet |
+| Your Life as a Fake Designer Bag | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/DMJl4E8W (l'ancienne 2N4dzqyI a des erreurs : ne pas poster) | 2-3 variantes jointes au paquet |
+| Your Life as an Amazon Return | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/Sgyh9BLj (l'ancienne EZintnGu a des erreurs : ne pas poster) | 2-3 variantes jointes au paquet |
+| Your Life as Lost Luggage | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/96s9jivz (l'ancienne dNT9Yp41 a des erreurs : ne pas poster) | 2-3 variantes jointes au paquet |
+| Your Life as a Totaled Car | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/lF86gVbv (l'ancienne x4FhWukR a des erreurs : ne pas poster) | 2-3 variantes jointes au paquet |
+| Your Life as a Donated T-Shirt | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/lP3cdKSk (l'ancienne N4BCXHTI a des erreurs : ne pas poster) | 2-3 variantes jointes au paquet |
 
 Description de chaîne : « Some things live oddly specific lives. » (+ en option : « Your phone, your car, your
 card… followed hand to hand, all the way to where they really end up. »)
@@ -56,16 +56,16 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Gettysburg **v2** (même voix, style « peinture d'histoire », regards caméra, réalisme) | **livrée** (vérifiée, Discord, 3 oct. 00:24) — https://gofile.io/d/ydAC4RRY ; 30 s d'Adobe Walls mélangées par le VPS (19:30-20:00) repérées à la relecture et refaites avant envoi ; 3 miniatures sans médaillon (BRUTAL FATE, CHILLING TRUTH, SHE SAW EVERYTHING) | à caler |
 | The 17-Year-Old Who Watched Pompeii Die — His Letters Still Exist | **livrée** (vérifiée, Discord, 3 oct.) — https://gofile.io/d/lDhthE4R ; 40 min, rendu 100 % VPS ; 16 plans des fouilles (1738-2024) refaits avant envoi (Romains en toge aux fouilles) ; miniatures CHILLING TRUTH, NO SUN RETURNED, WORSE THAN DEATH | à caler |
 | The 15-Year-Old Who Survived Agincourt — His Father Didn't | **livrée** (vérifiée plan par plan, salon Discord The Survivor's Account, 4 oct. 01:46 heure belge) — https://gofile.io/d/LwVV3hfd ; 40 min, rendu 100 % VPS ; témoin Jean de Waurin (15 ans, « was in the French army ») ; miniatures BRUTAL FATE (le garçon porte les armes anglaises : à éviter), CHILLING MEMORY, WORSE THAN DEATH | à caler |
-| The Zulu Warrior Britain Blamed for a War — What He Saw at Isandlwana | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
+| The Zulu Warrior Britain Blamed for a War — What He Saw at Isandlwana | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/RWXgYebX (l'ancienne Ct1kMgP0 a des erreurs : ne pas poster) | |
 
 ## Frontier Blood (History Docs, `frontier_blood`)
 
 | Vidéo | État | Publication |
 |---|---|---|
 | How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | **livrée** (vérifiée, Discord, 3 oct. 00:22) — https://gofile.io/d/vWmECEPV ; miniatures renvoyées sans médaillon (HIDDEN TRUTH, BRUTAL DAWN, WORSE THAN DEATH) | à caler |
-| The Alamo's Last 90 Minutes, Through the Eyes of a Boy Who Survived | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Comanche Raid That Reached the Sea — And Burned a Texas Town | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
-| The Fetterman Fight's Last 30 Minutes Were Worse Than You Were Told | **vérifiée image par image et corrigée, prête** (4 oct.) — envoi Discord en attente du feu vert de l'utilisateur ; l'ancien lien Gofile du pipeline est la version avec erreurs : ne pas poster | |
+| The Alamo's Last 90 Minutes, Through the Eyes of a Boy Who Survived | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/wFy6CQr1 (l'ancienne RA1PIU4T a des erreurs : ne pas poster) | |
+| The Comanche Raid That Reached the Sea — And Burned a Texas Town | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/Q5ObAUrp (l'ancienne LEpCCq85 a des erreurs : ne pas poster) | |
+| The Fetterman Fight's Last 30 Minutes Were Worse Than You Were Told | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/kuTc6gpJ (l'ancienne L1yfYRtc a des erreurs : ne pas poster) | |
 
 ## Cage Dispatch (actu MMA, `news/mma_en/`, outil `production/news.py`)
 
