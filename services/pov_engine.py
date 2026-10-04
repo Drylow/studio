@@ -2299,7 +2299,10 @@ def chapter_card(scene):
     m = _CHAPTER.match(scene.get("heading") or "") if scene.get("first") else None
     if not m:
         return None
-    return {"type": "chapter", "kicker": f"{m.group(1).upper()} #{m.group(2)}", "title": m.group(3).upper()[:32]}
+    title = m.group(3).upper()
+    if len(title) > 32:  # coupé sur un mot entier (avant : « THE PRESSER AND THE WASTE PILE B »)
+        title = title[:33].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return {"type": "chapter", "kicker": f"{m.group(1).upper()} #{m.group(2)}", "title": title}
 
 
 def montage_enabled(pr):
