@@ -39,7 +39,7 @@ Rental reimbursement is optional. Progressive and State Farm both describe it as
 
 Running tab: rental car, 14 days at about $56 a day: $784. Running total: $1,430.
 
-Full coverage can still leave you holding the rental key and the receipt. Pay attention to the next detail, because it explains why a small tap can price like a major repair.
+Full coverage can still leave you holding the rental key and the receipt. The next detail explains why a small tap can price like a major repair.
 
 ## The smart bumper
 At the shop, the bumper cover comes off. Behind the plastic are parking sensors, wiring, and a camera. The repair sheet adds a line for calibration.
@@ -61,7 +61,7 @@ A small bumper repair can include electronics work now. If the driver has paid $
 ## The renewal notice
 Months later, the car is fixed, the bumper is painted, and the first renewal notice lands in the app like a parking ticket with better branding.
 
-LendingTree, in a February 2026 study by Carol Pope using Quadrant Information Services rates, priced a 30-year-old with full coverage, a $500 deductible, and one at-fault accident with at least $2,000 of damage. The average annual premium went from $2,277 to $3,308.
+LendingTree's February 2026 study, using Quadrant Information Services rates, priced a 30-year-old with full coverage, a $500 deductible, and one at-fault accident with at least $2,000 of damage. The average annual premium went from $2,277 to $3,308.
 
 That is $1,031 more per year. About a 45% increase in that study.
 
@@ -92,7 +92,7 @@ Write this one down. The surcharge alone is bigger than the ER share, the rental
 
 If this is already changing how you see full coverage, subscribe, because the next bill is worse.
 
-The detail most people miss is that $5,023 is not the whole cost of the crash.
+The next detail is that $5,023 is not the whole cost of the crash.
 
 ## The insurer’s card
 Now keep the personal running tab clean. Do not add this next card to the $5,023. This is what other payers absorb in the typical case.
@@ -114,7 +114,7 @@ These branches do not go into our running tab. They show how fragile the $5,023 
 
 If the car cannot be driven, the rental clock gets longer. Enterprise Mobility's Q2 2026 report put the average collision rental at 20.7 days when the car is not drivable, compared with 14.1 days when it is.
 
-If it needs a tow, the city matters. Houston's regulated accident tow was $232 for the first 20 miles in 2026. In Texas, the Department of Licensing and Regulation allows storage lots to charge up to $22.85 a day.
+If it needs a tow, the city matters. The City of Houston's 2026 regulated accident tow fee schedule put a non-consent accident tow at $232 for the first 20 miles. In Texas, the Department of Licensing and Regulation allows storage lots to charge up to $22.85 a day.
 
 If the car is totaled, the bill changes again. CCC's Crash Course 2026 said 23.1% of claims were total losses. Almost one in four.
 
@@ -129,7 +129,7 @@ Pull back to the national ledger.
 
 NHTSA's economic study of 2019 crashes, revised in 2023, estimated the money cost at $340 billion in 2019 dollars. That works out to about $1,035 per American.
 
-The same study used a broader figure near $1.4 trillion, but that wasn't money spent. It included pain, lost quality of life, and other social harm. The actual money bill was $340 billion.
+The same study also used a broader figure near $1.4 trillion that included pain, lost quality of life, and other social harm. The money bill was $340 billion.
 
 NHTSA counted 22.9 million damaged vehicles, and 84% were in crashes where nobody was hurt. Those property-damage-heavy crashes alone cost $101.3 billion.
 
@@ -138,8 +138,6 @@ About 60% of property-damage-only crashes were never reported to police.
 Who paid? Private insurers covered about 54%. People in the crash paid about 23%. Public money covered about 9%, or roughly $30 billion. The rest moved through premiums, taxes, and traffic delay.
 
 NHTSA's breakdown means people not involved carried roughly three quarters of the cost.
-
-That is not a typo.
 
 Premiums and taxes put crash costs on people outside it. The real question is what happens behind the invoices.
 
@@ -152,7 +150,7 @@ Next, the rental company gets paid because repairs often take one or more weeks.
 
 The auto insurer pays covered repairs and other damages, then collects three years of higher premiums in the LendingTree example.
 
-Tow and storage lots enter when the car can't be driven. Houston's regulated tow was $232 for the first 20 miles in 2026, and the Texas Department of Licensing and Regulation allowed storage up to $22.85 a day.
+Tow and storage lots enter when the car can't be driven. The Texas Department of Licensing and Regulation allowed storage up to $22.85 a day.
 
 Lawyers appear mainly in injury disputes, not this light case.
 
