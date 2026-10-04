@@ -72,14 +72,22 @@
   "Turki Alalshik": "Turki Alalshikh",
   "Turki Alalshikh": "Turki Alalshikh",
   "Matchroom": "Matchroom",
-  "Zuffa": "Zuffa"
+  "Zuffa": "Zuffa",
+  "Turkey Shakes's": "Turki Alalshikh's",
+  "Turkey Al Sheikh's": "Turki Alalshikh's",
+  "Daniel Dubis": "Daniel Dubois",
+  "Amir Khn": "Amir Khan",
+  "Ben Davis": "Ben Davison",
+  "Tyson Fur": "Tyson Fury",
+  "Usik": "Usyk",
+  "Daniel Dubaris": "Daniel Dubois"
  },
  "segments": [
   {
    "type": "narration",
-   "text": "Meanwhile, Eddie Hearn opens the Fury-Joshua story by explaining why the promotion has turned ugly around Dana White and the December 11 fight. He frames the video’s central question: who actually controlled the launch in London?",
+   "text": "Meanwhile, Eddie Hearn opens the Fury-Joshua dispute by explaining how the other side’s approach changed Matchroom’s mindset. He says claims about who was promoting the event breached the agreement and forced him to push back.",
    "next_video": "7oxZjTXn7WY",
-   "headline": "HEARN QUESTIONS LONDON CONTROL"
+   "headline": "HEARN SAYS AGREEMENT BREACHED"
   },
   {
    "video": "7oxZjTXn7WY",
@@ -215,9 +223,9 @@
   },
   {
    "type": "narration",
-   "text": "On the other side, Eddie Hearn points toward a public-relations collapse for Dana White’s side after the September 30 press conference. He says the dispute became a major problem during the week that Tyson Fury and Anthony Joshua finally faced each other.",
+   "text": "On the other side, Eddie Hearn points toward a public-relations collapse for Dana White’s side. He says the situation over the previous seven days became one of the greatest PR disasters in boxing.",
    "next_video": "tUR0ti-kW9I",
-   "headline": "HEARN SEES WHITE PR COLLAPSE"
+   "headline": "HEARN CALLS PR DISASTER"
   },
   {
    "video": "tUR0ti-kW9I",
@@ -355,7 +363,7 @@
    "type": "narration",
    "text": "At the same time, Eddie Hearn lays out his version of White’s position at the event. He says White could have attended as a spectator, while warning that the disagreement may create more Matchroom and Zuffa battles later.",
    "next_video": "tUR0ti-kW9I",
-   "headline": "HEARN WARNS OF ZUFFA BATTLES"
+   "headline": "HEARN WARNS OF MORE BATTLES"
   },
   {
    "video": "tUR0ti-kW9I",
@@ -518,7 +526,7 @@
    "type": "narration",
    "text": "Beyond that, Tyson Fury fires back at the argument over who should promote the fight. He says Turki Alalshikh, who is funding the event, can involve Dana White or any promoter he chooses.",
    "next_video": "4V1RRRa8Iw8",
-   "headline": "FURY BACKS TURKI CONTROL"
+   "headline": "FURY DEFENDS TURKI CHOICE"
   },
   {
    "video": "4V1RRRa8Iw8",
@@ -610,12 +618,12 @@
     {
      "s": 20.79,
      "e": 23.11,
-     "t": "Um, [clears throat] but listen, Turkey"
+     "t": "Um, [clears throat] but listen, Turki"
     },
     {
      "s": 23.11,
      "e": 24.12,
-     "t": "Shakes's paying the money."
+     "t": "Alalshikh's paying the money."
     },
     {
      "s": 24.16,
@@ -729,9 +737,9 @@
   },
   {
    "type": "narration",
-   "text": "Adding to that, Tyson Fury keeps the Hearn-White feud separate from his own assignment against Anthony Joshua. He presents the dispute as an issue between the promoters rather than something affecting his preparation for Cardiff.",
+   "text": "Adding to that, Tyson Fury keeps the Hearn-White feud separate from his own role in the fight. He presents the dispute as an issue between the promoters rather than something that concerns him directly.",
    "next_video": "PBBz0KTps6Y",
-   "headline": "FURY SEPARATES PROMOTER FEUD"
+   "headline": "FURY DISTANCES HIMSELF FROM FEUD"
   },
   {
    "video": "PBBz0KTps6Y",
@@ -872,9 +880,9 @@
   },
   {
    "type": "narration",
-   "text": "Taking that further, Tyson Fury questions Eddie Hearn’s suggestion that he fears Joshua. He calls Hearn a nuisance and reduces the December 11 event to a professional boxing job between two heavyweights.",
+   "text": "Taking that further, Tyson Fury responds to Eddie Hearn’s suggestion that he fears Anthony Joshua. He dismisses Hearn’s comments and says the fight is simply a boxing match where he intends to do the job.",
    "next_video": "4V1RRRa8Iw8",
-   "headline": "FURY DISMISSES HEARN FEAR CLAIM"
+   "headline": "FURY DISMISSES JOSHUA FEAR CLAIM"
   },
   {
    "video": "4V1RRRa8Iw8",
@@ -1190,7 +1198,7 @@
    "type": "narration",
    "text": "From Eddie Hearn’s side, the promoter highlights the tension that could have emerged if he had been placed between the two fighters. He says Tyson Fury would not want Hearn provoking both men during the press conference.",
    "next_video": "pWpGM4r-WOs",
-   "headline": "HEARN FLAGS PRESSER TENSION"
+   "headline": "HEARN FLAGS PRESS CONFERENCE TENSION"
   },
   {
    "video": "pWpGM4r-WOs",
@@ -1283,7 +1291,7 @@
    "type": "narration",
    "text": "However, John Fury questions the explanation surrounding Peter Fury’s contact with Anthony Joshua. He argues that general advice would make little sense unless Joshua wanted information about Tyson Fury himself.",
    "next_video": "EOQ6RJDTny0",
-   "headline": "JOHN FURY QUESTIONS PETER LINK"
+   "headline": "JOHN FURY QUESTIONS PETER CONTACT"
   },
   {
    "video": "EOQ6RJDTny0",
@@ -1449,9 +1457,9 @@
   },
   {
    "type": "narration",
-   "text": "That's when John Fury attacks Ben Davison’s position in the story. He says Tyson Fury gave Davison his biggest opportunity and views Davison’s work with Anthony Joshua as a direct betrayal before the Cardiff fight.",
+   "text": "That's when John Fury attacks Ben Davison’s position in the story. He says Tyson Fury gave Davison a major opportunity and portrays Davison’s later work with Anthony Joshua as a betrayal.",
    "next_video": "EOQ6RJDTny0",
-   "headline": "JOHN FURY CALLS DAVISON BETRAYAL"
+   "headline": "JOHN FURY SLAMS DAVISON"
   },
   {
    "video": "EOQ6RJDTny0",
@@ -1685,9 +1693,9 @@
   },
   {
    "type": "narration",
-   "text": "Meanwhile, Frank Warren questions what Anthony Joshua’s search for outside input says about his mindset. He points to the return to Ben Davison and the Peter Fury link as signs that Joshua may be seeking reassurance.",
+   "text": "Meanwhile, Frank Warren questions Anthony Joshua’s confidence going into the fight. He points to moments of doubt in Joshua’s past and predicts that Tyson Fury can produce a special performance.",
    "next_video": "XIYCdWjS4iA",
-   "headline": "WARREN QUESTIONS JOSHUA MINDSET"
+   "headline": "WARREN QUESTIONS JOSHUA CONFIDENCE"
   },
   {
    "video": "XIYCdWjS4iA",
@@ -1739,7 +1747,7 @@
     {
      "s": 9.03,
      "e": 10.28,
-     "t": "he fought Daniel Dubis."
+     "t": "he fought Daniel Dubois."
     },
     {
      "s": 10.34,
@@ -1870,7 +1878,7 @@
    "type": "narration",
    "text": "On the other side, Dominic Ingle reveals another interpretation of Joshua speaking with Peter Fury and Ben Davison. He compares the situation with fighters looking for inside information instead of relying entirely on their own ability.",
    "next_video": "wJfdFE3Ja3c",
-   "headline": "INGLE SEES INSIDE INFO HUNT"
+   "headline": "INGLE SEES INSIDE INFORMATION HUNT"
   },
   {
    "video": "wJfdFE3Ja3c",
@@ -1887,7 +1895,7 @@
     {
      "s": 2.55,
      "e": 5.27,
-     "t": "Khn with Bulmarmac uh when he when he"
+     "t": "Khan with Bulmarmac uh when he when he"
     },
     {
      "s": 5.27,
@@ -2065,7 +2073,7 @@
     {
      "s": 10.23,
      "e": 12.71,
-     "t": "Davis who was training Tyson Fury if"
+     "t": "Davison who was training Tyson Fury if"
     },
     {
      "s": 12.71,
@@ -2184,7 +2192,7 @@
   },
   {
    "type": "narration",
-   "text": "Beyond that, Carl Froch questions Anthony Joshua’s recent form before the biggest fight of his career. He describes Joshua as being near the end of his run after a damaging performance against a lesser-regarded opponent.",
+   "text": "Beyond that, Carl Froch questions Anthony Joshua’s recent form before the Tyson Fury fight. He describes Joshua as being near the end of his career after a poor performance in which he was dropped.",
    "next_video": "Es3B41-j1io",
    "headline": "FROCH QUESTIONS JOSHUA FORM"
   },
@@ -2490,9 +2498,9 @@
   },
   {
    "type": "narration",
-   "text": "Taking that further, Carl Froch weighs in on the Hearn-White argument after White missed the London launch. He sees Eddie Hearn as having gained the upper hand because the fight ultimately landed in Britain.",
+   "text": "Taking that further, Carl Froch weighs in on the Hearn-White argument after White missed the launch. He sees Eddie Hearn as having gained the upper hand because Hearn is present and White is not.",
    "next_video": "Es3B41-j1io",
-   "headline": "FROCH GIVES HEARN EDGE"
+   "headline": "FROCH SAYS HEARN AHEAD"
   },
   {
    "video": "Es3B41-j1io",
@@ -2599,7 +2607,7 @@
     {
      "s": 24.12,
      "e": 24.63,
-     "t": "Tyson Fur"
+     "t": "Tyson Fury"
     },
     {
      "s": 24.63,
@@ -2623,9 +2631,9 @@
   },
   {
    "type": "narration",
-   "text": "On a similar note, Carl Froch highlights what the London face-off confirmed about the event itself. He says Fury and Joshua are now scheduled to meet on December 11, with Cardiff providing the setting for the showdown.",
+   "text": "On a similar note, Carl Froch highlights what the face-off confirmed about the event itself. He says Fury and Joshua are now scheduled to meet on December 11 after years of back-and-forth.",
    "next_video": "Es3B41-j1io",
-   "headline": "FROCH CONFIRMS CARDIFF SHOWDOWN"
+   "headline": "FROCH CONFIRMS DECEMBER 11"
   },
   {
    "video": "Es3B41-j1io",
@@ -2865,7 +2873,7 @@
     {
      "s": 31.27,
      "e": 32.71,
-     "t": "the two losses of Usik which they both"
+     "t": "the two losses of Usyk which they both"
     },
     {
      "s": 32.71,
@@ -2961,7 +2969,7 @@
    "type": "narration",
    "text": "However, Carl Froch puts Anthony Joshua’s most dangerous route forward in simple terms. He says Joshua may be able to end the fight if he lands his right hand cleanly against Tyson Fury.",
    "next_video": "Es3B41-j1io",
-   "headline": "FROCH HIGHLIGHTS JOSHUA RIGHT HAND"
+   "headline": "FROCH FLAGS JOSHUA RIGHT HAND"
   },
   {
    "video": "Es3B41-j1io",
@@ -3054,7 +3062,7 @@
    "type": "narration",
    "text": "That's when Frank Warren doubles down on Tyson Fury’s side of the rivalry. He says he has no personal animosity toward Anthony Joshua, but makes clear that his support remains with Fury ahead of December 11.",
    "next_video": "XIYCdWjS4iA",
-   "headline": "WARREN STANDS WITH FURY"
+   "headline": "WARREN BACKS FURY AGAIN"
   },
   {
    "video": "XIYCdWjS4iA",
@@ -3081,7 +3089,7 @@
     {
      "s": 6.95,
      "e": 10.39,
-     "t": "fought against um Daniel Dubaris and I"
+     "t": "fought against um Daniel Dubois and I"
     },
     {
      "s": 10.39,
@@ -3142,7 +3150,7 @@
    "type": "narration",
    "text": "Then, John Fury weighs in on the judging pressure surrounding the matchup. He argues that Anthony Joshua has the British crowd and environment behind him, while claiming Tyson Fury may need a knockout to secure the result.",
    "next_video": "EOQ6RJDTny0",
-   "headline": "JOHN FURY FEARS JUDGING PRESSURE"
+   "headline": "JOHN FURY WARNS ON JUDGING"
   },
   {
    "video": "EOQ6RJDTny0",
@@ -3375,13 +3383,12 @@
  ],
  "estimated_minutes": 18.1,
  "ticker": [
-  "FURY JOSHUA SET FOR CARDIFF",
-  "DECEMBER 11 FIGHT IN BRITAIN",
-  "HEARN AND WHITE FEUD ESCALATES",
-  "TURKI CONTROL BACKED BY FURY",
-  "DAVISON RETURN SPARKS DEBATE",
-  "JOSHUA INPUT SEARCH QUESTIONED",
-  "FROCH PICKS FURY OVER JOSHUA",
-  "JOHN FURY WARNS ON JUDGING"
+  "HEARN SAYS DEAL WAS BREACHED",
+  "WHITE ABSENCE SPARKS PR ROW",
+  "FURY DEFENDS TURKI PROMOTER CHOICE",
+  "JOSHUA TRAINER LINKS QUESTIONED",
+  "WARREN AND FROCH BACK FURY",
+  "FROCH FLAGS JOSHUA RIGHT HAND",
+  "DECEMBER 11 SHOWDOWN LOOMS"
  ]
 }
