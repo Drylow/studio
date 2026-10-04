@@ -77,4 +77,4 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
 
 - 4 oct. : **Ring Dispatch #1** (boxe) « MENTALLY WEAK! » Tyson Fury SLAMS Anthony Joshua… envoyée (https://gofile.io/d/nPQsyecm, 18 min).
-- 4 oct. : OSL en préparation (`--gate`, script à relire) : POV: You Marry a Japanese Woman (`work/osl/japanese`), a Female Bratva Boss (`work/osl/bratva`), a Female Boxing Champion (`work/osl/boxer`).
+- 4 oct. : OSL en préparation (`--gate`, script à relire) : POV: You Marry a Japanese Woman (`work/osl/japanese`), a Female Boxing Champion (`work/osl/boxer`), a Norwegian Woman (`work/osl/norwegian`), a Female WWE Champion (`work/osl/wwe`). Bratva refusée par l'utilisateur. **Japanese : à garder, il la postera après la monétisation.**
