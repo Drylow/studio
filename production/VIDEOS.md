@@ -75,3 +75,6 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | “IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN Topuria As Ilia Returns To Training! | **livrée** (Discord, 4 oct. 00:52 heure belge) — https://gofile.io/d/potc7Pzl ; 18 min 58 ; sources Double Coverage, Sonnen, Helwani, Submission Radio ; 1ère version montée non envoyée (13 noms mal écrits dans les sous-titres, corrigés) ; transitions douces + logo 4,5 s ; miniature Tsarukyan + Topuria “IT'S NOT GOING TO HAPPEN” | à caler |
 | **PITCH DISPATCH #1** “GRAB MY BAG AND LEAVE!” Ronaldo WALKS OUT On Portugal After Jorge Jesus Clash! | **livrée** (Discord, 4 oct. ~04h00 heure belge) — https://gofile.io/d/cguE7OrS ; 21 min 22 ; sources Fabrizio Romano, Coach Ali, On The Continent (toutes IVP) ; miniature verte Ronaldo + Jorge Jesus “GRAB MY BAG AND LEAVE” | à caler |
 
+
+- 4 oct. : **Ring Dispatch #1** (boxe) « MENTALLY WEAK! » Tyson Fury SLAMS Anthony Joshua… envoyée (https://gofile.io/d/nPQsyecm, 18 min).
+- 4 oct. : OSL en préparation (`--gate`, script à relire) : POV: You Marry a Japanese Woman (`work/osl/japanese`), a Female Bratva Boss (`work/osl/bratva`), a Female Boxing Champion (`work/osl/boxer`).
