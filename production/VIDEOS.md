@@ -63,9 +63,9 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | Vidéo | État | Publication |
 |---|---|---|
 | How 28 Buffalo Hunters Held Off Hundreds of Warriors at Adobe Walls | **livrée** (vérifiée, Discord, 3 oct. 00:22) — https://gofile.io/d/vWmECEPV ; miniatures renvoyées sans médaillon (HIDDEN TRUTH, BRUTAL DAWN, WORSE THAN DEATH) | à caler |
-| The Alamo's Last 90 Minutes, Through the Eyes of a Boy Who Survived | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/wFy6CQr1 (l'ancienne RA1PIU4T a des erreurs : ne pas poster) | |
-| The Comanche Raid That Reached the Sea — And Burned a Texas Town | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/Q5ObAUrp (l'ancienne LEpCCq85 a des erreurs : ne pas poster) | |
-| The Fetterman Fight's Last 30 Minutes Were Worse Than You Were Told | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/kuTc6gpJ (l'ancienne L1yfYRtc a des erreurs : ne pas poster) | |
+| The Alamo's Last 90 Minutes, Through the Eyes of a Boy Who Survived | **livrée** (vérifiée image par image, corrigée, salon Frontier Blood, 4 oct. ~13 h heure belge) — https://gofile.io/d/wFy6CQr1 (l'ancienne RA1PIU4T a des erreurs : ne pas poster) | |
+| The Comanche Raid That Reached the Sea — And Burned a Texas Town | **livrée** (vérifiée image par image, corrigée, salon Frontier Blood, 4 oct. ~13 h heure belge) — https://gofile.io/d/Q5ObAUrp (l'ancienne LEpCCq85 a des erreurs : ne pas poster) | |
+| The Fetterman Fight's Last 30 Minutes Were Worse Than You Were Told | **livrée** (vérifiée image par image, corrigée, salon Frontier Blood, 4 oct. ~13 h heure belge) — https://gofile.io/d/kuTc6gpJ (l'ancienne L1yfYRtc a des erreurs : ne pas poster) | |
 
 ## Cage Dispatch (actu MMA, `news/mma_en/`, outil `production/news.py`)
 
