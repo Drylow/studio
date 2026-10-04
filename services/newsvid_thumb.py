@@ -12,6 +12,7 @@ import io
 import json
 import os
 import re
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -23,7 +24,7 @@ TW, TH = 1280, 720
 # variantes proposées (couleur du trait et des mots mis en avant) ; A = choisie par défaut
 VARIANTS = (("A", "accent2"),)  # validée par l'utilisateur : la A (deux photos, citation jaune)
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/128.0 Safari/537.36"}
+                    "Chrome/128.0 Safari/537.36", "Accept-Language": "en-US,en;q=0.9"}   # sans langue : Bing renvoie n'importe quoi
 
 
 def _get(url, timeout=20):
@@ -35,7 +36,7 @@ def bing_images(query, n=12):
     import html as H
     try:
         page = _get("https://www.bing.com/images/async?q=" + urllib.parse.quote(query) +
-                    "&first=0&count=35&mmasync=1").decode("utf-8", "replace")
+                    "&first=0&count=35&mmasync=1&setlang=en-US&cc=US").decode("utf-8", "replace")
     except Exception:  # noqa: BLE001
         return []
     out, seen = [], set()
@@ -50,6 +51,26 @@ def bing_images(query, n=12):
         seen.add(u)
         out.append({"url": u, "title": m.get("t") or "", "page": m.get("purl") or ""})
     return out[:n]
+
+
+def wiki_images(who):
+    """Photo principale de la page Wikipédia (Commons, libre de droits) : Bing renvoie n'importe quoi depuis le cloud
+    (4 oct. : « Tyson Fury » → des affiches de film). Réessaie si Wikipédia limite (429)."""
+    import time as _t
+    url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(who.replace(" ", "_"))
+    for k in range(4):
+        try:
+            d = json.loads(urllib.request.urlopen(urllib.request.Request(
+                url, headers={"User-Agent": "DrylowStudio/1.0 (github.com/drylow/studio)"}), timeout=20).read())
+            src = (d.get("originalimage") or {}).get("source") or (d.get("thumbnail") or {}).get("source")
+            return [{"url": src, "title": f"{who} (Wikipedia)", "page": url}] if src else []
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                return []
+            _t.sleep(3 * (k + 1))
+        except Exception:  # noqa: BLE001
+            return []
+    return []
 
 
 def names_ok(who, text, others):
@@ -181,8 +202,19 @@ def candidates(job_dir, plan, who, log=print):
         if b:
             blobs.append(("yt:" + v, b))
     others = set(plan.get("people_all") or [])
-    for x in bing_images(f"{who} UFC", 25) + bing_images(f"{who}", 20):
+    try:   # mot du sport dans la recherche (« Jorge Jesus » seul donne des images de Jésus)
+        from services import newsvid as N
+        kws = N.channel(plan.get("channel") or "").get("photo_kw") or ["UFC", ""]
+    except KeyError:
+        kws = ["UFC", ""]
+    for x in wiki_images(who) + [y for n, k in zip((25, 20), kws) for y in bing_images(f"{who} {k}".strip(), n)] + \
+            bing_images(who, 25):
         if not names_ok(who, " ".join((x["url"], x["title"], x["page"])), others - {who}):
+            continue
+        # jamais une image fabriquée par une IA (craiyon : un faux Ronaldo en maillot du Real, 4 oct.) ni en double
+        if re.search(r"craiyon|lexica|openart|nightcafe|midjourney|playground|stablediffusion|artstation|deviantart|"
+                     r"aiart|ai-art|generated", (x["url"] + " " + x["page"]).lower()) or \
+                x["url"].split("?")[0] in {u.split("?")[0] for u, _ in blobs}:
             continue
         b = original(x["url"])
         if b:
