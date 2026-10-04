@@ -80,9 +80,12 @@ def download(video_id, dl_dir, log):
             got[kind] = have[0]
             continue
         for k in range(3):
-            r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
-                               capture_output=True, text=True, encoding="utf-8", errors="replace",
-                               creationflags=media._NO_WINDOW)
+            try:   # jamais bloqué pour toujours (4 oct. : un téléchargement freiné par YouTube a figé le montage 40 min)
+                r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
+                                   capture_output=True, text=True, encoding="utf-8", errors="replace",
+                                   creationflags=media._NO_WINDOW, timeout=15 * 60)
+            except subprocess.TimeoutExpired as e:
+                r = subprocess.CompletedProcess(e.cmd, 1, "", "téléchargement trop lent (15 min), arrêté")
             have = [f for f in glob.glob(os.path.join(dl_dir, f"{video_id}.{kind}.*")) if not f.endswith(".part")]
             if have:
                 got[kind] = have[0]
