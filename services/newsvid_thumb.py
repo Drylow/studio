@@ -211,6 +211,11 @@ def candidates(job_dir, plan, who, log=print):
             bing_images(who, 25):
         if not names_ok(who, " ".join((x["url"], x["title"], x["page"])), others - {who}):
             continue
+        # jamais une image fabriquée par une IA (craiyon : un faux Ronaldo en maillot du Real, 4 oct.) ni en double
+        if re.search(r"craiyon|lexica|openart|nightcafe|midjourney|playground|stablediffusion|artstation|deviantart|"
+                     r"aiart|ai-art|generated", (x["url"] + " " + x["page"]).lower()) or \
+                x["url"].split("?")[0] in {u.split("?")[0] for u, _ in blobs}:
+            continue
         b = original(x["url"])
         if b:
             blobs.append((x["url"], b))
