@@ -115,8 +115,8 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - Vidéo sur **Gofile** (lien `gofile_link.txt`), paquet sur **Discord** via `production/discord_send.py`
   (lien + miniature, titre, description + chapitres, tags, commentaire épinglé). Webhook :
   `DISCORD_WEBHOOK_URL` dans `.env` (à demander à l'utilisateur, jamais dans git). **Un salon Discord par chaîne**
-  (l'utilisateur, 4 oct.) : `DISCORD_WEBHOOK_<CLÉ>` (`SURVIVORS_ACCOUNT`, `ODDLY_THINGS_EN`, `ODDLY_SPECIFIC_EN` donnés ;
-  Frontier Blood et Oddly Expensive Lives vont encore dans le salon par défaut tant qu'il n'a pas donné les leurs).
+  (l'utilisateur, 4 oct.) : `DISCORD_WEBHOOK_<CLÉ>` (`SURVIVORS_ACCOUNT`, `FRONTIER_BLOOD`, `ODDLY_THINGS_EN`, `ODDLY_SPECIFIC_EN`, `ODDLY_EXPENSIVE_EN` :
+  toutes les chaînes ont leur salon ; le salon par défaut ne sert plus qu'aux chaînes sans webhook).
 - **Le paquet part en UN seul message à embeds** (couverture + miniature, description + chapitres, tags,
   commentaire épinglé) et un verrou (`$STUDIO_WORK/discord.lock`) fait passer les envois un par un : avant,
   deux vidéos envoyées ensemble mélangeaient leurs messages (Credit Card avec la description de Car).
