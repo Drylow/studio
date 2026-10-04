@@ -10,11 +10,11 @@
 | The Economics of Dying in America | livrée (Discord) | https://gofile.io/d/KCE0o4PZ |
 | The Economics of Having a Kid | livrée, **version corrigée** (ticket de caisse) — l'ancienne a7J8p4bS est fausse | https://gofile.io/d/LWalsRCI |
 | The Economics of an Ambulance Ride | livrée (Discord), vérifiée | https://gofile.io/d/OPhgqlbK |
-| The Economics of a Wedding | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/GTLWRLUM (l'ancienne hdhCOEn6 a des erreurs : ne pas poster) | |
-| The Economics of a Car Accident | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/39fxPk2e (l'ancienne d4mO5Vgd a des erreurs : ne pas poster) | |
-| The Economics of a Nursing Home | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/EK7nIFaj (l'ancienne OsTkNTv9 a des erreurs : ne pas poster) | |
-| The Economics of Retiring With Nothing Saved | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/ju2sSJmk (l'ancienne ronqbZRh a des erreurs : ne pas poster) | |
-| The Economics of Getting Arrested | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/4MfGf0ng (l'ancienne NbdoSLr9 a des erreurs : ne pas poster) | |
+| The Economics of a Wedding | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/GTLWRLUM (l'ancienne hdhCOEn6 a des erreurs : ne pas poster) | |
+| The Economics of a Car Accident | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/39fxPk2e (l'ancienne d4mO5Vgd a des erreurs : ne pas poster) | |
+| The Economics of a Nursing Home | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/EK7nIFaj (l'ancienne OsTkNTv9 a des erreurs : ne pas poster) | |
+| The Economics of Retiring With Nothing Saved | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/ju2sSJmk (l'ancienne ronqbZRh a des erreurs : ne pas poster) | |
+| The Economics of Getting Arrested | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/4MfGf0ng (l'ancienne NbdoSLr9 a des erreurs : ne pas poster) | |
 
 Idée suivante déjà discutée : la prison (mise de côté).
 
@@ -75,3 +75,6 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 | “IT'S NOT GOING TO HAPPEN!” Arman Tsarukyan SHUTS DOWN Topuria As Ilia Returns To Training! | **livrée** (Discord, 4 oct. 00:52 heure belge) — https://gofile.io/d/potc7Pzl ; 18 min 58 ; sources Double Coverage, Sonnen, Helwani, Submission Radio ; 1ère version montée non envoyée (13 noms mal écrits dans les sous-titres, corrigés) ; transitions douces + logo 4,5 s ; miniature Tsarukyan + Topuria “IT'S NOT GOING TO HAPPEN” | à caler |
 | **PITCH DISPATCH #1** “GRAB MY BAG AND LEAVE!” Ronaldo WALKS OUT On Portugal After Jorge Jesus Clash! | **livrée** (Discord, 4 oct. ~04h00 heure belge) — https://gofile.io/d/cguE7OrS ; 21 min 22 ; sources Fabrizio Romano, Coach Ali, On The Continent (toutes IVP) ; miniature verte Ronaldo + Jorge Jesus “GRAB MY BAG AND LEAVE” | à caler |
 
+
+- 4 oct. : **Ring Dispatch #1** (boxe) « MENTALLY WEAK! » Tyson Fury SLAMS Anthony Joshua… envoyée (https://gofile.io/d/nPQsyecm, 18 min).
+- 4 oct. : OSL en préparation (`--gate`, script à relire) : POV: You Marry a Japanese Woman (`work/osl/japanese`), a Female Boxing Champion (`work/osl/boxer`), a Norwegian Woman (`work/osl/norwegian`), a Female WWE Champion (`work/osl/wwe`). Bratva refusée par l'utilisateur. Japanese : envoyée sur Discord comme les autres, il la postera après la monétisation.
