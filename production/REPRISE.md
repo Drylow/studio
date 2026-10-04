@@ -57,6 +57,16 @@ En attente d'une réponse de l'utilisateur :
 - **Chaîne « listes sombres » façon Riff Rotten** (`chaines/_nouvelles/README.md` §1) : outil à construire,
   il doit choisir le thème.
 
+## 2 bis. État au 4 oct., 04h35 heure belge
+
+- **Cage Dispatch #2 (Topuria)** et **Pitch Dispatch #1 (Ronaldo / Jorge Jesus)** : envoyées sur Discord, à poster.
+- **Ring Dispatch #1 (Fury vs Joshua, “MENTALLY WEAK!”)** : tout est prêt (plan relu, voix, miniature dorée), le
+  montage a été coupé parce que l'utilisateur a éteint son PC. Le job est redéposé sur le relais : le PC le monte tout
+  seul au prochain démarrage. Ensuite : `python production/news.py pc-fetch news/boxing_en/2026-10-03_tyson-fury-vs-anthony-joshua-turns-ugly-eddie-he --wait`,
+  vérifier les planches (sous-titres au-dessus de la bande bleue de The Stomping Ground), puis `news.py send <dossier>`.
+- Mode 100 % auto (`news_auto.py`) : en attente de la décision de l'utilisateur (voir CLAUDE.md §11) ; il pense le
+  faire plus tard avec un tableau de bord des chaînes.
+
 ## 3. Cage Dispatch : comment on fait une vidéo d'actu (rodé le 3 oct.)
 
 Tout est dans `CLAUDE.md` §11 ; la chaîne de commandes est en tête de `production/news.py`. En bref :
