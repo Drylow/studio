@@ -269,6 +269,10 @@ def image_style(name):
 
 ARCHIVE = ("Museum catalogue photograph, neutral grey backdrop, soft studio light, sharp focus, realistic patina, "
            "photographed as a real surviving artifact. No text, no labels.")
+ARCHIVE_ONLY = ("Only the artifact itself, alone on the plain backdrop and filling the frame: no people, no soldiers, "
+                "no buildings, no landscape, no battle scene, no painting of the event, no inset picture, no collage, "
+                "no split or side-by-side panels. Any handwriting or print on it is faded and illegible: no readable "
+                "names, dates, signatures or headlines.")
 TERRAIN = ("Top-down satellite photograph of real terrain, desaturated grey-brown, subtle relief, dry riverbeds, "
            "no roads, no buildings, no text, no labels, evenly lit.")
 
@@ -284,7 +288,9 @@ def pick_archive(candidates, beat):
     prompt = (f"A history documentary needs a real museum image for: \"{beat.get('title','')}\" "
               f"(search: {beat.get('search','')}; narration context: {beat.get('note','')}).\n"
               f"Candidates:\n{lines}\n\nPick the candidate that genuinely shows this object or a very close equivalent "
-              "from the same culture and period. If none fits, answer -1. Return JSON only: {\"index\": n}")
+              "from the same culture and period. For a document, book, letter, order, newspaper or journal it must be "
+              "that same document or publication: a different one with a similar name, number or subject does not fit. "
+              "If none fits, answer -1. Return JSON only: {\"index\": n}")
     try:
         data = ai.chat_json(prompt, model=ai.fast_model(), timeout=120, tries=2)
         i = int(data.get("index", -1))
@@ -342,6 +348,41 @@ def check_shot(path, period, prompt=""):
                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
     res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=240)
     return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
+
+
+ARCHIVE_QA = """This image will fill a history documentary card titled "{title}" (context: {note}).
+Return JSON only: {{"ok": true or false, "problems": ["short description of each problem"]}}.
+ok = false if any of these is true:
+- it does not clearly show that item: for a document, book, letter, order, newspaper or journal it must be that same
+  document or publication (another document, edition, order number, year or subject fails); for an object (weapon,
+  tool, garment, marker) the same kind of object from the same period is enough;
+- it shows a scene, people, a portrait, a landscape or a building instead of the item or next to it, or a collage or
+  side-by-side panels;
+- it is blank, nearly black or a plain cover where nothing can be seen.
+{extra}"""
+ARCHIVE_QA_AI = ("- it is a reconstruction, so any readable text that states facts (names, signatures, dates, headlines, "
+                 "marker or plaque text) fails: text must be faded and illegible.\n")
+
+
+def check_archive(blob, beat, ai_made=False):
+    """Contrôle en vision d'une image de carte d'archive (octets) → (ok, [problèmes]). Sans réponse de l'IA : une vraie
+    image est refusée (l'image IA prend le relais), une image IA est gardée."""
+    import base64
+    import io
+    from PIL import Image
+    try:
+        im = Image.open(io.BytesIO(blob)).convert("RGB")
+        im.thumbnail((896, 896))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=86)
+        q = ARCHIVE_QA.format(title=beat.get("title", ""), note=beat.get("note", ""),
+                              extra=ARCHIVE_QA_AI if ai_made else "")
+        content = [{"type": "text", "text": q},
+                   {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()}}]
+        res = ai.chat_json([{"role": "user", "content": content}], model=ai.text_model(), timeout=240)
+        return bool(res.get("ok", True)), [str(x) for x in res.get("problems") or []][:4]
+    except Exception:  # noqa: BLE001
+        return ai_made, []
 
 
 FACING_QA = """Look at this illustration. Is there a main person (or a group facing the same way) in it? If so, which way

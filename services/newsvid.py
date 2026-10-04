@@ -82,7 +82,7 @@ CHANNELS = {
         "trend": {"AKHi TV": "UCUHpbLNkr4oNpNLweo0a0bQ", "Fight Trends": "UC8wLroF_z-X4D_fLMU-8MtA",
                   "Boxing HeadquaterZZ": "UCfL_2dJh_PhQ29QDL69gLCw", "Boxing Insider": "UCZ85O5uTe77QH8PSy0U4v8A",
                   "Fight Reactor": "UC7zaUoS592N75z2WqUBwCmw"},
-        "people": "boxers, trainers, promoters and pundits",
+        "people": "boxers, trainers, promoters and pundits", "photo_kw": ["boxing", "boxing press conference"],
     },
     "football_en": {
         "name": "Football news", "sport": "Football (soccer)", "language": "en",
@@ -101,7 +101,7 @@ CHANNELS = {
         "trend": {"Goal 90 Extra": "UC2EWbJwhSlbwvy3YsIZbk7g", "Front-Page Football": "UCSjbb17qX1FSn-zosp3NjiQ",
                   "Match Day Moments": "UClmARU4jb4KEoQWV0KqK-nA", "Dan Lee": "UCHSpkukiU9YNqPiBi29-hIw",
                   "talkSPORT": "UCWw6scNyopJ0yjMu1SyOEyw"},
-        "people": "players, managers, agents and pundits",
+        "people": "players, managers, agents and pundits", "photo_kw": ["football", "football press conference"],
     },
 }
 

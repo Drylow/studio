@@ -967,13 +967,25 @@ def _gen(pr, rel, kind, prompt, chars, info=None):
         blob = ai.generate_image(f"{HA.TERRAIN} {prompt}")
         w, h = 1920, 1080
     elif kind == "archive":
-        real = SRC.find_real_image(info or {"title": prompt}, HA.pick_archive)
-        if real:  # vraie image de musée : on la garde entière (pas de recadrage), avec son crédit
+        beat = info or {"title": prompt}
+        real = SRC.find_real_image(beat, HA.pick_archive)
+        # vraie image de musée, vérifiée en vision (le choix sur le seul titre avait pris un ordre de 1863 pour celui
+        # de 1866, une couverture toute noire) : on la garde entière (pas de recadrage), avec son crédit
+        if real and HA.check_archive(real[0], beat)[0]:
             blob, credit = real
             _save_contained(blob, os.path.join(d, rel))
             _set_archive_credit(pr["id"], rel, credit)
             return
-        blob = ai.generate_image(f"{HA.ARCHIVE} {prompt} {era}")
+        # pas l'ancre d'époque complète (« Setting: … every building… ») : avec elle l'IA collait une scène du récit
+        # à côté de l'objet (Alamo : la carte « India Pattern Musket » montrait surtout des soldats) ; contrôle en
+        # vision (scène, collage, texte lisible inventé comme un ordre « signé Sam Houston » en 1840) : refaite une fois
+        avoid = ""
+        for attempt in range(2):
+            blob = ai.generate_image(f"{HA.ARCHIVE} {prompt} {HA.ARCHIVE_ONLY}{avoid}")
+            ok, problems = HA.check_archive(blob, beat, ai_made=True)
+            if ok:
+                break
+            avoid = " Avoid: " + "; ".join(problems) + "."
         _set_archive_credit(pr["id"], rel, "Reconstruction (AI)")
         w, h = 1920, 1080
     else:
