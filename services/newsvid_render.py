@@ -726,10 +726,26 @@ def build(job_dir, work_root, upload=True, keep=False):
         voices[i] = mine
     # 2) téléchargements
     files = {}
-    for vid in dict.fromkeys(s["video"] for s in plan["segments"] if s["type"] == "clip"):
+    vids = list(dict.fromkeys(s["video"] for s in plan["segments"] if s["type"] == "clip"))
+    for vid in vids:
         files[vid] = download(vid, dl, log)
-        if not files[vid]:
-            log(f"!! vidéo {vid} impossible à télécharger : ses extraits sautent")
+    # YouTube bloque parfois quelques minutes (« confirm you're not a bot », 4 oct. : 5 vidéos sur 10 pendant que
+    # deux montages téléchargeaient en même temps) : on réessaie après une pause
+    for wait in (120, 300):
+        miss = [v for v in vids if not files.get(v)]
+        if not miss:
+            break
+        log(f"{len(miss)} vidéo(s) refusée(s) par YouTube : nouvel essai dans {wait // 60} min")
+        time.sleep(wait)
+        for vid in miss:
+            files[vid] = download(vid, dl, log)
+    clips = [s for s in plan["segments"] if s["type"] == "clip"]
+    lost = [s for s in clips if not files.get(s["video"])]
+    for vid in [v for v in vids if not files.get(v)]:
+        log(f"!! vidéo {vid} impossible à télécharger : ses extraits et leurs voix off sautent")
+    if clips and len(lost) > 0.25 * len(clips):
+        raise RuntimeError(f"{len(lost)} extraits sur {len(clips)} impossibles à télécharger (YouTube) : "
+                           "vidéo pas montée, à relancer plus tard")
     # 3) segments (+ logo animé après l'ouverture, rappel d'abonnement sur le 2e extrait encadré)
     parts = []
     segs = plan["segments"]
@@ -754,6 +770,9 @@ def build(job_dir, work_root, upload=True, keep=False):
             nxt = next((s for s in segs[i + 1:] if s["type"] == "clip" and files.get(s["video"])), None)
             if nxt is None and seg.get("next_video") is not None:
                 continue  # l'extrait annoncé n'existe plus : la voix off saute aussi
+            own = next((s for s in segs[i + 1:] if s["type"] == "clip"), None)
+            if i > 0 and not seg.get("outro") and own is not None and not files.get(own["video"]):
+                continue  # jamais une voix off qui annonce un extrait absent (4 oct. : 8 voix off d'affilée)
             ref = nxt or next((s for s in reversed(segs[:i]) if s["type"] == "clip" and files.get(s["video"])), None)
             if ref is None:
                 continue

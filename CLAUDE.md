@@ -292,6 +292,11 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   regarder » si le contrôle voit un vrai problème). **En attente** : le faire tourner tout seul sur le PC (agent qui se
   met à jour depuis GitHub avec les clés) a été bloqué par la sécurité de Claude (« agent autonome ») ; c'est à
   l'utilisateur de l'autoriser explicitement. D'ici là : radar et vidéos lancés depuis le cloud quand il le demande.
+- **YouTube bloque parfois le PC** quand deux montages téléchargent en même temps (4 oct. : 5 vidéos sur 10 refusées,
+  « confirm you're not a bot », puis téléchargements très lents) : le montage réessaie les vidéos refusées après 2 puis
+  5 min, saute la voix off d'un extrait absent, et refuse de monter si plus d'un quart des extraits manque. Déposer
+  les vidéos l'une après l'autre (attendre la fin de la 1re avant `vps --pc` de la 2e) quand le PC a déjà beaucoup
+  téléchargé dans la soirée.
 - **Transitions douces** (l'utilisateur, 4 oct. : « ça coupe net dès que les mecs arrêtent de parler ») : chaque
   passage entre et sort en fondu court (`vfades`/`afades`), la fin d'un extrait respire jusqu'à 0,6 s dans le silence
   (`snap`), le logo animé reste 4,5 s et sort en fondu.
