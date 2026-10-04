@@ -95,7 +95,9 @@ son marqueur (`AUDIT DONE`, `PROD DONE`, `QA DONE`, `RENDER DONE`, `ALL DONE`) :
 - **Relire le script** (`script.txt`) : pas de vrais joueurs/équipes, rien de sexualisé, chiffres = notes,
   pas de phrases méta (« this story is constructed »), titres de parties propres (pour OST : « Hand N: … »
   donne une carte, les autres parties pas de numéro). Corriger le fichier, puis
-  `python production/steps.py save <dossier>` et `touch <dossier>/script_ok`.
+  `python production/steps.py check <dossier>` : **toujours la vérif FacelessOS** (greenlight A-E + scanner) sur le script
+  corrigé (l'utilisateur, 4 oct.) ; appliquer ses fixes justes (à la main ou `--apply`), sans reprendre un chiffre qui
+  contredit les notes sourcées ; puis `python production/steps.py save <dossier>` et `touch <dossier>/script_ok`.
 - **Miniature** : `production/thumb.py` avec la référence de la chaîne, 2-4 variantes en planche, le choix
   de l'utilisateur va dans `<dossier>/thumb_choice.txt` (chemin absolu).
 - Durée par défaut 14 min. Une vidéo prend ~1 h 30 à 2 h (images ≈ 4-5/min, rendu ≈ 25 min).
