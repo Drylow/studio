@@ -947,6 +947,9 @@ def build_image_prompt(ch, scene_prompt, scene_chars=None, allow_text=False, ver
     elif not allow_text:
         fmt += (" Text: ONLY the short label(s) quoted in the scene description, big, bold, uppercase and spelled "
                 "exactly; no other writing, no small unreadable text, no watermark, no logo.")
+    # « no logo » seul ne suffisait pas : cartes avec les cercles Mastercard (mariage), sacs à damier et matelassés
+    # à chaîne façon grandes marques (sac contrefait), 4 oct.
+    fmt += BRAND_MARKS
     if board_layout and not vertical:
         fmt += (" Keep the bottom-left corner of the image calm and free of important details (a presenter "
                 "character is overlaid there).")
@@ -1821,6 +1824,10 @@ def _image_workers():
         return 6
 
 
+BRAND_MARKS = (" No brand marks of any kind: a payment card is plain with only a chip (no overlapping circles, no "
+               "network logo), bags are plain leather (no monogram, checkerboard, plaid or quilted-chain designer "
+               "pattern), no car badge, no fruit or other logo on devices.")
+
 IMAGE_QA = """You are the quality checker of a 2D cartoon explainer channel. Look at this generated image for the
 scene below and reject it only for REAL, visible mistakes a viewer would notice:
 - anatomy errors: count the arms and hands of EVERY figure, including background people and partly hidden ones;
@@ -1828,6 +1835,8 @@ scene below and reject it only for REAL, visible mistakes a viewer would notice:
   floating alone = reject); also two heads, fused bodies, broken limbs;
 - objects that make no sense or are upside down / facing the wrong way / floating;
 - any readable text, letters or numbers (blank papers and screens are fine){no_text}
+- a real brand mark, even small: overlapping circles or any logo on a payment card, a designer monogram,
+  checkerboard or quilted-chain pattern on a bag, a car badge, a logo on a device;
 - the image does not show what the narration says, or it is confusing (too many things, no clear subject){faceless}
 NARRATION: {text}
 PROMPT: {prompt}
