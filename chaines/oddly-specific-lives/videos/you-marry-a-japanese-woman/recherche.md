@@ -1,0 +1,15 @@
+# Recherche et consignes — POV: You Marry a Japanese Woman
+
+Faits vérifiés et règles données au script.
+
+VERIFIED FACTS about her world (use several, rounded, each inside a scene, with the source named in the sentence; never invent other statistics):
+- Article 750 of Japan's Civil Code requires a married couple of two Japanese nationals to share one surname; in about 95% of marriages it is the wife who gives up hers (Japanese government figures). The Supreme Court upheld the rule in 2015 and again in 2021.
+- When a Japanese citizen marries a foreigner, that rule does not apply: she keeps her own surname unless she files to change it within six months.
+- A marriage in Japan is legal only once the couple hands in a marriage registration form (kon'in todoke) at the city or ward office, signed by two adult witnesses; the ceremony itself has no legal value.
+- Japan's 2022 vital statistics (Ministry of Health, Labour and Welfare): average age at first marriage 31.1 for men, 29.7 for women.
+- Wedding guests give cash in a decorated envelope (goshugi): for a friend, usually 30,000 yen, in brand-new notes; odd amounts are preferred because an even sum can be "split".
+- At a Shinto wedding the couple share sake in san-san-kudo: three sips from each of three cups.
+- In many Japanese homes the wife runs the family budget and the husband gets a monthly allowance (okozukai); SBI Shinsei Bank's yearly survey puts the average office worker's allowance at around 40,000 yen a month (present as an estimate).
+- On Valentine's Day in Japan women give chocolate to men; on White Day, March 14, men give something back.
+STORY SHAPE: "You" are an American man, 31, teaching English in Osaka, bad at Japanese, always taking your shoes off at the wrong moment. She is FICTIONAL: Haruka, 29, a pharmacist in Osaka, very calm, very organised, dry sense of humour, secretly competitive at karaoke. First meeting: a convenience store at 11 p.m., you can't read the label on cold medicine and she quietly swaps it for the right one. Dates: street food in Dotonbori, a rainy day in Nara with the deer bowing for crackers. Meeting her parents (aisatsu) in their small house in Nara: you kneel on tatami, her father says almost nothing for an hour, then pours you a drink. You file the form at the ward office (the real wedding, 10 minutes, a clerk and a stamp), then a Shinto ceremony at a shrine in Kyoto with san-san-kudo, guests' envelopes, her friends' speeches. Wedding by ~55%. Married life: she gives you an allowance and you never win that argument; she keeps her name (the six-month rule); shoes off at the genkan; first New Year at her parents' (shrine visit at midnight, osechi boxes); White Day you forget, once; a hard moment (her father in hospital, you learn to be quiet the way her family is quiet); quiet ending: two pairs of shoes side by side at the genkan, then a tiny third pair.
+RULES: she is fictional, never a stereotype or a joke about her accent; respectful and warm, culture shown accurately; no real people, brands or logos; never sexualize her; places used correctly (Osaka, Dotonbori, Nara, Kyoto shrine, ward office). Advertiser-friendly.
