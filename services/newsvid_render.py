@@ -26,6 +26,9 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(REPO, "static", "fonts")
 W, H, FPS = 1920, 1080, 30
 BOX = (190, 112, 1540, 866)          # cadre des extraits (x, y, largeur, hauteur) : 16:9, un peu sous le centre
+# chaînes qui incrustent une bande en bas de leurs vidéos : nos sous-titres montent au-dessus (part de la hauteur de
+# l'image ; 4 oct. : sous-titres illisibles sur la bande bleue de The Stomping Ground)
+SUB_RAISE = {"The Stomping Ground": 0.15}
 X264 = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 AAC = ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
 TENSE = {"name": "News tense", "bpm": 84, "chords": [  # nappe mineure sombre, très basse sous la voix
@@ -231,9 +234,10 @@ def _wrap(text, n):
     return lines
 
 
-def _styles(acc, acc2, framed):
+def _styles(acc, acc2, framed, raise_frac=0.0):
     x, y, w, h = BOX
     sub_size, margin_v = (46, H - (y + h) + 34) if framed else (54, 70)
+    margin_v += int((h if framed else H) * raise_frac)
     a, a2 = _c(acc), _c(acc2)
     return [
         f"Style: Sub,Montserrat,{sub_size},&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,1,0,0,0,100,100,0,0,1,4,1,2,"
@@ -416,7 +420,7 @@ def _sub_text(t, color=None):
     return (f"{{\\c{color}}}" + txt) if color else txt
 
 
-def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None, brand=""):
+def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None, brand="", raise_frac=0.0):
     """Sous-titres (la phrase forte en jaune, rien qui surgit au milieu de l'écran), crédit, nom de qui parle
     pendant sa phrase forte, rappel d'abonnement discret une fois."""
     x, y, w, h = BOX
@@ -447,7 +451,7 @@ def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=No
     if pill_at is not None:
         a = pill_at
         ev.append(_ev(a, a + 4.5, "Pill", f"{{\\an9\\pos({x + w - 30},{y + 30})\\fad(250,250)}}{_ass_escape(pill)}", 5))
-    _write_ass(dest, _styles(acc, acc2, framed), ev)
+    _write_ass(dest, _styles(acc, acc2, framed, raise_frac), ev)
     return pill_at, (q0, q1)
 
 
@@ -490,7 +494,7 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
     framed = not seg.get("full")
     ass = os.path.join(workdir, os.path.basename(dest) + ".ass")
     clip_ass(ass, subs, framed, seg.get("credit") or "", seg.get("speaker") or "", quote, dur, accent, accent2,
-             pill=pill, brand=brand)
+             pill=pill, brand=brand, raise_frac=seg.get("sub_raise", SUB_RAISE.get(seg.get("channel") or "", 0.0)))
     x, y, w, h = BOX
     ins = ["-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["v"],
            "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["a"]]
