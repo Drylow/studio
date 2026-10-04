@@ -10,11 +10,11 @@
 | The Economics of Dying in America | livrée (Discord) | https://gofile.io/d/KCE0o4PZ |
 | The Economics of Having a Kid | livrée, **version corrigée** (ticket de caisse) — l'ancienne a7J8p4bS est fausse | https://gofile.io/d/LWalsRCI |
 | The Economics of an Ambulance Ride | livrée (Discord), vérifiée | https://gofile.io/d/OPhgqlbK |
-| The Economics of a Wedding | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/GTLWRLUM (l'ancienne hdhCOEn6 a des erreurs : ne pas poster) | |
-| The Economics of a Car Accident | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/39fxPk2e (l'ancienne d4mO5Vgd a des erreurs : ne pas poster) | |
-| The Economics of a Nursing Home | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/EK7nIFaj (l'ancienne OsTkNTv9 a des erreurs : ne pas poster) | |
-| The Economics of Retiring With Nothing Saved | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/ju2sSJmk (l'ancienne ronqbZRh a des erreurs : ne pas poster) | |
-| The Economics of Getting Arrested | **livrée** (vérifiée image par image, corrigée, Discord, 4 oct. ~13 h heure belge) — https://gofile.io/d/4MfGf0ng (l'ancienne NbdoSLr9 a des erreurs : ne pas poster) | |
+| The Economics of a Wedding | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/GTLWRLUM (l'ancienne hdhCOEn6 a des erreurs : ne pas poster) | |
+| The Economics of a Car Accident | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/39fxPk2e (l'ancienne d4mO5Vgd a des erreurs : ne pas poster) | |
+| The Economics of a Nursing Home | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/EK7nIFaj (l'ancienne OsTkNTv9 a des erreurs : ne pas poster) | |
+| The Economics of Retiring With Nothing Saved | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/ju2sSJmk (l'ancienne ronqbZRh a des erreurs : ne pas poster) | |
+| The Economics of Getting Arrested | **livrée** (vérifiée image par image, corrigée, salon Oddly Expensive Lives, 4 oct. ~13 h heure belge) — https://gofile.io/d/4MfGf0ng (l'ancienne NbdoSLr9 a des erreurs : ne pas poster) | |
 
 Idée suivante déjà discutée : la prison (mise de côté).
 
