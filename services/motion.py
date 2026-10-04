@@ -544,9 +544,11 @@ class Pie(Fx):
         tot = sum(v for _, v in vals) or 1.0
         # parts déjà en % (somme ≈ 100, ex. sondage 46/24/16/11) : on affiche le chiffre dit, pas la part recalculée
         # (le mariage affichait 47 % et 25 % pour 46 % et 24 %)
-        pct = 90 <= tot <= 110
+        # moins de 100 (54/23/9 % dits, le reste ailleurs) : parts sur 100, le reste en gris, au lieu de 63/27/10 %
+        pct = 50 <= tot <= 110
         disp = [str(i.get("display") or "") or (f"{v:g}%" if pct else "") for i, (_, v) in zip(items, vals)]
-        self.items = [(l, v / tot) for l, v in vals]
+        base = 100.0 if pct and tot < 100 else tot
+        self.items = [(l, v / base) for l, v in vals]
         self.disp = [d or f"{round(f * 100)}%" for d, (_, f) in zip(disp, self.items)]
         self.title = (self.spec.get("title") or "").upper()[:40]
         self.w, self.h = int(940 * k), int(580 * k)
