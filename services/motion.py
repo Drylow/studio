@@ -540,7 +540,12 @@ class Pie(Fx):
                 pn = parse_number(str(i.get("value") or ""))
                 vals.append((str(i.get("label") or "")[:26], pn[1] if pn else 1.0))
         tot = sum(v for _, v in vals) or 1.0
+        # parts déjà en % (somme ≈ 100, ex. sondage 46/24/16/11) : on affiche le chiffre dit, pas la part recalculée
+        # (le mariage affichait 47 % et 25 % pour 46 % et 24 %)
+        pct = 90 <= tot <= 110
+        disp = [str(i.get("display") or "") or (f"{v:g}%" if pct else "") for i, (_, v) in zip(items, vals)]
         self.items = [(l, v / tot) for l, v in vals]
+        self.disp = [d or f"{round(f * 100)}%" for d, (_, f) in zip(disp, self.items)]
         self.title = (self.spec.get("title") or "").upper()[:40]
         self.w, self.h = int(940 * k), int(580 * k)
         self.x = int(px + pw * 0.5 - self.w / 2)
@@ -582,7 +587,7 @@ class Pie(Fx):
             p.box((480 * k, y - 16 * k, 512 * k, y + 16 * k), PALETTE[j % len(PALETTE)], width=3 * k,
                   radius=6 * k, shadow=0)
             p.text((530 * k, y), label, 800, fit_size(label, 800, 34 * k, 250 * k), anchor="lm")
-            p.text((self.w - 60 * k, y), f"{round(frac * 100)}%", 900, 36 * k, anchor="rm")
+            p.text((self.w - 60 * k, y), self.disp[j], 900, 36 * k, anchor="rm")
         im = p.image()
         return transform(im, scale=0.7 + 0.3 * ease_back(seg(t, 0, 0.3)), alpha=seg(t, 0, 0.1))
 
