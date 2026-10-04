@@ -1,0 +1,15 @@
+# Recherche et consignes — POV: You Marry a Brazilian Woman
+
+Faits vérifiés et règles données au script.
+
+VERIFIED FACTS about her world (use several, rounded, each inside a scene, with the source named in the sentence; never invent other statistics):
+- Brazil's 2022 census (IBGE) counted about 203 million people; Brazil has the largest Catholic population in the world.
+- Christ the Redeemer above Rio was completed in 1931; the statue is about 30 metres tall, on an 8-metre pedestal.
+- Rio's Carnival parades take place in the Sambadrome, designed by architect Oscar Niemeyer and opened in 1984; the samba schools spend the whole year preparing.
+- On New Year's Eve (Réveillon) on Copacabana beach, people wear white, jump seven waves for luck and leave flowers in the sea for Iemanjá, the sea goddess of Afro-Brazilian religions.
+- Brigadeiro, the chocolate sweet at every Brazilian party, is named after Brigadeiro Eduardo Gomes, a presidential candidate of 1945 whose supporters sold the sweets.
+- "Bem-casados" ("well-married") are small sweet cakes wrapped in paper that couples give to their wedding guests, for luck in the marriage.
+- Festa junina: the June festivals, with bonfires, corn dishes, square dancing and checked shirts.
+- "Saudade": a Portuguese word for a deep longing for someone or something you love and miss.
+STORY SHAPE: "You" are an American man, 32, an engineer sent to Rio for a two-year project, very quiet, very bad at dancing, no idea what a family barbecue really means. She is FICTIONAL: Camila, 29, a physiotherapist from Rio, loud, warm, honest, always late, laughs with her whole body; she has a huge family in Niterói (mother, grandmother Dona Lúcia, three aunts, cousins everywhere). First meeting: Copacabana beach, a footvolley ball hits you in the head, she runs over, checks your neck like a professional and then laughs at you. Her world: Sunday churrasco at her family's house that starts at noon and ends at midnight, her grandmother feeding you until you surrender, cousins teaching you samba and giving up, everyone in your business, WhatsApp family group with 47 people. Réveillon on Copacabana in white, jumping seven waves. Carnival: her cousins' samba school, you carry costumes. Meeting her father, quiet, who tests you with football questions (no real teams named). Proposal at the top of Sugarloaf at sunset, half the family "accidentally" there. Wedding by ~55%: church wedding, huge party until 5 a.m., bem-casados, brigadeiros, her grandmother dancing. Married life: the family never leaves, you learn Portuguese, saudade when you visit the US, festa junina, a hard moment (your project ends, you choose to stay), a baby and Dona Lúcia moving in "for a week" (three months); quiet ending: Sunday churrasco, you're now the one at the grill, a cousin's new boyfriend looking as lost as you once did.
+RULES: she is fictional, warm and respectful, no clichés about danger or poverty, no favela tourism; no real people, teams, brands or logos; never sexualize her; places used correctly (Copacabana, Sugarloaf, Christ the Redeemer, Niterói, Sambadrome). Advertiser-friendly.
