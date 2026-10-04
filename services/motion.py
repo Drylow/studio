@@ -289,6 +289,8 @@ class Counter(Fx):
     def setup(self):
         k = self.k
         px, py, pw, ph = _panel(self.geo)
+        # « FIVE HOURS » ne se lit pas comme un nombre : on affiche le texte tel quel (avant : un « 0 » à l'écran)
+        self.raw = "" if parse_number(self.spec.get("to") or "") else str(self.spec.get("to") or "")[:24]
         self.to = parse_number(self.spec.get("to") or "") or ("", 0.0, "", 0, False)
         fr = parse_number(self.spec.get("from") or "")
         self.start = fr[1] if fr else 0.0
@@ -296,7 +298,7 @@ class Counter(Fx):
         self.w, self.h = int(800 * k), int(380 * k)
         self.x = int(px + pw * 0.5 - self.w / 2)
         self.y = int(py + ph * CENTER_Y - self.h / 2)
-        final = fmt_number(*self.to)
+        final = self.raw or fmt_number(*self.to)
         self.size = fit_size(final, 900, 150 * k, self.w - 110 * k)
         ticks = [(0.25 + i * 0.07, "tick", 0.5) for i in range(int((1.35 - 0.25) / 0.07))]
         self.sfx = [(0.0, "pop", 0.7)] + ticks + [(1.4, "ding", 0.7)]
@@ -308,7 +310,7 @@ class Counter(Fx):
         p.box((m, m, self.w - m - 10 * k, self.h - m - 10 * k), WHITE, width=5 * k, radius=26 * k, shadow=10 * k)
         pre, val, suf, dec, commas = self.to
         v = self.start + (val - self.start) * ease_out(seg(t, 0.25, 1.35))
-        s = fmt_number(pre, v, suf, dec, commas)
+        s = self.raw or fmt_number(pre, v, suf, dec, commas)
         cx = (self.w - 10 * k) / 2
         p.text((cx, self.h * 0.43), s, 900, self.size, fill=RED if t >= 1.35 else INK, anchor="mm")
         if self.label:
@@ -1123,6 +1125,18 @@ class Chapter(Fx):
         return transform(im, dx=-(1 - ease_out(seg(t, 0, 0.3))) * 60 * k, alpha=seg(t, 0, 0.08))
 
 
+def _place(name, n=24):
+    """Nom de lieu de 24 caractères au plus, sans mot coupé : les derniers mots (le lieu) d'abord."""
+    if len(name) <= n:
+        return name
+    words, out = name.split(), ""
+    for w in reversed(words):
+        if len(w) + len(out) + (1 if out else 0) > n:
+            break
+        out = (w + " " + out).strip()
+    return out or name[:n]
+
+
 class Route(Fx):
     """Trajet : deux points (départ, arrivée), une ligne pointillée en arc qui se trace avec un petit
     avion au bout, l'arrivée qui claque ; « sub » = comment ou combien (facultatif)."""
@@ -1131,8 +1145,8 @@ class Route(Fx):
     def setup(self):
         k = self.k
         px, py, pw, ph = _panel(self.geo)
-        self.a = (self.spec.get("from") or "").upper()[:24]
-        self.b = (self.spec.get("to") or "").upper()[:24]
+        # nom trop long (« AMAZON'S MISSISSAUGA WAREHOUSE ») : on garde la fin, le nom du lieu, plutôt qu'un mot coupé
+        self.a, self.b = (_place((self.spec.get(x) or "").upper()) for x in ("from", "to"))
         self.sub = (self.spec.get("sub") or "").upper()[:40]
         self.w, self.h = int(1120 * k), int((440 if self.sub else 380) * k)
         self.x = int(px + pw * 0.5 - self.w / 2)
