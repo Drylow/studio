@@ -576,11 +576,16 @@ def narration_ass(dest, seg, dur, plan, acc, acc2):
     ev.append(_ev(0, dur, "Tag", f"{{\\an9\\pos({W - 44},{34})\\fs56\\fnAnton\\b0}}{_ass_escape(brand)}", 2))
     head = seg.get("headline") or ("DROP YOUR THOUGHTS BELOW" if seg.get("outro") else "")
     if head:
-        lines = _wrap(_ass_escape(head), 15)[:3]
+        for width in (15, 18, 22):   # jamais un titre coupé (4 oct. : « PORTUGAL'S BIGGER DECISION: » sans RONALDO)
+            lines = _wrap(_ass_escape(head), width)
+            if len(lines) <= 3:
+                break
+        lines = lines[:3]
+        fs = f"\\fs{int(150 * 15 / width)}" if width > 15 else ""
         y0 = 280 if len(lines) < 3 else 200
         ev.append(_ev(0.25, dur, "Tag", f"{{\\pos(96,{y0})\\fad(250,0)}}"
                                         f"{'THE LATEST' if not seg.get('outro') else 'YOUR TAKE'}", 3))
-        ev.append(_ev(0.4, dur, "Head", f"{{\\pos(96,{y0 + 70})\\fad(300,0)}}" + "\\N".join(lines), 3))
+        ev.append(_ev(0.4, dur, "Head", f"{{\\pos(96,{y0 + 70})\\fad(300,0){fs}}}" + "\\N".join(lines), 3))
     if seg.get("outro") and plan.get("subscribe"):
         ev.append(_ev(1.0, dur, "Pill", f"{{\\an3\\pos({W - 60},{H - 120})\\fad(300,0)}}"
                                         f"{_ass_escape(plan['subscribe'])}", 4))
