@@ -26,6 +26,9 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(REPO, "static", "fonts")
 W, H, FPS = 1920, 1080, 30
 BOX = (190, 112, 1540, 866)          # cadre des extraits (x, y, largeur, hauteur) : 16:9, un peu sous le centre
+# chaînes qui incrustent une bande en bas de leurs vidéos : nos sous-titres montent au-dessus (part de la hauteur de
+# l'image ; 4 oct. : sous-titres illisibles sur la bande bleue de The Stomping Ground)
+SUB_RAISE = {"The Stomping Ground": 0.15}
 X264 = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 AAC = ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
 TENSE = {"name": "News tense", "bpm": 84, "chords": [  # nappe mineure sombre, très basse sous la voix
@@ -80,9 +83,12 @@ def download(video_id, dl_dir, log):
             got[kind] = have[0]
             continue
         for k in range(3):
-            r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
-                               capture_output=True, text=True, encoding="utf-8", errors="replace",
-                               creationflags=media._NO_WINDOW)
+            try:   # jamais bloqué pour toujours (4 oct. : un téléchargement freiné par YouTube a figé le montage 40 min)
+                r = subprocess.run(ytdlp_args() + ["-f", fmt, "-o", f"{video_id}.{kind}.%(ext)s", url], cwd=dl_dir,
+                                   capture_output=True, text=True, encoding="utf-8", errors="replace",
+                                   creationflags=media._NO_WINDOW, timeout=15 * 60)
+            except subprocess.TimeoutExpired as e:
+                r = subprocess.CompletedProcess(e.cmd, 1, "", "téléchargement trop lent (15 min), arrêté")
             have = [f for f in glob.glob(os.path.join(dl_dir, f"{video_id}.{kind}.*")) if not f.endswith(".part")]
             if have:
                 got[kind] = have[0]
@@ -228,9 +234,10 @@ def _wrap(text, n):
     return lines
 
 
-def _styles(acc, acc2, framed):
+def _styles(acc, acc2, framed, raise_frac=0.0):
     x, y, w, h = BOX
     sub_size, margin_v = (46, H - (y + h) + 34) if framed else (54, 70)
+    margin_v += int((h if framed else H) * raise_frac)
     a, a2 = _c(acc), _c(acc2)
     return [
         f"Style: Sub,Montserrat,{sub_size},&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,1,0,0,0,100,100,0,0,1,4,1,2,"
@@ -413,7 +420,7 @@ def _sub_text(t, color=None):
     return (f"{{\\c{color}}}" + txt) if color else txt
 
 
-def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None, brand=""):
+def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=None, brand="", raise_frac=0.0):
     """Sous-titres (la phrase forte en jaune, rien qui surgit au milieu de l'écran), crédit, nom de qui parle
     pendant sa phrase forte, rappel d'abonnement discret une fois."""
     x, y, w, h = BOX
@@ -444,7 +451,7 @@ def clip_ass(dest, subs, framed, credit, speaker, quote, dur, acc, acc2, pill=No
     if pill_at is not None:
         a = pill_at
         ev.append(_ev(a, a + 4.5, "Pill", f"{{\\an9\\pos({x + w - 30},{y + 30})\\fad(250,250)}}{_ass_escape(pill)}", 5))
-    _write_ass(dest, _styles(acc, acc2, framed), ev)
+    _write_ass(dest, _styles(acc, acc2, framed, raise_frac), ev)
     return pill_at, (q0, q1)
 
 
@@ -487,7 +494,7 @@ def render_clip(seg, files, frame, workdir, dest, accent, log, accent2=(255, 210
     framed = not seg.get("full")
     ass = os.path.join(workdir, os.path.basename(dest) + ".ass")
     clip_ass(ass, subs, framed, seg.get("credit") or "", seg.get("speaker") or "", quote, dur, accent, accent2,
-             pill=pill, brand=brand)
+             pill=pill, brand=brand, raise_frac=seg.get("sub_raise", SUB_RAISE.get(seg.get("channel") or "", 0.0)))
     x, y, w, h = BOX
     ins = ["-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["v"],
            "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", files["a"]]
@@ -569,11 +576,16 @@ def narration_ass(dest, seg, dur, plan, acc, acc2):
     ev.append(_ev(0, dur, "Tag", f"{{\\an9\\pos({W - 44},{34})\\fs56\\fnAnton\\b0}}{_ass_escape(brand)}", 2))
     head = seg.get("headline") or ("DROP YOUR THOUGHTS BELOW" if seg.get("outro") else "")
     if head:
-        lines = _wrap(_ass_escape(head), 15)[:3]
+        for width in (15, 18, 22):   # jamais un titre coupé (4 oct. : « PORTUGAL'S BIGGER DECISION: » sans RONALDO)
+            lines = _wrap(_ass_escape(head), width)
+            if len(lines) <= 3:
+                break
+        lines = lines[:3]
+        fs = f"\\fs{int(150 * 15 / width)}" if width > 15 else ""
         y0 = 280 if len(lines) < 3 else 200
         ev.append(_ev(0.25, dur, "Tag", f"{{\\pos(96,{y0})\\fad(250,0)}}"
                                         f"{'THE LATEST' if not seg.get('outro') else 'YOUR TAKE'}", 3))
-        ev.append(_ev(0.4, dur, "Head", f"{{\\pos(96,{y0 + 70})\\fad(300,0)}}" + "\\N".join(lines), 3))
+        ev.append(_ev(0.4, dur, "Head", f"{{\\pos(96,{y0 + 70})\\fad(300,0){fs}}}" + "\\N".join(lines), 3))
     if seg.get("outro") and plan.get("subscribe"):
         ev.append(_ev(1.0, dur, "Pill", f"{{\\an3\\pos({W - 60},{H - 120})\\fad(300,0)}}"
                                         f"{_ass_escape(plan['subscribe'])}", 4))
@@ -726,10 +738,26 @@ def build(job_dir, work_root, upload=True, keep=False):
         voices[i] = mine
     # 2) téléchargements
     files = {}
-    for vid in dict.fromkeys(s["video"] for s in plan["segments"] if s["type"] == "clip"):
+    vids = list(dict.fromkeys(s["video"] for s in plan["segments"] if s["type"] == "clip"))
+    for vid in vids:
         files[vid] = download(vid, dl, log)
-        if not files[vid]:
-            log(f"!! vidéo {vid} impossible à télécharger : ses extraits sautent")
+    # YouTube bloque parfois quelques minutes (« confirm you're not a bot », 4 oct. : 5 vidéos sur 10 pendant que
+    # deux montages téléchargeaient en même temps) : on réessaie après une pause
+    for wait in (120, 300):
+        miss = [v for v in vids if not files.get(v)]
+        if not miss:
+            break
+        log(f"{len(miss)} vidéo(s) refusée(s) par YouTube : nouvel essai dans {wait // 60} min")
+        time.sleep(wait)
+        for vid in miss:
+            files[vid] = download(vid, dl, log)
+    clips = [s for s in plan["segments"] if s["type"] == "clip"]
+    lost = [s for s in clips if not files.get(s["video"])]
+    for vid in [v for v in vids if not files.get(v)]:
+        log(f"!! vidéo {vid} impossible à télécharger : ses extraits et leurs voix off sautent")
+    if clips and len(lost) > 0.25 * len(clips):
+        raise RuntimeError(f"{len(lost)} extraits sur {len(clips)} impossibles à télécharger (YouTube) : "
+                           "vidéo pas montée, à relancer plus tard")
     # 3) segments (+ logo animé après l'ouverture, rappel d'abonnement sur le 2e extrait encadré)
     parts = []
     segs = plan["segments"]
@@ -754,6 +782,9 @@ def build(job_dir, work_root, upload=True, keep=False):
             nxt = next((s for s in segs[i + 1:] if s["type"] == "clip" and files.get(s["video"])), None)
             if nxt is None and seg.get("next_video") is not None:
                 continue  # l'extrait annoncé n'existe plus : la voix off saute aussi
+            own = next((s for s in segs[i + 1:] if s["type"] == "clip"), None)
+            if i > 0 and not seg.get("outro") and own is not None and not files.get(own["video"]):
+                continue  # jamais une voix off qui annonce un extrait absent (4 oct. : 8 voix off d'affilée)
             ref = nxt or next((s for s in reversed(segs[:i]) if s["type"] == "clip" and files.get(s["video"])), None)
             if ref is None:
                 continue
