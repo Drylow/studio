@@ -81,9 +81,10 @@ Le worker intégré est désactivé ici : un worker distinct est lancé à l'ét
 Activer HTTPS dans cPanel → SSL/TLS Status → AutoSSL. Puis Setup Python App → Restart.
 Passenger active le mode hébergé même si un ancien `.env` indique « développement ».
 Il refuse de démarrer en aperçu, sans adresse HTTPS ou avec une clé de session faible.
-Le studio est réservé à **deux comptes**, avec mot de passe personnel et code téléphone
-obligatoire. Conserver `FLASK_SECRET_KEY` : elle protège aussi les clés d'authentification
-chiffrées en base. Sa perte empêche de retrouver ces clés ; la sauvegarder en privé.
+Le studio est réservé à **deux comptes**, chacun avec un mot de passe personnel fort.
+Aucune application, aucun QR code et aucun code téléphone ne sont nécessaires, selon
+le choix confirmé par l’utilisateur. Conserver `FLASK_SECRET_KEY` stable pour signer les
+sessions ; la sauvegarder en privé.
 
 Le dossier public créé par cPanel doit être vide des anciens fichiers du site.
 Les sauvegarder hors de `public_html` avant remplacement. Ajouter les règles de
@@ -95,10 +96,10 @@ Donner au dossier de données des permissions `0700` et à `.env` des permission
 Flask limite aussi les fichiers publics aux bundles compilés et aux polices.
 
 Au premier lancement, utiliser le code `STUDIO_BOOTSTRAP_TOKEN` du fichier privé dans
-l'écran Code d'installation, créer Drylow et relier son application d'authentification,
-puis Réglages → Équipe → Ajouter Kanye. Kanye configure son téléphone à sa première
-connexion. Suivre [PRIVATE_ACCESS.md](PRIVATE_ACCESS.md) pour les étapes illustrées
-dans l'écran et la récupération d'accès.
+l'écran Code d'installation, créer Drylow, puis Réglages → Équipe → Ajouter Kanye.
+Ensuite chacun entre simplement son identifiant et son mot de passe. Le code
+d'installation ne sert qu'à créer le premier compte et ne revient pas à chaque
+connexion. Suivre [PRIVATE_ACCESS.md](PRIVATE_ACCESS.md) pour les étapes.
 Les mots de passe ACCESS_PASSWORD/BOSS_PASSWORD et l'ancien triple-clic ne sont plus utilisés.
 
 Avant ouverture, tester sur le **vrai domaine** sans cookie : pages redirigées vers la

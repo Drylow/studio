@@ -2,10 +2,6 @@
 Flask==3.1.3
 Werkzeug==3.1.8
 python-dotenv==1.2.2
-# Accès privé : TOTP, QR local et secrets chiffrés côté serveur.
-cryptography==50.0.2
-pyotp==2.9.0
-qrcode[pil]==8.2
 # Images (recadrage 16:9 des images IA, logos, miniatures).
 Pillow>=10.0.0
 # 2D Videos — voix off gratuite (voix neuronales Microsoft, timings au mot).

@@ -1,23 +1,13 @@
-"""Private access: revocable sessions, password throttling and mandatory TOTP.
+"""Private two-person access with password throttling and revocable sessions."""
 
-Only password-proven pending sessions may enrol or answer a second factor.
-No pending session can reach the workspace, media or operational APIs.
-"""
-
-import base64
 from contextlib import contextmanager
 import hashlib
 import hmac
-import io
-import json
 import re
 import secrets
 import time
 
-from cryptography.fernet import Fernet
 from flask import current_app, g, jsonify, request, session
-import pyotp
-import qrcode
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from studio.store import Conflict, now, uid
@@ -27,9 +17,6 @@ PUBLIC_APIS = {
     "/api/studio/setup",
     "/api/studio/login",
     "/api/studio/logout",
-    "/api/studio/auth/enrol",
-    "/api/studio/auth/verify",
-    "/api/studio/auth/finish",
 }
 DUMMY_HASH = generate_password_hash(secrets.token_urlsafe(32))
 
@@ -42,12 +29,6 @@ def initialize(store):
           scope TEXT NOT NULL, expires_at REAL NOT NULL, seen_at REAL NOT NULL,
           private_data TEXT NOT NULL DEFAULT '');
         CREATE INDEX IF NOT EXISTS studio_sessions_user ON studio_sessions(user_id);
-        CREATE TABLE IF NOT EXISTS studio_mfa(
-          user_id TEXT PRIMARY KEY REFERENCES studio_users(id), secret TEXT NOT NULL,
-          last_step INTEGER NOT NULL DEFAULT -1);
-        CREATE TABLE IF NOT EXISTS studio_recovery_codes(
-          user_id TEXT NOT NULL REFERENCES studio_users(id), code_hash TEXT NOT NULL,
-          PRIMARY KEY(user_id,code_hash));
         """)
 
 
@@ -57,21 +38,6 @@ def digest(value):
 
 def equal(left, right):
     return hmac.compare_digest(str(left).encode(), str(right).encode())
-
-
-def cipher():
-    key = current_app.config["SECRET_KEY"].encode()
-    return Fernet(
-        base64.urlsafe_b64encode(hmac.digest(key, b"studio-mfa-v1", "sha256"))
-    )
-
-
-def seal(value):
-    return cipher().encrypt(json.dumps(value).encode()).decode()
-
-
-def unseal(value):
-    return json.loads(cipher().decrypt(value.encode()))
 
 
 def valid_password(value):
@@ -119,7 +85,7 @@ def throttled():
 
 def revoke(store, container=session):
     token = container.get("studio_sid", "")
-    if token:
+    if isinstance(token, str) and 0 < len(token) <= 128:
         with store.db() as c:
             c.execute(
                 "DELETE FROM studio_sessions WHERE token_hash=?", (digest(token),)
@@ -127,24 +93,36 @@ def revoke(store, container=session):
     container.clear()
 
 
-def issue(store, user_id, *, scope="full", private=None, container=session, ttl=None):
-    revoke(store, container)
+def issue(
+    store, user_id, *, scope="full", container=session, ttl=None, expected_hash=None
+):
+    """Serialize credential changes with issuance; an old password cannot regain access."""
+    if scope not in {"full", "internal"}:
+        raise ValueError("Type de session invalide.")
     token = secrets.token_urlsafe(32)
+    previous = container.get("studio_sid", "")
     at = time.time()
-    lifespan = ttl or (43200 if scope == "full" else 600)
+    lifespan = ttl or (43200 if scope == "full" else 300)
     with store.db() as c:
+        c.execute("BEGIN IMMEDIATE")
+        user = c.execute(
+            "SELECT password_hash FROM studio_users WHERE id=?", (user_id,)
+        ).fetchone()
+        if not user or (
+            expected_hash is not None
+            and not equal(user["password_hash"], expected_hash)
+        ):
+            raise Conflict("Les identifiants ont changé. Reconnecte-toi.")
+        if isinstance(previous, str) and 0 < len(previous) <= 128:
+            c.execute(
+                "DELETE FROM studio_sessions WHERE token_hash=?", (digest(previous),)
+            )
         c.execute("DELETE FROM studio_sessions WHERE expires_at<?", (at,))
         c.execute(
             "INSERT INTO studio_sessions VALUES(?,?,?,?,?,?)",
-            (
-                digest(token),
-                user_id,
-                scope,
-                at + lifespan,
-                at,
-                seal(private) if private else "",
-            ),
+            (digest(token), user_id, scope, at + lifespan, at, ""),
         )
+    container.clear()
     container.update(
         studio_sid=token, studio_user=user_id, csrf=secrets.token_urlsafe(32)
     )
@@ -179,16 +157,6 @@ def identity(store):
                 (time.time(), digest(token)),
             )
     if record["scope"] not in {"full", "internal"}:
-        return None
-    if (
-        record["scope"] == "full"
-        and current_app.config["MFA_REQUIRED"]
-        and not current_app.config["PREVIEW"]
-        and not current_app.config.get("LOCAL_OWNER")
-        and not store.one(
-            "SELECT user_id FROM studio_mfa WHERE user_id=?", (user["id"],)
-        )
-    ):
         revoke(store)
         g.auth_session = None
         return None
@@ -210,55 +178,6 @@ def trusted_client(store, user_id):
     finally:
         with store.db() as c:
             c.execute("DELETE FROM studio_sessions WHERE token_hash=?", (token_hash,))
-
-
-def login_stage(store, user_id):
-    if not current_app.config["MFA_REQUIRED"]:
-        issue(store, user_id)
-    elif store.one("SELECT user_id FROM studio_mfa WHERE user_id=?", (user_id,)):
-        issue(store, user_id, scope="challenge")
-    else:
-        issue(store, user_id, scope="enrol", private={"secret": pyotp.random_base32()})
-
-
-def pending(scope):
-    record = getattr(g, "auth_session", None)
-    if not record or record["scope"] not in scope:
-        raise PermissionError("Reconnecte-toi avant de confirmer ton accès.")
-    return record
-
-
-def auth_status():
-    record = getattr(g, "auth_session", None)
-    if not record or record["scope"] in {"full", "internal"}:
-        return None
-    result = {"stage": record["scope"]}
-    if record["scope"] == "recovery":
-        result["codes"] = unseal(record["private_data"])["codes"]
-    return result
-
-
-def accept_totp(c, user_id, code, *, secret=None):
-    """Consume a step once. Called inside an immediate SQLite transaction."""
-    if not re.fullmatch(r"[0-9]{6}", code):
-        return False
-    record = c.execute(
-        "SELECT * FROM studio_mfa WHERE user_id=?", (user_id,)
-    ).fetchone()
-    last = record["last_step"] if record and secret is None else -1
-    secret = secret or (unseal(record["secret"]) if record else None)
-    if not secret:
-        return False
-    current = int(time.time()) // 30
-    totp = pyotp.TOTP(secret)
-    for step in (current, current - 1, current + 1):
-        if step > last and hmac.compare_digest(totp.at(step * 30), code):
-            c.execute(
-                "INSERT INTO studio_mfa VALUES(?,?,?) ON CONFLICT(user_id) DO UPDATE SET secret=excluded.secret,last_step=excluded.last_step",
-                (user_id, seal(secret), step),
-            )
-            return True
-    return False
 
 
 def json_body():
@@ -301,7 +220,7 @@ def register(app, store):
                 "INSERT INTO studio_users VALUES(?,?,?,?,?,?)",
                 (user_id, name, username, hashed, "owner", now()),
             )
-        login_stage(store, user_id)
+        issue(store, user_id, expected_hash=hashed)
         store.log(name, "setup", "Compte propriétaire créé")
         return jsonify(ok=True)
 
@@ -314,14 +233,19 @@ def register(app, store):
         if attempt is None:
             return throttled()
         u = store.one("SELECT * FROM studio_users WHERE username=?", (username,))
-        bounded = isinstance(password, str) and 1 <= len(password) <= 128
+        bounded = (
+            isinstance(password, str)
+            and 16 <= len(password) <= 128
+            and len(set(password)) >= 6
+        )
         correct = check_password_hash(
             u["password_hash"] if u else DUMMY_HASH, password if bounded else "invalid"
         )
         if not bounded or not u or not correct:
             return jsonify(error="Identifiant ou mot de passe incorrect."), 401
         clear_attempt(store, attempt)
-        login_stage(store, u["id"])
+        issue(store, u["id"], expected_hash=u["password_hash"])
+        store.log(u["name"], "login", "Connexion au studio")
         return jsonify(ok=True)
 
     @app.post("/api/studio/logout")
@@ -329,123 +253,12 @@ def register(app, store):
         revoke(store)
         return jsonify(ok=True)
 
-    @app.post("/api/studio/auth/enrol")
-    def auth_enrol():
-        record = pending({"enrol"})
-        secret = unseal(record["private_data"])["secret"]
-        user = store.one(
-            "SELECT username FROM studio_users WHERE id=?", (record["user_id"],)
-        )
-        uri = pyotp.TOTP(secret).provisioning_uri(
-            user["username"], issuer_name="Edgerunners Studio"
-        )
-        image = qrcode.make(uri)
-        buffer = io.BytesIO()
-        image.save(buffer, format="PNG")
-        return jsonify(
-            secret=secret,
-            uri=uri,
-            qr="data:image/png;base64," + base64.b64encode(buffer.getvalue()).decode(),
-        )
-
-    @app.post("/api/studio/auth/verify")
-    def auth_verify():
-        record = pending({"enrol", "challenge"})
-        b = json_body()
-        code = str(b.get("code", ""))[:128].strip()
-        user_id = record["user_id"]
-        attempt = reserve_attempt(store, "mfa:" + user_id)
-        if attempt is None:
-            return throttled()
-        recovered = False
-        with store.db() as c:
-            c.execute("BEGIN IMMEDIATE")
-            # A concurrent successful verification must invalidate this pending cookie.
-            if not c.execute(
-                "SELECT 1 FROM studio_sessions WHERE token_hash=?",
-                (record["token_hash"],),
-            ).fetchone():
-                raise PermissionError("Ce code a déjà été confirmé. Reconnecte-toi.")
-            if b.get("recovery") is True and record["scope"] == "challenge":
-                normalized = code.replace("-", "").replace(" ", "").upper()
-                recovered = bool(
-                    c.execute(
-                        "DELETE FROM studio_recovery_codes WHERE user_id=? AND code_hash=?",
-                        (user_id, digest(normalized)),
-                    ).rowcount
-                )
-                accepted = recovered
-            else:
-                secret = (
-                    unseal(record["private_data"])["secret"]
-                    if record["scope"] == "enrol"
-                    else None
-                )
-                accepted = accept_totp(c, user_id, code, secret=secret)
-            if not accepted:
-                return (
-                    jsonify(
-                        error="Code incorrect ou déjà utilisé. Utilise le nouveau code de ton application."
-                    ),
-                    401,
-                )
-            c.execute(
-                "DELETE FROM studio_sessions WHERE token_hash=?",
-                (record["token_hash"],),
-            )
-            if recovered or record["scope"] == "enrol":
-                c.execute("DELETE FROM studio_sessions WHERE user_id=?", (user_id,))
-            if record["scope"] == "enrol":
-                codes = [secrets.token_hex(10).upper() for _ in range(8)]
-                c.execute(
-                    "DELETE FROM studio_recovery_codes WHERE user_id=?", (user_id,)
-                )
-                c.executemany(
-                    "INSERT INTO studio_recovery_codes VALUES(?,?)",
-                    [(user_id, digest(code)) for code in codes],
-                )
-        clear_attempt(store, attempt)
-        if recovered:
-            issue(
-                store, user_id, scope="enrol", private={"secret": pyotp.random_base32()}
-            )
-        elif record["scope"] == "enrol":
-            issue(store, user_id, scope="recovery", private={"codes": codes})
-        else:
-            issue(store, user_id)
-            store.log("Studio", "login", "Connexion avec double authentification")
-        return jsonify(ok=True)
-
-    @app.post("/api/studio/auth/finish")
-    def auth_finish():
-        record = pending({"recovery"})
-        if json_body().get("saved") is not True:
-            raise ValueError("Enregistre tes codes de secours avant de continuer.")
-        with store.db() as c:
-            c.execute("BEGIN IMMEDIATE")
-            if not c.execute(
-                "DELETE FROM studio_sessions WHERE token_hash=?",
-                (record["token_hash"],),
-            ).rowcount:
-                raise PermissionError("Cette connexion a expiré. Reconnecte-toi.")
-        issue(store, record["user_id"])
-        return jsonify(ok=True)
-
     @app.get("/api/studio/security")
     def security_status():
         return jsonify(
-            mfa=bool(
-                store.one(
-                    "SELECT user_id FROM studio_mfa WHERE user_id=?", (g.user["id"],)
-                )
-            ),
             sessions=store.one(
                 "SELECT COUNT(*) AS n FROM studio_sessions WHERE user_id=? AND scope='full' AND expires_at>? AND seen_at>?",
                 (g.user["id"], time.time(), time.time() - 3600),
-            )["n"],
-            recovery_remaining=store.one(
-                "SELECT COUNT(*) AS n FROM studio_recovery_codes WHERE user_id=?",
-                (g.user["id"],),
             )["n"],
             preview=app.config["PREVIEW"],
         )
@@ -472,10 +285,6 @@ def register(app, store):
         hashed = generate_password_hash(replacement)
         with store.db() as c:
             c.execute("BEGIN IMMEDIATE")
-            if app.config["MFA_REQUIRED"] and not accept_totp(
-                c, user["id"], str(b.get("code", ""))[:128]
-            ):
-                return jsonify(error="Code de sécurité incorrect ou déjà utilisé."), 401
             if not c.execute(
                 "UPDATE studio_users SET password_hash=? WHERE id=? AND password_hash=?",
                 (hashed, user["id"], user["password_hash"]),
@@ -483,7 +292,7 @@ def register(app, store):
                 raise Conflict("Le mot de passe a changé. Reconnecte-toi.")
             c.execute("DELETE FROM studio_sessions WHERE user_id=?", (user["id"],))
         clear_attempt(store, attempt)
-        issue(store, user["id"])
+        issue(store, user["id"], expected_hash=hashed)
         store.log(
             user["name"],
             "security",

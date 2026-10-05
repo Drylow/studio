@@ -1,4 +1,4 @@
-"""Exercise the private gate, its second factor and hostile direct requests."""
+"""Exercise the private gate, hostile direct requests."""
 
 from concurrent.futures import ThreadPoolExecutor
 import json
@@ -8,8 +8,6 @@ import tempfile
 import time
 import unittest
 from unittest.mock import patch
-
-import pyotp
 
 from studio import security
 from studio.web import create_app
@@ -68,28 +66,6 @@ class PrivateGateTests(unittest.TestCase):
             **kwargs
         )
 
-    def complete(self, client=None):
-        client = client or self.client
-        self.assertEqual(
-            client.get("/api/studio/bootstrap").json["auth"]["stage"], "enrol"
-        )
-        enrol = self.post(client, "/auth/enrol", {}).json
-        self.assertTrue(enrol["qr"].startswith("data:image/png;base64,"))
-        self.assertIn("otpauth://totp/", enrol["uri"])
-        secret = enrol["secret"]
-        response = self.post(
-            client,
-            "/auth/verify",
-            {"code": pyotp.TOTP(secret).at(self.time.return_value)},
-        )
-        self.assertEqual(response.status_code, 200, response.json)
-        codes = client.get("/api/studio/bootstrap").json["auth"]["codes"]
-        self.assertEqual(
-            self.post(client, "/auth/finish", {"saved": True}).status_code, 200
-        )
-        self.assertEqual(client.get("/api/studio/workspace").status_code, 200)
-        return secret, codes
-
     def challenge(self, username="drylow", password=PASSWORD):
         client = self.app.test_client()
         self.assertEqual(
@@ -103,125 +79,7 @@ class PrivateGateTests(unittest.TestCase):
     def advance(self):
         self.time.return_value += 31
 
-    def test_password_proof_alone_never_opens_pages_or_tools(self):
-        boot = self.client.get("/api/studio/bootstrap").json
-        self.assertIsNone(boot["user"])
-        self.assertEqual(boot["auth"], {"stage": "enrol"})
-        for path in [
-            "/",
-            "/agent",
-            "/channels",
-            "/settings",
-            "/tools/osl-studio",
-            "/calendar",
-        ]:
-            response = self.client.get(path)
-            self.assertEqual(response.status_code, 302, path)
-            self.assertTrue(response.location.startswith("/login?next="), path)
-        for path in [
-            "/api/studio/workspace",
-            "/api/studio/chat",
-            "/api/studio/security",
-            "/api/studio/planning",
-            "/media/anything/video",
-            "/media/reference/private.png",
-        ]:
-            self.assertEqual(self.client.get(path).status_code, 401, path)
-        self.assertEqual(
-            self.post(self.client, "/auth/finish", {"saved": True}).status_code, 403
-        )
-
-    def test_no_registration_or_enrolment_without_password_proof(self):
-        client = self.app.test_client()
-        for path in ["/auth/enrol", "/auth/verify", "/auth/finish", "/users"]:
-            self.assertIn(
-                self.post(client, path, {"saved": True}).status_code, {401, 403}, path
-            )
-        self.assertEqual(
-            self.post(client, "/setup", {"token": "unknown"}).status_code, 403
-        )
-
-    def test_full_enrolment_keeps_secrets_off_cookie_and_database_plaintext(self):
-        enrol = self.post(self.client, "/auth/enrol", {}).json
-        raw_cookie = self.client.get_cookie("session").value
-        signed = self.app.session_interface.get_signing_serializer(self.app).loads(
-            raw_cookie
-        )
-        self.assertNotIn(enrol["secret"], json.dumps(signed))
-        secret, codes = self.complete()
-        record = self.store.one("SELECT * FROM studio_mfa")
-        self.assertNotIn(secret, record["secret"])
-        hashes = json.dumps(self.store.rows("SELECT * FROM studio_recovery_codes"))
-        for code in codes:
-            self.assertNotIn(code, hashes)
-        boot = self.client.get("/api/studio/bootstrap").json
-        self.assertIsNone(boot["auth"])
-        self.assertNotIn(secret, json.dumps(boot))
-        self.assertEqual(
-            self.client.get("/api/studio/security").json["recovery_remaining"], 8
-        )
-
-    def test_recovery_codes_must_be_saved_before_entering(self):
-        secret = self.post(self.client, "/auth/enrol", {}).json["secret"]
-        self.post(
-            self.client,
-            "/auth/verify",
-            {"code": pyotp.TOTP(secret).at(self.time.return_value)},
-        )
-        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 401)
-        self.assertEqual(
-            self.post(self.client, "/auth/finish", {"saved": False}).status_code, 400
-        )
-        self.assertEqual(
-            self.post(self.client, "/auth/finish", {"saved": True}).status_code, 200
-        )
-
-    def test_code_replay_is_rejected_even_after_a_new_password_login(self):
-        secret, _ = self.complete()
-        self.advance()
-        code = pyotp.TOTP(secret).at(self.time.return_value)
-        first = self.challenge()
-        self.assertEqual(
-            self.post(first, "/auth/verify", {"code": code}).status_code, 200
-        )
-        second = self.challenge()
-        self.assertEqual(
-            self.post(second, "/auth/verify", {"code": code}).status_code, 401
-        )
-        self.assertEqual(second.get("/api/studio/workspace").status_code, 401)
-        self.advance()
-        self.assertEqual(
-            self.post(
-                second,
-                "/auth/verify",
-                {"code": pyotp.TOTP(secret).at(self.time.return_value)},
-            ).status_code,
-            200,
-        )
-
-    def test_concurrent_confirmation_of_one_cookie_only_succeeds_once(self):
-        secret, _ = self.complete()
-        self.advance()
-        first = self.challenge()
-        cookie = first.get_cookie("session").value
-        csrf = first.get("/api/studio/bootstrap").json["csrf"]
-
-        def attempt(_):
-            client = self.app.test_client()
-            client.set_cookie("session", cookie)
-            return client.post(
-                "/api/studio/auth/verify",
-                json={"code": pyotp.TOTP(secret).at(self.time.return_value)},
-                headers={"X-CSRF-Token": csrf},
-            ).status_code
-
-        with ThreadPoolExecutor(max_workers=2) as pool:
-            results = list(pool.map(attempt, range(2)))
-        self.assertEqual(results.count(200), 1, results)
-        self.assertIn(next(code for code in results if code != 200), {401, 403})
-
     def test_logout_revokes_a_stolen_copy_of_the_cookie(self):
-        self.complete()
         cookie = self.client.get_cookie("session").value
         self.assertEqual(self.post(self.client, "/logout", {}).status_code, 200)
         thief = self.app.test_client()
@@ -229,7 +87,6 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(thief.get("/api/studio/workspace").status_code, 401)
 
     def test_cookie_identity_cannot_be_changed_to_another_user(self):
-        self.complete()
         self.post(
             self.client,
             "/users",
@@ -248,7 +105,6 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(thief.get("/api/studio/workspace").status_code, 401)
 
     def test_absolute_and_idle_session_expiry_are_enforced_on_server(self):
-        self.complete()
         with self.store.db() as c:
             c.execute(
                 "UPDATE studio_sessions SET seen_at=?", (self.time.return_value - 3601,)
@@ -260,39 +116,7 @@ class PrivateGateTests(unittest.TestCase):
             c.execute(
                 "UPDATE studio_sessions SET expires_at=?", (self.time.return_value - 1,)
             )
-        self.assertEqual(self.post(client, "/auth/enrol", {}).status_code, 403)
-
-    def test_only_two_accounts_can_be_created_and_both_need_mfa(self):
-        self.complete()
-        self.assertEqual(
-            self.post(
-                self.client,
-                "/users",
-                {"name": "Kanye", "username": "kanye", "password": OTHER_PASSWORD},
-            ).status_code,
-            201,
-        )
-        self.assertEqual(
-            self.post(
-                self.client,
-                "/users",
-                {
-                    "name": "Stranger",
-                    "username": "stranger",
-                    "password": OTHER_PASSWORD,
-                },
-            ).status_code,
-            403,
-        )
-        other = self.challenge("kanye", OTHER_PASSWORD)
-        self.assertEqual(other.get("/api/studio/workspace").status_code, 401)
-        self.complete(other)
-        self.assertEqual(
-            other.get("/api/studio/bootstrap").json["user"]["name"], "Kanye"
-        )
-        self.assertEqual(
-            self.post(other, "/users", {"name": "Intruder"}).status_code, 403
-        )
+        self.assertEqual(client.get("/api/studio/workspace").status_code, 401)
 
     def test_direct_static_files_never_expose_private_or_historical_media(self):
         anon = self.app.test_client()
@@ -318,7 +142,6 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(anon.get("/health/studio").json, {"status": "ok"})
 
     def test_csrf_origin_and_browser_headers_are_enforced(self):
-        self.complete()
         self.assertEqual(
             self.client.post("/api/studio/logout", json={}).status_code, 403
         )
@@ -340,20 +163,6 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(response.headers["X-Content-Type-Options"], "nosniff")
         response.close()
 
-    def test_malformed_unicode_codes_are_rejected_without_server_errors(self):
-        self.assertEqual(
-            self.post(self.client, "/auth/verify", {"code": "١٢٣٤٥٦"}).status_code, 401
-        )
-        self.assertEqual(
-            self.post(self.app.test_client(), "/setup", {"token": "é"}).status_code, 403
-        )
-        client = self.app.test_client()
-        client.get("/api/studio/bootstrap")
-        response = client.post(
-            "/api/studio/login", json={}, headers={"X-CSRF-Token": "é"}
-        )
-        self.assertEqual(response.status_code, 403)
-
     def test_parallel_password_guesses_cannot_bypass_throttle(self):
         def attempt(_):
             client = self.app.test_client()
@@ -366,106 +175,7 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(results.count(401), 8, results)
         self.assertEqual(results.count(429), 4, results)
 
-    def test_second_factor_guesses_are_throttled(self):
-        for _ in range(8):
-            self.assertEqual(
-                self.post(self.client, "/auth/verify", {"code": "invalid"}).status_code,
-                401,
-            )
-        response = self.post(self.client, "/auth/verify", {"code": "invalid"})
-        self.assertEqual(response.status_code, 429)
-        self.assertEqual(response.headers["Retry-After"], "600")
-
-    def test_recovery_is_one_use_and_requires_replacement_phone(self):
-        old_secret, codes = self.complete()
-        client = self.challenge()
-        self.assertEqual(
-            self.post(
-                client, "/auth/verify", {"code": codes[0], "recovery": True}
-            ).status_code,
-            200,
-        )
-        self.assertEqual(
-            client.get("/api/studio/bootstrap").json["auth"]["stage"], "enrol"
-        )
-        self.assertEqual(client.get("/api/studio/workspace").status_code, 401)
-        replay = self.challenge()
-        self.assertEqual(
-            self.post(
-                replay, "/auth/verify", {"code": codes[0], "recovery": True}
-            ).status_code,
-            401,
-        )
-        self.advance()
-        new_secret, new_codes = self.complete(client)
-        self.assertNotEqual(old_secret, new_secret)
-        self.assertTrue(set(codes).isdisjoint(new_codes))
-        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 401)
-
-    def test_password_change_needs_fresh_second_factor_and_revokes_old_sessions(self):
-        secret, _ = self.complete()
-        self.advance()
-        other = self.challenge()
-        self.post(
-            other,
-            "/auth/verify",
-            {"code": pyotp.TOTP(secret).at(self.time.return_value)},
-        )
-        self.assertEqual(other.get("/api/studio/workspace").status_code, 200)
-        replacement = "a new private password phrase for Drylow"
-        self.assertEqual(
-            self.post(
-                self.client,
-                "/security/password",
-                {
-                    "current_password": PASSWORD,
-                    "password": replacement,
-                    "code": "invalid",
-                },
-            ).status_code,
-            401,
-        )
-        self.advance()
-        self.assertEqual(
-            self.post(
-                self.client,
-                "/security/password",
-                {
-                    "current_password": PASSWORD,
-                    "password": replacement,
-                    "code": pyotp.TOTP(secret).at(self.time.return_value),
-                },
-            ).status_code,
-            200,
-        )
-        self.assertEqual(other.get("/api/studio/workspace").status_code, 401)
-        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 200)
-        self.assertEqual(
-            self.post(
-                self.app.test_client(),
-                "/login",
-                {"username": "drylow", "password": PASSWORD},
-            ).status_code,
-            401,
-        )
-
-    def test_close_other_devices_keeps_current_account_and_cookie(self):
-        secret, _ = self.complete()
-        self.advance()
-        other = self.challenge()
-        self.post(
-            other,
-            "/auth/verify",
-            {"code": pyotp.TOTP(secret).at(self.time.return_value)},
-        )
-        self.assertEqual(
-            self.post(self.client, "/security/sessions", {}).status_code, 200
-        )
-        self.assertEqual(other.get("/api/studio/workspace").status_code, 401)
-        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 200)
-
     def test_internal_worker_uses_bound_short_session_and_removes_it(self):
-        self.complete()
         original = len(self.store.rows("SELECT * FROM studio_sessions"))
         with security.trusted_client(self.store, self.user_id) as (client, csrf, base):
             response = client.post(
@@ -482,7 +192,7 @@ class PrivateGateTests(unittest.TestCase):
             len(self.store.rows("SELECT * FROM studio_sessions")), original
         )
 
-    def test_hosted_mode_enforces_https_domain_mfa_and_secure_cookie(self):
+    def test_hosted_mode_enforces_https_domain_and_secure_cookie(self):
         hosted = create_app(
             {**self.config, "HOSTED": True, "PUBLIC_URL": "https://studio.example.org"}
         )
@@ -535,7 +245,6 @@ class PrivateGateTests(unittest.TestCase):
         for changes in [
             {"PREVIEW": True},
             {"LOCAL_OWNER": True},
-            {"MFA_REQUIRED": False},
             {"SECRET_KEY": "weak"},
             {"PUBLIC_URL": "http://studio.example.org"},
         ]:
@@ -550,7 +259,6 @@ class PrivateGateTests(unittest.TestCase):
                 )
 
     def test_parallel_account_creation_preserves_the_two_member_limit(self):
-        self.complete()
         self.assertEqual(
             self.post(
                 self.client,
@@ -598,6 +306,220 @@ class PrivateGateTests(unittest.TestCase):
             ).status_code,
             401,
         )
+
+    def test_login_opens_the_workspace_without_an_app_or_extra_code(self):
+        owner = self.client.get("/api/studio/bootstrap").json
+        self.assertEqual(owner["user"]["name"], "Drylow")
+        self.assertNotIn("auth", owner)
+        client = self.challenge()
+        self.assertEqual(client.get("/api/studio/workspace").status_code, 200)
+        with client.get("/agent") as response:
+            self.assertEqual(response.status_code, 200)
+        self.assertEqual(client.get("/api/studio/security").json["sessions"], 2)
+        for route in ["/auth/enrol", "/auth/verify", "/auth/finish"]:
+            self.assertEqual(self.post(client, route, {}).status_code, 404)
+
+    def test_anonymous_users_cannot_open_pages_files_or_tools(self):
+        client = self.app.test_client()
+        boot = client.get("/api/studio/bootstrap").json
+        self.assertIsNone(boot["user"])
+        for path in [
+            "/",
+            "/agent",
+            "/channels",
+            "/settings",
+            "/tools/osl-studio",
+            "/calendar",
+        ]:
+            response = client.get(path)
+            self.assertEqual(response.status_code, 302, path)
+            self.assertTrue(response.location.startswith("/login?next="), path)
+        for path in [
+            "/api/studio/workspace",
+            "/api/studio/chat",
+            "/api/studio/security",
+            "/api/studio/planning",
+            "/media/anything/video",
+            "/media/reference/private.png",
+        ]:
+            self.assertEqual(client.get(path).status_code, 401, path)
+        self.assertEqual(self.post(client, "/users", {}).status_code, 401)
+
+    def test_setup_token_cannot_create_another_owner(self):
+        client = self.app.test_client()
+        self.assertEqual(
+            self.post(client, "/setup", {"token": "unknown"}).status_code, 403
+        )
+        response = self.post(
+            client,
+            "/setup",
+            {
+                "token": "private-installation-fixture",
+                "name": "Intruder",
+                "username": "intruder",
+                "password": OTHER_PASSWORD,
+            },
+        )
+        self.assertEqual(response.status_code, 409)
+        self.assertEqual(len(self.store.users()), 1)
+
+    def test_cookie_and_database_do_not_store_plaintext_credentials(self):
+        cookie = self.client.get_cookie("session").value
+        decoded = self.app.session_interface.get_signing_serializer(self.app).loads(
+            cookie
+        )
+        self.assertNotIn(PASSWORD, json.dumps(decoded))
+        self.assertNotIn(
+            decoded["studio_sid"],
+            json.dumps(self.store.rows("SELECT * FROM studio_sessions")),
+        )
+        self.assertNotIn(
+            PASSWORD,
+            self.store.one("SELECT password_hash FROM studio_users")["password_hash"],
+        )
+        self.assertNotIn(PASSWORD, self.client.get("/api/studio/workspace").text)
+
+    def test_both_accounts_enter_directly_and_a_third_is_refused(self):
+        self.assertEqual(
+            self.post(
+                self.client,
+                "/users",
+                {"name": "Kanye", "username": "kanye", "password": OTHER_PASSWORD},
+            ).status_code,
+            201,
+        )
+        self.assertEqual(
+            self.post(
+                self.client,
+                "/users",
+                {
+                    "name": "Stranger",
+                    "username": "stranger",
+                    "password": OTHER_PASSWORD,
+                },
+            ).status_code,
+            403,
+        )
+        colleague = self.challenge("kanye", OTHER_PASSWORD)
+        self.assertEqual(colleague.get("/api/studio/workspace").status_code, 200)
+        self.assertEqual(
+            colleague.get("/api/studio/bootstrap").json["user"]["name"], "Kanye"
+        )
+        self.assertEqual(self.post(colleague, "/users", {}).status_code, 403)
+
+    def test_invalid_tokens_and_unknown_accounts_never_produce_server_errors(self):
+        self.assertEqual(
+            self.post(self.app.test_client(), "/setup", {"token": "é"}).status_code, 403
+        )
+        client = self.app.test_client()
+        client.get("/api/studio/bootstrap")
+        self.assertEqual(
+            client.post(
+                "/api/studio/login", json={}, headers={"X-CSRF-Token": "é"}
+            ).status_code,
+            403,
+        )
+        self.assertEqual(
+            self.post(
+                client, "/login", {"username": "unknown", "password": OTHER_PASSWORD}
+            ).status_code,
+            401,
+        )
+        self.assertEqual(client.get("/api/studio/workspace").status_code, 401)
+
+    def test_password_change_requires_current_password_and_revokes_old_devices(self):
+        other = self.challenge()
+        replacement = "a new private password phrase for Drylow"
+        cookie = self.client.get_cookie("session").value
+        self.assertEqual(
+            self.post(
+                self.client,
+                "/security/password",
+                {"current_password": "incorrect", "password": replacement},
+            ).status_code,
+            401,
+        )
+        self.assertEqual(
+            self.post(
+                self.client,
+                "/security/password",
+                {"current_password": PASSWORD, "password": replacement},
+            ).status_code,
+            200,
+        )
+        self.assertNotEqual(self.client.get_cookie("session").value, cookie)
+        self.assertEqual(other.get("/api/studio/workspace").status_code, 401)
+        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 200)
+        self.assertEqual(
+            self.post(
+                self.app.test_client(),
+                "/login",
+                {"username": "drylow", "password": PASSWORD},
+            ).status_code,
+            401,
+        )
+        self.assertEqual(
+            self.challenge(password=replacement)
+            .get("/api/studio/workspace")
+            .status_code,
+            200,
+        )
+
+    def test_password_change_cannot_be_raced_by_a_login_using_old_credentials(self):
+        original = security.check_password_hash
+        changed = False
+        replacement = "a renewed private password phrase for Drylow"
+
+        def verify(hashed, submitted):
+            nonlocal changed
+            valid = original(hashed, submitted)
+            if valid and submitted == PASSWORD and not changed:
+                changed = True
+                result = self.post(
+                    self.client,
+                    "/security/password",
+                    {"current_password": PASSWORD, "password": replacement},
+                )
+                self.assertEqual(result.status_code, 200)
+            return valid
+
+        anonymous = self.app.test_client()
+        with patch("studio.security.check_password_hash", side_effect=verify):
+            response = self.post(
+                anonymous, "/login", {"username": "drylow", "password": PASSWORD}
+            )
+        self.assertEqual(response.status_code, 409)
+        self.assertEqual(anonymous.get("/api/studio/workspace").status_code, 401)
+        self.assertEqual(
+            self.challenge(password=replacement)
+            .get("/api/studio/workspace")
+            .status_code,
+            200,
+        )
+
+    def test_closing_other_devices_keeps_this_device_and_the_colleague(self):
+        other = self.challenge()
+        self.post(
+            self.client,
+            "/users",
+            {"name": "Kanye", "username": "kanye", "password": OTHER_PASSWORD},
+        )
+        colleague = self.challenge("kanye", OTHER_PASSWORD)
+        self.assertEqual(
+            self.post(self.client, "/security/sessions", {}).status_code, 200
+        )
+        self.assertEqual(other.get("/api/studio/workspace").status_code, 401)
+        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 200)
+        self.assertEqual(colleague.get("/api/studio/workspace").status_code, 200)
+
+    def test_old_incomplete_phone_sessions_do_not_grant_access(self):
+        with self.store.db() as c:
+            c.execute(
+                "UPDATE studio_sessions SET scope='enrol',private_data='old encrypted fixture'"
+            )
+        self.assertEqual(self.client.get("/api/studio/workspace").status_code, 401)
+        self.assertNotIn("auth", self.client.get("/api/studio/bootstrap").json)
+        self.assertEqual(self.challenge().get("/api/studio/workspace").status_code, 200)
 
 
 if __name__ == "__main__":

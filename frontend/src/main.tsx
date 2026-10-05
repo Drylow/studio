@@ -180,9 +180,7 @@ function App() {
   }, []);
   useEffect(() => {
     const lock = () => {
-      setBoot((previous) =>
-        previous ? { ...previous, user: null, auth: null } : null,
-      );
+      setBoot((previous) => (previous ? { ...previous, user: null } : null));
       setData(null);
       refresh().catch((e) => setFatal(e.message));
     };

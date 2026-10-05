@@ -1,6 +1,5 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import { createHmac } from "node:crypto";
 import { mkdtemp, mkdir, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, resolve } from "node:path";
@@ -41,21 +40,6 @@ let browser;
 const errors = [];
 const password = "private browser password phrase for Drylow";
 const username = "drylow";
-
-function totp(secret, offset = 0) {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
-  let bits = "";
-  for (const char of secret)
-    bits += alphabet.indexOf(char).toString(2).padStart(5, "0");
-  const bytes = Buffer.from(bits.match(/.{8}/g).map((b) => parseInt(b, 2)));
-  const count = Buffer.alloc(8);
-  count.writeBigUInt64BE(BigInt(Math.floor(Date.now() / 30000) + offset));
-  const hmac = createHmac("sha1", bytes).update(count).digest();
-  const at = hmac[hmac.length - 1] & 15;
-  return ((hmac.readUInt32BE(at) & 0x7fffffff) % 1000000)
-    .toString()
-    .padStart(6, "0");
-}
 
 async function noOverflow(page) {
   assert.ok(
@@ -140,40 +124,6 @@ try {
   await page.getByLabel("Identifiant", { exact: true }).fill(username);
   await page.getByLabel("Mot de passe", { exact: true }).fill(password);
   await page.getByRole("button", { name: "Créer mon compte" }).click();
-  await page.getByRole("heading", { name: "Sécurise ton accès." }).waitFor();
-  await page.locator(".gate-qr").waitFor();
-  await page.locator("summary").click();
-  const secret = await page.locator(".gate-secret").textContent();
-  await noOverflow(page);
-  assert.equal(
-    (await context.request.get(url + "/media/anything/video")).status(),
-    401,
-  );
-  await page
-    .getByLabel("Code de sécurité", { exact: true })
-    .fill(totp(secret, -1));
-  await page.getByRole("button", { name: "Confirmer mon accès" }).click();
-  await page
-    .getByRole("heading", { name: "Garde tes codes de secours." })
-    .waitFor();
-  await noOverflow(page);
-  assert.equal(
-    (await context.request.get(url + "/api/studio/workspace")).status(),
-    401,
-  );
-  assert.ok(
-    await page
-      .getByRole("button", { name: "Entrer dans le studio" })
-      .isDisabled(),
-  );
-  const download = page.waitForEvent("download");
-  await page.getByRole("button", { name: "Télécharger mes codes" }).click();
-  assert.equal(
-    (await download).suggestedFilename(),
-    "edgerunners-codes-de-secours.txt",
-  );
-  await page.getByRole("checkbox").check();
-  await page.getByRole("button", { name: "Entrer dans le studio" }).click();
   await page.locator("main h1").waitFor();
   assert.equal(
     new URL(page.url()).pathname,
@@ -207,22 +157,20 @@ try {
   await page.goto(url + "/settings", { waitUntil: "networkidle" });
   await page.getByLabel("Identifiant", { exact: true }).fill(username);
   await page.getByLabel("Mot de passe", { exact: true }).fill(password);
-  await page.getByRole("button", { name: "Se connecter", exact: true }).click();
+  await page.getByRole("button", { name: "Afficher le mot de passe" }).click();
+  assert.equal(
+    await page.getByLabel("Mot de passe", { exact: true }).getAttribute("type"),
+    "text",
+  );
+  await page.getByRole("button", { name: "Masquer le mot de passe" }).click();
   await page
-    .getByRole("heading", { name: "Confirme que c’est toi." })
-    .waitFor();
-  await page.getByRole("button", { name: "J’ai perdu mon téléphone" }).click();
-  await page.getByLabel("Code de secours", { exact: true }).waitFor();
-  await page
-    .getByRole("button", { name: "Utiliser le code sur mon téléphone" })
+    .getByRole("button", { name: "Entrer dans le studio", exact: true })
     .click();
-  await page.getByLabel("Code de sécurité", { exact: true }).fill(totp(secret));
-  await page.getByRole("button", { name: "Confirmer mon accès" }).click();
   await page
     .getByRole("heading", { name: "Accès & sécurité", exact: true })
     .waitFor();
   await page
-    .getByText("Double authentification active", { exact: true })
+    .getByText("Accès privé par mot de passe", { exact: true })
     .waitFor();
   await page
     .getByRole("button", { name: "Déconnecter les autres appareils" })
@@ -231,6 +179,25 @@ try {
     .getByText("Les autres appareils ont été déconnectés.", { exact: true })
     .waitFor();
   await noOverflow(page);
+  await page.getByRole("button", { name: "Changer mon mot de passe" }).click();
+  const replacement = "another private browser password phrase for Drylow";
+  await page.getByLabel("Mot de passe actuel", { exact: true }).fill(password);
+  await page
+    .getByLabel("Nouveau mot de passe", { exact: true })
+    .fill(replacement);
+  assert.equal(await page.locator(".gate-qr").count(), 0);
+  assert.equal(
+    await page.getByLabel("Nouveau code de sécurité", { exact: true }).count(),
+    0,
+  );
+  await page
+    .getByRole("button", { name: "Enregistrer mon mot de passe" })
+    .click();
+  await page
+    .getByText("Mot de passe changé. Les anciennes sessions ont été fermées.", {
+      exact: true,
+    })
+    .waitFor();
   const lastBoot = await (
     await context.request.get(url + "/api/studio/bootstrap")
   ).json();
@@ -253,7 +220,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "Real mobile access: account creation, QR enrolment, one-time code, backup download, intended page, logout/replay rejection and security settings passed",
+    "Real mobile access: direct password login, intended page, password visibility, password change, logout/replay rejection and private UI locking passed",
   );
   await context.close();
 } finally {

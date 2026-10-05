@@ -3452,83 +3452,28 @@ svg {
   font: 11px var(--mono);
   letter-spacing: 0.15em;
 }
-.gate-enrol ol {
-  padding-left: 20px;
-  color: #aac0cb;
-  font-size: 13px;
-  line-height: 1.8;
+.gate-password {
+  position: relative;
 }
-.gate-enrol li + li {
-  margin-top: 8px;
+.gate-password input {
+  width: 100%;
+  padding-right: 54px;
 }
-.gate-qr {
-  display: block;
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border: 8px solid white;
-  border-radius: 8px;
-}
-.gate-enrol details {
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 13px;
-  line-height: 1.8;
-}
-.gate-enrol summary {
-  cursor: pointer;
-  color: var(--yellow);
-}
-.gate-secret {
-  display: block;
-  overflow-wrap: anywhere;
-  padding: 10px 0;
-  color: var(--cyan);
-  letter-spacing: 1px;
-}
-.gate-code {
-  font-family: var(--mono);
-  font-size: 23px !important;
-  letter-spacing: 0.13em;
-}
-.gate-link {
-  min-height: 44px;
-  color: #afc0ca;
-  border: 0;
-  background: none;
-  font-size: 12px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  cursor: pointer;
-}
-.gate-recovery {
+.gate-password button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 48px;
+  min-height: 48px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 15px;
-  background: #101d27;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #a5bbc7;
+  cursor: pointer;
 }
-.gate-recovery code {
-  font: 13px var(--mono);
-  color: var(--cyan);
-  overflow-wrap: anywhere;
-}
-.gate-saved {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  gap: 12px;
-  line-height: 1.6;
-}
-.gate-saved input {
-  width: 22px !important;
-  height: 22px;
-  flex-shrink: 0;
-  accent-color: var(--yellow);
+.gate-password button:hover {
+  color: var(--yellow);
 }
 .gate-status {
   display: flex;

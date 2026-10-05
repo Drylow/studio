@@ -5,14 +5,19 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 
 ## Disponible
 
-- Gate privée obligatoire avant hébergement : deux comptes maximum, mots de passe
-  personnels (16–128 caractères), code téléphone TOTP et codes de secours à usage
-  unique. Écran Cyberpunk adapté au téléphone, QR et installation expliquée étape
-  par étape. Les accès incomplets n'ouvrent ni pages, ni vidéos, ni Delamain.
-- Sessions conservées côté serveur et invalidées à la déconnexion ; expiration,
-  limitation atomique des essais, protection CSRF/origine et impossibilité de rejouer
-  un code déjà confirmé. Réglages personnels pour changer le mot de passe ou fermer
-  les autres appareils. Clés TOTP chiffrées et SQLite limité au compte système.
+Validation de l’accès simplifié : 154 tests Python réussis, compilation TypeScript et
+parcours navigateur réussis sur cinq tailles d’écran. Ces contrôles couvrent notamment
+la connexion directe, le changement de mot de passe et la révocation des sessions.
+
+- Gate privée avant hébergement : deux comptes maximum, mots de passe personnels
+  de 16 à 128 caractères, connexion directe. Selon le choix de l’utilisateur, aucune
+  application ni QR code n'est nécessaire. Écran Cyberpunk adapté au téléphone,
+  mots de passe visibles/masqués et gestionnaire du navigateur utilisable.
+- Sessions côté serveur et invalidation immédiate à la déconnexion ; expiration,
+  essais limités même en parallèle, protection CSRF/origine et SQLite limité au
+  compte système. Réglages personnels pour changer le mot de passe ou fermer les
+  autres appareils. Le changement de mot de passe bloque aussi une connexion
+  concurrente avec l'ancien mot de passe ; une révocation referme l'interface.
 - Mode Passenger strict : HTTPS, domaine autorisé, cookies sécurisés, refus de
   l'aperçu et des clés faibles. Accès statiques limités, règles Apache fournies pour
   les fichiers physiques et absence d'indexation. [PRIVATE_ACCESS.md](../PRIVATE_ACCESS.md)
@@ -352,10 +357,9 @@ la confirmation de déconnexion et les commandes propriétaire/collaborateur.
 Les réponses Google et les changements de connexion sont simulés dans le navigateur ;
 aucun jeton n'est enregistré et aucun compte réel n'est connecté.
 
-Validation actuelle : **156 tests Python réussis**, dont 22 essais de la gate privée,
-compilation TypeScript/Vite et parcours réel de double authentification sur téléphone.
-Écran de connexion contrôlé sur cinq tailles (320, 390, 768, 844 et 1440 px),
-codes de secours téléchargés, session copiée refusée après déconnexion.
+Validation actuelle de la gate simplifiée : 20 essais Python de sécurité,
+compilation TypeScript/Vite. Le parcours navigateur couvre la connexion par mot
+de passe, son changement, la révocation et cinq tailles (320, 390, 768, 844, 1440 px).
 Les vérifications existantes incluent aussi
 six parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste

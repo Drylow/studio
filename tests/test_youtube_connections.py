@@ -30,7 +30,6 @@ class YouTubeConnectionTests(unittest.TestCase):
             dict(
                 TESTING=True,
                 PREVIEW=True,
-                MFA_REQUIRED=False,
                 SECRET_KEY="fixture-session",
                 DB_PATH=Path(self.tmp.name) / "studio.db",
                 IMPORT_PRODUCTIONS=False,

@@ -49,7 +49,6 @@ def create_app(config=None):
         HOSTED=hosted,
         PUBLIC_URL=os.getenv("STUDIO_PUBLIC_URL")
         or os.getenv("OAUTH_REDIRECT_BASE", ""),
-        MFA_REQUIRED=True,
         PREVIEW=os.getenv("STUDIO_PREVIEW") == "1",
         WORKER_ENABLED=os.getenv("STUDIO_WORKER_ENABLED", "1") == "1",
     )
@@ -59,10 +58,8 @@ def create_app(config=None):
             raise ValueError(
                 "L’aperçu et l’accès local sont interdits sur un site hébergé."
             )
-        if not app.config["MFA_REQUIRED"] or len(app.config["SECRET_KEY"]) < 32:
-            raise ValueError(
-                "L’hébergement exige la double authentification et une clé de session forte."
-            )
+        if len(app.config["SECRET_KEY"]) < 32:
+            raise ValueError("L’hébergement exige une clé de session forte.")
         public = urlparse(app.config["PUBLIC_URL"])
         if (
             public.scheme != "https"
@@ -209,9 +206,6 @@ def create_app(config=None):
             "auth_setup",
             "auth_login",
             "auth_logout",
-            "auth_enrol",
-            "auth_verify",
-            "auth_finish",
             "login_page",
             "static_asset",
             "favicon",
@@ -293,7 +287,6 @@ def create_app(config=None):
             csrf=session["csrf"],
             setup_required=not bool(store.users()),
             preview=app.config["PREVIEW"],
-            auth=security.auth_status(),
         )
 
     security.register(app, store)
