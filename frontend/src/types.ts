@@ -105,6 +105,20 @@ export type Alert = {
   message: string;
 };
 export type Workspace = {
+  development: {
+    configuration: {
+      configured: boolean;
+      ready: boolean;
+      preview: boolean;
+      worker_online: boolean;
+      verified: boolean;
+      checked_at: string;
+      check_error: string;
+      missing: string[];
+      scope: string;
+    };
+    changes: Development[];
+  };
   channels: Channel[];
   videos: Video[];
   tasks: Task[];
@@ -156,8 +170,24 @@ export type Message = {
   actor: string;
   created_at: string;
   attachments: {
-    kind: "video" | "channel" | "page";
+    kind: "video" | "channel" | "page" | "development";
     id: string | number;
     title: string;
   }[];
+};
+export type Development = {
+  id: string;
+  user_id: string;
+  request: string;
+  status: string;
+  message: string;
+  summary: string;
+  error: string;
+  base_commit: string;
+  commit_id: string;
+  branch: string;
+  checks: string;
+  diff?: string;
+  created_at: string;
+  updated_at: string;
 };

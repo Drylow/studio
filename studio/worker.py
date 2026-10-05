@@ -22,7 +22,12 @@ def start(store):
 
 def run(store, once=False):
     owner = uid()
+    version = ROOT / "work/studio/runtime-revision"
+    started_version = version.read_text() if version.exists() else ""
     while True:
+        if not once and version.exists() and version.read_text() != started_version:
+            # The cron supervisor starts a fresh process with the newly deployed code.
+            return
         with store.db() as c:
             c.execute(
                 "UPDATE studio_worker SET heartbeat=?,message=? WHERE id=1",

@@ -61,6 +61,7 @@ import { RoutinePicker } from "./routines";
 import { TeamBoard, TeamScope, matchesScope } from "./team-board";
 import { PersonalPlanning } from "./personal-planning";
 import { YouTubeConnection } from "./youtube-connection";
+import { DevelopmentCard, DevelopmentSettings } from "./development";
 
 export type PageProps = {
   data: Workspace;
@@ -1607,6 +1608,7 @@ export function Library(p: PageProps) {
 
 export function Agent({
   data,
+  user,
   initial = "",
   mutate,
   compact = false,
@@ -1615,6 +1617,7 @@ export function Agent({
   go,
 }: {
   data: Workspace;
+  user: User;
   initial?: string;
   mutate: Mutate;
   compact?: boolean;
@@ -1626,6 +1629,8 @@ export function Agent({
   const [text, setText] = useState(initial);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const [mode, setMode] = useState<"studio" | "development">("studio");
+  const developer = data.development.configuration;
   useEffect(() => {
     setText(initial);
   }, [initial]);
@@ -1656,7 +1661,7 @@ export function Agent({
     if (!text.trim()) return;
     setSending(true);
     const ok = await mutate(
-      () => api("/chat", "POST", { message: text }),
+      () => api("/chat", "POST", { message: text, mode }),
       "Demande transmise à Delamain.",
     );
     setSending(false);
@@ -1683,6 +1688,34 @@ export function Agent({
           </small>
         </div>
       </div>
+      {user.role === "owner" && (
+        <div className="chat-mode" role="group" aria-label="Mode Delamain">
+          <button
+            className={mode === "studio" ? "selected" : ""}
+            onClick={() => setMode("studio")}
+          >
+            Gérer le studio
+          </button>
+          <button
+            className={mode === "development" ? "selected" : ""}
+            onClick={() => setMode("development")}
+          >
+            Modifier le site
+          </button>
+        </div>
+      )}
+      {mode === "development" && (
+        <div className="chat-development-note">
+          <p>
+            {developer.ready
+              ? "Décris la modification. Delamain prépare le code, teste puis met le site à jour."
+              : "L’exécuteur doit être connecté au serveur avant de pouvoir modifier le site."}
+          </p>
+          {!developer.ready && (
+            <Button onClick={() => go("settings")}>Ouvrir les réglages</Button>
+          )}
+        </div>
+      )}
       <div className="chat-messages" aria-live="polite">
         {!messages.length && (
           <div className="chat-welcome">
@@ -1721,6 +1754,22 @@ export function Agent({
             </span>
             <p>{m.content}</p>
             {(m.attachments || []).map((link, index) => {
+              if (link.kind === "development") {
+                const change = data.development.changes.find(
+                  (change) => change.id === link.id,
+                );
+                return change ? (
+                  <DevelopmentCard
+                    key={index}
+                    change={change}
+                    owner={user.role === "owner"}
+                  />
+                ) : (
+                  <Button key={index} onClick={() => go("settings")}>
+                    Voir les modifications du site
+                  </Button>
+                );
+              }
               const v =
                 link.kind === "video"
                   ? data.videos.find((v) => v.id === link.id)
@@ -1798,7 +1847,11 @@ export function Agent({
         <textarea
           value={text}
           rows={2}
-          placeholder="Donne une mission à Delamain…"
+          placeholder={
+            mode === "development"
+              ? "Décris le changement à apporter au site…"
+              : "Donne une mission à Delamain…"
+          }
           aria-label="Message à Delamain"
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
@@ -1814,15 +1867,31 @@ export function Agent({
         />
         <button
           type="submit"
-          disabled={sending || active || !text.trim()}
+          disabled={
+            sending ||
+            active ||
+            !text.trim() ||
+            (mode === "development" &&
+              (!developer.ready ||
+                data.development.changes.some((change) =>
+                  [
+                    "queued",
+                    "preparing",
+                    "coding",
+                    "testing",
+                    "deploying",
+                  ].includes(change.status),
+                )))
+          }
           aria-label="Envoyer à Delamain"
         >
           <ArrowUpRight size={20} />
         </button>
       </form>
       <p className="chat-footnote">
-        Mise en file ≠ publication confirmée · les contrôles restent
-        obligatoires
+        {mode === "development"
+          ? "Le résultat est confirmé après les tests et le contrôle du site mis à jour."
+          : "Mise en file ≠ publication confirmée · les contrôles restent obligatoires"}
       </p>
     </div>
   );
@@ -1989,6 +2058,11 @@ export function Settings(p: PageProps) {
           </div>
         </section>
       </div>
+      <DevelopmentSettings
+        data={p.data}
+        owner={p.user.role === "owner"}
+        go={() => p.go("agent")}
+      />
       <section className="panel connections-panel">
         <SectionTitle eyebrow="LES SERVICES DU STUDIO" title="Connexions" />
         {labelsConnections.map(([key, label, desc]) => (

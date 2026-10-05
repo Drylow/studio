@@ -58,6 +58,10 @@ def create_app(config=None):
         import_productions(store)
     app.extensions["studio_store"] = store
     store.web_app = app
+    from studio.development import revision as code_revision, maintenance_path
+
+    app.config["CODE_REVISION"] = code_revision()
+    app.config.setdefault("DEVELOPMENT_MAINTENANCE_PATH", str(maintenance_path()))
     if (
         not app.config["PREVIEW"]
         and not store.users()
@@ -119,6 +123,16 @@ def create_app(config=None):
     @app.before_request
     def guard():
         g.user = None
+        if (
+            request.method not in {"GET", "HEAD", "OPTIONS"}
+            and Path(app.config["DEVELOPMENT_MAINTENANCE_PATH"]).exists()
+        ):
+            return (
+                jsonify(
+                    error="Le site se met à jour. Réessaie dans quelques instants."
+                ),
+                503,
+            )
         if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
             if request.remote_addr not in {"127.0.0.1", "::1"}:
                 return jsonify(error="L’aperçu est réservé à cette machine."), 403
@@ -271,6 +285,9 @@ def create_app(config=None):
     @app.get("/api/studio/workspace")
     def workspace():
         data = overview(store)
+        from studio.development import overview as development_overview
+
+        data["development"] = development_overview(store, preview=app.config["PREVIEW"])
         data["connections"] = {
             "ai": bool(os.getenv("AI_BASE_URL") and os.getenv("AI_API_KEY")),
             "voice": bool(os.getenv("ALGROW_API_KEY")),
@@ -760,6 +777,16 @@ def create_app(config=None):
         message = str(b.get("message", "")).strip()
         if not message or len(message) > 6000:
             raise ValueError("Écris une demande de 1 à 6 000 caractères.")
+        if b.get("mode") == "development":
+            owner()
+            from studio.development import enqueue as enqueue_development
+
+            job = enqueue_development(
+                store, g.user, message, preview=app.config["PREVIEW"]
+            )
+            return jsonify(development_id=job), 202
+        if b.get("mode", "studio") != "studio":
+            raise ValueError("Mode Delamain inconnu.")
         if app.config["PREVIEW"]:
             raise ValueError(
                 "L’agent est branché au service IA ; les appels externes sont désactivés dans cet aperçu."
@@ -835,6 +862,18 @@ def create_app(config=None):
     from studio.youtube import register_youtube
 
     register_youtube(app, store, owner)
+    from studio.development import register as register_development
+
+    register_development(app, store, owner)
+
+    @app.get("/health/studio")
+    def studio_health():
+        # Revision captured on application startup, not the possibly newer files on disk.
+        store.one("SELECT id FROM studio_settings WHERE id=1")
+        response = jsonify(status="ok", revision=app.config["CODE_REVISION"])
+        response.headers["Cache-Control"] = "no-store"
+        return response
+
     from studio.review import register_reviews
 
     register_reviews(app, store, owner)

@@ -694,6 +694,7 @@ function App() {
               <div className="panel full-chat">
                 <Agent
                   data={data}
+                  user={boot.user}
                   initial={agentText}
                   mutate={mutate}
                   openVideo={p.openVideo}
@@ -737,6 +738,7 @@ function App() {
             </div>
             <Agent
               data={data}
+              user={boot.user}
               initial={agentText}
               mutate={mutate}
               compact

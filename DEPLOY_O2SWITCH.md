@@ -13,12 +13,13 @@ le site est hébergé, avec les permissions du compte connecté et les contrôle
 La publication directe YouTube ne nécessite pas Discord.
 
 L'interface et le code peuvent être mis à jour depuis GitHub même après l'hébergement.
-Le chat Delamain ne dispose pas encore d'un agent de développement capable de modifier,
-tester et déployer le code. Pour cette capacité, il faudra connecter un exécuteur
-séparé au dépôt, avec une branche de travail, des tests, un aperçu des changements,
-puis un déploiement et la possibilité de revenir à la version précédente.
-Ce composant n'est pas implémenté ni connecté ; ne pas annoncer qu'une demande dans
-Delamain peut déjà créer une nouvelle page ou une nouvelle fonctionnalité du site.
+Le mode **Delamain → Modifier le site** utilise maintenant un exécuteur séparé
+pour modifier le code, tester, compiler et mettre le site à jour avec contrôle
+de version et retour au code précédent en cas d'échec. Il faut le connecter
+une fois sur le serveur : suivre [DEPLOY_DELAMAIN.md](DEPLOY_DELAMAIN.md).
+L'état de connexion et les résultats sont visibles dans Réglages.
+Les fichiers de sécurité, les dépendances et les migrations restent protégés.
+Ne pas annoncer que le déploiement sur o2switch fonctionne avant l'essai réel.
 
 ## 1. Créer l'application Python
 

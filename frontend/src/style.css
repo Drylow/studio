@@ -3947,7 +3947,7 @@ svg {
     font-size: 10px;
   }
   .topbar-right {
-    gap: 10px;
+    gap: 6px;
   }
   .agent-topbar span {
     display: none;
@@ -5918,5 +5918,144 @@ svg {
   }
   .chat-message small {
     font-size: 10px;
+  }
+}
+/* Delamain's development lane uses the same compact, mobile-first panels. */
+.chat-mode {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.chat-mode button {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.chat-mode button.selected {
+  color: var(--yellow);
+  border-color: var(--yellow);
+  background: rgba(246, 241, 55, 0.06);
+}
+.chat-development-note {
+  padding: 12px 20px;
+  font-size: 13px;
+}
+.chat-development-note p {
+  margin: 0 0 8px;
+}
+.development-panel {
+  margin-top: 24px;
+  padding: 24px;
+}
+.development-panel > p {
+  max-width: 850px;
+  line-height: 1.65;
+}
+.development-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+.development-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+.development-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.14);
+  min-width: 0;
+}
+.development-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.development-heading > strong {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+.development-heading > svg {
+  flex-shrink: 0;
+  color: var(--cyan);
+}
+.development-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  font-size: 11px;
+}
+.development-steps li {
+  padding-top: 8px;
+  border-top: 2px solid var(--border);
+  overflow-wrap: anywhere;
+}
+.development-steps li.complete {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.development-steps li.current {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+.development-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.development-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.development-log {
+  max-width: 100%;
+  max-height: 320px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 12px;
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 600px) {
+  .development-panel {
+    padding: 16px;
+  }
+  .development-card {
+    padding: 12px;
+  }
+  .development-heading {
+    flex-wrap: wrap;
+  }
+  .development-heading > strong {
+    flex-basis: calc(100% - 30px);
+  }
+  .development-heading > .tag {
+    margin-left: 28px;
+  }
+  .chat-mode,
+  .chat-development-note {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .development-actions > * {
+    max-width: 100%;
   }
 }

@@ -128,6 +128,40 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   Le worker distinct utilise désormais les routes protégées nécessaires à Delamain.
   Aucun déploiement ni essai sur l'offre réelle n'a été effectué ; ressources de rendu
   et processus permanents doivent être vérifiés sur le compte au moment de l'hébergement.
+- Mode propriétaire **Delamain → Modifier le site** : demandes de modifications de code
+  séparées des tâches vidéo, exécuteur `python -m studio.developer` lancé en cron,
+  copie Git isolée, lectures et remplacements bornés, tests d'origine protégés,
+  compilation TypeScript/Vite et démarrage Flask. Commit et branche de travail,
+  sauvegarde SQLite, maintenance brève, redémarrage Passenger, contrôle de la version
+  publique avant publication non forcée de `main`. Restauration de l'ancien code si
+  le redémarrage ou la publication Git échoue, reprise documentée après interruption.
+  Résultats et étapes réels dans le chat et Réglages ; guide [DEPLOY_DELAMAIN.md](../DEPLOY_DELAMAIN.md).
+  Les fichiers sensibles et dépendances restent protégés ; l'exécuteur tourne sous
+  le compte d'hébergement, sans constituer un bac à sable système. Il doit être
+  connecté une fois à Git et au site sur le vrai hébergement avant utilisation.
+
+### Validation des modifications Delamain
+
+- 19 essais dédiés initialement validés : vraie copie Git, tests Python, compilation Node,
+  installation et contrôle HTTP, refus des droits/CSRF, secrets et chemins protégés,
+  lot de modifications atomique, concurrence Git, restauration après mauvais redémarrage,
+  reconnaissance d'une version déjà publiée après interruption. Un cas supplémentaire
+  couvre désormais l'interruption de finalisation après un push déjà réussi.
+- Essai avec le **vrai service IA existant**, sans fournisseur simulé pour la génération :
+  demande authentifiée dans le chat, cinq échanges IA, ajout d'une phrase turquoise sous
+  le titre des tâches, **133 tests** exécutés sur la copie, compilation TypeScript/Vite,
+  nouveau démarrage Flask et vérification de son commit chargé via HTTP.
+  Commit poussé sur un dépôt Git local jetable ; aucun changement publié sur o2switch.
+- Navigateur sur cette version réellement modifiée : phrase visible et bonne couleur sur
+  téléphone, résultat « En ligne » dans Delamain, véritables comptes rendus des contrôles,
+  aucune erreur JavaScript ni débordement horizontal. Les captures d'essai sont dans
+  `work/studio/delamain-real-task.png` et `work/studio/delamain-real-checks.png` (non versionnées).
+- Nouveaux essais navigateur des états déconnecté/en cours/en ligne/échec, résultats et
+  droits aux largeurs 320, 390, 768 et 1440 px. Les onze pages du test mobile existant
+  restent validées aux six tailles habituelles ; parcours YouTube simulé toujours validé.
+- Raccordement du vrai compte o2switch, redémarrage Passenger et contraintes de ressources
+  encore à vérifier une fois le site hébergé. Aucun téléversement YouTube ni livraison
+  Discord effectué pendant le développement de cette fonction.
 
 ## À terminer avant les chaînes entièrement autonomes
 
@@ -149,9 +183,9 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
    constitue pas un contrôle Content ID et ne garantit pas l'absence de réclamation future.
 7. Hébergement permanent, sauvegardes récurrentes et notifications des blocages.
    Statistiques YouTube, facturation réelle et exports Discord des autres formats ensuite.
-8. Agent de développement relié au dépôt et au déploiement pour modifier le code depuis
-   le chat hébergé. Les mises à jour par Git restent possibles ; Delamain n'a pas encore
-   ce composant et ne peut pas ajouter une nouvelle page ou fonctionnalité lui-même.
+8. Brancher l'exécuteur de modifications sur le compte d'hébergement et y réaliser
+   le premier changement réel. Le composant est implémenté ; aucun accès o2switch,
+   redémarrage Passenger réel ni déploiement public n'a été validé dans le cloud.
 
 ## Ouvrir et utiliser
 

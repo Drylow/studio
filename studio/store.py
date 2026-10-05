@@ -471,6 +471,8 @@ class Store:
     def claim(self, owner):
         with self.db() as c:
             c.execute("BEGIN IMMEDIATE")
+            if (ROOT / "work/studio/development-maintenance.json").exists():
+                return None
             # Recover only expired leases. Every running process renews its lease independently of progress.
             c.execute(
                 "UPDATE studio_jobs SET status=CASE WHEN cancel_requested=1 THEN 'cancelled' ELSE 'queued' END,owner='' WHERE status='running' AND lease_until<?",
