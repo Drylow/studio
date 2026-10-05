@@ -10,10 +10,14 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 - Centre de contrôle : problèmes classés, prochaines actions précises, suivi des
   alertes propre à chaque compte et état du moteur/configurations.
 - Huit chaînes importées, réglages propres à chaque chaîne et mode manuel/automatique.
+- Répartition Drylow / Kanye par glisser-déposer, déplacement sur téléphone et vue
+  « Mes chaînes ». Les chaînes non attribuées restent dans « À répartir ».
 - Radar d'actualités MMA et foot : sources RSS datées, sujets récents et préparation
   d'une fiche de recherche. Collecte régulière configurable par chaîne.
 - Tableau de production, calendrier mensuel et agenda en heure belge.
-- Export du mois et de la chaîne sélectionnés vers un fichier d'agenda `.ics`.
+- Planning « Qui poste ? » : rythme stable par chaîne, responsable, créneaux
+  suggérés et vidéos réservées avec leurs blocages. Une suggestion ne lance aucun travail.
+- Export du mois, de la chaîne et du responsable sélectionnés vers un fichier `.ics`.
 - Tâches partagées, responsables et échéances ; deux comptes individuels.
 - Routines pour la recherche, la vérification d'une publication et l'organisation
   de la semaine. Recherche, filtre par chaîne, tâches en retard et lien vers la vidéo.
@@ -118,8 +122,9 @@ et le nouveau backend dans `studio/`. La migration SQLite conserve les anciennes
 données et sauvegarde la base avant sa première migration.
 
 Les essais navigateur nécessitent une seconde instance sur une base d'aperçu dédiée,
-puis `cd frontend` et `npm run smoke`, `npm run smoke:control` et `npm run smoke:news`.
-Le dernier parcours nécessite des infos dans le radar de cette base dédiée. Commande complète dans
+puis `cd frontend` et les parcours `smoke`, `smoke:control`, `smoke:news`, `smoke:team`.
+Le parcours news nécessite des infos dans le radar de cette base dédiée ; le parcours équipe
+nécessite le compte collègue de test. Commandes complètes dans
 [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md#développement-et-vérifications).
 
 ## Moteurs et références conservés

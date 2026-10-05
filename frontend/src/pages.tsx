@@ -58,6 +58,8 @@ import {
 import type { Mutate } from "./forms";
 import { ZoomImage } from "./image-viewer";
 import { RoutinePicker } from "./routines";
+import { TeamBoard, TeamScope, matchesScope } from "./team-board";
+import { PersonalPlanning } from "./personal-planning";
 
 export type PageProps = {
   data: Workspace;
@@ -71,7 +73,7 @@ export type PageProps = {
   editChannel: (channel: Channel) => void;
   newChannel: () => void;
   agent: (message?: string) => void;
-  schedule: (day: string) => void;
+  schedule: (day: string, channel?: number, postAt?: string) => void;
 };
 
 export function Overview(p: PageProps) {
@@ -403,8 +405,12 @@ export function Overview(p: PageProps) {
 
 export function Channels(p: PageProps) {
   const [filter, setFilter] = useState("all");
+  const [scope, setScope] = useState("all");
+  const [view, setView] = useState("team");
   const list = p.data.channels.filter(
-    (c) => filter === "all" || c.autonomy === filter,
+    (c) =>
+      (filter === "all" || c.autonomy === filter) &&
+      matchesScope(c, scope, p.user),
   );
   return (
     <div className="page">
@@ -416,14 +422,36 @@ export function Channels(p: PageProps) {
           <h1>
             Tes chaînes<span className="heading-dot">.</span>
           </h1>
-          <p>Chaque chaîne a son univers. Et ses propres règles.</p>
+          <p>
+            Drylow & Kanye. Des chaînes partagées, un responsable pour chacune.
+          </p>
         </div>
         <Button variant="primary" onClick={p.newChannel}>
           <Plus size={17} />
           Ajouter une chaîne
         </Button>
       </div>
-      <div className="filter-bar">
+      <div className="filter-bar channels-filters">
+        <div className="segmented">
+          <button
+            className={view === "team" ? "active" : ""}
+            onClick={() => setView("team")}
+          >
+            Répartition
+          </button>
+          <button
+            className={view === "details" ? "active" : ""}
+            onClick={() => setView("details")}
+          >
+            Fiches des chaînes
+          </button>
+        </div>
+        <TeamScope
+          users={p.data.users}
+          value={scope}
+          onChange={setScope}
+          label="Filtrer les chaînes par responsable"
+        />
         <div className="tabs">
           {[
             ["all", "Toutes"],
@@ -441,116 +469,126 @@ export function Channels(p: PageProps) {
         </div>
         <span className="muted small">{list.length} chaînes</span>
       </div>
-      <div className="channel-grid">
-        {list.map((c) => (
-          <article
-            className="panel channel-card"
-            key={c.id}
-            style={{ "--channel": c.accent } as React.CSSProperties}
-          >
-            <div className="channel-card-head">
-              <ChannelMark channel={c} />
-              <div className="channel-card-tags">
-                <Tag
-                  tone={
-                    c.paused
-                      ? "blocked"
+      {view === "team" ? (
+        <TeamBoard {...p} channels={list} />
+      ) : (
+        <div className="channel-grid">
+          {list.map((c) => (
+            <article
+              className="panel channel-card"
+              key={c.id}
+              style={{ "--channel": c.accent } as React.CSSProperties}
+            >
+              <div className="channel-card-head">
+                <ChannelMark channel={c} />
+                <div className="channel-card-tags">
+                  <Tag
+                    tone={
+                      c.paused
+                        ? "blocked"
+                        : c.autonomy === "auto"
+                          ? "auto"
+                          : "muted"
+                    }
+                  >
+                    {c.paused
+                      ? "EN PAUSE"
                       : c.autonomy === "auto"
-                        ? "auto"
-                        : "muted"
+                        ? "AUTOMATIQUE"
+                        : "VALIDATION"}
+                  </Tag>
+                  <span className="channel-connect">
+                    <i className={c.connected ? "connected" : ""} />
+                    {c.connected ? "YouTube connecté" : "YouTube à connecter"}
+                  </span>
+                </div>
+              </div>
+              <h2>{c.name}</h2>
+              <p className="channel-handle">
+                {c.handle || "Identifiant à renseigner"} <span>·</span>{" "}
+                {c.niche}
+              </p>
+              <p className="muted small">
+                Responsable :{" "}
+                {p.data.users.find((u) => u.id === c.responsible_id)?.name ||
+                  "À répartir"}
+              </p>
+              <div className="channel-metrics">
+                <div>
+                  <strong>
+                    {c.ready}
+                    <small> / {c.target_stock}</small>
+                  </strong>
+                  <span>Vidéos prêtes</span>
+                </div>
+                <div>
+                  <strong>
+                    {c.format === "news"
+                      ? `${c.freshness_hours}h`
+                      : c.days_ahead.toString()}
+                    <small>{c.format === "news" ? "" : " jours"}</small>
+                  </strong>
+                  <span>
+                    {c.format === "news"
+                      ? "Fraîcheur maximum"
+                      : "Calendrier couvert"}
+                  </span>
+                </div>
+              </div>
+              <div className="channel-progress">
+                <span
+                  style={{
+                    width: `${Math.min(100, (c.ready / Math.max(1, c.target_stock)) * 100)}%`,
+                  }}
+                />
+              </div>
+              <div className="channel-next">
+                <Clock3 size={15} />
+                <span>
+                  {c.next_post
+                    ? dateLabel(c.next_post, {
+                        day: "numeric",
+                        month: "long",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })
+                    : "Prochaine publication à planifier"}
+                </span>
+              </div>
+              <div className="channel-card-bottom">
+                <Button onClick={() => p.editChannel(c)}>
+                  <SlidersHorizontal size={15} />
+                  Réglages
+                </Button>
+                <Button variant="ghost" onClick={() => p.newVideo(c.id)}>
+                  <Plus size={16} />
+                  Créer
+                </Button>
+                <button
+                  className="icon-button"
+                  aria-label={`Connecter ${c.name} à YouTube`}
+                  title={`Connecter ${c.name} à YouTube`}
+                  onClick={() =>
+                    p.mutate(async () => {
+                      if (!p.data.connections.youtube) {
+                        p.go("settings");
+                        throw new Error(
+                          "La connexion Google du studio est à configurer avant de relier les chaînes.",
+                        );
+                      }
+                      window.location.assign(
+                        `/api/studio/youtube/${c.id}/connect`,
+                      );
+                    }, "Connexion en cours.")
                   }
                 >
-                  {c.paused
-                    ? "EN PAUSE"
-                    : c.autonomy === "auto"
-                      ? "AUTOMATIQUE"
-                      : "VALIDATION"}
-                </Tag>
-                <span className="channel-connect">
-                  <i className={c.connected ? "connected" : ""} />
-                  {c.connected ? "YouTube connecté" : "YouTube à connecter"}
-                </span>
+                  <Link2 size={17} />
+                </button>
               </div>
-            </div>
-            <h2>{c.name}</h2>
-            <p className="channel-handle">
-              {c.handle || "Identifiant à renseigner"} <span>·</span> {c.niche}
-            </p>
-            <div className="channel-metrics">
-              <div>
-                <strong>
-                  {c.ready}
-                  <small> / {c.target_stock}</small>
-                </strong>
-                <span>Vidéos prêtes</span>
-              </div>
-              <div>
-                <strong>
-                  {c.format === "news"
-                    ? `${c.freshness_hours}h`
-                    : c.days_ahead.toString()}
-                  <small>{c.format === "news" ? "" : " jours"}</small>
-                </strong>
-                <span>
-                  {c.format === "news"
-                    ? "Fraîcheur maximum"
-                    : "Calendrier couvert"}
-                </span>
-              </div>
-            </div>
-            <div className="channel-progress">
-              <span
-                style={{
-                  width: `${Math.min(100, (c.ready / Math.max(1, c.target_stock)) * 100)}%`,
-                }}
-              />
-            </div>
-            <div className="channel-next">
-              <Clock3 size={15} />
-              <span>
-                {c.next_post
-                  ? dateLabel(c.next_post, {
-                      day: "numeric",
-                      month: "long",
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })
-                  : "Prochaine publication à planifier"}
-              </span>
-            </div>
-            <div className="channel-card-bottom">
-              <Button onClick={() => p.editChannel(c)}>
-                <SlidersHorizontal size={15} />
-                Réglages
-              </Button>
-              <Button variant="ghost" onClick={() => p.newVideo(c.id)}>
-                <Plus size={16} />
-                Créer
-              </Button>
-              <button
-                className="icon-button"
-                aria-label={`Connecter ${c.name} à YouTube`}
-                title={`Connecter ${c.name} à YouTube`}
-                onClick={() =>
-                  p.mutate(async () => {
-                    if (!p.data.connections.youtube) {
-                      p.go("settings");
-                      throw new Error(
-                        "La connexion Google du studio est à configurer avant de relier les chaînes.",
-                      );
-                    }
-                    window.location.assign(
-                      `/api/studio/youtube/${c.id}/connect`,
-                    );
-                  }, "Connexion en cours.")
-                }
-              >
-                <Link2 size={17} />
-              </button>
-            </div>
-          </article>
-        ))}
-      </div>
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -760,6 +798,7 @@ export function Calendar(p: PageProps) {
   const today = dayKey(p.data.server_time);
   const [month, setMonth] = useState(today.slice(0, 7));
   const [filter, setFilter] = useState("all");
+  const [scope, setScope] = useState("all");
   const [view, setView] = useState("month");
   const [exporting, setExporting] = useState(false);
   const [year, m] = month.split("-").map(Number);
@@ -777,9 +816,23 @@ export function Calendar(p: PageProps) {
       };
     },
   );
-  const events = p.data.videos.filter(
-    (v) => v.post_at && (filter === "all" || v.channel_id === Number(filter)),
+  const personalChannels = p.data.channels.filter((c) =>
+    matchesScope(c, scope, p.user),
   );
+  const events = p.data.videos
+    .filter(
+      (v) => v.post_at && (filter === "all" || v.channel_id === Number(filter)),
+    )
+    .filter((v) => personalChannels.some((c) => c.id === v.channel_id));
+  const personalTasks = p.data.tasks.filter((t) => {
+    const member = scope === "mine" ? p.user.id : scope;
+    const channelMatches = filter === "all" || t.channel_id === Number(filter);
+    return (
+      channelMatches &&
+      (scope === "all" ||
+        (scope === "unassigned" ? !t.assignee : t.assignee === member))
+    );
+  });
   function move(n: number) {
     setMonth(
       new Date(Date.UTC(year, m - 1 + n, 1, 12)).toISOString().slice(0, 7),
@@ -788,7 +841,7 @@ export function Calendar(p: PageProps) {
   async function exportMonth() {
     setExporting(true);
     await p.mutate(async () => {
-      const query = new URLSearchParams({ month });
+      const query = new URLSearchParams({ month, scope });
       if (filter !== "all") query.set("channel_id", filter);
       const response = await fetch("/api/studio/calendar.ics?" + query, {
         credentials: "same-origin",
@@ -819,7 +872,10 @@ export function Calendar(p: PageProps) {
           <p>Tes publications, à l’heure. Fuseau : Belgique / Paris.</p>
         </div>
         <div className="heading-actions">
-          <Button onClick={exportMonth} disabled={exporting}>
+          <Button
+            onClick={exportMonth}
+            disabled={exporting || view === "rhythm"}
+          >
             <Download size={16} />
             {exporting ? "Export en cours…" : "Exporter le mois"}
           </Button>
@@ -831,39 +887,50 @@ export function Calendar(p: PageProps) {
       </div>
       <section className="panel calendar-panel">
         <div className="calendar-toolbar">
-          <div className="month-nav">
-            <button
-              className="icon-button"
-              onClick={() => move(-1)}
-              aria-label="Mois précédent"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <h2>
-              {dateLabel(start.toISOString(), {
-                month: "long",
-                year: "numeric",
-              })}
-            </h2>
-            <button
-              className="icon-button"
-              onClick={() => move(1)}
-              aria-label="Mois suivant"
-            >
-              <ChevronRight size={18} />
-            </button>
-            <Button onClick={() => setMonth(today.slice(0, 7))}>
-              Aujourd’hui
-            </Button>
-          </div>
+          {view !== "rhythm" && (
+            <div className="month-nav">
+              <button
+                className="icon-button"
+                onClick={() => move(-1)}
+                aria-label="Mois précédent"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <h2>
+                {dateLabel(start.toISOString(), {
+                  month: "long",
+                  year: "numeric",
+                })}
+              </h2>
+              <button
+                className="icon-button"
+                onClick={() => move(1)}
+                aria-label="Mois suivant"
+              >
+                <ChevronRight size={18} />
+              </button>
+              <Button onClick={() => setMonth(today.slice(0, 7))}>
+                Aujourd’hui
+              </Button>
+            </div>
+          )}
           <div className="filters">
+            <TeamScope
+              users={p.data.users}
+              value={scope}
+              onChange={(value) => {
+                setScope(value);
+                setFilter("all");
+              }}
+              label="Filtrer le calendrier par responsable"
+            />
             <select
               aria-label="Filtrer le calendrier par chaîne"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
             >
               <option value="all">Toutes les chaînes</option>
-              {p.data.channels.map((c) => (
+              {personalChannels.map((c) => (
                 <option key={c.id} value={c.id}>
                   {c.name}
                 </option>
@@ -882,10 +949,18 @@ export function Calendar(p: PageProps) {
               >
                 Agenda
               </button>
+              <button
+                className={view === "rhythm" ? "active" : ""}
+                onClick={() => setView("rhythm")}
+              >
+                Qui poste ?
+              </button>
             </div>
           </div>
         </div>
-        {view === "month" ? (
+        {view === "rhythm" ? (
+          <PersonalPlanning {...p} scope={scope} channelFilter={filter} />
+        ) : view === "month" ? (
           <>
             <div className="week-head">
               {["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"].map((s) => (
@@ -958,7 +1033,7 @@ export function Calendar(p: PageProps) {
                         </button>
                       );
                     })}
-                  {p.data.tasks
+                  {personalTasks
                     .filter(
                       (t) => !t.done && t.due_at && dayKey(t.due_at) === d.key,
                     )

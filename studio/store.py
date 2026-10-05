@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import sqlite3
 import uuid
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -160,6 +161,19 @@ class Store:
                 c.execute(
                     "UPDATE studio_channels SET template_key=key WHERE key IN ('mma_en','football_en','boxing_en','oddly_specific_en','oddly_expensive_en','oddly_things_en','survivors_account','frontier_blood')"
                 )
+            if "responsible_id" not in channel_columns:
+                c.execute(
+                    "ALTER TABLE studio_channels ADD COLUMN responsible_id TEXT REFERENCES studio_users(id)"
+                )
+            if "cadence_anchor" not in channel_columns:
+                c.execute(
+                    "ALTER TABLE studio_channels ADD COLUMN cadence_anchor TEXT DEFAULT ''"
+                )
+            c.execute(
+                "UPDATE studio_channels SET cadence_anchor=? WHERE cadence_anchor=''",
+                (datetime.now(ZoneInfo("Europe/Paris")).date().isoformat(),),
+            )
+            c.execute("INSERT OR IGNORE INTO studio_schema VALUES(5,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(1,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(2,?)", (now(),))
 
@@ -170,7 +184,7 @@ class Store:
             p.cadence_days,p.post_time,p.yt_channel_title,p.yt_channel_id,
             CASE WHEN p.yt_refresh_token!='' THEN 1 ELSE 0 END AS connected,
             s.key,s.format,s.accent,s.initials,s.target_stock,s.freshness_hours,s.enabled,s.paused,
-            s.budget,s.instructions,s.template_key,s.revision,s.updated_at
+            s.budget,s.instructions,s.template_key,s.responsible_id,s.cadence_anchor,s.revision,s.updated_at
             FROM studio_channels s JOIN delamain_projects p ON p.id=s.project_id ORDER BY p.id"""
         )
 
@@ -195,8 +209,8 @@ class Store:
             )
             pid = cur.lastrowid
             c.execute(
-                """INSERT INTO studio_channels(project_id,key,format,accent,initials,instructions,updated_at)
-                VALUES(?,?,?,?,?,?,?)""",
+                """INSERT INTO studio_channels(project_id,key,format,accent,initials,instructions,cadence_anchor,updated_at)
+                VALUES(?,?,?,?,?,?,?,?)""",
                 (
                     pid,
                     data.get("key") or uid(),
@@ -205,6 +219,7 @@ class Store:
                     data.get("initials")
                     or "".join(x[0] for x in data["name"].split())[:3].upper(),
                     data.get("instructions", ""),
+                    datetime.now(ZoneInfo("Europe/Paris")).date().isoformat(),
                     now(),
                 ),
             )
@@ -254,6 +269,8 @@ class Store:
                     "budget",
                     "instructions",
                     "template_key",
+                    "responsible_id",
+                    "cadence_anchor",
                 }
             }
             c.execute(

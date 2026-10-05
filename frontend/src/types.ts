@@ -7,6 +7,8 @@ export type Channel = {
   lang: string;
   autonomy: string;
   cadence_days: string;
+  cadence_anchor: string;
+  responsible_id: string | null;
   post_time: string;
   connected: number;
   key: string;

@@ -125,6 +125,9 @@ try {
 
   await page.locator("nav button").filter({ hasText: "Chaînes" }).click();
   await page
+    .getByRole("button", { name: "Fiches des chaînes", exact: true })
+    .click();
+  await page
     .locator(".channel-card")
     .filter({
       has: page.getByRole("heading", { name: "Cage Dispatch", exact: true }),

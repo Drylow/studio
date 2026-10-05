@@ -8,6 +8,7 @@ import re
 from flask import g, jsonify, request, Response
 from studio.domain import TZ, blockers, date, fresh, overview, utc_date
 from studio.store import Conflict, now, uid
+from studio.schedule import in_scope, resolve_scope
 
 ROUTINES = [
     {
@@ -477,7 +478,7 @@ def fold_line(line):
     return "\r\n".join(chunks)
 
 
-def calendar_export(store, month, channel_id=None):
+def calendar_export(store, month, channel_id=None, scope="all"):
     if not re.fullmatch(r"\d{4}-\d{2}", month or ""):
         raise ValueError("Choisis le mois à exporter.")
     try:
@@ -508,6 +509,8 @@ def calendar_export(store, month, channel_id=None):
         if channel_id is not None and v["channel_id"] != channel_id:
             continue
         c = channels[v["channel_id"]]
+        if not in_scope(c, scope):
+            continue
         lines.extend(
             [
                 "BEGIN:VEVENT",
@@ -578,7 +581,8 @@ def register(app, store, body):
                 cid = int(cid)
             except ValueError:
                 raise ValueError("Choisis une chaîne existante.")
-        content = calendar_export(store, request.args.get("month", ""), cid)
+        scope = resolve_scope(store, request.args.get("scope"), g.user["id"])
+        content = calendar_export(store, request.args.get("month", ""), cid, scope)
         response = Response(content, content_type="text/calendar; charset=utf-8")
         response.headers["Content-Disposition"] = (
             f'attachment; filename="edgerunners-{request.args["month"]}.ics"'

@@ -25,7 +25,16 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   sans les transformer en publications YouTube confirmées. Les miniatures approuvées
   restent les références ; aucune miniature des vidéos actuelles n'a été refaite.
 - Réglages persistants par chaîne : modèle de production, mode manuel/automatique,
-  cadence, fraîcheur de l'actualité, stock cible, instructions, budget et pause.
+  cadence, premier jour du rythme, fraîcheur de l'actualité, stock cible, instructions, budget et pause.
+- Répartition des chaînes en colonnes Drylow / Kanye, avec réserve « À répartir ».
+  Glisser-déposer et sélecteur sur mobile/clavier, attribution persistante et protection
+  contre les transferts simultanés obsolètes. Les deux comptes gardent accès à toutes
+  les chaînes ; le transfert conserve les vidéos, tâches, cadences et réglages.
+- Filtres par responsable et « Mes chaînes ». Planning « Qui poste ? » sur sept jours :
+  cadence ancrée à une date stable, créneaux suggérés distincts des vidéos réservées,
+  pauses et blocages visibles, programmation préremplie sur la chaîne et l'heure proposées.
+  Changer le responsable déplace immédiatement son planning ; cela ne crée aucun job.
+  Les tâches explicitement attribuées à une personne gardent leur responsable.
 - Tâches partagées avec responsable, priorité, échéance, modification et clôture.
   Calendrier mensuel et agenda, déplacement des créneaux, fuseau Europe/Paris,
   refus des collisions et des modifications simultanées obsolètes.
@@ -34,7 +43,7 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   commune. Ajout atomique et réutilisation de la routine ouverte pour éviter les doublons
   entre les deux utilisateurs et après une réponse réseau perdue.
 - Recherche de tâches, filtre par chaîne, vue des retards et ouverture de la vidéo liée.
-- Export `.ics` du mois et de la chaîne affichés. Dates UTC dans le fichier, sélection
+- Export `.ics` du mois, de la chaîne et du responsable affichés. Dates UTC dans le fichier, sélection
   du mois en heure belge, identifiants stables, révisions et échappement/folding des titres.
   Les créneaux exportés sont des intentions ; fichier ponctuel, aucune synchronisation.
 - Fiche vidéo : titre, description, script, faits, sources datées, programmation,
@@ -134,12 +143,25 @@ Pour le suivi : **Centre de contrôle → choisir un filtre → suivre l'action 
 La cloche de la barre du haut y conduit depuis chaque page. **Marquer comme lue**
 conserve le problème visible ; le filtre **Non lues** concerne uniquement ton compte.
 
+Pour répartir : **Chaînes → Répartition → glisser la chaîne dans Drylow ou Kanye**.
+Sur téléphone ou au clavier : **Déplacer vers… → choisir le responsable** sur la carte.
+Les chaînes non attribuées restent dans **À répartir**. Pour consulter ton travail :
+**Calendrier → Mes chaînes → Qui poste ?**. Les vues Mois/Agenda respectent aussi
+le filtre personnel ; les tâches y suivent leur attribution explicite. Pour régler
+les suggestions : **Chaînes → Fiches des chaînes → Réglages → cadence, heure belge
+et premier jour du rythme → Enregistrer**. Les heures inexistantes au changement
+de mars sont omises ; celles répétées en octobre utilisent la première occurrence.
+Une suggestion est à programmer, pas une publication active. Une vidéo réservée
+affiche les contrôles déclarés ; les vérifications du fichier et des droits restent
+obligatoires lors de la publication.
+
 Pour les routines : **Tâches → Ajouter une routine → choisir le type, la chaîne, la
 vidéo facultative, le responsable et l'échéance → Ajouter les tâches**. Une routine
 encore ouverte est réutilisée. Les contrôles de droits et de qualité se font dans
 la fiche vidéo, même lorsque toutes les tâches sont cochées.
 
-Pour exporter : **Calendrier → afficher le mois → choisir la chaîne → Exporter le
+Pour exporter : **Calendrier → Mois ou Agenda → afficher le mois → choisir le
+responsable et la chaîne → Exporter le
 mois**, puis **Importer** le fichier `.ics` dans l'agenda externe. Les dates restent
 des créneaux prévus. Les modifications ultérieures nécessitent un nouvel export.
 
@@ -188,13 +210,37 @@ de test. Il vérifie les ajouts sans doublons, les filtres, la lecture personnel
 alertes, le téléchargement du planning et le retour après coupure réseau. Il n'utilise
 pas la base principale, n'appelle pas les fournisseurs et ne lance aucun rendu.
 
-Validation actuelle : **67 tests Python réussis**, compilation TypeScript/Vite,
-trois parcours navigateur, onze pages en ordinateur et mobile, persistance des
+`npm run smoke:team` vérifie le glisser-déposer, le transfert mobile, la persistance,
+la programmation préremplie, les filtres et l'export personnel, puis la lecture
+depuis le compte de Kanye. Pour ce parcours seulement, préparer le mot de passe du
+compte `collegue` dans la base d'aperçu dédiée (jamais la base principale) :
+
+```bash
+.venv/bin/python - <<'PY'
+from studio.store import Store
+from werkzeug.security import generate_password_hash
+store = Store('/tmp/studio-ui-smoke.db')
+with store.db() as db:
+    db.execute('UPDATE studio_users SET password_hash=? WHERE id=?',
+               (generate_password_hash('team smoke colleague password'), 'collegue'))
+PY
+cd frontend
+STUDIO_SMOKE_URL=http://127.0.0.1:5001 npm run smoke:team
+```
+
+Exécuter les parcours successivement : ils modifient la base de test.
+
+Validation actuelle : **85 tests Python réussis**, compilation TypeScript/Vite,
+quatre parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
 des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.
 Le centre de contrôle, les tâches et le calendrier sont aussi vérifiés à quatre
 largeurs (1440, 1024, 768 et 390 pixels). Alertes personnelles, routines concurrentes,
 export au changement d'heure, formulaires RSS malformés et reprise réseau sont vérifiés.
+Les transferts entre les deux comptes, migrations répétées, séquences de deux/sept
+jours, cadence de douze heures, heure inexistante ou répétée et couverture du stock
+sur le même rythme sont également vérifiés. Les nouvelles vues passent à 1440,
+1024, 768 et 390 pixels.
 Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
 répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
 publication ou livraison Discord n'a été lancée pendant la construction.

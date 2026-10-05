@@ -21,8 +21,8 @@ et les miniatures/planches de contrôle s'agrandissent avec zoom.
 
 Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.
 L'ancien nom est remplacé dans l'affichage et les guides ; les noms techniques du
-dépôt et des bases sont conservés pour préserver les données. Validation : 67 tests
-Python et trois parcours navigateur, sur ordinateur et mobile.
+dépôt et des bases sont conservés pour préserver les données. Validation : 85 tests
+Python et quatre parcours navigateur, sur ordinateur et mobile.
 
 Ajouts demandés ensuite : centre de contrôle avec alertes et prochaines actions,
 lecture propre à chaque utilisateur, état local des configurations et du moteur.
@@ -34,6 +34,18 @@ la lecture reprend au retour du réseau. `studio/control.py` et les trois parcou
 `frontend/scripts/*smoke.mjs` portent ces contrôles. L'automatisation éditoriale,
 les droits complets et la connexion réelle Google restent à terminer comme indiqué
 dans le document d'état ; ne pas les présenter comme opérationnels.
+
+L'équipe utilise les pseudos **Drylow** et **Kanye**. La page Chaînes propose une
+répartition par glisser-déposer et sélecteur mobile ; les chaînes restent à répartir
+tant que l'utilisateur ne les attribue pas. Ne pas deviner leur responsable.
+Attribution par identifiant du vrai compte, sans restriction d'accès ni changement
+des vidéos, tâches ou modes. Le calendrier possède un filtre « Mes chaînes » et la
+vue « Qui poste ? » : suggestions de cadence ancrées, vidéos réellement réservées
+et contrôles encore nécessaires. Une suggestion ne programme rien et ne lance
+aucun job. Le transfert suit immédiatement dans le planning et l'export personnel.
+Les comptes d'aperçu sont `drylow` et `collegue` (affichage Kanye) ; les vrais comptes
+se créent dans Réglages → Équipe. Le serveur utilise Europe/Paris, y compris le
+changement d'heure. Modules `studio/schedule.py` / `planning.py`, parcours `smoke:team`.
 
 Les miniatures récentes sont approuvées : références dans
 `presets/news_thumbnails/approved_2026-10-05/`. L'utilisateur demande de ne plus refaire

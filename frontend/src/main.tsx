@@ -292,7 +292,11 @@ function App() {
   const [creatingChannel, setCreatingChannel] = useState(false);
   const [editingChannel, setEditingChannel] = useState<number | null>(null);
   const [openedVideo, setOpenedVideo] = useState<string | null>(null);
-  const [scheduleDay, setScheduleDay] = useState<string | null>(null);
+  const [scheduleDay, setScheduleDay] = useState<{
+    day: string;
+    channel?: number;
+    postAt?: string;
+  } | null>(null);
   const refresh = useCallback(async () => {
     const b = await api<Boot>("/bootstrap");
     setCsrf(b.csrf);
@@ -435,7 +439,8 @@ function App() {
     editChannel: (c) => setEditingChannel(c.id),
     newChannel: () => setCreatingChannel(true),
     agent,
-    schedule: (day) => setScheduleDay(day),
+    schedule: (day, channel, postAt) =>
+      setScheduleDay({ day, channel, postAt }),
   };
   const selectedVideo = data.videos.find((v) => v.id === openedVideo);
   const selectedChannel = data.channels.find((c) => c.id === editingChannel);
@@ -755,7 +760,13 @@ function App() {
       {scheduleDay && (
         <ScheduleForm
           data={data}
-          day={scheduleDay}
+          day={scheduleDay.day}
+          channelId={scheduleDay.channel}
+          postAt={scheduleDay.postAt}
+          createVideo={() => {
+            setScheduleDay(null);
+            p.newVideo(scheduleDay.channel);
+          }}
           close={() => setScheduleDay(null)}
           mutate={mutate}
         />

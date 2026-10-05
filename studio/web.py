@@ -68,7 +68,7 @@ def create_app(config=None):
         os.chmod(ROOT / ".env", 0o600)
     if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
         with store.db() as c:
-            for name, username in [("Drylow", "drylow"), ("Collègue", "collegue")]:
+            for name, username in [("Drylow", "drylow"), ("Kanye", "collegue")]:
                 c.execute(
                     "INSERT OR IGNORE INTO studio_users VALUES(?,?,?,?,?,?)",
                     (
@@ -80,6 +80,10 @@ def create_app(config=None):
                         now(),
                     ),
                 )
+
+            c.execute(
+                "UPDATE studio_users SET name='Kanye' WHERE id='collegue' AND name='Collègue'"
+            )
 
     def actor():
         return g.user["name"] if g.user else "Studio"
@@ -321,6 +325,7 @@ def create_app(config=None):
                 "paused",
                 "budget",
                 "instructions",
+                "cadence_anchor",
             }
         }
         if "template_key" in b:
@@ -352,6 +357,17 @@ def create_app(config=None):
             r"([01]\d|2[0-3]):[0-5]\d", str(data["post_time"])
         ):
             raise ValueError("Heure invalide.")
+        if "cadence_anchor" in data:
+            from datetime import date as calendar_date
+
+            try:
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data["cadence_anchor"]):
+                    raise ValueError()
+                calendar_date.fromisoformat(data["cadence_anchor"])
+            except (ValueError, TypeError):
+                raise ValueError(
+                    "Choisis un premier jour valide pour le rythme de publication."
+                )
         if data.get("enabled"):
             owner()
             if old["autonomy"] != "auto" and data.get("autonomy") != "auto":
@@ -360,6 +376,25 @@ def create_app(config=None):
                 raise ValueError("Connecte d’abord cette chaîne à YouTube.")
         store.update_channel(cid, data, revision(b))
         store.log(actor(), "channel", "Réglages mis à jour : " + old["name"])
+        return jsonify(ok=True)
+
+    @app.patch("/api/studio/channels/<int:cid>/responsibility")
+    def assign_channel(cid):
+        old = channel(cid)
+        b = body()
+        if "responsible_id" not in b:
+            raise ValueError("Choisis un responsable ou À répartir.")
+        member = b["responsible_id"]
+        if member is not None and (
+            not isinstance(member, str)
+            or member not in {u["id"] for u in store.users()}
+        ):
+            raise ValueError("Choisis un membre de l’équipe ou la section À répartir.")
+        store.update_channel(cid, {"responsible_id": member}, revision(b))
+        name = next(
+            (u["name"] for u in store.users() if u["id"] == member), "À répartir"
+        )
+        store.log(actor(), "assignment", old["name"] + " → " + name)
         return jsonify(ok=True)
 
     @app.post("/api/studio/videos")
@@ -772,6 +807,9 @@ def create_app(config=None):
     from studio.control import register as register_control
 
     register_control(app, store, body)
+    from studio.planning import register as register_planning
+
+    register_planning(app, store)
 
     @app.get("/tools/<path:slug>")
     @app.get("/category/<path:slug>")

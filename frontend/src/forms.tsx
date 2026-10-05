@@ -161,6 +161,19 @@ export function ChannelForm({
             />
           </label>
         </div>
+        <label>
+          Premier jour du rythme
+          <input
+            type="date"
+            required
+            value={form.cadence_anchor}
+            onChange={(e) => change("cadence_anchor", e.target.value)}
+          />
+          <small className="muted">
+            Le calendrier suggère des créneaux à partir de cette date. Il faut
+            ensuite y programmer une vidéo.
+          </small>
+        </label>
         <div className="form-grid">
           <label>
             Budget autorisé / vidéo ($)
@@ -574,21 +587,29 @@ export function NewTask({
 export function ScheduleForm({
   data,
   day,
+  channelId,
+  postAt,
+  createVideo,
   close,
   mutate,
 }: {
   data: Workspace;
   day: string;
+  channelId?: number;
+  postAt?: string;
+  createVideo: () => void;
   close: () => void;
   mutate: Mutate;
 }) {
-  const [vid, setVid] = useState(
-    data.videos.find((v) => !["published", "reported"].includes(v.status))
-      ?.id || "",
+  const available = data.videos.filter(
+    (v) =>
+      !["published", "reported"].includes(v.status) &&
+      (!channelId || v.channel_id === channelId),
   );
+  const [vid, setVid] = useState(available[0]?.id || "");
   const video = data.videos.find((v) => v.id === vid);
   const channel = data.channels.find((c) => c.id === video?.channel_id);
-  const [at, setAt] = useState(day + "T18:00");
+  const [at, setAt] = useState(postAt ? localTime(postAt) : day + "T18:00");
   return (
     <Modal
       title="Prévoir une publication"
@@ -613,17 +634,34 @@ export function ScheduleForm({
             close();
         }}
       >
+        {channelId && (
+          <p className="inline-note">
+            Créneau pour {data.channels.find((c) => c.id === channelId)?.name}
+          </p>
+        )}
+        {!available.length && (
+          <div className="inline-note">
+            <p>
+              Aucune vidéo à programmer{channelId ? " sur cette chaîne" : ""}.
+              Crée d’abord sa fiche.
+            </p>
+            <Button onClick={createVideo}>Créer une vidéo</Button>
+          </div>
+        )}
         <label>
           Vidéo
-          <select required value={vid} onChange={(e) => setVid(e.target.value)}>
-            {data.videos
-              .filter((v) => !["published", "reported"].includes(v.status))
-              .map((v) => (
-                <option key={v.id} value={v.id}>
-                  {data.channels.find((c) => c.id === v.channel_id)?.name} —{" "}
-                  {v.title}
-                </option>
-              ))}
+          <select
+            aria-label="Vidéo"
+            required
+            value={vid}
+            onChange={(e) => setVid(e.target.value)}
+          >
+            {available.map((v) => (
+              <option key={v.id} value={v.id}>
+                {data.channels.find((c) => c.id === v.channel_id)?.name} —{" "}
+                {v.title}
+              </option>
+            ))}
           </select>
         </label>
         <label>

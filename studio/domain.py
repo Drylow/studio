@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from studio.store import now
+from studio.schedule import cadence_slots
 
 TZ = ZoneInfo("Europe/Paris")
 STATUSES = {
@@ -102,25 +103,25 @@ def channel_summary(c, videos, at=None):
         key=lambda v: v["post_at"],
     )
     # Coverage stops at the first missing cadence slot, rather than claiming count*cadence days.
-    local = at.astimezone(TZ)
-    h, m = map(int, c["post_time"].split(":"))
-    slot = local.replace(hour=h, minute=m, second=0, microsecond=0)
-    if slot < local:
-        slot += timedelta(days=float(c["cadence_days"]))
     covered_until = None
-    for _ in range(365):
+    for slot in cadence_slots(c, at, at + timedelta(days=365)):
         match = next(
             (
                 v
                 for v in scheduled
-                if abs((date(v["post_at"]) - slot).total_seconds()) < 900
+                if abs(
+                    (
+                        date(v["post_at"]).astimezone(TZ).replace(tzinfo=None)
+                        - slot.replace(tzinfo=None)
+                    ).total_seconds()
+                )
+                < 900
             ),
             None,
         )
         if not match:
             break
-        covered_until = slot
-        slot += timedelta(days=float(c["cadence_days"]))
+        covered_until = date(match["post_at"])
     return dict(
         c,
         ready=len(eligible),
