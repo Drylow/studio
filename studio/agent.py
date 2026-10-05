@@ -70,6 +70,7 @@ Actions disponibles :
 - {"type":"show_channel","channel_id":entier} ou {"type":"open_page","page":"calendar|..."}.
 - {"type":"studio_settings","changes":{"paused":true,"daily_budget":nombre}} (propriétaire).
 - {"type":"job_cancel","job_id":"id exact"} pour annuler un travail.
+- {"type":"youtube_verify","channel_id":entier} pour tester l’accès enregistré auprès de Google (propriétaire).
 - {"type":"news_feed_create","channel_id":entier,"name":"...","url":"https://..."},
   {"type":"news_feed_update|news_feed_delete","feed_id":"id","enabled":bool} (propriétaire).
 - {"type":"news_config","channel_id":entier,"enabled":bool,"interval_minutes":entier} (propriétaire).
@@ -154,6 +155,12 @@ def dispatch(store, action, context, user):
         item = find(context["jobs"], action.get("job_id"))
         method, path, data = "POST", f"/jobs/{item['id']}/cancel", {}
         text = "Annulation demandée pour le travail"
+    elif kind == "youtube_verify":
+        item = find(context["channels"], action.get("channel_id"))
+        method, path = "POST", f"/youtube/{item['id']}/verify"
+        data = {"revision": item["revision"]}
+        text = "Connexion vérifiée auprès de YouTube : " + item["name"]
+        extras.append(attachment("channel", item))
     elif kind in {
         "news_feed_create",
         "news_feed_update",

@@ -163,14 +163,19 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   `studio/control.py` fournit les alertes locales, accusés de lecture par compte,
   routines partagées sans doublons et export du calendrier. Les routines ne remplacent
   jamais les contrôles de droits/qualité. Les indications de configuration ne sont
-  pas des appels réseau de vérification. Cinq parcours navigateur existent : smoke,
-  smoke:news, smoke:control, smoke:team et smoke:mobile, uniquement sur une base dédiée.
+  pas des appels réseau de vérification. Six parcours navigateur existent : smoke,
+  smoke:news, smoke:control, smoke:team, smoke:mobile et smoke:youtube, uniquement sur une base dédiée.
   Ring Dispatch (`boxing_en`) est retirée à la demande de l'utilisateur le 5 oct. :
   sept chaînes actives, historique conservé, ne pas relancer ses anciennes productions.
   Delamain gère maintenant chaînes, attribution, tâches, programmation et étapes vidéo
   via les mêmes routes protégées que l'interface ; il montre les miniatures existantes.
   Il ne remplace ni OAuth, ni les droits, ni la relecture, ni la génération des futures
   miniatures sportives. Les vues Agenda/Liste sont celles par défaut sur téléphone.
+  Connexion YouTube par bouton explicite sur chaque chaîne, test réel de l'accès et
+  déconnexion avec suspension ; aucun compte Google connecté dans cette session.
+  `DEPLOY_O2SWITCH.md` décrit désormais le nouveau site et le worker indépendant.
+  Delamain n'est pas l'agent de développement de cette conversation : un exécuteur
+  capable de modifier et déployer le code depuis son chat reste à connecter.
 
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie

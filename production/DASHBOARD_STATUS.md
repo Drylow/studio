@@ -107,6 +107,14 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 - OAuth YouTube par chaîne, chargement reprenable d'abord en privé, miniature avant
   mise en public, conservation de l'identifiant et confirmation du statut par l'API.
   Un incident de réseau déclenche une vérification de la session de chargement.
+- Bouton YouTube explicite dans Répartition, Fiches des chaînes et Réglages de chacune.
+  Fenêtre affichant nom et identifiant reliés, étapes Google, vérification de l'accès
+  sans chargement, reconnexion et confirmation avant déconnexion. Celle-ci suspend
+  l'automatisation et conserve l'identifiant pour empêcher une reconnexion accidentelle
+  à une autre chaîne. OAuth refuse les doublons et les modifications concurrentes ;
+  son retour rouvre la fiche ou affiche l'erreur, sans exposer une réponse fournisseur.
+  Les connexions sont réservées au propriétaire ; aperçu et opérations réelles restent distincts.
+  Delamain peut vérifier une connexion avec les mêmes permissions, pas accepter OAuth à ta place.
 - Publication des vidéos programmées par le worker, sous réserve des contrôles,
   de la validation requise et de l'activation de la chaîne. Elles restent privées
   jusqu'au créneau exécuté par le worker ; le serveur doit rester allumé.
@@ -115,6 +123,11 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   liens des outils redirigent vers le studio ; les moteurs, données et références sont conservés.
 - Migration SQLite additive avec sauvegarde avant migration. Les anciennes données
   ne passent pas par la réinitialisation de `database.init_db`.
+- Guide o2switch réécrit pour le nouveau studio : Passenger, worker distinct via cron/flock,
+  configuration Google commune et connexion par chaîne, mises à jour depuis GitHub.
+  Le worker distinct utilise désormais les routes protégées nécessaires à Delamain.
+  Aucun déploiement ni essai sur l'offre réelle n'a été effectué ; ressources de rendu
+  et processus permanents doivent être vérifiés sur le compte au moment de l'hébergement.
 
 ## À terminer avant les chaînes entièrement autonomes
 
@@ -136,6 +149,9 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
    constitue pas un contrôle Content ID et ne garantit pas l'absence de réclamation future.
 7. Hébergement permanent, sauvegardes récurrentes et notifications des blocages.
    Statistiques YouTube, facturation réelle et exports Discord des autres formats ensuite.
+8. Agent de développement relié au dépôt et au déploiement pour modifier le code depuis
+   le chat hébergé. Les mises à jour par Git restent possibles ; Delamain n'a pas encore
+   ce composant et ne peut pas ajouter une nouvelle page ou fonctionnalité lui-même.
 
 ## Ouvrir et utiliser
 
@@ -283,8 +299,14 @@ STUDIO_SMOKE_URL=http://127.0.0.1:5001 npm run smoke:mobile
 
 Exécuter les parcours successivement : ils modifient la base de test.
 
-Validation actuelle : **102 tests Python réussis**, compilation TypeScript/Vite,
-cinq parcours navigateur, onze pages en ordinateur et mobile, persistance des
+`npm run smoke:youtube`, sur la même instance d'aperçu dédiée, vérifie l'identité
+affichée au retour Google, quatre largeurs, le résultat du test de connexion,
+la confirmation de déconnexion et les commandes propriétaire/collaborateur.
+Les réponses Google et les changements de connexion sont simulés dans le navigateur ;
+aucun jeton n'est enregistré et aucun compte réel n'est connecté.
+
+Validation actuelle : **114 tests Python réussis**, compilation TypeScript/Vite,
+six parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
 des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.
 Le centre de contrôle, les tâches et le calendrier sont aussi vérifiés à quatre
@@ -301,6 +323,11 @@ Ils utilisent des réponses IA simulées et les routes réelles de l'application
 Les six tailles tactiles passent sans débordement de la page ; Enter crée une ligne
 dans le chat et la zone d'envoi reste visible avec une hauteur de clavier simulée.
 Ces essais Chromium ne remplacent pas une vérification sur appareil iOS/Safari réel.
+Le parcours mobile vérifie aussi les trois accès au panneau YouTube et la fermeture
+de sa fenêtre sans envoyer le formulaire de réglages. Le nouveau parcours YouTube
+teste les retours et commandes avec réponses simulées, et les tests Python utilisent
+les vraies routes pour les gardes OAuth, révisions, déconnexion, refus/erreurs Google
+et une mission Delamain exécutée par le worker distinct.
 Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
 répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
 publication ou livraison Discord n'a été lancée pendant la construction.

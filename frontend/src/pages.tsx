@@ -60,10 +60,12 @@ import { ZoomImage } from "./image-viewer";
 import { RoutinePicker } from "./routines";
 import { TeamBoard, TeamScope, matchesScope } from "./team-board";
 import { PersonalPlanning } from "./personal-planning";
+import { YouTubeConnection } from "./youtube-connection";
 
 export type PageProps = {
   data: Workspace;
   user: User;
+  preview: boolean;
   mutate: Mutate;
   go: (page: Page) => void;
   newVideo: (channel?: number) => void;
@@ -564,27 +566,14 @@ export function Channels(p: PageProps) {
                   <Plus size={16} />
                   Créer
                 </Button>
-                <button
-                  className="icon-button"
-                  aria-label={`Connecter ${c.name} à YouTube`}
-                  title={`Connecter ${c.name} à YouTube`}
-                  onClick={() =>
-                    p.mutate(async () => {
-                      if (!p.data.connections.youtube) {
-                        p.go("settings");
-                        throw new Error(
-                          "La connexion Google du studio est à configurer avant de relier les chaînes.",
-                        );
-                      }
-                      window.location.assign(
-                        `/api/studio/youtube/${c.id}/connect`,
-                      );
-                    }, "Connexion en cours.")
-                  }
-                >
-                  <Link2 size={17} />
-                </button>
               </div>
+              <YouTubeConnection
+                channel={c}
+                configured={p.data.connections.youtube}
+                preview={p.preview}
+                user={p.user}
+                mutate={p.mutate}
+              />
             </article>
           ))}
         </div>
@@ -2128,8 +2117,8 @@ export function Settings(p: PageProps) {
             </div>
             <ol className="connection-steps">
               <li>
-                Ouvre <strong>Chaînes</strong> et clique sur l’icône de
-                connexion de la chaîne.
+                Ouvre <strong>Chaînes</strong> et clique sur{" "}
+                <strong>Connecter YouTube</strong> sur la chaîne à relier.
               </li>
               <li>
                 Choisis son compte Google, puis la chaîne YouTube
@@ -2141,10 +2130,18 @@ export function Settings(p: PageProps) {
               </li>
             </ol>
             <p className="form-hint">
-              La configuration du serveur et l’adresse de retour seront
-              finalisées avec l’adresse d’hébergement choisie. Tes clés de
-              production actuelles sont déjà enregistrées.
+              Avant la première connexion, le propriétaire configure un client
+              Google pour le studio. Les étapes, le serveur o2switch et
+              l’adresse de retour sont décrits dans le guide ci-dessous.
             </p>
+            <a
+              className="button secondary"
+              href="/api/studio/youtube/setup-guide"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ouvrir le guide de configuration <ExternalLink size={16} />
+            </a>
             <Button
               variant="primary"
               onClick={() => {

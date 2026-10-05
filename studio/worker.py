@@ -5,7 +5,7 @@ import json
 import os
 import threading
 import time
-from studio.store import Store, ROOT, now, uid
+from studio.store import ROOT, now, uid
 
 _threads = {}
 
@@ -127,13 +127,19 @@ def run(store, once=False):
         time.sleep(3)
 
 
+def worker_application(config=None):
+    """A standalone worker also needs the guarded API used by Delamain actions."""
+    from studio.web import create_app
+
+    return create_app(dict(config or {}, WORKER_ENABLED=False))
+
+
 if __name__ == "__main__":
     from dotenv import load_dotenv
 
     load_dotenv(ROOT / ".env")
-    store = Store(os.getenv("DB_PATH") or ROOT / "drylow_studio.db")
-    store.migrate()
-    from studio.newsroom import initialize
-
-    initialize(store)
+    app = worker_application()
+    if app.config["PREVIEW"]:
+        raise SystemExit("L’aperçu ne lance pas le moteur de production.")
+    store = app.extensions["studio_store"]
     run(store)

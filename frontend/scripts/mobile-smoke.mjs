@@ -72,6 +72,54 @@ try {
   });
   assert.equal(colors.line, colors.letter);
   assert.equal(colors.width, "2px");
+  const connection = page.getByRole("button", {
+    name: "Connexion YouTube de Cage Dispatch",
+    exact: true,
+  });
+  assert.ok((await connection.boundingBox()).height >= 44);
+  await connection.tap();
+  let youtube = page.getByRole("dialog", {
+    name: "YouTube · Cage Dispatch",
+    exact: true,
+  });
+  await youtube.waitFor();
+  assert.ok(
+    await youtube
+      .getByRole("button", { name: "Connecter avec Google", exact: true })
+      .isDisabled(),
+  );
+  await youtube.getByText(/Aperçu : les connexions Google/).waitFor();
+  await youtube.getByRole("button", { name: "Fermer", exact: true }).tap();
+  await page
+    .getByRole("button", { name: "Fiches des chaînes", exact: true })
+    .tap();
+  await connection.tap();
+  await youtube.waitFor();
+  await youtube.getByRole("button", { name: "Fermer", exact: true }).tap();
+  await page.getByRole("button", { name: "Répartition", exact: true }).tap();
+  await page
+    .locator(".team-channel-name")
+    .filter({ hasText: "Cage Dispatch" })
+    .tap();
+  const settingsDialog = page.getByRole("dialog", {
+    name: "Cage Dispatch",
+    exact: true,
+  });
+  await settingsDialog
+    .getByRole("button", {
+      name: "Connexion YouTube de Cage Dispatch",
+      exact: true,
+    })
+    .tap();
+  await youtube.waitFor();
+  await youtube.getByRole("button", { name: "Fermer", exact: true }).tap();
+  await settingsDialog.getByLabel("Nom de la chaîne").waitFor();
+  await settingsDialog
+    .getByRole("button", { name: "Annuler", exact: true })
+    .tap();
+  console.log(
+    "Touch YouTube buttons in team, channel cards and settings, preview guards and nested dialog: passed",
+  );
   await page.getByRole("button", { name: "Ouvrir le menu", exact: true }).tap();
   await page.locator("nav button").filter({ hasText: "Tâches" }).tap();
   await page.getByRole("button", { name: "Nouvelle tâche", exact: true }).tap();

@@ -1722,6 +1722,74 @@ svg {
 .channel-card-bottom .icon-button {
   padding: 7px;
 }
+.youtube-connect-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #30545b;
+  background: #11252b;
+  color: var(--cyan);
+  font-size: 12px;
+  text-align: left;
+}
+.youtube-connect-button span {
+  flex: 1;
+}
+.youtube-connect-button.linked {
+  color: var(--cyan);
+  border-color: #365345;
+}
+.youtube-connect-button:hover {
+  background: #18353b;
+}
+.team-channel .youtube-connect-button {
+  margin: 5px 0 15px;
+}
+.youtube-connection > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.youtube-identity {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+.youtube-identity span {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  font: 12px var(--mono);
+}
+.youtube-identity .text-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.youtube-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.youtube-check-result {
+  color: var(--cyan) !important;
+}
+.youtube-connection .error-text {
+  color: var(--danger);
+}
+.youtube-disconnect {
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+.youtube-disconnect p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
 .filters {
   display: flex;
   align-items: center;

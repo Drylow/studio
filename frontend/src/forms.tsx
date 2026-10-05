@@ -15,8 +15,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { api, localTime, parisToIso, labels, dateLabel } from "./api";
-import type { Channel, Video, Workspace, Task } from "./types";
+import type { Channel, Video, Workspace, Task, User } from "./types";
 import { Modal, Button, Tag, VideoThumb } from "./components";
+import { YouTubeConnection } from "./youtube-connection";
 
 export type Mutate = (
   operation: () => Promise<unknown>,
@@ -27,10 +28,16 @@ export function ChannelForm({
   channel,
   close,
   mutate,
+  user,
+  configured,
+  preview,
 }: {
   channel: Channel;
   close: () => void;
   mutate: Mutate;
+  user: User;
+  configured: boolean;
+  preview: boolean;
 }) {
   const [form, setForm] = useState({ ...channel });
   const [busy, setBusy] = useState(false);
@@ -74,6 +81,14 @@ export function ChannelForm({
       close={close}
     >
       <form onSubmit={save} className="form">
+        <YouTubeConnection
+          channel={channel}
+          configured={configured}
+          preview={preview}
+          user={user}
+          mutate={mutate}
+          onDisconnected={close}
+        />
         <div className="form-grid">
           <label>
             Nom de la chaîne

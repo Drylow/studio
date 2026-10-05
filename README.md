@@ -11,6 +11,8 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
   alertes propre à chaque compte et état du moteur/configurations.
 - Sept chaînes actives, réglages propres à chaque chaîne et mode manuel/automatique.
   Ring Dispatch est retirée ; son historique reste conservé, sans nouveaux travaux.
+- Bouton YouTube sur chaque chaîne : nom et identifiant reliés, connexion Google,
+  vérification de l'accès et déconnexion avec suspension de l'automatisation.
 - Répartition Drylow / Kanye par glisser-déposer, déplacement sur téléphone et vue
   « Mes chaînes ». Les chaînes non attribuées restent dans « À répartir ».
 - Radar d'actualités MMA et foot : sources RSS datées, sujets récents et préparation
@@ -109,14 +111,19 @@ reprendre un incident sans créer un second chargement.
 
 Avant un hébergement public : configurer HTTPS, `COOKIE_SECURE=1`, un serveur WSGI,
 les sauvegardes et le client Google. Les étapes Google et la connexion par chaîne
-figurent dans **Réglages** ; l'essai initial doit être une publication privée.
+figurent dans **Réglages** ; un essai réel reste nécessaire avant les cadences.
+Le guide actuel [o2switch](DEPLOY_O2SWITCH.md) décrit Passenger, le worker distinct,
+Google et les mises à jour après hébergement. Un agent de développement capable
+de modifier et déployer le code depuis Delamain reste à connecter ; cet assistant
+gère aujourd'hui les données et les actions du studio.
 
 Dans **Delamain**, demander par exemple « Ajoute une chaîne de foot nommée… »,
 « Attribue Cage Dispatch à Kanye », « Programme cette vidéo demain à 18 h » ou
 « Montre-moi les miniatures des dernières vidéos ». Il utilise les permissions du
 compte connecté et les mêmes contrôles que les fiches. Une nouvelle chaîne commence
 en mode avec validation, désactivée. Un envoi accepté est mis en file ; seul le moteur
-confirme sa livraison ou publication. La connexion Google se fait dans **Réglages**.
+confirme sa livraison ou publication. L'accès Google du serveur se configure depuis
+le guide de **Réglages** ; chaque chaîne se relie dans **Chaînes → Connecter YouTube**.
 Delamain ne valide pas les droits ou la relecture et ne génère pas encore les
 miniatures sportives. Le serveur, son worker et la configuration IA sont nécessaires
 pour utiliser cet assistant sur un hébergement permanent.
@@ -142,6 +149,8 @@ Le parcours news nécessite des infos dans le radar de cette base dédiée ; le 
 nécessite le compte collègue de test ; le parcours mobile nécessite une miniature
 jointe dans le chat de la base dédiée. Commandes complètes dans
 [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md#développement-et-vérifications).
+`smoke:youtube` vérifie aussi l'interface d'un compte relié avec des réponses Google
+simulées ; il exige une instance d'aperçu dédiée et ne connecte aucun compte réel.
 
 ## Moteurs et références conservés
 

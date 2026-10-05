@@ -439,6 +439,7 @@ function App() {
   const p: PageProps = {
     data,
     user: boot.user,
+    preview: boot.preview,
     mutate,
     go,
     newVideo,
@@ -781,6 +782,9 @@ function App() {
       {selectedChannel && (
         <ChannelForm
           channel={selectedChannel}
+          user={boot.user}
+          configured={data.connections.youtube}
+          preview={boot.preview}
           close={() => setEditingChannel(null)}
           mutate={mutate}
         />

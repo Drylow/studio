@@ -4,6 +4,7 @@ import type { Channel, User } from "./types";
 import type { PageProps } from "./pages";
 import { api } from "./api";
 import { Button, ChannelMark, Empty, Tag } from "./components";
+import { YouTubeConnection } from "./youtube-connection";
 
 const DRAG_TYPE = "application/x-edgerunners-channel";
 
@@ -184,6 +185,13 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
                           : `tous les ${c.cadence_days} j`}
                       </span>
                     </div>
+                    <YouTubeConnection
+                      channel={c}
+                      configured={p.data.connections.youtube}
+                      preview={p.preview}
+                      user={p.user}
+                      mutate={p.mutate}
+                    />
                     <label className="team-move">
                       Déplacer vers…
                       <select

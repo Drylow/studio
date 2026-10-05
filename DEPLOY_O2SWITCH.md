@@ -1,156 +1,180 @@
-# Déploiement Edgerunners Studio sur o2switch — edgerunners.fr
+# Edgerunners Studio sur o2switch
 
-Guide clic par clic. ~20–30 min. L'app est en **Flask (Python)** ; les outils
-sont 100 % navigateur → aucune lib vidéo/IA côté serveur, install ultra-légère.
+Guide du 5 octobre 2026 pour le nouveau studio React/Flask. L'ancien guide,
+son archive de déploiement, son écran boss/guest et son cron HTTP ne s'appliquent plus.
+Aucun déploiement o2switch ni connexion Google réelle n'a été effectué ici.
 
-> Tu déploies à partir du fichier **`drylow_deploy.zip`** (déjà prêt). Il contient
-> tout le nécessaire, y compris le `.env` (avec tes mots de passe) et
-> `tool_apps/config.js` (avec tes clés API). **Ces 2 fichiers contiennent des
-> secrets — supprime le zip de ton PC après l'upload, et ne le mets jamais sur
-> un dépôt public.** Les secrets restent protégés sur le serveur (cf. sécurité).
+## Ce qui continue après l'hébergement
 
----
+Les chaînes, tâches, réglages, vidéos et créneaux sont enregistrés dans SQLite.
+Delamain utilise le service IA configuré sur le serveur ; c'est l'assistant intégré
+au site, distinct de la conversation de développement. Il reste utilisable quand
+le site est hébergé, avec les permissions du compte connecté et les contrôles habituels.
+La publication directe YouTube ne nécessite pas Discord.
 
-## 1. Créer l'app Python dans cPanel
+L'interface et le code peuvent être mis à jour depuis GitHub même après l'hébergement.
+Le chat Delamain ne dispose pas encore d'un agent de développement capable de modifier,
+tester et déployer le code. Pour cette capacité, il faudra connecter un exécuteur
+séparé au dépôt, avec une branche de travail, des tests, un aperçu des changements,
+puis un déploiement et la possibilité de revenir à la version précédente.
+Ce composant n'est pas implémenté ni connecté ; ne pas annoncer qu'une demande dans
+Delamain peut déjà créer une nouvelle page ou une nouvelle fonctionnalité du site.
 
-1. cPanel → section **Logiciels** → **« Setup Python App »** → **CREATE APPLICATION**
-2. Remplis :
-   - **Python version** : la plus récente (3.11+)
-   - **Application root** : `drylow_studio`  → sera `/home/drdr5446/drylow_studio/`
-     ⚠️ surtout **pas** dans `public_html` (sécurité)
-   - **Application URL** : `edgerunners.fr`
-   - **Application startup file** : `passenger_wsgi.py`
-   - **Application entry point** : `application`
-3. **CREATE**. cPanel affiche une commande du type :
-   ```
-   source /home/drdr5446/virtualenv/drylow_studio/3.11/bin/activate && cd /home/drdr5446/drylow_studio
-   ```
-   **Garde-la** (étape 3).
+## 1. Créer l'application Python
 
----
+1. cPanel → Logiciels → Setup Python App → Create Application.
+2. Choisir Python 3.11 ou une version plus récente compatible avec les dépendances.
+3. Application root : `edgerunners_studio`, hors de `public_html`.
+4. Application URL : sélectionner le domaine définitif du studio.
+5. Application startup file : `passenger_wsgi.py`.
+6. Application entry point : `application`.
+7. Cliquer Create et conserver la commande `source ...` proposée par cPanel.
 
-## 2. Uploader le code
+Importer le code actuel de `Drylow/studio`, branche `main`, par Git ou gestionnaire
+de fichiers. Le bundle compilé dans `static/studio/` est déjà dans le dépôt ; Node
+n'est pas requis pour afficher le site. Les moteurs documentaires peuvent en avoir besoin.
+Ne pas importer un ancien zip contenant une interface `tool_apps/config.js`.
+Conserver les données existantes et configurer leur chemin ; ne pas remplacer une base
+en service par une base vide ni publier `.env`, les médias privés ou SQLite sous `public_html`.
 
-1. cPanel → **Gestionnaire de fichiers** → `/home/drdr5446/drylow_studio/`
-2. **Téléverser** → `drylow_deploy.zip`
-3. Clic droit sur le zip → **Extraire** → dans le même dossier
-4. Supprime le zip une fois extrait
-   - ⚠️ Passenger a peut-être créé un `passenger_wsgi.py` d'exemple : laisse celui
-     du zip écraser/remplacer (le nôtre est le bon).
+Dans cPanel → Terminal : coller la commande `source ...` fournie, se placer dans
+le dossier de l'application, puis lancer :
 
----
+```bash
+python -m pip install -r requirements.txt
+```
 
-## 3. Installer les dépendances
+Les dépendances comprennent les moteurs vidéo, pas seulement Flask. Vérifier sur
+l'offre choisie le stockage, la mémoire, le temps de rendu et les exécutables Node/ffmpeg.
+Si les rendus dépassent les ressources disponibles, utiliser un VPS adapté. Le code
+actuel du worker et du serveur nécessite la même base et les mêmes fichiers : deux
+copies SQLite sur des machines différentes ne partagent pas les tâches.
 
-1. cPanel → **Terminal**
-2. Colle la commande `source ...` de l'étape 1 (prompt devient `(drylow_studio)`)
-3. Lance :
-   ```bash
-   pip install -r requirements.txt
-   ```
-   (≈ 30 s : juste Flask + python-dotenv)
+## 2. Configurer le serveur une fois
 
----
+Créer `.env` à partir de `.env.example` dans le dossier privé de l'application,
+ou utiliser les variables cPanel pour le serveur. Le worker lancé en cron doit
+recevoir les mêmes valeurs : les variables cPanel de l'application web ne lui sont
+pas automatiquement transmises. Un `.env` privé commun est lu par les deux processus.
 
-## 4. Vérifier le `.env`
+Régler ces valeurs sans afficher les secrets dans les logs :
 
-Le `.env` est déjà dans le zip avec les bonnes valeurs **prod** :
-`FLASK_ENV=production`, `COOKIE_SECURE=1`, `DB_PATH=/home/drdr5446/drylow_studio/drylow_studio.db`,
-`FLASK_SECRET_KEY` (aléatoire), `ACCESS_PASSWORD` (guest), `BOSS_PASSWORD` (boss),
-`OAUTH_REDIRECT_BASE=https://edgerunners.fr` (publication YouTube),
-`WORKER_CRON_SECRET` (rempli — sert au CRON de l'étape 8),
-+ les clés API (FAL, ElevenLabs, Pexels, LLM, Lore worker, Google OAuth).
+```dotenv
+FLASK_ENV=production
+COOKIE_SECURE=1
+STUDIO_PREVIEW=0
+STUDIO_WORKER_ENABLED=0
+DB_PATH=/home/TONUSER/edgerunners_data/studio.db
+OAUTH_REDIRECT_BASE=https://ton-domaine.fr
+```
 
-→ Rien à faire normalement. (Optionnel sécurité : régénère la clé secrète avec
-`python -c "import secrets; print(secrets.token_hex(32))"` et remplace
-`FLASK_SECRET_KEY` dans `.env`.)
+Remplacer `TONUSER` et le domaine par ceux de l'hébergement. `DB_PATH` doit désigner
+la base conservée ou son transfert contrôlé, avec ses productions disponibles au bon
+chemin. `FLASK_SECRET_KEY` doit rester stable entre serveur web, worker et mises à jour.
+Les clés IA/voix/montage existantes restent privées côté serveur ; ne pas les redemander
+si elles sont déjà configurées. Donner à `.env` des droits de lecture limités au compte.
+Le worker intégré est désactivé ici : un worker distinct est lancé à l'étape 5.
 
-⚠️ **YouTube OAuth** : dans Google Cloud Console (écran OAuth de l'app), l'URI de
-redirection autorisée doit être **`https://edgerunners.fr/api/youtube/callback`**
-(sinon la connexion d'une chaîne échouera). À vérifier une fois.
+Activer HTTPS dans cPanel → SSL/TLS Status → AutoSSL. Puis Setup Python App → Restart.
+Au premier lancement, utiliser le code `STUDIO_BOOTSTRAP_TOKEN` du fichier privé dans
+l'écran Code d'installation, créer Drylow, puis Réglages → Équipe → Ajouter Kanye.
+Les mots de passe ACCESS_PASSWORD/BOSS_PASSWORD et l'ancien triple-clic ne sont plus utilisés.
 
-La base de données SQLite se crée **toute seule** au 1er démarrage (fraîche, vide).
+## 3. Créer l'accès Google pour tout le studio
 
----
+Cette configuration se fait une seule fois ; la connexion des chaînes se fait ensuite
+dans le studio. Utiliser Google Cloud Console : https://console.cloud.google.com/
 
-## 5. Démarrer + HTTPS
+1. Créer ou sélectionner un projet.
+2. APIs et services → Bibliothèque → YouTube Data API v3 → Activer.
+3. Google Auth Platform : renseigner Branding, Audience et les adresses demandées.
+   Pour un essai en mode Testing, ajouter les comptes Google concernés comme utilisateurs de test.
+4. Data Access : configurer les autorisations YouTube correspondant à la lecture et
+   à la gestion des vidéos (`youtube.readonly` et `youtube.force-ssl`).
+5. Clients → Create client → Web application.
+6. Authorized redirect URIs : ajouter exactement l'adresse suivante, avec ton domaine :
 
-1. **Setup Python App** → ton app → **RESTART**
-2. cPanel → **SSL/TLS Status** → active **AutoSSL** (Let's Encrypt, gratuit) sur
-   `edgerunners.fr` si pas déjà fait.
-3. Ouvre **https://edgerunners.fr** → tu dois voir le gate Night City. 🎉
+```text
+https://ton-domaine.fr/api/studio/youtube/callback
+```
 
-> Erreur 500 ? cPanel → **Setup Python App** → logs, ou `stderr.log` dans le
-> dossier de l'app.
+7. Enregistrer le client. Copier son identifiant dans `GOOGLE_CLIENT_ID` et son secret
+   dans `GOOGLE_CLIENT_SECRET`, uniquement dans la configuration privée du serveur/worker.
+8. Garder `OAUTH_REDIRECT_BASE=https://ton-domaine.fr` cohérent avec cette adresse.
+9. Redémarrer l'application et le worker. Réglages → Connexions indique la présence
+   de cette configuration ; ce badge n'est pas un test réseau.
 
----
+Les autorisations en mode Testing peuvent expirer et Google peut exiger une validation
+ou un audit pour l'usage prévu et la publication publique via l'API. Un projet non audité
+peut rester limité aux chargements privés. Vérifier ces conditions avant d'activer
+la publication autonome ; une connexion réussie ne prouve pas que l'application
+est autorisée à rendre les vidéos publiques.
+Documentation Google : https://developers.google.com/youtube/v3/docs/videos/insert
 
-## 6. Te déclarer boss (IMPORTANT, à faire en 1er)
+## 4. Relier chaque chaîne et publier directement
 
-1. Sur https://edgerunners.fr, **triple-clic sur le kanji サムライ** en bas du gate
-   → passe en mode ROOT (gold) → entre le **BOSS_PASSWORD**.
-2. Va dans **SURVEILLANCE** → clique **★ MÉMORISER CET APPAREIL** (tu ne
-   retaperas plus le mot de passe sur cet appareil).
-3. Clique **⚠ PURGER — NE GARDER QUE MOI** → efface tout appareil/IP de test,
-   ne garde que le tien.
+1. Studio → Chaînes → Connecter YouTube sur la chaîne, en Répartition ou Fiches des chaînes.
+   Le même bouton est présent dans ses Réglages. La connexion est réservée au propriétaire.
+2. Dans la fenêtre : Connecter avec Google → choisir le compte et la chaîne correspondants.
+3. Accepter les autorisations ; le studio affiche le nom et l'identifiant de la chaîne reliée.
+   La fiche doit correspondre au vrai nom YouTube lors de la première connexion.
+   Ensuite, l'identifiant mémorisé empêche de reconnecter accidentellement une autre chaîne.
+4. Cliquer Vérifier la connexion pour interroger Google sans envoyer de vidéo.
+   Delamain peut aussi le faire si le compte demandeur est propriétaire.
+5. Recommencer pour chacune des chaînes.
 
----
+La connexion ne lance aucune vidéo et n'active pas l'automatisation. Déconnecter demande
+confirmation, retire l'accès local et met la chaîne en pause ; son identifiant reste
+mémorisé pour les futures reconnexions. Cela ne supprime pas son compte YouTube.
 
-## 7. Donner l'accès à un invité
+Dans une fiche vidéo : terminer les fichiers, la miniature, les droits et la relecture,
+valider si nécessaire, puis Publication → Publier sur YouTube. On peut aussi demander à Delamain
+« Publie [titre exact] sur [chaîne] ». Une mise en file attend le worker ; l'identifiant
+YouTube et le statut confirmé apparaissent ensuite. Discord reste une action séparée.
+Les formats Oddly/History restent bloqués tant que leur adaptateur de droits n'est pas terminé.
+Aucun réglage ne remplace les droits ou les contrôles des contenus réellement rendus.
 
-Donne-lui juste le **ACCESS_PASSWORD** (guest). Il devra se reconnecter à chaque
-session, n'aura accès qu'à l'accueil (pas aux outils, pas à la surveillance, pas
-aux clés API).
+## 5. Garder Delamain et les publications en service
 
----
+Le processus web Passenger peut être recyclé. Utiliser un worker séparé pour traiter
+les demandes et créneaux même quand personne ne regarde le site. Le module actuel
+crée son propre accès aux routes protégées ; il ne démarre pas un second serveur web.
 
-## 8. Activer la production automatique (CRON)
+Dans cPanel → Tâches cron : choisir Toutes les minutes. Exemple à adapter aux chemins
+réels de l'application et du Python du virtualenv fourni par cPanel :
 
-Pour que Delamain produise + programme les vidéos **tout seul** (même quand
-personne n'est sur le site), il faut un CRON qui « pousse » l'atelier régulièrement.
+```bash
+flock -n /home/TONUSER/.edgerunners-worker.lock /bin/bash -c 'cd /home/TONUSER/edgerunners_studio && exec /home/TONUSER/virtualenv/edgerunners_studio/3.11/bin/python -m studio.worker' >> /home/TONUSER/edgerunners-worker.log 2>&1
+```
 
-1. cPanel → section **Avancé** → **« Cron Jobs » (Tâches planifiées)**
-2. **Common settings** → choisis **« Toutes les 10 minutes »** (`*/10 * * * *`)
-3. **Command** → colle (remplace `CE_SECRET` par la valeur **WORKER_CRON_SECRET**
-   de ton `.env`) :
-   ```bash
-   curl -s "https://edgerunners.fr/api/delamain/worker/tick?key=CE_SECRET" >/dev/null 2>&1
-   ```
-4. **Add New Cron Job**.
+`flock` évite de lancer plusieurs workers ; le cron relance le processus s'il se termine.
+L'ancien `/api/delamain/worker/tick` ne fait pas partie du nouveau site. L'installation
+réelle, les limites du compte et un cycle complet doivent être vérifiés sur l'hébergement.
+Contrôler Centre de contrôle → moteur disponible et, d'abord, une tâche Delamain sans
+production, puis un essai contrôlé sur une vidéo approuvée avant d'activer les cadences.
+Le pipeline charge d'abord en privé avant de demander la mise en public ; un essai
+restant volontairement privé jusqu'au bout n'est pas encore proposé dans l'interface.
 
-> Chaque appel fait avancer la production d'**une étape** (1 rendu/publication à
-> la fois). Les appels qui se chevauchent ne font rien (verrou anti-doublon). Sans
-> ce CRON, la production n'avance que quand tu as Delamain ouvert dans le navigateur.
+## 6. Mettre à jour le site déjà hébergé
 
-⚠️ **Fuseau horaire** : pour que les heures de publication programmées soient
-exactes, le serveur doit être en **Europe/Paris**. cPanel n'expose pas toujours le
-fuseau ; en cas de décalage à l'usage, on ajustera (l'heure est interprétée dans le
-fuseau du serveur).
+1. Réglages → mettre le studio en pause et attendre la fin des travaux en cours.
+2. Désactiver temporairement le cron. Dans Terminal, `ps -u "$USER" -o pid,args`
+   affiche les processus ; relever le PID de la ligne `python -m studio.worker`,
+   puis `kill PID` pour arrêter uniquement ce worker. Remplacer PID par ce numéro.
+3. Sauvegarder la base et les médias avec une méthode cohérente pour SQLite ; ne pas
+   copier seulement le fichier `.db` pendant qu'une connexion écrit en WAL.
+4. Dans le dossier privé du code : `git pull --ff-only origin main`, ou uploader les
+   fichiers modifiés et le bundle compilé. Conserver `.env`, SQLite et les productions.
+5. Si requirements.txt a changé, relancer `python -m pip install -r requirements.txt`
+   dans le virtualenv cPanel.
+6. Setup Python App → sélectionner le studio → Restart.
+7. Réactiver le cron, vérifier connexion, tâches, planning et moteur, puis enlever la pause.
 
----
+En cas de problème, remettre le code de la version précédente et restaurer les données
+uniquement selon la migration et la sauvegarde concernées. Garder une sauvegarde indépendante
+du serveur. Le script d'un agent de développement devra automatiser ce parcours avant
+que Delamain puisse appliquer lui-même une modification du code depuis le site.
 
-## Après une mise à jour du code
-
-1. Re-upload les fichiers modifiés (Gestionnaire de fichiers)
-2. **Setup Python App** → **RESTART**
-
-> ⚠️ Si ton ami renvoie un zip d'un outil, ré-applique les retouches directes
-> (selects, recherche de voix, suppression Studio HeyGen) — demande-moi.
-
----
-
-## Sécurité (déjà en place, vérifié)
-
-- Tout le site est derrière le gate (mot de passe). Guests bloqués sur outils /
-  surveillance / API (403/redirect).
-- `config.js` (clés API) servi **uniquement** derrière le gate boss
-  (`/toolfiles/`), jamais via une URL publique. Path traversal bloqué.
-- Mots de passe comparés en temps constant (anti-timing), anti-bruteforce
-  (verrou après 8 essais ratés / 10 min), aucun mot de passe en dur dans le code.
-- HTTPS forcé + HSTS en prod, cookies httponly + Secure + SameSite.
-- `FLASK_ENV=production` → aucun mode debug exposé.
-- **Connexion auto = par appareil uniquement** (cookie secret aléatoire), JAMAIS
-  par IP. Une IP est partageable et usurpable (X-Forwarded-For) → ne donne aucun
-  accès. C'est pour ça qu'à l'étape 6 tu « mémorises ton appareil » (pas ton IP).
-- Secret du CRON (`WORKER_CRON_SECRET`) comparé en temps constant ; secret vide
-  = accès cron refusé (pas d'ouverture par défaut).
+Sources o2switch consultées le 5 octobre 2026 :
+- Python : https://faq.o2switch.fr/cpanel/logiciels/hebergement-python-multi-version/
+- Cron et flock : https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/taches-cron

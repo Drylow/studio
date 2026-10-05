@@ -11,7 +11,8 @@
     "smoke:news": "node scripts/news-smoke.mjs",
     "smoke:control": "node scripts/control-smoke.mjs",
     "smoke:team": "node scripts/team-smoke.mjs",
-    "smoke:mobile": "node scripts/mobile-smoke.mjs"
+    "smoke:mobile": "node scripts/mobile-smoke.mjs",
+    "smoke:youtube": "node scripts/youtube-smoke.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

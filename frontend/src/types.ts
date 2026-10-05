@@ -11,6 +11,8 @@ export type Channel = {
   responsible_id: string | null;
   post_time: string;
   connected: number;
+  yt_channel_id: string;
+  yt_channel_title: string;
   key: string;
   template_key: string;
   format: string;

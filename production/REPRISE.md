@@ -21,8 +21,19 @@ et les miniatures/planches de contrôle s'agrandissent avec zoom.
 
 Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.
 L'ancien nom est remplacé dans l'affichage et les guides ; les noms techniques du
-dépôt et des bases sont conservés pour préserver les données. Validation : 102 tests
-Python et cinq parcours navigateur, sur ordinateur et mobile.
+dépôt et des bases sont conservés pour préserver les données. Validation : 114 tests
+Python et six parcours navigateur, sur ordinateur et mobile.
+
+Chaque chaîne possède maintenant un bouton YouTube visible en Répartition, Fiches
+et Réglages : connexion/reconnexion propriétaire, identité reliée, vérification réelle
+de l'accès, confirmation avant déconnexion et pause automatique. Discord est facultatif
+pour la publication directe. Aucun compte Google n'est connecté ici et aucun upload réel
+n'a été testé. Guide `DEPLOY_O2SWITCH.md` réécrit : l'ancien zip, gate et cron HTTP ne
+correspondent plus au nouveau site. Worker indépendant corrigé pour exécuter les actions
+de Delamain via les mêmes routes que l'interface ; cron/flock documenté selon o2switch.
+Le site pourra être mis à jour après hébergement via GitHub/redémarrage. Delamain est
+un assistant intégré distinct de cette conversation ; l'agent de développement capable
+de modifier, tester et déployer son code depuis le chat reste à brancher.
 
 **Ring Dispatch est retirée le 5 octobre à la demande de l'utilisateur.** Sept chaînes
 restent actives ; son historique est conservé, ses travaux en attente sont annulés.
@@ -51,7 +62,7 @@ Routines partagées de recherche, publication et organisation hebdomadaire, sans
 doublons et sans appels payants. Recherche/filtres/retards dans les tâches, accès à
 la vidéo liée. Export mensuel `.ics` par chaîne ; copie du planning, pas abonnement.
 Une perte de connexion affiche la dernière lecture et un bouton pour réessayer ;
-la lecture reprend au retour du réseau. `studio/control.py` et les cinq parcours
+la lecture reprend au retour du réseau. `studio/control.py` et les six parcours
 `frontend/scripts/*smoke.mjs` portent ces contrôles. L'automatisation éditoriale,
 les droits complets et la connexion réelle Google restent à terminer comme indiqué
 dans le document d'état ; ne pas les présenter comme opérationnels.
