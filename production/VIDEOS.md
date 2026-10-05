@@ -109,6 +109,16 @@ RMC, sans prétendre l'avoir vérifié directement. Le défi d'Imavov est condit
 annoncé. L'intention de Mbappé envers Mourinho reste une interprétation ; sa réponse sur le Ballon d'Or
 concerne une autre allégation.
 
+5 octobre, retour utilisateur : import des trois vidéos sur YouTube sans réclamation de droits signalée.
+Publication en cours selon l'utilisateur ; état final non vérifié directement dans YouTube Studio.
+Le nouveau contrôle de licences (`rights_audit.json`) distingue ce résultat des droits de réutilisation :
+miniatures sous licences documentées et musique originale, mais images de presse des montages non autorisées
+pour réutilisation automatique tant que leurs droits ne sont pas établis. Pour les prochaines vidéos,
+le contrôle des droits est obligatoire et bloquant avant automatisation.
+L'utilisateur conserve les deux nouvelles miniatures déjà reçues, valide leur thème pour toutes les suivantes
+et demande l'arrêt des variantes supplémentaires. Références sauvegardées dans
+`presets/news_thumbnails/approved_2026-10-05/` ; aucun nouvel envoi de variantes après cette demande.
+
 **France–Belgique** : quatrième sujet prévu après le match du 5 octobre (20 h 45 heure belge).
 Collecte préparée et testée avec refus des scores provisoires, absents et des matchs abandonnés ;
 voir `production/NEWS_BRIEFS.md`. Aucun résumé produit avant résultat final, aucune attente automatique

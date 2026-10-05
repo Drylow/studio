@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-05T17:58:37.043133+00:00",
+  "video_md5": "8170ffa1612b18845253c6f1c0445300",
+  "youtube_check": {
+    "status": "no_claim_reported_by_user",
+    "independently_verified": false
+  },
+  "thumbnail_photos": [
+    {
+      "subject": "Nassourdine Imavov",
+      "source": "https://commons.wikimedia.org/wiki/File:Nassourdine_Imavov.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:JoeKhanMMA&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:JoeKhanMMA (page does not exist)\">JoeKhanMMA</a>",
+      "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+    },
+    {
+      "subject": "Sean Strickland",
+      "source": "https://commons.wikimedia.org/wiki/File:Sean_Strickland_at_UFN_200.png",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "MMAnytt",
+      "credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=jWAC4i75J5Q\"><bdi lang=\"\">https://www.youtube.com/watch?v=jWAC4i75J5Q</bdi></a> – View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=jWAC4i75J5Q\">archive.org</a></bdi>  @0.16"
+    }
+  ],
+  "music": {
+    "source": "services/music.py",
+    "kind": "original_synthesized",
+    "external_samples": false
+  },
+  "fonts": {
+    "license": "SIL Open Font License 1.1",
+    "evidence": "static/fonts/LICENSES.txt"
+  },
+  "press_visuals": [
+    {
+      "url": "https://www.actumma.com/wp-content/uploads/2026/10/nassourdine-imavov-fait-une-proposition-hallucinante-a-sean-strickland.jpg",
+      "credit": "Photo: ActuMMA",
+      "reuse_rights": "not_established"
+    }
+  ],
+  "voice": {
+    "provider": "Algrow",
+    "source": "https://algrow.online/terms",
+    "automated_access_permission": "needs_api_scope_confirmation"
+  },
+  "automation_clearance": "blocked",
+  "notes": "Le contrôle YouTube rapporté ne vaut pas licence. Les images de presse exigent une autorisation ou un remplacement avant toute réutilisation automatique."
+}

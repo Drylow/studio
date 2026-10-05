@@ -1,8 +1,9 @@
 """Musiques de fond libres de droits, générées localement (aucune source externe).
 
 Ambiances « lofi » très douces : nappes d'accords + arpège feutré + léger souffle vinyle,
-synthétisés par ffmpeg (aevalsrc). Comme rien n'est échantillonné, il n'y a aucun
-risque de réclamation Content ID sur YouTube. Pensées pour rester très bas sous la voix.
+synthétisés par ffmpeg (aevalsrc), sans échantillon d'un enregistrement externe.
+Le contrôle Content ID reste à effectuer sur YouTube ; une génération locale
+ne garantit pas l'absence de réclamation. Pensées pour rester très bas sous la voix.
 """
 import os
 

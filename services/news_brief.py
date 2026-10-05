@@ -10,6 +10,7 @@ import urllib.request
 from pathlib import Path
 
 from services import media, newsvid, render, tts
+from services.news_rights import image_rights
 
 REPO = Path(__file__).resolve().parents[1]
 FONTS = REPO / "static" / "fonts"
@@ -43,6 +44,7 @@ def validate(plan):
         visual = seg.get("visual") or {}
         if visual and (not visual.get("url", "").startswith("https://") or not visual.get("credit")):
             raise ValueError("Une image nécessite une URL HTTPS et un crédit.")
+        image_rights(visual)
     text = "\n\n".join(s["narration"].strip() for s in segments)
     if not 550 <= len(text.split()) <= 900:
         raise ValueError("Une analyse de 4–6 minutes doit avoir entre 550 et 900 mots.")

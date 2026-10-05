@@ -1,0 +1,16 @@
+{
+  "user_instruction": "Conserver exactement le thème des deux miniatures déjà reçues ; arrêter les variantes supplémentaires.",
+  "date": "2026-10-05",
+  "references": [
+    {
+      "file": "reference_01.png",
+      "sha256": "a86cd8158892e3e47aebacc132383a061b5bc955909c4b731aa6933e4958fcec",
+      "delivered_order": 1
+    },
+    {
+      "file": "reference_02.png",
+      "sha256": "8c5cca43b947860f213af0f2a535ed7471ebc73ca39382b2d7a4d4e40c3bac06",
+      "delivered_order": 2
+    }
+  ]
+}

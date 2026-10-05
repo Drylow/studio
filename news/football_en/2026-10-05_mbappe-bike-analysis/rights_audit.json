@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-05T17:58:37.042583+00:00",
+  "video_md5": "2f01f350aab1586ac7679ccb9ad4bd8e",
+  "youtube_check": {
+    "status": "no_claim_reported_by_user",
+    "independently_verified": false
+  },
+  "thumbnail_photos": [
+    {
+      "subject": "Kylian Mbappé",
+      "source": "https://commons.wikimedia.org/wiki/File:Kylian_Mbappe_France_v_Senegal_16_June_2026-391_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Berlination\" title=\"User:Berlination\">Bryan Berlin</a>",
+      "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+    },
+    {
+      "subject": "José Mourinho",
+      "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Mourinho_20250206_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "<div class=\"fn value\">\n<a href=\"//commons.wikimedia.org/wiki/User:Zafer\" title=\"User:Zafer\">Zafer</a></div>",
+      "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+    }
+  ],
+  "music": {
+    "source": "services/music.py",
+    "kind": "original_synthesized",
+    "external_samples": false
+  },
+  "fonts": {
+    "license": "SIL Open Font License 1.1",
+    "evidence": "static/fonts/LICENSES.txt"
+  },
+  "press_visuals": [
+    {
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2106776127242928128/img/wltxdVD01jOs0Yx6.jpg",
+      "credit": "Still: COPE / Bet It Drives / Mbappé story",
+      "reuse_rights": "not_established"
+    }
+  ],
+  "voice": {
+    "provider": "Algrow",
+    "source": "https://algrow.online/terms",
+    "automated_access_permission": "needs_api_scope_confirmation"
+  },
+  "automation_clearance": "blocked",
+  "notes": "Le contrôle YouTube rapporté ne vaut pas licence. Les images de presse exigent une autorisation ou un remplacement avant toute réutilisation automatique."
+}

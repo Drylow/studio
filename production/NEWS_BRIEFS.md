@@ -10,6 +10,35 @@ sources nommées avec URL et date, narration par segment, points à l'écran et
 crédits des images. Toute rumeur est signalée comme telle. Un repost décrit par
 un article reste attribué à cet article tant que l'original n'est pas vérifié.
 
+## Droits de réutilisation et automatisation
+
+Demande de l'utilisateur du 5 octobre : aucune publication automatique avec des droits
+non établis. Un article accessible, un crédit photo, une source indépendante ou une
+absence de réclamation Content ID **ne prouve pas une autorisation de réutilisation**.
+L'utilisateur rapporte un contrôle YouTube sans réclamation pour les trois vidéos du jour.
+Les contrôles de licences sont conservés dans leurs `rights_audit.json` : photos des
+miniatures vérifiées, musique synthétisée localement, mais droits des images de presse
+des montages non établis. Ces anciens montages ne sont pas autorisés à être recyclés automatiquement.
+
+La validation des nouveaux briefs refuse une image sans `visual.rights` documenté :
+licence compatible avec la réutilisation et les modifications, auteur, page de preuve,
+date de contrôle et lien de licence. Les adaptations BY-SA gardent la même licence.
+Les mentions « editorial », « fair use », « photo: média » ou une licence NC/ND
+ne passent pas ce contrôle. Choisir une image sous licence appropriée ou une création originale.
+Une relance des anciens briefs exige donc d'abord le remplacement de leurs visuels de presse.
+
+Pour le futur dashboard, `services.news_rights.automation_rights(plan)` doit être appelé
+avant toute publication automatique. Il exige aussi une autorisation documentée de
+réutilisation commerciale de la voix **et** d'accès automatisé à son fournisseur, ainsi
+qu'une trace de génération de la musique originale. La clé API seule ne suffit pas.
+Les conditions Algrow consultées le 5 octobre (`https://algrow.online/terms`, section 13)
+contiennent une restriction d'usage automatisé de la fonction voix ; la portée de
+l'offre API doit être confirmée avant de choisir ce fournisseur pour l'automatisation.
+Le programme ne promet pas zéro réclamation future et ne programme aucune publication.
+
+Miniatures futures : suivre `presets/news_thumbnails/approved_2026-10-05/` ; l'utilisateur
+a validé ce thème et a demandé d'arrêter les variantes pour les trois vidéos actuelles.
+
 ```bash
 cd /workspace/studio
 .venv/bin/python production/news_brief.py voice news/mma_en/2026-10-05_parnasse-topuria-analysis

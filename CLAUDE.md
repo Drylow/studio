@@ -330,6 +330,13 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   mot fort + contour en **bleu clair de la chaîne** (`thumb_accent` #40DCF8, bannière @CageDispatch) ; jamais une
   photo à plusieurs combattants (la vision a pris Oliveira pour Tsarukyan) : regarder qui est sur la photo ; refaire
   une miniature garde les photos validées (en tête de `photos.json`).
+  **Style des prochaines miniatures (5 oct., utilisateur)** : conserver exactement le thème des deux
+  dernières miniatures approuvées (« elles sont parfaites »). Références dans
+  `presets/news_thumbnails/approved_2026-10-05/`. Regarder ces références avant les prochaines créations.
+  Ne pas relancer de variantes pour les trois vidéos actuelles : l'utilisateur a demandé d'arrêter.
+  **Droits avant automatisation (5 oct., utilisateur)** : une absence de réclamation YouTube ne constitue
+  pas une licence. Chaque photo, extrait, musique et voix doit avoir des droits de réutilisation établis ;
+  droits absents ou ambigus = automatisation bloquée. `production/NEWS_BRIEFS.md` décrit le contrôle.
   Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
   `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
