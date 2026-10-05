@@ -1,4 +1,22 @@
-# Reprise sur un autre compte Claude (état au 3 oct. 2026, 23 h 50 heure belge)
+# Reprise sur un autre compte Claude (historique et état actuel)
+
+## Priorité actuelle — 5 octobre 2026
+
+L'utilisateur veut construire un nouveau site central de gestion des chaînes, après la
+livraison des trois analyses sportives du jour. **Lire `production/DASHBOARD_PLAN.md`** :
+plan et réponses confirmées. Toute l'interface doit être remplacée (anciens studios inclus),
+en thème Cyberpunk 2077 / Edgerunners. Conserver les outils récents et les données.
+Deux comptes dans un espace partagé. Autonomie par chaîne ; MMA et foot seront en automatique,
+avec contrôles obligatoires avant publication. Le plan est enregistré ; le site n'est pas encore refait.
+
+Les miniatures récentes sont approuvées : références dans
+`presets/news_thumbnails/approved_2026-10-05/`. L'utilisateur demande de ne plus refaire
+celles des vidéos actuelles et de garder ce thème pour les prochaines. Les preuves de droits
+et les limites de l'automatisation sont décrites dans `production/NEWS_BRIEFS.md`.
+Les anciennes étapes de connexion ci-dessous sont un historique : ne pas redemander des
+clés déjà fournies ni refaire l'onboarding cloud terminé dans cette conversation.
+
+## Historique de reprise — 3 octobre 2026
 
 L'utilisateur arrive au bout de son usage sur son compte et continue sur **le compte de son pote**, « comme
 si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarrer**. Le guide de travail reste

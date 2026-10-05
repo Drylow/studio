@@ -18,6 +18,10 @@ d'environnement du compte s'il manque).
   UTC+1 l'hiver), et des chiffres concrets (images 86/123, rendu en cours…).
 - Il décide des titres, miniatures et du calendrier ; propose 2-4 options visuelles (planches d'images),
   recommande-en une, puis applique son choix sans redemander.
+  **Exception confirmée le 5 oct. pour le futur dashboard** : le mode est réglable par chaîne.
+  Sur une chaîne en automatique (notamment Cage Dispatch et Pitch Dispatch), l'agent choisit et publie
+  dans les règles de la chaîne, sans validation à chaque vidéo. Les contrôles de faits, droits et
+  qualité restent obligatoires. Voir `production/DASHBOARD_PLAN.md`.
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
 
@@ -145,6 +149,11 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - Messages de commit en anglais, courts, qui disent le « pourquoi ». Ne pas créer de PR sans qu'on le demande.
 
 ## 9. Carte du code
+
+- **Refonte du site (décisions du 5 oct.)** : `production/DASHBOARD_PLAN.md`. Refaire toute l'interface,
+  y compris les anciens studios, en thème Cyberpunk 2077 / Edgerunners ; garder les outils récents,
+  données et références. Espace partagé pour deux comptes, agent et autonomie par chaîne. Ce fichier
+  décrit le plan ; la refonte et les nouvelles publications automatiques ne sont pas encore implémentées.
 
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie
