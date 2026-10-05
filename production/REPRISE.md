@@ -7,7 +7,12 @@ livraison des trois analyses sportives du jour. **Lire `production/DASHBOARD_PLA
 plan et réponses confirmées. Toute l'interface doit être remplacée (anciens studios inclus),
 en thème Cyberpunk 2077 / Edgerunners. Conserver les outils récents et les données.
 Deux comptes dans un espace partagé. Autonomie par chaîne ; MMA et foot seront en automatique,
-avec contrôles obligatoires avant publication. Le plan est enregistré ; le site n'est pas encore refait.
+avec contrôles obligatoires avant publication. **La première version est construite** :
+neuf pages, espace partagé, tâches/calendrier persistants, adaptateurs des moteurs récents,
+agent, file de travaux et publication protégée. Toutes les anciennes interfaces sont supprimées.
+Lire `production/DASHBOARD_STATUS.md` : lancement, vérifications et limites réelles.
+La collecte quotidienne et la relecture automatisée restent à terminer ; aucune cadence
+automatique réelle n'est active. Google n'est pas configuré et aucun déploiement n'a été fait.
 
 Les miniatures récentes sont approuvées : références dans
 `presets/news_thumbnails/approved_2026-10-05/`. L'utilisateur demande de ne plus refaire

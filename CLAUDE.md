@@ -150,10 +150,13 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 
 ## 9. Carte du code
 
-- **Refonte du site (décisions du 5 oct.)** : `production/DASHBOARD_PLAN.md`. Refaire toute l'interface,
-  y compris les anciens studios, en thème Cyberpunk 2077 / Edgerunners ; garder les outils récents,
-  données et références. Espace partagé pour deux comptes, agent et autonomie par chaîne. Ce fichier
-  décrit le plan ; la refonte et les nouvelles publications automatiques ne sont pas encore implémentées.
+- **Nouveau site (5 oct.)** : `production/DASHBOARD_STATUS.md` décrit la première version construite,
+  les essais et ce qui reste à terminer. `production/DASHBOARD_PLAN.md` conserve le cadrage complet.
+  Interface React dans `frontend/src/`, bundle servi depuis `static/studio/`, backend et migrations
+  dans `studio/`, entrée `app.py`. Toutes les anciennes interfaces sont supprimées ; leurs liens
+  redirigent vers le nouveau studio. Les outils récents, données et références sont conservés.
+  La collecte quotidienne et les contrôles autonomes restent à construire ; aucune chaîne automatique
+  n'est activée. Ne pas confondre le mode configuré avec une automatisation opérationnelle.
 
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie
@@ -168,7 +171,7 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - **History Docs** (format à part, §10) : `services/history.py` (pipeline + montage), `history_ai.py`
   (script, plan visuel, styles d'image), `history_geo.py` (cartes), `history_sources.py` (vraies archives),
   `history_audio.py` (musique + bruitages), `align.py` (Whisper), `routes/history.py`,
-  `tool_apps/history-studio/`, moteur Remotion `history_engine/`.
+  adaptateur `studio/jobs.py`, moteur Remotion `history_engine/`.
 
 ## 10. History Docs (format Histoire, `/tools/history-studio`)
 
@@ -180,7 +183,7 @@ mot pour mot) et **Frontier Blood** (`frontier_blood`, @FrontierBlood : la front
 Script : **FacelessOS** (format `history_doc`, référence de voix `skills/references/EDGm3821yE8.txt`) + 2 tours
 d'audit en plus ; recherche avec les vraies sources (mémoires du domaine public) dans les notes.
 Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
-templates : section History Docs du `README.md`.
+templates : `services/history.py` et `services/history_channels.py`.
 
 - **Pipeline** : script → voix (ElevenLabs via ai33pro, **Earl** à 0,9 validé par l'utilisateur ; `AI33_API_KEY`) → sous-titres calés par Whisper local sur
   l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits

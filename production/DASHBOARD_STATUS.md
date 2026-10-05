@@ -1,0 +1,130 @@
+# Studio Cyberpunk — état de construction
+
+Version du 5 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
+décrit ce qui fonctionne réellement et ce qui reste à construire.
+
+## Disponible
+
+- Neuf pages React/TypeScript, servies par Flask : accueil, chaînes, production,
+  calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
+- Thème Cyberpunk commun, illustration originale de Night City, polices locales,
+  navigation mobile, recherche globale et réduction des animations.
+- Huit chaînes reprises des moteurs récents. Les anciennes livraisons sont importées
+  sans les transformer en publications YouTube confirmées. Les miniatures approuvées
+  restent les références ; aucune miniature des vidéos actuelles n'a été refaite.
+- Réglages persistants par chaîne : modèle de production, mode manuel/automatique,
+  cadence, fraîcheur de l'actualité, stock cible, instructions, budget et pause.
+- Tâches partagées avec responsable, priorité, échéance, modification et clôture.
+  Calendrier mensuel et agenda, déplacement des créneaux, fuseau Europe/Paris,
+  refus des collisions et des modifications simultanées obsolètes.
+- Fiche vidéo : titre, description, script, faits, sources datées, programmation,
+  aperçu, fichiers disponibles et déclaration d'une publication manuelle.
+- Deux rôles de compte : propriétaire et collaborateur. Sessions individuelles,
+  mots de passe hachés, protection CSRF, limitation des tentatives de connexion,
+  journal partagé. Les connexions et réglages sensibles sont réservés au propriétaire.
+- Agent textuel connecté au proxy existant. Il consulte l'espace partagé, crée des
+  tâches et idées, et lance script/rendu sur une fiche existante. Ses actions sont
+  typées, persistantes et protégées contre les doublons après reprise.
+- Adaptateurs vers les moteurs Oddly, History et analyses sportives courtes.
+  Les modifications de narration invalident les étapes dépendantes. Les reprises
+  d'analyses sportives utilisent un dossier séparé et conservent l'archive originale.
+- File de travaux persistante, progression, erreurs, annulation, verrou global et
+  reprise après redémarrage. Enveloppes autorisées par lancement avec plafond journalier.
+  Ces enveloppes ne représentent pas les factures réelles des fournisseurs.
+- Contrôle technique du fichier par décodage complet ; relecture humaine distincte
+  pour l'audio, les faits, les images et sous-titres. Contrôles liés à l'empreinte du rendu.
+- Import d'une miniature JPEG/PNG avec contrôle du format ; sources, crédits et
+  justificatifs des droits dans la fiche. Adaptateur des droits pour les analyses
+  sportives courtes, lié aux empreintes vidéo et miniature.
+- OAuth YouTube par chaîne, chargement reprenable d'abord en privé, miniature avant
+  mise en public, conservation de l'identifiant et confirmation du statut par l'API.
+  Un incident de réseau déclenche une vérification de la session de chargement.
+- Publication des vidéos programmées par le worker, sous réserve des contrôles,
+  de la validation requise et de l'activation de la chaîne. Elles restent privées
+  jusqu'au créneau exécuté par le worker ; le serveur doit rester allumé.
+- Livraison Discord des analyses sportives courtes via les webhooks existants.
+- Toutes les anciennes interfaces, templates et styles sont supprimés. Les anciens
+  liens des outils redirigent vers le studio ; les moteurs, données et références sont conservés.
+- Migration SQLite additive avec sauvegarde avant migration. Les anciennes données
+  ne passent pas par la réinitialisation de `database.init_db`.
+
+## À terminer avant les chaînes entièrement autonomes
+
+1. Collecte régulière des actualités, dédoublonnage, vérification des faits et choix
+   des sujets ; suivi d'après-match. L'agent actuel reçoit les faits et sources fournis.
+2. Contrôle éditorial et visuel automatisé suffisamment complet pour remplacer les
+   étapes de relecture humaine. Le mode « automatique » est configuré mais les chaînes
+   ne sont pas activées. Aucun moteur ne déclare seul les droits ou faits vérifiés.
+3. Production de miniatures dans le thème sportif approuvé ; l'import manuel fonctionne,
+   mais le nouveau studio ne génère pas encore ces miniatures automatiquement.
+4. Extension du manifeste de droits aux formats Oddly et History. Leur production est
+   intégrée, mais leur publication reste bloquée tant que ce contrôle n'est pas adapté.
+5. Configuration Google côté serveur et essai réel d'une publication privée. OAuth et
+   publication ont été vérifiés avec des réponses simulées ; aucune chaîne n'est connectée
+   dans l'environnement actuel. Aucun chargement YouTube n'a été effectué pendant ces essais.
+6. Permissions documentées de la voix pour un usage commercial automatisé, et licences
+   des médias effectivement utilisés. Voir `NEWS_BRIEFS.md`. Un dossier de preuves ne
+   constitue pas un contrôle Content ID et ne garantit pas l'absence de réclamation future.
+7. Hébergement permanent, sauvegardes récurrentes et notifications des blocages.
+   Statistiques YouTube, facturation réelle et exports Discord des autres formats ensuite.
+
+## Ouvrir et utiliser
+
+### Aperçu de développement
+
+```bash
+STUDIO_PREVIEW=1 STUDIO_WORKER_ENABLED=0 .venv/bin/python app.py
+```
+
+Ouvrir `http://127.0.0.1:5000`. Une session locale de démonstration est créée dans
+`work/studio/preview.db`, séparée de la base principale. Les chaînes et livraisons
+réelles y sont reprises. Les tâches, fiches et créneaux peuvent être modifiés ; les
+appels payants, l'agent externe, les envois Discord et la publication sont bloqués.
+Cet aperçu accepte uniquement les connexions locales et n'est pas un site public.
+
+Pour tester l'organisation : cliquer **Tâches → Nouvelle tâche**, ou
+**Studio vidéo → choisir une chaîne → Ajouter à la production**. Pour programmer :
+**Calendrier → Prévoir une publication → choisir la vidéo et l'heure → Enregistrer le créneau**.
+
+### Application avec comptes individuels
+
+```bash
+.venv/bin/python app.py
+```
+
+Au premier lancement hors aperçu, `STUDIO_BOOTSTRAP_TOKEN` est créé dans `.env` s'il
+manque. Ouvrir `.env`, copier uniquement la valeur de cette variable dans le champ
+**Code d'installation** de l'écran initial, puis choisir nom, identifiant et mot de
+passe. Ce code ne sert qu'à créer le premier propriétaire. Ne pas le publier.
+Ensuite : **Réglages → Équipe → Ajouter un collaborateur**, renseigner son nom,
+son identifiant et un mot de passe d'au moins douze caractères. Les deux comptes
+partagent les tâches et productions. L'hébergement public n'est pas configuré ici.
+
+### Développement et vérifications
+
+```bash
+cd frontend
+npm ci
+npm run build
+cd ..
+.venv/bin/python -m unittest discover -s tests
+```
+
+Le bundle compilé est suivi dans `static/studio/` ; Node n'est pas requis pour servir
+le dashboard, mais reste nécessaire au moteur documentaire. Pour les essais navigateur,
+lancer une seconde instance d'aperçu sur le port 5001 avec une base dédiée :
+
+```bash
+.venv/bin/python -c "from studio.web import create_app; app=create_app({'PREVIEW':True,'DB_PATH':'/tmp/studio-ui-smoke.db','WORKER_ENABLED':False}); app.run(host='127.0.0.1',port=5001,debug=False,threaded=True)"
+```
+
+Dans un autre terminal, exécuter `cd frontend` puis `npm run smoke`.
+Le script utilise Chromium (`CHROMIUM_PATH` si son emplacement diffère) et
+`STUDIO_SMOKE_URL` pour une autre instance. Ne pas le lancer sur une base de production.
+
+Validation actuelle : **42 tests Python réussis**, compilation TypeScript/Vite,
+parcours navigateur sur les neuf pages en ordinateur et mobile, persistance des
+tâches, réglages et créneaux, et blocage des opérations externes dans l'aperçu.
+Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
+répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
+publication ou livraison Discord n'a été lancée pendant la construction.

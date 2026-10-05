@@ -1,7 +1,8 @@
 # Nouveau dashboard — Drylow Studio
 
-Cadrage du 5 octobre 2026. Ce document décrit le site à construire ; ses nouvelles
-fonctions ne sont pas encore implémentées.
+Cadrage du 5 octobre 2026. La première version du site est construite ; voir
+`DASHBOARD_STATUS.md` pour les fonctions disponibles, les essais et les étapes restantes.
+Ce document conserve le périmètre complet, y compris l'automatisation encore à terminer.
 
 ## Décisions confirmées par l'utilisateur
 
