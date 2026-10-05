@@ -1,4 +1,4 @@
-# Drylow Studio — guide pour Claude (à lire en entier avant de travailler)
+# Edgerunners Studio — guide pour Claude (à lire en entier avant de travailler)
 
 Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en bout : recherche, script,
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
@@ -155,8 +155,11 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   Interface React dans `frontend/src/`, bundle servi depuis `static/studio/`, backend et migrations
   dans `studio/`, entrée `app.py`. Toutes les anciennes interfaces sont supprimées ; leurs liens
   redirigent vers le nouveau studio. Les outils récents, données et références sont conservés.
-  La collecte quotidienne et les contrôles autonomes restent à construire ; aucune chaîne automatique
-  n'est activée. Ne pas confondre le mode configuré avec une automatisation opérationnelle.
+  `studio/newsroom.py` collecte les flux datés et prépare des fiches de recherche ;
+  les sources et intervalles sont configurables, collecte permanente désactivée par défaut.
+  Les choix éditoriaux, la vérification des faits et les contrôles autonomes restent à construire ;
+  aucune chaîne automatique n'est activée. Ne pas confondre le mode configuré avec une
+  automatisation opérationnelle. Nom retenu : Edgerunners Studio, en un mot avec un S.
 
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie

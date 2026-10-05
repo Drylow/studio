@@ -1,5 +1,5 @@
 @echo off
-title DRYLOW STUDIO // MONTAGE DES VIDEOS D'ACTU
+title EDGERUNNERS STUDIO // MONTAGE DES VIDEOS D'ACTU
 cd /d "%~dp0"
 rem Monte sur ce PC les videos d'actu sport preparees dans le cloud (news\...\plan.json) :
 rem telecharge les extraits YouTube, monte, envoie sur Gofile, SUPPRIME les clips, renvoie le lien dans git.

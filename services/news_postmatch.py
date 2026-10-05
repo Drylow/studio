@@ -13,7 +13,7 @@ def summary(event, league="uefa.nations"):
     if not re.fullmatch(r"\d+", str(event)) or not re.fullmatch(r"[a-z.]+", league):
         raise ValueError("Identifiant de match ou compétition invalide.")
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/summary?event={event}"
-    req = urllib.request.Request(url, headers={"User-Agent": "DrylowStudio/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "EdgerunnersStudio/1.0"})
     with urllib.request.urlopen(req, timeout=35) as response:
         return json.load(response)
 

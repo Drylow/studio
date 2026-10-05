@@ -16,7 +16,7 @@ WORKER = os.path.join(HERE, "runpod_worker.js")
 IMAGE = "mcr.microsoft.com/playwright:v1.49.1-noble"
 
 TEMPLATE = r"""#!/bin/bash
-# Machine de rendu Drylow Studio (vidéos History) sur ce VPS : serveur de rendu (Docker, image Playwright)
+# Machine de rendu Edgerunners Studio (vidéos History) sur ce VPS : serveur de rendu (Docker, image Playwright)
 # derrière Caddy en HTTPS automatique, protégé par un jeton. À lancer en root : bash vps_setup.sh
 set -e
 DIR=/opt/drylow-render

@@ -61,7 +61,7 @@ def wiki_images(who):
     for k in range(4):
         try:
             d = json.loads(urllib.request.urlopen(urllib.request.Request(
-                url, headers={"User-Agent": "DrylowStudio/1.0 (github.com/drylow/studio)"}), timeout=20).read())
+                url, headers={"User-Agent": "EdgerunnersStudio/1.0 (github.com/drylow/studio)"}), timeout=20).read())
             src = (d.get("originalimage") or {}).get("source") or (d.get("thumbnail") or {}).get("source")
             return [{"url": src, "title": f"{who} (Wikipedia)", "page": url}] if src else []
         except urllib.error.HTTPError as e:

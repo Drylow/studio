@@ -1,5 +1,5 @@
-﻿ODDLY SPECIFIC LIVES // STUDIO
-==============================
+﻿EDGERUNNERS STUDIO // NIGHT CITY
+================================
 
 1. Double-clique sur « Lancer le studio ».
    - Si Windows affiche « Windows a protégé votre ordinateur » : clique sur « Informations
@@ -8,14 +8,20 @@
      internet). Les fois suivantes, ça démarre en quelques secondes.
 
 2. La page du studio s'ouvre dans ton navigateur (adresse : http://127.0.0.1:5057).
-   Tu mets le titre, tu choisis la durée, tu cliques sur « Créer la vidéo ».
+   Au premier lancement, ouvre app\.env, copie la valeur de STUDIO_BOOTSTRAP_TOKEN
+   dans « Code d'installation », puis crée ton compte. Pour créer une vidéo :
+   « Studio vidéo » → choisis ta chaîne → renseigne le sujet et la durée →
+   « Ajouter à la production ». Complète la fiche, puis « Créer la vidéo ».
 
 3. Laisse la fenêtre noire ouverte pendant que tu travailles : c'est le moteur du studio.
    La fermer éteint le studio. Tu peux fermer l'onglet du navigateur : la vidéo continue.
 
-Tes vidéos, images et miniatures sont rangées dans app\data\pov (onglet « Projets » pour faire
-le ménage). Le dossier contient tes clés (fichier app\.env) : ne le partage pas.
+Tes vidéos, images et miniatures restent dans app\data\pov. La page « Production »
+permet de suivre les fiches et les fichiers. Le dossier contient tes clés
+(fichier app\.env) : ne le partage pas.
 
 MISE À JOUR : décompresse le nouveau zip, puis copie son dossier « Oddly Specific Lives Studio »
 par-dessus l'ancien et accepte de remplacer les fichiers. Tes vidéos (app\data) et l'installation
 (app\runtime) restent en place : pas besoin de tout réinstaller.
+Le dossier conserve son nom technique pour retrouver tes données ; le site s'appelle
+Edgerunners Studio.

@@ -8,11 +8,21 @@ plan et réponses confirmées. Toute l'interface doit être remplacée (anciens 
 en thème Cyberpunk 2077 / Edgerunners. Conserver les outils récents et les données.
 Deux comptes dans un espace partagé. Autonomie par chaîne ; MMA et foot seront en automatique,
 avec contrôles obligatoires avant publication. **La première version est construite** :
-neuf pages, espace partagé, tâches/calendrier persistants, adaptateurs des moteurs récents,
+dix pages, espace partagé, tâches/calendrier persistants, adaptateurs des moteurs récents,
 agent, file de travaux et publication protégée. Toutes les anciennes interfaces sont supprimées.
 Lire `production/DASHBOARD_STATUS.md` : lancement, vérifications et limites réelles.
-La collecte quotidienne et la relecture automatisée restent à terminer ; aucune cadence
-automatique réelle n'est active. Google n'est pas configuré et aucun déploiement n'a été fait.
+Le radar lit les flux datés de BBC Sport, The Guardian et MMA News ; collecte régulière
+configurable, désactivée par défaut. Delamain peut actualiser le radar et préparer une
+fiche sans lancer de production. Les liens et titres identiques sont dédoublonnés.
+Les faits, licences et choix éditoriaux autonomes restent à vérifier ; aucune cadence
+de publication automatique réelle n'est active. Google n'est pas configuré et aucun
+déploiement n'a été fait. Les fiches affichent les étapes à compléter avant publication,
+et les miniatures/planches de contrôle s'agrandissent avec zoom.
+
+Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.
+L'ancien nom est remplacé dans l'affichage et les guides ; les noms techniques du
+dépôt et des bases sont conservés pour préserver les données. Validation : 56 tests
+Python et deux parcours navigateur, sur ordinateur et mobile.
 
 Les miniatures récentes sont approuvées : références dans
 `presets/news_thumbnails/approved_2026-10-05/`. L'utilisateur demande de ne plus refaire

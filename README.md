@@ -1,4 +1,4 @@
-# Drylow Studio
+# Edgerunners Studio
 
 Un seul studio pour organiser les chaînes YouTube, préparer leurs vidéos et suivre
 leur publication. Interface Cyberpunk en français, backend Flask et moteurs de
@@ -8,16 +8,22 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 
 - Vue d'ensemble du stock, des créneaux, travaux et blocages.
 - Huit chaînes importées, réglages propres à chaque chaîne et mode manuel/automatique.
+- Radar d'actualités MMA et foot : sources RSS datées, sujets récents et préparation
+  d'une fiche de recherche. Collecte régulière configurable par chaîne.
 - Tableau de production, calendrier mensuel et agenda en heure belge.
 - Tâches partagées, responsables et échéances ; deux comptes individuels.
 - Studio vidéo pour les formats Oddly, History et analyses sportives courtes.
 - Fiches réunissant script, sources, fichiers, miniature, contrôles et programmation.
+- Liste des étapes avant publication, avec action précise pour chaque blocage.
 - Bibliothèque des références approuvées et des productions existantes.
+- Agrandissement des miniatures et planches de contrôle, utilisable aussi sur mobile.
 - Delamain : assistant connecté aux données et aux actions de préparation du studio.
 - File de travaux persistante avec progression, erreurs, annulation et reprise.
 
-La collecte quotidienne des actualités, les contrôles entièrement autonomes et la
-production automatique des miniatures sportives restent à construire. La connexion
+Le choix éditorial automatique des sujets, la vérification des faits, les contrôles
+entièrement autonomes et la production automatique des miniatures sportives restent
+à construire. Le radar fournit des pistes de recherche, pas des faits vérifiés ni
+des licences de médias. La collecte permanente est désactivée par défaut. La connexion
 Google et les permissions des médias doivent être finalisées avant toute publication
 réelle. Les adaptateurs de droits pour Oddly et History restent à terminer. Aucun
 hébergement public ni cadence automatique n'est activé par cette version.
@@ -53,6 +59,12 @@ Cliquer **Tâches → Nouvelle tâche** pour ajouter du travail, ou **Studio vid
 choisir une chaîne → Ajouter à la production** pour préparer une fiche. Dans
 **Calendrier → Prévoir une publication**, choisir la vidéo et la date, puis cliquer
 **Enregistrer le créneau**.
+
+Pour les actualités : **Radar d'actus → choisir Cage Dispatch ou Pitch Dispatch →
+Actualiser les infos**. Sur un sujet, cliquer **Préparer une vidéo** : la fiche reprend
+le lien et sa date ; compléter les faits vérifiés avant de produire. Les sources et
+la fréquence se règlent dans **Sources du radar → Configurer le radar**. L'aperçu autorise la lecture
+manuelle des flux publics, mais pas leur collecte permanente.
 
 ## Utiliser les comptes
 

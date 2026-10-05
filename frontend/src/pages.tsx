@@ -54,6 +54,7 @@ import {
   Modal,
 } from "./components";
 import type { Mutate } from "./forms";
+import { ZoomImage } from "./image-viewer";
 
 export type PageProps = {
   data: Workspace;
@@ -1381,7 +1382,7 @@ export function Library(p: PageProps) {
           <div className="reference-grid">
             {refs.map((r) => (
               <article className="panel reference-card" key={r.path}>
-                <img
+                <ZoomImage
                   src={"/media/reference/" + r.path}
                   alt={"Référence approuvée : " + r.name}
                   loading="lazy"
@@ -1740,7 +1741,7 @@ export function Settings(p: PageProps) {
             sont réservés au propriétaire.
           </div>
           <div className="team-decoration">
-            <span>DRYLOW</span>
+            <span>EDGERUNNERS</span>
             <span>CREW</span>
             <small>BETTER TOGETHER / NIGHT CITY</small>
           </div>

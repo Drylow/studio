@@ -135,6 +135,7 @@ export type Page =
   | "studio"
   | "library"
   | "settings"
+  | "news"
   | "agent";
 export type Boot = {
   user: User | null;

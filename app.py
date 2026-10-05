@@ -1,4 +1,4 @@
-"""Drylow Studio website entry point. Production engines remain in services/."""
+"""Edgerunners Studio website entry point. Production engines remain in services/."""
 
 import os
 from studio.web import create_app

@@ -287,6 +287,10 @@ def create_app(config=None):
         if len(name) < 3 or fmt not in {"news", "pov", "history"}:
             raise ValueError("Indique un nom et un format de chaîne.")
         cid = store.add_channel(dict(b, name=name, autonomy="manual"))
+        if fmt == "news":
+            from studio.newsroom import initialize
+
+            initialize(store)
         store.log(actor(), "channel", "Chaîne créée : " + name)
         return jsonify(id=cid), 201
 
@@ -757,6 +761,9 @@ def create_app(config=None):
     from studio.review import register_reviews
 
     register_reviews(app, store, owner)
+    from studio.newsroom import register as register_newsroom
+
+    register_newsroom(app, store, owner)
 
     @app.get("/tools/<path:slug>")
     @app.get("/category/<path:slug>")
@@ -774,6 +781,7 @@ def create_app(config=None):
     @app.get("/library")
     @app.get("/settings")
     @app.get("/agent")
+    @app.get("/news")
     def frontend():
         return send_from_directory(ROOT / "static/studio", "index.html")
 

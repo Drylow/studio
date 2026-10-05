@@ -108,6 +108,9 @@ def run(store, once=False):
                 pulse.join(timeout=1)
         if once:
             return
+        from studio.newsroom import tick
+
+        tick(store)
         # Publication scheduling uses server time and the same release gate as manual publication.
         if not store.settings()["paused"]:
             from studio.domain import blockers
@@ -130,4 +133,7 @@ if __name__ == "__main__":
     load_dotenv(ROOT / ".env")
     store = Store(os.getenv("DB_PATH") or ROOT / "drylow_studio.db")
     store.migrate()
+    from studio.newsroom import initialize
+
+    initialize(store)
     run(store)

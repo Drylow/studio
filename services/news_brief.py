@@ -183,7 +183,7 @@ def build(job, work_root, log=print):
             url = seg["visual"]["url"]
             photo = work / ("source-" + hashlib.sha256(url.encode()).hexdigest()[:16] + ".img")
             if not photo.exists():
-                request = urllib.request.Request(url, headers={"User-Agent": "DrylowStudio/1.0"})
+                request = urllib.request.Request(url, headers={"User-Agent": "EdgerunnersStudio/1.0"})
                 with urllib.request.urlopen(request, timeout=40) as response:
                     photo.write_bytes(response.read())
         start = next((w["s"] for w in audio["words"] if w["t"] >= token), None)

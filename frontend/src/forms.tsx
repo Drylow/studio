@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ReviewForm } from "./review";
+import { Readiness } from "./readiness";
 import {
   Plus,
   Save,
@@ -952,6 +953,7 @@ export function VideoDetail({
         )}
         {tab === "publish" && (
           <div className="form">
+            <Readiness video={video} select={setTab} />
             <form
               className="form"
               onSubmit={async (e) => {

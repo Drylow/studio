@@ -100,6 +100,130 @@ def register_reviews(app, store, owner):
         store.log("Équipe", "review", "Relecture du rendu confirmée : " + v["title"])
         return jsonify(ok=True)
 
+    @app.get("/api/studio/videos/<vid>/readiness")
+    def readiness(vid):
+        from studio.domain import fresh, date
+
+        v = video(vid)
+        ch = store.channel(v["channel_id"])
+        checks = []
+
+        def add(key, label, ok, help_text, tab="sources"):
+            checks.append(
+                {
+                    "key": key,
+                    "label": label,
+                    "complete": bool(ok),
+                    "help": help_text,
+                    "tab": tab,
+                }
+            )
+
+        try:
+            path = actual(v, "video_path")
+            sha = digest(path)
+        except (ValueError, OSError):
+            path = None
+            sha = ""
+        thumb = None
+        try:
+            thumb = actual(v, "thumb_path")
+        except ValueError:
+            pass
+        if ch["format"] == "news":
+            add(
+                "research",
+                "Faits et sources renseignés",
+                v["notes"].strip() and v["sources"],
+                "Ouvre les liens des sources, puis renseigne les faits vérifiés dans Script & notes.",
+                "script",
+            )
+            at = date(v.get("post_at"))
+            from datetime import datetime, timezone
+
+            current = datetime.now(timezone.utc)
+            add(
+                "freshness",
+                "Actualité encore fraîche",
+                fresh(v, ch, at if at and at > current else current),
+                f"Sources & contrôles → indiquer la date de l’info. Elle doit rester dans les {ch['freshness_hours']} dernières heures au créneau prévu.",
+            )
+        add(
+            "script",
+            "Script enregistré",
+            v["script"].strip(),
+            "Script & notes → enregistrer le texte, ou cliquer Écrire le script.",
+            "script",
+        )
+        add(
+            "render",
+            "Montage disponible",
+            path,
+            "Aperçu → Créer la vidéo. Attendre la fin du travail.",
+            "preview",
+        )
+        add(
+            "thumbnail",
+            "Miniature disponible",
+            thumb,
+            "Sources & contrôles → Importer une miniature JPEG/PNG, 16:9 et de moins de 2 Mo.",
+        )
+        intact = bool(sha and sha == v["render_digest"])
+        add(
+            "technical",
+            "Fichier contrôlé",
+            intact and v["quality_status"] in {"technical", "verified"},
+            "Aperçu → Contrôler le fichier. Ce contrôle vérifie le décodage et l’intégrité.",
+            "preview",
+        )
+        add(
+            "editorial",
+            "Images, son, faits et textes relus",
+            intact and v["quality_status"] == "verified",
+            "Sources & contrôles → regarder la vidéo et les planches, puis confirmer les quatre points de relecture.",
+        )
+        rights = False
+        if v["rights_status"] == "verified" and path and thumb:
+            try:
+                recheck_rights(store, v)
+                rights = True
+            except (ValueError, OSError):
+                pass
+        add(
+            "rights",
+            "Droits documentés pour ces fichiers",
+            rights,
+            "Sources & contrôles → Documenter les droits. Ajouter les licences des médias et les permissions de la voix. Le propriétaire enregistre les preuves.",
+        )
+        add(
+            "youtube",
+            "Chaîne YouTube connectée",
+            ch["connected"],
+            f"Ferme cette fiche → Chaînes → {ch['name']} → connecter YouTube. La configuration Google se prépare dans Réglages.",
+            "publish",
+        )
+        if ch["autonomy"] == "manual":
+            add(
+                "approval",
+                "Validation de l’équipe",
+                intact and v["approved_digest"] == sha,
+                "Publication → Valider, après les contrôles du rendu et des droits.",
+                "publish",
+            )
+        add(
+            "pause",
+            "Publication autorisée à reprendre",
+            not store.settings()["paused"] and not ch["paused"],
+            "Reprendre le studio dans la barre du haut, puis vérifier que la chaîne n’est pas en pause.",
+            "publish",
+        )
+        return jsonify(
+            checks=checks,
+            complete=sum(x["complete"] for x in checks),
+            total=len(checks),
+            ready=all(x["complete"] for x in checks),
+        )
+
     @app.post("/api/studio/videos/<vid>/rights")
     def rights(vid):
         owner()

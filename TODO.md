@@ -1,4 +1,4 @@
-# Drylow Studio - Amélioration UI ZIP Button
+# Edgerunners Studio - Amélioration UI ZIP Button
 
 ## 📋 Plan (1 étape)
 

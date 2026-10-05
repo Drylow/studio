@@ -49,6 +49,7 @@ import {
   Agent,
 } from "./pages";
 import type { PageProps } from "./pages";
+import { Newsroom } from "./newsroom";
 import "./style.css";
 
 const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
@@ -63,6 +64,12 @@ const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
       key: "channels",
       path: "/channels",
       label: "Chaînes",
+      icon: <Radio size={18} />,
+    },
+    {
+      key: "news",
+      path: "/news",
+      label: "Radar d’actus",
       icon: <Radio size={18} />,
     },
     {
@@ -132,10 +139,10 @@ function Login({
       <section className="login-world">
         <div className="brand">
           <span className="brand-icon">
-            D<span>/</span>
+            E<span>/</span>
           </span>
           <div>
-            DRYLOW<span>STUDIO</span>
+            EDGERUNNERS<span>STUDIO</span>
           </div>
         </div>
         <span className="eyebrow">NIGHT CITY / CREATIVE HEADQUARTERS</span>
@@ -372,7 +379,7 @@ function App() {
     return (
       <div className="startup-loader">
         <span className="brand-icon">
-          D<span>/</span>
+          E<span>/</span>
         </span>
         <p>
           CONNEXION AU STUDIO<span className="blinking">_</span>
@@ -433,18 +440,18 @@ function App() {
         <button
           className="brand"
           onClick={() => go("overview")}
-          aria-label="Drylow Studio, accueil"
+          aria-label="Edgerunners Studio, accueil"
         >
           <span className="brand-icon">
-            D<span>/</span>
+            E<span>/</span>
           </span>
           <div>
-            DRYLOW<span>STUDIO</span>
+            EDGERUNNERS<span>STUDIO</span>
           </div>
           <i>2077</i>
         </button>
         <div className="sidebar-section-label">
-          LE STUDIO<span>01—09</span>
+          LE STUDIO<span>01—10</span>
         </div>
         <nav aria-label="Navigation principale">
           {nav.map((n, i) => (
@@ -579,6 +586,8 @@ function App() {
         <main id="main" tabIndex={-1}>
           {page === "overview" ? (
             <Overview {...p} />
+          ) : page === "news" ? (
+            <Newsroom {...p} />
           ) : page === "channels" ? (
             <Channels {...p} />
           ) : page === "production" ? (
@@ -613,7 +622,7 @@ function App() {
         </main>
         <footer className="app-footer">
           <span>
-            DRYLOW STUDIO <i>/</i> BUILT FOR YOUR NEXT MOVE
+            EDGERUNNERS STUDIO <i>/</i> BUILT FOR YOUR NEXT MOVE
           </span>
           <span>
             NIGHT CITY ·{" "}

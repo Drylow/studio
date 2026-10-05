@@ -1,4 +1,4 @@
-// Timeline JSON produit par services/history_engine.py (Drylow Studio) et lu par la
+// Timeline JSON produit par services/history_engine.py (Edgerunners Studio) et lu par la
 // composition « History ». Toutes les durées sont en secondes ; les chemins d'images /
 // sons sont relatifs au dossier du projet (servi comme publicDir par render.mjs).
 

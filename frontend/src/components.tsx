@@ -110,6 +110,10 @@ export function Modal({
       ?.querySelector<HTMLElement>("button,input,select,textarea")
       ?.focus();
     function handle(e: KeyboardEvent) {
+      const dialogs = document.querySelectorAll(
+        '.modal-backdrop [role="dialog"]',
+      );
+      if (dialogs[dialogs.length - 1] !== ref.current) return;
       if (e.key === "Escape") closeRef.current();
       if (e.key === "Tab") {
         const items = ref.current?.querySelectorAll<HTMLElement>(
@@ -150,7 +154,7 @@ export function Modal({
       >
         <header className="modal-head">
           <div>
-            <span className="eyebrow">DRYLOW / STUDIO</span>
+            <span className="eyebrow">EDGERUNNERS / STUDIO</span>
             <h2>{title}</h2>
             {subtitle && <p>{subtitle}</p>}
           </div>

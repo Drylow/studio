@@ -2,7 +2,7 @@
   "name": "drylow-history-engine",
   "private": true,
   "version": "1.0.0",
-  "description": "Moteur Remotion du format Histoire (Drylow Studio) : templates animés + look film d'archive.",
+  "description": "Moteur Remotion du format Histoire (Edgerunners Studio) : templates animés + look film d'archive.",
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "node render.mjs"

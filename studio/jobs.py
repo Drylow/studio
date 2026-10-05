@@ -48,6 +48,20 @@ def execute(store, row):
         from studio.agent import respond
 
         return respond(store, payload["message"], actor, row["id"])
+    if row["kind"] == "news_scan":
+        from studio.newsroom import scan
+
+        job.update(0.05, "Recherche des infos datées dans les sources du radar")
+        result = scan(store, payload["channel_id"])
+        job.update(1, "Radar actualisé")
+        return result
+    if row["kind"] == "news_prepare":
+        from studio.newsroom import prepare
+
+        job.update(0.1, "Préparation de la fiche de recherche")
+        vid = prepare(store, payload["item_id"], payload["revision"], actor)
+        job.update(1, "Fiche de recherche préparée")
+        return {"video_id": vid}
     v = store.video(row["video_id"])
     if not v:
         raise ValueError("Vidéo introuvable.")

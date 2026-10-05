@@ -1,4 +1,4 @@
-"""Format Histoire (Drylow Studio) — titre → vidéo documentaire façon « Dose of History ».
+"""Format Histoire (Edgerunners Studio) — titre → vidéo documentaire façon « Dose of History ».
 
 Étapes (chacune reprend là où elle s'est arrêtée) :
   script  → narration (services.history_ai.write_script)

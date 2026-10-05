@@ -4,6 +4,7 @@ import { api, upload } from "./api";
 import { Button } from "./components";
 import type { Video } from "./types";
 import type { Mutate } from "./forms";
+import { ZoomImage } from "./image-viewer";
 
 const licenses: Record<string, string> = {
   CC0: "https://creativecommons.org/publicdomain/zero/1.0",
@@ -130,22 +131,12 @@ export function ReviewForm({
           <h3 className="review-title">Planches de contrôle</h3>
           <div className="review-sheets">
             {controls.sheets.map((name) => (
-              <a
+              <ZoomImage
                 key={name}
-                href={`/media/${video.id}/check/${name}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src={`/media/${video.id}/check/${name}`}
-                  alt={"Planche de contrôle " + name}
-                  loading="lazy"
-                />
-                <span>
-                  Ouvrir la planche
-                  <ArrowUpRight size={12} />
-                </span>
-              </a>
+                src={`/media/${video.id}/check/${name}`}
+                alt={"Planche de contrôle " + name}
+                caption="Agrandir la planche"
+              />
             ))}
           </div>
         </>

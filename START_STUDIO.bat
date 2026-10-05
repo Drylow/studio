@@ -1,5 +1,5 @@
 @echo off
-title DRYLOW STUDIO // NIGHT CITY SERVER
+title EDGERUNNERS STUDIO // NIGHT CITY SERVER
 cd /d "%~dp0"
 set DB_PATH=drylow_studio.db
 set FLASK_ENV=development
@@ -21,7 +21,7 @@ where node >nul 2>nul && if not exist "history_engine\node_modules\remotion" (
 )
 if not exist ".env" echo  // ATTENTION : pas de fichier .env — copie .env.example en .env et remplis-le.
 echo.
-echo  // DRYLOW STUDIO — NEURAL LINK EN COURS...
+echo  // EDGERUNNERS STUDIO — NEURAL LINK EN COURS...
 echo  // http://127.0.0.1:5000
 echo  // Ferme cette fenetre pour eteindre le serveur.
 echo.

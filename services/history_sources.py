@@ -12,7 +12,7 @@ import re
 import urllib.parse
 import urllib.request
 
-UA = "DrylowStudio/1.0 (history documentary tool; local use)"
+UA = "EdgerunnersStudio/1.0 (history documentary tool; local use)"
 
 
 def _get(url, timeout=20):

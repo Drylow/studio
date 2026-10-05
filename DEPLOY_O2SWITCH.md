@@ -1,4 +1,4 @@
-# Déploiement Drylow Studio sur o2switch — edgerunners.fr
+# Déploiement Edgerunners Studio sur o2switch — edgerunners.fr
 
 Guide clic par clic. ~20–30 min. L'app est en **Flask (Python)** ; les outils
 sont 100 % navigateur → aucune lib vidéo/IA côté serveur, install ultra-légère.

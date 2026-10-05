@@ -1,12 +1,14 @@
-# Studio Cyberpunk — état de construction
+# Edgerunners Studio — état de construction
 
 Version du 5 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
 ## Disponible
 
-- Neuf pages React/TypeScript, servies par Flask : accueil, chaînes, production,
-  calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
+- Dix pages React/TypeScript, servies par Flask : accueil, chaînes, radar d'actus,
+  production, calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
+- Nom Edgerunners Studio dans l'interface, les écrans de connexion, les lanceurs et
+  les guides. Les noms techniques du dépôt et des bases restent compatibles.
 - Thème Cyberpunk commun, illustration originale de Night City, polices locales,
   navigation mobile, recherche globale et réduction des animations.
 - Huit chaînes reprises des moteurs récents. Les anciennes livraisons sont importées
@@ -19,12 +21,29 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   refus des collisions et des modifications simultanées obsolètes.
 - Fiche vidéo : titre, description, script, faits, sources datées, programmation,
   aperçu, fichiers disponibles et déclaration d'une publication manuelle.
+- Liste des étapes avant publication : fichiers, faits renseignés, droits, relecture,
+  fraîcheur, connexion, créneau et validation. Chaque blocage décrit quoi faire et
+  ouvre l'onglet concerné ; cette liste ne dispense pas des contrôles serveur.
+- Miniatures et planches de contrôle agrandissables, zoom de 50 à 400 %, remise à
+  l'échelle et accès à l'image originale. Navigation clavier et mobile.
 - Deux rôles de compte : propriétaire et collaborateur. Sessions individuelles,
   mots de passe hachés, protection CSRF, limitation des tentatives de connexion,
   journal partagé. Les connexions et réglages sensibles sont réservés au propriétaire.
 - Agent textuel connecté au proxy existant. Il consulte l'espace partagé, crée des
   tâches et idées, et lance script/rendu sur une fiche existante. Ses actions sont
   typées, persistantes et protégées contre les doublons après reprise.
+- Radar d'actualités : lecture des flux RSS/Atom datés, sources modifiables, fenêtre
+  de fraîcheur par chaîne, date et lien visibles, erreurs des sources explicites.
+  Flux MMA News pour Cage Dispatch, BBC Sport et The Guardian pour Pitch Dispatch.
+  Déduplication par URL canonique et titre normalisé identique ; repérage des sujets
+  déjà présents dans les vidéos. Ce n'est pas un rapprochement sémantique des articles.
+- Préparation d'une fiche de recherche depuis le radar, sans narration ni faits
+  préremplis avec le texte RSS. Deux utilisateurs préparant le même article obtiennent
+  la même fiche. Delamain peut actualiser un radar et préparer un article sélectionné.
+  Les articles sont des pistes de recherche, pas des faits vérifiés ni des médias licenciés.
+- Collecte régulière configurable par chaîne, indépendante de la publication, avec
+  pauses générales et par chaîne. Elle est désactivée par défaut ; le worker et le
+  serveur doivent rester actifs. L'aperçu autorise seulement la lecture manuelle.
 - Adaptateurs vers les moteurs Oddly, History et analyses sportives courtes.
   Les modifications de narration invalident les étapes dépendantes. Les reprises
   d'analyses sportives utilisent un dossier séparé et conservent l'archive originale.
@@ -50,8 +69,9 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 
 ## À terminer avant les chaînes entièrement autonomes
 
-1. Collecte régulière des actualités, dédoublonnage, vérification des faits et choix
-   des sujets ; suivi d'après-match. L'agent actuel reçoit les faits et sources fournis.
+1. Vérification des faits et choix éditorial autonome des sujets ; suivi d'après-match.
+   La collecte et le dédoublonnage exact fonctionnent, mais ne confirment pas les rumeurs
+   et ne donnent aucun droit de réutiliser les photos ou extraits des articles.
 2. Contrôle éditorial et visuel automatisé suffisamment complet pour remplacer les
    étapes de relecture humaine. Le mode « automatique » est configuré mais les chaînes
    ne sont pas activées. Aucun moteur ne déclare seul les droits ou faits vérifiés.
@@ -85,6 +105,12 @@ Cet aperçu accepte uniquement les connexions locales et n'est pas un site publi
 Pour tester l'organisation : cliquer **Tâches → Nouvelle tâche**, ou
 **Studio vidéo → choisir une chaîne → Ajouter à la production**. Pour programmer :
 **Calendrier → Prévoir une publication → choisir la vidéo et l'heure → Enregistrer le créneau**.
+
+Pour la recherche : **Radar d'actus → Cage Dispatch ou Pitch Dispatch → Actualiser les
+actus**, puis **Préparer une vidéo** sur un sujet. Compléter les faits vérifiés dans
+la fiche ; aucun rendu payant ne démarre à cette étape. Modifier les flux dans
+**Sources du radar → Configurer le radar**. Hors aperçu, activer la collecte régulière dans ce panneau,
+choisir l'intervalle, puis conserver le serveur et son worker allumés.
 
 ### Application avec comptes individuels
 
@@ -122,9 +148,14 @@ Dans un autre terminal, exécuter `cd frontend` puis `npm run smoke`.
 Le script utilise Chromium (`CHROMIUM_PATH` si son emplacement diffère) et
 `STUDIO_SMOKE_URL` pour une autre instance. Ne pas le lancer sur une base de production.
 
-Validation actuelle : **42 tests Python réussis**, compilation TypeScript/Vite,
-parcours navigateur sur les neuf pages en ordinateur et mobile, persistance des
-tâches, réglages et créneaux, et blocage des opérations externes dans l'aperçu.
+Pour le second parcours, charger d'abord les flux dans le radar de cette base dédiée,
+puis exécuter `npm run smoke:news` avec la même `STUDIO_SMOKE_URL`. Il vérifie la fiche
+de recherche, les blocages, la gestion des sources et le zoom, sans produire de vidéo.
+
+Validation actuelle : **56 tests Python réussis**, compilation TypeScript/Vite,
+parcours navigateur sur les dix pages en ordinateur et mobile, persistance des
+tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
+des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.
 Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
 répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
 publication ou livraison Discord n'a été lancée pendant la construction.

@@ -1,4 +1,4 @@
-# Nouveau dashboard — Drylow Studio
+# Nouveau dashboard — Edgerunners Studio
 
 Cadrage du 5 octobre 2026. La première version du site est construite ; voir
 `DASHBOARD_STATUS.md` pour les fonctions disponibles, les essais et les étapes restantes.
@@ -6,6 +6,8 @@ Ce document conserve le périmètre complet, y compris l'automatisation encore �
 
 ## Décisions confirmées par l'utilisateur
 
+- Nom du site : **Edgerunners Studio**, en un mot avec un S. Le dépôt et les noms
+  techniques des bases restent compatibles avec les données existantes.
 - Refaire **toute l'interface de A à Z**, y compris les anciens studios de création.
   Garder les outils de production développés récemment et les contenus existants.
 - Un seul site pour gérer toutes les chaînes, produire, organiser et publier.
@@ -42,12 +44,14 @@ YouTube » sans confirmation ou import du lien. Une livraison Discord est un ét
 | --- | --- |
 | Vue d'ensemble | Publications du jour, stock par chaîne, travaux en cours, actions et alertes. |
 | Chaînes | Fiche, connexion YouTube, format, langue, voix, style, cadence, stock cible et autonomie. |
+| Radar d'actus | Flux datés, fraîcheur, sujets déjà traités, sources configurables et fiche de recherche. |
 | Production | Tableau des vidéos : idée, recherche, script, création, contrôle, prête, programmée, publiée ou bloquée. |
 | Calendrier | Vue semaine/mois, déplacement des créneaux, filtres par chaîne et avertissements de conflit. |
 | Tâches | To-do partagée : responsable, échéance, priorité, lien vers une chaîne ou une vidéo. |
 | Studio vidéo | Création guidée selon le format, script, sources, voix, visuels, montage, miniature et aperçu. |
 | Bibliothèque | Médias, références de style, sources, preuves de droits et anciennes productions. |
 | Réglages | Comptes, connexions, budgets, notifications et règles d'automatisation. |
+| Delamain | Conversation et actions persistantes de préparation, recherche et production. |
 
 L'agent **Delamain** reste accessible depuis toutes les pages dans un panneau latéral.
 Il peut expliquer les problèmes, proposer un programme, créer des tâches, rechercher
