@@ -29,8 +29,9 @@ import {
   ShieldAlert,
 } from "lucide-react";
 import { api, dateLabel, setCsrf } from "./api";
+import { Login } from "./private-access";
 import type { Boot, Workspace, Page, Video, Channel } from "./types";
-import { Button, Tag, Modal, Skyline, ChannelMark } from "./components";
+import { Button, Tag, Modal, ChannelMark } from "./components";
 import {
   ChannelForm,
   NewChannel,
@@ -130,145 +131,6 @@ function currentPage() {
   );
 }
 
-function Login({
-  boot,
-  refresh,
-}: {
-  boot: Boot;
-  refresh: () => Promise<void>;
-}) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [token, setToken] = useState("");
-  const [error, setError] = useState("");
-  const [busy, setBusy] = useState(false);
-  return (
-    <main className="login-page">
-      <section className="login-world">
-        <div className="brand">
-          <span className="brand-icon">
-            E<span>/</span>
-          </span>
-          <div>
-            EDGERUNNERS<span>STUDIO</span>
-          </div>
-        </div>
-        <span className="eyebrow">NIGHT CITY / CREATIVE HEADQUARTERS</span>
-        <h1>
-          Build your
-          <br />
-          <span>own empire.</span>
-        </h1>
-        <p>
-          Tes chaînes. Ton équipe. Ton studio.
-          <br />
-          Un seul endroit pour faire avancer tes idées.
-        </p>
-        <Skyline />
-        <div className="login-world-footer">
-          AFTERLIFE / CREW ACCESS<span>EST. 2026</span>
-        </div>
-      </section>
-      <section className="login-form">
-        <span className="eyebrow">ACCÈS AU STUDIO</span>
-        <h2>
-          {boot.setup_required
-            ? "Bienvenue dans ton studio."
-            : "Content de te revoir."}
-        </h2>
-        <p>
-          {boot.setup_required
-            ? "Crée ton compte propriétaire. Tu pourras ensuite ajouter ton collègue."
-            : "Connecte-toi pour retrouver ton espace partagé."}
-        </p>
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            setBusy(true);
-            setError("");
-            try {
-              await api(boot.setup_required ? "/setup" : "/login", "POST", {
-                name,
-                username,
-                password,
-                token,
-              });
-              await refresh();
-            } catch (e) {
-              setError((e as Error).message);
-            }
-            setBusy(false);
-          }}
-          className="form"
-        >
-          {boot.setup_required && (
-            <>
-              <label>
-                Code d’activation
-                <input
-                  required
-                  type="password"
-                  autoComplete="off"
-                  value={token}
-                  onChange={(e) => setToken(e.target.value)}
-                />
-              </label>
-              <label>
-                Ton nom
-                <input
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-            </>
-          )}
-          <label>
-            Identifiant
-            <input
-              required
-              autoComplete="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-          <label>
-            Mot de passe
-            <input
-              type="password"
-              required
-              minLength={boot.setup_required ? 12 : 1}
-              autoComplete={
-                boot.setup_required ? "new-password" : "current-password"
-              }
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-          {error && (
-            <div role="alert" className="error-box">
-              {error}
-            </div>
-          )}
-          <Button variant="primary" type="submit" disabled={busy}>
-            {busy
-              ? "Connexion…"
-              : boot.setup_required
-                ? "Activer le studio"
-                : "Entrer dans le studio"}
-            <ArrowUpRight size={17} />
-          </Button>
-        </form>
-        <div className="login-security">
-          <ShieldCheck size={16} />
-          Espace privé · données partagées · clés protégées
-        </div>
-      </section>
-    </main>
-  );
-}
-
 function App() {
   const [boot, setBoot] = useState<Boot | null>(null);
   const [data, setData] = useState<Workspace | null>(null);
@@ -301,12 +163,32 @@ function App() {
     const b = await api<Boot>("/bootstrap");
     setCsrf(b.csrf);
     setBoot(b);
+    if (b.user && window.location.pathname === "/login") {
+      const next = new URLSearchParams(window.location.search).get("next");
+      window.history.replaceState(
+        {},
+        "",
+        nav.some((item) => item.path === next) ? next! : "/",
+      );
+      setPage(currentPage());
+    }
     if (b.user) {
       const w = await api<Workspace>("/workspace");
       setData(w);
     } else setData(null);
     setSyncError("");
   }, []);
+  useEffect(() => {
+    const lock = () => {
+      setBoot((previous) =>
+        previous ? { ...previous, user: null, auth: null } : null,
+      );
+      setData(null);
+      refresh().catch((e) => setFatal(e.message));
+    };
+    window.addEventListener("studio:locked", lock);
+    return () => window.removeEventListener("studio:locked", lock);
+  }, [refresh]);
   useEffect(() => {
     const viewport = window.visualViewport;
     const update = () =>
@@ -437,6 +319,7 @@ function App() {
       </div>
     );
   const p: PageProps = {
+    refresh,
     data,
     user: boot.user,
     preview: boot.preview,

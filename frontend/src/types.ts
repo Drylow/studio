@@ -160,6 +160,7 @@ export type Page =
 export type Boot = {
   user: User | null;
   csrf: string;
+  auth?: { stage: "enrol" | "challenge" | "recovery"; codes?: string[] } | null;
   setup_required: boolean;
   preview: boolean;
 };

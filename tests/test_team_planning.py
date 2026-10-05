@@ -103,7 +103,10 @@ class TeamPlanningTests(unittest.TestCase):
         other = self.app.test_client()
         other.get("/api/studio/bootstrap")
         with other.session_transaction() as session:
-            session["studio_user"] = "collegue"
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
         csrf = other.get("/api/studio/bootstrap").json["csrf"]
         self.assertEqual(
             self.assign("collegue", client=other, csrf=csrf).status_code, 200

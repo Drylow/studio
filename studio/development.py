@@ -25,6 +25,8 @@ from studio.store import ROOT, Conflict, now, uid
 
 ACTIVE = ("queued", "preparing", "coding", "testing", "deploying")
 PROTECTED = {
+    "studio/security.py",
+    "frontend/src/private-access.tsx",
     "studio/development.py",
     "studio/developer.py",
     "studio/store.py",
@@ -186,7 +188,13 @@ def health(url, commit):
         )
     ):
         raise ValueError("L’adresse de contrôle doit utiliser HTTPS.")
-    req = urllib.request.Request(url, headers={"Cache-Control": "no-cache"})
+    from studio.security import health_token
+
+    headers = {"Cache-Control": "no-cache"}
+    token = health_token(os.getenv("FLASK_SECRET_KEY", ""))
+    if token:
+        headers["X-Studio-Health"] = token
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=10) as response:
         data = json.loads(response.read(65536))
     if data.get("status") != "ok" or data.get("revision") != commit:

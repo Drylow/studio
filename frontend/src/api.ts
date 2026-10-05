@@ -11,6 +11,8 @@ export async function upload(path: string, file: File) {
     headers: { "X-CSRF-Token": csrf },
   });
   const result = await response.json();
+  if (result.code === "locked")
+    window.dispatchEvent(new Event("studio:locked"));
   if (!response.ok) throw new Error(result.error || "Import impossible.");
   return result;
 }
@@ -28,6 +30,7 @@ export async function api<T = Record<string, unknown>>(
   const data = await response
     .json()
     .catch(() => ({ error: "Réponse du serveur indisponible." }));
+  if (data.code === "locked") window.dispatchEvent(new Event("studio:locked"));
   if (!response.ok) throw new Error(data.error || "L’opération a échoué.");
   return data as T;
 }

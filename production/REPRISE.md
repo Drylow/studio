@@ -2,6 +2,14 @@
 
 ## Priorité actuelle — 5 octobre 2026
 
+**Avant tout hébergement** : la gate privée a été ajoutée. Lire `PRIVATE_ACCESS.md`
+et le guide o2switch actualisé. Deux comptes maximum, mot de passe + code téléphone
+obligatoire ; aucun accès au studio avant la fin de la double authentification.
+Passenger impose HTTPS et interdit l'aperçu. Les sessions sont révocables côté
+serveur. Préserver `FLASK_SECRET_KEY`, qui protège aussi les secrets TOTP chiffrés.
+Le domaine, l'accès cPanel et le comportement réel Apache/Passenger restent à
+vérifier avant mise en service. Ne pas promettre une absence absolue de faille.
+
 L'utilisateur veut construire un nouveau site central de gestion des chaînes, après la
 livraison des trois analyses sportives du jour. **Lire `production/DASHBOARD_PLAN.md`** :
 plan et réponses confirmées. Toute l'interface doit être remplacée (anciens studios inclus),

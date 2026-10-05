@@ -1,3 +1,21 @@
+# Copier ce fichier dans le document root PUBLIC de l'application Passenger.
+# Le code, .env, SQLite et les productions restent hors de ce dossier.
+Options -Indexes -MultiViews
+
+<FilesMatch "(?i)(^\.|\.(py|pyc|sqlite|sqlite3|db|sql|bak|log|env)(-[a-z]+)?$)">
+    Require all denied
+</FilesMatch>
+
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Apache ne doit jamais court-circuiter Flask en servant d'anciens fichiers privés.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/static/studio/assets/[A-Za-z0-9_-]+\.(js|css)$
+RewriteCond %{REQUEST_URI} !^/static/fonts/[A-Za-z0-9_-]+\.(woff2?|ttf)$
+RewriteCond %{REQUEST_URI} !^/static/studio-icon\.svg$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[A-Za-z0-9_-]+$
+RewriteRule ^ - [F,L]
+
+# Le passage vers HTTPS et le domaine canonique sont contrôlés par Flask,
+# à partir de STUDIO_PUBLIC_URL, sans utiliser un Host fourni par le visiteur.

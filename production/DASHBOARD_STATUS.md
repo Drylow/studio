@@ -5,6 +5,19 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 
 ## Disponible
 
+- Gate privée obligatoire avant hébergement : deux comptes maximum, mots de passe
+  personnels (16–128 caractères), code téléphone TOTP et codes de secours à usage
+  unique. Écran Cyberpunk adapté au téléphone, QR et installation expliquée étape
+  par étape. Les accès incomplets n'ouvrent ni pages, ni vidéos, ni Delamain.
+- Sessions conservées côté serveur et invalidées à la déconnexion ; expiration,
+  limitation atomique des essais, protection CSRF/origine et impossibilité de rejouer
+  un code déjà confirmé. Réglages personnels pour changer le mot de passe ou fermer
+  les autres appareils. Clés TOTP chiffrées et SQLite limité au compte système.
+- Mode Passenger strict : HTTPS, domaine autorisé, cookies sécurisés, refus de
+  l'aperçu et des clés faibles. Accès statiques limités, règles Apache fournies pour
+  les fichiers physiques et absence d'indexation. [PRIVATE_ACCESS.md](../PRIVATE_ACCESS.md)
+  décrit les étapes de connexion. Aucun déploiement o2switch effectué à ce stade.
+
 - Onze pages React/TypeScript, servies par Flask : accueil, chaînes, centre de contrôle, radar d'actus,
   production, calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
 - Nom Edgerunners Studio dans l'interface, les écrans de connexion, les lanceurs et
@@ -339,7 +352,11 @@ la confirmation de déconnexion et les commandes propriétaire/collaborateur.
 Les réponses Google et les changements de connexion sont simulés dans le navigateur ;
 aucun jeton n'est enregistré et aucun compte réel n'est connecté.
 
-Validation actuelle : **114 tests Python réussis**, compilation TypeScript/Vite,
+Validation actuelle : **156 tests Python réussis**, dont 22 essais de la gate privée,
+compilation TypeScript/Vite et parcours réel de double authentification sur téléphone.
+Écran de connexion contrôlé sur cinq tailles (320, 390, 768, 844 et 1440 px),
+codes de secours téléchargés, session copiée refusée après déconnexion.
+Les vérifications existantes incluent aussi
 six parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
 des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.

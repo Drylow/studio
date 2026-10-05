@@ -308,7 +308,10 @@ class NewsroomTests(unittest.TestCase):
         item = self.item()
         c = self.app.test_client()
         with c.session_transaction() as session:
-            session["studio_user"] = "collegue"
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
         csrf = c.get("/api/studio/bootstrap").json["csrf"]
         headers = {"X-CSRF-Token": csrf}
         r = c.post(

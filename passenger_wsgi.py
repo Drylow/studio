@@ -11,10 +11,14 @@ if BASE_DIR not in sys.path:
 # Variables d'environnement depuis .env (cPanel ne les injecte pas toujours).
 try:
     from dotenv import load_dotenv
+
     load_dotenv(os.path.join(BASE_DIR, ".env"))
 except Exception:
     pass
 
 os.environ.setdefault("FLASK_ENV", "production")
+os.environ["STUDIO_HOSTED"] = "1"
 
-from app import app as application  # noqa: E402
+from studio.web import create_app  # noqa: E402
+
+application = create_app({"HOSTED": True})

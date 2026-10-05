@@ -31,6 +31,7 @@ class WorkspaceTests(unittest.TestCase):
                 "SECRET_KEY": "test-session-key",
                 "DB_PATH": Path(self.tmp.name) / "studio.db",
                 "PREVIEW": False,
+                "MFA_REQUIRED": False,
                 "WORKER_ENABLED": False,
                 "IMPORT_PRODUCTIONS": False,
             }

@@ -299,13 +299,16 @@ def dispatch(store, action, context, user):
         raise ValueError(
             "Le serveur du studio doit être démarré pour effectuer ces actions."
         )
-    client = app.test_client()
-    csrf = secrets.token_urlsafe(32)
-    with client.session_transaction() as session:
-        session.update(studio_user=user["id"], csrf=csrf)
-    r = client.open(
-        "/api/studio" + path, method=method, json=data, headers={"X-CSRF-Token": csrf}
-    )
+    from studio.security import trusted_client
+
+    with trusted_client(store, user["id"]) as (client, csrf, base):
+        r = client.open(
+            "/api/studio" + path,
+            method=method,
+            json=data,
+            headers={"X-CSRF-Token": csrf},
+            base_url=base,
+        )
     result = r.get_json() or {}
     if r.status_code >= 400:
         return {

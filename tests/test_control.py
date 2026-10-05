@@ -20,6 +20,7 @@ class ControlTests(unittest.TestCase):
         self.config = dict(
             TESTING=True,
             PREVIEW=True,
+            MFA_REQUIRED=False,
             SECRET_KEY="test",
             DB_PATH=Path(self.tmp.name) / "studio.db",
             WORKER_ENABLED=False,
@@ -252,7 +253,10 @@ class ControlTests(unittest.TestCase):
         vid = self.video()
         c = self.app.test_client()
         with c.session_transaction() as session:
-            session["studio_user"] = "collegue"
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
         csrf = c.get("/api/studio/bootstrap").json["csrf"]
         response = c.post(
             "/api/studio/routines",

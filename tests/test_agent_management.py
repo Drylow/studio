@@ -19,6 +19,7 @@ class AgentManagementTests(unittest.TestCase):
         self.config = dict(
             TESTING=True,
             PREVIEW=True,
+            MFA_REQUIRED=False,
             SECRET_KEY="test",
             DB_PATH=Path(self.tmp.name) / "studio.db",
             WORKER_ENABLED=False,

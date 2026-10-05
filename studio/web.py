@@ -1,7 +1,6 @@
 """Authenticated API and frontend entry point for the shared studio."""
 
 from datetime import datetime, timedelta, timezone
-import hmac
 import json
 import os
 from pathlib import Path
@@ -19,17 +18,22 @@ from flask import (
     redirect,
     g,
 )
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 from dotenv import load_dotenv, set_key
 from studio.store import ROOT, Store, Conflict, now, uid
 from studio.domain import overview, utc_date, blockers, STATUSES
 from studio.imports import seed, import_productions, digest
+from studio import security
 
 
 def create_app(config=None):
     load_dotenv(ROOT / ".env")
     config = config or {}
-    app = Flask(__name__, static_folder=str(ROOT / "static"), static_url_path="/static")
+    app = Flask(__name__, static_folder=None)
+    hosted = config.get(
+        "HOSTED",
+        os.getenv("STUDIO_HOSTED") == "1" or os.getenv("FLASK_ENV") == "production",
+    )
     secret = config.get("SECRET_KEY") or os.getenv("FLASK_SECRET_KEY")
     if not secret:
         secret = secrets.token_urlsafe(48)
@@ -41,11 +45,43 @@ def create_app(config=None):
         SESSION_COOKIE_SAMESITE="Lax",
         SESSION_COOKIE_SECURE=os.getenv("COOKIE_SECURE", "0") == "1",
         MAX_CONTENT_LENGTH=12 * 1024 * 1024,
-        PERMANENT_SESSION_LIFETIME=timedelta(days=14),
+        PERMANENT_SESSION_LIFETIME=timedelta(hours=12),
+        HOSTED=hosted,
+        PUBLIC_URL=os.getenv("STUDIO_PUBLIC_URL")
+        or os.getenv("OAUTH_REDIRECT_BASE", ""),
+        MFA_REQUIRED=True,
         PREVIEW=os.getenv("STUDIO_PREVIEW") == "1",
         WORKER_ENABLED=os.getenv("STUDIO_WORKER_ENABLED", "1") == "1",
     )
     app.config.update(config)
+    if app.config["HOSTED"]:
+        if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
+            raise ValueError(
+                "L’aperçu et l’accès local sont interdits sur un site hébergé."
+            )
+        if not app.config["MFA_REQUIRED"] or len(app.config["SECRET_KEY"]) < 32:
+            raise ValueError(
+                "L’hébergement exige la double authentification et une clé de session forte."
+            )
+        public = urlparse(app.config["PUBLIC_URL"])
+        if (
+            public.scheme != "https"
+            or not public.hostname
+            or public.username
+            or public.password
+            or public.path not in {"", "/"}
+            or public.query
+            or public.fragment
+        ):
+            raise ValueError("STUDIO_PUBLIC_URL doit être l’adresse HTTPS du studio.")
+        app.config.update(
+            SESSION_COOKIE_SECURE=True,
+            SESSION_COOKIE_NAME="__Host-edgerunners",
+            SESSION_COOKIE_PATH="/",
+            SESSION_COOKIE_DOMAIN=None,
+            TRUSTED_HOSTS=[public.hostname],
+        )
+        app.config["PUBLIC_URL"] = app.config["PUBLIC_URL"].rstrip("/")
     path = config.get("DB_PATH") or (
         ROOT / "work/studio/preview.db"
         if app.config["PREVIEW"]
@@ -53,6 +89,18 @@ def create_app(config=None):
     )
     store = Store(path)
     store.migrate()
+    security.initialize(store)
+    for private_file in [
+        store.path,
+        Path(str(store.path) + "-wal"),
+        Path(str(store.path) + "-shm"),
+    ]:
+        if private_file.exists():
+            os.chmod(private_file, 0o600)
+    if app.config["HOSTED"] and len(store.users()) > 2:
+        raise ValueError(
+            "Le studio hébergé est réservé à deux comptes. Vérifie les accès existants avant son ouverture."
+        )
     seed(store)
     if config.get("IMPORT_PRODUCTIONS", True):
         import_productions(store)
@@ -123,6 +171,17 @@ def create_app(config=None):
     @app.before_request
     def guard():
         g.user = None
+        if app.config["HOSTED"]:
+            public = urlparse(app.config["PUBLIC_URL"])
+            if request.host.lower() != public.netloc.lower():
+                return jsonify(error="Adresse du studio invalide."), 400
+            if not request.is_secure:
+                if request.method in {"GET", "HEAD"}:
+                    return redirect(
+                        app.config["PUBLIC_URL"] + request.full_path.rstrip("?"),
+                        code=308,
+                    )
+                return jsonify(error="La connexion HTTPS est obligatoire."), 426
         if (
             request.method not in {"GET", "HEAD", "OPTIONS"}
             and Path(app.config["DEVELOPMENT_MAINTENANCE_PATH"]).exists()
@@ -136,18 +195,43 @@ def create_app(config=None):
         if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
             if request.remote_addr not in {"127.0.0.1", "::1"}:
                 return jsonify(error="L’aperçu est réservé à cette machine."), 403
-            session.setdefault("studio_user", "drylow")
-        if session.get("studio_user"):
-            g.user = next(
-                (u for u in store.users() if u["id"] == session["studio_user"]), None
-            )
+        g.user = security.identity(store)
+        if (
+            (app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"))
+            and not g.user
+            and not g.auth_session
+        ):
+            security.issue(store, "drylow")
+            g.user = security.identity(store)
         session.setdefault("csrf", secrets.token_urlsafe(32))
+        public_endpoint = request.endpoint in {
+            "bootstrap",
+            "auth_setup",
+            "auth_login",
+            "auth_logout",
+            "auth_enrol",
+            "auth_verify",
+            "auth_finish",
+            "login_page",
+            "static_asset",
+            "favicon",
+            "studio_health",
+            "robots",
+        }
+        if request.endpoint and not public_endpoint and not g.user:
+            if request.endpoint in {"frontend", "legacy"}:
+                from urllib.parse import urlencode
+
+                return redirect("/login?" + urlencode({"next": request.path}), code=302)
+            return jsonify(error="Connecte-toi au studio.", code="locked"), 401
         if request.path.startswith("/api/") or request.path.startswith("/media/"):
-            public = {"/api/studio/bootstrap", "/api/studio/login", "/api/studio/setup"}
-            if not g.user and request.path not in public:
+            if not g.user and request.path not in security.PUBLIC_APIS:
                 return jsonify(error="Connecte-toi au studio.", code="locked"), 401
             if request.method not in {"GET", "HEAD", "OPTIONS"}:
-                if not hmac.compare_digest(
+                origin = request.headers.get("Origin")
+                if origin and origin != request.host_url.rstrip("/"):
+                    return jsonify(error="Origine de la requête refusée."), 403
+                if not security.equal(
                     request.headers.get("X-CSRF-Token", ""), session["csrf"]
                 ):
                     return (
@@ -162,12 +246,14 @@ def create_app(config=None):
         resp.headers["X-Content-Type-Options"] = "nosniff"
         resp.headers["Referrer-Policy"] = "same-origin"
         resp.headers["X-Frame-Options"] = "SAMEORIGIN"
+        resp.headers["X-Robots-Tag"] = "noindex, nofollow, noarchive"
+        resp.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
         )
-        if os.getenv("FLASK_ENV") == "production":
+        if app.config["HOSTED"]:
             resp.headers["Strict-Transport-Security"] = "max-age=31536000"
-        if request.path.startswith(("/api/", "/media/")):
+        if not request.path.startswith("/static/"):
             resp.headers["Cache-Control"] = "no-store"
         return resp
 
@@ -207,80 +293,10 @@ def create_app(config=None):
             csrf=session["csrf"],
             setup_required=not bool(store.users()),
             preview=app.config["PREVIEW"],
+            auth=security.auth_status(),
         )
 
-    @app.post("/api/studio/setup")
-    def setup():
-        b = body()
-        token = os.getenv("STUDIO_BOOTSTRAP_TOKEN", "")
-        if not token or not hmac.compare_digest(str(b.get("token", "")), token):
-            raise PermissionError("Code d’activation invalide.")
-        name = str(b.get("name", "")).strip()
-        username = str(b.get("username", "")).strip().lower()
-        password = str(b.get("password", ""))
-        if (
-            not name
-            or not re.fullmatch(r"[a-z0-9_.-]{3,40}", username)
-            or len(password) < 12
-        ):
-            raise ValueError(
-                "Nom, identifiant (3–40 caractères) et mot de passe de 12 caractères minimum requis."
-            )
-        with store.db() as c:
-            c.execute("BEGIN IMMEDIATE")
-            if c.execute("SELECT 1 FROM studio_users").fetchone():
-                raise Conflict("Le studio a déjà été activé.")
-            user_id = uid()
-            c.execute(
-                "INSERT INTO studio_users VALUES(?,?,?,?,?,?)",
-                (
-                    user_id,
-                    name,
-                    username,
-                    generate_password_hash(password),
-                    "owner",
-                    now(),
-                ),
-            )
-        session.clear()
-        session.update(studio_user=user_id, csrf=secrets.token_urlsafe(32))
-        store.log(name, "setup", "Studio activé")
-        return jsonify(ok=True)
-
-    @app.post("/api/studio/login")
-    def login():
-        b = body()
-        username = str(b.get("username", "")).strip().lower()
-        cutoff = (datetime.now(timezone.utc) - timedelta(minutes=10)).isoformat()
-        with store.db() as c:
-            c.execute("DELETE FROM studio_login_attempts WHERE created_at<?", (cutoff,))
-            attempts = c.execute(
-                "SELECT COUNT(*) FROM studio_login_attempts WHERE ip=? OR username=?",
-                (request.remote_addr, username),
-            ).fetchone()[0]
-            if attempts >= 8:
-                return jsonify(error="Trop d’essais. Réessaie dans 10 minutes."), 429
-            u = c.execute(
-                "SELECT * FROM studio_users WHERE username=?", (username,)
-            ).fetchone()
-            if not u or not check_password_hash(
-                u["password_hash"], str(b.get("password", ""))
-            ):
-                c.execute(
-                    "INSERT INTO studio_login_attempts VALUES(?,?,?)",
-                    (request.remote_addr, username, now()),
-                )
-                return jsonify(error="Identifiant ou mot de passe incorrect."), 401
-        session.clear()
-        session.update(studio_user=u["id"], csrf=secrets.token_urlsafe(32))
-        session.permanent = True
-        store.log(u["name"], "login", "Connexion au studio")
-        return jsonify(ok=True)
-
-    @app.post("/api/studio/logout")
-    def logout():
-        session.clear()
-        return jsonify(ok=True)
+    security.register(app, store)
 
     @app.get("/api/studio/workspace")
     def workspace():
@@ -705,18 +721,18 @@ def create_app(config=None):
             raise ValueError("Les deux comptes de l’aperçu sont déjà disponibles.")
         b = body()
         username = str(b.get("username", "")).strip().lower()
-        password = str(b.get("password", ""))
+        password = security.valid_password(b.get("password"))
         if (
             not re.fullmatch(r"[a-z0-9_.-]{3,40}", username)
-            or len(password) < 12
-            or not str(b.get("name", "")).strip()
+            or not 1 <= len(str(b.get("name", "")).strip()) <= 80
         ):
-            raise ValueError(
-                "Nom, identifiant et mot de passe de 12 caractères minimum requis."
-            )
+            raise ValueError("Renseigne le nom et un identifiant de 3 à 40 caractères.")
         if store.one("SELECT id FROM studio_users WHERE username=?", (username,)):
             raise Conflict("Cet identifiant est déjà utilisé.")
         with store.db() as c:
+            c.execute("BEGIN IMMEDIATE")
+            if c.execute("SELECT COUNT(*) FROM studio_users").fetchone()[0] >= 2:
+                raise PermissionError("Le studio est réservé à vos deux comptes.")
             c.execute(
                 "INSERT INTO studio_users VALUES(?,?,?,?,?,?)",
                 (
@@ -870,7 +886,13 @@ def create_app(config=None):
     def studio_health():
         # Revision captured on application startup, not the possibly newer files on disk.
         store.one("SELECT id FROM studio_settings WHERE id=1")
-        response = jsonify(status="ok", revision=app.config["CODE_REVISION"])
+        token = request.headers.get("X-Studio-Health", "")
+        expected = security.health_token(app.config["SECRET_KEY"])
+        private = bool(g.user) or bool(token and security.equal(token, expected))
+        response = jsonify(
+            status="ok",
+            **({"revision": app.config["CODE_REVISION"]} if private else {}),
+        )
         response.headers["Cache-Control"] = "no-store"
         return response
 
@@ -893,6 +915,29 @@ def create_app(config=None):
     @app.get("/unlock")
     def legacy(slug=""):
         return redirect("/studio" if slug != "delamain" else "/agent", code=302)
+
+    @app.get("/login")
+    def login_page():
+        if g.user:
+            return redirect("/", code=302)
+        return send_from_directory(ROOT / "static/studio", "index.html")
+
+    @app.get("/robots.txt")
+    def robots():
+        return "User-agent: *\nDisallow: /\n", 200, {"Content-Type": "text/plain"}
+
+    @app.get("/static/<path:path>")
+    def static_asset(path):
+        # Never expose old generated media or arbitrary files from the static tree.
+        allowed = (
+            re.fullmatch(r"studio/assets/[A-Za-z0-9_-]+\.(?:js|css)", path)
+            or re.fullmatch(r"fonts/[A-Za-z0-9_-]+\.(?:woff2?|ttf)", path)
+            or path == "studio-icon.svg"
+        )
+        file = (ROOT / "static" / path).resolve()
+        if not allowed or not file.is_relative_to((ROOT / "static").resolve()):
+            return jsonify(error="Fichier introuvable."), 404
+        return send_from_directory(ROOT / "static", path)
 
     @app.get("/")
     @app.get("/channels")

@@ -1,3 +1,4 @@
+import { SecuritySettings } from "./private-access";
 import { useEffect, useState } from "react";
 import {
   ArrowUpRight,
@@ -64,6 +65,7 @@ import { YouTubeConnection } from "./youtube-connection";
 import { DevelopmentCard, DevelopmentSettings } from "./development";
 
 export type PageProps = {
+  refresh: () => Promise<void>;
   data: Workspace;
   user: User;
   preview: boolean;
@@ -2030,7 +2032,10 @@ export function Settings(p: PageProps) {
             eyebrow="L’ESPACE PARTAGÉ"
             title="Ton équipe"
             action={
-              <Button onClick={() => setAdding(true)}>
+              <Button
+                disabled={p.user.role !== "owner" || p.data.users.length >= 2}
+                onClick={() => setAdding(true)}
+              >
                 <Plus size={15} />
                 Ajouter
               </Button>
@@ -2058,6 +2063,7 @@ export function Settings(p: PageProps) {
           </div>
         </section>
       </div>
+      <SecuritySettings refresh={p.refresh} />
       <DevelopmentSettings
         data={p.data}
         owner={p.user.role === "owner"}
@@ -2166,7 +2172,8 @@ export function Settings(p: PageProps) {
               Mot de passe initial
               <input
                 required
-                minLength={12}
+                minLength={16}
+                maxLength={128}
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

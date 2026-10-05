@@ -303,6 +303,8 @@ class DevelopmentPipelineTests(unittest.TestCase):
             "../other.py",
             "/tmp/other.py",
             "studio/web.py",
+            "studio/security.py",
+            "frontend/src/private-access.tsx",
             "studio/development.py",
             "tests/test_feature.py",
             "frontend/package.json",
@@ -525,6 +527,7 @@ class DevelopmentApiTests(unittest.TestCase):
             dict(
                 TESTING=True,
                 PREVIEW=True,
+                MFA_REQUIRED=False,
                 SECRET_KEY="fixture",
                 DB_PATH=Path(self.tmp.name) / "studio.db",
                 WORKER_ENABLED=False,
@@ -578,7 +581,11 @@ class DevelopmentApiTests(unittest.TestCase):
         )
         self.app.config["PREVIEW"] = False
         with self.client.session_transaction() as session:
-            session["studio_user"] = "collegue"
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
+        self.csrf = self.client.get("/api/studio/bootstrap").json["csrf"]
         with self.ready:
             self.assertEqual(self.post().status_code, 403)
             self.assertEqual(

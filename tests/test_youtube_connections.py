@@ -30,6 +30,7 @@ class YouTubeConnectionTests(unittest.TestCase):
             dict(
                 TESTING=True,
                 PREVIEW=True,
+                MFA_REQUIRED=False,
                 SECRET_KEY="fixture-session",
                 DB_PATH=Path(self.tmp.name) / "studio.db",
                 IMPORT_PRODUCTIONS=False,
@@ -312,7 +313,11 @@ class YouTubeConnectionTests(unittest.TestCase):
                 403,
             )
             with self.client.session_transaction() as session:
-                session["studio_user"] = "collegue"
+                from studio.security import issue
+
+                with self.app.app_context():
+                    issue(self.store, "collegue", container=session)
+            self.csrf = self.client.get("/api/studio/bootstrap").json["csrf"]
             for action in ["verify", "disconnect"]:
                 self.assertEqual(self.post(action).status_code, 403)
             self.assertEqual(

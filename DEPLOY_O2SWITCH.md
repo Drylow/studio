@@ -65,6 +65,8 @@ FLASK_ENV=production
 COOKIE_SECURE=1
 STUDIO_PREVIEW=0
 STUDIO_WORKER_ENABLED=0
+STUDIO_HOSTED=1
+STUDIO_PUBLIC_URL=https://ton-domaine.fr
 DB_PATH=/home/TONUSER/edgerunners_data/studio.db
 OAUTH_REDIRECT_BASE=https://ton-domaine.fr
 ```
@@ -77,9 +79,33 @@ si elles sont déjà configurées. Donner à `.env` des droits de lecture limit�
 Le worker intégré est désactivé ici : un worker distinct est lancé à l'étape 5.
 
 Activer HTTPS dans cPanel → SSL/TLS Status → AutoSSL. Puis Setup Python App → Restart.
+Passenger active le mode hébergé même si un ancien `.env` indique « développement ».
+Il refuse de démarrer en aperçu, sans adresse HTTPS ou avec une clé de session faible.
+Le studio est réservé à **deux comptes**, avec mot de passe personnel et code téléphone
+obligatoire. Conserver `FLASK_SECRET_KEY` : elle protège aussi les clés d'authentification
+chiffrées en base. Sa perte empêche de retrouver ces clés ; la sauvegarder en privé.
+
+Le dossier public créé par cPanel doit être vide des anciens fichiers du site.
+Les sauvegarder hors de `public_html` avant remplacement. Ajouter les règles de
+`public/.htaccess` au `.htaccess` de ce dossier public **en conservant les directives
+Passenger générées par cPanel**. Ces règles bloquent les fichiers physiques privés
+qu'Apache pourrait servir sans passer par Flask. Ne jamais relier tout le dépôt au
+dossier public ; `.env`, SQLite, `work/`, `news/`, `presets/` et les vidéos restent privés.
+Donner au dossier de données des permissions `0700` et à `.env` des permissions `0600`.
+Flask limite aussi les fichiers publics aux bundles compilés et aux polices.
+
 Au premier lancement, utiliser le code `STUDIO_BOOTSTRAP_TOKEN` du fichier privé dans
-l'écran Code d'installation, créer Drylow, puis Réglages → Équipe → Ajouter Kanye.
+l'écran Code d'installation, créer Drylow et relier son application d'authentification,
+puis Réglages → Équipe → Ajouter Kanye. Kanye configure son téléphone à sa première
+connexion. Suivre [PRIVATE_ACCESS.md](PRIVATE_ACCESS.md) pour les étapes illustrées
+dans l'écran et la récupération d'accès.
 Les mots de passe ACCESS_PASSWORD/BOSS_PASSWORD et l'ancien triple-clic ne sont plus utilisés.
+
+Avant ouverture, tester sur le **vrai domaine** sans cookie : pages redirigées vers la
+connexion, API et vidéos refusées, fichiers privés et anciens médias inaccessibles.
+Vérifier le cookie `__Host-edgerunners` Secure/HttpOnly, le retour Google en HTTPS et
+la déconnexion immédiate d'une copie de session. Contrôler les deux comptes avant
+d'activer le worker. Les essais cloud ne remplacent pas ce contrôle Apache/Passenger.
 
 ## 3. Créer l'accès Google pour tout le studio
 
