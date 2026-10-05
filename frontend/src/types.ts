@@ -153,4 +153,9 @@ export type Message = {
   content: string;
   actor: string;
   created_at: string;
+  attachments: {
+    kind: "video" | "channel" | "page";
+    id: string | number;
+    title: string;
+  }[];
 };

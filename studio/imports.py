@@ -158,6 +158,7 @@ def seed(store):
                     now(),
                 ),
             )
+    store.retire_defaults()
 
 
 def import_productions(store):

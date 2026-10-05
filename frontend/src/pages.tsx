@@ -628,7 +628,9 @@ const columns = [
 export function Production(p: PageProps) {
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
-  const [view, setView] = useState("board");
+  const [view, setView] = useState(() =>
+    window.matchMedia("(max-width: 600px)").matches ? "list" : "board",
+  );
   const vs = p.data.videos.filter(
     (v) =>
       (filter === "all" || v.channel_id === Number(filter)) &&
@@ -799,7 +801,9 @@ export function Calendar(p: PageProps) {
   const [month, setMonth] = useState(today.slice(0, 7));
   const [filter, setFilter] = useState("all");
   const [scope, setScope] = useState("all");
-  const [view, setView] = useState("month");
+  const [view, setView] = useState(() =>
+    window.matchMedia("(max-width: 600px)").matches ? "agenda" : "month",
+  );
   const [exporting, setExporting] = useState(false);
   const [year, m] = month.split("-").map(Number);
   const start = new Date(Date.UTC(year, m - 1, 1, 12));
@@ -961,7 +965,7 @@ export function Calendar(p: PageProps) {
         {view === "rhythm" ? (
           <PersonalPlanning {...p} scope={scope} channelFilter={filter} />
         ) : view === "month" ? (
-          <>
+          <div className="month-scroll">
             <div className="week-head">
               {["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"].map((s) => (
                 <span key={s}>{s}</span>
@@ -1050,7 +1054,7 @@ export function Calendar(p: PageProps) {
                 </div>
               ))}
             </div>
-          </>
+          </div>
         ) : (
           <div className="agenda-list">
             {events.filter((v) => dayKey(v.post_at).startsWith(month))
@@ -1617,11 +1621,17 @@ export function Agent({
   initial = "",
   mutate,
   compact = false,
+  openVideo,
+  editChannel,
+  go,
 }: {
   data: Workspace;
   initial?: string;
   mutate: Mutate;
   compact?: boolean;
+  openVideo: (video: Video) => void;
+  editChannel: (channel: Channel) => void;
+  go: (page: Page) => void;
 }) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [text, setText] = useState(initial);
@@ -1633,12 +1643,22 @@ export function Agent({
   useEffect(() => {
     const get = () =>
       api<{ messages: Message[] }>("/chat")
-        .then((r) => setMessages(r.messages))
+        .then((r) => {
+          setMessages(r.messages);
+          setError("");
+        })
         .catch((e) => setError(e.message));
     get();
     const timer = setInterval(get, 7000);
     return () => clearInterval(timer);
   }, []);
+  useEffect(() => {
+    if (data.jobs.some((j) => j.kind === "agent")) {
+      api<{ messages: Message[] }>("/chat")
+        .then((r) => setMessages(r.messages))
+        .catch((e) => setError(e.message));
+    }
+  }, [data.jobs]);
   const active = data.jobs.some(
     (j) => j.kind === "agent" && ["queued", "running"].includes(j.status),
   );
@@ -1682,14 +1702,15 @@ export function Agent({
             </span>
             <h3>Quelle est la mission ?</h3>
             <p>
-              Je connais les chaînes, les projets et les tâches de ton espace
-              partagé.
+              Chaînes, tâches, planning, vidéos et miniatures : donne-moi une
+              mission précise.
             </p>
             <div className="chat-suggestions">
               {[
                 "Fais le point sur le studio.",
                 "Propose des idées pour Cage Dispatch.",
                 "Crée les tâches pour préparer la semaine.",
+                "Montre-moi les miniatures des dernières vidéos.",
               ].map((s) => (
                 <button key={s} onClick={() => setText(s)}>
                   {s}
@@ -1698,7 +1719,9 @@ export function Agent({
               ))}
             </div>
             <span className="form-hint">
-              Les idées et tâches demandées sont enregistrées dans le studio.
+              Les actions utilisent tes permissions et les contrôles du studio.
+              Les connexions et la relecture humaine se font dans les fiches et
+              Réglages.
             </span>
           </div>
         )}
@@ -1708,6 +1731,65 @@ export function Agent({
               {m.role === "assistant" ? "DELAMAIN" : m.actor}
             </span>
             <p>{m.content}</p>
+            {(m.attachments || []).map((link, index) => {
+              const v =
+                link.kind === "video"
+                  ? data.videos.find((v) => v.id === link.id)
+                  : undefined;
+              const c =
+                link.kind === "channel"
+                  ? data.channels.find((c) => c.id === Number(link.id))
+                  : undefined;
+              if (v)
+                return (
+                  <article className="chat-attachment" key={index}>
+                    {v.thumb_path ? (
+                      <ZoomImage
+                        src={`/media/${v.id}/thumbnail`}
+                        alt={`Miniature : ${v.title}`}
+                        caption="Agrandir la miniature"
+                      />
+                    ) : (
+                      <p className="muted small">Miniature à choisir</p>
+                    )}
+                    <strong>{v.title}</strong>
+                    <Button onClick={() => openVideo(v)}>
+                      Ouvrir la fiche vidéo
+                    </Button>
+                  </article>
+                );
+              if (c)
+                return (
+                  <article className="chat-attachment channel" key={index}>
+                    <ChannelMark channel={c} />
+                    <strong>{c.name}</strong>
+                    <Button onClick={() => editChannel(c)}>
+                      Réglages de la chaîne
+                    </Button>
+                  </article>
+                );
+              if (
+                link.kind === "page" &&
+                [
+                  "overview",
+                  "channels",
+                  "production",
+                  "calendar",
+                  "tasks",
+                  "studio",
+                  "library",
+                  "settings",
+                  "news",
+                  "control",
+                ].includes(String(link.id))
+              )
+                return (
+                  <Button key={index} onClick={() => go(link.id as Page)}>
+                    {link.title}
+                  </Button>
+                );
+              return null;
+            })}
             <small>
               {dateLabel(m.created_at, { hour: "2-digit", minute: "2-digit" })}
             </small>
@@ -1732,8 +1814,12 @@ export function Agent({
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              e.currentTarget.form?.requestSubmit();
+              if (
+                window.matchMedia("(hover: hover) and (pointer: fine)").matches
+              ) {
+                e.preventDefault();
+                e.currentTarget.form?.requestSubmit();
+              }
             }
           }}
         />
@@ -1746,7 +1832,8 @@ export function Agent({
         </button>
       </form>
       <p className="chat-footnote">
-        Actions suivies dans le studio · données et clés côté serveur
+        Mise en file ≠ publication confirmée · les contrôles restent
+        obligatoires
       </p>
     </div>
   );

@@ -9,7 +9,8 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 - Vue d'ensemble du stock, des créneaux, travaux et blocages.
 - Centre de contrôle : problèmes classés, prochaines actions précises, suivi des
   alertes propre à chaque compte et état du moteur/configurations.
-- Huit chaînes importées, réglages propres à chaque chaîne et mode manuel/automatique.
+- Sept chaînes actives, réglages propres à chaque chaîne et mode manuel/automatique.
+  Ring Dispatch est retirée ; son historique reste conservé, sans nouveaux travaux.
 - Répartition Drylow / Kanye par glisser-déposer, déplacement sur téléphone et vue
   « Mes chaînes ». Les chaînes non attribuées restent dans « À répartir ».
 - Radar d'actualités MMA et foot : sources RSS datées, sujets récents et préparation
@@ -26,7 +27,10 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 - Liste des étapes avant publication, avec action précise pour chaque blocage.
 - Bibliothèque des références approuvées et des productions existantes.
 - Agrandissement des miniatures et planches de contrôle, utilisable aussi sur mobile.
-- Delamain : assistant connecté aux données et aux actions de préparation du studio.
+- Delamain : ajout, retrait et attribution des chaînes, tâches, fiches vidéo,
+  programmation, préparation et envois protégés. Miniatures existantes affichées dans le chat.
+- Téléphone : agenda et liste de production par défaut, formulaires lisibles,
+  commandes tactiles et chat adapté à la hauteur disponible avec le clavier.
 - File de travaux persistante avec progression, erreurs, annulation et reprise.
 - Avertissement de connexion interrompue, heure de dernière lecture et reprise
   automatique de la lecture lorsque le réseau revient.
@@ -107,6 +111,16 @@ Avant un hébergement public : configurer HTTPS, `COOKIE_SECURE=1`, un serveur W
 les sauvegardes et le client Google. Les étapes Google et la connexion par chaîne
 figurent dans **Réglages** ; l'essai initial doit être une publication privée.
 
+Dans **Delamain**, demander par exemple « Ajoute une chaîne de foot nommée… »,
+« Attribue Cage Dispatch à Kanye », « Programme cette vidéo demain à 18 h » ou
+« Montre-moi les miniatures des dernières vidéos ». Il utilise les permissions du
+compte connecté et les mêmes contrôles que les fiches. Une nouvelle chaîne commence
+en mode avec validation, désactivée. Un envoi accepté est mis en file ; seul le moteur
+confirme sa livraison ou publication. La connexion Google se fait dans **Réglages**.
+Delamain ne valide pas les droits ou la relecture et ne génère pas encore les
+miniatures sportives. Le serveur, son worker et la configuration IA sont nécessaires
+pour utiliser cet assistant sur un hébergement permanent.
+
 ## Développement et tests
 
 ```bash
@@ -122,9 +136,11 @@ et le nouveau backend dans `studio/`. La migration SQLite conserve les anciennes
 données et sauvegarde la base avant sa première migration.
 
 Les essais navigateur nécessitent une seconde instance sur une base d'aperçu dédiée,
-puis `cd frontend` et les parcours `smoke`, `smoke:control`, `smoke:news`, `smoke:team`.
+puis `cd frontend` et les parcours `smoke`, `smoke:control`, `smoke:news`, `smoke:team`,
+`smoke:mobile`.
 Le parcours news nécessite des infos dans le radar de cette base dédiée ; le parcours équipe
-nécessite le compte collègue de test. Commandes complètes dans
+nécessite le compte collègue de test ; le parcours mobile nécessite une miniature
+jointe dans le chat de la base dédiée. Commandes complètes dans
 [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md#développement-et-vérifications).
 
 ## Moteurs et références conservés

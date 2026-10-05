@@ -57,6 +57,7 @@ def create_app(config=None):
     if config.get("IMPORT_PRODUCTIONS", True):
         import_productions(store)
     app.extensions["studio_store"] = store
+    store.web_app = app
     if (
         not app.config["PREVIEW"]
         and not store.users()
@@ -302,6 +303,13 @@ def create_app(config=None):
             initialize(store)
         store.log(actor(), "channel", "Chaîne créée : " + name)
         return jsonify(id=cid), 201
+
+    @app.delete("/api/studio/channels/<int:cid>")
+    def remove_channel(cid):
+        old = channel(cid)
+        store.retire_channel(cid, revision(body()))
+        store.log(actor(), "channel", "Chaîne retirée : " + old["name"])
+        return jsonify(ok=True)
 
     @app.patch("/api/studio/channels/<int:cid>")
     def edit_channel(cid):
@@ -714,11 +722,37 @@ def create_app(config=None):
 
     @app.get("/api/studio/chat")
     def chat():
-        return jsonify(
-            messages=store.rows("SELECT * FROM studio_chat ORDER BY id DESC LIMIT 40")[
-                ::-1
-            ]
-        )
+        messages = store.rows("SELECT * FROM studio_chat ORDER BY id DESC LIMIT 40")[
+            ::-1
+        ]
+        for m in messages:
+            m["attachments"] = json.loads(m["attachments"])
+        return jsonify(messages=messages)
+
+    @app.post("/api/studio/agent/news-work")
+    def agent_news_work():
+        b = body()
+        if b.get("kind") == "news_scan":
+            ch = channel(b.get("channel_id"))
+            if ch["format"] != "news":
+                raise ValueError("Choisis une chaîne d’actualité.")
+            if app.config["PREVIEW"]:
+                raise ValueError(
+                    "Utilise Actualiser dans le radar de l’aperçu ; la collecte en file nécessite le moteur permanent."
+                )
+            payload = {"channel_id": ch["id"]}
+        elif b.get("kind") == "news_prepare":
+            item = store.one(
+                "SELECT * FROM studio_news_items WHERE id=?", (b.get("item_id"),)
+            )
+            if not item or item["revision"] != revision(b):
+                raise Conflict("Cette information a changé. Actualise le radar.")
+            channel(item["channel_id"])
+            payload = {"item_id": item["id"], "revision": item["revision"]}
+        else:
+            raise ValueError("Action de recherche inconnue.")
+        payload["actor"] = actor()
+        return jsonify(job_id=store.enqueue(b["kind"], payload=payload)), 202
 
     @app.post("/api/studio/chat")
     def send_chat():
@@ -735,7 +769,10 @@ def create_app(config=None):
                 "INSERT INTO studio_chat(role,content,actor,created_at) VALUES(?,?,?,?)",
                 ("user", message, actor(), now()),
             )
-        job = store.enqueue("agent", payload={"message": message, "actor": actor()})
+        job = store.enqueue(
+            "agent",
+            payload={"message": message, "actor": actor(), "user_id": g.user["id"]},
+        )
         return jsonify(job_id=job), 202
 
     @app.post("/api/studio/jobs/<jid>/cancel")

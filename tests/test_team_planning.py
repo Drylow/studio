@@ -138,7 +138,7 @@ class TeamPlanningTests(unittest.TestCase):
             c.execute("ALTER TABLE studio_channels DROP COLUMN cadence_anchor")
         app = create_app({**self.config, "DB_PATH": path})
         channels = app.extensions["studio_store"].channels()
-        self.assertEqual(len(channels), 8)
+        self.assertEqual(len(channels), 7)
         self.assertTrue(
             all(c["responsible_id"] is None and c["cadence_anchor"] for c in channels)
         )

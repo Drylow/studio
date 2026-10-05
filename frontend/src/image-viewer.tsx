@@ -47,6 +47,7 @@ export function ZoomImage({
             <div className="image-viewer">
               <div className="image-viewer-toolbar">
                 <Button
+                  aria-label="Réduire"
                   onClick={() => setZoom((z) => Math.max(0.5, z - 0.5))}
                   disabled={zoom <= 0.5}
                 >
@@ -55,18 +56,20 @@ export function ZoomImage({
                 </Button>
                 <output aria-live="polite">{Math.round(zoom * 100)} %</output>
                 <Button
+                  aria-label="Agrandir"
                   onClick={() => setZoom((z) => Math.min(4, z + 0.5))}
                   disabled={zoom >= 4}
                 >
                   <ZoomIn size={17} />
                   <span>Agrandir</span>
                 </Button>
-                <Button onClick={() => setZoom(1)}>
+                <Button aria-label="Ajuster" onClick={() => setZoom(1)}>
                   <Maximize size={17} />
                   <span>Ajuster</span>
                 </Button>
                 <a
                   className="button ghost"
+                  aria-label="Image originale"
                   href={src}
                   target="_blank"
                   rel="noreferrer"

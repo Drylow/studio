@@ -169,6 +169,17 @@ class Store:
                 c.execute(
                     "ALTER TABLE studio_channels ADD COLUMN cadence_anchor TEXT DEFAULT ''"
                 )
+            if "retired" not in channel_columns:
+                c.execute(
+                    "ALTER TABLE studio_channels ADD COLUMN retired INTEGER NOT NULL DEFAULT 0"
+                )
+            chat_columns = {
+                r["name"] for r in c.execute("PRAGMA table_info(studio_chat)")
+            }
+            if "attachments" not in chat_columns:
+                c.execute(
+                    "ALTER TABLE studio_chat ADD COLUMN attachments TEXT NOT NULL DEFAULT '[]'"
+                )
             c.execute(
                 "UPDATE studio_channels SET cadence_anchor=? WHERE cadence_anchor=''",
                 (datetime.now(ZoneInfo("Europe/Paris")).date().isoformat(),),
@@ -176,6 +187,50 @@ class Store:
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(5,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(1,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(2,?)", (now(),))
+            c.execute("INSERT OR IGNORE INTO studio_schema VALUES(6,?)", (now(),))
+        self.retire_defaults()
+
+    def retire_defaults(self):
+        """Ring Dispatch was discontinued by the owner; never reimport it as active."""
+        row = self.one(
+            "SELECT project_id,revision FROM studio_channels WHERE key='boxing_en' AND retired=0"
+        )
+        if row:
+            self.retire_channel(row["project_id"], row["revision"])
+
+    def retire_channel(self, channel_id, revision):
+        """Remove a channel from the active studio, retaining its historical records."""
+        with self.db() as c:
+            c.execute("BEGIN IMMEDIATE")
+            row = c.execute(
+                "SELECT revision,retired FROM studio_channels WHERE project_id=?",
+                (channel_id,),
+            ).fetchone()
+            if not row:
+                raise ValueError("Chaîne introuvable.")
+            if row["retired"]:
+                return
+            if row["revision"] != revision:
+                raise Conflict("Cette chaîne a changé. Actualise avant de la retirer.")
+            c.execute(
+                "UPDATE studio_channels SET retired=1,paused=1,enabled=0,responsible_id=NULL,revision=revision+1,updated_at=? WHERE project_id=?",
+                (now(), channel_id),
+            )
+            c.execute(
+                "UPDATE studio_jobs SET cancel_requested=1,status=CASE WHEN status='queued' THEN 'cancelled' ELSE status END,message='Chaîne retirée du studio',updated_at=? WHERE status IN ('queued','running') AND (video_id IN (SELECT id FROM studio_videos WHERE channel_id=?) OR (kind='news_scan' AND json_extract(payload,'$.channel_id')=?))",
+                (now(), channel_id, channel_id),
+            )
+            if c.execute(
+                "SELECT 1 FROM sqlite_master WHERE name='studio_news_config'"
+            ).fetchone():
+                c.execute(
+                    "UPDATE studio_news_config SET enabled=0,revision=revision+1 WHERE channel_id=?",
+                    (channel_id,),
+                )
+                c.execute(
+                    "UPDATE studio_jobs SET cancel_requested=1,status=CASE WHEN status='queued' THEN 'cancelled' ELSE status END,message='Chaîne retirée du studio',updated_at=? WHERE status IN ('queued','running') AND kind='news_prepare' AND json_extract(payload,'$.item_id') IN (SELECT id FROM studio_news_items WHERE channel_id=?)",
+                    (now(), channel_id),
+                )
 
     def channels(self):
         # Deliberately enumerate safe columns: refresh tokens and proxies never leave the server.
@@ -185,7 +240,7 @@ class Store:
             CASE WHEN p.yt_refresh_token!='' THEN 1 ELSE 0 END AS connected,
             s.key,s.format,s.accent,s.initials,s.target_stock,s.freshness_hours,s.enabled,s.paused,
             s.budget,s.instructions,s.template_key,s.responsible_id,s.cadence_anchor,s.revision,s.updated_at
-            FROM studio_channels s JOIN delamain_projects p ON p.id=s.project_id ORDER BY p.id"""
+            FROM studio_channels s JOIN delamain_projects p ON p.id=s.project_id WHERE s.retired=0 ORDER BY p.id"""
         )
 
     def channel(self, channel_id):
@@ -291,7 +346,9 @@ class Store:
             )
 
     def videos(self):
-        out = self.rows("SELECT * FROM studio_videos ORDER BY created_at DESC")
+        out = self.rows(
+            "SELECT v.* FROM studio_videos v JOIN studio_channels c ON c.project_id=v.channel_id WHERE c.retired=0 ORDER BY v.created_at DESC"
+        )
         for v in out:
             for key in ("sources", "tags", "engine_ref", "rights_manifest"):
                 v[key] = json.loads(v[key])

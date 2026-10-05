@@ -21,8 +21,29 @@ et les miniatures/planches de contrôle s'agrandissent avec zoom.
 
 Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.
 L'ancien nom est remplacé dans l'affichage et les guides ; les noms techniques du
-dépôt et des bases sont conservés pour préserver les données. Validation : 85 tests
-Python et quatre parcours navigateur, sur ordinateur et mobile.
+dépôt et des bases sont conservés pour préserver les données. Validation : 102 tests
+Python et cinq parcours navigateur, sur ordinateur et mobile.
+
+**Ring Dispatch est retirée le 5 octobre à la demande de l'utilisateur.** Sept chaînes
+restent actives ; son historique est conservé, ses travaux en attente sont annulés.
+Ne pas reprendre une ancienne production de cette chaîne ni la réactiver à l'import.
+Le bloc Drylow possède maintenant sa ligne turquoise, assortie à l'avatar D.
+Sur téléphone : Agenda/Liste par défaut, calendrier mensuel défilable sans élargir
+la page, formulaires de 16 px et commandes tactiles, chat adapté au clavier.
+Les essais couvrent six tailles, portrait et paysage, avec Chromium tactile émulé ;
+ils ne constituent pas un essai sur un vrai iPhone/Safari.
+
+Delamain gère les chaînes (ajout, retrait, réglages, attribution), les tâches,
+fiches et créneaux, le radar et ses sources ; il lance les étapes script/rendu/contrôle,
+publication et livraison protégées, annule un travail et affiche les miniatures
+existantes avec lien vers la fiche. Il utilise l'identité de la session et les mêmes
+routes que l'interface. Budgets, activation et modes sont réservés au propriétaire
+pour l'agent. Plans et résultats sont conservés ; une action interrompue ne se répète
+pas aveuglément. Une mise en file n'est pas une publication confirmée. Connexion
+Google, droits et relecture humaine restent nécessaires ; la génération automatique
+des miniatures sportives reste à construire. Hébergement permanent avec worker et
+configuration IA nécessaire. Nouveaux essais d'actions avec réponses IA simulées,
+sans appel payant ni publication réelle.
 
 Ajouts demandés ensuite : centre de contrôle avec alertes et prochaines actions,
 lecture propre à chaque utilisateur, état local des configurations et du moteur.
@@ -30,7 +51,7 @@ Routines partagées de recherche, publication et organisation hebdomadaire, sans
 doublons et sans appels payants. Recherche/filtres/retards dans les tâches, accès à
 la vidéo liée. Export mensuel `.ics` par chaîne ; copie du planning, pas abonnement.
 Une perte de connexion affiche la dernière lecture et un bouton pour réessayer ;
-la lecture reprend au retour du réseau. `studio/control.py` et les trois parcours
+la lecture reprend au retour du réseau. `studio/control.py` et les cinq parcours
 `frontend/scripts/*smoke.mjs` portent ces contrôles. L'automatisation éditoriale,
 les droits complets et la connexion réelle Google restent à terminer comme indiqué
 dans le document d'état ; ne pas les présenter comme opérationnels.

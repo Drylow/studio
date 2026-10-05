@@ -409,6 +409,8 @@ def prepare(store, item_id, revision, actor):
         if item["revision"] != revision:
             raise Conflict("Cette information a changé. Actualise le radar.")
         ch = store.channel(item["channel_id"])
+        if not ch:
+            raise ValueError("Cette chaîne a été retirée du studio.")
         if not fresh({"event_at": item["published"]}, ch):
             raise ValueError(
                 "Cette information a dépassé la fraîcheur autorisée sur la chaîne."
@@ -445,7 +447,7 @@ def register(app, store, owner, body):
     @app.get("/api/studio/news")
     def news_workspace():
         items = store.rows(
-            "SELECT * FROM studio_news_items ORDER BY published DESC LIMIT 400"
+            "SELECT i.* FROM studio_news_items i JOIN studio_channels c ON c.project_id=i.channel_id WHERE c.retired=0 ORDER BY i.published DESC LIMIT 400"
         )
         for item in items:
             item["sources"] = json.loads(item["sources"])
@@ -454,8 +456,12 @@ def register(app, store, owner, body):
             )
         return jsonify(
             items=items,
-            feeds=store.rows("SELECT * FROM studio_news_feeds ORDER BY name"),
-            configs=store.rows("SELECT * FROM studio_news_config"),
+            feeds=store.rows(
+                "SELECT f.* FROM studio_news_feeds f JOIN studio_channels c ON c.project_id=f.channel_id WHERE c.retired=0 ORDER BY f.name"
+            ),
+            configs=store.rows(
+                "SELECT n.* FROM studio_news_config n JOIN studio_channels c ON c.project_id=n.channel_id WHERE c.retired=0"
+            ),
         )
 
     @app.post("/api/studio/news/scan")

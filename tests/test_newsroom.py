@@ -269,8 +269,12 @@ class NewsroomTests(unittest.TestCase):
             "actions": [{"type": "news_prepare", "item_id": item["id"]}],
         }
         with patch("services.ai.chat_json", return_value=response):
-            respond(self.store, "Prépare cette info", "Owner", "fixed-news-agent")
-            respond(self.store, "Prépare cette info", "Owner", "fixed-news-agent")
+            respond(
+                self.store, "Prépare cette info", "Drylow", "fixed-news-agent", "drylow"
+            )
+            respond(
+                self.store, "Prépare cette info", "Drylow", "fixed-news-agent", "drylow"
+            )
         jobs = self.store.rows("SELECT * FROM studio_jobs")
         self.assertEqual(len(jobs), 1)
         self.assertEqual(jobs[0]["kind"], "news_prepare")

@@ -47,7 +47,9 @@ def execute(store, row):
     if row["kind"] == "agent":
         from studio.agent import respond
 
-        return respond(store, payload["message"], actor, row["id"])
+        return respond(
+            store, payload["message"], actor, row["id"], payload.get("user_id")
+        )
     if row["kind"] == "news_scan":
         from studio.newsroom import scan
 

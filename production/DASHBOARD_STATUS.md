@@ -11,6 +11,9 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   les guides. Les noms techniques du dépôt et des bases restent compatibles.
 - Thème Cyberpunk commun, illustration originale de Night City, polices locales,
   navigation mobile, recherche globale et réduction des animations.
+- Parcours téléphone : Agenda et Liste de production par défaut, calendrier mensuel
+  défilable dans son panneau, commandes tactiles de 44 px et formulaires de 16 px.
+  Formulaires sur une colonne, marges de sécurité et chat ajusté à la hauteur du clavier.
 - Centre de contrôle dans un poste Netwatch : stock des chaînes, configurations,
   signal du moteur et alertes de production/planning, tâches en retard, flux en erreur.
   Les alertes indiquent des étapes précises et ouvrent la fiche ou la page concernée.
@@ -21,12 +24,18 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
   La présence de clés est indiquée comme configuration, pas comme test réseau réussi.
 - Avertissement de perte de connexion : données potentiellement anciennes, dernière
   lecture en heure belge, bouton de reprise et lecture automatique au retour du réseau.
-- Huit chaînes reprises des moteurs récents. Les anciennes livraisons sont importées
+- Sept chaînes actives reprises des moteurs récents. Les anciennes livraisons sont importées
   sans les transformer en publications YouTube confirmées. Les miniatures approuvées
   restent les références ; aucune miniature des vidéos actuelles n'a été refaite.
+- Ring Dispatch (`boxing_en`) retirée à la demande du propriétaire : masquée du studio,
+  calendrier, tâches et radar, désactivée et en pause, collecte désactivée, travaux
+  en attente annulés et travaux en cours signalés pour annulation. Historique et
+  fichiers conservés ; imports et redémarrages ne la réactivent pas. Aucun compte
+  YouTube n'est supprimé. API de retrait réutilisable pour les autres chaînes.
 - Réglages persistants par chaîne : modèle de production, mode manuel/automatique,
   cadence, premier jour du rythme, fraîcheur de l'actualité, stock cible, instructions, budget et pause.
 - Répartition des chaînes en colonnes Drylow / Kanye, avec réserve « À répartir ».
+  Ligne turquoise sur Drylow assortie à son D, ligne jaune sur Kanye.
   Glisser-déposer et sélecteur sur mobile/clavier, attribution persistante et protection
   contre les transferts simultanés obsolètes. Les deux comptes gardent accès à toutes
   les chaînes ; le transfert conserve les vidéos, tâches, cadences et réglages.
@@ -56,9 +65,22 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 - Deux rôles de compte : propriétaire et collaborateur. Sessions individuelles,
   mots de passe hachés, protection CSRF, limitation des tentatives de connexion,
   journal partagé. Les connexions et réglages sensibles sont réservés au propriétaire.
-- Agent textuel connecté au proxy existant. Il consulte l'espace partagé, crée des
-  tâches et idées, et lance script/rendu sur une fiche existante. Ses actions sont
-  typées, persistantes et protégées contre les doublons après reprise.
+- Delamain connecté au proxy existant : consulte l'espace partagé, ajoute, modifie,
+  retire et attribue les chaînes, crée/modifie/supprime les tâches, prépare les fiches,
+  modifie narration et métadonnées, programme les créneaux et annule les travaux.
+  Il lance script/rendu/contrôle technique/publication/Discord via les mêmes routes
+  protégées que l'interface, avec l'identité du compte ayant envoyé la demande.
+  Modes, budgets et activation sont réservés au propriétaire pour l'agent.
+  Il peut régler les sources du radar et les pauses du studio selon ces permissions.
+- Réponses Delamain avec liens vers chaînes, pages et fiches vidéo ; miniatures
+  existantes affichées et agrandissables dans le chat, sans nouvelle génération.
+  Sur téléphone, Entrée insère une ligne ; le bouton Envoyer reste distinct.
+  Le résultat réel des routes remplace toute affirmation de succès proposée par l'IA.
+  Une mise en file n'est jamais annoncée comme une publication YouTube confirmée.
+  Plans et résultats persistants, étapes réutilisées après reprise ; une action
+  interrompue demande de vérifier l'état plutôt que de répéter une mutation incertaine.
+  L'agent ne peut ni valider les droits/faits/relecture, ni contourner OAuth ou les
+  contrôles de publication, ni ajouter des permissions à son compte.
 - Radar d'actualités : lecture des flux RSS/Atom datés, sources modifiables, fenêtre
   de fraîcheur par chaîne, date et lien visibles, erreurs des sources explicites.
   Flux MMA News pour Cage Dispatch, BBC Sport et The Guardian pour Pitch Dispatch.
@@ -228,10 +250,41 @@ cd frontend
 STUDIO_SMOKE_URL=http://127.0.0.1:5001 npm run smoke:team
 ```
 
+`npm run smoke:mobile` vérifie onze pages en tactile à 320, 375, 390, 430, 768 et
+844 pixels, portrait et paysage. Il vérifie aussi menu, ligne d'équipe, formulaire de
+tâche, agenda, défilement du mois, miniature Delamain et clavier. Préparer une
+pièce jointe de test avec une référence existante, depuis la racine du dépôt :
+
+```bash
+.venv/bin/python - <<'PY'
+import json
+from pathlib import Path
+from studio.store import Store, now
+db_path = Path('/tmp/studio-ui-smoke.db')
+assert db_path.is_file(), 'Démarrer la seconde instance avant de préparer le test.'
+store = Store(db_path)
+channel = next(c for c in store.channels() if c['key'] == 'mma_en')
+title = 'Mobile Delamain thumbnail fixture'
+video = next((v for v in store.videos() if v['title'] == title), None)
+vid = video['id'] if video else store.add_video({'channel_id': channel['id'], 'title': title})
+thumb = Path('presets/news_thumbnails/approved_2026-10-05/reference_01.png')
+assert thumb.is_file()
+store.update('studio_videos', vid, {'thumb_path': str(thumb)})
+content = 'Miniature existante — essai mobile, aucune génération.'
+if not store.one('SELECT id FROM studio_chat WHERE content=?', (content,)):
+    with store.db() as db:
+        db.execute('INSERT INTO studio_chat(role,content,actor,created_at,attachments) VALUES(?,?,?,?,?)',
+                   ('assistant', content, 'Delamain', now(),
+                    json.dumps([{'kind': 'video', 'id': vid, 'title': title}])))
+PY
+cd frontend
+STUDIO_SMOKE_URL=http://127.0.0.1:5001 npm run smoke:mobile
+```
+
 Exécuter les parcours successivement : ils modifient la base de test.
 
-Validation actuelle : **85 tests Python réussis**, compilation TypeScript/Vite,
-quatre parcours navigateur, onze pages en ordinateur et mobile, persistance des
+Validation actuelle : **102 tests Python réussis**, compilation TypeScript/Vite,
+cinq parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
 des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.
 Le centre de contrôle, les tâches et le calendrier sont aussi vérifiés à quatre
@@ -241,6 +294,13 @@ Les transferts entre les deux comptes, migrations répétées, séquences de deu
 jours, cadence de douze heures, heure inexistante ou répétée et couverture du stock
 sur le même rythme sont également vérifiés. Les nouvelles vues passent à 1440,
 1024, 768 et 390 pixels.
+Les nouveaux essais vérifient les droits de l'agent, l'identité de session, les
+modifications concurrentes, le retrait sans perte d'historique, la reprise sans
+doublons, les liens/miniatures et le refus de déclarer une publication bloquée réussie.
+Ils utilisent des réponses IA simulées et les routes réelles de l'application.
+Les six tailles tactiles passent sans débordement de la page ; Enter crée une ligne
+dans le chat et la zone d'envoi reste visible avec une hauteur de clavier simulée.
+Ces essais Chromium ne remplacent pas une vérification sur appareil iOS/Safari réel.
 Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
 répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
 publication ou livraison Discord n'a été lancée pendant la construction.

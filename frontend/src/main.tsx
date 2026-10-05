@@ -308,6 +308,21 @@ function App() {
     setSyncError("");
   }, []);
   useEffect(() => {
+    const viewport = window.visualViewport;
+    const update = () =>
+      document.documentElement.style.setProperty(
+        "--visible-height",
+        `${viewport?.height || window.innerHeight}px`,
+      );
+    update();
+    viewport?.addEventListener("resize", update);
+    window.addEventListener("resize", update);
+    return () => {
+      viewport?.removeEventListener("resize", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+  useEffect(() => {
     refresh().catch((e) => setFatal(e.message));
   }, [refresh]);
   useEffect(() => {
@@ -676,7 +691,14 @@ function App() {
                 <Tag tone="auto">ESPACE PARTAGÉ</Tag>
               </div>
               <div className="panel full-chat">
-                <Agent data={data} initial={agentText} mutate={mutate} />
+                <Agent
+                  data={data}
+                  initial={agentText}
+                  mutate={mutate}
+                  openVideo={p.openVideo}
+                  editChannel={p.editChannel}
+                  go={p.go}
+                />
               </div>
             </div>
           )}
@@ -712,7 +734,24 @@ function App() {
                 <X size={20} />
               </button>
             </div>
-            <Agent data={data} initial={agentText} mutate={mutate} compact />
+            <Agent
+              data={data}
+              initial={agentText}
+              mutate={mutate}
+              compact
+              openVideo={(v) => {
+                setAgentOpen(false);
+                p.openVideo(v);
+              }}
+              editChannel={(c) => {
+                setAgentOpen(false);
+                p.editChannel(c);
+              }}
+              go={(page) => {
+                setAgentOpen(false);
+                p.go(page);
+              }}
+            />
           </aside>
         </>
       )}

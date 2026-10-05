@@ -195,15 +195,16 @@ def overview(store):
             "review": sum(c["awaiting_review"] for c in channels),
             "scheduled": sum(c["scheduled"] for c in channels),
         },
-        "tasks": store.rows(
-            'SELECT * FROM studio_tasks ORDER BY done, due_at="", due_at, created_at DESC'
-        ),
+        "tasks": store.rows("""SELECT t.* FROM studio_tasks t WHERE
+            (t.channel_id IS NULL OR t.channel_id IN (SELECT project_id FROM studio_channels WHERE retired=0)) AND
+            (t.video_id IS NULL OR t.video_id IN (SELECT v.id FROM studio_videos v JOIN studio_channels c ON c.project_id=v.channel_id WHERE c.retired=0))
+            ORDER BY t.done, t.due_at="", t.due_at, t.created_at DESC"""),
         "activity": store.rows(
             "SELECT * FROM studio_activity ORDER BY id DESC LIMIT 40"
         ),
         "users": store.users(),
         "jobs": store.rows(
-            "SELECT id,kind,video_id,status,progress,message,error,created_at,updated_at FROM studio_jobs ORDER BY created_at DESC LIMIT 30"
+            "SELECT j.id,j.kind,j.video_id,j.status,j.progress,j.message,j.error,j.created_at,j.updated_at FROM studio_jobs j LEFT JOIN studio_videos v ON v.id=j.video_id LEFT JOIN studio_channels c ON c.project_id=v.channel_id WHERE j.video_id IS NULL OR c.retired=0 ORDER BY j.created_at DESC LIMIT 30"
         ),
         "worker": store.one("SELECT * FROM studio_worker WHERE id=1"),
         "server_time": now(),

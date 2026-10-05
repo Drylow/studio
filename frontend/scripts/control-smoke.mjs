@@ -20,7 +20,9 @@ try {
     const boot = await (await fetch("/api/studio/bootstrap")).json();
     const w = await (await fetch("/api/studio/workspace")).json();
     const cid = w.channels.find((c) => c.key === "mma_en").id;
-    const boxing = w.channels.find((c) => c.key === "boxing_en").id;
+    const otherChannel = w.channels.find(
+      (c) => c.key === "oddly_specific_en",
+    ).id;
     const title = "Control smoke " + Date.now();
     const headers = {
       "Content-Type": "application/json",
@@ -42,7 +44,7 @@ try {
     if (!scheduled.ok) throw new Error("Fixture calendar failed");
     return {
       cid,
-      boxing,
+      otherChannel,
       title,
       vid: v.id,
       postAt,
@@ -110,7 +112,7 @@ try {
   assert.equal(await page.locator(".task-row").count(), 4);
   await page
     .getByLabel("Filtrer les tâches par chaîne")
-    .selectOption(String(fixture.boxing));
+    .selectOption(String(fixture.otherChannel));
   assert.equal(await page.locator(".task-row").count(), 0);
   await page
     .getByLabel("Filtrer les tâches par chaîne")
@@ -138,11 +140,9 @@ try {
   const readTitle = await firstCard
     .getByRole("heading", { level: 3 })
     .innerText();
-  const card = page
-    .locator(".control-alert")
-    .filter({
-      has: page.getByRole("heading", { name: readTitle, exact: true }),
-    });
+  const card = page.locator(".control-alert").filter({
+    has: page.getByRole("heading", { name: readTitle, exact: true }),
+  });
   await card.getByRole("button", { name: /Marquer comme lue/ }).click();
   await card.getByText("Lu par toi", { exact: true }).waitFor();
   await page.reload({ waitUntil: "networkidle" });
