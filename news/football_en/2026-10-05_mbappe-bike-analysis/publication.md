@@ -1,8 +1,8 @@
 # Titres proposés
 
-1. Mbappé's Bike Story: A Mourinho Dig, or an Interpretation?
-2. Why Mbappé's Bike Ride Sparked a Mourinho Debate
-3. Mbappé Hits Back at a Rumor as His Bike Story Divides Madrid
+1. Mbappé's Bike Ride Sparks BACKLASH — Was It Really a Dig at Mourinho?
+2. Mbappé vs Mourinho? The Bike Story That Set Off a Madrid Debate
+3. Mbappé’s Bike Ride Divides Madrid — Then He Fires Back at a Different Rumor
 
 # Description à copier
 
@@ -35,6 +35,10 @@ Thumbnail adaptation: CC BY-SA 4.0.
 # Tags
 
 Kylian Mbappé,José Mourinho,football,Real Madrid,Pitch Dispatch,Mbappe news
+
+# Commentaire épinglé proposé
+
+Was Mbappé sending a message — or are people reading too much into a bike ride?
 
 # Miniature validée
 

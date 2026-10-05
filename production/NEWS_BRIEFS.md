@@ -21,10 +21,28 @@ git). Relancer reprend la même voix, avec le cache des requêtes du fournisseur
 Le montage écrit `result.json`, `captions.srt`, `script.txt` et les planches
 `check/sheet_*.jpg` (une capture toutes les cinq secondes). **Regarder toutes
 les planches et contrôler le son avant livraison**, puis noter la vérification.
-Le programme ne publie pas et n'envoie pas de message Discord.
+Le montage ne publie pas et n'envoie pas de message Discord.
 Si l'alignement audio local est installé, les sous-titres sont recalés sur la voix
 enregistrée en conservant l'orthographe du script ; une transcription trop
 différente interrompt la production pour contrôle. Une relance conserve ce recalage.
+
+## Livraison sur Discord
+
+À la demande de l'utilisateur, le 5 octobre : livrer les analyses MMA dans Cage Dispatch
+et les analyses foot dans Pitch Dispatch. Webhooks dans `.env` seulement :
+`DISCORD_WEBHOOK_MMA_EN` et `DISCORD_WEBHOOK_FOOTBALL_EN`. La publication YouTube reste manuelle.
+
+```bash
+.venv/bin/python production/news_brief.py send news/mma_en/2026-10-05_parnasse-topuria-analysis --dry-run
+.venv/bin/python production/news_brief.py send news/mma_en/2026-10-05_parnasse-topuria-analysis
+```
+
+La commande exige `review_ok`, un résultat vérifié et la miniature choisie. Chaque vidéo
+part en un seul message : lien MP4, miniature, titres proposés, description et chapitres,
+tags, commentaire épinglé proposé et kit ZIP à jour. Les requêtes attendent la confirmation
+Discord des deux pièces jointes ; `discord_receipt.json` garde l'identifiant du message,
+sans webhook secret. Une relance du même paquet confirmé ne crée pas de doublon.
+Le verrou `work/discord.lock` sépare les livraisons. Aucun envoi quotidien n'est programmé.
 
 ## Résumé après France–Belgique
 

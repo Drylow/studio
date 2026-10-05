@@ -1,0 +1,14 @@
+{
+  "sent_at": "2026-10-05T17:29:07.700346+00:00",
+  "channel": "football_en",
+  "channel_id": "1556074999708782662",
+  "webhook_id": "1556717404816539650",
+  "fingerprint": "8b7fa494733a9dc7388a9b487ffffa2f45194034391d9104fba2052909d6c269",
+  "link": "https://gofile.io/d/w5KntWGY",
+  "message_id": "1556719465973153815",
+  "attachments": [
+    "Kit_publication.zip",
+    "miniature.jpg"
+  ],
+  "confirmation": "message_and_embedded_image_verified"
+}

@@ -1,8 +1,8 @@
 # Titres proposés
 
-1. Imavov Offers Strickland $500,000 — If He Beats Him
-2. “If You Beat Me”: Imavov's $500,000 Challenge to Strickland
-3. Imavov Calls Out Strickland With a $500,000 Pledge
+1. Imavov Puts $500,000 on the Line: Can Strickland Ignore This Challenge?
+2. “IF YOU BEAT ME” — Imavov’s $500,000 Challenge to Sean Strickland
+3. Imavov Calls Out Strickland: $500,000 of His OWN Money at Stake
 
 # Description à copier
 
@@ -34,6 +34,10 @@ Thumbnail adaptation: CC BY-SA 4.0.
 # Tags
 
 Nassourdine Imavov,Sean Strickland,UFC,MMA,Cage Dispatch,Imavov Strickland
+
+# Commentaire épinglé proposé
+
+Would you take Imavov's $500,000 challenge if you were Strickland?
 
 # Miniature validée
 

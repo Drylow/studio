@@ -2,6 +2,7 @@
 
   python production/news_brief.py voice <dossier>
   python production/news_brief.py build <dossier>
+  python production/news_brief.py send <dossier> [--dry-run]
   python production/news_brief.py postmatch <dossier> <event> [--watch]
 
 postmatch attend une fin de match confirmée et écrit les faits à relire.
@@ -21,6 +22,9 @@ def main():
     sub = parser.add_subparsers(dest="command", required=True)
     for command in ("voice", "build"):
         sub.add_parser(command).add_argument("job", type=Path)
+    delivery = sub.add_parser("send")
+    delivery.add_argument("job", type=Path)
+    delivery.add_argument("--dry-run", action="store_true")
     match = sub.add_parser("postmatch")
     match.add_argument("job", type=Path)
     match.add_argument("event")
@@ -30,6 +34,13 @@ def main():
     match.add_argument("--hours", type=float, default=8)
     args = parser.parse_args()
     args.job.mkdir(parents=True, exist_ok=True)
+    if args.command == "send":
+        from services import news_brief_discord
+        try:
+            news_brief_discord.send(args.job, WORK, args.dry_run)
+        except (ValueError, RuntimeError) as exc:
+            raise SystemExit(str(exc)) from None
+        return
     if args.command in ("voice", "build"):
         plan = json.loads((args.job / "brief.json").read_text(encoding="utf-8"))
         if args.command == "voice":

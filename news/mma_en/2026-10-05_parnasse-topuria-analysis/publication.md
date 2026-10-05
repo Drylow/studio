@@ -1,8 +1,8 @@
 # Titres proposés
 
-1. Parnasse vs Topuria? The TikTok Repost and Atch's Real Message
-2. Parnasse–Topuria Rumor: His Camp Says YES, but Nothing Is Signed
-3. Why Parnasse–Topuria Is Trending — and What Is Actually Confirmed
+1. Parnasse vs Topuria?! His Camp Says YES — But Nothing Is Signed
+2. TOPURIA NEXT? Parnasse's Camp Responds as TikTok Repost Fuels Rumors
+3. Parnasse vs Topuria in January? The Messages Behind the Fight Rumor
 
 # Description à copier
 
@@ -33,6 +33,10 @@ Thumbnail adaptation: CC BY 3.0.
 # Tags
 
 Salahdine Parnasse,Ilia Topuria,UFC,MMA,Cage Dispatch,Parnasse Topuria
+
+# Commentaire épinglé proposé
+
+Would you want to see Parnasse face Topuria next, or should he climb the rankings first?
 
 # Miniature validée
 

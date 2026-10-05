@@ -1,6 +1,6 @@
 # Journal des vidéos
 
-État au 5 oct. 2026 : trois analyses sportives livrées pour publication manuelle ; France–Belgique attend la fin du match. Mettre à jour à chaque livraison (lien Gofile, mode de livraison, date de publication).
+État au 5 oct. 2026 : trois analyses sportives livrées sur Discord pour publication manuelle ; France–Belgique attend la fin du match. Mettre à jour à chaque livraison (lien Gofile, mode de livraison, date de publication).
 
 ## Oddly Expensive Lives (`oddly_expensive_en`)
 
@@ -85,11 +85,15 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 
 ## Analyses sportives courtes — 5 octobre 2026
 
-Livraison dans la conversation pour **publication manuelle** : chaque lien contient le MP4 et un kit ZIP
+Livraison dans la conversation puis sur **Discord, à la demande de l'utilisateur**, pour publication manuelle : chaque lien contient le MP4 et un kit ZIP
 (miniature validée, trois titres proposés, description avec chapitres et sources, tags, sous-titres et crédits).
 Les trois vidéos sont en anglais avec la voix de leur chaîne. Toutes les planches (une capture toutes les
 cinq secondes) ont été regardées ; décodage, format 1080p et recalage des sous-titres sur la voix contrôlés.
-Les transferts MP4 et ZIP ont été vérifiés par taille et empreinte MD5. Aucun envoi Discord ou YouTube.
+Les transferts MP4 et ZIP ont été vérifiés par taille et empreinte MD5. Les deux vidéos MMA sont envoyées
+dans Cage Dispatch, Mbappé dans Pitch Dispatch ; aucune publication YouTube automatique.
+Chaque message Discord contient la miniature choisie et un kit ZIP avec les titres renforcés du 5 octobre,
+description et chapitres, sources, crédits, tags et commentaire épinglé proposé.
+Les webhooks restent dans `.env` ; les traces d'envoi sont dans `discord_receipt.json` et `discord_done`.
 
 | Chaîne | Sujet | Durée | Miniature choisie | Lien | Publication |
 |---|---|---|---|---|---|

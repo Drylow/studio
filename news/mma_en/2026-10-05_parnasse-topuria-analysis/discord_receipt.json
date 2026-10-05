@@ -1,0 +1,14 @@
+{
+  "sent_at": "2026-10-05T17:29:08.948739+00:00",
+  "channel": "mma_en",
+  "channel_id": "1556074906775724082",
+  "webhook_id": "1556717349459992710",
+  "fingerprint": "13f4c92042f3b96592143885a36a31bf32417180c2cdf8e1bfd725b8e03e0bd7",
+  "link": "https://gofile.io/d/lRKv6ZQW",
+  "message_id": null,
+  "confirmation": "http_200",
+  "attachments_requested": [
+    "miniature.jpg",
+    "Kit_publication.zip"
+  ]
+}
