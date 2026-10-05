@@ -7,11 +7,16 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 ## Ce qu'on peut utiliser
 
 - Vue d'ensemble du stock, des créneaux, travaux et blocages.
+- Centre de contrôle : problèmes classés, prochaines actions précises, suivi des
+  alertes propre à chaque compte et état du moteur/configurations.
 - Huit chaînes importées, réglages propres à chaque chaîne et mode manuel/automatique.
 - Radar d'actualités MMA et foot : sources RSS datées, sujets récents et préparation
   d'une fiche de recherche. Collecte régulière configurable par chaîne.
 - Tableau de production, calendrier mensuel et agenda en heure belge.
+- Export du mois et de la chaîne sélectionnés vers un fichier d'agenda `.ics`.
 - Tâches partagées, responsables et échéances ; deux comptes individuels.
+- Routines pour la recherche, la vérification d'une publication et l'organisation
+  de la semaine. Recherche, filtre par chaîne, tâches en retard et lien vers la vidéo.
 - Studio vidéo pour les formats Oddly, History et analyses sportives courtes.
 - Fiches réunissant script, sources, fichiers, miniature, contrôles et programmation.
 - Liste des étapes avant publication, avec action précise pour chaque blocage.
@@ -19,6 +24,8 @@ production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOAR
 - Agrandissement des miniatures et planches de contrôle, utilisable aussi sur mobile.
 - Delamain : assistant connecté aux données et aux actions de préparation du studio.
 - File de travaux persistante avec progression, erreurs, annulation et reprise.
+- Avertissement de connexion interrompue, heure de dernière lecture et reprise
+  automatique de la lecture lorsque le réseau revient.
 
 Le choix éditorial automatique des sujets, la vérification des faits, les contrôles
 entièrement autonomes et la production automatique des miniatures sportives restent
@@ -66,6 +73,19 @@ le lien et sa date ; compléter les faits vérifiés avant de produire. Les sour
 la fréquence se règlent dans **Sources du radar → Configurer le radar**. L'aperçu autorise la lecture
 manuelle des flux publics, mais pas leur collecte permanente.
 
+Pour voir les problèmes : **Centre de contrôle**, ou la cloche en haut. Chaque alerte
+propose une action et ses étapes. **Marquer comme lue** ne change que ton suivi,
+pas celui du collègue ni les contrôles de publication.
+
+Pour un ensemble de tâches : **Tâches → Ajouter une routine → choisir le type, la
+chaîne, éventuellement une vidéo, le responsable et l'échéance → Ajouter les tâches**.
+Une routine ouverte du même type sur la même chaîne/vidéo est réutilisée plutôt que
+dupliquée. Cocher les tâches ne valide pas les droits ou le rendu.
+
+Pour l'agenda externe : **Calendrier → choisir le mois et la chaîne → Exporter le
+mois**. Dans ton agenda, choisir **Importer**, puis le fichier `.ics` téléchargé.
+C'est une copie des créneaux prévus, sans synchronisation ni publication automatique.
+
 ## Utiliser les comptes
 
 Lancer `python app.py`, ou `START_STUDIO.bat` sous Windows. Au premier lancement,
@@ -98,7 +118,8 @@ et le nouveau backend dans `studio/`. La migration SQLite conserve les anciennes
 données et sauvegarde la base avant sa première migration.
 
 Les essais navigateur nécessitent une seconde instance sur une base d'aperçu dédiée,
-puis `cd frontend` et `npm run smoke`. Commande complète dans
+puis `cd frontend` et `npm run smoke`, `npm run smoke:control` et `npm run smoke:news`.
+Le dernier parcours nécessite des infos dans le radar de cette base dédiée. Commande complète dans
 [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md#développement-et-vérifications).
 
 ## Moteurs et références conservés

@@ -160,6 +160,11 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   Les choix éditoriaux, la vérification des faits et les contrôles autonomes restent à construire ;
   aucune chaîne automatique n'est activée. Ne pas confondre le mode configuré avec une
   automatisation opérationnelle. Nom retenu : Edgerunners Studio, en un mot avec un S.
+  `studio/control.py` fournit les alertes locales, accusés de lecture par compte,
+  routines partagées sans doublons et export du calendrier. Les routines ne remplacent
+  jamais les contrôles de droits/qualité. Les indications de configuration ne sont
+  pas des appels réseau de vérification. Trois parcours navigateur existent : smoke,
+  smoke:news et smoke:control, uniquement sur une base dédiée.
 
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie

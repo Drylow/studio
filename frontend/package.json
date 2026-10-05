@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "check": "tsc --noEmit",
     "smoke": "node scripts/smoke.mjs",
-    "smoke:news": "node scripts/news-smoke.mjs"
+    "smoke:news": "node scripts/news-smoke.mjs",
+    "smoke:control": "node scripts/control-smoke.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

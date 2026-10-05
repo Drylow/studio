@@ -5,12 +5,22 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 
 ## Disponible
 
-- Dix pages React/TypeScript, servies par Flask : accueil, chaînes, radar d'actus,
+- Onze pages React/TypeScript, servies par Flask : accueil, chaînes, centre de contrôle, radar d'actus,
   production, calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
 - Nom Edgerunners Studio dans l'interface, les écrans de connexion, les lanceurs et
   les guides. Les noms techniques du dépôt et des bases restent compatibles.
 - Thème Cyberpunk commun, illustration originale de Night City, polices locales,
   navigation mobile, recherche globale et réduction des animations.
+- Centre de contrôle dans un poste Netwatch : stock des chaînes, configurations,
+  signal du moteur et alertes de production/planning, tâches en retard, flux en erreur.
+  Les alertes indiquent des étapes précises et ouvrent la fiche ou la page concernée.
+  Elles disparaissent lorsque la cause se résout. Le moteur au repos n'est pas présenté
+  comme en panne ; les collectes de chaînes en pause n'exigent pas son activité.
+- Cloche et compteur d'alertes non lues. Accusés de lecture persistants par compte,
+  liés à l'état du problème. Les lire ne résout pas un blocage et ne change aucun contrôle.
+  La présence de clés est indiquée comme configuration, pas comme test réseau réussi.
+- Avertissement de perte de connexion : données potentiellement anciennes, dernière
+  lecture en heure belge, bouton de reprise et lecture automatique au retour du réseau.
 - Huit chaînes reprises des moteurs récents. Les anciennes livraisons sont importées
   sans les transformer en publications YouTube confirmées. Les miniatures approuvées
   restent les références ; aucune miniature des vidéos actuelles n'a été refaite.
@@ -19,6 +29,14 @@ décrit ce qui fonctionne réellement et ce qui reste à construire.
 - Tâches partagées avec responsable, priorité, échéance, modification et clôture.
   Calendrier mensuel et agenda, déplacement des créneaux, fuseau Europe/Paris,
   refus des collisions et des modifications simultanées obsolètes.
+- Trois routines : préparer un sujet, vérifier une publication, organiser la semaine.
+  Tâches liées à une chaîne et éventuellement à une vidéo, avec responsable et échéance
+  commune. Ajout atomique et réutilisation de la routine ouverte pour éviter les doublons
+  entre les deux utilisateurs et après une réponse réseau perdue.
+- Recherche de tâches, filtre par chaîne, vue des retards et ouverture de la vidéo liée.
+- Export `.ics` du mois et de la chaîne affichés. Dates UTC dans le fichier, sélection
+  du mois en heure belge, identifiants stables, révisions et échappement/folding des titres.
+  Les créneaux exportés sont des intentions ; fichier ponctuel, aucune synchronisation.
 - Fiche vidéo : titre, description, script, faits, sources datées, programmation,
   aperçu, fichiers disponibles et déclaration d'une publication manuelle.
 - Liste des étapes avant publication : fichiers, faits renseignés, droits, relecture,
@@ -107,10 +125,23 @@ Pour tester l'organisation : cliquer **Tâches → Nouvelle tâche**, ou
 **Calendrier → Prévoir une publication → choisir la vidéo et l'heure → Enregistrer le créneau**.
 
 Pour la recherche : **Radar d'actus → Cage Dispatch ou Pitch Dispatch → Actualiser les
-actus**, puis **Préparer une vidéo** sur un sujet. Compléter les faits vérifiés dans
+infos**, puis **Préparer une vidéo** sur un sujet. Compléter les faits vérifiés dans
 la fiche ; aucun rendu payant ne démarre à cette étape. Modifier les flux dans
 **Sources du radar → Configurer le radar**. Hors aperçu, activer la collecte régulière dans ce panneau,
 choisir l'intervalle, puis conserver le serveur et son worker allumés.
+
+Pour le suivi : **Centre de contrôle → choisir un filtre → suivre l'action de l'alerte**.
+La cloche de la barre du haut y conduit depuis chaque page. **Marquer comme lue**
+conserve le problème visible ; le filtre **Non lues** concerne uniquement ton compte.
+
+Pour les routines : **Tâches → Ajouter une routine → choisir le type, la chaîne, la
+vidéo facultative, le responsable et l'échéance → Ajouter les tâches**. Une routine
+encore ouverte est réutilisée. Les contrôles de droits et de qualité se font dans
+la fiche vidéo, même lorsque toutes les tâches sont cochées.
+
+Pour exporter : **Calendrier → afficher le mois → choisir la chaîne → Exporter le
+mois**, puis **Importer** le fichier `.ics` dans l'agenda externe. Les dates restent
+des créneaux prévus. Les modifications ultérieures nécessitent un nouvel export.
 
 ### Application avec comptes individuels
 
@@ -152,10 +183,18 @@ Pour le second parcours, charger d'abord les flux dans le radar de cette base d�
 puis exécuter `npm run smoke:news` avec la même `STUDIO_SMOKE_URL`. Il vérifie la fiche
 de recherche, les blocages, la gestion des sources et le zoom, sans produire de vidéo.
 
-Validation actuelle : **56 tests Python réussis**, compilation TypeScript/Vite,
-parcours navigateur sur les dix pages en ordinateur et mobile, persistance des
+`npm run smoke:control` ajoute une vidéo de recherche et une routine dans cette base
+de test. Il vérifie les ajouts sans doublons, les filtres, la lecture personnelle des
+alertes, le téléchargement du planning et le retour après coupure réseau. Il n'utilise
+pas la base principale, n'appelle pas les fournisseurs et ne lance aucun rendu.
+
+Validation actuelle : **67 tests Python réussis**, compilation TypeScript/Vite,
+trois parcours navigateur, onze pages en ordinateur et mobile, persistance des
 tâches, réglages et créneaux, radar sans double fiche et gestion des sources, liste
 des étapes, zoom, et blocage des opérations de production externes dans l'aperçu.
+Le centre de contrôle, les tâches et le calendrier sont aussi vérifiés à quatre
+largeurs (1440, 1024, 768 et 390 pixels). Alertes personnelles, routines concurrentes,
+export au changement d'heure, formulaires RSS malformés et reprise réseau sont vérifiés.
 Le paquet autonome démarre aussi avec la nouvelle interface. Le proxy textuel a
 répondu à une demande de lecture du nombre de chaînes. Aucune vidéo payante, image,
 publication ou livraison Discord n'a été lancée pendant la construction.

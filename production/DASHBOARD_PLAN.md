@@ -44,10 +44,11 @@ YouTube » sans confirmation ou import du lien. Une livraison Discord est un ét
 | --- | --- |
 | Vue d'ensemble | Publications du jour, stock par chaîne, travaux en cours, actions et alertes. |
 | Chaînes | Fiche, connexion YouTube, format, langue, voix, style, cadence, stock cible et autonomie. |
+| Centre de contrôle | Blocages classés, actions précises, alertes propres à chaque compte, moteur et configurations. |
 | Radar d'actus | Flux datés, fraîcheur, sujets déjà traités, sources configurables et fiche de recherche. |
 | Production | Tableau des vidéos : idée, recherche, script, création, contrôle, prête, programmée, publiée ou bloquée. |
-| Calendrier | Vue semaine/mois, déplacement des créneaux, filtres par chaîne et avertissements de conflit. |
-| Tâches | To-do partagée : responsable, échéance, priorité, lien vers une chaîne ou une vidéo. |
+| Calendrier | Vue semaine/mois, déplacement des créneaux, filtres par chaîne, avertissements de conflit et export d'agenda. |
+| Tâches | To-do partagée : responsable, échéance, priorité, routines, filtres et lien vers une chaîne ou une vidéo. |
 | Studio vidéo | Création guidée selon le format, script, sources, voix, visuels, montage, miniature et aperçu. |
 | Bibliothèque | Médias, références de style, sources, preuves de droits et anciennes productions. |
 | Réglages | Comptes, connexions, budgets, notifications et règles d'automatisation. |

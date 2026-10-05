@@ -277,6 +277,11 @@ def create_app(config=None):
             "discord_mma": bool(os.getenv("DISCORD_WEBHOOK_MMA_EN")),
             "discord_football": bool(os.getenv("DISCORD_WEBHOOK_FOOTBALL_EN")),
         }
+        from studio.control import diagnostics
+
+        data["control"] = diagnostics(
+            store, g.user["id"], preview=app.config["PREVIEW"], data=data
+        )["summary"]
         return jsonify(data)
 
     @app.post("/api/studio/channels")
@@ -763,7 +768,10 @@ def create_app(config=None):
     register_reviews(app, store, owner)
     from studio.newsroom import register as register_newsroom
 
-    register_newsroom(app, store, owner)
+    register_newsroom(app, store, owner, body)
+    from studio.control import register as register_control
+
+    register_control(app, store, body)
 
     @app.get("/tools/<path:slug>")
     @app.get("/category/<path:slug>")
@@ -782,6 +790,7 @@ def create_app(config=None):
     @app.get("/settings")
     @app.get("/agent")
     @app.get("/news")
+    @app.get("/control")
     def frontend():
         return send_from_directory(ROOT / "static/studio", "index.html")
 

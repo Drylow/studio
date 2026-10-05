@@ -152,6 +152,7 @@ try {
   const pages = [
     ["/", "Vue d’ensemble."],
     ["/channels", "Tes chaînes."],
+    ["/control", "Centre de contrôle."],
     ["/news", "Radar d’actus."],
     ["/production", "Production."],
     ["/calendar", "Calendrier."],
@@ -195,7 +196,7 @@ try {
   }
   assert.deepEqual(errors, []);
   console.log(
-    "Ten pages, desktop/mobile, reference images and JavaScript errors: passed",
+    "Eleven pages, desktop/mobile, reference images and JavaScript errors: passed",
   );
 } finally {
   await browser.close();

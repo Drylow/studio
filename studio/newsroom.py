@@ -13,7 +13,7 @@ import unicodedata
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from flask import jsonify, request, g
+from flask import jsonify, g
 from studio.store import now, uid, Conflict
 from studio.domain import date, fresh
 
@@ -439,7 +439,7 @@ def prepare(store, item_id, revision, actor):
         return vid
 
 
-def register(app, store, owner):
+def register(app, store, owner, body):
     initialize(store)
 
     @app.get("/api/studio/news")
@@ -460,13 +460,13 @@ def register(app, store, owner):
 
     @app.post("/api/studio/news/scan")
     def news_refresh():
-        b = request.get_json() or {}
+        b = body()
         return jsonify(scan(store, int(b.get("channel_id", 0))))
 
     @app.post("/api/studio/news/feeds")
     def news_add_feed():
         owner()
-        b = request.get_json() or {}
+        b = body()
         cid = int(b.get("channel_id", 0))
         ch = store.channel(cid)
         name = str(b.get("name", "")).strip()
@@ -494,7 +494,7 @@ def register(app, store, owner):
     @app.patch("/api/studio/news/feeds/<fid>")
     def news_edit_feed(fid):
         owner()
-        b = request.get_json() or {}
+        b = body()
         with store.db() as c:
             cur = c.execute(
                 "UPDATE studio_news_feeds SET enabled=?,revision=revision+1 WHERE id=? AND revision=?",
@@ -507,7 +507,7 @@ def register(app, store, owner):
     @app.delete("/api/studio/news/feeds/<fid>")
     def news_delete_feed(fid):
         owner()
-        b = request.get_json() or {}
+        b = body()
         with store.db() as c:
             if not c.execute(
                 "DELETE FROM studio_news_feeds WHERE id=? AND revision=?",
@@ -519,7 +519,7 @@ def register(app, store, owner):
     @app.patch("/api/studio/news/config/<int:cid>")
     def news_config(cid):
         owner()
-        b = request.get_json() or {}
+        b = body()
         minutes = int(b.get("interval_minutes", 60))
         if not 30 <= minutes <= 1440:
             raise ValueError("Choisis un passage entre 30 minutes et 24 heures.")
@@ -537,12 +537,12 @@ def register(app, store, owner):
 
     @app.post("/api/studio/news/items/<iid>/prepare")
     def news_create_video(iid):
-        b = request.get_json() or {}
+        b = body()
         return jsonify(video_id=prepare(store, iid, b.get("revision"), g.user["name"]))
 
     @app.patch("/api/studio/news/items/<iid>")
     def news_dismiss(iid):
-        b = request.get_json() or {}
+        b = body()
         if b.get("status") not in {"new", "dismissed"}:
             raise ValueError("Statut du radar invalide.")
         with store.db() as c:

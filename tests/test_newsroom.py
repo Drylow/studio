@@ -337,6 +337,25 @@ class NewsroomTests(unittest.TestCase):
         self.assertFalse(checks["youtube"]["complete"])
         self.assertIn("Chaînes", checks["youtube"]["help"])
 
+    def test_malformed_requests_are_rejected_before_scanning_or_mutating(self):
+        for method, route in [
+            ("POST", "/news/scan"),
+            ("POST", "/news/feeds"),
+            ("PATCH", "/news/feeds/unknown"),
+            ("DELETE", "/news/feeds/unknown"),
+            ("PATCH", f"/news/config/{self.ch['id']}"),
+            ("POST", "/news/items/unknown/prepare"),
+            ("PATCH", "/news/items/unknown"),
+        ]:
+            response = self.client.open(
+                "/api/studio" + route,
+                method=method,
+                json=["not an object"],
+                headers={"X-CSRF-Token": self.csrf},
+            )
+            self.assertEqual(response.status_code, 400, route)
+        self.assertEqual(self.store.videos(), [])
+
 
 if __name__ == "__main__":
     unittest.main()

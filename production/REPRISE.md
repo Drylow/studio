@@ -8,7 +8,7 @@ plan et réponses confirmées. Toute l'interface doit être remplacée (anciens 
 en thème Cyberpunk 2077 / Edgerunners. Conserver les outils récents et les données.
 Deux comptes dans un espace partagé. Autonomie par chaîne ; MMA et foot seront en automatique,
 avec contrôles obligatoires avant publication. **La première version est construite** :
-dix pages, espace partagé, tâches/calendrier persistants, adaptateurs des moteurs récents,
+onze pages, espace partagé, tâches/calendrier persistants, adaptateurs des moteurs récents,
 agent, file de travaux et publication protégée. Toutes les anciennes interfaces sont supprimées.
 Lire `production/DASHBOARD_STATUS.md` : lancement, vérifications et limites réelles.
 Le radar lit les flux datés de BBC Sport, The Guardian et MMA News ; collecte régulière
@@ -21,8 +21,19 @@ et les miniatures/planches de contrôle s'agrandissent avec zoom.
 
 Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.
 L'ancien nom est remplacé dans l'affichage et les guides ; les noms techniques du
-dépôt et des bases sont conservés pour préserver les données. Validation : 56 tests
-Python et deux parcours navigateur, sur ordinateur et mobile.
+dépôt et des bases sont conservés pour préserver les données. Validation : 67 tests
+Python et trois parcours navigateur, sur ordinateur et mobile.
+
+Ajouts demandés ensuite : centre de contrôle avec alertes et prochaines actions,
+lecture propre à chaque utilisateur, état local des configurations et du moteur.
+Routines partagées de recherche, publication et organisation hebdomadaire, sans
+doublons et sans appels payants. Recherche/filtres/retards dans les tâches, accès à
+la vidéo liée. Export mensuel `.ics` par chaîne ; copie du planning, pas abonnement.
+Une perte de connexion affiche la dernière lecture et un bouton pour réessayer ;
+la lecture reprend au retour du réseau. `studio/control.py` et les trois parcours
+`frontend/scripts/*smoke.mjs` portent ces contrôles. L'automatisation éditoriale,
+les droits complets et la connexion réelle Google restent à terminer comme indiqué
+dans le document d'état ; ne pas les présenter comme opérationnels.
 
 Les miniatures récentes sont approuvées : références dans
 `presets/news_thumbnails/approved_2026-10-05/`. L'utilisateur demande de ne plus refaire

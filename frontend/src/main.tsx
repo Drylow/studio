@@ -25,6 +25,8 @@ import {
   RefreshCw,
   CheckCircle2,
   ShieldCheck,
+  Bell,
+  ShieldAlert,
 } from "lucide-react";
 import { api, dateLabel, setCsrf } from "./api";
 import type { Boot, Workspace, Page, Video, Channel } from "./types";
@@ -50,6 +52,7 @@ import {
 } from "./pages";
 import type { PageProps } from "./pages";
 import { Newsroom } from "./newsroom";
+import { Control } from "./control";
 import "./style.css";
 
 const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
@@ -65,6 +68,12 @@ const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
       path: "/channels",
       label: "Chaînes",
       icon: <Radio size={18} />,
+    },
+    {
+      key: "control",
+      path: "/control",
+      label: "Centre de contrôle",
+      icon: <ShieldAlert size={18} />,
     },
     {
       key: "news",
@@ -264,6 +273,7 @@ function App() {
   const [boot, setBoot] = useState<Boot | null>(null);
   const [data, setData] = useState<Workspace | null>(null);
   const [fatal, setFatal] = useState("");
+  const [syncError, setSyncError] = useState("");
   const [page, setPage] = useState<Page>(currentPage());
   const [toast, setToast] = useState<{ text: string; error: boolean } | null>(
     null,
@@ -291,6 +301,7 @@ function App() {
       const w = await api<Workspace>("/workspace");
       setData(w);
     } else setData(null);
+    setSyncError("");
   }, []);
   useEffect(() => {
     refresh().catch((e) => setFatal(e.message));
@@ -300,11 +311,23 @@ function App() {
     const timer = setInterval(
       () =>
         api<Workspace>("/workspace")
-          .then(setData)
-          .catch(() => {}),
+          .then((w) => {
+            setData(w);
+            setSyncError("");
+          })
+          .catch((e) => setSyncError(e.message)),
       15000,
     );
-    return () => clearInterval(timer);
+    const offline = () =>
+      setSyncError("La connexion au studio est interrompue.");
+    const online = () => refresh().catch((e) => setSyncError(e.message));
+    window.addEventListener("offline", offline);
+    window.addEventListener("online", online);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("offline", offline);
+      window.removeEventListener("online", online);
+    };
   }, [boot?.user?.id]);
   useEffect(() => {
     if (!toast) return;
@@ -451,7 +474,7 @@ function App() {
           <i>2077</i>
         </button>
         <div className="sidebar-section-label">
-          LE STUDIO<span>01—10</span>
+          LE STUDIO<span>01—11</span>
         </div>
         <nav aria-label="Navigation principale">
           {nav.map((n, i) => (
@@ -536,6 +559,16 @@ function App() {
           </div>
           <div className="topbar-right">
             <button
+              className={
+                "control-trigger " + (data.control.critical ? "attention" : "")
+              }
+              onClick={() => go("control")}
+              aria-label={`Centre de contrôle, ${data.control.unread} alertes non lues`}
+            >
+              <Bell size={16} />
+              {data.control.unread > 0 && <span>{data.control.unread}</span>}
+            </button>
+            <button
               className="search-trigger"
               onClick={() => setSearchOpen(true)}
             >
@@ -583,11 +616,34 @@ function App() {
             et publications désactivées.
           </div>
         )}
+        {syncError && (
+          <div className="connection-banner" role="alert">
+            <AlertTriangle size={20} />
+            <div>
+              <strong>Connexion à vérifier.</strong>
+              <span>
+                {syncError} Dernière lecture :{" "}
+                {dateLabel(data.server_time, {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
+                , heure belge. Les données peuvent être anciennes.
+              </span>
+            </div>
+            <Button
+              onClick={() => refresh().catch((e) => setSyncError(e.message))}
+            >
+              Réessayer la connexion
+            </Button>
+          </div>
+        )}
         <main id="main" tabIndex={-1}>
           {page === "overview" ? (
             <Overview {...p} />
           ) : page === "news" ? (
             <Newsroom {...p} />
+          ) : page === "control" ? (
+            <Control {...p} />
           ) : page === "channels" ? (
             <Channels {...p} />
           ) : page === "production" ? (

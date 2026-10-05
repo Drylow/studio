@@ -125,6 +125,7 @@ export type Workspace = {
   connections: Record<string, boolean>;
   worker: { heartbeat: string; message: string };
   server_time: string;
+  control: { total: number; unread: number; critical: number };
 };
 export type Page =
   | "overview"
@@ -136,6 +137,7 @@ export type Page =
   | "library"
   | "settings"
   | "news"
+  | "control"
   | "agent";
 export type Boot = {
   user: User | null;

@@ -31,6 +31,8 @@ import {
   AlertTriangle,
   ExternalLink,
   Sparkles,
+  Download,
+  ListChecks,
 } from "lucide-react";
 import type {
   Channel,
@@ -55,6 +57,7 @@ import {
 } from "./components";
 import type { Mutate } from "./forms";
 import { ZoomImage } from "./image-viewer";
+import { RoutinePicker } from "./routines";
 
 export type PageProps = {
   data: Workspace;
@@ -527,6 +530,7 @@ export function Channels(p: PageProps) {
               <button
                 className="icon-button"
                 aria-label={`Connecter ${c.name} à YouTube`}
+                title={`Connecter ${c.name} à YouTube`}
                 onClick={() =>
                   p.mutate(async () => {
                     if (!p.data.connections.youtube) {
@@ -757,6 +761,7 @@ export function Calendar(p: PageProps) {
   const [month, setMonth] = useState(today.slice(0, 7));
   const [filter, setFilter] = useState("all");
   const [view, setView] = useState("month");
+  const [exporting, setExporting] = useState(false);
   const [year, m] = month.split("-").map(Number);
   const start = new Date(Date.UTC(year, m - 1, 1, 12));
   const pad = (start.getUTCDay() + 6) % 7;
@@ -780,6 +785,29 @@ export function Calendar(p: PageProps) {
       new Date(Date.UTC(year, m - 1 + n, 1, 12)).toISOString().slice(0, 7),
     );
   }
+  async function exportMonth() {
+    setExporting(true);
+    await p.mutate(async () => {
+      const query = new URLSearchParams({ month });
+      if (filter !== "all") query.set("channel_id", filter);
+      const response = await fetch("/api/studio/calendar.ics?" + query, {
+        credentials: "same-origin",
+      });
+      if (!response.ok) {
+        const result = await response.json();
+        throw new Error(result.error || "Export indisponible.");
+      }
+      const url = URL.createObjectURL(await response.blob());
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `edgerunners-${month}.ics`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+    }, "Calendrier téléchargé. Ouvre ton agenda → Importer → sélectionne le fichier .ics. C’est une copie, sans synchronisation.");
+    setExporting(false);
+  }
   return (
     <div className="page">
       <div className="page-heading">
@@ -790,10 +818,16 @@ export function Calendar(p: PageProps) {
           </h1>
           <p>Tes publications, à l’heure. Fuseau : Belgique / Paris.</p>
         </div>
-        <Button variant="primary" onClick={() => p.schedule(today)}>
-          <Plus size={17} />
-          Prévoir une publication
-        </Button>
+        <div className="heading-actions">
+          <Button onClick={exportMonth} disabled={exporting}>
+            <Download size={16} />
+            {exporting ? "Export en cours…" : "Exporter le mois"}
+          </Button>
+          <Button variant="primary" onClick={() => p.schedule(today)}>
+            <Plus size={17} />
+            Prévoir une publication
+          </Button>
+        </div>
       </div>
       <section className="panel calendar-panel">
         <div className="calendar-toolbar">
@@ -988,12 +1022,21 @@ export function Calendar(p: PageProps) {
 
 export function Tasks(p: PageProps) {
   const [filter, setFilter] = useState("open");
+  const [routineOpen, setRoutineOpen] = useState(false);
+  const [channelFilter, setChannelFilter] = useState("all");
+  const [taskSearch, setTaskSearch] = useState("");
   const tasks = p.data.tasks.filter(
     (t) =>
-      filter === "all" ||
-      (filter === "done" && t.done) ||
-      (filter === "open" && !t.done) ||
-      (filter === "mine" && t.assignee === p.user.id && !t.done),
+      (channelFilter === "all" || t.channel_id === Number(channelFilter)) &&
+      t.title.toLowerCase().includes(taskSearch.toLowerCase()) &&
+      (filter === "all" ||
+        (filter === "done" && t.done) ||
+        (filter === "open" && !t.done) ||
+        (filter === "mine" && t.assignee === p.user.id && !t.done) ||
+        (filter === "overdue" &&
+          !t.done &&
+          t.due_at &&
+          new Date(t.due_at) < new Date(p.data.server_time))),
   );
   const done = p.data.tasks.filter((t) => t.done).length;
   return (
@@ -1006,11 +1049,20 @@ export function Tasks(p: PageProps) {
           </h1>
           <p>Toi, ton collègue, et un plan commun.</p>
         </div>
-        <Button variant="primary" onClick={p.newTask}>
-          <Plus size={17} />
-          Nouvelle tâche
-        </Button>
+        <div className="heading-actions">
+          <Button onClick={() => setRoutineOpen(true)}>
+            <ListChecks size={16} />
+            Ajouter une routine
+          </Button>
+          <Button variant="primary" onClick={p.newTask}>
+            <Plus size={17} />
+            Nouvelle tâche
+          </Button>
+        </div>
       </div>
+      {routineOpen && (
+        <RoutinePicker p={p} close={() => setRoutineOpen(false)} />
+      )}
       <div className="task-summary">
         <div className="panel">
           <ListTodo size={20} />
@@ -1034,6 +1086,7 @@ export function Tasks(p: PageProps) {
             {[
               ["open", "À faire"],
               ["mine", "Mes tâches"],
+              ["overdue", "En retard"],
               ["all", "Toutes"],
               ["done", "Terminées"],
             ].map(([key, label]) => (
@@ -1047,6 +1100,29 @@ export function Tasks(p: PageProps) {
             ))}
           </div>
           <span className="small muted">{tasks.length} tâches</span>
+        </div>
+        <div className="task-tools">
+          <div className="search-field">
+            <Search size={15} />
+            <input
+              aria-label="Rechercher une tâche"
+              placeholder="Trouver une tâche…"
+              value={taskSearch}
+              onChange={(e) => setTaskSearch(e.target.value)}
+            />
+          </div>
+          <select
+            aria-label="Filtrer les tâches par chaîne"
+            value={channelFilter}
+            onChange={(e) => setChannelFilter(e.target.value)}
+          >
+            <option value="all">Toutes les chaînes</option>
+            {p.data.channels.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.name}
+              </option>
+            ))}
+          </select>
         </div>
         {tasks.length ? (
           tasks.map((t) => {
@@ -1090,6 +1166,21 @@ export function Tasks(p: PageProps) {
                           minute: "2-digit",
                         })}
                   </small>
+                  {t.video_id &&
+                    p.data.videos.find((v) => v.id === t.video_id) && (
+                      <button
+                        className="task-video-link"
+                        onClick={() =>
+                          p.openVideo(
+                            p.data.videos.find((v) => v.id === t.video_id)!,
+                          )
+                        }
+                      >
+                        <Clapperboard size={12} />
+                        Ouvrir la vidéo liée
+                        <ArrowUpRight size={12} />
+                      </button>
+                    )}
                 </div>
                 <Tag tone={t.priority === "high" ? "blocked" : "muted"}>
                   {t.priority === "high"
