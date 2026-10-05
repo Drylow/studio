@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-05T17:13:54.891108+00:00",
+  "contact_sheets": [
+    "check/sheet_01.jpg",
+    "check/sheet_02.jpg"
+  ],
+  "sampling_seconds": 5,
+  "all_sheets_viewed": true,
+  "technical_check": "technical_check.json",
+  "caption_alignment": "audio_checked",
+  "narration_sources_reviewed": true,
+  "selected_thumbnail": "B",
+  "delivery": "manual_publication",
+  "notes": "Titres et noms relus ; rumeurs signalées ; sous-titres recalés sur la voix enregistrée."
+}

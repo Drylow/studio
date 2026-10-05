@@ -1,6 +1,6 @@
 # Journal des vidéos
 
-État au 4 oct. 2026, ~13 h heure belge : tout est livré. Mettre à jour à chaque livraison (lien Gofile, envoi Discord, date de publication).
+État au 5 oct. 2026 : trois analyses sportives livrées pour publication manuelle ; France–Belgique attend la fin du match. Mettre à jour à chaque livraison (lien Gofile, mode de livraison, date de publication).
 
 ## Oddly Expensive Lives (`oddly_expensive_en`)
 
@@ -82,3 +82,30 @@ Ensuite : d'autres sports (nom de la grande ligue dans le titre).
 - 4 oct. (soir) : OSL livrées (salon Discord OSL) : Brazilian Woman https://gofile.io/d/sXBdvVA2 ; Ukrainian Woman https://gofile.io/d/yezV1AP1 ; Korean Woman https://gofile.io/d/n77Xy6Q4. Miniatures refaites (drapeaux collés à la même taille, vrais drapeaux) : Brazilian J (mains corrigées), Korean E, Ukrainian J (Lviv, tenue moderne).
 - 4 oct. (soir) : OSL lot 3 « femmes dangereuses » en production : Female Samurai (Aizu 1868, miniature H3 katana), Female Mafia Boss (Naples, miniature G), Female Cartel Boss (barman dans un club de Culiacan, miniature I), Female Hacker (Portland, miniature H). Scripts relus + FOS, images en cours.
 - 4 oct. (nuit) : OSL lot 3 livré (salon Discord OSL), vérifié image par image : Female Cartel Boss https://gofile.io/d/kiSnTmGO (miniature I) ; Female Mafia Boss https://gofile.io/d/cxHg6Qbi (miniature G) ; Female Hacker https://gofile.io/d/lwcIlpUY (miniature H) ; Female Samurai https://gofile.io/d/XtBNFLjv (miniature H3, 2 images refaites : salon moderne + cheminée occidentale → tatami + irori).
+
+## Analyses sportives courtes — 5 octobre 2026
+
+Livraison dans la conversation pour **publication manuelle** : chaque lien contient le MP4 et un kit ZIP
+(miniature validée, trois titres proposés, description avec chapitres et sources, tags, sous-titres et crédits).
+Les trois vidéos sont en anglais avec la voix de leur chaîne. Toutes les planches (une capture toutes les
+cinq secondes) ont été regardées ; décodage, format 1080p et recalage des sous-titres sur la voix contrôlés.
+Les transferts MP4 et ZIP ont été vérifiés par taille et empreinte MD5. Aucun envoi Discord ou YouTube.
+
+| Chaîne | Sujet | Durée | Miniature choisie | Lien | Publication |
+|---|---|---|---|---|---|
+| Cage Dispatch | Parnasse–Topuria : rumeur, stories d'Atch et repost TikTok rapporté par RMC | 4 min 08 | A — TOPURIA NEXT? | https://gofile.io/d/lRKv6ZQW | à publier manuellement |
+| Cage Dispatch | Imavov–Strickland : le défi public à 500 000 dollars et sa condition | 4 min 00 | A — $500,000 CHALLENGE | https://gofile.io/d/0IyYUojj | à publier manuellement |
+| Pitch Dispatch | Mbappé : la story à vélo, Mourinho et la réaction des médias espagnols | 4 min 33 | B — BIKE RIDE BACKLASH | https://gofile.io/d/w5KntWGY | à publier manuellement |
+
+Dossiers : `news/mma_en/2026-10-05_parnasse-topuria-analysis/`,
+`news/mma_en/2026-10-05_imavov-strickland-analysis/` et
+`news/football_en/2026-10-05_mbappe-bike-analysis/`.
+Le combat Parnasse–Topuria n'est pas présenté comme signé ; le repost original TikTok reste attribué à
+RMC, sans prétendre l'avoir vérifié directement. Le défi d'Imavov est conditionnel, sans accord de combat
+annoncé. L'intention de Mbappé envers Mourinho reste une interprétation ; sa réponse sur le Ballon d'Or
+concerne une autre allégation.
+
+**France–Belgique** : quatrième sujet prévu après le match du 5 octobre (20 h 45 heure belge).
+Collecte préparée et testée avec refus des scores provisoires, absents et des matchs abandonnés ;
+voir `production/NEWS_BRIEFS.md`. Aucun résumé produit avant résultat final, aucune attente automatique
+lancée. L'automatisation quotidienne reste reportée à la demande de l'utilisateur.

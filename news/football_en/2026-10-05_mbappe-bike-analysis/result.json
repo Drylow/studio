@@ -1,0 +1,24 @@
+{
+  "file": "/workspace/studio/work/news_brief/2026-10-05_mbappe-bike-analysis/video.mp4",
+  "minutes": 4.55,
+  "size": 10608341,
+  "format": "analysis_brief",
+  "review_required": false,
+  "segments": 10,
+  "reviewed_at": "2026-10-05T17:13:54.891108+00:00",
+  "link": "https://gofile.io/d/w5KntWGY",
+  "uploaded_at": "2026-10-05T17:14:50.057137+00:00",
+  "manual_publication": true,
+  "uploads": [
+    {
+      "name": "Pitch_Dispatch_Mbappe.mp4",
+      "md5": "2f01f350aab1586ac7679ccb9ad4bd8e",
+      "size": 10608341
+    },
+    {
+      "name": "Kit_publication_Pitch_Dispatch_Mbappe.zip",
+      "md5": "e1f74c3a6a10d4a0e9a15a8d57e2b281",
+      "size": 301802
+    }
+  ]
+}
