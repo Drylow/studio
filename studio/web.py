@@ -892,6 +892,9 @@ def create_app(config=None):
     from studio.public_statistics import register as register_public_statistics
 
     register_public_statistics(app, store, owner)
+    from studio.pc_youtube import register as register_pc_youtube
+
+    register_pc_youtube(app, store, owner)
     from studio.development import register as register_development
 
     register_development(app, store, owner)

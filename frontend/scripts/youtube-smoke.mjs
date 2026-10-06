@@ -39,6 +39,48 @@ try {
   let role = "owner";
   let verified = 0;
   let disconnected = 0;
+  let pcRequested = 0;
+  let pcChecked = 0;
+  const localState = {
+    configured: true,
+    preview: false,
+    status: "idle",
+    message: "Connecte YouTube dans Chrome sur ton PC.",
+    channel_title: channel.name,
+    channel_id: "UC" + "a".repeat(22),
+    publication_validated: false,
+  };
+  await page.route(`**/api/studio/youtube/${channel.id}/pc`, (route) =>
+    route.fulfill({ json: localState }),
+  );
+  await page.route(
+    `**/api/studio/youtube/${channel.id}/pc/connect`,
+    async (route) => {
+      assert.equal(route.request().method(), "POST");
+      assert.equal(route.request().postDataJSON().revision, channel.revision);
+      assert.ok(route.request().headers()["x-csrf-token"]);
+      pcRequested++;
+      Object.assign(localState, {
+        status: "queued",
+        message: "Demande envoyée. L’agent PC va ouvrir Chrome.",
+      });
+      await route.fulfill({ json: localState, status: 202 });
+    },
+  );
+  await page.route(
+    `**/api/studio/youtube/${channel.id}/pc/check`,
+    async (route) => {
+      assert.equal(route.request().method(), "POST");
+      assert.ok(route.request().headers()["x-csrf-token"]);
+      pcChecked++;
+      Object.assign(localState, {
+        status: "ready",
+        message:
+          "La bonne chaîne est ouverte dans Chrome. L’envoi automatique reste à valider.",
+      });
+      await route.fulfill({ json: localState });
+    },
+  );
   await page.route("**/api/studio/bootstrap", (route) =>
     route.fulfill({
       json: {
@@ -113,6 +155,25 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   await button().tap();
   await dialog()
+    .getByRole("button", { name: "Connecter avec mon PC", exact: true })
+    .tap();
+  assert.equal(pcRequested, 1);
+  assert.ok(
+    await dialog()
+      .getByRole("button", {
+        name: "Connexion en cours sur ton PC",
+        exact: true,
+      })
+      .isDisabled(),
+  );
+  await dialog()
+    .getByRole("status")
+    .filter({ hasText: "L’envoi automatique reste à valider" })
+    .waitFor({ timeout: 22000 });
+  assert.equal(pcChecked, 1);
+  assert.equal(localState.publication_validated, false);
+  await dialog().getByText("CHROME VÉRIFIÉ", { exact: true }).waitFor();
+  await dialog()
     .getByRole("button", { name: "Vérifier la connexion", exact: true })
     .tap();
   await dialog()
@@ -146,6 +207,11 @@ try {
     .waitFor();
   assert.ok(
     await dialog()
+      .getByRole("button", { name: "Connecter avec mon PC", exact: true })
+      .isDisabled(),
+  );
+  assert.ok(
+    await dialog()
       .getByRole("button", { name: "Reconnecter avec Google", exact: true })
       .isDisabled(),
   );
@@ -162,7 +228,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "Simulated Google UI: return identity, four widths, checked result, confirmed disconnect, owner/editor controls and zero JavaScript errors: passed",
+    "Simulated YouTube UI: Google controls, PC request and checked dashboard without claiming upload, four widths, owner/editor access and zero JavaScript errors: passed",
   );
 } finally {
   await browser.close();

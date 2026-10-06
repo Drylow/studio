@@ -2729,6 +2729,35 @@ svg {
   color: #a9bec8;
   padding-left: 22px;
 }
+
+.pc-youtube-connection {
+  padding: 16px;
+  border: 1px solid var(--cyan, #00e5e5);
+  background: rgba(0, 229, 229, 0.025);
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.pc-youtube-connection p {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.pc-youtube-connection .connection-steps {
+  margin: 0;
+}
+
+.youtube-google-option > summary {
+  cursor: pointer;
+  padding: 10px 0;
+  color: var(--muted, #aaa);
+}
+
+.youtube-google-option[open] {
+  display: grid;
+  gap: 14px;
+}
 .connection-steps li {
   padding: 5px 0;
 }

@@ -10,6 +10,12 @@ que l’ancien site publiait gratuitement via Google. La sauvegarde a été comp
 au site actuel et un parcours compatible est implémenté :
 [publication historique gratuite](LEGACY_YOUTUBE.md). Cette piste devient prioritaire.
 
+**État au 7 octobre, heure de Paris :** le consentement réel reste bloqué après
+restauration du parcours historique. L’utilisateur précise qu’il a lui-même créé
+l’ancien studio et configuré Google ; ne pas attribuer cette configuration à Kanye.
+Le compte YouTube est le même, le compte Console utilisé auparavant est incertain.
+Aucun transport alternatif n’est actuellement connecté ou validé.
+
 Les éléments ci-dessous sont vérifiés dans les documentations publiques. Aucun
 prestataire n’a été activé et aucun compte, fichier ou jeton de chaîne ne lui a
 été transmis. Aucun envoi alternatif réel n’a encore été testé.
@@ -117,9 +123,32 @@ connecté au compte effectue les actions dans Studio. Elle implique une session 
 sur un serveur, des contrôles de destination et de doublons, et peut s’interrompre à
 une reconnexion, un contrôle de sécurité ou un changement de l’interface.
 
-Contrôle natif o2switch : aucun Chromium, Chrome ou Xvfb installé. L’accès au VPS pour
-y installer et maintenir ce navigateur n’est pas établi par les seuls identifiants
-du worker de rendu. Aucune session de compte Google disponible et aucun upload testé.
+Contrôle natif o2switch : aucun Chromium, Chrome ou Xvfb installé. L’accès aux tâches
+du VPS, les permissions d’un navigateur et l’administration de l’hôte sont des
+capacités distinctes, contrôlées ci-dessous. Aucune session de compte Google
+disponible et aucun upload testé.
+
+**Contrôles supplémentaires du 7 octobre :** l’API authentifiée du worker est
+accessible et son endpoint de tâches accepte le code de montage livré par le studio.
+Deux tâches de diagnostic bornées, sans envoi de vidéo, ont été exécutées puis
+effacées. Elles confirment un conteneur Linux avec droits root et gestionnaire de
+paquets, mais aucun navigateur ni serveur d’affichage installé. Le test de création
+d’un espace de noms utilisateur par un processus non root retourne un refus de
+permission. Cela ne valide pas le démarrage d’un navigateur correctement isolé.
+L’accès administratif à l’hôte Docker reste distinct de l’accès aux tâches.
+
+Sur o2switch, le compte n’est pas root et plusieurs bibliothèques nécessaires au
+navigateur manquent. Aucun paquet, profil Google ou robot de publication n’a été
+installé par ces diagnostics. Aucun contrôle de sécurité n’a été désactivé.
+Ne pas présenter « un navigateur sur le VPS » comme un outil déjà opérationnel.
+
+Des exemples publics confirment le principe d’automatisation par session de
+navigateur, notamment [un outil Playwright pour Windows](https://github.com/The-Despicable/Youtube_Shorts_tools)
+et [un outil WebView2 pour Windows](https://github.com/phongtrannm/nemo-youtube).
+Leurs descriptions ne prouvent ni la compatibilité Linux, ni l’accès à nos chaînes,
+ni la réussite d’un envoi. Le second contient une affirmation erronée selon laquelle
+l’API officielle impose une autorisation à chaque exécution ; ne pas la reprendre.
+Les sessions Google restent des accès sensibles, pas des substituts publics aux clés API.
 
 Les conditions YouTube consultées depuis l’hébergement interdisent l’accès automatisé
 hors exceptions, dont l’autorisation écrite de YouTube. Ce n’est donc pas une solution
@@ -127,6 +156,38 @@ contractuellement validée pour une publication permanente. Aucun contournement 
 connexion, de CAPTCHA ou de contrôle de sécurité n’a été tenté.
 
 Source : [conditions YouTube](https://www.youtube.com/static?template=terms).
+
+## Utiliser le PC et sa connexion Internet
+
+L’utilisateur propose ensuite son IP de PC. Lorsqu’il ouvre l’autorisation Google
+dans Chrome sur ce PC, Google reçoit déjà la requête de cette connexion Internet,
+sous réserve d’un proxy ou VPN configuré chez lui. L’échange du code sur o2switch
+n’arrive qu’après acceptation. Déplacer cet échange ou le rendu vers le PC ne prouve
+donc pas une résolution du refus affiché avant le retour au site.
+
+Un navigateur de publication peut aussi fonctionner localement. Il utilise alors
+la session YouTube et la connexion du PC, sans notre client OAuth. Cela nécessite
+un PC allumé et connecté pour les publications ; ce n’est pas un service permanent
+quand le PC est éteint. L’utilisateur a accepté cette contrainte : il souhaite
+réserver le PC à l’envoi, être informé quand il travaille, et préparer les vidéos
+côté serveur pendant son absence. La sélection et la création entièrement
+automatiques restent à terminer ; ne pas les présenter comme opérationnelles.
+
+Le PC a réellement exécuté un diagnostic : Windows, Chrome installé, agent connecté,
+aucun navigateur ouvert et aucun compte Google inspecté. Le studio propose maintenant
+une demande de connexion locale réservée au propriétaire, avec notification Windows
+et ouverture d’un profil Chrome dédié par ID de chaîne. Une connexion n’est acceptée
+qu’après observation du tableau de bord Studio de la chaîne attendue. Les demandes
+expirent et les résultats sont liés à une requête précise ; une autre chaîne ou une
+modification concurrente est refusée. Aucun cookie, capture de connexion ou jeton Google
+n’est transmis au site. Le navigateur normal de l’utilisateur n’est pas modifié.
+
+Cette première étape ne contient pas encore le pilotage des formulaires d’envoi.
+Une association Chrome ne marque donc pas la chaîne comme prête à publier et ne
+change ni la pause globale, ni les droits, ni les jetons OAuth historiques. Il faut
+encore une connexion réelle de l’utilisateur dans le Chrome dédié, puis vérifier
+un envoi complet dans l’interface réelle avant d’intégrer cette voie au worker.
+Aucun upload local alternatif n’a été testé.
 
 ## État du studio conservé
 

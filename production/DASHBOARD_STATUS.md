@@ -3,6 +3,33 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
+## Connexion Chrome sur le PC — 7 octobre 2026
+
+L’utilisateur accepte un PC allumé pour l’envoi, avec une notification lorsqu’il
+travaille. Le rendu et la future préparation autonome restent côté serveur.
+Le relais a confirmé l’agent Windows actif et Chrome installé ; la lecture publique
+a retrouvé les IDs exacts de Cage Dispatch et Pitch Dispatch avec la clé déjà configurée.
+
+Dans Chaînes → Connecter YouTube, le propriétaire peut demander « Connecter avec mon PC ».
+L’agent ouvre un profil Chrome dédié à la chaîne après notification Windows.
+L’utilisateur effectue lui-même la connexion Google normale dans cette fenêtre.
+Le studio exige le véritable tableau de bord YouTube Studio de l’ID attendu avant
+de confirmer cette association. Aucun cookie ni mot de passe ne revient au site.
+Les demandes sont uniques, bornées dans le temps, liées à la révision de la chaîne
+et refusées pour les éditeurs ou les visiteurs. L’ancienne voie API reste disponible.
+
+Cette étape ne pilote pas encore l’envoi des vidéos et n’active aucune automatisation.
+Une association affiche « Chrome vérifié », jamais « publication validée ».
+Il reste à observer une connexion réelle, puis à valider l’envoi privé, la miniature,
+les contrôles et la publication dans l’interface réelle. La sélection et la création
+entièrement automatiques des actualités restent également à terminer.
+La pause actuelle et les trois vidéos déjà postées sont conservées.
+
+Validation locale : 129 tests serveur, compilation TypeScript/Vite et parcours
+YouTube simulé à 320/390/768/1440 px. Le nouveau helper a également exécuté un
+diagnostic sur le vrai PC : emplacement de l’agent et Chrome confirmés, sans ouvrir
+de navigateur ni lire de session Google. Ces tests ne prouvent aucun upload réel.
+
 ## Page Statistiques par @pseudo — 6 octobre 2026
 
 Une rubrique indépendante Statistiques suit les chaînes via la lecture publique
