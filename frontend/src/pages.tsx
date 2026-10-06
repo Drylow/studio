@@ -1118,7 +1118,7 @@ export function Tasks(p: PageProps) {
           <h1>
             Tâches<span className="heading-dot">.</span>
           </h1>
-          <p>Toi, ton collègue, et un plan commun.</p>
+          <p>Drylow, Kanye, et un plan commun.</p>
         </div>
         <div className="heading-actions">
           <Button onClick={() => setRoutineOpen(true)}>
