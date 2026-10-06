@@ -8,10 +8,7 @@ import urllib.parse
 import urllib.request
 from flask import request, session, jsonify, redirect, send_file
 from studio.store import now, Conflict, ROOT
-
-# One permission covers identity reads, private uploads, thumbnails and visibility.
-# Checked against the official YouTube discovery document; do not drop visibility.
-PUBLICATION_SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl"
+from studio.youtube_permissions import MANAGED_SCOPE, requested_scope, supports
 
 
 def register_youtube(app, store, owner):
@@ -56,11 +53,11 @@ def register_youtube(app, store, owner):
             raise ValueError(
                 "La connexion Google doit être configurée sur le serveur. Consulte Réglages → Connexions."
             )
-        active_channel(cid)
+        scope = requested_scope(active_channel(cid))
         state = secrets.token_urlsafe(32)
         with store.db() as c:
             c.execute(
-                "INSERT INTO studio_oauth VALUES(?,?,?,?)",
+                "INSERT INTO studio_oauth(state,user_id,channel_id,expires_at) VALUES(?,?,?,?)",
                 (
                     state,
                     session["studio_user"],
@@ -68,12 +65,13 @@ def register_youtube(app, store, owner):
                     (datetime.now(timezone.utc) + timedelta(minutes=10)).isoformat(),
                 ),
             )
+            c.execute("INSERT INTO studio_oauth_requests VALUES(?,?)", (state, scope))
         query = urllib.parse.urlencode(
             {
                 "client_id": cfg("GOOGLE_CLIENT_ID"),
                 "redirect_uri": callback_url(),
                 "response_type": "code",
-                "scope": PUBLICATION_SCOPE,
+                "scope": scope,
                 "access_type": "offline",
                 "prompt": "select_account consent",
                 "state": state,
@@ -91,7 +89,8 @@ def register_youtube(app, store, owner):
         with store.db() as c:
             c.execute("BEGIN IMMEDIATE")
             row = c.execute(
-                "SELECT * FROM studio_oauth WHERE state=?", (state,)
+                "SELECT o.*,coalesce(r.requested_scope,?) AS requested_scope FROM studio_oauth o LEFT JOIN studio_oauth_requests r ON r.state=o.state WHERE o.state=?",
+                (MANAGED_SCOPE, state),
             ).fetchone()
             if (
                 not row
@@ -114,7 +113,10 @@ def register_youtube(app, store, owner):
                 "/channels?"
                 + urllib.parse.urlencode(
                     {
-                        "youtube_error": explanations.get(request.args["error"], "Google a refusé cette autorisation. Vérifie l’état du projet dans Google Auth Platform."),
+                        "youtube_error": explanations.get(
+                            request.args["error"],
+                            "Google a refusé cette autorisation. Vérifie l’état du projet dans Google Auth Platform.",
+                        ),
                         "channel": row["channel_id"],
                     }
                 )
@@ -159,10 +161,12 @@ def register_youtube(app, store, owner):
             raise ValueError(
                 "Google n’a pas fourni un accès permanent. Recommence en acceptant les autorisations."
             )
-        if token.get("scope") is not None and not set(str(token["scope"]).split()) & {
-            PUBLICATION_SCOPE, "https://www.googleapis.com/auth/youtube",
-        }:
-            raise ValueError("L’autorisation d’envoi et de mise en ligne est absente. Reconnecte la chaîne et accepte cette autorisation Google.")
+        if token.get("scope") is not None and not supports(
+            str(token["scope"]), row["requested_scope"]
+        ):
+            raise ValueError(
+                "L’autorisation d’envoi et de mise en ligne est absente. Reconnecte la chaîne et accepte cette autorisation Google."
+            )
         from routes.youtube import _fetch_channel
 
         title, yt_id = _fetch_channel(token["access_token"])
@@ -221,7 +225,10 @@ def register_youtube(app, store, owner):
             if expected["yt_channel_id"] != yt_id:
                 clear(c, row["channel_id"])
             else:
-                c.execute("DELETE FROM studio_channel_sync WHERE channel_id=?", (row["channel_id"],))
+                c.execute(
+                    "DELETE FROM studio_channel_sync WHERE channel_id=?",
+                    (row["channel_id"],),
+                )
             c.execute(
                 "UPDATE studio_channels SET revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), row["channel_id"]),

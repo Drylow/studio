@@ -24,6 +24,7 @@ class YouTubeConnectionTests(unittest.TestCase):
                 "GOOGLE_CLIENT_SECRET": "fixture-server-secret",
                 "OAUTH_REDIRECT_BASE": "https://studio.example.org",
                 "OAUTH_CALLBACK_PATH": "",
+                "YOUTUBE_PUBLICATION_FLOW": "",
             },
         )
         self.env.start()
@@ -70,11 +71,17 @@ class YouTubeConnectionTests(unittest.TestCase):
             ["https://studio.example.org/api/studio/youtube/callback"],
         )
         self.assertEqual(query["access_type"], ["offline"])
-        self.assertEqual(query["scope"], ["https://www.googleapis.com/auth/youtube.force-ssl"])
+        self.assertEqual(
+            query["scope"], ["https://www.googleapis.com/auth/youtube.force-ssl"]
+        )
         return query["state"][0]
 
     def callback(
-        self, state=None, title=None, yt_id=None, fetch=None,
+        self,
+        state=None,
+        title=None,
+        yt_id=None,
+        fetch=None,
         path="/api/studio/youtube/callback",
     ):
         state = state or self.state()
@@ -156,37 +163,142 @@ class YouTubeConnectionTests(unittest.TestCase):
                 self.assertEqual(replay.status_code, 400)
                 remote.assert_not_called()
             self.client.post(
-                "/api/studio/logout", json={},
+                "/api/studio/logout",
+                json={},
                 headers={"X-CSRF-Token": self.csrf},
             )
             self.assertEqual(
-                self.client.get("/api/youtube/callback", query_string={"state": state}).status_code,
+                self.client.get(
+                    "/api/youtube/callback", query_string={"state": state}
+                ).status_code,
                 401,
             )
 
     def test_callback_setting_cannot_redirect_tokens_to_an_arbitrary_path(self):
-        with patch.dict(os.environ, {"OAUTH_CALLBACK_PATH": "https://other.invalid/callback"}):
+        with patch.dict(
+            os.environ, {"OAUTH_CALLBACK_PATH": "https://other.invalid/callback"}
+        ):
             response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
             self.assertEqual(response.status_code, 400)
             self.assertNotIn("Location", response.headers)
 
     def test_missing_publication_permission_is_not_saved_as_a_connected_channel(self):
         state = self.state()
-        token = {"access_token": "fixture-access", "refresh_token": "fixture-refresh", "scope": "https://www.googleapis.com/auth/youtube.readonly"}
-        with patch("urllib.request.urlopen", return_value=io.BytesIO(json.dumps(token).encode())), patch("routes.youtube._fetch_channel") as channel:
-            response = self.client.get("/api/studio/youtube/callback", query_string={"state": state, "code": "fixture-code"})
+        token = {
+            "access_token": "fixture-access",
+            "refresh_token": "fixture-refresh",
+            "scope": "https://www.googleapis.com/auth/youtube.readonly",
+        }
+        with patch(
+            "urllib.request.urlopen",
+            return_value=io.BytesIO(json.dumps(token).encode()),
+        ), patch("routes.youtube._fetch_channel") as channel:
+            response = self.client.get(
+                "/api/studio/youtube/callback",
+                query_string={"state": state, "code": "fixture-code"},
+            )
         self.assertIn("youtube_error", response.location)
         self.assertFalse(self.store.channel(self.cid)["connected"])
         channel.assert_not_called()
 
+    def test_historical_permissions_apply_to_news_only_and_are_bound_to_state(self):
+        with patch.dict(os.environ, {"YOUTUBE_PUBLICATION_FLOW": "legacy-news"}):
+            response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
+            query = parse_qs(urlparse(response.location).query)
+            self.assertEqual(
+                set(query["scope"][0].split()),
+                {
+                    "https://www.googleapis.com/auth/youtube.upload",
+                    "https://www.googleapis.com/auth/youtube.readonly",
+                },
+            )
+            row = self.store.one(
+                "SELECT * FROM studio_oauth_requests WHERE state=?",
+                (query["state"][0],),
+            )
+            self.assertEqual(row["requested_scope"], query["scope"][0])
+            other = next(
+                c for c in self.store.channels() if c["publication_mode"] != "news"
+            )
+            other_response = self.client.get(
+                f'/api/studio/youtube/{other["id"]}/connect'
+            )
+            self.assertEqual(
+                parse_qs(urlparse(other_response.location).query)["scope"],
+                ["https://www.googleapis.com/auth/youtube.force-ssl"],
+            )
+        # The issued request remains authoritative even across a server change.
+        token = {
+            "access_token": "fixture-access",
+            "refresh_token": "fixture-refresh",
+            "scope": query["scope"][0],
+        }
+        with patch(
+            "urllib.request.urlopen",
+            return_value=io.BytesIO(json.dumps(token).encode()),
+        ), patch(
+            "routes.youtube._fetch_channel",
+            return_value=(self.channel["name"], self.yt_id),
+        ):
+            connected = self.client.get(
+                "/api/studio/youtube/callback",
+                query_string={"state": row["state"], "code": "fixture-code"},
+            )
+        self.assertEqual(connected.location, f"/channels?connected={self.cid}")
+        self.assertTrue(self.store.channel(self.cid)["connected"])
+        self.assertFalse(self.store.channel(self.cid)["enabled"])
+        self.assertIsNone(
+            self.store.one(
+                "SELECT state FROM studio_oauth WHERE state=?", (row["state"],)
+            )
+        )
+        self.assertIsNone(
+            self.store.one(
+                "SELECT state FROM studio_oauth_requests WHERE state=?", (row["state"],)
+            )
+        )
+
+    def test_historical_connection_rejects_partial_upload_or_read_grants(self):
+        for scope in ["youtube.upload", "youtube.readonly"]:
+            with self.subTest(scope=scope), patch.dict(
+                os.environ, {"YOUTUBE_PUBLICATION_FLOW": "legacy-news"}
+            ):
+                response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
+                state = parse_qs(urlparse(response.location).query)["state"][0]
+                token = {
+                    "access_token": "fixture-access",
+                    "refresh_token": "fixture-refresh",
+                    "scope": "https://www.googleapis.com/auth/" + scope,
+                }
+                with patch(
+                    "urllib.request.urlopen",
+                    return_value=io.BytesIO(json.dumps(token).encode()),
+                ), patch("routes.youtube._fetch_channel") as identity:
+                    rejected = self.client.get(
+                        "/api/studio/youtube/callback",
+                        query_string={"state": state, "code": "fixture-code"},
+                    )
+                self.assertIn("youtube_error", rejected.location)
+                self.assertFalse(self.store.channel(self.cid)["connected"])
+                identity.assert_not_called()
+
     def test_google_rejection_reason_is_actionable_and_state_is_consumed(self):
         state = self.state()
         with patch("urllib.request.urlopen") as remote:
-            response = self.client.get("/api/studio/youtube/callback", query_string={"state": state, "error": "disallowed_useragent", "error_description": "private-fixture-details"})
+            response = self.client.get(
+                "/api/studio/youtube/callback",
+                query_string={
+                    "state": state,
+                    "error": "disallowed_useragent",
+                    "error_description": "private-fixture-details",
+                },
+            )
         error = parse_qs(urlparse(response.location).query)["youtube_error"][0]
         self.assertIn("Chrome ou Safari", error)
         self.assertNotIn("private-fixture-details", error)
-        self.assertIsNone(self.store.one("SELECT state FROM studio_oauth WHERE state=?", (state,)))
+        self.assertIsNone(
+            self.store.one("SELECT state FROM studio_oauth WHERE state=?", (state,))
+        )
         remote.assert_not_called()
 
     def test_oauth_rejects_another_channel_without_overwriting_access(self):

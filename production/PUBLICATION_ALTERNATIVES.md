@@ -5,6 +5,11 @@ n’est pas la seule manière de publier. Le refus de notre application ne démo
 pas que tous les clients Google ou tous les mécanismes YouTube sont bloqués.
 Ne pas revenir par défaut à la demande d’examen Branding.
 
+**Préférence précisée ensuite :** aucun abonnement payant. L’utilisateur rappelle
+que l’ancien site publiait gratuitement via Google. La sauvegarde a été comparée
+au site actuel et un parcours compatible est implémenté :
+[publication historique gratuite](LEGACY_YOUTUBE.md). Cette piste devient prioritaire.
+
 Les éléments ci-dessous sont vérifiés dans les documentations publiques. Aucun
 prestataire n’a été activé et aucun compte, fichier ou jeton de chaîne ne lui a
 été transmis. Aucun envoi alternatif réel n’a encore été testé.
@@ -43,8 +48,8 @@ Confirmer les droits précis de Connect API sur le forfait choisi avant de prome
 une connexion entièrement intégrée. Vérifier le prix affiché avant tout paiement.
 
 Le prestataire reçoit les fichiers et conserve les autorisations Google nécessaires.
-L’utilisateur refusait auparavant un prestataire externe ; une question de préférence
-est en attente. Aucune création de compte, souscription ni connexion à sa place.
+L’utilisateur refuse les abonnements et n’a pas choisi ce prestataire.
+Aucune création de compte, souscription ni connexion à sa place.
 Une autre application peut encore rencontrer une restriction propre au compte Google :
 seul un consentement réel et une lecture de la bonne chaîne prouvent la connexion.
 

@@ -5,6 +5,13 @@ du projet existant, un état à usage unique, l’accès permanent et la permiss
 `youtube.force-ssl`. Le nouvel essai réel affiche toujours « This app is blocked ».
 Cage Dispatch et Pitch Dispatch ne sont pas connectées. Aucun envoi réel confirmé.
 
+Ce constat concerne le dernier essai du parcours privé puis public. À la demande
+de l’utilisateur, une comparaison de la sauvegarde a identifié le parcours gratuit
+original (`youtube.upload` + `youtube.readonly`, envoi public direct). Sa compatibilité
+est implémentée et documentée dans [LEGACY_YOUTUBE.md](LEGACY_YOUTUBE.md). Un nouveau
+consentement réel reste nécessaire. Ne pas proposer à nouveau l’examen Branding
+ou un abonnement comme seule prochaine étape.
+
 ## Demande d’examen de la propriété du domaine
 
 1. Ouvrir [Branding du projet existant](https://console.cloud.google.com/auth/branding?project=507920096990).

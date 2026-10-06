@@ -175,7 +175,8 @@ dans le studio. Utiliser Google Cloud Console : https://console.cloud.google.com
 3. Google Auth Platform : renseigner Branding, Audience et les adresses demandées.
    Pour un essai en mode Testing, ajouter les comptes Google concernés comme utilisateurs de test.
 4. Data Access : configurer les autorisations YouTube correspondant à la lecture et
-   à la gestion des vidéos (`youtube.readonly` et `youtube.force-ssl`).
+   à la gestion des vidéos (`youtube.readonly` et `youtube.force-ssl`). Si le parcours
+   historique gratuit est activé, ajouter également `youtube.upload`.
 5. Clients → Create client → Web application.
 6. Authorized redirect URIs : ajouter exactement l'adresse suivante, avec ton domaine :
 
@@ -193,6 +194,13 @@ clients utilisent le chemin moderne ci-dessus avec `OAUTH_CALLBACK_PATH` vide.
 8. Garder `OAUTH_REDIRECT_BASE=https://ton-domaine.fr` cohérent avec cette adresse.
 9. Redémarrer l'application et le worker. Réglages → Connexions indique la présence
    de cette configuration ; ce badge n'est pas un test réseau.
+
+`YOUTUBE_PUBLICATION_FLOW=legacy-news` restaure les permissions et l’envoi public
+direct de l’ancien site pour les chaînes d’actualité uniquement. Il conserve les
+contrôles de droits et de fichiers ; la miniature arrive après la fin du transfert.
+Ce parcours ne peut pas remettre en privé une vidéo déjà publique lors d’une pause
+tardive. Voir [la comparaison et les limites](production/LEGACY_YOUTUBE.md).
+Il ne garantit pas la levée du refus Google et ne réactive aucune chaîne tout seul.
 
 Les autorisations en mode Testing peuvent expirer et Google peut exiger une validation
 ou un audit pour l'usage prévu et la publication publique via l'API. Un projet non audité

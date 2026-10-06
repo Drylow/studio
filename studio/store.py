@@ -115,6 +115,8 @@ class Store:
             CREATE TABLE IF NOT EXISTS studio_login_attempts(ip TEXT NOT NULL, username TEXT NOT NULL, created_at TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS studio_oauth(state TEXT PRIMARY KEY, user_id TEXT NOT NULL,
                 channel_id INTEGER NOT NULL, expires_at TEXT NOT NULL);
+            CREATE TABLE IF NOT EXISTS studio_oauth_requests(state TEXT PRIMARY KEY REFERENCES studio_oauth(state) ON DELETE CASCADE,
+                requested_scope TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS studio_channel_snapshots(channel_id INTEGER NOT NULL REFERENCES studio_channels(project_id),
                 youtube_id TEXT NOT NULL, captured_at TEXT NOT NULL, views INTEGER,
                 subscribers INTEGER, videos INTEGER, PRIMARY KEY(channel_id,captured_at));

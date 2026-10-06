@@ -4,11 +4,18 @@ Edgerunners Studio utilise directement OAuth Google et l’API YouTube, sans ser
 de publication intermédiaire. Une clé API seule ne permet pas de publier sur une chaîne.
 Réutiliser le client Google existant ; ne pas créer un nouveau client pour chaque chaîne.
 
-L’utilisateur demande maintenant une recherche des autres moyens de publier.
+L’utilisateur refuse désormais les abonnements et rappelle son ancien parcours
+gratuit. [Comparaison de la sauvegarde et compatibilité implémentée](production/LEGACY_YOUTUBE.md).
+Le client et son secret sont conservés. `YOUTUBE_PUBLICATION_FLOW=legacy-news`
+rétablit `youtube.upload` + `youtube.readonly` pour les chaînes d’actualité, avec
+envoi public direct après contrôles. Ce changement n’est pas encore validé par
+un consentement Google réel ; ne pas annoncer le blocage résolu.
+
+La recherche des autres moyens de publier est conservée pour référence.
 [Deux autres voies documentées](production/PUBLICATION_ALTERNATIVES.md) : relais API
 avec l’application Google du prestataire, ou ingestion native de podcasts RSS
 (audio et image fixe). Le refus de notre client ne démontre pas que toutes ces voies
-sont bloquées. Le choix d’un prestataire ou d’un changement de format reste en attente.
+sont bloquées. Aucun prestataire ni changement de format n’est choisi.
 Ne pas reprendre par défaut les mêmes instructions d’examen Branding.
 
 ## État constaté le 6 octobre 2026
@@ -22,8 +29,10 @@ Voir [le dossier d’examen prêt à utiliser](production/GOOGLE_REVIEW.md).
 
 Le projet existant est **External / In production**. Les permissions auparavant
 demandées sont déclarées dans Data Access et Google affiche « not yet verified ».
-Le studio demande désormais uniquement `youtube.force-ssl`, qui couvre les quatre
-opérations requises ; cela ne prouve pas que Google lève le refus. La validation
+Le parcours privé puis public demande `youtube.force-ssl`, qui couvre les quatre
+opérations requises ; cela ne prouve pas que Google lève le refus. Le parcours
+historique des chaînes d’actualité utilise les deux permissions plus limitées
+indiquées ci-dessus et évite `videos.update`. La validation
 Search Console du domaine a réussi après ajout d'un TXT à l'apex, sans modification
 des autres enregistrements. Conserver ce TXT. Cette preuve ne vaut pas approbation OAuth.
 
@@ -140,9 +149,11 @@ compte ou de son organisation peuvent aussi empêcher une autorisation.
 L’adresse de retour actuellement conservée sur l’hébergement est
 `https://edgerunners.fr/api/youtube/callback`. Le handler protège la session,
 le rôle propriétaire et un état OAuth à usage unique. Les permissions demandées
-se limitent à `youtube.force-ssl` : elle couvre la lecture de l’identité, l’envoi,
-la miniature et la mise à jour de visibilité après l’upload privé. Ne pas la remplacer par `youtube.upload`
-seul, qui ne couvre pas `videos.update` dans ce parcours.
+dépendent du parcours : `youtube.force-ssl` pour l’envoi privé puis public ;
+`youtube.upload` + `youtube.readonly` pour le parcours historique d’actualité.
+`youtube.upload` seul ne couvre pas la lecture de l’identité ni `videos.update`.
+La compatibilité historique utilise l’envoi public direct et une confirmation
+par lecture, avec la limite de pause tardive documentée dans `production/LEGACY_YOUTUBE.md`.
 
 La connexion est validée par l’identité réelle retournée par YouTube, avec rejet
 des mauvaises chaînes et doublons. Les tests locaux simulent Google ; seule une
