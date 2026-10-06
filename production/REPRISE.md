@@ -8,6 +8,11 @@ enregistrée, mais aucun jeton de chaîne pour ces deux sports. Publication imm�
 des vidéos prêtes ajoutée dans `studio/auto_publication.py`, sans créneau fixe, avec
 tous les contrôles conservés. Google reçoit une permission `youtube.force-ssl`,
 suffisante selon discovery officiel. Aucun déblocage Google ou envoi réel confirmé.
+L’utilisateur a essayé le nouveau parcours et confirme encore **« This app is
+blocked »**. Le contrôle serveur suivant retrouve les deux chaînes sans identifiant
+YouTube ni jeton, activations désactivées, pause globale conservée. Les 108 tests
+réussis ne prouvent aucun consentement. Ne pas redemander un essai inchangé ni une
+clé API ; le dossier d’examen Google est dans `production/GOOGLE_REVIEW.md`.
 La génération éditoriale totalement autonome reste à construire ; ne pas la présenter
 comme activée ni recycler les trois vidéos déjà publiées manuellement.
 
@@ -20,16 +25,20 @@ Périodes 24/48 h, 7/14/28 jours, comparaison et classement des chaînes, détai
 200 dernières vidéos, filtres Drylow/Kanye, likes/commentaires publics, CSV privé.
 Relevés horaires indépendants des montages et de la pause, conservation 29 jours.
 Les gains commencent au premier relevé et ne constituent pas l’historique privé
-YouTube Analytics. Le serveur n’a pas encore de clé API de lecture : la configurer
-une seule fois sur Statistiques → Configurer la clé, avec les instructions du formulaire.
+YouTube Analytics. La clé API de lecture a été configurée par l’utilisateur et sa
+présence a été vérifiée sur le serveur ; ne pas lui redemander de la configurer.
 Ne pas redemander OAuth pour ce suivi. Voir `studio/public_statistics.py` et
 `GOOGLE_YOUTUBE.md`. Les essais utilisent exclusivement des données synthétiques.
 
 Search Console confirme la propriété du domaine après ajout du TXT, à conserver.
 Google Branding utilise encore l'ancien état et demande 24 heures : réessayer le
 7 octobre après 17 h 25 (Paris), ou demander l'examen manuel dans View issues.
-Le projet est External / In production et les deux scopes sont déclarés mais non vérifiés.
+Le projet est External / In production. Les scopes auparavant déclarés restent non
+vérifiés ; le site demande désormais seulement `youtube.force-ssl`.
 « This app is blocked » reste non résolu ; ne pas annoncer une connexion réussie.
+Le délai Branding n’établit pas la cause exacte de ce refus et ne garantit pas un
+déblocage après 24 heures. Le compte propriétaire Search Console doit aussi être
+Owner ou Editor du projet selon Google ; cette association n’a pas été vérifiée.
 
 **Site en ligne sur https://edgerunners.fr/**. Sauvegarde privée de l'ancien site et
 de SQLite vérifiée, ancienne interface remplacée, données conservées. Le code Git

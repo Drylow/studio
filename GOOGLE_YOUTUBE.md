@@ -6,6 +6,13 @@ Réutiliser le client Google existant ; ne pas créer un nouveau client pour cha
 
 ## État constaté le 6 octobre 2026
 
+Le nouvel essai de l’utilisateur, après déploiement du parcours à une seule
+permission, affiche encore **« This app is blocked »**. Le contrôle natif suivant
+confirme qu’aucun jeton de renouvellement ni identifiant YouTube n’est enregistré
+pour Cage ou Pitch. Ne pas lui demander de refaire cet essai inchangé.
+Les 108 tests du dernier déploiement valident le code, pas le consentement Google.
+Voir [le dossier d’examen prêt à utiliser](production/GOOGLE_REVIEW.md).
+
 Le projet existant est **External / In production**. Les permissions auparavant
 demandées sont déclarées dans Data Access et Google affiche « not yet verified ».
 Le studio demande désormais uniquement `youtube.force-ssl`, qui couvre les quatre
@@ -19,6 +26,8 @@ Branding → View issues → I have fixed the issues → Proceed. Si Google affi
 Ready to publish, cliquer Publish branding, puis ouvrir Verification Center pour
 examiner les éventuelles étapes Data Access. Ne pas annoncer une résolution avant
 un consentement réel puis une vérification de chaîne réussis.
+Ce délai concerne le contrôle de domaine. Il ne prouve pas la cause du refus OAuth
+et son expiration ne garantit pas que la connexion fonctionnera.
 
 Alternative officielle au contrôle automatique : View issues →
 I believe the issues found are incorrect → Proceed demande un examen manuel,
