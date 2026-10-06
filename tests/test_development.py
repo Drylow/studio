@@ -28,6 +28,7 @@ from studio.development import (
     run_once,
     safe_file,
     update,
+    verify,
 )
 from studio.store import Store, now, uid
 from studio.web import create_app
@@ -220,6 +221,34 @@ class DevelopmentPipelineTests(unittest.TestCase):
                 provider=lambda *a, **k: self.fail("Terminal jobs must not repeat"),
             )
             self.assertEqual(len(self.store.rows("SELECT * FROM studio_chat")), 1)
+
+    def test_baseline_cases_release_process_memory_without_ignoring_failures(self):
+        baseline = Path(self.tmp.name) / "isolated-baseline"
+        baseline.mkdir()
+        observed = Path(self.tmp.name) / "test-processes.txt"
+        source = baseline / "test_processes.py"
+        source.write_text(
+            "import os, unittest\nfrom pathlib import Path\n"
+            "class TestProcesses(unittest.TestCase):\n"
+            " def record(self):\n"
+            f"  path = Path({str(observed)!r})\n"
+            "  previous = path.read_text().splitlines() if path.exists() else []\n"
+            "  pid = str(os.getpid())\n"
+            "  self.assertNotIn(pid, previous, 'A test process was reused')\n"
+            "  path.write_text('\\n'.join(previous + [pid]))\n"
+            " def test_first(self): self.record()\n"
+            " def test_second(self): self.record()\n"
+        )
+        checks = verify(self.root, self.config, baseline, Path(self.tmp.name))
+        self.assertIn("Ran 2 tests", checks)
+        self.assertEqual(len(set(observed.read_text().splitlines())), 2)
+        source.write_text(
+            "import unittest\nclass TestFailure(unittest.TestCase):\n"
+            " def test_failure(self): self.fail('Baseline failure must block deployment')\n"
+        )
+        with self.assertRaisesRegex(ValueError, "Baseline failure must block deployment"):
+            verify(self.root, self.config, baseline, Path(self.tmp.name))
+        self.assertEqual(revision(self.root), self.base)
 
     def test_baseline_failure_never_deploys_or_pushes_main(self):
         with host(self.root) as url:

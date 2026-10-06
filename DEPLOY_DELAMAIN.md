@@ -11,6 +11,9 @@ envoie le message. Une tâche réelle est créée, séparée de la production vi
 Le processus de développement prépare une copie Git privée, lit les fichiers utiles,
 applique les changements, lance les tests Python d'origine et compile l'interface.
 Les tests sont copiés hors du code modifiable ; l'agent ne peut pas les affaiblir.
+Chaque cas de test s'exécute dans un processus distinct pour libérer la mémoire
+entre les contrôles sur un hébergement mutualisé. Une découverte vide ou un seul
+test en échec bloque toujours la mise en ligne.
 Un démarrage Flask vérifie aussi l'accueil et l'espace de travail authentifié.
 
 Quand les contrôles passent, l'exécuteur enregistre un commit et une branche

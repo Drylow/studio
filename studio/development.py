@@ -390,17 +390,36 @@ def apply_edits(root, operation, files):
 def verify(candidate, config, baseline, scratch):
     results = []
     # Baseline tests live outside the edited checkout and cannot be weakened by the coder.
-    tests = [
-        config.python,
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        str(baseline),
-        "-p",
-        "test_*.py",
-    ]
-    results.append(command(tests, candidate, timeout=600))
+    # Shared hosting can kill a long-lived test process as its memory accumulates.
+    # Discover the unchanged suite once, then release memory after every case.
+    discover = """import json, sys, unittest
+sys.path.insert(0, sys.argv[1])
+def cases(suite):
+    for item in suite:
+        if isinstance(item, unittest.TestSuite):
+            yield from cases(item)
+        else:
+            yield item.id()
+print(json.dumps(list(cases(unittest.defaultTestLoader.discover(sys.argv[1], pattern='test_*.py')))))
+"""
+    ids = json.loads(
+        command([config.python, "-c", discover, str(baseline)], candidate)
+    )
+    if not ids or any(not re.fullmatch(r"[A-Za-z0-9_.]+", item) for item in ids):
+        raise ValueError("Découverte des tests impossible ou suite vide.")
+    runner = """import sys, unittest
+sys.path.insert(0, sys.argv[1])
+unittest.main(module=None, argv=[sys.argv[0], sys.argv[2]])
+"""
+    for test_id in ids:
+        results.append(
+            command(
+                [config.python, "-c", runner, str(baseline), test_id],
+                candidate,
+                timeout=180,
+            )
+        )
+    results.append(f"Ran {len(ids)} tests in separate processes")
     frontend = candidate / "frontend"
     if (frontend / "package-lock.json").exists():
         installed = scratch / "node-dependencies-ready"
