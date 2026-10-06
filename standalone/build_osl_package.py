@@ -29,6 +29,7 @@ ENV_KEYS = (
 TREES = (
     "services",
     "studio",
+    "standalone/pc_bridge",
     "static/studio",
     "static/fonts",
     "skills",

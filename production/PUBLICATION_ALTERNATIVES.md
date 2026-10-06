@@ -173,21 +173,21 @@ réserver le PC à l’envoi, être informé quand il travaille, et préparer le
 côté serveur pendant son absence. La sélection et la création entièrement
 automatiques restent à terminer ; ne pas les présenter comme opérationnelles.
 
-Le PC a réellement exécuté un diagnostic : Windows, Chrome installé, agent connecté,
-aucun navigateur ouvert et aucun compte Google inspecté. Le studio propose maintenant
-une demande de connexion locale réservée au propriétaire, avec notification Windows
-et ouverture d’un profil Chrome dédié par ID de chaîne. Une connexion n’est acceptée
-qu’après observation du tableau de bord Studio de la chaîne attendue. Les demandes
-expirent et les résultats sont liés à une requête précise ; une autre chaîne ou une
-modification concurrente est refusée. Aucun cookie, capture de connexion ou jeton Google
-n’est transmis au site. Le navigateur normal de l’utilisateur n’est pas modifié.
+Le diagnostic de la file PC commune a confirmé Windows et Chrome installé sur
+l’agent exécutant, sans établir qu’il s’agissait du PC où l’utilisateur cliquait.
+Une demande prise par ce relais ne prouve donc pas une fenêtre visible sur ce PC.
+Le parcours de connexion n’utilise plus la file partagée : un assistant propre à
+Edgerunners est lancé localement par l’utilisateur, via notre protocole Windows.
+Son téléchargement privé, ses étapes et ses limites sont décrits dans
+[DASHBOARD_STATUS.md](DASHBOARD_STATUS.md#connexion-sur-le-pc-qui-ouvre-le-site--7-octobre-2026).
 
 Cette première étape ne contient pas encore le pilotage des formulaires d’envoi.
 Une association Chrome ne marque donc pas la chaîne comme prête à publier et ne
 change ni la pause globale, ni les droits, ni les jetons OAuth historiques. Il faut
 encore une connexion réelle de l’utilisateur dans le Chrome dédié, puis vérifier
 un envoi complet dans l’interface réelle avant d’intégrer cette voie au worker.
-Aucun upload local alternatif n’a été testé.
+Aucun upload local alternatif n’a été testé. Ne pas dire que l’IP du PC résout
+le refus OAuth : la connexion première partie à YouTube Studio est un autre parcours.
 
 ## État du studio conservé
 

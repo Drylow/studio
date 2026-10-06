@@ -41,6 +41,7 @@ try {
   let disconnected = 0;
   let pcRequested = 0;
   let pcChecked = 0;
+  let companionLaunched = false;
   const localState = {
     configured: true,
     preview: false,
@@ -61,8 +62,16 @@ try {
       assert.ok(route.request().headers()["x-csrf-token"]);
       pcRequested++;
       Object.assign(localState, {
-        status: "queued",
-        message: "Demande envoyée. L’agent PC va ouvrir Chrome.",
+        status: "awaiting_app",
+        message: "L’assistant n’a pas encore répondu. Installe-le sur ce PC.",
+        launch_uri:
+          "edgerunners-studio://connect/pc-local-" +
+          "a".repeat(32) +
+          "?token=" +
+          "b".repeat(64),
+        installer_href:
+          `/api/studio/youtube/${channel.id}/pc/installer/pc-local-` +
+          "a".repeat(32),
       });
       await route.fulfill({ json: localState, status: 202 });
     },
@@ -73,6 +82,10 @@ try {
       assert.equal(route.request().method(), "POST");
       assert.ok(route.request().headers()["x-csrf-token"]);
       pcChecked++;
+      if (!companionLaunched) {
+        await route.fulfill({ json: localState });
+        return;
+      }
       Object.assign(localState, {
         status: "ready",
         message:
@@ -161,18 +174,42 @@ try {
   assert.ok(
     await dialog()
       .getByRole("button", {
-        name: "Connexion en cours sur ton PC",
+        name: "En attente de l’assistant",
         exact: true,
       })
       .isDisabled(),
   );
+  const installer = dialog().getByRole("link", {
+    name: "Télécharger l’assistant PC",
+    exact: true,
+  });
+  await installer.waitFor();
+  assert.ok(
+    (await installer.getAttribute("href")).startsWith("/api/studio/youtube/"),
+  );
+  const localLink = dialog().getByRole("link", {
+    name: "Déjà installé ? Ouvrir l’assistant sur ce PC",
+    exact: true,
+  });
+  assert.ok(
+    (await localLink.getAttribute("href")).startsWith(
+      "edgerunners-studio://connect/",
+    ),
+  );
+  await page.waitForTimeout(3500);
+  assert.equal(localState.status, "awaiting_app");
+  await dialog()
+    .getByRole("status")
+    .filter({ hasText: "n’a pas encore répondu" })
+    .waitFor();
+  companionLaunched = true; // Simulated callback, no local program or Google session.
   await dialog()
     .getByRole("status")
     .filter({ hasText: "L’envoi automatique reste à valider" })
     .waitFor({ timeout: 22000 });
-  assert.equal(pcChecked, 1);
+  assert.ok(pcChecked >= 2);
   assert.equal(localState.publication_validated, false);
-  await dialog().getByText("CHROME VÉRIFIÉ", { exact: true }).waitFor();
+  await dialog().getByText("CHAÎNE VÉRIFIÉE", { exact: true }).waitFor();
   await dialog()
     .getByRole("button", { name: "Vérifier la connexion", exact: true })
     .tap();
@@ -200,6 +237,9 @@ try {
   assert.ok((await button().textContent()).includes("Connecter YouTube"));
   role = "editor";
   channel.connected = 1;
+  localState.status = "idle";
+  delete localState.launch_uri;
+  delete localState.installer_href;
   await page.reload({ waitUntil: "networkidle" });
   await button().tap();
   await dialog()
@@ -228,7 +268,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "Simulated YouTube UI: Google controls, PC request and checked dashboard without claiming upload, four widths, owner/editor access and zero JavaScript errors: passed",
+    "Simulated YouTube UI: Google controls, local PC installation, no browser claim before companion callback, and checked dashboard without claiming upload, four widths, owner/editor access and zero JavaScript errors: passed",
   );
 } finally {
   await browser.close();

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Monitor, RefreshCw } from "lucide-react";
+import { Download, Monitor, RefreshCw } from "lucide-react";
 import type { Channel } from "./types";
 import { api } from "./api";
 import { Button, Tag } from "./components";
@@ -7,10 +7,12 @@ import { Button, Tag } from "./components";
 type LocalConnection = {
   configured: boolean;
   preview: boolean;
-  status: "idle" | "queued" | "waiting" | "ready" | "failed";
+  status: "idle" | "awaiting_app" | "waiting" | "ready" | "failed";
   message: string;
   channel_title: string;
   channel_id: string;
+  launch_uri?: string;
+  installer_href?: string;
   publication_validated: false;
 };
 
@@ -27,7 +29,8 @@ export function PCYouTubeConnection({
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const path = `/youtube/${channel.id}/pc`;
-  const pending = state?.status === "queued" || state?.status === "waiting";
+  const pending =
+    state?.status === "awaiting_app" || state?.status === "waiting";
   useEffect(() => {
     let alive = true;
     api<LocalConnection>(path)
@@ -59,12 +62,12 @@ export function PCYouTubeConnection({
           setError(
             reason instanceof Error
               ? reason.message
-              : "Relais PC indisponible.",
+              : "Vérification indisponible.",
           );
       } finally {
         checking = false;
       }
-    }, 15000);
+    }, 3000);
     return () => {
       alive = false;
       window.clearInterval(timer);
@@ -77,26 +80,27 @@ export function PCYouTubeConnection({
     >
       <div className="youtube-actions">
         <Monitor size={20} />
-        <strong>Depuis ton PC</strong>
-        {state?.status === "ready" && <Tag tone="muted">CHROME VÉRIFIÉ</Tag>}
+        <strong>Depuis ce PC</strong>
+        {state?.status === "ready" && <Tag tone="muted">CHAÎNE VÉRIFIÉE</Tag>}
       </div>
       <p>
-        Ton PC servira à envoyer les vidéos préparées par le studio. Une
-        notification Windows annonce chaque intervention. Les vidéos attendront
-        si le PC est éteint.
+        À faire sur le PC Windows qui servira à publier, avec Google Chrome
+        installé.
       </p>
       {owner && !preview && (
         <ol className="connection-steps">
           <li>
-            Allume ton PC, puis clique sur{" "}
-            <strong>Connecter avec mon PC</strong>.
+            Clique sur <strong>Connecter avec mon PC</strong>.
           </li>
           <li>
-            Chrome s’ouvre sur ton PC. Connecte-toi normalement à YouTube.
+            Au premier usage, télécharge l’assistant ci-dessous,{" "}
+            <strong>extrais le ZIP</strong> puis double-clique sur{" "}
+            <strong>Installer.cmd</strong>.
           </li>
           <li>
-            Choisis <strong>{channel.name}</strong>. Si nécessaire : photo de
-            profil → Changer de compte.
+            Dans la nouvelle fenêtre Chrome, connecte-toi à YouTube et choisis{" "}
+            <strong>{channel.name}</strong> : photo → Changer de compte si
+            nécessaire.
           </li>
         </ol>
       )}
@@ -138,7 +142,6 @@ export function PCYouTubeConnection({
                 ? reason.message
                 : "Connexion PC indisponible.",
             );
-            // An already pending request stays discoverable after reopening the modal.
             try {
               setState(await api<LocalConnection>(path));
             } catch {
@@ -150,12 +153,38 @@ export function PCYouTubeConnection({
         }}
       >
         {busy || pending ? <RefreshCw size={16} /> : <Monitor size={16} />}
-        {pending ? "Connexion en cours sur ton PC" : "Connecter avec mon PC"}
+        {pending ? "En attente de l’assistant" : "Connecter avec mon PC"}
       </Button>
+      {owner &&
+        !preview &&
+        pending &&
+        state?.installer_href &&
+        state.launch_uri && (
+          <div className="pc-local-launch">
+            <a
+              className="button primary"
+              href={state.installer_href}
+              download="Edgerunners-PC.zip"
+            >
+              <Download size={16} /> Télécharger l’assistant PC
+            </a>
+            <p className="form-hint">
+              Une seule installation par PC. Le programme ouvre ensuite Chrome
+              automatiquement.
+            </p>
+            <a className="text-button" href={state.launch_uri}>
+              Déjà installé ? Ouvrir l’assistant sur ce PC
+            </a>
+            <p className="form-hint">
+              Si Chrome propose « Ouvrir Edgerunners Studio », accepte
+              l’ouverture. Si rien ne s’ouvre, installe l’assistant avec le ZIP
+              ci-dessus.
+            </p>
+          </div>
+        )}
       <p className="form-hint">
-        Cette étape vérifie l’accès à la bonne chaîne. Elle ne publie aucune
-        vidéo. L’envoi automatique et la création entièrement autonome restent à
-        valider.
+        Cette étape vérifie la bonne chaîne. Aucune vidéo n’est publiée. La
+        publication automatique depuis le PC reste à valider.
       </p>
     </section>
   );

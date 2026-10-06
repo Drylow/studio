@@ -2748,6 +2748,20 @@ svg {
   margin: 0;
 }
 
+.pc-local-launch {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.pc-local-launch .button {
+  white-space: normal;
+  text-align: center;
+  height: auto;
+  min-height: 44px;
+  text-decoration: none;
+}
+
 .youtube-google-option > summary {
   cursor: pointer;
   padding: 10px 0;

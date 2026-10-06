@@ -192,6 +192,12 @@ def create_app(config=None):
         if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
             if request.remote_addr not in {"127.0.0.1", "::1"}:
                 return jsonify(error="L’aperçu est réservé à cette machine."), 403
+        if request.endpoint in {"pc_local_manifest", "pc_local_progress"}:
+            from studio.pc_youtube import authorize_machine
+
+            # A short-lived channel-specific capability grants only these two
+            # assistant callbacks. Every other route keeps the private gate.
+            return authorize_machine(app, store)
         g.user = security.identity(store)
         if (
             (app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"))

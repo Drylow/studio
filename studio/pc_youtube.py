@@ -1,152 +1,115 @@
-"""Owner-initiated pairing with a visible local YouTube Studio browser.
+"""Pair on the PC that opens the link, using a narrowly scoped local companion.
 
-Pairing is deliberately separate from OAuth and publication readiness. It never
-enables a channel, changes its Google token, or queues an upload.
+This replaces the shared PC relay queue. A connection never activates publishing,
+exports cookies, installs on a remote PC, or supplies arbitrary commands.
 """
-
 from datetime import datetime, timedelta, timezone
+import hashlib
+import hmac
 import io
-import json
-import os
 import re
 import secrets
-import tarfile
-import time
-import urllib.error
-import urllib.parse
-import urllib.request
 
-from flask import jsonify, request, session
-from studio.store import ROOT, Conflict, now
+from flask import g, jsonify, request, send_file
 from studio import public_statistics
+from studio.store import Conflict, now
 
-ACTIVE = {"queued", "waiting"}
+ACTIVE = {"awaiting_app", "waiting"}
+TABLE = "studio_pc_local_connections"
 MESSAGES = {
-    "idle": "Connecte YouTube dans Chrome sur ton PC.",
-    "queued": "Demande envoyée. L’agent PC va ouvrir Chrome.",
-    "preparing_browser": "Ton PC prépare Chrome. Une notification Windows annonce la connexion.",
-    "sign_in": "Dans Chrome sur ton PC, connecte-toi à YouTube puis choisis cette chaîne.",
-    "dashboard_confirmed": "La bonne chaîne est ouverte dans Chrome. L’envoi automatique reste à valider.",
-    "expired_request": "Cette demande a expiré. Allume ton PC puis clique de nouveau sur Connecter avec mon PC.",
-    "invalid_request": "La demande PC n’a pas pu être vérifiée. Relance la connexion.",
-    "chrome_missing": "Installe Google Chrome sur ton PC, puis relance la connexion.",
-    "notification_failed": "Windows n’a pas pu afficher la notification. Vérifie les notifications de ton PC avant de réessayer.",
-    "dependency_failed": "La préparation du navigateur a échoué. Vérifie la connexion Internet du PC, puis réessaie.",
-    "agent_missing": "L’agent PC ne retrouve pas son dossier. La connexion n’a pas été ouverte.",
-    "windows_required": "Cette connexion nécessite l’agent Windows déjà installé sur ton PC.",
-    "unsafe_profile": "Le profil Chrome dédié ne peut pas être utilisé. Aucune session personnelle n’a été ouverte.",
-    "browser_busy": "Ferme la fenêtre Chrome ouverte par Edgerunners pour cette chaîne, puis réessaie.",
-    "browser_failed": "Chrome n’a pas pu être contrôlé. Aucune vidéo n’a été envoyée.",
-    "sign_in_timeout": "Connexion non terminée. Clique de nouveau sur Connecter avec mon PC, puis connecte-toi dans Chrome.",
-    "wrong_channel": "La chaîne ouverte ne correspond pas. Relance, puis dans YouTube Studio clique sur ta photo → Changer de compte et choisis la chaîne affichée ici.",
-    "channel_changed": "Cette chaîne a changé pendant la connexion. Actualise et relance.",
-    "worker_unavailable": "Le relais PC est indisponible. Aucune vidéo n’a été envoyée.",
+    "idle": "Installe l’assistant une fois sur le PC qui servira à publier.",
+    "awaiting_app": "L’assistant n’a pas encore répondu. Ouvre-le sur ce PC, ou télécharge l’installation ci-dessous.",
+    "preparing_browser": "L’assistant a répondu depuis le PC où il a été lancé. Il prépare Chrome.",
+    "sign_in": "Une fenêtre Chrome visible a été confirmée. Dans cette fenêtre, connecte-toi et choisis la chaîne indiquée.",
+    "dashboard_confirmed": "La bonne chaîne a été vérifiée dans Chrome. La publication automatique reste à valider.",
+    "expired_request": "Ce lien a expiré. Clique sur Connecter avec mon PC pour en créer un nouveau.",
+    "invalid_request": "Cette demande n’est pas valide. Relance la connexion depuis le studio.",
+    "chrome_missing": "Installe Google Chrome sur ce PC, puis relance depuis le studio.",
+    "unsafe_profile": "Le profil dédié ne peut pas être utilisé. Aucune session personnelle n’a été ouverte.",
+    "browser_busy": "Ferme la fenêtre Chrome dédiée déjà ouverte pour cette chaîne, puis relance.",
+    "browser_failed": "Chrome n’a pas pu être ouvert ou vérifié. Aucune vidéo n’a été envoyée.",
+    "browser_closed": "La fenêtre Chrome dédiée a été fermée. Relance la connexion depuis le studio.",
+    "desktop_not_interactive": "Ouvre ta session Windows, puis lance l’assistant depuis le studio sur ce PC.",
+    "browser_not_visible": "Aucune fenêtre Chrome visible n’a été confirmée. Ouvre ta session Windows puis relance.",
+    "sign_in_timeout": "Connexion non terminée. Relance et connecte-toi dans la nouvelle fenêtre Chrome.",
+    "wrong_channel": "La chaîne ouverte est différente. Relance puis clique sur ta photo → Changer de compte dans YouTube Studio.",
+    "channel_changed": "Cette chaîne a changé. Actualise le site puis relance la connexion.",
+    "cancelled": "Connexion annulée sur le PC. Tu peux la relancer depuis le studio.",
 }
+FAILURES = set(MESSAGES) - {"idle", "awaiting_app", "preparing_browser", "sign_in", "dashboard_confirmed"}
 
 
 def initialize(store):
     with store.db() as c:
-        c.executescript("""
-        CREATE TABLE IF NOT EXISTS studio_pc_connections(
+        c.executescript(f"""
+        CREATE TABLE IF NOT EXISTS {TABLE}(
             request_id TEXT PRIMARY KEY,channel_id INTEGER NOT NULL REFERENCES studio_channels(project_id) ON DELETE CASCADE,
             user_id TEXT NOT NULL REFERENCES studio_users(id),revision INTEGER NOT NULL,
-            expected_channel_id TEXT NOT NULL,channel_title TEXT NOT NULL,nonce TEXT NOT NULL,
+            expected_channel_id TEXT NOT NULL,channel_title TEXT NOT NULL,
             status TEXT NOT NULL,code TEXT NOT NULL,device_id TEXT NOT NULL DEFAULT '',
             created_at TEXT NOT NULL,expires_at TEXT NOT NULL,checked_at TEXT NOT NULL DEFAULT '');
-        CREATE INDEX IF NOT EXISTS studio_pc_connection_channel ON studio_pc_connections(channel_id,created_at);
+        CREATE INDEX IF NOT EXISTS studio_pc_local_channel ON {TABLE}(channel_id,created_at);
         """)
 
 
-def worker_configuration():
-    base = os.getenv("NEWS_WORKER_URL", "").strip().rstrip("/")
-    token = os.getenv("NEWS_WORKER_TOKEN", "").strip()
-    try:
-        url = urllib.parse.urlsplit(base)
-        valid = url.scheme == "https" and bool(url.hostname) and not url.username and not url.query and not url.fragment
-    except ValueError:
-        valid = False
-    return (base, token) if valid and token else ("", "")
-
-
-def relay(path, method="GET", body=None):
-    base, token = worker_configuration()
-    if not base:
-        raise ValueError("Le relais PC n’est pas configuré sur le serveur.")
-    req = urllib.request.Request(base + path, data=body, method=method,
-                                 headers={"X-Worker-Token": token, "Content-Type": "application/gzip" if body else "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=15) as response:
-            raw = response.read(65537)
-        if len(raw) > 65536:
-            raise ValueError("Le relais PC a renvoyé une réponse trop longue.")
-        value = json.loads(raw)
-        if not isinstance(value, dict):
-            raise ValueError("Réponse du relais PC invalide.")
-        return value
-    except urllib.error.HTTPError as error:
-        if error.code == 404:
-            return None
-        raise ValueError(MESSAGES["worker_unavailable"]) from None
-    except (OSError, json.JSONDecodeError):
-        raise ValueError(MESSAGES["worker_unavailable"]) from None
-
-
-def bundle(row):
-    manifest = dict(action="connect", request_id=row["request_id"], nonce=row["nonce"],
-                    channel_id=row["expected_channel_id"], deadline=datetime.fromisoformat(row["expires_at"]).timestamp())
-    files = {
-        "code/production/news.py": b"from pc_youtube import main\nmain()\n",
-        "code/production/pc_youtube.py": (ROOT / "production/pc_youtube.py").read_bytes(),
-        "job/pc_request.json": json.dumps(manifest).encode(),
-    }
-    output = io.BytesIO()
-    with tarfile.open(fileobj=output, mode="w:gz") as archive:
-        for dirname in ("code", "code/production", "job"):
-            info = tarfile.TarInfo(dirname)
-            info.type, info.mode = tarfile.DIRTYPE, 0o700
-            archive.addfile(info)
-        for name, raw in files.items():
-            info = tarfile.TarInfo(name)
-            info.size, info.mode = len(raw), 0o600
-            archive.addfile(info, io.BytesIO(raw))
-    return output.getvalue()
-
-
 def latest(store, cid):
-    return store.one("SELECT * FROM studio_pc_connections WHERE channel_id=? ORDER BY created_at DESC LIMIT 1", (cid,))
+    return store.one(f"SELECT * FROM {TABLE} WHERE channel_id=? ORDER BY created_at DESC LIMIT 1", (cid,))
 
 
-def public_state(row, preview=False):
-    return dict(configured=bool(worker_configuration()[0]), preview=preview, status=row["status"] if row else "idle",
-                message=MESSAGES.get(row["code"] if row else "idle", MESSAGES["invalid_request"]),
-                channel_title=row["channel_title"] if row else "", channel_id=row["expected_channel_id"] if row else "",
-                created_at=row["created_at"] if row else "", publication_validated=False)
+def capability(app, row):
+    payload = ":".join(str(row[k]) for k in ("request_id", "user_id", "channel_id", "revision", "expires_at"))
+    return hmac.new(app.config["SECRET_KEY"].encode(), ("pc-local-v1:" + payload).encode(), hashlib.sha256).hexdigest()
 
 
-def apply_result(store, row, result):
-    status, code, device = "failed", "invalid_request", ""
-    if now() >= row["expires_at"]:
-        code = "expired_request"
-    elif isinstance(result, dict) and type(result.get("version")) is int and all(result.get(k) == v for k, v in {
-        "version": 1, "action": "connect", "request_id": row["request_id"],
-        "nonce": row["nonce"], "expected_channel_id": row["expected_channel_id"],
-    }.items()):
-        returned_status, returned_code = result.get("status"), result.get("code")
-        if not isinstance(returned_status, str) or not isinstance(returned_code, str):
-            pass
-        elif returned_status == "ready" and returned_code == "dashboard_confirmed" and result.get("dashboard_seen") is True and result.get("channel_id") == row["expected_channel_id"] and re.fullmatch(r"[a-f0-9]{32}", str(result.get("device_id", ""))):
-            status, code, device = "ready", "dashboard_confirmed", result["device_id"]
-        elif returned_status == "waiting" and returned_code in {"preparing_browser", "sign_in"}:
-            status, code = "waiting", returned_code
-        elif returned_status == "failed" and returned_code in MESSAGES and returned_code not in {"idle", "queued", "preparing_browser", "sign_in", "dashboard_confirmed"}:
-            code = returned_code
+def valid_actor(c, row):
+    user = c.execute("SELECT role FROM studio_users WHERE id=?", (row["user_id"],)).fetchone()
+    ch = c.execute("SELECT revision,retired FROM studio_channels WHERE project_id=?", (row["channel_id"],)).fetchone()
+    return bool(user and user["role"] == "owner" and ch and not ch["retired"] and ch["revision"] == row["revision"])
+
+
+def expire(store, cid):
     with store.db() as c:
         c.execute("BEGIN IMMEDIATE")
-        ch = c.execute("SELECT revision,retired FROM studio_channels WHERE project_id=?", (row["channel_id"],)).fetchone()
-        if not ch or ch["retired"] or ch["revision"] != row["revision"]:
-            status, code, device = "failed", "channel_changed", ""
-        c.execute("UPDATE studio_pc_connections SET status=?,code=?,device_id=?,checked_at=? WHERE request_id=? AND status IN ('queued','waiting')",
-                  (status, code, device, now(), row["request_id"]))
+        for row in c.execute(f"SELECT * FROM {TABLE} WHERE channel_id=? AND status IN ('awaiting_app','waiting')", (cid,)).fetchall():
+            code = "expired_request" if now() >= row["expires_at"] else "channel_changed" if not valid_actor(c, row) else ""
+            if code:
+                c.execute(f"UPDATE {TABLE} SET status='failed',code=? WHERE request_id=?", (code, row["request_id"]))
+
+
+def public_state(app, row):
+    state = dict(configured=True, preview=app.config["PREVIEW"], status=row["status"] if row else "idle",
+                 message=MESSAGES.get(row["code"] if row else "idle", MESSAGES["invalid_request"]),
+                 channel_title=row["channel_title"] if row else "", channel_id=row["expected_channel_id"] if row else "",
+                 created_at=row["created_at"] if row else "", publication_validated=False)
+    # Narrow capabilities are visible only to the owner who initiated this request.
+    if row and row["status"] in ACTIVE and g.user and g.user["role"] == "owner" and g.user["id"] == row["user_id"] and not app.config["PREVIEW"]:
+        state["launch_uri"] = "edgerunners-studio://connect/" + row["request_id"] + "?token=" + capability(app, row)
+        state["installer_href"] = f'/api/studio/youtube/{row["channel_id"]}/pc/installer/{row["request_id"]}'
+    return state
+
+
+def authorize_machine(app, store):
+    """Only two fixed endpoints use this capability instead of the private gate."""
+    rid = (request.view_args or {}).get("request_id", "")
+    if not re.fullmatch(r"pc-local-[a-f0-9]{32}", rid):
+        return jsonify(error="Demande invalide."), 404
+    if app.config["PREVIEW"]:
+        return jsonify(error="Connexion PC désactivée dans l’aperçu."), 403
+    header = request.headers.get("Authorization", "")
+    if not header.startswith("Bearer "):
+        return jsonify(error="Autorisation de l’assistant requise."), 401
+    token = header[7:]
+    row = store.one(f"SELECT * FROM {TABLE} WHERE request_id=?", (rid,))
+    if not row or not re.fullmatch(r"[a-f0-9]{64}", token) or not hmac.compare_digest(token, capability(app, row)):
+        return jsonify(error="Autorisation refusée."), 403
+    origin = request.headers.get("Origin")
+    if origin and origin != request.host_url.rstrip("/"):
+        return jsonify(error="Origine refusée."), 403
+    with store.db() as c:
+        if now() >= row["expires_at"] or not valid_actor(c, row) or row["status"] not in ACTIVE:
+            return jsonify(error="Cette demande n’est plus active."), 410
+    g.pc_connection = row
+    return None
 
 
 def register(app, store, owner):
@@ -158,13 +121,17 @@ def register(app, store, owner):
             raise ValueError("Cette chaîne a été retirée ou n’existe pas.")
         return ch
 
+    def state_for(cid):
+        expire(store, cid)
+        return public_state(app, latest(store, cid))
+
     @app.get("/api/studio/youtube/<int:cid>/pc")
-    def state(cid):
+    def pc_local_state(cid):
         channel(cid)
-        return jsonify(public_state(latest(store, cid), app.config["PREVIEW"]))
+        return jsonify(state_for(cid))
 
     @app.post("/api/studio/youtube/<int:cid>/pc/connect")
-    def start(cid):
+    def pc_local_start(cid):
         owner()
         ch = channel(cid)
         data = request.get_json(silent=True)
@@ -172,60 +139,83 @@ def register(app, store, owner):
             raise Conflict("Cette chaîne a changé. Actualise avant de connecter ton PC.")
         if app.config["PREVIEW"]:
             raise ValueError("La connexion PC est désactivée dans l’aperçu.")
-        stamp = now()
-        with store.db() as c:
-            c.execute("BEGIN IMMEDIATE")
-            c.execute("UPDATE studio_pc_connections SET status='failed',code='expired_request' WHERE status IN ('queued','waiting') AND expires_at<=?", (stamp,))
-            if c.execute("SELECT request_id FROM studio_pc_connections WHERE status IN ('queued','waiting')").fetchone():
-                raise Conflict("Une connexion PC est déjà en cours. Termine-la dans Chrome avant de connecter une autre chaîne.")
-        status = relay("/status") or {}
-        seen = status.get("pc_seen")
-        if isinstance(seen, bool) or not isinstance(seen, (int, float)) or not 0 <= time.time() - seen <= 300:
-            raise ValueError("Allume ton PC, puis réessaie Connecter avec mon PC. L’agent installé peut mettre jusqu’à 15 minutes à redémarrer.")
+        expire(store, cid)
+        row = latest(store, cid)
+        if row and row["status"] in ACTIVE and row["user_id"] == g.user["id"]:
+            return jsonify(public_state(app, row)), 202
         public = public_statistics.lookup(public_statistics.api_key(store), ch["handle"])
+        if not re.fullmatch(r"UC[A-Za-z0-9_-]{22}", public["youtube_id"]):
+            raise ValueError("Identifiant de chaîne invalide.")
         if ch["yt_channel_id"] and ch["yt_channel_id"] != public["youtube_id"]:
             raise ValueError("Le @pseudo correspond à une autre chaîne. Corrige-le avant de connecter YouTube.")
-        row = dict(request_id="pc-connect-" + secrets.token_hex(16), nonce=secrets.token_hex(32),
-                   channel_id=cid, user_id=session["studio_user"], revision=ch["revision"],
-                   expected_channel_id=public["youtube_id"], channel_title=public["name"],
-                   status="queued", code="queued", created_at=stamp,
+        row = dict(request_id="pc-local-" + secrets.token_hex(16), channel_id=cid, user_id=g.user["id"],
+                   revision=ch["revision"], expected_channel_id=public["youtube_id"], channel_title=public["name"][:200],
+                   status="awaiting_app", code="awaiting_app", created_at=now(),
                    expires_at=(datetime.now(timezone.utc) + timedelta(minutes=20)).isoformat())
         with store.db() as c:
             c.execute("BEGIN IMMEDIATE")
-            current = channel(cid)
-            if current["revision"] != ch["revision"]:
+            if not valid_actor(c, row):
                 raise Conflict("Cette chaîne a changé. Actualise avant de connecter ton PC.")
-            if c.execute("SELECT request_id FROM studio_pc_connections WHERE status IN ('queued','waiting')").fetchone():
-                raise Conflict("Une connexion PC est déjà en cours. Termine-la dans Chrome.")
-            c.execute("INSERT INTO studio_pc_connections(" + ",".join(row) + ") VALUES(" + ",".join("?" for _ in row) + ")", list(row.values()))
-        # An ambiguous relay response must never cause a second browser command.
-        try:
-            accepted = relay("/pcjob?" + urllib.parse.urlencode({"name": row["request_id"]}), "PUT", bundle(row))
-            if not accepted or accepted.get("ok") is not True:
-                raise ValueError(MESSAGES["worker_unavailable"])
-        except ValueError:
-            return jsonify(public_state(row)), 202
-        store.log("user", "pc-youtube", "Connexion locale demandée pour " + ch["name"] + ". Aucune publication.")
-        return jsonify(public_state(row)), 202
+            existing = c.execute(f"SELECT * FROM {TABLE} WHERE channel_id=? AND user_id=? AND status IN ('awaiting_app','waiting') AND expires_at>? ORDER BY created_at DESC LIMIT 1", (cid, row["user_id"], now())).fetchone()
+            if existing:
+                return jsonify(public_state(app, dict(existing))), 202
+            c.execute(f"UPDATE {TABLE} SET status='failed',code='channel_changed' WHERE channel_id=? AND status IN ('awaiting_app','waiting')", (cid,))
+            c.execute(f'INSERT INTO {TABLE}(' + ','.join(row) + ') VALUES(' + ','.join('?' for _ in row) + ')', list(row.values()))
+        store.log("user", "pc-youtube", "Lien local préparé pour " + ch["name"] + ". Assistant pas encore lancé.")
+        return jsonify(public_state(app, row)), 202
 
     @app.post("/api/studio/youtube/<int:cid>/pc/check")
-    def check(cid):
+    def pc_local_check(cid):
         owner()
-        ch = channel(cid)
-        row = latest(store, cid)
-        if not row or row["status"] not in ACTIVE or app.config["PREVIEW"]:
-            return jsonify(public_state(row, app.config["PREVIEW"]))
-        if row["revision"] != ch["revision"] or now() >= row["expires_at"]:
-            apply_result(store, row, None)
-        elif not row["checked_at"] or (datetime.now(timezone.utc) - datetime.fromisoformat(row["checked_at"])).total_seconds() >= 12:
-            with store.db() as c:
-                c.execute("UPDATE studio_pc_connections SET checked_at=? WHERE request_id=?", (now(), row["request_id"]))
-            suffix = urllib.parse.urlencode({"name": row["request_id"], "path": "result.json"})
-            result = relay("/pc/file?" + suffix)
-            if result is not None:
-                apply_result(store, row, result)
+        channel(cid)
+        return jsonify(state_for(cid))
+
+    @app.get("/api/studio/youtube/<int:cid>/pc/installer/<request_id>")
+    def pc_local_installer(cid, request_id):
+        owner()
+        channel(cid)
+        expire(store, cid)
+        row = store.one(f"SELECT * FROM {TABLE} WHERE request_id=? AND channel_id=? AND user_id=?", (request_id, cid, g.user["id"]))
+        if app.config["PREVIEW"] or not row or row["status"] not in ACTIVE:
+            raise ValueError("Ce lien d’installation a expiré. Relance la connexion.")
+        from studio.pc_installer import installer_zip
+        uri = "edgerunners-studio://connect/" + request_id + "?token=" + capability(app, row)
+        return send_file(io.BytesIO(installer_zip(uri)), as_attachment=True, download_name="Edgerunners-PC.zip", mimetype="application/zip", max_age=0)
+
+    @app.get("/api/studio/pc-local/<request_id>/manifest")
+    def pc_local_manifest(request_id):
+        row = g.pc_connection
+        return jsonify(channel_id=row["expected_channel_id"], channel_title=row["channel_title"],
+                       deadline=datetime.fromisoformat(row["expires_at"]).timestamp())
+
+    @app.post("/api/studio/pc-local/<request_id>/progress")
+    def pc_local_progress(request_id):
+        if (request.content_length or 0) > 2048:
+            return jsonify(error="Réponse trop longue."), 413
+        data = request.get_json(silent=True)
+        if not isinstance(data, dict):
+            raise ValueError("Réponse de l’assistant invalide.")
+        status, code, device = data.get("status"), data.get("code"), data.get("device_id")
+        if not isinstance(status, str) or not isinstance(code, str) or not isinstance(device, str) or not re.fullmatch(r"[a-f0-9]{32}", device):
+            raise ValueError("Réponse de l’assistant invalide.")
+        with store.db() as c:
+            c.execute("BEGIN IMMEDIATE")
+            row = dict(c.execute(f"SELECT * FROM {TABLE} WHERE request_id=?", (request_id,)).fetchone())
+            if now() >= row["expires_at"] or not valid_actor(c, row) or row["status"] not in ACTIVE:
+                return jsonify(error="Cette demande n’est plus active."), 410
+            if row["device_id"] and row["device_id"] != device:
+                return jsonify(error="Cette connexion est déjà utilisée sur un autre PC."), 409
+            if data.get("expected_channel_id") != row["expected_channel_id"]:
+                raise ValueError("La chaîne de la demande ne correspond pas.")
+            if status == "waiting" and code == "preparing_browser" and row["code"] in {"awaiting_app", "preparing_browser"}:
+                pass
+            elif status == "waiting" and code == "sign_in" and row["code"] in {"preparing_browser", "sign_in"} and data.get("browser_visible") is True:
+                pass
+            elif status == "ready" and code == "dashboard_confirmed" and row["code"] == "sign_in" and data.get("browser_visible") is True and data.get("navigation_verified") is True and data.get("channel_id") == row["expected_channel_id"]:
+                pass
+            elif status == "failed" and code in FAILURES:
+                pass
             else:
-                remote = relay("/pc/state?" + urllib.parse.urlencode({"name": row["request_id"]}))
-                if (remote and remote.get("state") == "done") or (remote is None and (datetime.now(timezone.utc) - datetime.fromisoformat(row["created_at"])).total_seconds() > 30):
-                    apply_result(store, row, {})
-        return jsonify(public_state(latest(store, cid), app.config["PREVIEW"]))
+                raise ValueError("L’assistant n’a pas confirmé les étapes de connexion.")
+            c.execute(f"UPDATE {TABLE} SET status=?,code=?,device_id=?,checked_at=? WHERE request_id=?", (status, code, device, now(), request_id))
+        return jsonify(ok=True)
