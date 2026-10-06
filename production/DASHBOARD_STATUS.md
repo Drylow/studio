@@ -1,11 +1,33 @@
 # Edgerunners Studio — état de construction
 
-Version du 5 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
+Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
+
+## Hébergement réel
+
+Le nouveau site est en ligne sur **https://edgerunners.fr/** après sauvegarde vérifiée
+de l'ancien site et de SQLite. Deux comptes réels, Drylow/Kanye, huit chaînes visibles
+(les sept modèles actifs et Le Grand Récap conservée), gate HTTPS et worker permanent.
+Les accès privés, rôles, CSRF, fichiers privés, révocation et version Passenger sont
+vérifiés sur le vrai domaine. Les 155 tests Python passent sur l'hébergement ; les tests
+de développement sont isolés par processus pour respecter ses limites de ressources.
+Sept pages sont vérifiées à 390/1440 px avec les réponses HTTPS du serveur via un
+proxy local privé, séparément des contrôles directs de cookies HTTPS.
+Delamain a répondu à une vraie demande, et le relais de montage authentifié répond.
+Git en écriture, Node/npm et le cron de modification du site sont installés.
+Le premier changement de code réel a passé 155 tests, la compilation et le contrôle
+de version public, puis a été publié sur `main` (`b1da59e`). Le sous-titre des tâches
+est désormais « Drylow, Kanye, et un plan commun. ».
+
+La publication automatique reste en pause. Les paramètres Google préexistants et
+la connexion historique sont préservés, mais Google refuse son ancien jeton avec
+`invalid_grant`. Une reconnexion et la connexion des sept autres chaînes restent à faire.
+Les contrôles éditoriaux, droits et miniatures autonomes ci-dessous ne sont pas remplacés
+par le déploiement. Aucun upload YouTube ni envoi Discord n'a été réalisé pendant celui-ci.
 
 ## Disponible
 
-Validation de l’accès simplifié : 154 tests Python réussis, compilation TypeScript et
+Validation de l’accès simplifié : 155 tests Python réussis, compilation TypeScript et
 parcours navigateur réussis sur cinq tailles d’écran. Ces contrôles couvrent notamment
 la connexion directe, le changement de mot de passe et la révocation des sessions.
 
@@ -21,7 +43,7 @@ la connexion directe, le changement de mot de passe et la révocation des sessio
 - Mode Passenger strict : HTTPS, domaine autorisé, cookies sécurisés, refus de
   l'aperçu et des clés faibles. Accès statiques limités, règles Apache fournies pour
   les fichiers physiques et absence d'indexation. [PRIVATE_ACCESS.md](../PRIVATE_ACCESS.md)
-  décrit les étapes de connexion. Aucun déploiement o2switch effectué à ce stade.
+  décrit les étapes de connexion. Déploiement et contrôles HTTPS réels effectués le 6 octobre.
 
 - Onze pages React/TypeScript, servies par Flask : accueil, chaînes, centre de contrôle, radar d'actus,
   production, calendrier, tâches, studio vidéo, bibliothèque, réglages et Delamain.
@@ -144,8 +166,8 @@ la connexion directe, le changement de mot de passe et la révocation des sessio
 - Guide o2switch réécrit pour le nouveau studio : Passenger, worker distinct via cron/flock,
   configuration Google commune et connexion par chaîne, mises à jour depuis GitHub.
   Le worker distinct utilise désormais les routes protégées nécessaires à Delamain.
-  Aucun déploiement ni essai sur l'offre réelle n'a été effectué ; ressources de rendu
-  et processus permanents doivent être vérifiés sur le compte au moment de l'hébergement.
+  Le déploiement, la compilation, ffmpeg et le worker permanent sont vérifiés sur
+  l'offre réelle. Les ressources d'un rendu vidéo complet restent à mesurer.
 - Mode propriétaire **Delamain → Modifier le site** : demandes de modifications de code
   séparées des tâches vidéo, exécuteur `python -m studio.developer` lancé en cron,
   copie Git isolée, lectures et remplacements bornés, tests d'origine protégés,
@@ -177,8 +199,8 @@ la connexion directe, le changement de mot de passe et la révocation des sessio
 - Nouveaux essais navigateur des états déconnecté/en cours/en ligne/échec, résultats et
   droits aux largeurs 320, 390, 768 et 1440 px. Les onze pages du test mobile existant
   restent validées aux six tailles habituelles ; parcours YouTube simulé toujours validé.
-- Raccordement du vrai compte o2switch, redémarrage Passenger et contraintes de ressources
-  encore à vérifier une fois le site hébergé. Aucun téléversement YouTube ni livraison
+- Raccordement du vrai compte o2switch, redémarrage Passenger, Git en écriture et
+  premier changement réel vérifiés le 6 octobre. Aucun téléversement YouTube ni livraison
   Discord effectué pendant le développement de cette fonction.
 
 ## À terminer avant les chaînes entièrement autonomes
@@ -193,17 +215,17 @@ la connexion directe, le changement de mot de passe et la révocation des sessio
    mais le nouveau studio ne génère pas encore ces miniatures automatiquement.
 4. Extension du manifeste de droits aux formats Oddly et History. Leur production est
    intégrée, mais leur publication reste bloquée tant que ce contrôle n'est pas adapté.
-5. Configuration Google côté serveur et essai réel d'une publication privée. OAuth et
-   publication ont été vérifiés avec des réponses simulées ; aucune chaîne n'est connectée
-   dans l'environnement actuel. Aucun chargement YouTube n'a été effectué pendant ces essais.
+5. Reconnexion de l'ancienne autorisation Google (`invalid_grant`), connexion des autres
+   chaînes et essai réel d'une publication privée. Les paramètres serveur sont conservés.
+   Aucun chargement YouTube n'a été effectué pendant ces essais.
 6. Permissions documentées de la voix pour un usage commercial automatisé, et licences
    des médias effectivement utilisés. Voir `NEWS_BRIEFS.md`. Un dossier de preuves ne
    constitue pas un contrôle Content ID et ne garantit pas l'absence de réclamation future.
 7. Hébergement permanent, sauvegardes récurrentes et notifications des blocages.
    Statistiques YouTube, facturation réelle et exports Discord des autres formats ensuite.
-8. Brancher l'exécuteur de modifications sur le compte d'hébergement et y réaliser
-   le premier changement réel. Le composant est implémenté ; aucun accès o2switch,
-   redémarrage Passenger réel ni déploiement public n'a été validé dans le cloud.
+8. Exécuteur de modifications raccordé et premier changement réel validé sur o2switch.
+   Surveiller les sauvegardes, l'espace disque et les demandes suivantes ; les fichiers
+   de sécurité, les dépendances et les migrations restent hors de son périmètre.
 
 ## Ouvrir et utiliser
 

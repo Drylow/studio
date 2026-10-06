@@ -1,8 +1,59 @@
 # Edgerunners Studio sur o2switch
 
-Guide du 5 octobre 2026 pour le nouveau studio React/Flask. L'ancien guide,
+Guide actualisé le 6 octobre 2026 pour le nouveau studio React/Flask. L'ancien guide,
 son archive de déploiement, son écran boss/guest et son cron HTTP ne s'appliquent plus.
-Aucun déploiement o2switch ni connexion Google réelle n'a été effectué ici.
+
+## Installation réelle — edgerunners.fr
+
+Le studio est installé sur **https://edgerunners.fr/**, après sauvegarde de l'ancien
+site et copie SQLite cohérente vérifiée. Une deuxième copie privée de cette sauvegarde
+a été téléchargée dans l'espace de travail cloud. Les anciens fichiers restent dans
+un dossier privé distinct sur le serveur ; `public_html` contient seulement les règles
+Apache/Passenger et les dossiers système conservés.
+
+- Code : `/home/TONUSER/drylow_studio`, dépôt Git sur `main`.
+- Python : `/home/TONUSER/edgerunners_venv/bin/python`, version 3.12.14.
+  Ce nouvel environnement laisse intact l'ancien virtualenv pour le retour arrière.
+- Node/npm : `/opt/alt/alt-nodejs22/root/usr/bin/`, version 22.23.3.
+- Base conservée : `/home/TONUSER/drylow_studio/drylow_studio.db`.
+- Deux comptes : `drylow` (propriétaire) et `kanye` (collaborateur).
+  Leurs mots de passe initiaux sont dans `/home/TONUSER/edgerunners-access.txt`,
+  privé et hors du dossier public. cPanel → Gestionnaire de fichiers → dossier
+  principal du compte → ce fichier → Afficher. Chacun peut changer son mot de passe
+  dans Réglages → Accès privé.
+- Le cron distinct `studio.worker`, relancé chaque minute avec `flock`, est installé
+  et son heartbeat ainsi qu'une réponse réelle de Delamain ont été vérifiés.
+  L'ancien cron HTTP est désactivé. La publication automatique reste en pause.
+- La clé Git de déploiement est autorisée en écriture. Son identité SSH et les clés
+  d'hôte GitHub vérifiées sont conservées sur le serveur ; la configuration Git
+  s'applique seulement au dépôt du studio et à ses copies privées de développement.
+  Le contrôle Git/npm/version publique et le cron `studio.developer` sont installés.
+
+Le premier changement demandé dans **Delamain → Modifier le site** a réellement
+modifié le sous-titre des tâches, exécuté les 155 tests et la compilation, sauvegardé
+SQLite, redémarré Passenger, contrôlé la version HTTPS et poussé `main`.
+Commit de cet essai : `b1da59e48f099e28f9353d05295c0423cd063afb`.
+
+Les connexions HTTPS des deux comptes, les rôles, les cookies Secure/HttpOnly,
+CSRF/origine, la révocation d'une session copiée, HSTS et les refus des fichiers privés
+ont été contrôlés sur le vrai domaine. Les 155 tests Python passent sur le serveur
+avec des processus séparés pour les contrôles de développement. Sept pages et les
+connexions ont été rendues à 390 et 1440 px à partir des réponses HTTPS du vrai serveur
+via un proxy local privé ; les cookies HTTPS ont été vérifiés séparément par accès direct.
+
+Les clés IA, voix, montage et Discord existantes ont été installées en privé. Le relais
+de montage répond à `/status` avec authentification. Les paramètres Google et la chaîne
+historique **Le Grand Récap** sont conservés, mais Google refuse son ancien jeton avec
+`invalid_grant` : une reconnexion OAuth est nécessaire. Les sept autres chaînes ne sont
+pas encore reliées à YouTube. Aucun upload YouTube ni envoi Discord n'a été effectué
+pendant ce déploiement. Avant de connecter une chaîne, vérifier l'adresse de retour
+Google indiquée à l'étape 3. Cet hébergement réutilise l'ancien chemin enregistré
+`/api/youtube/callback` via `OAUTH_CALLBACK_PATH` : le nouveau handler conserve les
+contrôles de session, de rôle et d'état à usage unique sur les deux adresses.
+
+Ne pas annoncer une publication quotidienne autonome : les connexions, les contrôles
+éditoriaux et les adaptateurs de droits indiqués dans `production/DASHBOARD_STATUS.md`
+restent nécessaires.
 
 ## Ce qui continue après l'hébergement
 
@@ -125,6 +176,11 @@ dans le studio. Utiliser Google Cloud Console : https://console.cloud.google.com
 ```text
 https://ton-domaine.fr/api/studio/youtube/callback
 ```
+
+Pour un client existant enregistré avec `https://ton-domaine.fr/api/youtube/callback`,
+conserver cette adresse et ajouter `OAUTH_CALLBACK_PATH=/api/youtube/callback` au `.env`.
+Le studio accepte cet ancien chemin avec les mêmes contrôles OAuth. Les nouveaux
+clients utilisent le chemin moderne ci-dessus avec `OAUTH_CALLBACK_PATH` vide.
 
 7. Enregistrer le client. Copier son identifiant dans `GOOGLE_CLIENT_ID` et son secret
    dans `GOOGLE_CLIENT_SECRET`, uniquement dans la configuration privée du serveur/worker.

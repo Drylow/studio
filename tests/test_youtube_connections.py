@@ -23,6 +23,7 @@ class YouTubeConnectionTests(unittest.TestCase):
                 "GOOGLE_CLIENT_ID": "fixture-client",
                 "GOOGLE_CLIENT_SECRET": "fixture-server-secret",
                 "OAUTH_REDIRECT_BASE": "https://studio.example.org",
+                "OAUTH_CALLBACK_PATH": "",
             },
         )
         self.env.start()
@@ -71,7 +72,10 @@ class YouTubeConnectionTests(unittest.TestCase):
         self.assertEqual(query["access_type"], ["offline"])
         return query["state"][0]
 
-    def callback(self, state=None, title=None, yt_id=None, fetch=None):
+    def callback(
+        self, state=None, title=None, yt_id=None, fetch=None,
+        path="/api/studio/youtube/callback",
+    ):
         state = state or self.state()
         response = Mock()
         response.__enter__ = Mock(
@@ -91,7 +95,7 @@ class YouTubeConnectionTests(unittest.TestCase):
             return_value=(title or self.channel["name"], yt_id or self.yt_id),
         ):
             return self.client.get(
-                "/api/studio/youtube/callback",
+                path,
                 query_string={"state": state, "code": "fixture-code"},
             )
 
@@ -130,6 +134,40 @@ class YouTubeConnectionTests(unittest.TestCase):
                 400,
             )
             remote.assert_not_called()
+
+    def test_existing_google_client_callback_keeps_session_and_one_use_guards(self):
+        with patch.dict(os.environ, {"OAUTH_CALLBACK_PATH": "/api/youtube/callback"}):
+            response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
+            query = parse_qs(urlparse(response.location).query)
+            self.assertEqual(
+                query["redirect_uri"],
+                ["https://studio.example.org/api/youtube/callback"],
+            )
+            state = query["state"][0]
+            response = self.callback(state=state, path="/api/youtube/callback")
+            self.assertEqual(response.location, f"/channels?connected={self.cid}")
+            self.assertTrue(self.store.channel(self.cid)["connected"])
+            with patch("urllib.request.urlopen") as remote:
+                replay = self.client.get(
+                    "/api/studio/youtube/callback",
+                    query_string={"state": state, "code": "again"},
+                )
+                self.assertEqual(replay.status_code, 400)
+                remote.assert_not_called()
+            self.client.post(
+                "/api/studio/logout", json={},
+                headers={"X-CSRF-Token": self.csrf},
+            )
+            self.assertEqual(
+                self.client.get("/api/youtube/callback", query_string={"state": state}).status_code,
+                401,
+            )
+
+    def test_callback_setting_cannot_redirect_tokens_to_an_arbitrary_path(self):
+        with patch.dict(os.environ, {"OAUTH_CALLBACK_PATH": "https://other.invalid/callback"}):
+            response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
+            self.assertEqual(response.status_code, 400)
+            self.assertNotIn("Location", response.headers)
 
     def test_oauth_rejects_another_channel_without_overwriting_access(self):
         self.linked()

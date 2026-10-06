@@ -21,9 +21,12 @@ def register_youtube(app, store, owner):
         return os.getenv(k, "").strip()
 
     def callback_url():
+        path = cfg("OAUTH_CALLBACK_PATH") or "/api/studio/youtube/callback"
+        if path not in {"/api/studio/youtube/callback", "/api/youtube/callback"}:
+            raise ValueError("Adresse de retour Google non prise en charge.")
         return (
             cfg("OAUTH_REDIRECT_BASE").rstrip("/") or request.host_url.rstrip("/")
-        ) + "/api/studio/youtube/callback"
+        ) + path
 
     def active_channel(cid):
         ch = store.channel(cid)
@@ -77,6 +80,7 @@ def register_youtube(app, store, owner):
         return resp
 
     @app.get("/api/studio/youtube/callback")
+    @app.get("/api/youtube/callback")
     def callback():
         owner()
         state = request.args.get("state", "")

@@ -1,14 +1,34 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Priorité actuelle — 5 octobre 2026
+## Priorité actuelle — 6 octobre 2026
+
+**Site en ligne sur https://edgerunners.fr/**. Sauvegarde privée de l'ancien site et
+de SQLite vérifiée, ancienne interface remplacée, données conservées. Le code Git
+reste dans `~/drylow_studio`, avec le nouveau Python `~/edgerunners_venv/bin/python`
+et Node 22 disponible. Les vrais comptes sont `drylow` / `kanye` ; les mots de passe
+initiaux sont dans `~/edgerunners-access.txt`, privé, jamais dans Git ni les logs.
+Le worker autonome et le cron de développement sont installés ; Git en écriture,
+npm et la version HTTPS réelle ont été vérifiés. Delamain a répondu sur le vrai site.
+Son premier changement de code a été testé, installé, redémarré, vérifié en HTTPS
+et poussé sur `main` (`b1da59e`) sans intervention manuelle dans son exécution.
+Lire `DEPLOY_O2SWITCH.md` pour les chemins, les vérifications et les limites actuelles.
+Le vieux cron HTTP est désactivé ; ne pas le relancer. Automatisation en pause.
+
+Les clés Google préexistaient sur o2switch et ont été conservées : ne pas redemander
+un nouveau client sans vérifier l'existant. Le Grand Récap garde ses données de connexion,
+mais Google retourne `invalid_grant` ; il faut une reconnexion. Les sept autres chaînes
+ne sont pas reliées. Le relais de montage est joignable avec son jeton. Aucune vidéo
+n'a été publiée automatiquement lors de cette installation.
+L'ancien callback Google `/api/youtube/callback` est conservé via `OAUTH_CALLBACK_PATH`,
+avec le nouveau handler protégé ; ne pas demander de recréer le client Google.
 
 **Accès privé, choix confirmé par l’utilisateur** : la gate utilise seulement l'identifiant
 et le mot de passe fort de chacun. L'utilisateur refuse toute application à installer
 ou QR code ; ne pas remettre le code téléphone. Deux comptes maximum, sessions
 révocables, essais limités, HTTPS obligatoire sur Passenger et aperçu interdit.
 Lire `PRIVATE_ACCESS.md` et le guide o2switch actualisé. Préserver `FLASK_SECRET_KEY`.
-Le domaine et le comportement réel Apache/Passenger restent à vérifier avant
-mise en service. Les accès cPanel sont fournis en variables privées `CPANEL_URL`,
+Le domaine et le comportement réel Apache/Passenger ont été vérifiés, avec refus
+des fichiers privés et révocation des sessions. Les accès cPanel sont fournis en variables privées `CPANEL_URL`,
 `CPANEL_USER`, `CPANEL_PASSWORD` ; ne pas afficher leurs valeurs. Le bouton Save draft
 peut les rendre disponibles sans publication : vérifier le runtime avant toute demande.
 
@@ -25,8 +45,8 @@ Le radar lit les flux datés de BBC Sport, The Guardian et MMA News ; collecte r
 configurable, désactivée par défaut. Delamain peut actualiser le radar et préparer une
 fiche sans lancer de production. Les liens et titres identiques sont dédoublonnés.
 Les faits, licences et choix éditoriaux autonomes restent à vérifier ; aucune cadence
-de publication automatique réelle n'est active. Google n'est pas configuré et aucun
-déploiement n'a été fait. Les fiches affichent les étapes à compléter avant publication,
+de publication automatique réelle n'est active. Le serveur est déployé ; les connexions
+Google doivent encore être finalisées. Les fiches affichent les étapes à compléter avant publication,
 et les miniatures/planches de contrôle s'agrandissent avec zoom.
 
 Nom choisi par l'utilisateur : **Edgerunners Studio**, en un seul mot avec un S.

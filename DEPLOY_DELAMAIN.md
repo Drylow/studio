@@ -1,8 +1,10 @@
 # Brancher les modifications du site dans Delamain
 
-Cette fonction est implémentée. Elle n'est pas connectée à un hébergement tant que
-les contrôles ci-dessous n'ont pas réussi sur ce serveur. Le VPS de montage et ses
-clés existantes ne donnent pas d'accès au code ni à o2switch.
+Cette fonction est connectée à **edgerunners.fr** depuis le 6 octobre 2026. Le premier
+changement réel a modifié le sous-titre des tâches, passé 155 tests et la compilation,
+redémarré Passenger, vérifié la version HTTPS et poussé le commit `b1da59e` sur `main`.
+Les installations supplémentaires doivent réussir les contrôles ci-dessous avant
+de se déclarer connectées. Le VPS de montage et ses clés ne donnent pas d'accès au code.
 
 ## Ce que fait l'exécuteur
 
