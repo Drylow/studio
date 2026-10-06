@@ -12,6 +12,15 @@ est implémentée et documentée dans [LEGACY_YOUTUBE.md](LEGACY_YOUTUBE.md). Un
 consentement réel reste nécessaire. Ne pas proposer à nouveau l’examen Branding
 ou un abonnement comme seule prochaine étape.
 
+**Mise à jour après l’essai historique :** l’utilisateur signale encore le refus.
+Le serveur confirme la demande à deux permissions le 6 octobre à 23 h 10 à Paris,
+sans autorisation reçue pour Cage/Pitch. Le rétablissement du code ancien n’a donc
+pas rétabli la connexion. Aucun changement de client, de secret ou de jeton
+historique n’a eu lieu ; Google refuse toujours ce dernier avec `invalid_grant`.
+Les 25 identifiants d’envoi anciens sont reconnus par l’API YouTube, actuellement
+non répertoriés. Le problème n’est pas une absence d’implémentation d’envoi dans
+l’ancien studio. La distinction restriction du projet / du compte reste inconnue.
+
 ## Demande d’examen de la propriété du domaine
 
 1. Ouvrir [Branding du projet existant](https://console.cloud.google.com/auth/branding?project=507920096990).
@@ -30,7 +39,10 @@ Si Google demande une explication, voici un texte prêt à copier :
 > but Branding still reports that https://edgerunners.fr/about is not registered to
 > us. Our public app information, privacy policy and terms are available at /about,
 > /privacy and /terms. Please review the ownership rejection. Separately, the OAuth
-> consent flow still shows “This app is blocked” when requesting youtube.force-ssl.
+> consent flow still shows “This app is blocked”, both with youtube.force-ssl and
+> with the historical youtube.upload + youtube.readonly permissions. This same
+> client previously uploaded 25 videos confirmed by the YouTube Data API. Its
+> historical refresh token is preserved, but Google now returns invalid_grant.
 > Please identify whether any project verification or account policy prevents this
 > authorization. We have not obtained authorization for the two intended channels.
 

@@ -11,6 +11,14 @@ rétablit `youtube.upload` + `youtube.readonly` pour les chaînes d’actualité
 envoi public direct après contrôles. Ce changement n’est pas encore validé par
 un consentement Google réel ; ne pas annoncer le blocage résolu.
 
+**Essai réel suivant : toujours bloqué.** Le serveur confirme le départ de la
+demande Cage du 6 octobre à 23 h 10, heure de Paris, avec les deux permissions
+historiques. Aucun retour accepté ni jeton de chaîne reçu. Ne pas répéter la
+consigne d’ajouter ces permissions et de reconnecter sans nouveau diagnostic.
+Le client, le secret et le jeton historique sont conservés. L’API publique
+reconnaît les 25 anciens envois Le Grand Récap ; leur existence est confirmée.
+La restriction Google précise reste à identifier, et la connexion n’est pas rétablie.
+
 La recherche des autres moyens de publier est conservée pour référence.
 [Deux autres voies documentées](production/PUBLICATION_ALTERNATIVES.md) : relais API
 avec l’application Google du prestataire, ou ingestion native de podcasts RSS

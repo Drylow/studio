@@ -4,6 +4,21 @@ Le 6 octobre 2026, l’utilisateur refuse les abonnements de publication et rapp
 que son ancien site publiait gratuitement via Google. Ne pas proposer à nouveau
 un prestataire payant comme prochaine étape par défaut.
 
+**Résultat du nouvel essai : toujours refusé.** Après restauration du parcours,
+l’utilisateur signale le même blocage. Le contrôle serveur retrouve sa demande
+Cage du 6 octobre à 23 h 10, heure de Paris, avec exactement `youtube.upload` +
+`youtube.readonly`. Aucun callback accepté, identifiant de chaîne ou jeton permanent
+n’a été enregistré. Ne plus lui demander de répéter cette connexion inchangée ou
+de réajouter ces permissions comme si le déblocage était établi. La cause précise
+du refus Google reste inconnue ; distinguer une restriction du projet d’une
+restriction du compte nécessite des informations Google authentifiées.
+
+L’API publique reconnaît les 25 identifiants d’envoi de l’ancien historique,
+tous associés à Le Grand Récap et actuellement non répertoriés. Cela confirme
+de vrais chargements antérieurs, sans prouver leur ancienne visibilité publique.
+La comparaison privée confirme également que le jeton historique est inchangé
+depuis la sauvegarde ; il est conservé, mais Google refuse son renouvellement.
+
 ## Ce que les sauvegardes prouvent
 
 La copie privée du site avant remplacement contient `routes/youtube.py`, son `.env`
