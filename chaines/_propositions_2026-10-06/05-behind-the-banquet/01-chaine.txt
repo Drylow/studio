@@ -1,0 +1,44 @@
+NOM : Behind the Banquet
+HANDLE PROPOSE : @BehindTheBanquet
+STATUT : a valider ; disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+One dinner upstairs. A whole working world downstairs. Illustrated historical stories
+about the cooks, cleaners, attendants, and suppliers behind the comfort of the powerful.
+Follow a service from the first task to the moment the guests never notice.
+
+ANGLE
+Les grandes maisons et les lieux de pouvoir vus par leur fonctionnement quotidien.
+Un service, une reception ou un besoin de confort fait travailler une chaine de personnes.
+Commencer par une maison victorienne documentee ; chateaux et palais ensuite seulement
+quand les sources permettent un episode precis. Pas un patchwork de 'serviteurs de tous temps'.
+
+DIFFERENCE
+Deux perspectives alternees : l'experience confortable a l'etage et le travail qui la permet.
+La narration suit un besoin jusqu'a sa realisation : repas, vetement, feu, chambre ou evenement.
+Pas un expose generique sur 'les femmes medievales', pas une chaine de souffrance permanente.
+Montrer competence, hierarchie, cooperation et conflits, pas uniquement l'exploitation.
+
+STRUCTURE
+Une demande a l'etage -> chaine de preparation -> contrainte qui se propage -> arbitrage
+de l'equipe -> resultat servi -> travail qui reste quand l'evenement est fini.
+Environ 12-18 minutes selon la richesse des sources.
+
+VISUEL
+Contraste entre salle de reception et locaux de service, memes passages et memes portes.
+2-4 travailleurs au casting, femmes et hommes en style adulte blanc sans cheveux.
+References de tenues et accessoires historiquement informes, simplification assumee.
+Mettre l'effort au premier plan ; pas un decor royal surcharge couvrant toute l'image.
+
+SIGNAL ET RISQUE
+J. Draper et History Tea Time ont des videos a 572 211 et 490 198 vues sur les domestiques.
+Concurrence directe importante : ne pas lancer une chaine generique 'vie des servants'.
+Notre angle est l'organisation d'un service et la comparaison haut/bas, pas l'epoque seule.
+English Heritage documente les fonctions du majordome et la service wing d'Audley End.
+https://www.english-heritage.org.uk/visit/inspire-me/blog/blog-posts/could-you-be-a-butler/
+Ces sources sont une entree documentaire, pas une preuve de pratiques identiques a Versailles.
+
+PREMIER PILOTE
+One Victorian Dinner. How Many Jobs Did It Take?
+Choisir une maison et une date documentees ; suivre cuisine, service et nettoyage.

@@ -1,0 +1,43 @@
+NOM : Caravan Ledger
+HANDLE PROPOSE : @CaravanLedger
+STATUT : a valider ; disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+The map shows a trade route. It does not show the work between the markets.
+Illustrated historical journeys following the merchants, animals, stops, and decisions
+behind a delivery. Getting there is only half the job. Bringing something worth selling is the rest.
+
+ANGLE
+Un trajet commercial et sa cargaison, vus par ceux qui l'organisent.
+Promesse : pourquoi franchir quelques etapes demande bien plus que suivre une ligne sur une carte ?
+Routes terrestres d'abord pour rester distinct de Saltwater Shifts : caravanes, cols, foires, relais.
+Pas uniquement la Route de la soie, pas un inventaire exotique de dangers.
+
+DIFFERENCE
+Chaque episode est organise autour d'une livraison : preparer, franchir, negocier, arriver.
+Une decision affecte une autre contrainte : temps, animaux, securite, valeur de la cargaison.
+Pas de faux prix precis ou de compteur de benefice si les sources ne permettent pas le calcul.
+Les parcours historiques sont souvent des relais d'echanges : pas un heros qui traverse le monde.
+
+STRUCTURE
+Marchandise et destination -> choix de depart -> etape qui change les options -> transaction
+ou passage -> bilan de ce qui est arrive, et de ce qu'il a fallu mobiliser pour cela.
+Environ 12-18 minutes ; petites cartes de situation possibles, pas grandes animations obligatoires.
+
+VISUEL
+Camp, route et cour de caravansereil references ; peu d'animaux, un marchand et un accompagnateur.
+Les outils, especes animales, batiments et costumes proviennent du corridor/date choisis.
+Plans de chargement, gestes de soin et objets de transaction : trajectoire concrete.
+
+SIGNAL ET RISQUE
+Explications generales des routes commerciales : plusieurs millions de vues chez des acteurs etablis.
+Comparables POV trouves : 114, 20 et 16 vues, donc aucune validation actuelle de notre format.
+C'est le cinquieme concept experimental, pas celui a produire en volume d'abord.
+Base : UNESCO documente les fonctions d'accueil et l'implantation des caravansereils persans.
+https://whc.unesco.org/en/list/1668/
+La page ne prouve ni des tarifs, ni des reglements universels, ni une histoire individuelle.
+
+PREMIER PILOTE
+One Night in a Persian Caravanserai: Who Kept the Journey Moving?
+Lieu borne, operations concretes et sources architecturales disponibles ; periode a fixer.

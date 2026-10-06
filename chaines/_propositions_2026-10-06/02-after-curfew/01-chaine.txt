@@ -1,0 +1,43 @@
+NOM : After Curfew
+HANDLE PROPOSE : @AfterCurfewHistory
+STATUT : a valider ; disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+The city goes to bed. Someone still has to keep it running. Illustrated historical
+stories about the workers, watchers, and deliveries behind life after dark.
+One shift, one city, and the problem that cannot wait until morning.
+
+ANGLE
+La ville historique cote equipes de nuit : qui surveille, livre, nettoie et prepare le matin ?
+Un metier et une mission par episode, dans une ville et une periode precises.
+Le titre de chaine est evocateur : ne pas inventer un couvre-feu universel dans chaque ville.
+
+DIFFERENCE
+Pas une promenade generique parmi les dangers, ni une video d'ambiance pour dormir.
+Une releve commence avec une tache ; son resultat explique pourquoi la ville fonctionne.
+Les professions se rencontrent, mais pas une liste exhaustive de toutes les activites nocturnes.
+Fin recurrente : la ville se reveille et voit le resultat, sans forcement voir ceux qui l'ont produit.
+
+STRUCTURE
+Prise de poste -> premiere contrainte -> croisement avec une autre equipe -> incident
+documente ou situation reconstruite plausible -> transmission au matin.
+Environ 12-18 minutes selon matiere ; pas d'allongement automatique a 36 minutes.
+Reconstruction illustrative clairement distincte d'une personne historique attestee.
+
+VISUEL
+Nuit lisible, personnages blancs et adultes ; teintes vertes/grises, lumiere locale ambree,
+pas d'images presque noires ni de details surcharges. Trois lieux references par episode.
+Les torches, lampes et reverberes correspondent a la date, pas a une nuit medievale generique.
+Plans larges des rues, gestes de travail et objets utiles alternes.
+
+SIGNAL ET RISQUE
+Inside the Medieval Night de The Stache Chronicles : 407 541 vues observees dans la recherche.
+Il existe deja des concurrents directs : ne pas se limiter a 'la nuit medievale etait terrible'.
+La facture d'un nightman londonien de 1750 donne une entree primaire concrete.
+https://www.londonmuseum.org.uk/collections/v/object-449157/william-lewis-tallow-chandler/
+Chaque autre ville/metier exige sa propre documentation avant script.
+
+PREMIER PILOTE
+Who Cleaned London While Everyone Slept? (1750)
+Un travailleur, son employeur, un point de collecte ; le systeme se comprend par sa mission.

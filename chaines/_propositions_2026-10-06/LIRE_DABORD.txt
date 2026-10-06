@@ -1,0 +1,59 @@
+PROPOSITIONS DE CHAINES - 6 OCTOBRE 2026
+STATUT : A VALIDER. Aucune chaine creee, aucune video lancee.
+
+5 dossiers, 10 premiers titres chacun : 50 pistes, pas 50 videos deja commandees.
+Dans chaque dossier : 01-chaine.txt = nom, handle, description et angle ;
+02-premiers-titres.txt = titres anglais, promesse et recherches a faire.
+Noms et handles proposes seulement : disponibilite non verifiee, rien de reserve.
+Langue publique proposee : anglais, comme les references. Notes de travail : francais.
+
+LES CINQ PROMESSES
+1. Villain Payroll : devenir un petit mechant dans Gotham et decouvrir qui paie vraiment les degats.
+2. After Curfew : les equipes qui font fonctionner les villes historiques pendant que les autres dorment.
+3. Saltwater Shifts : un probleme concret a resoudre a bord, dans un monde ou personne ne peut partir.
+4. Caravan Ledger : transporter une marchandise jusqu'au prochain marche sans perdre sa cargaison.
+5. Behind the Banquet : ce que les travailleurs doivent faire pour que les riches aient l'air de ne rien faire.
+
+MON CHOIX EDITORIAL
+Pour notre premier essai creatif : Villain Payroll / Gotham, puisque cet univers t'interesse.
+Pour le signal historique adjacent le plus solide dans cette recherche : Saltwater Shifts.
+After Curfew a une promesse claire mais des concurrents directs existent deja.
+Behind the Banquet a un contraste visuel fort, mais la vie des domestiques est deja traitee.
+Caravan Ledger est le pari le plus experimental : curiosite generale pour les routes commerciales,
+mais les quelques videos POV directement comparables trouvees ont peu de vues.
+Ce classement est mon jugement editorial, pas une prediction de vues.
+
+CE QUE ROME UNSCROLLED NOUS APPREND
+Video : What Did People in Ancient Rome Actually Do All Day?
+https://www.youtube.com/watch?v=U_eV4WbL6Vw
+1 879 812 vues observees via Algrow le 6 octobre ; publication le 23 septembre 2026 ; 36 min 13 s.
+Catalogue de 12 videos publiques consulte, transcript obtenu via Nexlev,
+analyse audiovisuelle obtenue via Algrow. Details et limites : 00-recherche.txt et recherche.json.
+
+Le mecanisme transferable : une situation immediate, une contrainte concrete, puis des explications
+qui changent notre interpretation de cette situation. Le logement, le travail, les repas et les
+rapports sociaux rendent le passe tangible. Ce n'est pas simplement une liste de faits romains.
+Notre difference : une mission et ses consequences, plutot qu'un tour exhaustif d'une journee.
+Chaque chaine a son propre moteur narratif : carriere, releve de nuit, panne, trajet, service.
+Nous ne reprenons ni leurs formulations, ni leur ordre de chapitres, ni leurs images.
+
+PAS DE FAUSSE PROMESSE DE NICHE VIERGE
+Nexlev trouve deja des chaines historiques animees sur l'Egypte et les Vikings.
+Leurs donnees montrent souvent un gros ecart entre moyenne et mediane des vues.
+Un succes isole, une recherche vide ou une grosse video ancienne ne prouvent ni une faible
+concurrence, ni la demande actuelle pour notre format. Pas de RPM ou de revenus promis.
+CTR et retention des references ne nous sont pas accessibles.
+
+UNE PRODUCTION DE QUALITE
+Les cinq concepts restent dans le style 2D valide : tetes rondes blanches, corps adultes,
+peau blanche, pas de cheveux, decors simples. Pas dans le pipeline History Docs realiste.
+Le guide 00-production-2d.txt explique le casting, les decors references, la voix et le montage.
+La generation n'est pas litteralement gratuite : credits voix/recherche, reprises d'images,
+temps de rendu et controle restent a mesurer pendant le pilote. Pas de budget invente ici.
+
+APRES TA VALIDATION
+Validation possible chaine par chaine : oui / a modifier / non.
+Puis un pilote court pour tester style, continuite et synchronisation, et un premier episode
+complet par chaine retenue. Les autres titres passent en production par petits lots apres
+controle des premiers episodes. Pas de lancement aveugle des 50 videos en parallele.
+La duree de 36 minutes de Rome n'est pas une consigne a copier : la duree suit le contenu.

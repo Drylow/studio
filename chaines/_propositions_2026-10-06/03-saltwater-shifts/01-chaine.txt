@@ -1,0 +1,42 @@
+NOM : Saltwater Shifts
+HANDLE PROPOSE : @SaltwaterShifts
+STATUT : a valider ; disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+A ship is a small world that cannot stop working. Illustrated historical stories
+from below deck: the crews, repairs, meals, and decisions that kept a voyage alive.
+One shipboard problem at a time, seen by the people who had to solve it.
+
+ANGLE
+La vie embarquee par les taches qui maintiennent le navire en fonctionnement.
+La mer limite les options : comment une equipe repartit travail, repos et ressources ?
+Navires marchands et militaires selon les sources ; pas chaine de pirates generiques.
+
+DIFFERENCE
+Pas 'tout sur la terrible vie des marins', pas bataille celebree pendant vingt minutes.
+Une panne, un repas ou une releve permet d'expliquer le systeme humain et technique.
+Le navire est un lieu coherent que le spectateur apprend a comprendre visuellement.
+
+STRUCTURE
+Probleme a bord -> diagnostic simple -> travail de plusieurs roles -> arbitrage
+avec un autre besoin du navire -> solution et effets sur l'equipage.
+Environ 12-20 minutes selon question, aucune obligation de catastrophe dans chaque episode.
+
+VISUEL
+Pont, zone de repos et cuisine/cale : geometrie et positions fixes pour l'episode.
+Peu de personnages dans chaque plan. Vetements adaptes au navire/date, style blanc adulte.
+Inserts d'outils et de provisions ; coupe du navire seulement pour expliquer un lieu utile.
+Pas de greement genere au hasard ni de grand combat anime necessaire.
+
+SIGNAL ET RISQUE
+Videos de toilettes a bord et fonctionnement HMS Victory : 2,60 M et 14,99 M vues observees.
+Signaux adjacents forts mais succes anciens, formats differents et concurrence importante.
+Ne pas confondre animation technique 3D d'Animagraffs et nos capacites 2D illustrees.
+Royal Museums Greenwich : quarts et repos, contexte naval a respecter.
+https://www.rmg.co.uk/stories/maritime-history/what-are-watches-on-board-ship
+Les rations et droits varient selon marine, date, role et navire : aucune generalisation automatique.
+
+PREMIER PILOTE
+Your First Night Below Deck on HMS Victory
+Quart, emplacement de repos, interruption et transmission : une situation limitee et documentable.
