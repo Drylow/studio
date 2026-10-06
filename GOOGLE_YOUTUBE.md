@@ -4,6 +4,13 @@ Edgerunners Studio utilise directement OAuth Google et l’API YouTube, sans ser
 de publication intermédiaire. Une clé API seule ne permet pas de publier sur une chaîne.
 Réutiliser le client Google existant ; ne pas créer un nouveau client pour chaque chaîne.
 
+L’utilisateur demande maintenant une recherche des autres moyens de publier.
+[Deux autres voies documentées](production/PUBLICATION_ALTERNATIVES.md) : relais API
+avec l’application Google du prestataire, ou ingestion native de podcasts RSS
+(audio et image fixe). Le refus de notre client ne démontre pas que toutes ces voies
+sont bloquées. Le choix d’un prestataire ou d’un changement de format reste en attente.
+Ne pas reprendre par défaut les mêmes instructions d’examen Branding.
+
 ## État constaté le 6 octobre 2026
 
 Le nouvel essai de l’utilisateur, après déploiement du parcours à une seule

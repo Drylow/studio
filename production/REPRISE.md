@@ -2,6 +2,15 @@
 
 ## Priorité actuelle — 6 octobre 2026
 
+Dernière instruction : **chercher d’autres moyens de publier**, sortir du seul client
+Google Edgerunners et cesser les mêmes demandes de revue Branding. Recherche terminée
+dans `production/PUBLICATION_ALTERNATIVES.md` : Upload-Post propose son propre parcours
+Google et l’envoi complet par API ; YouTube propose aussi l’ingestion podcast RSS
+gratuite, avec image fixe, sans notre client OAuth. Aucun de ces parcours n’a encore
+été testé sur les chaînes. Question de préférence en attente sur un relais externe,
+auparavant refusé par l’utilisateur. Ne pas supposer ce refus levé ni changer le format
+des vidéos sans accord. Aucun prestataire, flux public ou navigateur Google activé.
+
 L’utilisateur reporte les statistiques et exige la publication automatique de Cage
 et Pitch. Diagnostic serveur : identifiants OAuth présents, clé publique déjà
 enregistrée, mais aucun jeton de chaîne pour ces deux sports. Publication immédiate
