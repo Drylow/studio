@@ -14,6 +14,7 @@ from studio.imports import digest
 
 class AutoPublicationTests(unittest.TestCase):
     def setUp(self):
+        (ROOT / "work/studio").mkdir(parents=True, exist_ok=True)
         self.tmp = tempfile.TemporaryDirectory(dir=ROOT / "work/studio")
         self.app = create_app(dict(TESTING=True, PREVIEW=True, HOSTED=False, WORKER_ENABLED=False,
                                    IMPORT_PRODUCTIONS=False, SECRET_KEY="publication-fixture",
