@@ -185,6 +185,11 @@ export function Login({
             Pages, vidéos et outils protégés côté serveur
           </span>
         </div>
+        <nav className="login-public-links" aria-label="Informations publiques">
+          <a href="/about">Présentation</a>
+          <a href="/privacy">Confidentialité</a>
+          <a href="/terms">Conditions</a>
+        </nav>
       </section>
     </main>
   );

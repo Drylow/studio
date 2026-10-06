@@ -3,7 +3,10 @@
 Choix confirmé par l’utilisateur : accès simple par **identifiant et mot de passe
 personnel**, sans application à installer et sans QR code. Deux comptes maximum :
 Drylow et Kanye. Aucune inscription publique. Les pages, vidéos et outils sont
-protégés par le serveur, même si quelqu'un connaît leur adresse exacte.
+protégés par le serveur, même si quelqu'un connaît leur adresse exacte. Seules les
+pages d’information `/about`, `/privacy` et `/terms` sont publiques pour présenter
+l’application et ses règles à Google et aux visiteurs ; elles n’exposent aucune
+donnée du studio.
 
 ## Première ouverture
 

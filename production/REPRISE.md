@@ -28,8 +28,13 @@ Liste des vidéos et agenda par défaut à toutes les tailles. Identité/style, 
 consignes, durée et priorité sont dans des sections à ouvrir ; les formulaires restent
 fonctionnels et les erreurs de validation ouvrent la section concernée.
 Les connexions YouTube sont accessibles depuis Chaînes ou Réglages → Connecter mes chaînes.
-Le blocage Google « This app is blocked » reste à régler demain dans la configuration
-Google du projet existant ; la connexion et l'automatisation ne sont pas déjà opérationnelles.
+Le blocage Google « This app is blocked » reste à résoudre dans le projet existant ;
+la connexion et l'automatisation ne sont pas déjà opérationnelles. Les captures du
+6 octobre montrent une application externe en Testing et des liens/domaine Branding
+non renseignés. Les pages publiques `/about`, `/privacy`, `/terms` et les liens de
+l’écran de connexion sont ajoutés pour terminer cette configuration. Voir
+`GOOGLE_YOUTUBE.md` pour les valeurs exactes et les limites du diagnostic.
+L’utilisateur refuse les services de publication intermédiaires : API YouTube directe.
 
 Les clés Google préexistaient sur o2switch et ont été conservées : ne pas redemander
 un nouveau client sans vérifier l'existant. Le Grand Récap garde ses données de connexion,

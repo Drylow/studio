@@ -55,6 +55,12 @@ Ne pas annoncer une publication quotidienne autonome : les connexions, les contr
 éditoriaux et les adaptateurs de droits indiqués dans `production/DASHBOARD_STATUS.md`
 restent nécessaires.
 
+Les documents publics de Branding sont servis aux chemins `/about`, `/privacy` et
+`/terms`, indépendamment de la gate privée. Leurs liens sont affichés sur l’écran
+de connexion. La configuration Google correspondante est dans `GOOGLE_YOUTUBE.md`.
+Ne pas rendre publiques les APIs, médias, sessions ou callbacks OAuth pour faciliter
+une vérification Google. Le blocage OAuth n’est pas une panne de l’hébergement.
+
 ## Ce qui continue après l'hébergement
 
 Les chaînes, tâches, réglages, vidéos et créneaux sont enregistrés dans SQLite.

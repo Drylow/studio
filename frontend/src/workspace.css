@@ -330,3 +330,18 @@
   font-size: 12px;
   min-height: 44px;
 }
+.login-public-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 14px;
+  font-size: 12px;
+}
+
+.login-public-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  text-underline-offset: 3px;
+}

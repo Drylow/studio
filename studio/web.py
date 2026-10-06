@@ -211,6 +211,9 @@ def create_app(config=None):
             "favicon",
             "studio_health",
             "robots",
+            "public_about",
+            "public_privacy",
+            "public_terms",
         }
         if request.endpoint and not public_endpoint and not g.user:
             if request.endpoint in {"frontend", "legacy"}:
@@ -927,9 +930,17 @@ def create_app(config=None):
             return redirect("/", code=302)
         return send_from_directory(ROOT / "static/studio", "index.html")
 
+    from studio.public_pages import register as register_public_pages
+
+    register_public_pages(app)
+
     @app.get("/robots.txt")
     def robots():
-        return "User-agent: *\nDisallow: /\n", 200, {"Content-Type": "text/plain"}
+        return (
+            "User-agent: *\nAllow: /about$\nAllow: /privacy$\nAllow: /terms$\nDisallow: /\n",
+            200,
+            {"Content-Type": "text/plain"},
+        )
 
     @app.get("/static/<path:path>")
     def static_asset(path):

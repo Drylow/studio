@@ -14,8 +14,15 @@ Les réglages avancés et historiques sont repliés ; connexion YouTube et sécu
 personnelle restent visibles. Les détails des formulaires se déplient au besoin,
 y compris automatiquement lorsqu'un champ masqué échoue à la validation.
 Le thème, les outils, les données, les contrôles de publication et l'accès privé sont conservés.
-Le réglage Google refusant la connexion est différé par l'utilisateur ; l'automatisation
-éditoriale reste à terminer et le studio reste en pause.
+Le réglage Google refusant la connexion est en cours ; l'automatisation éditoriale
+reste à terminer et le studio reste en pause.
+
+Pages publiques de présentation, confidentialité et conditions ajoutées le 6 octobre
+pour compléter Branding Google : `/about`, `/privacy`, `/terms`, avec liens sur la gate.
+Les données, médias, endpoints OAuth et outils privés gardent leur protection.
+36 tests de sécurité/connexion YouTube et compilation TypeScript/Vite réussis.
+Cela ne résout pas à lui seul « This app is blocked » : le consentement Google réel
+reste à vérifier. Aucune intégration à un éditeur tiers, conformément au choix utilisateur.
 
 Validation locale de cette simplification : compilation TypeScript/Vite, parcours
 de création/modification des tâches et vidéos, programmation, réglages persistants,

@@ -163,6 +163,41 @@ class PrivateGateTests(unittest.TestCase):
         self.assertEqual(response.headers["X-Content-Type-Options"], "nosniff")
         response.close()
 
+    def test_public_documents_do_not_open_the_private_workspace(self):
+        anon = self.app.test_client()
+        for path in ["/about", "/privacy", "/terms"]:
+            response = anon.get(path)
+            self.assertEqual(response.status_code, 200, path)
+            self.assertIn("Edgerunners Studio", response.text)
+            self.assertIn('href="/privacy"', response.text)
+            self.assertIn('href="/terms"', response.text)
+            self.assertNotIn(PASSWORD, response.text)
+            self.assertNotIn(self.user_id, response.text)
+            self.assertNotIn("private-session-fixture", response.text)
+            self.assertEqual(anon.head(path).status_code, 200)
+            self.assertEqual(anon.post(path).status_code, 405)
+            self.assertEqual(response.headers["Cache-Control"], "no-store")
+        for path in ["/", "/channels", "/settings", "/agent"]:
+            response = anon.get(path)
+            self.assertEqual(response.status_code, 302, path)
+            self.assertTrue(response.location.startswith("/login?"))
+        for path in ["/api/studio/workspace", "/media/private/thumb", "/api/youtube/callback"]:
+            self.assertEqual(anon.get(path).status_code, 401, path)
+        for path in ["/privacy/private", "/terms/.env", "/about/../.env"]:
+            self.assertEqual(anon.get(path).status_code, 404, path)
+
+    def test_public_documents_keep_host_and_https_protection(self):
+        hosted = create_app(
+            {**self.config, "HOSTED": True, "PUBLIC_URL": "https://studio.example.org"}
+        )
+        anon = hosted.test_client()
+        for path in ["/about", "/privacy", "/terms"]:
+            response = anon.get(path, base_url="https://studio.example.org")
+            self.assertEqual(response.status_code, 200)
+            self.assertIn("frame-ancestors 'self'", response.headers["Content-Security-Policy"])
+            self.assertEqual(anon.get(path, base_url="http://studio.example.org").status_code, 308)
+            self.assertEqual(anon.get(path, base_url="https://evil.example.org").status_code, 400)
+
     def test_parallel_password_guesses_cannot_bypass_throttle(self):
         def attempt(_):
             client = self.app.test_client()

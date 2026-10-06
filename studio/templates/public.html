@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ document.intro }}" />
+    <title>{{ document.label }} · Edgerunners Studio</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      @font-face { font-family: Studio; src: url('/static/fonts/DM-Sans.woff2') format('woff2'); font-display: swap; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #0b1017; color: #d6e2ee; font: 16px/1.75 Studio, system-ui, sans-serif; }
+      body::before { content: ''; position: fixed; inset: 0; z-index: -1; background: radial-gradient(ellipse at 85% 0%, #12333d 0%, transparent 60%); }
+      .wrap { max-width: 900px; padding: 28px 24px 48px; margin: auto; }
+      header { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; padding-bottom: 24px; border-bottom: 1px solid #263846; }
+      .brand { font-size: 18px; font-weight: 800; letter-spacing: 2px; color: #f4e750; }
+      a { color: #60dded; text-underline-offset: 4px; overflow-wrap: anywhere; }
+      nav { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 20px 0 38px; }
+      nav a, .enter { min-height: 44px; display: inline-flex; align-items: center; }
+      .enter { padding: 4px 14px; border: 1px solid #426c79; border-radius: 6px; text-decoration: none; }
+      .label { color: #60dded; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+      h1 { font-size: clamp(27px, 5vw, 42px); line-height: 1.2; letter-spacing: -1px; color: #f6f8fa; }
+      .intro { font-size: 18px; color: #adbecd; margin-bottom: 38px; }
+      section { margin: 28px 0; padding-left: 18px; border-left: 2px solid #273e4b; }
+      h2 { color: #f0e655; font-size: 20px; margin-bottom: 8px; }
+      p { margin-top: 0; }
+      li { margin: 12px 0; }
+      footer { border-top: 1px solid #263846; margin-top: 36px; padding-top: 24px; color: #9ab0c0; font-size: 14px; }
+      footer a { display: inline-block; min-height: 44px; padding-top: 8px; }
+      @media (max-width: 400px) { .wrap { padding: 20px 18px 36px; } section { padding-left: 12px; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <span class="brand">EDGERUNNERS STUDIO</span>
+        <a class="enter" href="/login">Entrer dans le studio</a>
+      </header>
+      <nav aria-label="Informations publiques">
+        <a href="/about">Présentation</a>
+        <a href="/privacy">Confidentialité</a>
+        <a href="/terms">Conditions</a>
+      </nav>
+      <main>
+        <span class="label">{{ document.label }}</span>
+        <h1>{{ document.title }}</h1>
+        <p class="intro">{{ document.intro }}</p>
+        {% for title, text in document.sections %}
+        <section>
+          <h2>{{ title }}</h2>
+          <p>{{ text }}</p>
+        </section>
+        {% endfor %}
+        {% if document.links %}
+        <ul>
+          {% for label, url in document.links %}
+          <li><a href="{{ url }}" rel="noreferrer">{{ label }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </main>
+      <footer>
+        <div>Contact de l’administrateur : <a href="mailto:{{ support_email }}">{{ support_email }}</a></div>
+        <div>Mis à jour le {{ updated }} · edgerunners.fr</div>
+      </footer>
+    </div>
+  </body>
+</html>
