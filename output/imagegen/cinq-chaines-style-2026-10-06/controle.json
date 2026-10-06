@@ -2,7 +2,7 @@
   "date": "2026-10-06",
   "provider": "configured_cli_proxy",
   "generation_calls": 5,
-  "refinement_calls": 3,
+  "refinement_calls": 8,
   "reference": "output/imagegen/cinq-chaines-style-2026-10-06/reference-style.png",
   "reference_source": "output/imagegen/strangely-proxy-white-2026-10-05/01-adultes-laverie.png",
   "concepts_approved": true,
@@ -10,63 +10,68 @@
   "selected": [
     {
       "channel": "Edo Daily",
-      "image": "01-japon-edo.png",
-      "prompt": "01-japon-edo.txt",
+      "image": "01-japon-edo-background-v3.png",
+      "prompt": "01-japon-edo-background-v3.txt",
+      "edit_target": "01-japon-edo.png",
       "dimensions": [
         1672,
         941
       ],
-      "bytes": 1671337,
-      "revision": 1,
-      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+      "bytes": 2036511,
+      "revision": 3,
+      "visual_review": "Two adult white round-head characters retained, covered clothing and mitten hands, no lettering. Background materials and architectural depth increased. Foreground action and framing visually consistent; not claimed pixel-identical."
     },
     {
       "channel": "Aztec Daily",
-      "image": "02-azteques-v2.png",
-      "prompt": "02-azteques-v2.txt",
+      "image": "02-azteques-background-v3.png",
+      "prompt": "02-azteques-background-v3.txt",
+      "edit_target": "02-azteques-v2.png",
       "dimensions": [
         1672,
         941
       ],
-      "bytes": 1619576,
-      "revision": 2,
-      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+      "bytes": 2219223,
+      "revision": 3,
+      "visual_review": "Two adult white round-head characters retained, covered clothing and mitten hands, no lettering. Background materials and architectural depth increased. Foreground action and framing visually consistent; not claimed pixel-identical."
     },
     {
       "channel": "Babylon Daily",
-      "image": "03-babylone-v2.png",
-      "prompt": "03-babylone-v2.txt",
+      "image": "03-babylone-background-v3.png",
+      "prompt": "03-babylone-background-v3.txt",
+      "edit_target": "03-babylone-v2.png",
       "dimensions": [
         1672,
         941
       ],
-      "bytes": 1548567,
-      "revision": 2,
-      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+      "bytes": 2122105,
+      "revision": 3,
+      "visual_review": "Two adult white round-head characters retained, covered clothing and mitten hands, no lettering. Background materials and architectural depth increased. Foreground action and framing visually consistent; not claimed pixel-identical."
     },
     {
       "channel": "Imperial China Daily",
-      "image": "04-chine-tang.png",
-      "prompt": "04-chine-tang.txt",
+      "image": "04-chine-tang-background-v3.png",
+      "prompt": "04-chine-tang-background-v3.txt",
+      "edit_target": "04-chine-tang.png",
       "dimensions": [
         1672,
         941
       ],
-      "bytes": 1795175,
-      "revision": 1,
-      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+      "bytes": 2142571,
+      "revision": 3,
+      "visual_review": "Two adult white round-head characters retained, covered clothing and mitten hands, no lettering. Background materials and architectural depth increased. Foreground action and framing visually consistent; not claimed pixel-identical."
     },
     {
       "channel": "Ottoman Daily",
-      "image": "05-ottomans-v2.png",
-      "prompt": "05-ottomans-v2.txt",
+      "image": "05-ottomans-background-v3.png",
+      "prompt": "05-ottomans-background-v3.txt",
+      "edit_target": "05-ottomans-v2.png",
       "dimensions": [
         1672,
         941
       ],
-      "bytes": 1535037,
-      "revision": 2,
-      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+      "bytes": 2114527,
+      "revision": 3,
+      "visual_review": "Two adult white round-head characters retained, covered clothing and mitten hands, no lettering. Background materials and architectural depth increased. Foreground action and framing visually consistent; not claimed pixel-identical."
     }
   ],
   "quality_notes": [
@@ -74,7 +79,9 @@
     "Face samples are near-white RGB 253-255, not all exact #FFFFFF; no automatic recoloring applied.",
     "Costumes/settings are stylized proposals, not final historical audits.",
     "Aztec costumes deliberately adapted to covered-body style.",
-    "One image per world does not establish continuity across a full video."
+    "One image per world does not establish continuity across a full video.",
+    "User liked previous samples but requested slightly more detailed backgrounds; new detail level awaits approval."
   ],
-  "status": "style_samples_for_user_review"
+  "status": "background_detail_revision_for_user_review",
+  "background_refinement_calls": 5
 }

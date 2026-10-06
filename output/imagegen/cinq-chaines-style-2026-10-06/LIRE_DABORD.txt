@@ -8,9 +8,12 @@ La tenue azteque est une adaptation couvrante stylisee pour conserver la base vi
 Les images doivent etre regardees avant validation du style et production de videos.
 
 SELECTION PRESENTEE :
-Japon : 01-japon-edo.png
-Azteques : 02-azteques-v2.png
-Babylone : 03-babylone-v2.png
-Chine : 04-chine-tang.png
-Ottomans : 05-ottomans-v2.png
-Les premieres versions sont conservees pour documenter les simplifications.
+Japon : 01-japon-edo-background-v3.png
+Azteques : 02-azteques-background-v3.png
+Babylone : 03-babylone-background-v3.png
+Chine : 04-chine-tang-background-v3.png
+Ottomans : 05-ottomans-background-v3.png
+Revision 3 : un cran de detail en plus dans les decors, apres demande de l'utilisateur.
+Bois, pierre, tissus, vegetation et profondeur enrichis ; personnages conserves.
+Les versions precedentes sont conservees pour comparer le niveau de detail.
+Validation finale des decors encore en attente ; aucun changement des presets de production.
