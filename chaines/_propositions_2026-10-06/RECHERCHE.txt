@@ -1,0 +1,74 @@
+RECHERCHE POUR LA CORRECTION - 6 OCTOBRE 2026
+
+La correction porte sur le sujet des chaines, pas sur le format de la reference.
+Les chiffres suivants sont des instantanes des outils, pas des Analytics internes.
+Des exemples anciens ne prouvent pas a eux seuls une demande actuelle ni une niche vide.
+Aucune estimation de revenus ou de RPM utilisee.
+
+JAPON D'EDO - ALGROW
+Simple History, Life in Edo Japan (1603-1868) : 1 807 881 vues, environ 7 ans, 10:21.
+https://www.youtube.com/watch?v=wIygLo_W1Sw
+Samurai Matcha, repas recrees de l'epoque Edo : 1 518 305 vues, environ 3 ans, 11:44.
+https://www.youtube.com/watch?v=fW-CCrPiMmc
+Ces deux resultats indiquent un interet pour cette epoque et ses pratiques concretes.
+D'autres videos de journee ordinaire trouvees ont quelques centaines de vues : aucun succes garanti.
+Source museale : exposition permanente Edo-Tokyo Museum, logement nagaya et vie citadine.
+https://edo-tokyo-museum.or.jp/en/p-exhibition/
+
+AZTEQUES - NEXLEV
+Weird History, What Everyday Life Was Like for the Aztecs : 2 329 607 vues, environ 6 ans, 12:03.
+https://www.youtube.com/watch?v=aZw9xyfMJ80
+TED-Ed, A day in the life of an Aztec midwife : 1 560 396 vues, environ 6 ans, 4:36.
+https://www.youtube.com/watch?v=JZj7acYZ19w
+Invicta, How They Did It - Growing Up Aztec : 1 836 253 vues, environ 7 ans, 13:33.
+https://www.youtube.com/watch?v=wsNdYD8DODo
+Vie quotidienne deja traitee. Le documentaire, le court anime et notre long 2D ne sont pas identiques.
+Source institutionnelle : INAH, travail documentaire sur la vie quotidienne mexica.
+https://www.inah.gob.mx/boletines/recrean-la-vida-cotidiana-de-los-mexicas-en-documental-antropologico
+
+BABYLONE - ALGROW
+timewarp cities, Life In Mesopotamia's Greatest City | 600 BC | 24 Hours In Ancient Babylon :
+183 682 vues, environ 7 mois, 18:17.
+https://www.youtube.com/watch?v=DcCwCGicQ1A
+TED-Ed, A day in the life of an ancient Babylonian business mogul :
+1 300 125 vues, environ 5 ans, 4:47.
+https://www.youtube.com/watch?v=ZsiHrK9DvvQ
+D'autres videos recentes comparables ont peu de vues ; pas un succes automatique.
+Source museale de contexte : Met, Babylon ; archeologie et textes de la ville.
+https://www.metmuseum.org/fr/essays/babylon
+Cette page seule ne suffit pas a sourcer repas, hygiene ou routines militaires.
+
+CHINE IMPERIALE - NEXLEV
+timewarp cities, Experience Life in Tang Dynasty | 24 Hours in Ancient China (Chang'an) :
+145 895 vues, environ 7 mois, 18:53.
+https://www.youtube.com/watch?v=jhEV3XGzcEo
+Amimisu, Spend a Day with Me in the Song Dynasty's Capital: Kaifeng :
+88 574 vues, environ 1 an, 29:47.
+https://www.youtube.com/watch?v=u7m7gl5PEtY
+Le second exemple concerne les Song, pas les Tang ; il ne fournit pas des faits a transposer.
+Source museale : exposition La Chine des Tang au Guimet, pratiques quotidiennes et objets.
+https://www.guimet.fr/en/exhibitions/tang-china
+
+OTTOMANS - ALGROW
+Primal Earth Stories, Daily Life in the Ottoman Empire : 22 979 vues, environ 11 mois, 9:14.
+https://www.youtube.com/watch?v=Ce_g26IaTvA
+POVrank, Your Life as Every Rank in the Ottoman Empire : 84 007 vues, environ 2 semaines, 24:55.
+https://www.youtube.com/watch?v=FsY9YH3vy0c
+Le classement est un format voisin, pas notre format de journee quotidienne.
+Signal directement comparable plus faible dans cette recherche que pour Edo ou les Azteques.
+Source museale de contexte et d'objets : Met, Art of the Ottomans before 1600.
+https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600
+Il faudra des sources specifiques supplementaires pour les pratiques ordinaires et militaires.
+
+LIMITES DES RECHERCHES
+Algrow n'a pas retourne de resultat pour les requetes initiales Azteques et Tang.
+Nexlev a trouve les exemples ci-dessus avec des requetes elargies : vide ne veut pas dire sans concurrence.
+La recherche semantique Nexlev sur les cinq themes a aussi propose des chaines de cartes,
+de classements et d'autres formats ; pas de classement de niches base sur ces recommandations.
+Requetes, metadonnees et limites conservees dans recherche-corrigee.json.
+
+AVANT CHAQUE SCRIPT
+Fixer lieu, date et milieu social ; recouper les gestes et objets avec les bonnes sources.
+Ne pas generaliser une pratique royale a toute une population, ni melanger les siecles.
+Les titres sont des questions candidates, pas des affirmations deja toutes verifiees.
+Si une question n'est pas documentable, remplacer ce titre plutot qu'inventer son contenu.

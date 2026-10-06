@@ -1,0 +1,37 @@
+NOM : Babylon Daily
+HANDLE PROPOSE : @BabylonDailyHistory
+STATUT : A VALIDER. Nom et handle non reserves, disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+Ancient Babylon was more than walls, kings, and legends. Illustrated history about what people actually ate, how they lived, where they worked, and what an ordinary day in the city felt like.
+
+SUJET DE LA CHAINE
+Babylone.
+Vie urbaine, logement, alimentation, chaleur, travail, commerce, contrats, loisirs et soldats quand les sources sont suffisantes.
+
+FORMAT
+Celui de Rome Unscrolled : recit historique immersif a la deuxieme personne,
+questions concretes du quotidien, explications factuelles et illustrations 2D.
+Une video sur la journee ordinaire, puis des sujets repas, habitat, hygiene,
+loisirs ou vie militaire. Pas de scenario de mission ou de personnages en serie.
+Episodes longs autour de 30-40 minutes si les sources permettent assez de contenu.
+Le script reste original et base sur cette societe, pas un texte romain rebaptise.
+
+CADRE DU LANCEMENT
+Babylone neo-babylonienne, principalement vers 600 av. J.-C. Ne pas melanger avec Sumer ou Hammurabi sans changer explicitement la date.
+Les tablettes ne renseignent pas egalement toutes les questions. Pas de pratiques inventees pour combler les trous ; pas de Jardins suspendus presentes comme decor certain.
+
+IMAGES
+Brique et terre, cours domestiques, canaux, objets et vetements du lieu/date ; les monuments ne remplacent pas les maisons ordinaires.
+Personnages au style blanc minimaliste valide ; les costumes, lieux et objets
+changent pour ce monde. Casting et decors coherents dans chaque video.
+Pas de visage humain realiste, pas de cheveux, pas de details gratuits.
+
+SOURCE DE CONTEXTE
+https://www.metmuseum.org/fr/essays/babylon
+Recherche complementaire necessaire pour chacun des dix episodes.
+Les liens et limites de concurrence sont dans RECHERCHE.txt a la racine.
+
+PREMIER TITRE PROPOSE
+What Did People in Ancient Babylon Actually Do All Day?

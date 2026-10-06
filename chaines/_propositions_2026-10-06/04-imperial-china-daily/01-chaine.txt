@@ -1,0 +1,37 @@
+NOM : Imperial China Daily
+HANDLE PROPOSE : @ImperialChinaDaily
+STATUT : A VALIDER. Nom et handle non reserves, disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+What did everyday life actually look like in imperial China? Illustrated history about food, homes, work, markets, leisure, and military life, beginning with Tang-era Chang'an.
+
+SUJET DE LA CHAINE
+Chine imperiale.
+Journee citadine, repas, maisons, marches, bains, loisirs et armees. Premiere serie Tang coherente, autres dynasties uniquement avec contexte distinct.
+
+FORMAT
+Celui de Rome Unscrolled : recit historique immersif a la deuxieme personne,
+questions concretes du quotidien, explications factuelles et illustrations 2D.
+Une video sur la journee ordinaire, puis des sujets repas, habitat, hygiene,
+loisirs ou vie militaire. Pas de scenario de mission ou de personnages en serie.
+Episodes longs autour de 30-40 minutes si les sources permettent assez de contenu.
+Le script reste original et base sur cette societe, pas un texte romain rebaptise.
+
+CADRE DU LANCEMENT
+Chang'an sous les Tang, principalement au VIIIe siecle pour le lancement. Une dynastie/date par episode.
+Ne pas presenter mille ans de Chine comme une seule societe. Le nom de la dynastie et le lieu restent explicites dans chaque video.
+
+IMAGES
+Architecture et objets Tang references ; pas melange automatique de Ming, Qing, samourais japonais et Chine contemporaine.
+Personnages au style blanc minimaliste valide ; les costumes, lieux et objets
+changent pour ce monde. Casting et decors coherents dans chaque video.
+Pas de visage humain realiste, pas de cheveux, pas de details gratuits.
+
+SOURCE DE CONTEXTE
+https://www.guimet.fr/en/exhibitions/tang-china
+Recherche complementaire necessaire pour chacun des dix episodes.
+Les liens et limites de concurrence sont dans RECHERCHE.txt a la racine.
+
+PREMIER TITRE PROPOSE
+What Did People in Tang Dynasty China Actually Do All Day?

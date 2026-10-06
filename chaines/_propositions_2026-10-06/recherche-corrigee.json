@@ -1,0 +1,791 @@
+{
+  "date": "2026-10-06",
+  "status": "pending_user_approval",
+  "supersedes": "_anciennes_propositions_refusees",
+  "format": "Rome Unscrolled: immersive second-person historical daily-life and practical-question longform, illustrated 2D",
+  "not_format": "Fictional missions, serial casts across episodes, task-oriented spinoffs, Gotham for this request",
+  "reference": {
+    "url": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+    "duration_seconds": 2173,
+    "views_snapshot": 1879812
+  },
+  "channels": [
+    {
+      "folder": "01-edo-daily",
+      "name": "Edo Daily",
+      "handle": "@EdoDailyHistory",
+      "availability_checked": false,
+      "approved": false,
+      "historical_scope": "Edo, principalement vers 1700. Japon des Tokugawa, pas Japon antique ni Meiji.",
+      "titles": [
+        "What Did People in Edo Japan Actually Do All Day?",
+        "What Did Samurai Actually Do When There Was No War?",
+        "How Did People in Edo Stay Warm Without Modern Heating?",
+        "What Did Ordinary People in Edo Actually Eat?",
+        "How Did People in Edo Wash Without Private Bathrooms?",
+        "What Was It Like to Live in an Edo Tenement?",
+        "What Did People in Edo Do for Fun?",
+        "What Happened When a Fire Broke Out in Edo?",
+        "What Was Daily Life Like for Women in Edo?",
+        "What Did Travelers in Edo Japan Do After Dark?"
+      ],
+      "context_source": "https://edo-tokyo-museum.or.jp/en/p-exhibition/"
+    },
+    {
+      "folder": "02-aztec-daily",
+      "name": "Aztec Daily",
+      "handle": "@AztecDailyHistory",
+      "availability_checked": false,
+      "approved": false,
+      "historical_scope": "Tenochtitlan et ses environs, vers 1500, avant la conquete. Preciser Mexica ou autre groupe selon l'episode.",
+      "titles": [
+        "What Did People in the Aztec Empire Actually Do All Day?",
+        "What Did Aztec Warriors Actually Eat During War?",
+        "How Did People in Tenochtitlan Get Clean Drinking Water?",
+        "How Did the Aztecs Keep Themselves Clean?",
+        "What Was It Like to Live in an Ordinary Aztec House?",
+        "What Did Aztec Warriors Do at Night During War?",
+        "What Did the Aztecs Do for Fun?",
+        "How Did an Aztec Market Actually Work?",
+        "What Was Daily Life Like for Women in Tenochtitlan?",
+        "What Happened in Tenochtitlan After Dark?"
+      ],
+      "context_source": "https://www.inah.gob.mx/boletines/recrean-la-vida-cotidiana-de-los-mexicas-en-documental-antropologico"
+    },
+    {
+      "folder": "03-babylon-daily",
+      "name": "Babylon Daily",
+      "handle": "@BabylonDailyHistory",
+      "availability_checked": false,
+      "approved": false,
+      "historical_scope": "Babylone neo-babylonienne, principalement vers 600 av. J.-C. Ne pas melanger avec Sumer ou Hammurabi sans changer explicitement la date.",
+      "titles": [
+        "What Did People in Ancient Babylon Actually Do All Day?",
+        "What Did Ordinary Babylonians Actually Eat?",
+        "How Did People in Babylon Stay Cool Without Air Conditioning?",
+        "What Was It Like to Live in an Ordinary Babylonian House?",
+        "How Did People in Babylon Wash and Use the Toilet?",
+        "What Did Babylonian Soldiers Actually Eat During War?",
+        "What Did People in Babylon Do for Fun?",
+        "How Did People Buy and Sell Things in Ancient Babylon?",
+        "What Was Daily Life Like for Women in Babylon?",
+        "What Happened in Babylon After Dark?"
+      ],
+      "context_source": "https://www.metmuseum.org/fr/essays/babylon"
+    },
+    {
+      "folder": "04-imperial-china-daily",
+      "name": "Imperial China Daily",
+      "handle": "@ImperialChinaDaily",
+      "availability_checked": false,
+      "approved": false,
+      "historical_scope": "Chang'an sous les Tang, principalement au VIIIe siecle pour le lancement. Une dynastie/date par episode.",
+      "titles": [
+        "What Did People in Tang Dynasty China Actually Do All Day?",
+        "What Did Chinese Soldiers Actually Eat During the Tang Dynasty?",
+        "How Did People in Tang China Stay Warm Without Modern Heating?",
+        "What Was It Like to Live in Chang'an?",
+        "How Did People in Tang China Wash and Use the Toilet?",
+        "What Did Ordinary People in Tang China Actually Eat?",
+        "What Did People in Tang China Do for Fun?",
+        "What Happened in Chang'an After Dark?",
+        "What Was Daily Life Like for Women in Tang China?",
+        "How Did People Buy and Sell Things in Tang China's Markets?"
+      ],
+      "context_source": "https://www.guimet.fr/en/exhibitions/tang-china"
+    },
+    {
+      "folder": "05-ottoman-daily",
+      "name": "Ottoman Daily",
+      "handle": "@OttomanDailyHistory",
+      "availability_checked": false,
+      "approved": false,
+      "historical_scope": "Istanbul au XVIe siecle pour le lancement ; episodes militaires avec campagne/date determinees.",
+      "titles": [
+        "What Did People in the Ottoman Empire Actually Do All Day?",
+        "What Did Ottoman Soldiers Actually Eat During War?",
+        "How Did Ottoman Soldiers Sleep During a Campaign?",
+        "How Did People in Ottoman Istanbul Keep Themselves Clean?",
+        "What Did Ordinary People in Ottoman Istanbul Actually Eat?",
+        "What Was It Like to Live in an Ottoman House?",
+        "What Did People in Ottoman Istanbul Do for Fun?",
+        "How Did Istanbul's Markets Actually Work?",
+        "What Was Daily Life Like for Women in Ottoman Istanbul?",
+        "What Happened in Ottoman Istanbul After Dark?"
+      ],
+      "context_source": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600"
+    }
+  ],
+  "searches": [
+    {
+      "topic": "edo",
+      "provider": "Algrow",
+      "query": "daily life Edo Japan",
+      "results": [
+        {
+          "title": "What Life Was Like for Common People in 1700s Japan (Edo Period)    ",
+          "url": "https://www.youtube.com/watch?v=2fVrxhZPfwg",
+          "channel": "Discover theW",
+          "views": 689,
+          "duration_seconds": 341,
+          "duration_label": null,
+          "relative_age": "11 months ago"
+        },
+        {
+          "title": "Life in Edo Japan (1603-1868)",
+          "url": "https://www.youtube.com/watch?v=wIygLo_W1Sw",
+          "channel": "Simple History",
+          "views": 1807881,
+          "duration_seconds": 621,
+          "duration_label": null,
+          "relative_age": "7 years ago"
+        },
+        {
+          "title": "Experience 24 Hours In 1750 Tokyo (Edo) | How a day looked like in Tokyo 1750",
+          "url": "https://www.youtube.com/watch?v=Qf1C0CFtSYg",
+          "channel": "Paladin - Reconstructing History",
+          "views": 1158,
+          "duration_seconds": 404,
+          "duration_label": null,
+          "relative_age": "7 months ago"
+        },
+        {
+          "title": "Daily Life in 1700s Edo (Tokyo) – Japan's Isolated Golden Age",
+          "url": "https://www.youtube.com/watch?v=5Y42v7vMi9I",
+          "channel": "Motiviber",
+          "views": 279,
+          "duration_seconds": 484,
+          "duration_label": null,
+          "relative_age": "7 months ago"
+        },
+        {
+          "title": "What Samurai（Japanese）ate in the Edo period🇯🇵!?【Completely recreate meals】",
+          "url": "https://www.youtube.com/watch?v=fW-CCrPiMmc",
+          "channel": "Samurai Matcha",
+          "views": 1518305,
+          "duration_seconds": 704,
+          "duration_label": null,
+          "relative_age": "3 years ago"
+        },
+        {
+          "title": "Japan's Edo Period: Culture Society and Samurai",
+          "url": "https://www.youtube.com/watch?v=tbx-aGFYuv4",
+          "channel": "Captivating History",
+          "views": 58372,
+          "duration_seconds": 738,
+          "duration_label": null,
+          "relative_age": "2 years ago"
+        },
+        {
+          "title": "What a Day in Edo Japan Was Really Like",
+          "url": "https://www.youtube.com/watch?v=Zp7NLZ0gaBc",
+          "channel": "The Fog Door",
+          "views": 5,
+          "duration_seconds": 479,
+          "duration_label": null,
+          "relative_age": "8 days ago"
+        },
+        {
+          "title": "What Was Daily Life Like in Edo Japan? | Easy Japanese Listening (ENG SUB)",
+          "url": "https://www.youtube.com/watch?v=ZNBW00f8_PE",
+          "channel": "Japanese Listening SHOGUN",
+          "views": 12781,
+          "duration_seconds": 3850,
+          "duration_label": null,
+          "relative_age": "2 months ago"
+        }
+      ]
+    },
+    {
+      "topic": "aztec_initial",
+      "provider": "Algrow",
+      "query": "daily life Aztec",
+      "results": []
+    },
+    {
+      "topic": "aztec",
+      "provider": "Nexlev",
+      "query": "Aztec daily life",
+      "results": [
+        {
+          "title": "What Everyday Life Was Like for the Aztecs",
+          "url": "https://www.youtube.com/watch?v=aZw9xyfMJ80",
+          "channel": "Weird History",
+          "views": 2329607,
+          "duration_seconds": null,
+          "duration_label": "12:03",
+          "relative_age": "6y ago"
+        },
+        {
+          "title": "Interesting facts about aztec people's daily life",
+          "url": "https://www.youtube.com/watch?v=bjhlmPVsl5M",
+          "channel": "The Ancient Library",
+          "views": 63102,
+          "duration_seconds": null,
+          "duration_label": "6:39",
+          "relative_age": "5y ago"
+        },
+        {
+          "title": "A day in the life of an Aztec midwife - Kay Read",
+          "url": "https://www.youtube.com/watch?v=JZj7acYZ19w",
+          "channel": "TED-Ed",
+          "views": 1560396,
+          "duration_seconds": null,
+          "duration_label": "4:36",
+          "relative_age": "6y ago"
+        },
+        {
+          "title": "Everyday Life in the Aztec Empire",
+          "url": "https://www.youtube.com/watch?v=QLhmA0M1fO8",
+          "channel": "Intrigued Mind",
+          "views": 16688,
+          "duration_seconds": null,
+          "duration_label": "10:04",
+          "relative_age": "3y ago"
+        },
+        {
+          "title": "Aztec Society, Culture, Religion and More | History | ClickView",
+          "url": "https://www.youtube.com/watch?v=hYFEY3Usdj8",
+          "channel": "ClickView",
+          "views": 11767,
+          "duration_seconds": null,
+          "duration_label": "3:58",
+          "relative_age": "2y ago"
+        },
+        {
+          "title": "“At Home with the Aztecs: An Archaeologist Uncovers Their Daily Life” with Michael E. Smith",
+          "url": "https://www.youtube.com/watch?v=wW_BnFANLqU",
+          "channel": "Aztlander",
+          "views": 2397,
+          "duration_seconds": null,
+          "duration_label": "1:14:09",
+          "relative_age": "4y ago"
+        },
+        {
+          "title": "🌽 Life in Tenochtitlan, 1500 CE | An Immersive AI Journey into the Aztec Empire 🛕",
+          "url": "https://www.youtube.com/watch?v=4sB9T53p1zQ",
+          "channel": "ChronoVerse AI",
+          "views": 29869,
+          "duration_seconds": null,
+          "duration_label": "2:30",
+          "relative_age": "1y ago"
+        },
+        {
+          "title": "Aztec Daily Life - Spanish Conquest of the Americas - Year 8 History",
+          "url": "https://www.youtube.com/watch?v=nIuB5H6b7EU",
+          "channel": "Mitch Knuckey",
+          "views": 1599,
+          "duration_seconds": null,
+          "duration_label": "4:26",
+          "relative_age": "6y ago"
+        },
+        {
+          "title": "How They Did It - Growing Up Aztec",
+          "url": "https://www.youtube.com/watch?v=wsNdYD8DODo",
+          "channel": "Invicta",
+          "views": 1836253,
+          "duration_seconds": null,
+          "duration_label": "13:33",
+          "relative_age": "7y ago"
+        },
+        {
+          "title": "Daily Life",
+          "url": "https://www.youtube.com/watch?v=DZsHIg-f75A",
+          "channel": "Aztec Ruins",
+          "views": 6339,
+          "duration_seconds": null,
+          "duration_label": "2:11",
+          "relative_age": "8y ago"
+        },
+        {
+          "title": "Daily Life Of The Aztecs by Jaques Soustelle - Introduction",
+          "url": "https://www.youtube.com/watch?v=n9Icw95j29c",
+          "channel": "Jon Martinez",
+          "views": 2264,
+          "duration_seconds": null,
+          "duration_label": "30:34",
+          "relative_age": "13y ago"
+        },
+        {
+          "title": "15 Astonishing Aztec Traditions You've Never Heard Of",
+          "url": "https://www.youtube.com/watch?v=XEuiCBjFVPg",
+          "channel": "Untold History",
+          "views": 2558,
+          "duration_seconds": null,
+          "duration_label": "19:11",
+          "relative_age": "2y ago"
+        },
+        {
+          "title": "Aztec Religion Explained",
+          "url": "https://www.youtube.com/watch?v=vdO-QB7weUs",
+          "channel": "ReligionForBreakfast",
+          "views": 1592470,
+          "duration_seconds": null,
+          "duration_label": "21:12",
+          "relative_age": "5y ago"
+        },
+        {
+          "title": "Tenochtitlan -The Venice of Mesoamerica (Aztec History)",
+          "url": "https://www.youtube.com/watch?v=fmHVqb6t__8",
+          "channel": "Invicta",
+          "views": 2410137,
+          "duration_seconds": null,
+          "duration_label": "8:13",
+          "relative_age": "7y ago"
+        },
+        {
+          "title": "A Day in Tenochtitlan (1500 CE) | Lost Aztec Metropolis Reconstructed with AI",
+          "url": "https://www.youtube.com/watch?v=lEVw3mI2Ir4",
+          "channel": "Boba",
+          "views": 165,
+          "duration_seconds": null,
+          "duration_label": "3:42",
+          "relative_age": "2mo ago"
+        },
+        {
+          "title": "What a Day in Tenochtitlan Looked Like | Experience 24 Hours in the Aztec Capital",
+          "url": "https://www.youtube.com/watch?v=hVsl875XZXQ",
+          "channel": "Thomas Relives History",
+          "views": 2446,
+          "duration_seconds": null,
+          "duration_label": "11:08",
+          "relative_age": "6mo ago"
+        },
+        {
+          "title": "The Surprising Daily Life of the Aztecs ( AZTEC EMPIRE )",
+          "url": "https://www.youtube.com/watch?v=3PfUsvPRDXw",
+          "channel": "Civil Explorer",
+          "views": 62,
+          "duration_seconds": null,
+          "duration_label": "7:31",
+          "relative_age": "3mo ago"
+        },
+        {
+          "title": "Daily Life in the Aztec Empire | 4K Cinematic Ancient Civilization Scene (Free Background Video)",
+          "url": "https://www.youtube.com/watch?v=iiRIViQri6o",
+          "channel": "Background Infinite",
+          "views": 76,
+          "duration_seconds": null,
+          "duration_label": "0:09",
+          "relative_age": "1y ago"
+        },
+        {
+          "title": "Aztec Daily life",
+          "url": "https://www.youtube.com/watch?v=Y91yE6KhjP8",
+          "channel": "vsteacher1 Snyder",
+          "views": 107,
+          "duration_seconds": null,
+          "duration_label": "11:19",
+          "relative_age": "6y ago"
+        },
+        {
+          "title": "A Day in the Life of an Aztec",
+          "url": "https://www.youtube.com/watch?v=C9Dhzj_uA9Q",
+          "channel": "Chronicles of Ancient Tribes",
+          "views": 87,
+          "duration_seconds": null,
+          "duration_label": "9:41",
+          "relative_age": "11mo ago"
+        }
+      ]
+    },
+    {
+      "topic": "babylon",
+      "provider": "Algrow",
+      "query": "daily life ancient Babylon",
+      "results": [
+        {
+          "title": "Life In Mesopotamia's Greatest City | 600 BC | 24 Hours In Ancient Babylon",
+          "url": "https://www.youtube.com/watch?v=DcCwCGicQ1A",
+          "channel": "timewarp cities",
+          "views": 183682,
+          "duration_seconds": 1097,
+          "duration_label": null,
+          "relative_age": "7 months ago"
+        },
+        {
+          "title": "A day in the life of an ancient Babylonian business mogul - Soraya Field Fiorio",
+          "url": "https://www.youtube.com/watch?v=ZsiHrK9DvvQ",
+          "channel": "TED-Ed",
+          "views": 1300125,
+          "duration_seconds": 287,
+          "duration_label": null,
+          "relative_age": "5 years ago"
+        },
+        {
+          "title": "Daily Life in Ancient Babylon | Human Voiced, No Ads",
+          "url": "https://www.youtube.com/watch?v=fMt1XFwtrc8",
+          "channel": "ASMR Historian",
+          "views": 50151,
+          "duration_seconds": 4623,
+          "duration_label": null,
+          "relative_age": "9 months ago"
+        },
+        {
+          "title": "A Day in the Life of Ancient Babylon",
+          "url": "https://www.youtube.com/watch?v=Nw5jd5zR2EM",
+          "channel": "Without Modern Life",
+          "views": 73,
+          "duration_seconds": 193,
+          "duration_label": null,
+          "relative_age": "2 months ago"
+        },
+        {
+          "title": "Inside Babylon 2,500 Years Ago: The Hidden Daily Life of Babylon's Great City",
+          "url": "https://www.youtube.com/watch?v=fwK-HUzkfAI",
+          "channel": "Behind Mystery Truth",
+          "views": 54,
+          "duration_seconds": 1125,
+          "duration_label": null,
+          "relative_age": "2 weeks ago"
+        },
+        {
+          "title": "A Day in Babylon, 2300 BC — How an Ancient City Endured (AI Reconstruction)",
+          "url": "https://www.youtube.com/watch?v=gNVDV-WVc9A",
+          "channel": "Bridge Across Centuries",
+          "views": 753,
+          "duration_seconds": 596,
+          "duration_label": null,
+          "relative_age": "8 months ago"
+        },
+        {
+          "title": "What Daily Life in Ancient Babylon Was Actually Like | Boring History for Sleep",
+          "url": "https://www.youtube.com/watch?v=VF6r-j2GAP8",
+          "channel": "DULL TALES",
+          "views": 21,
+          "duration_seconds": 6914,
+          "duration_label": null,
+          "relative_age": "2 months ago"
+        },
+        {
+          "title": "What Life Was Really Like in Ancient Babylon | A Day Inside One of the World's Greatest Cities ",
+          "url": "https://www.youtube.com/watch?v=_5sin-uD9CY",
+          "channel": "Century of history",
+          "views": 54,
+          "duration_seconds": 199,
+          "duration_label": null,
+          "relative_age": "2 weeks ago"
+        }
+      ]
+    },
+    {
+      "topic": "china_initial",
+      "provider": "Algrow",
+      "query": "daily life Tang dynasty",
+      "results": []
+    },
+    {
+      "topic": "china",
+      "provider": "Nexlev",
+      "query": "Tang dynasty daily life",
+      "results": [
+        {
+          "title": "Experience Life in Tang Dynasty | 24 Hours in Ancient China (Chang’an)",
+          "url": "https://www.youtube.com/watch?v=jhEV3XGzcEo",
+          "channel": "timewarp cities",
+          "views": 145895,
+          "duration_seconds": null,
+          "duration_label": "18:53",
+          "relative_age": "7mo ago"
+        },
+        {
+          "title": "“Experience 24 Hours in Tang Dynasty China | Ancient Life Revealed”",
+          "url": "https://www.youtube.com/watch?v=anVr6KnuQoU",
+          "channel": "Histaverse",
+          "views": 333,
+          "duration_seconds": null,
+          "duration_label": "8:39",
+          "relative_age": "6mo ago"
+        },
+        {
+          "title": "You Woke up in the Tang Dynasty ",
+          "url": "https://www.youtube.com/watch?v=m6tiDRlot4I",
+          "channel": "You Woke Up In",
+          "views": 7,
+          "duration_seconds": null,
+          "duration_label": "2:57",
+          "relative_age": "7mo ago"
+        },
+        {
+          "title": "The Emperor Who Bankrupted Provinces For One Woman | Luxury Life",
+          "url": "https://www.youtube.com/watch?v=sfhr4zGxeDI",
+          "channel": "Lived in Luxury",
+          "views": 19970,
+          "duration_seconds": null,
+          "duration_label": "10:55",
+          "relative_age": "5mo ago"
+        },
+        {
+          "title": "Tang Dynasty comes to life for tourists in ancient city of Xian",
+          "url": "https://www.youtube.com/watch?v=w-NToRvNI8Y",
+          "channel": "Switch TV News",
+          "views": 1189,
+          "duration_seconds": null,
+          "duration_label": "1:14",
+          "relative_age": "3y ago"
+        },
+        {
+          "title": "A Day in the Life of a Late Qing Dynasty Concubine",
+          "url": "https://www.youtube.com/watch?v=dIkYwVcZdD4",
+          "channel": "Amimisu ",
+          "views": 73780,
+          "duration_seconds": null,
+          "duration_label": "25:58",
+          "relative_age": "2mo ago"
+        },
+        {
+          "title": "China Travel 2025｜I Walked Into Three Kingdoms And Tang Dynasty In One Day, Hubei Ep7",
+          "url": "https://www.youtube.com/watch?v=CUknYov3164",
+          "channel": "Clare Traveling Pandaland",
+          "views": 300,
+          "duration_seconds": null,
+          "duration_label": "12:35",
+          "relative_age": "8mo ago"
+        },
+        {
+          "title": "Spend a Day with Me in the Song Dynasty's Capital: Kaifeng",
+          "url": "https://www.youtube.com/watch?v=u7m7gl5PEtY",
+          "channel": "Amimisu ",
+          "views": 88574,
+          "duration_seconds": null,
+          "duration_label": "29:47",
+          "relative_age": "1y ago"
+        },
+        {
+          "title": "THE WORLD OF THE TANG DYNAST - A Calm Journey Into Ancient Chinas Golden Age | Sleepless History Lab",
+          "url": "https://www.youtube.com/watch?v=1Ay3U1q2ubs",
+          "channel": "Sleepless History Lab",
+          "views": 6,
+          "duration_seconds": null,
+          "duration_label": "15:38",
+          "relative_age": "10mo ago"
+        },
+        {
+          "title": "What a Day in Tang Dynasty China Was Really Like | 24 Hours in Chang’an",
+          "url": "https://www.youtube.com/watch?v=9XCmGS4rKdw",
+          "channel": "Chronicles of Time",
+          "views": 407,
+          "duration_seconds": null,
+          "duration_label": "27:58",
+          "relative_age": "6mo ago"
+        },
+        {
+          "title": "Boring History For Sleep: How An Ordinary Person Survived A Day In Tang Dynasty China | Sleep Story",
+          "url": "https://www.youtube.com/watch?v=RIpSBPhsW94",
+          "channel": "Sleepytime Whisper",
+          "views": 2,
+          "duration_seconds": null,
+          "duration_label": "1:00:17",
+          "relative_age": "1y ago"
+        },
+        {
+          "title": "What Did People in Ancient China Actually Do All Day?",
+          "url": "https://www.youtube.com/watch?v=bIQmtsTs6aU",
+          "channel": "Civanterra",
+          "views": 1012,
+          "duration_seconds": null,
+          "duration_label": "13:21",
+          "relative_age": "6d ago"
+        },
+        {
+          "title": "I Lived in Chang'an at the Height of the Tang Dynasty | Inside the Greatest City on Earth",
+          "url": "https://www.youtube.com/watch?v=R99nCHKxPX4",
+          "channel": "Stone And Time History",
+          "views": 46,
+          "duration_seconds": null,
+          "duration_label": "12:01",
+          "relative_age": "2mo ago"
+        },
+        {
+          "title": "24 Hours in 750 AD in Chang'an (Tang Dynasty Capital – World's Largest City)",
+          "url": "https://www.youtube.com/watch?v=kPh5RUjtq3c",
+          "channel": "History AI Rebuilt",
+          "views": 1303,
+          "duration_seconds": null,
+          "duration_label": "16:40",
+          "relative_age": "6mo ago"
+        },
+        {
+          "title": "I Time Travelled To Chang’an, Tang China, circa 750 CE",
+          "url": "https://www.youtube.com/watch?v=ClQ6Wz5rZyM",
+          "channel": "Talia: Travel with me",
+          "views": 50,
+          "duration_seconds": null,
+          "duration_label": "1:01",
+          "relative_age": "3w ago"
+        },
+        {
+          "title": "Everyday Life in the Tang Dynasty: From Farmers to Merchants",
+          "url": "https://www.youtube.com/watch?v=89l0mR06OS0",
+          "channel": "Epochs Across Eras",
+          "views": 11,
+          "duration_seconds": null,
+          "duration_label": "7:59",
+          "relative_age": "8mo ago"
+        },
+        {
+          "title": "Inside the Elegant Concubine Rankings of the Tang Dynasty Imperial Harem!",
+          "url": "https://www.youtube.com/watch?v=21V0qcBBKeQ",
+          "channel": "Amimisu ",
+          "views": 147591,
+          "duration_seconds": null,
+          "duration_label": "25:41",
+          "relative_age": "1y ago"
+        },
+        {
+          "title": "The Tang Dynasty: Most Powerful Chinese Dynasty In History",
+          "url": "https://www.youtube.com/watch?v=x3mMMZvCjVM",
+          "channel": "Our Lìshǐ",
+          "views": 466652,
+          "duration_seconds": null,
+          "duration_label": "41:37",
+          "relative_age": "6mo ago"
+        },
+        {
+          "title": "What Was It like to Live in Ancient China?",
+          "url": "https://www.youtube.com/watch?v=qUGbfNN8nWA",
+          "channel": "Captivating History",
+          "views": 59055,
+          "duration_seconds": null,
+          "duration_label": "12:49",
+          "relative_age": "4y ago"
+        },
+        {
+          "title": "Ancient Chinese Tea Rituals | Song & Tang Dynasty Tea Culture | Aesthetic Cinematic Film",
+          "url": "https://www.youtube.com/watch?v=JEqrPknd5iY",
+          "channel": "Jiangnan Sourcing",
+          "views": 38,
+          "duration_seconds": null,
+          "duration_label": "2:01",
+          "relative_age": "9mo ago"
+        }
+      ]
+    },
+    {
+      "topic": "ottoman",
+      "provider": "Algrow",
+      "query": "daily life Ottoman Empire",
+      "results": [
+        {
+          "title": "Daily Life in the Ottoman Empire – A World of Power and Faith",
+          "url": "https://www.youtube.com/watch?v=Ce_g26IaTvA",
+          "channel": "Primal Earth Stories",
+          "views": 22979,
+          "duration_seconds": 554,
+          "duration_label": null,
+          "relative_age": "11 months ago"
+        },
+        {
+          "title": "Your Life as Every Rank in the Ottoman Empire",
+          "url": "https://www.youtube.com/watch?v=FsY9YH3vy0c",
+          "channel": "POVrank",
+          "views": 84007,
+          "duration_seconds": 1495,
+          "duration_label": null,
+          "relative_age": "2 weeks ago"
+        },
+        {
+          "title": "Life of a Citizen in an Ottoman City",
+          "url": "https://www.youtube.com/watch?v=eutd4H8_iBA",
+          "channel": "The Emotional Code",
+          "views": 6060,
+          "duration_seconds": 618,
+          "duration_label": null,
+          "relative_age": "4 years ago"
+        },
+        {
+          "title": "A Day in The Life of A Sultan In The Ottoman Empire",
+          "url": "https://www.youtube.com/watch?v=1nds74074rs",
+          "channel": "The History Network",
+          "views": 528,
+          "duration_seconds": 299,
+          "duration_label": null,
+          "relative_age": "1 year ago"
+        },
+        {
+          "title": "Istanbul 1550 - A Day as the Ottoman 0.1% (AI Reconstruction)",
+          "url": "https://www.youtube.com/watch?v=f8FhIxOv_QU",
+          "channel": "Paladin - Reconstructing History",
+          "views": 4633,
+          "duration_seconds": 837,
+          "duration_label": null,
+          "relative_age": "3 months ago"
+        },
+        {
+          "title": "Daily Life in Ottoman Empire",
+          "url": "https://www.youtube.com/watch?v=8iJWnqNH5kg",
+          "channel": "HISCOS",
+          "views": 86,
+          "duration_seconds": 188,
+          "duration_label": null,
+          "relative_age": "2 years ago"
+        },
+        {
+          "title": "Kuruluş Osman Ghazi – The Untold Real Story of Usman Ghazi | Ottoman Empire Documentary",
+          "url": "https://www.youtube.com/watch?v=-odWINM9F2M",
+          "channel": "Programmer Ki Videos",
+          "views": 2225,
+          "duration_seconds": 500,
+          "duration_label": null,
+          "relative_age": "11 months ago"
+        },
+        {
+          "title": "Diaries From Inside The Imperial Ottoman Harem",
+          "url": "https://www.youtube.com/watch?v=Q3IggScYHQk",
+          "channel": "Timeline - World History Documentaries",
+          "views": 26245,
+          "duration_seconds": 2524,
+          "duration_label": null,
+          "relative_age": "8 months ago"
+        }
+      ]
+    }
+  ],
+  "nexlev_semantic": {
+    "query": "animated history daily life Japan Aztec Babylon China Ottoman",
+    "used_to_rank_niches": false,
+    "reason": "Recommendations mixed maps, rankings, photo animation and other formats.",
+    "returned_channels": [
+      {
+        "title": "History Infographics",
+        "handle": "History.Infographics"
+      },
+      {
+        "title": "Histanimation",
+        "handle": "histanimation"
+      },
+      {
+        "title": "Italian Mapper EXTRA",
+        "handle": "italian_mapper_extra"
+      },
+      {
+        "title": "History in Motion",
+        "handle": "HistoryinMotion3"
+      },
+      {
+        "title": "Bozorgmehr Animation",
+        "handle": "Bozorgmehr_Animation"
+      },
+      {
+        "title": "Ancient Histories",
+        "handle": "ancienthistories1"
+      },
+      {
+        "title": "Ancient Accounts",
+        "handle": "AncientAccountss"
+      },
+      {
+        "title": "History Lists",
+        "handle": "TheHistoryLists"
+      }
+    ]
+  },
+  "limitations": [
+    "Search sample is not exhaustive.",
+    "Existing competition; no claims of an untapped niche or profitability.",
+    "Old successful examples do not validate current demand or identical longform.",
+    "Question titles require topic-specific source research before production.",
+    "No CTR, retention or revenue estimate.",
+    "No production authorised yet."
+  ]
+}

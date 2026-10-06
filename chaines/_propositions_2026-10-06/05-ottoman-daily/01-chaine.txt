@@ -1,0 +1,37 @@
+NOM : Ottoman Daily
+HANDLE PROPOSE : @OttomanDailyHistory
+STATUT : A VALIDER. Nom et handle non reserves, disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+What did people in the Ottoman world actually do all day? Illustrated history about homes, food, baths, markets, leisure, and military life, beginning with sixteenth-century Istanbul.
+
+SUJET DE LA CHAINE
+Monde ottoman.
+Citadins, repas, maisons, bains, commerces, loisirs et soldats ; la population plutot que la biographie des sultans.
+
+FORMAT
+Celui de Rome Unscrolled : recit historique immersif a la deuxieme personne,
+questions concretes du quotidien, explications factuelles et illustrations 2D.
+Une video sur la journee ordinaire, puis des sujets repas, habitat, hygiene,
+loisirs ou vie militaire. Pas de scenario de mission ou de personnages en serie.
+Episodes longs autour de 30-40 minutes si les sources permettent assez de contenu.
+Le script reste original et base sur cette societe, pas un texte romain rebaptise.
+
+CADRE DU LANCEMENT
+Istanbul au XVIe siecle pour le lancement ; episodes militaires avec campagne/date determinees.
+L'empire est divers : ville, metier, statut et communaute ne sont pas interchangeables. Eviter les stereotypes et les generalisations religieuses.
+
+IMAGES
+Rues, maisons, marches, bains et objets du XVIe siecle ; pas un palais a chaque plan, pas costumes de toutes les epoques melanges.
+Personnages au style blanc minimaliste valide ; les costumes, lieux et objets
+changent pour ce monde. Casting et decors coherents dans chaque video.
+Pas de visage humain realiste, pas de cheveux, pas de details gratuits.
+
+SOURCE DE CONTEXTE
+https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600
+Recherche complementaire necessaire pour chacun des dix episodes.
+Les liens et limites de concurrence sont dans RECHERCHE.txt a la racine.
+
+PREMIER TITRE PROPOSE
+What Did People in the Ottoman Empire Actually Do All Day?

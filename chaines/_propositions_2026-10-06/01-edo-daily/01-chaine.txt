@@ -1,0 +1,37 @@
+NOM : Edo Daily
+HANDLE PROPOSE : @EdoDailyHistory
+STATUT : A VALIDER. Nom et handle non reserves, disponibilite non verifiee.
+LANGUE : anglais.
+
+DESCRIPTION PUBLIQUE
+What did ordinary life actually feel like in samurai-era Japan? Illustrated history about the food, homes, work, baths, and leisure of Edo Japan, beyond the battles and the famous names.
+
+SUJET DE LA CHAINE
+Japon d'Edo.
+Habitat urbain, commerces, bains, repas, feux, loisirs et samourais en temps de paix. Le quotidien de la population, pas uniquement les guerriers.
+
+FORMAT
+Celui de Rome Unscrolled : recit historique immersif a la deuxieme personne,
+questions concretes du quotidien, explications factuelles et illustrations 2D.
+Une video sur la journee ordinaire, puis des sujets repas, habitat, hygiene,
+loisirs ou vie militaire. Pas de scenario de mission ou de personnages en serie.
+Episodes longs autour de 30-40 minutes si les sources permettent assez de contenu.
+Le script reste original et base sur cette societe, pas un texte romain rebaptise.
+
+CADRE DU LANCEMENT
+Edo, principalement vers 1700. Japon des Tokugawa, pas Japon antique ni Meiji.
+Le samourai en temps de paix est une extension de sujet, pas une aventure fictionnelle. Pas de ninjas partout ou de raccourci sur un Japon completement isole.
+
+IMAGES
+Maisons de bois, rues, boutiques, bains et vetements d'Edo ; la geographie reste celle du lieu retenu. Ne pas mettre un champ de bataille dans chaque episode.
+Personnages au style blanc minimaliste valide ; les costumes, lieux et objets
+changent pour ce monde. Casting et decors coherents dans chaque video.
+Pas de visage humain realiste, pas de cheveux, pas de details gratuits.
+
+SOURCE DE CONTEXTE
+https://edo-tokyo-museum.or.jp/en/p-exhibition/
+Recherche complementaire necessaire pour chacun des dix episodes.
+Les liens et limites de concurrence sont dans RECHERCHE.txt a la racine.
+
+PREMIER TITRE PROPOSE
+What Did People in Edo Japan Actually Do All Day?
