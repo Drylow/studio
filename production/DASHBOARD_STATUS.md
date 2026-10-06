@@ -3,6 +3,27 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
+## Interface simplifiée — 6 octobre 2026
+
+À la demande de l'utilisateur, l'accueil présente seulement les actions du moment,
+trois compteurs de vidéos et les trois dernières fiches. Six rubriques principales :
+Accueil, Chaînes, Vidéos, Calendrier, Tâches et Delamain. Radar, studio vidéo, bibliothèque
+et contrôle restent dans « Autres outils » ; Réglages reste directement accessible.
+La liste des vidéos et l'agenda sont les vues initiales sur ordinateur et téléphone.
+Les réglages avancés et historiques sont repliés ; connexion YouTube et sécurité
+personnelle restent visibles. Les détails des formulaires se déplient au besoin,
+y compris automatiquement lorsqu'un champ masqué échoue à la validation.
+Le thème, les outils, les données, les contrôles de publication et l'accès privé sont conservés.
+Le réglage Google refusant la connexion est différé par l'utilisateur ; l'automatisation
+éditoriale reste à terminer et le studio reste en pause.
+
+Validation locale de cette simplification : compilation TypeScript/Vite, parcours
+de création/modification des tâches et vidéos, programmation, réglages persistants,
+recherche depuis le radar et gestion de ses sources. Onze pages vérifiées sur six
+tailles tactiles (320 à 844 px), puis ordinateur à 1440 px, sans débordement horizontal
+ni erreur JavaScript. Connexions YouTube en aperçu, boîtes imbriquées, zoom des
+miniatures Delamain et saisie avec clavier mobile également vérifiés, sans appel payant.
+
 ## Hébergement réel
 
 Le nouveau site est en ligne sur **https://edgerunners.fr/** après sauvegarde vérifiée

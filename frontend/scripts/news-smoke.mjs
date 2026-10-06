@@ -56,6 +56,7 @@ try {
   console.log(
     "News preparation creates one research draft, exact next steps and no paid jobs: passed",
   );
+  await page.getByText("Sources et réglages du radar", { exact: true }).click();
   await page.getByRole("button", { name: "Configurer le radar" }).click();
   dialog = page.getByRole("dialog");
   await dialog.getByLabel("Nom de la source").fill("Browser temporary feed");

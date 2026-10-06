@@ -20,6 +20,17 @@ Leurs réglages masquent heure/cadence/stock cible et le planning ne suggère au
 créneau. Les réservations explicites restent visibles ; les autres chaînes gardent
 leur rythme. Ce choix n’active pas la production automatique, encore à terminer.
 
+**Interface simplifiée à la demande de l'utilisateur le 6 octobre** : conserver le thème
+Cyberpunk mais limiter la navigation principale à Accueil, Chaînes, Vidéos, Calendrier,
+Tâches et Delamain. Les outils complémentaires sont sous « Autres outils », les Réglages
+en bas du menu. Accueil : trois compteurs, actions à faire et trois dernières vidéos.
+Liste des vidéos et agenda par défaut à toutes les tailles. Identité/style, budgets,
+consignes, durée et priorité sont dans des sections à ouvrir ; les formulaires restent
+fonctionnels et les erreurs de validation ouvrent la section concernée.
+Les connexions YouTube sont accessibles depuis Chaînes ou Réglages → Connecter mes chaînes.
+Le blocage Google « This app is blocked » reste à régler demain dans la configuration
+Google du projet existant ; la connexion et l'automatisation ne sont pas déjà opérationnelles.
+
 Les clés Google préexistaient sur o2switch et ont été conservées : ne pas redemander
 un nouveau client sans vérifier l'existant. Le Grand Récap garde ses données de connexion,
 mais Google retourne `invalid_grant` ; il faut une reconnexion. Les sept autres chaînes

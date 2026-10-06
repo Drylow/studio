@@ -14,9 +14,7 @@ page.on("pageerror", (e) => errors.push(e.message));
 const stamp = "UI smoke " + Date.now();
 try {
   await page.goto(url, { waitUntil: "networkidle" });
-  await page
-    .getByRole("heading", { level: 1, name: "Vue d’ensemble." })
-    .waitFor();
+  await page.getByRole("heading", { level: 1, name: "Accueil." }).waitFor();
   await page.locator("nav button").filter({ hasText: "Tâches" }).click();
   await page
     .getByRole("button", { name: "Nouvelle tâche", exact: true })
@@ -48,6 +46,9 @@ try {
     "Task creation, editing, completion and reload persistence: passed",
   );
 
+  await page
+    .getByRole("button", { name: "Autres outils", exact: true })
+    .click();
   await page.locator("nav button").filter({ hasText: "Studio vidéo" }).click();
   await page
     .locator(".studio-channel-list button")
@@ -135,10 +136,12 @@ try {
     .getByRole("button", { name: "Réglages" })
     .click();
   dialog = page.getByRole("dialog");
+  await dialog.getByText("Identité et style", { exact: true }).click();
   assert.equal(
     await dialog.getByLabel("Modèle de production").inputValue(),
     "mma_en",
   );
+  await dialog.getByText("Budget et consignes", { exact: true }).click();
   await dialog
     .getByLabel("Instructions pour l’agent")
     .fill("UI smoke instructions");
@@ -153,11 +156,11 @@ try {
   console.log("Channel preset and persistent settings: passed");
 
   const pages = [
-    ["/", "Vue d’ensemble."],
+    ["/", "Accueil."],
     ["/channels", "Tes chaînes."],
     ["/control", "Centre de contrôle."],
     ["/news", "Radar d’actus."],
-    ["/production", "Production."],
+    ["/production", "Vidéos."],
     ["/calendar", "Calendrier."],
     ["/tasks", "Tâches."],
     ["/studio", "Studio vidéo."],

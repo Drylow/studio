@@ -75,8 +75,8 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
       <div className="team-intro">
         <ArrowLeftRight size={18} />
         <p>
-          Glisse une chaîne vers son responsable. Sur téléphone, utilise «
-          Déplacer vers… ». Vous gardez tous les deux accès au studio.
+          Glisse une chaîne vers Drylow ou Kanye. Sur téléphone : « Déplacer
+          vers… ».
         </p>
       </div>
       {members.length < 2 && (

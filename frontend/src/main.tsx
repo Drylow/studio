@@ -55,13 +55,14 @@ import type { PageProps } from "./pages";
 import { Newsroom } from "./newsroom";
 import { Control } from "./control";
 import "./style.css";
+import "./workspace.css";
 
 const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
   [
     {
       key: "overview",
       path: "/",
-      label: "Vue d’ensemble",
+      label: "Accueil",
       icon: <LayoutDashboard size={18} />,
     },
     {
@@ -85,7 +86,7 @@ const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
     {
       key: "production",
       path: "/production",
-      label: "Production",
+      label: "Vidéos",
       icon: <Clapperboard size={18} />,
     },
     {
@@ -141,6 +142,7 @@ function App() {
     null,
   );
   const [mobile, setMobile] = useState(false);
+  const [moreTools, setMoreTools] = useState(false);
   const [agentOpen, setAgentOpen] = useState(false);
   const [agentText, setAgentText] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -350,9 +352,6 @@ function App() {
   const searchChannels = query
     ? data.channels.filter((c) => c.name.toLowerCase().includes(query))
     : [];
-  const workerOnline =
-    data.worker.heartbeat &&
-    Date.now() - new Date(data.worker.heartbeat).getTime() < 120000;
   return (
     <div className="app-shell">
       <a href="#main" className="skip-link">
@@ -375,62 +374,85 @@ function App() {
           </div>
           <i>2077</i>
         </button>
-        <div className="sidebar-section-label">
-          LE STUDIO<span>01—11</span>
-        </div>
         <nav aria-label="Navigation principale">
-          {nav.map((n, i) => (
-            <button
-              key={n.key}
-              className={
-                "nav-item " +
-                (page === n.key ? "active" : "") +
-                (n.key === "settings" ? " settings-nav" : "")
-              }
-              onClick={() => go(n.key)}
-              aria-current={page === n.key ? "page" : undefined}
-            >
-              {n.icon}
-              <span>{n.label}</span>
-              {n.key === "channels" ? (
-                <small>{data.channels.length}</small>
-              ) : n.key === "tasks" &&
-                data.tasks.filter((t) => !t.done).length > 0 ? (
-                <small>{data.tasks.filter((t) => !t.done).length}</small>
-              ) : n.key === "agent" ? (
-                <i className="live-dot" />
-              ) : (
-                <em>{String(i + 1).padStart(2, "0")}</em>
-              )}
-            </button>
-          ))}
+          {nav
+            .filter((n) =>
+              [
+                "overview",
+                "channels",
+                "production",
+                "calendar",
+                "tasks",
+                "agent",
+              ].includes(n.key),
+            )
+            .map((n) => (
+              <button
+                key={n.key}
+                className={
+                  "nav-item " +
+                  (page === n.key ? "active" : "") +
+                  (n.key === "settings" ? " settings-nav" : "")
+                }
+                onClick={() => go(n.key)}
+                aria-current={page === n.key ? "page" : undefined}
+              >
+                {n.icon}
+                <span>{n.label}</span>
+                {n.key === "channels" ? (
+                  <small>{data.channels.length}</small>
+                ) : n.key === "tasks" &&
+                  data.tasks.filter((t) => !t.done).length > 0 ? (
+                  <small>{data.tasks.filter((t) => !t.done).length}</small>
+                ) : n.key === "agent" ? (
+                  <i className="live-dot" />
+                ) : null}
+              </button>
+            ))}
         </nav>
-        <div className="sidebar-bottom">
-          <button className="sidebar-agent" onClick={() => agent()}>
-            <Bot size={21} />
-            <div>
-              <strong>DELAMAIN</strong>
-              <span>Ton copilote de studio</span>
-            </div>
-            <ArrowUpRight size={15} />
+        <div className="sidebar-tools">
+          <button
+            className="nav-item"
+            aria-expanded={moreTools}
+            onClick={() => setMoreTools((value) => !value)}
+          >
+            <Plus size={18} />
+            <span>Autres outils</span>
           </button>
-          <div className="system-state">
-            <span className={workerOnline ? "live-dot" : "idle-dot"} />
-            <span>
-              {boot.preview
-                ? "APERÇU LOCAL"
-                : workerOnline
-                  ? "MOTEUR DISPONIBLE"
-                  : "MOTEUR AU REPOS"}
-            </span>
-          </div>
+          {moreTools && (
+            <nav aria-label="Autres outils">
+              {nav
+                .filter((n) =>
+                  ["news", "studio", "library", "control"].includes(n.key),
+                )
+                .map((n) => (
+                  <button
+                    className={"nav-item " + (page === n.key ? "active" : "")}
+                    key={n.key}
+                    onClick={() => go(n.key)}
+                    aria-current={page === n.key ? "page" : undefined}
+                  >
+                    {n.icon}
+                    <span>{n.label}</span>
+                  </button>
+                ))}
+            </nav>
+          )}
+        </div>
+        <div className="sidebar-bottom">
+          <button
+            className={"nav-item " + (page === "settings" ? "active" : "")}
+            onClick={() => go("settings")}
+          >
+            <SettingsIcon size={18} />
+            <span>Réglages</span>
+          </button>
           <div className="sidebar-user">
             <span className="avatar">{boot.user.name.slice(0, 1)}</span>
             <div>
               <strong>{boot.user.name}</strong>
               <span>
-                {boot.user.role === "owner" ? "Propriétaire" : "Collaborateur"}{" "}
-                / NIGHT CITY
+                {boot.user.role === "owner" ? "Propriétaire" : "Collaborateur"}
               </span>
             </div>
             <button
@@ -455,8 +477,6 @@ function App() {
             >
               <Menu size={20} />
             </button>
-            <span className="topbar-brand">NIGHT CITY</span>
-            <ChevronRight size={12} />
             <span>{nav.find((n) => n.key === page)?.label}</span>
           </div>
           <div className="topbar-right">
@@ -480,36 +500,37 @@ function App() {
                 <Command size={11} />K
               </kbd>
             </button>
-            <button
-              className={
-                "pause-control " + (data.settings.paused ? "paused" : "")
-              }
-              onClick={() =>
-                mutate(
-                  () =>
-                    api("/settings", "PATCH", {
-                      revision: data.settings.revision,
-                      paused: !data.settings.paused,
-                    }),
+            {boot.user.role === "owner" && (
+              <button
+                className={
+                  "pause-control " + (data.settings.paused ? "paused" : "")
+                }
+                onClick={() =>
+                  mutate(
+                    () =>
+                      api("/settings", "PATCH", {
+                        revision: data.settings.revision,
+                        paused: !data.settings.paused,
+                      }),
+                    data.settings.paused
+                      ? "Le studio reprend."
+                      : "Le studio est en pause.",
+                  )
+                }
+                aria-label={
                   data.settings.paused
-                    ? "Le studio reprend."
-                    : "Le studio est en pause.",
-                )
-              }
-              aria-label={
-                data.settings.paused
-                  ? "Reprendre le studio"
-                  : "Mettre le studio en pause"
-              }
-            >
-              {data.settings.paused ? <Play size={14} /> : <Pause size={14} />}
-              <span>{data.settings.paused ? "Reprendre" : "Pause"}</span>
-            </button>
-            <button className="agent-topbar" onClick={() => agent()}>
-              <Bot size={17} />
-              <span>Delamain</span>
-              <i className="live-dot" />
-            </button>
+                    ? "Reprendre le studio"
+                    : "Mettre le studio en pause"
+                }
+              >
+                {data.settings.paused ? (
+                  <Play size={14} />
+                ) : (
+                  <Pause size={14} />
+                )}
+                <span>{data.settings.paused ? "Reprendre" : "Pause"}</span>
+              </button>
+            )}
           </div>
         </header>
         {boot.preview && (

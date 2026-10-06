@@ -320,104 +320,107 @@ export function Newsroom(p: PageProps) {
               </div>
             )}
           </section>
-          <aside className="news-sidebar">
-            <section className="panel">
-              <SectionTitle
-                eyebrow="LA VEILLE"
-                title="Sources du radar"
-                action={
-                  p.user.role === "owner" && (
-                    <button
-                      className="icon-button"
-                      aria-label="Configurer le radar"
-                      onClick={() => setSettings(true)}
-                    >
-                      <SlidersHorizontal size={16} />
-                    </button>
-                  )
-                }
-              />
-              <div className="news-feeds">
-                {feeds.map((f) => (
-                  <div key={f.id}>
-                    <span
-                      className={
-                        f.error
-                          ? "news-feed-error"
-                          : f.enabled
-                            ? "live-dot"
-                            : "idle-dot"
-                      }
-                    />
-                    <div>
-                      <strong>{f.name}</strong>
-                      <p>
-                        {!f.enabled
-                          ? "En pause"
-                          : f.error ||
-                            (f.last_success
-                              ? "Lue le " +
-                                dateLabel(f.last_success, {
-                                  day: "numeric",
-                                  month: "short",
-                                  hour: "2-digit",
-                                  minute: "2-digit",
-                                })
-                              : "Premier passage à lancer")}
-                      </p>
+          <details className="disclosure news-options">
+            <summary>Sources et réglages du radar</summary>
+            <aside className="news-sidebar">
+              <section className="panel">
+                <SectionTitle
+                  eyebrow="LA VEILLE"
+                  title="Sources du radar"
+                  action={
+                    p.user.role === "owner" && (
+                      <button
+                        className="icon-button"
+                        aria-label="Configurer le radar"
+                        onClick={() => setSettings(true)}
+                      >
+                        <SlidersHorizontal size={16} />
+                      </button>
+                    )
+                  }
+                />
+                <div className="news-feeds">
+                  {feeds.map((f) => (
+                    <div key={f.id}>
+                      <span
+                        className={
+                          f.error
+                            ? "news-feed-error"
+                            : f.enabled
+                              ? "live-dot"
+                              : "idle-dot"
+                        }
+                      />
+                      <div>
+                        <strong>{f.name}</strong>
+                        <p>
+                          {!f.enabled
+                            ? "En pause"
+                            : f.error ||
+                              (f.last_success
+                                ? "Lue le " +
+                                  dateLabel(f.last_success, {
+                                    day: "numeric",
+                                    month: "short",
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                  })
+                                : "Premier passage à lancer")}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-                {!feeds.length && (
-                  <p className="muted">
-                    Aucune source. Ouvre les réglages du radar pour ajouter un
-                    flux RSS.
-                  </p>
-                )}
-              </div>
-            </section>
-            <section className="panel news-rules">
-              <span className="eyebrow">LA SUITE, SANS SE PERDRE</span>
-              <h2>De l’info à la vidéo.</h2>
-              <ol>
-                <li>
-                  <strong>Ouvrir la source.</strong>
-                  <span>Vérifier les faits, la date et les citations.</span>
-                </li>
-                <li>
-                  <strong>Préparer une vidéo.</strong>
-                  <span>
-                    Le sujet et les liens arrivent dans une fiche partagée.
-                  </span>
-                </li>
-                <li>
-                  <strong>Compléter les faits vérifiés.</strong>
-                  <span>Puis écrire le script et lancer le montage.</span>
-                </li>
-              </ol>
-              <p>
-                Le radar ne télécharge aucun extrait, photo ou musique de ces
-                articles.
-              </p>
-            </section>
-            <section className="panel news-cadence">
-              <Clock3 size={20} />
-              <h3>
-                {config?.enabled
-                  ? `Un passage toutes les ${config.interval_minutes} minutes`
-                  : "À ton rythme pour l’instant"}
-              </h3>
-              <p>
-                {config?.enabled && config.next_run
-                  ? "Prochain passage : " +
-                    dateLabel(config.next_run, {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })
-                  : "La collecte régulière se règle ici, indépendamment de la publication YouTube."}
-              </p>
-            </section>
-          </aside>
+                  ))}
+                  {!feeds.length && (
+                    <p className="muted">
+                      Aucune source. Ouvre les réglages du radar pour ajouter un
+                      flux RSS.
+                    </p>
+                  )}
+                </div>
+              </section>
+              <section className="panel news-rules">
+                <span className="eyebrow">LA SUITE, SANS SE PERDRE</span>
+                <h2>De l’info à la vidéo.</h2>
+                <ol>
+                  <li>
+                    <strong>Ouvrir la source.</strong>
+                    <span>Vérifier les faits, la date et les citations.</span>
+                  </li>
+                  <li>
+                    <strong>Préparer une vidéo.</strong>
+                    <span>
+                      Le sujet et les liens arrivent dans une fiche partagée.
+                    </span>
+                  </li>
+                  <li>
+                    <strong>Compléter les faits vérifiés.</strong>
+                    <span>Puis écrire le script et lancer le montage.</span>
+                  </li>
+                </ol>
+                <p>
+                  Le radar ne télécharge aucun extrait, photo ou musique de ces
+                  articles.
+                </p>
+              </section>
+              <section className="panel news-cadence">
+                <Clock3 size={20} />
+                <h3>
+                  {config?.enabled
+                    ? `Un passage toutes les ${config.interval_minutes} minutes`
+                    : "À ton rythme pour l’instant"}
+                </h3>
+                <p>
+                  {config?.enabled && config.next_run
+                    ? "Prochain passage : " +
+                      dateLabel(config.next_run, {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })
+                    : "La collecte régulière se règle ici, indépendamment de la publication YouTube."}
+                </p>
+              </section>
+            </aside>
+          </details>
         </div>
       )}
       {settings && channel && (

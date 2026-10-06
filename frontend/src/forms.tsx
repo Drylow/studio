@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { api, localTime, parisToIso, labels, dateLabel } from "./api";
 import type { Channel, Video, Workspace, Task, User } from "./types";
-import { Modal, Button, Tag, VideoThumb } from "./components";
+import { Modal, Button, Tag, VideoThumb, Disclosure } from "./components";
 import { YouTubeConnection } from "./youtube-connection";
 
 export type Mutate = (
@@ -89,37 +89,39 @@ export function ChannelForm({
           mutate={mutate}
           onDisconnected={close}
         />
-        <div className="form-grid">
+        <Disclosure title="Identité et style">
+          <div className="form-grid">
+            <label>
+              Nom de la chaîne
+              <input
+                required
+                value={form.name}
+                onChange={(e) => change("name", e.target.value)}
+              />
+            </label>
+            <label>
+              Identifiant YouTube
+              <input
+                value={form.handle}
+                onChange={(e) => change("handle", e.target.value)}
+              />
+            </label>
+          </div>
           <label>
-            Nom de la chaîne
-            <input
-              required
-              value={form.name}
-              onChange={(e) => change("name", e.target.value)}
-            />
+            Modèle de production
+            <select
+              value={form.template_key}
+              onChange={(e) => change("template_key", e.target.value)}
+            >
+              <option value="">Choisir un modèle…</option>
+              {templates.map(([key, name]) => (
+                <option key={key} value={key}>
+                  {name}
+                </option>
+              ))}
+            </select>
           </label>
-          <label>
-            Identifiant YouTube
-            <input
-              value={form.handle}
-              onChange={(e) => change("handle", e.target.value)}
-            />
-          </label>
-        </div>
-        <label>
-          Modèle de production
-          <select
-            value={form.template_key}
-            onChange={(e) => change("template_key", e.target.value)}
-          >
-            <option value="">Choisir un modèle…</option>
-            {templates.map(([key, name]) => (
-              <option key={key} value={key}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </label>
+        </Disclosure>
         <label>
           Autonomie
           <div className="mode-selector">
@@ -176,9 +178,8 @@ export function ChannelForm({
         )}
         {form.publication_mode === "news" ? (
           <p className="inline-note">
-            Publication selon les actualités pertinentes, dès que la vidéo et
-            ses contrôles sont prêts. Aucun créneau prédéfini. Ce réglage
-            n’active pas à lui seul la production ou la publication automatique.
+            Selon les actualités pertinentes, après les contrôles. Ce réglage
+            n’active pas la production automatique.
           </p>
         ) : (
           <>
@@ -233,53 +234,55 @@ export function ChannelForm({
             </label>
           </>
         )}
-        <div className="form-grid">
-          <label>
-            Budget autorisé / vidéo ($)
-            <input
-              type="number"
-              min="0"
-              max="1000"
-              step="0.5"
-              value={form.budget}
-              onChange={(e) => change("budget", Number(e.target.value))}
-            />
-          </label>
-          {channel.format === "news" ? (
+        <Disclosure title="Budget et consignes">
+          <div className="form-grid">
             <label>
-              Fraîcheur maximum (heures)
+              Budget autorisé / vidéo ($)
               <input
                 type="number"
-                min="1"
-                max="168"
-                value={form.freshness_hours}
-                onChange={(e) =>
-                  change("freshness_hours", Number(e.target.value))
-                }
+                min="0"
+                max="1000"
+                step="0.5"
+                value={form.budget}
+                onChange={(e) => change("budget", Number(e.target.value))}
               />
             </label>
-          ) : (
-            <label>
-              Langue des vidéos
-              <select
-                value={form.lang}
-                onChange={(e) => change("lang", e.target.value)}
-              >
-                <option value="en">Anglais</option>
-                <option value="fr">Français</option>
-              </select>
-            </label>
-          )}
-        </div>
-        <label>
-          Instructions pour l’agent
-          <textarea
-            rows={4}
-            value={form.instructions}
-            placeholder="Ton, sujets à privilégier, sujets à éviter…"
-            onChange={(e) => change("instructions", e.target.value)}
-          />
-        </label>
+            {channel.format === "news" ? (
+              <label>
+                Fraîcheur maximum (heures)
+                <input
+                  type="number"
+                  min="1"
+                  max="168"
+                  value={form.freshness_hours}
+                  onChange={(e) =>
+                    change("freshness_hours", Number(e.target.value))
+                  }
+                />
+              </label>
+            ) : (
+              <label>
+                Langue des vidéos
+                <select
+                  value={form.lang}
+                  onChange={(e) => change("lang", e.target.value)}
+                >
+                  <option value="en">Anglais</option>
+                  <option value="fr">Français</option>
+                </select>
+              </label>
+            )}
+          </div>
+          <label>
+            Instructions pour l’agent
+            <textarea
+              rows={4}
+              value={form.instructions}
+              placeholder="Ton, sujets à privilégier, sujets à éviter…"
+              onChange={(e) => change("instructions", e.target.value)}
+            />
+          </label>
+        </Disclosure>
         <div className="form-switches">
           <label>
             <input
@@ -469,7 +472,7 @@ export function NewVideo({
             }
           />
         </label>
-        <div className="form-grid">
+        <Disclosure title="Durée de la vidéo">
           <label>
             Durée souhaitée (minutes)
             <input
@@ -480,17 +483,17 @@ export function NewVideo({
               onChange={(e) => setMinutes(Number(e.target.value))}
             />
           </label>
-          {ch?.format === "news" && (
-            <label>
-              Date des faits · heure belge
-              <input
-                type="datetime-local"
-                value={eventAt}
-                onChange={(e) => setEventAt(e.target.value)}
-              />
-            </label>
-          )}
-        </div>
+        </Disclosure>
+        {ch?.format === "news" && (
+          <label>
+            Date des faits · heure belge
+            <input
+              type="datetime-local"
+              value={eventAt}
+              onChange={(e) => setEventAt(e.target.value)}
+            />
+          </label>
+        )}
         <label>
           {ch?.format === "news"
             ? "Faits vérifiés et angle de l’analyse"
@@ -611,26 +614,35 @@ export function NewTask({
               ))}
             </select>
           </label>
-          <label>
-            Priorité
-            <select
-              value={priority}
-              onChange={(e) => setPriority(e.target.value)}
-            >
-              <option value="normal">Normale</option>
-              <option value="high">Haute</option>
-              <option value="low">Basse</option>
-            </select>
-          </label>
-          <label>
-            Échéance · heure belge
-            <input
-              type="datetime-local"
-              value={due}
-              onChange={(e) => setDue(e.target.value)}
-            />
-          </label>
         </div>
+        <Disclosure
+          title="Échéance et priorité"
+          open={
+            !!initial?.due_at || (!!initial && initial.priority !== "normal")
+          }
+        >
+          <div className="form-grid">
+            <label>
+              Priorité
+              <select
+                value={priority}
+                onChange={(e) => setPriority(e.target.value)}
+              >
+                <option value="normal">Normale</option>
+                <option value="high">Haute</option>
+                <option value="low">Basse</option>
+              </select>
+            </label>
+            <label>
+              Échéance · heure belge
+              <input
+                type="datetime-local"
+                value={due}
+                onChange={(e) => setDue(e.target.value)}
+              />
+            </label>
+          </div>
+        </Disclosure>
         <div className="modal-footer">
           <Button onClick={close}>Annuler</Button>
           <Button type="submit" variant="primary">

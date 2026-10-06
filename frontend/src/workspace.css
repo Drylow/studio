@@ -1,0 +1,332 @@
+/* Everyday workspace. Detail remains available when needed. */
+.sidebar {
+  overflow-y: auto;
+}
+.sidebar > nav {
+  margin-top: 32px;
+  flex-shrink: 0;
+}
+.sidebar-tools {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--soft-border);
+}
+.sidebar-tools > .nav-item {
+  width: 100%;
+}
+.sidebar-tools nav {
+  margin: 4px 0 0;
+}
+.sidebar-bottom > .nav-item {
+  width: 100%;
+  margin: 18px 0 8px;
+}
+.page-heading > div > .eyebrow {
+  display: none;
+}
+.page-heading h1 {
+  font-size: 34px;
+}
+.page-heading p {
+  font-size: 13px;
+}
+.daily-home {
+  max-width: 1260px;
+}
+.daily-home .page-heading {
+  padding: 12px 0 24px;
+  border-bottom: 1px solid var(--soft-border);
+  position: relative;
+}
+.daily-home .page-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 64px;
+  height: 2px;
+  background: var(--yellow);
+}
+.daily-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.daily-stat {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  gap: 14px;
+  text-align: left;
+}
+.daily-stat svg {
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+.daily-stat strong {
+  font: 700 32px var(--display);
+}
+.daily-stat span {
+  color: #a9bac5;
+  font-size: 13px;
+}
+.daily-stat:hover,
+.daily-delamain:hover {
+  border-color: #4dcbd25c;
+  background: #13242b;
+}
+.daily-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.daily-panel {
+  padding: 24px;
+  min-width: 0;
+}
+.daily-panel h2,
+.settings-shortcuts h2 {
+  font: 700 23px var(--display);
+  margin-bottom: 18px;
+}
+.daily-action,
+.daily-video {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background: transparent;
+  color: inherit;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--soft-border);
+  text-align: left;
+}
+.daily-action > svg:first-child {
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+.daily-action > svg:last-child,
+.daily-video > svg {
+  color: #79949f;
+  flex-shrink: 0;
+}
+.daily-action > span,
+.daily-video > span {
+  flex: 1;
+  min-width: 0;
+}
+.daily-action strong,
+.daily-video strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.daily-action small,
+.daily-video small {
+  display: block;
+  color: #8ea4b0;
+  font-size: 11px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.daily-video .video-thumb {
+  width: 80px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.daily-panel > .text-button {
+  margin-top: 20px;
+  min-height: 44px;
+}
+.daily-delamain {
+  margin-top: 24px;
+  padding: 20px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  text-align: left;
+}
+.daily-agent-mark {
+  color: var(--cyan);
+  border: 1px solid #42b9c250;
+  padding: 8px;
+  font: 700 22px var(--display);
+}
+.daily-delamain > span:nth-child(2) {
+  flex: 1;
+}
+.daily-delamain strong,
+.daily-delamain small {
+  display: block;
+}
+.daily-delamain small {
+  color: #8ea4b0;
+  margin-top: 5px;
+}
+.disclosure {
+  background: #10171e;
+  border: 1px solid var(--soft-border);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  min-width: 0;
+}
+.disclosure > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  min-height: 52px;
+  color: #ced9df;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure > summary svg {
+  color: #85a4b1;
+  transition: transform 0.15s;
+}
+.disclosure[open] > summary svg {
+  transform: rotate(180deg);
+}
+.disclosure > summary:hover {
+  color: var(--yellow);
+}
+.disclosure > summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -3px;
+}
+.disclosure-content {
+  padding: 4px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.disclosure-content > .panel {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+.disclosure-content .settings-grid {
+  margin-bottom: 0;
+}
+.form .disclosure {
+  margin-bottom: 0;
+}
+.form .disclosure > summary {
+  padding: 14px;
+}
+.form .disclosure-content {
+  padding: 0 14px 16px;
+}
+.settings-shortcuts {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+.settings-shortcuts p {
+  color: #8ea4b0;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.settings-shortcuts .text-button {
+  margin-left: 18px;
+  min-height: 44px;
+}
+.compact-formats .format-card {
+  min-height: 0;
+  padding: 20px;
+}
+.compact-formats .format-card h2 {
+  font-size: 20px;
+}
+.compact-formats .format-sub {
+  margin: 8px 0 0;
+}
+.news-layout {
+  display: block;
+}
+.news-options {
+  margin-top: 24px;
+}
+.news-options > .news-sidebar {
+  padding: 0 20px 20px;
+}
+@media (max-width: 800px) {
+  .daily-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .daily-stat {
+    padding: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .daily-stat span {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .daily-stats {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .daily-stat {
+    padding: 12px;
+  }
+  .daily-stat strong {
+    font-size: 28px;
+  }
+  .daily-stat svg {
+    width: 16px;
+  }
+  .daily-panel {
+    padding: 18px;
+  }
+  .daily-action,
+  .daily-video {
+    gap: 10px;
+  }
+  .daily-video .video-thumb {
+    width: 64px;
+    height: 40px;
+  }
+  .daily-delamain {
+    padding: 18px;
+    margin-top: 16px;
+  }
+  .disclosure > summary {
+    padding: 16px;
+  }
+  .disclosure-content {
+    padding: 0 14px 16px;
+  }
+  .settings-shortcuts .text-button {
+    display: flex;
+    margin: 10px 0 0;
+  }
+  .compact-formats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .compact-formats .format-card {
+    padding: 14px 18px;
+  }
+  .compact-formats .format-sub {
+    margin-top: 4px;
+  }
+}
+.daily-home .page-heading > .button {
+  font-size: 12px;
+  min-height: 44px;
+}

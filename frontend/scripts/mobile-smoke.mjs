@@ -113,6 +113,7 @@ try {
     .tap();
   await youtube.waitFor();
   await youtube.getByRole("button", { name: "Fermer", exact: true }).tap();
+  await settingsDialog.getByText("Identité et style", { exact: true }).tap();
   await settingsDialog.getByLabel("Nom de la chaîne").waitFor();
   await settingsDialog
     .getByRole("button", { name: "Annuler", exact: true })
@@ -231,7 +232,7 @@ try {
   );
 
   await page.goto(url + "/", { waitUntil: "networkidle" });
-  await page.locator(".agent-topbar").tap();
+  await page.locator(".daily-delamain").tap();
   const drawer = page.getByRole("complementary", {
     name: "Assistant Delamain",
   });

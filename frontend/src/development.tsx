@@ -102,7 +102,7 @@ export function DevelopmentCard({
               Version enregistrée : {detail.commit_id.slice(0, 12)}
             </p>
           )}
-          <details open>
+          <details>
             <summary>Vérifications</summary>
             <pre className="development-log">
               {detail.checks ||

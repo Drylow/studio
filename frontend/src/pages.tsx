@@ -1,3 +1,4 @@
+import { DailyHome } from "./daily-home";
 import { SecuritySettings } from "./private-access";
 import { useEffect, useState } from "react";
 import {
@@ -55,6 +56,7 @@ import {
   VideoRow,
   Skyline,
   Modal,
+  Disclosure,
 } from "./components";
 import type { Mutate } from "./forms";
 import { ZoomImage } from "./image-viewer";
@@ -82,336 +84,7 @@ export type PageProps = {
 };
 
 export function Overview(p: PageProps) {
-  const { data } = p;
-  const today = dateLabel(data.server_time, {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  });
-  const delivered = data.videos.filter((v) => v.status === "delivered").length;
-  const recent = [...data.videos]
-    .sort((a, b) => Number(!!b.engine_ref.brief) - Number(!!a.engine_ref.brief))
-    .slice(0, 3);
-  return (
-    <div className="page overview-page">
-      <div className="page-heading">
-        <div>
-          <span className="eyebrow">TON CENTRE DE COMMANDE</span>
-          <h1>
-            Vue d’ensemble<span className="heading-dot">.</span>
-          </h1>
-          <p>Tout le studio, une longueur d’avance.</p>
-        </div>
-        <Button variant="primary" onClick={() => p.newVideo()}>
-          <Plus size={17} />
-          Nouvelle vidéo
-        </Button>
-      </div>
-      <div className="hero-grid">
-        <section className="hero panel">
-          <Skyline />
-          <div className="hero-label">
-            <span className="live-dot" />
-            NIGHT CITY / STUDIO OPÉRATIONNEL
-          </div>
-          <h2>
-            De bonnes idées.
-            <br />
-            <span>De grandes chaînes.</span>
-          </h2>
-          <p>
-            Crée, organise et fais grandir ton univers.
-            <br />
-            Delamain s’occupe du reste, selon tes règles.
-          </p>
-          <div className="hero-actions">
-            <Button variant="primary" onClick={() => p.go("studio")}>
-              Entrer dans le studio
-              <ArrowUpRight size={17} />
-            </Button>
-            <button className="text-button" onClick={() => p.go("calendar")}>
-              <CalendarDays size={15} />
-              Voir le planning
-            </button>
-          </div>
-          <div className="hero-footer">
-            <span>ESPACE PARTAGÉ / {data.users.length} MEMBRES</span>
-            <span>{today.toUpperCase()}</span>
-          </div>
-        </section>
-        <section className="agent-summary panel">
-          <div className="agent-summary-top">
-            <div className="agent-orb">
-              <Bot size={26} />
-            </div>
-            <Tag tone={data.connections.ai ? "ready" : "muted"}>
-              <span className="live-dot" />
-              {data.connections.ai ? "IA CONFIGURÉE" : "À CONNECTER"}
-            </Tag>
-          </div>
-          <span className="eyebrow">TON COPILOTE</span>
-          <h2>
-            Delamain<span>_</span>
-          </h2>
-          <p>
-            Un sujet à trouver ? Une semaine à préparer ? Donne-moi la mission.
-          </p>
-          <button
-            className="agent-prompt"
-            onClick={() =>
-              p.agent(
-                "Fais le point sur mes chaînes et propose les prochaines priorités.",
-              )
-            }
-          >
-            <Sparkles size={15} />
-            <span>Fais le point sur le studio</span>
-            <ArrowUpRight size={16} />
-          </button>
-          <button
-            className="agent-prompt"
-            onClick={() =>
-              p.agent(
-                "Crée les tâches prioritaires pour organiser les chaînes cette semaine.",
-              )
-            }
-          >
-            <ListTodo size={15} />
-            <span>Prépare les tâches de la semaine</span>
-            <ArrowUpRight size={16} />
-          </button>
-        </section>
-      </div>
-      <div className="stats-grid">
-        {[
-          {
-            n: data.stats.ready,
-            label: "Vidéos prêtes",
-            sub: "Contrôlées et éligibles",
-            icon: <CheckCircle2 size={18} />,
-            accent: "yellow",
-          },
-          {
-            n: data.stats.producing,
-            label: "En production",
-            sub: "Du script au montage",
-            icon: <Clapperboard size={18} />,
-            accent: "cyan",
-          },
-          {
-            n: data.stats.scheduled,
-            label: "Programmées",
-            sub: "Prêtes avec un créneau",
-            icon: <CalendarDays size={18} />,
-            accent: "pink",
-          },
-          {
-            n: delivered,
-            label: "Livrées sur Discord",
-            sub: "Publication à confirmer",
-            icon: <Send size={18} />,
-            accent: "violet",
-          },
-        ].map((s) => (
-          <div key={s.label} className={"stat-card panel " + s.accent}>
-            <div className="stat-top">
-              <span>{s.label}</span>
-              {s.icon}
-            </div>
-            <strong>{String(s.n).padStart(2, "0")}</strong>
-            <small>{s.sub}</small>
-            <div className="stat-lines" />
-          </div>
-        ))}
-      </div>
-      <div className="overview-bottom">
-        <section className="panel channels-overview">
-          <SectionTitle
-            eyebrow="LA FLOTTE"
-            title="Tes chaînes"
-            action={
-              <button className="text-button" onClick={() => p.go("channels")}>
-                Tout voir
-                <ArrowUpRight size={16} />
-              </button>
-            }
-          />
-          <div className="channel-table-head">
-            <span>CHAÎNE</span>
-            <span>STOCK PRÊT</span>
-            <span>PROCHAIN POST</span>
-            <span>MODE</span>
-          </div>
-          {data.channels.slice(0, 5).map((c) => (
-            <button
-              className="channel-table-row"
-              key={c.id}
-              onClick={() => p.editChannel(c)}
-            >
-              <div className="channel-table-name">
-                <ChannelMark channel={c} size="small" />
-                <div>
-                  <strong>{c.name}</strong>
-                  <small>{c.niche}</small>
-                </div>
-              </div>
-              <div className="stock-meter">
-                <span>
-                  <strong>{c.ready}</strong>
-                  {c.publication_mode !== "news" && (
-                    <small> / {c.target_stock}</small>
-                  )}
-                </span>
-                {c.publication_mode !== "news" && (
-                  <div>
-                    <i
-                      style={{
-                        width: `${Math.min(100, (c.ready / Math.max(c.target_stock, 1)) * 100)}%`,
-                        background: c.accent,
-                      }}
-                    />
-                  </div>
-                )}
-              </div>
-              <span className="next-post">
-                {c.next_post
-                  ? dateLabel(c.next_post, {
-                      day: "numeric",
-                      month: "short",
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })
-                  : c.publication_mode === "news"
-                    ? "Selon l’actualité"
-                    : "À planifier"}
-              </span>
-              <Tag tone={c.autonomy === "auto" ? "auto" : "muted"}>
-                {c.paused
-                  ? "PAUSE"
-                  : c.autonomy === "auto"
-                    ? "AUTO"
-                    : "VALIDATION"}
-              </Tag>
-            </button>
-          ))}
-          <div className="panel-bottom">
-            <span>{data.stats.channels} chaînes dans le studio</span>
-            <button onClick={p.newChannel}>
-              Ajouter une chaîne
-              <Plus size={14} />
-            </button>
-          </div>
-        </section>
-        <section className="panel priorities">
-          <SectionTitle eyebrow="RESTER EN AVANCE" title="À faire ensuite" />
-          <div
-            className="priority-card"
-            onClick={() => p.go("channels")}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") p.go("channels");
-            }}
-          >
-            <div className="priority-icon cyan">
-              <Link2 size={18} />
-            </div>
-            <div>
-              <strong>Connecter les chaînes</strong>
-              <p>
-                {data.channels.filter((c) => !c.connected).length} connexions
-                YouTube à terminer
-              </p>
-            </div>
-            <ArrowUpRight size={17} />
-          </div>
-          <div
-            className="priority-card"
-            onClick={() => p.go("production")}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") p.go("production");
-            }}
-          >
-            <div className="priority-icon yellow">
-              <ShieldCheck size={18} />
-            </div>
-            <div>
-              <strong>Contrôler les prochaines vidéos</strong>
-              <p>{data.stats.review} vidéos à relire avant publication</p>
-            </div>
-            <ArrowUpRight size={17} />
-          </div>
-          <div
-            className="priority-card"
-            onClick={() => p.go("calendar")}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") p.go("calendar");
-            }}
-          >
-            <div className="priority-icon pink">
-              <CalendarDays size={18} />
-            </div>
-            <div>
-              <strong>Remplir le calendrier</strong>
-              <p>Des créneaux clairs pour chaque chaîne</p>
-            </div>
-            <ArrowUpRight size={17} />
-          </div>
-          <div className="today-note">
-            <span className="eyebrow">AUJOURD’HUI</span>
-            <strong>
-              {data.today.length
-                ? `${data.today.length} publication${data.today.length > 1 ? "s" : ""} prévue${data.today.length > 1 ? "s" : ""}`
-                : "Le calendrier est ouvert."}
-            </strong>
-            <p>
-              {data.today.length
-                ? "Les contrôles déterminent ce qui pourra sortir."
-                : "Choisis le prochain sujet et réserve son créneau."}
-            </p>
-            <Button onClick={() => p.go("calendar")}>
-              Organiser la journée
-              <ArrowRight size={15} />
-            </Button>
-          </div>
-        </section>
-      </div>
-      <section className="panel recent-videos">
-        <SectionTitle
-          eyebrow="LES DERNIÈRES PRODUCTIONS"
-          title="Dans le studio"
-          action={
-            <button className="text-button" onClick={() => p.go("production")}>
-              Toute la production
-              <ArrowUpRight size={16} />
-            </button>
-          }
-        />
-        {recent.length ? (
-          recent.map((v) => (
-            <VideoRow
-              key={v.id}
-              video={v}
-              channel={data.channels.find((c) => c.id === v.channel_id)}
-              onClick={() => p.openVideo(v)}
-            />
-          ))
-        ) : (
-          <Empty
-            title="Le prochain projet commence ici"
-            text="Ajoute un sujet pour préparer ta première vidéo."
-            action={
-              <Button onClick={() => p.newVideo()}>Nouvelle vidéo</Button>
-            }
-          />
-        )}
-      </section>
-    </div>
-  );
+  return <DailyHome {...p} />;
 }
 
 export function Channels(p: PageProps) {
@@ -463,21 +136,15 @@ export function Channels(p: PageProps) {
           onChange={setScope}
           label="Filtrer les chaînes par responsable"
         />
-        <div className="tabs">
-          {[
-            ["all", "Toutes"],
-            ["auto", "Automatiques"],
-            ["manual", "Avec validation"],
-          ].map(([k, label]) => (
-            <button
-              key={k}
-              className={filter === k ? "active" : ""}
-              onClick={() => setFilter(k)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        <select
+          aria-label="Filtrer les chaînes par autonomie"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        >
+          <option value="all">Tous les modes</option>
+          <option value="auto">Automatiques</option>
+          <option value="manual">Avec validation</option>
+        </select>
         <span className="muted small">{list.length} chaînes</span>
       </div>
       {view === "team" ? (
@@ -632,9 +299,7 @@ const columns = [
 export function Production(p: PageProps) {
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
-  const [view, setView] = useState(() =>
-    window.matchMedia("(max-width: 600px)").matches ? "list" : "board",
-  );
+  const [view, setView] = useState("list");
   const vs = p.data.videos.filter(
     (v) =>
       (filter === "all" || v.channel_id === Number(filter)) &&
@@ -646,9 +311,9 @@ export function Production(p: PageProps) {
         <div>
           <span className="eyebrow">DE L’IDÉE À LA PUBLICATION</span>
           <h1>
-            Production<span className="heading-dot">.</span>
+            Vidéos<span className="heading-dot">.</span>
           </h1>
-          <p>Le bon projet, au bon stade. Rien ne se perd.</p>
+          <p>Ouvre une vidéo pour continuer sa création ou la publier.</p>
         </div>
         <Button variant="primary" onClick={() => p.newVideo()}>
           <Plus size={17} />
@@ -805,9 +470,7 @@ export function Calendar(p: PageProps) {
   const [month, setMonth] = useState(today.slice(0, 7));
   const [filter, setFilter] = useState("all");
   const [scope, setScope] = useState("all");
-  const [view, setView] = useState(() =>
-    window.matchMedia("(max-width: 600px)").matches ? "agenda" : "month",
-  );
+  const [view, setView] = useState("agenda");
   const [exporting, setExporting] = useState(false);
   const [year, m] = month.split("-").map(Number);
   const start = new Date(Date.UTC(year, m - 1, 1, 12));
@@ -1083,8 +746,8 @@ export function Calendar(p: PageProps) {
             ) : (
               <Empty
                 icon={<CalendarDays size={26} />}
-                title="Un mois à organiser"
-                text="Réserve un créneau pour tes prochaines vidéos."
+                title="Aucune publication programmée"
+                text="Les chaînes d’actualité suivent les infos. Tu peux réserver une date pour les autres vidéos."
                 action={
                   <Button onClick={() => p.schedule(today)}>
                     Ajouter un créneau
@@ -1152,23 +815,6 @@ export function Tasks(p: PageProps) {
       {routineOpen && (
         <RoutinePicker p={p} close={() => setRoutineOpen(false)} />
       )}
-      <div className="task-summary">
-        <div className="panel">
-          <ListTodo size={20} />
-          <strong>{p.data.tasks.length - done}</strong>
-          <span>À faire</span>
-        </div>
-        <div className="panel">
-          <CheckCircle2 size={20} />
-          <strong>{done}</strong>
-          <span>Terminées</span>
-        </div>
-        <div className="panel">
-          <Users size={20} />
-          <strong>{p.data.users.length}</strong>
-          <span>Dans l’équipe</span>
-        </div>
-      </div>
       <section className="panel task-panel">
         <div className="filter-bar">
           <div className="tabs">
@@ -1379,24 +1025,7 @@ export function Studio(p: PageProps) {
           Synchroniser
         </Button>
       </div>
-      <section className="studio-intro panel">
-        <span className="eyebrow">CHOISIS TON UNIVERS</span>
-        <h2>
-          La prochaine vidéo
-          <br />
-          commence avec <span>une idée.</span>
-        </h2>
-        <p>
-          Choisis le format, puis la chaîne.
-          <br />
-          On garde le style et les réglages qui font son identité.
-        </p>
-        <div className="studio-reel">
-          <Clapperboard size={76} />
-          <span>CREATE / BUILD / PUBLISH</span>
-        </div>
-      </section>
-      <div className="format-grid">
+      <div className="format-grid compact-formats">
         {formats.map((f) => (
           <button
             className={
@@ -1407,18 +1036,8 @@ export function Studio(p: PageProps) {
             key={f.key}
             onClick={() => setChosen(f.key)}
           >
-            <div className="format-top">
-              <span>{f.mark}</span>
-              {chosen === f.key ? (
-                <CheckCircle2 size={19} />
-              ) : (
-                <ArrowUpRight size={19} />
-              )}
-            </div>
-            <div className="format-icon">{f.icon}</div>
             <h2>{f.name}</h2>
             <span className="format-sub">{f.sub}</span>
-            <p>{f.text}</p>
           </button>
         ))}
       </div>
@@ -1446,63 +1065,65 @@ export function Studio(p: PageProps) {
             ))}
         </div>
       </section>
-      <section className="panel jobs-panel">
-        <SectionTitle
-          eyebrow="CE QUI SE PASSE EN COULISSES"
-          title="Travaux de création"
-        />
-        {p.data.jobs.length ? (
-          p.data.jobs.slice(0, 8).map((j) => (
-            <div className="job-row" key={j.id}>
-              <Activity size={17} />
-              <div>
-                <strong>
-                  {p.data.videos.find((v) => v.id === j.video_id)?.title ||
-                    "Delamain"}
-                </strong>
-                <small>{j.error || j.message}</small>
-              </div>
-              <Tag
-                tone={
-                  j.status === "failed"
-                    ? "blocked"
-                    : j.status === "done"
-                      ? "ready"
-                      : "auto"
-                }
-              >
-                {j.status === "done"
-                  ? "TERMINÉ"
-                  : j.status === "running"
-                    ? "EN COURS"
-                    : j.status === "queued"
-                      ? "EN ATTENTE"
-                      : j.status === "cancelled"
-                        ? "ANNULÉ"
-                        : "À REPRENDRE"}
-              </Tag>
-              {["running", "queued"].includes(j.status) && (
-                <button
-                  className="text-button"
-                  onClick={() =>
-                    p.mutate(
-                      () => api(`/jobs/${j.id}/cancel`, "POST", {}),
-                      "Annulation demandée.",
-                    )
+      <Disclosure title="Travaux de création et historique">
+        <section className="panel jobs-panel">
+          <SectionTitle
+            eyebrow="CE QUI SE PASSE EN COULISSES"
+            title="Travaux de création"
+          />
+          {p.data.jobs.length ? (
+            p.data.jobs.slice(0, 8).map((j) => (
+              <div className="job-row" key={j.id}>
+                <Activity size={17} />
+                <div>
+                  <strong>
+                    {p.data.videos.find((v) => v.id === j.video_id)?.title ||
+                      "Delamain"}
+                  </strong>
+                  <small>{j.error || j.message}</small>
+                </div>
+                <Tag
+                  tone={
+                    j.status === "failed"
+                      ? "blocked"
+                      : j.status === "done"
+                        ? "ready"
+                        : "auto"
                   }
                 >
-                  Annuler
-                </button>
-              )}
-            </div>
-          ))
-        ) : (
-          <Empty
-            title="Les moteurs sont au repos"
-            text="Les étapes et leur progression apparaîtront ici lorsque tu lanceras une création."
-          />
-        )}
-      </section>
+                  {j.status === "done"
+                    ? "TERMINÉ"
+                    : j.status === "running"
+                      ? "EN COURS"
+                      : j.status === "queued"
+                        ? "EN ATTENTE"
+                        : j.status === "cancelled"
+                          ? "ANNULÉ"
+                          : "À REPRENDRE"}
+                </Tag>
+                {["running", "queued"].includes(j.status) && (
+                  <button
+                    className="text-button"
+                    onClick={() =>
+                      p.mutate(
+                        () => api(`/jobs/${j.id}/cancel`, "POST", {}),
+                        "Annulation demandée.",
+                      )
+                    }
+                  >
+                    Annuler
+                  </button>
+                )}
+              </div>
+            ))
+          ) : (
+            <Empty
+              title="Les moteurs sont au repos"
+              text="Les étapes et leur progression apparaîtront ici lorsque tu lanceras une création."
+            />
+          )}
+        </section>
+      </Disclosure>
     </div>
   );
 }
@@ -1951,208 +1572,222 @@ export function Settings(p: PageProps) {
           </h1>
           <p>Les connexions, l’équipe et les limites de production.</p>
         </div>
-        <Tag tone="muted">HEURE BELGE / PARIS</Tag>
       </div>
-      <div className="settings-grid">
-        <section className="panel settings-card">
-          <SectionTitle
-            eyebrow="GARDE LE CONTRÔLE"
-            title="Production & budget"
-          />
-          <div className="pause-box">
-            <div className="priority-icon yellow">
-              {p.data.settings.paused ? (
-                <Pause size={20} />
-              ) : (
-                <Play size={20} />
-              )}
+      <section className="panel settings-shortcuts">
+        <h2>Chaînes YouTube</h2>
+        <p>La connexion se fait depuis la fiche de chaque chaîne.</p>
+        <Button onClick={() => p.go("channels")}>
+          Connecter mes chaînes <ArrowUpRight size={16} />
+        </Button>
+        <button className="text-button" onClick={() => setGuide(true)}>
+          Aide à la connexion
+        </button>
+      </section>
+      <SecuritySettings refresh={p.refresh} />
+      <Disclosure title="Équipe, budget et pause du studio">
+        <div className="settings-grid">
+          <section className="panel settings-card">
+            <SectionTitle
+              eyebrow="GARDE LE CONTRÔLE"
+              title="Production & budget"
+            />
+            <div className="pause-box">
+              <div className="priority-icon yellow">
+                {p.data.settings.paused ? (
+                  <Pause size={20} />
+                ) : (
+                  <Play size={20} />
+                )}
+              </div>
+              <div>
+                <strong>
+                  {p.data.settings.paused
+                    ? "Le studio est en pause"
+                    : "Le studio peut travailler"}
+                </strong>
+                <p>Une pause bloque les nouveaux lancements et publications.</p>
+              </div>
+              <button
+                className={"toggle " + (!p.data.settings.paused ? "on" : "")}
+                aria-label={
+                  p.data.settings.paused
+                    ? "Reprendre le studio"
+                    : "Mettre le studio en pause"
+                }
+                aria-pressed={!p.data.settings.paused}
+                onClick={() =>
+                  p.mutate(
+                    () =>
+                      api("/settings", "PATCH", {
+                        revision: p.data.settings.revision,
+                        paused: !p.data.settings.paused,
+                      }),
+                    "État du studio mis à jour.",
+                  )
+                }
+              >
+                <i />
+              </button>
             </div>
-            <div>
-              <strong>
-                {p.data.settings.paused
-                  ? "Le studio est en pause"
-                  : "Le studio peut travailler"}
-              </strong>
-              <p>Une pause bloque les nouveaux lancements et publications.</p>
-            </div>
-            <button
-              className={"toggle " + (!p.data.settings.paused ? "on" : "")}
-              aria-label={
-                p.data.settings.paused
-                  ? "Reprendre le studio"
-                  : "Mettre le studio en pause"
-              }
-              aria-pressed={!p.data.settings.paused}
-              onClick={() =>
-                p.mutate(
+            <form
+              className="form"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                await p.mutate(
                   () =>
                     api("/settings", "PATCH", {
                       revision: p.data.settings.revision,
-                      paused: !p.data.settings.paused,
+                      daily_budget: budget,
                     }),
-                  "État du studio mis à jour.",
-                )
-              }
+                  "Budget enregistré.",
+                );
+              }}
             >
-              <i />
-            </button>
-          </div>
-          <form
-            className="form"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              await p.mutate(
-                () =>
-                  api("/settings", "PATCH", {
-                    revision: p.data.settings.revision,
-                    daily_budget: budget,
-                  }),
-                "Budget enregistré.",
-              );
-            }}
-          >
-            <label>
-              Budget quotidien autorisé ($)
-              <div className="budget-input">
-                <Wallet size={19} />
-                <input
-                  type="number"
-                  step="1"
-                  min="0"
-                  max="1000"
-                  value={budget}
-                  onChange={(e) => setBudget(Number(e.target.value))}
-                />
-              </div>
-            </label>
-            <p className="form-hint">
-              Chaque lancement réserve le budget de sa vidéo. Les factures
-              réelles des fournisseurs restent distinctes ; aucun coût fictif
-              n’est affiché.
-            </p>
-            <Button type="submit">
-              <Check size={15} />
-              Enregistrer le budget
-            </Button>
-          </form>
-          <div className="settings-detail">
-            <Clock3 size={17} />
-            <div>
-              <strong>Europe/Paris</strong>
-              <span>
-                Calendrier en heure belge, changements d’heure inclus.
-              </span>
-            </div>
-          </div>
-        </section>
-        <section className="panel settings-card">
-          <SectionTitle
-            eyebrow="L’ESPACE PARTAGÉ"
-            title="Ton équipe"
-            action={
-              <Button
-                disabled={p.user.role !== "owner" || p.data.users.length >= 2}
-                onClick={() => setAdding(true)}
-              >
-                <Plus size={15} />
-                Ajouter
+              <label>
+                Budget quotidien autorisé ($)
+                <div className="budget-input">
+                  <Wallet size={19} />
+                  <input
+                    type="number"
+                    step="1"
+                    min="0"
+                    max="1000"
+                    value={budget}
+                    onChange={(e) => setBudget(Number(e.target.value))}
+                  />
+                </div>
+              </label>
+              <p className="form-hint">
+                Chaque lancement réserve le budget de sa vidéo. Les factures
+                réelles des fournisseurs restent distinctes ; aucun coût fictif
+                n’est affiché.
+              </p>
+              <Button type="submit">
+                <Check size={15} />
+                Enregistrer le budget
               </Button>
-            }
-          />
-          {p.data.users.map((u) => (
-            <div className="user-row" key={u.id}>
-              <span className="avatar">{u.name.slice(0, 1)}</span>
+            </form>
+            <div className="settings-detail">
+              <Clock3 size={17} />
               <div>
-                <strong>{u.name}</strong>
-                <small>@{u.username}</small>
+                <strong>Europe/Paris</strong>
+                <span>
+                  Calendrier en heure belge, changements d’heure inclus.
+                </span>
               </div>
-              <Tag>{u.role === "owner" ? "PROPRIÉTAIRE" : "COLLABORATEUR"}</Tag>
             </div>
-          ))}
-          <div className="inline-note">
-            <Users size={16} />
-            Les vidéos, tâches et créneaux sont partagés. Les réglages sensibles
-            sont réservés au propriétaire.
-          </div>
-          <div className="team-decoration">
-            <span>EDGERUNNERS</span>
-            <span>CREW</span>
-            <small>BETTER TOGETHER / NIGHT CITY</small>
-          </div>
-        </section>
-      </div>
-      <SecuritySettings refresh={p.refresh} />
-      <DevelopmentSettings
-        data={p.data}
-        owner={p.user.role === "owner"}
-        go={() => p.go("agent")}
-      />
-      <section className="panel connections-panel">
-        <SectionTitle eyebrow="LES SERVICES DU STUDIO" title="Connexions" />
-        {labelsConnections.map(([key, label, desc]) => (
-          <div className="connection-row" key={key}>
-            <div className="connection-icon">
-              {key === "youtube" ? (
-                <Clapperboard size={20} />
-              ) : key.includes("discord") ? (
-                <Send size={20} />
-              ) : key === "ai" ? (
-                <Bot size={20} />
-              ) : (
-                <Link2 size={20} />
+          </section>
+          <section className="panel settings-card">
+            <SectionTitle
+              eyebrow="L’ESPACE PARTAGÉ"
+              title="Ton équipe"
+              action={
+                <Button
+                  disabled={p.user.role !== "owner" || p.data.users.length >= 2}
+                  onClick={() => setAdding(true)}
+                >
+                  <Plus size={15} />
+                  Ajouter
+                </Button>
+              }
+            />
+            {p.data.users.map((u) => (
+              <div className="user-row" key={u.id}>
+                <span className="avatar">{u.name.slice(0, 1)}</span>
+                <div>
+                  <strong>{u.name}</strong>
+                  <small>@{u.username}</small>
+                </div>
+                <Tag>
+                  {u.role === "owner" ? "PROPRIÉTAIRE" : "COLLABORATEUR"}
+                </Tag>
+              </div>
+            ))}
+            <div className="inline-note">
+              <Users size={16} />
+              Les vidéos, tâches et créneaux sont partagés. Les réglages
+              sensibles sont réservés au propriétaire.
+            </div>
+          </section>
+        </div>
+      </Disclosure>
+      <Disclosure title="Développement du site avec Delamain">
+        <DevelopmentSettings
+          data={p.data}
+          owner={p.user.role === "owner"}
+          go={() => p.go("agent")}
+        />
+      </Disclosure>
+      <Disclosure title="Services et configuration">
+        <section className="panel connections-panel">
+          <SectionTitle eyebrow="LES SERVICES DU STUDIO" title="Connexions" />
+          {labelsConnections.map(([key, label, desc]) => (
+            <div className="connection-row" key={key}>
+              <div className="connection-icon">
+                {key === "youtube" ? (
+                  <Clapperboard size={20} />
+                ) : key.includes("discord") ? (
+                  <Send size={20} />
+                ) : key === "ai" ? (
+                  <Bot size={20} />
+                ) : (
+                  <Link2 size={20} />
+                )}
+              </div>
+              <div>
+                <strong>{label}</strong>
+                <small>{desc}</small>
+              </div>
+              <Tag tone={p.data.connections[key] ? "ready" : "muted"}>
+                {p.data.connections[key] ? "CONFIGURÉ" : "À CONFIGURER"}
+              </Tag>
+              {key === "youtube" && (
+                <Button onClick={() => setGuide(true)}>
+                  Comment connecter
+                  <ArrowUpRight size={14} />
+                </Button>
               )}
             </div>
-            <div>
-              <strong>{label}</strong>
-              <small>{desc}</small>
-            </div>
-            <Tag tone={p.data.connections[key] ? "ready" : "muted"}>
-              {p.data.connections[key] ? "CONFIGURÉ" : "À CONFIGURER"}
-            </Tag>
-            {key === "youtube" && (
-              <Button onClick={() => setGuide(true)}>
-                Comment connecter
-                <ArrowUpRight size={14} />
-              </Button>
-            )}
+          ))}
+          <div className="panel-bottom">
+            <ShieldCheck size={15} />
+            <span>
+              Les clés sont conservées sur le serveur. Elles ne sont jamais
+              affichées ici.
+            </span>
           </div>
-        ))}
-        <div className="panel-bottom">
-          <ShieldCheck size={15} />
-          <span>
-            Les clés sont conservées sur le serveur. Elles ne sont jamais
-            affichées ici.
-          </span>
-        </div>
-      </section>
-      <section className="panel activity-panel">
-        <SectionTitle eyebrow="CE QUI A CHANGÉ" title="Journal du studio" />
-        {p.data.activity.length ? (
-          p.data.activity.slice(0, 15).map((a) => (
-            <div className="activity-row" key={a.id}>
-              <span className="activity-dot" />
-              <div>
-                <strong>{a.message}</strong>
-                <small>{a.actor}</small>
+        </section>
+      </Disclosure>
+      <Disclosure title="Historique du studio">
+        <section className="panel activity-panel">
+          <SectionTitle eyebrow="CE QUI A CHANGÉ" title="Journal du studio" />
+          {p.data.activity.length ? (
+            p.data.activity.slice(0, 15).map((a) => (
+              <div className="activity-row" key={a.id}>
+                <span className="activity-dot" />
+                <div>
+                  <strong>{a.message}</strong>
+                  <small>{a.actor}</small>
+                </div>
+                <time>
+                  {dateLabel(a.created_at, {
+                    day: "numeric",
+                    month: "short",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </time>
               </div>
-              <time>
-                {dateLabel(a.created_at, {
-                  day: "numeric",
-                  month: "short",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                })}
-              </time>
-            </div>
-          ))
-        ) : (
-          <Empty
-            icon={<Activity size={24} />}
-            title="Un historique commun"
-            text="Les créations, modifications et publications apparaîtront ici."
-          />
-        )}
-      </section>
+            ))
+          ) : (
+            <Empty
+              icon={<Activity size={24} />}
+              title="Un historique commun"
+              text="Les créations, modifications et publications apparaîtront ici."
+            />
+          )}
+        </section>
+      </Disclosure>
       {adding && (
         <Modal title="Ajouter ton collègue" close={() => setAdding(false)}>
           <form

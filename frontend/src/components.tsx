@@ -8,9 +8,36 @@ import {
   AlertTriangle,
   Clock3,
   Clapperboard,
+  ChevronDown,
 } from "lucide-react";
 import type { Channel, Video } from "./types";
 import { dateLabel, labels } from "./api";
+
+export function Disclosure({
+  title,
+  children,
+  open = false,
+}: {
+  title: string;
+  children: ReactNode;
+  open?: boolean;
+}) {
+  return (
+    <details
+      className="disclosure"
+      open={open}
+      onInvalidCapture={(event) => {
+        event.currentTarget.open = true;
+      }}
+    >
+      <summary>
+        {title}
+        <ChevronDown size={17} />
+      </summary>
+      <div className="disclosure-content">{children}</div>
+    </details>
+  );
+}
 
 export function Button({
   children,
