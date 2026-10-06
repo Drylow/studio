@@ -1,0 +1,16 @@
+OTTOMAN DAILY - ESSAI VISUEL
+Achat de pain
+
+Image retenue pour presentation :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-v2.png
+
+Prompt correspondant :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-v2.txt
+
+Generation et retouches par le CLI Proxy configure, a partir de la reference blanche validee.
+Personnages, mains, proportions et lisibilite controles visuellement.
+Concept de chaine valide par l'utilisateur ; STYLE EN ATTENTE DE SON AVIS.
+Il s'agit d'un essai de direction graphique, pas d'une reconstitution historique definitive.
+La tenue azteque couvrante est une adaptation stylisee, pas une validation du costume reel.
+Le rendu est visuellement blanc ; quelques pixels du visage sont proches de blanc plutot
+que strictement #FFFFFF. Aucun traitement automatique des couleurs n'a ete applique.

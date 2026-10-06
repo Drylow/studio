@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "status": "pending_user_approval",
+  "status": "channel_concepts_approved_visual_style_pending",
   "supersedes": "_anciennes_propositions_refusees",
   "format": "Rome Unscrolled: immersive second-person historical daily-life and practical-question longform, illustrated 2D",
   "not_format": "Fictional missions, serial casts across episodes, task-oriented spinoffs, Gotham for this request",
@@ -15,7 +15,7 @@
       "name": "Edo Daily",
       "handle": "@EdoDailyHistory",
       "availability_checked": false,
-      "approved": false,
+      "approved": true,
       "historical_scope": "Edo, principalement vers 1700. Japon des Tokugawa, pas Japon antique ni Meiji.",
       "titles": [
         "What Did People in Edo Japan Actually Do All Day?",
@@ -36,7 +36,7 @@
       "name": "Aztec Daily",
       "handle": "@AztecDailyHistory",
       "availability_checked": false,
-      "approved": false,
+      "approved": true,
       "historical_scope": "Tenochtitlan et ses environs, vers 1500, avant la conquete. Preciser Mexica ou autre groupe selon l'episode.",
       "titles": [
         "What Did People in the Aztec Empire Actually Do All Day?",
@@ -57,7 +57,7 @@
       "name": "Babylon Daily",
       "handle": "@BabylonDailyHistory",
       "availability_checked": false,
-      "approved": false,
+      "approved": true,
       "historical_scope": "Babylone neo-babylonienne, principalement vers 600 av. J.-C. Ne pas melanger avec Sumer ou Hammurabi sans changer explicitement la date.",
       "titles": [
         "What Did People in Ancient Babylon Actually Do All Day?",
@@ -78,7 +78,7 @@
       "name": "Imperial China Daily",
       "handle": "@ImperialChinaDaily",
       "availability_checked": false,
-      "approved": false,
+      "approved": true,
       "historical_scope": "Chang'an sous les Tang, principalement au VIIIe siecle pour le lancement. Une dynastie/date par episode.",
       "titles": [
         "What Did People in Tang Dynasty China Actually Do All Day?",
@@ -99,7 +99,7 @@
       "name": "Ottoman Daily",
       "handle": "@OttomanDailyHistory",
       "availability_checked": false,
-      "approved": false,
+      "approved": true,
       "historical_scope": "Istanbul au XVIe siecle pour le lancement ; episodes militaires avec campagne/date determinees.",
       "titles": [
         "What Did People in the Ottoman Empire Actually Do All Day?",

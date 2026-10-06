@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-06",
+  "provider": "configured_cli_proxy",
+  "generation_calls": 5,
+  "refinement_calls": 3,
+  "reference": "output/imagegen/cinq-chaines-style-2026-10-06/reference-style.png",
+  "reference_source": "output/imagegen/strangely-proxy-white-2026-10-05/01-adultes-laverie.png",
+  "concepts_approved": true,
+  "visual_style_user_approved": false,
+  "selected": [
+    {
+      "channel": "Edo Daily",
+      "image": "01-japon-edo.png",
+      "prompt": "01-japon-edo.txt",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 1671337,
+      "revision": 1,
+      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+    },
+    {
+      "channel": "Aztec Daily",
+      "image": "02-azteques-v2.png",
+      "prompt": "02-azteques-v2.txt",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 1619576,
+      "revision": 2,
+      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+    },
+    {
+      "channel": "Babylon Daily",
+      "image": "03-babylone-v2.png",
+      "prompt": "03-babylone-v2.txt",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 1548567,
+      "revision": 2,
+      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+    },
+    {
+      "channel": "Imperial China Daily",
+      "image": "04-chine-tang.png",
+      "prompt": "04-chine-tang.txt",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 1795175,
+      "revision": 1,
+      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+    },
+    {
+      "channel": "Ottoman Daily",
+      "image": "05-ottomans-v2.png",
+      "prompt": "05-ottomans-v2.txt",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 1535037,
+      "revision": 2,
+      "visual_review": "Adult proportions, round bald white heads, dot eyes, straight mouths, white mitten hands, no lettering; refined exterior detail."
+    }
+  ],
+  "quality_notes": [
+    "Actual proxy output is 1672x941, not requested 2048x1152; not upscaled.",
+    "Face samples are near-white RGB 253-255, not all exact #FFFFFF; no automatic recoloring applied.",
+    "Costumes/settings are stylized proposals, not final historical audits.",
+    "Aztec costumes deliberately adapted to covered-body style.",
+    "One image per world does not establish continuity across a full video."
+  ],
+  "status": "style_samples_for_user_review"
+}

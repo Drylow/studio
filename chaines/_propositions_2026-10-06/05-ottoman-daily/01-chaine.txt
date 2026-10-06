@@ -1,6 +1,7 @@
 NOM : Ottoman Daily
 HANDLE PROPOSE : @OttomanDailyHistory
-STATUT : A VALIDER. Nom et handle non reserves, disponibilite non verifiee.
+STATUT : CONCEPT VALIDE PAR L'UTILISATEUR. Style en cours de validation.
+Nom et handle proposes, non reserves ; disponibilite non verifiee.
 LANGUE : anglais.
 
 DESCRIPTION PUBLIQUE

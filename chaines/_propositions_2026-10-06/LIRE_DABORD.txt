@@ -1,5 +1,8 @@
 PROPOSITIONS CORRIGEES - FORMAT ROME UNSCROLLED
-6 octobre 2026. A VALIDER. Aucune video ni chaine lancee.
+6 octobre 2026. CINQ CONCEPTS VALIDES PAR L'UTILISATEUR.
+Style visuel en cours de validation ; aucune video ni chaine lancee.
+
+Une image d'essai est maintenant liee dans chaque dossier, fichier 03-essai-visuel.txt.
 
 La premiere proposition etait hors sujet. Elle est rangee dans
 _anciennes_propositions_refusees et ne sert plus de direction de travail.

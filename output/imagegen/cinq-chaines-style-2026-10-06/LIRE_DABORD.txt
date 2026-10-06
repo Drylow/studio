@@ -1,0 +1,16 @@
+ESSAIS DE STYLE - CINQ CHAINES HISTORIQUES
+Une illustration par chaine, generee via le CLI Proxy configure.
+Reference de style : output/imagegen/strangely-proxy-white-2026-10-05/01-adultes-laverie.png.
+Une copie de cette reference est conservee ici : reference-style.png.
+Chaque prompt est conserve dans le TXT portant le meme nom que l'image.
+Les scenes servent a valider la direction graphique, pas une reconstitution historique definitive.
+La tenue azteque est une adaptation couvrante stylisee pour conserver la base visuelle validee.
+Les images doivent etre regardees avant validation du style et production de videos.
+
+SELECTION PRESENTEE :
+Japon : 01-japon-edo.png
+Azteques : 02-azteques-v2.png
+Babylone : 03-babylone-v2.png
+Chine : 04-chine-tang.png
+Ottomans : 05-ottomans-v2.png
+Les premieres versions sont conservees pour documenter les simplifications.
