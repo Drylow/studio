@@ -70,6 +70,7 @@ class YouTubeConnectionTests(unittest.TestCase):
             ["https://studio.example.org/api/studio/youtube/callback"],
         )
         self.assertEqual(query["access_type"], ["offline"])
+        self.assertEqual(query["scope"], ["https://www.googleapis.com/auth/youtube.force-ssl"])
         return query["state"][0]
 
     def callback(
@@ -168,6 +169,25 @@ class YouTubeConnectionTests(unittest.TestCase):
             response = self.client.get(f"/api/studio/youtube/{self.cid}/connect")
             self.assertEqual(response.status_code, 400)
             self.assertNotIn("Location", response.headers)
+
+    def test_missing_publication_permission_is_not_saved_as_a_connected_channel(self):
+        state = self.state()
+        token = {"access_token": "fixture-access", "refresh_token": "fixture-refresh", "scope": "https://www.googleapis.com/auth/youtube.readonly"}
+        with patch("urllib.request.urlopen", return_value=io.BytesIO(json.dumps(token).encode())), patch("routes.youtube._fetch_channel") as channel:
+            response = self.client.get("/api/studio/youtube/callback", query_string={"state": state, "code": "fixture-code"})
+        self.assertIn("youtube_error", response.location)
+        self.assertFalse(self.store.channel(self.cid)["connected"])
+        channel.assert_not_called()
+
+    def test_google_rejection_reason_is_actionable_and_state_is_consumed(self):
+        state = self.state()
+        with patch("urllib.request.urlopen") as remote:
+            response = self.client.get("/api/studio/youtube/callback", query_string={"state": state, "error": "disallowed_useragent", "error_description": "private-fixture-details"})
+        error = parse_qs(urlparse(response.location).query)["youtube_error"][0]
+        self.assertIn("Chrome ou Safari", error)
+        self.assertNotIn("private-fixture-details", error)
+        self.assertIsNone(self.store.one("SELECT state FROM studio_oauth WHERE state=?", (state,)))
+        remote.assert_not_called()
 
     def test_oauth_rejects_another_channel_without_overwriting_access(self):
         self.linked()

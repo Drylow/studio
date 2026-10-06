@@ -29,12 +29,17 @@ def publish(store, v, ch, job):
     from studio.review import recheck_rights
 
     recheck_rights(store, v)
-    from routes.youtube import _access_token, _opener
+    from routes.youtube import _access_token, _opener, _fetch_channel
 
     p = store.one(
         "SELECT yt_refresh_token,proxy FROM delamain_projects WHERE id=?", (ch["id"],)
     )
     access = _access_token(p["yt_refresh_token"], p["proxy"])
+    if not access:
+        raise ValueError("L’accès Google de cette chaîne a expiré ou a été refusé. Reconnecte-la depuis Chaînes → Connecter YouTube.")
+    _, actual_channel = _fetch_channel(access)
+    if not ch["yt_channel_id"] or actual_channel != ch["yt_channel_id"]:
+        raise ValueError("YouTube n’a pas confirmé l’identité de la chaîne attendue. Vérifie sa connexion avant de publier.")
     op = _opener(p["proxy"])
     with store.db() as c:
         c.execute(

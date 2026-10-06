@@ -485,7 +485,7 @@ class PublishingRecoveryTests(unittest.TestCase):
             ch = s.channels()[0]
             with s.db() as c:
                 c.execute(
-                    "UPDATE delamain_projects SET yt_refresh_token=? WHERE id=?",
+                    "UPDATE delamain_projects SET yt_refresh_token=?,yt_channel_id='UCfixturePublication' WHERE id=?",
                     ("fixture", ch["id"]),
                 )
             ch = s.channel(ch["id"])
@@ -548,7 +548,9 @@ class PublishingRecoveryTests(unittest.TestCase):
             op = Opener()
             with patch(
                 "routes.youtube._access_token", return_value="fixture-access"
-            ), patch("routes.youtube._opener", return_value=op):
+            ), patch("routes.youtube._opener", return_value=op), patch(
+                "routes.youtube._fetch_channel", return_value=(ch["name"], "UCfixturePublication")
+            ):
                 with self.assertRaises(urllib.error.URLError):
                     publish(s, s.video(vid), ch, Job())
                 self.assertTrue(

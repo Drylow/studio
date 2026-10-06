@@ -2,6 +2,16 @@
 
 ## Priorité actuelle — 6 octobre 2026
 
+L’utilisateur reporte les statistiques et exige la publication automatique de Cage
+et Pitch. Diagnostic serveur : identifiants OAuth présents, clé publique déjà
+enregistrée, mais aucun jeton de chaîne pour ces deux sports. Publication immédiate
+des vidéos prêtes ajoutée dans `studio/auto_publication.py`, sans créneau fixe, avec
+tous les contrôles conservés. Google reçoit une permission `youtube.force-ssl`,
+suffisante selon discovery officiel. Aucun déblocage Google ou envoi réel confirmé.
+La génération éditoriale totalement autonome reste à construire ; ne pas la présenter
+comme activée ni recycler les trois vidéos déjà publiées manuellement.
+
+
 À la demande explicite de l’utilisateur, la rubrique principale **Statistiques**
 remplace les petites fiches dépendantes de la connexion OAuth. Recherche officielle
 par @pseudo : YouTube Data API v3 `channels.list(forHandle=...)`, une clé API privée

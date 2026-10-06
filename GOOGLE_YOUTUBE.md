@@ -6,8 +6,10 @@ Réutiliser le client Google existant ; ne pas créer un nouveau client pour cha
 
 ## État constaté le 6 octobre 2026
 
-Le projet existant est **External / In production**. Les deux scopes nécessaires
-sont déclarés dans Data Access et Google affiche « not yet verified ». La validation
+Le projet existant est **External / In production**. Les permissions auparavant
+demandées sont déclarées dans Data Access et Google affiche « not yet verified ».
+Le studio demande désormais uniquement `youtube.force-ssl`, qui couvre les quatre
+opérations requises ; cela ne prouve pas que Google lève le refus. La validation
 Search Console du domaine a réussi après ajout d'un TXT à l'apex, sans modification
 des autres enregistrements. Conserver ce TXT. Cette preuve ne vaut pas approbation OAuth.
 
@@ -69,7 +71,8 @@ lisent seulement le cache. Les données restent privées et sont purgées après
 Retirer un suivi supprime ses relevés sans retirer la chaîne du studio. Une déconnexion
 OAuth n’arrête pas ce suivi public, qui est géré séparément dans Statistiques.
 
-Le 6 octobre, aucune clé de lecture publique n’était configurée sur l’hébergement.
+La clé de lecture publique a depuis été configurée par l’utilisateur. Les statistiques
+sont reportées à sa demande ; ne pas lui redemander cette clé.
 Les tests de compteurs utilisent une base dédiée et Google simulé ; ils ne prouvent
 pas encore un relevé réel. Les anciennes routes de cache lié à OAuth restent privées
 pour compatibilité, mais ne pilotent plus la nouvelle interface Statistiques.
@@ -121,8 +124,8 @@ compte ou de son organisation peuvent aussi empêcher une autorisation.
 L’adresse de retour actuellement conservée sur l’hébergement est
 `https://edgerunners.fr/api/youtube/callback`. Le handler protège la session,
 le rôle propriétaire et un état OAuth à usage unique. Les permissions demandées
-sont `youtube.readonly` et `youtube.force-ssl` : cette dernière permet la mise
-à jour de visibilité après l’upload privé. Ne pas la remplacer par `youtube.upload`
+se limitent à `youtube.force-ssl` : elle couvre la lecture de l’identité, l’envoi,
+la miniature et la mise à jour de visibilité après l’upload privé. Ne pas la remplacer par `youtube.upload`
 seul, qui ne couvre pas `videos.update` dans ce parcours.
 
 La connexion est validée par l’identité réelle retournée par YouTube, avec rejet
@@ -144,3 +147,35 @@ La publication et ses contrôles éditoriaux restent indépendants du paramétra
 OAuth. La vérification OAuth et les éventuelles exigences d’audit de l’API YouTube
 sont des processus distincts ; un consentement réussi ne garantit pas à lui seul
 qu’un upload puisse être rendu public ou qu’une automatisation soit opérationnelle.
+
+## Publication d’actualité sans créneau
+
+`studio/auto_publication.py` remplace le déclenchement exclusivement calendaire. Une
+vidéo `ready` d’une chaîne `publication_mode=news`, autonome, activée, connectée et
+non suspendue est mise en file dès que tous les contrôles passent. Les deux sports
+n’ont pas besoin d’une heure. Une réservation future explicite reste respectée ;
+les autres chaînes conservent leur calendrier et leur validation éventuelle. Les
+travaux actifs ne sont pas dupliqués. L’envoi vérifie l’identité réelle du jeton
+Google avant tout chargement, puis confirme la visibilité publique retournée.
+
+Au contrôle serveur du 6 octobre, Cage et Pitch n’ont aucun jeton OAuth. La clé API
+publique est présente, les identifiants OAuth du projet existant aussi, mais aucun
+consentement n’a encore abouti pour ces deux chaînes. Les activations restent
+désactivées et le studio en pause tant que la connexion réelle n’a pas réussi.
+La collecte du radar prépare seulement des fiches de recherche : la recherche
+éditoriale, le choix des faits et les contrôles autonomes de la création ne sont
+pas un pipeline sans intervention déjà opérationnel. Ne pas confondre ce correctif
+de publication avec une automatisation complète de la création.
+
+Les voies examinées ne fournissent pas de raccourci garanti : Apps Script utilise
+la même API et doit être autorisé, les comptes de service ordinaires ne disposent
+pas des chaînes YouTube des comptes personnels, une clé API ne publie pas, et un
+nouveau projet non audité peut être limité aux vidéos privées. Ne pas emprunter
+le client d’une autre application ni déplacer les vidéos vers un éditeur tiers.
+La règle d’usage personnel peut dispenser une petite équipe connue de revue,
+mais ne donne pas de permission quand Google affiche réellement « This app is blocked ».
+Un test réel du consentement et de la mise en ligne reste indispensable.
+
+Références : [permissions des méthodes (discovery officiel)](https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest),
+[envoi et restrictions des projets non audités](https://developers.google.com/youtube/v3/docs/videos/insert),
+[service YouTube Apps Script](https://developers.google.com/apps-script/advanced/youtube).

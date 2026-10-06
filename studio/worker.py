@@ -124,19 +124,9 @@ def run(store, once=False):
             from studio.channel_stats import tick as stats_tick
 
             stats_tick(store)
-        # Publication scheduling uses server time and the same release gate as manual publication.
-        if not store.settings()["paused"]:
-            from studio.domain import blockers
+        from studio.auto_publication import tick as publication_tick
 
-            for v in store.videos():
-                ch = store.channel(v["channel_id"])
-                if (
-                    v["status"] == "scheduled"
-                    and v["post_at"]
-                    and v["post_at"] <= now()
-                ):
-                    if not blockers(v, ch, store.settings(), automatic=True):
-                        store.enqueue("publish", v["id"], {"actor": "Delamain"})
+        publication_tick(store)
         time.sleep(3)
 
 

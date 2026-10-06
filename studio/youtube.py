@@ -9,6 +9,10 @@ import urllib.request
 from flask import request, session, jsonify, redirect, send_file
 from studio.store import now, Conflict, ROOT
 
+# One permission covers identity reads, private uploads, thumbnails and visibility.
+# Checked against the official YouTube discovery document; do not drop visibility.
+PUBLICATION_SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl"
+
 
 def register_youtube(app, store, owner):
     @app.get("/api/studio/youtube/setup-guide")
@@ -69,7 +73,7 @@ def register_youtube(app, store, owner):
                 "client_id": cfg("GOOGLE_CLIENT_ID"),
                 "redirect_uri": callback_url(),
                 "response_type": "code",
-                "scope": "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly",
+                "scope": PUBLICATION_SCOPE,
                 "access_type": "offline",
                 "prompt": "select_account consent",
                 "state": state,
@@ -99,11 +103,18 @@ def register_youtube(app, store, owner):
                 )
             c.execute("DELETE FROM studio_oauth WHERE state=?", (state,))
         if request.args.get("error"):
+            explanations = {
+                "access_denied": "Google a refusé l’autorisation. Si l’application est en test, le compte doit être ajouté aux utilisateurs de test du projet.",
+                "invalid_scope": "Google refuse une permission demandée. Vérifie les autorisations YouTube du projet Google existant.",
+                "admin_policy_enforced": "L’administrateur du compte Google bloque cette autorisation. Il doit autoriser Edgerunners Studio.",
+                "org_internal": "Le projet Google est réservé à une organisation. Son audience doit être externe pour ces comptes.",
+                "disallowed_useragent": "Ouvre edgerunners.fr directement dans Chrome ou Safari, puis recommence la connexion Google.",
+            }
             return redirect(
                 "/channels?"
                 + urllib.parse.urlencode(
                     {
-                        "youtube_error": "Connexion refusée : tu peux recommencer et accepter les autorisations Google.",
+                        "youtube_error": explanations.get(request.args["error"], "Google a refusé cette autorisation. Vérifie l’état du projet dans Google Auth Platform."),
                         "channel": row["channel_id"],
                     }
                 )
@@ -148,6 +159,10 @@ def register_youtube(app, store, owner):
             raise ValueError(
                 "Google n’a pas fourni un accès permanent. Recommence en acceptant les autorisations."
             )
+        if token.get("scope") is not None and not set(str(token["scope"]).split()) & {
+            PUBLICATION_SCOPE, "https://www.googleapis.com/auth/youtube",
+        }:
+            raise ValueError("L’autorisation d’envoi et de mise en ligne est absente. Reconnecte la chaîne et accepte cette autorisation Google.")
         from routes.youtube import _fetch_channel
 
         title, yt_id = _fetch_channel(token["access_token"])
