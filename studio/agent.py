@@ -26,6 +26,7 @@ CHANNEL_FIELDS = {
     "cadence_days",
     "cadence_anchor",
     "post_time",
+    "publication_mode",
     "target_stock",
     "freshness_hours",
     "enabled",
@@ -60,8 +61,10 @@ Actions disponibles :
   Programmation : post_at ISO AVEC fuseau ; heure locale Belgique/Paris, pas UTC par défaut.
 - {"type":"channel_create","name":"...","format":"news|pov|history","handle":"..."}
 - {"type":"channel_update","channel_id":entier,"changes":{...}}
-  Champs : name,handle,niche,lang,autonomy,cadence_days,cadence_anchor,post_time,target_stock,
+  Champs : name,handle,niche,lang,autonomy,publication_mode,cadence_days,cadence_anchor,post_time,target_stock,
   freshness_hours,enabled,paused,budget,instructions,template_key.
+  publication_mode : scheduled = rythme fixe ; news = selon l’actualité, sans heure ni stock cible.
+  En mode news, ne propose pas de créneaux de cadence ni de couverture en jours.
 - {"type":"channel_assign","channel_id":entier,"responsible_id":"id du membre ou null"}
 - {"type":"channel_retire","channel_id":entier} : retrait du studio, historique conservé.
 - {"type":"production","video_id":"id","stage":"script|render|verify|publish|discord"}

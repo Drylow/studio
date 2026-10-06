@@ -142,53 +142,97 @@ export function ChannelForm({
             ))}
           </div>
         </label>
-        <div className="form-grid three">
-          <label>
-            Un post tous les…
-            <select
-              value={form.cadence_days}
-              onChange={(e) => change("cadence_days", e.target.value)}
-            >
-              <option value="0.5">12 heures</option>
-              <option value="1">1 jour</option>
-              <option value="2">2 jours</option>
-              <option value="3">3 jours</option>
-              <option value="7">7 jours</option>
-            </select>
-          </label>
-          <label>
-            Heure belge
-            <input
-              type="time"
-              value={form.post_time}
-              required
-              onChange={(e) => change("post_time", e.target.value)}
-            />
-          </label>
-          <label>
-            Stock cible
-            <input
-              type="number"
-              min="0"
-              max="100"
-              value={form.target_stock}
-              onChange={(e) => change("target_stock", Number(e.target.value))}
-            />
-          </label>
-        </div>
-        <label>
-          Premier jour du rythme
-          <input
-            type="date"
-            required
-            value={form.cadence_anchor}
-            onChange={(e) => change("cadence_anchor", e.target.value)}
-          />
-          <small className="muted">
-            Le calendrier suggère des créneaux à partir de cette date. Il faut
-            ensuite y programmer une vidéo.
-          </small>
-        </label>
+        {channel.format === "news" && (
+          <div className="form" role="group" aria-label="Rythme de publication">
+            <span>Rythme de publication</span>
+            <div className="mode-selector">
+              {[
+                [
+                  "news",
+                  "Selon l’actualité",
+                  "Aucune heure fixe ni cadence quotidienne.",
+                ],
+                [
+                  "scheduled",
+                  "Rythme fixe",
+                  "Des créneaux suggérés dans le calendrier.",
+                ],
+              ].map(([key, title, desc]) => (
+                <button
+                  key={key}
+                  type="button"
+                  className={form.publication_mode === key ? "selected" : ""}
+                  onClick={() => change("publication_mode", key)}
+                >
+                  <span>
+                    {title}
+                    {form.publication_mode === key && <Check size={15} />}
+                  </span>
+                  <small>{desc}</small>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+        {form.publication_mode === "news" ? (
+          <p className="inline-note">
+            Publication selon les actualités pertinentes, dès que la vidéo et
+            ses contrôles sont prêts. Aucun créneau prédéfini. Ce réglage
+            n’active pas à lui seul la production ou la publication automatique.
+          </p>
+        ) : (
+          <>
+            <div className="form-grid three">
+              <label>
+                Un post tous les…
+                <select
+                  value={form.cadence_days}
+                  onChange={(e) => change("cadence_days", e.target.value)}
+                >
+                  <option value="0.5">12 heures</option>
+                  <option value="1">1 jour</option>
+                  <option value="2">2 jours</option>
+                  <option value="3">3 jours</option>
+                  <option value="7">7 jours</option>
+                </select>
+              </label>
+              <label>
+                Heure belge
+                <input
+                  type="time"
+                  value={form.post_time}
+                  required
+                  onChange={(e) => change("post_time", e.target.value)}
+                />
+              </label>
+              <label>
+                Stock cible
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  value={form.target_stock}
+                  onChange={(e) =>
+                    change("target_stock", Number(e.target.value))
+                  }
+                />
+              </label>
+            </div>
+            <label>
+              Premier jour du rythme
+              <input
+                type="date"
+                required
+                value={form.cadence_anchor}
+                onChange={(e) => change("cadence_anchor", e.target.value)}
+              />
+              <small className="muted">
+                Le calendrier suggère des créneaux à partir de cette date. Il
+                faut ensuite y programmer une vidéo.
+              </small>
+            </label>
+          </>
+        )}
         <div className="form-grid">
           <label>
             Budget autorisé / vidéo ($)

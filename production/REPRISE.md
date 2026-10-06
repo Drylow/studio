@@ -14,6 +14,12 @@ et poussé sur `main` (`b1da59e`) sans intervention manuelle dans son exécution
 Lire `DEPLOY_O2SWITCH.md` pour les chemins, les vérifications et les limites actuelles.
 Le vieux cron HTTP est désactivé ; ne pas le relancer. Automatisation en pause.
 
+**Publication sport, choix confirmé le 6 octobre** : Cage Dispatch et Pitch Dispatch
+suivent l’actualité, sans heure fixe ni cadence quotidienne (`publication_mode=news`).
+Leurs réglages masquent heure/cadence/stock cible et le planning ne suggère aucun
+créneau. Les réservations explicites restent visibles ; les autres chaînes gardent
+leur rythme. Ce choix n’active pas la production automatique, encore à terminer.
+
 Les clés Google préexistaient sur o2switch et ont été conservées : ne pas redemander
 un nouveau client sans vérifier l'existant. Le Grand Récap garde ses données de connexion,
 mais Google retourne `invalid_grant` ; il faut une reconnexion. Les sept autres chaînes

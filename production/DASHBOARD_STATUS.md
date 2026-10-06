@@ -260,12 +260,25 @@ Sur téléphone ou au clavier : **Déplacer vers… → choisir le responsable**
 Les chaînes non attribuées restent dans **À répartir**. Pour consulter ton travail :
 **Calendrier → Mes chaînes → Qui poste ?**. Les vues Mois/Agenda respectent aussi
 le filtre personnel ; les tâches y suivent leur attribution explicite. Pour régler
-les suggestions : **Chaînes → Fiches des chaînes → Réglages → cadence, heure belge
+les suggestions des chaînes à rythme fixe : **Chaînes → Fiches des chaînes → Réglages → cadence, heure belge
 et premier jour du rythme → Enregistrer**. Les heures inexistantes au changement
 de mars sont omises ; celles répétées en octobre utilisent la première occurrence.
 Une suggestion est à programmer, pas une publication active. Une vidéo réservée
 affiche les contrôles déclarés ; les vérifications du fichier et des droits restent
 obligatoires lors de la publication.
+
+Cage Dispatch et Pitch Dispatch sont en **Selon l’actualité** depuis le 6 octobre :
+aucune heure fixe, cadence quotidienne, couverture en jours ou cible de stock.
+Le planning ne crée pas de suggestions pour ces chaînes ; les dates réservées
+volontairement restent visibles. Sur une chaîne d’actualité, le réglage **Rythme
+de publication** permet de choisir ce fonctionnement ou un rythme fixe. Les pauses,
+droits, fraîcheur et contrôles restent obligatoires ; cette option n’active pas à
+elle seule une production automatique.
+
+Vérification du changement : 75 tests Python ciblés (planning, studio, contrôles,
+agent), compilation TypeScript/Vite, réglages d’actualité persistants et calendrier
+sur navigateur à 390 et 1440 pixels. La migration conserve les dates réservées,
+les attributions et les pauses ; elle n’active aucune chaîne.
 
 Pour les routines : **Tâches → Ajouter une routine → choisir le type, la chaîne, la
 vidéo facultative, le responsable et l'échéance → Ajouter les tâches**. Une routine

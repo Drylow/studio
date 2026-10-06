@@ -258,16 +258,20 @@ export function Overview(p: PageProps) {
               <div className="stock-meter">
                 <span>
                   <strong>{c.ready}</strong>
-                  <small> / {c.target_stock}</small>
+                  {c.publication_mode !== "news" && (
+                    <small> / {c.target_stock}</small>
+                  )}
                 </span>
-                <div>
-                  <i
-                    style={{
-                      width: `${Math.min(100, (c.ready / Math.max(c.target_stock, 1)) * 100)}%`,
-                      background: c.accent,
-                    }}
-                  />
-                </div>
+                {c.publication_mode !== "news" && (
+                  <div>
+                    <i
+                      style={{
+                        width: `${Math.min(100, (c.ready / Math.max(c.target_stock, 1)) * 100)}%`,
+                        background: c.accent,
+                      }}
+                    />
+                  </div>
+                )}
               </div>
               <span className="next-post">
                 {c.next_post
@@ -277,7 +281,9 @@ export function Overview(p: PageProps) {
                       hour: "2-digit",
                       minute: "2-digit",
                     })
-                  : "À planifier"}
+                  : c.publication_mode === "news"
+                    ? "Selon l’actualité"
+                    : "À planifier"}
               </span>
               <Tag tone={c.autonomy === "auto" ? "auto" : "muted"}>
                 {c.paused
@@ -522,7 +528,9 @@ export function Channels(p: PageProps) {
                 <div>
                   <strong>
                     {c.ready}
-                    <small> / {c.target_stock}</small>
+                    {c.publication_mode !== "news" && (
+                      <small> / {c.target_stock}</small>
+                    )}
                   </strong>
                   <span>Vidéos prêtes</span>
                 </div>
@@ -530,7 +538,7 @@ export function Channels(p: PageProps) {
                   <strong>
                     {c.format === "news"
                       ? `${c.freshness_hours}h`
-                      : c.days_ahead.toString()}
+                      : (c.days_ahead ?? 0).toString()}
                     <small>{c.format === "news" ? "" : " jours"}</small>
                   </strong>
                   <span>
@@ -540,13 +548,15 @@ export function Channels(p: PageProps) {
                   </span>
                 </div>
               </div>
-              <div className="channel-progress">
-                <span
-                  style={{
-                    width: `${Math.min(100, (c.ready / Math.max(1, c.target_stock)) * 100)}%`,
-                  }}
-                />
-              </div>
+              {c.publication_mode !== "news" && (
+                <div className="channel-progress">
+                  <span
+                    style={{
+                      width: `${Math.min(100, (c.ready / Math.max(1, c.target_stock)) * 100)}%`,
+                    }}
+                  />
+                </div>
+              )}
               <div className="channel-next">
                 <Clock3 size={15} />
                 <span>
@@ -557,7 +567,9 @@ export function Channels(p: PageProps) {
                         hour: "2-digit",
                         minute: "2-digit",
                       })
-                    : "Prochaine publication à planifier"}
+                    : c.publication_mode === "news"
+                      ? "Selon l’actualité · sans heure fixe"
+                      : "Prochaine publication à planifier"}
                 </span>
               </div>
               <div className="channel-card-bottom">
@@ -982,7 +994,13 @@ export function Calendar(p: PageProps) {
                           api(`/videos/${v.id}`, "PATCH", {
                             revision: v.revision,
                             post_at: parisToIso(
-                              d.key + "T" + (c?.post_time || "18:00"),
+                              d.key +
+                                "T" +
+                                (c?.publication_mode === "news"
+                                  ? localTime(
+                                      v.post_at || p.data.server_time,
+                                    ).slice(11)
+                                  : c?.post_time || "18:00"),
                             ),
                           }),
                         "Créneau déplacé.",

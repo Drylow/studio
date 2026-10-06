@@ -10,6 +10,7 @@ export type Channel = {
   cadence_anchor: string;
   responsible_id: string | null;
   post_time: string;
+  publication_mode: "scheduled" | "news";
   connected: number;
   yt_channel_id: string;
   yt_channel_title: string;
@@ -31,7 +32,7 @@ export type Channel = {
   awaiting_review: number;
   scheduled: number;
   next_post: string;
-  days_ahead: number;
+  days_ahead: number | null;
   delivered: number;
   published: number;
 };

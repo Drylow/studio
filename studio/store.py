@@ -169,6 +169,15 @@ class Store:
                 c.execute(
                     "ALTER TABLE studio_channels ADD COLUMN cadence_anchor TEXT DEFAULT ''"
                 )
+            if "publication_mode" not in channel_columns:
+                c.execute(
+                    "ALTER TABLE studio_channels ADD COLUMN publication_mode TEXT NOT NULL DEFAULT 'scheduled'"
+                )
+                # Existing sports channels follow the news, without inventing a daily slot.
+                c.execute(
+                    "UPDATE studio_channels SET publication_mode='news',revision=revision+1,updated_at=? WHERE key IN ('mma_en','football_en')",
+                    (now(),),
+                )
             if "retired" not in channel_columns:
                 c.execute(
                     "ALTER TABLE studio_channels ADD COLUMN retired INTEGER NOT NULL DEFAULT 0"
@@ -188,6 +197,7 @@ class Store:
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(1,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(2,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(6,?)", (now(),))
+            c.execute("INSERT OR IGNORE INTO studio_schema VALUES(7,?)", (now(),))
         self.retire_defaults()
 
     def retire_defaults(self):
@@ -239,7 +249,7 @@ class Store:
             p.cadence_days,p.post_time,p.yt_channel_title,p.yt_channel_id,
             CASE WHEN p.yt_refresh_token!='' THEN 1 ELSE 0 END AS connected,
             s.key,s.format,s.accent,s.initials,s.target_stock,s.freshness_hours,s.enabled,s.paused,
-            s.budget,s.instructions,s.template_key,s.responsible_id,s.cadence_anchor,s.revision,s.updated_at
+            s.budget,s.instructions,s.template_key,s.responsible_id,s.cadence_anchor,s.publication_mode,s.revision,s.updated_at
             FROM studio_channels s JOIN delamain_projects p ON p.id=s.project_id WHERE s.retired=0 ORDER BY p.id"""
         )
 
@@ -264,8 +274,8 @@ class Store:
             )
             pid = cur.lastrowid
             c.execute(
-                """INSERT INTO studio_channels(project_id,key,format,accent,initials,instructions,cadence_anchor,updated_at)
-                VALUES(?,?,?,?,?,?,?,?)""",
+                """INSERT INTO studio_channels(project_id,key,format,accent,initials,instructions,cadence_anchor,publication_mode,updated_at)
+                VALUES(?,?,?,?,?,?,?,?,?)""",
                 (
                     pid,
                     data.get("key") or uid(),
@@ -275,6 +285,7 @@ class Store:
                     or "".join(x[0] for x in data["name"].split())[:3].upper(),
                     data.get("instructions", ""),
                     datetime.now(ZoneInfo("Europe/Paris")).date().isoformat(),
+                    "news" if data["format"] == "news" else "scheduled",
                     now(),
                 ),
             )
@@ -326,6 +337,7 @@ class Store:
                     "template_key",
                     "responsible_id",
                     "cadence_anchor",
+                    "publication_mode",
                 }
             }
             c.execute(

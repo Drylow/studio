@@ -154,8 +154,10 @@ def diagnostics(store, user_id, *, preview=False, data=None, at=None):
                 },
                 c["revision"],
             )
-        if c["ready"] < c["target_stock"] and (
-            c["connected"] or c["total"] or c["enabled"]
+        if (
+            c["publication_mode"] != "news"
+            and c["ready"] < c["target_stock"]
+            and (c["connected"] or c["total"] or c["enabled"])
         ):
             add(
                 f"channel:{c['id']}:stock",

@@ -29,7 +29,12 @@ class TeamPlanningTests(unittest.TestCase):
         self.ch = self.store.channels()[0]
         self.store.update_channel(
             self.ch["id"],
-            {"cadence_anchor": "2026-10-05", "post_time": "18:00", "cadence_days": "2"},
+            {
+                "publication_mode": "scheduled",
+                "cadence_anchor": "2026-10-05",
+                "post_time": "18:00",
+                "cadence_days": "2",
+            },
             self.ch["revision"],
         )
         self.at = datetime(2026, 10, 5, 12, tzinfo=TZ)
@@ -164,6 +169,98 @@ class TeamPlanningTests(unittest.TestCase):
         ).json
         self.assertEqual(len(other["slots"]), 4)
         self.assertEqual(self.store.rows("SELECT * FROM studio_jobs"), [])
+
+    def test_news_mode_omits_suggestions_and_stock_targets_but_keeps_explicit_dates(self):
+        from studio.control import diagnostics
+
+        vid = self.reserve()
+        self.assign("drylow")
+        response = self.client.patch(
+            f"/api/studio/channels/{self.ch['id']}",
+            json={
+                "publication_mode": "news",
+                "revision": self.store.channel(self.ch["id"])["revision"],
+            },
+            headers={"X-CSRF-Token": self.csrf},
+        )
+        self.assertEqual(response.status_code, 200)
+        agenda = planning(self.store, "2026-10-05", scope="drylow", at=self.at)
+        self.assertEqual(len(agenda["slots"]), 1)
+        self.assertEqual(agenda["slots"][0]["video_id"], vid)
+        self.assertEqual(agenda["slots"][0]["kind"], "reserved")
+        self.assertIn("Chaîne YouTube à connecter", agenda["slots"][0]["blockers"])
+        ch = self.store.channel(self.ch["id"])
+        self.assertIsNone(channel_summary(ch, self.store.videos(), self.at)["days_ahead"])
+        self.assertFalse(any(
+            a["key"] == f"channel:{ch['id']}:stock"
+            for a in diagnostics(self.store, "drylow")["alerts"]
+        ))
+        self.assertEqual(self.store.rows("SELECT * FROM studio_jobs"), [])
+        self.assertEqual(ch["enabled"], 0)
+
+    def test_news_mode_validation_and_return_to_fixed_cadence(self):
+        history = next(c for c in self.store.channels() if c["format"] == "history")
+        for ch, mode in [(history, "news"), (self.ch, "invalid"), (self.ch, [])]:
+            with self.subTest(mode=mode):
+                response = self.client.patch(
+                    f"/api/studio/channels/{ch['id']}",
+                    json={
+                        "publication_mode": mode,
+                        "revision": self.store.channel(ch["id"])["revision"],
+                    },
+                    headers={"X-CSRF-Token": self.csrf},
+                )
+                self.assertEqual(response.status_code, 400)
+        ch = self.store.channel(self.ch["id"])
+        self.store.update_channel(ch["id"], {"publication_mode": "news"}, ch["revision"])
+        self.assertFalse(any(
+            s["channel_id"] == ch["id"]
+            for s in planning(self.store, "2026-10-05", at=self.at)["slots"]
+        ))
+        ch = self.store.channel(ch["id"])
+        self.store.update_channel(ch["id"], {"publication_mode": "scheduled"}, ch["revision"])
+        self.assertEqual(len([
+            s for s in planning(self.store, "2026-10-05", at=self.at)["slots"]
+            if s["channel_id"] == ch["id"]
+        ]), 4)
+
+    def test_existing_sports_migrate_once_without_changing_records_or_enabling_posting(self):
+        vid = self.reserve()
+        old_video = self.store.video(vid)
+        old = self.store.channel(self.ch["id"])
+        with self.store.db() as connection:
+            connection.execute("ALTER TABLE studio_channels DROP COLUMN publication_mode")
+        self.store.migrate()
+        channels = self.store.channels()
+        self.assertEqual(
+            {c["key"] for c in channels if c["publication_mode"] == "news"},
+            {"mma_en", "football_en"},
+        )
+        self.assertEqual(self.store.video(vid), old_video)
+        for field in [
+            "post_time", "cadence_days", "cadence_anchor", "enabled", "paused", "responsible_id"
+        ]:
+            self.assertEqual(self.store.channel(old["id"])[field], old[field])
+        ch = self.store.channel(old["id"])
+        self.store.update_channel(ch["id"], {"publication_mode": "scheduled"}, ch["revision"])
+        self.store.migrate()
+        self.assertEqual(self.store.channel(ch["id"])["publication_mode"], "scheduled")
+        self.assertEqual(self.store.rows("SELECT * FROM studio_jobs"), [])
+
+    def test_new_sports_default_to_news_and_news_does_not_require_a_clock(self):
+        from studio.imports import seed
+
+        fresh = Store(Path(self.tmp.name) / "fresh.db")
+        fresh.migrate()
+        seed(fresh)
+        self.assertEqual(
+            {c["key"] for c in fresh.channels() if c["publication_mode"] == "news"},
+            {"mma_en", "football_en"},
+        )
+        self.assertEqual(list(cadence_slots(
+            {"publication_mode": "news", "post_time": "", "cadence_days": "0"},
+            self.at, self.at + timedelta(days=7),
+        )), [])
 
     def test_reserved_video_replaces_suggestion_and_reports_real_blockers(self):
         vid = self.reserve()

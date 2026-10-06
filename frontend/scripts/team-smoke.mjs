@@ -25,6 +25,17 @@ try {
       "Content-Type": "application/json",
       "X-CSRF-Token": boot.csrf,
     };
+    // This part exercises fixed cadence explicitly; sports defaults follow the news.
+    const fixed = await fetch(`/api/studio/channels/${c.id}`, {
+      method: "PATCH",
+      headers,
+      body: JSON.stringify({
+        publication_mode: "scheduled",
+        revision: c.revision,
+      }),
+    });
+    if (!fixed.ok) throw new Error("Could not set fixed-cadence fixture");
+    c.revision += 1;
     for (const channel of [c, other]) {
       const r = await fetch(
         `/api/studio/channels/${channel.id}/responsibility`,

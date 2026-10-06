@@ -160,6 +160,9 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   Les choix éditoriaux, la vérification des faits et les contrôles autonomes restent à construire ;
   aucune chaîne automatique n'est activée. Ne pas confondre le mode configuré avec une
   automatisation opérationnelle. Nom retenu : Edgerunners Studio, en un mot avec un S.
+  Le 6 octobre, l'utilisateur choisit `publication_mode=news` pour Cage Dispatch et
+  Pitch Dispatch : selon l'actualité, sans heure fixe, cadence ou stock cible.
+  Ne pas inventer de créneaux pour ces chaînes ni remettre une publication quotidienne.
   `studio/control.py` fournit les alertes locales, accusés de lecture par compte,
   routines partagées sans doublons et export du calendrier. Les routines ne remplacent
   jamais les contrôles de droits/qualité. Les indications de configuration ne sont

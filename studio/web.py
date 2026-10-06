@@ -360,6 +360,7 @@ def create_app(config=None):
                 "budget",
                 "instructions",
                 "cadence_anchor",
+                "publication_mode",
             }
         }
         if "template_key" in b:
@@ -373,6 +374,17 @@ def create_app(config=None):
             data["template_key"] = b["template_key"]
         if "autonomy" in data and data["autonomy"] not in {"manual", "auto"}:
             raise ValueError("Mode invalide.")
+        if "publication_mode" in data:
+            if not isinstance(data["publication_mode"], str) or data["publication_mode"] not in {
+                "scheduled", "news"
+            }:
+                raise ValueError(
+                    "Choisis un rythme fixe ou une publication selon l’actualité."
+                )
+            if data["publication_mode"] == "news" and old["format"] != "news":
+                raise ValueError(
+                    "La publication selon l’actualité est réservée aux chaînes d’actualité."
+                )
         if "lang" in data and data["lang"] not in {"fr", "en"}:
             raise ValueError("Langue invalide.")
         for key, lo, hi in [

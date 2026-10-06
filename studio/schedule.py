@@ -13,6 +13,8 @@ def cadence_slots(channel, start, end):
     Nonexistent spring hours are omitted. Ambiguous autumn hours use the first
     occurrence. The anchor persists, so a two-day rhythm never resets on reload.
     """
+    if channel.get("publication_mode") == "news":
+        return
     local_start = start.astimezone(TZ).replace(tzinfo=None)
     anchor_day = datetime.fromisoformat(
         channel.get("cadence_anchor") or local_start.date().isoformat()

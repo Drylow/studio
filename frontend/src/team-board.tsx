@@ -158,7 +158,10 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
                       >
                         <strong>{c.name}</strong>
                         <small>
-                          {c.ready} / {c.target_stock} vidéos prêtes
+                          {c.ready}
+                          {c.publication_mode !== "news" &&
+                            ` / ${c.target_stock}`}{" "}
+                          vidéos prêtes
                         </small>
                       </button>
                     </div>
@@ -179,10 +182,16 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
                             : "VALIDATION"}
                       </Tag>
                       <span className="muted small">
-                        {c.post_time} ·{" "}
-                        {Number(c.cadence_days) < 1
-                          ? "2 / jour"
-                          : `tous les ${c.cadence_days} j`}
+                        {c.publication_mode === "news" ? (
+                          "Selon l’actualité · sans heure fixe"
+                        ) : (
+                          <>
+                            {c.post_time} ·{" "}
+                            {Number(c.cadence_days) < 1
+                              ? "2 / jour"
+                              : `tous les ${c.cadence_days} j`}
+                          </>
+                        )}
                       </span>
                     </div>
                     <YouTubeConnection

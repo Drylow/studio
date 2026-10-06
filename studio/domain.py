@@ -131,9 +131,13 @@ def channel_summary(c, videos, at=None):
         scheduled=len(scheduled),
         next_post=scheduled[0]["post_at"] if scheduled else "",
         days_ahead=(
-            round(max(0, (covered_until - at).total_seconds() / 86400), 1)
-            if covered_until
-            else 0
+            None
+            if c.get("publication_mode") == "news"
+            else (
+                round(max(0, (covered_until - at).total_seconds() / 86400), 1)
+                if covered_until
+                else 0
+            )
         ),
         delivered=sum(v["status"] == "delivered" for v in vs),
         published=sum(v["status"] == "published" for v in vs),
@@ -163,7 +167,7 @@ def overview(store):
                     "message": "Connexion YouTube à terminer",
                 }
             )
-        elif c["ready"] < c["target_stock"]:
+        elif c["publication_mode"] != "news" and c["ready"] < c["target_stock"]:
             alerts.append(
                 {
                     "kind": "stock",

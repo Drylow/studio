@@ -142,8 +142,12 @@ def seed(store):
                 ).lastrowid
             )
             c.execute(
-                "INSERT INTO studio_channels(project_id,key,format,accent,initials,template_key,updated_at) VALUES(?,?,?,?,?,?,?)",
-                (pid, key, fmt, accent, initials, key, now()),
+                "INSERT INTO studio_channels(project_id,key,format,accent,initials,template_key,publication_mode,updated_at) VALUES(?,?,?,?,?,?,?,?)",
+                (
+                    pid, key, fmt, accent, initials, key,
+                    "news" if key in {"mma_en", "football_en"} else "scheduled",
+                    now(),
+                ),
             )
         for p in c.execute(
             "SELECT p.* FROM delamain_projects p LEFT JOIN studio_channels s ON s.project_id=p.id WHERE s.project_id IS NULL"

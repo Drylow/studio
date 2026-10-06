@@ -73,6 +73,20 @@ export function PersonalPlanning(
           nécessaires ; ouvre sa fiche avant de publier.
         </p>
       </div>
+      {channels.some((c) => c.publication_mode === "news") && (
+        <div className="rhythm-intro">
+          <p>
+            <strong>
+              {channels
+                .filter((c) => c.publication_mode === "news")
+                .map((c) => c.name)
+                .join(" · ")}
+            </strong>{" "}
+            : selon l’actualité, sans heure fixe. Aucun créneau suggéré ; seules
+            les vidéos que vous programmez volontairement apparaissent ici.
+          </p>
+        </div>
+      )}
       <div className="rhythm-toolbar">
         <Button
           onClick={() => setStart(shift(start, -7))}

@@ -326,22 +326,26 @@ export function Control(p: PageProps) {
                         ? `Infos fraîches · ${c.freshness_hours} h`
                         : `${c.days_ahead} jour(s) couvert(s)`}
                     </small>
-                    <span className="control-stock-track">
-                      <i
-                        style={{
-                          width:
-                            Math.min(
-                              100,
-                              (c.ready / Math.max(1, c.target_stock)) * 100,
-                            ) + "%",
-                          background: c.accent,
-                        }}
-                      />
-                    </span>
+                    {c.publication_mode !== "news" && (
+                      <span className="control-stock-track">
+                        <i
+                          style={{
+                            width:
+                              Math.min(
+                                100,
+                                (c.ready / Math.max(1, c.target_stock)) * 100,
+                              ) + "%",
+                            background: c.accent,
+                          }}
+                        />
+                      </span>
+                    )}
                   </div>
                   <span>
                     {c.ready}
-                    <small>/{c.target_stock}</small>
+                    {c.publication_mode !== "news" && (
+                      <small>/{c.target_stock}</small>
+                    )}
                   </span>
                 </button>
               ))}
