@@ -29,21 +29,63 @@ groupe connu, mais elle ne permet pas de franchir un écran « This app is block
 Références : [vérification des scopes sensibles et examen manuel](https://developers.google.com/identity/protocols/oauth2/production-readiness/sensitive-scope-verification),
 [Audience et restrictions des comptes](https://support.google.com/cloud/answer/15549945).
 
-## Statistiques sans permission supplémentaire
+## Statistiques publiques par @pseudo
 
-Les fiches et le classement utilisent `channels.list`, `playlistItems.list` et
-`videos.list` avec l'autorisation existante. Aucun scope YouTube Analytics supplémentaire.
-Les vues affichées sont les compteurs cumulés ; les progressions sont leurs différences
-entre deux relevés datés. Les périodes incomplètes, abonnés masqués, corrections négatives,
-erreurs de connexion et données anciennes sont indiqués. Aucun historique n'est inventé.
-Stock, projets et réglages restent consultables avant la connexion Google.
+La page indépendante **Statistiques** utilise YouTube Data API v3 :
+`channels.list(forHandle=...)`, puis la playlist des publications et `videos.list`.
+Une seule clé API de serveur suffit pour toutes les chaînes ; aucun consentement
+OAuth du propriétaire d’une chaîne n’est nécessaire pour lire ces données publiques.
+Le blocage de connexion Google et la vérification Branding ne bloquent pas ce suivi.
 
-Le worker consulte une chaîne échue par passage inactif, environ toutes les 4 heures,
-indépendamment de la pause des publications. Actualiser utilise un délai de 15 minutes
-et un verrou transactionnel, sans accès distant déclenché par les GET du navigateur.
-Les caches sont privés, purgés après 29 jours, lors d'une déconnexion, d'un retrait
-ou d'un changement d'identité YouTube. Les mêmes chaînes reconnectées gardent leurs
-relevés historiques valides. Aucun appel d'upload dans le module de statistiques.
+Sur le site : Statistiques → Configurer la clé. Le formulaire contient les liens
+vers le projet existant et les instructions pour activer YouTube Data API v3,
+créer une clé API et la coller. Le serveur valide une vraie lecture avant de
+l’enregistrer dans la base privée ; seule la présence de la clé est retournée
+au navigateur. Seul Drylow peut la remplacer. Variante de configuration :
+`YOUTUBE_API_KEY` dans l’environnement privé. Limiter la clé à YouTube Data API v3 ;
+les restrictions par référent de site web ne conviennent pas au serveur.
+
+Puis Ajouter une chaîne → son @pseudo ou son lien YouTube. L’association à une
+chaîne du studio est facultative et sert aux filtres Drylow/Kanye. Les compteurs
+actuels de vues, abonnés arrondis ou masqués et vidéos publiques arrivent au premier
+relevé. Les vidéos donnent leurs vues, likes, commentaires et durée publics.
+Un lien déjà suivi ne crée pas un deuxième suivi ni ne réinitialise son historique.
+
+**L’API publique ne donne pas l’historique privé des dernières 48 h ou 7 jours.**
+Les gains affichés sont les différences réellement observées entre les relevés
+datés. Le suivi commence à l’ajout ; les périodes incomplètes et corrections
+négatives sont explicites. Ne pas confondre les vues cumulées d’une vidéo récente
+avec les vues de toute la chaîne gagnées pendant cette période. Durée de visionnage,
+revenus et taux de clics restent dans YouTube Analytics, qui demande OAuth.
+
+Périodes 24 h, 48 h, 7, 14 et 28 jours, classement triable, comparaison des courbes,
+fiche de vidéos, recherche, filtres de responsable et export CSV privé. Maximum
+20 chaînes et 200 dernières publications publiques par chaîne. Le collecteur relève
+les compteurs chaque heure, indépendamment des longs montages et de la pause de
+publication. Une collecte complète utilise au plus 9 unités par chaîne par heure
+(hors retries/ajouts), soit 4 320 unités pour 20 chaînes sur 24 heures. Actualiser
+respecte 15 minutes entre tentatives et un bail transactionnel ; les GET du navigateur
+lisent seulement le cache. Les données restent privées et sont purgées après 29 jours.
+Retirer un suivi supprime ses relevés sans retirer la chaîne du studio. Une déconnexion
+OAuth n’arrête pas ce suivi public, qui est géré séparément dans Statistiques.
+
+Le 6 octobre, aucune clé de lecture publique n’était configurée sur l’hébergement.
+Les tests de compteurs utilisent une base dédiée et Google simulé ; ils ne prouvent
+pas encore un relevé réel. Les anciennes routes de cache lié à OAuth restent privées
+pour compatibilité, mais ne pilotent plus la nouvelle interface Statistiques.
+
+Références officielles : [recherche par handle](https://developers.google.com/youtube/v3/docs/channels/list#forHandle),
+[compteurs publics](https://developers.google.com/youtube/v3/docs/channels#statistics),
+[configuration de l’API](https://developers.google.com/youtube/v3/getting-started),
+[rapports privés Analytics](https://developers.google.com/youtube/analytics/reference/reports/query).
+
+## Limite du raccourci YouTube Studio
+
+Ouvrir YouTube Studio depuis le site ne préremplit pas la vidéo, la miniature,
+le titre ou la description. Cela demanderait encore un envoi et une saisie manuels.
+Ne pas présenter cette proposition temporaire comme « juste cliquer Publier ».
+L’utilisateur n’a pas accepté cette proposition ; ne pas remplacer son objectif de
+publication directe par un autre éditeur ou par un faux envoi automatique.
 
 ## Branding du projet existant
 

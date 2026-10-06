@@ -65,7 +65,6 @@ import { TeamBoard, TeamScope, matchesScope } from "./team-board";
 import { PersonalPlanning } from "./personal-planning";
 import { YouTubeConnection } from "./youtube-connection";
 import { DevelopmentCard, DevelopmentSettings } from "./development";
-import { ChannelRanking } from "./channel-stats";
 
 export type PageProps = {
   refresh: () => Promise<void>;
@@ -149,7 +148,6 @@ export function Channels(p: PageProps) {
         </select>
         <span className="muted small">{list.length} chaînes</span>
       </div>
-      <ChannelRanking {...p} channels={list} />
       {view === "team" ? (
         <TeamBoard {...p} channels={list} />
       ) : (

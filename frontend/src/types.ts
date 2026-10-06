@@ -149,6 +149,7 @@ export type Workspace = {
 export type Page =
   | "overview"
   | "channels"
+  | "statistics"
   | "production"
   | "calendar"
   | "tasks"

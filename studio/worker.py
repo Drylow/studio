@@ -24,6 +24,10 @@ def run(store, once=False):
     owner = uid()
     version = ROOT / "work/studio/runtime-revision"
     started_version = version.read_text() if version.exists() else ""
+    if not once:
+        from studio.public_statistics import start_monitor
+
+        start_monitor(store)
     while True:
         if not once and version.exists() and version.read_text() != started_version:
             # The cron supervisor starts a fresh process with the newly deployed code.

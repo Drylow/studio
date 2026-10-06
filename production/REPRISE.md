@@ -2,11 +2,18 @@
 
 ## Priorité actuelle — 6 octobre 2026
 
-Fiches statistiques ajoutées à Chaînes (clic sur le nom ou Statistiques) et classement
-compact des progressions de vues. Compteurs réels Data API, relevés 4 heures, historique
-1/7/28 jours depuis le premier relevé, périodes incomplètes visibles, cache privé 29 jours.
-Pas de scope supplémentaire ni données fictives en production. Stock/projets disponibles
-même sans connexion. Voir `GOOGLE_YOUTUBE.md` et `studio/channel_stats.py`.
+À la demande explicite de l’utilisateur, la rubrique principale **Statistiques**
+remplace les petites fiches dépendantes de la connexion OAuth. Recherche officielle
+par @pseudo : YouTube Data API v3 `channels.list(forHandle=...)`, une clé API privée
+pour toutes les chaînes, aucun compte à connecter pour les chiffres publics.
+Périodes 24/48 h, 7/14/28 jours, comparaison et classement des chaînes, détail des
+200 dernières vidéos, filtres Drylow/Kanye, likes/commentaires publics, CSV privé.
+Relevés horaires indépendants des montages et de la pause, conservation 29 jours.
+Les gains commencent au premier relevé et ne constituent pas l’historique privé
+YouTube Analytics. Le serveur n’a pas encore de clé API de lecture : la configurer
+une seule fois sur Statistiques → Configurer la clé, avec les instructions du formulaire.
+Ne pas redemander OAuth pour ce suivi. Voir `studio/public_statistics.py` et
+`GOOGLE_YOUTUBE.md`. Les essais utilisent exclusivement des données synthétiques.
 
 Search Console confirme la propriété du domaine après ajout du TXT, à conserver.
 Google Branding utilise encore l'ancien état et demande 24 heures : réessayer le

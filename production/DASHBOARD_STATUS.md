@@ -3,32 +3,41 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
-## Fiches et progression des chaînes — 6 octobre 2026
+## Page Statistiques par @pseudo — 6 octobre 2026
 
-Dans Chaînes, cliquer le nom ou Statistiques ouvre une fiche : vues cumulées,
-abonnés (arrondis ou masqués par YouTube), vidéos publiques, courbe de relevés,
-progression sur 1/7/28 jours, dernières vidéos YouTube, stock et projets du studio.
-Un classement compact des trois progressions les plus élevées suit les filtres
-de responsable et d'autonomie. Pas de rubrique principale supplémentaire.
+Une rubrique indépendante Statistiques suit les chaînes via la lecture publique
+officielle YouTube Data API v3, sans OAuth. Une seule clé API privée est requise pour
+tout le studio. Le formulaire réservé à Drylow explique où la créer et vérifie une
+lecture Google avant de la conserver côté serveur. Ajouter un @pseudo ou un lien
+suffit ensuite, avec une association facultative aux chaînes Drylow/Kanye.
 
-Les chiffres utilisent les permissions Data API existantes et commencent à la
-première autorisation réelle : aucune histoire antérieure ou valeur fictive.
-Actualisation de fond toutes les 4 heures, bouton Actualiser avec délai de 15 minutes,
-cache privé de 29 jours et contrôle de l'identité YouTube avant sauvegarde.
-L'accès Google actuellement bloqué empêche encore de récupérer les vrais chiffres.
-La validation Search Console est confirmée ; Branding demande d'attendre 24 heures
-pour son cache. Voir `GOOGLE_YOUTUBE.md` pour les étapes et la voie d'examen manuel.
+La page propose les périodes 24/48 h et 7/14/28 jours, un classement triable,
+une comparaison des courbes, les compteurs actuels, les variations observées,
+le détail des dernières vidéos, likes/commentaires publics, durée, recherche,
+filtres de responsable, retrait du suivi et export CSV privé. Elle suit jusqu’à
+20 chaînes et 200 vidéos par chaîne. Les graphiques mobiles et tableaux ont un
+espace de défilement propre, sans élargir toute la page.
 
-Validation : 111 tests Python (statistiques, sécurité, connexion, stock, attribution,
-actualité), compilation TypeScript/Vite, parcours des fiches à 320/390/768/1440 px
-et parcours YouTube simulé aux mêmes tailles. Aucun appel réel à Google pendant
-ces tests ; les relevés navigateur sont exclusivement dans une base de test dédiée.
+Les relevés horaires commencent à l’ajout et restent 29 jours. Les périodes
+incomplètes et compteurs inconnus sont visibles. Le suivi continue pendant la pause
+des publications ou un long montage. Aucun historique privé antérieur, chiffre
+Analytics ou valeur de démonstration n’est affiché dans le vrai studio.
+
+La clé de lecture est encore absente de l’hébergement : une vraie lecture reste
+à vérifier après son enregistrement. Cela est indépendant du blocage OAuth pour
+la publication. La validation Search Console est confirmée ; le contrôle Branding
+Google demande 24 heures pour son cache. Voir `GOOGLE_YOUTUBE.md`.
+
+Validation locale réussie : 127 tests Python (suivi public, cache,
+sécurité, connexion, stock, attribution, actualité), compilation TypeScript/Vite,
+parcours Statistiques à 320/390/768/1440 px et connexions YouTube simulées.
+Les fixtures navigateur restent dans une base séparée et ne contactent pas Google.
 
 ## Interface simplifiée — 6 octobre 2026
 
 À la demande de l'utilisateur, l'accueil présente seulement les actions du moment,
-trois compteurs de vidéos et les trois dernières fiches. Six rubriques principales :
-Accueil, Chaînes, Vidéos, Calendrier, Tâches et Delamain. Radar, studio vidéo, bibliothèque
+trois compteurs de vidéos et les trois dernières fiches. Sept rubriques principales :
+Accueil, Chaînes, Statistiques, Vidéos, Calendrier, Tâches et Delamain. Radar, studio vidéo, bibliothèque
 et contrôle restent dans « Autres outils » ; Réglages reste directement accessible.
 La liste des vidéos et l'agenda sont les vues initiales sur ordinateur et téléphone.
 Les réglages avancés et historiques sont repliés ; connexion YouTube et sécurité

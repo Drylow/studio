@@ -27,6 +27,7 @@ import {
   ShieldCheck,
   Bell,
   ShieldAlert,
+  BarChart3,
 } from "lucide-react";
 import { api, dateLabel, setCsrf } from "./api";
 import { Login } from "./private-access";
@@ -54,7 +55,7 @@ import {
 import type { PageProps } from "./pages";
 import { Newsroom } from "./newsroom";
 import { Control } from "./control";
-import { ChannelDetail } from "./channel-stats";
+import { StatisticsPage } from "./statistics-page";
 import "./style.css";
 import "./workspace.css";
 
@@ -71,6 +72,12 @@ const nav: { key: Page; path: string; label: string; icon: React.ReactNode }[] =
       path: "/channels",
       label: "Chaînes",
       icon: <Radio size={18} />,
+    },
+    {
+      key: "statistics",
+      path: "/statistics",
+      label: "Statistiques",
+      icon: <BarChart3 size={18} />,
     },
     {
       key: "control",
@@ -156,7 +163,7 @@ function App() {
   const [editingTask, setEditingTask] = useState<string | null>(null);
   const [creatingChannel, setCreatingChannel] = useState(false);
   const [editingChannel, setEditingChannel] = useState<number | null>(null);
-  const [openedChannel, setOpenedChannel] = useState<number | null>(null);
+  const [statisticsStudio, setStatisticsStudio] = useState<number | null>(null);
   const [openedVideo, setOpenedVideo] = useState<string | null>(null);
   const [scheduleDay, setScheduleDay] = useState<{
     day: string;
@@ -338,7 +345,10 @@ function App() {
     },
     openVideo: (v) => setOpenedVideo(v.id),
     editChannel: (c) => setEditingChannel(c.id),
-    openChannel: (c) => setOpenedChannel(c.id),
+    openChannel: (c) => {
+      setStatisticsStudio(c.id);
+      go("statistics");
+    },
     newChannel: () => setCreatingChannel(true),
     agent,
     schedule: (day, channel, postAt) =>
@@ -346,7 +356,6 @@ function App() {
   };
   const selectedVideo = data.videos.find((v) => v.id === openedVideo);
   const selectedChannel = data.channels.find((c) => c.id === editingChannel);
-  const detailChannel = data.channels.find((c) => c.id === openedChannel);
   const query = search.toLowerCase();
   const searchVideos = query
     ? data.videos
@@ -384,6 +393,7 @@ function App() {
               [
                 "overview",
                 "channels",
+                "statistics",
                 "production",
                 "calendar",
                 "tasks",
@@ -398,7 +408,10 @@ function App() {
                   (page === n.key ? "active" : "") +
                   (n.key === "settings" ? " settings-nav" : "")
                 }
-                onClick={() => go(n.key)}
+                onClick={() => {
+                  if (n.key === "statistics") setStatisticsStudio(null);
+                  go(n.key);
+                }}
                 aria-current={page === n.key ? "page" : undefined}
               >
                 {n.icon}
@@ -573,6 +586,8 @@ function App() {
             <Control {...p} />
           ) : page === "channels" ? (
             <Channels {...p} />
+          ) : page === "statistics" ? (
+            <StatisticsPage {...p} initialStudio={statisticsStudio} />
           ) : page === "production" ? (
             <Production {...p} />
           ) : page === "calendar" ? (
@@ -687,14 +702,6 @@ function App() {
       {creatingChannel && (
         <NewChannel close={() => setCreatingChannel(false)} mutate={mutate} />
       )}{" "}
-      {detailChannel && (
-        <ChannelDetail
-          key={detailChannel.id}
-          {...p}
-          channel={detailChannel}
-          close={() => setOpenedChannel(null)}
-        />
-      )}
       {selectedChannel && (
         <ChannelForm
           channel={selectedChannel}
@@ -750,8 +757,8 @@ function App() {
                 key={c.id}
                 onClick={() => {
                   setSearchOpen(false);
-                  go("channels");
-                  setOpenedChannel(c.id);
+                  setStatisticsStudio(c.id);
+                  go("statistics");
                 }}
               >
                 <ChannelMark channel={c} size="small" />

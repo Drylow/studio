@@ -889,6 +889,9 @@ def create_app(config=None):
     from studio.channel_stats import register as register_channel_stats
 
     register_channel_stats(app, store)
+    from studio.public_statistics import register as register_public_statistics
+
+    register_public_statistics(app, store, owner)
     from studio.development import register as register_development
 
     register_development(app, store, owner)
@@ -960,6 +963,7 @@ def create_app(config=None):
 
     @app.get("/")
     @app.get("/channels")
+    @app.get("/statistics")
     @app.get("/production")
     @app.get("/calendar")
     @app.get("/tasks")

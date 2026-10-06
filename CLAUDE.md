@@ -163,8 +163,8 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   Le 6 octobre, l'utilisateur choisit `publication_mode=news` pour Cage Dispatch et
   Pitch Dispatch : selon l'actualité, sans heure fixe, cadence ou stock cible.
   Ne pas inventer de créneaux pour ces chaînes ni remettre une publication quotidienne.
-  Simplification demandée le 6 octobre : six entrées principales (Accueil, Chaînes,
-  Vidéos, Calendrier, Tâches, Delamain), puis « Autres outils » pour radar, studio vidéo,
+  Simplification demandée le 6 octobre, puis ajout explicite de Statistiques : sept
+  entrées principales (Accueil, Chaînes, Statistiques, Vidéos, Calendrier, Tâches, Delamain), puis « Autres outils » pour radar, studio vidéo,
   bibliothèque et contrôle. Réglages accessibles en bas du menu. Accueil limité aux
   actions utiles et dernières vidéos ; détails techniques repliés, accessibles au besoin.
   Ne pas réintroduire des panneaux ou indicateurs supplémentaires sur l'accueil.
