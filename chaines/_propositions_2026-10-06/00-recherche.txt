@@ -1,0 +1,107 @@
+RECHERCHE ET LIMITES - 2026-10-06
+
+METHODES
+Algrow : catalogue populaire de Rome Unscrolled, recherches YouTube ciblees, analyse video.
+Nexlev : transcript de la video Rome, recherches complementaires Gotham et routes commerciales,
+decouverte semantique de chaines historiques. Les comptes rendus sont resumes dans recherche.json.
+Web : sources patrimoniales pour verifier que les angles historiques ont une base documentaire.
+Les titres proposes ne constituent pas encore une recherche historique episode par episode.
+
+REFERENCE PRINCIPALE
+https://www.youtube.com/watch?v=U_eV4WbL6Vw
+What Did People in Ancient Rome Actually Do All Day? : 1 879 812 vues ; 36:13 ; 23 septembre 2026.
+Autres videos du catalogue : froid des soldats 626 904 vues ; sommeil pres des ennemis 313 817.
+Attention : dates et anciennete differentes, donc comparaison non normalisee.
+
+Lecture de la structure, a partir du transcript et de l'analyse Algrow :
+- 0:00 : situation sensorielle et obligation matinale avant l'explication historique.
+- Environ 2:46 : reseau de patronage et dependance materielle.
+- Environ 7:11-12:00 : logement, eau et travail ; la ville devient un systeme concret.
+- Environ 12:50-20:35 : hygiene et nourriture ; les objets expliquent les pratiques.
+- Environ 20:36-30:05 : loisirs et differences de condition ; attention aux generalisations.
+- Environ 30:06 : retour a la nuit ; les nuisances prolongent le probleme initial.
+- Fin : contraste entre confort prive moderne et vie collective antique.
+Ces plages sont des reperes de lecture approximatifs, pas des chapitres officiels a reutiliser.
+Le film s'adresse au spectateur a la deuxieme personne, mais decrit plusieurs groupes sociaux.
+Ne pas transformer cette reconstruction composite en biographie attestee d'un individu.
+
+Analyse visuelle Algrow : personnages simplifies sur des decors illustres et montage proche
+des notions racontees. Ses estimations de cadence de plans n'ont pas ete mesurees image par image.
+Les explications historiques de l'analyse IA ne sont pas des sources : verifier independamment,
+notamment les pratiques des latrines, chiffres de mortalite, heures, prix et interdictions de circulation.
+
+SIGNAL 1 : NAVIRES
+SandRhoman History : How Sailors Went to the Loo in the Age of Sail,
+2 597 814 vues dans le resultat Algrow, video d'environ un an ; 9:44.
+https://www.youtube.com/watch?v=kRGuBpphVEo
+Animagraffs : How an 18th Century Sailing Warship Works (HMS Victory),
+14 989 109 vues, video d'environ trois ans ; 25:27.
+https://www.youtube.com/watch?v=4Nr1AgIfajI
+Ces succes montrent une curiosite pour les systemes pratiques a bord ; ils ne garantissent
+pas des resultats identiques pour un POV cartoon. Concurrence forte sur la vie des marins.
+Base institutionnelle : Royal Museums Greenwich explique les quarts et leur rotation.
+https://www.rmg.co.uk/stories/maritime-history/what-are-watches-on-board-ship
+Ne pas appliquer une organisation de la Royal Navy a tous les navires et toutes les epoques.
+
+SIGNAL 2 : VILLES DE NUIT
+The Stache Chronicles : Inside the Medieval Night: What People Did After Dark,
+407 541 vues dans le resultat Algrow, environ un an ; 10:59.
+https://www.youtube.com/watch?v=ug45kmZMGvA
+Worlds Before Us : Why You Wouldn't Survive a Night on Medieval London's Streets in 1180,
+30 790 vues, environ deux mois ; 18:32.
+https://www.youtube.com/watch?v=UDZeHTVcxEw
+Les videos d'ambiance et de jeux remontent aussi dans la recherche : exclues du signal narratif.
+Base primaire : facture/carte de commerce d'un nightman londonien, octobre 1750, London Museum.
+https://www.londonmuseum.org.uk/collections/v/object-449157/william-lewis-tallow-chandler/
+Elle confirme un metier et un contexte precis, pas toutes les habitudes nocturnes d'une ville.
+
+SIGNAL 3 : COULISSES DU LUXE
+J. Draper : A Deep Dive Into Victorian Servants, 572 211 vues, environ quatre ans ; 39:59.
+https://www.youtube.com/watch?v=2RxwwC3c89k
+History Tea Time : Servants in the time of Downton Abbey | Victorian & Edwardian Era,
+490 198 vues, environ un an ; 29:02.
+https://www.youtube.com/watch?v=tuuDxDlBf_s
+Interet documente mais concurrence directe. Notre episode suit un service et ses dependances,
+pas un catalogue de souffrances ou une biographie generale de domestique.
+Base institutionnelle : fonctions et responsabilites du majordome chez English Heritage.
+https://www.english-heritage.org.uk/visit/inspire-me/blog/blog-posts/could-you-be-a-butler/
+Autre piste : service wing d'Audley End, routines de cuisine, conservation et nettoyage.
+https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/families/
+
+SIGNAL 4 : ROUTES COMMERCIALES
+Knowledgia : How did The Silk Road Actually Work?, 3 138 443 vues via Nexlev, environ quatre ans.
+https://www.youtube.com/watch?v=J-pfeFbssMw
+CrashCourse : The Silk Road and Ancient Trade, 6 195 650 vues, environ quatorze ans.
+https://www.youtube.com/watch?v=vfe-eNq-Qyg
+En revanche, trois comparables POV recents/petits trouves ont seulement 114, 20 et 16 vues :
+https://www.youtube.com/watch?v=wrBcv-ZUnJo
+https://www.youtube.com/watch?v=0KIaLc14H5o
+https://www.youtube.com/watch?v=OzEFPu2-QkY
+Donc signal general seulement, pas validation du format Caravan Ledger. Pari experimental.
+Une requete Algrow vide a ete elargie avec Nexlev : absence de resultat != absence de concurrence.
+Base institutionnelle : UNESCO, caravansereils persans, fonction d'accueil et implantation
+en relation avec l'eau, la geographie et la securite.
+https://whc.unesco.org/en/list/1668/
+Ne pas raconter un unique marchand parcourant automatiquement toute la Chine jusqu'a l'Europe.
+
+SIGNAL 5 : GOTHAM
+Nexlev remonte surtout du gameplay, des dialogues de sbires et des sketches courts.
+Exemple : Batman but it's the enemy POV, 197 754 vues ; 2:06 ; environ huit mois.
+https://www.youtube.com/watch?v=yxYtpuc97eY
+Ce signal est adjacent : pas une preuve de demande pour un episode original de 10-15 minutes.
+Le precedent dossier du 5 octobre nuance aussi l'idee : Quota Ladder utilise deja le cout
+cache et la vie quotidienne ; notre difference doit etre le personnage et ses consequences.
+Le pilote sert a tester l'execution, pas a annoncer une niche gagnee d'avance.
+
+DECOUVERTE NEXLEV
+Exemples de chaines du resultat semantique, mesures du fournisseur et non Analytics internes :
+Ancient Life : moyenne 103 986 vues, mediane 23 000 ; Egypte deja representee.
+Ancient World Uncovered : moyenne 27 018, mediane 6 200 ; Vikings/chauffage deja representes.
+Before 2000s : moyenne 11 652, mediane 959 ; vie medievale, logement et travail deja representes.
+Pas de conclusion quantitative sur une saturation globale a partir de dix chaines recommandees.
+Estimations de revenu et de RPM volontairement exclues du dossier.
+
+CONCLUSION
+La competence a mutualiser est la realisation 2D coherente, pas cinq copies du meme script.
+Les meilleurs angles changent la question, le point de vue, le deroulement et l'issue du recit.
+Les noms sont provisoires, les titres sont des hypotheses, les faits se sourcent avant narration.

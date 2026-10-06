@@ -1,0 +1,108 @@
+COMMENT PRODUIRE NOS VIDEOS 2D
+Plan de production propose, pas annonce de fonctionnalites deja toutes validees.
+
+CE QUI EXISTE
+Le projet genere script, voix, references de personnages, images et montage.
+Un test precedent de trois minutes a ete rendu ; il ne valide pas a lui seul la qualite
+d'un episode long avec plusieurs scenes et une continuite de decor parfaite.
+Le style clean_whitehead_pov et le preset quota_ladder_en contiennent la base visuelle validee.
+services/ai.py accepte des images de reference ; le chemin d'edition par CLI Proxy a ete teste.
+services/pov_engine.py assemble les references de style et de casting pour les plans.
+services/align.py propose un alignement sur l'audio reel, mais son fonctionnement et son
+branchement dans le parcours POV retenu doivent etre verifies lors du pilote.
+Le decor maitre par scene et son suivi d'etat ne sont pas encore prouves de bout en bout.
+
+1. CONTENU AVANT IMAGES
+Une video = une promesse et une question centrale. Recherche, synopsis, puis script relu.
+Historique : lieu, date, metier, condition sociale et sources propres a cet episode.
+Fiction : version de l'univers explicite, personnage invente ; pas de faux evenement canonique.
+Chaque partie change la situation : obstacle, choix, effet concret, nouvelle contrainte.
+Pas de remplissage pour atteindre trente minutes, pas de simple liste de faits.
+
+2. CASTING FIXE
+Creer les portraits et silhouettes avant les plans. 2-4 personnages principaux au debut.
+Chaque personnage a un identifiant, une tenue, une couleur et des proportions fixes.
+Toutes les tetes sont blanches, parfaitement rondes, avec points noirs et bouche droite.
+Pas de cheveux, nez, oreilles ni sourcils. Peau #FFFFFF, pas d'ombres sur le visage ou la peau.
+Corps adultes, manches et pantalons longs, mains blanches simples. Pas d'enfants par defaut.
+Reconnaissance par tenue, silhouette, accessoire et comportement, pas par detail facial.
+Toute tenue changee doit etre justifiee dans le script et posseder sa propre reference.
+
+3. DECORS MAITRES
+Creer un decor vide valide pour chaque lieu. Pour le pilote : trois lieux, peu d'objets.
+Fixer emplacement des portes, fenetres, mobilier, eclairage et palette ; consigner leur etat.
+Generer des angles derives DU decor maitre, pas de nouvelles pieces imaginees independamment.
+Pour un gros changement d'angle, valider une nouvelle vue du meme lieu avant ses variantes.
+Un vase casse reste casse ; une caisse ouverte ne se referme pas au plan suivant sans action.
+Si un decor doit etre strictement identique : conserver le fond original au montage et
+composer les personnages par-dessus. C'est une methode a tester, pas une capacite deja livree.
+Une reference guide le modele ; elle ne garantit jamais seule la continuite parfaite.
+
+4. GENERATION VIA TON CLI PROXY
+Script et images via le proxy configure, voix via Algrow. Aucune nouvelle cle dans ces fichiers.
+Prompt de plan = action precise + casting visible + decor/angle/etat + style valide.
+Joindre les vraies images de casting et de decor, pas seulement leurs descriptions.
+Utiliser le chemin d'edition/reference pour les changements au sein d'une meme scene.
+Regenerer seulement le plan fautif ; conserver les autres et les references validees.
+Pas de reprise d'images ou d'extraits des chaines d'inspiration.
+Les dimensions effectivement rendues par le proxy doivent etre controlees ; ne pas
+confondre format demande, resolution native obtenue et export final 16:9.
+
+5. VOIX, TRANSCRIPT ET IMAGES
+Verrouiller le script, produire la voix, puis obtenir les temps de l'audio effectivement livre.
+Verifier les noms, la ponctuation orale, les phrases manquantes et les pauses.
+Decouper en unites de sens, pas seulement en blocs de duree identique.
+Chaque plan conserve : id de phrase, debut/fin audio, personnage, lieu, action et objet-cle.
+Une phrase sur le salaire montre la paie ; une phrase sur une porte bloquee montre cette porte.
+Une comparaison peut exiger deux plans, un geste lent peut tenir sur plusieurs phrases.
+Cadence choisie editorialement ; pour dix minutes, ordre de grandeur de depart 80-130 plans,
+pas un quota fixe et pas une mesure de Rome Unscrolled. Recadrages d'une image possible
+seulement s'ils apportent une information ou un rythme, pas pour recycler sans raison.
+Si l'alignement reel est absent, ne pas livrer une estimation automatique comme exacte.
+
+6. MONTAGE ET SON
+Plans illustres, coupes, zooms doux, quelques inserts d'objets ; mouvements sobres.
+Voix clairement devant la musique ; ambiances et bruitages utiles, sans bruit constant.
+Transitions motivees par une action ou une phrase. Sous-titres exacts et lisibles si retenus.
+Ce format est un recit illustre/motion comic, PAS un dessin anime complet avec acteurs
+animes, marche continue, bagarres choregraphiees ou synchronisation labiale.
+Ajouter de l'animation ponctuelle plus tard demande une etape et un controle supplementaires.
+
+EXEMPLE GOTHAM : PREMIERE NUIT D'UN PETIT MECHANT
+Concept fictionnel, non canonique ; chronologie indicative AVANT generation de la voix.
+Cast : YOU, veste verte ; MARA, collegue en veste rouge ; SUPERVISOR, manteau gris.
+Decors : appartement, quai/entrepot, arriere-salle de paie. Nuit lisible, pas noir illisible.
+
+00:00-00:12 - Voix : le loyer est deja en retard et le travail commence cette nuit.
+Image : YOU dans son appartement simple, regarde une enveloppe et prend sa veste.
+00:12-00:25 - Voix : la mission devait seulement consister a garder une porte.
+Image : entrepot maitre, meme porte a droite ; MARA remet les consignes a YOU.
+00:25-00:40 - Voix : la personne qui devait te relever n'est pas venue.
+Image : angle derive du meme quai ; YOU attend, puis entend un bruit hors champ.
+00:40-00:55 - Voix : le chef exige que la caisse soit mise a l'abri avant le depart.
+Image : meme caisse et meme porte ; action lisible, pas de combat inutile.
+00:55-01:15 - Voix : le collegue disparait, la mission ne vaut plus la somme promise.
+Image : retour au meme cadre, place vide de MARA ; YOU hesite entre aider et finir.
+01:15-01:35 - Voix : la caisse arrive, mais la paie change encore les regles.
+Image : arriere-salle maitre ; remise d'une enveloppe, chiffre ajoute au montage seulement
+si le script le fixe. Pas de faux petit texte genere sur dix accessoires.
+La suite raconte le choix et son cout : dette, confiance d'un collegue, sortie plus difficile.
+On n'a pas besoin de montrer Batman ou le Joker a chaque plan pour raconter Gotham.
+Les personnages connus, si retenus, necessitent des tests de style/generation et une version
+coherente de l'univers ; aucun contournement des refus du fournisseur.
+
+CONTROLE AVANT LIVRAISON
+Regarder toutes les planches puis la video complete, pas seulement trois belles images.
+Verifier visage/peau, bras/mains, tenues, proportions, objets et geographie de chaque decor.
+Verifier ce qui est montre au moment exact ou la narration le decrit et les changements d'etat.
+Verifier absence de plans repetes gratuitement, zooms coupant les tetes et silences accidentels.
+Histoire : gestes, costumes et architecture correspondent au lieu/date retenus.
+Conserver dans le cache : script approuve, sources, voix, timings, casting, decors,
+prompts, references par plan, images validees, timeline, rendu et notes de controle.
+Une modification de script invalide les timings et plans dependants, pas tous les autres medias.
+Le futur manifeste de cache doit enregistrer ces dependances avant une production par lots.
+
+ORDRE APRES APPROBATION
+Un test court -> corrections -> premier episode complet -> controle -> lots de quelques episodes.
+Le test court valide l'execution visuelle, pas le succes commercial de la niche.
+Les couts, temps et nombres de reprises sont mesures avant de programmer cinquante videos.
