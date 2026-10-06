@@ -25,10 +25,15 @@ les contrôles et la publication dans l’interface réelle. La sélection et la
 entièrement automatiques des actualités restent également à terminer.
 La pause actuelle et les trois vidéos déjà postées sont conservées.
 
-Validation locale : 129 tests serveur, compilation TypeScript/Vite et parcours
+Validation locale : 130 tests serveur, compilation TypeScript/Vite et parcours
 YouTube simulé à 320/390/768/1440 px. Le nouveau helper a également exécuté un
 diagnostic sur le vrai PC : emplacement de l’agent et Chrome confirmés, sans ouvrir
 de navigateur ni lire de session Google. Ces tests ne prouvent aucun upload réel.
+
+Le premier lancement réel a ouvert Chrome sur le PC et a attendu la connexion de
+l’utilisateur, puis a expiré sans chaîne confirmée. Aucun envoi n’a été demandé.
+Le contrôle utilise l’URL de Studio et les liens de sa navigation vers la même
+chaîne, sans dépendre du nom d’un composant de tableau de bord susceptible de changer.
 
 ## Page Statistiques par @pseudo — 6 octobre 2026
 

@@ -54,6 +54,29 @@ def dashboard_channel(url):
         return ""
 
 
+def authenticated_dashboard(page, expected):
+    """Confirm both Studio's location and its authenticated navigation context.
+
+    Studio versions can use different dashboard tags. The visible app and its
+    channel-scoped navigation links provide a second proof without reading any
+    account configuration, cookie, login field, email or private video metadata.
+    An arbitrary channel URL with another channel's sidebar must fail closed.
+    """
+    if dashboard_channel(page.url) != expected:
+        return False
+    try:
+        if not page.locator("ytcp-app").is_visible():
+            return False
+        links = page.locator("ytcp-navigation-drawer a[href]").evaluate_all(
+            "items => items.map(item => item.href)"
+        )
+        channels = [dashboard_channel(link) for link in links]
+        channels = [channel for channel in channels if channel]
+        return len(channels) >= 2 and set(channels) == {expected}
+    except Exception:
+        return False
+
+
 def private_directory(path):
     if path.is_symlink():
         raise PairingError("unsafe_profile")
@@ -187,11 +210,7 @@ def connect(data, job):
                             if actual != data["channel_id"]:
                                 other_channel = True
                                 continue
-                            try:
-                                visible = page.locator("ytcp-channel-dashboard").is_visible(timeout=1500)
-                            except Exception:
-                                visible = False
-                            if visible:
+                            if authenticated_dashboard(page, data["channel_id"]):
                                 emit(job, data, "ready", "dashboard_confirmed", channel_id=actual,
                                      device_id=device, dashboard_seen=True)
                                 return

@@ -8,9 +8,9 @@ import tarfile
 import tempfile
 import time
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
-from production.pc_youtube import PairingError, dashboard_channel, validate_manifest
+from production.pc_youtube import PairingError, authenticated_dashboard, dashboard_channel, validate_manifest
 from studio.pc_youtube import apply_result, latest
 from studio.worker import worker_application
 
@@ -161,6 +161,22 @@ class PCPairingTests(unittest.TestCase):
 
 
 class BrowserTrustTests(unittest.TestCase):
+    def test_studio_navigation_must_confirm_the_same_channel_as_the_url(self):
+        page = Mock(url="https://studio.youtube.com/channel/" + CID)
+        def locator(selector):
+            if selector == "ytcp-channel-dashboard": return Mock(is_visible=Mock(return_value=False))
+            if selector == "ytcp-app": return Mock(is_visible=Mock(return_value=True))
+            return Mock(evaluate_all=Mock(return_value=["https://studio.youtube.com/channel/" + CID + suffix for suffix in ["/videos", "/analytics"]]))
+        page.locator.side_effect = locator
+        self.assertTrue(authenticated_dashboard(page, CID))
+        page.url = "https://studio.youtube.com/channel/UC" + "b" * 22
+        self.assertFalse(authenticated_dashboard(page, CID))
+        page.url = "https://studio.youtube.com/channel/" + CID
+        page.locator.side_effect = lambda selector: Mock(is_visible=Mock(return_value=selector == "ytcp-app"), evaluate_all=Mock(return_value=["https://studio.youtube.com/channel/UC" + "b" * 22 + suffix for suffix in ["/videos", "/analytics"]]))
+        self.assertFalse(authenticated_dashboard(page, CID))
+        page.locator.side_effect = RuntimeError("Navigation unavailable")
+        self.assertFalse(authenticated_dashboard(page, CID))
+
     def test_only_real_https_studio_channel_urls_identify_a_channel(self):
         self.assertEqual(dashboard_channel("https://studio.youtube.com/channel/" + CID), CID)
         for value in ["https://accounts.google.com/channel/" + CID, "https://studio.youtube.com.evil.org/channel/" + CID,
