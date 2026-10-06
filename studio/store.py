@@ -115,6 +115,14 @@ class Store:
             CREATE TABLE IF NOT EXISTS studio_login_attempts(ip TEXT NOT NULL, username TEXT NOT NULL, created_at TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS studio_oauth(state TEXT PRIMARY KEY, user_id TEXT NOT NULL,
                 channel_id INTEGER NOT NULL, expires_at TEXT NOT NULL);
+            CREATE TABLE IF NOT EXISTS studio_channel_snapshots(channel_id INTEGER NOT NULL REFERENCES studio_channels(project_id),
+                youtube_id TEXT NOT NULL, captured_at TEXT NOT NULL, views INTEGER,
+                subscribers INTEGER, videos INTEGER, PRIMARY KEY(channel_id,captured_at));
+            CREATE INDEX IF NOT EXISTS studio_channel_history ON studio_channel_snapshots(channel_id,youtube_id,captured_at);
+            CREATE TABLE IF NOT EXISTS studio_channel_sync(channel_id INTEGER PRIMARY KEY REFERENCES studio_channels(project_id),
+                checked_at TEXT NOT NULL DEFAULT '', lease_until TEXT NOT NULL DEFAULT '',
+                lease_id TEXT NOT NULL DEFAULT '', error TEXT NOT NULL DEFAULT '',
+                videos_json TEXT NOT NULL DEFAULT '[]', videos_at TEXT NOT NULL DEFAULT '');
             CREATE TABLE IF NOT EXISTS studio_worker(id INTEGER PRIMARY KEY CHECK(id=1), heartbeat TEXT DEFAULT '',
                 message TEXT DEFAULT 'Hors ligne');
             INSERT OR IGNORE INTO studio_worker(id) VALUES(1);
@@ -198,6 +206,7 @@ class Store:
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(2,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(6,?)", (now(),))
             c.execute("INSERT OR IGNORE INTO studio_schema VALUES(7,?)", (now(),))
+            c.execute("INSERT OR IGNORE INTO studio_schema VALUES(8,?)", (now(),))
         self.retire_defaults()
 
     def retire_defaults(self):
@@ -226,6 +235,9 @@ class Store:
                 "UPDATE studio_channels SET retired=1,paused=1,enabled=0,responsible_id=NULL,revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), channel_id),
             )
+            from studio.channel_stats import clear
+
+            clear(c, channel_id)
             c.execute(
                 "UPDATE studio_jobs SET cancel_requested=1,status=CASE WHEN status='queued' THEN 'cancelled' ELSE status END,message='Chaîne retirée du studio',updated_at=? WHERE status IN ('queued','running') AND (video_id IN (SELECT id FROM studio_videos WHERE channel_id=?) OR (kind='news_scan' AND json_extract(payload,'$.channel_id')=?))",
                 (now(), channel_id, channel_id),

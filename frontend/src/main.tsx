@@ -54,6 +54,7 @@ import {
 import type { PageProps } from "./pages";
 import { Newsroom } from "./newsroom";
 import { Control } from "./control";
+import { ChannelDetail } from "./channel-stats";
 import "./style.css";
 import "./workspace.css";
 
@@ -155,6 +156,7 @@ function App() {
   const [editingTask, setEditingTask] = useState<string | null>(null);
   const [creatingChannel, setCreatingChannel] = useState(false);
   const [editingChannel, setEditingChannel] = useState<number | null>(null);
+  const [openedChannel, setOpenedChannel] = useState<number | null>(null);
   const [openedVideo, setOpenedVideo] = useState<string | null>(null);
   const [scheduleDay, setScheduleDay] = useState<{
     day: string;
@@ -336,6 +338,7 @@ function App() {
     },
     openVideo: (v) => setOpenedVideo(v.id),
     editChannel: (c) => setEditingChannel(c.id),
+    openChannel: (c) => setOpenedChannel(c.id),
     newChannel: () => setCreatingChannel(true),
     agent,
     schedule: (day, channel, postAt) =>
@@ -343,6 +346,7 @@ function App() {
   };
   const selectedVideo = data.videos.find((v) => v.id === openedVideo);
   const selectedChannel = data.channels.find((c) => c.id === editingChannel);
+  const detailChannel = data.channels.find((c) => c.id === openedChannel);
   const query = search.toLowerCase();
   const searchVideos = query
     ? data.videos
@@ -683,6 +687,14 @@ function App() {
       {creatingChannel && (
         <NewChannel close={() => setCreatingChannel(false)} mutate={mutate} />
       )}{" "}
+      {detailChannel && (
+        <ChannelDetail
+          key={detailChannel.id}
+          {...p}
+          channel={detailChannel}
+          close={() => setOpenedChannel(null)}
+        />
+      )}
       {selectedChannel && (
         <ChannelForm
           channel={selectedChannel}
@@ -739,7 +751,7 @@ function App() {
                 onClick={() => {
                   setSearchOpen(false);
                   go("channels");
-                  setEditingChannel(c.id);
+                  setOpenedChannel(c.id);
                 }}
               >
                 <ChannelMark channel={c} size="small" />

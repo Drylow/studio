@@ -1,0 +1,297 @@
+.channel-ranking {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.channel-ranking header,
+.stats-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.channel-ranking h2,
+.stats-section-heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 6px 0;
+  font-size: 17px;
+}
+.channel-ranking select,
+.channel-detail select {
+  width: auto;
+  min-height: 42px;
+}
+.stats-empty {
+  color: var(--muted);
+  margin: 16px 0 4px;
+  line-height: 1.65;
+}
+.ranking-list {
+  margin-top: 14px;
+}
+.ranking-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 14px 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+}
+.ranking-row:hover .ranking-name strong,
+.channel-title-button:hover {
+  color: var(--cyan);
+}
+.ranking-position {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.ranking-name {
+  flex: 1;
+  min-width: 0;
+}
+.ranking-name strong,
+.ranking-name small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.ranking-name small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.ranking-gain {
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 18px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.ranking-gain small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+}
+.negative {
+  color: var(--pink) !important;
+}
+.stats-footnote {
+  line-height: 1.6;
+  margin-top: 14px;
+}
+.channel-title-button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.channel-detail {
+  padding: 24px;
+  min-width: 0;
+}
+.channel-detail-actions,
+.stats-section-heading > div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.channel-detail-actions {
+  margin-bottom: 24px;
+}
+.channel-detail section + section {
+  border-top: 1px solid var(--border);
+  margin-top: 26px;
+  padding-top: 24px;
+}
+.channel-detail h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+.stats-section-heading h3 {
+  margin: 0;
+}
+.stats-error {
+  color: var(--pink);
+  line-height: 1.6;
+  font-size: 13px;
+  margin: 14px 0;
+}
+.youtube-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.youtube-metrics > div {
+  padding: 17px 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 229, 229, 0.025);
+  border-radius: 8px;
+}
+.youtube-metrics strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: clamp(18px, 2.2vw, 26px);
+  overflow-wrap: anywhere;
+}
+.youtube-metrics span {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.stats-growth {
+  margin: 20px 0 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 13px;
+}
+.stats-growth strong {
+  color: var(--cyan);
+  font-family: var(--mono);
+}
+.stats-growth small {
+  color: var(--muted);
+  width: 100%;
+}
+.stats-chart {
+  padding: 12px;
+  background: rgba(0, 229, 229, 0.025);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.stats-chart svg {
+  width: 100%;
+  display: block;
+  max-height: 165px;
+}
+.stats-chart-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.stats-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.stats-line {
+  stroke: var(--cyan);
+  stroke-width: 2.5;
+}
+.stats-chart circle {
+  fill: var(--cyan);
+}
+.stats-recent {
+  margin-top: 26px;
+}
+.stats-recent a,
+.stats-projects button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--text);
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 13px 0;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.stats-recent a:hover,
+.stats-projects button:hover {
+  color: var(--cyan);
+}
+.stats-recent a > span:first-child,
+.stats-projects button > span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.stats-recent strong {
+  font-weight: 500;
+}
+.stats-recent small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+.stats-recent a > span:nth-child(2) {
+  text-align: right;
+  flex-shrink: 0;
+}
+.stats-recent svg,
+.stats-projects svg {
+  flex-shrink: 0;
+}
+.channel-stock-summary {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin: 14px 0;
+  color: var(--muted);
+}
+.channel-stock-summary strong {
+  color: var(--text);
+  font-family: var(--mono);
+  margin-right: 5px;
+}
+.team-channel-stats {
+  margin: 10px 0;
+}
+@media (max-width: 520px) {
+  .channel-ranking {
+    padding: 16px;
+  }
+  .channel-detail {
+    padding: 17px;
+  }
+  .youtube-metrics {
+    gap: 6px;
+  }
+  .youtube-metrics > div {
+    padding: 12px 7px;
+  }
+  .youtube-metrics strong {
+    font-size: 18px;
+  }
+  .ranking-row {
+    gap: 8px;
+  }
+  .ranking-row .channel-mark {
+    display: none;
+  }
+  .ranking-gain {
+    font-size: 16px;
+  }
+  .stats-section-heading > div {
+    width: 100%;
+  }
+  .stats-section-heading select {
+    flex: 1;
+    min-width: 0;
+  }
+}

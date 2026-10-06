@@ -3,6 +3,27 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
+## Fiches et progression des chaînes — 6 octobre 2026
+
+Dans Chaînes, cliquer le nom ou Statistiques ouvre une fiche : vues cumulées,
+abonnés (arrondis ou masqués par YouTube), vidéos publiques, courbe de relevés,
+progression sur 1/7/28 jours, dernières vidéos YouTube, stock et projets du studio.
+Un classement compact des trois progressions les plus élevées suit les filtres
+de responsable et d'autonomie. Pas de rubrique principale supplémentaire.
+
+Les chiffres utilisent les permissions Data API existantes et commencent à la
+première autorisation réelle : aucune histoire antérieure ou valeur fictive.
+Actualisation de fond toutes les 4 heures, bouton Actualiser avec délai de 15 minutes,
+cache privé de 29 jours et contrôle de l'identité YouTube avant sauvegarde.
+L'accès Google actuellement bloqué empêche encore de récupérer les vrais chiffres.
+La validation Search Console est confirmée ; Branding demande d'attendre 24 heures
+pour son cache. Voir `GOOGLE_YOUTUBE.md` pour les étapes et la voie d'examen manuel.
+
+Validation : 111 tests Python (statistiques, sécurité, connexion, stock, attribution,
+actualité), compilation TypeScript/Vite, parcours des fiches à 320/390/768/1440 px
+et parcours YouTube simulé aux mêmes tailles. Aucun appel réel à Google pendant
+ces tests ; les relevés navigateur sont exclusivement dans une base de test dédiée.
+
 ## Interface simplifiée — 6 octobre 2026
 
 À la demande de l'utilisateur, l'accueil présente seulement les actions du moment,

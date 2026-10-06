@@ -4,6 +4,47 @@ Edgerunners Studio utilise directement OAuth Google et l’API YouTube, sans ser
 de publication intermédiaire. Une clé API seule ne permet pas de publier sur une chaîne.
 Réutiliser le client Google existant ; ne pas créer un nouveau client pour chaque chaîne.
 
+## État constaté le 6 octobre 2026
+
+Le projet existant est **External / In production**. Les deux scopes nécessaires
+sont déclarés dans Data Access et Google affiche « not yet verified ». La validation
+Search Console du domaine a réussi après ajout d'un TXT à l'apex, sans modification
+des autres enregistrements. Conserver ce TXT. Cette preuve ne vaut pas approbation OAuth.
+
+Le contrôle Branding indique encore une propriété de domaine manquante et demande
+24 heures après sa validation. Réessayer **le 7 octobre après 17 h 25, heure de Paris** :
+Branding → View issues → I have fixed the issues → Proceed. Si Google affiche
+Ready to publish, cliquer Publish branding, puis ouvrir Verification Center pour
+examiner les éventuelles étapes Data Access. Ne pas annoncer une résolution avant
+un consentement réel puis une vérification de chaîne réussis.
+
+Alternative officielle au contrôle automatique : View issues →
+I believe the issues found are incorrect → Proceed demande un examen manuel,
+justifiable puisque Search Console confirme la propriété. Ce n'est pas un déblocage
+immédiat et son délai n'est pas maîtrisé. Ne pas recommander de contourner un blocage
+par un client emprunté, une clé API ou une permission incompatible avec la publication.
+L'exception Google pour usage personnel peut éviter une revue complète pour un petit
+groupe connu, mais elle ne permet pas de franchir un écran « This app is blocked ».
+
+Références : [vérification des scopes sensibles et examen manuel](https://developers.google.com/identity/protocols/oauth2/production-readiness/sensitive-scope-verification),
+[Audience et restrictions des comptes](https://support.google.com/cloud/answer/15549945).
+
+## Statistiques sans permission supplémentaire
+
+Les fiches et le classement utilisent `channels.list`, `playlistItems.list` et
+`videos.list` avec l'autorisation existante. Aucun scope YouTube Analytics supplémentaire.
+Les vues affichées sont les compteurs cumulés ; les progressions sont leurs différences
+entre deux relevés datés. Les périodes incomplètes, abonnés masqués, corrections négatives,
+erreurs de connexion et données anciennes sont indiqués. Aucun historique n'est inventé.
+Stock, projets et réglages restent consultables avant la connexion Google.
+
+Le worker consulte une chaîne échue par passage inactif, environ toutes les 4 heures,
+indépendamment de la pause des publications. Actualiser utilise un délai de 15 minutes
+et un verrou transactionnel, sans accès distant déclenché par les GET du navigateur.
+Les caches sont privés, purgés après 29 jours, lors d'une déconnexion, d'un retrait
+ou d'un changement d'identité YouTube. Les mêmes chaînes reconnectées gardent leurs
+relevés historiques valides. Aucun appel d'upload dans le module de statistiques.
+
 ## Branding du projet existant
 
 Sur Google Auth Platform → Branding, utiliser :

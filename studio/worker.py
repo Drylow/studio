@@ -116,6 +116,10 @@ def run(store, once=False):
         from studio.newsroom import tick
 
         tick(store)
+        if not row:
+            from studio.channel_stats import tick as stats_tick
+
+            stats_tick(store)
         # Publication scheduling uses server time and the same release gate as manual publication.
         if not store.settings()["paused"]:
             from studio.domain import blockers

@@ -2,6 +2,18 @@
 
 ## Priorité actuelle — 6 octobre 2026
 
+Fiches statistiques ajoutées à Chaînes (clic sur le nom ou Statistiques) et classement
+compact des progressions de vues. Compteurs réels Data API, relevés 4 heures, historique
+1/7/28 jours depuis le premier relevé, périodes incomplètes visibles, cache privé 29 jours.
+Pas de scope supplémentaire ni données fictives en production. Stock/projets disponibles
+même sans connexion. Voir `GOOGLE_YOUTUBE.md` et `studio/channel_stats.py`.
+
+Search Console confirme la propriété du domaine après ajout du TXT, à conserver.
+Google Branding utilise encore l'ancien état et demande 24 heures : réessayer le
+7 octobre après 17 h 25 (Paris), ou demander l'examen manuel dans View issues.
+Le projet est External / In production et les deux scopes sont déclarés mais non vérifiés.
+« This app is blocked » reste non résolu ; ne pas annoncer une connexion réussie.
+
 **Site en ligne sur https://edgerunners.fr/**. Sauvegarde privée de l'ancien site et
 de SQLite vérifiée, ancienne interface remplacée, données conservées. Le code Git
 reste dans `~/drylow_studio`, avec le nouveau Python `~/edgerunners_venv/bin/python`

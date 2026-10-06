@@ -65,6 +65,7 @@ import { TeamBoard, TeamScope, matchesScope } from "./team-board";
 import { PersonalPlanning } from "./personal-planning";
 import { YouTubeConnection } from "./youtube-connection";
 import { DevelopmentCard, DevelopmentSettings } from "./development";
+import { ChannelRanking } from "./channel-stats";
 
 export type PageProps = {
   refresh: () => Promise<void>;
@@ -78,6 +79,7 @@ export type PageProps = {
   editTask: (task: Task) => void;
   openVideo: (video: Video) => void;
   editChannel: (channel: Channel) => void;
+  openChannel: (channel: Channel) => void;
   newChannel: () => void;
   agent: (message?: string) => void;
   schedule: (day: string, channel?: number, postAt?: string) => void;
@@ -147,6 +149,7 @@ export function Channels(p: PageProps) {
         </select>
         <span className="muted small">{list.length} chaînes</span>
       </div>
+      <ChannelRanking {...p} channels={list} />
       {view === "team" ? (
         <TeamBoard {...p} channels={list} />
       ) : (
@@ -181,7 +184,14 @@ export function Channels(p: PageProps) {
                   </span>
                 </div>
               </div>
-              <h2>{c.name}</h2>
+              <h2>
+                <button
+                  className="channel-title-button"
+                  onClick={() => p.openChannel(c)}
+                >
+                  {c.name}
+                </button>
+              </h2>
               <p className="channel-handle">
                 {c.handle || "Identifiant à renseigner"} <span>·</span>{" "}
                 {c.niche}
@@ -240,6 +250,9 @@ export function Channels(p: PageProps) {
                 </span>
               </div>
               <div className="channel-card-bottom">
+                <Button onClick={() => p.openChannel(c)}>
+                  <Activity size={15} /> Statistiques
+                </Button>
                 <Button onClick={() => p.editChannel(c)}>
                   <SlidersHorizontal size={15} />
                   Réglages

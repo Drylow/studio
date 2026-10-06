@@ -154,7 +154,7 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
                       <ChannelMark channel={c} />
                       <button
                         className="team-channel-name"
-                        onClick={() => p.editChannel(c)}
+                        onClick={() => p.openChannel(c)}
                       >
                         <strong>{c.name}</strong>
                         <small>
@@ -193,6 +193,14 @@ export function TeamBoard(p: PageProps & { channels: Channel[] }) {
                           </>
                         )}
                       </span>
+                    </div>
+                    <div className="team-channel-stats">
+                      <Button variant="ghost" onClick={() => p.editChannel(c)}>
+                        Réglages
+                      </Button>
+                      <Button variant="ghost" onClick={() => p.openChannel(c)}>
+                        Statistiques
+                      </Button>
                     </div>
                     <YouTubeConnection
                       channel={c}

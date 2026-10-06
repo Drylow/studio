@@ -886,6 +886,9 @@ def create_app(config=None):
     from studio.youtube import register_youtube
 
     register_youtube(app, store, owner)
+    from studio.channel_stats import register as register_channel_stats
+
+    register_channel_stats(app, store)
     from studio.development import register as register_development
 
     register_development(app, store, owner)

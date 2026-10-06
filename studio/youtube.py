@@ -201,6 +201,12 @@ def register_youtube(app, store, owner):
                 "UPDATE delamain_projects SET yt_refresh_token=?,yt_channel_title=?,yt_channel_id=? WHERE id=?",
                 (token["refresh_token"], title, yt_id, row["channel_id"]),
             )
+            from studio.channel_stats import clear
+
+            if expected["yt_channel_id"] != yt_id:
+                clear(c, row["channel_id"])
+            else:
+                c.execute("DELETE FROM studio_channel_sync WHERE channel_id=?", (row["channel_id"],))
             c.execute(
                 "UPDATE studio_channels SET revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), row["channel_id"]),
@@ -270,6 +276,9 @@ def register_youtube(app, store, owner):
                 "UPDATE delamain_projects SET yt_refresh_token='' WHERE id=?",
                 (cid,),
             )
+            from studio.channel_stats import clear
+
+            clear(c, cid)
             c.execute(
                 "UPDATE studio_channels SET enabled=0,paused=1,revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), cid),
