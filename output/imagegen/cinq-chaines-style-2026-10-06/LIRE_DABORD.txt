@@ -16,4 +16,6 @@ Ottomans : 05-ottomans-background-v3.png
 Revision 3 : un cran de detail en plus dans les decors, apres demande de l'utilisateur.
 Bois, pierre, tissus, vegetation et profondeur enrichis ; personnages conserves.
 Les versions precedentes sont conservees pour comparer le niveau de detail.
-Validation finale des decors encore en attente ; aucun changement des presets de production.
+Style background-v3 valide par l'utilisateur ; presets automatiques inchanges.
+Production dirigee par Codex : voir production/COHERENCE_2D_CODEX.txt.
+Decors maitres et test : output/imagegen/coherence-codex-2026-10-07/.

@@ -1,0 +1,412 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "workflow": "Codex-authored prompts and manual visual review; configured CLI Proxy executes image calls",
+  "creative_owner": "Codex",
+  "automatic_prompt_generation": false,
+  "pipeline_background_automation": false,
+  "approved_visual_style": "cinq-chaines-style-2026-10-06 background-v3 set approved by user",
+  "master_calls": 5,
+  "scene_test_calls": 2,
+  "locations": [
+    {
+      "id": "edo_home_breakfast",
+      "channel": "Edo Daily",
+      "period": "Edo Japan, circa 1700",
+      "master": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+        "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 1953008
+      },
+      "prompt": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/prompts/01-edo-room-master.txt",
+        "sha256": "5f0d6b88cd892ed164c72ae1bc5e03ec53fec9d63db7ea32c0467e444f678745",
+        "dimensions": null,
+        "bytes": 1680
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "approved scene edit target",
+          "file": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+          "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 2036511
+        }
+      ],
+      "fixed_features": "Keep the low rectangular wooden table at the same scale, position and orientation. Keep tatami grid, green mat borders, rear shoji lattice, bedding alcove at left, blue folded bedding, small ceramic teapot on its shelf, open doorway at right, timber railing, tiled neighbor roof, wood fence and outdoor foliage EXACTLY in place. Preserve the kneeling cushion at lower left. Remove the handheld rice bowl and handheld cup together with the figures; the table is empty. Preserve all table legs and reconstruct only the narrow occluded portions.",
+      "status": "frozen_after_codex_visual_review",
+      "review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against approved source",
+        "result": "usable_initial_location_reference",
+        "notes": "Empty room plate: table, tatami borders, bedding alcove, teapot, shoji, veranda and outside roof remain recognizable and aligned with approved source. Previously hidden architecture reconstructed."
+      }
+    },
+    {
+      "id": "aztec_canal_maize_stall",
+      "channel": "Aztec Daily",
+      "period": "Tenochtitlan before conquest, circa 1500",
+      "master": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/masters/02-aztec-canal.png",
+        "sha256": "4c6dd309a9561b58f43855a66bc6fae128f01be2b425e64a8a0a6e17f063b745",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 2132796
+      },
+      "prompt": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/prompts/02-aztec-canal-master.txt",
+        "sha256": "bf957041f71e512ad071faf43b2fc804ce5c3700e2b81fbc15eeff77a26cd59a",
+        "dimensions": null,
+        "bytes": 1641
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "approved scene edit target",
+          "file": "output/imagegen/cinq-chaines-style-2026-10-06/02-azteques-background-v3.png",
+          "sha256": "5490dcc6c49e6a82af1f5e3d8371ac1fa60dc9203cdd124a1bcdcfafe1a19dfe",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 2219223
+        }
+      ],
+      "fixed_features": "Keep the canopy fabric, tied wooden poles, stall counter and its striped cloth, rear clay pot and rolled reed mat in exactly their positions. Preserve the canal width, stone quay height, canoe at right, reeds, steps, flat-roof plaster houses, red roof-edge bands, doorways and vegetation EXACTLY in place. Remove the handheld basket and maize with the figures; do not place new produce on the counter. Reconstruct the small occluded canal/quay portions using the visible surroundings.",
+      "status": "frozen_after_codex_visual_review",
+      "review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against approved source",
+        "result": "usable_initial_location_reference",
+        "notes": "Empty market plate: canopy poles, counter cloth, clay pot, reed mat, canoe and canal houses retained. Hidden areas reconstructed; ripples are a generated texture, not pixel-identical water."
+      }
+    },
+    {
+      "id": "babylon_house_water_courtyard",
+      "channel": "Babylon Daily",
+      "period": "Neo-Babylonian Babylon, circa 600 BCE",
+      "master": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/masters/03-babylon-courtyard.png",
+        "sha256": "50131b2cfd7e25baaacc5c5044f3866936093d7c68817f07972d6e0d160de46d",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 2140247
+      },
+      "prompt": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/prompts/03-babylon-courtyard-master.txt",
+        "sha256": "d195c143f75ee3cc3edde9df5d25a465a1106cc5957ea4f74461c9be619bf276",
+        "dimensions": null,
+        "bytes": 1632
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "approved scene edit target",
+          "file": "output/imagegen/cinq-chaines-style-2026-10-06/03-babylone-background-v3.png",
+          "sha256": "fab138fb97466e38869f1d2d9b5130094873cd76a3bf21ddf8cf57b7285cadb6",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 2122105
+        }
+      ],
+      "fixed_features": "Keep the modest round clay basin centered on the SAME low circular stone plinth, at precisely the same diameter and height, with calm water. Remove the handheld pouring jug and the pouring water stream with the figures. Preserve left stairway, sun-dried brick/plaster walls, palm, wall foliage, rear storage jar, overhead wooden pergola with reeds, right doorway and threshold mat EXACTLY in place. Keep paving layout, soft pergola shadows and daylight identical. No giant bath.",
+      "status": "frozen_after_codex_visual_review",
+      "review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against approved source",
+        "result": "usable_initial_location_reference",
+        "notes": "Empty courtyard plate: same modest basin and plinth, stairs, pergola, doorway and rear jar. People, pouring jug and stream removed; calm water retained."
+      }
+    },
+    {
+      "id": "tang_changan_noodle_stall",
+      "channel": "Imperial China Daily",
+      "period": "Tang-era Chang'an, circa 750 CE",
+      "master": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/masters/04-tang-noodle-stall.png",
+        "sha256": "27387c325abe61da1cb2cb1f6a728f5d5248525102fa0e9bf24158c59557c368",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 2195207
+      },
+      "prompt": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/prompts/04-tang-noodle-stall-master.txt",
+        "sha256": "9ecb9be0d17b34491ba772afca906db7e536e341542a2af11f3825b5718afaa2",
+        "dimensions": null,
+        "bytes": 1616
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "approved scene edit target",
+          "file": "output/imagegen/cinq-chaines-style-2026-10-06/04-chine-tang-background-v3.png",
+          "sha256": "5480010beaff7d6125a4a870c187dda9acf3f66d342349c15d97bbeae9e97a18",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 2142571
+        }
+      ],
+      "fixed_features": "Keep the wooden stall counter at the same position and angle, left cooking pot and steam, spoon, plain spare bowl, small box, wicker utensil holder, hanging cloth panels, wooden posts and roof beams EXACTLY in place. Remove only the exchanged handheld noodle bowl with the figures. Preserve the rear tiled wall and red timber gate, recessed window panels, road paving, trees and view through the gateway exactly. Do not enlarge the monumental gate or add lantern rows.",
+      "status": "frozen_after_codex_visual_review",
+      "review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against approved source",
+        "result": "usable_initial_location_reference",
+        "notes": "Empty stall plate: pot, steam, spare bowl, box, utensils, posts, tiled wall and gate retained. Previously hidden counter edge reconstructed."
+      }
+    },
+    {
+      "id": "ottoman_istanbul_neighborhood_bakery",
+      "channel": "Ottoman Daily",
+      "period": "Ottoman Istanbul, sixteenth century",
+      "master": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/masters/05-ottoman-bakery.png",
+        "sha256": "71650b99a079a7da59b359c8336b1b1f0e0f014d76c59ddda94d367429c0fe3f",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 2102060
+      },
+      "prompt": {
+        "file": "output/imagegen/coherence-codex-2026-10-07/prompts/05-ottoman-bakery-master.txt",
+        "sha256": "a92b8785760314a5212cf2ac31e9cb7909dc587d3c9557e889002bbbe6d5b78d",
+        "dimensions": null,
+        "bytes": 1599
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "approved scene edit target",
+          "file": "output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-background-v3.png",
+          "sha256": "88bf59878b99549d2a9d5f3803cdbb696a04e5aae2b3f5b7d559a2376ea42c8f",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 2114527
+        }
+      ],
+      "fixed_features": "Keep limestone storefront arch and block pattern, wood counter position, rear shelves with two scored loaves, folded linens, oven, right shutter, canopy and wood supports EXACTLY in place. Remove the handheld bread board with loaf and customer basket with the figures. Preserve the cobbled street, timber/plaster neighboring houses, flower pots, shutters, rooflines and distant dome/minarets exactly where they are. No new storefronts or new oven.",
+      "status": "frozen_after_codex_visual_review",
+      "review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against approved source",
+        "result": "usable_initial_location_reference",
+        "notes": "Empty bakery plate: counter, arch, bread shelf, oven, street houses and skyline retained. Previously hidden storefront and street reconstructed."
+      }
+    }
+  ],
+  "character_anchors": [
+    {
+      "id": "edo_home_breakfast_cast_anchor",
+      "channel": "Edo Daily",
+      "path": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+      "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+      "role": "approved two-character scene; identity and garment reference for these samples",
+      "status": "approved_style_anchor",
+      "individual_character_sheets": false
+    },
+    {
+      "id": "aztec_canal_maize_stall_cast_anchor",
+      "channel": "Aztec Daily",
+      "path": "output/imagegen/cinq-chaines-style-2026-10-06/02-azteques-background-v3.png",
+      "sha256": "5490dcc6c49e6a82af1f5e3d8371ac1fa60dc9203cdd124a1bcdcfafe1a19dfe",
+      "role": "approved two-character scene; identity and garment reference for these samples",
+      "status": "approved_style_anchor",
+      "individual_character_sheets": false
+    },
+    {
+      "id": "babylon_house_water_courtyard_cast_anchor",
+      "channel": "Babylon Daily",
+      "path": "output/imagegen/cinq-chaines-style-2026-10-06/03-babylone-background-v3.png",
+      "sha256": "fab138fb97466e38869f1d2d9b5130094873cd76a3bf21ddf8cf57b7285cadb6",
+      "role": "approved two-character scene; identity and garment reference for these samples",
+      "status": "approved_style_anchor",
+      "individual_character_sheets": false
+    },
+    {
+      "id": "tang_changan_noodle_stall_cast_anchor",
+      "channel": "Imperial China Daily",
+      "path": "output/imagegen/cinq-chaines-style-2026-10-06/04-chine-tang-background-v3.png",
+      "sha256": "5480010beaff7d6125a4a870c187dda9acf3f66d342349c15d97bbeae9e97a18",
+      "role": "approved two-character scene; identity and garment reference for these samples",
+      "status": "approved_style_anchor",
+      "individual_character_sheets": false
+    },
+    {
+      "id": "ottoman_istanbul_neighborhood_bakery_cast_anchor",
+      "channel": "Ottoman Daily",
+      "path": "output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-background-v3.png",
+      "sha256": "88bf59878b99549d2a9d5f3803cdbb696a04e5aae2b3f5b7d559a2376ea42c8f",
+      "role": "approved two-character scene; identity and garment reference for these samples",
+      "status": "approved_style_anchor",
+      "individual_character_sheets": false
+    }
+  ],
+  "continuity_test": {
+    "location_id": "edo_home_breakfast",
+    "kind": "two new consecutive action samples plus the original approved character scene",
+    "voice_generated": false,
+    "timings": null,
+    "production_video_ready": false,
+    "original": {
+      "file": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+      "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 2036511
+    },
+    "shots": [
+      {
+        "id": "edo-01-cup-down",
+        "beat": "La tasse est posee a portee du personnage agenouille.",
+        "narration_excerpt": null,
+        "start": null,
+        "end": null,
+        "location_id": "edo_home_breakfast",
+        "character_anchor_id": "edo_home_breakfast_cast_anchor",
+        "characters": [
+          "edo_green_adult",
+          "edo_coral_adult"
+        ],
+        "camera_variant": "master_same_camera",
+        "lighting_variant": "master_same_morning",
+        "image": {
+          "file": "output/imagegen/coherence-codex-2026-10-07/test-edo/edo-01-cup-down.png",
+          "sha256": "7a87f56d4ab6665e20e79abf80135419c1a90651012a19149433ad54b2f249e7",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 1962960
+        },
+        "prompt": {
+          "file": "output/imagegen/coherence-codex-2026-10-07/prompts/edo-01-cup-down.txt",
+          "sha256": "aab6b9f8243e511ce5494d4026a7f6cab1af7d4e1c99700cc06fd8908dc9bc3f",
+          "dimensions": null,
+          "bytes": 2325
+        },
+        "references_sent": [
+          {
+            "index": 1,
+            "role": "locked empty background edit target",
+            "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+            "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 1953008
+          },
+          {
+            "index": 2,
+            "role": "approved characters and bowl/cup identities",
+            "file": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+            "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 2036511
+          }
+        ],
+        "review": {
+          "reviewer": "Codex",
+          "method": "direct visual comparison with master and character anchor",
+          "result": "accepted_for_continuity_test",
+          "observations": "Table edges, shoji, bedding, teapot, veranda, outside roof and foliage visibly consistent. Exactly two adults retain wardrobe and round white heads. One rice bowl and one cup; placement changes follow requested action. Fine texture and movable-prop scale not certified pixel-identical."
+        }
+      },
+      {
+        "id": "edo-02-drink",
+        "beat": "Le personnage pose son bol et porte la meme tasse a sa bouche.",
+        "narration_excerpt": null,
+        "start": null,
+        "end": null,
+        "location_id": "edo_home_breakfast",
+        "character_anchor_id": "edo_home_breakfast_cast_anchor",
+        "characters": [
+          "edo_green_adult",
+          "edo_coral_adult"
+        ],
+        "camera_variant": "master_same_camera",
+        "lighting_variant": "master_same_morning",
+        "image": {
+          "file": "output/imagegen/coherence-codex-2026-10-07/test-edo/edo-02-drink.png",
+          "sha256": "b8efb1568f9580cbf43c36b407c2863658abbad9eee66730db81f66281b63f84",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "bytes": 1978512
+        },
+        "prompt": {
+          "file": "output/imagegen/coherence-codex-2026-10-07/prompts/edo-02-drink.txt",
+          "sha256": "e4df2a3fa2a30e428029ec82199c6dd86e6196553c8ec015406a1bc27ccc4724",
+          "dimensions": null,
+          "bytes": 2401
+        },
+        "references_sent": [
+          {
+            "index": 1,
+            "role": "locked empty background edit target",
+            "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+            "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 1953008
+          },
+          {
+            "index": 2,
+            "role": "approved characters and bowl/cup identities",
+            "file": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+            "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "bytes": 2036511
+          }
+        ],
+        "review": {
+          "reviewer": "Codex",
+          "method": "direct visual comparison with master and character anchor",
+          "result": "accepted_for_continuity_test",
+          "observations": "Table edges, shoji, bedding, teapot, veranda, outside roof and foliage visibly consistent. Exactly two adults retain wardrobe and round white heads. One rice bowl and one cup; placement changes follow requested action. Fine texture and movable-prop scale not certified pixel-identical."
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "One initial location per world, not all locations of future videos.",
+    "Only Edo action continuity tested; other masters inspected but not tested with sequential action scenes.",
+    "No pixel-perfect identity guarantee from generative edits; every production frame still requires Codex visual review.",
+    "Character anchors contain two people; build individual character references for a full video.",
+    "Historical settings/costumes still need episode-specific source checking.",
+    "Actual output is 1672x941, not requested 2048x1152; no upscaling applied.",
+    "Test actions are illustrative beats, not verified narration, audio alignment or a finished video."
+  ]
+}

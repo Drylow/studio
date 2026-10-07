@@ -1,6 +1,6 @@
 NOM : Aztec Daily
 HANDLE PROPOSE : @AztecDailyHistory
-STATUT : CONCEPT VALIDE PAR L'UTILISATEUR. Style en cours de validation.
+STATUT : CONCEPT ET STYLE background-v3 VALIDES PAR L'UTILISATEUR.
 Nom et handle proposes, non reserves ; disponibilite non verifiee.
 LANGUE : anglais.
 

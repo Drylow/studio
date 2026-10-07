@@ -1,0 +1,64 @@
+COHERENCE DES VIDEOS 2D - PRODUCTION DIRIGEE PAR CODEX
+Decision utilisateur : 7 octobre 2026.
+Les cinq concepts historiques et le style des images background-v3 sont approuves.
+
+QUI FAIT QUOI
+Codex fait la recherche, ecrit le script et chaque prompt, choisit les references,
+analyse les rendus, corrige les erreurs et decide quels plans sont retenus.
+Le CLI Proxy execute la generation. Les outils de voix, alignement et montage
+executent les operations techniques. La pipeline ne redige pas nos prompts.
+Ne pas utiliser ensure_prompts, _prompt_batch ou detect_cast pour ce workflow.
+Ne pas lancer un superviseur susceptible de regenerer prompts ou references.
+
+AVANT LES PLANS
+1. Relire le script et identifier les lieux reels recurrents, avec leur epoque.
+2. Creer un identifiant par lieu concret, pas un decor unique par civilisation.
+   Exemple : logement, rue et boutique d'Edo sont trois lieux distincts.
+3. Generer et regarder une image maitre du lieu sans personnages, puis figer son
+   fichier et son empreinte. Noter les portes, ouvertures, mobilier, accessoires
+   fixes, couleurs, hauteur de camera et direction de lumiere.
+4. Figer une reference par personnage de la video avec tenue et couleurs.
+   Une scene approuvee avec deux personnages peut servir d'ancre pour un test
+   court ; pour une video complete, preparer des references individuelles.
+5. Conserver le registre des lieux et personnages avec les prompts exacts.
+
+POUR CHAQUE PLAN
+Codex inscrit : id du plan, extrait EXACT du transcript, debut et fin alignes sur
+la voix reelle, id du lieu, variante de camera/lumiere, personnages presents,
+etat des objets mobiles, prompt final et ordre des references envoyees au proxy.
+Ne pas inventer les timings avant generation et alignement de la voix.
+Le test du kit n'a pas de voix : ses actions sont des beats fictifs de controle,
+pas un script historique verifie ni un montage pret a publier.
+
+Envoyer le decor maitre et les references de personnages avec des roles explicites
+dans le prompt. Pour une suite d'actions, l'image precedente peut aussi servir
+d'ancre de pose et d'etat, mais le decor maitre doit TOUJOURS etre present.
+Ne pas utiliser uniquement le plan precedent : cela accumule les derives.
+Limiter les changements demandes a l'action, la pose et les accessoires mobiles.
+Ne pas exiger un autre angle a chaque image : privilegier des cadrages derives
+du maitre. Une vue opposee n'est pas un nouveau lieu : la creer depuis le maitre,
+verifier sa geometrie, la nommer et la conserver avant de l'utiliser.
+Un objet pose reste a sa place au plan suivant sauf si l'action explique son
+deplacement. Un nouveau moment de la journee a sa variante de lumiere explicite.
+Ne pas supprimer silencieusement une reference si le proxy atteint sa limite.
+
+CONTROLE PAR CODEX
+Regarder chaque image, reference a cote. Controler :
+- murs, portes, fenetres, toit, sol et mobilier restent au meme endroit ;
+- proportions, camera et direction de lumiere sont compatibles ;
+- personnages, couleurs, tenues et nombre de membres restent coherents ;
+- objets fixes et etat des objets mobiles ne sautent pas entre les plans ;
+- l'action illustre vraiment l'extrait de narration ;
+- pas de texte parasite, logo, anachronisme evident ou personnage ajoute.
+Une image incorrecte n'est pas acceptee automatiquement apres un nombre fixe
+d'essais : corriger le prompt, regenerer et la regarder a nouveau.
+Conserver le resultat de cette relecture. Les empreintes attestent les fichiers
+utilises, pas la qualite visuelle ni une identite pixel par pixel.
+
+PORTEE DU KIT INITIAL
+output/imagegen/coherence-codex-2026-10-07/registre.json contient les references
+initiales des cinq lieux et les images du test Edo.
+Ces references sont un point de depart, pas tous les lieux des futures videos.
+La verification historique detaillee et la coherence d'une video entiere restent
+obligatoires a chaque production. La methode est pilotee par Codex et n'active
+aucune fonction automatique de coherence dans services/pov_engine.py.

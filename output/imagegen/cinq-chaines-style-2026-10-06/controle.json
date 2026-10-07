@@ -6,7 +6,7 @@
   "reference": "output/imagegen/cinq-chaines-style-2026-10-06/reference-style.png",
   "reference_source": "output/imagegen/strangely-proxy-white-2026-10-05/01-adultes-laverie.png",
   "concepts_approved": true,
-  "visual_style_user_approved": false,
+  "visual_style_user_approved": true,
   "selected": [
     {
       "channel": "Edo Daily",
@@ -80,8 +80,8 @@
     "Costumes/settings are stylized proposals, not final historical audits.",
     "Aztec costumes deliberately adapted to covered-body style.",
     "One image per world does not establish continuity across a full video.",
-    "User liked previous samples but requested slightly more detailed backgrounds; new detail level awaits approval."
+    "User approved the background-v3 visual style; continuity masters and tests are stored separately."
   ],
-  "status": "background_detail_revision_for_user_review",
+  "status": "visual_style_user_approved",
   "background_refinement_calls": 5
 }
