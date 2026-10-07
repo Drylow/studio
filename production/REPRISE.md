@@ -13,6 +13,17 @@
   Cage Dispatch reliée le 7 oct. à 18 h 30 (Paris) à `UC0kWhUDz5-dvl-KqfSw8f4A`. Les profils
   Google gardent d'anciens noms : quand le profil choisi n'est pas la chaîne de la fiche, le
   site montre la vraie chaîne et le propriétaire choisit sa fiche (`studio_youtube_pending`).
+- **Publication réelle validée (7 oct., 21 h 00 Paris)** : vidéo test de 6 s envoyée par le
+  serveur sur Cage Dispatch en **non répertoriée** (`MnthNFxqadY`) : titre, description et
+  miniature acceptés, visibilité respectée (pas de verrouillage en privé du projet Google).
+  Pitch Dispatch reliée (`UC7IbPH4JICJSDN-gyFP7PDA`), accès vérifié en direct pour les deux.
+  Choix de l'utilisateur : voix Algrow conservée malgré la restriction d'usage automatisé
+  (risque accepté par lui), 2 vidéos par jour et par chaîne au maximum.
+- **Delamain codé par Claude (option 2, mise en ligne sans validation)** : routine
+  `trig_01GfMnci6KHo8W7cB7amCy84` (Sonnet, environnement sans accès o2switch). À compléter
+  par l'utilisateur sur claude.ai : dépôt Drylow/studio + déclencheur API, puis adresse et
+  jeton dans Réglages → Modifications du site. Le site peut être en retard sur `main` :
+  chaque modification part du dernier `main` (contrôle exécuteur OK le 7 oct. à 20 h 36).
 - **Piste Google (historique)** : le projet était en *Testing* jusqu'au 6 octobre. En Testing,
   un jeton de renouvellement expire après 7 jours : explication probable de l'`invalid_grant`
   de Le Grand Récap (envois du 29 juin au 1er juillet, puis plus rien). Le passage en
