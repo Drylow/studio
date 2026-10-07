@@ -21,6 +21,28 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
   par vidéo, refaire une image : `--only nom`). Les petits dessins codés de `sprites.js` restent pour
   les icônes (soldats, crânes, thermomètre…). Clé : `REPLICATE_API_TOKEN` dans `.env`.
 
+## Le compte (proposé le 7 oct., 23 h)
+
+- **Nom et pseudo :**
+  - Nom proposé : **Octave**, pseudo **@octave.histoire**. Octave est le premier nom de l'empereur Auguste, et c'est aussi un terme de musique (Mozart, Beethoven).
+  - Libres sur TikTok le 7 oct. : @octave.histoire, @clovis.histoire, @anatole.histoire. Déjà pris : @octave.media.
+- **Bio proposée :** « L'Histoire comme on ne te l'a jamais racontée. 1 vidéo par jour. 📜 » (sur le modèle d'Archibald, « 1 vidéo de qualité par jour. 🧠 »).
+- **Photo de profil :**
+  - Fichiers dans `brand/` : un objet en pixel art bleu sur fond noir avec des cercles concentriques, comme son œil rouge.
+  - Recommandée : `avatar_crane.jpg` (crâne lauré). Autres choix : `avatar_sablier.jpg`, `avatar_laurier.jpg`.
+- **Description de vidéo, à la manière d'Archibald :**
+  - L'accroche en une phrase plus un émoji.
+  - « Je t'explique … ».
+  - 4 à 5 hashtags.
+  - « Sources : … » à la fin.
+  - Modèle : champ `caption` + `sources` du script.
+
+## Règles de qualité ajoutées après la 1re vidéo
+
+- **Vérifier chaque illustration** (mains, doigts, bras, visages) avant le montage. Sur la vidéo
+  Napoléon, l'image de Napoléon écrivant avait des mains ratées (remarqué par l'utilisateur, publiée
+  quand même). Une image ratée se refait avec `art.py batch … --only nom`.
+
 ## Le style d'Archibald (analysé image par image, 5 vidéos, 1 min 40 à 2 min)
 
 - **Mise en page :**
