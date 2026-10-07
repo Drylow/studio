@@ -2,6 +2,14 @@
 
 ## Essai de simulation low-poly — 7 octobre 2026
 
+**Version révisée : Pixel Cuts.** Selon le retour utilisateur : pixel art sur toute
+l'image, titres exclusivement anglais, coups de lame de 0,145 s espacés de 0,17 s,
+un accent sonore par coupe. MP4 de 12 s, 1080 × 1920, 60 images/s :
+`experiments/watermelon-lowpoly/watermelon-pixelcuts.mp4`. Les 720 images ont été
+décodées et regardées sur douze planches ; contrôle des titres sur chaque image,
+lecture complète et pic audio à −3 dBFS. Livraison dans la conversation Codex.
+Cette version remplace le premier essai ci-dessous pour la suite du format.
+
 Pastèque découpée en 1, 3 puis 7 passes : prototype original de 18 s, 1080 × 1920,
 30 images/s, 2/8/32 fragments, géométrie 3D et physique calculées par code,
 bruitages synthétisés. Livré dans la conversation Codex sous

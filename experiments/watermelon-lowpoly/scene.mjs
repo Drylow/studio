@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import DATA from './assets/simulation.json';
+import {PIXEL_WIDTH,PIXEL_HEIGHT,createPixelView} from './pixel.mjs';
 const W=1080,H=1920;
 const canvas=document.getElementById('fruit-canvas');
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});
-renderer.setSize(W,H,false);renderer.setPixelRatio(1);
+const renderer=new THREE.WebGLRenderer({antialias:false,alpha:false,preserveDrawingBuffer:true});
+renderer.setSize(PIXEL_WIDTH,PIXEL_HEIGHT,false);renderer.setPixelRatio(1);
+const drawPixelFrame=createPixelView(canvas);
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;
@@ -11,7 +13,7 @@ const scene=new THREE.Scene();scene.background=new THREE.Color('#f1e7d6');
 const camera=new THREE.PerspectiveCamera(37,W/H,.1,100);
 scene.add(new THREE.HemisphereLight('#fff4df','#99a98b',2.2));
 const key=new THREE.DirectionalLight('#fff3de',3.4);key.position.set(-4,8,5);key.castShadow=true;
-key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-7;key.shadow.camera.right=7;
+key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-7;key.shadow.camera.right=7;
 key.shadow.camera.top=8;key.shadow.camera.bottom=-7;key.shadow.normalBias=.022;key.shadow.bias=-.0002;
 key.shadow.radius=4;scene.add(key);
 const rim=new THREE.DirectionalLight('#e6efce',1.3);rim.position.set(5,4,-4);scene.add(rim);
@@ -91,10 +93,9 @@ const shots=DATA.shots.map(shot=>{
  const stages=shot.stages.map(stage=>{const holder=new THREE.Group();root.add(holder);return {holder,parts:stage.map(p=>{const g=createPiece(p);holder.add(g);return g;})};});
  return {root,stages};
 });
-const label=document.getElementById('cut-label'),steps=[...document.querySelectorAll('.step')];
 const poseA=new THREE.Quaternion(),poseB=new THREE.Quaternion(),yAxis=new THREE.Vector3(0,1,0);
 function renderAt(input){
- const time=Math.max(0,Math.min(input,DATA.duration-1/30)),index=Math.min(2,Math.floor(time/6)),t=time-index*6,shot=DATA.shots[index],view=shots[index];
+ const time=Math.max(0,Math.min(input,DATA.duration-1/60)),index=Math.min(2,Math.floor(time/DATA.shotLength)),t=time-index*DATA.shotLength,shot=DATA.shots[index],view=shots[index];
  shots.forEach((s,i)=>s.root.visible=i===index);
  const stage=shot.cutTimes.filter(c=>t>=c).length;
  view.stages.forEach((s,i)=>s.holder.visible=i===stage);const parts=view.stages[stage].parts;
@@ -105,17 +106,19 @@ function renderAt(input){
    poseA.set(...p.slice(3));poseB.set(...q.slice(3));g.quaternion.copy(poseA.slerp(poseB,mix));
   });
  }else parts.forEach((g,i)=>{const p=shot.stages[stage][i];g.position.copy(V(p.center)).add(V(p.offset)).add(new THREE.Vector3(0,DATA.height,0));g.quaternion.identity();});
- let cutting=-1;shot.cutTimes.forEach((c,i)=>{if(t>=c-.17&&t<=c+.14)cutting=i;});blade.visible=cutting>=0;
+ let cutting=-1;shot.cutTimes.forEach((c,i)=>{if(t>=c-.07&&t<=c+.075)cutting=i;});blade.visible=cutting>=0;
  if(cutting>=0){
   const c=shot.cutTimes[cutting],n=V(DATA.planes[cutting].n);
-  if(Math.abs(n.y)>.9){blade.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/2);blade.position.set((t-c)*-19,DATA.height,0);}
-  else{blade.quaternion.setFromAxisAngle(yAxis,-Math.atan2(n.z,n.x));blade.position.copy(n.multiplyScalar(DATA.planes[cutting].d)).add(new THREE.Vector3(0,DATA.height-(t-c)*21,0));}
+  const p=Math.max(0,Math.min(1,(t-c+.07)/.145));
+  const sweep=p*p*(3-2*p);
+  if(Math.abs(n.y)>.9){blade.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/2);blade.position.set(5.2-10.4*sweep,DATA.height,0);}
+  else{blade.quaternion.setFromAxisAngle(yAxis,-Math.atan2(n.z,n.x));blade.position.copy(n.multiplyScalar(DATA.planes[cutting].d)).add(new THREE.Vector3(0,5.55-4.4*sweep,0));}
  }
  const theta=.75+Math.sin(time*.18)*.045;
  const pullback=Math.max(0,Math.min(1,(t-shot.release)/1.0));
  const radius=18.5+5.5*pullback;
  camera.position.set(Math.sin(theta)*radius,11.5+3.5*pullback,Math.cos(theta)*radius);camera.lookAt(0,1.9,0);renderer.render(scene,camera);
- label.textContent=shot.count===1?'1 coupe':shot.count+' coupes';steps.forEach((s,i)=>s.classList.toggle('active',i===index));
+ drawPixelFrame(renderer.domElement,shot.count,index);
 }
 window.drawFruit=renderAt;
 window.addEventListener('hf-seek',e=>renderAt(e.detail.time));renderAt(window.__hfThreeTime||0);
