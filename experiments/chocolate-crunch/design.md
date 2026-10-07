@@ -12,8 +12,14 @@ fork, slab contact and accumulating chocolate pieces readable.
 Focal element: moulded chocolate slabs above a four-tined silver fork. Supporting
 detail: rough brown fracture surfaces, short shadow, oak grain. Top anchor:
 small chocolate icon, CHOCOLATE, large bar count, tool icon and English tool name.
-Bottom anchor: CRUNCH TEST and FORK / GLOVE / HAMMER markers. Closing phrase:
-CHEF APPROVED. Two short trials per mechanism; total duration 23.3 seconds.
+Bottom anchor: persistent coloured FORK / GLOVE / HAMMER sprite cards.
+The current tool has a dark green border and arrow; completed tools have ticks.
+Three compact 42×36 source-pixel cards sit horizontally at y=340, centred at
+x=48 / 108 / 168. Smaller sprites use rounded 1.5× cell boundaries, preserving
+the integer pixel grid. A short CRUNCH TEST label sits above them; no round text.
+The world is centred again. A cream footer protects icons from flying crumbs.
+Closing phrase: CHEF APPROVED. Two quantities per mechanism, three quick salvos
+at each quantity; total duration 66.7 seconds. Every salvo has different fractures.
 
 Typography: the approved embedded 5×7 bitmap glyphs, 3× scale for count and 1×
 for labels; no system font substitution. Tiny labels correspond to 35px output

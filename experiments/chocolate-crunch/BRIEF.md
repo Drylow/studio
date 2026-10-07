@@ -6,7 +6,7 @@ message: "Our pixel chef escalates from a fork to a spring boxing glove and upwa
 destination: tiktok-shorts
 aspect: 1080x1920
 language: en
-length: 23.3s
+length: 66.7s
 narration: no
 ---
 
@@ -29,7 +29,13 @@ for an actual adapted video. Author the scene and sound directly with code.
 - Same cream background, oak board, pixel art throughout and recognisable chef.
 - Begin normally with one bar carried on the palm; no preview hook.
 - Two trials per tool: fork 1 / 4 bars, spring boxing glove 4 / 8 bars,
-  upward-pointing jackhammer 8 / 16 bars. Shorter progression: 23.3 seconds.
+  upward-pointing jackhammer 8 / 16 bars. Three quick salvos per quantity,
+  with freshly seeded fracture geometry; 66.7 seconds, without slow playback.
+- Show all three tools in a compact pixel strip at the bottom from the first frame.
+  A dark green border and arrow mark the current tool; ticks mark finished tools.
+- Remove round captions and keep the action centred. The three smaller tool
+  cards replace that text. Keep only two quantities per mechanism; the channel
+  should aim for minute-plus food experiments.
 - The glove visibly compresses its coil, punches horizontally and retracts.
 - The last machine stands with its chisel pointing up, vibrating at 22Hz as
   chocolate drops onto it. Tool poses are shared by physics and rendering.

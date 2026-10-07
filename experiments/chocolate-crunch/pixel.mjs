@@ -59,6 +59,38 @@ function watermelonIcon(ctx,x,y){
  const colors={G:'#244c37',W:'#f2f0c4',R:'#ef5867',S:'#352922'};
  rows.forEach((row,j)=>[...row].forEach((cell,i)=>{if(colors[cell]){ctx.fillStyle=colors[cell];ctx.fillRect(x+i,y+j,1,1);}}));
 }
+// Future tools are visible from frame zero; completion and selection are explicit.
+function toolProgress(ctx,tool,outro){
+ const tools=['fork','glove','jackhammer'],labels=['FORK','GLOVE','HAMMER'];
+ const sprites=[
+  [' M M M M ',' M M M M ',' M M M M ',' MMMMMMM ',' MMMMMMM ','   MMM   ','   MMM   ','   MMM   ','   MMM   ','   MMM   ','   MMM   ','   GGG   ','   GGG   '],
+  ['   RRRRRRR   ','  RRRRRRRRR  ',' RRRRRRRRRRR ',' RRRRRRRRRRR ',' RRRRRRRRRRR ',' RRRRRRRRRRR ','  RRRRRRDRRR ','   RRRRRDRR  ','    RRRRRR   ','    IIIIII   ','    IIIIII   ',' M MMMMM M   ','  M M M M    '],
+  ['     M      ','    MMM     ','     M      ','     M      ','   YYYYY    ','   YYYYY    ',' DYYYYYYYD  ',' DDYYYYYDD  ','   YYYYY    ','   YDDDY    ','   YYYYY    ','   YDDDY    ','    YYY     ']
+ ];
+ const colors={M:'#b7c2ba',G:'#244c37',R:'#ef5867',D:'#203c2a',I:'#def2e1',Y:'#ffe59a'};
+ const active=tools.indexOf(tool);
+ tools.forEach((name,i)=>{
+  const cx=48+i*60,x=cx-21,y=340,w=42,h=36,done=outro||i<active,selected=!outro&&i===active;
+  ctx.fillStyle='#b4ac91';ctx.fillRect(x+2,y+2,w,h);
+  ctx.fillStyle=selected?'#203c2a':done?'#47714a':'#b4ac91';ctx.fillRect(x,y,w,h);
+  ctx.fillStyle='#f1e7d6';ctx.fillRect(x+2,y+2,w-4,h-4);
+  const sprite=sprites[i],sx=Math.round(cx-sprite[0].length*.75),sy=y+4;
+  // Rounded cell boundaries keep the smaller sprites on the integer pixel grid.
+  sprite.forEach((row,j)=>[...row].forEach((c,k)=>{if(colors[c]){
+   ctx.fillStyle=colors[c];ctx.fillRect(sx+Math.round(k*1.5),sy+Math.round(j*1.5),Math.round((k+1)*1.5)-Math.round(k*1.5),Math.round((j+1)*1.5)-Math.round(j*1.5));
+  }}));
+  text(ctx,labels[i],cx,y+26,1,selected?'#203c2a':'#6b6c51');
+  if(done){
+   ctx.fillStyle='#47714a';ctx.fillRect(x+31,y+5,2,2);ctx.fillRect(x+33,y+7,2,2);ctx.fillRect(x+35,y+3,2,4);
+  }
+  if(selected){
+   ctx.fillStyle='#203c2a';ctx.fillRect(cx-3,y-4,6,1);ctx.fillRect(cx-2,y-3,4,1);ctx.fillRect(cx-1,y-2,2,1);
+  }
+  if(i<2){
+   ctx.fillStyle='#b4ac91';ctx.fillRect(cx+26,y+14,2,7);ctx.fillRect(cx+28,y+15,2,5);ctx.fillRect(cx+30,y+16,1,3);
+  }
+ });
+}
 export function createPixelView(canvas){
  canvas.width=PIXEL_WIDTH;canvas.height=PIXEL_HEIGHT;
  const back=document.createElement('canvas');back.width=PIXEL_WIDTH;back.height=PIXEL_HEIGHT;
@@ -110,16 +142,9 @@ export function createPixelView(canvas){
    ctx.fillStyle='#203c2a';ctx.fillRect(iconX,82,12,2);
   }
   text(ctx,label,118,80,1);
-  if(outro)text(ctx,'CHEF APPROVED',108,350,1);
-  else {
-   text(ctx,'CRUNCH TEST',108,330,1);
-   const labels=['FORK','GLOVE','HAMMER'];
-   const current=Math.floor(index/2);
-   labels.forEach((label,i)=>{
-   const x=42+i*66;text(ctx,label,x,350,1,i===current?'#203c2a':'#6b6c51');
-   if(i===current){ctx.fillStyle='#203c2a';ctx.fillRect(x-8,363,16,1);}
-   });
-  }
+  ctx.fillStyle='#f1e7d6';ctx.fillRect(0,328,PIXEL_WIDTH,56);
+  text(ctx,outro?'CHEF APPROVED':'CRUNCH TEST',108,328,1);
+  toolProgress(ctx,tool,outro);
   // Publish one complete frame. Screenshot capture must never see the
   // intermediate palette image before all bitmap glyphs have been drawn.
   display.drawImage(back,0,0);
