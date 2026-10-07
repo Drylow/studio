@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Archivo Black";src:url(fonts/ArchivoBlack-Regular.ttf)}
+@font-face{font-family:"Silkscreen";src:url(fonts/Silkscreen-Regular.ttf)}
+@font-face{font-family:"Tiny5";src:url(fonts/Tiny5-Regular.ttf)}
+html,body{margin:0;background:#000}
+canvas{display:block;width:540px;height:960px}
+#bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:8px;padding:8px;background:#111;color:#ccc;font:13px sans-serif}
+body.player #bar{display:flex}
+</style></head>
+<body>
+<canvas id="c"></canvas>
+<div id="bar"><button id="play">Lecture</button><input id="seek" type="range" min="0" max="1000" value="0" style="flex:1"><span id="time">0.0</span></div>
+<script src="sprites.js"></script>
+<script src="engine.js"></script>
+<script>
+// Lecteur de contrôle : engine.html?spec=chemin/timeline.json&audio=chemin/mix.wav
+(async () => {
+  const q = new URLSearchParams(location.search);
+  if (!q.get("spec")) return;
+  document.body.classList.add("player");
+  const spec = await (await fetch(q.get("spec"))).json();
+  await TT.load(spec);
+  const audio = q.get("audio") ? new Audio(q.get("audio")) : null;
+  const seek = document.getElementById("seek"), time = document.getElementById("time");
+  let t0 = null, base = 0;
+  const tick = now => {
+    if (t0 !== null) {
+      const t = audio ? audio.currentTime : base + (now - t0) / 1000;
+      TT.frame(t); seek.value = 1000 * t / TT.duration; time.textContent = t.toFixed(1);
+    }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  TT.frame(0);
+  document.getElementById("play").onclick = () => {
+    if (t0 === null) { t0 = performance.now(); if (audio) audio.play(); }
+    else { base += (performance.now() - t0) / 1000; t0 = null; if (audio) audio.pause(); }
+  };
+  seek.oninput = () => {
+    base = seek.value / 1000 * TT.duration; if (audio) audio.currentTime = base;
+    if (t0 !== null) t0 = performance.now();
+    TT.frame(base); time.textContent = base.toFixed(1);
+  };
+})();
+</script>
+</body></html>
