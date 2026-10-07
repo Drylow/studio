@@ -16,13 +16,13 @@ npm run build
 npm run verify
 npm run check
 npx hyperframes preview --background
-npm run render -- --fps 60 --quality looks --strict --no-browser-gpu --workers 1 --output watermelon-pixelcuts-32.mp4
-python qa_frames.py watermelon-pixelcuts-32.mp4
+npm run render -- --fps 60 --quality looks --strict --no-browser-gpu --workers 1 --output watermelon-pixelcuts-32-polished.mp4
+python qa_frames.py watermelon-pixelcuts-32-polished.mp4
 ```
 
 Les versions de Three.js, Cannon et GSAP sont figées dans `package-lock.json`. La composition et le moteur ne font aucun appel réseau lors de l'évaluation d'une image. Les titres bitmap n'utilisent aucune police téléchargée.
 
-Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte graphique a dépassé le délai sur cette machine lors du premier essai. Les planches `qa/pixelcuts-32/all-frames-*.jpg` permettent de vérifier les 879 images du MP4. Les résultats du contrôle sont consignés dans `QA.md` après export. La preview HyperFrames reste ouverte pendant les révisions et précède le rendu.
+Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte graphique a dépassé le délai sur cette machine lors du premier essai. Les planches `qa/watermelon-pixelcuts-32-polished/all-frames-*.jpg` permettent de vérifier les 879 images du MP4. Les résultats du contrôle sont consignés dans `QA.md` après export. La preview HyperFrames reste ouverte pendant les révisions et précède le rendu.
 
 ## Comment ça fonctionne
 
@@ -30,8 +30,10 @@ Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte 
 - La physique est calculée à pas fixe de 1/120 s : gravité et collisions contre la planche et le sol. Les niveaux 1 et 4 incluent les contacts entre morceaux ; les salves de 8 à 32 utilisent une dispersion initiale modérée et désactivent ces contacts pour éviter les vibrations des lamelles très fines et borner le coût de calcul. Les poses sont enregistrées. `simulation-report.json` conserve les limites mesurées.
 - `scene.mjs` interpole les poses selon le temps demandé : rendu identique en lecture, en retour arrière et à l'export. Les sommets des fragments sont regroupés en trois maillages pour conserver les matériaux et les pépins sans multiplier les appels de dessin. Un pool de couteaux suit des trajectoires scénarisées à vitesse constante, synchronisées aux divisions géométriques. Un écho à 12 ms souligne la vitesse. La preview utilise uniquement les étapes de coupe, sans libération physique.
 - La chair, la bordure de l'écorce et les pépins sont modélisés. L'éclairage, les ombres et la caméra sont de vraies données 3D.
-- `pixel.mjs` réduit le rendu à une palette fixe avec tramage discret et dessine les lettres en pixels sur le même canevas que la scène. Aucun texte lissé n'est superposé à la vidéo.
-- `sound.py` synthétise un souffle, un claquement central et une résonance courte pour chaque coupe, ainsi que les impacts physiques plus doux. Le générateur est fixe ; un limiteur doux préserve l'impact de la frappe isolée malgré les salves denses.
+- `pixel.mjs` réduit le rendu à une palette fixe avec tramage discret et dessine les lettres et une petite icône pastèque sur le même canevas que la scène. Un cache conserve le résultat exact de chaque couleur et position de tramage ; les pixels restent identiques. Les sommets du fruit maintenu ne sont recalculés qu'au changement d'étape de coupe. Ces deux optimisations allègent la preview sans modifier le rythme du rendu.
+- `sound.py` synthétise 93 accents de coupe courts, avec un bruit filtré et une résonance grave. Les frappes proches adaptent leur gain. Les 584 collisions sont regroupées en 67 accents discrets par fenêtres de 50 ms et par chapitre. Le mixage utilise un gain linéaire avec réserve de niveau, sans le saturateur précédent. Le générateur est fixe.
+
+Le logo de chaîne est conservé dans `brand/chef-spatula-avatar.png` : cuisto pixel art avec spatule, sans texte, sur badge vert et fond crème. Le prompt est dans `brand/README.md`.
 
 ## Limites et suite
 
