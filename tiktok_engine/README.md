@@ -93,3 +93,19 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
   - Avec `"keep": true`, la scène précédente continue.
 
 Polices sous licence OFL (fichiers et licences dans `fonts/`).
+
+## Livraison de chaque vidéo (demande du 7 oct.)
+
+À chaque vidéo, l'utilisateur reçoit le **même paquet** :
+- la vidéo en **qualité maximale** (lien Gofile + fichier) ;
+- **3 miniatures** 1080×1920 (bloc `covers` du script, une recommandée) ;
+- la **description** à coller, simple comme Archibald : une phrase + 4 hashtags (`caption`).
+
+`build.py` fait tout à la fin du rendu (`deliver` : `covers/`, `description.txt`, `gofile_link.txt`,
+`livraison.txt`). Les illustrations se relisent sur `videos/<nom>/art_review.jpg` (pixels ×3) avant le montage.
+
+## Vidéos livrées
+
+| Date | Vidéo | Lien qualité max |
+|---|---|---|
+| 7 oct. 2026 | Napoléon en Russie (Minard, les poux, « La santé de Sa Majesté… ») | https://gofile.io/d/XfHd6IAK |

@@ -129,7 +129,28 @@ def batch(script_path, only=None, workers=4):
     with ThreadPoolExecutor(workers) as ex:
         for line in ex.map(run, jobs):
             print(line, flush=True)
+    review_sheet(base)
     print("ART DONE", flush=True)
+
+
+def review_sheet(base):
+    """Planche des illustrations en grand (pixels ×3) pour vérifier mains, doigts, bras et visages."""
+    import glob
+    files = sorted(f for f in glob.glob(os.path.join(base, "*.png")) if not f.endswith("_src.png"))
+    if not files:
+        return
+    tiles = []
+    for f in files:
+        im = Image.open(f).convert("RGBA")
+        im = im.resize((im.width * 3, im.height * 3), Image.NEAREST)
+        bg = Image.new("RGBA", im.size, (3, 4, 7, 255)); bg.alpha_composite(im)
+        tiles.append(bg.convert("RGB"))
+    cols = 3
+    cw, ch = max(t.width for t in tiles), max(t.height for t in tiles)
+    sheet = Image.new("RGB", (cols * cw, -(-len(tiles) // cols) * ch), (30, 30, 36))
+    for i, t in enumerate(tiles):
+        sheet.paste(t, ((i % cols) * cw, (i // cols) * ch))
+    sheet.save(os.path.join(base, "..", "art_review.jpg"), quality=90)
 
 
 def main():

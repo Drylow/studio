@@ -363,6 +363,7 @@ def main():
     ap.add_argument("--workers", default="3")
     ap.add_argument("--fake-voice", action="store_true", help="minutage estimé et voix muette (aperçu sans crédits)")
     ap.add_argument("--covers", action="store_true", help="seulement les miniatures (bloc \"covers\" du script)")
+    ap.add_argument("--no-upload", action="store_true", help="pas d'envoi Gofile à la fin")
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
     script = json.load(open(a.script, encoding="utf-8"))
@@ -401,7 +402,26 @@ def main():
     print("MIX DONE", flush=True)
     subprocess.run([node, os.path.join(HERE, "render.mjs"), "--spec", tl, "--audio", mixed, "--workers", a.workers,
                     "--out", os.path.join(a.work, "video.mp4"), "--ffmpeg", ffmpeg_exe()], check=True)
+    print("RENDER DONE", flush=True)
+    deliver(a.work, script, upload=not a.no_upload)
     print("ALL DONE", flush=True)
+
+
+def deliver(work, script, upload=True):
+    """Paquet pour l'utilisateur : miniatures, description à coller, lien Gofile de la vidéo en qualité max."""
+    if script.get("covers"):
+        covers(work, script)
+    caption = script.get("caption", "").strip()
+    with open(os.path.join(work, "description.txt"), "w", encoding="utf-8") as f:
+        f.write(caption + "\n")
+    link = ""
+    if upload:
+        sys.path.insert(0, os.path.join(ROOT, "production"))
+        from common import gofile_upload
+        link = gofile_upload(os.path.join(work, "video.mp4"), os.path.join(work, "gofile_link.txt"), print) or ""
+    with open(os.path.join(work, "livraison.txt"), "w", encoding="utf-8") as f:
+        f.write(f"{script.get('title', '')}\nVidéo : {link}\nDescription : {caption}\n")
+    print("DELIVER DONE", link, flush=True)
 
 
 if __name__ == "__main__":
