@@ -6,17 +6,21 @@ Ce prototype reprend les trois premières passes, en 18 secondes, avec une géom
 
 ## Reproduire
 
-Node récent, Python 3 et FFmpeg ; aucune clé API.
+Node récent, Python 3, Pillow et FFmpeg ; aucune clé API.
 
 ```sh
 npm ci
 npm run build
+npm run verify
 npm run check
 npx hyperframes preview --background
-npx hyperframes render --fps 30 --quality looks --output pastèque-lowpoly.mp4
+npm run render -- --fps 30 --quality looks --strict --no-browser-gpu --workers 1 --output watermelon-lowpoly.mp4
+python qa_frames.py watermelon-lowpoly.mp4
 ```
 
 Les versions de Three.js, Cannon et GSAP sont figées dans `package-lock.json`. La composition et le moteur ne font aucun appel réseau lors de l'évaluation d'une image. HyperFrames embarque les polices lors de la compilation.
+
+Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte graphique a dépassé le délai sur cette machine. L'export logiciel conserve la même scène, avec un temps de calcul plus long. Les planches `qa/all-frames-*.jpg` permettent de vérifier les 540 images du MP4.
 
 ## Comment ça fonctionne
 
