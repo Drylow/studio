@@ -1,0 +1,62 @@
+{
+ "title": "La Joconde est célèbre grâce à un vol",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "",
+ "sources": [],
+ "art": {
+  "mona_lisa": {
+   "prompt": "the Mona Lisa painting by Leonardo da Vinci in an ornate golden frame, front view",
+   "size": "192x256"
+  },
+  "mona_lisa_face": {
+   "prompt": "close-up of the Mona Lisa face with her mysterious smile, Leonardo da Vinci painting",
+   "size": "192x192"
+  },
+  "gallery_1911": {
+   "prompt": "old museum gallery wall crowded with many framed classical paintings, Louvre Salon Carre in 1911",
+   "size": "320x192"
+  },
+  "empty_wall": {
+   "prompt": "an empty museum wall with four small metal hooks where a painting used to hang, pale rectangle mark",
+   "size": "256x192"
+  },
+  "thief": {
+   "prompt": "a man in a long white worker smock walking away carrying a wrapped flat painting under his arm, early 1900s, side view",
+   "size": "192x256"
+  },
+  "detective": {
+   "prompt": "a French police detective with a mustache and bowler hat holding a magnifying glass, 1911, bust",
+   "size": "192x192"
+  },
+  "picasso": {
+   "prompt": "portrait of young Pablo Picasso around 1911, short dark hair, intense dark eyes, bust",
+   "size": "192x192"
+  },
+  "apollinaire": {
+   "prompt": "portrait of the poet Guillaume Apollinaire in 1911 behind prison bars, round face, bust",
+   "size": "192x192"
+  },
+  "trunk": {
+   "prompt": "an open old wooden trunk with a hidden false bottom containing a painting, in a small attic room",
+   "size": "256x192"
+  },
+  "florence": {
+   "prompt": "Florence Italy skyline with the cathedral dome and Ponte Vecchio bridge",
+   "size": "320x192"
+  },
+  "crowd_queue": {
+   "prompt": "huge crowd of people in 1914 clothes and hats queuing in front of a museum entrance",
+   "size": "320x192"
+  },
+  "tourists_phones": {
+   "prompt": "crowd of tourists holding smartphones up to photograph a small painting behind bulletproof glass, back view",
+   "size": "320x192"
+  }
+ },
+ "beats": []
+}
