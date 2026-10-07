@@ -1,5 +1,28 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Reprise Claude — 7 octobre 2026, après-midi
+
+- **Piste Google jamais testée** : le projet était en *Testing* jusqu'au 6 octobre. En Testing,
+  un jeton de renouvellement expire après 7 jours : explication probable de l'`invalid_grant`
+  de Le Grand Récap (envois du 29 juin au 1er juillet, puis plus rien). Le passage en
+  *Production* non vérifiée a précédé « This app is blocked ». Aucune note ne montre l'essai
+  **Testing + Gmail du propriétaire en utilisateur de test** (projet et chaînes sur le même
+  Gmail, confirmé par l'utilisateur). Étapes données : Audience → Back to testing → Test users
+  → Add users → puis Chaînes → Connecter YouTube → Autre méthode : API Google. Limite connue :
+  reconnexion hebdomadaire tant que l'application n'est pas vérifiée. Résultat en attente.
+- **Navigateur VPS** : ne pas terminer l'envoi par automatisation de YouTube Studio (envoi
+  automatisé hors API contraire aux conditions YouTube, risque pour les chaînes).
+- **Delamain** : il code aujourd'hui avec `AI_TEXT_MODEL` (défaut gpt-5.5) via le proxy de
+  `AI_BASE_URL`. L'utilisateur veut Claude (Sonnet, usage léger) via une routine Claude Code
+  déclenchée par le site. Le branchement entièrement autonome (code + mise en ligne sans
+  validation) a été refusé par la sécurité de la session ; variante proposée : Claude prépare
+  la branche, le propriétaire valide la mise en ligne d'un geste. Choix en attente.
+- **o2switch depuis le cloud Claude** : `CPANEL_*` présents dans l'environnement de la session.
+  Le port 2083 est injoignable depuis le cloud ; la connexion cPanel fonctionne par le
+  sous-domaine proxy sur 443. L'exécution de commandes sur le serveur demande une validation
+  explicite de l'utilisateur (mode « Accept edits ») : ne pas la contourner. Aucune commande
+  serveur exécutée, aucun déploiement. Selon la passation, site à `2795223`, `main` à `647a509` (docs).
+
 ## Passation à Claude — 7 octobre 2026
 
 L'utilisateur demande de mettre toutes les modifications et les informations de
