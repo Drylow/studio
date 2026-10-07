@@ -28,8 +28,8 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
   - Libres sur TikTok le 7 oct. : @octave.histoire, @clovis.histoire, @anatole.histoire. Déjà pris : @octave.media.
 - **Bio proposée :** « L'Histoire comme on ne te l'a jamais racontée. 1 vidéo par jour. 📜 » (sur le modèle d'Archibald, « 1 vidéo de qualité par jour. 🧠 »).
 - **Photo de profil :**
-  - Fichiers dans `brand/` : un objet en pixel art bleu sur fond noir avec des cercles concentriques, comme son œil rouge.
-  - Recommandée : `avatar_crane.jpg` (crâne lauré). Autres choix : `avatar_sablier.jpg`, `avatar_laurier.jpg`.
+  - Fichiers dans `brand/noir_*.jpg` : un objet en pixel art bleu sur **fond noir pur**. Les cercles bleus derrière ont été refusés le 7 oct.
+  - 9 propositions : crâne lauré, sablier, laurier, casque spartiate, bicorne, couronne, plume, bougie, colonne.
 - **Description de vidéo, à la manière d'Archibald :**
   - L'accroche en une phrase plus un émoji.
   - « Je t'explique … ».
