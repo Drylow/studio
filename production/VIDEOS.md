@@ -1,5 +1,15 @@
 # Journal des vidéos
 
+## Cage Dispatch — première vidéo du pilote automatique — 7 octobre 2026
+
+« Shavkat Rakhmonov teases 19-0 vs 19-0: Is Michael Morales next? » — **publique** :
+https://youtu.be/u5ZHjA5Ri0M (21 h 40, Paris). Sujet choisi seul par le radar (8/10), faits
+cités mot pour mot de Bloody Elbow, script vérifié, voix Algrow, 4 min 25, photos Commons
+(Morales : domaine public ; Shavkat : CC0 recadré sur lui seul à la demande de l'utilisateur,
+qui voulait les deux combattants sur la miniature). Planches et miniature regardées par Claude ;
+publication demandée par l'utilisateur dans la conversation, envoyée par le serveur o2switch
+(morceaux de 1 Mo, `YOUTUBE_CHUNK_MB=1`), miniature confirmée, message Discord envoyé.
+
 ## Essai de simulation low-poly — 7 octobre 2026
 
 **Révision actuelle : Pixel Cuts, maximum 32.** Dernier retour utilisateur :

@@ -24,6 +24,8 @@
   vidéo `77db6e8c11094c0f936e7c9c1c367c6f` (4 min 25) en `review`, non publiée. Corrigé pendant
   l'essai : threads ffmpeg (`FFMPEG_THREADS=4` sur o2switch), photos à une seule personne,
   jamais le visage d'une autre personne (cartes et miniature), référence de style sans visage.
+  Publiée sur demande de l'utilisateur : https://youtu.be/u5ZHjA5Ri0M (miniature refaite avec
+  Shavkat recadré depuis sa photo CC0 + Morales). Hébergeur : envoi YouTube par morceaux de 1 Mo.
   `NEWS_AUTO_DRY=1` reste dans le `.env` du serveur jusqu'au « go » de l'utilisateur ; ensuite :
   retirer cette ligne, activer l'automatisation de Cage/Pitch et lever la pause du studio.
   Limite connue : peu de photos libres → images répétées ; texte seul quand aucune n'existe.
