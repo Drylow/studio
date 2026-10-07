@@ -1,12 +1,12 @@
 {
- "title": "Napoléon en Russie : ce n'est pas l'hiver",
+ "title": "Napoléon a perdu la plus grande armée d'Europe",
  "voice": {
   "voice_id": "",
   "model": "eleven_v4",
   "speed": 1.0
  },
- "tail": 2.2,
- "caption": "Ce n'est pas l'hiver qui a détruit l'armée de Napoléon 🧠 #histoire #napoleon #1812 #vulgarisation #apprendresurtiktok",
+ "tail": 1.4,
+ "caption": "Ce n'est pas l'hiver qui a mis l'armée de Napoléon à genoux 🧠 #histoire #napoleon #1812 #vulgarisation #apprendresurtiktok",
  "sources": [
   "Charles Minard, Carte figurative des pertes successives en hommes de l'Armée Française dans la campagne de Russie 1812-1813 (1869), copie École des Ponts",
   "Edward Tufte, The Visual Display of Quantitative Information (1983), p. 40",
@@ -17,7 +17,58 @@
  ],
  "beats": [
   {
-   "say": "422 000 soldats partent en Russie avec Napoléon. 10 000 reviennent.",
+   "say": "Napoléon a perdu la plus grande armée jamais vue en Europe.",
+   "particles": "snow",
+   "density": 70,
+   "glow": {
+    "y": 470,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "napoleon_portrait",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Napoléon a perdu",
+     "at": 0,
+     "y": 140
+    },
+    {
+     "preset": "big",
+     "text": "LA GRANDE ARMÉE",
+     "at": "grande",
+     "y": 215,
+     "size": 46,
+     "ls": 3
+    }
+   ]
+  },
+  {
+   "say": "Et ce n'est pas l'hiver qui l'a mise à genoux.",
+   "keep": true,
+   "els": [
+    {
+     "type": "stamp",
+     "text": "CE N'EST PAS L'HIVER",
+     "at": "pas",
+     "y": 700,
+     "rot": -5,
+     "fill": true,
+     "size": 18
+    }
+   ]
+  },
+  {
+   "say": "422 000 soldats partent. 10 000 reviennent.",
    "glow": {
     "y": 470
    },
@@ -75,7 +126,7 @@
     {
      "type": "stamp",
      "text": "1812",
-     "at": "Russie",
+     "at": "partent",
      "x": 445,
      "y": 310,
      "rot": 8
@@ -553,9 +604,10 @@
   {
    "say": "Quand on pense à la retraite de Russie, on pense tous à ça : la neige, le froid, l'hiver russe.",
    "particles": "snow",
+   "density": 160,
    "glow": {
     "y": 470,
-    "r": 230,
+    "r": 260,
     "a": 0.2
    },
    "els": [
@@ -566,28 +618,19 @@
      "y": 160
     },
     {
-     "type": "forest",
-     "y": 500,
-     "r": 175,
-     "count": 18,
-     "px": 5,
-     "at": 0,
-     "in": "fade"
-    },
-    {
-     "type": "sprite",
-     "sprite": "napoleon",
-     "px": 8,
-     "y": 480,
+     "type": "img",
+     "src": "napoleon_snow",
+     "h": 360,
+     "y": 470,
      "at": 0.05,
-     "in": "pop",
+     "in": "fade",
      "fx": "shiver"
     },
     {
      "type": "stamp",
      "text": "HIVER RUSSE",
      "at": "hiver",
-     "y": 300,
+     "y": 690,
      "rot": -5,
      "fill": true
     }
@@ -735,7 +778,7 @@
   {
    "say": "Juin 1812, ils traversent le Niémen.",
    "glow": {
-    "y": 430
+    "y": 450
    },
    "els": [
     {
@@ -755,9 +798,9 @@
     {
      "type": "rect",
      "x": 270,
-     "y": 460,
-     "w": 46,
-     "h": 300,
+     "y": 470,
+     "w": 60,
+     "h": 330,
      "color": "N",
      "at": 0,
      "in": "fade"
@@ -765,9 +808,9 @@
     {
      "type": "rect",
      "x": 270,
-     "y": 460,
-     "w": 6,
-     "h": 300,
+     "y": 470,
+     "w": 10,
+     "h": 330,
      "color": "D",
      "at": 0,
      "in": "fade"
@@ -777,109 +820,33 @@
      "text": "NIÉMEN",
      "at": 0.1,
      "x": 270,
-     "y": 625,
+     "y": 655,
      "color": "G"
+    },
+    {
+     "type": "img",
+     "src": "army_march",
+     "h": 110,
+     "y": 470,
+     "at": 0,
+     "x": 60,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent",
+       "dur": 2.2,
+       "to": [
+        470,
+        470
+       ]
+      }
+     ]
     },
     {
      "preset": "num",
      "text": "422 000",
      "at": "Niémen",
      "y": 300
-    },
-    {
-     "type": "sprite",
-     "sprite": "soldier",
-     "px": 4.5,
-     "x": 70,
-     "y": 390,
-     "at": 0,
-     "in": "none",
-     "moves": [
-      {
-       "at": "traversent+0.00",
-       "dur": 1.7,
-       "to": [
-        450,
-        390
-       ]
-      }
-     ]
-    },
-    {
-     "type": "sprite",
-     "sprite": "soldier",
-     "px": 4.5,
-     "x": 40,
-     "y": 450,
-     "at": 0,
-     "in": "none",
-     "moves": [
-      {
-       "at": "traversent+0.15",
-       "dur": 1.7,
-       "to": [
-        420,
-        450
-       ]
-      }
-     ]
-    },
-    {
-     "type": "sprite",
-     "sprite": "soldier",
-     "px": 4.5,
-     "x": 95,
-     "y": 510,
-     "at": 0,
-     "in": "none",
-     "moves": [
-      {
-       "at": "traversent+0.30",
-       "dur": 1.7,
-       "to": [
-        475,
-        510
-       ]
-      }
-     ]
-    },
-    {
-     "type": "sprite",
-     "sprite": "soldier",
-     "px": 4.5,
-     "x": 55,
-     "y": 570,
-     "at": 0,
-     "in": "none",
-     "moves": [
-      {
-       "at": "traversent+0.45",
-       "dur": 1.7,
-       "to": [
-        435,
-        570
-       ]
-      }
-     ]
-    },
-    {
-     "type": "sprite",
-     "sprite": "soldier",
-     "px": 4.5,
-     "x": 20,
-     "y": 420,
-     "at": 0,
-     "in": "none",
-     "moves": [
-      {
-       "at": "traversent+0.60",
-       "dur": 1.7,
-       "to": [
-        400,
-        420
-       ]
-      }
-     ]
     }
    ]
   },
@@ -898,18 +865,27 @@
     {
      "type": "sprite",
      "sprite": "sun",
-     "px": 10,
-     "y": 480,
+     "px": 9,
+     "x": 400,
+     "y": 370,
      "at": 0.1,
      "in": "pop",
-     "fx": "bob",
-     "glow": "Y"
+     "fx": "bob"
+    },
+    {
+     "type": "img",
+     "src": "army_march",
+     "h": 120,
+     "y": 500,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "bob"
     },
     {
      "preset": "label",
      "text": "VILNIUS  →  VITEBSK",
      "at": 0.2,
-     "y": 360,
+     "y": 590,
      "color": "W",
      "out": "perd"
     },
@@ -927,7 +903,7 @@
      "type": "stamp",
      "text": "-165 000 HOMMES",
      "at": "165",
-     "y": 600,
+     "y": 640,
      "fill": true,
      "rot": -4,
      "size": 17
@@ -987,7 +963,7 @@
   {
    "say": "Le 14 septembre, ils entrent dans Moscou. Ils ne sont plus que 100 000.",
    "glow": {
-    "y": 470
+    "y": 480
    },
    "els": [
     {
@@ -1005,12 +981,14 @@
      "size": 30
     },
     {
-     "type": "sprite",
-     "sprite": "kremlin",
-     "px": 6,
+     "type": "img",
+     "src": "moscow",
+     "h": 200,
      "y": 500,
-     "at": 0.1,
-     "in": "rise"
+     "at": 0.05,
+     "in": "scan",
+     "scanDur": 0.6,
+     "fx": "zoom"
     },
     {
      "preset": "big",
@@ -1067,18 +1045,18 @@
      "type": "sprite",
      "sprite": "thermometer",
      "px": 10,
-     "x": 190,
-     "y": 440,
+     "x": 150,
+     "y": 460,
      "at": "froid",
      "in": "pop"
     },
     {
-     "type": "sprite",
-     "sprite": "napoleon",
-     "px": 6,
-     "x": 360,
-     "y": 450,
+     "type": "img",
+     "src": "napoleon_portrait",
+     "h": 250,
+     "y": 470,
      "at": "Napoléon",
+     "x": 350,
      "in": "pop"
     },
     {
@@ -1091,7 +1069,7 @@
      "type": "stamp",
      "text": "7 NOVEMBRE",
      "at": "7",
-     "y": 600,
+     "y": 640,
      "fill": true
     },
     {
@@ -1190,13 +1168,13 @@
      "size": 26
     },
     {
-     "type": "sprite",
-     "sprite": "bones",
-     "px": 10,
-     "y": 470,
+     "type": "img",
+     "src": "mass_grave",
+     "h": 260,
+     "y": 500,
      "at": 0.1,
-     "in": "build",
-     "buildDur": 0.7
+     "in": "scan",
+     "scanDur": 0.9
     },
     {
      "preset": "big",
@@ -1209,13 +1187,16 @@
      "preset": "label",
      "text": "SOLDATS DE NAPOLÉON",
      "at": "soldats",
-     "y": 590,
+     "y": 655,
      "color": "W"
     }
    ]
   },
   {
    "say": "Des chercheurs ont analysé leurs dents.",
+   "glow": {
+    "y": 460
+   },
    "els": [
     {
      "preset": "title",
@@ -1224,21 +1205,22 @@
      "y": 160
     },
     {
-     "type": "sprite",
-     "sprite": "tooth",
-     "px": 16,
-     "x": 200,
-     "y": 440,
+     "type": "img",
+     "src": "scientist",
+     "h": 320,
+     "y": 470,
      "at": 0.05,
-     "in": "pop"
+     "x": 230,
+     "in": "fade",
+     "fx": "breathe"
     },
     {
      "type": "sprite",
-     "sprite": "microscope",
-     "px": 13,
-     "x": 360,
-     "y": 430,
-     "at": 0.05,
+     "sprite": "tooth",
+     "px": 11,
+     "x": 430,
+     "y": 560,
+     "at": "dents",
      "in": "pop"
     }
    ]
@@ -1296,9 +1278,9 @@
   {
    "say": "par les poux.",
    "glow": {
-    "y": 420,
+    "y": 450,
     "r": 300,
-    "a": 0.25
+    "a": 0.28
    },
    "els": [
     {
@@ -1308,13 +1290,14 @@
      "y": 160
     },
     {
-     "type": "sprite",
-     "sprite": "louse",
-     "px": 16,
-     "y": 430,
+     "type": "img",
+     "src": "louse",
+     "h": 330,
+     "y": 460,
      "at": "poux",
      "in": "slam",
-     "flash": "big"
+     "flash": "big",
+     "fx": "shiver"
     }
    ]
   },
@@ -1344,7 +1327,7 @@
   {
    "say": "En 2025, une autre équipe a même trouvé une deuxième maladie de poux.",
    "glow": {
-    "y": 440
+    "y": 460
    },
    "els": [
     {
@@ -1357,33 +1340,34 @@
     {
      "preset": "title",
      "text": "Une *deuxième* maladie de poux",
-     "at": "deuxième",
+     "at": 0.1,
      "y": 220,
      "size": 24
     },
     {
-     "type": "sprite",
-     "sprite": "louse",
-     "px": 9,
-     "x": 190,
-     "y": 440,
-     "at": "équipe",
-     "in": "pop"
+     "type": "img",
+     "src": "louse",
+     "h": 200,
+     "y": 460,
+     "at": 0.1,
+     "x": 180,
+     "in": "pop",
+     "fx": "shiver"
     },
     {
      "type": "dna",
-     "x": 380,
-     "y": 440,
-     "h": 200,
-     "amp": 26,
-     "at": "équipe",
+     "x": 390,
+     "y": 460,
+     "h": 220,
+     "amp": 28,
+     "at": 0.2,
      "in": "build"
     },
     {
      "preset": "tag",
      "text": "FIÈVRE RÉCURRENTE",
      "at": "maladie",
-     "y": 590,
+     "y": 640,
      "color": "W"
     }
    ]
@@ -1391,7 +1375,13 @@
   {
    "say": "L'hiver a achevé la Grande Armée. Mais elle était à genoux bien avant le premier flocon.",
    "particles": "snow",
-   "density": 60,
+   "density": 180,
+   "wind": 40,
+   "glow": {
+    "y": 480,
+    "r": 280,
+    "a": 0.18
+   },
    "els": [
     {
      "preset": "title",
@@ -1407,39 +1397,23 @@
      "y": 175
     },
     {
-     "type": "icons",
-     "sprite": "soldier_cold",
-     "count": 12,
-     "cols": 6,
-     "px": 3,
-     "gapX": 14,
-     "gapY": 14,
-     "y": 450,
-     "at": 0,
+     "type": "img",
+     "src": "blizzard",
+     "h": 360,
+     "y": 500,
+     "at": 0.05,
      "in": "fade",
-     "keys": [
-      {
-       "at": "Mais",
-       "n": 3,
-       "dur": 1.2
-      }
-     ]
-    },
-    {
-     "type": "sprite",
-     "sprite": "snowflake",
-     "px": 9,
-     "y": 620,
-     "at": "flocon",
-     "in": "pop",
-     "glow": "W"
+     "fx": "shiver"
     }
    ]
   },
   {
    "say": "Et le 3 décembre, pendant que ses soldats meurent par milliers, Napoléon écrit un bulletin officiel pour la France. Sa dernière phrase ?",
    "glow": {
-    "y": 450
+    "y": 470,
+    "c": "B",
+    "a": 0.2,
+    "flicker": true
    },
    "els": [
     {
@@ -1457,79 +1431,106 @@
      "size": 26
     },
     {
-     "type": "sprite",
-     "sprite": "napoleon",
-     "px": 7,
-     "x": 170,
-     "y": 450,
-     "at": 0.1,
-     "in": "pop"
-    },
-    {
-     "type": "sprite",
-     "sprite": "paper",
-     "px": 9,
-     "x": 370,
-     "y": 450,
-     "at": "bulletin",
-     "in": "drop"
+     "type": "img",
+     "src": "napoleon_writing",
+     "h": 360,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
     },
     {
      "preset": "title",
      "text": "Sa *dernière phrase* ?",
      "at": "dernière",
-     "y": 600,
-     "size": 24
+     "y": 690,
+     "size": 26
     }
    ]
   },
   {
    "say": "La santé de Sa Majesté n'a jamais été meilleure.",
    "glow": {
-    "y": 400,
-    "r": 300,
-    "a": 0.22
+    "y": 520,
+    "r": 320,
+    "a": 0.25
    },
    "els": [
     {
-     "type": "sprite",
-     "sprite": "napoleon",
-     "px": 8,
-     "y": 580,
-     "at": 0,
-     "in": "pop",
-     "glow": "B"
-    },
-    {
      "type": "text",
      "font": "sans",
-     "size": 32,
+     "size": 30,
      "color": "W",
      "text": "« La santé de Sa Majesté\nn'a jamais été *meilleure*. »",
-     "at": 0.05,
-     "y": 360,
+     "at": 0,
+     "y": 200,
      "in": "fade",
-     "maxW": 470
+     "maxW": 480
+    },
+    {
+     "type": "img",
+     "src": "napoleon_smug",
+     "h": 400,
+     "y": 530,
+     "at": "Majesté",
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
     },
     {
      "preset": "label",
      "text": "29e BULLETIN · 3 DÉCEMBRE 1812",
      "at": "jamais",
-     "y": 470,
+     "y": 290,
      "color": "G"
     }
    ]
-  },
-  {
-   "say": "Demain : ce qu'on a trouvé dans les cheveux de Beethoven.",
-   "els": [
-    {
-     "type": "endcard",
-     "text": "Demain : ce qu'on a trouvé\ndans les *cheveux* de Beethoven…",
-     "at": 0,
-     "button": "LA SUITE DEMAIN"
-    }
-   ]
   }
- ]
+ ],
+ "art": {
+  "napoleon_portrait": {
+   "prompt": "portrait of Napoleon Bonaparte wearing his black bicorne hat and grey coat, stern face, three-quarter view, bust",
+   "size": "192x192"
+  },
+  "napoleon_snow": {
+   "prompt": "Napoleon Bonaparte on a white horse in a snowstorm, grey coat and bicorne hat, snowy pine forest, retreat from Russia",
+   "size": "256x256"
+  },
+  "army_march": {
+   "prompt": "column of Napoleonic infantry soldiers with shakos and muskets marching to the right, side view, full bodies",
+   "size": "320x192"
+  },
+  "summer_march": {
+   "prompt": "exhausted Napoleonic soldiers marching on a dusty road, a huge blazing sun with sharp rays in the sky, heat waves, side view",
+   "size": "256x256"
+  },
+  "moscow": {
+   "prompt": "wide skyline of old Moscow with Kremlin walls, red towers and many colorful onion domes, 1812",
+   "size": "320x192"
+  },
+  "mass_grave": {
+   "prompt": "rows of human skeletons lying side by side in a dirt trench, skulls clearly visible, archaeological dig, top view",
+   "size": "288x192"
+  },
+  "scientist": {
+   "prompt": "scientist in a white lab coat looking into a microscope in a laboratory, side view",
+   "size": "192x192"
+  },
+  "louse": {
+   "prompt": "a single body louse insect, macro view from above, detailed legs",
+   "size": "160x160"
+  },
+  "blizzard": {
+   "prompt": "starving Napoleonic soldiers wrapped in blankets stumbling through a blizzard, frozen, retreat",
+   "size": "256x256"
+  },
+  "napoleon_writing": {
+   "prompt": "Napoleon Bonaparte writing a letter with a quill at a desk by candlelight, side view",
+   "size": "256x256"
+  },
+  "napoleon_smug": {
+   "prompt": "portrait of Napoleon Bonaparte with a smug confident smile, black bicorne hat, arms crossed, bust",
+   "size": "192x192"
+  }
+ }
 }

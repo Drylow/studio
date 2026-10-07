@@ -25,6 +25,7 @@
   const off = document.createElement("canvas");       // calque pour les effets (rayures, pixelisation)
   const octx = off.getContext("2d");
   let spec = null, PAL = BASE_PAL, scenes = [], hits = [];
+  const IMG = {};                                     // illustrations en pixel art (nom → Image)
 
   // ---------- outils ----------
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
@@ -56,6 +57,9 @@
     for (const sc of scenes) for (const e of sc.els)
       if (e.in === "slam" || e.flash) hits.push({ t: e.at, c: e.flashColor || e.color || "B", k: e.flash === "big" ? 1.6 : 1 });
     TT.duration = s.duration;
+    await Promise.all(Object.entries(s.images || {}).map(([name, url]) => new Promise(ok => {
+      const im = new Image(); im.onload = () => { IMG[name] = im; ok(); }; im.onerror = () => { console.error("image", url); ok(); }; im.src = url;
+    })));
     await Promise.all(['40px "Archivo Black"', "40px Silkscreen", "40px Tiny5"].map(f => document.fonts.load(f)));
   }
 
@@ -72,6 +76,7 @@
       case "drop": { const p = clamp(lt / 0.35); dy = -80 * (1 - easeOut(p)); a = clamp(lt / 0.08); break; }
       case "type": rev = clamp(lt / (e.typeDur ?? Math.max(0.25, (e.text || "").length / 34))); break;
       case "build": rev = clamp(lt / (e.buildDur ?? 0.5)); break;
+      case "scan": a = 1; break;
     }
     const outT = e.out ?? null;
     if (outT !== null && t > outT) a *= 1 - clamp((t - outT) / (e.outDur ?? 0.12));
@@ -453,7 +458,28 @@
     ctx.restore();
   }
 
-  const DRAW = { dna: drawDna, text: drawText, sprite: drawSprite, icons: drawIcons, grid: drawGrid, bars: drawBars, stamp: drawStamp,
+  // ---------- illustration (PNG pixel art, agrandie sans lissage) ----------
+  function drawImg(e, t) {
+    const im = IMG[e.src];
+    if (!im) return;
+    const L = life(e, t), h = e.h || 300, w = h * im.width / im.height;
+    let sc = L.s, dx = 0, dy = 0;
+    if (e.fx === "breathe") sc *= 1 + 0.018 * Math.sin((t - e.at) * 1.6);
+    if (e.fx === "bob") dy = Math.round(Math.sin(t * 4) * 1.5) * 2;
+    if (e.fx === "shiver") dx = (hash(Math.floor(t * 18), 5) - .5) * 3;
+    if (e.fx === "zoom") sc *= 1 + 0.06 * clamp((t - e.at) / (e.zoomDur || 6));
+    ctx.save(); ctx.globalAlpha *= L.a; ctx.imageSmoothingEnabled = false;
+    ctx.translate(L.x + dx, L.y + dy); ctx.scale(sc * (e.flip ? -1 : 1), sc);
+    if (e.glow) { ctx.shadowColor = alpha(e.glow, 0.55); ctx.shadowBlur = 24; }
+    if (e.in === "scan") {                             // apparition ligne par ligne, par marches de pixels
+      const p = clamp((t - e.at) / (e.scanDur || 0.5)), step = h / 24;
+      ctx.beginPath(); ctx.rect(-w / 2, -h / 2, w, Math.ceil(p * 24) * step); ctx.clip();
+    }
+    ctx.drawImage(im, -w / 2, -h / 2, w, h);
+    ctx.restore();
+  }
+
+  const DRAW = { img: drawImg, dna: drawDna, text: drawText, sprite: drawSprite, icons: drawIcons, grid: drawGrid, bars: drawBars, stamp: drawStamp,
     counter: drawCounter, flow: drawFlow, line: drawLine, forest: drawForest, endcard: drawEndcard, rect: drawRect };
 
   function sceneAt(t) { let s = null; for (const sc of scenes) if (sc.start <= t) s = sc; return s; }

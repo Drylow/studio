@@ -226,8 +226,11 @@ def build_timeline(script, stoks, duration):
             if isinstance(e.get("strike"), dict):
                 e["strike"]["at"] = round(resolve(e["strike"]["at"], bt, start, end), 3)
             cur["els"].append(e)
+    art = os.path.join(os.path.dirname(os.path.abspath(script["_path"])), "art")
+    images = {n: "/abs" + os.path.join(art, n + ".png") for n in script.get("art", {})
+              if os.path.exists(os.path.join(art, n + ".png"))}
     return {"duration": round(duration, 3), "fps": script.get("fps", 30), "palette": script.get("palette", {}),
-            "scenes": scenes}
+            "images": images, "scenes": scenes}
 
 
 # ---------------------------------------------------------------- bruitages
@@ -344,6 +347,7 @@ def main():
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
     script = json.load(open(a.script, encoding="utf-8"))
+    script["_path"] = a.script
     if a.fake_voice:
         fake_voice(a.work, script)
     make_voice(a.work, script)
