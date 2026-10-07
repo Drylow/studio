@@ -133,7 +133,30 @@ La Belgique n'y figure pas : à vérifier dans TikTok Studio pour le compte de l
   depuis mars 2026. Une piste sans carte : GPU gratuit Kaggle (environ 30 h/semaine)
   + modèle libre image et voix vers vidéo qui parle + voix Algrow. La qualité serait sous Veo.
 
-### Série test « Jacky la Prise »
+### Mise à jour du 7 oct., 23 h : zéro dépense
+
+- L'utilisateur refuse toute dépense. Ce qui est écarté :
+  - kie.ai ;
+  - l'essai Google, inutilisable avec une clé Gemini ;
+  - les abonnements ;
+  - les comptes Google multiples, contraires aux règles de Google et faits à la main.
+- La clé fal.ai du serveur est invalide (401).
+- **Test gratuit réussi** : LTX-2.3, modèle libre (Space `Lightricks/LTX-2-3`, ZeroGPU), lancé depuis le serveur.
+  - Entrée : image de Keyvon et réplique française dans le prompt.
+  - Résultat : clip de 5 s en 576×1024 avec son, fait en environ 1 min.
+  - Whisper retrouve la phrase française mot pour mot.
+- Limites de ZeroGPU : sans compte, environ 2 min de GPU par jour, et la file finit par refuser.
+  Avec un compte gratuit, environ 5 min par jour, soit à peu près 2 clips.
+- **Pour le volume** : LTX-2.3 sur les GPU gratuits de Kaggle (environ 30 h par semaine, T4,
+  sans carte, vérification par téléphone). La vitesse reste à mesurer.
+  Il faut `KAGGLE_USERNAME`, `KAGGLE_KEY` et `HF_TOKEN` dans le `.env` du serveur.
+- Les personnages « Jacky la Prise » sont refusés par l'utilisateur (« nuls »).
+  Il faudra des concepts brainrot qui suivent les tendances.
+  Pour la vidéo test : les personnages de Broken Fruits, en français, uniquement pour juger le rendu.
+  Les 15 plans sont dans `work/tiktok_test/bf/shots.json` sur le serveur.
+- Outils sur le serveur : `~/tiktok_pkgs` (gradio_client, hors du venv de production).
+
+### Série test « Jacky la Prise » (refusée)
 
 - **Héros** : Jacky, tête de fiche électrique blanche, en survêtement noir.
   Sa phrase : « Coupe-moi l'jus si j'me trompe… », et il se trompe toujours d'objet.
