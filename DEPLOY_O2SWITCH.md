@@ -3,6 +3,12 @@
 Guide actualisé le 6 octobre 2026 pour le nouveau studio React/Flask. L'ancien guide,
 son archive de déploiement, son écran boss/guest et son cron HTTP ne s'appliquent plus.
 
+**Dernier état, 7 octobre :** le code `2795223` est déployé. Un écran Firefox privé
+sur le VPS fonctionne via le site avec des contrôles anonymes réels, mais aucun
+compte Google ni upload n'a été validé. Cage/Pitch restent désactivées, automatisation
+en pause. Pour reprendre sans répéter les anciens essais, lire
+[la passation à Claude](production/CLAUDE_HANDOFF_2026-10-07.md).
+
 ## Installation réelle — edgerunners.fr
 
 Le studio est installé sur **https://edgerunners.fr/**, après sauvegarde de l'ancien

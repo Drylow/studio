@@ -4,6 +4,11 @@ Un seul studio pour organiser les chaînes YouTube, préparer leurs vidéos et s
 leur publication. Interface Cyberpunk en français, backend Flask et moteurs de
 production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md).
 
+**Reprise par Claude, 7 octobre 2026 :** lire [CLAUDE.md](CLAUDE.md) puis
+[le dossier de passation](production/CLAUDE_HANDOFF_2026-10-07.md). Il décrit tout le
+travail livré, l'hébergement et les blocages réels. La publication automatique
+Cage/Pitch n'est pas validée ; l'écran de connexion sur le VPS n'est pas un uploader.
+
 ## Ce qu'on peut utiliser
 
 - Vue d'ensemble du stock, des créneaux, travaux et blocages.

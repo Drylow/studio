@@ -1,7 +1,14 @@
 # Edgerunners Studio — état de construction
 
-Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
-décrit ce qui fonctionne réellement et ce qui reste à construire.
+Historique de construction, complété le 7 octobre 2026. **État de référence pour la
+reprise : [CLAUDE_HANDOFF_2026-10-07.md](CLAUDE_HANDOFF_2026-10-07.md).** Le cadrage
+reste dans `DASHBOARD_PLAN.md`. Les résultats datés ci-dessous ne doivent pas être
+confondus avec une publication YouTube réellement validée : elle ne l'est pas.
+
+Un navigateur Firefox privé sur le VPS a été livré et testé via le vrai site
+sans compte Google. Il fournit un écran de connexion, aucun upload automatique.
+L'utilisateur n'a pas réalisé cette connexion et demande maintenant de reprendre
+avec Claude. La pause globale et la désactivation de Cage/Pitch restent conservées.
 
 ## Publication sans installation — 7 octobre 2026
 

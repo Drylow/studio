@@ -4,15 +4,24 @@ Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en b
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
 pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
 
-**Reprise sur un autre compte / nouvelle session : lire d'abord `production/REPRISE.md`** (état au 3 oct., ce qui
-est en cours, ce qu'il veut ensuite, comment brancher GitHub, les secrets et NexLev). Au début de chaque session
-cloud : `bash production/session_start.sh` (installe le hook git et recrée `.env` depuis les variables
-d'environnement du compte s'il manque).
+**Reprise demandée par l'utilisateur le 7 octobre 2026 : lire d'abord
+[le dossier de passation](production/CLAUDE_HANDOFF_2026-10-07.md), puis
+[REPRISE](production/REPRISE.md).** Le dossier rassemble l'état déployé, les changements,
+les preuves, les accès privés et les blocages. Les sections plus anciennes sont historiques.
+Priorité : publication réellement automatique de Cage Dispatch et Pitch Dispatch, gratuite,
+sans nouvelle installation sur son PC. **Elle n'est pas validée.** L'utilisateur n'a pas
+effectué la dernière connexion Google proposée ; il demande maintenant la reprise par Claude.
+
+Au début d'une session cloud Claude, examiner `production/session_start.sh` avant de le lancer :
+il installe un hook qui pousse automatiquement et, si `.env` manque, le recrée depuis les
+variables disponibles. Les secrets d'une session Codex ne sont pas transférés par GitHub.
 
 ## 1. L'utilisateur et la façon de lui parler
 
 - Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
   français, simple, court, direct. Pas d'anglais, pas de jargon, pas de pavé.
+- **Quand tu lui demandes de faire quelque chose, explique exactement comment** : chemin,
+  bouton, contenu à saisir et résultat attendu. Donne des nouvelles pendant le travail.
 - Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». **Jamais d'heure UTC**
   (l'utilisateur, 3 oct. : « je comprends rien ») : dis « dans 20 min » + l'heure de **Belgique** (UTC+2 l'été,
   UTC+1 l'hiver), et des chiffres concrets (images 86/123, rendu en cours…).
@@ -26,6 +35,8 @@ d'environnement du compte s'il manque).
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
 - **7 octobre : aucun programme à installer sur son PC pour publier.** Les parcours PC sont retirés.
   La publication API reste côté serveur et nécessite un consentement Google accepté.
+  Un écran Firefox privé sur le VPS est livré et testé sans compte ; il permet une
+  connexion interactive, mais **aucun transport d'upload par navigateur n'est implémenté**.
   Les identifiants YouTube/cPanel ne sont pas un accès administrateur Google Cloud.
   Ne pas annoncer le blocage Google résolu ni demander une répétition inchangée du consentement.
 

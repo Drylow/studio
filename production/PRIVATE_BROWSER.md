@@ -62,3 +62,17 @@ vidéo utilisé. Le test local du site couvre l’accès privé, le refus des en
 chiffrées, des requêtes rejouées, de l’éditeur et de l’aperçu, ainsi que les révocations.
 Les tests d’interface utilisent uniquement des réponses fictives et ne prouvent
 aucune autorisation Google ou publication.
+
+Le 7 octobre, le parcours complet a aussi été testé **sur edgerunners.fr**, avec une
+session propriétaire de test de 300 secondes révoquée à la fin : heartbeat signé
+du VPS, écran Google anonyme 480 × 820, aller-retour d'une touche chiffrée, inspection
+« connexion nécessaire », fermeture de l'écran et maintien de la pause sportive.
+L'éditeur et une requête machine sans signature sont refusés. Le navigateur n'a
+pas été refusé sur cette page anonyme ; cela ne prédit pas l'acceptation d'un vrai
+compte. Aucun identifiant Google, accès de chaîne ou fichier vidéo n'a été utilisé.
+
+Le code déployé est `2795223`. Les preuves restent privées sur o2switch dans
+`work/studio/private-browser-deployment.json` et
+`work/studio/private-browser-live-test.json`. L'utilisateur n'a pas effectué la
+connexion proposée et a demandé une passation à Claude. Lire
+[le dossier de reprise](CLAUDE_HANDOFF_2026-10-07.md) pour les limites et la suite.

@@ -1,6 +1,22 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Priorité actuelle — 7 octobre 2026
+## Passation à Claude — 7 octobre 2026
+
+L'utilisateur demande de mettre toutes les modifications et les informations de
+reprise sur GitHub pour continuer avec Claude. **Lire d'abord
+[CLAUDE_HANDOFF_2026-10-07.md](CLAUDE_HANDOFF_2026-10-07.md).** Ce dossier est l'état
+de référence ; les entrées datées ci-dessous décrivent les essais précédents.
+
+Tout le code jusqu'à `2795223` était déjà poussé sur `main` et `work` et déployé sur
+edgerunners.fr. La passation ajoute de la documentation. Le navigateur privé a été
+activé et testé sur le vrai site avec une session propriétaire temporaire révoquée
+après le contrôle : écran Google anonyme, heartbeat signé, touche chiffrée et
+fermeture vérifiés. **Aucune connexion Google réelle ni vidéo envoyée.** Le dernier
+parcours proposé n'a pas été effectué par l'utilisateur. Cage/Pitch restent sans
+autorisation OAuth, désactivées et en pause globale. Le transport d'upload navigateur
+et la production éditoriale autonome restent à terminer.
+
+## Diagnostic et navigateur privé — 7 octobre 2026
 
 Nouvelle piste concrète : Firefox **graphique** sur le VPS ouvre la vraie page de
 connexion YouTube, avec ses protections normales, sans programme à installer sur
@@ -32,7 +48,11 @@ officiel corrigé est `https://account.google.com/advanced-protection/enroll/det
 Ne pas reprendre les mêmes essais OAuth ou les mêmes demandes de clés sans un
 nouveau diagnostic. Les accès Git/o2switch ne donnent pas l’administration Google.
 
-## Priorité actuelle — 6 octobre 2026
+## Historique du diagnostic — 6 octobre 2026
+
+Cette entrée précède le retour aux scopes historiques et le navigateur privé.
+Ses mentions de méthode courante et de question en attente sont historiques ;
+la passation du 7 octobre décrit l'état final et les refus de l'utilisateur.
 
 Dernière instruction : **chercher d’autres moyens de publier**, sortir du seul client
 Google Edgerunners et cesser les mêmes demandes de revue Branding. Recherche terminée
