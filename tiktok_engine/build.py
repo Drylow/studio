@@ -304,8 +304,14 @@ def mix(work, timeline):
     with wave.open(tmp, "w") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes((bus * 32767).astype(np.int16).tobytes())
-    subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", str(SR),
-                    "-ac", "2", dst], check=True)
+    # loudnorm en deux passes : une seule passe reste ~2 dB sous la cible
+    probe = subprocess.run([ffmpeg_exe(), "-hide_banner", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json",
+                            "-f", "null", "-"], capture_output=True, text=True).stderr
+    m = json.loads(probe[probe.rindex("{"):probe.rindex("}") + 1])
+    af = ("loudnorm=I=-14:TP=-1.5:LRA=11:linear=true:"
+          f"measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}:"
+          f"measured_thresh={m['input_thresh']}:offset={m['target_offset']}")
+    subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-i", tmp, "-af", af, "-ar", str(SR), "-ac", "2", dst], check=True)
     return dst
 
 
