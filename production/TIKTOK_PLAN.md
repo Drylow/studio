@@ -1,5 +1,8 @@
 # TikTok : vidéos IA « persos à tête d'objet » (plan, 7 oct. 2026)
 
+> **En pause depuis le 7 oct. au soir** : l'utilisateur part sur un compte d'histoire en pixel art
+> dans le style de @archibald.media, codé en HTML/JS. Voir `tiktok_engine/README.md`.
+
 Demande de l'utilisateur : un nouvel outil pour lancer plusieurs comptes TikTok
 avec le même type de vidéos que les comptes qui marchent. Il faut la même fluidité,
 le même genre de personnages et des voix vivantes avec des tics (« fuck me if I'm wrong »).

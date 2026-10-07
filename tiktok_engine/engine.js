@@ -434,7 +434,26 @@
     ctx.restore();
   }
 
-  const DRAW = { text: drawText, sprite: drawSprite, icons: drawIcons, grid: drawGrid, bars: drawBars, stamp: drawStamp,
+  // ---------- double hélice d'ADN qui tourne ----------
+  function drawDna(e, t) {
+    const L = life(e, t), h = e.h || 260, amp = e.amp || 34, px = e.px || 5, n = Math.floor(h / (px * 1.6));
+    ctx.save(); ctx.globalAlpha *= L.a; ctx.translate(L.x, L.y - h / 2);
+    for (let i = 0; i < n; i++) {
+      if (L.rev < 1 && i / n > L.rev) break;
+      const y = i * px * 1.6, ph = i * 0.42 + t * (e.speed || 2.2);
+      const x1 = Math.sin(ph) * amp, x2 = -x1, front = Math.cos(ph) > 0;
+      if (i % 3 === 0) {                               // barreaux entre les deux brins
+        ctx.fillStyle = alpha("H", 0.35);
+        const a = Math.min(x1, x2), b = Math.max(x1, x2);
+        for (let x = a; x < b; x += px) ctx.fillRect(Math.round(x / px) * px, y, px - 1, px - 1);
+      }
+      ctx.fillStyle = col(front ? "B" : "D"); ctx.fillRect(Math.round(x1 / px) * px, y, px, px);
+      ctx.fillStyle = col(front ? "D" : "B"); ctx.fillRect(Math.round(x2 / px) * px, y, px, px);
+    }
+    ctx.restore();
+  }
+
+  const DRAW = { dna: drawDna, text: drawText, sprite: drawSprite, icons: drawIcons, grid: drawGrid, bars: drawBars, stamp: drawStamp,
     counter: drawCounter, flow: drawFlow, line: drawLine, forest: drawForest, endcard: drawEndcard, rect: drawRect };
 
   function sceneAt(t) { let s = null; for (const sc of scenes) if (sc.start <= t) s = sc; return s; }
