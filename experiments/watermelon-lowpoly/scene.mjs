@@ -33,9 +33,29 @@ const blade=new THREE.Group();
 blade.add(box([.055,1.6,4.5],[0,0,0],'#b7c2ba',.25));
 blade.add(box([.03,.06,4.52],[0,-.81,0],'#eef3e9',.2));
 blade.add(box([.24,.38,1.6],[0,.52,2.93],'#203c2a',.5));
-blade.add(box([.16,.42,.13],[0,.52,2.12],'#dfc79d',.3));scene.add(blade);
+blade.add(box([.16,.42,.13],[0,.52,2.12],'#dfc79d',.3));
+// A bounded pool supports overlapping throws in the teaser and 32-cut burst.
+const knives=Array.from({length:12},()=>{
+ const main=blade.clone(),echo=blade.clone();
+ main.scale.setScalar(.78);echo.scale.setScalar(.78);
+ echo.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.transparent=true;o.material.opacity=.12;o.material.depthWrite=false;o.castShadow=false;}});
+ scene.add(main,echo);return {main,echo};
+});
 const seedsMat=new THREE.MeshStandardMaterial({color:'#352922',roughness:.7});
+const seedGeometry=new THREE.IcosahedronGeometry(.045,1);
 const skinMat=new THREE.MeshStandardMaterial({vertexColors:true,flatShading:true,roughness:.73});
+const fleshMat=new THREE.MeshStandardMaterial({color:'#ed4b59',roughness:.82,flatShading:true});
+fleshMat.onBeforeCompile=shader=>{
+ shader.vertexShader='attribute vec3 fruitRest; varying vec3 vFruitPos;\n'+shader.vertexShader;
+ shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvFruitPos=fruitRest;');
+ shader.fragmentShader='varying vec3 vFruitPos;\n'+shader.fragmentShader;
+ shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+  float r=length(vFruitPos/vec3(1.55,1.65,1.55));
+  if(r>.971)diffuseColor.rgb=vec3(.10,.24,.12);
+  else if(r>.915)diffuseColor.rgb=vec3(.88,.90,.64);
+  else diffuseColor.rgb*=.96+.04*sin(vFruitPos.x*11.+vFruitPos.z*9.);
+ `);
+};
 const V=a=>new THREE.Vector3(...a);
 const average=pts=>pts.reduce((s,p)=>s.add(p),new THREE.Vector3()).multiplyScalar(1/pts.length);
 function normalized(p){return Math.sqrt((p.x/DATA.radii[0])**2+(p.y/DATA.radii[1])**2+(p.z/DATA.radii[2])**2)}
@@ -59,7 +79,7 @@ function createPiece(piece){
     const p=faceCenter.clone().addScaledVector(u,Math.cos(theta)*r).addScaledVector(v,Math.sin(theta)*r);
     const inside=pts.every((a,k)=>pts[(k+1)%pts.length].clone().sub(a).cross(p.clone().sub(a)).dot(normal)>=-1e-5);
     if(!inside||normalized(p)>.87)continue;
-    const seed=new THREE.Mesh(new THREE.IcosahedronGeometry(.045,1),seedsMat);
+    const seed=new THREE.Mesh(seedGeometry,seedsMat);
     seed.scale.set(.7,1.4,.28);seed.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),normal);
     seed.position.copy(p.sub(center).addScaledVector(normal,.008));group.add(seed);
    }
@@ -70,55 +90,104 @@ function createPiece(piece){
   const m=new THREE.Mesh(g,skinMat);m.castShadow=true;m.receiveShadow=true;group.add(m);
  }
  if(arrays.flesh.length){
-  const mat=new THREE.MeshStandardMaterial({color:'#ed4b59',roughness:.82,flatShading:true});
-  mat.onBeforeCompile=shader=>{
-   shader.uniforms.fruitCenter={value:center};
-   shader.vertexShader='varying vec3 vFruitPos; uniform vec3 fruitCenter;\n'+shader.vertexShader;
-   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvFruitPos=position+fruitCenter;');
-   shader.fragmentShader='varying vec3 vFruitPos;\n'+shader.fragmentShader;
-   shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
-    float r=length(vFruitPos/vec3(1.55,1.65,1.55));
-    if(r>.971)diffuseColor.rgb=vec3(.10,.24,.12);
-    else if(r>.915)diffuseColor.rgb=vec3(.88,.90,.64);
-    else diffuseColor.rgb*=.96+.04*sin(vFruitPos.x*11.+vFruitPos.z*9.);
-   `);
-  };
   const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(arrays.flesh,3));g.computeVertexNormals();
-  const m=new THREE.Mesh(g,mat);m.castShadow=true;m.receiveShadow=true;group.add(m);
+  const m=new THREE.Mesh(g,fleshMat);m.castShadow=true;m.receiveShadow=true;group.add(m);
  }
  group.position.copy(center).add(V(piece.offset)).add(new THREE.Vector3(0,DATA.height,0));return group;
 }
-const shots=DATA.shots.map(shot=>{
- const root=new THREE.Group();scene.add(root);
- const stages=shot.stages.map(stage=>{const holder=new THREE.Group();root.add(holder);return {holder,parts:stage.map(p=>{const g=createPiece(p);holder.add(g);return g;})};});
- return {root,stages};
-});
+const fruit=new THREE.Group();scene.add(fruit);
+const meshes=new Map(),batches=new Map();let activeStage='';let parts=[],activeBatches=[];
+function buildBatches(ids,prototypes){
+ const bins=[skinMat,fleshMat,seedsMat].map(material=>({material,rest:[],normals:[],fruitRest:[],colors:[],owners:[]}));
+ prototypes.forEach((group,owner)=>group.children.forEach(m=>{
+  m.updateMatrix();const b=bins.find(b=>b.material===m.material),g=m.geometry.index?m.geometry.toNonIndexed():m.geometry;
+  const a=g.attributes.position,n=g.attributes.normal,c=g.attributes.color;
+  const normalMatrix=new THREE.Matrix3().getNormalMatrix(m.matrix),center=V(DATA.geometries[ids[owner]].center);
+  for(let j=0;j<a.count;j++){
+   const p=new THREE.Vector3().fromBufferAttribute(a,j).applyMatrix4(m.matrix);
+   const normal=new THREE.Vector3().fromBufferAttribute(n,j).applyMatrix3(normalMatrix).normalize();
+   b.rest.push(...p.toArray());b.normals.push(...normal.toArray());b.fruitRest.push(...p.clone().add(center).toArray());b.owners.push(owner);
+   if(c)b.colors.push(c.getX(j),c.getY(j),c.getZ(j));
+  }
+ }));
+ return bins.filter(b=>b.rest.length).map(b=>{
+  const g=new THREE.BufferGeometry();
+  g.setAttribute('position',new THREE.Float32BufferAttribute(b.rest,3).setUsage(THREE.DynamicDrawUsage));
+  g.setAttribute('normal',new THREE.Float32BufferAttribute(b.normals,3).setUsage(THREE.DynamicDrawUsage));
+  g.setAttribute('fruitRest',new THREE.Float32BufferAttribute(b.fruitRest,3));
+  if(b.colors.length)g.setAttribute('color',new THREE.Float32BufferAttribute(b.colors,3));
+  const mesh=new THREE.Mesh(g,b.material);mesh.castShadow=true;mesh.receiveShadow=true;mesh.frustumCulled=false;
+  return {...b,mesh};
+ });
+}
+function mountStage(ids,key){
+ if(activeStage===key)return;
+ fruit.clear();parts=ids.map(id=>{
+  if(!meshes.has(id))meshes.set(id,createPiece(DATA.geometries[id]));
+  return meshes.get(id);
+ });
+ const geometryKey=ids.length;
+ if(!batches.has(geometryKey))batches.set(geometryKey,buildBatches(ids,parts));
+ activeBatches=batches.get(geometryKey);activeBatches.forEach(b=>fruit.add(b.mesh));activeStage=key;
+}
+const movingVertex=new THREE.Vector3(),movingNormal=new THREE.Vector3();
+function updateBatches(){
+ for(const b of activeBatches){
+  const pos=b.mesh.geometry.attributes.position.array,norm=b.mesh.geometry.attributes.normal.array;
+  for(let j=0;j<b.owners.length;j++){
+   const p=j*3,g=parts[b.owners[j]];
+   movingVertex.fromArray(b.rest,p).applyQuaternion(g.quaternion).add(g.position).toArray(pos,p);
+   movingNormal.fromArray(b.normals,p).applyQuaternion(g.quaternion).toArray(norm,p);
+  }
+  b.mesh.geometry.attributes.position.needsUpdate=true;b.mesh.geometry.attributes.normal.needsUpdate=true;
+ }
+}
 const poseA=new THREE.Quaternion(),poseB=new THREE.Quaternion(),yAxis=new THREE.Vector3(0,1,0);
+function throwKnife(knife,i,age){
+ const plane=DATA.planes[i],n=V(plane.n);
+ if(Math.abs(n.y)>.9){
+  knife.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/2);
+  knife.position.set(-age*80,DATA.height+plane.d,0);
+ }else{
+  knife.quaternion.setFromAxisAngle(yAxis,-Math.atan2(n.z,n.x));
+  // Travel lies in the cut plane. No ease-in/out: a launched blade retains
+  // its speed through the fruit and exits on the other side of the frame.
+  const tangent=new THREE.Vector3(-n.z,0,n.x);
+  knife.position.copy(n.multiplyScalar(plane.d)).addScaledVector(tangent,age*38);
+  knife.position.y=DATA.height-age*60;
+ }
+}
 function renderAt(input){
- const time=Math.max(0,Math.min(input,DATA.duration-1/60)),index=Math.min(2,Math.floor(time/DATA.shotLength)),t=time-index*DATA.shotLength,shot=DATA.shots[index],view=shots[index];
- shots.forEach((s,i)=>s.root.visible=i===index);
+ const time=Math.max(0,Math.min(input,DATA.duration-1/60));
+ const index=DATA.shots.findLastIndex(s=>time+1e-7>=s.start),shot=DATA.shots[index],t=Math.max(0,time-shot.start);
  const stage=shot.cutTimes.filter(c=>t>=c).length;
- view.stages.forEach((s,i)=>s.holder.visible=i===stage);const parts=view.stages[stage].parts;
+ const ids=shot.stages[stage];mountStage(ids,`${index}:${stage}`);
  if(t>=shot.release){
   const f=(t-shot.release)*DATA.fps,a=Math.min(Math.floor(f),shot.frames.length-1),b=Math.min(a+1,shot.frames.length-1),mix=f-a;
   parts.forEach((g,i)=>{const p=shot.frames[a][i],q=shot.frames[b][i];
    g.position.set(p[0]+(q[0]-p[0])*mix,p[1]+(q[1]-p[1])*mix,p[2]+(q[2]-p[2])*mix);
    poseA.set(...p.slice(3));poseB.set(...q.slice(3));g.quaternion.copy(poseA.slerp(poseB,mix));
   });
- }else parts.forEach((g,i)=>{const p=shot.stages[stage][i];g.position.copy(V(p.center)).add(V(p.offset)).add(new THREE.Vector3(0,DATA.height,0));g.quaternion.identity();});
- let cutting=-1;shot.cutTimes.forEach((c,i)=>{if(t>=c-.07&&t<=c+.075)cutting=i;});blade.visible=cutting>=0;
- if(cutting>=0){
-  const c=shot.cutTimes[cutting],n=V(DATA.planes[cutting].n);
-  const p=Math.max(0,Math.min(1,(t-c+.07)/.145));
-  const sweep=p*p*(3-2*p);
-  if(Math.abs(n.y)>.9){blade.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/2);blade.position.set(5.2-10.4*sweep,DATA.height,0);}
-  else{blade.quaternion.setFromAxisAngle(yAxis,-Math.atan2(n.z,n.x));blade.position.copy(n.multiplyScalar(DATA.planes[cutting].d)).add(new THREE.Vector3(0,5.55-4.4*sweep,0));}
- }
+ }else parts.forEach((g,i)=>{
+  const p=DATA.geometries[ids[i]],tease=index===0?4:1;
+  g.position.copy(V(p.center)).addScaledVector(V(p.offset),tease).add(new THREE.Vector3(0,DATA.height,0));
+  if(index===0)g.position.addScaledVector(V(p.center),.07*stage/shot.count);
+  g.quaternion.identity();
+ });
+ updateBatches();
+ knives.forEach(({main,echo})=>{main.visible=false;echo.visible=false;});
+ let slot=0;
+ shot.cutTimes.forEach((c,i)=>{
+  const age=t-c;
+  if(age<-.08||age>.07||slot>=knives.length)return;
+  const {main,echo}=knives[slot++];main.visible=true;echo.visible=true;
+  throwKnife(main,i,age);throwKnife(echo,i,age-.012);
+ });
  const theta=.75+Math.sin(time*.18)*.045;
- const pullback=Math.max(0,Math.min(1,(t-shot.release)/1.0));
- const radius=18.5+5.5*pullback;
- camera.position.set(Math.sin(theta)*radius,11.5+3.5*pullback,Math.cos(theta)*radius);camera.lookAt(0,1.9,0);renderer.render(scene,camera);
- drawPixelFrame(renderer.domElement,shot.count,index);
+ const pullback=Math.max(0,Math.min(1,(t-shot.release)/.75));
+ const radius=(index===0?16.9:18.5)+3.3*pullback;
+ camera.position.set(Math.sin(theta)*radius,11.5+2*pullback,Math.cos(theta)*radius);camera.lookAt(0,1.9,0);renderer.render(scene,camera);
+ drawPixelFrame(renderer.domElement,shot.count,index-1,index===0);
 }
 window.drawFruit=renderAt;
 window.addEventListener('hf-seek',e=>renderAt(e.detail.time));renderAt(window.__hfThreeTime||0);
