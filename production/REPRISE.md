@@ -19,6 +19,14 @@
   Pitch Dispatch reliée (`UC7IbPH4JICJSDN-gyFP7PDA`), accès vérifié en direct pour les deux.
   Choix de l'utilisateur : voix Algrow conservée malgré la restriction d'usage automatisé
   (risque accepté par lui), 2 vidéos par jour et par chaîne au maximum.
+- **Pilote automatique Cage/Pitch** (`studio/autonews.py`, détails dans `NEWS_BRIEFS.md`) : essai réel
+  sur le serveur le 7 oct. (21 h 23), sujet « Shavkat Rakhmonov teases 19-0 vs 19-0 » choisi 8/10,
+  vidéo `77db6e8c11094c0f936e7c9c1c367c6f` (4 min 25) en `review`, non publiée. Corrigé pendant
+  l'essai : threads ffmpeg (`FFMPEG_THREADS=4` sur o2switch), photos à une seule personne,
+  jamais le visage d'une autre personne (cartes et miniature), référence de style sans visage.
+  `NEWS_AUTO_DRY=1` reste dans le `.env` du serveur jusqu'au « go » de l'utilisateur ; ensuite :
+  retirer cette ligne, activer l'automatisation de Cage/Pitch et lever la pause du studio.
+  Limite connue : peu de photos libres → images répétées ; texte seul quand aucune n'existe.
 - **Delamain codé par Claude (option 2, mise en ligne sans validation)** : routine
   `trig_01GfMnci6KHo8W7cB7amCy84` (Sonnet, environnement sans accès o2switch). À compléter
   par l'utilisateur sur claude.ai : dépôt Drylow/studio + déclencheur API, puis adresse et
