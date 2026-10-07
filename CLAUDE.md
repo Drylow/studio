@@ -12,6 +12,10 @@ Priorité : publication réellement automatique de Cage Dispatch et Pitch Dispat
 sans nouvelle installation sur son PC. **Elle n'est pas validée.** L'utilisateur n'a pas
 effectué la dernière connexion Google proposée ; il demande maintenant la reprise par Claude.
 
+**Session lancée par Delamain** (bloc `routine-fire-payload` commençant par « Demande Delamain ») :
+suivre uniquement [production/DELAMAIN_ROUTINE.md](production/DELAMAIN_ROUTINE.md) ; ne pas lancer
+`session_start.sh`, ne jamais pousser sur `main`, un seul push sur la branche indiquée.
+
 Au début d'une session cloud Claude, examiner `production/session_start.sh` avant de le lancer :
 il installe un hook qui pousse automatiquement et, si `.env` manque, le recrée depuis les
 variables disponibles. Les secrets d'une session Codex ne sont pas transférés par GitHub.

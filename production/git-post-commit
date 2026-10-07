@@ -2,6 +2,8 @@
 # Pousse chaque commit sur GitHub tout de suite : la branche courante ET main (avance rapide seulement,
 # git refuse tout seul si main a divergé). En arrière-plan, quelques essais si le réseau coupe.
 branch=$(git rev-parse --abbrev-ref HEAD)
+# Sessions lancées par Delamain : un seul push, à la fin, sur leur branche (production/DELAMAIN_ROUTINE.md).
+case "$branch" in claude/delamain-*) exit 0 ;; esac
 (
   for i in 1 2 3 4; do git push -q -u origin "$branch" >/dev/null 2>&1 && break; sleep $((2 * i)); done
   [ "$branch" != "main" ] && for i in 1 2 3 4; do git push -q origin HEAD:main >/dev/null 2>&1 && break; sleep $((2 * i)); done

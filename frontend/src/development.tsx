@@ -79,6 +79,16 @@ export function DevelopmentCard({
       </ol>
       <p>{change.summary || change.message}</p>
       {change.error && <p className="error-text">{change.error}</p>}
+      {change.session_url && (
+        <a
+          className="text-button"
+          href={change.session_url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Suivre le travail de Claude <ArrowUpRight size={14} />
+        </a>
+      )}
       <div className="development-footer">
         <small>
           {dateLabel(change.updated_at, { hour: "2-digit", minute: "2-digit" })}
@@ -121,6 +131,92 @@ export function DevelopmentCard({
   );
 }
 
+function ClaudeRoutine({
+  routine,
+  owner,
+}: {
+  routine?: { configured: boolean; url: string };
+  owner: boolean;
+}) {
+  const [url, setUrl] = useState(routine?.url || "");
+  const [token, setToken] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState("");
+  if (!owner) return null;
+  async function save(remove = false) {
+    setBusy(true);
+    setMessage("");
+    try {
+      if (remove) await api("/development/routine", "DELETE", {});
+      else await api("/development/routine", "POST", { url, token });
+      window.location.reload();
+    } catch (e) {
+      setMessage(e instanceof Error ? e.message : "Enregistrement impossible.");
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="inline-note development-routine">
+      <Code2 size={18} />
+      <div>
+        <strong>
+          {routine?.configured
+            ? "Claude (Sonnet) code tes demandes."
+            : "Brancher Claude pour coder tes demandes"}
+        </strong>
+        {routine?.configured ? (
+          <p>
+            Chaque demande lance une session Claude que tu peux suivre ; le
+            serveur refait les tests et met en ligne tout seul.
+          </p>
+        ) : (
+          <>
+            <p>
+              Sur claude.ai/code/routines → routine « Delamain » → Modifier →
+              déclencheur API : copie l’adresse et génère le jeton, puis colle-les
+              ici.
+            </p>
+            <label>
+              Adresse de la routine
+              <input
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                placeholder="https://api.anthropic.com/v1/claude_code/routines/trig_…/fire"
+                autoComplete="off"
+              />
+            </label>
+            <label>
+              Jeton
+              <input
+                type="password"
+                value={token}
+                onChange={(e) => setToken(e.target.value)}
+                autoComplete="off"
+              />
+            </label>
+          </>
+        )}
+        {message && <p className="error-text">{message}</p>}
+        <div className="development-actions">
+          {routine?.configured ? (
+            <Button onClick={() => save(true)} disabled={busy}>
+              Retirer le jeton
+            </Button>
+          ) : (
+            <Button
+              variant="primary"
+              onClick={() => save()}
+              disabled={busy || !url || !token}
+            >
+              Enregistrer
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function DevelopmentSettings({
   data,
   owner,
@@ -147,6 +243,7 @@ export function DevelopmentSettings({
         le code, lance les vérifications et met le site à jour quand elles
         passent.
       </p>
+      <ClaudeRoutine routine={state.routine} owner={owner} />
       {!state.ready && (
         <div className="inline-note">
           <ShieldCheck size={18} />

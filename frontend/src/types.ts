@@ -117,6 +117,8 @@ export type Workspace = {
       check_error: string;
       missing: string[];
       scope: string;
+      coder?: string;
+      routine?: { configured: boolean; url: string };
     };
     changes: Development[];
   };
@@ -190,6 +192,7 @@ export type Development = {
   branch: string;
   checks: string;
   diff?: string;
+  session_url?: string;
   created_at: string;
   updated_at: string;
 };

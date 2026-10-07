@@ -6,6 +6,24 @@ redémarré Passenger, vérifié la version HTTPS et poussé le commit `b1da59e`
 Les installations supplémentaires doivent réussir les contrôles ci-dessous avant
 de se déclarer connectées. Le VPS de montage et ses clés ne donnent pas d'accès au code.
 
+## Claude comme codeur (7 octobre 2026)
+
+À la demande du propriétaire, Delamain peut faire coder ses demandes par **Claude (Sonnet)**
+au lieu du service IA du serveur. Le site lance une **routine Claude Code** (déclencheur API)
+avec la demande ; la session Claude suit `production/DELAMAIN_ROUTINE.md`, pousse une branche
+`claude/delamain-…` avec un commit final `Delamain-Job` / `Delamain-Status`, puis l'exécuteur
+reprend cette branche et applique **exactement les mêmes contrôles** : fichiers autorisés
+seulement, tests d'origine copiés hors de la branche, compilation, démarrage Flask, sauvegarde
+SQLite, maintenance, contrôle de version HTTPS, retour arrière et push de `main`. Mise en ligne
+sans validation manuelle, choix explicite du propriétaire. Attente maximale : 45 minutes.
+
+Brancher : **Réglages → Modifications du site → Brancher Claude**, coller l'adresse
+`https://api.anthropic.com/v1/claude_code/routines/trig_…/fire` et le jeton générés sur
+claude.ai (routine → Modifier → déclencheur API → Generate token). Le jeton est stocké dans la
+base privée et n'est jamais renvoyé au navigateur. `STUDIO_DEV_ROUTINE_URL` et
+`STUDIO_DEV_ROUTINE_TOKEN` dans `.env` sont aussi acceptés. Sans routine, l'ancien codeur
+(`AI_BASE_URL`) reste utilisé. Les sessions lancées consomment l'abonnement Claude du compte.
+
 ## Ce que fait l'exécuteur
 
 Le propriétaire choisit **Delamain → Modifier le site**, décrit le changement et

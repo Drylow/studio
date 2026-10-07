@@ -222,6 +222,88 @@ class DevelopmentPipelineTests(unittest.TestCase):
             )
             self.assertEqual(len(self.store.rows("SELECT * FROM studio_chat")), 1)
 
+    def routine(self, *, status="done", path="services/feature.py", push=True):
+        sent = []
+
+        def fire(text):
+            sent.append(text)
+            fields = dict(
+                line.split(" : ", 1) for line in text.splitlines() if " : " in line
+            )
+            work = Path(self.tmp.name) / ("claude-" + uid())
+            git(Path(self.tmp.name), "clone", "-b", "main", str(self.remote), str(work))
+            git(work, "config", "user.name", "Claude")
+            git(work, "config", "user.email", "claude@example.invalid")
+            if status == "done":
+                target = work / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                original = target.read_text() if target.exists() else ""
+                target.write_text(
+                    original.replace("LABEL = 'Original'", "LABEL = 'Updated'")
+                    if "LABEL = 'Original'" in original
+                    else original + "# changed\n"
+                )
+            git(work, "add", "-A")
+            message = (
+                "Update the label\n\nLibellé mis à jour par Claude.\n\n"
+                f"Delamain-Job: {fields['Demande Delamain']}\n"
+                f"Delamain-Status: {status}\n"
+            )
+            git(work, "commit", "--allow-empty", "-m", message)
+            if push:
+                git(work, "push", "origin", "HEAD:refs/heads/" + fields["Branche à pousser"])
+            return "https://claude.ai/code/session_fixture01"
+
+        fire.sent = sent
+        return fire
+
+    def test_claude_routine_change_passes_the_same_checks_and_deploys(self):
+        self.config.routine_poll = 0.05
+        with host(self.root) as url:
+            self.config.health_url = url
+            job = self.job()
+            fire = self.routine()
+            run_once(self.store, self.config, routine=fire)
+            result = self.store.one(
+                "SELECT * FROM studio_development WHERE id=?", (job["id"],)
+            )
+            self.assertEqual(result["status"], "done", result["error"])
+            self.assertIn("Change the original label", fire.sent[0])
+            self.assertIn("Libellé mis à jour par Claude", result["summary"])
+            self.assertEqual(result["session_url"], "https://claude.ai/code/session_fixture01")
+            self.assertIn("Ran 2 tests", result["checks"])
+            self.assertIn(
+                "LABEL = 'Updated'", (self.root / "services/feature.py").read_text()
+            )
+            self.assertEqual(
+                git(self.root, "ls-remote", "origin", "main").split()[0],
+                result["commit_id"],
+            )
+
+    def test_claude_routine_refusal_scope_or_silence_never_deploys(self):
+        self.config.routine_poll = 0.05
+        self.config.routine_wait = 1
+        cases = [
+            (self.routine(status="refused"), "Claude n’a pas fait"),
+            (self.routine(path="tests/test_feature.py"), "hors du périmètre"),
+            (self.routine(path="studio/security.py"), "hors du périmètre"),
+            (self.routine(push=False), "à temps"),
+        ]
+        with host(self.root) as url:
+            self.config.health_url = url
+            for fire, reason in cases:
+                job = self.job()
+                run_once(self.store, self.config, routine=fire)
+                result = self.store.one(
+                    "SELECT * FROM studio_development WHERE id=?", (job["id"],)
+                )
+                self.assertEqual(result["status"], "failed")
+                self.assertIn(reason, result["error"])
+                self.assertEqual(revision(self.root), self.base)
+                self.assertEqual(
+                    git(self.root, "ls-remote", "origin", "main").split()[0], self.base
+                )
+
     def test_baseline_cases_release_process_memory_without_ignoring_failures(self):
         baseline = Path(self.tmp.name) / "isolated-baseline"
         baseline.mkdir()
@@ -625,6 +707,36 @@ class DevelopmentApiTests(unittest.TestCase):
                 403,
             )
         self.assertEqual(self.store.rows("SELECT * FROM studio_development"), [])
+
+    def test_routine_token_is_owner_only_validated_and_never_returned(self):
+        url = "https://api.anthropic.com/v1/claude_code/routines/trig_01Fixture/fire"
+        token = "sk-ant-oat01-fixture-token-value-0123456789"
+        save = lambda **data: self.client.post(
+            "/api/studio/development/routine",
+            json=data,
+            headers={"X-CSRF-Token": self.csrf},
+        )
+        self.assertEqual(save(url="https://evil.example/fire", token=token).status_code, 400)
+        self.assertEqual(save(url=url, token="short").status_code, 400)
+        self.assertEqual(save(url=url, token=token).status_code, 200)
+        overview = self.client.get("/api/studio/development")
+        self.assertTrue(overview.json["configuration"]["routine"]["configured"])
+        self.assertEqual(overview.json["configuration"]["coder"], "claude")
+        self.assertNotIn(token, overview.get_data(as_text=True))
+        self.assertNotIn(token, self.client.get("/api/studio/workspace").get_data(as_text=True))
+        with self.client.session_transaction() as session:
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
+        self.csrf = self.client.get("/api/studio/bootstrap").json["csrf"]
+        self.assertEqual(save(url=url, token=token).status_code, 403)
+        self.assertEqual(
+            self.client.delete(
+                "/api/studio/development/routine", headers={"X-CSRF-Token": self.csrf}
+            ).status_code,
+            403,
+        )
 
     def test_health_reports_startup_version_and_no_secrets(self):
         self.app.config["CODE_REVISION"] = "loaded-version"

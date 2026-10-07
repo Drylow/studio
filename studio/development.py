@@ -18,6 +18,7 @@ import sys
 import tempfile
 import threading
 import time
+import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 
@@ -53,6 +54,15 @@ sont protégés. Si la demande exige leur modification, explique la limite sans 
 """
 
 
+# Optional coder: a Claude Code routine started by API. It returns a branch that
+# goes through exactly the same baseline tests, build, deployment and rollback.
+ROUTINE_BETA = "experimental-cc-routine-2026-04-01"
+ROUTINE_URL = re.compile(
+    r"https://api\.anthropic\.com/v1/claude_code/routines/trig_[A-Za-z0-9]+/fire"
+)
+TRAILER = re.compile(r"^Delamain-(Job|Status):[ \t]*(\S+)[ \t]*$", re.M)
+
+
 @dataclass
 class Config:
     root: Path = ROOT
@@ -61,6 +71,10 @@ class Config:
     python: str = sys.executable
     npm: str = "npm"
     npm_cache: str = ""
+    routine_url: str = ""
+    routine_token: str = ""
+    routine_wait: int = 2700
+    routine_poll: float = 20
 
     @classmethod
     def environment(cls):
@@ -70,6 +84,8 @@ class Config:
             npm=os.getenv("STUDIO_DEV_NPM", "npm"),
             npm_cache=os.getenv("STUDIO_DEV_NPM_CACHE")
             or os.getenv("NPM_CONFIG_CACHE", ""),
+            routine_url=os.getenv("STUDIO_DEV_ROUTINE_URL", "").strip(),
+            routine_token=os.getenv("STUDIO_DEV_ROUTINE_TOKEN", "").strip(),
         )
 
 
@@ -90,6 +106,15 @@ def initialize(store):
           checked_at TEXT NOT NULL DEFAULT '', check_error TEXT NOT NULL DEFAULT '');
         INSERT OR IGNORE INTO studio_developer_worker(id) VALUES(1);
         """)
+        c.execute(
+            "CREATE TABLE IF NOT EXISTS studio_developer_routine(id INTEGER PRIMARY KEY CHECK(id=1), url TEXT NOT NULL DEFAULT '', token TEXT NOT NULL DEFAULT '', updated_at TEXT NOT NULL DEFAULT '')"
+        )
+        c.execute("INSERT OR IGNORE INTO studio_developer_routine(id) VALUES(1)")
+        columns = {row[1] for row in c.execute("PRAGMA table_info(studio_development)")}
+        if "session_url" not in columns:
+            c.execute(
+                "ALTER TABLE studio_development ADD COLUMN session_url TEXT NOT NULL DEFAULT ''"
+            )
 
 
 def call_ai(messages, *, timeout=120, tries=2):
@@ -201,15 +226,29 @@ def health(url, commit):
         raise ValueError("Le site n’a pas encore chargé la version attendue.")
 
 
+def with_routine(store, config):
+    """The owner may paste the routine token in the site instead of the .env."""
+    if config.routine_url and config.routine_token:
+        return config
+    row = store.one("SELECT url,token FROM studio_developer_routine WHERE id=1")
+    if row and row["url"] and row["token"]:
+        config.routine_url = config.routine_url or row["url"]
+        config.routine_token = config.routine_token or row["token"]
+    return config
+
+
 def configuration(store, config=None, *, preview=False):
-    config = config or Config.environment()
+    config = with_routine(store, config or Config.environment())
     worker = store.one("SELECT * FROM studio_developer_worker WHERE id=1")
     missing = []
     if not config.enabled:
         missing.append("Activer l’exécuteur sur le serveur du site")
     from services import ai
 
-    if not ai.configured():
+    if config.routine_url or config.routine_token:
+        if not ROUTINE_URL.fullmatch(config.routine_url) or not config.routine_token:
+            missing.append("Renseigner l’adresse et le jeton de la routine Claude")
+    elif not ai.configured():
         missing.append("Configurer le service IA")
     if not config.health_url:
         missing.append("Renseigner l’adresse publique de contrôle du site")
@@ -234,6 +273,13 @@ def configuration(store, config=None, *, preview=False):
         "checked_at": worker["checked_at"],
         "check_error": worker["check_error"],
         "missing": missing,
+        "coder": "claude" if config.routine_url else "ia",
+        "routine": {
+            "configured": bool(
+                ROUTINE_URL.fullmatch(config.routine_url) and config.routine_token
+            ),
+            "url": config.routine_url,
+        },
         "scope": "Interface et fonctionnalités ; sécurité et infrastructure protégées",
     }
 
@@ -242,7 +288,7 @@ def overview(store, *, preview=False):
     return {
         "configuration": configuration(store, preview=preview),
         "changes": store.rows(
-            "SELECT id,user_id,request,status,message,summary,error,base_commit,commit_id,branch,checks,created_at,updated_at FROM studio_development ORDER BY created_at DESC LIMIT 12"
+            "SELECT id,user_id,request,status,message,summary,error,base_commit,commit_id,branch,checks,session_url,created_at,updated_at FROM studio_development ORDER BY created_at DESC LIMIT 12"
         ),
     }
 
@@ -258,6 +304,7 @@ def update(store, job, **values):
         "branch",
         "diff",
         "checks",
+        "session_url",
     }
     if set(values) - allowed:
         raise ValueError("État de développement invalide.")
@@ -558,6 +605,146 @@ def code(store, job, candidate, config, baseline, scratch, provider):
     )
 
 
+def fire_routine(config, text):
+    """Start one Claude Code routine run; only its session address is kept."""
+    if not ROUTINE_URL.fullmatch(config.routine_url) or not config.routine_token:
+        raise ValueError("Routine Claude mal configurée sur le serveur.")
+    req = urllib.request.Request(
+        config.routine_url,
+        data=json.dumps({"text": text}).encode(),
+        method="POST",
+        headers={
+            "Authorization": "Bearer " + config.routine_token,
+            "anthropic-beta": ROUTINE_BETA,
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read(65536))
+    except urllib.error.HTTPError as error:
+        raise ValueError(
+            f"Claude a refusé le lancement (HTTP {error.code}). Vérifie le jeton de la routine."
+        ) from None
+    except (OSError, ValueError):
+        raise ValueError("Claude est injoignable. Aucun changement effectué.") from None
+    url = str(data.get("claude_code_session_url", ""))
+    if not re.fullmatch(r"https://claude\.ai/code/[A-Za-z0-9_-]+", url):
+        raise ValueError("Réponse de lancement Claude inattendue.")
+    return url
+
+
+def routine_request(job, base, branch):
+    return "\n".join(
+        [
+            "Demande Delamain : " + job["id"],
+            "Commit de départ : " + base,
+            "Branche à pousser : " + branch,
+            "Demande du propriétaire :",
+            job["request"],
+        ]
+    )
+
+
+def routine_summary(message):
+    lines = message.strip().splitlines()[1:]
+    kept = [
+        line
+        for line in lines
+        if not re.match(
+            r"(Delamain-[A-Za-z]+|Co-Authored-By|Claude-Session|Signed-off-by):",
+            line.strip(),
+            re.I,
+        )
+    ]
+    return "\n".join(kept).strip()[:1500]
+
+
+def await_routine(candidate, config, job, branch):
+    """Wait for the final commit Claude marks for this exact request."""
+    deadline = time.monotonic() + config.routine_wait
+    seen = ""
+    while True:
+        heads = git(candidate, "ls-remote", "origin", "refs/heads/" + branch).split()
+        if heads and heads[0] != seen:
+            seen = heads[0]
+            git(candidate, "fetch", "origin", "refs/heads/" + branch)
+            head = git(candidate, "rev-parse", "FETCH_HEAD")
+            message = git(candidate, "log", "-1", "--format=%B", head)
+            fields = dict(TRAILER.findall(message))
+            if fields.get("Job") == job["id"] and fields.get("Status") in {
+                "done",
+                "refused",
+            }:
+                return head, fields["Status"], routine_summary(message)
+        if time.monotonic() >= deadline:
+            raise ValueError(
+                "Claude n’a pas rendu le changement à temps. Aucun déploiement effectué."
+            )
+        time.sleep(config.routine_poll)
+
+
+def apply_branch(candidate, base, head):
+    """Copy Claude's result as uncommitted work, under the executor's own rules."""
+    try:
+        git(candidate, "merge-base", "--is-ancestor", base, head)
+    except ValueError:
+        raise ValueError(
+            "Claude est parti d’une autre version du site. Aucun déploiement effectué."
+        ) from None
+    raw = git(candidate, "diff", "--raw", "-z", "--no-renames", base, head)
+    fields = [item for item in raw.split("\0") if item]
+    entries = list(zip(fields[0::2], fields[1::2]))
+    if not entries:
+        raise ValueError("Aucun changement de code produit. Aucun déploiement effectué.")
+    if len(entries) > 40:
+        raise ValueError("Changement trop étendu pour une mise en ligne automatique.")
+    deleted = []
+    for meta, name in entries:
+        modes = meta.lstrip(":").split()[:2]
+        if not editable(name) or any(m not in {"000000", "100644"} for m in modes):
+            raise ValueError("Une modification hors du périmètre autorisé a été refusée.")
+        if meta.endswith(" D"):
+            deleted.append(name)
+    kept = [n for _, n in entries if n not in deleted]
+    if kept:
+        git(candidate, "checkout", head, "--", *kept)
+        git(candidate, "reset", "-q")
+    for name in deleted:
+        safe_file(candidate, name).unlink()
+    for _, name in entries:
+        path = safe_file(candidate, name)
+        if path.exists() and path.stat().st_size > 400000:
+            raise ValueError("Fichier trop volumineux.")
+
+
+def remote_code(store, job, candidate, config, base, baseline, scratch, fire):
+    branch = "claude/delamain-" + job["id"][:12]
+    url = fire(routine_request(job, base, branch))
+    update(
+        store,
+        job["id"],
+        status="coding",
+        message="Claude prépare le changement",
+        session_url=url,
+    )
+    head, state, summary = await_routine(candidate, config, job, branch)
+    if state == "refused":
+        raise ValueError(
+            "Claude n’a pas fait ce changement : " + (summary or "raison non précisée.")
+        )
+    apply_branch(candidate, base, head)
+    update(store, job["id"], status="testing", message="Tests et compilation en cours")
+    checks = verify(candidate, config, baseline, scratch)
+    update(
+        store,
+        job["id"],
+        checks=checks,
+        summary=summary or "Modification préparée par Claude",
+    )
+
+
 def restart(root):
     # Passenger's supported restart marker; the next request loads the new application.
     path = root / "tmp/restart.txt"
@@ -716,8 +903,7 @@ def recover(store, config):
         )
 
 
-def execute(store, job, config, *, provider=None):
-    provider = provider or call_ai
+def execute(store, job, config, *, provider=None, routine=None):
     user = next((u for u in store.users() if u["id"] == job["user_id"]), None)
     if not user or user["role"] != "owner":
         raise PermissionError(
@@ -753,7 +939,11 @@ def execute(store, job, config, *, provider=None):
             base_commit=base,
             branch=branch,
         )
-        code(store, job, candidate, config, baseline, scratch, provider)
+        if provider is None and (routine or config.routine_url):
+            fire = routine or (lambda text: fire_routine(config, text))
+            remote_code(store, job, candidate, config, base, baseline, scratch, fire)
+        else:
+            code(store, job, candidate, config, baseline, scratch, provider or call_ai)
         # Only authorised source paths and compiler-generated frontend files can enter the commit.
         status = git(candidate, "status", "--porcelain", "--untracked-files=all")
         if not status:
@@ -824,9 +1014,9 @@ def execute(store, job, config, *, provider=None):
         maintenance_path(config.root).unlink(missing_ok=True)
 
 
-def run_once(store, config=None, *, provider=None):
-    config = config or Config.environment()
+def run_once(store, config=None, *, provider=None, routine=None):
     initialize(store)
+    config = with_routine(store, config or Config.environment())
     lock = config.root / "work/studio/developer.lock"
     lock.parent.mkdir(parents=True, exist_ok=True)
     with lock.open("a") as file:
@@ -874,7 +1064,7 @@ def run_once(store, config=None, *, provider=None):
             pulse = threading.Thread(target=heartbeat, daemon=True)
             pulse.start()
             try:
-                execute(store, job, config, provider=provider)
+                execute(store, job, config, provider=provider, routine=routine)
             finally:
                 stop.set()
                 pulse.join(timeout=1)
@@ -952,6 +1142,37 @@ def register(app, store, owner):
                 raise Conflict(
                     "Seule une modification encore en attente peut être annulée."
                 )
+        return jsonify(ok=True)
+
+    @app.post("/api/studio/development/routine")
+    def development_routine():
+        owner()
+        data = request.get_json(silent=True) or {}
+        url = str(data.get("url", "")).strip()
+        token = str(data.get("token", "")).strip()
+        if not ROUTINE_URL.fullmatch(url):
+            raise ValueError(
+                "Adresse de routine invalide : copie l’URL affichée par claude.ai (…/routines/trig_…/fire)."
+            )
+        if not re.fullmatch(r"[A-Za-z0-9_\-]{20,400}", token):
+            raise ValueError("Jeton invalide : copie le jeton complet généré par claude.ai.")
+        with store.db() as c:
+            c.execute(
+                "UPDATE studio_developer_routine SET url=?,token=?,updated_at=? WHERE id=1",
+                (url, token, now()),
+            )
+        store.log(g.user["name"], "development", "Routine Claude connectée")
+        return jsonify(ok=True)
+
+    @app.delete("/api/studio/development/routine")
+    def development_routine_remove():
+        owner()
+        with store.db() as c:
+            c.execute(
+                "UPDATE studio_developer_routine SET url='',token='',updated_at=? WHERE id=1",
+                (now(),),
+            )
+        store.log(g.user["name"], "development", "Routine Claude retirée")
         return jsonify(ok=True)
 
     @app.get("/api/studio/development/setup-guide")

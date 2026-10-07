@@ -6174,3 +6174,16 @@ svg {
     max-width: 100%;
   }
 }
+
+.development-routine label {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+.development-routine input {
+  width: 100%;
+  min-width: 0;
+}
+.development-routine p {
+  margin-top: 6px;
+}
