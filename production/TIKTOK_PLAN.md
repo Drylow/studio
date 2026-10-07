@@ -120,6 +120,32 @@ La Belgique n'y figure pas : à vérifier dans TikTok Studio pour le compte de l
    La publication automatique viendra plus tard : l'API TikTok n'autorise que des posts privés
    tant que l'application n'a pas passé l'audit.
 
+## Décisions et état (7 oct. 2026, soir)
+
+- Premier compte **en français**, avec **notre propre héros**.
+- Algrow n'a plus que des crédits de voix (environ 600 000 caractères). Il ne reste rien pour l'image
+  ni la vidéo : la génération vidéo ne passe donc pas par Algrow.
+- Les images (personnages et premières images des plans) sont faites par l'IA image du studio
+  (`services/ai.py`, proxy déjà utilisé pour les miniatures), sans coût en plus.
+- Le proxy n'a aucun modèle vidéo. La clé fal.ai du serveur a un solde inconnu.
+- L'utilisateur ne veut pas mettre de carte si possible. L'essai Google à 300 $ en demande une
+  (empreinte sans débit). Grok Imagine n'a plus de vidéo gratuite pour la plupart des comptes
+  depuis mars 2026. Une piste sans carte : GPU gratuit Kaggle (environ 30 h/semaine)
+  + modèle libre image et voix vers vidéo qui parle + voix Algrow. La qualité serait sous Veo.
+
+### Série test « Jacky la Prise »
+
+- **Héros** : Jacky, tête de fiche électrique blanche, en survêtement noir.
+  Sa phrase : « Coupe-moi l'jus si j'me trompe… », et il se trompe toujours d'objet.
+- **Les trois rencontres** :
+  - prise murale : « J'suis aux normes » ;
+  - multiprise cube : « quatre places… quatre bébés » ;
+  - adaptateur anglais : « mon bébé il est bilingue ».
+- **Fin** : maternité avec le docteur disjoncteur, « Trois mamans, six bébés, un seul père ».
+  Jacky répond « Moi j'me branche, c'est tout », le docteur saute et c'est le noir :
+  « … mais y a plus d'jus ».
+- Les fiches des 5 personnages sont faites (serveur : `work/tiktok_test/`).
+
 ## Tests proposés
 
 1. Une bible et un épisode complet en anglais, avec notre propre héros, en voie A.
