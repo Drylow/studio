@@ -337,6 +337,24 @@ def audio_duration(path):
     return int(h) * 3600 + int(m) * 60 + float(s)
 
 
+def covers(work, script):
+    """Miniatures 1080×1920 (bloc "covers" du script : une liste d'éléments par miniature, sans animation)."""
+    out = os.path.join(work, "covers")
+    os.makedirs(out, exist_ok=True)
+    base = build_timeline({**script, "beats": []}, [], 1.0)
+    for i, els in enumerate(script.get("covers", [])):
+        tl = dict(base, duration=1.0, scenes=[{"start": 0, "glow": {"y": 520, "r": 300, "a": 0.2},
+                                                "els": [dict({k: v for k, v in e.items() if k != "flash"}, at=0,
+                                                             **{"in": "none"}) for e in els]}])
+        path = os.path.join(out, f"cover_{i + 1}.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(tl, f, ensure_ascii=False)
+        subprocess.run([shutil.which("node") or "node", os.path.join(HERE, "render.mjs"), "--spec", path,
+                        "--stills", "0.5", "--stills-dir", out], check=True)
+        os.replace(os.path.join(out, "still_0.50.png"), os.path.join(out, f"cover_{i + 1}.png"))
+    print("COVERS DONE", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("work")
@@ -344,10 +362,13 @@ def main():
     ap.add_argument("--stills", action="store_true", help="planche d'images fixes seulement, pas de rendu vidéo")
     ap.add_argument("--workers", default="3")
     ap.add_argument("--fake-voice", action="store_true", help="minutage estimé et voix muette (aperçu sans crédits)")
+    ap.add_argument("--covers", action="store_true", help="seulement les miniatures (bloc \"covers\" du script)")
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
     script = json.load(open(a.script, encoding="utf-8"))
     script["_path"] = a.script
+    if a.covers:
+        return covers(a.work, script)
     if a.fake_voice:
         fake_voice(a.work, script)
     make_voice(a.work, script)

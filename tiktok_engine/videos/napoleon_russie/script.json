@@ -1532,5 +1532,84 @@
    "prompt": "portrait of Napoleon Bonaparte with a smug confident smile, black bicorne hat, arms crossed, bust",
    "size": "192x192"
   }
- }
+ },
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Qui a vraiment vaincu\n*Napoléon* ?",
+    "y": 330,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "napoleon_portrait",
+    "h": 440,
+    "y": 640
+   },
+   {
+    "type": "sprite",
+    "sprite": "question",
+    "px": 12,
+    "x": 440,
+    "y": 520
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ce n'est *pas l'hiver*\nqui l'a vaincu.",
+    "y": 330,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "napoleon_snow",
+    "h": 400,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "422 000 partis.\n*10 000* revenus.",
+    "y": 300,
+    "maxW": 470
+   },
+   {
+    "type": "icons",
+    "sprite": "soldier",
+    "count": 100,
+    "cols": 10,
+    "px": 1.8,
+    "gapX": 10,
+    "gapY": 6,
+    "y": 600,
+    "keys": [
+     {
+      "at": 0,
+      "n": 2,
+      "dur": 0.01
+     }
+    ]
+   },
+   {
+    "type": "stamp",
+    "text": "NAPOLÉON · 1812",
+    "y": 800,
+    "rot": -4,
+    "fill": true,
+    "size": 18
+   }
+  ]
+ ]
 }
