@@ -13,6 +13,7 @@ import {
   Download,
   Send,
   ShieldCheck,
+  Trash2,
 } from "lucide-react";
 import { api, localTime, parisToIso, labels, dateLabel } from "./api";
 import type { Channel, Video, Workspace, Task, User } from "./types";
@@ -41,6 +42,19 @@ export function ChannelForm({
 }) {
   const [form, setForm] = useState({ ...channel });
   const [busy, setBusy] = useState(false);
+  const [removing, setRemoving] = useState(false);
+  async function remove() {
+    setBusy(true);
+    const ok = await mutate(
+      () =>
+        api(`/channels/${channel.id}`, "DELETE", {
+          revision: channel.revision,
+        }),
+      `« ${channel.name} » supprimée du studio.`,
+    );
+    setBusy(false);
+    if (ok) close();
+  }
   const templates =
     channel.format === "news"
       ? [
@@ -308,6 +322,31 @@ export function ChannelForm({
             automatiques.
           </div>
         )}
+        {user.role === "owner" &&
+          (removing ? (
+            <div className="youtube-disconnect channel-remove">
+              <p>
+                <strong>Supprimer « {channel.name} » du studio ?</strong> Son
+                automatisation s’arrête et sa connexion YouTube est effacée. Ses
+                vidéos et son historique restent archivés.{" "}
+                <strong>Rien n’est supprimé sur YouTube.</strong>
+              </p>
+              <div className="youtube-actions">
+                <Button onClick={() => setRemoving(false)} disabled={busy}>
+                  Garder la chaîne
+                </Button>
+                <Button variant="danger" onClick={remove} disabled={busy}>
+                  <Trash2 size={16} />
+                  Supprimer la chaîne
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <Button variant="ghost" onClick={() => setRemoving(true)}>
+              <Trash2 size={16} />
+              Supprimer cette chaîne du studio
+            </Button>
+          ))}
         <div className="modal-footer">
           <Button onClick={close}>Annuler</Button>
           <Button variant="primary" type="submit" disabled={busy}>

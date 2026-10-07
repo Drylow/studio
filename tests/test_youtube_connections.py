@@ -350,6 +350,40 @@ class YouTubeConnectionTests(unittest.TestCase):
         self.assertFalse(self.store.channel(self.cid)["connected"])
         self.assertEqual(self.assign(pid, self.store.channel(self.cid)).status_code, 400)
 
+    def test_only_the_owner_removes_a_channel_and_its_youtube_access_goes(self):
+        self.linked()
+        editor = self.app.test_client()
+        editor.get("/api/studio/bootstrap")
+        with editor.session_transaction() as session:
+            from studio.security import issue
+
+            with self.app.app_context():
+                issue(self.store, "collegue", container=session)
+        token = editor.get("/api/studio/bootstrap").json["csrf"]
+        revision = {"revision": self.store.channel(self.cid)["revision"]}
+        refused = editor.delete(
+            f"/api/studio/channels/{self.cid}",
+            json=revision,
+            headers={"X-CSRF-Token": token},
+        )
+        self.assertEqual(refused.status_code, 403)
+        self.assertIsNotNone(self.store.channel(self.cid))
+        removed = self.client.delete(
+            f"/api/studio/channels/{self.cid}",
+            json=revision,
+            headers={"X-CSRF-Token": self.csrf},
+        )
+        self.assertEqual(removed.status_code, 200)
+        self.assertIsNone(self.store.channel(self.cid))
+        kept = self.store.one(
+            "SELECT name,yt_refresh_token,yt_channel_id FROM delamain_projects WHERE id=?",
+            (self.cid,),
+        )
+        self.assertEqual(
+            (kept["name"], kept["yt_refresh_token"], kept["yt_channel_id"]),
+            (self.channel["name"], "", ""),
+        )
+
     def test_unknown_channel_suggests_no_fiche(self):
         r = self.callback(title="Unrelated Channel", yt_id="UCunrelated")
         detail = self.client.get(

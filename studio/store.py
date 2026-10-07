@@ -238,6 +238,11 @@ class Store:
                 "UPDATE studio_channels SET retired=1,paused=1,enabled=0,responsible_id=NULL,revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), channel_id),
             )
+            # A removed fiche keeps its history but no access to the YouTube channel.
+            c.execute(
+                "UPDATE delamain_projects SET yt_refresh_token='',yt_channel_id='',yt_channel_title='' WHERE id=?",
+                (channel_id,),
+            )
             from studio.channel_stats import clear
 
             clear(c, channel_id)

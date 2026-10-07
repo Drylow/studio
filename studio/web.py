@@ -339,6 +339,7 @@ def create_app(config=None):
 
     @app.delete("/api/studio/channels/<int:cid>")
     def remove_channel(cid):
+        owner()
         old = channel(cid)
         store.retire_channel(cid, revision(body()))
         store.log(actor(), "channel", "Chaîne retirée : " + old["name"])
