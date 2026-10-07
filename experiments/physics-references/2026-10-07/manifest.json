@@ -1,0 +1,438 @@
+{
+  "date": "2026-10-07",
+  "purpose": "Reference research for original procedural pixel-art fruit simulations; not composition inputs",
+  "clips": [
+    {
+      "id": "FqGWEET6xcc",
+      "title": "Ball Rolls Down Rails and Knocks Down Columns | Blender Simulation",
+      "channel": "NodeFan3D",
+      "channel_id": "UCnoQhSGRGBaJ7g6Hl2QC2gw",
+      "url": "https://www.youtube.com/shorts/FqGWEET6xcc",
+      "upload_date": "20260806",
+      "views_at_download": 8582075,
+      "duration_seconds": 40.054422,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 1395628,
+      "sha256": "f5a3e17940c52f37a9bac65400895fa3bf52de4a17d0801d99e3e09aa041eb9f",
+      "relative_file": "media/FqGWEET6xcc.mp4",
+      "contact_sheet": "frames/FqGWEET6xcc.jpg",
+      "sampled_frames": 80,
+      "audio_peak_dbfs": 3.25,
+      "audio_rms_dbfs": -21.35,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 0.06,
+          "dbfs": -8.85
+        },
+        {
+          "time": 6.71,
+          "dbfs": -8.91
+        },
+        {
+          "time": 16.14,
+          "dbfs": -5.37
+        },
+        {
+          "time": 24.6,
+          "dbfs": -7.25
+        },
+        {
+          "time": 25.17,
+          "dbfs": -5.55
+        },
+        {
+          "time": 25.69,
+          "dbfs": -8.54
+        },
+        {
+          "time": 26.12,
+          "dbfs": -7.14
+        },
+        {
+          "time": 33.77,
+          "dbfs": -5.9
+        },
+        {
+          "time": 34.34,
+          "dbfs": -5.35
+        },
+        {
+          "time": 34.59,
+          "dbfs": -8.34
+        },
+        {
+          "time": 34.95,
+          "dbfs": -6.95
+        },
+        {
+          "time": 35.25,
+          "dbfs": -3.59
+        }
+      ]
+    },
+    {
+      "id": "jmw6kx5rOVc",
+      "title": "1 to 50 Blades vs a Mango",
+      "channel": "Velvet Ji",
+      "channel_id": "UCBS9DzV27pCPTh43kPRUAPw",
+      "url": "https://www.youtube.com/shorts/jmw6kx5rOVc",
+      "upload_date": "20261006",
+      "views_at_download": 3142,
+      "duration_seconds": 23.730794,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 781592,
+      "sha256": "d04a89620c95182c72c053b66a18af6b9b8a0943e140c95b1a58e92bce640ef8",
+      "relative_file": "media/jmw6kx5rOVc.mp4",
+      "contact_sheet": "frames/jmw6kx5rOVc.jpg",
+      "sampled_frames": 48,
+      "audio_peak_dbfs": 1.25,
+      "audio_rms_dbfs": -13.3,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 0.87,
+          "dbfs": -3.8
+        },
+        {
+          "time": 1.17,
+          "dbfs": -2.91
+        },
+        {
+          "time": 3.98,
+          "dbfs": -3.86
+        },
+        {
+          "time": 5.0,
+          "dbfs": -2.92
+        },
+        {
+          "time": 8.1,
+          "dbfs": -3.05
+        },
+        {
+          "time": 8.74,
+          "dbfs": -1.59
+        },
+        {
+          "time": 9.07,
+          "dbfs": -2.02
+        },
+        {
+          "time": 12.93,
+          "dbfs": -3.13
+        },
+        {
+          "time": 13.23,
+          "dbfs": -3.57
+        },
+        {
+          "time": 14.13,
+          "dbfs": -2.07
+        },
+        {
+          "time": 14.38,
+          "dbfs": -3.66
+        },
+        {
+          "time": 18.81,
+          "dbfs": -3.39
+        }
+      ]
+    },
+    {
+      "id": "K_lp3huE1_A",
+      "title": "Can Thicker Glass beat a Hydraulic Press?",
+      "channel": "Velvet Ji",
+      "channel_id": "UCBS9DzV27pCPTh43kPRUAPw",
+      "url": "https://www.youtube.com/shorts/K_lp3huE1_A",
+      "upload_date": "20260902",
+      "views_at_download": 180435,
+      "duration_seconds": 22.616236,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 1215980,
+      "sha256": "5e5ceffde5574667099dea39345efd01f88ccf4c3ebf649e214912af2b0623f8",
+      "relative_file": "media/K_lp3huE1_A.mp4",
+      "contact_sheet": "frames/K_lp3huE1_A.jpg",
+      "sampled_frames": 46,
+      "audio_peak_dbfs": 0.94,
+      "audio_rms_dbfs": -22.04,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 0.64,
+          "dbfs": -10.53
+        },
+        {
+          "time": 0.89,
+          "dbfs": -9.71
+        },
+        {
+          "time": 1.38,
+          "dbfs": -10.01
+        },
+        {
+          "time": 2.08,
+          "dbfs": -6.85
+        },
+        {
+          "time": 5.28,
+          "dbfs": -8.94
+        },
+        {
+          "time": 5.97,
+          "dbfs": -9.79
+        },
+        {
+          "time": 6.55,
+          "dbfs": -8.4
+        },
+        {
+          "time": 11.17,
+          "dbfs": -8.65
+        },
+        {
+          "time": 15.67,
+          "dbfs": -9.66
+        },
+        {
+          "time": 19.45,
+          "dbfs": -9.72
+        },
+        {
+          "time": 20.01,
+          "dbfs": -10.85
+        },
+        {
+          "time": 21.07,
+          "dbfs": -9.3
+        }
+      ]
+    },
+    {
+      "id": "lutYBNfxDkg",
+      "title": "Hammer Smashes a Tower of Cubes | Blender Simulation",
+      "channel": "NodeFan3D",
+      "channel_id": "UCnoQhSGRGBaJ7g6Hl2QC2gw",
+      "url": "https://www.youtube.com/shorts/lutYBNfxDkg",
+      "upload_date": "20260810",
+      "views_at_download": 1407817,
+      "duration_seconds": 31.718458,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 1680897,
+      "sha256": "e499028e89111b657f5e7aa9723862c096980ca7d4a01c79996d4f01214513e2",
+      "relative_file": "media/lutYBNfxDkg.mp4",
+      "contact_sheet": "frames/lutYBNfxDkg.jpg",
+      "sampled_frames": 64,
+      "audio_peak_dbfs": 3.69,
+      "audio_rms_dbfs": -20.42,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 0.06,
+          "dbfs": -8.85
+        },
+        {
+          "time": 5.27,
+          "dbfs": -7.27
+        },
+        {
+          "time": 7.09,
+          "dbfs": -9.13
+        },
+        {
+          "time": 8.74,
+          "dbfs": -9.94
+        },
+        {
+          "time": 10.09,
+          "dbfs": -9.78
+        },
+        {
+          "time": 12.0,
+          "dbfs": -1.4
+        },
+        {
+          "time": 13.36,
+          "dbfs": -7.92
+        },
+        {
+          "time": 18.21,
+          "dbfs": -4.85
+        },
+        {
+          "time": 18.62,
+          "dbfs": -2.16
+        },
+        {
+          "time": 25.13,
+          "dbfs": -4.53
+        },
+        {
+          "time": 25.45,
+          "dbfs": -0.91
+        },
+        {
+          "time": 28.69,
+          "dbfs": -9.01
+        }
+      ]
+    },
+    {
+      "id": "tEsIu9R6-pQ",
+      "title": "Glass Panels Fall on a Pyramid | Blender Simulation",
+      "channel": "NodeFan3D",
+      "channel_id": "UCnoQhSGRGBaJ7g6Hl2QC2gw",
+      "url": "https://www.youtube.com/shorts/tEsIu9R6-pQ",
+      "upload_date": "20260906",
+      "views_at_download": 326358,
+      "duration_seconds": 25.054331,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 1675222,
+      "sha256": "6ba4da3443f07da0e7b2c21b6672c1ff0e106222a2392492d9328a6df98fea6f",
+      "relative_file": "media/tEsIu9R6-pQ.mp4",
+      "contact_sheet": "frames/tEsIu9R6-pQ.jpg",
+      "sampled_frames": 50,
+      "audio_peak_dbfs": 2.91,
+      "audio_rms_dbfs": -19.41,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 4.59,
+          "dbfs": -5.25
+        },
+        {
+          "time": 8.76,
+          "dbfs": -5.11
+        },
+        {
+          "time": 9.46,
+          "dbfs": -6.87
+        },
+        {
+          "time": 11.09,
+          "dbfs": -6.13
+        },
+        {
+          "time": 13.76,
+          "dbfs": -5.21
+        },
+        {
+          "time": 16.15,
+          "dbfs": -4.96
+        },
+        {
+          "time": 19.26,
+          "dbfs": -5.23
+        },
+        {
+          "time": 19.97,
+          "dbfs": -6.92
+        },
+        {
+          "time": 20.85,
+          "dbfs": -6.79
+        },
+        {
+          "time": 21.24,
+          "dbfs": -6.55
+        },
+        {
+          "time": 21.78,
+          "dbfs": -6.11
+        },
+        {
+          "time": 22.56,
+          "dbfs": -7.18
+        }
+      ]
+    },
+    {
+      "id": "ub5r4awGvIc",
+      "title": "Glass Panels Fall and Shatter on a Pyramid | Blender Simulation",
+      "channel": "NodeFan3D",
+      "channel_id": "UCnoQhSGRGBaJ7g6Hl2QC2gw",
+      "url": "https://www.youtube.com/shorts/ub5r4awGvIc",
+      "upload_date": "20260816",
+      "views_at_download": 290761,
+      "duration_seconds": 22.546576,
+      "width": 360,
+      "height": 640,
+      "fps": "30/1",
+      "video_codec": "av1",
+      "audio_codec": "aac",
+      "bytes": 1300193,
+      "sha256": "329b880b036773f3fda249e62bb52b075e7ff23e9fb14e4a0a493ce58408fbfb",
+      "relative_file": "media/ub5r4awGvIc.mp4",
+      "contact_sheet": "frames/ub5r4awGvIc.jpg",
+      "sampled_frames": 45,
+      "audio_peak_dbfs": 3.2,
+      "audio_rms_dbfs": -18.97,
+      "rms_10ms_local_maxima": [
+        {
+          "time": 4.39,
+          "dbfs": -5.27
+        },
+        {
+          "time": 8.52,
+          "dbfs": -5.28
+        },
+        {
+          "time": 8.96,
+          "dbfs": -6.9
+        },
+        {
+          "time": 10.31,
+          "dbfs": -6.06
+        },
+        {
+          "time": 12.69,
+          "dbfs": -5.29
+        },
+        {
+          "time": 13.96,
+          "dbfs": -6.52
+        },
+        {
+          "time": 14.5,
+          "dbfs": -5.9
+        },
+        {
+          "time": 17.64,
+          "dbfs": -5.11
+        },
+        {
+          "time": 18.1,
+          "dbfs": -6.76
+        },
+        {
+          "time": 18.98,
+          "dbfs": -6.54
+        },
+        {
+          "time": 19.25,
+          "dbfs": -4.84
+        },
+        {
+          "time": 19.63,
+          "dbfs": -5.54
+        }
+      ]
+    }
+  ]
+}

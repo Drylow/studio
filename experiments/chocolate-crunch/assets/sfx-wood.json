@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "e9s9rg2qzhrmr0d131892g05a4",
+  "prompt": "Isolated close microphone foley: several small solid chocolate chunks fall onto a wooden chopping board. Short dry low wooden knocks with soft crumb clicks, irregular spaced individual impacts with silence between. No music, no voice, no reverberation, no metallic ringing.",
+  "source": "sfx-wood-source.mp3",
+  "sha256": "9a96fdc3943ff1bd041d5cd5a1ba6ee5e4bf05ed7002c1442b022bfe2d507506",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}
