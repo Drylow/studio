@@ -6,7 +6,7 @@ import {mkdirSync,writeFileSync} from 'node:fs';
 // Convex clipping, followed by an offline, fixed-step rigid-body simulation.
 // Rendering never integrates physics: every pose is baked and seekable.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
-const EPS=1e-6, R=[1.55,1.65,1.55], HEIGHT=2.65;
+const EPS=1e-6, R=[1.55,1.65,1.55], HEIGHT=2.65, SHOT_LENGTH=4;
 const unique=pts=>[...new Map(pts.map(p=>[p.toArray().map(n=>n.toFixed(5)).join(','),p])).values()];
 const mean=pts=>pts.reduce((s,p)=>s.add(p),V()).multiplyScalar(1/pts.length);
 function original(){
@@ -58,9 +58,9 @@ function bake(count){
     next.push(half(p,n,d,1,p.id+'p'+i),half(p,n,d,-1,p.id+'m'+i));
    }else next.push(p);
   }
-  pieces=next.filter(Boolean);stages.push(pieces.map(serialize));cutTimes.push(.82+i*.33);
+  pieces=next.filter(Boolean);stages.push(pieces.map(serialize));cutTimes.push(.65+i*.17);
  }
- const release=cutTimes.at(-1)+.34;
+ const release=cutTimes.at(-1)+.14;
  const world=new CANNON.World({gravity:new CANNON.Vec3(0,-7.6,0)});
  world.solver.iterations=24;world.allowSleep=true;
  const material=new CANNON.Material('fruit');
@@ -100,7 +100,7 @@ function bake(count){
   const speed=Math.abs(e.contact.getImpactVelocityAlongNormal());
   if(speed>1.2)impacts.push({t:release+elapsed,speed,piece:i});
  }));
- for(let f=0;f<=Math.ceil((6-release)*120);f++){
+ for(let f=0;f<=Math.ceil((SHOT_LENGTH-release)*120);f++){
   elapsed=f/120;
   frames.push(bodies.map(b=>[...b.position.toArray(),...b.quaternion.toArray()].map(n=>+n.toFixed(6))));
   world.step(1/120);
@@ -117,10 +117,10 @@ function bake(count){
  return {count,cutTimes,release,stages,frames,impacts,checks:{pieces:pieces.length,minBottom,maxRadius}};
 }
 mkdirSync('assets',{recursive:true});
-const data={fps:120,height:HEIGHT,radii:R,shotLength:6,duration:18,planes:PLANES.map(p=>({n:p.n.toArray(),d:p.d})),shots:[1,3,7].map(bake)};
+const data={fps:120,height:HEIGHT,radii:R,shotLength:SHOT_LENGTH,duration:SHOT_LENGTH*3,planes:PLANES.map(p=>({n:p.n.toArray(),d:p.d})),shots:[1,3,7].map(bake)};
 writeFileSync('assets/simulation.json',JSON.stringify(data));
 writeFileSync('assets/events.json',JSON.stringify(data.shots.flatMap((s,i)=>[
- ...s.cutTimes.map(t=>({type:'cut',t:t+i*6})),...s.impacts.map(e=>({type:'impact',...e,t:e.t+i*6}))
+ ...s.cutTimes.map(t=>({type:'cut',t:t+i*SHOT_LENGTH})),...s.impacts.map(e=>({type:'impact',...e,t:e.t+i*SHOT_LENGTH}))
 ]),null,2));
 writeFileSync('simulation-report.json',JSON.stringify(data.shots.map(s=>s.checks),null,2));
 console.log(JSON.stringify(data.shots.map(s=>({cuts:s.count,...s.checks})),null,2));
