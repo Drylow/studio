@@ -60,7 +60,7 @@ function convex(p){
 const geometries={},trials=[],events=[];
 let cursor=0;
 for(const [chapter,config] of settings.entries()){
- const {tool,count,length}=config,base=tool==='glove'?3.18:BASE;
+ const {tool,count,length,round,rounds}=config,base=tool==='glove'?3.18:BASE;
  const world=new CANNON.World({gravity:new CANNON.Vec3(0,-10.8,0)});
  world.solver.iterations=18;world.allowSleep=true;world.broadphase=new CANNON.SAPBroadphase(world);
  world.defaultContactMaterial.friction=.50;world.defaultContactMaterial.restitution=.08;
@@ -144,7 +144,7 @@ for(const [chapter,config] of settings.entries()){
  if(data.some(b=>b.hit===null))throw Error('A bar did not reach '+tool);
  if(tool==='glove')events.push({type:'spring',t:cursor+.12,chapter,tool},{type:'punch',t:cursor+Math.min(...data.map(b=>b.hit)),chapter,tool});
  if(tool==='jackhammer')for(let pulse=.98;pulse<Math.min(3,Math.max(...data.map(b=>b.hit))+.38);pulse+=1/22)events.push({type:'hammer',t:+(cursor+pulse).toFixed(6),chapter,tool});
- trials.push({start:cursor,length,count,tool,base,bars:data});cursor=+(cursor+length).toFixed(3);
+ trials.push({start:cursor,length,count,tool,round,rounds,base,bars:data});cursor=+(cursor+length).toFixed(3);
  console.log(`${count} bars: ${data.reduce((s,b)=>s+b.ids.length,0)} irregular pieces; contacts ${data.map(b=>b.hit.toFixed(3)).join(', ')}`);
 }
 const outroStart=cursor,duration=+(cursor+1.6).toFixed(3);

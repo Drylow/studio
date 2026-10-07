@@ -44,7 +44,8 @@ for(const s of d.trials){
  }
 }
 assert(minimum>-.015,'Fragment crossed the ground');assert(maximum<8,'Debris escaped the tabletop view');assert(unitError<2e-5,'Invalid rotation');
-assert(d.duration===23.3&&d.outroStart===cursor,'Wrong duration');
-assert(d.trials.map(t=>t.tool).join(',')==='fork,fork,glove,glove,jackhammer,jackhammer','Wrong tool progression');
+assert(d.duration===66.7&&d.outroStart===cursor,'Wrong duration');
+assert(d.trials.map(t=>t.tool).join(',')===[...Array(6).fill('fork'),...Array(6).fill('glove'),...Array(6).fill('jackhammer')].join(','),'Wrong tool progression');
+assert(d.trials.every((t,i)=>t.round===i%3+1&&t.rounds===3),'Wrong salvo counter');
 const report={ok:true,bars:barCount,geometries:Object.keys(d.geometries).length,poseCount,minimumBottom:minimum,maximumRadius:maximum,volumeError,unitError};
 mkdirSync('qa',{recursive:true});writeFileSync('qa/simulation-report.json',JSON.stringify(report,null,2));console.log(report);
