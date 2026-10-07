@@ -1,0 +1,1929 @@
+{
+  "schema": 1,
+  "id": "edo-daily-01",
+  "title": "What Did People in Edo Japan Actually Do All Day?",
+  "period": "Edo, around 1700",
+  "language": "en",
+  "authored_by": "Codex",
+  "voice": {
+    "provider": "algrow",
+    "id": "rU18Fk3uSDhmg5Xh41o4",
+    "speed": 1
+  },
+  "workdir": "work/edo-daily/01-what-did-people-do-all-day",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Before the city wakes"
+    },
+    {
+      "id": 2,
+      "title": "One room, many jobs"
+    },
+    {
+      "id": 3,
+      "title": "Water before breakfast"
+    },
+    {
+      "id": 4,
+      "title": "The household meal"
+    },
+    {
+      "id": 5,
+      "title": "Streets and seasonal time"
+    },
+    {
+      "id": 6,
+      "title": "At the workbench"
+    },
+    {
+      "id": 7,
+      "title": "Clothes and household errands"
+    },
+    {
+      "id": 8,
+      "title": "Customers, rank and wealth"
+    },
+    {
+      "id": 9,
+      "title": "Spending small coins"
+    },
+    {
+      "id": 10,
+      "title": "Somebody else makes lunch"
+    },
+    {
+      "id": 11,
+      "title": "The city by water"
+    },
+    {
+      "id": 12,
+      "title": "Living with fire"
+    },
+    {
+      "id": 13,
+      "title": "A trip to the bathhouse"
+    },
+    {
+      "id": 14,
+      "title": "What is worth watching?"
+    },
+    {
+      "id": 15,
+      "title": "A seat by the water"
+    },
+    {
+      "id": 16,
+      "title": "Home after daylight"
+    },
+    {
+      "id": 17,
+      "title": "What filled the day?"
+    }
+  ],
+  "shots": [
+    {
+      "id": "001",
+      "chapter": 1,
+      "location": "home",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You wake up in Edo with yesterday's work still waiting.",
+      "action": "Blue sits awake on the navy cushion beside the empty canonical table, bedding stacked left; quiet neutral white face.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/001.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/001.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "002",
+      "chapter": 1,
+      "location": "workshop",
+      "cast": [],
+      "narration": "A wooden box needs its lid fitted.",
+      "action": "Close view of plain unfinished wooden box and separate lid on the fixed workbench, hand plane unchanged, no people.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/002.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/002.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "003",
+      "chapter": 1,
+      "location": "alley",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Your breakfast needs water.",
+      "action": "Blue stands next to the fixed well holding one empty wooden bucket, no extra people.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/003.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/003.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "004",
+      "chapter": 1,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "And the room where you slept is about to become somewhere to eat, sort belongings, and get ready to earn a living.",
+      "action": "Red stands beside the clear canonical table with a folded gray cloth bundle; bedding stack remains left, navy cushion remains foreground.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/004.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/004.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "005",
+      "chapter": 1,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "The lid catches at one corner.",
+      "action": "Close framing of Blue's two white mitten hands testing the small plain lid on the fixed bench box; indigo sleeves visible, no fingers.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/005.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/005.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "006",
+      "chapter": 1,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "It is a small problem, but it belongs to someone expecting the finished box.",
+      "action": "Blue examines the slightly lifted box lid on the fixed workbench, neutral white head and pale gray towel visible.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/006.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/006.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "007",
+      "chapter": 1,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Today, skill will show itself in a clean fit rather than a spectacular object.",
+      "action": "Blue holds the lid beside the box and looks at the simple wooden joints, natural tabletop-scale objects.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/007.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/007.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "008",
+      "chapter": 1,
+      "location": "home",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "Before you can deal with it, the household has a morning to get through.",
+      "action": "Blue and Red stand beside the clear canonical low table, Red holding empty woven basket, Blue holding tied gray tool bundle, neutral white faces.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/008.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/008.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "009",
+      "chapter": 1,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "Meanwhile, someone in the household is deciding what to buy, what can wait, and whether a small repair will bring in anything useful. A city does not run on heroic poses. It runs on people remembering the things they still have to do.",
+      "action": "Red stands beside the vegetable stall, carrying a small empty woven basket, considering the produce without taking any.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/009.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/009.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "010",
+      "chapter": 1,
+      "location": "bridge",
+      "cast": [],
+      "narration": "We are in Edo, the city that would later become Tokyo, around the year seventeen hundred. The Tokugawa shogunate has its seat here. But the people making the streets busy are not all warriors. Artisans, merchants, servants, and laborers give the city its daily motion.",
+      "action": "Wide empty canonical wooden bridge and adjoining timber city, with a few distant anonymous adult white-headed townspeople walking; no cast foreground.",
+      "sources": [
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/010.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/010.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "011",
+      "chapter": 1,
+      "location": "alley",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "Come through one ordinary working day with an imagined artisan household. Their particular errands are our route through the city, not a schedule every resident followed. A rich merchant, a servant, and a poor worker could inhabit very different Edos, sometimes on the same street.",
+      "action": "Blue and Red stand outside their modest shared-alley doorway, Blue with a small cloth tool bundle, Red with woven basket; neutral poses.",
+      "sources": [
+        "I",
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/011.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/011.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "012",
+      "chapter": 1,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "How much of this day can you call your own? Keep that question in mind while the household gets ready. Some hours will earn money. Others will keep everyone fed and supplied. Somewhere between them, there may be room for a cup, a conversation, or a look at the water.",
+      "action": "Blue and Red sit calmly with two plain tea cups at the canonical riverside bench; restful posture, no exaggerated smiles.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/012.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/012.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "013",
+      "chapter": 2,
+      "location": "home",
+      "cast": [
+        "blue"
+      ],
+      "narration": "First, the bed has to disappear. Not into a separate bedroom, but out of the way. You fold the bedding and return it to its place. The same stretch of floor can now serve another purpose. Nothing about the room has changed. What you can do in it has.",
+      "action": "Blue crouches at the left bedding recess, folding the navy top quilt into the existing bedding stack; table and cushion remain unchanged.",
+      "sources": [
+        "I",
+        "S01"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/013.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/013.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "014",
+      "chapter": 2,
+      "location": "home",
+      "cast": [],
+      "narration": "Paper panels soften the light. Timber frames the walls. The low table is within reach of the bedding, and your belongings are close enough that you cannot forget them for long. The room is modest. Some rented homes were tighter still, while better-off households had very different surroundings.",
+      "action": "Empty home with the canonical table, navy cushion, plain gray teapot and bedding stack; no additions, architectural establishing view.",
+      "sources": [
+        "I",
+        "S01"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/014.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/014.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "015",
+      "chapter": 2,
+      "location": "alley",
+      "cast": [],
+      "narration": "The Edo-Tokyo Museum describes many commoners living in divided row houses called nagaya. The important word is divided. Several households could occupy sections of one long building. You might have your own doorway, but your domestic life did not unfold far from other people's domestic lives.",
+      "action": "Canonical shared alley, identical timber walls and plain sliding doors, a few distant adult white-headed residents entering their own doors.",
+      "sources": [
+        "S01"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/015.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/015.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "016",
+      "chapter": 2,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "For this household, setting things down is already a small decision. A basket left in the wrong place occupies the route to the door. A bundle on the table competes with breakfast. In a room with several jobs, tidiness is not decoration. It is access.",
+      "action": "Red moves a small woven basket from the edge of the table to beside the right doorway, keeping a clear walking path.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/016.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/016.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "017",
+      "chapter": 2,
+      "location": "alley",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Outside, another door opens. Somebody carries a bucket past you. The museum emphasizes the different occupations and mutual assistance within these neighborhoods. That does not make every neighbor your best friend. It means the people around you are part of the practical world you have to navigate.",
+      "action": "Blue stands at the doorway while one anonymous adult white-headed resident in muted green long sleeves and trousers passes with a wooden bucket.",
+      "sources": [
+        "S01",
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/017.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/017.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "018",
+      "chapter": 3,
+      "location": "alley",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Before the meal comes the water. Take the bucket to the shared well. It will serve more than one task when it reaches the house, so leaving this errand until later means leaving something else waiting too. The route is short; the dependence on it is substantial.",
+      "action": "Blue stands at the fixed well in the alley, holding one empty wooden bucket by its simple handle.",
+      "sources": [
+        "I",
+        "S03"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/018.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/018.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "019",
+      "chapter": 3,
+      "location": "alley",
+      "cast": [],
+      "narration": "Edo's water supply was more engineered than the romantic image of a premodern city might suggest. The Tokyo Waterworks Bureau describes water carried through stone and wooden conduits to waterworks wells, where residents drew it for drinking and household use. The bucket is the visible end of a larger system.",
+      "action": "Close framing on the fixed shared well with wooden rim, simple rope and bucket, adjacent timber wall unchanged; no transparent cutaway or new pipes.",
+      "sources": [
+        "S03"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/019.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/019.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "020",
+      "chapter": 3,
+      "location": "bridge",
+      "cast": [],
+      "narration": "That system did not fit inside one neighborhood. The Tamagawa waterworks, completed in the seventeenth century, brought water toward the city from far away. Behind the familiar household gesture of lifting a bucket stood channels, construction, maintenance, and the problem of supplying an expanding population.",
+      "action": "Canonical bridge and waterway, empty foreground, timber warehouses and a single distant wooden cargo boat; no claim this river is the actual aqueduct.",
+      "sources": [
+        "S03"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/020.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/020.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "021",
+      "chapter": 3,
+      "location": "alley",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "At the well, you lower the bucket and bring it up full. Set it down before adjusting your grip. Your partner arrives with another vessel and waits for space. Household errands have already become a small negotiation over a common facility.",
+      "action": "Blue sets a filled wooden bucket on the ground next to the fixed well, Red waits a pace away holding an empty smaller bucket; no spilling.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/021.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/021.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "022",
+      "chapter": 3,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "The water reaches the doorway. There is relief in setting the bucket down safely. A task that occupied your hands and attention is finished for now. The next question is what needs the water first, because food does not prepare itself just because its ingredients have arrived.",
+      "action": "Red holds the wooden water bucket in the right doorway, Blue absent, table still clear; preserve the doorway and shoji geometry.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/022.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/022.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "023",
+      "chapter": 4,
+      "location": "home",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "Breakfast is rice, soup, and vegetables at a cleared table. This household's meal gives us a starting point, not a fixed menu for every resident. Income and circumstances made a difference. What everyone sharing this table can agree on is that sitting down now feels better than carrying the water did.",
+      "action": "Blue and Red sit at the canonical low table with exactly two small plain bowls of rice, two plain soup bowls and one small dish of vegetables.",
+      "sources": [
+        "I",
+        "S06"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/023.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/023.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "024",
+      "chapter": 4,
+      "location": "market",
+      "cast": [],
+      "narration": "The Tokyo Metropolitan Library traces Edo's food culture to agriculture, fishing, and distribution networks linking the city with surrounding communities and more distant regions. A bowl placed in front of you therefore connects the home to people and places you will not meet this morning.",
+      "action": "Canonical market empty foreground, baskets of vegetables at the fixed stall, plain rice sacks at an adjacent shop, no modern packaging.",
+      "sources": [
+        "S06"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/024.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/024.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "025",
+      "chapter": 4,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "You eat. For a moment, the tasks that produced the meal are out of sight. The water has been carried. The ingredients are here. The table has been cleared. That brief feeling of having everything in reach is pleasant partly because somebody has arranged it.",
+      "action": "Red sits at the table holding her plain rice bowl with one white mitten hand and two simple chopsticks in the other; Blue absent from crop, no fingers.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/025.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/025.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "026",
+      "chapter": 4,
+      "location": "home",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Before leaving, you check what remains for later. There is enough to plan around, but an extra purchase may help. Your partner takes the basket. The choice will depend on what a seller has available and what else the household needs its money to do.",
+      "action": "Blue looks into one plain small wooden food container on the table beside his rice and soup bowls; no written figures or charts.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/026.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/026.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "027",
+      "chapter": 4,
+      "location": "alley",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You step out fed, equipped, and already involved in other people's mornings. Someone else's bucket is on its way home. A doorway is being swept. The street beyond will not wait until every household has finished breakfast. Daily life overlaps; it does not proceed one scene at a time.",
+      "action": "Blue exits the fixed household doorway carrying gray cloth tool bundle; one distant covered white-headed adult sweeps near a different doorway.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/027.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/027.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "028",
+      "chapter": 5,
+      "location": "alley",
+      "cast": [
+        "blue"
+      ],
+      "narration": "A bell sounds outside. The Edo-Tokyo Museum describes bells of time that gave residents an approximate hour. It is a public reference carried through the air, reaching people who are occupied with very different things. You hear it on your way to a piece of unfinished work.",
+      "action": "Blue pauses mid-step in the same alley and turns his round white head slightly toward the distance; no visible modern clock or added bell tower.",
+      "sources": [
+        "S01",
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/028.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/028.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "029",
+      "chapter": 5,
+      "location": "bridge",
+      "cast": [],
+      "narration": "There is another difference. As the Seiko Museum explains, Edo-period Japan used a seasonal system: daylight and night were each divided into six parts. Those units changed length with the season. Time was organized, but it was not your modern sequence of equal sixty-minute appointments.",
+      "action": "Wide canonical bridge in daylight, sunlight over timber waterfront; no clock dial, diagram, labels or numeric time overlay.",
+      "sources": [
+        "S02"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/029.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/029.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "030",
+      "chapter": 5,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "Elsewhere, shops are open and sellers are moving. The Tokyo Metropolitan Library describes itinerant merchants carrying wares through Edo's streets, as well as food stalls. Commerce can come toward the customer. For a busy household, that matters almost as much as having a large shop nearby.",
+      "action": "Red watches a covered adult white-headed vendor in muted ochre long sleeves and trousers carrying a simple shoulder pole with two small produce baskets through the fixed market.",
+      "sources": [
+        "S05"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/030.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/030.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "031",
+      "chapter": 5,
+      "location": "bridge",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Walk a little farther and the city looks different. Routes connect doorways, shops, bridges, and landing places. The same person might be a neighbor at home, a supplier on the street, and a customer elsewhere. Ordinary people give those places their meaning by passing between them.",
+      "action": "Blue walks across the fixed wooden bridge, carrying tied gray tool bundle; two distant adult white-headed townspeople move in the opposite direction.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/031.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/031.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "032",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "At the workbench, the troublesome corner is still troublesome. Bring the lid down carefully and feel where it catches. The correction must happen in the wood, not in an argument with the customer. You set the lid aside and prepare to work on the edge.",
+      "action": "Blue sits at the fixed workbench testing a plain lid against a small wooden box; two white mitten hands, box ordinary tabletop size.",
+      "sources": [
+        "I",
+        "S04"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/032.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/032.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "033",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [],
+      "narration": "Tokyo's account of Edo sashimono describes furniture and smaller wooden objects assembled using carefully worked joints rather than nails. The craft developed across the seventeenth through nineteenth centuries. Not all woodworking was sashimono. But it gives us a useful way to see skill in a small, ordinary object.",
+      "action": "Close shot at fixed workshop bench: a simple small wooden box corner with clean interlocking wooden joints and matching plain lid, no metal nails, no people.",
+      "sources": [
+        "S04"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/033.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/033.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "034",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You check the edge, position the board, and take off a little material. A shaving lands on the bench. Then you stop and test the fit, because removing more is easy and putting it back is not. The useful rhythm is action, inspection, and another small adjustment.",
+      "action": "Blue uses a small traditional wooden hand plane on one plain board at the bench, a modest curl of wood on the surface, no power tools.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/034.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/034.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "035",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [],
+      "narration": "The parts that will disappear inside the finished box still matter. A customer may admire the outside, but a poor fit can reveal itself every time the object is used. This is one reason the official description emphasizes workmanship even in places that remain unseen.",
+      "action": "Close framing on the fixed bench with an open plain wooden box showing neat interior joinery, loose matching lid beside it, minimal wood shavings.",
+      "sources": [
+        "S04"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/035.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/035.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "036",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You try the lid again. Better. The change is tiny enough that someone arriving now might not notice what occupied you. From outside, a worker can look as though he is merely sitting. From the bench, the whole morning has been a sequence of decisions.",
+      "action": "Blue places the matching lid flat onto the small box with both white mitten hands; calm focused posture, box fits without fantasy glow or motion effects.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/036.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/036.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "037",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [
+        "red"
+      ],
+      "narration": "Your partner arrives at the doorway carrying a folded garment. It needs a small repair before it goes back to its owner. You make space on the bench for a quick look. The household now has two pieces of work to complete, each demanding a different kind of care.",
+      "action": "Red stands in the fixed workshop doorway holding a folded plain gray garment; Blue not present in this frame.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/037.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/037.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "038",
+      "chapter": 6,
+      "location": "workshop",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "For a moment, the two jobs share a space. The box is almost ready. The cloth can be examined. A conversation about today's errands interrupts neither occupation very dramatically, yet it helps arrange what comes next. Work is not always sealed off from domestic life by a separate building.",
+      "action": "Blue sits at bench with the completed plain box, Red beside him holding gray cloth parcel; both neutral small line mouths, no dialogue balloons.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/038.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/038.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "039",
+      "chapter": 7,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "While that box leaves the bench, another piece of work is less conspicuous. A seam is being checked. A usable garment is laid out rather than discarded. For our household, the point is practical: can the thing do its job again without buying a replacement today?",
+      "action": "Red sits at the canonical table inspecting a plain gray garment laid flat; one small wooden sewing box beside it, no modern scissors.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/039.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/039.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "040",
+      "chapter": 7,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "She folds the garment after checking it. Outside, clothing belongs to a much wider world than this modest repair: trade, changing taste, and the desire to be seen a certain way. The Tokyo Metropolitan Library treats the evolving culture of dress as a significant part of Edo life.",
+      "action": "Red folds the repaired gray garment neatly on the fixed low table; burgundy sleeves and trousers unchanged, ochre sash unchanged.",
+      "sources": [
+        "S16",
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/040.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/040.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "041",
+      "chapter": 7,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "By the time she reaches the street, the repaired cloth is just one of several things to remember. Return the parcel. Buy something for the meal. Bring the basket home. An errand can look like a stroll from a distance, especially if you cannot see the list inside the person's head.",
+      "action": "Red walks beside the fixed market vegetable stall holding a woven basket with gray cloth parcel inside; no visible list or written signs.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/041.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/041.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "042",
+      "chapter": 7,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "A shopfront can offer temptation as well as necessity. A fine piece of cloth may catch your eye without coming anywhere near your budget. Looking is not the same as buying. Some of the city's pleasures can be borrowed for a moment simply by passing them.",
+      "action": "Red looks toward a modest textile shelf inside the fixed market shop with three folded plain muted fabrics; basket held close, no luxury fashion parade.",
+      "sources": [
+        "I",
+        "S16"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/042.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/042.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "043",
+      "chapter": 7,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "The gap between having money and displaying it mattered, too. The Asian Art Museum describes attempts to restrain commoners' luxury, alongside their ways of negotiating those restrictions. Status was not a simple photograph of wealth. An expensive-looking life and an officially privileged life were not always the same.",
+      "action": "Red stands near a shop doorway with restrained folded textiles on shelf; one distant adult white-headed well-dressed merchant in muted plum long sleeves and trousers, no jewelry.",
+      "sources": [
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/043.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/043.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "044",
+      "chapter": 7,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "For this day, no grand purchase follows. The basket comes home with a few ingredients instead. That is not a defeat. It is the choice that lets the household move from one meal to the next. The city offers more possibilities than one ordinary day can afford.",
+      "action": "Red sets the woven basket containing leafy greens and a small wrapped parcel beside the canonical low table; calm posture, no feast.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/044.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/044.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "045",
+      "chapter": 8,
+      "location": "bridge",
+      "cast": [
+        "blue"
+      ],
+      "narration": "The city around you is also a seat of government. The shogun's power and the residences of feudal lords help explain why so much demand concentrates here. Goods are not moving into an accidental collection of villages. People with money, rank, and obligations need the city to supply them.",
+      "action": "Blue walks on the fixed bridge with wrapped small box held in both white mitten hands; timber waterfront unchanged.",
+      "sources": [
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/045.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/045.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "046",
+      "chapter": 8,
+      "location": "market",
+      "cast": [],
+      "narration": "The Asian Art Museum points out that artisans and merchants supplied the material wants of the upper classes. It also describes samurai taking on civilian and cultural roles during the long peace. A warrior's status did not mean that every hour of his day involved fighting.",
+      "action": "Fixed market wide shot with an anonymous adult white-headed official in charcoal long sleeves and trousers inspecting a plain cloth-wrapped purchase; no sword battle, no armor.",
+      "sources": [
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/046.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/046.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "047",
+      "chapter": 8,
+      "location": "market",
+      "cast": [
+        "green"
+      ],
+      "narration": "Some merchants accumulated wealth that exceeded that of samurai. That helps break a misleading picture: status on one side, money on the other, each perfectly matching. They did not always match. Nor did every person called a merchant possess the resources of a great commercial household.",
+      "action": "Green stands behind the fixed vegetable counter, calmly arranging one small basket of greens; no gold treasure or rich palace.",
+      "sources": [
+        "S07"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/047.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/047.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "048",
+      "chapter": 8,
+      "location": "workshop",
+      "cast": [
+        "blue",
+        "green"
+      ],
+      "narration": "A customer reaches the workshop. He is the same shopkeeper your partner will encounter at the produce counter, now looking after a need of his own. You place the box between you and lift the lid. He can inspect what he is taking away before the parcel is wrapped.",
+      "action": "Blue and Green stand on opposite sides of fixed workshop bench with the completed small plain wooden box between them; neutral mouths, no dialogue balloons.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/048.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/048.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "049",
+      "chapter": 8,
+      "location": "workshop",
+      "cast": [
+        "green"
+      ],
+      "narration": "The parcel leaves. Your attention turns to the next object rather than following it to every place it will go. This is not the end of the day, just the end of one job. From the street, the workshop looks much the same. From inside, there is now room for something else.",
+      "action": "Green leaves through the existing right workshop doorway carrying the small cloth-wrapped box; same jade jacket, charcoal trousers and gray sash.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/049.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/049.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "050",
+      "chapter": 9,
+      "location": "market",
+      "cast": [
+        "red",
+        "green"
+      ],
+      "narration": "Now the coins matter. The Bank of Japan's Currency Museum describes the Edo shogunate's gold, silver, and copper currencies. They did not all work in exactly the same way. Gold carried denominations, silver was weighed, and copper coins served as smaller units of exchange.",
+      "action": "Red stands at the fixed produce counter opposite Green; a few small plain copper coins lie on the counter, no giant gold coin or modern yen.",
+      "sources": [
+        "S08"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/050.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/050.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "051",
+      "chapter": 9,
+      "location": "market",
+      "cast": [
+        "red"
+      ],
+      "narration": "Take fewer vegetables, or choose something else. Keep a little back, or spend it now. Such choices are not unique to Edo, which is precisely why they are useful. They make an unfamiliar monetary system feel less like a display case and more like somebody's afternoon.",
+      "action": "Red selects a small radish from the fixed basket while holding her woven shopping basket with the other white mitten hand, no exaggerated expression.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/051.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/051.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "052",
+      "chapter": 9,
+      "location": "market",
+      "cast": [
+        "green"
+      ],
+      "narration": "For the seller, a customer is one part of another working day. The goods must be arranged and moved. A person pausing over a choice can delay the next task without meaning to. Our market is full of these small collisions between somebody's convenience and somebody else's workload.",
+      "action": "Green lifts one modest woven vegetable basket onto the fixed counter, no shoulder pole or extra props, same identity as reference.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/052.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/052.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "053",
+      "chapter": 10,
+      "location": "market",
+      "cast": [
+        "blue"
+      ],
+      "narration": "But Edo also offered ways to eat without preparing everything yourself. The Tokyo Metropolitan Library explains how the city's large population of male retainers and employees helped create demand for food services. The meal could come from somebody whose occupation was making it available to other people.",
+      "action": "Blue pauses beside an anonymous covered adult white-headed ochre vendor at the fixed market; vendor carries a small plain lidded wooden food tray, no sushi.",
+      "sources": [
+        "S05"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/053.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/053.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "054",
+      "chapter": 10,
+      "location": "market",
+      "cast": [],
+      "narration": "After the great fire of sixteen fifty-seven, the influx of reconstruction workers helped expand the trade in prepared food. Sellers offered cooked or grilled fish and vegetables. That history gives us a better lunchtime image than projecting every later famous Edo dish backward onto the year seventeen hundred.",
+      "action": "Close shot of a plain wooden tray on the fixed market counter with a single modest cooked fish and a small dish of vegetables; no nigiri sushi, fried tempura or modern paper wrapper.",
+      "sources": [
+        "S05"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/054.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/054.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "055",
+      "chapter": 10,
+      "location": "teahouse",
+      "cast": [
+        "blue"
+      ],
+      "narration": "For our worker, the pause is simple. A bowl, a place to sit, and a few minutes when the workbench is out of reach. The setting is illustrative, not a named establishment. What matters is the exchange: someone else's preparation gives you a break from your own.",
+      "action": "Blue sits on the fixed riverside bench beside table with one plain bowl of rice, one small dish of vegetables and one plain tea cup; no feast.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/055.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/055.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "056",
+      "chapter": 10,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "green"
+      ],
+      "narration": "The shopkeeper sits beside you with his new parcel. The work you delivered has become an object resting beside a bench. For a moment, neither of you is discussing the fit of a lid or tending a vegetable counter. There are other things worth noticing in the city.",
+      "action": "Blue and Green sit at the fixed bench with two plain tea cups; Green's small gray wrapped box set safely beside him on the bench.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/056.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/056.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "057",
+      "chapter": 10,
+      "location": "teahouse",
+      "cast": [
+        "blue"
+      ],
+      "narration": "It is a pleasant pause. The customer's morning and yours have crossed here, after hours spent on different tasks. Eating together does not give you identical lives. It gives you a stretch of shared time before each of you returns to the business that brought you through the streets.",
+      "action": "Medium shot of Blue resting at the fixed bench, hands relaxed on knees, one cup on table, river visible behind; no smiling human face.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/057.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/057.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "058",
+      "chapter": 10,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "green"
+      ],
+      "narration": "In a little while, somebody stands up first. The conversation can wait; the next job cannot. There is no alarm in our scene. Just a movement that changes two people sharing a table into one person sitting and another person on his way somewhere else.",
+      "action": "Green stands beside the bench lifting his small gray parcel, Blue remains seated; preserve table, river, stall and clothing exactly.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/058.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/058.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "059",
+      "chapter": 11,
+      "location": "bridge",
+      "cast": [
+        "blue"
+      ],
+      "narration": "The waterfront makes the city's dependence easier to see. The Tokyo Metropolitan Library describes land and sea distribution bringing produce and seafood into Edo. The large city does not live only on what is growing beside its own streets. It consumes the work of a much larger hinterland.",
+      "action": "Blue stands beside the fixed bridge railing looking toward the moored wooden cargo boat and straw-wrapped bundles at landing; no modern harbor.",
+      "sources": [
+        "S06"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/059.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/059.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "060",
+      "chapter": 11,
+      "location": "bridge",
+      "cast": [],
+      "narration": "At the landing, a boat lies close to bundles and a warehouse. Before any goods can reach a shop, somebody must shift them from one place to another. Distribution is a large word. The visible work is often a very specific load that needs to be carried.",
+      "action": "Close framing toward the fixed landing with modest straw-wrapped bundles, wooden boat and timber warehouse doorway; no labels, no new bridge angle.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/060.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/060.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "061",
+      "chapter": 11,
+      "location": "bridge",
+      "cast": [
+        "green"
+      ],
+      "narration": "A person carrying a bundle across the bridge sees the same place differently from somebody admiring the water. For Green, the route is useful. For you, it may briefly be restful. Work and pleasure can occupy the same view without occupying the same person's time.",
+      "action": "Green walks along the fixed bridge carrying his small gray wrapped wooden box, calm posture, two white mitten hands.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/061.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/061.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "062",
+      "chapter": 11,
+      "location": "bridge",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You lean near the railing and watch a boat for a moment. The city has not stopped; your participation in it has changed. In the workshop you made something. At the stall you bought something. Here, briefly, you are not completing a transaction at all.",
+      "action": "Blue rests both white mitten hands lightly on the fixed bridge railing, watching the moored boat; no added ship crew.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/062.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/062.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "063",
+      "chapter": 12,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "Back in the workshop, a fresh board waits. But first you clear the shavings from the workbench. In a city of timber buildings and open flames, the relationship between ordinary activity and fire is never entirely theoretical. Cooking and lighting provide necessities. They also provide sources of danger.",
+      "action": "Blue gathers a few wood shavings from the fixed workbench into a small plain wooden tray; hand plane lies safely beside a fresh board.",
+      "sources": [
+        "I",
+        "S09"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/063.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/063.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "064",
+      "chapter": 12,
+      "location": "alley",
+      "cast": [],
+      "narration": "The Tokyo Fire Department describes dense wooden housing and everyday use of flame as conditions that made fire dangerous. The buildings stand close together. A small household problem can therefore become somebody else's problem very quickly. You do not need a fire today to have a reason to remember that.",
+      "action": "Canonical alley empty foreground with timber rental doors, well and two wooden buckets visible; clear mild daylight, no fire or smoke.",
+      "sources": [
+        "S09"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/064.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/064.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "065",
+      "chapter": 12,
+      "location": "bridge",
+      "cast": [],
+      "narration": "The great fire of sixteen fifty-seven had changed the city. The Tokyo Metropolitan Library describes relocation, wider routes, and new development after the catastrophe. Our ordinary day happens after that rebuilding. Disaster is not the action we are staging, but it helps explain the city around the action.",
+      "action": "Canonical bridge and timber waterfront wide, no burning buildings, no fantasy reconstruction, calm daylight.",
+      "sources": [
+        "S10"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/065.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/065.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "066",
+      "chapter": 12,
+      "location": "home",
+      "cast": [
+        "red"
+      ],
+      "narration": "Your partner brings the cooking pot safely toward the room. Heating and preparing food have taken attention, as well as ingredients. The meal is nearly ready, but it can wait until you return from washing. She sets the pot where it can be kept safely, then gathers a cloth.",
+      "action": "Red stands near the right home doorway holding a plain small lidded cooking pot on a wooden tray; no open flames on the tatami, no new stove.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/066.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/066.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "067",
+      "chapter": 12,
+      "location": "workshop",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You leave the next board and put the tools away. The remaining work needs another stretch of concentration, and there are other things to do before night. Leaving the bench in order makes the next start easier. For today, the workshop has supplied enough tasks.",
+      "action": "Blue puts the small hand plane and mallet neatly at the back of the fixed bench; window daylight still soft, no written clock.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/067.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/067.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "068",
+      "chapter": 13,
+      "location": "bath",
+      "cast": [
+        "blue"
+      ],
+      "narration": "By later in the day, washing has its own destination. The Tokyo bathhouse association describes public baths becoming popular during the Edo period, linking their growth to restrictions on private baths intended to prevent fires. Water and heating could be concentrated in a business instead of repeated in every house.",
+      "action": "Blue approaches the fixed modest bathhouse entrance with a folded plain gray cloth held in one white mitten hand; entirely clothed, no bathing.",
+      "sources": [
+        "S11"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bath.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/068.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/068.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "069",
+      "chapter": 13,
+      "location": "bath",
+      "cast": [
+        "red"
+      ],
+      "narration": "For our household, a visit is another small purchase and another journey. Carry what you need. Go there rather than expecting hot water to be waiting in your room. The activity is familiar; the arrangement around it differs. Convenience has a location, and you must reach it.",
+      "action": "Red stands beside the fixed bathhouse outdoor bench holding a folded plain burgundy cloth; fully covered long sleeves and trousers.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bath.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/069.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/069.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "070",
+      "chapter": 13,
+      "location": "bath",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "You meet outside again after washing, dressed for the trip onward. It feels good to have dealt with the dust and effort of the day. There is still a meal ahead, and perhaps time for a brief detour before going home. Neither of you has to stand at the workbench now.",
+      "action": "Blue and Red stand outside the fixed bathhouse doorway, fully dressed in their unchanged indigo and burgundy outfits, holding folded cloths; no steam on their skin.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/bath.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/070.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/070.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "071",
+      "chapter": 13,
+      "location": "alley",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "With the workshop's tools left behind and the purchases already home, you can walk without watching a heavy bundle. The street is the same, but the task attached to it has changed. A little farther on, the theater entrance attracts your attention.",
+      "action": "Blue and Red walk together down the fixed alley toward their household door, each carrying their folded cloth, no basket or weapons.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/071.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/071.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "072",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [
+        "green"
+      ],
+      "narration": "And somewhere in the city, the question is not what needs finishing but what is worth watching. The Tokyo Metropolitan Library describes kabuki gaining greater public acceptance in Edo by the end of the seventeenth century. Entertainment belongs to this city, not merely to its later reputation.",
+      "action": "Green stands outside the fixed theater entrance with hands resting by his sides, looking at the burgundy doorway curtain; no ticket in hand.",
+      "sources": [
+        "S12"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/072.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/072.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "073",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [],
+      "narration": "Going inside would require more time and money than a brief look. You stop outside instead. You can be curious about a performance without making it today's outing. A future visit is a possibility to consider, alongside the other things the household wants.",
+      "action": "Canonical theater exterior with three distant anonymous adult white-headed townspeople in covered muted clothes near the entrance; no evening lantern relighting.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/073.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/073.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "074",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "You can be interested without entering. Stop near the display. Look at the illustrations. Notice somebody else's excitement. A city's entertainment reaches farther than the people who pay for a seat on a particular occasion. It can become a subject of talk before it becomes your own outing.",
+      "action": "Blue and Red stand at the fixed small display stand looking at two monochrome sheets showing simple architectural stage motifs, not human actor faces, no readable writing.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/074.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/074.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "075",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [],
+      "narration": "The Met connects Edo's urban arts with kabuki and the prints called ukiyo-e. Black-and-white woodblock pictures belong to this early world too: its collection includes a print dated seventeen hundred. The elaborate full-color culture familiar from later prints was still to develop.",
+      "action": "Close framing on the fixed display stand with two plain black-and-white architectural picture sheets, simple line drawing motifs, no printed colored portraits or readable text.",
+      "sources": [
+        "S14",
+        "S15"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/075.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/075.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "076",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [
+        "green",
+        "blue"
+      ],
+      "narration": "The shopkeeper recognizes you beside the display. His parcel has gone elsewhere. You have both completed things since the lunchtime pause, and there are new things to mention. A few minutes of talk let the neighborhood expand beyond the places you personally visited.",
+      "action": "Green and Blue stand beside the fixed theater display stand, both empty-handed, quiet neutral conversation posture with tiny line mouths; no speech balloons.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/076.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/076.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "077",
+      "chapter": 14,
+      "location": "theater",
+      "cast": [
+        "red"
+      ],
+      "narration": "Your partner has seen enough of the display for today. She moves toward the street, leaving you to finish the conversation. Two people sharing a household can enjoy the same detour differently. You catch up with her a little farther along the route.",
+      "action": "Red stands slightly away from the fixed display stand, body angled toward the street, one white mitten hand resting at her sash, no impatience eyebrows.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/theater.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/077.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/077.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "078",
+      "chapter": 14,
+      "location": "market",
+      "cast": [],
+      "narration": "Books and prints also carried information and entertainment into the city. The Edo-Tokyo Museum describes publishing as a growing part of its culture. A picture on a display and a book in a shop belong to an urban world interested in more than supplies and official orders.",
+      "action": "Fixed market textile shelf includes one plain closed stitched paper book tucked beside folded fabrics, no ornate modern cover, no text; otherwise preserve market.",
+      "sources": [
+        "S13"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/078.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/078.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "079",
+      "chapter": 15,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "For our couple, today's leisure is a seat by the water, not a major spectacle. Two cups arrive. There is enough time to sit rather than carrying everything onward. You are still in the working city. The difference is that, for a moment, somebody else is tending the counter.",
+      "action": "Blue and Red sit at the fixed riverside bench with exactly two plain small tea cups on the table; no food feast, no vendor foreground.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/079.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/079.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "080",
+      "chapter": 15,
+      "location": "teahouse",
+      "cast": [
+        "red"
+      ],
+      "narration": "Your partner puts the basket down beside the bench. Now her hands are free. The water is worth watching for a moment, and there is no purchase to compare or parcel to return. The household has managed to find a pause that belongs to both of you.",
+      "action": "Red sits calmly at the canonical bench with woven basket set beside her feet, one plain cup on table, hands resting on knees.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/080.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/080.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "081",
+      "chapter": 15,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "red",
+        "green"
+      ],
+      "narration": "The shopkeeper passes and stops to exchange a few words before going on. He has been a buyer, a seller, and a companion at different points in the day. Those roles belong to one person, not separate types of people permanently assigned to separate backgrounds.",
+      "action": "Blue and Red remain seated at fixed bench with two cups; Green stands a pace to the right of the bench empty-handed; adult proportions consistent.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/081.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/081.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "082",
+      "chapter": 15,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "Eventually, the cups are empty. You leave the bench to somebody else. The pause has not solved the household's next expense or shortened tomorrow's work. It has done something less spectacular: given the day a stretch that was not entirely organized around completing a task.",
+      "action": "Blue and Red stand beside fixed bench, two empty plain cups left on table; Red picks up her woven basket, no third cup.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/082.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/082.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "083",
+      "chapter": 16,
+      "location": "home-evening",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "At home, the evening meal is ready to reach the table. Your partner brings the bowls while you clear a place. The water fetched this morning and the food carried from the market have led here. You sit opposite one another in a room familiar enough to find things without searching.",
+      "action": "Blue and Red sit at the canonical low table with two plain rice bowls, two plain soup bowls and one modest vegetable dish, early evening light; unchanged architecture.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-evening.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/083.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/083.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "084",
+      "chapter": 16,
+      "location": "home-evening",
+      "cast": [
+        "red"
+      ],
+      "narration": "After eating, you gather your tools and she moves the bowls onto a tray. The basket goes beside the doorway. The room gradually gains a clear stretch of floor. You can see the remaining tasks shrinking, though each still needs somebody to finish it.",
+      "action": "Red gathers two plain empty bowls into a wooden tray at the fixed table, early evening light; no Blue in this crop, no extra meal.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-evening.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/084.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/084.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "085",
+      "chapter": 16,
+      "location": "home-evening",
+      "cast": [
+        "blue"
+      ],
+      "narration": "You check the tool bundle before putting it aside. The next job has not been done in advance. Tomorrow will still ask for work. But knowing where the tools are is one problem you do not need to solve again at the start of it.",
+      "action": "Blue ties his small gray tool bundle on a cleared part of the canonical table, early evening light, two white mitten hands only.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-evening.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/085.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/085.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "086",
+      "chapter": 16,
+      "location": "home-night",
+      "cast": [],
+      "narration": "As daylight retreats, artificial light means maintaining a flame rather than touching an electric switch. In our illustrated room, a small oil lamp makes a limited pool of light. The rest of the room stays visible but dimmer. Night changes what is easy to see and do.",
+      "action": "Empty canonical room at night with one small covered oil lamp securely placed on the low table, gentle warm pool of light, dark blue alley outside, no open candle near bedding.",
+      "sources": [
+        "I",
+        "S09"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/086.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/086.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "087",
+      "chapter": 16,
+      "location": "home-night",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "Edo's nights did not all end at sunset. Work, money, season, and occasion made a difference. This household is winding down now. You have a little time together beside the lamp before attending to the last things that stand between the room and sleep.",
+      "action": "Blue and Red sit beside fixed low table with small covered oil lamp at table center, hands relaxed, same pure-white heads without warm skin coloring.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/087.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/087.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "088",
+      "chapter": 16,
+      "location": "home-night",
+      "cast": [
+        "blue"
+      ],
+      "narration": "The bedding comes back into use. You did not need to travel far to reach the end of the day. You needed the things occupying this floor to move aside. Morning turned the sleeping place into a working household; evening begins to reverse that transformation.",
+      "action": "Blue kneels near the left bedding stack holding the folded navy quilt ready to lay it down on a clear patch of floor; table remains in its canonical position.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/088.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/088.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "089",
+      "chapter": 17,
+      "location": "workshop",
+      "cast": [],
+      "narration": "What did people in Edo actually do all day? Our artisan household has made things, exchanged them, bought food, carried supplies, eaten, washed, and found a little time to enjoy the city. Somebody else's day would contain different work and a different balance, but it would be just as full of practical details.",
+      "action": "Empty fixed workshop bench with plain board, hand plane and small mallet neatly arranged for next day; daylight reference as reflective recap not night continuity.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/089.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/089.png",
+      "motion": "zoom_in"
+    },
+    {
+      "id": "090",
+      "chapter": 17,
+      "location": "market",
+      "cast": [
+        "green"
+      ],
+      "narration": "The urban world joined people through those details. Craftsmen and merchants supplied its needs and shaped parts of its culture. They also faced unequal resources and status. A seller's chance to earn was another household's chance to eat, and your finished work became a useful object in somebody else's home.",
+      "action": "Green tends the fixed produce counter, jade long-sleeved jacket and charcoal trousers unchanged, one basket of radishes and one of greens.",
+      "sources": [
+        "S07",
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/090.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/090.png",
+      "motion": "pan_right"
+    },
+    {
+      "id": "091",
+      "chapter": 17,
+      "location": "teahouse",
+      "cast": [
+        "blue",
+        "red"
+      ],
+      "narration": "The seat by the water was part of the answer too. Free time was uneven, and a pleasant pause did not erase an obligation. Still, it mattered. If you only saw the couple relaxing, you would miss the work; if you only saw the work, you would miss what made the day worth finishing.",
+      "action": "Blue and Red sit at fixed riverside bench with two plain tea cups, Red's basket beside her feet, neutral relaxed faces; daytime reflective recap.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/references/red.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/091.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/091.png",
+      "motion": "zoom_out"
+    },
+    {
+      "id": "092",
+      "chapter": 17,
+      "location": "home-night",
+      "cast": [],
+      "narration": "Tonight the room is ready to be a sleeping place again. The box is finished. The basket is home. The bowls are cleared. Tomorrow will rearrange much of it once more. For now, the last task is to let the day end, in one small household in Edo.",
+      "action": "Canonical night home empty, navy quilt unfolded on the clear floor area at left beside bedding recess, low table kept center with covered oil lamp, all geometry unchanged.",
+      "sources": [
+        "I"
+      ],
+      "references": [
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png"
+      ],
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/092.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/092.png",
+      "motion": "zoom_in"
+    }
+  ]
+}
