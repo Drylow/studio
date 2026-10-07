@@ -2,6 +2,16 @@
 
 ## Priorité actuelle — 7 octobre 2026
 
+Nouvelle piste concrète : Firefox **graphique** sur le VPS ouvre la vraie page de
+connexion YouTube, avec ses protections normales, sans programme à installer sur
+le PC. Capture et clavier vérifiés sans compte ; aucune authentification ni vidéo
+envoyée. Parcours privé dans `studio/browser_connection.py` et
+`production/private_browser_service.py`, guide `PRIVATE_BROWSER.md`.
+Opt-in `YOUTUBE_BROWSER_ENABLED=1`. Il fournit la connexion interactive uniquement :
+**le transport de publication par navigateur est encore à terminer et valider**.
+Ne pas confondre ce parcours, sa page de connexion ou ses tests avec le fix livré.
+Le PC de l’utilisateur est éteint ; il peut utiliser cet écran depuis son téléphone.
+
 L’utilisateur exige une publication réellement automatique, gratuite, sans
 prestataire intermédiaire ni nouvelle installation sur son PC. Les connexions
 Cage/Pitch restent absentes ; ne pas annoncer cet objectif livré. La production

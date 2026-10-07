@@ -11,6 +11,7 @@ import type { Channel, User } from "./types";
 import type { Mutate } from "./forms";
 import { api } from "./api";
 import { Button, Modal, Tag } from "./components";
+import { BrowserConnection } from "./browser-connection";
 
 export function YouTubeConnection({
   channel,
@@ -36,6 +37,7 @@ export function YouTubeConnection({
   const [busy, setBusy] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const [checked, setChecked] = useState("");
+  const [browserAvailable, setBrowserAvailable] = useState(false);
   const owner = user.role === "owner";
   const canConnect = owner && configured && !preview;
   function close() {
@@ -77,11 +79,13 @@ export function YouTubeConnection({
               <Tag tone={channel.connected ? "ready" : "muted"}>
                 {channel.connected ? "ACCÈS ENREGISTRÉ" : "À CONNECTER"}
               </Tag>
-              <p>
-                Rien à installer sur ton PC. Après l’autorisation Google, le
-                serveur pourra envoyer la vidéo, le titre, la description et la
-                miniature directement sur cette chaîne.
-              </p>
+              {!browserAvailable && (
+                <p>
+                  Rien à installer sur ton PC. Après l’autorisation Google, le
+                  serveur pourra envoyer la vidéo, le titre, la description et
+                  la miniature directement sur cette chaîne.
+                </p>
+              )}
               {!!channel.connected && (
                 <div className="youtube-identity">
                   <strong>{channel.yt_channel_title || channel.name}</strong>
@@ -119,75 +123,91 @@ export function YouTubeConnection({
                   studio : Réglages → Connexions → Comment connecter.
                 </div>
               ) : null}
-              <ol className="connection-steps">
-                <li>
-                  Clique sur{" "}
-                  <strong>
+              {owner && !preview && (
+                <BrowserConnection
+                  channel={channel}
+                  onAvailable={setBrowserAvailable}
+                />
+              )}
+              <details
+                className="youtube-api-alternative"
+                open={!browserAvailable}
+              >
+                <summary>
+                  {browserAvailable
+                    ? "Autre méthode : API Google"
+                    : "Connexion API Google"}
+                </summary>
+                <ol className="connection-steps">
+                  <li>
+                    Clique sur{" "}
+                    <strong>
+                      {channel.connected
+                        ? "Reconnecter avec Google"
+                        : "Connecter avec Google"}
+                    </strong>
+                    .
+                  </li>
+                  <li>
+                    Choisis le compte Google puis la chaîne{" "}
+                    <strong>{channel.name}</strong>.
+                  </li>
+                  <li>
+                    Accepte les autorisations : tu reviens au studio avec le nom
+                    de la chaîne reliée.
+                  </li>
+                </ol>
+                <p className="form-hint">
+                  La connexion n’active pas les publications automatiques. Les
+                  contrôles des fichiers, des droits et la validation prévue
+                  pour cette chaîne restent obligatoires. Un accès enregistré
+                  n’est pas un test de connexion réussi.
+                </p>
+                {checked && (
+                  <p className="youtube-check-result" role="status">
+                    {checked}
+                  </p>
+                )}
+                <div className="youtube-actions">
+                  <Button
+                    variant="primary"
+                    disabled={!canConnect || busy}
+                    onClick={() =>
+                      window.location.assign(
+                        `/api/studio/youtube/${channel.id}/connect`,
+                      )
+                    }
+                  >
+                    <Link2 size={16} />
                     {channel.connected
                       ? "Reconnecter avec Google"
                       : "Connecter avec Google"}
-                  </strong>
-                  .
-                </li>
-                <li>
-                  Choisis le compte Google puis la chaîne{" "}
-                  <strong>{channel.name}</strong>.
-                </li>
-                <li>
-                  Accepte les autorisations : tu reviens au studio avec le nom
-                  de la chaîne reliée.
-                </li>
-              </ol>
-              <p className="form-hint">
-                La connexion n’active pas les publications automatiques. Les
-                contrôles des fichiers, des droits et la validation prévue pour
-                cette chaîne restent obligatoires. Un accès enregistré n’est pas
-                un test de connexion réussi.
-              </p>
-              {checked && (
-                <p className="youtube-check-result" role="status">
-                  {checked}
-                </p>
-              )}
-              <div className="youtube-actions">
-                <Button
-                  variant="primary"
-                  disabled={!canConnect || busy}
-                  onClick={() =>
-                    window.location.assign(
-                      `/api/studio/youtube/${channel.id}/connect`,
-                    )
-                  }
-                >
-                  <Link2 size={16} />
-                  {channel.connected
-                    ? "Reconnecter avec Google"
-                    : "Connecter avec Google"}
-                </Button>
-                {!!channel.connected && (
-                  <Button
-                    disabled={!canConnect || busy}
-                    onClick={async () => {
-                      setBusy(true);
-                      setChecked("");
-                      await mutate(async () => {
-                        const result = await api<{ channel_title: string }>(
-                          `/youtube/${channel.id}/verify`,
-                          "POST",
-                          { revision: channel.revision },
-                        );
-                        setChecked(
-                          `Connexion vérifiée auprès de YouTube : ${result.channel_title}.`,
-                        );
-                      }, "Connexion YouTube vérifiée.");
-                      setBusy(false);
-                    }}
-                  >
-                    <RefreshCw size={16} />
-                    Vérifier la connexion
                   </Button>
-                )}
-              </div>
+                  {!!channel.connected && (
+                    <Button
+                      disabled={!canConnect || busy}
+                      onClick={async () => {
+                        setBusy(true);
+                        setChecked("");
+                        await mutate(async () => {
+                          const result = await api<{ channel_title: string }>(
+                            `/youtube/${channel.id}/verify`,
+                            "POST",
+                            { revision: channel.revision },
+                          );
+                          setChecked(
+                            `Connexion vérifiée auprès de YouTube : ${result.channel_title}.`,
+                          );
+                        }, "Connexion YouTube vérifiée.");
+                        setBusy(false);
+                      }}
+                    >
+                      <RefreshCw size={16} />
+                      Vérifier la connexion
+                    </Button>
+                  )}
+                </div>
+              </details>
               {!!channel.connected &&
                 owner &&
                 !preview &&

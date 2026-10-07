@@ -192,6 +192,10 @@ def create_app(config=None):
         if app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"):
             if request.remote_addr not in {"127.0.0.1", "::1"}:
                 return jsonify(error="L’aperçu est réservé à cette machine."), 403
+        if request.endpoint == "remote_browser_bridge":
+            from studio.browser_connection import authenticate_bridge
+
+            return authenticate_bridge(app, store)
         g.user = security.identity(store)
         if (
             (app.config["PREVIEW"] or app.config.get("LOCAL_OWNER"))
@@ -886,6 +890,9 @@ def create_app(config=None):
     from studio.youtube import register_youtube
 
     register_youtube(app, store, owner)
+    from studio.browser_connection import register as register_browser_connection
+
+    register_browser_connection(app, store, owner)
     from studio.channel_stats import register as register_channel_stats
 
     register_channel_stats(app, store)

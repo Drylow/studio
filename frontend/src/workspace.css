@@ -345,3 +345,58 @@
   color: var(--muted);
   text-underline-offset: 3px;
 }
+.private-browser-connection {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--cyan, #00e5e5);
+  border-radius: 10px;
+  min-width: 0;
+}
+.private-browser-connection p {
+  margin: 0;
+}
+.private-browser-screen {
+  width: 100%;
+  max-width: 480px;
+  min-width: 0;
+  margin-inline: auto;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.private-browser-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.private-browser-input {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.private-browser-type {
+  display: flex;
+  gap: 6px;
+  min-width: 0;
+}
+.private-browser-type input {
+  width: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+}
+.youtube-api-alternative {
+  min-width: 0;
+}
+.youtube-api-alternative > summary {
+  cursor: pointer;
+  color: var(--muted, #a2a6b5);
+}
+@media (max-width: 480px) {
+  .private-browser-connection {
+    padding: 10px;
+  }
+}
