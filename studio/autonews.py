@@ -386,7 +386,7 @@ def illustrate(plan, photos):
     for seg in plan["segments"]:
         names = [n for n in seg.get("people") or [] if n in photos] or [
             n for n in photos if n.split()[-1].lower() in seg["narration"].lower()
-        ]
+        ] or list(photos)[:1]  # otherwise the story's main person: no empty card
         if names:
             options = photos[names[0]]
             p = options[used.get(names[0], 0) % len(options)]
@@ -547,9 +547,9 @@ def _sheets_ok(tools, folder):
                             "type": "text",
                             "text": "Contact sheet of an automatically edited sports analysis video (one frame every 5 s, "
                             "time at the bottom right). Normal layout: dark branded card, headline and 2-3 short points on the "
-                            "left, a photo inside a thin blue frame on the right (portrait photos have dark bars on their "
-                            "sides inside the frame: normal), one caption line at the bottom, the same card for several "
-                            "frames. Report only real problems a viewer would notice: a fully black or glitched frame, "
+                            "left, usually a photo inside a thin blue frame on the right (portrait photos have dark bars on "
+                            "their sides inside the frame: normal; a card without photo, text only, is also normal), one "
+                            "caption line at the bottom, the same card for several frames. Report only real problems a viewer would notice: a fully black or glitched frame, "
                             "text cut off or overlapping, gibberish words, a photo that is clearly unrelated or shows a logo. "
                             'Return JSON {"blocking": ["time: problem"]} (empty when fine).',
                         },
