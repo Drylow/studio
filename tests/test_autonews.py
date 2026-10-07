@@ -281,6 +281,21 @@ class AutonewsTests(unittest.TestCase):
             result = produce(self.store, {"channel_id": self.ch["id"], "item_id": iid}, self.job(), Fake(self.root).tools())
         self.assertEqual(self.store.video(result["video_id"])["status"], "review")
 
+    def test_a_stopped_video_resumes_from_its_saved_script(self):
+        from studio.autonews import produce
+
+        broken = Fake(self.root)
+        broken.build = lambda folder, log: (_ for _ in ()).throw(ValueError("ffmpeg a échoué"))
+        iid = self.item("Topuria vs Gaethje official for Madrid")
+        payload = {"channel_id": self.ch["id"], "item_id": iid}
+        with self.assertRaisesRegex(ValueError, "ffmpeg"):
+            produce(self.store, payload, self.job(), broken.tools())
+        fixed = Fake(self.root)
+        result = produce(self.store, dict(payload, resume=True), self.job(), fixed.tools())
+        self.assertEqual(self.store.video(result["video_id"])["status"], "ready")
+        self.assertFalse(any("YouTube news analysis" in c or "Extract" in c for c in fixed.calls))
+        self.assertEqual(produce(self.store, dict(payload, resume=True), self.job(), fixed.tools()), {"skipped": "nothing to resume"})
+
     def test_a_refused_thumbnail_blocks_the_video(self):
         from studio.autonews import produce
 

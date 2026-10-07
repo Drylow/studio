@@ -53,12 +53,25 @@ class Cancelled(Exception):
     """Opération ffmpeg interrompue à la demande (bouton Annuler)."""
 
 
+def capped(args):
+    """FFMPEG_THREADS caps ffmpeg's threads: shared hosting shows many cores but
+    limits processes per account, and ffmpeg's automatic choice then fails (EAGAIN)."""
+    try:
+        n = int(os.environ.get("FFMPEG_THREADS", "0"))
+    except ValueError:
+        n = 0
+    if n <= 0 or not args:
+        return args
+    return (["-filter_threads", str(n), "-filter_complex_threads", str(n)]
+            + args[:-1] + ["-threads", str(n), args[-1]])
+
+
 def run(args, cwd=None, timeout=None, cancelled=None):
     """Lance ffmpeg ; lève MediaError avec la fin de stderr en cas d'échec.
 
     `cancelled` (callable) est interrogé pendant l'exécution : s'il renvoie True,
     le process ffmpeg est tué et Cancelled est levée (annulation immédiate)."""
-    cmd = [ffmpeg_bin(), "-hide_banner", "-nostdin", "-y"] + list(args)
+    cmd = [ffmpeg_bin(), "-hide_banner", "-nostdin", "-y"] + capped(list(args))
     if cancelled is None:
         p = subprocess.run(cmd, cwd=cwd, capture_output=True, timeout=timeout, creationflags=_NO_WINDOW)
         if p.returncode != 0:

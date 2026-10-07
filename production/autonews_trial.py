@@ -45,7 +45,15 @@ def main():
     finally:
         store.settings, store.channel = settings, channel
     at = datetime.now(timezone.utc)
-    if len(sys.argv) > 2:
+    resume = False
+    if len(sys.argv) > 2 and sys.argv[2] == "resume":
+        # Restart the last stopped autopilot video of this channel from its saved script.
+        row = store.one(
+            "SELECT i.* FROM studio_news_items i JOIN studio_videos v ON v.id=i.video_id WHERE i.channel_id=? AND v.status='blocked' AND json_extract(v.engine_ref,'$.auto')=1 ORDER BY v.created_at DESC LIMIT 1",
+            (ch["id"],),
+        )
+        item, resume = row, True
+    elif len(sys.argv) > 2:
         item = store.one("SELECT * FROM studio_news_items WHERE id=?", (sys.argv[2],))
     else:
         items = store.rows(
@@ -66,7 +74,11 @@ def main():
                 stamp = datetime.now().strftime("%H:%M:%S")
                 print(f"[{stamp}] {message}", flush=True)
 
-    result = autonews.produce(store, {"channel_id": ch["id"], "item_id": item["id"]}, Job())
+    result = autonews.produce(
+        store, {"channel_id": ch["id"], "item_id": item["id"], "resume": resume}, Job()
+    )
+    if not result.get("video_id"):
+        raise SystemExit(f"Rien à faire : {result}")
     v = store.video(result["video_id"])
     print("Vidéo :", v["id"], v["status"], v["title"], flush=True)
     print("Dossier :", v["engine_ref"].get("job"), flush=True)

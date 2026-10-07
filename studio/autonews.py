@@ -534,17 +534,25 @@ def produce(store, payload, job, tools=None):
     ch = store.channel(payload["channel_id"])
     if not item or not ch or item["channel_id"] != ch["id"]:
         raise ValueError("Sujet ou chaîne introuvable.")
-    if item["status"] != "new" or item["video_id"]:
+    resume = None
+    if payload.get("resume") and item["video_id"]:
+        # A stopped video restarts from its saved script: same text, cached voice.
+        resume = store.video(item["video_id"])
+        if not resume or resume["status"] != "blocked" or not resume["engine_ref"].get("auto"):
+            return {"skipped": "nothing to resume"}
+        vid = resume["id"]
+        folder = ROOT / resume["engine_ref"]["job"]
+    elif item["status"] != "new" or item["video_id"]:
         return {"skipped": "already used"}
-    vid = prepare(store, item["id"], item["revision"], "Delamain")
-    folder = ROOT / "work/studio/productions" / vid
-    folder.mkdir(parents=True, exist_ok=True)
-    ref = {"kind": "news", "job": str(folder.relative_to(ROOT)), "brief": True, "auto": True}
-    store.update(
-        "studio_videos", vid, {"engine_ref": ref, "asset_dir": ref["job"], "status": "creating"}
-    )
+    else:
+        vid = prepare(store, item["id"], item["revision"], "Delamain")
+        folder = ROOT / "work/studio/productions" / vid
+        folder.mkdir(parents=True, exist_ok=True)
+        ref = {"kind": "news", "job": str(folder.relative_to(ROOT)), "brief": True, "auto": True}
+        store.update("studio_videos", vid, {"engine_ref": ref, "asset_dir": ref["job"]})
+    store.update("studio_videos", vid, {"status": "creating", "error": ""})
     try:
-        return _produce(store, ch, item, vid, folder, job, tools, automation_rights)
+        return _produce(store, ch, item, vid, folder, job, tools, automation_rights, resume)
     except Exception as error:
         store.update(
             "studio_videos", vid, {"status": "blocked", "error": str(error)[:800]}
@@ -553,9 +561,20 @@ def produce(store, payload, job, tools=None):
         raise
 
 
-def _produce(store, ch, item, vid, folder, job, tools, automation_rights):
+def _produce(store, ch, item, vid, folder, job, tools, automation_rights, resume=None):
     from studio.imports import digest, relative
+    from services import news_brief
 
+    saved = folder / "brief.json"
+    if resume and saved.is_file():
+        plan = json.loads(saved.read_text(encoding="utf-8"))
+        sources = {s["id"]: s for s in plan["sources"]}
+        wanted = list(dict.fromkeys(
+            [n for s in plan["segments"] for n in s.get("people") or []]
+            + list((plan.get("thumbnail") or {}).get("people") or [])))
+        job.update(0.36, "Reprise : photos sous licence réutilisable")
+        photos = _photos(tools, folder, wanted)
+        return _media(store, ch, vid, folder, job, tools, automation_rights, plan, sources, photos)
     job.update(0.05, "Lecture des articles sources")
     listed = json.loads(item["sources"] or "[]") or [{"name": "Source", "url": item["url"]}]
     sources = {}
@@ -589,8 +608,6 @@ def _produce(store, ch, item, vid, folder, job, tools, automation_rights):
     store.update("studio_videos", vid, {"notes": notes, "sources": plain})
 
     job.update(0.2, "Écriture du script")
-    from services import news_brief
-
     plan, problems = None, None
     for attempt in range(3):
         draft = _script(tools, ch, facts, sources, people, problems)
@@ -634,6 +651,11 @@ def _produce(store, ch, item, vid, folder, job, tools, automation_rights):
         vid,
         {"title": plan["title"][:100], "script": news_brief.validate(plan), "status": "script"},
     )
+    return _media(store, ch, vid, folder, job, tools, automation_rights, plan, sources, photos)
+
+
+def _media(store, ch, vid, folder, job, tools, automation_rights, plan, sources, photos):
+    from studio.imports import digest, relative
 
     job.update(0.45, "Voix et montage")
     tools.build(folder, lambda msg: job.update(None, msg))
