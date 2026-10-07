@@ -35,27 +35,41 @@ function text(ctx,value,x,y,scale,color='#203c2a'){
   rows.forEach((row,j)=>[...row].forEach((cell,i)=>{if(cell==='1')ctx.fillRect(x+i*scale,y+j*scale,scale,scale);}));x+=6*scale;
  }
 }
+function watermelonIcon(ctx,x,y){
+ const rows=['  GGGGGGGGGG  ',' GWRRRRRRRRWG ',' GWRRSRRSRRWG ',' GWRRRRRRRRWG ','  GWRRSRRRWG  ','  GWRRRRRRWG  ','   GWRRRRWG   ','    GWWWWG    ','     GGGG     '];
+ const colors={G:'#244c37',W:'#f2f0c4',R:'#ef5867',S:'#352922'};
+ rows.forEach((row,j)=>[...row].forEach((cell,i)=>{if(colors[cell]){ctx.fillStyle=colors[cell];ctx.fillRect(x+i,y+j,1,1);}}));
+}
 export function createPixelView(canvas){
  canvas.width=PIXEL_WIDTH;canvas.height=PIXEL_HEIGHT;
  const back=document.createElement('canvas');back.width=PIXEL_WIDTH;back.height=PIXEL_HEIGHT;
  const ctx=back.getContext('2d',{willReadFrequently:true,alpha:false});ctx.imageSmoothingEnabled=false;
  const display=canvas.getContext('2d',{willReadFrequently:true,alpha:false,desynchronized:false});display.imageSmoothingEnabled=false;
  const bayer=[-6,2,6,-2];
+ // Cache exact nearest-palette results, including the four dither offsets.
+ // Every repeat color avoids searching all 19 colors again, with no change
+ // to pixel values between preview and export.
+ const nearestCache=new Map();
  return (source,count,index,hook=false)=>{
   ctx.drawImage(source,0,0,PIXEL_WIDTH,PIXEL_HEIGHT);
   const frame=ctx.getImageData(0,0,PIXEL_WIDTH,PIXEL_HEIGHT),a=frame.data;
   for(let p=0;p<a.length;p+=4){
-   const pixel=p/4,x=pixel%PIXEL_WIDTH,y=Math.floor(pixel/PIXEL_WIDTH),d=bayer[(y%2)*2+x%2];
-   let best=0,distance=Infinity;
-   for(let i=0;i<rgb.length;i++){const c=rgb[i],r=a[p]+d-c[0],g=a[p+1]+d-c[1],b=a[p+2]+d-c[2];const dist=r*r*2+g*g*3+b*b;
-    if(dist<distance){best=i;distance=dist;}
+   const pixel=p/4,x=pixel%PIXEL_WIDTH,y=Math.floor(pixel/PIXEL_WIDTH),pattern=(y%2)*2+x%2,d=bayer[pattern];
+   const cacheKey=((a[p]<<16)|(a[p+1]<<8)|a[p+2])*4+pattern;
+   let best=nearestCache.get(cacheKey);
+   if(best===undefined){
+    best=0;let distance=Infinity;
+    for(let i=0;i<rgb.length;i++){const c=rgb[i],r=a[p]+d-c[0],g=a[p+1]+d-c[1],b=a[p+2]+d-c[2];const dist=r*r*2+g*g*3+b*b;
+     if(dist<distance){best=i;distance=dist;}
+    }
+    nearestCache.set(cacheKey,best);
    }
    a[p]=rgb[best][0];a[p+1]=rgb[best][1];a[p+2]=rgb[best][2];
   }
   ctx.putImageData(frame,0,0);
   // Keep the title field readable even when a thrown blade enters above it.
   ctx.fillStyle='#f1e7d6';ctx.fillRect(0,0,PIXEL_WIDTH,85);
-  text(ctx,'WATERMELON',108,28,1);
+  watermelonIcon(ctx,70,27);text(ctx,'WATERMELON',118,28,1);
   text(ctx,count===1?'1 CUT':count+' CUTS',108,48,3);
   if(hook)text(ctx,'PREVIEW',108,350,1);
   else ['01','04','08','16','32'].forEach((label,i)=>{

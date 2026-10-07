@@ -96,7 +96,7 @@ function createPiece(piece){
  group.position.copy(center).add(V(piece.offset)).add(new THREE.Vector3(0,DATA.height,0));return group;
 }
 const fruit=new THREE.Group();scene.add(fruit);
-const meshes=new Map(),batches=new Map();let activeStage='';let parts=[],activeBatches=[];
+const meshes=new Map(),batches=new Map();let activeStage='',activePose='';let parts=[],activeBatches=[];
 function buildBatches(ids,prototypes){
  const bins=[skinMat,fleshMat,seedsMat].map(material=>({material,rest:[],normals:[],fruitRest:[],colors:[],owners:[]}));
  prototypes.forEach((group,owner)=>group.children.forEach(m=>{
@@ -174,7 +174,10 @@ function renderAt(input){
   if(index===0)g.position.addScaledVector(V(p.center),.07*stage/shot.count);
   g.quaternion.identity();
  });
- updateBatches();
+ // Held geometry stays identical between cuts. Only the camera and knives
+ // move then, so do not transform every fruit vertex on every preview tick.
+ const poseKey=t>=shot.release?`${index}:physics:${t}`:`${index}:held:${stage}`;
+ if(poseKey!==activePose){updateBatches();activePose=poseKey;}
  knives.forEach(({main,echo})=>{main.visible=false;echo.visible=false;});
  let slot=0;
  shot.cutTimes.forEach((c,i)=>{
