@@ -319,6 +319,25 @@ class AutonewsTests(unittest.TestCase):
         urls = [s["visual"]["url"][-1] for s in brief["segments"] if s.get("visual")]
         self.assertEqual(urls[:2], ["1", "2"])
 
+    def test_a_card_never_shows_someone_else_and_extra_faces_are_refused(self):
+        from studio.autonews import illustrate, produce
+
+        brief = plan()
+        found = {"Justin Gaethje": Fake.portraits(Fake(self.root), "Justin Gaethje")}
+        illustrate(brief, found)
+        for seg in brief["segments"]:
+            self.assertEqual(bool(seg.get("visual")), seg["people"] == ["Justin Gaethje"])
+        crowd = Fake(self.root)
+        original = crowd.chat
+        crowd.chat = lambda messages, **kw: (
+            {"ok": True, "people_visible": 3}
+            if isinstance(messages[0]["content"], list) and "Check this YouTube thumbnail" in messages[0]["content"][0]["text"]
+            else original(messages, **kw)
+        )
+        iid = self.item("Topuria vs Gaethje official for Madrid")
+        with self.assertRaisesRegex(ValueError, "Miniature refusée"):
+            produce(self.store, {"channel_id": self.ch["id"], "item_id": iid}, self.job(), crowd.tools())
+
     def test_a_refused_thumbnail_blocks_the_video(self):
         from studio.autonews import produce
 

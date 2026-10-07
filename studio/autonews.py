@@ -384,9 +384,11 @@ def illustrate(plan, photos):
     """Each segment shows the person it is about, alternating that person's photos."""
     used = {}
     for seg in plan["segments"]:
-        names = [n for n in seg.get("people") or [] if n in photos] or [
+        # Only a person this segment is about; never someone else's face (text-only card instead).
+        named = seg.get("people") or []
+        names = [n for n in named if n in photos] if named else [
             n for n in photos if n.split()[-1].lower() in seg["narration"].lower()
-        ] or list(photos)[:1]  # otherwise the story's main person: no empty card
+        ]
         if names:
             options = photos[names[0]]
             p = options[used.get(names[0], 0) % len(options)]
@@ -478,6 +480,18 @@ def _thumb_rights(photos):
     return main
 
 
+def _style_only():
+    """The approved thumbnail's central band: its text style without any face."""
+    from PIL import Image
+
+    with Image.open(REFERENCE) as im:
+        w, h = im.size
+        band = im.convert("RGB").crop((int(w * 0.37), int(h * 0.45), int(w * 0.71), h))
+        out = io.BytesIO()
+        band.save(out, "PNG")
+    return out.getvalue()
+
+
 def _thumbnail(tools, folder, ch, plan, photos):
     from PIL import Image
 
@@ -490,16 +504,21 @@ def _thumbnail(tools, folder, ch, plan, photos):
     line1 = str(spec.get("line1", "")).upper()[:16]
     line2 = str(spec.get("line2", "")).upper()[:16]
     who = " and ".join(p["name"] for p in chosen)
+    count = len(chosen)
     prompt = (
-        "YouTube sports news thumbnail, 16:9, in exactly the same art direction as the LAST reference image: "
-        f"{who} as sharp, realistic, high-contrast portrait cut-outs ({'left and right, facing each other' if len(chosen) == 2 else 'large on one side'}), "
-        f"using the faces from the first reference photo(s) exactly, background: {spec.get('scene') or 'dramatic arena lights'}, "
-        f"dark moody scene with {accent} glow, and huge bold 3D text in the centre-bottom on two lines: "
-        f'"{line1}" then "{line2}", {accent} gradient on the first line, white with dark outline on the second. '
+        "YouTube sports news thumbnail, 16:9. "
+        f"Exactly {count} person{'s' if count > 1 else ''}: {who}, copied from the reference photo"
+        f"{'s' if count > 1 else ''} (same face, same person), as sharp, realistic, high-contrast chest-up cut-out"
+        f"{'s on the left and right, facing each other' if count == 2 else ' large on the left'}. "
+        "No other person, no other face anywhere. "
+        f"Background: {spec.get('scene') or 'dramatic arena lights'}, dark moody scene with {accent} glow and light smoke. "
+        f'Huge bold condensed 3D text in the centre-bottom on two lines: "{line1}" then "{line2}", '
+        f"{accent} gradient with glow on the first line, white with dark outline on the second, "
+        "typography and colours like the LAST reference image (it shows the text style only). "
         "No logos, no brands, no belts, no jerseys with club crests, no other text."
     )
     refs = [Path(p["file"]).read_bytes() for p in chosen]
-    refs.append(REFERENCE.read_bytes())
+    refs.append(_style_only())
     last = None
     for _ in range(2):
         blob = tools.image(prompt, refs)
@@ -514,8 +533,9 @@ def _thumbnail(tools, folder, ch, plan, photos):
                         {
                             "type": "text",
                             "text": f'Check this YouTube thumbnail. Is the big text exactly "{line1} {line2}" with no '
-                            "misspelling, no extra words, no logos, no brand names and no distorted faces? "
-                            'Return JSON {"ok": true|false, "problem": "..."}.',
+                            f"misspelling and no extra words, are exactly {count} people visible, with no logos, no "
+                            "brand names and no distorted faces? "
+                            'Return JSON {"ok": true|false, "people_visible": n, "problem": "..."}.',
                         },
                         {
                             "type": "image_url",
@@ -527,7 +547,7 @@ def _thumbnail(tools, folder, ch, plan, photos):
                 }
             ]
         )
-        if check.get("ok") is True:
+        if check.get("ok") is True and check.get("people_visible", count) == count:
             path = folder / "thumb.jpg"
             path.write_bytes(out.getvalue())
             return path, _thumb_rights(chosen)
