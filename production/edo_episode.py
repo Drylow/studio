@@ -38,6 +38,18 @@ def timestamp(seconds):
     return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
 
 
+def measure_words(audio, language):
+    import numpy as np
+    if not align.available():
+        return None
+    # Feed decoded samples to the existing aligner; avoid incompatible decoder APIs.
+    decoded = subprocess.run([media.ffmpeg_bin(), "-hide_banner", "-v", "error", "-i", str(audio),
+                              "-f", "f32le", "-ar", "16000", "-ac", "1", "pipe:1"],
+                             capture_output=True, check=True)
+    samples = np.frombuffer(decoded.stdout, dtype=np.float32)
+    return align.words_from_audio(samples, language)
+
+
 def speech(episode, work):
     text = "\n\n".join(s["narration"] for s in episode["shots"])
     identity = {"text": text, "voice": episode["voice"]}
@@ -73,7 +85,7 @@ def timeline(episode, work):
         raw = cached["words"]
     else:
         print("Measuring words on actual narration audio", flush=True)
-        raw = align.words_from_audio(str(audio), episode["language"])
+        raw = measure_words(audio, episode["language"])
         if not raw:
             raise SystemExit("No measured word timings; estimated provider timings are not accepted.")
         save(measured, {"audio_sha256": digest(audio), "words": raw})
@@ -163,6 +175,9 @@ def export_video(episode, work, width, height):
     plan = read(work / "timeline.json")
     if plan["audio_sha256"] != digest(work / "narration.mp3"):
         raise SystemExit("Timeline references different narration.")
+    if [{k: s[k] for k in ("id", "image", "narration", "motion")} for s in plan["shots"]] != [
+            {k: s[k] for k in ("id", "image", "narration", "motion")} for s in episode["shots"]]:
+        raise SystemExit("Shot selection changed: rebuild the measured timeline before rendering.")
     scenes = [{"image": str(Path(REPO) / s["image"]), "start": s["start"],
                "motion": s["motion"]} for s in plan["shots"]]
     build = work / "render"
@@ -175,6 +190,25 @@ def export_video(episode, work, width, height):
                                  progress=lambda p, msg: print(f"{p:.0%} {msg}", flush=True))
     save(work / "render_result.json", result)
     print("Render complete", flush=True)
+
+
+def image_sheets(episode, work):
+    from PIL import Image, ImageDraw
+    folder = work / "image-check"
+    folder.mkdir(exist_ok=True)
+    ready = [s for s in episode["shots"] if (Path(REPO) / s["image"]).exists()]
+    for offset in range(0, len(ready), 6):
+        sheet = Image.new("RGB", (1800, 1620), "#181818")
+        draw = ImageDraw.Draw(sheet)
+        for j, shot in enumerate(ready[offset:offset + 6]):
+            with Image.open(Path(REPO) / shot["image"]) as source:
+                frame = source.convert("RGB")
+                frame.thumbnail((900, 506))
+                x, y = (j % 2) * 900, (j // 2) * 540
+                sheet.paste(frame, (x, y))
+                draw.text((x + 8, y + 510), shot["id"] + " - " + shot["location"], fill="white")
+        sheet.save(folder / f"images_{offset // 6 + 1:02d}.jpg", quality=95)
+    print(f"Contact sheets ready: {len(ready)}/{len(episode['shots'])} images", flush=True)
 
 
 def qa(episode, work):
@@ -217,7 +251,7 @@ def qa(episode, work):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("stage", choices=("voice", "timeline", "freeze", "render", "qa"))
+    parser.add_argument("stage", choices=("voice", "timeline", "freeze", "render", "qa", "image-sheets"))
     parser.add_argument("manifest")
     parser.add_argument("--width", type=int, default=1920)
     parser.add_argument("--height", type=int, default=1080)
@@ -234,5 +268,7 @@ if __name__ == "__main__":
         freeze(episode, work)
     elif args.stage == "render":
         export_video(episode, work, args.width, args.height)
+    elif args.stage == "image-sheets":
+        image_sheets(episode, work)
     else:
         qa(episode, work)

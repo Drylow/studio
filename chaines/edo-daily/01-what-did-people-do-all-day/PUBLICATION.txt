@@ -1,0 +1,74 @@
+TITLE
+What Did People in Edo Japan Actually Do All Day?
+
+DESCRIPTION
+What filled an ordinary day in Edo, the city that would become Tokyo?
+Follow an imagined artisan household around 1700: folding away the bedding,
+fetching water, eating breakfast, fixing a troublesome wooden box, running
+errands, handling small coins, and finding a little time for the bathhouse,
+street entertainment, and a quiet cup of tea.
+
+This is a source-backed illustrated exploration, not a recovered diary.
+Our unnamed household and its errands are fictional examples. Daily life varied
+with occupation, wealth, season, neighborhood, and household circumstances.
+The drawings are stylized illustrations, not exact architectural reconstructions.
+
+CHAPTERS
+00:00 Before the city wakes
+01:36 One room, many jobs
+03:06 Water before breakfast
+04:34 The household meal
+06:01 Streets and seasonal time
+07:13 At the workbench
+09:13 Clothes and household errands
+10:56 Customers, rank and wealth
+12:24 Spending small coins
+13:19 Somebody else makes lunch
+15:07 The city by water
+16:15 Living with fire
+17:48 A trip to the bathhouse
+18:58 What is worth watching?
+20:57 A seat by the water
+22:03 Home after daylight
+23:37 What filled the day?
+
+SELECTED SOURCES
+Edo-Tokyo Museum: housing, occupations, neighborhood life and time bells
+https://www.edo-tokyo-museum.or.jp/en/p-exhibition/
+Seiko Museum: seasonal time
+https://museum.seiko.co.jp/en/knowledge/relation_16/
+Tokyo Waterworks Historical Museum: Edo's water supply
+https://www.suidorekishi.jp/en/
+Tokyo Metropolitan Library: food sellers
+https://www.library.metro.tokyo.lg.jp/portals/0/edo/tokyo_library/english/gourmet/page1-1.html
+Asian Art Museum: Edo-period society
+https://education.asianart.org/resources/edo-period-society-in-japan/
+Bank of Japan Currency Museum: currency
+https://www.imes.boj.or.jp/cm/english/history/content/
+Tokyo bathhouse association: bathhouse history
+https://www.1010.or.jp/english/sento-history/
+The Metropolitan Museum of Art: art of the Edo period
+https://www.metmuseum.org/essays/art-of-the-edo-period-1615-1868
+Full claim-by-claim source ledger: SOURCES.md in the episode folder.
+
+THUMBNAIL PROPOSAL
+Existing human-cartoon thumbnail: WORK OR PLAY?
+The contrast matches the work, errands and leisure in this episode.
+Human characters are for the thumbnail only; the video uses white-headed adults.
+Individual thumbnail approval and publication date remain the user's decision.
+
+TAGS
+Edo Japan, Edo period, daily life in Japan, Japanese history, Edo daily life,
+Tokugawa Japan, history documentary, illustrated history, old Tokyo
+
+PINNED COMMENT PROPOSAL
+Which part of the day would feel most unfamiliar: the shared well, the seasonal
+hours, the workshop, or the bathhouse? This episode follows an imagined household;
+the historical sources are listed above.
+
+CREDITS
+Original research, narration and shot direction by Codex for Edo Daily.
+Illustrations generated through the user's configured CLI Proxy with frozen
+location and character references. Narration synthesized with Algrow.
+Local editing and encoding. No competitor audio, footage or transcript used.
+No external upload or publication authorized by this production request.
