@@ -27,7 +27,7 @@ for e in events:
         k=start+i
         if 0<=k<len(out):out[k]+=value*gain
 peak=max(abs(x) for x in out)
-scale=min(1,.65/max(peak,.001))
+scale=min(3.2,.65/max(peak,.001))
 with wave.open('assets/sound.wav','wb') as w:
     w.setnchannels(1);w.setsampwidth(2);w.setframerate(rate)
     w.writeframes(b''.join(struct.pack('<h',int(x*scale*32767)) for x in out))

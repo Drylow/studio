@@ -1,5 +1,17 @@
 # Journal des vidéos
 
+## Essai de simulation low-poly — 7 octobre 2026
+
+Pastèque découpée en 1, 3 puis 7 passes : prototype original de 18 s, 1080 × 1920,
+30 images/s, 2/8/32 fragments, géométrie 3D et physique calculées par code,
+bruitages synthétisés. Livré dans la conversation Codex sous
+`experiments/watermelon-lowpoly/watermelon-lowpoly.mp4` ; aucune publication externe.
+Les 540 images ont été décodées et regardées sur neuf planches ; lecture du MP4
+jusqu'à la fin et contrôle du niveau audio réalisés. Le rendu et les planches
+restent locaux ; code, reproduction et limites dans le même dossier (`README.md`,
+`QA.md`). Fragments rigides, sans jus ni chair souple. Inspiration : tweet
+https://x.com/ErnestoSOFTWARE/status/2107832530770829559 ; aucun extrait repris.
+
 État au 5 oct. 2026 : trois analyses sportives livrées sur Discord pour publication manuelle ; France–Belgique attend la fin du match. Mettre à jour à chaque livraison (lien Gofile, mode de livraison, date de publication).
 
 ## Oddly Expensive Lives (`oddly_expensive_en`)
