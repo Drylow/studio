@@ -6,7 +6,7 @@
   const W = 540, H = 960, S = 2;            // espace de dessin 540x960, sortie 1080x1920
   const BASE_PAL = {
     bg: "#030407", K: "#05060c", B: "#2347ff", H: "#8197ff", D: "#14259a", N: "#0b1452",
-    W: "#eceaf2", G: "#8d91a5", g: "#2b2e3b", S: "#b9c5ff", F: "#ff7a1a", Y: "#ffd04a", R: "#c2410c",
+    W: "#eceaf2", G: "#8d91a5", g: "#2b2e3b", S: "#dcc6bc", F: "#ff7a1a", Y: "#ffd04a", R: "#c2410c",
   };
   const DITHER = { b: ["B", "D"], h: ["H", "B"], d: ["D", "N"], n: ["N", "K"], w: ["W", "G"] };
   const PRESETS = {
@@ -14,8 +14,8 @@
     sub: { type: "text", font: "sans", size: 20, color: "W", in: "fade" },
     big: { type: "text", font: "pixelb", size: 76, color: "B", ls: 5, stripes: true, in: "slam", y: 245 },
     num: { type: "text", font: "pixelb", size: 50, color: "B", ls: 4, stripes: true, in: "pop" },
-    label: { type: "text", font: "pixel", size: 12, color: "G", ls: 2, in: "type" },
-    tag: { type: "text", font: "pixel", size: 14, color: "B", ls: 2, in: "type" },
+    label: { type: "text", font: "pixel", size: 14, color: "G", ls: 2, in: "type" },
+    tag: { type: "text", font: "pixel", size: 19, color: "B", ls: 2, in: "type" },
   };
   const FONTS = { sans: '"Archivo Black"', pixel: "Silkscreen", pixelb: "Tiny5" };
 
@@ -300,7 +300,7 @@
     e.items.forEach((it, k) => {
       const p = easeOut(clamp((t - e.at - k * (e.stagger ?? 0.15)) / (e.grow || 0.6)));
       const y = k * (bh + gp);
-      ctx.font = `11px Silkscreen`; ctx.letterSpacing = "1px"; ctx.textBaseline = "middle"; ctx.textAlign = "right";
+      ctx.font = `${e.fontSize || 15}px Silkscreen`; ctx.letterSpacing = "1px"; ctx.textBaseline = "middle"; ctx.textAlign = "right";
       ctx.fillStyle = col(it.hl ? "B" : "G"); ctx.fillText(it.label, -10, y + bh / 2);
       const n = Math.round((bw * it.value / max) * p / 4);
       ctx.fillStyle = col(it.hl ? "B" : (it.color || "G"));

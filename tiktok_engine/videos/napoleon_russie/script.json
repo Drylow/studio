@@ -1,0 +1,1536 @@
+{
+ "title": "Napoléon en Russie : ce n'est pas l'hiver",
+ "voice": {
+  "voice_id": "",
+  "model": "eleven_v4",
+  "speed": 1.0
+ },
+ "tail": 2.2,
+ "caption": "Ce n'est pas l'hiver qui a détruit l'armée de Napoléon 🧠 #histoire #napoleon #1812 #vulgarisation #apprendresurtiktok",
+ "sources": [
+  "Charles Minard, Carte figurative des pertes successives en hommes de l'Armée Française dans la campagne de Russie 1812-1813 (1869), copie École des Ponts",
+  "Edward Tufte, The Visual Display of Quantitative Information (1983), p. 40",
+  "29e Bulletin de la Grande Armée, 3 décembre 1812 (napoleon.org)",
+  "Raoult et al., Journal of Infectious Diseases 193(1), 2006",
+  "Barbieri, Rascovan et al., Current Biology 35(21), 2025 ; Institut Pasteur",
+  "Signoli et al., Comptes Rendus Palevol 3, 2004 (fosse de Vilnius)"
+ ],
+ "beats": [
+  {
+   "say": "422 000 soldats partent en Russie avec Napoléon. 10 000 reviennent.",
+   "glow": {
+    "y": 470
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Partis avec Napoléon :",
+     "at": 0,
+     "y": 160,
+     "out": "10"
+    },
+    {
+     "type": "counter",
+     "from": 300000,
+     "to": 422000,
+     "dur": 0.7,
+     "at": 0,
+     "y": 250,
+     "in": "none",
+     "dimWhileCounting": true,
+     "keys": [
+      {
+       "at": "10",
+       "to": 10000,
+       "dur": 1.1
+      }
+     ]
+    },
+    {
+     "preset": "label",
+     "text": "1 ICÔNE = 4 220 SOLDATS",
+     "at": 0.2,
+     "y": 300,
+     "color": "G"
+    },
+    {
+     "type": "icons",
+     "sprite": "soldier",
+     "count": 100,
+     "cols": 10,
+     "px": 1.6,
+     "gapX": 9,
+     "gapY": 5,
+     "y": 480,
+     "at": 0,
+     "in": "none",
+     "keys": [
+      {
+       "at": "10",
+       "n": 2,
+       "dur": 1.1
+      }
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "1812",
+     "at": "Russie",
+     "x": 445,
+     "y": 310,
+     "rot": 8
+    },
+    {
+     "preset": "title",
+     "text": "Revenus :",
+     "at": "10",
+     "y": 160,
+     "in": "none"
+    }
+   ]
+  },
+  {
+   "say": "C'est ce que montre ce graphique, dessiné en 1869 par un ingénieur français, Charles Minard.",
+   "glow": {
+    "y": 420,
+    "r": 320,
+    "a": 0.13
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Ce graphique",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 40,
+       "y": 350,
+       "n": 422000
+      },
+      {
+       "x": 80,
+       "y": 352,
+       "n": 340000
+      },
+      {
+       "x": 230,
+       "y": 340,
+       "n": 175000
+      },
+      {
+       "x": 300,
+       "y": 348,
+       "n": 145000
+      },
+      {
+       "x": 400,
+       "y": 342,
+       "n": 127100
+      },
+      {
+       "x": 500,
+       "y": 335,
+       "n": 100000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 1.3
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 500,
+       "y": 470,
+       "n": 100000
+      },
+      {
+       "x": 430,
+       "y": 474,
+       "n": 87000
+      },
+      {
+       "x": 350,
+       "y": 478,
+       "n": 55000
+      },
+      {
+       "x": 260,
+       "y": 482,
+       "n": 24000
+      },
+      {
+       "x": 200,
+       "y": 484,
+       "n": 20000
+      },
+      {
+       "x": 175,
+       "y": 484,
+       "n": 50000
+      },
+      {
+       "x": 150,
+       "y": 486,
+       "n": 28000
+      },
+      {
+       "x": 100,
+       "y": 488,
+       "n": 12000
+      },
+      {
+       "x": 60,
+       "y": 490,
+       "n": 8000
+      },
+      {
+       "x": 40,
+       "y": 490,
+       "n": 4000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "drawAt": "1869",
+     "dur": 1.5,
+     "color": "W",
+     "glowFx": false
+    },
+    {
+     "type": "stamp",
+     "text": "1869",
+     "at": "1869",
+     "x": 400,
+     "y": 250,
+     "rot": -6
+    },
+    {
+     "preset": "label",
+     "text": "CHARLES MINARD · INGÉNIEUR",
+     "at": "Charles",
+     "y": 590,
+     "color": "W"
+    },
+    {
+     "preset": "label",
+     "text": "NIÉMEN",
+     "at": 0.3,
+     "x": 55,
+     "y": 318,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    },
+    {
+     "preset": "label",
+     "text": "MOSCOU",
+     "at": 1.2,
+     "x": 480,
+     "y": 305,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    }
+   ]
+  },
+  {
+   "say": "Un célèbre expert l'a même qualifié de meilleur graphique statistique jamais dessiné.",
+   "keep": false,
+   "els": [
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 40,
+       "y": 350,
+       "n": 422000
+      },
+      {
+       "x": 80,
+       "y": 352,
+       "n": 340000
+      },
+      {
+       "x": 230,
+       "y": 340,
+       "n": 175000
+      },
+      {
+       "x": 300,
+       "y": 348,
+       "n": 145000
+      },
+      {
+       "x": 400,
+       "y": 342,
+       "n": 127100
+      },
+      {
+       "x": 500,
+       "y": 335,
+       "n": 100000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 500,
+       "y": 470,
+       "n": 100000
+      },
+      {
+       "x": 430,
+       "y": 474,
+       "n": 87000
+      },
+      {
+       "x": 350,
+       "y": 478,
+       "n": 55000
+      },
+      {
+       "x": 260,
+       "y": 482,
+       "n": 24000
+      },
+      {
+       "x": 200,
+       "y": 484,
+       "n": 20000
+      },
+      {
+       "x": 175,
+       "y": 484,
+       "n": 50000
+      },
+      {
+       "x": 150,
+       "y": 486,
+       "n": 28000
+      },
+      {
+       "x": 100,
+       "y": 488,
+       "n": 12000
+      },
+      {
+       "x": 60,
+       "y": 490,
+       "n": 8000
+      },
+      {
+       "x": 40,
+       "y": 490,
+       "n": 4000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01,
+     "color": "W",
+     "glowFx": false
+    },
+    {
+     "preset": "label",
+     "text": "NIÉMEN",
+     "at": 0,
+     "x": 55,
+     "y": 318,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    },
+    {
+     "preset": "label",
+     "text": "MOSCOU",
+     "at": 0,
+     "x": 480,
+     "y": 305,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    },
+    {
+     "preset": "title",
+     "text": "« Le meilleur graphique\nstatistique *jamais dessiné* »",
+     "at": "meilleur",
+     "y": 175,
+     "size": 24
+    },
+    {
+     "preset": "label",
+     "text": "EDWARD TUFTE, 1983",
+     "at": "jamais",
+     "y": 625,
+     "color": "G"
+    }
+   ],
+   "glow": {
+    "y": 420,
+    "r": 320,
+    "a": 0.13
+   }
+  },
+  {
+   "say": "La largeur de la bande, c'est le nombre d'hommes. Et elle fond.",
+   "glow": {
+    "y": 420,
+    "r": 320,
+    "a": 0.13
+   },
+   "els": [
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 40,
+       "y": 350,
+       "n": 422000
+      },
+      {
+       "x": 80,
+       "y": 352,
+       "n": 340000
+      },
+      {
+       "x": 230,
+       "y": 340,
+       "n": 175000
+      },
+      {
+       "x": 300,
+       "y": 348,
+       "n": 145000
+      },
+      {
+       "x": 400,
+       "y": 342,
+       "n": 127100
+      },
+      {
+       "x": 500,
+       "y": 335,
+       "n": 100000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 500,
+       "y": 470,
+       "n": 100000
+      },
+      {
+       "x": 430,
+       "y": 474,
+       "n": 87000
+      },
+      {
+       "x": 350,
+       "y": 478,
+       "n": 55000
+      },
+      {
+       "x": 260,
+       "y": 482,
+       "n": 24000
+      },
+      {
+       "x": 200,
+       "y": 484,
+       "n": 20000
+      },
+      {
+       "x": 175,
+       "y": 484,
+       "n": 50000
+      },
+      {
+       "x": 150,
+       "y": 486,
+       "n": 28000
+      },
+      {
+       "x": 100,
+       "y": 488,
+       "n": 12000
+      },
+      {
+       "x": 60,
+       "y": 490,
+       "n": 8000
+      },
+      {
+       "x": 40,
+       "y": 490,
+       "n": 4000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01,
+     "color": "W",
+     "glowFx": false
+    },
+    {
+     "preset": "title",
+     "text": "Largeur = *nombre d'hommes*",
+     "at": "largeur",
+     "y": 160,
+     "out": "fond"
+    },
+    {
+     "type": "rect",
+     "x": 40,
+     "y": 386,
+     "w": 3,
+     "h": 72,
+     "color": "W",
+     "at": "largeur",
+     "blink": 3
+    },
+    {
+     "preset": "title",
+     "text": "Et elle *fond*.",
+     "at": "fond",
+     "y": 160
+    },
+    {
+     "preset": "num",
+     "text": "422 000",
+     "at": "largeur",
+     "x": 120,
+     "y": 290
+    },
+    {
+     "preset": "num",
+     "text": "4 000",
+     "at": "fond",
+     "x": 105,
+     "y": 560,
+     "color": "W",
+     "in": "slam",
+     "flash": true
+    },
+    {
+     "preset": "label",
+     "text": "NIÉMEN",
+     "at": 0,
+     "x": 55,
+     "y": 318,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    },
+    {
+     "preset": "label",
+     "text": "MOSCOU",
+     "at": 0,
+     "x": 480,
+     "y": 305,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    }
+   ]
+  },
+  {
+   "say": "Quand on pense à la retraite de Russie, on pense tous à ça : la neige, le froid, l'hiver russe.",
+   "particles": "snow",
+   "glow": {
+    "y": 470,
+    "r": 230,
+    "a": 0.2
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "On pense tous à ça :",
+     "at": "pense#2",
+     "y": 160
+    },
+    {
+     "type": "forest",
+     "y": 500,
+     "r": 175,
+     "count": 18,
+     "px": 5,
+     "at": 0,
+     "in": "fade"
+    },
+    {
+     "type": "sprite",
+     "sprite": "napoleon",
+     "px": 8,
+     "y": 480,
+     "at": 0.05,
+     "in": "pop",
+     "fx": "shiver"
+    },
+    {
+     "type": "stamp",
+     "text": "HIVER RUSSE",
+     "at": "hiver",
+     "y": 300,
+     "rot": -5,
+     "fill": true
+    }
+   ]
+  },
+  {
+   "say": "Sauf que ce graphique raconte une tout autre histoire.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Sauf que ce graphique raconte\nune *tout autre* histoire.",
+     "at": 0,
+     "y": 175
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 40,
+       "y": 350,
+       "n": 422000
+      },
+      {
+       "x": 80,
+       "y": 352,
+       "n": 340000
+      },
+      {
+       "x": 230,
+       "y": 340,
+       "n": 175000
+      },
+      {
+       "x": 300,
+       "y": 348,
+       "n": 145000
+      },
+      {
+       "x": 400,
+       "y": 342,
+       "n": 127100
+      },
+      {
+       "x": 500,
+       "y": 335,
+       "n": 100000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01
+    },
+    {
+     "type": "flow",
+     "points": [
+      {
+       "x": 500,
+       "y": 470,
+       "n": 100000
+      },
+      {
+       "x": 430,
+       "y": 474,
+       "n": 87000
+      },
+      {
+       "x": 350,
+       "y": 478,
+       "n": 55000
+      },
+      {
+       "x": 260,
+       "y": 482,
+       "n": 24000
+      },
+      {
+       "x": 200,
+       "y": 484,
+       "n": 20000
+      },
+      {
+       "x": 175,
+       "y": 484,
+       "n": 50000
+      },
+      {
+       "x": 150,
+       "y": 486,
+       "n": 28000
+      },
+      {
+       "x": 100,
+       "y": 488,
+       "n": 12000
+      },
+      {
+       "x": 60,
+       "y": 490,
+       "n": 8000
+      },
+      {
+       "x": 40,
+       "y": 490,
+       "n": 4000
+      }
+     ],
+     "scale": 0.00017,
+     "at": 0,
+     "dur": 0.01,
+     "color": "W",
+     "glowFx": false
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 9,
+     "x": 270,
+     "y": 600,
+     "at": "histoire",
+     "in": "pop",
+     "blink": 2
+    },
+    {
+     "preset": "label",
+     "text": "NIÉMEN",
+     "at": 0,
+     "x": 55,
+     "y": 318,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    },
+    {
+     "preset": "label",
+     "text": "MOSCOU",
+     "at": 0,
+     "x": 480,
+     "y": 305,
+     "color": "G",
+     "in": "fade",
+     "size": 12
+    }
+   ]
+  },
+  {
+   "say": "Juin 1812, ils traversent le Niémen.",
+   "glow": {
+    "y": 430
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "JUIN 1812",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Ils traversent le *Niémen*",
+     "at": "traversent",
+     "y": 230,
+     "size": 24
+    },
+    {
+     "type": "rect",
+     "x": 270,
+     "y": 460,
+     "w": 46,
+     "h": 300,
+     "color": "N",
+     "at": 0,
+     "in": "fade"
+    },
+    {
+     "type": "rect",
+     "x": 270,
+     "y": 460,
+     "w": 6,
+     "h": 300,
+     "color": "D",
+     "at": 0,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "NIÉMEN",
+     "at": 0.1,
+     "x": 270,
+     "y": 625,
+     "color": "G"
+    },
+    {
+     "preset": "num",
+     "text": "422 000",
+     "at": "Niémen",
+     "y": 300
+    },
+    {
+     "type": "sprite",
+     "sprite": "soldier",
+     "px": 4.5,
+     "x": 70,
+     "y": 390,
+     "at": 0,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent+0.00",
+       "dur": 1.7,
+       "to": [
+        450,
+        390
+       ]
+      }
+     ]
+    },
+    {
+     "type": "sprite",
+     "sprite": "soldier",
+     "px": 4.5,
+     "x": 40,
+     "y": 450,
+     "at": 0,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent+0.15",
+       "dur": 1.7,
+       "to": [
+        420,
+        450
+       ]
+      }
+     ]
+    },
+    {
+     "type": "sprite",
+     "sprite": "soldier",
+     "px": 4.5,
+     "x": 95,
+     "y": 510,
+     "at": 0,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent+0.30",
+       "dur": 1.7,
+       "to": [
+        475,
+        510
+       ]
+      }
+     ]
+    },
+    {
+     "type": "sprite",
+     "sprite": "soldier",
+     "px": 4.5,
+     "x": 55,
+     "y": 570,
+     "at": 0,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent+0.45",
+       "dur": 1.7,
+       "to": [
+        435,
+        570
+       ]
+      }
+     ]
+    },
+    {
+     "type": "sprite",
+     "sprite": "soldier",
+     "px": 4.5,
+     "x": 20,
+     "y": 420,
+     "at": 0,
+     "in": "none",
+     "moves": [
+      {
+       "at": "traversent+0.60",
+       "dur": 1.7,
+       "to": [
+        400,
+        420
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Juillet, en plein été, entre Vilnius et Vitebsk, la colonne perd 165 000 hommes.",
+   "glow": {
+    "y": 470
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Juillet. *En plein été.*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "sprite",
+     "sprite": "sun",
+     "px": 10,
+     "y": 480,
+     "at": 0.1,
+     "in": "pop",
+     "fx": "bob",
+     "glow": "Y"
+    },
+    {
+     "preset": "label",
+     "text": "VILNIUS  →  VITEBSK",
+     "at": 0.2,
+     "y": 360,
+     "color": "W",
+     "out": "perd"
+    },
+    {
+     "type": "counter",
+     "from": 340000,
+     "to": 175000,
+     "dur": 1.6,
+     "at": "colonne",
+     "y": 250,
+     "in": "fade",
+     "size": 64
+    },
+    {
+     "type": "stamp",
+     "text": "-165 000 HOMMES",
+     "at": "165",
+     "y": 600,
+     "fill": true,
+     "rot": -4,
+     "size": 17
+    }
+   ]
+  },
+  {
+   "say": "En un seul mois d'été. Plus que pendant toute la retraite dans la neige.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "En *un seul mois* d'été.",
+     "at": 0,
+     "y": 160,
+     "out": "Plus"
+    },
+    {
+     "preset": "title",
+     "text": "Plus que pendant toute\nla *retraite* dans la neige.",
+     "at": "Plus",
+     "y": 175
+    },
+    {
+     "type": "bars",
+     "at": 0.1,
+     "y": 420,
+     "w": 230,
+     "barH": 30,
+     "gap": 34,
+     "max": 170000,
+     "items": [
+      {
+       "label": "JUILLET",
+       "value": 165000,
+       "text": "-165 000",
+       "hl": true
+      },
+      {
+       "label": "RETRAITE",
+       "value": 126000,
+       "text": "-126 000",
+       "color": "W"
+      }
+     ],
+     "fontSize": 16,
+     "x": 300
+    },
+    {
+     "preset": "label",
+     "text": "PERTES DE LA COLONNE, D'APRÈS MINARD",
+     "at": "retraite",
+     "y": 520,
+     "color": "G"
+    }
+   ]
+  },
+  {
+   "say": "Le 14 septembre, ils entrent dans Moscou. Ils ne sont plus que 100 000.",
+   "glow": {
+    "y": 470
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "14 SEPTEMBRE",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Moscou",
+     "at": "Moscou",
+     "y": 215,
+     "size": 30
+    },
+    {
+     "type": "sprite",
+     "sprite": "kremlin",
+     "px": 6,
+     "y": 500,
+     "at": 0.1,
+     "in": "rise"
+    },
+    {
+     "preset": "big",
+     "text": "100 000",
+     "at": "100",
+     "y": 300
+    }
+   ]
+  },
+  {
+   "say": "Plus des deux tiers de la colonne ont disparu.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Plus des *deux tiers*\nde la colonne ont disparu.",
+     "at": 0,
+     "y": 175
+    },
+    {
+     "type": "grid",
+     "cols": 10,
+     "rows": 10,
+     "cell": 18,
+     "gap": 5,
+     "lit": 29,
+     "y": 440,
+     "at": 0,
+     "in": "fade",
+     "offColor": "g"
+    },
+    {
+     "preset": "label",
+     "text": "340 000 PARTIS VERS MOSCOU · 100 000 ARRIVÉS",
+     "at": "disparu",
+     "y": 590,
+     "color": "G"
+    }
+   ]
+  },
+  {
+   "say": "Et le froid, d'après Napoléon lui-même, il ne commence que le 7 novembre.",
+   "glow": {
+    "y": 450
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Et le *froid* ?",
+     "at": 0,
+     "y": 160,
+     "out": "commence"
+    },
+    {
+     "type": "sprite",
+     "sprite": "thermometer",
+     "px": 10,
+     "x": 190,
+     "y": 440,
+     "at": "froid",
+     "in": "pop"
+    },
+    {
+     "type": "sprite",
+     "sprite": "napoleon",
+     "px": 6,
+     "x": 360,
+     "y": 450,
+     "at": "Napoléon",
+     "in": "pop"
+    },
+    {
+     "preset": "title",
+     "text": "Il commence le *7 novembre*.",
+     "at": "commence",
+     "y": 160
+    },
+    {
+     "type": "stamp",
+     "text": "7 NOVEMBRE",
+     "at": "7",
+     "y": 600,
+     "fill": true
+    },
+    {
+     "preset": "label",
+     "text": "29e BULLETIN DE LA GRANDE ARMÉE",
+     "at": "lui-même",
+     "y": 250,
+     "color": "G"
+    }
+   ]
+  },
+  {
+   "say": "Alors, où sont passés tous ces hommes ? Des morts au combat, des déserteurs… mais surtout, des maladies.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Où sont passés\ntous ces hommes ?",
+     "at": 0,
+     "y": 175
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 10,
+     "y": 430,
+     "at": 0.1,
+     "in": "pop",
+     "blink": 2,
+     "out": "combat"
+    },
+    {
+     "preset": "tag",
+     "text": "MORTS AU COMBAT",
+     "at": "combat",
+     "y": 340,
+     "color": "W"
+    },
+    {
+     "preset": "tag",
+     "text": "DÉSERTEURS",
+     "at": "déserteurs",
+     "y": 395,
+     "color": "W"
+    },
+    {
+     "preset": "big",
+     "text": "MALADIES",
+     "at": "maladies",
+     "y": 470,
+     "size": 58
+    },
+    {
+     "type": "sprite",
+     "sprite": "skull",
+     "px": 6,
+     "y": 590,
+     "at": "maladies+0.2",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez, parce que c'est là que ça devient vraiment fou.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 44,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true
+    }
+   ]
+  },
+  {
+   "say": "En 2001, à Vilnius, des ouvriers tombent sur une fosse commune. Plus de 3 000 soldats de Napoléon.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "VILNIUS · 2001",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Une *fosse commune*",
+     "at": 0,
+     "y": 220,
+     "size": 26
+    },
+    {
+     "type": "sprite",
+     "sprite": "bones",
+     "px": 10,
+     "y": 470,
+     "at": 0.1,
+     "in": "build",
+     "buildDur": 0.7
+    },
+    {
+     "preset": "big",
+     "text": "+ DE 3 000",
+     "at": "3",
+     "y": 300,
+     "size": 60
+    },
+    {
+     "preset": "label",
+     "text": "SOLDATS DE NAPOLÉON",
+     "at": "soldats",
+     "y": 590,
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "Des chercheurs ont analysé leurs dents.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Ils analysent leurs *dents*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "sprite",
+     "sprite": "tooth",
+     "px": 16,
+     "x": 200,
+     "y": 440,
+     "at": 0.05,
+     "in": "pop"
+    },
+    {
+     "type": "sprite",
+     "sprite": "microscope",
+     "px": 13,
+     "x": 360,
+     "y": 430,
+     "at": 0.05,
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Et dans près d'un tiers, ils ont trouvé l'ADN de bactéries transmises…",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Près d'*un tiers*",
+     "at": "tiers",
+     "y": 160,
+     "out": "ADN"
+    },
+    {
+     "preset": "title",
+     "text": "ADN de *bactéries*…",
+     "at": "ADN",
+     "y": 160
+    },
+    {
+     "type": "grid",
+     "cols": 7,
+     "rows": 5,
+     "cell": 22,
+     "gap": 6,
+     "lit": 10,
+     "fillDur": 0.8,
+     "x": 190,
+     "y": 420,
+     "at": 0,
+     "litAt": "tiers",
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "10 SOLDATS SUR 35",
+     "at": "tiers+0.6",
+     "x": 190,
+     "y": 520,
+     "color": "W"
+    },
+    {
+     "type": "dna",
+     "x": 420,
+     "y": 430,
+     "h": 240,
+     "amp": 30,
+     "at": "ADN",
+     "in": "build",
+     "buildDur": 0.6
+    }
+   ]
+  },
+  {
+   "say": "par les poux.",
+   "glow": {
+    "y": 420,
+    "r": 300,
+    "a": 0.25
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "par les *poux*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "sprite",
+     "sprite": "louse",
+     "px": 16,
+     "y": 430,
+     "at": "poux",
+     "in": "slam",
+     "flash": "big"
+    }
+   ]
+  },
+  {
+   "say": "La fièvre des tranchées. Et le typhus.",
+   "keep": true,
+   "els": [
+    {
+     "type": "stamp",
+     "text": "FIÈVRE DES TRANCHÉES",
+     "at": "fièvre",
+     "x": 270,
+     "y": 580,
+     "rot": -5
+    },
+    {
+     "type": "stamp",
+     "text": "TYPHUS",
+     "at": "typhus",
+     "x": 270,
+     "y": 630,
+     "rot": 4,
+     "fill": true
+    }
+   ]
+  },
+  {
+   "say": "En 2025, une autre équipe a même trouvé une deuxième maladie de poux.",
+   "glow": {
+    "y": 440
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "2025",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Une *deuxième* maladie de poux",
+     "at": "deuxième",
+     "y": 220,
+     "size": 24
+    },
+    {
+     "type": "sprite",
+     "sprite": "louse",
+     "px": 9,
+     "x": 190,
+     "y": 440,
+     "at": "équipe",
+     "in": "pop"
+    },
+    {
+     "type": "dna",
+     "x": 380,
+     "y": 440,
+     "h": 200,
+     "amp": 26,
+     "at": "équipe",
+     "in": "build"
+    },
+    {
+     "preset": "tag",
+     "text": "FIÈVRE RÉCURRENTE",
+     "at": "maladie",
+     "y": 590,
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "L'hiver a achevé la Grande Armée. Mais elle était à genoux bien avant le premier flocon.",
+   "particles": "snow",
+   "density": 60,
+   "els": [
+    {
+     "preset": "title",
+     "text": "L'hiver a *achevé*\nla Grande Armée.",
+     "at": 0,
+     "y": 175,
+     "out": "Mais"
+    },
+    {
+     "preset": "title",
+     "text": "Mais elle était à genoux\n*avant le premier flocon*.",
+     "at": "Mais",
+     "y": 175
+    },
+    {
+     "type": "icons",
+     "sprite": "soldier_cold",
+     "count": 12,
+     "cols": 6,
+     "px": 3,
+     "gapX": 14,
+     "gapY": 14,
+     "y": 450,
+     "at": 0,
+     "in": "fade",
+     "keys": [
+      {
+       "at": "Mais",
+       "n": 3,
+       "dur": 1.2
+      }
+     ]
+    },
+    {
+     "type": "sprite",
+     "sprite": "snowflake",
+     "px": 9,
+     "y": 620,
+     "at": "flocon",
+     "in": "pop",
+     "glow": "W"
+    }
+   ]
+  },
+  {
+   "say": "Et le 3 décembre, pendant que ses soldats meurent par milliers, Napoléon écrit un bulletin officiel pour la France. Sa dernière phrase ?",
+   "glow": {
+    "y": 450
+   },
+   "els": [
+    {
+     "type": "sprite",
+     "sprite": "napoleon",
+     "px": 8,
+     "y": 560,
+     "at": 0,
+     "in": "pop",
+     "glow": "B"
+    },
+    {
+     "preset": "title",
+     "text": "Un bulletin *officiel*",
+     "at": "bulletin",
+     "y": 220,
+     "size": 26
+    },
+    {
+     "type": "sprite",
+     "sprite": "napoleon",
+     "px": 7,
+     "x": 170,
+     "y": 450,
+     "at": 0.1,
+     "in": "pop"
+    },
+    {
+     "type": "sprite",
+     "sprite": "paper",
+     "px": 9,
+     "x": 370,
+     "y": 450,
+     "at": "bulletin",
+     "in": "drop"
+    },
+    {
+     "preset": "title",
+     "text": "Sa *dernière phrase* ?",
+     "at": "dernière",
+     "y": 600,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "La santé de Sa Majesté n'a jamais été meilleure.",
+   "glow": {
+    "y": 400,
+    "r": 300,
+    "a": 0.22
+   },
+   "els": [
+    {
+     "type": "sprite",
+     "sprite": "crown",
+     "px": 10,
+     "y": 250,
+     "at": 0,
+     "in": "pop"
+    },
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 32,
+     "color": "W",
+     "text": "« La santé de Sa Majesté\nn'a jamais été *meilleure*. »",
+     "at": 0.05,
+     "y": 380,
+     "in": "fade",
+     "maxW": 470
+    },
+    {
+     "preset": "label",
+     "text": "29e BULLETIN · 3 DÉCEMBRE 1812",
+     "at": "jamais",
+     "y": 470,
+     "color": "G"
+    }
+   ]
+  },
+  {
+   "say": "Demain : ce qu'on a trouvé dans les cheveux de Beethoven.",
+   "els": [
+    {
+     "type": "endcard",
+     "text": "Demain : ce qu'on a trouvé\ndans les *cheveux* de Beethoven…",
+     "at": 0,
+     "button": "LA SUITE DEMAIN"
+    }
+   ]
+  }
+ ]
+}

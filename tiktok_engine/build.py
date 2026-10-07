@@ -73,6 +73,20 @@ def make_voice(work, script):
     return dest
 
 
+def fake_voice(work, script):
+    """Aperçu sans crédits : mots datés estimés (≈ 15 caractères/s) et voix muette de la même durée."""
+    words, t = [], 0.3
+    for b in script["beats"]:
+        for raw in b["say"].split():
+            d = (len(raw) + 1) / 15.0
+            words.append({"w": raw, "s": round(t, 3), "e": round(t + d, 3)})
+            t += d + (0.35 if re.search(r"[.?!:]$", raw) else 0.12 if raw.endswith(",") else 0)
+    with open(os.path.join(work, "words.json"), "w", encoding="utf-8") as f:
+        json.dump(words, f, ensure_ascii=False)
+    subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-f", "lavfi", "-i", f"anullsrc=r={SR}:cl=mono", "-t", f"{t + 0.3:.2f}",
+                    "-c:a", "libmp3lame", "-b:a", "64k", os.path.join(work, "voice.mp3")], check=True)
+
+
 def wav16(src, dst):
     subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-i", src, "-ac", "1", "-ar", "16000", dst], check=True)
     with wave.open(dst) as w:
@@ -157,7 +171,9 @@ def resolve(anchor, beat_toks, beat_start, beat_end):
         pass
     if word.endswith(">"):
         key, end = norm(word[:-1]), True
-    hits = [t for t in beat_toks if t["n"].startswith(key)]
+    def elided(raw):                 # « l'hiver » répond aussi à l'ancre « hiver »
+        return norm(re.sub(r"^\w{1,2}['’]", "", raw))
+    hits = [t for t in beat_toks if t["n"].startswith(key) or elided(t["raw"]).startswith(key)]
     if len(hits) < nth:
         raise SystemExit(f"ancre introuvable : {anchor!r} dans « {' '.join(t['raw'] for t in beat_toks)} »")
     t = hits[nth - 1]
@@ -298,9 +314,12 @@ def main():
     ap.add_argument("--script", required=True)
     ap.add_argument("--stills", action="store_true", help="planche d'images fixes seulement, pas de rendu vidéo")
     ap.add_argument("--workers", default="3")
+    ap.add_argument("--fake-voice", action="store_true", help="minutage estimé et voix muette (aperçu sans crédits)")
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
     script = json.load(open(a.script, encoding="utf-8"))
+    if a.fake_voice:
+        fake_voice(a.work, script)
     make_voice(a.work, script)
     words = timed_words(a.work)
     stoks = align_script(script, words)
