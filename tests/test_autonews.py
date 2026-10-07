@@ -79,6 +79,9 @@ class Fake:
             return plan()
         if "strict fact-checker" in system:
             return {"problems": self.problems.pop(0) if self.problems else []}
+        text = messages[0]["content"][0]["text"] if isinstance(messages[0]["content"], list) else ""
+        if "Is exactly ONE person" in text:
+            return {"ok": True}
         return {"ok": self.thumb_ok, "problem": "texte faux"}
 
     def fetch(self, url):
@@ -295,6 +298,26 @@ class AutonewsTests(unittest.TestCase):
         self.assertEqual(self.store.video(result["video_id"])["status"], "ready")
         self.assertFalse(any("YouTube news analysis" in c or "Extract" in c for c in fixed.calls))
         self.assertEqual(produce(self.store, dict(payload, resume=True), self.job(), fixed.tools()), {"skipped": "nothing to resume"})
+
+    def test_group_photos_are_refused_and_photos_alternate(self):
+        from studio.autonews import _photos, illustrate
+
+        fake = Fake(self.root)
+        options = lambda name: [dict(o, url=o["url"] + str(i)) for i in range(3) for o in Fake.portraits(fake, name)]
+        seen = []
+
+        def chat(messages, **kw):
+            seen.append(1)
+            return {"ok": len(seen) != 1}  # the first photo shows a group
+
+        tools = fake.tools()
+        tools.portraits, tools.chat = options, chat
+        found = _photos(tools, self.root, ["Ilia Topuria"])
+        self.assertEqual([p["url"][-1] for p in found["Ilia Topuria"]], ["1", "2"])
+        brief = plan()
+        illustrate(brief, found)
+        urls = [s["visual"]["url"][-1] for s in brief["segments"] if s.get("visual")]
+        self.assertEqual(urls[:2], ["1", "2"])
 
     def test_a_refused_thumbnail_blocks_the_video(self):
         from studio.autonews import produce

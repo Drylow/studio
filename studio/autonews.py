@@ -380,12 +380,59 @@ Return JSON {"problems": [{"segment": index, "sentence": "...", "issue": "..."}]
     return answer.get("problems") or []
 
 
+def illustrate(plan, photos):
+    """Each segment shows the person it is about, alternating that person's photos."""
+    used = {}
+    for seg in plan["segments"]:
+        names = [n for n in seg.get("people") or [] if n in photos] or [
+            n for n in photos if n.split()[-1].lower() in seg["narration"].lower()
+        ]
+        if names:
+            options = photos[names[0]]
+            p = options[used.get(names[0], 0) % len(options)]
+            used[names[0]] = used.get(names[0], 0) + 1
+            seg["visual"] = {"url": p["url"], "credit": p["credit"], "rights": p["rights"]}
+        else:
+            seg.pop("visual", None)
+
+
 def _slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:40] or "photo"
 
 
-def _photos(tools, folder, people):
-    """First reusable portrait per person, downloaded with its rights."""
+def _solo(tools, path):
+    """Vision check: one clearly visible person, not a group, crowd, poster or text."""
+    from PIL import Image
+
+    with Image.open(path) as im:
+        im = im.convert("RGB")
+        im.thumbnail((768, 768))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=85)
+    answer = tools.chat(
+        [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Photo for a sports news video. Is exactly ONE person the clear main subject, with the "
+                        "face visible (not a group, two people side by side, a crowd, a poster, a logo or mostly text)? "
+                        'Return JSON {"ok": true|false}.',
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()},
+                    },
+                ],
+            }
+        ]
+    )
+    return answer.get("ok") is True
+
+
+def _photos(tools, folder, people, per_person=2):
+    """Up to two single-person reusable portraits per person, with their rights."""
     from services import commons
 
     download = tools.download or commons.download
@@ -395,8 +442,9 @@ def _photos(tools, folder, people):
             options = tools.portraits(name)
         except Exception:
             options = []
-        for option in options[:3]:
-            dest = folder / "photos" / (_slug(name) + ".img")
+        kept = []
+        for n, option in enumerate(options[:6]):
+            dest = folder / "photos" / f"{_slug(name)}-{n}.img"
             dest.parent.mkdir(parents=True, exist_ok=True)
             try:
                 download(option["url"], dest)
@@ -404,10 +452,15 @@ def _photos(tools, folder, people):
 
                 with Image.open(dest) as im:
                     im.verify()
+                if not _solo(tools, dest):
+                    continue
             except Exception:
                 continue
-            found[name] = dict(option, file=str(dest))
-            break
+            kept.append(dict(option, file=str(dest)))
+            if len(kept) >= per_person:
+                break
+        if kept:
+            found[name] = kept
     return found
 
 
@@ -430,7 +483,7 @@ def _thumbnail(tools, folder, ch, plan, photos):
 
     spec = plan.get("thumbnail") or {}
     names = [n for n in spec.get("people") or [] if n in photos] or list(photos)
-    chosen = [photos[n] for n in names[:2]]
+    chosen = [photos[n][0] for n in names[:2]]
     if not chosen:
         raise ValueError("Aucune photo sous licence réutilisable pour la miniature.")
     accent = "light blue" if (ch["template_key"] or ch["key"]) == "mma_en" else "bright green"
@@ -492,11 +545,13 @@ def _sheets_ok(tools, folder):
                     "content": [
                         {
                             "type": "text",
-                            "text": "Contact sheet of an automatically edited sports analysis video (one frame every 5 s): "
-                            "branded cards with a headline, short points, sometimes a photo, captions at the bottom. "
-                            "Report only real problems a viewer would notice: blank or glitched frames, text cut off or "
-                            "overlapping, gibberish, a photo that is clearly unrelated, logos. "
-                            'Return JSON {"blocking": ["time: problem"]}.',
+                            "text": "Contact sheet of an automatically edited sports analysis video (one frame every 5 s, "
+                            "time at the bottom right). Normal layout: dark branded card, headline and 2-3 short points on the "
+                            "left, a photo inside a thin blue frame on the right (portrait photos have dark bars on their "
+                            "sides inside the frame: normal), one caption line at the bottom, the same card for several "
+                            "frames. Report only real problems a viewer would notice: a fully black or glitched frame, "
+                            "text cut off or overlapping, gibberish words, a photo that is clearly unrelated or shows a logo. "
+                            'Return JSON {"blocking": ["time: problem"]} (empty when fine).',
                         },
                         {
                             "type": "image_url",
@@ -520,7 +575,8 @@ def description(plan, sources, photos):
         lines += ["", "Photos (Wikimedia Commons):"]
         lines += [
             f"- {p['name']}: {p['rights']['author'][:80]}, {p['rights']['license']}, {p['rights']['evidence_url']}"
-            for p in photos.values()
+            for options in photos.values()
+            for p in options
         ]
     return "\n".join(lines).strip()[:4900]
 
@@ -574,6 +630,9 @@ def _produce(store, ch, item, vid, folder, job, tools, automation_rights, resume
             + list((plan.get("thumbnail") or {}).get("people") or [])))
         job.update(0.36, "Reprise : photos sous licence réutilisable")
         photos = _photos(tools, folder, wanted)
+        illustrate(plan, photos)
+        news_brief.validate(plan)
+        saved.write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")
         return _media(store, ch, vid, folder, job, tools, automation_rights, plan, sources, photos)
     job.update(0.05, "Lecture des articles sources")
     listed = json.loads(item["sources"] or "[]") or [{"name": "Source", "url": item["url"]}]
@@ -635,15 +694,7 @@ def _produce(store, ch, item, vid, folder, job, tools, automation_rights, resume
     job.update(0.36, "Photos sous licence réutilisable")
     wanted = list(dict.fromkeys(people + list((plan.get("thumbnail") or {}).get("people") or [])))
     photos = _photos(tools, folder, wanted)
-    for seg in plan["segments"]:
-        names = [n for n in seg.get("people") or [] if n in photos] or [
-            n for n in photos if n.split()[-1].lower() in seg["narration"].lower()
-        ]
-        if names:
-            p = photos[names[0]]
-            seg["visual"] = {"url": p["url"], "credit": p["credit"], "rights": p["rights"]}
-        else:
-            seg.pop("visual", None)
+    illustrate(plan, photos)
     news_brief.validate(plan)
     (folder / "brief.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")
     store.update(
