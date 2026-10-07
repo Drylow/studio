@@ -1,0 +1,67 @@
+IMPERIAL CHINA DAILY - TITRES A VALIDER - 7 OCTOBRE 2026
+Cadre : Chang'an sous les Tang, vers 750 ; ne pas melanger Song, Ming et Tang.
+Statut : EN ATTENTE DE VALIDATION DES TITRES. Pas de script lance.
+Les titres du fichier 02 restent archives comme premiere proposition.
+Cette liste est la proposition active. Valider les identifiants pour choisir les episodes.
+
+C01 - What Did People in Tang China Actually Do All Day?
+Angle : Une journee d'habitant de Chang'an : quartier, repas, travail et ville.
+Famille de format : Journee immersive
+Limite avant script : Pas une journee universelle de toute la Chine imperiale.
+Statut : titre a valider ; faits precis a sourcer.
+
+C02 - What Happened in Chang'an After the City Gates Closed?
+Angle : Rentrer avant fermeture, vivre dans son quartier et expliquer les contraintes nocturnes.
+Famille de format : Vie apres la tombee du jour
+Limite avant script : Verifier regles, dates et exceptions du couvre-feu ; pas de punition spectaculaire inventee.
+Statut : titre a valider ; faits precis a sourcer.
+
+C03 - What Did Ordinary People in Tang China Actually Eat?
+Angle : Cuisine et achats ordinaires, avec outils et aliments d'un milieu precis.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Pas de cuisine moderne ni de riz universel ; distinguer region et statut.
+Statut : titre a valider ; faits precis a sourcer.
+
+C04 - What Was It Like to Shop in Chang'an's Markets?
+Angle : Suivre un achat, les produits, acteurs, horaires et quartiers commercants.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Echanges locaux et lointains distincts ; geographie des marches attestee.
+Statut : titre a valider ; faits precis a sourcer.
+
+C05 - How Did People in Tang China Keep Themselves Clean?
+Angle : Corps, vetements, eau et entretien d'un foyer.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Ne pas importer bains japonais ou hammams ; verifier installations et pratiques.
+Statut : titre a valider ; faits precis a sourcer.
+
+C06 - How Did People in Tang China Stay Warm Through Winter?
+Angle : Une nuit froide puis expliquer vetements, combustible et logement.
+Famille de format : Contrainte physique et solutions concretes
+Limite avant script : Pas de chauffage specifique a une autre dynastie sans preuve.
+Statut : titre a valider ; faits precis a sourcer.
+
+C07 - What Did Tang Soldiers Actually Eat on Campaign?
+Angle : Du stockage des provisions aux contraintes du repas en marche.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Campagne/date fixes, logistique Tang sourcee ; pas modele romain.
+Statut : titre a valider ; faits precis a sourcer.
+
+C08 - What Was It Like to Live in a Chang'an Neighborhood?
+Angle : Maison, cour, voisins, sorties et organisation d'un quartier.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Plan de quartier/foyer documente ; palais exclus de l'habitat ordinaire.
+Statut : titre a valider ; faits precis a sourcer.
+
+C09 - What Was It Like to Travel Across Tang China?
+Angle : Journee de route : bagages, haltes, logement et contraintes selon un trajet.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Choisir un trajet et un voyageur ; systeme postal officiel distinct du voyage prive.
+Statut : titre a valider ; faits precis a sourcer.
+
+C10 - What Did People in Tang China Actually Do for Fun?
+Angle : Jeux, musique, spectacles, sorties et differences sociales.
+Famille de format : Loisirs et sociabilite
+Limite avant script : Loisir de cour n'est pas loisir accessible a chaque habitant.
+Statut : titre a valider ; faits precis a sourcer.
+
+Recherche de format et methode d'ecriture : ../FORMAT_ET_ECRITURE_2026-10-07.txt

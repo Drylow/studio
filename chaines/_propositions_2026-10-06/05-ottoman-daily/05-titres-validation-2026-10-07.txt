@@ -1,0 +1,67 @@
+OTTOMAN DAILY - TITRES A VALIDER - 7 OCTOBRE 2026
+Cadre : Istanbul au XVIe siecle, vers 1550 ; campagnes ottomanes datees separement.
+Statut : EN ATTENTE DE VALIDATION DES TITRES. Pas de script lance.
+Les titres du fichier 02 restent archives comme premiere proposition.
+Cette liste est la proposition active. Valider les identifiants pour choisir les episodes.
+
+O01 - What Did People in Ottoman Istanbul Actually Do All Day?
+Angle : Une journee de quartier entre foyer, travail, provisions, bain et retour.
+Famille de format : Journee immersive
+Limite avant script : Istanbul XVIe, pas tous les siecles et territoires ottomans.
+Statut : titre a valider ; faits precis a sourcer.
+
+O02 - What Did a Janissary Actually Do All Day?
+Angle : Quotidien d'un militaire, entrainement, obligations, repas et repos.
+Famille de format : Quotidien d'un statut historique
+Limite avant script : Corps et periode precis ; pas histoire fictionnelle de promotions.
+Statut : titre a valider ; faits precis a sourcer.
+
+O03 - What Did Ottoman Soldiers Actually Eat During War?
+Angle : Approvisionnement, repas et contraintes d'une campagne concrete.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Campagne sourcee ; pas repas du palais presente comme ration.
+Statut : titre a valider ; faits precis a sourcer.
+
+O04 - How Did People in Ottoman Istanbul Survive Winter?
+Angle : Vetements, chauffage, logement et combustible dans un quartier.
+Famille de format : Contrainte physique et solutions concretes
+Limite avant script : Type de foyer precise ; pas absence totale de moyens de chauffage.
+Statut : titre a valider ; faits precis a sourcer.
+
+O05 - What Was It Like to Visit an Ottoman Hammam?
+Angle : Parcours du bain, materiel, travail des employes et sociabilite.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Choisir etablissement/clients/epoque ; mise en scene non sexualisee.
+Statut : titre a valider ; faits precis a sourcer.
+
+O06 - What Did Ordinary People in Ottoman Istanbul Actually Eat?
+Angle : Du vendeur et du four au repas de famille.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Pas banquet royal, pas mets modernes automatiquement projetes au XVIe.
+Statut : titre a valider ; faits precis a sourcer.
+
+O07 - What Was It Like to Shop in an Ottoman Bazaar?
+Angle : Un achat concret dans un marche : outils, produits, prix documentables et metiers.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Pas decor de bazar contemporain, pas un catalogue touristique.
+Statut : titre a valider ; faits precis a sourcer.
+
+O08 - How Did Poor People in Ottoman Istanbul Get Their Meals?
+Angle : Suivre approvisionnement et distribution d'une cuisine publique precise.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Registres d'imaret disponibles ; acces et beneficiaires variables, pas repas garanti pour tous.
+Statut : titre a valider ; faits precis a sourcer.
+
+O09 - What Happened When a Fire Broke Out in Ottoman Istanbul?
+Angle : Alerte, voisinage, pertes et reconstruction dans un cas documente.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Pas de pompiers/reformes tardives transposes au XVIe.
+Statut : titre a valider ; faits precis a sourcer.
+
+O10 - What Did People in Ottoman Istanbul Do After Dark?
+Angle : Eclairage, travail tardif, sociabilite et retour selon un quartier.
+Famille de format : Vie apres la tombee du jour
+Limite avant script : Cafe seulement a date attestee ; pas couvre-feu universel suppose.
+Statut : titre a valider ; faits precis a sourcer.
+
+Recherche de format et methode d'ecriture : ../FORMAT_ET_ECRITURE_2026-10-07.txt

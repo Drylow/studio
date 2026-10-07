@@ -1,0 +1,68 @@
+50 TITRES A VALIDER - 7 OCTOBRE 2026
+Titres anglais pour les cinq chaines. Aucun de ces titres n'est encore approuve.
+Premier lot recommande : E01, A01, B01, C01, O01 (une video par chaine).
+Format principal : questions de vie quotidienne a la Rome Unscrolled.
+Les notes d'angle et les limites de recherche sont dans les TXT de chaque chaine.
+
+EDO DAILY
+E01 - What Did People in Edo Japan Actually Do All Day?
+E02 - What Did Samurai Actually Do When There Was No War?
+E03 - How Did People in Edo Survive Winter in Wooden Houses?
+E04 - What Did Ordinary People in Edo Actually Eat?
+E05 - How Did People in Edo Get Clean Without a Bathroom at Home?
+E06 - What Was It Like to Live in an Edo Tenement?
+E07 - What Happened When a Fire Broke Out in Edo?
+E08 - What Did People in Edo Do After Dark?
+E09 - What Did People in Edo Actually Do for Fun?
+E10 - What Was It Like to Travel the Tokaido on Foot?
+
+AZTEC DAILY
+A01 - What Did People in the Aztec Capital Actually Do All Day?
+A02 - How Did the Aztecs Get Drinking Water in a Lake City?
+A03 - What Did Aztec Warriors Actually Eat During War?
+A04 - What Did Ordinary Aztec Families Actually Eat?
+A05 - How Did the Aztecs Keep Themselves Clean?
+A06 - What Was It Like to Shop at an Aztec Market?
+A07 - What Was It Like to Live in an Ordinary Aztec House?
+A08 - How Did the Aztecs Feed a City Built on a Lake?
+A09 - What Was It Like to Travel Through Tenochtitlan by Canoe?
+A10 - What Did Aztec Warriors Do at Night During War?
+
+BABYLON DAILY
+B01 - What Did People in Ancient Babylon Actually Do All Day?
+B02 - How Did People in Babylon Stay Cool Before Air Conditioning?
+B03 - What Did Ordinary People in Babylon Actually Eat?
+B04 - What Was It Like to Live in a Babylonian House?
+B05 - What Was It Like to Shop in Ancient Babylon?
+B06 - What Did a Babylonian Soldier Actually Do All Day?
+B07 - How Did People in Babylon Get Clean Without Modern Bathrooms?
+B08 - What Did Babylonians Actually Drink?
+B09 - What Was It Like to Earn a Living in Ancient Babylon?
+B10 - What Did People in Babylon Do After Dark?
+
+IMPERIAL CHINA DAILY
+C01 - What Did People in Tang China Actually Do All Day?
+C02 - What Happened in Chang'an After the City Gates Closed?
+C03 - What Did Ordinary People in Tang China Actually Eat?
+C04 - What Was It Like to Shop in Chang'an's Markets?
+C05 - How Did People in Tang China Keep Themselves Clean?
+C06 - How Did People in Tang China Stay Warm Through Winter?
+C07 - What Did Tang Soldiers Actually Eat on Campaign?
+C08 - What Was It Like to Live in a Chang'an Neighborhood?
+C09 - What Was It Like to Travel Across Tang China?
+C10 - What Did People in Tang China Actually Do for Fun?
+
+OTTOMAN DAILY
+O01 - What Did People in Ottoman Istanbul Actually Do All Day?
+O02 - What Did a Janissary Actually Do All Day?
+O03 - What Did Ottoman Soldiers Actually Eat During War?
+O04 - How Did People in Ottoman Istanbul Survive Winter?
+O05 - What Was It Like to Visit an Ottoman Hammam?
+O06 - What Did Ordinary People in Ottoman Istanbul Actually Eat?
+O07 - What Was It Like to Shop in an Ottoman Bazaar?
+O08 - How Did Poor People in Ottoman Istanbul Get Their Meals?
+O09 - What Happened When a Fire Broke Out in Ottoman Istanbul?
+O10 - What Did People in Ottoman Istanbul Do After Dark?
+
+VALIDATION : indiquer les codes retenus, ou valider toute la liste.
+Apres validation seulement : ecriture des scripts par Codex, puis production en parallele.

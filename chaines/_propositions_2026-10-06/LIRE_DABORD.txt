@@ -4,7 +4,11 @@ Style visuel background-v3 valide ; aucune video ni chaine lancee.
 Production dirigee par Codex : un premier decor maitre par univers est disponible.
 Voir 04-coherence-production.txt dans chaque dossier pour les references.
 
-Une image d'essai est maintenant liee dans chaque dossier, fichier 03-essai-visuel.txt.
+Une image d'essai est liee dans chaque dossier, fichier 03-essai-visuel.txt.
+PROPOSITION ACTIVE DE TITRES : TITRES_A_VALIDER_2026-10-07.txt, 50 candidats.
+Detail par chaine : 05-titres-validation-2026-10-07.txt (angles et limites).
+Recherche de format : FORMAT_ET_ECRITURE_2026-10-07.txt.
+En attente de validation des titres ; aucun script ni production lance.
 
 La premiere proposition etait hors sujet. Elle est rangee dans
 _anciennes_propositions_refusees et ne sert plus de direction de travail.

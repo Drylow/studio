@@ -1,0 +1,67 @@
+EDO DAILY - TITRES A VALIDER - 7 OCTOBRE 2026
+Cadre : Edo, vers 1700 ; Tokugawa. Fixer date, saison et milieu social par episode.
+Statut : EN ATTENTE DE VALIDATION DES TITRES. Pas de script lance.
+Les titres du fichier 02 restent archives comme premiere proposition.
+Cette liste est la proposition active. Valider les identifiants pour choisir les episodes.
+
+E01 - What Did People in Edo Japan Actually Do All Day?
+Angle : Une journee de citadin : logement, eau, travail, repas, bain et voisinage.
+Famille de format : Journee immersive
+Limite avant script : Ne pas reprendre le systeme romain de clientele ; pratiques et horaires d'Edo a sourcer.
+Statut : titre a valider ; faits precis a sourcer.
+
+E02 - What Did Samurai Actually Do When There Was No War?
+Angle : Montrer obligations, travail, revenus et famille plutot qu'un duel permanent.
+Famille de format : Quotidien d'un statut historique
+Limite avant script : Samourai de rang et employeur precis ; pas une echelle de promotions inventee.
+Statut : titre a valider ; faits precis a sourcer.
+
+E03 - How Did People in Edo Survive Winter in Wooden Houses?
+Angle : Partir d'une nuit froide dans un logement ordinaire et expliquer les solutions.
+Famille de format : Contrainte physique et solutions concretes
+Limite avant script : Distinguer foyer/brasero, richesse et type de logement ; pas 'sans aucun chauffage'.
+Statut : titre a valider ; faits precis a sourcer.
+
+E04 - What Did Ordinary People in Edo Actually Eat?
+Angle : Suivre les aliments depuis achat et preparation jusqu'au repas.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Menus, saison et acces selon revenu ; pas sushi moderne projete partout.
+Statut : titre a valider ; faits precis a sourcer.
+
+E05 - How Did People in Edo Get Clean Without a Bathroom at Home?
+Angle : Une sortie au bain et les contraintes concretes d'un logement partage.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Sento et pratiques correspondant a la date ; aucune sexualisation des bains.
+Statut : titre a valider ; faits precis a sourcer.
+
+E06 - What Was It Like to Live in an Edo Tenement?
+Angle : Espace reduit, voisins, eau et gestes ordinaires dans un nagaya.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Plan et objets documentes ; ne pas transposer notre bel essai a tout citadin pauvre.
+Statut : titre a valider ; faits precis a sourcer.
+
+E07 - What Happened When a Fire Broke Out in Edo?
+Angle : Suivre alerte, habitants, intervention et retour dans le quartier.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Choisir un incendie documente ; ne pas inventer un personnage heroique ou une mission.
+Statut : titre a valider ; faits precis a sourcer.
+
+E08 - What Did People in Edo Do After Dark?
+Angle : Travail tardif, eclairage et retour au logement selon un quartier precis.
+Famille de format : Vie apres la tombee du jour
+Limite avant script : Pas de ville uniformement fermee ou uniformement dangereuse.
+Statut : titre a valider ; faits precis a sourcer.
+
+E09 - What Did People in Edo Actually Do for Fun?
+Angle : Sorties, spectacles, jeux et sociabilite accessibles au milieu retenu.
+Famille de format : Loisirs et sociabilite
+Limite avant script : Ne pas melanger pratiques de 1700 et temoignages tardifs sans dater.
+Statut : titre a valider ; faits precis a sourcer.
+
+E10 - What Was It Like to Travel the Tokaido on Foot?
+Angle : Une journee de route, frais, bagages, haltes et logement.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Itineraire et acces fixes ; pas livraison fictionnelle ni chiffres empruntes a Rome.
+Statut : titre a valider ; faits precis a sourcer.
+
+Recherche de format et methode d'ecriture : ../FORMAT_ET_ECRITURE_2026-10-07.txt

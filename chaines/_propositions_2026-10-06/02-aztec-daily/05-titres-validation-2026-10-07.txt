@@ -1,0 +1,67 @@
+AZTEC DAILY - TITRES A VALIDER - 7 OCTOBRE 2026
+Cadre : Tenochtitlan et environs vers 1500, avant conquete ; Mexica et milieux precis.
+Statut : EN ATTENTE DE VALIDATION DES TITRES. Pas de script lance.
+Les titres du fichier 02 restent archives comme premiere proposition.
+Cette liste est la proposition active. Valider les identifiants pour choisir les episodes.
+
+A01 - What Did People in the Aztec Capital Actually Do All Day?
+Angle : Entrer dans un foyer de Tenochtitlan puis suivre travail, eau, repas et ville.
+Famille de format : Journee immersive
+Limite avant script : Cadre mexica precis ; pas une journee universelle de tous les peuples de l'empire.
+Statut : titre a valider ; faits precis a sourcer.
+
+A02 - How Did the Aztecs Get Drinking Water in a Lake City?
+Angle : Suivre l'eau jusqu'au foyer dans une capitale construite dans le lac.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Recouper sources d'eau, aqueducs et distribution ; pas boire partout le lac.
+Statut : titre a valider ; faits precis a sourcer.
+
+A03 - What Did Aztec Warriors Actually Eat During War?
+Angle : Rations, preparation, transport et fatigue d'une campagne.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Sources militaires et campagne definie ; ne pas transposer les rations legionnaires.
+Statut : titre a valider ; faits precis a sourcer.
+
+A04 - What Did Ordinary Aztec Families Actually Eat?
+Angle : Un repas familial a travers ingredients, outils et temps de preparation.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Distinguer quotidien, fete et statut ; pas gastronomie mexicaine moderne.
+Statut : titre a valider ; faits precis a sourcer.
+
+A05 - How Did the Aztecs Keep Themselves Clean?
+Angle : Eau, lavage, corps, vetements et entretien du foyer.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Temazcal : acces et usages documentes ; pas rituel identique pour tout le monde.
+Statut : titre a valider ; faits precis a sourcer.
+
+A06 - What Was It Like to Shop at an Aztec Market?
+Angle : Un parcours d'achat : marchandises, paiement, vendeur et retour.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Tlatelolco documente ; cacao et moyens d'echange nuances, pas absence de toute monnaie.
+Statut : titre a valider ; faits precis a sourcer.
+
+A07 - What Was It Like to Live in an Ordinary Aztec House?
+Angle : Dormir, cuisiner, stocker et partager l'espace d'un foyer.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Materiaux et milieu fixes ; pas palais royal presente comme habitat ordinaire.
+Statut : titre a valider ; faits precis a sourcer.
+
+A08 - How Did the Aztecs Feed a City Built on a Lake?
+Angle : Suivre l'approvisionnement depuis production et routes jusqu'au marche.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Chinampas, commerce et tribut a distinguer ; pas champs nourrissant seuls toute la ville.
+Statut : titre a valider ; faits precis a sourcer.
+
+A09 - What Was It Like to Travel Through Tenochtitlan by Canoe?
+Angle : Deplacements, charges, canaux, quais et trajets du quotidien.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Canoe et reseau documentes ; ne pas inventer regles de circulation ou prix.
+Statut : titre a valider ; faits precis a sourcer.
+
+A10 - What Did Aztec Warriors Do at Night During War?
+Angle : Repos, preparation et conditions de vie hors du combat.
+Famille de format : Vie apres la tombee du jour
+Limite avant script : Plus fragile : valider sources de campagne avant script ; supprimer si preuves insuffisantes.
+Statut : titre a valider ; faits precis a sourcer.
+
+Recherche de format et methode d'ecriture : ../FORMAT_ET_ECRITURE_2026-10-07.txt

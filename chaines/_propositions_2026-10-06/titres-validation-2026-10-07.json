@@ -1,0 +1,1145 @@
+{
+  "date": "2026-10-07",
+  "status": "awaiting_title_approval",
+  "title_count": 50,
+  "visual_style_approved": true,
+  "creative_owner": "Codex",
+  "scripts_started": false,
+  "production_started": false,
+  "main_reference": "Rome Unscrolled",
+  "recommended_first_batch": [
+    "E01",
+    "A01",
+    "B01",
+    "C01",
+    "O01"
+  ],
+  "execution_after_approval": {
+    "parallel_videos": true,
+    "provider": "configured_cli_proxy",
+    "bounded_concurrency": true,
+    "retry_on_saturation": true,
+    "reference_dependencies": true,
+    "manual_script_and_image_review": true
+  },
+  "research": {
+    "tools": [
+      "Algrow channel catalogs",
+      "Nexlev bulk transcripts",
+      "Nexlev Rome channel outliers",
+      "Nexlev full-video visual analysis",
+      "web institutional context"
+    ],
+    "transcripts_retrieved": [
+      "U_eV4WbL6Vw",
+      "diftQzzcm9E",
+      "E16DWKPiTAs"
+    ],
+    "copyright_note": "No full third-party transcript copied into proposal files.",
+    "catalogs": [
+      {
+        "key": "rome",
+        "channel_id": "UCuyKlvQhPbPKdENL8y1lDrA",
+        "videos": [
+          {
+            "video_id": "U_eV4WbL6Vw",
+            "title": "What Did People in Ancient Rome Actually Do All Day?",
+            "url": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+            "view_count_snapshot": 2002035,
+            "duration_seconds": 2173,
+            "published_at": "2026-09-23T21:00:36Z"
+          },
+          {
+            "video_id": "pQWJtBUyO2s",
+            "title": "How Did Roman Soldiers Survive Freezing Nights Without Heaters?",
+            "url": "https://www.youtube.com/watch?v=pQWJtBUyO2s",
+            "view_count_snapshot": 640241,
+            "duration_seconds": 1929,
+            "published_at": "2026-09-21T21:00:08Z"
+          },
+          {
+            "video_id": "1xK1yqgyhLU",
+            "title": "Why Were Roman Soldiers Not Afraid to Sleep Near Enemies?",
+            "url": "https://www.youtube.com/watch?v=1xK1yqgyhLU",
+            "view_count_snapshot": 316456,
+            "duration_seconds": 1696,
+            "published_at": "2026-09-19T18:45:00Z"
+          },
+          {
+            "video_id": "M4V0of4TVko",
+            "title": "Why Rome’s Enemies Feared the Roman Legions More Than Anything Else",
+            "url": "https://www.youtube.com/watch?v=M4V0of4TVko",
+            "view_count_snapshot": 274448,
+            "duration_seconds": 2009,
+            "published_at": "2026-09-25T20:00:01Z"
+          },
+          {
+            "video_id": "8B29D75XS3o",
+            "title": "What Did Roman Soldiers Do When It Rained All Week During War?",
+            "url": "https://www.youtube.com/watch?v=8B29D75XS3o",
+            "view_count_snapshot": 190447,
+            "duration_seconds": 1879,
+            "published_at": "2026-09-26T20:30:33Z"
+          },
+          {
+            "video_id": "TdFKPrty7e8",
+            "title": "Why Didn’t Predators Attack Roman Camps After Dark?",
+            "url": "https://www.youtube.com/watch?v=TdFKPrty7e8",
+            "view_count_snapshot": 151527,
+            "duration_seconds": 1821,
+            "published_at": "2026-09-24T20:45:07Z"
+          },
+          {
+            "video_id": "LYxqH4K20qM",
+            "title": "How Did Rome Invent Its Most Deadly Weapons?",
+            "url": "https://www.youtube.com/watch?v=LYxqH4K20qM",
+            "view_count_snapshot": 127279,
+            "duration_seconds": 2353,
+            "published_at": "2026-09-20T18:00:31Z"
+          },
+          {
+            "video_id": "Z8VsA_wPuV0",
+            "title": "What Did Roman Do For Pleasure?",
+            "url": "https://www.youtube.com/watch?v=Z8VsA_wPuV0",
+            "view_count_snapshot": 128074,
+            "duration_seconds": 1804,
+            "published_at": "2026-10-01T21:15:30Z"
+          },
+          {
+            "video_id": "Op-cWw0I3JA",
+            "title": "What Did Roman Soldiers Do at Night During War?",
+            "url": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+            "view_count_snapshot": 116998,
+            "duration_seconds": 2175,
+            "published_at": "2026-09-18T19:00:16Z"
+          },
+          {
+            "video_id": "5b-cq8RHbGI",
+            "title": "What Did Roman Soldiers Actually Eat During War?",
+            "url": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+            "view_count_snapshot": 105093,
+            "duration_seconds": 2042,
+            "published_at": "2026-09-27T19:00:31Z"
+          },
+          {
+            "video_id": "PSlbk_RXH-w",
+            "title": "How Did Ancient Romans Defeat Their Most Dangerous Enemies?",
+            "url": "https://www.youtube.com/watch?v=PSlbk_RXH-w",
+            "view_count_snapshot": 49135,
+            "duration_seconds": 1559,
+            "published_at": "2026-09-22T21:00:27Z"
+          },
+          {
+            "video_id": "PEJezahw47w",
+            "title": "Why the Roman Empire Was Almost Impossible to Defeat",
+            "url": "https://www.youtube.com/watch?v=PEJezahw47w",
+            "view_count_snapshot": 19472,
+            "duration_seconds": 2333,
+            "published_at": "2026-10-04T19:00:07Z"
+          }
+        ]
+      },
+      {
+        "key": "quota",
+        "channel_id": "UCk_Hrj9FTQ4hv8TxkEYyskA",
+        "videos": [
+          {
+            "video_id": "diftQzzcm9E",
+            "title": "Your Life as Every Rank in the Galactic Empire",
+            "url": "https://www.youtube.com/watch?v=diftQzzcm9E",
+            "view_count_snapshot": 213639,
+            "duration_seconds": 518,
+            "published_at": "2026-09-29T18:30:39Z"
+          },
+          {
+            "video_id": "Qb-h3lfgW7M",
+            "title": "Your Life as Every Rank in the Saiyan Army",
+            "url": "https://www.youtube.com/watch?v=Qb-h3lfgW7M",
+            "view_count_snapshot": 72653,
+            "duration_seconds": 618,
+            "published_at": "2026-10-03T18:30:02Z"
+          },
+          {
+            "video_id": "9BB4oCJ6cR4",
+            "title": "Your Life as Every Rank in Sith Empire",
+            "url": "https://www.youtube.com/watch?v=9BB4oCJ6cR4",
+            "view_count_snapshot": 76208,
+            "duration_seconds": 1149,
+            "published_at": "2026-10-01T18:30:17Z"
+          },
+          {
+            "video_id": "NZwfRoRuJE4",
+            "title": "Your Life as Every Rank in Viltrumite Empire",
+            "url": "https://www.youtube.com/watch?v=NZwfRoRuJE4",
+            "view_count_snapshot": 44735,
+            "duration_seconds": 1067,
+            "published_at": "2026-09-27T18:30:02Z"
+          },
+          {
+            "video_id": "7-E-tuW7puo",
+            "title": "Your Life as Every Rank in the Clone Army",
+            "url": "https://www.youtube.com/watch?v=7-E-tuW7puo",
+            "view_count_snapshot": 25029,
+            "duration_seconds": 784,
+            "published_at": "2026-10-05T18:30:20Z"
+          },
+          {
+            "video_id": "i609G2QBA1c",
+            "title": "Your Life as Every Rank in North Korea’s Military",
+            "url": "https://www.youtube.com/watch?v=i609G2QBA1c",
+            "view_count_snapshot": 16622,
+            "duration_seconds": 987,
+            "published_at": "2026-09-02T10:30:27Z"
+          },
+          {
+            "video_id": "Ds3zlS4_6mY",
+            "title": "Your Life as Every Rank in US Marines",
+            "url": "https://www.youtube.com/watch?v=Ds3zlS4_6mY",
+            "view_count_snapshot": 8914,
+            "duration_seconds": 1302,
+            "published_at": "2026-09-04T11:30:29Z"
+          },
+          {
+            "video_id": "STJrtXuvezg",
+            "title": "Your Life as Every Rank in Ancient Egypt Pharaohy",
+            "url": "https://www.youtube.com/watch?v=STJrtXuvezg",
+            "view_count_snapshot": 3182,
+            "duration_seconds": 1110,
+            "published_at": "2026-09-17T10:38:49Z"
+          },
+          {
+            "video_id": "Ilbw6IYE5Es",
+            "title": "Your Life as Every Rank in Special Forces",
+            "url": "https://www.youtube.com/watch?v=Ilbw6IYE5Es",
+            "view_count_snapshot": 2404,
+            "duration_seconds": 909,
+            "published_at": "2026-08-03T22:30:16Z"
+          },
+          {
+            "video_id": "5FlJfXFaJ8w",
+            "title": "Your Life as Every German Soldier Rank in WW2",
+            "url": "https://www.youtube.com/watch?v=5FlJfXFaJ8w",
+            "view_count_snapshot": 2786,
+            "duration_seconds": 894,
+            "published_at": "2026-09-06T16:30:02Z"
+          },
+          {
+            "video_id": "wbiD9cOmlVw",
+            "title": "Your Life as Every Rank in Idi Amin’s Army",
+            "url": "https://www.youtube.com/watch?v=wbiD9cOmlVw",
+            "view_count_snapshot": 1514,
+            "duration_seconds": 826,
+            "published_at": "2026-09-08T10:30:34Z"
+          },
+          {
+            "video_id": "f6YXGG2Oxl8",
+            "title": "Your Life as Every Rank in the Roman Empire’s Army",
+            "url": "https://www.youtube.com/watch?v=f6YXGG2Oxl8",
+            "view_count_snapshot": 825,
+            "duration_seconds": 1141,
+            "published_at": "2026-09-25T18:30:16Z"
+          },
+          {
+            "video_id": "tL0K0YscvYg",
+            "title": "Your Life as Every Rank in the Yakuza",
+            "url": "https://www.youtube.com/watch?v=tL0K0YscvYg",
+            "view_count_snapshot": 676,
+            "duration_seconds": 782,
+            "published_at": "2026-09-19T18:30:14Z"
+          },
+          {
+            "video_id": "iWhF9QIYOSU",
+            "title": "Your Life as a Foreigner in North Korea",
+            "url": "https://www.youtube.com/watch?v=iWhF9QIYOSU",
+            "view_count_snapshot": 611,
+            "duration_seconds": 1075,
+            "published_at": "2026-09-13T12:30:11Z"
+          },
+          {
+            "video_id": "nfOsjtlMhTE",
+            "title": "Your Life as Every Rank in the Hells Angels",
+            "url": "https://www.youtube.com/watch?v=nfOsjtlMhTE",
+            "view_count_snapshot": 593,
+            "duration_seconds": 738,
+            "published_at": "2026-09-23T18:30:23Z"
+          },
+          {
+            "video_id": "iQAUHUsdS5Y",
+            "title": "Your Life as Every Rank in the Israeli Military",
+            "url": "https://www.youtube.com/watch?v=iQAUHUsdS5Y",
+            "view_count_snapshot": 573,
+            "duration_seconds": 668,
+            "published_at": "2026-09-10T10:30:35Z"
+          },
+          {
+            "video_id": "_r8F144MdFQ",
+            "title": "Every Level of a Carpenter’s Career",
+            "url": "https://www.youtube.com/watch?v=_r8F144MdFQ",
+            "view_count_snapshot": 356,
+            "duration_seconds": 379,
+            "published_at": "2026-07-07T12:30:17Z"
+          },
+          {
+            "video_id": "bRTR7Lcum5U",
+            "title": "POV: You’re the Pilot in the Miami Plane Crash",
+            "url": "https://www.youtube.com/watch?v=bRTR7Lcum5U",
+            "view_count_snapshot": 255,
+            "duration_seconds": 624,
+            "published_at": "2026-09-11T17:00:16Z"
+          },
+          {
+            "video_id": "xNdmHwn6x9I",
+            "title": "Your Life as Every Level of a Corrupt CIA Spy",
+            "url": "https://www.youtube.com/watch?v=xNdmHwn6x9I",
+            "view_count_snapshot": 247,
+            "duration_seconds": 326,
+            "published_at": "2026-07-24T14:30:20Z"
+          },
+          {
+            "video_id": "bCBhvBNb3Tk",
+            "title": "Every Level of a Data Scientist's Career",
+            "url": "https://www.youtube.com/watch?v=bCBhvBNb3Tk",
+            "view_count_snapshot": 211,
+            "duration_seconds": 631,
+            "published_at": "2026-07-13T22:30:23Z"
+          },
+          {
+            "video_id": "fdPZ5hy9JmE",
+            "title": "Your Life as Every Rank of the Deadliest Warriors",
+            "url": "https://www.youtube.com/watch?v=fdPZ5hy9JmE",
+            "view_count_snapshot": 218,
+            "duration_seconds": 824,
+            "published_at": "2026-08-25T18:00:06Z"
+          },
+          {
+            "video_id": "XxV8FvBkubE",
+            "title": "Your Life as the Son of a Cartel Boss",
+            "url": "https://www.youtube.com/watch?v=XxV8FvBkubE",
+            "view_count_snapshot": 174,
+            "duration_seconds": 561,
+            "published_at": "2026-08-31T11:30:30Z"
+          },
+          {
+            "video_id": "PpsdEtzu0Ek",
+            "title": "Every Level of a Pediatric Surgeon's Career",
+            "url": "https://www.youtube.com/watch?v=PpsdEtzu0Ek",
+            "view_count_snapshot": 133,
+            "duration_seconds": 880,
+            "published_at": "2026-07-21T22:30:03Z"
+          },
+          {
+            "video_id": "tujUo4n-5Ao",
+            "title": "Your Life as Every Rank in Quantum Mechanics",
+            "url": "https://www.youtube.com/watch?v=tujUo4n-5Ao",
+            "view_count_snapshot": 142,
+            "duration_seconds": 664,
+            "published_at": "2026-08-20T16:30:12Z"
+          },
+          {
+            "video_id": "Bp-52IU96jg",
+            "title": "Your Life at Every Level of Federal Law",
+            "url": "https://www.youtube.com/watch?v=Bp-52IU96jg",
+            "view_count_snapshot": 142,
+            "duration_seconds": 413,
+            "published_at": "2026-08-15T11:30:09Z"
+          }
+        ]
+      },
+      {
+        "key": "curious",
+        "channel_id": "UCft-LD8wyBLj4ibKW0-3JUA",
+        "videos": [
+          {
+            "video_id": "E16DWKPiTAs",
+            "title": "Your Life at Every Level of Building a Cabin in the Middle of Nowhere",
+            "url": "https://www.youtube.com/watch?v=E16DWKPiTAs",
+            "view_count_snapshot": 249002,
+            "duration_seconds": 1360,
+            "published_at": "2026-09-23T17:20:38Z"
+          },
+          {
+            "video_id": "Vis2aWqkDHA",
+            "title": "Your Life at Every Level as a Fast Food Worker",
+            "url": "https://www.youtube.com/watch?v=Vis2aWqkDHA",
+            "view_count_snapshot": 149210,
+            "duration_seconds": 1435,
+            "published_at": "2026-09-25T20:52:27Z"
+          },
+          {
+            "video_id": "4Dimg9xHIGw",
+            "title": "Your Life at Every Level of Living in Rural America",
+            "url": "https://www.youtube.com/watch?v=4Dimg9xHIGw",
+            "view_count_snapshot": 60827,
+            "duration_seconds": 1463,
+            "published_at": "2026-09-24T18:01:00Z"
+          },
+          {
+            "video_id": "NPwC0O6_M8s",
+            "title": "Your Life at Every Level of Working Two Jobs",
+            "url": "https://www.youtube.com/watch?v=NPwC0O6_M8s",
+            "view_count_snapshot": 62331,
+            "duration_seconds": 1448,
+            "published_at": "2026-09-29T22:50:09Z"
+          },
+          {
+            "video_id": "8PR2SpZdQDg",
+            "title": "Your Life at Every Level of Building a Life From Cheap Land",
+            "url": "https://www.youtube.com/watch?v=8PR2SpZdQDg",
+            "view_count_snapshot": 55449,
+            "duration_seconds": 1564,
+            "published_at": "2026-10-03T22:41:09Z"
+          },
+          {
+            "video_id": "9ASCACYy5Og",
+            "title": "Your Life at Every Level After You Lose Your Home",
+            "url": "https://www.youtube.com/watch?v=9ASCACYy5Og",
+            "view_count_snapshot": 10573,
+            "duration_seconds": 1324,
+            "published_at": "2026-09-27T19:28:49Z"
+          }
+        ]
+      },
+      {
+        "key": "strangely",
+        "channel_id": "UCAScDY1MSVNoO9q1_5beLEQ",
+        "videos": [
+          {
+            "video_id": "5rXWGVnmV5A",
+            "title": "Your Life as Every Rank on the FBI Most Wanted List",
+            "url": "https://www.youtube.com/watch?v=5rXWGVnmV5A",
+            "view_count_snapshot": 1058041,
+            "duration_seconds": 921,
+            "published_at": "2026-03-02T20:50:09Z"
+          },
+          {
+            "video_id": "rYT-NUcC0oE",
+            "title": "POV: You're a DEA Agent Addicted to Drugs",
+            "url": "https://www.youtube.com/watch?v=rYT-NUcC0oE",
+            "view_count_snapshot": 764151,
+            "duration_seconds": 1322,
+            "published_at": "2026-03-10T17:20:22Z"
+          },
+          {
+            "video_id": "d4J_9nP9vKs",
+            "title": "Your Life at Every Level of Witness Protection",
+            "url": "https://www.youtube.com/watch?v=d4J_9nP9vKs",
+            "view_count_snapshot": 444205,
+            "duration_seconds": 1005,
+            "published_at": "2026-03-04T23:08:33Z"
+          },
+          {
+            "video_id": "WnANgrq5KzM",
+            "title": "Your Life at Every Level of an FBI Manhunt",
+            "url": "https://www.youtube.com/watch?v=WnANgrq5KzM",
+            "view_count_snapshot": 362044,
+            "duration_seconds": 1194,
+            "published_at": "2026-03-13T22:50:25Z"
+          },
+          {
+            "video_id": "9nNKhppUIK0",
+            "title": "Your Life as Every Level of a Bank Robbery",
+            "url": "https://www.youtube.com/watch?v=9nNKhppUIK0",
+            "view_count_snapshot": 192363,
+            "duration_seconds": 1426,
+            "published_at": "2026-03-22T22:08:42Z"
+          },
+          {
+            "video_id": "WBMyIWyDME8",
+            "title": "Your Life as Every Level of a Corrupt Politician",
+            "url": "https://www.youtube.com/watch?v=WBMyIWyDME8",
+            "view_count_snapshot": 177351,
+            "duration_seconds": 886,
+            "published_at": "2026-03-26T21:44:20Z"
+          },
+          {
+            "video_id": "Q49S2PFVSBM",
+            "title": "POV: You're a Corrupt Surgeon Selling Organs on the Black Market",
+            "url": "https://www.youtube.com/watch?v=Q49S2PFVSBM",
+            "view_count_snapshot": 155601,
+            "duration_seconds": 1216,
+            "published_at": "2026-03-01T13:59:24Z"
+          },
+          {
+            "video_id": "MShflHqp4Jg",
+            "title": "Your Life as Every Level of Being Hunted by the CIA",
+            "url": "https://www.youtube.com/watch?v=MShflHqp4Jg",
+            "view_count_snapshot": 153637,
+            "duration_seconds": 962,
+            "published_at": "2026-03-29T20:08:52Z"
+          },
+          {
+            "video_id": "-Py4hcyU0DY",
+            "title": "POV: You're a Fake Lawyer Who's Never Passed the Bar",
+            "url": "https://www.youtube.com/watch?v=-Py4hcyU0DY",
+            "view_count_snapshot": 144671,
+            "duration_seconds": 1179,
+            "published_at": "2026-02-27T22:04:38Z"
+          },
+          {
+            "video_id": "tgqc_o6aJcI",
+            "title": "POV: You're a Corrupt US Marshal",
+            "url": "https://www.youtube.com/watch?v=tgqc_o6aJcI",
+            "view_count_snapshot": 138612,
+            "duration_seconds": 1163,
+            "published_at": "2026-03-05T21:31:46Z"
+          },
+          {
+            "video_id": "38oWJey7K6Q",
+            "title": "POV: You Faked Your Own Death and Now You Can't Prove You're Alive",
+            "url": "https://www.youtube.com/watch?v=38oWJey7K6Q",
+            "view_count_snapshot": 130598,
+            "duration_seconds": 1296,
+            "published_at": "2026-06-25T19:00:10Z"
+          },
+          {
+            "video_id": "33IdZ1wBBPg",
+            "title": "POV: You're a Corrupt CIA Agent",
+            "url": "https://www.youtube.com/watch?v=33IdZ1wBBPg",
+            "view_count_snapshot": 128413,
+            "duration_seconds": 1132,
+            "published_at": "2026-03-08T22:14:30Z"
+          },
+          {
+            "video_id": "IYAq7fjdxqc",
+            "title": "POV: You’re a Therapist Who Blackmails His Own Patients",
+            "url": "https://www.youtube.com/watch?v=IYAq7fjdxqc",
+            "view_count_snapshot": 128027,
+            "duration_seconds": 1156,
+            "published_at": "2026-03-03T22:12:23Z"
+          },
+          {
+            "video_id": "Lzuyiy5LdvM",
+            "title": "POV: You're a Corrupt FBI Agent",
+            "url": "https://www.youtube.com/watch?v=Lzuyiy5LdvM",
+            "view_count_snapshot": 123836,
+            "duration_seconds": 824,
+            "published_at": "2026-02-15T09:31:55Z"
+          },
+          {
+            "video_id": "n-iNTpfxuh8",
+            "title": "POV: You're a Detective Investigating Your Own Family",
+            "url": "https://www.youtube.com/watch?v=n-iNTpfxuh8",
+            "view_count_snapshot": 110769,
+            "duration_seconds": 931,
+            "published_at": "2026-03-16T21:52:34Z"
+          }
+        ]
+      }
+    ],
+    "historical_context_is_not_full_episode_audit": true
+  },
+  "channels": [
+    {
+      "code": "E",
+      "folder": "01-edo-daily",
+      "name": "Edo Daily",
+      "scope": "Edo, vers 1700 ; Tokugawa. Fixer date, saison et milieu social par episode.",
+      "sources": [
+        "https://www.edo-tokyo-museum.or.jp/en/p-exhibition/",
+        "https://www.edo-tokyo-museum.or.jp/en/s-exhibition/ryogoku/"
+      ],
+      "titles": [
+        {
+          "id": "E01",
+          "title": "What Did People in Edo Japan Actually Do All Day?",
+          "format_family": "day",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Une journee de citadin : logement, eau, travail, repas, bain et voisinage.",
+          "research_limit_fr": "Ne pas reprendre le systeme romain de clientele ; pratiques et horaires d'Edo a sourcer.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E02",
+          "title": "What Did Samurai Actually Do When There Was No War?",
+          "format_family": "status",
+          "reference_video": "https://www.youtube.com/watch?v=diftQzzcm9E",
+          "angle_fr": "Montrer obligations, travail, revenus et famille plutot qu'un duel permanent.",
+          "research_limit_fr": "Samourai de rang et employeur precis ; pas une echelle de promotions inventee.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E03",
+          "title": "How Did People in Edo Survive Winter in Wooden Houses?",
+          "format_family": "weather",
+          "reference_video": "https://www.youtube.com/watch?v=pQWJtBUyO2s",
+          "angle_fr": "Partir d'une nuit froide dans un logement ordinaire et expliquer les solutions.",
+          "research_limit_fr": "Distinguer foyer/brasero, richesse et type de logement ; pas 'sans aucun chauffage'.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E04",
+          "title": "What Did Ordinary People in Edo Actually Eat?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Suivre les aliments depuis achat et preparation jusqu'au repas.",
+          "research_limit_fr": "Menus, saison et acces selon revenu ; pas sushi moderne projete partout.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E05",
+          "title": "How Did People in Edo Get Clean Without a Bathroom at Home?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Une sortie au bain et les contraintes concretes d'un logement partage.",
+          "research_limit_fr": "Sento et pratiques correspondant a la date ; aucune sexualisation des bains.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E06",
+          "title": "What Was It Like to Live in an Edo Tenement?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Espace reduit, voisins, eau et gestes ordinaires dans un nagaya.",
+          "research_limit_fr": "Plan et objets documentes ; ne pas transposer notre bel essai a tout citadin pauvre.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E07",
+          "title": "What Happened When a Fire Broke Out in Edo?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Suivre alerte, habitants, intervention et retour dans le quartier.",
+          "research_limit_fr": "Choisir un incendie documente ; ne pas inventer un personnage heroique ou une mission.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E08",
+          "title": "What Did People in Edo Do After Dark?",
+          "format_family": "night",
+          "reference_video": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+          "angle_fr": "Travail tardif, eclairage et retour au logement selon un quartier precis.",
+          "research_limit_fr": "Pas de ville uniformement fermee ou uniformement dangereuse.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E09",
+          "title": "What Did People in Edo Actually Do for Fun?",
+          "format_family": "leisure",
+          "reference_video": "https://www.youtube.com/watch?v=Z8VsA_wPuV0",
+          "angle_fr": "Sorties, spectacles, jeux et sociabilite accessibles au milieu retenu.",
+          "research_limit_fr": "Ne pas melanger pratiques de 1700 et temoignages tardifs sans dater.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "E10",
+          "title": "What Was It Like to Travel the Tokaido on Foot?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Une journee de route, frais, bagages, haltes et logement.",
+          "research_limit_fr": "Itineraire et acces fixes ; pas livraison fictionnelle ni chiffres empruntes a Rome.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        }
+      ]
+    },
+    {
+      "code": "A",
+      "folder": "02-aztec-daily",
+      "name": "Aztec Daily",
+      "scope": "Tenochtitlan et environs vers 1500, avant conquete ; Mexica et milieux precis.",
+      "sources": [
+        "https://www.inah.gob.mx/foto-del-dia/tlaloc-y-chapultepec-un-lugar-consagrado-al-agua",
+        "https://www.inah.gob.mx/index.php?Itemid=329&catid=35&id=1684%3Aesclarecen-enigma&option=com_content&view=article"
+      ],
+      "titles": [
+        {
+          "id": "A01",
+          "title": "What Did People in the Aztec Capital Actually Do All Day?",
+          "format_family": "day",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Entrer dans un foyer de Tenochtitlan puis suivre travail, eau, repas et ville.",
+          "research_limit_fr": "Cadre mexica precis ; pas une journee universelle de tous les peuples de l'empire.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A02",
+          "title": "How Did the Aztecs Get Drinking Water in a Lake City?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Suivre l'eau jusqu'au foyer dans une capitale construite dans le lac.",
+          "research_limit_fr": "Recouper sources d'eau, aqueducs et distribution ; pas boire partout le lac.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A03",
+          "title": "What Did Aztec Warriors Actually Eat During War?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Rations, preparation, transport et fatigue d'une campagne.",
+          "research_limit_fr": "Sources militaires et campagne definie ; ne pas transposer les rations legionnaires.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A04",
+          "title": "What Did Ordinary Aztec Families Actually Eat?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Un repas familial a travers ingredients, outils et temps de preparation.",
+          "research_limit_fr": "Distinguer quotidien, fete et statut ; pas gastronomie mexicaine moderne.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A05",
+          "title": "How Did the Aztecs Keep Themselves Clean?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Eau, lavage, corps, vetements et entretien du foyer.",
+          "research_limit_fr": "Temazcal : acces et usages documentes ; pas rituel identique pour tout le monde.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A06",
+          "title": "What Was It Like to Shop at an Aztec Market?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Un parcours d'achat : marchandises, paiement, vendeur et retour.",
+          "research_limit_fr": "Tlatelolco documente ; cacao et moyens d'echange nuances, pas absence de toute monnaie.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A07",
+          "title": "What Was It Like to Live in an Ordinary Aztec House?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Dormir, cuisiner, stocker et partager l'espace d'un foyer.",
+          "research_limit_fr": "Materiaux et milieu fixes ; pas palais royal presente comme habitat ordinaire.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A08",
+          "title": "How Did the Aztecs Feed a City Built on a Lake?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Suivre l'approvisionnement depuis production et routes jusqu'au marche.",
+          "research_limit_fr": "Chinampas, commerce et tribut a distinguer ; pas champs nourrissant seuls toute la ville.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A09",
+          "title": "What Was It Like to Travel Through Tenochtitlan by Canoe?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Deplacements, charges, canaux, quais et trajets du quotidien.",
+          "research_limit_fr": "Canoe et reseau documentes ; ne pas inventer regles de circulation ou prix.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "A10",
+          "title": "What Did Aztec Warriors Do at Night During War?",
+          "format_family": "night",
+          "reference_video": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+          "angle_fr": "Repos, preparation et conditions de vie hors du combat.",
+          "research_limit_fr": "Plus fragile : valider sources de campagne avant script ; supprimer si preuves insuffisantes.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "folder": "03-babylon-daily",
+      "name": "Babylon Daily",
+      "scope": "Babylone neo-babylonienne vers 600 av. J.-C. ; dates voisines explicitement annoncees.",
+      "sources": [
+        "https://www.metmuseum.org/essays/babylon",
+        "https://www.britishmuseum.org/collection/object/W_1898-0215-862",
+        "https://www.britishmuseum.org/collection/object/W_1896-0409-51"
+      ],
+      "titles": [
+        {
+          "id": "B01",
+          "title": "What Did People in Ancient Babylon Actually Do All Day?",
+          "format_family": "day",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Entrer dans un foyer puis suivre eau, nourriture, travail et quartier.",
+          "research_limit_fr": "Ne pas combler les lacunes par un quotidien sumerien ou romain.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B02",
+          "title": "How Did People in Babylon Stay Cool Before Air Conditioning?",
+          "format_family": "weather",
+          "reference_video": "https://www.youtube.com/watch?v=pQWJtBUyO2s",
+          "angle_fr": "Une journee chaude : logement, ombre, eau, vetements et organisation.",
+          "research_limit_fr": "Ne pas inventer tours a vent ou climatisation antique ; verifier chaque dispositif.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B03",
+          "title": "What Did Ordinary People in Babylon Actually Eat?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Repas, provisions et preparation selon le foyer retenu.",
+          "research_limit_fr": "Recettes paleo-babyloniennes vers 1750 ne prouvent pas le menu de 600 ; periodes distinctes.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B04",
+          "title": "What Was It Like to Live in a Babylonian House?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Cour, pieces, rangement, sommeil et voisinage.",
+          "research_limit_fr": "Plan archeologique du bon site et de la bonne periode.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B05",
+          "title": "What Was It Like to Shop in Ancient Babylon?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Acheter des provisions et comprendre mesures, paiement et relations commerciales.",
+          "research_limit_fr": "Silver/barley contracts a recouper ; pas bazar moderne, pas absence de comptabilite.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B06",
+          "title": "What Did a Babylonian Soldier Actually Do All Day?",
+          "format_family": "status",
+          "reference_video": "https://www.youtube.com/watch?v=diftQzzcm9E",
+          "angle_fr": "Travail, equipement et obligations d'un soldat au-dela des batailles.",
+          "research_limit_fr": "Plus fragile : documenter le quotidien militaire, pas copier un legionnaire ou un Assyrien.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B07",
+          "title": "How Did People in Babylon Get Clean Without Modern Bathrooms?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Eau, lavage, drainage et gestes a la maison.",
+          "research_limit_fr": "Ne pas inventer bains publics romains ; objets et installations attestes.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B08",
+          "title": "What Did Babylonians Actually Drink?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Boissons, preparation, acces et usages domestiques versus rituels.",
+          "research_limit_fr": "Sources de Borsippa/temples ne prouvent pas tous les foyers de Babylon ; preciser contexte.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B09",
+          "title": "What Was It Like to Earn a Living in Ancient Babylon?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Travail concret, paiement, provisions et obligations d'un milieu choisi.",
+          "research_limit_fr": "Pas de salaire ou duree de journee inventes ; contrats/archives a verifier.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "B10",
+          "title": "What Did People in Babylon Do After Dark?",
+          "format_family": "night",
+          "reference_video": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+          "angle_fr": "Une soiree de foyer et de quartier : lumiere, repas, repos et deplacements.",
+          "research_limit_fr": "Plus fragile : pas de couvre-feu suppose ni dangers inventes ; traiter lacunes explicitement.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "folder": "04-imperial-china-daily",
+      "name": "Imperial China Daily",
+      "scope": "Chang'an sous les Tang, vers 750 ; ne pas melanger Song, Ming et Tang.",
+      "sources": [
+        "https://www.guimet.fr/fr/expositions/la-chine-des-tang",
+        "https://www.guimet.fr/fr/catalogue-la-chine-des-tang-une-dynastie-cosmopolite"
+      ],
+      "titles": [
+        {
+          "id": "C01",
+          "title": "What Did People in Tang China Actually Do All Day?",
+          "format_family": "day",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Une journee d'habitant de Chang'an : quartier, repas, travail et ville.",
+          "research_limit_fr": "Pas une journee universelle de toute la Chine imperiale.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C02",
+          "title": "What Happened in Chang'an After the City Gates Closed?",
+          "format_family": "night",
+          "reference_video": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+          "angle_fr": "Rentrer avant fermeture, vivre dans son quartier et expliquer les contraintes nocturnes.",
+          "research_limit_fr": "Verifier regles, dates et exceptions du couvre-feu ; pas de punition spectaculaire inventee.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C03",
+          "title": "What Did Ordinary People in Tang China Actually Eat?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Cuisine et achats ordinaires, avec outils et aliments d'un milieu precis.",
+          "research_limit_fr": "Pas de cuisine moderne ni de riz universel ; distinguer region et statut.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C04",
+          "title": "What Was It Like to Shop in Chang'an's Markets?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Suivre un achat, les produits, acteurs, horaires et quartiers commercants.",
+          "research_limit_fr": "Echanges locaux et lointains distincts ; geographie des marches attestee.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C05",
+          "title": "How Did People in Tang China Keep Themselves Clean?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Corps, vetements, eau et entretien d'un foyer.",
+          "research_limit_fr": "Ne pas importer bains japonais ou hammams ; verifier installations et pratiques.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C06",
+          "title": "How Did People in Tang China Stay Warm Through Winter?",
+          "format_family": "weather",
+          "reference_video": "https://www.youtube.com/watch?v=pQWJtBUyO2s",
+          "angle_fr": "Une nuit froide puis expliquer vetements, combustible et logement.",
+          "research_limit_fr": "Pas de chauffage specifique a une autre dynastie sans preuve.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C07",
+          "title": "What Did Tang Soldiers Actually Eat on Campaign?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Du stockage des provisions aux contraintes du repas en marche.",
+          "research_limit_fr": "Campagne/date fixes, logistique Tang sourcee ; pas modele romain.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C08",
+          "title": "What Was It Like to Live in a Chang'an Neighborhood?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Maison, cour, voisins, sorties et organisation d'un quartier.",
+          "research_limit_fr": "Plan de quartier/foyer documente ; palais exclus de l'habitat ordinaire.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C09",
+          "title": "What Was It Like to Travel Across Tang China?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Journee de route : bagages, haltes, logement et contraintes selon un trajet.",
+          "research_limit_fr": "Choisir un trajet et un voyageur ; systeme postal officiel distinct du voyage prive.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "C10",
+          "title": "What Did People in Tang China Actually Do for Fun?",
+          "format_family": "leisure",
+          "reference_video": "https://www.youtube.com/watch?v=Z8VsA_wPuV0",
+          "angle_fr": "Jeux, musique, spectacles, sorties et differences sociales.",
+          "research_limit_fr": "Loisir de cour n'est pas loisir accessible a chaque habitant.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        }
+      ]
+    },
+    {
+      "code": "O",
+      "folder": "05-ottoman-daily",
+      "name": "Ottoman Daily",
+      "scope": "Istanbul au XVIe siecle, vers 1550 ; campagnes ottomanes datees separement.",
+      "sources": [
+        "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600",
+        "https://dergipark.org.tr/tr/pub/osmed/article/1797849",
+        "https://dergipark.org.tr/tr/pub/iuturkiyat/article/895705"
+      ],
+      "titles": [
+        {
+          "id": "O01",
+          "title": "What Did People in Ottoman Istanbul Actually Do All Day?",
+          "format_family": "day",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Une journee de quartier entre foyer, travail, provisions, bain et retour.",
+          "research_limit_fr": "Istanbul XVIe, pas tous les siecles et territoires ottomans.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O02",
+          "title": "What Did a Janissary Actually Do All Day?",
+          "format_family": "status",
+          "reference_video": "https://www.youtube.com/watch?v=diftQzzcm9E",
+          "angle_fr": "Quotidien d'un militaire, entrainement, obligations, repas et repos.",
+          "research_limit_fr": "Corps et periode precis ; pas histoire fictionnelle de promotions.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O03",
+          "title": "What Did Ottoman Soldiers Actually Eat During War?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Approvisionnement, repas et contraintes d'une campagne concrete.",
+          "research_limit_fr": "Campagne sourcee ; pas repas du palais presente comme ration.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O04",
+          "title": "How Did People in Ottoman Istanbul Survive Winter?",
+          "format_family": "weather",
+          "reference_video": "https://www.youtube.com/watch?v=pQWJtBUyO2s",
+          "angle_fr": "Vetements, chauffage, logement et combustible dans un quartier.",
+          "research_limit_fr": "Type de foyer precise ; pas absence totale de moyens de chauffage.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O05",
+          "title": "What Was It Like to Visit an Ottoman Hammam?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Parcours du bain, materiel, travail des employes et sociabilite.",
+          "research_limit_fr": "Choisir etablissement/clients/epoque ; mise en scene non sexualisee.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O06",
+          "title": "What Did Ordinary People in Ottoman Istanbul Actually Eat?",
+          "format_family": "food",
+          "reference_video": "https://www.youtube.com/watch?v=5b-cq8RHbGI",
+          "angle_fr": "Du vendeur et du four au repas de famille.",
+          "research_limit_fr": "Pas banquet royal, pas mets modernes automatiquement projetes au XVIe.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O07",
+          "title": "What Was It Like to Shop in an Ottoman Bazaar?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Un achat concret dans un marche : outils, produits, prix documentables et metiers.",
+          "research_limit_fr": "Pas decor de bazar contemporain, pas un catalogue touristique.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O08",
+          "title": "How Did Poor People in Ottoman Istanbul Get Their Meals?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Suivre approvisionnement et distribution d'une cuisine publique precise.",
+          "research_limit_fr": "Registres d'imaret disponibles ; acces et beneficiaires variables, pas repas garanti pour tous.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O09",
+          "title": "What Happened When a Fire Broke Out in Ottoman Istanbul?",
+          "format_family": "conditions",
+          "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+          "angle_fr": "Alerte, voisinage, pertes et reconstruction dans un cas documente.",
+          "research_limit_fr": "Pas de pompiers/reformes tardives transposes au XVIe.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        },
+        {
+          "id": "O10",
+          "title": "What Did People in Ottoman Istanbul Do After Dark?",
+          "format_family": "night",
+          "reference_video": "https://www.youtube.com/watch?v=Op-cWw0I3JA",
+          "angle_fr": "Eclairage, travail tardif, sociabilite et retour selon un quartier.",
+          "research_limit_fr": "Cafe seulement a date attestee ; pas couvre-feu universel suppose.",
+          "approved": false,
+          "script_status": "not_started",
+          "production_status": "not_started"
+        }
+      ]
+    }
+  ]
+}

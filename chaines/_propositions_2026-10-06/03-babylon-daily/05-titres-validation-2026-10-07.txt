@@ -1,0 +1,67 @@
+BABYLON DAILY - TITRES A VALIDER - 7 OCTOBRE 2026
+Cadre : Babylone neo-babylonienne vers 600 av. J.-C. ; dates voisines explicitement annoncees.
+Statut : EN ATTENTE DE VALIDATION DES TITRES. Pas de script lance.
+Les titres du fichier 02 restent archives comme premiere proposition.
+Cette liste est la proposition active. Valider les identifiants pour choisir les episodes.
+
+B01 - What Did People in Ancient Babylon Actually Do All Day?
+Angle : Entrer dans un foyer puis suivre eau, nourriture, travail et quartier.
+Famille de format : Journee immersive
+Limite avant script : Ne pas combler les lacunes par un quotidien sumerien ou romain.
+Statut : titre a valider ; faits precis a sourcer.
+
+B02 - How Did People in Babylon Stay Cool Before Air Conditioning?
+Angle : Une journee chaude : logement, ombre, eau, vetements et organisation.
+Famille de format : Contrainte physique et solutions concretes
+Limite avant script : Ne pas inventer tours a vent ou climatisation antique ; verifier chaque dispositif.
+Statut : titre a valider ; faits precis a sourcer.
+
+B03 - What Did Ordinary People in Babylon Actually Eat?
+Angle : Repas, provisions et preparation selon le foyer retenu.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Recettes paleo-babyloniennes vers 1750 ne prouvent pas le menu de 600 ; periodes distinctes.
+Statut : titre a valider ; faits precis a sourcer.
+
+B04 - What Was It Like to Live in a Babylonian House?
+Angle : Cour, pieces, rangement, sommeil et voisinage.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Plan archeologique du bon site et de la bonne periode.
+Statut : titre a valider ; faits precis a sourcer.
+
+B05 - What Was It Like to Shop in Ancient Babylon?
+Angle : Acheter des provisions et comprendre mesures, paiement et relations commerciales.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Silver/barley contracts a recouper ; pas bazar moderne, pas absence de comptabilite.
+Statut : titre a valider ; faits precis a sourcer.
+
+B06 - What Did a Babylonian Soldier Actually Do All Day?
+Angle : Travail, equipement et obligations d'un soldat au-dela des batailles.
+Famille de format : Quotidien d'un statut historique
+Limite avant script : Plus fragile : documenter le quotidien militaire, pas copier un legionnaire ou un Assyrien.
+Statut : titre a valider ; faits precis a sourcer.
+
+B07 - How Did People in Babylon Get Clean Without Modern Bathrooms?
+Angle : Eau, lavage, drainage et gestes a la maison.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Ne pas inventer bains publics romains ; objets et installations attestes.
+Statut : titre a valider ; faits precis a sourcer.
+
+B08 - What Did Babylonians Actually Drink?
+Angle : Boissons, preparation, acces et usages domestiques versus rituels.
+Famille de format : Nourriture et logistique quotidienne
+Limite avant script : Sources de Borsippa/temples ne prouvent pas tous les foyers de Babylon ; preciser contexte.
+Statut : titre a valider ; faits precis a sourcer.
+
+B09 - What Was It Like to Earn a Living in Ancient Babylon?
+Angle : Travail concret, paiement, provisions et obligations d'un milieu choisi.
+Famille de format : Conditions de vie et consequences materielles
+Limite avant script : Pas de salaire ou duree de journee inventes ; contrats/archives a verifier.
+Statut : titre a valider ; faits precis a sourcer.
+
+B10 - What Did People in Babylon Do After Dark?
+Angle : Une soiree de foyer et de quartier : lumiere, repas, repos et deplacements.
+Famille de format : Vie apres la tombee du jour
+Limite avant script : Plus fragile : pas de couvre-feu suppose ni dangers inventes ; traiter lacunes explicitement.
+Statut : titre a valider ; faits precis a sourcer.
+
+Recherche de format et methode d'ecriture : ../FORMAT_ET_ECRITURE_2026-10-07.txt
