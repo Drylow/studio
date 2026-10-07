@@ -132,6 +132,16 @@ un rappel Discord (salon de la chaîne) la veille. Reconnexion : Chaînes → Co
 → Autre méthode : API Google → Reconnecter avec Google. La vérification Google de
 l'application supprimera cette limite ; retirer alors `YOUTUBE_TOKEN_DAYS`.
 
+## Plusieurs chaînes sur un même compte Google
+
+Google propose le compte puis ses profils (Brand Accounts), qui peuvent garder un ancien
+nom de chaîne. Si le profil choisi ne correspond pas à la fiche d'où part la connexion,
+le site affiche la vraie chaîne (photo, nom, @pseudo, abonnés, lien YouTube) et laisse le
+propriétaire choisir la fiche à relier (choix gardé 15 minutes, à usage unique). Une fiche
+active ou en cours de publication garde sa chaîne ; une fiche inactive cède le lien.
+Une fiche dont l'autorisation demandée diffère (actualité / autres) se connecte depuis
+sa propre fiche.
+
 ## Branding du projet existant
 
 Sur Google Auth Platform → Branding, utiliser :

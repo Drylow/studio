@@ -301,18 +301,18 @@ class YouTubeConnectionTests(unittest.TestCase):
         )
         remote.assert_not_called()
 
-    def test_oauth_rejects_another_channel_without_overwriting_access(self):
+    def test_another_channel_waits_for_a_choice_without_overwriting_access(self):
         self.linked()
         r = self.callback(yt_id="UCotherChannel")
-        self.assertIn("youtube_error", parse_qs(urlparse(r.location).query))
+        self.assertIn("youtube_pending", parse_qs(urlparse(r.location).query))
         self.assertEqual(self.store.channel(self.cid)["yt_channel_id"], self.yt_id)
         self.assertEqual(
             self.store.channel(self.cid)["revision"], self.channel["revision"]
         )
 
-    def test_first_connection_rejects_mismatched_name_and_duplicate_identity(self):
+    def test_mismatched_name_or_duplicate_identity_waits_for_a_choice(self):
         r = self.callback(title="Unrelated Channel")
-        self.assertIn("youtube_error", r.location)
+        self.assertIn("youtube_pending", r.location)
         self.assertFalse(self.store.channel(self.cid)["connected"])
         other = next(c for c in self.store.channels() if c["id"] != self.cid)
         with self.store.db() as c:
@@ -321,8 +321,71 @@ class YouTubeConnectionTests(unittest.TestCase):
                 (self.yt_id, other["id"]),
             )
         r = self.callback()
-        self.assertIn("youtube_error", r.location)
+        self.assertIn("youtube_pending", r.location)
         self.assertFalse(self.store.channel(self.cid)["connected"])
+        self.assertEqual(self.store.channel(other["id"])["yt_channel_id"], self.yt_id)
+
+    def pending(self, location):
+        return parse_qs(urlparse(location).query)["youtube_pending"][0]
+
+    def assign(self, pid, fiche):
+        return self.client.post(
+            f"/api/studio/youtube/pending/{pid}/assign",
+            json={"channel_id": fiche["id"], "revision": fiche["revision"]},
+            headers={"X-CSRF-Token": self.csrf},
+        )
+
+    def test_owner_sees_the_chosen_channel_and_links_the_right_fiche(self):
+        other = next(c for c in self.store.channels() if c["id"] != self.cid)
+        r = self.callback(title=other["name"], yt_id="UCotherFixture")
+        pid = self.pending(r.location)
+        detail = self.client.get(f"/api/studio/youtube/pending/{pid}")
+        self.assertEqual(detail.status_code, 200)
+        self.assertEqual(detail.json["title"], other["name"])
+        self.assertEqual(detail.json["suggested"], other["id"])
+        self.assertNotIn("fixture-permanent-access", detail.get_data(as_text=True))
+        self.assertEqual(self.assign(pid, other).json["channel_id"], other["id"])
+        linked = self.store.channel(other["id"])
+        self.assertEqual((linked["yt_channel_id"], linked["connected"]), ("UCotherFixture", 1))
+        self.assertFalse(self.store.channel(self.cid)["connected"])
+        self.assertEqual(self.assign(pid, self.store.channel(self.cid)).status_code, 400)
+
+    def test_choice_is_private_one_use_and_needs_a_sufficient_grant(self):
+        with patch.dict(os.environ, {"YOUTUBE_PUBLICATION_FLOW": "legacy-news"}):
+            other = next(
+                c for c in self.store.channels() if c["publication_mode"] != "news"
+            )
+            r = self.callback(
+                state=parse_qs(
+                    urlparse(
+                        self.client.get(f"/api/studio/youtube/{self.cid}/connect").location
+                    ).query
+                )["state"][0],
+                title=other["name"],
+                yt_id="UCotherFixture",
+            )
+            pid = self.pending(r.location)
+            fiches = {
+                f["id"]: f
+                for f in self.client.get(f"/api/studio/youtube/pending/{pid}").json["fiches"]
+            }
+            self.assertFalse(fiches[other["id"]]["compatible"])
+            refused = self.assign(pid, other)
+            self.assertEqual(refused.status_code, 400)
+            self.assertIn("ne suffit pas", refused.json["error"])
+            self.assertFalse(self.store.channel(other["id"])["connected"])
+            stranger = self.client.post(
+                f"/api/studio/youtube/pending/{pid}/assign",
+                json={"channel_id": self.cid, "revision": self.channel["revision"]},
+            )
+            self.assertEqual(stranger.status_code, 403)
+            self.client.post(
+                f"/api/studio/youtube/pending/{pid}/cancel",
+                headers={"X-CSRF-Token": self.csrf},
+            )
+            self.assertEqual(
+                self.client.get(f"/api/studio/youtube/pending/{pid}").status_code, 400
+            )
 
     def test_renamed_channel_moves_from_its_inactive_former_fiche(self):
         other = next(c for c in self.store.channels() if c["id"] != self.cid)
@@ -340,7 +403,7 @@ class YouTubeConnectionTests(unittest.TestCase):
         self.assertEqual((former["yt_channel_id"], former["connected"]), ("", 0))
         self.assertEqual(former["revision"], other["revision"] + 1)
 
-    def test_renamed_channel_stays_with_an_active_or_same_name_fiche(self):
+    def test_active_fiche_keeps_its_channel_and_same_name_moves_only_on_choice(self):
         other = next(c for c in self.store.channels() if c["id"] != self.cid)
         for title, enabled in (("Former Recap", 1), (self.channel["name"], 0)):
             with self.store.db() as c:
@@ -353,9 +416,20 @@ class YouTubeConnectionTests(unittest.TestCase):
                     (enabled, other["id"]),
                 )
             r = self.callback()
-            self.assertIn("youtube_error", r.location)
+            self.assertIn("youtube_pending", r.location)
             self.assertFalse(self.store.channel(self.cid)["connected"])
             self.assertEqual(self.store.channel(other["id"])["yt_channel_id"], self.yt_id)
+            result = self.assign(self.pending(r.location), self.store.channel(self.cid))
+            if enabled:
+                self.assertEqual(result.status_code, 400)
+                self.assertIn("fiche active", result.json["error"])
+                self.assertEqual(
+                    self.store.channel(other["id"])["yt_channel_id"], self.yt_id
+                )
+            else:
+                self.assertEqual(result.status_code, 200)
+                self.assertEqual(self.store.channel(self.cid)["yt_channel_id"], self.yt_id)
+                self.assertFalse(self.store.channel(other["id"])["connected"])
 
     def test_testing_app_access_is_renewed_before_google_ends_it(self):
         from datetime import datetime, timedelta, timezone

@@ -1770,6 +1770,57 @@ svg {
   gap: 8px;
   align-items: center;
 }
+.youtube-pending {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--cyan);
+}
+.youtube-pending > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.youtube-pending label {
+  display: grid;
+  gap: 8px;
+}
+.youtube-pending-channel {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+}
+.youtube-pending-channel img,
+.youtube-pending-avatar {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.youtube-pending-avatar {
+  display: grid;
+  place-items: center;
+  background: var(--border);
+  font-weight: 700;
+}
+.youtube-pending-channel > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.youtube-pending-channel span {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  font: 12px var(--mono);
+}
+.youtube-pending-channel .text-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 .youtube-actions {
   display: flex;
   gap: 12px;

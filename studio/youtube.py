@@ -1,5 +1,6 @@
 """OAuth with expiring one-use state; uploads only through the checked job queue."""
 
+import base64
 from datetime import datetime, timedelta, timezone
 import json
 import os
@@ -22,6 +23,43 @@ def _normal(text):
     return "".join(x.lower() for x in text if x.isalnum())
 
 
+BUSY = """SELECT EXISTS(SELECT 1 FROM studio_jobs j JOIN studio_videos v ON v.id=j.video_id
+    WHERE v.channel_id=? AND j.kind='publish' AND j.status IN ('queued','running'))"""
+AVATAR_HOSTS = {"yt3.ggpht.com", "yt3.googleusercontent.com"}
+
+
+def _profile(access, yt_id):
+    """Best effort: handle, avatar and audience, so the owner recognises the channel."""
+    try:
+        req = urllib.request.Request(
+            "https://www.googleapis.com/youtube/v3/channels?"
+            + urllib.parse.urlencode({"part": "snippet,statistics", "id": yt_id}),
+            headers={"Authorization": "Bearer " + access},
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            item = (json.load(r).get("items") or [{}])[0]
+        snippet, stats = item.get("snippet") or {}, item.get("statistics") or {}
+        profile = {
+            "handle": str(snippet.get("customUrl") or "")[:100],
+            "subscribers": None
+            if stats.get("hiddenSubscriberCount")
+            else stats.get("subscriberCount"),
+        }
+        url = ((snippet.get("thumbnails") or {}).get("default") or {}).get("url", "")
+        # The page only loads its own images: carry the small avatar inline.
+        if urllib.parse.urlparse(url).hostname in AVATAR_HOSTS:
+            with urllib.request.urlopen(url, timeout=15) as r:
+                kind = r.headers.get("Content-Type", "image/jpeg").split(";")[0]
+                body = r.read(200001)
+            if kind.startswith("image/") and len(body) <= 200000:
+                profile["thumbnail"] = (
+                    f"data:{kind};base64," + base64.b64encode(body).decode()
+                )
+        return profile
+    except Exception:
+        return {}
+
+
 def movable(claims, title):
     """A channel renamed on YouTube may leave an inactive fiche that kept its former name."""
     return all(
@@ -34,6 +72,12 @@ def movable(claims, title):
 
 
 def register_youtube(app, store, owner):
+    with store.db() as c:
+        # Short-lived: one Google authorization waiting for the owner to pick its fiche.
+        c.execute(
+            "CREATE TABLE IF NOT EXISTS studio_youtube_pending(id TEXT PRIMARY KEY, user_id TEXT NOT NULL, origin INTEGER NOT NULL, scope TEXT NOT NULL, refresh_token TEXT NOT NULL, yt_channel_id TEXT NOT NULL, title TEXT NOT NULL, profile TEXT NOT NULL DEFAULT '{}', expires_at TEXT NOT NULL)"
+        )
+
     @app.get("/api/studio/youtube/setup-guide")
     def setup_guide():
         return send_file(
@@ -194,50 +238,86 @@ def register_youtube(app, store, owner):
         title, yt_id = _fetch_channel(token["access_token"])
         if not yt_id:
             raise ValueError("Aucune chaîne YouTube détectée sur ce compte.")
-        if expected["yt_channel_id"] and expected["yt_channel_id"] != yt_id:
-            raise ValueError(
-                "Ce compte Google correspond à une autre chaîne. Reconnecte la chaîne attendue."
+        same = expected["yt_channel_id"] == yt_id or (
+            not expected["yt_channel_id"]
+            and _normal(title)
+            in {_normal(expected["name"]), _normal(expected["handle"])}
+        )
+        if not same or not movable(
+            store.rows(CLAIMS, (yt_id, row["channel_id"])), title
+        ):
+            # Google profiles may still carry a former channel name: show which
+            # channel this is and let the owner choose its fiche explicitly.
+            granted = str(token.get("scope") or row["requested_scope"])
+            pending = secrets.token_urlsafe(18)
+            profile = _profile(token["access_token"], yt_id)
+            with store.db() as c:
+                c.execute(
+                    "DELETE FROM studio_youtube_pending WHERE expires_at<?", (now(),)
+                )
+                c.execute(
+                    "INSERT INTO studio_youtube_pending VALUES(?,?,?,?,?,?,?,?,?)",
+                    (
+                        pending,
+                        row["user_id"],
+                        row["channel_id"],
+                        granted,
+                        token["refresh_token"],
+                        yt_id,
+                        title,
+                        json.dumps(profile),
+                        (
+                            datetime.now(timezone.utc) + timedelta(minutes=15)
+                        ).isoformat(),
+                    ),
+                )
+            return redirect(
+                "/channels?"
+                + urllib.parse.urlencode(
+                    {"youtube_pending": pending, "channel": row["channel_id"]}
+                )
             )
-        if not expected["yt_channel_id"] and _normal(title) not in {
-            _normal(expected["name"]),
-            _normal(expected["handle"]),
-        }:
-            raise ValueError(
-                "La chaîne choisie ("
-                + title
-                + ") ne correspond pas à "
-                + expected["name"]
-                + ". Vérifie le compte sélectionné."
-            )
-        if not movable(store.rows(CLAIMS, (yt_id, row["channel_id"])), title):
-            raise ValueError(
-                "Cette chaîne YouTube est déjà reliée à une autre fiche du studio."
-            )
+        bind(
+            row["channel_id"],
+            expected["revision"],
+            token["refresh_token"],
+            title,
+            yt_id,
+        )
+        return redirect("/channels?connected=" + str(row["channel_id"]))
+
+    def bind(cid, revision, refresh, title, yt_id, *, explicit=False):
+        """Link one fiche to one YouTube channel; never two fiches on one channel."""
         from studio.channel_stats import clear
 
         with store.db() as c:
             c.execute("BEGIN IMMEDIATE")
             current = c.execute(
-                "SELECT revision,retired FROM studio_channels WHERE project_id=?",
-                (row["channel_id"],),
+                "SELECT s.revision,s.retired,p.yt_channel_id FROM studio_channels s JOIN delamain_projects p ON p.id=s.project_id WHERE s.project_id=?",
+                (cid,),
             ).fetchone()
-            if (
-                not current
-                or current["retired"]
-                or current["revision"] != expected["revision"]
-            ):
+            if not current or current["retired"] or current["revision"] != revision:
                 raise Conflict(
                     "Cette chaîne a changé pendant la connexion. Recommence depuis sa fiche."
                 )
-            stale = [
-                dict(r) for r in c.execute(CLAIMS, (yt_id, row["channel_id"])).fetchall()
-            ]
-            if not movable(stale, title):
+            stale = [dict(r) for r in c.execute(CLAIMS, (yt_id, cid)).fetchall()]
+            if explicit:
+                # The owner chose this fiche after seeing the channel; only an
+                # active or publishing fiche keeps its link.
+                active = [old for old in stale if old["enabled"] or old["busy"]]
+                if active:
+                    raise ValueError(
+                        f"Cette chaîne YouTube est reliée à la fiche active « {active[0]['name']} ». Désactive ou déconnecte d’abord cette fiche."
+                    )
+                if current["yt_channel_id"] != yt_id and c.execute(BUSY, (cid,)).fetchone()[0]:
+                    raise ValueError(
+                        "Une publication de cette fiche est en cours. Réessaie après sa fin."
+                    )
+            elif not movable(stale, title):
                 raise ValueError(
                     "Cette chaîne YouTube est déjà reliée à une autre fiche du studio."
                 )
-            # The channel was renamed on YouTube: its former fiche loses the link,
-            # keeps its history, and can no longer publish to this channel.
+            # The former fiche keeps its history and can no longer publish there.
             for old in stale:
                 c.execute(
                     "UPDATE delamain_projects SET yt_refresh_token='',yt_channel_title='',yt_channel_id='' WHERE id=?",
@@ -250,27 +330,118 @@ def register_youtube(app, store, owner):
                 )
             c.execute(
                 "UPDATE delamain_projects SET yt_refresh_token=?,yt_channel_title=?,yt_channel_id=?,yt_connected_at=? WHERE id=?",
-                (token["refresh_token"], title, yt_id, now(), row["channel_id"]),
+                (refresh, title, yt_id, now(), cid),
             )
-            if expected["yt_channel_id"] != yt_id:
-                clear(c, row["channel_id"])
+            if current["yt_channel_id"] != yt_id:
+                clear(c, cid)
             else:
-                c.execute(
-                    "DELETE FROM studio_channel_sync WHERE channel_id=?",
-                    (row["channel_id"],),
-                )
+                c.execute("DELETE FROM studio_channel_sync WHERE channel_id=?", (cid,))
             c.execute(
                 "UPDATE studio_channels SET revision=revision+1,updated_at=? WHERE project_id=?",
-                (now(), row["channel_id"]),
+                (now(), cid),
             )
         for old in stale:
             store.log(
                 "Studio",
                 "youtube",
-                f"Lien YouTube retiré de « {old['name']} » : chaîne renommée « {title} »",
+                f"Lien YouTube retiré de « {old['name']} » : chaîne « {title} » reliée ailleurs",
             )
         store.log("Studio", "youtube", "Chaîne connectée : " + title)
-        return redirect("/channels?connected=" + str(row["channel_id"]))
+
+    def pending_choice(pid):
+        row = store.one("SELECT * FROM studio_youtube_pending WHERE id=?", (pid,))
+        if (
+            not row
+            or row["user_id"] != session["studio_user"]
+            or row["expires_at"] < now()
+        ):
+            raise ValueError(
+                "Ce choix de chaîne a expiré. Relance la connexion depuis la fiche."
+            )
+        return row
+
+    @app.get("/api/studio/youtube/pending/<pid>")
+    def pending_detail(pid):
+        owner()
+        row = pending_choice(pid)
+        profile = json.loads(row["profile"] or "{}")
+        channels = store.channels()
+        handle = _normal(profile.get("handle", ""))
+        suggested = next(
+            (
+                c["id"]
+                for rule in (
+                    lambda c: c["yt_channel_id"] == row["yt_channel_id"],
+                    lambda c: handle and _normal(c["handle"] or "") == handle,
+                    lambda c: _normal(c["name"]) == _normal(row["title"]),
+                )
+                for c in channels
+                if rule(c)
+            ),
+            row["origin"],
+        )
+        return jsonify(
+            title=row["title"],
+            yt_channel_id=row["yt_channel_id"],
+            handle=profile.get("handle", ""),
+            subscribers=profile.get("subscribers"),
+            thumbnail=profile.get("thumbnail", ""),
+            expires_at=row["expires_at"],
+            origin=row["origin"],
+            suggested=suggested,
+            fiches=[
+                {
+                    "id": c["id"],
+                    "name": c["name"],
+                    "revision": c["revision"],
+                    "enabled": bool(c["enabled"]),
+                    "holds": c["yt_channel_id"] == row["yt_channel_id"],
+                    "linked_title": c["yt_channel_title"]
+                    if c["yt_channel_id"] and c["yt_channel_id"] != row["yt_channel_id"]
+                    else "",
+                    "compatible": supports(row["scope"], requested_scope(c)),
+                }
+                for c in channels
+            ],
+        )
+
+    @app.post("/api/studio/youtube/pending/<pid>/assign")
+    def pending_assign(pid):
+        owner()
+        if app.config["PREVIEW"]:
+            raise ValueError("Les connexions réelles sont désactivées dans l’aperçu.")
+        row = pending_choice(pid)
+        data = request.get_json(silent=True) or {}
+        try:
+            cid = int(data.get("channel_id"))
+        except (TypeError, ValueError):
+            raise ValueError("Choisis la fiche à relier.") from None
+        ch = requested_channel(cid)
+        if not supports(row["scope"], requested_scope(ch)):
+            raise ValueError(
+                f"L’autorisation donnée à Google ne suffit pas pour « {ch['name']} ». Lance la connexion depuis cette fiche."
+            )
+        bind(
+            cid,
+            ch["revision"],
+            row["refresh_token"],
+            row["title"],
+            row["yt_channel_id"],
+            explicit=True,
+        )
+        with store.db() as c:
+            c.execute("DELETE FROM studio_youtube_pending WHERE id=?", (pid,))
+        return jsonify(ok=True, channel_id=cid, title=row["title"])
+
+    @app.post("/api/studio/youtube/pending/<pid>/cancel")
+    def pending_cancel(pid):
+        owner()
+        with store.db() as c:
+            c.execute(
+                "DELETE FROM studio_youtube_pending WHERE id=? AND user_id=?",
+                (pid, session["studio_user"]),
+            )
+        return jsonify(ok=True)
 
     @app.post("/api/studio/youtube/<int:cid>/verify")
     def verify(cid):

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   Link2,
@@ -33,6 +33,7 @@ export function YouTubeConnection({
     query.get("connected") === String(channel.id) ||
     query.get("channel") === String(channel.id);
   const returnedError = returned ? query.get("youtube_error") : null;
+  const pending = returned ? query.get("youtube_pending") : null;
   const [open, setOpen] = useState(returned);
   const [busy, setBusy] = useState(false);
   const [confirm, setConfirm] = useState(false);
@@ -48,6 +49,7 @@ export function YouTubeConnection({
       url.searchParams.delete("connected");
       url.searchParams.delete("channel");
       url.searchParams.delete("youtube_error");
+      url.searchParams.delete("youtube_pending");
       window.history.replaceState({}, "", url.pathname + url.search);
     }
   }
@@ -76,6 +78,7 @@ export function YouTubeConnection({
                   {returnedError}
                 </p>
               )}
+              {pending && owner && <PendingChoice id={pending} close={close} />}
               <Tag tone={channel.connected ? "ready" : "muted"}>
                 {channel.connected ? "ACCÈS ENREGISTRÉ" : "À CONNECTER"}
               </Tag>
@@ -149,8 +152,9 @@ export function YouTubeConnection({
                     .
                   </li>
                   <li>
-                    Choisis le compte Google puis la chaîne{" "}
-                    <strong>{channel.name}</strong>.
+                    Choisis ton compte Google, puis un profil. Les profils
+                    peuvent garder un ancien nom de chaîne : le site te montre
+                    ensuite la vraie chaîne et te laisse choisir sa fiche.
                   </li>
                   <li>
                     Accepte les autorisations : tu reviens au studio avec le nom
@@ -255,5 +259,157 @@ export function YouTubeConnection({
           document.body,
         )}
     </>
+  );
+}
+
+type PendingFiche = {
+  id: number;
+  name: string;
+  revision: number;
+  enabled: boolean;
+  holds: boolean;
+  linked_title: string;
+  compatible: boolean;
+};
+type Pending = {
+  title: string;
+  yt_channel_id: string;
+  handle: string;
+  subscribers: string | null;
+  thumbnail: string;
+  origin: number;
+  suggested: number;
+  fiches: PendingFiche[];
+};
+
+// Google profiles can keep a former channel name: show the real channel, then
+// let the owner choose which studio fiche receives it.
+function PendingChoice({ id, close }: { id: string; close: () => void }) {
+  const [data, setData] = useState<Pending | null>(null);
+  const [target, setTarget] = useState(0);
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+  useEffect(() => {
+    api<Pending>(`/youtube/pending/${encodeURIComponent(id)}`)
+      .then((d) => {
+        setData(d);
+        setTarget(d.suggested);
+      })
+      .catch((e) =>
+        setError(e instanceof Error ? e.message : "Choix indisponible."),
+      );
+  }, [id]);
+  if (error && !data) return <p className="error-text">{error}</p>;
+  if (!data) return <p className="muted small">Lecture de la chaîne choisie…</p>;
+  const fiche = data.fiches.find((f) => f.id === target);
+  const holder = data.fiches.find((f) => f.holds && f.id !== target);
+  async function assign() {
+    if (!fiche) return;
+    setBusy(true);
+    setError("");
+    try {
+      await api(`/youtube/pending/${encodeURIComponent(id)}/assign`, "POST", {
+        channel_id: fiche.id,
+        revision: fiche.revision,
+      });
+      window.location.assign(`/channels?connected=${fiche.id}`);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Liaison impossible.");
+      setBusy(false);
+    }
+  }
+  async function other() {
+    setBusy(true);
+    await api(`/youtube/pending/${encodeURIComponent(id)}/cancel`, "POST", {}).catch(
+      () => undefined,
+    );
+    window.location.assign(`/api/studio/youtube/${data!.origin}/connect`);
+  }
+  return (
+    <div className="youtube-pending">
+      <p>
+        Google t’a donné l’accès à cette chaîne YouTube. Vérifie que c’est la
+        bonne, puis choisis la fiche du studio à laquelle la relier.
+      </p>
+      <div className="youtube-pending-channel">
+        {data.thumbnail ? (
+          <img src={data.thumbnail} alt="" width={56} height={56} />
+        ) : (
+          <span className="youtube-pending-avatar">
+            {data.title.slice(0, 1).toUpperCase()}
+          </span>
+        )}
+        <div>
+          <strong>{data.title}</strong>
+          <span>
+            {[
+              data.handle,
+              data.subscribers !== null && data.subscribers !== undefined
+                ? `${Number(data.subscribers).toLocaleString("fr-FR")} abonnés`
+                : "",
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+          </span>
+          <a
+            className="text-button"
+            href={`https://www.youtube.com/channel/${encodeURIComponent(data.yt_channel_id)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Voir sur YouTube <ExternalLink size={14} />
+          </a>
+        </div>
+      </div>
+      <label>
+        Relier à la fiche
+        <select
+          value={target}
+          onChange={(e) => setTarget(Number(e.target.value))}
+          disabled={busy}
+        >
+          {data.fiches.map((f) => (
+            <option key={f.id} value={f.id} disabled={!f.compatible}>
+              {f.name}
+              {f.id === data.suggested ? " (même nom)" : ""}
+              {!f.compatible ? " (connecte depuis cette fiche)" : ""}
+            </option>
+          ))}
+        </select>
+      </label>
+      {fiche?.linked_title && (
+        <p className="form-hint">
+          « {fiche.name} » est reliée à « {fiche.linked_title} » : ce lien sera
+          remplacé.
+        </p>
+      )}
+      {holder && (
+        <p className="form-hint">
+          Cette chaîne est reliée à « {holder.name} » : le lien sera déplacé
+          vers « {fiche?.name} ».
+        </p>
+      )}
+      {error && (
+        <p className="error-text" role="alert">
+          {error}
+        </p>
+      )}
+      <div className="youtube-actions">
+        <Button
+          variant="primary"
+          onClick={assign}
+          disabled={busy || !fiche?.compatible}
+        >
+          <Link2 size={16} />
+          Relier à {fiche?.name || "la fiche"}
+        </Button>
+        <Button onClick={other} disabled={busy}>
+          Choisir un autre profil Google
+        </Button>
+        <Button variant="ghost" onClick={close} disabled={busy}>
+          Annuler
+        </Button>
+      </div>
+    </div>
   );
 }

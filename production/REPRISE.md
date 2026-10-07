@@ -10,6 +10,9 @@
   lui cède le lien (historique conservé). Connexion datée (`yt_connected_at`) ; avec
   `YOUTUBE_TOKEN_DAYS=7` sur le serveur, alerte sur le site et rappel Discord la veille de la
   coupure Google hebdomadaire. Plusieurs chaînes sur un même Gmail : une connexion par chaîne.
+  Cage Dispatch reliée le 7 oct. à 18 h 30 (Paris) à `UC0kWhUDz5-dvl-KqfSw8f4A`. Les profils
+  Google gardent d'anciens noms : quand le profil choisi n'est pas la chaîne de la fiche, le
+  site montre la vraie chaîne et le propriétaire choisit sa fiche (`studio_youtube_pending`).
 - **Piste Google (historique)** : le projet était en *Testing* jusqu'au 6 octobre. En Testing,
   un jeton de renouvellement expire après 7 jours : explication probable de l'`invalid_grant`
   de Le Grand Récap (envois du 29 juin au 1er juillet, puis plus rien). Le passage en
