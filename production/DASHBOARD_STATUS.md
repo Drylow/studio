@@ -3,6 +3,36 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
+## Publication sans installation — 7 octobre 2026
+
+L’utilisateur refuse tout programme à installer sur son PC. Les parcours PC
+(commande via relais partagé et assistant Windows) sont retirés de l’interface
+et des routes actives. Aucun logiciel local n’est nécessaire pour publier via
+l’API YouTube depuis le serveur. Les anciennes tables de tentative restent
+conservées en base ; aucun profil, jeton, réglage ou historique n’est supprimé.
+
+Cela ne résout pas le refus Google. Le client existant et le callback HTTPS ont
+été conservés. Les essais réels avec `youtube.force-ssl` et avec les permissions
+historiques `youtube.upload` + `youtube.readonly` ont été refusés avant le callback.
+Aucun accès Google accepté n’a été enregistré pour Cage/Pitch. La cause précise
+n’est pas observable depuis le serveur : la page de refus contient un paramètre
+opaque, pas un code exploitable. Les clés YouTube/OAuth ne donnent pas l’accès
+administrateur à la Console Google ni au compte de l’utilisateur. Ne pas inviter
+à répéter la même connexion inchangée ou déclarer la publication réparée.
+
+Les méthodes officielles `videos.insert` et `thumbnails.set` requièrent une
+autorisation OAuth ; une clé publique de statistiques ne les remplace pas.
+Les documentations Google sur les applications non vérifiées et les erreurs OAuth
+ont été relues. Une application non vérifiée peut montrer un avertissement ;
+cela n’établit pas la cause exacte de « This app is blocked » dans ce compte.
+Ne pas utiliser le client approuvé d’un tiers pour contourner le refus.
+Le mode nouvelles sans heure fixe et les contrôles des vidéos restent présents.
+La pause est conservée et la création éditoriale autonome reste à terminer.
+
+Validation de ce retrait : 116 tests serveur, compilation TypeScript/Vite et
+parcours YouTube simulé à quatre tailles ; aucun envoi ni nouvelle autorisation
+Google ne sont prouvés par ces essais.
+
 ## Page Statistiques par @pseudo — 6 octobre 2026
 
 Une rubrique indépendante Statistiques suit les chaînes via la lecture publique
@@ -23,8 +53,8 @@ incomplètes et compteurs inconnus sont visibles. Le suivi continue pendant la p
 des publications ou un long montage. Aucun historique privé antérieur, chiffre
 Analytics ou valeur de démonstration n’est affiché dans le vrai studio.
 
-La clé de lecture est encore absente de l’hébergement : une vraie lecture reste
-à vérifier après son enregistrement. Cela est indépendant du blocage OAuth pour
+La clé de lecture est configurée sur l’hébergement ; les identifiants publics
+de Cage et Pitch ont été résolus avec elle. Cela est indépendant du blocage OAuth pour
 la publication. La validation Search Console est confirmée ; le contrôle Branding
 Google demande 24 heures pour son cache. Voir `GOOGLE_YOUTUBE.md`.
 

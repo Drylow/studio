@@ -96,6 +96,21 @@ try {
       waitUntil: "networkidle",
     });
     await dialog().waitFor();
+    assert.equal(
+      await dialog()
+        .getByRole("button", { name: "Connecter avec mon PC", exact: true })
+        .count(),
+      0,
+    );
+    assert.equal(
+      await dialog()
+        .getByRole("link", { name: "Télécharger l’assistant PC", exact: true })
+        .count(),
+      0,
+    );
+    await dialog()
+      .getByText(/Rien à installer sur ton PC/)
+      .waitFor();
     await dialog().getByText(channel.yt_channel_id, { exact: true }).waitFor();
     assert.ok(
       await page.evaluate(

@@ -78,9 +78,9 @@ export function YouTubeConnection({
                 {channel.connected ? "ACCÈS ENREGISTRÉ" : "À CONNECTER"}
               </Tag>
               <p>
-                Le studio publie directement sur la chaîne reliée, avec le
-                titre, la description et la miniature. Discord reste une
-                livraison facultative.
+                Rien à installer sur ton PC. Après l’autorisation Google, le
+                serveur pourra envoyer la vidéo, le titre, la description et la
+                miniature directement sur cette chaîne.
               </p>
               {!!channel.connected && (
                 <div className="youtube-identity">

@@ -24,6 +24,10 @@ d'environnement du compte s'il manque).
   qualité restent obligatoires. Voir `production/DASHBOARD_PLAN.md`.
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
+- **7 octobre : aucun programme à installer sur son PC pour publier.** Les parcours PC sont retirés.
+  La publication API reste côté serveur et nécessite un consentement Google accepté.
+  Les identifiants YouTube/cPanel ne sont pas un accès administrateur Google Cloud.
+  Ne pas annoncer le blocage Google résolu ni demander une répétition inchangée du consentement.
 
 ## 2. Règles absolues
 

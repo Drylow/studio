@@ -135,3 +135,24 @@ vérifie et produit seul les actualités reste à terminer. L’envoi des vidéo
 sans heure fixe sur Cage/Pitch, est implémenté et testé pour le transport Google
 actuel. Les deux chaînes restent déconnectées, désactivées et le studio en pause.
 Les contrôles de droits, de qualité et d’actualité restent obligatoires pour toute voie.
+
+## Décision du 7 octobre : aucune installation sur le PC
+
+L’utilisateur refuse l’assistant local. Tous les parcours de connexion PC sont
+retirés du site et des endpoints actifs. Ne pas lui proposer de télécharger un
+programme, installer une extension ou désactiver une protection. La piste du PC
+ne constitue plus la solution choisie. Les tâches de diagnostic ont compilé
+un programme sous Windows, sans exécuter celui-ci ni enregistrer le protocole.
+Cela ne prouve aucune connexion de compte ni aucune publication.
+
+La publication API depuis le serveur reste gratuite et sans logiciel local,
+mais elle exige un consentement Google accepté. Les deux demandes réelles
+connues sont refusées avant le callback ; la cause précise est inconnue.
+Les identifiants OAuth disponibles sur o2switch ne sont pas des identifiants
+administrateur Google Cloud. Ne pas annoncer une réparation du refus à partir
+d’une compilation, redirection de départ, clé de statistiques ou simulation.
+
+Sources officielles relues :
+[envoi et autorisation](https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest),
+[erreurs OAuth](https://developers.google.com/identity/protocols/oauth2/web-server#errors),
+[applications non vérifiées](https://support.google.com/cloud/answer/7454865?hl=en).
