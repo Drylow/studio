@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "xs357e2rp9rmr0d13188vv1v8w",
+  "prompt": "Isolated close microphone dry food foley: small broken chocolate pieces and chocolate crumbs tumble onto an oak chopping board, irregular gentle wooden tick tack patter, crunchy granular chocolate texture, a brief decaying cascade. Quiet clean studio. No music, no voice, no glass, no metallic ringing.",
+  "source": "sfx-crumbs-source.mp3",
+  "sha256": "2ae5387356714e0e63edfa89bb005c5776a99e2e69078bc1e27e814e4a971996",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}

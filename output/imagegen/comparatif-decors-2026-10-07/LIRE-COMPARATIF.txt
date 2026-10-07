@@ -14,3 +14,9 @@ But : comparer le traitement du decor sans changer la scene ni le personnage.
 Prompts rediges par Codex ; examen visuel apres chaque appel.
 Les variations sont des essais, PAS de nouveaux decors maitres approuves.
 Aucune video ni aucun nouveau style global n'est lance sans validation.
+
+CHOIX UTILISATEUR ENSUITE LE 7 OCTOBRE :
+Option 1 BD sobre retenue pour les decors. Revenir aux personnages a tete
+blanche pour toutes les videos. Les humains restent uniquement en miniature.
+L'image du comparatif avec humain valide le decor, PAS le personnage video.
+Exemple combine dans output/imagegen/style-bd-sobre-tetes-blanches-2026-10-07/.

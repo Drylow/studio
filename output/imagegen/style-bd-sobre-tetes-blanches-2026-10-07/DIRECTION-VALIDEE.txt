@@ -1,0 +1,16 @@
+DIRECTION VALIDEE LE 7 OCTOBRE 2026
+
+VIDEOS : decors BD sobres, lignes nettes, textures reduites, details
+architecturaux lisibles. Personnages adultes a tete ronde blanche,
+yeux noirs simples, bouche neutre, mains blanches en moufles, corps couverts.
+Pas d'humains dans les plans de video ; l'essai d'intro humaine est abandonne.
+
+MINIATURES : conserver les vrais visages humains cartoon expressifs.
+Les cinq propositions existantes sont rassemblees dans le dossier A-REGARDER
+sous output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/.
+Le choix de la direction ne valide pas individuellement toutes les miniatures.
+
+01-edo.png est un exemple de la combinaison demandee, examine par Codex,
+pas un plan synchronise avec une voix ni une video prete a publier.
+Les quatre autres lieux n'ont pas encore ete convertis en maitres BD sobres.
+Leurs anciennes references restent preservees comme ancres de geometrie.

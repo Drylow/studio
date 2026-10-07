@@ -6,6 +6,10 @@
   "request": "Compare background treatments judged too goofy by user; keep human protagonist and scene as controls.",
   "calls_completed": 3,
   "approved_by_user": false,
+  "background_direction_approved_by_user": true,
+  "approved_background_variant": "01-bd-sobre",
+  "human_video_characters_rejected": true,
+  "approval_scope": "Background direction only. Video characters must return to white round heads; humans remain thumbnail-only.",
   "replaces_canonical_master": false,
   "video_production_started": false,
   "baseline": {

@@ -1,0 +1,4 @@
+**/media/
+**/frames/
+**/tool-analysis/
+__pycache__/

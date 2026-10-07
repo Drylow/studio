@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-07",
+  "purpose": "Five existing human thumbnail proposals gathered for user review",
+  "folder": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER",
+  "operation": "Exact byte-for-byte copies of selected existing thumbnail files; no new thumbnail generation",
+  "human_thumbnail_direction_approved": true,
+  "individual_thumbnails_approved": false,
+  "folder_open_requested": true,
+  "selected": [
+    {
+      "channel": "Edo Daily",
+      "headline": "EDO LIFE",
+      "source": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/01-edo.png",
+      "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/01-Edo-Daily.png",
+      "sha256": "d187f9b977007bef32d08448d2226ca465d8f575b66b00c211605af918c5577e"
+    },
+    {
+      "channel": "Aztec Daily",
+      "headline": "LAKE CITY",
+      "source": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/02-aztec-v2.png",
+      "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/02-Aztec-Daily.png",
+      "sha256": "ece347f9416c824e772b128d9e7bf065e926cf62b70110bbc257c25b8706836d"
+    },
+    {
+      "channel": "Babylon Daily",
+      "headline": "DAILY GRIND",
+      "source": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/03-babylon.png",
+      "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/03-Babylon-Daily.png",
+      "sha256": "a5a2f87ce38b71cb81a7087a41d5d601d73dd843e9ffe1eecc78b827bb6b8820"
+    },
+    {
+      "channel": "Imperial China Daily",
+      "headline": "BEFORE DARK",
+      "source": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/04-tang.png",
+      "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/04-Imperial-China-Daily.png",
+      "sha256": "497e724f3c2f465d54380844b38fbed39f7746ffa59d1ef3637cfb3584301ef7"
+    },
+    {
+      "channel": "Ottoman Daily",
+      "headline": "DAILY BREAD",
+      "source": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/05-ottoman.png",
+      "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/05-Ottoman-Daily.png",
+      "sha256": "25982a0a144788d00acfca6b344767ec65087c8b14f4bc734790042c4f29d27b"
+    }
+  ]
+}

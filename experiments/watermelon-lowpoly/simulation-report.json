@@ -1,42 +1,101 @@
 [
   {
-    "cuts": 1,
-    "start": 0.85,
+    "tool": "machete",
+    "count": 1,
+    "start": 1.1,
     "length": 2,
     "pieces": 2,
     "minBottom": 0.28081842601304396,
     "maxRadius": 3.739305338026087
   },
   {
-    "cuts": 4,
-    "start": 2.85,
+    "tool": "machete",
+    "count": 4,
+    "start": 3.1,
     "length": 2.3,
     "pieces": 12,
     "minBottom": 0.2106226731140552,
     "maxRadius": 5.314740740507286
   },
   {
-    "cuts": 8,
-    "start": 5.15,
+    "tool": "machete",
+    "count": 8,
+    "start": 5.4,
     "length": 2.7,
     "pieces": 28,
     "minBottom": 0.2960872305060309,
     "maxRadius": 3.0629714154566865
   },
   {
-    "cuts": 16,
-    "start": 7.85,
+    "tool": "machete",
+    "count": 16,
+    "start": 8.1,
     "length": 3.1,
     "pieces": 60,
     "minBottom": 0.23662579846455128,
     "maxRadius": 3.058970935570419
   },
   {
-    "cuts": 32,
-    "start": 10.95,
+    "tool": "machete",
+    "count": 32,
+    "start": 11.2,
     "length": 3.7,
     "pieces": 124,
     "minBottom": 0.08638651120950486,
     "maxRadius": 3.070927422316343
+  },
+  {
+    "tool": "saw",
+    "count": 1,
+    "start": 14.9,
+    "length": 3.4,
+    "pieces": 2,
+    "minBottom": 0.28081842601304396,
+    "maxRadius": 4.477419400739012
+  },
+  {
+    "tool": "saw",
+    "count": 4,
+    "start": 18.3,
+    "length": 4.7,
+    "pieces": 12,
+    "minBottom": 0.2976505225506031,
+    "maxRadius": 4.198403688741285
+  },
+  {
+    "tool": "saw",
+    "count": 8,
+    "start": 23,
+    "length": 6.9,
+    "pieces": 28,
+    "minBottom": 0.2960872305060309,
+    "maxRadius": 3.0629714154566865
+  },
+  {
+    "tool": "pistol",
+    "count": 1,
+    "start": 29.9,
+    "length": 3.8,
+    "pieces": 18,
+    "minBottom": 0.0020418662764309925,
+    "maxRadius": 5.822627334752401
+  },
+  {
+    "tool": "pistol",
+    "count": 4,
+    "start": 33.7,
+    "length": 3.2,
+    "pieces": 40,
+    "minBottom": 0.0019431002038248213,
+    "maxRadius": 6.220468402969116
+  },
+  {
+    "tool": "pistol",
+    "count": 8,
+    "start": 36.9,
+    "length": 3.4,
+    "pieces": 100,
+    "minBottom": 0.0013141703941768057,
+    "maxRadius": 6.484131935286359
   }
 ]

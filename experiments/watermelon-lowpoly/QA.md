@@ -1,32 +1,56 @@
 # Vérification de Pixel Cuts — 7 octobre 2026
 
-Version actuelle : 1 / 4 / 8 / 16 / 32 cuts, cadence ralentie, 14,65 s. Révision audio, icône pastèque près de WATERMELON, preview allégée et logo cuisto avec spatule.
+Version actuelle : chef et trois outils, 41,80 s. Arrivée normale du fruit, puis
+machette 1 / 4 / 8 / 16 / 32, scie 1 / 4 / 8 et pistolet 1 / 4 / 8.
+Aucun hook, teaser ni texte PREVIEW. Musique reportée.
 
-## Contrôles réalisés
+## Composition et simulation
 
-- Source : vidéo du tweet regardée en lecture et sur 53 captures, avec agrandissement des détails. Aucun extrait incorporé au livrable.
-- Simulation : `node verify-simulation.mjs` vérifie les cinq niveaux, la continuité des chapitres, 93 événements de coupe (32 dans le hook et 61 ensuite), l'ordre des frappes, la conservation du volume, les surfaces fermées, les poses finies et les rotations unitaires. Résultat : réussite.
-- Niveaux 1 / 4 / 8 / 16 / 32 : 2 / 12 / 28 / 60 / 124 fragments. Physique à 120 Hz, respectivement 216 / 202 / 208 / 198 / 192 poses. Aucun sommet sous le sol ; limites détaillées dans `simulation-report.json`.
-- Hook : 0 à 0,85 s ; 32 frappes espacées de 20 ms. Fruit maintenu en place, fissures accentuées, aucune libération des fragments. Cut direct vers la pastèque intacte du niveau 1.
-- Chapitres : départs 0,85 / 2,85 / 5,15 / 7,85 / 10,95 s. Première frappe à +0,12 s. Salves des niveaux multiples réparties sur 0,42 / 0,77 / 1,25 / 1,90 s. Dernière salve trois fois plus longue que celle de 32 cuts du brouillon précédent.
-- Lames : vitesse constante réduite, fenêtres de visibilité de 0,15 s, écho à 12 ms et opacité de 12 %. Dispersion et rotation initiales des morceaux réduites. Un accent sonore synthétisé pour chaque division géométrique.
-- Style : grille 216 × 384 agrandie ×5 sans lissage, palette de 19 couleurs, titres bitmap sur la même grille. WATERMELON, PREVIEW, CUT et CUTS ; texte exclusivement anglais.
-- HyperFrames : contrôle strict de la révision à 0,5 / 1,1 / 5,7 / 11,7 / 14,5 s, sur GPU matériel : aucune erreur ni avertissement. Le contrôle logiciel remonte quatre avertissements du pilote liés à ReadPixels, sans erreur de composition. Le contraste DOM ne mesure pas les titres du canevas ; ils sont examinés visuellement.
-- Huit captures du montage révisé regardées dans `snapshots/pixel-32-final/`. Preview ouverte dans le navigateur Codex sur le port 3019 ; lecture lancée et arrivée en fin de timeline constatée. Le titre 32 CUTS et la durée 14,65 s sont chargés dans l'éditeur.
+- Référence : vidéo du tweet regardée en lecture et sur 53 captures avant réalisation ; aucun extrait incorporé.
+- `node verify-simulation.mjs` : réussite pour onze chapitres. Continuité, ordre des frappes, volumes conservés, solides fermés, poses finies, rotations unitaires et tolérance de sol vérifiés. L'intro garde un seul fruit intact et zéro événement de coupe.
+- Machette : 2 / 12 / 28 / 60 / 124 fragments, 216 / 202 / 208 / 198 / 192 poses. Scie : 2 / 12 / 28 fragments, 280 / 166 / 154 poses. Pistolet : 18 / 40 / 100 fragments, 350 / 259 / 439 poses. Échantillonnage à 120 Hz ; intégration à 240 Hz pour les tirs. Chute finale poursuivie pendant la fin avec la spatule.
+- Arrivée : fruit porté en 0,72 s, retrait de la main entre 0,76 et 1,05 s. Paume horizontale dédiée, centrée sous le fruit ; sa face supérieure et le point le plus bas du melon sont tous deux à y=1,00, sans écart. Main et fruit partagent le même déplacement jusqu'au retrait. Manche blanche reliée au poignet. Quatre captures à 0,30 / 0,55 / 0,72 / 0,82 s dans `snapshots/palm-support/`, dont les vues 0,55 et 0,72 s regardées en pleine taille.
+- 1 CUT affiché dès l'arrivée ; première vraie coupe à 1,22 s. Chapitres machette à 1,10 / 3,10 / 5,40 / 8,10 / 11,20 s ; salves multiples sur 0,42 / 0,77 / 1,25 / 1,90 s. Lames lancées à vitesse constante, visibles 0,15 s. Les quatre captures de `snapshots/no-hook/` ont été regardées : arrivée intacte, 1 CUT, première lame, puis 4 CUTS.
+- Scie : départs 14,90 / 18,30 / 23,00 s. Grand disque à 32 dents, rayon maximal 2,48. Entrée continue depuis le haut droit, alignement sur le plan de coupe, arc entre passes et sortie continue. Intervalles de 0,75 s pour quatre passes, 0,65 s pour huit.
+- Pistolet : départs 29,90 / 33,70 / 36,90 s. Rafales de quatre tirs sur 0,36 s et huit sur 0,56 s, intervalles de 120 puis 80 ms. Recul de moins de 0,1 s, traceur d'une image, flash chaud discret d'environ 52 ms, blessures visibles et éclats dirigés. Fractures obliques à positions inégales, ouverture progressive, projection et rotation renforcées. Recul et recentrage de caméra pour contenir les débris.
+- Mouvement : sampler et profil rig du composant camera-shake du catalogue adaptés à la caméra 3D avant la conversion en palette ; titres fixes. Carte d'animation sur 41,8 s dans `qa/animation-map/` : un seul pilote onUpdate, indicateur paced-slow. Cet indicateur décrit l'horloge et ne mesure pas les trajectoires 3D ; les cadences réelles figurent ci-dessus et dans les données simulées.
+- Style : grille 216 × 384 agrandie ×5 sans lissage, palette de 23 couleurs, titres bitmap et icônes sur la même grille. Texte exclusivement anglais. Détails de palette et zones de sécurité dans `design.md`.
+
+## Bruitages et contrôle technique
+
+- 74 accents de coupe, 13 tirs, 1 160 collisions regroupées en 180 accents discrets. Bruitages du tir et de la scie générés via Replicate, puis figés en fichiers locaux avec prompt, identifiant de génération, empreinte et lien des conditions dans `assets/sfx-*.json`. Aucun appel externe dans le build.
+- Tir : source réduite à 120 ms, mono 48 kHz, filtrage à 7,2 kHz, attaque de 1 ms et relâchement de 20 ms, puis gain de 0,62 dans le mix. Moteur de scie avec entrée progressive et accents au passage. Gain maître linéaire 1,314656 ; pic WAV 0,78, zéro échantillon écrêté. Sans saturateur, sans musique.
+- HyperFrames 0.8.140 : contrôle strict final sur GPU matériel à 0,55 / 31,05 / 34,90 / 38,35 / 40,58 / 41,18 s, réussi avec zéro erreur et zéro avertissement. `three-levels-check-report.json`. Le contraste DOM ne mesure pas les titres du canevas ; ils sont examinés visuellement.
+- Preview rechargée dans Codex sur le port 3019, durée 41,8 s et MACHETE — 1 CUT constatés. Les pages HTML de contrôle sont conservées sous extension .html.txt afin de ne pas être indexées comme compositions. FPS réel de Studio non mesuré ; aucune promesse de 60 FPS dans le navigateur.
+- Logo existant : `brand/chef-spatula-avatar.png`, chef pixel art avec spatule, déjà regardé après modification.
+
+## Dernière révision : éclats irréguliers et célébration
+
+- Fractures déterministes obliques, divisions à positions inégales : 18 / 40 / 100 solides. Volume conservé ; rapports de volumes max/min de 17,73 / 6,56 / 12,16 ; surfaces internes non alignées sur une grille, vérifiés par `verify-simulation.mjs`. Petits débris de tir tétraédriques. Garde de contact par points de support pour prévenir la traversée du sol par les éclats rapides.
+- Célébration : deux gerbes de quatorze particules à +0,06 et +0,72 s ; palette existante, petites étoiles et confettis bitmap. Ancre projetée depuis la main et la spatule, léger saut de 0,22 unité. Sampler adapté du composant confetti du catalogue, sans sa carte de démonstration.
+- Captures finales 38,65 / 40,58 / 41,18 s regardées. Les morceaux ont des silhouettes anguleuses inégales ; les particules sont visibles autour de la spatule sans masquer les titres.
 
 ## Export
 
-Livrable : `watermelon-pixelcuts-32-polished.mp4`, 14,65 s, 1080 × 1920, 60 images/s, 879 images, 11,4 Mo. SHA-256 : `5166cde66c74d3531a128dad94fb09ec3eb8aa2e15cf3459394d9f21938bd764`.
+MP4 terminé : 41,800 s, 1080 × 1920, 60 images/s, 2 508 images ; H.264 High,
+YUV420p / BT.709, AAC LC stéréo 48 kHz. Taille : 36 612 741 octets.
+SHA-256 : `a822dd6c6db65e4b5209fe4ee3783579da670752de072c392809da263ffaba15`.
 
-- Rendu logiciel terminé en 3 min 18,1 s, dont 3 min 15,7 s de capture. H.264 High, YUV420p, BT.709 ; AAC LC stéréo à 48 kHz.
-- Toutes les 879 images décodées sans erreur, puis regardées sur quinze planches numérotées couvrant les images 0 à 878. Hook coupé avant toute chute, cinq niveaux uniquement, lames espacées, morceaux dans le cadre, titres anglais et style pixel art conservés.
-- Contrôle de présence des pixels des titres sur chaque image : couverture minimale de 100 %. Le tampon du canevas est publié après composition de la scène et de toutes les lettres.
-- Audio décodé jusqu'à la fin : pic du MP4 à −4,0 dBFS, moyenne à −29,2 dBFS. Les 93 accents restent alignés sur les découpes ; 584 impacts regroupés en 67 accents doux. Le saturateur est supprimé, les bruits filtrés et les gains adaptés aux frappes proches. Aucun échantillon WAV écrêté. Dans le chapitre 32 cuts, l'énergie au-dessus de 4 kHz passe de 53,4 % à 34,6 % et le niveau RMS de −16,7 à −24,8 dBFS. Ces mesures vérifient l'adoucissement ; elles ne remplacent pas une écoute humaine du caractère satisfaisant.
-- Preview : cache de palette contrôlé contre le calcul sans cache, résultat identique octet par octet. Test isolé sur 100 images : 13,42 ms contre 2,20 ms pour cette étape. Les sommets du fruit maintenu sont réutilisés entre deux coupes. Le FPS réel de Studio n'est pas mesuré ; aucune promesse de 60 FPS dans le navigateur.
-- Logo : `brand/chef-spatula-avatar.png` regardé après modification avec imagegen. Cuisto pixel art, spatule visible dans la main, aucune pastèque ni texte dans le logo ; palette crème et vert.
+Rendu par captures avec GPU logiciel et deux workers : 7 min 4,4 s au total,
+dont 5 min 44,5 s de capture, 1 min 14,1 s d'encodage et 1,9 s d'assemblage.
+Les 2 508 images ont été décodées et regardées dans 42 planches ; la dernière
+contient 48 images. Pas d'image noire ni de canevas incomplet constaté.
+Les titres couvrent 100 % des images. Arrivée sur la paume, départ à 1 CUT,
+entrée continue de la grande scie, fragments irréguliers et célébration finale
+confirmés dans cet export. Rapport : `qa/watermelon-chef-three-levels/media-report.json`.
 
-Planches et rapport local : `qa/watermelon-pixelcuts-32-polished/`, quinze planches regardées couvrant les images 0 à 878. Icône et titre visibles sur tout le montage, hook coupé avant la chute, cinq niveaux uniquement, aucun cadre noir observé. Contrôle strict : `pixel-check-report.json`. Fichiers générés exclus de Git. `python qa_frames.py watermelon-pixelcuts-32-polished.mp4` reconstruit les quinze planches. Preview rechargée dans Studio sur le port 3019 et icône constatée ; aucune lecture complète du nouveau MP4 dans le navigateur n'est revendiquée.
+Audio AAC décodé : pic −3,4 dBFS, moyenne −31,3 dBFS, sans écrêtage mesuré.
+Reproduction du contrôle : `python qa_frames.py watermelon-chef-three-levels.mp4`.
 
 ## Limites
 
-Fragments rigides et coupes planes : pas de chair souple, jus ni déformation du fruit. Lames et séparation initiale scénarisées ; chute et collisions contre la planche et le sol simulées. Contacts entre fragments actifs pour 1 et 4 cuts ; désactivés pour 8 à 32, avec une dispersion initiale modérée pour stabiliser les lamelles fines. Le teaser ne déclenche pas la chute.
+Fragments rigides : pas de chair souple ni simulation de jus. Lames, flash,
+marques et petits éclats scénarisés ; chute et collisions contre planche et sol
+simulées. Contacts entre fragments désactivés pour les divisions denses et
+les tirs. Les mesures audio vérifient l'absence d'écrêtage ; elles ne remplacent
+pas une écoute humaine du caractère satisfaisant.

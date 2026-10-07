@@ -63,3 +63,20 @@ Les accroches restent provisoires et seront raccordees au contenu du script.
 Images humaines retenues : 01-edo.png, 02-aztec-v2.png, 03-babylon.png,
 04-tang.png et 05-ottoman.png. Les cinq images ont ete regardees par Codex.
 Direction humaine confirmee, mais ces cinq images restent a valider.
+
+DERNIERE DEMANDE DU 7 OCTOBRE : REFAIRE LES VIDEOS 01
+L'utilisateur refuse le portrait de travailleur avec un produit comme concept
+systematique. Il veut voir plusieurs activites d'une journee et une accroche
+liee au sujet de la video. Les anciennes series restent conservees.
+Nouvelle serie humaine : output/imagegen/miniatures-01-journee-v2-2026-10-07/.
+E01 : WORK OR PLAY?
+A01 : JUST WORK?
+B01 : WORK ALL DAY?
+C01 : ANY FREE TIME?
+O01 : JUST RELAXING?
+Les cinq titres sont toujours les questions What Did People ... Do All Day?
+L'accroche n'affirme pas que tout le monde etait inactif. La mise en scene
+contraste sociabilite/repos et une activite de travail secondaire.
+Humains uniquement en miniature. Videos : BD sobre et tetes blanches.
+Ces nouvelles miniatures doivent etre validees ; le script final n'existe pas
+encore et reste le controle editorial obligatoire avant publication.

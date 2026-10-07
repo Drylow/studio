@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-07",
+  "provider": "configured CLI Proxy",
+  "creative_owner": "Codex",
+  "background_direction_approved_by_user": "BD sobre / option 1",
+  "video_character_direction_approved_by_user": "Adult white round heads, small black eyes, neutral mouth, white mitten hands, covered bodies",
+  "thumbnail_direction": "Expressive human cartoon faces, thumbnail-only",
+  "human_intro_experiment_rejected": true,
+  "full_video_production_started": false,
+  "new_scene_image_approved_by_user": false,
+  "image": {
+    "file": "output/imagegen/style-bd-sobre-tetes-blanches-2026-10-07/01-edo.png",
+    "bytes": 1816923,
+    "sha256": "4bb71e795d2c14ba74791a8ef35fa83854db0f6bcdc44df3bf5b186f9405155e",
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  "prompt": {
+    "file": "output/imagegen/style-bd-sobre-tetes-blanches-2026-10-07/prompt-edo.txt",
+    "bytes": 2268,
+    "sha256": "1b2f13a9836151e359d4dbbe5386717c156ce00fa2a858b67c044b77917ce35b"
+  },
+  "references_sent": [
+    {
+      "index": 1,
+      "role": "approved sober comic environment; edit target",
+      "file": "output/imagegen/comparatif-decors-2026-10-07/01-bd-sobre.png",
+      "bytes": 1842619,
+      "sha256": "d2eedefede0821c0241b4cc3fcd99cf147857417f3d9f645d82af1594b3370db"
+    },
+    {
+      "index": 2,
+      "role": "white round-head adult character style only",
+      "file": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+      "bytes": 2036511,
+      "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "Codex",
+    "method": "direct image inspection against both references",
+    "result": "usable applied direction example",
+    "notes": "One white round-head adult, black dot eyes, tiny neutral mouth, no human facial details. Dark blue outfit and white rounded hands. Same table/cup, shoji, alcove and veranda recognizable; background retains reduced texture and clear line work. No second person or new text.",
+    "limitations": "White sampled inside face/hand is near-white (253-254), not proven literal #FFFFFF throughout. Generated scene is not pixel-identical to background reference."
+  },
+  "historical_script_verified": false,
+  "transcript": null,
+  "timing": null
+}

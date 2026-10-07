@@ -2,7 +2,7 @@
 import json,math,subprocess,sys
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageStat
-movie=Path(sys.argv[1] if len(sys.argv)>1 else 'watermelon-pixelcuts-32-polished.mp4')
+movie=Path(sys.argv[1] if len(sys.argv)>1 else 'watermelon-chef-three-levels.mp4')
 out=Path('qa')/movie.stem;out.mkdir(exist_ok=True,parents=True)
 composition=json.loads(Path('assets/simulation.json').read_text(encoding='utf-8'))
 expected_duration=composition['duration']
@@ -25,7 +25,8 @@ assert len(frames)==round(expected_duration*60),len(frames)
 # Regression check for the observed partial-canvas capture: static title
 # pixels must remain present throughout each chapter, including after cuts.
 title_coverage=[]
-for shot in composition['shots']:
+review_chapters=composition['shots']+[{'start':composition['outroStart'],'length':expected_duration-composition['outroStart']}]
+for shot in review_chapters:
     start=round(shot['start']*60)
     end=round((shot['start']+shot['length'])*60)
     baseline=frames[start].tobytes()
@@ -46,6 +47,6 @@ for start in range(0,len(frames),60):
         draw.text((col*180+5,row*342+4),f'{start+j:03d} | {(start+j)/60:05.2f}s',fill='#f1e7d6')
         assert sum(ImageStat.Stat(frame).mean)>60,'Unexpected black image'
     sheet.save(out/f'all-frames-{start//60+1:02d}.jpg',quality=91)
-report={'file':movie.name,'duration':float(meta['format']['duration']),'frames':len(frames),'resolution':[video['width'],video['height']],'fps':video['r_frame_rate'],'has_audio':True,'all_frames_decoded':True,'sheets':math.ceil(len(frames)/60),'minimum_title_coverage':min(title_coverage),'chapters':[{'start':s['start'],'cuts':s['count'],'length':s['length']} for s in composition['shots']]}
+report={'file':movie.name,'duration':float(meta['format']['duration']),'frames':len(frames),'resolution':[video['width'],video['height']],'fps':video['r_frame_rate'],'has_audio':True,'all_frames_decoded':True,'sheets':math.ceil(len(frames)/60),'minimum_title_coverage':min(title_coverage),'chapters':[{'tool':s['tool'],'start':s['start'],'count':s['count'],'length':s['length']} for s in composition['shots']]}
 (out/'media-report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 print(json.dumps(report,indent=2))
