@@ -12,7 +12,9 @@ publication demandée par l'utilisateur dans la conversation, envoyée par le se
 
 ## Essai de simulation low-poly — 7 octobre 2026
 
-**Révision actuelle : Pixel Cuts, son adouci et logo cuisto.** Cadence et maximum
+**Révision actuelle : chef, trois outils, éclats irréguliers et célébration.** 41,80 s, portrait 1080 × 1920 à 60 images/s. Paume sous le fruit pendant son arrivée ; départ normal à 1 CUT, puis machettes jusqu’à 32, grande scie flottante et rafales de pistolet cartoon. Les tirs produisent 18 / 40 / 100 morceaux anguleux inégaux. Fin à la spatule avec léger saut, confettis et étincelles pixel art. SFX de scie et de tir figés via Replicate, sans musique. Vérification physique et contrôle strict GPU matériel réussis. MP4 terminé, 2 508 images décodées et regardées dans 42 planches ; titres présents sur toutes les images, pic audio −3,4 dBFS. Livré dans Codex ; aucune publication sur les réseaux sociaux.
+
+**Révision précédente : Pixel Cuts, son adouci et logo cuisto.** Cadence et maximum
 32 conservés. Une petite icône pastèque accompagne WATERMELON. Le mix conserve
 93 accents de coupe et regroupe 584 impacts en 67 accents discrets, sans saturateur.
 Cache exact de palette et réutilisation des sommets entre coupes pour alléger la

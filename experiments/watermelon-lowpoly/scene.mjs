@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import DATA from './assets/simulation.json';
 import {PIXEL_WIDTH,PIXEL_HEIGHT,createPixelView} from './pixel.mjs';
+import {createChefTools} from './tools.mjs';
+import {impactMotion} from './impact-motion.mjs';
 const W=1080,H=1920;
 const canvas=document.getElementById('fruit-canvas');
 const renderer=new THREE.WebGLRenderer({antialias:false,alpha:false,preserveDrawingBuffer:true});
@@ -29,12 +31,13 @@ for(let i=0;i<14;i++){
  for(let j=0;j<4;j++)board.add(box([.55+(i*3+j*7)%9*.14,.004,.006],[-2.65+j*1.75+(i%3)*.06,.347,-2.46+i*.379+(j%3-.8)*.08],'#b78355'));
 }
 scene.add(board);
+const poseTools=createChefTools(scene,box,DATA.height,DATA.radii[1]);
 const blade=new THREE.Group();
 blade.add(box([.055,1.6,4.5],[0,0,0],'#b7c2ba',.25));
 blade.add(box([.03,.06,4.52],[0,-.81,0],'#eef3e9',.2));
 blade.add(box([.24,.38,1.6],[0,.52,2.93],'#203c2a',.5));
 blade.add(box([.16,.42,.13],[0,.52,2.12],'#dfc79d',.3));
-// A bounded pool supports overlapping throws in the teaser and 32-cut burst.
+// A bounded pool supports overlapping throws in the final 32-cut chapter.
 const knives=Array.from({length:12},()=>{
  const main=blade.clone(),echo=blade.clone();
  main.scale.setScalar(.78);echo.scale.setScalar(.78);
@@ -126,7 +129,7 @@ function mountStage(ids,key){
   if(!meshes.has(id))meshes.set(id,createPiece(DATA.geometries[id]));
   return meshes.get(id);
  });
- const geometryKey=ids.length;
+ const geometryKey=ids.join(',');
  if(!batches.has(geometryKey))batches.set(geometryKey,buildBatches(ids,parts));
  activeBatches=batches.get(geometryKey);activeBatches.forEach(b=>fruit.add(b.mesh));activeStage=key;
 }
@@ -159,9 +162,13 @@ function throwKnife(knife,i,age){
 }
 function renderAt(input){
  const time=Math.max(0,Math.min(input,DATA.duration-1/60));
- const index=DATA.shots.findLastIndex(s=>time+1e-7>=s.start),shot=DATA.shots[index],t=Math.max(0,time-shot.start);
+ const index=DATA.shots.findLastIndex(s=>time+1e-7>=s.start),shot=DATA.shots[index],outro=time>=DATA.outroStart;
+ const t=Math.max(0,Math.min(time-shot.start,shot.length+(outro?1.5:0)-1/60));
  const stage=shot.cutTimes.filter(c=>t>=c).length;
  const ids=shot.stages[stage];mountStage(ids,`${index}:${stage}`);
+ const hitAge=t-(shot.cutTimes.filter(c=>t>=c).at(-1)??-99);
+ const arrival=Math.max(0,Math.min(1,t/.72)),carry=index===0?-5*(1-arrival*arrival*(3-2*arrival)):0;
+ fruit.position.set(carry+(shot.tool==='pistol'&&hitAge<.075&&t<shot.release?.16*Math.sin(hitAge/.075*Math.PI):0),0,0);
  if(t>=shot.release){
   const f=(t-shot.release)*DATA.fps,a=Math.min(Math.floor(f),shot.frames.length-1),b=Math.min(a+1,shot.frames.length-1),mix=f-a;
   parts.forEach((g,i)=>{const p=shot.frames[a][i],q=shot.frames[b][i];
@@ -169,9 +176,9 @@ function renderAt(input){
    poseA.set(...p.slice(3));poseB.set(...q.slice(3));g.quaternion.copy(poseA.slerp(poseB,mix));
   });
  }else parts.forEach((g,i)=>{
-  const p=DATA.geometries[ids[i]],tease=index===0?4:1;
-  g.position.copy(V(p.center)).addScaledVector(V(p.offset),tease).add(new THREE.Vector3(0,DATA.height,0));
-  if(index===0)g.position.addScaledVector(V(p.center),.07*stage/shot.count);
+  const p=DATA.geometries[ids[i]];
+  g.position.copy(V(p.center)).add(V(p.offset)).add(new THREE.Vector3(0,DATA.height,0));
+  if(shot.tool==='pistol')g.position.addScaledVector(V(p.center),stage*.018);
   g.quaternion.identity();
  });
  // Held geometry stays identical between cuts. Only the camera and knives
@@ -180,17 +187,29 @@ function renderAt(input){
  if(poseKey!==activePose){updateBatches();activePose=poseKey;}
  knives.forEach(({main,echo})=>{main.visible=false;echo.visible=false;});
  let slot=0;
- shot.cutTimes.forEach((c,i)=>{
+ if(shot.tool==='machete'&&!outro)shot.cutTimes.forEach((c,i)=>{
   const age=t-c;
   if(age<-.08||age>.07||slot>=knives.length)return;
   const {main,echo}=knives[slot++];main.visible=true;echo.visible=true;
   throwKnife(main,i,age);throwKnife(echo,i,age-.012);
  });
+ poseTools({tool:shot.tool,t:outro?time-DATA.outroStart:t,cutTimes:shot.cutTimes,count:shot.count,planes:DATA.planes,outro,intro:index===0});
  const theta=.75+Math.sin(time*.18)*.045;
  const pullback=Math.max(0,Math.min(1,(t-shot.release)/.75));
- const radius=(index===0?16.9:18.5)+3.3*pullback;
- camera.position.set(Math.sin(theta)*radius,11.5+2*pullback,Math.cos(theta)*radius);camera.lookAt(0,1.9,0);renderer.render(scene,camera);
- drawPixelFrame(renderer.domElement,shot.count,index-1,index===0);
+ const radius=(index===0?18.5:shot.tool==='machete'?18.5:shot.tool==='saw'?20.5:20.0)+(shot.tool==='pistol'?7.5:3.3)*pullback;
+ const vibration=outro?0:shot.tool==='pistol'&&hitAge>=0&&hitAge<.18?3*(1-hitAge/.18):shot.tool==='saw'&&shot.cutTimes.some(c=>Math.abs(t-c)<.22)?1.2:0;
+ const shake=impactMotion(time,vibration);
+ camera.position.set(Math.sin(theta)*radius+shake.px,11.5+2*pullback+shake.py,Math.cos(theta)*radius+shake.pz);
+ camera.lookAt(shot.tool==='pistol'?-.65*(1-pullback):0,1.9,shot.tool==='pistol'?.25*(1-pullback):0);
+ camera.rotateX(shake.pitch*Math.PI/180);camera.rotateY(shake.yaw*Math.PI/180);camera.rotateZ(shake.roll*Math.PI/180);
+ renderer.render(scene,camera);
+ let celebration=null;
+ if(outro){
+  const local=time-DATA.outroStart,entrance=Math.min(1,local/.35);
+  const anchor=new THREE.Vector3(-3.25-(1-entrance)*3,DATA.height+.65+Math.max(0,Math.sin(local*Math.PI*3))*.22,1).project(camera);
+  celebration={time:local,x:(anchor.x+1)*PIXEL_WIDTH/2,y:(1-anchor.y)*PIXEL_HEIGHT/2};
+ }
+ drawPixelFrame(renderer.domElement,index===0?1:shot.count,Math.max(0,index-1),shot.tool,outro,celebration);
 }
 window.drawFruit=renderAt;
 window.addEventListener('hf-seek',e=>renderAt(e.detail.time));renderAt(window.__hfThreeTime||0);
