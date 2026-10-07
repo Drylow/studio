@@ -12,7 +12,14 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
 - **Thèmes** : des **personnages historiques** connus (Napoléon, Mozart, Beethoven…) avec un fait
   surprenant, chiffres à l'appui. Les idées « argent caché » et science pure ont été refusées
   (« à dormir debout »).
-- **Les deux premières secondes doivent accrocher** : le chiffre choc est à l'écran dès la première image.
+- **Les deux premières secondes doivent accrocher** (retour du 7 oct. sur la 1re vidéo : « pas assez
+  accrocheur ») : le personnage en grand portrait pixel claque dès la première image (flash), avec la
+  phrase choc. Le compteur seul ne suffit pas.
+- **Pas d'outro** (« demain on fera… » : refusé) : la vidéo s'arrête sur sa chute.
+- **Illustrations** : pixel art généré par Replicate (Retro Diffusion `rd-plus`, guidé par la palette,
+  fond transparent) avec `art.py batch videos/<nom>/script.json` (bloc `"art"` du script ; ~11 images
+  par vidéo, refaire une image : `--only nom`). Les petits dessins codés de `sprites.js` restent pour
+  les icônes (soldats, crânes, thermomètre…). Clé : `REPLICATE_API_TOKEN` dans `.env`.
 
 ## Le style d'Archibald (analysé image par image, 5 vidéos, 1 min 40 à 2 min)
 
@@ -48,7 +55,8 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
 - **`engine.js` + `sprites.js` :**
   - Dessinent l'image du temps t sur un canevas 1080×1920, de façon déterministe.
   - Éléments : `text` (préréglages `title`, `big`, `num`, `label`, `sub` ; `*mot*` = bleu), `counter`, `stamp`,
-    `sprite`, `icons`, `grid`, `bars`, `flow` (bande de Minard), `line`, `forest`, `dna`, `rect`, `endcard`.
+    `img` (illustration, effets `in: slam|scan|pop|fade`, `fx: breathe|shiver|bob|zoom`), `sprite`, `icons`,
+    `grid`, `bars`, `flow` (bande de Minard), `line`, `forest`, `dna`, `rect`, `endcard`.
   - Les gros chiffres utilisent Tiny5, avec des rayures façon écran LED.
 - **`render.mjs` :**
   - Chromium dessine chaque image et ffmpeg l'encode, sur 3 pages en parallèle (environ 13 images/s ici).
