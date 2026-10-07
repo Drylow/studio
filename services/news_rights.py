@@ -7,12 +7,19 @@ class RightsNotEstablished(ValueError):
 
 LICENSES = {
     "CC0": "https://creativecommons.org/publicdomain/zero/1.0",
+    "CC BY 2.0": "https://creativecommons.org/licenses/by/2.0",
+    "CC BY 2.5": "https://creativecommons.org/licenses/by/2.5",
     "CC BY 3.0": "https://creativecommons.org/licenses/by/3.0",
     "CC BY 4.0": "https://creativecommons.org/licenses/by/4.0",
+    "CC BY-SA 2.0": "https://creativecommons.org/licenses/by-sa/2.0",
+    "CC BY-SA 2.5": "https://creativecommons.org/licenses/by-sa/2.5",
     "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0",
     "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0",
     "Public domain": None,
 }
+# The owner keeps a voice provider whose terms restrict automated use (decision
+# recorded 7 Oct 2026). The manifest states that choice instead of claiming a licence.
+OWNER_RISK = "owner_accepted_risk"
 
 
 def image_rights(visual):
@@ -42,7 +49,9 @@ def automation_rights(plan):
         image_rights(segment.get("visual"))
     audio = plan.get("audio_rights") or {}
     voice = audio.get("voice") or {}
-    if (voice.get("commercial_use") is not True or voice.get("automated_access") is not True
+    granted = lambda key: voice.get(key) is True or (
+        voice.get(key) == OWNER_RISK and str(voice.get("owner_decision", "")).strip())
+    if (not granted("commercial_use") or not granted("automated_access")
             or not voice.get("evidence_url", "").startswith("https://") or not voice.get("reviewed_at")):
         raise RightsNotEstablished("L'automatisation exige une autorisation documentée pour la voix et l'accès API.")
     music = audio.get("music") or {}

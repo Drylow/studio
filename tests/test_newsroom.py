@@ -217,10 +217,14 @@ class NewsroomTests(unittest.TestCase):
                 "UPDATE studio_news_config SET enabled=1 WHERE channel_id=?",
                 (self.ch["id"],),
             )
+        feeds = self.store.one(
+            "SELECT count(*) AS n FROM studio_news_feeds WHERE channel_id=? AND enabled=1",
+            (self.ch["id"],),
+        )["n"]
         with patch("studio.newsroom.fetch_feed", return_value=[]) as external:
             tick(self.store)
             tick(self.store)
-            self.assertEqual(external.call_count, 2)  # two sources, one pass
+            self.assertEqual(external.call_count, feeds)  # every source, one pass
             with self.store.db() as c:
                 c.execute(
                     "UPDATE studio_news_config SET next_run='' WHERE channel_id=?",
@@ -228,7 +232,7 @@ class NewsroomTests(unittest.TestCase):
                 )
                 c.execute("UPDATE studio_settings SET paused=1")
             tick(self.store)
-            self.assertEqual(external.call_count, 2)
+            self.assertEqual(external.call_count, feeds)
 
     def test_disabling_source_during_download_discards_its_pending_result(self):
         def fetch(url):

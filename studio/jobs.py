@@ -64,6 +64,10 @@ def execute(store, row):
         vid = prepare(store, payload["item_id"], payload["revision"], actor)
         job.update(1, "Fiche de recherche préparée")
         return {"video_id": vid}
+    if row["kind"] == "news_auto":
+        from studio.autonews import produce
+
+        return produce(store, payload, job)
     v = store.video(row["video_id"])
     if not v:
         raise ValueError("Vidéo introuvable.")
@@ -72,7 +76,12 @@ def execute(store, row):
     if kind == "publish":
         from studio.publishing import publish
 
-        return publish(store, v, ch, job)
+        result = publish(store, v, ch, job)
+        if (result or {}).get("published"):
+            from studio.autonews import announce
+
+            announce(store, store.video(v["id"]), result["youtube_id"])
+        return result
     if kind == "verify":
         return verify(store, v, job)
     if kind == "discord":

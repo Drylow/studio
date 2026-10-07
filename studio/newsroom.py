@@ -18,10 +18,18 @@ from studio.store import now, uid, Conflict
 from studio.domain import date, fresh
 
 DEFAULTS = {
-    "mma_en": [("MMA News", "https://www.mmanews.com/feed/")],
+    "mma_en": [
+        ("MMA News", "https://www.mmanews.com/feed/"),
+        ("Sherdog", "https://www.sherdog.com/rss/news.xml"),
+        ("Bloody Elbow", "https://www.bloodyelbow.com/feed/"),
+        ("Cageside Press", "https://cagesidepress.com/feed/"),
+        ("BJPenn.com", "https://www.bjpenn.com/feed/"),
+    ],
     "football_en": [
         ("BBC Sport · Football", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
         ("The Guardian · Football", "https://www.theguardian.com/football/rss"),
+        ("Sky Sports · Football", "https://www.skysports.com/rss/12040"),
+        ("talkSPORT · Football", "https://talksport.com/football/feed/"),
     ],
 }
 

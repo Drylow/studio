@@ -133,6 +133,12 @@ def run(store, once=False):
             renewal_tick(store)
         except Exception as e:
             store.log("Studio", "error", "Rappel de connexion : " + str(e)[:300])
+        try:
+            from studio.autonews import tick as autonews_tick
+
+            autonews_tick(store)
+        except Exception as e:
+            store.log("Studio", "error", "Choix des sujets automatiques : " + str(e)[:300])
         time.sleep(3)
 
 

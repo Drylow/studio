@@ -1,5 +1,27 @@
 # Analyses courtes d'actualité sportive
 
+## Pilote automatique Cage / Pitch (7 octobre 2026)
+
+`studio/autonews.py`, lancé par le moteur du site toutes les 10 minutes, seulement si le
+studio n'est pas en pause et que la chaîne est **automatique, activée, connectée**.
+1. Radar : flux vérifiés (MMA : MMA News, Sherdog, Bloody Elbow, Cageside Press, BJPenn ;
+   foot : BBC, Guardian, Sky Sports, talkSPORT), infos de moins de 18 h, notées 0–10 par
+   l'IA (« croustillant » pour les fans) ; ≥ 7 seulement. **2 vidéos par jour et par chaîne**
+   au maximum (`NEWS_AUTO_DAILY`), 5 essais au plus par jour.
+2. Lecture des articles sources ; ne restent que les faits dont la citation est retrouvée
+   **mot pour mot** dans l'article (5 au minimum, sinon arrêt).
+3. Script 640–780 mots à partir de ces faits seuls, puis **vérification phrase par phrase** ;
+   2 réécritures au plus, sinon arrêt. `reviewed_at` = contrôle automatique, noté comme tel.
+4. Photos : Wikimedia Commons uniquement, licence réutilisable (CC0, domaine public,
+   CC BY / BY-SA 2.0–4.0), auteur + page de preuve enregistrés ; crédits dans la description.
+5. Voix Algrow (choix du propriétaire, risque des conditions accepté et noté dans le
+   manifeste), musique générée, montage existant (`news_brief.build`) sur o2switch.
+6. Miniature dans le thème validé (`presets/news_thumbnails/approved_2026-10-05/`), avec les
+   portraits Commons ; texte contrôlé en vision (sinon arrêt).
+7. Contrôle des planches en vision, décodage, manifeste des droits, statut `ready` →
+   `studio/auto_publication.py` publie (contrôles habituels) → message Discord avec le lien.
+`NEWS_AUTO_DRY=1` : fabrique et contrôle sans publier (statut `review` + message Discord).
+
 Format demandé le 5 octobre 2026 : analyses **4–6 minutes**, voix de la chaîne,
 sources affichées, photos sourcées et cartes originales. Les interviews de 15–20
 minutes continuent à utiliser `production/news.py`. Publication manuelle par
