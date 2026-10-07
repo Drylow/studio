@@ -102,7 +102,8 @@ async function main() {
       const seg = path.join(tmp, `seg_${w}.mp4`);
       const page = await openPage(browser, port, spec);
       const ff = ffmpeg(["-y", "-f", "image2pipe", "-framerate", String(fps), "-c:v", "png", "-i", "-",
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", seg]);
+        "-c:v", "libx264", "-preset", args.preset || "slow", "-tune", "animation", "-crf", String(args.crf || 10),
+        "-profile:v", "high", "-pix_fmt", "yuv420p", "-x264-params", "aq-mode=3:deblock=-1,-1", seg]);
       for (let f = a; f < b; f++) {
         await write(ff.stdin, await grab(page, f / fps));
         if (++done % 150 === 0) console.log(`images ${done}/${total} (${((Date.now() - started) / 1000).toFixed(0)} s)`);
@@ -113,7 +114,7 @@ async function main() {
     fs.writeFileSync(list, [...Array(workers).keys()].filter(w => fs.existsSync(path.join(tmp, `seg_${w}.mp4`)))
       .map(w => `file '${path.join(tmp, `seg_${w}.mp4`)}'`).join("\n"));
     const mux = ["-y", "-f", "concat", "-safe", "0", "-i", list];
-    if (args.audio) mux.push("-i", args.audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "192k", "-shortest");
+    if (args.audio) mux.push("-i", args.audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "320k", "-shortest");
     mux.push("-c:v", "copy", "-movflags", "+faststart", out);
     await ffmpeg(mux).done;
     fs.rmSync(tmp, { recursive: true, force: true });
