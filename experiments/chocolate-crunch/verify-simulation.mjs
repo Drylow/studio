@@ -18,10 +18,11 @@ for(const [id,g] of Object.entries(d.geometries)){
  assert(volume>0,'Wrong face winding '+id);
  localVertices[id]=[...new Map(g.faces.flatMap(f=>f.points).map(v=>[key(v),V(v).sub(V(g.center))])).values()];
 }
-let cursor=0;
+let cursor=0,barCount=0;
 for(const s of d.trials){
  assert(s.start===cursor,'Incorrect trial boundary');cursor=+(cursor+s.length).toFixed(3);
  assert(s.bars.length===s.count,'Counter mismatch');
+ barCount+=s.count;
  for(const bar of s.bars){
   const initial=d.size.reduce((a,n)=>a*n,1),sum=bar.ids.reduce((a,id)=>a+d.geometries[id].volume,0);
   volumeError=Math.max(volumeError,Math.abs(sum-initial));assert(Math.abs(sum-initial)<1e-6,'Lost chocolate volume');
@@ -29,7 +30,10 @@ for(const s of d.trials){
   assert(bar.hit>d.release&&bar.hit<3,'Invalid contact time');
   assert(bar.frames.slice(0,first).every(f=>f.length===1),'Fracture before contact');
   assert(bar.frames.slice(first).every(f=>f.length===bar.ids.length),'Missing fragments');
-  const pre=bar.frames[first-1][0];assert(Math.abs(pre[1]-d.size[1]/2-d.forkTop)<.15,'Break did not happen at the fork');
+  const pre=bar.frames[first-1][0];
+  if(s.tool==='fork')assert(Math.abs(pre[1]-d.size[1]/2-d.forkTop)<.15,'Break did not happen at the fork');
+  if(s.tool==='jackhammer')assert(Math.abs(pre[1]-d.size[1]/2-3.05)<.23,'Break missed the upward chisel');
+  if(s.tool==='glove')assert(Math.abs(pre[1]-(s.base+s.bars.indexOf(bar)*d.gap))<.06,'Chocolate fell before the glove hit');
   assert(events.some(e=>e.type==='crunch'&&e.chapter===d.trials.indexOf(s)&&e.bar===s.bars.indexOf(bar)&&Math.abs(e.t-s.start-bar.hit)<1e-6),'SFX contact mismatch');
   bar.frames.forEach((frame,i)=>frame.forEach((p,j)=>{
    poseCount++;assert(p.every(Number.isFinite),'Non-finite pose');
@@ -40,6 +44,7 @@ for(const s of d.trials){
  }
 }
 assert(minimum>-.015,'Fragment crossed the ground');assert(maximum<8,'Debris escaped the tabletop view');assert(unitError<2e-5,'Invalid rotation');
-assert(d.duration===27.8&&d.outroStart===cursor,'Wrong duration');
-const report={ok:true,bars:31,geometries:Object.keys(d.geometries).length,poseCount,minimumBottom:minimum,maximumRadius:maximum,volumeError,unitError};
+assert(d.duration===23.3&&d.outroStart===cursor,'Wrong duration');
+assert(d.trials.map(t=>t.tool).join(',')==='fork,fork,glove,glove,jackhammer,jackhammer','Wrong tool progression');
+const report={ok:true,bars:barCount,geometries:Object.keys(d.geometries).length,poseCount,minimumBottom:minimum,maximumRadius:maximum,volumeError,unitError};
 mkdirSync('qa',{recursive:true});writeFileSync('qa/simulation-report.json',JSON.stringify(report,null,2));console.log(report);

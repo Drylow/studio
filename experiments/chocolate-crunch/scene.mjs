@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import DATA from './assets/simulation.json';
 import {PIXEL_WIDTH,PIXEL_HEIGHT,createPixelView} from './pixel.mjs';
 import {createChef} from './chef.mjs';
+import {createCrazyTools} from './props.mjs';
 const canvas=document.getElementById('chocolate-canvas');
 const renderer=new THREE.WebGLRenderer({antialias:false,alpha:false,preserveDrawingBuffer:true});
 renderer.setSize(PIXEL_WIDTH,PIXEL_HEIGHT,false);renderer.setPixelRatio(1);
@@ -34,6 +35,7 @@ for(const x of [-.75,-.25,.25,.75]){
  tooth.rotation.y=Math.PI/4;tooth.position.set(x,2.35,0);tooth.castShadow=true;tooth.receiveShadow=true;fork.add(tooth);
 }
 const poseChef=createChef(scene,box);
+const poseTools=createCrazyTools(scene,box);
 const material=new THREE.MeshStandardMaterial({color:'#704530',roughness:.73,flatShading:true});
 material.onBeforeCompile=s=>{
  s.vertexShader='attribute vec3 chocolateRest; attribute float fractureFace; varying vec3 vRest; varying float vFracture;\n'+s.vertexShader;
@@ -75,6 +77,7 @@ function setPose(mesh,p,q,mix){mesh.position.set(p[0]+(q[0]-p[0])*mix,p[1]+(q[1]
 function renderAt(input){
  const time=Math.max(0,Math.min(input,DATA.duration-1/60)),index=DATA.trials.findLastIndex(s=>time>=s.start),trial=DATA.trials[index];
  const outro=time>=DATA.outroStart,t=Math.min(time-trial.start,trial.length-1/120),f=t*DATA.fps,a=Math.floor(f),b=a+1,mix=f-a;
+ fork.visible=trial.tool==='fork';poseTools(trial.tool,t);
  groups.forEach((g,i)=>g.visible=i===index);
  const carry=index===0&&t<.72?-5*(1-smooth(t/.72)):0;
  groups[index].position.set(carry,0,0);
@@ -91,13 +94,14 @@ function renderAt(input){
  if(index<DATA.trials.length-1)groups[index].position.x+=clear*10;
  const lastHit=trial.bars.filter(b=>t>=b.hit).at(-1)?.hit??-99,age=t-lastHit;
  const stack=Math.max(0,trial.count-4)*.32,anticipation=1-smooth((t-1.4)/1.2);
- const radius=20.5+stack*anticipation+1.3*smooth((t-2.3)/.8),theta=.75+Math.sin(time*.18)*.025;
- const shake=age>=0&&age<.10?Math.sin(age*185)*.025*(1-age/.10):0;
+ const radius=(trial.tool==='glove'?25:20.5)+stack*anticipation+1.3*smooth((t-2.3)/.8),theta=.75+Math.sin(time*.18)*.025;
+ const shake=age>=0&&age<.12?Math.sin(age*185)*(trial.tool==='fork'?.025:.10)*(1-age/.12):trial.tool==='jackhammer'&&t>=.98&&t<2.3?Math.sin(t*138)*.018:0;
  camera.position.set(Math.sin(theta)*radius+shake,11.5+stack*.25*anticipation,Math.cos(theta)*radius);
  camera.lookAt(0,3.25+stack*.20*anticipation,0);
- const anchor=poseChef({time:outro?time-DATA.outroStart:t,first:index===0,outro,base:DATA.base}).project(camera);
+ const anchor=poseChef({time:outro?time-DATA.outroStart:t,first:index===0,outro,base:trial.base}).project(camera);
  renderer.render(scene,camera);
- pixel(renderer.domElement,trial.count,index,outro,outro?{time:time-DATA.outroStart,x:(anchor.x+1)*PIXEL_WIDTH/2,y:(1-anchor.y)*PIXEL_HEIGHT/2}:null);
+ pixel(renderer.domElement,trial.count,index,outro,outro?{time:time-DATA.outroStart,x:(anchor.x+1)*PIXEL_WIDTH/2,y:(1-anchor.y)*PIXEL_HEIGHT/2}:null,trial.tool);
  canvas.dataset.trial=String(trial.count);canvas.dataset.broken=String(trial.bars.filter(b=>t>=b.hit).length);
+ canvas.dataset.tool=trial.tool;
 }
 window.drawChocolate=renderAt;window.addEventListener('hf-seek',e=>renderAt(e.detail.time));renderAt(window.__hfThreeTime||0);

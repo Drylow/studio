@@ -1,4 +1,46 @@
-# Delivery audit — 7 October 2026
+# Delivery audit — 8 October 2026
+
+Current output: `chocolate-crazy-tools.mp4`, SHA-256
+`2e6e09f59f21310cf9603094bc6fc4dd775f6c09b5fc2d2accbe646e6ea61069`.
+23.3 seconds, 1080×1920, 60fps, 1,398 frames, 49.9 MB.
+
+The user selected a spring boxing glove followed by an upward jackhammer, with
+fewer quantity steps. Two trials per tool replace the five fork-only trials:
+fork 1 / 4, glove 4 / 8, jackhammer 8 / 16. The normal palm arrival and happy
+spatula finish are retained. The earlier fork-only MP4 remains available as a
+previous export; this is the current composition.
+
+All 1,398 decoded frames were viewed in 24 numbered contact sheets. Reviewed
+spring compression, rapid horizontal punch, retraction, upward chisel movement,
+food contacts, transitions, tumbling and celebration. Some flying chips exit
+the side of the frame during the stronger actions; titles stay unobstructed.
+The white sleeve, original Watermelon palette and English bitmap labels remain.
+
+The strict hardware preview check passed at 28 timestamps with no errors or
+warnings. `qa_frames.py` verifies the quantity and tool-title field on every
+exported frame; minimum coverage 1.0. Export used HyperFrames 0.8.140,
+`--quality delivery --fps 60 --workers 2 --browser-gpu --gpu --strict-all`,
+hardware screenshot capture and encoding; completed in 85.3 seconds.
+
+Physics verification passed: 41 bars, 573 closed irregular geometries, 171,972
+stored poses, volume error below 1e-6, unit-quaternion error below 2e-5, no early
+fractures and contact checks for all three tools. Minimum vertex height 0.00314;
+maximum horizontal radius 6.604 units. The spring stroke and 22Hz upward chisel
+poses share one absolute-time function between physics and rendering.
+
+Three new original SFX sources add spring compression, a boxing thump and rapid
+mechanical percussion. All 41 primary chocolate cracks follow tool contacts;
+544 landing events share 114 restrained groups. PCM peak −2.73 dBFS, no clipped
+samples. Final decoded AAC peak −3.6 dBFS, mean −33.0 dBFS. These are measured
+checks, not a claim of human headphone listening. No music or reference audio.
+
+The dense piles retain the stylised static-object collision approximation and
+support guard documented below. The glove's extra damping keeps projected
+fragments near the tabletop. Studio preview was reopened in Codex and verified
+to show the spring-glove chapter and the revised 23.3-second timeline. No social
+media publishing was performed.
+
+## Previous delivery — 7 October 2026
 
 Reviewed output: `chocolate-giant-fork.mp4`, SHA-256
 `ac38feeb0737844a7af50e54de7b8374ce7cfa40e29cd8289206ca7bbc51586d`.

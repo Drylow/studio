@@ -2,11 +2,11 @@
 workflow: general-video
 flow: automation
 storyboard: no
-message: "Our pixel chef drops more and more chocolate bars onto a giant fork."
+message: "Our pixel chef escalates from a fork to a spring boxing glove and upward jackhammer."
 destination: tiktok-shorts
 aspect: 1080x1920
 language: en
-length: 27.8s
+length: 23.3s
 narration: no
 ---
 
@@ -28,9 +28,14 @@ for an actual adapted video. Author the scene and sound directly with code.
 - Real food only: chocolate here; fruits, steak and other food for later episodes.
 - Same cream background, oak board, pixel art throughout and recognisable chef.
 - Begin normally with one bar carried on the palm; no preview hook.
-- Five trials: 1 / 2 / 4 / 8 / 16 bars. Give the contact and tumbling time to read.
+- Two trials per tool: fork 1 / 4 bars, spring boxing glove 4 / 8 bars,
+  upward-pointing jackhammer 8 / 16 bars. Shorter progression: 23.3 seconds.
+- The glove visibly compresses its coil, punches horizontally and retracts.
+- The last machine stands with its chisel pointing up, vibrating at 22Hz as
+  chocolate drops onto it. Tool poses are shared by physics and rendering.
 - Irregular brittle fragments; the moulded chocolate grid is not the fracture grid.
-- Crisp food fracture and wooden landings. Replicate SFX already authorised.
+- Crisp food fracture and wooden landings, plus spring, boxing thump and
+  restrained mechanical hammer pulses. Replicate SFX already authorised.
 - No music or narration. All visible words in English.
 - Happy spatula finish with the existing small hop and pixel confetti.
 

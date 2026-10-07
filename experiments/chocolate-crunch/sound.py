@@ -1,4 +1,4 @@
-"""Frozen food foley; main accents from fork contacts, restrained wooden debris."""
+"""Frozen food and mechanism foley; each accent follows its visible action."""
 import json, math, subprocess, wave, hashlib
 from pathlib import Path
 import numpy as np
@@ -52,6 +52,9 @@ def sources(name,length):
 snaps=sources('snap',.17)
 woods=sources('wood',.095)
 crumbs=sources('crumbs',.38)
+springs=sources('spring',.52)
+punches=sources('punch',.20)
+hammers=sources('hammer',.045)
 
 def add(sample,t,gain,speed=1):
     n=round(len(sample)/speed)
@@ -63,9 +66,16 @@ crunch=[e for e in events if e['type']=='crunch']
 for e in crunch:
     # Dense stack: overlapping attacks share a bounded energy budget.
     occupancy=sum(abs(c['t']-e['t'])<.075 for c in crunch)
-    gain=.72/math.sqrt(occupancy)
+    gain=(.70 if e['tool']=='fork' else .84)/math.sqrt(occupancy)
     add(snaps[(e['bar']+e['chapter'])%3],e['t'],gain,1+(e['bar']%5-2)*.024)
     add(woods[e['bar']%3],e['t'],gain*.18,.92)
+
+for e in events:
+    if e['type']=='spring':add(springs[e['chapter']%3],e['t'],.22,.95)
+    elif e['type']=='punch':add(punches[e['chapter']%3],e['t'],.50,.92)
+    elif e['type']=='hammer':
+        # A restrained 22Hz mechanical pulse under the louder food fractures.
+        add(hammers[e['chapter']%3],e['t'],.16,1.04)
 
 groups={}
 for e in events:
@@ -91,6 +101,6 @@ for i,hz in enumerate([659.25,987.77]):
 raw=float(np.max(np.abs(out)));gain=min(2,.73/max(raw,1e-8));out*=gain
 write('assets/sound.wav',out)
 report={'duration':len(out)/RATE,'crunch_contacts':len(crunch),'raw_landing_events':sum(e['type']=='landing' for e in events),'landing_groups':len(groups),'peak_dbfs':20*math.log10(float(np.max(np.abs(out)))),'clipped_samples':int(np.sum(np.abs(out)>=1)),'linear_master_gain':gain,'sources':metadata}
-assert report['clipped_samples']==0 and len(crunch)==31
+assert report['clipped_samples']==0 and len(crunch)==sum(s['count'] for s in data['trials'])
 (QA/'audio-report.json').write_text(json.dumps(report,indent=2))
 print(json.dumps({k:v for k,v in report.items() if k!='sources'},indent=2))

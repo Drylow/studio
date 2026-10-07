@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "80cbz0s7z5rmr0d131k8xbt2g4",
+  "prompt": "Isolated close microphone boxing glove impact foley. A big leather boxing glove hits a thick solid object with a satisfying short heavy muffled THUMP and a dry slap. Three single impacts separated by silence, tight low mid frequency body, no long sub bass, no music, no voice, no ambience.",
+  "source": "sfx-punch-source.mp3",
+  "sha256": "98a7a576d3deeb074ece652df8e416493036398abc86110d3c4ea9e2f92a1d03",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}

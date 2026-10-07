@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import * as CANNON from 'cannon-es';
 import {mkdirSync,writeFileSync} from 'node:fs';
+import {trials as settings,toolState} from './tools.mjs';
 
 // Closed prisms are clipped by seeded oblique planes. None is a pre-cut cube.
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z), EPS=1e-7;
@@ -57,23 +58,34 @@ function convex(p){
  return new CANNON.ConvexPolyhedron({vertices,faces});
 }
 const geometries={},trials=[],events=[];
-const counts=[1,2,4,8,16],lengths=[4.4,4.6,5,5.8,6.4];let cursor=0;
-for(const [chapter,count] of counts.entries()){
- const length=lengths[chapter],world=new CANNON.World({gravity:new CANNON.Vec3(0,-10.8,0)});
+let cursor=0;
+for(const [chapter,config] of settings.entries()){
+ const {tool,count,length}=config,base=tool==='glove'?3.18:BASE;
+ const world=new CANNON.World({gravity:new CANNON.Vec3(0,-10.8,0)});
  world.solver.iterations=18;world.allowSleep=true;world.broadphase=new CANNON.SAPBroadphase(world);
  world.defaultContactMaterial.friction=.50;world.defaultContactMaterial.restitution=.08;
  const floor=new CANNON.Body({mass:0,shape:new CANNON.Plane()});floor.quaternion.setFromEuler(-Math.PI/2,0,0);world.addBody(floor);
  const board=new CANNON.Body({mass:0,shape:new CANNON.Box(new CANNON.Vec3(3.55,.17,2.65)),position:new CANNON.Vec3(0,.17,0)});world.addBody(board);
- const fork=new CANNON.Body({mass:0});
+ const fork=new CANNON.Body({mass:0,type:tool==='fork'?CANNON.Body.STATIC:CANNON.Body.KINEMATIC});
+ if(tool==='fork'){
  fork.addShape(new CANNON.Box(new CANNON.Vec3(.18,.55,.15)),new CANNON.Vec3(0,.95,0));
  fork.addShape(new CANNON.Box(new CANNON.Vec3(.95,.24,.16)),new CANNON.Vec3(0,1.59,0));
  const tooth=new CANNON.ConvexPolyhedron({vertices:[new CANNON.Vec3(-.14,0,-.14),new CANNON.Vec3(.14,0,-.14),new CANNON.Vec3(.14,0,.14),new CANNON.Vec3(-.14,0,.14),new CANNON.Vec3(0,1.2,0)],faces:[[0,3,2,1],[0,1,4],[1,2,4],[2,3,4],[3,0,4]].map(f=>f.reverse())});
- for(const x of [-.75,-.25,.25,.75])fork.addShape(tooth,new CANNON.Vec3(x,1.75,0));world.addBody(fork);
+ for(const x of [-.75,-.25,.25,.75])fork.addShape(tooth,new CANNON.Vec3(x,1.75,0));
+ }else if(tool==='glove'){
+  fork.addShape(new CANNON.Box(new CANNON.Vec3(1.0,1.20,1.44)));
+ }else{
+  fork.addShape(new CANNON.Box(new CANNON.Vec3(.48,.70,.45)),new CANNON.Vec3(0,1.12,0));
+  fork.addShape(new CANNON.Box(new CANNON.Vec3(.115,.47,.115)),new CANNON.Vec3(0,2.02,0));
+  const bit=new CANNON.ConvexPolyhedron({vertices:[new CANNON.Vec3(-.18,0,-.18),new CANNON.Vec3(.18,0,-.18),new CANNON.Vec3(.18,0,.18),new CANNON.Vec3(-.18,0,.18),new CANNON.Vec3(0,.62,0)],faces:[[0,1,2,3],[0,4,1],[1,4,2],[2,4,3],[3,4,0]]});
+  fork.addShape(bit,new CANNON.Vec3(0,2.43,0));
+ }
+ const initialTool=toolState(tool,0);fork.position.set(initialTool.x,initialTool.y,initialTool.z);world.addBody(fork);
  const bars=[],fragments=[],pending=new Set();let now=0;
  for(let i=0;i<count;i++){
   const id=`${chapter}-bar${i}`,pieces=fracture(12+(i+chapter)%5);
   const ids=pieces.map((p,j)=>{const key=`${id}-${j}`;geometries[key]=serialize(p);return key;});
-  const intact=new CANNON.Body({mass:0,shape:new CANNON.Box(new CANNON.Vec3(...SIZE.map(n=>n/2))),position:new CANNON.Vec3(0,BASE+i*GAP,0),linearDamping:.01});
+  const intact=new CANNON.Body({mass:0,shape:new CANNON.Box(new CANNON.Vec3(...SIZE.map(n=>n/2))),position:new CANNON.Vec3(0,base+i*GAP,0),linearDamping:.01});
   intact.collisionFilterGroup=4;intact.collisionFilterMask=1;
   intact.addEventListener('collide',e=>{if(e.body===fork)pending.add(i);});world.addBody(intact);
   bars.push({id,ids,pieces,intact,hit:null,frames:[]});
@@ -81,20 +93,25 @@ for(const [chapter,count] of counts.entries()){
  let active=false;
  for(let step=0;step<=Math.ceil(length/STEP);step++){
   now=step*STEP;
-  if(!active&&now>=release){active=true;for(const b of bars){b.intact.type=CANNON.Body.DYNAMIC;b.intact.mass=1;b.intact.updateMassProperties();b.intact.wakeUp();}}
+  const mechanism=toolState(tool,now),nextMechanism=toolState(tool,now+STEP);
+  fork.position.set(mechanism.x,mechanism.y,mechanism.z);
+  fork.velocity.set((nextMechanism.x-mechanism.x)/STEP,(nextMechanism.y-mechanism.y)/STEP,0);fork.aabbNeedsUpdate=true;
+  if(!active&&now>=(tool==='glove'?.83:release)){active=true;for(const b of bars){b.intact.type=CANNON.Body.DYNAMIC;b.intact.mass=1;b.intact.updateMassProperties();b.intact.wakeUp();}}
+  if(tool==='glove')for(const bar of bars)if(bar.hit===null){bar.intact.force.y=bar.intact.mass*10.8;bar.intact.velocity.set(0,0,0);}
   if(active)world.step(STEP);
   for(const index of pending){
    const bar=bars[index];if(bar.hit!==null)continue;
-   bar.hit=now;events.push({type:'crunch',t:+(cursor+now).toFixed(6),chapter,bar:index,count});
+   bar.hit=now;events.push({type:'crunch',t:+(cursor+now).toFixed(6),chapter,bar:index,count,tool});
    const position=bar.intact.position.clone(),velocity=bar.intact.velocity.clone(),q=bar.intact.quaternion.clone();world.removeBody(bar.intact);
    bar.bodies=bar.pieces.map((p,j)=>{
     const geometry=geometries[bar.ids[j]],center=new CANNON.Vec3(...geometry.center),local=q.vmult(center);
-    const body=new CANNON.Body({mass:Math.max(.004,geometry.volume*.65),shape:convex(p),linearDamping:.52,angularDamping:.60,sleepSpeedLimit:.1,sleepTimeLimit:.55});
+    const body=new CANNON.Body({mass:Math.max(.004,geometry.volume*.65),shape:convex(p),linearDamping:tool==='glove'?.80:.52,angularDamping:.60,sleepSpeedLimit:.1,sleepTimeLimit:.55});
     body.position.copy(position.vadd(local));body.quaternion.copy(q);
     body.collisionFilterGroup=2;body.collisionFilterMask=1;
     // Contact produces modest outward separation; retain the falling momentum.
     const a=Math.atan2(center.z,center.x),spread=.55+.30*random();
-    body.velocity.set(Math.cos(a)*spread,Math.min(-.5,velocity.y*.3)+.25*random(),Math.sin(a)*spread);
+    if(tool==='glove')body.velocity.set(3.4+random()*.4,.6+random()*.7,Math.sin(a)*(1.2+random()*.4));
+    else body.velocity.set(Math.cos(a)*spread*(tool==='jackhammer'?1.7:1),Math.min(-.5,velocity.y*.3)+.25*random(),Math.sin(a)*spread*(tool==='jackhammer'?1.7:1));
     body.angularVelocity.set((random()-.5)*6,(random()-.5)*2,(random()-.5)*6);
     body.addEventListener('collide',e=>{
      const speed=Math.abs(e.contact.getImpactVelocityAlongNormal());
@@ -109,8 +126,9 @@ for(const [chapter,count] of counts.entries()){
    // Thin wedges against a sharp static tine can create solver energy spikes.
    // Bound that numerical energy; this is an edible crunch, not an explosion.
    const horizontal=Math.hypot(body.velocity.x,body.velocity.z);
-   if(horizontal>2.4){body.velocity.x*=2.4/horizontal;body.velocity.z*=2.4/horizontal;}
-   body.velocity.y=Math.max(-8,Math.min(2.0,body.velocity.y));
+   const maxSpeed=tool==='glove'?4.3:tool==='jackhammer'?3.6:2.4;
+   if(horizontal>maxSpeed){body.velocity.x*=maxSpeed/horizontal;body.velocity.z*=maxSpeed/horizontal;}
+   body.velocity.y=Math.max(-8,Math.min(tool==='jackhammer'?3.2:2.0,body.velocity.y));
    const spin=body.angularVelocity.length();if(spin>7)body.angularVelocity.scale(7/spin,body.angularVelocity);
    let bottom=Infinity;
    for(const v of body.shapes[0].vertices){body.quaternion.vmult(v,p);bottom=Math.min(bottom,p.y+body.position.y);}
@@ -123,12 +141,14 @@ for(const [chapter,count] of counts.entries()){
   }
  }
  const data=bars.map(({id,ids,hit,frames})=>({id,ids,hit,frames}));
- if(data.some(b=>b.hit===null))throw Error('A bar did not reach the fork');
- trials.push({start:cursor,length,count,bars:data});cursor=+(cursor+length).toFixed(3);
+ if(data.some(b=>b.hit===null))throw Error('A bar did not reach '+tool);
+ if(tool==='glove')events.push({type:'spring',t:cursor+.12,chapter,tool},{type:'punch',t:cursor+Math.min(...data.map(b=>b.hit)),chapter,tool});
+ if(tool==='jackhammer')for(let pulse=.98;pulse<Math.min(3,Math.max(...data.map(b=>b.hit))+.38);pulse+=1/22)events.push({type:'hammer',t:+(cursor+pulse).toFixed(6),chapter,tool});
+ trials.push({start:cursor,length,count,tool,base,bars:data});cursor=+(cursor+length).toFixed(3);
  console.log(`${count} bars: ${data.reduce((s,b)=>s+b.ids.length,0)} irregular pieces; contacts ${data.map(b=>b.hit.toFixed(3)).join(', ')}`);
 }
 const outroStart=cursor,duration=+(cursor+1.6).toFixed(3);
 mkdirSync('assets',{recursive:true});
 writeFileSync('assets/simulation.json',JSON.stringify({fps:FPS,size:SIZE,base:BASE,gap:GAP,forkTop,release,duration,outroStart,geometries,trials}));
 writeFileSync('assets/events.json',JSON.stringify(events,null,2));
-console.log(`Duration ${duration}s; ${events.filter(e=>e.type==='crunch').length} actual fork contacts.`);
+console.log(`Duration ${duration}s; ${events.filter(e=>e.type==='crunch').length} actual tool contacts.`);
