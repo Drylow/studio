@@ -1,6 +1,7 @@
+import {drawCelebration} from './celebration.mjs';
 // One 216 x 384 pixel grid for the scene AND the type. No web fonts or blur.
 export const PIXEL_WIDTH=216,PIXEL_HEIGHT=384;
-const palette=['f1e7d6','203c2a','244c37','47714a','6e9852','a5bb76','ef5867','ff8291','b93751','f9af9f','f2f0c4','c79565','dfb27e','eacd9b','b4ac91','6b6c51','b7c2ba','def2e1','352922'];
+const palette=['f1e7d6','203c2a','244c37','47714a','6e9852','a5bb76','ef5867','ff8291','b93751','f9af9f','f2f0c4','c79565','dfb27e','eacd9b','b4ac91','6b6c51','b7c2ba','def2e1','352922','16201f','efb07a','ffd09b','ffe59a'];
 const rgb=palette.map(hex=>[0,2,4].map(i=>parseInt(hex.slice(i,i+2),16)));
 const glyphs={
  '0':['01110','10001','10011','10101','11001','10001','01110'],
@@ -13,7 +14,10 @@ const glyphs={
  '7':['11111','00001','00010','00100','01000','01000','01000'],
  A:['01110','10001','10001','11111','10001','10001','10001'],
  C:['01111','10000','10000','10000','10000','10000','01111'],
+ D:['11110','10001','10001','10001','10001','10001','11110'],
+ H:['10001','10001','10001','11111','10001','10001','10001'],
  E:['11111','10000','10000','11110','10000','10000','11111'],
+ F:['11111','10000','10000','11110','10000','10000','10000'],
  L:['10000','10000','10000','10000','10000','10000','11111'],
  M:['10001','11011','10101','10101','10001','10001','10001'],
  N:['10001','11001','11001','10101','10011','10011','10001'],
@@ -26,6 +30,7 @@ const glyphs={
  T:['11111','00100','00100','00100','00100','00100','00100'],
  U:['10001','10001','10001','10001','10001','10001','01110'],
  W:['10001','10001','10001','10101','10101','10101','01010'],
+ '!':['00100','00100','00100','00100','00100','00000','00100'],
  ' ':['00000','00000','00000','00000','00000','00000','00000']
 };
 function text(ctx,value,x,y,scale,color='#203c2a'){
@@ -34,6 +39,15 @@ function text(ctx,value,x,y,scale,color='#203c2a'){
  for(const letter of value){const rows=glyphs[letter];if(!rows)throw Error('Missing pixel glyph: '+letter);
   rows.forEach((row,j)=>[...row].forEach((cell,i)=>{if(cell==='1')ctx.fillRect(x+i*scale,y+j*scale,scale,scale);}));x+=6*scale;
  }
+}
+function toolIcon(ctx,tool,x,y){
+ const patterns={
+  machete:['       MMMMMMMM','      MMMMMMMMM',' KKKKMMMMMMMMM ',' KKKKMMMMMMMM  ','     MMMMM     '],
+  saw:['    M M M    ','  MMMMMMMMM  ',' MMMMMMMMMMM ',' MMMMMKMMMMM ',' M MMKKKMM M ',' MMMMMKMMMMM ',' MMMMMMMMMMM ','  MMMMMMMMM  ','    M M M    '],
+  pistol:[' KKKKKKKKKKKKK ',' KKKKKKKKKKKKK ',' KKKKKKKKKKKKK ',' KKKKK K       ','  KKK  K       ','  KKKKK        ','  KKK          ','  KKK          ']
+ };
+ const colors={K:'#16201f',M:'#b7c2ba'};
+ patterns[tool].forEach((row,j)=>[...row].forEach((c,i)=>{if(colors[c]){ctx.fillStyle=colors[c];ctx.fillRect(x+i,y+j,1,1);}}));
 }
 function watermelonIcon(ctx,x,y){
  const rows=['  GGGGGGGGGG  ',' GWRRRRRRRRWG ',' GWRRSRRSRRWG ',' GWRRRRRRRRWG ','  GWRRSRRRWG  ','  GWRRRRRRWG  ','   GWRRRRWG   ','    GWWWWG    ','     GGGG     '];
@@ -47,10 +61,10 @@ export function createPixelView(canvas){
  const display=canvas.getContext('2d',{willReadFrequently:true,alpha:false,desynchronized:false});display.imageSmoothingEnabled=false;
  const bayer=[-6,2,6,-2];
  // Cache exact nearest-palette results, including the four dither offsets.
- // Every repeat color avoids searching all 19 colors again, with no change
+ // Every repeat color avoids searching all palette colors again, with no change
  // to pixel values between preview and export.
  const nearestCache=new Map();
- return (source,count,index,hook=false)=>{
+ return (source,count,index,tool='machete',outro=false,celebration=null)=>{
   ctx.drawImage(source,0,0,PIXEL_WIDTH,PIXEL_HEIGHT);
   const frame=ctx.getImageData(0,0,PIXEL_WIDTH,PIXEL_HEIGHT),a=frame.data;
   for(let p=0;p<a.length;p+=4){
@@ -67,19 +81,29 @@ export function createPixelView(canvas){
    a[p]=rgb[best][0];a[p+1]=rgb[best][1];a[p+2]=rgb[best][2];
   }
   ctx.putImageData(frame,0,0);
+  if(celebration)drawCelebration(ctx,celebration);
   // Keep the title field readable even when a thrown blade enters above it.
-  ctx.fillStyle='#f1e7d6';ctx.fillRect(0,0,PIXEL_WIDTH,85);
+  ctx.fillStyle='#f1e7d6';ctx.fillRect(0,0,PIXEL_WIDTH,100);
   watermelonIcon(ctx,70,27);text(ctx,'WATERMELON',118,28,1);
-  text(ctx,count===1?'1 CUT':count+' CUTS',108,48,3);
-  if(hook)text(ctx,'PREVIEW',108,350,1);
-  else ['01','04','08','16','32'].forEach((label,i)=>{
-   const x=36+i*36;text(ctx,label,x,350,1,i===index?'#203c2a':'#6b6c51');
-   if(i===index){ctx.fillStyle='#203c2a';ctx.fillRect(x-8,363,16,1);}
-  });
+  const unit=tool==='pistol'?'SHOT':'CUT';
+  text(ctx,outro?'SERVED!':`${count} ${unit}${count===1?'':'S'}`,108,48,3);
+  const title={machete:'MACHETE',saw:'CIRCULAR SAW',pistol:'PISTOL'}[tool];
+  const titleX=tool==='saw'?120:116;
+  toolIcon(ctx,tool,tool==='saw'?65:78,79);text(ctx,title,titleX,80,1);
+  if(outro)text(ctx,'CHEF APPROVED',108,350,1);
+  else {
+   const level={machete:1,saw:2,pistol:3}[tool];text(ctx,'LEVEL '+level,108,330,1);
+   const labels=tool==='machete'?['01','04','08','16','32']:['01','04','08'];
+   const current=tool==='machete'?index:tool==='saw'?index-5:index-8;
+   labels.forEach((label,i)=>{
+   const x=labels.length===5?36+i*36:60+i*48;text(ctx,label,x,350,1,i===current?'#203c2a':'#6b6c51');
+   if(i===current){ctx.fillStyle='#203c2a';ctx.fillRect(x-8,363,16,1);}
+   });
+  }
   // Publish one complete frame. Screenshot capture must never see the
   // intermediate palette image before all bitmap glyphs have been drawn.
   display.drawImage(back,0,0);
   display.getImageData(0,0,1,1);
-  canvas.setAttribute('aria-label',`WATERMELON — ${count} ${count===1?'CUT':'CUTS'}`);
+  canvas.setAttribute('aria-label',`WATERMELON — ${title} — ${outro?'SERVED':count+' '+unit+(count===1?'':'S')}`);
  };
 }

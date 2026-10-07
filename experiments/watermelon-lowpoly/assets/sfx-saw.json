@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "93j6367fv9rmy0d130br6tyq80",
+  "source": "sfx-saw-source.mp3",
+  "source_sha256": "330b0b6cffad4be6f957ad55f50b4e0a00dc95444ca61f20a70e96c4ad20dcfb",
+  "asset": "sfx-saw.wav",
+  "duration_seconds": 4.0,
+  "prompt": "Close-miked electric circular saw spinning up, then a powerful fast metallic whir cutting into a juicy watermelon, rough mechanical buzz and a short crunchy wet slicing sound. Clean isolated game sound effect, dry recording. No music, no speech, no background ambience.",
+  "terms": "https://replicate.com/terms/"
+}

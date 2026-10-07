@@ -1,0 +1,13 @@
+{
+  "provider": "Replicate",
+  "prediction": "sbqznt1ax9rmr0d1307sp8f5gm",
+  "source": "sfx-pistol-source.mp3",
+  "source_sha256": "c619b3982eafef05641be6a74f8b01b7f58309f568f37e032eadfcf5c3a5ec34",
+  "asset": "sfx-pistol.wav",
+  "trim_start_seconds": 0.045,
+  "duration_seconds": 0.12,
+  "onset_delay_seconds": 0.001,
+  "treatment": "mono 48 kHz, 7.2 kHz gentle lowpass, 1 ms attack, 20 ms release, normalized with headroom",
+  "terms": "https://replicate.com/terms/",
+  "prompt": "Sound effects recording. Three isolated close-miked pistol gunshots separated by silence. Sharp dry mechanical crack, tight deep punch, short metallic tail. Clean punchy arcade game weapon sound effect. No music, no speech, no ambience, no echo."
+}
