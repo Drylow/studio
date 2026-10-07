@@ -1,6 +1,16 @@
 COHERENCE DES VIDEOS 2D - PRODUCTION DIRIGEE PAR CODEX
 Decision utilisateur : 7 octobre 2026.
-Les cinq concepts historiques et le style des images background-v3 sont approuves.
+Les cinq concepts historiques sont approuves.
+Derniere decision du 7 octobre : decors BD sobres (option 1 du comparatif),
+lignes nettes, textures reduites, aplats mats et ombres simples. Garder des
+lieux detailles et lisibles. Personnages des VIDEOS : tetes rondes blanches,
+petits yeux noirs, bouche neutre, mains blanches en moufles, corps adultes couverts.
+MINIATURES uniquement : humains cartoon expressifs. L'essai d'intro humaine
+est abandonne ; ne pas l'utiliser comme reference de personnages video.
+Le decor de style choisi est comparatif-decors-2026-10-07/01-bd-sobre.png sous
+output/imagegen/. Son humain n'est pas valide pour les videos. Les anciens
+maitres background-v3 restent des ancres de geometrie : les adapter a la BD
+sobre, les verifier puis figer leur nouvelle version sans ecraser les anciens.
 
 QUI FAIT QUOI
 Codex fait la recherche, ecrit le script et chaque prompt, choisit les references,

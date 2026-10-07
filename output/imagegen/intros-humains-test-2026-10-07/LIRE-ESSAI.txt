@@ -23,3 +23,6 @@ Son prompt prepare reste conserve, sans appel ni image correspondante.
 Voir output/imagegen/comparatif-decors-2026-10-07/ pour les nouveaux essais.
 Le style blanc existant et toutes les miniatures precedentes restent conserves.
 Ne pas lancer la production de videos ou remplacer les presets avec cet essai.
+
+DERNIERE DECISION : intro humaine abandonnee. Videos a tete blanche avec
+decors BD sobres ; visages humains uniquement pour les miniatures.

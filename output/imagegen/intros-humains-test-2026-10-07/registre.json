@@ -5,6 +5,8 @@
   "creative_owner": "Codex",
   "scope": "Fictional intro stills with thumbnail human identity; no approved narration or timing",
   "status": "superseded_by_user_request_for_background_style_comparison",
+  "human_intro_direction_rejected_by_user": true,
+  "latest_user_decision": "Sober comic backgrounds with white round-head video characters; human characters are thumbnail-only.",
   "calls_completed": 6,
   "planned_calls_not_run": 1,
   "user_approved_intro_style": false,

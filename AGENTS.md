@@ -6,21 +6,23 @@ existantes ni changer le frontend pour produire le contenu.
 Pour Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily et Ottoman Daily :
 - L'utilisateur demande que Codex ecrive lui-meme les scripts, decoupages et prompts.
   Ne pas deleguer le prompting a la generation automatique de la pipeline.
-- Le style approuve est celui des cinq images background-v3 du 6 octobre 2026 :
-  personnages adultes a tete ronde blanche, mains blanches en moufles, corps couverts,
-  bouches neutres ; decors 2D colores avec textures et profondeur moderees.
+- Decision finale du 7 octobre : VIDEOS = decors BD sobres (option 1 du
+  comparatif), lignes nettes, aplats mats, textures reduites et ombres simples.
+  Garder une architecture detaillee et lisible, sans decor excessivement simplifie.
+  PERSONNAGES = adultes a tete ronde blanche, petits yeux noirs, bouche neutre,
+  mains blanches en moufles et corps couverts, comme les references du 6 octobre.
 - Exception explicite du 7 octobre : pour les MINIATURES seulement, l'utilisateur
   veut des visages humains cartoon expressifs comme la miniature NO JOBS de Rome
   Unscrolled. Cette direction ne change PAS les personnages blancs des videos.
   Conserver les premieres propositions blanches sans les ecraser.
-- Essai demande ensuite le 7 octobre : images d'intro avec les humains des
-  miniatures comme references d'identite, expressions adaptees aux actions.
-  Essai separe dans output/imagegen/intros-humains-test-2026-10-07/ ; attendre
-  validation avant de remplacer le style blanc des videos ou lancer un montage.
-- Nouvelle demande le 7 octobre : comparer plusieurs rendus de decor car
-  les backgrounds actuels sont juges trop goofies. Comparatif separe dans
-  output/imagegen/comparatif-decors-2026-10-07/, meme scene et meme humain.
-  Ne pas promouvoir une variante en decor maitre sans validation utilisateur.
+- Les humains testes dans les intros sont abandonnes pour les VIDEOS.
+  Conserver ces essais comme archives, pas comme references de personnages.
+- Le decor choisi est output/imagegen/comparatif-decors-2026-10-07/01-bd-sobre.png.
+  Son personnage humain n'est PAS approuve pour les videos. Les autres variantes
+  restent des essais. Adapter et verifier les maitres de chaque lieu a la BD sobre.
+- Les cinq miniatures HUMAINES a regarder sont dans
+  output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/.
+  Direction humaine conservee ; ne pas en deduire la validation de chaque image.
 - Lire production/COHERENCE_2D_CODEX.txt avant toute production.
 - Reutiliser un decor maitre verifie pour chaque lieu et les memes references de
   personnages ; une description textuelle seule ne suffit pas.
