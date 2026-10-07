@@ -138,9 +138,22 @@ def align_script(script, words):
         else:
             merged.append(dict(w))
     sm = difflib.SequenceMatcher(None, [t["n"] for t in stoks], [w["n"] for w in merged], autojunk=False)
-    for a, b, size in sm.get_matching_blocks():
-        for k in range(size):
-            stoks[a + k]["s"], stoks[a + k]["e"] = merged[b + k]["s"], merged[b + k]["e"]
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == "equal":
+            for k in range(i2 - i1):
+                stoks[i1 + k]["s"], stoks[i1 + k]["e"] = merged[j1 + k]["s"], merged[j1 + k]["e"]
+        elif tag == "replace":
+            # mots mal entendus (« poux » → « poues ») : appariés par ressemblance, dans l'ordre
+            j = j1
+            for i in range(i1, i2):
+                best, score = None, 0.5
+                for jj in range(j, j2):
+                    r = difflib.SequenceMatcher(None, stoks[i]["n"], merged[jj]["n"]).ratio()
+                    if r > score:
+                        best, score = jj, r
+                if best is not None:
+                    stoks[i]["s"], stoks[i]["e"] = merged[best]["s"], merged[best]["e"]
+                    j = best + 1
     # mots non reconnus : interpolés entre les voisins
     known = [i for i, t in enumerate(stoks) if "s" in t]
     if not known:
