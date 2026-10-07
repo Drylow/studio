@@ -1,18 +1,20 @@
-# Vérification du prototype livré — 7 octobre 2026
+# Vérification de Pixel Cuts — 7 octobre 2026
 
-Livrable local : `watermelon-lowpoly.mp4`, 1080 × 1920, 30 images/s, 540 images. La vidéo dure 18 s ; le conteneur avec l'audio AAC dure 18,005 s. SHA-256 : `5aea99c0c96c0f3e98a4eb09224fc9190f9b44550332c9b0f83ed8cedeb0018a`.
+Livrable : `watermelon-pixelcuts.mp4`, 12 s, 1080 × 1920, 60 images/s, 720 images. SHA-256 : `ed9dfdd78d995cc006b2f409c2752570e2a1c252e07c038e318372dea0084777`.
 
 ## Contrôles réalisés
 
-- Source : vidéo du tweet regardée en lecture et sur 53 captures, avec agrandissement des détails. La source n'est pas incorporée au livrable.
-- Simulation : conservation du volume à chaque coupe, fragments fermés et non dégénérés, poses finies, rotations unitaires et contrôle de pénétration du sol. Les trois passes produisent 2, 8 et 32 fragments.
-- HyperFrames : contrôle de structure, d'exécution, de mise en page et de contraste, avec navigateur, à dix instants ; aucun avertissement ni erreur. Timeline GSAP de 18 s enregistrée et en pause pour le rendu.
-- Export : capture WebGL par logiciel, 540 images, terminée en 8 min 30,8 s. Le premier essai avec GPU a dépassé le délai de capture ; aucun MP4 issu de cet essai n'est livré.
-- Inspection visuelle : les neuf planches de 60 images ont toutes été regardées, ainsi que des agrandissements de la coupe et des fins de séquence. Cadrage, titre, bordure d'écorce, chair, pépins et surfaces coupées restent cohérents dans ce prototype. Les morceaux peuvent sortir de la planche, mais restent dans le cadre.
-- MP4 final : décodage de toutes les images sans erreur, présence d'une piste AAC stéréo, lecture dans le navigateur jusqu'à la fin sans erreur média. Bruitages relevés de ×3,2 après le premier export, puis nouveau contrôle du MP4 ; pic mesuré à −7,3 dBFS, moyenne à −28,9 dBFS. La même amplification est conservée dans `sound.py` pour les prochaines constructions. L'image a été copiée sans réencodage pendant cette correction audio.
+- Source : vidéo du tweet regardée en lecture et sur 53 captures, avec agrandissement des détails. Aucun extrait incorporé au livrable.
+- Simulation : conservation du volume à chaque coupe, fragments fermés et non dégénérés, poses finies, rotations unitaires et pénétration du sol contrôlée. Les niveaux 1, 3 et 7 produisent 2, 8 et 32 fragments ; 387, 346 et 264 poses de physique ont été vérifiées.
+- Exécution : contrôle HyperFrames avec navigateur à dix instants ; aucune erreur ni avertissement de structure, de mise en page ou d'exécution. Le texte est dessiné dans un canevas : le contrôle automatique de contraste DOM ne le mesure pas. La lisibilité des titres a été contrôlée visuellement.
+- Style : scène entière sur une grille 216 × 384, agrandie ×5 sans lissage, palette de 19 couleurs, typographie bitmap sur la même grille. Tous les mots visibles sont en anglais : WATERMELON, 1 CUT, 3 CUTS, 7 CUTS.
+- Mouvement et son : coups de lame de 0,145 s, espacés de 0,17 s, soit environ neuf images par coup à 60 images/s. Les onze accents sont centrés à 0,65 ; 4,65 / 4,82 / 4,99 ; 8,65 / 8,82 / 8,99 / 9,16 / 9,33 / 9,50 / 9,67 s. Pic audio du MP4 à −3,0 dBFS ; moyenne à −30,3 dBFS ; absence de saturation.
+- Export final : capture par logiciel, 720 images, terminé en 1 min 57,8 s. Toutes les images ont été décodées sans erreur ; les douze planches ont été regardées, avec agrandissements des coupes, titres et fins de séquence. Les morceaux restent dans le cadre.
+- Titres : un doute né des miniatures réduites a été levé par des images en pleine résolution et par un contrôle de présence des pixels des lettres sur les 720 images : couverture minimale de 100 %. La scène et le texte sont composés dans un tampon avant affichage. Le second export et les douze planches ont les mêmes empreintes que la version examinée.
+- Lecture : MP4 lu jusqu'à la fin dans le navigateur, avec une piste AAC stéréo et sans erreur média.
 
-Les captures et les rapports complets sont conservés localement dans `qa/`, `snapshots/` et `check-report.json`, exclus de Git. `python qa_frames.py` reconstruit les neuf planches depuis le MP4.
+Les captures et les rapports complets sont conservés localement dans `qa/pixelcuts/`, `snapshots/pixel-latest/` et `pixel-check-report.json`, exclus de Git. `python qa_frames.py watermelon-pixelcuts.mp4` reconstruit les douze planches et contrôle les titres.
 
-## Limites observées
+## Limites
 
-Il s'agit de fragments rigides et de coupes planes. Pas de chair souple, jus, déformation du fruit ni interaction physique avec la lame. Le fruit est maintenu en l'air pendant les passes ; la lame et la séparation initiale sont scénarisées, puis les collisions et la chute sont simulées. Le prototype reprend les niveaux 1, 3 et 7 ; les niveaux 13, 25 et 40 de la référence restent à concevoir et contrôler.
+Fragments rigides et coupes planes : pas de chair souple, jus, déformation du fruit ni interaction physique avec la lame. Le fruit est maintenu en l'air pendant les passes ; la lame et la séparation initiale sont scénarisées, puis les collisions et la chute sont simulées. Les niveaux 13, 25 et 40 de la référence restent à concevoir et contrôler.

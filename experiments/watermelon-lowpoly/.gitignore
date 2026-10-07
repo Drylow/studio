@@ -9,7 +9,9 @@ assets/sound.wav
 assets/gsap.min.js
 assets/events.json
 check-report.json
+pixel-check-report.json
 keyframes-report.json
 snapshots/
+renders/
 qa/
 *.mp4
