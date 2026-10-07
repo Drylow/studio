@@ -1,0 +1,65 @@
+MINIATURES DES CINQ CHAINES - PROPOSITIONS DU 7 OCTOBRE 2026
+Statut : premiere serie blanche conservee, nouvelle serie humaine a valider.
+Aucun script ou video lance. Choix humain applique aux miniatures seulement.
+Pour les cinq videos de journee ordinaire E01, A01, B01, C01 et O01.
+
+REFERENCE REGARDEE PAR CODEX
+Video : What Did People in Ancient Rome Actually Do All Day?
+https://www.youtube.com/watch?v=U_eV4WbL6Vw
+Miniature : https://i.ytimg.com/vi/U_eV4WbL6Vw/maxresdefault.jpg
+Algrow, catalogue populaire consulte le 7 octobre : 2 002 860 vues.
+La reference citee a 1,2 million de vues est desormais autour de 2 millions.
+Observation directe : NO JOBS en jaune/noir, boulanger tres grand a gauche,
+ville romaine en perspective et plusieurs scenes de loisir/echange derriere.
+Ces observations ne prouvent pas que la miniature cause les vues.
+
+ADAPTATION
+Une grande figure et un objet lisible, 2-3 petites actions integrees a la meme
+rue, architecture propre a chaque monde, gros texte court jaune/noir.
+Composition inspiree, mais nouvelles scenes et personnages.
+Le style approuve reste prioritaire : tete ronde blanche, petits yeux noirs,
+bouche droite, mains blanches, corps adulte couvert. Pas de visages de Rome.
+Ne pas copier NO JOBS : la promesse serait a justifier pour chaque societe.
+Les costumes sont stylises ; chaque episode aura sa recherche historique.
+
+PROPOSITIONS
+E01 - Edo Daily - EDO LIFE : porteur d'eau, rue de nagaya, commerce et voisinage.
+A01 - Aztec Daily - LAKE CITY : panier de mais, canoe, marche et ville sur l'eau.
+B01 - Babylon Daily - DAILY GRIND : orge, balances et tablette, rue de briques.
+C01 - Imperial China Daily - BEFORE DARK : nouilles et marche pres d'une porte.
+O01 - Ottoman Daily - DAILY BREAD : boulanger, clients et quartier d'Istanbul.
+
+FICHIERS
+Les prompts exacts ecrits par Codex sont dans chaque dossier de chaine :
+06-miniature-proposition-2026-10-07.txt.
+Les images generees et le controle sont dans :
+output/imagegen/miniatures-cinq-chaines-2026-10-07/.
+Generation par CLI Proxy configure dans .env, references envoyees dans l'ordre
+Rome (composition) puis image background-v3 de la chaine (style).
+Validation des miniatures distincte de la validation des titres.
+
+CORRECTIONS ET SOURCES
+Les premieres sorties sont relues par Codex. Les corrections ciblent les petits
+figurants hors style, les ornements de bols Tang et les silhouettes de monuments.
+Tenochtitlan : deux escaliers et deux sanctuaires, selon l'INAH.
+https://lugares.inah.gob.mx/en/node/4463
+Istanbul : ne pas transposer la Mosquee bleue de 1609-1616 au XVIe siecle.
+https://www.ktb.gov.tr/EN-113785/sultanahmet-blue-mosque.html
+Les couleurs, costumes, tracés de rue et objets restent stylises : ce controle
+de proposition ne remplace pas une recherche archeologique complete.
+Images retenues : 01-edo.png, 02-aztec-v2.png, 03-babylon-v2.png,
+04-tang-v2.png et 05-ottoman-v5.png ; les premiers essais ne sont pas a publier.
+La version Istanbul retenue est reconstruite depuis sa seule reference de style :
+les retouches precedentes de petits figurants avaient echoue a conserver le fond.
+
+NOUVELLE DIRECTION CONFIRMEE PAR L'UTILISATEUR
+Lien confirme : https://youtu.be/U_eV4WbL6Vw
+Miniature NO JOBS ; choix explicite de visages humains expressifs pour les
+miniatures uniquement. Les videos gardent les personnages blancs approuves.
+Nouvelle serie : output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/.
+Prompts : 07-miniature-humaine-proposition-2026-10-07.txt dans chaque chaine.
+Les premieres propositions restent conservees ; aucun fichier image ecrase.
+Les accroches restent provisoires et seront raccordees au contenu du script.
+Images humaines retenues : 01-edo.png, 02-aztec-v2.png, 03-babylon.png,
+04-tang.png et 05-ottoman.png. Les cinq images ont ete regardees par Codex.
+Direction humaine confirmee, mais ces cinq images restent a valider.

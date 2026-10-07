@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-07",
+  "status": "preserved_previous_direction",
+  "provider": "configured_cli_proxy",
+  "creative_owner": "Codex",
+  "user_thumbnail_approval": false,
+  "scripts_started": false,
+  "video_production_started": false,
+  "generation_calls": 5,
+  "refinement_calls": 7,
+  "reference_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+  "reference_thumbnail_url": "https://i.ytimg.com/vi/U_eV4WbL6Vw/maxresdefault.jpg",
+  "reference_thumbnail_sha256": "43414ebd68fdb744698c77f63677beda6bf490bdacf8932860290325ff104c70",
+  "reference_observation_fr": "NO JOBS jaune/noir, grand boulanger a gauche, ville romaine et scenes de loisirs/echange au fond. Observation directe, pas preuve de causalite sur les vues.",
+  "latest_user_direction": "Expressive human cartoon faces for thumbnails only; preserve this earlier white-head series. Video style stays unchanged.",
+  "selected": [
+    {
+      "channel": "Edo Daily",
+      "candidate_id": "E01",
+      "headline": "EDO LIFE",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/01-edo.png",
+        "sha256": "569a7de505ae27782ead0bac72f197b633a26e73764f1a4b74811688e4f1868b",
+        "bytes": 2197969
+      },
+      "initial_prompt": {
+        "path": "chaines/_propositions_2026-10-06/01-edo-daily/06-miniature-proposition-2026-10-07.txt",
+        "sha256": "9c99f9a70a736ac12ece03f79b76c76bbb9a1beb164d42e82c84c5fef3dfe73f",
+        "bytes": 3751
+      },
+      "initial_references_sent": [
+        {
+          "role": "composition_only",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "approved_cartoon_style",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+          "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+          "bytes": 2036511
+        }
+      ],
+      "actual_output": {
+        "file": "01-edo.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "face_sample_xy": [
+          300,
+          230
+        ],
+        "face_sample_rgb": [
+          253,
+          253,
+          253
+        ],
+        "mode": "RGB"
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Foreground water carrier, wooden bucket, bowl exchange and seated fan user. Large round white heads and short mouths; exact EDO LIFE text readable.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Aztec Daily",
+      "candidate_id": "A01",
+      "headline": "LAKE CITY",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/02-aztec-v2.png",
+        "sha256": "feaa133ebd27283241a3385b9bb78da291f7e7c3d1be77c5e7579681a9027159",
+        "bytes": 2303804
+      },
+      "initial_prompt": {
+        "path": "chaines/_propositions_2026-10-06/02-aztec-daily/06-miniature-proposition-2026-10-07.txt",
+        "sha256": "03a76fb41f349b2e200625afcb418147c7390d831b6da981f06aca4fbcf093f3",
+        "bytes": 3830
+      },
+      "initial_references_sent": [
+        {
+          "role": "composition_only",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "approved_cartoon_style",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/02-azteques-background-v3.png",
+          "sha256": "5490dcc6c49e6a82af1f5e3d8371ac1fa60dc9203cdd124a1bcdcfafe1a19dfe",
+          "bytes": 2219223
+        }
+      ],
+      "actual_output": {
+        "file": "02-aztec-v2.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "face_sample_xy": [
+          380,
+          220
+        ],
+        "face_sample_rgb": [
+          253,
+          253,
+          253
+        ],
+        "mode": "RGB"
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Maize basket, canal trade and two-sanctuary stepped backdrop. Main and canoe characters are white round-head cartoons; tiny temple crowd removed in revision.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Babylon Daily",
+      "candidate_id": "B01",
+      "headline": "DAILY GRIND",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/03-babylon-v2.png",
+        "sha256": "16759292b0d69591b5ed76f482649ba61ff2b7d1dd3f992ff2bb555572c3102c",
+        "bytes": 2367689
+      },
+      "initial_prompt": {
+        "path": "chaines/_propositions_2026-10-06/03-babylon-daily/06-miniature-proposition-2026-10-07.txt",
+        "sha256": "45676d74910fd8154206e5628e96e05d5b317749cbdb41e7419fddc01768dd2c",
+        "bytes": 3800
+      },
+      "initial_references_sent": [
+        {
+          "role": "composition_only",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "approved_cartoon_style",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/03-babylone-background-v3.png",
+          "sha256": "fab138fb97466e38869f1d2d9b5130094873cd76a3bf21ddf8cf57b7285cadb6",
+          "bytes": 2122105
+        }
+      ],
+      "actual_output": {
+        "file": "03-babylon-v2.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "face_sample_xy": [
+          400,
+          230
+        ],
+        "face_sample_rgb": [
+          253,
+          253,
+          253
+        ],
+        "mode": "RGB"
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Large grain basket and merchant/scribe routines. Four clearly visible white cartoon adults; obvious realistic boat passengers removed. Tiny distant masonry shapes are not claimed as fully audited characters.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Imperial China Daily",
+      "candidate_id": "C01",
+      "headline": "BEFORE DARK",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/04-tang-v2.png",
+        "sha256": "082d2cd8f93f71f126e1cdb7bbe822df9847405c910040bffcecdac560e4bc53",
+        "bytes": 2174607
+      },
+      "initial_prompt": {
+        "path": "chaines/_propositions_2026-10-06/04-imperial-china-daily/06-miniature-proposition-2026-10-07.txt",
+        "sha256": "1d7f54316264275772ccc35641331e7f9ec7af41daac257b52c975e5806977fd",
+        "bytes": 3803
+      },
+      "initial_references_sent": [
+        {
+          "role": "composition_only",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "approved_cartoon_style",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/04-chine-tang-background-v3.png",
+          "sha256": "5480010beaff7d6125a4a870c187dda9acf3f66d342349c15d97bbeae9e97a18",
+          "bytes": 2142571
+        }
+      ],
+      "actual_output": {
+        "file": "04-tang-v2.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "face_sample_xy": [
+          380,
+          300
+        ],
+        "face_sample_rgb": [
+          253,
+          253,
+          252
+        ],
+        "mode": "RGB"
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Four white cartoon adults, plain gray noodle bowls, no incidental market crowd. BEFORE DARK text readable with increased right-side space.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Ottoman Daily",
+      "candidate_id": "O01",
+      "headline": "DAILY BREAD",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/05-ottoman-v5.png",
+        "sha256": "7f2a0600d547b82a718815422df409d2a71f9a0e8196654ad452ca830c6b5b74",
+        "bytes": 2319881
+      },
+      "initial_prompt": {
+        "path": "chaines/_propositions_2026-10-06/05-ottoman-daily/06-miniature-proposition-2026-10-07.txt",
+        "sha256": "6d8f660a588e252c25f9aaccb5b2d87ce38172086406f75603482e40b8ac1193",
+        "bytes": 3702
+      },
+      "initial_references_sent": [
+        {
+          "role": "composition_only",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "approved_cartoon_style",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-background-v3.png",
+          "sha256": "88bf59878b99549d2a9d5f3803cdbb696a04e5aae2b3f5b7d559a2376ea42c8f",
+          "bytes": 2114527
+        }
+      ],
+      "actual_output": {
+        "file": "05-ottoman-v5.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "face_sample_xy": [
+          300,
+          250
+        ],
+        "face_sample_rgb": [
+          254,
+          252,
+          253
+        ],
+        "mode": "RGB"
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Rebuilt from approved style reference only. Exactly three visible round-white-head cartoon adults; no fountain crowd. Two minarets in the distant skyline. Earlier correction attempts rejected.",
+      "approved_by_user": false
+    }
+  ],
+  "rejected_correction_attempts": [
+    {
+      "image": "05-ottoman-v3.png",
+      "reason": "Two targeted tiny human silhouettes remained by fountain."
+    },
+    {
+      "image": "05-ottoman-v4.png",
+      "mask": "05-ottoman-fountain-mask.png",
+      "reason": "Local selection did not produce intended removal and removed blue pedestrian elsewhere; not retained."
+    }
+  ],
+  "limits": [
+    "Requested 2048x1152; actual outputs 1672x941. No upscaling.",
+    "Sampled face pixels are near-white 252-254, not uniformly exact #FFFFFF; not recolored.",
+    "Clothing, streets and background monuments are stylized proposals, not complete archaeological audits.",
+    "No mobile viewport or performance/CTR test; legibility judged by direct image inspection.",
+    "Headline copy is provisional; factual claims must match the eventual sourced scripts."
+  ]
+}

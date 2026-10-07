@@ -9,6 +9,12 @@ PROPOSITION ACTIVE DE TITRES : TITRES_A_VALIDER_2026-10-07.txt, 50 candidats.
 Detail par chaine : 05-titres-validation-2026-10-07.txt (angles et limites).
 Recherche de format : FORMAT_ET_ECRITURE_2026-10-07.txt.
 En attente de validation des titres ; aucun script ni production lance.
+PROPOSITIONS DE MINIATURES : MINIATURES_A_VALIDER_2026-10-07.txt.
+Prompts par chaine : 06-miniature-proposition-2026-10-07.txt.
+Validation des miniatures distincte de celle des titres ; aucune video lancee.
+Direction miniature confirmee : humains cartoon expressifs comme NO JOBS.
+Nouvelle serie : 07-miniature-humaine-proposition-2026-10-07.txt par chaine.
+Les essais blancs restent conserves ; le style des videos ne change pas.
 
 La premiere proposition etait hors sujet. Elle est rangee dans
 _anciennes_propositions_refusees et ne sert plus de direction de travail.

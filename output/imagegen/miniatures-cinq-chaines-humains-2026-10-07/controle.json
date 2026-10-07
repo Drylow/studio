@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-07",
+  "status": "awaiting_thumbnail_approval",
+  "provider": "configured_cli_proxy",
+  "creative_owner": "Codex",
+  "human_thumbnail_direction_approved_by_user": true,
+  "selected_images_approved_by_user": false,
+  "video_style_unchanged": "approved white round-head neutral-mouth cartoon characters",
+  "scripts_started": false,
+  "video_production_started": false,
+  "original_white_head_series_preserved": true,
+  "previous_series": "output/imagegen/miniatures-cinq-chaines-2026-10-07/",
+  "generation_calls": 5,
+  "refinement_calls": 1,
+  "source_video": "https://www.youtube.com/watch?v=U_eV4WbL6Vw",
+  "source_thumbnail_url": "https://i.ytimg.com/vi/U_eV4WbL6Vw/maxresdefault.jpg",
+  "source_thumbnail_sha256": "43414ebd68fdb744698c77f63677beda6bf490bdacf8932860290325ff104c70",
+  "selected": [
+    {
+      "channel": "Edo Daily",
+      "candidate_id": "E01",
+      "headline": "EDO LIFE",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/01-edo.png",
+        "sha256": "d187f9b977007bef32d08448d2226ca465d8f575b66b00c211605af918c5577e",
+        "bytes": 2497253
+      },
+      "prompt": {
+        "path": "chaines/_propositions_2026-10-06/01-edo-daily/07-miniature-humaine-proposition-2026-10-07.txt",
+        "sha256": "0e8e68b760d99f3a7c82c6aaaaea2c5487df086224216e97926374a85092aeb6",
+        "bytes": 3628
+      },
+      "initial_references_sent": [
+        {
+          "role": "primary_human_cartoon_and_composition",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "environment_and_clothing_palette_only",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/01-japon-edo-background-v3.png",
+          "sha256": "bb0c765a2e8478c535d27713f3e642a9cd29fc768141dc7f762dada8460abab3",
+          "bytes": 2036511
+        }
+      ],
+      "file_check": {
+        "file": "01-edo.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Large expressive water carrier with two buckets; food exchange and relaxed fan user behind. Human cartoon faces throughout; EDO LIFE text correct.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Aztec Daily",
+      "candidate_id": "A01",
+      "headline": "LAKE CITY",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/02-aztec-v2.png",
+        "sha256": "ece347f9416c824e772b128d9e7bf065e926cf62b70110bbc257c25b8706836d",
+        "bytes": 2679885
+      },
+      "prompt": {
+        "path": "chaines/_propositions_2026-10-06/02-aztec-daily/07-miniature-humaine-proposition-2026-10-07.txt",
+        "sha256": "59f1726f727d929cbc72e98f9a3f3e02c42463268b02b0ca529526386cf7e4c9",
+        "bytes": 3727
+      },
+      "initial_references_sent": [
+        {
+          "role": "primary_human_cartoon_and_composition",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "environment_and_clothing_palette_only",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/02-azteques-background-v3.png",
+          "sha256": "5490dcc6c49e6a82af1f5e3d8371ac1fa60dc9203cdd124a1bcdcfafe1a19dfe",
+          "bytes": 2219223
+        }
+      ],
+      "file_check": {
+        "file": "02-aztec-v2.png",
+        "dimensions": [
+          1673,
+          940
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Large maize basket holder, canoe trade and double-sanctuary backdrop. Two canoe men clean-shaven after correction; original human faces and LAKE CITY lettering preserved.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Babylon Daily",
+      "candidate_id": "B01",
+      "headline": "DAILY GRIND",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/03-babylon.png",
+        "sha256": "a5a2f87ce38b71cb81a7087a41d5d601d73dd843e9ffe1eecc78b827bb6b8820",
+        "bytes": 2597421
+      },
+      "prompt": {
+        "path": "chaines/_propositions_2026-10-06/03-babylon-daily/07-miniature-humaine-proposition-2026-10-07.txt",
+        "sha256": "61d731edc89ecb41647cc056589def5d696de37b891767ab80ffa2aa6ed45f57",
+        "bytes": 3627
+      },
+      "initial_references_sent": [
+        {
+          "role": "primary_human_cartoon_and_composition",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "environment_and_clothing_palette_only",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/03-babylone-background-v3.png",
+          "sha256": "fab138fb97466e38869f1d2d9b5130094873cd76a3bf21ddf8cf57b7285cadb6",
+          "bytes": 2122105
+        }
+      ],
+      "file_check": {
+        "file": "03-babylon.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Large expressive grain worker, scribe and merchant with balance scale. Human faces and DAILY GRIND text correct; street and gate are illustrative, not a surveyed reconstruction.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Imperial China Daily",
+      "candidate_id": "C01",
+      "headline": "BEFORE DARK",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/04-tang.png",
+        "sha256": "497e724f3c2f465d54380844b38fbed39f7746ffa59d1ef3637cfb3584301ef7",
+        "bytes": 2443446
+      },
+      "prompt": {
+        "path": "chaines/_propositions_2026-10-06/04-imperial-china-daily/07-miniature-humaine-proposition-2026-10-07.txt",
+        "sha256": "8d61b7091aaf39f5e070a474bf1d547c9a22d268f1ae2e70aec8629f8cffbe74",
+        "bytes": 3734
+      },
+      "initial_references_sent": [
+        {
+          "role": "primary_human_cartoon_and_composition",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "environment_and_clothing_palette_only",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/04-chine-tang-background-v3.png",
+          "sha256": "5480010beaff7d6125a4a870c187dda9acf3f66d342349c15d97bbeae9e97a18",
+          "bytes": 2142571
+        }
+      ],
+      "file_check": {
+        "file": "04-tang.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Expressive noodle vendor, travelers and gate attendant in late light. Plain undecorated bowls, correct BEFORE DARK text, human faces throughout.",
+      "approved_by_user": false
+    },
+    {
+      "channel": "Ottoman Daily",
+      "candidate_id": "O01",
+      "headline": "DAILY BREAD",
+      "image": {
+        "path": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/05-ottoman.png",
+        "sha256": "25982a0a144788d00acfca6b344767ec65087c8b14f4bc734790042c4f29d27b",
+        "bytes": 2525849
+      },
+      "prompt": {
+        "path": "chaines/_propositions_2026-10-06/05-ottoman-daily/07-miniature-humaine-proposition-2026-10-07.txt",
+        "sha256": "254d62ac2c3e9d9802bbb32032e7462f396987b808f0b8d61e328523f191f941",
+        "bytes": 3671
+      },
+      "initial_references_sent": [
+        {
+          "role": "primary_human_cartoon_and_composition",
+          "path": "output/imagegen/miniatures-cinq-chaines-2026-10-07/reference-rome.jpg"
+        },
+        {
+          "role": "environment_and_clothing_palette_only",
+          "path": "output/imagegen/cinq-chaines-style-2026-10-06/05-ottomans-background-v3.png",
+          "sha256": "88bf59878b99549d2a9d5f3803cdbb696a04e5aae2b3f5b7d559a2376ea42c8f",
+          "bytes": 2114527
+        }
+      ],
+      "file_check": {
+        "file": "05-ottoman.png",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manually_viewed_by_codex": true,
+      "review": "Expressive baker with three loaves, basket buyer and water carrier; two-minaret generic skyline. Human faces throughout, correct DAILY BREAD lettering.",
+      "approved_by_user": false
+    }
+  ],
+  "correction": {
+    "image": "02-aztec-v2.png",
+    "edit_target": "02-aztec.png",
+    "prompt": "02-aztec-correction.txt",
+    "result": "Both clear canoe characters' large beards removed. Viewed by Codex."
+  },
+  "limits": [
+    "Requested 2048x1152; actual outputs approximately 1672x941 (one 1673x940). No upscaling or claim of exact 2K output.",
+    "Fictional adult cartoon faces, costumes and scenes. Full archaeological/costume/prop audits remain for the actual episodes.",
+    "Yellow headline text intentionally provisional, not an optimized CTR claim; final copy must match the eventual script.",
+    "No mobile viewport or A/B performance test. PNG validity and nonblank pixels checked; images directly inspected by Codex.",
+    "Nothing is automatically published or queued for video production from these proposals."
+  ]
+}

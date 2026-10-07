@@ -1,0 +1,5 @@
+Use case: precise-object-edit / masked background cleanup.
+The supplied picture is our existing Istanbul thumbnail. The supplied mask marks ONLY a small region immediately left of the fountain basin in the distant background.
+In that selected region, remove the two small realistic human figures completely. Replace them with an EMPTY continuation of the existing pale stone fountain railing, pavilion masonry, subtle greenery and paving. NO PEOPLE, NO HEADS, NO HUMAN SILHOUETTES, NO STATUES in the selected patch.
+Match the surrounding crisp black linework, light stone colors, perspective and sunny cartoon shading seamlessly. Preserve the fountain geometry.
+Outside the selected patch, keep the entire original image, the four white cartoon adults, bread, exact DAILY BREAD lettering, skyline with two minarets, colors and composition unchanged. This is not a new thumbnail. No added object or writing.

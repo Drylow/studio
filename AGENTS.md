@@ -9,6 +9,10 @@ Pour Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily et Ottoman Dail
 - Le style approuve est celui des cinq images background-v3 du 6 octobre 2026 :
   personnages adultes a tete ronde blanche, mains blanches en moufles, corps couverts,
   bouches neutres ; decors 2D colores avec textures et profondeur moderees.
+- Exception explicite du 7 octobre : pour les MINIATURES seulement, l'utilisateur
+  veut des visages humains cartoon expressifs comme la miniature NO JOBS de Rome
+  Unscrolled. Cette direction ne change PAS les personnages blancs des videos.
+  Conserver les premieres propositions blanches sans les ecraser.
 - Lire production/COHERENCE_2D_CODEX.txt avant toute production.
 - Reutiliser un decor maitre verifie pour chaque lieu et les memes references de
   personnages ; une description textuelle seule ne suffit pas.
