@@ -1443,13 +1443,11 @@
    },
    "els": [
     {
-     "type": "sprite",
-     "sprite": "napoleon",
-     "px": 8,
-     "y": 560,
+     "type": "stamp",
+     "text": "3 DÉCEMBRE 1812",
      "at": 0,
-     "in": "pop",
-     "glow": "B"
+     "y": 160,
+     "rot": -4
     },
     {
      "preset": "title",
@@ -1495,11 +1493,12 @@
    "els": [
     {
      "type": "sprite",
-     "sprite": "crown",
-     "px": 10,
-     "y": 250,
+     "sprite": "napoleon",
+     "px": 8,
+     "y": 580,
      "at": 0,
-     "in": "pop"
+     "in": "pop",
+     "glow": "B"
     },
     {
      "type": "text",
@@ -1508,7 +1507,7 @@
      "color": "W",
      "text": "« La santé de Sa Majesté\nn'a jamais été *meilleure*. »",
      "at": 0.05,
-     "y": 380,
+     "y": 360,
      "in": "fade",
      "maxW": 470
     },

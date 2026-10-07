@@ -409,15 +409,15 @@
   function drawEndcard(e, t) {
     const L = life(e, t);
     ctx.save(); ctx.globalAlpha *= L.a;
-    ctx.fillStyle = col(e.bg || "D"); ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = col(e.bg || "B"); ctx.fillRect(0, 0, W, H);
     ctx.restore();
-    drawText({ type: "text", font: "sans", size: 25, color: "W", text: e.text, y: e.y || 170, at: e.at, in: "fade", maxW: 460 }, t);
+    drawText({ type: "text", font: "sans", size: 25, color: "W", accent: "N", text: e.text, y: e.y || 170, at: e.at, in: "fade", maxW: 460 }, t);
     if (e.button) {
       const p = clamp((t - e.at - 0.3) / 0.3);
       ctx.save(); ctx.globalAlpha *= p; ctx.translate(W / 2, e.by || 560); ctx.rotate(-3 * Math.PI / 180);
       ctx.font = "15px Silkscreen"; ctx.letterSpacing = "2px"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
       const w = ctx.measureText(e.button + "  ▶").width + 26;
-      ctx.fillStyle = alpha("B", 0.9); ctx.fillRect(-w / 2, -16, w, 32);
+      ctx.fillStyle = alpha("N", 0.85); ctx.fillRect(-w / 2, -16, w, 32);
       ctx.fillStyle = col("W"); ctx.fillText(e.button + "  ▶", 0, 1);
       ctx.restore();
     }
