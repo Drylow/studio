@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=1080, height=1920">
+ <title>Pastèque — découpes low-poly</title>
+ <script src="assets/gsap.min.js"></script>
+ <style>
+  html,body{margin:0;width:100%;height:100%;background:#f1e7d6;color:#203c2a}
+  #root{position:relative;width:100%;height:100%;overflow:hidden}
+  .clip{position:absolute;inset:0}
+  #fruit-canvas{width:100%;height:100%;display:block}
+  .head{position:absolute;inset:155px 70px auto;display:flex;flex-direction:column;align-items:center;gap:23px;pointer-events:none}
+  .object{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:30px;letter-spacing:.2em}
+  #cut-label{margin:0;font-family:'Archivo Black',sans-serif;font-weight:400;font-size:132px;line-height:1.05;letter-spacing:-.055em;white-space:nowrap}
+  .foot{position:absolute;inset:auto 90px 125px;display:flex;justify-content:center;gap:52px;pointer-events:none}
+  .step{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:34px;color:#42533c;min-width:86px;text-align:center;border-bottom:3px solid transparent;padding-bottom:15px}
+  .step.active{color:#203c2a;border-color:#203c2a}
+ </style>
+</head>
+<body>
+ <div data-hf-id="hf-if0g" id="root" data-composition-id="watermelon" data-width="1080" data-height="1920" data-duration="18">
+   <canvas data-hf-id="hf-3zzb" id="fruit-canvas" class="clip" data-start="0" data-duration="18" data-track-index="1" data-layout-allow-overflow=""></canvas>
+   <header data-hf-id="hf-4yb2" class="head"><div data-hf-id="hf-rs7c" class="object">PASTÈQUE</div><h1 data-hf-id="hf-iw8d" id="cut-label">1 coupe</h1></header>
+   <footer data-hf-id="hf-jp1y" class="foot"><span data-hf-id="hf-bz1c" class="step active">01</span><span data-hf-id="hf-jme2" class="step">03</span><span data-hf-id="hf-l7m6" class="step">07</span></footer>
+  <audio data-hf-id="hf-u9nv" id="cuts-audio" src="assets/sound.wav" data-start="0" data-duration="18" data-track-index="2" data-volume="0.75"></audio>
+ </div>
+ <script src="assets/scene.js"></script>
+ <script>
+  const clock={t:0};
+  const tl=gsap.timeline({paused:true});
+  tl.to(clock,{t:18,duration:18,ease:'none',onUpdate:()=>window.drawFruit(clock.t)},0);
+  window.__timelines['watermelon']=tl;
+ </script>
+</body>
+</html>

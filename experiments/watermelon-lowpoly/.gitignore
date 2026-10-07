@@ -1,0 +1,15 @@
+node_modules/
+.hyperframes/
+.thumbnails/
+.waveform-cache/
+.*.hf-transaction-*/
+assets/scene.js
+assets/simulation.json
+assets/sound.wav
+assets/gsap.min.js
+assets/events.json
+check-report.json
+keyframes-report.json
+snapshots/
+qa/
+*.mp4
