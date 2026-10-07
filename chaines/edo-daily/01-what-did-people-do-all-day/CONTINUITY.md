@@ -1,5 +1,6 @@
 # Continuity Correction Ledger
-Date: 2026-10-08. Current phase: corrected images awaiting individual review.
+Date: 2026-10-08. Current phase: all 92 selected images individually reviewed;
+51 shot selections corrected, including the empty night-room establishing scene.
 Do not render or deliver until every selected image has a fresh accepted hash.
 
 ## Stable State

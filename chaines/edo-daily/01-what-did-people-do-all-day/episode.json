@@ -158,8 +158,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/004.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/004-continuity.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/004-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/004-continuity-v2.png",
       "motion": "zoom_out"
     },
     {
@@ -594,9 +594,10 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/025.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/025-continuity.png",
-      "motion": "zoom_out"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/025-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/025-continuity-v2.png",
+      "motion": "zoom_out",
+      "accepted_variant": "Targeted continuity retry; original trial retained, not selected."
     },
     {
       "id": "026",
@@ -779,9 +780,10 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/033.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/034.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity.png",
-      "motion": "zoom_out"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/034-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity-v2.png",
+      "motion": "zoom_out",
+      "accepted_variant": "Targeted continuity retry; original trial retained, not selected."
     },
     {
       "id": "035",
@@ -839,9 +841,10 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/033.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/037.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/037-continuity.png",
-      "motion": "zoom_out"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/037-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/037-continuity-v2.png",
+      "motion": "zoom_out",
+      "accepted_variant": "Targeted continuity retry; original trial retained, not selected."
     },
     {
       "id": "038",
@@ -975,10 +978,11 @@
       "chapter": 7,
       "location": "home",
       "cast": [
+        "blue",
         "red"
       ],
       "narration": "For this day, no grand purchase follows. The basket comes home with a few ingredients instead. That is not a defeat. It is the choice that lets the household move from one meal to the next. The city offers more possibilities than one ordinary day can afford.",
-      "action": "This is the returned-shopping household scene after the earlier errands, not the next instant at the textile shop. Red places the SAME woven basket, now holding a few leafy greens and ONE modest wrapped food parcel, on floor inside the RIGHT doorway. Original table clear, ONE original navy cushion under LEFT side, bedding and teapot unchanged. Do not add a second basket.",
+      "action": "Returned-shopping illustrative crosscut: both partners at unchanged empty table; ingredient basket on floor inside right doorway.",
       "sources": [
         "I"
       ],
@@ -989,7 +993,8 @@
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/044.txt",
       "image": "work/edo-daily/01-what-did-people-do-all-day/images/044-continuity.png",
-      "motion": "zoom_in"
+      "motion": "zoom_in",
+      "accepted_variant": "Reviewed returned-shopping scene also retains Blue at home, identified from actually sent approved 023 seating reference. No claim of sending a separate Blue sheet on this retry."
     },
     {
       "id": "045",
@@ -1058,7 +1063,7 @@
         "green"
       ],
       "narration": "A customer reaches the workshop. He is the same shopkeeper your partner will encounter at the produce counter, now looking after a need of his own. You place the box between you and lift the lid. He can inspect what he is taking away before the parcel is wrapped.",
-      "action": "Blue and Green stand on opposite sides of original workshop bench, looking at the SAME finished wide shallow joined wooden box with matching lid CLOSED at bench center. Hand plane left, mallet/chisel right. No alternative box/cube/chest, no dialogue bubbles.",
+      "action": "Blue demonstrates the completed matching box lid fit to Green by lifting it; original box and tools remain; it will be closed for wrapping before Green leaves.",
       "sources": [
         "I"
       ],
@@ -1070,7 +1075,8 @@
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/048.txt",
       "image": "work/edo-daily/01-what-did-people-do-all-day/images/048-continuity.png",
-      "motion": "pan_right"
+      "motion": "pan_right",
+      "accepted_variant": "Reviewed lid-demonstration pose fits customer handover; box not replaced or duplicated."
     },
     {
       "id": "049",
@@ -1231,11 +1237,13 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/055-continuity.png",
+        "work/edo-daily/01-what-did-people-do-all-day/images/049-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/056.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity.png",
-      "motion": "zoom_in"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/056-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png",
+      "motion": "zoom_in",
+      "accepted_variant": "Retry with approved actual meal and wrapped parcel state, not text alone."
     },
     {
       "id": "057",
@@ -1254,11 +1262,12 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/057.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/057-continuity.png",
-      "motion": "pan_right"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/057-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/057-continuity-v2.png",
+      "motion": "pan_right",
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "058",
@@ -1277,11 +1286,12 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/058.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/058-continuity.png",
-      "motion": "zoom_out"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/058-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/058-continuity-v2.png",
+      "motion": "zoom_out",
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "059",
@@ -1724,11 +1734,12 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/080.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity.png",
-      "motion": "zoom_in"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/080-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
+      "motion": "zoom_in",
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "081",
@@ -1859,12 +1870,14 @@
         "S09"
       ],
       "references": [
-        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png"
+        "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
+        "work/edo-daily/01-what-did-people-do-all-day/images/085-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/086.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/086-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png",
       "motion": "zoom_in",
-      "reuse_reference": true
+      "reuse_reference": true,
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "087",
@@ -1883,12 +1896,12 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/085-v2.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/087.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/087-continuity.png",
-      "motion": "pan_right"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/087-v3.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/087-continuity-v3.png",
+      "motion": "pan_right",
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "088",
@@ -1905,12 +1918,13 @@
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/085-v2.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/087-v2.png",
+        "work/edo-daily/01-what-did-people-do-all-day/images/085-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/088.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/088-continuity.png",
-      "motion": "zoom_out"
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/088-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/088-continuity-v2.png",
+      "motion": "zoom_out",
+      "accepted_variant": "State/color retry using specifically reviewed actual props, not textual descriptions alone."
     },
     {
       "id": "089",
@@ -1967,10 +1981,10 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
-        "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/080.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/080-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
       "motion": "zoom_out",
       "accepted_variant": "Intentional exact-image recap of shot 080, not a separately generated state."
     },

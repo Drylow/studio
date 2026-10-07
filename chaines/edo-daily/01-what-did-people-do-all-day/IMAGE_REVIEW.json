@@ -1,0 +1,839 @@
+{
+  "001": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/001-continuity.png",
+    "id": "001",
+    "sha256": "07dea039e7b3747539074f193a74fab4fc62e6ee40ce6b399c1c5a4728ccdb8d",
+    "accepted": true,
+    "notes": "Same empty table, ONE cushion under left, bedding and teapot, matching Blue.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "002": {
+    "accepted": true,
+    "sha256": "f15e22671715085c11f78a8d89eb480873866551b533456ab3e0cc129afc11ac",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+    "notes": "Exact empty workshop master, deliberately establishing wide view; rejected actor version retained separately.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "003": {
+    "accepted": true,
+    "sha256": "666a3656f9c8a7bf8403710c4435fd84b2d7d6fde20cc4ed7cd22b7348cd961d",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/003.png",
+    "notes": "Blue fetching empty bucket at the canonical well.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "004": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/004-continuity-v2.png",
+    "id": "004",
+    "sha256": "866c877b495d440284b1db1bff15e6320f3df0b051c424605911a60f51af8ef2",
+    "accepted": true,
+    "notes": "v2: corrected smooth oval mittens, original table/cushion and burgundy/ochre outfit, same folded gray garment.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "005": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/005-continuity.png",
+    "id": "005",
+    "sha256": "b28e5998b3d9a22453cae5bfd28f780126d1896b09f455226668ccdbf923f264",
+    "accepted": true,
+    "notes": "Same wide shallow box, rimmed lid lifted, hand tools left/right and Blue full head.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "006": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/006-continuity.png",
+    "id": "006",
+    "sha256": "de8239b10adc0c0acd137088ef6b88265669f6d20e184aa4aa497e73b2e1c966",
+    "accepted": true,
+    "notes": "Same joined shallow box, lifted matching lid, complete Blue head and matching clothing.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "007": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/007-continuity.png",
+    "id": "007",
+    "sha256": "62a02a9699b544cb2b7cc7824256b0fdda40bd383806e88d9f1123a284bf9824",
+    "accepted": true,
+    "notes": "Matching rimmed lid held for inspection above same joined shallow box; original tools retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "008": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/008-continuity.png",
+    "id": "008",
+    "sha256": "694bd0cb5d846d210dca5cb104df6623d638394692bba72dd0bf14827c49b533",
+    "accepted": true,
+    "notes": "Same gray rolled tool wrap with wooden ends, Red empty handled basket, folded gray garment on table right, cushion original.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "009": {
+    "accepted": true,
+    "sha256": "bace2a448b1ef34053b0fe783b4d3c6281e40848b8cd7a631623d7059912132b",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/009.png",
+    "notes": "Red considering produce at the fixed market stall.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "010": {
+    "accepted": true,
+    "sha256": "8f3b790fc13ad95d4ef3d4c7b196aee85b003d3893e76be34fa1d76e75213619",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/010.png",
+    "notes": "White-headed adult city crowd crossing canonical bridge; populated variant accepted for city overview.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "011": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/011-continuity.png",
+    "id": "011",
+    "sha256": "434225d1fc9834f83bedfb35bbe089ba2f6a32ee257eff9456ec89f22a9f26c2",
+    "accepted": true,
+    "notes": "Gray rolled tools and empty woven basket, matching pair, same alley well and doorway.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "012": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png",
+    "id": "012",
+    "sha256": "25b5d7a59fffbe4259409a294baae190cc6b6787fdf70035ce0a15f916bfdd68",
+    "accepted": true,
+    "notes": "One near/right bench, two seated cast and two cups; THREE counter cups, kettle and river.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "013": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/013-continuity.png",
+    "id": "013",
+    "sha256": "e90e4454050b220c1e7c361cafd9dc0d4ebf17838cbbcedd10cd72cfe6a430ea",
+    "accepted": true,
+    "notes": "Blue folds navy quilt in left recess, gray teapot and ONE table cushion retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "014": {
+    "accepted": true,
+    "sha256": "d15f2b07dfec52a70254d9af1d7b93769a695a59dd470a8a2faefe4f99b5eeb4",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+    "notes": "Exact canonical empty home.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "015": {
+    "accepted": true,
+    "sha256": "43bec183c561dd5926e2a665c857daa03a118ad71bcadd2550b3ea68c1b86377",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/015.png",
+    "notes": "Adult white-headed residents at alley doorways; fixed well, rooflines and broom retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "016": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/016-continuity.png",
+    "id": "016",
+    "sha256": "a8b814568cebd89fb057b4c3d2879d6177a8e7032ce80b1ee3d85d4d8f45eae6",
+    "accepted": true,
+    "notes": "Red puts empty basket at right doorway; gray garment remains table right, ONE cushion.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "017": {
+    "accepted": true,
+    "sha256": "874649d5808fee6086f7e5f155cb27b0d81bdae2b7dc12389691c66c498aee92",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/017.png",
+    "notes": "Green carrying a bucket with Blue at doorway, same alley master and covered white cast.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "018": {
+    "accepted": true,
+    "sha256": "3ce78b077a036d1716fd0172b813cc2d679e40c00479c350d910312ff44c96db",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/018.png",
+    "notes": "Blue with empty bucket at unchanged well, intact head and towel.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "019": {
+    "accepted": true,
+    "sha256": "62c1b9c24c86a89f2e3339a45ba76d048946c440f90977fabad88643a2da367d",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/019.png",
+    "notes": "Empty close view of canonical well, rope and timber wall.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "020": {
+    "accepted": true,
+    "sha256": "d577fb5d3e3c29e9263b0d15988097bb6590af4c919e413405ab5ca35711a19e",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+    "notes": "Exact canonical bridge, boat and storehouses.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "021": {
+    "accepted": true,
+    "sha256": "327f71a7baf0e633e78692f9ecfb605292f9fa71137c3888502fcf9d509a0e08",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/021.png",
+    "notes": "Blue sets filled bucket down; Red holds smaller wooden vessel, well unaltered.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "022": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/022-continuity.png",
+    "id": "022",
+    "sha256": "817ba2d3a187b38781eaa8fce92461e174db5d59d27fdd86a2d1d94196378fc4",
+    "accepted": true,
+    "notes": "Red with water bucket at same doorway; woven basket remains beside door, clear table/cushion.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "023": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png",
+    "id": "023",
+    "sha256": "76eb67270d572f0b7a26864a186de7c8e9193aca0303443dba78f7b1901bb0ad",
+    "accepted": true,
+    "notes": "Original table and ONE cushion, Blue left and Red bare tatami right, two rice/two soup/one vegetable dish.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "024": {
+    "accepted": true,
+    "sha256": "3a22915a0ea71187a6bc2ac5acbac90281fc14509ffdd2b043c536d22c0b36c0",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+    "notes": "Exact canonical market baskets and sacks.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "025": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/025-continuity-v2.png",
+    "id": "025",
+    "sha256": "5d57e763ba0f919acf528563edabb4370e62de3cabc7d391a438b5e3faaf9625",
+    "accepted": true,
+    "notes": "v2: same meal retained, Red lifts rice bowl, Blue stays, ONLY original two chopstick pairs on table.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "026": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/026-continuity.png",
+    "id": "026",
+    "sha256": "59aee135a901bf01ba3fe35a342cd048eee414691e45f838cdaa6326ce7ac0ac",
+    "accepted": true,
+    "notes": "Same breakfast dishes and seats, Red basket and Blue checking newly placed small food container.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "027": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/027-continuity.png",
+    "id": "027",
+    "sha256": "e1a538a3ffb3d1ea760f140efb542a381b0e58a573b9f990d2a396201c88fd34",
+    "accepted": true,
+    "notes": "Matching gray tool roll with wooden ends rather than handbag; existing doorway and well, authored sweeper.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "028": {
+    "accepted": true,
+    "sha256": "fba8625927c334ac347ef100d1f2275f0dcb0f29e976d9f405d166b1c74f73ee",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/028.png",
+    "notes": "Blue pauses in shared alley; no modern clock.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "029": {
+    "accepted": true,
+    "sha256": "d577fb5d3e3c29e9263b0d15988097bb6590af4c919e413405ab5ca35711a19e",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+    "notes": "Exact canonical bridge, deliberately reused for seasonal-time context.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "030": {
+    "accepted": true,
+    "sha256": "52f1d6169961ca2207d19bd47983dff8bada11ba32e88c802ac23b5729efd5dc",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/030.png",
+    "notes": "Red passes covered white-headed shoulder-pole food seller, produce stall stable.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "031": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/031-continuity.png",
+    "id": "031",
+    "sha256": "0096f90609791d2c05c2aefaefd0b435be536625def5a2149dbe405617fe59d8",
+    "accepted": true,
+    "notes": "Matching gray tool roll on bridge; stable indigo/gray/towel costume, distant covered adults.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "032": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/032-continuity.png",
+    "id": "032",
+    "sha256": "5f87b993c7d04c9443152c2cbbae29f732c64e4095166e7c94907536f1c6ccd6",
+    "accepted": true,
+    "notes": "Matching wide shallow box and lifted rimmed lid, workbench/tools stable.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "033": {
+    "accepted": true,
+    "sha256": "e5f2880103eae9bafbed8f4f2d31fd9e40fd19de879b5b7c60504822aa4aa1ba",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/033.png",
+    "notes": "Empty object insert, readable wooden corner joints, no invented actor.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "034": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity-v2.png",
+    "id": "034",
+    "sha256": "1abb7a24802e9ef4055a4310d2ca2029fde008c7a9401310f1a47fa2983d0717",
+    "accepted": true,
+    "notes": "v2: no separate fingers; smooth oval pads planing board; box/lid and mallet/chisel retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "035": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/035-continuity.png",
+    "id": "035",
+    "sha256": "c97b28ffd319c5190eea8e6285195ce6a7bca30ee53c72a92abf3f56e0cc8b70",
+    "accepted": true,
+    "notes": "Object-only insert retaining box joints, matching lid, plane left and mallet/chisel right.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "036": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/036-continuity.png",
+    "id": "036",
+    "sha256": "ebc1cbd434abbba4dabc6f9f579190692f725af1e02c613c4eef0559ed0e0c29",
+    "accepted": true,
+    "notes": "Same wide shallow joined box and matching lid being lowered, Blue full head and mitten hands.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "037": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/037-continuity-v2.png",
+    "id": "037",
+    "sha256": "67b77129a621d02ab9ff00d91c94e67b313ae1437083b630e192fc3c7f98a836",
+    "accepted": true,
+    "notes": "v2: matching box CLOSED, same lid, Red gray garment at right doorway.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "038": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/038-continuity.png",
+    "id": "038",
+    "sha256": "5432582df388b3f4630c9374875cab86cc65349e3f7b7c388975ead3a72799c0",
+    "accepted": true,
+    "notes": "Same closed wide box, Red gray garment, Blue at original bench, tools retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "039": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/039-continuity.png",
+    "id": "039",
+    "sha256": "1ae57380d19319e8a6763d5ff5a41427434c132908e88a2cc9b658d719385416",
+    "accepted": true,
+    "notes": "Gray garment laid on table, plain sewing box, Red right/bare tatami, original cushion left.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "040": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/040-continuity.png",
+    "id": "040",
+    "sha256": "6542d679251cfa5342e863f644876e46fa3aa87df014f325cd6142012c7f5535",
+    "accepted": true,
+    "notes": "Same gray garment folded, sewing box now open after use, Red on bare tatami, original cushion left.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "041": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/041-continuity.png",
+    "id": "041",
+    "sha256": "b10d9d76f1b45eddade9538595e9ae96d9550e1dcb6d5a052366bf83073a97a5",
+    "accepted": true,
+    "notes": "Red's gray repair parcel remains inside woven basket at same market.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "042": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/042-continuity.png",
+    "id": "042",
+    "sha256": "ebaed0fd30eaa2a797f9bf8e21e09f30d63e78a7581a8d63e44f123f659f08a2",
+    "accepted": true,
+    "notes": "Same gray parcel retained inside woven basket; fabrics and vegetable counter retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "043": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/043-continuity.png",
+    "id": "043",
+    "sha256": "995a1991a04ab00edefa63ea087cc22621dd06481aeb7e5e6c08b00843532873",
+    "accepted": true,
+    "notes": "Same basket and gray parcel retained, matching Red, authored distant plum adult.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "044": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/044-continuity.png",
+    "id": "044",
+    "sha256": "d5ef887a35049976f90d93754961922d0f6d1e8e99018d795157e8d492327524",
+    "accepted": true,
+    "notes": "Returned-shopping crosscut with both household partners and ingredient basket by doorway, clear table and single cushion.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "045": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/045-continuity.png",
+    "id": "045",
+    "sha256": "9742d75f9f0d31e2edca091c9d649a63e5b75385711952f2a02d88a48b626c53",
+    "accepted": true,
+    "notes": "Blue empty-handed before box collection, matching costume on same bridge.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "046": {
+    "accepted": true,
+    "sha256": "75f34d9655f3556fe6f7eafcd35ccb20191280c69ad447a7bc48ed51d369ca5d",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/046.png",
+    "notes": "White-headed covered anonymous official/customer, no armor fight or human face.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "047": {
+    "accepted": true,
+    "sha256": "e12ca3a3c21cd13bedeb0247c5dea2103fc154ea1bce4f3df309a10b163ec65f",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/047.png",
+    "notes": "Green arranging produce, consistent jade outfit and gray sash.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "048": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/048-continuity.png",
+    "id": "048",
+    "sha256": "3ffccae78fb56baf0343eae86dfe643a83490ce3890998698f57f9f64dc6a807",
+    "accepted": true,
+    "notes": "Customer lid-fit demonstration, same shallow joined box and tools, correct Blue and Green.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "049": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/049-continuity.png",
+    "id": "049",
+    "sha256": "6e54445c327feeb62c1cb55505c3695aca336db929ca9c04cb2e3b90acecb18b",
+    "accepted": true,
+    "notes": "Green carries ONLY collected flat gray wrapped box, original empty bench and tools retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "050": {
+    "accepted": true,
+    "sha256": "ab2bc87a9d2d748b46fc65dd62e2a40eb22c84ce1974dc2cc3589402338fcdb3",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/050.png",
+    "notes": "Red pays Green with small counter coins; correct identities, no fictional price label.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "051": {
+    "accepted": true,
+    "sha256": "2d287b264b956b81212d8a8d9aca1b722a4be075d85c82fadabdc1623949e3ba",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/051.png",
+    "notes": "Red selecting modest produce, white oval hand holding vegetable.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "052": {
+    "accepted": true,
+    "sha256": "99b6767989bfbe4e57c89cb8304cbe177bef3ff66ba00a86bfb5064292855b52",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/052.png",
+    "notes": "Green moves produce basket at same stall, white oval hands.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "053": {
+    "accepted": true,
+    "sha256": "bde7f519c7855460e8e98722598d74322d6f615a6f6b98c95e4188ab977342e3",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/053.png",
+    "notes": "Blue beside anonymous covered ochre seller and plain food tray.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "054": {
+    "accepted": true,
+    "sha256": "0e66475d8f2e0944c36492d9aa7b74c60475f56265793a451f2cc5499124f473",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/054.png",
+    "notes": "Empty cooked-fish tray insert, no later sushi/tempura.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "055": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/055-continuity.png",
+    "id": "055",
+    "sha256": "e407832877396787322562b57dd984bf56b63b90e5fbc842c06f3943ff02836a",
+    "accepted": true,
+    "notes": "ONE bench, original kettle and three counter cups, Blue rice bowl/small vegetable dish/one table cup.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "056": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png",
+    "id": "056",
+    "sha256": "c874c41ef24eb37da0b26285f85ee441088102ad6f480bd42d1e2fcf3e2dca2f",
+    "accepted": true,
+    "notes": "v2: original small vegetable dish/rice bowl, two cups, flat wide gray parcel same as 049, correct Blue and Green.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "057": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/057-continuity-v2.png",
+    "id": "057",
+    "sha256": "c72fc31288221a5a999ad9f9838a79f142fc2ed1cbbb651ffaed49f5809b5ca8",
+    "accepted": true,
+    "notes": "v2: exact 056 meal state and flat gray parcel remain; both actors on original bench, head turn only.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "058": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/058-continuity-v2.png",
+    "id": "058",
+    "sha256": "48bf82b177f81edb162d7d9620afcdc3415933d2bd4538e7be6247c6045000c2",
+    "accepted": true,
+    "notes": "v2: Green lifts ONLY the same flat gray parcel, rice/vegetable dishes and both cups stay on table, Blue seated and original bench.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "059": {
+    "accepted": true,
+    "sha256": "a01706fbd1d0a9f3e0952396ab72001d05d362e44c50943b0095182ed956a00a",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/059.png",
+    "notes": "Blue observes canonical moored boat and landing.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "060": {
+    "accepted": true,
+    "sha256": "be61571f51dfa05bcb89eb2d2550c99ac0da9dc3d71a6bacde34e88f384e38f6",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/060.png",
+    "notes": "Empty closer view of boat and cargo landing, stable building positions.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "061": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/061-continuity.png",
+    "id": "061",
+    "sha256": "8ce8620977c745c7ece20f364d364e6483c323c1dbe006894eeaa6cf5f5a5192",
+    "accepted": true,
+    "notes": "Same flat gray parcel, one knot and jade/charcoal outfit on original bridge.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "062": {
+    "accepted": true,
+    "sha256": "6d726db46f4b1a86a623875d7aa6b1f97a67a26523d7e34c5b9b77bdd82a462c",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/062.png",
+    "notes": "Blue pauses at railing, neutral face, no unrequested crew.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "063": {
+    "accepted": true,
+    "sha256": "a998040c8ff8cfdb6d5707fe6688db75198486857baddbfc6c9690512eb6f945",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/063.png",
+    "notes": "Blue gathers shavings into tray; hand tools, stable workshop.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "064": {
+    "accepted": true,
+    "sha256": "15a0c3c60789db25f9009eff89f49f3e740a28b277bcd602e6e9e5936989ea43",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+    "notes": "Exact canonical alley for dense timber housing/fire precautions.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "065": {
+    "accepted": true,
+    "sha256": "d577fb5d3e3c29e9263b0d15988097bb6590af4c919e413405ab5ca35711a19e",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+    "notes": "Exact canonical bridge for rebuilding context, no fabricated disaster image.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "066": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/066-continuity.png",
+    "id": "066",
+    "sha256": "1abb4b94ccf3a085724d8e289a9d58aa3604a95c24fa02c3280b22d9cffdc360",
+    "accepted": true,
+    "notes": "Red safely handling lidded pot in same home, no flame on tatami, original table/cushion retained; accepted low pose at left.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "067": {
+    "accepted": true,
+    "sha256": "b0938a52edc64a3065b705941d8bf027dbc8d918265666e785f899f81370b9fc",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/067.png",
+    "notes": "Blue tidies hand tools as directed, same workshop anchors.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "068": {
+    "accepted": true,
+    "sha256": "0fc85a6a6ca5e29b8875de43df4c16ea9f55f29a7914f483cdc6115c5715f2eb",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/068.png",
+    "notes": "Clothed Blue approaches bathhouse, folded cloth, same towel.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "069": {
+    "accepted": true,
+    "sha256": "7baccd3ecab1f72da7b9e19711f0a4a988a09996c0b9f373d30ddb75e0cbc2d8",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/069.png",
+    "notes": "Clothed Red outside matching bathhouse, folded burgundy cloth.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "070": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/070-continuity.png",
+    "id": "070",
+    "sha256": "0c5c436ac852e730f36d23a11abb60401c7fca81c9f74c305d649de7bcc861c0",
+    "accepted": true,
+    "notes": "Matching covered pair with folded gray/burgundy bath cloths, no blue bag or outfit changes.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "071": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/071-continuity.png",
+    "id": "071",
+    "sha256": "c07cf9fde40b6d6cf272c82dc24e59562fb1da9c4ba652fc060faca5cc8876bd",
+    "accepted": true,
+    "notes": "Same folded gray/burgundy cloths on return, stable pair and alley.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "072": {
+    "accepted": true,
+    "sha256": "53dedbe4b5c4d0147eea6cb2e9567dfd4d558ad6dd044d35de4e51e52e9b1671",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/072.png",
+    "notes": "Green views matching theater entrance; hand/face design maintained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "073": {
+    "accepted": true,
+    "sha256": "00138c462ebd6a3b6e6a389c1cb2deacd164ea3f39f584587de039ea526d221e",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/073.png",
+    "notes": "Three white-headed covered adults outside theater, all heads intact; closer than requested distant extras, still appropriate establishing scene.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "074": {
+    "accepted": true,
+    "sha256": "0a8aec57f03212b17f6c2f5ee9178941da68f1129d7e4dbfe52f219c374fb1a3",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/074.png",
+    "notes": "Two main adults inspect architectural pictures, canonical theater and heads intact; this shot freezes the display state.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "075": {
+    "accepted": true,
+    "sha256": "8d9db97cd34b9f6512e6b48d29be473aa0fb2d94eb78f9a4850bb1cf0d0927ad",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/075-v2.png",
+    "notes": "Corrected board insert: same facade left/stage right as approved 074; no people.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "076": {
+    "accepted": true,
+    "sha256": "82541e6e976cb5fa623186d99b103653e851d11e37dbed0c98ef42a005aa2bf1",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/076-v2.png",
+    "notes": "Corrected meeting: board pictures remain present and match 074, Blue and Green identities intact.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "077": {
+    "accepted": true,
+    "sha256": "5f607afae8441dad0398948bf0241a481137627c37864b92be2c0eeb4e4700f2",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/077-v2.png",
+    "notes": "Corrected departure: board matches 074; Blue retained as background interlocutor, consistent with narration that he finishes conversation.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "078": {
+    "accepted": true,
+    "sha256": "6d383e2aec690f99ac95fbe876e38b3fc0599a529bc3736031e48ef2f6937d72",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/078.png",
+    "notes": "Empty market with one plain stitched book on original textile shelf.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "079": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png",
+    "id": "079",
+    "sha256": "c9b9352a312c0dd7b35be4e4584d2644fd8ee99e13b705337162506e37d7c104",
+    "accepted": true,
+    "notes": "ONE original bench, two table cups/three counter cups, Red small woven ingredient basket held by handle.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "080": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
+    "id": "080",
+    "sha256": "5e3ce6ce05660226529fd939b6dd106283737e03e5670a7b9b81b76dd825e244",
+    "accepted": true,
+    "notes": "v2: both partners and both cups retained, SAME small round woven ingredient basket now set on floor beside right bench leg.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "081": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/081-continuity.png",
+    "id": "081",
+    "sha256": "8853b8ba24b070efe6964e7189e815b683297b916d6bbe28bc139571cfd17381",
+    "accepted": true,
+    "notes": "Same couple, two cups, basket on floor, Green pauses empty-handed, no added bench.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "082": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/082-continuity.png",
+    "id": "082",
+    "sha256": "65e6c33dfe63501a4a3a210c13326dbdb1f77ff28008978f8aab3d051099e66c",
+    "accepted": true,
+    "notes": "Same couple stand; Red lifts same basket, two cups left on table, counter cups/kettle retained.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "083": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/083-continuity.png",
+    "id": "083",
+    "sha256": "a53938013840ef65a0e962056e0ea7e829ff4a6a4a515c24d11a2bd4ffb3533d",
+    "accepted": true,
+    "notes": "Same dinner seating: ONE navy cushion Blue left, Red bare mat right, two rice/two soup/one vegetable dish, basket at doorway.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "084": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/084-continuity.png",
+    "id": "084",
+    "sha256": "944c85704e835dd45480903a8461ac06e643805da7891bf48437cd4f1f91cff1",
+    "accepted": true,
+    "notes": "Both partners retained; dishes gathered on tray, gray roll checked, basket at doorway, ONE cushion.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "085": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/085-continuity.png",
+    "id": "085",
+    "sha256": "498f8103a5c56b7f4ddc2f4ea53f15149c93e04b70e131f2999a41387268584d",
+    "accepted": true,
+    "notes": "Matching gray rolled tools on clear table, tray and basket by doorway, same original room/evening variant.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "086": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png",
+    "id": "086",
+    "sha256": "c7e19197e113f0b759c124c852e6c5f7327cb46a291aabf41d609b7a002128e3",
+    "accepted": true,
+    "notes": "v2: original lamp at original back/right table position, ONE cushion, folded bedding, tools/basket/tray parked right; no people.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "087": {
+    "accepted": true,
+    "sha256": "a51a04fed1730f83c15b61c08dd048262dde430f1303b03eb85eb19c3a6123d9",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/087-continuity-v3.png",
+    "notes": "v3 individually reviewed: bright-white heads/necks/mittens, Blue on ONE navy cushion, Red bare tatami, EMPTY tabletop except original lamp at exact back/right position; basket/tray/gray tools retained right doorway.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "088": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/088-continuity-v2.png",
+    "id": "088",
+    "sha256": "ed12657854cf660c8d82237fcb49e8eb8e0fcf3b38aec970d9bbcd4dbe9fd7c4",
+    "accepted": true,
+    "notes": "v2: Blue white head/mittens restored, navy quilt being unfolded at left, ONE cushion/lamp retained; tools/basket/stacked bowls stay right. Gray teapot set back on left recess to clear bedding.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "089": {
+    "accepted": true,
+    "sha256": "62917ceca07cde426fb7f79128e5bed9414d9ca72a234e980c29a60e319fb58a",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/089.png",
+    "notes": "Empty workshop recap with tools and next board; no false actor.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "090": {
+    "accepted": true,
+    "sha256": "356d80306c342549ca6479116a4f518b2c039ab3d44937e642a30d8cc564b133",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/090.png",
+    "notes": "Green tends original produce stall, white mittens.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08"
+  },
+  "091": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
+    "id": "091",
+    "sha256": "5e3ce6ce05660226529fd939b6dd106283737e03e5670a7b9b81b76dd825e244",
+    "accepted": true,
+    "notes": "Intentional exact-image recap of approved 080 later tea scene, no new object/cast state.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  },
+  "092": {
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/092-continuity.png",
+    "id": "092",
+    "sha256": "f84db61504e638070180d4b118f6d1e45d573d7d26ce5532a052c4dc816fc91c",
+    "accepted": true,
+    "notes": "Empty night home; original lamp/table/cushion remain, navy quilt unfolded at left, basket/tools/stacked cleared dishes stay right.",
+    "reviewer": "Codex visual inspection",
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
+  }
+}

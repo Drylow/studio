@@ -17,7 +17,10 @@ Ten empty environment/light masters: home, shared alley, workshop, market,
 bridge/waterfront, bathhouse exterior, theater exterior, riverside teahouse,
 home at dusk, home at night. Approved shot 074 is an additional frozen
 scene-state reference for the two theater pictures.
-The exact ordered references actually sent are recorded in episode.json.
+Additional role-specific reviewed state/prop inputs are recorded in CONTINUITY.md
+and the reference review registry. The exact ordered inputs actually sent are
+recorded in episode.json. A reference approval is scoped to its stated role;
+for example the old white-skin color reference is not approved seating geometry.
 
 ## Corrections And Directorial Choices
 - Rejected 002: an unrequested actor appeared in an empty object shot. The final
@@ -29,14 +32,30 @@ The exact ordered references actually sent are recorded in episode.json.
 - Rejected 087: lamp tinted white skin cream. Corrected to bright white heads/hands.
 - Shot 077 retains Blue in the background while Red leaves, fitting the narration;
   his identity is taken from approved shot 074, which was actually sent to the proxy.
-- Shots 002, 014, 020, 024, 029, 064, 065 and 086 use their unchanged empty masters.
+- Shots 002, 014, 020, 024, 029, 064 and 065 use their unchanged empty masters.
   Their images are not falsely claimed to be newly generated character scenes.
+- After the user's continuity feedback, the initial render was stopped. Fifty
+  selected shots were held for correction/review, plus empty night shot 086.
+  Corrections lock ONE home cushion, ONE original near/right tea bench, the
+  shallow joined box, gray rolled tools, retained dishes/parcels and bath cloths.
+- 025, 026, 057, 080 and 084 keep both conversational/household actors visible.
+  044 accepts a reviewed returned-shopping crosscut with both partners; Blue's
+  design is inherited from the actually sent approved 023 state image.
+- 048 accepts the customer's matching-lid demonstration rather than falsely
+  describing the visible lifted lid as fully closed.
+- The later tea scene 080 is intentionally reused in reflective recap 091.
+- Rejected mask test 004-mask-test.png contains black/red corrupt wall patches.
+  It is not selected, not a location master and not used as a state reference.
+  The mask experiment was abandoned. No alternate provider was substituted.
 
 ## Visual Limits
-Repeated architectural anchors, cast designs and costume colors were checked.
-These are generative drawings, not pixel-identical composites. Small variations
-in cushion/table placement, carried wrapping and box proportions remain between
-some illustrations. Do not claim geometrically perfect continuity.
+Repeated architectural anchors, cast designs and costume colors are visually
+checked against actual reference images, not declared correct from prompts alone.
+These remain generative drawings, not pixel-identical composites. Major furniture
+layout and prop-identity drift triggered the correction pass; small variations
+in linework, apparent proportions, wrapping folds and utensil stacking can remain.
+Do not claim geometrically perfect continuity or exact unchanging pixels.
+The gray teapot in 088 is set back within the left recess to clear bedding.
 Anonymous background adults can wear similar colors, but are not the named cast.
 Bathhouse scenes stay dressed and outside; no modern bath mural is depicted.
 Black-and-white theater pictures are original illustrative motifs, not copies of
