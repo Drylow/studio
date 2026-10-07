@@ -1,5 +1,9 @@
 # Journal des vidéos
 
+## Chocolate vs Giant Fork — 7 octobre 2026
+
+Adaptation alimentaire des plaques qui tombent sur une pointe, étudiées chez NodeFan3D : 1 / 2 / 4 / 8 / 16 tablettes de chocolat sur une fourchette géante. Même manche blanche, paume, planche, palette et pixel art intégral que Watermelon ; fin à la spatule avec sautillement et confettis. 27,80 s, portrait 1080 × 1920, 60 images/s, titres anglais. Fractures obliques inégales au contact, 31 craquements synchronisés, retombées regroupées, sans musique. Export `experiments/chocolate-crunch/chocolate-giant-fork.mp4` terminé ; 1 668 images décodées et regardées sur 28 planches, titres présents partout, pic AAC −3,8 dBFS. Vérification de simulation et contrôle strict GPU matériel réussis. Six références téléchargées et analysées dans `experiments/physics-references/2026-10-07/README.md` ; aucun extrait ni son de ces vidéos repris dans notre rendu. Livré dans Codex, aperçu HyperFrames disponible ; aucune publication sur les réseaux sociaux. Simulation stylisée : collisions des éclats avec le décor, sans collisions mutuelles des débris denses.
+
 ## Essai de simulation low-poly — 7 octobre 2026
 
 **Révision actuelle : chef, trois outils, éclats irréguliers et célébration.** 41,80 s, portrait 1080 × 1920 à 60 images/s. Paume sous le fruit pendant son arrivée ; départ normal à 1 CUT, puis machettes jusqu’à 32, grande scie flottante et rafales de pistolet cartoon. Les tirs produisent 18 / 40 / 100 morceaux anguleux inégaux. Fin à la spatule avec léger saut, confettis et étincelles pixel art. SFX de scie et de tir figés via Replicate, sans musique. Vérification physique et contrôle strict GPU matériel réussis. MP4 terminé, 2 508 images décodées et regardées dans 42 planches ; titres présents sur toutes les images, pic audio −3,4 dBFS. Livré dans Codex ; aucune publication sur les réseaux sociaux.

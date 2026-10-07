@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "j3kvg9ar1xrmy0d1318adm3fdc",
+  "prompt": "Close microphone isolated foley. A thick dark chocolate bar snaps and breaks with one satisfying sharp dry chocolate CRACK, then a brief crunchy brittle crumble. Dense edible solid chocolate texture. Several separate single snaps spaced apart in a quiet studio. No music, no voice, no glass, no metallic ringing, no ambience.",
+  "source": "sfx-snap-source.mp3",
+  "sha256": "b8614f78dd4852271f240d5f41b2a44ac791d67f8ce2d03f87187b7fa69df86c",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}
