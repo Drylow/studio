@@ -12,7 +12,18 @@ publication demandée par l'utilisateur dans la conversation, envoyée par le se
 
 ## Essai de simulation low-poly — 7 octobre 2026
 
-**Révision actuelle : Pixel Cuts, maximum 32.** Dernier retour utilisateur :
+**Révision actuelle : Pixel Cuts, son adouci et logo cuisto.** Cadence et maximum
+32 conservés. Une petite icône pastèque accompagne WATERMELON. Le mix conserve
+93 accents de coupe et regroupe 584 impacts en 67 accents discrets, sans saturateur.
+Cache exact de palette et réutilisation des sommets entre coupes pour alléger la
+preview. Export `experiments/watermelon-lowpoly/watermelon-pixelcuts-32-polished.mp4` :
+14,65 s, 1080 × 1920, 60 images/s ; 879 images décodées et regardées sur quinze
+planches. Pic audio −4,0 dBFS, contrôle strict GPU matériel sans erreur ni
+avertissement. Logo pixel art avec spatule dans la main, selon la correction
+utilisateur : `experiments/watermelon-lowpoly/brand/chef-spatula-avatar.png`.
+Livraison dans Codex, aucune publication sur les réseaux sociaux.
+
+**Révision précédente : Pixel Cuts, maximum 32.** Dernier retour utilisateur :
 retirer 64 et ralentir les salves. Hook de 0,85 s qui coupe avant la chute, puis
 1 / 4 / 8 / 16 / 32 CUTS ; salve finale étalée sur 1,90 s, lames visibles 0,15 s,
 dispersion et rotation des morceaux modérées. Pixel art intégral et texte anglais.

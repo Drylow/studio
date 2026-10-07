@@ -2,8 +2,8 @@
 import json,math,subprocess,sys
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageStat
-movie=Path(sys.argv[1] if len(sys.argv)>1 else 'watermelon-pixelcuts-32.mp4')
-out=Path('qa/pixelcuts-32');out.mkdir(exist_ok=True,parents=True)
+movie=Path(sys.argv[1] if len(sys.argv)>1 else 'watermelon-pixelcuts-32-polished.mp4')
+out=Path('qa')/movie.stem;out.mkdir(exist_ok=True,parents=True)
 composition=json.loads(Path('assets/simulation.json').read_text(encoding='utf-8'))
 expected_duration=composition['duration']
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(movie)]))
