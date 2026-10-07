@@ -1,7 +1,7 @@
 ---
 mode: autonomous
-message: "More chocolate bars, more crunch, same pixel chef."
-duration: 27.8
+message: "Fork, spring boxing glove, upward jackhammer: two trials per tool."
+duration: 23.3
 ---
 
 ## Frame 1
@@ -9,20 +9,22 @@ status: animated
 src: index.html
 motion: dynamic-content-sequencing + multi-phase-camera; Three.js absolute-time adapter
 
-One continuous tabletop composition, five sequential tests and a closing gesture.
-No change of setting or camera cut; trial durations include the fall, fracture,
-tumble and a short clearing interval. The viewer first recognises the chef and
-one edible bar, anticipates the fork contact, then follows the growing crunch.
+One tabletop, three escalating tools, two trials per tool and the approved
+happy spatula finish. Quantities repeat when the tool changes, so the viewer
+compares its effect on the same stack before adding more food. The chef carries
+the first bar on the palm; no teaser or extra introductory hook.
 
 | Beat | Time | Action | Sound |
 | --- | --- | --- | --- |
-| 1 BAR | 0–4.4 | Palm carries one slab; hand withdraws; slab drops onto the fork. | One dry snap, scattered wooden landings. |
-| 2 BARS | 4.4–9.0 | Two slabs drop, each stays intact until contact. | Two separate crunches and soft crumb tail. |
-| 4 BARS | 9.0–14.0 | Four slabs create a growing brown pile. | Faster succession; fracture remains louder than debris. |
-| 8 BARS | 14.0–19.8 | Eight slabs strike, irregular pieces bounce off the metal. | Dense dry crunch; secondary collisions grouped at 40ms. |
-| 16 BARS | 19.8–26.2 | Tallest stack, controlled pull-back, fullest heap. | Strongest crunchy texture, bounded peak and decaying tail. |
-| CRUNCHED! | 26.2–27.8 | Chef raises spatula with the approved hop and two confetti bursts. | Short restrained happy sound mark. |
+| GIANT FORK / 1 BAR | 0–3.3 | Palm arrives, withdraws, one bar drops onto the fork. | Dry crack and soft wooden landings. |
+| GIANT FORK / 4 BARS | 3.3–6.5 | Four falling bars break at successive contacts. | Four distinct crunchy accents. |
+| SPRING GLOVE / 4 BARS | 6.5–9.9 | Mechanism enters; coil compresses, glove punches sideways and retracts. | Spring creak, thump, bounded simultaneous chocolate cracks. |
+| SPRING GLOVE / 8 BARS | 9.9–13.5 | Same punch into the larger stack, debris flies across the board. | Stronger brittle texture, restrained landing groups. |
+| JACKHAMMER / 8 BARS | 13.5–17.5 | Machine rises; chisel points up and vibrates under falling chocolate. | Fast mechanical pulses under edible cracks. |
+| JACKHAMMER / 16 BARS | 17.5–21.7 | Tallest pile fractures rapidly and scatters around the machine. | Fullest crunch, controlled motor and crumb decay. |
+| CRUNCHED! | 21.7–23.3 | Chef raises spatula, hops and celebrates with confetti. | Short happy sound mark. |
 
 Motion citations are adapted to a 3D tabletop: one scene writer composes camera
-pose; the baked content array owns all trial boundaries. Existing pixel confetti
+pose; the baked content array owns all trial boundaries. Shared mechanism poses
+drive both physics and rendering, including the 22Hz chisel. Existing pixel confetti
 was inspected against the live catalogue component and reused.

@@ -1,6 +1,7 @@
 # Chocolate crunch — approved Watermelon world
 
-Concept: the cute chef turns a giant fork into an absurd chocolate crunch test.
+Concept: the cute chef turns chocolate preparation into three absurd experiments:
+giant fork, red spring boxing glove, yellow upward-pointing jackhammer.
 
 Vertical 1080×1920 at 60fps. Entire frame, including type, is drawn on a 216×384
 pixel grid and enlarged exactly 5× with nearest-neighbour sampling. Warm cream
@@ -10,8 +11,9 @@ fork, slab contact and accumulating chocolate pieces readable.
 
 Focal element: moulded chocolate slabs above a four-tined silver fork. Supporting
 detail: rough brown fracture surfaces, short shadow, oak grain. Top anchor:
-small chocolate icon, CHOCOLATE, large bar count, GIANT FORK. Bottom anchor:
-CRUNCH TEST and the five quantity markers. Closing phrase: CHEF APPROVED.
+small chocolate icon, CHOCOLATE, large bar count, tool icon and English tool name.
+Bottom anchor: CRUNCH TEST and FORK / GLOVE / HAMMER markers. Closing phrase:
+CHEF APPROVED. Two short trials per mechanism; total duration 23.3 seconds.
 
 Typography: the approved embedded 5×7 bitmap glyphs, 3× scale for count and 1×
 for labels; no system font substitution. Tiny labels correspond to 35px output
@@ -25,7 +27,11 @@ Food-specific brown extension: #704530 #a46b46 #563426 #885438.
 Lighting may use intermediate values; final quantisation always uses these 27.
 
 Physical animation is computed offline at 240Hz, recorded at 120Hz and sampled
-by absolute time. All slabs remain intact until actual fork contact. Debris
+by absolute time. All slabs remain intact until actual tool contact. The red
+glove compresses, fires horizontally and retracts along a silver coil on a green
+support; its cream cuff matches the chef. The yellow machine has two black
+handles, a vented body, long silver shank and upward chisel. Shared mechanism
+poses drive its 22Hz vibration in both the physics and visible geometry. Debris
 retains downward momentum and separates in uneven wedges; no glass tint, no
 neat cubes, no fruit replaced by crystal. Stronger trials add more contacts,
 not a faster playback clock. Audio follows the contact ledger.

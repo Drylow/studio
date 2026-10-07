@@ -29,6 +29,8 @@ const glyphs={
  P:['11110','10001','10001','11110','10000','10000','10000'],
  V:['10001','10001','10001','10001','10001','01010','00100'],
  I:['01110','00100','00100','00100','00100','00100','01110'],
+ J:['00111','00010','00010','00010','10010','10010','01100'],
+ X:['10001','10001','01010','00100','01010','10001','10001'],
  S:['01111','10000','10000','01110','00001','00001','11110'],
  T:['11111','00100','00100','00100','00100','00100','00100'],
  U:['10001','10001','10001','10001','10001','10001','01110'],
@@ -67,7 +69,7 @@ export function createPixelView(canvas){
  // Every repeat color avoids searching all palette colors again, with no change
  // to pixel values between preview and export.
  const nearestCache=new Map();
- return (source,count,index,outro=false,celebration=null)=>{
+ return (source,count,index,outro=false,celebration=null,tool='fork')=>{
   ctx.drawImage(source,0,0,PIXEL_WIDTH,PIXEL_HEIGHT);
   const frame=ctx.getImageData(0,0,PIXEL_WIDTH,PIXEL_HEIGHT),a=frame.data;
   for(let p=0;p<a.length;p+=4){
@@ -94,16 +96,27 @@ export function createPixelView(canvas){
   }
   text(ctx,'CHOCOLATE',115,28,1);
   text(ctx,outro?'CRUNCHED!':`${count} BAR${count===1?'':'S'}`,108,48,outro?2:3);
-  ctx.fillStyle='#b7c2ba';ctx.fillRect(73,78,11,3);ctx.fillRect(78,80,2,9);
-  for(let x=0;x<4;x++)ctx.fillRect(73+x*3,74,2,5);
-  text(ctx,'GIANT FORK',119,80,1);
+  const label={fork:'GIANT FORK',glove:'SPRING GLOVE',jackhammer:'JACKHAMMER'}[tool];
+  const iconX=108-(label.length*6+20)/2;
+  if(tool==='fork'){
+   ctx.fillStyle='#b7c2ba';ctx.fillRect(iconX,78,11,3);ctx.fillRect(iconX+5,80,2,9);
+   for(let x=0;x<4;x++)ctx.fillRect(iconX+x*3,74,2,5);
+  }else if(tool==='glove'){
+   ctx.fillStyle='#ef5867';ctx.fillRect(iconX+1,75,9,9);ctx.fillRect(iconX+7,80,5,5);
+   ctx.fillStyle='#def2e1';ctx.fillRect(iconX+1,85,7,3);
+  }else{
+   ctx.fillStyle='#b7c2ba';ctx.fillRect(iconX+5,73,2,6);
+   ctx.fillStyle='#ffe59a';ctx.fillRect(iconX+2,79,8,9);
+   ctx.fillStyle='#203c2a';ctx.fillRect(iconX,82,12,2);
+  }
+  text(ctx,label,118,80,1);
   if(outro)text(ctx,'CHEF APPROVED',108,350,1);
   else {
    text(ctx,'CRUNCH TEST',108,330,1);
-   const labels=['01','02','04','08','16'];
-   const current=index;
+   const labels=['FORK','GLOVE','HAMMER'];
+   const current=Math.floor(index/2);
    labels.forEach((label,i)=>{
-   const x=labels.length===5?36+i*36:60+i*48;text(ctx,label,x,350,1,i===current?'#203c2a':'#6b6c51');
+   const x=42+i*66;text(ctx,label,x,350,1,i===current?'#203c2a':'#6b6c51');
    if(i===current){ctx.fillStyle='#203c2a';ctx.fillRect(x-8,363,16,1);}
    });
   }
@@ -111,6 +124,6 @@ export function createPixelView(canvas){
   // intermediate palette image before all bitmap glyphs have been drawn.
   display.drawImage(back,0,0);
   display.getImageData(0,0,1,1);
-  canvas.setAttribute('aria-label',`CHOCOLATE — GIANT FORK — ${outro?'CRUNCHED':count+' BAR'+(count===1?'':'S')}`);
+  canvas.setAttribute('aria-label',`CHOCOLATE — ${label} — ${outro?'CRUNCHED':count+' BAR'+(count===1?'':'S')}`);
  };
 }

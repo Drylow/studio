@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "3qj2an18vsrmt0d131kazca60m",
+  "prompt": "Isolated close microphone mechanical foley, an electric jackhammer runs in several short controlled bursts, fast tight dry percussive metal rattle with a low mechanical motor underneath. Small demolition tool, not a gun. Rhythmic staccato hammer blows. Quiet studio, no music, no voice, no ambience, no piercing ringing.",
+  "source": "sfx-hammer-source.mp3",
+  "sha256": "068033fbce322dfb43229a06bf491f0328a849d86e03c4496992574f75d31870",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}
