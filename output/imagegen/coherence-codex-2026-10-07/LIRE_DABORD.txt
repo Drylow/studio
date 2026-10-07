@@ -1,0 +1,32 @@
+COHERENCE DES DECORS - CODEX - 7 OCTOBRE 2026
+
+Le style des cinq images background-v3 est approuve par l'utilisateur.
+Codex ecrit les prompts lui-meme et verifie les images. Le CLI Proxy les execute.
+Aucune generation automatique de prompts ni changement du frontend.
+
+DECORS MAITRES SANS PERSONNAGES
+masters/01-edo-room.png : logement et petit-dejeuner d'Edo.
+masters/02-aztec-canal.png : etal de mais au bord d'un canal.
+masters/03-babylon-courtyard.png : cour domestique et bassin.
+masters/04-tang-noodle-stall.png : etal de nouilles a Chang'an.
+masters/05-ottoman-bakery.png : boulangerie de quartier a Istanbul.
+
+TEST EDO - MEME LIEU, MEMES PERSONNAGES, DEUX ACTIONS
+test-edo/edo-01-cup-down.png : la tasse est posee sur la table.
+test-edo/edo-02-drink.png : le personnage porte la tasse a sa bouche.
+Pour les deux appels, le decor maitre est l'image 1 et la scene approuvee
+avec les deux personnages est l'image 2. Aucun prompting automatique intermediaire.
+La table, les cloisons, la literie, la theiere et l'exterieur ont ete compares
+visuellement ; la disposition generale est conservee.
+
+Les prompts exacts sont dans prompts/. Le registre JSON conserve les fichiers,
+les empreintes, l'ordre des references, les actions et la relecture par Codex.
+Protocole complet : production/COHERENCE_2D_CODEX.txt a la racine du projet.
+
+Ces sept images ont ete generees via le CLI Proxy configure dans .env.
+Les fichiers sont en 1672x941, sans agrandissement artificiel.
+Le test n'est pas une video : pas de voix, transcript ni duree inventee.
+Les autres univers ont leur decor maitre verifie, mais pas encore de test
+d'actions successives. Chaque video complete sera relue plan par plan.
+La geometrie reste visuellement coherente ; les pixels et fines textures ne
+sont pas garantis identiques par un outil de generation.

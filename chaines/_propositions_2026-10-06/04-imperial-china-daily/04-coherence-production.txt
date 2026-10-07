@@ -1,0 +1,21 @@
+IMPERIAL CHINA DAILY - REFERENCES ET COHERENCE
+Style approuve : image background-v3 presentee le 6 octobre 2026.
+Prompts, decoupage et controle visuel ecrits et effectues par Codex.
+
+Premier decor maitre disponible, sans personnages :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/output/imagegen/coherence-codex-2026-10-07/masters/04-tang-noodle-stall.png
+Identifiant du lieu : tang_changan_noodle_stall
+Cadre : Tang-era Chang'an, circa 750 CE
+
+Ancre visuelle des personnages pour cet essai :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/output/imagegen/cinq-chaines-style-2026-10-06/04-chine-tang-background-v3.png
+Pour une video complete, preparer des references individuelles des personnages.
+
+Registre des references et du test :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/output/imagegen/coherence-codex-2026-10-07/registre.json
+Protocole de production :
+C:/Users/ytbyt/Documents/ChatGPT/2D Slop/production/COHERENCE_2D_CODEX.txt
+
+Ce lieu initial ne remplace pas les autres lieux d'une video.
+Toujours envoyer les references avec les prompts rediges par Codex.
+Pas de generation automatique des prompts par la pipeline.

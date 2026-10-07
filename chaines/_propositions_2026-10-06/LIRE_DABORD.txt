@@ -1,6 +1,8 @@
 PROPOSITIONS CORRIGEES - FORMAT ROME UNSCROLLED
 6 octobre 2026. CINQ CONCEPTS VALIDES PAR L'UTILISATEUR.
-Style visuel en cours de validation ; aucune video ni chaine lancee.
+Style visuel background-v3 valide ; aucune video ni chaine lancee.
+Production dirigee par Codex : un premier decor maitre par univers est disponible.
+Voir 04-coherence-production.txt dans chaque dossier pour les references.
 
 Une image d'essai est maintenant liee dans chaque dossier, fichier 03-essai-visuel.txt.
 
@@ -58,7 +60,8 @@ DUREE ET IMAGES
 Cible de format : episodes longs autour de 30-40 minutes, comme la reference,
 a condition d'avoir assez de matiere verifiee ; pas de remplissage pour la duree.
 Style blanc minimaliste deja valide, costumes et objets informes par les sources,
-decors sobres, casting stable au sein d'une video et references du meme lieu.
+decors textures avec profondeur moderee, casting stable et references du meme lieu.
 L'apparence blanche sans cheveux est une stylisation assumee, pas un portrait historique.
-Script/images via ton CLI Proxy, voix Algrow, plans cales sur l'audio effectif.
+Codex ecrit scripts et prompts ; images via ton CLI Proxy, voix Algrow,
+plans cales sur l'audio effectif. La pipeline ne redige pas nos prompts.
 Pas de nouvelle interface. Aucun lancement de production avant ta validation.
