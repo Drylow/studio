@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=1080, height=1920">
- <title>Chocolate — spring glove and upward jackhammer</title>
+  <title>Chocolate — crazy tools, full experiment</title>
  <script>window.__timelines=window.__timelines||{};</script>
  <script src="assets/gsap.min.js"></script>
  <style>
@@ -14,14 +14,14 @@
  </style>
 </head>
 <body>
- <div data-hf-id="hf-5v7y" id="root" data-composition-id="chocolate-crunch" data-width="1080" data-height="1920" data-duration="23.3">
-  <canvas data-hf-id="hf-fae3" id="chocolate-canvas" class="clip" data-start="0" data-duration="23.3" data-track-index="1" data-layout-allow-overflow=""></canvas>
-  <audio data-hf-id="hf-4gdm" id="crunch-audio" src="assets/sound.wav" data-start="0" data-duration="23.3" data-track-index="2" data-volume="0.90"></audio>
+ <div data-hf-id="hf-5v7y" id="root" data-composition-id="chocolate-crunch" data-width="1080" data-height="1920" data-duration="66.7">
+  <canvas data-hf-id="hf-fae3" id="chocolate-canvas" class="clip" data-start="0" data-duration="66.7" data-track-index="1" data-layout-allow-overflow=""></canvas>
+  <audio data-hf-id="hf-4gdm" id="crunch-audio" src="assets/sound.wav" data-start="0" data-duration="66.7" data-track-index="2" data-volume="0.90"></audio>
  </div>
  <script src="assets/scene.js"></script>
  <script>
   const clock={t:0},tl=gsap.timeline({paused:true});
-  tl.to(clock,{t:23.3,duration:23.3,ease:'none',onUpdate:()=>window.drawChocolate(clock.t)},0);
+  tl.to(clock,{t:66.7,duration:66.7,ease:'none',onUpdate:()=>window.drawChocolate(clock.t)},0);
   window.__timelines['chocolate-crunch']=tl;
  </script>
 </body>

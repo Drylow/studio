@@ -1,4 +1,45 @@
-# Delivery audit — 8 October 2026
+# Final export — 8 October 2026
+
+Current output: `chocolate-crazy-tools-final.mp4`, SHA-256
+`03d3e15ac915a32d489b7fb1181fbaf43beadcb7bebd18de8a543683f6d52385`.
+66.7 seconds, 1080×1920, 60fps, 4,002 frames, 147.8 MB.
+
+The minute-plus edit keeps two quantities per mechanism and three rapid salvos
+at each quantity. Each salvo has different seeded fractures. The final user
+correction moves all three smaller tool sprites into a compact horizontal
+footer, replacing round captions; the action is centred again. Current tool:
+dark green border and arrow. Completed tool: green tick. Future tools stay
+visible from frame zero. Footer cards remain clear of flying chocolate.
+
+Strict hardware preview checks passed at 13 timestamps after the footer edit,
+with no errors or warnings. Earlier timing checks passed at 23 timestamps.
+Final rendering completed with hardware screenshot capture and encoding:
+`--quality delivery --fps 60 --workers 2 --browser-gpu --gpu --strict-all`.
+Total wall time 5m57s; capture 306.5s, encode 39.2s, assemble 2.9s.
+
+All 4,002 decoded frames were viewed across 67 numbered contact sheets. Reviewed
+the palm arrival, each reload and contact, spring compression and retraction,
+upward jackhammer, irregular tumbling fragments and the spatula celebration.
+The compact footer stays unobstructed, with the active marker changing at the
+tool transitions and completed-tool ticks retained. Some chips leave the frame
+at the sides during stronger impacts. Automated checks cover every frame:
+minimum title coverage 0.99793, minimum tool-icon coverage 1.0, correct active
+tool on all frames. The original palette, English bitmap labels and white
+chef sleeve remain consistent in the contact-sheet review.
+
+Physics verification: 123 bars, 1,715 closed irregular fragments, 515,339 stored
+poses; minimum vertex height 0.00274, maximum horizontal radius 7.751, conserved
+volume and unit quaternions. All cracks follow contacts, with 1,625 landing
+events grouped into 337 accents. Existing frozen SFX are reused. PCM peak
+−2.73 dBFS, no clipped samples; final AAC peak −3.6 dBFS, mean −33.7 dBFS.
+These are measured checks, not a claim of human headphone listening.
+
+Preview on port 3003 was reopened and its 66.7-second timeline verified. A
+previous preview hot reload timed out; a fresh preview server resolved it.
+No music, reference footage/audio or social-media publication. The static-object
+debris collision approximation documented in README remains.
+
+## Previous short delivery — 8 October 2026
 
 Current output: `chocolate-crazy-tools.mp4`, SHA-256
 `2e6e09f59f21310cf9603094bc6fc4dd775f6c09b5fc2d2accbe646e6ea61069`.

@@ -90,7 +90,7 @@ for i,g in enumerate(sorted(groups.values(),key=lambda g:g['t'])):
 # One gentle granular tail per trial avoids playing a noise cloud per tiny shard.
 for chapter,trial in enumerate(data['trials']):
     last=max(b['hit'] for b in trial['bars'])
-    add(crumbs[chapter%3],trial['start']+last+.30,.055+chapter*.009)
+    add(crumbs[chapter%3],trial['start']+last+.30,.055+min(chapter//3,5)*.009)
 
 # Tiny original two-note finish. No background music bed.
 for i,hz in enumerate([659.25,987.77]):
