@@ -108,7 +108,7 @@
       "location": "workshop",
       "cast": [],
       "narration": "A wooden box needs its lid fitted.",
-      "action": "Close view of plain unfinished wooden box and separate lid on the fixed workbench, hand plane unchanged, no people.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "I"
       ],
@@ -116,8 +116,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/002.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/002.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "003",
@@ -167,7 +168,7 @@
         "blue"
       ],
       "narration": "The lid catches at one corner.",
-      "action": "Close framing of Blue's two white mitten hands testing the small plain lid on the fixed bench box; indigo sleeves visible, no fingers.",
+      "action": "Medium-wide view of Blue seated at the existing workbench, entire round white head safely visible, white mitten hands testing the box lid.",
       "sources": [
         "I"
       ],
@@ -176,7 +177,7 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/005.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/005.png",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/005-v2.png",
       "motion": "zoom_in"
     },
     {
@@ -196,7 +197,7 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/006.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/006.png",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/006-v2.png",
       "motion": "pan_right"
     },
     {
@@ -351,7 +352,7 @@
       "location": "home",
       "cast": [],
       "narration": "Paper panels soften the light. Timber frames the walls. The low table is within reach of the bedding, and your belongings are close enough that you cannot forget them for long. The room is modest. Some rented homes were tighter still, while better-off households had very different surroundings.",
-      "action": "Empty home with the canonical table, navy cushion, plain gray teapot and bedding stack; no additions, architectural establishing view.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "I",
         "S01"
@@ -360,8 +361,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/home.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/014.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/014.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/home.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "015",
@@ -467,7 +469,7 @@
       "location": "bridge",
       "cast": [],
       "narration": "That system did not fit inside one neighborhood. The Tamagawa waterworks, completed in the seventeenth century, brought water toward the city from far away. Behind the familiar household gesture of lifting a bucket stood channels, construction, maintenance, and the problem of supplying an expanding population.",
-      "action": "Canonical bridge and waterway, empty foreground, timber warehouses and a single distant wooden cargo boat; no claim this river is the actual aqueduct.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "S03"
       ],
@@ -475,8 +477,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/020.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/020.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "021",
@@ -549,7 +552,7 @@
       "location": "market",
       "cast": [],
       "narration": "The Tokyo Metropolitan Library traces Edo's food culture to agriculture, fishing, and distribution networks linking the city with surrounding communities and more distant regions. A bowl placed in front of you therefore connects the home to people and places you will not meet this morning.",
-      "action": "Canonical market empty foreground, baskets of vegetables at the fixed stall, plain rice sacks at an adjacent shop, no modern packaging.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "S06"
       ],
@@ -557,8 +560,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/market.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/024.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/024.png",
-      "motion": "pan_right"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
+      "motion": "pan_right",
+      "reuse_reference": true
     },
     {
       "id": "025",
@@ -648,7 +652,7 @@
       "location": "bridge",
       "cast": [],
       "narration": "There is another difference. As the Seiko Museum explains, Edo-period Japan used a seasonal system: daylight and night were each divided into six parts. Those units changed length with the season. Time was organized, but it was not your modern sequence of equal sixty-minute appointments.",
-      "action": "Wide canonical bridge in daylight, sunlight over timber waterfront; no clock dial, diagram, labels or numeric time overlay.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "S02"
       ],
@@ -656,8 +660,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/029.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/029.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "030",
@@ -1349,7 +1354,7 @@
       "location": "alley",
       "cast": [],
       "narration": "The Tokyo Fire Department describes dense wooden housing and everyday use of flame as conditions that made fire dangerous. The buildings stand close together. A small household problem can therefore become somebody else's problem very quickly. You do not need a fire today to have a reason to remember that.",
-      "action": "Canonical alley empty foreground with timber rental doors, well and two wooden buckets visible; clear mild daylight, no fire or smoke.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "S09"
       ],
@@ -1357,8 +1362,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/alley.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/064.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/064.png",
-      "motion": "zoom_out"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
+      "motion": "zoom_out",
+      "reuse_reference": true
     },
     {
       "id": "065",
@@ -1366,7 +1372,7 @@
       "location": "bridge",
       "cast": [],
       "narration": "The great fire of sixteen fifty-seven had changed the city. The Tokyo Metropolitan Library describes relocation, wider routes, and new development after the catastrophe. Our ordinary day happens after that rebuilding. Disaster is not the action we are staging, but it helps explain the city around the action.",
-      "action": "Canonical bridge and timber waterfront wide, no burning buildings, no fantasy reconstruction, calm daylight.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "S10"
       ],
@@ -1374,8 +1380,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/065.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/065.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "066",
@@ -1794,7 +1801,7 @@
       "location": "home-night",
       "cast": [],
       "narration": "As daylight retreats, artificial light means maintaining a flame rather than touching an electric switch. In our illustrated room, a small oil lamp makes a limited pool of light. The rest of the room stays visible but dimmer. Night changes what is easy to see and do.",
-      "action": "Empty canonical room at night with one small covered oil lamp securely placed on the low table, gentle warm pool of light, dark blue alley outside, no open candle near bedding.",
+      "action": "Use the unchanged approved empty location master as the establishing environment for this narration.",
       "sources": [
         "I",
         "S09"
@@ -1803,8 +1810,9 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png"
       ],
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/086.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/086.png",
-      "motion": "zoom_in"
+      "image": "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
+      "motion": "zoom_in",
+      "reuse_reference": true
     },
     {
       "id": "087",
