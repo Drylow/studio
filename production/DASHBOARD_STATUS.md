@@ -3,54 +3,6 @@
 Version du 6 octobre 2026. Le cadrage reste dans `DASHBOARD_PLAN.md` ; ce document
 décrit ce qui fonctionne réellement et ce qui reste à construire.
 
-## Connexion sur le PC qui ouvre le site — 7 octobre 2026
-
-Le précédent bouton envoyait une commande dans la file commune du relais Windows.
-Un agent a pris la demande, mais cela ne prouvait pas que la fenêtre apparaissait
-sur le PC utilisé par Drylow. Le diagnostic exécuté via ce relais a trouvé une
-session interactive, pas une session de service ; l’identité physique de ce PC
-n’a pas été établie. Ne pas confondre ces résultats avec un écran vu par l’utilisateur.
-
-Ce parcours ne passe plus par cette file. Dans Chaînes → Connecter YouTube →
-Connecter avec mon PC, le propriétaire obtient un lien local et un téléchargement
-privé **Edgerunners-PC.zip**. Au premier usage : extraire le ZIP puis double-cliquer
-sur **Installer.cmd**. L’installation compile notre code C# inclus avec .NET Windows,
-sans Python, téléchargement tiers, droits administrateur ni désactivation des
-protections. Elle inscrit seulement notre protocole dans le registre personnel,
-puis ouvre l’assistant sur le PC où l’utilisateur a lancé le fichier. Les fois
-suivantes : cliquer **Déjà installé ? Ouvrir l’assistant sur ce PC** ; accepter
-l’ouverture de l’application si Chrome la demande.
-
-Le programme affiche une fenêtre, ouvre Chrome installé avec un profil dédié à
-l’ID de chaîne, puis laisse l’utilisateur se connecter normalement. Il confirme
-une fenêtre réellement visible de son propre processus avant d’annoncer Chrome
-ouvert. Une connexion nécessite ensuite l’URL YouTube Studio et au moins deux liens
-de sa navigation vers l’ID exact attendu. Aucun cookie, mot de passe, capture de
-connexion ou jeton Google ne quitte le PC. Fermer l’assistant annule la tentative.
-
-Le lien dure vingt minutes et ne permet que la lecture du manifeste de cette
-connexion et le compte rendu de ses étapes. Il est lié à l’utilisateur propriétaire,
-la chaîne et sa révision ; le premier assistant le lie à son identifiant local.
-Les visiteurs et éditeurs ne peuvent ni télécharger l’installation, ni récupérer
-le lien d’ouverture. Les modifications concurrentes, expirations, changements
-de rôle, identités de chaîne différentes et réponses d’un autre PC sont refusés.
-Le reste du site conserve la gate et les protections CSRF. Aucun jeton global du
-site, du relais ou de Google n’est fourni à l’installation.
-
-Cette étape n’implémente pas l’envoi des vidéos. **Chaîne vérifiée** signifie
-association du Chrome dédié, jamais publication prête ou automation activée.
-La pause, les droits, les jetons historiques et les trois vidéos déjà publiées
-sont conservés. La connexion Google réelle sur le PC de Drylow et l’envoi complet
-d’une vidéo privée, avec miniature et destination vérifiées, restent à valider.
-La création autonome des actualités reste également à construire.
-
-Validation : 142 tests serveur, compilation TypeScript/Vite et parcours YouTube
-simulé à 320/390/768/1440 px, y compris l’absence de confirmation Chrome avant
-réponse de l’assistant et les liens d’installation. Une compilation sous Windows
-et les gardes d’identité du C# sont vérifiées séparément, sans exécuter le programme,
-ouvrir Chrome ni inscrire le protocole sur l’agent de diagnostic. Ces contrôles
-ne prouvent aucune connexion Google ni aucun upload réel.
-
 ## Page Statistiques par @pseudo — 6 octobre 2026
 
 Une rubrique indépendante Statistiques suit les chaînes via la lecture publique

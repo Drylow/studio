@@ -182,9 +182,6 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
   miniatures sportives. Les vues Agenda/Liste sont celles par défaut sur téléphone.
   Connexion YouTube par bouton explicite sur chaque chaîne, test réel de l'accès et
   déconnexion avec suspension ; aucun compte Google connecté dans cette session.
-  Connexion PC (7 oct.) : `studio/pc_youtube.py` et `standalone/pc_bridge/EdgerunnersPC.cs`.
-  Installer privé à lancer sur le PC utilisé ; aucun lancement par la file PC commune.
-  Une association Chrome n'active jamais la publication. Voir `DASHBOARD_STATUS.md`.
   `DEPLOY_O2SWITCH.md` décrit désormais le nouveau site et le worker indépendant.
   Delamain n'est pas l'agent de développement de cette conversation : un exécuteur
   capable de modifier et déployer le code depuis son chat reste à connecter.
