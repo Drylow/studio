@@ -2,7 +2,9 @@
 
 Étude inspirée de la vidéo partagée dans [le tweet d'Ernesto Lopez](https://x.com/ErnestoSOFTWARE/status/2107832530770829559). La référence montre une pastèque suspendue découpée en 1, 3, 7, 13, 25 puis 40 passes, avant de laisser les morceaux tomber sur une planche. Le filigrane visible est Velvet Physics. L'auteur du tweet est celui qui partage la vidéo ; son texte ne suffit pas à identifier le logiciel qui a produit l'animation originale.
 
-Ce prototype reprend les trois premiers niveaux, en 12 secondes et 60 images/s. Le fruit, la planche, les ombres et la typographie partagent un rendu pixel art : grille 216 × 384 agrandie ×5 sans lissage, palette de 19 couleurs. Tout le texte visible est en anglais. Les coups de lame durent 0,145 s et sont espacés de 0,17 s dans les séries, avec un accent sonore à chaque coupe. Aucun extrait de la référence n'est utilisé dans le rendu. Aucun fichier du frontend du studio n'est modifié.
+La version actuelle commence par une preview de 0,85 s : une salve de 32 couteaux entaille la pastèque, puis le montage coupe avant la chute des morceaux. Les niveaux 1, 4, 8, 16 et 32 suivent par cuts directs, en 14,65 secondes et 60 images/s. Chaque niveau compte les passes réellement effectuées, avec 2, 12, 28, 60 et 124 fragments fermés. Le dernier retour utilisateur demande un maximum de 32 et un rythme plus lent ; le niveau 64 est retiré.
+
+Le fruit, la planche, les ombres et la typographie partagent un rendu pixel art : grille 216 × 384 agrandie ×5 sans lissage, palette de 19 couleurs. Tout le texte visible est en anglais. Les lames sont projetées à vitesse constante ; leurs fenêtres de visibilité de 0,15 s peuvent se superposer. Première frappe à 0,12 s dans chaque chapitre, salves de 0,42 / 0,77 / 1,25 / 1,90 s. La vitesse de traversée et la dispersion des morceaux sont réduites pour améliorer la lecture. Un accent sonore accompagne chaque coupe. Aucun extrait de la référence n'est utilisé dans le rendu. Aucun fichier du frontend du studio n'est modifié.
 
 ## Reproduire
 
@@ -14,22 +16,22 @@ npm run build
 npm run verify
 npm run check
 npx hyperframes preview --background
-npm run render -- --fps 60 --quality looks --strict --no-browser-gpu --workers 1 --output watermelon-pixelcuts.mp4
-python qa_frames.py watermelon-pixelcuts.mp4
+npm run render -- --fps 60 --quality looks --strict --no-browser-gpu --workers 1 --output watermelon-pixelcuts-32.mp4
+python qa_frames.py watermelon-pixelcuts-32.mp4
 ```
 
-Les versions de Three.js, Cannon et GSAP sont figées dans `package-lock.json`. La composition et le moteur ne font aucun appel réseau lors de l'évaluation d'une image. HyperFrames embarque les polices lors de la compilation.
+Les versions de Three.js, Cannon et GSAP sont figées dans `package-lock.json`. La composition et le moteur ne font aucun appel réseau lors de l'évaluation d'une image. Les titres bitmap n'utilisent aucune police téléchargée.
 
-Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte graphique a dépassé le délai sur cette machine lors du premier essai. Les douze planches `qa/pixelcuts/all-frames-*.jpg` permettent de vérifier les 720 images du MP4.
+Le rendu logiciel est utilisé ici : la capture du contexte WebGL avec la carte graphique a dépassé le délai sur cette machine lors du premier essai. Les planches `qa/pixelcuts-32/all-frames-*.jpg` permettent de vérifier les 879 images du MP4. Les résultats du contrôle sont consignés dans `QA.md` après export. La preview HyperFrames reste ouverte pendant les révisions et précède le rendu.
 
 ## Comment ça fonctionne
 
-- `build-simulation.mjs` construit la pastèque facettée, coupe les polygones avec des plans, ferme les surfaces intérieures et prépare les enveloppes convexes des morceaux.
-- La physique est calculée à pas fixe de 1/120 s : gravité, collisions contre la planche, le sol et les autres morceaux. Les poses sont enregistrées. `simulation-report.json` conserve les limites mesurées.
-- `scene.mjs` interpole les poses selon le temps demandé : rendu identique en lecture, en retour arrière et à l'export. La lame suit une trajectoire scénarisée, synchronisée aux divisions géométriques.
+- `build-simulation.mjs` construit la pastèque facettée, coupe les polygones avec 31 plans radiaux imbriqués et un plan équatorial, ferme les surfaces intérieures et prépare les enveloppes convexes des morceaux. Les géométries sont dédupliquées par identifiant, puis chaque chapitre réutilise les mêmes étapes.
+- La physique est calculée à pas fixe de 1/120 s : gravité et collisions contre la planche et le sol. Les niveaux 1 et 4 incluent les contacts entre morceaux ; les salves de 8 à 32 utilisent une dispersion initiale modérée et désactivent ces contacts pour éviter les vibrations des lamelles très fines et borner le coût de calcul. Les poses sont enregistrées. `simulation-report.json` conserve les limites mesurées.
+- `scene.mjs` interpole les poses selon le temps demandé : rendu identique en lecture, en retour arrière et à l'export. Les sommets des fragments sont regroupés en trois maillages pour conserver les matériaux et les pépins sans multiplier les appels de dessin. Un pool de couteaux suit des trajectoires scénarisées à vitesse constante, synchronisées aux divisions géométriques. Un écho à 12 ms souligne la vitesse. La preview utilise uniquement les étapes de coupe, sans libération physique.
 - La chair, la bordure de l'écorce et les pépins sont modélisés. L'éclairage, les ombres et la caméra sont de vraies données 3D.
 - `pixel.mjs` réduit le rendu à une palette fixe avec tramage discret et dessine les lettres en pixels sur le même canevas que la scène. Aucun texte lissé n'est superposé à la vidéo.
-- `sound.py` synthétise un souffle, un claquement central et une résonance courte pour chaque coupe, ainsi que les impacts physiques plus doux. Le générateur et la normalisation sont fixes, avec une marge avant saturation.
+- `sound.py` synthétise un souffle, un claquement central et une résonance courte pour chaque coupe, ainsi que les impacts physiques plus doux. Le générateur est fixe ; un limiteur doux préserve l'impact de la frappe isolée malgré les salves denses.
 
 ## Limites et suite
 
