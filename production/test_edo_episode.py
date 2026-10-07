@@ -1,5 +1,7 @@
 import copy
 import importlib.util
+import hashlib
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -61,6 +63,17 @@ class TimelineTests(unittest.TestCase):
     def test_timestamps_round_across_minute_boundary(self):
         self.assertEqual(episode_tools.timestamp(59.9996), "00:01:00,000")
 
+    def test_small_script_change_refuses_a_cached_voice(self):
+        self.episode["voice"] = {"id": "fixture", "speed": 1}
+        identity = {"text": "\n\n".join(s["narration"] for s in self.episode["shots"]),
+                    "voice": self.episode["voice"]}
+        signature = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+        episode_tools.save(self.work / "voice.json", {"audio_sha256": self.sha,
+                                                     "signature": signature})
+        self.episode["shots"][1]["narration"] = "The table was ready."
+        with self.assertRaisesRegex(SystemExit, "Authored narration changed"):
+            episode_tools.timeline(self.episode, self.work)
+
     def test_render_refuses_a_stale_image_selection(self):
         shots = [{"id": "001", "image": "old.png", "narration": "Hello.", "motion": "none"}]
         episode_tools.save(self.work / "timeline.json", {"audio_sha256": self.sha, "shots": shots})
@@ -70,6 +83,53 @@ class TimelineTests(unittest.TestCase):
             with self.assertRaisesRegex(SystemExit, "Shot selection changed"):
                 episode_tools.export_video(changed, self.work, 1920, 1080)
         encode.assert_not_called()
+
+
+class ImageGateTests(unittest.TestCase):
+    def setUp(self):
+        from PIL import Image
+        self.tmp = tempfile.TemporaryDirectory()
+        self.work = Path(self.tmp.name)
+        self.reference = self.work / "master.png"
+        self.frame = self.work / "frame.png"
+        Image.new("RGB", (960, 540), "white").save(self.reference)
+        Image.new("RGB", (960, 540), "gray").save(self.frame)
+        self.episode = {"shots": [{"id": "001", "image": str(self.frame),
+                                    "references": [str(self.reference)]}]}
+        self.review = {"001": {"accepted": True, "image": str(self.frame),
+                                "sha256": episode_tools.digest(self.frame)}}
+        episode_tools.save(self.work / "image_review.json", self.review)
+        episode_tools.save(self.work / "frozen_references.json", {
+            str(self.reference): {"sha256": episode_tools.digest(self.reference)}})
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_reviewed_selection_passes(self):
+        self.assertTrue(episode_tools.validate_images(self.episode, self.work))
+
+    def test_revoked_continuity_review_blocks_render(self):
+        self.review["001"]["accepted"] = False
+        episode_tools.save(self.work / "image_review.json", self.review)
+        with self.assertRaisesRegex(SystemExit, "Shot must be reviewed"):
+            episode_tools.validate_images(self.episode, self.work)
+
+    def test_different_selected_path_requires_review_even_if_bytes_match(self):
+        duplicate = self.work / "duplicate.png"
+        duplicate.write_bytes(self.frame.read_bytes())
+        self.episode["shots"][0]["image"] = str(duplicate)
+        with self.assertRaisesRegex(SystemExit, "Shot must be reviewed"):
+            episode_tools.validate_images(self.episode, self.work)
+
+    def test_changed_master_blocks_render(self):
+        self.reference.write_bytes(b"changed reference fixture")
+        with self.assertRaisesRegex(SystemExit, "Canonical reference changed"):
+            episode_tools.validate_images(self.episode, self.work)
+
+    def test_new_reference_requires_refreezing(self):
+        self.episode["shots"][0]["references"].append("unreviewed.png")
+        with self.assertRaisesRegex(SystemExit, "Reference selection changed"):
+            episode_tools.validate_images(self.episode, self.work)
 
 
 if __name__ == "__main__":
