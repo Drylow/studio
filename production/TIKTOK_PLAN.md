@@ -156,6 +156,20 @@ La Belgique n'y figure pas : à vérifier dans TikTok Studio pour le compte de l
   Les 15 plans sont dans `work/tiktok_test/bf/shots.json` sur le serveur.
 - Outils sur le serveur : `~/tiktok_pkgs` (gradio_client, hors du venv de production).
 
+### Choix final du 7 oct. au soir : clips Flow faits à la main, montage par Claude
+
+- L'utilisateur juge LTX-2.3 trop mauvais (voix et image). Cette piste est abandonnée.
+- Les clips Veo sont générés par l'utilisateur dans Google Flow, avec les crédits gratuits :
+  50 crédits par jour et par compte, soit 5 clips Veo 3.1 Lite à 10 crédits.
+  Claude ne se connecte pas à ses comptes Google (interdit et risque de blocage).
+  Il est conseillé de ne jamais utiliser le Gmail des chaînes YouTube.
+- La page « Tournage Keyvon » (artefact privé de l'utilisateur) donne pour chaque plan l'image,
+  le texte Flow et l'envoi du clip. Les clips arrivent dans la collection `clips`
+  (doc = `s01`…`s15`, champ `asset` = id de l'asset). Une fois les clips reçus,
+  Claude les télécharge (Artifact `read` avec `path` = id) et fait le montage.
+- Pour les prochains épisodes, viser environ 9 clips de 8 s (deux répliques par clip)
+  pour tenir en 2 jours avec un seul compte.
+
 ### Série test « Jacky la Prise » (refusée)
 
 - **Héros** : Jacky, tête de fiche électrique blanche, en survêtement noir.
