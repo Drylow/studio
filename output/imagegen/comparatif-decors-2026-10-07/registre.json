@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "provider": "CLI Proxy configured in .env",
+  "creative_owner": "Codex",
+  "request": "Compare background treatments judged too goofy by user; keep human protagonist and scene as controls.",
+  "calls_completed": 3,
+  "approved_by_user": false,
+  "replaces_canonical_master": false,
+  "video_production_started": false,
+  "baseline": {
+    "file": "output/imagegen/intros-humains-test-2026-10-07/01-edo-01.png",
+    "bytes": 2084377,
+    "sha256": "4936282b886861cddd5e5c370878fec42f8791c31e8f64ba5307656a695ebbc4",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "format": "PNG"
+  },
+  "references_sent": [
+    {
+      "index": 1,
+      "role": "reviewed sleepy Edo intro edit target; preserve human",
+      "file": "output/imagegen/intros-humains-test-2026-10-07/01-edo-01.png",
+      "bytes": 2084377,
+      "sha256": "4936282b886861cddd5e5c370878fec42f8791c31e8f64ba5307656a695ebbc4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG"
+    },
+    {
+      "index": 2,
+      "role": "independent empty room geometry anchor",
+      "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+      "bytes": 1953008,
+      "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe"
+    }
+  ],
+  "variants": [
+    {
+      "id": "01-bd-sobre",
+      "label": "BD sobre",
+      "prompt": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/prompts/01-bd-sobre.txt",
+        "bytes": 2515,
+        "sha256": "c093b32326f87a7feb8fe4c9fb031800fe040a175bd86d726698e92a4bc982c7"
+      },
+      "image": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/01-bd-sobre.png",
+        "bytes": 1842619,
+        "sha256": "d2eedefede0821c0241b4cc3fcd99cf147857417f3d9f645d82af1594b3370db",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "visual_review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against target and master",
+        "status": "comparison_ready_pending_user_choice",
+        "notes": "Aplats plus propres, lignes architecturales nettes, textures de surface reduites. Meme personnage fatigue, tasse et geometrie de scene reconnaissables. Peu de texture : variante volontairement sobre."
+      }
+    },
+    {
+      "id": "02-animation-peinte",
+      "label": "Animation peinte",
+      "prompt": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/prompts/02-animation-peinte.txt",
+        "bytes": 2584,
+        "sha256": "b96e38589179ec450a09a8589e2fb8a3f9c36847507a04c6c8ded8d1aa724c07"
+      },
+      "image": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/02-animation-peinte.png",
+        "bytes": 2360454,
+        "sha256": "d8e87b8204eb48899eff1504db0e5940942e3edfae5210491dee63049db2deb0",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "visual_review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against target and master",
+        "status": "comparison_ready_pending_user_choice",
+        "notes": "Traitement gouache visible, contours du decor attenues, lumiere plus peinte et naturelle. Personnage garde en cartoon lisible ; table, shoji, alcove et veranda reconnaissables. Contraste de traitement entre humain et decor a valider."
+      }
+    },
+    {
+      "id": "03-dessin-historique",
+      "label": "Dessin historique",
+      "prompt": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/prompts/03-dessin-historique.txt",
+        "bytes": 2514,
+        "sha256": "f3cb2eac3b9f865355ed4bd4b0a9fd1fc7452d3c257323ff9cb78be440b9a295"
+      },
+      "image": {
+        "file": "output/imagegen/comparatif-decors-2026-10-07/03-dessin-historique.png",
+        "bytes": 3092107,
+        "sha256": "c941ba54099603c3c5ebbcc2fd41c3ba73b81df6397beb10b26901d83b77874e",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "visual_review": {
+        "reviewer": "Codex",
+        "method": "direct image inspection against target and master",
+        "status": "comparison_ready_pending_user_choice",
+        "notes": "Encre et crayon visibles, hachures discretes mais densite de texture plus forte. Meme personnage et composition reconnaissables ; aucune inscription ajoutee. Risque de texture trop chargee pour l'objectif de sobriete."
+      }
+    }
+  ],
+  "codex_preference": "02-animation-peinte",
+  "limitations": [
+    "Generated edits preserve recognizable identity and room geometry, not proven pixel-exact identity.",
+    "1672x941 actual outputs; 2048x1152 requested.",
+    "One scene comparison, not proof of style transfer across five channels or a whole video.",
+    "No voice, transcript alignment or historically validated sequence in this test."
+  ]
+}

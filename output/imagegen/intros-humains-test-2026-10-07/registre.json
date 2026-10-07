@@ -1,0 +1,323 @@
+{
+  "version": 1,
+  "date": "2026-10-07",
+  "provider": "CLI Proxy configured in .env",
+  "creative_owner": "Codex",
+  "scope": "Fictional intro stills with thumbnail human identity; no approved narration or timing",
+  "status": "superseded_by_user_request_for_background_style_comparison",
+  "calls_completed": 6,
+  "planned_calls_not_run": 1,
+  "user_approved_intro_style": false,
+  "global_video_style_changed": false,
+  "video_production_started": false,
+  "frames": [
+    {
+      "id": "01-edo-01",
+      "channel": "Edo Daily",
+      "proposed_test_action": "Petit-dejeuner : fatigue au reveil",
+      "proposed_expression": "Fatigue calme, bouche fermee",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/01-edo-01.txt",
+        "bytes": 2399,
+        "sha256": "2a49dcf222753e9e9ed77b486b3d90029cf1b61e8deb4a745e08cdbcc0cf0423"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+          "bytes": 1953008,
+          "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/01-edo.png",
+          "bytes": 2497253,
+          "sha256": "d187f9b977007bef32d08448d2226ca465d8f575b66b00c211605af918c5577e"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/01-edo-01.png",
+        "bytes": 2084377,
+        "sha256": "4936282b886861cddd5e5c370878fec42f8791c31e8f64ba5307656a695ebbc4",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Personnage reconnaissable (cheveux noues, barbe courte, veste bleue, serviette pale), fatigue lisible sans surprise. Table, shoji, alcove, tatami et veranda conserves visuellement. Tasse posee ; deux mains separees. Details du visage regeneres : pas identite pixel a pixel."
+      }
+    },
+    {
+      "id": "02-aztec",
+      "channel": "Aztec Daily",
+      "proposed_test_action": "Preparation du mais sur le comptoir",
+      "proposed_expression": "Concentration tranquille",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/02-aztec.txt",
+        "bytes": 2210,
+        "sha256": "5afe8c746ca5ec04dc74d00631a3d4a03568cf668a5fe45bb2ff76a2e05c75dc"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/02-aztec-canal.png",
+          "bytes": 2132796,
+          "sha256": "4c6dd309a9561b58f43855a66bc6fae128f01be2b425e64a8a0a6e17f063b745"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/02-aztec-v2.png",
+          "bytes": 2679885,
+          "sha256": "ece347f9416c824e772b128d9e7bf065e926cf62b70110bbc257c25b8706836d"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/02-aztec.png",
+        "bytes": 2259329,
+        "sha256": "8d290e3e3bd43631b760b0a8b721e87bfe1787b6f6afe1df5ac16f0650a6de33",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Personnage reconnaissable, cheveux noirs/bandeau rouge et tunique claire bordee rouge, bouche fermee et regard sur le mais. Panier pose sur le comptoir, mains distinctes. Poteaux, tissu, pot, natte, canal, maisons et canoe conserves visuellement. Aucun texte ni figurant."
+      }
+    },
+    {
+      "id": "03-babylon",
+      "channel": "Babylon Daily",
+      "proposed_test_action": "Remplir une petite cruche dans la cour",
+      "proposed_expression": "Serieux et attentif",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/03-babylon.txt",
+        "bytes": 2238,
+        "sha256": "4a5ef03b5f028d6717fce012496519ad02d313ebda2fa7a148da056a3145a0e7"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/03-babylon-courtyard.png",
+          "bytes": 2140247,
+          "sha256": "50131b2cfd7e25baaacc5c5044f3866936093d7c68817f07972d6e0d160de46d"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/03-babylon.png",
+          "bytes": 2597421,
+          "sha256": "a5a2f87ce38b71cb81a7087a41d5d601d73dd843e9ffe1eecc78b827bb6b8820"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/03-babylon.png",
+        "bytes": 2197031,
+        "sha256": "5709321acd434fe59437cb15591319eb16f512d22c6a10f3d5ee84d3db01dbf0",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Visage, cheveux boucles, barbe, bandeau et tenue rouge reconnaissables ; regard attentif et bouche fermee. Cour, escalier, bassin/plinthe, jarre arriere, pergola et porte conserves. Deux mains coherentes. Ecart mineur au prompt : la cruche est dans la main gauche du personnage, pas la droite demandee ; aucun raccord de cette main n'est revendique. Il abaisse la cruche dans le bassin, pas une demonstration du remplissage acheve."
+      }
+    },
+    {
+      "id": "04-tang",
+      "channel": "Imperial China Daily",
+      "proposed_test_action": "Remuer la marmite avant le service",
+      "proposed_expression": "Concentration au travail",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/04-tang.txt",
+        "bytes": 2183,
+        "sha256": "821d5dac2d70739ea20d0dcaa8a27cc472c53999ab44031cbc584edd5bbe2cd9"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/04-tang-noodle-stall.png",
+          "bytes": 2195207,
+          "sha256": "27387c325abe61da1cb2cb1f6a728f5d5248525102fa0e9bf24158c59557c368"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/04-tang.png",
+          "bytes": 2443446,
+          "sha256": "497e724f3c2f465d54380844b38fbed39f7746ffa59d1ef3637cfb3584301ef7"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/04-tang.png",
+        "bytes": 2249333,
+        "sha256": "1760872bd3673aa9fa9ec3882a915139b2c85f9c39a1c3155a9bd85a8d64ad62",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Personnage reconnaissable (chignon rouge, barbe courte, veste bordeaux), bouche fermee et regard sur la marmite. Main droite sur l'ustensile, main gauche sur le comptoir ; pas de main sur la marmite chaude. Marmite, bol, boites, poteaux, panneaux suspendus et portail conserves visuellement. Aucun texte ni figurant."
+      }
+    },
+    {
+      "id": "05-ottoman",
+      "channel": "Ottoman Daily",
+      "proposed_test_action": "Sortir le pain sur le comptoir",
+      "proposed_expression": "Satisfaction discrete",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/05-ottoman.txt",
+        "bytes": 2330,
+        "sha256": "de394c53d12d0c4a3ca586a1be8fa0b1e34b60bf929c77b9e776c701e15448f3"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/05-ottoman-bakery.png",
+          "bytes": 2102060,
+          "sha256": "71650b99a079a7da59b359c8336b1b1f0e0f014d76c59ddda94d367429c0fe3f"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/05-ottoman.png",
+          "bytes": 2525849,
+          "sha256": "25982a0a144788d00acfca6b344767ec65087c8b14f4bc734790042c4f29d27b"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/05-ottoman.png",
+        "bytes": 2163309,
+        "sha256": "68802d945a2df92d78f0fdc4cb422df2b1a0f1150f84e663e599136422a438e8",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Boulanger reconnaissable (barbe, couvre-chef pale, veste verte et tablier), petit sourire bouche fermee et regard vers ses trois pains. Plateau soutenu sur le comptoir, deux mains lisibles. Arche, etageres et deux pains fixes, linge, four, auvent, rue et monument de fond conserves visuellement. Aucun texte ni figurant."
+      }
+    },
+    {
+      "id": "01-edo-02",
+      "channel": "Edo Daily",
+      "proposed_test_action": "Prendre la tasse",
+      "proposed_expression": "Concentration",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/01-edo-02.txt",
+        "bytes": 2125,
+        "sha256": "a60fb5d678d1a473640dbf8cab6ce12bbd797a00984469c884f2c8572688fe1e"
+      },
+      "references_sent": [
+        {
+          "index": 1,
+          "role": "canonical empty location",
+          "file": "output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png",
+          "bytes": 1953008,
+          "sha256": "ae44239c8d68879a8c07eeeb88f0f6ea746ba9bd403c76aa9dd6e639541712fe"
+        },
+        {
+          "index": 2,
+          "role": "main adult man at left: thumbnail identity and clothes",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/01-edo.png",
+          "bytes": 2497253,
+          "sha256": "d187f9b977007bef32d08448d2226ca465d8f575b66b00c211605af918c5577e"
+        },
+        {
+          "index": 3,
+          "role": "preceding reviewed frame",
+          "file": "output/imagegen/intros-humains-test-2026-10-07/01-edo-01.png",
+          "bytes": 2084377,
+          "sha256": "4936282b886861cddd5e5c370878fec42f8791c31e8f64ba5307656a695ebbc4",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "format": "PNG"
+        }
+      ],
+      "output": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/01-edo-02.png",
+        "bytes": 2087678,
+        "sha256": "fda8eaf106fb377180eeec47ba3119632e3890d6a18762d2e77f0776ea73f964",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "format": "PNG"
+      },
+      "review": {
+        "status": "visually_reviewed_test_not_user_approved",
+        "method": "Codex direct inspection against references",
+        "notes": "Identite, tenue, cadrage et decor reconnaissables du premier plan. Main gauche tenant la meme tasse, main droite sur la cuisse ; aucun doublon. Tasse levee plus haut que les quelques centimetres demandes (devant le torse). Expression encore un peu lasse et attentive plutot que concentration marquee. Essai exploitable, pas raccord final valide."
+      }
+    },
+    {
+      "id": "01-edo-03",
+      "channel": "Edo Daily",
+      "proposed_test_action": "Boire une gorgee",
+      "proposed_expression": "Detente apres la premiere gorgee",
+      "transcript": null,
+      "start_seconds": null,
+      "end_seconds": null,
+      "prompt": {
+        "file": "output/imagegen/intros-humains-test-2026-10-07/prompts/01-edo-03.txt",
+        "bytes": 2188,
+        "sha256": "01716dc1575c9f967e49a608c7968ee135e7bb3f7775aae45e65a4c4c508f7cb"
+      },
+      "references_sent": [],
+      "output": null,
+      "review": {
+        "status": "not_generated_after_user_redirect",
+        "notes": "Prompt preserved but no API call made."
+      }
+    }
+  ],
+  "limitations": [
+    "Generated outputs are 1672x941 despite requesting 2048x1152; no artificial upscale.",
+    "Image hashes attest exact assets sent and stored, not visual identity or historical correctness.",
+    "Actions are invented visual test beats, not a validated historical script.",
+    "Historical details and full-video continuity still require separate review."
+  ]
+}

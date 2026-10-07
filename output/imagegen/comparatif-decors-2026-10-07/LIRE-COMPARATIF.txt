@@ -1,0 +1,16 @@
+COMPARATIF DE DECORS - 7 OCTOBRE 2026
+L'utilisateur trouve les backgrounds actuels trop goofies et demande plusieurs
+styles. La suite du test d'intro est mise de cote pour cette comparaison.
+
+Scene temoin : Edo, petit-dejeuner, personnage humain fatigue.
+Reference 1 : output/imagegen/intros-humains-test-2026-10-07/01-edo-01.png
+Reference 2 : output/imagegen/coherence-codex-2026-10-07/masters/01-edo-room.png
+Le rendu actuel sert de temoin ; trois alternatives sont generees via CLI Proxy.
+1. BD sobre : lignes fines, aplats mats, ombres simples, geometrie claire.
+2. Animation peinte : gouache, matieres mates, architecture sans contours noirs.
+3. Dessin historique : encre fine, crayon et hachures discretes.
+
+But : comparer le traitement du decor sans changer la scene ni le personnage.
+Prompts rediges par Codex ; examen visuel apres chaque appel.
+Les variations sont des essais, PAS de nouveaux decors maitres approuves.
+Aucune video ni aucun nouveau style global n'est lance sans validation.

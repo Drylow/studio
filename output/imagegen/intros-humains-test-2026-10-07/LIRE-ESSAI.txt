@@ -1,0 +1,25 @@
+ESSAI D'INTRO : PERSONNAGES HUMAINS DES MINIATURES
+Demande utilisateur : 7 octobre 2026.
+
+But : essayer le personnage principal de chaque miniature dans un vrai plan
+de video, avec son identite et sa tenue, mais une expression liee a l'action.
+Pas de visage blanc, pas de grimace de surprise imposee, pas de titre incruste.
+
+Sept images initialement prevues : trois moments d'un meme petit-dejeuner pour Edo,
+une preparation du mais pour Aztec, une cruche dans la cour pour Babylon,
+la marmite du vendeur Tang, le pain sur le comptoir Ottoman.
+Ces actions sont des situations fictives de test visuel, PAS le script valide
+ou le transcript d'une video. Aucun timing ni voix off n'est invente.
+
+Chaque appel utilise le decor maitre vide et la miniature humaine correspondante.
+Les moments 2 et 3 d'Edo utilisent aussi le plan precedent verifie.
+Les prompts exacts et le registre des references sont conserves ici.
+Codex controle les images avant de les montrer ; les empreintes ne prouvent
+pas une identite pixel par pixel. Toute derive importante doit etre corrigee.
+
+Statut : six images realisees et verifiees. Le troisieme plan Edo n'a pas
+ete genere : l'utilisateur a redirige la demande vers un comparatif de decors.
+Son prompt prepare reste conserve, sans appel ni image correspondante.
+Voir output/imagegen/comparatif-decors-2026-10-07/ pour les nouveaux essais.
+Le style blanc existant et toutes les miniatures precedentes restent conserves.
+Ne pas lancer la production de videos ou remplacer les presets avec cet essai.

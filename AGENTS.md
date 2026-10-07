@@ -13,6 +13,14 @@ Pour Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily et Ottoman Dail
   veut des visages humains cartoon expressifs comme la miniature NO JOBS de Rome
   Unscrolled. Cette direction ne change PAS les personnages blancs des videos.
   Conserver les premieres propositions blanches sans les ecraser.
+- Essai demande ensuite le 7 octobre : images d'intro avec les humains des
+  miniatures comme references d'identite, expressions adaptees aux actions.
+  Essai separe dans output/imagegen/intros-humains-test-2026-10-07/ ; attendre
+  validation avant de remplacer le style blanc des videos ou lancer un montage.
+- Nouvelle demande le 7 octobre : comparer plusieurs rendus de decor car
+  les backgrounds actuels sont juges trop goofies. Comparatif separe dans
+  output/imagegen/comparatif-decors-2026-10-07/, meme scene et meme humain.
+  Ne pas promouvoir une variante en decor maitre sans validation utilisateur.
 - Lire production/COHERENCE_2D_CODEX.txt avant toute production.
 - Reutiliser un decor maitre verifie pour chaque lieu et les memes references de
   personnages ; une description textuelle seule ne suffit pas.
