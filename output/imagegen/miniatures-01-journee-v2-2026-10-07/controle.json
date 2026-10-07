@@ -1,0 +1,305 @@
+{
+  "started_date": "2026-10-07",
+  "completed_date": "2026-10-08",
+  "status": "awaiting_user_thumbnail_review",
+  "provider": "configured_cli_proxy",
+  "creative_owner": "Codex",
+  "generation_calls": 5,
+  "refinement_calls": 1,
+  "thumbnail_generation_authorized_by_user": true,
+  "all_fifty_titles_approved": false,
+  "thumbnail_images_approved": false,
+  "script_writing_started": false,
+  "video_production_started": false,
+  "actual_script_alignment_verified": false,
+  "editorial_basis": "Existing first-video day-in-the-life title and angle only; final script remains to be written and checked against thumbnail before publication.",
+  "review_folder": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/",
+  "previous_series_preserved": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/",
+  "user_reference": {
+    "actual_sent_path": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+    "archived_exact_copy": {
+      "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/references/reference-utilisateur.png",
+      "bytes": 258717,
+      "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+    },
+    "role": "Composition hierarchy only; no interface, Roman identity or NO JOBS claim copied"
+  },
+  "selected": [
+    {
+      "video_id": "E01",
+      "channel": "Edo Daily",
+      "title": "What Did People in Edo Japan Actually Do All Day?",
+      "existing_angle_fr": "Une journee de citadin : logement, eau, travail, repas, bain et voisinage.",
+      "headline": "WORK OR PLAY?",
+      "period": "Edo Japan, circa 1700",
+      "editorial_relation": "Question about how a whole day is divided; neighborhood work, food and social downtime, not a profession/product portrait.",
+      "initial_prompt": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/01-Edo-Daily.txt",
+        "bytes": 3971,
+        "sha256": "54e48ab2ec5446b56350c258c99dc82b89844d56bf120a5b1686b0b473ec42c6"
+      },
+      "initial_references_sent": [
+        {
+          "index": 1,
+          "role": "User Rome screenshot: composition only",
+          "file": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+          "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+        },
+        {
+          "index": 2,
+          "role": "Existing local human thumbnail: illustration and civilization vocabulary only, not pose/worker/identity/headline",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/01-edo.png",
+          "bytes": 2497253,
+          "sha256": "d187f9b977007bef32d08448d2226ca465d8f575b66b00c211605af918c5577e"
+        }
+      ],
+      "refinement": null,
+      "image": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/01-Edo-Daily.png",
+        "bytes": 2405984,
+        "sha256": "95a4f4565637fbcfe4efe804fe3e6a305ab4eb331562f9c3c1bcced1ff258313",
+        "dimensions": [
+          1672,
+          940
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manual_review": {
+        "reviewer": "Codex",
+        "method": "direct inspection of each full image, faces, hands, headline and conceptual fit",
+        "status": "ready_for_user_review",
+        "notes": "WORK OR PLAY? lisible. Personnage principal feminin, regard sceptique et bouche fermee, sans produit tenu. Deux voisins mangent et discutent, un homme se repose avec un eventail, un artisan travaille. Cinq adultes principaux coherents ; deux petites silhouettes lointaines supplementaires apparaissent, sans dominer la scene. Symboles decoratifs et marques de tissu non commerciaux ; pas de texte UI. Costume et rue restent stylises."
+      },
+      "approved_by_user": false
+    },
+    {
+      "video_id": "A01",
+      "channel": "Aztec Daily",
+      "title": "What Did People in the Aztec Capital Actually Do All Day?",
+      "existing_angle_fr": "Entrer dans un foyer de Tenochtitlan puis suivre travail, eau, repas et ville.",
+      "headline": "JUST WORK?",
+      "period": "Tenochtitlan, before Spanish conquest, circa 1500",
+      "editorial_relation": "Question about how a whole day is divided; neighborhood work, food and social downtime, not a profession/product portrait.",
+      "initial_prompt": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/02-Aztec-Daily.txt",
+        "bytes": 4014,
+        "sha256": "27c65bdf97a51f4d94cb4d97b0f3dbdd204e330412836199d1c486bcfbdde69f"
+      },
+      "initial_references_sent": [
+        {
+          "index": 1,
+          "role": "User Rome screenshot: composition only",
+          "file": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+          "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+        },
+        {
+          "index": 2,
+          "role": "Existing local human thumbnail: illustration and civilization vocabulary only, not pose/worker/identity/headline",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/02-aztec-v2.png",
+          "bytes": 2679885,
+          "sha256": "ece347f9416c824e772b128d9e7bf065e926cf62b70110bbc257c25b8706836d"
+        }
+      ],
+      "refinement": null,
+      "image": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/02-Aztec-Daily.png",
+        "bytes": 2600345,
+        "sha256": "8ff582ece409440a12fd4ac16f90537a1fe97c1287fb4347900dd0194a3a8039",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manual_review": {
+        "reviewer": "Codex",
+        "method": "direct inspection of each full image, faces, hands, headline and conceptual fit",
+        "status": "ready_for_user_review",
+        "notes": "JUST WORK? lisible. Homme principal souriant discret, mains aux hanches, sans panier ni pain. Deux femmes partageant un repas et une conversation, un homme au repos, une femme en canoe : cinq adultes. Membres principaux et pagaie coherents ; aucun humain blanc ni UI. Architecture et vaisselle stylisees, pas une reconstruction archeologique certifiee."
+      },
+      "approved_by_user": false
+    },
+    {
+      "video_id": "B01",
+      "channel": "Babylon Daily",
+      "title": "What Did People in Ancient Babylon Actually Do All Day?",
+      "existing_angle_fr": "Entrer dans un foyer puis suivre eau, nourriture, travail et quartier.",
+      "headline": "WORK ALL DAY?",
+      "period": "Neo-Babylonian Babylon, circa 600 BCE",
+      "editorial_relation": "Question about how a whole day is divided; neighborhood work, food and social downtime, not a profession/product portrait.",
+      "initial_prompt": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/03-Babylon-Daily.txt",
+        "bytes": 3902,
+        "sha256": "d541bbcfc0c23b8df882e435456737f1e882120081c1f7a97edab578f9f3768c"
+      },
+      "initial_references_sent": [
+        {
+          "index": 1,
+          "role": "User Rome screenshot: composition only",
+          "file": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+          "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+        },
+        {
+          "index": 2,
+          "role": "Existing local human thumbnail: illustration and civilization vocabulary only, not pose/worker/identity/headline",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/03-babylon.png",
+          "bytes": 2597421,
+          "sha256": "a5a2f87ce38b71cb81a7087a41d5d601d73dd843e9ffe1eecc78b827bb6b8820"
+        }
+      ],
+      "refinement": null,
+      "image": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/03-Babylon-Daily.png",
+        "bytes": 2505269,
+        "sha256": "14c6978e1e885810dd29947da282b1db715557760f12a82739352ff2307ef010",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manual_review": {
+        "reviewer": "Codex",
+        "method": "direct inspection of each full image, faces, hands, headline and conceptual fit",
+        "status": "ready_for_user_review",
+        "notes": "WORK ALL DAY? lisible. Homme au premier plan, bras croises, bouche fermee et regard sceptique, sans panier de grain. Couple partageant repas/conversation, homme au repos et travailleur arrangeant des jarres. Cinq principaux adultes, une petite silhouette lointaine supplementaire pres de la porte. Membres principaux coherents. Architecture, vetements et repas stylises ; pas de UI ni de tete blanche."
+      },
+      "approved_by_user": false
+    },
+    {
+      "video_id": "C01",
+      "channel": "Imperial China Daily",
+      "title": "What Did People in Tang China Actually Do All Day?",
+      "existing_angle_fr": "Une journee d'habitant de Chang'an : quartier, repas, travail et ville.",
+      "headline": "ANY FREE TIME?",
+      "period": "Tang Chang'an, circa 750 CE",
+      "editorial_relation": "Question about how a whole day is divided; neighborhood work, food and social downtime, not a profession/product portrait.",
+      "initial_prompt": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/04-Imperial-China-Daily.txt",
+        "bytes": 4002,
+        "sha256": "df3d8ac7ec6dc520070bcab1e24c79fe3c8c44afdabe9d9c16da7370ce407db5"
+      },
+      "initial_references_sent": [
+        {
+          "index": 1,
+          "role": "User Rome screenshot: composition only",
+          "file": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+          "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+        },
+        {
+          "index": 2,
+          "role": "Existing local human thumbnail: illustration and civilization vocabulary only, not pose/worker/identity/headline",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/04-tang.png",
+          "bytes": 2443446,
+          "sha256": "497e724f3c2f465d54380844b38fbed39f7746ffa59d1ef3637cfb3584301ef7"
+        }
+      ],
+      "refinement": {
+        "prompt": {
+          "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/04-Imperial-China-Daily-correction.txt",
+          "bytes": 1617,
+          "sha256": "e44546b61b1bc6d62d96d16012bb646a34e8be17cecaf66e25f8d074babde854"
+        },
+        "references_sent": [
+          {
+            "index": 1,
+            "actual_sent_file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/04-Imperial-China-Daily.png",
+            "archived_file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/archives/04-Imperial-China-Daily-v1.png",
+            "sha256": "1df08e264be658602901e000da54f26339bcd2630c35315c1f5a89931a1846b3",
+            "role": "Initial generated Tang edit target"
+          }
+        ],
+        "change": "Three table bowls made undecorated; folding fan changed to plain round fan",
+        "rejected_first_output": {
+          "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/archives/04-Imperial-China-Daily-v1.png",
+          "bytes": 2487293,
+          "sha256": "1df08e264be658602901e000da54f26339bcd2630c35315c1f5a89931a1846b3",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "nonblank": true
+        },
+        "first_review": "ANY FREE TIME? lisible. Femme curieuse sans produit, deux hommes au repas/conversation, femme au repos, travailleur textile. Cinq adultes coherents. Premiere image non retenue : motifs bleu/blanc sur les bols et eventail plie a verifier/corriger pour le cadre Tang. Le texte et les mains principaux sont lisibles.",
+        "fan_context_source": "https://www.npm.gov.tw/Publications-Content.aspx?l=2&sno=04007305"
+      },
+      "image": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/04-Imperial-China-Daily-v2.png",
+        "bytes": 2323907,
+        "sha256": "bd5e3d73da53b1fad5a593328441b3496942c8eb8c59181b4bb2bc8b50019ec0",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manual_review": {
+        "reviewer": "Codex",
+        "method": "direct inspection of each full image, faces, hands, headline and conceptual fit",
+        "status": "ready_for_user_review",
+        "notes": "ANY FREE TIME? conserve et lisible. Femme curieuse, deux hommes au repas/conversation, femme au repos et travailleur textile : cinq adultes. Les trois bols sont maintenant sans motifs bleu/blanc et l'eventail est rond, sans plis. Visages, mains, texte et mise en scene reconnaissables de la premiere sortie. Aucun humain blanc, UI ou gros produit au premier plan."
+      },
+      "approved_by_user": false
+    },
+    {
+      "video_id": "O01",
+      "channel": "Ottoman Daily",
+      "title": "What Did People in Ottoman Istanbul Actually Do All Day?",
+      "existing_angle_fr": "Une journee de quartier entre foyer, travail, provisions, bain et retour.",
+      "headline": "JUST RELAXING?",
+      "period": "Ottoman Istanbul, 16th century",
+      "editorial_relation": "Question about how a whole day is divided; neighborhood work, food and social downtime, not a profession/product portrait.",
+      "initial_prompt": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/05-Ottoman-Daily.txt",
+        "bytes": 4055,
+        "sha256": "9c1b93d888a6d4e1e3d250da58da46f04efc9815bff69a60ef19f1c6926b5e97"
+      },
+      "initial_references_sent": [
+        {
+          "index": 1,
+          "role": "User Rome screenshot: composition only",
+          "file": "C:/Users/ytbyt/AppData/Local/Temp/codex-clipboard-b0168674-c27e-41eb-810b-fa4af23de16d.png",
+          "sha256": "2814f388f642edd06218aabae436593d5290cfe2b33c753ad85b9fbab9b0be23"
+        },
+        {
+          "index": 2,
+          "role": "Existing local human thumbnail: illustration and civilization vocabulary only, not pose/worker/identity/headline",
+          "file": "output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/05-ottoman.png",
+          "bytes": 2525849,
+          "sha256": "25982a0a144788d00acfca6b344767ec65087c8b14f4bc734790042c4f29d27b"
+        }
+      ],
+      "refinement": null,
+      "image": {
+        "file": "output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/05-Ottoman-Daily.png",
+        "bytes": 2564589,
+        "sha256": "ec1151fe399c570e4e0226af7644c0655800c0cbd1963b4689dbefa194ed9ba3",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "nonblank": true
+      },
+      "manual_review": {
+        "reviewer": "Codex",
+        "method": "direct inspection of each full image, faces, hands, headline and conceptual fit",
+        "status": "ready_for_user_review",
+        "notes": "JUST RELAXING? lisible. Citadin au premier plan avec petit sourire, main contre la porte, sans tablier ni pains. Deux hommes mangent/discutent, femme au repos, porteur d'eau au fond : cinq adultes. Deux minarets dans un monument stylise ; pas cafe/hookah/UI ni tete blanche. Membres principaux coherents. Image descriptive du quotidien, pas preuve d'oisivete universelle."
+      },
+      "approved_by_user": false
+    }
+  ],
+  "limitations": [
+    "Titles and angles are existing proposals; request authorizes thumbnail work, not full video production.",
+    "Scenes are stylized visual concepts. Institutional context does not prove every gesture, outfit, meal or street arrangement.",
+    "Requested image dimensions were 2048x1152; actual outputs are roughly 1672x941 with one 940px-high image. No upscaling done.",
+    "Foreground faces have varied expressions, natural skin and human features. White round heads remain video-only.",
+    "Edo and Babylon include small extra distant silhouettes despite the prompt's five-person target; principal actions remain readable."
+  ]
+}

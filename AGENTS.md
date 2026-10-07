@@ -21,8 +21,12 @@ Pour Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily et Ottoman Dail
   Son personnage humain n'est PAS approuve pour les videos. Les autres variantes
   restent des essais. Adapter et verifier les maitres de chaque lieu a la BD sobre.
 - Les cinq miniatures HUMAINES a regarder sont dans
-  output/imagegen/miniatures-cinq-chaines-humains-2026-10-07/A-REGARDER/.
+  output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/.
   Direction humaine conservee ; ne pas en deduire la validation de chaque image.
+- Miniatures des videos 01 : texte relie a l'angle du titre, plusieurs activites
+  de la journee dans une seule scene, expressions adaptees. Ne pas recycler
+  cinq vendeurs portant un produit ni affirmer NO JOBS sans preuve.
+  Relire l'accroche avec le script final avant publication.
 - Lire production/COHERENCE_2D_CODEX.txt avant toute production.
 - Reutiliser un decor maitre verifie pour chaque lieu et les memes references de
   personnages ; une description textuelle seule ne suffit pas.

@@ -1,0 +1,14 @@
+Aztec Daily - VIDEO A01 - MINIATURE REFAITE
+Titre candidat : What Did People in the Aztec Capital Actually Do All Day?
+Angle existant : Entrer dans un foyer de Tenochtitlan puis suivre travail, eau, repas et ville.
+Texte sur l'image : JUST WORK?
+La question du texte porte sur l'emploi d'une journee entiere, pas sur un produit.
+Mise en scene : personnage humain au premier plan qui observe plusieurs
+activites simultanees ; repas, conversation, repos et travail dans le quartier.
+Pas de gros produit tenu devant la camera, pas de surprise imposee.
+Image : output/imagegen/miniatures-01-journee-v2-2026-10-07/A-REGARDER/02-Aztec-Daily.png
+Prompt exact : output/imagegen/miniatures-01-journee-v2-2026-10-07/prompts/02-Aztec-Daily.txt
+Controle et references : output/imagegen/miniatures-01-journee-v2-2026-10-07/controle.json
+Statut : nouvelle proposition a valider. Script final non encore ecrit.
+Les anciennes miniatures restent des archives, pas la selection actuelle.
+La demande de miniature n'est pas une validation des 50 titres ou scripts.
