@@ -350,6 +350,13 @@ class YouTubeConnectionTests(unittest.TestCase):
         self.assertFalse(self.store.channel(self.cid)["connected"])
         self.assertEqual(self.assign(pid, self.store.channel(self.cid)).status_code, 400)
 
+    def test_unknown_channel_suggests_no_fiche(self):
+        r = self.callback(title="Unrelated Channel", yt_id="UCunrelated")
+        detail = self.client.get(
+            f"/api/studio/youtube/pending/{self.pending(r.location)}"
+        )
+        self.assertIsNone(detail.json["suggested"])
+
     def test_choice_is_private_one_use_and_needs_a_sufficient_grant(self):
         with patch.dict(os.environ, {"YOUTUBE_PUBLICATION_FLOW": "legacy-news"}):
             other = next(

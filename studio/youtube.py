@@ -378,7 +378,7 @@ def register_youtube(app, store, owner):
                 for c in channels
                 if rule(c)
             ),
-            row["origin"],
+            None,
         )
         return jsonify(
             title=row["title"],

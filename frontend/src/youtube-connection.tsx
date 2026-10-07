@@ -278,7 +278,7 @@ type Pending = {
   subscribers: string | null;
   thumbnail: string;
   origin: number;
-  suggested: number;
+  suggested: number | null;
   fiches: PendingFiche[];
 };
 
@@ -293,7 +293,7 @@ function PendingChoice({ id, close }: { id: string; close: () => void }) {
     api<Pending>(`/youtube/pending/${encodeURIComponent(id)}`)
       .then((d) => {
         setData(d);
-        setTarget(d.suggested);
+        setTarget(d.suggested ?? 0);
       })
       .catch((e) =>
         setError(e instanceof Error ? e.message : "Choix indisponible."),
@@ -368,6 +368,9 @@ function PendingChoice({ id, close }: { id: string; close: () => void }) {
           onChange={(e) => setTarget(Number(e.target.value))}
           disabled={busy}
         >
+          {data.suggested === null && (
+            <option value={0}>Choisis une fiche…</option>
+          )}
           {data.fiches.map((f) => (
             <option key={f.id} value={f.id} disabled={!f.compatible}>
               {f.name}
@@ -377,6 +380,12 @@ function PendingChoice({ id, close }: { id: string; close: () => void }) {
           ))}
         </select>
       </label>
+      {data.suggested === null && (
+        <p className="form-hint">
+          Aucune fiche du studio ne porte le nom de cette chaîne. Si ce n’est pas
+          une chaîne à automatiser, clique « Choisir un autre profil Google ».
+        </p>
+      )}
       {fiche?.linked_title && (
         <p className="form-hint">
           « {fiche.name} » est reliée à « {fiche.linked_title} » : ce lien sera
