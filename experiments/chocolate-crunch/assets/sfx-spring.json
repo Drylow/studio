@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "8a7v5hh7z1rmt0d131kadq3994",
+  "prompt": "Isolated close microphone mechanical foley: a large steel coil spring is compressed with a short rising creak for half a second, then released with one quick tight spring twang. Playful physical spring boxing mechanism. Three isolated actions spaced with silence. Dry studio, no music, no voice, no horn, no ambience.",
+  "source": "sfx-spring-source.mp3",
+  "sha256": "7529e9c2cf1d402182e6b30c1bfc600cb4880f917fc3b63510e3c3ceb94a5547",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}

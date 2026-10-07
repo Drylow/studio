@@ -10,7 +10,11 @@ qui voulait les deux combattants sur la miniature). Planches et miniature regard
 publication demandée par l'utilisateur dans la conversation, envoyée par le serveur o2switch
 (morceaux de 1 Mo, `YOUTUBE_CHUNK_MB=1`), miniature confirmée, message Discord envoyé.
 
-## Chocolate vs Giant Fork — 7 octobre 2026
+## Chocolate vs Crazy Tools — 8 octobre 2026
+
+**Révision actuelle : fourchette, gant de boxe à ressort et marteau-piqueur vers le haut.** Deux essais par outil : 1 / 4, puis 4 / 8, puis 8 / 16 tablettes. Montage raccourci à 23,30 s, 1080 × 1920 à 60 images/s. Ressort comprimé avant la patate latérale ; pointe du dernier outil orientée vers le haut, moteur et burin vibrant à 22 Hz. 41 contacts de chocolat, avec nouveaux SFX figés de ressort, boxe et percussion mécanique ; sans musique. Même cuistot, pixel art, textes anglais et fin à la spatule. Contrôle strict réussi à 28 instants, sans erreur ni avertissement. MP4 `experiments/chocolate-crunch/chocolate-crazy-tools.mp4` terminé ; 1 398 images décodées et regardées sur 24 planches, titres présents partout, pic AAC −3,6 dBFS. Audit final dans `experiments/chocolate-crunch/QA.md` ; livraison dans Codex, aucune publication sur les réseaux sociaux.
+
+**Version précédente du 7 octobre : fourchette seule.**
 
 Adaptation alimentaire des plaques qui tombent sur une pointe, étudiées chez NodeFan3D : 1 / 2 / 4 / 8 / 16 tablettes de chocolat sur une fourchette géante. Même manche blanche, paume, planche, palette et pixel art intégral que Watermelon ; fin à la spatule avec sautillement et confettis. 27,80 s, portrait 1080 × 1920, 60 images/s, titres anglais. Fractures obliques inégales au contact, 31 craquements synchronisés, retombées regroupées, sans musique. Export `experiments/chocolate-crunch/chocolate-giant-fork.mp4` terminé ; 1 668 images décodées et regardées sur 28 planches, titres présents partout, pic AAC −3,8 dBFS. Vérification de simulation et contrôle strict GPU matériel réussis. Six références téléchargées et analysées dans `experiments/physics-references/2026-10-07/README.md` ; aucun extrait ni son de ces vidéos repris dans notre rendu. Livré dans Codex, aperçu HyperFrames disponible ; aucune publication sur les réseaux sociaux. Simulation stylisée : collisions des éclats avec le décor, sans collisions mutuelles des débris denses.
 

@@ -2,7 +2,7 @@
 import json, math, subprocess, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageStat
-movie=Path(sys.argv[1] if len(sys.argv)>1 else 'chocolate-giant-fork.mp4')
+movie=Path(sys.argv[1] if len(sys.argv)>1 else 'chocolate-crazy-tools.mp4')
 out=Path('qa')/movie.stem;out.mkdir(exist_ok=True,parents=True)
 d=json.loads(Path('assets/simulation.json').read_text())
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(movie)]))
@@ -25,7 +25,7 @@ chapters=d['trials']+[{'start':d['outroStart'],'length':d['duration']-d['outroSt
 for chapter in chapters:
     start=round(chapter['start']*60);end=round((chapter['start']+chapter['length'])*60)
     base=frames[start].tobytes()
-    indices=[(y*180+x)*3 for y in range(38,61) for x in range(15,165)
+    indices=[(y*180+x)*3 for y in range(38,75) for x in range(15,165)
              if base[(y*180+x)*3]<110 and base[(y*180+x)*3+1]<135 and base[(y*180+x)*3+2]<120]
     assert len(indices)>50,'Missing title'
     for n in range(start,end):
