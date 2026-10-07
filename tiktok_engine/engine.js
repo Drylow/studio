@@ -490,7 +490,9 @@
     background(t, sc);
     if (sc) {
       const [sx, sy] = shake(t);
+      const k = spec.contentScale ?? 0.86;            // léger dézoom : rien ne touche les bords du téléphone
       ctx.save(); ctx.translate(sx, sy);
+      ctx.translate(W / 2, H / 2); ctx.scale(k, k); ctx.translate(-W / 2, -H / 2);
       for (const e of sc.els) {
         if (t < e.at) continue;
         if (e.out != null && t > e.out + (e.outDur ?? 0.12)) continue;
