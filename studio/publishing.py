@@ -1,6 +1,7 @@
 """Persist resumable sessions before upload; never blindly duplicate a publication."""
 
 import json
+import os
 from pathlib import Path
 import urllib.request
 import urllib.error
@@ -10,6 +11,15 @@ from studio.store import ROOT, now
 from studio.domain import blockers
 from studio.imports import digest
 from studio.youtube_permissions import direct_news
+
+
+def chunk_size():
+    """YOUTUBE_CHUNK_MB: o2switch cuts uploads of 8 MB bodies; 1 MB pieces go through."""
+    try:
+        mb = int(os.getenv("YOUTUBE_CHUNK_MB", "8"))
+    except ValueError:
+        mb = 8
+    return max(1, min(mb, 64)) * 1024 * 1024  # multiples of 256 KiB, as YouTube requires
 
 
 def publish(store, v, ch, job):
@@ -158,7 +168,7 @@ def publish(store, v, ch, job):
                 raise ValueError(
                     "Publication suspendue : les réglages ou contrôles ont changé."
                 )
-            data = f.read(min(8 * 1024 * 1024, total - offset))
+            data = f.read(min(chunk_size(), total - offset))
             if not data or path.stat().st_size != total:
                 raise ValueError(
                     "La taille de la vidéo a changé pendant son envoi. Publication interrompue."
