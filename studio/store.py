@@ -151,6 +151,7 @@ class Store:
                 "yt_refresh_token": "TEXT DEFAULT ''",
                 "yt_channel_title": "TEXT DEFAULT ''",
                 "yt_channel_id": "TEXT DEFAULT ''",
+                "yt_connected_at": "TEXT DEFAULT ''",
                 "proxy": "TEXT DEFAULT ''",
                 "cadence_days": "TEXT DEFAULT '1'",
                 "post_time": "TEXT DEFAULT '18:00'",
@@ -260,7 +261,7 @@ class Store:
         # Deliberately enumerate safe columns: refresh tokens and proxies never leave the server.
         return self.rows(
             """SELECT p.id,p.name,p.channel_id AS handle,p.niche,p.lang,p.autonomy,
-            p.cadence_days,p.post_time,p.yt_channel_title,p.yt_channel_id,
+            p.cadence_days,p.post_time,p.yt_channel_title,p.yt_channel_id,p.yt_connected_at,
             CASE WHEN p.yt_refresh_token!='' THEN 1 ELSE 0 END AS connected,
             s.key,s.format,s.accent,s.initials,s.target_stock,s.freshness_hours,s.enabled,s.paused,
             s.budget,s.instructions,s.template_key,s.responsible_id,s.cadence_anchor,s.publication_mode,s.revision,s.updated_at

@@ -52,7 +52,13 @@ def publish(store, v, ch, job):
     p = store.one(
         "SELECT yt_refresh_token,proxy FROM delamain_projects WHERE id=?", (ch["id"],)
     )
-    access = _access_token(p["yt_refresh_token"], p["proxy"])
+    try:
+        access = _access_token(p["yt_refresh_token"], p["proxy"])
+    except urllib.error.HTTPError as error:
+        # invalid_grant: Google ended this authorization (expired or revoked).
+        if error.code not in (400, 401):
+            raise
+        access = ""
     if not access:
         raise ValueError(
             "L’accès Google de cette chaîne a expiré ou a été refusé. Reconnecte-la depuis Chaînes → Connecter YouTube."

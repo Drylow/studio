@@ -123,6 +123,15 @@ Ne pas présenter cette proposition temporaire comme « juste cliquer Publier »
 L’utilisateur n’a pas accepté cette proposition ; ne pas remplacer son objectif de
 publication directe par un autre éditeur ou par un faux envoi automatique.
 
+## Mode Testing en service (7 octobre 2026)
+
+Le projet est remis en **Testing** et le Gmail propriétaire des chaînes est ajouté dans
+Audience → Test users : le consentement fonctionne. Google coupe alors chaque autorisation
+après 7 jours. `YOUTUBE_TOKEN_DAYS=7` dans le `.env` du serveur active l'alerte du site et
+un rappel Discord (salon de la chaîne) la veille. Reconnexion : Chaînes → Connecter YouTube
+→ Autre méthode : API Google → Reconnecter avec Google. La vérification Google de
+l'application supprimera cette limite ; retirer alors `YOUTUBE_TOKEN_DAYS`.
+
 ## Branding du projet existant
 
 Sur Google Auth Platform → Branding, utiliser :

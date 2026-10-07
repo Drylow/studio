@@ -10,6 +10,28 @@ from flask import request, session, jsonify, redirect, send_file
 from studio.store import now, Conflict, ROOT
 from studio.youtube_permissions import MANAGED_SCOPE, requested_scope, supports
 
+# Other fiches already bound to a YouTube channel, with what decides if they may let go.
+CLAIMS = """SELECT p.id,p.name,p.yt_channel_title,coalesce(s.enabled,0) AS enabled,
+    EXISTS(SELECT 1 FROM studio_jobs j JOIN studio_videos v ON v.id=j.video_id
+      WHERE v.channel_id=p.id AND j.kind='publish' AND j.status IN ('queued','running')) AS busy
+    FROM delamain_projects p LEFT JOIN studio_channels s ON s.project_id=p.id
+    WHERE p.yt_channel_id=? AND p.id!=?"""
+
+
+def _normal(text):
+    return "".join(x.lower() for x in text if x.isalnum())
+
+
+def movable(claims, title):
+    """A channel renamed on YouTube may leave an inactive fiche that kept its former name."""
+    return all(
+        c["yt_channel_title"]
+        and _normal(c["yt_channel_title"]) != _normal(title)
+        and not c["enabled"]
+        and not c["busy"]
+        for c in claims
+    )
+
 
 def register_youtube(app, store, owner):
     @app.get("/api/studio/youtube/setup-guide")
@@ -172,14 +194,13 @@ def register_youtube(app, store, owner):
         title, yt_id = _fetch_channel(token["access_token"])
         if not yt_id:
             raise ValueError("Aucune chaîne YouTube détectée sur ce compte.")
-        normalize = lambda text: "".join(x.lower() for x in text if x.isalnum())
         if expected["yt_channel_id"] and expected["yt_channel_id"] != yt_id:
             raise ValueError(
                 "Ce compte Google correspond à une autre chaîne. Reconnecte la chaîne attendue."
             )
-        if not expected["yt_channel_id"] and normalize(title) not in {
-            normalize(expected["name"]),
-            normalize(expected["handle"]),
+        if not expected["yt_channel_id"] and _normal(title) not in {
+            _normal(expected["name"]),
+            _normal(expected["handle"]),
         }:
             raise ValueError(
                 "La chaîne choisie ("
@@ -188,13 +209,12 @@ def register_youtube(app, store, owner):
                 + expected["name"]
                 + ". Vérifie le compte sélectionné."
             )
-        if store.one(
-            "SELECT id FROM delamain_projects WHERE yt_channel_id=? AND id!=?",
-            (yt_id, row["channel_id"]),
-        ):
+        if not movable(store.rows(CLAIMS, (yt_id, row["channel_id"])), title):
             raise ValueError(
                 "Cette chaîne YouTube est déjà reliée à une autre fiche du studio."
             )
+        from studio.channel_stats import clear
+
         with store.db() as c:
             c.execute("BEGIN IMMEDIATE")
             current = c.execute(
@@ -209,19 +229,29 @@ def register_youtube(app, store, owner):
                 raise Conflict(
                     "Cette chaîne a changé pendant la connexion. Recommence depuis sa fiche."
                 )
-            if c.execute(
-                "SELECT id FROM delamain_projects WHERE yt_channel_id=? AND id!=?",
-                (yt_id, row["channel_id"]),
-            ).fetchone():
+            stale = [
+                dict(r) for r in c.execute(CLAIMS, (yt_id, row["channel_id"])).fetchall()
+            ]
+            if not movable(stale, title):
                 raise ValueError(
                     "Cette chaîne YouTube est déjà reliée à une autre fiche du studio."
                 )
+            # The channel was renamed on YouTube: its former fiche loses the link,
+            # keeps its history, and can no longer publish to this channel.
+            for old in stale:
+                c.execute(
+                    "UPDATE delamain_projects SET yt_refresh_token='',yt_channel_title='',yt_channel_id='' WHERE id=?",
+                    (old["id"],),
+                )
+                clear(c, old["id"])
+                c.execute(
+                    "UPDATE studio_channels SET revision=revision+1,updated_at=? WHERE project_id=?",
+                    (now(), old["id"]),
+                )
             c.execute(
-                "UPDATE delamain_projects SET yt_refresh_token=?,yt_channel_title=?,yt_channel_id=? WHERE id=?",
-                (token["refresh_token"], title, yt_id, row["channel_id"]),
+                "UPDATE delamain_projects SET yt_refresh_token=?,yt_channel_title=?,yt_channel_id=?,yt_connected_at=? WHERE id=?",
+                (token["refresh_token"], title, yt_id, now(), row["channel_id"]),
             )
-            from studio.channel_stats import clear
-
             if expected["yt_channel_id"] != yt_id:
                 clear(c, row["channel_id"])
             else:
@@ -232,6 +262,12 @@ def register_youtube(app, store, owner):
             c.execute(
                 "UPDATE studio_channels SET revision=revision+1,updated_at=? WHERE project_id=?",
                 (now(), row["channel_id"]),
+            )
+        for old in stale:
+            store.log(
+                "Studio",
+                "youtube",
+                f"Lien YouTube retiré de « {old['name']} » : chaîne renommée « {title} »",
             )
         store.log("Studio", "youtube", "Chaîne connectée : " + title)
         return redirect("/channels?connected=" + str(row["channel_id"]))

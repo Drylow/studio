@@ -67,6 +67,8 @@ def initialize(store):
 
 
 def diagnostics(store, user_id, *, preview=False, data=None, at=None):
+    from studio.youtube_renewal import NOTICE, HOW as RENEW_HOW, expiry, message as renewal_message
+
     at = at or datetime.now(timezone.utc)
     data = data or overview(store)
     channels = {c["id"]: c for c in data["channels"]}
@@ -153,6 +155,23 @@ def diagnostics(store, user_id, *, preview=False, data=None, at=None):
                     "channel_id": c["id"],
                 },
                 c["revision"],
+            )
+        ends = expiry(c)
+        if ends and at >= ends - NOTICE:
+            add(
+                f"channel:{c['id']}:renewal",
+                "critical" if at >= ends else "warning",
+                "connections",
+                c["name"],
+                renewal_message(c, ends, at),
+                "Google coupe l’accès tous les 7 jours tant que l’application Google est en mode test. "
+                + RENEW_HOW,
+                {
+                    "page": "channels",
+                    "label": "Ouvrir les chaînes",
+                    "channel_id": c["id"],
+                },
+                c["yt_connected_at"],
             )
         if (
             c["publication_mode"] != "news"

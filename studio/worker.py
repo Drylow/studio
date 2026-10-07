@@ -127,6 +127,12 @@ def run(store, once=False):
         from studio.auto_publication import tick as publication_tick
 
         publication_tick(store)
+        try:
+            from studio.youtube_renewal import tick as renewal_tick
+
+            renewal_tick(store)
+        except Exception as e:
+            store.log("Studio", "error", "Rappel de connexion : " + str(e)[:300])
         time.sleep(3)
 
 

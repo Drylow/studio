@@ -324,6 +324,102 @@ class YouTubeConnectionTests(unittest.TestCase):
         self.assertIn("youtube_error", r.location)
         self.assertFalse(self.store.channel(self.cid)["connected"])
 
+    def test_renamed_channel_moves_from_its_inactive_former_fiche(self):
+        other = next(c for c in self.store.channels() if c["id"] != self.cid)
+        with self.store.db() as c:
+            c.execute(
+                "UPDATE delamain_projects SET yt_channel_id=?,yt_channel_title=?,yt_refresh_token=? WHERE id=?",
+                (self.yt_id, "Former Recap", "fixture-dead-access", other["id"]),
+            )
+        r = self.callback()
+        self.assertEqual(r.location, f"/channels?connected={self.cid}")
+        ch = self.store.channel(self.cid)
+        self.assertEqual((ch["yt_channel_id"], ch["connected"]), (self.yt_id, 1))
+        self.assertTrue(ch["yt_connected_at"])
+        former = self.store.channel(other["id"])
+        self.assertEqual((former["yt_channel_id"], former["connected"]), ("", 0))
+        self.assertEqual(former["revision"], other["revision"] + 1)
+
+    def test_renamed_channel_stays_with_an_active_or_same_name_fiche(self):
+        other = next(c for c in self.store.channels() if c["id"] != self.cid)
+        for title, enabled in (("Former Recap", 1), (self.channel["name"], 0)):
+            with self.store.db() as c:
+                c.execute(
+                    "UPDATE delamain_projects SET yt_channel_id=?,yt_channel_title=?,yt_refresh_token=? WHERE id=?",
+                    (self.yt_id, title, "fixture-other-access", other["id"]),
+                )
+                c.execute(
+                    "UPDATE studio_channels SET enabled=? WHERE project_id=?",
+                    (enabled, other["id"]),
+                )
+            r = self.callback()
+            self.assertIn("youtube_error", r.location)
+            self.assertFalse(self.store.channel(self.cid)["connected"])
+            self.assertEqual(self.store.channel(other["id"])["yt_channel_id"], self.yt_id)
+
+    def test_testing_app_access_is_renewed_before_google_ends_it(self):
+        from datetime import datetime, timedelta, timezone
+        from studio.control import diagnostics
+        from studio.youtube_renewal import tick
+
+        self.callback()
+        start = datetime.fromisoformat(self.store.channel(self.cid)["yt_connected_at"])
+        key = f"channel:{self.cid}:renewal"
+        alerts = lambda at: {
+            a["key"]: a for a in diagnostics(self.store, "x", at=at)["alerts"]
+        }
+        sent = []
+        hooks = {"DISCORD_WEBHOOK_MMA_EN": "https://discord.invalid/hook"}
+        with patch.dict(os.environ, hooks):
+            self.assertNotIn(key, alerts(start + timedelta(days=6)))
+        with patch.dict(os.environ, {**hooks, "YOUTUBE_TOKEN_DAYS": "7"}):
+            self.assertNotIn(key, alerts(start + timedelta(days=5)))
+            tick(self.store, start + timedelta(days=5), send=lambda *a: sent.append(a))
+            self.assertEqual(sent, [])
+            soon = alerts(start + timedelta(days=6, hours=2))[key]
+            self.assertEqual(soon["level"], "warning")
+            for _ in range(2):
+                tick(
+                    self.store,
+                    start + timedelta(days=6, hours=2),
+                    send=lambda *a: sent.append(a),
+                )
+            self.assertEqual(len(sent), 1)
+            self.assertIn(self.channel["name"], sent[0][1])
+            self.assertEqual(
+                alerts(start + timedelta(days=7, minutes=1))[key]["level"], "critical"
+            )
+
+    def test_publication_reports_an_ended_google_access_plainly(self):
+        from studio.publishing import publish
+
+        self.linked()
+        refused = urllib.error.HTTPError(
+            "https://oauth2.googleapis.com/token", 400, "Bad Request", {}, None
+        )
+        with patch("studio.publishing.blockers", return_value=[]), patch(
+            "studio.publishing.digest", return_value="d"
+        ), patch("studio.review.recheck_rights"), patch(
+            "routes.youtube._access_token", side_effect=refused
+        ), patch(
+            "pathlib.Path.is_file", return_value=True
+        ), patch(
+            "pathlib.Path.stat", return_value=Mock(st_size=1)
+        ):
+            with self.assertRaisesRegex(ValueError, "expiré ou a été refusé"):
+                publish(
+                    self.store,
+                    {
+                        "id": "v",
+                        "video_path": "work/v.mp4",
+                        "thumb_path": "work/v.jpg",
+                        "render_digest": "d",
+                        "post_at": "",
+                    },
+                    self.store.channel(self.cid),
+                    {},
+                )
+
     def test_connection_cannot_overwrite_a_concurrent_edit_or_retirement(self):
         def edit(_):
             self.store.update_channel(

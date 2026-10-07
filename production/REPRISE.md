@@ -2,7 +2,15 @@
 
 ## Reprise Claude — 7 octobre 2026, après-midi
 
-- **Piste Google jamais testée** : le projet était en *Testing* jusqu'au 6 octobre. En Testing,
+- **Google débloqué (7 oct., confirmé par l'utilisateur)** : en *Testing* avec son Gmail en
+  utilisateur de test, le consentement passe (plus de « This app is blocked »). Le refus suivant
+  « déjà reliée à une autre fiche » venait de la fiche historique **Le Grand Récap** (id 3) : sa
+  chaîne YouTube `UC0kWhUDz5-dvl-KqfSw8f4A` a été **renommée Cage Dispatch** (@CageDispatch).
+  Correctif : à la connexion, une fiche inactive qui garde l'ancien nom d'une chaîne renommée
+  lui cède le lien (historique conservé). Connexion datée (`yt_connected_at`) ; avec
+  `YOUTUBE_TOKEN_DAYS=7` sur le serveur, alerte sur le site et rappel Discord la veille de la
+  coupure Google hebdomadaire. Plusieurs chaînes sur un même Gmail : une connexion par chaîne.
+- **Piste Google (historique)** : le projet était en *Testing* jusqu'au 6 octobre. En Testing,
   un jeton de renouvellement expire après 7 jours : explication probable de l'`invalid_grant`
   de Le Grand Récap (envois du 29 juin au 1er juillet, puis plus rien). Le passage en
   *Production* non vérifiée a précédé « This app is blocked ». Aucune note ne montre l'essai
