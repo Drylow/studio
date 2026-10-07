@@ -36,7 +36,14 @@ def main():
                 "INSERT OR IGNORE INTO studio_news_feeds(id,channel_id,name,url) VALUES(?,?,?,?)",
                 (uid(), ch["id"], name, url),
             )
-    print("Radar :", scan(store, ch["id"]), flush=True)
+    # Explicit trial: the studio pause stops automatic work, not this manual run.
+    settings, channel = store.settings, store.channel
+    store.settings = lambda: dict(settings(), paused=0)
+    store.channel = lambda cid: dict(channel(cid), paused=0) if channel(cid) else None
+    try:
+        print("Radar :", scan(store, ch["id"]), flush=True)
+    finally:
+        store.settings, store.channel = settings, channel
     at = datetime.now(timezone.utc)
     if len(sys.argv) > 2:
         item = store.one("SELECT * FROM studio_news_items WHERE id=?", (sys.argv[2],))
