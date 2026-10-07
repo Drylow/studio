@@ -21,6 +21,22 @@ depuis la sauvegarde ; il est conservé, mais Google refuse son renouvellement.
 
 ## Ce que les sauvegardes prouvent
 
+**Contrôle supplémentaire du 7 octobre : le code d’origine a été exécuté depuis
+la copie privée antérieure au remplacement**, avec son propre `.env`, son propre
+jeton et son éventuel proxy. Google retourne HTTP 400 `invalid_grant`. Le client,
+le secret, la base du callback et le jeton correspondent aux valeurs conservées
+dans le studio actuel. Les fonctions de lecture de configuration et de
+renouvellement sont identiques dans les deux versions. Ce résultat distingue
+un refus réel de l’ancienne autorisation d’un défaut supposé du nouveau code.
+Il n’identifie pas la raison du refus et ne date pas sa survenue.
+
+L’archive et les réglages Python/Passenger ont aussi été contrôlés : aucun autre
+client Google ni remplacement des clés par un réglage serveur n’a été retrouvé.
+Les états de l’ancien outil conservés en base ne contiennent pas d’autre accès
+YouTube. L’historique enregistre les 25 envois entre le 29 juin et le 1er juillet ;
+ces dates de base ne constituent pas une preuve d’activité continue depuis.
+Aucun fichier privé, réglage ou jeton n’a été modifié par ces contrôles.
+
 La copie privée du site avant remplacement contient `routes/youtube.py`, son `.env`
 et sa base. Le client Google, son secret et le callback sont identiques à ceux de
 l’hébergement actuel. Aucun changement de client ou de secret n’est nécessaire.
@@ -79,11 +95,12 @@ Sur Google Auth Platform → Data Access, les permissions utilisées doivent com
 `https://www.googleapis.com/auth/youtube.readonly`. Pour les autres chaînes qui
 conservent le parcours privé puis public, garder également `youtube.force-ssl`.
 
-Puis edgerunners.fr → Chaînes → Cage Dispatch → Connecter YouTube. Ce test utilise
-une demande différente du dernier essai refusé. Ne pas promettre qu’elle franchira
-le blocage : seule une autorisation acceptée puis une lecture de la bonne chaîne le
-prouveront. Les tests simulés et la redirection HTTPS de départ ne le prouvent pas.
-Une restriction sur le compte ou le projet peut affecter également ce parcours.
+**Ce parcours a déjà été essayé et refusé.** Ne pas inviter à refaire cette demande
+comme si elle était nouvelle. Un prochain consentement doit suivre un changement
+ou un diagnostic Google pertinent. Seule une autorisation acceptée puis une lecture
+de la bonne chaîne prouveront la connexion ; les simulations et la redirection
+HTTPS de départ ne la prouvent pas. Une restriction du compte ou du projet peut
+affecter également ce parcours.
 
 Conserver la pause, les contrôles et l’automatisation désactivée jusqu’à validation.
 Le moteur complet de sélection, vérification et création des actualités reste à

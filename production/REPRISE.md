@@ -1,5 +1,27 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Priorité actuelle — 7 octobre 2026
+
+L’utilisateur exige une publication réellement automatique, gratuite, sans
+prestataire intermédiaire ni nouvelle installation sur son PC. Les connexions
+Cage/Pitch restent absentes ; ne pas annoncer cet objectif livré. La production
+éditoriale autonome reste également à terminer.
+
+La nouvelle comparaison exécute le code exact de l’ancien site avec sa sauvegarde
+d’origine : Google refuse aussi son jeton (`invalid_grant`, HTTP 400). Les fonctions
+de renouvellement et de configuration sont inchangées ; client, secret, callback
+et jeton conservés correspondent. Les réglages Python/Passenger et les états de
+l’ancien outil ne révèlent pas un autre client. Voir `LEGACY_YOUTUBE.md`.
+Cela ne prouve ni la date ni la cause du refus, et restaurer l’interface ancienne
+ne rétablit pas cette autorisation. Aucun envoi effectué pendant le diagnostic.
+
+La capture Google propose « Enroll in Advanced Protection » : ce programme n’est
+pas activé sur le compte affiché. Ne pas demander de l’activer ou de désactiver une
+protection. Le premier lien fourni, `/advanced-protection`, était erroné ; le lien
+officiel corrigé est `https://account.google.com/advanced-protection/enroll/details`.
+Ne pas reprendre les mêmes essais OAuth ou les mêmes demandes de clés sans un
+nouveau diagnostic. Les accès Git/o2switch ne donnent pas l’administration Google.
+
 ## Priorité actuelle — 6 octobre 2026
 
 Dernière instruction : **chercher d’autres moyens de publier**, sortir du seul client

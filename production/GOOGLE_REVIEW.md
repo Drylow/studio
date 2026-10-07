@@ -8,8 +8,8 @@ Cage Dispatch et Pitch Dispatch ne sont pas connectées. Aucun envoi réel confi
 Ce constat concerne le dernier essai du parcours privé puis public. À la demande
 de l’utilisateur, une comparaison de la sauvegarde a identifié le parcours gratuit
 original (`youtube.upload` + `youtube.readonly`, envoi public direct). Sa compatibilité
-est implémentée et documentée dans [LEGACY_YOUTUBE.md](LEGACY_YOUTUBE.md). Un nouveau
-consentement réel reste nécessaire. Ne pas proposer à nouveau l’examen Branding
+est implémentée et documentée dans [LEGACY_YOUTUBE.md](LEGACY_YOUTUBE.md). Cet essai
+réel a aussi été refusé. Ne pas proposer à nouveau l’examen Branding
 ou un abonnement comme seule prochaine étape.
 
 **Mise à jour après l’essai historique :** l’utilisateur signale encore le refus.
