@@ -119,6 +119,13 @@ def align_script(script, words):
     for bi, b in enumerate(script["beats"]):
         for n, raw in tokens(b["say"]):
             stoks.append({"beat": bi, "n": n, "raw": raw})
+    glued = []                        # Whisper coupe « c 'est », « lui -même » : on recolle au mot précédent
+    for w in words:
+        if glued and re.match(r"^['’-]", w["w"].strip()):
+            glued[-1] = {"w": glued[-1]["w"] + w["w"].strip(), "s": glued[-1]["s"], "e": w["e"]}
+        else:
+            glued.append(dict(w))
+    words = glued
     wtoks = []
     for w in words:
         for n, _ in tokens(w["w"]):
