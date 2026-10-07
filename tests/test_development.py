@@ -372,6 +372,41 @@ class DevelopmentPipelineTests(unittest.TestCase):
                 git(self.root, "ls-remote", "origin", "main").split()[0], self.base
             )
 
+    def test_site_behind_main_is_brought_up_to_it_with_the_change(self):
+        other = self.root.parent / "ahead"
+        git(self.root.parent, "clone", "-b", "main", str(self.remote), str(other))
+        (other / "README.md").write_text("Pushed by another session")
+        git(other, "add", ".")
+        git(
+            other,
+            "-c",
+            "user.name=Other",
+            "-c",
+            "user.email=other@example.invalid",
+            "commit",
+            "-m",
+            "Another session",
+        )
+        git(other, "push", "origin", "main")
+        ahead = revision(other)
+        with host(self.root) as url:
+            self.config.health_url = url
+            check_setup(self.store, self.config)
+            job = self.job()
+            run_once(self.store, self.config, provider=self.provider())
+            result = self.store.one(
+                "SELECT * FROM studio_development WHERE id=?", (job["id"],)
+            )
+            self.assertEqual(result["status"], "done", result["error"])
+            self.assertEqual(result["base_commit"], self.base)
+            self.assertEqual(git(self.root, "rev-parse", "HEAD^"), ahead)
+            self.assertTrue((self.root / "README.md").exists())
+            self.assertIn("LABEL = 'Updated'", (self.root / "services/feature.py").read_text())
+            self.assertEqual(
+                git(self.root, "ls-remote", "origin", "main").split()[0],
+                result["commit_id"],
+            )
+
     def test_remote_advance_does_not_overwrite_another_contributor(self):
         def advance():
             other = self.root.parent / "other"

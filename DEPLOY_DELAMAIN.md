@@ -17,6 +17,10 @@ seulement, tests d'origine copiés hors de la branche, compilation, démarrage F
 SQLite, maintenance, contrôle de version HTTPS, retour arrière et push de `main`. Mise en ligne
 sans validation manuelle, choix explicite du propriétaire. Attente maximale : 45 minutes.
 
+D'autres sessions poussent souvent sur `main` : un site en retard sur `main` reste prêt.
+Chaque modification part du dernier `main` (avance rapide uniquement) ; sa mise en ligne
+installe donc aussi ces commits, après les mêmes tests. Un `main` divergé bloque l'exécuteur.
+
 Brancher : **Réglages → Modifications du site → Brancher Claude**, coller l'adresse
 `https://api.anthropic.com/v1/claude_code/routines/trig_…/fire` et le jeton générés sur
 claude.ai (routine → Modifier → déclencheur API → Generate token). Le jeton est stocké dans la

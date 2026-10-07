@@ -789,7 +789,9 @@ def deploy(store, job, candidate, config):
                 "Le code du site a changé pendant la préparation. Redemande le changement sur cette version."
             )
         git(candidate, "fetch", "origin", "main")
-        if git(candidate, "rev-parse", "FETCH_HEAD") != previous:
+        if git(candidate, "rev-parse", "FETCH_HEAD") != git(
+            candidate, "rev-parse", commit + "^"
+        ):
             raise Conflict(
                 "GitHub a avancé pendant la préparation. Aucun changement écrasé."
             )
@@ -850,9 +852,26 @@ def check_setup(store, config):
                 "Le dépôt du site contient des modifications non enregistrées."
             )
         remote = git(config.root, "ls-remote", "origin", "refs/heads/main").split()
-        if not remote or remote[0] != revision(config.root):
-            raise ValueError("Le site doit être à jour avec main sur GitHub.")
-        git(config.root, "push", "--dry-run", "origin", "HEAD:refs/heads/main")
+        if not remote:
+            raise ValueError("La branche main est introuvable sur GitHub.")
+        if remote[0] != revision(config.root):
+            # Other sessions push to main; the next release brings the site up to it.
+            git(config.root, "fetch", "origin", "main")
+            try:
+                git(
+                    config.root, "merge-base", "--is-ancestor", "HEAD", "FETCH_HEAD"
+                )
+            except ValueError:
+                raise ValueError(
+                    "Le site a divergé de main sur GitHub : contrôle serveur nécessaire."
+                ) from None
+        git(
+            config.root,
+            "push",
+            "--dry-run",
+            "origin",
+            "HEAD:refs/heads/delamain/write-check",
+        )
         health(config.health_url, revision(config.root))
         command([config.npm, "--version"], config.root)
     except Exception as exc:
@@ -923,8 +942,16 @@ def execute(store, job, config, *, provider=None, routine=None):
         git(scratch, "clone", "--no-hardlinks", str(config.root), str(candidate))
         git(candidate, "remote", "set-url", "origin", remote)
         git(candidate, "fetch", "origin", "main")
-        if git(candidate, "rev-parse", "FETCH_HEAD") != base:
-            raise Conflict("Mets d’abord le site à jour depuis main.")
+        start = git(candidate, "rev-parse", "FETCH_HEAD")
+        if start != base:
+            # Work on top of main; the release also brings the site up to it.
+            try:
+                git(candidate, "merge-base", "--is-ancestor", base, start)
+            except ValueError:
+                raise Conflict(
+                    "Le site a divergé de main sur GitHub : contrôle serveur nécessaire."
+                ) from None
+            git(candidate, "checkout", "-q", start)
         branch = "delamain/site-" + job["id"][:12]
         git(candidate, "checkout", "-b", branch)
         baseline = scratch / "baseline-tests"
@@ -941,7 +968,7 @@ def execute(store, job, config, *, provider=None, routine=None):
         )
         if provider is None and (routine or config.routine_url):
             fire = routine or (lambda text: fire_routine(config, text))
-            remote_code(store, job, candidate, config, base, baseline, scratch, fire)
+            remote_code(store, job, candidate, config, start, baseline, scratch, fire)
         else:
             code(store, job, candidate, config, baseline, scratch, provider or call_ai)
         # Only authorised source paths and compiler-generated frontend files can enter the commit.
