@@ -1,17 +1,42 @@
 [
   {
+    "cuts": 1,
+    "start": 0.85,
+    "length": 2,
     "pieces": 2,
-    "minBottom": 0.3101177617189024,
-    "maxRadius": 4.79192986661882
+    "minBottom": 0.28081842601304396,
+    "maxRadius": 3.739305338026087
   },
   {
-    "pieces": 8,
-    "minBottom": -0.018392837500114556,
-    "maxRadius": 5.271692289173959
+    "cuts": 4,
+    "start": 2.85,
+    "length": 2.3,
+    "pieces": 12,
+    "minBottom": 0.2106226731140552,
+    "maxRadius": 5.314740740507286
   },
   {
-    "pieces": 32,
-    "minBottom": -0.020479930320532025,
-    "maxRadius": 5.087459637901673
+    "cuts": 8,
+    "start": 5.15,
+    "length": 2.7,
+    "pieces": 28,
+    "minBottom": 0.2960872305060309,
+    "maxRadius": 3.0629714154566865
+  },
+  {
+    "cuts": 16,
+    "start": 7.85,
+    "length": 3.1,
+    "pieces": 60,
+    "minBottom": 0.23662579846455128,
+    "maxRadius": 3.058970935570419
+  },
+  {
+    "cuts": 32,
+    "start": 10.95,
+    "length": 3.7,
+    "pieces": 124,
+    "minBottom": 0.08638651120950486,
+    "maxRadius": 3.070927422316343
   }
 ]

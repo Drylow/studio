@@ -2,6 +2,17 @@
 
 ## Essai de simulation low-poly — 7 octobre 2026
 
+**Révision actuelle : Pixel Cuts, maximum 32.** Dernier retour utilisateur :
+retirer 64 et ralentir les salves. Hook de 0,85 s qui coupe avant la chute, puis
+1 / 4 / 8 / 16 / 32 CUTS ; salve finale étalée sur 1,90 s, lames visibles 0,15 s,
+dispersion et rotation des morceaux modérées. Pixel art intégral et texte anglais.
+Preview HyperFrames ouverte dans Codex avant export ; lecture du montage de
+14,65 s constatée. MP4 de 1080 × 1920 à 60 images/s :
+`experiments/watermelon-lowpoly/watermelon-pixelcuts-32.mp4`. Les 879 images ont été
+décodées et regardées sur quinze planches ; titres présents sur chaque image,
+pic audio à −1,7 dBFS. Livraison dans la conversation Codex ; aucune publication
+externe. Cette version remplace les essais précédents pour la suite du format.
+
 **Version révisée : Pixel Cuts.** Selon le retour utilisateur : pixel art sur toute
 l'image, titres exclusivement anglais, coups de lame de 0,145 s espacés de 0,17 s,
 un accent sonore par coupe. MP4 de 12 s, 1080 × 1920, 60 images/s :

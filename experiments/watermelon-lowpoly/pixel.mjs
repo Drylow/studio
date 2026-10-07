@@ -7,6 +7,9 @@ const glyphs={
  '1':['00100','01100','00100','00100','00100','00100','01110'],
  '2':['01110','10001','00001','00010','00100','01000','11111'],
  '3':['11110','00001','00001','01110','00001','00001','11110'],
+ '4':['00010','00110','01010','10010','11111','00010','00010'],
+ '6':['01110','10000','10000','11110','10001','10001','01110'],
+ '8':['01110','10001','10001','01110','10001','10001','01110'],
  '7':['11111','00001','00010','00100','01000','01000','01000'],
  A:['01110','10001','10001','11111','10001','10001','10001'],
  C:['01111','10000','10000','10000','10000','10000','01111'],
@@ -16,6 +19,9 @@ const glyphs={
  N:['10001','11001','11001','10101','10011','10011','10001'],
  O:['01110','10001','10001','10001','10001','10001','01110'],
  R:['11110','10001','10001','11110','10100','10010','10001'],
+ P:['11110','10001','10001','11110','10000','10000','10000'],
+ V:['10001','10001','10001','10001','10001','01010','00100'],
+ I:['01110','00100','00100','00100','00100','00100','01110'],
  S:['01111','10000','10000','01110','00001','00001','11110'],
  T:['11111','00100','00100','00100','00100','00100','00100'],
  U:['10001','10001','10001','10001','10001','10001','01110'],
@@ -35,7 +41,7 @@ export function createPixelView(canvas){
  const ctx=back.getContext('2d',{willReadFrequently:true,alpha:false});ctx.imageSmoothingEnabled=false;
  const display=canvas.getContext('2d',{willReadFrequently:true,alpha:false,desynchronized:false});display.imageSmoothingEnabled=false;
  const bayer=[-6,2,6,-2];
- return (source,count,index)=>{
+ return (source,count,index,hook=false)=>{
   ctx.drawImage(source,0,0,PIXEL_WIDTH,PIXEL_HEIGHT);
   const frame=ctx.getImageData(0,0,PIXEL_WIDTH,PIXEL_HEIGHT),a=frame.data;
   for(let p=0;p<a.length;p+=4){
@@ -47,10 +53,13 @@ export function createPixelView(canvas){
    a[p]=rgb[best][0];a[p+1]=rgb[best][1];a[p+2]=rgb[best][2];
   }
   ctx.putImageData(frame,0,0);
+  // Keep the title field readable even when a thrown blade enters above it.
+  ctx.fillStyle='#f1e7d6';ctx.fillRect(0,0,PIXEL_WIDTH,85);
   text(ctx,'WATERMELON',108,28,1);
   text(ctx,count===1?'1 CUT':count+' CUTS',108,48,3);
-  ['01','03','07'].forEach((label,i)=>{
-   const x=72+i*36;text(ctx,label,x,350,1,i===index?'#203c2a':'#6b6c51');
+  if(hook)text(ctx,'PREVIEW',108,350,1);
+  else ['01','04','08','16','32'].forEach((label,i)=>{
+   const x=36+i*36;text(ctx,label,x,350,1,i===index?'#203c2a':'#6b6c51');
    if(i===index){ctx.fillStyle='#203c2a';ctx.fillRect(x-8,363,16,1);}
   });
   // Publish one complete frame. Screenshot capture must never see the
