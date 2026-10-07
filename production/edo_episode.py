@@ -78,6 +78,11 @@ def timeline(episode, work):
         raise SystemExit("Audio changed since voice generation.")
     text = "\n\n".join(s["narration"] for s in episode["shots"])
     measured = work / "measured_words.json"
+    if "signature" in voice:
+        identity = {"text": text, "voice": episode["voice"]}
+        signature = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+        if signature != voice["signature"]:
+            raise SystemExit("Authored narration changed after the voice was generated.")
     if measured.exists():
         cached = read(measured)
         if cached["audio_sha256"] != digest(audio):
@@ -155,6 +160,8 @@ def freeze(episode, work):
 def validate_images(episode, work):
     from PIL import Image
     frozen = read(work / "frozen_references.json")
+    if set(frozen) != {name for shot in episode["shots"] for name in shot["references"]}:
+        raise SystemExit("Reference selection changed: review and freeze the complete set again.")
     for name, meta in frozen.items():
         if digest(Path(REPO) / name) != meta["sha256"]:
             raise SystemExit(f"Canonical reference changed: {name}")
@@ -162,7 +169,8 @@ def validate_images(episode, work):
     for shot in episode["shots"]:
         path = Path(REPO) / shot["image"]
         review = reviews.get(shot["id"], {})
-        if not review.get("accepted") or review.get("sha256") != digest(path):
+        if (not review.get("accepted") or review.get("image") != shot["image"]
+                or review.get("sha256") != digest(path)):
             raise SystemExit(f"Shot must be reviewed before rendering: {shot['id']}")
         with Image.open(path) as im:
             if abs(im.width / im.height - 16 / 9) > 0.025:
