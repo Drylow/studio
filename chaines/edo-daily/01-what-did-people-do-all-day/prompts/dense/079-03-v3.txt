@@ -1,9 +1,0 @@
-Use case: precise-object-edit. One NEW 16:9 sober comic illustration.
-Actual ordered inputs:
-Image 1: immutable EMPTY original location geometry only.
-Image 2: exact canonical blue anatomy and clothing only.
-Image 3: exact canonical red anatomy and clothing only.
-Image 4: APPROVED original scene, the authoritative current cast, objects and positions. Rejected generated variants are NOT inputs.
-Only requested moment: Keep the SAME front three-quarter framing of Image 4. Blue and Red sit side by side on the SAME original bench. Blue glances toward Red with BOTH hands resting on his lap BELOW the tabletop; he holds nothing. Red rests her left hand on her lap and keeps her other hand on the SAME ingredient basket handle at the RIGHT bench beside her. EXACTLY TWO pale ceramic tea cups remain visibly separated on the TABLE: one at the table LEFT side, one at the table RIGHT side nearest Blue. Show BOTH full cup silhouettes unobstructed. The counter behind them still has its separate THREE cups and ONE kettle. Never move anyone behind the table or make a new bench.
-Sober historical comic, Edo Japan around 1700. Clean detailed readable architecture, matte colors, restrained texture and shadows. Preserve lighting and framing of LAST input. Every existing person has adult-sized body, perfectly circular oversized pure-white head, small black dot eyes, tiny straight mouth. NO hair, nose, ears, eyebrows. Skin and hands pure #FFFFFF. Both hands smooth CLOSED OVAL mittens, NO fingers or thumb tips. Long sleeves and trousers. Red keeps burgundy clothing and ochre sash. Blue keeps indigo clothing, gray sash and pale-gray neck towel. NO added people, text, captions, labels, logos, inset diagrams or modern objects. All objects stay in their original positions unless explicitly moved above.
-Narration for context, never print: "carrying everything onward. You are still in the working city. The"

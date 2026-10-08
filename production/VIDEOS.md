@@ -2,19 +2,27 @@
 
 ## Edo Daily — épisode 01 — 8 octobre 2026
 
-**What Did People in Edo Japan Actually Do All Day?** Version locale vérifiée,
-non publiée : 24 min 59, 1920 × 1080, 30 images/s. Voix originale de 4 031 mots
-conservée. À la demande de l’utilisateur, remplacement du découpage de 92 images
-par 306 plans mesurés sur la voix, 214 illustrations supplémentaires et corrections
-ciblées ; aucun plan au-delà de 179 images, soit 5,97 s. Codex a écrit les prompts,
-regardé les 306 sources sélectionnées et 918 captures du montage sur 77 planches.
-Décodage intégral sans erreur, 44 974 images, écart de fin son/image de 12,7 ms.
-23 tests réussis après correction d’une perte d’image dans l’horloge du rendu.
-Livraison : `output/edo-daily/01-A-REGARDER/Edo-Daily-01.mp4`, sous-titres anglais,
-script, sources et fiche publication. Miniature humaine WORK OR PLAY? encore
-proposée à validation. Audit : `chaines/edo-daily/01-what-did-people-do-all-day/QA_REPORT.md`.
-Aucun upload ni envoi Discord. De petites variations de dessin génératif subsistent ;
-les références ne garantissent pas une géométrie identique au pixel près.
+**What Did People in Edo Japan Actually Do All Day?** ANCIENNE VERSION REJETÉE
+par l'utilisateur : tableaux répétitifs, trop peu d'actions et d'habitants.
+Les contrôles techniques et les variantes d'images ne validaient pas le récit.
+Le montage de 24 min 59, son ancien script et ses plans ne sont plus une livraison
+ni une base à reprendre. Trois dossiers retirés des chemins actifs ; suppression
+définitive bloquée par l'outil, fichiers mis à l'écart dans
+`work/rejected/edo-01-2026-10-08/`. Références validées et propositions conservées.
+Aucun upload ni envoi Discord ; historique Git conservé.
+
+Reprise : analyse de deux vidéos Strangely Ironic Guy par Algrow et vérification
+directe d'extraits et des cinq captures locales. Codex réécrit le découpage et les
+prompts : cohérence dans chaque scène, nouvelles actions, POV, échanges et groupes.
+Dossier de reprise : `chaines/edo-daily/01-rebuild/`. Premier essai de six plans,
+quatre lieux et six adultes ; pas encore de nouvelle vidéo complète ou de voix
+mesurée. Les nouvelles illustrations passent par le CLI Proxy configuré.
+Dix nouvelles références et six scènes produites ; quatre passes de correction
+après relecture (literie, peau, objets de la chambre, doigts et stand de nourriture).
+Six images retenues et planche dans
+`output/imagegen/edo-rebuild-2026-10-08/A-REGARDER/`.
+Ce test visuel n'est pas encore validé par l'utilisateur ; voir `REVIEW.md` pour
+les limites. Aucune reprise de l'ancien transcript ni d'export prêt à publier.
 
 ## Cage Dispatch — première vidéo du pilote automatique — 7 octobre 2026
 

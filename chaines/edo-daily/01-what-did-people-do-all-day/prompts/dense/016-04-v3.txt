@@ -1,8 +1,0 @@
-Use case: precise-object-edit. One NEW 16:9 sober comic illustration.
-Actual ordered inputs:
-Image 1: immutable EMPTY original location geometry only.
-Image 2: exact canonical red anatomy and clothing only.
-Image 3: APPROVED original scene, the authoritative current cast, objects and positions. Rejected generated variants are NOT inputs.
-Only requested moment: Keep the SAME wide home framing and every object of Image 3. Red kneels on the BARE right tatami just LEFT of the doorway, looks toward the clear passage and rests BOTH smooth CLOSED WHITE OVAL hands on her knees. The ONE handled basket stays on the doorway floor at the far RIGHT and is COMPLETELY EMPTY: show its bare wicker interior with absolutely NO cloth, NO garment, NO groceries inside. The ONE folded gray garment stays ONLY on the TABLE at right; never duplicate or move it. ONE navy cushion under the left table edge, bedding and gray teapot in the far LEFT recess. No new right cushion.
-Sober historical comic, Edo Japan around 1700. Clean detailed readable architecture, matte colors, restrained texture and shadows. Preserve lighting and framing of LAST input. Every existing person has adult-sized body, perfectly circular oversized pure-white head, small black dot eyes, tiny straight mouth. NO hair, nose, ears, eyebrows. Skin and hands pure #FFFFFF. Both hands smooth CLOSED OVAL mittens, NO fingers or thumb tips. Long sleeves and trousers. Red keeps burgundy clothing and ochre sash. NO added people, text, captions, labels, logos, inset diagrams or modern objects. All objects stay in their original positions unless explicitly moved above.
-Narration for context, never print: "jobs, tidiness is not decoration. It is access."

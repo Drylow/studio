@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-08",
+  "files": [
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/artisan.txt",
+      "bytes": 1436,
+      "sha256": "ba257333a070d77763830585baf7f4c340d5385a3353a69a617daa05fa231f54"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/boatman.txt",
+      "bytes": 1368,
+      "sha256": "c9a035a1c9f508a64c9e37425aab8d1357ec3d5506a128b535de5f0814b5b30e"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/fish-quay.txt",
+      "bytes": 1306,
+      "sha256": "6b0b02325f4068aa99ccf948648b43c01822e47548247435c7a0b24fe4bd5d07"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/fishseller.txt",
+      "bytes": 1440,
+      "sha256": "c05af2a000528beee8b4a5b00bb8f40b6e3cce133caf4c98f1861e2ed18506d7"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/merchant-street.txt",
+      "bytes": 1189,
+      "sha256": "01a5b3251157dbbf7011d3cec98f3dd7e4a9cd933f759756a890a8093ffd9045"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/nagaya-room.txt",
+      "bytes": 1259,
+      "sha256": "1c431765a8862b6261e7c238f6e976f9a333c348587c497043a7e970a080c6eb"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/neighbor.txt",
+      "bytes": 1402,
+      "sha256": "2fd681a33221fefe675a63c7d3668e2ab69c3e77c3beaab9ae196cedce55eab0"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/partner.txt",
+      "bytes": 1460,
+      "sha256": "a1eafe12154d910a05345b60c9bf697bf2111fa4fe51017628d9d1cf73d697dd"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/porter.txt",
+      "bytes": 1436,
+      "sha256": "8997b70b82f42c08659720eae0701ea515ae5aee5859185b1b1f7471eb445ecf"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/references/well-court.txt",
+      "bytes": 1147,
+      "sha256": "113c107f5a2361cde5561797659a36f1510591535e782b97cf6d87c0373e12a2"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/01-arrival.txt",
+      "bytes": 2877,
+      "sha256": "c118d3535a214db04e5ee4a10d6d7a3876c319c2dddedbd050f6282723424723"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/02-coins-repair.txt",
+      "bytes": 861,
+      "sha256": "698c575def1660c589625aaf51360c11b671194aebf04fb07e4a110d029ba0af"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/02-coins.txt",
+      "bytes": 2544,
+      "sha256": "5f236540aab07a1f8dc77f8b6fdfd6b12a058857d3652bd3e306cd4c148f211d"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor-repair-v2.txt",
+      "bytes": 974,
+      "sha256": "a1105ce9bc293f84425b8acd92e1926fd5dce673d978802d3fe3c0c57199a2cc"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor-repair.txt",
+      "bytes": 1490,
+      "sha256": "db9cda473ccb202bb87e195587c0c42ad16026e398000ddb66fa156a7e408aa5"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor.txt",
+      "bytes": 2502,
+      "sha256": "a2bb8dbfd629c47e1ceac2ce778a37deb0fd4fbadd6ba3c42d4e0abc730460b8"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/04-water.txt",
+      "bytes": 2712,
+      "sha256": "b8197dbc8eb6d44ea21432657a209219832cd794dd3b115d2425978850f5bf77"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/05-hawker-repair.txt",
+      "bytes": 1057,
+      "sha256": "53197a89b1aefc81beb977c82754ff7710458d24a4bf31186b7abb5c795f447e"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/05-hawker.txt",
+      "bytes": 2747,
+      "sha256": "32db420a4a3079e861a7aff9570178b482cd36df1c498217652d55b4ad4fba8d"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/shots/06-delivery.txt",
+      "bytes": 2909,
+      "sha256": "d61d219b6c487b4c79567d1d6a0ead37bd94c63a1657c187922e11b363128f61"
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+      "bytes": 1274605,
+      "sha256": "dd30bd5657bf80b3fa7a5f5102140440383ca05a17f2c856947bab0fa34cf40e",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png",
+      "bytes": 1308667,
+      "sha256": "ed851dbff6ac22e7a9c7e6895a9a4438a008d53cf6815f5ed8d35152b9ae01df",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+      "bytes": 2364509,
+      "sha256": "e9a204ffcf21d93c74ee5413a2041c60b0a35b6498b93289f38cf1cf94a28ceb",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+      "bytes": 1316443,
+      "sha256": "b07e701f295ca70f5e274d2723fa250be8ac3e90471514a653f721d5ff79db02",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+      "bytes": 2219815,
+      "sha256": "8abddec3fb2b1f2c1158fd365b6661cf82127efbd46b1e230d76c8650695c763",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/nagaya-room.png",
+      "bytes": 2010911,
+      "sha256": "d443648b8aba706f97623d20e9e4397ccd1ae7932b2e19e1774a3a8b24a8320c",
+      "dimensions": [
+        1705,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png",
+      "bytes": 1217979,
+      "sha256": "5bda78878777e9c68dde81d6f9344119bda05762144337622484ee7b3e0f9a0b",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/partner.png",
+      "bytes": 1232094,
+      "sha256": "e69f070dcc096c1f68266439cda406edc2e49eda2cb69f0df14f1f04735ea2e4",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+      "bytes": 1338573,
+      "sha256": "8db0ef329508a7e95fad90054350e981b8ca34148c333ff10e0d335cff96fced",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/well-court.png",
+      "bytes": 2216100,
+      "sha256": "7dfad758aaeedfa47a2195bde22ba2371055abad5f853876332304a0f9f78107",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+      "bytes": 2325417,
+      "sha256": "7829229c178eafef5d0d4a3032668d046a8e8fdab22e99079220160f0880ccb4",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+      "bytes": 2266685,
+      "sha256": "1a1edb00e6d6c45a130a3438a959109b4369231ece5227015c6b24f6031c7365",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins.png",
+      "bytes": 2343772,
+      "sha256": "00cde2e7baa3f3e205d7d776a8f49755c3c94c3c6fb19a52e15b14d2ba054bf6",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair-v2.png",
+      "bytes": 1899575,
+      "sha256": "f02ffc892ef3a1b660a4e75f3963f4bb2a3bfdc9e1d10f618c2f90c9b893eae2",
+      "dimensions": [
+        1705,
+        922
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair.png",
+      "bytes": 1900123,
+      "sha256": "fe91dd791919ef012b26bed93477649b2099f8678c241e80d365bc4893800930",
+      "dimensions": [
+        1705,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor.png",
+      "bytes": 1988354,
+      "sha256": "820733e1829f2bc46261f01d9eba11f9e2cf059aec8ef3109ae74e2128b3049c",
+      "dimensions": [
+        1705,
+        922
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/04-water.png",
+      "bytes": 2209029,
+      "sha256": "2ecaab04718229b128637eaa92a1283015fe081c2c5ef13824a41459b99c9a28",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+      "bytes": 2164355,
+      "sha256": "5f0f7d92852d1efe578e0effa459e6e4daee3e17486d10b6849fc0e4650b174a",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker.png",
+      "bytes": 2227040,
+      "sha256": "c762a40a1018a3948f9ee1d25dc6798d8422829cfad21e496fe75f968fba7716",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+      "bytes": 2293616,
+      "sha256": "c9c35b037644c24b7c0e0654fc295149f8fa4af5408df994e4a8122f7c494a6f",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "reference/strangely-ironic-guy/04-hitman.jpg",
+      "bytes": 146763,
+      "sha256": "492a76d1ecc9c91979252cc2e118605fb2ba68f096121bd04160d24cf41fc564",
+      "dimensions": [
+        1936,
+        1048
+      ]
+    }
+  ],
+  "note": "File integrity and actual dimensions only, not a creative or continuity score."
+}

@@ -44,10 +44,14 @@ Envoyer le decor maitre et les references de personnages avec des roles explicit
 dans le prompt. Pour une suite d'actions, l'image precedente peut aussi servir
 d'ancre de pose et d'etat, mais le decor maitre doit TOUJOURS etre present.
 Ne pas utiliser uniquement le plan precedent : cela accumule les derives.
-Limiter les changements demandes a l'action, la pose et les accessoires mobiles.
-Ne pas exiger un autre angle a chaque image : privilegier des cadrages derives
-du maitre. Une vue opposee n'est pas un nouveau lieu : la creer depuis le maitre,
+La coherence ne limite PAS la mise en scene aux variations d'une pose frontale.
+Choisir le cadrage et les nouveaux lieux selon les actions de la narration.
+Une vue opposee n'est pas un nouveau lieu : la creer depuis le maitre,
 verifier sa geometrie, la nommer et la conserver avant de l'utiliser.
+Correction du 8 octobre : chaque plan apporte une action, un objet, un
+interlocuteur, une reaction ou une consequence nouveaux. Une nouvelle image
+ou un zoom seuls ne prouvent pas la variete. Les acteurs secondaires necessaires
+sont prepares et references ; la ville ne reste pas vide autour de trois gens.
 Un objet pose reste a sa place au plan suivant sauf si l'action explique son
 deplacement. Un nouveau moment de la journee a sa variante de lumiere explicite.
 Ne pas supprimer silencieusement une reference si le proxy atteint sa limite.

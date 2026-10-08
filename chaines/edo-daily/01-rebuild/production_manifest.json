@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-08",
+  "author": "Codex",
+  "provider": "CLI Proxy configured in .env",
+  "generation_interface": "bundled imagegen CLI edit, --no-augment, quality high",
+  "status": "Illustration test only, not a complete video. No measured narration or timing.",
+  "assets": [
+    {
+      "id": "artisan",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/artisan.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "partner",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/partner.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/partner.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "fishseller",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/fishseller.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "porter",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/porter.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "neighbor",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/neighbor.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "boatman",
+      "kind": "cast",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/boatman.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "fish-quay",
+      "kind": "location",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/fish-quay.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "nagaya-room",
+      "kind": "location",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/nagaya-room.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/nagaya-room.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "well-court",
+      "kind": "location",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/well-court.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/well-court.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    },
+    {
+      "id": "merchant-street",
+      "kind": "location",
+      "output": "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/references/merchant-street.txt",
+      "input_images_ordered": [
+        "reference/strangely-ironic-guy/04-hitman.jpg"
+      ],
+      "visually_inspected": true,
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+    }
+  ],
+  "shots": [
+    {
+      "id": "01-arrival",
+      "narration": "Your breakfast is still on somebody else's shoulder.",
+      "location": "fish-quay",
+      "characters": [
+        "porter",
+        "fishseller",
+        "boatman"
+      ],
+      "new_information": "Le poisson arrive : travail de transport avant l'achat.",
+      "camera": "plan de groupe en action, niveau quai",
+      "action": "At the original counter, the rust-clothed porter bends forward and lowers ONE wooden fish tray with BOTH white mitten hands from his left shoulder onto the third counter position. The ochre-and-green fishseller on the right steadies that SAME tray with both hands. TWO other fish trays remain on the counter; total THREE trays, no fourth. Teal boatman behind them aboard the SINGLE moored boat pulls its mooring rope. Three adults ONLY. Mid-action asymmetric triangular composition at quay level. Medium-wide frame with porter and seller large, full heads and torsos visible, not a distant establishing shot. Preserve green awnings, canal, far bridge, quay posts and two ground baskets. Moving tray is an explicit state change, not a new counter or duplicate prop.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/01-arrival.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    },
+    {
+      "id": "02-coins",
+      "narration": "You reach for fish. The seller reaches for your coins.",
+      "location": "fish-quay",
+      "characters": [
+        "artisan",
+        "fishseller"
+      ],
+      "new_information": "Paiement et remise du poisson, pas un vendeur immobile.",
+      "camera": "POV rapproche sur transaction, vendeur en face",
+      "action": "First-person artisan viewpoint at the SAME fish counter. Foreground indigo-sleeved white mitten holds a few small dark copper coins with square holes above an open palm. Opposite, seller's white mitten accepts the coins while the other holds one plain leaf-wrapped fish parcel ready to hand over. Seller's full white head and upper body visible, green apron and ochre sleeves recognizable; counter fish trays and canal landmarks retained. EXACTLY TWO adults including POV artisan. No giant coin, written price, modern notes, gloves colored other than white, or payment technology.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/02-coins.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    },
+    {
+      "id": "03-floor",
+      "narration": "Back home, the bed has to become the breakfast floor.",
+      "location": "nagaya-room",
+      "characters": [
+        "artisan",
+        "partner"
+      ],
+      "new_information": "Deux actions utiles libèrent le sol, avant le repas.",
+      "camera": "plan bas de piece occupee, deux gestes",
+      "action": "Partner at left crouches holding both ends of ONE indigo-and-off-white futon as she folds it toward wicker corner storage. Artisan at center/right slides the existing low table from the wall toward the newly freed floor. It is preparation before eating: no meal dishes yet. Medium low doorway-angle looking across living floor, both full heads visible. Original earthen kitchen step, hearth, water jar and entrance retained. Two adults ONLY. State: folded futon going left, table moving center; no added cushion, wardrobe or large modern room.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/nagaya-room.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/partner.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair-v2.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    },
+    {
+      "id": "04-water",
+      "narration": "Next door, three households are waiting for the same water.",
+      "location": "well-court",
+      "characters": [
+        "artisan",
+        "neighbor",
+        "porter"
+      ],
+      "new_information": "Attente, puisage et récipient : plusieurs voisins participent.",
+      "camera": "diagonale moyenne large au puits",
+      "action": "At the SAME wooden courtyard well, plum-clothed neighbor at right pulls the original rope up with both mitten hands, suspended wooden bucket partway above the well lip. Artisan foreground left sets down the single empty ground bucket. Rust-clothed porter, returning after his early delivery, waits at the back entrance with ONE smaller empty wooden pail. Three adults ONLY, each doing a different action. Clear medium-wide diagonal composition, full heads visible. Rope, well frame, broom and door positions preserved; no water pump, large fountain, masonry castle or duplicate suspended bucket.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/04-water.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/well-court.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/porter.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/04-water.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/04-water.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    },
+    {
+      "id": "05-hawker",
+      "narration": "And the seller is already off to the next street.",
+      "location": "merchant-street",
+      "characters": [
+        "fishseller",
+        "partner",
+        "neighbor"
+      ],
+      "new_information": "Le vendeur se déplace et une cliente l'interpelle.",
+      "camera": "plan de déplacement avec appel depuis une porte",
+      "action": "Fishseller foreground walks diagonally toward viewer-right carrying a plain wooden shoulder pole with exactly TWO balanced wicker fish baskets hanging by ropes, knees in stride. Partner left doorway leans outward and raises one white mitten to call him; plum neighbor farther right shopfront inspects a folded cloth. Three adults ONLY. Wide street rather than the well lane; retain fixed cloth shop left and brick-red canopy right. Seller's full head visible, ochre long sleeves, green apron and white headband. No pose copied from neutral character sheet, no extra baskets, floating pole, stiff symmetrical row or modern cart.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/05-hawker.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/partner.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    },
+    {
+      "id": "06-delivery",
+      "narration": "This is Edo: your morning is made from other people's work.",
+      "location": "merchant-street",
+      "characters": [
+        "artisan",
+        "porter",
+        "boatman"
+      ],
+      "new_information": "Livraison et réception : travail collectif, autre composition.",
+      "camera": "plan à plusieurs profondeurs, transfert de charge",
+      "action": "Different active view from the same side of the SAME merchant street, tighter medium framing and slightly higher diagonal camera. Rust porter foreground right bends and lowers ONE closed wicker cargo basket onto the left cloth-shop threshold. Indigo artisan just inside that doorway braces the bottom of the SAME basket to receive it; both hands visibly contact the basket. Teal boatman behind them at the next doorway uncoils ONE short rope above a plain wooden crate. Three adults ONLY, full heads visible, three readable depth layers. Retain the original left cloth display, roof and doorway identity and right brick-red food canopy where visible; do not invent a different street or another cloth shop. No fishseller, handcart, modern wheels, static row of people, or duplicate basket.",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/06-delivery.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+      "visually_inspected": true,
+      "review_status": "selected_for_visual_test_not_user_approved"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "03-floor-repair",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor-repair.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/nagaya-room.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/partner.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair.png",
+      "visually_inspected": true
+    },
+    {
+      "id": "02-coins-repair",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/02-coins-repair.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+      "visually_inspected": true
+    },
+    {
+      "id": "05-hawker-repair",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/05-hawker-repair.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+      "visually_inspected": true
+    },
+    {
+      "id": "03-floor-repair-v2",
+      "prompt": "chaines/edo-daily/01-rebuild/prompts/shots/03-floor-repair-v2.txt",
+      "input_images_ordered": [
+        "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair.png",
+        "output/imagegen/edo-rebuild-2026-10-08/references/nagaya-room.png"
+      ],
+      "output": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair-v2.png",
+      "visually_inspected": true
+    }
+  ]
+}

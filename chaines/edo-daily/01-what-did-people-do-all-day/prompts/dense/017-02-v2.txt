@@ -1,9 +1,0 @@
-Use case: precise-object-edit. One NEW 16:9 sober comic illustration.
-Actual ordered inputs:
-Image 1: Immutable original empty location geometry.
-Image 2: Exact individual cast anatomy and clothing only.
-Image 3: APPROVED exact original parent state; current people, objects, counts and positions.
-Only requested new moment: Blue pauses EMPTY-HANDED at the original LEFT doorway and turns his head toward the passing JADE neighbor. The JADE neighbor STILL carries HIS original wooden bucket in one white oval mitten. Blue does NOT carry any bucket. Original fixed left ground bucket and original well-rope bucket remain unchanged: THREE total buckets, only ONE carried, by JADE neighbor.
-Keep the LAST seed's architecture, object inventory and all original people. NO importing actors or meal props from other images. Current seed overrides all previous incorrect generated variants, which are not inputs. No added or disappearing buckets, baskets, garment, furniture, limbs or costume changes. Pure-white skin, CLOSED OVAL mittens with NO fingers.
-Sober clean historical comic, Edo Japan around 1700. Crisp readable architecture, flat matte colors, reduced textures and restrained shadows. ALL people are adult-sized with oversized perfectly circular pure #FFFFFF heads, small black dot eyes and tiny straight mouths; NO nose, ears, hair, eyebrows or human facial anatomy. ALL exposed skin and oval mitten hands pure #FFFFFF, even under warm night light. NO fingers, no child-sized bodies. Long sleeves and long trousers. Indigo Blue with gray sash and pale-gray neck towel; burgundy Red with ochre sash; jade Green with charcoal trousers/gray sash. No new words, captions, logos, clocks, modern objects, later-period dishes, random furniture or extra people.
-Narration, never print: "The museum emphasizes the different occupations and mutual assistance within these"

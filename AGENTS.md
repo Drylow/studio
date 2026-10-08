@@ -43,3 +43,13 @@ Pour Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily et Ottoman Dail
 
 Le kit de references initial et le test visuel sont dans
 output/imagegen/coherence-codex-2026-10-07/.
+
+Correction utilisateur du 8 octobre : la coherence ne doit PAS produire un film
+fait de variations des memes tableaux. L'episode Edo initial est rejete.
+Chaque plan apporte une information nouvelle liee a la narration : action,
+objet, interlocuteur, reaction ou consequence. Un zoom ou nouveau fichier seul
+ne compte pas. Ajouter les lieux et personnages necessaires aux evenements.
+Conserver l'identite d'une piece dans SA scene, pas la recopier partout.
+Etudier reference/strangely-ironic-guy/ et ses videos pour la mise en scene :
+POV, gestes, echanges, groupes, gros plans et espaces occupes.
+Reecrire script et decoupage avant une nouvelle production integrale.

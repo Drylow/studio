@@ -1,8 +1,0 @@
-Use case: precise-object-edit. One NEW 16:9 sober comic panel.
-Actual ordered input roles:
-Image 1: immutable EMPTY original location master; geometry only.
-Only requested new moment: EMPTY original waterfront, ZERO PEOPLE. New natural panel of original bridge rail, warehouse route and SAME single moored boat. Maintain original quiet cargo arrangement. NO walking group, NO new cargo, NO diagram.
-LAST scene overrides earlier scenes. Maintain all objects unless THIS action explicitly moves them. Do not add characters from any textual costume list. The rejected generated variants are NOT inputs.
-Clean sober historical comic, Edo Japan around 1700. Crisp readable detailed architecture, matte colors, reduced textures, restrained shadows. Preserve EXACT last seed's cast, anatomy, clothing, objects, lighting and camera side. Any EXISTING person has adult-sized body, oversized perfectly circular PURE #FFFFFF head, black dot eyes and tiny straight mouth; no hair, nose, ears or eyebrows. Exposed skin PURE #FFFFFF even at night. Hands CLOSED OVAL WHITE shapes with NO fingers or thumb tips. Long sleeves and trousers. NO writing, overlays, labels, inset diagrams, logos, modern objects, extra people or invented objects.
-
-Narration for context, NEVER print: "Library describes relocation, wider routes, and new development after the"

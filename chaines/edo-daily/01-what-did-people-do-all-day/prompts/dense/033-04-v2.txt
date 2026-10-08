@@ -1,9 +1,0 @@
-Use case: precise-object-edit. One NEW 16:9 sober comic panel.
-Actual ordered input roles:
-Image 1: immutable EMPTY original location master; geometry only.
-Image 2: APPROVED original parent scene; authoritative current cast, object inventory and positions.
-Only requested new moment: EMPTY original 033 joinery still-life, NO PEOPLE. New slightly wider natural panel of SAME open box, single rimmed lid right, plane left, mallet/chisel right, original few flat wood chips. NO new curled wood shavings, no deeper box, no new activity.
-LAST scene overrides earlier scenes. Maintain all objects unless THIS action explicitly moves them. Do not add characters from any textual costume list. The rejected generated variants are NOT inputs.
-Clean sober historical comic, Edo Japan around 1700. Crisp readable detailed architecture, matte colors, reduced textures, restrained shadows. Preserve EXACT last seed's cast, anatomy, clothing, objects, lighting and camera side. Any EXISTING person has adult-sized body, oversized perfectly circular PURE #FFFFFF head, black dot eyes and tiny straight mouth; no hair, nose, ears or eyebrows. Exposed skin PURE #FFFFFF even at night. Hands CLOSED OVAL WHITE shapes with NO fingers or thumb tips. Long sleeves and trousers. NO writing, overlays, labels, inset diagrams, logos, modern objects, extra people or invented objects.
-
-Narration for context, NEVER print: "But it gives us a useful way to see skill in a small, ordinary object."
