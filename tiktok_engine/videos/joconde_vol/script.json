@@ -7,7 +7,12 @@
  },
  "tail": 1.4,
  "caption": "La Joconde est devenue célèbre grâce à un voleur. #histoire #vulgarisation #joconde #louvre",
- "sources": [],
+ "sources": [
+  "Smithsonian Magazine (J. Zug, 2011)",
+  "Hoobler, The Crimes of Paris (2009)",
+  "Musée du Louvre : fiche INV 779 (79,4 × 53,4 cm), communiqué du 6 janvier 2025 (8,7 millions de visiteurs en 2024)",
+  "France Inter, 27 avril 2024 (estimation de la présidente du Louvre : environ 80 % des visiteurs viennent pour la Joconde)"
+ ],
  "art": {
   "mona_lisa": {
    "prompt": "the Mona Lisa painting by Leonardo da Vinci in an ornate golden frame, front view",
@@ -127,7 +132,7 @@
    ]
   },
   {
-   "say": "Un homme en blouse blanche décroche la Joconde, la sort de son cadre, et repart avec, cachée sous sa blouse.",
+   "say": "Un homme en blouse blanche décroche la Joconde, la sort de son cadre, et repart avec, tranquillement.",
    "glow": {
     "y": 480
    },
@@ -529,7 +534,7 @@
    ]
   },
   {
-   "say": "Un tableau de 77 centimètres sur 53, rendu célèbre par un voleur.",
+   "say": "Un tableau de 79 centimètres sur 53, rendu célèbre par un voleur.",
    "glow": {
     "y": 480,
     "r": 300,
@@ -547,7 +552,7 @@
     },
     {
      "preset": "num",
-     "text": "77 × 53 CM",
+     "text": "79 × 53 CM",
      "at": "77",
      "y": 210
     },
