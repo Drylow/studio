@@ -1,7 +1,8 @@
 # Routine quotidienne Octave Histoire (@octave.histoire)
 
-Lancée chaque jour vers 9 h (heure de Bruxelles), dans une session neuve. Elle fabrique **2 vidéos**
-et les programme sur TikTok par Zernio : la première **aujourd'hui à 19 h**, la seconde **demain à 7 h**.
+Lancée chaque jour vers 9 h (heure de Bruxelles), dans une session neuve. Elle garde **une semaine
+d'avance** : elle remplit le **premier jour sans vidéo programmée**, à **7 h et 19 h**, publiées par
+Zernio. Une session lancée pour un jour précis remplit ce jour-là.
 Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. Faits réels uniquement.
 
 ## 0. Préparer
@@ -10,8 +11,11 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 - `python3 tiktok_engine/zernio.py accounts` doit montrer le compte TikTok. Sinon, arrêter et écrire
   le problème dans le résumé de fin.
 - **Créneaux déjà pris** : chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`
-  (champ `at`). Si un dossier a déjà `at` = aujourd'hui 19:00 ou demain 07:00, ce créneau est fait :
-  ne pas le refaire. Si les deux sont pris, terminer.
+  (champ `at`). Prendre le premier jour, à partir de demain, qui n'a pas ses deux créneaux
+  (07:00 et 19:00). Ne jamais programmer un créneau déjà pris.
+- Les clés `ALGROW_API_KEY` et `ZERNIO_API_KEY` doivent être dans l'environnement (afficher
+  seulement « présente » ou « absente »). Si l'une manque, s'arrêter et le dire : ne pas passer par
+  les outils Algrow de la session, qui attendent une autorisation que personne ne donnera.
 
 ## 1. Choisir les sujets
 
@@ -76,7 +80,9 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
    - l'heure est celle de Bruxelles ;
    - `<n>` est la miniature recommandée.
 2. Copier `work/tiktok/<nom>/zernio.json` dans `tiktok_engine/videos/<nom>/`.
-3. Ajouter la ligne de la vidéo dans la table « Vidéos livrées » du README, avec son lien Gofile.
-4. Faire le commit (message en anglais) et pousser sur `main`. Les vidéos, elles, restent hors de git.
-5. Résumé de fin, en français, en 4 lignes : sujets, heures programmées, crédits Algrow utilisés,
+3. Copier aussi `livraison.txt` (lien Gofile) dans `tiktok_engine/videos/<nom>/`.
+4. Ne pas toucher au README : plusieurs sessions peuvent tourner en même temps.
+5. Faire le commit (message en anglais), puis `git pull --rebase origin main` et pousser sur `main`.
+   Réessayer si le push est refusé. Les vidéos, elles, restent hors de git.
+6. Résumé de fin, en français, en 4 lignes : sujets, heures programmées, crédits Algrow utilisés,
    problèmes éventuels.
