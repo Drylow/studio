@@ -1,0 +1,14 @@
+Use case: precise-object-edit. Asset: one NEW 16:9 storyboard illustration, not a duplicate still or a collage.
+Actual ordered inputs:
+Image 1: IMMUTABLE original location and camera-side master.
+Image 2: Exact named cast anatomy and clothing reference.
+Image 3: Exact named cast anatomy and clothing reference.
+Image 4: Approved lunch object state: ONE rice bowl, ONE SMALL vegetable dish, one served cup; three counter cups/kettle; original near/right bench.
+Image 5: Approved wrapped-box design: wide flat gray rectangle with ONE knot, no duplicate box left on workbench.
+Image 6: APPROVED original scene-state anchor for all current object counts, cast, seating, clothing and light.
+
+NEW moment to draw (overrides earlier pose only): Green looks toward Blue and rests his empty white mittens on his own lap; Blue responds with a head turn. Keep BOTH people, original TWO table cups, BOTH small meal dishes and the SAME gray-wrapped parcel on the RIGHT bench.
+Narration for this exact shot, NEVER print: "resting beside a bench. For a moment, neither of you is discussing the fit of a"
+
+Keep the original location geometry and the approved seed scene's exact visible objects, counts, colors and clothing. Move an object ONLY when the new moment explicitly calls for that move; show that same object, never a duplicate or substitution. Keep all seed-scene people present unless a requested DETAIL framing naturally crops them out. Preserve current light and time of day. Maintain the original camera SIDE and architectural topology; framing may tighten for a requested detail, not reverse or reinvent the set. Keep full round heads with safe margin whenever a head is shown. No mask painting, black empty patches, red artifacts or transparency.
+Sober clean historical comic, Edo Japan around 1700. Crisp readable architecture, flat matte colors, reduced textures and restrained shadows. ALL people are adult-sized with oversized perfectly circular pure #FFFFFF heads, small black dot eyes and tiny straight mouths; NO nose, ears, hair, eyebrows or human facial anatomy. ALL exposed skin and oval mitten hands pure #FFFFFF, even under warm night light. NO fingers, no child-sized bodies. Long sleeves and long trousers. Indigo Blue with gray sash and pale-gray neck towel; burgundy Red with ochre sash; jade Green with charcoal trousers/gray sash. No new words, captions, logos, clocks, modern objects, later-period dishes, random furniture or extra people.

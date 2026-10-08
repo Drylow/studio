@@ -85,6 +85,36 @@ class TimelineTests(unittest.TestCase):
         encode.assert_not_called()
 
 
+    def test_resegmented_shots_preserve_cached_voice_identity(self):
+        original = "You carry water home.\n\nThe table is ready."
+        changed = copy.deepcopy(self.episode)
+        changed["voice_text"] = original
+        changed["shots"] = [
+            {"id": "001-01", "narration": "You carry"},
+            {"id": "001-02", "narration": "water home."},
+            {"id": "002-01", "narration": "The table is ready."},
+        ]
+        self.assertEqual(episode_tools.authored_text(changed), original)
+
+    def test_voice_text_cannot_hide_a_changed_word(self):
+        self.episode["voice_text"] = "You carry water home. The table was ready."
+        with self.assertRaisesRegex(SystemExit, "approved voice text"):
+            episode_tools.authored_text(self.episode)
+
+    def test_image_cadence_includes_final_tail(self):
+        episode = {"max_shot_seconds": 6}
+        episode_tools.validate_cadence(episode, [{"id": "001", "start": 0, "end": 5.6}], tail=0.4)
+        with self.assertRaisesRegex(SystemExit, "image cadence"):
+            episode_tools.validate_cadence(episode, [{"id": "001", "start": 0, "end": 5.7}], tail=0.4)
+
+    def test_timeline_refuses_long_unsegmented_image(self):
+        self.episode["max_shot_seconds"] = 1.9
+        with patch.object(episode_tools, "measure_words", return_value=self.words), \
+             patch.object(episode_tools.media, "duration", return_value=4.2):
+            with self.assertRaisesRegex(SystemExit, "image cadence"):
+                episode_tools.timeline(self.episode, self.work)
+
+
 class ImageGateTests(unittest.TestCase):
     def setUp(self):
         from PIL import Image

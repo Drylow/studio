@@ -8,7 +8,19 @@ The spoken script is 4,031 words. Actual narration duration: 1,498.72 seconds.
 Word measurements match 98.958 percent of script words verbatim; remaining
 differences were inspected and are number formatting, compound words, proper
 names and ordinary recognition substitutions, not missing paragraphs.
-The 92 contiguous shots follow those measured word boundaries.
+The original 92 contiguous shots followed those measured word boundaries.
+User correction on 2026-10-08: one image every 6 seconds maximum. That cut was
+stopped, NOT delivered. The new cut contains 306 word-timed shots, with 214 new
+illustrations manually directed by Codex. Original narration and its identity
+are retained, not regenerated. Cadence is checked again before render, including
+the 0.4-second final tail. Shortening a shot alone does not count as a new image.
+
+New variants use an empty location master, individual named cast references and
+the approved original scene-state as the last input. Two first cadence tests
+(004-02 and 013-02) imported an early meal from an ancillary seating reference;
+both were rejected. Their retries exclude that unrelated state input. Accepted
+025-02 and 056-02 retain the recorded earlier actual inputs; input history is
+not retroactively rewritten. New illustrations still require visual acceptance.
 
 ## Frozen References
 Three adult character designs: indigo artisan with pale gray neck towel,

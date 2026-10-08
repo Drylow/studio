@@ -1,6 +1,8 @@
 # Continuity Correction Ledger
-Date: 2026-10-08. Current phase: all 92 selected images individually reviewed;
-53 shot selections corrected, including the empty night-room establishing scene.
+Date: 2026-10-08. Original 92-image set individually reviewed; 53 selections
+corrected, including the empty night-room establishing scene. That sparse cut
+was stopped after the user requested one image every 6 seconds maximum.
+Current cut: 306 measured shots; 214 new illustrations being generated/reviewed.
 Do not render or deliver until every selected image has a fresh accepted hash.
 
 ## Stable State

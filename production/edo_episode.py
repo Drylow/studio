@@ -30,6 +30,26 @@ def normalized(text):
     return "".join(c for c in text.lower() if c.isalnum())
 
 
+def authored_text(episode):
+    shots_text = "\n\n".join(s["narration"] for s in episode["shots"])
+    text = episode.get("voice_text", shots_text)
+    if text.split() != shots_text.split():
+        raise SystemExit("Shot narration disagrees with the approved voice text.")
+    return text
+
+
+def validate_cadence(episode, shots, tail=0.0):
+    limit = episode.get("max_shot_seconds")
+    if limit is None:
+        return
+    for index, shot in enumerate(shots):
+        duration = shot["end"] - shot["start"]
+        if index == len(shots) - 1:
+            duration += tail
+        if duration > float(limit) + 0.000001:
+            raise SystemExit(f"Shot exceeds image cadence: {shot['id']} ({duration:.2f}s)")
+
+
 def timestamp(seconds):
     ms = round(seconds * 1000)
     h, ms = divmod(ms, 3600000)
@@ -51,7 +71,7 @@ def measure_words(audio, language):
 
 
 def speech(episode, work):
-    text = "\n\n".join(s["narration"] for s in episode["shots"])
+    text = authored_text(episode)
     identity = {"text": text, "voice": episode["voice"]}
     signature = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
     audio, result = work / "narration.mp3", work / "voice.json"
@@ -76,7 +96,7 @@ def timeline(episode, work):
     voice = read(work / "voice.json")
     if digest(audio) != voice["audio_sha256"]:
         raise SystemExit("Audio changed since voice generation.")
-    text = "\n\n".join(s["narration"] for s in episode["shots"])
+    text = authored_text(episode)
     measured = work / "measured_words.json"
     if "signature" in voice:
         identity = {"text": text, "voice": episode["voice"]}
@@ -119,6 +139,7 @@ def timeline(episode, work):
         shot["end"] = shots[i + 1]["start"] if i + 1 < len(shots) else total
         if shot["end"] <= shot["start"]:
             raise SystemExit(f"Invalid shot duration: {shot['id']}")
+    validate_cadence(episode, shots, tail=0.4)
     save(work / "words.json", words)
     save(work / "timeline.json", {"duration": total, "coverage": coverage,
                                   "audio_sha256": digest(audio), "shots": shots})
@@ -186,6 +207,7 @@ def export_video(episode, work, width, height):
     if [{k: s[k] for k in ("id", "image", "narration", "motion")} for s in plan["shots"]] != [
             {k: s[k] for k in ("id", "image", "narration", "motion")} for s in episode["shots"]]:
         raise SystemExit("Shot selection changed: rebuild the measured timeline before rendering.")
+    validate_cadence(episode, plan["shots"], tail=0.4)
     scenes = [{"image": str(Path(REPO) / s["image"]), "start": s["start"],
                "motion": s["motion"]} for s in plan["shots"]]
     build = work / "render"
