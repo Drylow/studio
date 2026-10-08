@@ -101,3 +101,16 @@ Separate English subtitles and source-backed publication text accompany the MP4.
 The existing human-cartoon WORK OR PLAY? thumbnail remains a proposal, not an
 assertion that the user approved that individual image for publication.
 Final rendered-frame review and complete decode checks are required before delivery.
+
+## Encoder Timing Correction
+The first dense encode was rejected before delivery: 154 crossfaded clips lost
+one video frame each because still-image timestamps used the input's 25 fps
+clock before 30 fps filtering. Audio still lasted 1499.12 seconds, hiding a
+5.13-second picture shortfall if only container duration was checked.
+The shared renderer now sets an exact 30 fps timebase before counting frames,
+and its clip cache revision changed so old shortened clips cannot be reused.
+Real-encoder regression cases of 50, 63 and 128 frames reproduce the old loss
+and pass after the fix. QA now checks the independently decoded video-frame
+count, video duration, constant cadence and separate audio duration before
+scene captures. JPEG capture explicitly uses full-range pixels and one thread.
+23 focused tests pass. Fresh full-length encode and visual QA are required.

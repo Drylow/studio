@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import textwrap
 
@@ -241,10 +242,37 @@ def image_sheets(episode, work):
     print(f"Contact sheets ready: {len(ready)}/{len(episode['shots'])} images", flush=True)
 
 
+def validate_render_timing(plan, streams, fps=30):
+    video = next((s for s in streams if s.get("codec_type") == "video"), None)
+    audio = next((s for s in streams if s.get("codec_type") == "audio"), None)
+    if not video or not audio:
+        raise SystemExit("Export must contain both picture and narration.")
+    expected_frames = sum(render._frames_timeline(plan["shots"], fps, plan["duration"] + 0.4))
+    if int(video.get("nb_read_frames", -1)) != expected_frames:
+        raise SystemExit("Video frame count disagrees with the word-measured timeline.")
+    if abs(float(video.get("duration", 0)) - expected_frames / fps) > 0.5 / fps:
+        raise SystemExit("Picture duration disagrees with the word-measured timeline.")
+    if video.get("r_frame_rate") != f"{fps}/1":
+        raise SystemExit("Video cadence must remain constant during encoding.")
+    if abs(float(audio.get("duration", 0)) - (plan["duration"] + 0.4)) > 0.2:
+        raise SystemExit("Narration duration disagrees with the measured timeline.")
+    return expected_frames
+
+
 def qa(episode, work):
     from PIL import Image, ImageDraw
     plan = read(work / "timeline.json")
     final = work / "Edo-Daily-01.mp4"
+    probe = shutil.which("ffprobe")
+    if not probe:
+        raise SystemExit("ffprobe is required to verify picture duration independently of audio.")
+    measured = subprocess.run([probe, "-v", "error", "-count_frames", "-show_streams",
+                               "-of", "json", str(final)], capture_output=True, text=True, check=True)
+    if measured.stderr.strip():
+        raise SystemExit("Stream decode errors: " + measured.stderr[:500])
+    streams = json.loads(measured.stdout)["streams"]
+    video_frames = validate_render_timing(plan, streams)
+    print(f"Independent picture/audio timing verified: {video_frames} video frames", flush=True)
     check = work / "check"
     check.mkdir(exist_ok=True)
     frames = []
@@ -253,7 +281,8 @@ def qa(episode, work):
         for part, fraction in enumerate((0.2, 0.5, 0.8), 1):
             at = shot["start"] + span * fraction
             path = check / f"{shot['id']}_{part}.jpg"
-            media.run(["-ss", str(at), "-i", str(final), "-frames:v", "1", "-q:v", "2", str(path)])
+            media.run(["-ss", str(at), "-i", str(final), "-frames:v", "1", "-vf", "format=yuvj420p",
+                       "-threads", "1", "-q:v", "2", str(path)])
             frames.append((f"{shot['id']}.{part}", at, path))
     for batch in range(0, len(frames), 12):
         sheet = Image.new("RGB", (1280, 840), "#181818")
@@ -275,6 +304,7 @@ def qa(episode, work):
         raise SystemExit("Export duration disagrees with measured narration.")
     save(work / "qa_technical.json", {"decoded_without_errors": True, "duration": duration,
                                       "video_sha256": digest(final), "review_frames": len(frames),
+                                      "video_frames": video_frames, "streams": streams,
                                       "visual_review_pending": True})
     print(f"Technical QA complete: {len(frames)} scene captures; visual review required", flush=True)
 

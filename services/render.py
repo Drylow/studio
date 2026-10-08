@@ -91,7 +91,7 @@ def _file_sig(path):
 
 def _clip_key(image, frames, w, h, fps, motion, strength, layout=None, t0=0.0, track=None, extra=None):
     raw = json.dumps([_file_sig(image), frames, w, h, fps, motion, round(float(strength), 3),
-                      _layout_sig(layout, t0, track), "persp1", extra])
+                      _layout_sig(layout, t0, track), "persp2-cfr", extra])
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -215,8 +215,9 @@ def _scene_filter(W, H, motion, n, strength, offset=0, count=None, fps=None):
     fps : cadence déclarée explicitement (xfade exige une cadence constante sur ses deux entrées)."""
     # l'image est décodée et recadrée UNE fois, puis répétée en mémoire (loop) : pas de décodage / mise à
     # l'échelle à chaque image
+    # Still-image inputs can use a 25 fps clock; set the output clock before counting frames.
     f = (f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1,"
-         f"loop=loop=-1:size=1,setpts=N/({int(fps or FPS_DEFAULT)}*TB)")
+         f"loop=loop=-1:size=1,settb=1/{int(fps or FPS_DEFAULT)},setpts=N")
     if motion != "none":
         f += "," + _motion_filter(motion, n, strength, offset)
     f += ",format=yuv420p"

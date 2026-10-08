@@ -115,6 +115,40 @@ class TimelineTests(unittest.TestCase):
                 episode_tools.timeline(self.episode, self.work)
 
 
+class RenderTimingTests(unittest.TestCase):
+    def setUp(self):
+        self.plan = {"duration": 9.6, "shots": [{"start": 0}, {"start": 5}]}
+        self.streams = [{"codec_type": "video", "nb_read_frames": "300", "duration": "10",
+                         "r_frame_rate": "30/1"}, {"codec_type": "audio", "duration": "10"}]
+
+    def test_exact_picture_and_audio_pass(self):
+        self.assertEqual(episode_tools.validate_render_timing(self.plan, self.streams), 300)
+
+    def test_short_picture_is_not_hidden_by_long_audio(self):
+        self.streams[0].update(nb_read_frames="299", duration=str(299 / 30))
+        with self.assertRaisesRegex(SystemExit, "Video frame count"):
+            episode_tools.validate_render_timing(self.plan, self.streams)
+
+    def test_wrong_picture_duration_blocks_review(self):
+        self.streams[0]["duration"] = "9.9"
+        with self.assertRaisesRegex(SystemExit, "Picture duration"):
+            episode_tools.validate_render_timing(self.plan, self.streams)
+
+    def test_wrong_picture_cadence_blocks_review(self):
+        self.streams[0]["r_frame_rate"] = "25/1"
+        with self.assertRaisesRegex(SystemExit, "cadence"):
+            episode_tools.validate_render_timing(self.plan, self.streams)
+
+    def test_missing_audio_blocks_review(self):
+        with self.assertRaisesRegex(SystemExit, "both picture and narration"):
+            episode_tools.validate_render_timing(self.plan, self.streams[:1])
+
+    def test_wrong_audio_duration_blocks_review(self):
+        self.streams[1]["duration"] = "11"
+        with self.assertRaisesRegex(SystemExit, "Narration duration"):
+            episode_tools.validate_render_timing(self.plan, self.streams)
+
+
 class ImageGateTests(unittest.TestCase):
     def setUp(self):
         from PIL import Image
