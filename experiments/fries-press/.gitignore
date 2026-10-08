@@ -1,0 +1,16 @@
+node_modules/
+__pycache__/
+.hyperframes/
+.media/
+.thumbnails/
+.waveform-cache/
+assets/scene.js
+assets/gsap.min.js
+assets/sound.wav
+AGENTS.md
+CLAUDE.md
+snapshots/
+qa/
+renders/
+*.mp4
+*-report.json

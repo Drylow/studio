@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "4vgh5de025rmt0d13g7rztxwnc",
+  "prompt": "Close microphone isolated liquid foley: thick cooking oil pours and trickles over a metal tray edge into a shallow puddle. Smooth soft oily bubbling stream, gentle drips and little liquid splashes. Detailed close wet sound, no water faucet hiss, no music, no voices, no ambience.",
+  "source": "sfx-oil-source.mp3",
+  "sha256": "413988de0d3115e03cb008a1bdbd5bf1e6c5091859a275b9d803ffaf6bf377c5",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}

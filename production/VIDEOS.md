@@ -1,5 +1,26 @@
 # Journal des vidéos
 
+## Fries vs Hydraulic Press — 8 octobre 2026
+
+Nouvelle vidéo originale dans le style pixel art du cuistot : trois tas de
+48, 96 et 192 frites sous une presse hydraulique, écrasement progressif,
+morceaux irréguliers et huile dorée qui déborde du plateau, dégouline autour
+de la planche et forme des flaques au sol. La paume soutient le plateau à
+l'entrée ; fin avec la spatule, le sautillement et les confettis. Textes anglais.
+
+Livraison : `experiments/fries-press/fries-hydraulic-press-final.mp4` —
+63,6 s, 1080 × 1920, 60 images/s, 3 816 images. Trois nouveaux bruitages
+(moteur, écrasement humide, huile), deux sons de la bibliothèque précédente,
+sans musique. Le clip X sert seulement à étudier le mouvement ; aucune de
+ses images ni de son audio dans la vidéo finale.
+
+Contrôle visuel des 64 planches couvrant chaque image du MP4 ; textes et
+indicateurs vérifiés automatiquement sur les 3 816 images. Vérification
+HyperFrames : 0 erreur, 0 avertissement. États de l'animation contrôlés sur
+toutes les images, huile après contact. Audio AAC : pic −3,7 dB, aucun
+échantillon saturé dans le mix source. Détails : `experiments/fries-press/QA.md`.
+Rendu terminé et vérifié, pas de publication sur les réseaux.
+
 ## Chocolate vs Crazy Tools — 8 octobre 2026
 
 **Version finale de plus d’une minute : progression compacte des outils en bas.** 66,70 s, 1080 × 1920 à 60 images/s. Deux quantités par outil et trois salves rapides par quantité : fourchette 1 / 4, gant à ressort 4 / 8, marteau-piqueur vers le haut 8 / 16. 123 contacts, fractures différentes à chaque salve, SFX existants réutilisés sans musique. Les trois petites icônes FORK / GLOVE / HAMMER sont visibles dès le début en bas ; cadre et flèche sur l’outil actif, coche sur les outils terminés. Elles remplacent les textes ROUND ; scène recentrée. Même cuistot, pixel art, textes anglais et fin à la spatule. Contrôle strict réussi à 13 instants après la correction, sans erreur ni avertissement. Export final `experiments/chocolate-crunch/chocolate-crazy-tools-final.mp4` terminé ; 4 002 images décodées et regardées sur 67 planches, couverture minimale des titres 99,79 %, des icônes 100 %, outil actif vérifié sur chaque image, pic AAC −3,6 dBFS. Audit dans `experiments/chocolate-crunch/QA.md` ; livraison dans Codex, aucune publication sur les réseaux sociaux.

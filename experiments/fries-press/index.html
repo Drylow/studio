@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-resolution="portrait">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080, height=1920">
+<title>Fries — Hydraulic Press</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#f1e7d6}
+#root{position:relative;width:100%;height:100%;overflow:hidden}
+.clip{position:absolute;inset:0}
+canvas{display:block;width:100%;height:100%;image-rendering:pixelated}
+</style>
+</head>
+<body>
+<div data-hf-id="hf-dnm9" id="root" data-composition-id="fries-press" data-width="1080" data-height="1920" data-duration="63.6">
+<canvas data-hf-id="hf-4adu" id="film" class="clip" data-start="0" data-duration="63.6" data-track-index="1" data-overflow="allow" data-layout-allow-overflow></canvas>
+<audio data-hf-id="hf-e1qt" id="foley" src="assets/sound.wav" data-start="0" data-duration="63.6" data-track-index="2" data-volume="0.90"></audio>
+</div>
+<script src="assets/gsap.min.js"></script>
+<script src="assets/scene.js"></script>
+<script>
+const clock={t:0};const tl=gsap.timeline({paused:true});
+tl.to(clock,{t:63.6,duration:63.6,ease:'none',onUpdate:()=>window.drawFries(clock.t)},0);
+window.__timelines['fries-press']=tl;
+</script>
+</body>
+</html>
