@@ -36,6 +36,9 @@ for example the old white-skin color reference is not approved seating geometry.
   Their images are not falsely claimed to be newly generated character scenes.
 - After the user's continuity feedback, the initial render was stopped. Fifty
   selected shots were held for correction/review, plus empty night shot 086.
+  Full-sequence re-review caught two additional missing carried props: the tool
+  roll in alley pause 028 and Red's basket in vendor scene 030. Both were corrected
+  with the actual earlier prop-state images and individually reviewed afterward.
   Corrections lock ONE home cushion, ONE original near/right tea bench, the
   shallow joined box, gray rolled tools, retained dishes/parcels and bath cloths.
 - 025, 026, 057, 080 and 084 keep both conversational/household actors visible.

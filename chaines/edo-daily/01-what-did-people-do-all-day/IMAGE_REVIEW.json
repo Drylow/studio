@@ -246,12 +246,14 @@
     "continuity_status": "Corrected and visually reviewed"
   },
   "028": {
+    "id": "028",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/028-continuity.png",
+    "sha256": "9cabc5447308bb0a45ee5289a35a9f7bde96616c984899fc24d0f840898e83e7",
     "accepted": true,
-    "sha256": "fba8625927c334ac347ef100d1f2275f0dcb0f29e976d9f405d166b1c74f73ee",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/028.png",
-    "notes": "Blue pauses in shared alley; no modern clock.",
+    "notes": "Gray rolled tools retained in left hand at waist; same alley/well, Blue indigo outfit and pale neck towel. Head turns without dropping carried tools.",
     "reviewer": "Codex visual inspection",
-    "date": "2026-10-08"
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
   },
   "029": {
     "accepted": true,
@@ -262,12 +264,14 @@
     "date": "2026-10-08"
   },
   "030": {
+    "id": "030",
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/030-continuity.png",
+    "sha256": "840e073421891782d14a1034d36ed1c9db9e218debec0edaa6b7dc585a240740",
     "accepted": true,
-    "sha256": "52f1d6169961ca2207d19bd47983dff8bada11ba32e88c802ac23b5729efd5dc",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/030.png",
-    "notes": "Red passes covered white-headed shoulder-pole food seller, produce stall stable.",
+    "notes": "Red keeps the same small round handled empty basket while watching the shoulder-pole vendor; burgundy outfit and ochre sash retained.",
     "reviewer": "Codex visual inspection",
-    "date": "2026-10-08"
+    "date": "2026-10-08",
+    "continuity_status": "Corrected and visually reviewed"
   },
   "031": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/031-continuity.png",

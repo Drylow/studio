@@ -651,17 +651,18 @@
         "blue"
       ],
       "narration": "A bell sounds outside. The Edo-Tokyo Museum describes bells of time that gave residents an approximate hour. It is a public reference carried through the air, reaching people who are occupied with very different things. You hear it on your way to a piece of unfinished work.",
-      "action": "Blue pauses mid-step in the same alley and turns his round white head slightly toward the distance; no visible modern clock or added bell tower.",
+      "action": "Blue pauses and turns his head, still holding the same gray rolled tool wrap from 027.",
       "sources": [
         "S01",
         "I"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/alley.png",
-        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png"
+        "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
+        "work/edo-daily/01-what-did-people-do-all-day/images/027-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/028.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/028.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/028.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/028-continuity.png",
       "motion": "zoom_out"
     },
     {
@@ -690,17 +691,17 @@
         "red"
       ],
       "narration": "Elsewhere, shops are open and sellers are moving. The Tokyo Metropolitan Library describes itinerant merchants carrying wares through Edo's streets, as well as food stalls. Commerce can come toward the customer. For a busy household, that matters almost as much as having a large shop nearby.",
-      "action": "Red watches a covered adult white-headed vendor in muted ochre long sleeves and trousers carrying a simple shoulder pole with two small produce baskets through the fixed market.",
+      "action": "Red watches the passing shoulder-pole vendor while still holding the SAME empty round handled woven basket from 009.",
       "sources": [
         "S05"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
-        "work/edo-daily/01-what-did-people-do-all-day/references/green.png"
+        "work/edo-daily/01-what-did-people-do-all-day/images/009.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/shots/030.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/030.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/continuity/030.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/030-continuity.png",
       "motion": "pan_right"
     },
     {
