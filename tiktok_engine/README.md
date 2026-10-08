@@ -109,3 +109,4 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 | Date | Vidéo | Lien qualité max |
 |---|---|---|
 | 7 oct. 2026 | Napoléon en Russie (Minard, les poux, « La santé de Sa Majesté… ») | https://gofile.io/d/XfHd6IAK |
+| 8 oct. 2026 | La Joconde, célèbre grâce à un voleur (vol de 1911) | https://gofile.io/d/DOWccY1j |
