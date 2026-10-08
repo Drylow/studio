@@ -1,6 +1,9 @@
 """Illustrations en pixel art pour les vidéos TikTok, dans la palette de la chaîne.
 
 Voie normale depuis le 9 oct. 2026 : Algrow (1 crédit l'image, modèle nano-banana-2), sans Replicate.
+    python tiktok_engine/art.py algrow videos/<nom>/script.json [--only nom …]
+        tout d'un coup par l'API (clé ALGROW_API_KEY) : génération, mise sur la palette, planche
+Sans clé, à la main avec l'outil Algrow d'une session :
     python tiktok_engine/art.py prompts videos/<nom>/script.json   # consignes Algrow des images manquantes
     (générer chaque image avec l'outil Algrow generate_image : prompt, aspect_ratio et références donnés)
     python tiktok_engine/art.py fit videos/<nom>/script.json nom=<url ou fichier> [nom=...]
@@ -172,6 +175,63 @@ def prompts(script_path, only=None):
     print(json.dumps(todo, ensure_ascii=False, indent=2))
 
 
+def algrow_image(req, timeout=600):
+    """Génère une image par l'API d'Algrow (clé ALGROW_API_KEY) et rend son adresse ; sans outil MCP,
+    donc sans demande d'autorisation dans une session automatique."""
+    sys.path.insert(0, ROOT)
+    from services.tts import _algrow_call, TTSError
+    try:   # même format que la voix (formulaire), les références en JSON
+        job = _algrow_call("POST", "/api/generate-image", {
+            "prompt": req["prompt"], "model": req["model"], "aspect_ratio": req["aspect_ratio"],
+            "reference_image_urls": json.dumps(req["reference_image_urls"])})
+    except TTSError as e:
+        if not any(code in str(e) for code in ("400", "415", "422")):
+            raise
+        key = os.environ.get("ALGROW_API_KEY", "")
+        r = urllib.request.Request("https://api.algrow.online/api/generate-image", method="POST",
+                                   data=json.dumps(req).encode(),
+                                   headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
+        job = json.load(urllib.request.urlopen(r, timeout=60))
+    jid = job.get("job_id")
+    if not jid:
+        raise SystemExit("Algrow : pas de job_id (" + json.dumps(job)[:200] + ")")
+    end = time.time() + timeout
+    while time.time() < end:
+        st = _algrow_call("GET", f"/api/job-status/{jid}")
+        if st.get("status") == "completed" and st.get("image_urls"):
+            return st["image_urls"][0]
+        if st.get("status") in ("failed", "error", "cancelled"):
+            raise SystemExit(f"Algrow : image refusée ({st.get('status_detail_message') or st})")
+        time.sleep(4)
+    raise SystemExit(f"Algrow : image trop longue (job {jid})")
+
+
+def algrow_batch(script_path, only=None, workers=4):
+    """Toutes les images manquantes (ou --only) : génération Algrow, mise sur la palette, planche."""
+    from concurrent.futures import ThreadPoolExecutor
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(ROOT, ".env"))
+    script = json.load(open(script_path, encoding="utf-8"))
+    base = os.path.join(os.path.dirname(os.path.abspath(script_path)), "art")
+    todo = [n for n in script.get("art", {})
+            if (only and n in only) or (not only and not os.path.exists(os.path.join(base, n + ".png")))]
+
+    def run(name):
+        try:
+            return name, algrow_image(algrow_request(script["art"][name])), None
+        except BaseException as e:  # noqa: BLE001 — une image ratée ne bloque pas les autres
+            return name, None, e
+    pairs = []
+    with ThreadPoolExecutor(workers) as ex:
+        for name, url, err in ex.map(run, todo):
+            print(f"{name} {'ERREUR ' + str(err) if err else url}", flush=True)
+            if url:
+                pairs.append(f"{name}={url}")
+    if pairs:
+        fit(script_path, pairs)
+    print(f"{len(pairs)}/{len(todo)} images (≈ {len(pairs)} crédits Algrow)", flush=True)
+
+
 def fit_palette(img, size, keep_bg=False):
     """Image Algrow -> vrais pixels de la palette, au format exact ; le noir relié aux bords devient transparent."""
     from scipy import ndimage
@@ -238,7 +298,7 @@ def review_sheet(base):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["gen", "batch", "prompts", "fit"])
+    ap.add_argument("cmd", choices=["gen", "batch", "prompts", "fit", "algrow"])
     ap.add_argument("dest", help="gen : image de sortie ; batch, prompts, fit : script.json")
     ap.add_argument("prompt", nargs="*", help="gen : le prompt ; fit : nom=url_ou_fichier …")
     ap.add_argument("--model", default="rd", choices=["rd", "flux"])
@@ -251,6 +311,8 @@ def main():
         return batch(a.dest, a.only)
     if a.cmd == "prompts":
         return prompts(a.dest, a.only)
+    if a.cmd == "algrow":
+        return algrow_batch(a.dest, a.only)
     if a.cmd == "fit":
         return fit(a.dest, a.prompt)
     w, h = map(int, a.size.split("x"))

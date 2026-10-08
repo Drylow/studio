@@ -41,21 +41,23 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 
 ## 3. Images (Algrow, 1 crédit l'image)
 
-1. Lancer `python3 tiktok_engine/art.py prompts tiktok_engine/videos/<nom>/script.json`.
-2. Pour chaque image, appeler l'outil Algrow `generate_image` avec exactement le `prompt`,
-   l'`aspect_ratio`, le `model` et les `reference_image_urls` donnés.
-3. Suivre chaque travail avec `get_tts_job_status` (job_id) jusqu'à `completed`, puis lire `image_urls`.
-4. Lancer `python3 tiktok_engine/art.py fit tiktok_engine/videos/<nom>/script.json nom=<url> …`.
-5. **Regarder `videos/<nom>/art_review.jpg`** : mains, doigts, bras, visages, objets absurdes.
-   Une image ratée se refait (nouvel appel puis `fit … nom=<url>`).
+1. Lancer `.venv/bin/python tiktok_engine/art.py algrow tiktok_engine/videos/<nom>/script.json`.
+   Il passe par l'API, avec la clé `ALGROW_API_KEY` de l'environnement, donc sans autorisation à donner.
+2. **Regarder `videos/<nom>/art_review.jpg`** : mains, doigts, bras, visages, objets absurdes.
+3. Une image ratée se refait avec `art.py algrow … --only nom`.
+4. Sans clé dans l'environnement, passer par les outils Algrow de la session :
+   - `art.py prompts` donne la consigne de chaque image ;
+   - générer avec `generate_image` ;
+   - suivre avec `get_tts_job_status` jusqu'à `completed` ;
+   - finir avec `art.py fit … nom=<url>`.
 
 ## 4. Voix (Algrow)
 
-1. Le texte est la concaténation des `say` des temps forts, séparés par un espace.
-2. Appeler `generate_tts` avec ce texte, puis suivre avec `get_tts_job_status`.
-3. Télécharger le mp3 en se présentant comme un navigateur (`curl -A "Mozilla/5.0 …"`), dans le
-   dossier de travail `work/tiktok/<nom>/voice.mp3`.
-4. Ne pas y mettre de `words.srt` : Whisper date les mots tout seul.
+1. Avec `ALGROW_API_KEY`, `build.py` (étape 5) fait la voix tout seul.
+2. Sans clé, passer par l'outil de la session :
+   - le texte est la concaténation des `say` des temps forts, séparés par un espace ;
+   - générer avec `generate_tts` (Tenko, `eleven_v4`, vitesse 1,06) ;
+   - télécharger le mp3 avec `curl -A "Mozilla/5.0 …"` dans `work/tiktok/<nom>/voice.mp3`, sans `words.srt`.
 
 ## 5. Montage et contrôle
 
