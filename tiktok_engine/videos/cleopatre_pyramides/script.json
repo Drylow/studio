@@ -1,0 +1,479 @@
+{
+ "title": "Cléopâtre plus proche de l'iPhone que des pyramides",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Cléopâtre a vécu plus près de l'iPhone que de la construction de la grande pyramide. #histoire #cleopatre #egypte #pyramides",
+ "sources": [
+  "Pyramide de Khéops : construction vers 2560 av. J.-C. (Encyclopaedia Britannica ; Metropolitan Museum of Art)",
+  "Cléopâtre VII : née en 69 av. J.-C., morte en 30 av. J.-C. (Encyclopaedia Britannica ; Bibliothèque nationale de France)",
+  "Apollo 11 : premiers pas sur la Lune le 20 juillet 1969 (NASA) ; iPhone présenté en janvier 2007 (Apple Newsroom)",
+  "Écarts : 2560 - 69 = 2491 ans, 30 + 1969 - 1 = 1998 ans (calcul)"
+ ],
+ "art": {
+  "cleo": {
+   "prompt": "portrait of Queen Cleopatra VII of Egypt, black bob hair with gold headband and uraeus, kohl eyes, gold collar, bust, facing forward, no hands visible",
+   "size": "192x192"
+  },
+  "pyramid": {
+   "prompt": "the Great Pyramid of Giza at sunset in the desert with two smaller pyramids behind, wide view",
+   "size": "320x192"
+  },
+  "builders": {
+   "prompt": "ancient Egyptian workers pulling a huge stone block on a wooden sled up a ramp beside an unfinished pyramid, side view",
+   "size": "320x192"
+  },
+  "moon": {
+   "prompt": "astronaut in white spacesuit standing on the Moon surface seen from behind, Earth in the black sky, arms down",
+   "size": "192x256"
+  },
+  "iphone": {
+   "prompt": "a generic modern smartphone with a plain glowing screen, front view, no logo, no brand",
+   "size": "192x256"
+  }
+ },
+ "beats": [
+  {
+   "say": "Cléopâtre a vécu plus près de l'iPhone que de la construction de la grande pyramide.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "cleo",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Cléopâtre est plus proche\nde l'*iPhone*…",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "PYRAMIDE",
+     "at": "pyramide",
+     "y": 730,
+     "rot": -6,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Vous imaginez sûrement Cléopâtre devant les pyramides. Même époque, même désert.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Cléopâtre et les pyramides :\n*même époque* ?",
+     "at": 0,
+     "y": 160,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "pyramid",
+     "h": 250,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan",
+     "fx": "zoom"
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 9,
+     "y": 700,
+     "at": "même",
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Sauf que les chiffres racontent autre chose. La grande pyramide de Khéops est construite vers 2560 avant Jésus-Christ.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "VERS 2560 AV. J.-C.",
+     "at": "2560",
+     "y": 160,
+     "rot": -4,
+     "size": 20
+    },
+    {
+     "preset": "title",
+     "text": "Sauf que les *chiffres*…",
+     "at": 0,
+     "y": 235,
+     "out": "Khéops"
+    },
+    {
+     "type": "img",
+     "src": "builders",
+     "h": 260,
+     "y": 500,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "preset": "title",
+     "text": "La pyramide de *Khéops*",
+     "at": "Khéops",
+     "y": 235
+    }
+   ]
+  },
+  {
+   "say": "Cléopâtre naît en 69 avant Jésus-Christ. Soit environ 2 500 ans plus tard.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Cléopâtre *naît*",
+     "at": 0,
+     "y": 160,
+     "out": "69"
+    },
+    {
+     "type": "stamp",
+     "text": "69 AV. J.-C.",
+     "at": "69",
+     "y": 160,
+     "rot": -4,
+     "size": 22
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2500,
+     "dur": 1.6,
+     "at": "environ",
+     "y": 330,
+     "in": "fade",
+     "suffix": " ANS"
+    },
+    {
+     "type": "img",
+     "src": "cleo",
+     "h": 330,
+     "y": 560,
+     "at": 0.05,
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Quand elle naît, la pyramide a déjà plus de deux mille ans. Pour elle, c'est un monument de l'Antiquité.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "La pyramide a déjà\n*2 000 ans*",
+     "at": 0,
+     "y": 170,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "pyramid",
+     "h": 330,
+     "y": 520,
+     "at": 0.05,
+     "in": "scan",
+     "fx": "breathe"
+    },
+    {
+     "type": "stamp",
+     "text": "ANTIQUE",
+     "at": "Antiquité",
+     "y": 730,
+     "rot": 5,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Maintenant, regardez de l'autre côté. Cléopâtre meurt en 30 avant Jésus-Christ. Les premiers pas sur la Lune, c'est en 1969.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Cléopâtre *meurt*",
+     "at": 0,
+     "y": 150,
+     "out": "Lune"
+    },
+    {
+     "type": "stamp",
+     "text": "30 AV. J.-C.",
+     "at": "30",
+     "y": 215,
+     "rot": -4,
+     "size": 22,
+     "out": "Lune"
+    },
+    {
+     "type": "img",
+     "src": "moon",
+     "h": 330,
+     "y": 520,
+     "at": "premiers",
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    },
+    {
+     "type": "stamp",
+     "text": "1969",
+     "at": "1969",
+     "y": 730,
+     "rot": -5,
+     "fill": true,
+     "size": 30
+    }
+   ]
+  },
+  {
+   "say": "Ça fait environ 2 000 ans. Et l'iPhone, en 2007, c'est un peu plus de 2 000 ans après sa mort.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2000,
+     "dur": 1.4,
+     "at": "environ",
+     "y": 250,
+     "in": "fade",
+     "suffix": " ANS",
+     "out": "iPhone"
+    },
+    {
+     "preset": "title",
+     "text": "de Cléopâtre à la *Lune*",
+     "at": "environ",
+     "y": 330,
+     "size": 22,
+     "out": "iPhone"
+    },
+    {
+     "type": "img",
+     "src": "iphone",
+     "h": 330,
+     "y": 560,
+     "at": "iPhone",
+     "in": "pop",
+     "fx": "bob"
+    },
+    {
+     "preset": "title",
+     "text": "Et l'*iPhone* (2007)",
+     "at": "iPhone",
+     "y": 160
+    },
+    {
+     "type": "stamp",
+     "text": "2007",
+     "at": "2007",
+     "y": 760,
+     "rot": 4,
+     "fill": true,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Faites le calcul : Cléopâtre est séparée de la Lune d'environ 2 000 ans, mais des bâtisseurs de la pyramide, d'environ 2 500.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Faites"
+    },
+    {
+     "preset": "title",
+     "text": "Le calcul, en *années*",
+     "at": "Faites",
+     "y": 150,
+     "size": 26
+    },
+    {
+     "type": "bars",
+     "at": "Faites",
+     "y": 480,
+     "w": 200,
+     "x": 320,
+     "max": 2500,
+     "fontSize": 20,
+     "barH": 40,
+     "gap": 50,
+     "stagger": 0.4,
+     "items": [
+      {
+       "label": "PYRAMIDE",
+       "value": 2500,
+       "text": "2 500"
+      },
+      {
+       "label": "LUNE",
+       "value": 2000,
+       "text": "2 000",
+       "hl": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Environ 500 ans d'écart. À peu près le temps qui nous sépare de Christophe Colomb.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "big",
+     "text": "500 ANS",
+     "at": 0,
+     "y": 250,
+     "size": 54
+    },
+    {
+     "preset": "title",
+     "text": "d'écart en faveur de *l'iPhone*",
+     "at": 0.3,
+     "y": 340,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Pour Cléopâtre, les pyramides étaient déjà de l'histoire ancienne. Et pour nous, elle l'est devenue aussi.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "pyramid",
+     "h": 250,
+     "y": 450,
+     "at": 0,
+     "in": "fade",
+     "out": "nous"
+    },
+    {
+     "preset": "title",
+     "text": "Pour elle :\ndéjà *l'Antiquité*.",
+     "at": 0,
+     "y": 160,
+     "out": "nous"
+    },
+    {
+     "preset": "title",
+     "text": "Pour nous :\nelle aussi.",
+     "at": "nous",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "cleo",
+     "h": 400,
+     "y": 520,
+     "at": "nous",
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Cléopâtre a vécu plus près\nde l'*iPhone*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "cleo",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ce n'est *pas* la même\népoque.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "pyramid",
+    "h": 260,
+    "y": 620
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "*2 500* ans contre\n*2 000* ans",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "cleo",
+    "h": 430,
+    "y": 640
+   }
+  ]
+ ]
+}

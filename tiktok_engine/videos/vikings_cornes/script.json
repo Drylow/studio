@@ -1,0 +1,459 @@
+{
+ "title": "Les Vikings n'ont jamais porté de casques à cornes",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Les Vikings n'ont jamais porté de casques à cornes : c'est un mythe né sur une scène d'opéra. #histoire #vikings #mythe #opera",
+ "sources": [
+  "Casque de Gjermundbu : trouvé en 1943 (Ringerike, Norvège), seconde moitié du Xe s., Museum of Cultural History, Université d'Oslo ; seul casque de l'ère viking presque reconstructible (Wikipedia, World Tree Project)",
+  "Wagner, Der Ring des Nibelungen, Bayreuth, août 1876 ; costumes de Carl Emil Doepler souvent cités comme ayant fixé l'image (ZME Science, World Tree Project, History Hit)",
+  "Casques de Viksø (Danemark) : casques de cérémonie à cornes, âge du bronze vers 900 av. J.-C., trouvés en 1942, Musée national du Danemark (Smithsonian Magazine, Atlas Obscura)",
+  "900 av. J.-C. à 793 apr. J.-C. (début de l'ère viking) = environ 1 700 ans (calcul)"
+ ],
+ "art": {
+  "myth": {
+   "prompt": "cartoonish Viking warrior bust with a big horned iron helmet, long braided beard, stern face, facing forward, no hands visible",
+   "size": "192x192"
+  },
+  "real": {
+   "prompt": "the Gjermundbu Viking helmet: rounded iron cap with a crest ridge and spectacle-shaped eye guard, no horns, on a small stand, front view, museum object",
+   "size": "192x192"
+  },
+  "opera": {
+   "prompt": "1876 opera stage in a grand theatre, singers in Wagner opera costumes with horned helmets on stage, audience silhouettes in the foreground, wide view",
+   "size": "320x192"
+  },
+  "vikso": {
+   "prompt": "Bronze Age horned helmet with two long curved bronze horns and round eyes, ceremonial object on a display stand, front view",
+   "size": "192x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Les Vikings n'ont jamais porté de casques à cornes.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "myth",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Les Vikings n'ont *jamais*\nporté de cornes.",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "FAUX",
+     "at": "jamais",
+     "y": 740,
+     "rot": -6,
+     "fill": true,
+     "size": 30
+    }
+   ]
+  },
+  {
+   "say": "Vous les imaginez sûrement comme ça : des cornes, des haches, et des cris.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le Viking *typique* ?",
+     "at": 0,
+     "y": 165,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "myth",
+     "h": 380,
+     "y": 500,
+     "at": 0.05,
+     "in": "pop",
+     "fx": "shiver"
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 9,
+     "y": 740,
+     "at": "comme",
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Sauf que les archéologues n'ont jamais retrouvé un seul casque à cornes datant de l'époque viking.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "big",
+     "text": "0 CASQUE",
+     "at": "jamais",
+     "y": 240,
+     "size": 48
+    },
+    {
+     "preset": "title",
+     "text": "à cornes retrouvé",
+     "at": "jamais",
+     "y": 320,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "myth",
+     "h": 300,
+     "y": 560,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "zoom"
+    },
+    {
+     "type": "stamp",
+     "text": "INTROUVABLE",
+     "at": "seul",
+     "y": 760,
+     "rot": 5,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Le seul casque viking presque complet a été découvert en 1943, à Gjermundbu, en Norvège. Il date du dixième siècle.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le *seul* casque presque complet",
+     "at": 0,
+     "y": 165,
+     "size": 24,
+     "out": "1943"
+    },
+    {
+     "type": "counter",
+     "from": 1900,
+     "to": 1943,
+     "dur": 1.0,
+     "at": "1943",
+     "y": 210,
+     "in": "fade",
+     "decimals": 0
+    },
+    {
+     "preset": "label",
+     "text": "GJERMUNDBU, NORVÈGE",
+     "at": "Gjermundbu",
+     "y": 275,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "real",
+     "h": 360,
+     "y": 540,
+     "at": 0.05,
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Il est en fer, avec une protection autour des yeux. Et pas une seule corne.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "En fer. *Zéro* corne.",
+     "at": 0,
+     "y": 165,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "real",
+     "h": 400,
+     "y": 520,
+     "at": 0,
+     "in": "fade",
+     "fx": "breathe"
+    },
+    {
+     "type": "stamp",
+     "text": "PAS DE CORNES",
+     "at": "corne",
+     "y": 750,
+     "rot": -4,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Alors d'où vient l'image ? Du dix-neuvième siècle. En 1876, à Bayreuth, en Allemagne, on joue l'opéra de Wagner, L'Anneau du Nibelung.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "D'OÙ VIENT L'IMAGE ?",
+     "at": 0,
+     "y": 160,
+     "rot": -4,
+     "size": 17,
+     "out": "1876"
+    },
+    {
+     "type": "stamp",
+     "text": "BAYREUTH, 1876",
+     "at": "1876",
+     "y": 160,
+     "rot": -4,
+     "fill": true,
+     "size": 22
+    },
+    {
+     "type": "img",
+     "src": "opera",
+     "h": 270,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan",
+     "fx": "zoom"
+    }
+   ]
+  },
+  {
+   "say": "Les costumes de Carl Emil Doepler font passer les guerriers du Nord pour des hommes à casques à cornes. Le public adore. L'image reste.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Costumes de *Doepler*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "opera",
+     "h": 300,
+     "y": 500,
+     "at": 0,
+     "in": "fade"
+    },
+    {
+     "type": "img",
+     "src": "myth",
+     "h": 230,
+     "y": 700,
+     "at": "adore",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Des casques à cornes ont bien existé. Ceux de Viksø, au Danemark, vers 900 avant Jésus-Christ.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Des"
+    },
+    {
+     "preset": "title",
+     "text": "Les casques de *Viksø*",
+     "at": "Viksø",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "vikso",
+     "h": 380,
+     "y": 520,
+     "at": "Viksø",
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "type": "stamp",
+     "text": "VERS 900 AV. J.-C.",
+     "at": "900",
+     "y": 750,
+     "rot": -4,
+     "fill": true,
+     "size": 20
+    }
+   ]
+  },
+  {
+   "say": "Ils sont vieux de plus de 1 500 ans avant les Vikings. Des objets de cérémonie, pas de bataille.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "big",
+     "text": "+1 500 ANS",
+     "at": "plus",
+     "y": 240,
+     "size": 46
+    },
+    {
+     "preset": "title",
+     "text": "avant les *Vikings*",
+     "at": "plus",
+     "y": 320,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "vikso",
+     "h": 330,
+     "y": 560,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Les vrais Vikings n'avaient pas de cornes. Un mythe né sur une scène d'opéra, il y a 150 ans.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "real",
+     "h": 360,
+     "y": 480,
+     "at": 0,
+     "in": "fade",
+     "out": "mythe"
+    },
+    {
+     "preset": "title",
+     "text": "Les vrais Vikings :\n*sans cornes*.",
+     "at": 0,
+     "y": 160,
+     "out": "mythe"
+    },
+    {
+     "preset": "title",
+     "text": "Un mythe d'*opéra*.",
+     "at": "mythe",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "opera",
+     "h": 280,
+     "y": 500,
+     "at": "mythe",
+     "in": "slam",
+     "flash": true
+    },
+    {
+     "preset": "num",
+     "text": "150 ANS",
+     "at": "150",
+     "y": 760
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Les Vikings n'ont *jamais*\nporté de cornes",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "myth",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ce mythe est né\nà l'*opéra*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "opera",
+    "h": 260,
+    "y": 620
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Le *vrai* casque\nviking",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "real",
+    "h": 430,
+    "y": 640
+   }
+  ]
+ ]
+}
