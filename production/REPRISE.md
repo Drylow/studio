@@ -26,9 +26,16 @@
   jamais le visage d'une autre personne (cartes et miniature), référence de style sans visage.
   Publiée sur demande de l'utilisateur : https://youtu.be/u5ZHjA5Ri0M (miniature refaite avec
   Shavkat recadré depuis sa photo CC0 + Morales). Hébergeur : envoi YouTube par morceaux de 1 Mo.
-  `NEWS_AUTO_DRY=1` reste dans le `.env` du serveur jusqu'au « go » de l'utilisateur ; ensuite :
-  retirer cette ligne, activer l'automatisation de Cage/Pitch et lever la pause du studio.
   Limite connue : peu de photos libres → images répétées ; texte seul quand aucune n'existe.
+- **Pilote automatique EN LIGNE depuis le 8 oct., 23 h 04 (Paris)** : le « go » n'était jamais
+  venu (la conversation était passée à TikTok), donc rien ne postait ; le 8 oct. au soir
+  l'utilisateur : « c'est censé poster tous les jours, c'est pas normal ». Fait sur le serveur :
+  sauvegarde `before-autopilot-live-20261008T230352.db`, `NEWS_AUTO_DRY=0` dans `.env`, Cage et
+  Pitch `enabled=1, paused=0` (automatique, connectées), pause globale levée, worker relancé.
+  Les autres chaînes restent désactivées. Pour couper : `NEWS_AUTO_DRY=1` (fabrique sans publier)
+  ou désactiver la chaîne sur le site. **Google en Testing** : les deux connexions datent du
+  7 oct. (~19 h 50 Paris) et Google les coupe au bout de 7 jours : reconnecter Cage et Pitch
+  avant le **14 oct. au soir** (alerte site + Discord la veille), sinon les envois échouent.
 - **Delamain codé par Claude (option 2, mise en ligne sans validation)** : routine
   `trig_01GfMnci6KHo8W7cB7amCy84` (Sonnet, environnement sans accès o2switch). À compléter
   par l'utilisateur sur claude.ai : dépôt Drylow/studio + déclencheur API, puis adresse et

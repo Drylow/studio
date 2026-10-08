@@ -9,8 +9,9 @@ pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement p
 [REPRISE](production/REPRISE.md).** Le dossier rassemble l'état déployé, les changements,
 les preuves, les accès privés et les blocages. Les sections plus anciennes sont historiques.
 Priorité : publication réellement automatique de Cage Dispatch et Pitch Dispatch, gratuite,
-sans nouvelle installation sur son PC. **Elle n'est pas validée.** L'utilisateur n'a pas
-effectué la dernière connexion Google proposée ; il demande maintenant la reprise par Claude.
+sans nouvelle installation sur son PC. **En ligne depuis le 8 oct. 2026 (23 h 04, Paris)** :
+connexions Google faites le 7 oct. (application en *Testing* : reconnexion tous les 7 jours),
+pilote `studio/autonews.py`, 2 vidéos max par jour et par chaîne ; état dans `REPRISE.md`.
 
 **Session lancée par Delamain** (bloc `routine-fire-payload` commençant par « Demande Delamain ») :
 suivre uniquement [production/DELAMAIN_ROUTINE.md](production/DELAMAIN_ROUTINE.md) ; ne pas lancer
@@ -38,11 +39,10 @@ variables disponibles. Les secrets d'une session Codex ne sont pas transférés 
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
 - **7 octobre : aucun programme à installer sur son PC pour publier.** Les parcours PC sont retirés.
-  La publication API reste côté serveur et nécessite un consentement Google accepté.
-  Un écran Firefox privé sur le VPS est livré et testé sans compte ; il permet une
-  connexion interactive, mais **aucun transport d'upload par navigateur n'est implémenté**.
-  Les identifiants YouTube/cPanel ne sont pas un accès administrateur Google Cloud.
-  Ne pas annoncer le blocage Google résolu ni demander une répétition inchangée du consentement.
+  La publication passe par l'API YouTube, côté serveur (o2switch). Le blocage Google est levé
+  depuis le 7 oct. (application en *Testing*, son Gmail en utilisateur de test) : Cage et Pitch
+  sont connectées et une vraie publication est validée. L'écran Firefox privé du VPS ne sert
+  pas à publier (aucun envoi par navigateur, contraire aux conditions YouTube).
 
 ## 2. Règles absolues
 
