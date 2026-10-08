@@ -58,9 +58,11 @@ def plan(words=90, segments=8):
 
 
 class Fake:
-    def __init__(self, root, *, quotes=QUOTES, problems=None, thumb_ok=True):
+    def __init__(self, root, *, quotes=QUOTES, problems=None, thumb_ok=True, drafts=None):
         self.root, self.quotes, self.thumb_ok = root, quotes, thumb_ok
         self.problems = list(problems or [])
+        self.drafts = list(drafts or [])
+        self.feedback = []
         self.calls = []
 
     def chat(self, messages, **kw):
@@ -76,7 +78,8 @@ class Fake:
                 "rumor": False,
             }
         if "YouTube news analysis" in system:
-            return plan()
+            self.feedback.append(json.loads(messages[1]["content"])["problems_to_fix"])
+            return self.drafts.pop(0) if self.drafts else plan()
         if "strict fact-checker" in system:
             return {"problems": self.problems.pop(0) if self.problems else []}
         text = messages[0]["content"][0]["text"] if isinstance(messages[0]["content"], list) else ""
@@ -275,6 +278,17 @@ class AutonewsTests(unittest.TestCase):
         other = self.item("Topuria vs Gaethje: Madrid tickets gone", hours=1)
         with self.assertRaisesRegex(ValueError, "vérification des faits"):
             produce(self.store, {"channel_id": self.ch["id"], "item_id": other}, self.job(), stuck.tools())
+
+    def test_a_too_short_script_is_rewritten_with_its_word_count(self):
+        from studio.autonews import produce
+
+        fake = Fake(self.root, drafts=[plan(words=40)])
+        iid = self.item("Topuria vs Gaethje official for Madrid")
+        result = produce(self.store, {"channel_id": self.ch["id"], "item_id": iid}, self.job(), fake.tools())
+        self.assertEqual(self.store.video(result["video_id"])["status"], "ready")
+        self.assertEqual(fake.feedback[0], [])
+        self.assertIn("totals 320 words", fake.feedback[1][0]["issue"])
+        self.assertIn("Expand", fake.feedback[1][0]["issue"])
 
     def test_trial_mode_stops_before_publication(self):
         from studio.autonews import produce

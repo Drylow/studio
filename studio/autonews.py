@@ -701,7 +701,17 @@ def _produce(store, ch, item, vid, folder, job, tools, automation_rights, resume
         try:
             news_brief.validate(draft)
         except ValueError as error:
+            words = sum(len(str(s.get("narration", "")).split()) for s in draft.get("segments") or [])
             problems = [{"issue": str(error)}]
+            if not 550 <= words <= 900:
+                # A bare "550 to 900 words" did not get the length fixed: give the count and the way.
+                way = (
+                    "Expand: give each fact more context, what it means and what could happen next, "
+                    "framed as analysis, without adding any new claim."
+                    if words < 550
+                    else "Tighten: shorten the segments without dropping the key facts."
+                )
+                problems = [{"issue": f"The narration totals {words} words; it must total 680-760 words across 6-9 segments. {way}"}]
             continue
         job.update(0.3, "Vérification de chaque phrase")
         problems = _factcheck(tools, draft, facts)

@@ -152,6 +152,10 @@ def worker_application(config=None):
 if __name__ == "__main__":
     from dotenv import load_dotenv
 
+    # Shared hosting shows 80 cores but caps the threads of the whole account: numpy's
+    # BLAS pool alone opened 64 threads here, and ffmpeg's encoder could then not start.
+    for name in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+        os.environ.setdefault(name, "2")
     load_dotenv(ROOT / ".env")
     app = worker_application()
     if app.config["PREVIEW"]:
