@@ -42,8 +42,13 @@ Dix nouvelles références et six scènes produites ; quatre passes de correctio
 après relecture (literie, peau, objets de la chambre, doigts et stand de nourriture).
 Six images retenues et planche dans
 `output/imagegen/edo-rebuild-2026-10-08/A-REGARDER/`.
-Ce test visuel n'est pas encore validé par l'utilisateur ; voir `REVIEW.md` pour
-les limites. Aucune reprise de l'ancien transcript ni d'export prêt à publier.
+Retour utilisateur : scènes jugées propres, réserve sur les grandes tours et
+formes étranges au fond. Deux maîtres et quatre plans corrigés via le CLI Proxy :
+toits bas au quai, horizon de rue sans grandes montagnes décoratives. Six retouches
+regardées, personnages/actions conservés ; plans 03 et 04 inchangés. Références
+sélectionnées dans `horizon-v2/`, dossier A-REGARDER actualisé ; voir `HORIZONS.md`.
+Pas encore de nouveau film complet ou d'export prêt à publier ; validation de
+chaque retouche non demandée ni présumée. Limites dans `REVIEW.md`.
 
 ## Cage Dispatch — première vidéo du pilote automatique — 7 octobre 2026
 

@@ -80,7 +80,8 @@
         "reference/strangely-ironic-guy/04-hitman.jpg"
       ],
       "visually_inspected": true,
-      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique.",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png"
     },
     {
       "id": "nagaya-room",
@@ -113,7 +114,8 @@
         "reference/strangely-ironic-guy/04-hitman.jpg"
       ],
       "visually_inspected": true,
-      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique."
+      "review": "Reference de travail pour ce test. Architecture/costume releves visuellement, pas validation de geometrie au pixel ni de reconstitution archeologique.",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/merchant-street.png"
     }
   ],
   "shots": [
@@ -137,7 +139,7 @@
         "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
       ],
       "output": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
-      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/01-arrival.png",
       "visually_inspected": true,
       "review_status": "selected_for_visual_test_not_user_approved"
     },
@@ -159,7 +161,7 @@
         "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png"
       ],
       "output": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins.png",
-      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/02-coins.png",
       "visually_inspected": true,
       "review_status": "selected_for_visual_test_not_user_approved"
     },
@@ -229,7 +231,7 @@
         "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png"
       ],
       "output": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker.png",
-      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/05-hawker.png",
       "visually_inspected": true,
       "review_status": "selected_for_visual_test_not_user_approved"
     },
@@ -253,7 +255,7 @@
         "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
       ],
       "output": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
-      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+      "selected_output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/06-delivery.png",
       "visually_inspected": true,
       "review_status": "selected_for_visual_test_not_user_approved"
     }
@@ -301,5 +303,93 @@
       "output": "output/imagegen/edo-rebuild-2026-10-08/shots/03-floor-repair-v2.png",
       "visually_inspected": true
     }
-  ]
+  ],
+  "background_revision": {
+    "date": "2026-10-08",
+    "reason": "User liked the scenes but rejected strange large towers in the far background.",
+    "status": "Six edited outputs inspected by Codex; selected for the visual test. Not a new complete video or a user approval of each edited image.",
+    "masters": [
+      {
+        "id": "fish-quay",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/master-fish-quay.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png"
+        ],
+        "visually_inspected": true
+      },
+      {
+        "id": "merchant-street",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/merchant-street.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/master-merchant-street.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png"
+        ],
+        "visually_inspected": true
+      }
+    ],
+    "shots": [
+      {
+        "id": "01-arrival",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/01-arrival.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/01-arrival.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+          "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
+        ],
+        "visually_inspected": true
+      },
+      {
+        "id": "02-coins",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/02-coins.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/02-coins.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+          "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png"
+        ],
+        "visually_inspected": true
+      },
+      {
+        "id": "05-hawker",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/05-hawker.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/05-hawker.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+          "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/merchant-street.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/partner.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png"
+        ],
+        "visually_inspected": true
+      },
+      {
+        "id": "06-delivery",
+        "original": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+        "output": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/06-delivery.png",
+        "prompt": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/06-delivery.txt",
+        "input_images_ordered": [
+          "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+          "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/merchant-street.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+          "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png"
+        ],
+        "visually_inspected": true
+      }
+    ],
+    "unchanged_shots": [
+      "03-floor",
+      "04-water"
+    ]
+  }
 }

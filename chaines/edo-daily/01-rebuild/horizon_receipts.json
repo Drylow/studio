@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-08",
+  "revision": "horizon-v2",
+  "files": [
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/01-arrival.txt",
+      "bytes": 1555,
+      "sha256": "2c3f3332fb5ce2c76da73c145f78c3b9684695b39b8a5769459d314a130b2458"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/02-coins.txt",
+      "bytes": 1585,
+      "sha256": "97797ade1235e06060b93d67af70d9a611d894982de8e0ce64df1d02a9ff59ed"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/05-hawker.txt",
+      "bytes": 1554,
+      "sha256": "013279666575d62f81987201faf921946a9fad20a6923917dbf7d26c281d7d01"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/06-delivery.txt",
+      "bytes": 1565,
+      "sha256": "a5a0fff827649947128d5712dc688170e23b02e8ee8b6d2f2359a3934286e73d"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/master-fish-quay.txt",
+      "bytes": 1091,
+      "sha256": "33969e3893f13d174802ecd6f6dd4e9f85ec25e25afd8fb5fe52d73f2b032009"
+    },
+    {
+      "path": "chaines/edo-daily/01-rebuild/prompts/horizon-v2/master-merchant-street.txt",
+      "bytes": 984,
+      "sha256": "ab84bb7be99d0f0f97ef7ad9fbabf37f616d06dfd1c18cd9a47f462306d128ce"
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png",
+      "bytes": 2303970,
+      "sha256": "c735e70bdfea8cfb2f8fbe66a9094e4b8d90031f23f760e332486f5467cbca7b",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/merchant-street.png",
+      "bytes": 2078016,
+      "sha256": "ae69ba96c1cdbff5ce67116fa84143dfa1e39f46a38a16681005ead781df1569",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/01-arrival.png",
+      "bytes": 2328595,
+      "sha256": "bb323fc9720341983996404caf628584655e1ebfea94a33e262c53c1138be524",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/02-coins.png",
+      "bytes": 2276273,
+      "sha256": "52898987fa77b5b16423fe0694a9f15927f0045aed95df0fce99b034f9dbc638",
+      "dimensions": [
+        1671,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/05-hawker.png",
+      "bytes": 2153556,
+      "sha256": "b233de836965936a957f9ab8c2f0f43a4a787966c5fcad4d35db72e7d9b9333b",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/shots/06-delivery.png",
+      "bytes": 2150431,
+      "sha256": "ca6b6a4f04c34abdc9a7239c7d65362a3ce768a9ab2265de0fcb6ea0baec2ea4",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/artisan.png",
+      "bytes": 1274605,
+      "sha256": "dd30bd5657bf80b3fa7a5f5102140440383ca05a17f2c856947bab0fa34cf40e",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/boatman.png",
+      "bytes": 1308667,
+      "sha256": "ed851dbff6ac22e7a9c7e6895a9a4438a008d53cf6815f5ed8d35152b9ae01df",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/fish-quay.png",
+      "bytes": 2364509,
+      "sha256": "e9a204ffcf21d93c74ee5413a2041c60b0a35b6498b93289f38cf1cf94a28ceb",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/fishseller.png",
+      "bytes": 1316443,
+      "sha256": "b07e701f295ca70f5e274d2723fa250be8ac3e90471514a653f721d5ff79db02",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/merchant-street.png",
+      "bytes": 2219815,
+      "sha256": "8abddec3fb2b1f2c1158fd365b6661cf82127efbd46b1e230d76c8650695c763",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/neighbor.png",
+      "bytes": 1217979,
+      "sha256": "5bda78878777e9c68dde81d6f9344119bda05762144337622484ee7b3e0f9a0b",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/partner.png",
+      "bytes": 1232094,
+      "sha256": "e69f070dcc096c1f68266439cda406edc2e49eda2cb69f0df14f1f04735ea2e4",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/references/porter.png",
+      "bytes": 1338573,
+      "sha256": "8db0ef329508a7e95fad90054350e981b8ca34148c333ff10e0d335cff96fced",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/01-arrival.png",
+      "bytes": 2325417,
+      "sha256": "7829229c178eafef5d0d4a3032668d046a8e8fdab22e99079220160f0880ccb4",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/02-coins-repair.png",
+      "bytes": 2266685,
+      "sha256": "1a1edb00e6d6c45a130a3438a959109b4369231ece5227015c6b24f6031c7365",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/05-hawker-repair.png",
+      "bytes": 2164355,
+      "sha256": "5f0f7d92852d1efe578e0effa459e6e4daee3e17486d10b6849fc0e4650b174a",
+      "dimensions": [
+        1704,
+        923
+      ]
+    },
+    {
+      "path": "output/imagegen/edo-rebuild-2026-10-08/shots/06-delivery.png",
+      "bytes": 2293616,
+      "sha256": "c9c35b037644c24b7c0e0654fc295149f8fa4af5408df994e4a8122f7c494a6f",
+      "dimensions": [
+        1704,
+        923
+      ]
+    }
+  ],
+  "note": "File integrity only. Visual review documented separately in HORIZONS.md."
+}

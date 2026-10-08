@@ -1,4 +1,7 @@
 # Relecture visuelle par Codex - 8 octobre 2026
+Revision des horizons apres retour utilisateur : voir HORIZONS.md.
+Les selections actives utilisent les maitres et plans horizon-v2 pour le quai
+et la rue. Les comptes rendus initiaux ci-dessous restent une trace de l'essai.
 Statut : six illustrations originales selectionnees pour un essai de mise en scene.
 PAS une video complete, PAS une validation utilisateur, PAS une coherence parfaite.
 Chaque maitre, fiche de personnage, candidat et correction a ete regarde.

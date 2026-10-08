@@ -1,0 +1,7 @@
+Use case: precise-object-edit. Image 1 is the actual shot to repair. Image 2 is the inspected, corrected EMPTY location master: use its cleaned distant skyline ONLY, not its empty composition. Images 3 onward are the existing character identities in order: fishseller, partner, neighbor. Preserve those identities and image 1's poses and costume colors, do not copy the portrait stance.
+
+Remove the large decorative mountainous horizon ONLY in the distant background behind the last roofs. Use the corrected image 2's low rooftops, restrained low treetops and sky. Preserve the middle-distance willow and both near rows of buildings.
+
+Preserve exactly THREE adults and their actions: fishseller walking with ONE shoulder pole and TWO wicker fish baskets; burgundy/ochre partner calling from LEFT doorway; plum/sage neighbor holding ONE folded blue cloth at RIGHT. Preserve original left textile display, RIGHT food-stall cooking pot and utensil holder under brick-red canopy. Do not change the right food stall into a cloth shop.
+
+Do not alter any other part of the illustration, camera, crop, architecture, foreground/middle-ground layout, lighting or narrative action. No new monument, tower, cliff, peak, extra character or invented prop. Pure white round heads and mitten hands with tiny black eyes and neutral mouths, no realistic face, hair, skin shading or detailed fingers. Same clean matte detailed BD style; no blur, photorealism, sky replacement effect, panels, text or watermark. This is distant-background cleanup, not a scene regeneration.

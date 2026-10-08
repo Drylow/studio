@@ -53,3 +53,10 @@ Conserver l'identite d'une piece dans SA scene, pas la recopier partout.
 Etudier reference/strangely-ironic-guy/ et ses videos pour la mise en scene :
 POV, gestes, echanges, groupes, gros plans et espaces occupes.
 Reecrire script et decoupage avant une nouvelle production integrale.
+
+Retour utilisateur du 8 octobre sur les horizons : garder la mise en scene et
+les decors detailles, mais supprimer les grandes tours et architectures fantaisie
+ajoutees au loin. Arriere-plan lointain sobre, a echelle credible et adapte au lieu.
+Un monument n'apparait que s'il est documente et necessaire a la scene, pas comme
+decoration generique. Corriger le maitre puis les plans concernes sans changer
+les personnages, gestes, objets proches ou geometrie de la scene.

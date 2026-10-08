@@ -66,6 +66,11 @@ Regarder chaque image, reference a cote. Controler :
 - pas de texte parasite, logo, anachronisme evident ou personnage ajoute.
 Une image incorrecte n'est pas acceptee automatiquement apres un nombre fixe
 d'essais : corriger le prompt, regenerer et la regarder a nouveau.
+Retour utilisateur sur les horizons : inspecter aussi l'arriere-arriere-plan.
+Pas de tours geantes, chateaux inventes ou silhouettes monumentales gratuites.
+Garder le detail architectural utile au lieu ; simplifier seulement le lointain.
+Un monument doit etre documente et justifie par la scene. Appliquer la correction
+au maitre puis a tous ses plans, sans changer leurs acteurs ni leurs actions.
 Conserver le resultat de cette relecture. Les empreintes attestent les fichiers
 utilises, pas la qualite visuelle ni une identite pixel par pixel.
 
