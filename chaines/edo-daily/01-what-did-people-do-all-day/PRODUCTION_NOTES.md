@@ -109,8 +109,9 @@ clock before 30 fps filtering. Audio still lasted 1499.12 seconds, hiding a
 5.13-second picture shortfall if only container duration was checked.
 The shared renderer now sets an exact 30 fps timebase before counting frames,
 and its clip cache revision changed so old shortened clips cannot be reused.
-Real-encoder regression cases of 50, 63 and 128 frames reproduce the old loss
-and pass after the fix. QA now checks the independently decoded video-frame
+Real-encoder regression cases of 50, 63 and 128 frames reproduce the old loss.
+Fixed-clock cases of 50, 63, 128 and 179 frames pass at 24, 25, 30 and 60 fps.
+QA now checks the independently decoded video-frame
 count, video duration, constant cadence and separate audio duration before
 scene captures. JPEG capture explicitly uses full-range pixels and one thread.
 23 focused tests pass. Fresh full-length encode and visual QA are required.

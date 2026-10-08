@@ -19,20 +19,21 @@ class ClipTimingTests(unittest.TestCase):
             before, after = root / "before.png", root / "after.png"
             Image.new("RGB", (320, 180), "navy").save(before)
             Image.new("RGB", (320, 180), "green").save(after)
-            for frames in (50, 63, 128):
-                with self.subTest(frames=frames):
-                    clip = root / f"{frames}.mp4"
-                    render.render_clip(str(after), str(clip), frames, 320, 180, 30,
-                                       "zoom_in", 0.045, motion_frames=frames + 6,
-                                       prev={"image": str(before), "motion": "zoom_in",
-                                             "n": 76, "offset": 70, "tf": 6})
-                    result = subprocess.run(
-                        [shutil.which("ffprobe"), "-v", "error", "-count_frames",
-                         "-show_entries", "stream=nb_read_frames,duration",
-                         "-of", "json", str(clip)], capture_output=True, text=True, check=True)
-                    stream = json.loads(result.stdout)["streams"][0]
-                    self.assertEqual(int(stream["nb_read_frames"]), frames)
-                    self.assertAlmostEqual(float(stream["duration"]), frames / 30, places=5)
+            for fps in (24, 25, 30, 60):
+                for frames in (50, 63, 128, 179):
+                    with self.subTest(fps=fps, frames=frames):
+                        clip = root / f"{fps}-{frames}.mp4"
+                        render.render_clip(str(after), str(clip), frames, 320, 180, fps,
+                                           "zoom_in", 0.045, motion_frames=frames + 6,
+                                           prev={"image": str(before), "motion": "zoom_in",
+                                                 "n": 76, "offset": 70, "tf": 6})
+                        result = subprocess.run(
+                            [shutil.which("ffprobe"), "-v", "error", "-count_frames",
+                             "-show_entries", "stream=nb_read_frames,duration",
+                             "-of", "json", str(clip)], capture_output=True, text=True, check=True)
+                        stream = json.loads(result.stdout)["streams"][0]
+                        self.assertEqual(int(stream["nb_read_frames"]), frames)
+                        self.assertAlmostEqual(float(stream["duration"]), frames / fps, places=5)
 
 
 if __name__ == "__main__":
