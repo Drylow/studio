@@ -77,7 +77,7 @@ vanished in 079-03-v2. Both v3 outputs retain the required inventory.
 The measured cut has no adjacent repeated image file, an average hold of 4.90
 seconds and a longest hold of 5.96 seconds, including the 0.4-second final tail.
 These are nominal shot durations; the existing 0.2-second crossfades overlap
-the outgoing and incoming illustrations. Rendered-frame QA remains pending.
+the outgoing and incoming illustrations. Rendered-frame QA is now complete.
 017's original Blue is empty-handed: only the original jade neighbor carries a
 bucket. The fixed ground bucket and well-rope bucket stay in place. 017-03 is
 accepted as that observed variant rather than falsely claiming Blue carries it.
@@ -100,7 +100,7 @@ No burnt-in text, modern UI, human-faced video characters or stock competitor fo
 Separate English subtitles and source-backed publication text accompany the MP4.
 The existing human-cartoon WORK OR PLAY? thumbnail remains a proposal, not an
 assertion that the user approved that individual image for publication.
-Final rendered-frame review and complete decode checks are required before delivery.
+Final rendered-frame review and complete decode checks passed before delivery.
 
 ## Encoder Timing Correction
 The first dense encode was rejected before delivery: 154 crossfaded clips lost
@@ -114,4 +114,18 @@ Fixed-clock cases of 50, 63, 128 and 179 frames pass at 24, 25, 30 and 60 fps.
 QA now checks the independently decoded video-frame
 count, video duration, constant cadence and separate audio duration before
 scene captures. JPEG capture explicitly uses full-range pixels and one thread.
-23 focused tests pass. Fresh full-length encode and visual QA are required.
+23 focused tests pass. Fresh full-length encode and visual QA completed.
+
+## Final Delivery Verification
+All 306 clip frame counts match the plan. Full decode counted 44,974 video frames
+without errors. Picture duration is 1499.132682 seconds and audio is 1499.120000;
+the 12.7 ms end difference is less than one frame. Maximum encoded hold is
+179 frames at 30 fps, or 5.9667 seconds, including the final tail.
+Codex manually inspected all 918 rendered samples across 77 contact sheets and
+four full-frame spot checks. No sampled head clipping or black/red wall
+corruption remains. Full-black detection found no interval >= 0.05 seconds.
+Actual file audio measures -14.89 LUFS integrated and -0.98 dBTP true peak.
+QA_REPORT.md and QA_REVIEW.json identify the reviewed export by SHA-256.
+Earlier review notes that mislabeled empty bridge, market or workshop scenes
+were corrected to describe the actual images; their images, hashes, executed
+prompts and reference history were not rewritten. Local delivery only.

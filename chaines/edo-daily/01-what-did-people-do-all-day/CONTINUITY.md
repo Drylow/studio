@@ -5,7 +5,7 @@ was stopped after the user requested one image every 6 seconds maximum.
 Current cut: 306 measured shots; all 214 new illustrations reviewed. The 33
 held selections were corrected through versioned prompts and individually
 rechecked. All 306 selected files now have accepted hashes in IMAGE_REVIEW.json.
-Rendered-frame verification remains required before delivery.
+Rendered-frame verification completed: all 918 samples across 306 shots inspected.
 
 ## Stable State
 - Home: original table, ONE navy cushion under its LEFT side, bedding/gray teapot
@@ -63,7 +63,8 @@ the technical pipeline. Original rejected images/prompts remain as archives.
 ## Dense Cut Corrections
 Original 017 has Blue empty-handed and the jade neighbor carrying the bucket;
 that ownership remains unchanged in its new cuts. Empty cutaways must stay empty,
-including 020, 024, 026, 033, 035, 060, 064, 065, 078, 086 and 089.
+including 020, 024, 033, 035, 060, 064, 065, 078, 086 and 089.
+026 instead retains both Blue and Red; it is not an empty cutaway.
 Original 063 has a shallow shavings tray center-right, not a disappearing lid.
 016-04-v2 incorrectly filled the basket with gray cloth; rejected and superseded
 by visually accepted 016-04-v3, with EMPTY basket and gray garment only on table.

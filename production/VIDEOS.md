@@ -1,5 +1,21 @@
 # Journal des vidéos
 
+## Edo Daily — épisode 01 — 8 octobre 2026
+
+**What Did People in Edo Japan Actually Do All Day?** Version locale vérifiée,
+non publiée : 24 min 59, 1920 × 1080, 30 images/s. Voix originale de 4 031 mots
+conservée. À la demande de l’utilisateur, remplacement du découpage de 92 images
+par 306 plans mesurés sur la voix, 214 illustrations supplémentaires et corrections
+ciblées ; aucun plan au-delà de 179 images, soit 5,97 s. Codex a écrit les prompts,
+regardé les 306 sources sélectionnées et 918 captures du montage sur 77 planches.
+Décodage intégral sans erreur, 44 974 images, écart de fin son/image de 12,7 ms.
+23 tests réussis après correction d’une perte d’image dans l’horloge du rendu.
+Livraison : `output/edo-daily/01-A-REGARDER/Edo-Daily-01.mp4`, sous-titres anglais,
+script, sources et fiche publication. Miniature humaine WORK OR PLAY? encore
+proposée à validation. Audit : `chaines/edo-daily/01-what-did-people-do-all-day/QA_REPORT.md`.
+Aucun upload ni envoi Discord. De petites variations de dessin génératif subsistent ;
+les références ne garantissent pas une géométrie identique au pixel près.
+
 ## Cage Dispatch — première vidéo du pilote automatique — 7 octobre 2026
 
 « Shavkat Rakhmonov teases 19-0 vs 19-0: Is Michael Morales next? » — **publique** :

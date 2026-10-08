@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-08",
+  "reviewer": "Codex manual visual inspection",
+  "video_sha256": "b784925a1a0c705e790a4bac40b02a653c9bda237585b98405c18ea555d83724",
+  "shots": 306,
+  "source_images_accepted": 306,
+  "rendered_samples_seen": 918,
+  "sheets_seen": 77,
+  "complete": true,
+  "sheet_notes": [
+    {
+      "from": 1,
+      "to": 6,
+      "notes": "Opening/home/cargo/alley/tea montage: all 72 sampled frames inspected; white heads and costumes retained, full heads inside frame, no corrupt black/red patches. Tea table cup counts retained across held-cup action; return look preserves original bench. Contact-sheet gutters are not video borders."
+    },
+    {
+      "from": 7,
+      "to": 12,
+      "notes": "72 rendered samples inspected. Home cushion, folded bedding/teapot and empty basket remain; 016-04 corrected empty basket confirmed. Original well bucket ownership preserved in 017. No added cast in empty architectural crops, no head clipping or corrupted walls."
+    },
+    {
+      "from": 13,
+      "to": 18,
+      "notes": "72 samples inspected: empty waterfront and market, well water handling and breakfast. Same cast outfits; bowl counts include lifted bowls and are not duplicated. Camera moves keep full heads inside frame. Review wording for 020 and 024 must describe actual empty bridge/market, not cooking/home."
+    },
+    {
+      "from": 19,
+      "to": 24,
+      "notes": "72 rendered samples inspected: Red's departure retains basket and Blue's meal container, tools roll stays carried through 027-028 and bridge passage. Market carrying baskets remain; workshop box/lid and plane/mallet/chisel retained. Full white heads stay in frame; no blank/corrupt frames."
+    },
+    {
+      "from": 25,
+      "to": 30,
+      "notes": "72 samples inspected: original workshop tool inventory and shallow box/matching rimmed lid stay coherent, then closed box. Red retains single gray garment on visit and sewing sequence; burgundy costume and white skin stay stable. No head clipping, blank frame or corruption."
+    },
+    {
+      "from": 31,
+      "to": 36,
+      "notes": "72 samples inspected: gray repaired garment stays in Red's basket during market errands; sewing kit stays on table. Returned-shopping crosscut retains produce basket at doorway and both partners. Blue's bridge reflection is empty-handed as approved; official/vendor and original background people stay consistent. No white-head clipping or corrupt frames."
+    },
+    {
+      "from": 37,
+      "to": 42,
+      "notes": "72 rendered samples inspected. Green's jade costume and gray wrapped flat box retained through workshop pickup; market keeps three produce baskets and correct coins/turnip handling. Red's shopping basket fills only after selection; Blue and ochre server retain meal tray. Heads fully visible, no corrupted patches."
+    },
+    {
+      "from": 43,
+      "to": 48,
+      "notes": "72 samples inspected. Market/server tray and empty fish/vegetable insert stay coherent. Blue lifts original rice bowl without duplicate, Green joins with own cup and wrapped parcel, then leaves carrying parcel. Blue's bridge stance and navy clothes consistent; no head clipping or black corruption."
+    },
+    {
+      "from": 49,
+      "to": 54,
+      "notes": "72 samples inspected. 060 empty cargo quay retains bales, single moored boat and rope; Green carries gray parcel across bridge. Workshop 063 retains shallow box, lid and tools; 064 empty alley/well, 065 empty waterfront, 066 Red working by home storage. White heads full, no corruption. Notes for 060/065 must describe waterfront."
+    },
+    {
+      "from": 55,
+      "to": 60,
+      "notes": "72 samples inspected. Red retains white cloth by home storage; workshop tools and box persist, bathhouse visitors retain gray/white folded bundles and original navy/burgundy outfits. Theater exterior and original background cast stable, no facial/hair drift, clipping or corrupt frame."
+    },
+    {
+      "from": 61,
+      "to": 66,
+      "notes": "72 samples inspected. Theater board has same two architecture prints; Blue/Red/Green hand gestures do not change clothes or cast. 078 is empty produce market with three baskets, not teahouse. Tea 079 basket stays bench right and two table cups include lifted cup, then 080 basket on ground. No full-head clipping or corrupted frames."
+    },
+    {
+      "from": 67,
+      "to": 72,
+      "notes": "72 samples inspected. Tea keeps two table cups, three counter cups, kettle and ground basket; Green's empty-hand visit uses original taller basket seed. Red picks up basket, dusk dinner keeps two rice/two soup/vegetable dishes including held bowls; tray and tool roll move to doorway. Empty night lamp scenes and white-faced pair have no corruption or clipped heads."
+    },
+    {
+      "from": 73,
+      "to": 77,
+      "notes": "54 samples inspected (last sheet has six, not twelve). Unfolded quilt and home lamp/doorway props retained; 089 empty workshop has shallow box, matching lid, plane, mallet and chisel, not alley. Green's produce handling preserves clothes; final tea recap preserves cups/basket and night ending is readable, not black. All 918 rendered samples across 77 sheets now visually inspected."
+    }
+  ],
+  "full_frame_spot_notes": [
+    "opening at 0.8s: white Blue head, clothing and home geometry intact; no corrupt wall.",
+    "workshop at 480s: original tools, box and lid preserved, head stays inside framing.",
+    "teahouse at 1300s: three named cast retained, two table cups and three counter cups, basket on ground per state.",
+    "tail at 1498.95s: original empty night room visible, quilt/lamp/doorway roll-basket-tray retained, not black."
+  ],
+  "limits": "Three rendered samples per shot plus four full-frame spots; not every decoded frame manually watched. Small generative linework, geometry and cloth-fold variations remain. Technical decode checks cover all 44,974 video frames."
+}

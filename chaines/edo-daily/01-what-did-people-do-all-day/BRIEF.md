@@ -11,4 +11,4 @@ References: reviewed location masters and frozen cast designs must be sent with 
 Timing: measured audio timestamps, never estimated final scene times.
 QA: review each generated image and rendered scene; hold delivery on unresolved visual or historical errors.
 Cadence: user requires a different image every 6 seconds maximum, including the final tail. The earlier 92-shot cut was stopped and archived, not delivered.
-Current status: original voice retained; 306-shot word-measured timeline complete. All 214 additional illustrations and targeted corrections individually inspected. All 306 selections accepted; dense montage rendering next, still awaiting rendered-video review. No finished video delivered yet.
+Current status: reviewed local MP4 ready. Original voice retained, 306 word-measured shots, maximum encoded hold 179 frames (5.9667 seconds). All 306 selected sources and 918 rendered samples inspected; full decode and independent picture/audio timing checks passed. No upload or publication performed.
