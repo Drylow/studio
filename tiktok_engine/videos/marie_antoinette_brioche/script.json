@@ -1,0 +1,443 @@
+{
+ "title": "Marie-Antoinette n'a jamais dit ça",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Marie-Antoinette n'a jamais dit « qu'ils mangent de la brioche ». #histoire #marieantoinette #versailles #faussesinfos",
+ "sources": [
+  "Wikipédia, Let them eat cake (Rousseau, Confessions, livre VI, six premiers livres écrits en 1765, publiés en 1782 ; Marie-Antoinette a 9 ans, n'est jamais venue en France, arrive à Versailles en 1770 ; première attribution : Alphonse Karr, Les Guêpes, mars 1843 ; Livre de Jin, VIIe siècle)",
+  "Encyclopædia Britannica, entrée Marie-Antoinette (phrase 'presque certainement apocryphe', écrite alors qu'elle était enfant, 'grande princesse' sans nom ; première attribution imprimée en 1843)",
+  "Rousseau, Les Confessions, livre VI : « une grande princesse… dit : qu'ils mangent de la brioche »",
+  "Wikipédia, Marie Antoinette (mariage par procuration à Vienne le 19 avril 1770, à Versailles le 16 mai 1770, à 14 ans ; reine en mai 1774) ; Confessions, livres I-VI publiés en 1782, Rousseau mort en 1778"
+ ],
+ "art": {
+  "queen": {
+   "prompt": "portrait of Marie Antoinette, queen of France, elaborate tall powdered white wig with feathers, pale face, 1780s silk dress, bust, front view",
+   "size": "192x192"
+  },
+  "cake": {
+   "prompt": "a single golden brioche bread on a silver plate, simple, front view",
+   "size": "192x192"
+  },
+  "rousseau": {
+   "prompt": "portrait of the philosopher Jean-Jacques Rousseau, 1760s, armenian fur cap, holding a quill pen, bust",
+   "size": "192x192"
+  },
+  "book": {
+   "prompt": "an old leather-bound book lying open on a wooden desk with a quill and an ink pot, 1700s, top view, no readable text",
+   "size": "256x192"
+  },
+  "girl_vienna": {
+   "prompt": "a small nine-year-old child girl, clearly a child with a round face and short stature, in a simple 18th century dress, standing in a palace garden in Vienna, both hands visible holding a small doll, front view",
+   "size": "192x256"
+  },
+  "vienna": {
+   "prompt": "Vienna Austria in the 1760s, imperial palace and rooftops, panorama",
+   "size": "320x192"
+  },
+  "versailles": {
+   "prompt": "Palace of Versailles seen from the front gardens, golden gates, panorama",
+   "size": "320x192"
+  },
+  "emperor": {
+   "prompt": "ancient Chinese emperor in a golden robe sitting on a throne, 7th century, bust, front view",
+   "size": "192x192"
+  },
+  "journalist": {
+   "prompt": "a 19th century French journalist with side-whiskers writing at a desk by candlelight, 1843, side view",
+   "size": "256x192"
+  },
+  "newspaper": {
+   "prompt": "a stack of old newspapers from the 1840s on a table, no readable text",
+   "size": "256x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "« Qu'ils mangent de la brioche. » Marie-Antoinette n'a jamais dit ça.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "queen",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "« Qu'ils mangent\nde la brioche. »",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "FAUX",
+     "at": "jamais",
+     "y": 720,
+     "rot": -6,
+     "fill": true,
+     "size": 30
+    }
+   ]
+  },
+  {
+   "say": "La phrase vient d'un livre de Rousseau, Les Confessions, écrit vers 1765.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Dans un livre de *Rousseau*",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "rousseau",
+     "h": 260,
+     "y": 470,
+     "at": 0.05,
+     "in": "pop",
+     "x": 150
+    },
+    {
+     "type": "img",
+     "src": "book",
+     "h": 230,
+     "y": 520,
+     "at": "Confessions",
+     "in": "fade",
+     "x": 400
+    },
+    {
+     "type": "stamp",
+     "text": "VERS 1765",
+     "at": "1765",
+     "y": 740,
+     "rot": -4,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Rousseau parle d'une grande princesse. Il ne donne aucun nom.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "« Une *grande princesse* »",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 10,
+     "y": 520,
+     "at": "aucun",
+     "in": "pop",
+     "blink": 2
+    },
+    {
+     "type": "stamp",
+     "text": "AUCUN NOM",
+     "at": "aucun",
+     "y": 760,
+     "rot": -4,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "En 1765, Marie-Antoinette a neuf ans. Elle vit à Vienne, en Autriche, et n'a jamais mis les pieds en France.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 9,
+     "decimals": 0,
+     "suffix": " ANS",
+     "dur": 0.9,
+     "at": "neuf",
+     "y": 200,
+     "in": "fade"
+    },
+    {
+     "preset": "title",
+     "text": "Elle vit à *Vienne*",
+     "at": "Vienne",
+     "y": 290,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "girl_vienna",
+     "h": 360,
+     "y": 520,
+     "at": 0.05,
+     "in": "pop",
+     "x": 150
+    },
+    {
+     "type": "img",
+     "src": "vienna",
+     "h": 230,
+     "y": 560,
+     "at": "Vienne",
+     "in": "scan",
+     "x": 420
+    }
+   ]
+  },
+  {
+   "say": "À quatorze ans, elle épouse le futur Louis XVI. Elle n'arrive à Versailles qu'en 1770, et devient reine en 1774.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "À *14 ans* : mariage",
+     "at": 0,
+     "y": 160,
+     "size": 28,
+     "out": "1770"
+    },
+    {
+     "preset": "title",
+     "text": "Versailles :",
+     "at": "1770",
+     "y": 160,
+     "size": 28
+    },
+    {
+     "preset": "big",
+     "text": "1770",
+     "at": "1770",
+     "y": 240
+    },
+    {
+     "type": "img",
+     "src": "versailles",
+     "h": 250,
+     "y": 520,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "REINE EN 1774",
+     "at": "1774",
+     "y": 790,
+     "rot": -4,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Les Confessions ne sont publiées qu'en 1782. Quatre ans après la mort de Rousseau.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Publié en *1782*",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "book",
+     "h": 300,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "type": "stamp",
+     "text": "ROUSSEAU : MORT EN 1778",
+     "at": "Quatre",
+     "y": 760,
+     "rot": -4,
+     "size": 17
+    }
+   ]
+  },
+  {
+   "say": "Alors, qui a vraiment inventé cette phrase ? Rousseau lui-même, peut-être. Un récit chinois du septième siècle prête déjà une idée presque pareille à un empereur.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Qui l'a *inventée* ?",
+     "at": 0,
+     "y": 160,
+     "out": "Un"
+    },
+    {
+     "type": "img",
+     "src": "rousseau",
+     "h": 300,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade",
+     "out": "Un"
+    },
+    {
+     "preset": "title",
+     "text": "Chine, VIIe siècle :\nune idée *presque* pareille",
+     "at": "Un",
+     "y": 160,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "emperor",
+     "h": 330,
+     "y": 500,
+     "at": "Un",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Le premier à la mettre dans la bouche de la reine, c'est un journaliste, en 1843. Cinquante ans après sa mort.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Première attribution :",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "preset": "big",
+     "text": "1843",
+     "at": "1843",
+     "y": 240
+    },
+    {
+     "type": "img",
+     "src": "journalist",
+     "h": 300,
+     "y": 520,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "type": "stamp",
+     "text": "+50 ANS APRÈS SA MORT",
+     "at": "Cinquante",
+     "y": 760,
+     "rot": -4,
+     "size": 17
+    }
+   ]
+  },
+  {
+   "say": "Marie-Antoinette est morte en 1793, avec une phrase qui ne lui a jamais appartenu.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.26
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Une phrase qui n'est\n*pas la sienne*.",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "queen",
+     "h": 400,
+     "y": 520,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Elle n'a *jamais*\ndit ça.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "queen",
+    "h": 430,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Marie-Antoinette :\nla *fausse* phrase",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "cake",
+    "h": 330,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Elle avait *9 ans*\nà Vienne.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "girl_vienna",
+    "h": 430,
+    "y": 660
+   }
+  ]
+ ]
+}

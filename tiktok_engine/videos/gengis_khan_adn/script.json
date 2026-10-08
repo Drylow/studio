@@ -1,0 +1,492 @@
+{
+ "title": "Gengis Khan et 16 millions d'hommes",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Un seul conquérant du Moyen Âge serait l'ancêtre de millions d'hommes aujourd'hui. #histoire #gengiskhan #adn #mongols",
+ "sources": [
+  "Zerjal et al., The Genetic Legacy of the Mongols, American Journal of Human Genetics, 2003 (résumé PMC1180246 : 16 populations, environ 8 % des hommes de la région, environ 0,5 % des hommes du monde, origine en Mongolie il y a environ 1 000 ans, 'likely male-line descendants of Genghis Khan')",
+  "Wikipédia, Genetic descent from Genghis Khan (région du nord-est de la Chine à l'Ouzbékistan ; environ 16 millions d'hommes si l'échantillon est représentatif ; Lkhagvasuren et al. 2016 : tombes de Tavan Tolgoi d'une autre lignée ; Batini et Jobling 2017 ; Wei et al. 2018)",
+  "The Genetic Genealogist, Famous DNA Review Part II – Genghis Khan (2007) : tombeau jamais retrouvé, lien non prouvé",
+  "Zerjal et al. 2003 : 2 123 hommes analysés, lignée 'star-cluster' dans 16 populations ; 'si l'échantillon est représentatif, environ 16 millions d'hommes, ~0,5 % du total mondial'"
+ ],
+ "art": {
+  "genghis": {
+   "prompt": "portrait of Genghis Khan, Mongol emperor, 13th century, fur hat, long thin mustache and beard, stern face, bust, front view",
+   "size": "192x192"
+  },
+  "steppe_army": {
+   "prompt": "Mongol horsemen riding across a vast grassy steppe at sunset, many riders with bows, side view",
+   "size": "320x192"
+  },
+  "lab": {
+   "prompt": "a scientist in a lab coat looking at a computer screen showing a DNA band pattern, side view, simple lab",
+   "size": "256x192"
+  },
+  "asia_map": {
+   "prompt": "simple stylized map of Asia seen from above, one large region in the middle highlighted, no text",
+   "size": "320x192"
+  },
+  "men_crowd": {
+   "prompt": "a big crowd of men of Central Asia seen from behind, different hats, a huge dense crowd",
+   "size": "320x192"
+  },
+  "yurt": {
+   "prompt": "Mongolian steppe with traditional white yurt tents under a big sky, 1200s",
+   "size": "320x192"
+  },
+  "sons": {
+   "prompt": "Mongol warrior father in fur hat standing with several grown sons behind him, group portrait, medieval",
+   "size": "256x192"
+  },
+  "mountain": {
+   "prompt": "a lonely forested mountain in Mongolia, mist, no buildings, no people, mysterious",
+   "size": "320x192"
+  },
+  "grave": {
+   "prompt": "an archaeological excavation of an old grave with a skeleton lying in the soil, small brushes and tools, top view",
+   "size": "256x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Un seul homme du Moyen Âge pourrait avoir donné son ADN à seize millions d'hommes aujourd'hui.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "genghis",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Un seul homme.\n*16 millions* de porteurs ?",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "GENGIS KHAN",
+     "at": "seize",
+     "y": 720,
+     "rot": -5,
+     "fill": true,
+     "size": 20
+    }
+   ]
+  },
+  {
+   "say": "En 2003, des généticiens étudient le chromosome Y, celui qui passe de père en fils.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le chromosome *Y* :\nde père en fils",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "lab",
+     "h": 330,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "dna",
+     "x": 420,
+     "y": 430,
+     "h": 200,
+     "amp": 26,
+     "at": "chromosome",
+     "in": "build",
+     "buildDur": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ils analysent l'ADN de 2 123 hommes. Et la même signature revient dans seize populations différentes.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2123,
+     "decimals": 0,
+     "dur": 1.2,
+     "at": "2",
+     "y": 220,
+     "in": "fade",
+     "size": 64
+    },
+    {
+     "preset": "label",
+     "text": "HOMMES ANALYSÉS",
+     "at": "2+0.3",
+     "y": 290,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "men_crowd",
+     "h": 250,
+     "y": 540,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "16 POPULATIONS",
+     "at": "seize",
+     "y": 800,
+     "rot": -4,
+     "fill": true,
+     "size": 20
+    }
+   ]
+  },
+  {
+   "say": "Au total, environ 8 % des hommes d'une zone qui va du nord-est de la Chine à l'Ouzbékistan.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "La *même* signature",
+     "at": 0,
+     "y": 160,
+     "out": "zone"
+    },
+    {
+     "preset": "title",
+     "text": "Nord-est de la Chine\n→ Ouzbékistan",
+     "at": "zone",
+     "y": 160,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "asia_map",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 8,
+     "decimals": 0,
+     "suffix": " %",
+     "dur": 1.0,
+     "at": "8",
+     "y": 720,
+     "in": "fade",
+     "size": 64
+    }
+   ]
+  },
+  {
+   "say": "Huit pour cent de cette région, ça fait environ un demi pour cent des hommes de la planète. Soit à peu près seize millions d'hommes.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.26
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Environ *0,5 %* des hommes\ndu monde",
+     "at": 0,
+     "y": 160,
+     "size": 28,
+     "out": "Soit"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 16,
+     "decimals": 0,
+     "suffix": " M",
+     "dur": 1.4,
+     "at": "seize",
+     "y": 330,
+     "in": "fade",
+     "size": 64
+    },
+    {
+     "preset": "label",
+     "text": "D'HOMMES · SELON L'ÉTUDE",
+     "at": "seize+0.3",
+     "y": 395,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "men_crowd",
+     "h": 250,
+     "y": 600,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "L'origine de cette lignée : la Mongolie, il y a environ mille ans. L'époque de Gengis Khan.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Origine : la *Mongolie*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "yurt",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "IL Y A ~1 000 ANS",
+     "at": "mille",
+     "y": 720,
+     "rot": -4,
+     "size": 20
+    }
+   ]
+  },
+  {
+   "say": "Leur théorie : Gengis Khan et ses fils ont eu un nombre immense d'enfants, et leurs descendants ont eux-mêmes dirigé l'empire.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "La théorie : *des fils*,\nencore des fils",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "sons",
+     "h": 330,
+     "y": 500,
+     "at": 0.05,
+     "in": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "HYPOTHÈSE",
+     "at": "théorie",
+     "y": 740,
+     "rot": -5,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Personne n'a jamais retrouvé le tombeau de Gengis Khan. Impossible de comparer son ADN.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Personne"
+    },
+    {
+     "preset": "title",
+     "text": "Son tombeau :\n*jamais retrouvé*",
+     "at": "Personne",
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "mountain",
+     "h": 300,
+     "y": 520,
+     "at": "Personne",
+     "in": "fade"
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 8,
+     "y": 850,
+     "at": "Impossible",
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Et des squelettes mongols de cette époque, fouillés en 2016, portaient une autre lignée.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Fouilles de *2016* :\nune *autre* lignée",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "grave",
+     "h": 330,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Le lien avec Gengis Khan reste donc une hypothèse. Mais ce chiffre, lui, vient bien de l'étude.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Une *hypothèse*,\npas une preuve",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "genghis",
+     "h": 340,
+     "y": 520,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Un seul conquérant, peut-être dans l'ADN d'un homme sur deux cents.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "grid",
+     "cols": 20,
+     "rows": 10,
+     "cell": 18,
+     "gap": 5,
+     "lit": 1,
+     "y": 420,
+     "at": 0,
+     "in": "fade",
+     "offColor": "g"
+    },
+    {
+     "preset": "num",
+     "text": "1 SUR 200",
+     "at": "deux",
+     "y": 240
+    },
+    {
+     "preset": "title",
+     "text": "Peut-être l'ADN\nd'un *seul* homme.",
+     "at": 0,
+     "y": 700,
+     "size": 26
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Gengis Khan :\n*16 millions*\nd'hommes ?",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "genghis",
+    "h": 420,
+    "y": 660
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Son ADN est\npeut-être *partout*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "men_crowd",
+    "h": 300,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Un homme sur\n*deux cents*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "genghis",
+    "h": 430,
+    "y": 650
+   }
+  ]
+ ]
+}
