@@ -431,3 +431,14 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   (toujours `encoding="utf-8"`), le dossier du script n'est pas dans sys.path (ajouté dans le `._pth`).
 - **Après le montage PC** : `git pull`, regarder `check/sheet_*.jpg` (+ `build.log`), puis
   `python production/news.py send <dossier>` (Discord) seulement si tout est bon.
+
+## 12. Octave Histoire (compte TikTok @octave.histoire) : `tiktok_engine/`
+
+Outil à part pour le compte TikTok français **Octave Histoire** : des personnages historiques et un
+fait surprenant chiffré, dans le style visuel de @archibald.media (pixel, fond noir, un seul bleu
+vif à la place de son rouge), vidéos codées en HTML/JavaScript, voix ElevenLabs v4 via Algrow.
+Tout est décrit dans [tiktok_engine/README.md](tiktok_engine/README.md) : règles de l'utilisateur,
+moteur, paquet livré (vidéo qualité max + 3 miniatures + description), coût par vidéo, vidéos livrées.
+Une vidéo : `python tiktok_engine/art.py batch tiktok_engine/videos/<nom>/script.json`, regarder
+`art_review.jpg` (mains !), puis `python tiktok_engine/build.py <dossier> --script
+tiktok_engine/videos/<nom>/script.json`. Faits vérifiés avant la voix, comme partout.

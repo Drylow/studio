@@ -1,4 +1,7 @@
-# Compte TikTok « histoire en pixels » (démarré le 7 oct. 2026)
+# Octave Histoire (@octave.histoire) : l'outil du compte TikTok (démarré le 7 oct. 2026)
+
+Outil à part, propre à ce compte TikTok : tout est dans `tiktok_engine/`, indépendant des chaînes
+YouTube. Pas encore automatisé : l'utilisateur veut en reparler (8 oct. : « on va regarder demain »).
 
 Demande de l'utilisateur (7 oct., soir) : un compte TikTok français **dans le même style visuel
 que @archibald.media**, codé de A à Z en HTML et JavaScript, sans vidéo IA. Vidéos de plus d'une
@@ -21,21 +24,18 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
   par vidéo, refaire une image : `--only nom`). Les petits dessins codés de `sprites.js` restent pour
   les icônes (soldats, crânes, thermomètre…). Clé : `REPLICATE_API_TOKEN` dans `.env`.
 
-## Le compte (proposé le 7 oct., 23 h)
+## Le compte (retenu par l'utilisateur le 8 oct.)
 
-- **Nom et pseudo :**
-  - Nom proposé : **Octave**, pseudo **@octave.histoire**. Octave est le premier nom de l'empereur Auguste, et c'est aussi un terme de musique (Mozart, Beethoven).
-  - Libres sur TikTok le 7 oct. : @octave.histoire, @clovis.histoire, @anatole.histoire. Déjà pris : @octave.media.
-- **Bio proposée :** « L'Histoire comme on ne te l'a jamais racontée. 1 vidéo par jour. 📜 » (sur le modèle d'Archibald, « 1 vidéo de qualité par jour. 🧠 »).
-- **Photo de profil :**
-  - Fichiers dans `brand/noir_*.jpg` : un objet en pixel art bleu sur **fond noir pur**. Les cercles bleus derrière ont été refusés le 7 oct.
-  - 9 propositions : crâne lauré, sablier, laurier, casque spartiate, bicorne, couronne, plume, bougie, colonne.
-- **Description de vidéo, à la manière d'Archibald :**
-  - L'accroche en une phrase plus un émoji.
-  - « Je t'explique … ».
-  - 4 à 5 hashtags.
-  - « Sources : … » à la fin.
-  - Modèle : champ `caption` + `sources` du script.
+- **Nom et pseudo :** **Octave**, pseudo **@octave.histoire**. Octave est le premier nom de l'empereur
+  Auguste, et c'est aussi un terme de musique (Mozart, Beethoven).
+- **Bio :** « L'Histoire comme on ne te l'a jamais racontée. 1 vidéo par jour. 📜 » (sur le modèle
+  d'Archibald, « 1 vidéo de qualité par jour. 🧠 »). Elle ne change pas d'une vidéo à l'autre.
+- **Photo de profil :** la **couronne** bleue en pixel art, centrée sur fond noir pur :
+  `brand/photo_profil_couronne.png`. Les 8 autres propositions sont dans `brand/noir_*.jpg`
+  (les cercles bleus derrière ont été refusés le 7 oct.).
+- **Description de vidéo**, simple comme la 1re d'Archibald : **une phrase + 4 hashtags**, sans
+  sources ni émoji (ex. « La Joconde est devenue célèbre grâce à un voleur. #histoire #vulgarisation
+  #joconde #louvre »). Champ `caption` du script ; les sources restent dans `sources`, pour nous.
 
 ## Règles de qualité ajoutées après la 1re vidéo
 
@@ -103,6 +103,17 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 
 `build.py` fait tout à la fin du rendu (`deliver` : `covers/`, `description.txt`, `gofile_link.txt`,
 `livraison.txt`). Les illustrations se relisent sur `videos/<nom>/art_review.jpg` (pixels ×3) avant le montage.
+
+## Ce que coûte une vidéo (calculé le 8 oct.)
+
+- **Illustrations Replicate** (clé de l'utilisateur) : environ **0,60 $ par vidéo** pour une douzaine
+  d'images. Prix `rd-plus`, style `default`, à l'image : 0,044 $ jusqu'à 192×192, 0,058 $ jusqu'à
+  256×256 (320×192 compris), 0,077 $ jusqu'à 320×320. Napoléon : 0,58 $ ; Joconde : 0,64 $. Chaque image
+  refaite (mains ratées…) coûte le même prix. Les icônes de `sprites.js` sont gratuites.
+- **Voix** : crédits Algrow, v4 compte 3 crédits par caractère. Napoléon ≈ 5 100, Joconde ≈ 3 600.
+  Une voix refaite après correction se paie une 2e fois.
+- **Gratuit** : rendu (machine cloud), datation des mots (Whisper local), bruitages (synthétisés),
+  polices (OFL), hébergement Gofile.
 
 ## Vidéos livrées
 

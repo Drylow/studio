@@ -16,6 +16,7 @@ Un dossier par chaîne YouTube. Chaque dossier contient :
 | **Oddly Specific Things** (@OddlySpecificThingsYT) | « Your Life as a Stolen … » (tu es l'objet) | [oddly-specific-things](oddly-specific-things/README.md) |
 | **The Survivor's Account** (@SurvivorsAccount) | histoire racontée par un vrai témoin (History Docs, 35-40 min) | [the-survivors-account](the-survivors-account/README.md) |
 | **Frontier Blood** (@FrontierBlood) | la frontière américaine, sans Hollywood (History Docs, 35-40 min) | [frontier-blood](frontier-blood/README.md) |
+| **Octave Histoire** (@octave.histoire, TikTok) | personnages historiques en pixel, style Archibald en bleu (1 min 20) | [tiktok_engine](../tiktok_engine/README.md) |
 
 Les trois chaînes ont le même style 2D et la même voix, pour qu'on reconnaisse la même patte d'une chaîne à l'autre :
 - des bonshommes à grosse tête ronde blanche, avec des yeux en points noirs et des mains en moufles ;
