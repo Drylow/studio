@@ -13,9 +13,11 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 - **Créneaux déjà pris** : chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`
   (champ `at`). Prendre le premier jour, à partir de demain, qui n'a pas ses deux créneaux
   (07:00 et 19:00). Ne jamais programmer un créneau déjà pris.
-- Les clés `ALGROW_API_KEY` et `ZERNIO_API_KEY` doivent être dans l'environnement (afficher
-  seulement « présente » ou « absente »). Si l'une manque, s'arrêter et le dire : ne pas passer par
-  les outils Algrow de la session, qui attendent une autorisation que personne ne donnera.
+- Clés : `ZERNIO_API_KEY` est dans l'environnement. `ALGROW_API_KEY` est celle du site :
+  `setup.sh` la copie depuis le `.env` du serveur, avec `production/server_env.py` et les accès cPanel
+  de l'environnement, dans le `.env` local ignoré par git. N'afficher que « présente » ou « absente ».
+  Si une clé manque, s'arrêter et le dire. Ne pas passer par les outils Algrow de la session : ils
+  attendent une autorisation que personne ne donnera.
 
 ## 1. Choisir les sujets
 
@@ -46,7 +48,8 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 ## 3. Images (Algrow, 1 crédit l'image)
 
 1. Lancer `.venv/bin/python tiktok_engine/art.py algrow tiktok_engine/videos/<nom>/script.json`.
-   Il passe par l'API, avec la clé `ALGROW_API_KEY` de l'environnement, donc sans autorisation à donner.
+   Il passe par l'API, avec la clé `ALGROW_API_KEY` du `.env`, donc sans autorisation à donner.
+   Testé le 9 oct. : environ 30 s par image, 4 en parallèle.
 2. **Regarder `videos/<nom>/art_review.jpg`** : mains, doigts, bras, visages, objets absurdes.
 3. Une image ratée se refait avec `art.py algrow … --only nom`.
 4. Sans clé dans l'environnement, passer par les outils Algrow de la session :
