@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "mw32axnzt9rmr0d13g7ry23gw8",
+  "prompt": "Close microphone isolated food foley: a pile of crispy french fries is slowly crushed under a heavy metal plate. Short dry brittle crunches build into a dense crunchy wet squelch as cooking oil squeezes out. Several distinct close detailed crunchy compressions. Satisfying intimate ASMR, no music, no voices, no ambience, no metallic ringing.",
+  "source": "sfx-squeeze-source.mp3",
+  "sha256": "25c4e33f4935f3cb7b84a14ce82f88f4b4ea3d2acb80bbac98b48f52071651e2",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "fries-press",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node verify-simulation.mjs",
+    "dev": "npx --yes hyperframes@0.8.140 preview",
+    "check": "npx --yes hyperframes@0.8.140 check",
+    "render": "npx --yes hyperframes@0.8.140 render --fps 60 --quality delivery --browser-gpu --gpu --output fries-hydraulic-press-final.mp4",
+    "publish": "npx --yes hyperframes@0.8.140 publish"
+  },
+  "dependencies": {
+    "cannon-es": "0.20.0",
+    "esbuild": "0.25.11",
+    "gsap": "3.14.2",
+    "three": "0.181.2"
+  }
+}

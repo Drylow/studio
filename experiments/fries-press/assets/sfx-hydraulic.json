@@ -1,0 +1,10 @@
+{
+  "provider": "Replicate",
+  "prediction": "bz21gvnzrhrmt0d13g7v1m6ybr",
+  "prompt": "Close microphone isolated hydraulic press foley: a heavy hydraulic piston lowers with a smooth low electric pump hum and restrained pressurized air hiss, gradually strains, then stops. Small industrial workshop mechanism, intimate dry sound, no loud engine roar, no music, no voices, no ringing, no background ambience.",
+  "source": "sfx-hydraulic-source.mp3",
+  "sha256": "10dc02fa729d9dd8d77be3e5457d29ea1077906b552ad5b2f3ceaa54c70409a2",
+  "duration_requested": 5,
+  "status": "succeeded",
+  "terms": "https://replicate.com/terms/"
+}
