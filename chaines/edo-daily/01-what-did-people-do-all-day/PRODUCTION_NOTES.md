@@ -64,6 +64,17 @@ for example the old white-skin color reference is not approved seating geometry.
   The mask experiment was abandoned. No alternate provider was substituted.
 
 ## Visual Limits
+Cadence review on 2026-10-08: all 214 additional drawings inspected. 33 selections
+held for targeted versioned retries: invented actors in empty cutaways, shifted
+seating, missing cups/tray, changed box proportions and detailed fingers.
+The original common style text named all three costume designs even in empty
+scenes; corrected empty-scene prompts no longer name absent people. Original
+executed prompts are preserved, not retroactively rewritten. Review currently
+accepts 273/306; montage remains blocked until corrected outputs are inspected.
+017's original Blue is empty-handed: only the original jade neighbor carries a
+bucket. The fixed ground bucket and well-rope bucket stay in place. 017-03 is
+accepted as that observed variant rather than falsely claiming Blue carries it.
+
 Repeated architectural anchors, cast designs and costume colors are visually
 checked against actual reference images, not declared correct from prompts alone.
 These remain generative drawings, not pixel-identical composites. Major furniture

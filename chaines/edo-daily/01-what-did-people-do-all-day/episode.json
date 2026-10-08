@@ -958,7 +958,7 @@
         "blue"
       ],
       "narration": "neighborhoods. That does not make every neighbor your best friend.",
-      "action": "Blue shifts his stance slightly while retaining the same water bucket and the pale-gray neck towel; show original neighboring doors, well and broom unchanged.",
+      "action": "Blue remains empty-handed at the doorway while the original jade neighbor walks past carrying his same wooden bucket; fixed left and well buckets retained.",
       "sources": [
         "S01",
         "I"
@@ -971,7 +971,8 @@
       "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/017-03.txt",
       "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-03.png",
       "motion": "zoom_out",
-      "parent_shot": "017"
+      "parent_shot": "017",
+      "accepted_variant": "Reviewed pose variant agrees with original parent state and narration; requested Blue carrying a bucket was not accepted."
     },
     {
       "id": "017-04",

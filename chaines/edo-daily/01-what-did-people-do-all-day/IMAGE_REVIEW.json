@@ -98,18 +98,20 @@
   "009-02": {
     "id": "009-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/009-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "014ad4f6327e6babbcf2d250c3ac55341c94a1df0ca6711e1bf2ead26169bbee",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same empty ROUND handled basket and burgundy/ochre clothes; looking inside, unchanged produce and cloth shelves.",
+    "date": "2026-10-08"
   },
   "009-03": {
     "id": "009-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/009-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8cf831d82da176861ff460e9c153f3147378865c214901088c5ef9ab9c9df1b1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same handled basket retained, Red looking toward existing cloth shelf; original architecture and produce.",
+    "date": "2026-10-08"
   },
   "010-01": {
     "accepted": true,
@@ -123,26 +125,29 @@
   "010-02": {
     "id": "010-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/010-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "9f5c49d03fe49ad794f02e399b5657b3a6470a83c73317058d67e41d777426d7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Approved original anonymous waterfront workers retained in facade-focused crop; same warehouses, bales and single boat.",
+    "date": "2026-10-08"
   },
   "010-03": {
     "id": "010-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/010-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "cdb0775cdf9360eb0ff637c641c80c9e7d424e797e87fb338613fa26237ddb6e",
+    "reviewer": "Codex visual inspection",
+    "notes": "New close boat/cargo insert in original waterfront. No named cast, same warehouse shapes and single boat.",
+    "date": "2026-10-08"
   },
   "010-04": {
     "id": "010-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/010-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e7bb3c85e5d8154828d312bcfb002c467af1264feba1d2b11654ab0cf0e43505",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same anonymous waterfront workers, carried loads and single boat; bridge-focused panel, no new government building.",
+    "date": "2026-10-08"
   },
   "011-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/011-continuity.png",
@@ -157,26 +162,29 @@
   "011-02": {
     "id": "011-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/011-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "203005e3e517fe4147c59795fcc8a7c7ab81ff1b64054ce5bc504ab91cd8dd9c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both partners, gray tool roll and round empty basket retained, indigo/burgundy clothing and original alley.",
+    "date": "2026-10-08"
   },
   "011-03": {
     "id": "011-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/011-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "62f257ca567046ac15884931dd5aa34379ce96fad1d18dfee129a263dc0b1395",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both partners and carried props retained; Blue's free mitten gesture. Original well/broom.",
+    "date": "2026-10-08"
   },
   "011-04": {
     "id": "011-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/011-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "3f07d559ad98f3ff05c8d3332f7da7c4701cd0dc2faf6a87536499b189101df1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both partners step forward; SAME gray tool roll and basket retained, outfits unchanged.",
+    "date": "2026-10-08"
   },
   "012-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png",
@@ -191,18 +199,20 @@
   "012-02": {
     "id": "012-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/012-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ed1f775200762078502ea1baf72d9a7a8ff856a411d0e9b860bf61ff6d28c939",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both partners seated on original near/right bench, two table cups, three counter cups/kettle retained.",
+    "date": "2026-10-08"
   },
   "012-03": {
     "id": "012-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/012-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e00626132bbd6213b668ff46e205daf7906c3d92a99a26663cb4c1b151c7e7a4",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both partners look toward water, two table cups and original counter retained; no extra bench.",
+    "date": "2026-10-08"
   },
   "013-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/013-continuity.png",
@@ -226,10 +236,11 @@
   "013-03": {
     "id": "013-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/013-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "833d281625d06d97664a41c056960249ba88312c5c6e8981dd91cb70ba44e255",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue empty hands after folding original bedding; original teapot, empty table and ONE left cushion.",
+    "date": "2026-10-08"
   },
   "014-01": {
     "accepted": true,
@@ -243,26 +254,29 @@
   "014-02": {
     "id": "014-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/014-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "885843532b723ac621ad59b1a2bc8262fa97db4d0507019aca1d3aaf9d2dbb15",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty table/shoji detail, ONE navy cushion naturally visible; other objects outside detail crop.",
+    "date": "2026-10-08"
   },
   "014-03": {
     "id": "014-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/014-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "3944f8c2430e75e409646f215c7c0ac14d85971fe56d78207aa8e783e031f5bc",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original folded white/navy bedding and gray teapot in left recess; no duplicated bedding/vessel.",
+    "date": "2026-10-08"
   },
   "014-04": {
     "id": "014-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/014-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0dcfafa4f90830fec3343c19b5526cbb70c238fbfd17f77e3924f38952fc2ba3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Right doorway/shoji/floor detail, original table and ONE cushion naturally cropped.",
+    "date": "2026-10-08"
   },
   "015-01": {
     "accepted": true,
@@ -276,26 +290,29 @@
   "015-02": {
     "id": "015-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/015-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "22d5d7f46934b6ab4f2476e587b20a5100f0a21bad50aeb05d3f97a6282e3d7a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original left doorways and broom in detail crop; no added buildings or figures.",
+    "date": "2026-10-08"
   },
   "015-03": {
     "id": "015-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/015-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "2ccab793adf68a9ef2dddf094e22624064b06f48b5ce72decae4a612c8f2adb0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same FOUR original anonymous doorway adults in their original outfits, same well/broom/buckets.",
+    "date": "2026-10-08"
   },
   "015-04": {
     "id": "015-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/015-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c16459c6f331f715a0a1efd9a71e37ec4fa84af6914bb84ff152dd8f99a72aa0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same FOUR anonymous adults, near/right well and original left doorways; no new cast.",
+    "date": "2026-10-08"
   },
   "016-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/016-continuity.png",
@@ -310,18 +327,20 @@
   "016-02": {
     "id": "016-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1c27b01b6c374d0080425ee1d4d2dcbf278a6cdaf269bcc284d324de3639b770",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red releases original ROUND handled basket right doorway; same gray parcel on table, ONE cushion.",
+    "date": "2026-10-08"
   },
   "016-03": {
     "id": "016-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a5c574f9f5b754b3d6a264ee0e6f032d63b171388d91b9f5a248c901efbb6193",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red near original basket and gray tabletop parcel; original architecture and ONE cushion retained.",
+    "date": "2026-10-08"
   },
   "016-04": {
     "id": "016-04",
@@ -329,7 +348,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Pointing finger appeared; needs smooth CLOSED oval mitten gesture."
   },
   "017-01": {
     "accepted": true,
@@ -346,15 +365,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Carried bucket switched from jade neighbor to Blue; preserve Blue empty-handed and neighbor carrying."
   },
   "017-03": {
     "id": "017-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e3f7af50fca17e4013c8da91ba7008b63451f1629b281118ca57dd0748119213",
+    "reviewer": "Codex visual inspection",
+    "notes": "Accepted pose variant: Blue remains EMPTY-handed at doorway; seed's jade neighbor retains his original carried bucket. Fixed left bucket and well bucket stay. This matches original scene 017, unlike the requested-but-rejected Blue carrying a bucket.",
+    "date": "2026-10-08"
   },
   "017-04": {
     "id": "017-04",
@@ -362,7 +382,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Duplicate personal bucket appeared in Blue's hand; Blue must stay empty-handed, original neighbor retains his bucket."
   },
   "018-01": {
     "accepted": true,
@@ -376,18 +396,20 @@
   "018-02": {
     "id": "018-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/018-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "845efbfa960eb21471ac54396c15e93fd194c0601ef705cedb875922a234f28d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue uses SAME rope/well bucket, original fixed left bucket retained, white mittens; no second personal pail.",
+    "date": "2026-10-08"
   },
   "018-03": {
     "id": "018-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/018-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "037bc9e243a4eb6c44309588c4748c736877c4329b919c9c7e237adb487e79bb",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue adjusts SAME well bucket at rim, original fixed left bucket retained, indigo/pale towel/gray sash.",
+    "date": "2026-10-08"
   },
   "019-01": {
     "accepted": true,
@@ -401,26 +423,29 @@
   "019-02": {
     "id": "019-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/019-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5c145892313cf92ba00717fbf3fc5907c28656f6c26a508e3c6547b9a9e57302",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original well, SAME rope bucket, masonry and nearby original bucket in closer panel; no pipes.",
+    "date": "2026-10-08"
   },
   "019-03": {
     "id": "019-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/019-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "679d532afcc6c28cea408dd087bdb986b0e7d0dc7f37b7a6810107aac694a2c7",
+    "reviewer": "Codex visual inspection",
+    "notes": "SAME rope bucket just above original well with a few water droplets; no extra bucket, original masonry.",
+    "date": "2026-10-08"
   },
   "019-04": {
     "id": "019-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/019-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a4212f679d305bfe5a3be70528f17ddd17de0fac5902c4dc6224f6149ae2562d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original empty well/alley panel, rope bucket, broom and fixed buckets retained.",
+    "date": "2026-10-08"
   },
   "020-01": {
     "accepted": true,
@@ -434,10 +459,11 @@
   "020-02": {
     "id": "020-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "454236a09939b24a9db14db96068315608bcfb5a31bc943630b3f788c6487252",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original empty waterfront, same single boat/bales/warehouses; illustrative quay, not an aqueduct.",
+    "date": "2026-10-08"
   },
   "020-03": {
     "id": "020-03",
@@ -445,15 +471,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: three invented actors and cargo activity in empty waterfront."
   },
   "020-04": {
     "id": "020-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c5957e2cbf4bd35ecee1c995a59117bb8cb7efe20d420f662c2940ff4a897131",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty quay retained; close bridge rail, original boat and warehouses.",
+    "date": "2026-10-08"
   },
   "021-01": {
     "accepted": true,
@@ -467,18 +494,20 @@
   "021-02": {
     "id": "021-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/021-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d0f931c72d7046f55d8aff4510aafb5adf214064343d35a76ba6e68f8a90c28f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue lowers his personal filled pail beside well; Red holds original basin. Fixed left and rope pails retained.",
+    "date": "2026-10-08"
   },
   "021-03": {
     "id": "021-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/021-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "bbed3b2f7e75ee7268c3827ebb802efcb1510594b04dcf6b783329a645622364",
+    "reviewer": "Codex visual inspection",
+    "notes": "Personal filled pail now grounded right; Blue and Red beside original well, same clothing and basin.",
+    "date": "2026-10-08"
   },
   "022-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/022-continuity.png",
@@ -493,18 +522,20 @@
   "022-02": {
     "id": "022-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/022-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "266e5b8745f8944c5c62f706e909bb3aadf7603e12b38776caa0da095a898402",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red at doorway; personal pail and handled basket grounded, empty table and single left cushion.",
+    "date": "2026-10-08"
   },
   "022-03": {
     "id": "022-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/022-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "165ecef15216afcc8f18388a719aa64e259582c071cbb498dc5c35cf8b7fdfac",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red folded mitten pose by doorway; same pail and basket, bedding and teapot retained.",
+    "date": "2026-10-08"
   },
   "023-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png",
@@ -519,26 +550,29 @@
   "023-02": {
     "id": "023-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/023-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "b26283d2ece6296836bad8ac99b1cc955e3086856df1decf669df5b7a9ac5a99",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same seated pair and two rice/two soup/one vegetable dish. Red conversational mitten gesture.",
+    "date": "2026-10-08"
   },
   "023-03": {
     "id": "023-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/023-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "46d4b64c9a6d1bf0082bf810c70ee294d051994fcc512a3be6cfdf84406c9db8",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair observes unchanged household meal; original seating and room retained.",
+    "date": "2026-10-08"
   },
   "023-04": {
     "id": "023-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/023-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e3cc7a3018a1efbb39ac6a73d93e10c41240003468d059d970a87a1481f148d8",
+    "reviewer": "Codex visual inspection",
+    "notes": "Accepted pose variant: both lift original rice bowls, leaving two soups and one vegetable dish on table.",
+    "date": "2026-10-08"
   },
   "024-01": {
     "accepted": true,
@@ -555,23 +589,25 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: three invented actors and wheelcart in empty market."
   },
   "024-03": {
     "id": "024-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0b4953fd190ba362ee73c1e8965c8b10a91e363898f84ebb3d199efdae4f17e7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty market close view of original three produce baskets, cloth shelves and bale stack.",
+    "date": "2026-10-08"
   },
   "024-04": {
     "id": "024-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a93d8248f484067309e64af413886bca2f20a3558b61a2b4a35c327e72815691",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty market wider view; same three baskets and aisle.",
+    "date": "2026-10-08"
   },
   "025-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/025-continuity-v2.png",
@@ -595,10 +631,11 @@
   "025-03": {
     "id": "025-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/025-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "6db3233087ba7ca0f8d2066e406fb14ad41e4a3c3b90fbaa8d7510e6d1a93f1e",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both rice bowls returned to table; two soups and vegetable dish preserved, same seats.",
+    "date": "2026-10-08"
   },
   "026-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/026-continuity.png",
@@ -613,10 +650,11 @@
   "026-02": {
     "id": "026-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/026-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d5d4a373de4fb9f418dca9ab85cb7834ca16f68f18ef083e60cfcf8489c7c57d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red stands with original empty handled basket; Blue seated with original wooden food container and lid.",
+    "date": "2026-10-08"
   },
   "026-03": {
     "id": "026-03",
@@ -624,7 +662,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Red sits again after standing in preceding 026-02; breaks departure continuity."
   },
   "027-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/027-continuity.png",
@@ -639,26 +677,29 @@
   "027-02": {
     "id": "027-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/027-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e8aad9a990ec230f71184df1e1b4d4c9be00e7060add661762ed2123dbf3cd80",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue at left door with same gray tied tool roll; original distant sweeping neighbor retained.",
+    "date": "2026-10-08"
   },
   "027-03": {
     "id": "027-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/027-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "6a9833c898ba9f67b062b3ad67c564b979eb3697a883b27e727944929f185da1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue steps out with same gray tied roll, same neighbor and well.",
+    "date": "2026-10-08"
   },
   "027-04": {
     "id": "027-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/027-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7ad025cae1877a27e5774f9ea3c82660c95db9aeca2d812f63a23e6359e8e98c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue begins walking away; original roll at waist, same scarf and original distant neighbor.",
+    "date": "2026-10-08"
   },
   "028-01": {
     "id": "028-01",
@@ -673,18 +714,20 @@
   "028-02": {
     "id": "028-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/028-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "23c4d1ea1b28fdcd9b785d7acacf530b1b668de14bb6f8a96eff5eb84e767b28",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue tilts head up at threshold; same gray tied roll and empty alley.",
+    "date": "2026-10-08"
   },
   "028-03": {
     "id": "028-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/028-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "548d5d461dd8314e9253fc66613e23844caf227fb8dc372bfada7feef399713b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue glances along unchanged alley; same roll and canonical clothes.",
+    "date": "2026-10-08"
   },
   "029-01": {
     "accepted": true,
@@ -698,26 +741,29 @@
   "029-02": {
     "id": "029-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/029-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "45e24a67b3a66ffcfaf11a45121ef8d8ac86e9b187d69de8a21baceb4019a231",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original waterfront; single boat, bridge rails and warehouse row.",
+    "date": "2026-10-08"
   },
   "029-03": {
     "id": "029-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/029-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0a27c951bd000e2b837def4e12eb5f21d41c9554fa30962451a7cf4e819e318b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Natural roof and warehouse crop from same empty waterfront, no people or diagram.",
+    "date": "2026-10-08"
   },
   "029-04": {
     "id": "029-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/029-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1ccfcfd2b9eece0fe9cf8642471d4a0f5f35cab9c0292b777093e650c57a3d0a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original quay close composition; same single boat and cargo.",
+    "date": "2026-10-08"
   },
   "030-01": {
     "id": "030-01",
@@ -732,26 +778,29 @@
   "030-02": {
     "id": "030-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/030-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e7ec615814f41a477bcdbf92e538f3b35304a0fdb67f0a5911f9ecd8d3cc84ff",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red with original small empty handled basket; original ochre porter carries two produce baskets.",
+    "date": "2026-10-08"
   },
   "030-03": {
     "id": "030-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/030-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "139754bfa05422b313475b91be4c304b7d259eeab4546c677d3c519143208a76",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same Red and ochre porter, market geometry and carried basket counts retained.",
+    "date": "2026-10-08"
   },
   "030-04": {
     "id": "030-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/030-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5596f7c14f32ae5c9dac827e844f245274c275a0426a6e2849cafffcebca3a4f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts original empty basket slightly; same porter and two shoulder-pole baskets.",
+    "date": "2026-10-08"
   },
   "031-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/031-continuity.png",
@@ -766,26 +815,29 @@
   "031-02": {
     "id": "031-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/031-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ae01c7efd611befb7bc8e71128284026bff5ca8619528e15643ab66dc4670396",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue walks bridge with original gray roll; same two distant original bridge walkers.",
+    "date": "2026-10-08"
   },
   "031-03": {
     "id": "031-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/031-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "4d9d4bf42469e1d8be2cec37e2081eaedf50d95b48dd849e0aed70239bffda7b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue turns head along bridge; gray roll and distant pair retained.",
+    "date": "2026-10-08"
   },
   "031-04": {
     "id": "031-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/031-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "365d4c250d3bf73acfec51417c88509b73a5c3cbb7ab451dac391439f46c0ac1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue takes next step with gray roll; bridge boat and original distant pair retained.",
+    "date": "2026-10-08"
   },
   "032-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/032-continuity.png",
@@ -800,18 +852,20 @@
   "032-02": {
     "id": "032-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/032-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "9a22ddfa103620f5f6cb2dac733b2a08eb685a5824877057adf73234a797e215",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue holds original rimmed lid above same open box, original bench tools.",
+    "date": "2026-10-08"
   },
   "032-03": {
     "id": "032-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/032-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8863ab9b314ac45c64b8d1d17ff37a5dcda4b3d05a446295f5a4d1fb02848e44",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original single lid placed right of open box, Blue empty mittens; plane left and tools right.",
+    "date": "2026-10-08"
   },
   "033-01": {
     "accepted": true,
@@ -825,10 +879,11 @@
   "033-02": {
     "id": "033-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "6867336ba057148d5d1f568048601079095d22c919e545eb442273f0444326ea",
+    "reviewer": "Codex visual inspection",
+    "notes": "Natural close view of original 033 open joined box and rimmed lid; original plane left and mallet/chisel right. Perspective enlarges box.",
+    "date": "2026-10-08"
   },
   "033-03": {
     "id": "033-03",
@@ -836,7 +891,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: three invented actors, cream faces, in empty joinery close view."
   },
   "033-04": {
     "id": "033-04",
@@ -844,7 +899,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: unmotivated large curled shavings appear around unchanged still-life."
   },
   "034-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity-v2.png",
@@ -862,23 +917,25 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: original wide box replaced by small deep cube lifted by Blue."
   },
   "034-03": {
     "id": "034-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "61ffcec2885d5f54cea97b34428d48c7b363852eea55e76191b471ead322baba",
+    "reviewer": "Codex visual inspection",
+    "notes": "Accepted action variant: Blue checks same thin board on bench; plane parked left, same open box/lid right.",
+    "date": "2026-10-08"
   },
   "034-04": {
     "id": "034-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "657c2182351247e78e826efb5159a3bf3ca9ac3eece72a0d2ac536f47b4c49c0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue planes thin board with same hand plane; original open box, lid, mallet and chisel retained.",
+    "date": "2026-10-08"
   },
   "035-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/035-continuity.png",
@@ -896,15 +953,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: unsolicited magnifying inset and diagram leader lines."
   },
   "035-03": {
     "id": "035-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/035-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "3d021f630e3080f66643b4c33b4e696b95cdd42bd8505854377bccfa40986075",
+    "reviewer": "Codex visual inspection",
+    "notes": "Natural joinery close view of original open box and rimmed lid; no magnifying inset or labels.",
+    "date": "2026-10-08"
   },
   "036-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/036-continuity.png",
@@ -919,18 +977,20 @@
   "036-02": {
     "id": "036-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/036-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "69de3c2d1c735f90dcaf568b74637a32f7b757960f1fc64c7d2155751ee0db5c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue tests single lid on same closed wide box; tools and workshop retained.",
+    "date": "2026-10-08"
   },
   "036-03": {
     "id": "036-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/036-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5def5666a4bd46b066731df101387752a9a46de24b1c0b4518b4ff57b561a52a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue relaxes mittens beside same closed wide box; no duplicate lid.",
+    "date": "2026-10-08"
   },
   "037-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/037-continuity-v2.png",
@@ -945,18 +1005,20 @@
   "037-02": {
     "id": "037-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/037-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e0cc97365d0740182c367ebde1347a9b3dc3daacf4528f288301ec823badd6a7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red with same folded gray garment at bench; same closed wide box and tools.",
+    "date": "2026-10-08"
   },
   "037-03": {
     "id": "037-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/037-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d9d29b38c5a2e030f1a89ca1634065990a9fb5789a8004d9134f931fc656b6f1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red steps slightly toward door with same gray fold; closed box remains center.",
+    "date": "2026-10-08"
   },
   "038-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/038-continuity.png",
@@ -974,23 +1036,25 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Red pointing finger and closed box reopens without narrated action."
   },
   "038-03": {
     "id": "038-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0bed7bc39415412fe4f2dad227b02b3f826419710a062346de5aa6df0eb86d3a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original Blue seated and Red holding gray garment; closed wide box and original tools retained.",
+    "date": "2026-10-08"
   },
   "038-04": {
     "id": "038-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "b87c25804a3d70abca8ebadcb183e837ae61c4cb436da0792863fa132f681b1e",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue glances toward door while Red holds gray garment; closed box and original tools unchanged.",
+    "date": "2026-10-08"
   },
   "039-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/039-continuity.png",
@@ -1005,18 +1069,20 @@
   "039-02": {
     "id": "039-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/039-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "fd3bfd58a4369d15c8a3ff378a523d31187b22d4c46a3e9c0903949fae6f9e84",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red inspects opened gray garment seam on home table; original sewing box and one left cushion.",
+    "date": "2026-10-08"
   },
   "039-03": {
     "id": "039-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/039-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1a976d74e7e48fa8b21bc377c6d8634badfd9b309afaf2c0da36ddb74e956937",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts edge of same gray garment; sewing box, bedding, teapot and single left cushion retained.",
+    "date": "2026-10-08"
   },
   "040-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/040-continuity.png",
@@ -1031,10 +1097,11 @@
   "040-02": {
     "id": "040-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/040-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "89e2e4cb63e1bdc8390eecf6fe89cda71a1d34cdeebed2a4bf2a005853f5d8a8",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red smooths same folded gray garment; original sewing box left, single left cushion.",
+    "date": "2026-10-08"
   },
   "040-03": {
     "id": "040-03",
@@ -1042,7 +1109,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: gray garment pushed into sewing box instead of original handled basket; detailed fingers."
   },
   "041-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/041-continuity.png",
@@ -1057,18 +1124,20 @@
   "041-02": {
     "id": "041-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/041-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "9fedf84f711f9069f10c60420d19884becea48fa7b56edfede726ad735dc27b8",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red adjusts same gray garment inside original round handled basket, unchanged market.",
+    "date": "2026-10-08"
   },
   "041-03": {
     "id": "041-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/041-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "6dfea93daaa32f9872d9eefdb866da19ab5f01fffe05f11e678d87792c854fc3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red walks with original handled basket and gray garment visible.",
+    "date": "2026-10-08"
   },
   "042-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/042-continuity.png",
@@ -1083,18 +1152,20 @@
   "042-02": {
     "id": "042-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/042-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "600ff3dc4d55c16f862c5beeeb4ffc347bc4be20aa9d9b0cdaf48edf1e59d376",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lowers same basket by produce shelf; same gray garment retained.",
+    "date": "2026-10-08"
   },
   "042-03": {
     "id": "042-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/042-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8c9afe06b19e413b1419f22b422a6874940193d44eb2b0e9a495864d80fb03fc",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red steps forward holding original basket and gray fold.",
+    "date": "2026-10-08"
   },
   "043-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/043-continuity.png",
@@ -1109,26 +1180,29 @@
   "043-02": {
     "id": "043-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/043-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1fcec1f0d966c4aeb134b0a6e6a45fe744754262351a8fe4145d590af0b76e72",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red holds same round basket and gray fold; original distant plum passerby retained.",
+    "date": "2026-10-08"
   },
   "043-03": {
     "id": "043-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/043-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "64a929de076882ba7eb2d337524828e451c42de89b2b5e6423471a6ca36d3fcc",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red looks along aisle holding same round basket and gray fold; original passerby retained.",
+    "date": "2026-10-08"
   },
   "043-04": {
     "id": "043-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/043-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7efd345eea9b8d1625167849d82a40e854d44db38632cdbcafbdf55bd422950a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red walks away with same round basket and gray fold; original plum passerby.",
+    "date": "2026-10-08"
   },
   "044-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/044-continuity.png",
@@ -1143,18 +1217,20 @@
   "044-02": {
     "id": "044-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "54d32ef470198f2aa6d1da0b4c08eda602e9021c92e782945ec12d0e8202624f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts one ingredient from same handled produce basket; Blue remains seated left, table empty.",
+    "date": "2026-10-08"
   },
   "044-03": {
     "id": "044-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d60fa06da3173fea372f3ec31f731240adc4dc9e7273e6770385ea23fd7faeaf",
+    "reviewer": "Codex visual inspection",
+    "notes": "Ingredient returned to original basket at right doorway; original seated pair, empty table.",
+    "date": "2026-10-08"
   },
   "044-04": {
     "id": "044-04",
@@ -1162,7 +1238,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Blue has an open multi-finger hand instead of closed oval mitten."
   },
   "045-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/045-continuity.png",
@@ -1177,26 +1253,29 @@
   "045-02": {
     "id": "045-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/045-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "209178cddb9b3f8ba88276f8a7dd1f3b9d169e71ccea74d7edd2e1f248fb0358",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue rests empty mitten on bridge rail, original scarf and clothes, no parcel.",
+    "date": "2026-10-08"
   },
   "045-03": {
     "id": "045-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/045-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e61e537cb44bc8cff3c464d7bd59a5f8d22b5246137a8b5bde53fa3b8c8f76ee",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue steps away from rail empty-handed, no prematurely collected parcel.",
+    "date": "2026-10-08"
   },
   "045-04": {
     "id": "045-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/045-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "866b663a4ed2691463fc1f57c432a9fabd4c0a6657554f9c6cb92c47bc2b04fb",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue walks empty-handed along original bridge, no parcel.",
+    "date": "2026-10-08"
   },
   "046-01": {
     "accepted": true,
@@ -1210,26 +1289,29 @@
   "046-02": {
     "id": "046-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/046-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ee47b3a6ee2e4c3193ec8919a7f6fee350c9771dad6ba8e73ed3f79e574977ea",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original anonymous charcoal customer and brown vendor; three original distant pedestrians retained.",
+    "date": "2026-10-08"
   },
   "046-03": {
     "id": "046-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/046-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7d6b2d86410421400c724aac8d7411c02436301c2ab476f82b4ca208c4b80a3a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same official and vendor, wrapped purchase unchanged; original three distant walkers.",
+    "date": "2026-10-08"
   },
   "046-04": {
     "id": "046-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/046-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "392327a9f26762fc5a22c77e0ce4c7ad236bbeaf4381a7e87cf0fe451a9fb7b6",
+    "reviewer": "Codex visual inspection",
+    "notes": "Authored cutaway to empty same market produce counter; no new goods, fighting or costume.",
+    "date": "2026-10-08"
   },
   "047-01": {
     "accepted": true,
@@ -1243,26 +1325,29 @@
   "047-02": {
     "id": "047-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/047-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d96d44eaedd96ab1f0801bdc25fbf1c561f8859075dee765bb3881f877cac126",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green tends same produce baskets, jade/gray clothes unchanged.",
+    "date": "2026-10-08"
   },
   "047-03": {
     "id": "047-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/047-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "07ca633b7ffe14b8ae21ac6d80dc8b2554bd4a05a35a4d32ef580d52de898fe5",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green looks along original produce counter, same three baskets.",
+    "date": "2026-10-08"
   },
   "047-04": {
     "id": "047-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/047-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "77c753c832dca5765147ce1dd186896e0819e44f092a8c83949f4590cfa1f8a0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green lifts existing vegetable bunch; same counter inventory, jade clothes and oval mittens.",
+    "date": "2026-10-08"
   },
   "048-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/048-continuity.png",
@@ -1277,18 +1362,20 @@
   "048-02": {
     "id": "048-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/048-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5afaade9025a8a5a686054198001cb3d96e667be06b2380b42b6b4acc51a18d7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue lifts single lid over same shallow box as Green watches, tools unchanged.",
+    "date": "2026-10-08"
   },
   "048-03": {
     "id": "048-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/048-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8378e80f969ac72e0902a9318ab3903eadb78a84de73dd5ce2e01f1450c613c9",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue closes same shallow box; Green leans slightly, original tools retained.",
+    "date": "2026-10-08"
   },
   "049-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/049-continuity.png",
@@ -1303,18 +1390,20 @@
   "049-02": {
     "id": "049-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/049-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "4d3f1a885657b6be422d0daf643828890ffd11ddfeadd5a74d265616f0d1a3e4",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green carries same gray wrapped wide box toward doorway; bench now clear of sold box.",
+    "date": "2026-10-08"
   },
   "049-03": {
     "id": "049-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/049-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ee1a63b0aa72d5dc2703784e0e54a0228e9063693cd73ef16e1cdb372885f950",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green exits with same wrapped box; original workshop tools stay on bench.",
+    "date": "2026-10-08"
   },
   "050-01": {
     "accepted": true,
@@ -1328,26 +1417,29 @@
   "050-02": {
     "id": "050-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/050-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "2e238628648608e7a3457c0468673af261383ab6c3fa627de940c9689c7a8b4f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red and Green at produce counter; original plain copper coins and three produce baskets.",
+    "date": "2026-10-08"
   },
   "050-03": {
     "id": "050-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/050-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "53219af9cf4b818d24d932d4e21afacc4e7c0fa5ba5f5b3597b698ca292105ee",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green reaches toward same small copper coins; no giant coin, original pair.",
+    "date": "2026-10-08"
   },
   "050-04": {
     "id": "050-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/050-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c05eb76f5fbb04c3dab694eac21a5d3af17760cfb28ac390608ffa5b36f132b1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Both look at same copper coins on counter, same produce baskets.",
+    "date": "2026-10-08"
   },
   "051-01": {
     "accepted": true,
@@ -1361,26 +1453,29 @@
   "051-02": {
     "id": "051-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/051-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "cab22d76691992da918233fc9a2be2d3a7c45c01a1d1d27ff0afae0c1d3774f3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts one original round vegetable; same handled shopping basket.",
+    "date": "2026-10-08"
   },
   "051-03": {
     "id": "051-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/051-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "949411611108fc815b224b17212483fbfca2f78c6dc2e4dd0edc16800987bde7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red considers purchase with same handled basket, canonical burgundy/ochre.",
+    "date": "2026-10-08"
   },
   "051-04": {
     "id": "051-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/051-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a3197aaadbd15525b0dd919d70e69ff3a219b0eee833b611369ada0eb656ce5b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red walks away with purchased greens in original basket; market unchanged.",
+    "date": "2026-10-08"
   },
   "052-01": {
     "accepted": true,
@@ -1394,26 +1489,29 @@
   "052-02": {
     "id": "052-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/052-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "bf2775bf7a5e13769293c436ed1349aae6eda63a1fbc3f5ee3dd034f2f5a36c4",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green rearranges original round-vegetable basket; same counter and jade/gray clothes.",
+    "date": "2026-10-08"
   },
   "052-03": {
     "id": "052-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/052-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a31e3a12f73954228f7a3f60cdb20d89ed0113513aa68ae99d6fa4c6df512844",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green returns same vegetable basket to original right position.",
+    "date": "2026-10-08"
   },
   "052-04": {
     "id": "052-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/052-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "75e3eb7ac1c7de7c45a5f4dc60dcccc217530f02659012c3daea16b5f1a6c893",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green pauses after arranging produce; original three baskets, no added buyers.",
+    "date": "2026-10-08"
   },
   "053-01": {
     "accepted": true,
@@ -1427,26 +1525,29 @@
   "053-02": {
     "id": "053-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/053-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "26559172214f03a93e2317c8f5d6c06fa6452b667efee6e3c3a621c7e3de45b3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue faces original ochre vendor and original small wooden food box.",
+    "date": "2026-10-08"
   },
   "053-03": {
     "id": "053-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/053-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "bfca4126042258e7e58e61d038ebee0817e2e78ce35b274be97de8ab0755612a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Ochre vendor lifts lid of original food box as Blue watches, no other item introduced.",
+    "date": "2026-10-08"
   },
   "053-04": {
     "id": "053-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/053-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0fa5e546ff77d6aec97c54216f03b46bd08dd0b3dcd44886a622f06f5b678220",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue bends to inspect original vendor's wooden food box; canonical outfit unchanged.",
+    "date": "2026-10-08"
   },
   "054-01": {
     "accepted": true,
@@ -1460,26 +1561,29 @@
   "054-02": {
     "id": "054-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/054-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e7c6d12fe006aa141dfe828886f8e551ba1edfc558909b0f34c1a040e994ea45",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original single grilled fish on rectangular plate and vegetables in striped bowl, same wooden tray.",
+    "date": "2026-10-08"
   },
   "054-03": {
     "id": "054-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/054-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ab79982eed468282683f9aa03d6c9e1b273c4dd6a510c14053c6d865f6f18973",
+    "reviewer": "Codex visual inspection",
+    "notes": "Natural close framing of same fish, striped vegetable bowl and tray.",
+    "date": "2026-10-08"
   },
   "054-04": {
     "id": "054-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/054-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "62f6f8cdf8224388497f84118dd0b1d0a24cdea05eb79f32aee30f99a9ba8593",
+    "reviewer": "Codex visual inspection",
+    "notes": "Wider original prepared food tray; single fish and vegetable bowl unchanged.",
+    "date": "2026-10-08"
   },
   "055-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/055-continuity.png",
@@ -1497,23 +1601,25 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: original single tea cup no longer visible; meal inventory must remain."
   },
   "055-03": {
     "id": "055-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "215f4148b3b8b010b38bfc436074e731e80c4885f7e3d12619023eb08df9501c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue lifts original cup; rice bowl and vegetable dish remain, three counter cups and kettle.",
+    "date": "2026-10-08"
   },
   "055-04": {
     "id": "055-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "9c65531579b35a8802b1316a87c47fb644ab529c8266dfafd1a34eb6bf5cf7c0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Cup returned beside same rice/vegetables; Blue alone on original near bench.",
+    "date": "2026-10-08"
   },
   "056-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png",
@@ -1540,7 +1646,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: pair moved behind table, new seating perspective/bench geometry instead of original near bench."
   },
   "057-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/057-continuity-v2.png",
@@ -1555,18 +1661,20 @@
   "057-02": {
     "id": "057-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/057-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "55b9407479aa4a8db365c8f1ce9f59aec0a6de000750d4eb50d36f1af6251a7a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue gestures to Green; same gray wrapped parcel on right bench, two cups and original meal dishes.",
+    "date": "2026-10-08"
   },
   "057-03": {
     "id": "057-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/057-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "6ad4815446ced1bc8e14481e738b2bbe43060ff78e862b3031120a6ec3170319",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green leans toward Blue; same parcel, two table cups, original rice/vegetable dishes.",
+    "date": "2026-10-08"
   },
   "058-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/058-continuity-v2.png",
@@ -1581,26 +1689,29 @@
   "058-02": {
     "id": "058-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/058-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "dae61281c3a4838e28f9244bdbe7087102aa9f5b9d3861dc3a0501ea9ae0d1fd",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green stands lifting same gray wrapped parcel from right bench; Blue remains seated.",
+    "date": "2026-10-08"
   },
   "058-03": {
     "id": "058-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/058-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "9d139aba617bc0b82d6643e154d989f3fc2edd3a78953ac2c1a5524932c9e20c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green steps away carrying same wrapped parcel, no duplicate on bench.",
+    "date": "2026-10-08"
   },
   "058-04": {
     "id": "058-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/058-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0b310d72f26779d25fb34dfad31daa138431afb8e59ce70e976a006ce631e723",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green continues departure with original wrapped parcel; two cups and meal remain.",
+    "date": "2026-10-08"
   },
   "059-01": {
     "accepted": true,
@@ -1614,26 +1725,29 @@
   "059-02": {
     "id": "059-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/059-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7565cab927c9305b69e5d64509ec2b3cf067d653393f77c41cab7b9091350f6e",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue leans toward original waterfront rail empty-handed; original indigo/gray and scarf.",
+    "date": "2026-10-08"
   },
   "059-03": {
     "id": "059-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/059-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a84f879b435270bbf687de5a185e227a0ee8f3fcf8779f15234974281ce11dec",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue rests closed mittens on same bridge rail; boat and cargo unchanged.",
+    "date": "2026-10-08"
   },
   "059-04": {
     "id": "059-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/059-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "f19f995c1b5e7124c72c4f3bf2104d798e1ab90e8392aaf29223f5df47242faf",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue watches waterfront from same rail; no added actors or props.",
+    "date": "2026-10-08"
   },
   "060-01": {
     "accepted": true,
@@ -1650,15 +1764,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three loading actors in empty original quay still-life."
   },
   "060-03": {
     "id": "060-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/060-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "08c0be6c1258c67d233774ebc60c5de7fa8cbd416ae0cf6d7dd9db82b55c1dee",
+    "reviewer": "Codex visual inspection",
+    "notes": "Natural close view of original mooring rope, wooden boat side, bales and quay. Empty.",
+    "date": "2026-10-08"
   },
   "061-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/061-continuity.png",
@@ -1673,26 +1788,29 @@
   "061-02": {
     "id": "061-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/061-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7625790a193d97d9a10c82212f10bba3472e0c27a128513fc77d7062789ef95d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green carries same flat gray wrapped parcel across bridge.",
+    "date": "2026-10-08"
   },
   "061-03": {
     "id": "061-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/061-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d24a586cc035ea12502da47d38fce6295be3ac887e205c3ba9543d8d0bd57e02",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green turns head while carrying same flat gray parcel; unchanged bridge/boat.",
+    "date": "2026-10-08"
   },
   "061-04": {
     "id": "061-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/061-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "32d6ca9d9084d36400344cb46684f800b0b408f1f985c252d5a9472aa7186c75",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green takes another bridge step with same parcel and jade/gray costume.",
+    "date": "2026-10-08"
   },
   "062-01": {
     "accepted": true,
@@ -1706,18 +1824,20 @@
   "062-02": {
     "id": "062-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/062-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1d12013b95306e392d094bbe6844a44f3d3ae9a39dda271d4dd2b075d549721c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue empty-handed at rail, same single boat, warehouses and scarf.",
+    "date": "2026-10-08"
   },
   "062-03": {
     "id": "062-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/062-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7af097d0be46cd5e2f96873b0711c6e74476b2c2e523b1821457af050c576fbc",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue looks down from same rail; canonical mittens, boat and cargo retained.",
+    "date": "2026-10-08"
   },
   "063-01": {
     "accepted": true,
@@ -1734,7 +1854,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: original shavings tray disappears while gathering shavings."
   },
   "063-03": {
     "id": "063-03",
@@ -1742,15 +1862,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: original shavings tray disappears and empty lid replaces it."
   },
   "063-04": {
     "id": "063-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "007912906c705ecb15ff27c2c19fdde68e2eeef23d861ecd43470a26d0999e24",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original shavings tray retained on bench, Blue pauses by door; open box and tools remain.",
+    "date": "2026-10-08"
   },
   "064-01": {
     "accepted": true,
@@ -1764,10 +1885,11 @@
   "064-02": {
     "id": "064-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "4954bb959910f6a64b2507c7775bb51c83bf09266e8f16bf163f4d5cf5d1aaf0",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original alley architectural view for fire section, same well, fixed buckets and broom.",
+    "date": "2026-10-08"
   },
   "064-03": {
     "id": "064-03",
@@ -1775,7 +1897,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented Blue and Red well action in empty fire-prevention alley."
   },
   "064-04": {
     "id": "064-04",
@@ -1783,7 +1905,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three actors in empty fire-prevention alley."
   },
   "065-01": {
     "accepted": true,
@@ -1800,7 +1922,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three actors and changed outfits in empty waterfront."
   },
   "065-03": {
     "id": "065-03",
@@ -1808,7 +1930,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three cargo workers and cargo action in empty waterfront."
   },
   "065-04": {
     "id": "065-04",
@@ -1816,7 +1938,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three actors in empty waterfront."
   },
   "066-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/066-continuity.png",
@@ -1831,18 +1953,20 @@
   "066-02": {
     "id": "066-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/066-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c582a80e2e196cdffd60e25e18c02fda60ce4c215b787e7e5846ace9e0607be1",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lowers same covered dark cooking pot on same small stand, cloth in right mitten.",
+    "date": "2026-10-08"
   },
   "066-03": {
     "id": "066-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/066-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "4b6f0603c6b981e9ccb8654c015f1853ca617b290b4913a3855357063b5e78e6",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red wipes original cloth beside same pot; original gray teapot and bedding retained.",
+    "date": "2026-10-08"
   },
   "067-01": {
     "accepted": true,
@@ -1856,18 +1980,20 @@
   "067-02": {
     "id": "067-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/067-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "50bd8a3198d91f177b4530643313dfde9abd3c31780df2ab24aa2c9268efbd60",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue sets original hand plane by original box and lid; mallet/chisel stay.",
+    "date": "2026-10-08"
   },
   "067-03": {
     "id": "067-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/067-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "24388674b404a9893a4947486ba81b7b1811927f88cbc096020e6590daa6b099",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue pauses empty-handed after parking tools; same open box/lid and tools.",
+    "date": "2026-10-08"
   },
   "068-01": {
     "accepted": true,
@@ -1881,26 +2007,29 @@
   "068-02": {
     "id": "068-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/068-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "682302e0e713c626885bd776e4b9768bf9d2a6de48ee7746c35f842ef0ac767d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue approaches unchanged bath entrance with original folded gray cloth.",
+    "date": "2026-10-08"
   },
   "068-03": {
     "id": "068-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/068-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e65f59c69583f64eb0e574c368ab33b7f3935ca26dcc64b12d9cf11ce7db6904",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue adjusts original gray cloth with white mittens outside bath; same entrance.",
+    "date": "2026-10-08"
   },
   "068-04": {
     "id": "068-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/068-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "348642bf9a6cf2db2dc6c3981e3b4616a42207f37965cb52e1bf810de0eaae7d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue steps toward bath threshold carrying original gray cloth.",
+    "date": "2026-10-08"
   },
   "069-01": {
     "accepted": true,
@@ -1914,26 +2043,29 @@
   "069-02": {
     "id": "069-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/069-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0d6000d2e974d6d9592b61cf6febaa025d1b4ad61e6fa0d262d797e94a19baca",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red walks toward bath with original burgundy cloth, same doorway.",
+    "date": "2026-10-08"
   },
   "069-03": {
     "id": "069-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/069-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "07c7c8d6af5d1f4b18cf9dc202428b79ed437da996f5cfe1efefa2dd45ea9f4a",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red adjusts same burgundy folded cloth outside bath.",
+    "date": "2026-10-08"
   },
   "069-04": {
     "id": "069-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/069-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "2e5d254a5f8a171583e4ebec967f8b284fa70183eceb1f4ca996fad67d754272",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red waits outside bath holding original burgundy cloth; no nude scene.",
+    "date": "2026-10-08"
   },
   "070-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/070-continuity.png",
@@ -1948,18 +2080,20 @@
   "070-02": {
     "id": "070-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/070-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "2ecc272a46cb0807cf8843486c2f08cf59884c81a6149b150e15290b9342e316",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red outside bath holding respectively gray and burgundy cloth; unchanged uniforms.",
+    "date": "2026-10-08"
   },
   "070-03": {
     "id": "070-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/070-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d40cc76b713b16872672d6c77e3904fb99a0ea8e4b092b58b729344bff482650",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair looks toward same entrance with both original cloths; no clothing or color change.",
+    "date": "2026-10-08"
   },
   "071-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/071-continuity.png",
@@ -1974,18 +2108,20 @@
   "071-02": {
     "id": "071-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/071-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c1086888fc3a2ab39e60bdcd6eba0cae6e6e3dec447974a17d740974fed8a1b3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair returns along original alley with gray and burgundy bath cloths, unchanged clothes.",
+    "date": "2026-10-08"
   },
   "071-03": {
     "id": "071-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/071-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "731b51c4c2a222d3578cfe5bf2f171af4d1b41a9f83800b829dd722649ba5719",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red glances right while walking with same burgundy cloth; Blue same gray cloth.",
+    "date": "2026-10-08"
   },
   "072-01": {
     "accepted": true,
@@ -1999,26 +2135,29 @@
   "072-02": {
     "id": "072-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/072-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "0caf5c5974ef89382cdd3d237b046156144a4fd49615bd74e5954d01e1d938c3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green pauses facing same theater entrance, canonical jade/gray clothes.",
+    "date": "2026-10-08"
   },
   "072-03": {
     "id": "072-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/072-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c9d2001dec53d1e55c91dacc5684ecf39c179a7ab795dbeb0ef5ab3b7ab21aab",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green steps toward same theater entrance, no new prop.",
+    "date": "2026-10-08"
   },
   "072-04": {
     "id": "072-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/072-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "68539dd89dc1cf9c514a40293ceea402f450379df4b9a11741c058680e8851fc",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green stops at entrance under same banners and empty display.",
+    "date": "2026-10-08"
   },
   "073-01": {
     "accepted": true,
@@ -2032,18 +2171,20 @@
   "073-02": {
     "id": "073-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/073-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "77fec46bcf4566f3a29a457551de4d6008e30d7486213f62155503d4fb23f9db",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same original three anonymous theater visitors in navy/plum/olive covered clothes and bags.",
+    "date": "2026-10-08"
   },
   "073-03": {
     "id": "073-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/073-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "7e962ad9dc0a8294959dde6f2dd1ce79551a9f6234d0ed4a9fc9e50f5fcb4848",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original navy visitor turns toward counter, other original two wait with original bags.",
+    "date": "2026-10-08"
   },
   "074-01": {
     "accepted": true,
@@ -2057,10 +2198,11 @@
   "074-02": {
     "id": "074-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "fab701e8e045f24553e42027a7817e9d346aac69f4ab2c6e9af98d3e23a6fe1d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue bends toward original two monochrome architectural prints as Red watches.",
+    "date": "2026-10-08"
   },
   "074-03": {
     "id": "074-03",
@@ -2068,15 +2210,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Red has pointing finger instead of oval mitten."
   },
   "074-04": {
     "id": "074-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "bcbd1127889d7acb60c6518b6718602040e9d302ed6e61497ef164d50d9401e5",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue reflects by same two monochrome prints; Red's mittens closed, no new artifact.",
+    "date": "2026-10-08"
   },
   "075-01": {
     "accepted": true,
@@ -2090,26 +2233,29 @@
   "075-02": {
     "id": "075-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/075-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "b3f6fdca8f62a12ec75b1bcee4271eab695e0daba8ce9a8d8780631a91e8dfa9",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original two monochrome architectural prints on same theater display; no actors or extra print.",
+    "date": "2026-10-08"
   },
   "075-03": {
     "id": "075-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/075-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5932233e5b3c92db2516674c54c049d8264f58ac7e2e385fada34c767d83447c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Closer natural composition of same two prints and original wooden display.",
+    "date": "2026-10-08"
   },
   "075-04": {
     "id": "075-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/075-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "5a0735c2203e8a81a561d42522061d4b7f71d7d69d067b3d129f0d1134771d6e",
+    "reviewer": "Codex visual inspection",
+    "notes": "Wider same empty display outside theater, two original monochrome prints.",
+    "date": "2026-10-08"
   },
   "076-01": {
     "accepted": true,
@@ -2126,15 +2272,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Blue has detailed open fingers instead of oval mittens."
   },
   "076-03": {
     "id": "076-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/076-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "ec756160cc7cdf585c4caf67bd547fc16d65aff51fbc789c0055b0a23e839043",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green and Blue converse by same two prints, canonical clothes and no new props.",
+    "date": "2026-10-08"
   },
   "077-01": {
     "accepted": true,
@@ -2148,18 +2295,20 @@
   "077-02": {
     "id": "077-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/077-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "f7b99c1308da58e6ef04e30f5262b52e8c8a49cc8d9cedd95642fd06507786cf",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red begins leaving, Blue remains thoughtfully by same display.",
+    "date": "2026-10-08"
   },
   "077-03": {
     "id": "077-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/077-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "f97fdd8d12342b806093646ec877ff90f440792ec6d6207aadf1dd74bc1e7923",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue follows Red away from unchanged theater display.",
+    "date": "2026-10-08"
   },
   "078-01": {
     "accepted": true,
@@ -2173,10 +2322,11 @@
   "078-02": {
     "id": "078-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/078-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1b84b0c42767f974861dd1ce4150db88affaf0d7714817a0685fd88ac8963552",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty closing market crop, original three baskets and cloth shelves.",
+    "date": "2026-10-08"
   },
   "078-03": {
     "id": "078-03",
@@ -2184,7 +2334,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: invented three actors and vegetables held in empty closing market."
   },
   "079-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png",
@@ -2199,10 +2349,11 @@
   "079-02": {
     "id": "079-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "c8ae2ed6b773c14d46bce25b6dfc3f196466b5d03d8cc9e7055a1fb6b01112e2",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue drinks original cup and Red sits with basket on original near bench; second cup on table.",
+    "date": "2026-10-08"
   },
   "079-03": {
     "id": "079-03",
@@ -2210,7 +2361,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Blue teleports behind table rather than remaining on original near bench."
   },
   "079-04": {
     "id": "079-04",
@@ -2218,7 +2369,7 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: back-facing seating and extra bench geometry not original composition."
   },
   "080-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
@@ -2236,15 +2387,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: back-facing seating replaces original near bench geometry."
   },
   "080-03": {
     "id": "080-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/080-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d8eb690bfc68cbd17a7fc789479c8560be67ed1095c2f4bafeae3cfda569858c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair on original near bench, basket on ground right as original 080 seed, two cups remain.",
+    "date": "2026-10-08"
   },
   "081-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/081-continuity.png",
@@ -2259,18 +2411,20 @@
   "081-02": {
     "id": "081-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/081-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8a66f60c05411bb3a5aafdad6f79d5d0f2e24eaaa5fe999c29d4a2aa30f93e78",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green addresses original seated pair; original tall ingredient basket on ground, two cups and counter kettle/three cups.",
+    "date": "2026-10-08"
   },
   "081-03": {
     "id": "081-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/081-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "243d6cb2a7e0087abac0bd6e4012e75bedecd06f290cd6ba60fe7f743e63c328",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green leaves right, original seated pair and original tall ingredient basket retained.",
+    "date": "2026-10-08"
   },
   "082-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/082-continuity.png",
@@ -2288,15 +2442,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Blue sits behind table and new near bench appears."
   },
   "082-03": {
     "id": "082-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/082-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "4c7b74d8b4e28e322fa9701e499fb234968cd6bc019680fa53be9212f4f2ca28",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair leaves with original produce basket; same two cups remain on table and original bench.",
+    "date": "2026-10-08"
   },
   "083-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/083-continuity.png",
@@ -2311,18 +2466,20 @@
   "083-02": {
     "id": "083-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/083-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "745711b1102da8e83fc6e28d42404ecc3bdab36d924fbd0e1ea470c3e5f7cdcb",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair lifts original rice bowls at dusk; two soups and vegetable dish remain on table.",
+    "date": "2026-10-08"
   },
   "083-03": {
     "id": "083-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/083-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "708420b986712ad30cf7864a3d85e35067eb25dc5074b0c18f37e9b617266838",
+    "reviewer": "Codex visual inspection",
+    "notes": "Rice bowls returned, same two soups and vegetable dish, bare right mat and one left cushion.",
+    "date": "2026-10-08"
   },
   "084-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/084-continuity.png",
@@ -2337,18 +2494,20 @@
   "084-02": {
     "id": "084-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/084-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "651e9e7a8aed915c7a380ecf02766a9b4c030936d36305a59bab1d3240c09e15",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue adjusts original gray tied tool roll on table, Red attends basket right; same dusk room.",
+    "date": "2026-10-08"
   },
   "084-03": {
     "id": "084-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/084-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "32ff19c0034e871370ecae4aea43be6906827c0a52f207b938c38bffa22998e6",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts original dishes tray toward doorway; Blue retains original tied gray roll on table.",
+    "date": "2026-10-08"
   },
   "085-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/085-continuity.png",
@@ -2363,18 +2522,20 @@
   "085-02": {
     "id": "085-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/085-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "987090ffbc5679bd1664064de2abb568ce70ce4502b3350fb29ff60468dfc8b3",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue kneels left examining original gray tied roll; dish tray and basket retained at right doorway.",
+    "date": "2026-10-08"
   },
   "085-03": {
     "id": "085-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/085-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "b7b054d21612ef20b1081bf94987ff91589c7696a58dd7272fc08708e205ce4d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue lifts same tied gray tool roll; original tray/basket right and one left cushion.",
+    "date": "2026-10-08"
   },
   "086-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png",
@@ -2389,10 +2550,11 @@
   "086-02": {
     "id": "086-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "35c1751961cbcbcda76d60cb268d0defb2ba71d046cc647eed6a0ded8e96acd4",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty night interior detail; original lamp, doorway tray/basket/gray roll and single cushion.",
+    "date": "2026-10-08"
   },
   "086-03": {
     "id": "086-03",
@@ -2400,15 +2562,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: three invented characters, cream faces and cups in empty night interior."
   },
   "086-04": {
     "id": "086-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1eb9a354f1f449f3bd765521b620173745babdf16b2abd63efa79256b92afbb7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original night room wide frame; lamp, one left cushion, bedding/teapot and right doorway props retained.",
+    "date": "2026-10-08"
   },
   "087-01": {
     "accepted": true,
@@ -2423,18 +2586,20 @@
   "087-02": {
     "id": "087-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/087-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "e7fc2bc37f777ff67089236ed6e18bc1ebd00aeaa0128c6b053a604906035389",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red sit at night with PURE WHITE heads; lamp and original doorway props remain.",
+    "date": "2026-10-08"
   },
   "087-03": {
     "id": "087-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/087-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "fca8e60736dee3163b164760d88df71dffce6b36106a67138f2b4bd914217b94",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original pair pauses at night, PURE WHITE heads; lamp and doorway tray/basket/roll retained.",
+    "date": "2026-10-08"
   },
   "088-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/088-continuity-v2.png",
@@ -2449,18 +2614,20 @@
   "088-02": {
     "id": "088-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/088-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "1a0dc6bf7a6e7036b69dba46e258a813fc468d46c98035e52f27297c3cd9ea1f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue spreads original navy quilt left; original night lamp, gray teapot, gray roll/basket/tray retained.",
+    "date": "2026-10-08"
   },
   "088-03": {
     "id": "088-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/088-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "d37ef7281c1108f391e9cd40ad8cf9788697ebeb03600b1c656409a83525bd16",
+    "reviewer": "Codex visual inspection",
+    "notes": "After comparing original 088: same gray roll behind left edge of tray, basket right; bedding unfolded left and lamp unchanged.",
+    "date": "2026-10-08"
   },
   "089-01": {
     "accepted": true,
@@ -2477,23 +2644,25 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: adds many curled shavings to original clean recap workbench."
   },
   "089-03": {
     "id": "089-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "faa700e464b499b13921fc7ec47f819fe8c2f6f60dcce239755d88f3ce5b8f55",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original workshop detail, same open box/rimmed lid/plane/mallet/chisel; original sparse shavings.",
+    "date": "2026-10-08"
   },
   "089-04": {
     "id": "089-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "91afad48a874e799d444b37951d320e7033de26544baf8dbd6c4bbb5b86d350f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Authored evening-light variant of same empty workshop; no extra actors or props.",
+    "date": "2026-10-08"
   },
   "090-01": {
     "accepted": true,
@@ -2507,10 +2676,11 @@
   "090-02": {
     "id": "090-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "a87d9a1f678b28a49c5020a9a891a38c6fe995c2745bae9a9fcaab41483b5e6f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green lifts original bunch of round vegetables, jade/gray costume unchanged.",
+    "date": "2026-10-08"
   },
   "090-03": {
     "id": "090-03",
@@ -2518,15 +2688,16 @@
     "accepted": false,
     "sha256": null,
     "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "notes": "REJECTED: Green has pointing finger above produce instead of closed oval mitten."
   },
   "090-04": {
     "id": "090-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "2463025fe7cd618bf01631e0c8ea09621c5ce309e8398862408c7bd088ea3fd9",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green pauses empty-handed by original produce counter; no new buyers.",
+    "date": "2026-10-08"
   },
   "091-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
@@ -2541,26 +2712,29 @@
   "091-02": {
     "id": "091-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/091-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "8c2d8587cc54a23f048fe4e8bbf2ae11cdcedb4f04debb1100452ff95711a2ca",
+    "reviewer": "Codex visual inspection",
+    "notes": "Recap pair on original near bench, same two cups and ground basket.",
+    "date": "2026-10-08"
   },
   "091-03": {
     "id": "091-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/091-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "b34efbe3bb732804926fde28e07944c21b4c37c7fbe420d14b7f02e92ec1eb98",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red turns head toward river while remaining on original bench; two cups and basket retained.",
+    "date": "2026-10-08"
   },
   "091-04": {
     "id": "091-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/091-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "686343dc2d999627faa7eddd6e209b9248a69a5df12573f51c2b3330b498a45f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Pair reflects seated in original composition; two cups and same basket.",
+    "date": "2026-10-08"
   },
   "092-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/092-continuity.png",
@@ -2575,25 +2749,28 @@
   "092-02": {
     "id": "092-02",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/092-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "01874656a843d72d1d199fdebec924fce94e7ed4838af3e4aa2d2b3a961beef7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty night closer lamp/doorway view; original basket, gray roll and cleared bowls present.",
+    "date": "2026-10-08"
   },
   "092-03": {
     "id": "092-03",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/092-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "be820974b2c172ca5106673961465078c59c26162cf5a50c4a8a2c113ab8327c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty night room wide view, unfolded quilt left and single left cushion, lamp and doorway props.",
+    "date": "2026-10-08"
   },
   "092-04": {
     "id": "092-04",
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/092-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "New cadence illustration: generation and visual review required."
+    "accepted": true,
+    "sha256": "89d7819c3eed4b4940746de7177c209fec656c2859810eaa9542a5abe38f8a96",
+    "reviewer": "Codex visual inspection",
+    "notes": "Same empty night room wider composition; unfolded quilt, left teapot/bedding and doorway inventory retained.",
+    "date": "2026-10-08"
   }
 }

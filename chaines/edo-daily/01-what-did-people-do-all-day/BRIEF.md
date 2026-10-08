@@ -11,4 +11,4 @@ References: reviewed location masters and frozen cast designs must be sent with 
 Timing: measured audio timestamps, never estimated final scene times.
 QA: review each generated image and rendered scene; hold delivery on unresolved visual or historical errors.
 Cadence: user requires a different image every 6 seconds maximum, including the final tail. The earlier 92-shot cut was stopped and archived, not delivered.
-Current status: original voice retained; 306-shot word-measured timeline complete. 214 additional illustrations manually directed by Codex; generation and visual review in progress. No finished video delivered yet.
+Current status: original voice retained; 306-shot word-measured timeline complete. All 214 additional illustrations generated and individually inspected. 273 of 306 selections accepted; 33 targeted corrections generating, still blocked for montage. No finished video delivered yet.

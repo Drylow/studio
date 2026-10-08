@@ -1,0 +1,12 @@
+Use case: precise-object-edit. One NEW 16:9 sober comic panel.
+Actual ordered input roles:
+Image 1: immutable EMPTY original location master; geometry only.
+Image 2: individual canonical blue design only; never add this person unless already in LAST scene.
+Image 3: individual canonical red design only; never add this person unless already in LAST scene.
+Image 4: APPROVED original parent scene; authoritative current cast, object inventory and positions.
+Only requested new moment: Blue and Red remain SIDE BY SIDE seated on original NEAR bench viewed FROM FRONT as LAST seed. They glance toward water with small HEAD TILT only. SAME basket GROUNDED at right bench leg, EXACT TWO cups table, same three counter cups/kettle. NO reverse view, NO rotated bodies or extra bench.
+LAST scene overrides earlier scenes. Maintain all objects unless THIS action explicitly moves them. Do not add characters from any textual costume list. The rejected generated variants are NOT inputs.
+Clean sober historical comic, Edo Japan around 1700. Crisp readable detailed architecture, matte colors, reduced textures, restrained shadows. Preserve EXACT last seed's cast, anatomy, clothing, objects, lighting and camera side. Any EXISTING person has adult-sized body, oversized perfectly circular PURE #FFFFFF head, black dot eyes and tiny straight mouth; no hair, nose, ears or eyebrows. Exposed skin PURE #FFFFFF even at night. Hands CLOSED OVAL WHITE shapes with NO fingers or thumb tips. Long sleeves and trousers. NO writing, overlays, labels, inset diagrams, logos, modern objects, extra people or invented objects.
+Blue ONLY when present in LAST seed: indigo long sleeves and trousers, gray sash, pale-gray neck towel.
+Red ONLY when present in LAST seed: burgundy long sleeves and trousers, ochre sash.
+Narration for context, NEVER print: "water is worth watching for a moment, and there is no purchase to compare or parcel to"
