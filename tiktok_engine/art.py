@@ -179,19 +179,16 @@ def algrow_image(req, timeout=600):
     """Génère une image par l'API d'Algrow (clé ALGROW_API_KEY) et rend son adresse ; sans outil MCP,
     donc sans demande d'autorisation dans une session automatique."""
     sys.path.insert(0, ROOT)
-    from services.tts import _algrow_call, TTSError
-    try:   # même format que la voix (formulaire), les références en JSON
-        job = _algrow_call("POST", "/api/generate-image", {
-            "prompt": req["prompt"], "model": req["model"], "aspect_ratio": req["aspect_ratio"],
-            "reference_image_urls": json.dumps(req["reference_image_urls"])})
-    except TTSError as e:
-        if not any(code in str(e) for code in ("400", "415", "422")):
-            raise
-        key = os.environ.get("ALGROW_API_KEY", "")
-        r = urllib.request.Request("https://api.algrow.online/api/generate-image", method="POST",
-                                   data=json.dumps(req).encode(),
-                                   headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
-        job = json.load(urllib.request.urlopen(r, timeout=60))
+    from services.tts import _algrow_call
+    key = os.environ.get("ALGROW_API_KEY", "")
+    if not key:
+        raise SystemExit("ALGROW_API_KEY absente de l'environnement")
+    # Corps JSON (le formulaire de la voix est refusé ici : 400) ; testé le 9 oct. 2026.
+    r = urllib.request.Request("https://api.algrow.online/api/generate-image", method="POST",
+                               data=json.dumps(req).encode(),
+                               headers={"Authorization": "Bearer " + key, "Content-Type": "application/json",
+                                        "Accept": "application/json"})
+    job = json.load(urllib.request.urlopen(r, timeout=60))
     jid = job.get("job_id")
     if not jid:
         raise SystemExit("Algrow : pas de job_id (" + json.dumps(job)[:200] + ")")
