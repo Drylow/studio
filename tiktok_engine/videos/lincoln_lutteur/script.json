@@ -1,0 +1,143 @@
+{
+ "title": "Lincoln, le président lutteur",
+ "voice": {"voice_id": "0bKGtCCpdKSI5NjGhU3z", "model": "eleven_v4", "speed": 1.06},
+ "tail": 1.4,
+ "caption": "Avant d'être président, Abraham Lincoln était un lutteur redouté. #histoire #lincoln #vulgarisation #lutte",
+ "sources": [
+  "Snopes, « Is Lincoln in the Wrestling Hall of Fame? » (intronisation 1992, catégorie Outstanding American ; pas de relevé officiel de tous les combats)",
+  "National Wrestling Hall of Fame, Bob Dellinger : « une seule défaite enregistrée en 12 ans » ; chiffre de ~300 combats = estimation de sources secondaires",
+  "Tufts Daily, 2024 ; Mental Floss ; Abraham Lincoln Presidential Library (C. McWhirter : peu de preuves pour la plupart des combats) ; combat Jack Armstrong à New Salem documenté",
+  "Défaite attribuée à Lorenzo Dow Thompson, Black Hawk War, 1832, Beardstown (récit contesté)"
+ ],
+ "art": {
+  "lincoln": {"prompt": "portrait of Abraham Lincoln, tall man with dark beard and no mustache, black suit and bow tie, serious eyes, bust", "size": "192x256"},
+  "lincoln_young": {"prompt": "young beardless Abraham Lincoln, very tall and lanky, rolled-up sleeves, standing in 1830s frontier clothes, bust", "size": "192x256"},
+  "wrestlers": {"prompt": "two men wrestling in a circle of watching villagers in a frontier village, 1830s, wide view, simple clothes", "size": "320x192"},
+  "store": {"prompt": "small log cabin general store in New Salem Illinois in 1830s, wooden sign, dirt road", "size": "320x192"},
+  "armstrong": {"prompt": "stocky strong frontier man with a rough face and rolled sleeves, 1830s, bust", "size": "192x192"},
+  "camp": {"prompt": "militia soldiers camp with tents and campfire at dusk, 1832 American frontier", "size": "320x192"},
+  "belt": {"prompt": "an ornate championship wrestling medal on a ribbon, golden, no text, front view", "size": "192x192"},
+  "hall": {"prompt": "wide museum hall with plaques on wall honoring wrestlers, trophies on shelves", "size": "320x192"},
+  "white_house": {"prompt": "the White House in Washington with a lawn and a flag, 1860s, front view", "size": "320x192"}
+ },
+ "beats": [
+  {
+   "say": "Abraham Lincoln n'était pas qu'un président. C'était un lutteur redoutable.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"type": "img", "src": "lincoln", "h": 470, "y": 520, "at": 0, "in": "slam", "flash": "big", "fx": "breathe"},
+    {"preset": "title", "text": "Lincoln était *lutteur*.", "at": 0, "y": 150},
+    {"type": "stamp", "text": "REDOUTABLE", "at": "redoutable", "y": 740, "rot": -6, "fill": true, "size": 22}
+   ]
+  },
+  {
+   "say": "Dans les années 1830, il vit à New Salem, dans l'Illinois, et il travaille dans une épicerie.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "ANNÉES 1830", "at": 0, "y": 160, "rot": -4},
+    {"preset": "title", "text": "New Salem, *Illinois*", "at": "New", "y": 225, "size": 28},
+    {"type": "img", "src": "store", "h": 230, "y": 480, "at": 0.05, "in": "scan", "scanDur": 0.6}
+   ]
+  },
+  {
+   "say": "Il mesure un mètre quatre-vingt-treize. Et dans ce village, la lutte, c'est le sport roi.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "num", "text": "1,93 M", "at": "mètre", "y": 210},
+    {"type": "img", "src": "lincoln_young", "h": 400, "y": 520, "at": 0.05, "in": "pop", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Les gars du coin le défient. Le plus célèbre combat l'oppose à Jack Armstrong, le chef d'une bande, les Clary's Grove Boys.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Face à *Jack Armstrong*", "at": "Jack", "y": 160},
+    {"type": "img", "src": "wrestlers", "h": 250, "y": 480, "at": 0, "in": "fade", "out": "Jack"},
+    {"type": "img", "src": "armstrong", "h": 300, "y": 500, "at": "Jack", "in": "slam"}
+   ]
+  },
+  {
+   "say": "Les récits se contredisent sur le vainqueur. Mais après ce combat, la bande le respecte pour de bon.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Le vainqueur ?\n*Les récits se contredisent.*", "at": 0, "y": 175, "size": 26},
+    {"type": "sprite", "sprite": "question", "px": 9, "y": 560, "at": 0.1, "in": "pop", "blink": 2}
+   ]
+  },
+  {
+   "say": "Sa légende grandit. On raconte qu'il a lutté pendant douze ans, environ trois cents combats.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "title", "text": "Environ *300 combats*", "at": "environ", "y": 160},
+    {"type": "counter", "from": 0, "to": 300, "prefix": "~", "dur": 1.6, "at": "environ", "y": 300, "in": "fade"},
+    {"type": "img", "src": "wrestlers", "h": 250, "y": 520, "at": 0.05, "in": "scan"}
+   ]
+  },
+  {
+   "say": "Attention, ce nombre est une estimation. Il n'existe aucun registre officiel de tous ses combats.",
+   "els": [
+    {"type": "text", "font": "sans", "size": 40, "color": "W", "text": "ATTENTION.", "at": 0, "y": 330, "in": "slam", "flash": true, "out": "estimation"},
+    {"preset": "title", "text": "Un nombre *estimé*,\npas un registre.", "at": "estimation", "y": 230, "size": 28},
+    {"type": "stamp", "text": "ESTIMATION", "at": "estimation", "y": 600, "rot": -5, "fill": true, "size": 22}
+   ]
+  },
+  {
+   "say": "Mais une chose revient dans les sources : une seule défaite enregistrée en douze ans.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "big", "text": "1 DÉFAITE", "at": "seule", "y": 300, "size": 52},
+    {"preset": "label", "text": "ENREGISTRÉE EN 12 ANS", "at": "douze", "y": 400, "color": "W"},
+    {"type": "img", "src": "lincoln_young", "h": 330, "y": 650, "at": 0.1, "in": "fade"}
+   ]
+  },
+  {
+   "say": "On la situe en 1832, pendant la guerre de Black Hawk. Lincoln est capitaine, et un simple soldat, Lorenzo Dow Thompson, le met au sol.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "1832", "at": 0, "y": 160, "rot": -4},
+    {"preset": "title", "text": "Battu par un *simple soldat*", "at": "simple", "y": 225, "size": 24},
+    {"type": "img", "src": "camp", "h": 240, "y": 500, "at": 0.05, "in": "scan"}
+   ]
+  },
+  {
+   "say": "Lincoln devient avocat, puis président en 1860. Mais la lutte ne l'a jamais quitté.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Président en *1860*", "at": "président", "y": 160},
+    {"type": "img", "src": "white_house", "h": 250, "y": 480, "at": 0.05, "in": "fade"},
+    {"type": "img", "src": "lincoln", "h": 300, "y": 760, "at": "Mais", "in": "pop"}
+   ]
+  },
+  {
+   "say": "En 1992, il entre au National Wrestling Hall of Fame, aux États-Unis, dans la catégorie des Américains d'exception.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "num", "text": "1992", "at": 0, "y": 200},
+    {"preset": "label", "text": "NATIONAL WRESTLING HALL OF FAME", "at": "National", "y": 300, "color": "W"},
+    {"type": "img", "src": "hall", "h": 240, "y": 520, "at": 0.05, "in": "scan"}
+   ]
+  },
+  {
+   "say": "Un président des États-Unis, honoré comme lutteur.",
+   "glow": {"y": 480, "r": 300, "a": 0.24},
+   "els": [
+    {"type": "img", "src": "belt", "h": 330, "y": 480, "at": 0, "in": "pop", "fx": "breathe"},
+    {"preset": "title", "text": "Président... et *lutteur*.", "at": "honoré", "y": 760, "size": 26}
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Lincoln était\n*lutteur*.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "lincoln", "h": 450, "y": 650}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "1 défaite en\n12 ans de *lutte*.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "lincoln_young", "h": 450, "y": 650}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Un président au\n*Hall of Fame* de la lutte.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "belt", "h": 330, "y": 640}
+  ]
+ ]
+}
