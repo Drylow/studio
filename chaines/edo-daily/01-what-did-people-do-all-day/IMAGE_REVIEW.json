@@ -344,11 +344,12 @@
   },
   "016-04": {
     "id": "016-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Pointing finger appeared; needs smooth CLOSED oval mitten gesture."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-04-v3.png",
+    "accepted": true,
+    "sha256": "e99b75bff1f6cd302053bbb0c68c29c6273162151dee1e8774d75d30c4bf9b32",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red kneels on bare right mat with closed oval hands. Basket remains EMPTY on doorway right, single gray garment only on table, single navy cushion left. Earlier filled-basket variant rejected.",
+    "date": "2026-10-08"
   },
   "017-01": {
     "accepted": true,
@@ -361,11 +362,12 @@
   },
   "017-02": {
     "id": "017-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Carried bucket switched from jade neighbor to Blue; preserve Blue empty-handed and neighbor carrying."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-02-v2.png",
+    "accepted": true,
+    "sha256": "2b5a80328642cb0366d2fd65b95dbc7dfc85ba7b71c390f335311cede5937ad9",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue remains empty-handed; jade neighbor alone owns carried bucket. Fixed left and rope well buckets retained.",
+    "date": "2026-10-08"
   },
   "017-03": {
     "id": "017-03",
@@ -378,11 +380,12 @@
   },
   "017-04": {
     "id": "017-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Duplicate personal bucket appeared in Blue's hand; Blue must stay empty-handed, original neighbor retains his bucket."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-04-v2.png",
+    "accepted": true,
+    "sha256": "462c0221713ffa1920080837798afd8c5b51c07cfb1932b08ab24e20b8fefa92",
+    "reviewer": "Codex visual inspection",
+    "notes": "Three distinct buckets retained; Blue remains empty-handed and neighbor carries original bucket. White oval hands.",
+    "date": "2026-10-08"
   },
   "018-01": {
     "accepted": true,
@@ -467,11 +470,12 @@
   },
   "020-03": {
     "id": "020-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: three invented actors and cargo activity in empty waterfront."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-03-v2.png",
+    "accepted": true,
+    "sha256": "7513f4b6ede20cb006b4277376422d5ff2291de0d22a07205ae3a8ee42e4f0b2",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty cooking recess; no invented cook or serving bowls. Original pot, fire recess and vessels preserved.",
+    "date": "2026-10-08"
   },
   "020-04": {
     "id": "020-04",
@@ -585,11 +589,12 @@
   },
   "024-02": {
     "id": "024-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: three invented actors and wheelcart in empty market."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-02-v2.png",
+    "accepted": true,
+    "sha256": "39dc5a4214f45b5fe84f2f6c1a0c5d18c59d27cdb2673d459f15bd07f0393949",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty home cutaway with original table, gray garment and folded bedding, without invented third person or breakfast.",
+    "date": "2026-10-08"
   },
   "024-03": {
     "id": "024-03",
@@ -658,11 +663,12 @@
   },
   "026-03": {
     "id": "026-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/026-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Red sits again after standing in preceding 026-02; breaks departure continuity."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/026-03-v2.png",
+    "accepted": true,
+    "sha256": "10052802de23360fb2fab2a0e2e3a3d40f9cd7c1233abe10c613f09c63b93705",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original wooden food container and separate matching lid retained; no added actors or duplicate meal vessels.",
+    "date": "2026-10-08"
   },
   "027-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/027-continuity.png",
@@ -887,19 +893,21 @@
   },
   "033-03": {
     "id": "033-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: three invented actors, cream faces, in empty joinery close view."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-03-v2.png",
+    "accepted": true,
+    "sha256": "679ccb80c15e91f6039fc1e20a93754b5202fc919d3a87cbdc0077be39f87897",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original workshop closeup. Same box, rimmed lid, plane, mallet and chisel; no invented seated worker.",
+    "date": "2026-10-08"
   },
   "033-04": {
     "id": "033-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: unmotivated large curled shavings appear around unchanged still-life."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-04-v2.png",
+    "accepted": true,
+    "sha256": "c469713614e55251567ce72c6d7ae067072f15379a821a46178967eeb0b7179d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty widened workshop crop preserves box, lid and tools; flat wood chips consistent with seed.",
+    "date": "2026-10-08"
   },
   "034-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity-v2.png",
@@ -913,11 +921,12 @@
   },
   "034-02": {
     "id": "034-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: original wide box replaced by small deep cube lifted by Blue."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-02-v2.png",
+    "accepted": true,
+    "sha256": "9eb2fa6156b571bb2c9d9ab452ac9d0cc7e2b641e0883afc87ca75d477f44f81",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue continues planing original board. Shallow box and rimmed lid preserved; accepted action variant, not a paused hand pose.",
+    "date": "2026-10-08"
   },
   "034-03": {
     "id": "034-03",
@@ -949,11 +958,12 @@
   },
   "035-02": {
     "id": "035-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/035-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: unsolicited magnifying inset and diagram leader lines."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/035-02-v2.png",
+    "accepted": true,
+    "sha256": "d2aa4a73b8c6db5b1ba024a56062168b9008acab7f1d7a673784e7ec1fadac37",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty workshop detail with original box and separate lid. No invented worker or extra shavings.",
+    "date": "2026-10-08"
   },
   "035-03": {
     "id": "035-03",
@@ -1032,11 +1042,12 @@
   },
   "038-02": {
     "id": "038-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Red pointing finger and closed box reopens without narrated action."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-02-v2.png",
+    "accepted": true,
+    "sha256": "a91b1bc65ef031012f0a99c075f9451693a2fe25d132c478861182e7f9b76c57",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red retain costumes; original closed wooden box and Red's gray garment preserved; closed oval hands.",
+    "date": "2026-10-08"
   },
   "038-03": {
     "id": "038-03",
@@ -1105,11 +1116,12 @@
   },
   "040-03": {
     "id": "040-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/040-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: gray garment pushed into sewing box instead of original handled basket; detailed fingers."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/040-03-v2.png",
+    "accepted": true,
+    "sha256": "4b63fbc66993c98e502ecee68fcc3405eaf9b51944acacafac428797dc5e9a73",
+    "reviewer": "Codex visual inspection",
+    "notes": "Red lifts the single gray garment from right side of table. Original open sewing box remains left; no invented basket.",
+    "date": "2026-10-08"
   },
   "041-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/041-continuity.png",
@@ -1234,11 +1246,12 @@
   },
   "044-04": {
     "id": "044-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Blue has an open multi-finger hand instead of closed oval mitten."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-04-v2.png",
+    "accepted": true,
+    "sha256": "654b7bd6152b77c9fdb4c1ba14b089f4e119d656b42589a7cbff14edb977b333",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue's gesturing hand is closed oval; Red retains basket, original table clear. No fingers or added cups.",
+    "date": "2026-10-08"
   },
   "045-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/045-continuity.png",
@@ -1597,11 +1610,12 @@
   },
   "055-02": {
     "id": "055-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: original single tea cup no longer visible; meal inventory must remain."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-02-v2.png",
+    "accepted": true,
+    "sha256": "299373918fed8319575a09b66003b8334f5024228496a1933b94a001648be171",
+    "reviewer": "Codex visual inspection",
+    "notes": "Single table cup and vegetable dish retained; Blue lifts existing rice bowl with chopsticks, not a second bowl. Accepted action variant.",
+    "date": "2026-10-08"
   },
   "055-03": {
     "id": "055-03",
@@ -1642,11 +1656,12 @@
   },
   "056-03": {
     "id": "056-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/056-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: pair moved behind table, new seating perspective/bench geometry instead of original near bench."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/056-03-v2.png",
+    "accepted": true,
+    "sha256": "0957bd899727639cbe8f2749cd61e06d8a58444298bcb1a9bf51fb297d80e06c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Compared full-size against original: Blue and Green remain on same original bench; two cups, rice, vegetables, parcel retained. Only gaze changes.",
+    "date": "2026-10-08"
   },
   "057-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/057-continuity-v2.png",
@@ -1760,11 +1775,12 @@
   },
   "060-02": {
     "id": "060-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/060-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three loading actors in empty original quay still-life."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/060-02-v2.png",
+    "accepted": true,
+    "sha256": "2dee94f843adbc3a67f33e508a6ffca474a0e07d36980a8553d0f76fe3d50f4d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty cooking recess with existing kettle and covered pot; no invented actors, cup, tray or diagram.",
+    "date": "2026-10-08"
   },
   "060-03": {
     "id": "060-03",
@@ -1850,19 +1866,21 @@
   },
   "063-02": {
     "id": "063-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: original shavings tray disappears while gathering shavings."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-02-v2.png",
+    "accepted": true,
+    "sha256": "44cf41fc31fd3b1184e785741dbda98f65f6386776608a9e67f1cdbd0b59603f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Compared to original 063: same original tray center-right, open box center-left, plane left and mallet/chisel right. Blue gathers existing shavings; costume and architecture retained.",
+    "date": "2026-10-08"
   },
   "063-03": {
     "id": "063-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: original shavings tray disappears and empty lid replaces it."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-03-v2.png",
+    "accepted": true,
+    "sha256": "ad58625a6c48d17b3ef9c4692cddf6b00c5e61313c6389d88d07d3bc34a3a87e",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue places existing shavings in original shallow tray. Open box left and mallet/chisel right retained.",
+    "date": "2026-10-08"
   },
   "063-04": {
     "id": "063-04",
@@ -1893,19 +1911,21 @@
   },
   "064-03": {
     "id": "064-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented Blue and Red well action in empty fire-prevention alley."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-03-v2.png",
+    "accepted": true,
+    "sha256": "72e9c7df0a0845bc669879b678955f44d0ed88b0fc0f5dde98d824e1e240ec8f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original alley and well; no invented walkers. Fixed and hanging buckets retained.",
+    "date": "2026-10-08"
   },
   "064-04": {
     "id": "064-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three actors in empty fire-prevention alley."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-04-v2.png",
+    "accepted": true,
+    "sha256": "0aedd3da02df96374e5e7f77e015acaf141d44a99386adf5befde19f9643dedb",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original alley: original three buckets (left, back right, hanging well), broom, house doors and clear route retained. Slightly wider framing; zero invented people.",
+    "date": "2026-10-08"
   },
   "065-01": {
     "accepted": true,
@@ -1918,27 +1938,30 @@
   },
   "065-02": {
     "id": "065-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three actors and changed outfits in empty waterfront."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-02-v2.png",
+    "accepted": true,
+    "sha256": "67edbff5abf796f0cda87e4a902235765e2c7359846bc8befb3ab8f10994b279",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original well detail with fixed left and rope-hanging buckets, no invented figures or cart.",
+    "date": "2026-10-08"
   },
   "065-03": {
     "id": "065-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three cargo workers and cargo action in empty waterfront."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-03-v2.png",
+    "accepted": true,
+    "sha256": "9506908635a45ecb930a5cebe67b57caf77f59695d8696e820593137563a5f85",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty alley detail; original well and route clear. No invented walkers or extra containers.",
+    "date": "2026-10-08"
   },
   "065-04": {
     "id": "065-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three actors in empty waterfront."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-04-v2.png",
+    "accepted": true,
+    "sha256": "9d1c583de1355b0b763f962be1e6ce427fcedbf9512bad77a4a4b1e3f87b23ac",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty well and doors from original architectural framing; no newly invented people, fire or props.",
+    "date": "2026-10-08"
   },
   "066-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/066-continuity.png",
@@ -2206,11 +2229,12 @@
   },
   "074-03": {
     "id": "074-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Red has pointing finger instead of oval mitten."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-03-v2.png",
+    "accepted": true,
+    "sha256": "b04941ec7b36182e63604349c43b96bccdd1daeb2fff1c8f30a4a1bc607b97fb",
+    "reviewer": "Codex visual inspection",
+    "notes": "Original two monochrome prints retained; closed oval gesturing hands and all original cast preserved.",
+    "date": "2026-10-08"
   },
   "074-04": {
     "id": "074-04",
@@ -2268,11 +2292,12 @@
   },
   "076-02": {
     "id": "076-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/076-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Blue has detailed open fingers instead of oval mittens."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/076-02-v2.png",
+    "accepted": true,
+    "sha256": "2165e8da87e1c6c8676af73a141a7729c4ec5d05f5d7cd36d42d2b153a6a302b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Closed oval hand replaces pointed finger; original prints and costumes preserved.",
+    "date": "2026-10-08"
   },
   "076-03": {
     "id": "076-03",
@@ -2330,11 +2355,12 @@
   },
   "078-03": {
     "id": "078-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/078-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: invented three actors and vegetables held in empty closing market."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/078-03-v2.png",
+    "accepted": true,
+    "sha256": "ae9f9272830889248c4a4733363e927784c9df92b27ba3e208893058a7f3b1b6",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original tea counter, existing kettle and three cups; no invented server or guests.",
+    "date": "2026-10-08"
   },
   "079-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png",
@@ -2357,19 +2383,21 @@
   },
   "079-03": {
     "id": "079-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Blue teleports behind table rather than remaining on original near bench."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-03-v3.png",
+    "accepted": true,
+    "sha256": "d7c7ef536b6ea9072f5cd1aa5970a998833dded50131f5b991f302efdcddcb0f",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red sit on original near bench. EXACT two table cups visible separated; counter three cups/kettle retained. Ingredient basket on right bench, no back-facing seat or duplicate bench.",
+    "date": "2026-10-08"
   },
   "079-04": {
     "id": "079-04",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-04.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: back-facing seating and extra bench geometry not original composition."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-04-v2.png",
+    "accepted": true,
+    "sha256": "fc6c58934974caff676f2c0d4c7dc84f15b87e0b5590ef94796a9d03885e4e10",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red side by side on original near bench; two table cups visible; basket remains on bench right.",
+    "date": "2026-10-08"
   },
   "080-01": {
     "image": "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png",
@@ -2383,11 +2411,12 @@
   },
   "080-02": {
     "id": "080-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/080-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: back-facing seating replaces original near bench geometry."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/080-02-v2.png",
+    "accepted": true,
+    "sha256": "940d1858817fa3a7680224e71073f48331f84ac2f1941ef94fed543f033ff12c",
+    "reviewer": "Codex visual inspection",
+    "notes": "Blue and Red on original near bench, two table cups. Basket on ground matches original 080 seed.",
+    "date": "2026-10-08"
   },
   "080-03": {
     "id": "080-03",
@@ -2438,11 +2467,12 @@
   },
   "082-02": {
     "id": "082-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/082-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Blue sits behind table and new near bench appears."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/082-02-v2.png",
+    "accepted": true,
+    "sha256": "595535d5ce5e105b28b2994d5a82ad43ddba28b1ab319cb42251fdb6f02f21f7",
+    "reviewer": "Codex visual inspection",
+    "notes": "Viewed full-size: Blue seated on original near bench left; Red standing right with ingredient basket. Two table cups retained.",
+    "date": "2026-10-08"
   },
   "082-03": {
     "id": "082-03",
@@ -2558,11 +2588,12 @@
   },
   "086-03": {
     "id": "086-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: three invented characters, cream faces and cups in empty night interior."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-03-v2.png",
+    "accepted": true,
+    "sha256": "2da65870140aec054fa671374c28c0fa89a3a4aa1b5f562cc32daf70d351086d",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty original night home; back/right lamp and doorway gray roll, basket and tray remain. No invented diners or utensils.",
+    "date": "2026-10-08"
   },
   "086-04": {
     "id": "086-04",
@@ -2640,11 +2671,12 @@
   },
   "089-02": {
     "id": "089-02",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-02.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: adds many curled shavings to original clean recap workbench."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-02-v2.png",
+    "accepted": true,
+    "sha256": "fd0bd5144b14afc9fb1ab3885b26ef0dd28f6db3333db3764f13bc679e281c5b",
+    "reviewer": "Codex visual inspection",
+    "notes": "Empty same alley at original light; existing well and buckets preserved without added people.",
+    "date": "2026-10-08"
   },
   "089-03": {
     "id": "089-03",
@@ -2684,11 +2716,12 @@
   },
   "090-03": {
     "id": "090-03",
-    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-03.png",
-    "accepted": false,
-    "sha256": null,
-    "reviewer": "Pending Codex visual inspection",
-    "notes": "REJECTED: Green has pointing finger above produce instead of closed oval mitten."
+    "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-03-v2.png",
+    "accepted": true,
+    "sha256": "af2b618bee1c836af6cabaca2a220d43b43e7104a504496751ff7d88686a5740",
+    "reviewer": "Codex visual inspection",
+    "notes": "Green selects existing round vegetable using closed oval mitten; original three baskets preserved.",
+    "date": "2026-10-08"
   },
   "090-04": {
     "id": "090-04",

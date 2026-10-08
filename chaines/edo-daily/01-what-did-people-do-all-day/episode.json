@@ -890,7 +890,7 @@
         "red"
       ],
       "narration": "jobs, tidiness is not decoration. It is access.",
-      "action": "Red kneels on the BARE right tatami and points with a closed white oval mitten toward the clear route to the door. Same basket, bundle and sewing box remain.",
+      "action": "Keep the SAME wide home framing and every object of Image 3. Red kneels on the BARE right tatami just LEFT of the doorway, looks toward the clear passage and rests BOTH smooth CLOSED WHITE OVAL hands on her knees. The ONE handled basket stays on the doorway floor at the far RIGHT and is COMPLETELY EMPTY: show its bare wicker interior with absolutely NO cloth, NO garment, NO groceries inside. The ONE folded gray garment stays ONLY on the TABLE at right; never duplicate or move it. ONE navy cushion under the left table edge, bedding and gray teapot in the far LEFT recess. No new right cushion.",
       "sources": [
         "I"
       ],
@@ -899,8 +899,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/016-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/016-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/016-04-v3.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/016-04-v3.png",
       "motion": "zoom_in",
       "parent_shot": "016"
     },
@@ -935,7 +935,7 @@
         "blue"
       ],
       "narration": "The museum emphasizes the different occupations and mutual assistance within these",
-      "action": "Blue pauses with the SAME wooden water bucket in his hand and looks toward a neighboring doorway. No additional person or second bucket.",
+      "action": "Blue pauses EMPTY-HANDED at the original LEFT doorway and turns his head toward the passing JADE neighbor. The JADE neighbor STILL carries HIS original wooden bucket in one white oval mitten. Blue does NOT carry any bucket. Original fixed left ground bucket and original well-rope bucket remain unchanged: THREE total buckets, only ONE carried, by JADE neighbor.",
       "sources": [
         "S01",
         "I"
@@ -945,8 +945,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/017.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/017-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/017-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "017"
     },
@@ -982,7 +982,7 @@
         "blue"
       ],
       "narration": "It means the people around you are part of the practical world you have to navigate.",
-      "action": "Blue walks one small step along the original alley with the same bucket. The bucket remains visible in his white mitten hand; no gray tool roll at this water-errand moment.",
+      "action": "Blue takes one SMALL EMPTY-HANDED step out from the original LEFT doorway while the SAME JADE neighbor continues past him with HIS original carried wooden bucket. Blue's BOTH oval mittens EMPTY. Preserve original fixed LEFT ground bucket and well-rope bucket: THREE total buckets, only ONE carried, by JADE neighbor. No fourth bucket.",
       "sources": [
         "S01",
         "I"
@@ -992,8 +992,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/017.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/017-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/017-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/017-04-v2.png",
       "motion": "zoom_in",
       "parent_shot": "017"
     },
@@ -1184,15 +1184,15 @@
       "location": "bridge",
       "cast": [],
       "narration": "Behind the familiar household gesture of lifting a bucket stood channels, construction,",
-      "action": "Draw the original landing's timber edges and cargo bales with the same boat behind; an ordinary urban-waterfront detail, not a new channel reconstruction.",
+      "action": "EMPTY waterfront, NO PEOPLE anywhere. Draw a new natural tighter panel of the same moored single boat, original bales, warehouse frontage and quay. Original cargo remains where it is; no loading action, NO character or new cargo.",
       "sources": [
         "S03"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/020-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/020-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/020-03-v2.png",
       "motion": "zoom_out",
       "reuse_reference": true,
       "parent_shot": "020"
@@ -1477,15 +1477,15 @@
       "location": "market",
       "cast": [],
       "narration": "fishing, and distribution networks linking the city with surrounding communities",
-      "action": "New comic still-life drawing of the SAME three original market produce baskets: white radishes, leafy greens and small pale roots. Keep their original left-to-right order.",
+      "action": "EMPTY original produce market, NO PEOPLE. New natural counter-level framing of SAME three shallow produce baskets: white long radishes left, leafy greens center, round turnips right. Same bale stack, cloth shelves, indigo awning. NO cart, NO buyers, NO vendor.",
       "sources": [
         "S06"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/market.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/024-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/024-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/024-02-v2.png",
       "motion": "zoom_in",
       "reuse_reference": true,
       "parent_shot": "024"
@@ -1659,7 +1659,7 @@
         "red"
       ],
       "narration": "on what a seller has available and what else the household needs its money to do.",
-      "action": "Red holds the basket against her lap and turns her head toward the doorway; Blue keeps his place. Preserve all dish and object counts from the approved breakfast aftermath.",
+      "action": "Red remains STANDING at original RIGHT doorway after picking up her SAME round EMPTY handled basket. She turns toward the exit and takes one small step. Blue remains seated LEFT holding the SAME wooden food-container lid. Preserve two rice bowls, two soups, one vegetable dish, original food container, single left cushion. Red MUST NOT sit or kneel again.",
       "sources": [
         "I"
       ],
@@ -1669,8 +1669,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/026-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/026-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/026-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/026-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/026-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "026"
     },
@@ -2195,7 +2195,7 @@
       "location": "workshop",
       "cast": [],
       "narration": "the seventeenth through nineteenth centuries. Not all woodworking was sashimono.",
-      "action": "New panel showing the SAME shallow box and separate matching rimmed lid from the original camera side, emphasizing simple unpainted timber and careful fit. Tools remain in their original positions.",
+      "action": "EMPTY original 033 joinery still-life with NO PEOPLE. New close view of SAME open wooden box corner and matching RIMMED lid flat RIGHT; hand plane LEFT, original mallet and chisel RIGHT. Same proportions, joints and sparse FLAT wood chips. NO character hands, NO extra tools.",
       "sources": [
         "S04"
       ],
@@ -2203,8 +2203,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/033.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/033-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/033-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "033"
     },
@@ -2214,7 +2214,7 @@
       "location": "workshop",
       "cast": [],
       "narration": "But it gives us a useful way to see skill in a small, ordinary object.",
-      "action": "New close still-life panel of the original hand plane, wood surface and matching shallow box in the same workshop. This is one ordinary object's workmanship, not a second product.",
+      "action": "EMPTY original 033 joinery still-life, NO PEOPLE. New slightly wider natural panel of SAME open box, single rimmed lid right, plane left, mallet/chisel right, original few flat wood chips. NO new curled wood shavings, no deeper box, no new activity.",
       "sources": [
         "S04"
       ],
@@ -2222,8 +2222,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/033.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/033-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/033-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/033-04-v2.png",
       "motion": "zoom_in",
       "parent_shot": "033"
     },
@@ -2258,7 +2258,7 @@
         "blue"
       ],
       "narration": "A shaving lands on the bench. Then you stop and test the fit, because",
-      "action": "Blue pauses the plane stroke; the SAME single wood shaving lies beside the original plane on the bench. Both hands are smooth oval mittens, not individually drawn fingers.",
+      "action": "Blue pauses behind original bench with BOTH CLOSED WHITE OVAL mittens resting near the SAME wooden hand plane on SAME thin board at LEFT. SAME WIDE SHALLOW open box stays GROUNDED center, SAME rimmed lid grounded RIGHT. Box does NOT move or become a deep cube. Original mallet/chisel right.",
       "sources": [
         "I"
       ],
@@ -2267,10 +2267,11 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/034-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/034-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/034-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/034-02-v2.png",
       "motion": "zoom_in",
-      "parent_shot": "034"
+      "parent_shot": "034",
+      "accepted_variant": "Blue continues planing rather than pausing; shallow box and separate rimmed lid remain."
     },
     {
       "id": "034-03",
@@ -2341,7 +2342,7 @@
       "location": "workshop",
       "cast": [],
       "narration": "but a poor fit can reveal itself every time the object is used. This is one reason the",
-      "action": "New detail drawing of the original shallow box's inner rim and SAME matching lid nearby, showing the fit surfaces. Preserve the original joinery, not a different deep chest.",
+      "action": "EMPTY same joinery still-life. Natural close composition of original wood box interlocking corner and original single rimmed lid on bench RIGHT. Keep original box proportions and plane LEFT, mallet/chisel RIGHT. NO diagrams, NO bubbles, NO magnifying inset, NO arrows, NO overlays, NO labels or people.",
       "sources": [
         "S04"
       ],
@@ -2349,8 +2350,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/035-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/035-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/035-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/035-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/035-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "035"
     },
@@ -2539,7 +2540,7 @@
         "red"
       ],
       "narration": "can be examined. A conversation about today's errands interrupts neither occupation",
-      "action": "Red points with a closed oval mitten toward the SAME garment while Blue looks down at it. Keep BOTH partners and the SAME shallow box/lid and tool arrangement.",
+      "action": "Blue remains seated and Red stands RIGHT holding SAME folded GRAY garment in BOTH CLOSED WHITE OVAL mittens. Red turns head toward Blue, no pointing gesture. SAME wide wooden box CLOSED on bench, NO extra lid anywhere, plane left and mallet/chisel right. Box MUST NOT open.",
       "sources": [
         "I"
       ],
@@ -2549,8 +2550,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/038-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/038-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/038-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/038-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "038"
     },
@@ -2722,7 +2723,7 @@
         "red"
       ],
       "narration": "Tokyo Metropolitan Library treats the evolving culture of dress as a significant part of Edo life.",
-      "action": "Red places the SAME folded gray garment into the original handled basket without adding another parcel. The sewing box remains where it was; no meal appears.",
+      "action": "Red remains kneeling BARE tatami RIGHT. She gently LIFTS the SAME folded GRAY garment slightly above its original TABLE RIGHT position with TWO CLOSED WHITE OVAL mittens. Original OPEN small sewing box stays TABLE LEFT with needles, pin cushion and threads untouched. NO basket, NO placing garment in sewing box, NO fingers. SAME one LEFT cushion.",
       "sources": [
         "S16",
         "I"
@@ -2732,8 +2733,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/040-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/040-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/040-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/040-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/040-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "040"
     },
@@ -3038,7 +3039,7 @@
         "red"
       ],
       "narration": "offers more possibilities than one ordinary day can afford.",
-      "action": "Blue gestures toward the cleared table with an empty white mitten while Red keeps the SAME ingredient basket by the doorway. No additional tools, trays or meal dishes.",
+      "action": "Blue remains seated LEFT on original ONE cushion, raises ONE COMPLETELY CLOSED OVAL WHITE hand toward the EMPTY table. NO thumb, finger tips or open palm. Red seated RIGHT on bare tatami; SAME ingredient basket near RIGHT door; SAME bedding and gray teapot LEFT.",
       "sources": [
         "I"
       ],
@@ -3048,8 +3049,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/044-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/044-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/044-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/044-04-v2.png",
       "motion": "zoom_in",
       "parent_shot": "044"
     },
@@ -3904,7 +3905,7 @@
         "blue"
       ],
       "narration": "and a few minutes when the workbench is out of reach. The setting is illustrative,",
-      "action": "Blue settles on the ONE near/right bench and looks at his OWN original rice bowl and SMALL vegetable dish. Exactly ONE table cup, THREE counter cups.",
+      "action": "Blue remains alone on LEFT part of original NEAR bench, raises original chopsticks with simple WHITE OVAL mitten to eat from SAME rice bowl. Preserve EXACTLY ONE tea CUP visible next to rice bowl, ONE small vegetable dish on table. THREE counter cups and rounded kettle. No parcel, no extra bench.",
       "sources": [
         "I"
       ],
@@ -3913,10 +3914,11 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/055-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/055-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/055-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/055-02-v2.png",
       "motion": "zoom_in",
-      "parent_shot": "055"
+      "parent_shot": "055",
+      "accepted_variant": "Blue lifts the original rice bowl while eating; original single cup and vegetable dish remain, no duplicate bowl."
     },
     {
       "id": "055-03",
@@ -4023,7 +4025,7 @@
         "green"
       ],
       "narration": "lid or tending a vegetable counter. There are other things worth noticing in the city.",
-      "action": "Both Blue and Green turn briefly toward the water. Their SAME wrapped parcel remains on the RIGHT bench, TWO table cups and BOTH small meal dishes stay visible.",
+      "action": "Keep exact original FRONT camera and NEAR bench. Blue LEFT and Green RIGHT remain seated SIDE BY SIDE on SAME NEAR bench. They only TURN HEADS slightly toward river, not bodies, not seating. SAME gray wrapped flat parcel stays far RIGHT on bench. EXACT TWO table cups, ONE rice bowl and ONE vegetable dish. THREE counter cups and kettle.",
       "sources": [
         "I"
       ],
@@ -4033,8 +4035,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/056-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/056-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/056-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/056-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "056"
     },
@@ -4319,7 +4321,7 @@
       "location": "bridge",
       "cast": [],
       "narration": "shop, somebody must shift them from one place to another. Distribution is a large",
-      "action": "New detailed panel of the SAME cargo bales and warehouse landing with the SAME boat edge behind. Preserve the original number of cargo groups.",
+      "action": "EMPTY original quay, ZERO PEOPLE anywhere. New natural panel showing SAME bales on quay LEFT and SAME moored single cargo boat RIGHT. NO workers, NO Blue, Red or Green, NO loading action. Keep original cargo count, mooring rope, crate/barrel and warehouse arrangement.",
       "sources": [
         "I"
       ],
@@ -4327,8 +4329,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/060.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/060-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/060-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/060-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/060-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "060"
     },
@@ -4534,7 +4536,7 @@
         "blue"
       ],
       "narration": "workbench. In a city of timber buildings and open flames, the relationship between",
-      "action": "Blue gathers the SAME loose wood shavings from the original workbench into one small heap, keeping the fresh board and remaining shallow box/lid exactly where shown. No new broom or bin.",
+      "action": "Blue gathers SAME wood shavings into SAME shallow wooden TRAY at original bench CENTER RIGHT. Tray NEVER disappears; do NOT substitute box lid. SAME open wooden box CENTER LEFT, plane FAR LEFT, mallet/chisel RIGHT, same board. Both hands smooth CLOSED WHITE OVAL mittens.",
       "sources": [
         "I",
         "S09"
@@ -4544,8 +4546,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/063.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/063-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/063-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "063"
     },
@@ -4557,7 +4559,7 @@
         "blue"
       ],
       "narration": "ordinary activity and fire is never entirely theoretical. Cooking",
-      "action": "Blue wipes the remaining shavings aside with an EMPTY oval mitten while the SAME hand tools and fresh board stay on the bench.",
+      "action": "Blue drops the last small pinch of SAME wood shavings into SAME original shallow TRAY at bench CENTER RIGHT. Same tray visible with shavings INSIDE, not empty lid. Open box LEFT, hand plane FAR LEFT, mallet/chisel RIGHT unchanged. CLOSED OVAL WHITE mittens, no detailed fingers.",
       "sources": [
         "I",
         "S09"
@@ -4567,8 +4569,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/063.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/063-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/063-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/063-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "063"
     },
@@ -4639,15 +4641,15 @@
       "location": "alley",
       "cast": [],
       "narration": "A small household problem can therefore become somebody else's problem very",
-      "action": "New illustration of the original well, rope and nearby wooden house wall, contrasting available water and dense timber construction. Keep the original bucket and broom.",
+      "action": "EMPTY original alley, ZERO PEOPLE. New natural detail panel of SAME stone well rim RIGHT, wooden well rope/beam and original hanging rope bucket, SAME broom LEFT and fixed ground bucket LEFT. NO new carried bucket, NO water action, NO actors.",
       "sources": [
         "S09"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/alley.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/064-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/064-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-03-v2.png",
       "motion": "zoom_out",
       "reuse_reference": true,
       "parent_shot": "064"
@@ -4658,15 +4660,15 @@
       "location": "alley",
       "cast": [],
       "narration": "quickly. You do not need a fire today to have a reason to remember that.",
-      "action": "New clean alley panel emphasizing the SAME door thresholds and narrow shared path. No catastrophe, extra firefighting equipment or later town fire brigade.",
+      "action": "EMPTY original alley, ZERO PEOPLE. New slightly wider natural architectural panel along SAME clear central route, SAME left houses/doors and right well, original broom and fixed/hanging buckets. NO invented walkers, NO extra items, NO fire.",
       "sources": [
         "S09"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/alley.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/064-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/064-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/064-04-v2.png",
       "motion": "zoom_in",
       "reuse_reference": true,
       "parent_shot": "064"
@@ -4696,15 +4698,15 @@
       "location": "bridge",
       "cast": [],
       "narration": "Library describes relocation, wider routes, and new development after the",
-      "action": "New clear panel of the original waterfront route between the SAME warehouses and wooden bridge, preserving the existing street width and topology. No map or historical reconstruction overlay.",
+      "action": "EMPTY original waterfront, ZERO PEOPLE. New natural panel of original bridge rail, warehouse route and SAME single moored boat. Maintain original quiet cargo arrangement. NO walking group, NO new cargo, NO diagram.",
       "sources": [
         "S10"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-02-v2.png",
       "motion": "zoom_in",
       "reuse_reference": true,
       "parent_shot": "065"
@@ -4715,15 +4717,15 @@
       "location": "bridge",
       "cast": [],
       "narration": "catastrophe. Our ordinary day happens after that rebuilding. Disaster is",
-      "action": "New comic drawing of the original warehouse landing and water-facing facades; same boat, same cargo bales, no ruin or ongoing fire.",
+      "action": "EMPTY original waterfront, ZERO PEOPLE. New close natural panel of SAME plaster-and-timber warehouse facade, original quay cargo and moored boat in foreground edge. NO loading workers or carried bales, NO additions.",
       "sources": [
         "S10"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-03-v2.png",
       "motion": "zoom_out",
       "reuse_reference": true,
       "parent_shot": "065"
@@ -4734,15 +4736,15 @@
       "location": "bridge",
       "cast": [],
       "narration": "not the action we are staging, but it helps explain the city around the action.",
-      "action": "New original-geometry waterfront panel emphasizing the ordinary rebuilt city at peace. Keep every original roof and route; no invented monument or extra boat.",
+      "action": "EMPTY original waterfront, ZERO PEOPLE. New clear natural wider panel of same bridge walkway and warehouse route. SAME boat and cargo remain, NO group of three people, NO map, NO new structure.",
       "sources": [
         "S10"
       ],
       "references": [
         "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/065-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/065-04-v2.png",
       "motion": "zoom_in",
       "reuse_reference": true,
       "parent_shot": "065"
@@ -5393,7 +5395,7 @@
         "red"
       ],
       "narration": "reaches farther than the people who pay for a seat on a particular occasion.",
-      "action": "Red points with an EMPTY smooth oval mitten toward the SAME right-hand monochrome stage picture while Blue listens. Keep both original pictures and frame unchanged.",
+      "action": "Red and Blue remain by SAME two monochrome architectural prints outside theater. Red tilts head toward prints with BOTH CLOSED OVAL WHITE hands relaxed together at her waist; NO pointing fingers. Blue thinks with ONE CLOSED WHITE OVAL mitten under chin. Same indigo/gray/neck towel and burgundy/ochre uniforms.",
       "sources": [
         "I"
       ],
@@ -5403,8 +5405,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/074.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/074-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/074-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/074-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "074"
     },
@@ -5545,7 +5547,7 @@
         "blue"
       ],
       "narration": "elsewhere. You have both completed things since the lunchtime pause, and there are new things to",
-      "action": "Blue turns toward Green with a modest EMPTY mitten gesture; Green responds by tilting his head. BOTH remain beside the SAME facade/stage pair of monochrome pictures.",
+      "action": "Blue and Green remain outside SAME theater next to SAME two architectural prints. Blue lifts ONE fully CLOSED WHITE OVAL mitten while talking, other closed oval mitten at waist. Green listens with hands CLOSED WHITE OVALS together. NO open palm, NO fingers, NO thumb tips. Same clothes.",
       "sources": [
         "I"
       ],
@@ -5555,8 +5557,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/blue.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/076-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/076-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/076-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/076-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/076-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "076"
     },
@@ -5699,7 +5701,7 @@
       "location": "market",
       "cast": [],
       "narration": "shop belong to an urban world interested in more than supplies and official orders.",
-      "action": "New clear comic panel of the SAME market walkway and original blue shop curtain; preserve every existing basket and stored item. No text, floating books or anonymous new stall.",
+      "action": "EMPTY original closing market, NO PEOPLE anywhere. New natural tighter panel of SAME cloth shelf, original indigo curtain, three produce baskets and bale stack. NO shoppers, NO vegetable held by person, NO extra stock or cart.",
       "sources": [
         "S13"
       ],
@@ -5707,8 +5709,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/market.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/078.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/078-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/078-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/078-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/078-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "078"
     },
@@ -5769,7 +5771,7 @@
         "red"
       ],
       "narration": "carrying everything onward. You are still in the working city. The",
-      "action": "Blue returns his SAME cup to its original table spot; Red glances toward him, keeping the SAME ingredient basket on/near her lap. Exactly TWO table cups.",
+      "action": "Keep the SAME front three-quarter framing of Image 4. Blue and Red sit side by side on the SAME original bench. Blue glances toward Red with BOTH hands resting on his lap BELOW the tabletop; he holds nothing. Red rests her left hand on her lap and keeps her other hand on the SAME ingredient basket handle at the RIGHT bench beside her. EXACTLY TWO pale ceramic tea cups remain visibly separated on the TABLE: one at the table LEFT side, one at the table RIGHT side nearest Blue. Show BOTH full cup silhouettes unobstructed. The counter behind them still has its separate THREE cups and ONE kettle. Never move anyone behind the table or make a new bench.",
       "sources": [
         "I"
       ],
@@ -5779,8 +5781,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/079-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/079-03-v3.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-03-v3.png",
       "motion": "zoom_out",
       "parent_shot": "079"
     },
@@ -5793,7 +5795,7 @@
         "red"
       ],
       "narration": "difference is that, for a moment, somebody else is tending the counter.",
-      "action": "Red turns toward the water, keeping her SAME round handled ingredient basket; Blue rests both empty mittens. Both table cups remain on the original table.",
+      "action": "Blue and Red stay seated SIDE BY SIDE on original NEAR bench, SAME FRONT camera. They only turn HEADS toward the water, bodies and legs do NOT turn. SAME handled ingredient basket at RIGHT end of bench, EXACT TWO table cups. Preserve table legs and ONE bench.",
       "sources": [
         "I"
       ],
@@ -5803,8 +5805,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/079-04.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-04.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/079-04-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/079-04-v2.png",
       "motion": "zoom_in",
       "parent_shot": "079"
     },
@@ -5842,7 +5844,7 @@
         "red"
       ],
       "narration": "water is worth watching for a moment, and there is no purchase to compare or parcel to",
-      "action": "Both Blue and Red look toward the SAME water view, their hands EMPTY and Red's SAME small ROUND ingredient basket remaining on the FLOOR at the right bench leg. Exactly TWO table cups.",
+      "action": "Blue and Red remain SIDE BY SIDE seated on original NEAR bench viewed FROM FRONT as LAST seed. They glance toward water with small HEAD TILT only. SAME basket GROUNDED at right bench leg, EXACT TWO cups table, same three counter cups/kettle. NO reverse view, NO rotated bodies or extra bench.",
       "sources": [
         "I"
       ],
@@ -5852,8 +5854,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/080-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/080-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/080-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/080-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/080-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "080"
     },
@@ -5992,7 +5994,7 @@
         "red"
       ],
       "narration": "household's next expense or shortened tomorrow's work. It has done something less spectacular:",
-      "action": "Red stands beside Blue and keeps the SAME small round handled ingredient basket in both mittens. BOTH actors remain visible and the TWO empty cups stay on the original table.",
+      "action": "Red STANDS beside original RIGHT end of NEAR bench holding SAME ingredient basket. Blue remains seated on LEFT part of SAME NEAR bench in FRONT view, glancing up toward her. TWO table cups remain. NO moving Blue behind table, NO second bench.",
       "sources": [
         "I"
       ],
@@ -6002,8 +6004,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/red.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/082-continuity.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/082-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/082-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/082-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/082-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "082"
     },
@@ -6292,7 +6294,7 @@
       "location": "home-night",
       "cast": [],
       "narration": "lamp makes a limited pool of light. The rest of the room stays visible but",
-      "action": "New nighttime panel of the SAME RIGHT doorway storage: ingredient basket, cleared bowl tray and gray rolled tools ALL retained. The original lamp remains visible on the table.",
+      "action": "EMPTY original night room, ZERO PEOPLE, NO heads or hands. New natural close panel of SAME covered andon lamp on table and same shoji grid. Keep original single cushion LEFT, bedding and gray teapot LEFT, SAME basket/gray tied roll/cleared bowls at RIGHT doorway. NO cups added, NO tea-drinking activity.",
       "sources": [
         "I",
         "S09"
@@ -6301,8 +6303,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/086-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/086-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/086-03-v2.png",
       "motion": "zoom_out",
       "reuse_reference": true,
       "parent_shot": "086"
@@ -6493,7 +6495,7 @@
       "location": "workshop",
       "cast": [],
       "narration": "things, exchanged them, bought food, carried supplies, eaten,",
-      "action": "New detail panel of the SAME original hand tools and fresh wood on the empty workshop bench, preserving every existing tool and shallow box/lid. No actor or new product.",
+      "action": "EMPTY original recap workshop, NO PEOPLE. New natural tighter still-life of SAME open wide wooden box and SAME single rimmed lid RIGHT, plane LEFT, mallet/chisel RIGHT. Bench retains ONLY original few tiny FLAT chips. NO curled wood shavings, no new work material.",
       "sources": [
         "I"
       ],
@@ -6501,8 +6503,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/089.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/089-02.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-02.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/089-02-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/089-02-v2.png",
       "motion": "zoom_in",
       "parent_shot": "089"
     },
@@ -6597,7 +6599,7 @@
         "green"
       ],
       "narration": "and status. A seller's chance to earn was another household's chance to",
-      "action": "Green carefully adjusts ONE existing vegetable inside its SAME original basket, keeping the total basket count and original produce types unchanged.",
+      "action": "Green alone at same produce counter returns SAME round vegetable to original right basket using ONE completely CLOSED OVAL WHITE mitten. Other hand closed oval white at counter edge. No index finger, NO thumb tip, NO open palm. Same jade jacket/charcoal trousers/gray sash, original three baskets.",
       "sources": [
         "S07",
         "I"
@@ -6607,8 +6609,8 @@
         "work/edo-daily/01-what-did-people-do-all-day/references/green.png",
         "work/edo-daily/01-what-did-people-do-all-day/images/090.png"
       ],
-      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/090-03.txt",
-      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-03.png",
+      "prompt_file": "chaines/edo-daily/01-what-did-people-do-all-day/prompts/dense/090-03-v2.txt",
+      "image": "work/edo-daily/01-what-did-people-do-all-day/images/dense/090-03-v2.png",
       "motion": "zoom_out",
       "parent_shot": "090"
     },

@@ -70,7 +70,14 @@ seating, missing cups/tray, changed box proportions and detailed fingers.
 The original common style text named all three costume designs even in empty
 scenes; corrected empty-scene prompts no longer name absent people. Original
 executed prompts are preserved, not retroactively rewritten. Review currently
-accepts 273/306; montage remains blocked until corrected outputs are inspected.
+accepted 273/306 at that first dense review. The 33 versioned corrections have
+now been inspected and all 306 selections accepted. Two further corrections
+were needed: an empty basket gained a garment in 016-04-v2, and a table cup
+vanished in 079-03-v2. Both v3 outputs retain the required inventory.
+The measured cut has no adjacent repeated image file, an average hold of 4.90
+seconds and a longest hold of 5.96 seconds, including the 0.4-second final tail.
+These are nominal shot durations; the existing 0.2-second crossfades overlap
+the outgoing and incoming illustrations. Rendered-frame QA remains pending.
 017's original Blue is empty-handed: only the original jade neighbor carries a
 bucket. The fixed ground bucket and well-rope bucket stay in place. 017-03 is
 accepted as that observed variant rather than falsely claiming Blue carries it.
