@@ -1,5 +1,22 @@
 # Journal des vidéos
 
+## Crazy Chef 3D — pack de chaîne et livraison mobile — 8 octobre 2026
+
+Nom choisi : **Crazy Chef 3D**, handle **@CrazyChef3D**. Bio courte proposée :
+« Cute chef. Terrible ideas. Delicious destruction. 🍉💥 ».
+Les trois exports finaux déjà revus (pastèque 41,8 s, chocolat 66,7 s, frites 63,6 s)
+sont sur GoFile ; tailles et MD5 confirmés, SHA-256 identiques aux rapports QA.
+Trois covers verticales en pixel art créées et regardées, avec le chef approuvé
+à la spatule. Logo, covers, bio, nom, handle, titres et descriptions transmis
+au Discord indiqué par l'utilisateur ; message des quatre images relu et leurs
+fichiers comparés aux originaux. Kit mobile ZIP également sur GoFile.
+
+Fiche et liens : `chaines/crazy-chef-3d/DELIVERY.md`. Helper dédié :
+`production/crazy_chef_delivery.py` ; vérification des exports, cache des uploads,
+ZIP stable et protection contre les envois répétés ou incertains.
+Livraison GoFile + Discord autorisée pour les prochaines vidéos finalisées et
+vérifiées ; publication TikTok / YouTube manuelle. Aucun changement du frontend.
+
 ## Fries vs Hydraulic Press — 8 octobre 2026
 
 Nouvelle vidéo originale dans le style pixel art du cuistot : trois tas de
