@@ -2,12 +2,15 @@
 
     python tiktok_engine/zernio.py accounts                    # comptes connectés (vérifie la clé)
     python tiktok_engine/zernio.py creator-info                # réglages permis par le compte TikTok
-    python tiktok_engine/zernio.py schedule <dossier> --at 2026-10-10T07:00 [--cover 1] [--draft]
+    python tiktok_engine/zernio.py schedule <dossier> --at 2026-10-10T07:00 [--cover 1]
     python tiktok_engine/zernio.py posts                       # posts programmés ou publiés
 
 <dossier> = dossier de rendu de build.py (video.mp4, description.txt, covers/). L'heure est en
 heure de Bruxelles. Clé : ZERNIO_API_KEY (variable d'environnement ou .env), jamais dans le code.
 Chaque envoi est noté dans <dossier>/zernio.json : relancer ne programme jamais deux fois.
+Testé le 9 oct. 2026 : clé, compte octave.histoire (seul niveau permis : PUBLIC_TO_EVERYONE), envoi du
+fichier et création du post programmé. --draft n'est PAS fiable : le post d'essai est resté
+« scheduled / public » (supprimé avant l'heure). Ne pas s'en servir pour un test.
 """
 import argparse
 import glob
