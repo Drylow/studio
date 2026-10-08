@@ -123,7 +123,18 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
     doit lui-même être privé.
   - Source : developers.tiktok.com/doc/content-sharing-guidelines.
 - **Pas d'automatisation du site TikTok** (risque pour le compte, même règle que YouTube).
-- **Piste retenue à proposer : le planificateur de TikTok Studio** (sur ordinateur).
+- **Piste proposée le 9 oct. pour poster sans l'utilisateur : Zernio**, l'ancien « Late »
+  (zernio.com, docs.zernio.com/platforms/tiktok).
+  - Ses 2 premiers comptes connectés sont gratuits, avec des posts illimités et l'accès complet à l'API.
+  - C'est une appli que TikTok a validée, donc les posts sont publics.
+  - Envoi : `POST /v1/posts` avec `mediaItems` (vidéo par URL publique ou par leur envoi de fichiers),
+    `platforms` (tiktok + `accountId`) et `tiktokSettings` (`privacy_level` pris dans `creator-info`,
+    `content_preview_confirmed` et `express_consent_given` à true, `video_made_with_ai`).
+  - Programmation à une heure donnée (champ à vérifier : `scheduledFor`).
+  - Limite : 15 vidéos par 24 h et par compte.
+  - À faire par l'utilisateur, une fois : créer le compte, y connecter le TikTok, créer une clé API et
+    la mettre en variable d'environnement `ZERNIO_API_KEY` (jamais dans le chat).
+- Piste de secours : le planificateur de TikTok Studio (sur ordinateur).
   - Il programme jusqu'à 10 jours à l'avance.
   - Il demande un compte pro.
   - Nous, on prépare un paquet par semaine (vidéos, miniatures, descriptions, horaires) ;
