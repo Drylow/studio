@@ -65,8 +65,9 @@ def make_voice(work, script):
     from services import tts
     v = script["voice"]
     text = " ".join(b["say"].strip() for b in script["beats"])
+    # Sans SRT : celui d'Algrow est découpé par phrases, Whisper date chaque mot bien mieux.
     words = tts._algrow(text, v["voice_id"], dest, sub="elevenlabs", model=v.get("model", "eleven_v4"),
-                        speed=v.get("speed", 1.0), srt=True)
+                        speed=v.get("speed", 1.0), srt=False)
     if words:
         with open(os.path.join(work, "words.json"), "w", encoding="utf-8") as f:
             json.dump(words, f, ensure_ascii=False)
@@ -365,6 +366,8 @@ def main():
     ap.add_argument("--covers", action="store_true", help="seulement les miniatures (bloc \"covers\" du script)")
     ap.add_argument("--no-upload", action="store_true", help="pas d'envoi Gofile à la fin")
     a = ap.parse_args()
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(ROOT, ".env"))   # clé Algrow de la voix (copiée du serveur par setup.sh)
     os.makedirs(a.work, exist_ok=True)
     script = json.load(open(a.script, encoding="utf-8"))
     script["_path"] = a.script
