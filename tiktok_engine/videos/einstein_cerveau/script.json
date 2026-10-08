@@ -1,0 +1,433 @@
+{
+ "title": "Le cerveau d'Einstein, coupé en 240 morceaux",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Le cerveau d'Einstein a été coupé en 240 morceaux et gardé 43 ans par un seul homme. #histoire #einstein #vulgarisation #science",
+ "sources": [
+  "Science (« A Closer Look at Einstein's Brain », 1999) : cerveau divisé en 240 blocs, remis en 1998 à l'hôpital universitaire de Princeton",
+  "Live Science, « Where is Einstein's brain? » (240 blocs, 170 rendus à Princeton ; Harvey renvoyé de l'hôpital en 1960)",
+  "Brain: A Journal of Neurology / PMC3613708 (Falk et al., 2013) : autopsie de 1955 par Thomas Harvey, photographies avant découpe en 240 blocs",
+  "Einstein meurt le 18 avril 1955 (Britannica)",
+  "Chiffre « 18 chercheurs » écarté (une seule source)"
+ ],
+ "art": {
+  "einstein": {
+   "prompt": "portrait of Albert Einstein, famous wild white hair and bushy moustache, kind tired eyes, dark sweater, bust, front view, on a plain solid pure black background",
+   "size": "192x192"
+  },
+  "jar": {
+   "prompt": "a large glass jar of preserved specimen with a pale human brain floating in liquid on a shelf, laboratory, no people",
+   "size": "192x256"
+  },
+  "hospital_1955": {
+   "prompt": "1950s American hospital exterior at night, brick building with lit windows, vintage cars, Princeton New Jersey",
+   "size": "320x192"
+  },
+  "pathologist": {
+   "prompt": "a 1950s pathologist in a white coat and round glasses holding a camera, in an autopsy room, bust",
+   "size": "192x192"
+  },
+  "cut_blocks": {
+   "prompt": "many small pale tissue cubes arranged in neat rows on a lab tray with numbered labels, close-up, no people",
+   "size": "256x192"
+  },
+  "slides": {
+   "prompt": "rows of glass microscope slides in a wooden storage tray, close-up, no people",
+   "size": "256x192"
+  },
+  "road_trip": {
+   "prompt": "a 1950s style car on a long American highway through flat plains, a cardboard box on the passenger seat, side view",
+   "size": "320x192"
+  },
+  "cardboard_box": {
+   "prompt": "an old cardboard box with a glass jar inside next to a bottle of cider, on a kitchen floor, no people",
+   "size": "192x192"
+  },
+  "princeton_lab": {
+   "prompt": "a modern hospital pathology laboratory with a locked metal cabinet, no people",
+   "size": "256x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Le cerveau d'Einstein a été coupé en deux cent quarante morceaux.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "einstein",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Le cerveau d'Einstein…",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "240 MORCEAUX",
+     "at": "deux",
+     "y": 720,
+     "rot": -6,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Albert Einstein meurt le dix-huit avril 1955, à Princeton. Il avait demandé à être incinéré.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "18 AVRIL 1955",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Il voulait être *incinéré*.",
+     "at": "incinéré",
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "hospital_1955",
+     "h": 230,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Mais le pathologiste de l'hôpital, Thomas Harvey, a une autre idée.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Thomas *Harvey*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "pathologist",
+     "h": 340,
+     "y": 500,
+     "at": 0.1,
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Pendant l'autopsie, il prend le cerveau. Il le photographie, puis le découpe en deux cent quarante blocs.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Photographié, puis *découpé*",
+     "at": 0,
+     "y": 160,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "cut_blocks",
+     "h": 330,
+     "y": 500,
+     "at": "découpe",
+     "in": "scan"
+    },
+    {
+     "preset": "num",
+     "text": "240 BLOCS",
+     "at": "deux",
+     "y": 260,
+     "size": 46
+    }
+   ]
+  },
+  {
+   "say": "Il en fait des lames de microscope, et il garde tout pour lui.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Il garde *tout*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "slides",
+     "h": 330,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "type": "stamp",
+     "text": "GARDÉ",
+     "at": "garde",
+     "y": 720,
+     "rot": 5,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Le pathologiste est renvoyé de l'hôpital en 1960. Il part avec le cerveau.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1960",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Il part avec *le cerveau*.",
+     "at": "part",
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "jar",
+     "h": 400,
+     "y": 500,
+     "at": 0.2,
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Pendant des décennies, le cerveau voyage de ville en ville, dans un bocal, parfois dans un carton.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Dans un *carton*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "road_trip",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "img",
+     "src": "cardboard_box",
+     "h": 230,
+     "y": 730,
+     "at": "carton",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Il en envoie des morceaux à quelques chercheurs, qui cherchent la trace du génie.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Il"
+    },
+    {
+     "preset": "title",
+     "text": "À la recherche du *génie*",
+     "at": "chercheurs",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "slides",
+     "h": 300,
+     "y": 500,
+     "at": "chercheurs",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Enfin, en 1998, Thomas Harvey rend ce qu'il lui reste à l'hôpital de Princeton.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1998",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Rendu à *Princeton*",
+     "at": 0.3,
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "princeton_lab",
+     "h": 260,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Quarante-trois ans après la mort d'Einstein.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 43,
+     "suffix": " ANS",
+     "dur": 1.2,
+     "at": 0,
+     "y": 260,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "APRÈS SA MORT",
+     "at": 0.3,
+     "y": 340,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "jar",
+     "h": 330,
+     "y": 580,
+     "at": 0.2,
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "L'homme qui voulait disparaître en cendres est devenu le cerveau le plus convoité du monde.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "einstein",
+     "h": 400,
+     "y": 480,
+     "at": 0,
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Le cerveau le plus *convoité*.",
+     "at": "convoité",
+     "y": 720,
+     "size": 26
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Son cerveau a été\n*coupé en 240*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "einstein",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Un homme a gardé\nle cerveau d'*Einstein*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "jar",
+    "h": 440,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "43 ans dans\nun *carton*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "cardboard_box",
+    "h": 400,
+    "y": 640
+   }
+  ]
+ ]
+}
