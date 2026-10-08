@@ -1,0 +1,483 @@
+{
+ "title": "La malédiction de Toutankhamon en chiffres",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "La malédiction de Toutankhamon n'existe pas, et une étude de 2002 le prouve en chiffres. #histoire #toutankhamon #egypte #malediction",
+ "sources": [
+  "Nelson MR, The mummy's curse: historical cohort study, BMJ 2002;325:1482 (PubMed 12493675 / PMC139048) : 44 Occidentaux, 25 exposés, âge au décès 70 contre 75 ans, aucune association significative",
+  "HealthDay, JSTOR Daily, Science News, Skeptoid (reprise de l'étude, conclusion identique)",
+  "Wikipedia, Biography.com, History.co.uk : Howard Carter mort en 1939 ; tombe découverte en novembre 1922 ; Carnarvon mort d'une infection après une piqûre d'insecte (avril 1923, 'avril' de mémoire, à confirmer)",
+  "Âge de Carter non repris (64 à 66 ans selon les sources)"
+ ],
+ "art": {
+  "mask": {
+   "prompt": "the golden funerary mask of Tutankhamun with blue and gold striped headdress, front view, bust",
+   "size": "192x256"
+  },
+  "carter": {
+   "prompt": "portrait of archaeologist Howard Carter in the 1920s, mustache, wearing a fedora hat and a suit, bust",
+   "size": "192x192"
+  },
+  "carnarvon": {
+   "prompt": "portrait of an English aristocrat Lord Carnarvon in the 1920s, thin mustache, tweed jacket and tie, bust",
+   "size": "192x192"
+  },
+  "tomb_door": {
+   "prompt": "stone steps going down to a sealed ancient Egyptian tomb door in the desert rock, torch light, a few men in 1920s clothes at the top The whole background must be solid pure black outside the rocky tomb entrance.",
+   "size": "256x192"
+  },
+  "newspapers": {
+   "prompt": "a stack of old 1920s newspapers with big blurry headlines (no readable words) and a small drawing of a pharaoh mask Headlines must be only blurry unreadable gray bars, no letters at all.",
+   "size": "256x192"
+  },
+  "researcher": {
+   "prompt": "a modern researcher with glasses at a desk covered in papers, a calculator and a laptop showing a bar chart, side view The whole background must be solid pure black, no white wall.",
+   "size": "256x192"
+  },
+  "group44": {
+   "prompt": "a large group of men and women in 1920s clothes and hats standing in the desert in front of a tomb entrance, seen from behind",
+   "size": "320x192"
+  },
+  "sarcophagus": {
+   "prompt": "the golden coffin of Tutankhamun inside a stone sarcophagus, seen from above",
+   "size": "256x192"
+  },
+  "carter_old": {
+   "prompt": "an elderly Howard Carter in 1939 sitting in an armchair in a quiet study, mustache, cane, calm face, three-quarter view",
+   "size": "192x256"
+  }
+ },
+ "beats": [
+  {
+   "say": "Ils ont ouvert la tombe de Toutankhamon. Et ils sont tous morts. Enfin, c'est ce qu'on raconte.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "mask",
+     "h": 460,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "La *malédiction* de Toutankhamon.",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "MORTS ?",
+     "at": "morts",
+     "y": 760,
+     "rot": -6,
+     "fill": true,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Novembre 1922 : l'archéologue Howard Carter découvre la tombe du pharaon, presque intacte.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "NOVEMBRE 1922",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Howard *Carter*",
+     "at": "Carter",
+     "y": 225,
+     "size": 30
+    },
+    {
+     "type": "img",
+     "src": "carter",
+     "h": 300,
+     "y": 520,
+     "at": "Carter",
+     "in": "slam"
+    },
+    {
+     "type": "img",
+     "src": "tomb_door",
+     "h": 220,
+     "y": 760,
+     "at": "tombe",
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Quelques mois plus tard, en avril 1923, son financeur, Lord Carnarvon, meurt d'une infection après une piqûre d'insecte.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "AVRIL 1923",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "type": "img",
+     "src": "carnarvon",
+     "h": 340,
+     "y": 500,
+     "at": 0,
+     "in": "pop"
+    },
+    {
+     "preset": "title",
+     "text": "Lord *Carnarvon* meurt.",
+     "at": 0,
+     "y": 225,
+     "size": 28
+    },
+    {
+     "type": "stamp",
+     "text": "INFECTION",
+     "at": "infection",
+     "y": 720,
+     "rot": 4,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Les journaux s'enflamment : c'est la malédiction du pharaon !",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "La malédiction du *pharaon* !",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "newspapers",
+     "h": 320,
+     "y": 500,
+     "at": 0,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "SCANDALE",
+     "at": "s'enflamment",
+     "y": 740,
+     "rot": -5,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Alors en 2002, un chercheur, Mark Nelson, publie une étude dans le British Medical Journal. Il a fait le calcul.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "BMJ — 2002",
+     "at": "2002",
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Mark *Nelson* fait le calcul.",
+     "at": 0.3,
+     "y": 225,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "researcher",
+     "h": 300,
+     "y": 520,
+     "at": 0,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Il prend quarante-quatre Occidentaux présents en Égypte à l'époque. Vingt-cinq d'entre eux ont été en contact avec la tombe, le sarcophage ou la momie.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "*44* Occidentaux présents.",
+     "at": 0,
+     "y": 160,
+     "out": "Vingt-cinq"
+    },
+    {
+     "type": "img",
+     "src": "group44",
+     "h": 230,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 44,
+     "dur": 1.0,
+     "at": "quarante-quatre",
+     "y": 260,
+     "in": "fade"
+    },
+    {
+     "preset": "title",
+     "text": "*25* exposés à la tombe.",
+     "at": "Vingt-cinq",
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 25,
+     "dur": 1.0,
+     "at": "Vingt-cinq",
+     "y": 740,
+     "in": "fade",
+     "suffix": " EXPOSÉS"
+    }
+   ]
+  },
+  {
+   "say": "Il compare leur âge au décès. Les exposés : soixante-dix ans en moyenne. Les autres : soixante-quinze.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Âge moyen au décès",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 70,
+     "dur": 1.0,
+     "at": 0.3,
+     "y": 330,
+     "in": "fade",
+     "suffix": " ANS"
+    },
+    {
+     "preset": "label",
+     "text": "EXPOSÉS",
+     "at": 0.3,
+     "y": 400,
+     "color": "W"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 75,
+     "dur": 1.0,
+     "at": "autres",
+     "y": 560,
+     "in": "fade",
+     "suffix": " ANS"
+    },
+    {
+     "preset": "label",
+     "text": "PAS EXPOSÉS",
+     "at": "autres",
+     "y": 630,
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "Cinq ans d'écart, mais ce n'est pas significatif. Conclusion de l'étude : aucun lien entre la tombe et la durée de vie.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Écart *non significatif*.",
+     "at": "significatif",
+     "y": 160
+    },
+    {
+     "preset": "big",
+     "text": "0 LIEN",
+     "at": "Conclusion",
+     "y": 330,
+     "size": 50
+    },
+    {
+     "type": "img",
+     "src": "sarcophagus",
+     "h": 250,
+     "y": 570,
+     "at": 0,
+     "in": "fade"
+    }
+   ]
+  },
+  {
+   "say": "Et Howard Carter, celui qui a tout ouvert ? Il est mort en 1939. Seize ans plus tard.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "ET\nCARTER ?",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Il"
+    },
+    {
+     "type": "stamp",
+     "text": "MORT EN 1939",
+     "at": "1939",
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "type": "img",
+     "src": "carter_old",
+     "h": 440,
+     "y": 520,
+     "at": "Il",
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "preset": "num",
+     "text": "+16 ANS",
+     "at": "Seize",
+     "y": 770,
+     "size": 44
+    }
+   ]
+  },
+  {
+   "say": "Aucune malédiction. Juste une très bonne histoire de journaux.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Aucune malédiction.",
+     "at": 0,
+     "y": 160,
+     "out": "Juste"
+    },
+    {
+     "preset": "title",
+     "text": "Juste une *très bonne histoire*.",
+     "at": "Juste",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "mask",
+     "h": 400,
+     "y": 520,
+     "at": 0.05,
+     "in": "pop",
+     "fx": "breathe"
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ils sont\ntous *morts* ?",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "mask",
+    "h": 440,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "La malédiction,\nen *chiffres*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "sarcophagus",
+    "h": 330,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Carter est mort\n16 ans *après*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "carter",
+    "h": 430,
+    "y": 640
+   }
+  ]
+ ]
+}

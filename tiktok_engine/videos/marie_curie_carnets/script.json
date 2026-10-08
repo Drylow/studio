@@ -1,0 +1,490 @@
+{
+ "title": "Les carnets de Marie Curie sont encore radioactifs",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Les carnets de Marie Curie sont encore radioactifs, et ils le resteront des siècles. #histoire #mariecurie #radioactivite #science",
+ "sources": [
+  "Christian Science Monitor, 2011 (carnets contaminés au radium 226, demi-vie 1 600 ans, boîtes doublées de plomb, décharge, vêtements de protection, moins de 5 % de décroissance depuis 1902, livres de cuisine et meubles)",
+  "ScienceAlert / Business Insider (boîtes de plomb, décharge, effets personnels radioactifs ; fioles dans la poche et le tiroir)",
+  "Slate.fr, avril 2026, d'après la BnF (Chroniques) : contrôles de 1996 et 2020, précautions de manipulation",
+  "Wikipedia et Biography.com : mort le 4 juillet 1934 d'une anémie aplasique probablement due aux radiations",
+  "Isolement d'un dixième de gramme de chlorure de radium en 1902 après près de quatre ans (ScienceBlog, Sigmalive). Tonnage de minerai non repris : sources divergentes (7 à 8 tonnes).",
+  "Calcul : 1902 + 1 600 ans = vers 3500 ; 2^(-124/1600) = 0,948 soit environ 5 % de perte"
+ ],
+ "art": {
+  "curie_portrait": {
+   "prompt": "portrait of Marie Curie in the 1900s, hair pulled back in a bun, dark high-collar dress, serious calm face, bust",
+   "size": "192x192"
+  },
+  "notebook": {
+   "prompt": "an old open laboratory notebook lying on a table, handwritten pages with brown stains, a soft pale blue glow around it, no hands, no people The whole image background must be solid pure black, no white table or backdrop, only the notebook floating in darkness.",
+   "size": "256x192",
+   "kind": "scene"
+  },
+  "lab_shed": {
+   "prompt": "a cramped old 1900s Paris laboratory shed with glass flasks, a big cauldron and a stove, a woman scientist from behind",
+   "size": "320x192"
+  },
+  "vial_pocket": {
+   "prompt": "a small glass vial glowing pale blue sitting in the pocket of a dark lab coat, close-up",
+   "size": "192x192",
+   "kind": "person"
+  },
+  "cookbook_desk": {
+   "prompt": "an old wooden desk with a closed cookbook on top and a drawer slightly open, a faint pale blue glow, no hands, no people",
+   "size": "256x192"
+  },
+  "lead_box": {
+   "prompt": "a heavy grey lead-lined archive box with its lid half open, an old notebook inside, in a dark archive room",
+   "size": "256x192"
+  },
+  "reader_suit": {
+   "prompt": "a researcher in a white protective suit, mask and thick gloves carefully turning the page of an old notebook at a table, side view, both hands with five fingers visible",
+   "size": "192x256"
+  },
+  "library": {
+   "prompt": "a grand old French national library reading room with tall arched windows and long tables, wide view",
+   "size": "320x192"
+  },
+  "geiger": {
+   "prompt": "a vintage Geiger counter held near an old notebook, the dial needle in the red zone",
+   "size": "256x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Il existe, à Paris, un carnet qu'on ne peut pas ouvrir sans signer une décharge. Celui de Marie Curie.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "curie_portrait",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Ce carnet est encore *radioactif*.",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "DÉCHARGE",
+     "at": "décharge",
+     "y": 740,
+     "rot": -6,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Marie Curie est morte en 1934. Mais ses cahiers de laboratoire, eux, sont toujours dangereux.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Morte en *1934*.",
+     "at": 0,
+     "y": 160,
+     "out": "Mais"
+    },
+    {
+     "preset": "big",
+     "text": "1934",
+     "at": 0.3,
+     "y": 260
+    },
+    {
+     "preset": "title",
+     "text": "Ses cahiers sont *toujours dangereux*.",
+     "at": "Mais",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "notebook",
+     "h": 300,
+     "y": 500,
+     "at": 0.2,
+     "in": "pop",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Avec son mari Pierre, elle a mis près de quatre ans pour isoler un dixième de gramme de radium.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Un dixième de gramme de *radium*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "preset": "num",
+     "text": "0,1 G",
+     "at": "dixième",
+     "y": 250
+    },
+    {
+     "type": "img",
+     "src": "lab_shed",
+     "h": 230,
+     "y": 520,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "label",
+     "text": "PRÈS DE 4 ANS DE TRAVAIL",
+     "at": "quatre",
+     "y": 330,
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "Et elle manipulait ça à mains nues. Elle gardait même des fioles dans la poche de sa blouse, et dans un tiroir.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "À *mains nues*.",
+     "at": 0,
+     "y": 160,
+     "out": "poche"
+    },
+    {
+     "preset": "title",
+     "text": "Des fioles dans *sa poche*.",
+     "at": "poche",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "vial_pocket",
+     "h": 380,
+     "y": 520,
+     "at": 0,
+     "in": "pop",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Résultat : ses carnets, ses livres de cuisine, et même ses meubles sont contaminés.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Même ses *livres de cuisine*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "cookbook_desk",
+     "h": 330,
+     "y": 500,
+     "at": 0,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "CONTAMINÉ",
+     "at": "contaminés",
+     "y": 720,
+     "rot": -5,
+     "fill": true,
+     "size": 22
+    }
+   ]
+  },
+  {
+   "say": "Le coupable : le radium 226. Sa demi-vie, c'est mille six cents ans.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le coupable : le *radium 226*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1600,
+     "dur": 1.4,
+     "at": "mille",
+     "y": 300,
+     "suffix": " ANS",
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "DEMI-VIE DU RADIUM 226",
+     "at": "demi-vie",
+     "y": 370,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "geiger",
+     "h": 250,
+     "y": 560,
+     "at": 0.1,
+     "in": "fade"
+    }
+   ]
+  },
+  {
+   "say": "Concrètement : en plus d'un siècle, la contamination n'a baissé que d'environ cinq pour cent.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Depuis plus d'un siècle…",
+     "at": 0,
+     "y": 160,
+     "out": "cinq"
+    },
+    {
+     "preset": "title",
+     "text": "Seulement *-5 %*.",
+     "at": "cinq",
+     "y": 160
+    },
+    {
+     "preset": "big",
+     "text": "-5 %",
+     "at": "cinq",
+     "y": 300
+    },
+    {
+     "type": "img",
+     "src": "notebook",
+     "h": 300,
+     "y": 560,
+     "at": 0,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Alors les carnets dorment dans des boîtes doublées de plomb, à la Bibliothèque nationale de France.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Des boîtes doublées de *plomb*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "lead_box",
+     "h": 300,
+     "y": 480,
+     "at": 0,
+     "in": "scan"
+    },
+    {
+     "type": "img",
+     "src": "library",
+     "h": 230,
+     "y": 740,
+     "at": "Bibliothèque",
+     "in": "fade"
+    }
+   ]
+  },
+  {
+   "say": "Pour les consulter, il faut signer une décharge, et s'équiper de vêtements de protection.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "*Décharge* + tenue de protection.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "reader_suit",
+     "h": 440,
+     "y": 520,
+     "at": 0.1,
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "type": "stamp",
+     "text": "DÉCHARGE SIGNÉE",
+     "at": "décharge",
+     "y": 780,
+     "rot": -4,
+     "size": 18
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Ce qui l'a rendue célèbre est aussi ce qui l'a tuée : elle est morte d'une anémie probablement causée par les radiations.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Ce"
+    },
+    {
+     "preset": "title",
+     "text": "Morte d'une *anémie*.",
+     "at": "anémie",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "curie_portrait",
+     "h": 400,
+     "y": 520,
+     "at": "Ce",
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "preset": "label",
+     "text": "PROBABLEMENT LIÉE AUX RADIATIONS",
+     "at": "radiations",
+     "y": 740,
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "Et ses carnets ? Ils auront perdu la moitié de leur radioactivité vers l'an trois mille cinq cents.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "La moitié, vers *l'an 3500*.",
+     "at": "moitié",
+     "y": 160
+    },
+    {
+     "preset": "num",
+     "text": "≈ 3500",
+     "at": "trois",
+     "y": 250,
+     "size": 60
+    },
+    {
+     "type": "img",
+     "src": "notebook",
+     "h": 330,
+     "y": 560,
+     "at": 0,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ces carnets sont\n*radioactifs*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "notebook",
+    "h": 330,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Marie Curie :\ndécharge obligatoire.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "curie_portrait",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "1 600 ans\nde *radioactivité*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "lead_box",
+    "h": 330,
+    "y": 640
+   }
+  ]
+ ]
+}
