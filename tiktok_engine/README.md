@@ -104,6 +104,22 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 `build.py` fait tout à la fin du rendu (`deliver` : `covers/`, `description.txt`, `gofile_link.txt`,
 `livraison.txt`). Les illustrations se relisent sur `videos/<nom>/art_review.jpg` (pixels ×3) avant le montage.
 
+## Publication (recherche du 8 oct.)
+
+- **L'utilisateur veut 3 TikTok par jour** : matin, midi et soir (8 oct. au soir).
+- **API TikTok (Content Posting API)** : pas une solution pour nous.
+  - Les règles de TikTok refusent noir sur blanc « un outil pour envoyer du contenu sur le(s)
+    compte(s) que vous ou votre équipe gérez ».
+  - Sans leur audit, les vidéos postées par l'API restent privées (`SELF_ONLY`), et le compte
+    doit lui-même être privé.
+  - Source : developers.tiktok.com/doc/content-sharing-guidelines.
+- **Pas d'automatisation du site TikTok** (risque pour le compte, même règle que YouTube).
+- **Piste retenue à proposer : le planificateur de TikTok Studio** (sur ordinateur).
+  - Il programme jusqu'à 10 jours à l'avance.
+  - Il demande un compte pro.
+  - Nous, on prépare un paquet par semaine (vidéos, miniatures, descriptions, horaires) ;
+    l'utilisateur programme tout en une fois.
+
 ## Ce que coûte une vidéo (calculé le 8 oct.)
 
 - **Illustrations Replicate** (clé de l'utilisateur) : environ **0,60 $ par vidéo** pour une douzaine
