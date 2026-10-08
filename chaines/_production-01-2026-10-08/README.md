@@ -54,16 +54,42 @@ review, even though the correct identity reference was originally sent.
 
 `opening-reviews.json` records individual visual decisions for all 28 opening
 shots, including explicitly selected correction versions. It is not a complete
-film approval. There are 17 creatively accepted candidates and 11 requiring
-further corrections. All final-frame formatting and montage checks remain.
+film approval. After the resumption, all 28 opening shots have selected creatively
+accepted versions. All final-frame formatting and montage checks
+remain. The earlier decisions and executed correction prompts remain in Git
+history and versioned assets; no failed candidate is silently overwritten.
 
-Remaining visual faults include Edo boatman trousers and counter positions,
-Aztec grip fingers and a grey neck, Babylon crossed collars, and Ottoman camera
-axis, grip detail and an invented spike on a mallet. Preserve the original
-executed plans and request receipts; corrections do not erase their history.
+The Edo rope grip and Aztec grey neck have been repaired and individually viewed.
+Reopening the actual Edo boatman reference also corrected an earlier mistaken
+text description: grey trousers, navy wraps and ochre sandal straps are canonical.
+Further Edo locations and individual secondary cast have been generated and
+viewed for the complete-film shot authoring. Preserve the original executed
+plans and request receipts; corrections do not erase their history.
 The actual shop master has three tools (one mallet and two awls), contrary to
 the first Ottoman opening prompts. The correction request makes the intended
-inventory explicit; the delivered corrected images still need tool repairs.
+inventory explicit; its corrected mallet and two awls have now been viewed.
+
+## Continued Production Checkpoint
+
+Edo shots 007-062 have literal Codex-authored prompts, explicitly ordered
+references and exact excerpts/times extracted from the measured narration.
+All generated candidates and correction versions have been opened individually.
+The review ledger explicitly rejects object losses, duplicate limbs, changing
+clothing and meal inventory changes. Generation is not acceptance: many shots
+in this partial sequence still need correction before any montage.
+
+Mobile objects now have separate image anchors rather than relying on textual
+descriptions: household bucket, personal repair cloth, breakfast parcel,
+shopping basket, storage bundle, vegetable pole and commercial hamper.
+Empty room state variants preserve the actual furniture and storage changes.
+Unsolicited alpha in two isolated object candidates is being replaced by
+opaque versions; these failed candidates are not approved scene references.
+The first meal-state candidate also moved the table and requires correction.
+
+No new complete MP4 has been rendered. Full narration coverage, creative
+acceptance, final-frame format normalization and montage verification remain
+mandatory for each of the five films. Do not turn a partial sequence into a
+full film by repeating pictures or letting code invent the missing prompts.
 
 ## Episodes
 

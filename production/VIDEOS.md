@@ -302,3 +302,20 @@ Scripts, sources and partial plans: `chaines/<channel>/01-production-2026-10-08/
 Batch checkpoint: `chaines/_production-01-2026-10-08/`.
 New visuals: `output/imagegen/historical-01-2026-10-08/`.
 No frontend changes, no finished full-film delivery, no upload or publication.
+
+## Historical Daily - 8 October 2026, continued production
+
+All 28 opening shots now have individually viewed, creatively accepted
+correction selections. Final 16:9 formatting and montage checks remain.
+Edo has 56 additional personally authored shots (007-062), linked to actual
+narration excerpts and word-clock timings; each generated candidate was opened
+individually. Many are explicitly rejected in the visual ledger for changing
+objects, clothing or hands. They must not enter montage until corrected.
+
+Separate object image anchors and empty room state variants are being added
+to prevent textual descriptions alone from causing disappearing parcels,
+changing bucket handles, extra bowls or stacked commercial bolts replacing
+a personal garment. Opaque object corrections remove unsolicited alpha.
+No completed new full film, no repeated-image padding, no upload/publication
+and no frontend edits. Source prompts, actual request receipts and rejection
+notes preserve the unfinished work for a truthful continuation.

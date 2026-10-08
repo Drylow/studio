@@ -1,0 +1,7 @@
+{
+ "author":"Codex","image_root":"output/imagegen/historical-01-2026-10-08/",
+ "jobs":[
+  {"id":"edo-delivery-hamper","channel":"edo-daily","size":"1024x1024","output":"edo-daily/references/edo-delivery-hamper.png","references":["edo-daily/shots/edo-new-057.png"],"prompt":"Extract ONLY the porter's closed wicker commercial hamper from image 1. One wide rounded-RECTANGULAR woven body, shallow domed fitted lid, two dark securing cords crossing lid/body and tied at front. Same warm ochre wicker proportions, large enough for folded cloth stock, carried with two hands. Isolate closed hamper on plain pale-grey background, three-quarter view. No people, hands, street, clothes, baskets or contents copied. Sober BD black outlines, matte flats and restrained wicker pattern, no writing."},
+  {"id":"edo-delivery-parcel","channel":"edo-daily","size":"1024x1024","output":"edo-daily/references/edo-delivery-parcel.png","references":["edo-daily/references/edo-cloth-shop.png","edo-daily/references/edo-breakfast-parcel.png"],"prompt":"Design ONE shop DELIVERY cloth parcel as a clearly separate object from the SMALL GREY breakfast parcel in image 2. A larger flat rectangular folded cloth wrapped in unmarked OFF-WHITE fabric with a single DARK NAVY cord cross and modest tied knot, sized for a two-arm carry. No contents exposed yet. Use sober BD contour/matte-flat style of image 1. Isolated three-quarter view on pale-grey plain background. No person, hands, stock stack, room, text or labels. Off-white fabric is an OBJECT, not human skin."}
+ ]
+}
