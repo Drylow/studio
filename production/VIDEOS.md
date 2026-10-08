@@ -254,3 +254,51 @@ et demande l'arrêt des variantes supplémentaires. Références sauvegardées d
 Collecte préparée et testée avec refus des scores provisoires, absents et des matchs abandonnés ;
 voir `production/NEWS_BRIEFS.md`. Aucun résumé produit avant résultat final, aucune attente automatique
 lancée. L'automatisation quotidienne reste reportée à la demande de l'utilisateur.
+
+## Historical Daily - 8 October 2026, long narration checkpoint
+
+Episode 01 for Edo Daily, Aztec Daily, Babylon Daily, Imperial China Daily and
+Ottoman Daily: the user confirmed **20-25 minutes for EACH film**. Codex wrote
+five new English scripts with separate daily work, household and social stories.
+No reuse of the rejected Edo script, narration or repetitive image sequence.
+
+| Channel | New measured narration | Full film |
+| --- | --- | --- |
+| Edo Daily | 21:54.19 | Not yet rendered |
+| Aztec Daily | 23:39.25 | Not yet rendered |
+| Babylon Daily | 22:04.64 | Not yet rendered |
+| Imperial China Daily | 22:27.47 | Not yet rendered |
+| Ottoman Daily | 22:58.87 | Not yet rendered |
+
+Fresh Algrow voices and actual word measurements are cached separately under
+`work/historical-01-2026-10-08/<channel>/`. Measured transcript coverage exceeds
+98% for each narration. Duration, cached voice identity and audio fingerprints
+are checked before shot timing. The narration-only manifests cannot be rendered
+as complete films. Focused narration/timing/reference tests: **32 passed**.
+
+Codex also authored 28 initial opening shots, with exact narration word ranges,
+named characters, individual prompts and explicitly ordered references. These
+are **partial openings**, not the full films. Full shot writing, distinct scene
+generation and final montage remain pending. Never loop these openings to fill
+20 minutes. The six-second cadence requires at least 1,133 distinct shots across
+the five measured voices, including the closing tail.
+
+Reference masters and white-headed cast are generated through the configured
+CLI Proxy and reviewed individually. Skin shadows, crossed collar drift,
+invented distant monuments and changing props are corrected explicitly, not
+declared solved merely because reference images were sent. Early opening
+candidates include faults in shoe shape, produce contents, rope attachment and
+hand details; only reviewed corrected selections may enter montage.
+
+All 28 opening shots now have explicit individual visual decisions in
+`chaines/_production-01-2026-10-08/opening-reviews.json`: 17 creative candidates
+accepted and 11 requiring more correction. These are not render approvals.
+Some proxy outputs need verified 16:9 formatting. Remaining faults include
+Edo lower garments and counter positions, Aztec neck/grip detail, Babylon
+collars, and Ottoman camera axis, grip fingers and a spike invented on a mallet.
+No image worker remains running at this checkpoint.
+
+Scripts, sources and partial plans: `chaines/<channel>/01-production-2026-10-08/`.
+Batch checkpoint: `chaines/_production-01-2026-10-08/`.
+New visuals: `output/imagegen/historical-01-2026-10-08/`.
+No frontend changes, no finished full-film delivery, no upload or publication.

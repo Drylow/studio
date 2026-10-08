@@ -1,0 +1,65 @@
+{
+  "episodes": [
+    {
+      "channel": "edo-daily",
+      "script": "chaines/edo-daily/01-production-2026-10-08/script.txt",
+      "words": 3589,
+      "duration_seconds": 1314.19,
+      "audio": "work/historical-01-2026-10-08/edo-daily/narration.mp3",
+      "audio_sha256": "e6c35ec3f82e3b9a697355667996998d5a521dbfe426deb9e85f7c8806924811",
+      "measured_transcript_coverage": 0.9866258010587907,
+      "minimum_distinct_shots_at_six_second_limit": 220,
+      "full_shot_authoring_complete": false,
+      "full_render_complete": false
+    },
+    {
+      "channel": "aztec-daily",
+      "script": "chaines/aztec-daily/01-production-2026-10-08/script.txt",
+      "words": 3564,
+      "duration_seconds": 1419.25,
+      "audio": "work/historical-01-2026-10-08/aztec-daily/narration.mp3",
+      "audio_sha256": "8e5b816259dfacd904c9c996c46e32e9b3071e89c6de094ccd59c2eb9cbe4e04",
+      "measured_transcript_coverage": 0.9913019079685746,
+      "minimum_distinct_shots_at_six_second_limit": 237,
+      "full_shot_authoring_complete": false,
+      "full_render_complete": false
+    },
+    {
+      "channel": "babylon-daily",
+      "script": "chaines/babylon-daily/01-production-2026-10-08/script.txt",
+      "words": 3466,
+      "duration_seconds": 1324.64,
+      "audio": "work/historical-01-2026-10-08/babylon-daily/narration.mp3",
+      "audio_sha256": "5cc293f102b77316faa483f107bfdf37be345b10bd9ab8502996c9e9c8e6e78e",
+      "measured_transcript_coverage": 0.9933641084824004,
+      "minimum_distinct_shots_at_six_second_limit": 221,
+      "full_shot_authoring_complete": false,
+      "full_render_complete": false
+    },
+    {
+      "channel": "imperial-china-daily",
+      "script": "chaines/imperial-china-daily/01-production-2026-10-08/script.txt",
+      "words": 3552,
+      "duration_seconds": 1347.47,
+      "audio": "work/historical-01-2026-10-08/imperial-china-daily/narration.mp3",
+      "audio_sha256": "fc67c5463b546b3dc811e5548ea8339ab276fba9e02fbf71e98017306957fcc3",
+      "measured_transcript_coverage": 0.9828265765765766,
+      "minimum_distinct_shots_at_six_second_limit": 225,
+      "full_shot_authoring_complete": false,
+      "full_render_complete": false
+    },
+    {
+      "channel": "ottoman-daily",
+      "script": "chaines/ottoman-daily/01-production-2026-10-08/script.txt",
+      "words": 3467,
+      "duration_seconds": 1378.87,
+      "audio": "work/historical-01-2026-10-08/ottoman-daily/narration.mp3",
+      "audio_sha256": "57f39ae52bebe2fcd9b6be4e475b8b4335d24dcc4a1d1a849585f29fe108f461",
+      "measured_transcript_coverage": 0.9919238534756274,
+      "minimum_distinct_shots_at_six_second_limit": 230,
+      "full_shot_authoring_complete": false,
+      "full_render_complete": false
+    }
+  ],
+  "not_finished_films": true
+}

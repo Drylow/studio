@@ -1,0 +1,61 @@
+{
+  "status": "partial-shot-authoring-not-a-complete-film", "author": "Codex",
+  "script": "chaines/ottoman-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/ottoman-daily", "max_shot_seconds": 6,
+  "references": {
+    "shop": "output/imagegen/historical-01-2026-10-08/ottoman-daily/references/ottoman-leather-shop-v2.png",
+    "worker": "output/imagegen/historical-01-2026-10-08/ottoman-daily/references/ottoman-leatherworker-v2.png",
+    "customer": "output/imagegen/historical-01-2026-10-08/ottoman-daily/references/ottoman-colleague-v2.png"
+  },
+  "cast_note": "The teal-coated adult is the recurring local customer for this film. The earlier asset filename colleague is not an instruction to change their identity or clothes.",
+  "shots": [
+    {
+      "id": "ottoman-001", "word_start": 0, "word_end": 8,
+      "narration": "Your customer puts a shoe on the work surface.",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-001.png",
+      "prompt": "Image 1 is the fixed empty workshop, image 2 the olive-coated leatherworker, image 3 the teal-coated customer. Same shop camera, medium shot of the front counter. The customer stands OUTSIDE the counter on its street side and sets ONE worn dark-brown low shoe down with a pure-white mitten hand. The leatherworker stands BEHIND the counter beside its stool, leaning forward to inspect. The worn shoe has a loosened join between upper and sole along its outer side, still ONE attached object, not two shoes. Keep the master left rack, all folded leather and its two existing shoe pairs, rear door and jar, right bench with tools and jug, hanging leather and canopy fixed. Worker exact olive outer coat, burgundy inner garment, rust sash and dark covered lower body; customer exact teal coat, ochre inner garment, grey sash. Not a baker and no bread. Sober BD crisp outlines, flat matte colours, low texture, simple garment shadows. Both substantial adults have perfectly round oversized pure #FFFFFF heads, small black dot eyes and tiny straight neutral mouths, no nose, ears, hair or brows. ALL exposed skin #FFFFFF without grey shadows, white mitten hands without detailed fingers, covered bodies. No text or extra people."
+    },
+    {
+      "id": "ottoman-002", "word_start": 9, "word_end": 15,
+      "narration": "The shoe has almost become two shoes.",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-002.png",
+      "prompt": "Image 1 is the unchanged shop, image 2 worker, image 3 customer. A close crop from the same camera centres on the SAME ONE dark-brown low shoe on the front counter. Its upper has separated slightly from its sole along the outside edge, leaving a readable gap but still physically attached at heel and toe. Show the olive worker's white mitten gently holding the heel in place and the teal customer's white mitten withdrawn just beyond the toe. No second shoe appears on this counter. The master's separate display shoes remain on their rear shelf if in frame. Preserve wood seams, relative placement and exact olive/burgundy/rust and teal/ochre/grey clothes. No modern sneaker, adhesive tube, electric machine or product labels. Clean sober BD, crisp dark contours, matte flat colours, restrained leather texture. All exposed skin #FFFFFF pure white without shadows or detailed fingers, adult-size covered sleeves. No actual duplication to illustrate the joke, captions, labels, children, realistic human features or comic symbols."
+    },
+    {
+      "id": "ottoman-003", "word_start": 16, "word_end": 23,
+      "narration": "He points at the opening, looks at you,",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-003.png",
+      "prompt": "Image 1 fixes the workshop, image 2 the worker, image 3 the customer. Same master camera, medium two-person counter shot. Teal customer on the street side directs ONE rounded white mitten toward the loosened sole seam of the SAME worn dark-brown shoe, then turns their oversized head toward the olive worker behind the counter. Use hand direction and posture, not a detailed pointing finger. Worker looks toward the indicated gap. One worn shoe remains on the counter, its upper and sole still attached at toe and heel. No other counter object. Keep rack, its leather and two display shoe pairs, jug, bench tools, hanging leather, rear doorway and stool intact. Exactly olive/burgundy/rust worker and teal/ochre/grey customer outfits. Expressions quietly attentive, not shocked or grinning. Sober BD crisp contours, flat matte colours and reduced texture. ALL skin pure #FFFFFF without shadows, perfect round adult heads, dot eyes, tiny straight mouths, no nose, ears, hair, eyebrows or fingers. Covered adult bodies, no children, text, speech bubbles or extra people."
+    },
+    {
+      "id": "ottoman-004", "word_start": 24, "word_end": 36,
+      "narration": "and waits for the answer that determines whether he can keep walking comfortably.",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-004.png",
+      "prompt": "Image 1 fixed shop, image 2 worker, image 3 customer. Same camera orientation, medium shot weighted toward the teal customer waiting at the street side of the counter. Their shoulders lower a little and both white mitten hands now rest at the counter edge, head directed toward the worker. The olive worker behind the counter bends closer to check the SAME worn brown shoe's loosened upper/sole join; this is a careful examination, not a completed repair. Keep one damaged shoe on the counter and the two intact display pairs on the shelf. Keep all visible rack bundles, tools on right bench, jug, stool, doorway, jar, canopy and low street buildings unchanged. Exact clothing colours and proportions. Body language of waiting for a practical answer; no giant surprised face or open mouth. Sober BD matte flat colours, crisp readable lines, restrained texture and simple clothes shadows only. Heads, necks and mitten hands pure #FFFFFF without shading, dot eyes and tiny straight mouths, no hair, nose, ears or eyebrows, fully covered adult bodies. No text, children or extra characters."
+    },
+    {
+      "id": "ottoman-005", "word_start": 37, "word_end": 42,
+      "narration": "You have barely arranged your tools,",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-005.png",
+      "prompt": "Image 1 is the workshop master, images 2 and 3 the unchanged worker and customer. Same camera, tighter crop toward the RIGHT rear workbench, where the existing two hand tools and clay jug remain. The olive worker's white mitten reaches toward the nearest existing wood-handled hand tool, but it has NOT yet left the workbench. A visible strip of foreground front counter still carries the SAME one worn dark-brown shoe with loosened side join; teal customer waits outside that counter. Do not make the shoe or customer vanish just because the focal action shifts toward tools. Keep shop geometry and visible inventory exactly. Worker olive coat/burgundy inner/rust sash, customer teal/ochre/grey. No powered equipment, modern glue or third invented tool. Sober BD crisp contours, flat matte areas, reduced texture, simple clothing shadows. Pure #FFFFFF skin, rounded white mitten hands without fingers, perfect oversized circular heads, dot eyes and straight small mouths, no hair, ears, nose or brows. Covered adult bodies. No labels, captions or children."
+    },
+    {
+      "id": "ottoman-006", "word_start": 43, "word_end": 51,
+      "narration": "and the day already belongs partly to someone else.",
+      "location": "Leather repair shop", "characters": ["Leatherworker", "Local customer"],
+      "ordered_references": ["shop", "worker", "customer"],
+      "image": "output/imagegen/historical-01-2026-10-08/ottoman-daily/shots/ottoman-006.png",
+      "prompt": "Image 1 fixes the unchanged workshop, image 2 olive worker, image 3 teal customer. Same camera, medium-wide composition. Worker now holds the nearest wood-handled hand tool from the RIGHT bench in one white mitten and steadies the SAME worn brown shoe on the front counter with the other; show the first inspection before repairing, not a finished shoe. Only ONE remaining tool stays on the right bench beside the jug; this is the one explicit inventory transfer. Teal customer shifts their stance as they watch, outside the counter. Master left shelf leather bundles, two display shoe pairs, stool, hanging leather, rear doorway and jar stay fixed. Exact olive/burgundy/rust worker and teal/ochre/grey customer outfits. A small practical negotiation, no fantasy skyline or baker. Sober BD crisp outlines, matte flat colours, restrained texture and simple garment shadows. Adults have perfectly circular oversized pure #FFFFFF heads, black dot eyes, tiny straight mouths, no nose, ears, hair or brows. ALL skin #FFFFFF without grey shadows, white mitten hands without detailed fingers, long covered garments. No captions, labels, children or extra people."
+    }
+  ]
+}

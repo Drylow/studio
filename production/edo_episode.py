@@ -32,11 +32,33 @@ def normalized(text):
 
 
 def authored_text(episode):
+    if episode.get("phase") == "narration-only":
+        if "shots" in episode:
+            raise SystemExit("Narration-only manifests must not masquerade as final shot plans.")
+        text = (Path(REPO) / episode["narration_script"]).read_text(encoding="utf-8").strip()
+        if not text:
+            raise SystemExit("Authored narration is empty.")
+        return text
     shots_text = "\n\n".join(s["narration"] for s in episode["shots"])
     text = episode.get("voice_text", shots_text)
     if text.split() != shots_text.split():
         raise SystemExit("Shot narration disagrees with the approved voice text.")
     return text
+
+
+def validate_narration_duration(episode, duration):
+    bounds = episode.get("target_duration_seconds")
+    if bounds and not float(bounds[0]) <= duration <= float(bounds[1]):
+        raise SystemExit(f"Narration needs manual revision: {duration:.2f}s outside {bounds}.")
+
+
+def export_path(episode, work):
+    name = episode.get("export_filename", "Edo-Daily-01.mp4")
+    if not isinstance(name, str) or Path(name).name != name or "/" in name or "\\" in name:
+        raise SystemExit("Export filename must not contain a path.")
+    if not name.lower().endswith(".mp4"):
+        raise SystemExit("Export filename must end with .mp4.")
+    return work / name
 
 
 def validate_cadence(episode, shots, tail=0.0):
@@ -80,6 +102,7 @@ def speech(episode, work):
         old = read(result)
         if old.get("signature") != signature:
             raise SystemExit("Narration changed: choose a new work directory before generating again.")
+        validate_narration_duration(episode, old["duration"])
         print("Voice already cached", flush=True)
         return
     config = episode["voice"]
@@ -90,6 +113,39 @@ def speech(episode, work):
                   "audio_sha256": digest(audio), "provider": config["provider"],
                   "provider_words": res["words"]})
     print(f"Voice complete: {res['duration']:.2f} seconds", flush=True)
+    validate_narration_duration(episode, res["duration"])
+
+
+def measure_narration(episode, work):
+    audio = work / "narration.mp3"
+    voice = read(work / "voice.json")
+    text = authored_text(episode)
+    identity = {"text": text, "voice": episode["voice"]}
+    signature = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+    if signature != voice["signature"] or digest(audio) != voice["audio_sha256"]:
+        raise SystemExit("Narration source or audio changed before measurement.")
+    actual_duration = media.duration(str(audio))
+    validate_narration_duration(episode, actual_duration)
+    measured = work / "measured_words.json"
+    if measured.exists():
+        cached = read(measured)
+        if cached["audio_sha256"] != voice["audio_sha256"]:
+            raise SystemExit("Measured transcript references different narration.")
+        raw = cached["words"]
+    else:
+        raw = measure_words(audio, episode["language"])
+        if not raw:
+            raise SystemExit("No measured word timings; do not substitute estimated provider timings.")
+        save(measured, {"audio_sha256": voice["audio_sha256"], "words": raw})
+    matcher = difflib.SequenceMatcher(None, [normalized(w) for w in text.split()],
+                                      [normalized(w["w"]) for w in raw], autojunk=False)
+    coverage = sum(b.size for b in matcher.get_matching_blocks()) / len(text.split())
+    print(f"Measured narration: {len(raw)} words; transcript coverage {coverage:.2%}", flush=True)
+    if coverage < 0.94:
+        raise SystemExit("Narration/transcript discrepancy needs manual review before shot authoring.")
+    save(work / "narration_measurement.json", {"coverage": coverage,
+         "duration": actual_duration, "audio_sha256": voice["audio_sha256"],
+         "script_sha256": hashlib.sha256(text.encode()).hexdigest(), "shot_authoring_pending": True})
 
 
 def timeline(episode, work):
@@ -213,7 +269,8 @@ def export_video(episode, work, width, height):
                "motion": s["motion"]} for s in plan["shots"]]
     build = work / "render"
     build.mkdir(exist_ok=True)
-    final = work / "Edo-Daily-01.mp4"
+    validate_narration_duration(episode, plan["duration"])
+    final = export_path(episode, work)
     result = render.render_video(str(build), scenes, str(work / "narration.mp3"), str(final),
                                  width=width, height=height, fps=30, motion_strength=0.045,
                                  transition="fade", transition_dur=0.2, quality="high",
@@ -262,7 +319,8 @@ def validate_render_timing(plan, streams, fps=30):
 def qa(episode, work):
     from PIL import Image, ImageDraw
     plan = read(work / "timeline.json")
-    final = work / "Edo-Daily-01.mp4"
+    validate_narration_duration(episode, plan["duration"])
+    final = export_path(episode, work)
     probe = shutil.which("ffprobe")
     if not probe:
         raise SystemExit("ffprobe is required to verify picture duration independently of audio.")
@@ -311,17 +369,21 @@ def qa(episode, work):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("stage", choices=("voice", "timeline", "freeze", "render", "qa", "image-sheets"))
+    parser.add_argument("stage", choices=("voice", "measure", "timeline", "freeze", "render", "qa", "image-sheets"))
     parser.add_argument("manifest")
     parser.add_argument("--width", type=int, default=1920)
     parser.add_argument("--height", type=int, default=1080)
     args = parser.parse_args()
     os.chdir(REPO)
     episode = read(args.manifest)
+    if episode.get("phase") == "narration-only" and args.stage not in ("voice", "measure"):
+        raise SystemExit("Author and review the shot manifest before this production stage.")
     work = Path(REPO) / episode["workdir"]
     work.mkdir(parents=True, exist_ok=True)
     if args.stage == "voice":
         speech(episode, work)
+    elif args.stage == "measure":
+        measure_narration(episode, work)
     elif args.stage == "timeline":
         timeline(episode, work)
     elif args.stage == "freeze":

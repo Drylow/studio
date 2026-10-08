@@ -1,0 +1,63 @@
+{
+  "status": "partial-shot-authoring-not-a-complete-film", "author": "Codex",
+  "script": "chaines/edo-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/edo-daily", "max_shot_seconds": 6,
+  "references": {
+    "quay": "output/imagegen/edo-rebuild-2026-10-08/horizon-v2/references/fish-quay.png",
+    "assistant": "output/imagegen/historical-01-2026-10-08/edo-daily/references/edo-artisan-v2.png",
+    "seller": "output/imagegen/historical-01-2026-10-08/edo-daily/references/edo-fishseller-v2.png",
+    "porter": "output/imagegen/historical-01-2026-10-08/edo-daily/references/edo-porter-v2.png",
+    "boatman": "output/imagegen/historical-01-2026-10-08/edo-daily/references/edo-boatman-v2.png"
+  },
+  "cast_note": "Indigo identity is the cloth-shop assistant of this entirely new script. Do not reuse the old artisan story, voice or finished images.",
+  "shots": [
+    {
+      "id": "edo-new-001", "word_start": 0, "word_end": 7,
+      "narration": "Your breakfast is still on somebody else's shoulder.",
+      "location": "Fish supply quay", "characters": ["Quay porter"],
+      "ordered_references": ["quay", "porter"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-001.png",
+      "prompt": "Image 1 is the exact corrected low-horizon fish quay, image 2 the exact rust-jacket porter. Use the same master camera, medium crop on the porter walking on the dry quay carrying ONE additional shallow wooden fish tray balanced securely at shoulder height with a pure-white mitten hand. The porter wears precisely the rust jacket, grey waist sash, indigo headband and charcoal trousers of image 2. The tray holds three ordinary silver fish, not breakfast in a modern plate. Keep the THREE master's fish trays on the LEFT shop counter, the boat/cargo/ropes on the RIGHT, two lidded foreground quay baskets, awning and bridge in their actual locations if in frame. The carried tray is one incoming tray, not a missing counter tray. Adult substantial body, grounded walking stance, not a toddler. Sober BD clean outlines, matte flat colours, restrained textures and simple garment shadows. Perfect round oversized pure #FFFFFF head, black dot eyes, tiny straight mouth, no hair, nose, ears or brows; headband stays indigo. ALL skin #FFFFFF without shading, mitten hands without fingers. No text, extra people, children, enormous distant castle or fantasy tower."
+    },
+    {
+      "id": "edo-new-002", "word_start": 8, "word_end": 17,
+      "narration": "A porter steps off the quay with a fish tray,",
+      "location": "Fish supply quay", "characters": ["Quay porter"],
+      "ordered_references": ["quay", "porter"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-002.png",
+      "prompt": "Image 1 fixes the quay, image 2 rust porter. Same original camera orientation, tighter crop focused on the porter's full covered legs and carried fish tray as the porter takes a grounded step away from the waterside unloading edge toward the LEFT seller frontage. This means leaving the unloading area, NOT stepping into the canal or jumping off a dock. The SAME extra shallow wooden tray with THREE silver fish is now supported at chest height in both pure-white mitten hands, rather than vanishing from the earlier shoulder carry. Exact rust coat, grey sash, charcoal trousers, dark sandals and indigo headband if visible. Fixed three counter trays, two lidded quay baskets, boat and cargo, ropes, green awning and wood bridge remain in their master positions. Don't invent a new dock, castle skyline or displaced boat. Sober BD crisp contours, flat matte colours, sparse texture and simple clothing shadows. White skin #FFFFFF without grey shadows, no detailed fingers, adult body. If head visible: oversized perfect circle with dot eyes, tiny straight mouth, no nose, ears, hair or brows. No labels, text, children or extra people."
+    },
+    {
+      "id": "edo-new-003", "word_start": 18, "word_end": 31,
+      "narration": "a boatman tightens a rope, and a seller clears a space on the counter.",
+      "location": "Fish supply quay", "characters": ["Boatman", "Fish seller", "Quay porter"],
+      "ordered_references": ["quay", "boatman", "seller", "porter"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-003.png",
+      "prompt": "Image 1 exact corrected quay, image 2 teal boatman, image 3 ochre seller/green apron/WHITE headband, image 4 rust porter/INDIGO headband. Same master camera, medium-wide frame of two coordinated tasks. On the RIGHT, boatman crouches safely on the dry quay beside the mooring post, pulling the existing boat rope taut with both white mitten hands. On the LEFT, seller slides the RIGHTMOST of the THREE existing counter fish trays slightly closer to its neighbour to free a small receiving gap at the right counter end; keep all THREE trays and their fish. Rust porter waits next to that gap holding the SAME incoming shallow tray with THREE silver fish at chest height. Boat, cargo, two lidded baskets, bridge, awning and low rooflines fixed. Do not duplicate ropes, invent a fourth counter tray before delivery, remove fish or swap headband colours. Sober BD crisp lines, flat matte colours, sparse texture, simple garment shadows. All three substantial adults have perfectly round oversized #FFFFFF heads, dot eyes, straight tiny mouths, no hair, nose, ears or brows. ALL skin pure white #FFFFFF without shading, white mitten hands without fingers and covered bodies. No caption, children or human faces."
+    },
+    {
+      "id": "edo-new-004", "word_start": 32, "word_end": 39,
+      "narration": "You have not earned a single coin today.",
+      "location": "Fish supply quay", "characters": ["Cloth-shop assistant", "Fish seller"],
+      "ordered_references": ["quay", "assistant", "seller"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-004.png",
+      "prompt": "Image 1 fixes the fish quay; image 2 is the exact indigo cloth-shop assistant and image 3 the ochre seller with green apron and WHITE headband. Same master camera, closer medium shot of the assistant at the street side of the LEFT fish counter, resting one pure-white mitten at the opening of the indigo sleeve where coins are kept, hesitating before buying. No empty-wallet icon and no claim they own zero coins: they simply have earned nothing TODAY. Seller behind counter turns toward assistant, one white hand on counter, no fish parcel transferred yet. Exact assistant indigo wrap upper/grey sash/charcoal trousers, exact seller ochre/indigo/green apron/grey sash. Keep all THREE master's counter trays, visible fish, green awning and fixed quay geometry. The incoming extra tray and porter are outside this tighter crop, not an instruction to delete inventory from the whole scene. Sober BD clean contours, matte flat colours, restrained texture and simple garment shadows only. Adult bodies, perfect oversized circular #FFFFFF heads, dot eyes, tiny straight neutral mouths, no hair, nose, ears or eyebrows. ALL skin pure #FFFFFF without shadows, rounded mitten hands without detailed fingers, covered clothes. No captions, children, human faces or extra figures."
+    },
+    {
+      "id": "edo-new-005", "word_start": 40, "word_end": 52,
+      "narration": "Already, three people have done something that will end up in your stomach.",
+      "location": "Fish supply quay", "characters": ["Cloth-shop assistant", "Fish seller", "Quay porter", "Boatman"],
+      "ordered_references": ["quay", "assistant", "seller", "porter", "boatman"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-005.png",
+      "prompt": "Image 1 exact quay, image 2 indigo assistant, image 3 ochre seller with green apron and WHITE headband, image 4 rust porter with INDIGO headband, image 5 teal boatman with OCHRE headband. Same master camera, wide enough to show the practical supply chain. Assistant waits at left counter's street side, seller reaches toward the SAME incoming shallow fish tray held at chest height by porter at the counter's right end; the tray has THREE silver fish and has not yet been set down. Boatman at right mooring post checks the tightened original boat rope. Exactly FOUR adults, not a clone crowd. Keep THREE original counter trays, two lidded quay baskets, cargo boat, ropes, green awning, wood bridge and low rooflines fixed. Stable individual colours/sashes/headbands, no parcel or payment transferred yet. Sober BD crisp dark contours, matte flat colours, restrained texture, simple clothes shadows only. All four adult-sized bodies, perfectly round oversized pure #FFFFFF heads, dot eyes, tiny straight neutral mouths, no nose, ears, hair or brows. All skin pure #FFFFFF without shading and hands rounded white mittens without fingers. No text, children, giant skyline towers or human faces."
+    },
+    {
+      "id": "edo-new-006", "word_start": 53, "word_end": 62,
+      "narration": "Welcome to Edo around the beginning of the nineteenth century.",
+      "location": "Fish supply quay", "characters": ["Cloth-shop assistant", "Fish seller", "Quay porter", "Boatman"],
+      "ordered_references": ["quay", "assistant", "seller", "porter", "boatman"],
+      "image": "output/imagegen/historical-01-2026-10-08/edo-daily/shots/edo-new-006.png",
+      "prompt": "Image 1 exact corrected low-horizon quay, images 2-5 exact indigo assistant, ochre/green seller with WHITE headband, rust porter with INDIGO headband and teal boatman with OCHRE headband. Same full master camera orientation and geometry, not an invented aerial city. Seller and porter now complete the receiving action by jointly setting the SAME incoming shallow tray with THREE silver fish into the small right-end counter gap. THREE original counter trays remain: the incoming tray makes FOUR trays only after this explicit delivery. Assistant stands patiently on street side; boatman has finished tightening rope and stands beside original mooring post. Keep fixed cargo boat, two lidded baskets, green awning, bridge and low ordinary Edo rooflines. Broad ordinary working city feeling, no castle or giant pagoda on the horizon. Outfit colours exactly from individual references. Sober BD crisp lines, matte flat colours, restrained texture and simple garment shadows. Four substantial adult bodies, oversized perfectly circular pure #FFFFFF heads, dot eyes and tiny straight neutral mouths, no nose, ears, hair or brows. ALL skin #FFFFFF without grey shadows, rounded white mitten hands without fingers. No title overlay, text, children or realistic human faces."
+    }
+  ]
+}

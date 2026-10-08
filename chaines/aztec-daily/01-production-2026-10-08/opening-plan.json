@@ -1,0 +1,55 @@
+{
+  "status": "partial-shot-authoring-not-a-complete-film",
+  "author": "Codex",
+  "script": "chaines/aztec-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/aztec-daily",
+  "max_shot_seconds": 6,
+  "references": {
+    "landing": "output/imagegen/historical-01-2026-10-08/aztec-daily/references/aztec-landing.png",
+    "home": "output/imagegen/historical-01-2026-10-08/aztec-daily/references/aztec-house-cooking-v2.png",
+    "grower": "output/imagegen/historical-01-2026-10-08/aztec-daily/references/aztec-grower-v2.png",
+    "partner": "output/imagegen/historical-01-2026-10-08/aztec-daily/references/aztec-partner-v2.png"
+  },
+  "shots": [
+    {
+      "id": "aztec-001", "word_start": 0, "word_end": 8,
+      "narration": "Your canoe is nearly ready. Your breakfast is not.",
+      "location": "Household canal landing", "characters": ["Produce grower"],
+      "ordered_references": ["landing", "grower"],
+      "image": "output/imagegen/historical-01-2026-10-08/aztec-daily/shots/aztec-001.png",
+      "prompt": "Image 1 is the exact empty household landing master, image 2 the exact produce grower identity. Insert this ONE adult at the right foreground beside the existing canoe, leaning slightly to check its tied mooring rope with one white mitten hand; the other hand rests on the canoe edge. Keep the original camera and all house blocks, canopy posts, stepped bank, pots, rolled mat, reeds and canoe geometry unchanged. The grower wears the same forest-green rectangular-neck tunic, rust waist sash, grey-green left-shoulder mantle with red edge, charcoal trousers and plain dark foot covers as image 2. No food is in the grower's hands yet. Quiet waiting posture, neutral tiny straight mouth, not surprised. Medium-wide landscape staging with visible water and the practical task. No enormous temple or distant tower. Sober BD, crisp outlines, matte flat colour areas, limited texture and simple clothing shadows. Perfectly round oversized head, small black eyes, no nose, ears, hair or eyebrows. ALL skin pure #FFFFFF, including neck and mitten hands, no skin shadows or detailed fingers. Long sleeves and covered adult-sized body. No captions, text, children or human faces. Not a thumbnail. Do not add extra people."
+    },
+    {
+      "id": "aztec-002", "word_start": 9, "word_end": 16,
+      "narration": "A basket of vegetables waits beside the water,",
+      "location": "Household canal landing", "characters": ["Produce grower"],
+      "ordered_references": ["landing", "grower"],
+      "image": "output/imagegen/historical-01-2026-10-08/aztec-daily/shots/aztec-002.png",
+      "prompt": "Image 1 fixes the household landing geometry. Image 2 fixes the produce grower. Make a tighter crop from exactly the same camera orientation, centred on ONE reed basket filled with green edible leaves and two small squash, placed securely on the dry right bank immediately beside the existing canoe. The grower's lower torso and white mitten hand entering the top of this crop show them checking the basket's handle, not putting it in the water. Same forest-green tunic, rust sash, left grey-green red-edged mantle and charcoal covered lower body as image 2. Show the established canoe rim and the same retaining blocks behind the basket; do not redesign the waterfront, move the canoe or turn this into a European market. No wheat loaves, iron machinery or pyramids on the skyline. Sober BD: crisp clean contours, readable woven basket without photorealism, flat matte colours, restrained texture, simple clothing shadows only. Visible skin and mitten hand pure #FFFFFF without shading or detailed fingers. Adult body, no children. No captions or text. This is an object-focused narrative shot, not the same wide frame with a random new pose."
+    },
+    {
+      "id": "aztec-003", "word_start": 17, "word_end": 29,
+      "narration": "and the person preparing your food is still bent over a grinding stone.",
+      "location": "Household cooking room", "characters": ["Grower's partner"],
+      "ordered_references": ["home", "partner"],
+      "image": "output/imagegen/historical-01-2026-10-08/aztec-daily/shots/aztec-003.png",
+      "prompt": "Image 1 is the exact empty cooking-room master. Image 2 is the exact partner. Add this ONE adult kneeling securely at the LEFT foreground grinding stone, both pure-white mitten hands on its existing handstone, torso leaning toward the prepared maize dough on the grinding surface. Keep the stone, hearth, jars, rear sleeping mat, baskets, doorway and floor arrangement of image 1 exactly. The partner has the identical plum covered upper garment, forest-green ankle-length lower garment, rust sash and simple red-edged neckline from image 2; do not change colours. Crop from the same master camera to a medium shot of this practical task, with doorway and hearth still legible. The handstone must rest on the grinding stone, not float or multiply. No modern stove, tortilla press, iron pan or Japanese table. Sober BD clean contours, matte flat colours, reduced texture, simple clothing shadows only. Perfectly round oversized pure #FFFFFF head, black dot eyes, tiny straight mouth; no nose, ears, hair or brows. ALL skin pure #FFFFFF without grey shadows. Adult covered body, mitten hands, no fingers, human faces, children or text."
+    },
+    {
+      "id": "aztec-004", "word_start": 30, "word_end": 45,
+      "narration": "You could leave now, arrive sooner, and spend the next part of the morning regretting it.",
+      "location": "Household canal landing", "characters": ["Produce grower"],
+      "ordered_references": ["landing", "grower"],
+      "image": "output/imagegen/historical-01-2026-10-08/aztec-daily/shots/aztec-004.png",
+      "prompt": "Image 1 is the fixed household landing master; image 2 is the exact produce grower. Same camera orientation, medium framing around grower and right foreground canoe. Show the grower pausing before boarding: both feet firmly on the dry bank, one white hand on the canoe rim, the other resting on their own stomach as they turn their round head toward the household doorway. Keep the ONE vegetable basket with green leaves and two small squash on the dry bank beside the canoe, not duplicated or emptied. The boat is still moored. Exact forest-green tunic, rust sash, left grey-green red-edged mantle, charcoal trousers and plain dark footwear from image 2. Body language says reconsidering a hungry departure; tiny neutral mouth, no huge grin or surprise. Preserve all master buildings, steps, canopy, pot, mat and low horizon. No fantasy towers. Sober BD clean contours, flat matte colours, reduced texture and simple garment shadows. All visible skin perfectly white #FFFFFF without shadows, oversized circular head with dot eyes and tiny straight mouth, no nose, ears, hair or brows, mitten hands, fully covered adult body. No caption, children or additional people."
+    },
+    {
+      "id": "aztec-005", "word_start": 46, "word_end": 57,
+      "narration": "Or you could help carry the remaining basket while the meal finishes.",
+      "location": "Household cooking room", "characters": ["Produce grower", "Grower's partner"],
+      "ordered_references": ["home", "grower", "partner"],
+      "image": "output/imagegen/historical-01-2026-10-08/aztec-daily/shots/aztec-005.png",
+      "prompt": "Image 1 is the exact cooking-room master, image 2 the grower, image 3 the partner. Use exactly that room camera and geometry. Show the grower on the RIGHT lifting ONE of the master's two produce baskets, now loaded with green leaves, by both handles at knee height and moving toward the rear-right doorway. The other basket remains on the floor in its master position, empty. The partner stays at the LEFT grinding stone, both white mitten hands pressing the handstone over maize dough. Both tasks readable in a medium-wide composition, with no collision or overlapping limbs. Grower exact green tunic, rust sash, grey-green red-edged left mantle; partner exact plum upper, forest-green long lower garment and rust sash. Keep hearth, jars, sleeping mat and rolled cloth unchanged. Do not move vegetables from the separate canal basket magically into this basket: this is the remaining household load. Sober BD, crisp lines, matte flat colours, limited texture and simple clothing shadows. Both adults have oversized perfectly circular pure #FFFFFF heads, dot eyes, straight tiny mouths, no nose, hair, brows or ears. All skin and mitten hands #FFFFFF without shading or fingers. Fully covered bodies. No human faces, children, captions or extra characters."
+    }
+  ]
+}

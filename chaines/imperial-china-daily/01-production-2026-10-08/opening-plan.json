@@ -1,0 +1,62 @@
+{
+  "status": "partial-shot-authoring-not-a-complete-film",
+  "author": "Codex",
+  "script": "chaines/imperial-china-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/imperial-china-daily",
+  "max_shot_seconds": 6,
+  "references": {
+    "room": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/references/tang-pottery-room.png",
+    "potter": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/references/tang-potter-v2.png",
+    "maker": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/references/tang-maker-v2.png"
+  },
+  "shots": [
+    {
+      "id": "tang-001", "word_start": 0, "word_end": 8,
+      "narration": "The bowl is worth more before you drop it.",
+      "location": "Pottery workroom", "characters": ["Pottery worker"],
+      "ordered_references": ["room", "potter"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-001.png",
+      "prompt": "Image 1 is the exact empty pottery workroom, image 2 the exact worker. From the same master camera make a tight object-focused crop around the foreground RIGHT wicker packing basket. Two pure-white mitten hands belonging to the rust-robed worker hold ONE intact ordinary brown earthenware bowl just above the basket's folded pale protective cloth. A sliver of the exact rust round-collar robe and grey waist belt is visible behind the hands. The bowl is round, unpainted, not three-colour funerary sculpture. Keep the wicker pattern, cloth pads, basket location, doorway glimpse and original room orientation fixed. No broken pottery yet, no duplicated bowl in the hands, no floating fingers. Sober BD, crisp clean contours, matte flat colours, limited texture and simple garment shadows. Skin and hands pure #FFFFFF without shading, rounded mitten shapes with no detailed fingers. Adult-sized arms covered by long sleeves. No captions, labels, human faces, children or extra people."
+    },
+    {
+      "id": "tang-002", "word_start": 9, "word_end": 19,
+      "narration": "You are halfway through fitting it into a carrying basket when",
+      "location": "Pottery workroom", "characters": ["Pottery worker", "Workshop maker"],
+      "ordered_references": ["room", "potter", "maker"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-002.png",
+      "prompt": "Image 1 fixes the pottery room, image 2 the rust-robed worker, image 3 the blue-clad maker with ochre apron and green waist sash. Same camera, medium-wide crop. Rust worker crouches beside the foreground RIGHT wicker basket and carefully lowers ONE intact brown ordinary bowl halfway toward its pale cloth padding. The blue maker stands near the right rear doorway, about to cross the clear working floor toward the LEFT clay bench. Show the basket, bowl, both characters and their potential crossing clearly, without an actual collision. Keep all three-tier shelf contents, jars, workbench clay block, hand tools, stool, floor and rear doorway fixed. Adult bodies, stable outfit colours. Do not transplant a Japanese room or add tomb figurines or a modern kiln. Sober BD crisp black contours, flat matte colours, limited texture, simple clothing shadows only. Both heads perfectly round oversized #FFFFFF white, small black eyes and tiny straight mouths, no nose, hair, eyebrows or ears. ALL skin #FFFFFF without shadows, mitten hands, covered bodies. No text or children."
+    },
+    {
+      "id": "tang-003", "word_start": 20, "word_end": 28,
+      "narration": "the person beside you asks for room to pass.",
+      "location": "Pottery workroom", "characters": ["Pottery worker", "Workshop maker"],
+      "ordered_references": ["room", "potter", "maker"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-003.png",
+      "prompt": "Image 1 is the fixed workroom, images 2 and 3 are the exact rust pottery worker and blue maker. Same camera orientation, medium crop on their interaction beside the RIGHT basket. The maker extends one white mitten hand toward the gap between the crouching worker and the central working floor, asking to pass by body language. The worker turns their circular head toward the maker but holds the SAME one brown bowl suspended above the basket's pale protective cloth. No bowl on the floor, no breakage. Keep maker's ochre apron and green sash, worker's rust robe and grey belt exactly. Preserve rear racks, jars, door, bench and basket. No new shelf holes or extra pottery. Sober BD crisp lines, matte flat colours, restrained texture and simple clothes shadows. Two substantial adults with perfect oversized circular #FFFFFF heads, dot eyes, tiny straight neutral mouths, no noses, ears, hair or brows. White necks and mitten hands #FFFFFF with NO grey shading, no fingers. Long sleeves and covered lower bodies. No speech bubble, caption, children or human faces."
+    },
+    {
+      "id": "tang-004", "word_start": 29, "word_end": 34,
+      "narration": "You stop, lift the vessel clear,",
+      "location": "Pottery workroom", "characters": ["Pottery worker", "Workshop maker"],
+      "ordered_references": ["room", "potter", "maker"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-004.png",
+      "prompt": "Image 1 fixes the room and basket geometry, images 2 and 3 the two identities. Same camera, tight crop on the rust-robed worker's covered forearms and white mitten hands deliberately lifting the SAME intact plain brown bowl completely clear of the wicker basket rim. The blue maker's ochre-apron torso is visible at the edge of the frame, waiting rather than colliding. Bowl is now higher than in the previous lowering action; protective pale cloth remains in the basket and no contents disappear from visible background shelves. Keep rust sleeves, grey belt, blue sleeves, ochre apron and green sash. No second bowl, no breaking effects or comic icons. Sober BD, crisp dark contours, matte flat colours, simple clothing shadows, very restrained texture. All visible necks and mitten hands pure #FFFFFF, no grey skin shadows, no detailed fingers. Adult proportions and fully covered bodies. Do not alter the room camera angle or architecture. No labels, captions, children or human faces."
+    },
+    {
+      "id": "tang-005", "word_start": 35, "word_end": 38,
+      "narration": "and move your elbow.",
+      "location": "Pottery workroom", "characters": ["Pottery worker", "Workshop maker"],
+      "ordered_references": ["room", "potter", "maker"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-005.png",
+      "prompt": "Use image 1's unchanged pottery room camera and inventory, image 2's rust worker, image 3's blue maker. Medium framing of the newly clear passage. The crouching rust worker tucks the right elbow close to their covered body, still safely holding ONE intact brown bowl above the basket. The blue maker now steps through the cleared gap across the central floor toward the left workbench, both feet grounded, not walking through the basket. Basket and pale padding stay fixed. Shelf bowls and jars, rear door, stool, bench clay and hand tools stay present. Exact rust-grey and blue-ochre-green outfits, no colour drift. This shot shows the result of making space, not the same waiting pose. Sober BD with crisp contours, matte flat colours and restrained texture. Both adults' heads perfectly circular oversized #FFFFFF, small dot eyes and tiny straight neutral mouths; no hair, ears, nose or eyebrows. ALL skin #FFFFFF with no shading. Mitten hands without fingers and fully covered adult bodies. No text, children, human faces or comic motion symbols."
+    },
+    {
+      "id": "tang-006", "word_start": 39, "word_end": 49,
+      "narration": "One small collision would turn today's sale into today's broken pottery.",
+      "location": "Pottery workroom", "characters": ["Pottery worker", "Workshop maker"],
+      "ordered_references": ["room", "potter", "maker"],
+      "image": "output/imagegen/historical-01-2026-10-08/imperial-china-daily/shots/tang-006.png",
+      "prompt": "Image 1 is the fixed pottery room, image 2 the rust worker, image 3 the blue maker. Same camera, medium framing on a successful safe placement: the worker has settled the SAME ONE intact plain brown bowl into the foreground RIGHT wicker basket and folds the existing pale protective cloth around its lower sides with two white mitten hands. The maker is now at the LEFT workbench, examining its clay block, having passed safely. The narration describes a risk, not an actual accident: NO shattered bowl or invented second timeline. Keep basket, racks and all visible jar shapes, rear doorway, bench tools and stool unchanged. Precise rust robe/grey belt and blue robe/ochre apron/green sash colour continuity. Sober BD crisp contours, flat matte colours, reduced texture and simple garment shadows only. Adult proportions, oversized perfect circular pure #FFFFFF heads, dot eyes, tiny straight neutral mouths, no ears, hair, nose or brows. All exposed skin pure #FFFFFF without shadows; mitten hands without detailed fingers. No text, children or human faces."
+    }
+  ]
+}

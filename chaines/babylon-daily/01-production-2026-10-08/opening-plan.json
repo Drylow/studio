@@ -1,0 +1,52 @@
+{
+  "status": "partial-shot-authoring-not-a-complete-film", "author": "Codex",
+  "script": "chaines/babylon-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/babylon-daily", "max_shot_seconds": 6,
+  "references": {
+    "quay": "output/imagegen/historical-01-2026-10-08/babylon-daily/references/babylon-grain-quay.png",
+    "carrier": "output/imagegen/historical-01-2026-10-08/babylon-daily/references/babylon-carrier-v2.png",
+    "loader": "output/imagegen/historical-01-2026-10-08/babylon-daily/references/babylon-loader.png"
+  },
+  "shots": [
+    {
+      "id": "babylon-001", "word_start": 0, "word_end": 13,
+      "narration": "The grain is here. The man who is supposed to receive it is not.",
+      "location": "River grain landing", "characters": ["Goods carrier", "Grain-handling companion"],
+      "ordered_references": ["quay", "carrier", "loader"],
+      "image": "output/imagegen/historical-01-2026-10-08/babylon-daily/shots/babylon-001.png",
+      "prompt": "Image 1 is the exact grain quay master, image 2 brick-red goods carrier, image 3 ochre grain-handling companion. Same camera, medium-wide composition with two workers waiting beside EXACTLY THREE closed pale woven grain sacks on the dry bank: one nearest the storehouse door, two nearer the water. Both look toward the empty part-open storehouse doorway, which has no receiver in it yet. The brick-red carrier holds the end of ONE loose carrying rope threaded around the nearest sack; ochre companion stands beside that sack with their hands down. Worker exact brick-red tunic, blue sash and charcoal lower; companion exact ochre slit-neck tunic, olive belt, charcoal trousers and dark closed footwear. Keep river LEFT, original boat and its mooring posts/ropes, mudbrick wall, reed shade, part-open door and TWO clay jars inside unchanged. No distant ziggurat, monumental skyline or Hanging Gardens. Sober BD crisp dark outlines, matte flat colours, limited texture and simple garment shadows. Both adult heads oversized perfect #FFFFFF circles, dot eyes, straight tiny mouths, no hair, beard, nose, ears or brows. ALL skin #FFFFFF without shading, mitten hands and covered bodies. No labels, text or children."
+    },
+    {
+      "id": "babylon-002", "word_start": 14, "word_end": 21,
+      "narration": "You stand beside a load on the riverbank,",
+      "location": "River grain landing", "characters": ["Goods carrier", "Grain-handling companion"],
+      "ordered_references": ["quay", "carrier", "loader"],
+      "image": "output/imagegen/historical-01-2026-10-08/babylon-daily/shots/babylon-002.png",
+      "prompt": "Image 1 fixed grain quay, image 2 red carrier, image 3 ochre companion. Same camera orientation, closer medium crop of the carrier beside EXACTLY THREE closed pale woven grain sacks, one nearest the storehouse door and two nearer the river. Carrier's red covered torso and blue sash fill one side of the frame; one white mitten loosely holds the SAME carrying rope threaded around the door-side sack. Companion's ochre torso remains behind the sack, looking toward the same empty part-open doorway. All sacks on dry ground, no sack moving or duplicated. River, boat, mooring rope/posts, reed shade and wall stay in their master locations; two jars remain inside if visible. Do not convert sacks into modern labelled burlap bags or barrels. Sober BD crisp contours, matte flat colours, restrained texture and simple clothing shadows. Adult proportions, pure #FFFFFF skin and oversized circular heads, dot eyes, tiny straight mouths, no nose, ears, hair or eyebrows. White mitten hands without fingers, covered adult bodies. No text, children or new people."
+    },
+    {
+      "id": "babylon-003", "word_start": 22, "word_end": 35,
+      "narration": "holding one end of a carrying rope while your companion looks toward the storehouse.",
+      "location": "River grain landing", "characters": ["Goods carrier", "Grain-handling companion"],
+      "ordered_references": ["quay", "carrier", "loader"],
+      "image": "output/imagegen/historical-01-2026-10-08/babylon-daily/shots/babylon-003.png",
+      "prompt": "Image 1 is the unchanged quay, image 2 red carrier, image 3 ochre companion. Same camera, medium two-person frame. Carrier holds ONE end of the loose carrying rope attached around the nearest closed grain sack, arm lowered rather than hauling. Companion turns head and upper body toward the empty part-open storehouse door, visibly searching for the absent receiver. Preserve EXACTLY THREE pale woven sacks on dry bank: one nearer the door, two nearer the river. No extra rope appears and no sack has been opened. Keep river LEFT, boat, mooring posts/rope, shade, wall, door and two internal jars fixed. Red tunic/blue sash and ochre tunic/olive belt/charcoal lower stay exact. Sober BD crisp contours, matte flat colours, restrained texture, simple clothes shadows. Both adults have oversized perfectly circular pure #FFFFFF heads, black dot eyes and tiny straight mouths. No hair, eyebrows, ears, nose or beard. All skin #FFFFFF without grey shadows, mitten hands without fingers and fully covered bodies. No text, children or extra workers."
+    },
+    {
+      "id": "babylon-004", "word_start": 36, "word_end": 48,
+      "narration": "You have eaten a little, walked here, and helped move the first sack.",
+      "location": "River grain landing", "characters": ["Goods carrier", "Grain-handling companion"],
+      "ordered_references": ["quay", "carrier", "loader"],
+      "image": "output/imagegen/historical-01-2026-10-08/babylon-daily/shots/babylon-004.png",
+      "prompt": "Image 1 exact quay, image 2 red carrier, image 3 ochre companion. A brief visual flashback to their first handling task, same location, light and camera geometry. Carrier and companion are lowering ONE closed pale woven grain sack onto the dry receiving bank nearest the storehouse doorway using the SAME carrying rope, each holding one rope end; knees and arms show coordinated careful lowering. The other TWO closed sacks are still near the water. Total EXACTLY THREE sacks, not duplicated piles. This shot is the earlier action described by narration, before their current wait; no receiver appears. Keep boat, mooring posts/rope, river LEFT, reed shade, door and two inside jars fixed. Same brick-red/blue and ochre/olive outfits, adult bodies and grounded feet. Sober BD crisp black contours, matte flat colours, restrained material texture and simple garment shadows. All heads perfectly round oversized #FFFFFF, dot eyes, tiny straight mouths, no hair, ears, nose, beard or brows. All skin white #FFFFFF without shading, rounded mitten hands, no fingers. No text, modern sacks, children or extra workers."
+    },
+    {
+      "id": "babylon-005", "word_start": 49, "word_end": 60,
+      "narration": "Now the whole morning is waiting for somebody else to be ready.",
+      "location": "River grain landing", "characters": ["Goods carrier", "Grain-handling companion"],
+      "ordered_references": ["quay", "carrier", "loader"],
+      "image": "output/imagegen/historical-01-2026-10-08/babylon-daily/shots/babylon-005.png",
+      "prompt": "Image 1 fixed quay, image 2 red carrier, image 3 ochre companion. Return to the present wait in the SAME exact master camera. The one door-side grain sack now rests flat on the dry bank, its carrying rope loose; the TWO other pale woven sacks remain toward the river. Red carrier lets one rope end slacken while shifting weight onto one foot, head directed toward the still-empty part-open storehouse door. Ochre companion has folded their white mitten hands at the waist and also waits. Make their different waiting posture clearly readable, not another lifting frame. No receiver, food, clock or hour label. Preserve THREE sacks, river, boat, mooring posts/rope, shade, door, mudbrick wall and two jars inside. Exact red/blue and ochre/olive covered outfits. Sober BD crisp outlines, matte flat colours, reduced texture and simple garment shadows. Both adults have oversized circular #FFFFFF heads, dot eyes, tiny straight mouths, no nose, beard, ears, hair or brows. All skin #FFFFFF without grey shadows, mitten hands without fingers. No captions, children or extra characters."
+    }
+  ]
+}

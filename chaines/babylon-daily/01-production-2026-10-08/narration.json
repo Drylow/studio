@@ -1,0 +1,11 @@
+{
+  "phase": "narration-only",
+  "title": "What Did People in Ancient Babylon Actually Do All Day?",
+  "narration_script": "chaines/babylon-daily/01-production-2026-10-08/script.txt",
+  "workdir": "work/historical-01-2026-10-08/babylon-daily",
+  "language": "en",
+  "voice": {"provider": "algrow", "id": "rU18Fk3uSDhmg5Xh41o4", "speed": 1.0},
+  "target_duration_seconds": [1200, 1500],
+  "max_shot_seconds": 6,
+  "export_filename": "Babylon-Daily-01.mp4"
+}
