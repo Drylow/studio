@@ -1,0 +1,422 @@
+{
+ "title": "Beethoven : 95 fois trop de plomb",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Les cheveux de Beethoven contenaient jusqu'à 95 fois trop de plomb. #histoire #beethoven #vulgarisation #musique",
+ "sources": [
+  "Clinical Chemistry, 2024 : « High Lead Levels in 2 Independent and Authenticated Locks of Beethoven's Hair » (Mayo Clinic ; 380 et 258 µg/g contre ≤ 4 µg/g)",
+  "NPR, 27 juin 2024 (64 à 95 fois plus élevé ; plomb « a probablement contribué » mais n'a pas tué seul)",
+  "Smithsonian Magazine, 2024 (380 et 258 µg/g ; arsenic ×13, mercure ×4 ; hair lead ≠ plomb sanguin)"
+ ],
+ "art": {
+  "beethoven": {
+   "prompt": "portrait of Ludwig van Beethoven, wild untamed grey-brown hair, stern intense frown, dark coat with white cravat, bust, front view",
+   "size": "192x192"
+  },
+  "hair_lock": {
+   "prompt": "a small lock of grey hair tied with a ribbon lying on old paper, antique keepsake, close-up",
+   "size": "192x192"
+  },
+  "lab": {
+   "prompt": "modern laboratory bench with glass test tubes, a microscope and a small sample of hair, no people",
+   "size": "256x192"
+  },
+  "vienna_hall": {
+   "prompt": "Vienna theatre concert hall in 1824, orchestra on stage, audience in period clothes applauding, wide view",
+   "size": "320x192"
+  },
+  "goblet": {
+   "prompt": "an old ornate metal goblet and a bottle of wine on a wooden table, 1820s, no people",
+   "size": "192x192"
+  },
+  "piano": {
+   "prompt": "an old 1820s grand piano with open sheet music and a candle, in a dim room, no people",
+   "size": "256x192"
+  },
+  "skull_warning": {
+   "prompt": "a grey lead ingot bar and a warning triangle sign, simple still life, no people",
+   "size": "192x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Les cheveux de Beethoven contenaient jusqu'à quatre-vingt-quinze fois trop de plomb.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "beethoven",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Les cheveux de Beethoven…",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "preset": "num",
+     "text": "× 95",
+     "at": "quatre-vingt-quinze",
+     "y": 780,
+     "size": 60
+    }
+   ]
+  },
+  {
+   "say": "Beethoven perd l'ouïe dès la vingtaine. Vers quarante-cinq ans, il n'entend presque plus rien.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Sourd vers *45 ans*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "piano",
+     "h": 330,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "preset": "num",
+     "text": "~45 ANS",
+     "at": "quarante-cinq",
+     "y": 240,
+     "size": 48
+    }
+   ]
+  },
+  {
+   "say": "Pendant des siècles, les médecins ont avancé des hypothèses, sans jamais trancher.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Pourquoi ? *Personne* ne sait.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 9,
+     "y": 520,
+     "at": 0.3,
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Il meurt en 1827, à cinquante-six ans. Des admirateurs avaient gardé des mèches de ses cheveux, comme souvenirs.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1827",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Des mèches *gardées*",
+     "at": 0.4,
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "hair_lock",
+     "h": 340,
+     "y": 500,
+     "at": "mèches",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Deux cents ans plus tard, des chercheurs de la Mayo Clinic analysent deux mèches authentifiées.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Mayo Clinic, *2024*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "lab",
+     "h": 300,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Résultat : trois cent quatre-vingts microgrammes de plomb par gramme de cheveu, contre quatre ou moins normalement.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 380,
+     "suffix": " µg/g",
+     "dur": 1.4,
+     "at": "trois",
+     "y": 220,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "PLOMB DANS UNE MÈCHE",
+     "at": 0,
+     "y": 300,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "skull_warning",
+     "h": 300,
+     "y": 540,
+     "at": 0.1,
+     "in": "pop"
+    },
+    {
+     "preset": "title",
+     "text": "Normal : *4 ou moins*",
+     "at": "contre",
+     "y": 720,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Soit soixante-quatre à quatre-vingt-quinze fois la normale. Il y avait aussi treize fois trop d'arsenic, et quatre fois trop de mercure.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 95,
+     "prefix": "× ",
+     "dur": 1.3,
+     "at": 0.2,
+     "y": 240,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "FOIS LA NORMALE (64 À 95)",
+     "at": 0,
+     "y": 300,
+     "color": "W"
+    },
+    {
+     "preset": "title",
+     "text": "Arsenic *× 13*",
+     "at": "arsenic",
+     "y": 520
+    },
+    {
+     "preset": "title",
+     "text": "Mercure *× 4*",
+     "at": "mercure",
+     "y": 600
+    }
+   ]
+  },
+  {
+   "say": "D'où venait ce plomb ? Peut-être du vin adouci au plomb, de la vaisselle, ou des traitements de l'époque.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "D'où vient *ce plomb* ?",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "goblet",
+     "h": 380,
+     "y": 500,
+     "at": 0.05,
+     "in": "pop"
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 7,
+     "y": 740,
+     "at": "Peut-être",
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Le plomb n'a pas tué Beethoven à lui seul, disent les chercheurs. Il a seulement pu aggraver ses maux.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "Le"
+    },
+    {
+     "preset": "title",
+     "text": "Le plomb n'a pas *tout* expliqué.",
+     "at": "tué",
+     "y": 160
+    }
+   ]
+  },
+  {
+   "say": "En 1824, il dirige la création de sa Neuvième Symphonie, sans entendre un seul son.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1824",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "La *Neuvième*, sans l'entendre",
+     "at": 0.3,
+     "y": 225,
+     "size": 24
+    },
+    {
+     "type": "img",
+     "src": "vienna_hall",
+     "h": 230,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Il a écrit son chef-d'œuvre le plus célèbre avec un corps imprégné de plomb.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "beethoven",
+     "h": 400,
+     "y": 480,
+     "at": 0,
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Imprégné de *plomb*.",
+     "at": "imprégné",
+     "y": 720,
+     "size": 28
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ses cheveux étaient\n*95 fois* trop chargés",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "beethoven",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Beethoven était\nimprégné de *plomb*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "hair_lock",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Il a composé\nsans *entendre*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "vienna_hall",
+    "h": 300,
+    "y": 640
+   }
+  ]
+ ]
+}
