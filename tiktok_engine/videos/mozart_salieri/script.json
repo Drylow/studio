@@ -1,0 +1,154 @@
+{
+ "title": "Salieri n'a pas empoisonné Mozart",
+ "voice": {"voice_id": "0bKGtCCpdKSI5NjGhU3z", "model": "eleven_v4", "speed": 1.06},
+ "tail": 1.4,
+ "caption": "Salieri n'a jamais empoisonné Mozart : une rumeur née 32 ans après sa mort. #histoire #vulgarisation #mozart #salieri",
+ "sources": [
+  "Encyclopaedia Britannica, article Antonio Salieri (élèves : Beethoven, Schubert, Liszt)",
+  "Contingent Magazine, The Salieri Rumor and Why Gossip Matters (2022) : rumeur de 1823-1824, démenti de Salieri à Moscheles",
+  "Wisconsin Public Radio / HNN : Salieri interné à l'hôpital de Vienne en 1823, accusation de délire",
+  "Radio Prague International (février 2016) et AFP : cantate Per la ricuperata salute di Ofelia (1785, Mozart, Salieri, Cornetti, livret Da Ponte), identifiée au Musée tchèque de la musique par T. J. Herrmann en novembre 2015",
+  "Mozart : mort le 5 décembre 1791 à 35 ans (Britannica)"
+ ],
+ "art": {
+  "mozart_face": {"prompt": "portrait of Wolfgang Amadeus Mozart, young man with white powdered wig tied back, red coat, bust, facing the viewer", "size": "192x192"},
+  "salieri_face": {"prompt": "portrait of the composer Antonio Salieri, dark eyes, powdered wig, dark court coat, serious expression, bust", "size": "192x192"},
+  "poison_glass": {"prompt": "a wine glass with a green skull-shaped vapor rising from it, on a dark table, single object", "size": "192x192"},
+  "newspaper_1824": {"prompt": "an old 1820s French newspaper front page lying on a table, columns of text, no readable words", "size": "256x192"},
+  "salieri_old": {"prompt": "an old frail man in a nightcap sitting in a hospital bed in Vienna 1823, looking confused, side view, hands resting on blanket", "size": "192x256"},
+  "cinema": {"prompt": "a cinema screen with a pale man in a powdered wig laughing, audience silhouettes from behind in red seats", "size": "320x192"},
+  "beethoven": {"prompt": "portrait of Ludwig van Beethoven with wild untamed hair, stern expression, dark coat, bust", "size": "192x192"},
+  "schubert": {"prompt": "portrait of Franz Schubert, curly hair, round glasses, small man in dark coat with white cravat, bust", "size": "192x192"},
+  "liszt": {"prompt": "portrait of the young Franz Liszt, long hair to the shoulders, dramatic expression, black coat, bust", "size": "192x192"},
+  "manuscript": {"prompt": "an old yellowed music manuscript sheet with handwritten notes lying on a wooden table with a quill and an inkwell", "size": "256x192"},
+  "prague": {"prompt": "Prague skyline at dusk with Charles Bridge and the castle", "size": "320x192"},
+  "quills": {"prompt": "three quill pens in a row lying on a music sheet, only the pens, no hands", "size": "256x192"}
+ },
+ "beats": [
+  {
+   "say": "Salieri a empoisonné Mozart. Tout le monde le sait. Sauf que c'est faux.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"type": "img", "src": "mozart_face", "h": 430, "y": 520, "at": 0, "in": "slam", "flash": "big", "fx": "breathe"},
+    {"preset": "title", "text": "Salieri a empoisonné\n*Mozart* ?", "at": 0, "y": 150},
+    {"type": "stamp", "text": "FAUX", "at": "faux", "y": 730, "rot": -6, "fill": true, "size": 28}
+   ]
+  },
+  {
+   "say": "Mozart meurt en décembre 1791, à seulement 35 ans.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "DÉCEMBRE 1791", "at": 0, "y": 160, "rot": -4},
+    {"preset": "big", "text": "35 ANS", "at": "35", "y": 260},
+    {"type": "img", "src": "mozart_face", "h": 330, "y": 520, "at": 0.05, "in": "fade"}
+   ]
+  },
+  {
+   "say": "Et pendant plus de trente ans, personne ne parle de poison.",
+   "els": [
+    {"preset": "title", "text": "Personne ne parle\nde *poison*.", "at": 0, "y": 160},
+    {"type": "img", "src": "poison_glass", "h": 360, "y": 480, "at": "poison", "in": "pop"},
+    {"type": "stamp", "text": "SILENCE", "at": "trente", "y": 220, "rot": -4}
+   ]
+  },
+  {
+   "say": "Puis en 1823, Salieri a presque quatre-vingts ans. Il est malade, confus, enfermé à l'hôpital de Vienne.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "1823", "at": 0, "y": 160, "rot": -4},
+    {"preset": "title", "text": "Malade, confus, à l'*hôpital*.", "at": "malade", "y": 225, "size": 26},
+    {"type": "img", "src": "salieri_old", "h": 400, "y": 500, "at": 0.1, "in": "fade", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Dans son délire, il dit avoir tué Mozart. Les journaux de Paris s'en emparent en 1824.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "title", "text": "Dans son *délire*…", "at": 0, "y": 160, "out": "journaux"},
+    {"preset": "title", "text": "Les journaux s'en emparent.", "at": "journaux", "y": 160, "size": 28},
+    {"type": "img", "src": "newspaper_1824", "h": 300, "y": 500, "at": "journaux", "in": "scan"},
+    {"type": "stamp", "text": "1824", "at": "1824", "y": 700, "rot": 5, "fill": true, "size": 24}
+   ]
+  },
+  {
+   "say": "Salieri a toujours nié. Il l'a dit à un ami : cette rumeur absurde n'a aucun fondement.",
+   "els": [
+    {"preset": "title", "text": "Salieri a toujours *nié*.", "at": 0, "y": 160},
+    {"type": "img", "src": "salieri_face", "h": 400, "y": 500, "at": 0.05, "in": "slam", "fx": "breathe"},
+    {"type": "stamp", "text": "ABSURDE", "at": "absurde", "y": 760, "rot": -5, "fill": true, "size": 24}
+   ]
+  },
+  {
+   "say": "Mais le mal est fait. En 1830, le poète russe Pouchkine en fait une pièce de théâtre. Puis il y a le film Amadeus.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "title", "text": "Le mal est *fait*.", "at": 0, "y": 160, "out": "Pouchkine"},
+    {"preset": "title", "text": "Pouchkine, puis *Amadeus*.", "at": "Pouchkine", "y": 160, "size": 28},
+    {"type": "stamp", "text": "1830", "at": "1830", "y": 230, "rot": -4},
+    {"type": "img", "src": "cinema", "h": 270, "y": 520, "at": "film", "in": "scan"}
+   ]
+  },
+  {
+   "say": "Mais attendez. Salieri n'était pas le méchant de l'histoire. C'était un professeur.",
+   "els": [
+    {"type": "text", "font": "sans", "size": 40, "color": "W", "text": "MAIS\nATTENDEZ.", "at": 0, "y": 360, "in": "slam", "flash": true, "out": "Salieri"},
+    {"preset": "title", "text": "Un *professeur*.", "at": "professeur", "y": 160},
+    {"type": "img", "src": "salieri_face", "h": 380, "y": 500, "at": "Salieri", "in": "pop"}
+   ]
+  },
+  {
+   "say": "Parmi ses élèves : Beethoven, Schubert et Liszt.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Ses élèves", "at": 0, "y": 160},
+    {"type": "img", "src": "beethoven", "h": 230, "y": 480, "at": "Beethoven", "x": 50, "in": "slam"},
+    {"type": "img", "src": "schubert", "h": 230, "y": 480, "at": "Schubert", "x": 290, "in": "slam"},
+    {"type": "img", "src": "liszt", "h": 230, "y": 480, "at": "Liszt", "x": 530, "in": "slam"}
+   ]
+  },
+  {
+   "say": "Et le plus fou ? En 2015, on retrouve à Prague une cantate de 1785, écrite à deux : par Mozart et par Salieri.",
+   "glow": {"y": 500},
+   "els": [
+    {"type": "stamp", "text": "PRAGUE 2015", "at": "2015", "y": 160, "rot": -4},
+    {"type": "img", "src": "prague", "h": 230, "y": 340, "at": "Prague", "in": "scan"},
+    {"type": "img", "src": "manuscript", "h": 280, "y": 640, "at": "cantate", "in": "pop"},
+    {"preset": "big", "text": "1785", "at": "1785", "y": 220, "size": 50}
+   ]
+  },
+  {
+   "say": "Ensemble. Sur la même partition. Les deux hommes travaillaient ensemble.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Sur la *même* partition.", "at": 0, "y": 160},
+    {"type": "img", "src": "mozart_face", "h": 230, "y": 470, "at": "Ensemble", "x": 150, "in": "slam"},
+    {"type": "img", "src": "salieri_face", "h": 230, "y": 470, "at": "Ensemble+0.4", "x": 400, "in": "slam"},
+    {"type": "img", "src": "quills", "h": 190, "y": 760, "at": "partition", "in": "pop"}
+   ]
+  },
+  {
+   "say": "Le plus grand meurtrier de la musique n'a jamais tué personne. C'est une rumeur née trente-deux ans après la mort de Mozart.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"preset": "big", "text": "32 ANS", "at": "trente-deux", "y": 240},
+    {"preset": "label", "text": "LA RUMEUR NAÎT 32 ANS APRÈS", "at": "rumeur", "y": 300, "color": "W"},
+    {"type": "img", "src": "salieri_face", "h": 340, "y": 520, "at": 0.05, "in": "fade", "fx": "breathe"},
+    {"preset": "title", "text": "Il n'a tué *personne*.", "at": "jamais", "y": 760, "size": 26}
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Salieri n'a jamais\n*tué* Mozart", "y": 320, "maxW": 470},
+   {"type": "img", "src": "salieri_face", "h": 430, "y": 640}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "La plus grosse\n*rumeur* de la musique", "y": 320, "maxW": 470},
+   {"type": "img", "src": "poison_glass", "h": 430, "y": 640}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Mozart et Salieri :\nils *travaillaient ensemble*", "y": 320, "maxW": 470},
+   {"type": "img", "src": "manuscript", "h": 330, "y": 620}
+  ]
+ ]
+}
