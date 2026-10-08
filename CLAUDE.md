@@ -124,6 +124,18 @@ textes coupés, images absurdes. Doute sur une capture ? extraire 3-4 images aut
 - Donner aussi le lien dans le chat, avec le titre de la vidéo.
 - Calendrier (oct. 2026) : Oddly Specific Lives MMA le 3 oct., basket le 4 oct. ; d'autres sports ensuite.
 
+### Crazy Chef 3D — livraison depuis le téléphone
+
+Chaîne pixel art distincte : **Crazy Chef 3D**, **@CrazyChef3D**. Lire
+`chaines/crazy-chef-3d/README.md` et `videos.json` pour son identité et ses exports
+validés. L'utilisateur autorise désormais, pour chaque film terminé et revu,
+l'upload GoFile et l'envoi au Discord de la chaîne avec une cover 9:16, un titre
+et une description en anglais. Exécuter `production/crazy_chef_delivery.py`
+après sa vérification `--dry-run`. Destination : uniquement
+`DISCORD_WEBHOOK_CRAZY_CHEF_3D` du `.env`, sans fallback vers une autre chaîne.
+Logo approuvé à la spatule ; covers et prompts conservés dans la fiche de chaîne.
+La publication sur TikTok / YouTube reste manuelle.
+
 ## 7. Environnement cloud : pièges connus
 
 - **La machine redémarre souvent** (toutes les 40 min environ quand la session est inactive) et tue les

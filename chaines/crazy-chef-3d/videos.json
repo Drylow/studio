@@ -1,0 +1,41 @@
+{
+  "channel": "Crazy Chef 3D",
+  "handle": "@CrazyChef3D",
+  "bio": "Cute chef. Terrible ideas. Delicious destruction. 🍉💥",
+  "logo": "chaines/crazy-chef-3d/brand/chef-spatula-avatar.png",
+  "videos": [
+    {
+      "id": "watermelon",
+      "file": "experiments/watermelon-lowpoly/watermelon-chef-three-levels.mp4",
+      "sha256": "a822dd6c6db65e4b5209fe4ee3783579da670752de072c392809da263ffaba15",
+      "qa": "experiments/watermelon-lowpoly/QA.md",
+      "reviewed": true,
+      "seconds": 41.8,
+      "title": "Watermelon vs Machete, Saw & Pistol 🍉💥",
+      "description": "A cute chef with very questionable kitchen tools. 🍉💥 #CrazyChef3D #PixelArt #Satisfying #Shorts",
+      "cover": "chaines/crazy-chef-3d/covers/watermelon-cover.png"
+    },
+    {
+      "id": "chocolate",
+      "file": "experiments/chocolate-crunch/chocolate-crazy-tools-final.mp4",
+      "sha256": "03d3e15ac915a32d489b7fb1181fbaf43beadcb7bebd18de8a543683f6d52385",
+      "qa": "experiments/chocolate-crunch/QA.md",
+      "reviewed": true,
+      "seconds": 66.7,
+      "title": "Chocolate vs Spring Glove & Jackhammer 🍫🥊",
+      "description": "The recipe said break the chocolate. Chef took it personally. 🍫🥊 #CrazyChef3D #PixelArt #Satisfying #Shorts",
+      "cover": "chaines/crazy-chef-3d/covers/chocolate-cover.png"
+    },
+    {
+      "id": "fries",
+      "file": "experiments/fries-press/fries-hydraulic-press-final.mp4",
+      "sha256": "ae1eb694b495429c39636daea080522a81b216e419ff0d971ebbc04ab8edcfd8",
+      "qa": "experiments/fries-press/QA.md",
+      "reviewed": true,
+      "seconds": 63.6,
+      "title": "Fries vs Hydraulic Press 🍟💥",
+      "description": "Extra crispy? Chef ordered extra compressed. 🍟💥 #CrazyChef3D #PixelArt #Satisfying #Shorts",
+      "cover": "chaines/crazy-chef-3d/covers/fries-cover.png"
+    }
+  ]
+}
