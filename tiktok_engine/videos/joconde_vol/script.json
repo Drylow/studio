@@ -6,7 +6,7 @@
   "speed": 1.06
  },
  "tail": 1.4,
- "caption": "",
+ "caption": "La Joconde est devenue célèbre grâce à un voleur. #histoire #vulgarisation #joconde #louvre",
  "sources": [],
  "art": {
   "mona_lisa": {
@@ -58,5 +58,560 @@
    "size": "320x192"
   }
  },
- "beats": []
+ "beats": [
+  {
+   "say": "Le tableau le plus célèbre du monde n'était pas si célèbre. Jusqu'au jour où on l'a volé.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "mona_lisa_face",
+     "h": 430,
+     "y": 520,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Le tableau le plus célèbre\ndu monde…",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "VOLÉ",
+     "at": "volé",
+     "y": 720,
+     "rot": -6,
+     "fill": true,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Lundi 21 août 1911. Le Louvre est fermé.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "LUNDI 21 AOÛT 1911",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Le Louvre est *fermé*.",
+     "at": "Louvre",
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "gallery_1911",
+     "h": 230,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan",
+     "scanDur": 0.6,
+     "fx": "zoom"
+    }
+   ]
+  },
+  {
+   "say": "Un homme en blouse blanche décroche la Joconde, la sort de son cadre, et repart avec, cachée sous sa blouse.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Un homme en *blouse blanche*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "thief",
+     "h": 380,
+     "y": 500,
+     "at": 0.05,
+     "x": 150,
+     "in": "fade",
+     "moves": [
+      {
+       "at": "repart",
+       "dur": 2.0,
+       "to": [
+        420,
+        500
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Et personne ne remarque rien. Pendant plus d'une journée.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Personne ne remarque *rien*.",
+     "at": 0,
+     "y": 160,
+     "out": "Pendant"
+    },
+    {
+     "preset": "title",
+     "text": "Pendant plus d'*une journée*.",
+     "at": "Pendant",
+     "y": 160
+    },
+    {
+     "preset": "big",
+     "text": "+24 H",
+     "at": "journée",
+     "y": 420
+    },
+    {
+     "type": "sprite",
+     "sprite": "question",
+     "px": 9,
+     "y": 560,
+     "at": 0.1,
+     "in": "pop",
+     "blink": 2
+    }
+   ]
+  },
+  {
+   "say": "Le lendemain, un peintre vient pour la peindre. À sa place : quatre crochets de fer.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "À sa place :",
+     "at": "place",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "empty_wall",
+     "h": 330,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "preset": "big",
+     "text": "4 CROCHETS",
+     "at": "quatre",
+     "y": 240,
+     "size": 50
+    }
+   ]
+  },
+  {
+   "say": "Le Louvre ferme une semaine. Et là, il se passe un truc fou : des foules entières viennent regarder… un mur vide.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "FERMÉ 1 SEMAINE",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Des foules entières\nviennent regarder…",
+     "at": "foules",
+     "y": 230,
+     "size": 26,
+     "out": "mur"
+    },
+    {
+     "type": "img",
+     "src": "crowd_queue",
+     "h": 260,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "… un *mur vide*.",
+     "at": "mur",
+     "y": 230,
+     "size": 30
+    }
+   ]
+  },
+  {
+   "say": "La police cherche partout. Elle arrête même le poète Guillaume Apollinaire, et interroge un jeune peintre : Pablo Picasso.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "detective",
+     "h": 260,
+     "y": 470,
+     "at": 0,
+     "in": "pop",
+     "out": "Apollinaire"
+    },
+    {
+     "preset": "title",
+     "text": "La police cherche *partout*.",
+     "at": 0,
+     "y": 160,
+     "out": "arrête"
+    },
+    {
+     "preset": "title",
+     "text": "Arrêté : *Apollinaire*",
+     "at": "arrête",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "apollinaire",
+     "h": 230,
+     "y": 480,
+     "at": "Apollinaire",
+     "x": 150,
+     "in": "slam"
+    },
+    {
+     "type": "img",
+     "src": "picasso",
+     "h": 230,
+     "y": 480,
+     "at": "Picasso",
+     "x": 390,
+     "in": "slam"
+    },
+    {
+     "type": "stamp",
+     "text": "SUSPECTS",
+     "at": "Picasso",
+     "y": 660,
+     "rot": -5,
+     "fill": true
+    }
+   ]
+  },
+  {
+   "say": "Mais attendez. Le vrai voleur, c'est un vitrier italien qui avait travaillé au Louvre.",
+   "els": [
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 40,
+     "color": "W",
+     "text": "MAIS\nATTENDEZ.",
+     "at": 0,
+     "y": 360,
+     "in": "slam",
+     "flash": true,
+     "out": "vrai"
+    },
+    {
+     "preset": "title",
+     "text": "Le *vrai* voleur :",
+     "at": "vrai",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "thief",
+     "h": 360,
+     "y": 500,
+     "at": "vrai",
+     "in": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "VINCENZO PERUGGIA",
+     "at": "italien",
+     "y": 710,
+     "rot": -4,
+     "fill": true,
+     "size": 17
+    }
+   ]
+  },
+  {
+   "say": "Pendant plus de deux ans, il garde la Joconde chez lui, à Paris, cachée dans une malle.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Cachée dans une *malle*.",
+     "at": "malle",
+     "y": 160
+    },
+    {
+     "preset": "big",
+     "text": "+ DE 2 ANS",
+     "at": "deux",
+     "y": 250,
+     "size": 54
+    },
+    {
+     "type": "img",
+     "src": "trunk",
+     "h": 440,
+     "y": 500,
+     "at": 0.1,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "En décembre 1913, il essaie de la vendre à un marchand de Florence. Il est arrêté.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "DÉCEMBRE 1913",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Florence",
+     "at": "Florence",
+     "y": 225,
+     "size": 30
+    },
+    {
+     "type": "img",
+     "src": "florence",
+     "h": 220,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "ARRÊTÉ",
+     "at": "arrêté",
+     "y": 640,
+     "rot": 5,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Quand la Joconde revient au Louvre, les foules se pressent pour la voir.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Retour au *Louvre*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "crowd_queue",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "fade"
+    },
+    {
+     "type": "img",
+     "src": "mona_lisa",
+     "h": 200,
+     "y": 650,
+     "at": "foules",
+     "in": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Avant le vol, c'était un chef-d'œuvre parmi d'autres. Après, c'est devenu une star mondiale.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Avant : un chef-d'œuvre\n*parmi d'autres*.",
+     "at": 0,
+     "y": 175,
+     "out": "Après"
+    },
+    {
+     "type": "img",
+     "src": "gallery_1911",
+     "h": 230,
+     "y": 480,
+     "at": 0,
+     "in": "fade",
+     "out": "Après"
+    },
+    {
+     "preset": "title",
+     "text": "Après : une *star mondiale*.",
+     "at": "Après",
+     "y": 175
+    },
+    {
+     "type": "img",
+     "src": "mona_lisa_face",
+     "h": 360,
+     "y": 500,
+     "at": "Après",
+     "in": "slam",
+     "flash": true,
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Aujourd'hui, près de 9 millions de personnes visitent le Louvre chaque année. Et la plupart viennent pour elle.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 8.7,
+     "decimals": 1,
+     "suffix": " M",
+     "dur": 1.2,
+     "at": "9",
+     "y": 240,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "VISITEURS DU LOUVRE PAR AN",
+     "at": "visitent",
+     "y": 300,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "tourists_phones",
+     "h": 250,
+     "y": 510,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Un tableau de 77 centimètres sur 53, rendu célèbre par un voleur.",
+   "glow": {
+    "y": 480,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "mona_lisa",
+     "h": 380,
+     "y": 470,
+     "at": 0,
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "preset": "num",
+     "text": "77 × 53 CM",
+     "at": "77",
+     "y": 210
+    },
+    {
+     "preset": "title",
+     "text": "Rendu célèbre par *un voleur*.",
+     "at": "célèbre",
+     "y": 720,
+     "size": 26
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Qui a rendu la Joconde\n*célèbre* ?",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "mona_lisa_face",
+    "h": 430,
+    "y": 640
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ce tableau a été\n*volé*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "mona_lisa",
+    "h": 440,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ils faisaient la queue\npour un *mur vide*.",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "empty_wall",
+    "h": 330,
+    "y": 620
+   }
+  ]
+ ]
 }
