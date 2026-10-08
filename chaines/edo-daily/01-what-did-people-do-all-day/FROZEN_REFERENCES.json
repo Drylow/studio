@@ -1,0 +1,218 @@
+{
+  "work/edo-daily/01-what-did-people-do-all-day/references/home.png": {
+    "sha256": "d15f2b07dfec52a70254d9af1d7b93769a695a59dd470a8a2faefe4f99b5eeb4",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: piece vide, table/coussin/literie/shoji identifiables, allee commune a droite, theiere neutre. Stylisation et proportions illustratives, pas une maison archeologique mesuree."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/blue.png": {
+    "sha256": "a99eb42ac18742faf9c88e1bf0f722a9dd13df28d2a3f2a0fbc2b547aca917d2",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "review": "Revu: adulte indigo, tete blanche ronde sans traits humains, mains moufles, echarpe/tissu pale et ceinture grise, costume fige. Feuille de personnage portrait acceptee."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/023-continuity.png": {
+    "sha256": "76eb67270d572f0b7a26864a186de7c8e9193aca0303443dba78f7b1901bb0ad",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Visually checked: ONE navy cushion under table left with Blue; Red on bare tatami right; two rice/two soup/one vegetable dish; original furniture and white heads preserved."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/workshop.png": {
+    "sha256": "f15e22671715085c11f78a8d89eb480873866551b533456ab3e0cc129afc11ac",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: banc bas, boite/couvercle, rabot manuel, maillet/ciseau, planches a gauche, shoji centre et porte a droite; pas d'outil electrique. Variante d'atelier et non copie du domicile."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/alley.png": {
+    "sha256": "15a0c3c60789db25f9009eff89f49f3e740a28b277bcd602e6e9e5936989ea43",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: ruelle partagee, portes a gauche et droite, puits pres du bord droit, balai a gauche; aucune personne, aucun robinet moderne. Quelques tuiles dessinees: ne pas presenter comme une universalite des nagaya."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/red.png": {
+    "sha256": "307dd9b60a613b5438a5b39eada869ee1264c3bc0d3569d2d9007a0681b77094",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "review": "Revu: adulte bordeaux, tete blanche ronde, mains moufles, pantalon long et ceinture ocre, pas de cheveux/nez/oreilles. Feuille portrait acceptee."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/033.png": {
+    "sha256": "e5f2880103eae9bafbed8f4f2d31fd9e40fd19de879b5b7c60504822aa4aa1ba",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Visually checked box design insert: wide shallow unpainted box with interlocking corner joints and rimmed matching lid, hand plane left and mallet/chisel right."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/085-v2.png": {
+    "sha256": "1f3ec0afc877c7e03b28e1f759d57509d7ff26d3ada4cf21c61cbd78e30a910d",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Visually checked gray rolled tool cloth, single tie and exposed wooden handles; PROP reference only, do not copy evening lighting into day scenes."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/market.png": {
+    "sha256": "3a22915a0ea71187a6bc2ac5acbac90281fc14509ffdd2b043c536d22c0b36c0",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: legumes et trois paniers au comptoir gauche, sacs et tissus dedans, rideau bleu uni, rue centrale; pas d'ecriture ni nourriture tardive."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/bridge.png": {
+    "sha256": "d577fb5d3e3c29e9263b0d15988097bb6590af4c919e413405ab5ca35711a19e",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: pont de bois bas a gauche, voie d'eau a droite, entrepots et barque amarree. Site illustratif, pas une reconstruction de Nihonbashi ou de l'aqueduc."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/green.png": {
+    "sha256": "99d96719c25f91e800a40456e5746ebe70edc46e0139d311f86e92c591426da4",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: adulte vert jade, pantalon charbon, ceinture grise; meme anatomie blanche. Deux bras et deux jambes. Costume fige du vendeur/client."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/teahouse.png": {
+    "sha256": "9ae4c76e9ef468c8ae997ff0a0429cd1b731c7adf195f61e7648a9db08cffeb0",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: etal gauche, bouilloire/trois tasses, table centre et banc droit, rive et entrepots stables. Pas de paysage de fantaisie."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/027-continuity.png": {
+    "sha256": "e1a538a3ffb3d1ea760f140efb542a381b0e58a573b9f990d2a396201c88fd34",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Role: carried gray tool roll and alley departure state only. Visually reviewed actual shot 027; original alley master and individual Blue cast reference remain separate inputs."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/009.png": {
+    "sha256": "bace2a448b1ef34053b0fe783b4d3c6281e40848b8cd7a631623d7059912132b",
+    "dimensions": [
+      1671,
+      941
+    ],
+    "review": "Role: Red's small ROUND handled empty woven basket. Original accepted market scene 009 reviewed on the image sheets. Do not borrow other market props or framing as location authority."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/012-continuity.png": {
+    "sha256": "25b5d7a59fffbe4259409a294baae190cc6b6787fdf70035ce0a15f916bfdd68",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Visually checked: ONE near/right bench with seated Blue and Red; three counter cups and two table cups; original kettle, river and counter preserved. Some tabletop is naturally occluded by actors."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/055-continuity.png": {
+    "sha256": "e407832877396787322562b57dd984bf56b63b90e5fbc842c06f3943ff02836a",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Approved lunch object state: ONE rice bowl, ONE SMALL vegetable dish, one served cup; three counter cups/kettle; original near/right bench."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/049-continuity.png": {
+    "sha256": "6e54445c327feeb62c1cb55505c3695aca336db929ca9c04cb2e3b90acecb18b",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Approved wrapped-box design: wide flat gray rectangle with ONE knot, no duplicate box left on workbench."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/056-continuity-v2.png": {
+    "sha256": "c874c41ef24eb37da0b26285f85ee441088102ad6f480bd42d1e2fcf3e2dca2f",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "v2: original small vegetable dish/rice bowl, two cups, flat wide gray parcel same as 049, correct Blue and Green."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/bath.png": {
+    "sha256": "fef2a1c3ab45610af42deb9942c19143bc5fb1736df05a84dc4ee6f866940abb",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: entree modeste en bois, rideau bleu uni, banc et chaussures; aucune nudite/interieur moderne ni fresque du mont Fuji."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/theater.png": {
+    "sha256": "bb6f574807b5f5d2a88d66721cbb639ff5144ec70678469232fd3ac120316dd6",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: entree de bois, rideau bordeaux, guichet gauche, presentoir droit, banderoles muettes; vide et sans reproduction d'acteur reel."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/074.png": {
+    "sha256": "0a8aec57f03212b17f6c2f5ee9178941da68f1129d7e4dbfe52f219c374fb1a3",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Reviewed theater scene state: two architectural pictures fixed, facade LEFT and stage interior RIGHT. Identity/pose of this image does not override cast sheets."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/079-continuity.png": {
+    "sha256": "c9b9352a312c0dd7b35be4e4584d2644fd8ee99e13b705337162506e37d7c104",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "ONE original bench, two table cups/three counter cups, Red small woven ingredient basket held by handle."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/home-evening.png": {
+    "sha256": "54741384769bf992afac7f701d6906369d869e98ca1f343d57da936a1a37474a",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: geometrie du domicile conservee, lumiere du soir explicite, ciel bleu sombre; aucun mobilier ajoute."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/references/home-night.png": {
+    "sha256": "b9c23f01baf3c8d1b1b8f21ac95a3a55cdfc230c7a6e46b95cfae7b5fdf50b6d",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Revu: table/coussin/literie/shoji/porte conserves, nuit lisible, andon couvre sur table, pas de flamme exposee ni installation electrique."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/085-continuity.png": {
+    "sha256": "498f8103a5c56b7f4ddc2f4ea53f15149c93e04b70e131f2999a41387268584d",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Matching gray rolled tools on clear table, tray and basket by doorway, same original room/evening variant."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/086-continuity-v2.png": {
+    "sha256": "c7e19197e113f0b759c124c852e6c5f7327cb46a291aabf41d609b7a002128e3",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "Approved exact original night lamp position and ONE cushion; basket/tray of stacked cleared bowls/gray rolled tools remain inside right doorway, no people."
+  },
+  "work/edo-daily/01-what-did-people-do-all-day/images/087-v2.png": {
+    "sha256": "4ee2b7c7e231a2a485e1e17225205309eb54606cc8e904f444f66407ad6e5595",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "review": "WHITE SKIN COLOR ONLY: bright-white night faces and mittens accepted; its second cushion and cups are NOT allowed geometry/state anchors."
+  }
+}

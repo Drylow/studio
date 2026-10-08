@@ -1,5 +1,6 @@
 # Continuity Correction Ledger
-Date: 2026-10-08. Current phase: corrected images awaiting individual review.
+Date: 2026-10-08. Current phase: all 92 selected images individually reviewed;
+53 shot selections corrected, including the empty night-room establishing scene.
 Do not render or deliver until every selected image has a fresh accepted hash.
 
 ## Stable State
@@ -14,6 +15,9 @@ Do not render or deliver until every selected image has a fresh accepted hash.
   with one knot; not carried by Blue in the government shot 045.
 - Tools: gray rolled cloth with ONE tie and exposed wooden handles in reviewed
   085-v2. No blue bag, gray suitcase or handbag replacing the roll.
+  The roll remains carried in alley pause 028, using actual departure 027 as
+  its state anchor. Red retains the round handled basket while watching vendor 030,
+  using actual empty-basket shot 009 as a prop reference.
 - Bath: Blue carries folded gray cloth; Red carries folded burgundy cloth.
 - Cast: Blue indigo/gray sash/pale-gray neck towel; Red burgundy/ochre sash;
   Green jade/charcoal/gray sash. Red and Green never acquire Blue's neck towel.
