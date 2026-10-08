@@ -1,0 +1,155 @@
+{
+ "title": "Pierre le Grand et la taxe sur la barbe",
+ "voice": {"voice_id": "0bKGtCCpdKSI5NjGhU3z", "model": "eleven_v4", "speed": 1.06},
+ "tail": 1.4,
+ "caption": "Pierre le Grand a fait payer une taxe aux Russes qui gardaient leur barbe. #histoire #vulgarisation #pierrelegrand #russie",
+ "sources": [
+  "Wikipedia, Beard tax : taxe de Pierre Ier, décret du 16 janvier 1705, tarifs (100 roubles marchands riches, 60 cour et fonctionnaires, 30 Moscovites), jeton, abrogation par Catherine II en 1772",
+  "British Museum, jetons de la taxe sur la barbe (jeton de cuivre comme reçu, taxe introduite en 1698, jetons apparus en 1705)",
+  "Cambridge Core, étude Akelev (2020) sur l'oukaze de janvier 1705",
+  "Stacks Bowers / coins.ee : jeton de 1705, inscription « argent pris », décret du 16 (27) janvier 1705",
+  "Taille : environ 2,03 m (6 pieds 8 pouces) selon les biographies usuelles ; présentée comme approximative dans la vidéo"
+ ],
+ "art": {
+  "peter_face": {"prompt": "portrait of Tsar Peter the Great of Russia, very tall man, dark curly wig-like hair, thin moustache, no beard, intense eyes, dark green coat with fur collar, bust, facing the viewer", "size": "192x192"},
+  "bearded_boyar": {"prompt": "portrait of a Russian boyar in 1690s with a very long thick beard down to his chest, tall fur hat, long embroidered robe, bust", "size": "192x192"},
+  "tall_tsar": {"prompt": "a very tall man in a green coat standing next to a normal height man, the tall one towering over the other, full body side by side, 1700s Russia", "size": "192x256"},
+  "scissors": {"prompt": "a large pair of old metal scissors cutting a long beard, only scissors and beard, no hands, no face", "size": "192x192"},
+  "gate": {"prompt": "a Moscow city gate in 1705 with two soldiers in old Russian uniforms standing guard checking a bearded man, winter", "size": "320x192"},
+  "token": {"prompt": "a single round old copper coin with a moustache and beard engraved on it, front view, no text", "size": "192x192"},
+  "rubles": {"prompt": "a pile of old gold and silver coins on a table next to a small leather purse, no text", "size": "256x192"},
+  "beard_long": {"prompt": "a sad Russian man with an enormous long beard holding it with one hand, 1700s clothes, dark night background, bust", "size": "192x192"},
+  "shaved_man": {"prompt": "a Russian nobleman in 1700s clothes with a clean shaved face looking proud, European coat and wig, bust", "size": "192x192"},
+  "court_europe": {"prompt": "a European royal court in 1700 with elegant clean shaven men in wigs and long coats, grand hall", "size": "320x192"},
+  "decree": {"prompt": "an old rolled parchment decree with a red wax seal on a wooden table, no readable text", "size": "256x192"},
+  "catherine": {"prompt": "portrait of Empress Catherine the Great in 1770s, powdered hair, blue sash and grand dress, bust", "size": "192x192"}
+ },
+ "beats": [
+  {
+   "say": "Pierre le Grand, deux mètres de haut, a fait payer une taxe aux Russes qui gardaient leur barbe.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"type": "img", "src": "peter_face", "h": 430, "y": 520, "at": 0, "in": "slam", "flash": "big", "fx": "breathe"},
+    {"preset": "title", "text": "Une taxe sur\nla *barbe*", "at": 0, "y": 150},
+    {"type": "stamp", "text": "2 M DE HAUT", "at": "deux", "y": 730, "rot": -6, "fill": true, "size": 22}
+   ]
+  },
+  {
+   "say": "Pierre est grand : environ deux mètres trois, dans un pays où presque tout le monde le regarde d'en bas.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "big", "text": "2,03 M", "at": "deux", "y": 230},
+    {"type": "img", "src": "tall_tsar", "h": 400, "y": 560, "at": 0.1, "in": "fade", "fx": "breathe"},
+    {"preset": "label", "text": "TAILLE APPROXIMATIVE", "at": "environ", "y": 300, "color": "W"}
+   ]
+  },
+  {
+   "say": "Dans la Russie de la fin du dix-septième siècle, la barbe est sacrée. Les nobles la gardent longue, jusqu'au torse.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "title", "text": "La barbe est *sacrée*.", "at": 0, "y": 160},
+    {"type": "img", "src": "bearded_boyar", "h": 420, "y": 500, "at": "barbe", "in": "pop", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Mais Pierre revient d'Europe, où les hommes sont rasés. Et il veut que la Russie fasse pareil.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Il revient d'*Europe*.", "at": 0, "y": 160},
+    {"type": "img", "src": "court_europe", "h": 250, "y": 500, "at": 0.05, "in": "scan"},
+    {"type": "img", "src": "shaved_man", "h": 260, "y": 700, "at": "rasés", "in": "pop", "x": 280}
+   ]
+  },
+  {
+   "say": "Alors il passe aux ciseaux. À la cour, il coupe lui-même la barbe de certains nobles.",
+   "els": [
+    {"preset": "title", "text": "Il coupe *lui-même*.", "at": "coupe", "y": 160},
+    {"type": "img", "src": "scissors", "h": 400, "y": 500, "at": "ciseaux", "in": "slam", "flash": true}
+   ]
+  },
+  {
+   "say": "Mais beaucoup refusent. Alors, en janvier 1705, il signe un décret : garder sa barbe devient payant.",
+   "glow": {"y": 500},
+   "els": [
+    {"type": "stamp", "text": "JANVIER 1705", "at": "janvier", "y": 160, "rot": -4},
+    {"type": "img", "src": "decree", "h": 330, "y": 480, "at": "décret", "in": "pop"},
+    {"preset": "title", "text": "Garder sa barbe devient *payant*.", "at": "payant", "y": 250, "size": 24}
+   ]
+  },
+  {
+   "say": "Le prix dépend de ton rang. Trente roubles par an pour un Moscovite. Soixante pour un noble de la cour. Et cent pour un riche marchand.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "label", "text": "PAR AN", "at": 0, "y": 150, "color": "W"},
+    {"preset": "big", "text": "30 ROUBLES", "at": "Trente", "y": 230, "size": 46, "out": "Soixante"},
+    {"preset": "big", "text": "60 ROUBLES", "at": "Soixante", "y": 230, "size": 46, "out": "cent"},
+    {"preset": "big", "text": "100 ROUBLES", "at": "cent", "y": 230, "size": 46},
+    {"type": "img", "src": "rubles", "h": 300, "y": 520, "at": 0.1, "in": "fade"}
+   ]
+  },
+  {
+   "say": "Pour prouver que tu as payé, tu reçois un jeton en cuivre, avec une barbe gravée dessus. Et tu dois le garder sur toi.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"preset": "title", "text": "Un *jeton* à garder sur toi.", "at": "jeton", "y": 160},
+    {"type": "img", "src": "token", "h": 400, "y": 500, "at": "jeton", "in": "slam", "flash": true, "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Sans jeton, des patrouilles peuvent t'arrêter ou te mettre une amende.",
+   "els": [
+    {"preset": "title", "text": "Sans jeton : *amende*.", "at": "amende", "y": 160},
+    {"type": "img", "src": "gate", "h": 260, "y": 480, "at": 0.05, "in": "scan"},
+    {"type": "stamp", "text": "ARRÊTÉ", "at": "arrêter", "y": 640, "rot": 5, "fill": true, "size": 24}
+   ]
+  },
+  {
+   "say": "Mais attendez. Ça n'a pas vraiment marché. Beaucoup de Russes ont préféré se raser plutôt que payer.",
+   "els": [
+    {"type": "text", "font": "sans", "size": 40, "color": "W", "text": "MAIS\nATTENDEZ.", "at": 0, "y": 360, "in": "slam", "flash": true, "out": "Ça"},
+    {"preset": "title", "text": "Beaucoup se *rasent*.", "at": "préféré", "y": 160},
+    {"type": "img", "src": "shaved_man", "h": 380, "y": 500, "at": "Ça", "in": "pop"}
+   ]
+  },
+  {
+   "say": "Et d'autres ? Ils gardent leur barbe, ils paient, et ils gardent leur jeton.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "D'autres *paient*.", "at": "paient", "y": 160},
+    {"type": "img", "src": "beard_long", "h": 260, "y": 480, "at": 0.05, "in": "fade"},
+    {"type": "img", "src": "token", "h": 210, "y": 720, "at": "jeton", "in": "pop"}
+   ]
+  },
+  {
+   "say": "La taxe survit des décennies. Elle ne disparaît qu'en 1772, sous Catherine la Grande.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "SUPPRIMÉE EN 1772", "at": "1772", "y": 160, "rot": -4},
+    {"type": "img", "src": "catherine", "h": 380, "y": 500, "at": "Catherine", "in": "slam", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Un tsar de plus de deux mètres a fait payer des hommes pour leur barbe, avec un jeton de cuivre comme reçu.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"preset": "num", "text": "UNE BARBE = 1 JETON", "at": "deux", "y": 210, "size": 28},
+    {"type": "img", "src": "peter_face", "h": 380, "y": 500, "at": 0.05, "in": "fade", "fx": "breathe"},
+    {"preset": "title", "text": "Le *reçu* : un jeton de cuivre.", "at": "reçu", "y": 740, "size": 24}
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Pierre le Grand\ntaxait la *barbe*", "y": 320, "maxW": 470},
+   {"type": "img", "src": "peter_face", "h": 430, "y": 640}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Une barbe =\n*1 jeton*", "y": 320, "maxW": 470},
+   {"type": "img", "src": "token", "h": 430, "y": 640}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Garder sa barbe\ncoûtait *100 roubles*", "y": 320, "maxW": 470},
+   {"type": "img", "src": "bearded_boyar", "h": 430, "y": 640}
+  ]
+ ]
+}
