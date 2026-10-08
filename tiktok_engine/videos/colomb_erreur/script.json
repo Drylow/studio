@@ -1,0 +1,471 @@
+{
+ "title": "L'erreur de calcul de Christophe Colomb",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Christophe Colomb s'est trompé de 15 000 kilomètres, et c'est ce qui l'a sauvé. #histoire #vulgarisation #colomb #1492",
+ "sources": [
+  "World History Encyclopedia, « Map of the World According to Christopher Columbus c. 1490 » (Japon à environ 2 500 milles nautiques / 4 000 km des Canaries selon lui ; plus de 10 000 milles nautiques en réalité)",
+  "Université du Minnesota (R. McCaa), cours sur Colomb : 2 400 milles nautiques estimés contre 10 600 réels",
+  "History.com, « Christopher Columbus never set out to prove the Earth was round » (mythe de la Terre plate popularisé par Washington Irving, 1828)",
+  "Florida Museum, journal de bord de Colomb : départ de La Gomera le 9 septembre, terre en vue le 12 octobre 1492"
+ ],
+ "art": {
+  "colomb": {
+   "prompt": "portrait of Christopher Columbus, long gray-brown hair, red-brown cap and dark tunic, 1490s, serious look, bust, facing front pixel art, bust portrait, dark background",
+   "size": "192x256"
+  },
+  "colomb_face": {
+   "prompt": "close-up face of Christopher Columbus, clean-shaven, long gray hair, simple dark cap, 15th century, determined eyes, front view, bust, no beard, no ruff collar pixel art, dark background",
+   "size": "192x192"
+  },
+  "globe": {
+   "prompt": "an old antique terrestrial globe on a wooden stand, 15th century style, no text",
+   "size": "192x192"
+  },
+  "livre": {
+   "prompt": "a thick old book lying closed on a desk with a quill pen beside it, 1828 style",
+   "size": "256x192"
+  },
+  "carte": {
+   "prompt": "simple old parchment map showing only the Atlantic ocean, Europe and Africa coast on the left edge and Asia coast on the right edge, nothing in between except a straight dotted line, no America, no sea monsters, no text",
+   "size": "320x192"
+  },
+  "ocean_vide": {
+   "prompt": "endless empty ocean with only waves and a pale horizon, no land, no ship, wide",
+   "size": "320x192"
+  },
+  "navires": {
+   "prompt": "three small 15th century wooden caravel ships with square sails sailing on the open sea, side view, no flags with letters",
+   "size": "320x192"
+  },
+  "ile": {
+   "prompt": "a small tropical island with white beach and palm trees seen from the sea at dawn, Bahamas",
+   "size": "320x192"
+  },
+  "marins": {
+   "prompt": "tired sailors in 15th century clothes sitting on a wooden ship deck looking at the horizon, back view",
+   "size": "320x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Christophe Colomb s'est trompé de plus de quinze mille kilomètres. Et c'est ce qui l'a sauvé.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "colomb",
+     "h": 430,
+     "y": 540,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Il s'est trompé de\n*15 000 km*.",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "SAUVÉ",
+     "at": 1.6,
+     "y": 760,
+     "rot": -6,
+     "fill": true,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Vous pensez sûrement qu'il voulait prouver que la Terre est ronde. Faux.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Prouver que la Terre\nest ronde ?",
+     "at": 0,
+     "y": 160,
+     "out": "Faux"
+    },
+    {
+     "type": "img",
+     "src": "globe",
+     "h": 330,
+     "y": 500,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    },
+    {
+     "type": "text",
+     "font": "sans",
+     "size": 44,
+     "color": "W",
+     "text": "FAUX.",
+     "at": "Faux",
+     "y": 740,
+     "in": "slam",
+     "flash": true
+    }
+   ]
+  },
+  {
+   "say": "En 1492, les savants savent déjà qu'elle est ronde. Les Grecs en avaient même mesuré la taille, avec une bonne précision, il y a plus de dix-sept cents ans.",
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1492",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Les savants le savent\n*déjà*.",
+     "at": 0.3,
+     "y": 230,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "globe",
+     "h": 340,
+     "y": 500,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "Le mythe de la Terre plate ? Il est popularisé en 1828, dans un livre de l'écrivain américain Washington Irving.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le mythe de la Terre plate",
+     "at": 0,
+     "y": 160,
+     "out": "1828"
+    },
+    {
+     "type": "stamp",
+     "text": "1828",
+     "at": "1828",
+     "y": 230,
+     "rot": -5,
+     "fill": true
+    },
+    {
+     "type": "img",
+     "src": "livre",
+     "h": 300,
+     "y": 500,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "zoom"
+    }
+   ]
+  },
+  {
+   "say": "Son vrai problème, c'est la taille. Colomb croit la Terre bien plus petite qu'elle ne l'est.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Son vrai problème :\nla *taille*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "globe",
+     "h": 260,
+     "y": 430,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    },
+    {
+     "type": "img",
+     "src": "colomb_face",
+     "h": 260,
+     "y": 700,
+     "at": "croit",
+     "in": "fade"
+    }
+   ]
+  },
+  {
+   "say": "Il s'appuie sur la carte d'un savant italien, Toscanelli, qui rétrécit la Terre d'environ un quart.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Une Terre *25 % plus petite*",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "type": "img",
+     "src": "carte",
+     "h": 250,
+     "y": 500,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "D'après ses calculs, le Japon est à environ quatre mille kilomètres des Canaries.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Le Japon, d'après lui",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 4000,
+     "decimals": 0,
+     "suffix": " KM",
+     "dur": 0.9,
+     "at": 0.3,
+     "y": 250,
+     "in": "fade"
+    },
+    {
+     "type": "img",
+     "src": "carte",
+     "h": 250,
+     "y": 520,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "En réalité, il y en a près de vingt mille. Cinq fois plus.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "En réalité",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 20000,
+     "decimals": 0,
+     "suffix": " KM",
+     "dur": 0.9,
+     "at": 0.3,
+     "y": 250,
+     "in": "fade",
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "ocean_vide",
+     "h": 250,
+     "y": 520,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Il part avec trois petits navires. Avec leurs vivres, jamais ils n'auraient atteint l'Asie.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Trois petits navires",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "navires",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "Pas assez de *vivres*.",
+     "at": 3.0,
+     "y": 720,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Après plus d'un mois en mer, sans voir la moindre terre, l'équipage tient à peine.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Plus d'*un mois* en mer",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "marins",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "AUCUNE TERRE",
+     "at": "moindre",
+     "y": 700,
+     "rot": 4
+    }
+   ]
+  },
+  {
+   "say": "Puis, le 12 octobre 1492, une île apparaît. Dans les Bahamas. Un continent que l'Europe ne connaissait pas.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "type": "stamp",
+     "text": "12 OCTOBRE 1492",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "type": "img",
+     "src": "ile",
+     "h": 260,
+     "y": 470,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "Un continent\n*inconnu*.",
+     "at": 2.8,
+     "y": 720,
+     "size": 28
+    }
+   ]
+  },
+  {
+   "say": "Colomb a eu faux sur toute la ligne. Sans l'Amérique sur sa route, son voyage finissait en pleine mer. Il est pourtant mort persuadé d'avoir atteint l'Asie.",
+   "glow": {
+    "y": 480,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "colomb",
+     "h": 380,
+     "y": 470,
+     "at": 0,
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Faux sur toute la ligne.",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    },
+    {
+     "preset": "title",
+     "text": "Sans l'Amérique…",
+     "at": "Sans",
+     "y": 750,
+     "size": 26,
+     "out": "pourtant"
+    },
+    {
+     "preset": "title",
+     "text": "Il croyait être en *Asie*.",
+     "at": "persuadé",
+     "y": 750,
+     "size": 26
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Colomb s'est trompé de\n*15 000 km*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "colomb",
+    "h": 430,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Non, il ne voulait pas\nprouver que la Terre\nest *ronde*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "globe",
+    "h": 400,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Son erreur de calcul\nl'a *sauvé*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "navires",
+    "h": 300,
+    "y": 620
+   }
+  ]
+ ]
+}

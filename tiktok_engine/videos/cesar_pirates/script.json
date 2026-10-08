@@ -1,0 +1,382 @@
+{
+ "title": "Jules César et les pirates",
+ "voice": {
+  "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+  "model": "eleven_v4",
+  "speed": 1.06
+ },
+ "tail": 1.4,
+ "caption": "Jules César a exigé une rançon plus élevée à ses ravisseurs, avant de les faire crucifier. #histoire #vulgarisation #cesar #rome",
+ "sources": [
+  "Plutarque, Vie de César, 1-2 (rançon de 20 talents portée à 50, Milet, crucifixion)",
+  "Suétone, Vie de César, 4 (captivité de près de quarante jours, près de l'île de Pharmacuse, crucifixion après gorge tranchée)",
+  "History.com, « Julius Caesar pirate kidnap legend » ; Big Think (même récit, datation vers 75 av. J.-C.)"
+ ],
+ "art": {
+  "cesar": {
+   "prompt": "portrait of young Julius Caesar, short hair, no laurel wreath, white Roman toga with a purple band, strong chin, serious, bust, front view pixel art, bust portrait, dark background",
+   "size": "192x256"
+  },
+  "cesar_face": {
+   "prompt": "close-up face of young Julius Caesar, confident smirk, short hair, front view, bust pixel art, bust portrait, dark background",
+   "size": "192x192"
+  },
+  "navire_pirate": {
+   "prompt": "ancient Mediterranean pirate ship with oars and a dark sail attacking a Roman merchant ship at sea, side view",
+   "size": "320x192"
+  },
+  "pirates": {
+   "prompt": "group of rough ancient Mediterranean pirates with beards and bandanas sitting on a ship deck, front view",
+   "size": "320x192"
+  },
+  "talents": {
+   "prompt": "a pile of ancient silver ingots and silver coins on a wooden table, simple, no text",
+   "size": "256x192"
+  },
+  "cesar_pirates": {
+   "prompt": "a young Roman in a toga standing on a ship deck reading from a scroll while pirates sit around him listening, side view",
+   "size": "320x192"
+  },
+  "flotte": {
+   "prompt": "fleet of ancient Roman war galleys with oars sailing in a line on a calm sea, side view",
+   "size": "320x192"
+  },
+  "milet": {
+   "prompt": "ancient Greek coastal city Miletus with white columns and a harbor, seen from the sea",
+   "size": "320x192"
+  },
+  "croix": {
+   "prompt": "exactly three plain empty wooden crosses standing on a bare hill silhouetted against a red sunset sky, nothing else on the ground, no people, no objects",
+   "size": "320x192"
+  }
+ },
+ "beats": [
+  {
+   "say": "Jules César a ordonné à ses ravisseurs de demander plus d'argent. Puis il les a tous fait crucifier.",
+   "glow": {
+    "y": 500,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "cesar",
+     "h": 430,
+     "y": 540,
+     "at": 0,
+     "in": "slam",
+     "flash": "big",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Il a fait *augmenter*\nsa propre rançon.",
+     "at": 0,
+     "y": 150
+    },
+    {
+     "type": "stamp",
+     "text": "CRUCIFIÉS",
+     "at": "crucifier",
+     "y": 760,
+     "rot": -6,
+     "fill": true,
+     "size": 24
+    }
+   ]
+  },
+  {
+   "say": "Vers 75 avant Jésus-Christ, César a environ vingt-cinq ans. Il part étudier l'art de parler à Rhodes. Des pirates capturent son navire en mer Égée.",
+   "els": [
+    {
+     "type": "stamp",
+     "text": "VERS 75 AV. J.-C.",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Capturé par des *pirates*.",
+     "at": 0.5,
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "navire_pirate",
+     "h": 250,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Ils réclament vingt talents d'argent.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "La rançon demandée",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 20,
+     "decimals": 0,
+     "suffix": " TALENTS",
+     "dur": 0.9,
+     "at": 0.1,
+     "y": 250,
+     "in": "fade"
+    },
+    {
+     "type": "img",
+     "src": "talents",
+     "h": 300,
+     "y": 520,
+     "at": 0.05,
+     "in": "fade",
+     "fx": "breathe"
+    }
+   ]
+  },
+  {
+   "say": "César éclate de rire. Il leur dit qu'ils ne savent pas qui ils ont capturé, et exige qu'ils demandent cinquante talents.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Il éclate de *rire*.",
+     "at": 0,
+     "y": 160,
+     "out": "cinquante"
+    },
+    {
+     "type": "img",
+     "src": "cesar_face",
+     "h": 330,
+     "y": 480,
+     "at": 0.05,
+     "in": "slam",
+     "fx": "breathe"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 50,
+     "decimals": 0,
+     "suffix": " TALENTS",
+     "dur": 0.9,
+     "at": "exige",
+     "y": 250,
+     "in": "fade",
+     "color": "W"
+    }
+   ]
+  },
+  {
+   "say": "Pendant près de quarante jours, il vit avec eux comme un chef. Il fait du sport avec eux. Pour dormir, il leur ordonne de se taire, et ils obéissent. Il leur lit même ses poèmes, et les traite d'ignorants s'ils n'applaudissent pas.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Près de *40 jours*",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "cesar_pirates",
+     "h": 260,
+     "y": 490,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "Poèmes obligatoires.",
+     "at": "poèmes",
+     "y": 720,
+     "size": 26
+    }
+   ]
+  },
+  {
+   "say": "Et il les prévient en souriant : une fois libre, je vous ferai tous crucifier. Ils pensent que c'est une blague.",
+   "glow": {
+    "y": 480
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "pirates",
+     "h": 260,
+     "y": 470,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "« Je vous ferai\ntous *crucifier*. »",
+     "at": 0.2,
+     "y": 160,
+     "size": 30
+    },
+    {
+     "type": "stamp",
+     "text": "UNE BLAGUE ?",
+     "at": "blague",
+     "y": 720,
+     "rot": 5
+    }
+   ]
+  },
+  {
+   "say": "Les villes voisines réunissent la somme. Libéré près de Milet, il lève aussitôt une flotte, et retrouve les pirates encore à l'ancre.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Libre.",
+     "at": 0,
+     "y": 160,
+     "out": "lève"
+    },
+    {
+     "type": "img",
+     "src": "milet",
+     "h": 240,
+     "y": 470,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "preset": "title",
+     "text": "Il lève une *flotte*.",
+     "at": "lève",
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "flotte",
+     "h": 240,
+     "y": 470,
+     "at": "lève",
+     "in": "scan"
+    }
+   ]
+  },
+  {
+   "say": "Il les capture presque tous, et tient sa promesse. Par clémence, il leur fait d'abord trancher la gorge.",
+   "glow": {
+    "y": 500
+   },
+   "els": [
+    {
+     "preset": "title",
+     "text": "Il tient *parole*.",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "img",
+     "src": "croix",
+     "h": 260,
+     "y": 480,
+     "at": 0.05,
+     "in": "scan"
+    },
+    {
+     "type": "stamp",
+     "text": "PROMESSE TENUE",
+     "at": "promesse",
+     "y": 720,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "say": "Le jeune homme qui négociait sa rançon à la hausse deviendra le maître de Rome.",
+   "glow": {
+    "y": 480,
+    "r": 300,
+    "a": 0.24
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "cesar",
+     "h": 400,
+     "y": 480,
+     "at": 0,
+     "in": "pop",
+     "fx": "breathe"
+    },
+    {
+     "preset": "title",
+     "text": "Le futur maître de *Rome*.",
+     "at": 0,
+     "y": 160,
+     "size": 28
+    }
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Il a fait *augmenter*\nsa rançon",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "cesar",
+    "h": 430,
+    "y": 650
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "Ses ravisseurs ont\nfini *crucifiés*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "croix",
+    "h": 320,
+    "y": 620
+   }
+  ],
+  [
+   {
+    "type": "text",
+    "font": "sans",
+    "size": 38,
+    "color": "W",
+    "text": "20 talents ?\nJe vaux *50*",
+    "y": 320,
+    "maxW": 470
+   },
+   {
+    "type": "img",
+    "src": "talents",
+    "h": 330,
+    "y": 630
+   }
+  ]
+ ]
+}
