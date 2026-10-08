@@ -1,0 +1,144 @@
+{
+ "title": "Le doigt de Galilée",
+ "voice": {"voice_id": "0bKGtCCpdKSI5NjGhU3z", "model": "eleven_v4", "speed": 1.06},
+ "tail": 1.4,
+ "caption": "Le doigt de Galilée est exposé dans un musée de Florence. #histoire #galilee #vulgarisation #science",
+ "sources": [
+  "Museo Galileo, catalogue en ligne : majeur de la main droite, prélevé le 12 mars 1737 lors du transfert de la dépouille (inv. 2432)",
+  "Wikipedia « Galileo's middle finger » : pouce, index et dent gardés par la famille Capponi ; 5e vertèbre lombaire donnée à l'Université de Padoue en 1823 ; vitrine en forme d'œuf près de la lentille de lunette",
+  "Strange Remains (2013) ; Newser / astronomy2009.org (2009) : deux doigts et une dent perdus après 1905, retrouvés à une vente aux enchères en 2009 par un collectionneur florentin, remis au musée",
+  "Mort de Galilée : 1642 (95 ans avant 1737)"
+ ],
+ "art": {
+  "galileo": {"prompt": "portrait of the old astronomer Galileo Galilei, long white beard, bald head, dark scholar robe, bust", "size": "192x256"},
+  "tomb": {"prompt": "marble monument tomb of Galileo inside a Florence church, statues, candlelight, wide view", "size": "320x192"},
+  "men1737": {"prompt": "three men in 18th century powdered wigs and long coats standing around an open stone tomb in a church at night with a lantern, back view, no gore", "size": "320x192"},
+  "hand": {"prompt": "a single old human hand outline resting on a cloth, only a thumb index and middle finger shown pale, museum relic style", "size": "192x192"},
+  "egg_case": {"prompt": "an egg-shaped glass reliquary on a marble base containing a small pale finger, museum display, front view", "size": "192x256"},
+  "telescope": {"prompt": "a 17th century brass telescope and a round glass lens on a velvet cloth, museum display", "size": "320x192"},
+  "jar": {"prompt": "an old glass jar with a wooden base and a small bust on top, containing two small pale fingers and a tooth, dusty antique", "size": "192x256"},
+  "auction": {"prompt": "an auction room with an auctioneer at a wooden podium and people holding numbered paddles, dusty antiques on tables", "size": "320x192"},
+  "museum": {"prompt": "science museum hall in Florence with old astronomical instruments in glass cases, wide view", "size": "320x192"},
+  "moon": {"prompt": "full moon seen through an old brass telescope, night sky with stars", "size": "256x192"}
+ },
+ "beats": [
+  {
+   "say": "Galilée a découvert les lunes de Jupiter. Mais c'est son doigt qu'on admire aujourd'hui.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"type": "img", "src": "galileo", "h": 470, "y": 520, "at": 0, "in": "slam", "flash": "big", "fx": "breathe"},
+    {"preset": "title", "text": "Galilée, ce *doigt*.", "at": 0, "y": 150},
+    {"type": "stamp", "text": "SON DOIGT", "at": "doigt", "y": 740, "rot": -6, "fill": true, "size": 22}
+   ]
+  },
+  {
+   "say": "Il meurt en 1642. Quatre-vingt-quinze ans plus tard, en 1737, on déplace son corps vers un tombeau monumental, à Florence.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "1642", "at": 0, "y": 160, "rot": -4},
+    {"preset": "num", "text": "+95 ANS", "at": "Quatre", "y": 240},
+    {"type": "img", "src": "tomb", "h": 240, "y": 520, "at": "1737", "in": "scan"}
+   ]
+  },
+  {
+   "say": "Ce jour-là, des admirateurs présents prennent des morceaux de lui, en souvenir.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Des admirateurs\nprennent des *souvenirs*.", "at": 0, "y": 175, "size": 26},
+    {"type": "img", "src": "men1737", "h": 250, "y": 500, "at": 0.05, "in": "fade"},
+    {"type": "stamp", "text": "12 MARS 1737", "at": "souvenir", "y": 720, "rot": -4, "size": 20}
+   ]
+  },
+  {
+   "say": "Trois doigts de sa main droite. Une dent. Et même une vertèbre.",
+   "glow": {"y": 500},
+   "els": [
+    {"preset": "big", "text": "3 DOIGTS", "at": "Trois", "y": 240, "size": 52},
+    {"preset": "label", "text": "+ 1 DENT + 1 VERTÈBRE", "at": "Une", "y": 330, "color": "W"},
+    {"type": "img", "src": "hand", "h": 330, "y": 560, "at": 0.1, "in": "pop"}
+   ]
+  },
+  {
+   "say": "Le majeur finit chez un collectionneur, puis dans une bibliothèque, puis dans un musée.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Le *majeur* voyage.", "at": 0, "y": 160},
+    {"type": "img", "src": "egg_case", "h": 420, "y": 500, "at": 0.05, "in": "fade", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Les deux autres doigts et la dent, eux, restent dans une famille de Florence. Jusqu'en 1905. Puis ils disparaissent.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Disparus après *1905*", "at": "1905", "y": 160},
+    {"type": "stamp", "text": "1905", "at": "disparaissent", "y": 700, "rot": -5, "fill": true, "size": 24},
+    {"type": "sprite", "sprite": "question", "px": 9, "y": 480, "at": 0.1, "in": "pop", "blink": 2}
+   ]
+  },
+  {
+   "say": "Plus de cent ans sans aucune trace. Mais attendez.",
+   "els": [
+    {"preset": "big", "text": "+100 ANS", "at": 0, "y": 280, "size": 52, "out": "Mais"},
+    {"type": "text", "font": "sans", "size": 40, "color": "W", "text": "MAIS\nATTENDEZ.", "at": "Mais", "y": 360, "in": "slam", "flash": true}
+   ]
+  },
+  {
+   "say": "En 2009, un vieux bocal en verre est vendu aux enchères. L'étiquette a disparu. Personne ne sait ce qu'il y a dedans.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "stamp", "text": "2009", "at": 0, "y": 160, "rot": -4},
+    {"type": "img", "src": "auction", "h": 240, "y": 470, "at": 0.05, "in": "scan", "out": "bocal"},
+    {"type": "img", "src": "jar", "h": 420, "y": 500, "at": "étiquette", "in": "pop"},
+    {"preset": "title", "text": "Contenu *inconnu*", "at": "Personne", "y": 730, "size": 26}
+   ]
+  },
+  {
+   "say": "Un collectionneur de Florence l'achète. Et il comprend : ce sont les doigts de Galilée, et sa dent.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "2 doigts et *1 dent*", "at": "comprend", "y": 160},
+    {"type": "img", "src": "jar", "h": 400, "y": 500, "at": 0, "in": "fade", "fx": "breathe"},
+    {"type": "stamp", "text": "GALILÉE", "at": "Galilée", "y": 740, "rot": -5, "fill": true, "size": 24}
+   ]
+  },
+  {
+   "say": "Il les rend au musée, et les spécialistes confirment qu'ils sont authentiques.",
+   "glow": {"y": 480},
+   "els": [
+    {"preset": "title", "text": "Authentifiés", "at": "confirment", "y": 160, "size": 30},
+    {"type": "img", "src": "museum", "h": 250, "y": 500, "at": 0.05, "in": "scan"},
+    {"type": "stamp", "text": "AUTHENTIQUE", "at": "authentiques", "y": 720, "rot": 5, "fill": true, "size": 20}
+   ]
+  },
+  {
+   "say": "Aujourd'hui, le majeur de sa main droite est exposé au Museo Galileo, à Florence, dans une vitrine en forme d'œuf.",
+   "glow": {"y": 500, "r": 300, "a": 0.24},
+   "els": [
+    {"preset": "title", "text": "Museo Galileo,\n*Florence*", "at": "Museo", "y": 175, "size": 28},
+    {"type": "img", "src": "egg_case", "h": 430, "y": 520, "at": 0.05, "in": "pop", "fx": "breathe"}
+   ]
+  },
+  {
+   "say": "Le doigt qui a désigné les étoiles.",
+   "glow": {"y": 480},
+   "els": [
+    {"type": "img", "src": "moon", "h": 330, "y": 480, "at": 0, "in": "fade", "fx": "breathe"},
+    {"preset": "title", "text": "Le doigt qui a montré\n*les étoiles*.", "at": "étoiles", "y": 760, "size": 26}
+   ]
+  }
+ ],
+ "covers": [
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Le doigt de\n*Galilée* existe encore.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "egg_case", "h": 450, "y": 650}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Perdus 100 ans,\nvendus *sans étiquette*.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "jar", "h": 450, "y": 650}
+  ],
+  [
+   {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "On a coupé ses\n*doigts* en 1737.", "y": 320, "maxW": 470},
+   {"type": "img", "src": "galileo", "h": 450, "y": 650}
+  ]
+ ]
+}
