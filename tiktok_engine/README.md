@@ -19,10 +19,18 @@ tête d'objet (`production/TIKTOK_PLAN.md`) est **en pause**.
   accrocheur ») : le personnage en grand portrait pixel claque dès la première image (flash), avec la
   phrase choc. Le compteur seul ne suffit pas.
 - **Pas d'outro** (« demain on fera… » : refusé) : la vidéo s'arrête sur sa chute.
-- **Illustrations** : pixel art généré par Replicate (Retro Diffusion `rd-plus`, guidé par la palette,
-  fond transparent) avec `art.py batch videos/<nom>/script.json` (bloc `"art"` du script ; ~11 images
-  par vidéo, refaire une image : `--only nom`). Les petits dessins codés de `sprites.js` restent pour
-  les icônes (soldats, crânes, thermomètre…). Clé : `REPLICATE_API_TOKEN` dans `.env`.
+- **Illustrations : Algrow depuis le 9 oct.**
+  - Le modèle est `nano-banana-2`, à 1 crédit l'image. On l'a choisi parce que les crédits Replicate
+    sont presque épuisés, et que la version gratuite (vrais tableaux pixelisés) a été jugée « affreuse ».
+  - `art.py prompts videos/<nom>/script.json` donne, pour chaque image du bloc `"art"`, la consigne,
+    le format et deux références de style. Les références sont nos anciennes images `rd-plus`, sur le
+    dépôt public.
+  - On génère chaque image avec l'outil Algrow `generate_image`. L'état du travail se lit avec
+    `get_tts_job_status`, qui sert aussi pour les images.
+  - Ensuite, `art.py fit videos/<nom>/script.json nom=<url> …` recadre l'image, la met sur la palette
+    à la taille demandée, rend transparent le noir relié aux bords, puis refait `art_review.jpg`.
+  - Les petits dessins codés de `sprites.js` restent pour les icônes (soldats, crânes, thermomètre…).
+  - Ancienne voie Replicate : `art.py batch` (clé `REPLICATE_API_TOKEN`).
 
 ## Le compte (retenu par l'utilisateur le 8 oct.)
 
@@ -106,7 +114,8 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 
 ## Publication (recherche du 8 oct.)
 
-- **L'utilisateur veut 3 TikTok par jour** : matin, midi et soir (8 oct. au soir).
+- **Rythme : 2 TikTok par jour, à 7 h et 19 h (heure belge)**. Le 8 oct. au soir, l'utilisateur a hésité
+  avec 3 par jour (7 h, 12 h, 19 h), puis a dit : « je pense que c'est plus smart d'en poster deux ».
 - **API TikTok (Content Posting API)** : pas une solution pour nous.
   - Les règles de TikTok refusent noir sur blanc « un outil pour envoyer du contenu sur le(s)
     compte(s) que vous ou votre équipe gérez ».
@@ -122,7 +131,9 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 
 ## Ce que coûte une vidéo (calculé le 8 oct.)
 
-- **Illustrations Replicate** (clé de l'utilisateur) : environ **0,60 $ par vidéo** pour une douzaine
+- **Illustrations Algrow (depuis le 9 oct.)** : environ **12 crédits par vidéo** (1 par image, plus
+  1 par image refaite), soit presque rien à côté de la voix.
+- **Ancien coût Replicate** (clé de l'utilisateur) : environ **0,60 $ par vidéo** pour une douzaine
   d'images. Prix `rd-plus`, style `default`, à l'image : 0,044 $ jusqu'à 192×192, 0,058 $ jusqu'à
   256×256 (320×192 compris), 0,077 $ jusqu'à 320×320. Napoléon : 0,58 $ ; Joconde : 0,64 $. Chaque image
   refaite (mains ratées…) coûte le même prix. Les icônes de `sprites.js` sont gratuites.

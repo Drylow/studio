@@ -1,10 +1,16 @@
-"""Illustrations en pixel art pour les vidéos TikTok (Replicate), dans la palette de la chaîne.
+"""Illustrations en pixel art pour les vidéos TikTok, dans la palette de la chaîne.
 
+Voie normale depuis le 9 oct. 2026 : Algrow (1 crédit l'image, modèle nano-banana-2), sans Replicate.
+    python tiktok_engine/art.py prompts videos/<nom>/script.json   # consignes Algrow des images manquantes
+    (générer chaque image avec l'outil Algrow generate_image : prompt, aspect_ratio et références donnés)
+    python tiktok_engine/art.py fit videos/<nom>/script.json nom=<url ou fichier> [nom=...]
+fit recadre au format demandé, réduit en vrais pixels sur la palette, rend le fond noir transparent
+et refait la planche art_review.jpg (vérifier mains, doigts, visages).
+
+Ancienne voie Replicate (clé REPLICATE_API_TOKEN dans .env, crédits presque épuisés) :
     python tiktok_engine/art.py gen <sortie.png> "<prompt>" [--model rd|flux] [--size 256x256] [--keep-bg]
-
 - rd   : retro-diffusion/rd-plus, vrai pixel art, guidé par l'image de palette et fond retiré.
 - flux : black-forest-labs/flux-1.1-pro, puis réduit en pixels et tramé (Bayer) sur la palette.
-Clé : REPLICATE_API_TOKEN dans .env (jamais dans le code ni dans git).
 """
 import argparse
 import base64
@@ -133,6 +139,83 @@ def batch(script_path, only=None, workers=4):
     print("ART DONE", flush=True)
 
 
+# Algrow : nos anciennes illustrations rd-plus (dépôt public) servent de référence de style.
+REF = "https://raw.githubusercontent.com/Drylow/studio/main/tiktok_engine/videos/"
+REFS = {
+    "person": [REF + "joconde_vol/art/detective.png", REF + "napoleon_russie/art/napoleon_portrait.png"],
+    "scene": [REF + "napoleon_russie/art/blizzard.png", REF + "joconde_vol/art/thief.png"],
+}
+ALGROW_STYLE = (
+    "Pixel art illustration in exactly the same style as the reference images: low-resolution retro pixel "
+    "art with big visible square pixels, checkerboard dithering, strictly limited palette of deep navy blue, "
+    "vivid royal blue, light periwinkle blue, off-white and grey, with muted pale skin tones only, dramatic "
+    "rim light, pure solid black background, centered, no text, no border, anatomically correct hands with "
+    "five fingers. Subject: "
+)
+RATIOS = {"1:1": 1, "3:4": 3 / 4, "4:3": 4 / 3, "16:9": 16 / 9, "9:16": 9 / 16}
+
+
+def algrow_request(spec):
+    """Prompt, format and style references for Algrow generate_image."""
+    w, h = map(int, spec.get("size", "256x256").split("x"))
+    ratio = min(RATIOS, key=lambda r: abs(RATIOS[r] - w / h))
+    kind = spec.get("kind") or ("person" if w <= h else "scene")
+    return {"prompt": ALGROW_STYLE + spec["prompt"], "aspect_ratio": ratio, "model": "nano-banana-2",
+            "reference_image_urls": REFS[kind]}
+
+
+def prompts(script_path, only=None):
+    script = json.load(open(script_path, encoding="utf-8"))
+    base = os.path.join(os.path.dirname(os.path.abspath(script_path)), "art")
+    todo = {n: algrow_request(s) for n, s in script.get("art", {}).items()
+            if (only and n in only) or (not only and not os.path.exists(os.path.join(base, n + ".png")))}
+    print(json.dumps(todo, ensure_ascii=False, indent=2))
+
+
+def fit_palette(img, size, keep_bg=False):
+    """Image Algrow -> vrais pixels de la palette, au format exact ; le noir relié aux bords devient transparent."""
+    from scipy import ndimage
+    w, h = size
+    img = img.convert("RGB")
+    if img.width / img.height > w / h:          # recadrage au centre sur le format demandé
+        cw = round(img.height * w / h)
+        img = img.crop(((img.width - cw) // 2, 0, (img.width - cw) // 2 + cw, img.height))
+    else:
+        ch = round(img.width * h / w)
+        img = img.crop((0, (img.height - ch) // 2, img.width, (img.height - ch) // 2 + ch))
+    x = np.asarray(img.resize((w, h), Image.BOX)).astype(float)
+    pal = np.array([[int(c[k:k + 2], 16) for k in (1, 3, 5)] for c in PALETTE], float)
+    d = (((x[..., None, :] - pal[None, None]) / 255) ** 2 * np.array([0.3, 0.59, 0.11])).sum(-1)
+    idx = d.argmin(-1)
+    out = np.zeros((h, w, 4), np.uint8)
+    out[..., :3] = pal[idx]
+    out[..., 3] = 255
+    if not keep_bg:
+        labels, _ = ndimage.label(idx == 0)
+        edge = set(np.unique(np.concatenate([labels[0], labels[-1], labels[:, 0], labels[:, -1]]))) - {0}
+        out[..., 3] = np.where(np.isin(labels, list(edge)), 0, 255)
+    return Image.fromarray(out, "RGBA")
+
+
+def fit(script_path, pairs):
+    script = json.load(open(script_path, encoding="utf-8"))
+    base = os.path.join(os.path.dirname(os.path.abspath(script_path)), "art")
+    os.makedirs(base, exist_ok=True)
+    for pair in pairs:
+        name, src = pair.split("=", 1)
+        spec = script["art"][name]
+        if src.startswith("https://"):
+            req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})  # CDN Algrow : client navigateur
+            raw = Image.open(io.BytesIO(urllib.request.urlopen(req, timeout=120).read()))
+        else:
+            raw = Image.open(src)
+        size = tuple(map(int, spec.get("size", "256x256").split("x")))
+        fit_palette(raw, size, spec.get("keep_bg", False)).save(os.path.join(base, name + ".png"))
+        print(f"{name} ok", flush=True)
+    review_sheet(base)
+    print("ART DONE", flush=True)
+
+
 def review_sheet(base):
     """Planche des illustrations en grand (pixels ×3) pour vérifier mains, doigts, bras et visages."""
     import glob
@@ -155,9 +238,9 @@ def review_sheet(base):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["gen", "batch"])
-    ap.add_argument("dest", help="gen : image de sortie ; batch : script.json")
-    ap.add_argument("prompt", nargs="?")
+    ap.add_argument("cmd", choices=["gen", "batch", "prompts", "fit"])
+    ap.add_argument("dest", help="gen : image de sortie ; batch, prompts, fit : script.json")
+    ap.add_argument("prompt", nargs="*", help="gen : le prompt ; fit : nom=url_ou_fichier …")
     ap.add_argument("--model", default="rd", choices=["rd", "flux"])
     ap.add_argument("--size", default="256x256")
     ap.add_argument("--keep-bg", action="store_true")
@@ -166,8 +249,12 @@ def main():
     a = ap.parse_args()
     if a.cmd == "batch":
         return batch(a.dest, a.only)
+    if a.cmd == "prompts":
+        return prompts(a.dest, a.only)
+    if a.cmd == "fit":
+        return fit(a.dest, a.prompt)
     w, h = map(int, a.size.split("x"))
-    print(generate(a.dest, a.prompt, a.model, (w, h), a.keep_bg, a.seed))
+    print(generate(a.dest, " ".join(a.prompt), a.model, (w, h), a.keep_bg, a.seed))
 
 
 if __name__ == "__main__":
