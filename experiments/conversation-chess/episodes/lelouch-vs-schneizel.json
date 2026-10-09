@@ -3,6 +3,8 @@
   "title": "Lelouch vs Schneizel Analysed like Chess | Code Geass",
   "demo": false,
   "source_reviewed": true,
+  "show_source_quality_label": false,
+  "analysis_pawn_by_speaker": true,
   "source_sha256": "0ddea1a0e759801558e221b3e1964c328c3d4a8dbab7799c710a31d500577717",
   "source_url": "https://www.youtube.com/watch?v=xHmKbGeVL8g",
   "source_quality": {

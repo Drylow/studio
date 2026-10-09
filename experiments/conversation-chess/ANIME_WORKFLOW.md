@@ -2,9 +2,11 @@
 
 Le format retenu est son outil `conversation-chess`, avec son moteur graphique
 et son montage Kdenlive. `scene.js` et les neuf icônes actives Chess.com sont
-conservés. Pour l'anime, Tony est remplacé par un pion neutre provisoire,
+conservés. Pour l'anime, Tony est remplacé par des pions provisoires,
 conformément au retour utilisateur ; ses images originales restent archivées.
-Le personnage définitif n'est pas choisi. Les recherches, plans, variantes et
+Dans les analyses, le pion suit le camp du move : blanc pour Lelouch,
+noir pour Schneizel (`analysis_pawn_by_speaker: true`). Le bilan garde son pion
+commentateur neutre. Les recherches, plans, variantes et
 archives Sopranos restent disponibles.
 Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminée.
 
@@ -12,7 +14,10 @@ Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminé
    `SOURCE_IMPORT.md`. Mesurer le fichier réellement reçu : une réponse «1080p»
    ne suffit pas. Examiner les images natives et tous les plans pour le détail,
    les textes incrustés et les watermarks. Refuser les Fandango Clips et autres
-   surimpressions. Une source insuffisante permet seulement un aperçu marqué.
+   surimpressions. Une source insuffisante permet seulement un aperçu ; sa qualité
+   est indiquée dans le manifeste et à la livraison. Le texte technique à l'écran
+   est désactivé pour cet épisode à la demande de l'utilisateur
+   (`show_source_quality_label: false`), sans modifier le verrou de qualité.
 2. Vérifier les dialogues et choisir une scène qui montre une manœuvre et sa
    conséquence. Le premier locuteur du passage sélectionné est blanc ; garder
    les camps fixes. Les scores expriment notre lecture, pas un moteur d'échecs.
