@@ -1,5 +1,36 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Nouveau format Sopranos — travail du 9 octobre 2026
+
+- Dernier `main` récupéré jusqu'à `ad67480`. Lecture réelle du serveur : Cage et Pitch
+  connectées, pilote actif ; la base enregistre aussi une publication Pitch sur Everton.
+  Zernio répond : Beethoven publié, 13 posts encore programmés. Aucun nouveau créneau
+  pris ni automatisation modifiée pour cette recherche. Les 38 tests locaux du pilote
+  et des connexions YouTube passent ; ils ne remplacent pas une publication réelle.
+- Nouveau projet isolé : [conversation-chess](../experiments/conversation-chess/README.md).
+  Tony central, dialogues et annotations anglais, **aucune voix off**. La référence
+  prioritaire est ConversationAnalysisGuy ; [étude et limites](CONVERSATION_CHESS_REFERENCES.md).
+- Les deux premiers pions ont été rejetés. Après une planche A/B/C/D, l'utilisateur choisit
+  **A, avec le corps du pion noir comme B**. Garder la tête, le style et la silhouette de A ;
+  seule la couleur du corps change. `STYLE.md` conserve le choix et les essais rejetés.
+  La version autonome a ensuite été **approuvée**. Demande actuelle : montage test d'environ
+  **deux minutes**, intro des évaluations incluse, avant d'allonger la vidéo.
+- Habillage réellement rendu et inspecté : 14 s, 1920 × 1080, 30 images/s, sans audio.
+  Légende puis exemple synthétique Tony/Ralph ; sorties locales dans `/tmp`.
+  Le premier rendu contient une mascotte rejetée ; le nouvel aperçu utilise le choix A/noir.
+  Ce n'est pas une vidéo Sopranos et aucune publication n'a été lancée.
+- Scène proposée : Tony/Ralph sur Jackie Jr, S3E12, avec 12 beats documentés dans
+  `FIRST_EPISODE.md`. Le vrai média manque, donc pas de coupes ou timecodes validés.
+  Les vidéos de référence n'ont pas pu être lues (accès YouTube bloqué) ; leur avatar,
+  catalogues, descriptions et commentaires ont été examinés. Ne pas prétendre les
+  avoir visionnées ni garantir les droits des extraits.
+- Acquisition du vrai média toujours bloquée : téléchargement Algrow Tony/Ralph expiré,
+  autres lecteurs Dailymotion refusant leur flux (403 E005), confirmé par une tentative
+  normale sur le VPS. Aucun média obtenu. `render-clip.mjs` prépare le montage à partir
+  d'un fichier local et de timestamps revus ; son test synthétique n'est pas le pilote.
+  Test réel du compositor sur mire : 27,5 s, 1920 × 1080, audio d'origine en mouvement,
+  silence sur l'intro et les pauses, décodage réussi. Intro autonome de 12 s exportée.
+
 ## Passage à Codex — 9 octobre 2026, soir
 
 - L'utilisateur n'a bientôt plus d'usage Claude et continue avec Codex. Il veut que tout reste

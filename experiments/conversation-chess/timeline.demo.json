@@ -1,0 +1,27 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "demo": true,
+  "source_reviewed": false,
+  "source_in": 0,
+  "source_out": 9,
+  "intro_seconds": 12,
+  "initial_control": "balanced",
+  "annotations": [
+    {
+      "source_at": 3,
+      "hold_seconds": 3,
+      "rating": "brilliant",
+      "comment": "Layout test only.",
+      "control_after": "tony",
+      "reviewed": false
+    },
+    {
+      "source_at": 6,
+      "hold_seconds": 3.5,
+      "rating": "blunder",
+      "comment": "Second overlay test.",
+      "control_after": "ralph",
+      "reviewed": false
+    }
+  ]
+}
