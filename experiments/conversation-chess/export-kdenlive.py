@@ -50,6 +50,21 @@ def smpte(frames, fps):
     return f"{hours:02}:{minutes:02}:{seconds:02}:{remainder:02}"
 
 
+def reviewed_native_720_source(quality, video):
+    """Accept only a clean, reviewed native original at Naka's available maximum."""
+    review = quality.get("native_hd_review")
+    return (isinstance(review, dict)
+            and int(video["height"]) == 720 and int(video["width"]) >= 1280
+            and quality.get("accepted_for_final") is True
+            and review.get("provider") == "naka.cx"
+            and review.get("highest_available_height") == 720
+            and review.get("visually_reviewed") is True
+            and review.get("no_burned_subtitles") is True
+            and review.get("no_watermark") is True
+            and review.get("source_not_upscaled") is True
+            and isinstance(review.get("reason"), str) and bool(review["reason"].strip()))
+
+
 def generate(manifest_path, bundle):
     data = json.loads(manifest_path.read_text(encoding="utf-8"))
     if data.get("schema") != "conversation-chess-kdenlive-interchange-v1":
@@ -86,8 +101,9 @@ def generate(manifest_path, bundle):
     new_real = (int(data.get("rating_schema_version", 0)) >= 4
                 and data.get("demo") is not True
                 and data.get("legacy_opening_override") is not True)
-    if new_real and minimum_height < 1080:
-        raise ValueError("New real videos require at least a 1080p source target")
+    reviewed_native_720 = minimum_height == 720 and reviewed_native_720_source(quality, video)
+    if new_real and minimum_height < 1080 and not reviewed_native_720:
+        raise ValueError("New real videos require a 1080p source target, or an explicitly reviewed native 720p Naka original at the highest available quality")
     if new_real and quality.get("visually_reviewed") is not True and not quality_preview:
         raise ValueError("New source quality must be visually reviewed before a final export")
     if (int(video["height"]) < minimum_height or quality.get("accepted_for_final") is False) and not quality_preview:
