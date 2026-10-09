@@ -12,6 +12,15 @@
   clairement marquée aperçu. Les finales auront aussi leur miniature et les
   informations anglaises prêtes à copier. Procédure et contrôles :
   `experiments/conversation-chess/DISCORD_DELIVERY.md`. Le long reste à monter.
+- Le découpage du long est désormais concret : septpassages,37analyses,
+  durée prévue14min51s. Draft original partageable dans
+  `experiments/conversation-chess/tony-richie-long-editorial-draft.json`, avec
+  sources/empreintes/coupes/offsets et scores proposés. Aucun master/rendu créé,
+  contrôles finaux des sources et repères manquants ; ne pas le présenter comme
+  un MP4 prêt. Transcriptions/médias restent privés. Cinqnouveaux imports testés :
+  seule la réunion respect`wUs8M0yglX0` a donné un fichier704p mou avec watermark,
+  utilisable pour préparer, refusé pour le final. Les quatre autres n'ont donné
+  aucun fichier ; aucun retry inchangé. AuthAlgrow fonctionne, pas une clé manquante.
 - **Premier long choisi : Tony contre Richie, autour de The Jacket.** Tony/Janice
   reste l'essai de montage. Titre/miniature plus tard ; priorité aux clips et
   au montage. Découpage : `experiments/conversation-chess/PLAN_TONY_RICHIE.md`.
