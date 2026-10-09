@@ -10,6 +10,7 @@
   "players": ["Lelouch", "Schneizel"],
   "voiceover": false,
   "continuousSubtitles": false,
+  "volume": 0.6,
   "in": 0,
   "out": 191.6,
   "moves": [
@@ -61,7 +62,10 @@
       "comment": "Schneizel shoots Diethard to protect Lelouch. The enemy piece has changed sides. Diethard notices the new team arrangement one move too late.",
       "hold": 6.5,
       "score": 9,
-      "placement": "left"
+      "placement": "left",
+      "cardY": 60,
+      "iconX": 88,
+      "iconY": 18
     }
   ]
 }

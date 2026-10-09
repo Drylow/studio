@@ -43,6 +43,8 @@ Contrôle source : les 4 611 images décodées ont toutes été examinées dans 
 
 La quatrième pause est placée à 131,70 s, après la réponse de Schneizel : l'écran et les personnages sont encore dans le même plan. Le repère initial de 139,40 s était situé après une coupe sur un garde et illustrait moins bien la révélation. La fin à 191,60 s exclut le début de phrase tronqué de l'upload.
 
+Le contrôle du premier rendu a porté sur ses 5 378 images, cinq cartes agrandies et les raccords audio. Il a conduit à déplacer la dernière carte vers le bas et son icône vers le bord droit pour dégager les visages, et à régler le volume original à 0,60 pour laisser de la marge aux tirs. Ces corrections figurent dans le découpage conservé ; la maquette corrigée doit elle aussi passer le contrôle avant remise.
+
 Le candidat 1080p AnimeClub2020 et la scène de révélation de Zero aux Black Knights ont été écartés : japonais avec sous-titres incrustés. Le montage 720p sert à examiner le rythme et l'habillage ; le master de meilleure qualité reste à trouver.
 
 ## Suite
