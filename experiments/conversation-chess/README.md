@@ -9,11 +9,16 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
+**Miniatures Tony/Richie : trois propositions avec les SVG originaux Chess.com
+et cinq titres livrés sur Discord.** [Styles et recette](thumbnails/tony-richie-no-e8/README.md).
+Choix utilisateur en attente ; le film court reste identique.
+
 **Nouvelle version livrée après une réclamation HBO S02E08.** Tout cet épisode
 est retiré : 9 min 27, 27 analyses conservées, nouveau bilan et miniature sans
 veste. Export, audio et captures finales vérifiés ; neuf fichiers GoFile et
-envoi Discord dédié confirmés. Elle reste à tester en privé sur YouTube :
-les épisodes 3 et 6 peuvent encore être réclamés.
+envoi Discord dédié confirmés. **Le test utilisateur est réclamé pour S02E03**,
+dix passages signalés le 10 octobre. Publication suspendue ; épisode 6 inconnu.
+Ne pas refaire une autre coupe non licenciée en supposant qu'elle passera.
 Voir [la nouvelle livraison](TONY_RICHIE_NO_E8_DELIVERY.md) et
 [le rapport de réclamation](COPYRIGHT_REVIEW.md).
 Le long de 15 min 11 décrit ci-dessous devient une archive réclamée.

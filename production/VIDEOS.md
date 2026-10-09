@@ -1,5 +1,37 @@
 # Journal des vidéos
 
+## Scene Analysis Guy — clarification des voyants verts — 10 octobre 2026
+
+L'utilisateur envisage finalement de publier le premier long si ses revenus
+restent possibles. Les deux verts de la première capture concernent portée
+et chaîne/pas de strike ; ils ne montrent pas qui reçoit les revenus.
+Politique de monétisation de la réclamation toujours inconnue. Texte exact
+demandé dans Studio ; aucune publication, contestation ni nouvelle production
+effectuée. Ne pas confondre monétisation par le titulaire et par l'utilisateur.
+
+## Scene Analysis Guy — second test YouTube réclamé — 10 octobre 2026
+
+L'utilisateur signale `The Sopranos S02E03`, audiovisuel, dix passages entre
+00:16 et 05:29 dans le court de 9 min 27. Environ 244 s d'après la capture.
+Politique/titulaire non visibles ; statut E6 inconnu. Publication suspendue
+pour son exigence d'absence de réclamation. Aucun nouveau rendu lancé.
+Le format reste validé ; les sources doivent être autorisées ou remplacées
+par du contenu avec licence commerciale établie. Les deux films sont conservés
+comme archives et ne sont pas déclarés libres de réclamation.
+Voir `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
+
+## Scene Analysis Guy — trois miniatures et cinq titres — 10 octobre 2026
+
+Miniature initiale du court Tony/Richie rejetée. Trois styles A/B/C : duel
+sobre, confrontation `THE BOSS?`, détourages `BAD GAMBIT`. SVG originaux
+Brilliant/Blunder, empreintes et proportions contrôlées ; visages/textes vus
+à pleine taille et à 320 px. JPEG 1672×941, moins de 353 Ko chacun.
+Cinq titres avec `Richie Aprile vs Tony Soprano`, recommandé : n° 1,
+`The Respect Gambit Backfires`. Choix utilisateur encore en attente.
+Message Discord dédié `1558242590078279681` confirmé : trois images et
+`Titres.txt`, aucun nouvel envoi du film. Film/kit/reçus initiaux inchangés.
+Recette et propositions : `experiments/conversation-chess/thumbnails/tony-richie-no-e8/`.
+
 ## Scene Analysis Guy — nouvelle coupe sans épisode 8 — 9 octobre 2026
 
 Après son import du long, l'utilisateur signale une réclamation HBO audiovisuelle
@@ -10,7 +42,8 @@ courte. Nouvelle version **livrée** : https://gofile.io/d/b9gC1Nrk,
 décodage complet sans erreur, 57 segments audio/27 bruitages/27 pauses contrôlés,
 157 captures finales revues avec limites de taille documentées. Neuf fichiers
 GoFile vérifiés et Discord dédié confirmé avec kit, crédits et miniature.
-**Version à tester en privé sur YouTube** ; résultat encore inconnu.
+**Résultat du test connu le 10 octobre : réclamation S02E03**, voir entrée
+ci-dessus ; le premier statut de test est dépassé.
 Les extraits conservés ne sont pas licenciés pour
 republication et peuvent encore être réclamés. Le premier long ci-dessous
 est une archive. Preuves : `experiments/conversation-chess/TONY_RICHIE_NO_E8_DELIVERY.md`

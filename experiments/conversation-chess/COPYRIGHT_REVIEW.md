@@ -1,5 +1,19 @@
 # Tony / Richie — réclamation réelle et nouvelle coupe
 
+**Dernier résultat utilisateur, 10 octobre : la coupe courte est elle aussi
+réclamée, pour The Sopranos S02E03.** Le retrait de l'épisode 8 est vérifié,
+mais n'a pas rendu les autres extraits libres de droits. Ne pas présenter
+le court comme accepté, monétisable ou sans réclamation.
+
+**Dernière clarification :** l'utilisateur rappelle les deux voyants verts
+et envisage de publier le premier long si les revenus restent possibles.
+Dans la première capture, ils signifient « aucun impact sur la portée » et
+« aucun impact sur la chaîne / pas un strike ». La politique de revenus
+reste inconnue : une vidéo réclamée peut rester visible tout en rapportant
+au titulaire. Demande précise envoyée pour le texte « monétisation / revenus »
+dans les détails du premier long. Aucun choix de publication ou changement
+de source définitivement confirmé, aucune contestation exécutée.
+
 L'utilisateur a importé le premier long de 15 min 11 sur YouTube. Ses captures
 signalent une réclamation audiovisuelle de **Home Box Office Inc.** pour
 **The Sopranos S02E08**. Elles indiquent que ce n'est pas un avertissement
@@ -51,7 +65,63 @@ Ne pas la marquer « sans copyright » ou « prête à publier ». Aucun recadra
 changement de vitesse/hauteur sonore ou logo destiné à déjouer Content ID.
 
 La [nouvelle livraison](TONY_RICHIE_NO_E8_DELIVERY.md) est confirmée sur GoFile
-et Discord. Le résultat du test YouTube reste en attente de l'utilisateur.
+et Discord. Le résultat utilisateur du test est désormais **réclamation E3**.
+
+## Second test réel : épisode 3 réclamé
+
+La nouvelle capture utilisateur indique `The Sopranos S02E03`, type
+`Copyright - Audio-visual`, dans la coupe de 9 min 27 :
+
+00:16–01:06 ; 01:14–01:17 ; 01:24–01:37 ; 01:44–01:55 ;
+02:03–02:14 ; 02:21–03:22 ; 03:30–03:36 ; 03:43–04:09 ;
+04:19–04:24 ; 04:31–05:29.
+
+Ces dix intervalles représentent environ 244 secondes, suivant les bornes
+affichées à la seconde. Le nom du titulaire et sa politique ne sont pas
+visibles dans cette capture recadrée. Elle n'établit pas le statut de l'épisode
+6. Le premier E8 était explicitement une réclamation et non un avertissement.
+La présence publique d'une autre vidéo Sopranos ne révèle pas ses réclamations
+privées ni son bénéficiaire de revenus.
+
+**Ne pas refaire à l'aveugle une coupe limitée à E6, ni basculer vers une
+autre série en supposant qu'elle ne sera pas réclamée.** Aucun nouvel export
+n'est lancé après ce second retour. Les deux montages restent des archives.
+Les miniatures A/B/C et cinq titres ont déjà été livrés ; leur livraison ne
+constitue pas une validation du film ou des droits.
+
+Le format approuvé reste utilisable : analyses écrites originales, pas de
+voix off, pion, barre à gauche, évaluations, SFX et bilan. La source audiovisuelle
+doit maintenant avoir des droits de republication commerciale établis, ou
+une contestation justifiée doit être examinée. Un achat de visionnage ou un
+téléchargement hors ligne ne fournit pas une licence de republication.
+L'originalité exigée pour la monétisation reste un contrôle distinct.
+
+Preuve locale de ce nouveau résultat :
+`output/conversation-chess/tony-richie-no-e8-native/copyright-review-e3/user-claim-evidence.json`.
+Les fichiers, empreintes et reçus du court et du long sont conservés.
+
+## Résultat de la recherche après E3
+
+Cinq pages officielles YouTube récupérées normalement, HTTP200, confirment :
+la réclamation seule n'est pas un strike ; le titulaire peut bloquer,
+monétiser ou suivre ; Content ID ne décide pas les exceptions juridiques ;
+même quelques secondes peuvent être réclamées. Aucune durée, aucun badge,
+crédit ou voix ajoutée ne garantit zéro réclamation. Une licence ou absence
+de réclamation n'assure pas non plus l'admission au programme de monétisation.
+
+[Voies vérifiées et sources de remplacement](LICENSED_SOURCES.md) : demande
+officielle de licence WBD pour les titres HBO et éventuelle exemption par
+le titulaire ; ou film sous licence autorisant remix et usage commercial.
+Tears of Steel et Elephants Dream ont des licences documentées adaptées au
+film original ; leurs bandes originales séparées ont des conditions différentes.
+Agent 327 est exclu car sa licence interdit la distribution des adaptations.
+Aucun contact, achat, contestation, nouveau téléchargement ou montage exécuté.
+
+Conserver le montage approuvé et choisir des sources autorisées est la voie
+opérationnelle documentée. Ne pas promettre zéro faux positif de Content ID.
+L'utilisateur choisit la nouvelle direction avant production d'un autre long.
+La musique, les bruitages et les glyphes du kit gardent aussi leur provenance
+et leurs conditions ; les SVG Chess.com sont propriétaires, pas CC0.
 
 ## Références officielles consultées
 

@@ -1,13 +1,22 @@
 # Richie Aprile vs Tony Soprano — nouvelle version sans épisode 8
 
-**VERSION À TESTER SUR YOUTUBE — épisode 8 retiré.**
+**TEST YOUTUBE RÉCLAMÉ — épisode 3, après retrait vérifié de l'épisode 8.**
 
 [Nouveau film et kit GoFile](https://gofile.io/d/b9gC1Nrk) : neuf fichiers
-confirmés par taille, MD5 et SHA. Le résultat Content ID reste inconnu.
-Publication YouTube manuelle après le test ; titre et miniature proposés.
+confirmés par taille, MD5 et SHA. Le nouveau test utilisateur signale dix
+passages `The Sopranos S02E03` le 10 octobre. L'utilisateur envisage ensuite
+de garder le premier long si la réclamation ne retire pas les revenus.
+Politique de monétisation encore à lire ; voir [le rapport](COPYRIGHT_REVIEW.md).
+Titre et miniature restent des propositions.
 Envoi au Discord dédié confirmé : message `1558238933626921092`, avec
 `Kit_publication.txt`, `MUSIC_CREDITS.txt` et la nouvelle miniature.
 Aucun envoi incertain en attente ; les anciens reçus sont conservés.
+
+**Révision des miniatures et titres, 10 octobre :** la première miniature
+`RESPECT THE BOSS` est rejetée. [Trois nouveaux styles A/B/C et cinq titres](thumbnails/tony-richie-no-e8/README.md)
+sont livrés sur le Discord dédié, message `1558242590078279681`, avec les
+SVG originaux Brilliant/Blunder. Le film et son kit initial sont conservés ;
+choix de miniature et de titre en attente, aucune nouvelle vidéo renvoyée.
 
 ## Ce qui a changé
 
@@ -15,7 +24,8 @@ Tous les passages S02E08 sont retirés : scènes, dialogues, fonds de replay,
 13 analyses et quatre cartes de chapitre. Les épisodes 3 et 6 restent : retour
 de Richie, conflit Beansie, poker et excuses. Le titre proposé est
 **Richie Aprile vs Tony Soprano | Chess Analysis** ; la nouvelle miniature
-**RESPECT THE BOSS** utilise les deux personnages des scènes conservées.
+**RESPECT THE BOSS** utilisait les deux personnages des scènes conservées ;
+elle est désormais remplacée par les trois propositions mentionnées ci-dessus.
 
 Les 27 premières analyses, leurs notes et leurs sons restent inchangés.
 Richie ouvre Blanc, Tony reste Noir ; même mascotte, barre fine à gauche,

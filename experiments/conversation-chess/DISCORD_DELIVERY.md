@@ -65,11 +65,19 @@ Le verrou partagé `work/discord.lock` évite les envois concurrents mélangés.
 
 ## Premier long livré
 
+**Révision visuelle du court, 10 octobre :** message `1558242590078279681`
+confirmé, trois miniatures A/B/C et `Titres.txt` avec cinq propositions.
+Les miniatures utilisent les SVG originaux Chess.com. Les trois images sont
+confirmées dans les embeds ; le fichier texte est une pièce jointe.
+Le choix utilisateur reste en attente. La révision a ses propres manifest,
+contrôles et reçu sous `publication/thumbnail-options-02/`, sans modifier les
+32 fichiers du film/kit initial ni renvoyer son lien. [Styles et recette](thumbnails/tony-richie-no-e8/README.md).
+
 **Nouvelle coupe livrée :** [GoFile de la version sans E8](https://gofile.io/d/b9gC1Nrk),
 9 min 27, neuf fichiers confirmés. Le message dédié `1558238933626921092`
 contient kit, crédits et miniature, avec le statut explicite de test YouTube.
 Ses nouveaux reçus sont dans `tony-richie-no-e8-native/publication/`.
-Le test YouTube reste à faire : [fiche courte](TONY_RICHIE_NO_E8_DELIVERY.md).
+Le test utilisateur est désormais réclamé pour E3 : [fiche courte](TONY_RICHIE_NO_E8_DELIVERY.md).
 
 **Archive réclamée après l'import utilisateur : HBO S02E08.** Une coupe plus
 courte sans cet épisode est demandée. Elle doit partir comme version à tester

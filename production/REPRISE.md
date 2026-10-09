@@ -2,12 +2,31 @@
 
 ## Sopranos — correction après la réclamation HBO
 
+**Second test utilisateur : le court de 9 min 27 est lui aussi réclamé,
+pour The Sopranos S02E03 (dix passages, 00:16–05:29), le 10 octobre.**
+La capture recadrée ne montre pas la politique ni le titulaire ; E6 inconnu.
+Ne pas annoncer les deux vidéos sans réclamation ni refaire E6 seul à
+l'aveugle. L'utilisateur précise ensuite que les voyants sont verts et envisage
+de publier le premier long si les revenus lui restent. Les verts montrent
+absence d'impact sur portée/chaîne, pas l'identité du bénéficiaire des revenus.
+Texte de monétisation demandé dans les détails ; aucune publication ou
+contestation effectuée. Pas de changement de source confirmé. Recherche
+autorisations/sources licenciées dans `experiments/conversation-chess/LICENSED_SOURCES.md`.
+Aucun nouveau montage lancé après ce retour.
+
+Révision visuelle : première miniature rejetée. Trois nouvelles propositions
+A/B/C et cinq titres livrés sur Discord le 10 octobre, message
+`1558242590078279681`. SVG originaux Chess.com posés après génération des bases,
+contrôlés et regardés à pleine taille/320 px. Choix utilisateur en attente.
+Fichiers et recette : `experiments/conversation-chess/thumbnails/tony-richie-no-e8/`.
+Film/kit initial inchangés, aucun nouveau lien ou film renvoyé.
+
 L'utilisateur a importé le long Tony/Richie : réclamation audiovisuelle HBO
 S02E08, dix intervalles entre 9:29 et 14:59. Il autorise de retirer **tout E8**
 et accepte une durée réduite. Nouvelle sélection : E3/E6 seulement, 27 notes,
 9 min 27, nouveau bilan et miniature sans veste. Export et contrôles terminés,
 nouveau film/kit sur https://gofile.io/d/b9gC1Nrk ; Discord dédié confirmé.
-**Version à tester en privé sur YouTube**, pas une validation des droits.
+Ce premier statut de test est dépassé par le retour E3 ci-dessus.
 Le long livré ci-dessous reste une archive ; ne pas le renvoyer comme corrigé.
 Les autres épisodes peuvent encore être réclamés, droits non établis.
 Détails : `experiments/conversation-chess/TONY_RICHIE_NO_E8_DELIVERY.md`
