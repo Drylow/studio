@@ -19,6 +19,16 @@ SITE, HOST = "edgerunners.fr", "cpanel.edgerunners.fr"   # cPanel joint par son 
 CA = "/root/.ccr/ca-bundle.crt"
 
 
+def local_env(names=("CPANEL_URL", "CPANEL_USER", "CPANEL_PASSWORD")):
+    """Accès cPanel lus aussi dans le .env local (Codex sur le PC), si absents de l'environnement."""
+    path = os.path.join(ROOT, ".env")
+    if os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            k, _, v = line.strip().partition("=")
+            if k in names and v and not os.environ.get(k):
+                os.environ[k] = v.strip().strip('"').strip("'")
+
+
 def opener():
     ctx = ssl.create_default_context(cafile=CA) if os.path.exists(CA) else ssl.create_default_context()
     return urllib.request.build_opener(urllib.request.HTTPSHandler(context=ctx))
@@ -55,6 +65,7 @@ def server_env():
 def main(names):
     if not names:
         raise SystemExit(__doc__)
+    local_env()
     missing = [n for n in names if not os.environ.get(n)]
     if not missing:
         print("déjà présentes :", ", ".join(names))

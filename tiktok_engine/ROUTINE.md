@@ -15,7 +15,7 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
   (07:00 et 19:00). Ne jamais programmer un créneau déjà pris.
 - Clés : `ALGROW_API_KEY` et `ZERNIO_API_KEY` sont dans le `.env` du serveur. `setup.sh` copie
   celles qui manquent, avec `production/server_env.py` et les accès cPanel de l'environnement
-  (`CPANEL_USER`, `CPANEL_PASSWORD`), dans le `.env` local ignoré par git. N'afficher que
+  (`CPANEL_USER`, `CPANEL_PASSWORD`, dans l'environnement ou le `.env` local), dans le `.env` local ignoré par git. N'afficher que
   « présente » ou « absente ». Le dépôt est public : jamais une clé dans git.
   Si une clé manque, s'arrêter et le dire. Ne pas passer par les outils Algrow de la session : ils
   attendent une autorisation que personne ne donnera.

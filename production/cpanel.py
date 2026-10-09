@@ -5,7 +5,7 @@
     python production/cpanel.py put <dossier distant> <fichier local> ... # envoie des fichiers
     python production/cpanel.py deploy <étiquette>     # met en ligne origin/main sur le site
 
-Identifiants : CPANEL_USER et CPANEL_PASSWORD de l'environnement. La session cPanel reste en
+Identifiants : CPANEL_USER et CPANEL_PASSWORD de l'environnement (ou du .env local). La session cPanel reste en
 mémoire (aucun cookie écrit). `sh` passe par le websocket du terminal : il faut
 `pip install websocket-client`. Une réponse « Handshake status 400 » est passagère : relancer.
 `deploy` refuse si le dépôt du serveur a des changements locaux ou si un travail tourne, sauvegarde la
@@ -25,6 +25,17 @@ import uuid
 SITE = "edgerunners.fr"
 HOST = "cpanel.edgerunners.fr"   # cPanel joint par son sous-domaine, port 443
 CA = "/root/.ccr/ca-bundle.crt"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def local_env(names=("CPANEL_URL", "CPANEL_USER", "CPANEL_PASSWORD")):
+    """Accès cPanel lus aussi dans le .env local (Codex sur le PC), si absents de l'environnement."""
+    path = os.path.join(ROOT, ".env")
+    if os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            k, _, v = line.strip().partition("=")
+            if k in names and v and not os.environ.get(k):
+                os.environ[k] = v.strip().strip('"').strip("'")
 
 
 def _context():
@@ -36,6 +47,7 @@ def _open(req, timeout):
 
 
 def login():
+    local_env()
     last = None
     for attempt in range(4):
         try:
