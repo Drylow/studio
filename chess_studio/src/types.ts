@@ -1,0 +1,6 @@
+export type Move = {id: string; at: number; rating: string; player: number; title: string; comment: string; quote: string; hold: number; score: number; zoom: number; placement: 'left'|'right'};
+export type Shot = {id: string; mediaId: string; in: number; out: number; volume: number; moves: Move[]};
+export type Project = {id?: string; version: number; profile: string; title: string; fps: number; resolution: number; initialScore: number; iconSet: string; sfx: boolean; players: {name: string; portrait: string}[]; shots: Shot[]};
+export type Media = {id: string; name: string; duration: number; width: number; height: number; fps: number; codec: string; hasAudio: boolean; src: string; original: string; thumbnail: string; sourceUrl?: string; previewTranscoded: boolean; audioLanguage?: string};
+export type Segment = {kind: string; shotId: string; mediaId: string; from: number; duration: number; sourceFrame: number; volume: number; score: number; previousScore?: number; move?: Move; still?: string};
+export type VideoProps = {project: Project; media: Record<string,Media>; stills?: Record<string,string>};
