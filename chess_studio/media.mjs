@@ -67,6 +67,8 @@ export async function download(input, publicDir, tempDir, onLine = () => {}, lan
     const video = files.find(f => /^clip\.(mp4|webm|mkv|mov)$/.test(f));
     if (!video) throw new Error('Clip non téléchargé : utiliser une vidéo publique de moins de 30 minutes.');
     let meta = {}; try {meta = JSON.parse(await fs.readFile(path.join(dir,'clip.info.json'),'utf8'));} catch {}
+    if(/fandango|movieclips/i.test(`${meta.title || ''} ${meta.uploader || ''}`))
+      throw new Error('Source Fandango / Movieclips exclue : choisir un clip sans logo ni texte incrusté.');
     const media = await ingest(path.join(dir,video),meta.title || url,publicDir,onLine,url);
     // Preserve useful provenance, never expiring signed URLs or cookies.
     const audio=(meta.requested_formats || meta.requested_downloads?.[0]?.requested_formats || []).find(f=>f.acodec && f.acodec!=='none');
