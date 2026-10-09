@@ -1,5 +1,36 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Sopranos — sources Naka acquises, long en préparation
+
+- S2E3, S2E6 et S2E8 téléchargés par la fonction hors ligne normale du compte.
+  Anglais, 1280×720 natif, maximum proposé au compte, aucun sous-titre intégré.
+  Décodages A/V complets et empreintes vérifiés ; images de scènes examinées.
+  Le problème d'acquisition précédent est résolu pour ce long. Cache privé
+  `output/conversation-chess/source-cache/`, hors Git. Quota gratuit utilisé 3/3 ;
+  réutiliser les accès acquis, aucune quatrième acquisition ni contournement.
+  Contrat et preuves : `experiments/conversation-chess/SOURCE_IMPORT.md`.
+- Nouveau découpage réel : neuf extraits, sept chapitres, 40 commentaires,
+  17 accents comiques, durée 15 min 11 s. Richie parle réellement en premier :
+  Richie Blanc, Tony Noir. Timeline et provenance publiques dans
+  `tony-richie-long-timeline.json` et `tony-richie-source-map.json`, même dossier.
+  Le draft précédent à 37 coups reste une archive, pas le montage actuel.
+- Master privé : 17 126 images, 1280×720 à 30 fps, 253 102 330 octets,
+  SHA `c506faebca8192bd46a72f23c63705dc8f34edce419ce609cc1c1fa92212b042`.
+  Décodage complet passé. Habillage/sons natifs en préparation ; **le MP4
+  complet n'est pas encore exporté, contrôlé ni livré**.
+- Exception source720 volontaire et documentée : défaut1080 conservé,
+  preuves explicites Naka exigées jusqu'au bundle Kdenlive. Les anciens clips
+  compressés et les sources sans revue restent refusés. 40 contrôles de garde
+  passés, puis trois tests de portabilité après intégration du travail Windows.
+- Préparation des intermédiaires accélérée avec `superfast`, CRF17, mêmes
+  dimensions/fps. Sur un extrait réel : 4,23 s contre14,44 s, SSIM comparable ;
+  export final Kdenlive `medium` CRF17 inchangé. Ne pas extrapoler une durée
+  exacte du montage depuis un extrait : la charge et les graphismes comptent.
+- L'utilisateur a installé l'avatar sur sa chaîne et demande de ne plus le
+  renvoyer. Le pion utilisé dans le film reste l'original approuvé. Livraison
+  finale prévue via GoFile + webhook dédié, publication YouTube manuelle.
+  Aucun changement du site ni des automatisations Cage/Pitch/TikTok.
+
 ## Sopranos — décision actuelle après visionnage v3
 
 - **Nom de chaîne choisi : Scene Analysis Guy.** Le format couvre plusieurs
