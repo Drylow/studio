@@ -22,5 +22,10 @@
   "analysis_background": "replay",
   "initial_score_text": "0.0",
   "title": "Game of Thrones \u2014 conversation review",
-  "editorial_status": "Select the dialogue, then review the clean 1080p English source and its first speaker before assigning sides."
+  "editorial_status": "Select the dialogue, then review the clean 1080p English source and its first speaker before assigning sides.",
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
+  }
 }

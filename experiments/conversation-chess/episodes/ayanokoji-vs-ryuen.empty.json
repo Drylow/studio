@@ -22,5 +22,10 @@
   "analysis_background": "replay",
   "initial_score_text": "0.0",
   "title": "Ayanokoji vs Ryuen Analysed like Chess | Classroom of the Elite",
-  "editorial_status": "Awaiting verified clean 1080p English source; speaker assignments and timestamps require source review."
+  "editorial_status": "Awaiting verified clean 1080p English source; speaker assignments and timestamps require source review.",
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
+  }
 }

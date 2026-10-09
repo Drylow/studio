@@ -41,6 +41,17 @@ if (prepareProject && refreshIntro) throw new Error('--prepare-project and --ref
 const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
 const spec = JSON.parse(await fs.readFile(timelinePath, 'utf8'));
+if (spec.mascot != null) {
+  if (typeof spec.mascot !== 'object' || Array.isArray(spec.mascot)) throw new Error('mascot requires a local PNG file configuration.');
+  for (const key of ['file', 'overlay_file']) {
+    const value = spec.mascot[key];
+    if (key === 'overlay_file' && value == null) continue;
+    if (typeof value !== 'string' || !value.trim() || /^[a-z]+:\/\//i.test(value) || path.isAbsolute(value) || path.win32.isAbsolute(value)) throw new Error(`mascot.${key} must be a local path relative to this renderer.`);
+  }
+}
+const dialogueGain = spec.dialogue_gain ?? 1;
+if (!Number.isFinite(dialogueGain) || dialogueGain <= 0 || dialogueGain > 1) throw new Error('dialogue_gain must be greater than 0 and at most 1.');
+if (dialogueGain !== 1 && !prepareProject && !validateOnly) throw new Error('Adjusted dialogue gain uses the native editor workflow: add --prepare-project.');
 const outroSeconds = spec.outro_seconds ?? 0;
 if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < 6 || outroSeconds > 20))) throw new Error('outro_seconds must be 0 or 6–20 seconds.');
 if (!Number.isInteger(outroSeconds * 30)) throw new Error('outro_seconds must align to a 30fps frame.');
@@ -169,6 +180,7 @@ if (refreshProjectIntro) {
   const expected = spec.intro_seconds + end - start + annotations.reduce((sum, a) => sum + a.hold_seconds, 0);
   if (existing.source_sha256 !== sourceHash || existing.icon_set !== ratingSchema.icon_set || existing.bar?.side !== ratingSchema.bar.side
     || existing.duration !== expected || pastSource[0]?.source_in !== start || pastSource.at(-1)?.source_out !== end
+    || pastSource.some(v => (v.dialogue_gain ?? 1) !== dialogueGain)
     || (existing.side_colors && JSON.stringify(existing.side_colors) !== JSON.stringify(sides))
     || (existing.initial_score_text && existing.initial_score_text !== initialScoreText)
     || pastAnnotations.length !== annotations.length || pastAnnotations.some((v, i) => {
@@ -184,12 +196,20 @@ if (refreshIntro) {
     || JSON.stringify(previousRender.side_colors) !== JSON.stringify(sides)
     || pastAnnotations.length !== annotations.length || pastAnnotations.some((v, i) => { const a = annotations[i]; return v.source_at !== a.source_at || v.duration !== a.hold_seconds || v.rating !== a.rating || v.comment !== a.comment || v.control !== a.control_after || v.score_text !== a.score_text; })) throw new Error('Existing montage does not match this source/timeline; intro-only refresh refused.');
 }
-const mascot = path.resolve(option('--tony', path.join(here, 'assets/tony-pawn.png')));
+const mascot = path.resolve(option('--tony', path.resolve(here, spec.mascot?.file || 'assets/tony-pawn.png')));
 const mascotBytes = await fs.readFile(mascot);
 if (!mascotBytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))) throw new Error('--tony must be a PNG');
-const overlayMascot = path.resolve(option('--tony-overlay', path.join(here, 'assets/tony-pawn-overlay.png')));
+const overlayMascot = path.resolve(option('--tony-overlay', path.resolve(here, spec.mascot?.overlay_file || spec.mascot?.file || 'assets/tony-pawn-overlay.png')));
 const overlayMascotBytes = await fs.readFile(overlayMascot);
 if (!overlayMascotBytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))) throw new Error('--tony-overlay must be a PNG');
+const mascotHash = createHash('sha256').update(mascotBytes).digest('hex');
+const overlayMascotHash = createHash('sha256').update(overlayMascotBytes).digest('hex');
+if (refreshIntro || refreshProjectIntro) {
+  const existing = refreshIntro ? previousRender : JSON.parse(await fs.readFile(path.join(output, 'project-manifest.json'), 'utf8'));
+  const previousMascotHash = existing.mascot?.sha256 ?? createHash('sha256').update(await fs.readFile(path.join(here, 'assets/tony-pawn.png'))).digest('hex');
+  const previousOverlayHash = existing.mascot?.overlay_sha256 ?? createHash('sha256').update(await fs.readFile(path.join(here, 'assets/tony-pawn-overlay.png'))).digest('hex');
+  if (mascotHash !== previousMascotHash || overlayMascotHash !== previousOverlayHash) throw new Error('Changed mascot requires complete preparation, not an intro-only refresh.');
+}
 const iconAssets = {};
 for (const rating of ratingSchema.categories) {
   const bytes = await fs.readFile(path.join(here, rating.icon_file));
@@ -314,10 +334,10 @@ if (prepareProject) {
     run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', sourceVideoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
     const audioInput = hasAudio ? ['-ss', String(projectCursor), '-i', source] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
     run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
-      `aresample=48000,apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - .035)}:d=0.035,atrim=end_sample=${Math.round(duration * 48000)}`,
+      `aresample=48000,volume=${dialogueGain},apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - .035)}:d=0.035,atrim=end_sample=${Math.round(duration * 48000)}`,
       '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', dialogueAudioFile]);
     addProjectSegment({ kind: 'source', duration, source_in: projectCursor, source_out: until, background_file: backgroundFile,
-      graphics_file: overlayFile, graphics_type: 'alpha_png', dialogue_audio_file: dialogueAudioFile, control: projectControl, score_text: projectScore });
+      graphics_file: overlayFile, graphics_type: 'alpha_png', dialogue_audio_file: dialogueAudioFile, dialogue_gain:dialogueGain, control: projectControl, score_text: projectScore });
     projectCursor = until;
   }
   let normalOverlay = overlays[2];
@@ -354,7 +374,7 @@ if (prepareProject) {
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
     icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
     demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText,
-    outro_layout_reviewed:outroLayoutReviewed, music_attribution:musicAttribution,
+    outro_layout_reviewed:outroLayoutReviewed, mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash}, music_attribution:musicAttribution,
     final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
   console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
   process.exit(0);
@@ -448,6 +468,7 @@ await fs.writeFile(path.join(output, 'render-report.json'), JSON.stringify({ sch
   reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs',
   bar: ratingSchema.bar, initial_score_text: initialScoreText, conversation_score_editorial: true, icon_set: ratingSchema.icon_set,
   graphics_fps: graphicsFps,
+  mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash},
   source_quality: sourceQualityReport,
   sfx_manifest: sfxManifestPath, sfx_added_during_analysis_only: true,
   side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, analysis_background: analysisBackground, transparent_mascot_in_guide: true,
