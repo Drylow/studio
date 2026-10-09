@@ -5,6 +5,8 @@
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
 Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
 Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
+Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
+reprennent le pion approuvé et présentent un format ouvert aux séries/animés.
 Son style v3 est validé ; la qualité des clips et le tableau final sont rejetés.
 `pilot-tony-janice-v4.json` corrige les camps et prépare les règles, sans export
 du pilote complet. La capture du vrai tableau final Tuco fournie par l'utilisateur
@@ -90,12 +92,16 @@ un résumé anglais original, non vide, au plus700 caractères, adapté à ses
 propres échanges. Le moteur refuse aussi un texte qui dépasse la bulle.
 Le manifest conserve `recap_summary` et les comptes par camp pour vérification.
 
-L'aperçu privé `output/conversation-chess/outro-layout-v4-preview.mp4` dure
+Le dernier aperçu privé `output/conversation-chess/outro-v5-clean.mp4` dure
 12,01s :360frames,1920×1080 à30fps, export final **Kdenlive/MLT**.
 Il reprend seulement les cinq notes du test Janice (Brilliant1, Great1, Best1,
 Blunder1, Book1). Le fond720p refusé est volontairement flouté : cet aperçu
 valide l'habillage, pas une amélioration des clips ni le film Tony/Richie.
 Décodage intégral, quatre captures finales et musique sans écrêtage vérifiés.
+Le bandeau de crédits est retiré, à la demande de l'utilisateur et conformément
+à la FAQ de l'auteur. La musique exportée reste identique au précédent aperçu.
+Les crédits complets accompagnent le MP4 dans `MUSIC_CREDITS.txt` et doivent
+être copiés dans sa description lors de la publication surYouTube.
 La disposition n'est pas encore approuvée par l'utilisateur.
 
 ## Commentaires et sons
@@ -136,7 +142,10 @@ directement d'Incompetech sous **CC BY4.0**, avec empreintes, pages originales e
 crédits dans `assets/music/`. La corrélation PCM de l'intro identifie le passage
 66,104s de Sneaky Snitch. La musique est découpée et fondue sur une pisteA3
 indépendante ; elle s'arrête avant les dialogues. Les crédits sont affichés dans
-le bilan et doivent aussi accompagner la future description YouTube.
+le bilan historiquev3. Le nouveau bilan retire ce bandeau : l'auteur autorise
+explicitement les crédits dans la description YouTube. `MUSIC_CREDITS.txt`
+accompagne désormais la livraison et le projetKdenlive, avec les seules musiques
+réellement utilisées. Copier son texte dans la description lors de l'envoi.
 
 Les pions du haut et du bas utilisent **un seul tracé vectoriel recoloré**.
 Le bilan dénombre les annotations par locuteur et par catégorie officielle :

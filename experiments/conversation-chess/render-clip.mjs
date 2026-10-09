@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { writeMusicCredits } from './music-credits.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
@@ -280,6 +281,7 @@ if (prepareProject) {
     const projectManifest = path.join(output, 'project-manifest.json');
     const existing = JSON.parse(await fs.readFile(projectManifest, 'utf8'));
     existing.segments[0] = projectSegments[0];
+    existing.music_attribution = await writeMusicCredits(existing.segments, output);
     await fs.writeFile(projectManifest, JSON.stringify(existing, null, 2));
     console.log(JSON.stringify({ project_manifest: projectManifest, intro_refreshed: true, scene_media_unchanged: true, final_video_exported: false }));
     process.exit(0);
@@ -326,13 +328,14 @@ if (prepareProject) {
       graphics_frames:outroFrameDirectory, recap_counts:recapCounts, recap_summary:spec.outro_summary, ...(await musicPart('outro',outroSeconds))});
   }
   const projectManifest = path.join(output, 'project-manifest.json');
+  const musicAttribution = await writeMusicCredits(projectSegments, output);
   await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,
     original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: minimumSourceHeight, low_res_preview: lowResPreview, accepted_for_final:!lowResPreview, visually_reviewed:sourceQualityReviewed },
     timeline_file: timelinePath, timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'), rating_schema_version: ratingSchema.version,
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
     icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
     demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText,
-    outro_layout_reviewed:outroLayoutReviewed,
+    outro_layout_reviewed:outroLayoutReviewed, music_attribution:musicAttribution,
     final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
   console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
   process.exit(0);

@@ -170,10 +170,8 @@ window.ConversationChess = (() => {
       });
     }
 
-    // License attribution stays in its own slim strip, outside the summary.
-    ctx.fillStyle = 'rgba(0,0,0,.73)'; ctx.fillRect(0, 1035, W, 45);
-    text('Sneaky Snitch / Scheming Weasel (faster version) · Kevin MacLeod (incompetech.com) · Edited excerpts', W / 2, 1053, 16, '#bcb7ae', 400, 'center');
-    text('CC BY 4.0 · https://creativecommons.org/licenses/by/4.0/', W / 2, 1074, 15, '#bcb7ae', 400, 'center');
+    // Music attribution accompanies delivery and goes in the YouTube description.
+    // The creator explicitly permits that placement instead of on-screen credits.
     const fade = clamp(elapsed / .35) * clamp((duration - elapsed) / .8);
     if (fade < 1) { ctx.fillStyle = `rgba(0,0,0,${1-fade})`; ctx.fillRect(0,0,W,H); }
   }

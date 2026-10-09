@@ -2,6 +2,10 @@
 
 ## Sopranos — décision actuelle après visionnage v3
 
+- **Nom de chaîne choisi : Scene Analysis Guy.** Le format couvre plusieurs
+  séries/animés ; avatar = original carré du pionTony déjà approuvé, sans
+  modification, bio anglaise dans `experiments/conversation-chess/channel-profile/`.
+  Profil prêt à copier, aucun compteYouTube créé ni profil public modifié.
 - **Premier long choisi : Tony contre Richie, autour de The Jacket.** Tony/Janice
   reste l'essai de montage. Titre/miniature plus tard ; priorité aux clips et
   au montage. Découpage : `experiments/conversation-chess/PLAN_TONY_RICHIE.md`.
@@ -49,15 +53,23 @@
   grille4+4+Book. Aucun Miss/Interesting ni colonnes par camp. Résumé anglais
   original obligatoire `outro_summary` ; comptes calculés depuis la timeline.
   `outro_layout_reviewed:true` après contrôle des images, pas une validation user.
-- **Nouvelle outro seule exportée dans Kdenlive** :12,01s/360frames,1920×1080p30,
-  H264/AAC ; `output/conversation-chess/outro-layout-v4-preview.mp4`.
+- **Dernière outrov5 seule exportée dans Kdenlive, sans bandeau de crédits** :
+  12,01s/360frames,1920×1080p30, H264/AAC ;
+  `output/conversation-chess/outro-v5-clean.mp4`.
   Cinq vraies notes du test Janice : Brilliant1/Great1/Best1/Blunder1/Book1.
   Fond du test volontairement flouté, pas une sourceHD améliorée ni le long Richie.
   DécodageA/V complet et quatre captures finales contrôlés. Musique finale
-  corrélationPCM0,999916, aucun écrêtage ; aucune écoute humaine prétendue.
-  **GoFile vérifié (taille etMD5) : https://gofile.io/d/sFot3YPC**.
-  2 806 512octets ; SHA256
-  `da911af3675168945e4db88e1dd4d31dbd262b9292b1139898f33e48f67dbe81`.
+  corrélationPCM0,999916 avec la préparation, identique auv4, aucun écrêtage ;
+  aucune écoute humaine prétendue. Le retrait du bandeau est explicitement
+  autorisé parFAQIncompetech : attribution dans la descriptionYouTube suffit.
+  `music-credits.mjs` génère `MUSIC_CREDITS.txt` depuis les seuls morceaux utilisés ;
+  `render-clip.mjs` l'ajoute au manifest, `export-kdenlive.py` vérifie/copielefichier.
+  Outro seule =SchemingWeasel seulement ; filmavecintro/outro =les deux morceaux.
+  Fonction exercée sur vrai projet àdeuxmusiques, copie/SHA du bundle vérifiés.
+  **GoFile vérifié (taille etMD5 des quatre fichiers) : https://gofile.io/d/8Lye9Xup**.
+  Dossier : outro12s, `avatar.png`, `description.txt`, `MUSIC_CREDITS.txt`.
+  MP4 :2 730 587octets ; SHA256
+  `5626e2a91f695a01b4dc32f839af6643fe20549e0f563954b3f089784fe41cfd`.
   Le pilotev4 complet n'est pas rendu ; sa source reste refusée pour un final.
 - Validation de cette révision : **17 contrôles de préflight**, dont refus
   attendus du mauvais camp, de Miss, de la source refusée, de l'outro rejetée,

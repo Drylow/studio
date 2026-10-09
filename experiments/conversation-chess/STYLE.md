@@ -47,6 +47,9 @@ long10–15min : intro **Sneaky Snitch** (passage66,104s), outro **Scheming Weas
 (faster version)** et bilan du nombre de coups par catégorie. Les camps sont
 conservés dans les données ; l'écran final affiche leurs totaux réunis.
 Les musiques viennent des originauxIncompetech sousCCBY4.0 avec crédits.
+À la demande de l'utilisateur, l'outro reste **sans bandeau de crédits**.
+Les crédits complets vont dans la descriptionYouTube et dans le fichier
+`MUSIC_CREDITS.txt` joint à la livraison ; cet emplacement est autorisé par l'auteur.
 Conserver les neuf catégories ci-dessus : ni Miss ni Interesting violet.
 
 Sur la barre, même silhouette de pion en haut et en bas, uniquement recolorée

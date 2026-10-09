@@ -58,6 +58,13 @@ cinq notes réelles du test Janice, pas du premier long Tony/Richie. La capture
 établit l'agencement statique ; l'animation complète et le son de la fin de la
 référence n'ont toujours pas été visionnés/écoutés. Validation user en attente.
 
+L'utilisateur souhaite ensuite retirer le bandeau de crédits. La FAQ primaire
+[Incompetech](https://incompetech.com/music/royalty-free/faq.html) autorise
+explicitement les crédits dans la descriptionYouTube ou dans le film ;
+CCBY4.0 §3(a)(2) autorise un emplacement raisonnable. Le nouvel exportv5
+retire le bandeau et livre un fichier d'attribution avec le MP4. La musique
+reste identique àv4 (PCM comparé), la licence et l'obligation de crédit restent.
+
 ### Acquisition actuelle : vraie scène de la veste récupérée
 
 Deux demandes normales Algrow vidéo entière,1080p, cache neuf, ont réussi :

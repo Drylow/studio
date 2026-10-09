@@ -325,6 +325,15 @@ def generate(manifest_path, bundle):
         "music_segments": sum(bool(s.get("music_file")) for s in segments),
         "render_backend": "Kdenlive native application / MLT", "export_completed": False,
     }
+    attribution = data.get("music_attribution")
+    if attribution:
+        credits_source = Path(attribution["file"]).resolve(strict=True)
+        if digest(credits_source) != attribution["sha256"]:
+            raise ValueError("Music attribution file differs from the prepared project")
+        credits_destination = bundle / "MUSIC_CREDITS.txt"
+        if credits_source != credits_destination.resolve():
+            shutil.copyfile(credits_source, credits_destination)
+        report["music_attribution"] = {**attribution, "file": "MUSIC_CREDITS.txt"}
     (bundle / "bundle-manifest.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     (bundle / "project-manifest.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     (bundle / "README.txt").write_text(
@@ -337,6 +346,7 @@ def generate(manifest_path, bundle):
         "For a manual edit, use Kdenlive's Render command; rebuilding from the input manifest "
         "replaces the generated timeline.\n"
         "Native rendering needs X11/Wayland (an authenticated Xvfb display is supported).\n"
+        "Keep MUSIC_CREDITS.txt with video deliveries and include its text in the YouTube description.\n"
         "Qt offscreen cannot be used for the transparent overlays in this project.\n",
         encoding="utf-8",
     )
