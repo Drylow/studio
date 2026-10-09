@@ -44,7 +44,7 @@
   - Bloquées par les contrôles, rien de publié :
     - 2 miniatures : une personne de trop, et « UFC » refusé dans le texte ;
     - 1 sujet avec seulement 2 faits retrouvés.
-  - Corrigé et déployé le 9 oct. à 17 h 02 : 4 essais de miniature au lieu de 2, et un nom de ligue
+  - Corrigé et déployé le 9 oct. à 15 h 02 : 4 essais de miniature au lieu de 2, et un nom de ligue
     dans le texte est accepté.
   - Pitch : aucune info à 7/10 ou plus cette nuit-là.
 - **Delamain codé par Claude (option 2, mise en ligne sans validation)** : routine
