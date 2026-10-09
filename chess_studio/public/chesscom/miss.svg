@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="180" height="190"><g id="missed_win">
+    <g>
+      <path class="chesscom-component" opacity="0.3" d="M9,.5a9,9,0,1,0,9,9A9,9,0,0,0,9,.5Z"></path>
+      <path class="chesscom-component" fill="#dbac16" d="M9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z"></path>
+    </g>
+    <g>
+      <g class="chesscom-component" opacity="0.2">
+        <rect x="2.74" y="8.1" width="12.51" height="3.11" rx="0.36"></rect>
+      </g>
+      <rect class="chesscom-component" fill="#fff" x="2.74" y="7.6" width="12.51" height="3.11" rx="0.36"></rect>
+    </g>
+  </g></svg>
