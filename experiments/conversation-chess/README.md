@@ -6,6 +6,12 @@
 
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
 Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
+Le [draft éditorial détaillé](tony-richie-long-editorial-draft.json) comporte
+37analyses originales sur sept passages chronologiques distincts, environ
+14min51s avec guide, chapitres et outro. **Ce n'est pas un montage terminé** :
+les sourcesHD et les fins de dialogues restent à vérifier, les notes sont
+marquées non relues et le rendu final reste interdit. Les alias`SOURCE_*`
+référencent les sources publiques identifiées, pas des médias inclus dansGit.
 Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
 Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
 reprennent le pion approuvé et présentent un format ouvert aux séries/animés.

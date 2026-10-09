@@ -81,3 +81,28 @@ Ces fichiers temporaires ne sont pas garantis sur une autre machine : les
 requêtes ci-dessus et les identifiants publics permettent leur récupération.
 Cette méthode n'utilise ni shellVPS pour contourner unCDN refusé, ni connexion
 Naka, ni modification du site ou des automatisations existantes.
+
+## Lot ciblé supplémentaire et piste Naka
+
+Cinqnouveaux clips identifiés ont ensuite été importés une seule fois par la
+même route normale. `lKm5SXyQn20` est refuséHTTP400 avec une erreur du proxy
+YouTube du fournisseur ; `R0dNYdum5ss` échoueHTTP400 ; `8PPVQJdUcZM` dépasse150s ;
+`-7BHfJOgm80` échoueHTTP400 après expiration de sa recherche vidéo. Aucun fichier
+pour ces quatretests, aucun retryinchangé. Les recherchesAPI répondentHTTP200,
+donc ces erreurs ne prouvent pas une cléAlgrow manquante côté utilisateur.
+
+`wUs8M0yglX0` est réellement téléchargé :74,234s,1280×704,60fps,1,027Mb/s vidéo,
+SHA256`36bcfd1f60075b72a8e02894d88d6c5111abf6403b689b96f6e073c42ec43f9f`.
+Siximages et16segmentsASR revus, décodageA/V complet. RéunionS2E12 des routes,
+Tony ouvre vers2,86s. Visages mous et watermarkJWPLAYER permanent : préparation
+uniquement, **pas une source finale acceptée**. Rapportprivé dans
+`/tmp/sopranos_sources/new-richie-source-lot/LOT_REPORT.md`.
+
+L'utilisateur propose ensuite l'accès à son compteNaka. La page publique et
+ses scripts répondentHTTP200 à cette nouvelle vérification normale. Le site
+annonce une fonction horsligne et le téléchargement épisode par épisode enVO/VF.
+Le client conserve des médias segmentés en stockage navigateur ; ce n'est pas
+encore une preuve de fichierMP4 exportable ni de résolution réelle desSopranos.
+Aucune connexion de compte, téléchargement d'épisode ou récupération protégée
+n'a été effectuée. Ne pas affirmer que Naka est opérationnel avant de mesurer
+un vrai fichier acquis par une fonction autorisée. Aucun motdepasse dansGit/chat.
