@@ -25,12 +25,16 @@ Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminé
 4. Garder le guide16s, les commentaires anglais tapés, les pauses de3–9s et
    au moins2.5s de lecture après la frappe. Pendant une pause, le replay muet
    revient sur les2–4s précédentes ; le dialogue reprend au même instant.
-5. Utiliser les musiques et SFX existants : musique au guide et au bilan,
+5. Pour l'anime, musique discrète uniquement au guide initial ; conserver
+   la musique et les dialogues du clip pendant la scène. Les analyses restent
+   sans musique ajoutée. Garder les SFX existants :
    clavier pendant la frappe, accent de notation et quelques cues comiques
    explicitement choisis. Pas de voix off. Mesurer les crêtes audio.
-6. Écrire un bilan propre à l'épisode, conserver le panneau de fin du collègue
-   et compter les annotations une fois. Regarder l'image réellement produite
-   avant de marquer la mise en page revue. Garder les crédits musicaux séparés.
+6. Pour l'anime, finir par un fondu de toute l'image et du son sur0.5s,
+   puis un écran noir de2s avec « Subscribe » blanc, sans musique.
+   `outro_style: subscribe` remplace le bilan ; les projets anciens conservent
+   leur bilan par défaut. Regarder l'image réellement produite avant de marquer
+   la mise en page revue. Une musique sans crédit doit avoir sa licence vérifiée.
 7. Préparer les médias puis exporter depuis Kdenlive/MLT. Conserver le projet
    natif, les six pistes séparées, le job d'export et les médias relatifs.
    Régénérer le calque pour modifier le texte ; les mots ne sont pas des titres
@@ -39,11 +43,12 @@ Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminé
 ## Épisode en cours : Lelouch contre Schneizel
 
 Titre : **Lelouch vs Schneizel Analysed like Chess | Code Geass**.
-Dialogue anglais0–191.6s, cinq commentaires de7s, guide16s et bilan12s :
-254.6s, soit4m14.6. Lelouch ouvre et reste blanc. Le dénouement montre sa
+Dialogue anglais0–192s, cinq commentaires de7s, guide16s et Subscribe2s :
+245s, soit4m05. Lelouch ouvre et reste blanc. Le dénouement montre sa
 victoire ; Schneizel ne gagne pas cette scène.
 
 ```powershell
+python experiments/conversation-chess/fetch-music.py echoes
 powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Preview -Source work/chess-studio/schneizel/lelouch-vs-schneizel-english-720.mp4 -Timeline experiments/conversation-chess/episodes/lelouch-vs-schneizel.json -Out work/conversation-chess/lelouch-full-new
 ```
 
@@ -53,5 +58,8 @@ exigera une nouvelle vérification du dialogue, des repères et de son hash.
 Les modèles Ayanokoji/Ryuen et Game of Thrones restent à remplir après
 acquisition d'une vraie source répondant à ces critères.
 
-La livraison locale comprend MP4, projet Kdenlive et kit de description avec
-crédits. Aucun envoi Discord ni publication YouTube n'est déclenché.
+La livraison locale comprend MP4 et projet Kdenlive. « Echoes » d'Andrew Ev,
+licence Mixkit Stock Music Free, accompagne le guide à un gain de0.12.
+Sa licence est conservée dans `MUSIC_LICENSES.json`, sans crédit public requis.
+Le fichier original est téléchargé localement, pas redistribué dans Git.
+Aucun envoi Discord ni publication YouTube n'est déclenché.
