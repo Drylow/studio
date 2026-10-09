@@ -159,3 +159,17 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 |---|---|---|
 | 7 oct. 2026 | Napoléon en Russie (Minard, les poux, « La santé de Sa Majesté… ») | https://gofile.io/d/XfHd6IAK |
 | 8 oct. 2026 | La Joconde, célèbre grâce à un voleur (vol de 1911) | https://gofile.io/d/DOWccY1j |
+| jeu. 9 oct. 2026, 07 h (programmée) | Beethoven : 95 fois trop de plomb | https://gofile.io/d/7ANl9981 |
+| jeu. 9 oct. 2026, 19 h (programmée) | Le cerveau d'Einstein, coupé en 240 morceaux | https://gofile.io/d/i6QmFuJ5 |
+| ven. 10 oct. 2026, 07 h (programmée) | Cléopâtre plus proche de l'iPhone que des pyramides | https://gofile.io/d/fzxJzPB2 |
+| ven. 10 oct. 2026, 19 h (programmée) | Les Vikings n'ont jamais porté de casques à cornes | https://gofile.io/d/9L3GIfeF |
+| sam. 11 oct. 2026, 07 h (programmée) | Gengis Khan et 16 millions d'hommes | https://gofile.io/d/eg8Sy58k |
+| sam. 11 oct. 2026, 19 h (programmée) | Marie-Antoinette n'a jamais dit ça | https://gofile.io/d/yIuSw80p |
+| dim. 12 oct. 2026, 07 h (programmée) | Les carnets de Marie Curie sont encore radioactifs | https://gofile.io/d/ryrkE6D9 |
+| dim. 12 oct. 2026, 19 h (programmée) | La malédiction de Toutankhamon en chiffres | https://gofile.io/d/qflqThSp |
+| lun. 13 oct. 2026, 07 h (programmée) | Salieri n'a pas empoisonné Mozart | https://gofile.io/d/V6S1IU3w |
+| lun. 13 oct. 2026, 19 h (programmée) | Pierre le Grand et la taxe sur la barbe | https://gofile.io/d/EWrYy6bK |
+| mar. 14 oct. 2026, 07 h (programmée) | Lincoln, le président lutteur | https://gofile.io/d/LYvljZde |
+| mar. 14 oct. 2026, 19 h (programmée) | Le doigt de Galilée | https://gofile.io/d/fpWk4ev0 |
+| mer. 15 oct. 2026, 07 h (programmée) | L'erreur de calcul de Christophe Colomb | https://gofile.io/d/wxa6QISa |
+| mer. 15 oct. 2026, 19 h (programmée) | Jules César et les pirates | https://gofile.io/d/HwH5CZsH |
