@@ -36,6 +36,17 @@
   ou désactiver la chaîne sur le site. **Google en Testing** : les deux connexions datent du
   7 oct. (~19 h 50 Paris) et Google les coupe au bout de 7 jours : reconnecter Cage et Pitch
   avant le **14 oct. au soir** (alerte site + Discord la veille), sinon les envois échouent.
+- **Première nuit en ligne (8-9 oct.)** :
+  - Les rendus plantaient d'abord. Le pool BLAS de numpy ouvrait 64 fils, et l'hébergeur bloquait x264.
+    Corrigé dans `studio/worker.py` le 9 oct. à 0 h 26 : le worker passe de 67 fils à 2.
+  - Publiée : « Sean Strickland's Pay Dispute Could Stall His Expected Title Defense »
+    (`zRIfPuHf370`, Cage, vers 1 h 12). Miniature et planches relues, propres.
+  - Bloquées par les contrôles, rien de publié :
+    - 2 miniatures : une personne de trop, et « UFC » refusé dans le texte ;
+    - 1 sujet avec seulement 2 faits retrouvés.
+  - Corrigé et déployé le 9 oct. à 17 h 02 : 4 essais de miniature au lieu de 2, et un nom de ligue
+    dans le texte est accepté.
+  - Pitch : aucune info à 7/10 ou plus cette nuit-là.
 - **Delamain codé par Claude (option 2, mise en ligne sans validation)** : routine
   `trig_01GfMnci6KHo8W7cB7amCy84` (Sonnet, environnement sans accès o2switch). À compléter
   par l'utilisateur sur claude.ai : dépôt Drylow/studio + déclencheur API, puis adresse et
