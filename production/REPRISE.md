@@ -17,20 +17,49 @@
 - La source du test1280×720 est comprimée à ~0,687Mb/s vidéo. V4 est non rendue,
   qualité refusée. Nouveau minimum1080p et acceptation visuelle explicite ; les
   essais techniques sont marqués et ne valent pas livraison définitive.
-- Source officielle HBO de The Jacket : `UHvUDYKrFmw`, durée217s. Le lecteur
-  public annonce1080p30 ; **aucun fichier vidéo ni frame1080p obtenu**. La seule
-  requête Algrow1080p10–20s échoue avec « YouTube proxy authentication failed ».
-  Les autres essais du tour échouent également ; pas de boucle ni contournement.
-  Naka requiert une connexion (401), aucune session fournie : pas de récupération.
-- **La vraie fin de Tuco n'a pas été regardée.** Le lecteur répond mais les
-  médias/storyboards exacts sont refusés par le proxy (CONNECT403 confirmé).
-  Le tableau existant reste rejeté ; `outro_layout_reviewed:false` bloque v4.
-  Besoins précis : fichierHD des scènes retenues + capture du tableau final Tuco.
-- Validation de cette révision : **15 contrôles de préflight**, dont refus
-  attendus du mauvais camp, de Miss, de la source refusée et de l'outro rejetée.
+- **Les téléchargements fonctionnent pour des sources réellement récupérées.**
+  Algrow, requête documentée normale full1080p : `cRtAotacluI`, vraie scène du don
+  et de l'essayage de la veste,147,52s,28 620 872octets. Fichier réel1280×720,
+  ~1,416Mb/s vidéo ; images examinées, plus détaillées que la compilation mais
+  encore douces. Ne pas déclarer1080p parce que la requête le demandait.
+  **Vrai1080p acquis ensuite** : `Mc5qO4mnd2Q`,9,985s,3 936 485octets,
+  vidéo~3,043Mb/s. Le mari deLiliana porte la veste, puis gros plan surRichie.
+  Images natives examinées : traits, cheveux et tissu plus nets, aucun overlay.
+  Ce court passage établit une source réellement1080p, pas tout le futur long.
+  SHA256 `8cc7c14266cdc4ebf42df42a712beaf299930d53d65509a6accfaf86ccdeb989`.
+  Autre fichier acquis : `ORFLR7cgY3s`,397,689s,640×360/~116kbit/s vidéo,
+  uniquement pour le découpage. Il ne contient pas The Jacket. ASR locale et
+  60captures examinées : S2E5, S2E6 et S2E10, pas un seul échange continu.
+  Les fichiers et transcriptions intégrales restent privés dans `/tmp`.
+- Source officielle HBO `UHvUDYKrFmw`,217s :1080p30 annoncé, aucun vrai fichier
+  acquis. Les requêtes distinctes bornée10–20s et vidéo entière échouent.
+  `omfDQWEka6A`, `hsw8wv44e7E` et `wurP8X3b9cI` échouent également, sans retry
+  inchangé. Ces refus ne signifient pas que tous les téléchargements échouent.
+  Le CDN exact reste refuséCONNECT403 ; aucune route alternative ni bypass.
+  Dailymotion n'a pas fourni les échanges recherchés ; Vimeo annonce une
+  indisponibilité régionale. Naka requiert une connexion401, non contournée.
+  **Le téléchargement reste notre tâche : ne plus réclamer les clips au user.**
+- **Capture du vrai tableau Tuco fournie et examinée.** Le nouveau bilan reprend
+  Tony et la bulle de texte à gauche (~38,6%), icônes et totaux combinés à droite,
+  grille4+4+Book. Aucun Miss/Interesting ni colonnes par camp. Résumé anglais
+  original obligatoire `outro_summary` ; comptes calculés depuis la timeline.
+  `outro_layout_reviewed:true` après contrôle des images, pas une validation user.
+- **Nouvelle outro seule exportée dans Kdenlive** :12,01s/360frames,1920×1080p30,
+  H264/AAC ; `output/conversation-chess/outro-layout-v4-preview.mp4`.
+  Cinq vraies notes du test Janice : Brilliant1/Great1/Best1/Blunder1/Book1.
+  Fond du test volontairement flouté, pas une sourceHD améliorée ni le long Richie.
+  DécodageA/V complet et quatre captures finales contrôlés. Musique finale
+  corrélationPCM0,999916, aucun écrêtage ; aucune écoute humaine prétendue.
+  **GoFile vérifié (taille etMD5) : https://gofile.io/d/sFot3YPC**.
+  2 806 512octets ; SHA256
+  `da911af3675168945e4db88e1dd4d31dbd262b9292b1139898f33e48f67dbe81`.
+  Le pilotev4 complet n'est pas rendu ; sa source reste refusée pour un final.
+- Validation de cette révision : **17 contrôles de préflight**, dont refus
+  attendus du mauvais camp, de Miss, de la source refusée, de l'outro rejetée,
+  d'un résumé absent ou trop long.
   Le cas où le premier locuteur blanc n'est pas la première note passe.
   Quatre images d'habillage examinées : neuf catégories, pions, noms des camps,
-  bulle et score blancs corrects. Ce sont des captures graphiques, pas un filmv4.
+  bulle et score blancs corrects. Ce sont des captures graphiques, pas un pilotev4.
 - Tout reste isolé dans `experiments/conversation-chess` ; aucune publication,
   modification du site ou intervention sur Cage/Pitch/TikTok.
 

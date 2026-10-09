@@ -44,6 +44,8 @@ const outroSeconds = spec.outro_seconds ?? 0;
 if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < 6 || outroSeconds > 20))) throw new Error('outro_seconds must be 0 or 6–20 seconds.');
 if (!Number.isInteger(outroSeconds * 30)) throw new Error('outro_seconds must align to a 30fps frame.');
 if (spec.outro_subtitle != null && (typeof spec.outro_subtitle !== 'string' || spec.outro_subtitle.length > 70)) throw new Error('Supply a short outro_subtitle.');
+if (spec.outro_summary != null && (typeof spec.outro_summary !== 'string' || !spec.outro_summary.trim() || spec.outro_summary.length > 700)) throw new Error('Supply an original, nonempty outro_summary of at most 700 characters.');
+if (outroSeconds && spec.demo !== true && !args.includes('--allow-legacy-opening') && !spec.outro_summary) throw new Error('Real recaps require an original outro_summary about their own reviewed scene.');
 if ((outroSeconds || spec.music) && !prepareProject && !validateOnly) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
 if ((outroSeconds || spec.music) && refreshProjectIntro) throw new Error('Build a complete project when adding music or a recap.');
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
@@ -228,7 +230,7 @@ try {
     await fs.mkdir(outroFrameDirectory, { recursive: true });
     for (let frame = 0; frame < outroSeconds * graphicsFps; frame++) {
       const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), {
-        phase:'outro', t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, subtitle:spec.outro_subtitle,
+        phase:'outro', t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, summary:spec.outro_summary,
       });
       await fs.writeFile(path.join(outroFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
@@ -321,7 +323,7 @@ if (prepareProject) {
     await fs.copyFile(path.join(outroFrameDirectory,'frame_00030.png'),backgroundFile);
     addProjectSegment({kind:'outro', duration:outroSeconds, background_file:backgroundFile,
       graphics_file:alphaMovie(outroFrameDirectory,outroSeconds,'project-graphics-outro'), graphics_type:'alpha_mov',
-      graphics_frames:outroFrameDirectory, recap_counts:recapCounts, ...(await musicPart('outro',outroSeconds))});
+      graphics_frames:outroFrameDirectory, recap_counts:recapCounts, recap_summary:spec.outro_summary, ...(await musicPart('outro',outroSeconds))});
   }
   const projectManifest = path.join(output, 'project-manifest.json');
   await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,

@@ -2,7 +2,10 @@
 
 **User decision: Tony versus Richie, around The Jacket, is approved as the
 first long video.** Finish the video first; title and thumbnail production
-come afterward. Follow [the scene plan](PLAN_TONY_RICHIE.md). Tony/Janice remains
+come afterward. Follow [the scene plan](PLAN_TONY_RICHIE.md), now including the
+real 720p jacket donation, a real 1080p discovery, timed comment drafts and a
+verified edited opening. Acquisition is our task; do not ask the user to
+provide clips. Tony/Janice remains
 a private editing test, not the first published episode.
 
 Research reviewed on 9 October 2026. The user likes the current
@@ -59,8 +62,13 @@ configured Algrow search endpoint on the research date:
 
 The source-quality task subsequently confirmed that the official HBO upload's
 normal embedded player advertises **1920×1080 at 30 fps** in H264, VP9 and AV1.
-Those are advertised formats, not decoded frames: a normal bounded provider
-download still failed, and no actual HD file has been obtained or inspected.
+Those are advertised formats, not decoded frames: the normal bounded provider
+download of **that HBO upload** failed, so no file from UHvUDYKrFmw has been
+obtained or inspected. Independent sources have since delivered the actual
+donation `cRtAotacluI` in 1280×720 and the 9.985-second discovery
+`Mc5qO4mnd2Q` in 1920×1080. They were inspected through native images and local
+ASR; the complete scene set is still not approved for final quality. Their
+source-bound hashes, opening and timed comments are in the scene plan.
 The word HD in another upload's title is not a quality measurement. Existing
 views show that particular uploads have found an audience; they do not predict
 the performance of a new channel.
@@ -145,7 +153,7 @@ change the premise and require a new continuity plan.
 3. Preserve the validated music/SFX/typing rhythm and approved Tony pawn.
    Native Kdenlive project and export; English originals and written analysis,
    no voice-over. Analysis text must add a point rather than prolong a pause.
-4. Obtain genuinely detailed 1080p-or-better source material, then inspect
+4. Acquire genuinely detailed 1080p-or-better source material ourselves, then inspect
    images, codec/bitrate and dialogue. A 1080p export from a soft 720p source is
    not a source upgrade. No new source of that quality is established here.
 5. Source-relative timing, speakers, episode boundaries and reactions must be
@@ -175,8 +183,12 @@ The unusual `3-03` slug of the season-five Junior article belongs to the source
 website; the episode is still **S5E3**, as confirmed by its text and TVmaze.
 
 Public video figures are snapshots from normal authenticated
-`GET /api/search`, not private analytics or guarantees. Only metadata and
-public text were consulted for this document; no clip was acquired, watched
-or listened to by this research task. No episode downloaded, no render,
-no publication and no changes to sports/TikTok automation. Private research
-receipts are under `/tmp/sopranos_long_research/`.
+`GET /api/search`, not private analytics or guarantees. The initial shortlist
+used metadata and public text only. A subsequently acquired 640×360 rivalry
+compilation has since received local ASR and sampled-frame inspection; actual
+spans, limits and opener evidence are in the scene plan. It contains no jacket
+scene and is not HD render material. The separately acquired donation is
+720p, and the short discovery 1080p; their local ASR/native-image review and
+draft storyboard are documented in the same plan. No complete episode downloaded, no long
+render, no publication and no changes to sports/TikTok automation. Private
+research receipts are under `/tmp/sopranos_long_research/`.

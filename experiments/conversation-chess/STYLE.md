@@ -24,17 +24,28 @@ La sortie1920×1080 ne restitue pas les détails absents. Les nouvelles sources
 doivent mesurer au moins1080p et être acceptées après examen visuel du fichier,
 pas seulement d'une liste de formats. Une source non acceptée bloque l'export.
 
-Le tableau final de Tuco n'a **pas été visionné** : les extraits et le storyboard
-final sont inaccessibles actuellement. Ne pas annoncer une reproduction fidèle
-de ce tableau ni reconduire le GAME REVIEW rejeté. Une capture de sa fin est
-nécessaire pour confirmer disposition, ordre et portraits ; v4 marque cette
-outro `outro_layout_reviewed:false` et n'est pas exportée.
+L'utilisateur a fourni **une capture du vrai tableau final de Tuco**, examinée
+directement. Elle établit la disposition, pas l'animation ni le son de toute
+la fin. Le nouveau bilan reprend son organisation : panneau gauche (~38,6%)
+avec Tony au-dessus d'une grande bulle blanche et résumé anglais original ;
+à droite, grandes icônes et **totaux des deux camps réunis**. Deux rangées de
+quatre (Brilliant/Great/Best/Excellent puis Good/Inaccuracy/Mistake/Blunder),
+puis Book centré. Pas de violet, de croix Miss ni de colonnes par personnage.
+Le GAME REVIEW rejeté est remplacé. V4 marque `outro_layout_reviewed:true`
+après examen des images ; cela ne vaut pas validation de l'utilisateur.
+
+Un **aperçu séparé de l'outro de12s** a été exporté dans Kdenlive et contrôlé.
+Il utilise les cinq vraies notes du test Janice et un fond volontairement
+flouté, pas les notes du futur Tony/Richie. La source du pilote reste refusée
+et le pilotev4 complet n'est pas rendu. Chaque nouveau bilan doit renseigner
+`outro_summary` avec un texte propre à la scène, jamais le bilan d'un autre film.
 
 ## Montage v3 conservé
 
 Le testHD est jugé bien meilleur. Prochain aperçu avant validation du format
 long10–15min : intro **Sneaky Snitch** (passage66,104s), outro **Scheming Weasel
-(faster version)** et bilan du nombre de coups par catégorie et par camp.
+(faster version)** et bilan du nombre de coups par catégorie. Les camps sont
+conservés dans les données ; l'écran final affiche leurs totaux réunis.
 Les musiques viennent des originauxIncompetech sousCCBY4.0 avec crédits.
 Conserver les neuf catégories ci-dessus : ni Miss ni Interesting violet.
 

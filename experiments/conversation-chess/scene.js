@@ -102,42 +102,78 @@ window.ConversationChess = (() => {
   }
   function outro(options) {
     const elapsed = options.t || 0, duration = options.duration || 12;
-    const counts = options.counts || {}, sides = options.sides || {black:'Janice', white:'Tony'};
+    const counts = options.counts || {};
+    const panelWidth = 742;
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#262421'; ctx.fillRect(0, 0, W, H);
-    ctx.fillStyle = '#302e2b'; ctx.beginPath(); ctx.roundRect(646, 210, 1122, 790, 24); ctx.fill();
-    text('GAME REVIEW', 1208, 112, 72, '#f7f7f7', 800, 'center');
-    text(`${sides.black} vs ${sides.white} · ${options.subtitle || 'Family dinner'}`, 1208, 166, 32, '#bcb7ae', 700, 'center');
-    ctx.fillStyle = '#f7f7f7'; ctx.beginPath(); ctx.roundRect(78, 168, 472, 177, 38); ctx.fill();
-    ctx.beginPath(); ctx.moveTo(242, 338); ctx.lineTo(279, 391); ctx.lineTo(324, 338); ctx.fill();
-    lines('FAMILY DINNER.\nNO SURVIVORS.', 314, 239, 38, '#262421', 53, 'Arial', 'center');
+    ctx.fillStyle = '#292724'; ctx.fillRect(0, 0, W, H);
+    if (background) {
+      ctx.save(); ctx.filter = 'blur(20px)';
+      imageContain(background, -40, -24, W + 80, H + 48);
+      ctx.restore();
+    }
+    ctx.fillStyle = 'rgba(0,0,0,.47)'; ctx.fillRect(panelWidth, 0, W - panelWidth, H);
+    ctx.fillStyle = '#292724'; ctx.fillRect(0, 0, panelWidth, H);
+
+    // The reviewed reference uses a mascot above a tall speech bubble, then
+    // one combined count beneath each icon. It has no per-player score table.
     if (tonyOverlay || tony) {
-      const bounce = 9 * Math.exp(-elapsed * 3) * Math.sin(elapsed * 15);
-      imageContain(tonyOverlay || tony, 58, 357 + bounce, 524, 606);
+      imageContain(tonyOverlay || tony, 229, 8, 284, 222);
     }
-    pawn(1460, 222, 44); pawn(1655, 222, 44, true);
-    text(sides.black, 1460, 302, 30, '#f7f7f7', 700, 'center');
-    text(sides.white, 1655, 302, 30, '#f7f7f7', 700, 'center');
-    const order = ['brilliant','great','best','excellent','good','book','inaccuracy','mistake','blunder'];
-    for (const [i, id] of order.entries()) {
-      const v = ratings[id], y = 329 + i * 53;
-      if (!v) throw new Error(`Unknown official recap category: ${id}`);
-      ratingIcon(v, 695, y, 41);
-      text(v.label, 763, y + 32, 31, v.color, 700);
-      for (const [side, x] of [['black',1460],['white',1655]]) {
-        const n = counts[id]?.[side] || 0;
-        text(String(n), x, y + 32, 32, n ? '#ffffff' : '#817c72', 700, 'center');
+    const bubble = {x:62, y:255, width:614, height:764};
+    ctx.fillStyle = '#f7f7f7'; ctx.beginPath();
+    ctx.roundRect(bubble.x, bubble.y, bubble.width, bubble.height, 56); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(334, bubble.y + 8); ctx.lineTo(371, 230);
+    ctx.lineTo(412, bubble.y + 8); ctx.closePath(); ctx.fill();
+
+    const summary = String(options.summary || 'Tony opens with harmless-looking family talk, then keeps pressing the one subject Janice cannot ignore. She spots the attack, but her anger gives him exactly the reaction he wanted. He leaves the damage behind and hides behind the role of a concerned uncle.').trim();
+    const maxTextWidth = bubble.width - 88, maxTextHeight = bubble.height - 100;
+    function wrapSummary(size) {
+      ctx.font = `700 ${size}px Arial`;
+      const result = [];
+      for (const paragraph of summary.split(/\n+/)) {
+        let row = '';
+        for (const word of paragraph.trim().split(/\s+/)) {
+          const candidate = row ? `${row} ${word}` : word;
+          if (row && ctx.measureText(candidate).width > maxTextWidth) {
+            result.push(row); row = word;
+          } else row = candidate;
+          if (ctx.measureText(row).width > maxTextWidth) throw new Error('Outro summary contains a word that is too wide.');
+        }
+        if (row) result.push(row);
       }
+      return result;
     }
-    ctx.fillStyle = '#555149'; ctx.fillRect(690, 879, 1034, 2);
-    text('TOTAL MOVES', 763, 935, 30, '#c8c1b5', 700);
-    for (const [side, x] of [['black',1460],['white',1655]]) {
-      const n = order.reduce((sum, id) => sum + (counts[id]?.[side] || 0), 0);
-      text(String(n), x, 935, 38, '#ffffff', 800, 'center');
+    let summarySize = 49, summaryRows = wrapSummary(summarySize);
+    while (summaryRows.length * summarySize * 1.18 > maxTextHeight && summarySize > 31) {
+      summarySize -= 1; summaryRows = wrapSummary(summarySize);
     }
-    text('Analysis complete. The family feud continues.', 320, 1018, 24, '#bcb7ae', 700, 'center');
-    text('Music: Sneaky Snitch / Scheming Weasel (faster version) · Kevin MacLeod (incompetech.com) · Edited excerpts', W / 2, 1050, 19, '#bcb7ae', 400, 'center');
-    text('Licensed under CC BY 4.0 · https://creativecommons.org/licenses/by/4.0/', W / 2, 1075, 17, '#bcb7ae', 400, 'center');
+    const leading = summarySize * 1.18;
+    if (summaryRows.length * leading > maxTextHeight) throw new Error('Outro summary is too long for a readable speech bubble.');
+    const firstBaseline = bubble.y + (bubble.height - summaryRows.length * leading) / 2 + summarySize;
+    summaryRows.forEach((row, i) => text(row, bubble.x + bubble.width / 2,
+      firstBaseline + i * leading, summarySize, '#171717', 700, 'center'));
+
+    const centres = [984, 1222, 1460, 1698], iconSize = 198;
+    const rows = [
+      {ids:['brilliant','great','best','excellent'], iconY:63, countY:365},
+      {ids:['good','inaccuracy','mistake','blunder'], iconY:401, countY:703},
+      {ids:['book'], iconY:733, countY:1020},
+    ];
+    for (const row of rows) {
+      row.ids.forEach((id, i) => {
+        const v = ratings[id];
+        if (!v) throw new Error(`Unknown official recap category: ${id}`);
+        const x = row.ids.length === 1 ? (panelWidth + W) / 2 : centres[i];
+        const n = (counts[id]?.black || 0) + (counts[id]?.white || 0);
+        ratingIcon(v, x - iconSize / 2, row.iconY, iconSize);
+        text(String(n), x, row.countY, 116, v.color, 800, 'center');
+      });
+    }
+
+    // License attribution stays in its own slim strip, outside the summary.
+    ctx.fillStyle = 'rgba(0,0,0,.73)'; ctx.fillRect(0, 1035, W, 45);
+    text('Sneaky Snitch / Scheming Weasel (faster version) · Kevin MacLeod (incompetech.com) · Edited excerpts', W / 2, 1053, 16, '#bcb7ae', 400, 'center');
+    text('CC BY 4.0 · https://creativecommons.org/licenses/by/4.0/', W / 2, 1074, 15, '#bcb7ae', 400, 'center');
     const fade = clamp(elapsed / .35) * clamp((duration - elapsed) / .8);
     if (fade < 1) { ctx.fillStyle = `rgba(0,0,0,${1-fade})`; ctx.fillRect(0,0,W,H); }
   }

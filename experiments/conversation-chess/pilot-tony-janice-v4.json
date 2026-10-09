@@ -112,9 +112,10 @@
     "accepted_for_final": false
   },
   "initial_score_text": "0.0",
-  "revision": "Editing test only, not the first long video. Tony opens as White; scores and bar invert with sides. Miss is removed. Original source quality and the existing recap layout are rejected; no v4 final export yet.",
+  "revision": "Editing test only, not the first long video. Tony opens as White; scores and bar invert with sides. Miss is removed. The recap now follows the supplied reference screenshot with combined counts and an original scene summary; original source quality remains rejected, no v4 full pilot export yet.",
   "outro_seconds": 12,
-  "outro_layout_reviewed": false,
+  "outro_layout_reviewed": true,
+  "outro_summary": "Tony keeps turning a family question into a personal attack. Janice recognises the trap, but gives him the reaction he wants. Once the damage is done, he hides behind the role of a concerned uncle. Five moves, one ruined family dinner.",
   "music": {
     "intro": {
       "file": "assets/music/sneaky-snitch.mp3",

@@ -6,8 +6,13 @@
 Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
 Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
 Son style v3 est validé ; la qualité des clips et le tableau final sont rejetés.
-`pilot-tony-janice-v4.json` corrige les camps et prépare les règles, **sans export**.
-Les originauxHD et la disposition réelle du tableau final Tuco restent à obtenir.
+`pilot-tony-janice-v4.json` corrige les camps et prépare les règles, sans export
+du pilote complet. La capture du vrai tableau final Tuco fournie par l'utilisateur
+a été examinée ; **une nouvelle outro séparée de12s est exportée et contrôlée**.
+La scène où Richie offre la veste est désormais téléchargée en720p réel et
+le court passage où il la découvre sur quelqu'un d'autre en **1920×1080 réel**.
+Les autres sources finales de meilleure qualité restent à obtenir par notre
+pipeline, sans demander à l'utilisateur de fournir les clips.
 
 **Premier personnage qui parle = blanc**, pour toutes les vidéos. La première
 réplique peut être sans annotation. Renseigner `opening:{speaker:"white",
@@ -68,6 +73,28 @@ est1280×720 mais très compressé (~0,687Mb/s vidéo) ; il est refusé pour la 
 La résolution seule ne prouve pas le détail. `--allow-low-res-preview` permet
 seulement un brouillon technique marqué ; un cadre1080p ne restaure pas les détails
 d'une mauvaise source. Cette option ne permet pas de réutiliser l'outro rejetée.
+
+## Nouveau tableau final : capture fournie, aperçu exporté
+
+La disposition suit la capture réellement regardée : Tony au-dessus d'une
+grande bulle de bilan dans le panneau gauche (~38,6% de l'écran), puis neuf
+grandes icônes à droite. Brilliant/Great/Best/Excellent sur la première ligne,
+Good/Inaccuracy/Mistake/Blunder sur la deuxième, Book centré sur la troisième.
+Les nombres colorés sont les **totaux des deux personnages**, calculés à partir
+de la timeline. Pas de colonnes par joueur ni de catégorie violet/croix.
+
+`outro_summary` est obligatoire pour chaque nouvelle timeline réelle avec bilan :
+un résumé anglais original, non vide, au plus700 caractères, adapté à ses
+propres échanges. Le moteur refuse aussi un texte qui dépasse la bulle.
+Le manifest conserve `recap_summary` et les comptes par camp pour vérification.
+
+L'aperçu privé `output/conversation-chess/outro-layout-v4-preview.mp4` dure
+12,01s :360frames,1920×1080 à30fps, export final **Kdenlive/MLT**.
+Il reprend seulement les cinq notes du test Janice (Brilliant1, Great1, Best1,
+Blunder1, Book1). Le fond720p refusé est volontairement flouté : cet aperçu
+valide l'habillage, pas une amélioration des clips ni le film Tony/Richie.
+Décodage intégral, quatre captures finales et musique sans écrêtage vérifiés.
+La disposition n'est pas encore approuvée par l'utilisateur.
 
 ## Commentaires et sons
 

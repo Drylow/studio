@@ -19,16 +19,17 @@ editing rhythm. Preserve these elements for the next subject.
 
 The **footage quality is rejected**: the current source is visibly too
 compressed. The **v3 ending table is also rejected**. Its layout must be
-reconsidered against the end of the reference's Tuco business video. No
-claim is made that the replacement table has been reproduced, rendered or
-approved.
+reconsidered against the end of the reference's Tuco business video. The user
+has now supplied a screenshot of that actual ending, and a new separate
+12-second outro preview has been reproduced, exported and inspected against
+it. It is still awaiting user approval; the full v4 pilot is not rendered.
 
 Keep the active nine categories from `ratings.json`: Brilliant, Great, Best,
 Excellent, Good, Book, Blunder, Mistake and Inaccuracy. **Miss and Interesting
 are excluded from our format.** Historical assets and old timelines remain
 archives; they do not override this selection.
 
-## Prepared v4 correction — not rendered or delivered
+## Prepared v4 correction — separate outro preview only
 
 `pilot-tony-janice-v4.json` preserves the five reviewed comments, source
 anchors, analysis durations, music and sound-effect timings. **Tony is White;
@@ -52,8 +53,13 @@ Best and Great leave the preceding score and bar position unchanged.
 
 These numbers describe humorous conversational control, not a chess-engine
 calculation or a moral judgement. Timeline validation passes for the color,
-score and bar corrections. **No v4 video has been rendered, checked or
-uploaded**; no finished-render approval from v2/v3 carries into v4.
+score and bar corrections. **The full v4 pilot has not been rendered**; no
+finished-render approval from v2/v3 carries into v4. The independent outro
+preview uses these five actual notes, not counts copied from the reference.
+Its left panel contains Tony and an original English scene summary; the right
+panel has combined totals on a four/four/one grid of the nine official icons.
+Native export, full A/V decoding, four final screenshots and the music signal
+were checked. User approval of this new ending remains pending.
 
 ## Source quality required before the next delivery
 
@@ -86,7 +92,8 @@ The intro uses credited **Sneaky Snitch**; the tested outro uses credited
 **Scheming Weasel (faster version)**. Their source files and attribution are
 in `assets/music/` under CC BY 4.0. Added effects have provenance and hashes
 in `assets/sfx/`. Music remains outside the dialogue sections. These assets
-and the editing style are retained; the end-table layout is awaiting revision.
+and the editing style are retained; the new end-table layout follows the
+user-supplied screenshot and is ready for private review.
 
 Kdenlive performs the native montage and final export, with separate source,
 replay, graphics, dialogue, sound effects and music tracks. The animations

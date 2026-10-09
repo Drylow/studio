@@ -40,19 +40,56 @@ Ne pas confondre une démonstration d'habillage avec un montage de vrais extrait
 
 ## Ce qui a réellement été examiné
 
-### Limite actuelle : le vrai tableau final et les nouvelles sources HD
+### Tableau final : capture réelle fournie par l'utilisateur
+
+L'utilisateur a fourni une capture du vrai bilan final deTuco. Elle a été
+examinée directement : panneau gauche(~38,6%) avec la mascotte au-dessus d'une
+grande bulle blanche de texte centré ; à droite, icônes et grands totaux colorés
+communs aux deux camps. Rangées Brilliant/Great/Best/Excellent puis
+Good/Inaccuracy/Mistake/Blunder. La référence ajoute Book/Interesting/Miss
+en bas ; notre adaptation garde seulement **Book centré**, conformément aux
+neuf catégories demandées. Elle remplace Walter par le Tony approuvé et écrit
+un bilan original de nos propres échanges. Ni texte ni nombres de la capture
+ne sont recopiés comme analyse de notre scène.
+
+La nouvelle outro isolée de12s a été exportée dans Kdenlive, examinée sur quatre
+images finales et contrôlée en décodageA/V. Il s'agit de l'habillage avec les
+cinq notes réelles du test Janice, pas du premier long Tony/Richie. La capture
+établit l'agencement statique ; l'animation complète et le son de la fin de la
+référence n'ont toujours pas été visionnés/écoutés. Validation user en attente.
+
+### Acquisition actuelle : vraie scène de la veste récupérée
+
+Deux demandes normales Algrow vidéo entière,1080p, cache neuf, ont réussi :
+`cRtAotacluI` (don et essayage de la veste),147,52s, **1280×720 réel**, vidéo
+~1,416Mb/s ; `ORFLR7cgY3s` (autres confrontations Tony/Richie),397,689s,
+**640×360 réel**,~116kbit/s. La qualité demandée n'est pas la qualité acquise.
+Les captures du premier établissent la scène ; le second sert exclusivement au
+découpage et ne contient pas The Jacket. Transcription locale et images de ce
+second fichier ont été revues : S2E5/S2E6/S2E10 ; voir `PLAN_TONY_RICHIE.md`.
+Les médias, réponses du fournisseur et transcriptions complètes restent privés.
+Les sources finales plus détaillées restent à acquérir par notre pipeline.
+
+Acquisition supplémentaire réussie : `Mc5qO4mnd2Q`,9,985s, **1920×1080 réel**,
+vidéo~3,043Mb/s. Huit captures natives sauvegardées ; le manteau sur le mari
+deLiliana et la réaction deRichie sont visibles, sans texte d'un autre monteur.
+Le détail des cheveux, du visage et du tissu est plus net que le don720p.
+C'est un vrai court passage1080p, pas une preuve de qualité de tout le long.
+
+### Historique des refus d'accès avant la capture
 
 La fin de `InM2zft-iQs` n'a pas pu être visionnée. Durée recoupée970–971s.
 Le lecteur public normal indique playabilityOK, jusqu'à1080p30, mais aucun
 frame ne décode : CDN et URL exacte du storyboard final refusésCONNECT403,
 confirmés par requests puiscurl avec proxy/TLS hérités. Deux requêtes Algrow
-distinctes échouent avec « YouTube proxy authentication failed » ; aucune
-reproduction fidèle de cette fin n'est établie. Le GAME REVIEW du pilote est
+distinctes échouent avec « YouTube proxy authentication failed » ; ces essais
+n'avaient pas permis d'établir sa disposition. Le GAME REVIEW du pilote était
 une proposition désormais rejetée, pas une observation de la référence.
 
 The Jacket sur la chaîne officielle HBO (`UHvUDYKrFmw`,217s) est la source
 prioritaire du nouveau sujet. Le lecteur annonce1080p30 ; une seule demande
-normale1080p10–20s échoue côté fournisseur. Ces métadonnées ne prouvent pas la
+normale1080p10–20s, puis une requête distincte vidéo entière échouent côté
+fournisseur. Ces métadonnées ne prouvent pas la
 qualité d'un fichier acquis. Le test Janice mesure1280×720 mais seulement
 ~0,687Mb/s vidéo : remplacer l'original, pas simplement l'agrandir.
 
