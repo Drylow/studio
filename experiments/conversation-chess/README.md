@@ -16,13 +16,15 @@ originaux anglais natifs 1280×720, sans sous-titres intégrés. C'est le maximu
 proposé à ce compte Naka ; les anciens clips compressés sont remplacés.
 Le [découpage actuel](tony-richie-source-map.json) comporte neuf extraits,
 sept cartes de chapitre et [40 analyses originales](tony-richie-long-timeline.json).
-Durée prévue : **15 min 11 s**. Richie ouvre réellement : Richie est Blanc,
-Tony est Noir pendant tout le film. Le master de scènes est assemblé et
-décodé intégralement ; la préparation du projet natif est en cours.
-**Le MP4 complet n'est pas encore livré.** Le précédent
+Durée réelle : **15 min 11 s**, 27 326 images. Richie ouvre réellement : Richie
+est Blanc, Tony est Noir pendant tout le film. Le master et l'export Kdenlive
+natif sont terminés ; décodage complet, contrôles audio et images du vrai film
+vérifiés. **Le MP4 et le kit sont livrés via GoFile et Discord** ; voir
+[la livraison et ses preuves](TONY_RICHIE_DELIVERY.md). Publication YouTube
+manuelle, titre et miniature proposés. Le précédent
 [draft de 37 coups](tony-richie-long-editorial-draft.json) reste une archive,
 pas le découpage utilisé. Les épisodes, repères de dialogue et accès restent privés.
-Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
+Le titre et la miniature sont dans le kit après le montage. Tony/Janice reste un test.
 Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
 reprennent le pion approuvé et présentent un format ouvert aux séries/animés.
 La [livraison Discord](DISCORD_DELIVERY.md) envoie les aperçus et paquets finaux

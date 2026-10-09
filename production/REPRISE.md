@@ -1,6 +1,11 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Sopranos — sources Naka acquises, long en préparation
+## Sopranos — premier long Tony/Richie livré
+
+- **Film 15 min 11 et kit : https://gofile.io/d/mdNDwQQ4**. Huit fichiers vérifiés,
+  envoi au Discord dédié confirmé (kit, crédits, miniature). YouTube manuel ;
+  titre/miniature proposés, aucun choix utilisateur présumé. Détails et reprise :
+  `experiments/conversation-chess/TONY_RICHIE_DELIVERY.md`.
 
 - S2E3, S2E6 et S2E8 téléchargés par la fonction hors ligne normale du compte.
   Anglais, 1280×720 natif, maximum proposé au compte, aucun sous-titre intégré.
@@ -16,8 +21,15 @@
   Le draft précédent à 37 coups reste une archive, pas le montage actuel.
 - Master privé : 17 126 images, 1280×720 à 30 fps, 253 102 330 octets,
   SHA `c506faebca8192bd46a72f23c63705dc8f34edce419ce609cc1c1fa92212b042`.
-  Décodage complet passé. Habillage/sons natifs en préparation ; **le MP4
-  complet n'est pas encore exporté, contrôlé ni livré**.
+  Décodage complet passé. **MP4 natif terminé et livré** : 27 326 images,
+  1920×1080p30, medium CRF17/AAC192, 600 210 017 octets ; SHA
+  `c7e81eccb7061b719f9e6939237c6b24342d07db5f581e94b8abffd40c23d047`.
+  Décodage A/V intégral sans erreur, 83 segments audio comparés à 0 ms de décalage,
+  40 bruitages uniques et fins de lecture silencieuses, pic estimé −4,9 dBFS.
+  Images finales des 40 analyses, 164 frontières, guides/chapitres/outro revues ;
+  limites explicites : images fixes et comparaison audio, aucune écoute humaine
+  complète ni lecture continue intégrale. Rapports/reçus privés sous
+  `output/conversation-chess/tony-richie-long-native/`.
 - Exception source720 volontaire et documentée : défaut1080 conservé,
   preuves explicites Naka exigées jusqu'au bundle Kdenlive. Les anciens clips
   compressés et les sources sans revue restent refusés. 40 contrôles de garde
@@ -28,10 +40,10 @@
   exacte du montage depuis un extrait : la charge et les graphismes comptent.
 - L'utilisateur a installé l'avatar sur sa chaîne et demande de ne plus le
   renvoyer. Le pion utilisé dans le film reste l'original approuvé. Livraison
-  finale prévue via GoFile + webhook dédié, publication YouTube manuelle.
+  finale effectuée via GoFile + webhook dédié, publication YouTube manuelle.
   Aucun changement du site ni des automatisations Cage/Pitch/TikTok.
 
-## Sopranos — décision actuelle après visionnage v3
+## Historique Sopranos — décisions après visionnage v3
 
 - **Nom de chaîne choisi : Scene Analysis Guy.** Le format couvre plusieurs
   séries/animés ; avatar = original carré du pionTony déjà approuvé, sans

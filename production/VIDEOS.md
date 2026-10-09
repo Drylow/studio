@@ -1,5 +1,23 @@
 # Journal des vidéos
 
+## Scene Analysis Guy — Tony contre Richie / The Jacket — 9 octobre 2026
+
+**Premier long terminé et livré : https://gofile.io/d/mdNDwQQ4**.
+15 min 11, neuf extraits/sept chapitres, 40 commentaires anglais sans voix off,
+17 accents comiques. Richie ouvre Blanc, Tony Noir. Sources Naka natives 720p,
+maximum proposé au compte, sans sous-titres intégrés ; graphismes/export 1080p30.
+Kdenlive/MLT natif, 27 326 images, medium CRF17/AAC192, 600 210 017 octets.
+Décodage complet sans erreur, 83 segments audio à 0 ms de décalage, 40 évaluations
+et silences vérifiés ; images finales des analyses/frontières/guides/bilan revues.
+Inspection fixe et contrôles techniques, pas d'écoute humaine complète prétendue.
+
+Huit fichiers GoFile vérifiés par taille/MD5/SHA ; Discord dédié confirme kit,
+crédits et miniature THE JACKET. Titre/miniature proposés, publication YouTube
+manuelle et aucune vérification ContentID. Les crédits musicaux restent dans
+la description, sans footer à l'écran. Preuves, empreinte et reprise dans
+`experiments/conversation-chess/TONY_RICHIE_DELIVERY.md`. Aucun changement au
+site ou aux automatismes Cage/Pitch/TikTok.
+
 ## Sopranos — aperçu intro/outro/SFX, après le testHD — 9 octobre2026
 
 **À valider avant le film10–15min :** https://gofile.io/d/5xFSD5af .

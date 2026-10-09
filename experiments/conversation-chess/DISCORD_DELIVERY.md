@@ -58,7 +58,18 @@ Le reçu local empêche de renvoyer un paquet identique dans le même salon.
 Un envoi incertain conserve `discord_pending.json` : ne pas relancer à l'aveugle.
 Le verrou partagé `work/discord.lock` évite les envois concurrents mélangés.
 
-## Première livraison réelle
+## Premier long livré
+
+Tony/Richie, 15 min 11, est terminé et livré :
+[film et kit GoFile](https://gofile.io/d/mdNDwQQ4).
+Huit fichiers vérifiés, puis message du salon dédié confirmé avec
+`Kit_publication.txt`, `MUSIC_CREDITS.txt` et `thumbnail.png`.
+Les reçus sont privés dans
+`output/conversation-chess/tony-richie-long-native/publication/`.
+Titre et miniature restent des propositions ; publication YouTube manuelle.
+Contrôles réellement effectués et limites : [fiche de livraison](TONY_RICHIE_DELIVERY.md).
+
+## Historique — première livraison réelle
 
 L'aperçu `outro-v5-clean` a été envoyé et confirmé : kittexte et crédits joints,
 lien du dossier GoFile déjà vérifié. Il ne représente que l'outro12secondes,

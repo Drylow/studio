@@ -19,8 +19,12 @@ opening footage and local English ASR. Neither a later first annotation nor
 the historical donation-only opener changes these assignments. The ratings
 are original editorial interpretations, not a chess engine result.
 
-The master is assembled and its full audio/video decode passed. Final native
-project preparation is running; a complete film has not yet been delivered.
+The native Kdenlive/MLT film is complete: 27,326 frames, 1080p30 graphics and
+native 720p footage, medium CRF17/AAC192. Full A/V decode and all 83 audio-segment
+comparisons passed. Actual final analysis, boundary, guide, chapter and outro
+frames were inspected. The film and eight-file publication kit are delivered
+via GoFile and the dedicated Discord; YouTube upload is manual, and titles
+and thumbnail remain proposals. See [delivery evidence](TONY_RICHIE_DELIVERY.md).
 The notes below retain the earlier research and abandoned source imports.
 
 ## Earlier research and imports
