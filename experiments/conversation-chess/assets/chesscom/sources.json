@@ -1,0 +1,68 @@
+{
+  "retrieved_at": "2026-10-09T14:26:35.887796+00:00",
+  "publisher": "Chess.com",
+  "reference_page": "https://www.chess.com/analysis",
+  "license": "Proprietary Chess.com assets; no open redistribution license asserted.",
+  "assets": [
+    {
+      "file": "brilliant.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "great.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "3e8fdffc83fa86d3c04f8406fc1b5aff4da13a2480dd668624d5b0f5cd102533",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "best.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "725fed63d29c8dad95b39f0b3a96297830ae5b4d69f894bdb7ddbdf2bd15887c",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "excellent.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "89501999bde4833e6ce79426ecb81657a6068ed7ac95a44ee6d3f926c7ec6b7c",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "good.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "e9af1fe8ef63e264ac49138cd7123c43c960c1ddc8137c15c459a47ddb996346",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "book.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "432c88c3833ca77deef82281af21e508d310868d3425a4a14702cffd03369ffd",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "inaccuracy.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "3b71d8e08ed15a03b513a76eb300ed4383ed1be3a4f4de4a1f9f906d85fde871",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "mistake.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "9402e42b24b87c0adc03d2045f0abe780e161c2b2be839e0a17ee21b44b96925",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "miss.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "a06fed5c943f70ee85551754a0f8799d26a1705134de1ea4593d86bc96d61239",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    },
+    {
+      "file": "blunder.svg",
+      "source": "https://www.chess.com/r2/client-packages/analysis/2026.9.8/shared.eager.DLqp4stWnK.chunk.js",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311",
+      "processing": "SVG group extracted; template class names flattened; vector geometry and fills unchanged"
+    }
+  ]
+}
