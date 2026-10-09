@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "verified_on": "2026-10-09",
-  "licensor": "Kevin MacLeod / incompetech.com",
-  "license_evidence": "The creator track page renders the selected ISRC from pieces.json and explicitly provides a Creative Commons Attribution 4.0 attribution code. Original MP3s were downloaded from the same creator domain.",
+  "licensor": "Per recording: Kevin MacLeod / Incompetech or Mixkit",
+  "license_evidence": "Track-specific creator pages, license URLs and hashes are verified. Archived Incompetech tracks require CC BY4.0 credit; Echoes is Mixkit Stock Music Free, with no attribution required by the official music catalogue.",
   "creator_catalogue_url": "https://incompetech.com/music/royalty-free/pieces.json",
   "tracks": [
     {
@@ -45,6 +45,21 @@
       "bytes": 3664410,
       "required_attribution": "\"Scheming Weasel (faster version)\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
       "changes": "Excerpted, mixed at adjusted volume and faded in/out for the guide and end card."
+    },
+    {
+      "id": "echoes",
+      "file": "echoes.mp3",
+      "title": "Echoes",
+      "composer": "Andrew Ev",
+      "source_url": "https://assets.mixkit.co/music/188/188.mp3",
+      "creator_page": "https://mixkit.co/free-stock-music/mood/suspenseful/",
+      "license": "Mixkit Stock Music Free License",
+      "license_url": "https://mixkit.co/license/#musicFree",
+      "license_evidence_url": "https://mixkit.co/free-stock-music/",
+      "attribution_required": false,
+      "sha256": "49842074dc06f05a40690c2b3af42bd32be76a5f6505a65cfe952b2fe1ccb5de",
+      "bytes": 9052021,
+      "changes": "16-second opening guide only, quiet gain and fades. Original clip audio continues alone; silent Subscribe ending."
     }
   ]
 }

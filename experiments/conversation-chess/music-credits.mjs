@@ -10,15 +10,17 @@ export async function writeMusicCredits(segments, directory) {
   const manifest = JSON.parse(await fs.readFile(new URL('./assets/music/manifest.json', import.meta.url), 'utf8'));
   const tracks = hashes.map(hash => {
     const track = manifest.tracks.find(t => t.sha256 === hash);
-    if (!track?.required_attribution || !track.creator_page) throw new Error('Music source needs verified attribution in assets/music/manifest.json.');
+    if (!track?.creator_page || !track.license_url || (!track.required_attribution && !(track.attribution_required === false && track.license_evidence_url))) throw new Error('Music source needs verified license evidence in assets/music/manifest.json.');
     return track;
   });
-  const text = tracks.map(t => `${t.required_attribution}\nSource: ${t.creator_page}`).join('\n\n')
-    + '\n\nMusic excerpts have been trimmed, mixed at adjusted volume and faded in/out.\n';
-  const file = path.join(directory, 'MUSIC_CREDITS.txt');
+  const credited = tracks.filter(t => t.required_attribution);
+  const text = credited.length ? credited.map(t => `${t.required_attribution}\nSource: ${t.creator_page}`).join('\n\n')
+    + '\n\nMusic excerpts have been trimmed, mixed at adjusted volume and faded in/out.\n'
+    : JSON.stringify({public_credit_required:false, tracks:tracks.map(t => ({title:t.title, composer:t.composer, source:t.creator_page, license:t.license, license_url:t.license_url, evidence:t.license_evidence_url, sha256:t.sha256}))}, null, 2);
+  const file = path.join(directory, credited.length ? 'MUSIC_CREDITS.txt' : 'MUSIC_LICENSES.json');
   await fs.writeFile(file, text, 'utf8');
   return {
-    placement: 'youtube-description-and-delivery-sidecar', file,
+    placement: credited.length ? 'youtube-description-and-delivery-sidecar' : 'local-license-record-only', file,
     sha256: createHash('sha256').update(text).digest('hex'),
     tracks: tracks.map(t => ({title:t.title, composer:t.composer, source:t.creator_page, license:t.license, license_url:t.license_url})),
   };

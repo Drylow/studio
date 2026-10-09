@@ -11,7 +11,7 @@
     "note": "Original is 1280x720. Marked technical preview only; replace and realign for final HD."
   },
   "source_in": 0,
-  "source_out": 191.6,
+  "source_out": 192,
   "intro_seconds": 16,
   "initial_control": 0.5,
   "initial_score_text": "0.0",
@@ -24,23 +24,15 @@
     "evidence": "At 0.52-5.42s Lelouch on the screen asks about using Damocles to dominate the world; source frame at 1s reviewed."
   },
   "analysis_background": "replay",
-  "outro_seconds": 12,
+  "outro_seconds": 2,
   "music": {
     "intro": {
-      "file": "assets/music/sneaky-snitch.mp3",
-      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
-      "title": "Sneaky Snitch",
-      "license": "CC BY 4.0",
-      "gain": 0.65,
-      "start_seconds": 66.104
-    },
-    "outro": {
-      "file": "assets/music/scheming-weasel-faster.mp3",
-      "sha256": "f2f20d0737560a2dec0d82119810757326b1eec7eae211f2d3e056e9754834a9",
-      "title": "Scheming Weasel (faster version)",
-      "license": "CC BY 4.0",
-      "gain": 0.85,
-      "start_seconds": 0
+      "file": "assets/music/echoes.mp3",
+      "title": "Echoes",
+      "license": "Mixkit Stock Music Free License",
+      "sha256": "49842074dc06f05a40690c2b3af42bd32be76a5f6505a65cfe952b2fe1ccb5de",
+      "gain": 0.12,
+      "start_seconds": 10
     }
   },
   "annotations": [
@@ -112,12 +104,13 @@
     }
   ],
   "outro_layout_reviewed": true,
-  "outro_summary": "Schneizel prepares to die. Lelouch changes the win condition: serve Zero. The debate was a recording, and the real attack was already on its way. By the end, Schneizel is protecting the opponent he meant to defeat. Five moves. One very unexpected recruitment.",
   "dialogue_gain": 0.65,
   "mascot": {
     "file": "assets/neutral-pawn.png",
     "overlay_file": "assets/neutral-pawn.png",
     "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
   },
-  "outro_review_evidence": "Neutral-pawn end card actually rendered and visually checked2026-10-09: no Tony portrait, summary contained, counts match five annotations. Local technical review, not final avatar approval."
+  "outro_review_evidence": "Subscribe card rendered and visually checked2026-10-09: centered white regular text on black, two seconds, no portrait, recap or credits. Last line Understood ends at191.34 according to local alignment; fade begins191.5 and ends192.0, before next speech at192.06. Final native render must be reviewed.",
+  "outro_style": "subscribe",
+  "ending_fade_seconds": 0.5
 }

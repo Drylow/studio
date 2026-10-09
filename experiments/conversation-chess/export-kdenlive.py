@@ -347,10 +347,10 @@ def generate(manifest_path, bundle):
         credits_source = Path(attribution["file"]).resolve(strict=True)
         if digest(credits_source) != attribution["sha256"]:
             raise ValueError("Music attribution file differs from the prepared project")
-        credits_destination = bundle / "MUSIC_CREDITS.txt"
+        credits_destination = bundle / credits_source.name
         if credits_source != credits_destination.resolve():
             shutil.copyfile(credits_source, credits_destination)
-        report["music_attribution"] = {**attribution, "file": "MUSIC_CREDITS.txt"}
+        report["music_attribution"] = {**attribution, "file": credits_destination.name}
     (bundle / "bundle-manifest.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     (bundle / "project-manifest.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     (bundle / "README.txt").write_text(

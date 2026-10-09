@@ -53,11 +53,17 @@ const dialogueGain = spec.dialogue_gain ?? 1;
 if (!Number.isFinite(dialogueGain) || dialogueGain <= 0 || dialogueGain > 1) throw new Error('dialogue_gain must be greater than 0 and at most 1.');
 if (dialogueGain !== 1 && !prepareProject && !validateOnly) throw new Error('Adjusted dialogue gain uses the native editor workflow: add --prepare-project.');
 const outroSeconds = spec.outro_seconds ?? 0;
-if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < 6 || outroSeconds > 20))) throw new Error('outro_seconds must be 0 or 6–20 seconds.');
+const outroStyle = spec.outro_style ?? 'recap';
+if (!['recap', 'subscribe'].includes(outroStyle)) throw new Error('outro_style must be recap or subscribe.');
+if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < (outroStyle === 'subscribe' ? 1 : 6) || outroSeconds > (outroStyle === 'subscribe' ? 5 : 20)))) throw new Error('Use 1–5 seconds for subscribe or 6–20 seconds for recap.');
+const endingFadeSeconds = spec.ending_fade_seconds ?? 0;
+if (!Number.isFinite(endingFadeSeconds) || endingFadeSeconds < 0 || endingFadeSeconds > 1.2 || !Number.isInteger(endingFadeSeconds * 30)) throw new Error('ending_fade_seconds must be 0–1.2 seconds aligned to 30fps.');
+if (endingFadeSeconds && !prepareProject && !validateOnly) throw new Error('Ending fades require native project preparation.');
+if (outroStyle === 'subscribe' && spec.music?.outro) throw new Error('The simple subscribe end card is silent.');
 if (!Number.isInteger(outroSeconds * 30)) throw new Error('outro_seconds must align to a 30fps frame.');
 if (spec.outro_subtitle != null && (typeof spec.outro_subtitle !== 'string' || spec.outro_subtitle.length > 70)) throw new Error('Supply a short outro_subtitle.');
 if (spec.outro_summary != null && (typeof spec.outro_summary !== 'string' || !spec.outro_summary.trim() || spec.outro_summary.length > 700)) throw new Error('Supply an original, nonempty outro_summary of at most 700 characters.');
-if (outroSeconds && spec.demo !== true && !args.includes('--allow-legacy-opening') && !spec.outro_summary) throw new Error('Real recaps require an original outro_summary about their own reviewed scene.');
+if (outroSeconds && outroStyle === 'recap' && spec.demo !== true && !args.includes('--allow-legacy-opening') && !spec.outro_summary) throw new Error('Real recaps require an original outro_summary about their own reviewed scene.');
 if ((outroSeconds || spec.music) && !prepareProject && !validateOnly) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
 if ((outroSeconds || spec.music) && refreshProjectIntro) throw new Error('Build a complete project when adding music or a recap.');
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
@@ -266,7 +272,7 @@ try {
     await fs.mkdir(outroFrameDirectory, { recursive: true });
     for (let frame = 0; frame < outroSeconds * graphicsFps; frame++) {
       const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), {
-        phase:'outro', t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, summary:spec.outro_summary,
+        phase:'outro', style:outroStyle, t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, summary:spec.outro_summary,
       });
       await fs.writeFile(path.join(outroFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
@@ -326,18 +332,26 @@ if (prepareProject) {
   // preset. Superfast preserves the reviewed frame geometry and CRF while avoiding
   // redundant preparation work; the larger files are an intentional tradeoff.
   const videoEncoding = ['-an', '-c:v', 'libx264', '-preset', 'superfast', '-crf', '17', '-threads', '4', '-pix_fmt', 'yuv420p', '-r', String(fps)];
-  function prepareNormal(until, overlayFile) {
+  function prepareNormal(until, overlayFile, fadeOut = 0) {
     const duration = until - projectCursor;
     if (duration <= 0) return;
     const label = `project-source-${String(projectSegments.length).padStart(3, '0')}`;
     const backgroundFile = path.join(output, label + '.mkv'), dialogueAudioFile = path.join(output, label + '-dialogue.wav');
-    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', sourceVideoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
+    if (fadeOut > duration) throw new Error('Ending fade exceeds the last source segment.');
+    const videoFilter = sourceVideoFilter + (fadeOut ? `,fade=t=out:st=${duration-fadeOut}:d=${fadeOut}` : '');
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', videoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
+    let graphicsFile = overlayFile, graphicsType = 'alpha_png';
+    if (fadeOut) {
+      graphicsFile = path.join(output, label + '-graphics.mov'); graphicsType = 'alpha_mov';
+      run(ffmpeg, ['-hide_banner','-loglevel','error','-y','-loop','1','-framerate',String(fps),'-i',overlayFile,
+        '-vf',`format=argb,fade=t=out:st=${duration-fadeOut}:d=${fadeOut}:alpha=1`,'-an','-c:v','qtrle','-threads','2','-t',String(duration),graphicsFile]);
+    }
     const audioInput = hasAudio ? ['-ss', String(projectCursor), '-i', source] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
     run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
-      `aresample=48000,volume=${dialogueGain},apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - .035)}:d=0.035,atrim=end_sample=${Math.round(duration * 48000)}`,
+      `aresample=48000,volume=${dialogueGain},apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - (fadeOut || .035))}:d=${fadeOut || .035},atrim=end_sample=${Math.round(duration * 48000)}`,
       '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', dialogueAudioFile]);
     addProjectSegment({ kind: 'source', duration, source_in: projectCursor, source_out: until, background_file: backgroundFile,
-      graphics_file: overlayFile, graphics_type: 'alpha_png', dialogue_audio_file: dialogueAudioFile, dialogue_gain:dialogueGain, control: projectControl, score_text: projectScore });
+      graphics_file: graphicsFile, graphics_type: graphicsType, dialogue_audio_file: dialogueAudioFile, dialogue_gain:dialogueGain, fade_out_seconds:fadeOut, control: projectControl, score_text: projectScore });
     projectCursor = until;
   }
   let normalOverlay = overlays[2];
@@ -357,13 +371,13 @@ if (prepareProject) {
       graphics_file: alphaMovie(annotationFrames[i], a.hold_seconds, `project-graphics-analysis-${i}`), graphics_type: 'alpha_mov', graphics_frames: annotationFrames[i], sfx_file: sfxFile });
     projectControl = a.control_after; projectScore = a.score_text; normalOverlay = overlays[4 + i * 2];
   }
-  prepareNormal(end, normalOverlay);
+  prepareNormal(end, normalOverlay, endingFadeSeconds);
   if (outroSeconds) {
     const backgroundFile = path.join(output, 'project-background-outro.png');
-    await fs.copyFile(path.join(outroFrameDirectory,'frame_00030.png'),backgroundFile);
+    await fs.copyFile(path.join(outroFrameDirectory, outroStyle === 'subscribe' ? 'frame_00000.png' : 'frame_00030.png'),backgroundFile);
     addProjectSegment({kind:'outro', duration:outroSeconds, background_file:backgroundFile,
       graphics_file:alphaMovie(outroFrameDirectory,outroSeconds,'project-graphics-outro'), graphics_type:'alpha_mov',
-      graphics_frames:outroFrameDirectory, recap_counts:recapCounts, recap_summary:spec.outro_summary, ...(await musicPart('outro',outroSeconds))});
+      graphics_frames:outroFrameDirectory, outro_style:outroStyle, recap_counts:recapCounts, recap_summary:spec.outro_summary, ...(await musicPart('outro',outroSeconds))});
   }
   const projectManifest = path.join(output, 'project-manifest.json');
   const musicAttribution = await writeMusicCredits(projectSegments, output);

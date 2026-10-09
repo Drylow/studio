@@ -102,6 +102,15 @@ window.ConversationChess = (() => {
   }
   function outro(options) {
     const elapsed = options.t || 0, duration = options.duration || 12;
+    if (options.style === 'subscribe') {
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = '#000000'; ctx.fillRect(0, 0, W, H);
+      ctx.save();
+      ctx.globalAlpha = clamp((elapsed - .1) / .18) * clamp((duration - elapsed) / .3);
+      text('Subscribe', W / 2, H / 2 + 23, 64, '#ffffff', 400, 'center');
+      ctx.restore();
+      return;
+    }
     const counts = options.counts || {};
     const panelWidth = 742;
     ctx.clearRect(0, 0, W, H);

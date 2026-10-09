@@ -1,5 +1,24 @@
 # Music credits and source licence
 
+## Current anime opening: no public credit
+
+**Echoes — Andrew Ev**, Mixkit item188, was verified on9October2026 on
+the [official suspenseful catalogue](https://mixkit.co/free-stock-music/mood/suspenseful/).
+The [music catalogue](https://mixkit.co/free-stock-music/) explicitly permits use
+without attribution. The [Stock Music Free License](https://mixkit.co/license/#musicFree)
+permits commercial and non-commercial web/social videos, including YouTube.
+The [terms](https://mixkit.co/terms/) also apply. This is not a promise against claims.
+The sixteen-second guide uses a quiet excerpt from10s, gain0.12, with fades;
+there is no added music during dialogue, analysis pauses or Subscribe.
+
+Download locally with `python experiments/conversation-chess/fetch-music.py echoes`.
+The original MP3 is ignored by Git; its exact URL and hash are in the manifest.
+The native project preserves a local `MUSIC_LICENSES.json` record, with no
+public-credit requirement. The following attribution rules still apply to
+older projects which actually use the MacLeod tracks.
+
+## Archived reference music
+
 These are original MP3s downloaded from Kevin MacLeod's own Incompetech catalogue, not audio extracted from another creator's video. The creator pages provide a **Creative Commons Attribution 4.0** licence and attribution text for both tracks. Source URLs and SHA-256 hashes are in `manifest.json`.
 
 - [Sneaky Snitch — ISRC USUAN1100772](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772)
