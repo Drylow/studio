@@ -74,6 +74,13 @@ card separates the later discovery from the donation. This material supports
 stretched into 15 minutes. Additional distinct intact dialogue requires its
 own acquisition and quality review. No new final export is part of this step.
 
+The next bounded source lot is complete: alternate donation `PvKkpnT2sEs`
+delivered1280×720/162.93s; garbage warning `JQlpKya4HtM` delivered640×360/106.12s.
+Neither is approved for final quality. The advertisedS2E12 meeting
+`js7lnh8JrZw` timed out after150s without a file; no claim of its actual contents.
+See [the reproducible import contract](SOURCE_IMPORT.md). The long source set
+remains incomplete; this does not undo the successful donation/payoff imports.
+
 ## Actual compressed-source review
 
 Public source:

@@ -31,6 +31,11 @@
   uniquement pour le découpage. Il ne contient pas The Jacket. ASR locale et
   60captures examinées : S2E5, S2E6 et S2E10, pas un seul échange continu.
   Les fichiers et transcriptions intégrales restent privés dans `/tmp`.
+- Lot suivant clos : autre don `PvKkpnT2sEs` réellement720p/162,93s/~1,044Mb/s,
+  warning `JQlpKya4HtM` réellement360p/106,12s/~0,336Mb/s, donc nonfinals.
+  Réunion `js7lnh8JrZw` : délai150s dépassé, aucun fichier, aucun retry.
+  Total cinqMP4 acquis ; seule la réaction courte est1080p. Contrat/procédure
+  et limites sauvegardés dans `experiments/conversation-chess/SOURCE_IMPORT.md`.
 - Source officielle HBO `UHvUDYKrFmw`,217s :1080p30 annoncé, aucun vrai fichier
   acquis. Les requêtes distinctes bornée10–20s et vidéo entière échouent.
   `omfDQWEka6A`, `hsw8wv44e7E` et `wurP8X3b9cI` échouent également, sans retry

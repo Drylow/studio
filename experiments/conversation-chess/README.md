@@ -13,6 +13,8 @@ La scène où Richie offre la veste est désormais téléchargée en720p réel e
 le court passage où il la découvre sur quelqu'un d'autre en **1920×1080 réel**.
 Les autres sources finales de meilleure qualité restent à obtenir par notre
 pipeline, sans demander à l'utilisateur de fournir les clips.
+La [méthode d'import vérifiée](SOURCE_IMPORT.md) conserve le contrat API et
+les contrôles réels, sans clés ni fichiers vidéo dans Git.
 
 **Premier personnage qui parle = blanc**, pour toutes les vidéos. La première
 réplique peut être sans annotation. Renseigner `opening:{speaker:"white",
