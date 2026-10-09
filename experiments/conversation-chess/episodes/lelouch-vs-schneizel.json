@@ -1,0 +1,95 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Lelouch vs Schneizel Analysed like Chess | Code Geass",
+  "demo": false,
+  "source_reviewed": true,
+  "source_sha256": "0ddea1a0e759801558e221b3e1964c328c3d4a8dbab7799c710a31d500577717",
+  "source_url": "https://www.youtube.com/watch?v=xHmKbGeVL8g",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": false,
+    "note": "Original is 1280x720. Marked technical preview only; replace and realign for final HD."
+  },
+  "source_in": 0,
+  "source_out": 191.6,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "initial_score_text": "0.0",
+  "white_label": "Lelouch",
+  "black_label": "Schneizel",
+  "opening": {
+    "speaker": "white",
+    "label": "Lelouch",
+    "reviewed": true,
+    "evidence": "At 0.52-5.42s Lelouch on the screen asks about using Damocles to dominate the world; source frame at 1s reviewed."
+  },
+  "analysis_background": "replay",
+  "outro_seconds": 0,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "annotations": [
+    {
+      "source_at": 14.95,
+      "rating": "inaccuracy",
+      "speaker": "black",
+      "score_text": "+0.7",
+      "control_after": 0.437331,
+      "comment": "Schneizel calls human nature a matter of opinion. His peace plan needs people to stop changing. That is a risky assumption to build your endgame on.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    },
+    {
+      "source_at": 102.65,
+      "rating": "blunder",
+      "speaker": "black",
+      "score_text": "+2.5",
+      "control_after": 0.28905,
+      "comment": "Schneizel is ready to die. But he has decided what winning means for Lelouch without checking. That assumption is about to become expensive.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    },
+    {
+      "source_at": 112.95,
+      "rating": "great",
+      "speaker": "white",
+      "score_text": "+2.5",
+      "control_after": 0.28905,
+      "comment": "Lelouch orders Schneizel to serve Zero. Killing him would waste a useful piece. Taking control wins the position and keeps the piece.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    },
+    {
+      "source_at": 131.7,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+8.0",
+      "control_after": 0.053151,
+      "comment": "Schneizel was arguing with a recording. Lelouch predicted his answers and used the debate to conceal his approach. The conversation was the decoy.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    },
+    {
+      "source_at": 157.7,
+      "rating": "best",
+      "speaker": "white",
+      "score_text": "+8.0",
+      "control_after": 0.053151,
+      "comment": "Schneizel shoots Diethard to protect Lelouch. The enemy piece has changed sides. Diethard notices the new team arrangement one move too late.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    }
+  ]
+}

@@ -3,14 +3,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createRequire } from 'node:module';
+import { mediaBinary, loadChromium, browserOptions } from './runtime.mjs';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
-const require = createRequire(path.join(root, 'frontend/package.json'));
-const { chromium } = require('playwright');
+const ffmpeg = mediaBinary('ffmpeg');
+const ffprobe = mediaBinary('ffprobe');
 const args = process.argv.slice(2);
 function option(name, fallback) {
   const i = args.indexOf(name);
@@ -18,7 +18,7 @@ function option(name, fallback) {
   if (!args[i + 1] || args[i + 1].startsWith('--')) throw new Error(`Missing value after ${name}`);
   return args[i + 1];
 }
-const output = path.resolve(option('--out', '/tmp/edgerunners-conversation-chess'));
+const output = path.resolve(option('--out', path.join(root, 'work/conversation-chess/intro')));
 const introOnly = true;
 const fps = Number(option('--fps', '30'));
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
@@ -44,8 +44,7 @@ for (const rating of ratingSchema.categories) {
   if (createHash('sha256').update(bytes).digest('hex') !== rating.icon_sha256) throw new Error(`Official icon hash mismatch: ${rating.id}`);
   iconAssets[rating.id] = `data:image/svg+xml;base64,${bytes.toString('base64')}`;
 }
-const browser = await chromium.launch({ executablePath: option('--chromium', '/usr/bin/chromium'), headless: true,
-  args: ['--disable-dev-shm-usage'] });
+const browser = await loadChromium().launch(browserOptions(option('--chromium', '')));
 try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   // Offline synthetic content: prohibit all network access during the render.
@@ -69,10 +68,10 @@ function command(bin, cmd) {
   if (result.status !== 0) throw new Error(`${bin} exited ${result.status}`);
 }
 const video = path.join(output, 'preview.mp4');
-command('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'warning', '-y', '-framerate', String(fps),
+command(ffmpeg, ['-hide_banner', '-loglevel', 'warning', '-y', '-framerate', String(fps),
   '-i', path.join(output, 'frames/frame_%05d.png'), '-frames:v', String(Math.round(fps * seconds)),
   '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-an', video]);
-command('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'warning', '-y', '-i', video,
+command(ffmpeg, ['-hide_banner', '-loglevel', 'warning', '-y', '-i', video,
   '-vf', `fps=8/${seconds},scale=640:360,tile=4x2:padding=8:margin=8:color=0x161a1e`, '-frames:v', '1',
   '-update', '1',
   path.join(output, 'contact-sheet.jpg')]);

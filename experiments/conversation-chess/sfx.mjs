@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { mediaBinary } from './runtime.mjs';
 import { randomUUID } from 'node:crypto';
 
 const execute = promisify(execFile);
@@ -21,14 +22,14 @@ async function run(bin, args) {
 }
 
 function localPath(value, name) {
-  if (typeof value !== 'string' || !value.trim() || value.includes('\0') || /^[a-z][a-z0-9+.-]*:/i.test(value)) {
+  if (typeof value !== 'string' || !value.trim() || value.includes('\0') || (!path.isAbsolute(value) && /^[a-z][a-z0-9+.-]*:/i.test(value))) {
     throw new Error(`${name} must be a local filesystem path.`);
   }
   return value;
 }
 
 async function probe(file) {
-  const info = JSON.parse(await run('/usr/bin/ffprobe', [
+  const info = JSON.parse(await run(mediaBinary('ffprobe'), [
     '-v', 'error', '-protocol_whitelist', 'file,pipe', '-select_streams', 'a:0',
     '-show_streams', '-show_format', '-of', 'json', file,
   ]));
@@ -205,7 +206,7 @@ export async function renderAnalysisAudio({ manifest, annotation, schema, output
     + `alimiter=limit=0.7943282347242815:level=false:attack=1:release=50:latency=true,`
     + `apad=whole_len=${samples},atrim=end_sample=${samples},asetpts=PTS-STARTPTS[out]`);
   try {
-    await run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-nostdin', '-y', ...inputs,
+    await run(mediaBinary('ffmpeg'), ['-hide_banner', '-loglevel', 'error', '-nostdin', '-y', ...inputs,
       '-filter_complex', filters.join(';'), '-map', '[out]', '-c:a', 'pcm_s16le',
       '-ar', String(sampleRate), '-ac', '2', '-f', 'wav', temporary]);
     const audio = await probe(temporary);

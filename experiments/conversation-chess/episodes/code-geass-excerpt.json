@@ -1,0 +1,51 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Code Geass \u2014 technical excerpt",
+  "demo": false,
+  "source_reviewed": true,
+  "source_sha256": "0ddea1a0e759801558e221b3e1964c328c3d4a8dbab7799c710a31d500577717",
+  "source_url": "https://www.youtube.com/watch?v=xHmKbGeVL8g",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": false,
+    "note": "Original is 1280x720. Marked technical preview only; replace and realign for final HD."
+  },
+  "source_in": 0,
+  "source_out": 19.95,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "initial_score_text": "0.0",
+  "white_label": "Lelouch",
+  "black_label": "Schneizel",
+  "opening": {
+    "speaker": "white",
+    "label": "Lelouch",
+    "reviewed": true,
+    "evidence": "At 0.52-5.42s Lelouch on the screen asks about using Damocles to dominate the world; source frame at 1s reviewed."
+  },
+  "analysis_background": "replay",
+  "outro_seconds": 0,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "annotations": [
+    {
+      "source_at": 14.95,
+      "rating": "inaccuracy",
+      "speaker": "black",
+      "score_text": "+0.7",
+      "control_after": 0.437331,
+      "comment": "Schneizel calls human nature a matter of opinion. His peace plan needs people to stop changing. That is a risky assumption to build your endgame on.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true
+    }
+  ]
+}
