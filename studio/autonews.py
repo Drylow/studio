@@ -520,7 +520,8 @@ def _thumbnail(tools, folder, ch, plan, photos):
     refs = [Path(p["file"]).read_bytes() for p in chosen]
     refs.append(_style_only())
     last = None
-    for _ in range(2):
+    # Night of 9 Oct: two good stories lost to one extra face in two tries; give it four.
+    for _ in range(4):
         blob = tools.image(prompt, refs)
         im = Image.open(io.BytesIO(blob)).convert("RGB").resize((1280, 720))
         out = io.BytesIO()
@@ -534,7 +535,8 @@ def _thumbnail(tools, folder, ch, plan, photos):
                             "type": "text",
                             "text": f'Check this YouTube thumbnail. Is the big text exactly "{line1} {line2}" with no '
                             f"misspelling and no extra words, are exactly {count} people visible, with no logos, no "
-                            "brand names and no distorted faces? "
+                            "brand names and no distorted faces? A league or promotion name written in the big text "
+                            "(UFC, Premier League...) is allowed: only logos and brand marks drawn in the picture count. "
                             'Return JSON {"ok": true|false, "people_visible": n, "problem": "..."}.',
                         },
                         {
