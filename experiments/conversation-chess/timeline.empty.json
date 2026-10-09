@@ -5,7 +5,10 @@
   "source_sha256": "",
   "source_in": null,
   "source_out": null,
-  "intro_seconds": 12,
-  "initial_control": "balanced",
-  "annotations": []
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "annotations": [],
+  "black_label": "Tony",
+  "white_label": "Other speaker",
+  "analysis_background": "replay"
 }

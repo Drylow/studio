@@ -4,24 +4,41 @@
   "source_reviewed": false,
   "source_in": 0,
   "source_out": 9,
-  "intro_seconds": 12,
-  "initial_control": "balanced",
+  "intro_seconds": 16,
+  "initial_control": 0.5,
   "annotations": [
     {
-      "source_at": 3,
-      "hold_seconds": 3,
-      "rating": "brilliant",
+      "source_at": 2,
+      "hold_seconds": 4,
+      "rating": "great",
       "comment": "Layout test only.",
-      "control_after": "tony",
-      "reviewed": false
+      "control_after": 0.5,
+      "reviewed": false,
+      "speaker": "black",
+      "replay_seconds": 3
+    },
+    {
+      "source_at": 4,
+      "hold_seconds": 4.5,
+      "rating": "good",
+      "comment": "Good overlay test.",
+      "control_after": 0.42,
+      "reviewed": false,
+      "speaker": "black",
+      "replay_seconds": 3
     },
     {
       "source_at": 6,
-      "hold_seconds": 3.5,
-      "rating": "blunder",
-      "comment": "Second overlay test.",
-      "control_after": "ralph",
-      "reviewed": false
+      "hold_seconds": 8,
+      "rating": "inaccuracy",
+      "comment": "This is a synthetic layout test, not a line from The Sopranos. The reply gives away a little ground: a small misstep, not a spectacular defeat. The moving background replays the preceding source without skipping any dialogue.",
+      "control_after": 0.35,
+      "reviewed": false,
+      "speaker": "black",
+      "replay_seconds": 3
     }
-  ]
+  ],
+  "black_label": "Tony",
+  "white_label": "Ralph",
+  "analysis_background": "replay"
 }

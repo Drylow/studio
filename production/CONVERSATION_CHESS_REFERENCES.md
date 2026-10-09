@@ -40,14 +40,75 @@ directement**, en 176 × 176 puis 800 × 800 pixels. Il n'est pas une capture de
 vidéo. Aucun fichier de cet avatar ni extrait de la référence n'est ajouté au
 dépôt public.
 
-**Aucune vidéo de référence n'a pu être visionnée directement lors de cette
-étude.** Les essais de téléchargement ont échoué ; la lecture anonyme sur le
-VPS a donné un écran de connexion ou de contrôle anti-bot. Aucun contournement
-de ce contrôle n'a été effectué. Par conséquent, il n'y a pas de preuve directe
-de la typographie des panneaux, des animations, des temps de pause, du placement
-précis de la mascotte ou du traitement sonore des vidéos. Une description du
-créateur ou un commentaire de spectateur reste une source distincte de notre
-propre vision et écoute.
+**Mise à jour : les 25 premières secondes de « Business with Tuco » ont été
+récupérées et leurs images examinées directement.** La requête normale Algrow
+`download-video`, JSON `format=video`, `quality=360p`, `start=0`, `end=25`, a
+répondu HTTP 200 après environ 73 s. Le fichier mesure 640 × 360, dure 25,033 s
+et contient vidéo et audio. Le média et les captures restent dans `/tmp`.
+
+Les essais précédents avaient échoué ; le lecteur anonyme sur le VPS montrait
+un contrôle anti-bot. Ce résultat ultérieur vient du contrat documenté de l'API,
+sans contourner ce contrôle. Il établit le vrai guide et le début de la scène,
+**pas le rythme des annotations de toute la vidéo**. L'audio de cet extrait n'a
+pas été écouté. Ne pas confondre une image regardée, une description publiée et
+une écoute effective.
+
+### Dispositif réellement observé dans cet extrait
+
+- Environ 0–6,5 s : « Annotation Symbols Guide », sur une image de série
+  assombrie. Titre blanc en caractères à chasse fixe, petit pion Walter près du
+  titre, deux colonnes de six et cinq catégories avec icônes rondes colorées.
+- Environ 7–14 s : écran distinct « What is the Evaluation Bar? », texte blanc
+  sur image assombrie et barre de démonstration **à gauche**.
+- Vers 15 s : fondu noir ; vers 16 s : début de la scène.
+- Pendant la scène, la barre est **à droite**, noir au-dessus et blanc en dessous.
+  Vers 21 s, noms des camps et petits portraits apparaissent.
+
+Les onze catégories visibles sont **Brilliant (!!), Great (!), Best (étoile),
+Excellent (pouce), Good (coche), Book (livre), Blunder (??), Miss (croix),
+Mistake (?), Inaccuracy (?!), Interesting (!?)**. Forced, Checkmate et Draw
+ne figurent pas dans ce guide ; des demandes en commentaire ne prouvent pas
+leur présence à l'écran.
+
+Le second écran décrit un départ à égalité, des camps noir/blanc indépendants
+de l'ordre de parole, Best/Great sans déplacement, Book avec un petit avantage,
+Brilliant avec un gain et les autres grades avec une perte pour le locuteur.
+Une tierce personne ne compte que si sa parole affecte un des camps principaux.
+La barre dessinée dans ce guide n'est pas toujours à égalité : distinguer
+l'explication écrite de l'exemple affiché.
+
+Notre guide adapte ces deux pages, les onze catégories et la barre à droite
+avec le pion Tony approuvé, des définitions rédigées pour notre analyse et des
+icônes vectorielles originales. L'ancien panneau générique à quatre cartes a
+été rejeté et remplacé. Le rendu technique ne prouve pas encore la qualité
+d'un montage Sopranos de deux minutes.
+
+### Annotations examinées ensuite : extrait 25–100 secondes
+
+Une deuxième requête normale a livré un extrait de 75,166 s en 640 × 360,
+avec vidéo et audio. Ses images montrent maintenant les analyses dans la scène :
+grade et icône **en haut à gauche**, pion Walter **en bas à gauche**, grande
+bulle blanche arrondie avec pointe vers le pion, texte noir révélé progressivement.
+La scène est floutée et assombrie pendant ces bulles ; la barre à droite reste
+visible. Les paragraphes expliquent le choix, pas seulement le nom du grade.
+
+Le fond ne reste pas sur une seule image : il reprend au ralenti un passage
+juste précédent. Des correspondances visuelles et comparaisons normalisées
+hors overlays établissent trois exemples : passage d'analyse 50,5–56 s versus
+scène claire 42,73–46,5 s, 65,5–69,5 s versus 60,6–61,77 s, et 82,5–86 s versus
+75,9–77,87 s. Ce sont des mesures sur cet extrait, pas une règle universelle
+sur toutes les vidéos de la chaîne.
+
+L'ASR locale retrouve les dialogues entre les bulles, pas dans les cinq bulles
+Book examinées. Quatre maintiens du texte sont quasi muets (environ −72 dBFS),
+alors que la révélation du texte comporte des transitoires. Cette mesure
+établit une pause de dialogue dans ces exemples ; elle ne remplace pas une
+écoute humaine ni n'identifie tous les sons de la vidéo.
+
+Le pilote adapte ce procédé : relecture muette et ralentie des dernières
+secondes de sa propre scène derrière la bulle, puis reprise au même repère
+du dialogue. Ne pas supprimer les répliques sous un commentaire ni présenter
+une image figée ou un simple bandeau noir comme ce dispositif observé.
 
 ## Comparaison des deux chaînes
 
@@ -59,7 +120,7 @@ propre vision et écoute.
 | Durées des longs | 8:40–20:34, médiane 16:11 | 3:22–9:45, médiane 4:48,5 |
 | Construction annoncée | Une confrontation ou un arc réunissant plusieurs scènes | Principalement une scène et un duel |
 | Guide initial documenté | 16–18 secondes dans les deux longs les plus récents | Non établi par les données consultées |
-| Mascotte | Avatar pion Walter réellement regardé ; présence dans les vidéos non vérifiée | Non vérifiée |
+| Mascotte | Avatar regardé et petit pion constaté dans le vrai guide | Non vérifiée |
 | Déclinaisons courtes | 17 Shorts de 35–124 secondes, issus des longs | Aucun Short retrouvé dans le catalogue étudié |
 | Sopranos | Aucun upload retrouvé | Aucun upload retrouvé |
 
@@ -103,7 +164,8 @@ est explicitement nommé « Deleted Scene ».
 **Skyler wants a divorce** regroupe trois épisodes : S03E01 à **0:00**, S03E02
 à **5:53**, S03E03 à **10:41**. Ces timecodes viennent des descriptions
 effectivement lues. Ils établissent le découpage annoncé ; le contenu exact
-du guide et les plans restent à vérifier dans le média.
+du guide et les plans de ce long restent à vérifier dans le média. Le guide de
+« Business with Tuco » a depuis été examiné directement comme décrit plus haut.
 
 ### Avatar regardé directement
 

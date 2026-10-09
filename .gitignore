@@ -68,3 +68,6 @@ standalone/pc_agent/config.json
 standalone/pc_agent/agent.log
 tiktok_engine/videos/*/art_review.jpg
 tiktok_engine/node_modules/
+
+# Private conversation-analysis footage and rendered previews
+output/conversation-chess/

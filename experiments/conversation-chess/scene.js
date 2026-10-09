@@ -1,236 +1,152 @@
-// Original, silent layout study. No scene footage, dialogue recreation or external assets.
+// Offline conversation-review graphics. Original vector icons; approved PNG stays unchanged.
 window.ConversationChess = (() => {
-  const W = 1920, H = 1080;
-  const C = { bg: '#161a1e', panel: '#20262b', ivory: '#f3eddf', muted: '#9ca7ae',
-    line: '#38434b', teal: '#73d1ba', amber: '#e4b661', red: '#e77870', light: '#badad5' };
-  const canvas = document.querySelector('canvas');
+  const W = 1920, H = 1080, canvas = document.querySelector('canvas');
   const ctx = canvas.getContext('2d', { alpha: true });
+  const schema = window.ConversationRatingSchema;
+  if (!schema?.categories?.length) throw new Error('Load ratings.json before scene.js.');
+  const ratings = Object.fromEntries(schema.categories.map(v => [v.id, v]));
   const clamp = v => Math.max(0, Math.min(1, v));
-  const smooth = v => { v = clamp(v); return v * v * (3 - 2 * v); };
-  const mix = (a, b, v) => a + (b - a) * v;
-  let tony = null;
-
-  function round(x, y, w, h, r = 22, color = C.panel, stroke = null) {
-    ctx.beginPath(); ctx.roundRect(x, y, w, h, r); ctx.fillStyle = color; ctx.fill();
-    if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = 2; ctx.stroke(); }
-  }
-  function text(s, x, y, size, color = C.ivory, weight = 400, align = 'left', family = 'Arial') {
+  let tony = null, tonyOverlay = null, background = null;
+  function text(s, x, y, size, color = '#ffffff', weight = 700, align = 'left', family = 'Arial') {
     ctx.font = `${weight} ${size}px ${family}`; ctx.textAlign = align;
     ctx.textBaseline = 'alphabetic'; ctx.fillStyle = color; ctx.fillText(s, x, y);
   }
-  function line(x1, y1, x2, y2, color = C.line, width = 2) {
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
-    ctx.strokeStyle = color; ctx.lineWidth = width; ctx.stroke();
-  }
-  function dot(x, y, r, color) {
-    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill();
-  }
-  function badge(mark, x, y, color, size = 88) {
-    round(x, y, size, size, size * .28, color);
-    // Each label has a distinct mark: the artwork does not reuse a platform icon.
-    text(mark, x + size / 2, y + size * .70, size * .55, C.bg, 800, 'center');
-  }
-  function pawn(x, y, scale, color, outline = C.bg) {
-    ctx.save(); ctx.translate(x, y); ctx.scale(scale, scale);
-    ctx.fillStyle = color; ctx.strokeStyle = outline; ctx.lineWidth = 4;
-    const paths = [
-      () => { ctx.beginPath(); ctx.arc(70, 32, 27, 0, 2 * Math.PI); },
-      () => { ctx.beginPath(); ctx.roundRect(39, 66, 62, 16, 7); },
-      () => { ctx.beginPath(); ctx.moveTo(52, 82); ctx.lineTo(88, 82); ctx.bezierCurveTo(87, 120, 98, 152, 118, 178); ctx.lineTo(22, 178); ctx.bezierCurveTo(44, 144, 53, 122, 52, 82); ctx.closePath(); },
-      () => { ctx.beginPath(); ctx.roundRect(15, 177, 110, 24, 10); },
-      () => { ctx.beginPath(); ctx.roundRect(7, 200, 126, 21, 9); }
-    ];
-    for (const path of paths) { path(); ctx.fill(); ctx.stroke(); }
-    ctx.restore();
+  function lines(s, x, y, size, color, leading = size * 1.2, family = 'Arial', align = 'left') {
+    String(s).split('\n').forEach((row, i) => text(row, x, y + i * leading, size, color, 700, align, family));
   }
   function imageContain(image, x, y, w, h) {
     const s = Math.min(w / image.width, h / image.height);
     const nw = image.width * s, nh = image.height * s;
-    ctx.drawImage(image, x + (w - nw) / 2, y + h - nh, nw, nh);
+    ctx.drawImage(image, x + (w - nw) / 2, y + (h - nh) / 2, nw, nh);
   }
-  function backdrop() {
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W, H);
-    const g = ctx.createRadialGradient(220, 20, 20, 500, 250, 1000);
-    g.addColorStop(0, 'rgba(89,141,128,.11)'); g.addColorStop(1, 'rgba(89,141,128,0)');
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-    line(90, 1014, 1830, 1014);
-  }
-  function legend(t) {
-    backdrop();
-    // The first frame already carries the headline; only the cards ease in.
-    ctx.save();
-    text('THE CONVERSATION, REVIEWED.', 112, 123, 27, C.teal, 700);
-    text('Every line is a move.', 106, 231, 92, C.ivory, 800);
-    text('A quick guide before the first exchange.', 112, 290, 32, C.muted);
-    const items = [
-      { name: 'Brilliant', mark: '!!', color: C.teal,
-        a: 'Turns pressure into', b: 'an unexpected advantage.' },
-      { name: 'Best', mark: '!', color: C.light,
-        a: 'The strongest response', b: 'in the moment.' },
-      { name: 'Mistake', mark: '?', color: C.amber,
-        a: 'Gives up ground', b: 'without gaining much back.' },
-      { name: 'Blunder', mark: '??', color: C.red,
-        a: 'Hands the other side', b: 'control of the exchange.' }
-    ];
-    items.forEach((v, i) => {
-      const x = 112 + (i % 2) * 874, y = 354 + Math.floor(i / 2) * 231;
-      const pop = smooth((t - .2 - i * .1) / .4);
-      ctx.save(); ctx.globalAlpha *= pop; ctx.translate(0, 16 * (1 - pop));
-      round(x, y, 842, 200, 24, C.panel);
-      badge(v.mark, x + 27, y + 30, v.color, 90);
-      text(v.name, x + 145, y + 67, 45, v.color, 800);
-      text(v.a, x + 145, y + 115, 32, C.ivory);
-      text(v.b, x + 145, y + 158, 32, C.ivory);
-      ctx.restore();
-    });
-    line(112, 857, 1800, 857);
-    text('The bar tracks control of the conversation.', 112, 922, 43, C.ivory, 600);
-    text('Editorial labels. Context matters.', 112, 973, 25, C.muted);
-    ctx.restore();
-  }
-  function controlBar(t, control = null) {
-    const x = 1559, y = 177, w = 251, h = 805;
-    round(x, y, w, h, 26, C.panel);
-    text('CONTROL', x + w / 2, y + 51, 22, C.muted, 700, 'center');
-    text('TONY', x + w / 2, y + 107, 32, C.ivory, 800, 'center');
-    const bx = x + 88, by = y + 147, bw = 75, bh = 522;
-    // A subjective visual indicator, deliberately without scores or tick values.
-    const share = control ? ({ balanced: .5, tony: .72, ralph: .28 }[control] ?? .5)
-      : mix(.49, .72, smooth((t - 8.5) / 1.1));
-    ctx.save(); ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 15); ctx.clip();
-    ctx.fillStyle = '#11171b'; ctx.fillRect(bx, by, bw, bh);
-    ctx.fillStyle = C.ivory; ctx.fillRect(bx, by, bw, bh * share);
-    ctx.restore();
-    ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 15); ctx.strokeStyle = C.line; ctx.lineWidth = 2; ctx.stroke();
-    const indicator = by + bh * share;
-    line(bx - 11, indicator, bx + bw + 11, indicator, C.teal, 6);
-    dot(bx + bw + 11, indicator, 5, C.teal);
-    text('RALPH', x + w / 2, y + 726, 32, C.muted, 800, 'center');
-    text('Context, not a score.', x + w / 2, y + 771, 18, C.muted, 400, 'center');
-  }
-  function example(t, options = null) {
-    const media = options?.media === true;
-    const rating = options?.evaluation?.rating;
-    const ratings = { brilliant: { name: 'BRILLIANT', mark: '!!', color: C.teal },
-      best: { name: 'BEST', mark: '!', color: C.light },
-      mistake: { name: 'MISTAKE', mark: '?', color: C.amber },
-      blunder: { name: 'BLUNDER', mark: '??', color: C.red } };
-    backdrop();
-    text('CONVERSATION REVIEW', 112, 123, 27, C.teal, 700);
-    if (!media || options?.demo) text('Demo', 1447, 123, 26, C.muted, 700, 'right');
-    // Pure white deliberately matches the supplied avatar's white canvas.
-    // Keep its pixels unchanged: no alpha extraction, tint, mask or shadow.
-    round(112, 177, 1390, 580, 26, '#ffffff');
-    ctx.save(); ctx.beginPath(); ctx.roundRect(112, 177, 1390, 580, 26); ctx.clip();
-    if (media) {
-      // The source video occupies its own area. A supplied avatar stays on white,
-      // beside the footage, and cannot cover a character's face.
-      ctx.clearRect(472, 177, 1030, 580);
+  function ratingIcon(v, x, y, size = 76) {
+    ctx.beginPath(); ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2);
+    ctx.fillStyle = v.color; ctx.fill();
+    if (!['book', 'thumb'].includes(v.mark)) {
+      text(v.mark, x + size / 2, y + size * .715, size * .65, '#ffffff', 800, 'center'); return;
+    }
+    ctx.save(); ctx.translate(x, y); ctx.scale(size / 72, size / 72);
+    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 3.6; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    if (v.mark === 'book') {
+      ctx.beginPath(); ctx.moveTo(36, 26); ctx.quadraticCurveTo(25, 20, 16, 23);
+      ctx.lineTo(16, 49); ctx.quadraticCurveTo(27, 47, 36, 53);
+      ctx.quadraticCurveTo(46, 47, 56, 49); ctx.lineTo(56, 23);
+      ctx.quadraticCurveTo(46, 20, 36, 26); ctx.lineTo(36, 53); ctx.stroke();
     } else {
-      // The frame intentionally says what it is; no fabricated television scene.
-      text('SCENE FOOTAGE GOES HERE', 880, 371, 43, '#424b49', 700, 'center');
-      text('The edit pauses on the line', 880, 432, 30, '#646c67', 400, 'center');
-      text('that changes the exchange.', 880, 475, 30, '#646c67', 400, 'center');
+      // Original geometric thumbs-up, distinct from a platform's artwork.
+      ctx.beginPath(); ctx.moveTo(28, 49); ctx.lineTo(28, 30); ctx.lineTo(37, 20);
+      ctx.quadraticCurveTo(45, 17, 43, 28); ctx.lineTo(51, 28);
+      ctx.quadraticCurveTo(57, 28, 54, 35); ctx.lineTo(50, 49);
+      ctx.closePath(); ctx.stroke(); ctx.strokeRect(17, 31, 8, 19);
     }
     ctx.restore();
-    // Tony image is an optional supplied PNG. The fallback is an original neutral pawn.
-    if (tony) imageContain(tony, 132, 228, media ? 310 : 388, 508);
-    else {
-      pawn(171, 361, 1.58, '#f4edde', '#35443e');
-      text('TONY', 283, 742, 23, '#424b49', 800, 'center');
-    }
-    if (!media) {
-      pawn(1244, 459, .9, '#374743', '#27352f');
-      text('RALPH', 1307, 715, 23, '#424b49', 800, 'center');
-    }
-    controlBar(t, options?.control);
-    const inComment = media ? (options.evaluation ? 1 : 0) : smooth((t - 8.1) / .45);
-    ctx.save(); ctx.globalAlpha = inComment; ctx.translate(0, 16 * (1 - inComment));
-    round(112, 799, 1390, 183, 25, C.panel);
-    const selected = ratings[rating] || ratings.brilliant;
-    badge(selected.mark, 139, 832, selected.color, 108);
-    text(selected.name, 280, 849, 23, selected.color, 800);
-    const comment = options?.evaluation?.comment || 'Returned to sender.';
-    ctx.font = '700 58px Arial';
-    const lines = [''];
-    for (const word of comment.split(' ')) {
-      const last = lines.length - 1;
-      if (ctx.measureText((lines[last] + ' ' + word).trim()).width > 1140 && lines[last]) lines.push(word);
-      else lines[last] = (lines[last] + ' ' + word).trim();
-    }
-    if (lines.length > 2) throw new Error('Editorial comment must fit in two lines. Shorten it.');
-    lines.forEach((s, i) => text(s, 276, (lines.length === 1 ? 927 : 897) + i * 64, 58, C.ivory, 700));
-    ctx.restore();
-    if (!media && inComment < 1) {
-      ctx.save(); ctx.globalAlpha = 1 - inComment;
-      text('Pause. Read the move.', 112, 878, 53, C.ivory, 700);
-      text('An example of the overlay, not a finished scene.', 112, 933, 27, C.muted);
-      ctx.restore();
-    }
-    if (!media || options?.demo) text('Demo · layout preview', 112, 1055, 20, C.muted);
-    if (!media) text('NO VOICEOVER', 1809, 1055, 20, C.muted, 600, 'right');
   }
-  async function init(src) {
-    await document.fonts.ready;
-    if (src) {
-      tony = await new Promise((resolve, reject) => {
-        const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = src;
-      });
+  function guideBackground() {
+    ctx.clearRect(0, 0, W, H);
+    if (background) imageContain(background, 0, 0, W, H);
+    // Without a supplied frame this stays translucent for compositing over real footage.
+    ctx.fillStyle = 'rgba(0,0,0,.79)'; ctx.fillRect(0, 0, W, H);
+  }
+  function symbols() {
+    guideBackground();
+    if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 302, 12, 130, 130);
+    text('Annotation Symbols Guide', 1120, 107, 65, '#f4f4f4', 700, 'center', 'monospace');
+    for (const v of schema.categories) {
+      const x = 36 + v.column * 960, y = 189 + v.row * 141;
+      ratingIcon(v, x + 75, y, 76);
+      text(v.label + (['miss','inaccuracy','interesting'].includes(v.id) ? '' : ' Move'), x + 114, y + 111,
+        30, v.color, 700, 'center', 'monospace');
+      lines(v.definition, x + 300, y + 36, 33, v.color, 40, 'monospace');
     }
   }
-  function frame(t) {
-    if (t < 6) legend(t);
-    else if (t < 6.5) {
-      // Side-by-side slide avoids unreadable text superimposed by a crossfade.
-      const progress = smooth((t - 6) / .5);
-      ctx.save(); ctx.translate(-progress * W, 0); legend(6); ctx.restore();
-      ctx.save(); ctx.translate((1 - progress) * W, 0); example(t); ctx.restore();
+  function evaluation(t = 9) {
+    guideBackground();
+    text('What is the Evaluation Bar?', 1080, 120, 64, '#ffffff', 800, 'center');
+    const bx = 110, by = 0, bw = 94, bh = H;
+    const black = t < 10 ? .5 : .5 + .14 * clamp((t - 10) / 2);
+    ctx.fillStyle = '#181818'; ctx.fillRect(bx, by, bw, bh);
+    ctx.fillStyle = '#f3f3f3'; ctx.fillRect(bx, bh * black, bw, bh * (1 - black));
+    ctx.strokeStyle = '#888888'; ctx.lineWidth = 2; ctx.strokeRect(bx, 1, bw, bh - 2);
+    lines('The bar shows who controls the conversation: Black or White.\nThe colors identify the two sides, not who speaks first.\nEvery exchange starts equal. These are editorial judgments,\nnot calculations from a chess engine.', 1100, 254, 40, '#ffffff', 53, 'Arial', 'center');
+    function note(ids, y, rest) {
+      const size = 60;
+      let x = 374;
+      for (const [index, id] of ids.entries()) {
+        if (index > 0) { text('and', x, y, 40, '#ffffff', 700); x += 104; }
+        const v = ratings[id]; ratingIcon(v, x, y - 44, size);
+        text(v.label + ' Moves', x + 75, y, 40, v.color, 700);
+        ctx.font = '700 40px Arial'; x += 75 + ctx.measureText(v.label + ' Moves').width + 36;
+      }
+      text(rest, x, y, 40, '#ffffff', 700);
     }
-    else example(t);
-    return canvas.toDataURL('image/png');
+    note(['best', 'great'], 559, 'leave the bar unchanged.');
+    note(['book'], 675, 'may give the speaker a small edge.');
+    note(['brilliant'], 791, 'shift control toward the speaker.');
+    lines('The other labels show a loss of control for the speaker.\nA third party changes the bar only when their line\naffects one of the two main sides.', 1100, 923, 40, '#ffffff', 51, 'Arial', 'center');
   }
-  function clipFrame(options) {
-    if (options.phase === 'intro') legend(2);
-    else sourceFrame(options);
-    return canvas.toDataURL('image/png');
+  function intro(t) {
+    if (t < schema.symbols_seconds) symbols(); else evaluation(t);
+    if (t > schema.intro_seconds - schema.fade_seconds) {
+      ctx.fillStyle = `rgba(0,0,0,${clamp((t - schema.intro_seconds + schema.fade_seconds) / schema.fade_seconds)})`;
+      ctx.fillRect(0, 0, W, H);
+    }
+  }
+  function controlBar(control, previous = control, seconds = .5) {
+    const fraction = c => typeof c === 'number' ? c : ({ balanced: .5, black: .72, white: .28, tony: .72, ralph: .28 })[c] ?? .5;
+    const p = clamp(seconds / .5), eased = p * p * (3 - 2 * p);
+    const blackShare = fraction(previous) + (fraction(control) - fraction(previous)) * eased;
+    ctx.fillStyle = '#111111'; ctx.fillRect(1800, 0, 120, H);
+    ctx.fillStyle = '#eeeeee'; ctx.fillRect(1800, H * blackShare, 120, H * (1 - blackShare));
+    ctx.strokeStyle = '#808080'; ctx.lineWidth = 2; ctx.strokeRect(1800, 0, 120, H);
   }
   function sourceFrame(options) {
-    backdrop();
-    const freeze = Boolean(options.evaluation);
-    const source = freeze ? [72,72,1280,720] : [72,72,1600,900];
-    ctx.clearRect(...source);
-    const control = options.control || 'balanced';
-    const share = { balanced: .5, tony: .72, ralph: .28 }[control] ?? .5;
-    const bx = freeze ? 1851 : 1786, by = freeze ? 210 : 230;
-    const bw = freeze ? 28 : 40, bh = freeze ? 450 : 600;
-    round(bx, by, bw, bh, 10, '#0f1519', C.line);
-    ctx.save(); ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 10); ctx.clip();
-    ctx.fillStyle = C.ivory; ctx.fillRect(bx, by, bw, bh * share); ctx.restore();
-    line(bx - 6, by + bh * share, bx + bw + 6, by + bh * share, C.teal, 4);
-    text('TONY', bx + bw / 2, by - 25, freeze ? 19 : 27, C.ivory, 700, 'center');
-    text('RALPH', bx + bw / 2, by + bh + 39, freeze ? 18 : 26, C.muted, 700, 'center');
-    if (!freeze) {
-      round(1736, 28, 140, 140, 16, '#ffffff');
-      if (tony) imageContain(tony, 1740, 32, 132, 132);
-    } else {
-      round(1400, 72, 418, 720, 24, '#ffffff');
-      if (tony) imageContain(tony, 1420, 244, 376, 430);
-      const labels = { brilliant: ['BRILLIANT','!!',C.teal], best: ['BEST','!',C.light],
-        mistake: ['MISTAKE','?',C.amber], blunder: ['BLUNDER','??',C.red] };
-      const [label, mark, color] = labels[options.evaluation.rating];
-      round(72, 832, 1280, 180, 24, C.panel);
-      badge(mark, 96, 866, color, 100);
-      text(label, 224, 881, 24, color, 800);
-      ctx.font = '700 51px Arial'; const rows = [''];
+    ctx.clearRect(0, 0, W, H); controlBar(options.control ?? .5, options.previous_control ?? options.control ?? .5, options.reveal_seconds ?? .5);
+    if (options.evaluation) {
+      const v = ratings[options.evaluation.rating];
+      if (!v) throw new Error('Unknown conversation rating.');
+      // The observed annotation layout: blurred/dim scene, rating top left,
+      // approved pawn bottom left and a white speech bubble beside it.
+      ctx.fillStyle = 'rgba(0,0,0,.52)'; ctx.fillRect(0, 0, 1800, H);
+      ratingIcon(v, 278, 98, 196);
+      const title = v.label + (['miss','inaccuracy','interesting'].includes(v.id) ? '' : ' Move');
+      text(title, 376, 397, 72, v.color, 700, 'center');
+      if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535, 470, 520);
+      if (options.reveal_seconds == null || options.reveal_seconds >= schema.bubble_delay_seconds) {
+      ctx.fillStyle = '#f7f7f7'; ctx.beginPath(); ctx.roundRect(690, 449, 895, 577, 105); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(704, 550); ctx.lineTo(574, 628);
+      ctx.lineTo(704, 714); ctx.closePath(); ctx.fill();
+      ctx.font = '700 50px Arial'; const rows = [''];
       for (const word of options.evaluation.comment.split(' ')) {
         const i = rows.length - 1;
-        if (ctx.measureText((rows[i] + ' ' + word).trim()).width > 1080 && rows[i]) rows.push(word);
+        if (ctx.measureText((rows[i] + ' ' + word).trim()).width > 765 && rows[i]) rows.push(word);
         else rows[i] = (rows[i] + ' ' + word).trim();
       }
-      if (rows.length > 2) throw new Error('Editorial comment is too long.');
-      rows.forEach((s, i) => text(s, 222, (rows.length === 1 ? 954 : 930) + i * 58, 51, C.ivory, 700));
+      if (rows.length > 8) throw new Error('Editorial comment is too long for the speech bubble.');
+      const top = 738 - (rows.length - 1) * 29 + 16;
+      let remaining = Math.floor(options.reveal_seconds == null ? options.evaluation.comment.length : Math.max(0, options.reveal_seconds - schema.bubble_delay_seconds) * schema.typewriter_cps);
+      rows.forEach((s, i) => {
+        const visible = s.slice(0, Math.max(0, remaining));
+        remaining -= s.length + 1;
+        ctx.font = '700 50px Arial';
+        const start = 1138 - ctx.measureText(s).width / 2;
+        text(visible, start, top + i * 58, 50, '#151515', 700);
+      });
+      }
     }
-    if (options.demo) text('Demo', 72, 1053, 23, C.muted, 700);
+    if (options.showSides) {
+      ctx.fillStyle = 'rgba(0,0,0,.72)'; ctx.fillRect(48, 46, 1110, 70);
+      const sides = options.sides || { black: 'Tony', white: 'Other speaker' };
+      text(`${sides.black} is Black · ${sides.white} is White`, 72, 96, 40, '#ffffff', 700);
+    }
+    if (options.demo) text('Demo · synthetic source', 48, 1068, 28, '#ffffff', 700);
   }
-  return { init, frame, clipFrame, width: W, height: H };
+  async function load(src) {
+    if (!src) return null;
+    return new Promise((resolve, reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = reject; img.src = src; });
+  }
+  async function init(src, backdropSrc = '', overlaySrc = '') { await document.fonts.ready; tony = await load(src); background = await load(backdropSrc); tonyOverlay = await load(overlaySrc); }
+  function introFrame(t) { intro(t); return canvas.toDataURL('image/png'); }
+  function clipFrame(o) { if (o.phase === 'intro') intro(o.t || 0); else sourceFrame(o); return canvas.toDataURL('image/png'); }
+  function frame(t) { return introFrame(t); }
+  return { init, frame, clipFrame, introFrame, width: W, height: H };
 })();

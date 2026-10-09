@@ -29,8 +29,31 @@ Le choix de la direction n'autorise pas de nouvelles variantes improvisées.
 La démo peut placer l'avatar sur un panneau blanc ; un éventuel détourage
 pour le montage doit conserver le personnage, sa forme et ses badges.
 
+`assets/tony-pawn-overlay.png` est un dérivé sur fond transparent pour la bulle
+sur la scène assombrie. Il a été créé depuis l'original approuvé et regardé :
+même expression, silhouette courte noire et deux badges. Le détourage a
+légèrement modifié la texture du premier plan ; il n'est pas identique pixel
+par pixel. Il ne remplace pas `tony-pawn.png`, dont l'empreinte reste inchangée.
+
 Le montage doit réserver de la place aux visages, aux sous-titres anglais et
 à la barre. Faire intervenir le pion aux vrais renversements de l'échange,
 avec un texte court, plutôt qu'un panneau permanent sur chaque réplique.
 L'habillage de démonstration ne contient pas de scène de la série et ne
 constitue pas une vidéo prête à publier.
+
+## Guide réellement examiné
+
+Les images des 25 premières secondes de `InM2zft-iQs` ont été regardées :
+deux pages sur la scène assombrie, onze catégories et icônes rondes, puis la
+scène en grand avec la barre **à droite**, noir en haut et blanc en bas.
+Le guide de la barre utilise une démonstration à gauche ; ce placement ne
+s'applique pas au film. Les catégories exactes figurent dans `ratings.json`.
+Les demandes de Forced, Draw ou Checkmate en commentaire ne sont pas des
+catégories constatées dans ce guide.
+
+L'ancien guide générique à quatre cartes est rejeté. La nouvelle intro dure
+16 secondes : légende, explication de la barre, fondu. Le fond du vrai pilote
+doit provenir de sa propre scène Sopranos. Les images de Breaking Bad obtenues
+pour l'étude restent dans `/tmp` et ne deviennent pas des assets de production.
+L'étude de cette ouverture ne suffit pas à certifier le rythme des annotations
+ou le traitement sonore de toute la référence.

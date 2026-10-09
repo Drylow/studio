@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "intro_seconds": 16,
+  "symbols_seconds": 6,
+  "fade_seconds": 1,
+  "categories": [
+    {
+      "id": "brilliant",
+      "label": "Brilliant",
+      "mark": "!!",
+      "color": "#43c9b5",
+      "definition": "A surprising reply that\nturns the exchange around.",
+      "column": 0,
+      "row": 0,
+      "bar_effect": "gain"
+    },
+    {
+      "id": "great",
+      "label": "Great",
+      "mark": "!",
+      "color": "#78a4ca",
+      "definition": "The key response that\nkeeps the position steady.",
+      "column": 0,
+      "row": 1,
+      "bar_effect": "neutral"
+    },
+    {
+      "id": "best",
+      "label": "Best",
+      "mark": "\u2605",
+      "color": "#9abf67",
+      "definition": "The strongest response\navailable in this moment.",
+      "column": 0,
+      "row": 2,
+      "bar_effect": "neutral"
+    },
+    {
+      "id": "excellent",
+      "label": "Excellent",
+      "mark": "thumb",
+      "color": "#a6c27b",
+      "definition": "A strong reply, just\nshort of the best choice.",
+      "column": 0,
+      "row": 3,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "good",
+      "label": "Good",
+      "mark": "\u2713",
+      "color": "#96aa7b",
+      "definition": "A decent reply, but\nleaves something on the table.",
+      "column": 0,
+      "row": 4,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "book",
+      "label": "Book",
+      "mark": "book",
+      "color": "#c2a58b",
+      "definition": "A familiar opening\nthat sets the tone.",
+      "column": 0,
+      "row": 5,
+      "bar_effect": "small_gain"
+    },
+    {
+      "id": "blunder",
+      "label": "Blunder",
+      "mark": "??",
+      "color": "#de6f62",
+      "definition": "A disastrous line that\nhands over the advantage.",
+      "column": 1,
+      "row": 0,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "miss",
+      "label": "Miss",
+      "mark": "\u00d7",
+      "color": "#dd8882",
+      "definition": "A chance to take control\ngoes completely unused.",
+      "column": 1,
+      "row": 1,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "mistake",
+      "label": "Mistake",
+      "mark": "?",
+      "color": "#e1a552",
+      "definition": "A costly reply that\nweakens the position.",
+      "column": 1,
+      "row": 2,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "inaccuracy",
+      "label": "Inaccuracy",
+      "mark": "?!",
+      "color": "#d8b346",
+      "definition": "A questionable line that\ngives away a little ground.",
+      "column": 1,
+      "row": 3,
+      "bar_effect": "loss"
+    },
+    {
+      "id": "interesting",
+      "label": "Interesting",
+      "mark": "!?",
+      "color": "#b680cc",
+      "definition": "A risky idea that could\npay off later.",
+      "column": 1,
+      "row": 4,
+      "bar_effect": "loss"
+    }
+  ],
+  "typewriter_cps": 50,
+  "bubble_delay_seconds": 1,
+  "minimum_reading_seconds": 2.5
+}

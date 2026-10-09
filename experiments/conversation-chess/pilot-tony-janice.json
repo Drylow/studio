@@ -1,0 +1,91 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "demo": false,
+  "source_reviewed": true,
+  "source_sha256": "4e5e95c61ca17ca5d1fb6b109dc0ba6dde365592725892ad90da18a57403026d",
+  "source_in": 99.4,
+  "source_out": 173.9,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "black_label": "Tony",
+  "white_label": "Janice",
+  "annotations": [
+    {
+      "source_at": 101.95,
+      "hold_seconds": 7.0,
+      "rating": "book",
+      "speaker": "black",
+      "comment": "Tony brings up Harpo like he's making harmless dinner conversation. It's a standard family opening with a very non-standard intention: ruin the mood.",
+      "control_after": 0.54,
+      "reviewed": true,
+      "replay_seconds": 3
+    },
+    {
+      "source_at": 138.95,
+      "hold_seconds": 7.0,
+      "rating": "great",
+      "speaker": "white",
+      "comment": "Janice spots the mockery and sets a direct boundary. A strong defensive reply: call out the attack without handing him the angry reaction he wants.",
+      "control_after": 0.54,
+      "reviewed": true,
+      "replay_seconds": 3
+    },
+    {
+      "source_at": 149.6,
+      "hold_seconds": 7.0,
+      "rating": "brilliant",
+      "speaker": "black",
+      "comment": "He turns a question about a name into a question about an absent mother. Tony stops testing the armour and goes straight for the one gap.",
+      "control_after": 0.66,
+      "reviewed": true,
+      "replay_seconds": 3
+    },
+    {
+      "source_at": 165.6,
+      "hold_seconds": 7.0,
+      "rating": "blunder",
+      "speaker": "white",
+      "comment": "Janice's anger takes over the table. Tony has provoked the reaction he was fishing for; her anger-management training just met its final boss.",
+      "control_after": 0.85,
+      "reviewed": true,
+      "replay_seconds": 3
+    },
+    {
+      "source_at": 170.95,
+      "hold_seconds": 7.0,
+      "rating": "best",
+      "speaker": "black",
+      "comment": "Now he acts like he's only asking as a concerned uncle. The provocation disappears behind a family title: maximum damage, minimum ownership.",
+      "control_after": 0.85,
+      "reviewed": true,
+      "replay_seconds": 3
+    }
+  ],
+  "review_evidence": {
+    "visual_review": "Selected dense frames around each annotation, source opening, ending and original145-second join boundary",
+    "audio_review_method": "Existing local ASR measured on actual source audio, checked against public episode transcript; no human listening claimed",
+    "human_audio_listening": false,
+    "transcript_url": "https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=the-sopranos&episode=s05e10",
+    "full_source_offset_seconds": 0,
+    "tail_offset_seconds": 145,
+    "finished_render_reviewed": true,
+    "rights_cleared": false,
+    "music_instrumental_boundary_not_human_reviewed": true,
+    "finished_render_review": "All five real rendered speech bubbles and dialogue frames visually inspected; complete audio/video decoding passed; original dialogue audio measured, analysis windows silent. No human listening claimed."
+  },
+  "editorial_note": "Ratings measure conversational control, not morality. Source content is a proposed private pilot, not cleared for publication.",
+  "analysis_background": "replay",
+  "source_quality": {
+    "width": 640,
+    "height": 360,
+    "note": "Montage preview; the source is not HD. Export resolution does not restore source detail."
+  },
+  "render_result": {
+    "duration_seconds": 125.564,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "file": "output/conversation-chess/tony-janice-pilot.mp4",
+    "published": false
+  }
+}
