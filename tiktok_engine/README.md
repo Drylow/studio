@@ -114,7 +114,11 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 
 ## Publication (recherche du 8 oct.)
 
-- **Rythme : 2 TikTok par jour, à 7 h et 19 h (heure belge)**. Le 8 oct. au soir, l'utilisateur a hésité
+- **Rythme : 2 TikTok par jour, à 7 h et 19 h (heure belge)**, publiés tout seuls par Zernio.
+  Fabrication : routine quotidienne « Octave Histoire : 2 TikTok par jour » (vers 8 h 47), qui suit
+  [ROUTINE.md](ROUTINE.md) et garde une semaine d'avance. Première semaine (9-15 oct.) faite le 9 oct.
+  par 7 sessions en parallèle ; durées contrôlées (toutes > 61 s, Einstein refaite à 1 min 41).
+  Le 8 oct. au soir, l'utilisateur a hésité
   avec 3 par jour (7 h, 12 h, 19 h), puis a dit : « je pense que c'est plus smart d'en poster deux ».
 - **API TikTok (Content Posting API)** : pas une solution pour nous.
   - Les règles de TikTok refusent noir sur blanc « un outil pour envoyer du contenu sur le(s)
@@ -160,7 +164,7 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 | 7 oct. 2026 | Napoléon en Russie (Minard, les poux, « La santé de Sa Majesté… ») | https://gofile.io/d/XfHd6IAK |
 | 8 oct. 2026 | La Joconde, célèbre grâce à un voleur (vol de 1911) | https://gofile.io/d/DOWccY1j |
 | jeu. 9 oct. 2026, 07 h (programmée) | Beethoven : 95 fois trop de plomb | https://gofile.io/d/7ANl9981 |
-| jeu. 9 oct. 2026, 19 h (programmée) | Le cerveau d'Einstein, coupé en 240 morceaux | https://gofile.io/d/i6QmFuJ5 |
+| jeu. 9 oct. 2026, 19 h (programmée) | Le cerveau d'Einstein, coupé en 240 morceaux | https://gofile.io/d/bRKTUWbQ |
 | ven. 10 oct. 2026, 07 h (programmée) | Cléopâtre plus proche de l'iPhone que des pyramides | https://gofile.io/d/fzxJzPB2 |
 | ven. 10 oct. 2026, 19 h (programmée) | Les Vikings n'ont jamais porté de casques à cornes | https://gofile.io/d/9L3GIfeF |
 | sam. 11 oct. 2026, 07 h (programmée) | Gengis Khan et 16 millions d'hommes | https://gofile.io/d/eg8Sy58k |

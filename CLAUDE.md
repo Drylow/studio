@@ -451,12 +451,14 @@ fait surprenant chiffré, dans le style visuel de @archibald.media (pixel, fond 
 vif à la place de son rouge), vidéos codées en HTML/JavaScript, voix ElevenLabs v4 via Algrow.
 Tout est décrit dans [tiktok_engine/README.md](tiktok_engine/README.md) : règles de l'utilisateur,
 moteur, paquet livré (vidéo qualité max + 3 miniatures + description), coût par vidéo, vidéos livrées.
-Une vidéo :
-- `python tiktok_engine/art.py prompts tiktok_engine/videos/<nom>/script.json` ;
-- les images sur Algrow (`generate_image`, 1 crédit) ;
-- `art.py fit … nom=<url>` ;
-- regarder `art_review.jpg` (mains !) ;
-- puis `python tiktok_engine/build.py <dossier> --script tiktok_engine/videos/<nom>/script.json`.
+Fabrication automatique : routine quotidienne (vers 8 h 47) qui suit
+[tiktok_engine/ROUTINE.md](tiktok_engine/ROUTINE.md) et garde une semaine d'avance, 2 vidéos par jour
+publiées toutes seules à 7 h et 19 h par **Zernio** (`tiktok_engine/zernio.py`, clé `ZERNIO_API_KEY`).
+Une vidéo à la main :
+- `bash tiktok_engine/setup.sh` (copie la clé Algrow du site depuis le serveur) ;
+- `art.py algrow tiktok_engine/videos/<nom>/script.json` (images, 1 crédit chacune), puis regarder
+  `art_review.jpg` (mains !) ;
+- `build.py work/tiktok/<nom> --script tiktok_engine/videos/<nom>/script.json` (voix, montage, planches) ;
+- `zernio.py schedule work/tiktok/<nom> --at AAAA-MM-JJTHH:MM` (refuse une vidéo de moins de 61 s).
 
-Faits vérifiés avant la voix, comme partout. Publication : 2 par jour (7 h et 19 h), programmées par
-l'utilisateur dans TikTok Studio (l'API TikTok ne convient pas, voir le README).
+Faits vérifiés avant la voix, comme partout. L'API TikTok ne convient pas (voir le README).
