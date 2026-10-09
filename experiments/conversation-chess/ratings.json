@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "intro_seconds": 16,
   "symbols_seconds": 6,
   "fade_seconds": 1,
@@ -8,114 +8,140 @@
       "id": "brilliant",
       "label": "Brilliant",
       "mark": "!!",
-      "color": "#43c9b5",
+      "color": "#26c2a3",
       "definition": "A surprising reply that\nturns the exchange around.",
       "column": 0,
       "row": 0,
-      "bar_effect": "gain"
+      "bar_effect": "gain",
+      "icon_file": "assets/chesscom/brilliant.svg",
+      "icon_sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
     },
     {
       "id": "great",
       "label": "Great",
       "mark": "!",
-      "color": "#78a4ca",
+      "color": "#749BBF",
       "definition": "The key response that\nkeeps the position steady.",
       "column": 0,
       "row": 1,
-      "bar_effect": "neutral"
+      "bar_effect": "neutral",
+      "icon_file": "assets/chesscom/great.svg",
+      "icon_sha256": "3e8fdffc83fa86d3c04f8406fc1b5aff4da13a2480dd668624d5b0f5cd102533"
     },
     {
       "id": "best",
       "label": "Best",
       "mark": "\u2605",
-      "color": "#9abf67",
+      "color": "#81B64C",
       "definition": "The strongest response\navailable in this moment.",
       "column": 0,
       "row": 2,
-      "bar_effect": "neutral"
+      "bar_effect": "neutral",
+      "icon_file": "assets/chesscom/best.svg",
+      "icon_sha256": "725fed63d29c8dad95b39f0b3a96297830ae5b4d69f894bdb7ddbdf2bd15887c"
     },
     {
       "id": "excellent",
       "label": "Excellent",
       "mark": "thumb",
-      "color": "#a6c27b",
+      "color": "#81B64C",
       "definition": "A strong reply, just\nshort of the best choice.",
       "column": 0,
       "row": 3,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/excellent.svg",
+      "icon_sha256": "89501999bde4833e6ce79426ecb81657a6068ed7ac95a44ee6d3f926c7ec6b7c"
     },
     {
       "id": "good",
       "label": "Good",
       "mark": "\u2713",
-      "color": "#96aa7b",
+      "color": "#95b776",
       "definition": "A decent reply, but\nleaves something on the table.",
       "column": 0,
       "row": 4,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/good.svg",
+      "icon_sha256": "e9af1fe8ef63e264ac49138cd7123c43c960c1ddc8137c15c459a47ddb996346"
     },
     {
       "id": "book",
       "label": "Book",
       "mark": "book",
-      "color": "#c2a58b",
+      "color": "#D5A47D",
       "definition": "A familiar opening\nthat sets the tone.",
       "column": 0,
       "row": 5,
-      "bar_effect": "small_gain"
+      "bar_effect": "small_gain",
+      "icon_file": "assets/chesscom/book.svg",
+      "icon_sha256": "432c88c3833ca77deef82281af21e508d310868d3425a4a14702cffd03369ffd"
     },
     {
       "id": "blunder",
       "label": "Blunder",
       "mark": "??",
-      "color": "#de6f62",
+      "color": "#FA412D",
       "definition": "A disastrous line that\nhands over the advantage.",
       "column": 1,
       "row": 0,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/blunder.svg",
+      "icon_sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
     },
     {
       "id": "miss",
       "label": "Miss",
-      "mark": "\u00d7",
-      "color": "#dd8882",
+      "mark": "\u2014",
+      "color": "#dbac16",
       "definition": "A chance to take control\ngoes completely unused.",
       "column": 1,
       "row": 1,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/miss.svg",
+      "icon_sha256": "a06fed5c943f70ee85551754a0f8799d26a1705134de1ea4593d86bc96d61239"
     },
     {
       "id": "mistake",
       "label": "Mistake",
       "mark": "?",
-      "color": "#e1a552",
+      "color": "#FFA459",
       "definition": "A costly reply that\nweakens the position.",
       "column": 1,
       "row": 2,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/mistake.svg",
+      "icon_sha256": "9402e42b24b87c0adc03d2045f0abe780e161c2b2be839e0a17ee21b44b96925"
     },
     {
       "id": "inaccuracy",
       "label": "Inaccuracy",
       "mark": "?!",
-      "color": "#d8b346",
+      "color": "#F7C631",
       "definition": "A questionable line that\ngives away a little ground.",
       "column": 1,
       "row": 3,
-      "bar_effect": "loss"
-    },
-    {
-      "id": "interesting",
-      "label": "Interesting",
-      "mark": "!?",
-      "color": "#b680cc",
-      "definition": "A risky idea that could\npay off later.",
-      "column": 1,
-      "row": 4,
-      "bar_effect": "loss"
+      "bar_effect": "loss",
+      "icon_file": "assets/chesscom/inaccuracy.svg",
+      "icon_sha256": "3b71d8e08ed15a03b513a76eb300ed4383ed1be3a4f4de4a1f9f906d85fde871"
     }
   ],
   "typewriter_cps": 50,
   "bubble_delay_seconds": 1,
-  "minimum_reading_seconds": 2.5
+  "minimum_reading_seconds": 2.5,
+  "icon_set": "chesscom-official",
+  "bar": {
+    "side": "left",
+    "gutter_width": 72,
+    "x": 26,
+    "y": 112,
+    "width": 41,
+    "height": 857,
+    "black_color": "#403c38",
+    "white_color": "#ffffff",
+    "score_text_color": "#262421",
+    "score_font_size": 22,
+    "transition_seconds": 0.5,
+    "score_perspective": "white",
+    "score_method": "editorial conversation score; never engine analysis"
+  }
 }

@@ -41,13 +41,40 @@ avec un texte court, plutôt qu'un panneau permanent sur chaque réplique.
 L'habillage de démonstration ne contient pas de scène de la série et ne
 constitue pas une vidéo prête à publier.
 
-## Guide réellement examiné
+## Correction utilisateur prioritaire — second test
+
+Le premier pilote réel a été regardé puis rejeté : trop peu de bruitages,
+barre à droite trop large, icônes approximatives et source 360p. Pour tous
+les prochains montages : **barre fine à gauche**, noir en haut, blanc en bas,
+avec score lisible ; **vrais SVG Chess.com** inchangés pour les dix grades
+disponibles ; touches de clavier enregistrées pendant la frappe du texte,
+clic au changement de note et accent bref Brilliant/Blunder. Pas de voix off.
+Le son des dialogues reprend au même repère après chaque analyse.
+
+L’utilisateur exige ensuite un **vrai logiciel de montage** : garder un projet
+Kdenlive natif éditable et exporter via ce logiciel. La préparation des assets
+peut rester automatisée ; ne pas annoncer un montage CapCut/Premiere sans accès
+réel à ces applications sur son PC.
+
+Cette correction prime sur le placement à droite observé chez la référence.
+Interesting reste une catégorie observée chez celle-ci, mais aucun SVG
+officiel correspondant n’est établi : ne pas inventer une onzième icône.
+Les nouveaux médias doivent mesurer au moins720p réels ; agrandir360p
+à1080p ne satisfait pas cette exigence. Une dérogation explicite et visible
+permet seulement les essais techniques de basse résolution.
+
+Le second test utilise un extrait1280×720 obtenu en demandant la qualité
+maximale1080p au fournisseur. Le rendu1080p garde les SVG et textes nets,
+mais ne constitue pas une preuve de source1080p native.
+
+## Guide réellement examiné — constat historique
 
 Les images des 25 premières secondes de `InM2zft-iQs` ont été regardées :
 deux pages sur la scène assombrie, onze catégories et icônes rondes, puis la
 scène en grand avec la barre **à droite**, noir en haut et blanc en bas.
-Le guide de la barre utilise une démonstration à gauche ; ce placement ne
-s'applique pas au film. Les catégories exactes figurent dans `ratings.json`.
+Le guide de la barre utilise une démonstration à gauche. La correction
+utilisateur impose désormais ce côté dans notre film aussi. `ratings.json`
+contient les dix grades avec assets officiels, pas les onze de la référence.
 Les demandes de Forced, Draw ou Checkmate en commentaire ne sont pas des
 catégories constatées dans ce guide.
 

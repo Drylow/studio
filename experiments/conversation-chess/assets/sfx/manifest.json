@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "typewriter": {
+    "files": [
+      "keyboard-clack-01.wav",
+      "keyboard-clack-02.wav",
+      "keyboard-clack-03.wav",
+      "keyboard-clack-04.wav",
+      "keyboard-clack-05.wav",
+      "keyboard-clack-06.wav",
+      "keyboard-clack-07.wav",
+      "keyboard-clack-08.wav"
+    ],
+    "gain": 0.6,
+    "provenance": "Recorded physical keystrokes by unicaegames; https://opengameart.org/content/keyboard-soundpack-1-typing-and-single-keystrokes; LICENSES.md and provenance.json document derivation.",
+    "license": "CC0 1.0 Universal"
+  },
+  "move": {
+    "file": "ui-tick.wav",
+    "gain": 1.0,
+    "provenance": "Kenney Interface Sounds click_001.ogg; https://kenney.nl/assets/interface-sounds; see LICENSES.md.",
+    "license": "CC0 1.0 Universal"
+  },
+  "brilliant": {
+    "file": "brilliant-ui-confirmation.wav",
+    "gain": 0.5,
+    "provenance": "Kenney Interface Sounds confirmation_002.ogg; https://kenney.nl/assets/interface-sounds; see LICENSES.md.",
+    "license": "CC0 1.0 Universal"
+  },
+  "error": {
+    "file": "blunder-impact.wav",
+    "gain": 0.65,
+    "provenance": "Kenney Interface Sounds bong_001.ogg; https://kenney.nl/assets/interface-sounds; see LICENSES.md.",
+    "license": "CC0 1.0 Universal"
+  },
+  "blunder": {
+    "file": "blunder-impact.wav",
+    "gain": 0.65,
+    "provenance": "Kenney Interface Sounds bong_001.ogg; https://kenney.nl/assets/interface-sounds; see LICENSES.md.",
+    "license": "CC0 1.0 Universal"
+  }
+}

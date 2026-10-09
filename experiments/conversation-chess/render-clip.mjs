@@ -33,6 +33,10 @@ if (!(await fs.stat(source)).isFile()) throw new Error('Source must be a regular
 const output = path.resolve(option('--out', '/tmp/edgerunners-conversation-chess-clip'));
 await fs.mkdir(output, { recursive: true });
 const refreshIntro = args.includes('--refresh-intro');
+const refreshProjectIntro = args.includes('--refresh-project-intro');
+const prepareProject = args.includes('--prepare-project') || refreshProjectIntro;
+if (prepareProject && refreshIntro) throw new Error('--prepare-project and --refresh-intro cannot be combined.');
+const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
 const spec = JSON.parse(await fs.readFile(timelinePath, 'utf8'));
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
@@ -41,6 +45,8 @@ const sourceDuration = Number(meta.format.duration);
 const hasAudio = meta.streams.some(s => s.codec_type === 'audio');
 const video = meta.streams.find(s => s.codec_type === 'video');
 if (!video || !Number.isFinite(sourceDuration)) throw new Error('Source has no usable video/duration.');
+const lowResPreview = video.height < 720;
+if (lowResPreview && !args.includes('--allow-low-res-preview')) throw new Error(`Native source is ${video.width}×${video.height}; minimum 720p required. Use --allow-low-res-preview only for an explicitly marked draft, never as an HD delivery.`);
 if (spec.schema !== 'conversation-chess-clip-v1') throw new Error('Unknown timeline schema.');
 if (spec.intro_seconds !== ratingSchema.intro_seconds) throw new Error(`The complete legend intro is ${ratingSchema.intro_seconds} seconds.`);
 const start = Number(spec.source_in), end = Number(spec.source_out);
@@ -55,17 +61,30 @@ const controls = new Set(['balanced', 'black', 'white', 'tony', 'ralph']);
 const sides = { black: spec.black_label || 'Tony', white: spec.white_label || 'Other speaker' };
 if (Object.values(sides).some(v => typeof v !== 'string' || !v.trim() || v.length > 32)) throw new Error('Supply short black_label/white_label names.');
 const isControl = c => (typeof c === 'number' && Number.isFinite(c) && c >= 0 && c <= 1) || controls.has(c);
+const scoreValue = value => (typeof value === 'string' && /^[-+]?\d{1,2}(?:\.\d)?$/.test(value)) ? Number(value) : NaN;
+const initialScoreText = spec.initial_score_text ?? (demo ? '0.0' : null);
+if (!Number.isFinite(scoreValue(initialScoreText))) throw new Error('Supply reviewed initial_score_text, e.g.0.0; score is editorial, never engine output.');
+let scoreText = initialScoreText;
 let control = spec.initial_control ?? .5;
 if (!isControl(control)) throw new Error('Unknown initial_control.');
 const annotations = spec.annotations || [];
 if (!Array.isArray(annotations)) throw new Error('annotations must be an array.');
-let previous = start, reviewedControl = control;
+let previous = start, reviewedControl = control, reviewedScore = scoreValue(initialScoreText);
 const controlFraction = c => typeof c === 'number' ? c : ({ balanced: .5, black: .72, white: .28, tony: .72, ralph: .28 })[c];
 for (const a of annotations) {
   if (!Number.isFinite(a.source_at) || a.source_at <= previous || a.source_at >= end) throw new Error('Annotations need strictly ordered SOURCE timestamps inside the selected clip.');
   if (a.hold_seconds < 3 || a.hold_seconds > 9 || !Number.isFinite(a.hold_seconds)) throw new Error('Each analysis hold must last 3–9 seconds.');
   if (!ratings.has(a.rating) || !isControl(a.control_after)) throw new Error('Unknown rating/control_after.');
   const rating = ratingSchema.categories.find(v => v.id === a.rating);
+  if (!Number.isFinite(scoreValue(a.score_text))) throw new Error('Every annotation needs reviewed score_text in White-positive / Black-negative convention.');
+  const score = scoreValue(a.score_text);
+  if (rating.bar_effect === 'neutral' && score !== reviewedScore) throw new Error('Best/Great must leave the conversation score unchanged.');
+  if (a.speaker) {
+    const speakerScoreShift = (score - reviewedScore) * (a.speaker === 'white' ? 1 : -1);
+    const gains = ['gain','small_gain'].includes(rating.bar_effect);
+    if (rating.bar_effect !== 'neutral' && ((gains && speakerScoreShift < 0) || (!gains && speakerScoreShift > 0))) throw new Error('Conversation score contradicts the rating for this speaker.');
+  }
+  reviewedScore = score;
   if (rating.bar_effect === 'neutral' && Math.abs(controlFraction(a.control_after) - controlFraction(reviewedControl)) > 1e-7) throw new Error('Best/Great must leave the bar unchanged.');
   if (a.replay_seconds != null && (!Number.isFinite(a.replay_seconds) || a.replay_seconds < 2 || a.replay_seconds > 4)) throw new Error('replay_seconds must be 2–4 seconds.');
   if (a.speaker && !['black','white'].includes(a.speaker)) throw new Error('speaker must be black or white.');
@@ -83,13 +102,27 @@ for (const a of annotations) {
 }
 const sourceHash = createHash('sha256').update(await fs.readFile(source)).digest('hex');
 if (spec.source_sha256 && sourceHash !== spec.source_sha256) throw new Error('Timeline source_sha256 does not match the supplied media.');
+if (refreshProjectIntro) {
+  const existing = JSON.parse(await fs.readFile(path.join(output, 'project-manifest.json'), 'utf8'));
+  const pastAnnotations = existing.segments.filter(v => v.kind === 'analysis');
+  const pastSource = existing.segments.filter(v => v.kind === 'source');
+  const expected = spec.intro_seconds + end - start + annotations.reduce((sum, a) => sum + a.hold_seconds, 0);
+  if (existing.source_sha256 !== sourceHash || existing.icon_set !== ratingSchema.icon_set || existing.bar?.side !== ratingSchema.bar.side
+    || existing.duration !== expected || pastSource[0]?.source_in !== start || pastSource.at(-1)?.source_out !== end
+    || (existing.side_colors && JSON.stringify(existing.side_colors) !== JSON.stringify(sides))
+    || (existing.initial_score_text && existing.initial_score_text !== initialScoreText)
+    || pastAnnotations.length !== annotations.length || pastAnnotations.some((v, i) => {
+      const a = annotations[i]; return v.source_at !== a.source_at || v.duration !== a.hold_seconds || v.rating !== a.rating || v.comment !== a.comment || v.score_text !== a.score_text;
+    })) throw new Error('Existing project media differs; project-intro refresh refused.');
+}
 if (refreshIntro) {
+  if (previousRender.rating_schema_version !== ratingSchema.version || previousRender.bar?.side !== 'left') throw new Error('The old layout or icon set differs; a complete render is required.');
   const pastAnnotations = previousRender.events.filter(v => v.kind === 'analysis');
   const pastSource = previousRender.events.filter(v => v.kind === 'source');
   if (previousRender.source_sha256 !== sourceHash || previousRender.expected_duration !== ratingSchema.intro_seconds + end - start + annotations.reduce((sum, v) => sum + v.hold_seconds, 0)
     || pastSource[0]?.source_in !== start || pastSource.at(-1)?.source_out !== end
     || JSON.stringify(previousRender.side_colors) !== JSON.stringify(sides)
-    || pastAnnotations.length !== annotations.length || pastAnnotations.some((v, i) => { const a = annotations[i]; return v.source_at !== a.source_at || v.duration !== a.hold_seconds || v.rating !== a.rating || v.comment !== a.comment || v.control !== a.control_after; })) throw new Error('Existing montage does not match this source/timeline; intro-only refresh refused.');
+    || pastAnnotations.length !== annotations.length || pastAnnotations.some((v, i) => { const a = annotations[i]; return v.source_at !== a.source_at || v.duration !== a.hold_seconds || v.rating !== a.rating || v.comment !== a.comment || v.control !== a.control_after || v.score_text !== a.score_text; })) throw new Error('Existing montage does not match this source/timeline; intro-only refresh refused.');
 }
 const mascot = path.resolve(option('--tony', path.join(here, 'assets/tony-pawn.png')));
 const mascotBytes = await fs.readFile(mascot);
@@ -97,8 +130,18 @@ if (!mascotBytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])))
 const overlayMascot = path.resolve(option('--tony-overlay', path.join(here, 'assets/tony-pawn-overlay.png')));
 const overlayMascotBytes = await fs.readFile(overlayMascot);
 if (!overlayMascotBytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))) throw new Error('--tony-overlay must be a PNG');
+const iconAssets = {};
+for (const rating of ratingSchema.categories) {
+  const bytes = await fs.readFile(path.join(here, rating.icon_file));
+  if (createHash('sha256').update(bytes).digest('hex') !== rating.icon_sha256) throw new Error(`Official icon hash mismatch: ${rating.id}`);
+  iconAssets[rating.id] = `data:image/svg+xml;base64,${bytes.toString('base64')}`;
+}
+const { loadSfxManifest, renderAnalysisAudio } = await import('./sfx.mjs');
+const sfxManifestPath = path.resolve(option('--sfx-manifest', path.join(here, 'assets/sfx/manifest.json')));
+const sfxManifest = await loadSfxManifest(sfxManifestPath);
 const browser = await chromium.launch({ executablePath: '/usr/bin/chromium', headless: true, args: ['--disable-dev-shm-usage'] });
 const overlays = [], annotationFrames = [];
+const introFrameDirectory = path.join(output, 'intro-overlay-frames');
 const introBackground = path.join(output, 'intro-source-frame.png');
 run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', source, '-frames:v', '1', '-update', '1', introBackground]);
 const introBytes = await fs.readFile(introBackground);
@@ -106,32 +149,115 @@ try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   await page.route('**/*', route => route.abort());
   await page.setContent('<!doctype html><html><body style="margin:0"><canvas width="1920" height="1080"></canvas></body></html>');
-  await page.evaluate(schema => window.ConversationRatingSchema = schema, ratingSchema);
+  await page.evaluate(({ schema, icons }) => { window.ConversationRatingSchema = schema; window.ConversationRatingAssets = icons; }, { schema: ratingSchema, icons: iconAssets });
   await page.addScriptTag({ content: await fs.readFile(path.join(here, 'scene.js'), 'utf8') });
   await page.evaluate(({ mascot, backdrop, overlayMascot }) => window.ConversationChess.init(mascot, backdrop, overlayMascot), { mascot: `data:image/png;base64,${mascotBytes.toString('base64')}`, backdrop: `data:image/png;base64,${introBytes.toString('base64')}`, overlayMascot: `data:image/png;base64,${overlayMascotBytes.toString('base64')}` });
   async function overlay(name, options) {
-    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides });
+    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides, low_res_preview: lowResPreview, source_height: video.height });
     const dest = path.join(output, name + '.png');
     await fs.writeFile(dest, Buffer.from(data.split(',')[1], 'base64')); return dest;
   }
   overlays.push(await overlay('intro-symbols', { phase: 'intro', t: 3 }));
   overlays.push(await overlay('intro-bar', { phase: 'intro', t: 9 }));
-  if (!refreshIntro) {
-  overlays.push(await overlay('overlay-initial', { control, demo, showSides: true }));
+  if (prepareProject) {
+    await fs.mkdir(introFrameDirectory, { recursive: true });
+    for (let frame = 0; frame < spec.intro_seconds * graphicsFps; frame++) {
+      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { phase: 'intro', t: frame / graphicsFps, intro_overlay: true });
+      await fs.writeFile(path.join(introFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
+    }
+  }
+  if (!refreshIntro && !refreshProjectIntro) {
+  overlays.push(await overlay('overlay-initial', { control, score_text: scoreText, demo, showSides: true }));
   for (let i = 0; i < annotations.length; i++) {
     const a = annotations[i];
-    overlays.push(await overlay(`overlay-freeze-${i}`, { control: a.control_after, evaluation: a, demo }));
+    overlays.push(await overlay(`overlay-freeze-${i}`, { control: a.control_after, score_text: a.score_text, evaluation: a, demo }));
     const frameDir = path.join(output, `overlay-freeze-${i}-frames`);
     await fs.mkdir(frameDir, { recursive: true });
-    for (let frame = 0; frame < Math.ceil(a.hold_seconds * 15); frame++) {
-      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, evaluation: a, demo, sides, previous_control: i ? annotations[i - 1].control_after : control, reveal_seconds: frame / 15 });
+    for (let frame = 0; frame < Math.ceil(a.hold_seconds * graphicsFps); frame++) {
+      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, score_text: a.score_text, evaluation: a, demo, sides, low_res_preview: lowResPreview, source_height: video.height, previous_control: i ? annotations[i - 1].control_after : control, previous_score_text: i ? annotations[i - 1].score_text : initialScoreText, reveal_seconds: frame / graphicsFps });
       await fs.writeFile(path.join(frameDir, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
     annotationFrames.push(frameDir);
-    overlays.push(await overlay(`overlay-after-${i}`, { control: a.control_after, demo }));
+    overlays.push(await overlay(`overlay-after-${i}`, { control: a.control_after, score_text: a.score_text, demo }));
   }
   }
 } finally { await browser.close(); }
+
+if (prepareProject) {
+  // Interchange media only. The actual final export belongs to Kdenlive/MLT;
+  // source, muted replay, alpha graphics, dialogue and SFX stay separate.
+  const projectSegments = [];
+  const fps = 30;
+  let projectCursor = start, projectElapsed = 0, projectControl = control, projectScore = initialScoreText;
+  function addProjectSegment(segment) {
+    const startFrame = Math.round(projectElapsed * fps), endFrame = Math.round((projectElapsed + segment.duration) * fps);
+    projectSegments.push({ ...segment, output_in: projectElapsed, start_frame: startFrame, end_frame: endFrame, duration_frames: endFrame - startFrame });
+    projectElapsed += segment.duration;
+  }
+  function alphaMovie(directory, duration, name) {
+    const dest = path.join(output, name + '.mov');
+    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(graphicsFps), '-i', path.join(directory, 'frame_%05d.png'),
+      '-an', '-vf', 'format=argb', '-c:v', 'qtrle', '-threads', '2', '-r', String(fps), '-t', String(duration), dest]);
+    return dest;
+  }
+  const introBackgroundFile = path.join(output, 'project-background-intro.png');
+  run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', introBackground,
+    '-vf', 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black', '-frames:v', '1', '-update', '1', introBackgroundFile]);
+  addProjectSegment({ kind: 'intro', duration: spec.intro_seconds, background_file: introBackgroundFile,
+    graphics_file: alphaMovie(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro'), graphics_type: 'alpha_mov', graphics_frames: introFrameDirectory });
+  if (refreshProjectIntro) {
+    const projectManifest = path.join(output, 'project-manifest.json');
+    const existing = JSON.parse(await fs.readFile(projectManifest, 'utf8'));
+    existing.segments[0] = projectSegments[0];
+    await fs.writeFile(projectManifest, JSON.stringify(existing, null, 2));
+    console.log(JSON.stringify({ project_manifest: projectManifest, intro_refreshed: true, scene_media_unchanged: true, final_video_exported: false }));
+    process.exit(0);
+  }
+  const sourceVideoFilter = 'scale=1848:1080:force_original_aspect_ratio=decrease,pad=1848:1080:(ow-iw)/2:(oh-ih)/2:black,setsar=1,pad=1920:1080:72:0:black';
+  const videoEncoding = ['-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '17', '-threads', '4', '-pix_fmt', 'yuv420p', '-r', String(fps)];
+  function prepareNormal(until, overlayFile) {
+    const duration = until - projectCursor;
+    if (duration <= 0) return;
+    const label = `project-source-${String(projectSegments.length).padStart(3, '0')}`;
+    const backgroundFile = path.join(output, label + '.mkv'), dialogueAudioFile = path.join(output, label + '-dialogue.wav');
+    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', sourceVideoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
+    const audioInput = hasAudio ? ['-ss', String(projectCursor), '-i', source] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
+    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
+      `aresample=48000,apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - .035)}:d=0.035,atrim=end_sample=${Math.round(duration * 48000)}`,
+      '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', dialogueAudioFile]);
+    addProjectSegment({ kind: 'source', duration, source_in: projectCursor, source_out: until, background_file: backgroundFile,
+      graphics_file: overlayFile, graphics_type: 'alpha_png', dialogue_audio_file: dialogueAudioFile, control: projectControl, score_text: projectScore });
+    projectCursor = until;
+  }
+  let normalOverlay = overlays[2];
+  for (let i = 0; i < annotations.length; i++) {
+    const a = annotations[i]; prepareNormal(a.source_at, normalOverlay);
+    const replayStart = Math.max(start, a.source_at - (a.replay_seconds || 3));
+    const history = a.source_at - replayStart, replaySpeed = history / a.hold_seconds;
+    const backgroundFile = path.join(output, `project-replay-${i}.mkv`), sfxFile = path.join(output, `analysis-sfx-${i}.wav`);
+    const input = analysisBackground === 'freeze' ? ['-ss', String(a.source_at), '-i', source] : ['-ss', String(replayStart), '-t', String(history), '-i', source];
+    const stretch = analysisBackground === 'freeze' ? 'select=eq(n\\,0),tpad=stop_mode=clone:stop_duration=9,' : `setpts=${a.hold_seconds / history}*(PTS-STARTPTS),tpad=stop_mode=clone:stop_duration=0.5,`;
+    if (analysisBackground === 'loop') throw new Error('--prepare-project supports replay or freeze, not the legacy loop mode.');
+    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...input, '-vf', `${stretch}gblur=sigma=13,${sourceVideoFilter}`, '-t', String(a.hold_seconds), ...videoEncoding, backgroundFile]);
+    await renderAnalysisAudio({ manifest: sfxManifest, annotation: a, schema: ratingSchema, outputPath: sfxFile });
+    addProjectSegment({ kind: 'analysis', duration: a.hold_seconds, source_at: a.source_at, rating: a.rating, speaker: a.speaker,
+      comment: a.comment, score_text: a.score_text, control: a.control_after, background_file: backgroundFile,
+      replay_range: { source_in: replayStart, source_out: a.source_at }, replay_speed: replaySpeed, original_dialogue_progression_paused: true,
+      graphics_file: alphaMovie(annotationFrames[i], a.hold_seconds, `project-graphics-analysis-${i}`), graphics_type: 'alpha_mov', graphics_frames: annotationFrames[i], sfx_file: sfxFile });
+    projectControl = a.control_after; projectScore = a.score_text; normalOverlay = overlays[4 + i * 2];
+  }
+  prepareNormal(end, normalOverlay);
+  const projectManifest = path.join(output, 'project-manifest.json');
+  await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,
+    original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: 720, low_res_preview: lowResPreview },
+    timeline_file: timelinePath, timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'), rating_schema_version: ratingSchema.version,
+    fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
+    icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
+    side_colors: sides, initial_score_text: initialScoreText,
+    final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
+  console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
+  process.exit(0);
+}
 
 const fps = 30, intro = spec.intro_seconds, segments = [], events = [];
 const encoding = ['-c:v', 'libx264', '-preset', 'fast', '-crf', '17', '-threads', '4', '-pix_fmt', 'yuv420p',
@@ -151,8 +277,8 @@ segment('intro-bar', barSeconds, ['-loop', '1', '-framerate', String(fps), '-i',
   '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'],
   `[0:v]format=yuv420p,fade=t=out:st=${barSeconds - ratingSchema.fade_seconds}:d=${ratingSchema.fade_seconds}[out]`, '1:a', '', { output_in: ratingSchema.symbols_seconds });
 function layout(freeze = false, replayStretch = 1) {
-  // Preserve every source pixel: full-height film with right-side 120px bar, no crop.
-  return `[0:v]${replayStretch !== 1 ? `setpts=${replayStretch}*(PTS-STARTPTS),tpad=stop_mode=clone:stop_duration=0.5,` : ''}scale=1800:1080:force_original_aspect_ratio=decrease${freeze ? ',gblur=sigma=13' : ''},pad=1800:1080:(ow-iw)/2:(oh-ih)/2:black,setsar=1,pad=1920:1080:0:0:black[base];[base][1:v]overlay=0:0:shortest=1:format=auto[out]`;
+  // Preserve every source pixel, reserving a 72px LEFT gutter for the chess-style bar.
+  return `[0:v]${replayStretch !== 1 ? `setpts=${replayStretch}*(PTS-STARTPTS),tpad=stop_mode=clone:stop_duration=0.5,` : ''}scale=1848:1080:force_original_aspect_ratio=decrease${freeze ? ',gblur=sigma=13' : ''},pad=1848:1080:(ow-iw)/2:(oh-ih)/2:black,setsar=1,pad=1920:1080:72:0:black[base];[base][1:v]overlay=0:0:shortest=1:format=auto[out]`;
 }
 let cursor = start, elapsed = intro, overlayIndex = 2;
 function normal(until) {
@@ -163,7 +289,7 @@ function normal(until) {
   const fadeOut = Math.max(0, duration - .035);
   segment('source', duration, argv, layout(), hasAudio ? '0:a:0' : '2:a',
     `aresample=48000,apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${fadeOut}:d=0.035`,
-    { source_in: cursor, source_out: until, output_in: elapsed, control });
+    { source_in: cursor, source_out: until, output_in: elapsed, control, score_text: scoreText });
   elapsed += duration; cursor = until;
 }
 if (refreshIntro) {
@@ -194,13 +320,15 @@ for (let i = 0; i < annotations.length; i++) {
     if (analysisBackground === 'replay') replayStretch = a.hold_seconds / loopDuration;
     loopRange = { source_in: loopStart, source_out: a.source_at };
   }
+  const analysisAudio = path.join(output, `analysis-sfx-${i}.wav`);
+  await renderAnalysisAudio({ manifest: sfxManifest, annotation: a, schema: ratingSchema, outputPath: analysisAudio });
   segment('analysis', a.hold_seconds, [...backgroundInput,
-    '-framerate', '15', '-i', path.join(annotationFrames[i], 'frame_%05d.png'),
-    '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'], layout(true, replayStretch), '2:a', '',
+    '-framerate', String(graphicsFps), '-i', path.join(annotationFrames[i], 'frame_%05d.png'),
+    '-i', analysisAudio], layout(true, replayStretch), '2:a', '',
     { source_at: a.source_at, output_in: elapsed, rating: a.rating, speaker: a.speaker || null,
-      comment: a.comment, control: a.control_after, background: analysisBackground, replay_range: loopRange, replay_speed: 1 / replayStretch,
+      comment: a.comment, control: a.control_after, score_text: a.score_text, sfx_file: analysisAudio, background: analysisBackground, replay_range: loopRange, replay_speed: 1 / replayStretch,
       original_dialogue_progression_paused: true });
-  elapsed += a.hold_seconds; control = a.control_after; overlayIndex += 1;
+  elapsed += a.hold_seconds; control = a.control_after; scoreText = a.score_text; overlayIndex += 1;
 }
 normal(end);
 }
@@ -217,6 +345,10 @@ const actual = Number(finalMeta.format.duration);
 if (Math.abs(actual - elapsed) > .2) throw new Error(`Unexpected output duration ${actual}; expected ${elapsed}`);
 await fs.writeFile(path.join(output, 'render-report.json'), JSON.stringify({ schema: spec.schema, demo, rating_schema_version: ratingSchema.version,
   reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs',
+  bar: ratingSchema.bar, initial_score_text: initialScoreText, conversation_score_editorial: true, icon_set: ratingSchema.icon_set,
+  graphics_fps: graphicsFps,
+  source_quality: { native_hd: !lowResPreview, minimum_height: 720, low_res_preview: lowResPreview },
+  sfx_manifest: sfxManifestPath, sfx_added_during_analysis_only: true,
   side_colors: sides, analysis_background: analysisBackground, transparent_mascot_in_guide: true,
   timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'),
   review_evidence: spec.review_evidence || null,

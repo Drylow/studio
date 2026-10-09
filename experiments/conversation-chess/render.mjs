@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -37,6 +38,12 @@ if (mascot) {
   if (!data.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))) throw new Error('--tony must be a PNG');
   mascotSource = `data:image/png;base64,${data.toString('base64')}`;
 }
+const iconAssets = {};
+for (const rating of ratingSchema.categories) {
+  const bytes = await fs.readFile(path.join(here, rating.icon_file));
+  if (createHash('sha256').update(bytes).digest('hex') !== rating.icon_sha256) throw new Error(`Official icon hash mismatch: ${rating.id}`);
+  iconAssets[rating.id] = `data:image/svg+xml;base64,${bytes.toString('base64')}`;
+}
 const browser = await chromium.launch({ executablePath: option('--chromium', '/usr/bin/chromium'), headless: true,
   args: ['--disable-dev-shm-usage'] });
 try {
@@ -44,7 +51,7 @@ try {
   // Offline synthetic content: prohibit all network access during the render.
   await page.route('**/*', route => route.abort());
   await page.setContent('<!doctype html><html><head><meta charset="UTF-8"><style>html,body{margin:0;background:#161a1e}canvas{display:block}</style></head><body><canvas width="1920" height="1080"></canvas></body></html>');
-  await page.evaluate(schema => window.ConversationRatingSchema = schema, ratingSchema);
+  await page.evaluate(({ schema, icons }) => { window.ConversationRatingSchema = schema; window.ConversationRatingAssets = icons; }, { schema: ratingSchema, icons: iconAssets });
   await page.addScriptTag({ content: await fs.readFile(path.join(here, 'scene.js'), 'utf8') });
   await page.evaluate(({ mascot, backdrop, overlayMascot }) => window.ConversationChess.init(mascot, backdrop, overlayMascot), { mascot: mascotSource, backdrop: backgroundSource, overlayMascot: overlayMascotSource });
   const total = Math.round(fps * seconds);
@@ -73,6 +80,6 @@ await fs.copyFile(path.join(output, 'frames', `frame_${String(Math.round(3 * fps
 await fs.copyFile(path.join(output, 'frames', `frame_${String(Math.round(10 * fps)).padStart(5, '0')}.png`), path.join(output, 'example.png'));
 await fs.writeFile(path.join(output, 'render.json'), JSON.stringify({ width: 1920, height: 1080, fps,
   duration: seconds, intro_only: introOnly, audio: false, supplied_background: Boolean(backgroundImage),
-  internal_design_draft: true, reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs', supplied_tony_png: Boolean(mascot), supplied_tony_overlay: Boolean(overlayMascot),
+  internal_design_draft: true, icon_set: ratingSchema.icon_set, reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs', supplied_tony_png: Boolean(mascot), supplied_tony_overlay: Boolean(overlayMascot),
   files: { video, sheet: path.join(output, 'contact-sheet.jpg') } }, null, 2));
 process.stdout.write(`Preview: ${video}\n`);

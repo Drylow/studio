@@ -2,90 +2,118 @@
   "schema": "conversation-chess-clip-v1",
   "demo": false,
   "source_reviewed": true,
-  "source_sha256": "4e5e95c61ca17ca5d1fb6b109dc0ba6dde365592725892ad90da18a57403026d",
-  "source_in": 99.4,
-  "source_out": 173.9,
+  "source_sha256": "13bc578e355856c920552e2ce0f1495def368eef7be9c67a9a857e708ec4ed85",
+  "source_in": 0,
+  "source_out": 74.5,
   "intro_seconds": 16,
   "initial_control": 0.5,
   "black_label": "Tony",
   "white_label": "Janice",
   "annotations": [
     {
-      "source_at": 101.95,
+      "source_at": 2.55,
       "hold_seconds": 7.0,
       "rating": "book",
       "speaker": "black",
       "comment": "Tony brings up Harpo like he's making harmless dinner conversation. It's a standard family opening with a very non-standard intention: ruin the mood.",
-      "control_after": 0.54,
+      "control_after": 0.526974,
       "reviewed": true,
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "-0.3",
+      "original_upload_at": 101.95
     },
     {
-      "source_at": 138.95,
+      "source_at": 39.55,
       "hold_seconds": 7.0,
       "rating": "great",
       "speaker": "white",
       "comment": "Janice spots the mockery and sets a direct boundary. A strong defensive reply: call out the attack without handing him the angry reaction he wants.",
-      "control_after": 0.54,
+      "control_after": 0.526974,
       "reviewed": true,
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "-0.3",
+      "original_upload_at": 138.95
     },
     {
-      "source_at": 149.6,
+      "source_at": 50.2,
       "hold_seconds": 7.0,
       "rating": "brilliant",
       "speaker": "black",
       "comment": "He turns a question about a name into a question about an absent mother. Tony stops testing the armour and goes straight for the one gap.",
-      "control_after": 0.66,
+      "control_after": 0.65656,
       "reviewed": true,
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "-1.8",
+      "original_upload_at": 149.6
     },
     {
-      "source_at": 165.6,
+      "source_at": 66.2,
       "hold_seconds": 7.0,
       "rating": "blunder",
       "speaker": "white",
       "comment": "Janice's anger takes over the table. Tony has provoked the reaction he was fishing for; her anger-management training just met its final boss.",
-      "control_after": 0.85,
+      "control_after": 0.849156,
       "reviewed": true,
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "-4.8",
+      "original_upload_at": 165.6
     },
     {
-      "source_at": 170.95,
+      "source_at": 71.55,
       "hold_seconds": 7.0,
       "rating": "best",
       "speaker": "black",
       "comment": "Now he acts like he's only asking as a concerned uncle. The provocation disappears behind a family title: maximum damage, minimum ownership.",
-      "control_after": 0.85,
+      "control_after": 0.849156,
       "reviewed": true,
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "-4.8",
+      "original_upload_at": 170.95
     }
   ],
   "review_evidence": {
-    "visual_review": "Selected dense frames around each annotation, source opening, ending and original145-second join boundary",
-    "audio_review_method": "Existing local ASR measured on actual source audio, checked against public episode transcript; no human listening claimed",
+    "visual_review": "15 selected HD frames around five anchors inspected; scene opening, ending and reactions checked",
+    "audio_review_method": "Local ASR on actual HD PCM, with targeted sections; five anchor waveform correlations versus previously reviewed source:1.000000 at zero sample lag (8kHz). No human listening claimed.",
     "human_audio_listening": false,
+    "full_source_offset_seconds": 99.4,
     "transcript_url": "https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=the-sopranos&episode=s05e10",
-    "full_source_offset_seconds": 0,
-    "tail_offset_seconds": 145,
     "finished_render_reviewed": true,
     "rights_cleared": false,
-    "music_instrumental_boundary_not_human_reviewed": true,
-    "finished_render_review": "All five real rendered speech bubbles and dialogue frames visually inspected; complete audio/video decoding passed; original dialogue audio measured, analysis windows silent. No human listening claimed."
+    "alignment_offsets_seconds": [
+      2.55,
+      39.55,
+      50.2,
+      66.2,
+      71.55
+    ],
+    "audio_alignment_zero_offset_confirmed": true,
+    "finished_render_review": "Actual Kdenlive export:15images inspected, two guides, five complete bubbles, typing states, dialogue frames and ending. Full A/V decode passed. PCM measurements confirm5rating cues/typing, silent reading tails,6dialogue sections and no clipping. No human listening claimed.",
+    "native_editor_opened": true
   },
   "editorial_note": "Ratings measure conversational control, not morality. Source content is a proposed private pilot, not cleared for publication.",
   "analysis_background": "replay",
   "source_quality": {
-    "width": 640,
-    "height": 360,
-    "note": "Montage preview; the source is not HD. Export resolution does not restore source detail."
+    "width": 1280,
+    "height": 720,
+    "highest_request": "1080p",
+    "actual_download": "720p",
+    "note": "The provider returned native720p at its maximal1080p request. Export is1080p graphics over this HD source; no claim of native1080p footage."
   },
   "render_result": {
-    "duration_seconds": 125.564,
+    "duration_seconds": 125.504,
     "width": 1920,
     "height": 1080,
     "fps": 30,
-    "file": "output/conversation-chess/tony-janice-pilot.mp4",
-    "published": false
-  }
+    "frame_count": 3765,
+    "file": "output/conversation-chess/tony-janice-pilot-v2-hd.mp4",
+    "sha256": "373c5505ea067433bae190f3c4792a5b3210c58f16365e79ea5ae2c573551d09",
+    "native_editor": "Kdenlive24.12.3 / MLT7.30",
+    "native_project": "output/conversation-chess/tony-janice-kdenlive/project.kdenlive",
+    "export_crf": 17,
+    "audio_bitrate": "192k",
+    "published": false,
+    "status": "private-test-rendered-and-checked"
+  },
+  "initial_score_text": "0.0",
+  "revision": "v2: user requested left Chess.com bar, exact official icons, synchronized CC0 sound effects and actualHD source"
 }

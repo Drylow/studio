@@ -10,5 +10,6 @@
   "annotations": [],
   "black_label": "Tony",
   "white_label": "Other speaker",
-  "analysis_background": "replay"
+  "analysis_background": "replay",
+  "initial_score_text": "0.0"
 }

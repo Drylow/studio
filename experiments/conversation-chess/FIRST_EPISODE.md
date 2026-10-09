@@ -1,85 +1,102 @@
 # Two-minute pilot: Tony ruins Sunday dinner
 
-**The Sopranos — S5E10, Cold Cuts.** Tony provokes Janice at the dinner table by
-bringing up her son Harpo. The pilot includes the provocation, her angry reaction
-and Tony's claim that he is only asking as an uncle. Tony is central throughout.
+**The Sopranos — S5E10, Cold Cuts.** Tony brings up Janice's son Harpo at the
+dinner table, provokes her angry reaction, then claims he is only asking as an
+uncle. English dialogue and original written analysis; **no voice-over**.
+Primary reference: [ConversationAnalysisGuy](https://www.youtube.com/@ConversationAnalysisGuy).
 
-The user approved the photographic Tony head on the short black pawn, then
-requested a roughly two-minute montage before extending the format. Dialogue
-and written analysis are in English; **no voice-over**. The primary reference is
-[ConversationAnalysisGuy](https://www.youtube.com/@ConversationAnalysisGuy).
+The photographic Tony head on the short black pawn is approved. Preserve it.
+The user wants a roughly two-minute test before extending this format.
 
-## Actual footage and reviewed timing
+## Current revision
 
-The normal download API delivered the public research clip
-[`biugRUTkh1c`](https://www.youtube.com/watch?v=biugRUTkh1c) in two ranges: 0–145 s
-and 145–205 s, both 640×360 with original audio. The first range was trimmed to
-exactly 145 s before joining the second. Combined duration: 204.869 s.
-The source and third-party reference videos remain in the private work area,
-outside Git. The proposed Tony/Ralph scene could not be acquired and is not
-the footage in this pilot.
+The first real pilot was rejected after viewing: missing sound effects,
+a wide bar on the right, approximate rating icons and a360p source.
+The next test must use a **thin left evaluation bar**, actual Chess.com SVGs,
+synchronized typing sound, brief move/rating accents and realHD footage.
+After discussing the editing tools, the user also requires a real video editor.
+Kdenlive 24.12.3 is installed in this cloud; the deliverable must include an
+editable native project and its editor render. No access to the user's PC
+or desktop CapCut/Premiere is established.
 
-`pilot-tony-janice.json` binds the joined source with its SHA-256 and records the
-reviewed source range **99.4–173.9 s**. Sixteen seconds of introductory guide,
-74.5 seconds of original footage and five seven-second analyses give **125.5 s**.
-The outdoor walk and later song lyrics are outside this cut. This does not
-claim that every instrumental sound has been audited.
+The ten official SVGs are byte-identical copies of the existing verified
+`chess_studio/public/chesscom` assets. Miss is the official yellow minus;
+Interesting is observed in the reference but has no established official asset.
+The commentary text is original, and the numeric conversation score is an
+editorial interpretation, **not a chess-engine calculation**.
 
-The timestamps come from selected dense frames and local ASR on the actual
-audio, checked against the [public episode transcript](https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=the-sopranos&episode=s05e10).
-No human listening is claimed. No measured word crosses the 145-second join.
-Do not reuse these timings on another source file without reviewing it.
+## Actual HD source and timing
 
-**Image-quality limit:** the source is 360p. The 1920×1080 export keeps the
-graphics sharp, but does not recover detail absent from the footage. This is a
-test of the editing format, not a finished HD episode.
+A normal documented Algrow download request for
+[`biugRUTkh1c`](https://www.youtube.com/watch?v=biugRUTkh1c), range99.4–173.9 s,
+maximum quality1080p, returned **1280×720**, 30frames/s with original stereo
+audio; duration74.533 s. The provider does not list available formats. This
+establishes an actual720p source, not native 1080p footage or the maximum quality
+of every other upload. Final1080p graphics preserve SVG/text detail.
 
-## Format actually studied
+The media remains private outside Git. `pilot-tony-janice.json` binds its SHA256
+and selects local0–74.5 s, trimming the last33ms of padding. Intro16 s plus74.5 s
+of footage and five7 s inserts gives a125.5 s timeline. The outdoor walk and later
+song are outside this cut; no complete human audio audit is claimed.
 
-The first 100 seconds of the real reference `InM2zft-iQs` were acquired in two
-sections and inspected. Follow the observed two-page introduction: eleven
-evaluation types, bar explanation, fade and scene at 16 s. The guide uses a
-darkened frame from our own Sopranos source, not Breaking Bad footage.
+The source-relative anchors were reviewed again on the actual HD file:
+local ASR, targeted short sections and15selected frames. Waveform correlation
+against the previous reviewed source is1.000000 at zero sample lag at each
+anchor (8kHz comparison), confirming the99.4 s offset. Do not apply these times
+to a different source without review.
 
-In the scene, the rating sits at the upper left, Tony's pawn at the lower left,
-and an original explanation appears at about 50 characters per second in a
-large rounded white speech bubble. The bar remains on the right, black above
-white. During analysis the preceding few seconds replay slowly, blurred and
-muted; the original dialogue then resumes at the saved timestamp. No dialogue
-is discarded to make room for the commentary.
-
-The original approved PNG remains unchanged. `tony-pawn-overlay.png` is its
-visually reviewed transparent derivative; see `STYLE.md` for the slight texture
-differences introduced by background removal.
-
-## Five original evaluations
-
-The bar means our humorous interpretation of **control of this conversation**,
-with Tony black and Janice white. It does not score morality or calculate chess
-positions. Initial black share: 50%; no numeric score is printed on the video.
-
-| Source anchor | Rating | Editorial reading | Black share |
+| Local anchor | Original upload | Rating | Conversation score, White-positive |
 |---|---|---|---:|
-| 101.95 s, after Tony introduces Harpo | Book — Tony | A routine family topic used to spoil the dinner's mood. | 54% |
-| 138.95 s, after Janice sets a boundary | Great — Janice | She identifies the attack without immediately giving Tony the reaction he seeks. | 54% |
-| 149.60 s, after the absent-mother question | Brilliant — Tony | He moves from small talk to the most painful vulnerability. | 66% |
-| 165.60 s, after Janice's outburst | Blunder — Janice | Her anger gives Tony the reaction he was provoking. | 85% |
-| 170.95 s, after Tony's concerned-uncle defense | Best — Tony | He presents himself as merely asking, evading responsibility for the provocation. | 85% |
+|2.55s|101.95s|Book — Tony|−0.3|
+|39.55s|138.95s|Great — Janice|−0.3|
+|50.20s|149.60s|Brilliant — Tony|−1.8|
+|66.20s|165.60s|Blunder — Janice|−4.8|
+|71.55s|170.95s|Best — Tony|−4.8|
 
-The English paragraphs in the JSON are original commentary, not dialogue
-subtitles or quotations. Best/Great leave the bar unchanged; other changes
-follow the rated speaker. The renderer checks these directions and allows
-reading time after the typewriter finishes.
+Tony is Black; Janice is White. The score starts at 0.0 and controls the actual
+bar proportions consistently. Best/Great leave it unchanged. This is humorous
+conversation control, not a moral rating or a claim of objective measurement.
+
+## Montage and sound
+
+Intro: symbols guide, bar explanation and fade over our own darkened source.
+During an evaluation, the grade appears at upper left and the approved pawn at
+lower left beside a white speech bubble. Text appears at50characters/s.
+The preceding2–4 s replay slowly, blurred and without dialogue. Original
+dialogue progression resumes at the saved source timestamp afterward.
+
+Recorded keyboard clacks follow revealed non-space characters and stop when
+typing ends. A brief click accompanies each evaluation; Brilliant/Blunder get
+one short accent. Normal dialogue sections retain original audio. Added sounds
+are CC0 with source pages, processing notes and hashes in `assets/sfx`.
+No soundtrack or voice-over is added. Official Chess.com sounds were not
+obtained; do not describe these original licensed UI cues as their audio.
+
+Kdenlive should contain separate source, replay, graphics and audio tracks,
+so these timings and sound levels remain editable. Preparation of transparent
+graphics and WAVs can use scripts; the native project performs the montage
+and final export. The independent live sports/TikTok tools remain untouched.
 
 ## Delivery status
 
-**Real pilot rendered and checked: 125.564 s**, 1920×1080, 30 frames/s, original
-dialogue audio and five silent analysis inserts. Both guide pages, all five
-rendered bubbles and clear dialogue frames were inspected. The full audio/video
-decode passed; audio measurements confirm dialogue signal between analyses.
-These checks do not constitute human listening.
+**Corrected Kdenlive export rendered and inspected:125.504s**,1920×1080,
+30fps/3765 frames,H264CRF17/AAC192k. The actual native GUI opened the project:
+five tracks, 36media, no missing-resource dialog and correct alpha. A separate
+GUI SaveAs roundtrip preserves all 35 actual clip ranges and five tracks; Kdenlive
+normalizes wrapper/padding metadata without changing the reviewed clip timeline.
 
-Local delivery: `output/conversation-chess/tony-janice-pilot.mp4` (ignored by
-Git), with its render report. No upload, scheduling, source-rights clearance or
-copyright outcome is established. This experiment does not change the live
-Cage/Pitch or TikTok automations.
+Fifteen final rendered images were examined, including both guide pages, all
+five complete bubbles, progressive typing, clear dialogue and the ending.
+Full A/V decoding passed. Actual exported PCM confirms rating/typing cues,
+silent reading tails, original dialogue between analyses and no clipping.
+These checks do not constitute human audio listening.
+
+Private output: `output/conversation-chess/tony-janice-pilot-v2-hd.mp4`, plus
+`output/conversation-chess/tony-janice-kdenlive/project.kdenlive` and its media.
+After moving the full bundle, `export-kdenlive.py --bundle /new/path --relocate`
+updates its media root. The relocated private bundle was checked for all 36 files.
+Clips, pauses and sound levels remain editable in Kdenlive. Animated wording
+is a separate alpha asset, regenerated from JSON, not a native editable title.
+
+Keep the older rejected file separate. No upload, scheduling, source-rights
+clearance or copyright outcome is established.

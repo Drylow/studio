@@ -1,4 +1,4 @@
-// Offline conversation-review graphics. Original vector icons; approved PNG stays unchanged.
+// Offline conversation-review graphics. Exact official SVGs; approved PNG stays unchanged.
 window.ConversationChess = (() => {
   const W = 1920, H = 1080, canvas = document.querySelector('canvas');
   const ctx = canvas.getContext('2d', { alpha: true });
@@ -19,36 +19,20 @@ window.ConversationChess = (() => {
     const nw = image.width * s, nh = image.height * s;
     ctx.drawImage(image, x + (w - nw) / 2, y + (h - nh) / 2, nw, nh);
   }
+  const officialIcons = {};
   function ratingIcon(v, x, y, size = 76) {
-    ctx.beginPath(); ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2);
-    ctx.fillStyle = v.color; ctx.fill();
-    if (!['book', 'thumb'].includes(v.mark)) {
-      text(v.mark, x + size / 2, y + size * .715, size * .65, '#ffffff', 800, 'center'); return;
-    }
-    ctx.save(); ctx.translate(x, y); ctx.scale(size / 72, size / 72);
-    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 3.6; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-    if (v.mark === 'book') {
-      ctx.beginPath(); ctx.moveTo(36, 26); ctx.quadraticCurveTo(25, 20, 16, 23);
-      ctx.lineTo(16, 49); ctx.quadraticCurveTo(27, 47, 36, 53);
-      ctx.quadraticCurveTo(46, 47, 56, 49); ctx.lineTo(56, 23);
-      ctx.quadraticCurveTo(46, 20, 36, 26); ctx.lineTo(36, 53); ctx.stroke();
-    } else {
-      // Original geometric thumbs-up, distinct from a platform's artwork.
-      ctx.beginPath(); ctx.moveTo(28, 49); ctx.lineTo(28, 30); ctx.lineTo(37, 20);
-      ctx.quadraticCurveTo(45, 17, 43, 28); ctx.lineTo(51, 28);
-      ctx.quadraticCurveTo(57, 28, 54, 35); ctx.lineTo(50, 49);
-      ctx.closePath(); ctx.stroke(); ctx.strokeRect(17, 31, 8, 19);
-    }
-    ctx.restore();
+    const icon = officialIcons[v.id];
+    if (!icon) throw new Error(`Official Chess.com icon unavailable: ${v.id}`);
+    imageContain(icon, x, y, size, size);
   }
-  function guideBackground() {
+  function guideBackground(transparentBackground = false) {
     ctx.clearRect(0, 0, W, H);
-    if (background) imageContain(background, 0, 0, W, H);
+    if (background && !transparentBackground) imageContain(background, 0, 0, W, H);
     // Without a supplied frame this stays translucent for compositing over real footage.
     ctx.fillStyle = 'rgba(0,0,0,.79)'; ctx.fillRect(0, 0, W, H);
   }
-  function symbols() {
-    guideBackground();
+  function symbols(transparentBackground = false) {
+    guideBackground(transparentBackground);
     if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 302, 12, 130, 130);
     text('Annotation Symbols Guide', 1120, 107, 65, '#f4f4f4', 700, 'center', 'monospace');
     for (const v of schema.categories) {
@@ -59,15 +43,11 @@ window.ConversationChess = (() => {
       lines(v.definition, x + 300, y + 36, 33, v.color, 40, 'monospace');
     }
   }
-  function evaluation(t = 9) {
-    guideBackground();
-    text('What is the Evaluation Bar?', 1080, 120, 64, '#ffffff', 800, 'center');
-    const bx = 110, by = 0, bw = 94, bh = H;
-    const black = t < 10 ? .5 : .5 + .14 * clamp((t - 10) / 2);
-    ctx.fillStyle = '#181818'; ctx.fillRect(bx, by, bw, bh);
-    ctx.fillStyle = '#f3f3f3'; ctx.fillRect(bx, bh * black, bw, bh * (1 - black));
-    ctx.strokeStyle = '#888888'; ctx.lineWidth = 2; ctx.strokeRect(bx, 1, bw, bh - 2);
-    lines('The bar shows who controls the conversation: Black or White.\nThe colors identify the two sides, not who speaks first.\nEvery exchange starts equal. These are editorial judgments,\nnot calculations from a chess engine.', 1100, 254, 40, '#ffffff', 53, 'Arial', 'center');
+  function evaluation(t = 9, transparentBackground = false) {
+    guideBackground(transparentBackground);
+    text('What is the Conversation Score?', 1080, 120, 64, '#ffffff', 800, 'center');
+    controlBar(t < 10 ? '0.0' : '-1.8', '0.0', t - 10, {x:110, y:40, width:50, height:1000});
+    lines('The bar shows who controls the conversation: Black or White.\nThe score sits on the side with the advantage.\nEach conversation starts at 0.0. These are our judgments\nabout the dialogue, not chess engine calculations.', 1100, 254, 40, '#ffffff', 53, 'Arial', 'center');
     function note(ids, y, rest) {
       const size = 60;
       let x = 374;
@@ -84,34 +64,54 @@ window.ConversationChess = (() => {
     note(['brilliant'], 791, 'shift control toward the speaker.');
     lines('The other labels show a loss of control for the speaker.\nA third party changes the bar only when their line\naffects one of the two main sides.', 1100, 923, 40, '#ffffff', 51, 'Arial', 'center');
   }
-  function intro(t) {
-    if (t < schema.symbols_seconds) symbols(); else evaluation(t);
+  function intro(t, transparentBackground = false) {
+    if (t < schema.symbols_seconds) symbols(transparentBackground); else evaluation(t, transparentBackground);
     if (t > schema.intro_seconds - schema.fade_seconds) {
       ctx.fillStyle = `rgba(0,0,0,${clamp((t - schema.intro_seconds + schema.fade_seconds) / schema.fade_seconds)})`;
       ctx.fillRect(0, 0, W, H);
     }
   }
-  function controlBar(control, previous = control, seconds = .5) {
-    const fraction = c => typeof c === 'number' ? c : ({ balanced: .5, black: .72, white: .28, tony: .72, ralph: .28 })[c] ?? .5;
-    const p = clamp(seconds / .5), eased = p * p * (3 - 2 * p);
-    const blackShare = fraction(previous) + (fraction(control) - fraction(previous)) * eased;
-    ctx.fillStyle = '#111111'; ctx.fillRect(1800, 0, 120, H);
-    ctx.fillStyle = '#eeeeee'; ctx.fillRect(1800, H * blackShare, 120, H * (1 - blackShare));
-    ctx.strokeStyle = '#808080'; ctx.lineWidth = 2; ctx.strokeRect(1800, 0, 120, H);
+  function controlBar(scoreText = '0.0', previousScoreText = scoreText, seconds = .5, position = null) {
+    const score = Number(scoreText), previous = Number(previousScoreText);
+    const config = schema.bar, p = clamp(seconds / config.transition_seconds), eased = p * p * (3 - 2 * p);
+    const shownScore = previous + (score - previous) * eased;
+    // Same visual mapping as the existing chess review widget. This score is editorial.
+    const whiteShare = 1 / (1 + Math.exp(-shownScore * .36));
+    const bx = position?.x ?? config.x, by = position?.y ?? config.y;
+    const bw = position?.width ?? config.width, bh = position?.height ?? config.height;
+    ctx.fillStyle = config.black_color; ctx.fillRect(bx, by, bw, bh);
+    ctx.fillStyle = config.white_color; ctx.fillRect(bx, by + bh * (1 - whiteShare), bw, bh * whiteShare);
+    ctx.strokeStyle = '#11111188'; ctx.lineWidth = 3; ctx.strokeRect(bx, by, bw, bh);
+    text(Math.abs(shownScore).toFixed(1), bx + bw / 2, shownScore < 0 ? by + 29 : by + bh - 14,
+      config.score_font_size, shownScore < 0 ? '#ffffff' : config.score_text_color, 700, 'center');
+    if (!position) {
+      text('♟', bx + bw / 2, by - 37, 48, '#b1aca3', 700, 'center');
+      text('♙', bx + bw / 2, by + bh + 66, 48, '#ffffff', 700, 'center');
+    }
   }
   function sourceFrame(options) {
-    ctx.clearRect(0, 0, W, H); controlBar(options.control ?? .5, options.previous_control ?? options.control ?? .5, options.reveal_seconds ?? .5);
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#171614'; ctx.fillRect(0, 0, schema.bar.gutter_width, H);
+    controlBar(options.score_text ?? '0.0', options.previous_score_text ?? options.score_text ?? '0.0', options.reveal_seconds ?? .5);
+    ctx.save(); ctx.translate(schema.bar.gutter_width, 0);
     if (options.evaluation) {
       const v = ratings[options.evaluation.rating];
       if (!v) throw new Error('Unknown conversation rating.');
       // The observed annotation layout: blurred/dim scene, rating top left,
       // approved pawn bottom left and a white speech bubble beside it.
-      ctx.fillStyle = 'rgba(0,0,0,.52)'; ctx.fillRect(0, 0, 1800, H);
+      ctx.fillStyle = 'rgba(0,0,0,.52)'; ctx.fillRect(0, 0, W - schema.bar.gutter_width, H);
+      const elapsed = options.reveal_seconds ?? 10, entering = clamp(elapsed / .2);
+      const entryEase = 1 - Math.pow(1 - entering, 3), pop = .86 + .14 * entryEase;
+      const jolt = v.id === 'blunder' && elapsed < .15 ? Math.sin(elapsed * 95) * 5 * (1 - elapsed / .15) : 0;
+      ctx.save(); ctx.translate(376 + jolt, 196); ctx.scale(pop, pop); ctx.translate(-376, -196);
       ratingIcon(v, 278, 98, 196);
+      ctx.restore();
       const title = v.label + (['miss','inaccuracy','interesting'].includes(v.id) ? '' : ' Move');
       text(title, 376, 397, 72, v.color, 700, 'center');
-      if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535, 470, 520);
+      if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
       if (options.reveal_seconds == null || options.reveal_seconds >= schema.bubble_delay_seconds) {
+      const bubbleEntry = 1 - Math.pow(1 - clamp((elapsed - schema.bubble_delay_seconds) / .16), 3);
+      ctx.save(); ctx.translate(0, 12 * (1 - bubbleEntry)); ctx.globalAlpha = bubbleEntry;
       ctx.fillStyle = '#f7f7f7'; ctx.beginPath(); ctx.roundRect(690, 449, 895, 577, 105); ctx.fill();
       ctx.beginPath(); ctx.moveTo(704, 550); ctx.lineTo(574, 628);
       ctx.lineTo(704, 714); ctx.closePath(); ctx.fill();
@@ -131,6 +131,7 @@ window.ConversationChess = (() => {
         const start = 1138 - ctx.measureText(s).width / 2;
         text(visible, start, top + i * 58, 50, '#151515', 700);
       });
+      ctx.restore();
       }
     }
     if (options.showSides) {
@@ -139,14 +140,23 @@ window.ConversationChess = (() => {
       text(`${sides.black} is Black · ${sides.white} is White`, 72, 96, 40, '#ffffff', 700);
     }
     if (options.demo) text('Demo · synthetic source', 48, 1068, 28, '#ffffff', 700);
+    if (options.low_res_preview) text(`LOW-RES PREVIEW · ${options.source_height}p source`, 1798, 44, 28, '#ffda7c', 700, 'right');
+    ctx.restore();
   }
   async function load(src) {
     if (!src) return null;
     return new Promise((resolve, reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = reject; img.src = src; });
   }
-  async function init(src, backdropSrc = '', overlaySrc = '') { await document.fonts.ready; tony = await load(src); background = await load(backdropSrc); tonyOverlay = await load(overlaySrc); }
+  async function init(src, backdropSrc = '', overlaySrc = '') {
+    await document.fonts.ready; tony = await load(src); background = await load(backdropSrc); tonyOverlay = await load(overlaySrc);
+    for (const v of schema.categories) {
+      const data = window.ConversationRatingAssets?.[v.id];
+      if (!data) throw new Error(`Load the official icon bytes before rendering: ${v.id}`);
+      officialIcons[v.id] = await load(data);
+    }
+  }
   function introFrame(t) { intro(t); return canvas.toDataURL('image/png'); }
-  function clipFrame(o) { if (o.phase === 'intro') intro(o.t || 0); else sourceFrame(o); return canvas.toDataURL('image/png'); }
+  function clipFrame(o) { if (o.phase === 'intro') intro(o.t || 0, o.intro_overlay === true); else sourceFrame(o); return canvas.toDataURL('image/png'); }
   function frame(t) { return introFrame(t); }
   return { init, frame, clipFrame, introFrame, width: W, height: H };
 })();

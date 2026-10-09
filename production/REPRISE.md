@@ -1,51 +1,39 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Nouveau format Sopranos — travail du 9 octobre 2026
+## Nouveau format Sopranos — état du second test, 9 octobre 2026
 
-- Dernier `main` récupéré jusqu'à `ad67480`. Lecture réelle du serveur : Cage et Pitch
-  connectées, pilote actif ; la base enregistre aussi une publication Pitch sur Everton.
-  Zernio répond : Beethoven publié, 13 posts encore programmés. Aucun nouveau créneau
-  pris ni automatisation modifiée pour cette recherche. Les 38 tests locaux du pilote
-  et des connexions YouTube passent ; ils ne remplacent pas une publication réelle.
-- Nouveau projet isolé : [conversation-chess](../experiments/conversation-chess/README.md).
-  Tony central, dialogues et annotations anglais, **aucune voix off**. La référence
-  prioritaire est ConversationAnalysisGuy ; [étude et limites](CONVERSATION_CHESS_REFERENCES.md).
-- Les deux premiers pions ont été rejetés. Après une planche A/B/C/D, l'utilisateur choisit
-  **A, avec le corps du pion noir comme B**. Garder la tête, le style et la silhouette de A ;
-  seule la couleur du corps change. `STYLE.md` conserve le choix et les essais rejetés.
-  La version autonome a ensuite été **approuvée**. Demande actuelle : montage test d'environ
-  **deux minutes**, intro des évaluations incluse, avant d'allonger la vidéo.
-- L'ancien habillage générique à quatre cartes a été rejeté. **Vraie référence obtenue** :
-  les 25 premières secondes de `InM2zft-iQs` (ConversationAnalysisGuy), puis un extrait
-  25–100 s, par la route Algrow `download-video` documentée, sans contournement du lecteur.
-  Les images de l'ouverture ont été regardées : onze évaluations sur deux colonnes,
-  deuxième page expliquant la barre, fondu puis scène à 16 s. Ne pas déclarer avoir
-  regardé ou écouté toute la vidéo à partir de ces seuls extraits.
-- Guide refait sur ce dispositif : **16 s**, premier frame de sa propre scène assombri,
-  onze catégories dans `ratings.json`. Film en grand, barre **à droite**, noir au-dessus
-  et blanc en dessous. Tony intervient avec une observation écrite pendant les pauses.
-  Les noms des camps sont configurables ; pas de cartouche de tableau de bord permanent.
-  Deux pages inspectées en 1920 × 1080 et mobile paysage ; PNG approuvé inchangé.
-  Dérivé transparent regardé pour les incrustations, sans remplacer l'original.
-- Tony/Ralph sur Jackie Jr (S3E12) reste un scénario préparé, mais le téléchargement
-  normal a retourné « Video lookup timed out » après 135 s. Les lecteurs Dailymotion
-  testés auparavant refusent leur flux (403 E005), y compris sur le VPS.
-- **Vrai média Tony/Janice obtenu** : `biugRUTkh1c`, 0–145 puis 145–205 s, 640 × 360,
-  audio original. Source jointe de 204,869 s ; provocation, explosion et sortie présentes.
-  Les tentatives en 720p n'ont pas livré de fichier. Preuves et source dans
-  `/tmp/sopranos_sources`, jamais Git. La résolution d'export ne restaure pas le détail
-  absent de la source 360p.
-- **Pilote réel exporté : 125,564 s**, source 99,4–173,9 s + intro 16 s + cinq analyses
-  de 7 s. Répliques calées par ASR locale et transcription recoupée, images examinées.
-  Même dispositif observé : note en haut à gauche, pion en bas à gauche, bulle blanche
-  avec texte anglais progressif, scène précédente rejouée lentement et muette derrière
-  le flou, puis reprise exacte des dialogues. Barre animée, aucun ajout de voix.
-  Les cinq bulles et les séquences de dialogue ont été inspectées dans le vrai export.
-  Aucune écoute humaine ni autorisation de publier n'est prétendue.
-- Fixture finale du compositor : **41,5 s**, 1920 × 1080, 30 images/s, décodage intégral.
-  Great/Good/Inaccuracy, paragraphes, ralenti muet et proportions numériques exercés,
-  catégories inconnues et incohérences de barre refusées. Ce test synthétique reste
-  distinct du pilote réel. Aucun envoi ou déploiement.
+- Expérience isolée [conversation-chess](../experiments/conversation-chess/README.md) :
+  Tony/Janice, S5E10 *Cold Cuts*, anglais, **aucune voix off**. Référence principale :
+  ConversationAnalysisGuy ; [preuves et limites](CONVERSATION_CHESS_REFERENCES.md).
+- Pion **approuvé : A avec corps noir comme B**, tête photographique et badges conservés.
+  Original PNG inchangé ; dérivé transparent documenté dans `STYLE.md`.
+- **Premier vrai test125,564 s rejeté par l’utilisateur** : manque de SFX, barre trop grosse
+  et à droite, grades redessinés, source 360p. Ne pas présenter ce fichier comme le test corrigé.
+- Nouvelle direction prioritaire : barre fine **à gauche**, mêmes10 SVG Chess.com vérifiés,
+  noir au-dessus/blanc en dessous et score numérique ; clavier enregistré synchronisé au texte,
+  clic lors de la note et accents courts Brilliant/Blunder. Le score est une interprétation
+  humoristique de la conversation, pas une sortie de moteur d’échecs. Tony=Noir, Janice=Blanc.
+- **Source complèteHD obtenue** via la route Algrow documentée : `biugRUTkh1c`, requête
+  qualité maximale1080p, passage99,4–173,9 s. Fichier réellement décodé1280×720, durée74,533 s.
+  Le fournisseur a rendu720p ; ne pas déclarer1080p natif à partir du champ qualité demandé.
+  Source privée dans `/tmp/sopranos_sources`, jamais Git. Le renderer refuse<720p par défaut.
+- Exigence ensuite précisée par l’utilisateur : **vrai logiciel de montage**. Kdenlive 24.12.3
+  est déjà installé dans le cloud ; préparer une timeline native éditable et exporter par
+  ce logiciel. Aucun accès au CapCut/Premiere du PC établi ; aucune installation PC demandée.
+- Texte progressif, pion bas gauche, bulle blanche, extrait précédent rejoué lentement derrière
+  le flou puis reprise exacte des dialogues. Les nouveaux SFX CC0 sont dans `assets/sfx`,
+  avec licences/provenance. Pas de sons récupérés depuis les vidéos d’une autre chaîne.
+- La nouvelle timeline lie ce fichier HD par SHA-256 et utilise des repères locaux, pas les
+  anciens timestamps sur la source de 204,869 s. **Export natif Kdenlive terminé et revu :125,504 s,
+  1080p30/3765 frames,CRF17/AAC192k**. GUI réelle ouverte,5 pistes,36 médias présents, alpha correct.
+  Quinze images finales examinées ; décodage intégral et mesure des sons exportés passent.
+  Vidéo privée : `output/conversation-chess/tony-janice-pilot-v2-hd.mp4`, projet éditable
+  à côté dans `tony-janice-kdenlive/`. Rien publié automatiquement, aucune écoute humaine
+  prétendue. Texte animé = média alpha régénérable depuis JSON, pas titre natif éditable.
+  Le wrapper `with-editor-display.sh` prépare un display privé cloud et se nettoie après export.
+- Dernière lecture précédente du serveur : Cage/Pitch connectées et pilote actif ; Beethoven
+  publié sur TikTok, 13 posts programmés. Aucun nouveau créneau, déploiement ou modification
+  de ces automatisations dans ce travail. Le module `chess_studio` de Claude est conservé.
 
 ## Passage à Codex — 9 octobre 2026, soir
 

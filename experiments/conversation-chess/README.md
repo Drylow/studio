@@ -1,177 +1,171 @@
 # Conversation review — montage local
 
-Le guide a été repris **après visionnage réel de l'introduction de
-ConversationAnalysisGuy, `InM2zft-iQs`, 0–25 s**. L'ancien panneau à quatre cartes
-est abandonné. Le nouveau parcours comprend deux pages sur le premier frame de
-la scène assombri : légende de 0 à 6 s, explication de la barre de 6 à 15 s,
-puis fondu noir jusqu'à 16 s. La disposition, les catégories et les couleurs
-suivent le guide observé ; les descriptions et les icônes vectorielles sont
-originales. Cela ne prétend pas copier chaque pixel ni chaque phrase.
+Le format a été préparé après visionnage réel de ConversationAnalysisGuy
+(`InM2zft-iQs`, guide 0–25 s et annotations 25–100 s). Les corrections de
+l’utilisateur priment : **barre fine à gauche, vrais glyphes Chess.com, source HD,
+sons de frappe et projet Kdenlive éditable**. Aucun script de ce dossier ne touche
+le site, les automatisations ou une plateforme de publication.
 
-`ratings.json` est le schéma unique du guide et des annotations : **Brilliant
-`!!`, Great `!`, Best `★`, Excellent (pouce), Good `✓`, Book (livre), Blunder
-`??`, Miss `×`, Mistake `?`, Inaccuracy `?!`, Interesting `!?`**. Il ne contient
-ni Forced, ni Checkmate, ni Draw : ces catégories n'apparaissent pas dans ce guide.
-Les contrôles refusent un identifiant d'évaluation inconnu.
+## Habillage et source
 
-L'avatar Tony approuvé, `assets/tony-pawn.png`, est dessiné tel quel. Ses pixels,
-sa tête, ses badges et son pion noir ne sont ni modifiés ni détourés. La composition utilise une copie transparente distincte dans le guide et les
-bulles ; le PNG original reste le fichier de référence inchangé. Aucune génération
-visuelle supplémentaire n'est lancée par les scripts. Le compositing du guide et des bulles
-utilise séparément `assets/tony-pawn-overlay.png` (fond transparent, préparé et
-regardé par l'agent principal) : `--tony-overlay /chemin/image.png` peut le
-remplacer. L'original approuvé est toujours conservé intact.
+`ratings.json` est le schéma commun du guide et des commentaires : Brilliant,
+Great, Best, Excellent, Good, Book, Blunder, Miss, Mistake et Inaccuracy.
+Les dix SVG de `assets/chesscom/` sont réutilisés **sans changer leurs tracés ni
+leurs couleurs** ; leurs empreintes sont contrôlées au chargement. `sources.json`
+conserve leur provenance Chess.com. Ce sont des assets propriétaires : leur
+présence dans le dépôt ne constitue pas une licence ouverte. Interesting n’est
+pas revendiqué comme classification officielle.
 
-## Intro autonome
+Les deux pages du guide durent 16 s : symboles 0–6 s, explication du score 6–15 s,
+puis fondu noir 15–16 s. Le premier frame de la scène reste sur une piste séparée
+sous le guide. Les descriptions sont originales. Le Tony approuvé
+`assets/tony-pawn.png` reste intact ; la copie transparente séparée
+`assets/tony-pawn-overlay.png` sert à la composition, sans carré blanc.
 
-Depuis la racine du dépôt, avec une image PNG extraite de **sa propre source** :
+La barre occupe x26, y112, 41×857 px, dans une marge gauche de 72 px. Le film
+conserve ses proportions dans 1848×1080, sans recadrer les visages. Le chiffre
+s’affiche du côté qui a l’avantage ; le passage de barre dure 0,5 s. Les valeurs
+`score_text` sont des **jugements éditoriaux sur la conversation**, jamais des
+évaluations Stockfish : signe positif pour le camp blanc, négatif pour le noir
+(dans la timeline ; l’écran affiche la valeur absolue comme une barre d’échecs).
+Best/Great laissent le score inchangé. La validation refuse un mouvement de score
+contradictoire avec la catégorie et le locuteur.
 
-```bash
-node experiments/conversation-chess/render.mjs --intro-only \
-  --tony experiments/conversation-chess/assets/tony-pawn.png \
-  --background /chemin/premier-frame.png \
-  --out /tmp/conversation-chess-intro
-```
+La source réelle doit avoir une piste audio et une hauteur d’au moins 720 px.
+Une source 360p est refusée. `--allow-low-res-preview` permet seulement un brouillon
+explicitement marqué à l’écran ; un cadre1080p ne transforme pas une source basse
+résolution en vidéo HD.
 
-Sans `--background`, le guide a un fond sombre neutre. C'est un aperçu graphique,
-pas un épisode monté. Sorties : `preview.mp4` (1920×1080, 30 images/s, 16 s,
-silencieux), `legend.png`, `example.png` (page barre), `contact-sheet.jpg`,
-`render.json`, `frames/`. Les fichiers de référence visionnés et les exports
-volumineux restent dans `/tmp`, jamais dans le dépôt public.
+## Commentaires et sons
 
-Dépendances existantes : Playwright dans `frontend/node_modules/`,
-`/usr/bin/chromium`, `/usr/bin/ffmpeg`. Le navigateur de rendu interdit le réseau.
-Le code n'accède ni au site ni aux automatisations et ne publie rien.
+Après chaque réplique évaluée : grade en haut à gauche, Tony en bas à gauche,
+grande bulle blanche et texte noir révélé à 50 caractères/s après 1 s. Le grade,
+le pion et la bulle entrent discrètement ; les images d’habillage sont produites
+à30 images/s. Les paragraphes peuvent atteindre 260 caractères. Chaque pause dure
+3–9 s et réserve au moins 2,5 s de lecture après la frappe.
 
-## Montage d'un fichier source local
+Le mode `analysis_background: "replay"` rejoue au ralenti les 2–4 s précédentes,
+assombries et floutées, puis reprend **exactement** le dialogue au repère : aucun
+passage du dialogue n’est supprimé. Cette méthode suit les mouvements et silences
+mesurés dans la référence. Le replay ne contient pas de dialogue audible.
+`"freeze"` permet une image figée explicite.
 
-`render-clip.mjs` utilise la première image sélectionnée de la source derrière
-les deux pages du guide. Après ces 16 secondes silencieuses, la scène garde son
-**audio original**, sans voix off ni musique ajoutée. Les blocs de lecture durent 3–9 s (5–9 s pour les paragraphes),
-avec une courte observation en anglais dans une grande bulle blanche, l'icône
-d'évaluation en haut à gauche et la mascotte en bas à gauche. La scène est floutée
-et assombrie pendant cette lecture, comme dans les annotations réellement vues
-(`InM2zft-iQs`, plage 25–100 s). La référence garde parfois du mouvement derrière
-la bulle. Les mesures audio du fichier de référence montrent que les dialogues
-s'arrêtent pendant cette lecture. Notre mode `analysis_background: "replay"`
-rejoue au ralenti les 2–4 s précédant le repère, floutées et muettes, étirées
-sur la durée de lecture, puis reprend exactement le dialogue au repère : aucune réplique n'est jetée. `"freeze"` reste possible
-pour un fond figé explicite. Le texte anglais peut atteindre 260 caractères ; il apparaît
-une seconde après l'icône/la mascotte, progressivement à 50 caractères/s,
-puis reste lisible au moins 2,5 s.
-Ces lectures sont silencieuses ; les reprises audio ont des fondus de 35 ms. Une vraie
-source dépourvue de piste audio est refusée.
+Le clavier provient de vraies frappes enregistrées sous CC0 ; les cues brefs
+proviennent également d’assets CC0 documentés. **Ce ne sont pas les sons officiels
+Chess.com.** `assets/sfx/manifest.json`, `LICENSES.md` et `provenance.json`
+conservent sources, dérivations et gains. `sfx.mjs` choisit des frappes physiques
+variées, ignore les espaces et limite la cadence à 16 frappes/s. La frappe s’arrête
+avec le texte ; la fin de lecture est silencieuse. Un cue léger accompagne les
+notes et un accent bref Brilliant/Blunder/erreur. Les SFX sont sur une piste
+indépendante ; les dialogues gardent leur audio original et des fondus de 35 ms.
+Aucune voix off ni musique ajoutée.
 
-Le film est redimensionné proportionnellement dans **1800×1080**, sans recadrage,
-à côté d'une barre **120 px à droite** : noir en haut, blanc en bas. Les bandes
-nécessaires pour conserver tous les pixels restent noires. Il n'y a plus de
-cadre de tableau de bord ni de cartouche Tony permanent. Le commentaire apparaît
-uniquement lors d'une pause, après la réplique évaluée. Regarder chaque pause
-pour vérifier la lisibilité et le choix du repère ; le film redevient net dès
-la reprise.
+## Préparer les pistes Kdenlive
 
-`black_label` et `white_label` nomment les deux camps (par exemple Tony/Janice).
-Un nombre de 0 à 1 donne la proportion noire : `0.5` signifie l'égalité,
-`0.55` un petit avantage noir. Ces proportions ne sont jamais affichées en chiffres.
-La transition de barre prend 0,5 s. Les alias `balanced`/`black`/`white` restent
-acceptés. Les anciens alias `tony`/`ralph` restent acceptés pour compatibilité. Les états de
-barre sont une lecture éditoriale, pas un score mesuré par un moteur. Le guide
-explique que Best/Great ne déplacent pas la barre, Book peut donner un petit
-avantage, Brilliant augmente l'avantage et les autres catégories indiquent
-une perte de contrôle pour le locuteur. Les annotations réelles doivent être
-relues pour respecter ce sens et l'identité du locuteur.
-
-Copier `timeline.empty.json` dans un dossier de travail et renseigner les repères
-**après avoir regardé le fichier** : `source_in`, `source_out`, et pour chaque
-annotation `source_at` (secondes dans la SOURCE), `hold_seconds`, `rating`,
-`comment`, `speaker` (`black` ou `white`), `control_after` (proportion noire de 0 à 1), `reviewed`. Le locuteur permet de refuser une direction de barre
-contradictoire ; Best/Great doivent toujours laisser la barre inchangée.
-Renseigner aussi `black_label` et `white_label` pour la scène réelle,
-et `analysis_background: "replay"` pour le fond mobile muet.
-`replay_seconds`, facultatif (2–4, défaut 3), ajuste le contexte rejoué. Mettre `source_reviewed` et chaque
-`reviewed` à `true` uniquement après cette relecture. `source_sha256` peut figer
-le fichier exact ; le rapport enregistre toujours son empreinte.
+Dépendances présentes : Playwright dans `frontend/node_modules/`,
+`/usr/bin/chromium`, FFmpeg, Kdenlive et MLT. Le rendu navigateur est hors réseau.
+L’export natif exige un affichage X11 ou Wayland réel : `QT_QPA_PLATFORM=offscreen`
+produit du noir dans les compositions alpha et n’est pas utilisé.
+Depuis la racine du dépôt :
 
 ```bash
-node experiments/conversation-chess/render-clip.mjs \
-  --source /chemin/source.mp4 --timeline /chemin/timeline-revue.json \
-  --tony experiments/conversation-chess/assets/tony-pawn.png \
-  --out /tmp/conversation-chess-clip
-```
-
-Durée finale = 16 s + (`source_out` − `source_in`) + somme des pauses.
-Choisir un extrait cohérent pour environ deux minutes ; aucun repère de Sopranos
-n'est inventé dans le modèle vide. Le script exige un fichier local, ne télécharge
-rien et ne rend pas un extrait de série automatiquement publiable.
-Sorties : `clip.mp4`, `contact-sheet.jpg`, frames de pause, overlays, segments
-intermédiaires et `render-report.json`. Regarder toutes les pauses et écouter le
-résultat avant livraison. Aucune activation automatique de contenu protégé.
-
-## Fixture technique
-
-`timeline.demo.json` décrit uniquement une **mire FFmpeg avec un signal audio**,
-pas une scène de série. Elle comporte Great, Good et Inaccuracy pour exercer les
-nouvelles catégories. Les images de scène portent « Demo · synthetic source ».
-
-```bash
-mkdir -p /tmp/edgerunners-conversation-chess-fixture
-ffmpeg -hide_banner -loglevel error -y \
-  -f lavfi -i testsrc2=size=1280x720:rate=30:duration=10 \
-  -f lavfi -i sine=frequency=440:sample_rate=48000:duration=10 \
-  -c:v libx264 -preset fast -crf 18 -threads 4 -pix_fmt yuv420p \
-  -c:a aac -shortest /tmp/edgerunners-conversation-chess-fixture/source.mp4
-node experiments/conversation-chess/render-clip.mjs \
-  --source /tmp/edgerunners-conversation-chess-fixture/source.mp4 \
-  --timeline experiments/conversation-chess/timeline.demo.json \
-  --out /tmp/conversation-chess-full-legend-internal/fixture
-```
-
-Fixture finale exécutée et décodée intégralement : 1920×1080, 30 images/s, **41,5 s**
-(16 + 9 + 4 + 4,5 + 8), avec bulle et texte progressif. Ce test valide le
-compositing, les catégories et les pauses ; ce n'est pas un épisode des Sopranos.
-
-QA du guide : captures 1920×1080 et mobile paysage 844×475 regardées,
-11 catégories présentes, aucun débordement. L'empreinte Git du PNG approuvé
-est inchangée. Great/Good/Inaccuracy sont présentes dans le rapport de fixture ;
-la catégorie non observée `forced` est explicitement refusée.
-
-Intro autonome également exécutée sur le premier frame du vrai fichier
-Tony/Janice acquis : 16,000 s, 1920×1080, 30 images/s, sans piste audio.
-Captures des deux pages et planche regardées, décodage intégral réussi.
-Ce fichier d'intro interne seul ne remplace pas le pilote de deux minutes.
-
-## Pilote réel vérifié
-
-Pilote exécuté avec la timeline revue de travail et le fichier source local
-complet. `pilot-tony-janice.json` conserve ces repères pour le reproduire :
-
-```bash
-node experiments/conversation-chess/render-clip.mjs \
-  --source /chemin/tony-janice-harpo-full-360p.mp4 \
+node experiments/conversation-chess/render-clip.mjs --prepare-project \
+  --source /chemin/source-hd.mp4 \
   --timeline experiments/conversation-chess/pilot-tony-janice.json \
-  --out /tmp/conversation-chess-tony-janice-pilot
+  --out /tmp/conversation-chess-hd-project
+bash experiments/conversation-chess/with-editor-display.sh \
+  python experiments/conversation-chess/export-kdenlive.py \
+  --manifest /tmp/conversation-chess-hd-project/project-manifest.json \
+  --bundle /tmp/conversation-chess-kdenlive \
+  --render /tmp/conversation-chess-kdenlive/tony-janice.mp4
 ```
 
-Résultat réellement rendu : **125,564 s**, 1920×1080, 30 images/s. Intro16 s,
-74,5 s de dialogue source (99,4–173,9) et cinq analyses de7 s : Book, Great,
-Brilliant, Blunder, Best. Les deux pages du guide, les cinq bulles complètes,
-les portions nettes et la fin ont été regardées ; aucun texte coupé. Le fichier
-est décodé intégralement sans erreur. Le guide utilise également la copie
-transparente de Tony, sans carré blanc ; l'original approuvé reste inchangé.
+Le wrapper réutilise une session graphique existante. En cloud sans affichage,
+il démarre un Xvfb authentifié, sans écoute TCP, avec cookie non affiché et dossiers
+temporaires privés, puis ferme uniquement le processus qu’il a lancé. Il peut
+extraire sans root un paquet Debian amd64 précis après contrôle SHA256, si Xvfb
+manque ; il ne suppose pas que Xvfb soit installé sur chaque PC. `xauth`,
+`xdpyinfo` et les bibliothèques X11/Qt restent nécessaires. Aucun changement de
+`HOME` n’est effectué. Le bus de session D-Bus est créé si nécessaire.
+Le wrapper a été testé sans affichage préexistant sur un export natif de 2 s :
+60 frames à 30 fps, 1920×1080, AAC 48 kHz, composition alpha vue et décodage
+intégral sans erreur. Une tentative X11 sans cookie a été refusée. Le processus
+Xvfb et ses dossiers temporaires ont été nettoyés après la commande.
 
-Audio mesuré sur PCM décodé : silence dans le guide et les cinq analyses ;
-audio d'origine présent dans les six portions de dialogue (−24 à−35 dBFS RMS).
-Les intervalles source sont contigus : aucune réplique n'est supprimée par
-les analyses ajoutées. Aucun son ni voix off n'est ajouté. La synchronisation
-éditoriale repose sur l'ASR local et la transcription recoupée, puis les captures ;
-aucune écoute humaine n'est revendiquée.
+`--prepare-project` utilise FFmpeg seulement pour préparer les médias d’entrée.
+Il ne fabrique pas de vidéo finale. Il produit `project-manifest.json`, les plans
+sans texte, replays muets, habillageMOV qtrle alpha à 30fps, PNG alpha, audio des
+dialogues WAV et SFX WAV. Le manifeste donne les frontières cumulées en frames
+pour éviter les décalages par arrondis.
 
-La source acquise est **640×360**, agrandie pour le test : le cadre1080p ne la
-transforme pas en source HD. Ce pilote est une prévisualisation privée, pas une
-publication ni une validation de droits. MP4/source/captures restent dans des
-emplacements ignorés ; aucune vidéo de référence n'est ajoutée à git.
+L’exporteur construit un **vrai projet Kdenlive**, avec médias relogés dans le
+bundle et pistes vidéo/replay/habillage/dialogues/SFX séparées. Le fichier source
+original reste disponible dans le bin pour les retouches. Le MP4 final est rendu
+par Kdenlive/MLT. Ouvrir le `.kdenlive` pour modifier le montage dans le logiciel.
+Les fichiers lourds, extraits protégés et captures restent dans `/tmp` ou
+`output/conversation-chess/` ignoré par git ; ils ne sont pas ajoutés au dépôt public.
 
-Pour corriger uniquement le guide d'un montage déjà rendu : relancer la même
-commande avec `--refresh-intro`. Le script exige les mêmes source, repères,
-annotations et noms, réencode les deux segments du guide, puis réassemble les
-segments de scène existants. Ce parcours a été exécuté et le résultat redécodé.
+Pour corriger seulement le guide d’une préparation déjà faite, reprendre les
+mêmes arguments avec `--refresh-project-intro`. Le script contrôle source,
+repères, catégories et commentaires, régénère uniquement l’habillage d’intro et
+préserve les plans, replays et SFX.
+
+## Timeline revue et pilote
+
+`timeline.empty.json` est un modèle sans repères inventés. Chaque annotation
+réelle exige `source_at`, `hold_seconds`, `rating`, `comment`, `speaker`,
+`control_after`, `score_text` et `reviewed:true`, après examen de la source.
+`source_reviewed:true` et `source_sha256` figent la source exacte. Le score et la
+proportion noire sont renseignés ensemble ; ils ne sont pas calculés par un moteur
+d’échecs. `replay_seconds` précise la fenêtre de contexte (2–4 s, défaut 3).
+
+Le pilote Tony/Janice utilise une vraie source **1280×720 à 30 fps** de 74,533 s,
+recoupée visuellement et par ASR locale : aucune écoute humaine n’est prétendue.
+La timeline retient 0–74,5 s de cette source HD, puis cinq commentaires de 7 s
+(Book, Great, Brilliant, Blunder, Best), avec l’intro 16 s : **125,5 s /3765 frames**
+à préparer. Les scores sont 0.0,−0.3,−0.3,−1.8,−4.8,−4.8, Tony noir/Janice blanc.
+La demande de téléchargement maximal a fourni 720p ; l’export 1080p décrit la
+résolution du montage et des graphiques, pas des images originales 1080p.
+
+La préparation de ces pistes a été exécutée : 17 médias vidéo décodés entièrement
+sans erreur, cinq WAV SFX de 7 s et six WAV de dialogues aux plages contiguës.
+Le guide, la barre gauche, les vraies icônes et les bulles sont inspectés à partir des médias réels. Le helper audio a
+été vérifié sur des cas synthétiques : variantes, espaces, accents, durées exactes,
+48 kHz stéréo, limite −2dBFS et arrêt des frappes. Les WAV réels du pilote sont
+mesurés séparément : frappes présentes puis lecture silencieuse, pic de clavier
+−16,9 dBFS et accent Blunder −13,8 dBFS. Le projet/export natif et le MP4 final font l’objet de leur
+propre rapport de contrôle ; ne pas présenter la préparation comme un export fini.
+
+Le précédent pilote 360p à barre droite est historique et remplacé par cette
+révision. Aucune publication automatique de série ni validation de droits n’est
+activée. Le résultat reste un pilote privé.
+
+## Aperçus graphiques et fixture
+
+`render.mjs --intro-only --background /chemin/frame.png --out /tmp/intro` produit
+un aperçu graphique silencieux 16 s. Il ne remplace pas le montage Kdenlive.
+`timeline.demo.json` décrit seulement une mire 1280×720 avec audio synthétique,
+avec Great/Good/Inaccuracy ; elle est marquée « Demo · synthetic source » et ne
+constitue pas une scène des Sopranos. Les catégories inconnues, les contradictions
+de score et les timelines réelles non relues sont refusées.
+
+## Validation du second test
+
+Export réellement effectué via Kdenlive24.12.3 : **125,504s,1920×1080,30fps,
+3765frames,H264CRF17/AAC192k**. Les réglages sont confirmés dans son jobMLT
+et le fluxH264. La vraie GUI ouvre les cinq pistes et36médias sans ressource
+manquante. Le SaveAs séparé conserve les35clips et leurs bornes, avec les
+normalisations usuelles des métadonnées, wrappers et plages vides.
+
+Le MP4 final a été décodé intégralement. Quinze images ont été regardées : deux
+pages du guide, cinq bulles complètes, frappe progressive, scènes nettes et fin.
+Les mesures PCM confirment les cinq cues/sons de frappe, l'arrêt après le texte,
+les six parties de dialogue et l'absence de clipping. Aucune écoute humaine
+n'est revendiquée.
+
+La vidéo et le bundle sont dans `output/conversation-chess/`, ignoré par Git.
+Les plans et niveaux sont éditables dans Kdenlive ; modifier le texte animé
+nécessite de régénérer son médiaalpha depuis la timeline JSON. Ce n'est pas
+un titre natif à mots directement éditables. Après déplacement complet du
+bundle, `export-kdenlive.py --bundle /nouveau/dossier --relocate` actualise sa
+racine. Les36ressources relatives de la copie relogée ont été vérifiées.

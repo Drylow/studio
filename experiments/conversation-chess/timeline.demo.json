@@ -15,7 +15,8 @@
       "control_after": 0.5,
       "reviewed": false,
       "speaker": "black",
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "0.0"
     },
     {
       "source_at": 4,
@@ -25,7 +26,8 @@
       "control_after": 0.42,
       "reviewed": false,
       "speaker": "black",
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "0.9"
     },
     {
       "source_at": 6,
@@ -35,10 +37,12 @@
       "control_after": 0.35,
       "reviewed": false,
       "speaker": "black",
-      "replay_seconds": 3
+      "replay_seconds": 3,
+      "score_text": "1.7"
     }
   ],
   "black_label": "Tony",
   "white_label": "Ralph",
-  "analysis_background": "replay"
+  "analysis_background": "replay",
+  "initial_score_text": "0.0"
 }

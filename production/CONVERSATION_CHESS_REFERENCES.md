@@ -19,6 +19,9 @@ avec **Tony Soprano** comme personnage central et une mascotte pion à sa tête.
   les catégories, notamment le coup brillant et la gaffe.
 - Montage soigné, analyse des échanges et humour ; sélectionner des moments
   clés de la série. Les chiffres d'une autre chaîne ne garantissent pas nos vues.
+- Correction après le premier test : **barre à gauche**, vrais visuels
+  Chess.com, bruitages de frappe et de note, sourceHD. Ces demandes priment
+  sur le placement et les icônes différents de la référence.
 - Le choix de cette nouvelle référence prime sur la direction précédente.
   Aucun titre définitif, durée finale ou découpage synchronisé n'est validé par
   cette recherche.
@@ -77,11 +80,13 @@ Une tierce personne ne compte que si sa parole affecte un des camps principaux.
 La barre dessinée dans ce guide n'est pas toujours à égalité : distinguer
 l'explication écrite de l'exemple affiché.
 
-Notre guide adapte ces deux pages, les onze catégories et la barre à droite
-avec le pion Tony approuvé, des définitions rédigées pour notre analyse et des
-icônes vectorielles originales. L'ancien panneau générique à quatre cartes a
-été rejeté et remplacé. Le rendu technique ne prouve pas encore la qualité
-d'un montage Sopranos de deux minutes.
+Le premier guide adaptait ces pages avec onze catégories et des icônes
+redessinées. Ce choix a été rejeté après visionnage du pilote. La révision
+utilise maintenant dix SVG Chess.com existants, vérifiés par empreinte, et
+une barre fine à gauche demandée par l’utilisateur. Le symbole officiel Miss
+est un signe moins jaune ; Interesting n’a pas d’asset officiel établi.
+Les nouveaux bruitages sont CC0 : clavier enregistré, clic et accents courts.
+Les fichiers de la référence servent à l’étude ; ils ne sont pas redistribués.
 
 ### Annotations examinées ensuite : extrait 25–100 secondes
 

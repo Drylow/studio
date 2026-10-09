@@ -1,0 +1,228 @@
+{
+  "assets": [
+    {
+      "file": "keyboard-clack-01.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-006.wav",
+      "source_sha256": "419bde001e7ed1cae63b84f60c803fb024a0254e1afe65e59d8c6d8ad4196eb7",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.154188,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -33.702,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "97207058f3b5df773ce8f9accae749c9d44f8edf5b5c3e418674209d22ab8b41"
+    },
+    {
+      "file": "keyboard-clack-02.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-007.wav",
+      "source_sha256": "522834f471e6c2935fd1e6a28042c0864925556efbec32c36d7c7a98026d4bfc",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.129292,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -33.781,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "73edd851c585c20bc80c7c7cde32d2587d49dcb80fb4c25880190d8b4f6e771a"
+    },
+    {
+      "file": "keyboard-clack-03.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-013.wav",
+      "source_sha256": "a73d12a22403fe7b63a3da41ff07f13f956e3a30b397196288262d467f1e28c3",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.143479,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -35.869,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "29183c990073f3d1370abd9e68915637878f51d47f452c877f33b79145425ca5"
+    },
+    {
+      "file": "keyboard-clack-04.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-017.wav",
+      "source_sha256": "0f8d80d3f64328936bb699eade15cc89de12b7464833459e539bcf001101e431",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.150021,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -35.607,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "3b6c599fc28f00e652e1bfa5f2441c480332dcd215b06080f9ff2a217b4ce713"
+    },
+    {
+      "file": "keyboard-clack-05.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-019.wav",
+      "source_sha256": "9cdb32c0074eaa114f8740e80bdfc28b1b44b4c6789371e1ec872e185e92d49e",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.170625,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -36.856,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "63f73f0fd76666142403da5d7947d52c9d258b890ab518b8d9ece7e793117897"
+    },
+    {
+      "file": "keyboard-clack-06.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-028.wav",
+      "source_sha256": "a324dd279d5422bc2328e49122cdd39d071faccaf109332602f6ede13686ada7",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.174917,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -34.21,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "e79c4a4d056d52139d6170fbaa255dc32ba351a5404b1f8a14a0374c45ae9e5d"
+    },
+    {
+      "file": "keyboard-clack-07.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-030.wav",
+      "source_sha256": "355fb80cc1a40165de17c7653eed643da30afbb87f444d74c2eb0119adeec4f5",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.151792,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -34.745,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "c69023e0f04a34a07828644083bda7bee975b89600fc89dfe941bb7cdb2f8fb0"
+    },
+    {
+      "file": "keyboard-clack-08.wav",
+      "source_file": "unicae-keyboard/Single Keys/keypress-032.wav",
+      "source_sha256": "569648b47017747070b6d2a6d640449030b1b70da717c1f774c76a32dd75fb6c",
+      "processing": "highpass=f=150,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "unicae_keyboard_cc0",
+      "duration_seconds": 0.216771,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -36.51,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "4d19af0638506fd7f101d5ee27d5cc11088dca8f9f06eea0596ada904918c74f"
+    },
+    {
+      "file": "typewriter-key-01.wav",
+      "source_file": "typewriter6.wav",
+      "source_sha256": "825b668508448212edbf8ddcff2801b0a6251528aaccdf8ab85427023cf0797f",
+      "processing": "highpass=f=140,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "cassie_typewriter_cc0",
+      "duration_seconds": 0.275979,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -34.503,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "d8dc887b62ad5c838ae9d0a5b2d7eb013528d171ba3eb14a183af8f53919434b"
+    },
+    {
+      "file": "typewriter-key-02.wav",
+      "source_file": "typewriter7.wav",
+      "source_sha256": "113210a80c394cb3ad0d8b7d773ff752b81cb42bb193efb4d11eb8379f736144",
+      "processing": "highpass=f=140,lowpass=f=7000; trim recorded onset silence; 2 ms edge fades; peak target -12 dBFS",
+      "source_group": "cassie_typewriter_cc0",
+      "duration_seconds": 0.27575,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -32.624,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "8220da0565430e5073ca94c9c2e3a4d9ac960408f385661fc65d158aa812465a"
+    },
+    {
+      "file": "blunder-impact.wav",
+      "source_file": "kenney-interface/Audio/bong_001.ogg",
+      "source_sha256": "d21d0f0b782445db579d11e2506b24cd1ac9d664ee33aeaf807761aa7b6fd710",
+      "processing": "highpass=f=100,lowpass=f=8000; trim recorded onset silence; 2 ms edge fades; peak target -10 dBFS",
+      "source_group": "kenney_interface_cc0",
+      "duration_seconds": 0.067479,
+      "peak_dbfs": -10.0,
+      "rms_dbfs": -22.242,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "730aca821f193d09c040e4c0c6fa3bbf8b6ee24cc94c508a7a0fd7a0cfad23c4"
+    },
+    {
+      "file": "brilliant-ui-confirmation.wav",
+      "source_file": "kenney-interface/Audio/confirmation_002.ogg",
+      "source_sha256": "33b17a9a9a2397c62b285c52c33a907fdffb476909c99e42dde603f6a7a8b12c",
+      "processing": "highpass=f=100,lowpass=f=8000; trim recorded onset silence; 2 ms edge fades; peak target -13 dBFS",
+      "source_group": "kenney_interface_cc0",
+      "duration_seconds": 0.497937,
+      "peak_dbfs": -13.748,
+      "rms_dbfs": -27.432,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "9c187c78b6692e9fcfb89425b1ada3e0ca329dce717e827322b267c4db37803c"
+    },
+    {
+      "file": "ui-tick.wav",
+      "source_file": "kenney-interface/Audio/click_001.ogg",
+      "source_sha256": "ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9",
+      "processing": "highpass=f=100,lowpass=f=8000; trim recorded onset silence; 2 ms edge fades; peak target -14 dBFS",
+      "source_group": "kenney_interface_cc0",
+      "duration_seconds": 0.030729,
+      "peak_dbfs": -18.643,
+      "rms_dbfs": -34.971,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "d632322b6737e322372871449988d6ca78d979006eb7a4f8c1bd5668d665e224"
+    }
+  ],
+  "catalogue_labels": [
+    {
+      "at": 0.25,
+      "name": "keyboard-clack-01.wav"
+    },
+    {
+      "at": 1.25,
+      "name": "keyboard-clack-02.wav"
+    },
+    {
+      "at": 2.25,
+      "name": "keyboard-clack-03.wav"
+    },
+    {
+      "at": 3.25,
+      "name": "keyboard-clack-04.wav"
+    },
+    {
+      "at": 4.25,
+      "name": "keyboard-clack-05.wav"
+    },
+    {
+      "at": 5.25,
+      "name": "keyboard-clack-06.wav"
+    },
+    {
+      "at": 6.25,
+      "name": "keyboard-clack-07.wav"
+    },
+    {
+      "at": 7.25,
+      "name": "keyboard-clack-08.wav"
+    },
+    {
+      "at": 8.25,
+      "name": "typewriter-key-01.wav"
+    },
+    {
+      "at": 9.25,
+      "name": "typewriter-key-02.wav"
+    },
+    {
+      "at": 10.25,
+      "name": "blunder-impact.wav"
+    },
+    {
+      "at": 11.25,
+      "name": "brilliant-ui-confirmation.wav"
+    },
+    {
+      "at": 12.25,
+      "name": "ui-tick.wav"
+    }
+  ],
+  "inspection": "Source licenses and recorded keyboard description verified. PCM decoded and signal levels/onsets inspected. No listening tool available; not claimed aurally auditioned."
+}
