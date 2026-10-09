@@ -13,6 +13,9 @@ function option(name) {
   return path.resolve(args[i+1]);
 }
 const original = option('--original'), clean = option('--clean'), out = option('--out');
+const tiltIndex = args.indexOf('--tilt');
+const tilt = tiltIndex < 0 ? 0 : Number(args[tiltIndex+1]);
+if (!Number.isFinite(tilt) || Math.abs(tilt) > 15) throw new Error('--tilt must be a number between -15 and 15 degrees.');
 const format = /\.jpe?g$/i.test(out) ? 'image/jpeg' : 'image/png';
 try {await fs.access(out); throw new Error('Preserve the previous thumbnail: choose a new --out filename.');}
 catch (error) {if (error.code !== 'ENOENT') throw error;}
@@ -31,7 +34,7 @@ try {
   const page = await browser.newPage();
   await page.route('**/*', route => route.abort());
   await page.setContent('<!doctype html><meta charset="UTF-8"><canvas></canvas>');
-  const result = await page.evaluate(async ({original, clean, icons, format}) => {
+  const result = await page.evaluate(async ({original, clean, icons, format, tilt}) => {
     const load = source => new Promise((resolve,reject) => {
       const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = source;
     });
@@ -44,8 +47,13 @@ try {
     // hand, expressions, costumes and framing retain their approved original pixels.
     const patches = [{x:0,y:0,w:280,h:288},{x:canvas.width-280,y:0,w:280,h:288}];
     for (const p of patches) ctx.drawImage(plate,p.x,p.y,p.w,p.h,p.x,p.y,p.w,p.h);
-    const placements = [{x:4,y:3,w:250,h:250*19/18},{x:canvas.width-254,y:3,w:250,h:250*19/18}];
-    [brilliant,blunder].forEach((image,i) => {const p=placements[i]; ctx.drawImage(image,p.x,p.y,p.w,p.h);});
+    const placements = [{x:4,y:3,w:250,h:250*19/18,rotation_degrees:tilt},{x:canvas.width-254,y:3,w:250,h:250*19/18,rotation_degrees:-tilt}];
+    [brilliant,blunder].forEach((image,i) => {
+      const p=placements[i]; ctx.save();
+      ctx.translate(p.x+p.w/2,p.y+p.h/2);
+      ctx.rotate(p.rotation_degrees*Math.PI/180);
+      ctx.drawImage(image,-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+    });
     const finalPixels = ctx.getImageData(0,0,canvas.width,canvas.height).data;
     let differencesOutsidePatches=0;
     for(let y=0;y<canvas.height;y++) for(let x=0;x<canvas.width;x++) {
@@ -55,7 +63,7 @@ try {
     }
     if(differencesOutsidePatches) throw new Error('Approved artwork changed outside the badge corners');
     return {dataUrl:canvas.toDataURL(format,.95), width:canvas.width,height:canvas.height,patches,placements,differencesOutsidePatches};
-  }, {original:`data:image/png;base64,${originalBytes.toString('base64')}`,clean:`data:image/png;base64,${cleanBytes.toString('base64')}`,icons,format});
+  }, {original:`data:image/png;base64,${originalBytes.toString('base64')}`,clean:`data:image/png;base64,${cleanBytes.toString('base64')}`,icons,format,tilt});
   await fs.mkdir(path.dirname(out),{recursive:true});
   const output = Buffer.from(result.dataUrl.split(',')[1],'base64'); await fs.writeFile(out,output);
   const {dataUrl,...geometry}=result;

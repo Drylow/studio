@@ -16,3 +16,7 @@ Les miniatures de [Chicanery](https://www.youtube.com/watch?v=mA4t3Ph9DI4), [Wal
 Code visuel retenu : visages dominants, séparation blanche, couleurs de notation teal/rouge, seulement les symboles « !! » et « ?? ». Pas de gros titre, d'échiquier décoratif ou de collage chargé. Les identités et costumes ont été guidés par les images de la source anglaise Lelouch/Schneizel aux secondes 2, 11 et 111, réellement inspectées. Les badges expriment ici la lecture éditoriale de la scène.
 
 Les prompts complets sont conservés dans `prompt-a.txt`, `prompt-b.txt` et `prompt-clean-corners.txt`. Les références téléchargées et la planche de contrôle restent dans `work/chess-studio/thumbnail-reference/`, hors dépôt. Les premières propositions sont conservées ; B est sélectionnée, sans publication.
+
+## Ajustement de l'inclinaison demandé ensuite
+
+La livraison courante est **B-chesscom-tilted.jpg** (392 468 octets), avec son PNG maître. Les mêmes SVG originaux tournent de +10° à gauche et −10° à droite, comme les pastilles de la première B. Taille et placement conservés. Le renderer accepte `--tilt 10` ; sans cet argument, il conserve les icônes droites. Les reçus confirment les empreintes des SVG et zéro différence hors des coins avant encodage. La version inclinée a été regardée en pleine taille : glyphes et cercles entiers, sans découpe des bords ni changement des visages. Les versions droites restent archivées.
