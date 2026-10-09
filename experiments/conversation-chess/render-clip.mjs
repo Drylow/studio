@@ -39,6 +39,12 @@ if (prepareProject && refreshIntro) throw new Error('--prepare-project and --ref
 const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
 const spec = JSON.parse(await fs.readFile(timelinePath, 'utf8'));
+const outroSeconds = spec.outro_seconds ?? 0;
+if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < 6 || outroSeconds > 20))) throw new Error('outro_seconds must be 0 or 6–20 seconds.');
+if (!Number.isInteger(outroSeconds * 30)) throw new Error('outro_seconds must align to a 30fps frame.');
+if (spec.outro_subtitle != null && (typeof spec.outro_subtitle !== 'string' || spec.outro_subtitle.length > 70)) throw new Error('Supply a short outro_subtitle.');
+if ((outroSeconds || spec.music) && !prepareProject) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
+if ((outroSeconds || spec.music) && refreshProjectIntro) throw new Error('Build a complete project when adding music or a recap.');
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
 const meta = JSON.parse(run('/usr/bin/ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', source], true));
 const sourceDuration = Number(meta.format.duration);
@@ -100,6 +106,9 @@ for (const a of annotations) {
   if (!demo && a.reviewed !== true) throw new Error('Every real annotation requires reviewed=true; do not invent source timestamps.');
   previous = a.source_at;
 }
+if (outroSeconds && annotations.some(a => !a.speaker)) throw new Error('Every recap move requires its reviewed black/white speaker.');
+const recapCounts = Object.fromEntries(ratingSchema.categories.map(v => [v.id, {black:0, white:0}]));
+for (const a of annotations) if (a.speaker) recapCounts[a.rating][a.speaker]++;
 const sourceHash = createHash('sha256').update(await fs.readFile(source)).digest('hex');
 if (spec.source_sha256 && sourceHash !== spec.source_sha256) throw new Error('Timeline source_sha256 does not match the supplied media.');
 if (refreshProjectIntro) {
@@ -143,6 +152,7 @@ const browser = await chromium.launch({ executablePath: '/usr/bin/chromium', hea
 const overlays = [], annotationFrames = [];
 const introFrameDirectory = path.join(output, 'intro-overlay-frames');
 const introBackground = path.join(output, 'intro-source-frame.png');
+const outroFrameDirectory = path.join(output, 'outro-frames');
 run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', source, '-frames:v', '1', '-update', '1', introBackground]);
 const introBytes = await fs.readFile(introBackground);
 try {
@@ -181,6 +191,15 @@ try {
     overlays.push(await overlay(`overlay-after-${i}`, { control: a.control_after, score_text: a.score_text, demo }));
   }
   }
+  if (prepareProject && outroSeconds) {
+    await fs.mkdir(outroFrameDirectory, { recursive: true });
+    for (let frame = 0; frame < outroSeconds * graphicsFps; frame++) {
+      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), {
+        phase:'outro', t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, subtitle:spec.outro_subtitle,
+      });
+      await fs.writeFile(path.join(outroFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
+    }
+  }
 } finally { await browser.close(); }
 
 if (prepareProject) {
@@ -200,11 +219,28 @@ if (prepareProject) {
       '-an', '-vf', 'format=argb', '-c:v', 'qtrle', '-threads', '2', '-r', String(fps), '-t', String(duration), dest]);
     return dest;
   }
+  async function musicPart(name, duration) {
+    const config = spec.music?.[name];
+    if (!config) return {};
+    if (typeof config.file !== 'string' || /^[a-z]+:\/\//i.test(config.file) || path.isAbsolute(config.file)) throw new Error('Music file must be relative to this renderer, never a remote URL.');
+    const file = path.resolve(here, config.file), bytes = await fs.readFile(file);
+    if (!/^[a-f0-9]{64}$/.test(config.sha256 || '') || createHash('sha256').update(bytes).digest('hex') !== config.sha256) throw new Error(`Music hash mismatch: ${name}`);
+    const gain = config.gain ?? .28, offset = config.start_seconds ?? 0;
+    if (!Number.isFinite(gain) || gain < 0 || gain > 1 || !Number.isFinite(offset) || offset < 0) throw new Error('Supply music gain0–1 and a nonnegative start_seconds.');
+    const audio = JSON.parse(run('/usr/bin/ffprobe', ['-v','error','-show_streams','-show_format','-of','json',file], true));
+    if (!audio.streams.some(s => s.codec_type === 'audio') || Number(audio.format.duration) < offset + duration) throw new Error(`Music is too short: ${name}`);
+    const dest = path.join(output, `music-${name}.wav`);
+    run('/usr/bin/ffmpeg', ['-hide_banner','-loglevel','error','-y','-ss',String(offset),'-i',file,'-vn','-af',
+      `aresample=48000,volume=${gain},afade=t=in:st=0:d=0.18,afade=t=out:st=${duration-1}:d=1,apad,atrim=end_sample=${Math.round(duration*48000)}`,
+      '-c:a','pcm_s16le','-ar','48000','-ac','2',dest]);
+    return {music_file:dest, music_title:config.title, music_license:config.license, music_source_sha256:config.sha256, music_gain:gain, music_offset_seconds:offset};
+  }
   const introBackgroundFile = path.join(output, 'project-background-intro.png');
   run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', introBackground,
     '-vf', 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black', '-frames:v', '1', '-update', '1', introBackgroundFile]);
   addProjectSegment({ kind: 'intro', duration: spec.intro_seconds, background_file: introBackgroundFile,
-    graphics_file: alphaMovie(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro'), graphics_type: 'alpha_mov', graphics_frames: introFrameDirectory });
+    graphics_file: alphaMovie(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro'), graphics_type: 'alpha_mov', graphics_frames: introFrameDirectory,
+    ...(await musicPart('intro', spec.intro_seconds)) });
   if (refreshProjectIntro) {
     const projectManifest = path.join(output, 'project-manifest.json');
     const existing = JSON.parse(await fs.readFile(projectManifest, 'utf8'));
@@ -247,6 +283,13 @@ if (prepareProject) {
     projectControl = a.control_after; projectScore = a.score_text; normalOverlay = overlays[4 + i * 2];
   }
   prepareNormal(end, normalOverlay);
+  if (outroSeconds) {
+    const backgroundFile = path.join(output, 'project-background-outro.png');
+    await fs.copyFile(path.join(outroFrameDirectory,'frame_00030.png'),backgroundFile);
+    addProjectSegment({kind:'outro', duration:outroSeconds, background_file:backgroundFile,
+      graphics_file:alphaMovie(outroFrameDirectory,outroSeconds,'project-graphics-outro'), graphics_type:'alpha_mov',
+      graphics_frames:outroFrameDirectory, recap_counts:recapCounts, ...(await musicPart('outro',outroSeconds))});
+  }
   const projectManifest = path.join(output, 'project-manifest.json');
   await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,
     original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: 720, low_res_preview: lowResPreview },

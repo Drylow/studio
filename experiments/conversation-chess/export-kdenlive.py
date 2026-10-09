@@ -65,7 +65,7 @@ def generate(manifest_path, bundle):
             raise ValueError("Manifest boundaries must be contiguous, positive, and end-exclusive")
         if int(segment["duration_frames"]) != end - start:
             raise ValueError("Inconsistent frame count in manifest")
-        if segment.get("kind") not in ("intro", "source", "analysis"):
+        if segment.get("kind") not in ("intro", "source", "analysis", "outro"):
             raise ValueError("Unknown timeline segment kind")
         if segment["kind"] == "source" and not segment.get("dialogue_audio_file"):
             raise ValueError("A source segment must preserve its original dialogue track")
@@ -145,6 +145,8 @@ def generate(manifest_path, bundle):
             "seekable": 1, "threads": 2,
         }
         if role == "audio":
+            if audio_index < 0:
+                raise ValueError(f"An audio asset must contain an audio stream: {label}")
             values.update({"audio_index": audio_index, "video_index": -1, "set.test_image": 1})
         elif role == "video":
             values.update({"audio_index": -1, "video_index": 0 if image else video_index,
@@ -160,33 +162,44 @@ def generate(manifest_path, bundle):
 
     asset(str(original), "original", math.ceil(float(source_probe["format"]["duration"]) * fps), "Original HD source")
     # Native Kdenlive audio tracks precede video tracks in the MLT multitrack.
-    track_specs = [
-        ("A2 — Analysis SFX", "audio"), ("A1 — Original dialogue", "audio"),
-        ("V1 — Source / intro background", "video"), ("V2 — Muted slow replays", "video"),
-        ("V3 — Intro / bar / rating / mascot", "video"),
-    ]
+    # Keep the reviewed five-track layout for manifests without music. Music is
+    # a separate editable audio track; adding it must not shift hardcoded targets.
+    track_specs = []
+    if any(segment.get("music_file") for segment in segments):
+        track_specs.append(("music", "A3 — Music", "audio"))
+    track_specs.extend([
+        ("sfx", "A2 — Analysis / outro SFX", "audio"),
+        ("dialogue", "A1 — Original dialogue", "audio"),
+        ("background", "V1 — Source / intro / outro background", "video"),
+        ("replay", "V2 — Muted slow replays", "video"),
+        ("graphics", "V3 — Intro / bar / rating / mascot / outro", "video"),
+    ])
+    track_index = {key: index for index, (key, _, _) in enumerate(track_specs)}
     track_entries = [[] for _ in track_specs]
     for index, segment in enumerate(segments):
         start, length = int(segment["start_frame"]), int(segment["duration_frames"])
         kind = segment["kind"]
         title = f"{index + 1:02} {kind}"
-        background_track = 3 if kind == "analysis" else 2
+        background_track = track_index["replay" if kind == "analysis" else "background"]
         background = asset(segment["background_file"], "video", length, title + " — background")
         track_entries[background_track].append((start, length, background))
         graphic = asset(segment["graphics_file"], "video", length, title + " — graphics")
-        track_entries[4].append((start, length, graphic))
+        track_entries[track_index["graphics"]].append((start, length, graphic))
         if segment.get("dialogue_audio_file"):
             if kind != "source":
                 raise ValueError("Original dialogue must only occur in source segments")
             sound = asset(segment["dialogue_audio_file"], "audio", length, title + " — dialogue")
-            track_entries[1].append((start, length, sound))
+            track_entries[track_index["dialogue"]].append((start, length, sound))
         if segment.get("sfx_file"):
-            if kind != "analysis":
-                raise ValueError("Analysis SFX must not overlap original dialogue segments")
+            if kind not in ("analysis", "outro"):
+                raise ValueError("SFX are only allowed in analysis or outro segments")
             sound = asset(segment["sfx_file"], "audio", length, title + " — SFX")
-            track_entries[0].append((start, length, sound))
+            track_entries[track_index["sfx"]].append((start, length, sound))
+        if segment.get("music_file"):
+            sound = asset(segment["music_file"], "audio", length, title + " — music")
+            track_entries[track_index["music"]].append((start, length, sound))
 
-    for index, ((name, kind), entries) in enumerate(zip(track_specs, track_entries)):
+    for index, ((_, name, kind), entries) in enumerate(zip(track_specs, track_entries)):
         playlists = []
         for layer in range(2):
             playlist_id = f"playlist_{index}_{layer}"
@@ -223,16 +236,19 @@ def generate(manifest_path, bundle):
         "kdenlive:duration": smpte(total, fps), "kdenlive:maxduration": total,
         "kdenlive:sequenceproperties.documentuuid": sequence_uuid,
         "kdenlive:sequenceproperties.hasAudio": 1, "kdenlive:sequenceproperties.hasVideo": 1,
-        "kdenlive:sequenceproperties.tracksCount": 5, "kdenlive:sequenceproperties.tracks": 5,
-        "kdenlive:sequenceproperties.activeTrack": 4, "kdenlive:sequenceproperties.audioTarget": 1,
-        "kdenlive:sequenceproperties.videoTarget": 2, "kdenlive:sequenceproperties.position": 480,
+        "kdenlive:sequenceproperties.tracksCount": len(track_specs),
+        "kdenlive:sequenceproperties.tracks": len(track_specs),
+        "kdenlive:sequenceproperties.activeTrack": track_index["graphics"],
+        "kdenlive:sequenceproperties.audioTarget": track_index["dialogue"],
+        "kdenlive:sequenceproperties.videoTarget": track_index["background"],
+        "kdenlive:sequenceproperties.position": min(480, total - 1),
         "kdenlive:sequenceproperties.zonein": 0, "kdenlive:sequenceproperties.zoneout": total,
         "kdenlive:sequenceproperties.zoom": 4, "kdenlive:sequenceproperties.scrollPos": 0,
         "kdenlive:sequenceproperties.verticalzoom": 1, "kdenlive:sequenceproperties.disablepreview": 0,
         "kdenlive:sequenceproperties.groups": "[]", "kdenlive:sequenceproperties.guides": "[]",
     })
     ET.SubElement(sequence, "track", producer="black", **{"in": "0", "out": str(total - 1)})
-    for index, (_, kind) in enumerate(track_specs, start=1):
+    for index, (_, _, kind) in enumerate(track_specs, start=1):
         ET.SubElement(sequence, "track", producer=f"track_{index - 1}")
         transition = ET.SubElement(sequence, "transition", id=f"transition_{index}")
         common = {"a_track": 0, "b_track": index, "internal_added": 237, "always_active": 1}
@@ -271,16 +287,24 @@ def generate(manifest_path, bundle):
     temporary.replace(project)
     report = {
         "project": str(project), "fps": fps, "duration_frames": total, "duration_seconds": total / fps,
-        "tracks": [name for name, _ in track_specs], "source_sha256": source_hash,
+        "tracks": [name for _, name, _ in track_specs], "source_sha256": source_hash,
+        "track_indices": track_index,
+        "track_clips": {
+            key: [{"start_frame": start, "duration_frames": length, "producer": identity}
+                  for start, length, identity in track_entries[index]]
+            for key, index in track_index.items()
+        },
         "source_dimensions": [video["width"], video["height"]], "proxies_enabled": False,
         "source_segments": sum(s["kind"] == "source" for s in segments),
         "analysis_segments": sum(s["kind"] == "analysis" for s in segments), "assets": assets,
+        "outro_segments": sum(s["kind"] == "outro" for s in segments),
+        "music_segments": sum(bool(s.get("music_file")) for s in segments),
         "render_backend": "Kdenlive native application / MLT", "export_completed": False,
     }
     (bundle / "bundle-manifest.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     (bundle / "project-manifest.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     (bundle / "README.txt").write_text(
-        "Open project.kdenlive in Kdenlive to edit the five separate timeline tracks.\n"
+        f"Open project.kdenlive in Kdenlive to edit the {len(track_specs)} separate timeline tracks.\n"
         "The original HD source remains in the project bin; proxies are disabled.\n"
         "Animated captions are separate transparent clips, regenerated from the reviewed JSON timeline.\n"
         "The media/ folder must travel with the project. If the whole folder is moved, run:\n"

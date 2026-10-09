@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "verified_on": "2026-10-09",
+  "licensor": "Kevin MacLeod / incompetech.com",
+  "license_evidence": "The creator track page renders the selected ISRC from pieces.json and explicitly provides a Creative Commons Attribution 4.0 attribution code. Original MP3s were downloaded from the same creator domain.",
+  "creator_catalogue_url": "https://incompetech.com/music/royalty-free/pieces.json",
+  "tracks": [
+    {
+      "id": "sneaky-snitch",
+      "file": "sneaky-snitch.mp3",
+      "title": "Sneaky Snitch",
+      "composer": "Kevin MacLeod",
+      "isrc": "USUAN1100772",
+      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sneaky%20Snitch.mp3",
+      "creator_page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "bytes": 5466943,
+      "required_attribution": "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
+      "changes": "Excerpted, mixed at adjusted volume and faded in/out for the guide and end card.",
+      "reference_intro_start_seconds": 66.103875,
+      "reference_match_evidence": {
+        "type": "normalized PCM waveform correlation",
+        "reference_video_url": "https://www.youtube.com/watch?v=InM2zft-iQs",
+        "reference_window_seconds": [
+          0,
+          12
+        ],
+        "correlation": 0.9664592447005086,
+        "note": "The reference soundtrack is used only for comparison, not redistributed."
+      }
+    },
+    {
+      "id": "scheming-weasel-faster",
+      "file": "scheming-weasel-faster.mp3",
+      "title": "Scheming Weasel (faster version)",
+      "composer": "Kevin MacLeod",
+      "isrc": "USUAN1100085",
+      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Scheming%20Weasel%20faster.mp3",
+      "creator_page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100085",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sha256": "f2f20d0737560a2dec0d82119810757326b1eec7eae211f2d3e056e9754834a9",
+      "bytes": 3664410,
+      "required_attribution": "\"Scheming Weasel (faster version)\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttps://creativecommons.org/licenses/by/4.0/",
+      "changes": "Excerpted, mixed at adjusted volume and faded in/out for the guide and end card."
+    }
+  ]
+}

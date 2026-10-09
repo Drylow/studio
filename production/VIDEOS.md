@@ -1,5 +1,16 @@
 # Journal des vidéos
 
+## Sopranos — aperçu intro/outro/SFX, après le testHD — 9 octobre2026
+
+**À valider avant le film10–15min :** https://gofile.io/d/5xFSD5af .
+Tony/Janice, anglais, sans voix off ; intro musicale16s, même scène et analyses,
+outro12s avec bilan des dix catégoriesChess.com. Pions identiques recolorés,
+clic redondant retiré et accents comiques ciblés. Kdenlive natif, six pistes,
+137,514s/4125frames en1080p30 (source720p), décodage intégral et22images revues.
+Fichier54 600 498octets, MD5 confirmé parGoFile. CréditsCCBY4.0 des deux musiques
+dans le bilan et `experiments/conversation-chess/assets/music/LICENSES.md`.
+Publication manuelle ultérieure ; ce fichier reste un aperçu privé.
+
 ## Crazy Chef 3D — pack de chaîne et livraison mobile — 8 octobre 2026
 
 Nom choisi : **Crazy Chef 3D**, handle **@CrazyChef3D**. Bio courte proposée :

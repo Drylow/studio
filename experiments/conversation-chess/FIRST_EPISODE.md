@@ -1,4 +1,4 @@
-# Two-minute pilot: Tony ruins Sunday dinner
+# Two-minute pilot: Tony ruins family dinner
 
 **The Sopranos — S5E10, Cold Cuts.** Tony brings up Janice's son Harpo at the
 dinner table, provokes her angry reaction, then claims he is only asking as an
@@ -7,6 +7,32 @@ Primary reference: [ConversationAnalysisGuy](https://www.youtube.com/@Conversati
 
 The photographic Tony head on the short black pawn is approved. Preserve it.
 The user wants a roughly two-minute test before extending this format.
+
+## Review after the HD pilot
+
+The user finds the second test much better. The next preview uses
+`pilot-tony-janice-v3.json`: the same reviewed dialogue and five annotations,
+plus the exact credited intro music and a12-second move-count recap.
+Sneaky Snitch starts at66.104s in the original recording; the outro uses
+Scheming Weasel (faster version). Originals and attribution are in
+`assets/music/` underCCBY4.0. Music has its own nativeKdenlive track and
+does not play under dialogue.
+
+Both bar pawns now share one vector silhouette. A redundant generic tick
+has been removed from accented rating onsets. Two explicitly timed original
+CC0 comic cues accompany the Book and Blunder bubbles; the reference9:12
+shows a fire/explosion overlay, whose recording is not copied.
+The end card displays ten official categories and counts only the actual
+annotations:Tony3, Janice2. Interesting/purple is explicitly excluded.
+
+The10–15-minute version waits for the user's approval of the intro/outro/SFX.
+The previous second-test delivery status below describes that earlier revision.
+
+Third-review native export completed:137.514s,1080p30/4125frames,
+six editable tracks and40media files. Full A/V decoding passed;22rendered
+screenshots were inspected, including both guide pages, typing, completed
+comments, recap and fades. Delivered for private review onGoFile with exact
+size/MD5 verification. Latest link and state are in `production/REPRISE.md`.
 
 ## Current revision
 

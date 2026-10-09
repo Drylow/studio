@@ -32,6 +32,24 @@ Ne pas confondre une démonstration d'habillage avec un montage de vrais extrait
 
 ## Ce qui a réellement été examiné
 
+### Musiques et accents — recherche après le retour sur le piloteHD
+
+La description de **Business with Tuco — re-upload** crédite
+[Sneaky Snitch](https://www.youtube.com/watch?v=QrqjLoPbnyY) à l'ouverture et
+[Scheming Weasel (faster version)](https://www.youtube.com/watch?v=y4zXHvaQ7Ng)
+à la fin, tous deux deKevin MacLeod. Les titres ont été recoupés avec leurs
+pagesIncompetech, ISRCUSUAN1100772/USUAN1100085 et licenceCCBY4.0.
+Les originaux de l'auteur, pas un rip de la vidéo de référence, sont conservés
+avec crédits et hashes dans `experiments/conversation-chess/assets/music/`.
+
+La comparaison PCM des12 premières secondes de la référence avec l'original
+Sneaky Snitch trouve le début à **66,103875s**, corrélation0,96646 malgré la
+compressionAAC. Cette preuve établit le morceau et le passage ; aucune écoute
+humaine n'est prétendue. La capture du passage547–558s, notamment9:12, montre
+un effet **feu/explosion** plein écran sur la scène deTuco. Elle guide le choix
+d'un accent comique ; le son exact n'a pas été identifié à l'oreille et n'est
+pas copié. Les extraits de référence restent privés, horsGit.
+
 L'API Algrow configurée a renvoyé les catalogues, descriptions, dates, durées et
 statistiques publiques des deux chaînes. Des commentaires publics des trois
 longs les plus vus de chaque chaîne ont été lus : dix par vidéo pour Analysed

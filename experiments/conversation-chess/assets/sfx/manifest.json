@@ -38,5 +38,25 @@
     "gain": 0.65,
     "provenance": "Kenney Interface Sounds bong_001.ogg; https://kenney.nl/assets/interface-sounds; see LICENSES.md.",
     "license": "CC0 1.0 Universal"
+  },
+  "comedy": {
+    "comic-impact": {
+      "file": "original-comic-impact.wav",
+      "gain": 0.65,
+      "provenance": "Original Edgerunners Studio sound design; deterministic bass sweep and filtered noise. Reproduce with generate-comedy.py; see original-comedy-provenance.json and LICENSES.md. No reference audio sampled.",
+      "license": "CC0 1.0 Universal"
+    },
+    "soft-pop": {
+      "file": "original-soft-pop.wav",
+      "gain": 0.7,
+      "provenance": "Original Edgerunners Studio descending bubble oscillator. Reproduce with generate-comedy.py; see original-comedy-provenance.json and LICENSES.md. No reference audio sampled.",
+      "license": "CC0 1.0 Universal"
+    },
+    "rising-twinkle": {
+      "file": "original-rising-twinkle.wav",
+      "gain": 0.6,
+      "provenance": "Original Edgerunners Studio three-note bell-like oscillator accent. Reproduce with generate-comedy.py; see original-comedy-provenance.json and LICENSES.md. No reference audio sampled.",
+      "license": "CC0 1.0 Universal"
+    }
   }
 }

@@ -37,6 +37,16 @@ All acquired through the normal cloud HTTP proxy with TLS verification; no desti
 - The confirmation is a supplemental UI cue, not a claim of a naturally recorded bell. These should not replace the recorded keyboard as the main typing sound.
 - Derivative processing: 48 kHz mono PCM16, high-pass 100 Hz, low-pass 8 kHz, trimmed onset silence, 2 ms fades, restrained peak normalization. Asset-specific measurements and source hashes are in `sfx-manifest.json`.
 
+## Original comic cues — 9 October 2026
+
+- Author: **Edgerunners Studio**.
+- Works: `original-comic-impact.wav`, `original-soft-pop.wav`, `original-rising-twinkle.wav`, and their reproducible sound-design script `generate-comedy.py`.
+- License: **CC0 1.0 Universal** — https://creativecommons.org/publicdomain/zero/1.0/. To the extent possible under law, the author dedicates these original works to the public domain and waives copyright and related rights. Commercial use, modification and distribution are permitted without attribution.
+- These sounds are computed from original oscillator envelopes and seeded filtered noise. No audio from The Sopranos, the reference channel, or a named meme recording was sampled or copied.
+- `original-comic-impact.wav` is a short bass-thump/noise-burst comedy accent in the general explosion-gag style. It is **not** identified as or claimed to reproduce the recording heard at 9:12 in the reference video.
+- `original-soft-pop.wav` is a restrained bubble entrance cue; `original-rising-twinkle.wav` is an optional positive three-note accent. They are opt-in cues with editorial timing, never an automatic bed over source dialogue.
+- Measurements, reproducible formulas, exact durations and hashes are in `original-comedy-provenance.json`.
+
 ## Inspection and scope
 
 Source pages, archive licenses/readmes, actual PCM signal levels, duration and active onsets were checked. No audio listening tool was available; these assets are **not claimed to have been aurally auditioned**. The private preview WAVs are supplied for listening review. CC0 provenance applies to these added sounds only; it does not license The Sopranos footage or reference channel assets, and it does not guarantee absence of platform matching errors.

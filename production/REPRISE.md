@@ -1,5 +1,37 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Sopranos — troisième aperçu intro/outro/SFX, après retour sur le testHD
+
+- Le testHD a été jugé bien meilleur. L'utilisateur demande désormais la musique
+  deConversationAnalysisGuy, une outro avec compte des coups, deux pions identiques
+  et des accents comiques commeBusiness with Tuco à9:12. La version10–15min attend
+  sa validation de ce nouvel aperçu ; aucune publicationYouTube demandée ici.
+- Timeline `experiments/conversation-chess/pilot-tony-janice-v3.json` : mêmes dialogues
+  et cinq repères déjà relus, guide16s, bilan12s. **Export natifKdenlive terminé :
+  137,514s /4125frames,1080p30,CRF17/AAC192k**, six pistes et40médias vérifiés.
+  Source native720p ; les graphismes sont1080p. DécodageA/V complet réussi ;
+  22images finales regardées, dont guides, commentaires, bilan et fondus.
+  PCM final contrôlé : musique/dialogues/SFX sans décalage, lecture silencieuse,
+  pas de tick supplémentaire mesuré, coupures propres et aucun écrêtage.
+  Contrôles de signal documentés ; aucune écoute humaine prétendue.
+- Musiques exactes identifiées dans les crédits du créateur : **Sneaky Snitch**
+  (intro, départ66,104s confirmé par corrélationPCM0,96646) et **Scheming Weasel
+  (faster version)** (outro). OriginauxIncompetech sousCCBY4.0, hashes et attribution
+  dans `assets/music/` ; crédits intégrés au bilan, à conserver dans la description
+  de la future vidéo. Musique surA3 séparée, arrêtée avant le dialogue.
+- Même tracé de pion recoloré sur les deux côtés ; masque comparé à100%.
+  Plus de clic générique doublant Brilliant/Blunder. Frappes synchronisées,
+  petits accents CC0 originauxBook/Blunder et lecture silencieuse. Référence9:12
+  = effetfeu/explosion, son étudié mais pas repris. Le bilan utilise seulement les
+  dix catégories officiellesChess.com : **Tony3, Janice2**, pas de violetInteresting.
+- Vidéo privée : `output/conversation-chess/tony-janice-pilot-v3-intro-outro.mp4`.
+  Projet : `output/conversation-chess/tony-janice-v3-kdenlive/project.kdenlive`.
+  **GoFile vérifié, fichier54 600 498octets etMD5 conforme :**
+  https://gofile.io/d/5xFSD5af . SHA256
+  `d9e056bc7e832dec6c4b2fff205ddc2f3cef2d7992ad8ca72b79bf93667ed9c9`.
+  Guide au début ; bilan à **2:05,5**. Ce lien remplace le précédent pour la revue.
+- Aucun changement du site ni des automatisationsCage/Pitch/TikTok.
+
 ## Nouveau format Sopranos — état du second test, 9 octobre 2026
 
 - Expérience isolée [conversation-chess](../experiments/conversation-chess/README.md) :

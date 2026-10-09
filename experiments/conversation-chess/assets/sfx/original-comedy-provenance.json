@@ -1,0 +1,42 @@
+{
+  "license": "CC0 1.0 Universal",
+  "author": "Edgerunners Studio",
+  "created": "2026-10-09",
+  "source": "generate-comedy.py",
+  "assets": [
+    {
+      "file": "original-comic-impact.wav",
+      "source_group": "edgerunners_original_cc0",
+      "processing": "Original oscillator bass sweep 118\u219243 Hz plus decaying harmonic and seeded filtered-noise burst (seed 14912); 4 ms onset, 35 ms ending fades; mono PCM16 at 48 kHz",
+      "license": "CC0 1.0 Universal",
+      "duration_seconds": 0.78,
+      "peak_dbfs": -9,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "434022a21893e10d5a083744e0d0c6e0bcc58336fd8789bbeb35ce9feb2b0090"
+    },
+    {
+      "file": "original-soft-pop.wav",
+      "source_group": "edgerunners_original_cc0",
+      "processing": "Original descending rounded bubble oscillator 1220\u2192320 Hz with quiet lower body; exponential decay; 4 ms onset, 35 ms ending fades; mono PCM16 at 48 kHz",
+      "license": "CC0 1.0 Universal",
+      "duration_seconds": 0.18,
+      "peak_dbfs": -16,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "0967d53107e5f0cf9d1c8b24e1e3979c9a02632f624963dac1d0548451c50f67"
+    },
+    {
+      "file": "original-rising-twinkle.wav",
+      "source_group": "edgerunners_original_cc0",
+      "processing": "Original three-note bell-like oscillator accent A5\u2192D6\u2192F6 with decaying envelopes and faint inharmonic partial; 4 ms onset, 35 ms ending fades; mono PCM16 at 48 kHz",
+      "license": "CC0 1.0 Universal",
+      "duration_seconds": 0.62,
+      "peak_dbfs": -15,
+      "sample_rate": 48000,
+      "channels": 1,
+      "sha256": "47b3cd14dddc02431455d84ae76f284c2c5c84e2093b9bae686837d5001cd66a"
+    }
+  ],
+  "scope": "Original local sound-design cues; no reference-channel audio sampled or copied."
+}

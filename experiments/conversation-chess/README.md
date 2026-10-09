@@ -58,7 +58,54 @@ variées, ignore les espaces et limite la cadence à 16 frappes/s. La frappe s�
 avec le texte ; la fin de lecture est silencieuse. Un cue léger accompagne les
 notes et un accent bref Brilliant/Blunder/erreur. Les SFX sont sur une piste
 indépendante ; les dialogues gardent leur audio original et des fondus de 35 ms.
-Aucune voix off ni musique ajoutée.
+Aucune voix off. La révision musicale du guide et du bilan est décrite ci-dessous.
+
+## Troisième aperçu : intro musicale et bilan
+
+L'utilisateur trouve le second test bien meilleur et demande maintenant une intro
+musicale, un bilan des coups, deux pions de même forme et davantage de petits SFX.
+`pilot-tony-janice-v3.json` conserve les cinq repères et dialogues déjà relus ;
+il ajoute12s de bilan, soit137,5s au total. La vidéo longue de10–15min attend sa
+validation de cet aperçu.
+
+Les crédits du créateur identifient **Sneaky Snitch** pour l'intro et
+**Scheming Weasel (faster version)** pour l'outro. Les deux enregistrements viennent
+directement d'Incompetech sous **CC BY4.0**, avec empreintes, pages originales et
+crédits dans `assets/music/`. La corrélation PCM de l'intro identifie le passage
+66,104s de Sneaky Snitch. La musique est découpée et fondue sur une pisteA3
+indépendante ; elle s'arrête avant les dialogues. Les crédits sont affichés dans
+le bilan et doivent aussi accompagner la future description YouTube.
+
+Les pions du haut et du bas utilisent **un seul tracé vectoriel recoloré**.
+Le bilan dénombre les annotations par locuteur et par catégorie officielle :
+Tony3 (Book, Brilliant, Best), Janice2 (Great, Blunder). Il n'ajoute ni catégorie
+violette Interesting, ni pourcentage de précision inventé.
+
+Un seul cue accompagne chaque note : le clic générique ne se superpose plus aux
+accents Brilliant/Blunder. Des fondus de4–8ms adoucissent les bords. Deux accents
+comiques originauxCC0 sont placés à l'entrée des bulles Book et Blunder. Le passage
+de référence à9:12 montre une explosion ; son enregistrement n'est pas réutilisé.
+`annotation.comedy_sfx` permet d'autres accents explicitement placés, à partir des
+assets locaux documentés. Ils finissent avant la lecture silencieuse.
+
+```bash
+node experiments/conversation-chess/render-clip.mjs --prepare-project \
+  --source /chemin/source-hd.mp4 \
+  --timeline experiments/conversation-chess/pilot-tony-janice-v3.json \
+  --out /tmp/conversation-chess-v3-project
+bash experiments/conversation-chess/with-editor-display.sh \
+  python experiments/conversation-chess/export-kdenlive.py \
+  --manifest /tmp/conversation-chess-v3-project/project-manifest.json \
+  --bundle /tmp/conversation-chess-v3-kdenlive \
+  --render /tmp/conversation-chess-v3-kdenlive/pilot.mp4
+```
+
+Les fichiersMP3 vérifiés rendent ce projet reproductible sans télécharger les
+musiques à chaque export. La timeline accepte `outro_seconds` (0 ou6–20s) et
+`music.intro`/`music.outro` avec chemin local relatif, SHA256, gain et début.
+Ces ajouts exigent `--prepare-project` : le rendu final passe par Kdenlive.
+L'ancien manifeste sans musique garde ses cinq pistes ; la version musicale
+en possède six, avec indices et cibles calculés automatiquement.
 
 ## Préparer les pistes Kdenlive
 

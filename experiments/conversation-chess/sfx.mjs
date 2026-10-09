@@ -46,6 +46,7 @@ async function probe(file) {
 /**
  * Read version 1: each required asset has { file, gain, provenance, license }.
  * Typewriter may instead use files: [relative local paths] for discrete clacks.
+ * Optional comedy is a map of named assets with the same single-file contract.
  * Asset files are relative to the manifest; provenance/license are documentation,
  * not a claim that this helper has independently verified reuse rights.
  */
@@ -54,8 +55,7 @@ export async function loadSfxManifest(manifestPath) {
   const document = JSON.parse(await fs.readFile(resolved, 'utf8'));
   if (!document || document.version !== 1 || Array.isArray(document)) throw new Error('Unknown SFX manifest version.');
   const manifest = { version: 1, manifest_path: resolved };
-  for (const name of assetNames) {
-    const asset = document[name];
+  async function loadAsset(name, asset, multipleAllowed = false) {
     if (!asset || typeof asset !== 'object' || Array.isArray(asset)) throw new Error(`SFX manifest requires ${name}.`);
     if (typeof asset.gain !== 'number' || !Number.isFinite(asset.gain) || asset.gain < 0 || asset.gain > 1) {
       throw new Error(`${name}.gain must be between 0 and 1.`);
@@ -63,7 +63,7 @@ export async function loadSfxManifest(manifestPath) {
     for (const field of ['provenance', 'license']) {
       if (typeof asset[field] !== 'string' || !asset[field].trim()) throw new Error(`${name}.${field} is required.`);
     }
-    const multiple = name === 'typewriter' && asset.files != null;
+    const multiple = multipleAllowed && asset.files != null;
     if (multiple && (asset.file != null || !Array.isArray(asset.files) || !asset.files.length)) {
       throw new Error('typewriter needs either file or a nonempty files array.');
     }
@@ -75,9 +75,19 @@ export async function loadSfxManifest(manifestPath) {
       if (!(await fs.stat(file)).isFile()) throw new Error(`${name}.file must be a regular local file.`);
       variants.push(Object.freeze({ file, relative_file: relative, ...(await probe(file)) }));
     }
-    manifest[name] = Object.freeze({ gain: asset.gain, provenance: asset.provenance, license: asset.license,
+    return Object.freeze({ gain: asset.gain, provenance: asset.provenance, license: asset.license,
       ...(multiple ? { files: Object.freeze(variants.map(v => v.file)), variants: Object.freeze(variants) } : variants[0]) });
   }
+  for (const name of assetNames) manifest[name] = await loadAsset(name, document[name], name === 'typewriter');
+  const comedy = Object.create(null);
+  if (document.comedy != null) {
+    if (typeof document.comedy !== 'object' || Array.isArray(document.comedy)) throw new Error('comedy must be a named asset map.');
+    for (const [name, asset] of Object.entries(document.comedy)) {
+      if (!/^[a-z][a-z0-9_-]{0,40}$/.test(name)) throw new Error('Unknown comedy asset name.');
+      comedy[name] = await loadAsset(`comedy.${name}`, asset);
+    }
+  }
+  manifest.comedy = Object.freeze(comedy);
   Object.freeze(manifest);
   loadedManifests.add(manifest);
   return manifest;
@@ -85,9 +95,13 @@ export async function loadSfxManifest(manifestPath) {
 
 /**
  * Return the absolute path of a PCM WAV matching this analysis hold.
- * Move/accent start at zero. Typing starts with the bubble and ends with its text;
+ * One move OR rating accent starts at zero, never a redundant tick over an accent.
+ * Typing starts with the bubble and ends with its text;
  * files variants ignore spaces and cap keypresses at 16/s; file alone loops.
- * The reading hold is silent and the mix is limited to -2 dBFS. No dialogue
+ * Optional annotation.comedy_sfx is { name, at_seconds, gain? } or an array of
+ * up to three cues. Only explicitly placed local assets can be used. They start
+ * after the rating and finish before the reading hold, which stays silent.
+ * The mix is limited to -2 dBFS. No dialogue
  * input can enter this mix. Durations round to the nearest 48 kHz sample.
  */
 export async function renderAnalysisAudio({ manifest, annotation, schema, outputPath }) {
@@ -106,12 +120,29 @@ export async function renderAnalysisAudio({ manifest, annotation, schema, output
   const typingStart = Math.round(schema.bubble_delay_seconds * sampleRate);
   const typingSamples = Math.round(annotation.comment.length / schema.typewriter_cps * sampleRate);
   if (typingStart + typingSamples > samples) throw new Error('Analysis hold ends before its text finishes typing.');
+  const comedyCues = annotation.comedy_sfx == null ? []
+    : Array.isArray(annotation.comedy_sfx) ? annotation.comedy_sfx : [annotation.comedy_sfx];
+  if (comedyCues.length > 3) throw new Error('Use at most three explicitly placed comedy cues per hold.');
+  const comedyEvents = comedyCues.map(cue => {
+    if (!cue || typeof cue !== 'object' || Array.isArray(cue) || typeof cue.name !== 'string'
+        || !Object.hasOwn(manifest.comedy, cue.name)) throw new Error('Unknown local comedy sound.');
+    if (!Number.isFinite(cue.at_seconds) || cue.at_seconds < .5) {
+      throw new Error('Place comedy cues at least half a second after the rating onset.');
+    }
+    const gain = cue.gain ?? 1;
+    if (!Number.isFinite(gain) || gain < 0 || gain > 1) throw new Error('Comedy gain must be between 0 and 1.');
+    const asset = manifest.comedy[cue.name];
+    const start = Math.round(cue.at_seconds * sampleRate), length = Math.round(asset.duration * sampleRate);
+    if (start + length > typingStart + typingSamples) throw new Error('Comedy cues must finish before the silent reading hold.');
+    return { asset, start, length, gain };
+  });
   const result = path.resolve(localPath(outputPath, 'outputPath'));
   if (path.extname(result).toLowerCase() !== '.wav') throw new Error('outputPath must name a WAV file.');
   await fs.mkdir(path.dirname(result), { recursive: true });
   const directory = await fs.realpath(path.dirname(result));
   const destination = path.join(directory, path.basename(result));
-  if (assetNames.some(name => manifest[name].file === destination || manifest[name].files?.includes(destination))) {
+  if ([...assetNames.map(name => manifest[name]), ...Object.values(manifest.comedy)]
+    .some(asset => asset.file === destination || asset.files?.includes(destination))) {
     throw new Error('Do not overwrite a source sound asset.');
   }
   const temporary = path.join(directory, `.${path.basename(result)}.${randomUUID()}.tmp`);
@@ -122,22 +153,22 @@ export async function renderAnalysisAudio({ manifest, annotation, schema, output
     inputs.push('-protocol_whitelist', 'file,pipe', ...(loop ? ['-stream_loop', '-1'] : []), '-i', file);
     return inputCount++;
   }
-  function effect(name, start, length, loop = false) {
-    const asset = manifest[name];
-    if (asset.gain === 0 || length < 1) return;
+  function effect(name, start, length, loop = false, asset = manifest[name], gain = 1) {
+    if (asset.gain * gain === 0 || length < 1) return;
     const index = input(asset.file, loop);
     const seconds = length / sampleRate;
-    const fadeIn = Math.min(.0015, seconds / 3), fadeOut = Math.min(.004, seconds / 3);
+    const fadeIn = Math.min(.004, seconds / 3), fadeOut = Math.min(.008, seconds / 3);
     filters.push(`[${index}:a:0]aresample=${sampleRate},aformat=sample_fmts=fltp:channel_layouts=stereo,`
-      + `atrim=end_sample=${length},asetpts=PTS-STARTPTS,volume=${asset.gain},`
+      + `atrim=end_sample=${length},asetpts=PTS-STARTPTS,volume=${asset.gain * gain},`
       + `afade=t=in:st=0:d=${fadeIn},afade=t=out:st=${seconds - fadeOut}:d=${fadeOut},`
       + `adelay=delays=${start}S:all=1[${name}]`);
     mix.push(`[${name}]`);
   }
-  effect('move', 0, Math.min(samples, Math.round(Math.min(.35, manifest.move.duration) * sampleRate)));
   const accent = annotation.rating === 'brilliant' ? 'brilliant' : annotation.rating === 'blunder' ? 'blunder'
     : ['mistake', 'inaccuracy', 'miss', 'missed_win'].includes(annotation.rating) ? 'error' : null;
-  if (accent) effect(accent, 0, Math.min(samples, Math.round(Math.min(.8, manifest[accent].duration) * sampleRate)));
+  const ratingCue = accent || 'move';
+  effect(ratingCue, 0, Math.min(samples, Math.round(Math.min(accent ? .8 : .35, manifest[ratingCue].duration) * sampleRate)));
+  comedyEvents.forEach((event, i) => effect(`comedy${i}`, event.start, event.length, false, event.asset, event.gain));
   if (!manifest.typewriter.files) {
     effect('typewriter', typingStart, typingSamples, true);
   } else if (manifest.typewriter.gain > 0) {

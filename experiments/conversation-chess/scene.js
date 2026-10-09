@@ -25,6 +25,17 @@ window.ConversationChess = (() => {
     if (!icon) throw new Error(`Official Chess.com icon unavailable: ${v.id}`);
     imageContain(icon, x, y, size, size);
   }
+  // A single silhouette, recoloured for both sides; Unicode pawn glyphs differ.
+  function pawn(x, y, height = 46, white = false) {
+    ctx.save(); ctx.translate(x - height * .34, y); ctx.scale(height / 100, height / 100);
+    ctx.beginPath(); ctx.arc(34, 17, 14, 0, Math.PI * 2);
+    ctx.moveTo(19, 36); ctx.lineTo(49, 36); ctx.lineTo(51, 44); ctx.lineTo(17, 44); ctx.closePath();
+    ctx.moveTo(22, 45); ctx.bezierCurveTo(24, 60, 19, 73, 12, 82);
+    ctx.lineTo(56, 82); ctx.bezierCurveTo(49, 73, 44, 60, 46, 45); ctx.closePath();
+    ctx.moveTo(10, 83); ctx.lineTo(58, 83); ctx.lineTo(62, 94); ctx.lineTo(6, 94); ctx.closePath();
+    ctx.fillStyle = white ? '#ffffff' : '#403c38'; ctx.fill();
+    ctx.strokeStyle = white ? '#aaa69e' : '#b8b2a8'; ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
+  }
   function guideBackground(transparentBackground = false) {
     ctx.clearRect(0, 0, W, H);
     if (background && !transparentBackground) imageContain(background, 0, 0, W, H);
@@ -85,9 +96,50 @@ window.ConversationChess = (() => {
     text(Math.abs(shownScore).toFixed(1), bx + bw / 2, shownScore < 0 ? by + 29 : by + bh - 14,
       config.score_font_size, shownScore < 0 ? '#ffffff' : config.score_text_color, 700, 'center');
     if (!position) {
-      text('♟', bx + bw / 2, by - 37, 48, '#b1aca3', 700, 'center');
-      text('♙', bx + bw / 2, by + bh + 66, 48, '#ffffff', 700, 'center');
+      pawn(bx + bw / 2, by - 82, 46);
+      pawn(bx + bw / 2, by + bh + 22, 46, true);
     }
+  }
+  function outro(options) {
+    const elapsed = options.t || 0, duration = options.duration || 12;
+    const counts = options.counts || {}, sides = options.sides || {black:'Tony', white:'Janice'};
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#262421'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#302e2b'; ctx.beginPath(); ctx.roundRect(646, 210, 1122, 790, 24); ctx.fill();
+    text('GAME REVIEW', 1208, 112, 72, '#f7f7f7', 800, 'center');
+    text(`${sides.black} vs ${sides.white} · ${options.subtitle || 'Family dinner'}`, 1208, 166, 32, '#bcb7ae', 700, 'center');
+    ctx.fillStyle = '#f7f7f7'; ctx.beginPath(); ctx.roundRect(78, 168, 472, 177, 38); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(242, 338); ctx.lineTo(279, 391); ctx.lineTo(324, 338); ctx.fill();
+    lines('FAMILY DINNER.\nNO SURVIVORS.', 314, 239, 38, '#262421', 53, 'Arial', 'center');
+    if (tonyOverlay || tony) {
+      const bounce = 9 * Math.exp(-elapsed * 3) * Math.sin(elapsed * 15);
+      imageContain(tonyOverlay || tony, 58, 357 + bounce, 524, 606);
+    }
+    pawn(1460, 222, 44); pawn(1655, 222, 44, true);
+    text(sides.black, 1460, 302, 30, '#f7f7f7', 700, 'center');
+    text(sides.white, 1655, 302, 30, '#f7f7f7', 700, 'center');
+    const order = ['brilliant','great','best','excellent','good','book','inaccuracy','mistake','miss','blunder'];
+    for (const [i, id] of order.entries()) {
+      const v = ratings[id], y = 329 + i * 53;
+      if (!v) throw new Error(`Unknown official recap category: ${id}`);
+      ratingIcon(v, 695, y, 41);
+      text(v.label, 763, y + 32, 31, v.color, 700);
+      for (const [side, x] of [['black',1460],['white',1655]]) {
+        const n = counts[id]?.[side] || 0;
+        text(String(n), x, y + 32, 32, n ? '#ffffff' : '#817c72', 700, 'center');
+      }
+    }
+    ctx.fillStyle = '#555149'; ctx.fillRect(690, 879, 1034, 2);
+    text('TOTAL MOVES', 763, 935, 30, '#c8c1b5', 700);
+    for (const [side, x] of [['black',1460],['white',1655]]) {
+      const n = order.reduce((sum, id) => sum + (counts[id]?.[side] || 0), 0);
+      text(String(n), x, 935, 38, '#ffffff', 800, 'center');
+    }
+    text('Analysis complete. The family feud continues.', 320, 1018, 24, '#bcb7ae', 700, 'center');
+    text('Music: Sneaky Snitch / Scheming Weasel (faster version) · Kevin MacLeod (incompetech.com) · Edited excerpts', W / 2, 1050, 19, '#bcb7ae', 400, 'center');
+    text('Licensed under CC BY 4.0 · https://creativecommons.org/licenses/by/4.0/', W / 2, 1075, 17, '#bcb7ae', 400, 'center');
+    const fade = clamp(elapsed / .35) * clamp((duration - elapsed) / .8);
+    if (fade < 1) { ctx.fillStyle = `rgba(0,0,0,${1-fade})`; ctx.fillRect(0,0,W,H); }
   }
   function sourceFrame(options) {
     ctx.clearRect(0, 0, W, H);
@@ -156,7 +208,7 @@ window.ConversationChess = (() => {
     }
   }
   function introFrame(t) { intro(t); return canvas.toDataURL('image/png'); }
-  function clipFrame(o) { if (o.phase === 'intro') intro(o.t || 0, o.intro_overlay === true); else sourceFrame(o); return canvas.toDataURL('image/png'); }
+  function clipFrame(o) { if (o.phase === 'intro') intro(o.t || 0, o.intro_overlay === true); else if (o.phase === 'outro') outro(o); else sourceFrame(o); return canvas.toDataURL('image/png'); }
   function frame(t) { return introFrame(t); }
   return { init, frame, clipFrame, introFrame, width: W, height: H };
 })();

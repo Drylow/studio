@@ -1,5 +1,21 @@
 # Direction visuelle — pion Tony
 
+## Retour après visionnage du test HD
+
+Le testHD est jugé bien meilleur. Prochain aperçu avant validation du format
+long10–15min : intro **Sneaky Snitch** (passage66,104s), outro **Scheming Weasel
+(faster version)** et bilan du nombre de coups par catégorie et par camp.
+Les musiques viennent des originauxIncompetech sousCCBY4.0 avec crédits.
+Conserver seulement les dix catégoriesChess.com : pas d'Interesting violet.
+
+Sur la barre, même silhouette de pion en haut et en bas, uniquement recolorée
+en noir et en blanc. La mascotteTony approuvée reste intacte. À l'entrée des
+analyses, un seul son d'évaluation : retirer le clic redondant qui doublait
+les accents. Petits SFX comiques sur les réactions/punchlines, propres et
+ponctuels ; la référenceBusiness with Tuco à9:12 montre une explosion.
+Les dialogues restent audibles, sans voix off, avec une lecture silencieuse
+après la frappe. Le film long ne commence qu'après validation de l'aperçu.
+
 Référence prioritaire : **ConversationAnalysisGuy**, choisie le 9 octobre 2026.
 La mascotte explique avec des textes et des réactions visuelles, **sans voix off**.
 
