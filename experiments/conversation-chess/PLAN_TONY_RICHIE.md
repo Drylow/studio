@@ -1,5 +1,15 @@
 # Selected first long: Tony / Richie and The Jacket
 
+## Current correction after the actual upload
+
+The user reports a real HBO audiovisual claim on S02E08 and authorizes removing
+that entire episode, accepting a shorter film. The replacement retains only
+the E3/E6 prefix: 27 analyses, three chapter cards, 17,018 output frames
+(9:27.267). All E8 scenes, original audio and analysis replays are excluded;
+the recap and cover are rewritten without the jacket. Export checks and a new
+private YouTube upload test are pending. Remaining HBO rights are not cleared.
+See [the claim report](COPYRIGHT_REVIEW.md). The earlier long below is an archive.
+
 ## Current actual-source edit
 
 The complete English originals for S2E3, S2E6 and S2E8 are acquired, fully

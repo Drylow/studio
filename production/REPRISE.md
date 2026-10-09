@@ -1,5 +1,15 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Sopranos — correction après la réclamation HBO
+
+L'utilisateur a importé le long Tony/Richie : réclamation audiovisuelle HBO
+S02E08, dix intervalles entre 9:29 et 14:59. Il autorise de retirer **tout E8**
+et accepte une durée réduite. Nouvelle sélection : E3/E6 seulement, 27 notes,
+9 min 27, nouveau bilan et miniature sans veste. Export et test YouTube en attente.
+Le long livré ci-dessous reste une archive ; ne pas le renvoyer comme corrigé.
+Les autres épisodes peuvent encore être réclamés, droits non établis.
+Détails : `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
+
 ## Sopranos — premier long Tony/Richie livré
 
 - **Film 15 min 11 et kit : https://gofile.io/d/mdNDwQQ4**. Huit fichiers vérifiés,

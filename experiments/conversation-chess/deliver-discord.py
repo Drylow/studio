@@ -37,8 +37,8 @@ def prepare(manifest):
     data = json.loads(manifest.read_text(encoding="utf-8"))
     resolve = lambda name: (folder / data[name]).resolve()
     kind = data["kind"]
-    if kind not in ("preview", "final"):
-        raise ValueError("Le paquet doit être un aperçu ou une vidéo finale.")
+    if kind not in ("preview", "final", "youtube-test"):
+        raise ValueError("Le paquet doit être un aperçu, une vidéo finale ou une version à tester sur YouTube.")
     video = resolve("video")
     video_hash = digest(video)
     review = json.loads(resolve("review").read_text(encoding="utf-8"))
@@ -64,8 +64,9 @@ def prepare(manifest):
     description += "\n\nMusic credits\n" + credits
     if len(description) > 5000:
         raise ValueError("Description trop longue pour YouTube.")
-    status = "APERÇU — à regarder, pas destiné à publication" if kind == "preview" \
-        else "Vidéo vérifiée — à publier manuellement"
+    status = {"preview": "APERÇU — à regarder, pas destiné à publication",
+              "final": "Vidéo vérifiée — à publier manuellement",
+              "youtube-test": "VERSION À TESTER SUR YOUTUBE — épisode 8 retiré"}[kind]
     kit = f"Scene Analysis Guy\n{status}\n\nDOWNLOAD\n{link}\n\nTITLE\n{title}\n\nDESCRIPTION\n{description}\n"
     if data.get("tags"):
         kit += "\nTAGS\n" + ", ".join(data["tags"]) + "\n"
@@ -75,7 +76,7 @@ def prepare(manifest):
     kit_path.write_text(kit, encoding="utf-8")
     files = [kit_path, resolve("music_credits")]
     cover = {"title": "Scene Analysis Guy — " + title, "url": link, "color": 0x81B64C}
-    if kind == "final":
+    if kind in ("final", "youtube-test"):
         if not review.get("source_quality", {}).get("accepted_for_final"):
             raise ValueError("La qualité des sources doit être acceptée avant la livraison finale.")
         thumbnail = resolve("thumbnail")

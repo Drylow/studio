@@ -51,6 +51,11 @@ Une finale requiert sa miniature. Un aperçu est marqué explicitement
 **APERÇU — pas destiné à publication** et n'utilise pas une photo de profil
 comme fausse miniature définitive.
 
+`kind: "youtube-test"` conserve les mêmes contrôles qu'une finale et sa miniature,
+mais affiche **VERSION À TESTER SUR YOUTUBE — épisode 8 retiré**. Cette livraison
+signifie que le montage est terminé et revu ; elle ne valide ni Content ID ni
+les droits des extraits. Ce statut est réservé à la nouvelle coupe Tony/Richie.
+
 Un seul message comprend les informations et `Kit_publication.txt`,
 `MUSIC_CREDITS.txt`, plus la miniature pour une finale. `allowed_mentions` est
 vide. La réponse `wait=true` doit confirmer l'identifiant et les pièces jointes.
@@ -59,6 +64,11 @@ Un envoi incertain conserve `discord_pending.json` : ne pas relancer à l'aveugl
 Le verrou partagé `work/discord.lock` évite les envois concurrents mélangés.
 
 ## Premier long livré
+
+**Archive réclamée après l'import utilisateur : HBO S02E08.** Une coupe plus
+courte sans cet épisode est demandée. Elle doit partir comme version à tester
+sur YouTube, avec ses propres contrôles et reçus ; ne pas réutiliser les reçus
+ci-dessous pour annoncer la nouvelle vidéo. Voir [le rapport](COPYRIGHT_REVIEW.md).
 
 Tony/Richie, 15 min 11, est terminé et livré :
 [film et kit GoFile](https://gofile.io/d/mdNDwQQ4).

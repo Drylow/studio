@@ -9,6 +9,13 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
+**Correction en cours après une réclamation HBO S02E08.** L'utilisateur demande
+de retirer tout cet épisode et accepte une vidéo plus courte : 9 min 27,
+27 analyses conservées, nouveau bilan et miniature sans veste. Cette version
+devra être testée sur YouTube ; les épisodes 3 et 6 peuvent encore être réclamés.
+Voir [le rapport et les règles de livraison](COPYRIGHT_REVIEW.md).
+Le long de 15 min 11 décrit ci-dessous devient une archive réclamée.
+
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
 Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
 Les trois épisodes S2E3, S2E6 et S2E8 sont maintenant acquis et contrôlés :

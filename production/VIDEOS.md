@@ -1,5 +1,15 @@
 # Journal des vidéos
 
+## Scene Analysis Guy — nouvelle coupe sans épisode 8 — 9 octobre 2026
+
+Après son import du long, l'utilisateur signale une réclamation HBO audiovisuelle
+S02E08. Il demande de supprimer tout cet épisode et accepte une version plus
+courte. Nouvelle sélection prévue : 9 min 27, 27 analyses, E3/E6 seulement,
+bilan recalculé et miniature sans veste. Export, contrôles et nouveau test
+YouTube restent à faire. Les extraits conservés ne sont pas licenciés pour
+republication et peuvent encore être réclamés. Le premier long ci-dessous
+est une archive. Rapport : `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
+
 ## Historical Daily - OVNI integration, 9 October 2026
 
 OVNI is now the default picture renderer for the five manually authored
