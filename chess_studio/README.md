@@ -1,6 +1,6 @@
 # Chess Studio — atelier local
 
-Base de montage pour **les films d’animation**, puis **Game of Thrones**. Le format reste celui d’Analysed Like Chess : vrais clips, pions portant les portraits des personnages, annotations et évaluations écrites, sans narration ajoutée.
+Base de montage pour **les films d’animation**, puis **Game of Thrones**. Le gabarit est recalé sur les images d’Analysed Like Chess : clip plein écran, portraits carrés, barre d’évaluation, grandes icônes et cartes à texte progressif, sans narration ajoutée. Voir [REFERENCE.md](REFERENCE.md) pour la comparaison et ses limites.
 
 ## Ouvrir
 
@@ -18,12 +18,14 @@ L’atelier est accessible sur **http://127.0.0.1:4317**, uniquement sur cette m
 
 1. Créer un projet **Animation** ou **Thrones** et nommer les deux personnages.
 2. Importer un fichier local, ou un lien vers un clip YouTube public (30 minutes maximum). La meilleure définition disponible est conservée ; l’audio anglais ou français est préféré quand disponible. L’original est téléchargeable depuis sa fiche. Vérifier sa langue et l’absence de sous-titres, logos ou montages déjà incrustés : l’import ne les efface pas.
-3. Ajouter le clip au montage. Régler ses points d’entrée et de sortie, sa cadence et le volume des dialogues.
-4. À la fin d’une réplique ou d’un geste, cliquer **Ajouter un coup au curseur**. Écrire le nom du coup, la note, le commentaire, la durée de pause et l’évaluation. Déplacer la carte à gauche ou à droite pour préserver l’action. La citation est facultative et doit correspondre exactement au dialogue.
-5. Importer une tête par personnage pour l’intégrer au pion. Sans portrait, un pion neutre est affiché.
-6. **Sauvegarder** prépare les images fixes dans la qualité de la source. **Exporter le film** produit le MP4 et propose son téléchargement.
+3. Cliquer **Vérifier la source**, regarder le clip entier et confirmer l’absence de logo et de texte incrusté. La planche de contrôle facilite le repérage mais ne remplace pas le visionnage. Les sources Fandango / Movieclips sont exclues. Seuls les clips validés peuvent être ajoutés et exportés.
+4. Ajouter le clip au montage. Régler ses points d’entrée et de sortie, sa cadence et le volume des dialogues.
+5. À la fin d’une réplique ou d’un geste, cliquer **Ajouter un coup au curseur**. Écrire le nom du coup, la note, le commentaire, la durée de pause et l’évaluation. Déplacer la carte à gauche ou à droite pour préserver l’action. La citation est facultative et doit correspondre exactement au dialogue.
+6. Importer un portrait par personnage. Les portraits apparaissent en haut et en bas de la barre. Le pion est une variante facultative dans les réglages.
+7. Ajuster **Placement précis** pour placer séparément la carte et la grande icône selon l’action. Ajouter, si utile, une meilleure alternative et des tags.
+8. **Sauvegarder** prépare les images fixes dans la qualité de la source. **Exporter le film** produit le MP4 et propose son téléchargement.
 
-Les commentaires, décisions éditoriales et scores sont saisis à la main. La barre d’évaluation est une interprétation éditoriale ; aucun moteur d’échecs ne calcule une scène de film. La lecture continue conserve les dialogues ; la pause les arrête, puis la lecture reprend au même point source. Les mouvements sont sobres et déterministes : légère approche pendant la pause, entrée/sortie brève de la carte, glissement de la barre et bruitage facultatif discret. Pas de coupe ou de transition ajoutée automatiquement dans le clip.
+Les commentaires, décisions éditoriales et scores sont saisis à la main. La barre d’évaluation est une interprétation éditoriale ; aucun moteur d’échecs ne calcule une scène de film. La lecture continue conserve les dialogues ; la pause les arrête, puis la lecture reprend au même point source. Les mouvements sont sobres et déterministes : entrée/sortie brève de la carte, texte progressif, glissement de la barre et bruitage facultatif discret. Le zoom est désactivé par défaut. Pas de coupe ou de transition ajoutée automatiquement dans le clip.
 
 ## Qualité, sauvegarde et export
 
@@ -55,8 +57,8 @@ npm run build
 npm run demo
 ```
 
-La démo est une **mire technique**, pas un épisode proposé : elle vérifie pauses, reprise, son et cartes. Elle n’est créée qu’une fois. Lancer `npm start` après un build sert le build ; pour le développement, retirer uniquement le dossier `chess_studio/dist` pour activer Vite à la prochaine ouverture.
+`npm run demo` crée une **mire technique**, destinée aux tests et à exclure des exports éditoriaux. L’atelier installé contient aussi un test de gabarit sur un extrait propre de Big Buck Bunny (02:20–02:34, 1080p natif). Attribution : Big Buck Bunny © Blender Foundation | www.bigbuckbunny.org — CC BY 3.0. Les médias et projets locaux ne sont pas inclus dans Git. Lancer `npm start` après un build sert le build ; pour le développement, retirer uniquement le dossier `chess_studio/dist` pour activer Vite à la prochaine ouverture.
 
-Vérifications du 9 octobre 2026 : six tests de découpage réussis ; build TypeScript/Vite réussi ; export Remotion complet en 1920 × 1080, H.264/AAC, 30 images/s (8 secondes de source + 6,5 secondes de pauses). Import YouTube testé sur l’évasion de Tai Lung (Movieclips) en 1080p. Ce clip de test contient un logo incrusté et la piste reçue est en espagnol : il ne constitue pas une source propre validée pour publication.
+Vérifications du 9 octobre 2026 : neuf tests de découpage et de validation des sources réussis ; build TypeScript/Vite réussi. Les anciens projets de mire et Movieclips sont archivés, les sources marquées sont rejetées et l’export exige une validation complète.
 
 Cette base est autonome : elle ne modifie ni le frontend Flask, ni les chaînes historiques, ni les pipelines existantes. Pas de publication automatique. Pour obtenir un extrait vraiment propre et dans sa meilleure qualité, privilégier le fichier original disponible et vérifier visuellement chaque source.

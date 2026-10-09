@@ -9,6 +9,7 @@ import {spawn} from 'node:child_process';
 import {createServer as createViteServer} from 'vite';
 import {PROFILES, newProject, validateProject, buildTimeline} from './model.mjs';
 import {FFMPEG, FFPROBE, YTDLP, run, ingest, download} from './media.mjs';
+import {setSourceReview, assertCleanSources} from './quality.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const PUBLIC = path.join(here,'public');
@@ -18,6 +19,15 @@ for (const d of [LOCAL,WORK,path.join(WORK,'tmp'),path.join(WORK,'exports')]) fs
 const dbFile = path.join(LOCAL,'library.json');
 let db = fs.existsSync(dbFile) ? JSON.parse(fs.readFileSync(dbFile,'utf8')) : {media:{},projects:{}};
 function persist() {fs.writeFileSync(dbFile+'.tmp',JSON.stringify(db,null,2));fs.renameSync(dbFile+'.tmp',dbFile);}
+// Retain the previous test files as archives, but exclude their marked images
+// and contaminated projects from the active workshop.
+for(const m of Object.values(db.media)){
+  if(/fandango|movieclips|mire de test/i.test(m.name)){
+    m.review=setSourceReview(m,{status:'rejected',notes:'Source écartée : logo ou texte incrusté. Ne pas masquer ni effacer le marquage ; remplacer la source.'});
+    for(const p of Object.values(db.projects))if(p.shots.some(s=>s.mediaId===m.id))p.archived=true;
+  }
+}
+persist();
 const jobs = new Map();
 function job(kind, task) {
   if ([...jobs.values()].some(j => j.kind === kind && j.state === 'running')) throw new Error('Une opération de ce type est déjà en cours.');
@@ -56,7 +66,18 @@ app.use((req,res,next)=>{
 });
 app.use(express.json({limit:'4mb'}));
 const upload = multer({dest:path.join(WORK,'tmp'),limits:{fileSize:20*1024*1024*1024,files:1}});
-app.get('/api/library',(req,res)=>res.json({profiles:PROFILES,media:db.media,projects:Object.values(db.projects).map(({id,title,profile,updatedAt})=>({id,title,profile,updatedAt}))}));
+app.get('/api/library',(req,res)=>res.json({profiles:PROFILES,media:db.media,projects:Object.values(db.projects).filter(p=>!p.archived).sort((a,b)=>(b.updatedAt || '').localeCompare(a.updatedAt || '')).map(({id,title,profile,updatedAt})=>({id,title,profile,updatedAt}))}));
+app.post('/api/media/:id/review',(req,res)=>{
+  const m=db.media[req.params.id];if(!m)throw new Error('Source introuvable.');
+  m.review=setSourceReview(m,req.body);persist();res.json(m);
+});
+app.post('/api/media/:id/contact-sheet',async(req,res)=>{
+  const m=db.media[req.params.id];if(!m)throw new Error('Source introuvable.');
+  const relative=`media/${m.id}/contact-sheet.jpg`;const target=path.join(PUBLIC,relative);
+  if(!fs.existsSync(target))await run(FFMPEG,['-hide_banner','-loglevel','error','-y','-i',path.join(PUBLIC,m.original),
+    '-vf',`fps=12/${m.duration},scale=480:-2,tile=4x3`,'-frames:v','1','-q:v','2',target]);
+  res.json({path:relative});
+});
 app.get('/api/health',async(req,res)=>{
   const checks = await Promise.all([FFMPEG,FFPROBE,YTDLP].map(async name=>{try {await run(name,[name===YTDLP?'--version':'-version'],()=>{},10000);return {name,ok:true};}catch{return {name,ok:false};}}));
   res.json({ok:true,application:'drylow-chess-studio',checks});
@@ -94,6 +115,7 @@ app.get('/api/jobs/:id',(req,res)=>{const j=jobs.get(req.params.id);if(!j)return
 app.post('/api/export/:id',(req,res)=>{
   const project=structuredClone(requireProject(req.params.id));validateProject(project,db.media);
   if(!project.shots.length) throw new Error('Ajouter au moins un extrait avant l’export.');
+  assertCleanSources(project,db.media);
   const j=job('render',async(j,line)=>{
     const stills=await freezes(project);const props=prepareProps(project,stills);
     // The export freezes both edits AND media; later edits cannot change this render.

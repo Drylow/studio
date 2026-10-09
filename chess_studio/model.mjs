@@ -17,7 +17,7 @@ export const PROFILES = {
 };
 export function newProject(profile = 'animation', title = 'Nouvelle analyse') {
   return {version: 1, profile, title, fps: 30, resolution: 1080, initialScore: 0,
-    iconSet: 'chesscom', sfx: true,
+    iconSet: 'chesscom', sfx: true,showPawn:false,
     players: [{name: 'Blancs', portrait: ''}, {name: 'Noirs', portrait: ''}], shots: []};
 }
 const fail = (message) => {throw new Error(message);};
@@ -29,6 +29,7 @@ export function validateProject(p, media = {}) {
   if (![1080, 2160].includes(p.resolution)) fail('Export : 1080p ou 4K.');
   if (!Number.isFinite(p.initialScore) || Math.abs(p.initialScore) > 10) fail('Score initial : de −10 à +10.');
   if (!['chesscom', 'notation'].includes(p.iconSet) || typeof p.sfx !== 'boolean') fail('Habillage invalide.');
+  if (p.showPawn!==undefined && typeof p.showPawn!=='boolean') fail('Option de pion invalide.');
   if (!Array.isArray(p.players) || p.players.length !== 2) fail('Deux personnages requis.');
   for (const player of p.players) {
     if (typeof player.name !== 'string' || !player.name.trim() || player.name.length > 36) fail('Nom de personnage requis, 36 caractères maximum.');
@@ -59,6 +60,9 @@ export function validateProject(p, media = {}) {
       if (typeof move.title !== 'string' || move.title.length > 60 || !move.title.trim()) fail('Nom du coup requis, 60 caractères maximum.');
       if (typeof move.comment !== 'string' || move.comment.length > 240 || !move.comment.trim()) fail('Analyse requise, 240 caractères maximum.');
       if (typeof move.quote !== 'string' || move.quote.length > 180) fail('Citation : 180 caractères maximum.');
+      for(const key of ['cardX','cardY','cardWidth','iconX','iconY'])if(move[key]!==undefined && (!Number.isFinite(move[key]) || move[key]<0 || move[key]>100))fail('Placement : de 0 à 100 %.');
+      if(move.cardWidth!==undefined && (move.cardWidth<20 || move.cardWidth>45))fail('Largeur de carte : de 20 à 45 %.');
+      for(const key of ['tags','betterMove'])if(move[key]!==undefined && (typeof move[key]!=='string' || move[key].length>120))fail('Indication : 120 caractères maximum.');
     }
   }
   return p;
