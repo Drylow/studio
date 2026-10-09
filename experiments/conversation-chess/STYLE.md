@@ -1,12 +1,42 @@
 # Direction visuelle — pion Tony
 
-## Retour après visionnage du test HD
+## Décision actuelle — premier long Tony/Richie
+
+L'utilisateur valide le **style de montage v3**, mais rejette la qualité des
+clips et l'agencement du tableau final. Tony/Janice reste un essai, jamais le
+premier long. Le sujet **Tony contre Richie autour de The Jacket** est choisi ;
+voir `PLAN_TONY_RICHIE.md`. Le titre et la miniature viennent après le montage.
+
+Pour **chaque vidéo**, le premier personnage qui parle dans le passage retenu
+joue les **blancs**, même si sa première réplique n'a pas de note. Vérifier le
+véritable début, renseigner `opening`, puis conserver les camps dans la vidéo.
+Le premier commentaire ne permet pas d'inférer le premier locuteur. Les signes
+du score et les proportions de la barre suivent ces camps. Sur l'essai Janice,
+Tony commence : Tony blanc, Janice noire.
+
+Seulement **neuf catégories actives** : Brilliant, Great, Best, Excellent,
+Good, Book, Blunder, Mistake, Inaccuracy. **Miss retiré à la demande de
+l'utilisateur**, Interesting violet exclu. Les fichiers d'archives restent
+historiques ; ne pas réactiver ces catégories à partir d'une vieille timeline.
+
+Le fichier1280×720 utilisé jusqu'ici est très compressé (~0,687Mb/s vidéo).
+La sortie1920×1080 ne restitue pas les détails absents. Les nouvelles sources
+doivent mesurer au moins1080p et être acceptées après examen visuel du fichier,
+pas seulement d'une liste de formats. Une source non acceptée bloque l'export.
+
+Le tableau final de Tuco n'a **pas été visionné** : les extraits et le storyboard
+final sont inaccessibles actuellement. Ne pas annoncer une reproduction fidèle
+de ce tableau ni reconduire le GAME REVIEW rejeté. Une capture de sa fin est
+nécessaire pour confirmer disposition, ordre et portraits ; v4 marque cette
+outro `outro_layout_reviewed:false` et n'est pas exportée.
+
+## Montage v3 conservé
 
 Le testHD est jugé bien meilleur. Prochain aperçu avant validation du format
 long10–15min : intro **Sneaky Snitch** (passage66,104s), outro **Scheming Weasel
 (faster version)** et bilan du nombre de coups par catégorie et par camp.
 Les musiques viennent des originauxIncompetech sousCCBY4.0 avec crédits.
-Conserver seulement les dix catégoriesChess.com : pas d'Interesting violet.
+Conserver les neuf catégories ci-dessus : ni Miss ni Interesting violet.
 
 Sur la barre, même silhouette de pion en haut et en bas, uniquement recolorée
 en noir et en blanc. La mascotteTony approuvée reste intacte. À l'entrée des
@@ -62,7 +92,7 @@ constitue pas une vidéo prête à publier.
 Le premier pilote réel a été regardé puis rejeté : trop peu de bruitages,
 barre à droite trop large, icônes approximatives et source 360p. Pour tous
 les prochains montages : **barre fine à gauche**, noir en haut, blanc en bas,
-avec score lisible ; **vrais SVG Chess.com** inchangés pour les dix grades
+avec score lisible ; **vrais SVG Chess.com** inchangés pour les neuf grades actifs
 disponibles ; touches de clavier enregistrées pendant la frappe du texte,
 clic au changement de note et accent bref Brilliant/Blunder. Pas de voix off.
 Le son des dialogues reprend au même repère après chaque analyse.
@@ -75,8 +105,9 @@ réel à ces applications sur son PC.
 Cette correction prime sur le placement à droite observé chez la référence.
 Interesting reste une catégorie observée chez celle-ci, mais aucun SVG
 officiel correspondant n’est établi : ne pas inventer une onzième icône.
-Les nouveaux médias doivent mesurer au moins720p réels ; agrandir360p
-à1080p ne satisfait pas cette exigence. Une dérogation explicite et visible
+Les nouveaux médias doivent mesurer au moins1080p réels et être contrôlés
+visuellement ; agrandir une petite source ne satisfait pas cette exigence.
+Une dérogation explicite et visible
 permet seulement les essais techniques de basse résolution.
 
 Le second test utilise un extrait1280×720 obtenu en demandant la qualité

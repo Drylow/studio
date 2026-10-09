@@ -35,6 +35,7 @@ await fs.mkdir(output, { recursive: true });
 const refreshIntro = args.includes('--refresh-intro');
 const refreshProjectIntro = args.includes('--refresh-project-intro');
 const prepareProject = args.includes('--prepare-project') || refreshProjectIntro;
+const validateOnly = args.includes('--validate-only');
 if (prepareProject && refreshIntro) throw new Error('--prepare-project and --refresh-intro cannot be combined.');
 const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
@@ -43,7 +44,7 @@ const outroSeconds = spec.outro_seconds ?? 0;
 if (!Number.isFinite(outroSeconds) || (outroSeconds !== 0 && (outroSeconds < 6 || outroSeconds > 20))) throw new Error('outro_seconds must be 0 or 6–20 seconds.');
 if (!Number.isInteger(outroSeconds * 30)) throw new Error('outro_seconds must align to a 30fps frame.');
 if (spec.outro_subtitle != null && (typeof spec.outro_subtitle !== 'string' || spec.outro_subtitle.length > 70)) throw new Error('Supply a short outro_subtitle.');
-if ((outroSeconds || spec.music) && !prepareProject) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
+if ((outroSeconds || spec.music) && !prepareProject && !validateOnly) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
 if ((outroSeconds || spec.music) && refreshProjectIntro) throw new Error('Build a complete project when adding music or a recap.');
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
 const meta = JSON.parse(run('/usr/bin/ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', source], true));
@@ -51,8 +52,17 @@ const sourceDuration = Number(meta.format.duration);
 const hasAudio = meta.streams.some(s => s.codec_type === 'audio');
 const video = meta.streams.find(s => s.codec_type === 'video');
 if (!video || !Number.isFinite(sourceDuration)) throw new Error('Source has no usable video/duration.');
-const lowResPreview = video.height < 720;
-if (lowResPreview && !args.includes('--allow-low-res-preview')) throw new Error(`Native source is ${video.width}×${video.height}; minimum 720p required. Use --allow-low-res-preview only for an explicitly marked draft, never as an HD delivery.`);
+const archiveSource = args.includes('--allow-legacy-opening');
+const minimumSourceHeight = spec.source_quality?.quality_target ?? (spec.demo === true || archiveSource ? 720 : 1080);
+if (![720, 1080, 1440, 2160].includes(minimumSourceHeight)) throw new Error('Source quality target must be 720, 1080, 1440 or 2160.');
+if (spec.demo !== true && !archiveSource && minimumSourceHeight < 1080) throw new Error('New real videos require at least a 1080p source target.');
+const sourceQualityReviewed = spec.source_quality?.accepted_for_final === true;
+const lowResPreview = video.height < minimumSourceHeight || spec.source_quality?.accepted_for_final === false
+  || (spec.demo !== true && !archiveSource && !sourceQualityReviewed);
+if (lowResPreview && !args.includes('--allow-low-res-preview') && !validateOnly) throw new Error(`Source quality is not accepted: ${video.width}×${video.height}, target at least ${minimumSourceHeight}p. Replace and visually review the original source, then set source_quality.accepted_for_final=true. --allow-low-res-preview is only for a clearly marked technical draft.`);
+const outroLayoutReviewed = outroSeconds === 0 || spec.outro_layout_reviewed === true
+  || (spec.outro_layout_reviewed == null && (spec.demo === true || archiveSource));
+if (!outroLayoutReviewed && !validateOnly) throw new Error('This outro layout was rejected or has not been reviewed. Check the actual reference end card and update the layout before export.');
 if (spec.schema !== 'conversation-chess-clip-v1') throw new Error('Unknown timeline schema.');
 if (spec.intro_seconds !== ratingSchema.intro_seconds) throw new Error(`The complete legend intro is ${ratingSchema.intro_seconds} seconds.`);
 const start = Number(spec.source_in), end = Number(spec.source_out);
@@ -64,8 +74,22 @@ if (!hasAudio && !demo) throw new Error('Real dialogue footage must contain its 
 if (!demo && spec.source_reviewed !== true) throw new Error('Real footage requires source_reviewed=true after review.');
 const ratings = new Set(ratingSchema.categories.map(v => v.id));
 const controls = new Set(['balanced', 'black', 'white', 'tony', 'ralph']);
-const sides = { black: spec.black_label || 'Tony', white: spec.white_label || 'Other speaker' };
+const sides = { black: spec.black_label || 'Other speaker', white: spec.white_label || 'Tony' };
 if (Object.values(sides).some(v => typeof v !== 'string' || !v.trim() || v.length > 32)) throw new Error('Supply short black_label/white_label names.');
+// The opening dialogue may be ungraded: do not infer the opener from the first annotation.
+// Old review files can be reproduced only with an explicit archive override; invalid
+// opening evidence cannot use that override to evade the White-first rule.
+const opening = spec.opening ?? null;
+let legacyOpeningOverride = false;
+if (opening) {
+  if (typeof opening !== 'object' || Array.isArray(opening) || opening.reviewed !== true) throw new Error('opening requires reviewed=true after checking the first dialogue in the selected source.');
+  if (opening.speaker !== 'white') throw new Error('White must open the conversation: assign the first speaker to White.');
+  if (opening.label !== sides.white) throw new Error('The reviewed opening.label must match white_label.');
+} else if (!demo) {
+  if (!args.includes('--allow-legacy-opening')) throw new Error('Real footage requires opening:{speaker:"white",label:<white_label>,reviewed:true}. Review the opening dialogue, including ungraded lines. --allow-legacy-opening is only for reproducing an archived timeline.');
+  legacyOpeningOverride = true;
+  console.warn('ARCHIVE ONLY: opening dialogue has no reviewed White-first evidence.');
+}
 const isControl = c => (typeof c === 'number' && Number.isFinite(c) && c >= 0 && c <= 1) || controls.has(c);
 const scoreValue = value => (typeof value === 'string' && /^[-+]?\d{1,2}(?:\.\d)?$/.test(value)) ? Number(value) : NaN;
 const initialScoreText = spec.initial_score_text ?? (demo ? '0.0' : null);
@@ -111,6 +135,15 @@ const recapCounts = Object.fromEntries(ratingSchema.categories.map(v => [v.id, {
 for (const a of annotations) if (a.speaker) recapCounts[a.rating][a.speaker]++;
 const sourceHash = createHash('sha256').update(await fs.readFile(source)).digest('hex');
 if (spec.source_sha256 && sourceHash !== spec.source_sha256) throw new Error('Timeline source_sha256 does not match the supplied media.');
+if (validateOnly) {
+  console.log(JSON.stringify({ valid: true, demo, source_sha256: sourceHash,
+    source_dimensions: [video.width, video.height], opening, legacy_opening_override: legacyOpeningOverride,
+    source_quality_accepted:!lowResPreview, minimum_source_height:minimumSourceHeight,
+    source_quality_reviewed:sourceQualityReviewed, outro_layout_reviewed:outroLayoutReviewed,
+    side_colors: sides, annotation_count: annotations.length, recap_counts: recapCounts,
+    rating_schema_version: ratingSchema.version, final_video_exported: false }));
+  process.exit(0);
+}
 if (refreshProjectIntro) {
   const existing = JSON.parse(await fs.readFile(path.join(output, 'project-manifest.json'), 'utf8'));
   const pastAnnotations = existing.segments.filter(v => v.kind === 'analysis');
@@ -292,11 +325,12 @@ if (prepareProject) {
   }
   const projectManifest = path.join(output, 'project-manifest.json');
   await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,
-    original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: 720, low_res_preview: lowResPreview },
+    original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: minimumSourceHeight, low_res_preview: lowResPreview, accepted_for_final:!lowResPreview, visually_reviewed:sourceQualityReviewed },
     timeline_file: timelinePath, timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'), rating_schema_version: ratingSchema.version,
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
     icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
-    side_colors: sides, initial_score_text: initialScoreText,
+    demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText,
+    outro_layout_reviewed:outroLayoutReviewed,
     final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
   console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
   process.exit(0);
@@ -390,9 +424,9 @@ await fs.writeFile(path.join(output, 'render-report.json'), JSON.stringify({ sch
   reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs',
   bar: ratingSchema.bar, initial_score_text: initialScoreText, conversation_score_editorial: true, icon_set: ratingSchema.icon_set,
   graphics_fps: graphicsFps,
-  source_quality: { native_hd: !lowResPreview, minimum_height: 720, low_res_preview: lowResPreview },
+  source_quality: { native_hd: video.height >= 720, minimum_height: minimumSourceHeight, low_res_preview: lowResPreview, accepted_for_final:!lowResPreview, visually_reviewed:sourceQualityReviewed },
   sfx_manifest: sfxManifestPath, sfx_added_during_analysis_only: true,
-  side_colors: sides, analysis_background: analysisBackground, transparent_mascot_in_guide: true,
+  side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, analysis_background: analysisBackground, transparent_mascot_in_guide: true,
   timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'),
   review_evidence: spec.review_evidence || null,
   original_audio_present: hasAudio, voiceover: false, source_sha256: sourceHash,

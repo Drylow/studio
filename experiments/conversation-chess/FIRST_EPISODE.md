@@ -1,128 +1,111 @@
-# Two-minute pilot: Tony ruins family dinner
+# Tony–Janice editing test — not the first long episode
 
-**The Sopranos — S5E10, Cold Cuts.** Tony brings up Janice's son Harpo at the
-dinner table, provokes her angry reaction, then claims he is only asking as an
-uncle. English dialogue and original written analysis; **no voice-over**.
-Primary reference: [ConversationAnalysisGuy](https://www.youtube.com/@ConversationAnalysisGuy).
+**The Sopranos — S5E10, Cold Cuts.** Tony provokes Janice about her son Harpo
+at the dinner table. This short scene is an **editing test only**. The user's
+new decision is **Tony versus Richie around The Jacket** for the first roughly
+15-minute upload; do not extend this pilot into that episode. See
+[PLAN_TONY_RICHIE.md](PLAN_TONY_RICHIE.md) for its scene plan and
+[FIRST_LONG_OPTIONS.md](FIRST_LONG_OPTIONS.md) for the researched alternatives.
 
-The photographic Tony head on the short black pawn is approved. Preserve it.
-The user wants a roughly two-minute test before extending this format.
+The dialogue and written analysis are in English, with **no voice-over**.
+Reference: [ConversationAnalysisGuy](https://www.youtube.com/@ConversationAnalysisGuy).
+The photographic Tony head on the short black pawn remains approved.
 
-## Review after the HD pilot
+## Current user feedback
 
-The user finds the second test much better. The next preview uses
-`pilot-tony-janice-v3.json`: the same reviewed dialogue and five annotations,
-plus the exact credited intro music and a12-second move-count recap.
-Sneaky Snitch starts at66.104s in the original recording; the outro uses
-Scheming Weasel (faster version). Originals and attribution are in
-`assets/music/` underCCBY4.0. Music has its own nativeKdenlive track and
-does not play under dialogue.
+The user approves the **v3 montage style**: intro music, analysis bubbles,
+typing and comic sound effects, matching bar-pawn silhouettes and the general
+editing rhythm. Preserve these elements for the next subject.
 
-Both bar pawns now share one vector silhouette. A redundant generic tick
-has been removed from accented rating onsets. Two explicitly timed original
-CC0 comic cues accompany the Book and Blunder bubbles; the reference9:12
-shows a fire/explosion overlay, whose recording is not copied.
-The end card displays ten official categories and counts only the actual
-annotations:Tony3, Janice2. Interesting/purple is explicitly excluded.
+The **footage quality is rejected**: the current source is visibly too
+compressed. The **v3 ending table is also rejected**. Its layout must be
+reconsidered against the end of the reference's Tuco business video. No
+claim is made that the replacement table has been reproduced, rendered or
+approved.
 
-The10–15-minute version waits for the user's approval of the intro/outro/SFX.
-The previous second-test delivery status below describes that earlier revision.
+Keep the active nine categories from `ratings.json`: Brilliant, Great, Best,
+Excellent, Good, Book, Blunder, Mistake and Inaccuracy. **Miss and Interesting
+are excluded from our format.** Historical assets and old timelines remain
+archives; they do not override this selection.
 
-Third-review native export completed:137.514s,1080p30/4125frames,
-six editable tracks and40media files. Full A/V decoding passed;22rendered
-screenshots were inspected, including both guide pages, typing, completed
-comments, recap and fades. Delivered for private review onGoFile with exact
-size/MD5 verification. Latest link and state are in `production/REPRISE.md`.
+## Prepared v4 correction — not rendered or delivered
 
-## Current revision
+`pilot-tony-janice-v4.json` preserves the five reviewed comments, source
+anchors, analysis durations, music and sound-effect timings. **Tony is White;
+Janice is Black**, because Tony opens the selected conversation. The opening
+is explicitly reviewed separately from the first annotated line. All future
+real timelines must likewise assign the first speaker to White, including
+when their opening line is ungraded.
 
-The first real pilot was rejected after viewing: missing sound effects,
-a wide bar on the right, approximate rating icons and a360p source.
-The next test must use a **thin left evaluation bar**, actual Chess.com SVGs,
-synchronized typing sound, brief move/rating accents and realHD footage.
-After discussing the editing tools, the user also requires a real video editor.
-Kdenlive 24.12.3 is installed in this cloud; the deliverable must include an
-editable native project and its editor render. No access to the user's PC
-or desktop CapCut/Premiere is established.
+The five speakers, White-positive scores and bar fractions are corrected
+consistently. Each previous score changes sign and each previous numeric bar
+fraction becomes `1 - previous_fraction`; the opening stays balanced at 0.0.
+Best and Great leave the preceding score and bar position unchanged.
 
-The ten official SVGs are byte-identical copies of the existing verified
-`chess_studio/public/chesscom` assets. Miss is the official yellow minus;
-Interesting is observed in the reference but has no established official asset.
-The commentary text is original, and the numeric conversation score is an
-editorial interpretation, **not a chess-engine calculation**.
+| Local anchor | Original upload | Rating | Speaker | White-positive score |
+|---|---|---|---|---:|
+| 2.55 s | 101.95 s | Book | Tony — White | +0.3 |
+| 39.55 s | 138.95 s | Great | Janice — Black | +0.3 |
+| 50.20 s | 149.60 s | Brilliant | Tony — White | +1.8 |
+| 66.20 s | 165.60 s | Blunder | Janice — Black | +4.8 |
+| 71.55 s | 170.95 s | Best | Tony — White | +4.8 |
 
-## Actual HD source and timing
+These numbers describe humorous conversational control, not a chess-engine
+calculation or a moral judgement. Timeline validation passes for the color,
+score and bar corrections. **No v4 video has been rendered, checked or
+uploaded**; no finished-render approval from v2/v3 carries into v4.
 
-A normal documented Algrow download request for
-[`biugRUTkh1c`](https://www.youtube.com/watch?v=biugRUTkh1c), range99.4–173.9 s,
-maximum quality1080p, returned **1280×720**, 30frames/s with original stereo
-audio; duration74.533 s. The provider does not list available formats. This
-establishes an actual720p source, not native 1080p footage or the maximum quality
-of every other upload. Final1080p graphics preserve SVG/text detail.
+## Source quality required before the next delivery
 
-The media remains private outside Git. `pilot-tony-janice.json` binds its SHA256
-and selects local0–74.5 s, trimming the last33ms of padding. Intro16 s plus74.5 s
-of footage and five7 s inserts gives a125.5 s timeline. The outdoor walk and later
-song are outside this cut; no complete human audio audit is claimed.
+The known pilot file is **1280×720**, approximately 74.533 seconds, with
+original stereo dialogue. It came from the reviewed 99.4–173.9-second range
+of [`biugRUTkh1c`](https://www.youtube.com/watch?v=biugRUTkh1c). A documented
+1080p download request returned 720p; that request does not establish a
+native 1080p source. Neither a 1080p export nor upscaling improves the missing
+source detail.
 
-The source-relative anchors were reviewed again on the actual HD file:
-local ASR, targeted short sections and15selected frames. Waveform correlation
-against the previous reviewed source is1.000000 at zero sample lag at each
-anchor (8kHz comparison), confirming the99.4 s offset. Do not apply these times
-to a different source without review.
+The v4 file retains this known source hash and marks its quality
+`accepted_for_final: false`. Before another delivery, obtain a genuinely
+high-quality **original 1920×1080 or better** and inspect its faces, movement,
+compression and framing visually. Resolution metadata alone is insufficient.
+Review the new file's hash, opening dialogue and exact annotation timestamps;
+do not copy the old offsets to a replacement without alignment checks.
 
-| Local anchor | Original upload | Rating | Conversation score, White-positive |
-|---|---|---|---:|
-|2.55s|101.95s|Book — Tony|−0.3|
-|39.55s|138.95s|Great — Janice|−0.3|
-|50.20s|149.60s|Brilliant — Tony|−1.8|
-|66.20s|165.60s|Blunder — Janice|−4.8|
-|71.55s|170.95s|Best — Tony|−4.8|
+For the new long subject, review the full chosen source and write fresh
+annotations. Pilot source anchors and counts are not its analysis plan.
 
-Tony is Black; Janice is White. The score starts at 0.0 and controls the actual
-bar proportions consistently. Best/Great leave it unchanged. This is humorous
-conversation control, not a moral rating or a claim of objective measurement.
+## Approved montage elements to preserve
 
-## Montage and sound
+Use a thin evaluation bar on the left, the nine selected Chess.com SVG
+categories, the approved Tony mascot and original written explanations.
+Recorded keyboard clacks follow the revealed characters and stop during the
+reading pause. Avoid the redundant generic click that v3 removed. Brief
+licensed comic accents supplement the rating sounds without masking dialogue.
 
-Intro: symbols guide, bar explanation and fade over our own darkened source.
-During an evaluation, the grade appears at upper left and the approved pawn at
-lower left beside a white speech bubble. Text appears at50characters/s.
-The preceding2–4 s replay slowly, blurred and without dialogue. Original
-dialogue progression resumes at the saved source timestamp afterward.
+The intro uses credited **Sneaky Snitch**; the tested outro uses credited
+**Scheming Weasel (faster version)**. Their source files and attribution are
+in `assets/music/` under CC BY 4.0. Added effects have provenance and hashes
+in `assets/sfx/`. Music remains outside the dialogue sections. These assets
+and the editing style are retained; the end-table layout is awaiting revision.
 
-Recorded keyboard clacks follow revealed non-space characters and stop when
-typing ends. A brief click accompanies each evaluation; Brilliant/Blunder get
-one short accent. Normal dialogue sections retain original audio. Added sounds
-are CC0 with source pages, processing notes and hashes in `assets/sfx`.
-No soundtrack or voice-over is added. Official Chess.com sounds were not
-obtained; do not describe these original licensed UI cues as their audio.
+Kdenlive performs the native montage and final export, with separate source,
+replay, graphics, dialogue, sound effects and music tracks. The animations
+are generated alpha assets, not native editable text titles. The independent
+live sports and TikTok automations remain untouched.
 
-Kdenlive should contain separate source, replay, graphics and audio tracks,
-so these timings and sound levels remain editable. Preparation of transparent
-graphics and WAVs can use scripts; the native project performs the montage
-and final export. The independent live sports/TikTok tools remain untouched.
+## Historical private tests
 
-## Delivery status
+- **v2:** 125.504 seconds, exported at **1920×1080 / 30 fps**, from the actual
+  **1280×720 source**. Editable Kdenlive project with five tracks and 36 media
+  files; full A/V decoding and 15 selected rendered images checked.
+  `output/conversation-chess/tony-janice-pilot-v2-hd.mp4`.
+- **v3:** 137.514 seconds, exported at **1920×1080 / 30 fps**, from the same
+  **1280×720 source**. Six tracks and 40 media files; full A/V decoding and
+  22 selected rendered images checked. Added the credited music, comic cues
+  and the subsequently rejected 12-second end table.
+  `output/conversation-chess/tony-janice-pilot-v3-intro-outro.mp4`.
 
-**Corrected Kdenlive export rendered and inspected:125.504s**,1920×1080,
-30fps/3765 frames,H264CRF17/AAC192k. The actual native GUI opened the project:
-five tracks, 36media, no missing-resource dialog and correct alpha. A separate
-GUI SaveAs roundtrip preserves all 35 actual clip ranges and five tracks; Kdenlive
-normalizes wrapper/padding metadata without changing the reviewed clip timeline.
-
-Fifteen final rendered images were examined, including both guide pages, all
-five complete bubbles, progressive typing, clear dialogue and the ending.
-Full A/V decoding passed. Actual exported PCM confirms rating/typing cues,
-silent reading tails, original dialogue between analyses and no clipping.
-These checks do not constitute human audio listening.
-
-Private output: `output/conversation-chess/tony-janice-pilot-v2-hd.mp4`, plus
-`output/conversation-chess/tony-janice-kdenlive/project.kdenlive` and its media.
-After moving the full bundle, `export-kdenlive.py --bundle /new/path --relocate`
-updates its media root. The relocated private bundle was checked for all 36 files.
-Clips, pauses and sound levels remain editable in Kdenlive. Animated wording
-is a separate alpha asset, regenerated from JSON, not a native editable title.
-
-Keep the older rejected file separate. No upload, scheduling, source-rights
-clearance or copyright outcome is established.
+Both tests were delivered on GoFile for private review with size and MD5
+verification. Their technical checks do not constitute human audio listening
+or clearance for public reuse of the footage. Neither is the first long
+YouTube upload. Keep their results as history, not as v4 delivery evidence.

@@ -77,8 +77,31 @@ def generate(manifest_path, bundle):
     original = Path(data["original_source"]).resolve(strict=True)
     source_probe = probe(original)
     video = next(s for s in source_probe["streams"] if s["codec_type"] == "video")
-    if int(video["height"]) < 720:
-        raise ValueError("A genuine source of at least 720p is required")
+    quality = data.get("source_quality", {})
+    minimum_height = int(quality.get("minimum_height", 720))
+    if minimum_height not in (720, 1080, 1440, 2160):
+        raise ValueError("Unknown source quality target")
+    quality_preview = quality.get("low_res_preview") is True
+    new_real = (int(data.get("rating_schema_version", 0)) >= 4
+                and data.get("demo") is not True
+                and data.get("legacy_opening_override") is not True)
+    if new_real and minimum_height < 1080:
+        raise ValueError("New real videos require at least a 1080p source target")
+    if new_real and quality.get("visually_reviewed") is not True and not quality_preview:
+        raise ValueError("New source quality must be visually reviewed before a final export")
+    if (int(video["height"]) < minimum_height or quality.get("accepted_for_final") is False) and not quality_preview:
+        raise ValueError("Original source does not satisfy the reviewed quality target; no final export")
+    if int(video["height"]) < 360:
+        raise ValueError("No usable original source for even a marked technical preview")
+    opening = data.get("opening")
+    if int(data.get("rating_schema_version", 0)) >= 4 and data.get("demo") is not True:
+        if not opening and data.get("legacy_opening_override") is not True:
+            raise ValueError("New real footage requires a reviewed White-first opening")
+    if opening and (opening.get("speaker") != "white" or opening.get("reviewed") is not True
+                    or opening.get("label") != data.get("side_colors", {}).get("white")):
+        raise ValueError("The reviewed first speaker must play White")
+    if any(segment["kind"] == "outro" for segment in segments) and data.get("outro_layout_reviewed") is False:
+        raise ValueError("The outro layout must be reviewed before a native export")
     source_hash = digest(original)
     if source_hash != data["source_sha256"]:
         raise ValueError("Source SHA256 differs from the reviewed manifest")
@@ -295,6 +318,7 @@ def generate(manifest_path, bundle):
             for key, index in track_index.items()
         },
         "source_dimensions": [video["width"], video["height"]], "proxies_enabled": False,
+        "source_quality": quality, "opening": opening,
         "source_segments": sum(s["kind"] == "source" for s in segments),
         "analysis_segments": sum(s["kind"] == "analysis" for s in segments), "assets": assets,
         "outro_segments": sum(s["kind"] == "outro" for s in segments),

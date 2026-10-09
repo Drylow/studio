@@ -12,6 +12,14 @@ avec **Tony Soprano** comme personnage central et une mascotte pion à sa tête.
 
 ## Instructions de l'utilisateur
 
+- Décision après visionnage v3 : **Tony contre Richie / The Jacket** sera le
+  premier long, pas Tony/Janice. Le montage est validé dans son style, mais la
+  qualité des clips et le tableau final doivent changer. Titre/miniature après.
+- **Premier personnage qui parle = blanc**, dans toutes nos vidéos. Attribuer
+  les camps à partir du vrai début, pas de la première annotation.
+- **Miss retiré** du jeu de notes actif à sa demande ; neuf grades conservés,
+  aucun Interesting violet. Cela ne réécrit pas les observations historiques
+  des catégories effectivement présentes chez la référence.
 - Dialogues et annotations **en anglais**.
 - **Aucune voix off ajoutée** : conserver les dialogues des personnages.
 - La mascotte Tony explique par des panneaux écrits, expressions et mouvements.
@@ -31,6 +39,22 @@ Le prototype original et ses limites sont documentés séparément dans
 Ne pas confondre une démonstration d'habillage avec un montage de vrais extraits.
 
 ## Ce qui a réellement été examiné
+
+### Limite actuelle : le vrai tableau final et les nouvelles sources HD
+
+La fin de `InM2zft-iQs` n'a pas pu être visionnée. Durée recoupée970–971s.
+Le lecteur public normal indique playabilityOK, jusqu'à1080p30, mais aucun
+frame ne décode : CDN et URL exacte du storyboard final refusésCONNECT403,
+confirmés par requests puiscurl avec proxy/TLS hérités. Deux requêtes Algrow
+distinctes échouent avec « YouTube proxy authentication failed » ; aucune
+reproduction fidèle de cette fin n'est établie. Le GAME REVIEW du pilote est
+une proposition désormais rejetée, pas une observation de la référence.
+
+The Jacket sur la chaîne officielle HBO (`UHvUDYKrFmw`,217s) est la source
+prioritaire du nouveau sujet. Le lecteur annonce1080p30 ; une seule demande
+normale1080p10–20s échoue côté fournisseur. Ces métadonnées ne prouvent pas la
+qualité d'un fichier acquis. Le test Janice mesure1280×720 mais seulement
+~0,687Mb/s vidéo : remplacer l'original, pas simplement l'agrandir.
 
 ### Musiques et accents — recherche après le retour sur le piloteHD
 

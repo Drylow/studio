@@ -49,7 +49,7 @@ window.ConversationChess = (() => {
     for (const v of schema.categories) {
       const x = 36 + v.column * 960, y = 189 + v.row * 141;
       ratingIcon(v, x + 75, y, 76);
-      text(v.label + (['miss','inaccuracy','interesting'].includes(v.id) ? '' : ' Move'), x + 114, y + 111,
+      text(v.label + (v.id === 'inaccuracy' ? '' : ' Move'), x + 114, y + 111,
         30, v.color, 700, 'center', 'monospace');
       lines(v.definition, x + 300, y + 36, 33, v.color, 40, 'monospace');
     }
@@ -102,7 +102,7 @@ window.ConversationChess = (() => {
   }
   function outro(options) {
     const elapsed = options.t || 0, duration = options.duration || 12;
-    const counts = options.counts || {}, sides = options.sides || {black:'Tony', white:'Janice'};
+    const counts = options.counts || {}, sides = options.sides || {black:'Janice', white:'Tony'};
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = '#262421'; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = '#302e2b'; ctx.beginPath(); ctx.roundRect(646, 210, 1122, 790, 24); ctx.fill();
@@ -118,7 +118,7 @@ window.ConversationChess = (() => {
     pawn(1460, 222, 44); pawn(1655, 222, 44, true);
     text(sides.black, 1460, 302, 30, '#f7f7f7', 700, 'center');
     text(sides.white, 1655, 302, 30, '#f7f7f7', 700, 'center');
-    const order = ['brilliant','great','best','excellent','good','book','inaccuracy','mistake','miss','blunder'];
+    const order = ['brilliant','great','best','excellent','good','book','inaccuracy','mistake','blunder'];
     for (const [i, id] of order.entries()) {
       const v = ratings[id], y = 329 + i * 53;
       if (!v) throw new Error(`Unknown official recap category: ${id}`);
@@ -158,7 +158,7 @@ window.ConversationChess = (() => {
       ctx.save(); ctx.translate(376 + jolt, 196); ctx.scale(pop, pop); ctx.translate(-376, -196);
       ratingIcon(v, 278, 98, 196);
       ctx.restore();
-      const title = v.label + (['miss','inaccuracy','interesting'].includes(v.id) ? '' : ' Move');
+      const title = v.label + (v.id === 'inaccuracy' ? '' : ' Move');
       text(title, 376, 397, 72, v.color, 700, 'center');
       if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
       if (options.reveal_seconds == null || options.reveal_seconds >= schema.bubble_delay_seconds) {
@@ -188,11 +188,11 @@ window.ConversationChess = (() => {
     }
     if (options.showSides) {
       ctx.fillStyle = 'rgba(0,0,0,.72)'; ctx.fillRect(48, 46, 1110, 70);
-      const sides = options.sides || { black: 'Tony', white: 'Other speaker' };
-      text(`${sides.black} is Black · ${sides.white} is White`, 72, 96, 40, '#ffffff', 700);
+      const sides = options.sides || { black: 'Other speaker', white: 'Tony' };
+      text(`${sides.white} is White · ${sides.black} is Black`, 72, 96, 40, '#ffffff', 700);
     }
     if (options.demo) text('Demo · synthetic source', 48, 1068, 28, '#ffffff', 700);
-    if (options.low_res_preview) text(`LOW-RES PREVIEW · ${options.source_height}p source`, 1798, 44, 28, '#ffda7c', 700, 'right');
+    if (options.low_res_preview) text(`SOURCE QUALITY PREVIEW · ${options.source_height}p source`, 1798, 44, 28, '#ffda7c', 700, 'right');
     ctx.restore();
   }
   async function load(src) {

@@ -165,7 +165,7 @@ export async function renderAnalysisAudio({ manifest, annotation, schema, output
     mix.push(`[${name}]`);
   }
   const accent = annotation.rating === 'brilliant' ? 'brilliant' : annotation.rating === 'blunder' ? 'blunder'
-    : ['mistake', 'inaccuracy', 'miss', 'missed_win'].includes(annotation.rating) ? 'error' : null;
+    : ['mistake', 'inaccuracy'].includes(annotation.rating) ? 'error' : null;
   const ratingCue = accent || 'move';
   effect(ratingCue, 0, Math.min(samples, Math.round(Math.min(accent ? .8 : .35, manifest[ratingCue].duration) * sampleRate)));
   comedyEvents.forEach((event, i) => effect(`comedy${i}`, event.start, event.length, false, event.asset, event.gain));

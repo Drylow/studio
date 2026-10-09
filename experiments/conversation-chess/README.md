@@ -1,5 +1,35 @@
 # Conversation review — montage local
 
+## État actuel et premier long
+
+**Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
+Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
+Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
+Son style v3 est validé ; la qualité des clips et le tableau final sont rejetés.
+`pilot-tony-janice-v4.json` corrige les camps et prépare les règles, **sans export**.
+Les originauxHD et la disposition réelle du tableau final Tuco restent à obtenir.
+
+**Premier personnage qui parle = blanc**, pour toutes les vidéos. La première
+réplique peut être sans annotation. Renseigner `opening:{speaker:"white",
+label:<white_label>,reviewed:true}` après examen du vrai début. Les camps restent
+fixes, score positif blanc / négatif noir. Ne pas déduire les blancs de la
+première note ni imposer Tony blanc si l'autre personnage ouvre réellement.
+
+La validation des repères ne lance pas de rendu et indique séparément les
+prérequis manquants :
+
+```bash
+node experiments/conversation-chess/render-clip.mjs --validate-only \
+  --source /chemin/source.mp4 \
+  --timeline experiments/conversation-chess/pilot-tony-janice-v4.json
+```
+
+`valid:true` valide les repères/camps ; **source_quality_accepted:false** ou
+**outro_layout_reviewed:false** signifie que la livraison finale reste bloquée.
+Le moteur refuse l'export d'un original non accepté ou d'un tableau rejeté.
+`--allow-legacy-opening` est réservé aux anciennes archives et ne valide pas
+un nouveau premier locuteur. Ne pas l'utiliser pour une nouvelle vidéo.
+
 Le format a été préparé après visionnage réel de ConversationAnalysisGuy
 (`InM2zft-iQs`, guide 0–25 s et annotations 25–100 s). Les corrections de
 l’utilisateur priment : **barre fine à gauche, vrais glyphes Chess.com, source HD,
@@ -9,8 +39,9 @@ le site, les automatisations ou une plateforme de publication.
 ## Habillage et source
 
 `ratings.json` est le schéma commun du guide et des commentaires : Brilliant,
-Great, Best, Excellent, Good, Book, Blunder, Miss, Mistake et Inaccuracy.
-Les dix SVG de `assets/chesscom/` sont réutilisés **sans changer leurs tracés ni
+Great, Best, Excellent, Good, Book, Blunder, Mistake et Inaccuracy.
+Miss est retiré à la demande de l'utilisateur, Interesting violet exclu.
+Les neuf SVG actifs de `assets/chesscom/` sont réutilisés **sans changer leurs tracés ni
 leurs couleurs** ; leurs empreintes sont contrôlées au chargement. `sources.json`
 conserve leur provenance Chess.com. Ce sont des assets propriétaires : leur
 présence dans le dépôt ne constitue pas une licence ouverte. Interesting n’est
@@ -31,10 +62,12 @@ s’affiche du côté qui a l’avantage ; le passage de barre dure 0,5 s. Les v
 Best/Great laissent le score inchangé. La validation refuse un mouvement de score
 contradictoire avec la catégorie et le locuteur.
 
-La source réelle doit avoir une piste audio et une hauteur d’au moins 720 px.
-Une source 360p est refusée. `--allow-low-res-preview` permet seulement un brouillon
-explicitement marqué à l’écran ; un cadre1080p ne transforme pas une source basse
-résolution en vidéo HD.
+La nouvelle source réelle doit avoir son audio et mesurer au moins1080p, avec
+`source_quality.accepted_for_final:true` après examen visuel. Le fichier du test
+est1280×720 mais très compressé (~0,687Mb/s vidéo) ; il est refusé pour la suite.
+La résolution seule ne prouve pas le détail. `--allow-low-res-preview` permet
+seulement un brouillon technique marqué ; un cadre1080p ne restaure pas les détails
+d'une mauvaise source. Cette option ne permet pas de réutiliser l'outro rejetée.
 
 ## Commentaires et sons
 
@@ -60,13 +93,13 @@ notes et un accent bref Brilliant/Blunder/erreur. Les SFX sont sur une piste
 indépendante ; les dialogues gardent leur audio original et des fondus de 35 ms.
 Aucune voix off. La révision musicale du guide et du bilan est décrite ci-dessous.
 
-## Troisième aperçu : intro musicale et bilan
+## Historique v3 : intro musicale et bilan
 
 L'utilisateur trouve le second test bien meilleur et demande maintenant une intro
 musicale, un bilan des coups, deux pions de même forme et davantage de petits SFX.
 `pilot-tony-janice-v3.json` conserve les cinq repères et dialogues déjà relus ;
-il ajoute12s de bilan, soit137,5s au total. La vidéo longue de10–15min attend sa
-validation de cet aperçu.
+il ajoutait12s de bilan, soit137,5s au total. L'utilisateur a ensuite validé le
+style, refusé la qualité des clips/tableau final et choisi Tony/Richie pour le long.
 
 Les crédits du créateur identifient **Sneaky Snitch** pour l'intro et
 **Scheming Weasel (faster version)** pour l'outro. Les deux enregistrements viennent
@@ -89,7 +122,7 @@ de référence à9:12 montre une explosion ; son enregistrement n'est pas réuti
 assets locaux documentés. Ils finissent avant la lecture silencieuse.
 
 ```bash
-node experiments/conversation-chess/render-clip.mjs --prepare-project \
+node experiments/conversation-chess/render-clip.mjs --prepare-project --allow-legacy-opening \
   --source /chemin/source-hd.mp4 \
   --timeline experiments/conversation-chess/pilot-tony-janice-v3.json \
   --out /tmp/conversation-chess-v3-project
@@ -109,6 +142,11 @@ en possède six, avec indices et cibles calculés automatiquement.
 
 ## Préparer les pistes Kdenlive
 
+Les commandes historiques ci-dessous reproduisent une préparation technique,
+pas une version finale acceptée. Pour les nouveaux projets, partir de
+`timeline.empty.json`, vérifier le premier locuteur et remplacer les repères
+à partir du vrai fichierHD. Ne pas réutiliser les temps Janice sur une autre source.
+
 Dépendances présentes : Playwright dans `frontend/node_modules/`,
 `/usr/bin/chromium`, FFmpeg, Kdenlive et MLT. Le rendu navigateur est hors réseau.
 L’export natif exige un affichage X11 ou Wayland réel : `QT_QPA_PLATFORM=offscreen`
@@ -116,7 +154,7 @@ produit du noir dans les compositions alpha et n’est pas utilisé.
 Depuis la racine du dépôt :
 
 ```bash
-node experiments/conversation-chess/render-clip.mjs --prepare-project \
+node experiments/conversation-chess/render-clip.mjs --prepare-project --allow-legacy-opening \
   --source /chemin/source-hd.mp4 \
   --timeline experiments/conversation-chess/pilot-tony-janice.json \
   --out /tmp/conversation-chess-hd-project
@@ -157,7 +195,7 @@ mêmes arguments avec `--refresh-project-intro`. Le script contrôle source,
 repères, catégories et commentaires, régénère uniquement l’habillage d’intro et
 préserve les plans, replays et SFX.
 
-## Timeline revue et pilote
+## Timeline et historique du pilote v2
 
 `timeline.empty.json` est un modèle sans repères inventés. Chaque annotation
 réelle exige `source_at`, `hold_seconds`, `rating`, `comment`, `speaker`,
@@ -168,7 +206,7 @@ d’échecs. `replay_seconds` précise la fenêtre de contexte (2–4 s, défaut
 
 Le pilote Tony/Janice utilise une vraie source **1280×720 à 30 fps** de 74,533 s,
 recoupée visuellement et par ASR locale : aucune écoute humaine n’est prétendue.
-La timeline retient 0–74,5 s de cette source HD, puis cinq commentaires de 7 s
+La timeline historique v2 retient 0–74,5 s de cette source, puis cinq commentaires de 7 s
 (Book, Great, Brilliant, Blunder, Best), avec l’intro 16 s : **125,5 s /3765 frames**
 à préparer. Les scores sont 0.0,−0.3,−0.3,−1.8,−4.8,−4.8, Tony noir/Janice blanc.
 La demande de téléchargement maximal a fourni 720p ; l’export 1080p décrit la

@@ -1,6 +1,40 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Sopranos — troisième aperçu intro/outro/SFX, après retour sur le testHD
+## Sopranos — décision actuelle après visionnage v3
+
+- **Premier long choisi : Tony contre Richie, autour de The Jacket.** Tony/Janice
+  reste l'essai de montage. Titre/miniature plus tard ; priorité aux clips et
+  au montage. Découpage : `experiments/conversation-chess/PLAN_TONY_RICHIE.md`.
+- Le style v3 est apprécié et conservé : anglais, aucune voix off, pion Tony
+  approuvé, barre fine à gauche, frappe/SFX et musique. **Source et tableau final
+  rejetés** ; le lien v3 ci-dessous est un historique de revue, pas un v4 corrigé.
+- Pour toutes les vidéos, **premier véritable locuteur = blanc**. Ce n'est pas
+  forcément le premier locuteur annoté. `opening` vérifié obligatoire ; le
+  renderer et l'export natif contrôlent les camps. V4 Janice : Tony blanc,
+  Janice noire, scores+0,3/+0,3/+1,8/+4,8/+4,8 et proportions inversées.
+- **Neuf catégories actives**, Miss et Interesting exclus. Assets Chess.com
+  inchangés et vérifiés par hash. Les timelines v2/v3 gardent l'histoire.
+- La source du test1280×720 est comprimée à ~0,687Mb/s vidéo. V4 est non rendue,
+  qualité refusée. Nouveau minimum1080p et acceptation visuelle explicite ; les
+  essais techniques sont marqués et ne valent pas livraison définitive.
+- Source officielle HBO de The Jacket : `UHvUDYKrFmw`, durée217s. Le lecteur
+  public annonce1080p30 ; **aucun fichier vidéo ni frame1080p obtenu**. La seule
+  requête Algrow1080p10–20s échoue avec « YouTube proxy authentication failed ».
+  Les autres essais du tour échouent également ; pas de boucle ni contournement.
+  Naka requiert une connexion (401), aucune session fournie : pas de récupération.
+- **La vraie fin de Tuco n'a pas été regardée.** Le lecteur répond mais les
+  médias/storyboards exacts sont refusés par le proxy (CONNECT403 confirmé).
+  Le tableau existant reste rejeté ; `outro_layout_reviewed:false` bloque v4.
+  Besoins précis : fichierHD des scènes retenues + capture du tableau final Tuco.
+- Validation de cette révision : **15 contrôles de préflight**, dont refus
+  attendus du mauvais camp, de Miss, de la source refusée et de l'outro rejetée.
+  Le cas où le premier locuteur blanc n'est pas la première note passe.
+  Quatre images d'habillage examinées : neuf catégories, pions, noms des camps,
+  bulle et score blancs corrects. Ce sont des captures graphiques, pas un filmv4.
+- Tout reste isolé dans `experiments/conversation-chess` ; aucune publication,
+  modification du site ou intervention sur Cage/Pitch/TikTok.
+
+## Historique — troisième aperçu intro/outro/SFX
 
 - Le testHD a été jugé bien meilleur. L'utilisateur demande désormais la musique
   deConversationAnalysisGuy, une outro avec compte des coups, deux pions identiques

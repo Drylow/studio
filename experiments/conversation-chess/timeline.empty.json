@@ -3,13 +3,22 @@
   "demo": false,
   "source_reviewed": false,
   "source_sha256": "",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": false
+  },
   "source_in": null,
   "source_out": null,
   "intro_seconds": 16,
   "initial_control": 0.5,
   "annotations": [],
-  "black_label": "Tony",
-  "white_label": "Other speaker",
+  "black_label": "Second speaker",
+  "white_label": "First speaker",
+  "opening": {
+    "speaker": "white",
+    "label": "First speaker",
+    "reviewed": false
+  },
   "analysis_background": "replay",
   "initial_score_text": "0.0"
 }

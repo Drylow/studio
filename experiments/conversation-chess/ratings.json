@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "intro_seconds": 16,
   "symbols_seconds": 6,
   "fade_seconds": 1,
@@ -89,25 +89,13 @@
       "icon_sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
     },
     {
-      "id": "miss",
-      "label": "Miss",
-      "mark": "\u2014",
-      "color": "#dbac16",
-      "definition": "A chance to take control\ngoes completely unused.",
-      "column": 1,
-      "row": 1,
-      "bar_effect": "loss",
-      "icon_file": "assets/chesscom/miss.svg",
-      "icon_sha256": "a06fed5c943f70ee85551754a0f8799d26a1705134de1ea4593d86bc96d61239"
-    },
-    {
       "id": "mistake",
       "label": "Mistake",
       "mark": "?",
       "color": "#FFA459",
       "definition": "A costly reply that\nweakens the position.",
       "column": 1,
-      "row": 2,
+      "row": 1,
       "bar_effect": "loss",
       "icon_file": "assets/chesscom/mistake.svg",
       "icon_sha256": "9402e42b24b87c0adc03d2045f0abe780e161c2b2be839e0a17ee21b44b96925"
@@ -119,7 +107,7 @@
       "color": "#F7C631",
       "definition": "A questionable line that\ngives away a little ground.",
       "column": 1,
-      "row": 3,
+      "row": 2,
       "bar_effect": "loss",
       "icon_file": "assets/chesscom/inaccuracy.svg",
       "icon_sha256": "3b71d8e08ed15a03b513a76eb300ed4383ed1be3a4f4de4a1f9f906d85fde871"
