@@ -65,6 +65,12 @@ Le verrou partagé `work/discord.lock` évite les envois concurrents mélangés.
 
 ## Premier long livré
 
+**Nouvelle coupe livrée :** [GoFile de la version sans E8](https://gofile.io/d/b9gC1Nrk),
+9 min 27, neuf fichiers confirmés. Le message dédié `1558238933626921092`
+contient kit, crédits et miniature, avec le statut explicite de test YouTube.
+Ses nouveaux reçus sont dans `tony-richie-no-e8-native/publication/`.
+Le test YouTube reste à faire : [fiche courte](TONY_RICHIE_NO_E8_DELIVERY.md).
+
 **Archive réclamée après l'import utilisateur : HBO S02E08.** Une coupe plus
 courte sans cet épisode est demandée. Elle doit partir comme version à tester
 sur YouTube, avec ses propres contrôles et reçus ; ne pas réutiliser les reçus

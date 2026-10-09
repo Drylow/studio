@@ -2,9 +2,9 @@
 
 **Archive : l'utilisateur a reçu une réclamation HBO sur l'épisode 8 après
 l'import YouTube.** Il demande une version plus courte sans cet épisode.
-Le nouveau montage de 9 min 27 est en préparation et devra être testé sur
-YouTube ; les autres extraits HBO restent sans droits établis. Voir
-[la réclamation et la décision de coupe](COPYRIGHT_REVIEW.md).
+Le [nouveau montage de 9 min 27](TONY_RICHIE_NO_E8_DELIVERY.md) est exporté,
+vérifié et livré pour un test privé sur YouTube ; les autres extraits HBO
+restent sans droits établis. Voir [la décision de coupe](COPYRIGHT_REVIEW.md).
 
 **Scene Analysis Guy : film et kit vérifiés sur [GoFile](https://gofile.io/d/mdNDwQQ4).**
 L'envoi au salon Discord dédié est confirmé avec la miniature,

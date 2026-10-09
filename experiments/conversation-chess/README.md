@@ -9,11 +9,13 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
-**Correction en cours après une réclamation HBO S02E08.** L'utilisateur demande
-de retirer tout cet épisode et accepte une vidéo plus courte : 9 min 27,
-27 analyses conservées, nouveau bilan et miniature sans veste. Cette version
-devra être testée sur YouTube ; les épisodes 3 et 6 peuvent encore être réclamés.
-Voir [le rapport et les règles de livraison](COPYRIGHT_REVIEW.md).
+**Nouvelle version livrée après une réclamation HBO S02E08.** Tout cet épisode
+est retiré : 9 min 27, 27 analyses conservées, nouveau bilan et miniature sans
+veste. Export, audio et captures finales vérifiés ; neuf fichiers GoFile et
+envoi Discord dédié confirmés. Elle reste à tester en privé sur YouTube :
+les épisodes 3 et 6 peuvent encore être réclamés.
+Voir [la nouvelle livraison](TONY_RICHIE_NO_E8_DELIVERY.md) et
+[le rapport de réclamation](COPYRIGHT_REVIEW.md).
 Le long de 15 min 11 décrit ci-dessous devient une archive réclamée.
 
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.

@@ -6,9 +6,12 @@ The user reports a real HBO audiovisual claim on S02E08 and authorizes removing
 that entire episode, accepting a shorter film. The replacement retains only
 the E3/E6 prefix: 27 analyses, three chapter cards, 17,018 output frames
 (9:27.267). All E8 scenes, original audio and analysis replays are excluded;
-the recap and cover are rewritten without the jacket. Export checks and a new
-private YouTube upload test are pending. Remaining HBO rights are not cleared.
-See [the claim report](COPYRIGHT_REVIEW.md). The earlier long below is an archive.
+the recap and cover are rewritten without the jacket. Native export, complete
+decode, audio comparisons and157 static captures are verified. The new film
+and kit are delivered through GoFile and the dedicated Discord, explicitly
+for a private YouTube retest. That test and remaining HBO rights are not cleared.
+See [the short delivery](TONY_RICHIE_NO_E8_DELIVERY.md) and
+[the claim report](COPYRIGHT_REVIEW.md). The earlier long below is an archive.
 
 ## Current actual-source edit
 

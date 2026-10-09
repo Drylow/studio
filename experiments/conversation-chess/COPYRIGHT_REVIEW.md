@@ -23,7 +23,7 @@ Retirer **tout l'épisode 8**, même si la vidéo devient plus courte. La nouvel
 sélection conserve le début du master jusqu'à l'image exclusive 9 860 à 30 fps :
 épisodes 3 et 6, cinq fragments, trois cartes de chapitre et les 27 premières
 analyses inchangées. Les 13 analyses de l'épisode 8 et leurs replays disparaissent.
-Durée prévue : **9 min 27,267 s / 17 018 images**, intro 16 s et outro 12 s incluses.
+Durée finale vérifiée : **9 min 27,267 s / 17 018 images**, intro 16 s et outro 12 s incluses.
 Le découpage reproductible est dans [la timeline courte](tony-richie-no-e8-timeline.json),
 avec l'empreinte du master parent et la sélection exclusive.
 
@@ -39,8 +39,8 @@ Les médias, transcriptions et accès restent privés, hors Git.
 
 ## Ce que les contrôles peuvent établir
 
-La revue technique et visuelle doit prouver que le nouveau MP4 ne contient
-aucune scène, voix, carte ou replay de l'épisode 8. Elle ne constitue pas une
+La revue de la sélection, des médias et du nouvel export confirme que le MP4
+ne contient aucune scène, voix, carte ou replay de l'épisode 8. Elle ne constitue pas une
 validation des droits ni un contrôle Content ID. Les épisodes 3 et 6 restent
 des extraits HBO : aucun droit de republication n'est établi et ils peuvent
 être réclamés à leur tour. La monétisation n'est pas garantie.
@@ -49,6 +49,9 @@ Livrer sous **« VERSION À TESTER SUR YOUTUBE — épisode 8 retiré »**. L'ut
 importe d'abord cette version en privé et consulte les vérifications YouTube.
 Ne pas la marquer « sans copyright » ou « prête à publier ». Aucun recadrage,
 changement de vitesse/hauteur sonore ou logo destiné à déjouer Content ID.
+
+La [nouvelle livraison](TONY_RICHIE_NO_E8_DELIVERY.md) est confirmée sur GoFile
+et Discord. Le résultat du test YouTube reste en attente de l'utilisateur.
 
 ## Références officielles consultées
 

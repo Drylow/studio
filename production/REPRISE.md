@@ -5,10 +5,15 @@
 L'utilisateur a importé le long Tony/Richie : réclamation audiovisuelle HBO
 S02E08, dix intervalles entre 9:29 et 14:59. Il autorise de retirer **tout E8**
 et accepte une durée réduite. Nouvelle sélection : E3/E6 seulement, 27 notes,
-9 min 27, nouveau bilan et miniature sans veste. Export et test YouTube en attente.
+9 min 27, nouveau bilan et miniature sans veste. Export et contrôles terminés,
+nouveau film/kit sur https://gofile.io/d/b9gC1Nrk ; Discord dédié confirmé.
+**Version à tester en privé sur YouTube**, pas une validation des droits.
 Le long livré ci-dessous reste une archive ; ne pas le renvoyer comme corrigé.
 Les autres épisodes peuvent encore être réclamés, droits non établis.
-Détails : `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
+Détails : `experiments/conversation-chess/TONY_RICHIE_NO_E8_DELIVERY.md`
+et `COPYRIGHT_REVIEW.md` dans le même dossier. Rapports/reçus privés sous
+`output/conversation-chess/tony-richie-no-e8-native/`. Aucun changement du site
+ni des automatismes des autres chaînes.
 
 ## Sopranos — premier long Tony/Richie livré
 

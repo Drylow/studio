@@ -4,11 +4,17 @@
 
 Après son import du long, l'utilisateur signale une réclamation HBO audiovisuelle
 S02E08. Il demande de supprimer tout cet épisode et accepte une version plus
-courte. Nouvelle sélection prévue : 9 min 27, 27 analyses, E3/E6 seulement,
-bilan recalculé et miniature sans veste. Export, contrôles et nouveau test
-YouTube restent à faire. Les extraits conservés ne sont pas licenciés pour
+courte. Nouvelle version **livrée** : https://gofile.io/d/b9gC1Nrk,
+9 min 27, 27 analyses, E3/E6 seulement, bilan recalculé et miniature sans veste.
+17 018 images, 361 833 622 octets, Kdenlive natif medium CRF17/AAC192,
+décodage complet sans erreur, 57 segments audio/27 bruitages/27 pauses contrôlés,
+157 captures finales revues avec limites de taille documentées. Neuf fichiers
+GoFile vérifiés et Discord dédié confirmé avec kit, crédits et miniature.
+**Version à tester en privé sur YouTube** ; résultat encore inconnu.
+Les extraits conservés ne sont pas licenciés pour
 republication et peuvent encore être réclamés. Le premier long ci-dessous
-est une archive. Rapport : `experiments/conversation-chess/COPYRIGHT_REVIEW.md`.
+est une archive. Preuves : `experiments/conversation-chess/TONY_RICHIE_NO_E8_DELIVERY.md`
+et `COPYRIGHT_REVIEW.md` dans le même dossier.
 
 ## Historical Daily - OVNI integration, 9 October 2026
 

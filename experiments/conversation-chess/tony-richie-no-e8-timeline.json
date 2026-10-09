@@ -570,15 +570,16 @@
     "human_audio_listening": false,
     "rights_cleared": false,
     "source_quality_maximum_available_for_account": 720,
-    "finished_render_reviewed": false,
-    "new_export_created": false,
+    "finished_render_reviewed": true,
+    "new_export_created": true,
     "source_selection_reviewed": true,
     "retained_commentary_previously_reviewed": true,
     "approved_outro_layout_reused": true,
     "new_outro_text_reviewed_by_parent": true,
     "new_outro_render_visually_reviewed": true,
     "new_upload_test_completed": false,
-    "outro_review_scope": "Prepared frame 180 inspected; final MP4 review still pending."
+    "continuous_human_playback": false,
+    "visual_scope": "157 actual final MP4 captures inspected: 27 analyses and15 guide/chapter/outro at1080p;48 boundaries at1080p;64 boundaries on480x270 QA sheets with enlarged details and3 E6 tail images at1080p. Static inspection, no full human audio listening."
   },
   "title": "Richie Aprile vs Tony Soprano | Chess Analysis",
   "outro_subtitle": "Reputation vs Authority",
@@ -615,9 +616,9 @@
     "reported_episode08_ranges": 10,
     "episode08_removal": {
       "scope": "All selected S02E08 video, original audio, analysis replay backgrounds and four associated chapter cards; the 13 episode08 annotations are omitted.",
-      "status": "Excluded from this timeline proposal; new final export verification pending.",
+      "status": "Excluded from the new verified native export. YouTube upload test pending.",
       "removed_from_selected_timeline": true,
-      "removed_from_final_export_verified": false,
+      "removed_from_final_export_verified": true,
       "exclusive_parent_master_end_frame": 9860
     },
     "retained_episode_status": {
@@ -640,5 +641,31 @@
     "inaccuracy": 1,
     "blunder": 2,
     "brilliant": 2
+  },
+  "export_review": {
+    "file": "Richie-Aprile-vs-Tony-Soprano-E8-Removed.mp4",
+    "sha256": "939789b711b20cd5a3cc52e99f043d71fe5c08b47b1ce9d3c1ef429e21e552e4",
+    "bytes": 361833622,
+    "frames": 17018,
+    "fps": 30,
+    "final_width": 1920,
+    "final_height": 1080,
+    "source_native_height": 720,
+    "native_engine": "Kdenlive / MLT",
+    "full_av_decode_passed": true,
+    "audio_segments_compared": 57,
+    "audio_alignment_ms": 0,
+    "grade_onsets_checked": 27,
+    "silent_reading_tails_checked": 27,
+    "youtube_content_id_checked": false,
+    "rights_cleared": false
+  },
+  "delivery": {
+    "status": "VERSION À TESTER SUR YOUTUBE — épisode 8 retiré",
+    "gofile_url": "https://gofile.io/d/b9gC1Nrk",
+    "files_verified": 9,
+    "discord_delivery_confirmed": true,
+    "discord_message_id": "1558238933626921092",
+    "youtube_test_completed": false
   }
 }
