@@ -30,11 +30,11 @@ Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminé
    sans musique ajoutée. Garder les SFX existants :
    clavier pendant la frappe, accent de notation et quelques cues comiques
    explicitement choisis. Pas de voix off. Mesurer les crêtes audio.
-6. Pour l'anime, finir par un fondu de toute l'image et du son sur0.5s,
-   puis un écran noir de2s avec « Subscribe » blanc, sans musique.
-   `outro_style: subscribe` remplace le bilan ; les projets anciens conservent
-   leur bilan par défaut. Regarder l'image réellement produite avant de marquer
-   la mise en page revue. Une musique sans crédit doit avoir sa licence vérifiée.
+6. Pour cet épisode, finir la scène par un fondu de toute l'image et du son
+   sur0.5s, puis utiliser le bilan natif du collègue pendant12s : pion neutre,
+   résumé propre à la scène et compte des cinq moves. L'utilisateur a rejeté
+   le carton Subscribe ; `outro_style: recap` est rétabli. Pas de musique ajoutée
+   au bilan. Regarder l'image réellement produite avant de marquer la mise en page revue.
 7. Préparer les médias puis exporter depuis Kdenlive/MLT. Conserver le projet
    natif, les six pistes séparées, le job d'export et les médias relatifs.
    Régénérer le calque pour modifier le texte ; les mots ne sont pas des titres
@@ -43,12 +43,11 @@ Le plan Tony/Richie de14m51 est un brouillon éditorial, pas une vidéo terminé
 ## Épisode en cours : Lelouch contre Schneizel
 
 Titre : **Lelouch vs Schneizel Analysed like Chess | Code Geass**.
-Dialogue anglais0–192s, cinq commentaires de7s, guide16s et Subscribe2s :
-245s, soit4m05. Lelouch ouvre et reste blanc. Le dénouement montre sa
+Dialogue anglais0–192s, cinq commentaires de7s, guide16s et bilan natif12s :
+255s, soit4m15. Lelouch ouvre et reste blanc. Le dénouement montre sa
 victoire ; Schneizel ne gagne pas cette scène.
 
 ```powershell
-python experiments/conversation-chess/fetch-music.py echoes
 powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Preview -Source work/chess-studio/schneizel/lelouch-vs-schneizel-english-720.mp4 -Timeline experiments/conversation-chess/episodes/lelouch-vs-schneizel.json -Out work/conversation-chess/lelouch-full-new
 ```
 
@@ -58,8 +57,14 @@ exigera une nouvelle vérification du dialogue, des repères et de son hash.
 Les modèles Ayanokoji/Ryuen et Game of Thrones restent à remplir après
 acquisition d'une vraie source répondant à ces critères.
 
-La livraison locale comprend MP4 et projet Kdenlive. « Echoes » d'Andrew Ev,
-licence Mixkit Stock Music Free, accompagne le guide à un gain de0.12.
-Sa licence est conservée dans `MUSIC_LICENSES.json`, sans crédit public requis.
-Le fichier original est téléchargé localement, pas redistribué dans Git.
+La livraison locale comprend MP4 et projet Kdenlive. À la demande de l'utilisateur,
+« Sneaky Snitch » de Kevin MacLeod est rétabli comme dans la V2 : guide seul,
+gain0.65 et départ source66.104s. Le morceau exige l'attribution CC BY4.0 dans
+la description, conservée dans `MUSIC_CREDITS.txt`, sans crédit à l'écran.
+La variante « Echoes » sans attribution de la V4 reste archivée ; sa récupération
+locale reste possible avec `python fetch-music.py echoes`.
+Deux miniatures adaptées à la référence sont conservées dans
+`thumbnails/lelouch-schneizel/`. L'utilisateur a choisi B ; `B-chesscom.jpg`
+est sa version corrigée avec les SVG originaux Brilliant et Blunder, posés par
+`render-thumbnail.mjs`. Les premières variantes et le PNG maître sont archivés.
 Aucun envoi Discord ni publication YouTube n'est déclenché.

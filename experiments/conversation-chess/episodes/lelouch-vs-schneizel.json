@@ -24,15 +24,15 @@
     "evidence": "At 0.52-5.42s Lelouch on the screen asks about using Damocles to dominate the world; source frame at 1s reviewed."
   },
   "analysis_background": "replay",
-  "outro_seconds": 2,
+  "outro_seconds": 12,
   "music": {
     "intro": {
-      "file": "assets/music/echoes.mp3",
-      "title": "Echoes",
-      "license": "Mixkit Stock Music Free License",
-      "sha256": "49842074dc06f05a40690c2b3af42bd32be76a5f6505a65cfe952b2fe1ccb5de",
-      "gain": 0.12,
-      "start_seconds": 10
+      "file": "assets/music/sneaky-snitch.mp3",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "gain": 0.65,
+      "start_seconds": 66.104
     }
   },
   "annotations": [
@@ -104,13 +104,14 @@
     }
   ],
   "outro_layout_reviewed": true,
+  "outro_summary": "Schneizel prepares to die. Lelouch changes the win condition: serve Zero. The debate was a recording, and the real attack was already on its way. By the end, Schneizel is protecting the opponent he meant to defeat. Five moves. One very unexpected recruitment.",
   "dialogue_gain": 0.65,
   "mascot": {
     "file": "assets/neutral-pawn.png",
     "overlay_file": "assets/neutral-pawn.png",
     "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
   },
-  "outro_review_evidence": "Subscribe card rendered and visually checked2026-10-09: centered white regular text on black, two seconds, no portrait, recap or credits. Last line Understood ends at191.34 according to local alignment; fade begins191.5 and ends192.0, before next speech at192.06. Final native render must be reviewed.",
-  "outro_style": "subscribe",
+  "outro_review_evidence": "User explicitly requested the native colleague-tool outro instead of Subscribe. Restored the previously rendered and reviewed V2 neutral-pawn recap, summary and five-move counts. Source last word preserved before the whole-image fade at191.5-192.0. New complete native export must be reviewed.",
+  "outro_style": "recap",
   "ending_fade_seconds": 0.5
 }
