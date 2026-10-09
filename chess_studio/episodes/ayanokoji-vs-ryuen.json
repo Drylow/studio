@@ -1,0 +1,85 @@
+{
+  "title": "Ayanokoji vs Ryuen Analysed like Chess | Classroom of the Elite",
+  "status": "awaiting-clean-english-source",
+  "series": "Classroom of the Elite",
+  "season": 2,
+  "episode": 12,
+  "location": "Warehouse",
+  "players": ["Ayanokoji", "Ryuen"],
+  "voiceover": false,
+  "continuousSubtitles": false,
+  "timingStatus": "Search windows in the rejected Slash Kyubi candidate. Re-time against the clean source before rendering.",
+  "moves": [
+    {
+      "sourceWindow": [0, 30],
+      "trigger": "After Ayanokoji explains the surveillance camera was disabled.",
+      "player": 0,
+      "rating": "best",
+      "title": "Disabling the camera",
+      "comment": "Ayanokoji removes the camera before the confrontation. Ryuen sees an easy target. The target has already prepared the room.",
+      "hold": 6,
+      "score": 0.8
+    },
+    {
+      "sourceWindow": [31, 52],
+      "trigger": "After the four-on-one threat and Ayanokoji's response.",
+      "player": 1,
+      "rating": "mistake",
+      "title": "Trusting the numbers",
+      "comment": "Four against one looks winning. Ryuen counts bodies instead of checking the opponent. There is a small problem with his calculation.",
+      "hold": 6,
+      "score": 1.7
+    },
+    {
+      "sourceWindow": [53, 94],
+      "trigger": "After the group attackers are neutralized; keep the actual fight uninterrupted.",
+      "player": 0,
+      "rating": "great",
+      "title": "Breaking the formation",
+      "comment": "Ayanokoji deals with the attackers in sequence. The numerical advantage never becomes a coordinated attack. Ryuen's backup is disappearing.",
+      "hold": 6.5,
+      "score": 3
+    },
+    {
+      "sourceWindow": [95, 106],
+      "trigger": "After Ibuki's attack is stopped.",
+      "player": 1,
+      "rating": "miss",
+      "title": "Repeating the same attack",
+      "comment": "Another attacker steps in, and the same plan fails again. Ryuen has watched the counters. He still has no second strategy.",
+      "hold": 6,
+      "score": 4.2
+    },
+    {
+      "sourceWindow": [107, 150],
+      "trigger": "After Ryuen frames fear and violence as the deciding advantage.",
+      "player": 1,
+      "rating": "blunder",
+      "title": "Betting everything on fear",
+      "comment": "Ryuen expects pain to make everyone obey. His whole strategy needs a frightened opponent. Ayanokoji is not providing one.",
+      "hold": 7,
+      "score": 5.6
+    },
+    {
+      "sourceWindow": [151, 214],
+      "trigger": "After a complete exchange exposes Ayanokoji's lack of the expected emotional response.",
+      "player": 0,
+      "rating": "brilliant",
+      "title": "Turning the weapon around",
+      "comment": "Ayanokoji stays unreadable while Ryuen loses control. The man who built his position on fear is becoming the only frightened player.",
+      "hold": 7,
+      "score": 7.5
+    },
+    {
+      "sourceWindow": [215, 227],
+      "trigger": "After Ryuen's defeat is clearly shown; do not freeze on an unfinished punch.",
+      "player": 1,
+      "rating": "blunder",
+      "title": "Finding out too late",
+      "comment": "Ryuen finally learns what fear feels like. Unfortunately, this is the part where the lesson stops being theoretical.",
+      "hold": 6,
+      "score": 9
+    }
+  ],
+  "ending": "Resume the original scene and let the Karuizawa resolution close the episode. Exclude every uploader end card."
+}

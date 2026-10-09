@@ -1,0 +1,67 @@
+{
+  "title": "Lelouch vs Schneizel Analysed like Chess | Code Geass",
+  "status": "720p-layout-preview",
+  "sourceUrl": "https://www.youtube.com/watch?v=xHmKbGeVL8g",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceDuration": 192.377,
+  "language": "en",
+  "fps": 24,
+  "players": ["Lelouch", "Schneizel"],
+  "voiceover": false,
+  "continuousSubtitles": false,
+  "in": 0,
+  "out": 191.6,
+  "moves": [
+    {
+      "at": 29.7,
+      "player": 1,
+      "rating": "inaccuracy",
+      "title": "Freezing the world",
+      "comment": "Schneizel wants a world that never changes. Lelouch spots the problem: people do. A powerful plan is resting on a fragile assumption.",
+      "hold": 6,
+      "score": 0.7,
+      "placement": "right"
+    },
+    {
+      "at": 102.65,
+      "player": 1,
+      "rating": "blunder",
+      "title": "Accepting death",
+      "comment": "Schneizel is ready to die. But he has decided what winning means for Lelouch without checking. That assumption is about to become expensive.",
+      "hold": 6.5,
+      "score": 2.5,
+      "placement": "right"
+    },
+    {
+      "at": 112.95,
+      "player": 0,
+      "rating": "great",
+      "title": "Changing the win condition",
+      "comment": "Lelouch orders Schneizel to serve Zero. Killing him would waste a useful piece. Taking control wins the position and keeps the piece.",
+      "hold": 6.5,
+      "score": 5.5,
+      "placement": "right"
+    },
+    {
+      "at": 131.7,
+      "player": 0,
+      "rating": "brilliant",
+      "title": "Pre-recording the conversation",
+      "comment": "Schneizel was arguing with a recording. Lelouch predicted his answers and used the debate to conceal his approach. The conversation was the decoy.",
+      "hold": 7,
+      "score": 8,
+      "placement": "left"
+    },
+    {
+      "at": 157.7,
+      "player": 0,
+      "rating": "best",
+      "title": "Recruiting the opponent",
+      "comment": "Schneizel shoots Diethard to protect Lelouch. The enemy piece has changed sides. Diethard notices the new team arrangement one move too late.",
+      "hold": 6.5,
+      "score": 9,
+      "placement": "left"
+    }
+  ]
+}
