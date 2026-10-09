@@ -13,6 +13,10 @@ sans nouvelle installation sur son PC. **En ligne depuis le 8 oct. 2026 (23 h 04
 connexions Google faites le 7 oct. (application en *Testing* : reconnexion tous les 7 jours),
 pilote `studio/autonews.py`, 2 vidéos max par jour et par chaîne ; état dans `REPRISE.md`.
 
+**Codex (depuis le 9 oct. au soir)** : lire d'abord la section de reprise en tête de `AGENTS.md`.
+Le dépôt est public : les clés sont dans le `.env` du serveur, et `production/server_env.py` les
+copie à partir des seuls accès cPanel.
+
 **Session lancée par Delamain** (bloc `routine-fire-payload` commençant par « Demande Delamain ») :
 suivre uniquement [production/DELAMAIN_ROUTINE.md](production/DELAMAIN_ROUTINE.md) ; ne pas lancer
 `session_start.sh`, ne jamais pousser sur `main`, un seul push sur la branche indiquée.
@@ -455,7 +459,7 @@ Fabrication automatique : routine quotidienne (vers 8 h 47) qui suit
 [tiktok_engine/ROUTINE.md](tiktok_engine/ROUTINE.md) et garde une semaine d'avance, 2 vidéos par jour
 publiées toutes seules à 7 h et 19 h par **Zernio** (`tiktok_engine/zernio.py`, clé `ZERNIO_API_KEY`).
 Une vidéo à la main :
-- `bash tiktok_engine/setup.sh` (copie la clé Algrow du site depuis le serveur) ;
+- `bash tiktok_engine/setup.sh` (copie les clés Algrow et Zernio depuis le `.env` du serveur) ;
 - `art.py algrow tiktok_engine/videos/<nom>/script.json` (images, 1 crédit chacune), puis regarder
   `art_review.jpg` (mains !) ;
 - `build.py work/tiktok/<nom> --script tiktok_engine/videos/<nom>/script.json` (voix, montage, planches) ;

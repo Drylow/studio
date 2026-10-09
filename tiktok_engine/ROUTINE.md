@@ -13,9 +13,10 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 - **Créneaux déjà pris** : chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`
   (champ `at`). Prendre le premier jour, à partir de demain, qui n'a pas ses deux créneaux
   (07:00 et 19:00). Ne jamais programmer un créneau déjà pris.
-- Clés : `ZERNIO_API_KEY` est dans l'environnement. `ALGROW_API_KEY` est celle du site :
-  `setup.sh` la copie depuis le `.env` du serveur, avec `production/server_env.py` et les accès cPanel
-  de l'environnement, dans le `.env` local ignoré par git. N'afficher que « présente » ou « absente ».
+- Clés : `ALGROW_API_KEY` et `ZERNIO_API_KEY` sont dans le `.env` du serveur. `setup.sh` copie
+  celles qui manquent, avec `production/server_env.py` et les accès cPanel de l'environnement
+  (`CPANEL_USER`, `CPANEL_PASSWORD`), dans le `.env` local ignoré par git. N'afficher que
+  « présente » ou « absente ». Le dépôt est public : jamais une clé dans git.
   Si une clé manque, s'arrêter et le dire. Ne pas passer par les outils Algrow de la session : ils
   attendent une autorisation que personne ne donnera.
 

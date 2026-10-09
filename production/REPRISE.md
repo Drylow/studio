@@ -1,5 +1,21 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Passage à Codex — 9 octobre 2026, soir
+
+- L'utilisateur n'a bientôt plus d'usage Claude et continue avec Codex. Il veut que tout reste
+  pareil : la marche à suivre est en tête de `AGENTS.md`.
+- Il a demandé de mettre les clés sur GitHub, mais le dépôt est public : c'est refusé. À la place,
+  `ZERNIO_API_KEY` a été ajoutée au `.env` du serveur (sauvegarde `.env.bak-20261009T151318`).
+  Le `.env` du serveur contient maintenant toutes les clés.
+- Il suffit donc de mettre 3 variables dans l'environnement de l'agent (`CPANEL_URL`,
+  `CPANEL_USER`, `CPANEL_PASSWORD`). `production/server_env.py` copie les autres.
+- Testé sans la clé dans l'environnement : `setup.sh` l'a copiée et Zernio a répondu.
+- Nouveau `production/cpanel.py` : commandes sur le serveur (`sh`), fichiers (`get`/`put`) et
+  mise en ligne (`deploy`). C'est l'outil qui servait à Claude, rangé dans le dépôt.
+- La routine Claude des TikTok (`trig_01PCph2AiHJH7YqgXwNgYd62`, vers 8 h 47) reste active.
+  Elle s'arrête d'elle-même quand l'usage Claude est épuisé. Sa limite hebdomadaire revient le
+  14 oct. vers 11 h.
+
 ## Reprise Claude — 7 octobre 2026, après-midi
 
 - **Google débloqué (7 oct., confirmé par l'utilisateur)** : en *Testing* avec son Gmail en

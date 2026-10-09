@@ -1,3 +1,52 @@
+# Reprise par Codex — 9 octobre 2026 au soir (après Claude)
+
+L'utilisateur passe de Claude à Codex et veut que **tout continue exactement pareil**. Lire dans
+l'ordre : `CLAUDE.md` (règles, ton avec l'utilisateur : français familier, court, heures de
+Belgique, jamais UTC), le haut de `production/REPRISE.md` (état en ligne), puis
+`tiktok_engine/README.md` et `tiktok_engine/ROUTINE.md` (TikTok).
+
+**Ce qui tourne tout seul, sans agent :**
+- **Cage Dispatch et Pitch Dispatch** : pilote `studio/autonews.py` sur le serveur o2switch
+  (worker lancé par cron). Il publie au plus 2 vidéos par jour et par chaîne, seulement les
+  sujets notés 7/10 ou plus. Rien à lancer. Pour couper : `NEWS_AUTO_DRY=1` dans le `.env` du
+  serveur.
+- **TikTok @octave.histoire** : 14 vidéos programmées sur Zernio du 9 au 15 oct., à 7 h et 19 h
+  (Bruxelles). Chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`.
+
+**Ce qu'il reste à faire :**
+- **Chaque jour, `tiktok_engine/ROUTINE.md`** : 2 nouvelles vidéos dans le premier jour libre.
+  - Une routine Claude (vers 8 h 47) le fait aussi, tant que l'utilisateur a de l'usage Claude.
+  - Avant de prendre un créneau : `git pull`, lire les `zernio.json`, et `zernio.py posts`
+    (l'état réel chez Zernio). Jamais deux vidéos sur un même créneau.
+- **Avant le 14 oct. au soir, rappeler à l'utilisateur de reconnecter Cage et Pitch.** Google est
+  en mode *Testing* et coupe l'accès au bout de 7 jours. Sur le site : Chaînes → la chaîne →
+  Connecter YouTube → Autre méthode : API Google.
+
+**Clés.** Le dépôt est **PUBLIC** : jamais une clé dans git ni dans un message.
+- Dans l'environnement Codex, seulement 3 **variables d'environnement** : `CPANEL_URL`,
+  `CPANEL_USER`, `CPANEL_PASSWORD`. Pas des « secrets » : Codex retire les secrets avant que
+  l'agent travaille.
+- Tout le reste est dans le `.env` du serveur (`~/drylow_studio/.env`, 45 variables :
+  `ALGROW_API_KEY`, `ZERNIO_API_KEY`, `AI_API_KEY`, `DISCORD_WEBHOOK_*`, `GOOGLE_CLIENT_*`…).
+  - `python production/server_env.py NOM [NOM…]` copie les variables voulues dans le `.env`
+    local (ignoré par git), sans les afficher.
+  - `bash tiktok_engine/setup.sh` le fait pour Algrow et Zernio. Il installe aussi la venv,
+    playwright et Chromium.
+- L'environnement doit avoir **accès à Internet** : zernio.com, api.algrow.online,
+  edgerunners.fr, gofile.io et les sources pour vérifier les faits.
+
+**Serveur :** `python production/cpanel.py` (`pip install websocket-client`).
+- `sh '<commande>'` lance une commande sur le serveur.
+- `deploy <étiquette>` met `main` en ligne : sauvegarde de la base, avance rapide, relance du
+  worker et du site.
+- Toujours sauvegarder la base avant un changement sur le serveur.
+
+**Git :** commit en anglais qui dit le « pourquoi ». `git pull --rebase origin main` puis push
+sur `main` après chaque changement. Aucun nom de modèle d'IA dans les commits ou les fichiers.
+`production/session_start.sh` ne sert que dans une session Claude.
+
+---
+
 # Production 2D historique dirigee par Codex
 
 Lire CLAUDE.md pour les regles generales du depot. Ne pas annuler les modifications
