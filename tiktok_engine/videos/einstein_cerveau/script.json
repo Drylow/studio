@@ -12,7 +12,11 @@
   "Live Science, « Where is Einstein's brain? » (240 blocs, 170 rendus à Princeton ; Harvey renvoyé de l'hôpital en 1960)",
   "Brain: A Journal of Neurology / PMC3613708 (Falk et al., 2013) : autopsie de 1955 par Thomas Harvey, photographies avant découpe en 240 blocs",
   "Einstein meurt le 18 avril 1955 (Britannica)",
-  "Chiffre « 18 chercheurs » écarté (une seule source)"
+  "Chiffre « 18 chercheurs » écarté (une seule source)",
+  "Steven Levy, New Jersey Monthly, 1978 « The Search for Einstein's Brain » : cerveau retrouvé à Wichita (Kansas) par un journaliste, dans une boîte de cidre (Wikipedia « Brain of Albert Einstein » ; Gizmodo ; Prospect)",
+  "1997 : Thomas Harvey, 84 ans, traverse les États-Unis en voiture avec l'écrivain Michael Paterniti, de New Jersey à Berkeley (Californie) (Publishers Weekly ; Austin Chronicle ; Harper's, oct. 1997)",
+  "Witelson et al., The Lancet, 1999 : lobes pariétaux environ 15 % plus larges que 91 cerveaux témoins, d'après les photos de 1955 (Wikipedia ; PsyPost) ; lien avec le génie = hypothèse, non prouvé",
+  "Poids du cerveau écarté (sources divergentes : 1 230 g vs 2,64 livres)"
  ],
  "art": {
   "einstein": {
@@ -49,6 +53,14 @@
   },
   "princeton_lab": {
    "prompt": "a modern hospital pathology laboratory with a locked metal cabinet, no people",
+   "size": "256x192"
+  },
+  "journalist": {
+   "prompt": "a 1970s male journalist with a notebook and thick glasses standing in a cluttered small-town office, bust, front view",
+   "size": "192x192"
+  },
+  "brain_side": {
+   "prompt": "side view of a pale human brain on a dark laboratory table with a ruler beside it, close-up, no people, no text",
    "size": "256x192"
   }
  },
@@ -287,6 +299,88 @@
    ]
   },
   {
+   "say": "En 1978, un journaliste, Steven Levy, retrouve la trace de Harvey, à Wichita, dans le Kansas.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Un *journaliste* le retrouve",
+     "at": 0,
+     "y": 160
+    },
+    {
+     "type": "stamp",
+     "text": "1978",
+     "at": 0,
+     "y": 225,
+     "rot": -4
+    },
+    {
+     "type": "img",
+     "src": "journalist",
+     "h": 340,
+     "y": 520,
+     "at": 0.1,
+     "in": "pop"
+    }
+   ],
+   "glow": {
+    "y": 480
+   }
+  },
+  {
+   "say": "Le cerveau d'Einstein est là, dans un bocal, rangé dans une boîte de cidre.",
+   "els": [
+    {
+     "preset": "title",
+     "text": "Dans une boîte de *cidre*",
+     "at": 0,
+     "y": 160,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "cardboard_box",
+     "h": 330,
+     "y": 520,
+     "at": 0.1,
+     "in": "pop"
+    }
+   ],
+   "glow": {
+    "y": 480
+   }
+  },
+  {
+   "say": "En 1997, Harvey a quatre-vingt-quatre ans. Il traverse les États-Unis en voiture avec un écrivain, Michael Paterniti, jusqu'en Californie, pour en rendre une partie à la famille d'Einstein.",
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1997",
+     "at": 0,
+     "y": 160,
+     "rot": -4
+    },
+    {
+     "preset": "title",
+     "text": "Cap sur la *Californie*",
+     "at": 0.3,
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "road_trip",
+     "h": 280,
+     "y": 520,
+     "at": 0.1,
+     "in": "scan"
+    }
+   ],
+   "glow": {
+    "y": 480
+   }
+  },
+  {
    "say": "Enfin, en 1998, Thomas Harvey rend ce qu'il lui reste à l'hôpital de Princeton.",
    "glow": {
     "y": 480
@@ -315,6 +409,69 @@
      "in": "scan"
     }
    ]
+  },
+  {
+   "say": "Et la science, alors ? En 1999, une équipe canadienne étudie les photos de 1955.",
+   "els": [
+    {
+     "type": "stamp",
+     "text": "1999",
+     "at": 0,
+     "y": 160,
+     "rot": 4
+    },
+    {
+     "preset": "title",
+     "text": "La science *s'en mêle*",
+     "at": 0.3,
+     "y": 225,
+     "size": 26
+    },
+    {
+     "type": "img",
+     "src": "brain_side",
+     "h": 300,
+     "y": 520,
+     "at": 0.1,
+     "in": "scan"
+    }
+   ],
+   "glow": {
+    "y": 480
+   }
+  },
+  {
+   "say": "Ses lobes pariétaux, liés au raisonnement spatial, seraient environ quinze pour cent plus larges que la moyenne. Une hypothèse, pas une preuve du génie.",
+   "els": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 15,
+     "suffix": " %",
+     "dur": 1.2,
+     "at": 0,
+     "y": 260,
+     "in": "fade"
+    },
+    {
+     "preset": "label",
+     "text": "LOBES PARIÉTAUX PLUS LARGES",
+     "at": 0.3,
+     "y": 340,
+     "color": "W"
+    },
+    {
+     "type": "img",
+     "src": "brain_side",
+     "h": 300,
+     "y": 580,
+     "at": 0.2,
+     "in": "pop"
+    }
+   ],
+   "glow": {
+    "y": 480
+   }
   },
   {
    "say": "Quarante-trois ans après la mort d'Einstein.",
