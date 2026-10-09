@@ -24,7 +24,7 @@
     "evidence": "At 0.52-5.42s Lelouch on the screen asks about using Damocles to dominate the world; source frame at 1s reviewed."
   },
   "analysis_background": "replay",
-  "outro_seconds": 0,
+  "outro_seconds": 12,
   "music": {
     "intro": {
       "file": "assets/music/sneaky-snitch.mp3",
@@ -33,11 +33,19 @@
       "license": "CC BY 4.0",
       "gain": 0.65,
       "start_seconds": 66.104
+    },
+    "outro": {
+      "file": "assets/music/scheming-weasel-faster.mp3",
+      "sha256": "f2f20d0737560a2dec0d82119810757326b1eec7eae211f2d3e056e9754834a9",
+      "title": "Scheming Weasel (faster version)",
+      "license": "CC BY 4.0",
+      "gain": 0.85,
+      "start_seconds": 0
     }
   },
   "annotations": [
     {
-      "source_at": 14.95,
+      "source_at": 15.45,
       "rating": "inaccuracy",
       "speaker": "black",
       "score_text": "+0.7",
@@ -45,7 +53,8 @@
       "comment": "Schneizel calls human nature a matter of opinion. His peace plan needs people to stop changing. That is a risky assumption to build your endgame on.",
       "hold_seconds": 7,
       "replay_seconds": 3,
-      "reviewed": true
+      "reviewed": true,
+      "boundary_evidence": "User requested a less abrupt cut after opinion. Word-alignment interval14.60-14.84s; pause moved from14.95s to15.45s, leaving0.61s after the aligned word and before the next phrase at15.98s. Original short audio edge fades retained."
     },
     {
       "source_at": 102.65,
@@ -56,7 +65,12 @@
       "comment": "Schneizel is ready to die. But he has decided what winning means for Lelouch without checking. That assumption is about to become expensive.",
       "hold_seconds": 7,
       "replay_seconds": 3,
-      "reviewed": true
+      "reviewed": true,
+      "comedy_sfx": {
+        "name": "comic-impact",
+        "at_seconds": 1,
+        "gain": 0.55
+      }
     },
     {
       "source_at": 112.95,
@@ -78,7 +92,12 @@
       "comment": "Schneizel was arguing with a recording. Lelouch predicted his answers and used the debate to conceal his approach. The conversation was the decoy.",
       "hold_seconds": 7,
       "replay_seconds": 3,
-      "reviewed": true
+      "reviewed": true,
+      "comedy_sfx": {
+        "name": "rising-twinkle",
+        "at_seconds": 1,
+        "gain": 0.45
+      }
     },
     {
       "source_at": 157.7,
@@ -91,5 +110,14 @@
       "replay_seconds": 3,
       "reviewed": true
     }
-  ]
+  ],
+  "outro_layout_reviewed": true,
+  "outro_summary": "Schneizel prepares to die. Lelouch changes the win condition: serve Zero. The debate was a recording, and the real attack was already on its way. By the end, Schneizel is protecting the opponent he meant to defeat. Five moves. One very unexpected recruitment.",
+  "dialogue_gain": 0.65,
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
+  },
+  "outro_review_evidence": "Neutral-pawn end card actually rendered and visually checked2026-10-09: no Tony portrait, summary contained, counts match five annotations. Local technical review, not final avatar approval."
 }

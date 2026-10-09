@@ -1,9 +1,11 @@
 # Utiliser l'outil du collègue sur Windows
 
-Le moteur et l'habillage de `conversation-chess` sont conservés : pion Tony,
+Le moteur et l'habillage de `conversation-chess` sont conservés :
 grande bulle blanche, vrais SVG Chess.com, frappe, barre gauche, replay muet et
 montage Kdenlive avec pistes séparées. Aucun changement du site Flask.
-Le pion est encore celui du collègue ; aucun avatar anime n'est prétendu validé.
+Les archives conservent son pion Tony. Le duel anime complet utilise maintenant
+un pion neutre provisoire, à la demande de l'utilisateur ; le futur personnage
+reste à choisir. Le moteur graphique est identique.
 
 Depuis la racine du dépôt, installation et diagnostic :
 
@@ -43,6 +45,10 @@ Une nouvelle vidéo finale exige une vraie source au moins1080p, revue et
 acceptée dans la timeline. Ne pas transformer une source720p en source acceptée
 en l'agrandissant. Un nouveau fichier impose de revoir hash, dialogues et temps.
 
+Le collegue documente une exception pour les originaux Naka720p dont la qualite
+native et la disponibilite maximale ont ete verifiees, avec preuves dans la
+timeline. Cette exception ne s'applique pas au clip anime YouTube actuel.
+
 L'export ajoute son propre profil dans le dossier local Kdenlive, sans remplacer
 `customprofiles.xml`. Le job natif est conservé et contrôlé : H264 CRF17,
 1920×1080,30fps, AAC192k/48kHz. Un profil ignoré fait échouer le contrôle.
@@ -52,16 +58,29 @@ projet Kdenlive retouché manuellement.
 
 ## Episodes
 
-- `episodes/lelouch-vs-schneizel.json` : cinq annotations adaptées au moteur,
-  dont Great et Best à score inchangé. Source720p refusée pour la version finale.
+- `episodes/lelouch-vs-schneizel.json` : duel entier, cinq annotations adaptées
+  au moteur, dont Great et Best à score inchangé, bilan12s et les deux musiques.
+  Deux accents comiques choisis. Source720p refusée pour la version finale.
 - `episodes/ayanokoji-vs-ryuen.empty.json` : titre retenu, repères à remplir
   après acquisition d'un clip anglais1080p sans texte incrusté.
 - `episodes/game-of-thrones.empty.json` : même format, dialogue à sélectionner.
 
 Les recherches précédentes n'ont pas trouvé de source Ayanokoji–Ryuen réunissant
 ces exigences ; les modèles vides ne contiennent pas de temps inventés.
-Le générique de fin existant reste disponible ; aucun nouveau bilan anime
-n'a encore été exporté et revu dans ce test.
+Le bilan conserve le dessin du collègue et compte une seule fois chaque
+annotation. La recette complète est dans `ANIME_WORKFLOW.md`.
+
+`dialogue_gain` est un gain linéaire optionnel dans la timeline, entre0 et1
+(0 exclu), par défaut1. Il atténue uniquement les pistes de dialogue préparées,
+sans normalisation dynamique et sans modifier le fichier source. L'épisode
+Lelouch utilise0.65 après mesure de pics interéchantillons à+1.42dBTP dans
+l'original. Un changement de gain demande une préparation complète.
+
+`mascot.file` et `mascot.overlay_file` permettent de choisir deux PNG locaux
+relatifs au dossier de l'outil. Si seul `file` est donné, il sert aux deux
+emplacements. Sans configuration, les assets Tony historiques
+restent utilisés. Le duel anime choisit `assets/neutral-pawn.png` pour les deux
+emplacements. Les chemins et empreintes sont conservés dans le manifeste.
 
 Options de chemins : `CHESS_KDENLIVE`, `CHESS_FFMPEG`, `CHESS_FFPROBE`,
 `CHESS_CHROMIUM` ou `--chromium` pour les deux scripts Node.

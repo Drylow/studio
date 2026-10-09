@@ -1,5 +1,9 @@
 # Verification Windows — 9 octobre 2026
 
+Ce rapport decrit le premier extrait historique. La version complete corrigee,
+avec pion neutre et pause retardee apres « opinion », est documentee dans
+`VALIDATION_ANIME_COMPLETE.md` ; les constats ci-dessous concernent l'ancien test.
+
 L'outil du collegue a ete execute sur Windows, sans changer `scene.js`,
 les traces SVG ou les deux images de pion. La preparation Node et l'export
 Kdenlive26.08.1/MLT ont reellement produit un extrait Code Geass en anglais.

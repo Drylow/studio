@@ -37,7 +37,7 @@
   },
   "annotations": [
     {
-      "source_at": 14.95,
+      "source_at": 15.45,
       "rating": "inaccuracy",
       "speaker": "black",
       "score_text": "+0.7",
@@ -45,7 +45,14 @@
       "comment": "Schneizel calls human nature a matter of opinion. His peace plan needs people to stop changing. That is a risky assumption to build your endgame on.",
       "hold_seconds": 7,
       "replay_seconds": 3,
-      "reviewed": true
+      "reviewed": true,
+      "boundary_evidence": "User requested a less abrupt cut after opinion. Word-alignment interval14.60-14.84s; pause moved from14.95s to15.45s, leaving0.61s after the aligned word and before the next phrase at15.98s. Original short audio edge fades retained."
     }
-  ]
+  ],
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Temporary neutral pawn; Tony removed for anime at user request. Final character undecided."
+  },
+  "dialogue_gain": 0.65
 }

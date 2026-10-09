@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="544" height="800" viewBox="0 0 68 100">
+  <title>Temporary neutral chess commentator</title>
+  <g fill="#403c38" stroke="#b8b2a8" stroke-width="2" stroke-linejoin="round">
+    <circle cx="34" cy="17" r="14"/>
+    <path d="M19 36H49L51 44H17Z M22 45C24 60 19 73 12 82H56C49 73 44 60 46 45Z M10 83H58L62 94H6Z"/>
+  </g>
+</svg>

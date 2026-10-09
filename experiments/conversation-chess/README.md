@@ -2,6 +2,11 @@
 
 **Sur Windows : [installation, lancement et premiers épisodes anime](WINDOWS.md).**
 
+Déclinaison anime : [recette de production](ANIME_WORKFLOW.md) et
+[duel Lelouch–Schneizel](episodes/lelouch-vs-schneizel.json), cinq analyses,
+guide16s et bilan12s. La pause après « opinion » laisse une respiration ; Tony
+est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
+
 ## État actuel et premier long
 
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
