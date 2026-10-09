@@ -203,7 +203,11 @@ window.ConversationChess = (() => {
       ctx.restore();
       const title = v.label + (v.id === 'inaccuracy' ? '' : ' Move');
       text(title, 376, 397, 72, v.color, 700, 'center');
-      if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
+      if (options.analysis_pawn_by_speaker) {
+        const speaker = options.evaluation.speaker;
+        if (!['white', 'black'].includes(speaker)) throw new Error('A player-coloured analysis pawn requires its white/black speaker.');
+        pawn(345, 535 + 10 * (1 - entryEase), 520, speaker === 'white');
+      } else if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
       if (options.reveal_seconds == null || options.reveal_seconds >= schema.bubble_delay_seconds) {
       const bubbleEntry = 1 - Math.pow(1 - clamp((elapsed - schema.bubble_delay_seconds) / .16), 3);
       ctx.save(); ctx.translate(0, 12 * (1 - bubbleEntry)); ctx.globalAlpha = bubbleEntry;
@@ -235,7 +239,7 @@ window.ConversationChess = (() => {
       text(`${sides.white} is White · ${sides.black} is Black`, 72, 96, 40, '#ffffff', 700);
     }
     if (options.demo) text('Demo · synthetic source', 48, 1068, 28, '#ffffff', 700);
-    if (options.low_res_preview) text(`SOURCE QUALITY PREVIEW · ${options.source_height}p source`, 1798, 44, 28, '#ffda7c', 700, 'right');
+    if (options.low_res_preview && options.show_source_quality_label !== false) text(`SOURCE QUALITY PREVIEW · ${options.source_height}p source`, 1798, 44, 28, '#ffda7c', 700, 'right');
     ctx.restore();
   }
   async function load(src) {

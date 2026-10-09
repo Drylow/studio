@@ -41,6 +41,11 @@ if (prepareProject && refreshIntro) throw new Error('--prepare-project and --ref
 const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
 const spec = JSON.parse(await fs.readFile(timelinePath, 'utf8'));
+for (const key of ['show_source_quality_label', 'analysis_pawn_by_speaker']) {
+  if (spec[key] != null && typeof spec[key] !== 'boolean') throw new Error(`${key} must be boolean.`);
+}
+const showSourceQualityLabel = spec.show_source_quality_label !== false;
+const analysisPawnBySpeaker = spec.analysis_pawn_by_speaker === true;
 if (spec.mascot != null) {
   if (typeof spec.mascot !== 'object' || Array.isArray(spec.mascot)) throw new Error('mascot requires a local PNG file configuration.');
   for (const key of ['file', 'overlay_file']) {
@@ -91,9 +96,10 @@ const sourceQualityReviewed = spec.source_quality?.accepted_for_final === true;
 const lowResPreview = video.height < minimumSourceHeight || spec.source_quality?.accepted_for_final === false
   || (spec.demo !== true && !archiveSource && !sourceQualityReviewed);
 const sourceQualityReport = { native_hd: video.height >= 720, minimum_height: minimumSourceHeight,
+  on_screen_label: lowResPreview && showSourceQualityLabel,
   low_res_preview: lowResPreview, accepted_for_final: !lowResPreview, visually_reviewed: sourceQualityReviewed,
   ...(reviewedNative720 ? { native_hd_review: nativeHdReview } : {}) };
-if (lowResPreview && !args.includes('--allow-low-res-preview') && !validateOnly) throw new Error(`Source quality is not accepted: ${video.width}×${video.height}, target at least ${minimumSourceHeight}p. Replace and visually review the original source, then set source_quality.accepted_for_final=true. --allow-low-res-preview is only for a clearly marked technical draft.`);
+if (lowResPreview && !args.includes('--allow-low-res-preview') && !validateOnly) throw new Error(`Source quality is not accepted: ${video.width}×${video.height}, target at least ${minimumSourceHeight}p. Replace and visually review the original source, then set source_quality.accepted_for_final=true. --allow-low-res-preview remains a technical draft; source quality is recorded in the project manifest.`);
 const outroLayoutReviewed = outroSeconds === 0 || spec.outro_layout_reviewed === true
   || (spec.outro_layout_reviewed == null && (spec.demo === true || archiveSource));
 if (!outroLayoutReviewed && !validateOnly) throw new Error('This outro layout was rejected or has not been reviewed. Check the actual reference end card and update the layout before export.');
@@ -240,7 +246,7 @@ try {
   await page.addScriptTag({ content: await fs.readFile(path.join(here, 'scene.js'), 'utf8') });
   await page.evaluate(({ mascot, backdrop, overlayMascot }) => window.ConversationChess.init(mascot, backdrop, overlayMascot), { mascot: `data:image/png;base64,${mascotBytes.toString('base64')}`, backdrop: `data:image/png;base64,${introBytes.toString('base64')}`, overlayMascot: `data:image/png;base64,${overlayMascotBytes.toString('base64')}` });
   async function overlay(name, options) {
-    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides, low_res_preview: lowResPreview, source_height: video.height });
+    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height });
     const dest = path.join(output, name + '.png');
     await fs.writeFile(dest, Buffer.from(data.split(',')[1], 'base64')); return dest;
   }
@@ -261,7 +267,7 @@ try {
     const frameDir = path.join(output, `overlay-freeze-${i}-frames`);
     await fs.mkdir(frameDir, { recursive: true });
     for (let frame = 0; frame < Math.ceil(a.hold_seconds * graphicsFps); frame++) {
-      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, score_text: a.score_text, evaluation: a, demo, sides, low_res_preview: lowResPreview, source_height: video.height, previous_control: i ? annotations[i - 1].control_after : control, previous_score_text: i ? annotations[i - 1].score_text : initialScoreText, reveal_seconds: frame / graphicsFps });
+      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, score_text: a.score_text, evaluation: a, demo, sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height, previous_control: i ? annotations[i - 1].control_after : control, previous_score_text: i ? annotations[i - 1].score_text : initialScoreText, reveal_seconds: frame / graphicsFps });
       await fs.writeFile(path.join(frameDir, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
     annotationFrames.push(frameDir);
@@ -387,7 +393,7 @@ if (prepareProject) {
     timeline_file: timelinePath, timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'), rating_schema_version: ratingSchema.version,
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
     icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
-    demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText,
+    demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText, analysis_pawn_by_speaker: analysisPawnBySpeaker,
     outro_layout_reviewed:outroLayoutReviewed, mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash}, music_attribution:musicAttribution,
     final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
   console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
