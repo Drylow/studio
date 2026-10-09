@@ -17,6 +17,10 @@ def main():
     for field in ('timeline', 'approval', 'audio', 'ffmpeg', 'output'):
         parser.add_argument('--' + field, required=True)
     parser.add_argument('--seconds', type=float, default=30)
+    parser.add_argument('--transition', choices=('none', 'fade'), default='none')
+    parser.add_argument('--transition-duration', type=float, default=0.15)
+    parser.add_argument('--tail', type=float, default=0)
+    parser.add_argument('--normalize', action='store_true')
     args = parser.parse_args()
     output = Path(args.output)
     assert not output.exists(), 'Baseline needs an empty, uncached directory'
@@ -32,18 +36,22 @@ def main():
     result = render.render_video(str(output / 'render'), shots, str(audio),
                                  str(output / 'CPU-TECHNICAL-TEST-NOT-PUBLISHABLE.mp4'),
                                  width=1920, height=1080, fps=30, motion_strength=0.025,
-                                 transition='none', normalize=False, quality='high',
-                                 captions={'mode': 'none'}, tail=0,
+                                 transition=args.transition, transition_dur=args.transition_duration,
+                                 normalize=args.normalize, quality='high',
+                                 captions={'mode': 'none'}, tail=args.tail,
                                  progress=lambda p, msg: print(f'{p:.0%} {msg}', flush=True))
     elapsed = time.perf_counter() - started
     save(output / 'benchmark.json', {'phase': 'technical-test-NOT-complete-episode',
                                     'renderer': 'Existing services.render with fresh cache',
                                     'duration': args.seconds, 'images': len(shots),
+                                    'transition': args.transition, 'transition_duration': args.transition_duration,
+                                    'tail': args.tail, 'normalize': args.normalize,
                                     'audio_prepare_seconds': audio_seconds,
                                     'render_seconds': elapsed, 'result': result,
                                     'comparison_caveat': 'Same inputs, cadence, size and zoom strength; '
                                     'studio easing and interpolation differ. CPU uses CRF 18, OVNI uses '
-                                    '8 Mbps/P3. Not identical quality settings or a universal speed claim.',
+                                    'NVENC bitrate/preset selected by the GPU benchmark. '
+                                    'Not identical quality settings or a universal speed claim.',
                                     'publication_ready': False})
     print(f'Studio baseline: {elapsed:.3f}s plus {audio_seconds:.3f}s audio preparation', flush=True)
 

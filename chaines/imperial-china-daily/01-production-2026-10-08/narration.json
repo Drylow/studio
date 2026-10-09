@@ -1,5 +1,7 @@
 {
   "phase": "narration-only",
+  "channel": "imperial-china-daily",
+  "render_backend": "ovni",
   "title": "What Did People in Tang China Actually Do All Day?",
   "narration_script": "chaines/imperial-china-daily/01-production-2026-10-08/script.txt",
   "workdir": "work/historical-01-2026-10-08/imperial-china-daily",

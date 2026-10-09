@@ -1,5 +1,7 @@
 {
   "phase": "narration-only",
+  "channel": "aztec-daily",
+  "render_backend": "ovni",
   "title": "What Did People in the Aztec Capital Actually Do All Day?",
   "narration_script": "chaines/aztec-daily/01-production-2026-10-08/script.txt",
   "workdir": "work/historical-01-2026-10-08/aztec-daily",

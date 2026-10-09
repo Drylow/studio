@@ -11,6 +11,7 @@ import textwrap
 
 from common import REPO
 from services import align, media, render, tts
+import historical_renderer
 
 
 def read(path):
@@ -271,7 +272,7 @@ def export_video(episode, work, width, height):
     build.mkdir(exist_ok=True)
     validate_narration_duration(episode, plan["duration"])
     final = export_path(episode, work)
-    result = render.render_video(str(build), scenes, str(work / "narration.mp3"), str(final),
+    result = historical_renderer.render_video(episode, str(build), scenes, str(work / "narration.mp3"), str(final),
                                  width=width, height=height, fps=30, motion_strength=0.045,
                                  transition="fade", transition_dur=0.2, quality="high",
                                  captions={"mode": "none"}, tail=0.4,

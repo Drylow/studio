@@ -1,0 +1,21 @@
+{
+ "author":"Codex","phase":"review-excerpt-NOT-complete-episode",
+ "channel":"edo-daily","render_backend":"ovni",
+ "source_audio":"work/historical-01-2026-10-08/edo-daily/narration.mp3",
+ "word_clock":"work/historical-01-2026-10-08/edo-daily/authoring_words.json",
+ "script":"chaines/edo-daily/01-production-2026-10-08/script.txt",
+ "workdir":"work/historical-01-2026-10-08/edo-daily/review-excerpt-ovni",
+ "export":"output/historical-01-2026-10-08/edo-daily/Edo-Daily-01-EXTRAIT-3min-OVNI.mp4",
+ "opening_reviews":"chaines/_production-01-2026-10-08/opening-reviews.json",
+ "shot_reviews":"chaines/edo-daily/01-production-2026-10-08/shot-reviews.json",
+ "max_shot_seconds":6,"tail":0.4,
+ "selection":[
+  "edo-new-001","edo-new-002","edo-new-003-v4","edo-new-004","edo-new-005-v3","edo-new-006-v2",
+  "edo-new-007-v6","edo-new-008-v3","edo-new-009-v2","edo-new-010-v3","edo-new-011-v2","edo-new-012-v2",
+  "edo-new-013-v2","edo-new-014","edo-new-015","edo-new-016-v2","edo-new-017-v3","edo-new-018",
+  "edo-new-019-v3","edo-new-020","edo-new-021","edo-new-022-v2","edo-new-023-v3","edo-new-024",
+  "edo-new-025-v3","edo-new-026-v2","edo-new-027-v3","edo-new-028-v3","edo-new-029-v2","edo-new-030-v2",
+  "edo-new-031-v2","edo-new-032-v3","edo-new-033-v3","edo-new-034-v3","edo-new-035-v3","edo-new-036-v3"
+ ],
+ "note":"Same 36 reviewed shots and measured narration as the earlier excerpt. Separate GPU export; never a complete episode. Montage review required after rendering."
+}

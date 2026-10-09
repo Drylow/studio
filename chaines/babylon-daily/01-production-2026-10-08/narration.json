@@ -1,5 +1,7 @@
 {
   "phase": "narration-only",
+  "channel": "babylon-daily",
+  "render_backend": "ovni",
   "title": "What Did People in Ancient Babylon Actually Do All Day?",
   "narration_script": "chaines/babylon-daily/01-production-2026-10-08/script.txt",
   "workdir": "work/historical-01-2026-10-08/babylon-daily",

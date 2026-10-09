@@ -1,5 +1,7 @@
 {
   "phase": "narration-only",
+  "channel": "ottoman-daily",
+  "render_backend": "ovni",
   "title": "What Did People in Ottoman Istanbul Actually Do All Day?",
   "narration_script": "chaines/ottoman-daily/01-production-2026-10-08/script.txt",
   "workdir": "work/historical-01-2026-10-08/ottoman-daily",

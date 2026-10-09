@@ -1,8 +1,9 @@
 # OVNI On Windows
 
-Installed and exercised on 9 October 2026. This is an isolated GPU renderer
-evaluation, not a completed episode or a silent switch of the studio renderer.
-The user explicitly requested OVNI after sharing Marc's post.
+Installed, exercised and integrated on 9 October 2026 at the user's request.
+OVNI is the default picture renderer for the five Codex-authored historical
+channels only. This integration does not complete the unfinished episodes or
+change the frontend, automatic prompting or other studio workflows.
 
 ## Sources
 
@@ -85,9 +86,75 @@ with no visible rendering corruption. The pre-existing headband-knot continuity
 caution is unchanged. RGB mean absolute errors near shot starts are 3.64-4.63.
 These numerical checks do not substitute for creative review or a listening pass.
 
-## Remaining Scope
+## Historical Production Integration
 
-OVNI is installed and the technical test works. Production integration still
-needs the final motion, transitions, audio mix, colour metadata, exact frame
-clock and full montage QA. No complete historical episode is claimed ready.
-The old renderer remains unchanged as a comparison and recovery path.
+`production/historical_renderer.py` routes Edo Daily, Aztec Daily, Babylon Daily,
+Imperial China Daily and Ottoman Daily to `services/render_ovni.py`. The five
+narration manifests carry their channel and `render_backend: ovni`; their
+narration-only phase still prevents premature full-episode rendering. Final
+authored episode manifests must retain those fields. Other channels stay on
+the existing renderer. An explicit `render_backend: studio` is available for
+comparison, never an automatic fallback after a GPU failure.
+
+The wrapper preserves the voice-derived integer frame clock, centre/corner
+zooms, four pans, cuts and short fades. Fades consume frames at the start of the
+next shot, not narration time. The existing final audio pass still handles
+voice normalization, music ducking, effects and the audio tail; it copies the
+GPU-encoded picture rather than encoding it again. H.264 VUI declares the
+upstream converter's limited-range BT.709 colour matrix explicitly.
+
+Each render starts one GPU child process, retaining at most two scene images.
+Cancellation kills and waits for that child. Cache keys include actual image
+hashes, camera/frame settings, wrapper/worker sources and compiled kernel hash.
+Picture reuse requires the completed worker receipt, frame count and file hash.
+Progress-file replacement retries brief Windows locks; a locked progress file
+cannot abort the encode. A missing runtime/kernel or worker failure is visible.
+`OVNI_PYTHON` can override the isolated runtime executable.
+
+Nonopaque images require normalization and review before this path. Existing
+full-sized RGB frames are passed through unchanged. Board layouts, graphic
+overlays, effects layers and burned-in captions are explicitly rejected rather
+than silently discarded. The backend never writes prompts, swaps references,
+approves an image or declares a movie publication-ready.
+
+## Full Excerpt Comparison
+
+Same 36 manually reviewed Edo shots, 180.62 seconds of actual narration plus
+0.4-second tail, 1920x1080 at 30 fps, 2.5 percent zoom, 0.15-second fades and
+identical voice normalization. Neither picture cache was reused:
+
+- Existing studio renderer: 69.138 seconds.
+- Integrated OVNI renderer: 32.263 seconds, including worker startup, image
+  checks, GPU encoding, muxing and final audio mix; GPU worker 21.215 seconds.
+- About 2.14x faster on this measured workload. Voice extraction and final QA
+  are outside both render timers. Inputs were already reviewed RGB frames.
+- Studio uses CRF 18; OVNI uses NVENC P5 at 12 Mbps. Camera interpolation and
+  encoders differ, so this is not an identical-quality or universal speed claim.
+
+The original reviewed excerpt is preserved. The separate GPU excerpt is:
+`output/historical-01-2026-10-08/edo-daily/Edo-Daily-01-EXTRAIT-3min-OVNI.mp4`.
+Its manifest is `chaines/edo-daily/01-production-2026-10-08/review-excerpt-ovni.json`.
+Full-episode assets and creative checks remain unfinished.
+
+```powershell
+$env:PYTHONPATH = (Get-Location).Path
+./venv/Scripts/python.exe production/review_excerpt.py chaines/edo-daily/01-production-2026-10-08/review-excerpt-ovni.json --stage prepare
+# Keep the existing manual format review only when every frame hash matches.
+./venv/Scripts/python.exe production/review_excerpt.py chaines/edo-daily/01-production-2026-10-08/review-excerpt-ovni.json --stage render
+./venv/Scripts/python.exe production/review_excerpt.py chaines/edo-daily/01-production-2026-10-08/review-excerpt-ovni.json --stage qa
+$env:OVNI_GPU_TESTS = '1'
+./venv/Scripts/python.exe -m unittest discover -s production -p 'test_*.py'
+```
+
+The opt-in actual GPU test verifies a 90-frame fixture, red-to-blue blend at
+start/middle/end, colour metadata and decoded pixels, audio presence, completed
+cache reuse and cancellation. This technical fixture is not content for upload.
+
+Final GPU excerpt QA: full decode without errors, 5,431 video frames, constant
+30 fps, 1920x1080, BT.709 limited range, picture 181.033333 seconds and audio
+181.020000 seconds. Codex viewed all 108 scene captures on six contact sheets;
+no renderer-added black areas or visible corruption. The original headband-knot
+continuity caution remains; no perfect creative continuity or listening review
+is claimed. Review ledger: `work/historical-01-2026-10-08/edo-daily/review-excerpt-ovni/montage-review.json`.
+Export SHA256: `192be7aab782624de7e860aaedfcd8349fec4a150f3124487cffdf2ecd7854ef`.
+All 56 focused tests pass, including the actual GPU/mux/cache/cancellation test.

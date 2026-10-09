@@ -1,5 +1,19 @@
 # Journal des vidéos
 
+## Historical Daily - OVNI integration, 9 October 2026
+
+OVNI is now the default picture renderer for the five manually authored
+historical channels, without frontend or prompting changes. The same 36-shot
+Edo excerpt renders in 32.263 seconds versus 69.138 seconds with the old engine,
+about 2.14x on this workload; encoder quality settings differ. Audio mix, fades,
+voice-derived frame clock and explicit creative gates remain.
+GPU excerpt: `output/historical-01-2026-10-08/edo-daily/Edo-Daily-01-EXTRAIT-3min-OVNI.mp4`.
+5431 frames, 1080p30, full decode clean, 108 captures manually viewed; 56 tests
+pass including real GPU blend/colour/audio/cache/cancellation. The original
+headband continuity caution remains and no listening review is claimed.
+This is still only an excerpt. All five full films remain unfinished; no upload
+or publication. See `production/OVNI.md` for installation, measurements and QA.
+
 ## Scene Analysis Guy — Tony contre Richie / The Jacket — 9 octobre 2026
 
 **Premier long terminé et livré : https://gofile.io/d/mdNDwQQ4**.
