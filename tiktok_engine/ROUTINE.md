@@ -42,7 +42,9 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 - Le bloc `voice` reste identique : Tenko `0bKGtCCpdKSI5NjGhU3z`, `eleven_v4`, vitesse 1,06.
 - **Les 2 premières secondes accrochent** : le personnage en grand portrait pixel claque dès la
   première image, avec la phrase choc.
-- Environ 1 min 20, avec « vous ». **Pas d'outro** : la vidéo s'arrête sur sa chute.
+- **Plus d'une minute obligatoire** (TikTok ne rémunère que les vidéos de plus d'une minute) : viser
+  1 min 10 à 1 min 30, soit **200 à 240 mots** de `say` au total. `zernio.py` refuse une vidéo de
+  moins de 61 s. Avec « vous ». **Pas d'outro** : la vidéo s'arrête sur sa chute.
 - `caption` : une phrase et 4 hashtags, sans émoji ni sources.
 
 ## 3. Images (Algrow, 1 crédit l'image)

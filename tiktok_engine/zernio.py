@@ -4,6 +4,7 @@
     python tiktok_engine/zernio.py creator-info                # réglages permis par le compte TikTok
     python tiktok_engine/zernio.py schedule <dossier> --at 2026-10-10T07:00 [--cover 1]
     python tiktok_engine/zernio.py posts                       # posts programmés ou publiés
+    python tiktok_engine/zernio.py unschedule <zernio.json>    # annule un post programmé (pour le refaire)
 
 <dossier> = dossier de rendu de build.py (video.mp4, description.txt, covers/). L'heure est en
 heure de Bruxelles. Clé : ZERNIO_API_KEY (variable d'environnement ou .env), jamais dans le code.
@@ -91,6 +92,19 @@ def settings(account_id, draft=False):
     }
 
 
+MIN_SECONDS = 61   # TikTok ne rémunère que les vidéos de plus d'une minute
+
+
+def duration(path):
+    """Durée de la vidéo en secondes (ffmpeg d'imageio_ffmpeg)."""
+    import re
+    import subprocess
+    import imageio_ffmpeg
+    out = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-i", path], capture_output=True, text=True).stderr
+    h, m, sec = re.search(r"Duration: (\d+):(\d+):([\d.]+)", out).groups()
+    return int(h) * 3600 + int(m) * 60 + float(sec)
+
+
 def schedule(folder, at, cover=1, draft=False):
     folder = os.path.abspath(folder)
     record = os.path.join(folder, "zernio.json")
@@ -99,6 +113,9 @@ def schedule(folder, at, cover=1, draft=False):
         print(f"déjà programmée : {done['post_id']} pour {done['at']} ({done['status']})")
         return done
     video = os.path.join(folder, "video.mp4")
+    length = duration(video)
+    if length < MIN_SECONDS:
+        raise SystemExit(f"vidéo trop courte : {length:.1f} s (il faut plus de {MIN_SECONDS} s) ; rallonger le script")
     caption = open(os.path.join(folder, "description.txt"), encoding="utf-8").read().strip()
     covers = sorted(glob.glob(os.path.join(folder, "covers", "*.png")))
     account = tiktok_account()
@@ -124,7 +141,7 @@ def schedule(folder, at, cover=1, draft=False):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["accounts", "creator-info", "schedule", "posts"])
+    ap.add_argument("cmd", choices=["accounts", "creator-info", "schedule", "posts", "unschedule"])
     ap.add_argument("folder", nargs="?")
     ap.add_argument("--at", help="heure de Bruxelles, ex. 2026-10-10T07:00")
     ap.add_argument("--cover", type=int, default=1, help="numéro de la miniature (covers/, 1 = la 1re)")
@@ -136,6 +153,11 @@ def main():
     elif a.cmd == "creator-info":
         print(json.dumps(api("GET", f"/accounts/{tiktok_account()['_id']}/tiktok/creator-info?mediaType=video"),
                          ensure_ascii=False, indent=2))
+    elif a.cmd == "unschedule":
+        record = json.load(open(a.folder, encoding="utf-8"))
+        print(api("DELETE", f"/posts/{record['post_id']}"))
+        os.remove(a.folder)
+        print(f"annulé : {record['post_id']} ({record['at']}) ; {a.folder} supprimé")
     elif a.cmd == "posts":
         print(json.dumps(api("GET", "/posts"), ensure_ascii=False, indent=2)[:6000])
     else:
