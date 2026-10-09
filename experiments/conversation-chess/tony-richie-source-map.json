@@ -1,0 +1,369 @@
+{
+  "schema": "conversation-chess-actual-three-episode-edl-v1",
+  "status": "Actual source edit, quality reviewed; final movie review and delivery still pending.",
+  "production_render_allowed_after_root_quality_acceptance": true,
+  "master_fps": 30,
+  "sources": {
+    "03": {
+      "id": "s02e03",
+      "file": "the-sopranos-s02e03-english-acquired.mp4",
+      "sha256": "941ae249547c50175f666fdcbbf66ab64e72466f8f7e9307591d44c26ff5d3e1",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "final_quality_acceptance": "Native maximum 720p visually reviewed; full A/V decode passed. Not claimed as 1080p."
+    },
+    "06": {
+      "id": "s02e06",
+      "file": "the-sopranos-s02e06-english-acquired.mp4",
+      "sha256": "68f1a8cebe052c11bc10143404ed681f5e34327ac7b9cb4b7bdf4a6c99a70194",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "final_quality_acceptance": "Native maximum 720p visually reviewed; full A/V decode passed. Not claimed as 1080p."
+    },
+    "08": {
+      "id": "s02e08",
+      "file": "the-sopranos-s02e08-english-acquired.mp4",
+      "sha256": "f639555648e1f66131107c9f8ff1cf4b618de7cd9824eac1c9641fa6465fc54f",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "final_quality_acceptance": "Native maximum 720p visually reviewed; full A/V decode passed. Not claimed as 1080p."
+    }
+  },
+  "source_map": [
+    {
+      "kind": "source",
+      "id": "return",
+      "chapter_title": "OLD REPUTATION, NEW BOSS",
+      "episode": "S02E03",
+      "file": "the-sopranos-s02e03-english-acquired.mp4",
+      "source_in": 1226.7,
+      "source_out": 1373.5,
+      "duration_frames": 4404,
+      "master_in_frames": 0,
+      "master_out_frames": 4404,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": "Richie",
+      "source_sha256": "941ae249547c50175f666fdcbbf66ab64e72466f8f7e9307591d44c26ff5d3e1",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 0.0,
+      "master_out": 146.8,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "THE RULES STILL APPLY",
+      "chapter": "warning",
+      "duration_frames": 90,
+      "master_in_frames": 4404,
+      "master_out_frames": 4494,
+      "master_in": 146.8,
+      "master_out": 149.8
+    },
+    {
+      "kind": "source",
+      "id": "warning",
+      "chapter_title": "THE RULES STILL APPLY",
+      "episode": "S02E03",
+      "file": "the-sopranos-s02e03-english-acquired.mp4",
+      "source_in": 2882.3,
+      "source_out": 2930.9,
+      "duration_frames": 1458,
+      "master_in_frames": 4494,
+      "master_out_frames": 5952,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "941ae249547c50175f666fdcbbf66ab64e72466f8f7e9307591d44c26ff5d3e1",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 149.8,
+      "master_out": 198.4,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "THE EXECUTIVE GAME",
+      "chapter": "game-inside",
+      "duration_frames": 90,
+      "master_in_frames": 5952,
+      "master_out_frames": 6042,
+      "master_in": 198.4,
+      "master_out": 201.4
+    },
+    {
+      "kind": "source",
+      "id": "game-inside",
+      "chapter_title": "THE EXECUTIVE GAME",
+      "episode": "S02E06",
+      "file": "the-sopranos-s02e06-english-acquired.mp4",
+      "source_in": 1705.9,
+      "source_out": 1744.0,
+      "duration_frames": 1143,
+      "master_in_frames": 6042,
+      "master_out_frames": 7185,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "68f1a8cebe052c11bc10143404ed681f5e34327ac7b9cb4b7bdf4a6c99a70194",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 201.4,
+      "master_out": 239.5,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "source",
+      "id": "game-outside",
+      "chapter_title": "THE EXECUTIVE GAME",
+      "episode": "S02E06",
+      "file": "the-sopranos-s02e06-english-acquired.mp4",
+      "source_in": 1776.65,
+      "source_out": 1821.0,
+      "duration_frames": 1330,
+      "master_in_frames": 7185,
+      "master_out_frames": 8515,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "68f1a8cebe052c11bc10143404ed681f5e34327ac7b9cb4b7bdf4a6c99a70194",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 239.5,
+      "master_out": 283.8333333333333,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "THE COST OF DISRESPECT",
+      "chapter": "apology",
+      "duration_frames": 90,
+      "master_in_frames": 8515,
+      "master_out_frames": 8605,
+      "master_in": 283.8333333333333,
+      "master_out": 286.8333333333333
+    },
+    {
+      "kind": "source",
+      "id": "apology",
+      "chapter_title": "THE COST OF DISRESPECT",
+      "episode": "S02E06",
+      "file": "the-sopranos-s02e06-english-acquired.mp4",
+      "source_in": 2293.58,
+      "source_out": 2335.4,
+      "duration_frames": 1255,
+      "master_in_frames": 8605,
+      "master_out_frames": 9860,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "68f1a8cebe052c11bc10143404ed681f5e34327ac7b9cb4b7bdf4a6c99a70194",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 286.8333333333333,
+      "master_out": 328.6666666666667,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "THE JACKET",
+      "chapter": "jacket-gift",
+      "duration_frames": 90,
+      "master_in_frames": 9860,
+      "master_out_frames": 9950,
+      "master_in": 328.6666666666667,
+      "master_out": 331.6666666666667
+    },
+    {
+      "kind": "source",
+      "id": "jacket-gift",
+      "chapter_title": "THE JACKET",
+      "episode": "S02E08",
+      "file": "the-sopranos-s02e08-english-acquired.mp4",
+      "source_in": 727.95,
+      "source_out": 859.2,
+      "duration_frames": 3938,
+      "master_in_frames": 9950,
+      "master_out_frames": 13888,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "f639555648e1f66131107c9f8ff1cf4b618de7cd9824eac1c9641fa6465fc54f",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 331.6666666666667,
+      "master_out": 462.93333333333334,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "SUNDAY DINNER",
+      "chapter": "jacket-dinner",
+      "duration_frames": 90,
+      "master_in_frames": 13888,
+      "master_out_frames": 13978,
+      "master_in": 462.93333333333334,
+      "master_out": 465.93333333333334
+    },
+    {
+      "kind": "source",
+      "id": "jacket-dinner",
+      "chapter_title": "SUNDAY DINNER",
+      "episode": "S02E08",
+      "file": "the-sopranos-s02e08-english-acquired.mp4",
+      "source_in": 1273.45,
+      "source_out": 1289.35,
+      "duration_frames": 477,
+      "master_in_frames": 13978,
+      "master_out_frames": 14455,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "f639555648e1f66131107c9f8ff1cf4b618de7cd9824eac1c9641fa6465fc54f",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 465.93333333333334,
+      "master_out": 481.8333333333333,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "WHERE IS THE JACKET?",
+      "chapter": "jacket-public",
+      "duration_frames": 90,
+      "master_in_frames": 14455,
+      "master_out_frames": 14545,
+      "master_in": 481.8333333333333,
+      "master_out": 484.8333333333333
+    },
+    {
+      "kind": "source",
+      "id": "jacket-public",
+      "chapter_title": "WHERE IS THE JACKET?",
+      "episode": "S02E08",
+      "file": "the-sopranos-s02e08-english-acquired.mp4",
+      "source_in": 1623.7,
+      "source_out": 1663.2,
+      "duration_frames": 1185,
+      "master_in_frames": 14545,
+      "master_out_frames": 15730,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "f639555648e1f66131107c9f8ff1cf4b618de7cd9824eac1c9641fa6465fc54f",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 484.8333333333333,
+      "master_out": 524.3333333333334,
+      "actual_quality_accepted_for_final": true
+    },
+    {
+      "kind": "chapter_card",
+      "title": "A DIFFERENT OWNER",
+      "chapter": "jacket-payoff",
+      "duration_frames": 90,
+      "master_in_frames": 15730,
+      "master_out_frames": 15820,
+      "master_in": 524.3333333333334,
+      "master_out": 527.3333333333334
+    },
+    {
+      "kind": "source",
+      "id": "jacket-payoff",
+      "chapter_title": "A DIFFERENT OWNER",
+      "episode": "S02E08",
+      "file": "the-sopranos-s02e08-english-acquired.mp4",
+      "source_in": 2029.45,
+      "source_out": 2073.0,
+      "duration_frames": 1306,
+      "master_in_frames": 15820,
+      "master_out_frames": 17126,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "actual_quality_acceptance_pending_root": false,
+      "opening_player": null,
+      "source_sha256": "f639555648e1f66131107c9f8ff1cf4b618de7cd9824eac1c9641fa6465fc54f",
+      "source_reviewed": true,
+      "review_method": "Private actual episode timings and scene evidence reviewed; original source hash retained.",
+      "master_in": 527.3333333333334,
+      "master_out": 570.8666666666667,
+      "actual_quality_accepted_for_final": true
+    }
+  ],
+  "duration_plan": {
+    "raw_original_scene_seconds": 549.867,
+    "chapter_card_seconds": 21,
+    "analysis_count": 40,
+    "analysis_seconds": 312.0,
+    "intro_seconds": 16,
+    "outro_seconds": 12,
+    "total_seconds": 910.867,
+    "total_display": "15m11s"
+  },
+  "counts": {
+    "book": 5,
+    "best": 8,
+    "mistake": 8,
+    "great": 3,
+    "excellent": 2,
+    "good": 5,
+    "inaccuracy": 4,
+    "blunder": 3,
+    "brilliant": 2
+  },
+  "comic_cue_count": 17,
+  "qa_notes": [
+    "Richie firstactualspeaker=White; TonyBlackfixedallchapters.",
+    "No Tony/Janiceargument, no secondcopyofdonation, no lowrescompilation clips.",
+    "Chris/Richieintervention playsascontext; no dubiousTonyannotation or gradedthirdplayer.",
+    "FullE3sistertail showsTonyadmittingmisinterpretation; no claimRichieintentionallybaitedhim.",
+    "Giftpayoff supportsfailedstatusstrategy, notprovenTonymalice; thanksareforTVnotjacket.",
+    "No comiccue overBeansieinjuryorhospitaldiscipline.",
+    "All9officialcategories; noMiss/purpleInteresting.",
+    "AllscoreseditorialWhitepositive; Best/Greatneutral; type/readholds >=minimum.",
+    "Rootmasterprep shouldpreserve7cards/inheritedbar; samechapterpokerinside\u2192outside hasnocard.",
+    "Sourcehash forpreparedmastermustbe filled aftercreation; explicitnative720reviewmetadata present."
+  ],
+  "timeline": "tony-richie-long-timeline.json",
+  "source_master_sha256": "c506faebca8192bd46a72f23c63705dc8f34edce419ce609cc1c1fa92212b042",
+  "source_master_dimensions": [
+    1280,
+    720
+  ],
+  "source_master_frames": 17126,
+  "target_film_duration_frames": 27326,
+  "master_duration_frames": 17126
+}

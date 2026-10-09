@@ -1,5 +1,30 @@
 # Selected first long: Tony / Richie and The Jacket
 
+## Current actual-source edit
+
+The complete English originals for S2E3, S2E6 and S2E8 are acquired, fully
+decoded and cached privately. They are native 1280×720, the highest quality
+available to this account, with no subtitle track. Actual native images of
+the chosen scenes were reviewed; the old soft/watermarked clips are superseded.
+
+Use [the actual source map](tony-richie-source-map.json) and
+[the 40-move timeline](tony-richie-long-timeline.json). Nine intact fragments
+cover Richie's return, the Beansie warning, poker dispute and apology, then
+the jacket gift, dinner, public demand and later discovery. Seven chapter
+cards separate the jumps. The prepared source master is 17,126 frames at
+30 fps; intro, 40 analysis holds and outro give **15 min 11 s**.
+
+**Richie opens White; Tony remains Black.** This was checked on the actual
+opening footage and local English ASR. Neither a later first annotation nor
+the historical donation-only opener changes these assignments. The ratings
+are original editorial interpretations, not a chess engine result.
+
+The master is assembled and its full audio/video decode passed. Final native
+project preparation is running; a complete film has not yet been delivered.
+The notes below retain the earlier research and abandoned source imports.
+
+## Earlier research and imports
+
 **User-approved subject, 9 October 2026.** Produce the video first; titles and
 thumbnail production follow later. English original dialogue, English written
 analysis, no voice-over. Retain the validated Tony pawn, musical intro, typing

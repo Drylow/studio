@@ -11,25 +11,29 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.
 Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_LONG_OPTIONS.md).
-Le [draft éditorial détaillé](tony-richie-long-editorial-draft.json) comporte
-37analyses originales sur sept passages chronologiques distincts, environ
-14min51s avec guide, chapitres et outro. **Ce n'est pas un montage terminé** :
-les sourcesHD et les fins de dialogues restent à vérifier, les notes sont
-marquées non relues et le rendu final reste interdit. Les alias`SOURCE_*`
-référencent les sources publiques identifiées, pas des médias inclus dansGit.
+Les trois épisodes S2E3, S2E6 et S2E8 sont maintenant acquis et contrôlés :
+originaux anglais natifs 1280×720, sans sous-titres intégrés. C'est le maximum
+proposé à ce compte Naka ; les anciens clips compressés sont remplacés.
+Le [découpage actuel](tony-richie-source-map.json) comporte neuf extraits,
+sept cartes de chapitre et [40 analyses originales](tony-richie-long-timeline.json).
+Durée prévue : **15 min 11 s**. Richie ouvre réellement : Richie est Blanc,
+Tony est Noir pendant tout le film. Le master de scènes est assemblé et
+décodé intégralement ; la préparation du projet natif est en cours.
+**Le MP4 complet n'est pas encore livré.** Le précédent
+[draft de 37 coups](tony-richie-long-editorial-draft.json) reste une archive,
+pas le découpage utilisé. Les épisodes, repères de dialogue et accès restent privés.
 Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
 Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
 reprennent le pion approuvé et présentent un format ouvert aux séries/animés.
 La [livraison Discord](DISCORD_DELIVERY.md) envoie les aperçus et paquets finaux
 avecGoFile, titre, description, miniature et crédits dans le salon dédié.
-Son style v3 est validé ; la qualité des clips et le tableau final sont rejetés.
+Son style v3 est validé ; les anciennes sources et l'ancien tableau sont rejetés.
 `pilot-tony-janice-v4.json` corrige les camps et prépare les règles, sans export
 du pilote complet. La capture du vrai tableau final Tuco fournie par l'utilisateur
 a été examinée ; **une nouvelle outro séparée de12s est exportée et contrôlée**.
 La scène où Richie offre la veste est désormais téléchargée en720p réel et
 le court passage où il la découvre sur quelqu'un d'autre en **1920×1080 réel**.
-Les autres sources finales de meilleure qualité restent à obtenir par notre
-pipeline, sans demander à l'utilisateur de fournir les clips.
+Ces courts imports historiques ne servent pas au nouveau long Naka.
 La [méthode d'import vérifiée](SOURCE_IMPORT.md) conserve le contrat API et
 les contrôles réels, sans clés ni fichiers vidéo dans Git.
 
@@ -86,8 +90,14 @@ s’affiche du côté qui a l’avantage ; le passage de barre dure 0,5 s. Les v
 Best/Great laissent le score inchangé. La validation refuse un mouvement de score
 contradictoire avec la catégorie et le locuteur.
 
-La nouvelle source réelle doit avoir son audio et mesurer au moins1080p, avec
-`source_quality.accepted_for_final:true` après examen visuel. Le fichier du test
+La nouvelle source réelle doit avoir son audio et viser au moins1080p par défaut,
+avec `source_quality.accepted_for_final:true` après examen visuel. Une exception
+native720 explicite est disponible pour les originaux Naka réellement proposés
+à cette résolution maximale : `source_quality.native_hd_review` exige fournisseur,
+maximum disponible, revue visuelle, absence de sous-titres incrustés/watermark,
+absence d'agrandissement de l'original et justification. Les preuves sont
+conservées jusqu'au bundle natif. Une simple cible720 ne valide pas la qualité.
+Le fichier du test
 est1280×720 mais très compressé (~0,687Mb/s vidéo) ; il est refusé pour la suite.
 La résolution seule ne prouve pas le détail. `--allow-low-res-preview` permet
 seulement un brouillon technique marqué ; un cadre1080p ne restaure pas les détails
@@ -194,6 +204,25 @@ L'ancien manifeste sans musique garde ses cinq pistes ; la version musicale
 en possède six, avec indices et cibles calculés automatiquement.
 
 ## Préparer les pistes Kdenlive
+
+Pour un long composé de plusieurs scènes, le préparateur local conserve les
+dimensions natives, vérifie les SHA des originaux et les durées en images,
+insère les chapitres et ne réencode l'audio AAC qu'une fois. Il ne télécharge
+aucun média et ne remplace pas les contrôles de l'export final.
+
+```bash
+python experiments/conversation-chess/prepare-source-master.py \
+  --source-map experiments/conversation-chess/tony-richie-source-map.json \
+  --source-root output/conversation-chess/source-cache \
+  --out output/conversation-chess/tony-richie-master
+```
+
+Le reçu contient le SHA du master réellement écrit. S'il diffère du SHA
+enregistré dans la timeline, vérifier le nouveau master et mettre à jour
+`source_sha256` avant le préflight ; ne pas supprimer le contrôle d'empreinte.
+`--verify-only` recontrôle un master existant sans réencodage. Pour un autre
+duel, fournir son propre découpage et `--heading`, vérifier l'audio sélectionné
+et conserver ses camps. Les originaux ne sont pas inclus dans Git.
 
 Les commandes historiques ci-dessous reproduisent une préparation technique,
 pas une version finale acceptée. Pour les nouveaux projets, partir de
