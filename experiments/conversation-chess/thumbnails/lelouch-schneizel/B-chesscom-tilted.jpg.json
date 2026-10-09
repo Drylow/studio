@@ -1,0 +1,53 @@
+{
+  "original": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\experiments\\conversation-chess\\thumbnails\\lelouch-schneizel\\B-calcul.png",
+  "original_sha256": "67cc366b64e093c15ae94634232273e8c2224314b6abeb9b20f5ec149fac768f",
+  "clean": "C:\\Users\\ytbyt\\Documents\\ChatGPT\\2D Slop\\experiments\\conversation-chess\\thumbnails\\lelouch-schneizel\\B-clean-corners.png",
+  "clean_sha256": "15a1bb5a77a8adcacd521452cf5a2f02e2c223b8528e01ecad42a68abe72167a",
+  "output_sha256": "040b5cd3fedbdd3319c4d0424f56ed621cb4e100a612bbb192f75a44bd106e47",
+  "bytes": 392468,
+  "format": "image/jpeg",
+  "pixel_comparison_stage": "Canvas composition before file encoding; JPEG is lossy.",
+  "width": 1672,
+  "height": 941,
+  "patches": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 280,
+      "h": 288
+    },
+    {
+      "x": 1392,
+      "y": 0,
+      "w": 280,
+      "h": 288
+    }
+  ],
+  "placements": [
+    {
+      "x": 4,
+      "y": 3,
+      "w": 250,
+      "h": 263.8888888888889,
+      "rotation_degrees": 10
+    },
+    {
+      "x": 1418,
+      "y": 3,
+      "w": 250,
+      "h": 263.8888888888889,
+      "rotation_degrees": -10
+    }
+  ],
+  "differencesOutsidePatches": 0,
+  "icons": [
+    {
+      "id": "brilliant",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ]
+}
