@@ -6,6 +6,12 @@
   séries/animés ; avatar = original carré du pionTony déjà approuvé, sans
   modification, bio anglaise dans `experiments/conversation-chess/channel-profile/`.
   Profil prêt à copier, aucun compteYouTube créé ni profil public modifié.
+- **Livraison Discord demandée et testée.** Webhook dédié
+  `DISCORD_WEBHOOK_SCENE_ANALYSIS_GUY` dans les `.env` privés local/serveur,
+  aucune valeur dansGit. L'outro12s a été envoyée avecGoFile, kit et crédits,
+  clairement marquée aperçu. Les finales auront aussi leur miniature et les
+  informations anglaises prêtes à copier. Procédure et contrôles :
+  `experiments/conversation-chess/DISCORD_DELIVERY.md`. Le long reste à monter.
 - **Premier long choisi : Tony contre Richie, autour de The Jacket.** Tony/Janice
   reste l'essai de montage. Titre/miniature plus tard ; priorité aux clips et
   au montage. Découpage : `experiments/conversation-chess/PLAN_TONY_RICHIE.md`.

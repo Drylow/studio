@@ -7,6 +7,8 @@ Voir [le découpage](PLAN_TONY_RICHIE.md) et [la comparaison des scènes](FIRST_
 Le titre et la miniature viennent après la vidéo. Tony/Janice reste un test.
 Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
 reprennent le pion approuvé et présentent un format ouvert aux séries/animés.
+La [livraison Discord](DISCORD_DELIVERY.md) envoie les aperçus et paquets finaux
+avecGoFile, titre, description, miniature et crédits dans le salon dédié.
 Son style v3 est validé ; la qualité des clips et le tableau final sont rejetés.
 `pilot-tony-janice-v4.json` corrige les camps et prépare les règles, sans export
 du pilote complet. La capture du vrai tableau final Tuco fournie par l'utilisateur

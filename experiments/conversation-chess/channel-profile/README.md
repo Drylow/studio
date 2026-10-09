@@ -19,3 +19,8 @@ La mascotteTony reste la voix écrite du format même quand une autre série
 est analysée. Les dialogues et évaluations restent en anglais, sans voix off.
 Pour les descriptions des vidéos, conserver aussi les crédits des musiques
 effectivement utilisées, fournis dans `MUSIC_CREDITS.txt` avec chaque montage.
+
+Livraison choisie ensuite par l'utilisateur : [Discord dédié](../DISCORD_DELIVERY.md),
+avec lienGoFile, titre, description, miniature et crédits, pour publication
+manuelle surYouTube. `DISCORD_WEBHOOK_SCENE_ANALYSIS_GUY` reste dans les
+configurations privées ; aucune valeur dans ce dossier.
