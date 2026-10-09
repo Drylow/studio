@@ -1,5 +1,7 @@
 # Conversation review — montage local
 
+**Sur Windows : [installation, lancement et premiers épisodes anime](WINDOWS.md).**
+
 ## État actuel et premier long
 
 **Tony contre Richie autour de The Jacket** est choisi par l'utilisateur.

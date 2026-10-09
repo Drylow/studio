@@ -1,0 +1,2 @@
+# Icon hashes refer to the original SVG bytes; Windows must keep LF endings.
+assets/chesscom/*.svg text eol=lf

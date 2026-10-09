@@ -1,0 +1,12 @@
+{
+  "name": "conversation-chess-local",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup-browser": "playwright install chromium",
+    "check": "node --test runtime.test.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.55.1"
+  }
+}

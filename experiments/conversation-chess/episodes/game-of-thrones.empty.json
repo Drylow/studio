@@ -1,0 +1,26 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "demo": false,
+  "source_reviewed": false,
+  "source_sha256": "",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": false
+  },
+  "source_in": null,
+  "source_out": null,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "annotations": [],
+  "black_label": "Second speaker",
+  "white_label": "First speaker",
+  "opening": {
+    "speaker": "white",
+    "label": "First speaker",
+    "reviewed": false
+  },
+  "analysis_background": "replay",
+  "initial_score_text": "0.0",
+  "title": "Game of Thrones \u2014 conversation review",
+  "editorial_status": "Select the dialogue, then review the clean 1080p English source and its first speaker before assigning sides."
+}

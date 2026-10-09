@@ -3,15 +3,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createRequire } from 'node:module';
+import { mediaBinary, loadChromium, browserOptions } from './runtime.mjs';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { writeMusicCredits } from './music-credits.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
-const require = createRequire(path.join(root, 'frontend/package.json'));
-const { chromium } = require('playwright');
+const ffmpeg = mediaBinary('ffmpeg');
+const ffprobe = mediaBinary('ffprobe');
 const args = process.argv.slice(2);
 function option(name, fallback = '') {
   const i = args.indexOf(name);
@@ -31,7 +31,7 @@ if (!sourceArg || !timelineArg) throw new Error('Use --source /local/video.mp4 -
 if (/^[a-z]+:\/\//i.test(sourceArg)) throw new Error('Only an existing local source file is accepted.');
 const source = path.resolve(sourceArg), timelinePath = path.resolve(timelineArg);
 if (!(await fs.stat(source)).isFile()) throw new Error('Source must be a regular local file.');
-const output = path.resolve(option('--out', '/tmp/edgerunners-conversation-chess-clip'));
+const output = path.resolve(option('--out', path.join(root, 'work/conversation-chess/prepared')));
 await fs.mkdir(output, { recursive: true });
 const refreshIntro = args.includes('--refresh-intro');
 const refreshProjectIntro = args.includes('--refresh-project-intro');
@@ -50,7 +50,7 @@ if (outroSeconds && spec.demo !== true && !args.includes('--allow-legacy-opening
 if ((outroSeconds || spec.music) && !prepareProject && !validateOnly) throw new Error('Music and recap use the native editor workflow: add --prepare-project.');
 if ((outroSeconds || spec.music) && refreshProjectIntro) throw new Error('Build a complete project when adding music or a recap.');
 const ratingSchema = JSON.parse(await fs.readFile(path.join(here, 'ratings.json'), 'utf8'));
-const meta = JSON.parse(run('/usr/bin/ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', source], true));
+const meta = JSON.parse(run(ffprobe, ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', source], true));
 const sourceDuration = Number(meta.format.duration);
 const hasAudio = meta.streams.some(s => s.codec_type === 'audio');
 const video = meta.streams.find(s => s.codec_type === 'video');
@@ -184,12 +184,12 @@ for (const rating of ratingSchema.categories) {
 const { loadSfxManifest, renderAnalysisAudio } = await import('./sfx.mjs');
 const sfxManifestPath = path.resolve(option('--sfx-manifest', path.join(here, 'assets/sfx/manifest.json')));
 const sfxManifest = await loadSfxManifest(sfxManifestPath);
-const browser = await chromium.launch({ executablePath: '/usr/bin/chromium', headless: true, args: ['--disable-dev-shm-usage'] });
+const browser = await loadChromium().launch(browserOptions(option('--chromium', '')));
 const overlays = [], annotationFrames = [];
 const introFrameDirectory = path.join(output, 'intro-overlay-frames');
 const introBackground = path.join(output, 'intro-source-frame.png');
 const outroFrameDirectory = path.join(output, 'outro-frames');
-run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', source, '-frames:v', '1', '-update', '1', introBackground]);
+run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', source, '-frames:v', '1', '-update', '1', introBackground]);
 const introBytes = await fs.readFile(introBackground);
 try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
@@ -251,7 +251,7 @@ if (prepareProject) {
   }
   function alphaMovie(directory, duration, name) {
     const dest = path.join(output, name + '.mov');
-    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(graphicsFps), '-i', path.join(directory, 'frame_%05d.png'),
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(graphicsFps), '-i', path.join(directory, 'frame_%05d.png'),
       '-an', '-vf', 'format=argb', '-c:v', 'qtrle', '-threads', '2', '-r', String(fps), '-t', String(duration), dest]);
     return dest;
   }
@@ -263,16 +263,16 @@ if (prepareProject) {
     if (!/^[a-f0-9]{64}$/.test(config.sha256 || '') || createHash('sha256').update(bytes).digest('hex') !== config.sha256) throw new Error(`Music hash mismatch: ${name}`);
     const gain = config.gain ?? .28, offset = config.start_seconds ?? 0;
     if (!Number.isFinite(gain) || gain < 0 || gain > 1 || !Number.isFinite(offset) || offset < 0) throw new Error('Supply music gain0–1 and a nonnegative start_seconds.');
-    const audio = JSON.parse(run('/usr/bin/ffprobe', ['-v','error','-show_streams','-show_format','-of','json',file], true));
+    const audio = JSON.parse(run(ffprobe, ['-v','error','-show_streams','-show_format','-of','json',file], true));
     if (!audio.streams.some(s => s.codec_type === 'audio') || Number(audio.format.duration) < offset + duration) throw new Error(`Music is too short: ${name}`);
     const dest = path.join(output, `music-${name}.wav`);
-    run('/usr/bin/ffmpeg', ['-hide_banner','-loglevel','error','-y','-ss',String(offset),'-i',file,'-vn','-af',
+    run(ffmpeg, ['-hide_banner','-loglevel','error','-y','-ss',String(offset),'-i',file,'-vn','-af',
       `aresample=48000,volume=${gain},afade=t=in:st=0:d=0.18,afade=t=out:st=${duration-1}:d=1,apad,atrim=end_sample=${Math.round(duration*48000)}`,
       '-c:a','pcm_s16le','-ar','48000','-ac','2',dest]);
     return {music_file:dest, music_title:config.title, music_license:config.license, music_source_sha256:config.sha256, music_gain:gain, music_offset_seconds:offset};
   }
   const introBackgroundFile = path.join(output, 'project-background-intro.png');
-  run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', introBackground,
+  run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-i', introBackground,
     '-vf', 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black', '-frames:v', '1', '-update', '1', introBackgroundFile]);
   addProjectSegment({ kind: 'intro', duration: spec.intro_seconds, background_file: introBackgroundFile,
     graphics_file: alphaMovie(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro'), graphics_type: 'alpha_mov', graphics_frames: introFrameDirectory,
@@ -293,9 +293,9 @@ if (prepareProject) {
     if (duration <= 0) return;
     const label = `project-source-${String(projectSegments.length).padStart(3, '0')}`;
     const backgroundFile = path.join(output, label + '.mkv'), dialogueAudioFile = path.join(output, label + '-dialogue.wav');
-    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', sourceVideoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(projectCursor), '-i', source, '-vf', sourceVideoFilter, '-t', String(duration), ...videoEncoding, backgroundFile]);
     const audioInput = hasAudio ? ['-ss', String(projectCursor), '-i', source] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
-    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
       `aresample=48000,apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - .035)}:d=0.035,atrim=end_sample=${Math.round(duration * 48000)}`,
       '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', dialogueAudioFile]);
     addProjectSegment({ kind: 'source', duration, source_in: projectCursor, source_out: until, background_file: backgroundFile,
@@ -311,7 +311,7 @@ if (prepareProject) {
     const input = analysisBackground === 'freeze' ? ['-ss', String(a.source_at), '-i', source] : ['-ss', String(replayStart), '-t', String(history), '-i', source];
     const stretch = analysisBackground === 'freeze' ? 'select=eq(n\\,0),tpad=stop_mode=clone:stop_duration=9,' : `setpts=${a.hold_seconds / history}*(PTS-STARTPTS),tpad=stop_mode=clone:stop_duration=0.5,`;
     if (analysisBackground === 'loop') throw new Error('--prepare-project supports replay or freeze, not the legacy loop mode.');
-    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...input, '-vf', `${stretch}gblur=sigma=13,${sourceVideoFilter}`, '-t', String(a.hold_seconds), ...videoEncoding, backgroundFile]);
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...input, '-vf', `${stretch}gblur=sigma=13,${sourceVideoFilter}`, '-t', String(a.hold_seconds), ...videoEncoding, backgroundFile]);
     await renderAnalysisAudio({ manifest: sfxManifest, annotation: a, schema: ratingSchema, outputPath: sfxFile });
     addProjectSegment({ kind: 'analysis', duration: a.hold_seconds, source_at: a.source_at, rating: a.rating, speaker: a.speaker,
       comment: a.comment, score_text: a.score_text, control: a.control_after, background_file: backgroundFile,
@@ -330,6 +330,7 @@ if (prepareProject) {
   const projectManifest = path.join(output, 'project-manifest.json');
   const musicAttribution = await writeMusicCredits(projectSegments, output);
   await fs.writeFile(projectManifest, JSON.stringify({ schema: 'conversation-chess-kdenlive-interchange-v1', version: 1,
+    title: spec.title || `${sides.white} / ${sides.black} — conversation review`,
     original_source: source, source_sha256: sourceHash, source_dimensions: [video.width, video.height], source_quality: { minimum_height: minimumSourceHeight, low_res_preview: lowResPreview, accepted_for_final:!lowResPreview, visually_reviewed:sourceQualityReviewed },
     timeline_file: timelinePath, timeline_sha256: createHash('sha256').update(await fs.readFile(timelinePath)).digest('hex'), rating_schema_version: ratingSchema.version,
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
@@ -347,7 +348,7 @@ const encoding = ['-c:v', 'libx264', '-preset', 'fast', '-crf', '17', '-threads'
 function segment(kind, duration, argv, filter, audioMap, afilter, details) {
   // PCM avoids an AAC encoder delay at every editorial freeze/cut.
   const dest = path.join(output, `segment-${String(segments.length).padStart(3, '0')}.mkv`);
-  run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...argv,
+  run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...argv,
     '-filter_complex', filter, '-map', '[out]', '-map', audioMap,
     ...(afilter ? ['-af', afilter] : []), '-t', String(duration), ...encoding, dest]);
   segments.push(dest); events.push({ kind, duration, ...details });
@@ -385,7 +386,7 @@ if (refreshIntro) {
 for (let i = 0; i < annotations.length; i++) {
   const a = annotations[i]; normal(a.source_at);
   const still = path.join(output, `source-freeze-${i}.png`);
-  run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(a.source_at), '-i', source,
+  run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(a.source_at), '-i', source,
     '-frames:v', '1', '-update', '1', still]);
   if (!(await fs.stat(still)).size) throw new Error('Could not extract the reviewed source frame.');
   overlayIndex = 3 + i * 2;
@@ -395,7 +396,7 @@ for (let i = 0; i < annotations.length; i++) {
     const contextSeconds = analysisBackground === 'replay' ? (a.replay_seconds || 3) : .8;
     const loopStart = Math.max(start, a.source_at - contextSeconds), loopDuration = a.source_at - loopStart;
     const moving = path.join(output, `source-loop-${i}.mkv`);
-    run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(loopStart), '-i', source,
+    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(loopStart), '-i', source,
       '-t', String(loopDuration), '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '18', '-r', String(fps),
       '-threads', '2', '-pix_fmt', 'yuv420p', moving]);
     backgroundInput = analysisBackground === 'loop' ? ['-stream_loop', '-1', '-i', moving] : ['-i', moving];
@@ -417,11 +418,11 @@ normal(end);
 const concat = path.join(output, 'segments.txt');
 await fs.writeFile(concat, segments.map(p => `file '${p.replace(/'/g, "'\\''")}'`).join('\n') + '\n');
 const result = path.join(output, 'clip.mp4');
-run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', concat,
+run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', concat,
   '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', result]);
-const finalMeta = JSON.parse(run('/usr/bin/ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', result], true));
-run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-i', result, '-f', 'null', '-']);
-run('/usr/bin/ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', result, '-vf',
+const finalMeta = JSON.parse(run(ffprobe, ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', result], true));
+run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-i', result, '-f', 'null', '-']);
+run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-i', result, '-vf',
   `fps=8/${elapsed},scale=640:360,tile=4x2:padding=8:margin=8:color=0x161a1e`, '-frames:v', '1', '-update', '1', path.join(output, 'contact-sheet.jpg')]);
 const actual = Number(finalMeta.format.duration);
 if (Math.abs(actual - elapsed) > .2) throw new Error(`Unexpected output duration ${actual}; expected ${elapsed}`);

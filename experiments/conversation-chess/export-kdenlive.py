@@ -3,7 +3,7 @@
 
 Input is the separate-media manifest produced by render-clip.mjs --prepare-project.
 The final export is performed by Kdenlive, never by an ffmpeg assembly command.
-Qt/MLT alpha compositing needs a real X11/Wayland display, including an Xvfb one.
+Qt/MLT alpha compositing needs Windows' desktop or a real X11/Wayland display.
 """
 
 import argparse
@@ -19,6 +19,7 @@ import uuid
 from fractions import Fraction
 from pathlib import Path
 import xml.etree.ElementTree as ET
+from urllib.parse import unquote
 
 
 def digest(path):
@@ -31,7 +32,7 @@ def digest(path):
 
 def probe(path):
     result = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_format", "-show_streams", "-of", "json", str(path)],
+        [os.environ.get("CHESS_FFPROBE", "ffprobe"), "-v", "error", "-show_format", "-show_streams", "-of", "json", str(path)],
         check=True, capture_output=True, text=True,
     )
     return json.loads(result.stdout)
@@ -254,7 +255,7 @@ def generate(manifest_path, bundle):
     sequence = ET.SubElement(root, "tractor", id=sequence_uuid, **{"in": "0", "out": str(total - 1)})
     props(sequence, {
         "kdenlive:uuid": sequence_uuid, "kdenlive:control_uuid": sequence_uuid,
-        "kdenlive:clipname": "Tony / Janice — conversation review", "kdenlive:id": 1,
+        "kdenlive:clipname": data.get("title") or " / ".join(data.get("side_colors", {}).values()) or "Conversation review", "kdenlive:id": 1,
         "kdenlive:producer_type": 17, "kdenlive:folderid": 2,
         "kdenlive:duration": smpte(total, fps), "kdenlive:maxduration": total,
         "kdenlive:sequenceproperties.documentuuid": sequence_uuid,
@@ -345,7 +346,7 @@ def generate(manifest_path, bundle):
         "--relocate --bundle /new/path/to/bundle\n"
         "For a manual edit, use Kdenlive's Render command; rebuilding from the input manifest "
         "replaces the generated timeline.\n"
-        "Native rendering needs X11/Wayland (an authenticated Xvfb display is supported).\n"
+        "Native rendering needs the Windows desktop or X11/Wayland (authenticated Xvfb is supported).\n"
         "Keep MUSIC_CREDITS.txt with video deliveries and include its text in the YouTube description.\n"
         "Qt offscreen cannot be used for the transparent overlays in this project.\n",
         encoding="utf-8",
@@ -354,14 +355,19 @@ def generate(manifest_path, bundle):
 
 
 def render(project, destination, report, display=None, xauthority=None):
+    if destination.exists():
+        raise ValueError("Output already exists; use a new --render filename to preserve the previous export")
     env = os.environ.copy()
     if display:
         env["DISPLAY"] = display
     if xauthority:
         env["XAUTHORITY"] = str(Path(xauthority).resolve(strict=True))
-    if not env.get("DISPLAY") and not env.get("WAYLAND_DISPLAY"):
+    windows = os.name == "nt"
+    if not windows and not env.get("DISPLAY") and not env.get("WAYLAND_DISPLAY"):
         raise RuntimeError("Qt/MLT compositing needs X11/Wayland: start authenticated Xvfb or use a graphical session")
-    if env.get("DISPLAY"):
+    if windows:
+        env["QT_QPA_PLATFORM"] = "windows"
+    elif env.get("DISPLAY"):
         env["QT_QPA_PLATFORM"] = "xcb"
     else:
         env["QT_QPA_PLATFORM"] = "wayland"
@@ -370,6 +376,10 @@ def render(project, destination, report, display=None, xauthority=None):
     env["XDG_DATA_HOME"] = str(project.parent / ".render-data")
     preset_name = "Conversation Review — H264 CRF17 AAC192"
     preset_directory = Path(env["XDG_DATA_HOME"]) / "kdenlive" / "export"
+    if windows:
+        # Qt resolves Windows known folders, not substituted XDG/APPDATA paths.
+        # Add our own named preset without overwriting the user's custom profiles.
+        preset_directory = Path(env["LOCALAPPDATA"]) / "kdenlive" / "export"
     preset_directory.mkdir(parents=True, exist_ok=True)
     presets = ET.Element("profiles", version="1")
     group = ET.SubElement(presets, "group", name="Conversation Review", renderer="avformat", type="av")
@@ -377,19 +387,36 @@ def render(project, destination, report, display=None, xauthority=None):
         "f=mp4 movflags=+faststart vcodec=libx264 crf=17 preset=medium g=30 "
         "pix_fmt=yuv420p acodec=aac ab=192k ar=48000 channels=2 threads=4"
     ))
-    ET.ElementTree(presets).write(preset_directory / "customprofiles.xml", encoding="utf-8", xml_declaration=True)
+    preset_file = preset_directory / ("conversation-chess-native.xml" if windows else "customprofiles.xml")
+    ET.ElementTree(presets).write(preset_file, encoding="utf-8", xml_declaration=True)
     destination.parent.mkdir(parents=True, exist_ok=True)
     log = project.parent / "kdenlive-export.log"
-    command = ["/usr/bin/kdenlive", "--render", "--render-preset", preset_name, str(project), str(destination)]
+    executable = os.environ.get("CHESS_KDENLIVE") or shutil.which("kdenlive")
+    if not executable:
+        raise RuntimeError("Kdenlive is missing; set CHESS_KDENLIVE to the installed executable")
+    command = [executable, "--render", "--render-preset", preset_name, str(project), str(destination)]
     print("Kdenlive native export started:", destination, flush=True)
     job_copy = project.parent / "native-render-job.mlt"
+    job_copy.unlink(missing_ok=True)
     last_progress = -10
     with log.open("w", encoding="utf-8") as output:
-        process = subprocess.Popen(command, cwd=project.parent, env=env, stdout=output, stderr=subprocess.STDOUT)
+        startup = None
+        if windows:
+            startup = subprocess.STARTUPINFO()
+            startup.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            startup.wShowWindow = 0
+        process = subprocess.Popen(command, cwd=project.parent, env=env, stdout=output,
+                                   stderr=subprocess.STDOUT, startupinfo=startup)
         while process.poll() is None:
             contents = log.read_text(encoding="utf-8", errors="replace")
-            for candidate in reversed(re.findall(r'"(/tmp/kdenlive-[^"\s]+\.mlt)"', contents)):
-                generated_job = Path(candidate)
+            # Windows' render helper logs its URL-encoded job in the MP4 log.
+            render_log = Path(str(destination) + ".log")
+            if render_log.is_file():
+                contents += "\n" + render_log.read_text(encoding="utf-8", errors="replace")
+            candidates = re.findall(r'"([^"\r\n]*kdenlive-[^"\r\n]+\.mlt)"', contents)
+            candidates += re.findall(r'-progress2 ([^\r\n]+\.mlt)', contents)
+            for candidate in reversed(candidates):
+                generated_job = Path(unquote(candidate))
                 if generated_job.is_file():
                     try:
                         shutil.copy2(generated_job, job_copy)
@@ -409,6 +436,12 @@ def render(project, destination, report, display=None, xauthority=None):
                 pass
     if process.returncode:
         raise RuntimeError(f"Kdenlive export failed ({process.returncode}); inspect {log}")
+    if not job_copy.is_file():
+        raise RuntimeError("The native render job could not be retained; export settings are unverified")
+    consumer = ET.parse(job_copy).getroot().find("consumer")
+    expected = {"vcodec": "libx264", "crf": "17", "preset": "medium", "acodec": "aac", "ab": "192k", "ar": "48000"}
+    if consumer is None or any(consumer.get(k) != v for k, v in expected.items()):
+        raise RuntimeError("Kdenlive ignored the requested quality preset; inspect native-render-job.mlt")
     final_probe = probe(destination)
     video = next(s for s in final_probe["streams"] if s["codec_type"] == "video")
     if int(video["width"]) != 1920 or int(video["height"]) != 1080:
