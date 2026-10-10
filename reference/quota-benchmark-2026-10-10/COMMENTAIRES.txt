@@ -1,0 +1,183 @@
+QUOTA LADDER — DEMANDES ET RETOURS DES SPECTATEURS
+Relevé du 10 octobre 2026, complément au BENCHMARK.txt.
+Périmètre : les mêmes sept vidéos récentes, pas toute la chaîne.
+
+CE QUE CELA CHANGE POUR NOUS
+
+Le premier test le plus proche de cette audience devient la Rébellion ou une
+branche impériale précise, notamment les pilotes TIE. Pour une piste plus
+originale, la vie de ceux que les Jedi ne prennent pas comme Padawan offre
+un conflit immédiatement compréhensible. Pokémon est la demande extérieure
+à Star Wars la plus soutenue dans cet échantillon. Naruto remonte dans les
+priorités : deux personnes le demandent sur deux vidéos différentes.
+
+Le signal le plus fort concerne cependant la crédibilité de l'organisation :
+151 J'aime sur un commentaire reprochant le mélange des branches impériales.
+Notre différence doit donc être visible dans le récit ET dans les images :
+une branche choisie, une époque annoncée, un personnage reconnaissable,
+des missions et des conséquences concrètes à chaque étape.
+
+1. MÉTHODE ET TAILLE RÉELLE DE L'ÉCHANTILLON
+
+385 messages publics récupérés, dont 125 réponses du créateur et 260 messages
+de spectateurs. Ces derniers comprennent 180 commentaires principaux et
+80 réponses, provenant de 193 comptes distincts sur les sept vidéos.
+Les 180 commentaires principaux proviennent de 157 comptes distincts.
+Ce ne sont donc ni 385 spectateurs ni 385 demandes indépendantes.
+
+Vidéo                 Principaux   Réponses spectateurs   Créateur   Total
+Imperial Guard                5                      1          4      10
+Arasaka                       4                      0          4       8
+Clone Army                   22                      3         21      46
+Saiyan Army                  34                     14         29      77
+Sith Empire                  28                     31         15      74
+Galactic Empire              68                     28         42     138
+Viltrumite                   19                      3         10      32
+TOTAL                       180                     80        125     385
+
+Lecture des commentaires principaux et des échanges de spectateurs ; lecture
+des réponses du créateur dans les fils utiles à l'analyse. Premier repérage
+par les commentaires populaires, puis récupération paginée par yt-dlp avec
+tri récent et réponses. Les nombres décrivent le corpus retourné au relevé :
+ils peuvent évoluer, et les commentaires supprimés ou masqués sont absents.
+
+Les J'aime mesurent le soutien visible à un message, pas un vote exclusif
+pour une prochaine vidéo. L'âge des vidéos, leur audience et l'exposition
+des commentaires diffèrent. Aucun pourcentage représentatif des viewers
+ni classement statistique de demande n'est déduit de ce petit corpus.
+
+2. DEMANDES EXPLICITES POUR DE NOUVELLES VIDÉOS
+
+RÉBELLION — 1 auteur, 17 J'aime, sous Sith Empire.
+Demande directe d'un épisode sur les rangs de la Rébellion. Le créateur
+répond qu'il l'ajoute à sa liste ; cela ne prouve pas qu'un épisode est prêt.
+Très bon test proche : même franchise, autre organisation et autres enjeux.
+Source : https://www.youtube.com/watch?v=9BB4oCJ6cR4&lc=UgxuqFjlyLr3MK_6U-14AaABAg
+
+POKÉMON — 1 auteur, 15 J'aime, sous Sith Empire.
+Demande d'un parcours de Pokémon master ; également ajoutée à la liste
+selon la réponse du créateur. Bonne piste de diversification, mais il faudra
+choisir une région et une continuité, puis définir de vraies étapes de parcours
+plutôt qu'inventer une hiérarchie universelle de grades.
+Source : https://www.youtube.com/watch?v=9BB4oCJ6cR4&lc=UgyHlH0IrCPMsB0v8SF4AaABAg
+
+JEDI NON CHOISIS COMME PADAWAN — 1 auteur, 14 J'aime.
+La réponse du même auteur précise son intérêt : leur devenir et jusqu'où
+ils peuvent aller. Ce sont deux messages d'une seule personne. Le créateur
+juge l'idée intéressante, sans engagement de publication.
+Notre angle possible : « Ta vie si les Jedi ne te choisissent pas ».
+Fort enjeu narratif : une voie refusée, puis une autre vie à construire.
+Le parcours et l'époque doivent être documentés avant le script.
+Source : https://www.youtube.com/watch?v=9BB4oCJ6cR4&lc=UgyHFvY5UAoYVw-zQQx4AaABAg
+
+NARUTO / SHINOBI — 2 auteurs, sur Arasaka et Saiyan Army.
+Les deux commentaires ont respectivement 2 et 0 J'aime. C'est une petite
+demande répétée, pas un consensus. Le créateur répond favorablement aux deux.
+Cela justifie un test plus haut dans notre liste malgré les performances
+modestes de certains exemples concurrents relevés dans le benchmark initial.
+Sources : https://www.youtube.com/watch?v=9EbJnPHQ_Zg&lc=UgyF9D-bsFbf_DZKTGp4AaABAg
+https://www.youtube.com/watch?v=Qb-h3lfgW7M&lc=Ugyf8x6kBLyz00cCgql4AaABAg
+
+HALO — 1 auteur, 0 J'aime, sous Clone Army.
+Demande UNSC ou ODST, puis suggestion des factions Covenant dans une réponse.
+Le créateur évoque UNSC d'abord, ODST séparément. Ne pas compter ces variantes
+comme trois demandes indépendantes. Structure de série intéressante à explorer.
+Source : https://www.youtube.com/watch?v=7-E-tuW7puo&lc=Ugw3BUZnK9h6f0M2Rf94AaABAg
+
+AUTRES DEMANDES ISOLÉES
+Daleks : 1 auteur, 1 J'aime ; League of Villains : 1 auteur, 0 J'aime.
+Warhammer 40K : 2 auteurs sur Galactic Empire et Clone Army, 0 J'aime chacun ;
+la demande Imperium est déjà partiellement couverte par Imperial Guard dans
+les sept vidéos. On ne peut pas affirmer que ces commentaires ont causé sa
+production. Ils ne demandent pas explicitement un épisode Space Marines.
+Heaven et Satan : deux auteurs distincts, 3 et 2 J'aime ; suggestions hors
+du cœur franchises, aucune hiérarchie religieuse validée par ces messages.
+Les liens de ces suggestions sont dans preuves-commentaires.json.
+
+S.H.I.E.L.D., Nation du Feu, Gotham et Ben 10 restent nos pistes créatives.
+Aucune demande explicite pour ces sujets n'a été repérée dans ce corpus.
+La concurrence Space Marines reste un signal séparé des commentaires.
+
+3. LES SPECTATEURS VEULENT AUSSI DES SPÉCIALITÉS
+
+Pilote TIE : un commentaire à 57 J'aime, plus un autre auteur à 3 J'aime.
+Ce sont des envies de rôle exprimées, pas deux demandes formelles d'épisode.
+Un troisième auteur voudrait piloter un AT-AT, avec 4 J'aime.
+Death Troopers : un auteur demande où ils sont dans le parcours, 13 J'aime.
+Il décrit aussi une condition d'accès : cette affirmation de lore reste à vérifier.
+Source TIE : https://www.youtube.com/watch?v=diftQzzcm9E&lc=UgyO61XmojB4UtFK30B4AaABAg
+Source Death Troopers : https://www.youtube.com/watch?v=diftQzzcm9E&lc=UgznejrjRQbiPWVjohZ4AaABAg
+
+Déduction éditoriale : une franchise peut fournir plusieurs épisodes par
+branche, spécialité ou voie alternative. Le titre doit annoncer le vrai
+périmètre ; spécialité, fonction et grade ne sont pas interchangeables.
+Un protagoniste peut rester pilote toute sa carrière et connaître malgré tout
+une progression de responsabilités, de missions et de risques.
+
+4. CE QU'IL FAUT AMÉLIORER DANS NOTRE VERSION
+
+HIÉRARCHIE — le commentaire à 151 J'aime reproche un mélange Army, Navy
+et Stormtroopers. D'autres spectateurs discutent des rangs manquants et
+du passage entre branches. Leurs détails ne constituent pas une source canonique.
+Action : documenter une branche et distinguer grades, affectations et pouvoir
+politique ; ne pas faire monter automatiquement un soldat jusqu'à empereur.
+Source : https://www.youtube.com/watch?v=diftQzzcm9E&lc=UgzoTxTKZSZ70k6zXEh4AaABAg
+
+ÉPOQUE ET VISUELS — sous Sith Empire, plusieurs auteurs reprochent des
+images d'autres époques impériales. Sous Imperial Guard, un spectateur repère
+des uniformes mêlant Warhammer et Star Wars à 8:03, avec 8 J'aime ; le
+créateur reconnaît le mélange. Sous Saiyan Army, deux auteurs signalent
+une identité changeante et deux queues. Ce sont des observations à contrôler
+visuellement, mais elles confirment que les fans regardent les détails.
+Action : période explicite, références propres à l'univers et contrôle des plans
+pour les uniformes, objets, silhouette et continuité du personnage.
+Source uniformes : https://www.youtube.com/watch?v=GjFdMW5KgCY&lc=Ugz1Sp98iqv3YQydWhl4AaABAg
+Source identité : https://www.youtube.com/watch?v=Qb-h3lfgW7M&lc=Ugy9rg82MD4J6S276ud4AaABAg
+
+IMMERSION — un spectateur aimerait jouer un Saiyan inconnu qui part en
+missions et monte en responsabilité, 9 J'aime. Un autre apprécie le renversement
+où la planète transforme le conquérant viltrumite, 5 J'aime. Ces messages
+soutiennent notre piste d'un personnage suivi et changé par les événements,
+sans démontrer une cause de rétention ou de succès.
+Source : https://www.youtube.com/watch?v=Qb-h3lfgW7M&lc=UgzdiwzQ6jRTfvUNmdB4AaABAg
+Source : https://www.youtube.com/watch?v=NZwfRoRuJE4&lc=UgwwfVnp2CQksUa5xOB4AaABAg
+
+HUMOUR ET VIE QUOTIDIENNE — Sith comparé à une entreprise, 45 J'aime ;
+Arasaka comparé à un emploi dont le badge conditionne tous les avantages,
+12 J'aime. Garder les contraintes concrètes, les relations et l'absurdité
+institutionnelle. Chaque rang doit changer quelque chose dans la vie vécue.
+Source : https://www.youtube.com/watch?v=9BB4oCJ6cR4&lc=UgywPUUxvSB_iy2y5Ct4AaABAg
+Source : https://www.youtube.com/watch?v=9EbJnPHQ_Zg&lc=Ugwxg3xIJv7Qia_9zr14AaABAg
+
+CONVERSATION — un spectateur préfère s'arrêter au Conseil Noir, 17 J'aime.
+Bonne question de fin : « À quel niveau tu t'arrêterais, et pourquoi ? ».
+Source : https://www.youtube.com/watch?v=9BB4oCJ6cR4&lc=Ugwqjb9fKmzHWfUDby14AaABAg
+Un auteur réclame aussi des playlists, 0 J'aime ; le créateur convient de
+mieux organiser les épisodes. Suggestion utile pour nos séries ; l'absence
+actuelle de playlists du concurrent n'a pas été vérifiée séparément.
+
+5. CE QUE LA LECTURE DES RÉPONSES ÉVITE DE CONCLURE
+
+Une critique du son de Saiyan Army est retirée par son auteur : ses
+haut-parleurs de téléphone étaient endommagés. Ne pas la compter comme
+preuve d'un problème de mixage.
+Source correction : https://www.youtube.com/watch?v=Qb-h3lfgW7M&lc=UgxHfYd6My_xPh8_F1p4AaABAg.AbWpgJQp_mrAbXlxOzGBHs
+
+Le rejet des images générées existe, notamment un fil sous Clone Army où
+un auteur dit qu'il ne reviendra pas malgré les explications du créateur.
+La transparence et le temps de travail déclaré ne suffisent donc pas à
+convaincre chaque spectateur. Un commentaire ne mesure pas le départ réel
+de l'audience ; il indique une attente de soin et de fidélité des images.
+
+PLAN DE TEST MIS À JOUR
+
+1) Proche : Rébellion ou pilote TIE, avec un parcours précisément délimité.
+2) Différence narrative : ceux que les Jedi ne choisissent pas ; le récit
+   porte sur la voie alternative, sans forcer des grades inexistants.
+3) Diversification : Pokémon ; Naruto peut être le test suivant ou une
+   alternative selon notre chaîne. Halo reste une piste secondaire.
+
+Conserver la progression lisible du benchmark initial, mais faire de chaque
+étape une mission ou une décision avec conséquence. Ces priorités viennent
+de signaux visibles et d'un choix éditorial ; elles ne garantissent pas les vues.
+Aucune vidéo, miniature ou publication n'a été lancée.

@@ -328,6 +328,9 @@ Différence possible : le même ordre traverse une chaîne de commandement et ch
 de sens selon la personne qui doit l'exécuter.
 
 ONE PIECE / NARUTO — possibles, mais pas nos premiers paris automatiques
+Mise à jour après lecture des commentaires : Naruto est demandé par deux
+spectateurs distincts sur deux vidéos. Cela remonte sa priorité de test ;
+voir COMMENTAIRES.txt pour distinguer ce signal de la performance concurrente.
 Des titres proches existent déjà. One Piece Marine :
 https://www.youtube.com/watch?v=H3e_YqwgnRw (2 731 vues).
 Naruto :
@@ -380,3 +383,26 @@ Décision proposée : adapter le moteur de progression, choisir un univers avec
 un signal ou un enjeu clair, puis faire de la continuité et des conséquences
 notre signature. Aucune production, publication ou modification de frontend
 n'a été lancée dans ce benchmark.
+
+11. COMPLÉMENT COMMENTAIRES — PRIORITÉS MISES À JOUR
+
+Voir COMMENTAIRES.txt et preuves-commentaires.json dans ce dossier.
+385 messages récupérés : 260 messages de spectateurs et 125 du créateur.
+Les spectateurs représentent 193 comptes distincts ; 180 commentaires
+principaux et 80 réponses ont été examinés.
+
+Demandes explicites les plus soutenues dans cet échantillon : Rébellion
+(17 J'aime), Pokémon (15), Jedi non choisis comme Padawan (14).
+Naruto est demandé par deux auteurs sur deux vidéos ; Halo par un auteur.
+Les pilotes TIE suscitent aussi un fort intérêt de rôle (57 J'aime sur un
+commentaire), sans constituer un vote formel pour un prochain épisode.
+
+Le reproche le plus soutenu (151 J'aime) concerne le mélange des branches
+impériales. Il renforce notre différence : une branche précise, une époque
+annoncée, une continuité visuelle et des conséquences vécues à chaque étape.
+
+Pour cette audience, le test proche devient Rébellion ou pilote TIE, suivi
+d'une voie alternative Jedi puis d'une diversification Pokémon ou Naruto.
+Space Marines conserve son signal concurrentiel, et S.H.I.E.L.D. son intérêt
+créatif ; aucun des deux n'est explicitement demandé dans les commentaires
+lus. Ne pas confondre demande exprimée, J'aime et garantie de performance.
