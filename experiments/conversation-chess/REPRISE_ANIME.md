@@ -123,3 +123,14 @@ Les accès aux outils et identifiants dépendront du nouveau compte ; les secret
 restent dans la configuration privée. Ne jamais les inclure dans un commit.
 Préserver les autres travaux locaux non liés à l'anime. Publier les changements
 de ce projet sur la branche de session et sur main via un checkout propre.
+
+
+## Deuxième anime choisi le 11 octobre 2026
+
+L'utilisateur a choisi **L Outsmarts Light Analysed like Chess | Death Note**.
+Production documentée dans `DEATH_NOTE.md`, timeline `episodes/light-vs-l.json`.
+L blanc, Light noir ; Lind L. Tailor est le représentant du piège de L.
+Sources anglaises 1080p déjà remasterisées en amont, pas un master studio brut.
+Sept analyses écrites à la main, guide Sneaky Snitch, bilan natif sans Subscribe.
+État précis de l'export et de sa QA dans la fiche de production ; ne pas
+confondre une timeline validée avec une vidéo déjà vérifiée.

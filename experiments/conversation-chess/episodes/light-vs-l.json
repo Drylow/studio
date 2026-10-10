@@ -1,0 +1,200 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "L Outsmarts Light Analysed like Chess | Death Note",
+  "demo": false,
+  "source_reviewed": true,
+  "show_source_quality_label": false,
+  "analysis_pawn_by_speaker": true,
+  "source_sha256": "b932310e5cc3344effe7dd709b69806efe06f8d6c1d1db8dd1d7ae22bbd111e9",
+  "source_url": "https://www.youtube.com/watch?v=Owdxb3BmmIo",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "note": "Four acquired 1920x1080,23.976fps English-dub clips, already remastered by Anime Remastered. Ten source contact sheets and native samples reviewed: no distributor watermark, burned subtitles or promotional overlay observed. Studio-master resolution and upstream restoration method unverified. No further detail reconstruction. See DEATH_NOTE.md and source_parts for provenance."
+  },
+  "source_in": 13.1,
+  "source_out": 385.2,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "initial_score_text": "0.0",
+  "white_label": "L",
+  "black_label": "Light",
+  "opening": {
+    "speaker": "white",
+    "label": "L",
+    "reviewed": true,
+    "evidence": "Selected source starts13.10s. Lind L. Tailor speaks13.50-22.18s on behalf of L's televised trap; he is a proxy, not the real L. Light reacts23.04s. Camps identify the strategists and remain fixed throughout."
+  },
+  "analysis_background": "replay",
+  "dialogue_gain": 1,
+  "annotations": [
+    {
+      "source_at": 22.55,
+      "rating": "book",
+      "speaker": "white",
+      "score_text": "+0.3",
+      "control_after": 0.473048,
+      "comment": "L's side puts a name and face on television. A direct challenge, aimed at making an invisible killer reveal something about himself.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Lind finishes otherwise known as L at22.18s; pause22.55s leaves0.37s. Light next speaks23.04s. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 73.65,
+      "rating": "inaccuracy",
+      "speaker": "black",
+      "score_text": "+0.8",
+      "control_after": 0.42855,
+      "comment": "Light confuses being hard to convict with being impossible to find. He protects the notebook, but overlooks what his own reactions could reveal.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Impossible ends73.14s; pause73.65s leaves0.51s. Light's next sentence begins74.82s. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 90.4,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+1.5",
+      "control_after": 0.368288,
+      "comment": "The bait gets personal. Calling Kira evil attacks Light's claim to be justice. L's side is inviting an emotional reply, not asking for a confession.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "The decoy finishes evil at89.78s; pause90.40s leaves0.62s. Light answers91.60s. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 162.7,
+      "rating": "blunder",
+      "speaker": "black",
+      "score_text": "+3.5",
+      "control_after": 0.221147,
+      "comment": "Light kills the man on screen and celebrates. He has answered a public challenge with a murder, giving his unseen opponent a result to study.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Light's final taunt ends162.16s; pause162.70s leaves0.54s. L's real voice starts165.21s; no reveal spoiled by this comment. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 208.05,
+      "rating": "great",
+      "speaker": "white",
+      "score_text": "+3.5",
+      "control_after": 0.221147,
+      "comment": "The victim was a condemned inmate. L never exposed his own identity. Light killed the wrong target, while the real investigator stayed hidden.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "L's secrecy explanation ends207.307s; pause208.05s leaves0.743s. Ryuk reacts209.447s. Great keeps score and bar unchanged. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 250.0,
+      "rating": "great",
+      "speaker": "white",
+      "score_text": "+3.5",
+      "control_after": 0.221147,
+      "comment": "L challenges Kira again, this time without a usable identity. Nothing happens. The unanswered challenge shows that Light's killing power has limits.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Useful hint ends249.653s; pause250.00s leaves0.347s. L resumes250.493s. The test does not yet establish the exact killing rules. Great is neutral. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    },
+    {
+      "source_at": 271.75,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+5.0",
+      "control_after": 0.142026,
+      "comment": "The worldwide broadcast was only shown in Kanto. By reacting to the bait, Light has turned a global manhunt into a regional one. L still needs his identity.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "L finishes I now know where you are at271.313s; pause271.75s leaves0.437s. Ryuk speaks272.553s. Kanto is a region, not Light's exact location. Rechecked against word alignment of the exact joined source; no speech crosses this pause."
+    }
+  ],
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "outro_review_evidence": "Actual1920x1080 native scene.js recap rendered and inspected: complete summary inside the bubble, seven moves counted (2brilliant,2great,1inaccuracy,1blunder,1book), original SVG icons, neutral pawn, no Subscribe. Private capture source-review/outro-review.png.",
+  "outro_summary": "Light thinks killing the man on TV ends the game. L used a decoy, tested the limits of Kira's power, and narrowed the search to Kanto. Light keeps his identity, but loses his advantage. Seven moves. L wins this opening; the hunt has only begun.",
+  "ending_fade_seconds": 0.5,
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Neutral pawn in the guide and recap. Analysis pawns follow the speaker's camp. No Tony portrait."
+  },
+  "review_evidence": "Handwritten commentary; exact acquired parts visually reviewed, joined without overlap or reordered dialogue. Timings aligned locally. Final I am justice and the concluding city shot retained. Source and full transcripts remain private in work/chess-studio/death-note/source-review.",
+  "source_parts": [
+    {
+      "file": "01-lind-broadcast.mp4",
+      "url": "https://www.youtube.com/watch?v=Owdxb3BmmIo",
+      "duration": 165.279637,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24000/1001",
+      "codec": "h264",
+      "sha256": "79013e5b8ff29935af8ca9428ba97a68d03941ea56500a9ecbc6a67500955d11",
+      "bytes": 29066638,
+      "reviewed": true,
+      "joined_in": 0,
+      "joined_out": 165.20670833333332,
+      "video_frames": 3961
+    },
+    {
+      "file": "02-decoy-reveal.mp4",
+      "url": "https://www.youtube.com/watch?v=aFmEy9tf49c",
+      "duration": 72.957098,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24000/1001",
+      "codec": "h264",
+      "sha256": "43129b1fabede1edbdcac8895a26a8184ca612f582b42df63f888625ecd7c88e",
+      "bytes": 10326877,
+      "reviewed": true,
+      "joined_in": 165.20670833333332,
+      "joined_out": 238.11287499999997,
+      "video_frames": 1748
+    },
+    {
+      "file": "03-kanto-reveal.mp4",
+      "url": "https://www.youtube.com/watch?v=SnfgTzuUABk",
+      "duration": 105.859773,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24000/1001",
+      "codec": "av1",
+      "sha256": "f9878fb9fe0d3811b0b81280ef5c6c8bcf68da8b25a4aa153437dbec40eca692",
+      "bytes": 6658371,
+      "reviewed": true,
+      "joined_in": 238.11287499999997,
+      "joined_out": 343.8852083333333,
+      "video_frames": 2536
+    },
+    {
+      "file": "04-justice.mp4",
+      "url": "https://www.youtube.com/watch?v=9VpIsZ9TCIg",
+      "duration": 43.630295,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24000/1001",
+      "codec": "av1",
+      "sha256": "2e4dec84c7b3dbdf4f2786d9501e83992bc943f16be2ff223d0d9e6bee875162",
+      "bytes": 2952285,
+      "reviewed": true,
+      "joined_in": 343.8852083333333,
+      "joined_out": 387.4287083333333,
+      "video_frames": 1044
+    }
+  ],
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  }
+}
