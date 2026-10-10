@@ -2,7 +2,28 @@
 
 ## Nouveau projet — fonds marins, aperçu entièrement codé
 
-Dernier retour utilisateur : premier essai apprécié mais rejeté comme trop
+**V3 livrée le 10 octobre : https://gofile.io/d/6pQee3FV**, MP4 et lecteur
+HTML autonome en ZIP. 24 s, 1920×1080 natif/30fps, 720 images,
+9 840 323 octets ; export complet 257,221 s. Dernier retour : la V2 est
+plus immersive mais ses modèles sont « goofy » et la baudroie paraît morte.
+Modèles refaits : silhouette continue, petits yeux sombres, pigmentation
+mate ; onde réelle dans le corps et la queue, membranes et leurre décalés,
+respiration, banc qui se déforme et méduse qui pulse. Trajectoire courbe,
+roulis, caméra/torche suivant brièvement la rencontre, roches plus cohérentes
+et anticrénelage WebGL actif. Sources officielles DREDGE réellement étudiées :
+`experiments/deep-sea-procedural/STYLE_DREDGE.md`. Aucun fichier du jeu utilisé.
+
+Décodage A/V intégral sans erreur, aucun échantillon audio saturé ; 12 images
+réparties, 40 du poisson et 16 de la méduse vues dans le MP4 final, plus
+quatre images natives. Revue indépendante supplémentaire des planches/deux
+images natives. Déformations locales vérifiées, animation finie/déterministe ;
+aucune lecture continue ou écoute humaine complète prétendue. Taille et MD5
+des deux uploads confirmés. Aucun appel de génération payant, script ou voix.
+Le style attend l'avis utilisateur : **pas de long de 15–20 minutes**, choix
+de niche/thème seulement après validation visuelle. Aucun envoi YouTube,
+Discord, changement du site ou des automatismes existants.
+
+Archive V2 : premier essai apprécié mais rejeté comme trop
 statique et trop peu immersif, animaux Canvas insuffisants. **V2 livrée** :
 24 secondes en vue subjective, trajet dans un canyon, banc de poissons,
 baudroie et méduse **réellement en 3D**, sans texte sur l'image. Capture WebGL
@@ -10,15 +31,15 @@ directe et éclairage aux sommets ; aucun appel de génération. 1920×1080 nati
 30 images/s, 720 images ; export complet en 180,586 s (environ 2,2 fois plus
 rapide par image que la V1). Décodage A/V complet et captures du MP4 final
 contrôlés, intégrité des deux uploads confirmée par MD5/taille.
-Livraison actuelle : https://gofile.io/d/hiTXjUn2 — MP4 + lecteur HTML en ZIP.
-Attendre son
-retour sur cette V2 avant script, voix off, montage ou long de 15–20 minutes.
+Livraison V2 archivée : https://gofile.io/d/hiTXjUn2 — MP4 + lecteur HTML en ZIP.
+Le dernier retour utilisateur est décrit dans l'entrée V3 ci-dessus ;
+ne pas prendre cette V2 pour une direction artistique validée.
 
 L'utilisateur a arrêté Peaky le 10 octobre à cause de son accès Google, puis
 a choisi une nouvelle chaîne YouTube sur les **vrais fonds marins avec une
 ambiance inquiétante**. Direction corrigée explicitement : **aucun Algrow ni
 générateur d'images**, visuels construits en HTML/JavaScript. Seul un aperçu
-de 30 secondes a été livré ; attendre son retour sur le style avant le script,
+de 30 secondes a d'abord été livré ; attendre son retour sur la V3 avant le script,
 la voix off et le montage du long de 15–20 minutes.
 
 Premier prototype archivé : `experiments/deep-sea-procedural/scene-v1.mjs`.

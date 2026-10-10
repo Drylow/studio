@@ -6,16 +6,16 @@ import { applyVertexLighting } from './vertex-lighting.mjs';
 // An original first-person dive. Terrain and creatures are actual mesh volumes.
 const WIDTH=1920, HEIGHT=1080, DURATION=24;
 const film=document.getElementById('film');
-const renderer=new THREE.WebGLRenderer({canvas:film,antialias:false,alpha:false,preserveDrawingBuffer:true});
+const renderer=new THREE.WebGLRenderer({canvas:film,antialias:window.__DEEPSEA_AA__!==false,alpha:false,preserveDrawingBuffer:true});
 renderer.setSize(WIDTH,HEIGHT,false); renderer.setPixelRatio(1);
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.35;
 const scene=new THREE.Scene();
 scene.background=new THREE.Color('#092b35'); scene.fog=new THREE.FogExp2('#092b35',.048);
 const camera=new THREE.PerspectiveCamera(66,WIDTH/HEIGHT,.12,130); scene.add(camera);
-scene.add(new THREE.HemisphereLight('#6ca7a0','#332532',2.45));
-const overhead=new THREE.DirectionalLight('#8791b9',1.7); overhead.position.set(-9,17,5); scene.add(overhead);
-const lamp=new THREE.SpotLight('#efdeb1',65,42,.70,.64,1.65);
+scene.add(new THREE.HemisphereLight('#779791','#302a33',1.55));
+const overhead=new THREE.DirectionalLight('#85879a',1.30); overhead.position.set(-9,17,5); scene.add(overhead);
+const lamp=new THREE.SpotLight('#efdeb1',85,42,.70,.64,1.65);
 lamp.position.set(.45,-.4,-.6); lamp.target.position.set(.4,-1.4,-20); camera.add(lamp,lamp.target);
 const fill=new THREE.PointLight('#b7d9cf',3,14,1.6); fill.position.set(0,-.4,-1.0); camera.add(fill);
 
@@ -37,26 +37,36 @@ for(let iz=0;iz<=35;iz++){
 }
 for(let iz=0;iz<35;iz++)for(let ix=0;ix<20;ix++){
   const a=grid[iz][ix],b=grid[iz+1][ix],d=grid[iz][ix+1],e=grid[iz+1][ix+1];
-  const tone=new THREE.Color().setHSL(.50+rng()*.05,.13+rng()*.08,.20+rng()*.08);
-  face(a,d,b,tone);face(b,d,e,tone.clone().multiplyScalar(.86+rng()*.25));
+  const shade=.20+.02*Math.sin(a[0]*.26+a[2]*.12)+.01*Math.cos(a[2]*.37);
+  const tone=new THREE.Color().setHSL(.525,.14,shade);
+  face(a,d,b,tone);face(b,d,e,tone.clone().multiplyScalar(.96+rng()*.075));
 }
 const floor=new THREE.BufferGeometry(); floor.setAttribute('position',new THREE.Float32BufferAttribute(p,3));
 floor.setAttribute('color',new THREE.Float32BufferAttribute(c,3));floor.computeVertexNormals();
 scene.add(new THREE.Mesh(floor,terrainMat));
 const rockParts=[];
 function rock(x,z,width,height,length,shade){
-  const g=new THREE.IcosahedronGeometry(1,0);
+  const g=new THREE.IcosahedronGeometry(1,1);
+  const coordinates=g.attributes.position.array;
+  for(let i=0;i<coordinates.length;i+=3){
+    const x=coordinates[i],y=coordinates[i+1],z=coordinates[i+2];
+    // Coherent distortion keeps shared edges closed and sculpts the silhouette.
+    const ridges=1+.085*Math.sin(x*6.2+y*3.4+z*4.7)+.04*Math.sin(y*9-z*3);
+    coordinates[i]=x*ridges;coordinates[i+1]=y*(1+.055*Math.sin(x*4+z*3));coordinates[i+2]=z*ridges;
+  }
   g.scale(width,height,length);g.rotateY(rng()*Math.PI);g.rotateZ((rng()-.5)*.4);
   g.translate(x,ground(x,z)+height*.60,z); const count=g.attributes.position.count, colors=[];
   for(let i=0;i<count;i+=3){
-    const col=new THREE.Color(shade).multiplyScalar(.78+rng()*.46);
+    const offset=i*3,wx=g.attributes.position.array[offset],wy=g.attributes.position.array[offset+1],wz=g.attributes.position.array[offset+2];
+    const band=.90+.075*Math.sin(wy*1.6+wx*.37+wz*.2);
+    const col=new THREE.Color(shade).multiplyScalar(band);
     for(let k=0;k<3;k++)colors.push(col.r,col.g,col.b);
   }
   g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();rockParts.push(g);
 }
 for(let i=0;i<76;i++){
   const side=i%2?1:-1,z=17-rng()*111;
-  rock(side*(9+rng()*8),z,3+rng()*4.4,4+rng()*10,3+rng()*5,['#50566c','#4f625e','#57536a','#405555'][i%4]);
+  rock(side*(10+rng()*7),z,3+rng()*4.0,3.5+rng()*8.5,3+rng()*5,['#555360','#505c55','#5a535d','#475354'][i%4]);
 }
 for(let i=0;i<38;i++)rock((rng()-.5)*16,12-rng()*100,.45+rng()*1.5,.35+rng()*1.1,.7+rng()*1.8,'#52626a');
 // Uneven near banks create passage and occlusion, not a side-on display stage.
@@ -66,6 +76,11 @@ const rocks=mergeGeometries(rockParts,false);rockParts.forEach(g=>g.dispose());
 scene.add(new THREE.Mesh(rocks,terrainMat));
 
 const animals=createCreatures(THREE);scene.add(animals.angler,animals.jelly,animals.fishSchool);
+const encounterPath=new THREE.CatmullRomCurve3([
+  new THREE.Vector3(-12,-3.65,-12.8),new THREE.Vector3(-3,-3.22,-14.0),
+  new THREE.Vector3(-.5,-3.32,-17.5),new THREE.Vector3(2.8,-3.85,-25.5),
+  new THREE.Vector3(14,-4.55,-40),
+],false,'centripetal');
 const dustArray=new Float32Array(360*3),dustOrigins=[];
 for(let i=0;i<360;i++){const a=[(rng()-.5)*26,-6+rng()*11,16-rng()*78];dustOrigins.push(a);dustArray.set(a,i*3);}
 const dustGeo=new THREE.BufferGeometry();dustGeo.setAttribute('position',new THREE.BufferAttribute(dustArray,3));
@@ -78,17 +93,24 @@ const vertexLighting=applyVertexLighting(THREE,scene,camera);
 
 function render(t){
   if(!Number.isFinite(t))throw new Error('A finite time in seconds is required.');t=clamp(t,0,DURATION);
+  const travel=clamp((t-7.5)/10.0),u=.14*travel+.86*travel*travel*(3-2*travel);
+  const location=encounterPath.getPoint(u),direction=encounterPath.getTangent(u);
+  const inspection=smooth(9.5,11,t)*(1-smooth(14.8,16.1,t));
   const x=.65*Math.sin(t*.14),y=-2.8-.035*t+.055*Math.sin(t*.62),z=12-1.8*t;
   camera.position.set(x,y,z);
-  camera.lookAt(x+.36*Math.sin(t*.24),y-.35-.18*Math.sin(t*.16),z-13);
+  const look=new THREE.Vector3(x+.36*Math.sin(t*.24),y-.35-.18*Math.sin(t*.16),z-13);
+  look.lerp(location,.22*inspection);camera.lookAt(look);
   camera.rotateZ(.012*Math.sin(t*.42));
   lamp.target.position.set(.5+1.7*Math.sin(t*.18),-1.6,-21);
+  camera.updateMatrixWorld(true);
+  const focus=camera.worldToLocal(location.clone());lamp.target.position.lerp(focus,.72*inspection);
   animals.update(t);
-  animals.angler.position.set(-16+(t-6)*2.3,-3.15+.18*Math.sin(t*.8),-16.2+.17*(t-9));
-  animals.angler.rotation.set(0,-.36+.10*Math.sin(t*.3),.035*Math.sin(t*.65));animals.angler.scale.setScalar(.78);
-  animals.angler.visible=t>=6&&t<=17;
-  animals.jelly.position.set(-2.4,-1.4,-32);animals.jelly.rotation.y=.25+t*.09;
-  animals.jelly.visible=t>=14;
+  animals.angler.position.copy(location);
+  animals.angler.rotation.set(.025*Math.sin(t*1.1),Math.atan2(-direction.z,direction.x),Math.atan2(direction.y,Math.hypot(direction.x,direction.z))+.045*Math.sin(t*.85));
+  animals.angler.scale.setScalar(.82);animals.angler.visible=true;
+  animals.jelly.position.set(-2.25+.18*Math.sin(t*.41),-1.40+.15*Math.sin(t*.96),-32.5+.2*Math.sin(t*.23));
+  animals.jelly.rotation.set(.035*Math.sin(t*.5),.15+.07*Math.sin(t*.3),.035*Math.sin(t*.7));
+  animals.jelly.visible=true;
   animals.fishSchool.position.set(-3.6+.65*t,-2.5,0);animals.fishSchool.rotation.y=.35;animals.fishSchool.scale.setScalar(.70);
   animals.fishSchool.visible=t<=10;
   const arr=dustGeo.attributes.position.array;
@@ -101,7 +123,7 @@ function render(t){
   vertexLighting.update();renderer.render(scene,camera);
   return{time:t,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,camera:[x,y,z]};
 }
-window.DeepSeaFilm={render,duration:DURATION,width:WIDTH,height:HEIGHT,renderer:'Original 3D faceted meshes, first-person camera, native WebGL output'};
+window.DeepSeaFilm={render,duration:DURATION,width:WIDTH,height:HEIGHT,renderer:'Original 3D faceted meshes with deforming bodies, first-person camera, native WebGL output',antialias:renderer.getContext().getContextAttributes().antialias};
 let playing=true,playbackTime=0,last=performance.now();
 const seek=document.getElementById('seek'),play=document.getElementById('play'),clock=document.getElementById('time');
 if(seek)seek.max=DURATION;

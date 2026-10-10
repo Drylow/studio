@@ -44,7 +44,8 @@ try{
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   await page.addInitScript(()=>{window.__CAPTURE_MODE__=true;});
   await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm);
-  const filmDuration=await page.evaluate(()=>window.DeepSeaFilm.duration);
+  const sceneInfo=await page.evaluate(()=>({duration:window.DeepSeaFilm.duration,antialias:window.DeepSeaFilm.antialias,renderer:window.DeepSeaFilm.renderer}));
+  const filmDuration=sceneInfo.duration;
   if(duration>filmDuration)throw new Error(`The current scene lasts ${filmDuration} seconds.`);
   async function grab(t,format='image/jpeg'){
     const result=await page.evaluate(({t,format})=>{
@@ -87,7 +88,7 @@ try{
     }
     encoder.stdin.end();await finished;await rename(temporary,out);
     const bytes=await readFile(out);
-    const report={schema:'deep-sea-procedural-render-v1',file:path.basename(out),width:1920,height:1080,fps,frames,duration_seconds:frames/fps,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),elapsed_seconds:(Date.now()-started)/1000,paid_generation_calls:0,external_images:0,browser_errors:errors,frame_info:lastInfo,finished_visual_reviewed:false,full_av_decode_ok:false,ambient_audio:sound?'Original procedurally synthesized ambience':'None; visual study'};
+    const report={schema:'deep-sea-procedural-render-v1',file:path.basename(out),width:1920,height:1080,fps,frames,duration_seconds:frames/fps,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),elapsed_seconds:(Date.now()-started)/1000,scene:sceneInfo,paid_generation_calls:0,external_images:0,browser_errors:errors,frame_info:lastInfo,finished_visual_reviewed:false,full_av_decode_ok:false,ambient_audio:sound?'Original procedurally synthesized ambience':'None; visual study'};
     await writeFile(out+'.render.json',JSON.stringify(report,null,2));
     console.log(JSON.stringify(report));
   }

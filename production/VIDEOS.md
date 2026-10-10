@@ -1,5 +1,24 @@
 # Journal des vidéos
 
+## Fonds marins — V3, silhouettes sobres et nage vivante — 10 octobre 2026
+
+Livraison : https://gofile.io/d/6pQee3FV — `Les-Profondeurs-V3-Nage-24s.mp4`
+et `Exploration-3D-V3-HTML.zip`. 24 s, 1920×1080 natif/30fps, 720 images,
+9 840 323 octets. Export complet 257,221 s, anticrénelage WebGL actif.
+Retour V2 : immersion améliorée mais poissons « goofy », baudroie trop rigide.
+Modèles refaits, yeux sombres, corps/queue réellement déformés, nageoires et
+leurre décalés, respiration, banc souple et méduse pulsante. Passage courbe
+avec orientation/roulis, caméra/torche attentive, roches/palette cohérentes.
+Étude officielle DREDGE documentée dans `STYLE_DREDGE.md`, aucun fichier
+du jeu repris, aucune génération payante, voix off ou script documentaire.
+Décodage A/V complet sans erreur, pic −18,51 dBFS, aucune saturation ;
+12 images réparties, 40 images poisson, 16 images méduse et quatre vues
+natives du MP4 final revues. Seconde revue indépendante des planches/deux
+vues natives. Pas de lecture continue ni d'écoute complète prétendue.
+Uploads vérifiés par taille/MD5, déformations déterministes et finies contrôlées.
+Style soumis à l'avis utilisateur, aucun long lancé ni envoi YouTube/Discord.
+Sources et recette : `experiments/deep-sea-procedural/README.md`.
+
 ## Fonds marins — V2 immersive, créatures en 3D — 10 octobre 2026
 
 Premier essai rejeté comme trop statique et trop peu 3D. Nouvelle version livrée :
@@ -11,7 +30,8 @@ Aucun animal Canvas superposé, aucune génération payante, voix ou extrait du 
 Export complet en 180,586 s ; environ 2,2 fois plus rapide par image que la V1.
 Décodage A/V intégral sans erreur, aucune saturation audio, 12 captures et
 trois images natives du MP4 final revues ; uploads vérifiés par taille et MD5.
-Validation du style utilisateur toujours en attente, aucun long lancé.
+Retour reçu : plus immersif, mais modèles « goofy » et baudroie rigide ;
+direction à corriger, voir V3 ci-dessus. Aucun long lancé.
 Aucun envoi YouTube ou Discord ; sources dans `experiments/deep-sea-procedural/`.
 
 ## Fonds marins — aperçu codé de 30 secondes — 10 octobre 2026
