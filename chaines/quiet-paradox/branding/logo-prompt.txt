@@ -1,0 +1,7 @@
+QUIET PARADOX - LOGO PROPOSE
+Statut : proposition, validation utilisateur non revendiquee.
+Outil : generation d'image integree, sans CLI de remplacement.
+Fichier : logo-proposition-01.png
+Usage : avatar carre de la chaine; verifier le recadrage circulaire lors de l'import.
+Prompt final :
+Use case: logo-brand. Asset type: square YouTube channel avatar for Quiet Paradox, a channel for calm bedtime theories about mysterious science-fiction television. Create one extremely simple, elegant original emblem: a single thick ivory crescent which subtly folds into an impossible continuous loop, combining a quiet moon silhouette with a visual paradox. Center one bold clean symbol on a solid near-black charcoal background. Flat graphic treatment, precise smooth contours, generous negative space and generous safe margins for circular avatar cropping. The symbol should occupy about 60 percent of the frame and remain recognizable at 40 pixels. Calm, enigmatic, restrained. No words, letters, initials, stars, additional objects, gradients, glow, texture, 3D, mockup, border or watermark. One final logo, no contact sheet.

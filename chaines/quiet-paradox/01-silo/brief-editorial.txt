@@ -28,7 +28,7 @@ B, rejected: The voice controlling the silos has a human being behind it. Strong
 C, rejected: Juliette recognizes the birds outside before she recognizes the lie. Recognizable scene, but too compressed to explain the physical clue naturally and less suited to the wider verification angle.
 
 STRUCTURE HINT
-Sixteen independently understandable discussions. Each opens with a concrete detail, separates the television fact from an interpretation, tests alternatives and closes its local question. The sequence expands from a single cleaner to the network's governance and a credible route toward freedom.
+Twenty-two independently understandable discussions. Each opens with a concrete detail, separates the television fact from an interpretation, tests alternatives and closes its local question. The sequence expands from a single cleaner to the network's governance, material sustainability, consent, succession, communication and decisions under uncertainty, then a credible route toward freedom.
 
 FACELESSOS APPLIED
 Master workflow, research and ideation, voice anchoring, humanizer, script structures, retention mechanics, variety rotation, outro psychology and greenlight audit. No automatic scriptwriting pipeline; the narration is written directly by Codex.
@@ -36,7 +36,7 @@ Sleep adaptation: no aggressive rehooks, forced suspense, shouted calls to actio
 Voice: conversational English, contractions, concrete examples and varied sentence lengths. Hushed is a reference for delivery and modular listening; its phrasing and fictional subject matter are not copied.
 
 DURATION
-Writing target approximately 14,400-15,000 words for a calm 120-125 spoken words per minute. This is an editorial estimate, not measured audio. The generic FacelessOS 145 wpm default is deliberately lowered for this sleep format. Rendered narration must be timed before the title's two-hour promise is considered satisfied. No looping or recap padding to hit duration.
+User revision: at least two hours of narration, with enough words at a natural pace. Final narration: 21,308 whitespace-separated words across 22 chapters. Estimates without added pauses: 142.1 minutes at 150 wpm, 133.2 minutes at 160 wpm, 125.3 minutes at 170 wpm. The 145 wpm FacelessOS baseline would give 147 minutes. A spoken rate up to approximately 177.6 wpm meets two hours on word count alone. Hushed delivery references run around 155-162 wpm; the earlier 122 wpm assumption is withdrawn. Time the rendered narration and confirm at least 120 minutes before publication. No looping, recap padding or silence used to hit duration.
 
 LIVRAISON
 script-voix.txt = narration anglaise seule, sans titres, URLs ni consignes.
