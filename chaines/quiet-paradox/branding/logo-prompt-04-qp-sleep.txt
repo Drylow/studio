@@ -1,0 +1,8 @@
+QUIET PARADOX - LOGO PROPOSE 04
+Statut : proposition, validation utilisateur non revendiquee.
+Outil : edition d'image integree.
+Fichier : logo-proposition-04-qp-sleep.png
+Reference : logo-proposition-03-qp.png
+Direction utilisateur : mieux reconnaitre le croissant de lune dans le Q et evoquer le sommeil.
+Prompt final :
+Use case: logo-brand. Edit target: attached QP logo. Redesign the monogram to look unmistakably like a peaceful bedtime channel named Quiet Paradox, retaining the Q on the left and P on the right. Crucial change: the left emblem must be an actual OPEN crescent moon, not a closed circular letter Q. Draw a generous ivory crescent facing upper-right with two clearly separated, tapered moon tips and a broad dark opening spanning the upper-right quadrant. Attach a very small thin curved diagonal tail near the lower-right crescent tip, subtly suggesting Q without closing the moon opening. The crescent silhouette must be recognizable instantly even at 40 pixels. Give the P a gentle custom rounded lowercase p form, softly curved bowl, rounded stroke ends, visually secondary and slightly smaller than the moon, sitting close to its right without filling or obscuring the crescent opening. Add ONE tiny simple four-point sleepy star above the gap between the two letters, much smaller than either letter. Keep the overall mark compact, harmonious, calm and elegant, with spacious margins for a circular YouTube crop. Flat warm ivory on a solid deep midnight navy background. No heavy corporate typography, sharp chunky Q tail, closed O ring, full words, extra stars, glow, gradients, shading, texture, 3D, border, mockup or watermark. One final square logo only.
