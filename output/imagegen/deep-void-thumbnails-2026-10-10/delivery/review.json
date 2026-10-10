@@ -1,0 +1,48 @@
+{
+  "channel": "Deep Void Theories",
+  "date": "2026-10-10",
+  "deliveryStatus": "proposals for user review",
+  "images": [
+    {
+      "id": "01-sith",
+      "source": "C:/Users/ytbyt/.codex/generated_images/01a125db-c77f-7233-8a28-50334b97d3d1/exec-07bd8b8f-0ee6-43c8-97e4-f97af3e6293e.png",
+      "review": "Reviewed visually: red pyramidal holocron left, red saber artifact right, ancient temple upper center. Correct LORE/FOR/SLEEP text and central blue/white typography. Alternative object composition; original character portrait composition was rejected.",
+      "acceptedByUser": false,
+      "export": "delivery/01-sith.jpg",
+      "prompt": "delivery/01-sith-prompt.txt",
+      "exportWidth": 1280,
+      "exportHeight": 720
+    },
+    {
+      "id": "02-leto-ii",
+      "source": "C:/Users/ytbyt/.codex/generated_images/01a125db-c77f-7233-8a28-50334b97d3d1/exec-c36dd283-09fb-41ef-a145-f1f0b046458d.png",
+      "review": "Reviewed visually: correct three-line text, large Paul portrait on left and human-sandworm hybrid on right; readable center; style follows channel references.",
+      "acceptedByUser": false,
+      "export": "delivery/02-leto-ii.jpg",
+      "prompt": "delivery/02-leto-ii-prompt.txt",
+      "exportWidth": 1280,
+      "exportHeight": 720
+    },
+    {
+      "id": "03-vader",
+      "source": "C:/Users/ytbyt/.codex/generated_images/01a125db-c77f-7233-8a28-50334b97d3d1/exec-214e6a2d-842e-4f6e-883d-000c32f88cad.png",
+      "review": "Reviewed visually: blue saber with brown robe left; red saber with black cloth right; planet upper center; correct LORE/FOR/SLEEP. Symbolic alternative; no Vader portrait or helmet because those compositions were rejected by generator.",
+      "acceptedByUser": false,
+      "export": "delivery/03-vader.jpg",
+      "prompt": "delivery/03-vader-prompt.txt",
+      "exportWidth": 1280,
+      "exportHeight": 720
+    },
+    {
+      "id": "04-thinking-machines",
+      "source": "C:/Users/ytbyt/.codex/generated_images/01a125db-c77f-7233-8a28-50334b97d3d1/exec-42a42e5e-3ae2-4b9c-9942-faace62ca4da.png",
+      "review": "Reviewed visually: correct three-line text, smooth metal machine face on left and human resistance figure on right; machine city behind text; brown human eyes.",
+      "acceptedByUser": false,
+      "export": "delivery/04-thinking-machines.jpg",
+      "prompt": "delivery/04-thinking-machines-prompt.txt",
+      "exportWidth": 1280,
+      "exportHeight": 720
+    }
+  ],
+  "method": "Built-in image generation with reference inputs; technical JPEG exports from preserved originals."
+}
