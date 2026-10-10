@@ -1,0 +1,126 @@
+{
+  "schema": "conversation-chess-delivery-review-v1",
+  "review_date": "2026-10-10",
+  "title": "Chess Analysis - Game of Thrones | Littlefinger VS Varys",
+  "delivery": {
+    "file": "Westeros-Checkmate-Littlefinger-Varys.mp4",
+    "bytes": 104566787,
+    "sha256": "4316a364359aa13a6b1191bb31f486772eec5e8467e79abdf813b1ab2315690b",
+    "duration_seconds": 256.618,
+    "frames": 7698,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "audio_finish_gain_db": 7,
+    "integrated_lufs": -22.3,
+    "true_peak_dbfs": -1.8,
+    "full_av_decode_errors": 0,
+    "video_stream_identical_to_reviewed_native_export": true,
+    "video_stream_sha256": "SHA256=42415ac92bc9cbf69be66ec0a5f3ab715c473374fa4e39c0e98828e2bf514506",
+    "native_project_audio_finish_note": "The editable native project retains its original mix. After any new native export, apply a master volume gain of7dB to the AAC audio, copy the video stream, and measure peaks again. No limiter or added music was used."
+  },
+  "visual_review": {
+    "frames": 7698,
+    "visual_review_complete": true,
+    "contact_sheets_reviewed": 39,
+    "no_frames_skipped_in_contact_sheets": true,
+    "native_frames": [
+      3,
+      10,
+      18,
+      35.1,
+      39.1,
+      40.4,
+      40.65,
+      71.7,
+      75.7,
+      77.0,
+      77.25,
+      96.6,
+      100.6,
+      101.89999999999999,
+      102.14999999999999,
+      142.7,
+      146.7,
+      148.0,
+      148.25,
+      156.79999999999998,
+      160.79999999999998,
+      162.1,
+      162.35,
+      196.39999999999998,
+      200.39999999999998,
+      201.7,
+      201.95,
+      243.8,
+      244.1,
+      244.3,
+      244.55,
+      246.6,
+      254.6,
+      256.5
+    ],
+    "native_montage_sheets_reviewed": 6,
+    "full_resolution_frames_reviewed_seconds": [
+      75.7,
+      146.7,
+      254.6
+    ],
+    "visual_findings": "No watermark, source quality banner, Subscribe, incorrect speaker pawn, or clipped commentary observed. Final fade and six-move recap inspected.",
+    "review_method": "All frames on contact sheets;34 key captures on six montage sheets;three additional full-resolution inspections. No continuous human audio audition claimed."
+  },
+  "timeline_checks": {
+    "annotations": 6,
+    "white": "Varys",
+    "black": "Littlefinger",
+    "pawns_follow_speaker": true,
+    "source_continuous_from_seconds": 0,
+    "source_continuous_to_seconds": 186.6,
+    "last_word_end_source_seconds": 185.84,
+    "fade_start_source_seconds": 186.1,
+    "added_music": false,
+    "voiceover": false,
+    "outro_style": "native recap",
+    "rating_counts": {
+      "brilliant": 2,
+      "great": 1,
+      "best": 1,
+      "inaccuracy": 1,
+      "book": 1
+    },
+    "scores": "Editorial judgments of this exchange, not engine evaluations."
+  },
+  "sfx_reading_tails": [
+    {
+      "annotation": 0,
+      "reading_tail_seconds": 2.8599791666666663,
+      "reading_tail_peak": 0
+    },
+    {
+      "annotation": 1,
+      "reading_tail_seconds": 3.0,
+      "reading_tail_peak": 0
+    },
+    {
+      "annotation": 2,
+      "reading_tail_seconds": 2.88,
+      "reading_tail_peak": 0
+    },
+    {
+      "annotation": 3,
+      "reading_tail_seconds": 2.96,
+      "reading_tail_peak": 0
+    },
+    {
+      "annotation": 4,
+      "reading_tail_seconds": 3.04,
+      "reading_tail_peak": 0
+    },
+    {
+      "annotation": 5,
+      "reading_tail_seconds": 3.32,
+      "reading_tail_peak": 0
+    }
+  ],
+  "source_limitation": "1920x1080 compressed online copy, softer than the watermarked HBO copy. No uncompressed master or restored detail claimed."
+}
