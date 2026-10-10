@@ -53,7 +53,7 @@ function placeAnimals(t){
     r[name].position.set(radius*Math.sin(q),y+.35*Math.sin(3*a+offset),radius*Math.cos(q));
     faceTangent(r[name],Math.cos(q),0,-Math.sin(q),.03*Math.sin(6*a));r[name].scale.setScalar(scale);
   }
-  for(const [name,offset,y,scale]of[['ray1',1.2,.35,.90],['ray2',3.6,-.6,.73]]){
+  for(const [name,offset,y,scale]of[['ray1',1.2,.35,.90],['ray2',3.6,2.9,.73]]){
     if(!r[name])continue;const q=a+offset;
     r[name].position.set(28*Math.sin(q),y+.6*Math.sin(2*a+offset),19*Math.cos(q));
     faceTangent(r[name],28*Math.cos(q),1.2*Math.cos(2*a+offset),-19*Math.sin(q),.065*Math.sin(3*a+offset));r[name].scale.setScalar(scale);

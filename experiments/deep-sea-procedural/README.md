@@ -4,19 +4,26 @@
 
 Direction actuelle : **histoires marines vraies, ambiance calme et inquiétante**.
 Les futurs épisodes visent deux heures : ce fond de **300 secondes** pourra
-être répété **24 fois** sous une narration originale. Le fond est un parcours
-continu de cinq minutes, pas une répétition de l'aperçu de 24 secondes.
-**Export et contrôle final en cours : aucune livraison de cette boucle n'est
-encore annoncée.** Aucun épisode de deux heures, script, voix off ou publication
-n'est produit à cette étape.
+être répété **24 fois** sous une narration originale. Ces cinq minutes sont
+calculées comme un parcours continu, distinct des anciens aperçus courts.
+**Rendu intégral repris avec la scène corrigée ; contrôle du fichier final
+à terminer avant livraison.** Aucun épisode de deux heures, script, voix off
+ou publication n'est produit à cette étape.
 
 La scène conserve des volumes originaux entièrement codés : relief, rochers,
-détails de surface procéduraux et vie sur le fond. Sept racines animées
-réunissent une baudroie, deux méduses, deux bancs et deux raies. Caméra,
+détails de surface procéduraux et vie sur le fond. Sept groupes animés
+(`roots`) réunissent une baudroie, deux méduses, deux bancs et deux raies. Caméra,
 animaux, particules et ambiance sonore suivent des cycles de 300 secondes,
 sans fondu final ; le raccord et les passages libres doivent être contrôlés.
 Les animaux sont des reconstitutions illustratives, pas des prises de vue
 scientifiques ni des modèles repris du jeu.
+
+Pour séparer son passage de ceux des autres animaux, la seconde raie (`ray2`)
+passe désormais plus haut : son altitude de base est fixée à `y = 2.9`
+unités de scène. Les volumes réservés aux animaux et à la caméra sont
+recalculés avant de placer le décor. Le rendu repris utilise ce réglage ;
+la cohérence de tout le cycle et le raccord du MP4 restent à vérifier avant
+d'annoncer le fichier terminé.
 
 Le lecteur se construit séparément dans `dist-sleep/`. Depuis la racine du dépôt,
 créer l'ambiance originale avec la venv existante et NumPy :
@@ -51,10 +58,13 @@ intégral, durée et nombre d'images, raccord audio, saturation et revue des
 images restent requis avant livraison. Les rapports de capture gardent les
 indicateurs de contrôle final à `false` jusqu'à ce travail effectif.
 
-L'[évaluation de fframes](FFRAMES_REVIEW.md) décrit une option locale gratuite
-sous licence MIT, en Rust/SVG, avec rendu GPU pour les habillages et animations
-de texte. Ce n'est pas un import direct de notre JavaScript Three.js ; aucune
-installation ni accélération de cette boucle avec fframes n'est revendiquée.
+L'[évaluation de fframes](FFRAMES_REVIEW.md) rassemble la recherche sur son
+dépôt officiel, sa documentation et la démonstration proposée. L'outil local
+est sous licence MIT : Rust/SVG, rendu Skia, Metal/Vulkan et options CPU. Il
+peut servir aux habillages et animations de texte ; porter nos volumes et
+animations Three.js demanderait une intégration ou une réécriture. Three.js
+reste utilisé pour cette boucle. fframes n'a pas été installé ici et aucun
+gain de vitesse sur notre scène 3D n'a été mesuré.
 
 ## Historique — aperçus d'exploration de 24 secondes
 

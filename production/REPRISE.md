@@ -1,5 +1,26 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## En cours — véritable boucle sleep de cinq minutes
+
+Nouvelle instruction du 10 octobre : produire **un parcours 3D de 300 secondes**
+très détaillé pour validation visuelle, inspiré de DREDGE et Subnautica.
+**Tous les futurs épisodes feront deux heures**, soit 24 répétitions de ce fond.
+Aucun long, script ou voix n'est autorisé avant validation des visuels.
+
+Source dédiée : `experiments/deep-sea-procedural/sleep-scene.mjs` ; build séparé
+`dist-sleep/`, README avec commandes de vérification/export. Décor original,
+surfaces procédurales, sept groupes animés, faune benthique et ambiance originale.
+Cycles de 300 secondes sans fondu final. La deuxième raie a été relevée de
+3,5 unités pour supprimer trois croisements avec d'autres animaux ; contrôle
+indépendant des triangles sur les poses candidates corrigées sans croisement.
+Export intégral natif 1080p30 en cours ; **pas encore de nouveau lien livré**.
+Ne pas confondre avec l'archive V4 de 24 secondes ci-dessous.
+
+Outil proposé ensuite par l'utilisateur : **fframes.studio**. Recherche primaire
+et décision dans `FFRAMES_REVIEW.md` : gratuit en local, Rust/SVG/Skia, utile
+pour les habillages ; pas d'import direct du JavaScript Three.js. Aucun port,
+installation ou gain de vitesse 3D mesuré revendiqué.
+
 ## Nouveau projet — fonds marins, aperçu entièrement codé
 
 **Dernière livraison V4 : https://gofile.io/d/nrriY6iM**, 24 s/1080p30,

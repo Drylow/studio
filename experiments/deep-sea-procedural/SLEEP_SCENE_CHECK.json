@@ -1,0 +1,30 @@
+{
+  "schema": "deep-sea-sleep-loop-check-v1",
+  "passed": true,
+  "scene_bundle_sha256": "7679f4f3c8376251869c4be8e13135d9bd6dfc881f37d0c9667ced910cb5c694",
+  "duration_seconds": 300,
+  "width": 1920,
+  "height": 1080,
+  "antialias": true,
+  "endpoints_pixel_identical": true,
+  "boundary_jump_suspected": false,
+  "velocities_continuous": true,
+  "rewind_deterministic": true,
+  "sample_hz": 30,
+  "samples": 9001,
+  "rock_count": 274,
+  "rock_overlap_count": 0,
+  "floor_safe_by_bound": true,
+  "exact_floor_checked_poses": 309,
+  "exact_floor_checked_vertices": 9744624,
+  "limits": "Discrete time samples; rock checks use conservative world boxes. Global analytic ground bound proves vertical separation at those poses; exact vertex floor checks supplement it once per second and at minimum-bound poses. Boundary velocities use centres of observed boxes, not every vertex.",
+  "animal_pairs": {
+    "sample_hz": 2,
+    "poses": 601,
+    "ray2_broad_overlaps": 0,
+    "other_candidate_overlap_poses": 24,
+    "first_triangle_crossings": [],
+    "method": "Actual source placement functions and animated indexed/non-indexed world triangles. All pair bounds sampled2Hz; overlapping poses tested for edge/triangle intersections. Does not exhaustively prove containment or continuous-time avoidance."
+  },
+  "finished_mp4_review": "Pending full export and final encoded movie review; this report verifies the scene only."
+}
