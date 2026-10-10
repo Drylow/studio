@@ -1,0 +1,559 @@
+{
+  "title": "Londres : treize mille maisons perdues dans le Grand Incendie",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "En 1666, un feu parti d’une boulangerie détruit environ treize mille maisons à Londres. #histoire #londres #incendie #vulgarisation",
+  "sources": [
+    "Royal Museums Greenwich, The Great Fire of London : départ le 2 septembre 1666 dans la boulangerie de Thomas Farynor, été sec, vent, hésitation à abattre les maisons, intervention royale, destruction de Saint-Paul et plus de 13 000 maisons ; https://www.rmg.co.uk/stories/topics/great-fire-london — page lue le 10 octobre 2026. Introduction : presque quatre jours ; FAQ : 2–6 septembre, cinq dates calendaires. Le script parle de près de quatre jours de ravage, pas de disparition de tout Londres.",
+    "Encyclopaedia Britannica, Great Fire of London : 2–5 septembre 1666, départ accidentel chez le boulanger du roi à Pudding Lane, environ 13 000 maisons, Saint-Paul détruite, évacuations par le fleuve et foyers repris ensuite ; https://www.britannica.com/event/Great-Fire-of-London — page lue le 10 octobre 2026. Les six décès souvent cités ne sont pas un décompte fiable de toutes les victimes ; chiffre omis du récit."
+  ],
+  "art": {
+    "bread": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. A plain seventeenth century round loaf of bread on a small wooden baker board, a few cracks in the crust, isolated object, no hands, no flames. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x192"
+    },
+    "bakery": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Interior of a small London bakery in 1666 with a brick bread oven and timber beams, a faint trail of blue smoke emerging near the hearth, no people and no readable shop sign. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "street": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. London narrow street in 1666 with crowded timber frame houses and overhanging upper storeys, stylized blue and white fire spreading across rooftops, no modern buildings or domed cathedral. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "charles": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of King Charles II of England in the 1660s, long dark wavy hair, thin mustache, white lace collar and dark coat, no crown, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "pepys": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of Samuel Pepys in the 1660s, round face, long dark wavy hair, dark coat and white collar, holding no objects, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "cart": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. London residents in seventeenth century clothing pulling a small wooden cart loaded with household bundles toward a riverside boat, two adults seen from a distance, anatomically correct two arms and hands, no modern wheels. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "firebreak": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Seventeenth century London workers carefully pulling down an empty timber house to create an open gap between buildings, long ropes, clearly separated adult figures with correct limbs, no visible injury. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "stpauls": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Old Saint Paul’s Cathedral in London during the Great Fire of 1666, large medieval Gothic church with tower and no great spire, roofs burning in stylized blue white flames, absolutely no modern Baroque dome. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "ruins": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Aftermath of the Great Fire of London in 1666, burned timber remains and exposed stone chimneys, smoke above empty rubble streets, a distant small group carrying bundles, no modern landmarks or legible text. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "En seize cent soixante-six, environ treize mille maisons disparaissent à Londres. Tout commence dans une boulangerie.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Environ *13 000 maisons*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "bread",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 13000,
+          "at": "treize",
+          "suffix": "",
+          "prefix": "~",
+          "y": 280,
+          "dur": 1.1,
+          "size": 64,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "stamp",
+          "text": "LONDRES, 1666",
+          "at": "Londres",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Vous pensez à une immense attaque ? Non. Un feu dans un bâtiment suffit à lancer une catastrophe urbaine.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un seul bâtiment.\nUne *catastrophe*.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "bakery",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Nous sommes le deux septembre, dans Pudding Lane. Les flammes démarrent chez le boulanger Thomas Farriner, pendant la nuit.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*2 septembre* 1666",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "bakery",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "fade",
+          "fx": "zoom"
+        },
+        {
+          "type": "stamp",
+          "text": "PUDDING LANE",
+          "at": "Pudding",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Un été sec. Un vent fort. Des rues étroites, et des maisons en bois serrées les unes contre les autres.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Bois + sécheresse + *vent*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "street",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Le feu saute de toit en toit. Les habitants emportent leurs biens. Certains cherchent une issue sur la Tamise.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Fuir avec ses *affaires*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "cart",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Il faut abattre des maisons pour créer des espaces vides. Mais cette décision coûteuse se fait attendre.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Détruire pour *protéger*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "firebreak",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "CRÉER DES COUPE-FEU",
+          "at": "abattre",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Le roi Charles le Deuxième et son frère participent aux efforts. Les équipes essaient de couper le brasier.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le roi intervient *aussi*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "charles",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Samuel Pepys raconte tout dans son journal. Il met ses affaires à l’abri, et enterre même son fromage.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Pepys sauve même son *fromage*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "pepys",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "RACONTÉ DANS SON JOURNAL",
+          "at": "journal",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Le centre brûle près de quatre jours. Le vent tombe, et les tentatives pour contenir le feu réussissent.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Près de *4 jours* de ravage",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 4,
+          "at": "quatre",
+          "suffix": " JOURS",
+          "prefix": "~",
+          "y": 280,
+          "dur": 1.1,
+          "size": 64,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "img",
+          "src": "street",
+          "h": 280,
+          "y": 545,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "L’ancienne cathédrale Saint-Paul est détruite. Des églises, des ateliers, des maisons : des quartiers entiers ne sont plus que des ruines.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Saint-Paul est *détruite*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "stpauls",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "slam"
+        }
+      ]
+    },
+    {
+      "say": "Environ treize mille maisons perdues. Les survivants doivent trouver où dormir, manger, et recommencer leur vie.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*13 000 maisons* perdues",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "~13 000",
+          "at": "treize",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "ruins",
+          "h": 280,
+          "y": 550,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "La ville se reconstruit ensuite. Mais le désastre rappelle combien un réseau de bâtiments serrés peut transmettre le danger.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La reconstruction commence *ensuite*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "ruins",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        }
+      ]
+    },
+    {
+      "say": "Une boulangerie, du vent, du bois sec. Parfois, il ne faut pas une armée pour mettre une capitale à genoux.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Pas besoin d’une *armée*.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "bread",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "UNE VILLE À GENOUX",
+          "at": "genoux",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "preset": "title",
+        "text": "Une boulangerie.\n*13 000 maisons*\nperdues.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "bread",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "LONDRES 1666",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Près de 4 jours\nà détruire\n*Londres*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "street",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "LE GRAND INCENDIE",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Un feu.\nUne capitale\nà *genoux*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "charles",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "UNE CATASTROPHE URBAINE",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ]
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "title": "Gandhi : une poignée de sel contre un empire",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "En 1930, Gandhi a transformé une poignée de sel en symbole de résistance. #histoire #gandhi #inde #vulgarisation",
+  "sources": [
+    "Encyclopaedia Britannica, Salt March : départ le 12 mars 1930, environ 240 miles (385 km selon son arrondi), arrivée à Dandi le 5 avril, geste du sel le 6 avril, monopole britannique, arrestation de Gandhi début mai ; https://www.britannica.com/event/Salt-March",
+    "HISTORY, Salt March : monopole et taxe, départ le 12 mars 1930, environ 240 miles, arrivée le 5 avril et geste le lendemain, arrestation le 5 mai, indépendance en août 1947 ; https://www.history.com/articles/salt-march",
+    "HISTORY, Evan Andrews, When Gandhi’s Salt March Rattled British Colonial Rule : 24 jours, 241 miles selon cette source, arrivée le 5 avril et geste le lendemain ; https://www.history.com/articles/gandhi-salt-march-india-british-colonial-rule",
+    "University of Wisconsin–Madison, The Nonviolence Project, Salt March : marche de 24 jours, prises de parole devant des milliers de personnes ; https://thenonviolenceproject.wisc.edu/2021/08/19/salt-march/",
+    "UCLA, South Asia, Dandi March : 78 compagnons choisis pour le départ, puis d’autres participants rejoignent le cortège. Le chiffre ne désigne pas toute la foule finale. Pour la date du geste du sel, retenir le 6 avril recoupé par Britannica et HISTORY ; https://southasia.ucla.edu/history-politics/gandhi/dandi-march/",
+    "Distance : estimation usuelle de 240 à 241 miles selon les sources. Le script dit environ 386 kilomètres, conversion arrondie de 240 miles ; ne pas présenter une distance mesurée au kilomètre près. La marche et le geste du sel ne donnent pas immédiatement l’indépendance."
+  ],
+  "art": {
+    "gandhi_portrait": {
+      "prompt": "Recognizable bust portrait of Mahatma Gandhi around 1930, an elderly slender Indian man with a bald head, small round wire glasses, gentle but determined expression, prominent ears and a simple off-white khadi shawl over both shoulders. Face turned slightly toward the viewer, not a modern celebrity caricature. Both hands remain outside the crop. Low-resolution retro pixel art with deliberately visible square pixels and sparse checkerboard dithering; strictly deep navy, vivid royal blue, pale periwinkle, off-white and cool grey. Render the entire face in off-white and blue only, no natural skin colors. Bright blue rim light defines the shawl. Center the entire head and shoulders with comfortable black margins, isolated on pure solid black. No lettering, flags, logos, watermarks, borders or extra limbs.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "salt_bowl": {
+      "prompt": "A single small unbranded earthenware bowl filled with coarse irregular off-white salt crystals, viewed at a low three-quarter angle, a few larger crystals clearly visible at the rim. Ordinary household salt, not a magical glowing substance, no heap floating above the bowl. Centered isolated object with a compact silhouette and generous black margins. Crisp low-resolution retro pixel art, large square pixels, sparse checkerboard dithering, palette limited to deep navy, vivid royal blue, pale periwinkle, off-white and grey. Pure solid black background with a restrained blue edge light. No hands, faces, packaging, text, symbols, logos, watermark or border.",
+      "size": "192x192",
+      "kind": "person"
+    },
+    "colonial_salt": {
+      "prompt": "A small historically grounded salt distribution depot in British-ruled India around 1930: several plain coarse cloth sacks of salt stacked beside an unmarked balance scale on a wooden counter, a colonial clerk behind the counter taking payment from one adult Indian customer in simple period clothing. The customer extends one hand with a coin, the clerk has exactly two arms and two separate anatomically coherent hands; five fingers only on any visible open hand, no merged fingers or limbs. Keep the exchange readable rather than drawing a large crowd. Wide compact scene, all figures and objects fully inside the frame, empty pure solid black around the vignette. Retro low-resolution pixel art with square pixels and checkerboard dithering, strictly deep navy and royal blue shading, off-white sacks and garments and cool grey. All faces and hands use off-white and blue only, no natural skin colors. No numeric price, writing, signs, modern currency, flags, branded uniforms, emblems, logos or watermark.",
+      "size": "256x192",
+      "kind": "scene"
+    },
+    "forbidden_coast": {
+      "prompt": "A readable coastal vignette in Gujarat, India, around 1930: a strip of off-white natural salt crust beside calm blue seawater, a simple wooden barrier separating the shore from a dirt path, one adult local villager looking toward the salt while a colonial policeman stands on the path. Show the salt, barrier and sea as the focus, with no violence or caricature. Period plain khadi clothing and generic period police clothing without insignia; each adult has two arms, two legs, coherent anatomy, hands either naturally at their sides or occluded. Wide view, restrained horizon without invented monuments, entire vignette centered with black margins. Crisp square-pixel retro art, limited deep navy, royal blue, pale periwinkle, off-white and cool grey, checkerboard dithering on sea shadows only. All faces and hands use off-white and blue only, no natural skin colors. Pure black surrounding background. No lettering, prohibition symbols, flags, logos, watermark or modern objects.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "ashram_departure": {
+      "prompt": "Departure from Sabarmati Ashram near Ahmedabad in March 1930, a modest low courtyard building and shaded verandah, Gandhi in a plain off-white khadi shawl leading a small representative group of adult male marchers onto a dusty path. Do not attempt to draw exactly seventy-eight people; show six readable adult companions as a symbolic vignette of the much larger initial group. Gandhi is slender, bald, with small round glasses and one simple wooden walking staff. Correct anatomy: two arms and two legs per visible person, each staff belongs to one hand, no duplicated or floating limbs, fingers simplified but coherent. Wide compact composition, feet fully visible, realistic low buildings, no grand palace. Retro pixel art with large deliberate square pixels, limited deep navy, vivid royal blue, pale periwinkle, off-white and cool grey, sparse checkerboard shading. All faces and hands use off-white and blue only, no natural skin colors. Pure black space around the vignette. No text, exact count labels, flags, logos, symbols or watermark.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "marchers": {
+      "prompt": "Side view of Gandhi's Salt March in Gujarat in 1930: the slender bald Gandhi wearing a simple white khadi shawl and round glasses walks with one wooden staff, followed by several adult Indian men in plain period clothing. One small cluster of villagers watches from beside a modest low roadside house, suggesting new supporters without showing an exact crowd count. The road stretches horizontally through the vignette, no invented geographic map or route labels. Clear alternating walking poses, two arms and two legs per figure, correctly attached hands and feet, no fused bodies, no extra staff, simplified coherent five-finger hands when visible. Full-body figures fit inside a wide scene with generous black margins. Low-resolution retro pixel art, hard square pixel edges, deep navy and vivid royal blue shadows, off-white garments, pale periwinkle and cool grey highlights. All faces and hands use off-white and blue only, no natural skin colors. Pure solid black surrounding background. No written text, logos, flags, watermark or modern vehicles.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "dandi_salt": {
+      "prompt": "Gandhi at the Dandi seashore on the morning of 6 April 1930, shown crouching slightly and raising a small irregular lump of salt-encrusted mud from an off-white patch of shoreline, calm blue Arabian Sea behind him. He is slender, bald, has small round glasses and plain white khadi clothing, with a determined understated expression. The raised right hand holds one small lump clearly, the left hand rests naturally near his bent knee. Exactly two arms, two hands, five anatomically coherent fingers on each visible hand, no extra fingers, merged limbs or floating object. A few distant adult supporters are silhouettes only, not portraits or an exact head count. Compact three-quarter scene, complete body and feet comfortably within the frame. Retro crisp low-resolution pixel art, royal blue and deep navy shading, pale periwinkle, off-white and cool grey, restrained checkerboard dithering. All faces and hands use off-white and blue only, no natural skin colors. Pure black around the scene. No text, logos, flags, borders or watermark.",
+      "size": "256x192",
+      "kind": "scene"
+    },
+    "salt_resistance": {
+      "prompt": "A nonviolent salt protest vignette in India around 1930: three adult Indian villagers in modest plain khadi clothes gather around a low unbranded shallow pan holding white salt crystals. One adult carefully pours salt into an ordinary earthenware bowl while the others look on with resolute expressions. Two distant journalists with a generic period box camera and a notebook stand to the side, showing public attention without a fictitious headline. Exactly two arms and two hands per foreground person, coherent five-finger hands, one bowl and one pan, no duplicated limbs or floating props. Clear readable action and wide compact layout, no battle, fire, weapons or crowds too small to read. Retro pixel art with square blocks and sparse checkerboard dithering, palette deep navy, vivid royal blue, pale periwinkle, off-white and cool grey only. All faces and hands use off-white and blue only, no natural skin colors. Entire scene isolated with black margins on pure black background. No text, newspaper writing, flags, logos, watermarks or modern technology.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "gandhi_prison": {
+      "prompt": "Restrained symbolic bust portrait of Gandhi behind three straight generic iron prison bars, referring to his May 1930 arrest without inventing a specific prison interior. Slender bald elderly Indian man, small round wire glasses, simple off-white khadi shawl, composed expression. The bars are spaced so the face remains readable; both hands outside the crop, no hand grasping a bar. Centered head and shoulders, generous pure black margins, not a modern mugshot. Low-resolution retro pixel art with visible square pixels, deep navy and royal blue bars, pale periwinkle and off-white clothing highlights, cool grey and sparse checkerboard dithering. Render the entire face in off-white and blue only, no natural skin colors. Pure solid black background. No numbers, plaque, writing, logos, flags, watermark or extra limbs.",
+      "size": "192x256",
+      "kind": "person"
+    }
+  },
+  "beats": [
+    {
+      "say": "Gandhi a défié l'Empire britannique avec une poignée de sel. Oui, du sel.",
+      "glow": {
+        "y": 500,
+        "r": 300,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "gandhi_portrait",
+          "h": 430,
+          "y": 500,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Du *sel* contre un empire.",
+          "at": 0,
+          "y": 150,
+          "size": 29
+        },
+        {
+          "type": "stamp",
+          "text": "UNE POIGNÉE",
+          "at": "poignée",
+          "y": 755,
+          "rot": -5,
+          "fill": true,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "say": "En 1930, l'Inde est sous domination britannique. Le pouvoir colonial contrôle la production du sel et impose une taxe.",
+      "glow": {
+        "y": 525
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L'Inde sous domination\n*britannique*.",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "preset": "num",
+          "text": "1930",
+          "at": "1930",
+          "y": 275,
+          "size": 64
+        },
+        {
+          "type": "img",
+          "src": "colonial_salt",
+          "h": 275,
+          "y": 535,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "TAXÉ",
+          "at": "taxe",
+          "y": 725,
+          "rot": 4,
+          "fill": true,
+          "size": 24
+        }
+      ]
+    },
+    {
+      "say": "Vous voyez la mer, mais récupérer son sel est interdit. Même les plus pauvres doivent payer.",
+      "glow": {
+        "y": 510
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Récupérer le sel ?",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "forbidden_coast",
+          "h": 250,
+          "y": 505,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "INTERDIT",
+          "at": "interdit",
+          "y": 690,
+          "rot": -5,
+          "fill": true,
+          "size": 26
+        },
+        {
+          "preset": "sub",
+          "text": "Même les plus *pauvres*.",
+          "at": "pauvres",
+          "y": 765,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "say": "Gandhi choisit cet ingrédient indispensable. Toute la population peut comprendre pourquoi cette taxe pose problème.",
+      "glow": {
+        "y": 530,
+        "a": 0.22
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le même sel pour *tous*.",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "preset": "label",
+          "text": "UN INGRÉDIENT INDISPENSABLE",
+          "at": "indispensable",
+          "y": 270,
+          "color": "W",
+          "size": 13
+        },
+        {
+          "type": "img",
+          "src": "salt_bowl",
+          "h": 300,
+          "y": 535,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        }
+      ]
+    },
+    {
+      "say": "Le 12 mars, il quitte son ashram près d'Ahmedabad avec 78 compagnons. C'est seulement le groupe du départ.",
+      "glow": {
+        "y": 520
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "12 mars 1930",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 78,
+          "dur": 0.8,
+          "at": "78",
+          "y": 265,
+          "size": 76,
+          "dimWhileCounting": true,
+          "in": "fade"
+        },
+        {
+          "preset": "label",
+          "text": "COMPAGNONS AU DÉPART",
+          "at": "78",
+          "y": 335,
+          "color": "W",
+          "size": 14
+        },
+        {
+          "type": "img",
+          "src": "ashram_departure",
+          "h": 230,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "LE GROUPE INITIAL",
+          "at": "départ",
+          "y": 710,
+          "rot": -4,
+          "size": 18
+        }
+      ]
+    },
+    {
+      "say": "La marche dure 24 jours. Ils parcourent environ 386 kilomètres à pied, jusqu'au village côtier de Dandi.",
+      "glow": {
+        "y": 535
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La marche du *sel*",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 24,
+          "suffix": " JOURS",
+          "dur": 0.7,
+          "at": "24",
+          "y": 250,
+          "size": 62,
+          "ls": 2,
+          "in": "fade"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 386,
+          "suffix": " KM",
+          "dur": 0.9,
+          "at": "386",
+          "y": 335,
+          "size": 62,
+          "ls": 2,
+          "dimWhileCounting": true,
+          "in": "fade"
+        },
+        {
+          "preset": "label",
+          "text": "ENVIRON · À PIED",
+          "at": "environ",
+          "y": 392,
+          "size": 14
+        },
+        {
+          "type": "img",
+          "src": "marchers",
+          "h": 230,
+          "y": 555,
+          "at": 0,
+          "in": "fade",
+          "fx": "bob"
+        },
+        {
+          "type": "stamp",
+          "text": "DANDI",
+          "at": "Dandi",
+          "y": 735,
+          "rot": 4,
+          "fill": true,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "say": "À chaque étape, Gandhi parle aux habitants. Des foules viennent l'écouter, et d'autres marcheurs rejoignent le cortège.",
+      "glow": {
+        "y": 515
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le cortège *grandit*.",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "marchers",
+          "h": 245,
+          "y": 515,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "DE VILLAGE EN VILLAGE",
+          "at": "étape",
+          "y": 715,
+          "rot": -4,
+          "size": 17
+        }
+      ]
+    },
+    {
+      "say": "Le 6 avril, il ramasse du sel sur la plage. Un geste banal, qui enfreint la loi coloniale.",
+      "glow": {
+        "y": 530,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "6 avril 1930",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "dandi_salt",
+          "h": 300,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "LA LOI EST ENFREINTE",
+          "at": "enfreint",
+          "y": 735,
+          "rot": -5,
+          "fill": true,
+          "size": 18
+        }
+      ]
+    },
+    {
+      "say": "Des milliers d'Indiens commencent à produire ou à vendre du sel illégal. La désobéissance civile se répand.",
+      "glow": {
+        "y": 515
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le sel devient *résistance*.",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "salt_resistance",
+          "h": 275,
+          "y": 515,
+          "at": 0,
+          "in": "rise"
+        },
+        {
+          "type": "stamp",
+          "text": "DÉSOBÉISSANCE CIVILE",
+          "at": "désobéissance",
+          "y": 725,
+          "rot": 4,
+          "fill": true,
+          "size": 18
+        }
+      ]
+    },
+    {
+      "say": "La stratégie ? Désobéir publiquement, sans violence. Et obliger les autorités à réagir devant les journalistes du monde entier.",
+      "glow": {
+        "y": 505
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Désobéir *publiquement*.",
+          "at": 0,
+          "out": "violence",
+          "y": 150
+        },
+        {
+          "preset": "title",
+          "text": "Sans *violence*.",
+          "at": "violence",
+          "y": 150,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "img",
+          "src": "gandhi_portrait",
+          "h": 330,
+          "y": 505,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "DEVANT LE MONDE",
+          "at": "journalistes",
+          "y": 725,
+          "rot": -4,
+          "size": 21
+        }
+      ]
+    },
+    {
+      "say": "Gandhi est arrêté en mai. Pourtant, le mouvement continue sans lui : enfermer un homme ne suffit plus.",
+      "glow": {
+        "y": 520,
+        "a": 0.12
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Arrêté en *mai 1930*.",
+          "at": "mai",
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "gandhi_prison",
+          "h": 390,
+          "y": 515,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "LE MOUVEMENT CONTINUE",
+          "at": "continue",
+          "y": 765,
+          "rot": 4,
+          "fill": true,
+          "size": 17
+        }
+      ]
+    },
+    {
+      "say": "L'Inde n'obtient pas son indépendance ce jour-là. Elle devient indépendante en 1947, dix-sept ans plus tard.",
+      "glow": {
+        "y": 540
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L'indépendance *attendra*.",
+          "at": 0,
+          "y": 150
+        },
+        {
+          "preset": "big",
+          "text": "1947",
+          "at": "1947",
+          "y": 285,
+          "size": 76
+        },
+        {
+          "preset": "num",
+          "text": "17 ANS PLUS TARD",
+          "at": "dix-sept",
+          "y": 365,
+          "size": 32,
+          "ls": 2
+        },
+        {
+          "type": "img",
+          "src": "gandhi_portrait",
+          "h": 260,
+          "y": 560,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "Pas une victoire instantanée. Gandhi avait choisi un produit que chacun avait dans sa cuisine pour contester un empire. Une poignée de sel.",
+      "glow": {
+        "y": 525,
+        "r": 280,
+        "a": 0.23
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Pas une victoire\n*instantanée*.",
+          "at": 0,
+          "out": "poignée",
+          "y": 150
+        },
+        {
+          "type": "img",
+          "src": "salt_bowl",
+          "h": 330,
+          "y": 535,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Une *poignée de sel*.",
+          "at": "poignée",
+          "y": 150,
+          "in": "slam",
+          "flash": true
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "Du *sel* contre\nun empire.",
+        "y": 280,
+        "maxW": 470
+      },
+      {
+        "type": "img",
+        "src": "gandhi_portrait",
+        "h": 400,
+        "y": 595
+      },
+      {
+        "type": "stamp",
+        "text": "GANDHI · 1930",
+        "y": 855,
+        "rot": -4,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "Environ 386 km\npour du *sel* ?",
+        "y": 280,
+        "maxW": 470
+      },
+      {
+        "type": "img",
+        "src": "marchers",
+        "h": 250,
+        "y": 580
+      },
+      {
+        "type": "stamp",
+        "text": "24 JOURS À PIED",
+        "y": 805,
+        "rot": 4,
+        "fill": true,
+        "size": 21
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "Cette poignée de sel\nétait *illégale*.",
+        "y": 280,
+        "maxW": 470
+      },
+      {
+        "type": "img",
+        "src": "salt_bowl",
+        "h": 330,
+        "y": 580
+      },
+      {
+        "type": "stamp",
+        "text": "6 AVRIL 1930",
+        "y": 825,
+        "rot": -4,
+        "fill": true,
+        "size": 21
+      }
+    ]
+  ]
+}

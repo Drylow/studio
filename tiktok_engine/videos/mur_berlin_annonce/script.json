@@ -1,0 +1,561 @@
+{
+  "title": "Le mur de Berlin et l’annonce qui a tout accéléré",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Une annonce mal maîtrisée a accéléré l’ouverture du mur de Berlin après vingt-huit ans. #histoire #berlin #murdeberlin #vulgarisation",
+  "sources": [
+    "BBC, Fall of Berlin Wall: How 1989 reshaped the modern world, 5 novembre 2019 : 9 novembre 1989, Schabowski mal préparé, annonce immédiate au lieu du lendemain, foule et ouverture ; https://www.bbc.com/news/world-europe-50013048 — page lue le 10 octobre 2026.",
+    "Encyclopaedia Britannica, Berlin Wall : fermeture les 12–13 août 1961, ouverture le 9 novembre 1989, contestation politique et changement de régime ; https://www.britannica.com/topic/Berlin-Wall — page lue le 10 octobre 2026. Vingt-huit ans = écart 1961–1989, pas une durée exacte au jour près. L’annonce ne constitue pas l’unique cause de la chute."
+  ],
+  "art": {
+    "wall": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Berlin Wall as it looked in 1989, tall concrete barrier with rounded top and a guard tower, centered isolated structure, night atmosphere, no modern skyscrapers. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "schabowski": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of Günter Schabowski in November 1989, middle aged East German official with dark combed hair, square glasses, dark suit and tie, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "wire": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Berlin street in August 1961 with barbed wire barrier being installed between buildings, adults in period work clothing viewed from a distance, hands too small to emphasize. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "protest": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Peaceful East German protest crowd in autumn 1989 holding blank rectangular placards, winter coats, diverse adult faces, no readable text, all hands simplified and anatomically correct. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "press": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. East German official Günter Schabowski at a 1989 press conference desk with tabletop microphones, papers resting flat on desk, seated journalists seen from behind, no readable writing. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "papers": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. A small stack of official paper sheets and a microphone on a 1989 conference desk, abstract lines instead of writing, no person or hands. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "256x192"
+    },
+    "television": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. An old box shaped late 1980s television with a blue screen showing a tiny newsreader silhouette, realistic proportions, no words on screen. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "256x192"
+    },
+    "checkpoint": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bornholmer Strasse border checkpoint in Berlin on the night of 9 November 1989, dense crowd facing a closed road barrier, guard booth, period civilian winter coats, no violence. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "crossing": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Adults from East Berlin walking joyfully through an open border barrier on the night of 9 November 1989, people hugging with anatomically correct arms and hands, period winter clothes, wide view. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "Ce mur sépare Berlin pendant vingt-huit ans. Une réponse mal préparée va précipiter l’ouverture des frontières.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*28 ans* de séparation",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "wall",
+          "h": 340,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 28,
+          "at": "vingt-huit",
+          "suffix": " ANS",
+          "prefix": "",
+          "y": 280,
+          "dur": 1.1,
+          "size": 64,
+          "in": "slam",
+          "flash": true
+        }
+      ]
+    },
+    {
+      "say": "Vous imaginez un ordre parfaitement clair ? En réalité, cette nuit commence dans une conférence de presse.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Tout commence devant des *journalistes*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "press",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Le mur existe depuis mille neuf cent soixante et un. Il empêche les habitants de l’Est de partir librement.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une frontière imposée en *1961*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "1961",
+          "at": "mille",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "wire",
+          "h": 280,
+          "y": 550,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "En mille neuf cent quatre-vingt-neuf, les manifestations se multiplient. Le régime est sous pression. Le changement a commencé.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le régime est sous *pression*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "1989",
+          "at": "mille",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "protest",
+          "h": 290,
+          "y": 550,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "Le neuf novembre, Günter Schabowski présente de nouvelles règles de voyage. Il n’a pas eu le temps de les lire.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*9 novembre* 1989",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "schabowski",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "UNE ANNONCE MAL PRÉPARÉE",
+          "at": "lire",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Un journaliste demande quand elles entrent en vigueur. Schabowski fouille ses notes, hésite, puis répond : immédiatement.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Quand ?\n*Immédiatement*.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "papers",
+          "h": 280,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "IMMÉDIATEMENT",
+          "at": "immédiatement",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "La procédure devait commencer le lendemain, avec des demandes de visa. Pas une consigne d’ouverture générale immédiate.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Prévu pour *le lendemain*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "press",
+          "h": 290,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "PAS UN ORDRE CLAIR",
+          "at": "consigne",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "La télévision diffuse l’annonce. Pour beaucoup de Berlinois, le message devient simple : le passage est ouvert. Ils sortent vérifier.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’annonce passe à la *télévision*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "television",
+          "h": 320,
+          "y": 520,
+          "at": 0,
+          "in": "slam"
+        }
+      ]
+    },
+    {
+      "say": "Des foules arrivent aux postes-frontières. Les gardes n’ont pas de réponse claire. La pression devient impossible à contenir.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des foules aux *postes-frontières*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "checkpoint",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Des passages s’ouvrent. Les habitants traversent, se retrouvent, s’embrassent. La frontière que l’on croyait verrouillée cède.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Les passages *s’ouvrent*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "crossing",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "LA FRONTIÈRE CÈDE",
+          "at": "cède",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Mais une phrase n’explique pas tout. Les protestations, les départs et l’affaiblissement du régime ont préparé cet instant historique.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La phrase n’est pas *l’unique cause*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "protest",
+          "h": 290,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "UN CONTEXTE DÉCISIF",
+          "at": "préparé",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "L’annonce maladroite a accéléré le basculement. Le mur ne disparaît pas entièrement cette nuit-là, mais sa fonction vient de s’effondrer.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le béton reste.\nLa frontière *s’effondre*.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "wall",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        }
+      ]
+    },
+    {
+      "say": "Vingt-huit ans de séparation. Ce soir-là, le pouvoir n’arrive même plus à expliquer quand ses propres règles commencent.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*28 ans*. Puis cette nuit.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "schabowski",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "LE POUVOIR PERD LE CONTRÔLE",
+          "at": "expliquer",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "preset": "title",
+        "text": "28 ans de mur.\nPuis *cette phrase*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "wall",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "BERLIN 1989",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Il répond :\n*immédiatement*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "schabowski",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "UNE ANNONCE HISTORIQUE",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Une conférence.\nUne frontière\nqui *s’ouvre*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "crossing",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "9 NOVEMBRE 1989",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ]
+  ]
+}

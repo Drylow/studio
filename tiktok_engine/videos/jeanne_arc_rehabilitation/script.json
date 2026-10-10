@@ -1,0 +1,196 @@
+{
+  "title": "Jeanne d'Arc, réhabilitée vingt-cinq ans trop tard",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Le procès de Jeanne d'Arc a été annulé vingt-cinq ans après son exécution. #histoire #jeannedarc #vulgarisation #moyenage",
+  "sources": [
+    "Encyclopaedia Britannica, Saint Joan of Arc : naissance vers 1412, exécution à Rouen le 30 mai 1431, âge donné comme 19 ans et annulation de la sentence en 1455–1456. https://www.britannica.com/biography/Saint-Joan-of-Arc",
+    "Encyclopaedia Britannica, Capture, trial, and execution : capture par les Bourguignons, remise aux Anglais, procès ecclésiastique, requête de la famille et procédure de 1455–1456 annulant la sentence de 1431. https://www.britannica.com/biography/Saint-Joan-of-Arc/Capture-trial-and-execution",
+    "Vatican, audience générale du 26 janvier 2011 : mort à 19 ans en 1431 ; procès en nullité terminé le 7 juillet 1456, condamnation déclarée nulle et non avenue ; nombreux témoignages. Il s'agit d'une annulation après la mort, pas d'une libération ni d'une simple grâce. https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110126.html",
+    "Fordham University, Internet Medieval Sourcebook, traduction W. P. Barrett des actes du procès : interrogée sur son âge, Jeanne répond qu'elle pense avoir dix-neuf ans. L'âge reste donc approximatif dans le récit et à l'écran. https://sourcebooks.fordham.edu/basis/joanofarc-trial.asp",
+    "Ville de Rouen, programme Jeanne d'Arc : supplice du 30 mai 1431 ; présentation du procès de réhabilitation de 1456, vingt-cinq ans plus tard. Le délai de 25 ans est un écart d'années civiles, pas une affirmation de dates anniversaires identiques. https://rouen.fr/jeannedarc"
+  ],
+  "art": {
+    "jeanne_portrait": {
+      "prompt": "Original illustrative pixel-art bust of Joan of Arc as a young woman around nineteen, short dark bob haircut, alert solemn eyes, plain fifteenth-century steel breastplate with a modest high neckline, facing the viewer with a resolute expression. An evocative historical reconstruction, not a claim to reproduce a surviving life portrait. Crisp square pixels, detailed readable face, restrained checkerboard dithering, limited electric royal blue, deep blue, off-white and gray palette on pure black, no colored backdrop, no gradients, no text, no lettering, no halo, no logos, no watermark. Shoulders and head fully inside the frame with breathing room; arms and hands below the crop, no duplicate limbs, no floating hands.",
+      "size": "192x256"
+    },
+    "rouen_square": {
+      "prompt": "Wide original pixel-art illustration of a modest medieval public square in Rouen in 1431, low timber-framed houses and a small empty wooden stake on a raised platform, several tiny fully clothed distant spectators, subdued solemn atmosphere, no person on the stake, no flames, no injury and no gore. Historically plausible late medieval Normandy architecture, no fantasy skyline or modern street fixtures. Crisp square pixels and controlled checkerboard dithering, electric royal blue and deep blue shadows, off-white and gray highlights on a pure black outer background, no orange or red, no text, no logos, no watermark. Keep buildings and the platform fully inside the image; distant figures have natural two-arm silhouettes and no visible detailed hands.",
+      "size": "320x192"
+    },
+    "joan_armor": {
+      "prompt": "Original pixel-art three-quarter standing reconstruction of Joan of Arc, the same young woman with a short dark bob as the portrait, wearing practical early fifteenth-century French plate armor with a plain white cloth layer, one hand resting naturally beside a sheathed sword, the other arm relaxed; no combat action and no weapon pointing at anyone. Human proportions, exactly two arms and two hands, gloves cover fingers without fused or extra digits. Face earnest, posture straight, entire head and boots visible. Crisp large square pixels, fine controlled checkerboard dithering, electric royal blue, deep blue, off-white and gray only, pure black background, no banners or heraldic logos, no text, no watermark.",
+      "size": "192x256"
+    },
+    "trial_1431": {
+      "prompt": "Original wide pixel-art illustration of Joan of Arc's ecclesiastical interrogation in Rouen in 1431: one young woman with a short dark bob and simple fully covering medieval clothing stands to the left, two clerics in late medieval robes sit behind a modest wooden desk to the right, one clerk records proceedings with a quill. Serious faces and visibly unequal positions, no theatrical modern judge wigs, no gavels, no modern courtroom objects. Closed room suggested with a few stone arches, no readable writing. Each visible person has exactly two arms; simplify hands to clear natural glove-like pixel shapes, no extra fingers or detached hands. Crisp square pixels, restrained checkerboard dithering, electric royal blue and deep blue with off-white and gray highlights, pure black edges, no text, no logos, no watermark.",
+      "size": "320x192"
+    },
+    "condemnation_scroll": {
+      "prompt": "Original pixel-art close-up of a single fifteenth-century parchment legal document, partly unrolled on a small dark wooden surface, uneven cream-colored edges rendered in off-white, a small round blue wax seal on its lower corner, faint abstract gray line marks only with no readable alphabet or numbers. The object symbolizes a condemnation record but contains no invented quotation. Isolated clear silhouette, crisp square pixels, restrained checkerboard dithering, electric royal blue, deep blue, off-white and gray on pure black, no hands, no people, no logos, no watermark, no pre-rendered title or stamp.",
+      "size": "256x192"
+    },
+    "family_petition": {
+      "prompt": "Original wide pixel-art historical reconstruction of a bereaved French family presenting a petition to a church clerk in the mid-fifteenth century: one older woman in a modest fully covering blue gown and white linen head covering, one adult male relative in a plain tunic behind her, one seated clerk receiving a rolled parchment across a narrow desk. Quiet determined expressions, not a scene of physical confrontation, no attempt to depict a verified individual likeness. Exactly three people, each with two arms, hands naturally placed and simplified to coherent pixel silhouettes, no extra fingers, no floating hands. Crisp square pixels, detailed readable clothing, restrained checkerboard dithering, electric royal blue, deep blue, off-white and gray palette on pure black outer background, no readable writing, no text, no logos, no watermark.",
+      "size": "320x192"
+    },
+    "witness_hearing": {
+      "prompt": "Original wide pixel-art illustration of a fifteenth-century ecclesiastical inquiry hearing: a fully clothed elderly witness in a plain tunic speaks calmly from the left, a cleric listens across a small desk at the right, a second clerk makes notes on a parchment at the center, several separate rolled documents on the desk. Natural eye lines and human proportions, quiet investigation rather than a dramatic trial verdict. Three figures only, exactly two arms each, clearly attached simple hands, no extra fingers or duplicated limbs. Crisp square pixels, subtle checkerboard dithering, limited electric royal blue, deep blue, off-white and gray palette, pure black surrounding background, no readable writing, no modern objects, no logos, no watermark.",
+      "size": "320x192"
+    },
+    "annulment_scroll": {
+      "prompt": "Original pixel-art object illustration of two separate fifteenth-century parchment records side by side, the older sheet on the left dim and creased, the newly opened sheet on the right bright off-white with a small electric-blue wax seal. Use only faint abstract line marks, no readable words, dates or invented quotations; the program will add all dates and annulment labels separately. Clear balanced silhouette, crisp square pixels, restrained checkerboard dithering, limited electric royal blue, deep blue, off-white and gray on pure black, no hands, no people, no modern legal symbols, no logos, no watermark.",
+      "size": "320x192"
+    },
+    "empty_cell": {
+      "prompt": "Original wide pixel-art illustration of an empty late medieval stone prison chamber in Rouen, one narrow barred window with a small shaft of off-white light, an empty wooden stool and a few simple stone floor tiles, somber restrained mood. Absolutely no prisoner, no ghost, no body, no chains attached to a person and no injury; this image emphasizes that a later legal decision cannot bring a dead person back. Historically plausible fifteenth-century masonry, no fantasy castle skyline, no modern fixtures. Crisp square pixels and controlled checkerboard dithering, electric royal blue and deep blue shadows, off-white and gray highlights, pure black surrounding background, no text, no logos, no watermark.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "Jeanne d'Arc est exécutée. Vingt-cinq ans plus tard, son procès est annulé. La justice arrive beaucoup trop tard.",
+      "glow": {"y": 530, "r": 280, "a": 0.24},
+      "els": [
+        {"type": "img", "src": "jeanne_portrait", "h": 430, "y": 535, "at": 0, "in": "slam", "flash": "big", "fx": "breathe"},
+        {"preset": "title", "text": "Condamnée.\n*Puis réhabilitée.*", "at": 0, "y": 150, "size": 28},
+        {"type": "counter", "from": 0, "to": 25, "suffix": " ANS", "at": "Vingt-cinq", "dur": 0.65, "y": 275, "size": 52, "ls": 2},
+        {"type": "stamp", "text": "TROP TARD", "at": "justice", "y": 790, "rot": -5, "fill": true, "size": 19}
+      ]
+    },
+    {
+      "say": "Le trente mai mille quatre cent trente et un, elle meurt sur le bûcher, à Rouen.",
+      "glow": {"y": 540},
+      "els": [
+        {"preset": "title", "text": "L'exécution à *Rouen*", "at": 0, "y": 150},
+        {"preset": "num", "text": "30 MAI 1431", "at": "bûcher", "y": 280, "size": 42, "ls": 2},
+        {"type": "img", "src": "rouen_square", "h": 245, "y": 530, "at": 0, "in": "scan", "scanDur": 0.55, "fx": "zoom"}
+      ]
+    },
+    {
+      "say": "Environ dix-neuf ans. Pendant l'interrogatoire, Jeanne dit elle-même qu'elle pense avoir cet âge.",
+      "glow": {"y": 560},
+      "els": [
+        {"preset": "title", "text": "*Une très jeune femme*", "at": 0, "y": 150},
+        {"type": "counter", "from": 0, "to": 19, "prefix": "~", "suffix": " ANS", "at": "dix-neuf", "dur": 0.55, "y": 280, "size": 55, "ls": 2},
+        {"type": "img", "src": "jeanne_portrait", "h": 340, "y": 560, "at": 0, "in": "pop", "fx": "breathe"},
+        {"type": "stamp", "text": "ÂGE APPROXIMATIF", "at": "pense", "y": 775, "rot": -4, "size": 15}
+      ]
+    },
+    {
+      "say": "Vous connaissez l'armure et les batailles. Mais son dernier combat se joue devant des juges.",
+      "glow": {"y": 520},
+      "els": [
+        {"preset": "title", "text": "L'armure ne protège\npas des *juges*.", "at": 0, "y": 150, "size": 27},
+        {"type": "img", "src": "joan_armor", "h": 380, "y": 530, "at": 0, "in": "pop", "out": "juges"},
+        {"type": "img", "src": "trial_1431", "h": 240, "y": 530, "at": "juges", "in": "scan", "scanDur": 0.45}
+      ]
+    },
+    {
+      "say": "Capturée, puis livrée aux Anglais, elle est accusée d'hérésie. Un tribunal religieux examine sa foi et ses voix.",
+      "glow": {"y": 530},
+      "els": [
+        {"preset": "title", "text": "Un *tribunal religieux*", "at": 0, "y": 150},
+        {"type": "stamp", "text": "ACCUSÉE D'HÉRÉSIE", "at": "hérésie", "y": 295, "rot": -5, "fill": true, "size": 17},
+        {"type": "img", "src": "trial_1431", "h": 250, "y": 550, "at": 0, "in": "fade", "fx": "breathe"}
+      ]
+    },
+    {
+      "say": "La condamnation tombe. Jeanne est exécutée. Mais sa famille refuse que cette sentence reste le dernier mot.",
+      "glow": {"y": 530},
+      "els": [
+        {"preset": "title", "text": "La sentence reste.\n*La famille résiste.*", "at": 0, "y": 150, "size": 27},
+        {"type": "img", "src": "condemnation_scroll", "h": 295, "y": 530, "at": 0, "in": "slam"},
+        {"type": "stamp", "text": "CONDAMNATION", "at": "condamnation", "y": 760, "rot": -5, "size": 18}
+      ]
+    },
+    {
+      "say": "Sa famille saisit l'Église pour faire réexaminer la condamnation. Elle veut laver son nom, même après sa mort.",
+      "glow": {"y": 520},
+      "els": [
+        {"preset": "title", "text": "Sa famille demande\n*justice*.", "at": 0, "y": 150, "size": 28},
+        {"type": "img", "src": "family_petition", "h": 250, "y": 530, "at": 0, "in": "scan", "scanDur": 0.5},
+        {"type": "stamp", "text": "RÉEXAMINER", "at": "réexaminer", "y": 735, "rot": -4, "size": 19}
+      ]
+    },
+    {
+      "say": "Des témoins sont interrogés. Cette fois, on examine aussi la manière dont le premier procès s'est déroulé.",
+      "glow": {"y": 530},
+      "els": [
+        {"preset": "title", "text": "Le procès lui-même\nest *examiné*.", "at": 0, "y": 150, "size": 27},
+        {"type": "img", "src": "witness_hearing", "h": 250, "y": 535, "at": 0, "in": "scan", "scanDur": 0.75},
+        {"preset": "label", "text": "TÉMOIGNAGES · DOCUMENTS", "at": "examine", "y": 735, "color": "W", "size": 15, "ls": 1}
+      ]
+    },
+    {
+      "say": "Le sept juillet mille quatre cent cinquante-six, la condamnation est annulée. Les juges prononcent sa réhabilitation.",
+      "glow": {"y": 535, "a": 0.24},
+      "els": [
+        {"preset": "title", "text": "La condamnation\nest *annulée*.", "at": 0, "y": 150, "size": 28},
+        {"preset": "num", "text": "1456", "at": "cinquante-six", "y": 290, "size": 65, "in": "slam", "flash": true},
+        {"type": "img", "src": "annulment_scroll", "h": 245, "y": 555, "at": 0, "in": "scan", "scanDur": 0.55},
+        {"type": "stamp", "text": "RÉHABILITÉE", "at": "réhabilitation", "y": 750, "rot": -5, "fill": true, "size": 21}
+      ]
+    },
+    {
+      "say": "Attention : personne ne sort de prison. Jeanne est morte depuis un quart de siècle. On répare sa réputation.",
+      "glow": {"y": 530, "a": 0.14},
+      "els": [
+        {"preset": "title", "text": "*Personne* ne sort\nde prison.", "at": 0, "y": 150, "size": 28},
+        {"type": "img", "src": "empty_cell", "h": 260, "y": 535, "at": 0, "in": "fade"},
+        {"type": "stamp", "text": "APRÈS SA MORT", "at": "morte", "y": 755, "rot": -4, "size": 18}
+      ]
+    },
+    {
+      "say": "De mille quatre cent trente et un à mille quatre cent cinquante-six : vingt-cinq ans. Le dossier change ; le bûcher, lui, ne s'efface pas.",
+      "glow": {"y": 530},
+      "els": [
+        {"preset": "title", "text": "1431 → *1456*", "at": 0, "y": 150, "size": 32},
+        {"type": "counter", "from": 0, "to": 25, "suffix": " ANS", "at": "vingt-cinq", "dur": 0.9, "y": 295, "size": 58, "ls": 2},
+        {"type": "img", "src": "annulment_scroll", "h": 225, "y": 545, "at": 0, "in": "scan", "out": "bûcher"},
+        {"type": "img", "src": "rouen_square", "h": 240, "y": 545, "at": "bûcher", "in": "fade"}
+      ]
+    },
+    {
+      "say": "C'est un procès en nullité, pas un simple pardon. Le premier jugement est déclaré invalide.",
+      "glow": {"y": 535},
+      "els": [
+        {"preset": "title", "text": "Un jugement *invalide*", "at": 0, "y": 150},
+        {"type": "text", "font": "sans", "size": 33, "color": "W", "text": "PARDON", "at": "pardon", "y": 290, "strike": {"at": "invalide", "color": "B", "dur": 0.3}},
+        {"type": "img", "src": "annulment_scroll", "h": 245, "y": 555, "at": 0, "in": "pop"},
+        {"type": "stamp", "text": "PROCÈS ANNULÉ", "at": "invalide", "y": 755, "rot": -5, "fill": true, "size": 20}
+      ]
+    },
+    {
+      "say": "Elle a perdu sa vie devant un tribunal. Puis sa famille a obtenu la reconnaissance de l'injustice. Trop tard.",
+      "glow": {"y": 530, "r": 270, "a": 0.19},
+      "els": [
+        {"preset": "title", "text": "Son nom est lavé.\n*Sa vie est perdue.*", "at": 0, "y": 150, "size": 28},
+        {"type": "img", "src": "jeanne_portrait", "h": 390, "y": 535, "at": 0, "in": "fade", "fx": "breathe"},
+        {"type": "stamp", "text": "TROP TARD", "at": "Trop", "y": 785, "rot": -5, "fill": true, "size": 23}
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {"type": "text", "font": "sans", "size": 39, "color": "W", "text": "Réhabilitée\n*25 ans trop tard*.", "y": 270, "maxW": 465},
+      {"type": "img", "src": "jeanne_portrait", "h": 430, "y": 585},
+      {"type": "stamp", "text": "JEANNE D'ARC", "y": 850, "size": 18, "rot": -4}
+    ],
+    [
+      {"type": "text", "font": "sans", "size": 38, "color": "W", "text": "Condamnée.\nPuis *réhabilitée*.", "y": 270, "maxW": 465},
+      {"type": "img", "src": "annulment_scroll", "h": 255, "y": 580},
+      {"type": "stamp", "text": "1431 → 1456", "y": 795, "size": 24, "rot": -5, "fill": true}
+    ],
+    [
+      {"type": "text", "font": "sans", "size": 39, "color": "W", "text": "La justice arrive\n*après sa mort*.", "y": 270, "maxW": 465},
+      {"type": "img", "src": "jeanne_portrait", "h": 395, "y": 580},
+      {"type": "stamp", "text": "PROCÈS ANNULÉ", "y": 835, "size": 20, "rot": -4}
+    ]
+  ]
+}

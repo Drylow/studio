@@ -1,0 +1,602 @@
+{
+  "title": "Mandela : de vingt-sept ans de prison à la présidence",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Après vingt-sept ans de prison, Nelson Mandela devient président de l’Afrique du Sud. #histoire #mandela #afriquedusud #vulgarisation",
+  "sources": [
+    "Nelson Mandela Foundation, Biography : arrestation en 1962, condamnation à vie en 1964, Robben Island jusqu’en 1982, libération le 11 février 1990, investiture le 10 mai 1994 ; https://www.nelsonmandela.org/content/page/biography — page lue le 10 octobre 2026.",
+    "South African History Online, Nelson Rolihlahla Mandela : vingt-sept ans de prison, travaux à la carrière de chaux, restrictions des visites et lettres, libération en 1990, élections et investiture en 1994 ; https://www.sahistory.org.za/people/nelson-rolihlahla-mandela — page lue le 10 octobre 2026.",
+    "Encyclopaedia Britannica, Nelson Mandela : Robben Island 1964–1982, environ dix-huit ans ; président 1994–1999, négociations avec de Klerk et passage à une démocratie multiraciale ; https://www.britannica.com/biography/Nelson-Mandela — page lue le 10 octobre 2026. Les vingt-sept ans ne se passent pas tous à Robben Island, qui accueille Mandela brièvement aussi en 1963."
+  ],
+  "art": {
+    "mandela": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of older Nelson Mandela, recognizable warm smile, short grey tightly curled hair, patterned collared shirt rendered only in blue and off-white, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "young": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of young Nelson Mandela in the early 1960s, short dark tightly curled hair, serious expression, dark suit, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "courthouse": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. South African courtroom in 1964, adult Nelson Mandela standing upright in the dock wearing a plain dark suit, officials distant, no symbols or readable writing, hands resting naturally at his sides. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "robben": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Robben Island prison complex off Cape Town, low austere stone buildings, ocean around the island, no people visible, wide landscape. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "cell": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Small austere Robben Island prison cell with a thin mat on floor, metal bucket and barred window, no person, period accurate 1960s interior. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "256x192"
+    },
+    "quarry": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Robben Island limestone quarry with political prisoners in simple prison clothes working at a distance, small hand tools held with anatomically correct two hands, no violence, pale rock and strong blue shadows. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "letters": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. A paper letter inside an open plain envelope next to a blunt pencil on a small prison table, no legible writing, no hands. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "256x192"
+    },
+    "release": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Nelson Mandela walking out of prison in February 1990 with Winnie Mandela beside him, older adults in formal civilian clothes, gate behind, viewed from knees up with arms relaxed, no duplicated hands. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "ballot": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Nelson Mandela in 1994 lowering a paper ballot into a simple ballot box, one visible anatomically correct hand holding the paper, other hand resting by his side, adults waiting in background, no legible words. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "Vingt-sept ans en prison. Puis Nelson Mandela devient président du pays qui l’avait enfermé. Un retournement que vous n’oubliez pas.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*27 ans* en prison",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "mandela",
+          "h": 390,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 27,
+          "at": "Vingt-sept",
+          "suffix": " ANS",
+          "prefix": "",
+          "y": 280,
+          "dur": 1.1,
+          "size": 64,
+          "in": "slam",
+          "flash": true
+        }
+      ]
+    },
+    {
+      "say": "En Afrique du Sud, l’apartheid organise la domination raciale. Les droits des habitants dépendent de leur couleur de peau.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’apartheid organise la *domination*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "young",
+          "h": 360,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "DES DROITS INÉGAUX",
+          "at": "droits",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Mandela combat ce système avec l’ANC. Il participe aussi à la lutte armée, après des années de répression.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Mandela combat *ce système*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "young",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Arrêté en mille neuf cent soixante-deux, il est ensuite jugé pour sabotage. Le régime veut neutraliser ses adversaires.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Arrêté en *1962*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "1962",
+          "at": "mille",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "courthouse",
+          "h": 280,
+          "y": 550,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "En mille neuf cent soixante-quatre, la condamnation tombe : prison à perpétuité. Rien ne garantit son retour à la liberté.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Condamné à *perpétuité*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "1964",
+          "at": "mille",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "cell",
+          "h": 290,
+          "y": 545,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "LA PRISON À VIE",
+          "at": "perpétuité",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Environ dix-huit ans se passent à Robben Island. Pas les vingt-sept ans entiers : d’autres prisons complètent cette détention.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Environ *18 ans* à Robben Island",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 18,
+          "at": "dix-huit",
+          "suffix": " ANS",
+          "prefix": "",
+          "y": 280,
+          "dur": 1.1,
+          "size": 64,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "img",
+          "src": "robben",
+          "h": 280,
+          "y": 545,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Sur cette île : travaux forcés dans une carrière de chaux, surveillance, et séparation avec les proches.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Travaux forcés dans la *carrière*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "quarry",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "ROBBEN ISLAND",
+          "at": "île",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Les lettres et visites sont limitées. Même enfermé, Mandela reste un symbole pour ceux qui combattent l’apartheid.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Lettres et visites *limitées*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "letters",
+          "h": 280,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "UN SYMBOLE ENFERMÉ",
+          "at": "symbole",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Les pressions internationales grandissent. En prison, puis à sa sortie, Mandela participe à des négociations.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La pression *grandit*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "mandela",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "VERS DES NÉGOCIATIONS",
+          "at": "négociations",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Le onze février mille neuf cent quatre-vingt-dix, il sort enfin. Un homme libre, après presque trois décennies enfermé.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Libéré le *11 février 1990*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "release",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "slam"
+        },
+        {
+          "type": "stamp",
+          "text": "LIBRE",
+          "at": "libre",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Mais tout n’est pas réglé. Le pays traverse encore des tensions et des violences. La démocratie reste à construire.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La liberté ne règle pas *tout*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "young",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "UNE TRANSITION DIFFICILE",
+          "at": "tensions",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "En mille neuf cent quatre-vingt-quatorze, les premières élections nationales ouvertes aux adultes de toutes les races changent enfin le pouvoir.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des élections pour *tous*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "1994",
+          "at": "mille",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "ballot",
+          "h": 290,
+          "y": 550,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Mandela devient président. L’homme que l’État avait condamné à rester enfermé est désormais celui qui dirige le pays.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Du prisonnier au *président*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "mandela",
+          "h": 390,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": true,
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "PRÉSIDENT EN 1994",
+          "at": "président",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "preset": "title",
+        "text": "27 ans enfermé.\nPuis *président*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "mandela",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "LE RETOURNEMENT",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Le pays l’emprisonne.\nPuis il le *dirige*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "young",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "NELSON MANDELA",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "18 ans sur cette île.\n27 ans de *prison*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "robben",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "DE ROBBEN ISLAND À LA LIBERTÉ",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ]
+  ]
+}

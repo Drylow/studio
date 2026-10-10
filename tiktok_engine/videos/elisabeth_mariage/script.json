@@ -1,0 +1,522 @@
+{
+  "title": "Élisabeth I : plus de quarante-quatre ans de règne, aucun mari",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Élisabeth I a fait de ses projets de mariage un instrument de pouvoir. #histoire #elisabethI #angleterre #vulgarisation",
+  "sources": [
+    "The Royal Family, « Elizabeth I (r.1558-1603) », https://www.royal.uk/elizabeth-i : accession en novembre1558, mort le24mars1603 ; plus de44ans révolus (la page arrondit à45ans), jamais mariée ; choix entre prince étranger et noble anglais aux conséquences diplomatiques ou de factions ; projets de mariage utilisés comme outil politique ; Jacques VI devient Jacques I.",
+    "Encyclopaedia Britannica, Stephen J. Greenblatt, « Elizabeth I », https://www.britannica.com/biography/Elizabeth-I : règne1558–1603, absence de mari et d’héritier, enjeux successoraux ; mise en scène de sa personne et de sa souveraineté. Ces dates corroborent la durée de plus de44ans ; ne pas écrire45ans complets.",
+    "Encyclopaedia Britannica, « Elizabeth I / Accession », https://www.britannica.com/biography/Elizabeth-I/Accession : Dudley favori et projet de mariage avec François duc d’Alençon ; diplomatie et ambiguïté du mariage ; raisons psychologiques présentées comme interprétations, donc non affirmées dans le script.",
+    "Nuance éditoriale : les raisons intimes du célibat ne sont pas présentées comme connues. « Mariée à son royaume » décrit l’image politique de la reine, pas une cérémonie réelle. Les candidatures et négociations ne prouvent aucun amour secret. Aucun nombre de prétendants avancé."
+  ],
+  "art": {
+    "elisabeth": {
+      "prompt": "Elizabeth I of England, recognisable mature Tudor queen with pale face, auburn hair shown in muted off-white and grey tones, elaborate white ruff, small pearl crown, dark royal-blue embroidered dress, confident direct gaze, chest-up portrait, hands entirely out of frame, no emblems or lettering.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "court": {
+      "prompt": "English Tudor throne room in 1558, young adult Queen Elizabeth I sitting upright in a royal-blue gown with white ruff on a grey carved wooden throne, two adult courtiers standing on opposite sides at a respectful distance, natural proportions, sober Tudor panelling, no modern furniture, no flags or text. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "ring": {
+      "prompt": "A single sixteenth-century silver-grey signet ring beside a dark royal-blue royal crown on a plain black velvet cushion, both objects at natural relative size, blue edge reflections, completely blank surfaces, no lettering or heraldic logos, isolated still life.",
+      "size": "192x192",
+      "kind": "scene"
+    },
+    "foreign": {
+      "prompt": "Adult sixteenth-century European prince presenting a sealed blank parchment to an English adult royal envoy across a small table, charcoal velvet doublets and white ruffs, two distinct people with anatomically natural arms and hands, no woman being touched, Tudor political negotiation, sober royal-blue highlights. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "dudley": {
+      "prompt": "Robert Dudley Earl of Leicester, recognisable mature Elizabethan nobleman with short trimmed moustache and beard, short curly hair, black velvet doublet, white ruff and a plain royal-blue sash, serious chest-up portrait, hands outside frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "anjou": {
+      "prompt": "Francis Duke of Alencon (later Duke of Anjou), adult sixteenth-century French prince, dark short hair, small moustache and pointed beard, dark navy velvet doublet with white ruff, composed chest-up historical portrait, hands outside frame, no fleurs-de-lis or insignia.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "parliament": {
+      "prompt": "An Elizabethan council chamber, several adult advisers in charcoal Tudor robes with white ruffs seated on benches, one plain wooden table with blank papers, strong varied silhouettes, natural anatomy, restrained grey wood and royal-blue lighting, no lettering or logos. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "kingdom": {
+      "prompt": "English Tudor town and farmland viewed from a low hill in late sixteenth century, simple church spire, timber-frame houses and modest fields, dark navy sky and royal-blue highlights, no giant fantasy towers, no people, no text or flags. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "james": {
+      "prompt": "James VI of Scotland becoming James I of England in1603, recognisable mature bearded king with narrow moustache, dark charcoal early-seventeenth-century doublet, white lace collar and small royal-blue cap, chest-up historical portrait, hands outside frame, no coats of arms.",
+      "size": "192x256",
+      "kind": "person"
+    }
+  },
+  "beats": [
+    {
+      "say": "Élisabeth première a régné plus de quarante-quatre ans. Et elle n'a jamais pris de mari.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "elisabeth",
+          "h": 420,
+          "y": 500,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Reine.\n*Jamais mariée*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "stamp",
+          "text": "+ DE 44 ANS",
+          "at": "quarante",
+          "y": 745,
+          "size": 23,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "En 1558, elle devient reine d'Angleterre. À la cour, une question revient aussitôt : qui va l'épouser ?",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "stamp",
+          "text": "1558",
+          "at": 0,
+          "y": 150,
+          "size": 28,
+          "rot": -4,
+          "fill": true
+        },
+        {
+          "type": "img",
+          "src": "court",
+          "h": 245,
+          "y": 515,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "title",
+          "text": "Qui va *l’épouser* ?",
+          "at": "épouser",
+          "y": 280,
+          "size": 26
+        }
+      ]
+    },
+    {
+      "say": "Vous pourriez croire que c'est sa vie privée. Sauf qu'un mariage royal peut déplacer tout l'équilibre du pays.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un mariage\nchange *l’équilibre*.",
+          "at": "équilibre",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "ring",
+          "h": 285,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Un prince étranger pourrait entraîner l'Angleterre dans les intérêts d'une autre puissance. Le futur mari serait aussi une affaire diplomatique.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un prince *étranger*.",
+          "at": "étranger",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "foreign",
+          "h": 245,
+          "y": 515,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "UNE AFFAIRE DIPLOMATIQUE",
+          "at": "diplomatique",
+          "y": 725,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Un noble anglais poserait d'autres problèmes : favoriser une famille risquerait de dresser les autres contre elle.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une famille *favorisée*.",
+          "at": "famille",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "parliament",
+          "h": 240,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "RIVALITÉS",
+          "at": "autres",
+          "y": 725,
+          "size": 22,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Et il y a la succession. Sans enfant, qui prendra la couronne après la reine ? Ses conseillers s'inquiètent.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Et après *la reine* ?",
+          "at": "couronne",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "ring",
+          "h": 265,
+          "y": 515,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "LA SUCCESSION",
+          "at": "succession",
+          "y": 735,
+          "size": 19,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Des noms circulent. Robert Dudley, comte de Leicester. Puis le duc d'Alençon. Des projets sérieux, des négociations, mais aucune cérémonie.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des *prétendants*.",
+          "at": "noms",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "dudley",
+          "h": 260,
+          "y": 510,
+          "at": 0,
+          "in": "pop",
+          "x": 270,
+          "out": "Alençon"
+        },
+        {
+          "type": "img",
+          "src": "anjou",
+          "h": 260,
+          "y": 510,
+          "at": "Alençon",
+          "in": "pop",
+          "x": 270
+        },
+        {
+          "type": "stamp",
+          "text": "AUCUNE CÉRÉMONIE",
+          "at": "aucune",
+          "y": 730,
+          "size": 20,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Élisabeth laisse ouverte une possibilité précieuse. Tant qu'un mariage reste envisageable, les alliances restent en discussion.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La possibilité reste\n*ouverte*.",
+          "at": "ouverte",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "foreign",
+          "h": 245,
+          "y": 525,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "LES ALLIANCES SE NÉGOCIENT",
+          "at": "alliances",
+          "y": 730,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "C'est un outil politique. Pas la preuve qu'elle aurait eu une raison intime unique, cachée dans sa tête.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un *outil politique*.",
+          "at": "politique",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "elisabeth",
+          "h": 330,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "SES RAISONS INTIMES RESTENT DÉBATTUES",
+          "at": "intime",
+          "y": 745,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Son image évolue : la reine vierge, entièrement dévouée à son royaume. Une souveraine peut ainsi se présenter comme mariée à l'Angleterre.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "« Mariée » à\n*l’Angleterre*.",
+          "at": "Angleterre",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "kingdom",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Ce n'est pas un vrai mariage. C'est une façon de raconter son pouvoir, et de placer le royaume au premier plan.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le royaume\nau *premier plan*.",
+          "at": "royaume",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "court",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "Elle meurt en 1603. Jacques d'Écosse lui succède, et la dynastie des Tudor s'arrête avec elle.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La fin des *Tudor*.",
+          "at": "Tudor",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "preset": "num",
+          "text": "1603",
+          "at": "meurt",
+          "y": 285,
+          "size": 55
+        },
+        {
+          "type": "img",
+          "src": "james",
+          "h": 300,
+          "y": 555,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Plus de quarante-quatre ans sur le trône. Pour ses prétendants, la réponse aura finalement été : aucune invitation au mariage.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "elisabeth",
+          "h": 355,
+          "y": 500,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "+ DE 44 ANS",
+          "at": 0,
+          "y": 180,
+          "size": 25,
+          "rot": -4,
+          "fill": true
+        },
+        {
+          "preset": "title",
+          "text": "L’invitation ?\n*Jamais envoyée*.",
+          "at": "invitation",
+          "y": 745,
+          "size": 27
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "44 ans de règne.\n*Aucun mari*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "elisabeth",
+        "h": 390,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Un mariage ?\nUne *négociation*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "ring",
+        "h": 300,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Ses prétendants\nont *attendu*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "court",
+        "h": 255,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ]
+  ]
+}

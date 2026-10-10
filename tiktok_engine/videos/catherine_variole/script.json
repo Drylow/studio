@@ -1,0 +1,537 @@
+{
+  "title": "Catherine II a accepté la variole pour lui échapper",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Catherine II a donné l’exemple en acceptant un risque que sa cour redoutait. #histoire #catherineII #russie #vulgarisation",
+  "sources": [
+    "Centers for Disease Control and Prevention, Emerging Infectious Diseases 28(10), 2022, « A Head of State Leading by Example », https://pmc.ncbi.nlm.nih.gov/articles/PMC9514359/ ; texte intégral vérifié par https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9514359&retmode=xml : Catherine variolisée en 1768, maladie légère puis rétablissement, son fils Paul suit ; moyen de fuite préparé pour Dimsdale ; vaccination de Jenner en 1796.",
+    "W. J. Bishop, Annals of Medical History 4(4), 1932, « Thomas Dimsdale, M.D., F.R.S. (1712-1800) And the Inoculation of Catherine the Great of Russia », https://pmc.ncbi.nlm.nih.gov/articles/PMC7945256/ ; texte intégral vérifié par https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7945256&retmode=xml : voyage et inoculation en 1768, précautions de fuite, convalescence et anoblissement. La description des chevaux est rapportée comme un récit ; aucun détail non confirmé sur un dispositif exact dans la narration.",
+    "Science Museum, « Smallpox and the story of vaccination », https://www.sciencemuseum.org.uk/objects-and-stories/medicine/smallpox-and-story-vaccination : variolisation utilisant la variole distincte de la vaccination par la vaccine ; expérience de Jenner en 1796, également corroborée par le CDC."
+  ],
+  "art": {
+    "catherine": {
+      "prompt": "Catherine II the Great of Russia, recognisable mature eighteenth-century empress, pale face, grey powdered hair swept up, pearl necklace, royal-blue silk dress with off-white lace, small blue-and-grey crown, serious direct gaze, waist-up historical portrait with both hands outside the frame, large clear silhouette.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "palace": {
+      "prompt": "Saint Petersburg Russian imperial palace in 1768, restrained broad eighteenth-century facade and courtyard at dusk, royal-blue window lights, grey masonry, dark navy sky, no people, no signs, no readable text. Wide environmental scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "dimsdale": {
+      "prompt": "Thomas Dimsdale, English physician in 1768, middle-aged clean-shaven man in grey powdered wig, charcoal eighteenth-century coat and off-white cravat, cautious direct expression, chest-up portrait, hands outside frame, no medical uniform or modern objects.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "case": {
+      "prompt": "An open compact eighteenth-century wooden physician travelling case on a table, a closed glass vial, rolled clean cloth and a plain metal instrument safely laid apart, simple objects with believable scale, no syringes, no needle procedure, no blood, no labels. Isolated still life.",
+      "size": "192x192",
+      "kind": "scene"
+    },
+    "private_room": {
+      "prompt": "Russian imperial private chamber in 1768, Catherine II resting fully clothed on a blue upholstered armchair under soft lamplight, powdered hair and off-white lace, one worried adult court attendant seen from behind at doorway, restrained historical room, two natural silhouettes, no treatment being performed, no wounds. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "escape": {
+      "prompt": "Small eighteenth-century sailing yacht with grey sails waiting in a quiet northern coastal harbour, dark navy water, blue moonlit mist, simple wooden pier, a compact physician travelling bag on the pier, no passengers, no text, no flags or logos. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "paul": {
+      "prompt": "Young adult Grand Duke Paul Petrovich of Russia in 1768, pale slender face, grey powdered wig, eighteenth-century dark navy coat with plain blue trim and off-white cravat, thoughtful direct gaze, chest-up historical portrait, hands outside frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "medal": {
+      "prompt": "An eighteenth-century commemorative round silver-grey medal, relief profile of crowned Catherine II, blue edge highlights, decorative blank border with no lettering, realistic round object viewed head-on and isolated against black, no gold or logos.",
+      "size": "192x192",
+      "kind": "scene"
+    },
+    "jenner": {
+      "prompt": "Edward Jenner in 1796, adult English country physician in dark navy coat and off-white cravat, standing at the left of a calm small grey cow in a rural yard, no children, no medical procedure, no syringe, natural anatomy and scale, simple fence, restrained blue highlights. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    }
+  },
+  "beats": [
+    {
+      "say": "Catherine la Grande a accepté d'attraper la variole. Volontairement. Pour se protéger de la variole.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "catherine",
+          "h": 425,
+          "y": 495,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Elle choisit…\n*la variole*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "stamp",
+          "text": "VOLONTAIREMENT",
+          "at": "Volontairement",
+          "y": 745,
+          "size": 21,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "En 1768, l'impératrice de Russie règne sur un immense pays. Mais un virus peut menacer même son trône.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "stamp",
+          "text": "1768",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "rot": -4,
+          "fill": true
+        },
+        {
+          "type": "img",
+          "src": "palace",
+          "h": 245,
+          "y": 505,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "title",
+          "text": "Même une *impératrice*.",
+          "at": "impératrice",
+          "y": 255,
+          "size": 25
+        }
+      ]
+    },
+    {
+      "say": "La variole tue et défigure. Catherine veut éviter cette maladie, qui terrifie aussi les familles de sa cour.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une cour *terrifiée*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "catherine",
+          "h": 305,
+          "y": 510,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "VARIOLE",
+          "at": "variole",
+          "y": 725,
+          "size": 23,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Elle fait venir un médecin anglais, Thomas Dimsdale. Sa mission : pratiquer sur elle une méthode appelée variolisation.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un médecin *anglais*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "dimsdale",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "THOMAS DIMSDALE",
+          "at": "Thomas",
+          "y": 725,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Attention : ce n'est pas encore le vaccin. On utilise la variole elle-même pour provoquer une infection censée protéger ensuite.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Ce n’est pas encore\n*le vaccin*.",
+          "at": "vaccin",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "case",
+          "h": 285,
+          "y": 535,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "VARIOLISATION",
+          "at": "infection",
+          "y": 735,
+          "size": 18,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Vous imaginez le pari : la méthode peut elle aussi tuer. La souveraine met réellement sa vie en jeu.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un *vrai risque*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "private_room",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "SA VIE EN JEU",
+          "at": "vie",
+          "y": 725,
+          "size": 21,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "L'opération se déroule discrètement. Et Catherine prévoit même un moyen de faire fuir le médecin si tout tourne mal.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Même une *fuite* est prévue.",
+          "at": "fuir",
+          "y": 165,
+          "size": 25
+        },
+        {
+          "type": "img",
+          "src": "escape",
+          "h": 260,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "SI TOUT TOURNE MAL",
+          "at": "mal",
+          "y": 715,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Parce que si l'impératrice meurt, ses sujets pourraient accuser celui qui l'a soignée. Voilà l'ambiance au palais.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Si l’impératrice *meurt*…",
+          "at": "meurt",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "dimsdale",
+          "h": 325,
+          "y": 515,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "MÉDECIN EN DANGER",
+          "at": "accuser",
+          "y": 735,
+          "size": 18,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Catherine développe une forme légère de la maladie, puis se rétablit. Son fils Paul passe lui aussi par la variolisation.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Elle se *rétablit*.",
+          "at": "rétablit",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "catherine",
+          "h": 265,
+          "y": 505,
+          "at": 0,
+          "in": "fade",
+          "out": "Paul"
+        },
+        {
+          "type": "img",
+          "src": "paul",
+          "h": 310,
+          "y": 520,
+          "at": "Paul",
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "SON FILS SUIT",
+          "at": "fils",
+          "y": 735,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Cette fois, le succès est rendu public. La cour suit l'exemple, et le médecin reçoit un titre de baron.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La cour suit *l’exemple*.",
+          "at": "exemple",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "medal",
+          "h": 285,
+          "y": 520,
+          "at": 0,
+          "in": "slam"
+        },
+        {
+          "type": "stamp",
+          "text": "BARON",
+          "at": "baron",
+          "y": 735,
+          "size": 25,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Le vaccin de Jenner arrive en 1796, avec la vaccine. C'est une autre étape, et une méthode différente.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Puis *Jenner*.",
+          "at": "Jenner",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "preset": "num",
+          "text": "1796",
+          "at": "arrive",
+          "y": 280,
+          "size": 55
+        },
+        {
+          "type": "img",
+          "src": "jenner",
+          "h": 235,
+          "y": 555,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "UNE MÉTHODE DIFFÉRENTE",
+          "at": "différente",
+          "y": 735,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Catherine n'a donc pas inventé la vaccination. Elle a surtout transformé une décision médicale en démonstration politique devant sa cour.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une *démonstration politique*.",
+          "at": "politique",
+          "y": 165,
+          "size": 24
+        },
+        {
+          "type": "img",
+          "src": "catherine",
+          "h": 340,
+          "y": 530,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        }
+      ]
+    },
+    {
+      "say": "Pour convaincre ses sujets de prendre un risque, elle a commencé par mettre la couronne sur la table.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "medal",
+          "h": 330,
+          "y": 490,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "La *couronne*\nsur la table.",
+          "at": "couronne",
+          "y": 740,
+          "size": 28
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Elle a choisi\n*la variole*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "catherine",
+        "h": 390,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Le médecin avait\nun plan de *fuite*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "escape",
+        "h": 250,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Une impératrice.\nUn *pari mortel*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "medal",
+        "h": 330,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "title": "Néron ne pouvait pas jouer du violon",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Néron au violon pendant l’incendie de Rome : une scène célèbre, mais impossible. #histoire #neron #rome #vulgarisation",
+  "sources": [
+    "Encyclopaedia Britannica, Nero : incendie de Rome en 64, Néron à Antium au début, passions musicales et réputation ; https://www.britannica.com/biography/Nero-Roman-emperor — page lue le 10 octobre 2026.",
+    "Tacite, Annales XV, 38–40, traduction hébergée par University of Chicago : cause accidentelle ou criminelle incertaine, séjour à Antium, secours et rumeur de chant ; https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/15B*.html — page lue le 10 octobre 2026. Tacite écrit après les faits, ce n’est pas un témoin direct.",
+    "Encyclopaedia Britannica, Violin : naissance du violon à la Renaissance, au XVIe siècle ; https://www.britannica.com/art/violin — page lue le 10 octobre 2026. Aucun violon moderne dans la Rome antique ; la lyre est un autre instrument.",
+    "The Metropolitan Museum of Art, Wendy Powers, Violin Makers, 2003 : violons modernes vers 1550, donc plus de mille ans après Rome en 64 ; https://www.metmuseum.org/toah/hd/strd/hd_strd.htm — page lue le 10 octobre 2026, complète la datation de Britannica."
+  ],
+  "art": {
+    "nero": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of the Roman emperor Nero, recognizable round face, short curled hair, clean shaven, simple laurel wreath and ancient Roman tunic, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "violin": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. A single Renaissance style violin and bow, front view, clear four strings and two f holes, no person, no hands. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "rome_fire": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Ancient Rome residential street in AD 64, timber upper floors and tiled roofs engulfed in stylized blue and white fire, no Colosseum, no modern buildings, no people visible. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "antium": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Roman coastal villa at Antium, low classical courtyard beside the Mediterranean sea, calm empty landscape, first century AD, no modern structures. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "relief": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Roman garden opened as an emergency refuge, several clothed adults sitting beneath temporary cloth shelters, figures viewed from distance with hands not prominent, first century AD. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    },
+    "lyre": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. An ancient Roman seven string lyre, complete curved arms and crossbar, isolated object, no bow and no violin, no hands. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x192"
+    },
+    "tacitus": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Bust portrait of the Roman historian Tacitus, adult man in plain toga looking thoughtful, no accessories, hands outside frame. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "192x256"
+    },
+    "scroll": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. An unrolled ancient papyrus scroll beside a reed pen, abstract unreadable marks only, no legible writing, isolated still life. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "256x192"
+    },
+    "nero_stage": {
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Roman emperor Nero standing beside a lyre on a small ancient theatrical platform, white toga, arms relaxed with hands tucked within fabric, no fire, no violin, restrained scene. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "Néron au violon pendant que Rome brûle ? Impossible. Cet instrument apparaît plus de mille ans après lui.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Néron au *violon* ?",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "nero",
+          "h": 390,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "IMPOSSIBLE",
+          "at": "Impossible",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Vous connaissez cette image : un tyran tranquille, de la musique, et une capitale qui part en fumée.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’image que vous *connaissez*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "rome_fire",
+          "h": 290,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Mais l’incendie de Rome se produit en l’an soixante-quatre. Le violon, lui, appartient à une époque bien plus tardive.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Rome brûle en *64*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "preset": "num",
+          "text": "AN 64",
+          "at": "soixante-quatre",
+          "y": 280,
+          "size": 50,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "violin",
+          "h": 300,
+          "y": 555,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "MAUVAISE ÉPOQUE",
+          "at": "tardive",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Premier problème : l’instrument. Néron aimait chanter et jouer de la lyre. Ce n’est pas un violon.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une *lyre*, pas un violon",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "lyre",
+          "h": 340,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "INSTRUMENT ANTIQUE",
+          "at": "lyre",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Le deuxième problème, c’est le lieu. Selon l’historien Tacite, Néron se trouve à Antium quand le feu commence.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Au début : *Antium*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "antium",
+          "h": 290,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "SELON TACITE",
+          "at": "Tacite",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Pas sur un balcon au-dessus des flammes. Dans une autre ville, sur la côte, avant de revenir à Rome.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une *autre ville*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "antium",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "fade",
+          "fx": "zoom"
+        }
+      ]
+    },
+    {
+      "say": "Tacite raconte que l’empereur ouvre ses jardins aux réfugiés et aménage des abris pour les habitants sans logement.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des jardins ouverts aux *réfugiés*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "relief",
+          "h": 300,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Une rumeur circule pourtant : Néron aurait chanté la destruction de Troie pendant la catastrophe. Une scène jamais prouvée.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Il aurait *chanté*…",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "nero_stage",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "RUMEUR",
+          "at": "rumeur",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Attention : Tacite écrit après les événements. Son récit distingue les secours, les soupçons, et ce que les gens racontent.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un récit écrit *après*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "tacitus",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "PAS UN TÉMOIN DIRECT",
+          "at": "après",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "L’origine du feu reste discutée. Affirmer que Néron a personnellement incendié Rome irait plus loin que les preuves.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’origine du feu reste *discutée*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "scroll",
+          "h": 270,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Cela ne transforme pas l’empereur en héros. Cela montre comment une réputation terrible peut avaler les nuances historiques.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une réputation n’est pas une *preuve*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "nero",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        }
+      ]
+    },
+    {
+      "say": "Un incendie réel. Un empereur musicien. Une rumeur ancienne. Et, bien plus tard, un instrument ajouté dans notre imagination.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Incendie + musique + *rumeur*",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "lyre",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "LA LÉGENDE SE CONSTRUIT",
+          "at": "imagination",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Le violon de Néron ne prouve pas sa cruauté. Il prouve surtout que l’histoire peut jouer faux.",
+      "glow": {
+        "y": 500,
+        "r": 290,
+        "a": 0.2
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’histoire peut *jouer faux*.",
+          "at": 0,
+          "y": 150,
+          "size": 27,
+          "maxW": 450
+        },
+        {
+          "type": "img",
+          "src": "violin",
+          "h": 340,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "VIOLON IMPOSSIBLE",
+          "at": "faux",
+          "y": 730,
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "preset": "title",
+        "text": "Néron au violon ?\n*Impossible*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "nero",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "ROME, AN 64",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Rome brûle.\nMais le violon\n*n’existe pas*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "violin",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "UNE LÉGENDE",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ],
+    [
+      {
+        "preset": "title",
+        "text": "Le violon de Néron\nsonne *faux*.",
+        "at": 0,
+        "y": 250,
+        "size": 36,
+        "maxW": 450
+      },
+      {
+        "type": "img",
+        "src": "lyre",
+        "h": 380,
+        "y": 555,
+        "at": 0,
+        "in": "none"
+      },
+      {
+        "type": "stamp",
+        "text": "LA VRAIE HISTOIRE",
+        "at": 0,
+        "y": 790,
+        "rot": -5,
+        "fill": true,
+        "size": 20
+      }
+    ]
+  ]
+}

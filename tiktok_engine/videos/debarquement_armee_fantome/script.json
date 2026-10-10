@@ -1,0 +1,519 @@
+{
+  "title": "Patton et la fausse armée du Débarquement",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Avant le Débarquement, les Alliés ont donné à Patton une armée destinée à tromper l’ennemi. #histoire #debarquement #patton #vulgarisation",
+  "sources": [
+    "Imperial War Museums, « D-Day’s Parachuting Dummies and Inflatable Tanks », https://www.iwm.org.uk/history/second-world-war/d-day/parachuting-dummies-and-inflatable-tanks :6juin1944 ; Fortitude South vise Pas-de-Calais ; FUSAG fictif basé dans le sud-est britannique, chars et débarquements factices, faux trafic radio et agents doubles ; croyance en une deuxième invasion persiste en juillet1944.",
+    "Imperial War Museums, « The Lies and Deceptions that made D-Day possible », https://www.iwm.org.uk/history/the-lies-and-deceptions-that-made-d-day-possible : Patton présenté comme chef du FUSAG ; matériels gonflables et embarcations factices, radios et Garbo ; contexte et chronologie du Débarquement. Ne pas confondre ce groupe fictif avec la23rd Headquarters Special Troops dite Ghost Army, unité tactique réelle.",
+    "National Army Museum, « D-Day », https://www.nam.ac.uk/explore/d-day : Débarquement en Normandie le6juin1944 ; diversion Calais, agents doubles et armée factice en Angleterre corroborés. Aucun total de chars, de divisions ou d’hommes fictifs non recoupé n’est avancé."
+  ],
+  "art": {
+    "patton": {
+      "prompt": "General George S Patton in1944, recognisable mature American general with stern pale face, simple grey military helmet without insignia, plain dark navy field jacket, off-white shirt collar, chest-up front portrait, no stars or badges or medals, no hands in frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "tank": {
+      "prompt": "A single inflatable dummy Sherman tank used in1944 military deception, visibly soft canvas hull with subtle sewn seams and slightly sagging sides, short believable tank barrel, grey inflatable track shapes with royal-blue highlights, three-quarter view, isolated against black, no people, no insignia, no writing.",
+      "size": "256x192",
+      "kind": "scene"
+    },
+    "camp": {
+      "prompt": "South-east England military deception camp in1944, low grey canvas tents, a few dummy canvas tanks and plain crates spread across a flat field, subdued royal-blue dusk lighting, shallow landscape with modest trees, no mountains, no huge monuments, no people or writing. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "radio": {
+      "prompt": "A single1940s military field radio set on a small wooden table, grey metal box with simple knobs, cable and headphones, no readable labels or brand marks, dim royal-blue dial glow, isolated still life, no hands or people.",
+      "size": "192x192",
+      "kind": "scene"
+    },
+    "garbo": {
+      "prompt": "Juan Pujol Garcia known as Garbo, recognisable adult Spanish double agent in1944 with dark neatly combed hair, small thin moustache, plain charcoal civilian suit and off-white shirt, thoughtful slightly amused direct gaze, chest-up portrait, hands outside frame, no spy gadgets.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "boat": {
+      "prompt": "One dummy landing craft built from wooden boards and dark grey canvas in1944, resting visibly on a simple support cradle beside a southern English estuary, believable shallow boat shape and size, royal-blue light on dark water, no crew, no insignia or writing. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "calais": {
+      "prompt": "Pas-de-Calais coast in1944, low chalk coastline and modest grey coastal fortification viewed from the sea, dark navy water with blue highlights, restrained realistic scale, no explosions or people, no flags, no readable signs, simple wide environmental illustration.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "normandy": {
+      "prompt": "Normandy D-Day landing in1944 shown as a restrained distant coastal overview, a few real grey landing boats approaching a broad flat beach, small adult soldiers as natural silhouettes far away, low cliffs and fields, no gore, no graphic casualties, no insignia or modern ships, royal-blue lighting, no text. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "briefing": {
+      "prompt": "Allied military planning room in1944, two adult officers in plain charcoal field uniforms looking at a large blank folded map on a small table, wall clock without readable numbers and dark lamps, sober grey-and-blue lighting, natural anatomy, no rank badges, no flags, no written map labels. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    }
+  },
+  "beats": [
+    {
+      "say": "En 1944, le général Patton commande une armée qui n'existe pas. Certains de ses chars sont gonflables.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "patton",
+          "h": 420,
+          "y": 500,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe",
+          "out": "gonflables"
+        },
+        {
+          "preset": "title",
+          "text": "Une armée qui\n*n’existe pas*.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "tank",
+          "h": 280,
+          "y": 515,
+          "at": "gonflables",
+          "in": "slam"
+        },
+        {
+          "type": "stamp",
+          "text": "1944",
+          "at": 0,
+          "y": 740,
+          "size": 26,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Vous imaginez des unités au combat. Sauf qu'ici, l'image fait partie du piège.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "L’image fait partie\ndu *piège*.",
+          "at": "piège",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "briefing",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Avant le Débarquement, les Alliés veulent cacher leur objectif : la Normandie. Ils préparent une opération de diversion.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La vraie cible :\n*la Normandie*.",
+          "at": "Normandie",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "normandy",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "preset": "label",
+          "text": "CACHER L’OBJECTIF",
+          "at": "cacher",
+          "y": 735,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Son nom : Fortitude. Sa partie sud doit convaincre l'ennemi que les Alliés débarqueront dans le Pas-de-Calais.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "stamp",
+          "text": "FORTITUDE",
+          "at": 0,
+          "y": 155,
+          "size": 24,
+          "rot": -4,
+          "fill": true
+        },
+        {
+          "type": "img",
+          "src": "calais",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "title",
+          "text": "Faire croire au\n*Pas-de-Calais*.",
+          "at": "convaincre",
+          "y": 270,
+          "size": 25
+        }
+      ]
+    },
+    {
+      "say": "Le passage y est plus court. L'idée paraît crédible, surtout quand le général Patton apparaît dans le décor.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le passage est\n*plus court*.",
+          "at": "court",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "patton",
+          "h": 320,
+          "y": 525,
+          "at": 0,
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "On lui attribue un faux groupe d'armées, installé dans le sud-est de l'Angleterre. Son sigle : FUSAG.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un faux *groupe d’armées*.",
+          "at": "faux",
+          "y": 165,
+          "size": 25
+        },
+        {
+          "type": "img",
+          "src": "camp",
+          "h": 245,
+          "y": 535,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "FUSAG",
+          "at": "sigle",
+          "y": 745,
+          "size": 28,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Des équipements factices rendent le scénario visible : chars gonflables, débarquements en préparation, et embarcations qui ne doivent jamais combattre.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des équipements *factices*.",
+          "at": "factices",
+          "y": 165,
+          "size": 26
+        },
+        {
+          "type": "img",
+          "src": "tank",
+          "h": 270,
+          "y": 515,
+          "at": 0,
+          "in": "pop",
+          "out": "embarcations"
+        },
+        {
+          "type": "img",
+          "src": "boat",
+          "h": 245,
+          "y": 530,
+          "at": "embarcations",
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Les radios échangent de faux messages pour donner l'impression d'une armée active. Pas juste du théâtre en plein air.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "De *faux messages*.",
+          "at": "faux",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "radio",
+          "h": 305,
+          "y": 525,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "UNE ARMÉE ACTIVE… EN APPARENCE",
+          "at": "active",
+          "y": 735,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Des agents doubles confirment cette version. Garbo alimente les services allemands avec les informations choisies par les Alliés.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un agent nommé *Garbo*.",
+          "at": "Garbo",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "garbo",
+          "h": 330,
+          "y": 525,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "AGENT DOUBLE",
+          "at": "allemands",
+          "y": 745,
+          "size": 20,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Le six juin 1944, les vrais soldats débarquent en Normandie. Pourtant, on laisse croire à une autre attaque vers Calais.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le vrai *Débarquement*.",
+          "at": "soldats",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "preset": "num",
+          "text": "6 JUIN 1944",
+          "at": "six",
+          "y": 285,
+          "size": 39
+        },
+        {
+          "type": "img",
+          "src": "normandy",
+          "h": 245,
+          "y": 565,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Des forces allemandes restent dans le mauvais secteur. La diversion contribue à retarder les renforts, sans expliquer seule la victoire.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des renforts *retardés*.",
+          "at": "retarder",
+          "y": 165,
+          "size": 26
+        },
+        {
+          "type": "img",
+          "src": "calais",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "preset": "label",
+          "text": "LA DIVERSION CONTRIBUE AU SUCCÈS",
+          "at": "contribue",
+          "y": 735,
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Attention : cette armée fictive ne doit pas être confondue avec la Ghost Army, une vraie unité américaine spécialisée dans la tromperie.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "FUSAG ≠\n*Ghost Army*.",
+          "at": "confondue",
+          "y": 180,
+          "size": 29
+        },
+        {
+          "type": "img",
+          "src": "camp",
+          "h": 235,
+          "y": 540,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "DEUX HISTOIRES DIFFÉRENTES",
+          "at": "vraie",
+          "y": 745,
+          "size": 15,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Les tanks gonflables n'ont pas gagné une bataille en tirant. Ils ont aidé à la gagner en se faisant regarder.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "tank",
+          "h": 330,
+          "y": 490,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "L’arme ?\n*Se faire regarder*.",
+          "at": "regarder",
+          "y": 745,
+          "size": 27
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Ses chars étaient\n*gonflables*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "tank",
+        "h": 330,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Patton commandait\nune *fausse armée*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "patton",
+        "h": 385,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Le Débarquement\navait un *leurre*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "camp",
+        "h": 255,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ]
+  ]
+}

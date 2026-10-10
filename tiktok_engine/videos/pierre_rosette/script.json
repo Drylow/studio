@@ -1,0 +1,559 @@
+{
+  "title": "La pierre de Rosette, trois écritures mais deux langues",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "La pierre de Rosette a aidé les chercheurs à retrouver le sens des hiéroglyphes. #histoire #rosette #champollion #egypte",
+  "sources": [
+    "British Museum, Everything you ever wanted to know about the Rosetta Stone, https://www.britishmuseum.org/blog/everything-you-ever-wanted-know-about-rosetta-stone ; page réellement lue : découverte en 1799 près de Rashid/Rosette, trois écritures du décret, grec connu, apports de Thomas Young, connaissance du copte et annonce de Champollion en septembre 1822. Le mois exact de découverte est omis car les sources divergent.",
+    "Encyclopaedia Britannica, Rosetta Stone, https://www.britannica.com/topic/Rosetta-Stone ; page réellement lue : découverte en 1799, explicitement deux langues (égyptien, grec) et trois systèmes d'écriture, travail de Young et Champollion. Le démotique est une écriture de l'égyptien, pas une troisième langue.",
+    "British Museum, objet EA24, https://www.britishmuseum.org/collection/object/Y_EA24 ; page réellement lue : décret des prêtres concernant Ptolémée V, trois blocs hiéroglyphique/démotique/grec ; des soldats découvrent la pierre pendant les travaux d'un fort. Ne pas montrer une pierre complète : c'est un fragment de stèle.",
+    "Bibliothèque nationale de France, L'aventure Champollion, exposition du bicentenaire en 2022, https://www.bnf.fr/fr/agenda/laventure-champollion ; page réellement lue : méthode comparative, manuscrits et documents multilingues. Ne pas présenter 1822 comme une traduction totale, instantanée et solitaire. Le décret existe en versions correspondantes, pas comme un mot-à-mot parfaitement identique."
+  ],
+  "art": {
+    "stone": {
+      "prompt": "A historically informed frontal view of the ORIGINAL Rosetta Stone, a dark granodiorite broken stela with its distinctive irregular sloping broken top and uneven lower right corner, three stacked bands of very small shallow carved marks, sparse hieroglyphic marks at top, denser demotic marks in middle and Greek-like marks at bottom; entire stone visible, no stand, no museum case. Crisp high-quality 16-bit pixel art with deliberate square pixel clusters and checkerboard dithering, strong readable silhouette, highlights in white and icy blue, shadows deep cobalt and navy, pure solid black background. Only black, blue and white palette. Tiny inscriptions are texture, not invented readable claims; no Latin captions, no numbers, no logos, no watermark, no modern objects, no photorealism or smooth vector gradients.",
+      "size": "192x256"
+    },
+    "fort": {
+      "prompt": "Historically informed 1799 Fort Saint-Julien near Rashid in Egypt, low stone fort walls on flat Nile delta land; two fully clothed French army engineering soldiers in late eighteenth-century coats and plain bicorne hats inspect a dark broken stone exposed during wall repairs. Medium-wide scene, stone and repair work clearly visible, believable modest fort, no giant fantasy towers, no pyramids in the distance. Crisp high-quality 16-bit pixel art, square clusters, checkerboard dithering, white and icy blue highlights over deep cobalt and navy shadows on pure black negative space. Only black, blue and white palette. Each visible person has two arms and two hands with believable grips and separate fingers, no extra limbs. No printed captions, no numbers, no flags, no modern logos, no watermark, no photorealism.",
+      "size": "320x192"
+    },
+    "ptolemy": {
+      "prompt": "Historically informed bust illustration of the young Ptolemaic king Ptolemy V as represented in ancient Egyptian royal imagery, fully covered in a simple ceremonial linen garment and traditional Egyptian royal headdress, dignified side-facing pose; avoid Roman armour, modern jewellery, fantasy wings and invented emblems. Chest-up composition with clean isolated silhouette. Crisp high-quality 16-bit pixel art, readable face made of intentional square clusters, sparse checkerboard dithering, white and icy blue highlights, deep cobalt/navy shadows, pure black background. Only black, blue and white palette. Arms mostly outside crop, normal anatomy. No caption, no numbers, no logos or watermark, no photorealism, no smooth airbrushed glow.",
+      "size": "192x256"
+    },
+    "inscriptions": {
+      "prompt": "Close frontal detail of three horizontal carved writing bands on a broken ancient Egyptian granodiorite stela: tiny bird and reed-like hieroglyphic forms in upper band, tightly flowing demotic marks in middle band, compact Greek-letter forms in lower band. Visually distinct writing textures, not an exact transcription and no invented legible message. Keep three bands separated and readable as textures at small size. Crisp high-quality 16-bit pixel art, square pixels, checkerboard dithering, stone edges and incisions picked out in white and blue with deep cobalt/navy shadows on pure black background; only black, blue and white. No overlay labels, no numbers, no Latin sentences, no logos or watermark, no museum frame, no photorealism.",
+      "size": "320x192"
+    },
+    "greek_sheet": {
+      "prompt": "An early nineteenth-century scholar's broad paper facsimile of the Greek text from the Rosetta Stone, laid flat and seen slightly from above, several compact rows of tiny ancient Greek letter-shaped marks, a narrow section softly picked out in bright icy blue to suggest a known text. No hand and no extra props; a single sheet with irregular paper edges. Crisp high-quality 16-bit pixel art with deliberate square clusters and checkerboard dithering, white paper and blue shadows on a pure solid black background, only black, blue and white. Marks are tiny manuscript texture, not fabricated readable quotations; no Latin text, no numbers, no computer interface, no logos or watermark, no photorealism.",
+      "size": "256x192"
+    },
+    "young": {
+      "prompt": "Historically informed portrait bust of Thomas Young the English scholar around 1815, middle-aged white man with short wavy hair and sideburns, high-collared early nineteenth-century dark coat, waistcoat and simple white cravat, composed inquisitive expression, facing slightly right. Fully clothed, chest-up, recognisable scholarly period silhouette. Crisp high-quality 16-bit pixel art, detailed intentional facial pixel clusters and sparse checkerboard dithering, white and icy blue highlights with deep cobalt/navy shadows, isolated on pure solid black background, only black, blue and white palette. No hands needed, normal neck and facial anatomy. No caption, no numbers, no logos, no watermark, no photorealism or vector illustration.",
+      "size": "192x256"
+    },
+    "champollion": {
+      "prompt": "Historically informed portrait bust of Jean-Francois Champollion in the early 1820s, young adult French scholar with thick dark curly hair, prominent sideburns, large thoughtful eyes and broad forehead, dark early nineteenth-century high-collared coat and plain white cravat, determined expression facing slightly left. Fully clothed chest-up, clean distinctive silhouette, not Napoleon, not a pharaoh. Crisp high-quality 16-bit pixel art, finely readable intentional square facial clusters, sparse checkerboard dithering, white and icy blue highlights, deep cobalt and navy shadows on pure solid black background. Only black, blue and white. No hands needed, natural anatomy, no caption, no numbers, no logos, no watermark, no photorealism or smooth gradients.",
+      "size": "192x256"
+    },
+    "coptic": {
+      "prompt": "A historically informed open early nineteenth-century scholarly notebook studying the Coptic language, two paper pages with compact small Coptic letter-shaped writing textures and a few comparison marks in the margins, single blue quill pen resting beside it, viewed from above at a gentle angle. No modern printed textbook, no accurate quotation claimed, no readable Latin words, no date or numbers. Crisp high-quality 16-bit pixel art, deliberate square clusters and checkerboard dithering, white pages with icy blue highlights and deep cobalt/navy shadows, isolated on pure solid black background; only black, blue and white palette. No hands, no extra objects, no logos, no watermark, no photorealism or smooth vector treatment.",
+      "size": "256x192"
+    },
+    "study": {
+      "prompt": "Historically informed 1820s French scholar's working desk: Jean-Francois Champollion with thick curly hair, sideburns, dark coat and white cravat leans over paper facsimiles containing tiny hieroglyphic and Coptic writing textures, comparing one sheet with an open notebook. A plain quill and small ink pot, modest wooden desk, focused hard work instead of a magical discovery, medium-wide side angle. Fully clothed, two arms and two hands only, anatomically believable wrists and five fingers per visible hand, separate pages and realistic pen grip. Crisp high-quality 16-bit pixel art, square clusters, checkerboard dithering, white and icy blue highlights over deep cobalt/navy shadows with pure black background and margins; only black, blue and white. No invented readable text, no numbers, no logos, no watermark, no fantasy Egyptian scenery, no photorealism.",
+      "size": "320x192"
+    }
+  },
+  "beats": [
+    {
+      "say": "Ce morceau de pierre a aidé à rendre les hiéroglyphes lisibles. Son secret, ce n'est pas un dessin magique.",
+      "glow": {
+        "y": 520,
+        "r": 270,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "stone",
+          "h": 420,
+          "y": 540,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Cette pierre a changé\n*la lecture de l'Égypte*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "stamp",
+          "text": "LE SECRET ?",
+          "y": 790,
+          "at": "secret",
+          "rot": -5,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "say": "En 1799, des soldats de l'armée de Napoléon découvrent la pierre près de Rosette, en Égypte, pendant des travaux sur un fort.",
+      "glow": {
+        "y": 540
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une découverte\npendant des *travaux*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "preset": "num",
+          "text": "1799",
+          "y": 280,
+          "at": "1799",
+          "flash": true
+        },
+        {
+          "type": "img",
+          "src": "fort",
+          "h": 255,
+          "y": 530,
+          "at": 0,
+          "in": "scan",
+          "scanDur": 0.65
+        },
+        {
+          "preset": "label",
+          "text": "PRÈS DE ROSETTE, ÉGYPTE",
+          "y": 710,
+          "at": "Rosette",
+          "color": "W",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "say": "Elle porte un décret de prêtres en l'honneur de Ptolémée le Cinquième, un roi d'Égypte.",
+      "glow": {
+        "y": 530
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un *décret* pour le roi.",
+          "y": 150,
+          "at": "décret"
+        },
+        {
+          "type": "img",
+          "src": "ptolemy",
+          "h": 360,
+          "y": 530,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "PTOLÉMÉE V",
+          "y": 750,
+          "at": "Ptolémée",
+          "rot": -4,
+          "size": 23
+        }
+      ]
+    },
+    {
+      "say": "Le détail décisif ? Ce décret apparaît dans trois écritures : hiéroglyphique, démotique et grecque. Mais seulement deux langues.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*Trois écritures*…",
+          "y": 150,
+          "at": "trois",
+          "out": "Mais"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 3,
+          "size": 70,
+          "y": 280,
+          "at": "trois",
+          "dur": 0.65,
+          "out": "Mais"
+        },
+        {
+          "type": "img",
+          "src": "inscriptions",
+          "h": 225,
+          "y": 530,
+          "at": 0,
+          "in": "scan",
+          "scanDur": 0.5
+        },
+        {
+          "preset": "label",
+          "text": "HIÉROGLYPHIQUE · DÉMOTIQUE · GREC",
+          "y": 700,
+          "size": 11,
+          "color": "W",
+          "at": "hiéroglyphique"
+        },
+        {
+          "preset": "title",
+          "text": "… mais *deux langues*.",
+          "y": 150,
+          "at": "Mais"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 2,
+          "size": 70,
+          "y": 280,
+          "at": "deux",
+          "dur": 0.65
+        }
+      ]
+    },
+    {
+      "say": "L'égyptien est écrit de deux manières. Le grec, lui, reste lisible pour les savants. Vous voyez l'avantage ?",
+      "glow": {
+        "y": 530
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Égyptien + *grec*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "greek_sheet",
+          "h": 285,
+          "y": 530,
+          "at": 0,
+          "in": "scan",
+          "scanDur": 0.6
+        },
+        {
+          "type": "stamp",
+          "text": "DÉJÀ LISIBLE",
+          "y": 740,
+          "at": "lisible",
+          "rot": -5,
+          "fill": true,
+          "size": 20
+        }
+      ]
+    },
+    {
+      "say": "Ils ont un texte qu'ils comprennent, placé à côté de textes qu'ils ne savent plus lire. Une sorte de sous-titre antique.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Comparer les *versions*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "inscriptions",
+          "h": 255,
+          "y": 530,
+          "at": 0,
+          "in": "fade",
+          "fx": "zoom"
+        },
+        {
+          "type": "stamp",
+          "text": "UN INDICE",
+          "y": 750,
+          "at": "comprennent",
+          "rot": 4,
+          "size": 23
+        }
+      ]
+    },
+    {
+      "say": "Mais les hiéroglyphes ne représentent pas seulement des objets. Certains peuvent aussi noter des sons. Voilà ce qui complique l'enquête.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des objets…\nmais aussi *des sons*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "stone",
+          "h": 360,
+          "y": 550,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "PAS QUE DES DESSINS",
+          "y": 280,
+          "at": "sons",
+          "rot": -3,
+          "fill": true,
+          "size": 15
+        },
+        {
+          "type": "sprite",
+          "sprite": "question",
+          "px": 5,
+          "x": 425,
+          "y": 790,
+          "at": "complique",
+          "in": "pop",
+          "blink": 2
+        }
+      ]
+    },
+    {
+      "say": "L'Anglais Thomas Young identifie des signes dans le nom du roi. Puis Jean-François Champollion pousse le déchiffrement beaucoup plus loin.",
+      "glow": {
+        "y": 530
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*Deux savants* clés.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "young",
+          "h": 320,
+          "x": 155,
+          "y": 530,
+          "at": 0,
+          "out": "Champollion",
+          "in": "slam"
+        },
+        {
+          "preset": "label",
+          "text": "THOMAS YOUNG",
+          "x": 155,
+          "y": 725,
+          "at": "Young",
+          "out": "Champollion",
+          "size": 12,
+          "color": "W"
+        },
+        {
+          "type": "img",
+          "src": "champollion",
+          "h": 320,
+          "x": 395,
+          "y": 530,
+          "at": "Champollion",
+          "in": "slam"
+        },
+        {
+          "preset": "label",
+          "text": "CHAMPOLLION",
+          "x": 395,
+          "y": 725,
+          "at": "Champollion",
+          "size": 12,
+          "color": "W"
+        }
+      ]
+    },
+    {
+      "say": "Champollion connaît le copte, une langue issue de l'égyptien ancien. Cette connaissance l'aide à comprendre le système.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un autre indice :\n*le copte*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "coptic",
+          "h": 275,
+          "y": 530,
+          "at": 0,
+          "in": "scan",
+          "scanDur": 0.65
+        },
+        {
+          "type": "stamp",
+          "text": "COMPRENDRE LE SYSTÈME",
+          "y": 740,
+          "at": "système",
+          "rot": -3,
+          "size": 14
+        }
+      ]
+    },
+    {
+      "say": "En 1822, il présente une étape majeure du déchiffrement. La pierre n'est pas sa seule source : il compare d'autres inscriptions.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une étape *majeure*.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "preset": "num",
+          "text": "1822",
+          "y": 280,
+          "at": "1822",
+          "flash": true
+        },
+        {
+          "type": "img",
+          "src": "study",
+          "h": 265,
+          "y": 550,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "preset": "label",
+          "text": "D'AUTRES INSCRIPTIONS AUSSI",
+          "y": 735,
+          "at": "inscriptions",
+          "size": 12,
+          "color": "W"
+        }
+      ]
+    },
+    {
+      "say": "Ce n'est ni une traduction instantanée, ni un exploit solitaire. Les chercheurs croisent les langues et les documents.",
+      "glow": {
+        "y": 550
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une *enquête*,\npas un tour de magie.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "study",
+          "h": 275,
+          "y": 550,
+          "at": 0,
+          "in": "scan",
+          "scanDur": 0.6,
+          "fx": "zoom"
+        },
+        {
+          "type": "stamp",
+          "text": "CROISER LES SOURCES",
+          "y": 740,
+          "at": "croisent",
+          "rot": 4,
+          "size": 17
+        }
+      ]
+    },
+    {
+      "say": "Une pierre brisée, et toute une civilisation redevient lisible. Parfois, pour lire le passé, il faut d'abord lire à côté.",
+      "glow": {
+        "y": 520,
+        "r": 290,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Pour lire le passé…",
+          "y": 150,
+          "at": 0,
+          "out": "d'abord"
+        },
+        {
+          "type": "img",
+          "src": "stone",
+          "h": 390,
+          "y": 540,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "… lire *à côté*.",
+          "y": 150,
+          "at": "d'abord",
+          "in": "slam",
+          "flash": true
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "Cette pierre a\n*changé l'Histoire*.",
+        "y": 240,
+        "maxW": 460
+      },
+      {
+        "type": "img",
+        "src": "stone",
+        "h": 410,
+        "y": 590
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "*3 écritures.*\nSeulement 2 langues.",
+        "y": 235,
+        "maxW": 460
+      },
+      {
+        "type": "img",
+        "src": "inscriptions",
+        "h": 255,
+        "y": 585
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 38,
+        "color": "W",
+        "text": "Comment lire\n*les hiéroglyphes* ?",
+        "y": 235,
+        "maxW": 460
+      },
+      {
+        "type": "img",
+        "src": "champollion",
+        "h": 420,
+        "y": 590
+      }
+    ]
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "title": "Henri VIII : six femmes, mais seulement deux exécutées",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Les six épouses d'Henri VIII n'ont pas toutes connu le même destin. #histoire #henriviii #tudor #vulgarisation",
+  "sources": [
+    {
+      "name": "Encyclopaedia Britannica — Henry VIII",
+      "url": "https://www.britannica.com/biography/Henry-VIII-king-of-England",
+      "checked": "2026-10-10",
+      "evidence": "Henry VIII married six times; of his six wives, he had two killed: Anne Boleyn and Catherine Howard. Les six épouses sont nommées dans l'ordre, avec les trois enfants royaux.",
+      "supports": [
+        "six épouses",
+        "deux exécutées",
+        "ordre des six mariages",
+        "Élisabeth et Édouard"
+      ]
+    },
+    {
+      "name": "Historic Royal Palaces — Henry VIII’s wives: six queens, six women",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/henry-viii-s-wives-six-queens-six-women/",
+      "checked": "2026-10-10",
+      "evidence": "Présente les six femmes séparément. Anne de Clèves accepte l'annulation, reçoit des propriétés et des revenus, et devient la King's Sister. Catherine Parr survit à Henri.",
+      "supports": [
+        "six épouses",
+        "annulations distinctes des divorces modernes",
+        "Anne de Clèves",
+        "Catherine Parr"
+      ]
+    },
+    {
+      "name": "Historic Royal Palaces — Anne Boleyn",
+      "url": "https://www.hrp.org.uk/tower-of-london/history-and-stories/anne-boleyn/",
+      "checked": "2026-10-10",
+      "evidence": "Anne est exécutée après des accusations de trahison, adultère et inceste dont le bien-fondé est contesté. Elle est décapitée par un épéiste, pas avec une hache.",
+      "supports": [
+        "exécution d'Anne Boleyn",
+        "accusations contestées",
+        "ne pas illustrer Anne avec une hache"
+      ]
+    },
+    {
+      "name": "Historic Royal Palaces — Catherine Howard",
+      "url": "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/catherine-howard/",
+      "checked": "2026-10-10",
+      "evidence": "Catherine est la cinquième épouse. Condamnée par bill of attainder, elle est exécutée au Tower Green. Son âge exact n'est pas certain et n'est pas utilisé.",
+      "supports": [
+        "seconde épouse exécutée",
+        "accusation de trahison",
+        "aucun âge chiffré"
+      ]
+    }
+  ],
+  "art": {
+    "henry": {
+      "size": "192x256",
+      "prompt": "Recognizable adult King Henry VIII of England, broad face, small reddish beard, flat Tudor cap, fur-trimmed dark royal coat and plain chain, chest-up portrait inspired by historical Tudor painting proportions, stern direct gaze, both arms outside the crop and no visible hands. Sober crisp pixel art with ordered dithering, deep blue, white and grey palette, pure black background, strong readable silhouette, generous clean margin, no writing, no letters, no logos, no photorealism."
+    },
+    "aragon": {
+      "size": "192x256",
+      "prompt": "Adult Catherine of Aragon, Tudor queen with a pale composed face, modest white linen head covering beneath a formal English gable hood, richly structured dark Tudor dress, chest-up historical portrait, quiet determined expression, arms and hands outside the crop. Sober high-contrast pixel art, controlled checkerboard dithering, deep blue white grey palette on pure black, centered complete headwear with margin, no text, no coat of arms, no logos."
+    },
+    "boleyn": {
+      "size": "192x256",
+      "prompt": "Adult Anne Boleyn as a Tudor queen, slender oval face, dark eyes, dark hair inside a French hood with pearl edging, square-necked dark Tudor gown and a plain pearl necklace without any letter pendant, chest-up portrait, alert intelligent expression, no visible hands. Restrained crisp pixel art, deep blue white grey with ordered dithering, isolated pure black, complete uncropped hood, no writing, no logos, no execution, no gore."
+    },
+    "seymour": {
+      "size": "192x256",
+      "prompt": "Adult Jane Seymour, pale Tudor queen with a formal English gable hood, modest square-necked dark gown, calm reserved expression, chest-up historical portrait, shoulders evenly placed, arms outside crop and no visible hands. Crisp sober pixel art in deep blue white grey, sparse ordered dithering, isolated on pure black with margin around headwear, no writing, no logos, no baby, no medical scene."
+    },
+    "cleves": {
+      "size": "192x256",
+      "prompt": "Adult Anne of Cleves in a historical German court headdress with symmetrical structured white linen and a decorative dark cap, broad composed face, elaborate high-necked Tudor-era gown, chest-up portrait, dignified slightly confident expression, no visible hands. Sober clean pixel art using deep blue white grey and ordered dithering, pure black background, complete headwear with breathing space, no text, no numbers, no logos. Entire backdrop MUST be solid pure black. No white rectangle, no white background or poster. The outlined bust alone floats against pitch black."
+    },
+    "howard": {
+      "size": "192x256",
+      "prompt": "An adult Tudor noblewoman representing Catherine Howard, clearly adult face, dark French hood edged in pearls, formal Tudor dress with a modest neckline and simple pearl jewelry, chest-up portrait, serious vulnerable expression, arms cropped out and no visible hands. Original restrained pixel art illustration rather than a claim of an authenticated likeness, deep blue white grey, pure black background, no writing, no letters, no logos, no execution or gore."
+    },
+    "parr": {
+      "size": "192x256",
+      "prompt": "Adult Catherine Parr, Tudor queen in a pearl-edged French hood and a modest structured dark gown, poised thoughtful face, chest-up historical portrait, straight shoulders, no visible hands or objects being held. Sober sharply readable pixel art, deep blue white grey palette, controlled ordered dithering and pure black background, keep complete headdress inside frame, no writing, no logos, no modern accessories."
+    },
+    "torn_decree": {
+      "size": "256x192",
+      "prompt": "A single Tudor-era parchment sheet torn cleanly into two halves lying beside each other, one simple blue wax seal without any emblem, the surface completely blank and without writing, no human hands, no extra objects. Sober historical pixel art, crisp readable paper edges, deep blue white grey palette with sparse ordered dithering, isolated pure black background, centered composition with margin, no letters, no numbers, no logos."
+    },
+    "marriage_decree": {
+      "size": "256x192",
+      "prompt": "A single rolled Tudor-era parchment document resting beside one plain simple wedding ring, blank unmarked parchment, no inscriptions, no symbols on the ring, no human hands, a restrained historical still life. Crisp sober pixel art, deep blues white grey, ordered dithering, black background, centered uncluttered composition, every object fully inside frame, no writing, no letters, no logos."
+    }
+  },
+  "beats": [
+    {
+      "say": "Henri huit a eu six femmes. Mais il ne les a pas toutes fait exécuter. Deux seulement ont été décapitées.",
+      "glow": {
+        "y": 510,
+        "r": 280,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Henri VIII : *6 femmes*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "henry",
+          "h": 370,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "2 EXÉCUTÉES",
+          "y": 760,
+          "size": 21,
+          "rot": -5,
+          "fill": true,
+          "at": "Deux"
+        }
+      ]
+    },
+    {
+      "say": "Pour les autres, oubliez le cliché. Leur destin se partage entre annulation, mort après un accouchement, et veuvage.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un cliché *trompeur*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "counter",
+          "from": 6,
+          "to": 2,
+          "dur": 1.3,
+          "y": 300,
+          "size": 72,
+          "at": "cliché"
+        },
+        {
+          "type": "img",
+          "src": "marriage_decree",
+          "h": 230,
+          "y": 540,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "preset": "label",
+          "text": "EXÉCUTÉES SUR SIX ÉPOUSES",
+          "y": 400,
+          "color": "W",
+          "at": "destin"
+        }
+      ]
+    },
+    {
+      "say": "Première épouse : Catherine d'Aragon. Le mariage est annulé, après un long conflit avec le pape.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "1. *Catherine d'Aragon*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "aragon",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "ANNULÉ",
+          "y": 735,
+          "rot": -4,
+          "fill": true,
+          "at": "annulé"
+        }
+      ]
+    },
+    {
+      "say": "Henri veut un héritier masculin. Il rompt avec Rome. Un problème de couple qui bouleverse un royaume.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un mariage.\n*Un royaume bouleversé.*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "torn_decree",
+          "h": 260,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "stamp",
+          "text": "RUPTURE AVEC ROME",
+          "y": 735,
+          "size": 17,
+          "rot": -4,
+          "at": "Rome"
+        }
+      ]
+    },
+    {
+      "say": "Deuxième épouse : Anne Boleyn. Mère d'Élisabeth, future reine, elle est exécutée sur des accusations dont le bien-fondé reste contesté.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "2. *Anne Boleyn*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "boleyn",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "EXÉCUTÉE",
+          "y": 735,
+          "rot": -4,
+          "fill": true,
+          "at": "exécutée"
+        }
+      ]
+    },
+    {
+      "say": "Troisième épouse : Jeanne Seymour. Elle accouche du futur roi Édouard, puis meurt peu après. Elle n'est pas exécutée.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "3. *Jeanne Seymour*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "seymour",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "MORTE APRÈS L'ACCOUCHEMENT",
+          "y": 735,
+          "size": 13,
+          "rot": -3,
+          "at": "meurt"
+        }
+      ]
+    },
+    {
+      "say": "Quatrième épouse : Anne de Clèves. Encore une annulation. Mais elle reçoit des terres, des revenus, et reste en Angleterre.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "4. *Anne de Clèves*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "cleves",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "ANNULÉ",
+          "y": 735,
+          "fill": true,
+          "rot": -4,
+          "at": "annulation"
+        }
+      ]
+    },
+    {
+      "say": "Elle devient même la sœur bien-aimée du roi. Une sortie de couple différente de ce que vous imaginiez.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "La *sœur bien-aimée*\ndu roi",
+          "y": 150,
+          "size": 26,
+          "at": "sœur"
+        },
+        {
+          "type": "img",
+          "src": "cleves",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "fade",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "DES TERRES ET DES REVENUS",
+          "y": 735,
+          "size": 13,
+          "rot": 4,
+          "at": "sortie"
+        }
+      ]
+    },
+    {
+      "say": "Cinquième épouse : Catherine Howard. Accusée de trahison liée à ses relations, elle est exécutée à son tour.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "5. *Catherine Howard*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "howard",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "EXÉCUTÉE",
+          "y": 735,
+          "fill": true,
+          "rot": -4,
+          "at": "exécutée"
+        }
+      ]
+    },
+    {
+      "say": "Sixième épouse : Catherine Parr. Elle survit à Henri. Cette fois, c'est le roi qui meurt avant sa femme.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "6. *Catherine Parr*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "parr",
+          "h": 350,
+          "y": 510,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "ELLE SURVIT AU ROI",
+          "y": 735,
+          "size": 18,
+          "rot": -4,
+          "fill": true,
+          "at": "survit"
+        }
+      ]
+    },
+    {
+      "say": "Bilan : deux mariages annulés, deux exécutions, une mort après l'accouchement, et une épouse devenue veuve.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Six femmes.\n*Quatre destins.*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "preset": "num",
+          "text": "2 + 2 + 1 + 1",
+          "y": 320,
+          "size": 47,
+          "at": "annulés"
+        },
+        {
+          "type": "text",
+          "font": "sans",
+          "size": 22,
+          "maxW": 455,
+          "color": "W",
+          "text": "Annulations · Exécutions\nMort après l'accouchement · Veuvage",
+          "y": 505,
+          "at": "veuve",
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "La comptine utilise le mot divorcée. Pratique à retenir, mais juridiquement, ces deux mariages ont été annulés.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Divorcée ?",
+          "y": 150,
+          "at": "divorcée",
+          "strike": {
+            "at": "juridiquement",
+            "dur": 0.3
+          }
+        },
+        {
+          "type": "img",
+          "src": "torn_decree",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "ANNULATION",
+          "y": 735,
+          "rot": -4,
+          "fill": true,
+          "at": "annulés"
+        }
+      ]
+    },
+    {
+      "say": "Six épouses, six histoires. Vous pensiez connaître le roi ; leurs vies méritent mieux qu'un seul cliché.",
+      "glow": {
+        "y": 520,
+        "r": 280,
+        "a": 0.23
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "*Six histoires*,\npas un seul cliché.",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "henry",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "6 FEMMES ≠ 6 EXÉCUTIONS",
+          "y": 750,
+          "size": 16,
+          "rot": -4,
+          "fill": true,
+          "at": "cliché"
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "maxW": 470,
+        "color": "W",
+        "text": "6 femmes.\n*2 exécutées.*",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "henry",
+        "h": 400,
+        "y": 575
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "Le cliché sur\n*Henri VIII*",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "henry",
+        "h": 345,
+        "x": 180,
+        "y": 575
+      },
+      {
+        "type": "img",
+        "src": "parr",
+        "h": 290,
+        "x": 370,
+        "y": 590
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "Elle a *survécu*\nau roi.",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "parr",
+        "h": 400,
+        "y": 575
+      }
+    ]
+  ]
+}
