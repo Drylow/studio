@@ -1,0 +1,320 @@
+{
+  "timing": "Editorial estimates at 122 words/min; replace after measured voiceover",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "The cleaning",
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_boundary": "Display deception is answered; a cleaner's individual motivation is not.",
+      "original_analysis": "A controlled ritual removes the returning witness.",
+      "file": "chapitres/01-the-cleaning.txt",
+      "words": 996,
+      "script_start_line": 1,
+      "script_end_line": 25,
+      "start_seconds_estimate": 0,
+      "end_seconds_estimate": 490,
+      "narration_start": "In Silo, you can learn more from a roll of tape than from the mayor. A better seal lets Juliette survive a journey that everyone expects to kill her. That small change raises a much larger q",
+      "narration_end": "The answer here is fairly clear: the visor's green scene is manufactured, and the public ritual conceals that fact. The question still worth asking is how much cooperation comes from belief, habit, or fear. We don't have to decide that for every individual. We can see that the system benefits whenever those motives produce the same visible action. Juliette gives everyone a rare result that doesn't fit, and the next mystery is what allowed that result to happen.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 2,
+      "title": "The suit",
+      "source_ids": [
+        "S02",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "Better sealing matters; the compound's precise composition and global conditions are unknown.",
+      "original_analysis": "Preparation compromises the independence of the supposed outside test.",
+      "file": "chapitres/02-the-suit.txt",
+      "words": 920,
+      "script_start_line": 27,
+      "script_end_line": 51,
+      "start_seconds_estimate": 490,
+      "end_seconds_estimate": 942,
+      "narration_start": "Walker notices something that a politician might overlook: two departments have tape with different performance. Mechanical's material works better than the material used by IT. Before Julie",
+      "narration_end": "So the suit gives us a confirmed practical answer and a more limited open question. Better sealing changes Juliette's outcome. The exact hazards beyond the doors still need to be distinguished from the measures used to control those doors. I would put far more confidence in that separation than in a theory declaring the whole surface safe. The first thing a survivor needs is an account they can check, including the conditions that kept them alive.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 3,
+      "title": "The screens",
+      "source_ids": [
+        "S03",
+        "S06"
+      ],
+      "evidence_boundary": "The green flash occurs; it does not independently prove the current surface safe.",
+      "original_analysis": "Displayed evidence requires place, time and provenance.",
+      "file": "chapitres/03-the-screens.txt",
+      "words": 887,
+      "script_start_line": 53,
+      "script_end_line": 75,
+      "start_seconds_estimate": 942,
+      "end_seconds_estimate": 1379,
+      "narration_start": "During the generator shutdown in season one, the cafeteria display briefly shows a green scene. For a resident who notices it, that would be a difficult moment to forget. You are watching th",
+      "narration_end": "The open question is how much of the residents' daily view is a controlled presentation, and what an independent observation would change. The green flash gives them a reason to investigate. It doesn't finish the investigation. To make progress, someone would need to trace the feed, find out when the camera last sent an image, and establish whether the interruption used stored material. Those are questions for someone with access to the equipment, alongside the people who saw the change.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 4,
+      "title": "The stairs",
+      "source_ids": [
+        "S05",
+        "S12",
+        "S14",
+        "S18"
+      ],
+      "evidence_boundary": "Transport and magnification restrictions exist; their exact original purpose is open.",
+      "original_analysis": "Costs of movement and inspection hinder coordination.",
+      "file": "chapitres/04-the-stairs.txt",
+      "words": 846,
+      "script_start_line": 77,
+      "script_end_line": 99,
+      "start_seconds_estimate": 1379,
+      "end_seconds_estimate": 1795,
+      "narration_start": "There is a simple question you can ask while looking down the central staircase: why does getting across the silo have to be such hard work? The society can maintain elaborate machinery, but",
+      "narration_end": "The answer we can defend is that the restrictions shape movement and investigation. The theory that they help prevent coordination is strong because it fits the silo's visible social separation. The theory that magnification would uncover one particular unrevealed substance remains much weaker. Until television shows that connection, it belongs among possibilities, without a technical explanation attached. For now, the most important consequence of the stairs is ordinary: they make it harder for two people with useful pieces of the truth to meet.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 5,
+      "title": "The mirrors",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S10"
+      ],
+      "evidence_boundary": "Hidden cameras are revealed; total surveillance is not established.",
+      "original_analysis": "Blind spots, interpretation and informants limit observation.",
+      "file": "chapitres/05-the-mirrors.txt",
+      "words": 954,
+      "script_start_line": 101,
+      "script_end_line": 127,
+      "start_seconds_estimate": 1795,
+      "end_seconds_estimate": 2264,
+      "narration_start": "Holston leaves a clue that makes sense only when Juliette understands where someone might be watching. A mirror in a room is supposed to be part of private life. In season one, the discovery",
+      "narration_end": "The confirmed answer is that hidden surveillance reaches into private spaces. The remaining question is how extensive and reliable that surveillance really is. I would expect gaps to matter, because the story repeatedly gives ordinary people ways to notice and use them. Holston's clue is a small example of that possibility: an action that looks unimportant until someone understands who might have been watching it.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 6,
+      "title": "The families",
+      "source_ids": [
+        "S04",
+        "S06"
+      ],
+      "evidence_boundary": "Reproductive deception is shown and testified to; genetic causation is not established.",
+      "original_analysis": "Family stories offer a route for forbidden knowledge.",
+      "file": "chapitres/06-the-families.txt",
+      "words": 905,
+      "script_start_line": 129,
+      "script_end_line": 153,
+      "start_seconds_estimate": 2264,
+      "end_seconds_estimate": 2709,
+      "narration_start": "Allison has official permission to try for a child. What she discovers is that the medical procedure meant to make that possible has been misrepresented to her. Her contraceptive implant rem",
+      "narration_end": "The theory I find most convincing is that the authorities want to restrict the transmission of inconvenient knowledge as much as they want to manage population. The television evidence supports that connection, while leaving their biological assumptions open to doubt. For someone like Gloria, a preserved picture and a conversation with Juliette offer another route. The system has interfered with one kind of continuity, but it hasn't eliminated every person willing to remember.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 7,
+      "title": "The erased history",
+      "source_ids": [
+        "S06",
+        "S08",
+        "S09"
+      ],
+      "evidence_boundary": "Bernard describes a reset; the coded letter survives.",
+      "original_analysis": "Quinn may preserve a route to checking evidence rather than a complete explanation.",
+      "file": "chapitres/07-the-erased-history.txt",
+      "words": 878,
+      "script_start_line": 155,
+      "script_end_line": 179,
+      "start_seconds_estimate": 2709,
+      "end_seconds_estimate": 3141,
+      "narration_start": "Salvador Quinn leaves behind a coded message, and Lukas has to work out how to read it. The unusual part is that Quinn is also associated with the destruction of records and the suppression ",
+      "narration_end": "What the characters can use is the fact that an erased past has not remained completely silent. The surviving book, the letter, and the willingness of someone to investigate create a new link between generations. Lukas has to do more than receive it. He has to decide whether the people who gave him access should also control what he does with the answer.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 8,
+      "title": "The Legacy",
+      "source_ids": [
+        "S07",
+        "S10"
+      ],
+      "evidence_boundary": "Restricted archives exist; complete origin knowledge is not assured.",
+      "original_analysis": "Access can recruit a successor while leaving them dependent.",
+      "file": "chapitres/08-the-legacy.txt",
+      "words": 832,
+      "script_start_line": 181,
+      "script_end_line": 205,
+      "start_seconds_estimate": 3141,
+      "end_seconds_estimate": 3550,
+      "narration_start": "Lukas enters the restricted world of the Legacy and discovers how different the silo looks when you are allowed to ask different questions. Books, records, and digital knowledge are availabl",
+      "narration_end": "An official can know more than the public and still know less than they think. That leaves an opening for someone like Lukas. The archive gives him tools, but he can reach his own conclusion. The best outcome for an investigator would be to use those tools to find evidence outside the archive's own authority. A book can tell you a door exists. Walking to that door lets you begin checking what the book left out.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 9,
+      "title": "The door",
+      "source_ids": [
+        "S08",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "Remote Safeguard and no-contact rule established.",
+      "original_analysis": "Isolation prevents communities comparing accounts; original justification remains open.",
+      "file": "chapitres/09-the-door.txt",
+      "words": 906,
+      "script_start_line": 207,
+      "script_end_line": 231,
+      "start_seconds_estimate": 3550,
+      "end_seconds_estimate": 3995,
+      "narration_start": "Lukas follows Quinn's message to the bottom of Silo 18, beneath the part of the building most residents understand. He finds a tunnel and a large door. In the second-season episode The Safeg",
+      "narration_end": "Lukas's discovery therefore answers a question about scale. The silo has an authority beyond the leaders residents can see, and that authority can threaten their lives collectively. What remains unresolved is the full purpose of maintaining that power and the extent of the network it serves. The door is useful evidence because it connects an unexplained rule to a place, a voice, and a consequence. It gives the characters something they can begin investigating together.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 10,
+      "title": "The lost memories",
+      "source_ids": [
+        "S01",
+        "S11"
+      ],
+      "evidence_boundary": "Camille exploits and maintains memory loss; exact biology is fictional.",
+      "original_analysis": "Relationships can contradict the approved account of a person's life.",
+      "file": "chapitres/10-the-lost-memories.txt",
+      "words": 883,
+      "script_start_line": 233,
+      "script_end_line": 257,
+      "start_seconds_estimate": 3995,
+      "end_seconds_estimate": 4430,
+      "narration_start": "At the beginning of season three, Juliette has returned to her home, but people she once knew have become strangers to her. The episode Who Are You places her in the position of needing othe",
+      "narration_end": "Her confusion is being exploited and maintained by people who benefit from controlling her story. The open question is how much of her former knowledge can return, and which relationships will help her place it accurately. I would expect a familiar detail to matter: the sound of someone's voice, or a place that briefly feels recognizable. Even without a complete memory, it could give her a question she wanted to ask for herself.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 11,
+      "title": "Silo seventeen",
+      "source_ids": [
+        "S09",
+        "S12",
+        "S15"
+      ],
+      "evidence_boundary": "Survivors and deliberate attack revealed.",
+      "original_analysis": "Local evidence must replace the obsolete universal-poison explanation.",
+      "file": "chapitres/11-the-silo-seventeen.txt",
+      "words": 931,
+      "script_start_line": 259,
+      "script_end_line": 285,
+      "start_seconds_estimate": 4430,
+      "end_seconds_estimate": 4888,
+      "narration_start": "Juliette enters Silo 17 and finds a place that has lost the ordinary activity of a living community. There are traces of people everywhere, but few people available to explain them. Solo's p",
+      "narration_end": "Jimmy and the others make the survival question more concrete. What remains of a society can include a room, a repair, a family, and a person who hasn't told their story clearly yet. Juliette's discovery gives those pieces a chance to matter beyond the damaged building. For someone planning what to do next, the most valuable account of Silo 17 would preserve those details alongside the warning about the attack.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 12,
+      "title": "The Algorithm",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "evidence_boundary": "Human voice, imposed identities and recurring memory established.",
+      "original_analysis": "An internal ally is plausible, with limits; memory is no guaranteed moral reversal.",
+      "file": "chapitres/12-the-algorithm.txt",
+      "words": 930,
+      "script_start_line": 287,
+      "script_end_line": 313,
+      "start_seconds_estimate": 4888,
+      "end_seconds_estimate": 5345,
+      "narration_start": "By the end of season three, we know that the voice called the Algorithm is being performed by a human being. Victor has spoken through that role, and Troy later takes it over. This is a majo",
+      "narration_end": "What could disrupt that arrangement is information that changes the next person's decisions. Daniel's unresolved connection to Helen is a plausible weakness, and Susan's objection shows another. Neither is a guaranteed rescue. Both are grounded in people we have actually seen within the project. If help ever comes from Silo 1, I would expect it to come through a specific choice by one of those people, with limits and risks attached.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 13,
+      "title": "The Before Times",
+      "source_ids": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "evidence_boundary": "Stated survival purpose and visible explosion established.",
+      "original_analysis": "Manufactured catastrophe is a strong but incomplete culpability theory.",
+      "file": "chapitres/13-the-before-times.txt",
+      "words": 908,
+      "script_start_line": 315,
+      "script_end_line": 339,
+      "start_seconds_estimate": 5345,
+      "end_seconds_estimate": 5791,
+      "narration_start": "In Gray Goo, the founders explain the project through the image of a seed bank. Per and Thurman describe underground communities preserving people through a future catastrophe. The danger th",
+      "narration_end": "The most defensible conclusion is that the silos were built with a survival rationale, and the way people entered them involved concealed knowledge and severely unequal control over events. The theory that the project's backers manufactured the emergency deserves attention, but it remains a theory about the larger chain of responsibility. The origin has become much clearer. The moral authority claimed by its organizers still needs to be questioned through their choices.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 14,
+      "title": "Helen and the relic",
+      "source_ids": [
+        "S10",
+        "S14",
+        "S17"
+      ],
+      "evidence_boundary": "Gift, pregnancy and placement established; genealogy unresolved.",
+      "original_analysis": "Recoverable influence need not require a blood relationship.",
+      "file": "chapitres/14-helen-and-the-relic.txt",
+      "words": 937,
+      "script_start_line": 341,
+      "script_end_line": 367,
+      "start_seconds_estimate": 5791,
+      "end_seconds_estimate": 6252,
+      "narration_start": "Daniel gives Helen a small Pez dispenser at the end of the second season. It connects an ordinary moment in the Before Times with an object the audience has already seen treated as a forbidd",
+      "narration_end": "So I would keep the ancestry theory open, with modest confidence, and place greater weight on the possibility that Helen leaves some recoverable trace of her choices. The dispenser is evidence of continuity, without being a complete family tree. Whatever television eventually reveals about her, a convincing answer will need to connect her actions with the people who come after her, rather than relying only on the pleasure of recognizing a resemblance.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 15,
+      "title": "The other silos",
+      "source_ids": [
+        "S09",
+        "S13",
+        "S19"
+      ],
+      "evidence_boundary": "Fifty versus fifty-one remains an account discrepancy.",
+      "original_analysis": "Map lights and a missing number do not identify a facility or census.",
+      "file": "chapitres/15-the-other-silos.txt",
+      "words": 922,
+      "script_start_line": 369,
+      "script_end_line": 395,
+      "start_seconds_estimate": 6252,
+      "end_seconds_estimate": 6706,
+      "narration_start": "The network is much larger than the places the audience has explored closely. That is one of Silo's most useful sources of uncertainty. We can understand a particular room, follow a particul",
+      "narration_end": "The most promising future discovery would be a verified conversation with people whose lives challenge Silo 18's assumptions. It might confirm some fears and complicate others. That would give the residents more than a mysterious extra number. It would give them another account of the world, with witnesses and limits they could begin to examine. Until that happens, the unvisited silos are open questions rather than ready-made answers.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    },
+    {
+      "chapter": 16,
+      "title": "A way forward",
+      "source_ids": [
+        "S12",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "S18 survives one mechanism; its final liberation is not shown.",
+      "original_analysis": "Durable freedom requires verifiable communication, resources and shared access.",
+      "file": "chapitres/16-a-way-forward.txt",
+      "words": 1052,
+      "script_start_line": 397,
+      "script_end_line": 425,
+      "start_seconds_estimate": 6706,
+      "end_seconds_estimate": 7223,
+      "narration_start": "By the third-season finale, the people in Silo 18 have prevented the internal Safeguard from killing them, and Juliette has begun thinking about taking the conflict to Silo 1. That is a sign",
+      "narration_end": "For now, I like the smaller future this would make possible. Someone finishes their work, visits a person on another level, and asks what they have heard. They can compare the answer with a record they are allowed to read. If something doesn't fit, they can ask again the following day. For people who have spent their lives depending on a single approved account, that would be a welcome ordinary evening.",
+      "editor_guidance": "Plans lents sur le detail puis ses consequences; identifier les hypotheses visuellement."
+    }
+  ]
+}

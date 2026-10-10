@@ -1,0 +1,101 @@
+QUIET PARADOX - AUDIT EDITORIAL FACELESSOS
+Script : script-voix.txt. Date : 10 octobre 2026.
+Perimetre : narration et sources; aucune voix mesuree ou video rendue.
+14 687 mots, 16 chapitres. Environ deux heures a 122,4 mots/min.
+Le rythme de rehooks est adapte au sommeil dans brief-editorial.txt : curiosite calme, questions locales, pas de grand secret retenu jusqu'a la fin.
+
+PASSE 1 : FIX-THEN-PASS
+1. Faute a opening au chapitre 8 corrigee.
+2. Les formulations repetitives sur la version de la theorie et ce que nous n'avons pas besoin de savoir ont ete remplacees par des observations ou exemples concrets.
+3. Fins des chapitres 3, 7, 10 et passage 14 rendus moins generiques.
+4. Deux sequences de phrases courtes signalees ont ete reliees.
+5. Trois captures de reframe, faux positifs traversant une fin de phrase, ont ete rephrasees.
+6. Trois sources nommees ajoutees naturellement : TVLine, TIME, TheWrap.
+7. Accroche : Silo et you dans les premiers mots; limite de spoilers avant les revelations tardives.
+8. Comparaisons symetriques superflues remplacees par des descriptions d'actions.
+Corrections de recherche : ne pas reprendre comme faits le faux deces initial de Bernard, l'ancien presume-AI des recaps S2, la securite globale deduite par un recap du final, ou sept silos vivants deduits des lumieres d'une carte.
+
+PASSE FINALE COMPLETE : PASS EDITORIAL DU SCRIPT
+Effectuee apres les corrections et l'assemblage du texte entier. PASS ne certifie ni une duree audio de deux heures ni une decision de monetisation.
+
+A - HOOK
+Premiere phrase : "In Silo, you can learn more from a roll of tape than from the mayor."
+Accroche : 81 mots separes par espaces.
+Objet concret avant l'explication : tape. Enjeu : le resultat attendu d'une sortie peut etre arrange. Turn : question sur les conditions produisant ce resultat, variante 9B.
+Promesse : mysteres, reponses TV et theories plausibles. Aucun engagement de reveler une fin inedite.
+Comparaisons reelles A4, issues des transcriptions recuperees :
+- AjibRjwB0sI : "theories floating around". Programme annonce; notre ouverture pose d'abord une anomalie materielle.
+- EQ4SHeWZJ_w : "not everyone can make it to London or New York". Promesse d'acces; Quiet Paradox promet une lecture analytique sans importer une autre continuite.
+- bVaFyms_P80 : "a bit of disappointment if I'm being honest." Point de vue identifiable; notre jugement vient d'un objet verifiable.
+- zHIK3YBE0mY : "Star Wars has been sold to children for nearly 50 years now." Proposition concrete immediate; notre ouverture arrive aussi sans salutation.
+Evaluation : clarte, detail initial et promesse comparables sur le texte; aucun pronostic de taux de clic.
+
+B - RETENTION
+Ledger exact des boucles : plan-montage.json donne les lignes d'ouverture et de fermeture de chaque chapitre et leurs textes. Toutes les boucles locales donnent une reponse ou une evaluation explicite de l'inconnu.
+1 rituel -> display; 2 materiau -> test controle; 3 image -> provenance; 4 regles -> coordination; 5 miroir -> observation limitee; 6 familles -> transmission; 7 lettre -> route recuperable; 8 archive -> acces borne; 9 porte -> autorite distante; 10 memoire -> recit impose; 11 communaute -> intervention deliberee; 12 voix -> humains et identites; 13 fondateurs -> raison annoncee/culpabilite ouverte; 14 relique -> continuites possibles; 15 reseau -> compte incertain; 16 futur -> conditions d'une autonomie durable.
+Une inconnue de la serie est close au niveau du script par une evaluation des preuves, pas par une revelation inventee.
+Rhythme : exemples, consequences, objections et personnages alternent. Aucun recap de remplissage ni boucle audio. Les paragraphes les plus longs et les longueurs de phrases sont mesures dans controle-technique.json.
+B7 : N/A classement; ordre de l'objet au reseau. Dernier chapitre sur les consequences.
+Une mention facultative de la chaine au chapitre 8; reprise immediate de l'archive. Fin au dernier resultat humain, sans demande de clic.
+B1-B4 adaptes au format sommeil : pas d'urgence ni de suspense exigeant de rester eveille; nouveaux objets/questions aux transitions et progression au sein des discussions.
+
+C - SPINE ET PROMISE MAP
+Fil : les moyens de verifier ce que les autorites racontent.
+Mysteres concrets : chapitres 1-11 et 14-15.
+Reponses diffusees : visor, tape, cameras, reset rapporte, Safeguard, S17, voix humaine, identites, raison annoncee; chapitres 1-13.
+Theories ouvertes : coordination, memoire/alliances, responsabilite de la catastrophe, filiation, comptage et autonomie; chapitres 4, 6, 9, 12-16.
+Frontiere de canon explicite dans chaque discussion et dans sources.json. Aucun evenement futur des romans.
+Exemples inventes signales par imagine, suppose, picture, hypothetical ou fictional; aucun faux souvenir personnel.
+
+D - VOICE ET HUMANIZER
+Ancrages : vraies transcriptions Hushed, pas une voix imaginee.
+AjibRjwB0sI : "My guess is that the truth is somewhere in the middle."
+tmdbTOVWArU : "I'll tell you which is which as we go"
+Forme correspondante : "My guess is that the transport and inspection rules are especially effective together." (chapitre 4).
+Avis en premiere personne, rattaches a des exemples; pas de certitude mise dans la bouche d'une autorite abstraite.
+D3 : 0 phrase machine-ban; 0 candidat trailer voice/staccato dans le dernier scan. 0 emdash et non-ASCII dans la voix. Aucun titre, URL, consigne ou verdict dans la narration.
+D5 : registre complet dans nombres-et-controles.json; numeros des silos, cinquante/cinquante-et-un et saisons sources; exemples hypothetique separes des statistiques.
+D6 : 0 reframe litteral not X it's Y; aucune signature inventee.
+D7 : 2 constructions d'antithese retenues, 1 closer aphoristique; aucune paire dans deux paragraphes voisins.
+Ledger D7 :
+- "more from a roll of tape than from the mayor" (chapitre 1, accroche).
+- "know more than the public and still know less than they think" (chapitre 8, dernier paragraphe).
+- Closer : "Walking to that door lets you begin checking what the book left out." (chapitre 8).
+Floor mecanique : 0, inferieur au ledger. Les hypotheses concurrentes et comparaisons de causes expliquees en prose ordinaire sont conservees; le controle porte sur les formulations miroirs construites pour le rythme.
+Les residus H18 sont adjudicates ci-dessous, pas presentes comme un scan sans aucun signal.
+
+E - AUTHENTICITY
+5/7 signaux appuyes :
+Recherche originale hors page 1 : 0, pas de revendication de decouverte inedite.
+Angle distinct : 1, comparaison documentee des cinq plus gros compteurs du retour Silo.
+Voix editoriale : 1, hypotheses classees et jugements explicites.
+Sourcing specifique : 1, TVLine, TIME, TheWrap et episodes dans le texte; 19 sources en dossier.
+Connexions non evidentes : 1, mouvement/temoignages, archive/recrutement, don/transmission sans preuve genealogique.
+Structure originale : 1, seize discussions thematiques; aucun recap chronologique copie ou these unique de chronologie.
+Relecture humaine utilisateur : 0, non revendiquee; le controle de Codex ne compte pas comme validation utilisateur.
+E2 : 0 red flags constates. Aucun plan de double publication, de production en masse ou de recopie.
+E3 : livraison conversationnelle et ecoute independante prises en reference; angle, faits, exemples et structure ecrits pour Silo.
+Controle complementaire : aucune sequence commune de 12 mots consecutifs avec six transcriptions Hushed et cinq comparaisons Silo. Ce test complete la relecture; il ne prouve pas seul l'originalite.
+E4 : N/A video. La voix humaine des references n'est pas certifiee.
+
+RESIDUS H18
+a reason to investigate, 3x : situations distinctes (image, propos de Quinn, comptes incompatibles); expression generique, pas le meme fait repete.
+the third season finale, 3x : repere temporel pour limite de defense, histoire S17 et situation finale S18; faits distincts.
+in the before times, 3x : nom de la periode, necessaire au contexte.
+1, 18, 17 : identifiants de lieux, pas des statistiques. Chaque mention situe une action, un contraste ou une consequence distincte. Aucune repetition d'un chiffre d'evenement pour prolonger la duree.
+Pas de taux de mortalite ou de date speculative presente comme fait.
+
+ROTATION
+Slot 1 : 1E, question du resultat organise apres l'objet concret.
+Slot 2 : 2D et 2K adaptes, detail incomplet/decision inaccessible; aucun slogan recopie.
+Slot 3 : 3A, reprise de l'archive apres la mention de chaine.
+Slot 4 : 4E predominant; 4I pour l'expansion vers le reseau.
+Slot 5 : 5E pour Gloria/Jimmy; 5F adapte a la lettre, sans fuite fabriquee.
+Slot 6 : 6C, reaction rattachee au materiau ou a l'image.
+Slot 7 : N/A menace repetee et urgence, adaptation sommeil explicite.
+Slot 8 : 8G, soiree ordinaire envisagee, explicitement au conditionnel.
+Slot 9 : 9B, question-turn.
+Premier upload : comparaison avec propres scripts precedents N/A.
+
+FILES USED
+faceless-scripts-os-master.md; research-and-ideation-skill.md; script-structures-skill.md; retention-mechanics-skill.md; voice-anchoring-skill.md; humanizer-skill.md; variety-rotation-skill.md; outro-psychology-skill.md; greenlight-audit-skill.md; trailer-voice-scan.py.

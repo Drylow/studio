@@ -1,0 +1,351 @@
+{
+  "cutoff": "2026-10-10",
+  "scope": "Released television only through S3E10; no novel spoilers",
+  "method": "Opened public episode recaps, creator/cast interviews and official release information; this is not a claim of having watched every episode directly.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Apple TV Press - season three announcement",
+      "url": "https://www.apple.com/tv-pr/news/2026/04/apples-globally-acclaimed-drama-silo-starring-and-executive-produced-by-rebecca-ferguson-returns-for-season-three-on-july-3-2026/",
+      "type": "Primary production source",
+      "supports": "July 3 to September 4, 2026 release schedule; Juliette's memory loss; Helen and Daniel in the Before Times.",
+      "limits": "Scope only. No season-four story is imported.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S02",
+      "title": "TVLine - Rebecca Ferguson on the season-one finale",
+      "url": "https://www.tvline.com/recaps/silo-recap-season-1-finale-episode-10-juliette-outside-wasteland-rebecca-ferguson-1235007079/",
+      "type": "Primary cast interview plus episode recap",
+      "supports": "Better tape through Supply; repeating birds; visor display; Juliette's refusal to clean.",
+      "limits": "Survival on one journey is not evidence of worldwide safety.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S03",
+      "title": "Ready Steady Cut - Machines",
+      "url": "https://readysteadycut.com/2023/05/12/silo-season-1-episode-3-recap/",
+      "type": "Episode recap",
+      "supports": "Generator shutdown and momentary green cafeteria display.",
+      "limits": "The article calls the green view real; the script does not adopt that early interpretation as a settled answer.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S04",
+      "title": "TVLine - The Flamekeepers",
+      "url": "https://www.tvline.com/recaps/silo-recap-season-1-episode-7-juliette-gloria-flamekeepers-cameras-1234998236/",
+      "type": "Episode recap",
+      "supports": "Gloria's account, family suppression, Pete, mirror cameras, flowers and hidden evidence.",
+      "limits": "Character testimony is attributed. No inherited-curiosity science is asserted.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S05",
+      "title": "Ready Steady Cut - The Flamekeepers",
+      "url": "https://readysteadycut.com/2023/06/09/silo-season-1-episode-7-recap/",
+      "type": "Episode recap",
+      "supports": "Hanna's magnifying device; Flamekeepers preserving relics; mirror discovery.",
+      "limits": "Supports devices and acts, not an exact secret that magnification would reveal.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S06",
+      "title": "Wikipedia - television series episode summaries",
+      "url": "https://en.wikipedia.org/wiki/Silo_(TV_series)",
+      "type": "Secondary TV-only cross-check",
+      "supports": "Allison's retained implant; S2E8 Quinn history and Pact cipher.",
+      "limits": "The novels' entry is excluded. Reset details are framed as Bernard's account, not independently witnessed history.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S07",
+      "title": "TV Obsessive - The Dive",
+      "url": "https://tvobsessive.com/2024/12/27/silo-s2e7-recap-the-dive-turns-on-the-fountain-of-information/",
+      "type": "Episode recap",
+      "supports": "Legacy contains restricted knowledge; information remains incomplete.",
+      "limits": "Do not repeat the article's early assumption that every hidden voice is autonomous intelligence.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S08",
+      "title": "Ready Steady Cut - The Safeguard",
+      "url": "https://readysteadycut.com/2025/01/10/silo-season-2-episode-9-recap/",
+      "type": "Episode recap",
+      "supports": "Lukas follows the letter to the tunnel and door; disclosure is threatened.",
+      "limits": "The article's presumed-AI label is superseded by the S3 reveal.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S09",
+      "title": "TV Obsessive - The Safeguard",
+      "url": "https://tvobsessive.com/2025/01/10/silo-s2e9-recap-the-safeguard-remains-a-mystery/",
+      "type": "Episode recap",
+      "supports": "Jimmy's identity and younger survivors; Bernard's fifty-one statement.",
+      "limits": "No book-only identity or family tree used.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S10",
+      "title": "TIME - Graham Yost on the season-two finale",
+      "url": "https://time.com/7206478/silo-season-2-finale-explained/",
+      "type": "Primary creator interview plus episode discussion",
+      "supports": "Camille developed late in S1; Daniel's Pez gift links timelines.",
+      "limits": "Adaptation/novel passages and future-story promises excluded.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S11",
+      "title": "Ready Steady Cut - Who Are You?",
+      "url": "https://readysteadycut.com/2026/07/03/silo-season-3-episode-1-recap/",
+      "type": "Episode recap",
+      "supports": "Juliette's memory loss, mayoral symbolism, Camille's false footage and suppressants.",
+      "limits": "The early account of Bernard's death is misleading and is not adopted. No drug dosing or real medical mechanism in script.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S12",
+      "title": "TV Obsessive - Gray Goo",
+      "url": "https://tvobsessive.com/2026/08/21/silo-s3e8-recap-gray-goo-a-peach-of-a-hole-in-the-ground/",
+      "type": "Episode recap",
+      "supports": "Human seed-bank plan; Jimmy's mother and disabled Safeguard; secret elevator and supply theft.",
+      "limits": "Fictional nano-weapons only. Exact remaining-resource estimates omitted.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S13",
+      "title": "Ready Steady Cut - origins in Gray Goo",
+      "url": "https://readysteadycut.com/2026/08/21/silo-season-3-gray-goo/",
+      "type": "Episode analysis",
+      "supports": "Founders' stated protection rationale; fifty-silo proposal.",
+      "limits": "Stated rationale does not prove disaster's complete cause.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S14",
+      "title": "TV Obsessive - Farewell",
+      "url": "https://tvobsessive.com/2026/08/28/silo-s3e9-recap-farewell-cruel-world-im-off-to-join-the-circus/",
+      "type": "Episode recap plus explicitly identified author theories",
+      "supports": "Pregnant Helen; separation into S18 and S1; explosion at unveiling; secret elevator.",
+      "limits": "Per's responsibility, shortened chronology and Helen's later role remain hypotheses. Do not treat the author's confident opinions as confirmed scenes.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S15",
+      "title": "TV Obsessive - Troy",
+      "url": "https://tvobsessive.com/2026/09/04/silo-s3e10-recap-troy-who-are-we-freed-from-the-past/",
+      "type": "TV-only episode recap",
+      "supports": "Daniel/Troy, Charlotte/Susan, S17 attack, no-contact Directive, human Algorithm, failed internal Safeguard and external attack.",
+      "limits": "The author's worldwide-safety inference is deliberately narrowed to the shown event. No numeric death toll or shift roster imported.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S16",
+      "title": "Ready Steady Cut - Troy",
+      "url": "https://readysteadycut.com/2026/09/04/silo-season-3-ending-explained/",
+      "type": "Independent finale recap",
+      "supports": "Troy and Susan identities; Silo 1 enforcement; S18 resistance.",
+      "limits": "Supports event cross-checks, not a guaranteed future alliance.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S17",
+      "title": "TheWrap - Graham Yost on season-three ending",
+      "url": "https://www.thewrap.com/creative-content/tv-shows/silo-season-3-ending-explained-season-4/",
+      "type": "Primary creator interview",
+      "supports": "Victor is one founder among several; skills versus personal memories; recurring Helen memory.",
+      "limits": "Use only released-story discussion. Novel names, shift staffing copied from novels, and S4 plot teasers excluded.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S18",
+      "title": "Phil Bosco - Silo TV Timeline",
+      "url": "https://philbosco.com/silo-tv-timeline",
+      "type": "Unofficial fan compilation",
+      "supports": "Corroborates Pact's transport and magnification restrictions.",
+      "limits": "Not a primary authority. Future teaser commentary and the asserted active-silo list are excluded.",
+      "accessed": "2026-10-10"
+    },
+    {
+      "id": "S19",
+      "title": "GamesRadar - illuminated silo entries",
+      "url": "https://www.gamesradar.com/entertainment/sci-fi-shows/one-eagle-eyed-silo-fan-has-spotted-a-clue-in-season-3-that-reveals-how-many-silos-are-remaining/",
+      "type": "Report of fan interpretations",
+      "supports": "Viewers infer activity from illuminated map entries; rival interpretations remain.",
+      "limits": "Script avoids claiming seven living silos. A light's meaning is not independently established.",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "chapter_claim_map": [
+    {
+      "chapter": 1,
+      "title": "The cleaning",
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_boundary": "Display deception is answered; a cleaner's individual motivation is not.",
+      "original_analysis": "A controlled ritual removes the returning witness."
+    },
+    {
+      "chapter": 2,
+      "title": "The suit",
+      "source_ids": [
+        "S02",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "Better sealing matters; the compound's precise composition and global conditions are unknown.",
+      "original_analysis": "Preparation compromises the independence of the supposed outside test."
+    },
+    {
+      "chapter": 3,
+      "title": "The screens",
+      "source_ids": [
+        "S03",
+        "S06"
+      ],
+      "evidence_boundary": "The green flash occurs; it does not independently prove the current surface safe.",
+      "original_analysis": "Displayed evidence requires place, time and provenance."
+    },
+    {
+      "chapter": 4,
+      "title": "The stairs",
+      "source_ids": [
+        "S05",
+        "S12",
+        "S14",
+        "S18"
+      ],
+      "evidence_boundary": "Transport and magnification restrictions exist; their exact original purpose is open.",
+      "original_analysis": "Costs of movement and inspection hinder coordination."
+    },
+    {
+      "chapter": 5,
+      "title": "The mirrors",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S10"
+      ],
+      "evidence_boundary": "Hidden cameras are revealed; total surveillance is not established.",
+      "original_analysis": "Blind spots, interpretation and informants limit observation."
+    },
+    {
+      "chapter": 6,
+      "title": "The families",
+      "source_ids": [
+        "S04",
+        "S06"
+      ],
+      "evidence_boundary": "Reproductive deception is shown and testified to; genetic causation is not established.",
+      "original_analysis": "Family stories offer a route for forbidden knowledge."
+    },
+    {
+      "chapter": 7,
+      "title": "The erased history",
+      "source_ids": [
+        "S06",
+        "S08",
+        "S09"
+      ],
+      "evidence_boundary": "Bernard describes a reset; the coded letter survives.",
+      "original_analysis": "Quinn may preserve a route to checking evidence rather than a complete explanation."
+    },
+    {
+      "chapter": 8,
+      "title": "The Legacy",
+      "source_ids": [
+        "S07",
+        "S10"
+      ],
+      "evidence_boundary": "Restricted archives exist; complete origin knowledge is not assured.",
+      "original_analysis": "Access can recruit a successor while leaving them dependent."
+    },
+    {
+      "chapter": 9,
+      "title": "The door",
+      "source_ids": [
+        "S08",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "Remote Safeguard and no-contact rule established.",
+      "original_analysis": "Isolation prevents communities comparing accounts; original justification remains open."
+    },
+    {
+      "chapter": 10,
+      "title": "The lost memories",
+      "source_ids": [
+        "S01",
+        "S11"
+      ],
+      "evidence_boundary": "Camille exploits and maintains memory loss; exact biology is fictional.",
+      "original_analysis": "Relationships can contradict the approved account of a person's life."
+    },
+    {
+      "chapter": 11,
+      "title": "Silo seventeen",
+      "source_ids": [
+        "S09",
+        "S12",
+        "S15"
+      ],
+      "evidence_boundary": "Survivors and deliberate attack revealed.",
+      "original_analysis": "Local evidence must replace the obsolete universal-poison explanation."
+    },
+    {
+      "chapter": 12,
+      "title": "The Algorithm",
+      "source_ids": [
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "evidence_boundary": "Human voice, imposed identities and recurring memory established.",
+      "original_analysis": "An internal ally is plausible, with limits; memory is no guaranteed moral reversal."
+    },
+    {
+      "chapter": 13,
+      "title": "The Before Times",
+      "source_ids": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "evidence_boundary": "Stated survival purpose and visible explosion established.",
+      "original_analysis": "Manufactured catastrophe is a strong but incomplete culpability theory."
+    },
+    {
+      "chapter": 14,
+      "title": "Helen and the relic",
+      "source_ids": [
+        "S10",
+        "S14",
+        "S17"
+      ],
+      "evidence_boundary": "Gift, pregnancy and placement established; genealogy unresolved.",
+      "original_analysis": "Recoverable influence need not require a blood relationship."
+    },
+    {
+      "chapter": 15,
+      "title": "The other silos",
+      "source_ids": [
+        "S09",
+        "S13",
+        "S19"
+      ],
+      "evidence_boundary": "Fifty versus fifty-one remains an account discrepancy.",
+      "original_analysis": "Map lights and a missing number do not identify a facility or census."
+    },
+    {
+      "chapter": 16,
+      "title": "A way forward",
+      "source_ids": [
+        "S12",
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "S18 survives one mechanism; its final liberation is not shown.",
+      "original_analysis": "Durable freedom requires verifiable communication, resources and shared access."
+    }
+  ]
+}

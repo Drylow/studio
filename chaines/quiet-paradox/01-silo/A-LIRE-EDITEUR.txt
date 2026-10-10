@@ -1,0 +1,19 @@
+A L'EDITEUR - QUIET PARADOX / SILO
+Titre approuve : 2 Hours of Silo's Biggest Mysteries & Theories to Fall Asleep To
+
+Importer uniquement script-voix.txt dans l'outil de narration.
+Le texte est entier, en anglais, sans consignes a lire. 16 chapitres sont reperes dans plan-montage.json et dans les fichiers numerotes.
+14 687 mots. Duree estimee : environ deux heures a 122 mots/min. A 145 mots/min, le meme texte ferait environ 101 minutes. Ne pas annoncer une duree mesuree avant d'avoir la voix.
+Faire un essai de 300 mots avec la voix retenue, mesurer le temps et ajuster le debit vers 122,4 mots/min si l'objectif est 120 minutes. Le rythme doit rester naturel. Recalculer ensuite les chapitres a partir de l'audio complet.
+Les timestamps JSON sont des estimations a 122 mots/min, pas des reperes de son final.
+
+Ton : voix basse et naturelle, articulation claire, pas de chuchotement force. Pas de hausse de volume sur les mots death, attack ou reveal. Pauses discretes entre discussions. Une seule mention facultative de la chaine, au milieu; aucune outro commerciale.
+Prononciations a verifier : Juliette Nichols, Lukas Kyle, Salvador Quinn, Camille Sims, Helen Drew, Daniel Keene, Pez, Safeguard, Legacy, IT. IT se lit comme les deux lettres anglaises.
+Le script emploie le prenom Per pour eviter les variantes d'orthographe des recaps.
+
+Montage : changements lents, pas de jump scares, flashs ni musique brusque. Choisir un nouveau detail par discussion. Ne pas alterner toujours les memes trois plans du silo.
+Les numeros du reseau sont des noms de lieux. La discrepancy 50/51 est intentionnelle et expliquee; ne pas la corriger arbitrairement.
+Les titres d'episodes et les sources cites sont des mots de narration, pas des liens a lire.
+Une theorie doit rester presentee comme theorie; les images ne doivent pas la faire passer pour une scene diffusee.
+Aucun spoiler apres S3E10 et aucun emprunt aux revelations des romans.
+Ne pas ajouter une boucle, un recap redondant ou de longues minutes de silence pour afficher deux heures.
