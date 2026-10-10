@@ -1,21 +1,21 @@
 {
-  "words": 21308,
+  "words": 21321,
   "words_count_method": "Whitespace-separated narration tokens; contractions and hyphenated words count as one",
   "chapters": 22,
   "duration_minutes_estimate": {
-    "at145": 146.95172413793102,
-    "at150": 142.05333333333334,
-    "at155": 137.47096774193548,
-    "at160": 133.175,
-    "at170": 125.34117647058824
+    "at145": 147.04137931034484,
+    "at150": 142.14,
+    "at155": 137.55483870967743,
+    "at160": 133.25625,
+    "at170": 125.41764705882353
   },
   "minimum_duration_target_minutes": 120,
   "words_needed_at170": 20400,
-  "words_margin_at170": 908,
-  "maximum_wpm_for_two_hours": 177.56666666666666,
+  "words_margin_at170": 921,
+  "maximum_wpm_for_two_hours": 177.675,
   "measured_audio_seconds": null,
   "max_paragraph_words": 95,
-  "paragraphs": 301,
+  "paragraphs": 302,
   "non_ascii": false,
   "urls_in_narration": false,
   "em_or_en_dashes": false,
@@ -65,5 +65,9 @@
       "id": "8rdGOw2Pgh0",
       "matches12words": []
     }
-  ]
+  ],
+  "call_to_action_count": {
+    "subscribe": 1,
+    "comments": 1
+  }
 }

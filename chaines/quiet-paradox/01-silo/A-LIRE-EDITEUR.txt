@@ -3,12 +3,12 @@ Titre approuve : 2 Hours of Silo's Biggest Mysteries & Theories to Fall Asleep T
 
 Importer uniquement script-voix.txt dans l'outil de narration.
 Le texte est entier, en anglais, sans consignes a lire. 22 chapitres dans l'ordre numerique; plan-montage.json donne les reperes et les limites des hypotheses.
-21 308 mots, comptes par separation entre mots; contractions et mots composes comptent pour un. Estimations sans pauses ajoutees : 2 h 27 a 145 mots/min, 2 h 22 a 150, 2 h 17 a 155, 2 h 13 a 160, 2 h 05 a 170. La narration n'est pas encore generee : ces durees restent des estimations.
-Objectif obligatoire : au moins 120 minutes de narration finale. Debit conseille 145-160 mots/min, naturel et regulier. La marge reste de plus de cinq minutes a 170 mots/min. Au-dela de 177,6 mots/min, le volume seul ne garantit plus deux heures.
+21 321 mots, comptes par separation entre mots; contractions et mots composes comptent pour un. Estimations sans pauses ajoutees : 2 h 27 a 145 mots/min, 2 h 22 a 150, 2 h 17 a 155, 2 h 13 a 160, 2 h 05 a 170. La narration n'est pas encore generee : ces durees restent des estimations.
+Objectif obligatoire : au moins 120 minutes de narration finale. Debit conseille 145-160 mots/min, naturel et regulier. La marge reste de plus de cinq minutes a 170 mots/min. Au-dela de 177,7 mots/min, le volume seul ne garantit plus deux heures.
 Faire un essai de 300 mots avec la voix retenue, mesurer son debit puis generer et chronometrer la voix entiere. Ne pas reduire le texte pour tenir dans un preset court. Recalculer les chapitres a partir de l'audio complet.
 Les timestamps JSON sont des estimations a 150 mots/min, pas des reperes du son final. L'ancienne consigne de ralentir vers 122 mots/min est remplacee par cette version plus longue.
 
-Ton : voix basse et naturelle, articulation claire, pas de chuchotement force. Pas de hausse de volume sur les mots death, attack ou reveal. Pauses discretes entre discussions. Une seule mention facultative de la chaine, au chapitre 8; aucune outro commerciale.
+Ton : voix basse et naturelle, articulation claire, pas de chuchotement force. Pas de hausse de volume sur les mots death, attack ou reveal. Pauses discretes entre discussions. Un seul passage facultatif abonnement + commentaire au chapitre 1, vers 1 min 33 a 150 mots/min : demander d'ou la personne ecoute et s'il fait jour ou nuit. Garder le meme volume, sans couper la musique; reprendre aussitot la discussion. Aucune outro commerciale.
 Prononciations a verifier : Juliette Nichols, Lukas Kyle, Salvador Quinn, Camille Sims, Helen Drew, Daniel Keene, Pez, Safeguard, Legacy, IT. IT se lit comme les deux lettres anglaises.
 Le script emploie le prenom Per pour eviter les variantes d'orthographe des recaps.
 
