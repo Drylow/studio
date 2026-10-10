@@ -1,0 +1,7 @@
+QUIET PARADOX - LOGO PROPOSE 03
+Statut : proposition, validation utilisateur non revendiquee.
+Outil : generation d'image integree.
+Fichier : logo-proposition-03-qp.png
+Direction utilisateur : croissant de lune en Q, P a cote; monogramme QP.
+Prompt final :
+Use case: logo-brand. Asset type: square YouTube avatar for Quiet Paradox. Create ONE refined, very simple original QP monogram. The Q is a recognizable thick crescent moon curved around a dark circular counter, with one short diagonal ivory tail at the lower right so it unmistakably reads as the letter Q. Immediately to the right, a clear uppercase P in a matching bold geometric style, with a single clean rounded bowl and vertical stem. Both letters have the same visual height and stroke weight, a small consistent gap, and together form one compact harmonious mark. The moon-shaped Q must remain legible as BOTH a crescent and a Q, and the P must clearly read P, not R. Flat warm ivory silhouette on a uniform near-black charcoal background, crisp smooth edges, centered horizontally and vertically, generous outer margins safe for circular avatar cropping. Make the complete QP mark occupy roughly 65 percent of the square width. Quiet, enigmatic, premium and restrained. No full words, no additional letters, no stars, no eye, no doorway, no underline, no outer border, no texture, no gradients, no glow, no 3D, no shadows, no mockup, no watermark. One final logo only, no contact sheet.
