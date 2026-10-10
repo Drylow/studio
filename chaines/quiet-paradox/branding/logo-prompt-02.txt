@@ -1,0 +1,7 @@
+QUIET PARADOX - LOGO PROPOSE 02
+Statut : proposition, validation utilisateur non revendiquee.
+Outil : generation d'image integree.
+Fichier : logo-proposition-02.png
+Direction : porte impossible, ivoire sur fond noir; avatar carre.
+Prompt final :
+Use case: logo-brand. Asset type: square YouTube channel avatar for Quiet Paradox, calm bedtime theories about mysterious television stories. Create a single striking minimal original emblem: an impossible doorway, drawn as a thick continuous ivory geometric frame, with an elegant subtle perspective contradiction at one corner. The open doorway interior remains the same near-black charcoal as the background. Simple flat graphic, clean precise contours, no texture, no shading, no glow. Quiet enigmatic mood. Center the one compact bold symbol with generous space around it, approximately 55 percent of the square, readable at tiny avatar sizes and safe for circular cropping. Just two colors: warm ivory and charcoal. No crescent, moon, stars, eye, text, letters, initials, border, mockup, watermark, or extra objects. One logo only, no variations sheet.
