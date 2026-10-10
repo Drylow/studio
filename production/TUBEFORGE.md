@@ -22,6 +22,48 @@ Arreter les taches actives dans TubeForge avant d'arreter le serveur.
 `work/TubeForge/start.bat` utilise aussi le nouvel environnement isole.
 Pas de service Windows, de tache programmee ni d'exposition reseau ajoutes.
 
+## Interface simplifiee
+
+Navigation : Videos, Chaines, Reglages. Nouvelle video rassemble le titre,
+la chaine, la duree cible, le script colle ou importe (.txt/.md UTF-8, 1 Mo max),
+le style visuel avec apercu et les deux modeles de generation.
+Seuls les styles existants non archives sont proposes ; POV style est le preset
+commun prepare. Un choix visuel ne remplace jamais la voix Algrow de la chaine.
+Le script importe reste exact. Creation et lots ne lancent aucune production.
+Chaque projet conserve ses reglages de style et son choix de modeles.
+Le titre peut ensuite etre modifie sans reecriture du texte ni des prompts.
+
+Les modeles viennent du catalogue reel du CLI Proxy. Les capacites annoncees
+et les capacites non confirmees sont distinguees ; la presence dans la liste
+ne prouve pas qu'une generation reussira avec un compte donne.
+Les modeles de texte et d'image peuvent etre choisis avant creation, sans IDs
+de modeles figes dans le depot et sans changement de fournisseur.
+
+Les cinq profils separent les apercus video (personnages blancs) des miniatures
+(humains expressifs). Les anciens presets sont conserves en archives privees.
+Les captures de reference presentes datent du 30 septembre au 2 octobre ;
+les nouvelles captures de l'utilisateur restent attendues.
+
+Parcours : Texte, Voix, Images, Verification, Export. Chaque plan montre
+sa narration, son lieu, son casting, son prompt exact et ses references ordonnees.
+Refaire un plan demande de confirmer ce prompt et le modele enregistre ;
+aucune nouvelle reference, reecriture ou correction automatique n'est appliquee.
+Les versions precedentes sont conservees. Une image nouvelle redevient a verifier.
+Un rendu disponible ne signifie jamais valide pour publication.
+
+Mettre a jour l'interface sans reconfigurer les fournisseurs (serveur inactif) :
+
+```powershell
+./venv/Scripts/python.exe production/tubeforge_workspace.py
+```
+
+Tests sans requete de generation payante :
+
+```powershell
+./work/TubeForge/.venv/Scripts/python.exe -m pytest work/TubeForge/tests production/test_tubeforge_workspace.py -q
+node production/tubeforge_support/workspace_ui_tests.cjs
+```
+
 ## Voix et generation
 
 Algrow est le fournisseur par defaut, avec la voix historique existante.
@@ -55,7 +97,7 @@ produire sur le meme GPU : le verrou de rendu est propre a chaque instance.
 La configuration creative livree dans le ZIP est un exemple, PAS la direction
 validee pour nos cinq chaines. Aucun script ou prompt historique n'a ete genere
 automatiquement pendant cette installation.
-Les imports `codex_directed` sont reserves au montage de medias deja prepares.
+Les projets `codex_directed` attendent le contenu ecrit et verifie par Codex.
 Les etapes automatiques de reecriture, voix/decoupage, personnages, prompts et
 images sont bloquees sur ces imports. La passerelle ne choisit aucune reference.
 L'import d'extrait verifie les empreintes des images et des references, conserve

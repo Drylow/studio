@@ -80,6 +80,8 @@ def main():
     subprocess.run([str(local), '-m', 'pip', 'install', '-r',
                     str(Path(REPO) / 'production/tubeforge_support/requirements.lock')], check=True)
     configure(destination)
+    from tubeforge_workspace import deploy
+    deploy(destination)
     subprocess.run([str(local), '-m', 'pytest', '-q', 'tests'], cwd=destination, check=True)
     print('TubeForge installed. Start with production/tubeforge.ps1.')
 
