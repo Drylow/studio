@@ -8,6 +8,9 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 ## 0. Préparer
 
 - `git pull origin main`, puis `bash tiktok_engine/setup.sh` (qui doit afficher « prêt »).
+- En cloud avec un home non inscriptible : utiliser `npm_config_cache="$PWD/.cache/npm"`
+  et `PLAYWRIGHT_BROWSERS_PATH="$PWD/.cache/pw-browsers"` dans la session avant le setup
+  et les commandes de montage.
 - `python3 tiktok_engine/zernio.py accounts` doit montrer le compte TikTok. Sinon, arrêter et écrire
   le problème dans le résumé de fin.
 - **Créneaux déjà pris** : chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`
@@ -72,12 +75,16 @@ Lire d'abord [README.md](README.md) : style, règles de l'utilisateur, moteur. F
 ## 5. Montage et contrôle
 
 1. Lancer `.venv/bin/python tiktok_engine/build.py work/tiktok/<nom> --script tiktok_engine/videos/<nom>/script.json`.
+   Pour le rendu sur le VPS existant, suivre [VPS.md](VPS.md) : préparer la voix, la timeline,
+   le mix et les planches localement, approuver la QA, puis soumettre le lot au worker.
+   Ne jamais remplacer un job actif ni contourner les identifiants du proxy.
 2. **Regarder les planches `work/tiktok/<nom>/check/sheet_*.jpg`** :
    - le chiffre affiché correspond au chiffre dit ;
    - aucun texte coupé ;
    - le hook est là dès le début ;
    - l'image est assez dézoomée pour ne pas déborder des bords du téléphone.
-3. Regarder aussi les 3 miniatures `covers/`.
+3. Regarder aussi les 3 miniatures `covers/`. Vérifier le MP4 récupéré : décodage complet,
+   1080×1920, 30 images/s, audio AAC ; revoir des captures début/milieu/fin du fichier encodé.
 4. Corriger et refaire ce qui ne va pas.
 
 ## 6. Programmer et noter

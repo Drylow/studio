@@ -1,0 +1,36 @@
+{
+  "slug": "londres_incendie",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/londres_incendie/art_review.jpg"
+  ],
+  "assets_inspected_in_review": [
+    "bread",
+    "bakery",
+    "street",
+    "charles",
+    "pepys",
+    "cart",
+    "firebreak",
+    "stpauls",
+    "ruins"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/londres_incendie/check/sheet_00.jpg",
+    "work/tiktok/londres_incendie/check/sheet_01.jpg",
+    "work/tiktok/londres_incendie/check/sheet_02.jpg",
+    "work/tiktok/londres_incendie/check/sheet_03.jpg",
+    "work/tiktok/londres_incendie/check/sheet_04.jpg",
+    "work/tiktok/londres_incendie/check/sheet_05.jpg",
+    "work/tiktok/londres_incendie/check/sheet_06.jpg",
+    "work/tiktok/londres_incendie/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/londres_incendie/covers/cover_1.png",
+    "work/tiktok/londres_incendie/covers/cover_2.png",
+    "work/tiktok/londres_incendie/covers/cover_3.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 90.01,
+  "note": "9 assets inspectés sur art_review.jpg, toutes les 8 planches et 3 covers vues. Architecture de Londres XVIIe siècle et ancienne cathédrale gothique sans dôme moderne, four, portraits et scènes humaines sans anomalie flagrante. Dates et compteurs lisibles (1666, 13000 maisons environ, près de 4 jours), aucun chevauchement ni texte hors cadre. Le nombre de morts a été omis plutôt que donner un chiffre officiel incomplet. Aucun changement de narration/composition."
+}

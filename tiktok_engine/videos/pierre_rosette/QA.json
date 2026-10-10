@@ -1,0 +1,61 @@
+{
+  "slug": "pierre_rosette",
+  "approved": true,
+  "review_type": "actual visual QA of illustrations, all contact sheets and all covers",
+  "assets_viewed": [
+    "stone",
+    "fort",
+    "ptolemy",
+    "inscriptions",
+    "greek_sheet",
+    "young",
+    "champollion",
+    "coptic",
+    "study"
+  ],
+  "art_review_viewed": "tiktok_engine/videos/pierre_rosette/art_review.jpg",
+  "individual_assets_viewed": [
+    "fort.png",
+    "study.png",
+    "stone.png"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/pierre_rosette/check/sheet_00.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_01.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_02.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_03.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_04.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_05.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_06.jpg",
+    "work/tiktok/pierre_rosette/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/pierre_rosette/covers/cover_1.png",
+    "work/tiktok/pierre_rosette/covers/cover_2.png",
+    "work/tiktok/pierre_rosette/covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 90.97,
+  "voice_duration": 89.57,
+  "script_sha256": "80fc78fe1aee6e117b23408434993496781946e84a2ba0d5e389947d9925f129",
+  "timeline_sha256": "44b9004ba24923a68cbb201c8963949f43200ffb84fd9945ec79765bb103777d",
+  "mix_ready": true,
+  "notes": [
+    "All nine original pixel-art illustrations viewed; fort and study hands, faces and objects also inspected individually. No blocking anatomy, logo or scene artifact seen.",
+    "All eight actual sheets viewed. No whole blank frame, unintended overlap or incorrect on-screen year/count seen.",
+    "The 3-writing-systems to 2-languages replacement, Young-to-Champollion portrait replacement, and final title replacement are clear.",
+    "The questioned stone sprite is outside the stone at y790.",
+    "All three actual covers viewed. Cover1 selected for recognisable stone and clear immediate hook.",
+    "Actual voice alignment reported224/226 script tokens matched; visual timeline uses measured word times. No new narration or paid image generation performed.",
+    "Advanced replacement outs by0.15s to finish the engine default0.12s fade before a new title/portrait appears. Narration and covers unchanged.",
+    "All eight regenerated sheets and three dense transition sheets(21 actual captures) viewed after this correction; no old/new text overlap seen.",
+    "mix.wav retained and build.mix called successfully: changes concern only out times, not duration or audio/SFX cues."
+  ],
+  "reviewed_at": "2026-10-10T01:07:31.496406+00:00",
+  "transition_sheets_viewed": [
+    "work/tiktok/pierre_rosette/check_transitions/sheet_00.jpg",
+    "work/tiktok/pierre_rosette/check_transitions/sheet_01.jpg",
+    "work/tiktok/pierre_rosette/check_transitions/sheet_02.jpg"
+  ],
+  "transition_capture_count": 21
+}

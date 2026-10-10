@@ -1,0 +1,58 @@
+{
+  "slug": "bismarck_depeche",
+  "reviewed_at": "2026-10-10T01:08:37.917275+00:00",
+  "assets_viewed": [
+    "bismarck",
+    "ems",
+    "king",
+    "napoleon",
+    "spanish_throne",
+    "message",
+    "editor",
+    "press",
+    "battlefield"
+  ],
+  "art_sheet_viewed": "tiktok_engine/videos/bismarck_depeche/art_review.jpg",
+  "individual_assets_viewed": [
+    "tiktok_engine/videos/bismarck_depeche/art/ems.png"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/bismarck_depeche/check/sheet_00.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_01.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_02.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_03.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_04.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_05.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_06.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_07.jpg",
+    "work/tiktok/bismarck_depeche/check/sheet_08.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/bismarck_depeche/covers/cover_1.png",
+    "work/tiktok/bismarck_depeche/covers/cover_2.png",
+    "work/tiktok/bismarck_depeche/covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 98.65,
+  "notes": [
+    "All nine art assets inspected on the real art review sheet; the Ems encounter also inspected individually. Period clothes and anatomical proportions pass.",
+    "All 66 checkpoints across nine real sheets inspected. No overlapping replacement portraits, clipped headlines or text/image collisions observed.",
+    "Both small labels now use fade rather than late typewriter animation; relevant rebuilt sheets re-inspected. Narration and generated voice unchanged.",
+    "Cover 1 selected: large Bismarck portrait with readable short headline. All three covers inspected.",
+    "Local voice/SFX mix generated from this exact timeline. Still/timeline QA only; final encoded video and audio review remains with coordinator."
+  ],
+  "approved": true,
+  "encoded_movie_review": {
+    "reviewed_at": "2026-10-10T01:22:40.543149+00:00",
+    "board_viewed": "work/tiktok/bismarck_depeche/movie_check/board.jpg",
+    "full_decode": "passed",
+    "format": "1080x1920,30fps,aac",
+    "sample_times": [
+      0.5,
+      49,
+      97
+    ],
+    "visual_result": "passed",
+    "notes": "Opening, middle and ending decoded frames actually inspected. Composition matches approved stills, text readable, no missing art or clipping."
+  }
+}

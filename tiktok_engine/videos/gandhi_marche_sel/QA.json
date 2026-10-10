@@ -1,0 +1,51 @@
+{
+  "assets_viewed": [
+    "ashram_departure",
+    "colonial_salt",
+    "dandi_salt",
+    "forbidden_coast",
+    "gandhi_portrait",
+    "gandhi_prison",
+    "marchers",
+    "salt_bowl",
+    "salt_resistance"
+  ],
+  "asset_review": "/workspace/studio/tiktok_engine/videos/gandhi_marche_sel/art_review.jpg",
+  "sheets_viewed": [
+    "check/sheet_00.jpg",
+    "check/sheet_01.jpg",
+    "check/sheet_02.jpg",
+    "check/sheet_03.jpg",
+    "check/sheet_04.jpg",
+    "check/sheet_05.jpg",
+    "check/sheet_06.jpg",
+    "check/sheet_07.jpg",
+    "check/sheet_08.jpg"
+  ],
+  "covers_viewed": [
+    "covers/cover_1.png",
+    "covers/cover_2.png",
+    "covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 97.27,
+  "mix": "mix.wav",
+  "mix_info": {
+    "channels": 2,
+    "sample_rate": 44100,
+    "duration": 98.27
+  },
+  "script_sha256": "22f3b8eb07fa6e7957b4ddc43a96369891723eed9123880a8a4b783f1e0e5885",
+  "timeline_sha256": "bbc9c342a962c022ef5d5d040616bc2e5d017a2f3eae5424137699531f7305e3",
+  "notes": [
+    "Les neuf illustrations ont été inspectées sur art_review.jpg : anatomie et objets cohérents, aucun membre supplémentaire évident.",
+    "Toutes les neuf planches finales et les trois couvertures 1080x1920 ont été vues. Pas de texte coupé, de collision texte/image ou de chevauchement restant.",
+    "Deux sorties de titres avancées de 0,15 s (violence et poignée) pour finir le fondu avant le texte suivant. Narration inchangée.",
+    "Les compteurs finissent à 78 compagnons au départ, 24 jours, environ 386 km et 1947 / 17 ans plus tard. Les groupes dessinés sont illustratifs.",
+    "Couverture 1 recommandée : Gandhi identifiable immédiatement et promesse claire. Les trois couvertures sont exploitables.",
+    "Palette noire, bleue et blanche dominante ; quelques pixels pâles chauds proviennent des illustrations déjà produites et de la palette existante.",
+    "Mix stéréo 44,1 kHz créé localement avec les SFX du moteur. Il contient une seconde supplémentaire que le rendu vidéo coupe à la durée de timeline.",
+    "Contrôle visuel sur images fixes ; aucun film final rendu ni visionné, aucune écoute intégrale du mix effectuée dans cette sous-tâche."
+  ],
+  "approved": true
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "henri_huit_six_epouses",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/henri_huit_six_epouses/art_review.jpg"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/henri_huit_six_epouses/check/sheet_00.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_01.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_02.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_03.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_04.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_05.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_06.jpg",
+    "work/tiktok/henri_huit_six_epouses/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/henri_huit_six_epouses/covers/cover_1.png",
+    "work/tiktok/henri_huit_six_epouses/covers/cover_2.png",
+    "work/tiktok/henri_huit_six_epouses/covers/cover_3.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 92.96,
+  "note": "9 assets vus sur art_review, toutes les 8 planches et 3 covers inspectés. Nouvelle Anne de Clèves correcte et visible sur stills refaits. Aucun doigt anormal ni visage fusionné, aucun texte coupé ou superposé aux portraits. Cover1 recommandée. Une seule correction de composition : le libellé du bilan apparaît à exécutions plutôt que veuve, donc reste lisible plus longtemps. Aucun changement de narration ou de voix. Mix local créé, rendu vidéo non lancé.",
+  "assets_inspected_in_review": [
+    "aragon",
+    "boleyn",
+    "cleves",
+    "henry",
+    "howard",
+    "marriage_decree",
+    "parr",
+    "seymour",
+    "torn_decree"
+  ]
+}

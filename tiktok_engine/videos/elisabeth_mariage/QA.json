@@ -1,0 +1,41 @@
+{
+  "slug": "elisabeth_mariage",
+  "reviewed_at": "2026-10-10T01:03:47.037505+00:00",
+  "assets_viewed": [
+    "elisabeth",
+    "court",
+    "ring",
+    "foreign",
+    "dudley",
+    "anjou",
+    "parliament",
+    "kingdom",
+    "james"
+  ],
+  "art_sheet_viewed": "tiktok_engine/videos/elisabeth_mariage/art_review.jpg",
+  "sheets_viewed": [
+    "work/tiktok/elisabeth_mariage/check/sheet_00.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_01.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_02.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_03.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_04.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_05.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_06.jpg",
+    "work/tiktok/elisabeth_mariage/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/elisabeth_mariage/covers/cover_1.png",
+    "work/tiktok/elisabeth_mariage/covers/cover_2.png",
+    "work/tiktok/elisabeth_mariage/covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 94.97,
+  "notes": [
+    "All nine generated assets inspected; Tudor costumes, faces and objects coherent; foreign/parliament hands also inspected individually.",
+    "No crop, overlap or missing illustration in 63 sampled frames. Dudley and Alencon alternate at the same position.",
+    "Three late labels changed to quick fade so text appears complete before scene ends. Narration unchanged.",
+    "Cover1 is the clearest portrait and factual hook; all three covers viewed.",
+    "Still/timeline QA only; final encoded video verification remains with coordinator."
+  ],
+  "approved": true
+}

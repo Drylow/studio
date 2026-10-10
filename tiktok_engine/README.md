@@ -1,7 +1,8 @@
 # Octave Histoire (@octave.histoire) : l'outil du compte TikTok (démarré le 7 oct. 2026)
 
-Outil à part, propre à ce compte TikTok : tout est dans `tiktok_engine/`, indépendant des chaînes
-YouTube. Pas encore automatisé : l'utilisateur veut en reparler (8 oct. : « on va regarder demain »).
+Outil propre à ce compte TikTok : tout est dans `tiktok_engine/`, indépendant des chaînes
+YouTube. La publication des vidéos programmées est automatique par Zernio ; une session
+prépare et contrôle les nouveaux contenus avant de les ajouter à la file.
 
 Demande de l'utilisateur (7 oct., soir) : un compte TikTok français **dans le même style visuel
 que @archibald.media**, codé de A à Z en HTML et JavaScript, sans vidéo IA. Vidéos de plus d'une
@@ -163,17 +164,45 @@ Polices sous licence OFL (fichiers et licences dans `fonts/`).
 |---|---|---|
 | 7 oct. 2026 | Napoléon en Russie (Minard, les poux, « La santé de Sa Majesté… ») | https://gofile.io/d/XfHd6IAK |
 | 8 oct. 2026 | La Joconde, célèbre grâce à un voleur (vol de 1911) | https://gofile.io/d/DOWccY1j |
-| jeu. 9 oct. 2026, 07 h (programmée) | Beethoven : 95 fois trop de plomb | https://gofile.io/d/7ANl9981 |
-| jeu. 9 oct. 2026, 19 h (programmée) | Le cerveau d'Einstein, coupé en 240 morceaux | https://gofile.io/d/bRKTUWbQ |
-| ven. 10 oct. 2026, 07 h (programmée) | Cléopâtre plus proche de l'iPhone que des pyramides | https://gofile.io/d/fzxJzPB2 |
-| ven. 10 oct. 2026, 19 h (programmée) | Les Vikings n'ont jamais porté de casques à cornes | https://gofile.io/d/9L3GIfeF |
-| sam. 11 oct. 2026, 07 h (programmée) | Gengis Khan et 16 millions d'hommes | https://gofile.io/d/eg8Sy58k |
-| sam. 11 oct. 2026, 19 h (programmée) | Marie-Antoinette n'a jamais dit ça | https://gofile.io/d/yIuSw80p |
-| dim. 12 oct. 2026, 07 h (programmée) | Les carnets de Marie Curie sont encore radioactifs | https://gofile.io/d/ryrkE6D9 |
-| dim. 12 oct. 2026, 19 h (programmée) | La malédiction de Toutankhamon en chiffres | https://gofile.io/d/qflqThSp |
-| lun. 13 oct. 2026, 07 h (programmée) | Salieri n'a pas empoisonné Mozart | https://gofile.io/d/V6S1IU3w |
-| lun. 13 oct. 2026, 19 h (programmée) | Pierre le Grand et la taxe sur la barbe | https://gofile.io/d/EWrYy6bK |
-| mar. 14 oct. 2026, 07 h (programmée) | Lincoln, le président lutteur | https://gofile.io/d/LYvljZde |
-| mar. 14 oct. 2026, 19 h (programmée) | Le doigt de Galilée | https://gofile.io/d/fpWk4ev0 |
-| mer. 15 oct. 2026, 07 h (programmée) | L'erreur de calcul de Christophe Colomb | https://gofile.io/d/wxa6QISa |
-| mer. 15 oct. 2026, 19 h (programmée) | Jules César et les pirates | https://gofile.io/d/HwH5CZsH |
+| ven. 9 oct. 2026, 07 h (publiée) | Beethoven : 95 fois trop de plomb | https://gofile.io/d/7ANl9981 |
+| ven. 9 oct. 2026, 19 h (publiée) | Le cerveau d'Einstein, coupé en 240 morceaux | https://gofile.io/d/bRKTUWbQ |
+| sam. 10 oct. 2026, 07 h (programmée) | Cléopâtre plus proche de l'iPhone que des pyramides | https://gofile.io/d/fzxJzPB2 |
+| sam. 10 oct. 2026, 19 h (programmée) | Les Vikings n'ont jamais porté de casques à cornes | https://gofile.io/d/9L3GIfeF |
+| dim. 11 oct. 2026, 07 h (programmée) | Gengis Khan et 16 millions d'hommes | https://gofile.io/d/eg8Sy58k |
+| dim. 11 oct. 2026, 19 h (programmée) | Marie-Antoinette n'a jamais dit ça | https://gofile.io/d/yIuSw80p |
+| lun. 12 oct. 2026, 07 h (programmée) | Les carnets de Marie Curie sont encore radioactifs | https://gofile.io/d/ryrkE6D9 |
+| lun. 12 oct. 2026, 19 h (programmée) | La malédiction de Toutankhamon en chiffres | https://gofile.io/d/qflqThSp |
+| mar. 13 oct. 2026, 07 h (programmée) | Salieri n'a pas empoisonné Mozart | https://gofile.io/d/V6S1IU3w |
+| mar. 13 oct. 2026, 19 h (programmée) | Pierre le Grand et la taxe sur la barbe | https://gofile.io/d/EWrYy6bK |
+| mer. 14 oct. 2026, 07 h (programmée) | Lincoln, le président lutteur | https://gofile.io/d/LYvljZde |
+| mer. 14 oct. 2026, 19 h (programmée) | Le doigt de Galilée | https://gofile.io/d/fpWk4ev0 |
+| jeu. 15 oct. 2026, 07 h (programmée) | L'erreur de calcul de Christophe Colomb | https://gofile.io/d/wxa6QISa |
+| jeu. 15 oct. 2026, 19 h (programmée) | Jules César et les pirates | https://gofile.io/d/HwH5CZsH |
+
+## Semaine du 16 au 22 octobre 2026
+
+14 nouvelles vidéos programmées le 10 octobre, à 07:00 et 19:00 Europe/Brussels.
+Voix et images via Algrow, rendus sur le VPS existant, fichiers 1080×1920 à 30 images/s,
+durées de 1 min 27 à 1 min 39. Chaque illustration, planche et cover a été revue ;
+les MP4 ont été décodés intégralement puis examinés au début, au milieu et à la fin.
+Audit Zernio : 14 posts publics programmés, médias accessibles, aucun doublon.
+Le compte compte 28 posts au total, dont les deux du 9 octobre déjà publiés.
+Le prochain jour libre après cette file est le 23 octobre, à confirmer dans Zernio
+avant de le remplir. Rendu réutilisable : [VPS.md](VPS.md).
+
+| Date | Vidéo | Lien qualité max |
+|---|---|---|
+| ven. 16 oct. 2026, 07 h (programmée) | Henri VIII : six femmes, mais seulement deux exécutées | https://gofile.io/d/qg16U0vY |
+| ven. 16 oct. 2026, 19 h (programmée) | Néron ne pouvait pas jouer du violon | https://gofile.io/d/aXT4Qwtl |
+| sam. 17 oct. 2026, 07 h (programmée) | Titanic : vingt canots pour plus de deux mille personnes | https://gofile.io/d/ZbiAuSs4 |
+| sam. 17 oct. 2026, 19 h (programmée) | La tour Eiffel devait rester vingt ans : la radio a contribué à la sauver | https://gofile.io/d/yuPYyeWe |
+| dim. 18 oct. 2026, 07 h (programmée) | Jeanne d'Arc, réhabilitée vingt-cinq ans trop tard | https://gofile.io/d/T2qRcN4Q |
+| dim. 18 oct. 2026, 19 h (programmée) | Élisabeth I : plus de quarante-quatre ans de règne, aucun mari | https://gofile.io/d/fqn9Sqbf |
+| lun. 19 oct. 2026, 07 h (programmée) | La pierre de Rosette, trois écritures mais deux langues | https://gofile.io/d/WEuyNlq5 |
+| lun. 19 oct. 2026, 19 h (programmée) | Catherine II a accepté la variole pour lui échapper | https://gofile.io/d/nEiW5M8E |
+| mar. 20 oct. 2026, 07 h (programmée) | Gandhi : une poignée de sel contre un empire | https://gofile.io/d/rDAuRo1x |
+| mar. 20 oct. 2026, 19 h (programmée) | Mandela : de vingt-sept ans de prison à la présidence | https://gofile.io/d/V1l4BozC |
+| mer. 21 oct. 2026, 07 h (programmée) | Le mur de Berlin et l’annonce qui a tout accéléré | https://gofile.io/d/KUM2F1Lk |
+| mer. 21 oct. 2026, 19 h (programmée) | Bismarck : un message raccourci, une guerre six jours après | https://gofile.io/d/WvOcngTQ |
+| jeu. 22 oct. 2026, 07 h (programmée) | Londres : treize mille maisons perdues dans le Grand Incendie | https://gofile.io/d/GuxlKznO |
+| jeu. 22 oct. 2026, 19 h (programmée) | Patton et la fausse armée du Débarquement | https://gofile.io/d/0pWqhrfg |

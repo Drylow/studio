@@ -59,7 +59,11 @@ def tiktok_account():
 
 
 def upload(path, content_type):
-    """Envoie un fichier local chez Zernio et rend son adresse publique (valable 7 jours pour un post)."""
+    """Envoie un fichier ; Zernio le conserve pour le post quand celui-ci est créé.
+
+    Les uploads non associés expirent après 7 jours, pas les médias des posts programmés.
+    Voir https://docs.zernio.com/guides/media-uploads .
+    """
     size = os.path.getsize(path)
     pre = api("POST", "/media/presign", {"filename": os.path.basename(path), "contentType": content_type,
                                           "size": size})
@@ -106,6 +110,10 @@ def duration(path):
 
 
 def schedule(folder, at, cover=1, draft=False):
+    if type(draft) is not bool:
+        raise ValueError('draft must be a boolean; use keyword arguments for cover and draft')
+    if type(cover) is not int or cover < 1:
+        raise ValueError('cover must be a positive integer')
     folder = os.path.abspath(folder)
     record = os.path.join(folder, "zernio.json")
     if os.path.exists(record):

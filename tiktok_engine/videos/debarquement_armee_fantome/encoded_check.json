@@ -1,0 +1,11 @@
+{
+  "full_decode": "passed",
+  "format": "1080x1920,30fps,aac",
+  "sample_times": [
+    0.5,
+    45,
+    89
+  ],
+  "duration": 90.82,
+  "sampled_frames_visually_reviewed": true
+}

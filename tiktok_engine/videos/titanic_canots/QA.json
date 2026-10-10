@@ -1,0 +1,36 @@
+{
+  "slug": "titanic_canots",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/titanic_canots/art_review.jpg"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/titanic_canots/check/sheet_00.jpg",
+    "work/tiktok/titanic_canots/check/sheet_01.jpg",
+    "work/tiktok/titanic_canots/check/sheet_02.jpg",
+    "work/tiktok/titanic_canots/check/sheet_03.jpg",
+    "work/tiktok/titanic_canots/check/sheet_04.jpg",
+    "work/tiktok/titanic_canots/check/sheet_05.jpg",
+    "work/tiktok/titanic_canots/check/sheet_06.jpg",
+    "work/tiktok/titanic_canots/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/titanic_canots/covers/cover_1.png",
+    "work/tiktok/titanic_canots/covers/cover_2.png",
+    "work/tiktok/titanic_canots/covers/cover_3.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 90.4,
+  "note": "9 assets inspectés (navires4/1cheminées, canots rigide/pliable, adultes en silhouettes sans mains détaillées). Toutes les8planches et3covers vus : aucun chevauchement, texte coupé ou illustration impossible flagrant. Chiffres20,1178,~2200,16+4 corrects et alignés ; 1178 dit capacité théorique du rapport britannique, total inclut équipage. Deux corrections de timing uniquement : label PASSAGERS+ÉQUIPAGE ancré Attention ; titre places vides ancré places, puis stills refaits et vérifiés. Narration et voix inchangées, mix local prêt, aucun rendu vidéo ni programmation lancé.",
+  "assets_inspected_in_review": [
+    "boat_deck",
+    "carpathia",
+    "crowd",
+    "folding_boat",
+    "iceberg",
+    "lifeboat",
+    "rulebook",
+    "telegram",
+    "titanic"
+  ]
+}

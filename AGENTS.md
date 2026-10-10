@@ -1,4 +1,4 @@
-# Reprise par Codex — 9 octobre 2026 au soir (après Claude)
+# Reprise par Codex — 10 octobre 2026 (TikTok prolongés après Claude)
 
 L'utilisateur passe de Claude à Codex et veut que **tout continue exactement pareil**. Lire dans
 l'ordre : `CLAUDE.md` (règles, ton avec l'utilisateur : français familier, court, heures de
@@ -10,8 +10,12 @@ Belgique, jamais UTC), le haut de `production/REPRISE.md` (état en ligne), puis
   (worker lancé par cron). Il publie au plus 2 vidéos par jour et par chaîne, seulement les
   sujets notés 7/10 ou plus. Rien à lancer. Pour couper : `NEWS_AUTO_DRY=1` dans le `.env` du
   serveur.
-- **TikTok @octave.histoire** : 14 vidéos programmées sur Zernio du 9 au 15 oct., à 7 h et 19 h
-  (Bruxelles). Chaque vidéo programmée a son `tiktok_engine/videos/<nom>/zernio.json`.
+- **TikTok @octave.histoire** : file du 9 au 22 octobre, à 7 h et 19 h (Bruxelles).
+  Les deux du 9 sont publiés ; 26 autres sont programmés. Les 14 du 16 au 22 ont été
+  produites et contrôlées le 10 octobre, puis vérifiées directement chez Zernio.
+  Chaque vidéo a son `tiktok_engine/videos/<nom>/zernio.json`, ses trois covers et son lien Gofile.
+  Rendu sur le VPS existant : lire `tiktok_engine/VPS.md`. Le prochain jour libre est
+  le 23 octobre, à revérifier dans Zernio avant de remplir les créneaux.
 
 **Ce qu'il reste à faire :**
 - **Chaque jour, `tiktok_engine/ROUTINE.md`** : 2 nouvelles vidéos dans le premier jour libre.

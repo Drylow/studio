@@ -1,0 +1,30 @@
+{
+  "duration": 94.32,
+  "size": 14441776,
+  "md5": "274f24539740441cffb2bcc809e7195a",
+  "sha256": "9a300cbe52a22215bff8096b1a77114b419f08c02ba97064b076605d9e55c59f",
+  "inputs_sha256": {
+    "tiktok_engine/vps_render_job.py": "79109dbcbbc254a96728fdf9f292fa2ad3a393f13637a01436adf1704a4fad9b",
+    "tiktok_engine/render.mjs": "56c3bc36c6ec2065620483d433b7079171bd981dd63599abc43fb0015c9dec6c",
+    "tiktok_engine/engine.js": "075d82d2ff6c7f3152bd0166f33fdef6f043f40c1c041cfbffee5fe1c94cc65f",
+    "tiktok_engine/sprites.js": "15cfcfdae7370a293da2be8e7b31cc7fcbea01026fceb96895a614b26a609d0a",
+    "tiktok_engine/engine.html": "d8fa0420d250b1a63ae0d901aa79abd394acf99c2ed44d4b8396d0c4f7ea2d1f",
+    "tiktok_engine/fonts/ArchivoBlack-Regular.ttf": "dd9a89a019b4849f66ab75455fe7bdf931311042cbb0f0f97acc061539703180",
+    "tiktok_engine/fonts/Silkscreen-Regular.ttf": "c845473330b94c2079ce9af01c51ac8ba2d99c24f4d14c039843bbb8e642ebd8",
+    "tiktok_engine/fonts/Tiny5-Regular.ttf": "cb8168f80cfee2f47f6db59f2a7afbde31cdcdcdcf262e7a993e4d468a5bf4b0",
+    "tiktok_engine/videos/eiffel_vingt_ans/script.json": "2eccd623d7d1498749f49b866901500ac2e676f14c95aabc1caaa4126f7ae6e8",
+    "work/tiktok/eiffel_vingt_ans/timeline.json": "07312fcd42e928c8521163fce36c54ef3c2586ecc3fffb6f9ee5311d15d1075d",
+    "work/tiktok/eiffel_vingt_ans/mix.wav": "5a23e082f1f95e6382cb7a5b5c13feea6388856ef47fee82b8d7363977aee13c",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/tower.png": "503e1bed4c34a97b73bd68ed9910d8c43b5f700b576fc1d00f6f1447a9837e5c",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/gustave.png": "31e874f732f7b957fd9dab6c1db43dca8f65f871d0d4acb0734997d296b706e4",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/fair.png": "7e0622582b98b13057594e98ab236c842808973110684ddbde7a53335485c24c",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/construction.png": "3ad07b993414379478e8f87965c3497017b570670e1356d3c93aa3824c35aa8d",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/concession.png": "a4e9e8c5c33d45346c4c4143948988333aebaa2d202e41bda27c84dc45add48d",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/newspaper.png": "208706ebdc528c5cab7c385a49319f2abc6d8cf8d6d0a43067d5fe4a689091c0",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/radio.png": "61bb46103b7819cc78787192382df1d89e30cf12b25939bf1216b2eb5bf079bf",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/antenna.png": "dca6ef3639df842fff7c63423ff4d56a2ef56505206b5271b0f7111318d54864",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/station.png": "ddab41b88fc9a0b27b564e83082e22d007f57e522fafddad2ae11b4f97bf8a01"
+  },
+  "job": "tiktok-render-52bfc28b133c",
+  "transport": "authenticated worker result"
+}

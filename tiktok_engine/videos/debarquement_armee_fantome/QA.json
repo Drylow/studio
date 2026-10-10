@@ -1,0 +1,60 @@
+{
+  "slug": "debarquement_armee_fantome",
+  "reviewed_at": "2026-10-10T01:11:13.600240+00:00",
+  "assets_viewed": [
+    "patton",
+    "tank",
+    "camp",
+    "radio",
+    "garbo",
+    "boat",
+    "calais",
+    "normandy",
+    "briefing"
+  ],
+  "art_sheet_viewed": "tiktok_engine/videos/debarquement_armee_fantome/art_review.jpg",
+  "individual_assets_viewed": [
+    "tiktok_engine/videos/debarquement_armee_fantome/art/briefing.png",
+    "tiktok_engine/videos/debarquement_armee_fantome/art/tank.png"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/debarquement_armee_fantome/check/sheet_00.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_01.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_02.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_03.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_04.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_05.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_06.jpg",
+    "work/tiktok/debarquement_armee_fantome/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/debarquement_armee_fantome/covers/cover_1.png",
+    "work/tiktok/debarquement_armee_fantome/covers/cover_2.png",
+    "work/tiktok/debarquement_armee_fantome/covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 90.82,
+  "notes": [
+    "Nine generated assets inspected on the real art review sheet; briefing hands also inspected individually. No anatomical defect seen.",
+    "Original tank looked metallic. Coordinator regenerated it with visible canvas folds, seams and a soft crooked barrel. Replacement inspected individually and on the updated contact sheet.",
+    "All 61 checkpoints across eight real sheets inspected again after the tank replacement and label corrections. No image/text collisions or clipped headline observed.",
+    "Three late labels changed from typewriter to fade. Narration and generated voice unchanged.",
+    "All three rebuilt covers inspected. Cover1 selected for the inflatable-tank hook and the replacement illustration.",
+    "Historical distinction between fictitious FUSAG and actual tactical Ghost Army retained in narration and on screen.",
+    "Local voice/SFX mix generated from this exact timeline. Still/timeline QA only; final encoded video and audio review remains with coordinator."
+  ],
+  "approved": true,
+  "encoded_movie_review": {
+    "reviewed_at": "2026-10-10T01:22:40.543925+00:00",
+    "board_viewed": "work/tiktok/debarquement_armee_fantome/movie_check/board.jpg",
+    "full_decode": "passed",
+    "format": "1080x1920,30fps,aac",
+    "sample_times": [
+      0.5,
+      45,
+      89
+    ],
+    "visual_result": "passed",
+    "notes": "Opening, middle and ending decoded frames actually inspected. Composition matches approved stills, text readable, no missing art or clipping. Fortitude uses the corrected inflatable tank."
+  }
+}

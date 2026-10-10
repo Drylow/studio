@@ -6,8 +6,8 @@ cd "$(dirname "$0")/.."
 if [ ! -x .venv/bin/python ]; then
   python3 -m venv .venv
 fi
-.venv/bin/python -c "import numpy, PIL, scipy, imageio_ffmpeg, faster_whisper, dotenv" 2>/dev/null ||
-  .venv/bin/pip install -q numpy Pillow scipy imageio-ffmpeg faster-whisper python-dotenv
+.venv/bin/python -c "import numpy, PIL, scipy, imageio_ffmpeg, faster_whisper, dotenv, requests" 2>/dev/null ||
+  .venv/bin/pip install -q numpy Pillow scipy imageio-ffmpeg faster-whisper python-dotenv requests
 # render.mjs cherche playwright dans tiktok_engine/ ; le navigateur est celui de /opt/pw-browsers
 # (session Claude) ou, ailleurs (Codex…), le Chromium que playwright télécharge ici une fois.
 [ -d tiktok_engine/node_modules/playwright ] ||

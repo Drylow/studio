@@ -1,0 +1,37 @@
+{
+  "slug": "eiffel_vingt_ans",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/eiffel_vingt_ans/art_review.jpg",
+    "tiktok_engine/videos/eiffel_vingt_ans/art/gustave.png"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/eiffel_vingt_ans/check/sheet_00.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_01.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_02.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_03.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_04.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_05.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_06.jpg",
+    "work/tiktok/eiffel_vingt_ans/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/eiffel_vingt_ans/covers/cover_1.png",
+    "work/tiktok/eiffel_vingt_ans/covers/cover_2.png",
+    "work/tiktok/eiffel_vingt_ans/covers/cover_3.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 94.32,
+  "note": "9 assets inspectés ; toutes les8planches et3covers vues. Portrait Gustave initial avec fond blanc rejeté : root l’a régénéré seul. Nouveau portrait sur noir inspecté, stills et3covers reconstruits, scènes3/5/12 et cover3 revues : défaut corrigé. Aucun texte coupé ou chevauchement ;1889,20ans,1909 etfin sont alignés. Les tours sont des illustrations historiques, pas une reconstruction documentaire exacte ; aucun éclairage nocturne moderne. Récit précise utilité radio parmi les causes et démontage initialement prévu, sans destruction automatique certaine. Narration et voix inchangées, mix local prêt. Aucun rendu vidéo ni programmation lancé.",
+  "assets_inspected_in_review": [
+    "antenna",
+    "concession",
+    "construction",
+    "fair",
+    "gustave",
+    "newspaper",
+    "radio",
+    "station",
+    "tower"
+  ]
+}
