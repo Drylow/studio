@@ -1,0 +1,40 @@
+{
+  "provider": "Replicate",
+  "date": "2026-10-10",
+  "status": "no_images_generated",
+  "attempts": [
+    {
+      "thumbnail": "03-vader",
+      "variant": "A",
+      "prediction_id": "fzgrmmvw6srmw0d14w0v7asavg",
+      "status": "failed",
+      "error": "Input or output flagged as sensitive (E005).",
+      "output": null
+    },
+    {
+      "thumbnail": "01-sith",
+      "variant": "A",
+      "prediction_id": "1rawpm3w8hrmr0d14w0tdhnqk8",
+      "status": "failed",
+      "error": "Input or output flagged as sensitive (E005).",
+      "output": null
+    },
+    {
+      "thumbnail": "03-vader",
+      "variant": "B",
+      "prediction_id": "6npc56bw9nrmw0d14w0s5h489c",
+      "status": "failed",
+      "error": "Input or output flagged as sensitive (E005).",
+      "output": null
+    },
+    {
+      "thumbnail": "01-sith",
+      "variant": "B",
+      "prediction_id": "w6dgmevw9xrmr0d14w0vzahnzc",
+      "status": "failed",
+      "error": "Input or output flagged as sensitive (E005).",
+      "output": null
+    }
+  ],
+  "next_action": "Stopped these requests; no filter changes or retries."
+}
