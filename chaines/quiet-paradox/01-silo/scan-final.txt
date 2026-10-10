@@ -4,9 +4,9 @@ chaines/quiet-paradox/01-silo/script-voix.txt
   [echo H18: phrase repeated 3x] "a reason to investigate"
   [echo H18: phrase repeated 3x] "the third season finale"
   [echo H18: phrase repeated 3x] "in the before times"
-  [echo H18: fact repeated 15x] "1" (each mention past the second must add something new)
-  [echo H18: fact repeated 6x] "18" (each mention past the second must add something new)
-  [echo H18: fact repeated 6x] "17" (each mention past the second must add something new)
+  [echo H18: fact repeated 16x] "1" (each mention past the second must add something new)
+  [echo H18: fact repeated 9x] "18" (each mention past the second must add something new)
+  [echo H18: fact repeated 7x] "17" (each mention past the second must add something new)
 
 0 candidate flags across 1 files. Judge each flag by the shape test in voice-anchoring-skill.md: have you ever actually said a sentence with this shape? Enumerations are real speech, leave them alone.
 Antithesis/reframe floor: 0 mechanical hit(s). This is the MINIMUM for the greenlight D7 ledger: a ledger listing fewer instances than the floor is wrong. A floor of 0 clears nothing; most of the family is machine-invisible, so the audit still scans by eye.

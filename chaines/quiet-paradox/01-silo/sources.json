@@ -338,6 +338,65 @@
     },
     {
       "chapter": 16,
+      "title": "The spare parts",
+      "source_ids": [
+        "S12"
+      ],
+      "evidence_boundary": "Critical Supply and the theft investigation are television premises; remaining stock and any central delivery route are unconfirmed.",
+      "original_analysis": "Stored inventory, renewable manufacturing and transferred repair skills imply different futures."
+    },
+    {
+      "chapter": 17,
+      "title": "The mayor's chair",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "evidence_boundary": "Juliette is a public leader whose account is managed; proposed reforms and council practices are hypothetical.",
+      "original_analysis": "Changes in officeholders can leave the routes for decisions unchanged."
+    },
+    {
+      "chapter": 18,
+      "title": "The first agreement",
+      "source_ids": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "evidence_boundary": "The project is presented to early participants; no complete original contract or exit condition is established.",
+      "original_analysis": "Voluntary entry and the inherited restrictions of later generations require separate judgments."
+    },
+    {
+      "chapter": 19,
+      "title": "The message between neighbors",
+      "source_ids": [
+        "S12",
+        "S15"
+      ],
+      "evidence_boundary": "A repaired radio permits contact; a durable public communications network has not been established.",
+      "original_analysis": "Modest practical exchanges could build cooperation while retaining checks on incoming accounts."
+    },
+    {
+      "chapter": 20,
+      "title": "The next person in the room",
+      "source_ids": [
+        "S07"
+      ],
+      "evidence_boundary": "Bernard appoints Lukas as shadow and grants access; a universal deliberate recruitment sequence is unconfirmed.",
+      "original_analysis": "Training requires sharing abilities that an apprentice may use to challenge the institution."
+    },
+    {
+      "chapter": 21,
+      "title": "The decision before morning",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "evidence_boundary": "The residents face incomplete knowledge; imagined councils and future ultimatums are explicitly hypothetical.",
+      "original_analysis": "Limited goals, reversible options and visible corrections could permit decisions without complete certainty."
+    },
+    {
+      "chapter": 22,
       "title": "A way forward",
       "source_ids": [
         "S12",
