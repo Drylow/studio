@@ -9,6 +9,12 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
+**Second long choisi : Tommy Shelby vs Alfie Solomons (Peaky Blinders).**
+[Plan des trois confrontations](PLAN_TOMMY_ALFIE.md). Premier clip BBC réellement
+acquis en 1080p, Tommy ouvre donc Blanc. Les autres sources et le long restent
+en préparation ; voir le haut de `production/REPRISE.md` pour le point précis
+sur les téléchargements Naka. Aucun nouveau MP4 final livré à ce stade.
+
 **Miniatures Tony/Richie : trois propositions avec les SVG originaux Chess.com
 et cinq titres livrés sur Discord.** [Styles et recette](thumbnails/tony-richie-no-e8/README.md).
 Choix utilisateur en attente ; le film court reste identique.

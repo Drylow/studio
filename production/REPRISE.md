@@ -1,5 +1,31 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Peaky Blinders — Tommy Shelby vs Alfie Solomons en préparation
+
+Choix utilisateur du 10 octobre : produire le second long aujourd'hui, avec le
+montage Tony/Richie validé, anglais sans voix off et livraison GoFile + Discord.
+Plan : `experiments/conversation-chess/PLAN_TOMMY_ALFIE.md`. Trois confrontations
+visées : S2E2, S2E6 et S3E6 ; environ 15 minutes, durée finale non encore mesurée.
+
+Un clip BBC de S2E2 est réellement acquis en 1920×1080, 25 fps, anglais ;
+logo BBC conservé. Il ouvre sur Tommy : Tommy Blanc / Alfie Noir. Douze analyses
+du premier chapitre sont préparées et validées structurellement, pas de long
+exporté. Kdenlive natif testé avec image, alpha et pistes audio séparées.
+
+Les imports publics des deux autres scènes n'ont pas fourni de fichier après
+des erreurs fournisseur/délais. Les trois épisodes Naka sont proposés en 1080p,
+mais le compte utilise ses trois emplacements hors ligne pour les Sopranos.
+**Correction de la compréhension du quota : trois épisodes à la fois**, selon
+l'interface publique ; le bouton « Retirer » libère un emplacement. L'accord
+de l'utilisateur pour remplacer les trois téléchargements précédents par Peaky
+a été demandé, sans retrait ni nouvelle acquisition avant sa réponse. Les
+films livrés ne seront pas effacés. Aucun abonnement payant ni dépassement
+de quota. Sources, sessions, repères de dialogue et rendus restent privés.
+
+Le changement de série ne valide pas les droits de republication ni Content ID.
+Conserver les crédits musicaux dans la description ; l'import final sur YouTube
+reste manuel. Site et automatismes Cage/Pitch/TikTok inchangés.
+
 ## Sopranos — correction après la réclamation HBO
 
 **Second test utilisateur : le court de 9 min 27 est lui aussi réclamé,
