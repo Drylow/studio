@@ -1,0 +1,667 @@
+{
+  "method": "Digit and number-word occurrences in the final narration; examples are hypothetical, not undocumented events.",
+  "television": [
+    {
+      "value": "Silo 1",
+      "sources": [
+        "S15",
+        "S16"
+      ]
+    },
+    {
+      "value": "Silo 17",
+      "sources": [
+        "S09",
+        "S15"
+      ]
+    },
+    {
+      "value": "Silo 18",
+      "sources": [
+        "S02",
+        "S14",
+        "S15"
+      ]
+    },
+    {
+      "value": "fifty",
+      "sources": [
+        "S12",
+        "S13"
+      ],
+      "meaning": "Founders stated proposal, not final census"
+    },
+    {
+      "value": "fifty-one",
+      "sources": [
+        "S09"
+      ],
+      "meaning": "Bernards conflicting statement in S2E9"
+    },
+    {
+      "value": "first/second/third season",
+      "sources": [
+        "S01",
+        "S02",
+        "S07",
+        "S09",
+        "S11",
+        "S15"
+      ]
+    },
+    {
+      "value": "two departments",
+      "sources": [
+        "S02"
+      ],
+      "meaning": "Mechanical and IT"
+    }
+  ],
+  "examples": "Ten archive questions, two imaginary residents and two warnings are authored examples or structural counts, not measured events.",
+  "occurrences": [
+    {
+      "line": 1,
+      "numbers": [
+        "three"
+      ],
+      "paragraph_excerpt": "In Silo, you can learn more from a roll of tape than from the mayor. A better seal lets Juliette survive a journey that everyone expects to kill her. That small change ra"
+    },
+    {
+      "line": 7,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "It also gives the same action more than one possible meaning. A cleaner wiping a lens might be trying to show people a beautiful view. They might be following an instruct"
+    },
+    {
+      "line": 9,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "In the first-season finale, Juliette recognizes the repeated formation of birds in her visor. The beautiful scene is a display, and the pattern gives it away. That is the"
+    },
+    {
+      "line": 13,
+      "numbers": [
+        "one",
+        "one"
+      ],
+      "paragraph_excerpt": "There is a simpler possibility alongside that. A person facing their last moments might clean because it is the last task they understand, or because they want a loved on"
+    },
+    {
+      "line": 27,
+      "numbers": [
+        "two",
+        "first"
+      ],
+      "paragraph_excerpt": "Walker notices something that a politician might overlook: two departments have tape with different performance. Mechanical's material works better than the material used"
+    },
+    {
+      "line": 29,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "It is worth keeping the explanation at the scale the show actually demonstrates. A reliable seal helps Juliette survive her particular trip. It doesn't prove that every p"
+    },
+    {
+      "line": 31,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "As the television story develops, deliberate killing and the compound used by Silo 1 become part of the picture. That makes it harder to accept the idea that every death "
+    },
+    {
+      "line": 33,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "My strongest interpretation of the suit mystery is that the apparent test of the outside has never been an independent test. The resident is given a prepared suit, sent t"
+    },
+    {
+      "line": 37,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "The tape reveals a break in that chain because someone outside the usual preparation process understands the material. Walker can recognize the problem while knowing very"
+    },
+    {
+      "line": 45,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "There is another reason the repair is important: it is cooperative. The solution passes through relationships between departments. Someone notices, someone asks, someone "
+    },
+    {
+      "line": 47,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "For a future escape attempt, the useful lesson would be to reproduce verified conditions carefully. Keep track of which equipment worked, how long it worked, and where it"
+    },
+    {
+      "line": 51,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "So the suit gives us a confirmed practical answer and a more limited open question. Better sealing changes Juliette's outcome. The exact hazards beyond the doors still ne"
+    },
+    {
+      "line": 53,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "During the generator shutdown in season one, the cafeteria display briefly shows a green scene. For a resident who notices it, that would be a difficult moment to forget."
+    },
+    {
+      "line": 67,
+      "numbers": [
+        "1",
+        "one"
+      ],
+      "paragraph_excerpt": "The same caution applies to images of greenery elsewhere in the series. A comfortable-looking view inside Silo 1 is evidence about what that room presents to its occupant"
+    },
+    {
+      "line": 69,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "This doesn't mean every image is worthless. Juliette's journey, the different witnesses, and the physical remains of other silos give us information that doesn't all depe"
+    },
+    {
+      "line": 73,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "I like that this mystery rewards patient attention without requiring us to believe every background detail contains a secret message. The scene matters because it visibly"
+    },
+    {
+      "line": 91,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "Hanna Nichols's interest in a magnifying device belongs in that discussion. The first season connects her work with the wider pattern of forbidden inquiry. The device wou"
+    },
+    {
+      "line": 95,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "There are limits to this reading. We can't infer a founder's exact original intent from every inconvenience. A rule can survive because later leaders find it useful, even"
+    },
+    {
+      "line": 97,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "That makes the system feel more believable to me. The residents don't live inside a perfectly efficient scheme where every object has one secret purpose. They live among "
+    },
+    {
+      "line": 99,
+      "numbers": [
+        "one",
+        "two"
+      ],
+      "paragraph_excerpt": "The answer we can defend is that the restrictions shape movement and investigation. The theory that they help prevent coordination is strong because it fits the silo's vi"
+    },
+    {
+      "line": 101,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "Holston leaves a clue that makes sense only when Juliette understands where someone might be watching. A mirror in a room is supposed to be part of private life. In seaso"
+    },
+    {
+      "line": 107,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "The cameras have a second effect once someone learns they exist. Alongside collecting information, they can frighten that person. Once you know a room may be watched, you"
+    },
+    {
+      "line": 109,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "But there is a tradeoff for the authorities. Keeping surveillance secret lets them observe unguarded behavior. Revealing it may deter that behavior, but it also teaches p"
+    },
+    {
+      "line": 111,
+      "numbers": [
+        "Two"
+      ],
+      "paragraph_excerpt": "We can picture a small hypothetical case. Two residents need to compare a note. If they assume nobody is watching, they may read it openly at a table. If they know a mirr"
+    },
+    {
+      "line": 113,
+      "numbers": [
+        "two",
+        "one"
+      ],
+      "paragraph_excerpt": "The people doing the watching face their own limits. Seeing someone enter a room doesn't establish why they entered it. Seeing two people speak doesn't guarantee a correc"
+    },
+    {
+      "line": 117,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "There is an interesting production detail behind Camille's role in those relationships. Graham Yost told TIME that the character was developed late in the first season, w"
+    },
+    {
+      "line": 149,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "That also helps explain why forbidden family stories can matter long before a rebellion begins. A person who hears a relative describe an old injustice may become more at"
+    },
+    {
+      "line": 151,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "There is a possible future twist involving family connections between named characters, and we'll consider one of those later. But I don't want that possibility to oversh"
+    },
+    {
+      "line": 153,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "The theory I find most convincing is that the authorities want to restrict the transmission of inconvenient knowledge as much as they want to manage population. The telev"
+    },
+    {
+      "line": 155,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "Salvador Quinn leaves behind a coded message, and Lukas has to work out how to read it. The unusual part is that Quinn is also associated with the destruction of records "
+    },
+    {
+      "line": 169,
+      "numbers": [
+        "two",
+        "One"
+      ],
+      "paragraph_excerpt": "Imagine two residents debating whether a rule has always existed. One remembers a story told by a grandparent. The other has an official record saying the rule is ancient"
+    },
+    {
+      "line": 173,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "There is a temptation to treat every missing record as proof of one enormous hidden event. Some missing information may indeed reflect deliberate suppression. Some may re"
+    },
+    {
+      "line": 181,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "Lukas enters the restricted world of the Legacy and discovers how different the silo looks when you are allowed to ask different questions. Books, records, and digital kn"
+    },
+    {
+      "line": 183,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "This answers one mystery immediately. The residents' limited understanding of the old world is not simply the total knowledge that survived. Some material exists and has "
+    },
+    {
+      "line": 199,
+      "numbers": [
+        "ten",
+        "one"
+      ],
+      "paragraph_excerpt": "Suppose an archive answers ten questions about machinery but refuses to answer one about the building's origin. The refusal itself gives the investigator a clue about the"
+    },
+    {
+      "line": 201,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "It is also useful to separate the Legacy from the voice later called the Algorithm. Both contribute to the experience of hidden authority, but a knowledge store and a voi"
+    },
+    {
+      "line": 207,
+      "numbers": [
+        "18",
+        "second"
+      ],
+      "paragraph_excerpt": "Lukas follows Quinn's message to the bottom of Silo 18, beneath the part of the building most residents understand. He finds a tunnel and a large door. In the second-seas"
+    },
+    {
+      "line": 211,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "This doesn't justify the way Bernard treats people. It helps explain why knowing his secret wouldn't simply turn him into a free actor. More information can expose a dang"
+    },
+    {
+      "line": 217,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "The later Directive makes that reading much stronger: preventing contact between silos is a stated priority of Silo 1. That is a television revelation, not a theory that "
+    },
+    {
+      "line": 229,
+      "numbers": [
+        "third",
+        "one"
+      ],
+      "paragraph_excerpt": "That possibility has limits, which the third-season finale makes clear. A way to prevent one form of attack does not prevent every form of attack. It can still be a genui"
+    },
+    {
+      "line": 233,
+      "numbers": [
+        "three"
+      ],
+      "paragraph_excerpt": "At the beginning of season three, Juliette has returned to her home, but people she once knew have become strangers to her. The episode Who Are You places her in the posi"
+    },
+    {
+      "line": 247,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "I find that more interesting than the idea that remembering one perfect scene would instantly solve everything. A recovering witness may need to compare impressions, obje"
+    },
+    {
+      "line": 259,
+      "numbers": [
+        "17"
+      ],
+      "paragraph_excerpt": "Juliette enters Silo 17 and finds a place that has lost the ordinary activity of a living community. There are traces of people everywhere, but few people available to ex"
+    },
+    {
+      "line": 261,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "The second season eventually reveals that Solo is Jimmy, the son of the silo's former head of IT. Other survivors have also been there, watching Juliette from a perspecti"
+    },
+    {
+      "line": 267,
+      "numbers": [
+        "third",
+        "17",
+        "1"
+      ],
+      "paragraph_excerpt": "The third-season finale answers the biggest question about the people who left Silo 17. Silo 1 deliberately attacks them after they emerge. We see an ordered intervention"
+    },
+    {
+      "line": 269,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "The earlier idea that the population simply stepped into a universally poisonous world therefore needs to be revised. For this event, television supplies a specific cause"
+    },
+    {
+      "line": 271,
+      "numbers": [
+        "17"
+      ],
+      "paragraph_excerpt": "That gives us a grounded theory about why the story spends so much time with the remnants of this community. Silo 17 demonstrates that an official account can be wrong ab"
+    },
+    {
+      "line": 273,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "There is a second, practical revelation involving Jimmy's mother and the disabling of the internal Safeguard. The story gives the survival of the building an explanation "
+    },
+    {
+      "line": 275,
+      "numbers": [
+        "two",
+        "second",
+        "first"
+      ],
+      "paragraph_excerpt": "My interpretation is that this gives Juliette two different warnings. A crowd can misunderstand the situation outside and become exposed to a danger it hasn't identified."
+    },
+    {
+      "line": 281,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "That is one reason Juliette's role as a visitor matters. She isn't fully contained within either group's history of blame. She can ask questions that have become difficul"
+    },
+    {
+      "line": 283,
+      "numbers": [
+        "17",
+        "one"
+      ],
+      "paragraph_excerpt": "For theories about other silos, Silo 17 gives a useful limit. A place that appears inactive may still contain survivors or working systems. It would be a mistake to assum"
+    },
+    {
+      "line": 285,
+      "numbers": [
+        "17"
+      ],
+      "paragraph_excerpt": "Jimmy and the others make the survival question more concrete. What remains of a society can include a room, a repair, a family, and a person who hasn't told their story "
+    },
+    {
+      "line": 287,
+      "numbers": [
+        "three",
+        "1"
+      ],
+      "paragraph_excerpt": "By the end of season three, we know that the voice called the Algorithm is being performed by a human being. Victor has spoken through that role, and Troy later takes it "
+    },
+    {
+      "line": 293,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "Victor is also a founder, though he isn't the only founder. Graham Yost makes that distinction in his interview with TheWrap after the finale. It keeps us from replacing "
+    },
+    {
+      "line": 297,
+      "numbers": [
+        "17",
+        "1"
+      ],
+      "paragraph_excerpt": "Troy's behavior in the Silo 17 crisis shows how serious the change is. Susan objects, while he carries the operation forward. Their disagreement gives us a visible reason"
+    },
+    {
+      "line": 307,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "A less dramatic possibility is that the memory changes how he handles one decision before it changes his allegiance. A hesitation, a request for a record, or a refusal to"
+    },
+    {
+      "line": 311,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "The human voice therefore gives us a more complicated, and to me more interesting, account of control. Authority can be delegated through a role that appears impersonal. "
+    },
+    {
+      "line": 313,
+      "numbers": [
+        "1",
+        "one"
+      ],
+      "paragraph_excerpt": "What could disrupt that arrangement is information that changes the next person's decisions. Daniel's unresolved connection to Helen is a plausible weakness, and Susan's "
+    },
+    {
+      "line": 315,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "In Gray Goo, the founders explain the project through the image of a seed bank. Per and Thurman describe underground communities preserving people through a future catast"
+    },
+    {
+      "line": 323,
+      "numbers": [
+        "18",
+        "1"
+      ],
+      "paragraph_excerpt": "The unveiling in Farewell gives that question a much sharper setting. Helen is directed to Silo 18, while Daniel is associated with Silo 1. They are separated when an exp"
+    },
+    {
+      "line": 329,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "This is where the local scale matters. We see a catastrophic explosion near the project. We can't infer a complete map of the planet's condition from that image. Other ev"
+    },
+    {
+      "line": 341,
+      "numbers": [
+        "second"
+      ],
+      "paragraph_excerpt": "Daniel gives Helen a small Pez dispenser at the end of the second season. It connects an ordinary moment in the Before Times with an object the audience has already seen "
+    },
+    {
+      "line": 343,
+      "numbers": [
+        "third",
+        "18"
+      ],
+      "paragraph_excerpt": "The third season places Helen in Silo 18 and establishes that she is pregnant before the catastrophe. Those facts make a possible connection to later residents an underst"
+    },
+    {
+      "line": 345,
+      "numbers": [
+        "Two"
+      ],
+      "paragraph_excerpt": "But a resemblance in temperament isn't a family record. Two people can be curious, brave, or stubborn without being related. The series has not yet established the specif"
+    },
+    {
+      "line": 349,
+      "numbers": [
+        "one",
+        "first"
+      ],
+      "paragraph_excerpt": "My preferred version of the theory is that Helen's influence could persist through records, objects, or people who hear her story, whether or not Juliette is a direct des"
+    },
+    {
+      "line": 365,
+      "numbers": [
+        "first"
+      ],
+      "paragraph_excerpt": "Picture a later resident finding such a relic among ordinary supplies. They might first ask what it does, turn it in their hands, and try to decide why someone kept it. A"
+    },
+    {
+      "line": 369,
+      "numbers": [
+        "one",
+        "one"
+      ],
+      "paragraph_excerpt": "The network is much larger than the places the audience has explored closely. That is one of Silo's most useful sources of uncertainty. We can understand a particular roo"
+    },
+    {
+      "line": 371,
+      "numbers": [
+        "fifty",
+        "fifty-one",
+        "one",
+        "one"
+      ],
+      "paragraph_excerpt": "There is even an unresolved counting question. The founders describe a fifty-silo project, while Bernard tells Lukas there are fifty-one. The mismatch between those telev"
+    },
+    {
+      "line": 373,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "An extra control facility is a plausible theory, partly because the series already distinguishes between ordinary communities and Silo 1. But plausibility isn't a locatio"
+    },
+    {
+      "line": 375,
+      "numbers": [
+        "one",
+        "two"
+      ],
+      "paragraph_excerpt": "I also wouldn't resolve the discrepancy by quietly changing one number. Leaving it visible is more honest and more interesting. It tells us that even the people with acce"
+    },
+    {
+      "line": 381,
+      "numbers": [
+        "18"
+      ],
+      "paragraph_excerpt": "My strongest theory about the other silos is that their differences will matter more than their total number. Silo 18 has a particular social history, a particular set of"
+    },
+    {
+      "line": 385,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "There is a narrower point we can establish. Silo 1 can observe and respond to communities that aren't allowed to compare notes with each other. Whether the project calls "
+    },
+    {
+      "line": 387,
+      "numbers": [
+        "two",
+        "one",
+        "first"
+      ],
+      "paragraph_excerpt": "That advantage could fail if two communities establish reliable communication. An official explanation of a local problem could be checked against another place's account"
+    },
+    {
+      "line": 391,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "There is also the question of what the central staff can actually see. A network map may make control appear comprehensive. The history of surviving people outside an off"
+    },
+    {
+      "line": 393,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "For that reason, I would be cautious about predictions built around one secret silo solving everything. A hidden facility could introduce new knowledge, but it could also"
+    },
+    {
+      "line": 395,
+      "numbers": [
+        "18"
+      ],
+      "paragraph_excerpt": "The most promising future discovery would be a verified conversation with people whose lives challenge Silo 18's assumptions. It might confirm some fears and complicate o"
+    },
+    {
+      "line": 397,
+      "numbers": [
+        "third",
+        "18",
+        "1"
+      ],
+      "paragraph_excerpt": "By the third-season finale, the people in Silo 18 have prevented the internal Safeguard from killing them, and Juliette has begun thinking about taking the conflict to Si"
+    },
+    {
+      "line": 399,
+      "numbers": [
+        "one"
+      ],
+      "paragraph_excerpt": "The immediate victory gives them time, rather than complete safety. The external attack shows that the central authority has other ways to threaten them. That puts a usef"
+    },
+    {
+      "line": 405,
+      "numbers": [
+        "One",
+        "1"
+      ],
+      "paragraph_excerpt": "One possibility is an alliance with someone inside Silo 1. Daniel's unresolved memories and Susan's resistance give that idea evidence to work with. But an ally there wou"
+    },
+    {
+      "line": 409,
+      "numbers": [
+        "third"
+      ],
+      "paragraph_excerpt": "A third possibility is a negotiated change that preserves much of the old system. That may appeal to people who want immediate relief from danger. It also raises a questi"
+    },
+    {
+      "line": 413,
+      "numbers": [
+        "third"
+      ],
+      "paragraph_excerpt": "The resources question belongs alongside all of these possibilities. A society can win a confrontation and still need food, working equipment, and replacement parts. The "
+    },
+    {
+      "line": 421,
+      "numbers": [
+        "1"
+      ],
+      "paragraph_excerpt": "We can already answer part of who controls the silos. Local officials shape daily life, and Silo 1 can direct or threaten those communities. Human beings occupy the comma"
+    }
+  ]
+}

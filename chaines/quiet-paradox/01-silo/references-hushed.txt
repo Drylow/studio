@@ -1,0 +1,68 @@
+QUIET PARADOX - REFERENCES HUSHED THEORIES
+Releve : 10 octobre 2026. Sources : catalogue Algrow de 73 videos; six transcriptions recuperees. Les nombres sont des compteurs publics au moment du releve, pas des donnees YouTube Studio.
+
+METHODE
+Baseline : mediane des 15 premieres videos recentes publiees avant le 3 octobre 2026, soit 7 428 vues. Fenetre effective : 1 octobre au 3 septembre 2026. Les uploads de moins de sept jours sont exclus. Les ratios ci-dessous divisent les vues par cette mediane recente. Les gros succes Stranger Things ont plusieurs mois de plus : ces ratios ne mesurent pas une vitesse de croissance comparable, un effet causal de la narration, ni une promesse de resultat pour Silo.
+La requete Nexlev d'outliers n'a pas abouti; aucun score proprietaire Nexlev n'est invente.
+
+REFERENCES ET COMPTEURS
+Stranger Things 5 Theories To Fall Asleep To
+https://www.youtube.com/watch?v=AjibRjwB0sI
+183205 vues; 24.66x la mediane recente; 83 min 12 s; 13311 mots de transcription nettoyee; 160.0 mots/min estimees.
+
+Stranger Things The First Shadow - Entire Play Breakdown For Sleep
+https://www.youtube.com/watch?v=EQ4SHeWZJ_w
+148750 vues; 20.03x la mediane recente; 88 min 45 s; 13791 mots de transcription nettoyee; 155.4 mots/min estimees.
+
+Why Stranger Things 5 Was A Total Disaster (For Sleep)
+https://www.youtube.com/watch?v=bVaFyms_P80
+136699 vues; 18.40x la mediane recente; 95 min 19 s; 14655 mots de transcription nettoyee; 153.8 mots/min estimees.
+
+Stranger Things 5 Vol 2 Theories To Fall Asleep To
+https://www.youtube.com/watch?v=SiHXE9WvdfE
+74127 vues; 9.98x la mediane recente; 86 min 7 s; 13258 mots de transcription nettoyee; 154.0 mots/min estimees.
+
+2 Hours Of Unsolved Star Wars Mysteries + Theories
+https://www.youtube.com/watch?v=tmdbTOVWArU
+8970 vues; 1.21x la mediane recente; 130 min 39 s; 20868 mots de transcription nettoyee; 159.7 mots/min estimees.
+
+Star Wars Lore, But It's Disturbing
+https://www.youtube.com/watch?v=zHIK3YBE0mY
+12681 vues; 1.71x la mediane recente; 102 min 7 s; 16539 mots de transcription nettoyee; 162.0 mots/min estimees.
+
+Les trois premieres sont les plus grosses performances du catalogue. Vol 2 complete l'etude des hypotheses. Les deux Star Wars sont surtout des references de format recent et modulaire; elles ne sont pas des outliers de 5x sur ce benchmark.
+Les taux de parole sont des estimations de transcription sur duree video, avec erreurs et musique possibles. Ils ne sont pas la vitesse obligatoire de Quiet Paradox.
+
+PRINCIPES RETENUS
+- Relation conversationnelle avec l'auditeur, phrases prononcables et avis identifies comme tels.
+- Modules accessibles independamment; pas de reponse principale retenue pendant deux heures.
+- Separations explicites entre continuite officielle, autres materiaux et hypotheses.
+- Entree par un detail concret, puis implication plus large.
+- Pour Quiet Paradox : aucun souvenir personnel fabrique, aucune salutation ou signature copiee.
+- Accroche plus courte que les anciennes intros; un seul message facultatif au milieu.
+- Fin sur un resultat humain concret, sans long recapitulatif ni demande de clic.
+
+COMPARAISON SILO
+Recherche Nexlev : Silo season 3 mysteries theories explained; filtre demande : long, annee, vues. Le retour de 20 resultats n'etait pas trie strictement et incluait des videos courtes. Les cinq ci-dessous sont donc les cinq compteurs les plus eleves DANS le retour, pas un classement exhaustif de YouTube.
+SILO Season 3 Ending Explained | Season 3 Finale Breakdown - 1098919 vues
+https://www.youtube.com/watch?v=40bf7uPYwss
+SILO Season 3 Ending Explained! - 870749 vues
+https://www.youtube.com/watch?v=VwfhFoxn_RU
+SILO - Season 3 Episode 10: Theories (Daniel's Watch, Troy & Noah's Ark) - 266573 vues
+https://www.youtube.com/watch?v=Rv0qwuHgGG4
+SILO Season 3: The 300-Year Timeline Was Never Real - 223262 vues
+https://www.youtube.com/watch?v=DpLmWLdyyg0
+SILO Season 3 Episode 10 Theories Explained - 197365 vues
+https://www.youtube.com/watch?v=8rdGOw2Pgh0
+Echantillons de leurs transcriptions consultes : ouverture, passage central et fin.
+Pete Peppers : final, adaptation et commentaires sur la memoire.
+Think Story : recapitulatif du final et nouvelles theories.
+Duriboh : predictions avant le final a partir de mythologie et motifs.
+What yOu Missed? : these centrale d'une chronologie raccourcie.
+BrainPilot : predictions du prochain episode a partir des images et du synopsis.
+Quiet Paradox : seize discussions sur les moyens de verifier un recit officiel, dans les trois saisons diffusees. La chronologie raccourcie est traitee comme hypothese faible, pas comme conclusion. Les romans ne servent pas de reservoir de revelations.
+Cette comparaison renseigne l'angle et la structure; elle ne prouve pas qu'aucun autre createur n'a traite ces questions.
+
+APPLICATION AU SCRIPT
+Pas de sujet Stranger Things pour le lancement. Silo reste le premier upload approuve; FROM et Severance restent les univers suivants envisages.
+Aucune phrase des references n'est inseree dans la narration. Les courts extraits exacts necessaires a l'audit restent dans audit-editorial.txt; les transcriptions integrales ne sont pas republiees.

@@ -1,0 +1,49 @@
+QUIET PARADOX - FIRST UPLOAD
+Approved title: 2 Hours of Silo's Biggest Mysteries & Theories to Fall Asleep To
+Language: English narration; French production instructions.
+Scope locked by user: all released television episodes, no spoilers from the novels.
+Research cutoff: 10 October 2026. Television endpoint: S3E10, Troy.
+
+TOPIC
+The television series Silo, its answered mysteries and its remaining questions.
+
+ANGLE
+Who can check the official story? Follow concrete tools, witnesses, records and physical limits. Each chapter examines a different obstacle to finding a reliable answer. The first upload introduces Quiet Paradox through patient, evidence-led theory discussion, not a recap or a list of invented twists.
+
+PROOF BANK
+1. Juliette's altered suit sealing and repeating visor imagery: S1 finale; TVLine interview/recap.
+2. Gloria, reproductive deception and hidden cameras: S1E7; TVLine and Ready Steady Cut.
+3. The Legacy and privileged knowledge: S2E7; TV Obsessive.
+4. Quinn's letter, Lukas and the underground door: S2E8-9; television episode summaries and Ready Steady Cut.
+5. Juliette's memory loss and Camille's management of it: S3E1; official Apple synopsis and Ready Steady Cut.
+6. The founders' stated survival rationale: S3E8; TV Obsessive and Ready Steady Cut.
+7. Helen and Daniel's separation and the explosion: S3E9; TV Obsessive.
+8. Troy, Susan, the human Algorithm and Silo 17's destruction: S3E10; TheWrap creator interview and independently checked recaps.
+
+HOOK DIRECTION
+Start with the suit-sealing clue. Less than 100 words. State TV spoiler boundary before the later revelations. Explain that some mysteries have answers and others remain theories. No promise to solve the series' unrevealed ending.
+Hook variants compared during editing:
+A, selected: In Silo, you can learn more from a roll of tape than from the mayor. Concrete material clue first; question follows immediately; low-pressure delivery.
+B, rejected: The voice controlling the silos has a human being behind it. Strong released reveal, but discloses a late-season answer before the spoiler boundary and narrows the opening to one chapter.
+C, rejected: Juliette recognizes the birds outside before she recognizes the lie. Recognizable scene, but too compressed to explain the physical clue naturally and less suited to the wider verification angle.
+
+STRUCTURE HINT
+Sixteen independently understandable discussions. Each opens with a concrete detail, separates the television fact from an interpretation, tests alternatives and closes its local question. The sequence expands from a single cleaner to the network's governance and a credible route toward freedom.
+
+FACELESSOS APPLIED
+Master workflow, research and ideation, voice anchoring, humanizer, script structures, retention mechanics, variety rotation, outro psychology and greenlight audit. No automatic scriptwriting pipeline; the narration is written directly by Codex.
+Sleep adaptation: no aggressive rehooks, forced suspense, shouted calls to action or deadline language. Local answers arrive within their chapters. One short, optional mid-video channel mention. The last sentence completes the final discussion.
+Voice: conversational English, contractions, concrete examples and varied sentence lengths. Hushed is a reference for delivery and modular listening; its phrasing and fictional subject matter are not copied.
+
+DURATION
+Writing target approximately 14,400-15,000 words for a calm 120-125 spoken words per minute. This is an editorial estimate, not measured audio. The generic FacelessOS 145 wpm default is deliberately lowered for this sleep format. Rendered narration must be timed before the title's two-hour promise is considered satisfied. No looping or recap padding to hit duration.
+
+LIVRAISON
+script-voix.txt = narration anglaise seule, sans titres, URLs ni consignes.
+chapitres/ = versions de travail par chapitre, dans l'ordre numerique.
+plan-montage.json = reperes et sources par chapitre; timestamps estimates seulement.
+sources.json = sources de verification et limites des hypotheses.
+references-hushed.txt = analyse des references, avec methode et limites.
+audit-editorial.txt = relecture, controles et limites de validation.
+
+Montage sobre pour le sommeil. Aucune musique, voix, image, publication ou depense lancee par ce travail de script. Les scenes citees sont des reperes de verification; leur reutilisation dans une video demande des choix de montage adaptes. Ne pas afficher des predictions comme des captures canoniques.

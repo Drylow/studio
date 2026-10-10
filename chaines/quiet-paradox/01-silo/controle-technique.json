@@ -1,0 +1,63 @@
+{
+  "words": 14687,
+  "chapters": 16,
+  "duration_minutes_estimate": {
+    "at120": 122.39166666666667,
+    "at122": 120.38524590163935,
+    "at125": 117.496,
+    "at145": 101.28965517241379
+  },
+  "measured_audio_seconds": null,
+  "max_paragraph_words": 92,
+  "paragraphs": 213,
+  "non_ascii": false,
+  "urls_in_narration": false,
+  "em_or_en_dashes": false,
+  "source_records": 19,
+  "reference_overlap_test": [
+    {
+      "id": "AjibRjwB0sI",
+      "matches12words": []
+    },
+    {
+      "id": "EQ4SHeWZJ_w",
+      "matches12words": []
+    },
+    {
+      "id": "tmdbTOVWArU",
+      "matches12words": []
+    },
+    {
+      "id": "zHIK3YBE0mY",
+      "matches12words": []
+    },
+    {
+      "id": "bVaFyms_P80",
+      "matches12words": []
+    },
+    {
+      "id": "SiHXE9WvdfE",
+      "matches12words": []
+    },
+    {
+      "id": "40bf7uPYwss",
+      "matches12words": []
+    },
+    {
+      "id": "VwfhFoxn_RU",
+      "matches12words": []
+    },
+    {
+      "id": "Rv0qwuHgGG4",
+      "matches12words": []
+    },
+    {
+      "id": "DpLmWLdyyg0",
+      "matches12words": []
+    },
+    {
+      "id": "8rdGOw2Pgh0",
+      "matches12words": []
+    }
+  ]
+}
