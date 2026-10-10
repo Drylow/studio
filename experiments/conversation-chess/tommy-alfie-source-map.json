@@ -1,0 +1,305 @@
+{
+  "schema": "conversation-chess-actual-three-episode-edl-v1",
+  "status": "Actual source cuts and original editorial comments; native editor export and final review pending.",
+  "master_fps": 30,
+  "sources": {
+    "s02e02": {
+      "filename": "peaky-blinders-s02e02-english-acquired.mp4",
+      "sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "native_max_manifest_height": 720
+    },
+    "s02e06": {
+      "filename": "peaky-blinders-s02e06-english-acquired.mp4",
+      "sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "native_max_manifest_height": 720
+    },
+    "s03e06": {
+      "filename": "peaky-blinders-s03e06-english-acquired.mp4",
+      "sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "native_max_manifest_height": 720
+    }
+  },
+  "source_map": [
+    {
+      "kind": "source",
+      "id": "police-opening",
+      "episode": "S02E02",
+      "source_id": "s02e02",
+      "file": "peaky-blinders-s02e02-english-acquired.mp4",
+      "source_sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "source_in": 692.4,
+      "source_out": 708.5,
+      "duration_frames": 483,
+      "master_in_frames": 0,
+      "master_out_frames": 483,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "war-story-omitted",
+      "title": "AFTER THE WAR STORY",
+      "duration_frames": 90,
+      "master_in_frames": 483,
+      "master_out_frames": 573
+    },
+    {
+      "kind": "source",
+      "id": "telegram-finances",
+      "episode": "S02E02",
+      "source_id": "s02e02",
+      "file": "peaky-blinders-s02e02-english-acquired.mp4",
+      "source_sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "source_in": 744.4,
+      "source_out": 823.6,
+      "duration_frames": 2376,
+      "master_in_frames": 573,
+      "master_out_frames": 2949,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "threat-omitted",
+      "title": "THE OFFER CONTINUES",
+      "duration_frames": 90,
+      "master_in_frames": 2949,
+      "master_out_frames": 3039
+    },
+    {
+      "kind": "source",
+      "id": "offer-cabinet",
+      "episode": "S02E02",
+      "source_id": "s02e02",
+      "file": "peaky-blinders-s02e02-english-acquired.mp4",
+      "source_sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "source_in": 842.0,
+      "source_out": 877.4,
+      "duration_frames": 1062,
+      "master_in_frames": 3039,
+      "master_out_frames": 4101,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "cabinet-logistics-omitted",
+      "title": "AFTER THE CABINET DISCUSSION",
+      "duration_frames": 90,
+      "master_in_frames": 4101,
+      "master_out_frames": 4191
+    },
+    {
+      "kind": "source",
+      "id": "meeting-remembered",
+      "episode": "S02E02",
+      "source_id": "s02e02",
+      "file": "peaky-blinders-s02e02-english-acquired.mp4",
+      "source_sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "source_in": 938.6,
+      "source_out": 943.2,
+      "duration_frames": 138,
+      "master_in_frames": 4191,
+      "master_out_frames": 4329,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "chapter-partnership",
+      "title": "THE PARTNERSHIP TRAP",
+      "duration_frames": 90,
+      "master_in_frames": 4329,
+      "master_out_frames": 4419
+    },
+    {
+      "kind": "source",
+      "id": "contract-to-first-concession",
+      "episode": "S02E06",
+      "source_id": "s02e06",
+      "file": "peaky-blinders-s02e06-english-acquired.mp4",
+      "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+      "source_in": 406.3,
+      "source_out": 699.3,
+      "duration_frames": 8790,
+      "master_in_frames": 4419,
+      "master_out_frames": 13209,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "reflection-omitted",
+      "title": "ALFIE RECONSIDERS THE PRICE",
+      "duration_frames": 90,
+      "master_in_frames": 13209,
+      "master_out_frames": 13299
+    },
+    {
+      "kind": "source",
+      "id": "final-negotiation",
+      "episode": "S02E06",
+      "source_id": "s02e06",
+      "file": "peaky-blinders-s02e06-english-acquired.mp4",
+      "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+      "source_in": 718.1,
+      "source_out": 781.7,
+      "duration_frames": 1908,
+      "master_in_frames": 13299,
+      "master_out_frames": 15207,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "chapter-moral",
+      "title": "THE MORAL COUNTERATTACK",
+      "duration_frames": 90,
+      "master_in_frames": 15207,
+      "master_out_frames": 15297
+    },
+    {
+      "kind": "source",
+      "id": "buyers-criterion",
+      "episode": "S03E06",
+      "source_id": "s03e06",
+      "file": "peaky-blinders-s03e06-english-acquired.mp4",
+      "source_sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "source_in": 1155.8,
+      "source_out": 1163.4333333333334,
+      "duration_frames": 229,
+      "master_in_frames": 15297,
+      "master_out_frames": 15526,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "gun-draw-bridge",
+      "title": "TOMMY DRAWS HIS GUN",
+      "duration_frames": 84,
+      "master_in_frames": 15526,
+      "master_out_frames": 15610
+    },
+    {
+      "kind": "source",
+      "id": "deduction-and-accusation",
+      "episode": "S03E06",
+      "source_id": "s03e06",
+      "file": "peaky-blinders-s03e06-english-acquired.mp4",
+      "source_sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "source_in": 1194.1666666666667,
+      "source_out": 1273.4,
+      "duration_frames": 2377,
+      "master_in_frames": 15610,
+      "master_out_frames": 17987,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "violent-rupture-bridge",
+      "title": "MICHAEL INTERVENES",
+      "duration_frames": 126,
+      "master_in_frames": 17987,
+      "master_out_frames": 18113
+    },
+    {
+      "kind": "source",
+      "id": "moral-counterattack",
+      "episode": "S03E06",
+      "source_id": "s03e06",
+      "file": "peaky-blinders-s03e06-english-acquired.mp4",
+      "source_sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "source_in": 1331.6,
+      "source_out": 1400.4,
+      "duration_frames": 2064,
+      "master_in_frames": 18113,
+      "master_out_frames": 20177,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    },
+    {
+      "kind": "chapter_card",
+      "id": "business-plea-bridge",
+      "title": "MICHAEL ARGUES FOR BUSINESS",
+      "duration_frames": 72,
+      "master_in_frames": 20177,
+      "master_out_frames": 20249
+    },
+    {
+      "kind": "source",
+      "id": "acknowledgement-and-clarification",
+      "episode": "S03E06",
+      "source_id": "s03e06",
+      "file": "peaky-blinders-s03e06-english-acquired.mp4",
+      "source_sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "source_in": 1414.7333333333333,
+      "source_out": 1447.0,
+      "duration_frames": 968,
+      "master_in_frames": 20249,
+      "master_out_frames": 21217,
+      "source_reviewed": true,
+      "actual_dimensions": [
+        1280,
+        720
+      ],
+      "review_method": "Native soft English timing references, local word-timed ASR and actual sampled frames; continuous human listening not claimed."
+    }
+  ],
+  "master_duration_frames": 21217,
+  "master_duration": 707.2333333333333,
+  "editorial_omissions_disclosed": true,
+  "first_speaker": "Tommy",
+  "white": "Tommy",
+  "black": "Alfie",
+  "copyright_clearance": "Protected drama footage; access is not a licence. No claim or monetisation guarantee inferred."
+}

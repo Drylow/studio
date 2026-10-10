@@ -294,7 +294,12 @@ def verify(options):
     peak, clipping, encoded_audio = check_encoded_audio(video, source_peak)
     print(f"Encoded audio boundary: {json.dumps(encoded_audio)}", flush=True)
     motion_count = 0
-    for name, start, seconds, rate in MOTION_SEQUENCES:
+    sequences = ([("early-passage", 0, 5, 8), ("jellyfish", 62, 5, 8),
+                  ("late-passage", 211, 5, 8), ("shoal", 173, 5, 8),
+                  ("boundary-before", 296, 4, 6),
+                  ("boundary-after", 0, 4, 6)]
+                 if illustrated else MOTION_SEQUENCES)
+    for name, start, seconds, rate in sequences:
         run(["ffmpeg", "-hide_banner", "-v", "error", "-y", "-ss", str(start),
              "-i", str(video), "-t", str(seconds), "-vf", f"fps={rate}",
              "-q:v", "2", str(directory / f"{name}-%02d.jpg")])

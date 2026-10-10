@@ -9,17 +9,22 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
-**Peaky est arrêté à la demande de l'utilisateur**, qui a perdu l'accès à sa
-chaîne Google. Aucun long Peaky livré ; garder la préparation et ne pas la
-reprendre automatiquement. Nouveau projet indépendant :
-[`../deep-sea-procedural/`](../deep-sea-procedural/README.md), aperçu sous-marin
-codé de30s, en attente de validation du style.
+**Tommy / Alfie est repris sur instruction de l'utilisateur**, qui a récupéré
+l'accès à son compte Google. La production avance en parallèle du fond Sleep,
+sans publication YouTube. Les trois épisodes locaux sont complets à la lecture
+des conteneurs, anglais natif 720p ; les reçus d'acquisition S2E2/S2E6 du premier
+essai sont périmés et ne décrivent pas cet état local. Les véritables scènes,
+sous-titres séparés, captures et repères ASR ont été examinés.
+[Le découpage](tommy-alfie-source-map.json) et
+[la timeline](tommy-alfie-long-timeline.json) préparent **32 analyses** et
+**15 min 28 s**, avec l'habillage approuvé. Master, export Kdenlive et contrôles
+du film final restent en cours ; aucun nouveau MP4 livré à ce stade.
 
 **Préparation précédente : Tommy Shelby vs Alfie Solomons (Peaky Blinders).**
-[Plan des trois confrontations](PLAN_TOMMY_ALFIE.md). Premier clip BBC réellement
-acquis en 1080p, Tommy ouvre donc Blanc. Les autres sources et le long restent
-en préparation ; voir le haut de `production/REPRISE.md` pour le point précis
-sur les téléchargements Naka. Aucun nouveau MP4 final livré à ce stade.
+[Plan des trois confrontations](PLAN_TOMMY_ALFIE.md). Le montage actuel emploie
+les trois originaux anglais de même résolution 720p native ; l'ancien clip BBC 1080p
+reste une source alternative conservée. La première réplique retenue sur le
+vrai S2E2 vient de Tommy : **Tommy Blanc / Alfie Noir** pendant tout le film.
 
 **Miniatures Tony/Richie : trois propositions avec les SVG originaux Chess.com
 et cinq titres livrés sur Discord.** [Styles et recette](thumbnails/tony-richie-no-e8/README.md).

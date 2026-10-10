@@ -1,12 +1,22 @@
 # Tommy Shelby vs Alfie Solomons — second long
 
-Choix confirmé par l'utilisateur le 10 octobre 2026. Reprendre le montage
+Choix confirmé par l'utilisateur le 10 octobre 2026, puis reprise explicitement
+demandée après résolution du problème de compte Google. Reprendre le montage
 Tony/Richie qu'il a validé : dialogues anglais, analyses humoristiques écrites
 en anglais, aucune voix off, vrais SVG du dossier `assets/chesscom/`, barre fine
 à gauche, frappe/SFX documentés, guide de 16 s et tableau final de 12 s.
-Rendu final dans Kdenlive/MLT et projet éditable. Ce plan est préparatoire :
-il ne certifie pas un long terminé. Le premier clip BBC est acquis et des
-captures réelles sont examinées ; les deux autres confrontations restent à acquérir.
+Rendu final dans Kdenlive/MLT et projet éditable. Ce plan ne certifie pas un
+long terminé. Les trois originaux locaux anglais sont maintenant présents,
+lisibles et mesurés : natifs 1280×720/25fps, maximum accordé par leurs manifestes.
+Le catalogue 1080p ne prouve pas que 1080p soit accessible à ce compte.
+Les anciennes acquisitions et le clip BBC 1080p restent des archives.
+
+Le [découpage réel](tommy-alfie-source-map.json) et
+[la timeline de 32 analyses](tommy-alfie-long-timeline.json) visent 15 min 28 s.
+Ils utilisent les repères privés des fichiers effectivement lus, des captures,
+les sous-titres anglais séparés et l'ASR locale, avec les limites de cette
+revue. Aucune écoute humaine continue n'est revendiquée. Le master et le vrai
+export Kdenlive doivent être décodés et revus avant livraison.
 
 ## Histoire du duel
 
@@ -20,14 +30,14 @@ Trois rencontres dans l'ordre de la série, sans final de plage :
 
 | Chapitre | Épisode | Échange documenté | Sélection à examiner |
 |---|---|---|---|
-| The Bakery Opening | S2E2 | Première rencontre : pain brun/blanc, statut social, refus de boire avant de discuter, policiers et guerre contre Sabini. | Le passage public de sous-titres situe l'accueil autour de 10:15, la question à Tommy à 10:30 et le premier débat jusqu'à environ 12:41. Une extension jusqu'à l'offre d'alliance et d'hommes est possible, jusqu'à environ 15:11. |
-| The Partnership Trap | S2E6 | Tommy apporte un permis d'export. Alfie substitue une exigence de 100 % à l'accord téléphonique préalable. Tommy affirme disposer d'un levier de crise ; Alfie recule à 65 %, puis Tommy négocie 45 % et termine à 35 %. | Début possible après l'appel d'Arthur, à la première demande d'Alfie sur la contrepartie. Fin après la dernière offre de 35 %. Le transcript public n'a pas de timecodes et omet le premier pourcentage : mesurer et confirmer dans le vrai épisode. |
-| The Moral Counterattack | S3E6 | Une liste d'acheteurs incomplète révèle une trahison. Tommy accuse Alfie d'avoir franchi une limite ; Alfie conteste l'exception morale que Tommy réclame pour lui-même. Dernière clarification sur le fils de Tommy. | Les sous-titres publics situent la rencontre vers 19:12–24:55 ; accusation autour de 20:42 et monologue moral vers 23:00. Conserver les réponses et la clarification finale dans les extraits sélectionnés. |
+| The Bakery Opening | S2E2 | Tommy ouvre sur ses liens avec les policiers, relève la défaite d'Alfie et propose une alliance. Alfie répond par des menaces et les conséquences pour son armoire. | Début réel 692,40 s sur Tommy. Le récit de guerre et la longue logistique de l'armoire sont retirés avec des cartes explicites. L'ancien accueil pain/whisky n'est pas dans cette sélection. |
+| The Partnership Trap | S2E6 | Permis d'export, contrat téléphonique de 20 %, demande de 100 %, contre-menace et concessions. Le vrai sous-titre confirme 65 %, puis Alfie propose 45 %, Tommy contre 30 % et finit à 35 %. |406,30–699,30s, puis718,10–781,70s dans le fichier natif ; la réflexion intermédiaire est signalée par une carte. Le vieux brouillon confondait le contrat initial avec le dernier prix : ne pas reprendre 35 % comme point de départ. |
+| The Moral Counterattack | S3E6 | Une omission dans la liste révèle un autre accord. Tommy invoque son fils ; Alfie attaque l'exception morale et précise finalement qu'il ignorait l'enlèvement. | Quatre blocs réels totalisent3min08s. Le tir/bagarre et les interventions de Michael sont retirés avec trois transitions. Le monologue garde deux pauses aux articulations, et la clarification finale demeure. |
 
-Ces repères viennent de sous-titres de diffusion tiers ; ils peuvent être
-décalés sur une autre édition. Ils ne sont pas des points d'entrée/sortie
-validés. Recouper les mots, le locuteur, les images et les silences sur chaque
-fichier original avant de remplir une source map.
+Les repères de la source map viennent des sources locales actuelles. Les
+anciens repères publics conservés plus bas peuvent être décalés d'environ 48 s
+et ne doivent pas remplacer ces positions réelles. L'ASR fait des erreurs de
+mots et de pourcentages ; les sous-titres séparés et les images recoupent le sens.
 
 S2E2 contient un long récit de violence guerrière entre les deux blocs de
 négociation : il n'est pas nécessaire au projet. S3E6 contient un tir et un
@@ -39,12 +49,11 @@ leur attribuer les coups de Tommy ou d'Alfie.
 
 ## Durée visée, à mesurer
 
-Objectif : environ 15 min, avec 9–10 min de vrais échanges sélectionnés,
-30–40 commentaires utiles de 5–7 s, le guide, de brèves cartes de chapitre et
-le bilan. Exemple de budget : 9 min 50 de scènes + 40 × 6,5 s d'analyse +
-16 s de guide + 12 s de bilan + 9 s de cartes = 14 min 47.
+Budget calculé du découpage actuel : master 707,233 s, cartes comprises ;
+32 commentaires totalisent 192,667 s ; guide 16 s et bilan 12 s. Total 927,900 s,
+soit 15 min 27,900 s et 27 837 images à 30 fps. La mesure du vrai export reste requise.
 
-Le budget est un calcul de préparation, pas une durée de clips mesurée.
+Le total reste une durée de montage prévue tant que le vrai MP4 n'est pas mesuré.
 Si S2E6 réclame plus de temps pour garder une négociation compréhensible,
 raccourcir le premier accueil et la liste d'acheteurs plutôt que supprimer
 les répliques qui rendent le retournement intelligible. Garder le monologue
@@ -58,9 +67,10 @@ Les sous-titres S2E2 suggèrent qu'Alfie parle le premier lors de l'accueil
 complet. **Mais le clip BBC acquis, de 257,86 s, commence plus tard, sur
 Tommy expliquant ses liens avec les policiers** : ASR locale recoupée avec
 les sous-titres publics et captures réelles à 0,60 s et 2,30 s.
-Si ce fichier ouvre la vidéo tel quel, **Tommy = Blanc, Alfie = Noir**,
-pendant tout le film. L'accueil antérieur et le tour de boulangerie ne sont
-pas dans ce clip ; ne pas leur attribuer des annotations dans ce découpage.
+L'ouverture actuelle utilise la même réplique dans le vrai épisode à 692,40 s :
+cadre natif à 692,50 s examiné, sous-titre692,56–694,239 et ASR locale recoupés.
+**Tommy = Blanc, Alfie = Noir** pendant tout le film. L'accueil antérieur et le
+tour de boulangerie ne sont pas sélectionnés ; ne pas leur attribuer des annotations.
 Alfie peut ouvrir une rencontre ultérieure sans devenir Blanc. Si le premier
 extrait change, vérifier le premier locuteur et corriger tous les camps avant
 toute notation.
