@@ -46,20 +46,21 @@ n'importe quel obstacle. Chaque nouvelle scène doit refaire ses contrôles.
 
 ## Étape actuelle
 
-Visuels courts codés en HTML/JavaScript, style DREDGE étudié, sans Algrow,
-génération d'images payante ni ressources du jeu. Garder le test sous une
-minute. Choisir le premier récit avec l'utilisateur après validation de cette
-cohérence ; aucun long, script ou voix off n'est lancé à cette étape.
+**Décision du 10 octobre : produire d'abord une boucle de cinq minutes**,
+entièrement codée en HTML/JavaScript, détaillée et fluide. DREDGE et Subnautica
+servent de références visuelles documentées dans `STYLE_SLEEP.md` ; aucun
+asset de jeu, Algrow ou générateur d'images payant. L'utilisateur vérifiera
+cette boucle avant tout premier récit, script, voix ou épisode de deux heures.
 
-## Piste sleep envisagée ensuite
+## Format sleep choisi
 
-L'utilisateur envisage une chaîne **sleep** avec récits marins réels de deux
-heures et collaboration avec la chaîne sleep existante de son collègue.
-Il propose un fond immersif d'environ cinq minutes répété en boucle.
-La durée, le premier sujet, la langue et la voix restent à choisir ; aucune
-production de deux heures ni invitation de collaboration n'a été lancée.
+L'utilisateur choisit une chaîne **sleep** avec récits marins réels : **tous
+les épisodes feront deux heures**, avec la boucle de cinq minutes répétée
+**24 fois**. Collaboration envisagée avec leur chaîne sleep existante.
+Le premier sujet, la langue et la voix restent à choisir ; aucune production
+de deux heures ni invitation de collaboration n'a été lancée.
 
-Cette variante privilégierait une lumière stable, des mouvements lents, des
+Cette variante privilégie une lumière stable, des mouvements lents, des
 passages espacés et une voix calme. La boucle doit raccorder réellement la
 caméra, les animaux, les particules et l'ambiance sonore. **L'aperçu actuel
 de 24 secondes est un test de cohérence, pas cette boucle sleep achevée.**

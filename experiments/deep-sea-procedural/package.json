@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "build:sleep": "node build.mjs --sleep",
+    "render:sleep": "node capture-loop.mjs",
     "render": "node capture.mjs"
   },
   "dependencies": {

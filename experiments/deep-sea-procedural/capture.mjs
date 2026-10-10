@@ -10,6 +10,7 @@ import { chromium } from 'playwright';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const args=process.argv.slice(2);
 function arg(name,fallback){const i=args.indexOf(name);return i<0?fallback:args[i+1];}
+const distribution=path.resolve(here,arg('--dist','dist'));
 const out=path.resolve(arg('--out',path.join(here,'renders/preview.mp4')));
 const stills=arg('--stills','');
 const fps=Number(arg('--fps','30')), duration=Number(arg('--duration','24'));
@@ -30,7 +31,7 @@ const files=new Map([
 const server=http.createServer(async(req,res)=>{
   const file=files.get(new URL(req.url,'http://localhost').pathname);
   if(!file){res.writeHead(404);res.end();return;}
-  try{const bytes=await readFile(path.join(here,'dist',file[0]));res.writeHead(200,{'Content-Type':file[1]});res.end(bytes);}
+  try{const bytes=await readFile(path.join(distribution,file[0]));res.writeHead(200,{'Content-Type':file[1]});res.end(bytes);}
   catch{res.writeHead(500);res.end('Build the prototype first.');}
 });
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

@@ -1,5 +1,63 @@
 # Les profondeurs — exploration 3D codée
 
+## Boucle sleep de cinq minutes — en cours
+
+Direction actuelle : **histoires marines vraies, ambiance calme et inquiétante**.
+Les futurs épisodes visent deux heures : ce fond de **300 secondes** pourra
+être répété **24 fois** sous une narration originale. Le fond est un parcours
+continu de cinq minutes, pas une répétition de l'aperçu de 24 secondes.
+**Export et contrôle final en cours : aucune livraison de cette boucle n'est
+encore annoncée.** Aucun épisode de deux heures, script, voix off ou publication
+n'est produit à cette étape.
+
+La scène conserve des volumes originaux entièrement codés : relief, rochers,
+détails de surface procéduraux et vie sur le fond. Sept racines animées
+réunissent une baudroie, deux méduses, deux bancs et deux raies. Caméra,
+animaux, particules et ambiance sonore suivent des cycles de 300 secondes,
+sans fondu final ; le raccord et les passages libres doivent être contrôlés.
+Les animaux sont des reconstitutions illustratives, pas des prises de vue
+scientifiques ni des modèles repris du jeu.
+
+Le lecteur se construit séparément dans `dist-sleep/`. Depuis la racine du dépôt,
+créer l'ambiance originale avec la venv existante et NumPy :
+
+```bash
+.venv/bin/python experiments/deep-sea-procedural/make-sleep-ambience.py \
+  --seconds 300 --out /tmp/deepsea-sleep-5m/ambience-master.wav
+```
+
+Puis, depuis `experiments/deep-sea-procedural/` :
+
+```bash
+npm run build:sleep
+node verify-sleep-loop.mjs --out /tmp/deepsea-sleep-5m/loop-check.json
+node capture-loop.mjs \
+  --out /tmp/deepsea-sleep-5m/Les-Profondeurs-Boucle-Sleep-5min.mp4 \
+  --audio /tmp/deepsea-sleep-5m/ambience-master.wav
+```
+
+La capture vise **1920×1080 natif, 30 images/s, 9 000 images**, H.264 CRF17,
+avec anticrénelage et ambiance AAC stéréo. Elle enregistre des blocs de
+10 secondes vérifiés par nombre d'images et SHA-256. Pour reprendre après
+une interruption, relancer la même commande en ajoutant `--resume` : les
+empreintes du lecteur, de la scène, du script de capture et de l'audio doivent
+être identiques. Un verrou restant ne se retire qu'après confirmation de
+l'arrêt du processus ; un MP4 terminé n'est jamais écrasé.
+
+Le contrôle `verify-sleep-loop.mjs` inspecte le raccord visuel, le retour
+arrière déterministe, les mouvements et les passages à partir des modèles
+entiers animés. Il ne remplace pas le **QA du MP4 terminé** : décodage A/V
+intégral, durée et nombre d'images, raccord audio, saturation et revue des
+images restent requis avant livraison. Les rapports de capture gardent les
+indicateurs de contrôle final à `false` jusqu'à ce travail effectif.
+
+L'[évaluation de fframes](FFRAMES_REVIEW.md) décrit une option locale gratuite
+sous licence MIT, en Rust/SVG, avec rendu GPU pour les habillages et animations
+de texte. Ce n'est pas un import direct de notre JavaScript Three.js ; aucune
+installation ni accélération de cette boucle avec fframes n'est revendiquée.
+
+## Historique — aperçus d'exploration de 24 secondes
+
 Nouvelle chaîne YouTube envisagée : **vrais fonds marins, ambiance inquiétante
 inspirée de DREDGE**, entièrement construite en HTML/JavaScript, sans Algrow
 ni générateur d'images. Le 10 octobre 2026, le premier essai est rejeté comme
@@ -8,7 +66,7 @@ mais l'utilisateur trouve les créatures trop « goofy » et la baudroie trop ri
 comme morte. Il demande des formes plus belles et une animation plus vivante,
 en étudiant réellement le style du jeu.
 
-**V4 : 24 secondes seulement, exportée et livrée.** La direction
+**Archive V4 : 24 secondes seulement, exportée et livrée.** La direction
 associe des silhouettes plus sobres, des mouvements du corps et des nageoires,
 un banc qui change de forme et une caméra qui suit brièvement la rencontre.
 La [recherche DREDGE](STYLE_DREDGE.md) distingue les grandes créatures 3D des
@@ -21,9 +79,10 @@ rochers qui les obstruent. Les faits et visuels devront suivre la narration.
 Direction confirmée : **histoires vraies, ambiance inquiétante**. L'utilisateur
 envisage ensuite une variante sleep : récits de deux heures, boucle calme
 d'environ cinq minutes et collaboration avec une chaîne existante. Voir
-[DIRECTION.md](DIRECTION.md). Aucun long, script, voix ou boucle sleep n'est lancé.
+[DIRECTION.md](DIRECTION.md). La section ci-dessus décrit la boucle désormais
+en cours ; les livraisons qui suivent restent les anciens aperçus courts.
 
-## Aperçu V4 livré — 10 octobre 2026
+### Aperçu V4 livré — archive du 10 octobre 2026
 
 [Voir les passages corrigés sur GoFile](https://gofile.io/d/nrriY6iM).
 
@@ -55,7 +114,7 @@ La mise en scène reste préparée : un nouvel animal ou trajet nécessite de
 réserver ses passages et de refaire les contrôles, pas une collision dynamique
 universelle. La V4 corrige ce test ; elle ne constitue pas encore la boucle sleep.
 
-## Ce qui est réellement calculé
+## Ce qui est réellement calculé dans les aperçus V1–V4
 
 - Caméra en vue subjective : environ 43 mètres de parcours virtuel, légère
   dérive, tangage et roulis ; rochers proches et silhouettes lointaines.
@@ -86,7 +145,7 @@ image, interface, son ou extrait du jeu n'est repris. Les volumes sont originaux
 Les seules formes Canvas actuelles sont une minuscule texture de particule
 créée par le code ; le film est capturé directement depuis le canvas WebGL.
 
-## Installation et lecteur autonome
+## Installation et lecteur autonome de l'aperçu V4
 
 Node.js, Chromium et FFmpeg sont nécessaires à l'export. Les versions sont
 fixées dans `package-lock.json`. Dans ce dossier :
@@ -148,7 +207,7 @@ Le rapport voisin du MP4 indique taille, SHA-256, durée, cadence, nombre
 réel d'images, temps d'export et erreurs du navigateur. Le rendu laisse les
 indicateurs de contrôle final à `false` : seul le QA du fichier terminé les valide.
 
-## Coût et vitesse
+## Coût et vitesse des aperçus courts
 
 **Zéro appel de génération et zéro facturation à l'image.** Aucune API Algrow
 ni autre fournisseur n'est utilisée. Three.js est sous licence MIT, incluse
