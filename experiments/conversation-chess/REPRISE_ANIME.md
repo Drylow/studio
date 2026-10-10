@@ -134,3 +134,10 @@ Sources anglaises 1080p déjà remasterisées en amont, pas un master studio bru
 Sept analyses écrites à la main, guide Sneaky Snitch, bilan natif sans Subscribe.
 État précis de l'export et de sa QA dans la fiche de production ; ne pas
 confondre une timeline validée avec une vidéo déjà vérifiée.
+
+Livraison complète vérifiée le 11 octobre :
+`work/conversation-chess/death-note-light-l-v1/L-Outsmarts-Light-Death-Note.mp4`,
+7 min 29,1 s, 1080p, doublage anglais. Reçu `episodes/light-vs-l.qa.json` et
+texte de publication `episodes/light-vs-l.publish.txt`. Projet Kdenlive et médias
+locaux dans le même dossier, sous `kdenlive/`. La finition audio ajoute 6 dB aux
+scènes seules ; la refaire après un nouvel export natif. Aucune publication.

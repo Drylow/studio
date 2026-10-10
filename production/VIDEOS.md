@@ -542,3 +542,15 @@ a personal garment. Opaque object corrections remove unsolicited alpha.
 No completed new full film, no repeated-image padding, no upload/publication
 and no frontend edits. Source prompts, actual request receipts and rejection
 notes preserve the unfinished work for a truthful continuation.
+
+## Anime Chess - 11 October 2026, L versus Light
+
+Completed local delivery: L Outsmarts Light Analysed like Chess | Death Note.
+7m29.1s, 1920x1080, 30fps, seven personally authored annotations, original
+English dub, original Chess.com rating icons and native Kdenlive recap.
+All 13,473 frames inspected across 68 contact sheets; 38 larger captures and
+three full-resolution captures checked. Full decode passed; final sound
+-19.2 LUFS, -3.2 dBFS true peak. Source copies remastered upstream; not a
+verified studio master. Report and reproduction steps: experiments/conversation-chess/DEATH_NOTE.md.
+Current MP4 and editable media bundle remain in work/conversation-chess/death-note-light-l-v1/.
+Timeline, publishing text and QA receipt backed up in Git. No upload or publication.

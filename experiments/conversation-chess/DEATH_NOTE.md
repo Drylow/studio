@@ -63,3 +63,43 @@ Ajouter à la description les crédits de musique présents dans le bundle
 Les sources, transcriptions intégrales, médias de montage et vidéos sont dans
 `work/`, ignoré par Git. Les conserver sur ce PC avec le projet et son dossier
 `media/`. Ni publication YouTube ni envoi Discord ne sont déclenchés.
+
+
+## Reproduire l'export local
+
+Depuis la racine du dépôt :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Source work/chess-studio/death-note/sources/light-vs-l-broadcast-1080.mp4 -Timeline experiments/conversation-chess/episodes/light-vs-l.json -Out work/conversation-chess/death-note-light-l-new
+python experiments/conversation-chess/finish-dialogue-audio.py --bundle work/conversation-chess/death-note-light-l-new/kdenlive --out work/conversation-chess/death-note-light-l-new/L-Outsmarts-Light-Death-Note.mp4 --gain-db 6
+```
+
+La finition augmente de 6 dB le son des huit passages de scène uniquement.
+Guide, clavier, accents de notation et bilan gardent leur niveau. Les dialogues
+et la musique intégrée au clip restent dans le même rapport. Le MP4 natif est
+préservé ; le flux vidéo de la livraison est copié sans réencodage et son hash
+est comparé. Une mesure des crêtes et un décodage intégral sont obligatoires.
+Cette étape produit un reçu `.audio.json`. Le projet natif conserve le niveau
+initial des sources ; appliquer la même finition après tout nouvel export.
+
+## Livraison vérifiée — 11 octobre 2026
+
+Fichier courant : `work/conversation-chess/death-note-light-l-v1/L-Outsmarts-Light-Death-Note.mp4`.
+Durée 7 min 29,1 s ; 1920×1080, 30 images/s, 13 473 images ; H264 et AAC
+stéréo 192 kb/s, 48 kHz. Taille 197 943 752 octets. Le reçu public
+`episodes/light-vs-l.qa.json` conserve le SHA256 et les résultats.
+
+Les 68 planches représentant toutes les images ont été regardées. Les 38 captures
+sélectionnées ont été examinées en montages de plus grande taille, puis les pions
+blanc/noir et le bilan en captures pleine résolution : textes lisibles, camps
+cohérents, comptage des sept coups correct. Le décodage intégral passe.
+Son final : -19,2 LUFS intégrés, crête vraie -3,2 dBFS. Les points de pause sont
+placés après les mots alignés ; la dernière réplique complète est conservée.
+Les effets de clavier cessent avant les queues de lecture, toutes silencieuses.
+Ces contrôles ne sont pas une écoute humaine continue de tout le film.
+
+Projet éditable : `work/conversation-chess/death-note-light-l-v1/kdenlive/project.kdenlive`,
+à conserver avec `media/`. Le titre, la description et l'attribution musicale
+sont dans `episodes/light-vs-l.publish.txt` et dans `PUBLISH.txt` près du MP4.
+Les textes, paramètres et contrôles sont sauvegardés dans Git ; les vidéos,
+sources et le bundle lourd restent locaux dans `work/`.
