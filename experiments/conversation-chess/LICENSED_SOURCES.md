@@ -1,5 +1,10 @@
 # Sources autorisées pour le format d'analyse
 
+La [recherche sur les revenus](REVENUE_RESEARCH.md) distingue les cas vécus,
+les données globales YouTube et le risque inconnu propre aux Sopranos.
+Les séries modernes populaires restent des pistes éditoriales, pas des
+sources libres de réclamation ou dont les revenus sont garantis.
+
 Recherche du 10 octobre après deux tests Sopranos réclamés : E8 dans le long,
 E3 dans le court. La source à analyser doit désormais être choisie avec des
 droits couvrant montage, diffusion et usage commercial. Ne pas sélectionner
