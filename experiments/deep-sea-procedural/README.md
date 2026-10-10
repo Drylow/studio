@@ -41,6 +41,11 @@ node verify-sleep-loop.mjs --out /tmp/deepsea-sleep-5m/loop-check.json
 node capture-loop.mjs \
   --out /tmp/deepsea-sleep-5m/Les-Profondeurs-Boucle-Sleep-5min.mp4 \
   --audio /tmp/deepsea-sleep-5m/ambience-master.wav
+../../.venv/bin/python verify-sleep-render.py \
+  --video /tmp/deepsea-sleep-5m/Les-Profondeurs-Boucle-Sleep-5min.mp4 \
+  --scene-check /tmp/deepsea-sleep-5m/loop-check.json \
+  --ambience-check /tmp/deepsea-sleep-5m/ambience-master.json \
+  --out-dir /tmp/deepsea-sleep-5m/check
 ```
 
 La capture vise **1920×1080 natif, 30 images/s, 9 000 images**, H.264 CRF17,
