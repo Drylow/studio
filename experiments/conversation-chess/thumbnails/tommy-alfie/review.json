@@ -1,0 +1,10 @@
+{
+  "status": "proposal_not_selected",
+  "sha256": "55ebe9578802d96f3cbce826e96e805c256a6515641b213f75fc215731eb98fe",
+  "width": 1672,
+  "height": 941,
+  "bytes": 441512,
+  "visually_reviewed_full_and_320": true,
+  "icons": "Original Brilliant/Blunder SVG from existing ratings.json, separately composed, hashes checked",
+  "full_video_finished": false
+}

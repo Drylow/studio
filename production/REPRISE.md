@@ -11,6 +11,9 @@ Un clip BBC de S2E2 est réellement acquis en 1920×1080, 25 fps, anglais ;
 logo BBC conservé. Il ouvre sur Tommy : Tommy Blanc / Alfie Noir. Douze analyses
 du premier chapitre sont préparées et validées structurellement, pas de long
 exporté. Kdenlive natif testé avec image, alpha et pistes audio séparées.
+Préparation du premier chapitre : `tommy-alfie-first-chapter-timeline.json` ;
+proposition de miniature et trois titres : `thumbnails/tommy-alfie/`, dans le
+même dossier. Aucun choix de miniature présumé ni nouveau kit Discord envoyé.
 
 Les imports publics des deux autres scènes n'ont pas fourni de fichier après
 des erreurs fournisseur/délais. Les trois épisodes Naka sont proposés en 1080p,
