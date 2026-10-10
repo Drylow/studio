@@ -205,3 +205,15 @@ concerne une autre allégation.
 Collecte préparée et testée avec refus des scores provisoires, absents et des matchs abandonnés ;
 voir `production/NEWS_BRIEFS.md`. Aucun résumé produit avant résultat final, aucune attente automatique
 lancée. L'automatisation quotidienne reste reportée à la demande de l'utilisateur.
+
+## Anime Chess - 11 October 2026, L versus Light
+
+Completed local delivery: L Outsmarts Light Analysed like Chess | Death Note.
+7m29.1s, 1920x1080, 30fps, seven personally authored annotations, original
+English dub, original Chess.com rating icons and native Kdenlive recap.
+All 13,473 frames inspected across 68 contact sheets; 38 larger captures and
+three full-resolution captures checked. Full decode passed; final sound
+-19.2 LUFS, -3.2 dBFS true peak. Source copies remastered upstream; not a
+verified studio master. Report and reproduction steps: experiments/conversation-chess/DEATH_NOTE.md.
+Current MP4 and editable media bundle remain in work/conversation-chess/death-note-light-l-v1/.
+Timeline, publishing text and QA receipt backed up in Git. No upload or publication.
