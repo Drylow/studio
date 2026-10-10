@@ -44,7 +44,7 @@ try{
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   await page.addInitScript(()=>{window.__CAPTURE_MODE__=true;});
   await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm);
-  const sceneInfo=await page.evaluate(()=>({duration:window.DeepSeaFilm.duration,antialias:window.DeepSeaFilm.antialias,renderer:window.DeepSeaFilm.renderer}));
+  const sceneInfo=await page.evaluate(()=>({duration:window.DeepSeaFilm.duration,antialias:window.DeepSeaFilm.antialias,renderer:window.DeepSeaFilm.renderer,layout:window.DeepSeaFilm.layout}));
   const filmDuration=sceneInfo.duration;
   if(duration>filmDuration)throw new Error(`The current scene lasts ${filmDuration} seconds.`);
   async function grab(t,format='image/jpeg'){

@@ -8,41 +8,52 @@ mais l'utilisateur trouve les créatures trop « goofy » et la baudroie trop ri
 comme morte. Il demande des formes plus belles et une animation plus vivante,
 en étudiant réellement le style du jeu.
 
-**V3 : 24 secondes seulement, exportée et livrée.** La direction
+**V4 : 24 secondes seulement, exportée et livrée.** La direction
 associe des silhouettes plus sobres, des mouvements du corps et des nageoires,
 un banc qui change de forme et une caméra qui suit brièvement la rencontre.
 La [recherche DREDGE](STYLE_DREDGE.md) distingue les grandes créatures 3D des
 illustrations de poissons en 2D et décrit les sources effectivement regardées.
 
-Aucun long de 15–20 minutes n'est lancé. Attendre la validation de ces visuels
-avant de choisir la niche et le thème, puis d'ajouter script, voix off et montage.
+Retour V3 : « pas trop mal », mais les poissons traversent des rochers. La V4
+réserve leurs passages à partir des modèles entiers animés, puis déplace les
+rochers qui les obstruent. Les faits et visuels devront suivre la narration.
 
-## Aperçu V3 livré — 10 octobre 2026
+Direction confirmée : **histoires vraies, ambiance inquiétante**. L'utilisateur
+envisage ensuite une variante sleep : récits de deux heures, boucle calme
+d'environ cinq minutes et collaboration avec une chaîne existante. Voir
+[DIRECTION.md](DIRECTION.md). Aucun long, script, voix ou boucle sleep n'est lancé.
 
-[Voir le nouvel aperçu V3 sur GoFile](https://gofile.io/d/6pQee3FV).
+## Aperçu V4 livré — 10 octobre 2026
 
-- `Les-Profondeurs-V3-Nage-24s.mp4` : 24 s, 1920×1080 natif, 30 images/s,
-  720 images, 9 840 323 octets ; ambiance originale, sans voix off.
-- `Exploration-3D-V3-HTML.zip` : lecteur autonome sans son, 198 898 octets ;
+[Voir les passages corrigés sur GoFile](https://gofile.io/d/nrriY6iM).
+
+- `Les-Profondeurs-V4-Passages-Libres-24s.mp4` : 24 s, 1920×1080 natif,
+  30 images/s, 720 images, 9 438 720 octets, sans voix.
+- `Exploration-3D-V4-HTML.zip` : lecteur autonome sans son, 199 550 octets ;
   extraire puis ouvrir `Les-Profondeurs-3D/index.html`, sans installation.
 
 SHA-256 du MP4 :
-`7b746b1e093f6173767ee1d57ac54c5abdc278f68fddf5ff4938fefa111ec438`.
-Les deux uploads sont vérifiés auprès de GoFile par taille et MD5.
-Décodage vidéo/audio intégral sans erreur ; pic audio −18,51 dBFS, aucun
-échantillon saturé. Revue du fichier final : 12 images réparties, 40 images
-du passage du poisson à 8 images/s, 16 de la méduse à 4 images/s et quatre
-images natives 1080. Seconde revue indépendante des planches et deux images
-natives. Aucune lecture continue ni écoute intégrale humaine n'est prétendue.
+`713d498db228157c46c5eb53b29ff707350ad8d23602c55ab016075b4ba7000d`.
+Les deux uploads sont vérifiés par taille/MD5. Décodage A/V intégral sans erreur,
+pic audio −18,51 dBFS, aucune saturation. Revue du MP4 terminé : 12 captures
+réparties, 40 images du passage de la baudroie, 16 de la méduse et quatre vues
+natives 1080. Pas de lecture continue ni d'écoute complète humaine prétendue.
 
-Les coordonnées locales vérifiées dans le navigateur changent réellement :
-le corps se déforme de jusqu'à 0,250 unité sur une demi-seconde, indépendamment
-du déplacement de l'animal dans le décor. Queue, membranes, leurre, banc,
-cloche et bras de la méduse évoluent aussi. Les contrôles confirment des
-coordonnées finies, une recherche temporelle reproductible et des racines
-de modèles inchangées par la bibliothèque d'animation. Le contexte WebGL
-confirme l'anticrénelage actif ; aucune erreur navigateur pendant l'export.
-La qualité artistique reste soumise à l'avis de l'utilisateur.
+**Cohérence physique vérifiée indépendamment sur 1 441 poses à 60 poses/s** :
+aucun recouvrement entre les volumes entiers animés et les rochers retenus,
+ni avec le passage de la caméra. La réserve de construction prend 721 poses
+à 30 poses/s, élargies de 0,40 unité, et une marge caméra de 0,55 unité.
+Les 122 rochers sont conservés, dont 26 déplacés latéralement hors des passages.
+Le contrôle indépendant mesure au minimum 0,433 unité aux rochers et 0,832
+au sol réel, interpolé dans les triangles sous chaque sommet du modèle.
+Un second contrôle Chromium confirme positions finies, retour arrière
+reproductible, absence d'erreur et anticrénelage actif. Il s'agit de poses
+échantillonnées, pas d'une preuve de simulation physique continue.
+
+Le banc continue hors champ au lieu d'être masqué à une heure donnée.
+La mise en scène reste préparée : un nouvel animal ou trajet nécessite de
+réserver ses passages et de refaire les contrôles, pas une collision dynamique
+universelle. La V4 corrige ce test ; elle ne constitue pas encore la boucle sleep.
 
 ## Ce qui est réellement calculé
 
@@ -94,20 +105,20 @@ ni clé. Le ZIP livré peut être extrait puis ouvert, sans installation.
 La capture sert uniquement les fichiers publics prévus sur 127.0.0.1 et
 interdit les requêtes du navigateur vers une autre origine.
 
-## Export de la V3
+## Export de la V4
 
 Depuis la racine du dépôt :
 
 ```bash
 python experiments/deep-sea-procedural/make-ambience.py \
-  --seconds 24 --out /tmp/deepsea-v3/ambience.wav
+  --seconds 24 --out /tmp/deepsea-v4/ambience.wav
 ```
 
 Puis, depuis ce dossier :
 
 ```bash
-node capture.mjs --out /tmp/deepsea-v3/apercu-3d-v3.mp4 \
-  --duration 24 --audio /tmp/deepsea-v3/ambience.wav
+node capture.mjs --out /tmp/deepsea-v4/apercu-3d-v4.mp4 \
+  --duration 24 --audio /tmp/deepsea-v4/ambience.wav
 ```
 
 Images **natives 1920×1080**, H.264 CRF17, 30 images/s, 720 images ; ambiance
@@ -119,8 +130,19 @@ ou retirer son verrou seulement après avoir confirmé l'arrêt du processus.
 Contrôles avant export :
 
 ```bash
-node capture.mjs --stills 2,5,12,13,20,22 --stills-dir /tmp/deepsea-v3/review
+node capture.mjs --stills 2,5,12,13,20,22 --stills-dir /tmp/deepsea-v4/review
 ```
+
+Contrôle reproductible de l'espace libre, depuis ce dossier :
+
+```bash
+node verify-clearance.mjs --out /tmp/deepsea-v4/clearance.json
+```
+
+Il inspecte dans Chromium les vrais volumes déformés à 60 poses/s et toutes
+les boîtes des rochers, puis vérifie retour arrière, visibilité et coordonnées
+finies. Il échoue si un chevauchement est trouvé. Le contrôle géométrique
+indépendant du sol effectué pour la V4 n'est pas inclus dans ce CLI.
 
 Le rapport voisin du MP4 indique taille, SHA-256, durée, cadence, nombre
 réel d'images, temps d'export et erreurs du navigateur. Le rendu laisse les
@@ -134,7 +156,11 @@ dans le ZIP. Le développement utilise la session, et le calcul la machine :
 ce n'est pas une promesse de coût global nul.
 
 Le navigateur disponible utilise **SwiftShader sur processeur**, sans GPU local.
-La V3 complète a pris **257,221 s pour 720 images**, soit environ 2,80 images
+La V4 a pris **218,418 s pour 720 images** sur la machine actuelle, capture
+et encodage inclus. Ce résultat ne mesure pas le futur fond sleep ni deux
+heures de narration ; la charge et le cadrage peuvent influencer la durée.
+
+La V3 complète avait pris **257,221 s pour 720 images**, soit environ 2,80 images
 calculées/s, capture et encodage inclus. Elle prend davantage de temps que la
 V2 (180,586 s) : géométrie enrichie, déformations et anticrénelage actif donnent
 la priorité au rendu demandé. Ces chiffres n'isolent pas le coût de chaque
@@ -163,6 +189,37 @@ l'allongement de ce trajet. Les gains d'un GPU ou d'un montage long restent
 à mesurer ; ne pas annoncer une cadence de production finale sur ce seul essai.
 
 ## Archives et références
+
+### Aperçu V3 livré — archive du 10 octobre 2026
+
+[Voir le nouvel aperçu V3 sur GoFile](https://gofile.io/d/6pQee3FV).
+
+- `Les-Profondeurs-V3-Nage-24s.mp4` : 24 s, 1920×1080 natif, 30 images/s,
+  720 images, 9 840 323 octets ; ambiance originale, sans voix off.
+- `Exploration-3D-V3-HTML.zip` : lecteur autonome sans son, 198 898 octets ;
+  extraire puis ouvrir `Les-Profondeurs-3D/index.html`, sans installation.
+
+SHA-256 du MP4 :
+`7b746b1e093f6173767ee1d57ac54c5abdc278f68fddf5ff4938fefa111ec438`.
+Les deux uploads sont vérifiés auprès de GoFile par taille et MD5.
+Décodage vidéo/audio intégral sans erreur ; pic audio −18,51 dBFS, aucun
+échantillon saturé. Revue du fichier final : 12 images réparties, 40 images
+du passage du poisson à 8 images/s, 16 de la méduse à 4 images/s et quatre
+images natives 1080. Seconde revue indépendante des planches et deux images
+natives. Aucune lecture continue ni écoute intégrale humaine n'est prétendue.
+
+Les coordonnées locales vérifiées dans le navigateur changent réellement :
+le corps se déforme de jusqu'à 0,250 unité sur une demi-seconde, indépendamment
+du déplacement de l'animal dans le décor. Queue, membranes, leurre, banc,
+cloche et bras de la méduse évoluent aussi. Les contrôles confirment des
+coordonnées finies, une recherche temporelle reproductible et des racines
+de modèles inchangées par la bibliothèque d'animation. Le contexte WebGL
+confirme l'anticrénelage actif ; aucune erreur navigateur pendant l'export.
+La qualité artistique reste soumise à l'avis de l'utilisateur.
+
+Retour reçu : modèles appréciés davantage, mais traversées de rochers signalées.
+La revue d'images V3 ne constituait pas un contrôle de collision ; voir V4.
+
 
 ### Aperçu V2 livré — archive du 10 octobre 2026
 

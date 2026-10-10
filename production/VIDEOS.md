@@ -1,5 +1,22 @@
 # Journal des vidéos
 
+## Fonds marins — V4, passages libres et piste sleep — 10 octobre 2026
+
+Livraison : https://gofile.io/d/nrriY6iM — `Les-Profondeurs-V4-Passages-Libres-24s.mp4`
+et `Exploration-3D-V4-HTML.zip`. 24 s, natif 1080p30, 720 images, 9 438 720 octets,
+export 218,418 s. Modèles/nage V3 gardés ; passages préparés depuis les géométries
+entières animées, 26 rochers déplacés sur 122. Aucun recouvrement sur 1 441 poses
+indépendantes à 60 poses/s, marges minimales : 0,433 aux rochers et 0,832 au sol réel. Caméra aussi contrôlée,
+banc continue hors champ, seek reproductible, MSAA actif, 0 erreur navigateur.
+Décodage A/V complet, aucune saturation ; 12 captures générales, 40 images poisson,
+16 images méduse et quatre vues natives du MP4 final revues, sans lecture/écoute continue
+prétendue. Deux uploads confirmés taille/MD5, zéro génération payante.
+Direction confirmée : récits vrais, ambiance inquiétante. Piste sleep ensuite
+envisagée par utilisateur : deux heures de récits avec boucle calme de cinq
+minutes et collaboration avec une chaîne sleep existante. Recherche/sources
+et limites dans `experiments/deep-sea-procedural/DIRECTION.md`. Le présent
+aperçu n'est pas une boucle sleep ; aucun long, script, voix ou collab lancés.
+
 ## Fonds marins — V3, silhouettes sobres et nage vivante — 10 octobre 2026
 
 Livraison : https://gofile.io/d/6pQee3FV — `Les-Profondeurs-V3-Nage-24s.mp4`
@@ -16,7 +33,7 @@ Décodage A/V complet sans erreur, pic −18,51 dBFS, aucune saturation ;
 natives du MP4 final revues. Seconde revue indépendante des planches/deux
 vues natives. Pas de lecture continue ni d'écoute complète prétendue.
 Uploads vérifiés par taille/MD5, déformations déterministes et finies contrôlées.
-Style soumis à l'avis utilisateur, aucun long lancé ni envoi YouTube/Discord.
+Retour utilisateur : « pas trop mal » mais traversées de rochers, corrigées en V4. Aucun long lancé ni envoi YouTube/Discord.
 Sources et recette : `experiments/deep-sea-procedural/README.md`.
 
 ## Fonds marins — V2 immersive, créatures en 3D — 10 octobre 2026

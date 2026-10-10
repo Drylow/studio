@@ -2,6 +2,30 @@
 
 ## Nouveau projet — fonds marins, aperçu entièrement codé
 
+**Dernière livraison V4 : https://gofile.io/d/nrriY6iM**, 24 s/1080p30,
+720 images, 9 438 720 octets ; export 218,418 s, MP4 et lecteur HTML en ZIP.
+Retour V3 : « pas trop mal », mais poissons traversant les cailloux. Réserve
+calculée depuis les géométries entières animées à 30 poses/s + marge de 0,40 ;
+122 rochers conservés dont 26 déplacés. Banc maintenu hors champ naturellement.
+Contrôle indépendant à 60 poses/s : 1 441 poses, 0 recouvrement, distances minimales : 0,433
+aux rochers et 0,832 au sol réel. Chromium confirme finitude, retour arrière,
+visibilité continue, aucune erreur et MSAA. CLI reproductible :
+`experiments/deep-sea-procedural/verify-clearance.mjs` (sol non inclus dans le CLI).
+Décodage A/V intégral et revue du MP4 final : 12 captures générales, 40 images
+poisson, 16 images méduse et quatre vues 1080, sans lecture/écoute continue prétendue ; aucun
+échantillon saturé, uploads confirmés taille/MD5. Ce n'est pas une boucle sleep.
+
+**Direction utilisateur : histoires vraies, ambiance inquiétante**, visuels
+raccordés à ce que dit la voix. Puis il envisage une chaîne **sleep** : récits
+de deux heures, fond calme d'environ cinq minutes en boucle, collaboration
+avec leur chaîne sleep existante. Recherche confirme un catalogue vaste
+(exploration, épaves, nature, lieux extrêmes, enquêtes résolues). Proposition :
+plusieurs récits liés par épisode. Détails/sources dans `DIRECTION.md`.
+Premier sujet/langue/voix/format final à choisir ; aucun long, script, voix,
+invitation YouTube ou boucle sleep lancés. Aucun changement du site/automatismes.
+
+Archive de la livraison précédente :
+
 **V3 livrée le 10 octobre : https://gofile.io/d/6pQee3FV**, MP4 et lecteur
 HTML autonome en ZIP. 24 s, 1920×1080 natif/30fps, 720 images,
 9 840 323 octets ; export complet 257,221 s. Dernier retour : la V2 est
@@ -19,8 +43,8 @@ quatre images natives. Revue indépendante supplémentaire des planches/deux
 images natives. Déformations locales vérifiées, animation finie/déterministe ;
 aucune lecture continue ou écoute humaine complète prétendue. Taille et MD5
 des deux uploads confirmés. Aucun appel de génération payant, script ou voix.
-Le style attend l'avis utilisateur : **pas de long de 15–20 minutes**, choix
-de niche/thème seulement après validation visuelle. Aucun envoi YouTube,
+Retour V3 reçu ensuite : « pas trop mal », mais traversées de rochers ; voir V4.
+À cette étape V3, aucun long n'avait été lancé. Aucun envoi YouTube,
 Discord, changement du site ou des automatismes existants.
 
 Archive V2 : premier essai apprécié mais rejeté comme trop
