@@ -60,7 +60,7 @@ try{
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   await page.addInitScript(()=>{window.__CAPTURE_MODE__=true;});
-  await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm,null,{timeout:120000});
+  await page.goto(origin,{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.DeepSeaFilm,null,{timeout:120000});
   const sceneInfo=await page.evaluate(()=>({duration:DeepSeaFilm.duration,width:DeepSeaFilm.width,height:DeepSeaFilm.height,
     antialias:DeepSeaFilm.antialias,renderer:DeepSeaFilm.renderer,layout:DeepSeaFilm.layout}));
   if(sceneInfo.duration!==duration||sceneInfo.width!==1920||sceneInfo.height!==1080||!sceneInfo.antialias)throw new Error('Expected antialiased native1080p300-second scene.');
@@ -111,7 +111,11 @@ try{
   await rename(temporary,out);
   const report={schema:'deep-sea-sleep-loop-render-v1',file:path.basename(out),width:1920,height:1080,fps,frames,duration_seconds:duration,
     bytes:(await stat(out)).size,sha256:await hash(out),elapsed_seconds:(Date.now()-started)/1000,
-    scene:sceneInfo,checkpoint_chunks:30,source:identity,paid_generation_calls:0,external_images:0,
+    scene:sceneInfo,checkpoint_chunks:30,source:identity,
+    asset_generation_calls:sceneInfo.layout?.asset_generation_calls??0,
+    paid_generation_calls:sceneInfo.layout?.asset_generation_calls?null:0,
+    external_images:sceneInfo.layout?.source_images??sceneInfo.layout?.original_generated_backgrounds??0,
+    algrow_calls:0,video_generation_calls:0,
     browser_errors:errors,finished_visual_reviewed:false,full_av_decode_ok:false,
     ambient_audio:sound?'Original periodic underwater ambience, no music/samples/speech':'None'};
   await writeFile(out+'.render.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

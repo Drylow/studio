@@ -1,3 +1,19 @@
+## Décision actuelle — repartir avec une illustration animée
+
+L’utilisateur demande de tout oublier sur la 3D et autorise n’importe quel
+style, pourvu que ce soit beau et différent du clip rejeté. Nouveau moteur
+Canvas2D et récif nocturne illustré original, animaux et mouvement de caméra
+codés. Deux assets originaux préparés une fois ; aucun Algrow ou générateur
+vidéo, pas de génération à chaque image.
+
+Les vidéos finales restent deux heures. Après validation du fond : voix off
+sur histoires marines vraies et texte lisible, discret et élégant au milieu
+de l’écran (pas de petits sous-titres bas d’écran). La première vidéo Sleep
+sera publiée avant la prochaine Chess, Tommy/Alfie préparée en parallèle.
+Depths After Dark et l’avatar méduse sont validés ; la bio anglaise est livrée.
+
+Toutes les orientations 3D ci-dessous sont désormais historiques.
+
 # Histoires vraies des profondeurs
 
 Direction confirmée le 10 octobre 2026 : **récits vrais, ambiance inquiétante**.
@@ -46,9 +62,20 @@ n'importe quel obstacle. Chaque nouvelle scène doit refaire ses contrôles.
 
 ## Étape actuelle
 
+**Correction explicite après la livraison de cinq minutes : repartir sur une
+nouvelle direction artistique complète.** Le film GoFile `ixBAzbR6` est rejeté
+comme vide et laid ; il n'est pas une référence validée. L'utilisateur abandonne
+la reproduction du style DREDGE et demande un fond beau, vivant et inquiétant
+supportant deux heures de narration. Nouveau décor organique, eau bleu-noir,
+éclairage diffus, corps lisses, nombreux bancs visibles, requins et méduses
+délicates ; aucune des anciennes créatures ou roches n'entre dans le nouvel
+entrypoint `sleep-cinematic-scene.mjs`. Garder les archives sans les déclarer
+validées. La construction reste entièrement codée, sans Algrow ni générateur
+d'images. Vérifier un extrait avant un nouvel export complet de cinq minutes.
+
 **Décision du 10 octobre : produire d'abord une boucle de cinq minutes**,
-entièrement codée en HTML/JavaScript, détaillée et fluide. DREDGE et Subnautica
-servent de références visuelles documentées dans `STYLE_SLEEP.md` ; aucun
+entièrement codée en HTML/JavaScript, détaillée et fluide. Les anciennes références
+DREDGE et Subnautica restent documentées dans `STYLE_SLEEP.md` ; aucun
 asset de jeu, Algrow ou générateur d'images payant. L'utilisateur vérifiera
 cette boucle avant tout premier récit, script, voix ou épisode de deux heures.
 
@@ -63,7 +90,8 @@ de deux heures ni invitation de collaboration n'a été lancée.
 Cette variante privilégie une lumière stable, des mouvements lents, des
 passages espacés et une voix calme. La boucle doit raccorder réellement la
 caméra, les animaux, les particules et l'ambiance sonore. **L'aperçu actuel
-de 24 secondes est un test de cohérence, pas cette boucle sleep achevée.**
+de 24 secondes reste une archive de cohérence. La première boucle de cinq
+minutes a été livrée puis rejetée visuellement ; la refonte n'est pas validée.**
 Une fois la boucle rendue, ses répétitions ne nécessiteront pas de recalculer
 la géométrie durant deux heures ; l'assemblage et le son resteront à exporter.
 

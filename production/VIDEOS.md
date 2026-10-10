@@ -1,8 +1,30 @@
+## En cours — nouvelle direction Sleep / reprise Tommy–Alfie
+
+Depths After Dark : nom et avatar validés, bio donnée. Nouveau fond illustré
+animé Canvas2D ; toutes les directions 3D précédentes abandonnées. Extrait
+animé 24 s livré : https://gofile.io/d/95IFNFjM ; boucle de 300 s en
+rendu, avis utilisateur encore nécessaire.
+Après validation : 2 h avec voix off et texte central discret. Chess Tommy/Alfie
+repris en parallèle, 32 analyses/~15 min 28 s, sans voix off. Aucune publication.
+Voir `experiments/deep-sea-procedural/README.md` et `CHANNEL_BRAND.md`.
+
 # Journal des vidéos
+
+## Archive — étude 3D abandonnée après rejet de la boucle
+
+L'utilisateur rejette le GoFile `ixBAzbR6` : trop vide et laid. Il abandonne
+la reproduction de DREDGE et demande une nouvelle direction artistique belle,
+vivante et inquiétante pour deux heures de narration. Nouveau build entièrement
+codé : `sleep-cinematic-scene.mjs`, décor et animaux remplacés, lumière diffuse,
+312 poissons / 12 bancs, trois requins et trois méduses translucides. Nombre
+total uniquement ; la présence effective dans le cadre est contrôlée séparément.
+Construction et contrôles en cours, aucune nouvelle livraison ou approbation.
+Recherche de nom demandée en parallèle ; vérifier noms et @ avant proposition,
+profil/bio après choix. Aucun long, voix, Discord ou YouTube lancé.
 
 ## Fonds marins — boucle sleep de cinq minutes livrée pour validation
 
-Livraison actuelle : https://gofile.io/d/ixBAzbR6 —
+Livraison historique, visuel rejeté : https://gofile.io/d/ixBAzbR6 —
 `Les-Profondeurs-Boucle-Sleep-5min.mp4` et `Les-Profondeurs-Boucle-5min-HTML.zip`.
 300 s, 1920×1080 natif/30 fps, 9 000 images, 155 052 684 octets ;
 export complet en 3 080,867 s sur cette machine sans GPU. ZIP : 206 228 octets,

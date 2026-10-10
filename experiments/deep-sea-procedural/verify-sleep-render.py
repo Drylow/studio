@@ -234,12 +234,23 @@ def verify(options):
     require((capture["width"], capture["height"], capture["fps"], capture["frames"],
              capture["duration_seconds"]) == (WIDTH, HEIGHT, FPS, FRAMES, DURATION),
             "The capture sidecar describes a different render format.")
-    require(capture.get("browser_errors") == [] and capture["scene"]["antialias"] is True,
-            "The capture must have native antialiasing and no browser errors.")
-    require(capture["paid_generation_calls"] == 0 and capture["external_images"] == 0,
-            "Expected the original procedural scene without generated or external images.")
-    require(loop["passed"] is True and loop["endpoints_pixel_identical"] is True
-            and loop["rock_overlap_count"] == 0, "The scene loop checks did not pass.")
+    illustrated = loop.get("schema") == "illustrated-loop-check-v1"
+    require(capture.get("browser_errors") == [], "The capture contains browser errors.")
+    if illustrated:
+        require(capture["scene"].get("renderer", "").startswith("New painted nocturnal ocean"),
+                "The illustrated check must match an illustrated render.")
+        require(capture.get("video_generation_calls") == 0 and capture.get("algrow_calls") == 0,
+                "The illustrated scene must not use video generation or Algrow.")
+        require(capture.get("asset_generation_calls") == capture["scene"]["layout"]["asset_generation_calls"],
+                "The asset-creation ledger differs from the captured scene.")
+        require(loop["passed"] is True and loop["endpoints_pixel_identical"] is True,
+                "The illustrated scene loop checks did not pass.")
+    else:
+        require(capture["scene"]["antialias"] is True, "Expected native WebGL antialiasing.")
+        require(capture["paid_generation_calls"] == 0 and capture["external_images"] == 0,
+                "Expected the procedural scene without generated or external images.")
+        require(loop["passed"] is True and loop["endpoints_pixel_identical"] is True
+                and loop["rock_overlap_count"] == 0, "The scene loop checks did not pass.")
     require((loop["width"], loop["height"], loop["duration_seconds"])
             == (WIDTH, HEIGHT, DURATION), "The scene check describes a different loop.")
     require(loop["scene_bundle_sha256"] == source["scene_sha256"],
@@ -304,13 +315,18 @@ def verify(options):
         "finished_render_visual_reviewed": False, "human_continuous_viewing": False,
         "human_full_audio_listening": False, "sampled_movie_frames": len(files),
         "motion_movie_frames": motion_count, "native_movie_frames": len(NATIVE_TIMES),
-        "loop_geometry_check_passed": loop["passed"],
+        "loop_geometry_check_passed": None if illustrated else loop["passed"],
+        "loop_illustrated_check_passed": loop["passed"] if illustrated else None,
         "loop_endpoints_pixel_identical": loop["endpoints_pixel_identical"],
-        "loop_sample_hz": loop["sample_hz"], "loop_rock_overlap_count": loop["rock_overlap_count"],
+        "loop_sample_hz": loop.get("sample_hz"), "loop_rock_overlap_count": loop.get("rock_overlap_count"),
         "encoded_visual_boundary_rms": boundary,
         "encoded_visual_ordinary_step_rms": [first_step, last_step],
         "source_scene_sha256": source["scene_sha256"],
-        "paid_generation_calls": 0, "external_images": 0,
+        "paid_generation_calls": capture.get("paid_generation_calls"),
+        "asset_generation_calls": capture.get("asset_generation_calls", 0),
+        "external_images": capture["external_images"],
+        "video_generation_calls": capture.get("video_generation_calls", 0),
+        "algrow_calls": capture.get("algrow_calls", 0),
     }
     temporary = directory / "qa.json.partial"
     temporary.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
@@ -322,7 +338,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--video", type=Path, required=True, help="Finished 300-second MP4.")
     parser.add_argument("--scene-check", type=Path, required=True,
-                        help="JSON report from verify-sleep-loop.mjs.")
+                        help="JSON report from verify-illustrated-loop.mjs or the historical 3D verify-sleep-loop.mjs.")
     parser.add_argument("--ambience-check", type=Path, required=True,
                         help="Ambience JSON report with its matching .wav in the same directory.")
     parser.add_argument("--out-dir", type=Path, required=True,

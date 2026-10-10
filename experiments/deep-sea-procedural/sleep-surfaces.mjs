@@ -1,5 +1,5 @@
 /** Original tiled pigment/grain textures, generated in code, anchored in 3D. */
-export function addSleepSurfaceDetail(THREE, group) {
+export function addSleepSurfaceDetail(THREE, group, { cinematic = false } = {}) {
   const size=512,TAU=Math.PI*2;let state=80914;
   const random=()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;};
   function lattice(n){return Float32Array.from({length:n*n},()=>random());}
@@ -34,10 +34,13 @@ export function addSleepSurfaceDetail(THREE, group) {
       shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vSleepWorld,vSleepNormal;');
       shader.vertexShader=shader.vertexShader.replace('#include <fog_vertex>','#include <fog_vertex>\nvSleepWorld=(modelMatrix*vec4(transformed,1.0)).xyz;vSleepNormal=normalize(mat3(modelMatrix)*normal);');
       shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vSleepWorld,vSleepNormal;uniform sampler2D uSleepGrain;');
-      const detail=sand?`
+      const detail=sand?(cinematic?`
+        vec3 sleepSilt=texture2D(uSleepGrain,vSleepWorld.xz/7.9).rgb;
+        outgoingLight*=.88+.16*sleepSilt.r+.035*sleepSilt.b;
+      `:`
         vec3 sleepSilt=texture2D(uSleepGrain,vSleepWorld.xz/3.7).rgb;
         outgoingLight*=.76+.26*sleepSilt.r+.19*sleepSilt.b;
-      `:`
+      `):`
         vec3 sleepWeights=pow(abs(vSleepNormal),vec3(3.0));sleepWeights/=max(dot(sleepWeights,vec3(1.0)),.0001);
         vec3 sleepStone=texture2D(uSleepGrain,vSleepWorld.zy/3.4).rgb*sleepWeights.x
           +texture2D(uSleepGrain,vSleepWorld.xz/3.4).rgb*sleepWeights.y
@@ -46,7 +49,7 @@ export function addSleepSurfaceDetail(THREE, group) {
       `;
       shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',detail+'\n#include <opaque_fragment>');
     };
-    material.customProgramCacheKey=()=>`deep-sea-surface-v1-${sand?'silt':'stone'}`;
+    material.customProgramCacheKey=()=>`deep-sea-surface-v1-${cinematic?'cinematic':'study'}-${sand?'silt':'stone'}`;
     mesh.material=material;
   });
   return {texture_resolution:size,original_texture_count:1,world_anchored:true};

@@ -1,0 +1,259 @@
+{
+  "schema": "illustrated-loop-check-v1",
+  "passed": true,
+  "width": 1920,
+  "height": 1080,
+  "duration_seconds": 300,
+  "native_1080p": true,
+  "canvas_2d_only": true,
+  "canvas_context_types": [
+    "2d"
+  ],
+  "finite_render_and_diagnostic_samples": true,
+  "fully_opaque_canvas": true,
+  "endpoints_pixel_identical": true,
+  "endpoint_pixel_delta": {
+    "rms": 0,
+    "maximum_channel_difference": 0,
+    "changed_pixel_fraction": 0
+  },
+  "boundary_frame_delta": {
+    "rms": 0.8230547625963356,
+    "maximum_channel_difference": 52,
+    "changed_pixel_fraction": 0.21439091435185184
+  },
+  "ordinary_first_frame_delta": {
+    "rms": 0.7824379856505491,
+    "maximum_channel_difference": 50,
+    "changed_pixel_fraction": 0.20685956790123458
+  },
+  "ordinary_last_frame_delta": {
+    "rms": 0.8015019136870685,
+    "maximum_channel_difference": 50,
+    "changed_pixel_fraction": 0.19472511574074075
+  },
+  "boundary_jump_suspected": false,
+  "compared_frame_step_seconds": 0.03333333333333333,
+  "rewind_render_pixels_identical": true,
+  "rewind_render_pixel_delta": {
+    "rms": 0,
+    "maximum_channel_difference": 0,
+    "changed_pixel_fraction": 0
+  },
+  "diagnostics_periodic_at_endpoints": true,
+  "diagnostics_rewind_deterministic": true,
+  "endpoint_diagnostic_phases": [
+    0,
+    0
+  ],
+  "motion_between_start_and_probe": {
+    "rms": 28.672986137937535,
+    "maximum_channel_difference": 193,
+    "changed_pixel_fraction": 0.9901572145061729
+  },
+  "sampled_render_poses": 13,
+  "samples": [
+    {
+      "time": 0,
+      "phase": 0,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.518567708333336
+    },
+    {
+      "time": 25,
+      "phase": 0.5235987755982988,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.627855742026746
+    },
+    {
+      "time": 50,
+      "phase": 1.0471975511965976,
+      "masked_fish_centres": 28,
+      "jellyfish": 3,
+      "mean_rgb": 48.45028243955761
+    },
+    {
+      "time": 75,
+      "phase": 1.5707963267948966,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.3054592656893
+    },
+    {
+      "time": 100,
+      "phase": 2.0943951023931953,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.22921875
+    },
+    {
+      "time": 125,
+      "phase": 2.6179938779914944,
+      "masked_fish_centres": 20,
+      "jellyfish": 3,
+      "mean_rgb": 48.29895720807613
+    },
+    {
+      "time": 150,
+      "phase": 3.141592653589793,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.50263406635803
+    },
+    {
+      "time": 175,
+      "phase": 3.6651914291880923,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.58782327031893
+    },
+    {
+      "time": 200,
+      "phase": 4.1887902047863905,
+      "masked_fish_centres": 35,
+      "jellyfish": 3,
+      "mean_rgb": 48.430719521604935
+    },
+    {
+      "time": 225,
+      "phase": 4.71238898038469,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.14120820473251
+    },
+    {
+      "time": 250,
+      "phase": 5.235987755982989,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.04199781378601
+    },
+    {
+      "time": 275,
+      "phase": 5.759586531581287,
+      "masked_fish_centres": 18,
+      "jellyfish": 3,
+      "mean_rgb": 48.243373199588476
+    },
+    {
+      "time": 300,
+      "phase": 0,
+      "masked_fish_centres": 36,
+      "jellyfish": 3,
+      "mean_rgb": 48.518567708333336
+    }
+  ],
+  "fish_masked_centres_minimum": 18,
+  "fish_masked_centres_maximum": 36,
+  "sampled_mean_rgb_minimum": 48.04199781378601,
+  "sampled_mean_rgb_maximum": 48.627855742026746,
+  "background_source_dimensions": [
+    1672,
+    941
+  ],
+  "layout": {
+    "art_direction": "Original painted nocturnal marine valley; the 3D aquarium directions are abandoned",
+    "duration_seconds": 300,
+    "background_source_dimensions": [
+      1672,
+      941
+    ],
+    "original_generated_backgrounds": 1,
+    "original_generated_sprites": 1,
+    "source_images": 2,
+    "asset_generation_calls": 2,
+    "video_generation_calls": 0,
+    "algrow_calls": 0,
+    "runtime_network_calls": 0,
+    "fish_total": 144,
+    "fish_schools": 8,
+    "shark_silhouettes": 2,
+    "jellyfish": 3,
+    "marine_snow": 240,
+    "motion": "Stateless integer-periodic harmonics; slow framing drift, independent pulsing and tentacles",
+    "asset_reused_for_all_frames": true
+  },
+  "finished_mp4_review": "Not performed by this source-loop checker.",
+  "user_visual_approval": false,
+  "geometry_collision_checks": "Not applicable: this renderer composites 2D paths over a painting, without a 3D solid scene.",
+  "limitations": "13 rendered poses plus endpoint, rewind and adjacent-frame probes. Fish counts use the programmed 2D visibility envelope, not image segmentation or proof of painted reef occlusion. Full encoded-video decode, audio checks and continuous viewing are separate.",
+  "elapsed_seconds": 3.9075,
+  "scene_bundle_sha256": "fd45a50514c59c1d52192241b1d0276861b0b7bd32fb1ee55c41fb287454e7fa",
+  "index_html_sha256": "2b57cec6ef17f3e83e0f6823f12367055cf4bbe91c8e264f81a9ca813adf1c66",
+  "background_source_file": "nocturnal-reef.png",
+  "background_source_sha256": "454b29694cbe00e405ade9e8212e0b2ca81be72e0a2c68a435a289afbdcb59e0",
+  "background_source_png_dimensions": [
+    1672,
+    941
+  ],
+  "background_dimensions_match_source": true,
+  "background_embedded_byte_identical": true,
+  "original_background_count": 1,
+  "embedded_source_png_count": 2,
+  "marine_sprite_source_file": "jellyfish-cutout.png",
+  "marine_sprite_source_sha256": "65903207e99cca4a3bb62857a818b5e819ae0304bfc36b5954487bc5835648c4",
+  "marine_sprite_source_png_dimensions": [
+    1254,
+    1254
+  ],
+  "marine_sprite_embedded_byte_identical": true,
+  "marine_sprite_alpha": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "rgba_pixels": 1572516,
+    "fully_transparent_pixels": 884520,
+    "partially_transparent_pixels": 687968,
+    "opaque_pixels": 28,
+    "fully_transparent_fraction": 0.5624871225475607,
+    "partially_transparent_fraction": 0.43749507159227635,
+    "mean_alpha_byte": 73.15136698132166,
+    "corner_alpha_bytes": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "border_mean_alpha_byte": 0.03830806065442937,
+    "border_maximum_alpha_byte": 10,
+    "transparent_cutout_observed": true,
+    "limit": "Measures the original decoded PNG alpha, not semantic object segmentation or every deformed output frame."
+  },
+  "marine_sprite_dimensions_match_source": true,
+  "browser_errors": [],
+  "browser_console_errors": [],
+  "outside_network_attempts": [],
+  "failed_requests": [],
+  "isolated_offline_assets_work": true,
+  "bundle_unchanged_during_check": true,
+  "frames": [
+    {
+      "time": 0,
+      "file": "0-0.00000.png",
+      "bytes": 4434388,
+      "sha256": "68ede4bcf97b588dd22d87b25490307ad5aa34b7b62531faa36c63c25646423b"
+    },
+    {
+      "time": 300,
+      "file": "1-300.00000.png",
+      "bytes": 4434388,
+      "sha256": "68ede4bcf97b588dd22d87b25490307ad5aa34b7b62531faa36c63c25646423b"
+    },
+    {
+      "time": 299.96666666666664,
+      "file": "2-299.96667.png",
+      "bytes": 4435670,
+      "sha256": "b784e12f6719456c87e213543728871d67d2f9b17fdb8b3dce59d4b37e92fa1c"
+    },
+    {
+      "time": 0.03333333333333333,
+      "file": "3-0.03333.png",
+      "bytes": 4435601,
+      "sha256": "bd42be86b0ff4ce9d470abd3ed969c92c67796545b0fe9c431d467a16ac29b94"
+    }
+  ],
+  "endpoints_png_identical": true
+}

@@ -44,7 +44,7 @@ try{
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   await page.addInitScript(()=>{window.__CAPTURE_MODE__=true;});
-  await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm);
+  await page.goto(origin,{waitUntil:'domcontentloaded',timeout:120000});await page.waitForFunction(()=>window.DeepSeaFilm,null,{timeout:120000});
   const sceneInfo=await page.evaluate(()=>({duration:window.DeepSeaFilm.duration,antialias:window.DeepSeaFilm.antialias,renderer:window.DeepSeaFilm.renderer,layout:window.DeepSeaFilm.layout}));
   const filmDuration=sceneInfo.duration;
   if(duration>filmDuration)throw new Error(`The current scene lasts ${filmDuration} seconds.`);
@@ -89,7 +89,7 @@ try{
     }
     encoder.stdin.end();await finished;await rename(temporary,out);
     const bytes=await readFile(out);
-    const report={schema:'deep-sea-procedural-render-v1',file:path.basename(out),width:1920,height:1080,fps,frames,duration_seconds:frames/fps,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),elapsed_seconds:(Date.now()-started)/1000,scene:sceneInfo,paid_generation_calls:0,external_images:0,browser_errors:errors,frame_info:lastInfo,finished_visual_reviewed:false,full_av_decode_ok:false,ambient_audio:sound?'Original procedurally synthesized ambience':'None; visual study'};
+    const report={schema:'deep-sea-procedural-render-v1',file:path.basename(out),width:1920,height:1080,fps,frames,duration_seconds:frames/fps,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),elapsed_seconds:(Date.now()-started)/1000,scene:sceneInfo,asset_generation_calls:sceneInfo.layout?.asset_generation_calls??0,paid_generation_calls:sceneInfo.layout?.asset_generation_calls?null:0,external_images:sceneInfo.layout?.source_images??sceneInfo.layout?.original_generated_backgrounds??0,algrow_calls:0,video_generation_calls:0,browser_errors:errors,frame_info:lastInfo,finished_visual_reviewed:false,full_av_decode_ok:false,ambient_audio:sound?'Original procedurally synthesized ambience':'None; visual study'};
     await writeFile(out+'.render.json',JSON.stringify(report,null,2));
     console.log(JSON.stringify(report));
   }

@@ -1,6 +1,32 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Livraison actuelle — boucle sleep de cinq minutes à valider
+## En cours — Sleep illustré animé, Chess repris en parallèle
+
+**Depths After Dark** confirmé, avatar méduse validé, bio anglaise donnée.
+L’utilisateur abandonne explicitement toutes les contraintes de 3D ; le
+fond ne doit pas ressembler au clip rejeté. Nouvelle direction dans
+`experiments/deep-sea-procedural/sleep-illustrated-scene.mjs`, entrée active
+de `build:sleep` : récif original illustré + animations Canvas2D, poissons,
+requins, méduses ondulantes et mouvement optique lent. Deux images originales
+préparées une fois, ensuite réutilisées ; aucun Algrow/générateur vidéo.
+Le décor source fait 1672×941 ; canevas/export 1920×1080, ne pas prétendre
+que cette source est native 4K ou que tous les assets sont purement codés.
+
+Extrait animé de 24 s livré : https://gofile.io/d/95IFNFjM ; 1080p30,
+720 images, décodage A/V complet et revue des captures terminés. Boucle
+complète de cinq minutes en rendu. Le fond n’est pas validé. Après validation :
+épisode de deux heures (24 boucles de cinq minutes), voix off et texte
+central élégant, taille modérée. Aucun premier script/voix/publication lancé.
+Ancienne étude `sleep-cinematic-scene.mjs` et modèles 3D : archives abandonnées,
+jamais approuvées ou livrées. SLEEP_*CHECK publics sont pour le film rejeté.
+
+L’utilisateur dit avoir réparé le compte Google de Chess. Il autorise la
+reprise de **Tommy/Alfie en parallèle**, dossiers séparés, Sleep publiée en
+premier. Trois sources Peaky déjà complètes, maximum livré par compte 720p,
+habillage/export 1080p. Plan de 32 analyses, environ 15 min 28 s ; master/montage/QA en
+cours chez l’agent dédié. Aucun nouvel upload/publication prétendu.
+
+## Archive — première boucle sleep, rejetée après livraison
 
 Nouvelle instruction du 10 octobre : produire **un parcours 3D de 300 secondes**
 très détaillé pour validation visuelle, inspiré de DREDGE et Subnautica.
@@ -27,7 +53,7 @@ indépendante. Pas de lecture continue ni d'écoute humaine complète prétendue
 Rapports publics : `SLEEP_SCENE_CHECK.json` et `SLEEP_RENDER_CHECK.json` dans
 le dossier de l'expérience. Les passages ont été contrôlés par poses
 échantillonnées ; aucune preuve de collision continue revendiquée.
-**Avis visuel utilisateur encore attendu.** Aucun épisode de deux heures,
+**Visuel rejeté par l’utilisateur ; garder cette livraison comme archive.** Aucun épisode de deux heures,
 script, voix off, envoi Discord/YouTube ou modification des automatismes.
 Pour le futur mix de deux heures, utiliser le master PCM périodique original ;
 ne pas répéter les paquets AAC du MP4 comme fond sonore.

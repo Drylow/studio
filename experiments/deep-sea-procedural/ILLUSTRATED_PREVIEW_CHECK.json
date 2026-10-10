@@ -1,0 +1,25 @@
+{
+  "kind": "Actual finished 24-second illustrated preview review",
+  "duration_seconds": 24,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "decoded_video_frames": 720,
+  "full_video_audio_decode_ok": true,
+  "sha256": "fe04d1ffc23e8cfa470cb9756fdbbc2a9ccef1bcc4d6ff5eabd40e5ff0eeb9b4",
+  "finished_render_visual_reviewed": true,
+  "visual_review": {
+    "actual_mp4_general_frames": 24,
+    "actual_mp4_motion_frames": 12,
+    "actual_mp4_native_frames": 1,
+    "human_continuous_playback": false,
+    "human_full_audio_listen": false,
+    "notes": "Detailed reef backdrop and moving wildlife visible across decoded frames; no opaque sprite rectangle or strip cracks visible in reviewed frames.",
+    "independent_review_completed": true,
+    "independent_review_notes": "Separate review of the same finished MP4 frames found no opaque card, detached tentacles, strip tearing, flash or obvious jump. Gentle wildlife; the three jellyfish share one sprite at different depths and scales."
+  },
+  "audio_peak_dbfs": -23.58377832868996,
+  "audio_clipped_samples": 0,
+  "source_scene_sha256": "fd45a50514c59c1d52192241b1d0276861b0b7bd32fb1ee55c41fb287454e7fa",
+  "user_visual_approval": false
+}

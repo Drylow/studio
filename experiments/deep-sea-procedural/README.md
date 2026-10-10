@@ -1,13 +1,84 @@
-# Les profondeurs — exploration 3D codée
+# Depths After Dark — fonds marins animés
 
-## Boucle sleep de cinq minutes — livrée pour validation
+## Direction actuelle — récif nocturne illustré et animé
 
-Direction actuelle : **histoires marines vraies, ambiance calme et inquiétante**.
+La boucle 3D livrée précédemment est **rejetée**. L’utilisateur abandonne
+ensuite toutes les contraintes de 3D et de style de jeu : il veut un beau
+fond marin vivant, immersif, très différent du rendu précédent.
+
+`npm run build:sleep` utilise maintenant **sleep-illustrated-scene.mjs**,
+un moteur Canvas2D neuf. Un récif nocturne original et une méduse détourée
+sont animés par du code : panoramique/zoom lents, huit bancs (144 poissons
+au total), deux silhouettes de requins, trois méduses aux tissus ondulants,
+neige marine et frondes. Les anciennes scènes et modèles 3D ne sont pas
+importés ; ils restent des études abandonnées.
+
+Deux illustrations ont été préparées une fois, puis sont réutilisées pour
+chaque image de la boucle. Aucun appel à Algrow, aucune génération vidéo,
+aucune API lors de la lecture. Le décor source est **1672×941** ; le canevas
+et l’export sont **1920×1080**. Ne pas prétendre que le décor est une source
+native 4K/1080p, ni que tout a été fabriqué sans générateur d’images.
+Le sprite provient de l’avatar original validé. Voir [ASSETS.md](ASSETS.md).
+
+**[Extrait animé de 24 secondes livré sur GoFile](https://gofile.io/d/95IFNFjM).**
+1080p30, 720 images, 34 388 095 octets ; décodage A/V intégral et revue des
+24 images générales, 12 images rapprochées et une vue native terminés,
+avec revue indépendante. Aucune lecture/écoute continue prétendue, aucun
+avis utilisateur présumé. La boucle complète est en cours de rendu. La durée du cycle est 300 secondes. Les futurs épisodes feront
+deux heures, soit 24 répétitions, avec voix off et texte élégant et discret
+au milieu de l’écran après validation du fond. Aucun texte/voix de long ni
+publication lancés à cette étape.
+
+Chaîne : **Depths After Dark**, nom confirmé ; avatar méduse validé et bio
+anglaise dans [CHANNEL_BRAND.md](CHANNEL_BRAND.md). Sleep passe avant Chess,
+mais le montage Tommy–Alfie a repris en parallèle dans son propre dossier.
+
+Depuis ce dossier :
+
+```bash
+npm run build:sleep
+../../.venv/bin/python make-sleep-ambience.py --seconds 300 \
+  --out /tmp/deepsea-sleep-5m/ambience-master.wav
+node verify-illustrated-loop.mjs --out /tmp/deepsea-illustrated/check.json
+node capture.mjs --dist dist-sleep --duration 24 --fps 30 \
+  --out /tmp/deepsea-illustrated/preview.mp4 \
+  --audio /tmp/deepsea-sleep-5m/ambience-master.wav
+node capture-loop.mjs --out /tmp/deepsea-illustrated/loop-5min.mp4 \
+  --audio /tmp/deepsea-sleep-5m/ambience-master.wav
+../../.venv/bin/python verify-sleep-render.py \
+  --video /tmp/deepsea-illustrated/loop-5min.mp4 \
+  --scene-check /tmp/deepsea-illustrated/check.json \
+  --ambience-check /tmp/deepsea-sleep-5m/ambience-master.json \
+  --out-dir /tmp/deepsea-illustrated/review
+```
+
+Le master sonore se recrée avec `make-sleep-ambience.py`, comme indiqué plus
+bas. Le vérificateur illustré contrôle les **vrais pixels**, le raccord,
+le retour arrière, la finitude et la lecture hors ligne. Il ne prétend pas
+faire des collisions 3D. Le MP4 terminé doit encore être décodé et inspecté,
+avec `verify-sleep-render.py` qui distingue les schémas illustré et 3D.
+Les rapports publics `SLEEP_*CHECK.json` concernent seulement le film
+**rejeté** ci-dessous, pas la nouvelle direction. Le nouveau moteur est
+contrôlé dans [ILLUSTRATED_SCENE_CHECK.json](ILLUSTRATED_SCENE_CHECK.json) ;
+l’extrait terminé dans [ILLUSTRATED_PREVIEW_CHECK.json](ILLUSTRATED_PREVIEW_CHECK.json).
+
+### Étude intermédiaire 3D abandonnée, jamais livrée
+
+`sleep-cinematic-scene.mjs`, `sleep-cinematic-environment.mjs`, les nouveaux
+bancs/requins/méduses, shaders et vérificateurs 3D restent des archives de
+travail. Ils n’ont pas reçu de validation artistique et ne sont pas le
+fond actif. Ne pas réutiliser les rapports privés d’anciennes trajectoires
+pour présenter les dernières trajectoires de cette étude comme contrôlées.
+
+## Archive — première boucle de cinq minutes, rejetée visuellement
+
+Direction à cette étape historique : **histoires marines vraies, ambiance calme et inquiétante**.
 Les futurs épisodes visent deux heures : ce fond de **300 secondes** pourra
 être répété **24 fois** sous une narration originale. Ces cinq minutes sont
 calculées comme un parcours continu, distinct des anciens aperçus courts.
 **[Télécharger le MP4 et le lecteur HTML sur GoFile](https://gofile.io/d/ixBAzbR6).**
-Le fichier final est contrôlé ; l'avis visuel de l'utilisateur reste attendu.
+Les contrôles techniques étaient passés ; l’utilisateur a ensuite rejeté
+le rendu visuel. Ne pas reprendre cette version comme référence approuvée.
 Aucun épisode de deux heures, script, voix off ou publication n'est produit
 à cette étape.
 
@@ -51,19 +122,19 @@ créer l'ambiance originale avec la venv existante et NumPy :
   --seconds 300 --out /tmp/deepsea-sleep-5m/ambience-master.wav
 ```
 
-Puis, depuis `experiments/deep-sea-procedural/` :
+Les anciennes commandes qui associaient `build:sleep` à
+`verify-sleep-loop.mjs` concernaient le build 3D historique. L’entrée active
+est désormais illustrée : utiliser les commandes en tête de ce README et
+`verify-illustrated-loop.mjs`. L’ancien vérificateur exige des diagnostics
+3D absents de la nouvelle scène ; ne pas l’exécuter sur le build actuel.
+Pour le MP4 illustré terminé :
 
 ```bash
-npm run build:sleep
-node verify-sleep-loop.mjs --out /tmp/deepsea-sleep-5m/loop-check.json
-node capture-loop.mjs \
-  --out /tmp/deepsea-sleep-5m/Les-Profondeurs-Boucle-Sleep-5min.mp4 \
-  --audio /tmp/deepsea-sleep-5m/ambience-master.wav
 ../../.venv/bin/python verify-sleep-render.py \
-  --video /tmp/deepsea-sleep-5m/Les-Profondeurs-Boucle-Sleep-5min.mp4 \
-  --scene-check /tmp/deepsea-sleep-5m/loop-check.json \
+  --video /tmp/deepsea-illustrated/loop-5min.mp4 \
+  --scene-check /tmp/deepsea-illustrated/check.json \
   --ambience-check /tmp/deepsea-sleep-5m/ambience-master.json \
-  --out-dir /tmp/deepsea-sleep-5m/check
+  --out-dir /tmp/deepsea-illustrated/review
 ```
 
 La capture vise **1920×1080 natif, 30 images/s, 9 000 images**, H.264 CRF17,

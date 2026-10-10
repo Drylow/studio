@@ -53,7 +53,7 @@ try {
   });
   await page.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
   await page.addInitScript(() => { window.__CAPTURE_MODE__ = true; window.__DEEPSEA_DIAGNOSTICS__ = true; });
-  await page.goto(origin);
+  await page.goto(origin, { waitUntil: 'domcontentloaded', timeout: 120000 });
   await page.waitForFunction(() => window.DeepSeaFilm?.diagnostics, null, { timeout: 120000 });
   const result = await page.evaluate(({ sampleHz }) => {
     const started = performance.now(), film = window.DeepSeaFilm, d = film.diagnostics, duration = film.duration;
