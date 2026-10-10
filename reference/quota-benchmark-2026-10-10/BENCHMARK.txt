@@ -1,0 +1,382 @@
+BENCHMARK QUOTA LADDER11 — 10 OCTOBRE 2026
+Chaîne : https://www.youtube.com/@QuotaLadder11
+Périmètre principal : les sept dernières vidéos, du 27 septembre au 9 octobre.
+Trois vidéos antérieures servent uniquement de comparaison.
+
+VERDICT
+
+Le signal est assez fort pour tester une adaptation. Je recommande de conserver
+la promesse claire de progression, puis de construire notre différence dans le
+récit : une personne, des relations, des décisions et leurs conséquences.
+Le changement de sujet vers les franchises connues est le premier changement
+objectivement visible autour de la rupture de performances. Le titre et la
+composition des miniatures existaient déjà avant elle.
+
+Ce benchmark ne prouve ni le taux de clic ni la rétention. Les causes proposées
+sont des hypothèses éditoriales. La demande n'est pas garantie sur une autre chaîne.
+
+1. MÉTHODE ET SOURCES
+
+- Métadonnées publiques recueillies avec Algrow le 10 octobre : dates, compteurs,
+  durées, descriptions, sept vidéos et trois témoins.
+- Dix miniatures regardées directement.
+- Sept transcriptions consultées pour comparer accroches, rangs, progression,
+  chutes et appels à l'action. Aucun script concurrent reproduit dans ce dossier.
+- Analyse audiovisuelle assistée par Algrow sur les sept vidéos.
+- Contrôle direct par Codex de 55 captures réparties sur les sept vidéos :
+  30 pour Galactic Empire/Sith et 25 pour les cinq autres. Les deux planches
+  sont jointes. Échantillonnage, pas audit exhaustif image par image.
+- Historique public déjà archivé dans reference/market-research-2026-10-05.json.
+- Recherches de concurrence ciblées le 10 octobre ; résultats non exhaustifs.
+  Les résultats hors sujet ne sont pas utilisés comme preuve de marché libre.
+
+Les détails sonores et estimations de cadence issus de l'analyse assistée ne sont
+pas des mesures indépendantes du mixage ou du montage. Les repères ci-dessous
+peuvent servir à retrouver les passages ; vérifier à la lecture avant de les
+utiliser comme timecodes de montage. Les transcriptions automatiques déforment
+certains noms propres.
+
+Fichiers joints :
+- donnees-publiques.json : compteurs et descriptions publics, traçabilité.
+- captures-empire-sith.jpg : 30 captures timecodées.
+- captures-cinq-videos.jpg : 25 captures timecodées.
+Les vidéos téléchargées pour contrôle restent dans le dossier de travail ignoré.
+
+2. LES SEPT VIDÉOS
+
+Sujet                   Publication    Durée     Vues au relevé    Rangs racontés
+Imperial Guard          09/10/2026     12:47       19 055            9
+Arasaka                 07/10/2026     14:17       12 207           10
+Clone Army              05/10/2026     13:04       46 306            7 + enfance
+Saiyan Army             03/10/2026     10:18       88 425            5
+Sith Empire             01/10/2026     19:09       94 305            6
+Galactic Empire         29/09/2026      8:38      231 365            7
+Viltrumite Empire       27/09/2026     17:47       51 108            6 + crises
+
+Sources individuelles :
+Imperial Guard : https://www.youtube.com/watch?v=GjFdMW5KgCY
+Arasaka : https://www.youtube.com/watch?v=9EbJnPHQ_Zg
+Clone Army : https://www.youtube.com/watch?v=7-E-tuW7puo
+Saiyan Army : https://www.youtube.com/watch?v=Qb-h3lfgW7M
+Sith Empire : https://www.youtube.com/watch?v=9BB4oCJ6cR4
+Galactic Empire : https://www.youtube.com/watch?v=diftQzzcm9E
+Viltrumite Empire : https://www.youtube.com/watch?v=NZwfRoRuJE4
+
+Total : 542 771 vues. Médiane : 51 108. Durée médiane : 13:04.
+Galactic Empire représente environ 43 % des vues de cet échantillon.
+Ce succès domine, mais les autres succès montrent que le signal ne tient pas
+à un seul épisode.
+
+Témoins antérieurs :
+Rome (25/09), 999 vues : https://www.youtube.com/watch?v=f6YXGG2Oxl8
+Hells Angels (23/09), 655 vues : https://www.youtube.com/watch?v=nfOsjtlMhTE
+Yakuza (19/09), 752 vues : https://www.youtube.com/watch?v=tL0K0YscvYg
+
+Médiane des trois témoins : 752 vues ; médiane récente environ 68 fois supérieure.
+Comparaison descriptive entre cohortes, pas effet causal du format.
+La différence d'âge avantage pourtant les anciens témoins dans les compteurs
+cumulés. Les deux dernières vidéos sont trop jeunes pour les déclarer perdantes.
+
+Les sept épisodes suivent une cadence de deux jours, à des heures de publication
+très proches. Cela décrit son exploitation ; cela n'établit pas la cadence
+optimale pour nous.
+
+3. LA CROISSANCE CONTINUE, AU-DELÀ DU PREMIER BUZZ
+
+Épisode             Relevé 05/10    Relevé 10/10    Différence
+Galactic Empire        126 866         231 365       +104 499
+Sith Empire             26 690          94 305        +67 615
+Saiyan Army             41 548          88 425        +46 877
+Viltrumite Empire       36 665          51 108        +14 443
+Clone Army                 184          46 306        +46 122
+
+Les quatre premiers continuent donc à progresser après leur lancement.
+Clone Army venait de sortir lors du premier relevé : sa progression est normale
+à interpréter avec son âge, pas comme une multiplication comparable aux autres.
+Sur la même période, les trois témoins passent de 558/518/605 à 999/655/752.
+Les heures exactes et le retard possible des sources interdisent d'appeler ces
+différences une vitesse actuelle de vues par jour.
+
+La fiche About paraît encore orientée vers les carrières réelles. Elle ne suffit
+pas à décrire la stratégie actuelle. Ses agrégats ne sont pas utilisés pour
+calculer les performances du nouveau format.
+
+4. CE QUI CHANGE ET CE QUI RESTE
+
+Changement établi : à partir de Viltrumite Empire, le dernier bloc de vidéos
+traite exclusivement de franchises : Invincible, Star Wars, Dragon Ball,
+Cyberpunk et Warhammer. Trois épisodes sur sept utilisent Star Wars.
+
+Continuités directement vérifiées :
+- Le titre « Your Life as Every Rank » existe déjà sur les trois témoins.
+- Les dix miniatures opposent deux statuts dans un seul univers graphique.
+- La personne à gauche paraît faible, inquiète ou dominée ; celle de droite
+  paraît puissante, sûre d'elle, équipée et mieux placée.
+- Pas de grand texte marketing sur les dix miniatures examinées.
+- Uniformes, accessoires, coiffures, bâtiments et véhicules identifient le sujet.
+
+La miniature raconte en une image l'écart entre le début et le sommet.
+Son rôle probable est de rendre la promesse instantanément lisible. L'effet sur
+le clic reste inconnu. La composition seule ne suffit pas : Rome et les Yakuza
+l'utilisaient déjà.
+
+Hypothèse principale : la projection dans une franchise familière augmente
+l'intérêt initial et facilite la lecture des personnages, équipements et enjeux.
+La diffusion, le public déjà acquis et le moment de publication peuvent aussi
+contribuer. Aucune donnée privée ne permet de les départager.
+
+5. LA MATRICE NARRATIVE À RÉUTILISER
+
+À chaque rang, le récit répond à cinq questions :
+1) Où vis-tu et que fais-tu concrètement ?
+2) Qu'as-tu gagné : matériel, confort, accès, autorité ?
+3) Qui peut encore te punir, te remplacer ou te menacer ?
+4) Quel conflit devient possible à ce niveau ?
+5) Que coûtera le passage au suivant ?
+
+L'échelle des enjeux change : ton propre corps, ton équipe, tes subordonnés,
+tes ressources, puis l'institution entière. Le récit fait ressentir la différence
+entre les rangs avec des scènes de vie, pas seulement des définitions.
+
+La formule centrale est « nouveau pouvoir, nouveau prix ».
+C'est notre unité de scénario. Changer uniquement le costume, le décor ou la
+taille du groupe commandé finit par rendre les chapitres interchangeables.
+
+Le POV est surtout narratif : « tu » désigne un avatar souvent vu de l'extérieur.
+Cela n'exige pas de filmer tout l'épisode en vue subjective.
+
+Les chutes inversent le fantasme initial :
+- Le pouvoir ne garantit pas la sécurité (Galactic Empire).
+- Le dirigeant reproduit les contraintes qu'il subissait (Arasaka).
+- La victoire ne garantit pas un avenir personnel (Clone Army).
+- La force ne protège pas d'une autorité supérieure (Saiyan).
+- Le sommet hérite des ambitions qui l'ont produit (Sith).
+- La force individuelle ne protège pas de l'effondrement collectif (Viltrumite).
+- Survivre et commander peut devenir plus lourd que mourir en exécutant (Guard).
+
+Ces sens différents comptent davantage que la répétition d'une chute cynique.
+Pour notre série, chaque organisation doit avoir son propre dilemme final.
+
+6. CE QUE CHAQUE ÉPISODE NOUS APPREND
+
+GALACTIC EMPIRE — référence de clarté et de concision
+Commence directement au rang 1, sans préambule. La recrue s'engage pour survivre.
+Les lieux évoluent de l'académie et des tranchées vers les coursives, le vaisseau
+et le pouvoir territorial. À 0:34, l'instructeur occupe réellement l'espace face
+à la recrue ; à 2:11, la menace change en tirs dans une tranchée.
+Le premier titre apparaît dès 0:00 et les chapitres sont lisibles dans les
+captures. C'est aussi le plus court et le plus vu ; cela ne prouve pas que le
+raccourcir est la cause du succès.
+À reprendre : entrée immédiate, quotidien matériel, différences entre scènes.
+À améliorer : transitions entre infanterie, marine et gouvernance à expliquer,
+plutôt que les faire passer pour une carrière militaire universelle.
+
+SITH EMPIRE — référence de tension politique, avec une limite de synchronisation
+Le texte ouvre sur un novice sans secours dans un tombeau. La capture à 0:00
+montre pourtant une figure dominante sur un trône devant une flotte.
+Vers 1:20, une carte de réseau remplace déjà l'expérience simple de l'acolyte.
+Les cartons tardifs repérés par l'analyse assistée paraissent parfois décalés
+par rapport aux rangs annoncés dans la narration. Ce point mérite une lecture
+continue avant diagnostic exhaustif, mais l'écart d'ouverture est vérifié.
+À reprendre : rivalité entre maître et élève, pouvoir comme vulnérabilité.
+À améliorer : chaque image doit servir la phrase entendue ; pas de salle du
+conseil pour illustrer n'importe quel niveau.
+
+SAIYAN ARMY — référence d'identification immédiate
+Le scouter à la naissance matérialise le classement. La mesure 200 est visible
+dans la capture à 0:24 ; le premier rang à 0:58. La queue saisie par un ennemi
+à 3:37 donne une vulnérabilité concrète, propre à l'univers.
+À reprendre : accessoires et règles qui expliquent visuellement une condition.
+À améliorer : ne pas confondre rang, catégorie sociale, puissance et famille
+royale ; l'ascension présentée est un cadre dramatique, pas une carrière garantie.
+Notre éventuelle adaptation peut commencer avec un adulte.
+
+CLONE ARMY — référence de continuité émotionnelle et de suite entre épisodes
+L'ouverture parle d'identité, d'enfance fabriquée et de fraternité avant le rang 1.
+Le retournement majeur arrive avec l'Ordre 66, puis le remplacement des clones.
+Les captures montrent l'incubation, le groupe de clones et le survivant âgé qui
+voit les nouveaux soldats. La fin du texte renvoie vers Galactic Empire :
+l'épisode suivant répond naturellement à « qu'est-ce qui vient après ? ».
+À reprendre : relations persistantes et passage de relais entre deux épisodes.
+À améliorer : limiter les scènes répétitives autour des consoles et séparer les
+crises historiques des simples promotions.
+
+ARASAKA — référence de changement de nature du pouvoir
+Le badge commence comme permission d'exister dans le bâtiment. Au sommet,
+le personnage peut faire retirer l'accès aux autres. Cette boucle donne un
+début et une fin cohérents. Dix niveaux répartissent le pouvoir, les secrets,
+l'influence et les privilèges.
+À reprendre : un objet concret qui change de signification au fil de l'histoire.
+À améliorer : une crise incarnée, des collègues et des conséquences visibles,
+pour que bureaux, hologrammes et réseaux ne remplacent pas toutes les actions.
+Le compteur est trop jeune pour conclure à une faiblesse de Cyberpunk.
+
+VILTRUMITE EMPIRE — référence de rupture au milieu de l'échelle
+Purge, crise démographique et mission d'infiltration interrompent les grades.
+Le contraste se voit entre le soldat blessé, l'arrivée sur un monde et la vie
+domestique à 7:10. L'attachement à une famille crée une obligation que le pouvoir
+militaire ne sait pas résoudre.
+À reprendre : un changement de monde vécu, pas seulement un poste plus élevé.
+À améliorer : rendre explicites les fonctions, légitimités et branches du pouvoir.
+
+IMPERIAL GUARD — référence la plus utile pour notre écriture
+Le vieux soldat devient une relation et ses plaques un motif narratif. Au début,
+il aide le protagoniste ; à la fin, le général se rappelle ce qu'il lui doit
+pendant qu'il ordonne un sacrifice. Chaque responsabilité mène à une crise :
+panique, ressources insuffisantes, commissaire, bureaucratie, sacrifice.
+La capture à 5:30 met le personnage devant une carte et des options ; à 11:30,
+la décision lui coûte visiblement. Le script fait revenir les plaques du mentor.
+À reprendre : un objet, un interlocuteur, une dette et un rappel final.
+À améliorer : varier la nature des choix ; plusieurs dilemmes tactiques similaires
+peuvent devenir une mécanique prévisible. Compteur de moins de deux jours.
+
+7. VISUEL ET SON : CE QUE NOUS POUVONS PRODUIRE
+
+Les captures montrent des avatars à tête blanche, des corps habillés, des
+uniformes lisibles et des environnements détaillés. Les personnages secondaires
+ne partagent pas toujours le même traitement de visage. Les expressions sont
+plus marquées que les références historiques approuvées dans notre dépôt.
+
+L'analyse assistée décrit essentiellement des illustrations successives, avec
+mouvements de caméra, effets et transitions, plutôt qu'une animation complète.
+Les captures confirment les compositions, cartons et transitions visibles, mais
+ne permettent pas à elles seules de certifier le découpage en calques ou la
+technique de fabrication. Certaines transitions tournantes brouillent l'image.
+
+L'analyse assistée indique selon les épisodes des visuels de quelques secondes,
+un narrateur masculin posé, une musique continue et des bruitages discrets.
+Aucune mesure fiable de LUFS, nombre total de plans ou budget n'est disponible.
+
+Recommandation de production, distincte de ce qui est mesuré :
+- Préparer les plans à partir des actions écrites et de la voix réellement alignée.
+- Alterner situations, échanges, détails d'objet et conséquences.
+- Donner une fonction à chaque nouveau visuel ; un zoom ne crée pas un événement.
+- Utiliser des cartons de rang courts et placés sur leur annonce exacte.
+- Garder l'information principale dans la voix ; réserver le texte aux repères.
+- Laisser respirer le choix dramatique, éviter les transitions spectaculaires
+  qui masquent un geste ou une information.
+
+Pour les cinq chaînes historiques, les choix approuvés restent applicables :
+BD sobre, lieux détaillés crédibles, adultes à tête blanche, petits yeux noirs,
+bouche neutre et mains en moufles ; miniatures humaines expressives seulement.
+Ce benchmark n'est pas une validation des visages expressifs du concurrent.
+Une nouvelle série de franchises devra avoir sa propre direction validée.
+
+8. TROIS OPTIONS POUR NOTRE FORMAT
+
+A. ADAPTATION PROCHE — « Ta vie à chaque rang de [organisation] »
+Avantage : promesse immédiatement compréhensible et proche du signal observé.
+Limite : forte concurrence et risque de chapitres artificiels.
+Différence minimale : un événement complet à chaque rang, un protagoniste
+identifiable et des secondaires qui restent dans son histoire.
+
+B. ÉVOLUTION RECOMMANDÉE — « Chaque promotion change ce que tu peux sacrifier »
+On conserve les rangs dans le titre et le repérage, mais une crise traverse
+l'épisode. Une décision prise au début change une relation ou une mission plus
+tard. Le spectateur découvre le sommet et veut savoir ce qu'il restera de lui.
+Signature réutilisable : promesse du rang, privilège concret, choix, conséquence,
+puis rappel. Le pouvoir transforme l'histoire au lieu de simplement l'agrandir.
+
+C. FORMAT PLUS ORIGINAL — « Le même événement, vu depuis chaque rôle »
+Une opération, une panne ou une purge est vue depuis l'exécutant, son chef,
+la logistique et la direction. Les versions se complètent et révèlent un secret.
+Ce sont des rôles, pas nécessairement une carrière de promotion.
+Potentiel de signature fort, mais demande encore à tester : on s'éloigne davantage
+du moteur « découvrir le prochain rang ».
+
+Mon choix : B, avec un premier titre encore très lisible. C peut devenir une
+série secondaire après quelques épisodes. Pas besoin de lancer trois chaînes.
+
+9. ADAPTATIONS ET PRIORITÉS
+
+SPACE MARINES — meilleur contrôle pour un test proche de la référence
+Signal direct de demande : « Your Life as Every Space Marine Rank », nerd.mp4,
+196 412 vues au relevé ; d'autres variantes atteignent plusieurs dizaines de
+milliers. La concurrence existe donc déjà.
+Source : https://www.youtube.com/watch?v=eQeLLR6TzqE
+Autre exemple : https://www.youtube.com/watch?v=at836JzL8go (74 483 vues).
+Angle proposé : ce qui reste de l'humain derrière les promotions ; suivre un
+chapitre et des relations précis, sans fabriquer un escalier universel.
+Titre de travail : « Your Life as Every Rank in a Space Marine Chapter ».
+Étape suivante avant script : choisir le chapitre, la continuité et les fonctions
+documentées. Ce titre est une proposition, pas une validation de canon.
+
+S.H.I.E.L.D. / HYDRA — meilleure piste pour notre différence Marvel
+Angle : chaque accès obtenu révèle un secret et réduit le nombre de personnes
+auxquelles tu peux faire confiance. Un même dossier change de sens en montant.
+L'existence d'un accès « Level 7 » est illustrée par une vidéo officielle Marvel :
+https://www.youtube.com/watch?v=z3aYXim7AEw
+Cela vérifie l'élément de lore ; ses 127 038 vues anciennes ne valident pas
+commercialement notre nouveau format.
+Titre de travail : « Your Life Inside S.H.I.E.L.D. — Every Secret You Unlock ».
+Les recherches de titres proches ont surtout donné des résultats hors sujet :
+concurrence et demande de ce format exact restent inconnues.
+Choisir une continuité avant écriture ; ne pas transformer automatiquement des
+niveaux d'habilitation en grades, ni une succession de rôles en carrière canonique.
+Piste plus originale, à tester après ou à la place du contrôle proche si le choix
+créatif prioritaire reste Marvel/DC.
+
+NATION DU FEU — bonne transposition de l'engrenage militaire vers un cartoon
+Angle : un soldat adulte monte en responsabilité pendant une guerre ; il doit
+finalement défendre un système dont il connaît les conséquences.
+Signal adjacent : « The History Of The Fire Nation Military (Avatar) »,
+The Amagi, 133 461 vues sur plusieurs années, pas validation du POV à chaque rang.
+Source : https://www.youtube.com/watch?v=t2fKjxsEmpU
+Titre de travail : « Your Life in the Fire Nation Army ».
+Ne pas finir automatiquement « Fire Lord » : fonction dynastique distincte.
+Différence possible : le même ordre traverse une chaîne de commandement et change
+de sens selon la personne qui doit l'exécuter.
+
+ONE PIECE / NARUTO — possibles, mais pas nos premiers paris automatiques
+Des titres proches existent déjà. One Piece Marine :
+https://www.youtube.com/watch?v=H3e_YqwgnRw (2 731 vues).
+Naruto :
+https://www.youtube.com/watch?v=1RxkrUBxDs8 (5 293 vues).
+Pirates de Whitebeard :
+https://www.youtube.com/watch?v=qm-ScG5k8ig (23 459 vues).
+Échantillon limité, âges différents, pas verdict sur les franchises. Il montre
+que « franchise connue + Every Rank » ne garantit pas le succès.
+Éviter de multiplier les variantes sans conflit spécifique ni mise en scène.
+
+Les pistes Gotham, Plumbers/Ben 10 et Team Rocket restent possibles dans le
+contexte Marvel/DC/cartoon déjà exploré. Elles ne sont pas priorisées ici sans
+meilleure recherche de demande et clarification de la vraie structure des rôles.
+
+10. TEST CONCRET RECOMMANDÉ
+
+Trois épisodes sur une même série, avec une direction visuelle stable :
+1) Un sujet de contrôle proche, avec une demande déjà observable.
+2) Une organisation adjacente, en gardant la même promesse et une durée comparable.
+3) Une évolution narrative plus marquée, avec un dossier, une relation ou une crise
+   qui traverse les rangs. Pas de classement de puissance interchangeable.
+
+Pour le premier pilote, viser environ 10-13 minutes est un choix de maîtrise du
+récit et du coût, pas une « durée optimale » démontrée. Le meilleur épisode du
+concurrent dure 8:38 ; son deuxième dure 19:09. La longueur seule n'explique pas.
+
+Comparer nos épisodes aux mêmes âges : 48 heures, 7 jours et 28 jours.
+Utiliser nos propres impressions, CTR par source de trafic, rétention des
+30 premières secondes, durée moyenne regardée et retours précis sur les scènes.
+Ne pas inventer des seuils universels. Comparer aux vidéos de notre chaîne.
+Un succès isolé sert à affiner un test ; plusieurs épisodes concordants servent
+à confirmer une direction. Ne pas changer sujet, miniature, durée, ton et
+graphisme tous ensemble après un seul compteur faible.
+
+Miniature proposée pour le test, sans génération lancée :
+un changement visible de situation, deux statuts clairement distincts, un indice
+reconnaissable de l'univers. Pour marquer notre différence, le puissant peut être
+pris dans la conséquence de sa décision ; il n'est pas obligatoirement
+arrogant à droite. Les cinq miniatures historiques gardent leurs règles propres.
+
+Exemple de structure originale écrite par Codex, fiction illustrative :
+un agent adulte reçoit un dossier dont une page lui est interdite ; plus tard,
+sa promotion lui donne cette page et lui révèle que son premier rapport a mis
+un collègue en danger ; au sommet, il doit décider qui aura accès à la vérité.
+Ce n'est ni un fait de lore établi, ni un script ou un découpage approuvés.
+Cette idée montre notre différence : le gain d'accès modifie une relation
+et retourne une scène déjà vécue.
+
+Décision proposée : adapter le moteur de progression, choisir un univers avec
+un signal ou un enjeu clair, puis faire de la continuité et des conséquences
+notre signature. Aucune production, publication ou modification de frontend
+n'a été lancée dans ce benchmark.
