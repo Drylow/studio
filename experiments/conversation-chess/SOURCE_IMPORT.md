@@ -175,6 +175,16 @@ trois téléchargements, la lecture du prix d'un épisode non acquis renvoie
 zéro du quota. Aucun quatrième épisode, suppression d'accès ou contournement
 de la limite n'a été tenté.
 
+**Vérification du 10 octobre : ce quota concerne les épisodes acquis en même
+temps.** L'interface normale précise « 3 épisodes à la fois » et propose
+« Retirer (libère le quota gratuit) ». Le retrait utilise le droit hors ligne
+du compte et peut supprimer les fichiers locaux dans l'application. Pour
+Peaky Blinders, les trois emplacements correspondent aux épisodes Sopranos
+créés pour notre précédent montage ; leur remplacement a été demandé à
+l'utilisateur, sans retrait avant sa réponse. Ne pas dépasser la limite,
+forcer un achat, ni annoncer que les accès retirés restent valides. Les films
+montés et déjà livrés sont distincts des téléchargements d'épisodes.
+
 Les copies exactes et vérifiées sont dans le dossier ignoré par Git
 `output/conversation-chess/source-cache/` :
 
