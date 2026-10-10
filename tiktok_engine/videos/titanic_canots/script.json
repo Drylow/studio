@@ -1,0 +1,591 @@
+{
+  "title": "Titanic : vingt canots pour plus de deux mille personnes",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Les vingt canots du Titanic ne pouvaient pas accueillir toutes les personnes à bord. #histoire #titanic #vulgarisation #naufrage",
+  "sources": [
+    {
+      "name": "British Wreck Commissioner's Inquiry, 1912 — Board of Trade's Administration",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/botRepBOT.php",
+      "checked": "2026-10-10",
+      "evidence": "La table réglementaire est basée sur le tonnage brut, non sur les personnes transportées, et s'arrête à la catégorie 10 000 tons and upwards. Le rapport constate que les règles sont restées stationnaires malgré des navires beaucoup plus grands. Il donne 2 201 personnes lors de la catastrophe, cohérent avec environ 2 200 chez Britannica.",
+      "supports": [
+        "tonnage plutôt que personnes à sauver",
+        "réglementation dépassée",
+        "environ 2 200 personnes à bord"
+      ]
+    },
+    {
+      "name": "British Wreck Commissioner's Inquiry, 1912 — Boats (transcription du rapport primaire par Titanic Inquiry Project)",
+      "url": "https://www.titanicinquiry.org/BOTInq/BOTReport/BOTRepBoats.php",
+      "checked": "2026-10-10",
+      "evidence": "The Titanic was provided with 20 boats. Fourteen lifeboats carried 65 each, two emergency boats 40 each, four collapsible boats 47 each. Thus the total boat accommodation was 1,178 persons. Le rapport détaille aussi le départ de canots non remplis et les difficultés des derniers canots pliables.",
+      "supports": [
+        "20 canots",
+        "16 canots rigides et 4 pliables",
+        "capacité théorique de 1 178 places",
+        "capacité différente selon les canots",
+        "évacuation incomplète"
+      ]
+    },
+    {
+      "name": "Encyclopaedia Britannica — Titanic, Maiden voyage",
+      "url": "https://www.britannica.com/topic/Titanic/Maiden-voyage",
+      "checked": "2026-10-10",
+      "evidence": "Onboard were some 2,200 people, approximately 1,300 of whom were passengers. Its 20 boats could carry only 1,178 people. Le nombre de canots excédait les exigences du Board of Trade ; plusieurs furent lancés bien en dessous de leur capacité. Le Carpathia recueille les survivants.",
+      "supports": [
+        "environ 2 200 personnes, équipage compris",
+        "20 canots",
+        "1 178 places",
+        "règles respectées mais places insuffisantes",
+        "canots non remplis",
+        "Carpathia"
+      ]
+    },
+    {
+      "name": "U.S. Senate Inquiry, 1912 — Lifeboats (transcription du rapport primaire par Titanic Inquiry Project)",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep03.php",
+      "checked": "2026-10-10",
+      "evidence": "Le rapport américain décrit 16 lifeboats et 4 collapsibles, respectant les exigences britanniques. Il donne 1 176 places, avec un calcul différent pour les canots de secours et pliables : ne pas présenter cette valeur comme confirmation exacte des 1 178 du rapport britannique.",
+      "supports": [
+        "20 canots au total",
+        "16 rigides et 4 pliables",
+        "conformité réglementaire",
+        "limite documentaire sur les capacités détaillées"
+      ]
+    },
+    {
+      "name": "U.S. Senate Inquiry, 1912 — Abandoning ship",
+      "url": "https://www.titanicinquiry.org/USInq/USReport/AmInqRep07.php",
+      "checked": "2026-10-10",
+      "evidence": "Only a few of the ship's lifeboats were fully loaded. Le rapport décrit des hésitations, des consignes non uniformes et une capacité de sauvetage inutilisée. Les décomptes de survivants varient entre sources et sont volontairement omis.",
+      "supports": [
+        "canots partiellement remplis",
+        "organisation confuse",
+        "capacité théorique différente du nombre de personnes sauvées"
+      ]
+    }
+  ],
+  "art": {
+    "titanic": {
+      "size": "320x192",
+      "prompt": "Historical RMS Titanic ocean liner in 1912, complete ship in a clear three-quarter side view, four evenly spaced funnels, dark hull and pale superstructure, a few restrained pale wave pixels beneath it, no people visible. Sober crisp pixel art, deep blue white grey palette with ordered checkerboard dithering, pure black background, entire bow and stern within frame with generous margin, no text, no ship name, no logos, no movie imagery, no photorealism."
+    },
+    "lifeboat": {
+      "size": "320x192",
+      "prompt": "One empty early twentieth-century wooden open lifeboat, simple pointed bow, symmetrical hull, evenly spaced wooden benches and oarlocks, resting isolated in side perspective, no people and no loose oars crossing confusingly. Sober high-contrast pixel art, deep blue white grey, clean ordered dithering, pure black background, whole boat visible with margins, no writing, no numbers, no logos."
+    },
+    "folding_boat": {
+      "size": "256x192",
+      "prompt": "One historical Engelhardt collapsible lifeboat from the early twentieth century, low solid wooden bottom with upright pale canvas side walls, simple bench seats, shown empty in a clear three-quarter view. Restrained sober pixel art, deep blue white grey, pure black background, historically plausible shallow boat silhouette, complete object within frame, no human hands, no text or logos."
+    },
+    "crowd": {
+      "size": "320x192",
+      "prompt": "An illustrative crowd of adult ocean-liner travelers and uniformed crew in 1912, a few clearly separated foreground busts with hats, coats and pale lifejackets, further figures indicated by simple silhouettes, not a literal numerical count, no hands visible. Sober crisp historical pixel art in deep blue white grey on pure black, readable distinct faces, no modern clothing, no text, no logos, no panic caricature."
+    },
+    "boat_deck": {
+      "size": "320x192",
+      "prompt": "Empty 1912 ocean-liner boat deck with one wooden lifeboat hanging from two curved metal davits, pale ship railing and a short section of dark deck, clean technically plausible ropes, no people. Restrained pixel art with clear geometry, deep blue white grey, sparse ordered dithering, isolated pure black background, uncluttered and fully in frame, no writing, no logos."
+    },
+    "telegram": {
+      "size": "192x192",
+      "prompt": "A historical 1912 maritime wireless telegraph key and a pair of period headphones resting beside it, simple coherent brass-and-metal shapes represented in blue white grey, no cables resembling extra limbs, no human hands. Sober crisp pixel art, ordered checkerboard dithering, pure black background, centered still life with margin, no labels, letters or logos."
+    },
+    "rulebook": {
+      "size": "192x256",
+      "prompt": "One closed early twentieth-century maritime rulebook with a plain dark cloth cover and a small blank paper certificate partly tucked beneath it, simple historical still life, unmarked surfaces and no human hands. Sober crisp pixel art in deep blue white grey, sparse ordered dithering, pure black background, centered objects within frame, no writing, numbers, stamps with letters or logos."
+    },
+    "iceberg": {
+      "size": "320x192",
+      "prompt": "A single North Atlantic iceberg at night, irregular pale ice above a thin dark-blue sea surface, understated cold atmosphere, no ship and no people, not a literal reconstruction of a specific iceberg. Sober clean pixel art, deep blue white grey, ordered dithering, pure black negative space with clear silhouette and generous margins, no text, no logos, no photorealism."
+    },
+    "carpathia": {
+      "size": "320x192",
+      "prompt": "Historical RMS Carpathia rescue steamship in 1912, one funnel and dark hull with pale superstructure, full side perspective on a small patch of calm sea, no people visible. Crisp sober pixel art, deep blue white grey palette, ordered checkerboard dithering, pure black background, complete bow and stern inside frame, no writing, no ship name, no logos, no movie imagery."
+    }
+  },
+  "beats": [
+    {
+      "say": "Le Titanic n'avait que vingt canots. Même remplis, ils ne pouvaient pas sauver toutes les personnes à bord.",
+      "glow": {
+        "y": 520,
+        "r": 290,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Titanic : *20 canots*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "titanic",
+          "h": 280,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "PAS ASSEZ DE PLACES",
+          "y": 735,
+          "size": 18,
+          "rot": -5,
+          "fill": true,
+          "at": "sauver"
+        }
+      ]
+    },
+    {
+      "say": "Vous imaginez un paquebot luxueux. Mais le luxe ne vous donne aucune place dans un canot.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le luxe ne sauve *pas*.",
+          "y": 150,
+          "size": 26,
+          "at": "luxe"
+        },
+        {
+          "type": "img",
+          "src": "boat_deck",
+          "h": 260,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "LE LUXE N'EST PAS UNE PLACE",
+          "y": 735,
+          "size": 13,
+          "rot": -3,
+          "at": "place"
+        }
+      ]
+    },
+    {
+      "say": "Environ deux mille deux cents personnes voyagent sur le navire. Attention : ce total comprend les passagers et l'équipage.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Environ *2 200 personnes*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 2200,
+          "prefix": "~",
+          "dur": 1.1,
+          "y": 290,
+          "size": 67,
+          "at": "mille"
+        },
+        {
+          "type": "img",
+          "src": "crowd",
+          "h": 250,
+          "y": 535,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "PASSAGERS + ÉQUIPAGE",
+          "y": 725,
+          "color": "W",
+          "at": "Attention"
+        }
+      ]
+    },
+    {
+      "say": "Les canots offrent mille cent soixante-dix-huit places, d'après l'enquête britannique. Une capacité théorique, pas un nombre de rescapés.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Seulement *1 178 places*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 1178,
+          "dur": 1.1,
+          "y": 285,
+          "size": 70,
+          "at": "mille"
+        },
+        {
+          "type": "img",
+          "src": "lifeboat",
+          "h": 250,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "CAPACITÉ THÉORIQUE",
+          "y": 735,
+          "size": 16,
+          "rot": -4,
+          "at": "théorique"
+        }
+      ]
+    },
+    {
+      "say": "Cela représente à peine plus de la moitié des personnes présentes. Le manque de places existe avant même l'évacuation.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "À peine plus de *la moitié*",
+          "y": 150,
+          "size": 25,
+          "at": "moitié"
+        },
+        {
+          "preset": "num",
+          "text": "1 178 / ~2 200",
+          "y": 300,
+          "size": 44,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "crowd",
+          "h": 245,
+          "y": 540,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "AVANT L'ÉVACUATION",
+          "y": 735,
+          "size": 16,
+          "rot": -4,
+          "fill": true,
+          "at": "avant"
+        }
+      ]
+    },
+    {
+      "say": "Le navire transporte seize canots rigides et quatre pliables. Et tous n'ont pas la même capacité.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "*16 rigides* + 4 pliables",
+          "y": 150,
+          "size": 26,
+          "at": "seize"
+        },
+        {
+          "type": "img",
+          "src": "lifeboat",
+          "h": 220,
+          "y": 480,
+          "at": 0,
+          "in": "pop",
+          "out": "pliables"
+        },
+        {
+          "type": "img",
+          "src": "folding_boat",
+          "h": 260,
+          "y": 525,
+          "at": "pliables",
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "DES CAPACITÉS DIFFÉRENTES",
+          "y": 735,
+          "size": 14,
+          "rot": 4,
+          "at": "capacité"
+        }
+      ]
+    },
+    {
+      "say": "Le plus troublant : ce nombre respecte les règles britanniques de l'époque. Le Titanic emporte même davantage de canots que nécessaire.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Les règles étaient *respectées*",
+          "y": 150,
+          "size": 25,
+          "at": "respecte"
+        },
+        {
+          "type": "img",
+          "src": "rulebook",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "stamp",
+          "text": "CONFORME AUX RÈGLES",
+          "y": 750,
+          "size": 16,
+          "rot": -4,
+          "fill": true,
+          "at": "règles"
+        }
+      ]
+    },
+    {
+      "say": "Les exigences dépendaient du tonnage, pas simplement du nombre de personnes à sauver. La réglementation n'avait pas suivi ces géants.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le *tonnage*,\npas les personnes.",
+          "y": 150,
+          "size": 26,
+          "at": "tonnage"
+        },
+        {
+          "type": "img",
+          "src": "titanic",
+          "h": 260,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "RÈGLES DÉPASSÉES",
+          "y": 735,
+          "size": 19,
+          "rot": -5,
+          "at": "réglementation"
+        }
+      ]
+    },
+    {
+      "say": "Puis vient le naufrage. Plusieurs canots partent sans être remplis. Des places disponibles quittent donc le navire vides.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Des places partent *vides*",
+          "y": 150,
+          "size": 26,
+          "at": "places"
+        },
+        {
+          "type": "img",
+          "src": "iceberg",
+          "h": 255,
+          "y": 525,
+          "at": 0,
+          "in": "scan",
+          "out": "canots"
+        },
+        {
+          "type": "img",
+          "src": "lifeboat",
+          "h": 245,
+          "y": 525,
+          "at": "canots",
+          "in": "slam"
+        },
+        {
+          "type": "stamp",
+          "text": "CAPACITÉ INUTILISÉE",
+          "y": 735,
+          "size": 17,
+          "rot": -4,
+          "fill": true,
+          "at": "remplis"
+        }
+      ]
+    },
+    {
+      "say": "Les enquêtes décrivent des hésitations et des consignes inégales. Avoir un canot ne suffit pas : il faut organiser l'évacuation.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une évacuation *confuse*",
+          "y": 150,
+          "size": 26,
+          "at": "hésitations"
+        },
+        {
+          "type": "img",
+          "src": "boat_deck",
+          "h": 260,
+          "y": 525,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "ORGANISATION DÉFAILLANTE",
+          "y": 735,
+          "size": 14,
+          "rot": 4,
+          "at": "organiser"
+        }
+      ]
+    },
+    {
+      "say": "Les derniers pliables ne sont même pas tous mis à l'eau normalement. La catastrophe dépasse le simple inventaire du matériel.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Du matériel.\n*Pas une garantie.*",
+          "y": 150,
+          "size": 26,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "folding_boat",
+          "h": 275,
+          "y": 525,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "LE TEMPS MANQUE",
+          "y": 735,
+          "size": 20,
+          "rot": -5,
+          "at": "catastrophe"
+        }
+      ]
+    },
+    {
+      "say": "Les survivants seront recueillis par le Carpathia. Mais leur nombre ne mesure pas les places restées inutilisées.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le *Carpathia* arrive",
+          "y": 150,
+          "at": "Carpathia"
+        },
+        {
+          "type": "img",
+          "src": "carpathia",
+          "h": 270,
+          "y": 525,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "img",
+          "src": "telegram",
+          "h": 105,
+          "x": 420,
+          "y": 715,
+          "at": "recueillis",
+          "in": "pop"
+        }
+      ]
+    },
+    {
+      "say": "Le Titanic était conforme. Il n'était pas prêt à sauver tout le monde. Respecter un minimum n'est pas garantir la sécurité.",
+      "glow": {
+        "y": 520,
+        "r": 290,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Conforme.\n*Mais pas suffisant.*",
+          "y": 150,
+          "size": 27,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "titanic",
+          "h": 275,
+          "y": 530,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "MINIMUM ≠ SÉCURITÉ",
+          "y": 735,
+          "size": 18,
+          "rot": -4,
+          "fill": true,
+          "at": "minimum"
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "maxW": 470,
+        "color": "W",
+        "text": "Le Titanic avait\n*20 canots.*",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "titanic",
+        "h": 280,
+        "y": 575
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 33,
+        "maxW": 470,
+        "color": "W",
+        "text": "1 178 places.\n*Environ 2 200 vies.*",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "lifeboat",
+        "h": 270,
+        "y": 570
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "Conforme aux règles.\n*Pas assez de places.*",
+        "y": 255
+      },
+      {
+        "type": "img",
+        "src": "rulebook",
+        "h": 350,
+        "y": 575
+      }
+    ]
+  ]
+}

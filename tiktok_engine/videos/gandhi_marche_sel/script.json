@@ -11,6 +11,7 @@
     "Encyclopaedia Britannica, Salt March : départ le 12 mars 1930, environ 240 miles (385 km selon son arrondi), arrivée à Dandi le 5 avril, geste du sel le 6 avril, monopole britannique, arrestation de Gandhi début mai ; https://www.britannica.com/event/Salt-March",
     "HISTORY, Salt March : monopole et taxe, départ le 12 mars 1930, environ 240 miles, arrivée le 5 avril et geste le lendemain, arrestation le 5 mai, indépendance en août 1947 ; https://www.history.com/articles/salt-march",
     "HISTORY, Evan Andrews, When Gandhi’s Salt March Rattled British Colonial Rule : 24 jours, 241 miles selon cette source, arrivée le 5 avril et geste le lendemain ; https://www.history.com/articles/gandhi-salt-march-india-british-colonial-rule",
+    "HISTORY, This Day in History, Gandhi leads civil disobedience, 12 March 1930 : départ de Sabarmati avec 78 compagnons, 241 miles selon cette source ; recoupe le groupe initial de 78 donné par UCLA ; https://www.history.com/this-day-in-history/march-12/gandhi-leads-civil-disobedience",
     "University of Wisconsin–Madison, The Nonviolence Project, Salt March : marche de 24 jours, prises de parole devant des milliers de personnes ; https://thenonviolenceproject.wisc.edu/2021/08/19/salt-march/",
     "UCLA, South Asia, Dandi March : 78 compagnons choisis pour le départ, puis d’autres participants rejoignent le cortège. Le chiffre ne désigne pas toute la foule finale. Pour la date du geste du sel, retenir le 6 avril recoupé par Britannica et HISTORY ; https://southasia.ucla.edu/history-politics/gandhi/dandi-march/",
     "Distance : estimation usuelle de 240 à 241 miles selon les sources. Le script dit environ 386 kilomètres, conversion arrondie de 240 miles ; ne pas présenter une distance mesurée au kilomètre près. La marche et le geste du sel ne donnent pas immédiatement l’indépendance."
@@ -423,7 +424,7 @@
           "preset": "title",
           "text": "Désobéir *publiquement*.",
           "at": 0,
-          "out": "violence",
+          "out": "violence-0.15",
           "y": 150
         },
         {
@@ -534,7 +535,7 @@
           "preset": "title",
           "text": "Pas une victoire\n*instantanée*.",
           "at": 0,
-          "out": "poignée",
+          "out": "poignée-0.15",
           "y": 150
         },
         {

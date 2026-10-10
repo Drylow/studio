@@ -23,7 +23,7 @@
       "size": "192x256"
     },
     "rome_fire": {
-      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Ancient Rome residential street in AD 64, timber upper floors and tiled roofs engulfed in stylized blue and white fire, no Colosseum, no modern buildings, no people visible. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs.",
+      "prompt": "Low resolution retro pixel art, large visible square pixels, checkerboard dithering, deep navy and vivid royal blue with off-white and grey only, pure black background, strong blue rim light, no text or border, no orange or red, centered subject, correct proportions. Ancient Rome residential street in AD 64, timber upper floors and tiled roofs engulfed in stylized blue and white fire, no Colosseum, no modern buildings, no people visible. If human hands are visible, each person has exactly two arms and two anatomically correct hands with five digits each; no extra limbs. STRICT FIRST-CENTURY ANCIENT ROME: white plaster masonry apartment blocks, stone facades, red tile roofs rendered in blue palette. No Tudor timber framing, no half-timbered medieval houses, no Gothic or medieval gables, no castles. Modest Roman insula street, some smoke and non-graphic flames.",
       "size": "320x192"
     },
     "antium": {

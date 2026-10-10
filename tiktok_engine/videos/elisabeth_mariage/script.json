@@ -177,7 +177,8 @@
           "at": "diplomatique",
           "y": 725,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },
@@ -315,7 +316,8 @@
           "at": "alliances",
           "y": 730,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },
@@ -346,7 +348,8 @@
           "at": "intime",
           "y": 745,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },

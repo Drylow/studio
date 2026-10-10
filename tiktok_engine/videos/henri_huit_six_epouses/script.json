@@ -411,7 +411,7 @@
           "color": "W",
           "text": "Annulations · Exécutions\nMort après l'accouchement · Veuvage",
           "y": 505,
-          "at": "veuve",
+          "at": "exécutions",
           "in": "fade"
         }
       ]

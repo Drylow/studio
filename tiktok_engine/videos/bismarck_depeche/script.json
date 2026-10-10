@@ -1,0 +1,514 @@
+{
+  "title": "Bismarck : un message raccourci, une guerre six jours après",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "Bismarck a rendu une dépêche diplomatique explosive en la raccourcissant. #histoire #bismarck #diplomatie #vulgarisation",
+  "sources": [
+    "Encyclopaedia Britannica, « Ems telegram », https://www.britannica.com/event/Ems-telegram : dépêche envoyée le13juillet1870, entrevue GuillaumeI/Benedetti, modification volontaire de la tonalité, déclaration de guerre française le19juillet. Les deux dates donnent sixjours ; la dépêche est un déclencheur dans une crise existante, pas la seule cause de guerre.",
+    "German Historical Institute Washington, German History in Documents and Images, « Original and Edited Versions of the Ems Dispatch (July13,1870) », https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/original-and-edited-versions-of-the-ems-dispatch-july-13-1870 : documents primaires original et communiqué abrégé comparés ; date13juillet et déclaration française19juillet corroborées. L’introduction donne une date de retrait espagnol qui diffère de Britannica : cette date précise n’est donc pas reprise.",
+    "Encyclopaedia Britannica, « Otto von Bismarck / Prime minister », https://www.britannica.com/biography/Otto-von-Bismarck/Prime-minister : candidature Hohenzollern au trône espagnol, crainte française d’encerclement, refus poli du roi, dépêche abrégée pour la presse et guerre française19juillet1870.",
+    "German Historical Institute Washington, « Bismarck Remembers the Evening the Ems Dispatch was Edited (July13,1870) », https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/bismarck-remembers-the-evening-the-ems-dispatch-was-edited-july-13-1870 : mémoires tardifs, à lire avec recul ; aucune quantité précise de mots et aucune citation inventée dans la vidéo."
+  ],
+  "art": {
+    "bismarck": {
+      "prompt": "Otto von Bismarck in1870, recognisable mature German statesman with bald crown, short grey side hair and broad grey moustache, charcoal high-collared plain coat, firm direct gaze, chest-up historical portrait, no medals or heraldic logos, no hands in frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "ems": {
+      "prompt": "Bad Ems spa promenade inGermany in1870, King Wilhelm I as an elderly man in a plain dark navy nineteenth-century coat with grey moustache facing the adult French ambassador in a charcoal frock coat, two men having a restrained conversation with relaxed arms, river and modest classical spa buildings behind, natural anatomy, no military confrontation or flags. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "king": {
+      "prompt": "Wilhelm I King of Prussia in1870, elderly man with short grey hair and full grey sideburns and moustache, plain dark navy high-collared coat, calm direct expression, chest-up portrait, no military insignia or medals, hands outside frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "napoleon": {
+      "prompt": "Napoleon III of France in1870, recognisable mature man with pointed dark moustache and small goatee, short side-parted dark grey hair, charcoal nineteenth-century formal coat and off-white shirt collar, serious direct gaze, chest-up portrait, no insignia or medals, hands outside frame.",
+      "size": "192x256",
+      "kind": "person"
+    },
+    "spanish_throne": {
+      "prompt": "An empty nineteenth-century Spanish royal throne with carved grey wood and deep royal-blue upholstery, plain silver-grey crown resting on the seat, no coat of arms, no gold, no people, no lettering, isolated still life with natural object proportions.",
+      "size": "192x256",
+      "kind": "scene"
+    },
+    "message": {
+      "prompt": "A single nineteenth-century telegraph dispatch sheet beside a plain brass telegraph key coloured grey and royal-blue on a small dark desk, paper contains only sparse abstract grey strokes without actual readable words, period-correct compact equipment, no logos or labels, no hands. Wide still life.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "editor": {
+      "prompt": "A pair of simple nineteenth-century grey metal scissors beside two off-white strips cut from a longer plain parchment sheet, a few abstract grey strokes but no readable letters, visual metaphor for shortening a dispatch, natural scale, isolated overhead still life on black, no hands, no logos.",
+      "size": "192x192",
+      "kind": "scene"
+    },
+    "press": {
+      "prompt": "A compact nineteenth-century hand-operated newspaper printing press in1870, dark cast iron machine and a stack of plain off-white sheets with abstract grey print marks, no readable words, royal-blue highlights, no workers, no modern machinery or brand logos. Wide object scene.",
+      "size": "320x192",
+      "kind": "scene"
+    },
+    "battlefield": {
+      "prompt": "Distant French and Prussian soldiers advancing in opposing small grey and navy silhouettes across a restrained European field in1870, period-correct kepis on one side and low pickelhaube silhouettes on the other, early rifles not modern automatic guns, no gore, no explosions, no flags or insignia, no fantasy structures, sober blue highlights. Wide scene.",
+      "size": "320x192",
+      "kind": "scene"
+    }
+  },
+  "beats": [
+    {
+      "say": "Bismarck raccourcit un message. Six jours plus tard, la France déclare la guerre.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "bismarck",
+          "h": 420,
+          "y": 500,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Il *raccourcit*\nun message.",
+          "at": 0,
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "stamp",
+          "text": "6 JOURS APRÈS",
+          "at": "Six",
+          "y": 745,
+          "size": 25,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Le treize juillet 1870, l'Europe traverse déjà une crise. Tout part d'une candidature au trône d'Espagne, soutenue par la Prusse.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "stamp",
+          "text": "13 JUILLET 1870",
+          "at": 0,
+          "y": 150,
+          "size": 23,
+          "rot": -4,
+          "fill": true
+        },
+        {
+          "type": "img",
+          "src": "spanish_throne",
+          "h": 315,
+          "y": 520,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "preset": "title",
+          "text": "Le trône *d’Espagne*.",
+          "at": "Espagne",
+          "y": 270,
+          "size": 26
+        }
+      ]
+    },
+    {
+      "say": "À Paris, Napoléon trois redoute de voir la France entourée. La tension monte entre la France et la Prusse.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La France craint\n*l’encerclement*.",
+          "at": "redoute",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "napoleon",
+          "h": 340,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Le candidat a renoncé. L'ambassadeur français veut une garantie : aucun candidat de cette famille ne reviendra, jamais.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une garantie\n*pour toujours*.",
+          "at": "garantie",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "spanish_throne",
+          "h": 310,
+          "y": 540,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "JAMAIS",
+          "at": "jamais",
+          "y": 750,
+          "size": 27,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Il rencontre le roi de Prusse à Ems. Le roi refuse poliment cette promesse, impossible à garantir pour toujours.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une rencontre à *Ems*.",
+          "at": "Ems",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "ems",
+          "h": 245,
+          "y": 525,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Un compte rendu de leur échange arrive à Bismarck. C'est la dépêche d'Ems, avec des explications et du contexte.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un *compte rendu*.",
+          "at": "compte",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "message",
+          "h": 245,
+          "y": 525,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "LA DÉPÊCHE D’EMS",
+          "at": "dépêche",
+          "y": 735,
+          "color": "W",
+          "size": 13,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "Bismarck choisit d'en publier une version raccourcie. Des précisions disparaissent. Le refus du roi semble désormais beaucoup plus sec.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le contexte *disparaît*.",
+          "at": "disparaissent",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "editor",
+          "h": 290,
+          "y": 535,
+          "at": 0,
+          "in": "slam"
+        },
+        {
+          "type": "stamp",
+          "text": "RACCOURCIE",
+          "at": "raccourcie",
+          "y": 750,
+          "size": 20,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Vous connaissez ça : retirez le contexte d'un message, et une réponse diplomatique peut soudain ressembler à une humiliation.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Diplomatie…\nou *humiliation* ?",
+          "at": "humiliation",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "king",
+          "h": 330,
+          "y": 525,
+          "at": 0,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "La presse diffuse cette version. Chacun y voit une offense à son camp. Le conflit devient plus facile à vendre.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La presse *s’en empare*.",
+          "at": "presse",
+          "y": 155,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "press",
+          "h": 245,
+          "y": 525,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "OFFENSE",
+          "at": "offense",
+          "y": 745,
+          "size": 24,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Le dix-neuf juillet 1870, la France déclare la guerre à la Prusse. Six jours après le message envoyé depuis Ems.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La France déclare\n*la guerre*.",
+          "at": "guerre",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "preset": "num",
+          "text": "19 JUILLET 1870",
+          "at": "juillet",
+          "y": 280,
+          "size": 39
+        },
+        {
+          "type": "img",
+          "src": "battlefield",
+          "h": 245,
+          "y": 565,
+          "at": 0,
+          "in": "scan"
+        }
+      ]
+    },
+    {
+      "say": "Attention, une dépêche n'explique pas tout. Rivalités politiques, prestige et rapports de force existaient déjà. Bismarck exploite cette situation.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une crise *déjà présente*.",
+          "at": "déjà",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "napoleon",
+          "h": 270,
+          "y": 515,
+          "at": 0,
+          "in": "pop",
+          "out": "Bismarck"
+        },
+        {
+          "type": "img",
+          "src": "bismarck",
+          "h": 270,
+          "y": 515,
+          "at": "Bismarck",
+          "in": "pop"
+        },
+        {
+          "preset": "label",
+          "text": "PAS UNE CAUSE UNIQUE",
+          "at": "tout",
+          "y": 745,
+          "color": "W",
+          "size": 13,
+          "in": "fade"
+        }
+      ]
+    },
+    {
+      "say": "Son objectif est que la France apparaisse comme l'agresseur. Cela aide la Prusse à rallier d'autres États allemands.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Faire apparaître\n*l’agresseur*.",
+          "at": "agresseur",
+          "y": 165,
+          "size": 27
+        },
+        {
+          "type": "img",
+          "src": "battlefield",
+          "h": 245,
+          "y": 530,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "L’IMAGE COMPTE",
+          "at": "rallier",
+          "y": 745,
+          "size": 21,
+          "rot": -4,
+          "fill": true
+        }
+      ]
+    },
+    {
+      "say": "Il n'a pas eu besoin d'écrire un roman. Il a surtout fait une coupe au montage diplomatique.",
+      "glow": {
+        "y": 500
+      },
+      "els": [
+        {
+          "type": "img",
+          "src": "editor",
+          "h": 325,
+          "y": 500,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "preset": "title",
+          "text": "Une coupe au\n*montage diplomatique*.",
+          "at": "montage",
+          "y": 750,
+          "size": 25
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Un message.\n*Une guerre*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "bismarck",
+        "h": 385,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "6 jours après :\n*la guerre*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "message",
+        "h": 265,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 35,
+        "color": "W",
+        "text": "Le contexte\n*a disparu*.",
+        "y": 280,
+        "maxW": 465
+      },
+      {
+        "type": "img",
+        "src": "editor",
+        "h": 325,
+        "y": 590,
+        "at": 0,
+        "in": "none"
+      }
+    ]
+  ]
+}

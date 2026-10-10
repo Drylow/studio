@@ -1,0 +1,576 @@
+{
+  "title": "La tour Eiffel devait rester vingt ans : la radio a contribué à la sauver",
+  "voice": {
+    "voice_id": "0bKGtCCpdKSI5NjGhU3z",
+    "model": "eleven_v4",
+    "speed": 1.06
+  },
+  "tail": 1.4,
+  "caption": "La tour Eiffel était temporaire avant que son utilité scientifique et radio contribue à la sauver. #histoire #toureiffel #paris #vulgarisation",
+  "sources": [
+    {
+      "name": "History — 10 Things You May Not Know About the Eiffel Tower",
+      "url": "https://www.history.com/articles/10-things-you-may-not-know-about-the-eiffel-tower",
+      "checked": "2026-10-10",
+      "evidence": "Eiffel was permitted to have the structure stand for 20 years. Seeking to prove its strategic utility, he erected an antenna and financed wireless telegraphy experiments beginning in 1898. Its value for military wireless messages caused the city to renew Eiffel's concession when it expired in 1909. Le projet initial de démontage ne doit pas être présenté comme une destruction certaine ou automatique.",
+      "supports": [
+        "vingt ans d'exploitation initiale",
+        "concession expirant en 1909 puis renouvelée",
+        "financement d'expériences radio par Eiffel",
+        "utilité militaire"
+      ]
+    },
+    {
+      "name": "LiveScience — Eiffel Tower: Information & Facts",
+      "url": "https://www.livescience.com/29391-eiffel-tower.html",
+      "checked": "2026-10-10",
+      "evidence": "The tower was intended as a temporary structure that was to be removed after 20 years. L'article relate aussi ses usages scientifiques et de communication sans fil. Les chiffres de hauteur et de fréquentation de cet article ancien ne sont pas repris.",
+      "supports": [
+        "structure initialement temporaire",
+        "vingt ans",
+        "usages scientifiques et radio"
+      ]
+    },
+    {
+      "name": "Association des Descendants de Gustave Eiffel — La tour Eiffel",
+      "url": "https://gustaveeiffel.com/ouvrages/la-tour-eiffel/",
+      "checked": "2026-10-10",
+      "evidence": "Monument élevé à l'occasion de l'Exposition Universelle de 1889, conçu avec Maurice Koechlin et Émile Nouguier. Une concession d'exploitation est accordée par la Ville de Paris. Ne pas attribuer seul à Eiffel tous les dessins techniques.",
+      "supports": [
+        "Exposition universelle de 1889",
+        "concession d'exploitation",
+        "travail collectif de conception"
+      ]
+    },
+    {
+      "name": "Encyclopaedia Britannica — Eiffel Tower",
+      "url": "https://www.britannica.com/topic/Eiffel-Tower-Paris-France",
+      "checked": "2026-10-10",
+      "evidence": "La tour est construite pour l'Exposition de 1889. Britannica mentionne une station météorologique en 1890, une station de télégraphie militaire en 1903 et un laboratoire d'aérodynamique en 1909. Ces dates secondaires ne sont pas utilisées dans la voix.",
+      "supports": [
+        "construction pour 1889",
+        "observations météorologiques",
+        "télégraphie militaire",
+        "recherche aérodynamique"
+      ]
+    },
+    {
+      "name": "History — Eiffel Tower",
+      "url": "https://www.history.com/articles/eiffel-tower",
+      "checked": "2026-10-10",
+      "evidence": "Originally intended as a temporary exhibit, the Eiffel Tower was almost torn down and scrapped in 1909. City officials opted to save it after recognizing its value as a radiotelegraph station. L'article rappelle les critiques d'artistes et d'intellectuels, sans suggérer que tous les Parisiens s'y opposaient.",
+      "supports": [
+        "menace de démontage en 1909",
+        "rôle de la radiotélégraphie",
+        "critiques de certains artistes"
+      ]
+    }
+  ],
+  "art": {
+    "tower": {
+      "size": "192x256",
+      "prompt": "The Eiffel Tower as it stood in 1889, complete recognizable iron lattice structure with four curved legs, broad lower arch, progressively narrowing levels and the original small summit, no modern radio mast, no illuminated night show. Clear front three-quarter view, all legs and summit inside frame. Sober crisp pixel art, deep blue white grey palette, ordered checkerboard dithering, pure black background with generous margins, no people, no text, no logos, no photorealism."
+    },
+    "gustave": {
+      "size": "192x256",
+      "prompt": "Adult Gustave Eiffel around the late nineteenth century, recognizable older French engineer with a full neatly trimmed grey beard and moustache, receding short hair, dark formal coat, waistcoat and white shirt, calm thoughtful chest-up historical portrait. Both arms and hands outside the crop. Crisp restrained pixel art in deep blue white grey, ordered dithering, pure black background, complete head and shoulders with margin, no writing, no logos, no modern objects. IMPORTANT: the entire background outside the head and dark jacket must be solid pure black #000000. No white rectangle, no pale halo, no light wall, no picture card or vignette. Subject isolated against completely black empty space, dark jacket edges clearly visible."
+    },
+    "fair": {
+      "size": "320x192",
+      "prompt": "Illustrative Paris World Fair of 1889, a small complete Eiffel Tower rising behind a restrained ornate exhibition pavilion and simple distant adult silhouettes, historical architecture rather than an exact documentary map. Quiet uncluttered wide composition, tiny figures have no detailed hands. Sober readable pixel art, deep blue white grey with controlled checkerboard dithering on pure black, no banners with writing, no text, no logos, no modern cars."
+    },
+    "construction": {
+      "size": "256x256",
+      "prompt": "Eiffel Tower under construction in the late 1880s, a coherent rising iron lattice framework with four grounded legs, temporary wooden work platforms and one simple period hoist, no workers visible, no impossible floating beams. Sober detailed but readable pixel art, deep blue white grey palette, ordered dithering, pure black background, complete construction silhouette with generous margin, no writing, no logos, no modern cranes."
+    },
+    "concession": {
+      "size": "192x256",
+      "prompt": "A blank nineteenth-century legal concession parchment with one plain blue wax seal and a simple antique quill resting beside it, unmarked paper with no written characters, no hands, a restrained French historical document still life. Crisp sober pixel art in deep blue white grey, controlled checkerboard dithering, pure black background, all objects fully inside frame, no text, no numbers, no logos."
+    },
+    "newspaper": {
+      "size": "256x192",
+      "prompt": "One folded late nineteenth-century French newspaper represented as blank pale paper blocks with a small simple Eiffel Tower silhouette illustration, no legible writing or simulated letters, no hands and no extra objects. Restrained historical pixel art, deep blue white grey palette, clean ordered dithering, isolated pure black with generous margin, no real newspaper branding, no logos."
+    },
+    "radio": {
+      "size": "256x192",
+      "prompt": "Late nineteenth-century wireless telegraph experiment apparatus, one clear Morse key, a small coherently connected induction coil and a simple period receiver on a plain dark table, historical metal and ceramic components, no human hands and no modern screen. Crisp sober pixel art in deep blue white grey, ordered checkerboard dithering, pure black background, technically plausible uncluttered still life, no labels, writing or logos."
+    },
+    "antenna": {
+      "size": "192x256",
+      "prompt": "Early twentieth-century wireless telegraph antenna at the Eiffel Tower summit, the upper lattice section and a small original summit platform with a few thin historically plausible antenna wires extending upward, no modern long broadcasting mast, no people. Restrained crisp pixel art, deep blue white grey palette, ordered dithering, pure black background, readable wire geometry and margin around structure, no writing, no logos, no colored illumination."
+    },
+    "station": {
+      "size": "320x192",
+      "prompt": "Early twentieth-century French military wireless telegraph station, one adult uniformed operator viewed from the chest upward behind a simple period radio receiver, attentive face, arms and hands completely hidden behind the equipment, no combat. Coherent quiet historical workroom indicated by minimal pale lines. Sober pixel art in deep blue white grey with ordered dithering, pure black negative space, no insignia, no text, no logos, no modern computers."
+    }
+  },
+  "beats": [
+    {
+      "say": "La tour Eiffel devait rester vingt ans. Le symbole de Paris était d'abord une construction temporaire, promise à un possible démontage.",
+      "glow": {
+        "y": 510,
+        "r": 290,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "La tour Eiffel : *20 ans*",
+          "y": 150,
+          "size": 26,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "tower",
+          "h": 390,
+          "y": 510,
+          "at": 0,
+          "in": "slam",
+          "flash": "big",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "CONSTRUCTION TEMPORAIRE",
+          "y": 760,
+          "size": 15,
+          "rot": -4,
+          "fill": true,
+          "at": "temporaire"
+        }
+      ]
+    },
+    {
+      "say": "Elle est construite pour l'Exposition universelle de mille huit cent quatre-vingt-neuf. L'objectif : impressionner les visiteurs avec une prouesse d'ingénierie.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "L'Exposition de *1889*",
+          "y": 150,
+          "at": "Exposition"
+        },
+        {
+          "preset": "num",
+          "text": "1889",
+          "y": 285,
+          "size": 66,
+          "at": "mille"
+        },
+        {
+          "type": "img",
+          "src": "fair",
+          "h": 265,
+          "y": 545,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "PROUESSE D'INGÉNIERIE",
+          "y": 745,
+          "size": 16,
+          "rot": -4,
+          "at": "prouesse"
+        }
+      ]
+    },
+    {
+      "say": "Gustave Eiffel obtient une concession d'exploitation de vingt ans. Cela ne lui donne pas un droit éternel sur la tour.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une concession de *20 ans*",
+          "y": 150,
+          "size": 25,
+          "at": "concession"
+        },
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 20,
+          "suffix": " ANS",
+          "dur": 1,
+          "y": 295,
+          "size": 65,
+          "at": "vingt"
+        },
+        {
+          "type": "img",
+          "src": "gustave",
+          "h": 300,
+          "y": 555,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "UNE AUTORISATION LIMITÉE",
+          "y": 760,
+          "size": 14,
+          "rot": -4,
+          "fill": true,
+          "at": "éternel"
+        }
+      ]
+    },
+    {
+      "say": "L'échéance arrive en mille neuf cent neuf. Vous comprenez le problème : garder ce monument n'était pas acquis dès le départ.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "L'échéance : *1909*",
+          "y": 150,
+          "at": 0
+        },
+        {
+          "preset": "num",
+          "text": "1909",
+          "y": 290,
+          "size": 69,
+          "at": "mille"
+        },
+        {
+          "type": "img",
+          "src": "concession",
+          "h": 325,
+          "y": 545,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "QUE FAIRE DE LA TOUR ?",
+          "y": 755,
+          "size": 16,
+          "rot": -4,
+          "at": "problème"
+        }
+      ]
+    },
+    {
+      "say": "Certains artistes la détestent. Mais Eiffel prépare un autre argument : sa tour peut servir à la science.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Certains artistes *la détestent*",
+          "y": 150,
+          "size": 25,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "newspaper",
+          "h": 255,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "out": "science"
+        },
+        {
+          "type": "img",
+          "src": "gustave",
+          "h": 350,
+          "y": 525,
+          "at": "science",
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "UN AUTRE ARGUMENT",
+          "y": 745,
+          "size": 18,
+          "rot": 4,
+          "at": "argument"
+        }
+      ]
+    },
+    {
+      "say": "Observations météorologiques, recherches sur l'air : il multiplie les expériences. Le monument devient aussi un outil de travail.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un monument.\n*Un outil de recherche.*",
+          "y": 150,
+          "size": 26,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "construction",
+          "h": 310,
+          "y": 520,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "EXPÉRIENCES SCIENTIFIQUES",
+          "y": 740,
+          "size": 14,
+          "rot": -4,
+          "at": "expériences"
+        }
+      ]
+    },
+    {
+      "say": "Et surtout, la hauteur de la tour offre un emplacement précieux pour des antennes de télégraphie sans fil.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Une antenne *idéale*",
+          "y": 150,
+          "at": "antennes"
+        },
+        {
+          "type": "img",
+          "src": "antenna",
+          "h": 375,
+          "y": 520,
+          "at": 0,
+          "in": "scan",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "TÉLÉGRAPHIE SANS FIL",
+          "y": 755,
+          "size": 17,
+          "rot": -4,
+          "fill": true,
+          "at": "télégraphie"
+        }
+      ]
+    },
+    {
+      "say": "À l'époque, on transmet des messages par radio. Eiffel finance des essais pour démontrer l'intérêt de cette position.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Eiffel finance *les essais*",
+          "y": 150,
+          "size": 26,
+          "at": "finance"
+        },
+        {
+          "type": "img",
+          "src": "radio",
+          "h": 270,
+          "y": 530,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "DES MESSAGES PAR RADIO",
+          "y": 735,
+          "size": 15,
+          "rot": -4,
+          "at": "radio"
+        }
+      ]
+    },
+    {
+      "say": "L'armée y voit une utilité stratégique. Une grande structure métallique devient un relais de communication, pas seulement une attraction.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "L'armée voit *son intérêt*",
+          "y": 150,
+          "size": 26,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "station",
+          "h": 260,
+          "y": 530,
+          "at": 0,
+          "in": "scan"
+        },
+        {
+          "type": "stamp",
+          "text": "COMMUNICATION MILITAIRE",
+          "y": 735,
+          "size": 15,
+          "rot": -4,
+          "fill": true,
+          "at": "communication"
+        }
+      ]
+    },
+    {
+      "say": "Cette utilité contribue à sauver la tour. La concession est renouvelée : le démontage prévu n'a finalement pas lieu.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "La concession est *renouvelée*",
+          "y": 150,
+          "size": 25,
+          "at": "renouvelée"
+        },
+        {
+          "type": "img",
+          "src": "concession",
+          "h": 350,
+          "y": 520,
+          "at": 0,
+          "in": "slam",
+          "flash": true
+        },
+        {
+          "type": "stamp",
+          "text": "LA TOUR RESTE",
+          "y": 750,
+          "size": 22,
+          "rot": -5,
+          "fill": true,
+          "at": "démontage"
+        }
+      ]
+    },
+    {
+      "say": "Attention : la radio n'est pas l'unique raison. Elle apporte un argument concret pour conserver l'ouvrage.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un argument *concret*",
+          "y": 150,
+          "at": "argument"
+        },
+        {
+          "type": "img",
+          "src": "radio",
+          "h": 260,
+          "y": 520,
+          "at": 0,
+          "in": "fade"
+        },
+        {
+          "type": "stamp",
+          "text": "L'UTILITÉ COMPTE AUSSI",
+          "y": 735,
+          "size": 16,
+          "rot": 4,
+          "at": "conserver"
+        }
+      ]
+    },
+    {
+      "say": "La tour était temporaire. Elle devient utile autrement que par sa silhouette. Voilà le pari d'Eiffel.",
+      "els": [
+        {
+          "preset": "title",
+          "text": "Le pari de *Gustave Eiffel*",
+          "y": 150,
+          "size": 26,
+          "at": "pari"
+        },
+        {
+          "type": "img",
+          "src": "gustave",
+          "h": 360,
+          "y": 515,
+          "at": 0,
+          "in": "pop"
+        },
+        {
+          "type": "stamp",
+          "text": "PROUVER SON UTILITÉ",
+          "y": 745,
+          "size": 18,
+          "rot": -4,
+          "at": "autrement"
+        }
+      ]
+    },
+    {
+      "say": "Vous voyez un symbole de Paris. Son histoire vous rappelle qu'un monument peut survivre grâce à ce qu'il permet de faire.",
+      "glow": {
+        "y": 515,
+        "r": 280,
+        "a": 0.24
+      },
+      "els": [
+        {
+          "preset": "title",
+          "text": "Un symbole.\n*Une utilité décisive.*",
+          "y": 150,
+          "size": 27,
+          "at": 0
+        },
+        {
+          "type": "img",
+          "src": "tower",
+          "h": 385,
+          "y": 515,
+          "at": 0,
+          "in": "pop",
+          "fx": "breathe"
+        },
+        {
+          "type": "stamp",
+          "text": "BIEN PLUS QU'UNE SILHOUETTE",
+          "y": 760,
+          "size": 13,
+          "rot": -4,
+          "fill": true,
+          "at": "survivre"
+        }
+      ]
+    }
+  ],
+  "covers": [
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "La tour Eiffel devait\nrester *20 ans.*",
+        "y": 250
+      },
+      {
+        "type": "img",
+        "src": "tower",
+        "h": 400,
+        "y": 575
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "La radio a contribué\nà *sauver la tour.*",
+        "y": 250
+      },
+      {
+        "type": "img",
+        "src": "antenna",
+        "h": 395,
+        "y": 575
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "font": "sans",
+        "size": 34,
+        "maxW": 470,
+        "color": "W",
+        "text": "Eiffel avait\n*un autre plan.*",
+        "y": 250
+      },
+      {
+        "type": "img",
+        "src": "gustave",
+        "h": 400,
+        "y": 575
+      }
+    ]
+  ]
+}

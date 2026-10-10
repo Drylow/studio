@@ -166,7 +166,7 @@
           "text": "*Trois écritures*…",
           "y": 150,
           "at": "trois",
-          "out": "Mais"
+          "out": "Mais-0.15"
         },
         {
           "type": "counter",
@@ -176,7 +176,7 @@
           "y": 280,
           "at": "trois",
           "dur": 0.65,
-          "out": "Mais"
+          "out": "Mais-0.15"
         },
         {
           "type": "img",
@@ -335,7 +335,7 @@
           "x": 155,
           "y": 530,
           "at": 0,
-          "out": "Champollion",
+          "out": "Champollion-0.15",
           "in": "slam"
         },
         {
@@ -344,7 +344,7 @@
           "x": 155,
           "y": 725,
           "at": "Young",
-          "out": "Champollion",
+          "out": "Champollion-0.15",
           "size": 12,
           "color": "W"
         },
@@ -481,7 +481,7 @@
           "text": "Pour lire le passé…",
           "y": 150,
           "at": 0,
-          "out": "d'abord"
+          "out": "d'abord-0.15"
         },
         {
           "type": "img",

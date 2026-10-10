@@ -1,0 +1,36 @@
+{
+  "slug": "mur_berlin_annonce",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/mur_berlin_annonce/art_review.jpg"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/mur_berlin_annonce/check/sheet_00.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_01.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_02.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_03.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_04.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_05.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_06.jpg",
+    "work/tiktok/mur_berlin_annonce/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/mur_berlin_annonce/covers/cover_1.png",
+    "work/tiktok/mur_berlin_annonce/covers/cover_2.png",
+    "work/tiktok/mur_berlin_annonce/covers/cover_3.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 94.32,
+  "note": "9 assets inspectés sur art_review.jpg, 8 planches couvrant tous les beats et 3 covers vus. Portrait, foule, mains, époque et barrière sans anomalie flagrante. Textes et dates lisibles, ni chevauchement ni sortie de cadre du texte. Compteur initial atteint 28 ans, années 1961 et 1989 alignées. Aucun changement de narration ni de composition.",
+  "assets_inspected_in_review": [
+    "wall",
+    "schabowski",
+    "wire",
+    "protest",
+    "press",
+    "papers",
+    "television",
+    "checkpoint",
+    "crossing"
+  ]
+}

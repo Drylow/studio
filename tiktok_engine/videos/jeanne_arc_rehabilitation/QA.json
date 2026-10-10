@@ -1,0 +1,75 @@
+{
+  "assets_viewed": [
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/jeanne_portrait.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/rouen_square.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/joan_armor.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/trial_1431.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/condemnation_scroll.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/family_petition.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/witness_hearing.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/annulment_scroll.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/empty_cell.png"
+  ],
+  "asset_review_sheet": "tiktok_engine/videos/jeanne_arc_rehabilitation/art_review.jpg",
+  "focused_assets_viewed": [
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/family_petition.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/witness_hearing.png",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/joan_armor.png"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_00.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_01.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_02.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_03.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_04.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_05.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_06.jpg",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_1.png",
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_2.png",
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_3.png"
+  ],
+  "cover_choice": 1,
+  "duration": 87.53,
+  "notes": [
+    "Pré-rendu uniquement : les 9 illustrations sont vues sur la planche, avec contrôles séparés des trois scènes comportant des mains visibles.",
+    "Les 8 planches finales, soit 59 images fixes échantillonnées toutes les 1,5 secondes, ont toutes été regardées après correction.",
+    "Les 3 covers réelles 1080 × 1920 ont été regardées. Cover 1 recommandée : portrait lisible et accroche chiffrée, Réhabilitée 25 ans trop tard.",
+    "Aucune anatomie manifestement aberrante, logo, texte coupé ou superposition gênante relevé dans les images regardées.",
+    "Correction minimale : suppression du préfixe ~ interprété comme balise de couleur et ajout du label ENVIRON sous 19 ANS ; le compteur reste explicitement approximatif.",
+    "Correction minimale : le mot PARDON est barré à sa propre apparition. Les planches modifiées 01 et 06 ont été regardées de nouveau, ainsi que toutes les autres.",
+    "Aucune narration ni illustration régénérée. Aucun appel payant, film, téléchargement externe ou programmation exécuté pour cette QA.",
+    "mix.wav préparé par la fonction mix existante. Pas de déclaration de lecture intégrale ou d’écoute humaine du futur film."
+  ],
+  "approved": true,
+  "review_stage": "pre_render_stills_and_covers",
+  "audio_mix_prepared": true,
+  "script_sha256": "90a1db6c275f1207b56a3bad1303493de033342de23ad29458ad2b1069b7ac83",
+  "timeline_sha256": "df0b4b0e863ddd5b3a4c8ca29dd1b1e10de17160b6bb7559724829997dac4159",
+  "voice_sha256": "268ac14fe7e99c4b6af86a0d702ae886fcdfb8092de7290fdd83e101068899f6",
+  "mix_sha256": "311998bcd0398a27b950a8a45189494f615106318985ee7fbc9cfe084cab2037",
+  "artifact_sha256": {
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/jeanne_portrait.png": "b4f8a978f25be83bea272062fa32025cea5f534405503abc6f2d1d161f881838",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/rouen_square.png": "fcd5b1998e0227a508ec8a6cfb9ede16c1654247e55a24adbfc14430e02cd6db",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/joan_armor.png": "a795a936587a0c55b34ee2bb32cebacd261b558b92e005f4720c5a1bd01554d8",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/trial_1431.png": "fdafa1194ba3d2bbd5d83dfac28267413b937ee45ec85ace3acfa337e5ad9c6c",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/condemnation_scroll.png": "af23e2065363fdde03ae2b1c92cdf8650aebd192be6f4f67eeb6a94848921324",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/family_petition.png": "a71345dd4df0aa806f5cba80b9e36237e0a07d49934b41bc4c37a944f10e96d3",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/witness_hearing.png": "abd077326521a9a0828b8e77dd0b90693106fea788c054da8317fb6ae516c8c9",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/annulment_scroll.png": "be96c38f12cfb0d4a524fe6e6c76655493d5427ad1ce3d152681b2adc42b1531",
+    "tiktok_engine/videos/jeanne_arc_rehabilitation/art/empty_cell.png": "359c45a46da454e10860c4b1053e6c02ef1a33ad4304891a15f820251c081466",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_00.jpg": "e5a0a4507b950f20418ca18387e3a9326ee6cd7439caeff9a275cfca1cf216aa",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_01.jpg": "bfcc4c39c377b238c7466a0f7bd311fc33eb70c467693b9bb2eba7b900c1569b",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_02.jpg": "d79a968c57e7a9fa000ca54c0f53bdf1274c68db334081e19b953a00b16be671",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_03.jpg": "24e203a567908ee78222a298fbf9807e97579aa45246b1df8e5cc24ff5e12a99",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_04.jpg": "a7ae6938959ed028f081b7ab4dbc6a5094bbaf73f308ea6bd9375e91846ae289",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_05.jpg": "215b8d091638fcc4e9dec0888fc7c846fe1e01d84075914bbbf514446b239782",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_06.jpg": "6a279d1a8dbd6762e7a056d7a5be7187f6e697b94977991b5497f20eae88e635",
+    "work/tiktok/jeanne_arc_rehabilitation/check/sheet_07.jpg": "7d5c623c777b67a24e1ab633b195f5b9e8d8f333738a6f7190c1445f85eab43d",
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_1.png": "192686c0641ea768d5965e9cde904a9cfc7de1abf9452dcbb7e46f669f11a390",
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_2.png": "2282793ae955b6f3ea903008d950e8a423d6e722713aaea2e60f74ffa629e9b6",
+    "work/tiktok/jeanne_arc_rehabilitation/covers/cover_3.png": "bdda8eb79dfe61c7f384a9c3bacf28c5c84d025c6ed2518b6a935f593c52064d"
+  }
+}

@@ -19,7 +19,7 @@
       "kind": "person"
     },
     "tank": {
-      "prompt": "A single inflatable dummy Sherman tank used in1944 military deception, visibly soft canvas hull with subtle sewn seams and slightly sagging sides, short believable tank barrel, grey inflatable track shapes with royal-blue highlights, three-quarter view, isolated against black, no people, no insignia, no writing.",
+      "prompt": "A single inflatable dummy Sherman tank used in1944 military deception, visibly soft canvas hull with subtle sewn seams and slightly sagging sides, short believable tank barrel, grey inflatable track shapes with royal-blue highlights, three-quarter view, isolated against black, no people, no insignia, no writing. This is unmistakably an INFLATABLE RUBBER DUMMY tank, not real armor. Exaggerate sewn fabric panels, prominent stitched seams, soft sagging folds and wrinkles on turret and side, slightly collapsed rubber barrel, rounded fabric edges. One isolated inflatable decoy. No shiny metal, no rigid armored plates, no combat damage. Clear material texture visible at pixel scale, pure black background.",
       "size": "256x192",
       "kind": "scene"
     },
@@ -153,7 +153,8 @@
           "at": "cacher",
           "y": 735,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },
@@ -303,7 +304,8 @@
           "at": "active",
           "y": 735,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },
@@ -396,7 +398,8 @@
           "at": "contribue",
           "y": 735,
           "color": "W",
-          "size": 13
+          "size": 13,
+          "in": "fade"
         }
       ]
     },

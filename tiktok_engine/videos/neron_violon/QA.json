@@ -1,0 +1,43 @@
+{
+  "slug": "neron_violon",
+  "approved": true,
+  "assets_viewed": [
+    "tiktok_engine/videos/neron_violon/art_review.jpg",
+    "tiktok_engine/videos/neron_violon/art/rome_fire.png"
+  ],
+  "assets_inspected_in_review": [
+    "nero",
+    "violin",
+    "rome_fire",
+    "antium",
+    "relief",
+    "lyre",
+    "tacitus",
+    "scroll",
+    "nero_stage"
+  ],
+  "sheets_viewed": [
+    "work/tiktok/neron_violon/check/sheet_00.jpg",
+    "work/tiktok/neron_violon/check/sheet_01.jpg",
+    "work/tiktok/neron_violon/check/sheet_02.jpg",
+    "work/tiktok/neron_violon/check/sheet_03.jpg",
+    "work/tiktok/neron_violon/check/sheet_04.jpg",
+    "work/tiktok/neron_violon/check/sheet_05.jpg",
+    "work/tiktok/neron_violon/check/sheet_06.jpg",
+    "work/tiktok/neron_violon/check/sheet_07.jpg"
+  ],
+  "covers_viewed": [
+    "work/tiktok/neron_violon/covers/cover_1.png",
+    "work/tiktok/neron_violon/covers/cover_2.png",
+    "work/tiktok/neron_violon/covers/cover_3.png"
+  ],
+  "extra_frames_viewed": [
+    "check/still_27.50.png",
+    "check/boundary/still_27.53.png",
+    "check/boundary/still_27.63.png",
+    "check/boundary/still_27.80.png"
+  ],
+  "cover_choice": "covers/cover_1.png",
+  "duration": 93.61,
+  "note": "9 assets inspectés sur art_review.jpg ; rome_fire remplacé par root puis revu individuellement : architecture romaine conforme. Les 8 planches ont été rebuild et vues après remplacement, les 3 covers aussi. Aucun chevauchement ni texte hors cadre. Le still à 27,50 s est exactement la première frame du fade ; vérifié à 27,5333, 27,6333 et 27,8 s : titre puis wipe de l’image apparaissent normalement. Il ne s’agit pas d’une scène manquante. Pas de changement narration/composition."
+}

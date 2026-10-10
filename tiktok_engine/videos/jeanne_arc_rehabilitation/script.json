@@ -77,7 +77,8 @@
       "glow": {"y": 560},
       "els": [
         {"preset": "title", "text": "*Une très jeune femme*", "at": 0, "y": 150},
-        {"type": "counter", "from": 0, "to": 19, "prefix": "~", "suffix": " ANS", "at": "dix-neuf", "dur": 0.55, "y": 280, "size": 55, "ls": 2},
+        {"type": "counter", "from": 0, "to": 19, "suffix": " ANS", "at": "dix-neuf", "dur": 0.55, "y": 280, "size": 55, "ls": 2},
+        {"preset": "label", "text": "ENVIRON", "at": "dix-neuf", "y": 350, "color": "W", "size": 16, "ls": 1},
         {"type": "img", "src": "jeanne_portrait", "h": 340, "y": 560, "at": 0, "in": "pop", "fx": "breathe"},
         {"type": "stamp", "text": "ÂGE APPROXIMATIF", "at": "pense", "y": 775, "rot": -4, "size": 15}
       ]
@@ -161,7 +162,7 @@
       "glow": {"y": 535},
       "els": [
         {"preset": "title", "text": "Un jugement *invalide*", "at": 0, "y": 150},
-        {"type": "text", "font": "sans", "size": 33, "color": "W", "text": "PARDON", "at": "pardon", "y": 290, "strike": {"at": "invalide", "color": "B", "dur": 0.3}},
+        {"type": "text", "font": "sans", "size": 33, "color": "W", "text": "PARDON", "at": "pardon", "y": 290, "strike": {"at": "pardon", "color": "B", "dur": 0.3}},
         {"type": "img", "src": "annulment_scroll", "h": 245, "y": 555, "at": 0, "in": "pop"},
         {"type": "stamp", "text": "PROCÈS ANNULÉ", "at": "invalide", "y": 755, "rot": -5, "fill": true, "size": 20}
       ]
