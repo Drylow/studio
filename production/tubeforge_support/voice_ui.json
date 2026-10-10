@@ -1,5 +1,12 @@
 [
   {
+    "line": 138,
+    "remove": 1,
+    "insert": [
+      "      ${STATE.has_algrow ? '<div style=\"margin-top:6px\">Voix : Algrow configure</div>' : STATE.has_elevenlabs ? '' : '<div style=\"color:var(--warn);margin-top:6px\">Fournisseur vocal a configurer</div>'}`;"
+    ]
+  },
+  {
     "line": 645,
     "remove": 1,
     "insert": [

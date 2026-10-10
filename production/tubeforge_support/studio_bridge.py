@@ -10,6 +10,12 @@ from . import config, events, store
 from .util import now
 
 
+def algrow_configured():
+    from dotenv import dotenv_values
+    root = config.get('STUDIO_ROOT')
+    return bool(root and dotenv_values(Path(root) / '.env').get('ALGROW_API_KEY'))
+
+
 async def execute(payload, directory, progress=None):
     studio = Path(config.get('STUDIO_ROOT')).resolve()
     python = studio / 'venv/Scripts/python.exe'

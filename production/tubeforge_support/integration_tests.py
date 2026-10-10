@@ -11,6 +11,12 @@ from app import pipeline, studio_bridge, tts
 from app.steps import render
 
 
+def test_algrow_status_does_not_expose_key(tmp_path):
+    (tmp_path / '.env').write_text('ALGROW_API_KEY=fixture\n', encoding='utf-8')
+    with patch.object(studio_bridge.config, 'get', return_value=str(tmp_path)):
+        assert studio_bridge.algrow_configured() is True
+
+
 def test_algrow_routing(tmp_path):
     with patch.object(studio_bridge, 'voice', new_callable=AsyncMock, return_value={'provider': 'algrow'}) as voice:
         result = asyncio.run(tts.synthesize('Authored text', {'provider': 'algrow'}, tmp_path))

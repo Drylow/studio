@@ -51,7 +51,11 @@
 +        return await studio_bridge.voice(text, vs, out_dir, progress)
 --- a/app/server.py
 +++ b/app/server.py
-@@ -199,0 +200,9 @@
+@@ -98,0 +99 @@
++    from . import studio_bridge
+@@ -99,0 +101 @@
++            "has_algrow": studio_bridge.algrow_configured(),
+@@ -199,0 +202,9 @@
 +    if vs.get("provider") == "algrow" and len(text) < 200:
 +        if body.get("text", "").strip():
 +            raise HTTPException(400, "Algrow demande au moins 200 caracteres pour un apercu vocal")
@@ -61,7 +65,7 @@
 +                "Tu te leves avant le soleil. Dehors, des pas traversent la rue et un marchand ouvre ses volets. "
 +                "Au bord de la riviere, les porteurs dechargent les premiers paniers. La ville est deja reveillee, "
 +                "mais ta journee commence a peine.")
-@@ -202 +211 @@
+@@ -202 +213 @@
 -    for old in sorted(out_dir.glob("*"))[:-20]:
 +    for old in sorted(f for f in out_dir.glob("*") if f.is_file())[:-20]:
 --- a/start.bat

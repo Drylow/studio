@@ -81,7 +81,7 @@ Un export technique reste non publiable tant que la relecture n'est pas faite.
   108 captures sur six planches regardees : pas de corruption noire ni marge vide.
   Reserve creative existante : orientation du noeud du bandeau entre les deux
   premiers plans. Aucune coherence parfaite ni ecoute de voix revendiquee.
-- 19 tests TubeForge passent ; 59 tests studio passent, un test GPU optionnel
+- 20 tests TubeForge passent ; 59 tests studio passent, un test GPU optionnel
   ignore. L'export GPU reel ci-dessus a bien ete execute.
 - Reconstruction du code depuis le ZIP verifiee ; `pip check` sans erreur.
 
