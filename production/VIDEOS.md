@@ -1,5 +1,19 @@
 # Journal des vidéos
 
+## Fonds marins — aperçu codé de 30 secondes — 10 octobre 2026
+
+Peaky arrêté explicitement ; nouveau projet indépendant, vrais fonds marins
+avec ambiance inquiétante inspirée de DREDGE. Aperçu livré :
+https://gofile.io/d/VDW9Jtf8 — MP4 natif 1920×1080/30fps, 30 s, 900 images,
+7 558 921 octets, et lecteur HTML autonome en ZIP. Relief/véhicule Three.js,
+animaux Canvas originaux, ambiance synthétisée localement. Aucun Algrow,
+générateur d'images, voix off ou extrait du jeu utilisé.
+Décodage vidéo/audio intégral sans erreur, aucune saturation audio, 15 captures
+réparties et deux images natives du MP4 final revues ; intégrité GoFile vérifiée.
+Le style attend l'avis utilisateur. Ne pas lancer le long de 15–20 minutes,
+script ou voix avant ce retour. Aucun envoi YouTube ou Discord.
+Sources et recette : `experiments/deep-sea-procedural/README.md`.
+
 ## Scene Analysis Guy — clarification des voyants verts — 10 octobre 2026
 
 L'utilisateur envisage finalement de publier le premier long si ses revenus

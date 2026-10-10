@@ -1,0 +1,14 @@
+{
+  "name": "deep-sea-procedural",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "render": "node capture.mjs"
+  },
+  "dependencies": {
+    "three": "0.181.2",
+    "esbuild": "0.25.11",
+    "playwright": "1.55.0"
+  }
+}

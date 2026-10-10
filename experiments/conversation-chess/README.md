@@ -9,7 +9,13 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 ## État actuel et premier long
 
-**Second long choisi : Tommy Shelby vs Alfie Solomons (Peaky Blinders).**
+**Peaky est arrêté à la demande de l'utilisateur**, qui a perdu l'accès à sa
+chaîne Google. Aucun long Peaky livré ; garder la préparation et ne pas la
+reprendre automatiquement. Nouveau projet indépendant :
+[`../deep-sea-procedural/`](../deep-sea-procedural/README.md), aperçu sous-marin
+codé de30s, en attente de validation du style.
+
+**Préparation précédente : Tommy Shelby vs Alfie Solomons (Peaky Blinders).**
 [Plan des trois confrontations](PLAN_TOMMY_ALFIE.md). Premier clip BBC réellement
 acquis en 1080p, Tommy ouvre donc Blanc. Les autres sources et le long restent
 en préparation ; voir le haut de `production/REPRISE.md` pour le point précis

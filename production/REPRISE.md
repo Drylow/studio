@@ -1,6 +1,39 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Peaky Blinders — Tommy Shelby vs Alfie Solomons en préparation
+## Nouveau projet — fonds marins, aperçu entièrement codé
+
+L'utilisateur a arrêté Peaky le 10 octobre à cause de son accès Google, puis
+a choisi une nouvelle chaîne YouTube sur les **vrais fonds marins avec une
+ambiance inquiétante**. Direction corrigée explicitement : **aucun Algrow ni
+générateur d'images**, visuels construits en HTML/JavaScript. Seul un aperçu
+de 30 secondes a été livré ; attendre son retour sur le style avant le script,
+la voix off et le montage du long de 15–20 minutes.
+
+Prototype : `experiments/deep-sea-procedural/`. Reliefs et véhicule en Three.js,
+animaux originaux en Canvas, lumière/particules/brume et ambiance synthétisée
+localement. Zéro appel de génération. Un navigateur cloud en rendu logiciel
+calcule réellement les images1080. Export terminé : 30 s, 1920×1080 natif,
+30 images/s, 900 images. Décodage A/V intégral et revue de captures du MP4
+terminé réussis ; aucun appel de génération payant.
+Livraison : https://gofile.io/d/VDW9Jtf8 — MP4 et lecteur HTML autonome en ZIP.
+Lire le README du prototype pour installation, contrôles et limites de calcul.
+Aucune publication YouTube ou livraison au Discord de Scene Analysis Guy.
+
+## Peaky Blinders — arrêté à la demande de l'utilisateur
+
+Production interrompue explicitement le 10 octobre : l'utilisateur a perdu
+l'accès à sa chaîne Google. Agents et acquisitions arrêtés, aucun long Peaky
+exporté ni envoyé. Conserver la préparation ; ne pas reprendre ce projet
+sans nouvelle instruction de l'utilisateur.
+
+Après accord utilisateur, les trois emplacements hors ligne Sopranos ont été
+libérés et remplacés par les accès Peaky S2E2/S2E6/S3E6. Les films Sopranos
+montés et livrés sont conservés. **Le catalogue annonçait1080 mais les
+manifestes du compte accordent720 natif** : S3E6 a fini son import normal
+1280×720/25fps, S2E2 et S2E6 ont été interrompus. Leurs références privées
+ne valident pas une acquisition complète ou une qualité finale.
+
+### Préparation historique avant l'arrêt
 
 Choix utilisateur du 10 octobre : produire le second long aujourd'hui, avec le
 montage Tony/Richie validé, anglais sans voix off et livraison GoFile + Discord.
@@ -16,14 +49,10 @@ proposition de miniature et trois titres : `thumbnails/tommy-alfie/`, dans le
 même dossier. Aucun choix de miniature présumé ni nouveau kit Discord envoyé.
 
 Les imports publics des deux autres scènes n'ont pas fourni de fichier après
-des erreurs fournisseur/délais. Les trois épisodes Naka sont proposés en 1080p,
-mais le compte utilise ses trois emplacements hors ligne pour les Sopranos.
-**Correction de la compréhension du quota : trois épisodes à la fois**, selon
-l'interface publique ; le bouton « Retirer » libère un emplacement. L'accord
-de l'utilisateur pour remplacer les trois téléchargements précédents par Peaky
-a été demandé, sans retrait ni nouvelle acquisition avant sa réponse. Les
-films livrés ne seront pas effacés. Aucun abonnement payant ni dépassement
-de quota. Sources, sessions, repères de dialogue et rendus restent privés.
+des erreurs fournisseur/délais. Le quota Naka est **trois épisodes à la fois**.
+La rotation et l'état final des imports sont décrits au-dessus. Aucun
+abonnement payant ni dépassement de quota. Sources, sessions, repères de
+dialogue et rendus restent privés.
 
 Le changement de série ne valide pas les droits de republication ni Content ID.
 Conserver les crédits musicaux dans la description ; l'import final sur YouTube

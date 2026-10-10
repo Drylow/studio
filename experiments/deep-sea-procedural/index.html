@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Les profondeurs — essai visuel</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#071315;color:#d9e6df;font-family:Arial,sans-serif}
+    main{max-width:1400px;margin:0 auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
+    h1{font-size:20px;font-weight:500;letter-spacing:.08em;margin:0}header span{font-size:12px;color:#819795}canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#06171c;border:1px solid #253d3f}
+    .controls{display:flex;align-items:center;gap:14px;margin-top:18px}button{background:#284642;color:#e8f2e9;border:1px solid #53756b;padding:11px 18px;border-radius:3px;cursor:pointer}input{flex:1;accent-color:#9bc5ad;min-width:0}output{font-size:12px;min-width:45px;color:#a3b5ab}p{max-width:850px;font-size:13px;line-height:1.7;color:#819795}
+    @media(max-width:600px){main{padding:12px}header{display:block}header span{display:block;margin-top:8px}h1{font-size:16px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>LES PROFONDEURS</h1><span>Essai d’ambiance • décors et animations entièrement codés</span></header>
+    <canvas id="film" width="1920" height="1080" aria-label="Animation sous-marine originale avec un véhicule et des animaux des profondeurs"></canvas>
+    <div class="controls"><button id="play">Pause</button><input id="seek" aria-label="Position dans l’aperçu" type="range" min="0" max="30" step="0.01" value="0"><output id="time">0:00</output></div>
+    <p>Étude visuelle originale : reliefs en 3D, éclairage, particules et animaux stylisés. Les rencontres sont illustratives ; cet aperçu ne représente pas une expédition réelle ni un documentaire terminé. Aucun générateur d’images, extrait de jeu ou ressource distante n’est utilisé.</p>
+  </main>
+  <script src="creatures.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>
