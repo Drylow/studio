@@ -1,0 +1,85 @@
+{
+  "schema": "deep-sea-sleep-qa-v1",
+  "file": "Depths-After-Dark-Boucle-5min.mp4",
+  "sha256": "bec3996016d93c4e994b72a15ef88b4d1ce531cfd7a5e12b79216e703c4389fa",
+  "bytes": 393133259,
+  "duration_seconds": 300.0,
+  "frames": 9000,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": "30/1",
+  "color_space": "bt709",
+  "full_video_audio_decode_ok": true,
+  "audio_peak_dbfs": -22.98454905741762,
+  "audio_clipping_samples": 0,
+  "audio_periodic_master_check": {
+    "seconds": 300.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak_dbfs": -22.976804491345767,
+    "rms_dbfs": -36.51171413318253,
+    "boundary_sample_step": [
+      5,
+      6
+    ],
+    "maximum_adjacent_step": [
+      27,
+      28
+    ],
+    "samples_clipped": 0,
+    "periodic_synthesis": true,
+    "external_samples": 0
+  },
+  "encoded_audio_boundary": {
+    "decoded_sample_frames": 14400512,
+    "valid_duration_sample_frames": 14400000,
+    "boundary_step": [
+      0.00276867114007473,
+      0.0016003153286874294
+    ],
+    "first_last_second_max_normal_step": [
+      0.0028255702927708626,
+      0.0018074838444590569
+    ],
+    "loop_bed_source": "The original 300-second periodic PCM master is the source for future long mixes; repeated AAC packets are not used as the narration bed."
+  },
+  "finished_render_visual_reviewed": true,
+  "human_continuous_viewing": false,
+  "human_full_audio_listening": false,
+  "sampled_movie_frames": 60,
+  "motion_movie_frames": 208,
+  "native_movie_frames": 11,
+  "loop_geometry_check_passed": null,
+  "loop_illustrated_check_passed": true,
+  "loop_endpoints_pixel_identical": true,
+  "loop_sample_hz": null,
+  "loop_rock_overlap_count": null,
+  "encoded_visual_boundary_rms": 3.0560680862234966,
+  "encoded_visual_ordinary_step_rms": [
+    1.1049927756360305,
+    0.6946600359790533
+  ],
+  "source_scene_sha256": "fd45a50514c59c1d52192241b1d0276861b0b7bd32fb1ee55c41fb287454e7fa",
+  "paid_generation_calls": null,
+  "asset_generation_calls": 2,
+  "external_images": 2,
+  "video_generation_calls": 0,
+  "algrow_calls": 0,
+  "user_visual_approval": false,
+  "visual_review": {
+    "root_review": "Three finished-MP4 overview sheets (60 frames) and actual native start/end frames viewed. Detailed coherent reef and correctly integrated animals; no obvious composition discontinuity in the examined join frames.",
+    "independent_review": {
+      "overview_frames": 60,
+      "motion_and_boundary_frames": 208,
+      "native_frames": 11,
+      "completed": true,
+      "notes": "Detailed coherent reef; jellyfish integrated without visible opaque rectangle, detached tissue or strip tears; quiet fish and legible shark silhouettes. No major defect or obvious composition jump seen in the samples. Compressed join pixels are not identical.",
+      "continuous_playback": false,
+      "full_audio_listening": false
+    },
+    "artistic_approval_pending": true,
+    "renderer_scope": "Original painted backdrop composited with coded 2D marine animation; optical framing motion, not a 3D exploration."
+  }
+}

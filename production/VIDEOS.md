@@ -1,12 +1,29 @@
-## En cours — nouvelle direction Sleep / reprise Tommy–Alfie
+## Livraison actuelle — Sleep illustré / Tommy–Alfie en export parallèle
 
 Depths After Dark : nom et avatar validés, bio donnée. Nouveau fond illustré
-animé Canvas2D ; toutes les directions 3D précédentes abandonnées. Extrait
-animé 24 s livré : https://gofile.io/d/95IFNFjM ; boucle de 300 s en
-rendu, avis utilisateur encore nécessaire.
-Après validation : 2 h avec voix off et texte central discret. Chess Tommy/Alfie
-repris en parallèle, 32 analyses/~15 min 28 s, sans voix off. Aucune publication.
-Voir `experiments/deep-sea-procedural/README.md` et `CHANNEL_BRAND.md`.
+animé Canvas2D ; les directions 3D précédentes restent des archives abandonnées.
+**Boucle complète livrée pour avis : https://gofile.io/d/95IFNFjM**.
+Fichier `Depths-After-Dark-Boucle-5min.mp4` : 300 s, 1920×1080/30 fps,
+9 000 images, 393 133 259 octets, export en 1 819,46 s. SHA-256 :
+`bec3996016d93c4e994b72a15ef88b4d1ce531cfd7a5e12b79216e703c4389fa`.
+Lecteur HTML autonome ZIP (4 645 976 octets) et extrait 24 s dans le même dossier.
+MP4/ZIP uploads vérifiés taille/MD5 ; décor source original 1672×941,
+export 1080p, mouvement optique et animaux 2D codés. Deux générations
+uniques d’assets, aucun Algrow ni génération vidéo.
+
+Décodage A/V complet, 9 000 images comptées, raccord image/son contrôlé,
+aucune saturation. Revue de 60 captures générales, 208 mouvements/raccord,
+11 natives, avec revue indépendante. Pas de lecture/écoute humaine continue.
+Pixels source 0/300 s identiques ; pixels encodés différents, sans saut
+évident de composition dans les captures examinées. Avis utilisateur requis
+avant voix off et texte central pour deux heures. Aucune publication.
+Preuves : `ILLUSTRATED_RENDER_CHECK.json`, `ILLUSTRATED_VISUAL_REVIEW.md`,
+`ILLUSTRATED_DELIVERY.json` dans `experiments/deep-sea-procedural/`.
+
+Chess Tommy/Alfie : master source contrôlé, export Kdenlive/MLT en cours,
+32 analyses/~15 min 28 s, sans voix off. QA final à effectuer après le rendu,
+aucun fichier partiel livré. Sources et timeline poussées, travail privé
+autonome en parallèle ; Sleep doit être publiée avant Chess.
 
 # Journal des vidéos
 

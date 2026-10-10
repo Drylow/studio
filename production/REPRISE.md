@@ -1,6 +1,6 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## En cours — Sleep illustré animé, Chess repris en parallèle
+## État actuel — boucle Sleep livrée pour avis, Chess en export parallèle
 
 **Depths After Dark** confirmé, avatar méduse validé, bio anglaise donnée.
 L’utilisateur abandonne explicitement toutes les contraintes de 3D ; le
@@ -12,9 +12,14 @@ préparées une fois, ensuite réutilisées ; aucun Algrow/générateur vidéo.
 Le décor source fait 1672×941 ; canevas/export 1920×1080, ne pas prétendre
 que cette source est native 4K ou que tous les assets sont purement codés.
 
-Extrait animé de 24 s livré : https://gofile.io/d/95IFNFjM ; 1080p30,
-720 images, décodage A/V complet et revue des captures terminés. Boucle
-complète de cinq minutes en rendu. Le fond n’est pas validé. Après validation :
+Boucle complète livrée : https://gofile.io/d/95IFNFjM ; choisir
+`Depths-After-Dark-Boucle-5min.mp4`, 300 s, 1080p30, 9 000 images,
+393 133 259 octets. Extrait 24 s et lecteur HTML ZIP aussi disponibles.
+Décodage A/V complet, raccord et audio contrôlés, revue de 60 captures
+générales + 208 mouvements/raccord + 11 natives, avec revue indépendante.
+Upload MP4/ZIP confirmé taille/MD5. Pas de lecture/écoute humaine continue.
+Preuves publiques `ILLUSTRATED_*` dans le dossier de l’expérience.
+Le fond n’est pas encore validé par l’utilisateur. Après validation :
 épisode de deux heures (24 boucles de cinq minutes), voix off et texte
 central élégant, taille modérée. Aucun premier script/voix/publication lancé.
 Ancienne étude `sleep-cinematic-scene.mjs` et modèles 3D : archives abandonnées,
@@ -23,8 +28,11 @@ jamais approuvées ou livrées. SLEEP_*CHECK publics sont pour le film rejeté.
 L’utilisateur dit avoir réparé le compte Google de Chess. Il autorise la
 reprise de **Tommy/Alfie en parallèle**, dossiers séparés, Sleep publiée en
 premier. Trois sources Peaky déjà complètes, maximum livré par compte 720p,
-habillage/export 1080p. Plan de 32 analyses, environ 15 min 28 s ; master/montage/QA en
-cours chez l’agent dédié. Aucun nouvel upload/publication prétendu.
+habillage/export 1080p. Plan de 32 analyses, environ 15 min 28 s ; master source vérifié et
+export final Kdenlive/MLT en cours chez l’agent dédié, puis QA du MP4
+terminé. Job autonome et checkpoint privés : un MP4 partiel ne se livre
+pas. Sources/timeline documentées et poussées. Aucun nouvel upload ni
+publication Chess prétendu.
 
 ## Archive — première boucle sleep, rejetée après livraison
 

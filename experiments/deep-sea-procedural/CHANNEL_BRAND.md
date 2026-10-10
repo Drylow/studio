@@ -35,8 +35,9 @@ en Canvas2D. Voir [ASSETS.md](ASSETS.md) pour les deux images du film.
 
 Le compte Google de la chaîne Chess est rétabli selon l’utilisateur.
 Il souhaite terminer et publier Sleep d’abord, puis reprendre Chess.
-Le nouvel extrait illustré animé est livré pour avis ; la boucle de cinq
-minutes est en cours de rendu, pas validée ni publiée. Tommy/Alfie reprend
-en parallèle, dans son propre dossier.
+La nouvelle boucle illustrée animée de cinq minutes est terminée,
+contrôlée et livrée pour avis sur https://gofile.io/d/95IFNFjM. Elle n’est
+pas encore validée visuellement par l’utilisateur ni publiée sur YouTube.
+Tommy/Alfie est en export Kdenlive/MLT dans son propre dossier, en parallèle.
 Nom confirmé par l’utilisateur : **Depths After Dark**. Aucun compte créé
 ou chaîne réservée depuis cette session.

@@ -20,14 +20,31 @@ et l’export sont **1920×1080**. Ne pas prétendre que le décor est une sourc
 native 4K/1080p, ni que tout a été fabriqué sans générateur d’images.
 Le sprite provient de l’avatar original validé. Voir [ASSETS.md](ASSETS.md).
 
-**[Extrait animé de 24 secondes livré sur GoFile](https://gofile.io/d/95IFNFjM).**
-1080p30, 720 images, 34 388 095 octets ; décodage A/V intégral et revue des
-24 images générales, 12 images rapprochées et une vue native terminés,
-avec revue indépendante. Aucune lecture/écoute continue prétendue, aucun
-avis utilisateur présumé. La boucle complète est en cours de rendu. La durée du cycle est 300 secondes. Les futurs épisodes feront
-deux heures, soit 24 répétitions, avec voix off et texte élégant et discret
-au milieu de l’écran après validation du fond. Aucun texte/voix de long ni
-publication lancés à cette étape.
+**[Boucle complète de cinq minutes livrée sur GoFile](https://gofile.io/d/95IFNFjM).**
+Choisir `Depths-After-Dark-Boucle-5min.mp4` : **300 s, 1920×1080, 30 images/s,
+9 000 images, 393 133 259 octets**. SHA-256 :
+`bec3996016d93c4e994b72a15ef88b4d1ce531cfd7a5e12b79216e703c4389fa`.
+Export en 1 819,46 s sur cette machine sans GPU. Upload confirmé par taille
+et MD5. Le même dossier contient l’extrait de 24 s et le lecteur autonome
+`Depths-After-Dark-Boucle-5min-HTML.zip` (4 645 976 octets) : extraire et ouvrir
+`index.html` dans Chrome/Firefox sur PC, sans installation. Le lecteur HTML
+est silencieux ; le MP4 contient une ambiance aquatique originale.
+
+Le film terminé passe le décodage A/V intégral, le comptage des images,
+les contrôles de raccord et de saturation audio. Revue des captures :
+60 générales, 208 de mouvements/raccord et 11 natives, dont une revue
+indépendante. Pas de lecture/écoute humaine continue prétendue. Les pixels
+0/300 s de la scène source sont identiques ; ceux du raccord encodé ne le
+sont pas. Aucun saut de composition évident dans les captures examinées.
+Voir [ILLUSTRATED_RENDER_CHECK.json](ILLUSTRATED_RENDER_CHECK.json),
+[ILLUSTRATED_VISUAL_REVIEW.md](ILLUSTRATED_VISUAL_REVIEW.md) et
+[ILLUSTRATED_DELIVERY.json](ILLUSTRATED_DELIVERY.json).
+
+**Validation visuelle utilisateur encore attendue.** Les futurs épisodes
+feront deux heures, soit 24 répétitions, avec voix off et texte élégant et
+discret au milieu de l’écran après validation du fond. Aucun texte/voix de
+long ni publication lancés à cette étape. Pour le futur mix, utiliser le
+master PCM périodique ; ne pas répéter les paquets AAC comme fond sonore.
 
 Chaîne : **Depths After Dark**, nom confirmé ; avatar méduse validé et bio
 anglaise dans [CHANNEL_BRAND.md](CHANNEL_BRAND.md). Sleep passe avant Chess,
@@ -55,8 +72,9 @@ node capture-loop.mjs --out /tmp/deepsea-illustrated/loop-5min.mp4 \
 Le master sonore se recrée avec `make-sleep-ambience.py`, comme indiqué plus
 bas. Le vérificateur illustré contrôle les **vrais pixels**, le raccord,
 le retour arrière, la finitude et la lecture hors ligne. Il ne prétend pas
-faire des collisions 3D. Le MP4 terminé doit encore être décodé et inspecté,
-avec `verify-sleep-render.py` qui distingue les schémas illustré et 3D.
+faire des collisions 3D. Le MP4 terminé a été décodé et inspecté avec `verify-sleep-render.py`,
+qui distingue les schémas illustré et 3D ; refaire ces contrôles pour tout
+nouvel export.
 Les rapports publics `SLEEP_*CHECK.json` concernent seulement le film
 **rejeté** ci-dessous, pas la nouvelle direction. Le nouveau moteur est
 contrôlé dans [ILLUSTRATED_SCENE_CHECK.json](ILLUSTRATED_SCENE_CHECK.json) ;

@@ -6,6 +6,11 @@ Canvas2D et récif nocturne illustré original, animaux et mouvement de caméra
 codés. Deux assets originaux préparés une fois ; aucun Algrow ou générateur
 vidéo, pas de génération à chaque image.
 
+La nouvelle boucle complète de cinq minutes est livrée pour avis sur
+https://gofile.io/d/95IFNFjM, avec fichier MP4 contrôlé et lecteur HTML
+autonome. La validation du nom et de l’avatar ne vaut pas approbation de
+ce fond ; avis visuel utilisateur attendu.
+
 Les vidéos finales restent deux heures. Après validation du fond : voix off
 sur histoires marines vraies et texte lisible, discret et élégant au milieu
 de l’écran (pas de petits sous-titres bas d’écran). La première vidéo Sleep
