@@ -82,34 +82,48 @@ def _hash(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
 
 
-def _profiles():
+def _style_references(style):
+    refs = copy.deepcopy(style.get("workspace_references", []))
+    if not refs:
+        sources = style.get("visuals", {}).get("reference_sources", [])
+        refs = [{"path": path, "state": "unreviewed"} | next(
+            (r for r in sources if isinstance(r, dict) and r.get("path", r.get("file")) == path), {})
+            for path in style.get("visuals", {}).get("style_refs", [])]
+    return refs
+
+
+def _profiles(include_archived=False):
     # Unlike list_channels(), this read does not seed unrelated vendor channels.
     saved = {c["id"]: c for c in read_json(channels.FILE, []) or [] if isinstance(c, dict) and c.get("id")}
     out = []
-    for cid, name in PROFILE_NAMES.items():
+    visible = dict(PROFILE_NAMES)
+    visible.update({cid: c.get("name", cid) for cid, c in saved.items() if c.get("workspace_managed")})
+    for cid, name in visible.items():
         c = saved.get(cid, {})
+        if c.get("archived") and not include_archived:
+            continue
         sid = c.get("style_id", "pov-history")
         style = store.get_style(_identifier(sid)) or {}
-        refs = copy.deepcopy(style.get("workspace_references", []))
-        if not refs:
-            sources = style.get("visuals", {}).get("reference_sources", [])
-            refs = [{"path": path, "state": "unreviewed"} | next(
-                (r for r in sources if isinstance(r, dict) and r.get("path", r.get("file")) == path), {})
-                for path in style.get("visuals", {}).get("style_refs", [])]
+        refs = _style_references(style)
         for ref in refs:
             ref["url"] = f"/style-media/{sid}/{ref['path']}"
             ref["exists"] = bool(_file_digest(store.style_dir(sid), ref["path"]))
+        video_preview = c.get("video_preview") or style.get("visuals", {}).get("preview")
+        thumbnail_preview = c.get("thumbnail_preview") or style.get("thumbnail", {}).get("preview")
         out.append({"id": cid, "name": c.get("name", name), "style_id": sid,
+                    "style_name": style.get("name", sid), "archived": bool(c.get("archived")),
+                    "handle": c.get("handle", ""), "description": c.get("description", ""),
+                    "language": c.get("language", "English"),
                     "setting": c.get("setting", ""), "historical_profile": c.get("historical_profile", False),
-                    "configured": bool(c and style), "duration_minutes_min": 20,
+                    "configured": bool(c and style and not style.get("archived")), "duration_minutes_min": 20,
                     "duration_minutes_max": 25,
                     "target_minutes": c.get("target_minutes", 22),
                     "style_prompt": style.get("visuals", {}).get("art_style", ""),
                     "thumbnail_prompt": style.get("thumbnail", {}).get("style", ""),
                     "background_direction": style.get("visuals", {}).get("background_direction", ""),
-                    "video_preview": c.get("video_preview"), "thumbnail_preview": c.get("thumbnail_preview"),
-                    "video_preview_url": f"/style-media/{sid}/{c['video_preview']}" if c.get("video_preview") else None,
-                    "thumbnail_preview_url": f"/style-media/{sid}/{c['thumbnail_preview']}" if c.get("thumbnail_preview") else None,
+                    "video_preview": video_preview, "thumbnail_preview": thumbnail_preview,
+                    "video_preview_url": f"/style-media/{sid}/{video_preview}" if video_preview else None,
+                    "thumbnail_preview_url": f"/style-media/{sid}/{thumbnail_preview}" if thumbnail_preview else None,
                     "preview_label": c.get("preview_label", "Apercu existant"),
                     "references": refs,
                     "reference_update_pending": style.get("visuals", {}).get("reference_update_pending", True),
@@ -126,19 +140,26 @@ def _profile(cid):
     return profile
 
 
-def _styles():
+def _styles(include_archived=False):
     out = []
     for path in sorted(config.STYLES_DIR.glob("*/style.json")):
         raw = read_json(path, {})
-        if not isinstance(raw, dict) or raw.get("archived"):
+        if not isinstance(raw, dict) or raw.get("archived") and not include_archived:
             continue
         sid = _identifier(path.parent.name)
         style = store.get_style(sid)
         if style:
             visuals = style.get("visuals", {})
             out.append({"id": sid, "name": style.get("name", sid),
+                        "archived": bool(style.get("archived")),
                         "prompt": visuals.get("art_style", ""),
-                        "background_direction": visuals.get("background_direction", "")})
+                        "background_direction": visuals.get("background_direction", ""),
+                        "thumbnail_prompt": style.get("thumbnail", {}).get("style", ""),
+                        "video_preview_url": f"/style-media/{sid}/{visuals['preview']}" if visuals.get("preview") else None,
+                        "thumbnail_preview_url": f"/style-media/{sid}/{style['thumbnail']['preview']}" if style.get("thumbnail", {}).get("preview") else None,
+                        "references": [{**r, "url": f"/style-media/{sid}/{r['path']}",
+                                        "exists": bool(_file_digest(store.style_dir(sid), r["path"]))}
+                                       for r in _style_references(style)]})
     return out
 
 
@@ -232,7 +253,7 @@ def _prepare(body, catalog):
     sid = _identifier(body.get("style_id", profile["style_id"]))
     if not any(style["id"] == sid for style in _styles()):
         raise HTTPException(422, "Choisissez un style visuel disponible")
-    minutes = body.get("duration_minutes", 22)
+    minutes = body.get("duration_minutes", profile.get("target_minutes", 22))
     if (isinstance(minutes, bool) or not isinstance(minutes, (float, int))
             or not math.isfinite(minutes) or not 20 <= minutes <= 25):
         raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
@@ -254,6 +275,10 @@ def _create(prepared, catalog):
                              })
     # A visual preset must not replace the channel's configured voice provider.
     p["settings"]["voice"] = copy.deepcopy(channel_style["voice"])
+    saved_channel = next((c for c in read_json(channels.FILE, []) if c.get("id") == profile["id"]), {})
+    p["settings"]["voice"].update({k: v for k, v in saved_channel.get("voice", {}).items() if v not in (None, "")})
+    p["settings"]["voice"]["provider"] = "algrow"
+    p["settings"]["language"] = profile["language"]
     p.update(codex_directed=True, channel_id=profile["id"], profile_id=profile["id"],
              target_duration_seconds=prepared["target_duration_seconds"],
              script=prepared["script"], auto_promo_shorts=0, prompts_approved=False,

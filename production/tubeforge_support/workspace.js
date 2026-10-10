@@ -161,6 +161,8 @@
   let submitting = false;
   let listFilters = { search: '', profile: '', status: '' };
   let batchRows = [];
+  let management = { channels: [], styles: [] };
+  let managementFilters = { channels: '', styles: '', archivedChannels: false, archivedStyles: false };
   const STEPS = [['texte', 'Texte', 'script'], ['voix', 'Voix', 'voiceover'], ['images', 'Images', 'visuals'], ['verification', 'Vérification', null], ['export', 'Export', 'render']];
 
   async function api(path, options = {}) {
@@ -220,7 +222,7 @@
   }
   function bindFormState(root = main) {
     $$('input, textarea, select', root).forEach((input) => {
-      if (input.closest('main') && !input.closest('.toolbar') && !input.dataset.dirtyBound) {
+      if (input.type !== 'file' && !input.hasAttribute('data-preview-select') && !input.closest('.toolbar') && !input.dataset.dirtyBound) {
         input.addEventListener('input', () => { dirty = true; });
         input.dataset.dirtyBound = 'true';
       }
@@ -267,7 +269,6 @@
     const currentEpoch = ++epoch;
     let parts = routeParts();
     if (parts[0] === 'batch') { history.replaceState(null, '', '#/queue'); parts = ['queue']; }
-    if (parts[0] === 'styles') { history.replaceState(null, '', '#/channels'); parts = ['channels']; }
     if (parts[0] === 'projects') parts = ['videos'];
     if (parts[0] === 'p') parts = ['video', parts[1], ({ script: 'texte', voice: 'voix', visuals: 'images', render: 'export', thumbs: 'export' })[parts[2]] || 'texte'];
     const page = parts[0] || 'videos';
@@ -281,17 +282,20 @@
       if (refresh) await refreshData();
       let detail = null;
       if (page === 'video') detail = await api(`/api/workspace/projects/${encode(parts[1] || '')}`);
+      const managed = ['channels', 'styles'].includes(page) ? await api('/api/workspace/management') : null;
       if (currentEpoch !== epoch) return;
+      if (managed) management = managed;
       dirty = false;
       if (page === 'videos') renderDashboard();
       else if (page === 'queue') renderBatch();
       else if (page === 'video') { project = detail; renderProject(parts[2] || 'texte'); }
-      else if (page === 'channels') renderChannels(parts[1]);
+      else if (page === 'channels') renderChannels(parts[1], parts[2]);
+      else if (page === 'styles') renderStyles(parts[1]);
       else if (page === 'settings') renderSettings();
       else main.innerHTML = `${header('Page introuvable', '')}<a href="#/videos">Revenir aux vidéos</a>`;
       bindPreviews();
       bindFormState();
-      document.title = `${page === 'video' ? project.title : ({ videos: 'Vidéos', queue: 'File de vidéos', channels: 'Chaînes', settings: 'Réglages' })[page] || 'Studio'} | TubeForge`;
+      document.title = `${page === 'video' ? project.title : ({ videos: 'Vidéos', queue: 'File de vidéos', channels: 'Chaînes', styles: 'Styles visuels', settings: 'Réglages' })[page] || 'Studio'} | TubeForge`;
     } catch (error) {
       if (currentEpoch === epoch) {
         main.innerHTML = `${header('Studio indisponible', '')}<div class="banner error">${esc(error.message)}</div><button id="retry">${icon('refresh')}Réessayer</button>`;
@@ -325,7 +329,7 @@
     update();
   }
   function defaultRow(profile = '') {
-    return { profile_id: profile, title: '', duration_minutes: 22, text_model: data.models.defaults?.text_model || '', image_model: data.models.defaults?.image_model || '' };
+    return { profile_id: profile, title: '', duration_minutes: data.profiles.find((p) => p.id === profile)?.target_minutes || 22, text_model: data.models.defaults?.text_model || '', image_model: data.models.defaults?.image_model || '' };
   }
   function formRow(form) {
     const fields = new FormData(form);
@@ -358,6 +362,7 @@
     };
   }
   function openCreate(profile = '') {
+    if (dirty) { notify('Enregistrez vos modifications avant de créer une vidéo.', true); return; }
     const dialog = $('#create-dialog');
     dialog.className = 'create-video-dialog';
     const row = defaultRow(profile);
@@ -374,12 +379,14 @@
       const sid = $('[name="style_id"]', dialog).value;
       const selectedProfile = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value);
       const owner = selectedProfile?.style_id === sid ? selectedProfile : data.profiles.find((p) => p.style_id === sid);
-      const url = owner ? profilePreview(owner, 'video') : '';
+      const url = (owner ? profilePreview(owner, 'video') : '') || data.styles.find((s) => s.id === sid)?.video_preview_url || '';
       $('#create-style-preview', dialog).innerHTML = url ? `<img class="preview" src="${esc(url)}" alt="Aperçu du style vidéo"><figcaption>${esc(data.styles.find((s) => s.id === sid)?.name || '')}</figcaption>` : '<div class="preview-empty">Aperçu non disponible</div>';
     };
     $('[name="style_id"]', dialog).onchange = updatePreview;
     $('[name="profile_id"]', dialog).onchange = () => { const selected = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value); if (selected) $('[name="style_id"]', dialog).value = selected.style_id; updatePreview(); };
     updatePreview();
+    $('[name="duration_minutes"]', dialog).value = row.duration_minutes;
+    $('[name="profile_id"]', dialog).addEventListener('change', () => { const selected = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value); if (selected) $('[name="duration_minutes"]', dialog).value = selected.target_minutes; });
     bindScriptImport($('#create-form', dialog), '[name="custom_script"]');
     $('#create-form', dialog).onsubmit = (event) => {
       event.preventDefault();
@@ -403,6 +410,7 @@
     if (!batchRows.length) batchRows = [defaultRow(), defaultRow()];
     main.innerHTML = `${header('File de vidéos', 'Préparer plusieurs projets', '<a class="button" href="#/videos">Vidéos</a>')}${catalogNotice()}<form id="batch-form"><div class="table-wrap"><table class="batch-table"><thead><tr><th>Chaîne</th><th>Titre</th><th>Minutes</th><th>Modèle texte</th><th>Modèle image</th><th><span class="small">Retirer</span></th></tr></thead><tbody id="batch-body">${batchRows.map((row, index) => `<tr><td data-label="Chaîne"><select aria-label="Chaîne de la vidéo ${index + 1}" name="profile_id" required>${profileOptions(row.profile_id)}</select></td><td data-label="Titre"><input class="title-input" aria-label="Titre de la vidéo ${index + 1}" name="title" maxlength="240" required value="${esc(row.title)}"></td><td data-label="Durée cible (minutes)"><input class="duration-input" aria-label="Durée de la vidéo ${index + 1}" name="duration_minutes" type="number" min="20" max="25" step="0.5" required value="${row.duration_minutes}"></td><td data-label="Modèle texte"><select aria-label="Modèle texte de la vidéo ${index + 1}" name="text_model" required>${modelOptions(row.text_model, 'text')}</select></td><td data-label="Modèle image"><select aria-label="Modèle image de la vidéo ${index + 1}" name="image_model" required>${modelOptions(row.image_model, 'image')}</select></td><td><button type="button" data-remove="${index}" class="icon-button" aria-label="Retirer la vidéo ${index + 1}" title="Retirer cette ligne" ${batchRows.length === 1 ? 'disabled' : ''}>${icon('close')}</button></td></tr>`).join('')}</tbody></table></div>${catalogStatus()}<div class="form-actions"><button type="button" id="add-row">${icon('plus')}Ajouter une ligne</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length ? 'disabled' : ''}>${icon('plus')}Ajouter le lot à la file</button></div><div id="batch-error" role="alert"></div></form><section class="section"><h2>Lots enregistrés</h2>${data.batches?.length ? `<div class="table-wrap"><table><thead><tr><th>Lot</th><th>Vidéos</th><th>Création</th></tr></thead><tbody>${data.batches.map((batch) => `<tr><td>${esc(batch.name || batch.id)}</td><td>${(batch.projects || []).length}</td><td>${esc(fmtDate(batch.created))}</td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">Aucun lot enregistré.</p>'}</section>`;
     $('#add-row').onclick = () => { captureBatch(); batchRows.push(defaultRow()); renderBatch(); };
+    $$('#batch-body select[name="profile_id"]').forEach((select) => select.onchange = () => { const profile = data.profiles.find((p) => p.id === select.value); if (profile) $('[name="duration_minutes"]', select.closest('tr')).value = profile.target_minutes; });
     $$('[data-remove]').forEach((b) => b.onclick = () => { captureBatch(); batchRows.splice(Number(b.dataset.remove), 1); renderBatch(); });
     $('#batch-form').onsubmit = (event) => {
       event.preventDefault(); captureBatch();
@@ -599,43 +607,135 @@
     const value = profile[`${kind}_preview`] || profile[`${kind}_preview_url`];
     return value ? mediaUrl('style-media', profile.style_id, value) : '';
   }
-  function renderChannels(id) {
-    const profile = data.profiles.find((p) => p.id === id);
-    if (profile) { renderChannel(profile); return; }
-    main.innerHTML = `${header('Chaînes', `${data.profiles.length} chaînes de production`)}<div class="channels-grid">${data.profiles.map((p) => `<section class="channel-item"><h2><a href="#/channels/${encode(p.id)}">${esc(p.name)}</a></h2><div class="previews"><figure>${preview(profilePreview(p, 'video'), `Style vidéo · ${p.name}`)}<figcaption>Exemple commun de style vidéo · personnages blancs</figcaption></figure><figure>${preview(profilePreview(p, 'thumbnail'), `Proposition de miniature · ${p.name}`)}<figcaption>Miniature · humains expressifs · à valider</figcaption></figure></div><div class="inline"><span class="muted small">${data.projects.filter((v) => (v.profile_id || v.channel_id) === p.id).length} vidéos</span><a class="button" href="#/channels/${encode(p.id)}">Ouvrir la chaîne ${icon('next')}</a></div></section>`).join('')}</div>${!data.profiles.length ? '<div class="empty"><h2>Aucune chaîne disponible</h2><p>Les profils du studio doivent être initialisés.</p></div>' : ''}${advanced([['styles/pov-history', 'POV style avancé'], ['planning', 'Calendrier des chaînes']])}`;
+  function countLabel(count, word) { return count + ' ' + word + (count === 1 ? '' : 's'); }
+  function styleOptions(selected) {
+    return data.styles.map((s) => '<option value="' + esc(s.id) + '"' + (s.id === selected ? ' selected' : '') + '>' + esc(s.name) + '</option>').join('');
   }
-  function profileRefs(profile) { return profile.references || []; }
-  function refFile(ref) { return typeof ref === 'string' ? ref : ref.file || ref.path || ''; }
-  function renderChannel(profile) {
-    const refs = profileRefs(profile);
-    main.innerHTML = `<div class="breadcrumbs"><a href="#/channels">Chaînes</a><span>/</span>${esc(profile.name)}</div>${header(profile.name, profile.setting || '', `<button id="channel-create" class="primary">${icon('plus')}Nouvelle vidéo</button>`)}<div class="previews editor"><figure>${preview(profilePreview(profile, 'video'), 'Style vidéo')}<figcaption>Exemple commun de style vidéo · personnages blancs</figcaption></figure><figure>${preview(profilePreview(profile, 'thumbnail'), 'Proposition de miniature')}<figcaption>Proposition de miniature · à valider</figcaption></figure></div><section class="section editor"><h2>POV style · commun aux cinq chaînes</h2><form id="style-form"><div class="form-grid"><label class="full">Prompt de style vidéo<textarea name="style_prompt" rows="10">${esc(profile.style_prompt || '')}</textarea></label><label class="full">Prompt de style miniature<textarea name="thumbnail_prompt" rows="5">${esc(profile.thumbnail_prompt || '')}</textarea></label></div><div class="form-actions"><button type="submit" class="primary">Enregistrer le style</button></div></form></section><section class="section editor"><h2>Captures de style</h2>${profile.reference_status === 'pending' || profile.reference_status === 'waiting_for_user_references' || profile.reference_update_pending ? '<div class="banner">Nouvelles captures attendues. Références existantes : vidéos du 30 septembre au 2 octobre.</div>' : ''}<ol class="reference-list">${refs.map((ref, index) => `<li><span class="small muted">${index + 1}</span><img src="${esc(typeof ref === 'object' && ref.url ? safeUrl(ref.url) : mediaUrl('style-media', profile.style_id, refFile(ref)))}" alt="Capture de style ${index + 1}" loading="lazy"><span class="ref-label">${esc(typeof ref === 'object' ? ref.label || refFile(ref) : ref)}${typeof ref === 'object' && ref.observed ? `<span class="small muted"> · observée le ${esc(ref.observed)}</span>` : ''}</span><div class="actions"><button type="button" class="icon-button" data-move="${index}" data-direction="-1" title="Monter la référence" aria-label="Monter la référence ${index + 1}" ${index === 0 ? 'disabled' : ''}>${icon('up')}</button><button type="button" class="icon-button" data-move="${index}" data-direction="1" title="Descendre la référence" aria-label="Descendre la référence ${index + 1}" ${index === refs.length - 1 ? 'disabled' : ''}>${icon('down')}</button></div></li>`).join('')}</ol><form id="refs-upload"><label>Ajouter des captures, dans l’ordre<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required></label><div class="form-actions"><button type="submit">${icon('plus')}Ajouter les captures</button></div><p id="upload-progress" class="small muted" role="status"></p></form></section><section class="section"><h2>Vidéos de la chaîne</h2>${projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id))}</section>${advanced([[`styles/${encode(profile.style_id)}`, 'Style avancé'], ['thumbs', 'Miniatures'], [`planning/${encode(profile.id)}`, 'Calendrier']])}`;
-    $('#channel-create').onclick = () => openCreate(profile.id);
-    $('#style-form').onsubmit = (event) => {
-      event.preventDefault();
-      action(event.submitter, async () => { await api(`/api/workspace/profiles/${encode(profile.id)}`, { method: 'PUT', body: { style_prompt: $('[name="style_prompt"]').value, thumbnail_prompt: $('[name="thumbnail_prompt"]').value } }); await route(); }, 'Style enregistré.');
-    };
-    $$('[data-move]').forEach((button) => button.onclick = () => action(button, async () => {
-      const ordered = [...refs];
-      const from = Number(button.dataset.move), to = from + Number(button.dataset.direction);
-      [ordered[from], ordered[to]] = [ordered[to], ordered[from]];
-      await api(`/api/workspace/profiles/${encode(profile.id)}`, { method: 'PUT', body: { references: ordered } }); await route();
-    }, 'Ordre des références enregistré.'));
-    $('#refs-upload').onsubmit = (event) => {
+  function channelFields(c = {}) {
+    const languages = {English: 'Anglais', French: 'Français', Spanish: 'Espagnol', German: 'Allemand', Italian: 'Italien', Portuguese: 'Portugais', Japanese: 'Japonais'};
+    return '<div class="form-grid"><label>Nom de la chaîne<input name="name" value="' + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + '" placeholder="@MaChaine" maxlength="100"></label><label>Langue<select name="language">' + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label><label>Durée cible (minutes)<input name="target_minutes" type="number" min="20" max="25" step="0.5" value="' + (c.target_minutes || 22) + '" required></label><label class="full">Style par défaut<select name="style_id" required>' + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? '<option value="" selected>Style archivé · choisir un style actif</option>' : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label class="full">Univers et époque<textarea name="setting" rows="3">' + esc(c.setting || '') + '</textarea></label><label class="full">Description de la chaîne<textarea name="description" rows="3">' + esc(c.description || '') + '</textarea></label></div>';
+  }
+  function channelBody(form) {
+    const fields = new FormData(form);
+    return {name: fields.get('name'), handle: fields.get('handle'), language: fields.get('language'), target_minutes: Number(fields.get('target_minutes')), style_id: fields.get('style_id'), setting: fields.get('setting'), description: fields.get('description')};
+  }
+  function managementDialog(title, fields, submit) {
+    if (dirty) { notify('Enregistrez vos modifications avant de continuer.', true); return; }
+    const dialog = $('#create-dialog');
+    dialog.className = 'management-dialog';
+    dialog.innerHTML = '<div class="dialog-head"><h2 id="create-heading">' + esc(title) + '</h2><button type="button" data-close class="icon-button" aria-label="Fermer" title="Fermer">' + icon('close') + '</button></div><form id="management-form">' + fields + '<div id="management-error" role="alert"></div><div class="form-actions"><button type="button" data-close>Annuler</button><button type="submit" class="primary">' + icon('plus') + 'Créer</button></div></form>';
+    const close = () => { if (dirty && !confirm('Abandonner les modifications ?')) return; dirty = false; dialog.close(); };
+    $$('[data-close]', dialog).forEach((button) => button.onclick = close);
+    dialog.oncancel = (event) => { event.preventDefault(); close(); };
+    $('#management-form').onsubmit = (event) => {
       event.preventDefault();
       action(event.submitter, async () => {
-        const files = [...$('[name="files"]').files];
+        try { const destination = await submit(event.target); dialog.close(); dirty = false; location.hash = destination; }
+        catch (error) { $('#management-error').innerHTML = '<div class="banner error">' + esc(error.message) + '</div>'; throw error; }
+      }, 'Création enregistrée.');
+    };
+    bindFormState(dialog); dialog.showModal(); $('input', dialog).focus();
+  }
+  function newChannel() {
+    managementDialog('Nouvelle chaîne', channelFields(), async (form) => {
+      const result = await api('/api/workspace/management/channels', {method: 'POST', body: channelBody(form)});
+      return '#/channels/' + encode(result.id) + '/settings';
+    });
+  }
+  function archiveManaged(kind, item, archived) {
+    if (dirty) { notify('Enregistrez vos modifications avant de continuer.', true); return; }
+    if (!confirm((archived ? 'Archiver ' : 'Restaurer ') + '« ' + item.name + ' » ?')) return;
+    action(null, async () => { await api('/api/workspace/management/' + kind + '/' + encode(item.id), {method: 'PUT', body: {archived}}); await route(); }, archived ? 'Archivé. Les fichiers et les vidéos sont conservés.' : 'Restauré.');
+  }
+  function renderChannels(id, selected = 'videos') {
+    const profile = management.channels.find((p) => p.id === id);
+    if (profile) { renderChannel(profile, selected); return; }
+    if (id) { main.innerHTML = header('Chaîne introuvable', '') + '<a href="#/channels">Revenir aux chaînes</a>'; return; }
+    main.innerHTML = header('Chaînes', '', '<button id="new-channel" class="primary">' + icon('plus') + 'Nouvelle chaîne</button>') + '<div class="toolbar"><label class="search">Rechercher une chaîne<input id="channel-search" type="search" value="' + esc(managementFilters.channels) + '"></label><label class="checkbox-label"><input id="archived-channels" type="checkbox"' + (managementFilters.archivedChannels ? ' checked' : '') + '>Afficher les archives</label><span id="channels-count" class="count"></span></div><div id="channels-list"></div>';
+    const update = () => {
+      managementFilters.channels = $('#channel-search').value;
+      managementFilters.archivedChannels = $('#archived-channels').checked;
+      const items = management.channels.filter((c) => !!c.archived === managementFilters.archivedChannels && (c.name + ' ' + c.handle).toLocaleLowerCase('fr').includes(managementFilters.channels.toLocaleLowerCase('fr')));
+      $('#channels-count').textContent = items.length + ' chaîne' + (items.length === 1 ? '' : 's');
+      $('#channels-list').innerHTML = items.length ? '<div class="table-wrap"><table class="management-table"><thead><tr><th>Chaîne</th><th>Style par défaut</th><th>Langue</th><th>Vidéos</th><th>Actions</th></tr></thead><tbody>' + items.map((c) => '<tr><td data-label="Chaîne"><a class="project-title" href="#/channels/' + encode(c.id) + '">' + esc(c.name) + '</a><div class="small muted">' + esc(c.handle || 'Handle non renseigné') + '</div></td><td data-label="Style"><a href="#/styles/' + encode(c.style_id) + '">' + esc(c.style_name) + '</a></td><td data-label="Langue">' + esc(({English:'Anglais',French:'Français'})[c.language] || c.language) + '</td><td data-label="Vidéos">' + data.projects.filter((p) => (p.profile_id || p.channel_id) === c.id).length + '</td><td data-label="Actions"><div class="actions"><a class="button icon-button" href="#/channels/' + encode(c.id) + '/settings" title="Réglages de ' + esc(c.name) + '" aria-label="Réglages de ' + esc(c.name) + '">' + icon('edit') + '</a>' + (!c.archived ? '<button class="icon-button" data-create-channel="' + esc(c.id) + '" title="Nouvelle vidéo pour ' + esc(c.name) + '" aria-label="Nouvelle vidéo pour ' + esc(c.name) + '">' + icon('plus') + '</button>' : '<button data-restore-channel="' + esc(c.id) + '">Restaurer</button>') + '</div></td></tr>').join('') + '</tbody></table></div>' : '<div class="empty">Aucune chaîne dans cette liste.</div>';
+      $$('[data-create-channel]').forEach((button) => button.onclick = () => openCreate(button.dataset.createChannel));
+      $$('[data-restore-channel]').forEach((button) => button.onclick = () => archiveManaged('channels', items.find((c) => c.id === button.dataset.restoreChannel), false));
+    };
+    $('#new-channel').onclick = newChannel;
+    $('#channel-search').oninput = update; $('#archived-channels').onchange = update; update();
+  }
+  function renderChannel(profile, selected) {
+    const settings = selected === 'settings';
+    main.innerHTML = '<div class="breadcrumbs"><a href="#/channels">Chaînes</a><span>/</span>' + esc(profile.name) + '</div>' + header(profile.name, profile.handle || '', profile.archived ? '<button id="restore-channel">Restaurer la chaîne</button>' : '<button id="channel-create" class="primary">' + icon('plus') + 'Nouvelle vidéo</button>') + '<nav class="view-tabs" aria-label="Vues de la chaîne"><a href="#/channels/' + encode(profile.id) + '"' + (!settings ? ' aria-current="page"' : '') + '>Vidéos</a><a href="#/channels/' + encode(profile.id) + '/settings"' + (settings ? ' aria-current="page"' : '') + '>Réglages</a></nav><div id="channel-content"></div>';
+    if (profile.archived) $('#restore-channel').onclick = () => archiveManaged('channels', profile, false);
+    else $('#channel-create').onclick = () => openCreate(profile.id);
+    if (!settings) {
+      $('#channel-content').innerHTML = '<dl class="channel-summary"><div><dt>Style par défaut</dt><dd><a href="#/styles/' + encode(profile.style_id) + '">' + esc(profile.style_name) + '</a></dd></div><div><dt>Langue</dt><dd>' + esc(({English:'Anglais', French:'Français', Spanish:'Espagnol', German:'Allemand', Italian:'Italien', Portuguese:'Portugais', Japanese:'Japonais'})[profile.language] || profile.language) + '</dd></div><div><dt>Durée cible</dt><dd>' + profile.target_minutes + ' min</dd></div><div><dt>Voix</dt><dd>Algrow</dd></div></dl>' + projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id));
+      return;
+    }
+    $('#channel-content').innerHTML = '<div class="management-editor"><form id="channel-settings"><h2>Identité et réglages</h2>' + channelFields(profile) + '<div class="form-actions"><button type="submit" class="primary">Enregistrer la chaîne</button></div></form><aside><h2>Aperçus actuels</h2><figure>' + preview(profilePreview(profile, 'video'), 'Style vidéo') + '<figcaption>Vidéo · ' + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), 'Miniature') + '<figcaption>Miniature · proposition à valider</figcaption></figure><a class="button" href="#/styles/' + encode(profile.style_id) + '">' + icon('edit') + 'Modifier ce style</a></aside></div><section class="section"><h2>Statut de la chaîne</h2><div class="inline">' + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? 'Archivée' : 'Active') + '<button id="archive-channel">' + (profile.archived ? 'Restaurer' : 'Archiver la chaîne') + '</button></div></section>';
+    $('#channel-settings').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api('/api/workspace/management/channels/' + encode(profile.id), {method:'PUT', body:channelBody(event.target)}); await route(); }, 'Chaîne enregistrée.'); };
+    $('#archive-channel').onclick = () => archiveManaged('channels', profile, !profile.archived);
+  }
+  function newStyle() {
+    const fields = '<div class="form-grid"><label class="full">Nom du style<input name="name" maxlength="200" required></label><label class="full">Prompt vidéo<textarea name="prompt" rows="6" required></textarea></label><label class="full">Direction des décors<textarea name="background_direction" rows="3"></textarea></label><label class="full">Prompt miniature<textarea name="thumbnail_prompt" rows="3"></textarea></label></div>';
+    managementDialog('Nouveau style visuel', fields, async (form) => { const result = await api('/api/workspace/management/styles', {method:'POST', body:Object.fromEntries(new FormData(form))}); return '#/styles/' + encode(result.id); });
+  }
+  function duplicateStyle(style) {
+    if (dirty) { notify('Enregistrez le style avant de le dupliquer.', true); return; }
+    action(null, async () => { const result = await api('/api/workspace/management/styles', {method:'POST', body:{name:style.name + ' (copie)', base_id:style.id}}); location.hash = '#/styles/' + encode(result.id); }, 'Style dupliqué avec ses références.');
+  }
+  function renderStyles(id) {
+    const style = management.styles.find((s) => s.id === id);
+    if (style) { renderStyle(style); return; }
+    if (id) { main.innerHTML = header('Style introuvable', '') + '<a href="#/styles">Revenir aux styles</a>'; return; }
+    main.innerHTML = header('Styles visuels', '', '<button id="new-style" class="primary">' + icon('plus') + 'Nouveau style</button>') + '<div class="toolbar"><label class="search">Rechercher un style<input id="style-search" type="search" value="' + esc(managementFilters.styles) + '"></label><label class="checkbox-label"><input id="archived-styles" type="checkbox"' + (managementFilters.archivedStyles ? ' checked' : '') + '>Afficher les archives</label><span id="styles-count" class="count"></span></div><div id="styles-list"></div>';
+    const update = () => {
+      managementFilters.styles = $('#style-search').value;
+      managementFilters.archivedStyles = $('#archived-styles').checked;
+      const items = management.styles.filter((s) => !!s.archived === managementFilters.archivedStyles && s.name.toLocaleLowerCase('fr').includes(managementFilters.styles.toLocaleLowerCase('fr')));
+      $('#styles-count').textContent = items.length + ' style' + (items.length === 1 ? '' : 's');
+      $('#styles-list').innerHTML = items.length ? '<div class="style-grid">' + items.map((s) => '<article class="style-item"><a class="style-image" href="#/styles/' + encode(s.id) + '">' + (s.video_preview_url ? '<img src="' + esc(safeUrl(s.video_preview_url)) + '" alt="Aperçu de ' + esc(s.name) + '">' : '<span>Aucun aperçu</span>') + '</a><div class="style-item-content"><h2><a href="#/styles/' + encode(s.id) + '">' + esc(s.name) + '</a></h2><p class="small muted">' + management.channels.filter((c) => !c.archived && c.style_id === s.id).length + ' chaîne(s) · ' + s.references.length + ' référence(s)</p><div class="actions"><a class="button" href="#/styles/' + encode(s.id) + '">' + icon('edit') + 'Modifier</a>' + (!s.archived ? '<button data-duplicate="' + esc(s.id) + '">Dupliquer</button>' : '<button data-restore-style="' + esc(s.id) + '">Restaurer</button>') + '</div></div></article>').join('') + '</div>' : '<div class="empty">Aucun style dans cette liste.</div>';
+      $$('[data-duplicate]').forEach((button) => button.onclick = () => duplicateStyle(items.find((s) => s.id === button.dataset.duplicate)));
+      $$('[data-restore-style]').forEach((button) => button.onclick = () => archiveManaged('styles', items.find((s) => s.id === button.dataset.restoreStyle), false));
+    };
+    $('#new-style').onclick = newStyle;
+    $('#style-search').oninput = update; $('#archived-styles').onchange = update; update();
+  }
+  function renderStyle(style) {
+    const used = management.channels.filter((c) => !c.archived && c.style_id === style.id);
+    const refs = style.references.map((r) => ({...r}));
+    main.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Styles visuels</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, 'chaîne') + ' · ' + countLabel(refs.length, 'référence'), !style.archived ? '<button id="duplicate-style">Dupliquer le style</button>' : '<button id="restore-style">Restaurer le style</button>') + '<div class="management-editor"><form id="visual-style-form"><h2>Réglages du style</h2><div class="form-grid"><label class="full">Nom du style<input name="name" value="' + esc(style.name) + '" maxlength="200" required></label><label class="full">Prompt vidéo<textarea name="prompt" rows="10" required>' + esc(style.prompt) + '</textarea></label><label class="full">Direction des décors<textarea name="background_direction" rows="4">' + esc(style.background_direction) + '</textarea></label><label class="full">Prompt miniature<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + '</textarea></label></div><div class="form-actions"><button type="submit" class="primary">Enregistrer le style</button></div></form><aside><h2>Aperçus du style</h2><figure>' + preview(style.video_preview_url, 'Style vidéo') + '<figcaption>Vidéo</figcaption></figure><figure>' + preview(style.thumbnail_preview_url, 'Style miniature') + '<figcaption>Miniature</figcaption></figure><h3>Chaînes associées</h3><ul class="linked-channels">' + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || '<li>Aucune chaîne associée</li>') + '</ul></aside></div><section class="section"><div class="page-head"><h2>Références visuelles</h2><button id="save-style-refs">Enregistrer les références</button></div><ol class="reference-list" id="style-references"></ol><form id="style-upload"><label>Ajouter des images<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required' + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + 'Ajouter les références</button></div><p id="upload-progress" class="small muted" role="status"></p></form></section><section class="section"><h2>Statut du style</h2><div class="inline">' + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? 'Archivé' : 'Actif') + (style.id !== 'pov-history' ? '<button id="archive-style">' + (style.archived ? 'Restaurer' : 'Archiver le style') + '</button>' : '') + '</div></section>';
+    if (!style.archived) $('#duplicate-style').onclick = () => duplicateStyle(style);
+    else $('#restore-style').onclick = () => archiveManaged('styles', style, false);
+    if ($('#archive-style')) $('#archive-style').onclick = () => archiveManaged('styles', style, !style.archived);
+    $('#visual-style-form').onsubmit = (event) => {
+      event.preventDefault();
+      if (used.length > 1 && !confirm('Enregistrer ce style partagé par ' + used.length + ' chaînes ? Les vidéos déjà créées conservent leurs réglages.')) return;
+      action(event.submitter, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{...Object.fromEntries(new FormData(event.target)), references:refs}}); await route(); }, 'Style enregistré.');
+    };
+    const renderRefs = () => {
+      $('#style-references').innerHTML = refs.length ? refs.map((ref, index) => '<li><span class="small muted">' + (index + 1) + '</span><img src="' + esc(safeUrl(ref.url)) + '" alt="Référence ' + (index + 1) + '"><span class="ref-label">' + esc(ref.label || ref.path) + (!ref.exists ? '<span class="error-text"> · fichier manquant</span>' : '') + '</span><div class="actions"><button type="button" class="icon-button" data-move="' + index + '" data-direction="-1" title="Monter" aria-label="Monter la référence ' + (index + 1) + '"' + (index === 0 ? ' disabled' : '') + '>' + icon('up') + '</button><button type="button" class="icon-button" data-move="' + index + '" data-direction="1" title="Descendre" aria-label="Descendre la référence ' + (index + 1) + '"' + (index === refs.length - 1 ? ' disabled' : '') + '>' + icon('down') + '</button><select data-preview-select="' + index + '" aria-label="Aperçu pour la référence ' + (index + 1) + '"><option value="">Choisir un aperçu</option><option value="video_preview">Vidéo</option><option value="thumbnail_preview">Miniature</option></select><button type="button" class="icon-button" data-remove-ref="' + index + '" title="Retirer de la liste" aria-label="Retirer la référence ' + (index + 1) + '">' + icon('close') + '</button></div></li>').join('') : '<li class="muted">Aucune référence enregistrée.</li>';
+      $$('[data-move]').forEach((button) => button.onclick = () => { const from = Number(button.dataset.move), to = from + Number(button.dataset.direction); [refs[from],refs[to]] = [refs[to],refs[from]]; dirty = true; renderRefs(); });
+      $$('[data-remove-ref]').forEach((button) => button.onclick = () => { refs.splice(Number(button.dataset.removeRef), 1); dirty = true; renderRefs(); });
+      $$('[data-preview-select]').forEach((select) => select.onchange = () => { const role = select.value; if (!role) return; if (dirty) { select.value = ''; notify('Enregistrez les modifications avant de choisir un aperçu.', true); return; } action(select, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{[role]:refs[Number(select.dataset.previewSelect)].path}}); await route(); }, 'Aperçu enregistré.'); });
+    };
+    renderRefs();
+    $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify('Enregistrez les réglages du style avant les références.', true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, 'Références enregistrées.'); };
+    $('#style-upload').onsubmit = (event) => {
+      event.preventDefault();
+      if (dirty) { notify('Enregistrez vos modifications avant d’ajouter des images.', true); return; }
+      action(event.submitter, async () => {
         let uploaded = 0;
-        try {
-          for (const file of files) {
-            const form = new FormData(); form.append('file', file); form.append('label', file.name);
-            await api(`/api/workspace/profiles/${encode(profile.id)}/references`, { method: 'POST', body: form });
-            uploaded++; $('#upload-progress').textContent = `${uploaded}/${files.length} captures enregistrées`;
-          }
-          await route();
-        } catch (error) {
-          throw new Error(`${uploaded}/${files.length} captures enregistrées. ${error.message} Reprenez avec les fichiers restants.`);
+        const files = [...$('[name="files"]', event.target).files];
+        for (const file of files) {
+          const form = new FormData(); form.append('file',file); form.append('label',file.name);
+          try { await api('/api/workspace/management/styles/' + encode(style.id) + '/references', {method:'POST',body:form}); }
+          catch (error) { throw new Error(uploaded + '/' + files.length + ' images enregistrées. ' + error.message); }
+          uploaded++; $('#upload-progress').textContent = uploaded + '/' + files.length + ' images enregistrées';
         }
-      }, 'Captures enregistrées dans l’ordre.');
+        await route();
+      }, 'Images ajoutées dans l’ordre.');
     };
   }
   function renderSettings() {

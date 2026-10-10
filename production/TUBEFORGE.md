@@ -24,7 +24,7 @@ Pas de service Windows, de tache programmee ni d'exposition reseau ajoutes.
 
 ## Interface simplifiee
 
-Navigation : Videos, Chaines, Reglages. Nouvelle video rassemble le titre,
+Navigation : Videos, Chaines, Styles, Reglages. Nouvelle video rassemble le titre,
 la chaine, la duree cible, le script colle ou importe (.txt/.md UTF-8, 1 Mo max),
 le style visuel avec apercu et les deux modeles de generation.
 Seuls les styles existants non archives sont proposes ; POV style est le preset
@@ -50,6 +50,16 @@ Refaire un plan demande de confirmer ce prompt et le modele enregistre ;
 aucune nouvelle reference, reecriture ou correction automatique n'est appliquee.
 Les versions precedentes sont conservees. Une image nouvelle redevient a verifier.
 Un rendu disponible ne signifie jamais valide pour publication.
+
+Styles : creation, duplication avec copie des references, edition separee des
+prompts video/decors/miniature, ajout et ordre des references, choix des apercus.
+Les styles partages affichent leurs chaines associees. L'archivage est reversible
+et conserve les fichiers ; un style utilise par une chaine active ne peut pas
+etre archive avant sa reaffectation. Le preset commun reste disponible.
+Chaines : liste filtrable, creation, onglets Videos/Reglages, nom, handle,
+description, univers, langue, duree et style par defaut. Les reglages sont repris
+uniquement par les nouveaux projets. Archives et restauration sont disponibles.
+Les ecritures n'utilisent pas le seeding des anciennes chaines du ZIP.
 
 Mettre a jour l'interface sans reconfigurer les fournisseurs (serveur inactif) :
 

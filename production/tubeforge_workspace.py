@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py'):
         shutil.copy2(support / name, root / 'app' / name)
     web = root / 'app/web'
     legacy = web / 'legacy.html'
@@ -39,6 +39,9 @@ def deploy(root, seed=True):
     replace_once(root, 'app/server.py',
         'workspace_api.install(app)\n',
         'workspace_api.install(app)\nfrom . import workspace_generation\nworkspace_generation.install(app)\n')
+    replace_once(root, 'app/server.py',
+        'workspace_generation.install(app)\n',
+        'workspace_generation.install(app)\nfrom . import workspace_management\nworkspace_management.install(app)\n')
     replace_once(root, 'app/server.py',
         'if request.url.path in ("/", "/index.html", "/app.js", "/style.css"):',
         'if request.url.path in ("/", "/index.html", "/legacy.html", "/app.js", "/style.css", "/workspace.js", "/workspace.css"):')
@@ -75,7 +78,8 @@ def deploy(root, seed=True):
                                 'model=p["settings"]["script"].get("model") or config.get("SCRIPT_MODEL")')
         path.write_text(source, encoding='utf-8', newline='\n')
     for source, target in (('workspace_api_tests.py', 'test_workspace_api.py'),
-                           ('workspace_generation_tests.py', 'test_workspace_generation.py')):
+                           ('workspace_generation_tests.py', 'test_workspace_generation.py'),
+                           ('workspace_management_tests.py', 'test_workspace_management.py')):
         shutil.copy2(support / source, root / 'tests' / target)
     if seed:
         subprocess.run([str(root / '.venv/Scripts/python.exe'), '-m', 'app.workspace_seed'], cwd=root, check=True)
