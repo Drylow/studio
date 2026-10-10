@@ -2,6 +2,18 @@
 
 ## Nouveau projet — fonds marins, aperçu entièrement codé
 
+Dernier retour utilisateur : premier essai apprécié mais rejeté comme trop
+statique et trop peu immersif, animaux Canvas insuffisants. **V2 livrée** :
+24 secondes en vue subjective, trajet dans un canyon, banc de poissons,
+baudroie et méduse **réellement en 3D**, sans texte sur l'image. Capture WebGL
+directe et éclairage aux sommets ; aucun appel de génération. 1920×1080 natif,
+30 images/s, 720 images ; export complet en 180,586 s (environ 2,2 fois plus
+rapide par image que la V1). Décodage A/V complet et captures du MP4 final
+contrôlés, intégrité des deux uploads confirmée par MD5/taille.
+Livraison actuelle : https://gofile.io/d/hiTXjUn2 — MP4 + lecteur HTML en ZIP.
+Attendre son
+retour sur cette V2 avant script, voix off, montage ou long de 15–20 minutes.
+
 L'utilisateur a arrêté Peaky le 10 octobre à cause de son accès Google, puis
 a choisi une nouvelle chaîne YouTube sur les **vrais fonds marins avec une
 ambiance inquiétante**. Direction corrigée explicitement : **aucun Algrow ni
@@ -9,7 +21,8 @@ générateur d'images**, visuels construits en HTML/JavaScript. Seul un aperçu
 de 30 secondes a été livré ; attendre son retour sur le style avant le script,
 la voix off et le montage du long de 15–20 minutes.
 
-Prototype : `experiments/deep-sea-procedural/`. Reliefs et véhicule en Three.js,
+Premier prototype archivé : `experiments/deep-sea-procedural/scene-v1.mjs`.
+Reliefs et véhicule en Three.js,
 animaux originaux en Canvas, lumière/particules/brume et ambiance synthétisée
 localement. Zéro appel de génération. Un navigateur cloud en rendu logiciel
 calcule réellement les images1080. Export terminé : 30 s, 1920×1080 natif,

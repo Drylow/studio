@@ -1,5 +1,19 @@
 # Journal des vidéos
 
+## Fonds marins — V2 immersive, créatures en 3D — 10 octobre 2026
+
+Premier essai rejeté comme trop statique et trop peu 3D. Nouvelle version livrée :
+https://gofile.io/d/hiTXjUn2 — `Les-Profondeurs-Immersion-3D-24s.mp4`,
+24 s, 1920×1080 natif/30fps, 720 images, 11 410 969 octets ; lecteur HTML
+autonome en ZIP. Caméra subjective traversant un canyon, 17 poissons,
+baudroie et méduse en vrais volumes 3D, couleurs mates, brume et lampe mobile.
+Aucun animal Canvas superposé, aucune génération payante, voix ou extrait du jeu.
+Export complet en 180,586 s ; environ 2,2 fois plus rapide par image que la V1.
+Décodage A/V intégral sans erreur, aucune saturation audio, 12 captures et
+trois images natives du MP4 final revues ; uploads vérifiés par taille et MD5.
+Validation du style utilisateur toujours en attente, aucun long lancé.
+Aucun envoi YouTube ou Discord ; sources dans `experiments/deep-sea-procedural/`.
+
 ## Fonds marins — aperçu codé de 30 secondes — 10 octobre 2026
 
 Peaky arrêté explicitement ; nouveau projet indépendant, vrais fonds marins

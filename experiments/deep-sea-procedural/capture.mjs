@@ -12,7 +12,7 @@ const args=process.argv.slice(2);
 function arg(name,fallback){const i=args.indexOf(name);return i<0?fallback:args[i+1];}
 const out=path.resolve(arg('--out',path.join(here,'renders/preview.mp4')));
 const stills=arg('--stills','');
-const fps=Number(arg('--fps','30')), duration=Number(arg('--duration','30'));
+const fps=Number(arg('--fps','30')), duration=Number(arg('--duration','24'));
 if(!Number.isInteger(fps)||fps<1||fps>60||!Number.isFinite(duration)||duration<=0||duration>30)throw new Error('This prototype supports 0–30 seconds and 1–60 fps.');
 const executablePath=process.env.DEEPSEA_CHROMIUM || '/usr/bin/chromium';
 let lock;
@@ -43,7 +43,9 @@ try{
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   await page.addInitScript(()=>{window.__CAPTURE_MODE__=true;});
-  await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm&&window.DeepSeaCreatures);
+  await page.goto(origin);await page.waitForFunction(()=>window.DeepSeaFilm);
+  const filmDuration=await page.evaluate(()=>window.DeepSeaFilm.duration);
+  if(duration>filmDuration)throw new Error(`The current scene lasts ${filmDuration} seconds.`);
   async function grab(t,format='image/jpeg'){
     const result=await page.evaluate(({t,format})=>{
       const rendered=window.DeepSeaFilm.render(t);
@@ -55,7 +57,7 @@ try{
   if(stills){
     const directory=path.resolve(arg('--stills-dir',path.dirname(out)));await mkdir(directory,{recursive:true});
     for(const t of stills.split(',').map(Number)){
-      if(!Number.isFinite(t)||t<0||t>30)throw new Error('Invalid still time.');
+      if(!Number.isFinite(t)||t<0||t>filmDuration)throw new Error('Invalid still time.');
       const frame=await grab(t,'image/png');
       await writeFile(path.join(directory,`frame-${t.toFixed(2)}.png`),frame.data);
       console.log(JSON.stringify({frame:t,...frame.rendered}));

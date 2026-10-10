@@ -5,6 +5,6 @@ import path from 'node:path';
 const here = path.dirname(fileURLToPath(import.meta.url));
 await mkdir(path.join(here, 'dist'), { recursive: true });
 await build({ entryPoints: [path.join(here, 'scene.mjs')], outfile: path.join(here, 'dist/scene.js'), bundle: true, format: 'iife', platform: 'browser', target: 'es2022', minify: true });
-for (const file of ['index.html', 'creatures.js']) await copyFile(path.join(here, file), path.join(here, 'dist', file));
+await copyFile(path.join(here, 'index.html'), path.join(here, 'dist/index.html'));
 await copyFile(path.join(here,'node_modules/three/LICENSE'),path.join(here,'dist/THREE-LICENSE.txt'));
 console.log('Offline procedural scene built. No image or generation API is used.');
