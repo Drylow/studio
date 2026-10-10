@@ -1,7 +1,7 @@
 QUIET PARADOX - AUDIT EDITORIAL FACELESSOS
 Script : script-voix.txt. Date : 10 octobre 2026.
 Perimetre : narration et sources; aucune voix mesuree ou video rendue.
-21 308 mots, 22 chapitres. 142,1 min a 150 mots/min; 133,2 min a 160; 125,3 min a 170. Comptage par espaces, sans pauses ajoutees.
+21 321 mots, 22 chapitres. 142,1 min a 150 mots/min; 133,3 min a 160; 125,4 min a 170. Comptage par espaces, sans pauses ajoutees.
 Le rythme de rehooks est adapte au sommeil dans brief-editorial.txt : curiosite calme, questions locales, pas de grand secret retenu jusqu'a la fin.
 
 PASSE 1 DE LA VERSION INITIALE : FIX-THEN-PASS
@@ -19,7 +19,7 @@ REVISION 2H+ - FIX-THEN-PASS
 La duree de la premiere version etait insuffisante a un debit naturel. Six discussions nouvelles ecrites directement, avec exemples et analyses distincts, puis ancien chapitre final renumerote 22. Aucun texte replique pour allonger.
 Premiere passe longue : 17 residus H18, zero candidat de voix; repetitions de formulations corrigees dans les nouveaux chapitres. Derniere passe : 6 residus H18 contextuels, zero candidat de voix et zero floor mecanique.
 Verification des nouvelles premisses : S07, S11 et S12 ouverts dans la recherche; S12 et S11 revisites pour la revision. Les ateliers, conseils, contrats, livraisons et modes de transmission futurs sont explicitement hypothetique. Une livraison centrale de pieces et un contrat complet des fondateurs ne sont pas affirmes comme canoniques.
-Les 22 textes sources assembles correspondent exactement au fichier de voix. Comptage refait sur les mots effectivement lus; 908 mots de marge au-dessus des 20 400 requis a 170 mots/min.
+Les 22 textes sources assembles correspondent exactement au fichier de voix. Comptage refait sur les mots effectivement lus; 921 mots de marge au-dessus des 20 400 requis a 170 mots/min.
 
 PASSE FINALE COMPLETE APRES REVISION : PASS EDITORIAL DU SCRIPT
 Effectuee apres les corrections et l'assemblage du texte entier. PASS ne certifie ni une duree audio de deux heures ni une decision de monetisation.
@@ -42,7 +42,7 @@ Ledger exact des boucles : plan-montage.json donne les lignes d'ouverture et de 
 Une inconnue de la serie est close au niveau du script par une evaluation des preuves, pas par une revelation inventee.
 Rhythme : exemples, consequences, objections et personnages alternent. Aucun recap de remplissage ni boucle audio. Les paragraphes les plus longs et les longueurs de phrases sont mesures dans controle-technique.json.
 B7 : N/A classement; ordre de l'objet au reseau. Dernier chapitre sur les consequences.
-Une mention facultative de la chaine au chapitre 8, au premier tiers du texte; reprise immediate de l'archive. Fin au dernier resultat humain, sans demande de clic.
+Un passage facultatif abonnement + commentaire au chapitre 1, ligne 7, estime a 1 min 33 a 150 mots/min; retour immediat aux interpretations du geste de nettoyage. Fin au dernier resultat humain, sans demande de clic.
 B1-B4 adaptes au format sommeil : pas d'urgence ni de suspense exigeant de rester eveille; nouveaux objets/questions aux transitions et progression au sein des discussions.
 
 C - SPINE ET PROMISE MAP
@@ -94,7 +94,7 @@ Pas de taux de mortalite ou de date speculative presente comme fait.
 ROTATION
 Slot 1 : 1E, question du resultat organise apres l'objet concret.
 Slot 2 : 2D et 2K adaptes, detail incomplet/decision inaccessible; aucun slogan recopie.
-Slot 3 : 3A, reprise de l'archive apres la mention de chaine.
+Slot 3 : 3A, reprise de la discussion du nettoyage apres le passage de chaine.
 Slot 4 : 4E predominant; 4I pour l'expansion vers le reseau.
 Slot 5 : 5E pour Gloria/Jimmy; 5F adapte a la lettre, sans fuite fabriquee.
 Slot 6 : 6C, reaction rattachee au materiau ou a l'image.
@@ -112,6 +112,15 @@ REVISION - PREUVES DES SIX DISCUSSIONS
 21 : "A theory can feel convincing while leaving a character unsure what to do the next morning." But de la decision, possibilite de correction et cout de l'erreur; ne transforme pas les discussions imaginees en canon.
 Transitions verifiees : reseau -> ressources -> voies de decision -> accord initial -> cooperation -> formation -> choix avec inconnues -> avenir. Les enjeux pratiques se construisent avant le chapitre final, dont la conclusion demeure une soiree ordinaire envisagee.
 Durations : titre de deux heures soutenu en volume a 145-170 mots/min, sans certifier une voix encore absente. Mesurer le fichier audio reste requis.
+
+REVISION CTA - VERIFICATION COMPLETE A-E
+L'invitation a s'abonner existait au chapitre 8; aucune demande de commentaire n'etait presente. Remplacee par un passage combine de 36 mots au debut, quand les auditeurs sont plus susceptibles d'etre encore eveilles. Le premier paragraphe de 81 mots reste intact.
+A : accroche et exemples de comparaison inchanges; promesse, limite des spoilers et anomalie materielle preservees.
+B : demande facultative apres trois paragraphes substantiels, environ 14 secondes au debit estime; pas de suspense retenu ou de coupure sonore. La question du nettoyage reprend dans le paragraphe suivant. Une occurrence de subscribe, une de comments; aucun autre CTA dans les 22 chapitres.
+C : meme fil conducteur et meme cloture; aucun nouveau fait de Silo ni promesse ajoutee par le passage. Les lignes et minutages du plan ont ete recalcules sur le texte exact.
+D : formulation anglaise relue a voix conversationnelle; scanner du texte entier relance apres la modification. Zero candidat trailer voice, zero machine-ban et floor zero; six residus H18 contextuels inchanges et adjudicates plus haut. Deux antitheses et un closer restent au ledger, aucun ajoute par le CTA.
+E : redaction originale du passage, limites de canon inchangees; comparaison de 12 mots consecutifs refaite avec les onze transcriptions, aucun passage commun. Validation utilisateur et audio non revendiques.
+Texte final : 21 321 mots; 133,3 min a 160 mots/min et 125,4 min a 170. PASS editorial apres la modification; mesure de l'audio toujours a faire.
 
 FILES USED
 faceless-scripts-os-master.md; research-and-ideation-skill.md; script-structures-skill.md; retention-mechanics-skill.md; voice-anchoring-skill.md; humanizer-skill.md; variety-rotation-skill.md; outro-psychology-skill.md; greenlight-audit-skill.md; trailer-voice-scan.py.

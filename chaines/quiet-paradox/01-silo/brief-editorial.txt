@@ -32,11 +32,11 @@ Twenty-two independently understandable discussions. Each opens with a concrete 
 
 FACELESSOS APPLIED
 Master workflow, research and ideation, voice anchoring, humanizer, script structures, retention mechanics, variety rotation, outro psychology and greenlight audit. No automatic scriptwriting pipeline; the narration is written directly by Codex.
-Sleep adaptation: no aggressive rehooks, forced suspense, shouted calls to action or deadline language. Local answers arrive within their chapters. One short, optional mid-video channel mention. The last sentence completes the final discussion.
+Sleep adaptation: no aggressive rehooks, forced suspense, shouted calls to action or deadline language. Local answers arrive within their chapters. One short, optional combined subscription and listening-location comment request early in chapter one, after the first observations. The last sentence completes the final discussion.
 Voice: conversational English, contractions, concrete examples and varied sentence lengths. Hushed is a reference for delivery and modular listening; its phrasing and fictional subject matter are not copied.
 
 DURATION
-User revision: at least two hours of narration, with enough words at a natural pace. Final narration: 21,308 whitespace-separated words across 22 chapters. Estimates without added pauses: 142.1 minutes at 150 wpm, 133.2 minutes at 160 wpm, 125.3 minutes at 170 wpm. The 145 wpm FacelessOS baseline would give 147 minutes. A spoken rate up to approximately 177.6 wpm meets two hours on word count alone. Hushed delivery references run around 155-162 wpm; the earlier 122 wpm assumption is withdrawn. Time the rendered narration and confirm at least 120 minutes before publication. No looping, recap padding or silence used to hit duration.
+User revision: at least two hours of narration, with enough words at a natural pace. Final narration: 21,321 whitespace-separated words across 22 chapters. Estimates without added pauses: 142.1 minutes at 150 wpm, 133.3 minutes at 160 wpm, 125.4 minutes at 170 wpm. The 145 wpm FacelessOS baseline would give 147 minutes. A spoken rate up to approximately 177.7 wpm meets two hours on word count alone. Hushed delivery references run around 155-162 wpm; the earlier 122 wpm assumption is withdrawn. Time the rendered narration and confirm at least 120 minutes before publication. No looping, recap padding or silence used to hit duration.
 
 LIVRAISON
 script-voix.txt = narration anglaise seule, sans titres, URLs ni consignes.
