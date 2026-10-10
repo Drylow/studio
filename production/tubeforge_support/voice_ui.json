@@ -1,0 +1,19 @@
+[
+  {
+    "line": 645,
+    "remove": 1,
+    "insert": [
+      "    <div class=\"field\"><label>Fournisseur</label><select data-k=\"${prefix}.provider\">${opts([['algrow', 'Algrow (voix du studio)'], ['local', 'Voix locale'], ['elevenlabs', 'ElevenLabs'], ['edge', 'Edge']], v.provider)}</select></div>",
+      "    <div data-show=\"algrow\" ${v.provider === 'algrow' ? '' : 'hidden'}>",
+      "      <div class=\"field\"><label>ID de voix Algrow</label><input type=\"text\" data-k=\"${prefix}.voice_id\" value=\"${esc(v.voice_id || '')}\"></div>",
+      "    </div>"
+    ]
+  },
+  {
+    "line": 1374,
+    "remove": 1,
+    "insert": [
+      "      <div class=\"field\"><label>Voix</label><select data-c=\"voice.provider\">${opts([['algrow', 'Algrow'], ['local', 'Locale'], ['edge', 'Edge'], ['elevenlabs', 'ElevenLabs']], v.provider || 'algrow')}</select></div>"
+    ]
+  }
+]

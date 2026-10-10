@@ -1,0 +1,83 @@
+--- a/app/config.py
++++ b/app/config.py
+@@ -22,0 +23,2 @@
++    "STUDIO_ROOT": "",
++    "RENDER_BACKEND": "auto",
+@@ -24,0 +27 @@
++    "HOST": "127.0.0.1",
+--- a/app/pipeline.py
++++ b/app/pipeline.py
+@@ -144,0 +145,2 @@
++    if p.get("codex_directed"):
++        raise RuntimeError("Projet dirige par Codex : importer un script valide, sans reecriture automatique")
+@@ -154,0 +157,2 @@
++    if p.get("codex_directed"):
++        raise RuntimeError("Projet dirige par Codex : importer la narration et son decoupage valides")
+@@ -175 +179 @@
+-                          if p["settings"]["voice"].get("provider") == "elevenlabs"
++                          if p["settings"]["voice"].get("provider") in ("elevenlabs", "algrow")
+@@ -209,0 +214,2 @@
++    if p.get("codex_directed"):
++        raise RuntimeError("Projet dirige par Codex : personnages et references choisis manuellement")
+@@ -223,0 +230,2 @@
++    if p.get("codex_directed"):
++        raise RuntimeError("Projet dirige par Codex : importer les prompts et references valides")
+@@ -231,0 +240,2 @@
++    if p.get("codex_directed"):
++        raise RuntimeError("Projet dirige par Codex : utiliser les images relues et leurs references explicites")
+@@ -434 +444 @@
+-        if r.get("provider", "").lower() in ("elevenlabs", "edge", "local"):
++        if r.get("provider", "").lower() in ("elevenlabs", "edge", "local", "algrow"):
+--- a/app/steps/render.py
++++ b/app/steps/render.py
+@@ -183,0 +184,12 @@
++    backend = v.get("render_backend") or config.get("RENDER_BACKEND")
++    if backend not in ("auto", "native", "ovni"):
++        raise RuntimeError("Unknown render backend")
++    plain = not tiktok and not v.get("captions")
++    if backend == "ovni" and not plain:
++        raise RuntimeError("OVNI does not yet support TubeForge captions or TikTok graphics; select native")
++    if backend == "ovni" or (backend == "auto" and plain and config.get("STUDIO_ROOT")):
++        from .. import studio_bridge
++        async with render_sem():
++            return await studio_bridge.render(p, jobs_scenes, total_frames, W, H, FPS, out_dir, progress)
++    events.log("Rendu TubeForge natif : habillage et sous-titres conserves")
++
+--- a/app/tts.py
++++ b/app/tts.py
+@@ -291,0 +292,3 @@
++    if provider == "algrow":
++        from . import studio_bridge
++        return await studio_bridge.voice(text, vs, out_dir, progress)
+--- a/app/server.py
++++ b/app/server.py
+@@ -199,0 +200,9 @@
++    if vs.get("provider") == "algrow" and len(text) < 200:
++        if body.get("text", "").strip():
++            raise HTTPException(400, "Algrow demande au moins 200 caracteres pour un apercu vocal")
++        text = ("You wake before sunrise. Outside, footsteps move along the narrow street, and a merchant opens "
++                "his shutters. By the river, workers unload the first baskets of the day. The city is already "
++                "awake, and your morning has only just begun." if vs["language"] != "French" else
++                "Tu te leves avant le soleil. Dehors, des pas traversent la rue et un marchand ouvre ses volets. "
++                "Au bord de la riviere, les porteurs dechargent les premiers paniers. La ville est deja reveillee, "
++                "mais ta journee commence a peine.")
+@@ -202 +211 @@
+-    for old in sorted(out_dir.glob("*"))[:-20]:
++    for old in sorted(f for f in out_dir.glob("*") if f.is_file())[:-20]:
+--- a/start.bat
++++ b/start.bat
+@@ -4 +4 @@
+-python -m pip install -q -r requirements.txt
++".venv\Scripts\python.exe" -m pip check
+@@ -6,2 +6,2 @@
+-echo TubeForge demarre sur http://localhost:8765  (ferme cette fenetre pour arreter)
+-python -m app serve
++echo TubeForge demarre sur http://127.0.0.1:8766 (ferme cette fenetre pour arreter)
++".venv\Scripts\python.exe" -m app serve --host 127.0.0.1 --port 8766
+--- a/batch.bat
++++ b/batch.bat
+@@ -5,2 +5,2 @@
+-if "%MODE%"=="" set MODE=auto
+-python -m app batch "%~1" --mode %MODE%
++if "%MODE%"=="" set MODE=review
++".venv\Scripts\python.exe" -m app batch "%~1" --mode %MODE%
