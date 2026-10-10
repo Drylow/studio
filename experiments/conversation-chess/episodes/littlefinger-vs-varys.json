@@ -1,0 +1,116 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Chess Analysis - Game of Thrones | Littlefinger VS Varys",
+  "demo": false,
+  "source_reviewed": true,
+  "show_source_quality_label": false,
+  "analysis_pawn_by_speaker": true,
+  "source_sha256": "2adb6050f86231954f89e90cd06f7229b04bb94c9a7f56019da536c8938bb7d4",
+  "source_url": "https://www.youtube.com/watch?v=_eb6ZRHQhg4",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "note": "Downloaded H264 stream is 1920x1080 at30fps. Five one-second source contact sheets and native samples23,81,94,134,176 reviewed. No burned subtitles, watermark or added text seen. Source is compressed and softer than the official HBO copy; that copy is rejected because of its permanent HBO watermark. No restoration or invented detail."
+  },
+  "source_in": 0,
+  "source_out": 186.6,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "initial_score_text": "0.0",
+  "white_label": "Varys",
+  "black_label": "Littlefinger",
+  "opening": {
+    "speaker": "white",
+    "label": "Varys",
+    "reviewed": true,
+    "evidence": "Varys opens at1.6s with the legend of the throne's thousand blades. Littlefinger answers at10.66s. These assignments stay fixed, including annotation pawns."
+  },
+  "analysis_background": "replay",
+  "dialogue_gain": 1,
+  "annotations": [
+    {
+      "source_at": 17.6,
+      "rating": "book",
+      "speaker": "black",
+      "score_text": "0.0",
+      "control_after": 0.5,
+      "comment": "Littlefinger has counted the throne's blades. Varys brings a grand legend; his opponent brings the inventory. A small correction, and a very revealing hobby.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Local word alignment ends counted at17.10s; pause at17.60s leaves0.50s before replay. Varys next speaks at18.06s."
+    },
+    {
+      "source_at": 47.2,
+      "rating": "great",
+      "speaker": "white",
+      "score_text": "0.0",
+      "control_after": 0.5,
+      "comment": "Littlefinger tries to make this personal. Varys refuses that frame: stopping him is not his main ambition. He keeps the bigger objective on the board.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Varys finishes his assurance at46.84s; pause47.20s leaves0.36s. His next sentence begins47.80s."
+    },
+    {
+      "source_at": 65.1,
+      "rating": "brilliant",
+      "speaker": "black",
+      "score_text": "-1.2",
+      "control_after": 0.606253,
+      "comment": "Littlefinger turns Varys's friendly jab into a counterattack. He reveals that he blocked the Sansa plan. The player who was gathering secrets has been read.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Littlefinger's sentence ends at64.44s; pause65.10s leaves0.66s. His next threat starts66.16s."
+    },
+    {
+      "source_at": 104.2,
+      "rating": "brilliant",
+      "speaker": "black",
+      "score_text": "-3.0",
+      "control_after": 0.746494,
+      "comment": "Ros was Varys's source. Littlefinger reveals he found the leak and handed her to Joffrey. One move removes an informant and warns the player behind her.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Fresh experience ends103.52s; pause104.20s leaves0.68s. Varys next speaks108.52s. Ros's fate is shown later in the source montage."
+    },
+    {
+      "source_at": 111.3,
+      "rating": "inaccuracy",
+      "speaker": "white",
+      "score_text": "-3.5",
+      "control_after": 0.7782,
+      "comment": "Varys defends the realm, but does not answer the threat to his source. He gives Littlefinger room to attack the principle behind his whole strategy.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Varys ends realm at110.88s; pause111.30s leaves0.42s. Littlefinger next speaks111.68s."
+    },
+    {
+      "source_at": 143.9,
+      "rating": "best",
+      "speaker": "black",
+      "score_text": "-3.5",
+      "control_after": 0.7782,
+      "comment": "Varys sees chaos as a shared danger. Littlefinger sees a route to power. This reply exposes why they cannot play for the same outcome.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Ladder ends143.18s; pause143.90s leaves0.72s. The monologue resumes146.10s and is retained through its final sentence at185.84s."
+    }
+  ],
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "outro_review_evidence": "Actual1920x1080 scene.js recap rendered and inspected before preparation: text fully inside the bubble; original icons; six moves counted as2brilliant,1great,1best,1inaccuracy,1book. Neutral pawn, no Subscribe. Private capture source-review/outro-review.png.",
+  "outro_summary": "Varys opens with the realm's founding story. Littlefinger answers with facts, exposes the failed Sansa plan, then reveals the cost of losing Ros. Varys wants stability. Littlefinger wants a ladder. He controls this exchange; the wider game remains open.",
+  "ending_fade_seconds": 0.5,
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Neutral pawn in the guide and recap. Analysis pawns follow the speaker's camp. No Tony portrait."
+  },
+  "review_evidence": "Handwritten commentary and cuts aligned against the exact acquired source. Source review is private under work/chess-studio/game-of-thrones/source-review. Scores are editorial judgments of this exchange, not engine evaluations or a verdict on the full series."
+}
