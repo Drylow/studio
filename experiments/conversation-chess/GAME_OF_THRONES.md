@@ -10,7 +10,7 @@ Bio proposée :
 > blunders and unexpected checkmates — analysed one move at a time.
 > No voiceover. Just the scenes and the mind games.
 
-## Recherche du10octobre2026
+## Recherche du 10 octobre 2026
 
 Nexlev : recherche Game of Thrones chess analysis. Algrow : recherche exacte
 Game of Thrones analysed like chess, scènes candidates et catalogue de la référence.
@@ -91,6 +91,35 @@ Original privé : `work/chess-studio/game-of-thrones/sources/littlefinger-varys-
 SHA256 : `2adb6050f86231954f89e90cd06f7229b04bb94c9a7f56019da536c8938bb7d4`.
 Ne pas confondre la définition du flux avec une copie sans compression.
 
-État : source inspectée, six commentaires écrits. Bilan à contrôler avant
-rendu ; MP4 complet et contrôle final à compléter. Les médias et transcriptions
-intégrales restent hors Git. Aucune création de compte ou publication déclenchée.
+État : **premier épisode complet rendu et vérifié**, six commentaires et bilan
+natif. Export de livraison :
+`work/conversation-chess/littlefinger-varys-v1/kdenlive/Westeros-Checkmate-Littlefinger-Varys.mp4`.
+1920×1080, 30 fps, 256.618 s, 104 566 787 octets. SHA256 :
+`4316a364359aa13a6b1191bb31f486772eec5e8467e79abdf813b1ab2315690b`.
+
+Contrôle visuel : les 7 698 images figurent sur 39 planches toutes inspectées ;
+34 captures de moments clés revues sur six planches supplémentaires, puis trois
+captures à leur définition native (75.7 s, 146.7 s, 254.6 s). Aucun watermark,
+bandeau de qualité, Subscribe ou texte tronqué observé. Pions du bon camp,
+six notes comptées correctement dans le bilan, fondu final vérifié.
+Cette méthode ne constitue pas une écoute humaine continue du MP4.
+
+Le décodage complet audio et vidéo passe sans erreur. Après le rendu natif,
+le volume général est augmenté de 7 dB, sans limiter la dynamique ni réencoder
+l'image. Mesures finales : −22.3 LUFS, crête vraie −1.8 dBFS. Les empreintes
+du flux vidéo natif et livré sont identiques. Les pauses sont placées après
+les mots complets selon l'alignement du fichier source ; la dernière phrase
+se termine avant le fondu. Les queues de lecture des six pauses restent silencieuses.
+Reçu public : `episodes/littlefinger-vs-varys.qa.json`.
+
+Le projet modifiable reste dans `kdenlive/project.kdenlive`. Il conserve le mix
+du rendu natif : après un nouvel export, reproduire la finition audio de 7 dB
+et mesurer à nouveau les crêtes. Commande depuis le dossier `kdenlive` :
+
+```powershell
+ffmpeg -i video.mp4 -map 0:v:0 -map 0:a:0 -c:v copy -af volume=7dB -c:a aac -b:a 192k -ar 48000 -movflags +faststart Westeros-Checkmate-Littlefinger-Varys.mp4
+```
+
+Les médias et transcriptions intégrales restent hors Git. Aucune création
+de compte ou publication YouTube déclenchée. Les deux autres scènes restent
+des propositions sourcées ; leurs fichiers et timings ne sont pas encore vérifiés.
