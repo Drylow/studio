@@ -1,0 +1,68 @@
+{
+  "schema": "deep-sea-sleep-qa-v1",
+  "file": "Les-Profondeurs-Boucle-Sleep-5min.mp4",
+  "sha256": "203de8a6a72be4ff9817d97e4ce2be0a6db7d043d4ce40cbbaf30d27ff8ab9d0",
+  "bytes": 155052684,
+  "duration_seconds": 300.0,
+  "frames": 9000,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": "30/1",
+  "color_space": "bt709",
+  "full_video_audio_decode_ok": true,
+  "audio_peak_dbfs": -22.98454905741762,
+  "audio_clipping_samples": 0,
+  "audio_periodic_master_check": {
+    "seconds": 300.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak_dbfs": -22.976804491345767,
+    "rms_dbfs": -36.51171413318253,
+    "boundary_sample_step": [
+      5,
+      6
+    ],
+    "maximum_adjacent_step": [
+      27,
+      28
+    ],
+    "samples_clipped": 0,
+    "periodic_synthesis": true,
+    "external_samples": 0
+  },
+  "encoded_audio_boundary": {
+    "decoded_sample_frames": 14400512,
+    "valid_duration_sample_frames": 14400000,
+    "boundary_step": [
+      0.00276867114007473,
+      0.0016003153286874294
+    ],
+    "first_last_second_max_normal_step": [
+      0.0028255702927708626,
+      0.0018074838444590569
+    ],
+    "loop_bed_source": "The original 300-second periodic PCM master is the source for future long mixes; repeated AAC packets are not used as the narration bed."
+  },
+  "finished_render_visual_reviewed": true,
+  "human_continuous_viewing": false,
+  "human_full_audio_listening": false,
+  "sampled_movie_frames": 60,
+  "motion_movie_frames": 208,
+  "native_movie_frames": 11,
+  "loop_geometry_check_passed": true,
+  "loop_endpoints_pixel_identical": true,
+  "loop_sample_hz": 30,
+  "loop_rock_overlap_count": 0,
+  "encoded_visual_boundary_rms": 4.403582942062458,
+  "encoded_visual_ordinary_step_rms": [
+    4.266898480934945,
+    4.371353620806473
+  ],
+  "source_scene_sha256": "7679f4f3c8376251869c4be8e13135d9bd6dfc881f37d0c9667ced910cb5c694",
+  "paid_generation_calls": 0,
+  "external_images": 0,
+  "visual_review_scope": "Actual finished MP4 frames: 60 overview samples, 208 motion/boundary samples, 11 native frames; primary and independent reviews. No continuous full playback or full listening claimed.",
+  "user_visual_approval": false
+}

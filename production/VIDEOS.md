@@ -1,5 +1,32 @@
 # Journal des vidéos
 
+## Fonds marins — boucle sleep de cinq minutes livrée pour validation
+
+Livraison actuelle : https://gofile.io/d/ixBAzbR6 —
+`Les-Profondeurs-Boucle-Sleep-5min.mp4` et `Les-Profondeurs-Boucle-5min-HTML.zip`.
+300 s, 1920×1080 natif/30 fps, 9 000 images, 155 052 684 octets ;
+export complet en 3 080,867 s sur cette machine sans GPU. ZIP : 206 228 octets,
+lecteur autonome silencieux, extraire puis ouvrir `index.html`, sans installation.
+Taille/MD5 des deux uploads confirmés.
+
+Décor et animaux 3D entièrement codés, relief et surfaces procédurales,
+sept groupes animés, flore benthique, particules et ambiance originale.
+Raccord de 300 secondes sans fondu final ; seconde raie relevée de 3,5 unités
+pour séparer les passages. Source contrôlée sur 9 001 poses à 30 Hz : aucun
+recouvrement avec les obstacles retenus, caméra et sol contrôlés. Ces contrôles
+échantillonnés ne prouvent pas une simulation physique continue.
+Décodage A/V du MP4 intégral sans erreur, raccord image/audio vérifié et
+aucune saturation. Revue des images finales : 60 générales, 208 de mouvements
+et raccord, 11 natives, avec contribution indépendante. Pas de lecture continue
+ni d'écoute humaine complète prétendue. Rapports : `SLEEP_SCENE_CHECK.json`
+et `SLEEP_RENDER_CHECK.json`, dans `experiments/deep-sea-procedural/`.
+
+Tous les futurs épisodes visent deux heures (24 boucles), après validation
+visuelle utilisateur. Aucun long, narration, publication ou changement des
+automatismes existants. Zéro appel de génération payante. Outil fframes proposé
+et étudié : gratuit en local, utile aux habillages ; pas d'import direct de cette
+scène Three.js ni d'accélération 3D mesurée ici. Voir `FFRAMES_REVIEW.md`.
+
 ## Fonds marins — V4, passages libres et piste sleep — 10 octobre 2026
 
 Livraison : https://gofile.io/d/nrriY6iM — `Les-Profondeurs-V4-Passages-Libres-24s.mp4`

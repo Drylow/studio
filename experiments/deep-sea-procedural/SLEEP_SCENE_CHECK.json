@@ -26,5 +26,5 @@
     "first_triangle_crossings": [],
     "method": "Actual source placement functions and animated indexed/non-indexed world triangles. All pair bounds sampled2Hz; overlapping poses tested for edge/triangle intersections. Does not exhaustively prove containment or continuous-time avoidance."
   },
-  "finished_mp4_review": "Pending full export and final encoded movie review; this report verifies the scene only."
+  "finished_mp4_review": "Passed machine checks and sampled finished-movie visual review; user visual approval pending. See SLEEP_RENDER_CHECK.json."
 }

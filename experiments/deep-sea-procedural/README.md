@@ -1,29 +1,47 @@
 # Les profondeurs — exploration 3D codée
 
-## Boucle sleep de cinq minutes — en cours
+## Boucle sleep de cinq minutes — livrée pour validation
 
 Direction actuelle : **histoires marines vraies, ambiance calme et inquiétante**.
 Les futurs épisodes visent deux heures : ce fond de **300 secondes** pourra
 être répété **24 fois** sous une narration originale. Ces cinq minutes sont
 calculées comme un parcours continu, distinct des anciens aperçus courts.
-**Rendu intégral repris avec la scène corrigée ; contrôle du fichier final
-à terminer avant livraison.** Aucun épisode de deux heures, script, voix off
-ou publication n'est produit à cette étape.
+**[Télécharger le MP4 et le lecteur HTML sur GoFile](https://gofile.io/d/ixBAzbR6).**
+Le fichier final est contrôlé ; l'avis visuel de l'utilisateur reste attendu.
+Aucun épisode de deux heures, script, voix off ou publication n'est produit
+à cette étape.
+
+- MP4 : **300 s, 1920×1080 natif, 30 images/s, 9 000 images**, 155 052 684 octets.
+  SHA-256 : `203de8a6a72be4ff9817d97e4ce2be0a6db7d043d4ce40cbbaf30d27ff8ab9d0`.
+- ZIP : `Les-Profondeurs-Boucle-5min-HTML.zip`, 206 228 octets. Extraire puis
+  ouvrir `index.html` dans Chrome ou Firefox, sans installation. Lecteur silencieux ;
+  le MP4 contient une ambiance aquatique originale, sans narration.
+- Taille et MD5 des deux uploads vérifiés. Export complet : **3 080,867 secondes**
+  (51 min 21 s environ), sur cette machine sans GPU, avec rendu logiciel.
 
 La scène conserve des volumes originaux entièrement codés : relief, rochers,
 détails de surface procéduraux et vie sur le fond. Sept groupes animés
 (`roots`) réunissent une baudroie, deux méduses, deux bancs et deux raies. Caméra,
 animaux, particules et ambiance sonore suivent des cycles de 300 secondes,
-sans fondu final ; le raccord et les passages libres doivent être contrôlés.
+sans fondu final ; le raccord et les passages ont été contrôlés.
 Les animaux sont des reconstitutions illustratives, pas des prises de vue
 scientifiques ni des modèles repris du jeu.
 
 Pour séparer son passage de ceux des autres animaux, la seconde raie (`ray2`)
 passe désormais plus haut : son altitude de base est fixée à `y = 2.9`
 unités de scène. Les volumes réservés aux animaux et à la caméra sont
-recalculés avant de placer le décor. Le rendu repris utilise ce réglage ;
-la cohérence de tout le cycle et le raccord du MP4 restent à vérifier avant
-d'annoncer le fichier terminé.
+recalculés avant de placer le décor. Le MP4 livré utilise ce réglage.
+
+Contrôles consignés dans [SLEEP_SCENE_CHECK.json](SLEEP_SCENE_CHECK.json) et
+[SLEEP_RENDER_CHECK.json](SLEEP_RENDER_CHECK.json) : décodage A/V intégral sans
+erreur, format et nombre d'images conformes, raccord visuel comparable aux
+pas ordinaires du film, aucune saturation audio. Revue des captures du MP4
+terminé : 60 images générales, 208 images de mouvements/raccord et 11 vues
+natives, avec revue indépendante supplémentaire. Aucune lecture continue ni
+écoute humaine complète prétendue. Les passages sont vérifiés sur des poses
+échantillonnées, pas par une preuve de collision continue. Pour les futurs
+épisodes de deux heures, utiliser le master PCM périodique dans le mix audio,
+plutôt que de répéter les paquets AAC encodés.
 
 Le lecteur se construit séparément dans `dist-sleep/`. Depuis la racine du dépôt,
 créer l'ambiance originale avec la venv existante et NumPy :
@@ -95,7 +113,7 @@ Direction confirmée : **histoires vraies, ambiance inquiétante**. L'utilisateu
 envisage ensuite une variante sleep : récits de deux heures, boucle calme
 d'environ cinq minutes et collaboration avec une chaîne existante. Voir
 [DIRECTION.md](DIRECTION.md). La section ci-dessus décrit la boucle désormais
-en cours ; les livraisons qui suivent restent les anciens aperçus courts.
+livrée pour validation ; les livraisons qui suivent restent les anciens aperçus courts.
 
 ### Aperçu V4 livré — archive du 10 octobre 2026
 

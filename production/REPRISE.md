@@ -1,6 +1,6 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## En cours — véritable boucle sleep de cinq minutes
+## Livraison actuelle — boucle sleep de cinq minutes à valider
 
 Nouvelle instruction du 10 octobre : produire **un parcours 3D de 300 secondes**
 très détaillé pour validation visuelle, inspiré de DREDGE et Subnautica.
@@ -13,8 +13,24 @@ surfaces procédurales, sept groupes animés, faune benthique et ambiance origin
 Cycles de 300 secondes sans fondu final. La deuxième raie a été relevée de
 3,5 unités pour supprimer trois croisements avec d'autres animaux ; contrôle
 indépendant des triangles sur les poses candidates corrigées sans croisement.
-Export intégral natif 1080p30 en cours ; **pas encore de nouveau lien livré**.
-Ne pas confondre avec l'archive V4 de 24 secondes ci-dessous.
+**Livraison : https://gofile.io/d/ixBAzbR6**, MP4 et lecteur HTML autonome en ZIP.
+MP4 : 300 s, natif 1920×1080/30 fps, 9 000 images, 155 052 684 octets ;
+SHA-256 `203de8a6a72be4ff9817d97e4ce2be0a6db7d043d4ce40cbbaf30d27ff8ab9d0`.
+ZIP : 206 228 octets, extraire puis ouvrir `index.html`, sans installation.
+Les deux uploads sont confirmés par taille/MD5. Export complet en 3 080,867 s
+sur CPU sans GPU. Ne pas confondre avec l'archive V4 de 24 secondes ci-dessous.
+
+Décodage A/V intégral sans erreur, raccord du fichier encodé vérifié,
+aucune saturation audio. Revue du MP4 terminé : 60 captures générales,
+208 captures de mouvements/raccord et 11 vues natives, dont une revue
+indépendante. Pas de lecture continue ni d'écoute humaine complète prétendue.
+Rapports publics : `SLEEP_SCENE_CHECK.json` et `SLEEP_RENDER_CHECK.json` dans
+le dossier de l'expérience. Les passages ont été contrôlés par poses
+échantillonnées ; aucune preuve de collision continue revendiquée.
+**Avis visuel utilisateur encore attendu.** Aucun épisode de deux heures,
+script, voix off, envoi Discord/YouTube ou modification des automatismes.
+Pour le futur mix de deux heures, utiliser le master PCM périodique original ;
+ne pas répéter les paquets AAC du MP4 comme fond sonore.
 
 Outil proposé ensuite par l'utilisateur : **fframes.studio**. Recherche primaire
 et décision dans `FFRAMES_REVIEW.md` : gratuit en local, Rust/SVG/Skia, utile
