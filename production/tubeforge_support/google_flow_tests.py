@@ -119,3 +119,23 @@ def test_llm_dispatch_bypasses_proxy_and_preserves_stats(provider, monkeypatch):
     request.assert_awaited_once_with("Exact", "fixture-image", "16:9", [picture()], receipt)
     assert llm.STATS["image"]["done"] == before["done"] + 1
     assert llm.STATS["image"]["active"] == before["active"]
+
+
+def test_portrait_output_rejected_without_paid_retry(provider, monkeypatch):
+    calls, client = provider
+    original_post = client.post
+    async def post(url, **kwargs):
+        if url.endswith("/images"):
+            calls.append("paid image request")
+            stream = io.BytesIO()
+            Image.new("RGB", (18, 32), "white").save(stream, format="PNG")
+            return httpx.Response(200, json={"jobId": "wrong-shape", "media": [{"image": {"generatedImage": {
+                "encodedImage": base64.b64encode(stream.getvalue()).decode()}}}]})
+        return await original_post(url, **kwargs)
+    monkeypatch.setattr(client, "post", post)
+    receipt = {}
+    with pytest.raises(flow.FlowError, match="format"):
+        asyncio.run(flow.generate("Exact landscape prompt", "fixture-image", "16:9", receipt=receipt))
+    assert calls.count("paid image request") == 1
+    assert receipt["dimensions"] == [18, 32]
+    assert receipt["job_id"] == "wrong-shape"

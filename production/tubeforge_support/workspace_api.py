@@ -329,6 +329,7 @@ def _create(prepared, catalog):
                                  "script.model": models["text"], "script.fast_model": models["text"],
                                  "visuals.image_model": models["image"],
                                  "visuals.image_provider": prepared["image_provider"],
+                                 "visuals.aspect": "16:9",
                                  "thumbnail.image_provider": prepared["image_provider"],
                                  "thumbnail.model": models["image"], "thumbnail.count": 0,
                                  "visuals.auto_characters": False, "visuals.continuity": "off",

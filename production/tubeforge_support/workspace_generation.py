@@ -54,7 +54,7 @@ def _signature(p, s):
 
 
 def _prepare(p, s, body):
-    from . import workspace_planning
+    from . import workspace_planning, workspace_composition
     prompt = s.get("prompt")
     if (not isinstance(prompt, str) or not prompt.strip() or "renderer-only import" in prompt.lower()
             or not (s.get("prompt_author") == "codex" or workspace_planning.authored(p, s)) or not s.get("location_id")
@@ -95,6 +95,9 @@ def _prepare(p, s, body):
                          "role": ref.get("role"), "sha256": source_hash,
                          "source_sha256": source_hash, "sent_sha256": hashlib.sha256(payload).hexdigest()})
     aspect = p["settings"]["visuals"].get("aspect", "16:9")
+    if workspace_planning.allowed(p):
+        if aspect != "16:9" or workspace_composition.contradictory(prompt):
+            raise HTTPException(422, "Les plans de cette chaîne doivent être plein cadre paysage 16:9, sans composition verticale ni personnage en surimpression")
     if aspect not in llm.ASPECTS:
         raise HTTPException(422, "Le format d'image enregistré n'est pas pris en charge")
     return prompt, model, aspect, payloads, sources, receipts

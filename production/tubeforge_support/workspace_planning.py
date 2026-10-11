@@ -9,6 +9,7 @@ from app import config, llm, pipeline, store
 from app.steps import scenes as timing
 from app.util import parse_json, now
 from . import workspace_api as api, workspace_management as management, workspace_generation as generation
+from . import workspace_composition as composition
 
 
 def allowed(p):
@@ -64,6 +65,16 @@ def inputs(p):
         digest = api._file_digest(store.style_dir(p["style_id"]), ref.get("path"))
         if not digest or ref.get("sha256") != digest or ref.get("review_state") != "verified":
             raise HTTPException(409, "Une référence du style est manquante ou a changé")
+    era_refs = style.get("workspace_character_references") or {}
+    if not isinstance(era_refs, dict):
+        raise HTTPException(409, "Les références de personnages du style sont invalides")
+    for selected in era_refs.values():
+        if not isinstance(selected, list) or not selected:
+            raise HTTPException(409, "Chaque époque doit avoir une référence de personnage approuvée")
+        for ref in selected:
+            if (not isinstance(ref, dict) or ref.get("review_state") != "verified"
+                    or not ref.get("sha256") or api._file_digest(store.style_dir(p["style_id"]), ref.get("path")) != ref["sha256"]):
+                raise HTTPException(409, "Une référence de personnage est manquante, non vérifiée ou a changé")
     shots = timing.split(words, p["script"], p["voiceover"]["duration"], target=6)
     for i, shot in enumerate(shots, 1):
         shot.update(id=i, text=p["script"][shot["c0"]:shot["c1"]].strip())
@@ -88,7 +99,11 @@ async def prepare(p):
             "For Kratos preserve the red facial stripe and simple face of the approved references; Greek-era chain blades versus "
             "Norse-era axe and fur/leather attire must follow the narration. Atreus is a distinct smaller "
             "round-white-headed boy with bow, not another Kratos. Depict family deaths as non-graphic "
-            "aftermath, avoid showing violence against children. No image generation, only prompts."
+            "aftermath, avoid showing violence against children. No image generation, only prompts. "
+            + composition.RULES +
+            "Do not use the proper name Kratos in the image prompt; describe the reference avatar. "
+            "When era-specific character references are supplied, return reference_era equal to one "
+            "of their exact keys. The era follows this shot's narration, not the end of the story."
         )
         try:
             limit = max(1, min(8, int(config.get("WORKSPACE_PLAN_CONCURRENCY") or 4)))
@@ -104,6 +119,7 @@ async def prepare(p):
                 raw = await llm.chat([
                     {"role": "system", "content": rules + "\nApproved style: " + style.get("visuals", {}).get("art_style", "")},
                     {"role": "user", "content": json.dumps({"full_story": p["script"],
+                        "character_reference_eras": list(style.get("workspace_character_references", {})),
                         "context_before": [s["text"] for s in shots[max(0, offset - 2):offset]],
                         "context_after": [s["text"] for s in shots[offset + len(batch):offset + len(batch) + 2]],
                         "requested_shots": [{"id": s["id"], "narration": s["text"]} for s in batch]}, ensure_ascii=False)}
@@ -118,9 +134,22 @@ async def prepare(p):
                         or not isinstance(row.get("characters"), list)
                         or any(not isinstance(c, str) or not c.strip() for c in row["characters"])):
                     raise ValueError("Incomplete storyboard response")
-                prompt = style.get("visuals", {}).get("art_style", "") + "\nScene: " + row["prompt"].strip()
+                prompt = composition.compose(row["prompt"], style.get("visuals", {}).get("art_style", ""))
+                if composition.contradictory(prompt):
+                    raise ValueError("Contradictory image composition")
+                selected_refs = refs
+                era_refs = style.get("workspace_character_references") or {}
+                if era_refs:
+                    era = row.get("reference_era")
+                    if era not in era_refs:
+                        raise ValueError("Missing explicit reference era")
+                    selected_refs = copy.deepcopy(era_refs[era])
+                    for ref in selected_refs:
+                        ref["owner"] = "style"
+                        if api._file_digest(store.style_dir(p["style_id"]), ref["path"]) != ref.get("sha256"):
+                            raise ValueError("Character reference changed")
                 prepared.append(dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
-                    characters=row["characters"], references=copy.deepcopy(refs), prompt_author="configured_text_proxy",
+                    characters=row["characters"], references=copy.deepcopy(selected_refs), prompt_author="configured_text_proxy",
                     status="idle", human_review={"state": "unreviewed"}))
             completed += len(prepared)
             progress(completed, len(shots), f"{completed}/{len(shots)} plans prêts · {limit} lots en parallèle")
@@ -132,6 +161,9 @@ async def prepare(p):
             batches = await asyncio.gather(*tasks)
             result = [shot for batch in batches for shot in batch]
             inputs(p)  # Recheck physical reference files before publishing the complete plan.
+            for shot in result:
+                if any(api._file_digest(store.style_dir(p["style_id"]), r["path"]) != r.get("sha256") for r in shot["references"]):
+                    raise ValueError("Reference changed during preparation")
             if signature(p) != stamp or p.get("scenes"):
                 raise ValueError("Project changed")
             p["planning_receipt"] = {"input_hash": stamp, "text_model": model, "created_at": now(),
