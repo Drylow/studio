@@ -8,7 +8,7 @@ import uuid
 from fastapi import APIRouter, HTTPException
 from PIL import Image
 
-from app import config, llm, pipeline, store
+from app import config, google_flow, llm, pipeline, store
 from app.util import now
 from . import workspace_api as api
 
@@ -52,8 +52,15 @@ def _prepare(p, s, body):
     model = (p.get("model_snapshot") or {}).get("image_model")
     if not isinstance(model, str) or not model or body.get("image_model") != model:
         raise HTTPException(409, "Confirmez le modèle image enregistré dans ce projet")
-    if not config.get("PROXY_API_KEY") or not config.get("PROXY_BASE_URL"):
+    provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
+    if body.get("image_provider", provider) != provider:
+        raise HTTPException(409, "Le fournisseur confirmé ne correspond pas à celui du projet")
+    if provider == "google_flow" and not google_flow.configured():
+        raise HTTPException(503, "Google Flow n'est pas configuré")
+    if provider == "cli_proxy" and (not config.get("PROXY_API_KEY") or not config.get("PROXY_BASE_URL")):
         raise HTTPException(503, "Le CLI Proxy n'est pas configuré")
+    if provider not in ("cli_proxy", "google_flow"):
+        raise HTTPException(422, "Fournisseur image inconnu")
     refs = s.get("references")
     if not isinstance(refs, list) or not refs or any(not isinstance(ref, dict) for ref in refs):
         raise HTTPException(422, "Enregistrez au moins une référence réelle, dans l'ordre exact à envoyer")
@@ -96,8 +103,10 @@ async def generate(pid, sid, body):
                       "generation_receipt": copy.deepcopy(s.get("generation_receipt"))}
     previous_render = copy.deepcopy(p.get("render"))
     job_id = uuid.uuid4().hex
+    provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     receipt = {"id": job_id, "prompt": prompt, "model": model, "aspect": aspect,
-               "references": references, "transport": "cli_proxy", "endpoint": "/images/edits",
+               "references": references, "transport": provider,
+               "endpoint": "/v1/google-flow/images" if provider == "google_flow" else "/images/edits",
                "started_at": now(), "state": "running", "previous_image": previous_image}
     _active_projects.add(pid)
     succeeded = False
@@ -108,8 +117,9 @@ async def generate(pid, sid, body):
         p["steps"]["visuals"].update(state="running", msg="Génération du plan confirmé")
         store.save_project(p)
         # Nonempty refs route this existing helper to /images/edits. No composition or rewrite.
+        extra = {"provider": provider, "receipt": receipt.setdefault("provider_receipt", {})} if provider == "google_flow" else {}
         data = await llm.generate_image(prompt, model=model, aspect=aspect, refs=payloads,
-                                        attempts=1, label=f"Plan dirigé {sid}")
+                                        attempts=1, label=f"Plan dirigé {sid}", **extra)
         with Image.open(io.BytesIO(data)) as image:
             extension = {"PNG": ".png", "JPEG": ".jpg", "WEBP": ".webp"}.get(image.format)
             image.verify()
@@ -149,6 +159,8 @@ async def generate(pid, sid, body):
         raise
     except asyncio.CancelledError:
         raise
+    except google_flow.FlowError as error:
+        raise HTTPException(502, str(error)) from None
     except Exception:
         raise HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée") from None
     finally:

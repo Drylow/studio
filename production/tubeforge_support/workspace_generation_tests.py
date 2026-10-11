@@ -81,3 +81,27 @@ def test_generation_failure_preserves_previous_asset_and_hides_errors(workspace,
     assert response.status_code == 502 and "private upstream" not in response.text
     assert store.get_project(p["id"])["scenes"][0]["image"] == "previous.png"
     assert (store.project_dir(p["id"]) / "previous.png").exists()
+
+
+def test_flow_scene_pins_provider_and_records_actual_account(workspace, monkeypatch):
+    client, p = prepared_plan(workspace)
+    p["model_snapshot"]["image_provider"] = "google_flow"
+    store.save_project(p)
+    monkeypatch.setattr(generation.google_flow, "configured", lambda: True)
+    stream = io.BytesIO()
+    Image.new("RGB", (32, 18), "blue").save(stream, format="JPEG")
+    async def generate(*args, **kwargs):
+        assert kwargs["provider"] == "google_flow" and kwargs["attempts"] == 1
+        kwargs["receipt"].update(account="account@example.invalid", count=1)
+        return stream.getvalue()
+    request = AsyncMock(side_effect=generate)
+    monkeypatch.setattr(llm, "generate_image", request)
+    body = {"confirm_prompt": p["scenes"][0]["prompt"], "image_model": p["model_snapshot"]["image_model"]}
+    rejected = client.post(f"/api/workspace/projects/{p['id']}/scenes/1/generate", json={**body, "image_provider": "cli_proxy"})
+    assert rejected.status_code == 409 and request.await_count == 0
+    response = client.post(f"/api/workspace/projects/{p['id']}/scenes/1/generate", json={**body, "image_provider": "google_flow"})
+    assert response.status_code == 200, response.text
+    scene = response.json()["scenes"][0]
+    assert scene["image"].endswith(".jpg")
+    assert scene["generation_receipt"]["provider_receipt"]["account"] == "account@example.invalid"
+    assert scene["generation_receipt"]["transport"] == "google_flow"

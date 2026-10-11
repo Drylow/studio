@@ -33,11 +33,11 @@ Le script importe reste exact. Creation et lots ne lancent aucune production.
 Chaque projet conserve ses reglages de style et son choix de modeles.
 Le titre peut ensuite etre modifie sans reecriture du texte ni des prompts.
 
-Les modeles viennent du catalogue reel du CLI Proxy. Les capacites annoncees
+Les modeles texte viennent du catalogue reel du CLI Proxy. Les capacites annoncees
 et les capacites non confirmees sont distinguees ; la presence dans la liste
 ne prouve pas qu'une generation reussira avec un compte donne.
 Les modeles de texte et d'image peuvent etre choisis avant creation, sans IDs
-de modeles figes dans le depot et sans changement de fournisseur.
+de modeles figes dans le depot. Le fournisseur image est conserve dans le projet.
 
 Les cinq profils separent les apercus video (personnages blancs) des miniatures
 (humains expressifs). Les anciens presets sont conserves en archives privees.
@@ -64,7 +64,7 @@ Les ecritures n'utilisent pas le seeding des anciennes chaines du ZIP.
 Mettre a jour l'interface sans reconfigurer les fournisseurs (serveur inactif) :
 
 ```powershell
-./venv/Scripts/python.exe production/tubeforge_workspace.py
+./venv/Scripts/python.exe production/tubeforge_workspace.py --no-seed
 ```
 
 Tests sans requete de generation payante :
@@ -80,10 +80,49 @@ Algrow est le fournisseur par defaut, avec la voix historique existante.
 Aucun moteur de voix locale n'a ete installe. Aucune voix de chaine remplacee.
 Les cles sont chargees depuis les configurations privees ; la cle Algrow reste
 dans le `.env` du studio, pas dans les requetes JSON de la passerelle.
-Le proxy texte/images reprend la configuration du studio.
+Le proxy texte reprend la configuration du studio ; le proxy image reste disponible.
 Algrow impose 200 caracteres minimum : un texte trop court est refuse, jamais
 complete automatiquement. Le bouton d'apercu utilise un exemple assez long.
 Les narrations de projet identiques sont mises en cache avec controle d'empreinte.
+
+## Google Flow via useapi - integration du 11 octobre
+
+Les images et les miniatures des nouveaux projets peuvent utiliser Google Flow.
+Le choix se fait dans Nouvelle video, File de videos et Reglages. Les anciens
+projets gardent leur fournisseur image ; ils ne sont pas migres automatiquement.
+Le texte et les voix conservent leurs fournisseurs existants.
+
+Configuration privee : `USEAPI_API_KEY` et `USEAPI_IMAGE_MODEL` dans le `.env`
+du studio, ou dans celui de TubeForge. Le fichier TubeForge peut surcharger les
+valeurs du studio. `IMAGE_PROVIDER=google_flow` active ce choix par defaut pour
+les nouveaux projets. `USEAPI_IMAGE_CONCURRENCY=3` limite la generation a trois
+requetes simultanees au maximum. Les secrets sont masques dans les reglages publics.
+Aucun identifiant de modele n'est inscrit dans les sources.
+
+Les comptes sont lus par GET `/v1/google-flow/accounts` et affiches dans Reglages.
+Les comptes sains sont utilises a tour de role ; un compte ayant retourne une
+erreur 429 est temporairement exclu selon Retry-After. Une tentative qui echoue
+ne relance pas automatiquement une generation sur un autre compte.
+
+Les references sont envoyees dans leur ordre exact sur le meme compte que la
+generation, via POST `/v1/google-flow/assets/{email}`. Les uploads identiques sont
+reutilises en memoire par compte. Dix references maximum ; aucune suppression
+automatique. POST `/v1/google-flow/images` demande exactement une image. Les
+prompts restent exacts et les recus conservent compte, job, fichiers et empreintes.
+Un delai depasse ne declenche ni repetition, ni fournisseur de secours ; verifier
+l'historique useapi avant de relancer. Les quotas et erreurs captcha sont visibles.
+
+Sources persistantes : `tubeforge_support/google_flow.py`, modules workspace et
+interface ; deploiement par `tubeforge_workspace.py --no-seed`, serveur arrete.
+Cette commande ne reecrit pas les projets, styles, chaines ou leurs references.
+
+Verification : trois comptes Google disponibles, catalogue CLI accessible,
+92 tests Python et 69 controles JavaScript passes. Essai reel depuis l'endpoint
+de generation d'un plan TubeForge : une image avec reference, 1376 x 768, en
+37,59 secondes. Image regardee : trois personnages a tete ronde blanche, gestes
+et accessoires lisibles ; ce test ne valide pas un episode complet. Le projet
+de test est archive. Les 31 fichiers JSON preexistants sont inchanges.
+Recus et fichier de test : `work/tubeforge-flow-integration/`, prive et ignore.
 
 ## Rendu
 
