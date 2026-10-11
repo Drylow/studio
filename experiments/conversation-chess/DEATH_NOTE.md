@@ -103,3 +103,14 @@ Projet éditable : `work/conversation-chess/death-note-light-l-v1/kdenlive/proje
 sont dans `episodes/light-vs-l.publish.txt` et dans `PUBLISH.txt` près du MP4.
 Les textes, paramètres et contrôles sont sauvegardés dans Git ; les vidéos,
 sources et le bundle lourd restent locaux dans `work/`.
+
+## Paquet et miniature — 11 octobre 2026
+
+Le dossier `work/conversation-chess/death-note-light-l-v1/A-PUBLIER/` rassemble
+le MP4 final vérifié, une miniature JPEG 1280×720, le titre et la description
+avec l'attribution musicale. La copie vidéo est contrôlée par SHA256.
+La miniature dessine L calme face à Light surpris ; les SVG Chess.com originaux
+Brilliant et Blunder sont ajoutés avec des inclinaisons opposées de 10°.
+Base, prompt, reçu et JPEG sont conservés dans `thumbnails/light-vs-l/`.
+Image finale regardée : personnages identifiables, yeux dégagés, badges entiers,
+aucun texte ni watermark ajouté. Aucune nouvelle modification du film.

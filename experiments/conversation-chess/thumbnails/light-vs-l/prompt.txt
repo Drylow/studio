@@ -1,0 +1,12 @@
+Use case: ads-marketing
+Mode: built-in image-generation tool; new illustration, no reference image.
+
+Create one premium 16:9 YouTube thumbnail illustration for "L Outsmarts Light Analysed like Chess | Death Note". Authentic recognizable Death Note anime character designs, crisp inked linework and rich cel shading, professional finished anime art, not photorealism, not generic anime faces.
+Full bleed two enormous close-up character portraits separated by a thin white diagonal slash near the center. LEFT: L Lawliet, messy jet-black spiky hair, large dark eyes with characteristic heavy dark eye bags, very pale skin, white long-sleeved crewneck shirt, subtle knowing smile, calculating gaze toward the opponent, index finger resting naturally near lower lip. RIGHT: Light Yagami, neat chestnut-brown fringe hair, brown eyes, white button-up shirt and red tie, tense stunned realization, brows drawn together, slight parted lips, serious handsome face; no exaggerated screaming.
+Both faces must be instantly identifiable and readable at small mobile size, eyes and mouths fully visible, faces dominate, medium close-up cropped upper torso. L on cool deep midnight navy and restrained teal light, Light on dark crimson background with warm side lighting. Detailed faces, restrained uncluttered backgrounds. Strong tonal contrast and clean silhouette, dramatic psychological duel, not a collage of tiny elements.
+Reserve small upper outside corners for separately composited badges; keep both characters' eyes away from the upper outer corner zones. NO lettering, NO words, NO numbers, NO logos, NO chess icons, NO badges, NO chessboard, NO other characters, NO watermark, NO border. Finished sharp premium thumbnail.
+
+Final composition: original repository Chess.com brilliant.svg and blunder.svg,
+verified against ratings.json SHA-256, placed separately using compose-thumbnail.mjs.
+L left: brilliant +10 degrees. Light right: blunder -10 degrees.
+Final export: 1280x720 JPEG. No generated rating icons.

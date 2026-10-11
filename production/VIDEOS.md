@@ -217,3 +217,14 @@ three full-resolution captures checked. Full decode passed; final sound
 verified studio master. Report and reproduction steps: experiments/conversation-chess/DEATH_NOTE.md.
 Current MP4 and editable media bundle remain in work/conversation-chess/death-note-light-l-v1/.
 Timeline, publishing text and QA receipt backed up in Git. No upload or publication.
+
+## Anime Chess - 11 October 2026, Death Note publishing kit
+
+Delivered a local A-PUBLIER folder containing the verified 7m29.1s MP4,
+1280x720 JPEG thumbnail, title, short English description and music attribution.
+Copied video SHA256 matches the reviewed delivery. Thumbnail illustration
+and final composite viewed: L calculating, Light surprised, original Brilliant
+and Blunder SVGs tilted +10/-10 degrees. SVG hashes verified; artwork outside
+badge corners preserved before JPEG encoding. Base, prompt, receipt and export
+backed up in experiments/conversation-chess/thumbnails/light-vs-l/.
+Windows Explorer opened on the complete delivery folder. No upload or publication.
