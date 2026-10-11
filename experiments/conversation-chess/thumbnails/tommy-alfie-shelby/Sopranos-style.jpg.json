@@ -1,0 +1,61 @@
+{
+  "base": "/workspace/generated_images/exec-583ae1bb-e08d-414c-a055-00a8afa3082b.png",
+  "base_sha256": "84dac09b4b5b7f9f1c042894b6069ff26169a9dd76fba947b5671a97bb56e76f",
+  "layout": "/workspace/studio/experiments/conversation-chess/thumbnails/tony-richie-no-e8/badge-layout.json",
+  "output_sha256": "4d553c537641102e5a32eb78963298f530b85fc1e86985be191c1ffec4b3e165",
+  "bytes": 371336,
+  "format": "image/jpeg",
+  "width": 1672,
+  "height": 941,
+  "placements": [
+    {
+      "id": "brilliant",
+      "x": 25.08,
+      "y": 25.407,
+      "width": 209,
+      "height": 220.61111111111111,
+      "rotation_degrees": 0,
+      "bounds": {
+        "left": 24,
+        "top": 24,
+        "right": 236,
+        "bottom": 248
+      }
+    },
+    {
+      "id": "blunder",
+      "x": 1437.92,
+      "y": 25.407,
+      "width": 209,
+      "height": 220.61111111111111,
+      "rotation_degrees": 0,
+      "bounds": {
+        "left": 1436,
+        "top": 24,
+        "right": 1648,
+        "bottom": 248
+      }
+    }
+  ],
+  "changedOutsideBadges": 0,
+  "icons": [
+    {
+      "id": "brilliant",
+      "x": 0.015,
+      "y": 0.027,
+      "width": 0.125,
+      "rotation_degrees": 0,
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "x": 0.86,
+      "y": 0.027,
+      "width": 0.125,
+      "rotation_degrees": 0,
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "pixel_comparison_stage": "Decoded canvas before file encoding; JPEG is lossy",
+  "visually_reviewed": false
+}

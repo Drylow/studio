@@ -1,17 +1,32 @@
-# Pion analyste Shelby — cinq propositions rejetées
+# Pion analyste Shelby — portrait frontal validé
 
-La vidéo Tommy / Alfie doit utiliser **Thomas Shelby comme analyste**. Le
-pion doit d’abord être présenté seul puis **validé explicitement par
-l’utilisateur avant toute intégration ou nouvel export**. Aucun brouillon
-d’image, aucune validation technique et aucun avis interne ne remplace ce choix.
+La vidéo Tommy / Alfie utilise **Thomas Shelby comme analyste**. L’utilisateur
+a explicitement validé la septième proposition frontale : « Voilà là nickel »,
+puis demandé de l’utiliser dans tout le montage et de préparer la vidéo.
+Cette validation lève la gate du portrait ; aucun des anciens essais rejetés
+n’est intégré.
 
-## Nouvelle direction acceptée, portrait encore à modifier
+## Asset exact approuvé et correction en cours
 
-`branding/shelby-tony-style-candidate-2026-10-11.png` a été montré et
-l’utilisateur apprécie enfin le rendu, mais demande **une autre photo avec
-la tête plus droite**. Il ne valide pas encore cette image pour le montage.
-Conserver proportions, base noire et badges ; soumettre le nouveau portrait
-avant toute intégration. Le portrait de référence vient de TVmaze1000×1400.
+Le PNG final est [assets/peaky/shelby-pawn-approved-2026-10-11.png](assets/peaky/shelby-pawn-approved-2026-10-11.png),
+1254×1254 RGBA, empreinte
+`de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04`.
+Il est copié sans retouche depuis la sortie présentée puis validée. La
+[fiche d’asset](assets/peaky/shelby-pawn-approved-2026-10-11.json) conserve
+la source BBC du portrait de référence et l’empreinte réelle. Cette édition
+photographique par générateur reconstruit des détails ; ne pas la décrire
+comme un photomontage conservant exactement les pixels du visage.
+
+La [timeline Shelby](tommy-alfie-shelby-timeline.json) remplace seulement
+`mascot.file`/`mascot.overlay_file` et fixe `analysis_pawn_by_speaker: false`.
+Les 32 analyses, timings, sources, audio, musiques, catégories et ouvertures
+restent identiques. Le guide, chaque carte, l’outro et son fond incrusté
+sont régénérés ; un nouvel export Kdenlive/MLT et sa propre QA sont en cours
+dans `output/conversation-chess/tommy-alfie-shelby-native/`.
+
+La sixième proposition `branding/shelby-tony-style-candidate-2026-10-11.png`
+a fait accepter la direction, mais l’utilisateur demandait encore une tête
+plus droite. Elle n’est jamais utilisée dans le montage.
 
 La méthode du Tony approuvé est désormais retrouvée : planche, édition du
 choix A avec corps noir, puis édition transparente. Les trois PNG du dépôt
@@ -41,9 +56,9 @@ La tête de255×341px a été agrandie2,3× ; la douceur et les contours irrégu
 restent visibles en grand format. Ne pas l’intégrer ni tenter de la faire
 accepter en invoquant une revue interne.
 
-La recherche a ensuite retrouvé la méthode du Tony ; le sixième essai ci-dessus
-est apprécié, mais une meilleure orientation de portrait reste demandée.
-Les cinq fichiers sont des archives **rejetées**, aucun asset n’est approuvé.
+La recherche a ensuite retrouvé la méthode du Tony. Le sixième essai a fait
+accepter le style ; le septième, frontal, est maintenant validé pour la vidéo.
+Les cinq anciens fichiers sont des archives **rejetées**.
 Conserver tête entière, proportions courtes, jonction harmonieuse et base noire.
 Les frames S02E06 à747s et S03E06 à1165s ne sont plus recommandées pour le portrait.
 Le poster BBC rayé et la petite photo Netflix aux yeux cachés ne sont pas des
@@ -74,8 +89,8 @@ Seul l’analyste de cet épisode change. Conserver :
 - SFX, musiques, timing et les **32 annotations**, si la timeline reste identique.
 
 Le renderer accepte déjà `mascot.file` et `mascot.overlay_file`, chemins PNG
-relatifs au dossier du toolkit. Après validation seulement, une copie de la
-timeline Peaky peut recevoir ces deux chemins et
+relatifs au dossier du toolkit. La copie de la
+timeline Peaky validée reçoit ces deux chemins et
 `analysis_pawn_by_speaker: false`. Enregistrer l’empreinte du PNG réellement
 validé dans le manifeste ; ne jamais remplacer un asset global Tony.
 
@@ -85,7 +100,7 @@ son fond déjà incrusté `project-background-outro.png`. Toutes ces couches doi
 d’intro est insuffisant : `--refresh-intro` et `--refresh-project-intro`
 refusent volontairement une empreinte de mascotte différente.
 
-## Reprise après validation utilisateur seulement
+## Reprise après la validation reçue
 
 1. Sauvegarder le PNG transparent validé sous un nouveau nom propre à Peaky.
    Vérifier visage, masque, cadrage, jonction tête/base et aperçu réduit.
@@ -114,7 +129,8 @@ Le premier MP4 terminé, 15 min 27,900 s, contient encore Tony comme analyste :
 **archive privée, livraison interdite depuis la correction utilisateur**. Son
 empreinte est
 `24308206f0147649a22af173db41e3a3f50ecedfe8178ade89f1a328cbf73e55`.
-Sa QA n’approuve pas un futur film corrigé. Aucun export Shelby n’est lancé.
+Sa QA n’approuve pas le film corrigé. Le pipeline Shelby est lancé dans un
+nouveau dossier ; son reçu et sa QA restent nécessaires avant toute livraison.
 
 Les originaux sont natifs 720p ; les graphismes et l’export sont en 1080p.
 Conserver les crédits musicaux réels de la description. Les extraits Peaky

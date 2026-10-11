@@ -3,20 +3,40 @@
 Production reprise sur demande de l’utilisateur, après résolution de son
 problème de compte Google. Aucun envoi YouTube. Le fond Sleep reste prioritaire.
 
-## Correction demandée — validation du pion Shelby en attente
+## Correction Shelby validée — nouveau montage en cours
 
-L’utilisateur demande désormais **Thomas Shelby comme pion analyste** dans
-cette vidéo Peaky. Le premier export terminé ci-dessous utilise encore Tony :
-il reste une archive privée et **ne doit pas être livré**. Le nouveau pion doit
-être montré seul à l’utilisateur et validé par lui **avant toute intégration ou
-nouveau montage**. Aucun nouvel export n’est lancé à ce stade.
+L’utilisateur a validé le portrait frontal **Thomas Shelby comme pion analyste**
+et demandé le montage final, puis la livraison sur son webhook avec titre,
+description et choix de miniatures. Le premier export terminé ci-dessous
+utilise encore Tony : il reste une archive privée et **ne doit pas être livré**.
+Le nouveau pipeline natif est lancé dans un dossier distinct. Aucun nouveau
+fichier final n’est déclaré prêt avant son export terminé et ses contrôles.
+
+- Sprite final intact : [PNG Shelby](assets/peaky/shelby-pawn-approved-2026-10-11.png),
+  1254×1254 RGBA, SHA256
+  `de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04`.
+- [Timeline corrigée](tommy-alfie-shelby-timeline.json), SHA256
+  `70de2668c233341fd8d47e97a53e63701ebeda5c94be039e978b3ffdd398fd0a` :
+  32 analyses, ouverture Tommy Blanc, anglais sans voix off ; seulement la
+  configuration de mascotte change. Préflight réel passé.
+- Le nouveau guide, les 32 analyses et le bilan, y compris le fond incrusté,
+  sont régénérés. Source, dialogues, replays et musiques inchangés réutilisés
+  après vérification de timeline et des empreintes. Projet Kdenlive séparé,
+  preset medium/CRF17 et AAC192, deux threads et affinité CPU0/1 pour laisser
+  le fond marin avancer indépendamment.
+- Checkpoint privé : `output/conversation-chess/tommy-alfie-shelby-native/`,
+  `progress.json` et `resume-shelby-native.py`. Le job n’envoie aucun fichier ;
+  le root gère livraison et Git après la QA du nouveau MP4.
 
 Cette correction concerne le guide, les bulles et le bilan du seul épisode
 Peaky. L’avatar Tony de la chaîne, les fichiers Tony génériques et les deux
 pions identiques de la barre d’évaluation restent distincts. Le renderer permet
 déjà une mascotte par timeline via `mascot.file` et `mascot.overlay_file`,
-chemins locaux relatifs au toolkit. Le nouveau PNG transparent devra être
-contrôlé et son empreinte enregistrée dans le manifeste après validation.
+chemins locaux relatifs au toolkit. Le PNG transparent est validé ; son
+empreinte doit concorder avec le nouveau manifeste. L’édition photographique
+par générateur reconstruit des détails ; la
+[fiche d’asset](assets/peaky/shelby-pawn-approved-2026-10-11.json) conserve
+la vraie référence BBC et ne revendique pas des pixels de visage inchangés.
 
 Un simple rafraîchissement d’intro est insuffisant : le pion figure dans les
 32 analyses, l’outro et son fond déjà incrusté. Les sources/replays, dialogues,
@@ -92,11 +112,11 @@ dossier local. Depuis la racine du dépôt :
 
 node experiments/conversation-chess/render-clip.mjs --validate-only \
   --source /chemin/du/master/source-master-native720p30.mp4 \
-  --timeline experiments/conversation-chess/tommy-alfie-long-timeline.json
+  --timeline experiments/conversation-chess/tommy-alfie-shelby-timeline.json
 
 node experiments/conversation-chess/render-clip.mjs --prepare-project \
   --source /chemin/du/master/source-master-native720p30.mp4 \
-  --timeline experiments/conversation-chess/tommy-alfie-long-timeline.json \
+  --timeline experiments/conversation-chess/tommy-alfie-shelby-timeline.json \
   --out /chemin/des/pistes
 
 bash experiments/conversation-chess/with-editor-display.sh .venv/bin/python \
@@ -109,7 +129,7 @@ bash experiments/conversation-chess/with-editor-display.sh .venv/bin/python \
   --file /chemin/du/film.mp4 \
   --manifest /chemin/des/pistes/project-manifest.json \
   --bundle-manifest /chemin/du/projet-kdenlive/bundle-manifest.json \
-  --timeline experiments/conversation-chess/tommy-alfie-long-timeline.json \
+  --timeline experiments/conversation-chess/tommy-alfie-shelby-timeline.json \
   --out /chemin/du/controle-final --workers 1
 ```
 

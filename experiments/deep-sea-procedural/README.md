@@ -1,6 +1,6 @@
 # Depths After Dark — fonds marins animés
 
-## Aperçu corrigé livré — caméra en avancée et davantage de vie
+## Boucle corrigée livrée — caméra en avancée et davantage de vie
 
 Retour utilisateur après le film `95IFNFjM` : ambiance appréciée, mais pas
 assez de vie et mouvement caméra en avant demandé explicitement. Cette boucle
@@ -47,8 +47,20 @@ en 2.5D et le fond lointain reste fixe. Le contrôle technique ne valide pas
 la direction artistique. Deux assets historiques sont réutilisés : **zéro
 nouvelle génération pour cet aperçu, zéro Algrow et zéro génération vidéo**.
 
-Le rendu corrigé de cinq minutes est **en cours**, non terminé et sans QA
-du MP4 final. Ne pas le déclarer livré ou validé à partir de cet aperçu.
+**La boucle corrigée complète de cinq minutes est livrée dans le même dossier
+GoFile.** Choisir `Depths-After-Dark-Camera-Forward-5min.mp4` :300s,
+1920×1080/30i/s,9000images,462311725octets, SHA-256
+`37699678ea847830c6992e160064adc8592d4760b2508fa4153b39ae42a8c459`.
+Rendu en24,10min sur cette machine, upload confirmé par taille et MD5.
+Un seul décodage A/V complet a contrôlé les9000PTS ; revue réelle de249
+trames sélectionnées dans17planches et13PNG natifs, avec revue indépendante.
+Audio PCM fini, sans saturation, raccord encodé dans les variations voisines
+mesurées. Source0/300 identique ; dernier/premier frame encodé différent,
+continuité comparable à celle des frames voisines. Aucun visionnage ou écoute
+humain continu prétendu. **Validation artistique utilisateur toujours attendue.**
+Preuves : [FORWARD_LOOP_CHECK.json](FORWARD_LOOP_CHECK.json),
+[FORWARD_LOOP_REVIEW.md](FORWARD_LOOP_REVIEW.md),
+[FORWARD_DELIVERY.json](FORWARD_DELIVERY.json).
 Aucun script, voix off ou épisode de deux heures n’est produit à cette étape.
 
 Pour reproduire dans un nouveau dossier de sortie, depuis ce dossier :
@@ -67,6 +79,15 @@ blocage lors du premier essai. Le contrôle source vérifie vrais pixels au
 raccord, retour arrière, perspective des repères et marges latérales des
 animaux. Il ne certifie ni collisions 3D continues ni qualité artistique.
 La QA d’un aperçu de 24 s ne certifie pas le raccord d’un MP4 de 300 s.
+
+Pour contrôler à nouveau un futur export de **cette même version figée**,
+utiliser `verify-current-forward-render.py --video /chemin/boucle.mp4
+--scene-check /chemin/check.json --out-dir /chemin/nouveau-dossier-qa`.
+Le checker a été exécuté sur le vrai film terminé ci-dessus ; il est épinglé
+au bundle `d3460e…`, exige le reçu final et30checkpoints complets, puis fait
+un seul décodage A/V avec captures et PCM. Il laisse la revue visuelle et
+l’analyse audio en attente : elles ne sont pas automatiquement approuvées.
+Une autre version de la scène demande une nouvelle épingle et sa propre QA.
 
 ## Archive récente — récif nocturne illustré et animé
 

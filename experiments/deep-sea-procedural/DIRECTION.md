@@ -1,4 +1,4 @@
-## Correction du 11 octobre — aperçu en avancée livré, avis attendu
+## Correction du 11 octobre — boucle en avancée livrée, avis attendu
 
 L’utilisateur aime l’ambiance illustrée récente, mais demande davantage de
 vie et une vraie avancée de la caméra. Nouveau parcours projeté 2.5D dans
@@ -20,8 +20,12 @@ livraison dans [FORWARD_DELIVERY.json](FORWARD_DELIVERY.json).
 récif se répètent, certains contours restent ceux de calques illustrés,
 le fond lointain est fixe et les animaux sont en 2.5D. Ne pas présenter ce
 rendu comme une simulation 3D ou comme parfait. Le nouveau rendu de cinq
-minutes est en cours, non terminé et sans QA du MP4 final ; le contrôle de
-l’aperçu ne vaut pas contrôle du raccord encodé de ce futur film.
+minutes est terminé, contrôlé et livré dans le même dossier GoFile : choisir
+`Depths-After-Dark-Camera-Forward-5min.mp4`,300s,1080p30,9000images.
+Décodage A/V complet, PTS exacts, audio PCM sans saturation et249trames
+échantillonnées examinées. Voir [FORWARD_LOOP_CHECK.json](FORWARD_LOOP_CHECK.json)
+et [FORWARD_LOOP_REVIEW.md](FORWARD_LOOP_REVIEW.md). L’utilisateur n’a pas
+encore validé l’apparence ; aucun long narré de deux heures n’est commencé.
 
 Le format final reste deux heures, avec narration documentée et texte central
 modéré après validation du fond. Le nombre d’animaux du monde ne suffit pas

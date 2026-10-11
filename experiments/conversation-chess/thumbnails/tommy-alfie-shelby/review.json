@@ -1,0 +1,19 @@
+{
+  "schema": "peaky-thumbnail-reference-review-v1",
+  "active_file": "Sopranos-style.jpg",
+  "sha256": "4d553c537641102e5a32eb78963298f530b85fc1e86985be191c1ffec4b3e165",
+  "composition_reference": "../tony-richie-no-e8/A.jpg",
+  "base_sha256": "84dac09b4b5b7f9f1c042894b6069ff26169a9dd76fba947b5671a97bb56e76f",
+  "root_actual_jpeg_fullsize_reviewed": true,
+  "independent_actual_jpeg_fullsize_and_320px_reviewed": true,
+  "same_composition_verified": true,
+  "user_approval": false,
+  "user_requested_exact_reference_style": true,
+  "svg_icons": "Original brilliant/blunder, hashes validated against ratings.json by compositor",
+  "limits": [
+    "Badges cover small outer hat edges; no eyes/faces obscured.",
+    "Alfie is darker under his hat.",
+    "Generated photographic retouch, not unmodified scene pixels."
+  ],
+  "old_three_style_bases": "Abandoned after user demanded exact Sopranos-style composition."
+}

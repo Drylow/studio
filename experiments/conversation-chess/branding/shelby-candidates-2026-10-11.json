@@ -4,13 +4,13 @@
   "candidate_2": "shelby-photo-candidate-2026-10-11.png",
   "candidate_2_status": "Rejected by user: wrong character. It depicted Michael Gray, not Thomas Shelby.",
   "candidate_2_source": "S02E06,487 seconds: Michael Gray. Excluded from all Tommy/Shelby workflows.",
-  "video_export_authorization": "No rerender until explicit user approval of the selected mascot.",
+  "video_export_authorization": "Approved: replace only Peaky episode mascot throughout guide,32analyses,outro; preserve Tony profile/global assets and actual dialogue/audio/editing; verify final new MP4 before dedicatedDiscord delivery.",
   "profile_avatar": "Existing Tony profile unchanged.",
   "candidate_3": "shelby-real-photo-candidate-2026-10-11.png",
   "candidate_3_status": "Rejected by user: poor cutout and head/pawn junction. Never integrate.",
   "candidate_3_source": "Verified Thomas Shelby / Cillian Murphy real frame, S02E06 at747s. Hand-masked photo composited in Canvas2D with ordinary grayscale/exposure and approved pawn pixels; no generated face.",
   "candidate_3_source_sha256": "54c0fe4150886f55acd9f29303bd5f4465f9abef5e1abd75c1e1d37796dcec7c",
-  "current_work": "Keep candidate6 composition approved in principle, replace its portrait with a straighter/front-facing real Thomas photo. Present final portrait before video integration.",
+  "current_work": "Final candidate7 approved. New Peaky-specific native export with exact approved PNG hash underway; user now requests the exact Sopranos A thumbnail style adapted to Tommy/Alfie. Old Tony export remains private archive.",
   "candidate_4": "shelby-bbc-photo-candidate-2026-10-11.png",
   "candidate_4_sha256": "f8e2669967ec79e6e4c1698eb36691eaaca405e7d188618bbabb57259cb125b8",
   "candidate_4_status": "Rejected by user: stylised/grainy BBC poster rather than ordinary scene photograph, visible photographed neck overhang on right. Never integrate.",
@@ -36,5 +36,16 @@
   ],
   "candidate_6_method": "Photographic image edit using the original approved Tony mascot and a real Tommy portrait as two references. Face details are reconstructed by the editor; this is not an unchanged-pixel manual cutout.",
   "candidate_6_review": "Root and independent reviewer inspected fullsize and320px on dark/white. Identity and head/pawn join recognizable, proportions closer to Tony. Source facial details and badges altered; small cyan fringe on left badge remains.",
-  "tony_provenance": "Original assets/tony-options.png, assets/tony-pawn.png and assets/tony-pawn-overlay.png match three saved image-generator outputs exactly. The literal original prompt is not preserved. STYLE.md records A with body black like B."
+  "tony_provenance": "Original assets/tony-options.png, assets/tony-pawn.png and assets/tony-pawn-overlay.png match three saved image-generator outputs exactly. The literal original prompt is not preserved. STYLE.md records A with body black like B.",
+  "candidate_7": "../assets/peaky/shelby-pawn-approved-2026-10-11.png",
+  "candidate_7_sha256": "de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04",
+  "candidate_7_status": "Explicitly approved by user after display: use throughout Tommy/Alfie montage. User also requested final video and multiple thumbnail options delivered to dedicated Discord.",
+  "candidate_7_source_url": "https://www.bbc.co.uk/mediacentre/mediapacks/peaky-blinders-series-six",
+  "candidate_7_image_reference_url": "https://ichef.bbci.co.uk/images/ic/raw/p0bqjvbv.jpg",
+  "candidate_7_source_sha256": "fde46e08a37c5adf60e58cd2a660e7afda205e68e1af951286fadb7897d26b77",
+  "candidate_7_source_dimensions": [
+    1024,
+    576
+  ],
+  "candidate_7_method": "Photographic image edit with candidate6 approved styling and actual official BBC photograph for an upright/front-facing Tommy pose. Reconstructed details; not unchanged source pixels."
 }

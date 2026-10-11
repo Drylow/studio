@@ -1,5 +1,5 @@
 {
-  "kind": "Depths After Dark \u2014 forward camera 24-second preview awaiting user approval",
+  "kind": "Depths After Dark \u2014 corrected forward camera preview and loop awaiting user approval",
   "url": "https://gofile.io/d/qsIDnkvK",
   "files": [
     {
@@ -7,6 +7,12 @@
       "bytes": 34172536,
       "sha256": "38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84",
       "md5": "1196173c700f3541527dcadcfa781288"
+    },
+    {
+      "file": "Depths-After-Dark-Camera-Forward-5min.mp4",
+      "bytes": 462311725,
+      "sha256": "37699678ea847830c6992e160064adc8592d4760b2508fa4153b39ae42a8c459",
+      "md5": "36f5a4607ffb73153021f46826c5d3bf"
     }
   ],
   "asset_generation_calls": 2,

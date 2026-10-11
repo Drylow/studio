@@ -67,7 +67,35 @@ def prepare(manifest):
     status = {"preview": "APERÇU — à regarder, pas destiné à publication",
               "final": "Vidéo vérifiée — à publier manuellement",
               "youtube-test": "VERSION À TESTER SUR YOUTUBE — épisode 8 retiré"}[kind]
+    options = []
+    if "thumbnail_options" in data:
+        if "thumbnail" in data:
+            raise ValueError("Choisir une miniature unique ou trois propositions, pas les deux.")
+        choices = data["thumbnail_options"]
+        if not isinstance(choices, list) or len(choices) != 3:
+            raise ValueError("Trois propositions de miniature A/B/C sont requises.")
+        for choice in choices:
+            if not isinstance(choice, dict) or choice.get("label") not in ("A", "B", "C"):
+                raise ValueError("Chaque proposition doit porter le label A, B ou C.")
+            name, option_title = choice.get("path"), choice.get("title", "")
+            if not isinstance(name, str) or not name.strip() or not isinstance(option_title, str):
+                raise ValueError("Chemin et titre de proposition invalides.")
+            thumbnail = (folder / name).resolve()
+            if thumbnail.suffix.lower() not in (".png", ".jpg", ".jpeg") or not thumbnail.is_file():
+                raise ValueError("Proposition de miniature absente ou invalide.")
+            embed_title = "Miniature " + choice["label"]
+            if option_title.strip():
+                embed_title += " — " + option_title.strip()
+            if len(embed_title) > 256:
+                raise ValueError("Titre de proposition trop long pour Discord.")
+            options.append({"label": choice["label"], "path": thumbnail, "title": embed_title})
+        if {option["label"] for option in options} != {"A", "B", "C"}:
+            raise ValueError("Les trois labels A/B/C doivent être distincts.")
+        options.sort(key=lambda option: option["label"])
+        status += "\nMINIATURES A/B/C À CHOISIR — aucune miniature finale sélectionnée"
     kit = f"Scene Analysis Guy\n{status}\n\nDOWNLOAD\n{link}\n\nTITLE\n{title}\n\nDESCRIPTION\n{description}\n"
+    if options:
+        kit += "\nMINIATURES À CHOISIR\n" + "\n".join(option["title"] for option in options) + "\n"
     if data.get("tags"):
         kit += "\nTAGS\n" + ", ".join(data["tags"]) + "\n"
     if data.get("pinned_comment"):
@@ -79,12 +107,20 @@ def prepare(manifest):
     if kind in ("final", "youtube-test"):
         if not review.get("source_quality", {}).get("accepted_for_final"):
             raise ValueError("La qualité des sources doit être acceptée avant la livraison finale.")
-        thumbnail = resolve("thumbnail")
-        if thumbnail.suffix.lower() not in (".png", ".jpg", ".jpeg") or not thumbnail.is_file():
-            raise ValueError("Miniature finale absente ou invalide.")
-        files.append(thumbnail)
-        cover["image"] = {"url": "attachment://" + thumbnail.name}
+        if not options:
+            thumbnail = resolve("thumbnail")
+            if thumbnail.suffix.lower() not in (".png", ".jpg", ".jpeg") or not thumbnail.is_file():
+                raise ValueError("Miniature finale absente ou invalide.")
+            files.append(thumbnail)
+            cover["image"] = {"url": "attachment://" + thumbnail.name}
     embeds = [cover]
+    if options:
+        files.extend(option["path"] for option in options)
+        if len({file.name for file in files}) != len(files):
+            raise ValueError("Les pièces jointes doivent avoir des noms de fichier distincts.")
+        embeds.extend({"title": option["title"], "url": link, "color": 0x81B64C,
+                       "image": {"url": "attachment://" + option["path"].name}}
+                      for option in options)
     if len(description) <= 4096:
         embeds.append({"title": "Description et crédits à copier", "description": description,
                        "color": 0x81B64C})

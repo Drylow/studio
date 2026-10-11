@@ -1,5 +1,26 @@
 # Scene Analysis Guy — livraison Discord
 
+## Trois miniatures facultatives à choisir
+
+Pour livrer le film et trois propositions dans **un seul message**, remplacer
+le champ `thumbnail` du manifest par :
+
+```json
+"thumbnail_options": [
+  {"label": "A", "path": "miniature-A.jpg", "title": "Titre facultatif"},
+  {"label": "B", "path": "miniature-B.jpg"},
+  {"label": "C", "path": "miniature-C.jpg"}
+]
+```
+
+Les chemins sont relatifs au manifest. Les trois labels A/B/C et noms de
+fichier sont distincts ; chaque image est un PNG ou JPEG existant. Les trois
+images sont jointes et affichées dans leurs embeds A/B/C. Le message et le
+kit indiquent **miniatures à choisir**, sans prétendre qu’un choix est validé.
+La miniature unique existante reste compatible. Ne pas fournir les deux
+formats ensemble. Tous les contrôles du film final, le routage dédié et la
+protection contre les doublons restent identiques ; `--dry-run` n’envoie rien.
+
 L'utilisateur a demandé le9octobre2026 que les vidéos de cette chaîne soient
 livrées dans son salon Discord : **un lien GoFile**, titreanglais, description
 prête à copier, miniature, chapitres/tags/commentaire si utiles, crédits des
@@ -47,7 +68,8 @@ la taille réellement uploadée, le décodageA/V et la revue visuelle. Le reçu
 d'upload contient `url` et `files:[{sha256,bytes,...}]`. La revue contient
 `sha256`, `full_video_audio_decode_ok`, `finished_render_visual_reviewed` et,
 pour une livraison finale, `source_quality.accepted_for_final:true`.
-Une finale requiert sa miniature. Un aperçu est marqué explicitement
+Une finale requiert une miniature unique ou les trois propositions A/B/C.
+Un aperçu est marqué explicitement
 **APERÇU — pas destiné à publication** et n'utilise pas une photo de profil
 comme fausse miniature définitive.
 
@@ -57,7 +79,8 @@ signifie que le montage est terminé et revu ; elle ne valide ni Content ID ni
 les droits des extraits. Ce statut est réservé à la nouvelle coupe Tony/Richie.
 
 Un seul message comprend les informations et `Kit_publication.txt`,
-`MUSIC_CREDITS.txt`, plus la miniature pour une finale. `allowed_mentions` est
+`MUSIC_CREDITS.txt`, plus la miniature unique ou les trois propositions pour
+une finale. `allowed_mentions` est
 vide. La réponse `wait=true` doit confirmer l'identifiant et les pièces jointes.
 Le reçu local empêche de renvoyer un paquet identique dans le même salon.
 Un envoi incertain conserve `discord_pending.json` : ne pas relancer à l'aveugle.

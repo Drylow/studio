@@ -1,25 +1,31 @@
-## État actuel — aperçu Sleep corrigé livré, pion Tommy à refaire
+## État actuel — caméra Sleep corrigée, export Tommy approuvé en cours
 
 **Sleep** : l’aperçu corrigé avec caméra en avancée est livré :
 https://gofile.io/d/qsIDnkvK —24s,1080p30,720images,34 172 536octets.
 SHA-256 `38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84`.
 Décodage A/V entier et captures effectivement contrôlés. Illustration2.5D,
 assets originaux réutilisés ; pas de nouvel appel de génération. La boucle
-complète de cinq minutes corrigée est en cours de rendu dans son dossier privé,
-pas terminée ni vérifiée. L’ancienne `95IFNFjM` reste une archive à corriger.
+complète de cinq minutes corrigée est maintenant livrée dans le même dossier :
+`Depths-After-Dark-Camera-Forward-5min.mp4`,300s,1080p30,9000images,
+462311725octets, SHA `37699678ea847830c6992e160064adc8592d4760b2508fa4153b39ae42a8c459`.
+Un décodage A/V complet, audio PCM et249trames distinctes échantillonnées ont été
+contrôlés ; upload confirmé par taille/MD5. Pas de visionnage/écoute humaine continue. L’ancienne `95IFNFjM` reste une archive à corriger.
 Aucun récit, voix ou long de deux heures produit ; avis visuel utilisateur attendu.
 Voir les preuves `FORWARD_*` et le README de l’expérience.
 
-**Chess** : le premier MP4 Tommy/Alfie est terminé (15:27,900,1080p30),
-avec QA technique et captures contrôlées. Il contient encore Tony comme
-analyste : archive privée, **ne pas livrer**. L’utilisateur exige Thomas
-Shelby et doit valider le pion seul avant intégration. Les **cinq** premiers essais
-sont rejetés. Le sixième, édité avec le Tony et un portrait réel haute
-résolution, plaît enfin par son style. L’utilisateur demande encore une
-autre photo avec la tête plus droite avant de valider le pion pour le film.
-Aucun export Shelby lancé. Voir `SHELBY_ANALYST_README.md` et
+**Chess** : le pion Tommy frontal (septième proposition) est explicitement
+validé. PNG `de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04`.
+Le nouvel export Peaky doit remplacer l’analyste dans l’intro,32analyses et
+bilan ; montage, dialogues anglais, SFX et comptes conservés. Production
+native Kdenlive/MLT reprise dans un nouveau dossier. L’ancien export Tony
+15:27,900 reste une archive privée ; ne pas le livrer. L’utilisateur demande
+le film fini et contrôlé sur le Discord dédié Scene Analysis Guy avec
+GoFile, titre/description/crédits et miniature adaptée exactement de Sopranos A
+(Tommy gauche, Alfie droite, séparation blanche, mêmes SVG Brilliant/Blunder).
+Les trois bases d’autres styles sont abandonnées. Aucun
+nouveau film envoyé ou publication YouTube prétendus à cette étape.
+Garder l’avatar Tony de la chaîne. Voir `SHELBY_ANALYST_README.md` et
 `TOMMY_ALFIE_PRODUCTION.md` dans `experiments/conversation-chess/`.
-Garder l’avatar Tony de la chaîne ; la revue interne ne remplace pas son choix.
 
 ## État antérieur — boucle Sleep livrée pour avis, Chess en export parallèle
 

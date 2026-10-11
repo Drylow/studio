@@ -1,0 +1,24 @@
+{
+  "schema": "peaky-approved-shelby-asset-v1",
+  "user_approved": true,
+  "user_instruction": "Use the final front-facing Thomas Shelby pawn for the montage and prepare the video.",
+  "file": "assets/peaky/shelby-pawn-approved-2026-10-11.png",
+  "sha256": "de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04",
+  "size": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "method": "Image generator photographic edit using the approved Tony composition and a real Tommy reference; photo details can be reconstructed.",
+  "reference_source": "https://www.bbc.co.uk/mediacentre/mediapacks/peaky-blinders-series-six",
+  "reference_sha256": "fde46e08a37c5adf60e58cd2a660e7afda205e68e1af951286fadb7897d26b77",
+  "unretouched_since_approval": true,
+  "original_tony_assets_unchanged": true,
+  "scope": "Peaky analyst in intro,32 analysis cards and outro; channel avatar and evaluation-bar pawns unchanged.",
+  "copyright_claim_or_monetization_guaranteed": false,
+  "reference_image_url": "https://ichef.bbci.co.uk/images/ic/raw/p0bqjvbv.jpg",
+  "reference_dimensions": [
+    1024,
+    576
+  ]
+}

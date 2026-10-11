@@ -15,8 +15,11 @@ Inspiration : le principe du portrait sur pion et de la bio centrée sur les
 conversations deConversationAnalysisGuy. Notre personnage et notre texte sont
 propres à cette chaîne ; ne pas reprendre son avatarWalter ou ses phrases.
 
-La mascotteTony reste la voix écrite du format même quand une autre série
-est analysée. Les dialogues et évaluations restent en anglais, sans voix off.
+L’avatar de la chaîne reste Tony. Le personnage analyste du montage peut changer
+selon la série après validation : pour Tommy/Alfie, l’utilisateur a approuvé
+le [pion Thomas Shelby](../assets/peaky/shelby-pawn-approved-2026-10-11.png)
+le11octobre2026, pour l’intro, les32analyses et l’outro.
+Les dialogues et évaluations restent en anglais, sans voix off.
 Pour les descriptions des vidéos, conserver aussi les crédits des musiques
 effectivement utilisées, fournis dans `MUSIC_CREDITS.txt` avec chaque montage.
 
