@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-11",
+  "videos": [
+    {
+      "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+      "revision": "death-note-v3",
+      "filename": "Death-Note-Chess-Short.mp4",
+      "sha256": "ce37536d7364df21330cd78529dc36af2dd8cb51e7eded49c70837db7c965f80",
+      "bytes": 30428705,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 2886,
+      "duration_seconds": 96.2,
+      "scene_box": {
+        "x": 88,
+        "y": 304,
+        "width": 864,
+        "height": 1152,
+        "aspect_ratio": "3:4"
+      },
+      "all_frames_visually_reviewed": true,
+      "review_pages": 21,
+      "native_size_analysis_frames_reviewed": true,
+      "source_crop_regions_visually_reviewed": true,
+      "full_decode_passed": true,
+      "native_picture_stream_unchanged": true,
+      "approved_audio_stream_unchanged": true,
+      "approved_audio_stream_sha256": "SHA256=4c8abbdf991026c928f3875c27aa566cf6f318965b4f726d5f001868745d3122",
+      "outer_background_rgb": [
+        0,
+        0,
+        0
+      ],
+      "outer_background_checked_in_every_frame": true,
+      "source_passages": [
+        [
+          86.7666666667,
+          118.4
+        ],
+        [
+          143.4,
+          155.3
+        ],
+        [
+          155.3,
+          197.1666666667
+        ]
+      ],
+      "integrated_loudness_lufs": -16.2,
+      "true_peak_dbfs": -1.2,
+      "youtube_copyright_check_performed": false
+    },
+    {
+      "title": "Ayanokoji Outsmarts Ryuen Analysed like Chess | Classroom of the Elite",
+      "revision": "ayanokoji-v4",
+      "filename": "Ayanokoji-Chess-Short.mp4",
+      "sha256": "5d4006ef33308e345b4fe1d701eaf264faf5da53ea295b3e7557a99c719669b9",
+      "bytes": 12387423,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 1720,
+      "duration_seconds": 57.333333333333336,
+      "scene_box": {
+        "x": 88,
+        "y": 304,
+        "width": 864,
+        "height": 1152,
+        "aspect_ratio": "3:4"
+      },
+      "all_frames_visually_reviewed": true,
+      "review_pages": 12,
+      "native_size_analysis_frames_reviewed": true,
+      "source_crop_regions_visually_reviewed": true,
+      "full_decode_passed": true,
+      "native_picture_stream_unchanged": true,
+      "approved_audio_stream_unchanged": true,
+      "approved_audio_stream_sha256": "SHA256=d85e8b725843175284c10410d289abc1930afc47b273f8f4696bfaae50f0fd7d",
+      "outer_background_rgb": [
+        0,
+        0,
+        0
+      ],
+      "outer_background_checked_in_every_frame": true,
+      "source_passages": [
+        [
+          44.2,
+          49.6666666667
+        ],
+        [
+          49.6666666667,
+          90.7333333333
+        ]
+      ],
+      "integrated_loudness_lufs": -17.0,
+      "true_peak_dbfs": -1.1,
+      "youtube_copyright_check_performed": false
+    }
+  ]
+}
