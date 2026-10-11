@@ -1,4 +1,33 @@
-## Correction du 11 octobre — boucle en avancée livrée, avis attendu
+## Direction actuelle — sommeil doux, référence Stephen Dalton
+
+L’utilisateur abandonne les fonds marins inquiétants le 11 octobre 2026.
+Il cherche désormais une ambiance **mignonne, calme et apaisante**, peut-être
+au-delà du thème marin. Il demande une recherche de concepts sleep distincts
+inspirés du format Stephen Dalton, avec un angle éditorial propre. Aucun nouveau
+fond, script, voix, avatar ou changement du nom de chaîne lancé avant le choix.
+La recherche abyssale ci-dessous est conservée comme historique, pas direction
+active. Voir `experiments/deep-sea-procedural/CHILL_SLEEP_DIRECTION.md`.
+
+**Peaky est livré séparément.** La consigne « on coupe tout » a été
+immédiatement précisée par l’utilisateur : seule la production marine
+inquiétante s’arrête. Le nouveau MP4 Shelby de 15 min 27,900 s a passé sa QA
+technique/audio et les revues de captures réelles, dont celle du root.
+Kit GoFile : https://gofile.io/d/cCuEdqOv. Message Discord et trois pièces
+jointes confirmés le 11 octobre 2026. Aucune publication YouTube réalisée.
+Voir `experiments/conversation-chess/PEAKY_SHELBY_DELIVERY.json`.
+
+## Archive — arrêt des fonds fabriqués, recherche marine ensuite abandonnée
+
+L’utilisateur rejette le rendu caméra en avancée et demande de remplacer les
+fonds fabriqués par de vraies vidéos sous-marines inquiétantes, librement
+utilisables sur YouTube. **Ne plus rendre ou améliorer ces scènes.** Toutes
+les livraisons ci-dessous sont des archives ; les contrôles techniques ne
+valent pas approbation de leur rendu. Les droits de chaque vidéo stock seront
+vérifiés et une sélection sera montrée avant montage. Nom, avatar et bio
+Depths After Dark conservés ; narration de deux heures pas encore lancée.
+Voir [MARINE_STOCK_RESEARCH.md](MARINE_STOCK_RESEARCH.md).
+
+## Archive — correction du 11 octobre, rejetée après livraison
 
 L’utilisateur aime l’ambiance illustrée récente, mais demande davantage de
 vie et une vraie avancée de la caméra. Nouveau parcours projeté 2.5D dans

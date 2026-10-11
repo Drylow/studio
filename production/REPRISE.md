@@ -1,6 +1,42 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## État actuel — caméra Sleep corrigée, export Tommy approuvé en cours
+## Direction actuelle — sommeil doux, référence Stephen Dalton
+
+L’utilisateur abandonne les fonds marins inquiétants le 11 octobre 2026.
+Il cherche désormais une ambiance **mignonne, calme et apaisante**, peut-être
+au-delà du thème marin. Il demande une recherche de concepts sleep distincts
+inspirés du format Stephen Dalton, avec un angle éditorial propre. Aucun nouveau
+fond, script, voix, avatar ou changement du nom de chaîne lancé avant le choix.
+La recherche abyssale ci-dessous est conservée comme historique, pas direction
+active. Voir `experiments/deep-sea-procedural/CHILL_SLEEP_DIRECTION.md`.
+
+**Peaky est livré séparément.** La consigne « on coupe tout » a été
+immédiatement précisée par l’utilisateur : seule la production marine
+inquiétante s’arrête. Le nouveau MP4 Shelby de 15 min 27,900 s a passé sa QA
+technique/audio et les revues de captures réelles, dont celle du root.
+Kit GoFile : https://gofile.io/d/cCuEdqOv. Message Discord et trois pièces
+jointes confirmés le 11 octobre 2026. Aucune publication YouTube réalisée.
+Voir `experiments/conversation-chess/PEAKY_SHELBY_DELIVERY.json`.
+
+## Archive — remplacement provisoire par des vidéos marines réelles
+
+Le 11 octobre 2026, l’utilisateur rejette explicitement le fond corrigé livré sur
+`qsIDnkvK` et demande d’arrêter cette direction. **Aucun nouveau rendu, code
+visuel ou génération d’images marines.** Les MP4 et preuves `FORWARD_*` restent
+des archives rejetées ; leur PASS technique n’est pas une validation artistique.
+La nouvelle recherche vise de vraies prises de vues sous-marines sombres et
+immersives, domaine public ou licence gratuite permettant YouTube monétisé,
+avec droits de chaque clip vérifiés. Montrer une sélection avant tout montage.
+Trois pistes réelles ont été montrées : requin NOAA, grotte Pexels et méduses
+Pixabay. L’utilisateur aime le requin et la grotte, écarte le bleu aquarium
+et demande des vrais abysses plus profonds ainsi qu’une recherche des
+chaînes comparables et de leurs sources. Aucun montage lancé ; voir
+`experiments/deep-sea-procedural/MARINE_STOCK_RESEARCH.md` et son manifest.
+Aucun script, voix off ou film de deux heures lancé.
+Nom Depths After Dark, avatar et bio conservés. **Peaky continue séparément** :
+le montage Tommy/Alfie est toujours autorisé et en export natif.
+
+## Archive technique — boucle rejetée ensuite, export Tommy en cours
 
 **Sleep** : l’aperçu corrigé avec caméra en avancée est livré :
 https://gofile.io/d/qsIDnkvK —24s,1080p30,720images,34 172 536octets.

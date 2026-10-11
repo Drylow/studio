@@ -1,0 +1,191 @@
+{
+  "checked_utc": "2026-10-11T00:58:46.453929+00:00",
+  "channel": "Depths After Dark",
+  "status": "Archived stock research; user subsequently abandoned underwater horror for calm adult sleep concept research.",
+  "custom_marine_visuals_cancelled": true,
+  "new_montage_started": false,
+  "continuous_human_playback": false,
+  "stock_masters_redistributed": false,
+  "clips": [
+    {
+      "key": "noaa-sixgill",
+      "page_url": "https://oceanexplorer.noaa.gov/multimedia/video-shorts-ex2206-shark/",
+      "download_url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2023/12/ex2206-shark.mp4",
+      "source_sha256": "42e77df6ebc4661a9ace9aa71f57823a9c0e4154dd216388d58b3f2e367daf34",
+      "source_bytes": 42242658,
+      "native_download": {
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 66.099375,
+        "fps_fraction": "30000/1001"
+      },
+      "rights_basis": "NOAA website public-domain policy, except material explicitly marked copyright. Selected caption credits NOAA only; no exception observed in caption or sampled frames. Not individually mapped to NCEI.",
+      "license_urls": [
+        "https://oceanexplorer.noaa.gov/contact-us/",
+        "https://oceanexplorer.noaa.gov/about/media-kit/"
+      ],
+      "credit": "NOAA Ocean Exploration, Voyage to the Ridge 2022",
+      "root_reviewed_seconds": [
+        0,
+        10.01,
+        19.986633333333334,
+        35.00163333333333,
+        50.01663333333333,
+        62.99626666666666
+      ],
+      "limitations": [
+        "Approximately 600 m, not strictly abyssal.",
+        "Final NOAA title card and original sound should be omitted from the future background.",
+        "Not a seamless loop."
+      ]
+    },
+    {
+      "key": "pexels-cave38579846",
+      "platform": "Pexels",
+      "page_url": "https://www.pexels.com/video/diver-exploring-underwater-cave-in-deep-ocean-38579846/",
+      "author": "JUN HO LEE",
+      "source_sha256": "650cc9f8e4d20dae615c880e9aada77243994d0cc216a7b1bdba285f1b5ddb3e",
+      "source_bytes": 4388599,
+      "native_download": {
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 8.024691,
+        "fps_fraction": "2997/50",
+        "has_audio": false
+      },
+      "license_url": "https://www.pexels.com/terms-of-service/",
+      "commercial_use": true,
+      "attribution_required": false,
+      "source_is_not_public_domain": true,
+      "review": {
+        "basis": "Actual decoded source snapshots viewed; not continuous human playback or listening",
+        "viewed_seconds": [
+          1,
+          5
+        ],
+        "summary": "Very dark blue cave, rough stone foreground, small real scuba diver moves through a gloomy opening; strongest mood fit from these stock sites.",
+        "limitations": "Only eight seconds, visible diver, compressed/soft low-light photography. No established abyssal depth and no abundant fish. Not a seamless loop."
+      },
+      "root_reviewed_seconds": [
+        5
+      ]
+    },
+    {
+      "key": "pixabay-jelly10480",
+      "platform": "Pixabay",
+      "page_url": "https://pixabay.com/videos/jellyfish-tank-water-life-marine-10480/",
+      "author": "lucdecleir",
+      "source_sha256": "dc43312926e7b69203b38b8d77e5827c64b8c2b13d0feb5970a0078e5462aecd",
+      "source_bytes": 69694880,
+      "native_download": {
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 111.541667,
+        "fps_fraction": "24/1",
+        "has_audio": false
+      },
+      "license_url": "https://pixabay.com/service/terms/",
+      "commercial_use": true,
+      "attribution_required": false,
+      "source_is_not_public_domain": true,
+      "review": {
+        "basis": "Actual decoded source snapshots viewed; not continuous human playback or listening",
+        "viewed_seconds": [
+          5,
+          55,
+          105
+        ],
+        "summary": "Large groups of real translucent jellyfish moving in rich blue lighting against dark negative space, long enough for an ambient passage.",
+        "limitations": "Explicit tank/aquarium footage; saturation quite electric and photograph somewhat soft/noisy. Not open-ocean/abyss evidence and not a forward travel shot. Three snapshots cannot establish no flashes throughout."
+      },
+      "root_reviewed_seconds": [
+        55
+      ]
+    }
+  ],
+  "terms_evidence": {
+    "Pexels": {
+      "url": "https://www.pexels.com/terms-of-service/",
+      "html_sha256": "8d237b62d2899997e1819324b169699b807547c77115506460eae1a6bc1130d7",
+      "commercial_quote": "5. Content License granted to you for Content (other than CC0 Content). Subject to the Prohibited Uses described below (which you agree and acknowledge you are not entitled to engage in), when you download any Content that is not CC0 Content from the Service, we grant you an irrevocable, worldwide, perpetual (or as long as allowed by law), non-exclusive and royalty-free right to download, use, copy, modify or adapt the Content for commercial or non-commercial purposes (“ Content License ” or “ Pexels License ”). The rights granted are non-exclusive, meaning that we may also grant other users the same rights in the same Content. This content is marked with the reference “Pexels License”. For the avoidance of doubt, you do not obtain any rights in any other users’ Communications. You agree and acknowledge that the following items are \" Prohibited Uses \" and the Content License which we grant to you is conditional on you not engaging in any of the Prohibited Uses. You cannot sell or distr",
+      "credit_quote": "6. Attribution. You do not need to credit Pexels or the contributor of Content when you use it, but it is certainly appreciated when you do so - especially when the use is of an editorial nature, where photo credits are more customary. You can provide credit in the following format: \" by [Contributor] via Pexels \". 7A. Uploading Content or Communications. We are always grateful when you choose to contribute Content or Communications to our Service. For us to be able to make the Content and Communications available for other users, it is important that we receive specific rights and promises fr",
+      "important_condition": "No standalone redistribution. An authored documentary with original script, narration and editing is an adapted work; this is not a guarantee of YouTube Partner Program acceptance."
+    },
+    "Pixabay": {
+      "url": "https://pixabay.com/service/terms/",
+      "html_sha256": "f9a5ecb12f7fc99714cadbdd1e69e570d3947af3ebdbf7fe0f6400d2ca9f52d2",
+      "commercial_quote": "5. Content License granted to you for Content (other than CC0 Content). Subject to the Prohibited Uses described below (which you agree and acknowledge you are not entitled to engage in), when you download any Content that is not CC0 Content from the Service, we grant you an irrevocable, worldwide, perpetual (or as long as allowed by law), non-exclusive and royalty-free right to download, use, copy, modify or adapt the Content for commercial or non-commercial purposes ( 'Content License' ). The rights granted are non-exclusive, meaning that we may also grant other users the same rights in the same Content. For the avoidance of doubt, you do not obtain any rights in any other users’ Communications. You agree and acknowledge that the following items are \" Prohibited Uses \" and the Content License which we grant to you is conditional on you not engaging in any of the Prohibited Uses. You cannot sell or distribute the Content (either in digital or physical form) on a Standalone basis. This",
+      "credit_quote": "6. Attribution. You do not need to credit Pixabay or the contributor of Content when you use it, but it is certainly appreciated when you do so - especially when the use is of an editorial nature, where photo credits are more customary. You can provide credit in the following format: \" by [Contributor] via Pixabay \". 7A. Uploading Content or Communications. We are always grateful when you choose to contribute Content or Communications to our Service. For us to be able to make the Content and Communications available for other users, it is important that we receive specific rights and promises ",
+      "important_condition": "No standalone redistribution. An authored documentary with original script, narration and editing is an adapted work; this is not a guarantee of YouTube Partner Program acceptance."
+    }
+  },
+  "excluded_examples": [
+    {
+      "key": "mixkit-reef12816",
+      "page_url": "https://mixkit.co/free-stock-video/diving-through-a-reef-12816/",
+      "reason": "Actual page says personal use only / Restricted License. Generic VideoObject metadata says videoFree and commercial; disregard that conflicting generic schema."
+    },
+    {
+      "key": "mixkit-jelly45404",
+      "page_url": "https://mixkit.co/free-stock-video/beuatiful-white-jellyfish-floating-through-dark-ocean-waters-45404/",
+      "reason": "Actual page Restricted License / personal use only. Not available free for monetized YouTube despite generic schema."
+    },
+    {
+      "key": "mixkit-jelly17858",
+      "page_url": "https://mixkit.co/free-stock-video/jellyfish-swimming-in-the-ocean-17858/",
+      "reason": "Actual page Restricted License / personal use only. Not available free for monetized YouTube."
+    },
+    {
+      "key": "mixkit-fish4291",
+      "page_url": "https://mixkit.co/free-stock-video/school-of-fish-swimming-4291/",
+      "reason": "Free commercial license confirmed; actual decoded image too bright turquoise for requested creepy abyss mood."
+    },
+    {
+      "key": "mixkit-shark4406",
+      "page_url": "https://mixkit.co/free-stock-video/small-shark-swimming-4406/",
+      "reason": "Free commercial license confirmed; actual footage blue/sunlit reef, not sufficiently dark for main background. Optional shark insert only."
+    },
+    {
+      "key": "pexels-fish7318092",
+      "page_url": "https://www.pexels.com/video/shot-of-a-school-of-fish-underwater-7318092/",
+      "reason": "Free commercial license confirmed; actual native1080 footage weak/soft green haze, low visual detail."
+    },
+    {
+      "key": "pexels-fish10800300",
+      "page_url": "https://www.pexels.com/video/fish-swimming-under-water-10800300/",
+      "reason": "Poster shows very bright blue aquarium, not creepy dark environment."
+    },
+    {
+      "key": "pixabay-ocean216284",
+      "page_url": "https://pixabay.com/videos/ocean-underwater-diving-water-216284/",
+      "reason": "Poster shows tight macro octopus on brightly lit sand, not moving atmospheric background."
+    },
+    {
+      "key": "pixabay-diving1084",
+      "page_url": "https://pixabay.com/videos/diving-scuba-diving-underwater-fish-1084/",
+      "reason": "Only720p and contributor Vimeo-Free-Videos is secondary aggregator; not prioritized over named original creators."
+    },
+    {
+      "key": "pexels-seal5743312",
+      "page_url": "https://www.pexels.com/video/wide-shot-of-a-seal-under-the-ocean-5743312/",
+      "reason": "Real4K blue/grey seabed with seal and fish, but surface visible and shallow-looking. Optional atmospheric insert, not abyssal evidence."
+    }
+  ],
+  "limits": [
+    "No promise of zero Content ID claims.",
+    "A licensed background alone does not establish YouTube Partner Program eligibility.",
+    "Pexels/Pixabay masters must not be distributed as standalone stock files."
+  ],
+  "user_visual_preferences": {
+    "liked_references": [
+      "noaa-sixgill",
+      "pexels-cave38579846"
+    ],
+    "excluded_as_main_direction": [
+      "pixabay-jelly10480"
+    ],
+    "target": "Real very deep abyssal footage, dark and immersive; avoid bright aquarium blue. Research comparable YouTube channels and trace their credited original sources."
+  },
+  "active_direction": false,
+  "superseded_by": "Calm and soothing adult sleep niche research inspired by Stephen Dalton; no new underwater horror footage production"
+}

@@ -6,7 +6,7 @@ puis demandé de l’utiliser dans tout le montage et de préparer la vidéo.
 Cette validation lève la gate du portrait ; aucun des anciens essais rejetés
 n’est intégré.
 
-## Asset exact approuvé et correction en cours
+## Asset exact approuvé et correction exportée
 
 Le PNG final est [assets/peaky/shelby-pawn-approved-2026-10-11.png](assets/peaky/shelby-pawn-approved-2026-10-11.png),
 1254×1254 RGBA, empreinte
@@ -21,8 +21,19 @@ La [timeline Shelby](tommy-alfie-shelby-timeline.json) remplace seulement
 `mascot.file`/`mascot.overlay_file` et fixe `analysis_pawn_by_speaker: false`.
 Les 32 analyses, timings, sources, audio, musiques, catégories et ouvertures
 restent identiques. Le guide, chaque carte, l’outro et son fond incrusté
-sont régénérés ; un nouvel export Kdenlive/MLT et sa propre QA sont en cours
-dans `output/conversation-chess/tommy-alfie-shelby-native/`.
+sont régénérés. Le nouvel export Kdenlive/MLT est terminé dans
+`output/conversation-chess/tommy-alfie-shelby-native/` :
+`Tommy-Alfie-Shelby-15m28.mp4`, 27 837 images, 927,900 s, 444 369 182 octets,
+SHA256 `97725d9abe363e8c421adaab5367464275a0700efb27cd8eb2ad88743c59a694`.
+Son propre décodage A/V et contrôle technique/audio passent sans erreur,
+sans clipping, avec true peak −4,9 dBFS. Les 181 captures réelles sont extraites ;
+les raccords, le guide et le bilan ont été regardés, sans ancien pion observé.
+La revue indépendante est terminée : 32 analyses et tous les groupes hors
+raccords examinés, empreinte du MP4 recalculée conforme, aucun défaut trouvé
+dans ces captures. Les deux revues couvrent les 181 images sur 25 planches.
+Elles ne constituent pas une lecture continue du film ni une écoute humaine
+complète. Le root a aussi examiné 85 captures distinctes, dont trois en
+1920×1080 natif ; son reçu autorise la livraison de ce MP4 précis.
 
 La sixième proposition `branding/shelby-tony-style-candidate-2026-10-11.png`
 a fait accepter la direction, mais l’utilisateur demandait encore une tête
@@ -116,12 +127,12 @@ refusent volontairement une empreinte de mascotte différente.
    notamment guide, toutes les analyses et bilan. Voir les commandes complètes
    dans [la fiche de production](TOMMY_ALFIE_PRODUCTION.md).
 
-Les caches source, pistes audio et décisions de montage restent réutilisables.
-Le remplacement sélectif de toutes les couches de mascotte n’est pas encore
-implémenté ni testé ; ne pas promettre une reprise instantanée. Le premier
-export a demandé environ 15 minutes de préparation puis 31 minutes d’export
-natif dans cet environnement CPU. Ce sont des mesures passées, pas une garantie
-de délai pour la correction.
+La préparation privée a réutilisé les caches source, pistes audio et décisions
+de montage après contrôle d’empreintes, et régénéré toutes les couches de
+mascotte. Elle n’a pas modifié le MP4 existant : le nouveau film est un export
+natif complet. Cet export a pris environ 26 minutes après préparation ; le
+premier export avait demandé environ 15 minutes de préparation puis 31 minutes
+d’export natif. Ces mesures passées ne garantissent pas les délais suivants.
 
 ## Archive et état de livraison
 
@@ -129,8 +140,15 @@ Le premier MP4 terminé, 15 min 27,900 s, contient encore Tony comme analyste :
 **archive privée, livraison interdite depuis la correction utilisateur**. Son
 empreinte est
 `24308206f0147649a22af173db41e3a3f50ecedfe8178ade89f1a328cbf73e55`.
-Sa QA n’approuve pas le film corrigé. Le pipeline Shelby est lancé dans un
-nouveau dossier ; son reçu et sa QA restent nécessaires avant toute livraison.
+Sa QA n’approuve pas le film corrigé. Le film Shelby et sa QA technique propre
+sont terminés dans le nouveau dossier. Le bilan montre 32 annotations,
+dont 7 Brilliant, 7 Great, 8 Best, 0 Excellent, 2 Good, 2 Inaccuracy, 4 Mistake,
+1 Blunder et 1 Book ; les images examinées montrent le seul pion frontal approuvé.
+Le root a confirmé la livraison du nouveau MP4 et de son kit sur
+[GoFile](https://gofile.io/d/cCuEdqOv), puis le message Discord et ses trois
+pièces jointes : kit, crédits et JPG. Aucune publication YouTube réalisée.
+Voir [le reçu public de livraison](PEAKY_SHELBY_DELIVERY.json) ; il ne contient
+ni clé de webhook ni jeton propriétaire GoFile.
 
 Les originaux sont natifs 720p ; les graphismes et l’export sont en 1080p.
 Conserver les crédits musicaux réels de la description. Les extraits Peaky

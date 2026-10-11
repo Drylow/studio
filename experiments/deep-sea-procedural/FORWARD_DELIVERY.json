@@ -1,5 +1,5 @@
 {
-  "kind": "Depths After Dark \u2014 corrected forward camera preview and loop awaiting user approval",
+  "kind": "Archive — corrected forward camera preview and loop REJECTED by user",
   "url": "https://gofile.io/d/qsIDnkvK",
   "files": [
     {
@@ -18,5 +18,7 @@
   "asset_generation_calls": 2,
   "algrow_calls": 0,
   "video_generation_calls": 0,
-  "user_visual_approval": false
+  "user_visual_approval": false,
+  "user_rejected": true,
+  "active_direction": "Calm and soothing adult sleep concept research inspired by Stephen Dalton; underwater horror footage and custom marine renders abandoned."
 }

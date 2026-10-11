@@ -1,0 +1,110 @@
+{
+  "schema": "peaky-shelby-final-delivery-v1",
+  "delivered_utc": "2026-10-11T01:17:08.246239+00:00",
+  "status": "delivered_for_manual_youtube_publication",
+  "film": {
+    "filename": "Tommy-Alfie-Shelby-15m28.mp4",
+    "bytes": 444369182,
+    "sha256": "97725d9abe363e8c421adaab5367464275a0700efb27cd8eb2ad88743c59a694",
+    "duration_video_seconds": 927.9,
+    "duration_container_seconds": 927.914,
+    "frames": 27837,
+    "export_dimensions": [
+      1920,
+      1080
+    ],
+    "native_source_dimensions": [
+      1280,
+      720
+    ],
+    "fps": 30
+  },
+  "gofile": {
+    "url": "https://gofile.io/d/cCuEdqOv",
+    "confirmed_files": [
+      {
+        "filename": "Tommy-Alfie-Shelby-15m28.mp4",
+        "bytes": 444369182,
+        "sha256": "97725d9abe363e8c421adaab5367464275a0700efb27cd8eb2ad88743c59a694",
+        "md5": "57552a0d4297e22ace1cd5e2849984fc"
+      },
+      {
+        "filename": "thumbnail.jpg",
+        "bytes": 371336,
+        "sha256": "4d553c537641102e5a32eb78963298f530b85fc1e86985be191c1ffec4b3e165",
+        "md5": "af5beb194b867869d651ce10b3b839f2"
+      },
+      {
+        "filename": "description_with_credits.txt",
+        "bytes": 1658,
+        "sha256": "051b6b699e27d221398a9d68a87e659baf9e0e1d417fd283dd9d00af2d422653",
+        "md5": "af82465eea6962c0d601a3515ba09d45"
+      },
+      {
+        "filename": "Titres.txt",
+        "bytes": 310,
+        "sha256": "e07f97dd39166311573967baec375a530995020c9736679024af07a3bbf4d8f6",
+        "md5": "c0b7fd53bbbaae287ab8184ed1a4d2d0"
+      },
+      {
+        "filename": "MUSIC_CREDITS.txt",
+        "bytes": 564,
+        "sha256": "a1857412f8e759ed7411aefe61fbe2d4603caf8418bab68fb14bee0342c024be",
+        "md5": "2297e90734dc7726ad9082a55cd31cfe"
+      }
+    ]
+  },
+  "discord": {
+    "confirmed": true,
+    "message_id": "1558649618949079100",
+    "attachments": [
+      "Kit_publication.txt",
+      "MUSIC_CREDITS.txt",
+      "thumbnail.jpg"
+    ]
+  },
+  "quality_review": {
+    "full_video_audio_decode_ok": true,
+    "technical_audio_passed": true,
+    "finished_render_sampled_visual_reviewed": true,
+    "root_distinct_captures": 85,
+    "root_native_views": 3,
+    "team_distinct_planned_captures": 181,
+    "independent_distinct_captures": 50,
+    "continuous_human_playback": false,
+    "continuous_human_audio_listening": false
+  },
+  "analyst": {
+    "file": "assets/peaky/shelby-pawn-approved-2026-10-11.png",
+    "user_approved": true,
+    "sha256": "de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04"
+  },
+  "thumbnail": {
+    "file": "thumbnails/tommy-alfie-shelby/Sopranos-style.jpg",
+    "sha256": "4d553c537641102e5a32eb78963298f530b85fc1e86985be191c1ffec4b3e165",
+    "explicit_style_request": "Sopranos A adapted to Tommy left / Alfie right, white slanted divider, official Chess.com !! / ??",
+    "new_explicit_user_image_approval_recorded": false
+  },
+  "annotation_counts": {
+    "Brilliant": 7,
+    "Great": 7,
+    "Best": 8,
+    "Excellent": 0,
+    "Good": 2,
+    "Inaccuracy": 2,
+    "Mistake": 4,
+    "Blunder": 1,
+    "Book": 1
+  },
+  "opening": "Tommy White; Alfie Black",
+  "recommended_title": "Tommy Shelby vs Alfie Solomons — The Baker’s Gambit",
+  "title_options_user_approved": false,
+  "music_attribution": "Sneaky Snitch and Scheming Weasel (faster version), Kevin MacLeod, CC BY 4.0; exact sources and credits included in delivered description and MUSIC_CREDITS.txt",
+  "youtube_uploaded": false,
+  "youtube_published": false,
+  "limits": [
+    "Native drama sources are 720p; graphic export is 1080p.",
+    "Sampled review is not continuous human playback or listening.",
+    "No Content ID or monetization clearance asserted."
+  ]
+}

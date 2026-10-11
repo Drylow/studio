@@ -1,16 +1,19 @@
 # Tommy / Alfie — reprise de production
 
 Production reprise sur demande de l’utilisateur, après résolution de son
-problème de compte Google. Aucun envoi YouTube. Le fond Sleep reste prioritaire.
+problème de compte Google. Le nouveau film Shelby et son kit sont livrés sur
+GoFile et Discord. Aucun envoi YouTube. La direction Sleep est désormais une
+recherche de concepts doux pour adultes ; le fond marin inquiétant est abandonné.
 
-## Correction Shelby validée — nouveau montage en cours
+## Correction Shelby validée — export contrôlé et livraison confirmée
 
 L’utilisateur a validé le portrait frontal **Thomas Shelby comme pion analyste**
 et demandé le montage final, puis la livraison sur son webhook avec titre,
 description et choix de miniatures. Le premier export terminé ci-dessous
 utilise encore Tony : il reste une archive privée et **ne doit pas être livré**.
-Le nouveau pipeline natif est lancé dans un dossier distinct. Aucun nouveau
-fichier final n’est déclaré prêt avant son export terminé et ses contrôles.
+Le nouveau pipeline natif a terminé dans un dossier distinct. Le MP4 Shelby
+est fermé, son décodage complet A/V et sa QA technique/audio passent ; la
+revue du root est terminée et les reçus GoFile/Discord sont confirmés.
 
 - Sprite final intact : [PNG Shelby](assets/peaky/shelby-pawn-approved-2026-10-11.png),
   1254×1254 RGBA, SHA256
@@ -22,11 +25,47 @@ fichier final n’est déclaré prêt avant son export terminé et ses contrôle
 - Le nouveau guide, les 32 analyses et le bilan, y compris le fond incrusté,
   sont régénérés. Source, dialogues, replays et musiques inchangés réutilisés
   après vérification de timeline et des empreintes. Projet Kdenlive séparé,
-  preset medium/CRF17 et AAC192, deux threads et affinité CPU0/1 pour laisser
-  le fond marin avancer indépendamment.
+  preset medium/CRF17 et AAC192, deux threads d’encodage. L’affinité initiale
+  CPU0/1 a été élargie à CPU0–3 après la QA lourde du fond marin, sans
+  redémarrage ni changement de preset ; reçu privé d’affinité conservé.
 - Checkpoint privé : `output/conversation-chess/tommy-alfie-shelby-native/`,
   `progress.json` et `resume-shelby-native.py`. Le job n’envoie aucun fichier ;
   le root gère livraison et Git après la QA du nouveau MP4.
+
+Le fichier corrigé est `Tommy-Alfie-Shelby-15m28.mp4` dans ce checkpoint :
+**444 369 182 octets, 27 837 images, 1920×1080 à 30 fps**, vidéo 927,900 s
+(conteneur 927,914 s), audio AAC48k stéréo. L’empreinte du MP4 concorde avec le
+reçu natif `export_completed: true` :
+`97725d9abe363e8c421adaab5367464275a0700efb27cd8eb2ad88743c59a694`.
+L’export natif a pris environ 26 minutes ; le délai observé n’est pas une
+garantie pour les prochains montages.
+
+La QA propre à ce fichier passe : décodage complet A/V, 67 comparaisons
+audio, 32 cues de grade et 32 silences de lecture, zéro erreur ou avertissement,
+zéro échantillon écrêté, true peak −4,9 dBFS. Les 181 captures sont extraites
+du MP4 terminé, jamais des pistes préparées. Les 132 captures de raccord
+ont été regardées, ainsi que le guide, l’ouverture Tommy/Blanc, une analyse
+finale et l’outro en plein cadre : aucun Tony ni ancien essai, aucun texte
+coupé observé. La revue indépendante est terminée : 14 planches, les
+32 analyses, le guide, les chapitres et le bilan ont été regardés. Elle a
+recalculé l’empreinte du MP4 et ne trouve pas de défaut dans ce périmètre.
+Les 181 captures sont ainsi couvertes par les deux revues, sur 25 planches.
+Cette inspection par images ne constitue ni une vision continue du mouvement
+ni une écoute humaine complète. Les reçus `audio-technical-qa.json`,
+`boundary-visual-review.json`, `subagent-visual-review.json` et
+`team-final-review.json` sont dans `qa/`. Le reçu de livraison du root
+ajoute sa revue de 85 captures distinctes, dont trois vues natives.
+GoFile et Discord sont confirmés : [kit final](https://gofile.io/d/cCuEdqOv),
+message `1558649618949079100`, pièces jointes `Kit_publication.txt`,
+`MUSIC_CREDITS.txt` et `thumbnail.jpg`. Aucune publication YouTube effectuée.
+Voir [le reçu public](PEAKY_SHELBY_DELIVERY.json).
+
+Le bilan du fichier corrigé affiche exactement 32 annotations : 19 Tommy/Blanc
+et 13 Alfie/Noir. Brilliant 7, Great 7, Best 8, Excellent 0, Good 2, Inaccuracy 2,
+Mistake 4, Blunder 1 et Book 1. Neuf visuels du kit officiel, sans Miss ni violet.
+Les extraits restent natifs 720p ; les graphismes et l’export sont en 1080p.
+Conserver dans la description les crédits de Sneaky Snitch et Scheming Weasel
+(faster version), Kevin MacLeod, sous CC BY 4.0.
 
 Cette correction concerne le guide, les bulles et le bilan du seul épisode
 Peaky. L’avatar Tony de la chaîne, les fichiers Tony génériques et les deux
@@ -41,8 +80,12 @@ la vraie référence BBC et ne revendique pas des pixels de visage inchangés.
 Un simple rafraîchissement d’intro est insuffisant : le pion figure dans les
 32 analyses, l’outro et son fond déjà incrusté. Les sources/replays, dialogues,
 SFX, musiques et compteurs restent réutilisables si la timeline ne change pas.
-Le MP4 corrigé devra recevoir sa propre QA et revue ; les preuves de l’ancien
-export ne l’approuvent pas automatiquement.
+Le MP4 corrigé a reçu sa propre QA, ses captures réelles et sa revue de
+livraison. Les preuves de l’ancien export ne l’approuvent pas automatiquement.
+La miniature livrée reprend exactement le style demandé de Sopranos A :
+Tommy à gauche, Alfie à droite, trait blanc incliné et badges officiels !!/??.
+Les quatre titres restent des propositions ; aucun choix final utilisateur
+n’est enregistré.
 
 ## Archive vérifiée du premier export — pion Tony
 
