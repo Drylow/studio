@@ -1,0 +1,61 @@
+{
+  "base_file": "B-duel-anime.base.png",
+  "base_sha256": "b89b702966ea5d3bf6d60d7f6d72db5a4c4affc88113e277816b350184630dc9",
+  "output_file": "B-duel-anime.jpg",
+  "output_sha256": "08a630c135c131b6b42735b0c87785513fcddd13d6d1981d212038d04aa5ce1a",
+  "bytes": 207292,
+  "width": 1280,
+  "height": 720,
+  "sourceWidth": 1672,
+  "sourceHeight": 941,
+  "crop": {
+    "x": 0,
+    "y": -0.19138755980861788,
+    "width": 1280,
+    "height": 720.3827751196172
+  },
+  "placements": [
+    {
+      "x": 26,
+      "y": 25,
+      "width": 166,
+      "height": 175.22222222222223,
+      "rotation": 10
+    },
+    {
+      "x": 1088,
+      "y": 25,
+      "width": 166,
+      "height": 175.22222222222223,
+      "rotation": -10
+    }
+  ],
+  "changesOutsideBadges": 0,
+  "badgeBounds": [
+    {
+      "left": 9.047446712167329,
+      "right": 208.95255328783267,
+      "top": 8.918210892519667,
+      "bottom": 216.30401132970258
+    },
+    {
+      "left": 1071.0474467121674,
+      "right": 1270.9525532878326,
+      "top": 8.918210892519667,
+      "bottom": 216.30401132970258
+    }
+  ],
+  "icons": [
+    {
+      "id": "brilliant",
+      "file": "assets/chesscom/brilliant.svg",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "file": "assets/chesscom/blunder.svg",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "comparison_stage": "Before lossy JPEG encoding"
+}

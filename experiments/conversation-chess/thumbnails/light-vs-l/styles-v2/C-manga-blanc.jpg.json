@@ -1,0 +1,61 @@
+{
+  "base_file": "C-manga-blanc.base.png",
+  "base_sha256": "a76478b55e706c8cd7f6eea780e540d8d9f2b068847b05687e5d3d663ae8d87a",
+  "output_file": "C-manga-blanc.jpg",
+  "output_sha256": "855de6b9d6eeadae3fbc57c9d5c5d6869806dbe07045c58ddda52f7ddb41b7b9",
+  "bytes": 341874,
+  "width": 1280,
+  "height": 720,
+  "sourceWidth": 1672,
+  "sourceHeight": 941,
+  "crop": {
+    "x": 0,
+    "y": -0.19138755980861788,
+    "width": 1280,
+    "height": 720.3827751196172
+  },
+  "placements": [
+    {
+      "x": 26,
+      "y": 25,
+      "width": 156,
+      "height": 164.66666666666666,
+      "rotation": 10
+    },
+    {
+      "x": 1098,
+      "y": 25,
+      "width": 156,
+      "height": 164.66666666666666,
+      "rotation": -10
+    }
+  ],
+  "changesOutsideBadges": 0,
+  "badgeBounds": [
+    {
+      "left": 9.887961970470514,
+      "right": 198.1120380295295,
+      "top": 9.70627047730764,
+      "bottom": 204.96039618935902
+    },
+    {
+      "left": 1081.8879619704705,
+      "right": 1270.1120380295295,
+      "top": 9.70627047730764,
+      "bottom": 204.96039618935902
+    }
+  ],
+  "icons": [
+    {
+      "id": "brilliant",
+      "file": "assets/chesscom/brilliant.svg",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "file": "assets/chesscom/blunder.svg",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "comparison_stage": "Before lossy JPEG encoding"
+}
