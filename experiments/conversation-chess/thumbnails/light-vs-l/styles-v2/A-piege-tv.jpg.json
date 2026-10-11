@@ -1,0 +1,61 @@
+{
+  "base_file": "A-piege-tv.base.png",
+  "base_sha256": "97f842b6f586767daecd82172894caf58f798f85040c1fc57919806b9d5f4acf",
+  "output_file": "A-piege-tv.jpg",
+  "output_sha256": "ee070ea6c0f8a1426822305b16f49c0cd0d4df2dcf9d595be60a1dd64d1631d8",
+  "bytes": 275261,
+  "width": 1280,
+  "height": 720,
+  "sourceWidth": 1672,
+  "sourceHeight": 941,
+  "crop": {
+    "x": 0,
+    "y": -0.19138755980861788,
+    "width": 1280,
+    "height": 720.3827751196172
+  },
+  "placements": [
+    {
+      "x": 26,
+      "y": 25,
+      "width": 160,
+      "height": 168.88888888888889,
+      "rotation": 10
+    },
+    {
+      "x": 1094,
+      "y": 25,
+      "width": 160,
+      "height": 168.88888888888889,
+      "rotation": -10
+    }
+  ],
+  "changesOutsideBadges": 0,
+  "badgeBounds": [
+    {
+      "left": 9.55175586714924,
+      "right": 202.44824413285076,
+      "top": 9.391046643392457,
+      "bottom": 209.49784224549643
+    },
+    {
+      "left": 1077.5517558671493,
+      "right": 1270.4482441328507,
+      "top": 9.391046643392457,
+      "bottom": 209.49784224549643
+    }
+  ],
+  "icons": [
+    {
+      "id": "brilliant",
+      "file": "assets/chesscom/brilliant.svg",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "file": "assets/chesscom/blunder.svg",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "comparison_stage": "Before lossy JPEG encoding"
+}

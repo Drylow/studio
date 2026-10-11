@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-11",
+  "variants": [
+    {
+      "filename": "A-piege-tv.jpg",
+      "sha256": "ee070ea6c0f8a1426822305b16f49c0cd0d4df2dcf9d595be60a1dd64d1631d8",
+      "bytes": 275261,
+      "width": 1280,
+      "height": 720,
+      "original_svg_icons_verified": true
+    },
+    {
+      "filename": "B-duel-anime.jpg",
+      "sha256": "08a630c135c131b6b42735b0c87785513fcddd13d6d1981d212038d04aa5ce1a",
+      "bytes": 207292,
+      "width": 1280,
+      "height": 720,
+      "original_svg_icons_verified": true
+    },
+    {
+      "filename": "C-manga-blanc.jpg",
+      "sha256": "855de6b9d6eeadae3fbc57c9d5c5d6869806dbe07045c58ddda52f7ddb41b7b9",
+      "bytes": 341874,
+      "width": 1280,
+      "height": 720,
+      "original_svg_icons_verified": true
+    },
+    {
+      "filename": "D-echec-strategie.jpg",
+      "sha256": "602dfb751892e49dfb676070e7a36945918e6538fef3c40053f3f48f984ff8c9",
+      "bytes": 230365,
+      "width": 1280,
+      "height": 720,
+      "original_svg_icons_verified": true
+    }
+  ],
+  "human_click_performance_tested": false,
+  "visual_review_complete": true,
+  "comparison_sheets_reviewed": [
+    "COMPARATIF-4-STYLES.jpg",
+    "COMPARATIF-MOBILE.jpg"
+  ],
+  "mobile_preview_width": 312,
+  "legacy_default_output_unchanged": true,
+  "visual_findings": "All four final compositions reviewed. No rating badge covers an eye or the captions. A and D headlines remain readable at mobile preview size; C retains high-contrast facial silhouettes. Complete original tilted rating SVGs, no generated rating marks, no watermark observed. These are untested creative alternatives, not measured click-performance improvements."
+}
