@@ -1,4 +1,4 @@
-"""Execute one explicitly confirmed, authored scene through the existing proxy."""
+"""Execute authored images in two review stages, then render verified assets."""
 import asyncio
 import copy
 import hashlib
@@ -14,6 +14,19 @@ from . import workspace_api as api
 
 
 _active_projects = set()
+_batch_tasks = {}
+
+
+def batch_running(pid):
+    task = _batch_tasks.get(pid)
+    return bool(task and not task.done())
+
+
+def batch_status(p):
+    status = copy.deepcopy(p.get("workspace_batch"))
+    if status and status.get("state") in ("queued", "running", "stopping") and not batch_running(p["id"]):
+        status.update(state="interrupted", error="Le serveur a été redémarré. Vérifiez le dernier plan avant de reprendre.")
+    return status
 
 
 def _digest(path):
@@ -33,6 +46,7 @@ def _scene(p, sid):
 
 def _signature(p, s):
     return api._hash({"script": p.get("script"), "models": p.get("model_snapshot"),
+                      "style": p.get("style_id"),
                       "aspect": p["settings"]["visuals"].get("aspect"),
                       "scene": {key: s.get(key) for key in (
                           "id", "text", "prompt", "prompt_author", "location_id", "characters",
@@ -85,9 +99,10 @@ def _prepare(p, s, body):
     return prompt, model, aspect, payloads, sources, receipts
 
 
-async def generate(pid, sid, body):
+async def generate(pid, sid, body, *, batch_id=None):
     p = api._project(pid, writable=True)
     if (pid in _active_projects or pipeline.is_running(pid)
+            or batch_running(pid) and (p.get("workspace_batch") or {}).get("id") != batch_id
             or any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
             or any(step.get("state") == "running" for step in p.get("steps", {}).values())):
         raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
@@ -113,7 +128,7 @@ async def generate(pid, sid, body):
     succeeded = False
     try:
         s.update(status="running", generation_id=job_id, error=None)
-        p["workspace_generation"] = {"id": job_id, "scene_id": sid, "state": "running"}
+        p["workspace_generation"] = {"id": job_id, "scene_id": sid, "state": "running", "batch_id": batch_id}
         p["render"] = None
         p["steps"]["visuals"].update(state="running", msg="Génération du plan confirmé")
         store.save_project(p)
@@ -180,6 +195,130 @@ async def generate(pid, sid, body):
                 store.save_project(current)
 
 
+def _batch_signature(p):
+    frozen = copy.deepcopy(p)
+    for scene in frozen.get("scenes", []):
+        scene.pop("image", None)
+    return api._generation_confirmation(frozen)
+
+
+def _missing(p, scene):
+    return not api._file_digest(store.project_dir(p["id"]), scene.get("image"))
+
+
+def _preview_verified(p):
+    return all(api._review(s.get("human_review"), api._scene_evidence(p, s))["state"] == "verified"
+               for s in p.get("scenes", [])[:3])
+
+
+def _recover_batch(p):
+    previous = p.get("workspace_batch") or {}
+    if previous.get("state") in ("queued", "running", "stopping") and not batch_running(p["id"]):
+        previous.update(state="interrupted", finished_at=now())
+        generation = p.get("workspace_generation") or {}
+        if generation.get("batch_id") == previous.get("id"):
+            for scene in p.get("scenes", []):
+                if scene.get("generation_id") == generation.get("id") and scene.get("status") == "running":
+                    scene.update(status="error", error="Génération interrompue : vérifiez le résultat avant de reprendre")
+            generation["state"] = "failed"
+            p["steps"]["visuals"].update(state="error")
+        store.save_project(p)
+
+
+async def start_batch(pid, body):
+    p = api._project(pid, writable=True)
+    if batch_running(pid) or pid in _active_projects:
+        raise HTTPException(409, "Une génération est déjà en cours sur ce projet")
+    _recover_batch(p)
+    if (any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
+            or any(step.get("state") == "running" for step in p.get("steps", {}).values())):
+        raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
+    phase = body.get("phase")
+    if phase not in ("preview", "remaining"):
+        raise HTTPException(422, "Choisissez le test des trois premiers plans ou les images restantes")
+    if body.get("confirmation") != api._generation_confirmation(p):
+        raise HTTPException(409, "Le projet a changé. Actualisez avant de lancer la génération")
+    scenes = p.get("scenes", [])
+    if not scenes:
+        raise HTTPException(422, "Enregistrez d'abord le découpage et les prompts écrits par Codex")
+    if phase == "remaining" and not _preview_verified(p):
+        raise HTTPException(409, "Regardez et marquez vérifiés les trois premiers plans avant de continuer")
+    candidates = scenes[:3] if phase == "preview" else scenes[3:]
+    targets = [s for s in candidates if _missing(p, s)]
+    if not targets:
+        raise HTTPException(409, "Toutes les images de cette étape existent déjà")
+    model = (p.get("model_snapshot") or {}).get("image_model")
+    provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
+    if body.get("image_model") != model or body.get("image_provider", provider) != provider:
+        raise HTTPException(409, "Le modèle ou le fournisseur du projet a changé")
+    # Validate the entire requested batch before the first billable request.
+    sources = {}
+    for scene in targets:
+        try:
+            prepared = _prepare(p, scene, {"confirm_prompt": scene.get("prompt"), "image_model": model,
+                                          "image_provider": provider})
+            sources.update(dict(prepared[4]))
+        except HTTPException:
+            raise
+        except Exception:
+            raise HTTPException(422, f"Une référence du plan {scene['id']} est illisible") from None
+    job = {"id": uuid.uuid4().hex, "phase": phase, "state": "queued", "started_at": now(),
+           "scene_ids": [s["id"] for s in targets], "done": 0, "total": len(targets),
+           "current_scene_id": None, "stop_requested": False, "error": None}
+    p["workspace_batch"] = job
+    store.save_project(p)
+    _batch_tasks[pid] = asyncio.create_task(_run_batch(pid, job["id"], _batch_signature(p), sources))
+    return api._full(p)
+
+
+def _update_batch(pid, job_id, **changes):
+    p = api._project(pid)
+    if (p.get("workspace_batch") or {}).get("id") != job_id:
+        raise HTTPException(409, "Le lot de génération a changé")
+    p["workspace_batch"].update(changes)
+    store.save_project(p)
+    return p
+
+
+async def _run_batch(pid, job_id, signature, sources):
+    state, error = "done", None
+    try:
+        p = _update_batch(pid, job_id, state="running")
+        for sid in p["workspace_batch"]["scene_ids"]:
+            current = api._project(pid)
+            if current["workspace_batch"].get("stop_requested"):
+                state = "stopped"
+                break
+            if (_batch_signature(current) != signature
+                    or any(api._file_digest(path.parent, path.name) != digest for path, digest in sources.items())):
+                raise HTTPException(409, "Le découpage, le modèle ou les références ont changé. Le lot a été arrêté")
+            if current["workspace_batch"]["phase"] == "remaining" and not _preview_verified(current):
+                raise HTTPException(409, "La validation des trois premiers plans a changé. Le lot a été arrêté")
+            scene = _scene(current, sid)
+            # Never overwrite an image selected by the user or another request.
+            if not _missing(current, scene):
+                raise HTTPException(409, "Une image a été ajoutée pendant la génération. Actualisez le projet")
+            _update_batch(pid, job_id, current_scene_id=sid)
+            await generate(pid, sid, {"confirm_prompt": scene["prompt"],
+                "image_model": current["model_snapshot"]["image_model"],
+                "image_provider": current["model_snapshot"].get("image_provider", "cli_proxy")}, batch_id=job_id)
+            latest = api._project(pid)
+            _update_batch(pid, job_id, done=latest["workspace_batch"]["done"] + 1)
+        if api._project(pid)["workspace_batch"].get("stop_requested"):
+            state = "stopped"
+    except asyncio.CancelledError:
+        state, error = "interrupted", "Génération interrompue. Vérifiez le dernier plan avant de reprendre"
+    except HTTPException as exc:
+        state, error = "failed", str(exc.detail)
+    except Exception:
+        state, error = "failed", "Le lot a échoué. Les images terminées sont conservées ; aucune nouvelle tentative automatique"
+    finally:
+        try:
+            _update_batch(pid, job_id, state=state, error=error, current_scene_id=None, finished_at=now())
+        finally:
+            _batch_tasks.pop(pid, None)
+
+
 def install(app):
     if getattr(app.state, "workspace_generation_installed", False):
         return
@@ -188,6 +327,32 @@ def install(app):
     @router.post("/projects/{pid}/scenes/{sid}/generate")
     async def generate_scene(pid: str, sid: int, body: dict):
         return await generate(pid, sid, body)
+
+    @router.post("/projects/{pid}/images/generate", status_code=202)
+    async def generate_images(pid: str, body: dict):
+        return await start_batch(pid, body)
+
+    @router.post("/projects/{pid}/images/stop")
+    async def stop_images(pid: str):
+        p = api._project(pid)
+        if not batch_running(pid):
+            raise HTTPException(409, "Aucun lot de génération n'est en cours")
+        p["workspace_batch"].update(stop_requested=True, state="stopping")
+        store.save_project(p)
+        return api._full(p)
+
+    @router.post("/projects/{pid}/render", status_code=202)
+    async def render_project(pid: str):
+        p = api._project(pid, writable=True)
+        if batch_running(pid) or pid in _active_projects:
+            raise HTTPException(409, "Attendez la fin de la génération des images")
+        full = api._full(p)
+        if (not full["technical_ready"] or not full["scenes"]
+                or any(s["human_review"]["state"] != "verified" for s in full["scenes"])
+                or any(full["human_reviews"][scope]["state"] != "verified" for scope in ("script", "voiceover"))):
+            raise HTTPException(409, "Vérifiez le script, la voix, les images et les timings avant de lancer le montage")
+        pipeline.start(pid, pipeline.do_render)
+        return api._full(api._project(pid))
 
     existing = list(app.router.routes)
     app.include_router(router)
