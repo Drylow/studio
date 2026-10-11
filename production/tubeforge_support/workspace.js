@@ -684,16 +684,28 @@
     bindPreviews(dialog);
     $('[data-cancel]', dialog).focus();
   }
+  function planningMarkup() {
+    if (project.scenes?.length) return '';
+    const step = project.steps?.planning || {};
+    const active = project.running;
+    return `<section class="section" id="planning-workflow"><h2>Préparer les images</h2><p>Ton script et ta voix sont enregistrés. Prépare les plans, leurs prompts et les références du style, puis teste les trois premières images.</p>${project.can_prepare_images ? `<button id="prepare-images" class="primary" ${active || project.duration_info?.kind !== 'actual' ? 'disabled' : ''}>${active ? 'Préparation en cours…' : 'Préparer les images'}</button>` : '<p>Le découpage de cette chaîne historique reste préparé par Codex.</p>'}${active ? `<p role="status">${esc(step.msg || 'Démarrage de la préparation…')}</p><progress max="${Math.max(1, step.total || 1)}" ${step.total ? `value="${step.done || 0}"` : ''} aria-label="Préparation des plans"></progress>` : ''}${step.state === 'error' ? `<p class="error-text">${esc(step.msg)}</p>` : ''}<p class="small muted">Cette étape prépare les prompts. Aucune image n’est encore générée.</p></section>`;
+  }
   function renderScenes(verification) {
     const scenes = project.scenes || [];
     const verified = scenes.filter((s) => reviewState(s) === 'verified').length;
-    $('#step-content').innerHTML = `${header(verification ? 'Vérification des images' : 'Plans et images', `${scenes.length} plans · ${verified} vérifiés`)}${batchMarkup()}${!scenes.length ? '<div class="empty"><h2>Aucun plan enregistré</h2><p>Le découpage et les prompts de ce projet restent à préparer.</p></div>' : scenes.map((scene, index) => {
+    $('#step-content').innerHTML = `${header(verification ? 'Vérification des images' : 'Plans et images', `${scenes.length} plans · ${verified} vérifiés`)}${scenes.length ? batchMarkup() : planningMarkup()}${!scenes.length ? '' : scenes.map((scene, index) => {
       const references = sceneReferences(scene);
       const names = (scene.characters || []).map((id) => typeof id === 'object' ? id.name || id.id : project.characters?.find((c) => c.id === id)?.name || id);
       const image = safeUrl(scene.image_url) || mediaUrl('media', project.id, scene.image);
-      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Plan ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<h3>${scene.sent_references ? 'Références envoyées, dans l’ordre' : 'Références du plan, dans l’ordre'}</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : '<p class="muted small">Aucune référence enregistrée.</p>'}</div><div class="scene-data"><div class="scene-head"><h2>Plan ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : 'Voix non alignée'}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || 'Extrait manquant')}</p></div><dl class="metadata"><dt>Lieu</dt><dd>${esc(scene.location_id || scene.location || 'Non renseigné')}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || 'Aucun personnage nommé')}</dd><dt>Variante</dt><dd>${esc(scene.variant || scene.camera_variant || 'Non renseignée')}</dd></dl>${verification ? `<details><summary>Prompt du plan</summary><p>${esc(scene.prompt || 'Prompt manquant')}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Enregistrer le prompt</button></div></form>`}${generationControl(scene)}<form class="review-form"><label>Note de vérification<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Marquer vérifié</button><button type="submit" name="state" value="unreviewed" title="Retirer la validation">À vérifier</button></div></form></div></article>`;
+      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Plan ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<details><summary>Références du style</summary><h3>${scene.sent_references ? 'Références envoyées, dans l’ordre' : 'Références du plan, dans l’ordre'}</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : '<p class="muted small">Aucune référence enregistrée.</p>'}</details></div><div class="scene-data"><div class="scene-head"><h2>Plan ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : 'Voix non alignée'}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || 'Extrait manquant')}</p></div><details><summary>Détails du plan et prompt</summary><dl class="metadata"><dt>Lieu</dt><dd>${esc(scene.location_id || scene.location || 'Non renseigné')}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || 'Aucun personnage nommé')}</dd><dt>Variante</dt><dd>${esc(scene.variant || scene.camera_variant || 'Non renseignée')}</dd></dl>${verification ? `<details><summary>Prompt du plan</summary><p>${esc(scene.prompt || 'Prompt manquant')}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Enregistrer le prompt</button></div></form>`}</details>${generationControl(scene)}<form class="review-form"><label>Note de vérification<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Marquer vérifié</button><button type="submit" name="state" value="unreviewed" title="Retirer la validation">À vérifier</button></div></form></div></article>`;
     }).join('')}`;
     bindBatchControls();
+    const prepare = $('#prepare-images');
+    if (prepare) prepare.onclick = () => action(prepare, async () => {
+      if (dirty) throw new Error('Enregistrez vos modifications avant de préparer les plans.');
+      project = await api(`/api/workspace/projects/${encode(project.id)}/images/prepare`, {method: 'POST', body: {script_hash: project.script_hash}});
+      renderScenes(verification);
+    }, 'Préparation lancée. Les images seront générées après votre test.');
     $$('[data-generate]').forEach((button) => {
       const article = button.closest('[data-scene]');
       const scene = project.scenes.find((candidate) => String(candidate.id) === button.dataset.generate);
@@ -929,14 +941,14 @@
   }, 1000);
   setInterval(async () => {
     const parts = routeParts();
-    if (batchPolling || document.hidden || submitting || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !['queued', 'running', 'stopping'].includes(project?.workspace_batch?.state)) return;
+    if (batchPolling || document.hidden || submitting || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !(project?.running && project?.can_prepare_images && !project?.scenes?.length || ['queued', 'running', 'stopping'].includes(project?.workspace_batch?.state))) return;
     batchPolling = true;
     const id = project.id;
     try {
       const latest = await api(`/api/workspace/projects/${encode(id)}`);
-      if (routeParts()[1] !== id || !$('#batch-workflow')) return;
+      if (routeParts()[1] !== id || (!$('#batch-workflow') && !$('#planning-workflow'))) return;
       if (dirty || $('#preview-dialog').open || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
-        $('#batch-workflow').outerHTML = batchMarkup(latest); bindBatchControls();
+        if ($('#batch-workflow')) { $('#batch-workflow').outerHTML = batchMarkup(latest); bindBatchControls(); }
       } else { project = latest; renderScenes(routeParts()[2] === 'verification'); }
     } catch { /* Keep the visible job and try reading its status on the next tick. */ }
     finally { batchPolling = false; }
