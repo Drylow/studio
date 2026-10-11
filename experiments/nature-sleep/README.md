@@ -1,5 +1,16 @@
 # Silent Little Worlds — production sleep
 
+## Pause demandée — validation de l’animation attendue
+
+L’utilisateur a rappelé qu’il avait choisi l’image, mais pas validé cette
+animation. Le rendu long est suspendu et ne doit pas reprendre sans son avis.
+Un aperçu animé de 16 s en 1080p, avec voix, pluie, bassin, vapeur et forme
+centrale, est préparé pour cette validation. Le MP4 long partiel ne doit pas
+être livré. `cozy-garden/episode-01/HOLD.json` bloque nouvel export et livraison.
+Les processus suspendus sont consignés dans le résultat privé
+`garden-production/long-render-paused.json` ; ne pas les relancer automatiquement.
+
+
 ## Premier épisode actif : le jardin des lanternes
 
 Le 11 octobre 2026, l’utilisateur confirme le nouveau nom **Silent Little Worlds**

@@ -32,9 +32,10 @@
       "Small original central voice-responsive orb"
     ],
     "native_cycle_seconds": 60,
-    "loop_closure": "One-second cyclic crossfade into the next cycle, lossless intermediate; reviewed before long render"
+    "loop_closure": "One-second cyclic crossfade into the next cycle, lossless intermediate; reviewed before long render",
+    "user_approved_animation": false
   },
   "full_episode_requested_seconds": 7200,
-  "delivery_state": "Two-hour export running; final not delivered",
+  "delivery_state": "Long render paused at user request; animated preview awaiting approval",
   "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS"
 }

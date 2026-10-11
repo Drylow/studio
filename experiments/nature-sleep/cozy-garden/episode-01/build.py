@@ -262,6 +262,8 @@ def loop_info():
 
 
 def package():
+    if (HERE / 'HOLD.json').exists():
+        raise RuntimeError('Animated preview is awaiting user approval; do not start the long export')
     source_loop = loop_info()
     for name in ('technical-review.json', 'visual-review.json'):
         review = json.loads((OUT / 'qa' / name).read_text())
