@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-11",
+  "channel_name": "Oddly Fictional Lives",
+  "provider": "built_in_image_generation",
+  "prompt_author": "Codex",
+  "prompt": "logo-prompt.txt",
+  "image": "logo.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "image_sha256": "9d19ccd0304db3607f78d12fd3118953e964ff6087384ecd5bb8c62b593f0a8b",
+  "reference_images_sent": [],
+  "concept": "Plain round white face with two dot eyes and a short straight mouth on black",
+  "review_state": "superseded_by_requested_edit",
+  "user_feedback": "Add only a moustache and goatee.",
+  "user_approval": false,
+  "uploaded_to_youtube": false,
+  "visual_review": "Viewed: one white round head, two black dot eyes, straight mouth and black background. No decoration."
+}

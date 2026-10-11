@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "channel_name": "Oddly Fictional Lives",
+  "provider": "built_in_image_generation",
+  "mode": "edit",
+  "prompt_author": "Codex",
+  "prompt": "logo-prompt.txt",
+  "image": "logo.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "image_sha256": "a4a286102e122322e7d2fb810567cf0d1c92c750905cb17c85772216da5efa24",
+  "reference_images_sent": [
+    "../oddly-fictional-lives-logo-v4-2026-10-11/logo.png"
+  ],
+  "concept": "Simple round white face with black moustache and goatee on black",
+  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "user_approval": false,
+  "uploaded_to_youtube": false,
+  "visual_review": "Viewed: original round white head, dot eyes, straight mouth and black framing preserved; added a solid black two-lobe moustache and compact black chin tuft. No other decoration."
+}
