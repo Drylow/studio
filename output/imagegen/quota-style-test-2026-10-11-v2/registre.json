@@ -1,0 +1,142 @@
+{
+  "date_local": "2026-10-11",
+  "request": "Refaire nos trois images de test : 100 % des personnages à tête ronde blanche.",
+  "transport": "CLI du guide imagegen dirige vers le CLI Proxy du .env",
+  "automatic_prompt_rewriting": false,
+  "video_or_user_style_approval": false,
+  "previous_files_preserved": true,
+  "scenes": [
+    {
+      "id": "01",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "Le responsable indique le casier ; la recrue porte la caisse.",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-A"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/01-prompt.txt",
+        "sha256": "778ee129e852423cc1e259d7588223be56a97ae7dfe85c71da2121d31ef83ba1"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/01-echange.png",
+          "sha256": "73164ade7549e1a3322317f61bbb60485ca0ded33d3c9c121c1424017fe81aaa",
+          "index": 1,
+          "role": "cible_et_maitre_baie_A"
+        }
+      ],
+      "output": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/01-echange.png",
+        "sha256": "b1c84599d4154c660a36f7cb9605ecda451e6a3620ab6b633a5deff4b76ea70c",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "heads_visually_checked": 3,
+      "all_people_round_white_headed": true,
+      "visual_review": "Trois têtes circulaires blanches examinées, y compris le travailleur du fond. Les deux visages principaux restent expressifs et sans traits humains. Décor et interaction conservés visuellement.",
+      "mathematically_identical_circle_or_pixel_continuity_claimed": false
+    },
+    {
+      "id": "02",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "La recrue tend sa carte en portant sa caisse dans l’autre main.",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/02-prompt.txt",
+        "sha256": "501c91a357c79471f087a7d826fbfa86133f4fee13e9ee8385a4390946ce391d"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/02-carte-v2.png",
+          "sha256": "a30e63ea133a12086bd2d6bde25cdc30b78def2cef067f86ce20064a14f52bc0",
+          "index": 1,
+          "role": "cible_remise_carte"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v2/01-echange.png",
+          "sha256": "b1c84599d4154c660a36f7cb9605ecda451e6a3620ab6b633a5deff4b76ea70c",
+          "index": 2,
+          "role": "maitre_baie_A_et_personnages_corriges"
+        }
+      ],
+      "output": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/02-carte.png",
+        "sha256": "78929cce6b42c674180a7133213c9bfab21deb5a4e926c8895fd55770d18f7ff",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "heads_visually_checked": 2,
+      "all_people_round_white_headed": true,
+      "visual_review": "Deux têtes blanches rondes examinées ; aucune personne au fond. Carte à gauche et caisse à droite conservées. Taille et hauteur de la tête d’Orin légèrement modifiées ; ce test valide le dessin observé, pas une continuité au pixel.",
+      "mathematically_identical_circle_or_pixel_continuity_claimed": false
+    },
+    {
+      "id": "03",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "La recrue charge la caisse ; deux travailleurs portent une autre caisse.",
+      "place": "quai-B",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-B",
+        "travailleur-C"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/03-prompt.txt",
+        "sha256": "d338945869c960b27deeae2d0f5238113dedd0271fa17d66ee42ff4dd0bd500c"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/03-quai.png",
+          "sha256": "e8a0b4851d6a9d728751f2647c9090f0b0b0ccf66ca5865acaae98eabbb4aa76",
+          "index": 1,
+          "role": "cible_et_maitre_quai_B"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v2/01-echange.png",
+          "sha256": "b1c84599d4154c660a36f7cb9605ecda451e6a3620ab6b633a5deff4b76ea70c",
+          "index": 2,
+          "role": "personnages_corriges_pas_decor"
+        }
+      ],
+      "output": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v2/03-quai.png",
+        "sha256": "bab07b54097da43aed5a659c672e859c47f0470bcde3f61fa6363032c5876fc6",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "heads_visually_checked": 4,
+      "all_people_round_white_headed": true,
+      "visual_review": "Quatre têtes blanches rondes examinées, dont les deux travailleurs du fond. Quai, pluie, caisse et groupe conservés visuellement. Pièce de manche et attribution des mains de levage encore différentes de la consigne ; pas de validation de séquence finale.",
+      "mathematically_identical_circle_or_pixel_continuity_claimed": false
+    }
+  ]
+}
