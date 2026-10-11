@@ -30,6 +30,20 @@ async function testImport() {
   await assert.rejects(ui.readScriptFile({...file, name: 'script.pdf'}));
   await assert.rejects(ui.readScriptFile({...file, size: 1024 * 1024 + 1}));
   await assert.rejects(ui.readScriptFile({...file, arrayBuffer: async () => new Uint8Array([255]).buffer}));
-  console.log('22 workspace UI checks passed');
+  console.log('32 workspace UI checks passed');
 }
+const directed = {codex_directed: true, mode: 'review', generation_confirmation: 'fixture-hash',
+  model_snapshot: {image_model: 'fixture-image'}, scenes: [1, 2, 3, 4, 5].map((id) => ({id,
+    prompt: `Authored ${id}`, references: [{path: 'master.png'}], human_review: {state: 'unreviewed'}}))};
+assert.equal(ui.batchPlan(directed, 'preview').reason, '');
+assert.deepEqual(ui.batchPlan(directed, 'preview').targets.map((s) => s.id), [1, 2, 3]);
+assert.match(ui.batchPlan(directed, 'remaining').reason, /vérifiés/);
+directed.scenes.slice(0, 3).forEach((s) => {s.image = 'selected.png'; s.human_review.state = 'verified';});
+assert.equal(ui.batchPlan(directed, 'preview').targets.length, 0);
+assert.equal(ui.batchPlan(directed, 'remaining').reason, '');
+assert.deepEqual(ui.batchPlan(directed, 'remaining').targets.map((s) => s.id), [4, 5]);
+assert.match(ui.batchPlan({...directed, running: true}, 'remaining').reason, /en cours/);
+assert.match(ui.batchPlan({...directed, scenes: []}, 'preview').reason, /découpage/);
+directed.scenes[0].human_review.state = 'stale';
+assert.match(ui.batchPlan(directed, 'remaining').reason, /vérifiés/);
 testImport().catch((error) => { console.error(error); process.exitCode = 1; });

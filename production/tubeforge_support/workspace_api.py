@@ -487,6 +487,14 @@ def _technical_issues(p, scene_evidence=None):
     return issues
 
 
+def _generation_confirmation(p):
+    return _hash({"script": p.get("script"), "models": p.get("model_snapshot"),
+                  "style": p.get("style_id"), "aspect": p["settings"]["visuals"].get("aspect"),
+                  "scenes": [{k: s.get(k) for k in (
+                      "id", "text", "prompt", "prompt_author", "location_id", "characters",
+                      "references", "start", "end", "motion", "image")} for s in p.get("scenes", [])]})
+
+
 def _full(p):
     out = copy.deepcopy(p)
     out.pop("script_history", None)
@@ -494,6 +502,7 @@ def _full(p):
     scenes = out.get("scenes", [])
     evidence = [_scene_evidence(p, s) for s in scenes]
     for s, item in zip(scenes, evidence):
+        s["image_available"] = bool(_file_digest(store.project_dir(p["id"]), s.get("image")))
         s["human_review"] = _review(s.get("human_review"), item)
         s["image_url"] = f"/media/{p['id']}/{s['image']}" if s.get("image") else None
         receipt_refs = (s.get("codex_receipt") or {}).get("references", [])
@@ -517,7 +526,10 @@ def _full(p):
     out["technical_ready"] = not out["technical_issues"]
     ready = scenes_verified and out["technical_ready"] and all(scopes[k]["state"] == "verified" for k in ("script", "voiceover"))
     out["publication_ready"] = bool(ready and scopes["render"]["state"] == "verified")
-    out["running"] = pipeline.is_running(p["id"])
+    from . import workspace_generation
+    out["workspace_batch"] = workspace_generation.batch_status(p)
+    out["generation_confirmation"] = _generation_confirmation(p)
+    out["running"] = pipeline.is_running(p["id"]) or workspace_generation.batch_running(p["id"])
     if out["running"]:
         state = "running"
     elif p.get("error"):
@@ -768,6 +780,13 @@ def install(app):
             scene["references"] = [{k: v for k, v in ref.items() if k != "url"} for ref in scene["references"]]
             if old.get(row["id"], {}).get("codex_receipt"):
                 scene["codex_receipt"] = copy.deepcopy(old[row["id"]]["codex_receipt"])
+            previous = old.get(row["id"], {})
+            if previous.get("generation_history"):
+                scene["generation_history"] = copy.deepcopy(previous["generation_history"])
+            if image and image == previous.get("image"):
+                for key in ("generation_receipt", "sent_references"):
+                    if previous.get(key):
+                        scene[key] = copy.deepcopy(previous[key])
             scene.update(status="done" if image else "idle", prompt_author="codex",
                          human_review=old.get(row["id"], {}).get("human_review"))
             output.append(scene)

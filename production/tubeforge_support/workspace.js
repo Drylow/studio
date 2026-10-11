@@ -69,7 +69,7 @@
   }
   function generationBlockReason(project, scene, editedPrompt = scene?.prompt) {
     if (project?.codex_directed !== true || project.readonly || project.mode !== 'review') return 'La génération d’un plan est réservée aux projets dirigés.';
-    if (project.running || ['running', 'queued'].includes(scene?.status)) return 'Une opération est déjà en cours sur ce projet.';
+    if (project.running || (project.workspace_batch?.state !== 'interrupted' && ['running', 'queued'].includes(scene?.status))) return 'Une opération est déjà en cours sur ce projet.';
     if (typeof scene?.prompt !== 'string' || !scene.prompt.trim() || /^renderer[- ]only\b/i.test(scene.prompt.trim())) return 'Ce plan n’a pas de prompt de génération explicite.';
     if (editedPrompt !== scene.prompt) return 'Enregistrez le prompt avant de refaire ce plan.';
     if (!sceneReferences(scene).length) return 'Ajoutez les références ordonnées du plan avant de le refaire.';
@@ -87,7 +87,22 @@
   function referenceOrder(references) {
     return references.map((ref) => typeof ref === 'string' ? { path: ref, owner: 'project' } : { path: ref.path || ref.file || ref.image, owner: ref.owner || 'project', sha256: ref.sha256 || null });
   }
-  const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder };
+  const hasImage = (scene) => scene.image_available ?? Boolean(scene.image);
+  function batchPlan(project, phase) {
+    const scenes = project.scenes || [];
+    const first = scenes.slice(0, 3);
+    const candidates = phase === 'preview' ? first : scenes.slice(3);
+    const targets = candidates.filter((scene) => !hasImage(scene));
+    let reason = '';
+    if (!scenes.length) reason = 'Enregistrez d’abord le découpage, les prompts et les références.';
+    else if (project.running) reason = 'Une génération est déjà en cours.';
+    else if (phase === 'remaining' && first.some((scene) => !hasImage(scene) || scene.human_review?.state !== 'verified')) reason = 'Regardez et marquez vérifiés les trois premiers plans pour continuer.';
+    else if (!targets.length) reason = 'Les images de cette étape existent déjà.';
+    else reason = targets.map((scene) => generationBlockReason(project, scene)).find(Boolean) || '';
+    if (!reason && !project.generation_confirmation) reason = 'Actualisez le projet avant de générer ses images.';
+    return { first, targets, reason };
+  }
+  const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan };
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = helpers;
     if (require.main === module && process.argv.includes('--test')) {
@@ -511,7 +526,34 @@
   }
   function generationControl(scene) {
     if (generationBlockReason(project, scene)) return '';
-    return `<div class="actions"><button type="button" data-generate="${esc(scene.id)}">${icon('refresh')}Refaire ce plan</button></div>`;
+    return `<div class="actions"><button type="button" data-generate="${esc(scene.id)}">${icon('refresh')}${hasImage(scene) ? 'Refaire ce plan' : 'Générer ce plan'}</button></div>`;
+  }
+  function batchMarkup(p = project) {
+    if (!p.codex_directed || p.readonly) return '';
+    const test = batchPlan(p, 'preview');
+    const rest = batchPlan(p, 'remaining');
+    const job = p.workspace_batch;
+    const active = ['queued', 'running', 'stopping'].includes(job?.state);
+    const labels = { queued: 'Démarrage', running: 'Génération en cours', stopping: 'Arrêt après le plan en cours', done: 'Images générées · à vérifier', stopped: 'Génération arrêtée', failed: 'Génération arrêtée sur une erreur', interrupted: 'Génération interrompue' };
+    return `<section id="batch-workflow" class="section batch-workflow" aria-label="Tester puis générer les images"><h2>Tester les 3 premières, puis générer la suite</h2><p class="muted">Vérifiez le personnage, les décors et le style sur les trois premiers plans avant de lancer les images restantes. Les images déjà présentes sont conservées.</p><div class="actions"><button type="button" class="primary" data-batch="preview" ${test.reason ? 'disabled' : ''}>1. Tester les ${test.first.length || 3} premières images${test.targets.length ? ` · ${test.targets.length} à générer` : ''}</button><button type="button" class="primary" data-batch="remaining" ${rest.reason ? 'disabled' : ''}>2. Générer les images restantes${rest.targets.length ? ` · ${rest.targets.length}` : ''}</button>${active ? `<button type="button" id="stop-images" ${job.stop_requested ? 'disabled' : ''}>Arrêter après ce plan</button>` : ''}</div>${test.reason && !active ? `<p class="small muted">Test : ${esc(test.reason)}</p>` : ''}${rest.reason && !active ? `<p class="small muted">Suite : ${esc(rest.reason)}</p>` : ''}${job ? `<div class="batch-progress" role="status" aria-live="polite"><strong>${esc(labels[job.state] || job.state)}</strong><span>${job.done}/${job.total} images${job.current_scene_id != null ? ` · plan ${esc(job.current_scene_id)}` : ''}</span><progress max="${Math.max(1, job.total)}" value="${job.done}" aria-label="Images terminées"></progress>${job.error ? `<p class="error-text">${esc(job.error)}</p>` : ''}</div>` : ''}<p class="small muted">Après la génération, vérifiez toutes les images, puis lancez le montage dans l’onglet Export. La voix et les timings doivent être prêts.</p></section>`;
+  }
+  function bindBatchControls() {
+    $$('[data-batch]').forEach((button) => button.onclick = () => action(button, async () => {
+      if (dirty) throw new Error('Enregistrez les prompts et vos notes avant de lancer la génération.');
+      const phase = button.dataset.batch;
+      const plan = batchPlan(project, phase);
+      if (plan.reason) throw new Error(plan.reason);
+      project = await api(`/api/workspace/projects/${encode(project.id)}/images/generate`, { method: 'POST', body: {
+        phase, confirmation: project.generation_confirmation, image_model: project.model_snapshot.image_model,
+        image_provider: project.model_snapshot.image_provider || 'cli_proxy'
+      } });
+      renderScenes(routeParts()[2] === 'verification');
+    }, 'Génération lancée. Vous pouvez quitter cette page et revenir suivre le résultat.'));
+    const stop = $('#stop-images');
+    if (stop) stop.onclick = () => action(stop, async () => {
+      project = await api(`/api/workspace/projects/${encode(project.id)}/images/stop`, { method: 'POST' });
+      $('#batch-workflow').outerHTML = batchMarkup(); bindBatchControls();
+    }, 'Arrêt demandé : l’image en cours sera conservée.');
   }
   function openGeneration(scene, article) {
     const editedPrompt = $('[name="prompt"]', article)?.value ?? scene.prompt;
@@ -558,12 +600,13 @@
   function renderScenes(verification) {
     const scenes = project.scenes || [];
     const verified = scenes.filter((s) => reviewState(s) === 'verified').length;
-    $('#step-content').innerHTML = `${header(verification ? 'Vérification des images' : 'Plans et images', `${scenes.length} plans · ${verified} vérifiés`)}${!scenes.length ? '<div class="empty"><h2>Aucun plan enregistré</h2><p>Le découpage et les prompts de ce projet restent à préparer.</p></div>' : scenes.map((scene, index) => {
+    $('#step-content').innerHTML = `${header(verification ? 'Vérification des images' : 'Plans et images', `${scenes.length} plans · ${verified} vérifiés`)}${batchMarkup()}${!scenes.length ? '<div class="empty"><h2>Aucun plan enregistré</h2><p>Le découpage et les prompts de ce projet restent à préparer.</p></div>' : scenes.map((scene, index) => {
       const references = sceneReferences(scene);
       const names = (scene.characters || []).map((id) => typeof id === 'object' ? id.name || id.id : project.characters?.find((c) => c.id === id)?.name || id);
       const image = safeUrl(scene.image_url) || mediaUrl('media', project.id, scene.image);
-      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Plan ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<h3>${scene.sent_references ? 'Références envoyées, dans l’ordre' : 'Références du plan, dans l’ordre'}</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : '<p class="muted small">Aucune référence enregistrée.</p>'}</div><div class="scene-data"><div class="scene-head"><h2>Plan ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : 'Voix non alignée'}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || 'Extrait manquant')}</p></div><dl class="metadata"><dt>Lieu</dt><dd>${esc(scene.location_id || scene.location || 'Non renseigné')}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || 'Aucun personnage nommé')}</dd><dt>Variante</dt><dd>${esc(scene.variant || scene.camera_variant || 'Non renseignée')}</dd></dl>${verification ? `<details><summary>Prompt du plan</summary><p>${esc(scene.prompt || 'Prompt manquant')}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Enregistrer le prompt</button></div></form>`}<form class="review-form"><label>Note de vérification<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Marquer vérifié</button><button type="submit" name="state" value="unreviewed" title="Retirer la validation">À vérifier</button></div></form></div></article>`;
+      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Plan ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<h3>${scene.sent_references ? 'Références envoyées, dans l’ordre' : 'Références du plan, dans l’ordre'}</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : '<p class="muted small">Aucune référence enregistrée.</p>'}</div><div class="scene-data"><div class="scene-head"><h2>Plan ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : 'Voix non alignée'}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || 'Extrait manquant')}</p></div><dl class="metadata"><dt>Lieu</dt><dd>${esc(scene.location_id || scene.location || 'Non renseigné')}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || 'Aucun personnage nommé')}</dd><dt>Variante</dt><dd>${esc(scene.variant || scene.camera_variant || 'Non renseignée')}</dd></dl>${verification ? `<details><summary>Prompt du plan</summary><p>${esc(scene.prompt || 'Prompt manquant')}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Enregistrer le prompt</button></div></form>`}${generationControl(scene)}<form class="review-form"><label>Note de vérification<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Marquer vérifié</button><button type="submit" name="state" value="unreviewed" title="Retirer la validation">À vérifier</button></div></form></div></article>`;
     }).join('')}`;
+    bindBatchControls();
     $$('[data-generate]').forEach((button) => {
       const article = button.closest('[data-scene]');
       const scene = project.scenes.find((candidate) => String(candidate.id) === button.dataset.generate);
@@ -599,6 +642,8 @@
         await api(`/api/workspace/projects/${encode(project.id)}/review`, { method: 'POST', body: { scene_id: scene.id, state, notes } }); await route();
       }, 'État de vérification enregistré.');
     });
+    bindFormState($('#step-content'));
+    bindPreviews($('#step-content'));
   }
   function renderExport() {
     const render = project.render || {};
@@ -607,6 +652,12 @@
     const status = projectStatus(project);
     $('#step-content').innerHTML = `${header('Export', '', badge(status.state, status.label))}${project.technical_issues?.length ? `<div class="banner"><h3>Contrôles techniques à terminer</h3><ul>${project.technical_issues.map((issue) => `<li>${esc(issue)}</li>`).join('')}</ul></div>` : ''}${url ? `<video controls preload="metadata" src="${esc(url)}"></video><div class="actions"><a class="button" href="${esc(url)}" download>${icon('download')}Télécharger le rendu</a>${srt ? `<a class="button" href="${esc(srt)}" download>${icon('download')}Sous-titres</a>` : ''}</div>${project.publication_ready !== true ? '<div class="banner">Rendu disponible. La vérification avant publication reste à terminer.</div>' : '<div class="banner good">Validation avant publication enregistrée.</div>'}<section class="section editor"><h2>Vérification du rendu</h2>${scopeReview('render')}</section>` : '<div class="empty"><h2>Aucun rendu disponible</h2><p>Le projet attend son montage et son export.</p></div>'}<section class="section"><h2>Modèles du projet</h2><dl class="definition-list"><div><dt>Texte</dt><dd>${esc(project.model_snapshot?.text_model || project.settings?.script?.model || 'Non renseigné')}</dd></div><div><dt>Images</dt><dd>${esc(project.model_snapshot?.image_model || project.settings?.visuals?.image_model || 'Non renseigné')}</dd></div></dl></section>`;
     bindScopeReviews();
+    const ready = project.technical_ready && project.scenes?.length && project.scenes.every((s) => s.human_review?.state === 'verified') && ['script', 'voiceover'].every((scope) => project.human_reviews?.[scope]?.state === 'verified');
+    $('#step-content').insertAdjacentHTML('afterbegin', `<section class="section"><h2>Montage de la vidéo</h2><button id="render-video" type="button" class="primary" ${!ready || project.running ? 'disabled' : ''}>${project.running ? 'Montage en cours…' : 'Générer le montage vidéo'}</button>${!ready ? '<p class="small muted">Préparez la voix et les timings, puis vérifiez le texte, la voix et toutes les images pour lancer le montage.</p>' : ''}</section>`);
+    $('#render-video').onclick = (event) => action(event.currentTarget, async () => {
+      if (dirty) throw new Error('Enregistrez vos notes avant de lancer le montage.');
+      await api(`/api/workspace/projects/${encode(project.id)}/render`, { method: 'POST' }); await route();
+    }, 'Montage lancé.');
   }
   function profilePreview(profile, kind) {
     const value = profile[`${kind}_preview`] || profile[`${kind}_preview_url`];
@@ -765,6 +816,21 @@
     const link = event.target.closest('a[href^="#/"]');
     if (link && dirty && !window.confirm('Quitter cette page sans enregistrer les modifications ?')) event.preventDefault();
   });
+  let batchPolling = false;
+  setInterval(async () => {
+    const parts = routeParts();
+    if (batchPolling || document.hidden || submitting || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !['queued', 'running', 'stopping'].includes(project?.workspace_batch?.state)) return;
+    batchPolling = true;
+    const id = project.id;
+    try {
+      const latest = await api(`/api/workspace/projects/${encode(id)}`);
+      if (routeParts()[1] !== id || !$('#batch-workflow')) return;
+      if (dirty || $('#preview-dialog').open || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
+        $('#batch-workflow').outerHTML = batchMarkup(latest); bindBatchControls();
+      } else { project = latest; renderScenes(routeParts()[2] === 'verification'); }
+    } catch { /* Keep the visible job and try reading its status on the next tick. */ }
+    finally { batchPolling = false; }
+  }, 3000);
   setInterval(() => {
     const page = routeParts()[0] || 'videos';
     if (document.hidden || dirty || submitting || $('#create-dialog').open || $('#preview-dialog').open || !['videos', 'video'].includes(page)) return;
