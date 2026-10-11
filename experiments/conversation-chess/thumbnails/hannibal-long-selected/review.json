@@ -1,0 +1,47 @@
+{
+  "status": "user_selected_exact_base_original_dimensions_with_only_svg_badges",
+  "base_sha256": "c6dff4cd68287fc516918bfcb94610b4f33c1dc63d1e351f14f1b6bb5831e48b",
+  "exact_source_image_user_selected": true,
+  "no_resize": true,
+  "unchanged_pixels_outside_badges": true,
+  "base_restored_portrait_details": true,
+  "native_4k_capture_claimed": false,
+  "original_svg_icons": [
+    {
+      "id": "brilliant",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "great",
+      "sha256": "3e8fdffc83fa86d3c04f8406fc1b5aff4da13a2480dd668624d5b0f5cd102533"
+    }
+  ],
+  "visually_reviewed": true,
+  "review_method": "Actual final lossless PNG opened and exact canvas-comparison receipt checked. JPEG is an additional high-quality YouTube-compatible encoding, not a claim of pixel identity.",
+  "files": [
+    {
+      "file": "Hannibal-Will-exact-image-icons.png",
+      "sha256": "9fcef9b511e4ba63430060a87a798341679f9808f9c36165dbb94a23c4ed36dd",
+      "bytes": 2827582,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "Hannibal-Will-exact-image-icons-YouTube.jpg",
+      "sha256": "77e8a40cac1502f43b089be2b1406c1f9b5b651c4a3583c72883b50989b6171d",
+      "bytes": 247033,
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "delivery": "Displayed in chat and downloadable file links supplied; no new Discord retry.",
+  "previous_4k_proposals": "User reports receipt and rejects variants; transport attachment confirmation remains incomplete and its pending retained privately.",
+  "independent_decoded_png_comparison": {
+    "pixels_changed_outside_badge_regions": 0,
+    "performed": true
+  }
+}

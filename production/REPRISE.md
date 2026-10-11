@@ -42,6 +42,13 @@ GoFile réconciliés avec la lecture réelle du site officiel, sans succès reve
 pour l’API Premium. Un message Discord Scene Analysis Guy et ses cinq pièces
 jointes sont confirmés : trois miniatures A/B/C, kit de publication et crédits.
 Quatre titres sont fournis. Les reçus et le pending archivé restent privés.
+**Miniature mise à jour :** l’utilisateur rejette les propositions 4K et demande
+exactement l’image restaurée affichée, avec seulement les deux SVG Chess.com.
+Le fichier final garde1672×941, sans changement hors badges : voir
+`experiments/conversation-chess/thumbnails/hannibal-long-selected/`.
+PNG sans perte et JPG YouTube sont fournis dans le chat. Les variantes rejetées
+restent privées ; le transport de cette galerie est reçu selon l’utilisateur,
+sans confirmation indépendante complète, donc ne pas renvoyer son pending.
 Classement `youtube-test`, sans résultat YouTube établi pour ce long ni garantie
 Content ID. Le retour propre du pilote ne suffit pas à valider ce fichier
 différent. L’utilisateur choisit titre/miniature et garde la main sur l’upload.

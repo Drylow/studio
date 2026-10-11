@@ -1,5 +1,25 @@
 # Landa long edition — publication text handoff
 
+## Pending accessible title proposals — 11 October 2026
+
+The latest request is for a premise that makes sense before someone has seen
+*Inglourious Basterds*, with the exact phrase **Analyzed Like Chess**. These
+chat proposals await the user's choice; they have not changed the YouTube title
+or the original delivered text kit and receipts.
+
+1. **A Nazi Hunting Jews Analyzed Like Chess | Inglourious Basterds** — 62 characters; recommended.
+2. **Hiding Jews From an SS Officer | Analyzed Like Chess** — 52 characters.
+3. **A Jewish Woman Facing the SS | Analyzed Like Chess** — 50 characters.
+
+The first premise fits Landa's hunt at the farmhouse and the later uncertain
+restaurant encounter without asserting that he recognises Shosanna. The second
+foregrounds LaPadite's concealment and stays close to the supplied title pattern.
+The third accurately describes Shosanna's encounter but covers the restaurant
+part more narrowly than this two-duel film. The full description still identifies
+both conversations. Earlier character-name proposals and the frozen delivered
+kit remain below as history.
+
+
 Text kit updated, 11 October 2026. Technical QA and sampled final-frame review
 are complete. The user now reports publication with Content ID claims and
 no reported block or strike; this result has not been independently checked.

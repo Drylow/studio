@@ -47,7 +47,15 @@ Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772
 Music excerpts have been trimmed, mixed at adjusted volume and faded in/out.
 ```
 
-## Thumbnail choices
+## Selected thumbnail revision
+
+The user rejects the former options and chooses the exact restored image
+shown in chat, with only the existing icons added. The original1672×941 framing
+and image pixels outside the badges are preserved. Use the new
+[PNG or YouTube JPG](../../thumbnails/hannibal-long-selected/README.md); this
+selection supersedes the covers in the first kit. The delivered movie is unchanged.
+
+## Historical initial thumbnail choices
 
 A — Confession (recommended); B — Direct gaze; C — Watchful Will.
 Each uses real series frames, the established diagonal white separator and
