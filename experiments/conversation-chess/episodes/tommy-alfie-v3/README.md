@@ -1,5 +1,12 @@
 # Tommy–Alfie V3 — editorial draft, not a cleared export
 
+**Short candidate retained as an archive.** The user now requires at least ten
+minutes, targeting ten to fifteen. This 5:20 native test is not the requested
+long and must not be delivered as its replacement. Long recut work is separate
+in `../tommy-alfie-long-v3/`. The native export and sample-accurate audio finish
+have passed full decoding and technical QA locally; that establishes no
+YouTube acceptance. No GoFile or Discord delivery of this short was made.
+
 The user requested a new Tommy–Alfie edit after the original 15m28 export was
 claimed and blocked in some territories. Landa–Shosanna is the first production;
 this folder prepares the next edit without rendering or replacing the archive.

@@ -11,12 +11,24 @@ est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
 Le 11 octobre 2026, l’utilisateur annule la chaîne sleep et confirme :
 **strudel Landa–Shosanna d’abord**, puis une nouvelle version Tommy–Alfie.
+Il précise ensuite **au moins dix minutes par vidéo**, cible dix à quinze
+minutes. Le candidat Landa de 2:24 et le court Tommy de 5:20 restent des
+brouillons techniques conservés ; ils ne doivent pas être livrés à sa place.
+La préparation longue reprend dans `episodes/landa-shosanna-long-v3/` et
+`episodes/tommy-alfie-long-v3/`. Les sources réellement disponibles et les
+analyses utiles déterminent le découpage ; aucun long n’est encore exporté.
 Le [plan du strudel](episodes/landa-shosanna/EDITORIAL.md) est un brouillon
 lié aux événements, sans repères inventés. Le procédé V3 transmis rapporte
 un test Death Note favorable pour un fichier exact ; il décrit des coupes
 éditoriales et des analyses originales, pas une garantie pour d’autres films.
 Les nouvelles versions sont destinées à un premier contrôle privé YouTube,
 pas annoncées comme déjà exemptes de claims.
+
+[Livraison GoFile contrôlée](UPLOAD_REVIEWED.md) : le nouveau helper exige
+l’export natif terminé, les preuves visuelles, le décodage intégral et les
+empreintes exactes. Une finition de dialogue conserve le parent Kdenlive et
+son flux image ; son gain est appliqué par échantillon uniquement dans les
+intervalles source, sans toucher les niveaux du guide et des bruitages.
 
 `prepare-source-edit.py` conserve désormais les dimensions réelles (720p ou
 1080p selon la source), exige les camps et l’ouverture du premier extrait,

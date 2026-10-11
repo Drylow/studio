@@ -6,6 +6,11 @@ L’utilisateur confirme la scène du strudel d’Inglourious Basterds en premie
 puis une nouvelle coupe Tommy–Alfie. Le procédé envoyé décrit une réduction
 éditoriale avec analyses, et un résultat Death Note rapporté pour un fichier
 précis. Aucune absence de claim n’est établie pour ces nouvelles vidéos.
+**Correction explicite : minimum dix minutes, cible dix à quinze.** Ne pas
+livrer les candidats courts Landa 2:24 ou Tommy 5:20. Ils sont conservés comme
+brouillons. La préparation longue reprend dans les dossiers distincts
+`episodes/landa-shosanna-long-v3/` et `episodes/tommy-alfie-long-v3/` sous
+`experiments/conversation-chess/`. Landa reste la première livraison demandée.
 Voir `experiments/conversation-chess/episodes/landa-shosanna/EDITORIAL.md`.
 Sources, coupes réelles, montage et vérification restent à terminer.
 

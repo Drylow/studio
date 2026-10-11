@@ -40,6 +40,82 @@ def probe(path):
     return json.loads(result.stdout)
 
 
+def picture_hash(path):
+    result = subprocess.run(['ffmpeg', '-v', 'error', '-nostdin', '-protocol_whitelist', 'file,pipe', '-i', str(path), '-map', '0:v:0',
+        '-c', 'copy', '-f', 'hash', '-hash', 'sha256', '-'],
+        capture_output=True, text=True, check=True)
+    return result.stdout.strip()
+
+
+def validate_native_provenance(file, export_path, data, finishing_path=None):
+    """An audio finish is a documented child of the native export, not that export."""
+    file, export_path = Path(file).resolve(strict=True), Path(export_path).resolve(strict=True)
+    native = json.loads(export_path.read_text())
+    if native.get('export_completed') is not True:
+        raise ValueError('Native export is not marked complete; never QA a partial export')
+    parent_name = native.get('final_video')
+    if not isinstance(parent_name, str) or not parent_name.strip():
+        raise ValueError('Native receipt has no final_video')
+    parent = (export_path.parent / parent_name).resolve(strict=True)
+    final_sha = sha256(file)
+    if finishing_path is None:
+        if parent != file or native.get('output_sha256') != final_sha:
+            raise ValueError('File differs from native completion receipt; provide audio_finishing_receipt for a finished child')
+        return {'output_sha256': final_sha, 'native_output_sha256': final_sha,
+                'source_audio_gain_db': 0, 'audio_finishing': None}
+    finishing_path = Path(finishing_path).resolve(strict=True)
+    finish = json.loads(finishing_path.read_text())
+    if not isinstance(finish, dict):
+        raise ValueError('Audio finishing receipt must be an object')
+    def finished_file(key):
+        name = finish.get(key)
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError('Audio finishing receipt requires explicit parent/output paths')
+        return (finishing_path.parent / name).resolve(strict=True)
+    gain = finish.get('source_audio_gain_db')
+    if type(gain) not in (int, float) or not math.isfinite(gain) or not 0 <= gain <= 12:
+        raise ValueError('Audio finishing gain must be finite and between 0 and 12 dB')
+    parent_sha = sha256(parent)
+    if finished_file('parent_video') != parent or finished_file('output_video') != file \
+            or native.get('output_sha256') != parent_sha or finish.get('parent_sha256') != parent_sha \
+            or finish.get('sha256') != final_sha or finish.get('bytes') != file.stat().st_size \
+            or finish.get('picture_stream_unchanged') is not True \
+            or finish.get('preserve_grading_music') is not True \
+            or finish.get('full_decode_passed') is not True \
+            or finish.get('source_interval_policy') != 'half-open-sample-index' \
+            or finish.get('audio_sample_rate') != RATE \
+            or finish.get('intro_analysis_outro_audio_gain_db') != 0:
+        raise ValueError('Audio finishing receipt does not prove exact native parent/output and preserved grade/music levels')
+    fps = float(data['fps'])
+    expected_ranges = [(s['start_frame']/fps, s['end_frame']/fps)
+                       for s in data['segments'] if s['kind'] == 'source']
+    ranges = finish.get('source_output_ranges')
+    if not isinstance(ranges, list) or len(ranges) != len(expected_ranges) or not expected_ranges:
+        raise ValueError('Audio finishing source ranges must match the prepared native source segments')
+    for provided, expected in zip(ranges, expected_ranges):
+        if not isinstance(provided, (list, tuple)) or len(provided) != 2 \
+                or any(type(v) not in (int, float) or not math.isfinite(v) for v in provided) \
+                or any(abs(v-e) > 1e-7 for v, e in zip(provided, expected)):
+            raise ValueError('Audio finishing source ranges must match the prepared native source segments')
+    expected_samples = [[round(start*RATE), round(end*RATE)] for start, end in expected_ranges]
+    if finish.get('source_output_sample_ranges') != expected_samples:
+        raise ValueError('Audio finishing sample intervals must match exact prepared source boundaries')
+    parent_picture = picture_hash(parent)
+    if not re.fullmatch(r'SHA256=[a-f0-9]{64}', parent_picture) \
+            or finish.get('picture_stream_sha256') != parent_picture or picture_hash(file) != parent_picture:
+        raise ValueError('Audio finishing changed the native picture stream')
+    proof = {'receipt_file': str(finishing_path), 'receipt_sha256': sha256(finishing_path),
+        'parent_video': str(parent), 'parent_sha256': parent_sha, 'output_video': str(file),
+        'output_sha256': final_sha, 'picture_stream_sha256': parent_picture,
+        'picture_stream_unchanged': True, 'source_audio_gain_db': gain,
+        'source_output_ranges': expected_ranges, 'intro_analysis_outro_audio_gain_db': 0,
+        'source_output_sample_ranges': expected_samples, 'source_interval_policy': 'half-open-sample-index',
+        'audio_preservation_verification': 'Sampled segment audio windows, grade onsets and complete analysis reading tails; not continuous human listening.',
+        'human_audio_listening': False}
+    return {'output_sha256': final_sha, 'native_output_sha256': parent_sha,
+            'source_audio_gain_db': gain, 'audio_finishing': proof}
+
+
 def read_wav(path):
     with wave.open(str(path), 'rb') as source:
         if source.getframerate() != RATE or source.getnchannels() != CHANNELS or source.getsampwidth() != 2:
@@ -242,17 +318,16 @@ def contact_sheets(plan, check):
 
 def run_visual_captures(args, check):
     data=json.loads(args.manifest.read_text())
-    native=json.loads(args.bundle_manifest.read_text())
-    if native.get('export_completed') is not True or Path(native.get('final_video','')).resolve()!=args.file:
-        raise ValueError('Native completion receipt does not match finished MP4')
+    provenance=getattr(args, 'provenance', None) or validate_native_provenance(
+        args.file, args.bundle_manifest, data, getattr(args, 'audio_finishing_receipt', None))
     info=probe(args.file);video=next(s for s in info['streams'] if s['codec_type']=='video')
     if ((int(video['width']),int(video['height']))!=(1920,1080)
         or Fraction(video['avg_frame_rate'])!=data['fps']
         or int(video.get('nb_frames',0))!=data['duration_frames']
         or abs(float(info['format']['duration'])-data['duration_frames']/data['fps'])>.1):
         raise ValueError('Completed MP4 profile/framecount mismatch')
-    if sha256(args.file)!=native.get('output_sha256'):
-        raise ValueError('MP4 SHA differs from native completion receipt')
+    if sha256(args.file)!=provenance['output_sha256']:
+        raise ValueError('MP4 changed after completion/provenance validation')
     sfx_path=Path(data['sfx_manifest'])
     rating_schema=json.loads((sfx_path.parents[2]/'ratings.json').read_text())
     plan=visual_capture_plan(data,rating_schema,check)
@@ -261,6 +336,8 @@ def run_visual_captures(args, check):
         source_quality_accepted=data.get('source_quality',{}).get('accepted_for_final') is True,
         full_decode_checked_separately=not args.frames_only,
         finished_render_visual_reviewed=False,human_audio_listening=False)
+    if provenance['audio_finishing'] is not None:
+        plan['audio_finishing']=provenance['audio_finishing']
     (check/'final-frame-plan.json').write_text(json.dumps(plan,indent=2))
     def capture(shot):
         out=Path(shot['file']);out.parent.mkdir(parents=True,exist_ok=True)
@@ -294,6 +371,8 @@ def main():
     parser.add_argument('--manifest', type=Path, required=True)
     parser.add_argument('--bundle-manifest', type=Path, required=True,
         help='Native Kdenlive completion receipt; prevents QA of a partial or wrong export')
+    parser.add_argument('--audio-finishing-receipt', type=Path,
+        help='Optional documented audio-finished child; retains native parent SHA and verifies identical picture stream')
     parser.add_argument('--timeline', type=Path,
         help='Defaults to timeline_file recorded in prepared manifest')
     parser.add_argument('--out', type=Path, required=True)
@@ -310,13 +389,9 @@ def main():
     data=json.loads(args.manifest.read_text())
     args.expected_frames=int(data['duration_frames'])
     args.timeline=(args.timeline or Path(data['timeline_file'])).resolve(strict=True)
+    args.provenance=validate_native_provenance(args.file, args.bundle_manifest, data, args.audio_finishing_receipt)
     if args.frames_only:
         return run_visual_captures(args, check)
-    export = json.loads(args.bundle_manifest.read_text())
-    if export.get('export_completed') is not True:
-        raise RuntimeError('Native export is not marked complete; do not run QA against a partial file')
-    if Path(export.get('final_video', '')).resolve() != args.file.resolve():
-        raise RuntimeError('Native completion receipt belongs to a different output file')
     data = json.loads(args.manifest.read_text())
     timeline = json.loads(args.timeline.read_text())
     info = probe(args.file)
@@ -331,6 +406,9 @@ def main():
         'annotation_count': len(timeline['annotations']),
         'expected_frames': args.expected_frames, 'expected_seconds': args.expected_frames/FPS,
         'probe': info, 'comparison_method': 'Actual final decoded PCM versus actual prepared dialogue/SFX/music at manifest frame boundaries; single intended grade cue versus prepared onset; no human-listening claim.'}
+    if args.provenance['audio_finishing'] is not None:
+        report['audio_finishing']=args.provenance['audio_finishing']
+        report['comparison_method'] += ' Source-scene reference alone receives the documented finishing gain; guide/analysis/outro reference levels are preserved.'
     def require(condition, message):
         if not condition:
             report['failures'].append(message)
@@ -346,7 +424,7 @@ def main():
         'Final A/V duration differs materially from exact timeline')
     require(data.get('voiceover') is False, 'Unexpected voiceover metadata')
     report['sha256'] = sha256(args.file)
-    require(report['sha256']==export.get('output_sha256'), 'Final SHA differs from native export receipt')
+    require(report['sha256']==args.provenance['output_sha256'], 'Final SHA differs from validated native/audio-finishing provenance')
     report['full_av_decode'] = run_logged(['ffmpeg', '-v', 'error', '-xerror', '-nostdin',
         '-threads', '2', '-protocol_whitelist', 'file,pipe', '-i', str(args.file),
         '-f', 'null', '-'], check/'full-av-decode.log')
@@ -394,9 +472,11 @@ def main():
             if difference:
                 report['warnings'].append(f'Segment{index} {key}: {difference} sample difference from rounded frame duration')
             used=min(length,len(samples))
-            expected[first:first+used] += samples[:used]
+            finishing_gain = 10 ** (args.provenance['source_audio_gain_db'] / 20) if segment['kind']=='source' else 1.0
+            expected[first:first+used] += samples[:used] * finishing_gain
             sources.append({'role':key,'file':segment[key],'samples':len(samples),
-                'frame_needed_samples':length,'difference_samples':difference,'peak_dbfs':db(peak(samples))})
+                'frame_needed_samples':length,'difference_samples':difference,'peak_dbfs':db(peak(samples)),
+                'expected_finishing_gain_db': args.provenance['source_audio_gain_db'] if segment['kind']=='source' else 0})
             if key=='sfx_file':audio_arrays[index]=samples
         prepared_audio.append({'index':index,'kind':segment['kind'],'start_frame':segment['start_frame'],
             'duration_frames':segment['duration_frames'],'audio':sources})
@@ -448,6 +528,9 @@ def main():
             threshold=.90 if kind=='analysis' else .96
             require(comp['correlation']>=threshold, f'Segment{index}:{kind} audio correlation is unexpectedly low')
             require(abs(comp['lag_ms'])<=33.4,f'Segment{index}:{kind} audio drift exceeds one frame')
+            if args.provenance['audio_finishing'] is not None:
+                require(abs(comp['gain_db']) <= .75,
+                    f'Segment{index}:{kind} audio level differs from the explicitly finished reference by over .75 dB')
         if kind!='analysis':continue
         annotation=annotations[card];card+=1
         require(segment['rating']==annotation['rating'],'Analysis rating order differs from timeline')

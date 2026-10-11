@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "composition": "Sopranos/Peaky photographic split portraits; Landa left, Shosanna right; thin white diagonal divider; dark brown background; no headline",
+  "base_kind": "generated photographic retouch from reference images; actor details reconstructed, not preserved source-frame pixels",
+  "clothing": "neutral charcoal jacket/plain shirt and green cardigan; no uniform or insignia",
+  "user_selection_presumed": false,
+  "files": [
+    {
+      "name": "base-without-badges.png",
+      "sha256": "a591d9536cab9e00f9be2d2862bb3efa8c3b0684e7d55a0b9a3d1826ecbb2da9",
+      "bytes": 2340492
+    },
+    {
+      "name": "Sopranos-style.png",
+      "sha256": "c24268e9b8f376c405e29df65e035522e6d4b00561db6b0d032cd2059b260355",
+      "bytes": 2991210
+    },
+    {
+      "name": "Sopranos-style.jpg",
+      "sha256": "a932ab33b07028ba23312e5135416de0506200e884dc704c33629c97cd78e092",
+      "bytes": 449061
+    }
+  ],
+  "references": [
+    {
+      "role": "approved composition reference",
+      "file": "/workspace/studio/experiments/conversation-chess/thumbnails/tommy-alfie-shelby/base-without-badges.png",
+      "sha256": "84dac09b4b5b7f9f1c042894b6069ff26169a9dd76fba947b5671a97bb56e76f"
+    },
+    {
+      "role": "approved Landa pawn face reference",
+      "file": "/workspace/generated_images/exec-11625ced-7bf3-4dbb-9d21-416be152ed60.png",
+      "sha256": "b3771d49817ba29410889ba057697135cbc24bddcb4a54ee1524ea769d186482"
+    },
+    {
+      "role": "authentic Shosanna scene frame",
+      "file": "/workspace/studio/output/conversation-chess/landa-shosanna/source-clipcafe-original/review-frames/aunt-ada-passed-away-from-fever-last-spring-1.png",
+      "sha256": "e85e5335fdd302b8c80942d4a8cee8f23f2620a198216347dd13df16bbbe8363"
+    }
+  ],
+  "visual_review": {
+    "full_size": true,
+    "mobile_320px": true,
+    "reviewers": 2,
+    "recognizable_actor_likeness": true,
+    "eyes_unobscured": true,
+    "original_grade_icons_readable": true,
+    "no_emblems_uniforms_or_stray_text": true,
+    "no_important_crop_cutoffs": true,
+    "limitations": [
+      "Small outer areas of hair are covered by the badges, as in the composition reference.",
+      "Generated portrait details are smoother and Landa appears somewhat younger than the film reference."
+    ],
+    "preview": "/tmp/landa-thumbnail-320-review.png"
+  },
+  "svg_verification": {
+    "receipts": [
+      "Sopranos-style.png.json",
+      "Sopranos-style.jpg.json"
+    ],
+    "original_svg_sha256_verified": true,
+    "changed_pixels_outside_badges_before_encoding": 0,
+    "icons": [
+      {
+        "id": "brilliant",
+        "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+      },
+      {
+        "id": "blunder",
+        "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+      }
+    ]
+  },
+  "publication_status": "not uploaded or sent"
+}

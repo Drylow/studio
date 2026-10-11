@@ -1,0 +1,31 @@
+{
+  "schema": "landa-approved-pawn-v1",
+  "user_approved": true,
+  "user_instruction": "Use the approved Landa pawn and add the same original Chess.com brilliant (!!) and blunder (??) companion badges as the other pawns.",
+  "file": "assets/landa/landa-pawn-approved-2026-10-11.png",
+  "sha256": "b3771d49817ba29410889ba057697135cbc24bddcb4a54ee1524ea769d186482",
+  "size": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "approval_date": "2026-10-11",
+  "method": "User-approved photographic pawn composition from the supplied generated PNG. No further portrait editing.",
+  "unretouched_since_approval": true,
+  "badges_in_source_image": false,
+  "native_companion_badges": {
+    "timeline_option": "mascot.badges:true",
+    "categories": [
+      "brilliant",
+      "blunder"
+    ],
+    "assets": [
+      "assets/chesscom/brilliant.svg",
+      "assets/chesscom/blunder.svg"
+    ],
+    "method": "Draw verified original SVGs beside the contained portrait in the scene wrapper; do not modify portrait or icon bytes.",
+    "enabled_by_default": false
+  },
+  "scope": "Analyst mascot in symbol guide, written analysis cards and recap outro. Evaluation-bar pawns unchanged.",
+  "copyright_claim_or_monetization_guaranteed": false
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "conversation-chess-source-edit-v1",
+  "status": "source_timing_candidate_for_native_preparation_not_final",
+  "source_sha256": "6f03353c9c4accf2298ca4e8e5974e37e4cceba1f24a24cac207484deb715d52",
+  "source_file": "output/conversation-chess/landa-shosanna/source-compiled/source-compilation-1080p.mkv",
+  "source_dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "timeline": "timeline.candidate.json",
+  "purpose": "Retain only public clips that support a coherent critical account of hospitality, agenda control and Shosanna’s cover. Remove clipped opening fragments, the incomplete milk-order beat, secondary projector subplot, duplicated speech and the redundant middle of a gaze. Public clips have gaps; no full scene completeness or Content ID clearance is asserted.",
+  "source_visually_reviewed": true,
+  "white_label": "Landa",
+  "black_label": "Shosanna",
+  "opening": {
+    "speaker": "white",
+    "label": "Landa",
+    "reviewed": true,
+    "source_at": 2.4,
+    "evidence": "First retained dialogue is Landa’s Alors/question about how Shosanna knows Zoller. The acquired original-French clip has ASR languagefr0.909 with Alors2.68 and the question2.68–7.32; inspected source images show Landa speaking at4.139. Shosanna answers later. Visual samples and ASR are reviewed; no continuous playback or listening is claimed."
+  },
+  "cuts": [
+    {
+      "id": "opening-question",
+      "in": 2.4,
+      "out": 7.8,
+      "reason": "Remove the clipped tail of the prior dessert remark. Keep the complete question about Zoller (recognised Alors2.68; connaissance ends7.32) and the visible turn toward Shosanna.",
+      "original_clip": "so-how-is-it-the-young-private-and-yourself-came-to-be-acquainted",
+      "original_clip_in": 2.4,
+      "original_clip_out": 7.8,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "recent-acquaintance",
+      "in": 14.933333333333334,
+      "out": 20.3,
+      "reason": "Keep Shosanna’s recent-acquaintance answer. Recognised French begins0.82 and ends5.40; the complete public clip ends5.868. No absent claim about his exploits is subtitled.",
+      "original_clip": "up-until-a-couple-of-days-ago-i-had-no-knowledge-of-private-zoller",
+      "original_clip_in": 0.5,
+      "original_clip_out": 5.8666666667,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "interrupted-answer",
+      "in": 20.8,
+      "out": 28.533333333333335,
+      "reason": "Keep her explanation of ordinary cinema visits and Landa’s interruption, ending at7.99. Stop before the next clipped sentence fragment; do not claim the formality/nerves speech is present.",
+      "original_clip": "the-private-was-simply-just-a-patron-of-my-cinema",
+      "original_clip_in": 0.5,
+      "original_clip_out": 8.2333333333,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "forgotten-cream",
+      "in": 29.166666666666668,
+      "out": 34.86666666666667,
+      "reason": "Keep the cream-order apology with the waitress bringing the plates. The following waiting is omitted; its separate instruction remains.",
+      "original_clip": "i-apologize-i-forgot-to-order-the-cream",
+      "original_clip_in": 0,
+      "original_clip_out": 5.7,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "wait-for-cream",
+      "in": 34.86666666666667,
+      "out": 38.63333333333333,
+      "reason": "Keep Landa’s instruction and Shosanna withdrawing her hand. End after the short line and visible response.",
+      "original_clip": "wait-the-cr-me",
+      "original_clip_in": 0,
+      "original_clip_out": 3.7666666667,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "polite-name-check",
+      "in": 39.13333333333333,
+      "out": 43.43333333333333,
+      "reason": "Keep Landa’s complete polite name question and silence after it; do not claim or subtitle Shosanna’s unconfirmed brief reply. The form of an ordinary introduction leaves his knowledge ambiguous.",
+      "original_clip": "so-emmanuelle",
+      "original_clip_in": 0.5,
+      "original_clip_out": 4.8,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "ownership-question",
+      "in": 44.56666666666667,
+      "out": 49.2,
+      "reason": "Begin in silence before Comment0.60, excluding the clipped Moi from Dites-moi. Keep the complete cinema-ownership question. The naming exchange is not needed for the focused argument.",
+      "original_clip": "how-does-it-happen-that-a-young-lady-such-as-yourself-comes-to-own-a-cinema",
+      "original_clip_in": 0.4666666667,
+      "original_clip_out": 5.1,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "family-ownership",
+      "in": 50.13333333333333,
+      "out": 55.8,
+      "reason": "Keep Shosanna’s family-ownership answer and the close-up reaction. The supplied translation says aunt and uncle; base ASR recognition of the ending is imperfect, so no word-listening claim is made.",
+      "original_clip": "the-cinema-originally-belonged-to-my-aunt-and-uncle",
+      "original_clip_in": 0.5,
+      "original_clip_out": 6.1666666667,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "inheritance-answer",
+      "in": 56.3,
+      "out": 60.5,
+      "reason": "Keep the complete aunt-death sentence (last recognised word4.22), then stop before Landa’s Regrettable, whose public clip ending is tight. Do not infer that missing names/uncle history were shown.",
+      "original_clip": "aunt-ada-passed-away-from-fever-last-spring",
+      "original_clip_in": 0.5,
+      "original_clip_out": 4.7,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "additional-question",
+      "in": 61.166666666666664,
+      "out": 65.66666666666667,
+      "reason": "Keep the complete additional-question statement and an initial meaningful silence. Remove only the redundant middle of the longer gaze, without reordering either half of the thought.",
+      "original_clip": "i-did-have-something-else-i-wanted-ask-you",
+      "original_clip_in": 0,
+      "original_clip_out": 4.5,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    },
+    {
+      "id": "question-and-farewell",
+      "in": 73.0,
+      "out": 88.73333333333333,
+      "reason": "Resume before the forgotten-question conclusion (speech14.57–21.79) and retain the farewell25.47–25.79 plus Shosanna’s restrained smile. The cigarette-extinguishing and departure/gasp are absent and not claimed.",
+      "original_clip": "i-did-have-something-else-i-wanted-ask-you",
+      "original_clip_in": 11.8333333333,
+      "original_clip_out": 27.5666666667,
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Multilingual base ASR French speech times; reviewed public-English translation; word recognition imperfect. Boundary stills sampled separately; continuous audio review pending.",
+      "boundary_stills_visually_reviewed": true
+    }
+  ],
+  "annotations": [
+    {
+      "base_index": 0,
+      "original_at": 7.7
+    },
+    {
+      "base_index": 1,
+      "original_at": 20.133333333333333
+    },
+    {
+      "base_index": 2,
+      "original_at": 28.466666666666665
+    },
+    {
+      "base_index": 3,
+      "original_at": 38.3
+    },
+    {
+      "base_index": 4,
+      "original_at": 43.233333333333334
+    },
+    {
+      "base_index": 5,
+      "original_at": 60.4
+    },
+    {
+      "base_index": 6,
+      "original_at": 83.1
+    }
+  ],
+  "youtube_clearance_verified": false,
+  "source_review_scope": "36actual native stills and French ASR from acquired player-original tracks; no full motion or audible raccord review.",
+  "visual_review_evidence": "29actual1920x1080 source-compiled boundary/annotation stills inspected after exact2662frame/4,259,200sample CFR normalization. Evidence at output/conversation-chess/landa-shosanna/source-compiled/exact-review/; sourcehash matches final master. No continuous-motion or audible raccord review claimed."
+}
