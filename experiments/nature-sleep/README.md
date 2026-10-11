@@ -18,19 +18,32 @@ Au point d’état actuel :
 
 - **9 textes anglais, 14 541 mots**, accueil et huit histoires originales dans
   le même jardin clos ; [relecture et SHA figés](cozy-garden/episode-01/script-review.json).
-- **Voix en production**, plan de 40 segments de chapitre plus l’accueil.
-- **Boucle 60 secondes, 1080p30 en cours de rendu** : pluie animée, impacts et
-  cercles sur le bassin, vapeur du thé, reflets, feuillage et respiration discrète.
-- **Petite forme centrale liée à la voix demandée**, prototype en préparation ;
-  intégration et revue du film final encore à faire.
+- **41 prises AI33 complètes**, 80 245 caractères normalisés ; sources vocales
+  de 6 520,007 s, assemblées en une timeline de **7 200 s** avec pauses naturelles.
+- **Boucle 1080p30 terminée et contrôlée** : les 60 s sources sont raccordées
+  en **59 s / 1 770 images**, fondu d’une seconde sans perte. Huit planches revues.
+  Pluie, impacts et cercles sur le bassin, vapeur, reflets, feuillage et chat animés.
+- **Petite forme centrale liée à la voix** prête pour le rendu long. Un test
+  court du mux est validé, audio copié identique au mix ; export final lancé,
+  contrôle du film complet et livraison restent à terminer.
 - **Ambiance pluie/eau et musique originale discrète** :
   [provenance et contrôles des stems](cozy-garden/episode-01/AMBIENCE.md).
-- **SRT anglais activable**, sans transcription incrustée en permanence.
+- **Mix terminé : −19,01 LUFS / −4,98 dBTP** ; aucune musique de la référence reprise.
+- **SRT anglais activable, 1 322 cues contrôlés** contre l’intégralité du texte
+  et des timings fournis, sans chevauchement. Les cues brefs ont été corrigés.
+  Pas de transcription incrustée en permanence.
 
 **Aucun long jardin terminé ni livré sur GoFile ou Discord à cette étape.**
-La durée de 2:00:00, le rendu réel, les raccords, le mix et les sous-titres
-restent à vérifier sur les fichiers assemblés. Une quantité de mots ou un
-contrôle technique seul ne prouve pas une validation artistique ou sonore.
+La timeline vocale est bien de 2:00:00 ; le MP4 final avec visualiseur reste à
+exporter et à contrôler. L’alignement SRT a été vérifié numériquement, sans
+nouvelle écoute acoustique ni import YouTube revendiqués. Les mesures seules
+ne constituent pas une validation artistique ou sonore du film complet.
+
+**AI33 est confirmé par l’utilisateur**. Sur les 3 millions de caractères
+annoncés, cet épisode représente environ **37 films de taille comparable
+avant retouches**, essais et autres consommations ; ce n’est pas un solde
+vérifié du compte. **Kokoro : recherche future seulement**, aucune installation
+ni substitution de la voix en cours.
 
 La [nouvelle bio](cozy-garden/channel-bio-en.txt) est prête, sans nouvel envoi.
 Le kit nom/bio/avatar précédent a déjà été reçu sur Discord, confirmé par
@@ -39,8 +52,10 @@ privé **DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS** malgré le changement de nom.
 Aucune valeur de webhook ou réponse privée de service ne doit entrer dans Git.
 
 Le [helper de livraison](cozy-garden/episode-01/deliver.py) prépare trois titres,
-miniature, description, histoire et SRT depuis la vraie timeline. Les gardes
-SHA, reçus et verrous sont conservés. Aucun upload ou message ne doit être
+miniature, description, histoire et SRT depuis la timeline maintenant présente.
+`cozy-garden/episode-01/build.py package` appelle désormais le rendu complet
+avec visualiseur, puis `verify` contrôle le fichier exact. Les gardes SHA,
+reçus et verrous sont conservés. Aucun upload ou message ne doit être
 présenté comme envoyé avant confirmation ; aucune publication YouTube n’a été
 réalisée pour cet épisode.
 

@@ -20,7 +20,7 @@
     1080
   ],
   "animation": {
-    "loop_seconds": 60,
+    "loop_seconds": 59,
     "fps": 30,
     "requested_details": [
       "Rain with depth",
@@ -30,9 +30,11 @@
       "Very gentle foliage",
       "Sleeping-cat breathing",
       "Small original central voice-responsive orb"
-    ]
+    ],
+    "native_cycle_seconds": 60,
+    "loop_closure": "One-second cyclic crossfade into the next cycle, lossless intermediate; reviewed before long render"
   },
   "full_episode_requested_seconds": 7200,
-  "delivery_state": "production in progress; not delivered",
+  "delivery_state": "Two-hour export running; final not delivered",
   "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS"
 }

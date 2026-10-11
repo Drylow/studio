@@ -19,35 +19,53 @@ Les anciennes directions marines, botaniques et pixel art restent des archives.
   huit histoires originales anglaises dans le même jardin et ses dépendances.
   Voir `episode-01/CONTENT_REVIEW.md` et `script-review.json` : chaque texte
   est approuvé pour narration uniquement avec son SHA-256 exact.
-- **Voix en production** : le plan compte 40 segments de chapitre et un
-  accueil. Ce nombre n’indique pas que toutes les prises sont déjà terminées.
-  Les résultats privés et leurs contrôles déterminent ce qui est réutilisable.
-- **Boucle visuelle de 60 s, 1080p30 en cours de rendu**. Dernière demande :
-  pluie animée, impacts et cercles dans le bassin, vapeur du thé. Feuillage,
-  reflets et respiration discrète du chat complètent le mouvement.
-- **Petite forme centrale liée à la voix demandée par l’utilisateur**, en
-  prototypage ; intégration au film et vérification visuelle encore à faire.
+- **41 prises AI33 complètes**, accueil compris, **80 245 caractères normalisés**.
+  Les sources totalisent **6 520,007 s** ; timeline vocale de **7 200 s** achevée,
+  pause de paragraphe calculée à **2,6008 s**, sans répétition de l’histoire.
+- **Boucle visuelle terminée et contrôlée** : source 60 s, raccord final
+  **59 s / 1 770 images / 1080p30**, fondu d’une seconde encodé sans perte par
+  `close_loop.py`. Huit planches revues et raccord comparé aux images voisines.
+  Pluie animée, impacts/cercles, vapeur, reflets, feuillage et chat sont présents.
+- **Petite forme centrale liée à la voix demandée par l’utilisateur** prête
+  pour le long. Le test court du mux final est validé : 16 s, 480 images,
+  neuf chapitres et audio copié identique. L’export complet est lancé ;
+  contrôle du fichier final et livraison restent à faire.
   Le détail de la forme chez Stephen Dalton n’a pas été vérifié par lecture
   de sa vidéo : `cozy-garden/REFERENCE_VISUALIZER.md` distingue les observations
   réelles de la description donnée par l’utilisateur.
 - **Son** : pluie/eau du jardin et musique originale discrète sous la voix.
   Les stems et leur provenance sont dans `episode-01/AMBIENCE.md`.
   Aucun audio du créateur de référence n’est employé.
-- **Sous-titres SRT anglais activables**, sans transcription incrustée.
-  Les timings et le mix doivent être contrôlés après assemblage réel.
+- **Mix terminé**, mesure **−19,01 LUFS / −4,98 dBTP**.
+- **SRT anglais activable : 1 322 cues contrôlés**, les 14 541 mots présents
+  dans l’ordre, alignement sur les timings fournis, aucun chevauchement.
+  Les 26 cues brefs sont maintenant d’au moins une seconde et six fins ont
+  été corrigées pour conserver le dernier mot. Rapport privé
+  `output/nature-sleep/garden-production/qa/captions-review.json`.
+  Aucun sous-titre incrusté, aucune nouvelle écoute ni import CC revendiqués.
 
-La cible est **2:00:00** de récit continu avec pauses naturelles, sans répétition
-artificielle de l’histoire. **Aucun film jardin de deux heures terminé, aucun
-GoFile final, aucun envoi Discord ni publication YouTube à ce stade.** Le rendu,
-le son, les sous-titres et le MP4 final doivent encore passer leurs contrôles.
-Une revue de texte ou une égalité mathématique des extrémités d’une boucle ne
-constitue pas une validation artistique ou sonore du film.
+La timeline vocale est mesurée à **2:00:00**, mais **aucun film jardin de deux
+heures terminé, aucun GoFile final, aucun envoi Discord ni publication YouTube
+à ce stade**. Le MP4 avec visualiseur doit encore être exporté et contrôlé.
+Les validations de texte, de timings ou de niveaux ne constituent pas une
+écoute du mix ni une revue du film complet.
+
+**AI33 est confirmé par l’utilisateur**, avec un budget annoncé de **3 millions
+de caractères**. À 80 245 caractères normalisés par épisode, cela représente
+un ordre de grandeur de **37 films avant retouches**, essais et autres usages ;
+ce n’est pas un solde vérifié ni une promesse de facturation exacte.
+**Kokoro reste une recherche future**, sans installation ni remplacement de
+la voix active. Ne pas relancer ou changer de fournisseur pour ce film.
 
 Résultats privés : `output/nature-sleep/garden-production/`.
 Le helper `cozy-garden/episode-01/deliver.py` est prêt pour le film
 `Silent-Little-Worlds-The-Lantern-Garden-2-Hours.mp4`, trois titres, description,
-miniature, histoire et SRT. Ne pas lancer le kit avant la timeline réelle.
-Les gardes SHA, reçus et verrous de livraison sont conservés.
+miniature, histoire et SRT. La timeline réelle est désormais présente.
+`cozy-garden/episode-01/build.py package` appelle maintenant le visualiseur
+complet avec gardes SHA du fond, puis extrait la miniature finale. L’ancien
+export sans orbe n’est plus la fonction de cette commande. Terminer par
+`build.py verify` sur le MP4 réel. Ne pas lancer un second rendu en parallèle
+du root. Les gardes SHA, reçus et verrous de livraison sont conservés.
 
 Le salon existant reste lié à **DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS** ; le
 renommage public ne change pas ce binding privé. Ne jamais publier sa valeur.

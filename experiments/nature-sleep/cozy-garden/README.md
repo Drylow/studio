@@ -39,23 +39,34 @@ sous la pergola lorsque le jardin se repose.
 - Relecture : [CONTENT_REVIEW.md](episode-01/CONTENT_REVIEW.md).
 - Approbation des **octets exacts**, liée aux SHA-256 :
   [script-review.json](episode-01/script-review.json).
-- La voix est en production : **40 segments de chapitre et un accueil** dans
-  le plan de narration. Ne pas confondre ce nombre avec des prises toutes
-  déjà terminées et contrôlées. Les résultats privés font foi.
+- Les **41 prises AI33 sont produites**, soit 40 segments de chapitre et
+  l’accueil. Leur texte représente **80 245 caractères normalisés**. Les
+  résultats et l’audit des transcriptions sont privés ; ils ne remplacent
+  pas une écoute de la voix ni une validation de sa qualité sonore.
 - Toute modification du texte invalide son ancienne approbation. Ne pas
   réutiliser une prise sur la seule ressemblance des noms de fichiers.
 
-La durée finale doit être mesurée puis assemblée à **2:00:00** avec des pauses
-naturelles. La seule quantité de mots ne prouve pas la durée. Les histoires
-ne doivent pas être répétées pour remplir les deux heures.
+Les sources vocales totalisent **6 520,007 secondes**. La timeline vocale est
+maintenant assemblée et mesurée à **7 200 secondes**, avec une pause de
+paragraphe calculée à **2,6008 secondes** et les respirations de chapitre.
+`timeline.json`, `timeline-words.json` et `voice-timeline.flac` sont présents
+dans le dossier privé. Les histoires sont continues, sans répétition pour
+remplir les deux heures. Le mix et le film encodé demandent encore leurs
+contrôles propres ; une timeline de deux heures n’est pas le film livré.
 
 ## Animation et habillage
 
-Une boucle **60 secondes, 1920 × 1080, 30 images/s** est en cours de rendu avec
-[scene.html](scene.html) et [render.mjs](render.mjs). La dernière demande de
-l’utilisateur insiste sur la pluie animée, les impacts et cercles dans le
-bassin, ainsi que la vapeur du thé. Le travail comprend également reflets,
-feuillage discret et respiration locale du chat. Les zones sous l’abri
+Le rendu source de **60 secondes, 1920 × 1080, 30 images/s** est complet.
+[close_loop.py](close_loop.py) en a tiré une boucle de **59 secondes,
+1 770 images**, encodée sans perte, avec un fondu de raccord d’une seconde.
+Cette boucle corrigée est maintenant contrôlée : 1 770 images vérifiées,
+raccord comparé aux images voisines et huit planches effectivement revues.
+Le master et les mouvements viennent de [scene.html](scene.html) et
+[render.mjs](render.mjs).
+
+La pluie animée, les impacts et cercles dans le bassin et la vapeur du thé
+répondent à la dernière demande utilisateur. Reflets, feuillage discret et
+respiration locale du chat complètent le mouvement. Les zones sous l’abri
 doivent rester cohérentes ; la pluie ne doit pas traverser le toit.
 
 Le code et la présence d’effets ne suffisent pas à valider leur rendu :
@@ -64,16 +75,26 @@ raccord, puis vérifier le MP4 final. Ne pas déclarer la boucle ou les deux
 heures validées avant leurs contrôles.
 
 L’utilisateur demande aussi une **petite forme centrale organique liée à la
-voix**. Un prototype original est en préparation, à relier à l’enveloppe de
-notre narration et à laisser revenir doucement au repos pendant les pauses.
-Son intégration et son contrôle dans le film final restent à faire. La forme
+voix**. Le moteur [visualizer.py](episode-01/visualizer.py) la pilote par notre
+narration et la laisse revenir doucement au repos pendant les pauses.
+Le mix et les contrôles du fond sont terminés. Le test court du mux final
+est validé : 16 s, 480 images, neuf chapitres et copie audio identique.
+L’export complet avec la forme centrale est lancé. **Le film final n’est pas encore achevé**.
+La forme
 décrite chez Stephen Dalton n’a pas été vérifiée par lecture de sa vidéo :
 voir [REFERENCE_VISUALIZER.md](REFERENCE_VISUALIZER.md). Aucun de ses médias
 n’est repris dans notre production.
 
-Sous-titres : fichier **SRT anglais activable**, sans transcription permanente
-incrustée. Le SRT devra être ajouté dans YouTube Studio pour que le bouton CC
-propose ces sous-titres. Cet habillage ne garantit pas la monétisation.
+Sous-titres : **SRT anglais activable, 1 322 cues**, sans transcription
+permanente incrustée. Contrôle exhaustif contre les 14 541 mots du script et
+les timings de la timeline : aucun mot perdu ni chevauchement. Les 26 cues
+initialement trop brefs ont été prolongés à une seconde ; les six fins qui
+rognaient légèrement le dernier mot ont été corrigées. Rapport privé :
+`output/nature-sleep/garden-production/qa/captions-review.json`, lié au SHA
+exact du SRT. Ce contrôle ne prétend pas à une nouvelle écoute acoustique.
+Le SRT devra être ajouté dans YouTube Studio pour que CC le propose ; cet
+import et l’alignement sur le film final restent à vérifier. Cet habillage
+ne garantit pas la monétisation.
 
 ## Fond sonore et fabrication
 
@@ -83,9 +104,10 @@ L’ambiance du jardin est nouvelle ; elle ne contient pas le roulement du
 train. La musique est la composition originale du projet, réutilisée avec
 contrôle de son empreinte. Aucun audio de Stephen Dalton n’est employé.
 
-Les contrôles numériques des stems ne remplacent pas l’écoute du mix final.
-La voix, les raccords entre prises, les noms propres, les niveaux et le
-timing des sous-titres demandent leur propre vérification.
+Le mix final est terminé et mesuré à **−19,01 LUFS / −4,98 dBTP**. Ces
+mesures ne remplacent pas l’écoute du mix. La voix, les raccords entre
+prises et les noms propres demandent leur propre vérification. Le contrôle SRT porte sur les timings fournis et ne
+prouve pas à lui seul la synchronisation perçue de chaque mot.
 
 Fichiers de travail privés : `output/nature-sleep/garden-production/`.
 [narrate.py](episode-01/narrate.py) reprend les requêtes et contrôle les textes ;
@@ -94,11 +116,39 @@ Ne pas relancer aveuglément une génération payante lorsque son résultat
 est incertain. Ni les sorties privées ni les réponses de services ne vont
 dans le dépôt public.
 
-## Livraison prévue
+## Fournisseur vocal et ordre de grandeur
+
+L’utilisateur confirme l’usage d’**AI33** et un budget annoncé de **3 millions
+de caractères**. Avec **80 245 caractères normalisés** pour cet épisode,
+l’ordre de grandeur est **37 films de taille comparable avant retouches**,
+essais, régénérations et autres consommations. Ce calcul n’est pas un solde
+vérifié du compte ni une garantie des règles de décompte du fournisseur.
+
+**Kokoro reste une recherche d’alternative future**. Aucune installation,
+conversion de la production active ou nouvelle voix locale n’a été lancée.
+Ne pas changer de fournisseur pour terminer ce film.
+
+## Assemblage final et livraison prévue
+
+Après présence du mix terminé et des revues SHA de la boucle, la commande
+courte est désormais :
+
+```sh
+.venv/bin/python experiments/nature-sleep/cozy-garden/episode-01/build.py package
+.venv/bin/python experiments/nature-sleep/cozy-garden/episode-01/build.py verify
+```
+
+`package` appelle **le rendu complet du visualiseur lié à la voix**, avec
+contrôles du fond, puis extrait la miniature du film final. Il ne produit
+plus l’ancien export sans orbe. `verify` doit ensuite contrôler le fichier
+réel, ses empreintes et son décodage complet. Ne pas lancer cette commande
+en doublon pendant l’export déjà suivi par le root.
+
 
 [deliver.py](episode-01/deliver.py) prépare trois titres, description, chapitres
 issus de la vraie timeline, tags, commentaire, histoire intégrale et SRT.
-Le kit ne doit pas être exécuté avant la présence de cette timeline.
+La timeline existe désormais ; le kit peut être préparé à partir d’elle,
+mais l’upload reste conditionné aux contrôles du film final exact.
 
 Nom du film attendu :
 `Silent-Little-Worlds-The-Lantern-Garden-2-Hours.mp4`.

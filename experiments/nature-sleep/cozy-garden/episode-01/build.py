@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 import re
 import subprocess
+import sys
 import textwrap
 from fractions import Fraction
 
@@ -67,7 +68,14 @@ def captions(words):
     lines, info = [], []
     for i, cue in enumerate(cues):
         start = cue[0]['s']
-        end = min(cue[-1]['e'] + .25, cues[i + 1][0]['s'] - .02 if i + 1 < len(cues) else LENGTH)
+        last_word_end = cue[-1]['e']
+        next_start = cues[i + 1][0]['s'] if i + 1 < len(cues) else LENGTH
+        if last_word_end > next_start + .000001:
+            raise ValueError('Native word alignment overlaps the next caption; review the alignment')
+        # Keep the final word visible; use a small gap only when it fits.
+        # Brief captions can remain for one second when the following pause allows it.
+        end = min(max(last_word_end + .25, start + 1),
+                  max(last_word_end, next_start - .02), next_start, LENGTH)
         text = '\n'.join(textwrap.wrap(' '.join(w['w'] for w in cue), width=42, break_long_words=False))
         if not 0 <= start < end <= LENGTH or len(text.splitlines()) > 2:
             raise ValueError('Caption outside timeline or too many lines')
@@ -255,13 +263,16 @@ def loop_info():
 
 def package():
     source_loop = loop_info()
+    for name in ('technical-review.json', 'visual-review.json'):
+        review = json.loads((OUT / 'qa' / name).read_text())
+        assert review['sha256'] == source_loop['sha256']
+        assert review.get('technical_pass') or review.get('approved_as_render_background')
     DELIVERY.mkdir(parents=True, exist_ok=True)
-    run(['ffmpeg', '-hide_banner', '-loglevel', 'warning', '-stream_loop', '-1', '-i', str(LOOP),
-         '-i', str(OUT / 'final-audio.m4a'), '-i', str(OUT / 'chapters.ffmeta'), '-map', '0:v:0', '-map', '1:a:0',
-         '-map_metadata', '2', '-map_chapters', '2', '-t', str(LENGTH), '-frames:v', str(LENGTH * 30), '-c:v', 'copy', '-c:a', 'copy',
-         '-movflags', '+faststart', '-y', str(VIDEO)])
-    write(OUT / 'package-source.json', {'loop': source_loop,
-          'audio_sha256': sha(OUT / 'final-audio.m4a'), 'chapters_sha256': sha(OUT / 'chapters.ffmeta')})
+    run([sys.executable, str(HERE / 'visualizer.py'), '--background', str(LOOP),
+         '--voice', str(OUT / 'voice-timeline.flac'), '--mix', str(OUT / 'final-audio.m4a'),
+         '--chapters', str(OUT / 'chapters.ffmeta'), '--duration', str(LENGTH),
+         '--allow-long-render', '--warm-cache', '--threads', '4',
+         '--out', str(OUT / 'visualizer-final'), '--final-path', str(VIDEO)])
     run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-ss', '9', '-i', str(VIDEO), '-frames:v', '1',
          '-q:v', '2', '-y', str(DELIVERY / 'Silent-Little-Worlds-Thumbnail.jpg')])
     print(json.dumps({'video': str(VIDEO.relative_to(ROOT)), 'bytes': VIDEO.stat().st_size}))
@@ -280,14 +291,27 @@ def verify():
     assert source['loop']['sha256'] == sha(LOOP)
     assert source['audio_sha256'] == sha(OUT / 'final-audio.m4a')
     assert source['chapters_sha256'] == sha(OUT / 'chapters.ffmeta')
-    run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-xerror', '-threads', '2', '-i', str(VIDEO),
-         '-map', '0:v:0', '-map', '0:a:0', '-f', 'null', '-'])
-    report = {'technical_pass': True, 'sha256': sha(VIDEO), 'bytes': VIDEO.stat().st_size,
+    video_sha = sha(VIDEO)
+    profile_path = ROOT / source['visualizer_profile']['file']
+    assert sha(profile_path) == source['visualizer_profile']['sha256']
+    profile = json.loads(profile_path.read_text())
+    assert profile['sha256'] == source['video_sha256'] == video_sha
+    assert profile['background_sha256'] == source['loop']['sha256']
+    assert profile['mix_sha256'] == source['audio_sha256']
+    assert profile['chapters_sha256'] == source['chapters_sha256']
+    assert profile['voice_sha256'] == sha(OUT / 'voice-timeline.flac')
+    assert profile['narrator_only_rms'] and not profile['background_is_still']
+    assert profile['full_decode_pass'] and profile['full_decode_streams'] == ['0:v:0', '0:a:0']
+    assert profile['frames'] == 216000 and profile['duration_seconds'] == LENGTH
+    # The renderer has already decoded both streams of this exact SHA in full.
+    # Reuse that evidence rather than repeating the same two-hour decode.
+    report = {'technical_pass': True, 'sha256': video_sha, 'bytes': VIDEO.stat().st_size,
               'duration': float(probe['format']['duration']), 'video_frames': int(video['nb_frames']),
               'resolution': [1920, 1080], 'fps': 30, 'audio_hz': 48000, 'audio_channels': 2,
               'full_av_decode': True, 'chapters': len(probe['chapters']), 'mix': json.loads((OUT / 'mix-level.json').read_text()),
               'source_loop': source['loop'],
-              'note': 'Full machine decode. The source loop duration is probed; a separate visual review is still required.'}
+              'visualizer_profile': source['visualizer_profile'],
+              'note': 'Full AV decode recorded by the renderer and bound to this exact SHA. Separate visual review is still required.'}
     write(OUT / 'technical-review.json', report)
     print(json.dumps(report))
 
