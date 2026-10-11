@@ -1,0 +1,217 @@
+{
+  "date_local": "2026-10-11",
+  "request": "Rapprocher le dessin de nos personnages de la capture jointe, tout le casting à tête ronde blanche.",
+  "user_reference": {
+    "path": "output/imagegen/quota-style-test-2026-10-11-v3/references/personnage-utilisateur.png",
+    "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+  },
+  "method": "Prompts écrits par Codex, sans augmentation automatique. Maître de lieu toujours envoyé ; nouvelle ancre de personnages examinée avant les scènes 02 et 03.",
+  "generations": [
+    {
+      "id": "01-premier",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "Orin indique le casier ; Milo porte sa caisse.",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-A"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-prompt.txt",
+        "sha256": "d46af38f4c58b8f5acea7c50e66d9878176f31c7bae7404ca3050601b11c350c"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/references/personnage-utilisateur.png",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7",
+          "sent_index": 1,
+          "role": "style_personnages_utilisateur"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v2/01-echange.png",
+          "sha256": "b1c84599d4154c660a36f7cb9605ecda451e6a3620ab6b633a5deff4b76ea70c",
+          "sent_index": 2,
+          "role": "cible_et_maitre_baie_A"
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-echange.png",
+        "sha256": "c565a4312f0b32ea0a1015b75306609ba7dfc9714f64cbcbe9b96c46ee3e7514",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI du guide imagegen vers le CLI Proxy du .env",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Têtes plus petites, corps plus adultes et manteaux plus mats. Yeux encore grands ; version archivée après correction.",
+      "selected_for_style_comparison": false,
+      "user_style_approval_received": false,
+      "production_ready": false
+    },
+    {
+      "id": "01-corrige",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "Même échange, même caisse portée.",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-A"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-correction-prompt.txt",
+        "sha256": "7b7cbc1bc1d29a9beb81ed1acec42d0df33b2edb466b94513346f810082a273c"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/references/personnage-utilisateur.png",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7",
+          "sent_index": 1,
+          "role": "style_yeux_et_mains_utilisateur"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-echange.png",
+          "sha256": "c565a4312f0b32ea0a1015b75306609ba7dfc9714f64cbcbe9b96c46ee3e7514",
+          "sent_index": 2,
+          "role": "cible_et_maitre_baie_A"
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-echange-corrige.png",
+        "sha256": "241fe1052bcc5a5b72ae50543b60a76229b1b1f9cfa499a3d4e0633d89ea241e",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI du guide imagegen vers le CLI Proxy du .env",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Trois têtes blanches rondes examinées. Yeux nettement réduits ; gabarit adulte et vêtements plus plats conservés. Mains légèrement affinées, encore plus épaisses que dans la capture.",
+      "selected_for_style_comparison": true,
+      "user_style_approval_received": false,
+      "production_ready": false
+    },
+    {
+      "id": "02",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "Remise d’une carte ; caisse dans l’autre main.",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/02-prompt.txt",
+        "sha256": "240d9c18dacae8d24a6ddfd5d7697c8c37257fde3e531b961caf5e354b611c7e"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/references/personnage-utilisateur.png",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7",
+          "sent_index": 1,
+          "role": "style_personnages_utilisateur"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v2/02-carte.png",
+          "sha256": "78929cce6b42c674180a7133213c9bfab21deb5a4e926c8895fd55770d18f7ff",
+          "sent_index": 2,
+          "role": "cible_et_maitre_baie_A"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-echange-corrige.png",
+          "sha256": "241fe1052bcc5a5b72ae50543b60a76229b1b1f9cfa499a3d4e0633d89ea241e",
+          "sent_index": 3,
+          "role": "personnages_et_maitre_baie_A_corriges"
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/02-carte.png",
+        "sha256": "57cd8ca1c4ad96eaa60cef6efb1ac8672b59b12b3c35f5ff4f601aef80189ad0",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI du guide imagegen vers le CLI Proxy du .env",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Deux têtes rondes blanches examinées, yeux et têtes plus petits que dans V2. Carte et caisse restent dans leurs mains ; baie reconnaissable. Yeux proportionnellement un peu plus grands que dans le maître corrigé et nouvelle pièce de manche visible.",
+      "selected_for_style_comparison": true,
+      "user_style_approval_received": false,
+      "production_ready": false
+    },
+    {
+      "id": "03",
+      "phase": "test_style_sans_voix",
+      "illustrative_narration": "Milo charge la caisse ; deux travailleurs transportent une caisse au fond.",
+      "place": "quai-B",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-B",
+        "travailleur-C"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/03-prompt.txt",
+        "sha256": "8070d0d6f4bb8f3f91c30b5efc1a607ffaae68a6368d1ab44e90f43f8601a2cf"
+      },
+      "ordered_sent_images": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/references/personnage-utilisateur.png",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7",
+          "sent_index": 1,
+          "role": "style_personnages_utilisateur"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v2/03-quai.png",
+          "sha256": "bab07b54097da43aed5a659c672e859c47f0470bcde3f61fa6363032c5876fc6",
+          "sent_index": 2,
+          "role": "cible_et_maitre_quai_B"
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11-v3/01-echange-corrige.png",
+          "sha256": "241fe1052bcc5a5b72ae50543b60a76229b1b1f9cfa499a3d4e0633d89ea241e",
+          "sent_index": 3,
+          "role": "personnages_corriges_pas_decor"
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11-v3/03-quai.png",
+        "sha256": "5541eb0c4b5304fb8fc15140ef44f6720e46a75131e83c07b7eb9dfb3d589ffa",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI du guide imagegen vers le CLI Proxy du .env",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Quatre têtes rondes blanches examinées ; gabarits plus adultes, yeux et silhouettes plus proches de la référence. Même quai, pluie et action. Coutures, pièce de manche, détails de caisse et position des mains restent variables.",
+      "selected_for_style_comparison": true,
+      "user_style_approval_received": false,
+      "production_ready": false
+    }
+  ],
+  "selected_images": [
+    "01-echange-corrige.png",
+    "02-carte.png",
+    "03-quai.png"
+  ],
+  "limits": "Rapprochement visuel examiné ; pas reproduction exacte, proportion mesurée garantie, validation utilisateur ou cohérence de séquence finale."
+}
