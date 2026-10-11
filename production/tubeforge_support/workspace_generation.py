@@ -55,6 +55,7 @@ def _prepare(p, s, body):
     provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     if body.get("image_provider", provider) != provider:
         raise HTTPException(409, "Le fournisseur confirmé ne correspond pas à celui du projet")
+    api._check_image_provider(provider)
     if provider == "google_flow" and not google_flow.configured():
         raise HTTPException(503, "Google Flow n'est pas configuré")
     if provider == "cli_proxy" and (not config.get("PROXY_API_KEY") or not config.get("PROXY_BASE_URL")):

@@ -1,0 +1,312 @@
+{
+  "date": "2026-10-11",
+  "provider": "google_flow_via_useapi",
+  "prompt_author": "Codex",
+  "purpose": "Three newly generated visual references for each fictional theme",
+  "model_source": "private_runtime_configuration",
+  "scenes": [
+    {
+      "theme": "pokemon",
+      "stem": "01-trainer-and-partner",
+      "location": "forest-trail",
+      "characters": [
+        "adult-trainer",
+        "Pikachu"
+      ],
+      "prompt": "pokemon/01-trainer-and-partner-prompt.txt",
+      "reference": "01-pokemon.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "request_started": true,
+      "image": "pokemon/01-trainer-and-partner.jpg",
+      "image_sha256": "2a4e652699261561c7c8aabf253518c6e9865ba7edbbe61fc016ffe9674733f6",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 31.24,
+      "visual_review": "Trainer outfit, round white face and hands, recognizable yellow companion and forest style match approved reference.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "pokemon",
+      "stem": "02-care-at-the-center",
+      "location": "healing-center",
+      "characters": [
+        "adult-trainer",
+        "adult-nurse",
+        "Pikachu"
+      ],
+      "prompt": "pokemon/02-care-at-the-center-prompt.txt",
+      "reference": "01-pokemon.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "request_started": true,
+      "image": "pokemon/02-care-at-the-center.jpg",
+      "image_sha256": "3faf062e52d0b4c6f65a7b92216be24be28493420a27be9a93630499f7ea9ccd",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 32.33,
+      "visual_review": "Both humanoids retain white round heads; trainer and nurse interact in a new indoor setting. Shelf labels contain small abstract marks, not readable captions. Paw examination beat simplified to cloth handoff.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "pokemon",
+      "stem": "03-friendly-training-battle",
+      "location": "outdoor-battle-court",
+      "characters": [
+        "adult-trainer",
+        "adult-opponent",
+        "Pikachu",
+        "Squirtle"
+      ],
+      "prompt": "pokemon/03-friendly-training-battle-prompt.txt",
+      "reference": "01-pokemon.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "request_started": true,
+      "image": "pokemon/03-friendly-training-battle.jpg",
+      "image_sha256": "550009dfe058ac72e5c12d23629911502ff77874649a0d2c58e109f090d6dcbc",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 33.98,
+      "visual_review": "Both adult trainers have round white heads; recognizable yellow mouse and blue turtle, clear left-right training staging.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "naruto",
+      "stem": "01-ninja-training",
+      "location": "forest-training-ground",
+      "characters": [
+        "adult-ninja"
+      ],
+      "prompt": "naruto/01-ninja-training-prompt.txt",
+      "reference": "02-naruto-corrige.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/02-naruto-corrige.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "04d6cb9e3f4c7bd19aee154c6bf9c8ddfc5954d73e8d275ac343f56af7734ce2"
+        }
+      ],
+      "request_started": true,
+      "image": "naruto/01-ninja-training.jpg",
+      "image_sha256": "b4afd6be355fddbcfabb8b536a555a8e6e00994c1d5ba8d508fedf17903bfceb",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 30.29,
+      "visual_review": "Adult white round-headed ninja, orange-black outfit and headband; readable kunai training pose and detailed stream setting.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "naruto",
+      "stem": "02-ramen-break",
+      "location": "village-ramen-stall",
+      "characters": [
+        "adult-ninja",
+        "adult-instructor",
+        "adult-cook"
+      ],
+      "prompt": "naruto/02-ramen-break-prompt.txt",
+      "reference": "02-naruto-corrige.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/02-naruto-corrige.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "04d6cb9e3f4c7bd19aee154c6bf9c8ddfc5954d73e8d275ac343f56af7734ce2"
+        }
+      ],
+      "request_started": true,
+      "image": "naruto/02-ramen-break.jpg",
+      "image_sha256": "52690e12d5c8543606363ecb12fc01c397c0fcbdd8a348f666a82c5bf513861d",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 32.16,
+      "visual_review": "Foreground characters and background crowd retain round white heads. Outfit, headband, bowls and hand gestures readable. Small costume symbols present.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "naruto",
+      "stem": "03-shadow-clone-exercise",
+      "location": "stream-training-course",
+      "characters": [
+        "adult-ninja",
+        "adult-shadow-clone",
+        "adult-instructor"
+      ],
+      "prompt": "naruto/03-shadow-clone-exercise-prompt.txt",
+      "reference": "02-naruto-corrige.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/02-naruto-corrige.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "04d6cb9e3f4c7bd19aee154c6bf9c8ddfc5954d73e8d275ac343f56af7734ce2"
+        }
+      ],
+      "request_started": true,
+      "image": "naruto/03-shadow-clone-exercise.jpg",
+      "image_sha256": "26af2b9f4571491b41873956feb8403d1681a7bfeeff2c72de7935a96e1ff3c3",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 35.25,
+      "visual_review": "Two white round-headed adult ninjas and instructor, readable rope/log exercise. Sleeve details vary slightly; reference is for visual style, not a locked costume sheet.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "god-of-war",
+      "stem": "01-warrior-on-the-pass",
+      "location": "snowy-mountain-path",
+      "characters": [
+        "Kratos-inspired-warrior"
+      ],
+      "prompt": "god-of-war/01-warrior-on-the-pass-prompt.txt",
+      "reference": "03-kratos.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/03-kratos.jpg",
+          "role": "user_approved_theme_style",
+          "sha256": "9a76ded19bd9996a06df5754e8690c994964e3fb1293f2b743b1873e9b531b38"
+        }
+      ],
+      "request_started": true,
+      "image": "god-of-war/01-warrior-on-the-pass.jpg",
+      "image_sha256": "fb5d5f53a24291d8ced99e36744ab7eae46d9ad2c43ba3583271eb7e3a59fa7a",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 33.05,
+      "visual_review": "White round warrior face, red marking, dark covered torso, leather armor and axe match approved identity; snowy Nordic setting readable.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "god-of-war",
+      "stem": "02-axe-at-the-forge",
+      "location": "nordic-forge",
+      "characters": [
+        "Kratos-inspired-warrior",
+        "adult-blacksmith"
+      ],
+      "prompt": "god-of-war/02-axe-at-the-forge-correction-prompt.txt",
+      "reference": "03-kratos.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/fictional-theme-references-2026-10-11/god-of-war/02-axe-at-the-forge.jpg",
+          "role": "edit_target",
+          "sha256": "cf225d72f4336c212b69550328aa369efd1eb5d6f3bb9ae8d6089b3f935aeceb"
+        },
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/03-kratos.jpg",
+          "role": "approved_costume_reference",
+          "sha256": "9a76ded19bd9996a06df5754e8690c994964e3fb1293f2b743b1873e9b531b38"
+        }
+      ],
+      "request_started": true,
+      "image": "god-of-war/02-axe-at-the-forge-v2.jpg",
+      "image_sha256": "0f7e64147ebc403c476607e6dec2449d4d1d0e36d14ea0c5d66ece42b422ac73",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 32.19,
+      "correction_started": true,
+      "previous_version": {
+        "image": "god-of-war/02-axe-at-the-forge.jpg",
+        "image_sha256": "cf225d72f4336c212b69550328aa369efd1eb5d6f3bb9ae8d6089b3f935aeceb",
+        "prompt": "god-of-war/02-axe-at-the-forge-prompt.txt",
+        "review_state": "rejected_by_codex",
+        "reason": "Uncovered white torso despite clothing constraint"
+      },
+      "visual_review": "Corrected torso now fully covered with dark fabric. Both heads white and round; workshop interaction readable. Small facial scratch persists; not a locked character sheet.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    },
+    {
+      "theme": "god-of-war",
+      "stem": "03-temple-confrontation",
+      "location": "snowy-stone-ruins",
+      "characters": [
+        "Kratos-inspired-warrior",
+        "adult-armored-opponent"
+      ],
+      "prompt": "god-of-war/03-temple-confrontation-correction-prompt.txt",
+      "reference": "03-kratos.jpg",
+      "references": [
+        {
+          "path": "output/imagegen/fictional-theme-references-2026-10-11/god-of-war/03-temple-confrontation.jpg",
+          "role": "edit_target",
+          "sha256": "7aee49e6c37bb0d2731fd669b9c1147d94dc5de6adf2ed49ccc8ba95e28becb2"
+        },
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/03-kratos.jpg",
+          "role": "approved_costume_reference",
+          "sha256": "9a76ded19bd9996a06df5754e8690c994964e3fb1293f2b743b1873e9b531b38"
+        }
+      ],
+      "request_started": true,
+      "image": "god-of-war/03-temple-confrontation-v2.jpg",
+      "image_sha256": "05ad02cf36f4f8c349f0c7ad94f786ea9ebd2a6cfde8567c4977313681dde1d5",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "review_state": "reviewed_by_codex",
+      "seconds": 30.62,
+      "correction_started": true,
+      "previous_version": {
+        "image": "god-of-war/03-temple-confrontation.jpg",
+        "image_sha256": "7aee49e6c37bb0d2731fd669b9c1147d94dc5de6adf2ed49ccc8ba95e28becb2",
+        "prompt": "god-of-war/03-temple-confrontation-prompt.txt",
+        "review_state": "rejected_by_codex",
+        "reason": "Uncovered white torso despite clothing constraint"
+      },
+      "visual_review": "Corrected torso fully covered with dark fabric; two white round-headed adults and readable snowy action. Shafts remain near-parallel; retained as a drawing-style reference, not a mechanically validated combat frame.",
+      "user_approval": false,
+      "reference_scope": "drawing_style_and_universe_not_locked_location_or_character_master"
+    }
+  ],
+  "reviewed_by": "Codex",
+  "review_date": "2026-10-11",
+  "selected_reference_count": 9,
+  "user_approval": false
+}

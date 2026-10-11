@@ -72,7 +72,7 @@ def _update_style(s, body):
         if not isinstance(body["archived"], bool):
             raise HTTPException(422, "Le statut archivé doit être vrai ou faux")
         if body["archived"]:
-            if s["id"] == "pov-history":
+            if s["id"] == api._default_style_id():
                 raise HTTPException(409, "Le style commun du studio ne peut pas être archivé")
             if any(p["style_id"] == s["id"] for p in api._profiles()):
                 raise HTTPException(409, "Changez d'abord le style par défaut des chaînes qui utilisent ce style")
@@ -123,7 +123,7 @@ def install(app):
 
     @router.post("/styles", status_code=201)
     async def create_style(body: dict):
-        base = _style(body["base_id"], active=True) if body.get("base_id") else _style("pov-history", active=True)
+        base = _style(body["base_id"], active=True) if body.get("base_id") else _style(api._default_style_id(), active=True)
         s = copy.deepcopy(base)
         s["id"] = "style-" + uuid.uuid4().hex[:12]
         s.update(archived=False, created=now(), workspace_managed=True)
@@ -165,7 +165,7 @@ def install(app):
     async def create_channel(body: dict):
         if not body.get("style_id"):
             raise HTTPException(422, "Choisissez le style par défaut de la chaîne")
-        base = _style("pov-history", active=True)
+        base = _style(api._default_style_id(), active=True)
         c = {"id": "channel-" + uuid.uuid4().hex[:12], "name": "", "handle": "", "description": "",
              "language": "English", "kind": "long", "auto_resolve": False, "target_minutes": 22,
              "voice": copy.deepcopy(base["voice"]), "created": now(), "archived": False}
