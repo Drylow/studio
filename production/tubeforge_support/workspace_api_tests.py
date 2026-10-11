@@ -131,6 +131,29 @@ def test_catalog_uses_existing_proxy_and_sanitizes(workspace):
     assert not future["capability_verified"] and future["suggested_role"] == "image"
 
 
+def test_flow_choice_is_saved_without_migrating_existing_projects(workspace, monkeypatch):
+    client, _, values, _ = workspace
+    existing = create(client)
+    values.update(USEAPI_API_KEY="private-flow-key", USEAPI_IMAGE_MODEL="fixture-flow", IMAGE_PROVIDER="google_flow")
+    monkeypatch.setattr(api.google_flow, "status", AsyncMock(return_value={
+        "configured": True, "available": True, "error": None,
+        "accounts": [{"email": "account@example.invalid", "health": "OK", "backend": "flow"}]}))
+    catalog = client.get("/api/workspace/models").json()
+    assert catalog["defaults"]["image_provider"] == "google_flow"
+    assert "private-flow-key" not in str(catalog)
+    flow = create(client)
+    assert flow["settings"]["visuals"]["image_provider"] == "google_flow"
+    assert flow["settings"]["thumbnail"]["image_provider"] == "google_flow"
+    assert flow["model_snapshot"]["image_model"] == "fixture-flow"
+    assert flow["model_snapshot"]["text_provider"] == "cli_proxy"
+    assert store.get_project(existing["id"])["model_snapshot"]["image_provider"] == "cli_proxy"
+    proxy = create(client, image_model="fixture-image", image_provider="cli_proxy")
+    assert proxy["settings"]["visuals"]["image_provider"] == "cli_proxy"
+    invalid = client.post("/api/workspace/projects", json={"profile_id": "edo-daily", "title": "Wrong",
+        "image_model": "fixture-image", "image_provider": "google_flow"})
+    assert invalid.status_code == 422
+
+
 @pytest.mark.parametrize("failure", ["http", "exception", "shape"])
 def test_catalog_failure_never_echoes_upstream(workspace, failure):
     client, proxy, values, _ = workspace

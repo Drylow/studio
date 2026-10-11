@@ -17,7 +17,7 @@ from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from PIL import Image, UnidentifiedImageError
 
-from app import channels, config, llm, pipeline, store
+from app import channels, config, google_flow, llm, pipeline, store
 from app.util import now, read_json, write_json
 
 
@@ -165,8 +165,10 @@ def _styles(include_archived=False):
 
 def _default_models():
     style = store.get_style("pov-history") or {}
+    provider = config.get("IMAGE_PROVIDER") or "cli_proxy"
     return {"text_model": config.get("SCRIPT_MODEL") or config.get("FAST_MODEL"),
-            "image_model": style.get("visuals", {}).get("image_model", "")}
+            "image_model": google_flow.setting("USEAPI_IMAGE_MODEL") if provider == "google_flow" else style.get("visuals", {}).get("image_model", ""),
+            "image_provider": provider}
 
 
 def _capabilities(item):
@@ -183,7 +185,7 @@ def _capabilities(item):
     return caps
 
 
-async def _catalog():
+async def _proxy_catalog():
     result = {"available": False, "models": [], "defaults": _default_models(),
               "checked_at": now(), "error": None, "generation_tested": False,
               "provider_connection": "not_tested"}
@@ -222,6 +224,40 @@ async def _catalog():
     return result
 
 
+async def _catalog():
+    result = await _proxy_catalog()
+    proxy_available = result["available"]
+    for item in result["models"]:
+        item["provider"] = "cli_proxy"
+    flow = await google_flow.status()
+    result["providers"] = {"cli_proxy": {"available": proxy_available, "error": result["error"]},
+                           "google_flow": flow}
+    model = google_flow.setting("USEAPI_IMAGE_MODEL")
+    if flow["available"] and isinstance(model, str) and re.fullmatch(r"[A-Za-z0-9_.+-]{1,100}", model):
+        result["models"].append({"id": model, "provider": "google_flow", "label": "Google Flow · " + model,
+                                "capabilities": {"text": False, "image": True}, "suggested_role": "image",
+                                "suggested_role_source": "configured_provider", "capability_verified": True})
+    result["available"] = bool(result["models"]) or proxy_available
+    if result["available"]:
+        result["error"] = None
+    return result
+
+
+def _image_provider(body, catalog, defaults=None):
+    defaults = defaults or catalog["defaults"]
+    mid = body.get("image_model", defaults.get("image_model"))
+    provider = body.get("image_provider")
+    if provider is None:
+        if mid == defaults.get("image_model"):
+            provider = defaults.get("image_provider", "cli_proxy")
+        else:
+            matches = [m for m in catalog["models"] if m["id"] == mid and m["capabilities"]["image"] is not False]
+            provider = matches[0].get("provider", "cli_proxy") if len(matches) == 1 else "cli_proxy"
+    if provider not in ("cli_proxy", "google_flow"):
+        raise HTTPException(422, "Choisissez un fournisseur image disponible")
+    return provider
+
+
 def _models(body, catalog, defaults=None):
     if not catalog["available"]:
         raise HTTPException(503, catalog["error"])
@@ -230,9 +266,10 @@ def _models(body, catalog, defaults=None):
     for role in ("text", "image"):
         key = f"{role}_model"
         mid = body.get(key, defaults.get(key))
-        entry = next((m for m in catalog["models"] if m["id"] == mid), None)
+        provider = _image_provider(body, catalog, defaults) if role == "image" else "cli_proxy"
+        entry = next((m for m in catalog["models"] if m["id"] == mid and m.get("provider", "cli_proxy") == provider), None)
         if not entry:
-            raise HTTPException(422, f"Choisissez {key} dans le catalogue actuel du CLI Proxy")
+            raise HTTPException(422, f"Choisissez {key} dans le catalogue actuel du fournisseur")
         if entry["capabilities"][role] is False:
             raise HTTPException(422, f"Le modèle choisi pour {key} ne propose pas ce type de sortie")
         selected[role] = mid
@@ -258,7 +295,8 @@ def _prepare(body, catalog):
             or not math.isfinite(minutes) or not 20 <= minutes <= 25):
         raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
     return {"profile": profile, "title": title, "topic": topic, "script": script, "style_id": sid,
-            "target_duration_seconds": minutes * 60, "models": _models(body, catalog)}
+            "target_duration_seconds": minutes * 60, "models": _models(body, catalog),
+            "image_provider": _image_provider(body, catalog)}
 
 
 def _create(prepared, catalog):
@@ -270,6 +308,8 @@ def _create(prepared, catalog):
                                  "models.text": models["text"], "models.image": models["image"],
                                  "script.model": models["text"], "script.fast_model": models["text"],
                                  "visuals.image_model": models["image"],
+                                 "visuals.image_provider": prepared["image_provider"],
+                                 "thumbnail.image_provider": prepared["image_provider"],
                                  "thumbnail.model": models["image"], "thumbnail.count": 0,
                                  "visuals.auto_characters": False, "visuals.continuity": "off",
                              })
@@ -284,9 +324,11 @@ def _create(prepared, catalog):
              script=prepared["script"], auto_promo_shorts=0, prompts_approved=False,
              workspace_queue={"state": "queued_for_authoring", "created": now()},
              model_snapshot={"text_model": models["text"], "image_model": models["image"],
+                             "image_provider": prepared["image_provider"], "text_provider": "cli_proxy",
                              "selected_at": now(), "catalog_checked_at": catalog["checked_at"],
-                             "transport": "cli_proxy", "capabilities": {
-                                 role: next(m["capabilities"] for m in catalog["models"] if m["id"] == mid)
+                             "transport": prepared["image_provider"], "capabilities": {
+                                 role: next(m["capabilities"] for m in catalog["models"] if m["id"] == mid and
+                                            m.get("provider", "cli_proxy") == (prepared["image_provider"] if role == "image" else "cli_proxy"))
                                  for role, mid in models.items()}},
              human_reviews={}, workspace_references=[],
              style_snapshot={"id": prepared["style_id"], "name": selected_style["name"],
@@ -540,7 +582,8 @@ def install(app):
     async def workspace():
         return {"profiles": _profiles(), "styles": _styles(), "models": await _catalog(), "batches": _batches(),
                 "projects": [_summary(p) for p in store.list_projects(False)],
-                "connection": {"has_proxy": bool(config.get("PROXY_API_KEY") and config.get("PROXY_BASE_URL"))},
+                "connection": {"has_proxy": bool(config.get("PROXY_API_KEY") and config.get("PROXY_BASE_URL")),
+                               "has_google_flow": google_flow.configured()},
                 "settings": {k: config.get(k) for k in (
                     "PROJECT_PARALLEL", "IMAGE_CONCURRENCY", "LLM_CONCURRENCY", "RENDER_BACKEND")} | _default_models()}
 
@@ -559,19 +602,24 @@ def install(app):
 
     @router.post("/models/refresh")
     async def refresh_models():
+        await google_flow.status(force=True)
         return await _catalog()
 
     @router.put("/settings")
     async def settings(body: dict):
         catalog = await _catalog()
         selected = _models(body, catalog)
+        provider = _image_provider(body, catalog)
         style = copy.deepcopy(store.get_style("pov-history"))
         if not style:
             raise HTTPException(409, "Le style commun des chaînes doit être préparé avant de changer les modèles")
         style["visuals"]["image_model"] = selected["image"]
         style["thumbnail"]["model"] = selected["image"]
         store.save_style(style)
-        config.update({"SCRIPT_MODEL": selected["text"], "FAST_MODEL": selected["text"]})
+        changes = {"SCRIPT_MODEL": selected["text"], "FAST_MODEL": selected["text"], "IMAGE_PROVIDER": provider}
+        if provider == "google_flow":
+            changes["USEAPI_IMAGE_MODEL"] = selected["image"]
+        config.update(changes)
         return _default_models()
 
     @router.put("/profiles/{cid}")
@@ -757,7 +805,7 @@ def install(app):
             raise HTTPException(422, "Le lot doit contenir entre 1 et 100 vidéos")
         name = _text(body.get("name", "Batch dirige"), "name", required=True)
         catalog = await _catalog()
-        defaults = {key: body[key] for key in ("text_model", "image_model") if key in body}
+        defaults = {key: body[key] for key in ("text_model", "image_model", "image_provider") if key in body}
         prepared = [_prepare(defaults | row, catalog) for row in rows]
         created = []
         previous_batches = copy.deepcopy(pipeline.list_batches())

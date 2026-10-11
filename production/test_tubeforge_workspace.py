@@ -28,7 +28,9 @@ def test_workspace_deployment_preserves_projects_and_is_repeatable():
         first = {str(p.relative_to(destination)): p.read_bytes() for p in (
             destination / 'app/server.py', destination / 'app/pipeline.py',
             destination / 'app/web/index.html', destination / 'app/steps/script.py',
-            destination / 'app/steps/visuals.py', destination / 'app/web/legacy.html')}
+            destination / 'app/steps/visuals.py', destination / 'app/web/legacy.html',
+            destination / 'app/config.py', destination / 'app/llm.py', destination / 'app/google_flow.py',
+            destination / 'app/steps/thumbnails.py')}
         deploy(destination, seed=False)
         assert before == hashlib.sha256(private_project.read_bytes()).hexdigest()
         assert all((destination / name).read_bytes() == content for name, content in first.items())
