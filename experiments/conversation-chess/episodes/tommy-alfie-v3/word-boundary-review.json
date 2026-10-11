@@ -1,0 +1,579 @@
+{
+  "schema": "conversation-chess-existing-asr-boundary-review-v1",
+  "asr_provenance": {
+    "source": "peaky-blinders-s02e06-english-acquired.mp4",
+    "source_start_metadata": 300.0,
+    "timestamps": "Absolute source coordinates: transcribe-range.py saved start+s.start for each segment and word. Do not add300 again.",
+    "sha256": "8e2ffddd378d91ad3d9d9fb9519a80d8ef17e83dd0454b53084e3da1b5c0c0b5",
+    "inventory_sha256": "041ea7ae87d8307e75275c5332c197418ba260404df33feb567e95fc91aca1da",
+    "source_hash_matches_inventory": true,
+    "hash_bound_into_original_asr_header": false,
+    "limitations": [
+      "The old ASR header records a filename but no input SHA; the current episode matches the adjacent contemporaneous inventory.",
+      "The ASR omits Why and some final lines, and misrecognises several percentages. Subtitle text resolves story meaning but is not word-level alignment.",
+      "No listening has been performed in this review."
+    ]
+  },
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "initial_crossings": [
+    {
+      "cut": "whole-company-demand",
+      "boundary": "in",
+      "at": 453.2,
+      "words": [
+        {
+          "start": 452.79,
+          "end": 453.31,
+          "word": " It"
+        }
+      ]
+    },
+    {
+      "cut": "coercion",
+      "boundary": "in",
+      "at": 506.7,
+      "words": [
+        {
+          "start": 506.49,
+          "end": 506.87,
+          "word": " It's"
+        }
+      ]
+    },
+    {
+      "cut": "coercion",
+      "boundary": "out",
+      "at": 517.1666666666666,
+      "words": [
+        {
+          "start": 517.11,
+          "end": 517.29,
+          "word": " Good."
+        }
+      ]
+    },
+    {
+      "cut": "prepared-counterthreat",
+      "boundary": "in",
+      "at": 519.2666666666667,
+      "words": [
+        {
+          "start": 519.17,
+          "end": 519.27,
+          "word": " Well,"
+        }
+      ]
+    },
+    {
+      "cut": "prepared-counterthreat",
+      "boundary": "out",
+      "at": 551.7,
+      "words": [
+        {
+          "start": 551.61,
+          "end": 551.93,
+          "word": " And"
+        }
+      ]
+    },
+    {
+      "cut": "clock",
+      "boundary": "in",
+      "at": 605.6,
+      "words": [
+        {
+          "start": 605.51,
+          "end": 605.91,
+          "word": " You"
+        }
+      ]
+    },
+    {
+      "cut": "war-record",
+      "boundary": "in",
+      "at": 733.4,
+      "words": [
+        {
+          "start": 733.39,
+          "end": 733.53,
+          "word": " In"
+        }
+      ]
+    }
+  ],
+  "refined_boundaries": [
+    {
+      "cut": "legal-leverage",
+      "boundary": "in",
+      "time": 406.2,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 398.95,
+        "end": 399.09,
+        "word": " me?"
+      },
+      "next_asr_word": {
+        "start": 406.3,
+        "end": 406.7,
+        "word": " Signed"
+      }
+    },
+    {
+      "cut": "legal-leverage",
+      "boundary": "out",
+      "time": 424.23333333333335,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 423.58,
+        "end": 423.98,
+        "word": " That's"
+      },
+      "next_asr_word": {
+        "start": 424.54,
+        "end": 424.82,
+        "word": " So?"
+      }
+    },
+    {
+      "cut": "agreed-share",
+      "boundary": "in",
+      "time": 424.43333333333334,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 423.58,
+        "end": 423.98,
+        "word": " That's"
+      },
+      "next_asr_word": {
+        "start": 424.54,
+        "end": 424.82,
+        "word": " So?"
+      }
+    },
+    {
+      "cut": "agreed-share",
+      "boundary": "out",
+      "time": 450.1,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 448.89,
+        "end": 449.27,
+        "word": " case."
+      },
+      "next_asr_word": {
+        "start": 450.43,
+        "end": 450.57,
+        "word": " There"
+      }
+    },
+    {
+      "cut": "whole-company-demand",
+      "boundary": "in",
+      "time": 452.6333333333333,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 450.59,
+        "end": 450.77,
+        "word": " go."
+      },
+      "next_asr_word": {
+        "start": 452.79,
+        "end": 453.31,
+        "word": " It"
+      }
+    },
+    {
+      "cut": "whole-company-demand",
+      "boundary": "out",
+      "time": 474.9,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 473.96,
+        "end": 474.1,
+        "word": " me."
+      },
+      "next_asr_word": {
+        "start": 475.0,
+        "end": 475.28,
+        "word": " Is"
+      }
+    },
+    {
+      "cut": "tommy-asks-why",
+      "boundary": "in",
+      "time": 492.4,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 490.01,
+        "end": 490.29,
+        "word": " Yeah."
+      },
+      "next_asr_word": {
+        "start": 498.81,
+        "end": 498.93,
+        "word": " Well,"
+      }
+    },
+    {
+      "cut": "tommy-asks-why",
+      "boundary": "out",
+      "time": 496.0,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 490.01,
+        "end": 490.29,
+        "word": " Yeah."
+      },
+      "next_asr_word": {
+        "start": 498.81,
+        "end": 498.93,
+        "word": " Well,"
+      }
+    },
+    {
+      "cut": "coercion",
+      "boundary": "in",
+      "time": 506.3,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 505.55,
+        "end": 505.67,
+        "word": " road."
+      },
+      "next_asr_word": {
+        "start": 506.49,
+        "end": 506.87,
+        "word": " It's"
+      }
+    },
+    {
+      "cut": "coercion",
+      "boundary": "out",
+      "time": 516.9333333333333,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 516.45,
+        "end": 516.77,
+        "word": " understand."
+      },
+      "next_asr_word": {
+        "start": 517.11,
+        "end": 517.29,
+        "word": " Good."
+      }
+    },
+    {
+      "cut": "prepared-counterthreat",
+      "boundary": "in",
+      "time": 519.0,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 518.69,
+        "end": 518.83,
+        "word": " it."
+      },
+      "next_asr_word": {
+        "start": 519.17,
+        "end": 519.27,
+        "word": " Well,"
+      }
+    },
+    {
+      "cut": "prepared-counterthreat",
+      "boundary": "out",
+      "time": 551.5,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 550.35,
+        "end": 550.93,
+        "word": " wiretrip."
+      },
+      "next_asr_word": {
+        "start": 551.61,
+        "end": 551.93,
+        "word": " And"
+      }
+    },
+    {
+      "cut": "shared-downside",
+      "boundary": "in",
+      "time": 562.4333333333333,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 561.21,
+        "end": 561.51,
+        "word": " wire."
+      },
+      "next_asr_word": {
+        "start": 563.61,
+        "end": 563.71,
+        "word": " About"
+      }
+    },
+    {
+      "cut": "shared-downside",
+      "boundary": "out",
+      "time": 575.9,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 574.92,
+        "end": 575.14,
+        "word": " well."
+      },
+      "next_asr_word": {
+        "start": 589.88,
+        "end": 589.96,
+        "word": " He"
+      }
+    },
+    {
+      "cut": "clock",
+      "boundary": "in",
+      "time": 605.3333333333334,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 602.54,
+        "end": 602.84,
+        "word": " paper."
+      },
+      "next_asr_word": {
+        "start": 605.51,
+        "end": 605.91,
+        "word": " You"
+      }
+    },
+    {
+      "cut": "clock",
+      "boundary": "out",
+      "time": 609.7,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 607.87,
+        "end": 608.53,
+        "word": " But"
+      },
+      "next_asr_word": {
+        "start": 610.68,
+        "end": 610.94,
+        "word": " I"
+      }
+    },
+    {
+      "cut": "exit-covered",
+      "boundary": "in",
+      "time": 610.5,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 607.87,
+        "end": 608.53,
+        "word": " But"
+      },
+      "next_asr_word": {
+        "start": 610.68,
+        "end": 610.94,
+        "word": " I"
+      }
+    },
+    {
+      "cut": "exit-covered",
+      "boundary": "out",
+      "time": 619.5,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 618.4,
+        "end": 618.54,
+        "word": " grenade."
+      },
+      "next_asr_word": {
+        "start": 620.7,
+        "end": 621.0,
+        "word": " He"
+      }
+    },
+    {
+      "cut": "credibility",
+      "boundary": "in",
+      "time": 626.0,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 622.52,
+        "end": 622.72,
+        "word": " lace."
+      },
+      "next_asr_word": {
+        "start": 626.06,
+        "end": 626.24,
+        "word": " I"
+      }
+    },
+    {
+      "cut": "credibility",
+      "boundary": "out",
+      "time": 641.6,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 639.33,
+        "end": 639.77,
+        "word": " insurance."
+      },
+      "next_asr_word": {
+        "start": 644.53,
+        "end": 644.97,
+        "word": " Okay,"
+      }
+    },
+    {
+      "cut": "first-concession-refused",
+      "boundary": "in",
+      "time": 644.3,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 639.33,
+        "end": 639.77,
+        "word": " insurance."
+      },
+      "next_asr_word": {
+        "start": 644.53,
+        "end": 644.97,
+        "word": " Okay,"
+      }
+    },
+    {
+      "cut": "first-concession-refused",
+      "boundary": "out",
+      "time": 666.9,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 665.91,
+        "end": 666.27,
+        "word": " Shelby."
+      },
+      "next_asr_word": {
+        "start": 669.95,
+        "end": 670.35,
+        "word": " You're"
+      }
+    },
+    {
+      "cut": "counteroffer",
+      "boundary": "in",
+      "time": 724.3333333333334,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 718.62,
+        "end": 718.86,
+        "word": " this,"
+      },
+      "next_asr_word": {
+        "start": 725.57,
+        "end": 725.97,
+        "word": " 25%."
+      }
+    },
+    {
+      "cut": "counteroffer",
+      "boundary": "out",
+      "time": 729.8666666666667,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 729.15,
+        "end": 729.29,
+        "word": " me."
+      },
+      "next_asr_word": {
+        "start": 733.39,
+        "end": 733.53,
+        "word": " In"
+      }
+    },
+    {
+      "cut": "war-record",
+      "boundary": "in",
+      "time": 733.2333333333333,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 729.15,
+        "end": 729.29,
+        "word": " me."
+      },
+      "next_asr_word": {
+        "start": 733.39,
+        "end": 733.53,
+        "word": " In"
+      }
+    },
+    {
+      "cut": "war-record",
+      "boundary": "out",
+      "time": 765.8,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 761.47,
+        "end": 761.81,
+        "word": " now?"
+      },
+      "next_asr_word": {
+        "start": 773.27,
+        "end": 773.67,
+        "word": " Listen,"
+      }
+    },
+    {
+      "cut": "settlement",
+      "boundary": "in",
+      "time": 768.8,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 761.47,
+        "end": 761.81,
+        "word": " now?"
+      },
+      "next_asr_word": {
+        "start": 773.27,
+        "end": 773.67,
+        "word": " Listen,"
+      }
+    },
+    {
+      "cut": "settlement",
+      "boundary": "out",
+      "time": 782.1,
+      "crossed_words": [],
+      "previous_asr_word": {
+        "start": 776.73,
+        "end": 776.83,
+        "word": " dog."
+      },
+      "next_asr_word": {
+        "start": 802.58,
+        "end": 802.82,
+        "word": " Your"
+      }
+    }
+  ],
+  "all_refined_boundaries_have_zero_recognised_word_crossings": true,
+  "complete_word_alignment_or_listening_claimed": false,
+  "targeted_asr_reference": {
+    "file": "targeted-asr-review.json",
+    "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+    "timestamps_absolute": true,
+    "method": "Local base ASR with word timestamps, beam5, no VAD, no prompt containing expected dialogue or percentages. This is speech recognition, not listening or complete forced alignment."
+  },
+  "targeted_additional_crossing_fixed": {
+    "cut": "shared-downside",
+    "boundary": "in",
+    "previous": 562.9,
+    "new": 562.4333333333333,
+    "word": {
+      "start": 562.56,
+      "end": 563.04,
+      "word": " If",
+      "probability": 0.16457
+    }
+  },
+  "asr_dialogue_limits_after_targeted_pass": [
+    "Short-window recognitions recovered the missing Why-position utterance but misheard its text as What with low probability; retain Why meaning from the subtitle reference and review the actual speech before release.",
+    "The short settlement window recognises35 in Tommy’s offer and Alfie’s final acceptance; the old long ASR had misheard45.",
+    "ASR words remain recognition estimates. Zero recognised-word crossings still does not prove a smoothly audible raccord."
+  ]
+}

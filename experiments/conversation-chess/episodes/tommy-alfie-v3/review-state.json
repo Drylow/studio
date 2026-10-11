@@ -1,0 +1,62 @@
+{
+  "schema": "conversation-chess-draft-review-v1",
+  "source_hash_checked": true,
+  "source_probe_checked": true,
+  "subtitle_progression_read": true,
+  "source_visual_review_performed": false,
+  "word_alignment_checked": false,
+  "boundary_listening_performed": false,
+  "final_render_exists": false,
+  "youtube_check_performed": false,
+  "cut_count": 14,
+  "retained_scene_frames": 6874,
+  "retained_scene_seconds": 229.13333333333333,
+  "annotation_count": 9,
+  "analysis_seconds": 63,
+  "guide_seconds": 16,
+  "outro_seconds": 12,
+  "expected_final_seconds_before_review_corrections": 320.1333333333333,
+  "counts": {
+    "brilliant": 1,
+    "great": 2,
+    "best": 3,
+    "excellent": 0,
+    "good": 1,
+    "book": 2,
+    "blunder": 0,
+    "mistake": 0,
+    "inaccuracy": 0
+  },
+  "annotation_cut_membership_ok": true,
+  "source_boundaries_frame_quantized": true,
+  "grade_score_direction_checked": true,
+  "all_new_review_flags_remain_false": true,
+  "known_boundary_risks": [
+    "Existing ASR omits Why and some final utterances and misrecognises percentages. Zero recognised-word crossings does not establish complete word alignment.",
+    "Cue spans and word alignment disagree on some short transitions. Every new raccord still needs listening.",
+    "No final export or YouTube check exists for this edit."
+  ],
+  "existing_asr_checked": true,
+  "existing_asr_timestamps_absolute": true,
+  "existing_asr_crossing_count_before": 7,
+  "existing_asr_crossing_count_after": 0,
+  "asr_complete_alignment_verified": false,
+  "grade_refinement": {
+    "brilliant_before": 4,
+    "brilliant_after": 1,
+    "changes": [
+      "Whole-company demand: Brilliant to Book. A coercive squeeze is established; a uniquely brilliant strategic choice is not.",
+      "Covered exit: Brilliant to Great. This develops the already explained counterthreat rather than constituting a separate sacrifice or reversal.",
+      "Settlement: Brilliant to Best. The final practical bargain is a sound conversion of existing leverage, not another independent reversal."
+    ],
+    "strongest_reversal": "Shared downside: Tommy changes the outcome Alfie risks by forcing the takeover. The single Brilliant is an editorial reading of that observed turning point, not an engine result."
+  },
+  "source_boundary_stills_reviewed": true,
+  "source_annotation_stills_reviewed": true,
+  "native_stills_examined": 37,
+  "source_full_visual_review_performed": false,
+  "targeted_source_pinned_asr_checked": true,
+  "targeted_additional_crossings_fixed": 1,
+  "total_recognised_word_crossings_fixed": 8,
+  "targeted_and_existing_recognised_word_crossings_after": 0
+}

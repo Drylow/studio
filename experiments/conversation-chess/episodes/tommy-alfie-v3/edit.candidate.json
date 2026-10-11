@@ -1,0 +1,885 @@
+{
+  "schema": "conversation-chess-source-edit-v1",
+  "status": "source_timing_candidate_for_native_preparation_not_final",
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "timeline": "timeline.candidate.json",
+  "source_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4",
+  "subtitle_reference_file": "output/conversation-chess/peaky-source-cache/naka-s02e06/english-timing-reference.vtt",
+  "subtitle_reference_sha256": "d093c289f8a9e56a34869730afe92c9d050ea3adcb91d397593433cf94c67c46",
+  "purpose": "Keep one complete negotiation and original decision analysis; omit the other two encounters, repetitions and long pauses. No Content ID clearance inferred.",
+  "source_visually_reviewed": true,
+  "cuts": [
+    {
+      "id": "legal-leverage",
+      "in": 406.2,
+      "out": 424.23333333333335,
+      "frames": 541,
+      "edited_in": 0.0,
+      "edited_out": 18.033333333333335,
+      "reason": "Tommy supplies the document that protects the rum shipments; Alfie accepts it without legal review. Establish why the partnership has value.",
+      "reference_cues": [
+        {
+          "start": 406.38,
+          "end": 408.499,
+          "text": "Signed by the Minister of the Empire himself."
+        },
+        {
+          "start": 408.5,
+          "end": 410.659,
+          "text": "Yeah? So it is."
+        },
+        {
+          "start": 411.14,
+          "end": 413.899,
+          "text": "This means that you can put your rum in our shipments,"
+        },
+        {
+          "start": 413.9,
+          "end": 416.939,
+          "text": "and no one at Poplar Docks will lift a canvas."
+        },
+        {
+          "start": 416.94,
+          "end": 419.499,
+          "text": "You know what? I'm not even going to have my lawyer look at that."
+        },
+        {
+          "start": 419.5,
+          "end": 421.259,
+          "text": "- I know, it's all legal. - You know what,"
+        },
+        {
+          "start": 421.26,
+          "end": 424.739,
+          "text": "mate, I trust you. That's that. Done."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 406.3,
+          "out": 424.9
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "agreed-share",
+      "in": 424.43333333333334,
+      "out": 450.1,
+      "frames": 770,
+      "edited_in": 18.033333333333335,
+      "edited_out": 43.7,
+      "reason": "Alfie raises the agreed twenty percent, interrupts Tommy and introduces a different lawyer-drafted document. Keep the full change of terms.",
+      "reference_cues": [
+        {
+          "start": 421.26,
+          "end": 424.739,
+          "text": "mate, I trust you. That's that. Done."
+        },
+        {
+          "start": 424.74,
+          "end": 427.579,
+          "text": "So, whisky..."
+        },
+        {
+          "start": 428.58,
+          "end": 432.459,
+          "text": "There is, one thing, though, that we do need to discuss."
+        },
+        {
+          "start": 432.46,
+          "end": 436.739,
+          "text": "- What would that be? - It says here, \"20%\""
+        },
+        {
+          "start": 437.34,
+          "end": 439.979,
+          "text": "\"paid to me of your export business.\""
+        },
+        {
+          "start": 440.86,
+          "end": 443.459,
+          "text": "- As we agreed on the telephone... - No, no, no, no, no."
+        },
+        {
+          "start": 443.46,
+          "end": 447.139,
+          "text": "See, I've had my lawyer draw this up..."
+        },
+        {
+          "start": 447.54,
+          "end": 449.939,
+          "text": "for us, just in case."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 428.5,
+          "out": 450.1
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "whole-company-demand",
+      "in": 452.6333333333333,
+      "out": 474.9,
+      "frames": 668,
+      "edited_in": 43.7,
+      "edited_out": 65.96666666666667,
+      "reason": "The new document transfers one hundred percent of the company. Keep the explicit demand and the instruction to sign, rather than only a shocked reaction.",
+      "reference_cues": [
+        {
+          "start": 453.3,
+          "end": 458.619,
+          "text": "It says that, here, that 100%"
+        },
+        {
+          "start": 458.62,
+          "end": 462.299,
+          "text": "of your business goes to me."
+        },
+        {
+          "start": 465.62,
+          "end": 468.05899999999997,
+          "text": "- I see. - It's there. Right."
+        },
+        {
+          "start": 468.06,
+          "end": 470.939,
+          "text": "Don't worry about it, right, 'cause it's totally legal binding."
+        },
+        {
+          "start": 470.94,
+          "end": 474.779,
+          "text": "All you have to do is sign the document and transfer the whole lot over to me."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 453.2,
+          "out": 474.9
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "tommy-asks-why",
+      "in": 492.4,
+      "out": 496.0,
+      "frames": 108,
+      "edited_in": 65.96666666666667,
+      "edited_out": 69.56666666666666,
+      "reason": "Tommy asks why he should accept the demand. Omit the repeated funny exchange; retain the question and a reaction margin.",
+      "reference_cues": [
+        {
+          "start": 492.54,
+          "end": 493.779,
+          "text": "Why?"
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "coercion",
+      "in": 506.3,
+      "out": 516.9333333333333,
+      "frames": 319,
+      "edited_in": 69.56666666666666,
+      "edited_out": 80.2,
+      "reason": "Alfie calls the transfer non-negotiable and points Tommy toward signing. Tommy acknowledges the demand without accepting it.",
+      "reference_cues": [
+        {
+          "start": 504.42,
+          "end": 506.699,
+          "text": "He's a big boy, he knows the road. Now, look,"
+        },
+        {
+          "start": 506.7,
+          "end": 508.779,
+          "text": "it's just non-fucking-negotiable."
+        },
+        {
+          "start": 508.78,
+          "end": 510.019,
+          "text": "That's all you need to know."
+        },
+        {
+          "start": 510.02,
+          "end": 513.3389999999999,
+          "text": "So all you have to do is sign the fucking contract."
+        },
+        {
+          "start": 513.34,
+          "end": 514.819,
+          "text": "- Right there. - Just sign here?"
+        },
+        {
+          "start": 514.82,
+          "end": 517.179,
+          "text": "- With your pen. - I understand."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 506.7,
+          "out": 517.1666666666666
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "prepared-counterthreat",
+      "in": 519.0,
+      "out": 551.5,
+      "frames": 975,
+      "edited_in": 80.2,
+      "edited_out": 112.7,
+      "reason": "Tommy introduces his associate at the door; Alfie threatens to shoot him; Tommy explains his earlier action while tying his lace. The associate is needed for the next condition.",
+      "reference_cues": [
+        {
+          "start": 517.18,
+          "end": 519.259,
+          "text": "Good. Get on with it."
+        },
+        {
+          "start": 519.26,
+          "end": 521.699,
+          "text": "Well, I have an associate waiting for me at the door."
+        },
+        {
+          "start": 523.9,
+          "end": 528.099,
+          "text": "I know that he looks like a choir boy, but he is actually an anarchist"
+        },
+        {
+          "start": 528.66,
+          "end": 530.819,
+          "text": "- from Kentish Town. - Tommy..."
+        },
+        {
+          "start": 530.82,
+          "end": 533.259,
+          "text": "I'm going to fucking shoot you."
+        },
+        {
+          "start": 533.26,
+          "end": 534.659,
+          "text": "All right?"
+        },
+        {
+          "start": 534.66,
+          "end": 537.179,
+          "text": "Now, when I came in here, Mr Solomons,"
+        },
+        {
+          "start": 537.18,
+          "end": 540.459,
+          "text": "I stopped to tie my shoelace. Isn't that a fact?"
+        },
+        {
+          "start": 540.46,
+          "end": 541.659,
+          "text": "Ollie?"
+        },
+        {
+          "start": 541.9,
+          "end": 544.259,
+          "text": "I stopped to tie my shoelace."
+        },
+        {
+          "start": 544.26,
+          "end": 545.699,
+          "text": "And while I was doing it,"
+        },
+        {
+          "start": 545.7,
+          "end": 548.299,
+          "text": "I laid a hand grenade on one of your barrels,"
+        },
+        {
+          "start": 548.98,
+          "end": 551.499,
+          "text": "Mark 15, with wired trip."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 519.2666666666667,
+          "out": 551.7
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "shared-downside",
+      "in": 562.4333333333333,
+      "out": 575.9,
+      "frames": 404,
+      "edited_in": 112.7,
+      "edited_out": 126.16666666666667,
+      "reason": "Keep the deadline, trigger condition and danger to everyone. Omit the Wall Street comparison and the repeated qualifications of the associate.",
+      "reference_cues": [
+        {
+          "start": 562.9,
+          "end": 566.499,
+          "text": "If I don't walk out that door on the stroke of 7:00,"
+        },
+        {
+          "start": 567.22,
+          "end": 570.579,
+          "text": "he's going to trigger the grenade and..."
+        },
+        {
+          "start": 570.58,
+          "end": 575.779,
+          "text": "your very combustible rum will blow us all to hell."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_boundary_refinement": {
+        "previous_in": 562.9,
+        "new_in": 562.4333333333333,
+        "crossed_word_before": [
+          {
+            "start": 562.56,
+            "end": 563.04,
+            "word": " If",
+            "probability": 0.16457
+          }
+        ],
+        "reason": "A source-pinned short-window recognition recovered If, omitted in the previous long ASR. Enter before its start562.56 instead of cutting at562.90."
+      },
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "clock",
+      "in": 605.3333333333334,
+      "out": 609.7,
+      "frames": 131,
+      "edited_in": 126.16666666666667,
+      "edited_out": 130.53333333333333,
+      "reason": "Tommy checks the time and lets Alfie continue. A visible deadline now drives the negotiation without another speech.",
+      "reference_cues": [
+        {
+          "start": 605.66,
+          "end": 606.939,
+          "text": "What are you doing?"
+        },
+        {
+          "start": 607.06,
+          "end": 609.499,
+          "text": "Just checking the time. Carry on."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 605.6,
+          "out": 609.7
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "exit-covered",
+      "in": 610.5,
+      "out": 619.5,
+      "frames": 270,
+      "edited_in": 130.53333333333333,
+      "edited_out": 139.53333333333333,
+      "reason": "Alfie tries to remove the associate; Tommy specifies that anyone else going through the door causes the same consequence. Preserve both sides of this attempted escape.",
+      "reference_cues": [
+        {
+          "start": 610.58,
+          "end": 614.179,
+          "text": "Right, Ollie, I want you to go outside, yeah, and shoot that boy in the face"
+        },
+        {
+          "start": 614.18,
+          "end": 615.779,
+          "text": "from the good family, all right?"
+        },
+        {
+          "start": 615.78,
+          "end": 619.299,
+          "text": "Anyone walks through that door except me, he blows the grenade."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "credibility",
+      "in": 626.0,
+      "out": 641.6,
+      "frames": 468,
+      "edited_in": 139.53333333333333,
+      "edited_out": 155.13333333333333,
+      "reason": "Alfie doubts the threat. Tommy supplies his own past conduct as evidence; keep the complete insurance line and a short margin.",
+      "reference_cues": [
+        {
+          "start": 626.14,
+          "end": 628.859,
+          "text": "I bet, 100 to 1,"
+        },
+        {
+          "start": 630.26,
+          "end": 633.939,
+          "text": "you're fucking lying, mate. That's my money."
+        },
+        {
+          "start": 633.94,
+          "end": 636.379,
+          "text": "Well, see, you've failed to consider the form."
+        },
+        {
+          "start": 636.86,
+          "end": 638.699,
+          "text": "I did blow up me own pub..."
+        },
+        {
+          "start": 639.02,
+          "end": 641.059,
+          "text": "for the insurance."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 626.0,
+          "out": 641.2
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "first-concession-refused",
+      "in": 644.3,
+      "out": 666.9,
+      "frames": 678,
+      "edited_in": 155.13333333333333,
+      "edited_out": 177.73333333333332,
+      "reason": "Alfie offers sixty-five percent, Tommy refuses, and Ollie confirms the observed lace action. The warning explains why the threat continues to carry weight.",
+      "reference_cues": [
+        {
+          "start": 644.46,
+          "end": 647.059,
+          "text": "OK right... Well, considering the form,"
+        },
+        {
+          "start": 647.3,
+          "end": 650.219,
+          "text": "I would say 65 to 1 . Very good odds."
+        },
+        {
+          "start": 650.22,
+          "end": 652.419,
+          "text": "And I would be more than happy and agree"
+        },
+        {
+          "start": 652.42,
+          "end": 654.939,
+          "text": "if you were to sign over 65% of your business to me."
+        },
+        {
+          "start": 654.94,
+          "end": 657.979,
+          "text": "- Thank you. - Sixty-five? No deal."
+        },
+        {
+          "start": 657.98,
+          "end": 659.859,
+          "text": "- Ollie, what do you say? - Jesus Christ, Alfie."
+        },
+        {
+          "start": 659.86,
+          "end": 661.819,
+          "text": "He tied his fucking lace, I saw him!"
+        },
+        {
+          "start": 661.82,
+          "end": 664.579,
+          "text": "He planted a grenade, I know he did."
+        },
+        {
+          "start": 664.98,
+          "end": 666.739,
+          "text": "Alfie, it's Tommy fucking Shelby..."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "counteroffer",
+      "in": 724.3333333333334,
+      "out": 729.8666666666667,
+      "frames": 166,
+      "edited_in": 177.73333333333332,
+      "edited_out": 183.26666666666668,
+      "reason": "Alfie offers forty-five percent; Tommy counters with thirty; Alfie rejects that price. Remove the long inspection pause but keep the actual offers.",
+      "reference_cues": [
+        {
+          "start": 724.46,
+          "end": 726.059,
+          "text": "forty-five percent."
+        },
+        {
+          "start": 726.06,
+          "end": 728.139,
+          "text": "- Thirty. - Fuck off, Tommy."
+        },
+        {
+          "start": 728.14,
+          "end": 729.699,
+          "text": "That's far too little."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "war-record",
+      "in": 733.2333333333333,
+      "out": 765.8,
+      "frames": 977,
+      "edited_in": 183.26666666666668,
+      "edited_out": 215.83333333333334,
+      "reason": "Tommy cites his wartime tunnelling and Alfie recognises the unit. Keep the exchange that supports credibility and the digging-out metaphor rather than asserting an unseen confirmation.",
+      "reference_cues": [
+        {
+          "start": 733.5,
+          "end": 737.499,
+          "text": "In France, Mr Solomons, while I was a tunneller, a clay-kicker."
+        },
+        {
+          "start": 737.5,
+          "end": 739.379,
+          "text": "179."
+        },
+        {
+          "start": 741.14,
+          "end": 742.979,
+          "text": "I blew up Schwaben Höhe."
+        },
+        {
+          "start": 744.86,
+          "end": 746.619,
+          "text": "Same kit I'm using today."
+        },
+        {
+          "start": 747.82,
+          "end": 749.219,
+          "text": "It's funny, that."
+        },
+        {
+          "start": 751.7,
+          "end": 753.939,
+          "text": "I do know the 179."
+        },
+        {
+          "start": 754.5,
+          "end": 757.059,
+          "text": "And I heard they all got buried."
+        },
+        {
+          "start": 758.26,
+          "end": 760.099,
+          "text": "Three of us dug ourselves out."
+        },
+        {
+          "start": 760.1,
+          "end": 762.3389999999999,
+          "text": "Like you're digging yourself out now?"
+        },
+        {
+          "start": 763.78,
+          "end": 765.539,
+          "text": "Like I'm digging now."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "boundary_refinement": {
+        "previous": {
+          "in": 733.4,
+          "out": 765.8
+        },
+        "reason": "Move outside recognised ASR words and preserve a complete subtitle-supported utterance. Word alignment remains partial, and listening is still required."
+      },
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    },
+    {
+      "id": "settlement",
+      "in": 768.8,
+      "out": 782.1,
+      "frames": 399,
+      "edited_in": 215.83333333333334,
+      "edited_out": 229.13333333333333,
+      "reason": "Alfie reacts, Tommy makes the final thirty-five-percent offer and Alfie repeats it. The retained tail must be checked before placing the final half-second fade.",
+      "reference_cues": [
+        {
+          "start": 768.9,
+          "end": 770.619,
+          "text": "Fuck me."
+        },
+        {
+          "start": 773.42,
+          "end": 775.859,
+          "text": "Listen, I'll give you 35%."
+        },
+        {
+          "start": 776.26,
+          "end": 777.899,
+          "text": "That's your lot."
+        },
+        {
+          "start": 780.1,
+          "end": 781.459,
+          "text": "Thirty-five."
+        }
+      ],
+      "boundary_visual_reviewed": false,
+      "boundary_word_aligned": false,
+      "boundary_listened": false,
+      "existing_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      },
+      "boundary_stills_visually_reviewed": true,
+      "visual_sample_evidence": "Both native source boundary stills examined in visual-sample-review.json; this does not establish smooth moving or audible raccords.",
+      "targeted_asr_word_crossing_check": {
+        "in": [],
+        "out": []
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "original_at": 416.4,
+      "base_index": 0
+    },
+    {
+      "original_at": 462.4,
+      "base_index": 1
+    },
+    {
+      "original_at": 494.0,
+      "base_index": 2
+    },
+    {
+      "original_at": 575.8666666666667,
+      "base_index": 3
+    },
+    {
+      "original_at": 619.4,
+      "base_index": 4
+    },
+    {
+      "original_at": 641.4,
+      "base_index": 5
+    },
+    {
+      "original_at": 666.8,
+      "base_index": 6
+    },
+    {
+      "original_at": 757.1666666666666,
+      "base_index": 7
+    },
+    {
+      "original_at": 778.0333333333333,
+      "base_index": 8
+    }
+  ],
+  "youtube_clearance_verified": false,
+  "asr_reference": {
+    "source": "peaky-blinders-s02e06-english-acquired.mp4",
+    "source_start_metadata": 300.0,
+    "timestamps": "Absolute source coordinates: transcribe-range.py saved start+s.start for each segment and word. Do not add300 again.",
+    "sha256": "8e2ffddd378d91ad3d9d9fb9519a80d8ef17e83dd0454b53084e3da1b5c0c0b5",
+    "inventory_sha256": "041ea7ae87d8307e75275c5332c197418ba260404df33feb567e95fc91aca1da",
+    "source_hash_matches_inventory": true,
+    "hash_bound_into_original_asr_header": false,
+    "limitations": [
+      "The old ASR header records a filename but no input SHA; the current episode matches the adjacent contemporaneous inventory.",
+      "The ASR omits Why and some final lines, and misrecognises several percentages. Subtitle text resolves story meaning but is not word-level alignment.",
+      "No listening has been performed in this review."
+    ]
+  },
+  "source_dimensions": {
+    "width": 1280,
+    "height": 720
+  },
+  "white_label": "Tommy",
+  "black_label": "Alfie",
+  "visual_review_scope": "Actual source boundary and pause stills reviewed in sequence; see visual-sample-review.json. Continuous moving raccords and listening are not reviewed.",
+  "opening": {
+    "speaker": "white",
+    "label": "Tommy",
+    "reviewed": true,
+    "source_episode": "S02E06",
+    "actual_source_start": 406.2,
+    "first_subtitle_start": 406.38,
+    "evidence": "The first retained dialogue is Tommy presenting the signed export document. Source opening406.20 shows him handing the paper to Alfie; the source pause416.40 shows Tommy. English cue406.38–408.499 and source-pinned filename/inventory-matched ASR406.30–408.20 agree on this signed-document line before Alfie replies. No listening is claimed. Tommy is White; this is new evidence for S02E06, not the old payroll opening.",
+    "visual_sample_reviewed": true,
+    "visual_evidence": "Source opening still406.20 shows Tommy presenting the paper to Alfie; the pause still416.40 shows Tommy. These samples agree with the subtitle and recognised opening dialogue; no listening is claimed.",
+    "source_at": 406.2
+  }
+}

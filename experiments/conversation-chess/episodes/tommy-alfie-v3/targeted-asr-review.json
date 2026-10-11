@@ -1,0 +1,575 @@
+{
+  "schema": "conversation-chess-source-pinned-targeted-asr-v1",
+  "source_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4",
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "source_timestamps_absolute": true,
+  "method": "Local base ASR with word timestamps, beam5, no VAD, no prompt containing expected dialogue or percentages. This is speech recognition, not listening or complete forced alignment.",
+  "windows": [
+    {
+      "id": "why",
+      "source_start": 489.0,
+      "duration_seconds": 9.0,
+      "decoded_pcm_sha256": "91ca8f815d20ea0cf46809756f43233a54440aeadb3f166e43a14ea2fd47596f",
+      "segments": [
+        {
+          "start": 490.0,
+          "end": 490.3,
+          "text": " Yeah.",
+          "words": [
+            {
+              "start": 489.6,
+              "end": 490.3,
+              "word": " Yeah.",
+              "probability": 0.19046
+            }
+          ]
+        },
+        {
+          "start": 493.0,
+          "end": 493.24,
+          "text": " What?",
+          "words": [
+            {
+              "start": 492.54,
+              "end": 493.24,
+              "word": " What?",
+              "probability": 0.19187
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shared-downside",
+      "source_start": 560.0,
+      "duration_seconds": 18.0,
+      "decoded_pcm_sha256": "0b9dec0698ec2d1edbc18a0c55f5997ad1e51091e3752ed827acb3f1269ad419",
+      "segments": [
+        {
+          "start": 560.0,
+          "end": 561.48,
+          "text": " And he's in charge of the wire",
+          "words": [
+            {
+              "start": 560.0,
+              "end": 560.54,
+              "word": " And",
+              "probability": 0.4736
+            },
+            {
+              "start": 560.54,
+              "end": 560.7,
+              "word": " he's",
+              "probability": 0.98529
+            },
+            {
+              "start": 560.7,
+              "end": 560.78,
+              "word": " in",
+              "probability": 0.99136
+            },
+            {
+              "start": 560.78,
+              "end": 560.96,
+              "word": " charge",
+              "probability": 0.99915
+            },
+            {
+              "start": 560.96,
+              "end": 561.12,
+              "word": " of",
+              "probability": 0.99813
+            },
+            {
+              "start": 561.12,
+              "end": 561.22,
+              "word": " the",
+              "probability": 0.99407
+            },
+            {
+              "start": 561.22,
+              "end": 561.48,
+              "word": " wire",
+              "probability": 0.90716
+            }
+          ]
+        },
+        {
+          "start": 562.56,
+          "end": 565.9,
+          "text": " If I don't walk over that door or the stroke is seven",
+          "words": [
+            {
+              "start": 562.56,
+              "end": 563.04,
+              "word": " If",
+              "probability": 0.16457
+            },
+            {
+              "start": 563.04,
+              "end": 563.16,
+              "word": " I",
+              "probability": 0.98112
+            },
+            {
+              "start": 563.16,
+              "end": 563.34,
+              "word": " don't",
+              "probability": 0.99818
+            },
+            {
+              "start": 563.34,
+              "end": 563.52,
+              "word": " walk",
+              "probability": 0.98961
+            },
+            {
+              "start": 563.52,
+              "end": 563.74,
+              "word": " over",
+              "probability": 0.61969
+            },
+            {
+              "start": 563.74,
+              "end": 564.0,
+              "word": " that",
+              "probability": 0.51744
+            },
+            {
+              "start": 564.0,
+              "end": 564.2,
+              "word": " door",
+              "probability": 0.99412
+            },
+            {
+              "start": 564.2,
+              "end": 565.08,
+              "word": " or",
+              "probability": 0.07979
+            },
+            {
+              "start": 565.08,
+              "end": 565.2,
+              "word": " the",
+              "probability": 0.83774
+            },
+            {
+              "start": 565.2,
+              "end": 565.42,
+              "word": " stroke",
+              "probability": 0.2836
+            },
+            {
+              "start": 565.42,
+              "end": 565.6,
+              "word": " is",
+              "probability": 0.8779
+            },
+            {
+              "start": 565.6,
+              "end": 565.9,
+              "word": " seven",
+              "probability": 0.91778
+            }
+          ]
+        },
+        {
+          "start": 566.88,
+          "end": 568.96,
+          "text": " He's gonna trigger the grenade and",
+          "words": [
+            {
+              "start": 566.88,
+              "end": 567.36,
+              "word": " He's",
+              "probability": 0.80395
+            },
+            {
+              "start": 567.36,
+              "end": 567.46,
+              "word": " gonna",
+              "probability": 0.77983
+            },
+            {
+              "start": 567.46,
+              "end": 567.72,
+              "word": " trigger",
+              "probability": 0.93116
+            },
+            {
+              "start": 567.72,
+              "end": 567.86,
+              "word": " the",
+              "probability": 0.76847
+            },
+            {
+              "start": 567.86,
+              "end": 568.12,
+              "word": " grenade",
+              "probability": 0.81598
+            },
+            {
+              "start": 568.12,
+              "end": 568.96,
+              "word": " and",
+              "probability": 0.91915
+            }
+          ]
+        },
+        {
+          "start": 570.22,
+          "end": 575.16,
+          "text": " You're very combustible wrong the blow is all so well",
+          "words": [
+            {
+              "start": 570.22,
+              "end": 570.7,
+              "word": " You're",
+              "probability": 0.8071
+            },
+            {
+              "start": 570.7,
+              "end": 571.06,
+              "word": " very",
+              "probability": 0.6526
+            },
+            {
+              "start": 571.06,
+              "end": 571.82,
+              "word": " combustible",
+              "probability": 0.99327
+            },
+            {
+              "start": 571.82,
+              "end": 572.28,
+              "word": " wrong",
+              "probability": 0.21533
+            },
+            {
+              "start": 572.28,
+              "end": 573.7,
+              "word": " the",
+              "probability": 0.30611
+            },
+            {
+              "start": 573.7,
+              "end": 573.88,
+              "word": " blow",
+              "probability": 0.39734
+            },
+            {
+              "start": 573.88,
+              "end": 574.1,
+              "word": " is",
+              "probability": 0.63635
+            },
+            {
+              "start": 574.1,
+              "end": 574.36,
+              "word": " all",
+              "probability": 0.98533
+            },
+            {
+              "start": 574.36,
+              "end": 574.92,
+              "word": " so",
+              "probability": 0.92633
+            },
+            {
+              "start": 574.92,
+              "end": 575.16,
+              "word": " well",
+              "probability": 0.63366
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "war-reply",
+      "source_start": 749.0,
+      "duration_seconds": 19.0,
+      "decoded_pcm_sha256": "b95e38105f507b3a5b96255d62b2b063784038600740a9524b0662fc416330a8",
+      "segments": [
+        {
+          "start": 751.26,
+          "end": 756.26,
+          "text": " I do know the 179, and I heard they all got buried.",
+          "words": [
+            {
+              "start": 751.26,
+              "end": 751.9,
+              "word": " I",
+              "probability": 0.62222
+            },
+            {
+              "start": 751.9,
+              "end": 752.1,
+              "word": " do",
+              "probability": 0.73788
+            },
+            {
+              "start": 752.1,
+              "end": 752.32,
+              "word": " know",
+              "probability": 0.35885
+            },
+            {
+              "start": 752.32,
+              "end": 752.5,
+              "word": " the",
+              "probability": 0.44022
+            },
+            {
+              "start": 752.5,
+              "end": 753.34,
+              "word": " 179,",
+              "probability": 0.77207
+            },
+            {
+              "start": 754.3,
+              "end": 754.58,
+              "word": " and",
+              "probability": 0.93092
+            },
+            {
+              "start": 754.58,
+              "end": 754.74,
+              "word": " I",
+              "probability": 0.9726
+            },
+            {
+              "start": 754.74,
+              "end": 754.96,
+              "word": " heard",
+              "probability": 0.75565
+            },
+            {
+              "start": 754.96,
+              "end": 755.26,
+              "word": " they",
+              "probability": 0.81187
+            },
+            {
+              "start": 755.26,
+              "end": 755.48,
+              "word": " all",
+              "probability": 0.64592
+            },
+            {
+              "start": 755.48,
+              "end": 755.7,
+              "word": " got",
+              "probability": 0.23947
+            },
+            {
+              "start": 755.7,
+              "end": 756.26,
+              "word": " buried.",
+              "probability": 0.97015
+            }
+          ]
+        },
+        {
+          "start": 757.94,
+          "end": 761.82,
+          "text": " Three of us told ourselves out how you're digging yourself out now.",
+          "words": [
+            {
+              "start": 757.94,
+              "end": 758.4,
+              "word": " Three",
+              "probability": 0.17782
+            },
+            {
+              "start": 758.4,
+              "end": 758.54,
+              "word": " of",
+              "probability": 0.97647
+            },
+            {
+              "start": 758.54,
+              "end": 758.64,
+              "word": " us",
+              "probability": 0.99492
+            },
+            {
+              "start": 758.64,
+              "end": 758.78,
+              "word": " told",
+              "probability": 0.58523
+            },
+            {
+              "start": 758.78,
+              "end": 759.18,
+              "word": " ourselves",
+              "probability": 0.99002
+            },
+            {
+              "start": 759.18,
+              "end": 759.84,
+              "word": " out",
+              "probability": 0.24732
+            },
+            {
+              "start": 759.84,
+              "end": 760.26,
+              "word": " how",
+              "probability": 0.18989
+            },
+            {
+              "start": 760.26,
+              "end": 760.56,
+              "word": " you're",
+              "probability": 0.86846
+            },
+            {
+              "start": 760.56,
+              "end": 760.76,
+              "word": " digging",
+              "probability": 0.98784
+            },
+            {
+              "start": 760.76,
+              "end": 761.2,
+              "word": " yourself",
+              "probability": 0.98828
+            },
+            {
+              "start": 761.2,
+              "end": 761.56,
+              "word": " out",
+              "probability": 0.80949
+            },
+            {
+              "start": 761.56,
+              "end": 761.82,
+              "word": " now.",
+              "probability": 0.54065
+            }
+          ]
+        },
+        {
+          "start": 763.48,
+          "end": 764.72,
+          "text": " How come digging now?",
+          "words": [
+            {
+              "start": 763.48,
+              "end": 763.88,
+              "word": " How",
+              "probability": 0.49642
+            },
+            {
+              "start": 763.88,
+              "end": 764.02,
+              "word": " come",
+              "probability": 0.97895
+            },
+            {
+              "start": 764.02,
+              "end": 764.38,
+              "word": " digging",
+              "probability": 0.91281
+            },
+            {
+              "start": 764.38,
+              "end": 764.72,
+              "word": " now?",
+              "probability": 0.99039
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "settlement",
+      "source_start": 768.0,
+      "duration_seconds": 16.0,
+      "decoded_pcm_sha256": "4a63bcaf95fa082ebdb57de629816be753a394a8f514c03dda485522d8dd18ed",
+      "segments": [
+        {
+          "start": 772.74,
+          "end": 775.28,
+          "text": " Listen, I'll give you 35 percent.",
+          "words": [
+            {
+              "start": 772.74,
+              "end": 773.7,
+              "word": " Listen,",
+              "probability": 0.26911
+            },
+            {
+              "start": 773.98,
+              "end": 774.14,
+              "word": " I'll",
+              "probability": 0.65436
+            },
+            {
+              "start": 774.14,
+              "end": 774.18,
+              "word": " give",
+              "probability": 0.68639
+            },
+            {
+              "start": 774.18,
+              "end": 774.32,
+              "word": " you",
+              "probability": 0.98746
+            },
+            {
+              "start": 774.32,
+              "end": 774.76,
+              "word": " 35",
+              "probability": 0.3461
+            },
+            {
+              "start": 774.76,
+              "end": 775.28,
+              "word": " percent.",
+              "probability": 0.20735
+            }
+          ]
+        },
+        {
+          "start": 776.04,
+          "end": 776.84,
+          "text": " That's your lot.",
+          "words": [
+            {
+              "start": 776.04,
+              "end": 776.6,
+              "word": " That's",
+              "probability": 0.91181
+            },
+            {
+              "start": 776.6,
+              "end": 776.68,
+              "word": " your",
+              "probability": 0.77211
+            },
+            {
+              "start": 776.68,
+              "end": 776.84,
+              "word": " lot.",
+              "probability": 0.23701
+            }
+          ]
+        },
+        {
+          "start": 779.32,
+          "end": 780.28,
+          "text": " 35.",
+          "words": [
+            {
+              "start": 779.32,
+              "end": 780.28,
+              "word": " 35.",
+              "probability": 0.91247
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "conversation-chess-source-edit-preflight-v1",
+  "helper_plan_edit_passed": true,
+  "source_hash_matches": true,
+  "candidate_edit": "edit.candidate.json",
+  "candidate_timeline": "timeline.candidate.json",
+  "source_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4",
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "source_dimensions": {
+    "width": 1280,
+    "height": 720
+  },
+  "prepared_source_frames": 6874,
+  "prepared_source_seconds": 229.13333333333333,
+  "expected_final_frames": 9604,
+  "expected_final_seconds": 320.1333333333333,
+  "remapped_pause_points": [
+    {
+      "id": "legal-leverage",
+      "source_at": 10.2,
+      "original_source_at": 416.4
+    },
+    {
+      "id": "whole-company-demand",
+      "source_at": 53.466666667,
+      "original_source_at": 462.4
+    },
+    {
+      "id": "tommy-asks-why",
+      "source_at": 67.566666667,
+      "original_source_at": 494.0
+    },
+    {
+      "id": "shared-downside",
+      "source_at": 126.133333333,
+      "original_source_at": 575.8666666666667
+    },
+    {
+      "id": "exit-covered",
+      "source_at": 139.433333333,
+      "original_source_at": 619.4
+    },
+    {
+      "id": "credibility",
+      "source_at": 154.933333333,
+      "original_source_at": 641.4
+    },
+    {
+      "id": "first-concession-refused",
+      "source_at": 177.633333333,
+      "original_source_at": 666.8
+    },
+    {
+      "id": "war-record",
+      "source_at": 207.2,
+      "original_source_at": 757.1666666666666
+    },
+    {
+      "id": "settlement",
+      "source_at": 225.066666667,
+      "original_source_at": 778.0333333333333
+    }
+  ],
+  "no_media_encoded": true,
+  "continuous_motion_raccord_review_performed": false,
+  "listening_performed": false,
+  "youtube_check_performed": false,
+  "native_contract_validation": {
+    "command": "node experiments/conversation-chess/render-clip.mjs --source output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4 --timeline experiments/conversation-chess/episodes/tommy-alfie-v3/timeline.candidate.json --out /tmp/peaky-v3-contract-check --validate-only",
+    "exit_code": 0,
+    "valid": true,
+    "annotation_count": 9,
+    "counts": {
+      "brilliant": 1,
+      "great": 2,
+      "best": 3,
+      "book": 2,
+      "good": 1,
+      "excellent": 0,
+      "inaccuracy": 0,
+      "mistake": 0,
+      "blunder": 0
+    },
+    "final_video_exported": false,
+    "scope": "Read-only schema/camps/grade/source-quality contract check. Does not certify audible raccords, continuous motion, final output or YouTube acceptance."
+  }
+}

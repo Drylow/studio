@@ -1,0 +1,42 @@
+{
+  "schema": "conversation-chess-boundary-and-annotation-stills-review-v1",
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "extraction_manifest_sha256": "99f880559374a1f48c206f1a96d8d86b36eeaf5d3e0877ee27cbf1ac79dffc92",
+  "native_stills_examined": 37,
+  "cut_boundaries_examined": 28,
+  "annotation_samples_examined": 9,
+  "boards": [
+    {
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-01.jpg",
+      "sha256": "b5f366dfa88a0119065ef526123b3d8194b93e8637e139735c458da8b8b99b0a",
+      "observations": "All twelve cells examined. The document and room are consistent; Tommy and Alfie are identifiable, with Ollie behind the desk. First and last samples preserve full frame proportions. No visible burned subtitles or watermark in these samples.",
+      "visually_examined": true
+    },
+    {
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-02.jpg",
+      "sha256": "c72285cff963dafe83f2bcf6a5016c70f6da46be2ad1d045a0c7d5be368fa990",
+      "observations": "All twelve cells examined again after entering the shared-risk condition before the newly recognised If at562.56s. The requested first sample is562.433s. Camera positions remain consistent across the listed source cuts. The first-concession final sample contains source motion blur on Ollie; the moving raccord still needs review. No visible burned subtitles or watermark in these samples.",
+      "visually_examined": true
+    },
+    {
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-03.jpg",
+      "sha256": "f93edd18f55e64d93c8e48b256e392fcd63ca4aa60925ec6b4fbc039125c10bc",
+      "observations": "All twelve cells examined. War and settlement samples remain in the same room and match the cast. All eight annotation samples shown on this board were examined; some are natural listener/reaction shots rather than the graded speaker. The legal-leverage point shows Tommy; the Why point shows Ollie reacting. No visible burned subtitles or watermark.",
+      "visually_examined": true
+    },
+    {
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-04.jpg",
+      "sha256": "e1b17723d5bf291a387a307e5363fbc4cfb1ea19e09d25ec384364f8c95165c5",
+      "observations": "The final annotation sample was examined again after moving the White closing-grade pause from781.60 to778.033 s. It now shows Tommy after his offer, before Alfie repeats the price. No visible burned subtitles or watermark.",
+      "visually_examined": true
+    }
+  ],
+  "sampled_no_visible_burned_subtitles": true,
+  "sampled_no_visible_watermark": true,
+  "native_aspect_ratio_preserved": true,
+  "continuous_motion_review_performed": false,
+  "continuous_source_scene_review_performed": false,
+  "listening_performed": false,
+  "final_render_review_performed": false,
+  "copyright_clearance_verified": false
+}

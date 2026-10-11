@@ -1,0 +1,28 @@
+{
+  "schema": "conversation-chess-native-quality-evidence-v1",
+  "provider": "naka.cx",
+  "manifest_file": "output/conversation-chess/peaky-source-cache/naka-s02e06/manifest-private.json",
+  "manifest_sha256": "cd7e2ff484880637f880ae8584f1dc561cf9d3d56b24a689f82fa403eedcb81d",
+  "manifest_records_without_urls_or_ids": [
+    {
+      "season": 2,
+      "episode": 6,
+      "quality": "720p",
+      "maxHeight": 720
+    }
+  ],
+  "highest_available_height": 720,
+  "source_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+  "actual_native_dimensions": [
+    1280,
+    720
+  ],
+  "actual_native_fps": "25/1",
+  "current_manifest_network_response_rechecked": false,
+  "historical_receipt_download_flag": false,
+  "historical_receipt_note": "The earlier partial-acquisition safe receipt reported downloaded:false, requested1080p and granted720p. The stored entitlement manifest independently grants S02E06 at720p; the full local source is verified by its separate contemporaneous inventory SHA. Do not describe the receipt as proof of completed acquisition.",
+  "visual_review_file": "visual-sample-review.json",
+  "visual_review_scope": "37 source stills: both boundaries of14retained cuts plus9annotation points; no burned subtitles or watermark observed in those actual images. Continuous moving cuts and sound raccords remain pending.",
+  "footage_upscaled": false,
+  "copyright_permission_inferred": false
+}
