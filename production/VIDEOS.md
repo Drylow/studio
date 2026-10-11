@@ -243,3 +243,26 @@ assets only. Local A-REGARDER-V2-GRAPHICS folder opened with MP4, thumbnail,
 title and revised description. QA hash and reproduction saved in Git.
 This is a different graphic format; YouTube clearance remains unverified.
 No claim dispute, upload or publication performed.
+
+## Anime Chess - 11 October 2026, Death Note scene-led V3
+
+The user rejected the 91-second graphics-only V2 because it removes the scene
+and dialogue. Preserve that experiment as an archive and retain V1 unchanged.
+V3 uses thirteen explicitly authored scene excerpts with the English dub,
+seven native chess analyses, the existing guide and recap. All 26 source cut
+boundaries are outside aligned words. Two comments are adapted to retained
+context; the full final declaration and fade are preserved.
+
+Final local package: work/conversation-chess/death-note-light-l-v3-edit/A-TESTER-V3/.
+182.6 seconds, 1920x1080, 30fps, 5478 frames; 70,124,437 bytes.
+SHA256 b3e5d2fb3d6c438acc3587003bcbbf8c2c11c516984d2011fda93ebefe5033ec.
+Reviewed all 28 full-frame contact sheets and 35 larger captures. Native export
+and full decode pass; dialogue finishing preserves the picture stream,
+-19.2 LUFS integrated, -3.0 dBFS true peak. Original V1 hash is unchanged.
+
+Authored edit, reusable source preparation, QA and reproduction notes saved in
+experiments/conversation-chess/. Keep video, original sources and full private
+transcripts outside Git. Existing thumbnail/title/description included.
+The new cut still contains episode footage and soundtrack. Content ID has not
+been tested: do not describe the global block as resolved. No automatic upload,
+publication or dispute. Unrelated historical production changes preserved.
