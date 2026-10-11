@@ -1,0 +1,38 @@
+{
+  "provider": "useapi.net Google Flow",
+  "requested_count": 1,
+  "received_count": 1,
+  "aspect_ratio_requested": "16:9",
+  "dimensions": [
+    1376,
+    768
+  ],
+  "image_format": "JPEG",
+  "generation_seconds": 25.9,
+  "seed": 338559844,
+  "references_ordered": [
+    {
+      "slot": "reference_1",
+      "path": "references/personnage-utilisateur.png",
+      "role": "user character and drawing style reference",
+      "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+    }
+  ],
+  "scene": "industrial salvage-base equipment bay",
+  "characters": [
+    "Milo",
+    "Orin",
+    "background worker"
+  ],
+  "narration_excerpt": "Fictional test beat: Milo receives his equipment and Orin directs him to the work-clothes locker. No finished episode narration.",
+  "prompt": "01-prompt.txt",
+  "output": "01-echange.jpg",
+  "output_sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179",
+  "google_credits_used": "not measured",
+  "visual_review": "RELECTURE.txt",
+  "technical_test": "passed",
+  "user_visual_approval": "approved",
+  "user_feedback": "Non, frerot, c'est parfait, c'est parfait, la.",
+  "approval_scope": "this image and its character drawing style for the Quota-inspired channel",
+  "full_episode_coherence_verified": false
+}
