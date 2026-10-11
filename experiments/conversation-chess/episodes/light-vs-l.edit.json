@@ -1,0 +1,32 @@
+{
+  "schema": "conversation-chess-source-edit-v1",
+  "source_sha256": "b932310e5cc3344effe7dd709b69806efe06f8d6c1d1db8dd1d7ae22bbd111e9",
+  "timeline": "light-vs-l.json",
+  "purpose": "Shorter scene-led editorial cut. Keep the English dub, meaningful actions and chess analysis; remove repeated exposition and crowd reactions. This is not verified Content ID clearance.",
+  "source_visually_reviewed": true,
+  "cuts": [
+    {"in": 17.7, "out": 27.7, "reason": "The televised representative introduces himself; Light reacts. Complete introduction and reaction, with margins outside aligned words."},
+    {"in": 60.6, "out": 73.7, "reason": "Light equates a hidden notebook with being untraceable. Sentence finishes at73.12, retained through73.70."},
+    {"in": 85.7333333333, "out": 97.3666666667, "reason": "The decoy calls Kira evil; Light's response reveals his wounded pride. Full final word ends97.04."},
+    {"in": 115.7, "out": 120.7, "reason": "Show the decisive physical action: Light writes in the notebook, then raises it. No dialogue crosses either cut."},
+    {"in": 143.4, "out": 155.3, "reason": "The complete countdown and death establish the consequence of writing the name. Keep the collapse and resulting broadcast close-up."},
+    {"in": 159.6, "out": 163.0, "reason": "Light celebrates the apparent victory. Last taunt finishes162.16; preserve it before the analysis."},
+    {"in": 183.3666666667, "out": 197.1666666667, "reason": "L identifies the victim as a condemned inmate and denies being the man on screen. Keep Light's complete startled reaction, ending196.90."},
+    {"in": 215.7333333333, "out": 220.9666666667, "reason": "L challenges Kira to kill him; Light reacts. Omit the crowd montage that repeats the challenge."},
+    {"in": 241.0666666667, "out": 249.9666666667, "reason": "L states the failed challenge's implication. Final sentence ends249.64; retain a clean margin."},
+    {"in": 254.6, "out": 262.6, "reason": "The actual broadcast area is revealed as Kanto. Keep the complete explanation, ending262.20."},
+    {"in": 269.7333333333, "out": 272.0, "reason": "L states that he now knows the region. End before the next speaker starts272.54."},
+    {"in": 359.9, "out": 362.1666666667, "reason": "Light accepts the challenge. The complete line ends361.82."},
+    {"in": 375.1, "out": 385.2, "reason": "Retain the final mirrored declaration and city shot. Final word ends384.14; fade begins after it."}
+  ],
+  "annotations": [
+    {"original_at": 22.55, "base_index": 0},
+    {"original_at": 73.65, "base_index": 1},
+    {"original_at": 90.4, "base_index": 2},
+    {"original_at": 162.7, "base_index": 3},
+    {"original_at": 197.1, "base_index": 4, "comment": "The man on television was a condemned inmate, not L. Light exposed his killing power while the real investigator kept his own name and face hidden."},
+    {"original_at": 249.85, "base_index": 5},
+    {"original_at": 271.75, "base_index": 6, "comment": "The broadcast claimed to be worldwide, but only aired in Kanto. Light's reaction shrinks a global search to one region. L has a location, but still needs an identity."}
+  ],
+  "youtube_clearance_verified": false
+}

@@ -25,6 +25,7 @@
       "ranges_seconds": [[32,82],[93,104]]
     }
   ],
-  "revision": "Separate graphics-only editorial overview. Remove all episode footage, replay imagery, original dub and episode soundtrack; retain original written analysis, native rating graphics, pawn colors and recap.",
+  "rejected_revision": "The 91-second graphics-only overview was rejected by the user because removing the scene and English dub destroys the intended format. Keep it only as an archive.",
+  "revision": "Scene-led editorial cut with explicitly selected complete dialogue lines and key actions, original English dub, seven native analyses and recap. See light-vs-l.edit.json. This local edit does not establish Content ID clearance.",
   "youtube_clearance_verified": false
 }
