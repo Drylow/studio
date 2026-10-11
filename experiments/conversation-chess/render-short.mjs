@@ -28,6 +28,7 @@ for(const s of spec.segments){
   if(s.kind==='source'){
     if(!Number.isFinite(s.in)||!Number.isFinite(s.out)||s.in<0||s.out<=s.in||s.out>Number(meta.format.duration)||!s.boundary_review)throw new Error('Review source cuts and dialogue boundaries');
     if(s.mode!=='wide'&&(!Number.isFinite(s.center_x)||s.center_x<489||s.center_x>video.width-489))throw new Error('Portrait crop exceeds source frame');
+    if(s.transition_seconds!==undefined&&(!lastSource||!Number.isInteger(s.transition_seconds*30)||s.transition_seconds<=0||s.transition_seconds>.4))throw new Error('Review a short frame-aligned transition after an earlier source');
     lastSource=s;
   }else{
     if(!lastSource||!Number.isInteger(s.seconds*30)||s.seconds<=0)throw new Error('Review frame-aligned hold after source footage');
@@ -51,21 +52,32 @@ try{
  await page.setContent('<canvas></canvas>');await page.evaluate(s=>window.ConversationRatingSchema=s,schema);
  await page.addScriptTag({path:path.join(here,'short-scene.js')});await page.evaluate(u=>window.ChessShort.init(u),urls);
  const sfx=await loadSfxManifest(path.join(here,'assets/sfx/manifest.json'));
- const rows=[];let cursor=0,currentScore=0,previous=null;
+ const rows=[];let cursor=0,currentScore=0,previous=null,previousBackground=null,previousFrames=0;
  for(const [i,s] of spec.segments.entries()){
   const seconds=s.kind==='source'?Math.round((s.out-s.in)*30)/30:s.seconds;
   const frames=Math.round(seconds*30),stem=path.join(out,String(i+1).padStart(2,'0'));
   const background=stem+'-background.mp4',graphics=stem+(s.kind==='source'?'-graphics.png':'-graphics.mov');
-  const origin=s.kind==='source'?s:s.frame_source?{...s.frame_source,out:s.frame_source.at+.10}:previous;
+  const origin=s.kind==='source'?s:s.frame_source?{...s.frame_source,out:s.frame_source.at+1/30}:previous;
   const cropWidth=Math.floor(video.height*940/1040/2)*2;
   // A reviewed central wide rectangle retains both actors in the action shots.
-  const filter=origin.mode==='wide'?`crop=1728:972:96:0,scale=940:528,pad=1080:1920:68:648:color=0x151311`:
-   `crop=${cropWidth}:${video.height}:${Math.round(origin.center_x-cropWidth/2)}:0,scale=940:1040,pad=1080:1920:68:392:color=0x151311`;
+  const filter=origin.mode==='wide'?`crop=1728:972:96:0,scale=940:528:flags=lanczos,pad=1080:1920:68:648:color=black`:
+   `crop=${cropWidth}:${video.height}:${Math.round(origin.center_x-cropWidth/2)}:0,scale=940:1040:flags=lanczos,pad=1080:1920:68:392:color=black`;
   const fade=s.kind==='outro'?`,fade=t=out:st=${seconds-.4}:d=0.4`:'';
-  if(s.kind==='source')run(ffmpeg,['-v','error','-y','-ss',String(s.in),'-i',source,'-vf',filter+',setsar=1','-r','30','-frames:v',String(frames),'-an','-c:v','libx264','-crf','17','-preset','fast',background]);
+  if(s.kind==='source'){
+   let videoArgs=['-vf',filter+',setsar=1'];
+   let inputs=['-ss',String(s.in),'-i',source];
+   if(s.transition_seconds){
+    const last=stem+'-transition-from.png';
+    run(ffmpeg,['-v','error','-y','-ss',String((previousFrames-1)/30),'-i',previousBackground,'-frames:v','1',last]);
+    inputs.push('-loop','1','-framerate','30','-i',last);
+    const d=s.transition_seconds;
+    videoArgs=['-filter_complex',`[0:v]${filter},fps=30,setsar=1,setpts=PTS-STARTPTS[new];[1:v]setsar=1,setpts=PTS-STARTPTS[old];[old][new]blend=all_expr='if(lt(T,${d}),A*(1-T/${d})+B*T/${d},B)'[v]`,'-map','[v]'];
+   }
+   run(ffmpeg,['-v','error','-y',...inputs,...videoArgs,'-r','30','-frames:v',String(frames),'-an','-c:v','libx264','-crf','17','-preset','fast',background]);
+  }
   else {
-   const still=stem+'-freeze.png';run(ffmpeg,['-v','error','-y','-ss',String(origin.out-.10),'-i',source,'-vf',filter+',setsar=1','-frames:v','1',still]);
-   run(ffmpeg,['-v','error','-y','-loop','1','-framerate','30','-i',still,'-vf','eq=brightness=-.05'+fade,'-frames:v',String(frames),'-an','-c:v','libx264','-pix_fmt','yuv420p','-crf','17','-preset','fast',background]);
+   const still=stem+'-freeze.png';run(ffmpeg,['-v','error','-y','-ss',String(origin.out-1/30),'-i',source,'-vf',filter+',setsar=1','-frames:v','1',still]);
+   run(ffmpeg,['-v','error','-y','-loop','1','-framerate','30','-i',still,'-vf','null'+fade,'-frames:v',String(frames),'-an','-c:v','libx264','-pix_fmt','yuv420p','-crf','17','-preset','fast',background]);
   }
   const before=currentScore;if(s.kind==='analysis')currentScore=s.analysis.score;
   const o={...s,series:spec.series,hook:spec.hook,sides:spec.sides,recap:spec.recap,score:currentScore,previous_score:before,seconds};
@@ -79,15 +91,17 @@ try{
   const row={kind:s.kind,start_frame:cursor,end_frame:cursor+frames,duration_frames:frames,background_file:background,graphics_file:graphics};
   if(s.kind==='source'){
    const audio=stem+'-dialogue.wav';
-   run(ffmpeg,['-v','error','-y','-ss',String(s.in),'-i',source,'-af',`apad,atrim=end_sample=${frames*1600},afade=t=in:d=0.006,afade=t=out:st=${seconds-.012}:d=0.012`,'-ar','48000','-ac','2','-c:a','pcm_s16le',audio]);
+   const inFade=s.transition_seconds||.06;
+   run(ffmpeg,['-v','error','-y','-ss',String(s.in),'-i',source,'-af',`apad,atrim=end_sample=${frames*1600},afade=t=in:d=${inFade},afade=t=out:st=${seconds-.12}:d=0.12`,'-ar','48000','-ac','2','-c:a','pcm_s16le',audio]);
    row.dialogue_audio_file=audio;row.source_in=s.in;row.source_out=s.out;previous=s;
   }else if(s.kind==='analysis'){
    row.sfx_file=stem+'-sfx.wav';await renderAnalysisAudio({manifest:sfx,annotation:{...s.analysis,hold_seconds:seconds},schema,outputPath:row.sfx_file});
    row.speaker=s.analysis.speaker;row.rating=s.analysis.rating;row.comment=s.analysis.comment;
   }
-  rows.push(row);cursor+=frames;console.log(`${i+1}/${spec.segments.length} ${s.kind} ${frames} frames`);
+  if(s.transition_seconds)row.transition_seconds=s.transition_seconds;
+  rows.push(row);cursor+=frames;previousBackground=background;previousFrames=frames;console.log(`${i+1}/${spec.segments.length} ${s.kind} ${frames} frames`);
  }
- const manifest={schema:'conversation-chess-kdenlive-interchange-v1',title:spec.title,fps:30,width:1080,height:1920,duration_frames:cursor,original_source:source,source_sha256:sha,source_quality:{...spec.source_quality,minimum_height:1080,visually_reviewed:true},rating_schema_version:4,voiceover:false,demo:false,side_colors:spec.sides,opening:spec.opening,outro_layout_reviewed:true,segments:rows,published:false};
+ const manifest={schema:'conversation-chess-kdenlive-interchange-v1',title:spec.title,fps:30,width:1080,height:1920,background_color:'#000000',duration_frames:cursor,original_source:source,source_sha256:sha,source_quality:{...spec.source_quality,minimum_height:1080,visually_reviewed:true},rating_schema_version:4,voiceover:false,demo:false,side_colors:spec.sides,opening:spec.opening,outro_layout_reviewed:true,segments:rows,published:false};
  await fs.writeFile(path.join(out,'project-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
  await fs.copyFile(timeline,path.join(out,'authored-timeline.json'));
  console.log(`Prepared ${(cursor/30).toFixed(2)}s portrait project`);
