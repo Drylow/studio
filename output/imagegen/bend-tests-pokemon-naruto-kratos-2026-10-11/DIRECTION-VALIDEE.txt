@@ -1,0 +1,25 @@
+DIRECTION VISUELLE VALIDEE PAR L'UTILISATEUR — 11 OCTOBRE 2026
+
+L'utilisateur valide les trois images finales :
+- 01-pokemon.jpg
+- 02-naruto-corrige.jpg
+- 03-kratos.jpg
+
+Retour : « c exactement ce qu'on veut, tjr garder nos persos white stylé et leur mettre outfit etc etc.. »
+
+Pour les prochains tests et plans de ces univers, conserver le dessin, les
+proportions, les tetes rondes blanches, les traits simples, les mains blanches
+et le traitement BD observes dans ces trois images. Adapter les tenues,
+armures, accessoires et equipements au personnage et a son univers.
+Tous les personnages humanoides, y compris les personnages connus et les
+figurants, conservent notre identite visuelle blanche. Les creatures comme
+Pikachu restent reconnaissables, comme dans le test valide.
+
+Quota Ladder reste une inspiration de narration et de mise en scene ; son
+melange de visages humains et de tetes blanches ne remplace pas notre direction.
+Les trois fichiers valides servent de references visuelles reelles, en plus
+des descriptions. Conserver les originaux et les prompts ; toute variante
+future doit etre sauvegardee a part et inspectee visuellement.
+
+Validation du style et des trois tests uniquement : aucun episode complet,
+script, calendrier ou publication n'est valide par ce retour.

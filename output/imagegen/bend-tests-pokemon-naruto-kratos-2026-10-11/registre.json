@@ -47,7 +47,7 @@
           "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
         }
       ],
-      "review_state": "reviewed_by_codex_awaiting_user_feedback",
+      "review_state": "approved_by_user",
       "seconds": 42.22
     },
     {
@@ -79,7 +79,7 @@
           "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
         }
       ],
-      "review_state": "reviewed_by_codex_awaiting_user_feedback",
+      "review_state": "approved_by_user",
       "seconds": 42.17,
       "previous_image": "archives/02-naruto-premier-essai.jpg",
       "correction": {
@@ -129,10 +129,20 @@
           "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
         }
       ],
-      "review_state": "reviewed_by_codex_awaiting_user_feedback",
+      "review_state": "approved_by_user",
       "seconds": 44.18
     }
   ],
   "generation_count": 4,
-  "selected_image_count": 3
+  "selected_image_count": 3,
+  "user_approval": {
+    "date": "2026-10-11",
+    "scope": "The three selected images and their character/outfit style",
+    "direction_file": "DIRECTION-VALIDEE.txt",
+    "reference_images": [
+      "01-pokemon.jpg",
+      "02-naruto-corrige.jpg",
+      "03-kratos.jpg"
+    ]
+  }
 }
