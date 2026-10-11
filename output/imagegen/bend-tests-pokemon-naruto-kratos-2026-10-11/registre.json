@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-11",
+  "provider": "google_flow_via_useapi",
+  "prompt_author": "Codex",
+  "purpose": "Three independent franchise style tests, not an episode or canon retelling",
+  "model_source": "private_runtime_configuration",
+  "narration_status": "illustrative_authored_beats_without_voice_or_timing",
+  "reference_order": [
+    {
+      "path": "references/01-style-valide.jpg",
+      "role": "approved_style_and_proportions",
+      "sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179"
+    },
+    {
+      "path": "references/02-personnage-utilisateur.png",
+      "role": "supporting_character_drawing",
+      "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+    }
+  ],
+  "scenes": [
+    {
+      "id": 1,
+      "slug": "pokemon",
+      "location": "forest-route-rest-stop",
+      "characters": [
+        "adult-trainer",
+        "Pikachu",
+        "waiting-adult-trainer"
+      ],
+      "narration": "Tu interromps ton voyage pour prendre soin de ton partenaire.",
+      "prompt": "01-pokemon-prompt.txt",
+      "image": "01-pokemon.jpg",
+      "image_sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "references": [
+        {
+          "path": "references/01-style-valide.jpg",
+          "role": "approved_style_and_proportions",
+          "sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179"
+        },
+        {
+          "path": "references/02-personnage-utilisateur.png",
+          "role": "supporting_character_drawing",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+        }
+      ],
+      "review_state": "approved_by_user",
+      "seconds": 42.22
+    },
+    {
+      "id": 2,
+      "slug": "naruto",
+      "location": "village-stream-training-ground",
+      "characters": [
+        "adult-ninja",
+        "shadow-clone",
+        "adult-instructor"
+      ],
+      "narration": "Ton clone te rattrape avant que ton entraînement ne finisse dans le ruisseau.",
+      "prompt": "02-naruto-prompt.txt",
+      "image": "02-naruto-corrige.jpg",
+      "image_sha256": "04d6cb9e3f4c7bd19aee154c6bf9c8ddfc5954d73e8d275ac343f56af7734ce2",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "references": [
+        {
+          "path": "references/01-style-valide.jpg",
+          "role": "approved_style_and_proportions",
+          "sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179"
+        },
+        {
+          "path": "references/02-personnage-utilisateur.png",
+          "role": "supporting_character_drawing",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+        }
+      ],
+      "review_state": "approved_by_user",
+      "seconds": 42.17,
+      "previous_image": "archives/02-naruto-premier-essai.jpg",
+      "correction": {
+        "prompt": "02-naruto-correction-prompt.txt",
+        "reason": "Remove unexpected insignia; preserve scene",
+        "references": [
+          {
+            "path": "archives/02-naruto-premier-essai.jpg",
+            "role": "edit_target",
+            "sha256": "e1d5f97c3b14ce2f608a534504bba0fdad4c3c43ad8fff04f5be23a4be38f8a1",
+            "path_at_generation": "02-naruto.jpg"
+          },
+          {
+            "path": "references/01-style-valide.jpg",
+            "role": "approved_style",
+            "sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179"
+          }
+        ],
+        "seconds": 41.36
+      }
+    },
+    {
+      "id": 3,
+      "slug": "kratos",
+      "location": "nordic-mountain-stone-gate",
+      "characters": [
+        "Kratos",
+        "adult-traveler"
+      ],
+      "narration": "Ta force peut détruire une porte. Cette fois, elle permet à quelqu’un de la franchir.",
+      "prompt": "03-kratos-prompt.txt",
+      "image": "03-kratos.jpg",
+      "image_sha256": "9a76ded19bd9996a06df5754e8690c994964e3fb1293f2b743b1873e9b531b38",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "references": [
+        {
+          "path": "references/01-style-valide.jpg",
+          "role": "approved_style_and_proportions",
+          "sha256": "eca6d21e9c86e9d33d30bf14cd53af964447a9869aa1202de9721f8c21e45179"
+        },
+        {
+          "path": "references/02-personnage-utilisateur.png",
+          "role": "supporting_character_drawing",
+          "sha256": "18331c876b87c6f3236b4c4bf0de7016cdd57a5067ccf277f0f61e9560ccb3f7"
+        }
+      ],
+      "review_state": "approved_by_user",
+      "seconds": 44.18
+    }
+  ],
+  "generation_count": 4,
+  "selected_image_count": 3,
+  "user_approval": {
+    "date": "2026-10-11",
+    "scope": "The three selected images and their character/outfit style",
+    "direction_file": "DIRECTION-VALIDEE.txt",
+    "reference_images": [
+      "01-pokemon.jpg",
+      "02-naruto-corrige.jpg",
+      "03-kratos.jpg"
+    ]
+  }
+}
