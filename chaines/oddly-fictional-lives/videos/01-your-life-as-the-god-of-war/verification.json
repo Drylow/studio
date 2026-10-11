@@ -1,0 +1,18 @@
+{
+  "script_sha256": "86bef8973626acd747be892e149d518b8d132fd5e9ade6281cbc845a42b9416c",
+  "words": 2225,
+  "hook_words": 88,
+  "clean_narration_only": true,
+  "ascii_only": true,
+  "section_coverage_complete": true,
+  "max_paragraph_words": 84,
+  "reference_nine_word_matches": {
+    "9BB4oCJ6cR4-transcript.txt": [],
+    "diftQzzcm9E-transcript.txt": [],
+    "Qb-h3lfgW7M-transcript.txt": []
+  },
+  "actual_voice_duration_checked": false,
+  "video_rendered": false,
+  "thumbnail_prompt_authored": true,
+  "thumbnail_generated": false
+}
