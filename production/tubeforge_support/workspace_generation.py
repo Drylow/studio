@@ -187,7 +187,9 @@ async def generate(pid, sid, body, *, batch_id=None):
     except asyncio.CancelledError:
         raise
     except google_flow.FlowError as error:
-        raise HTTPException(502, str(error)) from None
+        safe = HTTPException(502, str(error))
+        safe.workspace_safe_detail = True  # FlowError is already sanitized by our transport.
+        raise safe from None
     except Exception:
         raise HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée") from None
     finally:
@@ -247,19 +249,21 @@ async def start_batch(pid, body):
             or any(step.get("state") == "running" for step in p.get("steps", {}).values())):
         raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
     phase = body.get("phase")
-    if phase not in ("preview", "remaining"):
-        raise HTTPException(422, "Choisissez le test des trois premiers plans ou les images restantes")
+    if phase not in ("preview", "remaining", "corrections"):
+        raise HTTPException(422, "Choisissez le test des trois premiers plans, les images restantes ou les corrections")
     if body.get("confirmation") != api._generation_confirmation(p):
         raise HTTPException(409, "Le projet a changé. Actualisez avant de lancer la génération")
     scenes = p.get("scenes", [])
     if not scenes:
         raise HTTPException(422, "Enregistrez d'abord le découpage et les prompts écrits par Codex")
-    if phase == "remaining" and not _preview_verified(p):
+    if phase in ("remaining", "corrections") and not _preview_verified(p):
         raise HTTPException(409, "Regardez et marquez vérifiés les trois premiers plans avant de continuer")
     candidates = scenes[:3] if phase == "preview" else scenes[3:]
-    targets = [s for s in candidates if _missing(p, s)]
+    targets = [s for s in candidates if (s.get("workspace_regeneration_required") is True
+                                       if phase == "corrections" else _missing(p, s))]
     if not targets:
-        raise HTTPException(409, "Toutes les images de cette étape existent déjà")
+        raise HTTPException(409, "Aucun plan n’est marqué à corriger" if phase == "corrections"
+                            else "Toutes les images de cette étape existent déjà")
     model = (p.get("model_snapshot") or {}).get("image_model")
     provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     if body.get("image_model") != model or body.get("image_provider", provider) != provider:
@@ -278,6 +282,8 @@ async def start_batch(pid, body):
     job = {"id": uuid.uuid4().hex, "phase": phase, "state": "queued", "started_at": now(),
            "scene_ids": [s["id"] for s in targets], "done": 0, "total": len(targets),
            "current_scene_id": None, "stop_requested": False, "error": None}
+    if phase == "corrections":
+        job.update(processed=0, failed_scene_ids=[], scene_errors={})
     p["workspace_batch"] = job
     store.save_project(p)
     _batch_tasks[pid] = asyncio.create_task(_run_batch(pid, job["id"], _batch_signature(p), sources))
@@ -293,6 +299,23 @@ def _update_batch(pid, job_id, **changes):
     return p
 
 
+def _check_batch_inputs(p, signature, sources):
+    if (_batch_signature(p) != signature
+            or any(api._file_digest(path.parent, path.name) != digest for path, digest in sources.items())):
+        raise HTTPException(409, "Le découpage, le modèle ou les références ont changé. Le lot a été arrêté")
+    if p["workspace_batch"]["phase"] in ("remaining", "corrections") and not _preview_verified(p):
+        raise HTTPException(409, "La validation des trois premiers plans a changé. Le lot a été arrêté")
+
+
+def _correction_error(exc):
+    if getattr(exc, "workspace_safe_detail", False):
+        return str(exc.detail)[:500]
+    if exc.detail == "La génération du plan a échoué ; aucune correction automatique n'a été appliquée":
+        return exc.detail
+    # A raw HTTPException from an upstream client must not expose its response body.
+    return f"La tentative de ce plan a échoué (HTTP {exc.status_code}). L’image précédente est conservée ; aucune nouvelle tentative automatique."
+
+
 async def _run_batch(pid, job_id, signature, sources):
     state, error = "done", None
     try:
@@ -302,21 +325,36 @@ async def _run_batch(pid, job_id, signature, sources):
             if current["workspace_batch"].get("stop_requested"):
                 state = "stopped"
                 break
-            if (_batch_signature(current) != signature
-                    or any(api._file_digest(path.parent, path.name) != digest for path, digest in sources.items())):
-                raise HTTPException(409, "Le découpage, le modèle ou les références ont changé. Le lot a été arrêté")
-            if current["workspace_batch"]["phase"] == "remaining" and not _preview_verified(current):
-                raise HTTPException(409, "La validation des trois premiers plans a changé. Le lot a été arrêté")
+            _check_batch_inputs(current, signature, sources)
             scene = _scene(current, sid)
             # Never overwrite an image selected by the user or another request.
             if not _missing(current, scene):
                 raise HTTPException(409, "Une image a été ajoutée pendant la génération. Actualisez le projet")
             _update_batch(pid, job_id, current_scene_id=sid)
-            await generate(pid, sid, {"confirm_prompt": scene["prompt"],
-                "image_model": current["model_snapshot"]["image_model"],
-                "image_provider": current["model_snapshot"].get("image_provider", "cli_proxy")}, batch_id=job_id)
+            correction = current["workspace_batch"]["phase"] == "corrections"
+            if correction:
+                _update_batch(pid, job_id, processed=current["workspace_batch"]["processed"] + 1)
+            try:
+                await generate(pid, sid, {"confirm_prompt": scene["prompt"],
+                    "image_model": current["model_snapshot"]["image_model"],
+                    "image_provider": current["model_snapshot"].get("image_provider", "cli_proxy")}, batch_id=job_id)
+            except HTTPException as exc:
+                if not correction:
+                    raise
+                latest = api._project(pid)
+                failed = latest["workspace_batch"]["failed_scene_ids"] + [sid]
+                errors = dict(latest["workspace_batch"]["scene_errors"], **{str(sid): _correction_error(exc)})
+                _update_batch(pid, job_id, failed_scene_ids=failed, scene_errors=errors)
+                _check_batch_inputs(api._project(pid), signature, sources)
+                continue
             latest = api._project(pid)
             _update_batch(pid, job_id, done=latest["workspace_batch"]["done"] + 1)
+            if correction:
+                _check_batch_inputs(api._project(pid), signature, sources)
+        latest = api._project(pid)
+        if state == "done" and latest["workspace_batch"].get("failed_scene_ids"):
+            state = "done_with_errors"
+            error = f"{len(latest['workspace_batch']['failed_scene_ids'])} plan(s) restent à corriger ; aucune nouvelle tentative automatique."
         if api._project(pid)["workspace_batch"].get("stop_requested"):
             state = "stopped"
     except asyncio.CancelledError:

@@ -108,12 +108,12 @@
     const scenes = project.scenes || [];
     const first = scenes.slice(0, 3);
     const candidates = phase === 'preview' ? first : scenes.slice(3);
-    const targets = candidates.filter((scene) => scene.workspace_regeneration_required === true || !hasImage(scene));
+    const targets = candidates.filter((scene) => scene.workspace_regeneration_required === true || phase !== 'corrections' && !hasImage(scene));
     let reason = '';
     if (!scenes.length) reason = 'Enregistrez d’abord le découpage, les prompts et les références.';
     else if (project.running) reason = 'Une génération est déjà en cours.';
-    else if (phase === 'remaining' && first.some((scene) => !hasImage(scene) || scene.human_review?.state !== 'verified')) reason = 'Regardez et marquez vérifiés les trois premiers plans pour continuer.';
-    else if (!targets.length) reason = 'Les images de cette étape existent déjà.';
+    else if (phase !== 'preview' && first.some((scene) => !hasImage(scene) || scene.human_review?.state !== 'verified')) reason = 'Regardez et marquez vérifiés les trois premiers plans pour continuer.';
+    else if (!targets.length) reason = phase === 'corrections' ? 'Aucun plan marqué à refaire.' : 'Les images de cette étape existent déjà.';
     else reason = targets.map((scene) => generationBlockReason(project, scene)).find(Boolean) || '';
     if (!reason && !project.generation_confirmation) reason = 'Actualisez le projet avant de générer ses images.';
     return { first, targets, reason };
@@ -169,6 +169,10 @@
       const approved = { ...authored, image: 'approved.png', human_review: { state: 'verified' } };
       const repair = { ...approved, id: 4, workspace_regeneration_required: true };
       check(() => assert.deepEqual(batchPlan({ ...directed, generation_confirmation: 'confirmed', scenes: [approved, approved, approved, repair, { ...approved, id: 5 }] }, 'remaining').targets.map((s) => s.id), [4]));
+      const correctionProject = { ...directed, generation_confirmation: 'confirmed', scenes: [approved, approved, approved, repair, { ...authored, id: 5 }, { ...approved, id: 6 }] };
+      check(() => assert.deepEqual(batchPlan(correctionProject, 'corrections').targets.map((s) => s.id), [4]));
+      check(() => assert.equal(batchPlan(correctionProject, 'corrections').reason, ''));
+      check(() => assert.match(batchPlan({ ...correctionProject, scenes: [authored, approved, approved, repair] }, 'corrections').reason, /trois premiers/));
       process.stdout.write(`${checks} focused checks passed\n`);
     }
   }
@@ -622,10 +626,14 @@
     if (!p.codex_directed || p.readonly) return '';
     const test = batchPlan(p, 'preview');
     const rest = batchPlan(p, 'remaining');
+      const corrections = batchPlan(p, 'corrections');
     const job = p.workspace_batch;
     const active = ['queued', 'running', 'stopping'].includes(job?.state);
-    const labels = { queued: 'Démarrage', running: 'Génération en cours', stopping: 'Arrêt après le plan en cours', done: 'Images générées · à vérifier', stopped: 'Génération arrêtée', failed: 'Génération arrêtée sur une erreur', interrupted: 'Génération interrompue' };
-    return `<section id="batch-workflow" class="section batch-workflow" aria-label="Tester puis générer les images"><h2>Tester les 3 premières, puis générer la suite</h2><p class="muted">Vérifiez le personnage, les décors et le style sur les trois premiers plans avant de lancer les images restantes. Les images réussies sont conservées. Les plans marqués à refaire sont régénérés avec leurs nouvelles références.</p><div class="actions"><button type="button" class="primary" data-batch="preview" ${test.reason ? 'disabled' : ''}>1. Tester les ${test.first.length || 3} premières images${test.targets.length ? ` · ${test.targets.length} à générer` : ''}</button><button type="button" class="primary" data-batch="remaining" ${rest.reason ? 'disabled' : ''}>2. Générer les images restantes${rest.targets.length ? ` · ${rest.targets.length}` : ''}</button>${active ? `<button type="button" id="stop-images" ${job.stop_requested ? 'disabled' : ''}>Arrêter après ce plan</button>` : ''}</div>${test.reason && !active ? `<p class="small muted">Test : ${esc(test.reason)}</p>` : ''}${rest.reason && !active ? `<p class="small muted">Suite : ${esc(rest.reason)}</p>` : ''}${job ? `<div class="batch-progress" role="status" aria-live="polite"><strong>${esc(labels[job.state] || job.state)}</strong><span>${job.done}/${job.total} images${job.current_scene_id != null ? ` · plan ${esc(job.current_scene_id)}` : ''}</span><progress max="${Math.max(1, job.total)}" value="${job.done}" aria-label="Images terminées"></progress>${job.error ? `<p class="error-text">${esc(job.error)}</p>` : ''}</div>` : ''}<p class="small muted">Après la génération, vérifiez toutes les images, puis lancez le montage dans l’onglet Export. La voix et les timings doivent être prêts.</p></section>`;
+      const labels = { queued: 'Démarrage', running: job?.phase === 'corrections' ? 'Correction des plans en cours' : 'Génération en cours', stopping: 'Arrêt après le plan en cours', done: 'Images générées · à vérifier', done_with_errors: 'Corrections terminées · certains plans restent à refaire', stopped: 'Génération arrêtée', failed: 'Génération arrêtée sur une erreur', interrupted: 'Génération interrompue' };
+      const correctionButton = corrections.targets.length ? `<button type="button" data-batch="corrections" ${corrections.reason ? 'disabled' : ''}>Refaire les plans incorrects · ${corrections.targets.length}</button>` : '';
+      const failedCount = job?.failed_scene_ids?.length || 0;
+      const processed = job?.processed ?? job?.done ?? 0;
+    return `<section id="batch-workflow" class="section batch-workflow" aria-label="Tester puis générer les images"><h2>Tester les 3 premières, puis générer la suite</h2><p class="muted">Vérifiez le personnage, les décors et le style sur les trois premiers plans avant de lancer les images restantes. Les images réussies sont conservées. Les plans marqués à refaire sont régénérés avec leurs nouvelles références.</p><div class="actions"><button type="button" class="primary" data-batch="preview" ${test.reason ? 'disabled' : ''}>1. Tester les ${test.first.length || 3} premières images${test.targets.length ? ` · ${test.targets.length} à générer` : ''}</button><button type="button" class="primary" data-batch="remaining" ${rest.reason ? 'disabled' : ''}>2. Générer les images restantes${rest.targets.length ? ` · ${rest.targets.length}` : ''}</button>${correctionButton}${active ? `<button type="button" id="stop-images" ${job.stop_requested ? 'disabled' : ''}>Arrêter après ce plan</button>` : ''}</div>${test.reason && !active ? `<p class="small muted">Test : ${esc(test.reason)}</p>` : ''}${rest.reason && !active ? `<p class="small muted">Suite : ${esc(rest.reason)}</p>` : ''}${job ? `<div class="batch-progress" role="status" aria-live="polite"><strong>${esc(labels[job.state] || job.state)}</strong><span>${processed}/${job.total} plans traités · ${job.done} images générées${failedCount ? ` · ${failedCount} échec(s)` : ''}${job.current_scene_id != null ? ` · plan ${esc(job.current_scene_id)}` : ''}</span><progress max="${Math.max(1, job.total)}" value="${processed}" aria-label="Plans traités"></progress>${job.error ? `<p class="error-text">${esc(job.error)}</p>` : ''}${failedCount ? `<p class="small error-text">À refaire : plans ${job.failed_scene_ids.map(esc).join(', ')}. Les anciennes images sont conservées.</p>` : ''}</div>` : ''}<p class="small muted">Après la génération, vérifiez toutes les images, puis lancez le montage dans l’onglet Export. La voix et les timings doivent être prêts.</p></section>`;
   }
   function bindBatchControls() {
     $$('[data-batch]').forEach((button) => button.onclick = () => action(button, async () => {

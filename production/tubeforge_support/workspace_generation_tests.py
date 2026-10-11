@@ -295,6 +295,115 @@ def test_regeneration_flag_edit_during_request_rejects_obsolete_output(workspace
     assert latest["workspace_generation_history"][-1]["state"] == "obsolete_unselected"
 
 
+def correction_project(workspace):
+    _, p, data = batch_project(workspace, preview_ready=True)
+    for shot in p["scenes"][3:]:
+        shot.update(image="previous.png", generation_receipt={"id": "old-" + str(shot["id"])})
+    p["scenes"][3]["workspace_regeneration_required"] = True
+    p["scenes"][5]["workspace_regeneration_required"] = True
+    p["scenes"][4]["image"] = None  # Missing but not flagged: corrections must not generate it.
+    store.save_project(p)
+    return p, data
+
+
+def test_corrections_target_only_flagged_shots_after_verified_preview(workspace, monkeypatch):
+    p, data = correction_project(workspace)
+    request = AsyncMock(return_value=data)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, "corrections"))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    job = latest["workspace_batch"]
+    assert job["state"] == "done" and job["scene_ids"] == [21, 8]
+    assert job["done"] == job["processed"] == 2
+    assert job["failed_scene_ids"] == [] and job["scene_errors"] == {}
+    assert latest["scenes"][4]["image"] is None
+    assert latest["scenes"][6]["image"] == "previous.png"
+    assert all(shot["image"] == "previous.png" for shot in latest["scenes"][:3])
+    assert [call.args[0] for call in request.await_args_list] == [p["scenes"][i]["prompt"] for i in (3, 5)]
+    assert all(call.kwargs["attempts"] == 1 for call in request.await_args_list)
+
+
+@pytest.mark.parametrize("error", [generation.google_flow.FlowError(
+    "Google Flow est indisponible ou a refusé la requête (HTTP 400).", 400),
+    HTTPException(502, "private upstream response must stay hidden")])
+def test_corrections_continue_after_one_failed_attempt_without_rewriting_or_retry(workspace, monkeypatch, error):
+    p, data = correction_project(workspace)
+    old = copy.deepcopy(p["scenes"][3])
+    request = AsyncMock(side_effect=[error, data])
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, "corrections"))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    job = latest["workspace_batch"]
+    assert job["state"] == "done_with_errors" and job["done"] == 1 and job["processed"] == 2
+    assert job["failed_scene_ids"] == [21] and set(job["scene_errors"]) == {"21"}
+    assert "private upstream" not in job["scene_errors"]["21"]
+    if isinstance(error, generation.google_flow.FlowError):
+        assert job["scene_errors"]["21"] == str(error)
+    failed, succeeded = latest["scenes"][3], latest["scenes"][5]
+    assert failed["image"] == old["image"] and failed["generation_receipt"] == old["generation_receipt"]
+    assert failed["workspace_regeneration_required"] is True
+    assert succeeded["image"] != "previous.png" and "workspace_regeneration_required" not in succeeded
+    assert succeeded["generation_receipt"]["previous_image"]["path"] == "previous.png"
+    assert latest["scenes"][4]["image"] is None and latest["scenes"][6]["image"] == "previous.png"
+    assert request.await_count == 2
+    assert [call.args[0] for call in request.await_args_list] == [p["scenes"][i]["prompt"] for i in (3, 5)]
+    assert all(call.kwargs["attempts"] == 1 and call.kwargs["model"] == p["model_snapshot"]["image_model"]
+               for call in request.await_args_list)
+
+
+@pytest.mark.parametrize("change", ["prompt", "reference", "preview-review", "stop"])
+def test_corrections_stop_instead_of_continuing_after_failure_when_inputs_change(workspace, monkeypatch, change):
+    p, _ = correction_project(workspace)
+
+    async def image(*args, **kwargs):
+        current = copy.deepcopy(store.get_project(p["id"]))
+        if change == "prompt":
+            current["scenes"][5]["prompt"] = "Authored prompt changed during the first request."
+        elif change == "reference":
+            Image.new("RGB", (32, 18), "red").save(store.project_dir(p["id"]) / "reference.png")
+        elif change == "preview-review":
+            current["scenes"][0]["human_review"] = {"state": "unreviewed"}
+        else:
+            current["workspace_batch"]["stop_requested"] = True
+        store.save_project(current)
+        raise generation.google_flow.FlowError("Google Flow est indisponible ou a refusé la requête (HTTP 400).", 400)
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, "corrections"))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    job = store.get_project(p["id"])["workspace_batch"]
+    assert job["state"] == ("stopped" if change == "stop" else "failed")
+    assert job["processed"] == 1 and job["done"] == 0 and job["failed_scene_ids"] == [21]
+    assert request.await_count == 1
+
+
+def test_corrections_require_reviewed_preview_before_any_request(workspace, monkeypatch):
+    p, _ = correction_project(workspace)
+    p["scenes"][0]["human_review"] = {"state": "unreviewed"}
+    store.save_project(p)
+    request = AsyncMock()
+    monkeypatch.setattr(llm, "generate_image", request)
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(generation.start_batch(p["id"], batch_body(p, "corrections")))
+    assert exc.value.status_code == 409
+    request.assert_not_awaited()
+
+
 def test_failure_stops_without_retry_and_resume_skips_successes(workspace, monkeypatch):
     _, p, data = batch_project(workspace)
     request = AsyncMock(side_effect=[data, RuntimeError("private failure"), data, data])
