@@ -1,0 +1,114 @@
+QUOTA LADDER — TEST DU STYLE AVANT LE CHOIX D'UNE VIDÉO
+11 octobre 2026. Demande et correction utilisateur : tous les personnages
+de notre essai ont une tête ronde blanche, y compris les secondaires.
+
+OBJECTIF
+Vérifier concrètement notre capacité à produire des scènes dans la même famille
+visuelle que les vidéos récentes de Quota Ladder, avant de choisir un épisode.
+Ce test ne valide ni un sujet, ni une miniature, ni un film terminé.
+
+RÉFÉRENCES REGARDÉES
+Les deux planches du benchmark du 10 octobre, puis les captures individuelles :
+- Galactic Empire, 0:34 : recrue inquiète face à un instructeur.
+  https://www.youtube.com/watch?v=diftQzzcm9E&t=34
+- Galactic Empire, 1:44 : soldat près du matériel sous la pluie.
+  https://www.youtube.com/watch?v=diftQzzcm9E&t=104
+Les copies exactes utilisées sont dans references/. Les captures viennent du
+corpus du benchmark, pas de nouvelles images présentées comme des créations.
+
+LANGAGE VISUEL OBSERVÉ
+1. Avatar simple : tête blanche ronde et surdimensionnée, contour noir,
+   yeux noirs très simples. Les émotions se lisent aussi dans les sourcils,
+   les bouches courbes et les gestes ; ce n'est pas toujours un visage neutre.
+2. Corps habillés plus construits que les visages : coudes et genoux lisibles,
+   bottes, ceintures, plis et ombres. Éviter le simple bonhomme fil de fer.
+3. Décors dessinés beaucoup plus détaillés que les têtes : perspective,
+   panneaux, meubles, accessoires, terrain et traces d'usage.
+4. Lumière de scène : tons froids, lumière chaude locale, ombres, profondeur.
+   Le niveau de texture et de finition varie entre les vidéos et les plans.
+5. Mise en scène : échanges, gestes, réactions, groupes et gros plans,
+   en plus des vues larges et des cartons de rang. Le POV narratif n'impose
+   pas une caméra constamment subjective.
+
+ADAPTATION DEMANDÉE
+Le concurrent mélange parfois avatars blancs et personnages aux visages humains.
+Notre test conserve UNIQUEMENT les têtes rondes blanches. Tous les acteurs,
+officiers et personnes de fond suivent cette règle. Les mains sont blanches.
+Conserver le contraste têtes simples / décors détaillés et les expressions.
+Les décors ne sont pas volontairement vidés pour faciliter la génération.
+
+L'ancien presets/quota_ladder_en/style-prompt.txt impose notamment une bouche
+neutre, aucune expression de sourcil et des décors aux détails restreints.
+Il reste conservé : ce nouveau test doit être comparé, pas écrasé dessus.
+Les règles des cinq chaînes historiques restent propres à ces productions.
+
+TROIS SCÈNES DE CONTRÔLE
+Ce sont des scènes fictives dans une base orbitale générique, pas un épisode
+Star Wars ni un script historique. Deux adultes nommés, Milo et Orin,
+permettent de comparer les identités, les poses et la continuité.
+
+01 — Échange dans une baie d'équipement.
+Action illustrative : « Le responsable te montre où prendre ton équipement. »
+Lieu : baie A. Milo : recrue, veste charbon ; Orin : uniforme olive.
+Un travailleur au fond, même tête ronde blanche.
+Références envoyées dans l'ordre : dialogue source, extérieur source.
+Prompt exact : 01-prompt.txt. Sortie attendue : 01-echange.png.
+
+02 — Remise d'une carte, réaction du responsable.
+Action illustrative : « Tu tends ta carte ; il la regarde avant de répondre. »
+Lieu : baie A, même architecture, cadrage plus proche et geste nouveau.
+Personnages : Milo et Orin.
+Références prévues dans l'ordre : scène 01 vérifiée comme maître de la baie
+et ancre d'identité, dialogue source comme rappel du dessin.
+Prompt exact : 02-prompt.txt. Sortie attendue : 02-carte.png.
+
+03 — Chargement d'une caisse sur un quai extérieur.
+Action illustrative : « Tu charges la caisse pendant que l'équipe prépare le départ. »
+Lieu : quai B, nouveau lieu ; pas la baie A transformée artificiellement.
+Personnages : Milo, Orin, deux travailleurs adultes à tête ronde blanche.
+Références prévues dans l'ordre : scène 01 comme ancre de personnages et
+de dessin seulement, extérieur source comme référence de rendu du décor.
+Prompt exact : 03-prompt.txt. Sortie attendue : 03-quai.png.
+
+Les phrases sont des actions de contrôle, pas une narration enregistrée.
+Aucun timing, mouvement ou synchronisme de film n'est validé par ces images.
+
+EXÉCUTION ET CONTRÔLE
+Prompts écrits par Codex, sans réécriture automatique ni choix de références
+par la pipeline. Génération par le CLI fourni avec le guide imagegen, dirigé
+vers le CLI Proxy du .env. Aucun secret n'est copié dans ce dossier.
+01 doit être regardée avant de devenir référence des deux suivantes.
+Les fichiers restent des essais jusqu'au choix de l'utilisateur.
+Le registre de génération indiquera les entrées réellement envoyées, leurs
+empreintes et la relecture visuelle ; un prompt seul ne prouve pas la qualité.
+
+RÉSULTAT REGARDÉ PAR CODEX
+Trois scènes présentables pour juger le STYLE : 01-echange.png,
+02-carte-v2.png et 03-quai.png. Planche à regarder : A-REGARDER.jpg.
+Le premier essai de la carte reste conservé dans 02-carte.png.
+
+Les trois scènes montrent uniquement des personnages à tête ronde blanche,
+avec des expressions, des corps habillés ombrés et des décors dessinés détaillés.
+Les personnes du fond gardent aussi une tête blanche. Le dessin des deux
+protagonistes reste reconnaissable en interaction et dans le nouvel extérieur.
+
+La correction 02-v2 replace bien la carte dans la main gauche et montre la
+caisse toujours portée à droite. L'architecture de la baie et la palette restent
+lisibles entre 01 et 02 ; ce n'est pas une preuve de géométrie identique au pixel.
+
+Limites observées, à résoudre pour une vraie séquence : ajout d'une pièce
+rectangulaire sur la manche de Milo dans les scènes suivantes malgré la
+demande de retrait, variations de coutures et des fermetures de la caisse.
+La scène 03 inverse aussi les deux mains par rapport à la consigne de levage,
+mais montre bien le chargement demandé. Les uniformes dans le casier 01
+sont suspendus plutôt que pliés. Ces variantes n'empêchent pas de juger le
+style ; elles ne sont pas déclarées conformes pour un montage final.
+
+Le décor généré a des contours plus nets et une usure plus présente que la
+capture de dialogue 0:34, qui utilise davantage de flou et de lumière diffuse.
+On obtient une famille visuelle proche, pas une reproduction identique de tous
+les plans du concurrent. Ce petit test confirme la faisabilité des images,
+pas encore la tenue de cette direction sur une vidéo complète ou animée.
+
+Tous les prompts, références ordonnées et empreintes sont conservés dans ce
+dossier. La direction reste proposée à l'utilisateur, sans validation présumée.
