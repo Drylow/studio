@@ -7,7 +7,24 @@ Déclinaison anime : [recette de production](ANIME_WORKFLOW.md) et
 guide16s et bilan12s. La pause après « opinion » laisse une respiration ; Tony
 est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
-## État actuel et premier long
+## Reprise actuelle — Landa / Shosanna en premier
+
+Le 11 octobre 2026, l’utilisateur annule la chaîne sleep et confirme :
+**strudel Landa–Shosanna d’abord**, puis une nouvelle version Tommy–Alfie.
+Le [plan du strudel](episodes/landa-shosanna/EDITORIAL.md) est un brouillon
+lié aux événements, sans repères inventés. Le procédé V3 transmis rapporte
+un test Death Note favorable pour un fichier exact ; il décrit des coupes
+éditoriales et des analyses originales, pas une garantie pour d’autres films.
+Les nouvelles versions sont destinées à un premier contrôle privé YouTube,
+pas annoncées comme déjà exemptes de claims.
+
+`prepare-source-edit.py` conserve désormais les dimensions réelles (720p ou
+1080p selon la source), exige les camps et l’ouverture du premier extrait,
+et refuse les annotations situées dans un passage retiré. Onze tests, dont
+un vrai raccord vidéo/audio, vérifient le remapping et la durée. La sortie
+porte les dimensions mesurées : `scene-edit-1280x720.mkv` par exemple.
+
+## Archive — état des premiers longs
 
 **Tommy / Alfie est repris sur instruction de l'utilisateur**, qui a récupéré
 l'accès à son compte Google. La production avance en parallèle du fond Sleep,

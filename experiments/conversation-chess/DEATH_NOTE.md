@@ -173,8 +173,9 @@ l'exposition secondaire sont coupées. Les sept coups restent présents.
 Découpage et raisons : `episodes/light-vs-l.edit.json`. Les 26 limites des
 extraits ne traversent aucun mot de l'alignement privé. Deux commentaires sont
 adaptés au passage retenu et à l'annonce trompeuse de diffusion mondiale.
-`prepare-source-edit.py` prépare uniquement un intermédiaire 1080p et remappe
-les pauses. Les pistes partent ensemble à zéro et chaque extrait est contrôlé
+`prepare-source-edit.py` prépare un intermédiaire aux dimensions natives déclarées
+et contrôlées (1920×1080 pour cet épisode), puis remappe les pauses. Chaque
+découpage exige sa propre preuve d’ouverture et ses camps explicites. Les pistes partent ensemble à zéro et chaque extrait est contrôlé
 contre sa durée prévue pour éviter une dérive cumulée. Le montage final reste
 le moteur du collègue, rendu par Kdenlive/MLT, avec replay muet, pions par camp,
 icônes d'origine, guide Sneaky Snitch et bilan sans Subscribe.
@@ -183,7 +184,7 @@ Reproduction dans un nouveau dossier :
 
 ```powershell
 python experiments/conversation-chess/prepare-source-edit.py --source work/chess-studio/death-note/sources/light-vs-l-broadcast-1080.mp4 --edit experiments/conversation-chess/episodes/light-vs-l.edit.json --out work/conversation-chess/death-note-new/source-edit
-powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Source work/conversation-chess/death-note-new/source-edit/scene-edit-1080.mkv -Timeline work/conversation-chess/death-note-new/source-edit/timeline.json -Out work/conversation-chess/death-note-new
+powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Source work/conversation-chess/death-note-new/source-edit/scene-edit-1920x1080.mkv -Timeline work/conversation-chess/death-note-new/source-edit/timeline.json -Out work/conversation-chess/death-note-new
 python experiments/conversation-chess/finish-dialogue-audio.py --bundle work/conversation-chess/death-note-new/kdenlive --out work/conversation-chess/death-note-new/L-Outsmarts-Light-Death-Note-V3.mp4 --gain-db 6
 ```
 

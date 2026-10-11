@@ -4,6 +4,16 @@
   "timeline": "light-vs-l.json",
   "purpose": "Shorter scene-led editorial cut. Keep the English dub, meaningful actions and chess analysis; remove repeated exposition and crowd reactions. This is not verified Content ID clearance.",
   "source_visually_reviewed": true,
+  "source_dimensions": {"width": 1920, "height": 1080},
+  "white_label": "L",
+  "black_label": "Light",
+  "opening": {
+    "speaker": "white",
+    "label": "L",
+    "reviewed": true,
+    "source_at": 17.7,
+    "evidence": "The first retained cut starts17.70s with the televised representative introducing himself on behalf of L. Light then reacts. L remains White and Light Black; the representative is a proxy, not the real L."
+  },
   "cuts": [
     {"in": 17.7, "out": 27.7, "reason": "The televised representative introduces himself; Light reacts. Complete introduction and reaction, with margins outside aligned words."},
     {"in": 60.6, "out": 73.7, "reason": "Light equates a hidden notebook with being untraceable. Sentence finishes at73.12, retained through73.70."},

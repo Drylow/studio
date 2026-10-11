@@ -1,5 +1,14 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+## Reprise chess — Landa / Shosanna d’abord
+
+L’utilisateur confirme la scène du strudel d’Inglourious Basterds en premier,
+puis une nouvelle coupe Tommy–Alfie. Le procédé envoyé décrit une réduction
+éditoriale avec analyses, et un résultat Death Note rapporté pour un fichier
+précis. Aucune absence de claim n’est établie pour ces nouvelles vidéos.
+Voir `experiments/conversation-chess/episodes/landa-shosanna/EDITORIAL.md`.
+Sources, coupes réelles, montage et vérification restent à terminer.
+
 ## Projet sleep annulé — 11 octobre 2026
 
 L’utilisateur a explicitement arrêté cette chaîne et demandé de reprendre
