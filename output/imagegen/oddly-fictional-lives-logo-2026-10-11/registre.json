@@ -19,7 +19,7 @@
     }
   ],
   "seconds": 31.16,
-  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "review_state": "rejected_by_user",
   "user_approval": false,
   "uploaded_to_youtube": false,
   "visual_review": "RELECTURE.txt",
@@ -27,5 +27,9 @@
     48,
     96,
     128
-  ]
+  ],
+  "user_feedback": {
+    "date": "2026-10-11",
+    "reason": "Too minimal; adding an orbit to the old avatar is insufficient. User requests a different, more developed concept through built-in generation."
+  }
 }

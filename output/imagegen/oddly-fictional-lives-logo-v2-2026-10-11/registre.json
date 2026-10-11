@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-11",
+  "channel_name": "Oddly Fictional Lives",
+  "provider": "built_in_image_generation",
+  "prompt_author": "Codex",
+  "prompt": "logo-prompt.txt",
+  "image": "logo.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "image_sha256": "ce78599f03bf4d5d700867fd9652b71719133e90a39ef46b2516fc12ca87b3cc",
+  "reference_images_sent": [],
+  "concept": "White round-headed multiverse storykeeper; three fictional worlds emerge from an open book",
+  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "user_approval": false,
+  "uploaded_to_youtube": false,
+  "previous_concept": "../oddly-fictional-lives-logo-2026-10-11/logo.jpg",
+  "previous_concept_status": "rejected_by_user_as_too_minimal",
+  "visual_review": "RELECTURE.txt",
+  "avatar_check_sizes": [
+    64,
+    128,
+    192
+  ]
+}
