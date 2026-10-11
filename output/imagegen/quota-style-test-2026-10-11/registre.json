@@ -1,0 +1,212 @@
+{
+  "date_local": "2026-10-11",
+  "purpose": "Reproduire une famille visuelle proche avant le choix de sujet ; tous les personnages à tête blanche. Essai générique, pas miniature ni épisode.",
+  "source_references": [
+    {
+      "file": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/references/01-dialogue-source.jpg",
+        "sha256": "d1bcf1d045c3b0dfaff7134d9dfe750c5bdf77be3b48196babc10c5893da248e"
+      },
+      "video": "https://www.youtube.com/watch?v=diftQzzcm9E&t=34",
+      "role": "dialogue et contraste figures/décor"
+    },
+    {
+      "file": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/references/02-exterieur-source.jpg",
+        "sha256": "765bc33105b0d90227ce95c3b2c6dda5f52af8d15d49fd86242cb80ecb3eb18d"
+      },
+      "video": "https://www.youtube.com/watch?v=diftQzzcm9E&t=104",
+      "role": "rendu décor extérieur"
+    }
+  ],
+  "generations": [
+    {
+      "id": "01",
+      "phase": "test_style_sans_voix",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-A"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/01-prompt.txt",
+        "sha256": "73cec6a46d6e6f95e6d53a586b22c0810f90eadc452235de67fccae171b3feae"
+      },
+      "references_sent_ordered": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/references/01-dialogue-source.jpg",
+          "sha256": "d1bcf1d045c3b0dfaff7134d9dfe750c5bdf77be3b48196babc10c5893da248e",
+          "role": "style_interaction",
+          "sent_index": 1
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/references/02-exterieur-source.jpg",
+          "sha256": "765bc33105b0d90227ce95c3b2c6dda5f52af8d15d49fd86242cb80ecb3eb18d",
+          "role": "style_environment",
+          "sent_index": 2
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/01-echange.png",
+        "sha256": "73164ade7549e1a3322317f61bbb60485ca0ded33d3c9c121c1424017fe81aaa",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI Proxy configure dans .env, CLI du guide imagegen, aucune augmentation du prompt",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Trois têtes rondes blanches, interaction lisible, décor détaillé. Casier avec uniformes suspendus plutôt que pliés. Retenu pour comparaison de style et ancre des essais suivants.",
+      "user_approval": "not_requested_yet_or_received",
+      "production_ready": false
+    },
+    {
+      "id": "02-v1",
+      "phase": "test_style_sans_voix",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/02-prompt.txt",
+        "sha256": "c47c53c6ae20bee3c4f3814fc440da80725597940eed898907097e5a1e8212c6"
+      },
+      "references_sent_ordered": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/01-echange.png",
+          "sha256": "73164ade7549e1a3322317f61bbb60485ca0ded33d3c9c121c1424017fe81aaa",
+          "role": "master_baie_A_et_personnages",
+          "sent_index": 1
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/references/01-dialogue-source.jpg",
+          "sha256": "d1bcf1d045c3b0dfaff7134d9dfe750c5bdf77be3b48196babc10c5893da248e",
+          "role": "style_interaction",
+          "sent_index": 2
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/02-carte.png",
+        "sha256": "77177971cc534cb69126437d11ff92cb1d2f2761ee77d173cddf3e42a5f11034",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI Proxy configure dans .env, CLI du guide imagegen, aucune augmentation du prompt",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Style et expressions cohérents. Carte offerte par la mauvaise main, caisse hors champ et manche modifiée. Conservé comme essai, remplacé par 02-v2 dans la planche.",
+      "user_approval": "not_requested_yet_or_received",
+      "production_ready": false
+    },
+    {
+      "id": "03",
+      "phase": "test_style_sans_voix",
+      "place": "quai-B",
+      "characters": [
+        "Milo",
+        "Orin",
+        "travailleur-B",
+        "travailleur-C"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/03-prompt.txt",
+        "sha256": "f2aaa1b151119aca3ea0c484bba9cb23d92686a8bd7f4c07d905a782433533c0"
+      },
+      "references_sent_ordered": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/01-echange.png",
+          "sha256": "73164ade7549e1a3322317f61bbb60485ca0ded33d3c9c121c1424017fe81aaa",
+          "role": "personnages_et_style_pas_decor",
+          "sent_index": 1
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/references/02-exterieur-source.jpg",
+          "sha256": "765bc33105b0d90227ce95c3b2c6dda5f52af8d15d49fd86242cb80ecb3eb18d",
+          "role": "style_exterieur",
+          "sent_index": 2
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/03-quai.png",
+        "sha256": "e8a0b4851d6a9d728751f2647c9090f0b0b0ccf66ca5865acaae98eabbb4aa76",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI Proxy configure dans .env, CLI du guide imagegen, aucune augmentation du prompt",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Quatre têtes blanches, nouveau lieu détaillé, chargement et groupe lisibles. Ajout d’une pièce sur la manche et variations des détails de caisse ; mains de levage inversées face au prompt. Retenu pour style, pas conformité de séquence finale.",
+      "user_approval": "not_requested_yet_or_received",
+      "production_ready": false
+    },
+    {
+      "id": "02-v2",
+      "phase": "test_style_sans_voix",
+      "place": "baie-A",
+      "characters": [
+        "Milo",
+        "Orin"
+      ],
+      "prompt_author": "Codex",
+      "prompt": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/02-correction-prompt.txt",
+        "sha256": "d456d76bcc4a14a427da66882647cb423d5f9ed9e85ce9623bea6feea2c2e152"
+      },
+      "references_sent_ordered": [
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/02-carte.png",
+          "sha256": "77177971cc534cb69126437d11ff92cb1d2f2761ee77d173cddf3e42a5f11034",
+          "role": "cible_correction",
+          "sent_index": 1
+        },
+        {
+          "path": "output/imagegen/quota-style-test-2026-10-11/01-echange.png",
+          "sha256": "73164ade7549e1a3322317f61bbb60485ca0ded33d3c9c121c1424017fe81aaa",
+          "role": "master_baie_A_personnages_et_caisse",
+          "sent_index": 2
+        }
+      ],
+      "image": {
+        "path": "output/imagegen/quota-style-test-2026-10-11/02-carte-v2.png",
+        "sha256": "a30e63ea133a12086bd2d6bde25cdc30b78def2cef067f86ce20064a14f52bc0",
+        "dimensions": [
+          1672,
+          941
+        ]
+      },
+      "transport": "CLI Proxy configure dans .env, CLI du guide imagegen, aucune augmentation du prompt",
+      "endpoint": "/images/edits",
+      "requested_size": "1536x864",
+      "quality": "medium",
+      "visual_review_by": "Codex",
+      "visual_review": "Carte maintenant main gauche, caisse portée à droite visible. Deux têtes blanches, palette et architecture conservées visuellement. Pièce rectangulaire de manche encore présente malgré la demande de retrait. Retenu pour comparaison du style, continuité fine non validée.",
+      "user_approval": "not_requested_yet_or_received",
+      "production_ready": false
+    }
+  ],
+  "selected_style_tests": [
+    "01-echange.png",
+    "02-carte-v2.png",
+    "03-quai.png"
+  ],
+  "archived_tests": [
+    "02-carte.png"
+  ],
+  "limitations": "Correspondance visuelle examinée, pas identité exacte de tous les pixels ou validation d’un film. Variations de vêtements, caisse et attribution des mains notées dans les relectures."
+}
