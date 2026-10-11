@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.hyperframes/
+*.mp4
+qa/
+snapshots/
+check-report.json
+*.log
