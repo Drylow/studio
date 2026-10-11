@@ -2,11 +2,11 @@
   "schema": "nature-sleep-brand-proposals-v1",
   "concept_user_approved": true,
   "brand_name_user_approved": true,
-  "visual_style_user_approved": true,
+  "visual_style_user_approved": false,
   "avatar_user_approved": false,
-  "animation_started": true,
+  "animation_started": false,
   "youtube_channel_created": false,
-  "root_recommended_style": "cozy_pastel_pixel_art",
+  "root_recommended_style": "cozy-reset-2026-10-11/C",
   "assets": [
     {
       "proposal": "A",
@@ -63,18 +63,20 @@
       }
     }
   ],
-  "status": "Branding retained; cottage still approved; continuous foliage and frog animation delivered for review after first pixel preview feedback",
+  "status": "Previous cottage animation rejected; pixel constraint abandoned; three new cozy stills shown for user selection before animation",
   "brand_name": "Quiet Little Worlds",
   "proposed_handle": "QuietLittleWorlds",
   "handle_availability": "not_confirmed",
   "avatar_delivery_user_authorized": true,
   "visual_style_selected_by_delegation": "C (historical, subsequently rejected)",
-  "visual_style_explicit_image_approval": true,
+  "visual_style_explicit_image_approval": false,
   "branding_delivered_user_confirmed": true,
-  "animation_preview_delivered": true,
+  "animation_preview_delivered": false,
   "animation_preview_user_approved": false,
-  "active_art_direction": "cozy_pastel_pixel_art",
+  "active_art_direction": "awaiting_new_cozy_style_selection",
   "previous_style_C_rejected": true,
   "pixel_cottage_source_user_approved": true,
-  "active_preview_receipt": "pixel-cozy/SMOOTH_DELIVERY.json"
+  "active_preview_receipt": null,
+  "active_proposals": "cozy-reset-2026-10-11/proposals.json",
+  "previous_pixel_cottage_rejected": true
 }

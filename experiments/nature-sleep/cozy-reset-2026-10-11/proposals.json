@@ -1,0 +1,53 @@
+{
+  "schema": "quiet-little-worlds-cozy-reset-v1",
+  "date": "2026-10-11",
+  "status": "three_stills_shown_awaiting_user_selection_before_animation",
+  "brand_name": "Quiet Little Worlds",
+  "previous_pixel_direction_abandoned_by_user": true,
+  "old_cottage_reference_reused": false,
+  "active_animation_started": false,
+  "long_episode_started": false,
+  "recommended_proposal": "C",
+  "chosen_proposal": null,
+  "proposals": [
+    {
+      "id": "A",
+      "file": "A-cinematic-night-train.png",
+      "user_approved": false,
+      "prompt": "Create one exceptionally beautiful original widescreen 16:9 cinematic scene for an adult cozy sleep-story channel. NO text, NO labels, NO split panels. A sophisticated, intimate, wood-paneled sleeper-train reading compartment at blue hour in a misty evergreen forest. Art direction A: convincing high-end cinematic photorealism, physically plausible materials and architectural photography, exquisite soft bounced lighting, subtle film grain, tactile velvet, wool and polished walnut, not pixel art, not cartoon, not a game screenshot, no plastic CGI look. Camera from inside at seated eye level, wide enough to read the whole room but no extreme wide-angle distortion. The LEFT third has a welcoming moss-green velvet banquette with a rumpled cream wool blanket, two muted ochre cushions and a small shelf of old clothbound books. A single small ginger cat sleeping naturally curled on the left end of the bench, anatomically correct. A beautiful brass reading lamp casts a restrained pool of warm amber light. CENTER-right: a large clearly framed train window, with gently rain-streaked glass and deep blue-gray conifers receding into fog outside, a hint of the rail curve visible far ahead without a train coming toward us. Below the window a compact walnut table holds a small ceramic teapot, one steaming cup, a folded linen napkin and an open book with no legible text. Very subtle two or three wisps of steam. The last right edge shows another warm wall sconce and elegant joinery. Strong warm-inside/cool-outside contrast, richly layered depth, beautifully curated limited palette of warm honey, walnut, muted olive and soft slate blue. Peaceful shelter, authentic lived-in details, emotionally inviting, polished tasteful composition. More space and breathing room than clutter. No people, no threatening elements, no purple fantasy glow, no glitter or floating magic, no collage, no exterior cottage, no pond, no willow. The image should immediately feel like a place an adult wants to spend a long quiet evening. Favor an unobstructed window whose outdoor landscape can later move independently and distinct small elements for future rain/steam animation. Complete finished master still, full-bleed landscape.",
+      "root_viewed": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 2648192,
+      "sha256": "4c86dad463dfef6b15966662199b18d24d23483e38f84ca84d474fc983e86ba4"
+    },
+    {
+      "id": "B",
+      "file": "B-painted-tree-tearoom.png",
+      "user_approved": false,
+      "prompt": "One original breathtaking widescreen 16:9 hand-painted 2D animated-film background for an adult cozy bedtime story. No text, no lettering, no logos, no split panels. Art direction B must be unmistakably traditional hand-painted illustration: beautifully composed clean organic contour lines, lush matte gouache color, brushwork in large controlled shapes, detailed but calm, graceful stylization, subtle paper texture, absolutely NOT photorealistic, NOT 3D, NOT pixel art. An intimate hidden tea room built INSIDE a gigantic living oak tree at rainy late afternoon. Viewed from one room corner at comfortable eye level. Sweeping curved honey-colored wooden ribs and softly textured cream plaster form the ceiling and walls, not a cave or exterior cabin. Center-left: a large round window with neat wooden mullions frames a layered misty green woodland in gentle rain. Below the window a broad soft sage-green window seat with peach and oatmeal pillows and a folded linen throw. Center foreground: low round wooden table with a celadon teapot, TWO small ceramic cups, a bowl of fresh pears and a closed book; enough open floor around it. RIGHT: a little beautiful rounded terracotta wood stove with a clearly visible small steady golden fire inside and its flue properly connected upwards, a neat stack of split logs and a kettle on top. Bookshelves follow the curvature of the tree wall, with assorted clothbound books, pottery, one potted fern, and a restrained hanging bundle of drying herbs. LEFT foreground a few large softly painted fern fronds frame the view without blocking the room. A woven oval rug, slippers by the seat, small imperfections and loving lived-in details. Color design: warm ivory, muted sage, buttery yellow, apricot/terracotta, soft blue-gray rainy forest. The image is luminous and welcoming, medium-low contrast, no harsh black shadows, no neon, no purple glow, no glitter, no magic particles. Premium art direction with strong readable silhouettes, sophisticated adult storybook atmosphere, clear depth from foreground fern to table to window to distant trees. No people or animals, no human faces, no copied existing intellectual property, no outdoor pond, no hanging willow. Full-bleed single beautiful finished scene. Independent bounded fire, window, kettle and plant elements suitable for careful future animation; for now it is only a still visual proposal.",
+      "root_viewed": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 3030303,
+      "sha256": "ecc799c1292faca44f5623c1f414cf3689e1076354438b45baaca8384e665f52"
+    },
+    {
+      "id": "C",
+      "file": "C-miniature-root-retreat.png",
+      "user_approved": false,
+      "prompt": "Create ONE original exquisitely crafted 16:9 widescreen cozy miniature world, adult relaxation channel concept art. Art direction C: unmistakable premium STOP-MOTION MINIATURE SET photographed with a macro lens. Tangible HANDMADE materials: hand-cut basswood, slightly imperfect glazed ceramic, wool felt, knitted yarn, tiny paper leaves, sculpted moss, painted clay. It must be clearly a charming scale model and VERY DIFFERENT from a photoreal life-sized room or a painted illustration. No pixel art. No text, no labels, no logos, no collage. Scene: a miniature bookshop and tea refuge nestled in the roots of a huge old tree, shown as an intimate open-front architectural cutaway, at moss-floor height, filling the frame. Asymmetrical rounded structure under a sheltering root and large overlapping terracotta tiles. The upper left loft contains tightly arranged tiny colorful clothbound books and a miniature armchair with a clearly knitted sage blanket, reached by a gracefully curved wooden ladder. Lower right room contains a tiny warm cream ceramic stove with an amber fire visible inside, a dark flue, a cobalt miniature kettle and a single small brass lantern. Lower left foreground: a tiny round tea table with two realistic miniature ceramic cups, one little loaf on a wooden board, a small linen napkin. A large single rounded window at the back of the structure shows softly blurred fern fronds and warm dusk light beyond, no black void. Roof and foreground surrounded by beautiful soft moss cushions, a few elegant cream mushrooms and detailed paper ferns. Subtle signs of life, a little blanket draped naturally, slippers by a low stool, inviting balanced furnishings; no people or animals. Sophisticated warm apricot/cream/sage palette with soft cocoa shadows and a hint of lavender in distant background, restrained warm bulbs, physically plausible bounce lighting, not oversaturated neon, no spooky eyes, no excessive glitter, no magical particles. Very beautiful lens composition: sharp detailed refuge, shallow depth behind it, gentle out-of-focus foreground leaves at frame edges only. The miniature is embedded in a larger natural world, not isolated against a studio backdrop or presented on a pedestal. Wholesome restful visual storytelling with interesting depth and multiple cozy nooks. Realistic scale relationships within the miniature. Clearly separated small flame, kettle and hanging lantern for future subtle animation. Full-bleed complete finished scene, no frame or UI.",
+      "root_viewed": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "bytes": 2867490,
+      "sha256": "8bbdcfb3d29b86fa54d0640f34a7c1acb3b6214cff0e1f9bb06dedc9071efe35"
+    }
+  ]
+}

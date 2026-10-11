@@ -1,3 +1,7 @@
+> **Archive rejetée le 11 octobre 2026.** L’utilisateur abandonne le cottage et
+> la contrainte pixel art. Ne plus utiliser ce moteur comme base imposée.
+> Nouvelle sélection : [trois styles cosy](../cozy-reset-2026-10-11/README.md).
+
 # Quiet Little Worlds — cottage pastel, animation fluide
 
 Nouvelle direction demandée le 11 octobre 2026 après le rejet de l’animation

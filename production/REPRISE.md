@@ -9,45 +9,28 @@ explicitement choisi ; @**QuietLittleWorlds** encore non confirmé disponible.
 Aucune chaîne YouTube créée ou renommée. La nouvelle direction remplace
 Depths After Dark et ses visuels marins comme projet de branding.
 
-Le 11 octobre 2026, l’utilisateur rejette l’aperçu botanique C et demande
-une nouvelle DA **pixel art cozy, chill, couleurs pastel**. Il aime explicitement
-le nouveau décor de cottage/serre/mare, puis demande beaucoup plus d’animation
-et de détails. **Image fixe approuvée ; animation encore à valider.**
+Le 11 octobre 2026, après avoir vu le nouvel aperçu du cottage, l’utilisateur
+**rejette l’ensemble de cette direction et abandonne explicitement le pixel art**.
+Il demande plusieurs styles cosy en images, puis choisira celui à animer.
+Le cottage, le saule et la grenouille restent des archives, pas la base du nouvel essai.
 
-Nouvel aperçu révisé : **https://gofile.io/d/rGAUzFXX**, `Quiet-Little-Worlds-Living-Cottage-24s.mp4`,
-24 s, 1080p30, 720 images, sans son, 8378235 octets. SHA-256 :
-`332485ac7f819fcb1dbfa52e506b8e85ee1197f9dd6a5829a55517616c973d6f`.
-L’utilisateur a demandé de corriger le saule du premier aperçu pixel, qui
-bougeait par bandes, et d’ajouter une petite grenouille. Le pixel art concerne
-le dessin ; les mouvements doivent rester fluides. Nouveau rendu directement
-en 1080p, fond propre et calque de saule transparent animé séparément : le ciel
-reste fixe. Grenouille avec respiration, clignement, petits sauts et repos sur
-la pierre. Reflets, pluie, lucioles et papillon conservés. Caméra fixe.
-Sources générées 1672×941 ; aucun master natif 4K revendiqué.
-Décodage complet passé ; cinq planches/73 captures et trois vues natives revues ;
-upload confirmé par taille/MD5. Pas de visionnage continu prétendu.
-Cycle natif exact, sans garantie de raccord MP4 imperceptible.
-Code : `experiments/nature-sleep/pixel-cozy/render-smooth.mjs` ;
-reçu : `experiments/nature-sleep/pixel-cozy/SMOOTH_DELIVERY.json`.
-Les premiers essais restent en archives ; l’aperçu botanique C est rejeté.
-**Avis utilisateur attendu avant de commencer le long.** Aucun aperçu Discord,
-script intégral, voix ou film de deux heures lancé.
+Trois images entièrement nouvelles affichées dans la conversation :
+- **A — train de nuit** : ambiance cinéma réaliste, bois/velours et forêt brumeuse.
+- **B — maison de thé dans l’arbre** : illustration texturée, fenêtre ronde, poêle.
+- **C — refuge miniature** : petit monde sous les racines, matières de maquette.
 
-Montage proposé : quatre à six vues liées au récit, transitions lentes,
-ambiance sonore adaptée et sous-titres activables ; essai de texte central
-sobre possible. Comparer deux courts essais de voix après l’animation.
-Ces ajouts ne garantissent pas la monétisation. Règles officielles YouTube
-consultées : https://support.google.com/youtube/answer/1311392?hl=en .
-Voir `experiments/nature-sleep/pixel-cozy/EDITING_AND_VOICE.md`.
+Dossier actif : `experiments/nature-sleep/cozy-reset-2026-10-11/README.md`.
+Sources, prompts et empreintes : `proposals.json` dans ce même dossier.
+C recommandé pour l’identité de la chaîne ; A pour l’immersion. Une question de
+choix a été présentée après les images. **Aucun style encore choisi par l’utilisateur.**
+Ne pas animer sur la base du défaut préselectionné, ni déduire une validation de
+l’absence de réponse. Aucun nouvel extrait animé ou film long lancé.
 
-L’utilisateur demande une explication précise du format de deux heures.
-**Proposition à discuter, non validée :** histoires originales en anglais pour
-adultes, imaginaires et apaisantes, dans de petits refuges naturels. Exemple :
-une nuit de pluie dans le cottage. Narration évolutive pendant près de deux
-heures et fond animé en boucle ; ne pas répéter le récit pour remplir la durée.
-Les faits naturels présentés comme réels seront vérifiés. Voir
-`experiments/nature-sleep/pixel-cozy/CHANNEL_FORMAT_PROPOSAL.md`.
-Ne pas présenter la fiction comme un choix utilisateur déjà confirmé.
+La cible reste deux heures, après choix de l’image puis validation de l’animation.
+La proposition de fiction anglaise et les pistes de montage/voix précédentes
+restent des propositions non validées. Aucun script intégral ni voix lancé.
+Aucun nouvel envoi Discord ; nom/bio/avatar existants conservés.
+
 
 **Nom, bio et avatar fougère/lune livrés sur le Discord dédié.** Le contrôle API
 des pièces jointes a échoué et aucun messageID n’est conservé ; l’utilisateur

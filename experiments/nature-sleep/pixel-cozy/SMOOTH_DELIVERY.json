@@ -1,6 +1,6 @@
 {
   "schema": "quiet-little-worlds-smooth-preview-v1",
-  "status": "delivered_for_user_review_before_long_episode",
+  "status": "rejected_by_user_complete_art_direction_reset",
   "url": "https://gofile.io/d/rGAUzFXX",
   "file": {
     "name": "Quiet-Little-Worlds-Living-Cottage-24s.mp4",
@@ -50,5 +50,10 @@
   },
   "animation_user_approved": false,
   "discord_sent": false,
-  "two_hour_episode_started": false
+  "two_hour_episode_started": false,
+  "user_feedback": {
+    "date": "2026-10-11",
+    "action": "Abandon pixel art and the existing cottage; show several entirely new cozy styles as stills before animation",
+    "new_animation_requires_user_style_selection": true
+  }
 }
