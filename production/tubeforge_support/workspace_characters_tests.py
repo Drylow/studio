@@ -67,6 +67,125 @@ def test_author_selects_only_present_cast_and_keeps_variant_order(workspace):
     assert shot == before  # Executor validation never authors or reorders.
 
 
+@pytest.mark.parametrize("provider", ["cli_proxy", None])
+def test_generic_identity_bindings_keep_literal_image_labels_without_flow_markers(workspace, provider):
+    p = fictional(workspace)
+    ref = register(p)
+    if provider is None:
+        p["model_snapshot"].pop("image_provider", None)
+    else:
+        p["model_snapshot"]["image_provider"] = provider
+    # Provider selection comes only from the frozen model snapshot, not mutable settings.
+    p["settings"]["visuals"]["image_provider"] = "google_flow"
+    shot = scene(p, ref)
+    block = cast.binding(p, shot)
+    assert 'Image 1: Atreus; variant "child";' in block
+    assert "@reference_" not in block
+    cast.validate(p, shot)
+
+
+def test_flow_bindings_match_actual_ordered_slots_and_keep_two_hero_refs_one_identity(workspace):
+    p = fictional(workspace)
+    p["model_snapshot"]["image_provider"] = "google_flow"
+    hero = register(p, name="Kratos", key="norse")
+    hero_second = dict(hero, path="identity-kratos-norse-second.png")
+    directory = store.style_dir(p["style_id"])
+    (directory / hero_second["path"]).write_bytes((directory / hero["path"]).read_bytes())
+    style = store.get_style(p["style_id"])
+    style["workspace_cast_registry"]["Kratos"]["variants"]["norse"]["references"].append(hero_second)
+    store.save_style(style)
+    atreus = register(p, name="Atreus", key="child")
+    mimir = register(p, name="Mimir", key="head")
+    freya = register(p, name="Freya", key="norse")
+    generic = {"path": "ref.png", "owner": "style", "role": "style-only"}
+    refs = [generic, hero, hero_second, dict(generic, role="location"), atreus, mimir, freya, generic]
+    shot = {"characters": ["Kratos", "Atreus", "Mimir", "Freya"],
+            "character_variants": {"Kratos": "norse", "Atreus": "child", "Mimir": "head", "Freya": "norse"},
+            "references": refs}
+    before = copy.deepcopy(refs)
+    block = cast.binding(p, shot)
+    assert "Image 2 (@reference_2): the round-white-headed warrior protagonist;" in block
+    assert "Image 3 (@reference_3): the round-white-headed warrior protagonist;" in block
+    assert "Image 5 (@reference_5): Atreus;" in block
+    assert "Image 6 (@reference_6): Mimir;" in block
+    assert "Image 7 (@reference_7): Freya;" in block
+    assert all(f"@reference_{index}" not in block for index in (1, 4, 8, 9, 10))
+    assert "same single named individual" in block and "draw that identity exactly once" in block
+    assert shot["references"] == before
+    shot["prompt"] = "Physical wide scene.\n" + block
+    cast.validate(p, shot)
+    assert shot["references"] == before
+
+
+def test_flow_validator_requires_new_saved_grounding_without_executor_rewrite(workspace):
+    p = fictional(workspace)
+    p["model_snapshot"]["image_provider"] = "cli_proxy"
+    ref = register(p)
+    shot = scene(p, ref)
+    generic_prompt = shot["prompt"]
+    p["model_snapshot"]["image_provider"] = "google_flow"
+    with pytest.raises(HTTPException) as exc:
+        cast.validate(p, shot)
+    assert exc.value.status_code == 422 and shot["prompt"] == generic_prompt
+    shot["prompt"] = "Physical wide scene.\n" + cast.binding(p, shot)
+    saved = copy.deepcopy(shot)
+    cast.validate(p, shot)
+    assert shot == saved and "Image 1 (@reference_1): Atreus;" in shot["prompt"]
+
+
+def test_flow_without_identity_references_emits_no_unbound_markers(workspace):
+    p = fictional(workspace)
+    p["model_snapshot"]["image_provider"] = "google_flow"
+    register(p)
+    shot = {"characters": [], "references": [{"path": "ref.png", "owner": "style", "role": "style-only"}]}
+    assert cast.binding(p, shot) == ""
+
+
+@pytest.mark.parametrize("label", ["", " ", " role ", None, 12, False])
+def test_registry_rejects_invalid_explicit_prompt_labels(workspace, label):
+    p = fictional(workspace)
+    register(p)
+    style = store.get_style(p["style_id"])
+    style["workspace_cast_registry"]["Atreus"]["prompt_label"] = label
+    store.save_style(style)
+    with pytest.raises(HTTPException) as exc:
+        cast.registry(p)
+    assert exc.value.status_code == 422
+
+
+def test_prompt_role_labels_override_names_and_hero_alias_without_changing_identity_keys(workspace):
+    p = fictional(workspace)
+    p["model_snapshot"]["image_provider"] = "google_flow"
+    hero = register(p, name="Kratos", key="norse")
+    atreus = register(p, name="Atreus", key="child")
+    freya = register(p, name="Freya", key="norse")
+    labels = {"Kratos": "the red-marked white-circle-headed father", "Atreus": "the white-circle-headed son",
+              "Freya": "the white-circle-headed woodland healer"}
+    style = store.get_style(p["style_id"])
+    for name, label in labels.items():
+        style["workspace_cast_registry"][name]["prompt_label"] = label
+    store.save_style(style)
+    refs = [{"path": "ref.png", "owner": "style", "role": "style-only"}, hero, atreus, freya]
+    shot = {"characters": ["Kratos", "Atreus", "Freya"],
+            "character_variants": {"Kratos": "norse", "Atreus": "child", "Freya": "norse"}, "references": refs}
+    block = cast.binding(p, shot)
+    for index, name in enumerate(shot["characters"], 2):
+        assert f"Image {index} (@reference_{index}): {labels[name]};" in block
+        assert name not in block
+        assert cast.summary(p)[name]["prompt_label"] == labels[name]
+    assert cast.selected(p, shot) == [hero, atreus, freya]
+    assert [ref["character"] for ref in cast.selected(p, shot)] == shot["characters"]
+    shot["prompt"] = block
+    cast.validate(p, shot)
+
+
+def test_summary_without_optional_prompt_label_keeps_original_shape(workspace):
+    p = fictional(workspace)
+    register(p)
+    summary = cast.summary(p)
+    assert set(summary["Atreus"]) == {"required", "variants"}
+
+
 @pytest.mark.parametrize("change", ["missing_variant", "wrong_variant", "missing_ref", "wrong_identity",
                                     "unverified", "hash_changed", "missing_binding", "absent_cast", "alias"])
 def test_identity_mismatch_is_rejected(workspace, change):

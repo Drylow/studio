@@ -28,6 +28,9 @@ def registry(p):
                 or not isinstance(entry, dict) or type(entry.get("required", True)) is not bool
                 or not isinstance(entry.get("variants"), dict) or not entry["variants"]):
             raise HTTPException(422, "Une identité du registre est invalide")
+        if "prompt_label" in entry and (not isinstance(entry["prompt_label"], str)
+                or not entry["prompt_label"].strip() or entry["prompt_label"] != entry["prompt_label"].strip()):
+            raise HTTPException(422, "Le libellé visuel du personnage doit être un texte non vide, sans espaces aux extrémités")
         for key, variant in entry["variants"].items():
             if (not isinstance(key, str) or not key.strip() or key != key.strip()
                     or not isinstance(variant, dict) or not isinstance(variant.get("description"), str)
@@ -38,9 +41,13 @@ def registry(p):
 
 
 def summary(p):
-    return {name: {"required": entry.get("required", True), "variants": {
+    output = {name: {"required": entry.get("required", True), "variants": {
         key: variant["description"] for key, variant in entry["variants"].items()}}
         for name, entry in registry(p).items()}
+    for name, entry in registry(p).items():
+        if "prompt_label" in entry:
+            output[name]["prompt_label"] = entry["prompt_label"]
+    return output
 
 
 def _reference(p, ref, name, key):
@@ -86,14 +93,17 @@ def _identity_key(ref):
 
 def binding(p, scene):
     entries = registry(p)
+    positional = (p.get("model_snapshot") or {}).get("image_provider") == "google_flow"
     lines = []
     for index, ref in enumerate(scene.get("references") or [], 1):
         if ref.get("role") != "identity":
             continue
         name, key = ref.get("character"), ref.get("variant")
-        label = "the round-white-headed warrior protagonist" if name == "Kratos" else name
+        label = entries[name].get("prompt_label") or (
+            "the round-white-headed warrior protagonist" if name == "Kratos" else name)
         description = entries[name]["variants"][key]["description"].strip()
-        lines.append(f"Image {index}: {label}; variant {json.dumps(key)}; {description}")
+        slot = f"Image {index} (@reference_{index})" if positional else f"Image {index}"
+        lines.append(f"{slot}: {label}; variant {json.dumps(key)}; {description}")
     if not lines:
         return ""
     return ("IDENTITY REFERENCE BINDINGS (exact ordered attachments):\n" + "\n".join(lines)
