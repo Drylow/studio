@@ -1,0 +1,175 @@
+{
+  "filename": "L-Outsmarts-Light-GRAPHICS-V2.mp4",
+  "sha256": "92add77e4b7739fe2bdd8ebcffe0627b5032287fe794d7bebd52752b30197994",
+  "bytes": 12073867,
+  "duration_seconds": 91,
+  "frames": 2730,
+  "full_decode_passed": true,
+  "youtube_clearance_verified": false,
+  "sheets": [
+    "frames-00.jpg",
+    "frames-01.jpg",
+    "frames-02.jpg",
+    "frames-03.jpg",
+    "frames-04.jpg",
+    "frames-05.jpg",
+    "frames-06.jpg",
+    "frames-07.jpg",
+    "frames-08.jpg",
+    "frames-09.jpg",
+    "frames-10.jpg",
+    "frames-11.jpg",
+    "frames-12.jpg",
+    "frames-13.jpg"
+  ],
+  "captures": [
+    "capture-00.jpg",
+    "capture-01.jpg",
+    "capture-02.jpg",
+    "capture-03.jpg",
+    "capture-04.jpg",
+    "capture-05.jpg",
+    "capture-06.jpg",
+    "capture-07.jpg",
+    "capture-08.jpg",
+    "capture-09.jpg",
+    "capture-10.jpg"
+  ],
+  "visual_review_complete": true,
+  "visual_review_notes": "All 2730 frames represented in fourteen contact sheets inspected, plus eleven full-size captures. No episode pictures, readable original comments, pawn colors coherent, seven-move recap and fade inspected.",
+  "audio_asset_audit": "Only the existing attributed opening music and seven existing analysis SFX. No episode dialogue or soundtrack asset in bundle.",
+  "assets": [
+    {
+      "file": "original-graphics-background.mp4",
+      "role": "original",
+      "sha256": "83c29dc611707668205544d8ac0879862092728629e9fcb0215d89f3243e71b5"
+    },
+    {
+      "file": "background-guide.png",
+      "role": "video",
+      "sha256": "ee42cb8b64e562bb43c21bc190c2e5232ba586ba3cd6560f0d877e144cb1bd3b"
+    },
+    {
+      "file": "intro.mov",
+      "role": "video",
+      "sha256": "d8174cd201b5ac94d1a6c9b12ee4e1248f241b4cb6f72a9fc2b2dc401fbd1966"
+    },
+    {
+      "file": "music-intro.wav",
+      "role": "audio",
+      "sha256": "4fbb481df92c949569db57595051f686618ad3def0c45d2b20a9d54f5c9827b6"
+    },
+    {
+      "file": "background-0.png",
+      "role": "video",
+      "sha256": "501eb3889c8055a1ec8220c40ee1d9cd2aa06f639d7240d743db671da4fa31f3"
+    },
+    {
+      "file": "analysis-0.mov",
+      "role": "video",
+      "sha256": "e4961c0a87b45bff3a6fe8e1e01726b492fd600b1a60e8b6e9a3af2682871740"
+    },
+    {
+      "file": "analysis-sfx-0.wav",
+      "role": "audio",
+      "sha256": "5088680a80d35cdc0043341544e96029eb527160eae9e673651dd73738ecf19c"
+    },
+    {
+      "file": "background-1.png",
+      "role": "video",
+      "sha256": "49c11f4959605fa0fa7c5e703f7b88cc68734e6c624e5beaf8db16b96451836c"
+    },
+    {
+      "file": "analysis-1.mov",
+      "role": "video",
+      "sha256": "f52c231fa0a601635ccc89753d7da304ab276a5cef71e613c530a376c099a108"
+    },
+    {
+      "file": "analysis-sfx-1.wav",
+      "role": "audio",
+      "sha256": "d731c1c19eae7b1b31a31ef154a31c7b1e58f32ffa593be9ca0e38b8c1a683e5"
+    },
+    {
+      "file": "background-2.png",
+      "role": "video",
+      "sha256": "be8dbb7151b331443d595b09699ca879e0d980aea8b72b39d6c32ffec90f380d"
+    },
+    {
+      "file": "analysis-2.mov",
+      "role": "video",
+      "sha256": "2b4851062d1e8b2162aca8353b616bf1ee6a40a9adcbff251ab8734be26e886d"
+    },
+    {
+      "file": "analysis-sfx-2.wav",
+      "role": "audio",
+      "sha256": "96885315920dc3eea70010972994d0755b624e9fe65e0f053373575a21597b32"
+    },
+    {
+      "file": "background-3.png",
+      "role": "video",
+      "sha256": "160766729f94b9b2abfcd8d573a381d495f05fefab006bc42fdeea9c4bc1489f"
+    },
+    {
+      "file": "analysis-3.mov",
+      "role": "video",
+      "sha256": "5eae259d9703211089541929f6bfadadc002579cc4038cac9b25f72c9a2a8ab0"
+    },
+    {
+      "file": "analysis-sfx-3.wav",
+      "role": "audio",
+      "sha256": "f6f44eb7364698d632ebbc798e605a9728f63700393668534bdf74a9342d81c7"
+    },
+    {
+      "file": "background-4.png",
+      "role": "video",
+      "sha256": "6d89c9bccaf1b629b153aaeddec50ce2b4614128e090e6e4e42a4e69bcf56913"
+    },
+    {
+      "file": "analysis-4.mov",
+      "role": "video",
+      "sha256": "7824a2dcdf34e57716c5e4db2b95b307b768bf84e1fa726897dcfec9b26c51c7"
+    },
+    {
+      "file": "analysis-sfx-4.wav",
+      "role": "audio",
+      "sha256": "d3bb736e58095739b7156ab3e7194a1319f00e29fb72a2fc1ff4a219552e95b5"
+    },
+    {
+      "file": "background-5.png",
+      "role": "video",
+      "sha256": "4811d5246864758b7160780e48b42a9b17b7b62ff30ef41e00d05cf3207b1413"
+    },
+    {
+      "file": "analysis-5.mov",
+      "role": "video",
+      "sha256": "3bc7b1a0be8f3006690a3ccc3bd83496c87d9e73225f955224234eeeec27c6f8"
+    },
+    {
+      "file": "analysis-sfx-5.wav",
+      "role": "audio",
+      "sha256": "a58427e5c0e2805d8bc5c298e579e5a3bceeb0e1e4c7f97a27c95e6b9bc75505"
+    },
+    {
+      "file": "background-6.png",
+      "role": "video",
+      "sha256": "d4dfd129f481458e5962ec1a2d5e734d7ca6a005fb94bb00cdc7b1d9f6c5cbeb"
+    },
+    {
+      "file": "analysis-6.mov",
+      "role": "video",
+      "sha256": "b2d3be46f1f82a9e39091844d5d4a65d52fc924d0a0ecb727f84f9c6571cb683"
+    },
+    {
+      "file": "analysis-sfx-6.wav",
+      "role": "audio",
+      "sha256": "a4cc471b3392add86aed59a71c9c57f7066982fbf22b4b679e586b1888294025"
+    },
+    {
+      "file": "outro.mov",
+      "role": "video",
+      "sha256": "64fc3ed281f565563cc0b62d0cc3eda420a1235178aeb383ae10ccc24133faa4"
+    }
+  ],
+  "source_segments": 0,
+  "analysis_segments": 7
+}

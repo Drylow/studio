@@ -114,3 +114,43 @@ Brilliant et Blunder sont ajoutés avec des inclinaisons opposées de 10°.
 Base, prompt, reçu et JPEG sont conservés dans `thumbnails/light-vs-l/`.
 Image finale regardée : personnages identifiables, yeux dégagés, badges entiers,
 aucun texte ni watermark ajouté. Aucune nouvelle modification du film.
+
+## Retour Content ID et variante graphique — 11 octobre 2026
+
+L'utilisateur signale un blocage mondial Nippon Television sur six plages,
+totalisant 358 secondes de la livraison initiale. VAP revendique également
+deux musiques intégrées à l'épisode, avec une limitation potentielle des revenus.
+Les plages et les titulaires lus dans ses captures sont conservés dans
+`episodes/light-vs-l.claims.json`. La livraison initiale reste archivée ; ne pas
+la présenter comme un fichier dont YouTube a accepté la diffusion.
+
+Une simple suppression des six plages laisserait 91,1 secondes, mais casserait
+la continuité et garderait des fonds de replay de l'épisode sous les analyses.
+La nouvelle variante est donc un aperçu graphique distinct de 91 secondes :
+guide de 16 secondes, sept analyses de 9 secondes, bilan natif de 12 secondes.
+Elle conserve les commentaires originaux, les pions par camp, les SVG vérifiés
+et les effets existants. Tous les plans, replays, voix et musiques de l'épisode
+sont retirés. Guide et bilan sont régénérés sur un fond graphique original.
+Ce n'est plus la scène doublée avec pauses ; c'est une explication graphique.
+
+Préparation puis rendu natif :
+
+```powershell
+node experiments/conversation-chess/prepare-graphics-overview.mjs --manifest work/conversation-chess/death-note-light-l-v1/kdenlive/project-manifest.json --out work/conversation-chess/death-note-light-l-v2-graphics/prepared
+$env:CHESS_KDENLIVE = 'work/conversation-chess/runtime/kdenlive-26.08.1_standalone/bin/kdenlive.exe'
+python experiments/conversation-chess/export-kdenlive.py --manifest work/conversation-chess/death-note-light-l-v2-graphics/prepared/project-manifest.json --bundle work/conversation-chess/death-note-light-l-v2-graphics/kdenlive --render work/conversation-chess/death-note-light-l-v2-graphics/L-Outsmarts-Light-GRAPHICS-V2.mp4
+```
+
+Choisir un nouveau répertoire pour chaque autre préparation. La description
+adaptée est dans `episodes/light-vs-l.graphics.publish.txt`.
+Le contrôle Content ID de cette variante n'a pas été exécuté : seul le retour
+de YouTube peut confirmer son statut de diffusion. Aucune contestation envoyée.
+
+Rendu natif livré : `work/conversation-chess/death-note-light-l-v2-graphics/A-REGARDER-V2-GRAPHICS/`.
+1920×1080, 30 fps, 2 730 images, 12 073 867 octets. Toutes les images sont
+représentées dans 14 planches regardées, avec 11 captures pleine résolution.
+Décodage complet réussi. Les médias du bundle sont vérifiés par empreinte :
+zéro segment de scène, uniquement fonds graphiques, surimpressions natives,
+Sneaky Snitch au guide et effets d'analyse existants. Aucun son d'épisode.
+Le reçu `episodes/light-vs-l.graphics.qa.json` conserve ces contrôles et le hash
+du MP4. Le dossier contient aussi la miniature, le titre et la description adaptée.
