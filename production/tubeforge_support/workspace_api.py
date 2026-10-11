@@ -545,7 +545,8 @@ def _full(p):
     out["technical_ready"] = not out["technical_issues"]
     ready = scenes_verified and out["technical_ready"] and scopes["voiceover"]["state"] == "verified"
     out["publication_ready"] = bool(ready and scopes["render"]["state"] == "verified")
-    from . import workspace_generation
+    from . import workspace_generation, workspace_planning
+    out["can_prepare_images"] = workspace_planning.allowed(p)
     out["workspace_batch"] = workspace_generation.batch_status(p)
     out["generation_confirmation"] = _generation_confirmation(p)
     out["script_hash"] = _hash(p.get("script") or "")
@@ -811,6 +812,8 @@ def install(app):
                         scene[key] = copy.deepcopy(previous[key])
             scene.update(status="done" if image else "idle", prompt_author="codex",
                          human_review=old.get(row["id"], {}).get("human_review"))
+            if previous.get("prompt_author") == "configured_text_proxy" and scene.get("prompt") == previous.get("prompt"):
+                scene["prompt_author"] = "configured_text_proxy"
             output.append(scene)
         p.update(scenes=output, render=None, prompts_approved=False)
         p["steps"]["visuals"].update(state="done" if output and all(s.get("image") for s in output) else "idle")

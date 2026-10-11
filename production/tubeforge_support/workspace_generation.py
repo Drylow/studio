@@ -54,9 +54,10 @@ def _signature(p, s):
 
 
 def _prepare(p, s, body):
+    from . import workspace_planning
     prompt = s.get("prompt")
     if (not isinstance(prompt, str) or not prompt.strip() or "renderer-only import" in prompt.lower()
-            or s.get("prompt_author") != "codex" or not s.get("location_id")
+            or not (s.get("prompt_author") == "codex" or workspace_planning.authored(p, s)) or not s.get("location_id")
             or not isinstance(s.get("text"), str) or not s["text"].strip()
             or s["text"] not in p.get("script", "") or not isinstance(s.get("characters"), list)
             or any(not isinstance(c, str) or not c.strip() for c in s["characters"])):
