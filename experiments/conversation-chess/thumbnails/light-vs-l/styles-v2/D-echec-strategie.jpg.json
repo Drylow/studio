@@ -1,0 +1,61 @@
+{
+  "base_file": "D-echec-strategie.base.png",
+  "base_sha256": "87f1fec778f57033ef182283ab9f738d564a3203cf598d01154951b03d599151",
+  "output_file": "D-echec-strategie.jpg",
+  "output_sha256": "602dfb751892e49dfb676070e7a36945918e6538fef3c40053f3f48f984ff8c9",
+  "bytes": 230365,
+  "width": 1280,
+  "height": 720,
+  "sourceWidth": 1672,
+  "sourceHeight": 941,
+  "crop": {
+    "x": 0,
+    "y": -0.19138755980861788,
+    "width": 1280,
+    "height": 720.3827751196172
+  },
+  "placements": [
+    {
+      "x": 26,
+      "y": 26,
+      "width": 148,
+      "height": 156.22222222222223,
+      "rotation": 10
+    },
+    {
+      "x": 1092,
+      "y": 337,
+      "width": 148,
+      "height": 156.22222222222223,
+      "rotation": -10
+    }
+  ],
+  "changesOutsideBadges": 0,
+  "badgeBounds": [
+    {
+      "left": 10.560374177113047,
+      "right": 189.43962582288697,
+      "top": 11.336718145138022,
+      "bottom": 196.8855040770842
+    },
+    {
+      "left": 1076.560374177113,
+      "right": 1255.439625822887,
+      "top": 322.336718145138,
+      "bottom": 507.8855040770842
+    }
+  ],
+  "icons": [
+    {
+      "id": "brilliant",
+      "file": "assets/chesscom/brilliant.svg",
+      "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+    },
+    {
+      "id": "blunder",
+      "file": "assets/chesscom/blunder.svg",
+      "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+    }
+  ],
+  "comparison_stage": "Before lossy JPEG encoding"
+}

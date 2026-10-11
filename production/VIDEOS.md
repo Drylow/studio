@@ -790,3 +790,18 @@ les sept analyses, le rendu natif et les contrôles. Il contient un prompt
 adaptable aux autres séries, sans promesse de résultat Content ID universel.
 Copie du guide et du retour dans le paquet local `A-TESTER-V3/`.
 Aucune modification du MP4, aucun upload ni contestation.
+
+
+## Death Note — quatre styles de miniature, 11 octobre 2026
+
+Nouvelle exploration demandée après le rejet de la miniature initiale.
+Quatre illustrations différentes : piège télévisé, duel anime serré, manga
+clair et métaphore des pions. Bases, prompts et JPEG dans
+`experiments/conversation-chess/thumbnails/light-vs-l/styles-v2/`.
+Les SVG Chess.com originaux sont vérifiés et inclinés, avec des placements
+adaptés ; le compositeur accepte désormais un fichier de placement optionnel.
+Son rendu historique par défaut reste identique par SHA256. Quatre sorties
+1280×720 sous 2 Mo, regardées en grand et à 312 pixels de largeur ; aucun
+badge ne couvre les yeux ni les accroches. Alternatives créatives non testées
+en performance de clics. Paquet local `A-TESTER-V3/THUMBNAILS-4-STYLES/` avec
+comparatifs et titre. Ancienne miniature et MP4 conservés ; pas de publication.
