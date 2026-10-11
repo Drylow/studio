@@ -12,7 +12,7 @@
   "image_sha256": "ce78599f03bf4d5d700867fd9652b71719133e90a39ef46b2516fc12ca87b3cc",
   "reference_images_sent": [],
   "concept": "White round-headed multiverse storykeeper; three fictional worlds emerge from an open book",
-  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "review_state": "rejected_by_user",
   "user_approval": false,
   "uploaded_to_youtube": false,
   "previous_concept": "../oddly-fictional-lives-logo-2026-10-11/logo.jpg",
@@ -22,5 +22,9 @@
     64,
     128,
     192
-  ]
+  ],
+  "user_feedback": {
+    "date": "2026-10-11",
+    "reason": "Overdeveloped and too complex; user requests a simple logo."
+  }
 }
