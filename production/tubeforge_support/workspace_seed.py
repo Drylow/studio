@@ -63,6 +63,9 @@ def migrate_previews(studio):
 
 
 def seed_workspace():
+    policy = config.DATA / "workspace-visual-policy.json"
+    if policy.exists():
+        return read_json(policy)
     marker = config.DATA / "workspace-seeded.json"
     studio = Path(config.get("STUDIO_ROOT")).resolve()
     if marker.exists():
