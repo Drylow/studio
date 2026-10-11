@@ -59,6 +59,13 @@ def deploy(root, seed=True):
                  '    size, ratio = ASPECTS.get(aspect, ASPECTS["16:9"])')
     replace_once(root, 'app/llm.py', '    _sems.clear()\n',
                  '    _sems.clear()\n    from . import google_flow\n    google_flow.reset()\n')
+    replace_once(root, 'app/llm.py', '               on_delta=None) -> str:',
+                 '               on_delta=None, hedge: bool = True) -> str:')
+    replace_once(root, 'app/llm.py', '        first = asyncio.create_task(once_bounded())\n'
+                 '        done, _ = await asyncio.wait({first}, timeout=hedge_after)\n',
+                 '        if not hedge:\n            return await once_bounded()\n'
+                 '        first = asyncio.create_task(once_bounded())\n'
+                 '        done, _ = await asyncio.wait({first}, timeout=hedge_after)\n')
     replace_once(root, 'app/steps/visuals.py', '                                    label=f"Fiche {c[\'name\']}")',
                  '                                    label=f"Fiche {c[\'name\']}", provider=v.get("image_provider", "cli_proxy"))')
     replace_once(root, 'app/steps/visuals.py', '                                                label=f"Image #{s[\'id\']}")',
