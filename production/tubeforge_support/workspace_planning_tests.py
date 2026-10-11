@@ -233,3 +233,44 @@ def test_no_hedge_request_closes_stream_when_cancelled(workspace, monkeypatch):
     entered = None
     asyncio.run(exercise())
     assert closed == [True]
+
+
+def test_explicit_era_references_are_required_and_preserved(workspace, monkeypatch):
+    p = fictional(workspace)
+    style = store.get_style(p["style_id"])
+    greek = store.style_dir(p["style_id"]) / "greek.png"
+    greek.write_bytes(b"explicit greek character")
+    ref = {"path": "greek.png", "role": "protagonist-identity", "review_state": "verified",
+           "sha256": hashlib.sha256(greek.read_bytes()).hexdigest()}
+    style["workspace_character_references"] = {"greek": [ref]}
+    store.save_style(style)
+    _, _, _, shots = planning.inputs(p)
+    response = json.loads(answer(shots))
+    for row in response["shots"]:
+        row["reference_era"] = "greek"
+    monkeypatch.setattr(llm, "chat", AsyncMock(return_value=json.dumps(response)))
+    asyncio.run(planning.prepare(p))
+    assert all(s["references"] == [dict(ref, owner="style")] for s in p["scenes"])
+    assert all("#FFFFFF" in s["prompt"] and "NO eyebrows" in s["prompt"] for s in p["scenes"])
+    assert all("Kratos" not in s["prompt"] for s in p["scenes"])
+    p["scenes"] = []
+    monkeypatch.setattr(llm, "chat", AsyncMock(return_value=answer(shots)))
+    with pytest.raises(RuntimeError):
+        asyncio.run(planning.prepare(p))
+    assert not p["scenes"]
+    greek.write_bytes(b"changed character")
+    with pytest.raises(HTTPException):
+        planning.inputs(p)
+
+
+@pytest.mark.parametrize("prompt", ["Use a vertical composition.", "A translucent warrior reaches out.",
+                                   "The family appears as a distant memory."])
+def test_contradictory_composition_never_publishes_a_plan(workspace, monkeypatch, prompt):
+    p = fictional(workspace)
+    _, _, _, shots = planning.inputs(p)
+    response = json.loads(answer(shots))
+    response["shots"][0]["prompt"] += " " + prompt
+    monkeypatch.setattr(llm, "chat", AsyncMock(return_value=json.dumps(response)))
+    with pytest.raises(RuntimeError):
+        asyncio.run(planning.prepare(p))
+    assert not p["scenes"]

@@ -76,6 +76,24 @@ def test_unsafe_generation_rejected_without_request(workspace, monkeypatch, chan
     request.assert_not_awaited()
 
 
+@pytest.mark.parametrize("aspect,prompt", [("9:16", "Physical wide scene"),
+    ("16:9", "Use a portrait composition."), ("16:9", "A translucent warrior reaches toward his family.")])
+def test_fictional_manual_plan_blocks_wrong_composition_before_request(workspace, monkeypatch, aspect, prompt):
+    import importlib
+    workspace_planning = importlib.import_module(generation.__package__ + ".workspace_planning")
+    client, p = prepared_plan(workspace)
+    monkeypatch.setattr(workspace_planning, "allowed", lambda project: True)
+    p["settings"]["visuals"]["aspect"] = aspect
+    p["scenes"][0]["prompt"] = prompt
+    store.save_project(p)
+    request = AsyncMock()
+    monkeypatch.setattr(llm, "generate_image", request)
+    response = client.post(f"/api/workspace/projects/{p['id']}/scenes/1/generate", json={
+        "confirm_prompt": prompt, "image_model": p["model_snapshot"]["image_model"]})
+    assert response.status_code == 422
+    request.assert_not_awaited()
+
+
 def test_generation_failure_preserves_previous_asset_and_hides_errors(workspace, monkeypatch):
     client, p = prepared_plan(workspace)
     monkeypatch.setattr(llm, "generate_image", AsyncMock(side_effect=RuntimeError("private upstream detail")))

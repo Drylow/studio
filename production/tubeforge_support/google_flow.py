@@ -13,6 +13,7 @@ from dotenv import dotenv_values
 from PIL import Image
 
 from . import config
+from .workspace_composition import ratio_matches
 
 BASE = "https://api.useapi.net/v1/google-flow"
 _client = None
@@ -209,6 +210,8 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
             if receipt is not None:
                 receipt.update(account=account, job_id=result.get("jobId"), dimensions=dimensions,
                                seconds=round(time.monotonic() - started, 2), count=1)
+            if not ratio_matches(dimensions, aspect):
+                raise FlowError("Google Flow a retourné une image au mauvais format. Elle n’est pas sélectionnée ; vérifiez l’historique avant de réessayer.")
             return content
         except httpx.TimeoutException:
             raise FlowError("Délai Google Flow dépassé. Vérifiez l'historique useapi avant de relancer : une image peut avoir été créée.") from None

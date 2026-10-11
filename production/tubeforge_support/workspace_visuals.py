@@ -6,6 +6,7 @@ import shutil
 
 from app import channels, config, google_flow, store
 from app.util import now, read_json, write_json
+from .workspace_composition import RULES
 
 
 STYLE_ID = "fictional-god-of-war"
@@ -32,6 +33,15 @@ BACKGROUND = (
     "colors and restrained shading. Composition follows the narrated action: interactions, gestures, "
     "objects, reactions, close-ups and occupied spaces. Avoid repeating one tableau with only zooms. "
     "Use verified location and character references for continuity within each scene."
+)
+GOD_OF_WAR_ART_STYLE = (
+    RULES + " Clean flat digital comic illustration, matte color fills, thick readable ink "
+    "outlines. Detailed anime-inspired environments with readable architecture and props; "
+    "restrained shading on clothing and backgrounds ONLY, never on exposed white skin. "
+    "Characters differ through covered costumes, equipment and graphic markings. "
+    "Express emotion through posture, gestures and the tiny line mouth. Non-humanoid creatures "
+    "retain their recognizable species design and colors. Preserve the supplied character "
+    "reference identity but compose a new narrated action and appropriate environment."
 )
 THUMBNAIL = (
     "Readable 16:9 comic thumbnail using the same round white-headed humanoids and universe-specific "
@@ -80,7 +90,8 @@ def activate(studio=None):
         style.update(id=sid, name=name, archived=False, workspace_managed=True,
                      created=now(), updated=now(), characters=[])
         style["script"].update(instructions="Scripts, decoupages et prompts ecrits par Codex. Aucune reecriture automatique.", references=[])
-        style["visuals"].update(art_style=ART_STYLE + " Current universe: " + name.split(" - ")[0] + ".",
+        style["visuals"].update(art_style=(GOD_OF_WAR_ART_STYLE if theme == "god-of-war" else ART_STYLE) + " Current universe: " + name.split(" - ")[0] + ".",
+            aspect="16:9",
             background_direction=BACKGROUND, image_provider="google_flow", image_model=model,
             auto_characters=False, avg_scene_seconds=6, use_style_refs=True, reference_update_pending=False)
         style["thumbnail"].update(style=THUMBNAIL, model=model, image_provider="google_flow", preview=None)
