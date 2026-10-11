@@ -115,3 +115,14 @@ avant toute décision de reprise, sans supprimer aveuglément cet état.
 Le manifeste confirmé est ensuite consommable par `deliver-discord.py`. L’envoi
 Discord reste une action séparée, avec son propre reçu et sa propre protection
 contre les doublons.
+
+## Limiter les copies de travail
+
+`export-kdenlive.py --hardlink-media` est facultatif. Sur le même système de
+fichiers, les médias préparés stables et leurs chemins dans le bundle partagent
+les mêmes octets ; sur un autre système, l’export fait une copie vérifiée.
+Chaque chemin du bundle reste autonome après suppression du chemin de travail.
+Modifier les octets d’un média lié affecte les deux chemins : réserver cette
+option aux médias figés et préparer un nouveau bundle pour changer le montage.
+Sans cette option, le comportement reste une copie indépendante. Les projets,
+sources, vidéos finales et preuves de contrôle doivent être conservés.

@@ -7,6 +7,7 @@ Qt/MLT alpha compositing needs Windows' desktop or a real X11/Wayland display.
 """
 
 import argparse
+import errno
 import hashlib
 import json
 import math
@@ -66,7 +67,20 @@ def reviewed_native_720_source(quality, video):
             and isinstance(review.get("reason"), str) and bool(review["reason"].strip()))
 
 
-def generate(manifest_path, bundle, subtitles_path=None):
+def store_media(source, destination, hardlink=False):
+    """Keep the bundle self-contained; optionally share immutable media bytes."""
+    if hardlink:
+        try:
+            os.link(source, destination)
+            return 'hardlink'
+        except OSError as error:
+            if error.errno not in (errno.EXDEV, errno.EPERM, errno.EOPNOTSUPP):
+                raise
+    shutil.copy2(source, destination)
+    return 'copy'
+
+
+def generate(manifest_path, bundle, subtitles_path=None, hardlink_media=False):
     data = json.loads(manifest_path.read_text(encoding="utf-8"))
     if data.get("schema") != "conversation-chess-kdenlive-interchange-v1":
         raise ValueError("Expected the separate-media conversation-chess manifest")
@@ -171,7 +185,10 @@ def generate(manifest_path, bundle, subtitles_path=None):
             destination = media / filename
             if not destination.exists() or digest(destination) != sha:
                 temporary = destination.with_suffix(destination.suffix + ".copying")
-                shutil.copy2(path, temporary)
+                store_media(path, temporary, hardlink_media)
+                if digest(temporary) != sha:
+                    temporary.unlink()
+                    raise ValueError('Source media changed while building the native bundle')
                 temporary.replace(destination)
             copied[str(path)] = "media/" + filename
         resource = copied[str(path)]
@@ -208,6 +225,9 @@ def generate(manifest_path, bundle, subtitles_path=None):
         props(producer, values)
         row = {"producer": identity, "bin_id": bin_id, "resource": resource,
                "original_path": str(path), "sha256": sha, "role": role, "frames": length}
+        if hardlink_media:
+            stored = bundle / resource
+            row['media_storage'] = 'hardlink' if (path.stat().st_dev, path.stat().st_ino) == (stored.stat().st_dev, stored.stat().st_ino) else 'copy'
         assets.append(row)
         registered[key] = identity
         return identity
@@ -381,6 +401,10 @@ def generate(manifest_path, bundle, subtitles_path=None):
     if subtitle_report is not None:
         report['dialogue_subtitles'] = subtitle_report
         data['dialogue_subtitles'] = subtitle_report
+    if data.get('conversations'):
+        report['conversations'] = data['conversations']
+    if hardlink_media:
+        report['immutable_media_sharing_requested'] = True
     attribution = data.get("music_attribution")
     if attribution:
         credits_source = Path(attribution["file"]).resolve(strict=True)
@@ -543,6 +567,8 @@ def main():
     parser.add_argument("--xauthority", type=Path)
     parser.add_argument("--subtitles", type=Path,
                         help="Optional local English SRT timed against the edited source, added as editable dialogue-only titles")
+    parser.add_argument("--hardlink-media", action="store_true",
+                        help="Share immutable prepared media on the same filesystem; copy on other filesystems. Editing linked media changes both paths.")
     parser.add_argument("--relocate", action="store_true", help="Rebase relative media paths after moving the whole bundle")
     args = parser.parse_args()
     bundle = args.bundle.resolve()
@@ -551,7 +577,7 @@ def main():
         return
     if not args.manifest:
         parser.error("--manifest is required unless --relocate is used")
-    project, report = generate(args.manifest.resolve(strict=True), bundle, args.subtitles)
+    project, report = generate(args.manifest.resolve(strict=True), bundle, args.subtitles, args.hardlink_media)
     print(json.dumps({"native_project": str(project), "frames": report["duration_frames"],
                       "tracks": report["tracks"], "source_segments": report["source_segments"],
                       "analysis_segments": report["analysis_segments"]}), flush=True)

@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 // Offline compositor for a supplied local source and explicitly reviewed source timestamps.
 import fs from 'node:fs/promises';
+import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { mediaBinary, loadChromium, browserOptions } from './runtime.mjs';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { writeMusicCredits } from './music-credits.mjs';
+import { validateConversations, annotationContexts, sourceSpans, sourceAudioFades, dialogueAudioFilter } from './conversations.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
@@ -37,6 +39,8 @@ const refreshIntro = args.includes('--refresh-intro');
 const refreshProjectIntro = args.includes('--refresh-project-intro');
 const prepareProject = args.includes('--prepare-project') || refreshProjectIntro;
 const validateOnly = args.includes('--validate-only');
+const discardFrameCaches = args.includes('--discard-frame-caches');
+if (discardFrameCaches && (!prepareProject || refreshIntro || refreshProjectIntro || validateOnly)) throw new Error('--discard-frame-caches applies only to a fresh native project preparation.');
 if (prepareProject && refreshIntro) throw new Error('--prepare-project and --refresh-intro cannot be combined.');
 const graphicsFps = 30;
 const previousRender = refreshIntro ? JSON.parse(await fs.readFile(path.join(output, 'render-report.json'), 'utf8')) : null;
@@ -48,12 +52,14 @@ const showSourceQualityLabel = spec.show_source_quality_label !== false;
 const analysisPawnBySpeaker = spec.analysis_pawn_by_speaker === true;
 if (spec.mascot != null) {
   if (typeof spec.mascot !== 'object' || Array.isArray(spec.mascot)) throw new Error('mascot requires a local PNG file configuration.');
+  if (spec.mascot.badges != null && typeof spec.mascot.badges !== 'boolean') throw new Error('mascot.badges must be boolean.');
   for (const key of ['file', 'overlay_file']) {
     const value = spec.mascot[key];
     if (key === 'overlay_file' && value == null) continue;
     if (typeof value !== 'string' || !value.trim() || /^[a-z]+:\/\//i.test(value) || path.isAbsolute(value) || path.win32.isAbsolute(value)) throw new Error(`mascot.${key} must be a local path relative to this renderer.`);
   }
 }
+const mascotBadges = spec.mascot?.badges === true;
 const dialogueGain = spec.dialogue_gain ?? 1;
 if (!Number.isFinite(dialogueGain) || dialogueGain <= 0 || dialogueGain > 1) throw new Error('dialogue_gain must be greater than 0 and at most 1.');
 if (dialogueGain !== 1 && !prepareProject && !validateOnly) throw new Error('Adjusted dialogue gain uses the native editor workflow: add --prepare-project.');
@@ -139,9 +145,17 @@ let control = spec.initial_control ?? .5;
 if (!isControl(control)) throw new Error('Unknown initial_control.');
 const annotations = spec.annotations || [];
 if (!Array.isArray(annotations)) throw new Error('annotations must be an array.');
+const conversations = validateConversations(spec, start, end);
+if (conversations && ((!prepareProject && !validateOnly) || refreshIntro || refreshProjectIntro)) throw new Error('Independent conversations require a complete native --prepare-project (or --validate-only).');
+const annotationScopes = annotationContexts(annotations, conversations);
+if (discardFrameCaches && [spec.intro_seconds, outroSeconds, ...annotations.map(a => a.hold_seconds)].some(t => Math.abs(t * 30 - Math.round(t * 30)) > 1e-6)) throw new Error('Discarded frame caches require all graphics durations aligned to 30fps.');
 let previous = start, reviewedControl = control, reviewedScore = scoreValue(initialScoreText);
 const controlFraction = c => typeof c === 'number' ? c : ({ balanced: .5, black: .72, white: .28, tony: .72, ralph: .28 })[c];
-for (const a of annotations) {
+for (const [annotationIndex, a] of annotations.entries()) {
+  if (annotationScopes) {
+    reviewedControl = annotationScopes[annotationIndex].previous_control;
+    reviewedScore = scoreValue(annotationScopes[annotationIndex].previous_score_text);
+  }
   if (!Number.isFinite(a.source_at) || a.source_at <= previous || a.source_at >= end) throw new Error('Annotations need strictly ordered SOURCE timestamps inside the selected clip.');
   if (a.hold_seconds < 3 || a.hold_seconds > 9 || !Number.isFinite(a.hold_seconds)) throw new Error('Each analysis hold must last 3–9 seconds.');
   if (!ratings.has(a.rating) || !isControl(a.control_after)) throw new Error('Unknown rating/control_after.');
@@ -180,8 +194,9 @@ if (validateOnly) {
     source_dimensions: [video.width, video.height], opening, legacy_opening_override: legacyOpeningOverride,
     source_quality_accepted:!lowResPreview, minimum_source_height:minimumSourceHeight,
     source_quality_reviewed:sourceQualityReviewed, outro_layout_reviewed:outroLayoutReviewed,
-    reviewed_native_720:reviewedNative720,
+    reviewed_native_720:reviewedNative720, mascot_badges:mascotBadges,
     side_colors: sides, annotation_count: annotations.length, recap_counts: recapCounts,
+    ...(conversations ? { conversations } : {}),
     rating_schema_version: ratingSchema.version, final_video_exported: false }));
   process.exit(0);
 }
@@ -220,7 +235,7 @@ if (refreshIntro || refreshProjectIntro) {
   const existing = refreshIntro ? previousRender : JSON.parse(await fs.readFile(path.join(output, 'project-manifest.json'), 'utf8'));
   const previousMascotHash = existing.mascot?.sha256 ?? createHash('sha256').update(await fs.readFile(path.join(here, 'assets/tony-pawn.png'))).digest('hex');
   const previousOverlayHash = existing.mascot?.overlay_sha256 ?? createHash('sha256').update(await fs.readFile(path.join(here, 'assets/tony-pawn-overlay.png'))).digest('hex');
-  if (mascotHash !== previousMascotHash || overlayMascotHash !== previousOverlayHash) throw new Error('Changed mascot requires complete preparation, not an intro-only refresh.');
+  if (mascotHash !== previousMascotHash || overlayMascotHash !== previousOverlayHash || mascotBadges !== (existing.mascot?.badges === true)) throw new Error('Changed mascot or companion badges require complete preparation, not an intro-only refresh.');
 }
 const iconAssets = {};
 for (const rating of ratingSchema.categories) {
@@ -233,9 +248,52 @@ const sfxManifestPath = path.resolve(option('--sfx-manifest', path.join(here, 'a
 const sfxManifest = await loadSfxManifest(sfxManifestPath);
 const browser = await loadChromium().launch(browserOptions(option('--chromium', '')));
 const overlays = [], annotationFrames = [];
+const conversationOverlays = [];
+const createdFrameDirectories = new Set(), cachedAlphaMovies = new Map(), frameCacheReceipts = [];
 const introFrameDirectory = path.join(output, 'intro-overlay-frames');
 const introBackground = path.join(output, 'intro-source-frame.png');
 const outroFrameDirectory = path.join(output, 'outro-frames');
+const outroReviewFrame = path.join(output, 'outro-review-frame.png');
+async function createFrameDirectory(directory) {
+  if (discardFrameCaches) {
+    // Only a directory made by this run may be discarded; never old output.
+    await fs.mkdir(directory);
+    createdFrameDirectories.add(directory);
+  } else await fs.mkdir(directory, {recursive:true});
+}
+function alphaMovie(directory, duration, name) {
+  const cached = cachedAlphaMovies.get(name);
+  if (cached) {
+    if (cached.directory !== directory || cached.duration !== duration) throw new Error('Cached alpha movie parameters changed.');
+    return cached.file;
+  }
+  const dest = path.join(output, name + '.mov');
+  run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(graphicsFps), '-i', path.join(directory, 'frame_%05d.png'),
+    '-an', '-vf', 'format=argb', '-c:v', 'qtrle', '-threads', '2', '-r', '30', '-t', String(duration), dest]);
+  return dest;
+}
+async function finishFrameCache(directory, duration, name) {
+  if (!discardFrameCaches) return;
+  if (!createdFrameDirectories.has(directory)) throw new Error('Refuse to discard a frame directory not created by this run.');
+  const expected = Math.round(duration * 30), names = (await fs.readdir(directory)).sort();
+  if (names.length !== expected || names.some((v, i) => v !== `frame_${String(i).padStart(5, '0')}.png`)) throw new Error('Generated frame cache is incomplete or contains unrelated files.');
+  const movie = alphaMovie(directory, duration, name);
+  const info = JSON.parse(run(ffprobe, ['-v','error','-count_frames','-select_streams','v:0','-show_streams','-show_format','-of','json',movie], true));
+  const stream = info.streams?.[0];
+  if (!stream || stream.codec_name !== 'qtrle' || stream.pix_fmt !== 'argb' || stream.width !== 1920 || stream.height !== 1080
+      || stream.avg_frame_rate !== '30/1' || Number(stream.nb_read_frames) !== expected
+      || Math.abs(Number(info.format?.duration) - duration) > 1e-6) throw new Error('Completed alpha MOV did not decode to the exact generated frame profile; retain its PNGs.');
+  const digest = createHash('sha256');
+  for await (const block of createReadStream(movie)) digest.update(block);
+  const movieSha = digest.digest('hex');
+  // The confirmed lossless MOV remains the native resource. Review PNGs and
+  // source media live outside these newly created frame directories.
+  for (const name of names) await fs.unlink(path.join(directory, name));
+  await fs.rmdir(directory);
+  cachedAlphaMovies.set(name, {file:movie,directory,duration});
+  frameCacheReceipts.push({directory,movie,movie_sha256:movieSha,frames:expected,fps:30,
+    duration_seconds:duration,decoded_frame_count:expected,frame_cache_discarded:true});
+}
 run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-ss', String(start), '-i', source, '-frames:v', '1', '-update', '1', introBackground]);
 const introBytes = await fs.readFile(introBackground);
 try {
@@ -244,44 +302,57 @@ try {
   await page.setContent('<!doctype html><html><body style="margin:0"><canvas width="1920" height="1080"></canvas></body></html>');
   await page.evaluate(({ schema, icons }) => { window.ConversationRatingSchema = schema; window.ConversationRatingAssets = icons; }, { schema: ratingSchema, icons: iconAssets });
   await page.addScriptTag({ content: await fs.readFile(path.join(here, 'scene.js'), 'utf8') });
-  await page.evaluate(({ mascot, backdrop, overlayMascot }) => window.ConversationChess.init(mascot, backdrop, overlayMascot), { mascot: `data:image/png;base64,${mascotBytes.toString('base64')}`, backdrop: `data:image/png;base64,${introBytes.toString('base64')}`, overlayMascot: `data:image/png;base64,${overlayMascotBytes.toString('base64')}` });
+  await page.evaluate(({ mascot, backdrop, overlayMascot, badges }) => window.ConversationChess.init(mascot, backdrop, overlayMascot, {badges}), { mascot: `data:image/png;base64,${mascotBytes.toString('base64')}`, backdrop: `data:image/png;base64,${introBytes.toString('base64')}`, overlayMascot: `data:image/png;base64,${overlayMascotBytes.toString('base64')}`, badges:mascotBadges });
   async function overlay(name, options) {
-    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height });
+    const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { ...options, sides: options.sides ?? sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height });
     const dest = path.join(output, name + '.png');
     await fs.writeFile(dest, Buffer.from(data.split(',')[1], 'base64')); return dest;
   }
   overlays.push(await overlay('intro-symbols', { phase: 'intro', t: 3 }));
   overlays.push(await overlay('intro-bar', { phase: 'intro', t: 9 }));
   if (prepareProject) {
-    await fs.mkdir(introFrameDirectory, { recursive: true });
+    await createFrameDirectory(introFrameDirectory);
     for (let frame = 0; frame < spec.intro_seconds * graphicsFps; frame++) {
       const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { phase: 'intro', t: frame / graphicsFps, intro_overlay: true });
       await fs.writeFile(path.join(introFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
+    await finishFrameCache(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro');
   }
   if (!refreshIntro && !refreshProjectIntro) {
   overlays.push(await overlay('overlay-initial', { control, score_text: scoreText, demo, showSides: true }));
+  if (conversations) {
+    for (const c of conversations) {
+      conversationOverlays.push({
+        initial: c.index === 0 ? overlays[2] : await overlay(`overlay-conversation-${c.index}-initial`, {control:.5,score_text:'0.0',demo,showSides:true,sides:c.sides}),
+        normal: await overlay(`overlay-conversation-${c.index}-normal`, {control:.5,score_text:'0.0',demo,sides:c.sides}),
+      });
+    }
+  }
   for (let i = 0; i < annotations.length; i++) {
     const a = annotations[i];
-    overlays.push(await overlay(`overlay-freeze-${i}`, { control: a.control_after, score_text: a.score_text, evaluation: a, demo }));
+    const scope = annotationScopes?.[i];
+    overlays.push(await overlay(`overlay-freeze-${i}`, { control: a.control_after, score_text: a.score_text, evaluation: a, demo, ...(scope ? {sides:scope.sides} : {}) }));
     const frameDir = path.join(output, `overlay-freeze-${i}-frames`);
-    await fs.mkdir(frameDir, { recursive: true });
+    await createFrameDirectory(frameDir);
     for (let frame = 0; frame < Math.ceil(a.hold_seconds * graphicsFps); frame++) {
-      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, score_text: a.score_text, evaluation: a, demo, sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height, previous_control: i ? annotations[i - 1].control_after : control, previous_score_text: i ? annotations[i - 1].score_text : initialScoreText, reveal_seconds: frame / graphicsFps });
+      const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), { control: a.control_after, score_text: a.score_text, evaluation: a, demo, sides: scope?.sides ?? sides, low_res_preview: lowResPreview, show_source_quality_label: showSourceQualityLabel, analysis_pawn_by_speaker: analysisPawnBySpeaker, source_height: video.height, previous_control: scope?.previous_control ?? (i ? annotations[i - 1].control_after : control), previous_score_text: scope?.previous_score_text ?? (i ? annotations[i - 1].score_text : initialScoreText), reveal_seconds: frame / graphicsFps });
       await fs.writeFile(path.join(frameDir, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
     }
+    await finishFrameCache(frameDir, a.hold_seconds, `project-graphics-analysis-${i}`);
     annotationFrames.push(frameDir);
-    overlays.push(await overlay(`overlay-after-${i}`, { control: a.control_after, score_text: a.score_text, demo }));
+    overlays.push(await overlay(`overlay-after-${i}`, { control: a.control_after, score_text: a.score_text, demo, ...(scope ? {sides:scope.sides} : {}) }));
   }
   }
   if (prepareProject && outroSeconds) {
-    await fs.mkdir(outroFrameDirectory, { recursive: true });
+    await createFrameDirectory(outroFrameDirectory);
     for (let frame = 0; frame < outroSeconds * graphicsFps; frame++) {
       const data = await page.evaluate(o => window.ConversationChess.clipFrame(o), {
         phase:'outro', style:outroStyle, t:frame / graphicsFps, duration:outroSeconds, counts:recapCounts, sides, summary:spec.outro_summary,
       });
       await fs.writeFile(path.join(outroFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), Buffer.from(data.split(',')[1], 'base64'));
+      if (discardFrameCaches && frame === (outroStyle === 'subscribe' ? 0 : 30)) await fs.copyFile(path.join(outroFrameDirectory, `frame_${String(frame).padStart(5, '0')}.png`), outroReviewFrame);
     }
+    await finishFrameCache(outroFrameDirectory, outroSeconds, 'project-graphics-outro');
   }
 } finally { await browser.close(); }
 
@@ -295,12 +366,6 @@ if (prepareProject) {
     const startFrame = Math.round(projectElapsed * fps), endFrame = Math.round((projectElapsed + segment.duration) * fps);
     projectSegments.push({ ...segment, output_in: projectElapsed, start_frame: startFrame, end_frame: endFrame, duration_frames: endFrame - startFrame });
     projectElapsed += segment.duration;
-  }
-  function alphaMovie(directory, duration, name) {
-    const dest = path.join(output, name + '.mov');
-    run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(graphicsFps), '-i', path.join(directory, 'frame_%05d.png'),
-      '-an', '-vf', 'format=argb', '-c:v', 'qtrle', '-threads', '2', '-r', String(fps), '-t', String(duration), dest]);
-    return dest;
   }
   async function musicPart(name, duration) {
     const config = spec.music?.[name];
@@ -323,6 +388,7 @@ if (prepareProject) {
     '-vf', 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:black', '-frames:v', '1', '-update', '1', introBackgroundFile]);
   addProjectSegment({ kind: 'intro', duration: spec.intro_seconds, background_file: introBackgroundFile,
     graphics_file: alphaMovie(introFrameDirectory, spec.intro_seconds, 'project-graphics-intro'), graphics_type: 'alpha_mov', graphics_frames: introFrameDirectory,
+    ...(discardFrameCaches ? {frame_cache_discarded:true} : {}),
     ...(await musicPart('intro', spec.intro_seconds)) });
   if (refreshProjectIntro) {
     const projectManifest = path.join(output, 'project-manifest.json');
@@ -338,7 +404,8 @@ if (prepareProject) {
   // preset. Superfast preserves the reviewed frame geometry and CRF while avoiding
   // redundant preparation work; the larger files are an intentional tradeoff.
   const videoEncoding = ['-an', '-c:v', 'libx264', '-preset', 'superfast', '-crf', '17', '-threads', '4', '-pix_fmt', 'yuv420p', '-r', String(fps)];
-  function prepareNormal(until, overlayFile, fadeOut = 0) {
+  let projectScopeIndex = 0;
+  function prepareNormalPiece(until, overlayFile, fadeOut = 0, scope = null, audioFadeIn = .035, audioFadeOut = fadeOut || .035) {
     const duration = until - projectCursor;
     if (duration <= 0) return;
     const label = `project-source-${String(projectSegments.length).padStart(3, '0')}`;
@@ -354,16 +421,32 @@ if (prepareProject) {
     }
     const audioInput = hasAudio ? ['-ss', String(projectCursor), '-i', source] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
     run(ffmpeg, ['-hide_banner', '-loglevel', 'error', '-y', ...audioInput, '-vn', '-af',
-      `aresample=48000,volume=${dialogueGain},apad,afade=t=in:st=0:d=0.035,afade=t=out:st=${Math.max(0, duration - (fadeOut || .035))}:d=${fadeOut || .035},atrim=end_sample=${Math.round(duration * 48000)}`,
+      dialogueAudioFilter(duration, dialogueGain, audioFadeIn, audioFadeOut),
       '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', dialogueAudioFile]);
     addProjectSegment({ kind: 'source', duration, source_in: projectCursor, source_out: until, background_file: backgroundFile,
-      graphics_file: graphicsFile, graphics_type: graphicsType, dialogue_audio_file: dialogueAudioFile, dialogue_gain:dialogueGain, fade_out_seconds:fadeOut, control: projectControl, score_text: projectScore });
+      graphics_file: graphicsFile, graphics_type: graphicsType, dialogue_audio_file: dialogueAudioFile, dialogue_gain:dialogueGain, fade_out_seconds:fadeOut, control: projectControl, score_text: projectScore,
+      ...(scope ? {conversation_index:scope.conversation_index,side_colors:scope.sides,conversation_start:scope.starts_conversation,show_sides:scope.show_sides,
+        dialogue_fade_in_seconds:audioFadeIn,dialogue_fade_out_seconds:audioFadeOut} : {}) });
     projectCursor = until;
   }
-  let normalOverlay = overlays[2];
+  let normalOverlay = conversations ? conversationOverlays[0].normal : overlays[2];
+  function prepareNormal(until, overlayFile, fadeOut = 0) {
+    if (!conversations) return prepareNormalPiece(until, overlayFile, fadeOut);
+    const spans = sourceSpans(projectCursor, until, conversations, annotations);
+    for (const [spanIndex, span] of spans.entries()) {
+      if (span.conversation_index !== projectScopeIndex) {
+        projectScopeIndex = span.conversation_index;
+        projectControl = .5; projectScore = '0.0';
+        normalOverlay = conversationOverlays[projectScopeIndex].normal;
+      }
+      const audioFades = sourceAudioFades(span, spanIndex, spans, conversations, fadeOut);
+      prepareNormalPiece(span.source_out, span.show_sides ? conversationOverlays[projectScopeIndex].initial : normalOverlay,
+        spanIndex === spans.length - 1 ? fadeOut : 0, span, audioFades.fade_in_seconds, audioFades.fade_out_seconds);
+    }
+  }
   for (let i = 0; i < annotations.length; i++) {
     const a = annotations[i]; prepareNormal(a.source_at, normalOverlay);
-    const replayStart = Math.max(start, a.source_at - (a.replay_seconds || 3));
+    const replayStart = Math.max(annotationScopes?.[i]?.source_in ?? start, a.source_at - (a.replay_seconds || 3));
     const history = a.source_at - replayStart, replaySpeed = history / a.hold_seconds;
     const backgroundFile = path.join(output, `project-replay-${i}.mkv`), sfxFile = path.join(output, `analysis-sfx-${i}.wav`);
     const input = analysisBackground === 'freeze' ? ['-ss', String(a.source_at), '-i', source] : ['-ss', String(replayStart), '-t', String(history), '-i', source];
@@ -374,16 +457,20 @@ if (prepareProject) {
     addProjectSegment({ kind: 'analysis', duration: a.hold_seconds, source_at: a.source_at, rating: a.rating, speaker: a.speaker,
       comment: a.comment, score_text: a.score_text, control: a.control_after, background_file: backgroundFile,
       replay_range: { source_in: replayStart, source_out: a.source_at }, replay_speed: replaySpeed, original_dialogue_progression_paused: true,
-      graphics_file: alphaMovie(annotationFrames[i], a.hold_seconds, `project-graphics-analysis-${i}`), graphics_type: 'alpha_mov', graphics_frames: annotationFrames[i], sfx_file: sfxFile });
+      graphics_file: alphaMovie(annotationFrames[i], a.hold_seconds, `project-graphics-analysis-${i}`), graphics_type: 'alpha_mov', graphics_frames: annotationFrames[i], sfx_file: sfxFile,
+      ...(discardFrameCaches ? {frame_cache_discarded:true} : {}),
+      ...(annotationScopes ? {conversation_index:annotationScopes[i].conversation_index,side_colors:annotationScopes[i].sides,
+        previous_control:annotationScopes[i].previous_control,previous_score_text:annotationScopes[i].previous_score_text} : {}) });
     projectControl = a.control_after; projectScore = a.score_text; normalOverlay = overlays[4 + i * 2];
   }
   prepareNormal(end, normalOverlay, endingFadeSeconds);
   if (outroSeconds) {
     const backgroundFile = path.join(output, 'project-background-outro.png');
-    await fs.copyFile(path.join(outroFrameDirectory, outroStyle === 'subscribe' ? 'frame_00000.png' : 'frame_00030.png'),backgroundFile);
+    await fs.copyFile(discardFrameCaches ? outroReviewFrame : path.join(outroFrameDirectory, outroStyle === 'subscribe' ? 'frame_00000.png' : 'frame_00030.png'),backgroundFile);
     addProjectSegment({kind:'outro', duration:outroSeconds, background_file:backgroundFile,
       graphics_file:alphaMovie(outroFrameDirectory,outroSeconds,'project-graphics-outro'), graphics_type:'alpha_mov',
       graphics_frames:outroFrameDirectory, outro_style:outroStyle, recap_counts:recapCounts, recap_summary:spec.outro_summary, ...(await musicPart('outro',outroSeconds))});
+    if (discardFrameCaches) projectSegments.at(-1).frame_cache_discarded = true;
   }
   const projectManifest = path.join(output, 'project-manifest.json');
   const musicAttribution = await writeMusicCredits(projectSegments, output);
@@ -394,7 +481,9 @@ if (prepareProject) {
     fps, graphics_fps: graphicsFps, width: 1920, height: 1080, duration: projectElapsed, duration_frames: Math.round(projectElapsed * fps),
     icon_set: ratingSchema.icon_set, bar: ratingSchema.bar, scores_are_editorial: true, original_audio_present: hasAudio, voiceover: false,
     demo, side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, initial_score_text: initialScoreText, analysis_pawn_by_speaker: analysisPawnBySpeaker,
-    outro_layout_reviewed:outroLayoutReviewed, mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash}, music_attribution:musicAttribution,
+    ...(conversations ? {conversations} : {}),
+    ...(discardFrameCaches ? {graphics_frame_cache_policy:{discarded:true,lossless_alpha_movies_retained:true,receipts:frameCacheReceipts}} : {}),
+    outro_layout_reviewed:outroLayoutReviewed, mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash,badges:mascotBadges}, music_attribution:musicAttribution,
     final_export_engine: 'Kdenlive / MLT required', sfx_manifest: sfxManifestPath, published: false, segments: projectSegments }, null, 2));
   console.log(JSON.stringify({ project_manifest: projectManifest, duration: projectElapsed, final_video_exported: false, tracks_are_separate: true }));
   process.exit(0);
@@ -488,7 +577,7 @@ await fs.writeFile(path.join(output, 'render-report.json'), JSON.stringify({ sch
   reference_guide_observed: true, reference_guide_id: 'InM2zft-iQs',
   bar: ratingSchema.bar, initial_score_text: initialScoreText, conversation_score_editorial: true, icon_set: ratingSchema.icon_set,
   graphics_fps: graphicsFps,
-  mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash},
+  mascot:{file:mascot,overlay_file:overlayMascot,sha256:mascotHash,overlay_sha256:overlayMascotHash,badges:mascotBadges},
   source_quality: sourceQualityReport,
   sfx_manifest: sfxManifestPath, sfx_added_during_analysis_only: true,
   side_colors: sides, opening, legacy_opening_override: legacyOpeningOverride, analysis_background: analysisBackground, transparent_mascot_in_guide: true,

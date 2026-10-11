@@ -29,6 +29,91 @@ def media_probe(file, count_frames=False):
         '-show_format', '-show_streams', '-of', 'json', str(file)]))
 
 
+def finite_timestamp(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
+
+
+def conversation_at(conversations, source_at, source_out):
+    """Use half-open chapter scopes; a boundary belongs to the new chapter."""
+    if not finite_timestamp(source_at) or not conversations[0]['source_at'] <= source_at < source_out:
+        return None
+    return next(i for i in range(len(conversations) - 1, -1, -1)
+                if conversations[i]['source_at'] <= source_at)
+
+
+def remap_conversations(timeline, cuts, edit_opening):
+    """Keep explicit chapter openings, refusing a cut which loses their evidence.
+
+    The first chapter may lose its original opening only when the edit's own
+    reviewed White opening replaces it. Later openings must remain in a cut.
+    Absence of this optional list preserves the single-conversation workflow.
+    """
+    if 'conversations' not in timeline:
+        return None, None
+    original = timeline['conversations']
+    if not isinstance(original, list) or not original:
+        raise ValueError('conversations must be a nonempty ordered list of reviewed chapter openings.')
+    source_in, source_out = timeline.get('source_in'), timeline.get('source_out')
+    if not all(finite_timestamp(t) for t in (source_in, source_out)) or not 0 <= source_in < source_out:
+        raise ValueError('Chapter scopes require the original source_in/source_out interval.')
+    previous = None
+    for chapter in original:
+        if not isinstance(chapter, dict):
+            raise ValueError('Each conversation must contain reviewed chapter metadata.')
+        at = chapter.get('source_at')
+        if not finite_timestamp(at) or not source_in <= at < source_out or (previous is not None and at <= previous):
+            raise ValueError('Conversation source_at values must be strictly ordered inside the original source interval.')
+        for camp in ('white', 'black'):
+            label = chapter.get(camp + '_label')
+            if not isinstance(label, str) or not label.strip():
+                raise ValueError('Each conversation needs its reviewed White and Black labels.')
+        if chapter['white_label'] == chapter['black_label']:
+            raise ValueError('The two conversation camps must differ.')
+        opening = chapter.get('opening')
+        if (not isinstance(opening, dict) or opening.get('reviewed') is not True
+                or opening.get('speaker') != 'white' or opening.get('label') != chapter['white_label']
+                or not isinstance(opening.get('evidence'), str) or not opening['evidence'].strip()):
+            raise ValueError('Each conversation opening requires reviewed White-first evidence matching its White label.')
+        if 'source_at' in opening and (not finite_timestamp(opening['source_at']) or opening['source_at'] != at):
+            raise ValueError('A conversation opening.source_at must match its chapter source_at.')
+        if (chapter.get('initial_score_text') != '0.0' or not finite_timestamp(chapter.get('initial_control'))
+                or chapter['initial_control'] != .5):
+            raise ValueError('Each conversation must restart at initial_score_text=0.0 and initial_control=0.5.')
+        previous = at
+    first = original[0]
+    if first['source_at'] != source_in:
+        raise ValueError('The first conversation must start at the original source_in.')
+    if (any(first[camp + '_label'] != timeline.get(camp + '_label') for camp in ('white', 'black'))
+            or timeline.get('initial_score_text') != '0.0'
+            or not finite_timestamp(timeline.get('initial_control')) or timeline['initial_control'] != .5):
+        raise ValueError('The first conversation must agree with the global camps and initial 0.0/0.5 state.')
+    global_opening = timeline['opening']
+    if 'source_at' in global_opening and (not finite_timestamp(global_opening['source_at'])
+                                         or global_opening['source_at'] != source_in):
+        raise ValueError('The global opening.source_at must match the first conversation at source_in.')
+    if any(c['in'] < source_in or c['out'] > source_out for c in cuts):
+        raise ValueError('Retained chapter cuts must stay inside the original source_in/source_out interval.')
+    if conversation_at(original, cuts[0]['in'], source_out) != 0:
+        raise ValueError('The first retained cut must stay in the first conversation; later chapters cannot replace it.')
+
+    remapped = []
+    for index, chapter in enumerate(original):
+        retained_at = cuts[0]['in'] if index == 0 else chapter['source_at']
+        matches = [c for c in cuts if c['in'] <= retained_at < c['out']]
+        if len(matches) != 1:
+            raise ValueError(f'Conversation {index + 1} opening must remain in exactly one retained cut; do not silently omit a chapter.')
+        cut = matches[0]
+        mapped = round(cut['edited_in'] + retained_at - cut['in'], 9)
+        if remapped and mapped <= remapped[-1]['source_at']:
+            raise ValueError('Remapped conversation openings must remain strictly ordered.')
+        result = copy.deepcopy(chapter)
+        result.update(source_at=mapped, original_source_at=chapter['source_at'])
+        result['opening'] = copy.deepcopy(edit_opening if index == 0 else chapter['opening'])
+        result['opening'].update(source_at=mapped, original_source_at=retained_at)
+        remapped.append(result)
+    return original, remapped
+
+
 def plan_edit(edit, timeline, source_meta):
     """Validate authored decisions before creating media or an output directory."""
     if edit.get('schema') != 'conversation-chess-source-edit-v1' or edit.get('source_visually_reviewed') is not True:
@@ -87,6 +172,7 @@ def plan_edit(edit, timeline, source_meta):
     first_at = opening.get('source_at')
     if not isinstance(first_at, (int, float)) or not math.isfinite(first_at) or abs(first_at - cuts[0]['in']) > 1e-8:
         raise ValueError('opening.source_at must match the first retained cut, rather than the unedited opening.')
+    original_conversations, conversations = remap_conversations(timeline, cuts, opening)
 
     annotations, previous = [], -1
     for item in edit.get('annotations', []):
@@ -95,6 +181,14 @@ def plan_edit(edit, timeline, source_meta):
             raise ValueError('Each remapped annotation must identify an existing base annotation.')
         if not isinstance(at, (int, float)) or not math.isfinite(at):
             raise ValueError('Annotation source timestamps must be finite.')
+        if conversations is not None:
+            base_at = timeline['annotations'][index].get('source_at')
+            original_scope = conversation_at(original_conversations, base_at, timeline['source_out'])
+            retained_scope = conversation_at(original_conversations, at, timeline['source_out'])
+            if original_scope is None or retained_scope != original_scope:
+                raise ValueError('An annotation cannot migrate to another conversation through original_at.')
+            if at == original_conversations[retained_scope]['source_at'] or base_at == original_conversations[original_scope]['source_at']:
+                raise ValueError('An annotation cannot coincide with a conversation opening.')
         matches = [c for c in cuts if c['in'] <= at < c['out']]
         if len(matches) != 1:
             raise ValueError(f'Annotation {at} must lie in exactly one retained cut.')
@@ -102,6 +196,11 @@ def plan_edit(edit, timeline, source_meta):
         mapped = round(cut['edited_in'] + at - cut['in'], 9)
         if mapped <= previous or not 0 < mapped < cursor / 30:
             raise ValueError('Remapped annotations must remain ordered and inside the edited scene.')
+        if conversations is not None:
+            if conversation_at(conversations, mapped, cursor / 30) != original_scope:
+                raise ValueError('A remapped annotation must remain in its original conversation scope.')
+            if mapped == conversations[original_scope]['source_at']:
+                raise ValueError('An annotation cannot coincide with a remapped conversation opening.')
         a = copy.deepcopy(timeline['annotations'][index])
         a.update(source_at=mapped, original_source_at=at)
         if item.get('comment'):
@@ -111,6 +210,9 @@ def plan_edit(edit, timeline, source_meta):
         previous = mapped
     base = copy.deepcopy(timeline)
     base.update(source_in=0, source_out=cursor / 30, annotations=annotations, opening=copy.deepcopy(opening))
+    if conversations is not None:
+        base['conversations'] = conversations
+        base['opening'] = copy.deepcopy(conversations[0]['opening'])
     return base, cuts, cursor, dimensions
 
 

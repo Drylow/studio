@@ -6,7 +6,7 @@ window.ConversationChess = (() => {
   if (!schema?.categories?.length) throw new Error('Load ratings.json before scene.js.');
   const ratings = Object.fromEntries(schema.categories.map(v => [v.id, v]));
   const clamp = v => Math.max(0, Math.min(1, v));
-  let tony = null, tonyOverlay = null, background = null;
+  let tony = null, tonyOverlay = null, background = null, mascotBadges = false;
   function text(s, x, y, size, color = '#ffffff', weight = 700, align = 'left', family = 'Arial') {
     ctx.font = `${weight} ${size}px ${family}`; ctx.textAlign = align;
     ctx.textBaseline = 'alphabetic'; ctx.fillStyle = color; ctx.fillText(s, x, y);
@@ -24,6 +24,19 @@ window.ConversationChess = (() => {
     const icon = officialIcons[v.id];
     if (!icon) throw new Error(`Official Chess.com icon unavailable: ${v.id}`);
     imageContain(icon, x, y, size, size);
+  }
+  function mascot(image, x, y, w, h) {
+    imageContain(image, x, y, w, h);
+    if (!mascotBadges) return;
+    // Companion graphics only: the approved portrait bytes stay untouched.
+    // Match the Shelby composition, positioning exact verified SVGs beside
+    // the lower face. Use the contained image bounds, including letterboxing.
+    const scale = Math.min(w / image.width, h / image.height);
+    const nw = image.width * scale, nh = image.height * scale;
+    const left = x + (w - nw) / 2, top = y + (h - nh) / 2;
+    const size = Math.min(nw, nh) * .18;
+    ratingIcon(ratings.brilliant, left + nw * .17 - size / 2, top + nh * .575 - size / 2, size);
+    ratingIcon(ratings.blunder, left + nw * .83 - size / 2, top + nh * .575 - size / 2, size);
   }
   // A single silhouette, recoloured for both sides; Unicode pawn glyphs differ.
   function pawn(x, y, height = 46, white = false) {
@@ -44,7 +57,7 @@ window.ConversationChess = (() => {
   }
   function symbols(transparentBackground = false) {
     guideBackground(transparentBackground);
-    if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 302, 12, 130, 130);
+    if (tonyOverlay || tony) mascot(tonyOverlay || tony, 302, 12, 130, 130);
     text('Annotation Symbols Guide', 1120, 107, 65, '#f4f4f4', 700, 'center', 'monospace');
     for (const v of schema.categories) {
       const x = 36 + v.column * 960, y = 189 + v.row * 141;
@@ -126,7 +139,7 @@ window.ConversationChess = (() => {
     // The reviewed reference uses a mascot above a tall speech bubble, then
     // one combined count beneath each icon. It has no per-player score table.
     if (tonyOverlay || tony) {
-      imageContain(tonyOverlay || tony, 229, 8, 284, 222);
+      mascot(tonyOverlay || tony, 229, 8, 284, 222);
     }
     const bubble = {x:62, y:255, width:614, height:764};
     ctx.fillStyle = '#f7f7f7'; ctx.beginPath();
@@ -207,7 +220,7 @@ window.ConversationChess = (() => {
         const speaker = options.evaluation.speaker;
         if (!['white', 'black'].includes(speaker)) throw new Error('A player-coloured analysis pawn requires its white/black speaker.');
         pawn(345, 535 + 10 * (1 - entryEase), 520, speaker === 'white');
-      } else if (tonyOverlay || tony) imageContain(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
+      } else if (tonyOverlay || tony) mascot(tonyOverlay || tony, 110, 535 + 10 * (1 - entryEase), 470, 520);
       if (options.reveal_seconds == null || options.reveal_seconds >= schema.bubble_delay_seconds) {
       const bubbleEntry = 1 - Math.pow(1 - clamp((elapsed - schema.bubble_delay_seconds) / .16), 3);
       ctx.save(); ctx.translate(0, 12 * (1 - bubbleEntry)); ctx.globalAlpha = bubbleEntry;
@@ -246,7 +259,9 @@ window.ConversationChess = (() => {
     if (!src) return null;
     return new Promise((resolve, reject) => { const img = new Image(); img.onload = () => resolve(img); img.onerror = reject; img.src = src; });
   }
-  async function init(src, backdropSrc = '', overlaySrc = '') {
+  async function init(src, backdropSrc = '', overlaySrc = '', mascotOptions = {}) {
+    if (mascotOptions.badges != null && typeof mascotOptions.badges !== 'boolean') throw new Error('mascot.badges must be boolean.');
+    mascotBadges = mascotOptions.badges === true;
     await document.fonts.ready; tony = await load(src); background = await load(backdropSrc); tonyOverlay = await load(overlaySrc);
     for (const v of schema.categories) {
       const data = window.ConversationRatingAssets?.[v.id];
