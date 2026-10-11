@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'studio_bridge.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     web = root / 'app/web'
     legacy = web / 'legacy.html'
@@ -129,6 +129,7 @@ def deploy(root, seed=True):
                            ('workspace_management_tests.py', 'test_workspace_management.py'),
                            ('workspace_voice_tests.py', 'test_workspace_voice.py'),
                            ('workspace_planning_tests.py', 'test_workspace_planning.py'),
+                           ('workspace_characters_tests.py', 'test_workspace_characters.py'),
                            ('google_flow_tests.py', 'test_google_flow.py')):
         shutil.copy2(support / source, root / 'tests' / target)
     if seed:

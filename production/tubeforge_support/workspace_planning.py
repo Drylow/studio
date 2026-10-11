@@ -10,6 +10,7 @@ from app.steps import scenes as timing
 from app.util import parse_json, now
 from . import workspace_api as api, workspace_management as management, workspace_generation as generation
 from . import workspace_composition as composition
+from . import workspace_characters as cast
 
 
 def allowed(p):
@@ -22,16 +23,27 @@ def allowed(p):
 
 def signature(p):
     style = store.get_style(p.get("style_id")) or {}
-    return api._hash({"script": p.get("script"), "voice": p.get("voiceover"),
-                      "style": style, "models": p.get("model_snapshot"), "settings": p.get("settings")})
+    evidence = {"script": p.get("script"), "voice": p.get("voiceover"),
+                "style": style, "models": p.get("model_snapshot"), "settings": p.get("settings")}
+    entries = cast.registry(p)
+    if entries:
+        evidence["cast_registry"] = entries
+    return api._hash(evidence)
+
+
+def _shot_evidence(s):
+    keys = ("text", "prompt", "location_id", "characters", "references", "start", "end")
+    # Retain valid pre-registry receipts for projects that have no variant field.
+    if "character_variants" in s:
+        keys += ("character_variants",)
+    return {key: s.get(key) for key in keys}
 
 
 def authored(p, s):
     receipt = p.get("planning_receipt") or {}
     return (allowed(p) and s.get("prompt_author") == "configured_text_proxy"
             and receipt.get("input_hash") == signature(p)
-            and receipt.get("shots", {}).get(str(s["id"])) == api._hash(
-                {k: s.get(k) for k in ("text", "prompt", "location_id", "characters", "references", "start", "end")}))
+            and receipt.get("shots", {}).get(str(s["id"])) == api._hash(_shot_evidence(s)))
 
 
 def inputs(p):
@@ -65,7 +77,8 @@ def inputs(p):
         digest = api._file_digest(store.style_dir(p["style_id"]), ref.get("path"))
         if not digest or ref.get("sha256") != digest or ref.get("review_state") != "verified":
             raise HTTPException(409, "Une référence du style est manquante ou a changé")
-    era_refs = style.get("workspace_character_references") or {}
+    entries = cast.registry(p)
+    era_refs = {} if entries else style.get("workspace_character_references") or {}
     if not isinstance(era_refs, dict):
         raise HTTPException(409, "Les références de personnages du style sont invalides")
     for selected in era_refs.values():
@@ -88,7 +101,7 @@ async def prepare(p):
         result = []
         rules = (
             "Write concrete varied storyboard image prompts for the supplied fictional story. "
-            "Return JSON {shots:[{id,location_id,characters:[named identities],prompt}]}. "
+            "Return JSON {shots:[{id,location_id,characters:[named identities],character_variants:{exact_character_name:exact_variant_key},prompt}]}. "
             "Exactly one entry per requested id, in order. Do not rewrite narration. "
             "Each prompt must show a distinct narrated action, consequence, object or interaction; "
             "alternate compositions and avoid repeated tableaux. Specify framing, visible action, "
@@ -104,6 +117,11 @@ async def prepare(p):
             "Do not use the proper name Kratos in the image prompt; describe the reference avatar. "
             "When era-specific character references are supplied, return reference_era equal to one "
             "of their exact keys. The era follows this shot's narration, not the end of the story."
+            "When a cast registry is supplied, use its EXACT character names in characters and select "
+            "an explicit character_variants key for every required registered identity in the shot. "
+            "Variants determine age and costume from this shot's narration, not the end of the story. "
+            "Do not select or draw absent cast members. Copy the chosen variant's appearance into its "
+            "character's scene description; never swap another character's costume or hero marking."
         )
         try:
             limit = max(1, min(8, int(config.get("WORKSPACE_PLAN_CONCURRENCY") or 4)))
@@ -119,7 +137,8 @@ async def prepare(p):
                 raw = await llm.chat([
                     {"role": "system", "content": rules + "\nApproved style: " + style.get("visuals", {}).get("art_style", "")},
                     {"role": "user", "content": json.dumps({"full_story": p["script"],
-                        "character_reference_eras": list(style.get("workspace_character_references", {})),
+                        "character_reference_eras": [] if cast.registry(p) else list(style.get("workspace_character_references", {})),
+                        "cast_registry": cast.summary(p),
                         "context_before": [s["text"] for s in shots[max(0, offset - 2):offset]],
                         "context_after": [s["text"] for s in shots[offset + len(batch):offset + len(batch) + 2]],
                         "requested_shots": [{"id": s["id"], "narration": s["text"]} for s in batch]}, ensure_ascii=False)}
@@ -139,7 +158,7 @@ async def prepare(p):
                 if composition.contradictory(prompt):
                     raise ValueError("Contradictory image composition")
                 selected_refs = refs
-                era_refs = style.get("workspace_character_references") or {}
+                era_refs = {} if cast.registry(p) else style.get("workspace_character_references") or {}
                 if era_refs:
                     era = row.get("reference_era")
                     if era not in era_refs:
@@ -149,9 +168,16 @@ async def prepare(p):
                         ref["owner"] = "style"
                         if api._file_digest(store.style_dir(p["style_id"]), ref["path"]) != ref.get("sha256"):
                             raise ValueError("Character reference changed")
-                prepared.append(dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
+                scene = dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
                     characters=row["characters"], references=copy.deepcopy(selected_refs), prompt_author="configured_text_proxy",
-                    status="idle", human_review={"state": "unreviewed"}))
+                    status="idle", human_review={"state": "unreviewed"})
+                if cast.registry(p):
+                    scene["character_variants"] = copy.deepcopy(row.get("character_variants") or {})
+                    scene["references"], block = cast.author(p, scene, selected_refs)
+                    if block:
+                        scene["prompt"] += "\n" + block
+                    cast.validate(p, scene)
+                prepared.append(scene)
             completed += len(prepared)
             progress(completed, len(shots), f"{completed}/{len(shots)} plans prêts · {limit} lots en parallèle")
             return prepared
@@ -163,13 +189,14 @@ async def prepare(p):
             result = [shot for batch in batches for shot in batch]
             inputs(p)  # Recheck physical reference files before publishing the complete plan.
             for shot in result:
-                if any(api._file_digest(store.style_dir(p["style_id"]), r["path"]) != r.get("sha256") for r in shot["references"]):
+                if any(api._file_digest(store.project_dir(p["id"]) if r.get("owner") == "project" else
+                        store.style_dir(p["style_id"]), r["path"]) != r.get("sha256") for r in shot["references"]):
                     raise ValueError("Reference changed during preparation")
+                cast.validate(p, shot)
             if signature(p) != stamp or p.get("scenes"):
                 raise ValueError("Project changed")
             p["planning_receipt"] = {"input_hash": stamp, "text_model": model, "created_at": now(),
-                "shots": {str(s["id"]): api._hash({k: s.get(k) for k in
-                    ("text", "prompt", "location_id", "characters", "references", "start", "end")}) for s in result}}
+                "shots": {str(s["id"]): api._hash(_shot_evidence(s)) for s in result}}
             p.update(scenes=result, scenes_script_hash=timing.script_hash(p["script"]), render=None)
             progress(len(result), len(result), "Plans prêts : testez les trois premières images")
             store.save_project(p)

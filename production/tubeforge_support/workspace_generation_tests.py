@@ -216,6 +216,85 @@ def test_remaining_preserves_approved_and_existing_images(workspace, monkeypatch
     assert request.await_count == 3
 
 
+def test_remaining_regenerates_flagged_existing_images_and_skips_good_ones(workspace, monkeypatch):
+    _, p, data = batch_project(workspace, preview_ready=True)
+    for scene in p["scenes"][3:]:
+        scene.update(image="previous.png", generation_receipt={"id": "previous-" + str(scene["id"])})
+    targets = [p["scenes"][3], p["scenes"][5]]
+    for scene in targets:
+        scene["workspace_regeneration_required"] = True
+    old = {scene["id"]: copy.deepcopy(scene["generation_receipt"]) for scene in targets}
+    store.save_project(p)
+    request = AsyncMock(return_value=data)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, "remaining"))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    assert latest["workspace_batch"]["state"] == "done" and latest["workspace_batch"]["done"] == 2
+    assert latest["workspace_batch"]["scene_ids"] == [21, 8]
+    assert [call.args[0] for call in request.await_args_list] == [scene["prompt"] for scene in targets]
+    for scene in latest["scenes"]:
+        if scene["id"] in old:
+            assert scene["image"] != "previous.png" and "workspace_regeneration_required" not in scene
+            previous = scene["generation_receipt"]["previous_image"]
+            assert previous["path"] == "previous.png" and previous["generation_receipt"] == old[scene["id"]]
+        else:
+            assert scene["image"] == "previous.png"
+    assert (store.project_dir(p["id"]) / "previous.png").is_file()
+
+
+def test_flagged_regeneration_failure_keeps_selected_old_image_and_retry_flag(workspace, monkeypatch):
+    _, p, _ = batch_project(workspace, preview_ready=True)
+    for scene in p["scenes"][3:]:
+        scene["image"] = "previous.png"
+    target = p["scenes"][3]
+    target.update(workspace_regeneration_required=True, generation_receipt={"id": "old-selected-receipt"})
+    old_receipt = copy.deepcopy(target["generation_receipt"])
+    store.save_project(p)
+    request = AsyncMock(side_effect=RuntimeError("private fixture failure"))
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, "remaining"))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    assert latest["workspace_batch"]["state"] == "failed" and latest["workspace_batch"]["done"] == 0
+    assert request.await_count == 1
+    failed = latest["scenes"][3]
+    assert failed["image"] == "previous.png" and failed["workspace_regeneration_required"] is True
+    assert failed["generation_receipt"] == old_receipt
+    assert (store.project_dir(p["id"]) / "previous.png").is_file()
+
+
+def test_regeneration_flag_edit_during_request_rejects_obsolete_output(workspace, monkeypatch):
+    _, p, data = batch_project(workspace, preview_ready=True)
+    target = p["scenes"][3]
+    target.update(image="previous.png", workspace_regeneration_required=True)
+    store.save_project(p)
+
+    async def image(*args, **kwargs):
+        current = copy.deepcopy(store.get_project(p["id"]))
+        current["scenes"][3].pop("workspace_regeneration_required")
+        store.save_project(current)
+        return data
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+    body = {"confirm_prompt": target["prompt"], "image_model": p["model_snapshot"]["image_model"]}
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(generation.generate(p["id"], target["id"], body))
+    assert exc.value.status_code == 409
+    latest = store.get_project(p["id"])
+    assert latest["scenes"][3]["image"] == "previous.png"
+    assert latest["workspace_generation_history"][-1]["state"] == "obsolete_unselected"
+
+
 def test_failure_stops_without_retry_and_resume_skips_successes(workspace, monkeypatch):
     _, p, data = batch_project(workspace)
     request = AsyncMock(side_effect=[data, RuntimeError("private failure"), data, data])
