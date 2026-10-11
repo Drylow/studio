@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "review_type": "editorial_text_and_reference_continuity",
+  "reviewed_at": "2026-10-11T15:08:42+02:00",
+  "channel_name": "Silent Little Worlds",
+  "status": "approved_for_narration",
+  "approved_for_narration": true,
+  "approval_scope": "Only the exact UTF-8 script bytes identified below are approved to enter narration production. This is not approval of generated audio, subtitles, final duration, rendered video, or publication.",
+  "invalidation_rule": "Any change to a script byte invalidates that script approval until it is reviewed and its SHA-256 updated. Verify these hashes before narration submission or audio reuse.",
+  "visual_reference": {
+    "path": "experiments/nature-sleep/cozy-garden/A-lantern-garden.png",
+    "sha256": "eeb976a48b707d1fd6b0c7fea6307f1e8b1d10e5b4b55eabb034a450cd867145",
+    "visually_inspected": true
+  },
+  "scripts": {
+    "00-welcome": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/00-welcome.txt",
+      "sha256": "fbeb22af8265d3c1566f1931a1027d6f4b30c838f6d36f261518e3a474755578",
+      "word_count": 211,
+      "paragraph_count": 4,
+      "approved_for_narration": true
+    },
+    "01-lanterns": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/01-lanterns.txt",
+      "sha256": "4d4a6121a5df513cb6814496ced3a845974e32ca5db17ef5de3511dd4e4dd05c",
+      "word_count": 1787,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "02-conservatory": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/02-conservatory.txt",
+      "sha256": "13a24c1e27c3d8df34c0cf7cfbccc3fa0141acb895b67459e8ee8dd0b416fead",
+      "word_count": 1756,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "03-mender": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/03-mender.txt",
+      "sha256": "412268c0b48bdb25367b3d21e61276547183af94f6a3c4295e62124ba43322fd",
+      "word_count": 1770,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "04-reading-room": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/04-reading-room.txt",
+      "sha256": "d53179a2d52b3cb0f9315ae18b4e9542982c38fc88f0592af47445158e348701",
+      "word_count": 1771,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "05-pond-room": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/05-pond-room.txt",
+      "sha256": "f4e8185bc8c846db04d1ba344f5be3043d946fc41e230ceb64d7ed29ff09bd2d",
+      "word_count": 1805,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "06-garden-kitchen": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/06-garden-kitchen.txt",
+      "sha256": "d2abe0ed27ffdb4cbc55b4813f544f20262347fc53ac5e97b0c316df9aeb7cac",
+      "word_count": 1783,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "07-seed-library": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/07-seed-library.txt",
+      "sha256": "f7b82cba08341c8ca0a72ac9c534accd3f205993190586435a6566cf4c86e916",
+      "word_count": 1823,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    },
+    "08-last-lantern": {
+      "path": "experiments/nature-sleep/cozy-garden/episode-01/script/08-last-lantern.txt",
+      "sha256": "1500ba44ef1e61ab887c8a29c759c80f39bb14267c25fdbf4e2507d24d18becd",
+      "word_count": 1835,
+      "paragraph_count": 30,
+      "approved_for_narration": true
+    }
+  },
+  "script_manifest_sha256": "2d7eee034c26771528eeb8f3dcded1e6c30da31bb75f983e2c1867382e9137b5",
+  "script_manifest_hash_method": "SHA-256 of sorted lines: chapter_id + TAB + script_sha256 + LF, encoded as UTF-8.",
+  "totals": {
+    "scripts": 9,
+    "words": 14541,
+    "paragraphs": 244
+  },
+  "checks": {
+    "all_nine_texts_read": true,
+    "names_places_objects_and_chapter_transitions_reviewed": true,
+    "visible_bench_lantern_and_blanket_match_reference_after_corrections": true,
+    "old_channel_names_or_railway_framing_found": false,
+    "verbatim_repeated_paragraphs": 0,
+    "verbatim_repeated_sentences_at_least_eight_words": 0,
+    "repeated_casefolded_twelve_word_spans_within_paragraphs": 0,
+    "plain_english_narration_without_markdown_or_stage_directions": true,
+    "medical_or_guaranteed_sleep_claims_found": false
+  },
+  "word_count_method": "English word tokens matched with [A-Za-z]+(?:['’-][A-Za-z]+)*; the current texts have the same whitespace-token totals.",
+  "corrections": [
+    {
+      "script": "01-lanterns",
+      "paragraph": 3,
+      "change": "The visible bench is brown wood, matching the approved garden image."
+    },
+    {
+      "script": "01-lanterns",
+      "paragraph": 5,
+      "change": "The lantern has a dark metal frame and latch, rather than a polished brass description."
+    },
+    {
+      "script": "01-lanterns",
+      "paragraph": 8,
+      "change": "Replaced the horticultural verb train with guide, removing an avoidable railway keyword."
+    },
+    {
+      "script": "05-pond-room",
+      "paragraph": 24,
+      "change": "Mara stands beside the rosemary bush, not beneath a small shrub."
+    },
+    {
+      "script": "05-pond-room",
+      "paragraph": 30,
+      "change": "The fruit area is introduced as a few small trees within the garden."
+    },
+    {
+      "script": "06-garden-kitchen",
+      "paragraph": 1,
+      "change": "The orchard is explicitly miniature, with small apple trees and pear branches against the enclosing wall."
+    },
+    {
+      "script": "06-garden-kitchen",
+      "paragraph": 22,
+      "change": "Clarified the single open kitchen doorway and its protective roof; removed the awkward inner/outer-door phrasing."
+    },
+    {
+      "script": "07-seed-library",
+      "paragraph": 4,
+      "change": "The vase catches lamplight, preserving the evening setting rather than restarting sunset."
+    },
+    {
+      "script": "08-last-lantern",
+      "paragraph": 1,
+      "change": "The listener cup stands on the little table and the main lantern has a dark metal frame, matching image A."
+    },
+    {
+      "script": "08-last-lantern",
+      "paragraph": 5,
+      "change": "The teapot still holds warm tea, preserving the beverage established throughout the story."
+    },
+    {
+      "script": "08-last-lantern",
+      "paragraph": 14,
+      "change": "Mara returns the lamp box to where she placed it in chapter 01, correcting the attribution to Elias."
+    },
+    {
+      "script": "08-last-lantern",
+      "paragraph": 16,
+      "change": "The visible cream blanket has thick knitted loops rather than a fine woven texture."
+    }
+  ],
+  "remaining_validation": [
+    "Listen to generated narration, including consistent pronunciation of Mara, Elias, Ivo, Niall, Iona, Tomas and Rowan.",
+    "Measure narration duration and natural pauses: 14,541 words require approximately 121.2 words per elapsed minute to fit 120 minutes; exact duration is not established by text review.",
+    "Check actual audio joins, volume, background sound, optional subtitle timings, animation and final export separately.",
+    "This was an internal originality and duplication review, not a search of all published works or a promise of copyright or monetization outcomes."
+  ]
+}

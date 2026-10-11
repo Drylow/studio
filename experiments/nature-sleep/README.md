@@ -1,36 +1,85 @@
-# Quiet Little Worlds — sélection visuelle
+# Silent Little Worlds — production sleep
 
-Concept choisi par l’utilisateur le 11 octobre 2026 : récits longs pour dormir
-destinés aux adultes, autour de mousse, jardins, serres et petits bassins.
-L’objectif reste deux heures. Nom, bio et avatar sont déjà livrés sur Discord.
+## Premier épisode actif : le jardin des lanternes
 
-Le 11 octobre 2026, après avoir vu le nouvel aperçu du cottage, l’utilisateur
-**rejette l’ensemble de cette direction et abandonne explicitement le pixel art**.
-Il demande plusieurs styles cosy en images, puis choisira celui à animer.
-Le cottage, le saule et la grenouille restent des archives, pas la base du nouvel essai.
+Le 11 octobre 2026, l’utilisateur confirme le nouveau nom **Silent Little Worlds**
+et indique avoir mis sa chaîne à jour après l’indisponibilité de l’ancien @.
+Cette confirmation vient de lui ; le compte et le nouvel identifiant n’ont pas
+été vérifiés indépendamment ici. Quiet Little Worlds est désormais le nom historique.
 
-Trois images entièrement nouvelles affichées dans la conversation :
-- **A — train de nuit** : ambiance cinéma réaliste, bois/velours et forêt brumeuse.
-- **B — maison de thé dans l’arbre** : illustration texturée, fenêtre ronde, poêle.
-- **C — refuge miniature** : petit monde sous les racines, matières de maquette.
+**Le décor A du jardin est choisi** pour le premier film de deux heures :
+pergola, chat Pip sur une couverture, lanterne, serre éclairée à gauche et bassin
+à droite. Le [dossier actif](cozy-garden/README.md) remplace le train comme
+premier épisode. Le [master A](cozy-garden/A-lantern-garden.png) est conservé ;
+sa [version propre](cozy-garden/assets/garden-clean.png) retire la pluie figée
+en gardant la composition, pour permettre les mouvements demandés.
 
-Dossier actif : `experiments/nature-sleep/night-train/README.md`.
-L’utilisateur a maintenant **choisi A — train de nuit** et demandé l’extrait animé.
-Il gardera cette direction pour la chaîne **si l’animation lui convient** :
-le choix de l’image n’est pas une validation de l’animation ni de l’épisode long.
-Sources de l’image choisie : `cozy-reset-2026-10-11/proposals.json` ; calques,
-code et contrôles du train dans `night-train/`.
-Extrait **24 s, 1080p30, silencieux**, contrôlé et livré :
-https://gofile.io/d/eIVTL3rq — reçu `night-train/DELIVERY.json`.
-Forêt à plusieurs distances, pluie sur vitre, vapeur du thé, respiration discrète
-du chat. 720 images décodées, 73 captures sur cinq planches revues ; raccord natif
-contrôlé. **Validation utilisateur de l’animation encore attendue.**
+Au point d’état actuel :
 
-La cible reste deux heures, après validation de l’animation.
-La proposition de fiction anglaise et les pistes de montage/voix précédentes
-restent des propositions non validées. Aucun script intégral ni voix lancé.
-Aucun nouvel envoi Discord ; nom/bio/avatar existants conservés.
+- **9 textes anglais, 14 541 mots**, accueil et huit histoires originales dans
+  le même jardin clos ; [relecture et SHA figés](cozy-garden/episode-01/script-review.json).
+- **Voix en production**, plan de 40 segments de chapitre plus l’accueil.
+- **Boucle 60 secondes, 1080p30 en cours de rendu** : pluie animée, impacts et
+  cercles sur le bassin, vapeur du thé, reflets, feuillage et respiration discrète.
+- **Petite forme centrale liée à la voix demandée**, prototype en préparation ;
+  intégration et revue du film final encore à faire.
+- **Ambiance pluie/eau et musique originale discrète** :
+  [provenance et contrôles des stems](cozy-garden/episode-01/AMBIENCE.md).
+- **SRT anglais activable**, sans transcription incrustée en permanence.
 
+**Aucun long jardin terminé ni livré sur GoFile ou Discord à cette étape.**
+La durée de 2:00:00, le rendu réel, les raccords, le mix et les sous-titres
+restent à vérifier sur les fichiers assemblés. Une quantité de mots ou un
+contrôle technique seul ne prouve pas une validation artistique ou sonore.
+
+La [nouvelle bio](cozy-garden/channel-bio-en.txt) est prête, sans nouvel envoi.
+Le kit nom/bio/avatar précédent a déjà été reçu sur Discord, confirmé par
+l’utilisateur ; ne pas le renvoyer en doublon. Le salon conserve le binding
+privé **DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS** malgré le changement de nom.
+Aucune valeur de webhook ou réponse privée de service ne doit entrer dans Git.
+
+Le [helper de livraison](cozy-garden/episode-01/deliver.py) prépare trois titres,
+miniature, description, histoire et SRT depuis la vraie timeline. Les gardes
+SHA, reçus et verrous sont conservés. Aucun upload ou message ne doit être
+présenté comme envoyé avant confirmation ; aucune publication YouTube n’a été
+réalisée pour cet épisode.
+
+## Référence étudiée et projet chess
+
+[670 uploads publics de Stephen Dalton](cozy-garden/reference-stats.json) ont
+été récupérés, dont 560 vidéos longues analysées. Les comparaisons portent
+sur des compteurs cumulés et des cohortes ; ce ne sont ni des Analytics privés
+ni une garantie de performance. Le détail de sa forme centrale animée n’a pas
+été vérifié en vidéo : [limites de la recherche](cozy-garden/REFERENCE_VISUALIZER.md).
+Notre voix, nos textes et notre musique ne reprennent pas ses médias.
+
+La recherche parallèle [Inglourious Basterds](../conversation-chess/BASTERDS_RIGHTS_RESEARCH.md)
+est terminée. Le film est protégé, avec une piste de licence Universal Clips
+à obtenir et à préciser pour l’usage envisagé. **Aucun montage ni test YouTube
+lancé ; aucune absence de claim garantie.** Les titres chess doivent garder
+**Analyzed Like Chess**. Ne pas affirmer que Landa reconnaît Shosanna : le film
+entretient cette incertitude.
+
+Peaky Tommy/Alfie a été livré, publié puis supprimé par l’utilisateur après
+une réclamation audiovisuelle avec blocage territorial. Voir le
+[protocole de droits](../conversation-chess/COPYRIGHT_RELEASE.md) avant toute
+nouvelle livraison finale ; la qualité technique n’établit pas une licence.
+
+## Archive récente — train en réserve
+
+Le [train A](night-train/README.md) avait été choisi et son aperçu de 24 secondes
+livré. Un prototype de deux heures a ensuite été produit et contrôlé
+techniquement, puis placé sous `night-train/episode-01/HOLD.json` lorsque
+l’utilisateur a préféré le jardin pour la première vidéo. **Ce long n’a jamais
+été envoyé sur GoFile ou Discord.** Son MP4 dérivé a été supprimé pour libérer
+de la place ; sources, boucle, voix, mix et reconstruction sont conservés.
+Ne pas le livrer ou le relancer à la place du jardin.
+
+Les trois propositions du reset précédent — A train, B maison de thé dans
+l’arbre, C refuge miniature — restent dans [cozy-reset-2026-10-11/](cozy-reset-2026-10-11/).
+Le cottage pixel art, le saule, la grenouille et les anciennes scènes marines
+sont des directions rejetées. Les sections suivantes relatent ces étapes
+antérieures ; elles ne décrivent pas la production active ci-dessus.
 
 ## Anciennes propositions — archives
 
@@ -48,16 +97,16 @@ validation visuelle explicite de cette image n’est enregistrée. Le nombre de 
 mesuré dans le manifeste est la résolution réelle ; aucun master natif 4K.
 Les détails figurés ne servent pas de preuve biologique ou de prise de vue.
 
-## Avatar proposé
+## Archive — avatar fougère et lune
 
 [Avatar fougère, lune et luciole](branding/avatar-fern-moon.png), sans texte,
 fond opaque, composition centrale destinée au recadrage circulaire YouTube.
 Il ne reprend pas l’ancien avatar méduse. Son envoi a été demandé par
 l’utilisateur, qui confirme le nom, la bio et l’image reçus dans Discord.
 
-## Nom choisi et autres pistes
+## Archive — premier nom choisi et autres pistes
 
-1. **Quiet Little Worlds — @QuietLittleWorlds**, nom choisi explicitement.
+1. **Quiet Little Worlds — @QuietLittleWorlds**, premier nom choisi explicitement, remplacé depuis par Silent Little Worlds.
 2. **Glowfern Stories — @GlowfernStories**.
 3. **Little Wilds Sleep — @LittleWildsSleep**.
 
@@ -68,7 +117,7 @@ ont été élargies par le moteur ou limitées. Le choix ne vaut pas confirmatio
 de disponibilité ; celle-ci se vérifie dans YouTube lors de la création.
 Voir [recherche de noms](NAME_RESEARCH.md) et [résumé](name-research.json).
 
-## Bio proposée
+## Archive — première bio proposée
 
 > Slow stories. Small worlds. Deep rest.
 >
@@ -100,21 +149,10 @@ l’auteur, un examinateur indépendant et le root. Le raccord du shader est
 exact ; celui du MP4 conserve les différences de compression. Aucune lecture
 continue revendiquée. L’utilisateur a depuis rejeté cet aperçu. Voir
 [preuve de livraison](PREVIEW_DELIVERY.json) et [moteur](animation/README.md).
-Le nom est choisi et le kit de branding est livré dans
-Discord, confirmé par l’utilisateur. Aucun film de deux heures ni voix lancé.
+À cette étape ancienne, le premier nom était choisi et le kit de branding livré
+dans Discord, confirmé par l’utilisateur. Aucun long ni voix n’avait alors été lancé.
 Voir BRANDING_DELIVERY.json : le contrôle API des pièces jointes a échoué,
 mais l’utilisateur confirme les trois éléments reçus ; aucun doublon envoyé.
 Le webhook dédié est enregistré dans les .env privés local et serveur,
-sans clé dans le dépôt. Aucun compte YouTube créé ou renommé.
-
-## Projet chess indépendant
-
-Tommy/Alfie a été livré, puis publié et supprimé par l’utilisateur après
-une réclamation audiovisuelle et un blocage dans certains pays. La publication
-est désormais bloquée ; la QA technique ne démontrait pas les droits sur les
-épisodes. Voir [protocole de droits et contrôles](../conversation-chess/COPYRIGHT_RELEASE.md).
-La scène du strudel Landa/Shosanna dans *Inglourious
-Basterds* est une piste retenue pour la prochaine reprise, pas une production
-lancée. Attendre la demande de reprise de l’utilisateur. Titres : inclure
-**Analyzed Like Chess**, avec un z. Ne pas affirmer que Landa reconnaît
-Shosanna : le film entretient cette incertitude, qui participe à la tension.
+sans clé dans le dépôt. À cette étape ancienne, aucun compte YouTube n’avait
+encore été créé ou renommé par l’agent ; l’état actuel figure en tête de ce document.

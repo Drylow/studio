@@ -1,0 +1,139 @@
+{
+  "fetched_at": "2026-10-11T12:45:06.503558+00:00",
+  "source": "YouTube Data API v3 public channels, playlistItems and videos; existing authorized server key; no private Analytics data",
+  "channel_id": "UCjxAUYz6RxbcCYlNZnZcwKQ",
+  "channel_statistics": {
+    "viewCount": "55299594",
+    "subscriberCount": "326000",
+    "hiddenSubscriberCount": false,
+    "videoCount": "673"
+  },
+  "uploads_retrieved": 670,
+  "long_videos_in_analysis": 560,
+  "minimum_duration_seconds": 1800,
+  "selected_examples": [
+    {
+      "id": "xUAswZ5OQlw",
+      "title": "A Snowy Night in Paris: A Soothing Sleep Story to Calm Mind and Body",
+      "url": "https://www.youtube.com/watch?v=xUAswZ5OQlw",
+      "published": "2022-11-28T02:15:04Z",
+      "duration": "PT1H",
+      "views": 1947038,
+      "comparison_window_days": 60,
+      "comparison_videos": 8,
+      "comparison_mean": 582196.88,
+      "comparison_median": 465086.0,
+      "ratio_to_median": 4.186
+    },
+    {
+      "id": "uwaAdcbSkek",
+      "title": "A Rainy Night in The Tent: Cozy Bedtime Story with Rain Sounds",
+      "url": "https://www.youtube.com/watch?v=uwaAdcbSkek",
+      "published": "2023-05-18T20:30:08Z",
+      "duration": "PT3H",
+      "views": 1221522,
+      "comparison_window_days": 60,
+      "comparison_videos": 31,
+      "comparison_mean": 199954.81,
+      "comparison_median": 91351,
+      "ratio_to_median": 13.372
+    },
+    {
+      "id": "_7YcKEurJJQ",
+      "title": "A Rainy Night in a Caravan: A Cozy Bedtime Story with Rain Sounds",
+      "url": "https://www.youtube.com/watch?v=_7YcKEurJJQ",
+      "published": "2024-05-23T20:30:03Z",
+      "duration": "PT3H",
+      "views": 1168469,
+      "comparison_window_days": 60,
+      "comparison_videos": 51,
+      "comparison_mean": 137151.18,
+      "comparison_median": 66963,
+      "ratio_to_median": 17.449
+    },
+    {
+      "id": "M6HElXKOgZM",
+      "title": "A Soothing Sleepy Story: The Garden of Letting Go",
+      "url": "https://www.youtube.com/watch?v=M6HElXKOgZM",
+      "published": "2025-03-27T21:30:02Z",
+      "duration": "PT1H30M",
+      "views": 139494,
+      "comparison_window_days": 60,
+      "comparison_videos": 57,
+      "comparison_mean": 79096.88,
+      "comparison_median": 53266,
+      "ratio_to_median": 2.619
+    },
+    {
+      "id": "s6NrNXQL3HQ",
+      "title": "A Soothing Sleep Story: The Magical Garden of Night Flowers",
+      "url": "https://www.youtube.com/watch?v=s6NrNXQL3HQ",
+      "published": "2025-07-30T20:30:07Z",
+      "duration": "PT3H",
+      "views": 129481,
+      "comparison_window_days": 60,
+      "comparison_videos": 65,
+      "comparison_mean": 72892.42,
+      "comparison_median": 44061,
+      "ratio_to_median": 2.939
+    },
+    {
+      "id": "UKrqKeIo5p4",
+      "title": "A Rainy Day in the Greenhouse: A Calming Sleepy Story",
+      "url": "https://www.youtube.com/watch?v=UKrqKeIo5p4",
+      "published": "2025-01-08T21:30:03Z",
+      "duration": "PT1H30M",
+      "views": 77623,
+      "comparison_window_days": 60,
+      "comparison_videos": 51,
+      "comparison_mean": 78694.02,
+      "comparison_median": 51851,
+      "ratio_to_median": 1.497
+    },
+    {
+      "id": "YRfLPX0WyfU",
+      "title": "The Getting Away Garden: A Cozy Bedtime Story",
+      "url": "https://www.youtube.com/watch?v=YRfLPX0WyfU",
+      "published": "2026-06-01T20:30:23Z",
+      "duration": "PT3H",
+      "views": 51970,
+      "comparison_window_days": 60,
+      "comparison_videos": 51,
+      "comparison_mean": 47380.84,
+      "comparison_median": 35771,
+      "ratio_to_median": 1.453
+    },
+    {
+      "id": "Ft59jI39rro",
+      "title": "The Garden Beside the Lighthouse: A Calming Bedtime Story",
+      "url": "https://www.youtube.com/watch?v=Ft59jI39rro",
+      "published": "2026-06-22T20:30:30Z",
+      "duration": "PT2H22M22S",
+      "views": 26539,
+      "comparison_window_days": 60,
+      "comparison_videos": 51,
+      "comparison_mean": 44734,
+      "comparison_median": 35581,
+      "ratio_to_median": 0.746
+    },
+    {
+      "id": "zlbmrf-6WuY",
+      "title": "The Midnight Garden: A Soothing Bedtime Story",
+      "url": "https://www.youtube.com/watch?v=zlbmrf-6WuY",
+      "published": "2026-01-07T21:30:13Z",
+      "duration": "PT1H20M",
+      "views": 59972,
+      "comparison_window_days": 60,
+      "comparison_videos": 54,
+      "comparison_mean": 44122.09,
+      "comparison_median": 34065.5,
+      "ratio_to_median": 1.76
+    }
+  ],
+  "limitations": [
+    "Current lifetime counters, not last-48h Analytics.",
+    "Observational title/theme comparison, not proof of causal performance or a forecast.",
+    "Publication cohorts include different lengths and formats.",
+    "Thumbnail host was inaccessible through the configured proxy; no claim of thumbnail or video playback inspection."
+  ]
+}

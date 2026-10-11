@@ -1,0 +1,38 @@
+{
+  "channel": "Silent Little Worlds",
+  "previous_name": "Quiet Little Worlds",
+  "name_confirmed_by_user": true,
+  "handle_reserved_by_assistant": false,
+  "user_report": "User found @SilentLittleWorlds free, then confirmed channel modification.",
+  "selected": "A-lantern-garden.png",
+  "unselected": "B-cottage-garden.png",
+  "source_sha256": "eeb976a48b707d1fd6b0c7fea6307f1e8b1d10e5b4b55eabb034a450cd867145",
+  "clean_plate": "assets/garden-clean.png",
+  "clean_plate_sha256": "27860fb1027a422203b11fdc63899e7ed039048a7926f9fe82521d4baaf5cc6f",
+  "clean_plate_edit": "Preserve approved A composition; remove baked rain and mug steam for coded animation. Visually compared to A.",
+  "visuals_are_generated": true,
+  "native_dimensions": [
+    1672,
+    941
+  ],
+  "export_dimensions": [
+    1920,
+    1080
+  ],
+  "animation": {
+    "loop_seconds": 60,
+    "fps": 30,
+    "requested_details": [
+      "Rain with depth",
+      "Raindrop impact rings in pond",
+      "Tea vapour",
+      "Stable architecture",
+      "Very gentle foliage",
+      "Sleeping-cat breathing",
+      "Small original central voice-responsive orb"
+    ]
+  },
+  "full_episode_requested_seconds": 7200,
+  "delivery_state": "production in progress; not delivered",
+  "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS"
+}

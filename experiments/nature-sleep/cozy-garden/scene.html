@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Silent Little Worlds — The Lantern Garden</title>
+<style>html,body{margin:0;background:#111411;overflow:hidden}canvas{width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id="screen" width="1920" height="1080"></canvas>
+<script>
+'use strict';
+const CAPTURE_MODE=false;
+const W=1672,H=941,PERIOD=60,TAU=2*Math.PI;
+const screen=document.querySelector('canvas'),ctx=screen.getContext('2d');
+const make=(w,h)=>Object.assign(document.createElement('canvas'),{width:w,height:h});
+const field=make(W,H),mask=make(W,H),mc=mask.getContext('2d');
+const water=make(W,H),wc=water.getContext('2d'),weather=make(W,H),rc=weather.getContext('2d');
+const steam=make(150,200),sc=steam.getContext('2d');
+const gl=field.getContext('webgl',{alpha:false,preserveDrawingBuffer:true,antialias:false});
+if(!gl)throw new Error('WebGL is required for continuous water refraction.');
+const mod=(n,m)=>((n%m)+m)%m;
+function seeded(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const rand=seeded(402741),lerp=(a,b,u)=>a+(b-a)*u;
+const pondPoints=[[1115,619],[1170,604],[1212,582],[1272,580],[1345,572],[1406,578],[1461,576],[1544,590],[1633,609],[1672,644],[1672,669],[1590,669],[1568,695],[1574,729],[1516,758],[1472,769],[1441,791],[1383,775],[1351,764],[1321,740],[1280,726],[1238,704],[1209,694],[1205,665],[1160,649],[1115,638]];
+function polygon(c,points){c.beginPath();points.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.closePath();}
+const pondPath=new Path2D();pondPoints.forEach(([x,y],i)=>i?pondPath.lineTo(x,y):pondPath.moveTo(x,y));pondPath.closePath();
+// Water is restricted to open water; no motion is applied to surrounding stone,
+// the greenhouse, lilies, reeds or foreground planting.
+const stillPatches=[[1440,615,58,20],[1510,620,44,18],[1550,642,37,17],[1281,742,65,30],[1662,635,38,33]];
+function insidePond(x,y){return wc.isPointInPath(pondPath,x,y)&&!stillPatches.some(([cx,cy,rx,ry])=>((x-cx)/rx)**2+((y-cy)/ry)**2<1.15);}
+function ellipse(c,x,y,rx,ry,color){c.save();c.translate(x,y);c.scale(rx,ry);const g=c.createRadialGradient(0,0,.08,0,0,1);g.addColorStop(0,color);g.addColorStop(.62,color);g.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=g;c.fillRect(-1,-1,2,2);c.restore();}
+function masks(){
+ mc.fillStyle='black';mc.fillRect(0,0,W,H);
+ mc.save();mc.filter='blur(3px)';polygon(mc,pondPoints);mc.fillStyle='red';mc.fill();mc.restore();
+ for(const [x,y,rx,ry] of stillPatches){mc.save();mc.filter='blur(3px)';mc.beginPath();mc.ellipse(x,y,rx,ry,0,0,TAU);mc.fillStyle='black';mc.fill();mc.restore();}
+ // Small independent foliage areas, not a rectangular patch of an entire tree.
+ for(const leaf of [[457,54,38,37],[493,108,33,55],[605,64,33,41],[814,86,47,60],[855,97,26,63],[980,58,41,41],[1048,73,32,54],[1100,89,24,69],[1467,32,33,45],[1589,29,31,35],[973,539,33,22]])ellipse(mc,...leaf,'rgb(0,210,0)');
+ ellipse(mc,173,634,108,44,'rgb(0,0,255)');
+}
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
+const program=gl.createProgram();
+gl.attachShader(program,shader(gl.VERTEX_SHADER,'attribute vec2 p;varying vec2 uv;void main(){uv=(p+1.0)*0.5;gl_Position=vec4(p,0.,1.);}'));
+gl.attachShader(program,shader(gl.FRAGMENT_SHADER,`precision highp float;
+varying vec2 uv;uniform sampler2D source;uniform sampler2D motion;uniform float time;
+void main(){vec2 size=vec2(1672.,941.);vec2 p=vec2(uv.x,1.-uv.y)*size;vec3 m=texture2D(motion,uv).rgb;float pi=6.28318530718;
+ float wave=sin(p.y*.205+time*pi/5.)*.64+sin(p.y*.083-p.x*.010+time*pi/12.)*.48;
+ vec2 shift=vec2(wave*1.7,sin(p.x*.059+p.y*.087-time*pi/6.)*.43)*m.r;
+ float leaf=sin(time*pi/10.+p.x*.009)*.65+sin(time*pi/15.-p.y*.016)*.27;
+ shift+=vec2(leaf,sin(time*pi/12.+p.x*.017)*.21)*m.g;
+ shift.y+=(1.-cos(time*pi/5.))*.60*m.b;
+ vec2 sampleUV=vec2((p.x+shift.x)/size.x,1.-(p.y+shift.y)/size.y);
+ vec3 color=texture2D(source,sampleUV).rgb;
+ gl_FragColor=vec4(color,1.);}`));
+gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
+const pos=gl.getAttribLocation(program,'p');gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,2,gl.FLOAT,false,0,0);
+function texture(unit,name,image){gl.activeTexture(gl.TEXTURE0+unit);const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);gl.uniform1i(gl.getUniformLocation(program,name),unit);}
+const timeUniform=gl.getUniformLocation(program,'time');
+const rainfall=Array.from({length:370},(_,i)=>({x:lerp(850,1740,rand()),y:rand(),period:[1.5,2,2.5,3,4,5][i%6],length:lerp(9,20,rand()),alpha:lerp(.10,.32,rand()),drift:lerp(9,24,rand()),width:i%7===0?1:.65}));
+const impacts=[];for(let i=0;i<100;i++){let x,y;do{x=lerp(1118,1668,rand());y=lerp(583,787,rand());}while(!insidePond(x,y));impacts.push({x,y,period:[4,5,6,10,12][i%5],phase:rand(),radius:lerp(7,21,rand()),alpha:lerp(.13,.31,rand())});}
+const pathImpacts=Array.from({length:28},()=>({x:lerp(640,826,rand()),y:lerp(810,934,rand()),phase:rand(),period:[4,5,6][Math.floor(rand()*3)]}));
+function exposed(x,y){if(y<180)return x>1140&&x<1330;return x>975||(x>650&&y>630);}
+function rainAt(t){
+ rc.clearRect(0,0,W,H);
+ for(const d of rainfall){const u=mod(t/d.period+d.y,1),y=lerp(-40,H+40,u),x=d.x-d.drift*u;if(!exposed(x,y))continue;rc.beginPath();rc.moveTo(x,y);rc.lineTo(x-.8,y+d.length);rc.strokeStyle=`rgba(167,187,197,${d.alpha})`;rc.lineWidth=d.width;rc.stroke();}
+ for(const d of impacts){const age=mod(t+d.phase*d.period,d.period);if(age>d.period-.66){const left=d.period-age,y=d.y-left*260;rc.beginPath();rc.moveTo(d.x+left*6,y);rc.lineTo(d.x+left*6-.3,y+9);rc.strokeStyle='rgba(190,209,215,.24)';rc.lineWidth=.62;rc.stroke();}}
+ // Separate, rare drips from the shelter end well outside the dry bench.
+ for(let i=0;i<6;i++){const age=mod(t+i*.51,3),x=951+i*26;if(age<1.12){const y=205+age*age*460;if(y<600){rc.fillStyle='rgba(196,211,214,.28)';rc.beginPath();rc.ellipse(x,y,.75,1.5+age*1.5,0,0,TAU);rc.fill();}}}
+ ctx.drawImage(weather,0,0);
+}
+function pondAt(t){
+ wc.clearRect(0,0,W,H);wc.save();wc.clip(pondPath);
+ for(const d of impacts){const age=mod(t+d.phase*d.period,d.period);if(age>2.15)continue;
+  const u=age/2.15,fade=Math.sin(Math.PI*Math.min(1,age/.12))*.1;
+  for(let ring=0;ring<2;ring++){const ru=u-ring*.19;if(ru<0)continue;const radius=1+ru*d.radius,a=d.alpha*Math.pow(1-u,1.6)*(ring? .58:1);
+   wc.beginPath();wc.ellipse(d.x,d.y,radius,radius*.27,0,0,TAU);wc.strokeStyle=`rgba(177,203,213,${a})`;wc.lineWidth=.64;wc.stroke();
+  }
+  if(age<.2){const life=age/.2;wc.beginPath();wc.moveTo(d.x,d.y);wc.lineTo(d.x,d.y-Math.sin(life*Math.PI)*2.7);wc.strokeStyle=`rgba(211,228,224,${.29*(1-life)})`;wc.lineWidth=.75;wc.stroke();}
+ }
+ // Warm broken glints inside existing lantern reflections, low contrast.
+ for(let i=0;i<34;i++){const y=619+i*3.2,x=1288+Math.sin(i*2.8+t*TAU/10)*5;const a=.016+.025*(.5+.5*Math.sin(i*.8-t*TAU/6));wc.strokeStyle=`rgba(255,194,105,${a})`;wc.lineWidth=.85;wc.beginPath();wc.moveTo(x-3-i*.08,y);wc.lineTo(x+4+i*.12,y);wc.stroke();}
+ wc.restore();
+ // Reeds and lily pads remain in front of the rain ripples.
+ wc.globalCompositeOperation='destination-out';for(const p of stillPatches){wc.beginPath();wc.ellipse(...p,0,0,TAU);wc.fill();}wc.globalCompositeOperation='source-over';
+ ctx.drawImage(water,0,0);
+}
+function steamAt(t){
+ sc.clearRect(0,0,150,200);
+ for(let strand=0;strand<3;strand++)for(let i=0;i<46;i++){const u=mod(t/6+i/46+strand*.197,1),radius=2+u*10,x=74+(strand-1)*5+Math.sin(u*8-t*TAU/6+strand)*u*11,y=192-u*162,alpha=Math.sin(Math.PI*u)**1.5*.09;
+  const g=sc.createRadialGradient(x,y,0,x,y,radius);g.addColorStop(0,`rgba(227,229,219,${alpha})`);g.addColorStop(1,'rgba(227,229,219,0)');sc.fillStyle=g;sc.fillRect(x-radius,y-radius,2*radius,2*radius);
+ }
+ ctx.drawImage(steam,445,448,96,128);
+}
+function cascadesAt(t){
+ // Thin falling threads follow the existing right-hand stone cascade.
+ ctx.save();for(let i=0;i<19;i++){const p=mod(t/2+i*.171,1),x=1600+i*.76+Math.sin(i)*1.6,y=712+p*71;ctx.strokeStyle=`rgba(204,212,205,${Math.sin(Math.PI*p)*.105})`;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-.4,y+6);ctx.stroke();}ctx.restore();
+ for(const d of pathImpacts){const a=mod(t+d.phase*d.period,d.period);if(a>.6)continue;ctx.strokeStyle=`rgba(244,209,152,${.16*(1-a/.6)})`;ctx.lineWidth=.5;ctx.beginPath();ctx.ellipse(d.x,d.y,1+a*5,.35+a*1.1,0,0,TAU);ctx.stroke();}
+}
+function renderAt(seconds){const t=mod(seconds,PERIOD);gl.uniform1f(timeUniform,t);gl.drawArrays(gl.TRIANGLES,0,6);ctx.setTransform(1920/W,0,0,1080/H,0,0);ctx.drawImage(field,0,0);rainAt(t);pondAt(t);cascadesAt(t);steamAt(t);}
+window.gardenReady=(async()=>{const image=await new Promise((resolve,reject)=>{let i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='__GARDEN_SOURCE__';});masks();texture(0,'source',image);texture(1,'motion',mask);renderAt(0);window.renderGardenAt=renderAt;window.gardenFramePNG=()=>screen.toDataURL('image/png');
+ if(!CAPTURE_MODE){const start=performance.now();function frame(now){renderAt((now-start)/1000);requestAnimationFrame(frame);}requestAnimationFrame(frame);}
+ return{source:[image.width,image.height],resolution:[1920,1080],duration:PERIOD,rain_streaks:rainfall.length,pond_impacts:impacts.length,animation:'Local water refraction, independently phased foliage, cat breathing, synchronized rain impacts, rain at depth, rising tea vapour',static_architecture:true};})();
+</script></html>
