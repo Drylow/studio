@@ -1,0 +1,46 @@
+TESTS QUOTA LADDER V2 — TÊTES RONDES BLANCHES POUR TOUT LE CASTING
+11 octobre 2026. Correction explicitement demandée par l'utilisateur.
+
+Les trois images du premier test sont refaites séparément. Les anciens fichiers
+restent conservés. La nouvelle planche présente uniquement nos trois essais.
+
+Règle de personnage : silhouette de tête circulaire, blanche, contour noir ;
+pas de nez, oreilles, cheveux, mâchoire ni visage humain, même chez les gens
+au fond. Expressions minimales en noir à l'intérieur de la tête. Corps adultes
+habillés, mains blanches ; conserver les décors détaillés et les gestes.
+
+Exécution : CLI du guide imagegen vers le CLI Proxy configuré dans .env.
+Prompts entièrement écrits par Codex, envoyés sans augmentation automatique.
+Pas de nouvelle capture à visage humain utilisée dans ces trois requêtes.
+
+01 — baie A : Milo, Orin, travailleur A.
+Action de contrôle : le responsable indique le casier pendant que la recrue
+porte la caisse. Référence réellement envoyée : ancien 01-echange.png,
+comme cible et maître de la pièce. Nouveau maître : 01-echange.png de ce dossier.
+
+02 — baie A : Milo, Orin.
+Action de contrôle : remise d'une carte, caisse portée dans l'autre main.
+Références réellement envoyées dans l'ordre : ancien 02-carte-v2.png comme cible,
+puis nouveau 01-echange.png comme maître de la pièce et des personnages.
+
+03 — quai B : Milo, Orin, travailleurs B et C.
+Action de contrôle : chargement de la caisse ; deux travailleurs portent
+une caisse derrière les protagonistes.
+Références réellement envoyées dans l'ordre : ancien 03-quai.png comme cible
+et maître du quai, puis nouveau 01-echange.png comme référence des personnages.
+
+Ce sont des images fictives de contrôle de style, sans voix ni timing de film.
+Le registre conserve prompts, références ordonnées, empreintes et relectures.
+Ces essais ne constituent pas une validation utilisateur de la direction.
+
+RELECTURE DES SORTIES PAR CODEX
+Les trois sorties ont été regardées individuellement : 3 personnes dans 01,
+2 dans 02, 4 dans 03. Toutes ont une tête ronde blanche, avec seulement des
+marques de visage cartoon. Les trois personnes de fond visibles dans 01 et 03
+suivent aussi ce dessin. Aucun visage humain observé dans les nouvelles images.
+
+Les décors, tenues principales et actions restent reconnaissables. Quelques
+détails de tenue et l'attribution des mains du levage restent variables ; cela
+n'est pas déclaré conforme pour un film. La géométrie des cercles est appréciée
+visuellement, pas présentée comme une égalité mathématique de tous les pixels.
+La planche A-REGARDER.jpg contient seulement les trois nouveaux essais.
