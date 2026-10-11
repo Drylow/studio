@@ -7,7 +7,7 @@ Déclinaison anime : [recette de production](ANIME_WORKFLOW.md) et
 guide16s et bilan12s. La pause après « opinion » laisse une respiration ; Tony
 est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
-## Reprise actuelle — Peaky arrêté, recherche Hannibal
+## Reprise actuelle — Peaky arrêté, acquisition Hannibal bloquée
 
 L’utilisateur rapporte **Landa publié avec des claims comparables aux Sopranos**,
 sans blocage ni strike déclaré. Ce retour n’est pas vérifié indépendamment dans
@@ -20,10 +20,25 @@ nombreux pays, dont la liste exacte reste inconnue. Ne pas relancer, recouper
 ou réenvoyer Peaky. Sa QA technique et sa livraison réussies ne valident pas
 les droits de publication.
 
-La prochaine piste confirmée est **Hannibal, la série TV avec Mads Mikkelsen**.
-[Recherche de faisabilité](HANNIBAL_FEASIBILITY.md) seulement : aucun montage,
-téléchargement ou test lancé. Le projet sleep reste annulé et les automatismes
-des autres chaînes sont inchangés.
+**Hannibal, série TV avec Mads Mikkelsen : aperçu de deux minutes autorisé.**
+Le [pion photographique](assets/hannibal/hannibal-pawn-approved-2026-10-11.png)
+est explicitement approuvé, son reçu JSON et SHA vérifiés ; il reste intact.
+**Source S02E08 indisponible : `source_not_ready`.** L’accès hors ligne Naka
+gratuit est accordé, avec métadonnées 720p / maximum 720p et audio anglais,
+mais le premier segment reçoit HTTP 403 du fournisseur Cloudflare, sans
+redirection. Aucun segment ni fichier vidéo téléchargé, aucun alignement audio
+anglais possible. L’emplacement hors ligne Peaky S02E06 a été remplacé ; tous
+les originaux et montages locaux sont conservés.
+
+NBC renvoie 403, YouTube est refusé par le proxy ; les métadonnées du clip AXN
+Dailymotion répondent 200 mais sa playlist 403. Aucune alternative HD vérifiée.
+Preuve privée : `output/conversation-chess/hannibal-source-cache/naka-s02e08/SOURCE_NOT_READY_SAFE.json`.
+Quatre annotations en brouillon et le kit texte sont prêts, ainsi que la chaîne
+d’export native ; aucun film Hannibal exporté, livré ou testé sur YouTube.
+Un long de dix à quinze minutes reste conditionnel au futur test privé :
+**valider le pion n’autorise pas un long automatique**. Aucune garantie
+d’absence de réclamation. [État et recherche initiale](HANNIBAL_FEASIBILITY.md).
+Le projet sleep reste annulé et les automatismes des autres chaînes inchangés.
 
 ## Longs du 11 octobre 2026 — préparation et livraison conservées
 

@@ -1,9 +1,49 @@
 # Hannibal — faisabilité du format chess
 
-Recherche du 11 octobre 2026. L’utilisateur confirme la **série avec Mads
+## État actuel — test autorisé, source indisponible
+
+L’utilisateur autorise un aperçu d’environ **deux minutes**, puis son propre
+upload privé YouTube avant de décider d’un long de dix à quinze minutes.
+Il approuve explicitement le pion « Oui, utilise ce pion », construit à partir
+d’une photo officielle de Mads Mikkelsen :
+[PNG approuvé](assets/hannibal/hannibal-pawn-approved-2026-10-11.png) et
+[reçu JSON](assets/hannibal/hannibal-pawn-approved-2026-10-11.json).
+SHA256 PNG vérifié : `2286f6aeb2aaaa41be196efe6741dc33b218bc0bb8ec822d67479ef02decc51d`.
+Cette approbation visuelle n’établit pas de droits de réutilisation et
+**n’autorise pas le lancement automatique d’un long**.
+
+**S02E08 : `source_not_ready`.** L’accès hors ligne gratuit de Naka est obtenu ;
+le manifest répond 200 et annonce 720p, maximum disponible 720p, audio anglais.
+Le premier segment média renvoie pourtant HTTP 403, page de blocage fournisseur
+Cloudflare, sans redirection. Zéro segment téléchargé, aucun fichier vidéo ni
+profil natif vérifié, aucun alignement possible sur l’audio anglais. Le VTT
+français reste un repère textuel, pas un alignement validé. Seul l’emplacement
+hors ligne du Peaky S02E06 abandonné a été remplacé ; tous les fichiers locaux
+antérieurs sont conservés.
+
+NBC refuse l’accès (403), YouTube est refusé par le proxy. Les métadonnées du
+clip public AXN sur Dailymotion répondent 200, mais sa playlist 403 : aucune
+alternative HD vérifiée. Le diagnostic privé est conservé dans
+`output/conversation-chess/hannibal-source-cache/naka-s02e08/SOURCE_NOT_READY_SAFE.json`.
+Les URL de médias et identifiants de compte ne figurent pas dans ce document.
+
+Le pion approuvé, quatre annotations en brouillon non alignées et le kit texte
+sont conservés ; la chaîne d’export native est prête. Aucun film acquis,
+exporté ou livré, aucun test YouTube effectué. Le futur test privé de deux
+minutes doit précéder toute décision de long de dix à quinze minutes.
+Son résultat ne garantira ni l’absence de nouvelles réclamations ni le
+résultat d’un autre montage. Aucun droit de réutilisation établi.
+
+## Recherche initiale conservée
+
+Les sections suivantes décrivent la recherche avant production. La proposition
+initiale de trois à quatre minutes est remplacée par le test de deux minutes
+autorisé ci-dessus ; aucun long n’est encore engagé.
+
+Recherche initiale du 11 octobre 2026. L’utilisateur confirme la **série avec Mads
 Mikkelsen**, pas les films avec Anthony Hopkins. Peaky est abandonné après
-le nouveau blocage territorial. Aucun épisode Hannibal téléchargé, aucun
-pion créé, montage lancé ou test YouTube effectué pendant cette recherche.
+le nouveau blocage territorial. Pendant cette recherche initiale, aucun épisode
+Hannibal téléchargé, aucun pion créé, montage lancé ou test YouTube effectué.
 
 ## Conclusion
 

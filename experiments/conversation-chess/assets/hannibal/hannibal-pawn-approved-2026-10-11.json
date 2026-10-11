@@ -1,0 +1,18 @@
+{
+  "schema": "conversation-chess-approved-mascot-v1",
+  "character": "Hannibal Lecter",
+  "actor": "Mads Mikkelsen",
+  "approved_by_user": true,
+  "approval_date": "2026-10-11",
+  "approval_message": "Oui, utilise ce pion",
+  "file": "hannibal-pawn-approved-2026-10-11.png",
+  "sha256": "2286f6aeb2aaaa41be196efe6741dc33b218bc0bb8ec822d67479ef02decc51d",
+  "photographic_reference_url": "https://www.gaumont.com/sites/com/files/2023-02/2014-01-17_20-17-47_NUP_157166_3812.jpg",
+  "reference_sha256": "6ce6b8e18f042210aaad1109090137e0c99f501bdd3dfec367eb168da881ed02",
+  "reference_notice": "© 2014 Chiswick 2 Productions, LLC. All Rights Reserved.",
+  "construction": "Image edit based on an authentic official Mads photograph and the approved black Tony pawn style. This is an edited composite, not a claim that every portrait pixel is unchanged.",
+  "transparent_background": true,
+  "badges_in_asset": false,
+  "render_original_chess_svg_badges": true,
+  "reuse_rights_established": false
+}

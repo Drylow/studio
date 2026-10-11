@@ -1,6 +1,6 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Reprise chess — Peaky arrêté, recherche Hannibal
+## Reprise chess — Peaky arrêté, Hannibal bloqué à l’acquisition
 
 **Landa : l’utilisateur rapporte la vidéo publiée**, avec des claims comparables
 à ceux des Sopranos. Aucun blocage ni strike n’est déclaré. Publication et
@@ -14,10 +14,30 @@ nombreux pays ; leur liste exacte n’a pas été récupérée. Ne pas relancer,
 recouper ou réenvoyer ce montage. La QA technique et la livraison réussies
 restent distinctes de ce résultat défavorable sur les droits.
 
-**Piste suivante : Hannibal, la série TV avec Mads Mikkelsen**, confirmée par
-l’utilisateur. [Recherche de faisabilité](../experiments/conversation-chess/HANNIBAL_FEASIBILITY.md)
-uniquement : aucun montage, téléchargement ou test YouTube lancé. Le projet
-sleep reste annulé ; les automatismes des autres chaînes ne sont pas modifiés.
+**Hannibal : test d’environ deux minutes autorisé**, avec la série TV et Mads
+Mikkelsen. L’utilisateur valide explicitement le pion « Oui, utilise ce pion » :
+`experiments/conversation-chess/assets/hannibal/hannibal-pawn-approved-2026-10-11.png`,
+avec reçu JSON et SHA vérifié, conservé intact. **État : `source_not_ready`.**
+Naka a accordé l’accès hors ligne gratuit à S02E08 ; les métadonnées annoncent
+720p, maximum 720p et audio anglais. Mais le premier segment vidéo renvoie
+HTTP 403, page de blocage fournisseur Cloudflare, sans redirection. Aucun
+segment ni fichier vidéo disponible ; l’anglais ne peut pas être aligné sur
+l’audio. Seul l’emplacement hors ligne du Peaky S02E06 abandonné a été remplacé ;
+les originaux et montages locaux restent conservés.
+
+Les alternatives n’ont pas fourni de source HD vérifiée : NBC 403, refus du
+proxy pour YouTube, métadonnées AXN sur Dailymotion accessibles (200) mais
+playlist refusée (403). Le reçu privé
+`output/conversation-chess/hannibal-source-cache/naka-s02e08/SOURCE_NOT_READY_SAFE.json`
+conserve ce diagnostic, sans URL de média publiée ici.
+
+Le pion, quatre annotations non alignées et le kit texte sont préparés ; la
+chaîne d’export native est prête. Aucun film Hannibal exporté, livré ou testé
+sur YouTube. Le long de dix à quinze minutes reste conditionnel au futur test
+privé ; **l’approbation du pion n’autorise pas son lancement automatique**.
+Aucune garantie Content ID ni droit de réutilisation établi.
+[État et recherche initiale](../experiments/conversation-chess/HANNIBAL_FEASIBILITY.md).
+Le projet sleep reste annulé ; les autres automatismes ne sont pas modifiés.
 
 ## Deux longs livrés le 11 octobre 2026 — preuves techniques conservées
 
