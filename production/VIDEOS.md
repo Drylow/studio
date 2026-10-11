@@ -228,3 +228,18 @@ and Blunder SVGs tilted +10/-10 degrees. SVG hashes verified; artwork outside
 badge corners preserved before JPEG encoding. Base, prompt, receipt and export
 backed up in experiments/conversation-chess/thumbnails/light-vs-l/.
 Windows Explorer opened on the complete delivery folder. No upload or publication.
+
+## Anime Chess - 11 October 2026, Death Note Content ID revision
+
+User's Studio captures show a global Nippon Television audiovisual block
+on 358 seconds of the 449.1s original; two VAP episode-music claims also exist.
+Original retained. Produced a separate 91s graphics overview, removing all
+episode pictures, original dub, episode music and replays, including the guide
+and recap backgrounds. Seven native analyses, verified rating SVGs and pawn
+colors retained; reading holds extended to nine seconds. Exported with Kdenlive.
+All 2730 frames inspected in 14 contact sheets plus 11 full-size captures;
+full decode passed. Bundle audit: no episode asset, eight original music/SFX
+assets only. Local A-REGARDER-V2-GRAPHICS folder opened with MP4, thumbnail,
+title and revised description. QA hash and reproduction saved in Git.
+This is a different graphic format; YouTube clearance remains unverified.
+No claim dispute, upload or publication performed.

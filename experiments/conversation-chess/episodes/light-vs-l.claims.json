@@ -1,0 +1,30 @@
+{
+  "evidence": "User supplied YouTube Studio claim-detail screenshots, 11 October 2026",
+  "reported_video_duration_seconds": 449.1,
+  "claims": [
+    {
+      "claimant": "Nippon Television Network Corp.",
+      "asset": "20061011 0000 0000 日本テレビ アニメ DEATH NOTE #2",
+      "type": "audio_visual",
+      "effect": "blocked_globally",
+      "ranges_seconds": [[32,83],[90,107],[114,239],[246,282],[295,313],[326,437]],
+      "total_seconds": 358
+    },
+    {
+      "claimant": "VAP Inc. on behalf of VAP",
+      "asset": "Lのテーマ",
+      "type": "audio",
+      "effect": "potential_earnings_limitation",
+      "ranges_seconds": [[199,377]]
+    },
+    {
+      "claimant": "VAP Inc. on behalf of VAP",
+      "asset": "L",
+      "type": "audio",
+      "effect": "potential_earnings_limitation",
+      "ranges_seconds": [[32,82],[93,104]]
+    }
+  ],
+  "revision": "Separate graphics-only editorial overview. Remove all episode footage, replay imagery, original dub and episode soundtrack; retain original written analysis, native rating graphics, pawn colors and recap.",
+  "youtube_clearance_verified": false
+}
