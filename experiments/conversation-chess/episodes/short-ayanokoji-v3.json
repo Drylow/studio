@@ -1,0 +1,77 @@
+{
+  "schema": "conversation-chess-short-v1",
+  "title": "Ayanokoji Outsmarts Ryuen Analysed like Chess | Classroom of the Elite",
+  "description": "Ryuen brought four fighters. Ayanokoji chose the battlefield. #ClassroomOfTheElite #ChessAnalysis",
+  "series": "Classroom of the Elite",
+  "hook": [
+    "FOUR AGAINST ONE.",
+    "WRONG OPPONENT."
+  ],
+  "sides": {
+    "white": "Ayanokoji",
+    "black": "Ryuen"
+  },
+  "opening": {
+    "speaker": "white",
+    "label": "Ayanokoji",
+    "reviewed": true,
+    "evidence": "Ayanokoji starts the retained passage at44.42. All his connected response through49.48 is kept."
+  },
+  "source_sha256": "d0ef536db497c2b247db5b89d1e453d403cf1073ca356c554116f94caf4d21b0",
+  "source_url": "https://www.youtube.com/watch?v=ZMamsKeRgew",
+  "source_reviewed": true,
+  "source_quality": {
+    "accepted_for_final": true,
+    "note": "Same public English-dub scene, now the native H264 1920x1080/60fps stream at about1.02Mbps, compared with the previous AV1 stream at about0.49Mbps. Both reviewed side by side: improvement is modest; no 4K or studio-master claim. Small lower-right creator logo remains in the upstream source, outside the reviewed central1728x972 frame. No blur or painted removal. Other candidates were subtitled, marked, Japanese-language or480p/720p."
+  },
+  "recap": [
+    "Ryuen trusts his numbers.",
+    "Ayanokoji controls the encounter."
+  ],
+  "segments": [
+    {
+      "kind": "source",
+      "in": 44.2,
+      "out": 49.6666666667,
+      "mode": "wide",
+      "context": "Four opponents. Ayanokoji does not retreat.",
+      "boundary_review": "Complete connected Ayanokoji response44.42-49.48. Starts before first word and ends after final word. No crop switch between sentences."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "blunder",
+        "speaker": "black",
+        "score": 2,
+        "reviewed": true,
+        "comment": "Ryuen counts fighters, but misjudges his opponent."
+      }
+    },
+    {
+      "kind": "source",
+      "in": 49.6666666667,
+      "out": 90.7333333333,
+      "mode": "wide",
+      "context": "Ayanokoji turns their chosen confrontation against them.",
+      "boundary_review": "Resumes at the exact previous source time. Keeps the full initial fight and reactions, followed by all three connected Ayanokoji explanation sentences78.72-90.58. No jump from the first blow to the later speech."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "brilliant",
+        "speaker": "white",
+        "score": 4,
+        "reviewed": true,
+        "comment": "He lets Ryuen choose the fight he already wants."
+      }
+    },
+    {
+      "kind": "outro",
+      "seconds": 1.2
+    }
+  ],
+  "background_color": "#000000",
+  "revision": "V3: one continuous source passage, stable wide framing, higher-bitrate HD stream"
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-11",
+  "videos": [
+    {
+      "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+      "revision": "death-note-v2",
+      "filename": "Death-Note-Chess-Short.mp4",
+      "sha256": "df04a304220bfe4c42c7d3a86f7eede78acb7917ccf62d63342cb8ed3a8018a4",
+      "bytes": 19872776,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 2886,
+      "duration_seconds": 96.2,
+      "all_frames_visually_reviewed": true,
+      "review_pages": 21,
+      "native_size_analysis_frames_reviewed": true,
+      "dialogue_boundaries_reviewed": true,
+      "full_decode_passed": true,
+      "picture_stream_unchanged": true,
+      "outer_background_rgb": [
+        0,
+        0,
+        0
+      ],
+      "outer_background_checked_in_every_frame": true,
+      "source_passages": [
+        [
+          86.7666666667,
+          118.4
+        ],
+        [
+          143.4,
+          155.3
+        ],
+        [
+          155.3,
+          197.1666666667
+        ]
+      ],
+      "source_time_ellipses": 1,
+      "source_audio_gain_db": 8.0,
+      "integrated_loudness_lufs": -16.2,
+      "true_peak_dbfs": -1.2,
+      "youtube_copyright_check_performed": false
+    },
+    {
+      "title": "Ayanokoji Outsmarts Ryuen Analysed like Chess | Classroom of the Elite",
+      "revision": "ayanokoji-v3",
+      "filename": "Ayanokoji-Chess-Short.mp4",
+      "sha256": "bcc41fcaa238869851ba735e6b3388fb9efdbe5bb0a6ee7c5b258b590377ba5c",
+      "bytes": 9826259,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 1720,
+      "duration_seconds": 57.333333333333336,
+      "all_frames_visually_reviewed": true,
+      "review_pages": 12,
+      "native_size_analysis_frames_reviewed": true,
+      "dialogue_boundaries_reviewed": true,
+      "full_decode_passed": true,
+      "picture_stream_unchanged": true,
+      "outer_background_rgb": [
+        0,
+        0,
+        0
+      ],
+      "outer_background_checked_in_every_frame": true,
+      "source_passages": [
+        [
+          44.2,
+          49.6666666667
+        ],
+        [
+          49.6666666667,
+          90.7333333333
+        ]
+      ],
+      "source_time_ellipses": 0,
+      "source_audio_gain_db": 2.0,
+      "integrated_loudness_lufs": -17.0,
+      "true_peak_dbfs": -1.1,
+      "youtube_copyright_check_performed": false
+    }
+  ]
+}

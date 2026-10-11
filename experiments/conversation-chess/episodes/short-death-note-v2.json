@@ -1,0 +1,85 @@
+{
+  "schema": "conversation-chess-short-v1",
+  "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+  "description": "Light takes the bait. L stays hidden. #DeathNote #ChessAnalysis",
+  "series": "Death Note",
+  "hook": [
+    "LIGHT TAKES",
+    "THE BAIT."
+  ],
+  "sides": {
+    "white": "L",
+    "black": "Light"
+  },
+  "opening": {
+    "speaker": "white",
+    "label": "L",
+    "reviewed": true,
+    "evidence": "The televised decoy opens on behalf of L's trap. Camps identify strategists, not the actor on the screen."
+  },
+  "source_sha256": "b932310e5cc3344effe7dd709b69806efe06f8d6c1d1db8dd1d7ae22bbd111e9",
+  "source_reviewed": true,
+  "source_quality": {
+    "accepted_for_final": true,
+    "note": "Existing reviewed English-dub 1920x1080 source, remastered upstream. No burned subtitles or distributor marks observed. No studio-master claim."
+  },
+  "recap": [
+    "Light reacts to the bait.",
+    "L keeps his identity hidden."
+  ],
+  "segments": [
+    {
+      "kind": "source",
+      "in": 86.7666666667,
+      "out": 118.4,
+      "mode": "wide",
+      "context": "Light takes the bait and writes the name.",
+      "boundary_review": "Complete provocation 86.98-89.78 and all connected Light replies 91.60-115.24. Includes the notebook action through118.40. No internal time deletions."
+    },
+    {
+      "kind": "source",
+      "in": 143.4,
+      "out": 155.3,
+      "mode": "wide",
+      "transition_seconds": 0.2,
+      "context": "The countdown ends. The man on television dies.",
+      "boundary_review": "Full countdown and collapse retained. One six-frame dissolve marks the wait after the notebook, rather than several abrupt skips."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "blunder",
+        "speaker": "black",
+        "score": 2,
+        "reviewed": true,
+        "comment": "Light kills on cue. L now has evidence of Kira's power."
+      }
+    },
+    {
+      "kind": "source",
+      "in": 155.3,
+      "out": 197.1666666667,
+      "mode": "wide",
+      "context": "The real L reveals that the victim was a decoy.",
+      "boundary_review": "Resumes at the exact source time following the previous excerpt. Keeps Light reaction159.94-162.16, L proof167.84-182.06, decoy explanation183.72-196.20 and Light reaction196.56-196.90, with all natural pauses."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "brilliant",
+        "speaker": "white",
+        "score": 4,
+        "reviewed": true,
+        "comment": "A decoy takes the risk. The real L stays out of reach."
+      }
+    },
+    {
+      "kind": "outro",
+      "seconds": 1.2
+    }
+  ],
+  "background_color": "#000000",
+  "revision": "V2: longer complete exchanges, one soft ellipsis, stable wide framing"
+}

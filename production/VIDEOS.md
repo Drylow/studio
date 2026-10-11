@@ -313,3 +313,24 @@ Vidéos, titres, descriptions, reçus QA et projets éditables conservés en loc
 Code, découpages et reprise : `experiments/conversation-chess/SHORTS.md`.
 Le clip Classroom public n'est pas un master raw ; les cadrages excluent le
 petit logo à son bord. Aucune publication ni vérification YouTube effectuée.
+
+
+## 11 octobre 2026 — Shorts chess : passages continus et fond noir
+
+Retour utilisateur appliqué aux deux Shorts : moins de coupes, répliques
+entières, cadrage large constant et fond extérieur noir pur permanent.
+Death Note V2 conserve sa source validée et dure 96,20 s ; une seule ellipse
+adoucie de 200 ms. Classroom V3 dure 57,33 s et conserve le passage intégral
+44,20–90,733 s, interrompu uniquement par une pause d'analyse. Même clip
+anglais public repris dans un flux H264 HD natif : amélioration modeste,
+aucun nouveau master raw confirmé. Les anciens exports restent archivés.
+
+Contrôle visuel des 2886 / 1720 images finales et évaluations à taille native,
+décodage complet, fond noir testé dans chaque image. Dialogue relevé sans
+réencoder le flux vidéo natif : −16,2 / −17,0 LUFS, crêtes −1,2 / −1,1 dBFS.
+Deux fichiers 9:16 en 1080 × 1920 / 30 fps, titres et descriptions dans
+`work/conversation-chess/shorts/A-POSTER-CORRIGE-2026-10-11/`.
+Projets natifs éditables conservés localement. Reprise et reçus :
+`experiments/conversation-chess/SHORTS.md` et
+`experiments/conversation-chess/episodes/shorts-2026-10-11-smooth.qa.json`.
+Aucune publication ni nouvelle vérification YouTube effectuée.

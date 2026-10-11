@@ -1,5 +1,54 @@
 # Deux Shorts anime — 11 octobre 2026
 
+## Versions corrigées : passages continus et fond noir
+
+Retour utilisateur : trop de coupes soudaines, fond noir permanent, meilleure
+source si possible. Il valide la qualité de la source Death Note : elle reste
+strictement identique. Les premières versions ci-dessous sont des archives.
+
+- Death Note V2 : `episodes/short-death-note-v2.json`, 2886 images / 96,20 s.
+  Les réponses de Light et l'explication de L sont complètes. Une seule ellipse
+  sépare l'écriture du compte à rebours ; fondu de six images, sans écran noir
+  intercalé ni suppression de mots. Après la première pause, la scène reprend
+  au temps source exact où elle s'était arrêtée.
+- Classroom V3 : `episodes/short-ayanokoji-v3.json`, 1720 images / 57,33 s.
+  Le passage source 44,20–90,733 s est intégral, avec une pause d'analyse.
+  Le combat initial reste entier avant les trois phrases d'Ayanokoji.
+  Aucune ellipse ni retour artificiel vers un ancien plan pour les pauses.
+
+Le cadre extérieur est noir pur `#000000`, y compris pendant les évaluations.
+Le cadrage central large reste constant : pas de bascule portrait / paysage
+ni de déplacement brusque du recadrage. Les pauses tiennent la dernière image
+source à 1/30 s de la fin ; pas de filtre de luminosité sur le fond. L'audio
+entre sur 60 ms et sort sur 120 ms, dans les marges vérifiées autour des mots.
+Le seul fondu visuel Death Note dure 200 ms. Les coupes natives de l'anime
+restent celles de la scène originale.
+
+La recherche Classroom a comparé les candidats publics aux sources archivées.
+`YyV1KEn7o4U` est anglais mais 480p ; `3toHDky3Ub0` est japonais en 720p ;
+`hbzKj5uC31g` est japonais. Les versions Crunchyroll portent un logo et des
+mentions incrustées ; d'autres versions ont des sous-titres. Pas de nouveau
+master anglais brut plus propre confirmé. Le même clip Slash Kyubi est repris
+dans son flux H264 natif 1920 × 1080 / 60 fps, environ 1,02 Mb/s ; ancien flux
+AV1 environ 0,49 Mb/s. Comparaison visuelle côte à côte : gain modeste, le débit
+seul ne prouve pas la qualité. Aucun agrandissement 4K n'est revendiqué.
+Source privée : `work/chess-studio/ayanokoji/slash-kyubi-avc.mp4`.
+
+Reproduire avec les mêmes commandes ci-dessous, en remplaçant les timelines
+et dossiers par `death-note-v2` et `ayanokoji-v3`. Les gains de dialogue restent
+respectivement +8 et +2 dB. Les nouveaux reçus sont dans
+`episodes/shorts-2026-10-11-smooth.qa.json`. Les médias et projets restent dans
+`work/conversation-chess/shorts/` ; livraison corrigée distincte des anciens
+exports, dans `A-POSTER-CORRIGE-2026-10-11/`.
+
+Les exports finaux sont décodés entièrement et leurs 2886 / 1720 images
+contrôlées sur 21 / 12 planches, avec les évaluations à taille native.
+Le coin extérieur est testé noir pur dans chaque image. Death Note mesure
+−16,2 LUFS et −1,2 dBFS de crête vraie ; Classroom −17,0 LUFS et −1,1 dBFS.
+Le gain audio conserve le flux vidéo natif à l'identique.
+
+## Première livraison conservée en archive
+
 Demandés séparément : Death Note et Classroom of the Elite. Montage anglais,
 1080 × 1920, 30 fps, deux évaluations courtes, répliques complètes, aucun guide
 d'ouverture. Le moteur conserve les SVG Chess.com originaux et vérifie leurs
