@@ -5,4 +5,6 @@ dist/
 qa/
 snapshots/
 check-report.json
+check-v2.json
+.thumbnails/
 *.log
