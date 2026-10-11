@@ -1,0 +1,546 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Hannibal Lecter vs Will Graham Analyzed Like Chess | Hannibal",
+  "demo": false,
+  "source_reviewed": true,
+  "source_in": 0,
+  "source_out": 662.3,
+  "intro_seconds": 16,
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "source_not_upscaled": true,
+    "source_metadata_note": "Thirty ordinary public-player clips measured native 1920x1080; conformed without resize to 30fps. Nine selected conversations, authentic cast, no burned captions or broadcast watermark seen in reviewed frames. Five acquired 720p clips and broadcast-logo groups excluded. Original public clips are highly compressed and facial detail is softer than a disc master; accepted for this authorized long private YouTube candidate, not claimed maximum-source quality."
+  },
+  "white_label": "Will",
+  "black_label": "Hannibal",
+  "opening": {
+    "speaker": "white",
+    "label": "Will",
+    "reviewed": true,
+    "source_at": 0.0,
+    "evidence": "First complete retained line: Jack thinks I need therapy. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 170fd92d16e648a1e9b0ef32ec800a44b6f4055aceaf68633e0012b1ed5043aa. Sampled review; no continuous human listening claimed."
+  },
+  "initial_score_text": "0.0",
+  "initial_control": 0.5,
+  "analysis_background": "replay",
+  "analysis_pawn_by_speaker": false,
+  "show_source_quality_label": false,
+  "mascot": {
+    "file": "assets/hannibal/hannibal-pawn-approved-2026-10-11.png",
+    "overlay_file": "assets/hannibal/hannibal-pawn-approved-2026-10-11.png",
+    "badges": true,
+    "status": "Exact user-approved pawn, unchanged. Companion Chess.com SVG badges are added by the renderer."
+  },
+  "dialogue_gain": 1,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "ending_fade_seconds": 0.5,
+  "outro_summary": "Hannibal turns concern into leverage, while Will keeps asking what their closeness costs. Therapy becomes a contest over who defines the truth. By the last dinner, the offer to escape sounds almost tender; the consequences do not. Nine exchanges, twenty-eight decisions, and absolutely no reason to trust the menu.",
+  "annotations": [
+    {
+      "id": "therapy-request",
+      "source_at": 6.3,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Will opens with Jack's recommendation rather than his own need. He enters the session while keeping a little distance from its premise.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "shared-obligation",
+      "source_at": 37.233333333333334,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Will returns the question of obligation to Hannibal. The therapist now has to disclose a stake of his own instead of examining Will alone.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "role-boundaries",
+      "source_at": 70.8,
+      "speaker": "black",
+      "rating": "inaccuracy",
+      "comment": "Hannibal offers any role Will needs, which sounds generous but dodges the question. The session's boundaries remain suspiciously negotiable.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.5",
+      "control_after": 0.455121
+    },
+    {
+      "id": "pleasure-premise",
+      "source_at": 101.8,
+      "speaker": "white",
+      "rating": "excellent",
+      "comment": "Hannibal moves the question from whom Will shot to how killing felt. That change of subject makes pleasure, rather than duty, the issue.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "paddle-obligation",
+      "source_at": 156.73333333333332,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will turns the paddle metaphor back on its author. If Hannibal is his safeguard, the doctor also has to answer for where this voyage goes.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "direct-pleasure-question",
+      "source_at": 171.73333333333332,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "Hannibal asks about pleasure directly and gets an admission. The abstract discussion has produced exactly the personal detail he wanted.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "god-question",
+      "source_at": 194.7,
+      "speaker": "black",
+      "rating": "excellent",
+      "comment": "Will questions the divine comparison instead of accepting it as permission. Hannibal must now explain the example he brought to the table.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "open-kitchen",
+      "source_at": 213.6,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Hannibal answers the apology with an invitation to friendship. The reassuring kitchen setting also makes a professional boundary less clear.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "chosen-work",
+      "source_at": 229.66666666666666,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "Will says he chose to return to work rather than accepting the picture of helpless manipulation. He protects his agency without claiming he is fine.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "jack-manipulation",
+      "source_at": 233.56666666666666,
+      "speaker": "white",
+      "rating": "excellent",
+      "comment": "Hannibal moves the discussion from symptoms to Jack's influence. He questions the other relationship while keeping his own concern above suspicion.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.1",
+      "control_after": 0.491001
+    },
+    {
+      "id": "devil-label",
+      "source_at": 281.06666666666666,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will rejects the devil label without denying the strain of the job. He refuses the simple villain Hannibal offers as an explanation.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.1",
+      "control_after": 0.491001
+    },
+    {
+      "id": "symptoms-account",
+      "source_at": 305.6,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "Will separates what he imagined from what was there, then names his symptoms. He puts facts on the table rather than defending the illusion.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "work-explanation",
+      "source_at": 318.26666666666665,
+      "speaker": "black",
+      "rating": "inaccuracy",
+      "comment": "Hannibal answers a list of disturbing symptoms by pointing to the job. Will's reply makes the problem harder to dismiss as a simple choice.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.3",
+      "control_after": 0.473026
+    },
+    {
+      "id": "investigation-redirect",
+      "source_at": 359.1333333333333,
+      "speaker": "black",
+      "rating": "brilliant",
+      "comment": "Hannibal offers a lead while admitting a confidentiality risk. Will follows it, leaving his own symptoms behind as the subject changes.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.9",
+      "control_after": 0.580299
+    },
+    {
+      "id": "external-witness",
+      "source_at": 372.76666666666665,
+      "speaker": "white",
+      "rating": "excellent",
+      "comment": "Will brings Hannibal's psychiatrist into the conversation. Another person's account makes the session harder to control from just one chair.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "direct-killing-question",
+      "source_at": 388.6,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Will asks whether Hannibal killed his former psychiatrist. The polite talk ends on a question the available scene does not answer.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "tasting-open",
+      "source_at": 395.3333333333333,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Hannibal opens with a tasting note. Perfectly normal dinner talk, unless your host treats every ingredient like evidence.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "palate-decline",
+      "source_at": 404.7,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "Will declines the palate contest. He gives Hannibal a compliment without giving him anything useful. A tidy defensive move.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.2",
+      "control_after": 0.482008
+    },
+    {
+      "id": "frightened-ingredient",
+      "source_at": 419.23333333333335,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "Hannibal makes the meat a witness. A tasting note becomes a veiled accusation, and Will now has to answer without flinching.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.4",
+      "control_after": 0.376601
+    },
+    {
+      "id": "observable-behavior",
+      "source_at": 448.1,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will talks behavior, not good and evil. He keeps the conversation on observable actions instead of accepting Hannibal as a mystery.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "1.4",
+      "control_after": 0.376601
+    },
+    {
+      "id": "shared-hunt",
+      "source_at": 480.43333333333334,
+      "speaker": "white",
+      "rating": "excellent",
+      "comment": "Hannibal changes a dangerous problem into a shared pleasure. The invitation makes cooperation sound intimate before Will agrees to it.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "name-the-pattern",
+      "source_at": 499.96666666666664,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will names the dependency and points to Abigail as a comparison. He asks what this bond costs instead of admiring how close it feels.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "-0.1",
+      "control_after": 0.508999
+    },
+    {
+      "id": "notes-accountability",
+      "source_at": 512.6666666666666,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Will asks who will need the notes after Hannibal leaves. A practical question makes the planned disappearance answer to someone else's needs.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "portable-identity",
+      "source_at": 534.0333333333333,
+      "speaker": "black",
+      "rating": "excellent",
+      "comment": "Hannibal speaks of leaving as a shared future already decided. His memory palace offers a refuge while quietly treating Will as a resident.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.1",
+      "control_after": 0.491001
+    },
+    {
+      "id": "own-refuge",
+      "source_at": 560.7,
+      "speaker": "white",
+      "rating": "best",
+      "comment": "Will offers a stream instead of a palace. He keeps his own idea of refuge rather than moving into Hannibal's very expensive metaphor.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.1",
+      "control_after": 0.491001
+    },
+    {
+      "id": "escape-offer",
+      "source_at": 611.5333333333333,
+      "speaker": "white",
+      "rating": "great",
+      "comment": "Hannibal offers to leave tonight, turning a distant plan into an immediate choice. The invitation tests what Will is actually willing to do.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "justice-stakes",
+      "source_at": 643.2666666666667,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "Will replaces the language of forgiveness with justice. The dinner cannot stay a private fantasy when he brings Jack's purpose to the table.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    },
+    {
+      "id": "identity-frame",
+      "source_at": 655.3333333333334,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will admits that Jack will also see what he has become. The encounter exposes both men; even the hunter is now part of the evidence.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "review_method": "Actual local English speech-word endpoints, separately repaired public text and authentic source frames sampled. Original editorial conversation analogy, not chess-engine output. No continuous human listening claim.",
+      "score_text": "0.0",
+      "control_after": 0.5
+    }
+  ],
+  "source_sha256": "277630094acd2a4a01c81380c9ead5ebb5daa28f885ab1aefccfb635eeab4c82",
+  "conversations": [
+    {
+      "source_at": 0.0,
+      "white_label": "Will",
+      "black_label": "Hannibal",
+      "opening": {
+        "speaker": "white",
+        "label": "Will",
+        "reviewed": true,
+        "source_at": 0.0,
+        "evidence": "First complete retained line: Jack thinks I need therapy. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 170fd92d16e648a1e9b0ef32ec800a44b6f4055aceaf68633e0012b1ed5043aa. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 80.6,
+      "white_label": "Hannibal",
+      "black_label": "Will",
+      "opening": {
+        "speaker": "white",
+        "label": "Hannibal",
+        "reviewed": true,
+        "source_at": 80.6,
+        "evidence": "First complete retained line: When you shot Eldon Stammets, who was it that you saw? Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 22be4a77ed4e3451f2440b535afd8977aec4fc361b6fb13a36ff713215fa9a6c. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 199.33333333333334,
+      "white_label": "Hannibal",
+      "black_label": "Will",
+      "opening": {
+        "speaker": "white",
+        "label": "Hannibal",
+        "reviewed": true,
+        "source_at": 199.33333333333334,
+        "evidence": "First complete retained line: Is it safe to assume you're not sleepwalking now? Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA f3804a4fffdb25bd88704fa748060ec5289fc2805095cc50776e4873e35f4a60. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 289.1333333333333,
+      "white_label": "Will",
+      "black_label": "Hannibal",
+      "opening": {
+        "speaker": "white",
+        "label": "Will",
+        "reviewed": true,
+        "source_at": 289.1333333333333,
+        "evidence": "First complete retained line: There was no animal in the chimney. It was only in my head. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA a2a6cd6b17a384f9b5d0cc19f34235b33b66213060702ad68906b698799afca5. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 364.3333333333333,
+      "white_label": "Will",
+      "black_label": "Hannibal",
+      "opening": {
+        "speaker": "white",
+        "label": "Will",
+        "reviewed": true,
+        "source_at": 364.3333333333333,
+        "evidence": "First complete retained line: Your psychiatrist came to visit me at the hospital before my trial. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA a3eb0bfc1bc104383ba3061fa6b45244088a1a657b64388f8a0b22c5e14f92cd. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 389.0,
+      "white_label": "Hannibal",
+      "black_label": "Will",
+      "opening": {
+        "speaker": "white",
+        "label": "Hannibal",
+        "reviewed": true,
+        "source_at": 389.0,
+        "evidence": "First complete retained line: The meat has an interesting flavor. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA daa00eee1d7f141a3cd017f56fdb210b98e6216d03f03048c120d33c7583ca8c. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 449.23333333333335,
+      "white_label": "Hannibal",
+      "black_label": "Will",
+      "opening": {
+        "speaker": "white",
+        "label": "Hannibal",
+        "reviewed": true,
+        "source_at": 449.23333333333335,
+        "evidence": "First complete retained line: There are extraordinary circumstances here, Will. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 5db84cd81922959436cb1b2615d603d5148f05d1197e9e42ec038bee5cef6e2b. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 500.3333333333333,
+      "white_label": "Will",
+      "black_label": "Hannibal",
+      "opening": {
+        "speaker": "white",
+        "label": "Will",
+        "reviewed": true,
+        "source_at": 500.3333333333333,
+        "evidence": "First complete retained line: These are your notes on me. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 7262fa5dfd27686daff152b7895018d178904cc2ba4919afdc427fef04c45654. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    },
+    {
+      "source_at": 603.8666666666667,
+      "white_label": "Hannibal",
+      "black_label": "Will",
+      "opening": {
+        "speaker": "white",
+        "label": "Hannibal",
+        "reviewed": true,
+        "source_at": 603.8666666666667,
+        "evidence": "First complete retained line: We could disappear now. Tonight. Local English speech alignment, selected source cut and authentic speaking/reaction frames reviewed; source clip SHA 123cf13e979574c33a752e7da2a677a48b06f453c9eb8aff536aa1d6e57571ce. Sampled review; no continuous human listening claimed."
+      },
+      "initial_score_text": "0.0",
+      "initial_control": 0.5
+    }
+  ]
+}

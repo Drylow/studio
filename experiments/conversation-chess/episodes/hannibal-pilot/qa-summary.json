@@ -1,6 +1,6 @@
 {
   "schema": "conversation-chess-public-qa-summary-v1",
-  "status": "reviewed_youtube_test_delivered",
+  "status": "reviewed_pilot_delivered_user_reports_no_content_id_claims",
   "episode": "Hannibal S02E10 — Naka-Choko",
   "title": "Hannibal Lecter vs Will Graham | Analyzed Like Chess",
   "video": {
@@ -98,9 +98,17 @@
   },
   "publication": {
     "kind": "youtube-test",
-    "youtube_checks_complete": false,
+    "youtube_checks_complete": true,
     "rights_clearance_verified": false,
     "published": false,
-    "long_production": "Conditional on the user's private test and a later decision. Mascot approval does not authorize an automatic long render."
+    "long_production": "Authorized by the user on 11 October 2026 after the reported clean pilot check; native 15:14.3 long exported, reviewed and delivered. The long YouTube check remains unverified. See hannibal-long preparation and QA summary.",
+    "youtube_checks_evidence": "User report on 11 October 2026; no screenshot or independent account check reviewed.",
+    "youtube_checks_independently_reviewed": false,
+    "user_uploaded_for_checks": true,
+    "user_reported_content_id_claims_detected": false,
+    "user_reported_copyright_detection": false,
+    "user_reported_at": "2026-10-11",
+    "long_intended_user_upload_date": "2026-10-12",
+    "pilot_guarantees_long_check_result": false
   }
 }

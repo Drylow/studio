@@ -1,57 +1,58 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Reprise chess — Peaky arrêté, test Hannibal livré pour contrôle privé
+## Reprise chess — long Hannibal contrôlé et livré
 
-**Landa : l’utilisateur rapporte la vidéo publiée**, avec des claims comparables
-à ceux des Sopranos. Aucun blocage ni strike n’est déclaré. Publication et
-résultat YouTube ne sont pas vérifiés indépendamment dans le compte ou via API ;
-ces claims ne constituent pas une autorisation ni une garantie de revenus.
+**Hannibal : le test de 118 secondes est déclaré sans détection par l’utilisateur.**
+Ce retour n’est pas vérifié indépendamment dans YouTube Studio. L’utilisateur
+confirme ensuite le long de quinze minutes et prévoit de le programmer lui-même
+pour le **12 octobre 2026**. Le long est désormais exporté dans Kdenlive :
+**15:14,3 / 27 429 images / 1920×1080 à 30 fps**, H264 et AAC stéréo 48 kHz,
+299 169 615 octets. SHA256 :
+`c343aab8d9381642d3221a80b1afbfd658a43439137d274e500aa92aeafd2d1a`.
 
-**Peaky : abandon demandé après le nouveau test.** La capture confirme un
-blocage territorial, sans impact sur la chaîne et sans strike. L’utilisateur
-indique S02E02 bloqué en Russie seulement et un blocage associé à UGC dans de
-nombreux pays ; leur liste exacte n’a pas été récupérée. Ne pas relancer,
-recouper ou réenvoyer ce montage. La QA technique et la livraison réussies
-restent distinctes de ce résultat défavorable sur les droits.
+Neuf conversations Hannibal–Will des saisons 1 et 2, 28 analyses originales
+écrites de huit secondes, 169 sous-titres anglais éditables, guide de 16 s et
+bilan de 12 s. Aucun ajout de voix off. Chaque nouvelle conversation remet
+le score à 0,0 et donne les Blancs au premier interlocuteur réellement conservé.
+Le pion Hannibal approuvé reste intact, avec les badges Chess.com originaux,
+la barre à gauche et les pions assortis. Trois miniatures réelles au séparateur
+blanc diagonal et quatre titres **Analyzed Like Chess** sont prêts.
 
-**Hannibal : test d’environ deux minutes autorisé**, avec la série TV et Mads
-Mikkelsen. L’utilisateur valide explicitement le pion « Oui, utilise ce pion » :
-`experiments/conversation-chess/assets/hannibal/hannibal-pawn-approved-2026-10-11.png`,
-avec reçu JSON et SHA vérifié, conservé intact. **Source désormais acquise :
-trois clips publics Clip.cafe du dîner S02E10, *Naka-Choko*.** Les 58 secondes
-retenues restent chronologiques, avec deux ellipses de 6 et 39 secondes et
-des coupes sèches. Les fichiers sont 1080p natifs mais très compressés
-(environ 0,33 Mb/s vidéo) ; ce n’est pas la qualité maximale d’un long.
-SHA du master local : `620089c215f07c6b9e96c5104fbaac6037ed86b1a0dc33b767a39ed76720e6de`.
+La source comprend trente clips publics natifs 1080p ; les candidats 720p ou
+avec logo ont été exclus. Les sources restent très compressées : ne pas les
+présenter comme une qualité maximale. Le master source mesure 662,3 s,
+chapitres inclus, SHA256 :
+`277630094acd2a4a01c81380c9ead5ebb5daa28f885ab1aefccfb635eeab4c82`.
+Décodage audiovisuel complet et QA technique du long passent, sans échec,
+avertissement ni clipping ; crête vraie −4,9 dBTP, 75 segments audio corrélés,
+28 pauses de lecture calmes et 28 attaques de grade contrôlées.
 
-La timeline réelle contient Book Hannibal, Best Will, Brilliant Hannibal et
-Great Will, quatre pauses de huit secondes, guide de 16 s et bilan de 12 s :
-**118 s d’image / 118,016 s de fichier final**, 3 540 images en 1080p30.
-L’export natif H264/AAC 48 kHz stéréo est terminé : SHA256
-`75bbf2f928ce8f25f29fd2c038bfc0f8c685b0d6bb4d7bbe8e937c7aa71e1cd9`.
-Décodage audiovisuel intégral et QA audio passent sans échec ni avertissement,
-crête vraie −4,9 dBTP. La revue finale a examiné 40 captures sur sept planches :
-quatre notes complètes, bilan totalisant quatre, sous-titres et ellipses.
-Hannibal ouvre Blanc, Will reste Noir. Revue échantillonnée, sans écoute humaine
-ni lecture continue. **Livraison `youtube-test` confirmée** : cinq fichiers
-GoFile réconciliés après lecture du site officiel, un message Discord et trois
-pièces jointes. Les reçus privés et le pending archivé sont conservés ; aucun
-lien ni identifiant de livraison n’est publié ici. L’utilisateur doit encore
-effectuer son upload privé YouTube ; aucun résultat de Checks n’est établi.
-Voir [préparation et timeline publique](../experiments/conversation-chess/episodes/hannibal-pilot/PREPARATION.md).
+**Revue visuelle finale échantillonnée passée : 195 images / 26 planches.**
+Le réviseur principal a vu 36 images d’analyses, guide et bilan ; un second
+réviseur a vu 159 images de frontières et chapitres. Les neuf compteurs du
+bilan totalisent bien 28 : Brilliant 2, Great 9, Best 6, Excellent 6, Good 0,
+Inaccuracy 2, Mistake 0, Blunder 0, Book 3. Les sous-titres ne débordent pas sur
+les cartes ou analyses. Aucune écoute humaine ni lecture continue revendiquée.
+Voir [la reprise du long](../experiments/conversation-chess/episodes/hannibal-long/PREPARATION.md)
+et son résumé QA public. Les médias, projet natif, preuves et kit privés restent
+sous `output/conversation-chess/hannibal-long-native/` sur cette machine.
 
-L’échec S02E08 Naka reste historique et cette proposition n’est pas utilisée :
-manifest 200 mais premier segment 403 fournisseur, sans redirection. Le reçu
-privé `SOURCE_NOT_READY_SAFE.json` est conservé. NBC 403, YouTube refusé par le
-proxy et playlist AXN Dailymotion 403 n’ont pas donné de vidéo exploitable.
-Seul l’emplacement hors ligne Peaky S02E06 avait été remplacé ; tous les
-originaux et montages locaux restent conservés.
+**Livraison confirmée :** [kit Hannibal](https://gofile.io/d/SmKNmhMH), cinq fichiers
+GoFile réconciliés avec la lecture réelle du site officiel, sans succès revendiqué
+pour l’API Premium. Un message Discord Scene Analysis Guy et ses cinq pièces
+jointes sont confirmés : trois miniatures A/B/C, kit de publication et crédits.
+Quatre titres sont fournis. Les reçus et le pending archivé restent privés.
+Classement `youtube-test`, sans résultat YouTube établi pour ce long ni garantie
+Content ID. Le retour propre du pilote ne suffit pas à valider ce fichier
+différent. L’utilisateur choisit titre/miniature et garde la main sur l’upload.
 
-Le long de dix à quinze minutes reste conditionnel au futur test
-privé ; **l’approbation du pion n’autorise pas son lancement automatique**.
-Aucune garantie Content ID ni droit de réutilisation établi.
-[État et recherche initiale](../experiments/conversation-chess/HANNIBAL_FEASIBILITY.md).
-Le projet sleep reste annulé ; les autres automatismes ne sont pas modifiés.
+**Landa : publication rapportée par l’utilisateur**, avec des claims semblables
+aux Sopranos ; aucun blocage ni strike déclaré. Résultat et revenus non vérifiés.
+**Peaky : abandon demandé après le nouveau test.** Le blocage territorial est
+confirmé par capture, sans strike ni impact sur la chaîne ; ne pas relancer ou
+réenvoyer ce montage. Le projet sleep reste annulé et les autres automatismes
+ne sont pas modifiés. Les anciens échecs Naka et essais restent historiques :
+voir [la préparation du pilote](../experiments/conversation-chess/episodes/hannibal-pilot/PREPARATION.md).
 
 ## Deux longs livrés le 11 octobre 2026 — preuves techniques conservées
 

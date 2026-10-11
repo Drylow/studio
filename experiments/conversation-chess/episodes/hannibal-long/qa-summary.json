@@ -1,0 +1,192 @@
+{
+  "schema": "conversation-chess-public-qa-summary-v1",
+  "status": "reviewed_native_long_delivered_for_user_youtube_checks",
+  "title": "Hannibal Lecter vs Will Graham Analyzed Like Chess | Hannibal",
+  "video": {
+    "sha256": "c343aab8d9381642d3221a80b1afbfd658a43439137d274e500aa92aeafd2d1a",
+    "bytes": 299169615,
+    "frames": 27429,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "picture_duration_seconds": 914.3,
+    "container_duration_seconds": 914.304,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "export_engine": "Kdenlive / MLT",
+    "export_completed": true
+  },
+  "source": {
+    "master_sha256": "277630094acd2a4a01c81380c9ead5ebb5daa28f885ab1aefccfb635eeab4c82",
+    "master_seconds": 662.3,
+    "master_frames": 19869,
+    "chapter_cards": 9,
+    "clips": 30,
+    "conversations": 9,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "not_upscaled": true,
+    "full_video_audio_decode_ok": true,
+    "quality_limitation": "Native 1080p public clips are highly compressed; facial detail is softer than a disc master. Native HD is accepted; maximum source quality is not claimed."
+  },
+  "dialogue": {
+    "language": "English",
+    "added_voiceover": false,
+    "editable_native_caption_cues": 169,
+    "captions_during_dialogue_only": true
+  },
+  "technical_review": {
+    "completed": true,
+    "full_video_audio_decode_ok": true,
+    "full_av_decode_returncode": 0,
+    "full_av_decode_error_log_empty": true,
+    "technical_audio_passed": true,
+    "failures": [],
+    "warnings": [],
+    "true_peak_dbtp": -4.9,
+    "samples_at_or_above_full_scale": 0,
+    "correlated_audio_segments": 75,
+    "quiet_reading_tails_passed": 28,
+    "single_grade_onsets_passed": 28,
+    "evidence_names": [
+      "audio-technical-qa.json"
+    ],
+    "evidence_retained_privately": true
+  },
+  "sampled_visual_review": {
+    "completed": true,
+    "root_review": {
+      "completed": true,
+      "reviewed_images": 36,
+      "contact_sheets": 10,
+      "breakdown": {
+        "analysis_captures": 28,
+        "guide_captures": 5,
+        "recap_captures": 3
+      },
+      "method": "Final-export images on contact sheets were actually inspected by the root reviewer. This is sampled frame review, not continuous playback."
+    },
+    "boundary_chapter_caption_review": {
+      "completed": true,
+      "reviewed_images": 159,
+      "contact_sheets": 16,
+      "defects_found": [],
+      "method": "Independent actual final-export contact-sheet inspection of boundaries, chapters and dialogue captions."
+    },
+    "human_audio_listening": false,
+    "continuous_playback_reviewed": false,
+    "reviewed_images": 195,
+    "contact_sheets": 26,
+    "defects_found": [],
+    "chapter_reset_review": {
+      "reviewed": true,
+      "conversations": 9,
+      "initial_score_text": "0.0",
+      "initial_control": 0.5,
+      "white_is_first_retained_speaker": true
+    },
+    "caption_scope_review": {
+      "reviewed": true,
+      "caption_cues": 169,
+      "not_on_chapter_cards": true,
+      "not_on_analysis_holds": true
+    }
+  },
+  "counter_review": {
+    "reviewed": true,
+    "total": 28,
+    "counts_derived_from_final_timeline": true,
+    "actual_read_back_matches": true,
+    "status": "All nine finished recap counts inspected and matched the final timeline; total28.",
+    "counts": {
+      "brilliant": 2,
+      "great": 9,
+      "best": 6,
+      "excellent": 6,
+      "good": 0,
+      "book": 3,
+      "inaccuracy": 2,
+      "mistake": 0,
+      "blunder": 0
+    },
+    "recap_captures_reviewed": 3
+  },
+  "openings": {
+    "conversation_count": 9,
+    "white_is_first_retained_speaker": true,
+    "reviewed_source_bindings": true,
+    "white_order": [
+      "Will",
+      "Hannibal",
+      "Hannibal",
+      "Will",
+      "Will",
+      "Hannibal",
+      "Hannibal",
+      "Will",
+      "Hannibal"
+    ],
+    "reset_evaluation_each_conversation": true
+  },
+  "approved_mascot": {
+    "asset": "assets/hannibal/hannibal-pawn-approved-2026-10-11.png",
+    "sha256": "2286f6aeb2aaaa41be196efe6741dc33b218bc0bb8ec822d67479ef02decc51d",
+    "unchanged": true,
+    "renderer_adds_chess_com_companion_badges": true
+  },
+  "delivery": {
+    "confirmed": true,
+    "gofile_confirmed": true,
+    "discord_confirmed": true,
+    "gofile_url": "https://gofile.io/d/SmKNmhMH",
+    "gofile_files": 5,
+    "official_web_client_readback_complete": true,
+    "api_readback_complete": false,
+    "discord_messages": 1,
+    "discord_attachment_count": 5,
+    "discord_attachments": [
+      "A-confession.jpg",
+      "B-direct-gaze.jpg",
+      "C-watchful-will.jpg",
+      "Kit_publication.txt",
+      "MUSIC_CREDITS.txt"
+    ],
+    "thumbnail_options": 3,
+    "title_options": 4,
+    "status": "Exact long kit confirmed on GoFile and delivered once to Scene Analysis Guy Discord. Private receipts retained; no YouTube upload performed."
+  },
+  "publication": {
+    "kind": "youtube-test",
+    "youtube_checks_complete": false,
+    "youtube_checks_independently_reviewed": false,
+    "rights_clearance_verified": false,
+    "published": false,
+    "pilot_result": "User reports zero copyright or Content ID detection on the 118-second pilot; no independent YouTube Studio evidence reviewed.",
+    "pilot_guarantees_long_check_result": false,
+    "intended_user_upload_date": "2026-10-12"
+  },
+  "thumbnails": [
+    {
+      "file": "A-confession.jpg",
+      "sha256": "8625bc836a06a3bc566d56ea1b0f77537b96236a6eb6cb0fc323df48a5b4f030",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "B-direct-gaze.jpg",
+      "sha256": "cde6c9c8fe9bde54ad591fa695c6641264aedb72b4eeedbd0c03a1869326805c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "C-watchful-will.jpg",
+      "sha256": "5418b938a97f20498526739320a091414a201dc511dbca278314ec9291c5e9fb",
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}

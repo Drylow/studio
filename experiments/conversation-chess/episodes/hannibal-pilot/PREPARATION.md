@@ -1,6 +1,13 @@
 # Hannibal — pilot preparation, 11 October 2026
 
-## Current pilot — S02E10 dinner, delivered for a private YouTube test
+## Current pilot — S02E10 dinner, delivered and tested by the user
+
+On 11 October 2026, the user reports that their upload of this pilot shows no
+copyright detection or Content ID claim. This is their report; no YouTube Studio
+screenshot or independent account check has been reviewed. They now authorize
+a roughly 15-minute Hannibal–Will production, which they intend to post on
+12 October. Its current plan is recorded in
+[the long preparation](../hannibal-long/PREPARATION.md).
 
 The authorized two-minute pilot now uses three acquired public Clip.cafe clips
 from the same Hannibal–Will dinner in S02E10, *Naka-Choko*. The retained source
@@ -22,7 +29,8 @@ Its four original annotations are Book Hannibal, Best Will, Brilliant Hannibal
 and Great Will. Each hold lasts eight seconds, including a three-second muted
 replay. The budget is **58 + 32 + 16 + 12 = 118 seconds** for retained dialogue,
 analysis holds, guide and recap. The completed native export confirms that
-picture duration; delivery is confirmed below, while a YouTube result is pending.
+picture duration; delivery is confirmed below. The user's YouTube test result
+is recorded above.
 
 The native export is complete: **3 540 frames / 118.000 seconds of picture**,
 **118.016 seconds overall**, 1920×1080 at 30 fps, H264 with AAC 48 kHz stereo.
@@ -38,13 +46,12 @@ strict local reconciliation; no Premium API success is claimed. Its pending
 state is archived. Discord delivery is confirmed separately: one message with
 three attachments. Private transport receipts are retained; no download URL or
 delivery identifier is published here. This is a delivered `youtube-test`
-candidate, awaiting the user's private upload and YouTube Checks, with no
-copyright clearance established.
+candidate. The user reports no detection on their test upload; commercial reuse
+rights have not been established.
 
-The user will privately test the exact reviewed file. A 10–15 minute production
-remains conditional on that result and a later decision. Approval of the pawn
-does not authorize an automatic long render. Check any future long separately;
-the pilot cannot guarantee absence of later claims or territorial blocks.
+The authorized long production is now exported, reviewed and delivered. Its own
+YouTube check remains outstanding; see the long preparation for actual receipts. The clean pilot
+report applies to this short file and does not guarantee the result of the long.
 
 ## Archive — unused S02E08 proposal and acquisition blocker
 
