@@ -14,6 +14,8 @@ from . import workspace_api as api
 
 
 _active_projects = set()
+_active_generations = {}
+_batch_permits = {}
 _batch_tasks = {}
 
 
@@ -54,6 +56,14 @@ def _signature(p, s):
                           "id", "text", "prompt", "prompt_author", "location_id", "characters",
                           "references", "character_variants", "workspace_regeneration_required",
                           "start", "end", "motion", "image")}})
+
+
+def _same_inputs(p, scene, signature):
+    try:
+        return scene is not None and _signature(p, scene) == signature
+    except Exception:
+        # Invalidated authoring metadata cannot discard the receipt of a paid output.
+        return False
 
 
 def _prepare(p, s, body):
@@ -109,12 +119,29 @@ def _prepare(p, s, body):
     return prompt, model, aspect, payloads, sources, receipts
 
 
+def _other_generations(pid, sid=None):
+    return [record for (project, scene), record in _active_generations.items()
+            if project == pid and scene != sid]
+
+
 async def generate(pid, sid, body, *, batch_id=None):
-    p = api._project(pid, writable=True)
-    if (pid in _active_projects or pipeline.is_running(pid)
-            or batch_running(pid) and (p.get("workspace_batch") or {}).get("id") != batch_id
-            or any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
-            or any(step.get("state") == "running" for step in p.get("steps", {}).values())):
+    # The executor applies its own narrow authorization; other writable APIs stay locked.
+    p = api._project(pid)
+    authorized_batch = (batch_id is not None and batch_running(pid)
+                        and (p.get("workspace_batch") or {}).get("id") == batch_id
+                        and _batch_permits.get((pid, sid)) == batch_id)
+    other = _other_generations(pid, sid)
+    limit = 3 if (p.get("model_snapshot") or {}).get("image_provider") == "google_flow" and (
+        p.get("workspace_batch") or {}).get("phase") != "preview" else 1
+    if (pipeline.is_running(pid) or (pid, sid) in _active_generations
+            or not authorized_batch and (pid in _active_projects or batch_running(pid)
+                or any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
+                or any(step.get("state") == "running" for step in p.get("steps", {}).values()))
+            or authorized_batch and (len(other) >= limit or any(r.get("batch_id") != batch_id for r in other)
+                or pid in _active_projects and not other
+                or any(step.get("state") == "running" for key, step in p.get("steps", {}).items() if key != "visuals")
+                or any(s.get("status") in ("running", "queued") and (pid, s["id"]) not in _active_generations
+                       for s in p.get("scenes", [])))):
         raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
     s = _scene(p, sid)
     try:
@@ -135,10 +162,12 @@ async def generate(pid, sid, body, *, batch_id=None):
                "endpoint": "/v1/google-flow/images" if provider == "google_flow" else "/images/edits",
                "started_at": now(), "state": "running", "previous_image": previous_image}
     _active_projects.add(pid)
+    _active_generations[(pid, sid)] = {"id": job_id, "scene_id": sid, "batch_id": batch_id}
     succeeded = False
     try:
         s.update(status="running", generation_id=job_id, error=None)
         p["workspace_generation"] = {"id": job_id, "scene_id": sid, "state": "running", "batch_id": batch_id}
+        p.setdefault("workspace_generations", {})[str(sid)] = copy.deepcopy(p["workspace_generation"])
         p["render"] = None
         p["steps"]["visuals"].update(state="running", msg="Génération du plan confirmé")
         store.save_project(p)
@@ -158,8 +187,9 @@ async def generate(pid, sid, body, *, batch_id=None):
             stream.write(data)
         receipt.update(image={"path": relative, "sha256": hashlib.sha256(data).hexdigest()}, finished_at=now())
         current = api._project(pid)
-        scene = _scene(current, sid)
-        if _signature(current, scene) != signature or any(_digest(path) != digest for path, digest in sources):
+        scene = next((x for x in current.get("scenes", []) if x["id"] == sid), None)
+        if not _same_inputs(current, scene, signature) or any(
+                api._file_digest(path.parent, path.name) != digest for path, digest in sources):
             receipt["state"] = "obsolete_unselected"
             current.setdefault("workspace_generation_history", []).append(receipt)
             store.save_project(current)
@@ -172,11 +202,17 @@ async def generate(pid, sid, body, *, batch_id=None):
         scene.pop("workspace_regeneration_required", None)
         scene.pop("clip", None)
         current["render"] = None
-        if previous_render:
+        if previous_render and previous_render not in current.get("render_history", []):
             current.setdefault("render_history", []).append(previous_render)
-        current["workspace_generation"]["state"] = "generated_unreviewed"
+        if (current.get("workspace_generation") or {}).get("id") == job_id:
+            current["workspace_generation"]["state"] = "generated_unreviewed"
+        record = current.setdefault("workspace_generations", {}).setdefault(str(sid), {
+            "id": job_id, "scene_id": sid, "batch_id": batch_id})
+        if record.get("id") == job_id:
+            record["state"] = "generated_unreviewed"
         current["steps"]["visuals"].update(
-            state="done" if all(x.get("image") for x in current["scenes"]) else "idle",
+            state="running" if _other_generations(pid, sid) else (
+                "done" if all(x.get("image") for x in current["scenes"]) else "idle"),
             msg="Nouvelle image à vérifier")
         current["steps"]["render"].update(state="idle", msg="Image modifiée : le montage reste à refaire")
         store.save_project(current)
@@ -193,18 +229,26 @@ async def generate(pid, sid, body, *, batch_id=None):
     except Exception:
         raise HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée") from None
     finally:
-        _active_projects.discard(pid)
+        _active_generations.pop((pid, sid), None)
+        if not _other_generations(pid):
+            _active_projects.discard(pid)
         if not succeeded:
             current = store.get_project(pid)
-            if current and (current.get("workspace_generation") or {}).get("id") == job_id:
+            if current:
                 current = copy.deepcopy(current)
                 scene = next((x for x in current.get("scenes", []) if x["id"] == sid), None)
                 if scene and scene.get("generation_id") == job_id:
                     scene.update(status="error", error="Génération interrompue ou échouée ; le plan précédent est conservé")
-                    if _signature(current, scene) == signature and current.get("render") is None:
+                    if (not _other_generations(pid) and (not authorized_batch or limit == 1)
+                            and _same_inputs(current, scene, signature) and current.get("render") is None):
                         current["render"] = previous_render
-                current["workspace_generation"]["state"] = "failed"
-                current["steps"]["visuals"].update(state="error", msg="Ce plan reste à corriger")
+                if (current.get("workspace_generation") or {}).get("id") == job_id:
+                    current["workspace_generation"]["state"] = "failed"
+                record = current.get("workspace_generations", {}).get(str(sid), {})
+                if record.get("id") == job_id:
+                    record["state"] = "failed"
+                current["steps"]["visuals"].update(
+                    state="running" if _other_generations(pid) else "error", msg="Ce plan reste à corriger")
                 store.save_project(current)
 
 
@@ -230,13 +274,15 @@ def _recover_batch(p):
     previous = p.get("workspace_batch") or {}
     if previous.get("state") in ("queued", "running", "stopping") and not batch_running(p["id"]):
         previous.update(state="interrupted", finished_at=now())
-        generation = p.get("workspace_generation") or {}
-        if generation.get("batch_id") == previous.get("id"):
-            for scene in p.get("scenes", []):
-                if scene.get("generation_id") == generation.get("id") and scene.get("status") == "running":
+        records = list((p.get("workspace_generations") or {}).values()) + [p.get("workspace_generation") or {}]
+        for generation in records:
+            if generation.get("batch_id") == previous.get("id"):
+                for scene in p.get("scenes", []):
+                    if scene.get("generation_id") != generation.get("id") or scene.get("status") != "running":
+                        continue
                     scene.update(status="error", error="Génération interrompue : vérifiez le résultat avant de reprendre")
-            generation["state"] = "failed"
-            p["steps"]["visuals"].update(state="error")
+                generation["state"] = "failed"
+                p["steps"]["visuals"].update(state="error")
         store.save_project(p)
 
 
@@ -281,9 +327,11 @@ async def start_batch(pid, body):
             raise HTTPException(422, f"Une référence du plan {scene['id']} est illisible") from None
     job = {"id": uuid.uuid4().hex, "phase": phase, "state": "queued", "started_at": now(),
            "scene_ids": [s["id"] for s in targets], "done": 0, "total": len(targets),
-           "current_scene_id": None, "stop_requested": False, "error": None}
-    if phase == "corrections":
-        job.update(processed=0, failed_scene_ids=[], scene_errors={})
+           "current_scene_id": None, "current_scene_ids": [], "stop_requested": False, "error": None,
+           "concurrency": 3 if provider == "google_flow" and phase != "preview" else 1,
+           "processed": 0, "failed_scene_ids": [], "scene_errors": {}}
+    if p.get("render") and p["render"] not in p.get("render_history", []):
+        p.setdefault("render_history", []).append(copy.deepcopy(p["render"]))
     p["workspace_batch"] = job
     store.save_project(p)
     _batch_tasks[pid] = asyncio.create_task(_run_batch(pid, job["id"], _batch_signature(p), sources))
@@ -316,57 +364,101 @@ def _correction_error(exc):
     return f"La tentative de ce plan a échoué (HTTP {exc.status_code}). L’image précédente est conservée ; aucune nouvelle tentative automatique."
 
 
+def _collect_batch_result(pid, job_id, sid, task):
+    """Read current state and save without an await: sibling results cannot be lost."""
+    failure = None
+    try:
+        task.result()
+    except HTTPException as exc:
+        failure = exc
+    except BaseException:
+        failure = HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée")
+    current = api._project(pid)
+    job = current["workspace_batch"]
+    if failure:
+        _update_batch(pid, job_id, failed_scene_ids=job["failed_scene_ids"] + [sid],
+                      scene_errors=dict(job["scene_errors"], **{str(sid): _correction_error(failure)}))
+    else:
+        _update_batch(pid, job_id, done=job["done"] + 1)
+    _batch_permits.pop((pid, sid), None)
+    return failure
+
+
 async def _run_batch(pid, job_id, signature, sources):
     state, error = "done", None
+    pending = {}
     try:
         p = _update_batch(pid, job_id, state="running")
-        for sid in p["workspace_batch"]["scene_ids"]:
-            current = api._project(pid)
-            if current["workspace_batch"].get("stop_requested"):
-                state = "stopped"
-                break
-            _check_batch_inputs(current, signature, sources)
-            scene = _scene(current, sid)
-            # Never overwrite an image selected by the user or another request.
-            if not _missing(current, scene):
-                raise HTTPException(409, "Une image a été ajoutée pendant la génération. Actualisez le projet")
-            _update_batch(pid, job_id, current_scene_id=sid)
-            correction = current["workspace_batch"]["phase"] == "corrections"
-            if correction:
-                _update_batch(pid, job_id, processed=current["workspace_batch"]["processed"] + 1)
-            try:
-                await generate(pid, sid, {"confirm_prompt": scene["prompt"],
+        job = p["workspace_batch"]
+        scene_ids, limit = job["scene_ids"], job["concurrency"]
+        correction = job["phase"] == "corrections"
+        next_index, halted = 0, False
+        while pending or next_index < len(scene_ids) and not halted:
+            while not halted and next_index < len(scene_ids) and len(pending) < limit:
+                current = api._project(pid)
+                if current["workspace_batch"].get("stop_requested"):
+                    state, halted = "stopped", True
+                    break
+                _check_batch_inputs(current, signature, sources)
+                sid = scene_ids[next_index]
+                scene = _scene(current, sid)
+                # Selected images only change for explicitly missing/flagged targets.
+                if not _missing(current, scene) or correction and scene.get("workspace_regeneration_required") is not True:
+                    raise HTTPException(409, "La sélection du plan a changé. Le lot a été arrêté")
+                _batch_permits[(pid, sid)] = job_id
+                task = asyncio.create_task(generate(pid, sid, {"confirm_prompt": scene["prompt"],
                     "image_model": current["model_snapshot"]["image_model"],
-                    "image_provider": current["model_snapshot"].get("image_provider", "cli_proxy")}, batch_id=job_id)
-            except HTTPException as exc:
-                if not correction:
-                    raise
-                latest = api._project(pid)
-                failed = latest["workspace_batch"]["failed_scene_ids"] + [sid]
-                errors = dict(latest["workspace_batch"]["scene_errors"], **{str(sid): _correction_error(exc)})
-                _update_batch(pid, job_id, failed_scene_ids=failed, scene_errors=errors)
-                _check_batch_inputs(api._project(pid), signature, sources)
-                continue
-            latest = api._project(pid)
-            _update_batch(pid, job_id, done=latest["workspace_batch"]["done"] + 1)
-            if correction:
-                _check_batch_inputs(api._project(pid), signature, sources)
+                    "image_provider": current["model_snapshot"].get("image_provider", "cli_proxy")}, batch_id=job_id))
+                pending[task] = sid
+                active_ids = list(pending.values())
+                _update_batch(pid, job_id, processed=current["workspace_batch"]["processed"] + 1,
+                              current_scene_ids=active_ids, current_scene_id=active_ids[0])
+                next_index += 1
+            if not pending:
+                break
+            completed, _ = await asyncio.wait(pending, return_when=asyncio.FIRST_COMPLETED)
+            for task in sorted(completed, key=lambda item: scene_ids.index(pending[item])):
+                sid = pending.pop(task)
+                failure = _collect_batch_result(pid, job_id, sid, task)
+                if failure and not correction:
+                    state, error, halted = "failed", _correction_error(failure), True
+            current = api._project(pid)
+            active_ids = list(pending.values())
+            _update_batch(pid, job_id, current_scene_ids=active_ids,
+                          current_scene_id=active_ids[0] if active_ids else None)
+            _check_batch_inputs(current, signature, sources)
+            if current["workspace_batch"].get("stop_requested"):
+                state, halted = "stopped", True
         latest = api._project(pid)
         if state == "done" and latest["workspace_batch"].get("failed_scene_ids"):
             state = "done_with_errors"
             error = f"{len(latest['workspace_batch']['failed_scene_ids'])} plan(s) restent à corriger ; aucune nouvelle tentative automatique."
-        if api._project(pid)["workspace_batch"].get("stop_requested"):
-            state = "stopped"
     except asyncio.CancelledError:
-        state, error = "interrupted", "Génération interrompue. Vérifiez le dernier plan avant de reprendre"
+        state, error = "interrupted", "Génération interrompue. Vérifiez les derniers plans avant de reprendre"
     except HTTPException as exc:
         state, error = "failed", str(exc.detail)
     except Exception:
         state, error = "failed", "Le lot a échoué. Les images terminées sont conservées ; aucune nouvelle tentative automatique"
     finally:
+        # Stop/cancel/input errors close admission, but already-started billable calls finish.
+        if pending:
+            drain = asyncio.gather(*pending, return_exceptions=True)
+            while not drain.done():
+                try:
+                    await asyncio.shield(drain)
+                except asyncio.CancelledError:
+                    state = "interrupted"
+            for task, sid in list(pending.items()):
+                _collect_batch_result(pid, job_id, sid, task)
         try:
-            _update_batch(pid, job_id, state=state, error=error, current_scene_id=None, finished_at=now())
+            if api._project(pid)["workspace_batch"].get("stop_requested"):
+                state = "stopped"
+            _update_batch(pid, job_id, state=state, error=error, current_scene_id=None,
+                          current_scene_ids=[], finished_at=now())
         finally:
+            for key, permit in list(_batch_permits.items()):
+                if key[0] == pid and permit == job_id:
+                    _batch_permits.pop(key, None)
             _batch_tasks.pop(pid, None)
 
 
