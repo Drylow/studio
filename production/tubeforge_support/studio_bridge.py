@@ -6,8 +6,8 @@ from pathlib import Path
 import re
 import uuid
 
-from . import config, events, store
-from .util import now
+from app import config, events, store
+from app.util import now
 
 
 def algrow_configured():
@@ -85,8 +85,9 @@ async def render(p, jobs_scenes, total_frames, width, height, fps, out_dir, prog
 
 
 async def voice(text, settings, out_dir, progress=None):
-    languages = {'english': 'en', 'french': 'fr'}
-    settings = {'voice_id': settings['voice_id'], 'speed': settings.get('speed', 1),
+    languages = {'english': 'en', 'french': 'fr', 'spanish': 'es', 'german': 'de',
+                 'italian': 'it', 'portuguese': 'pt', 'japanese': 'ja'}
+    settings = {'voice_id': settings['voice_id'], 'speed': settings.get('speed', 1), 'provider': settings.get('provider', 'algrow'),
                 'language': languages.get(str(settings.get('language', 'English')).lower(), 'en')}
     if progress:
         progress(0, 1)

@@ -85,6 +85,28 @@ def create(client, **changes):
     return response.json()
 
 
+def test_pasted_script_duration_is_estimated_and_target_is_ignored(workspace):
+    client = workspace[0]
+    script = '  ' + 'word '.join(['word'] * 145) + '\n'
+    for target in (None, 15, 60):
+        p = create(client, custom_script=script, duration_minutes=target)
+        assert p['script'] == script
+        assert p['target_duration_seconds'] is None
+        assert p['duration_info']['kind'] == 'estimated'
+        assert p['duration_info']['word_count'] == len(script.split())
+    response = client.post('/api/workspace/projects', json={'profile_id': 'edo-daily', 'title': 'No script', 'duration_minutes': 15})
+    assert response.status_code == 422
+
+
+def test_missing_voice_file_never_displays_actual_duration(workspace):
+    client = workspace[0]
+    p = create(client, custom_script='A supplied script.')
+    stored = store.get_project(p['id'])
+    stored['voiceover'] = {'file': 'missing.mp3', 'duration': 955}
+    store.save_project(stored)
+    assert client.get(f"/api/workspace/projects/{p['id']}").json()['duration_info']['kind'] == 'estimated'
+
+
 def media_project(client):
     p = create(client, custom_script="First action.")
     pdir = store.project_dir(p["id"])
@@ -179,7 +201,8 @@ def test_project_snapshot_review_mode_exact_script_and_no_auto(workspace):
     assert p["script"] == "  Exact script.\n\n"
     assert p["settings"]["script"]["model"] == "fixture-text"
     assert p["settings"]["models"]["image"] == "future-image-fixture"
-    assert p["target_duration_seconds"] == 1320
+    assert p["target_duration_seconds"] is None
+    assert p["duration_info"]["kind"] == "estimated"
     assert p["workspace_queue"]["state"] == "queued_for_authoring"
     assert p["review_state"] == "waiting_for_voiceover"
     assert not p["publication_ready"] and not p["prompts_approved"]

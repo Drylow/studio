@@ -265,4 +265,12 @@ dialog::backdrop { background: rgb(20 35 42 / .42); }
 .batch-workflow .actions { flex-wrap: wrap; }
 .batch-progress { display: grid; gap: 8px; margin-top: 18px; }
 .batch-progress progress { width: 100%; height: 10px; accent-color: var(--accent); }
+.script-duration { padding: 12px 14px; border-radius: 6px; background: var(--accent-soft); }
+[data-target-duration][hidden], [data-script-duration][hidden] { display: none; }
+#voice-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: 16px; }
+#voice-sample[hidden] { display: none; }
+.voice-progress { margin: 18px 0 24px; padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--accent-soft); }
+.voice-progress .inline { justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.voice-progress progress { display: block; width: 100%; height: 14px; margin: 14px 0; accent-color: var(--accent); }
+.voice-progress p { margin: 8px 0 0; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

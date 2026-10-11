@@ -31,18 +31,21 @@ def render(job):
 
 def voice(job):
     text, settings = job['text'], job['settings']
-    if len(text.strip()) < 200:
+    provider = settings.get('provider', 'algrow')
+    if provider not in ('algrow', 'ai33'):
+        raise ValueError('Unknown narration provider')
+    if provider == 'algrow' and len(text.strip()) < 200:
         raise ValueError('Algrow requires at least 200 characters; provide a longer authored excerpt')
     key = hashlib.sha256(json.dumps({'text': text, 'settings': settings}, sort_keys=True).encode()).hexdigest()
     root = Path(job['workdir'])
     root.mkdir(parents=True, exist_ok=True)
-    cached, receipt = root / f'algrow-{key}.mp3', root / f'algrow-{key}.json'
+    cached, receipt = root / f'{provider}-{key}.mp3', root / f'{provider}-{key}.json'
     if receipt.exists() and cached.exists():
         result = json.loads(receipt.read_text(encoding='utf-8'))
         if hashlib.sha256(cached.read_bytes()).hexdigest() != result['audio_sha256']:
             raise ValueError('Cached narration changed')
     else:
-        raw = tts.synthesize(text, str(cached), provider='algrow', voice=settings['voice_id'],
+        raw = tts.synthesize(text, str(cached), provider=provider, voice=settings['voice_id'],
                              speed=float(settings.get('speed', 1)), lang=settings.get('language', 'en'))
         tokens = list(re.finditer(r'\S+', text))
         aligned = tts.align_to_text(raw['words'], text)
@@ -51,7 +54,7 @@ def voice(job):
         words = [{**word, 'c0': token.start(), 'c1': token.end()}
                  for token, word in zip(tokens, aligned)]
         result = {'file': 'voice.mp3', 'duration': media.duration(str(cached)), 'words': words,
-                  'audio_sha256': hashlib.sha256(cached.read_bytes()).hexdigest(), 'provider': 'algrow'}
+                  'audio_sha256': hashlib.sha256(cached.read_bytes()).hexdigest(), 'provider': provider}
         save(receipt, result)
     shutil.copy2(cached, job['output'])
     return result

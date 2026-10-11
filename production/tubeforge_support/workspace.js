@@ -27,7 +27,7 @@
     if (!row.title.trim()) throw new Error('Indiquez le titre de la vidéo.');
     if (row.title.trim().length > 240) throw new Error('Le titre est limité à 240 caractères.');
     if (row.custom_script !== undefined) validateScript(row.custom_script);
-    if (!Number.isFinite(row.duration_minutes) || row.duration_minutes < 20 || row.duration_minutes > 25) throw new Error('La durée cible doit être comprise entre 20 et 25 minutes.');
+    if (!row.custom_script?.trim() && (!Number.isFinite(row.duration_minutes) || row.duration_minutes < 20 || row.duration_minutes > 25)) throw new Error('La durée cible doit être comprise entre 20 et 25 minutes.');
     for (const key of ['text_model', 'image_model']) {
       const entry = models.find((m) => m.id === row[key] && (key !== 'image_model' || !row.image_provider || (m.provider || 'cli_proxy') === row.image_provider));
       if (!entry) throw new Error('Choisissez les deux modèles dans le catalogue du fournisseur.');
@@ -38,6 +38,22 @@
   function validateScript(text) {
     if (typeof text !== 'string' || text.includes('\0') || new TextEncoder().encode(text).length > 1024 * 1024) throw new Error('Le script doit être un texte de moins de 1 Mo, sans caractère nul.');
     return text;
+  }
+  function scriptDuration(text) {
+    const words = String(text || '').trim().split(/\s+/).filter(Boolean).length;
+    return { kind: words ? 'estimated' : 'unknown', seconds: words ? words * 60 / 145 : null, word_count: words, words_per_minute: 145 };
+  }
+  function durationLabel(info) {
+    if (!info || !Number.isFinite(info.seconds) || info.seconds <= 0) return 'Durée à déterminer';
+    const seconds = Math.max(1, Math.round(info.seconds));
+    const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
+    return `${info.kind === 'actual' ? 'Durée réelle' : info.kind === 'estimated' ? 'Durée estimée : environ' : 'Durée cible'}${info.kind === 'estimated' ? ' ' : ' : '}${time}`;
+  }
+  function voiceProgressInfo(p) {
+    const step = p?.steps?.voiceover || {};
+    return { active: Boolean(p?.running && step.state === 'running'),
+      percent: step.total > 1 && Number.isFinite(step.done) ? Math.max(0, Math.min(100, step.done * 100 / step.total)) : null,
+      started: Number.isFinite(step.started) ? step.started : null };
   }
   async function readScriptFile(file) {
     if (!file || !/\.(txt|md)$/i.test(file.name) || file.size > 1024 * 1024) throw new Error('Choisissez un fichier .txt ou .md de moins de 1 Mo.');
@@ -102,7 +118,7 @@
     if (!reason && !project.generation_confirmation) reason = 'Actualisez le projet avant de générer ses images.';
     return { first, targets, reason };
   }
-  const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan };
+  const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = helpers;
     if (require.main === module && process.argv.includes('--test')) {
@@ -323,11 +339,10 @@
   }
   function projectTable(projects) {
     if (!projects.length) return '<div class="empty"><h2>Aucune vidéo</h2><p>Créez une vidéo ou préparez un lot pour cette chaîne.</p></div>';
-    return `<div class="table-wrap"><table><thead><tr><th scope="col">Vidéo</th><th scope="col">Chaîne</th><th scope="col">Durée cible</th><th scope="col">État</th><th scope="col">Mise à jour</th></tr></thead><tbody>${projects.map((p) => {
+    return `<div class="table-wrap"><table><thead><tr><th scope="col">Vidéo</th><th scope="col">Chaîne</th><th scope="col">Durée</th><th scope="col">État</th><th scope="col">Mise à jour</th></tr></thead><tbody>${projects.map((p) => {
       const status = projectStatus(p);
       const thumb = mediaUrl('media', p.id, p.thumb || p.thumbnail?.file);
-      const minutes = p.target_duration_seconds ? p.target_duration_seconds / 60 : p.duration_minutes;
-      return `<tr><td><div class="project-cell">${thumb ? `<img src="${esc(thumb)}" alt="Miniature de ${esc(p.title)}" loading="lazy">` : '<span class="project-placeholder">Miniature absente</span>'}<div><a class="project-title" href="${esc(projectHref(p))}">${esc(p.title || 'Sans titre')}</a><div class="small muted">${p.scenes_count ?? (Array.isArray(p.scenes) ? p.scenes.length : p.scenes) ?? 0} plans</div></div></div></td><td>${esc(profileName(p.profile_id || p.channel_id))}</td><td>${Number.isFinite(minutes) ? `${minutes} min` : 'Non définie'}</td><td>${badge(status.state, status.label)}</td><td class="small muted">${esc(fmtDate(p.updated || p.created))}</td></tr>`;
+      return `<tr><td><div class="project-cell">${thumb ? `<img src="${esc(thumb)}" alt="Miniature de ${esc(p.title)}" loading="lazy">` : '<span class="project-placeholder">Miniature absente</span>'}<div><a class="project-title" href="${esc(projectHref(p))}">${esc(p.title || 'Sans titre')}</a><div class="small muted">${p.scenes_count ?? (Array.isArray(p.scenes) ? p.scenes.length : p.scenes) ?? 0} plans</div></div></div></td><td>${esc(profileName(p.profile_id || p.channel_id))}</td><td>${esc(durationLabel(p.duration_info))}</td><td>${badge(status.state, status.label)}</td><td class="small muted">${esc(fmtDate(p.updated || p.created))}</td></tr>`;
     }).join('')}</tbody></table></div>`;
   }
   function renderDashboard() {
@@ -354,16 +369,30 @@
     const row = { profile_id: fields.get('profile_id'), title: String(fields.get('title') || '').trim(), duration_minutes: Number(fields.get('duration_minutes')), text_model: fields.get('text_model'), image_model: fields.get('image_model') };
     if (fields.has('style_id')) row.style_id = fields.get('style_id');
     if (fields.has('custom_script')) row.custom_script = fields.get('custom_script');
+    if (!fields.has('duration_minutes')) delete row.duration_minutes;
     row.image_provider = $('[name="image_model"]', form)?.selectedOptions[0]?.dataset.provider || 'cli_proxy';
     return row;
   }
   function scriptImportMarkup(id) {
-    return `<div class="script-tools"><label class="file-picker">${icon('up')}Importer un script<input id="${id}" type="file" accept=".txt,.md,text/plain,text/markdown"></label><span class="small muted" data-script-count></span></div><p class="small muted import-status" data-import-status role="status"></p>`;
+    return `<div class="script-tools"><label class="file-picker">${icon('up')}Ou importer un fichier<input id="${id}" type="file" accept=".txt,.md,text/plain,text/markdown"></label><span class="small muted" data-script-count></span></div><p class="small muted import-status" data-import-status role="status"></p><p class="script-duration small" data-script-duration role="status" aria-live="polite" hidden></p>`;
   }
   function bindScriptImport(root, inputSelector) {
     const input = $(inputSelector, root);
     const fileInput = $('input[type="file"]', root);
-    const count = () => { $('[data-script-count]', root).textContent = `${input.value.trim().split(/\s+/).filter(Boolean).length} mots`; };
+    const count = () => {
+      const estimate = scriptDuration(input.value);
+      $('[data-script-count]', root).textContent = `${estimate.word_count} mots`;
+      const target = $('[name="duration_minutes"]', root);
+      if (target) {
+        target.closest('[data-target-duration]').hidden = estimate.word_count > 0;
+        target.disabled = estimate.word_count > 0;
+        target.required = estimate.word_count === 0;
+      }
+      const duration = $('[data-script-duration]', root);
+      const info = root.id === 'script-form' && input.value === project.script ? project.duration_info : estimate;
+      duration.hidden = !estimate.word_count;
+      duration.textContent = durationLabel(info) + (info?.kind === 'estimated' ? ' · estimation à 145 mots/min ; la durée réelle dépendra de la voix.' : '');
+    };
     count(); input.addEventListener('input', count);
     fileInput.onchange = async () => {
       const file = fileInput.files[0];
@@ -388,7 +417,7 @@
     const defaultStyle = data.profiles.find((p) => p.id === profile)?.style_id || data.profiles[0]?.style_id;
     const previousDirty = dirty;
     let dialogEdited = false;
-    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">Nouvelle vidéo</h2><button type="button" data-close class="icon-button" title="Fermer" aria-label="Fermer">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Projet</legend><div class="form-grid"><label class="full">Titre de la vidéo<input name="title" placeholder="What Did People in Edo Japan Actually Do All Day?" required maxlength="240" autocomplete="off"></label><label>Chaîne<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label>Durée cible (minutes)<input type="number" name="duration_minutes" min="20" max="25" step="0.5" value="22" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Texte de narration<textarea name="custom_script" rows="8" spellcheck="true"></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Style visuel</legend><label>Style de la vidéo<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Modèles de génération</legend><div class="form-grid"><label class="full">Modèle texte<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Modèle image<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Annuler</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Créer la vidéo</button></div></form>`;
+    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">Nouvelle vidéo</h2><button type="button" data-close class="icon-button" title="Fermer" aria-label="Fermer">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Projet</legend><div class="form-grid"><label class="full">Titre de la vidéo<input name="title" placeholder="What Did People in Edo Japan Actually Do All Day?" required maxlength="240" autocomplete="off"></label><label>Chaîne<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label data-target-duration>Durée cible (minutes)<input type="number" name="duration_minutes" min="20" max="25" step="0.5" value="22" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Collez votre script ici<textarea name="custom_script" rows="12" spellcheck="true" placeholder="Collez votre script complet ici. Aucun fichier TXT nécessaire."></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Style visuel</legend><label>Style de la vidéo<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Modèles de génération</legend><div class="form-grid"><label class="full">Modèle texte<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Modèle image<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Annuler</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Créer la vidéo</button></div></form>`;
     const close = () => { if (dialogEdited && !confirm('Abandonner cette nouvelle vidéo ?')) return; dialog.close(); dirty = previousDirty; };
     $('#create-form', dialog).addEventListener('input', () => { dialogEdited = true; });
     $('#create-form', dialog).addEventListener('change', () => { dialogEdited = true; });
@@ -452,7 +481,7 @@
     if (!STEPS.some(([key]) => key === selected)) selected = 'texte';
     const status = projectStatus(project);
     const verification = project.review_state?.state || (typeof project.review_state === 'string' ? project.review_state : 'unreviewed');
-    main.innerHTML = `<div class="breadcrumbs"><a href="#/videos">Vidéos</a><span>/</span><a href="#/channels/${encode(project.profile_id || project.channel_id || '')}">${esc(profileName(project.profile_id || project.channel_id))}</a></div>${header(project.title || 'Sans titre', `${project.target_duration_seconds ? `${project.target_duration_seconds / 60} min · ` : ''}${profileName(project.profile_id || project.channel_id)}`, `${badge(status.state, status.label)}<button class="icon-button" id="refresh-project" title="Actualiser ce projet" aria-label="Actualiser ce projet">${icon('refresh')}</button>`)}${project.error ? `<div class="banner error">${esc(project.error)}</div>` : ''}<nav class="steps" aria-label="Étapes de la vidéo">${STEPS.map(([key, name, step], index) => `<a href="#/video/${encode(project.id)}/${key}" ${key === selected ? 'aria-current="step"' : ''}><span class="step-name"><span class="step-number">${index + 1}</span>${name}</span>${badge(key === 'verification' ? verification : stepState(project, step))}</a>`).join('')}</nav><div id="step-content"></div>${advanced([[`p/${encode(project.id)}/script`, 'Texte avancé'], [`p/${encode(project.id)}/voice`, 'Voix avancée'], [`p/${encode(project.id)}/visuals`, 'Images avancées'], [`p/${encode(project.id)}/render`, 'Montage'], [`p/${encode(project.id)}/thumbs`, 'Miniatures']])}`;
+    main.innerHTML = `<div class="breadcrumbs"><a href="#/videos">Vidéos</a><span>/</span><a href="#/channels/${encode(project.profile_id || project.channel_id || '')}">${esc(profileName(project.profile_id || project.channel_id))}</a></div>${header(project.title || 'Sans titre', `${esc(durationLabel(project.duration_info))} · ${profileName(project.profile_id || project.channel_id)}`, `${badge(status.state, status.label)}<button class="icon-button" id="refresh-project" title="Actualiser ce projet" aria-label="Actualiser ce projet">${icon('refresh')}</button>`)}${project.error ? `<div class="banner error">${esc(project.error)}</div>` : ''}<nav class="steps" aria-label="Étapes de la vidéo">${STEPS.map(([key, name, step], index) => `<a href="#/video/${encode(project.id)}/${key}" ${key === selected ? 'aria-current="step"' : ''}><span class="step-name"><span class="step-number">${index + 1}</span>${name}</span>${badge(key === 'verification' ? verification : stepState(project, step))}</a>`).join('')}</nav><div id="step-content"></div>${advanced([[`p/${encode(project.id)}/script`, 'Texte avancé'], [`p/${encode(project.id)}/voice`, 'Voix avancée'], [`p/${encode(project.id)}/visuals`, 'Images avancées'], [`p/${encode(project.id)}/render`, 'Montage'], [`p/${encode(project.id)}/thumbs`, 'Miniatures']])}`;
     $('#refresh-project').onclick = (event) => action(event.currentTarget, () => route());
     if (project.style_name) $('.page-head p').textContent += ` · ${project.style_name}`;
     $('#refresh-project').insertAdjacentHTML('beforebegin', `<button id="rename-video" class="icon-button" title="Modifier le titre" aria-label="Modifier le titre">${icon('edit')}</button>`);
@@ -498,18 +527,76 @@
     });
   }
   function renderText() {
-    $('#step-content').innerHTML = `<form id="script-form" class="editor"><div class="page-head"><h2>Script</h2></div>${scriptImportMarkup('edit-script-file')}<label>Texte de narration<textarea name="text" class="script-editor" spellcheck="true">${esc(project.script || '')}</textarea></label><div class="form-actions"><button type="submit" class="primary">Enregistrer le texte</button></div>${project.voiceover_stale ? '<div class="banner">La voix correspond à une version antérieure du texte.</div>' : ''}</form><section class="section editor"><h2>Relecture du texte</h2>${scopeReview('script')}</section>`;
+    $('#step-content').innerHTML = `<form id="script-form" class="editor"><div class="page-head"><h2>Script</h2></div><label>Collez ou modifiez votre script<textarea name="text" class="script-editor" spellcheck="true" placeholder="Collez votre script complet ici.">${esc(project.script || '')}</textarea></label>${scriptImportMarkup('edit-script-file')}<div class="form-actions"><button type="submit">Enregistrer le texte</button><button type="submit" name="action" value="next" class="primary">Enregistrer et passer à la voix →</button></div>${project.voiceover_stale ? '<div class="banner">La voix correspond à une version antérieure du texte.</div>' : ''}</form>`;
     const input = $('[name="text"]');
     bindScriptImport($('#script-form'), '[name="text"]');
-    $('#script-form').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api(`/api/workspace/projects/${encode(project.id)}/script`, { method: 'PUT', body: { text: validateScript(input.value) } }); await route(); }, 'Texte enregistré.'); };
-    bindScopeReviews();
+    $('#script-form').onsubmit = (event) => { event.preventDefault(); const next = event.submitter?.value === 'next'; action(event.submitter, async () => { const text = validateScript(input.value); if (next && !text.trim()) throw new Error('Collez votre script pour passer à la voix.'); await api(`/api/workspace/projects/${encode(project.id)}/script`, { method: 'PUT', body: { text } }); dirty = false; if (next) location.hash = `/video/${encode(project.id)}/voix`; else await route(); }, 'Texte enregistré.'); };
   }
   function renderVoice() {
     const voice = project.voiceover;
     const url = mediaUrl('media', project.id, voice?.file);
     const step = project.steps?.voiceover || {};
-    $('#step-content').innerHTML = `${header('Voix', step.msg || '', badge(step.state || 'idle'))}${project.voiceover_stale ? '<div class="banner">La voix est à refaire : le texte a changé.</div>' : ''}${url ? `<audio controls preload="metadata" src="${esc(url)}"></audio><p class="muted small">Durée réelle : ${fmtTime(voice.duration)}</p><section class="section editor"><h2>Écoute et vérification</h2>${scopeReview('voiceover')}</section>` : '<div class="empty"><h2>Aucune voix enregistrée</h2><p>Le projet attend sa narration.</p></div>'}<dl class="definition-list"><div><dt>Voix du projet</dt><dd>${esc(project.settings?.voice?.voice_name || project.settings?.voice?.voice_id || 'Non définie')}</dd></div><div><dt>Langue</dt><dd>${esc(project.settings?.language || 'Non définie')}</dd></div></dl>`;
+    const chosen = project.settings?.voice || {};
+    const blocked = project.running || project.readonly || !project.script?.trim();
+    $('#step-content').innerHTML = `${header('Voix', step.msg || '', badge(step.state || 'idle'))}${project.voiceover_stale ? '<div class="banner">La voix est à refaire : le texte ou le choix de voix a changé.</div>' : ''}<form id="voice-form" class="editor"><fieldset ${blocked ? 'disabled' : ''}><label>Fournisseur vocal<select name="provider"><option value="algrow" ${chosen.provider !== 'ai33' ? 'selected' : ''}>Algrow · ElevenLabs</option><option value="ai33" ${chosen.provider === 'ai33' ? 'selected' : ''}>AI33 Pro · ElevenLabs</option></select></label><label>ID de voix ElevenLabs<input name="manual_voice_id" value="${esc(chosen.voice_id || '')}" placeholder="Collez l’ID ElevenLabs de votre voix" maxlength="200" required></label><label>Rechercher une voix<div class="actions"><input id="voice-search" placeholder="Nom de voix, accent…"><button id="search-voices" type="button">Rechercher</button></div></label><label>Voix<select name="voice_id">${chosen.voice_id ? `<option value="${esc(chosen.voice_id)}">${esc(chosen.voice_name || chosen.voice_id)} · voix enregistrée</option>` : '<option value="">Choisir une voix</option>'}</select></label><p id="voice-catalog-status" class="muted small" role="status">Chargement du catalogue…</p><audio id="voice-sample" controls preload="none" hidden></audio><label>Vitesse<input type="number" name="speed" min="0.7" max="1.2" step="0.05" value="${esc(chosen.speed || 1)}"></label><p class="muted small">Langue : ${esc(project.settings?.language || 'English')}. L’aperçu est celui du catalogue ; la génération lit votre script enregistré.</p><div class="form-actions"><button type="submit" name="action" value="save">Enregistrer la voix du projet</button><button type="submit" name="action" value="default">Garder cette voix pour la chaîne</button><button type="submit" name="action" value="generate" class="primary">${project.running ? 'Génération en cours…' : voice ? 'Refaire la narration' : 'Générer la narration'}</button></div></fieldset></form>${!project.script?.trim() ? '<p class="banner">Collez et enregistrez votre texte à l’étape Texte.</p>' : ''}${url ? `<section class="section"><h2>Narration ${esc(voice.voice || '')}</h2><audio controls preload="metadata" src="${esc(url)}"></audio><p class="muted small">${project.voiceover_stale ? 'Durée de l’ancienne voix' : 'Durée réelle'} : ${fmtTime(voice.duration)}</p></section><section class="section editor"><h2>Écoute et vérification</h2>${scopeReview('voiceover')}</section>` : ''}<div class="form-actions"><a class="button" href="#/video/${encode(project.id)}/texte">← Texte</a>${url && !project.voiceover_stale && !project.running ? `<a class="button primary" href="#/video/${encode(project.id)}/images">Passer aux images →</a>` : ''}</div>`;
+    const id = project.id;
+    const form = $('#voice-form');
+    const select = $('[name="voice_id"]', form);
+    const manual = $('[name="manual_voice_id"]', form);
+    const provider = $('[name="provider"]', form);
+    let entries = [];
+    let request = 0;
+    const showSample = () => {
+      const sample = $('#voice-sample');
+      const raw = entries.find((v) => v.id === select.value)?.preview_url;
+      let src = '';
+      try { const u = new URL(raw); if (u.protocol === 'https:' && !u.username && !u.password) src = u.href; } catch {}
+      sample.hidden = !src;
+      if (src) sample.src = src; else sample.removeAttribute('src');
+    };
+    const loadVoices = async () => {
+      const token = ++request;
+      const status = $('#voice-catalog-status');
+      status.textContent = 'Chargement du catalogue…';
+      try {
+        const result = await api(`/api/workspace/voices?language=${encode(project.settings?.language || 'English')}&provider=${encode(provider.value)}&search=${encode($('#voice-search').value)}`);
+        if (request !== token || project.id !== id || !form.isConnected) return;
+        const current = { id: select.value, name: select.selectedOptions[0]?.textContent || chosen.voice_name };
+        entries = result.voices || [];
+        const options = current.id && !entries.some((v) => v.id === current.id) ? [current, ...entries] : entries;
+        select.innerHTML = `<option value="">Choisir une voix</option>${options.map((v) => `<option value="${esc(v.id)}">${esc(v.name)}${v.accent ? ` · ${esc(v.accent)}` : ''}</option>`).join('')}`;
+        select.value = current.id || '';
+        status.textContent = entries.length ? `${entries.length} voix disponibles. Sélectionnez une voix pour écouter son aperçu.` : 'Aucune voix trouvée. Essayez une autre recherche.';
+        showSample();
+      } catch (error) { if (form.isConnected && request === token) status.textContent = error.message; }
+    };
+    $('#search-voices').onclick = loadVoices;
+    $('#voice-search').onkeydown = (event) => { if (event.key === 'Enter') { event.preventDefault(); loadVoices(); } };
+    select.onchange = () => { manual.value = select.value; showSample(); };
+    manual.oninput = () => { select.value = manual.value.trim(); showSample(); };
+    provider.onchange = loadVoices;
+    form.onsubmit = (event) => {
+      event.preventDefault();
+      const mode = event.submitter?.value;
+      action(event.submitter, async () => {
+        if (!form.reportValidity()) return;
+        const vid = manual.value.trim();
+        const body = { provider: provider.value, voice_id: vid, voice_name: entries.find((v) => v.id === vid)?.name || (vid === chosen.voice_id ? chosen.voice_name : vid) || vid, speed: Number($('[name="speed"]', form).value) };
+        const suffix = mode === 'generate' ? '/generate' : mode === 'default' ? '/channel-default' : '';
+        if (mode === 'generate') body.script_hash = project.script_hash;
+        await api(`/api/workspace/projects/${encode(id)}/voice${suffix}`, { method: mode === 'save' ? 'PUT' : 'POST', body });
+        dirty = false; await route();
+      }, mode === 'generate' ? 'Génération de la narration lancée.' : mode === 'default' ? 'Voix sauvegardée pour les prochaines vidéos de la chaîne.' : 'Voix du projet enregistrée.');
+    };
+    loadVoices();
+    form.insertAdjacentHTML('beforebegin', voiceProgressMarkup(project));
     bindScopeReviews();
+  }
+  function voiceProgressMarkup(p) {
+    const info = voiceProgressInfo(p);
+    if (!info.active) return '<div id="voice-progress"></div>';
+    const elapsed = info.started ? Math.max(0, Date.now() / 1000 - info.started) : 0;
+    return `<section id="voice-progress" class="voice-progress" aria-label="Génération de la narration"><div class="inline"><strong>Narration en cours</strong><span data-voice-elapsed data-started="${info.started || ''}">Temps écoulé : ${fmtTime(elapsed)}</span></div><progress max="100" ${info.percent !== null ? `value="${info.percent}"` : ''} aria-label="Progression de la voix"></progress><p class="small" role="status">${esc(p.steps?.voiceover?.msg || 'Synthèse vocale…')}${info.percent !== null ? ` · ${Math.round(info.percent)} %` : ''}</p><p class="muted small">${info.percent === null ? 'Le fournisseur ne transmet pas encore de pourcentage. ' : ''}La narration et sa durée réelle apparaîtront automatiquement ici.</p></section>`;
   }
   function sceneReferences(scene) {
     if (scene.display_references?.length) return scene.display_references;
@@ -652,8 +739,8 @@
     const status = projectStatus(project);
     $('#step-content').innerHTML = `${header('Export', '', badge(status.state, status.label))}${project.technical_issues?.length ? `<div class="banner"><h3>Contrôles techniques à terminer</h3><ul>${project.technical_issues.map((issue) => `<li>${esc(issue)}</li>`).join('')}</ul></div>` : ''}${url ? `<video controls preload="metadata" src="${esc(url)}"></video><div class="actions"><a class="button" href="${esc(url)}" download>${icon('download')}Télécharger le rendu</a>${srt ? `<a class="button" href="${esc(srt)}" download>${icon('download')}Sous-titres</a>` : ''}</div>${project.publication_ready !== true ? '<div class="banner">Rendu disponible. La vérification avant publication reste à terminer.</div>' : '<div class="banner good">Validation avant publication enregistrée.</div>'}<section class="section editor"><h2>Vérification du rendu</h2>${scopeReview('render')}</section>` : '<div class="empty"><h2>Aucun rendu disponible</h2><p>Le projet attend son montage et son export.</p></div>'}<section class="section"><h2>Modèles du projet</h2><dl class="definition-list"><div><dt>Texte</dt><dd>${esc(project.model_snapshot?.text_model || project.settings?.script?.model || 'Non renseigné')}</dd></div><div><dt>Images</dt><dd>${esc(project.model_snapshot?.image_model || project.settings?.visuals?.image_model || 'Non renseigné')}</dd></div></dl></section>`;
     bindScopeReviews();
-    const ready = project.technical_ready && project.scenes?.length && project.scenes.every((s) => s.human_review?.state === 'verified') && ['script', 'voiceover'].every((scope) => project.human_reviews?.[scope]?.state === 'verified');
-    $('#step-content').insertAdjacentHTML('afterbegin', `<section class="section"><h2>Montage de la vidéo</h2><button id="render-video" type="button" class="primary" ${!ready || project.running ? 'disabled' : ''}>${project.running ? 'Montage en cours…' : 'Générer le montage vidéo'}</button>${!ready ? '<p class="small muted">Préparez la voix et les timings, puis vérifiez le texte, la voix et toutes les images pour lancer le montage.</p>' : ''}</section>`);
+    const ready = project.technical_ready && project.scenes?.length && project.scenes.every((s) => s.human_review?.state === 'verified') && project.human_reviews?.voiceover?.state === 'verified';
+    $('#step-content').insertAdjacentHTML('afterbegin', `<section class="section"><h2>Montage de la vidéo</h2><button id="render-video" type="button" class="primary" ${!ready || project.running ? 'disabled' : ''}>${project.running ? 'Montage en cours…' : 'Générer le montage vidéo'}</button>${!ready ? '<p class="small muted">Préparez la voix et les timings, puis vérifiez la voix et toutes les images pour lancer le montage.</p>' : ''}</section>`);
     $('#render-video').onclick = (event) => action(event.currentTarget, async () => {
       if (dirty) throw new Error('Enregistrez vos notes avant de lancer le montage.');
       await api(`/api/workspace/projects/${encode(project.id)}/render`, { method: 'POST' }); await route();
@@ -669,11 +756,11 @@
   }
   function channelFields(c = {}) {
     const languages = {English: 'Anglais', French: 'Français', Spanish: 'Espagnol', German: 'Allemand', Italian: 'Italien', Portuguese: 'Portugais', Japanese: 'Japonais'};
-    return '<div class="form-grid"><label>Nom de la chaîne<input name="name" value="' + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + '" placeholder="@MaChaine" maxlength="100"></label><label>Langue<select name="language">' + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label><label>Durée cible (minutes)<input name="target_minutes" type="number" min="20" max="25" step="0.5" value="' + (c.target_minutes || 22) + '" required></label><label class="full">Style par défaut<select name="style_id" required>' + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? '<option value="" selected>Style archivé · choisir un style actif</option>' : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label class="full">Univers et époque<textarea name="setting" rows="3">' + esc(c.setting || '') + '</textarea></label><label class="full">Description de la chaîne<textarea name="description" rows="3">' + esc(c.description || '') + '</textarea></label></div>';
+    return '<div class="form-grid"><label>Nom de la chaîne<input name="name" value="' + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + '" placeholder="@MaChaine" maxlength="100"></label><label>Langue<select name="language">' + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label><label>Durée cible (minutes)<input name="target_minutes" type="number" min="20" max="25" step="0.5" value="' + (c.target_minutes || 22) + '" required></label><label class="full">Style par défaut<select name="style_id" required>' + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? '<option value="" selected>Style archivé · choisir un style actif</option>' : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label>Fournisseur vocal<select name="voice_provider"><option value="algrow"' + (c.voice?.provider !== 'ai33' ? ' selected' : '') + '>Algrow · ElevenLabs</option><option value="ai33"' + (c.voice?.provider === 'ai33' ? ' selected' : '') + '>AI33 Pro · ElevenLabs</option></select></label><label>ID de voix ElevenLabs<input name="voice_id" value="' + esc(c.voice?.voice_id || '') + '" placeholder="ID de voix propre à cette chaîne" maxlength="200" required></label><label class="full">Univers et époque<textarea name="setting" rows="3">' + esc(c.setting || '') + '</textarea></label><label class="full">Description de la chaîne<textarea name="description" rows="3">' + esc(c.description || '') + '</textarea></label></div>';
   }
   function channelBody(form) {
     const fields = new FormData(form);
-    return {name: fields.get('name'), handle: fields.get('handle'), language: fields.get('language'), target_minutes: Number(fields.get('target_minutes')), style_id: fields.get('style_id'), setting: fields.get('setting'), description: fields.get('description')};
+    return {name: fields.get('name'), handle: fields.get('handle'), language: fields.get('language'), target_minutes: Number(fields.get('target_minutes')), style_id: fields.get('style_id'), setting: fields.get('setting'), description: fields.get('description'), voice: {provider: fields.get('voice_provider'), voice_id: fields.get('voice_id'), voice_name: fields.get('voice_id') === form.dataset.savedVoiceId ? form.dataset.savedVoiceName : fields.get('voice_id'), speed: Number(form.dataset.savedVoiceSpeed || 1)}};
   }
   function managementDialog(title, fields, submit) {
     if (dirty) { notify('Enregistrez vos modifications avant de continuer.', true); return; }
@@ -730,6 +817,9 @@
       return;
     }
     $('#channel-content').innerHTML = '<div class="management-editor"><form id="channel-settings"><h2>Identité et réglages</h2>' + channelFields(profile) + '<div class="form-actions"><button type="submit" class="primary">Enregistrer la chaîne</button></div></form><aside><h2>Aperçus actuels</h2><figure>' + preview(profilePreview(profile, 'video'), 'Style vidéo') + '<figcaption>Vidéo · ' + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), 'Miniature') + '<figcaption>Miniature · proposition à valider</figcaption></figure><a class="button" href="#/styles/' + encode(profile.style_id) + '">' + icon('edit') + 'Modifier ce style</a></aside></div><section class="section"><h2>Statut de la chaîne</h2><div class="inline">' + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? 'Archivée' : 'Active') + '<button id="archive-channel">' + (profile.archived ? 'Restaurer' : 'Archiver la chaîne') + '</button></div></section>';
+    $('#channel-settings').dataset.savedVoiceId = profile.voice?.voice_id || '';
+    $('#channel-settings').dataset.savedVoiceName = profile.voice?.voice_name || profile.voice?.voice_id || '';
+    $('#channel-settings').dataset.savedVoiceSpeed = profile.voice?.speed || 1;
     $('#channel-settings').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api('/api/workspace/management/channels/' + encode(profile.id), {method:'PUT', body:channelBody(event.target)}); await route(); }, 'Chaîne enregistrée.'); };
     $('#archive-channel').onclick = () => archiveManaged('channels', profile, !profile.archived);
   }
@@ -817,6 +907,26 @@
     if (link && dirty && !window.confirm('Quitter cette page sans enregistrer les modifications ?')) event.preventDefault();
   });
   let batchPolling = false;
+  let voicePolling = false;
+  setInterval(async () => {
+    const parts = routeParts();
+    if (voicePolling || document.hidden || submitting || dirty || parts[0] !== 'video' || parts[2] !== 'voix' || !project?.running) return;
+    voicePolling = true;
+    const id = project.id;
+    try {
+      const latest = await api(`/api/workspace/projects/${encode(id)}`);
+      if (routeParts()[1] !== id || routeParts()[2] !== 'voix' || dirty) return;
+      const finished = !latest.running || latest.steps?.voiceover?.state !== project.steps?.voiceover?.state;
+      project = latest;
+      if (finished) { renderProject('voix'); bindFormState(); }
+      else if ($('#voice-progress')) $('#voice-progress').outerHTML = voiceProgressMarkup(latest);
+    } catch { /* Read again on the next tick without launching another synthesis. */ }
+    finally { voicePolling = false; }
+  }, 3000);
+  setInterval(() => {
+    const timer = $('[data-voice-elapsed]');
+    if (timer && timer.dataset.started) timer.textContent = `Temps écoulé : ${fmtTime(Math.max(0, Date.now() / 1000 - Number(timer.dataset.started)))}`;
+  }, 1000);
   setInterval(async () => {
     const parts = routeParts();
     if (batchPolling || document.hidden || submitting || parts[0] !== 'video' || !['images', 'verification'].includes(parts[2]) || !['queued', 'running', 'stopping'].includes(project?.workspace_batch?.state)) return;

@@ -62,6 +62,6 @@ def test_theme_catalog_replacement_preserves_projects_and_old_reference_paths(wo
     custom = client.post("/api/workspace/management/styles", json={"name": "Later custom style", "prompt": "Custom."})
     assert custom.status_code == 201
     assert client.post("/api/workspace/management/channels", json={"name": "Later channel",
-        "style_id": "fictional-pokemon"}).status_code == 201
+        "style_id": "fictional-pokemon", "voice": {"voice_id": "fixture-channel-voice"}}).status_code == 201
     assert visuals.activate(tmp_path / "studio") == policy
     assert custom.json()["id"] in {s["id"] for s in api._styles()}

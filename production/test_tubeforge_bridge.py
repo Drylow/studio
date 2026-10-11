@@ -37,6 +37,23 @@ class BridgeTests(unittest.TestCase):
                 bridge.voice({'text': 'Too short.', 'settings': {}})
             provider.assert_not_called()
 
+    def test_ai33_voice_uses_separate_cache_and_exact_text(self):
+        text = 'Exact ElevenLabs narration.'
+        with tempfile.TemporaryDirectory() as directory:
+            job = {'text': text, 'settings': {'voice_id': 'fixture-voice', 'provider': 'ai33'},
+                   'workdir': directory, 'output': str(Path(directory) / 'voice.mp3')}
+            def synthesize(script, destination, **kwargs):
+                self.assertEqual(script, text)
+                self.assertEqual(kwargs['provider'], 'ai33')
+                Path(destination).write_bytes(b'audio fixture')
+                return {'words': [{'w': w, 's': i, 'e': i + 1} for i, w in enumerate(text.split())]}
+            with patch.object(bridge.tts, 'synthesize', side_effect=synthesize) as provider, \
+                    patch.object(bridge.media, 'duration', return_value=3):
+                result = bridge.voice(job)
+                self.assertEqual(result['provider'], 'ai33')
+                self.assertEqual(bridge.voice(job), result)
+                self.assertEqual(provider.call_count, 1)
+
     def test_render_rejects_changed_audio(self):
         with patch.object(bridge.media, 'duration', return_value=11), \
                 patch.object(bridge.render_ovni, 'render_video') as renderer:
