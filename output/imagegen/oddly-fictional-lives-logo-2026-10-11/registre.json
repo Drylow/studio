@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-11",
+  "channel_name": "Oddly Fictional Lives",
+  "provider": "google_flow_via_useapi",
+  "prompt_author": "Codex",
+  "prompt": "logo-prompt.txt",
+  "image": "logo.jpg",
+  "image_sha256": "a515e184bbf40910fa1997f2cb9d3df7192d5aba45e580b6a9b06c109e4af172",
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "reference_order": [
+    {
+      "path": "references/oddly-specific-lives-logo.jpg",
+      "role": "actual_user_owned_sister_channel_avatar",
+      "source": "https://www.youtube.com/@OddlySpecificLives",
+      "sha256": "4c99791ae6d87fa86df30b97d0987cdcc47d473ae5e1a222b72500afc6d33a1d"
+    }
+  ],
+  "seconds": 31.16,
+  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "user_approval": false,
+  "uploaded_to_youtube": false,
+  "visual_review": "RELECTURE.txt",
+  "avatar_check_sizes": [
+    48,
+    96,
+    128
+  ]
+}

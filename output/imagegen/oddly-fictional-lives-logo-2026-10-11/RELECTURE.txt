@@ -1,0 +1,27 @@
+LOGO ODDLY FICTIONAL LIVES — PROPOSITION DU 11 OCTOBRE 2026
+
+Reference inspectee : avatar reel de la chaine Oddly Specific Lives, recupere
+via les metadonnees publiques de la chaine et envoye en reference unique.
+Le nom Oddly Fictional Lives est choisi par l'utilisateur.
+
+Le logo genere et les apercus de controle ont ete regardes par Codex.
+Ressemblance de famille : tete ronde blanche dominante, paupieres horizontales
+noires, yeux ovales noirs et petite bouche descendante ; expression blasee
+proche de la reference. Fond presque noir, ombre grise discrete sur la tete.
+Difference : un anneau violet avec un petit accent cyan, evocateur d'autres
+univers. Pas de texte, de corps, d'arme ni de symbole d'une franchise.
+
+Ecart au prompt : l'anneau passe en partie devant la partie inferieure de la
+tete au lieu de rester entierement derriere. Il ne masque ni yeux ni bouche.
+Le resultat reste une proposition de logo lisible et apparentable a la chaine
+soeur ; aucune identite exacte des formes ou pixels n'est revendiquee.
+
+Controle technique : JPEG carre de 1024 x 1024, fichier verifie et empreinte
+conservee. Controle visuel en recadrage circulaire a 48, 96 et 128 pixels :
+le visage et l'expression restent reconnaissables. Les extremites exterieures
+de l'anneau sont coupees par le cercle, mais les arcs et l'accent cyan restent
+visibles. Les apercus sont dans le dossier de travail prive.
+
+Une generation via le fournisseur deja configure pour les images de cette
+chaine. Prompt exact et reference conserves. Aucun logo precedent ecrase.
+Pas encore valide par l'utilisateur et pas installe sur YouTube.
