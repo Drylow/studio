@@ -404,6 +404,281 @@ def test_corrections_require_reviewed_preview_before_any_request(workspace, monk
     request.assert_not_awaited()
 
 
+def concurrent_project(workspace, monkeypatch, phase="remaining", provider="google_flow"):
+    _, p, data = batch_project(workspace, preview_ready=phase != "preview")
+    p["model_snapshot"]["image_provider"] = provider
+    template = copy.deepcopy(p["scenes"][-1])
+    for i, sid in enumerate([11, 12, 13], 7):
+        p["scenes"].append(dict(template, id=sid, text=f"Action {i}.", prompt=f"Authored scene {i}.",
+                                image=None, start=i * 6, end=(i + 1) * 6))
+    p["script"] = " ".join(shot["text"] for shot in p["scenes"])
+    if phase != "preview":
+        for shot in p["scenes"][:3]:
+            shot["human_review"] = {"state": "verified", "evidence": api._scene_evidence(p, shot)}
+    if phase == "corrections":
+        for shot in p["scenes"][3:]:
+            shot.update(image="previous.png", workspace_regeneration_required=True,
+                        generation_receipt={"id": "old-" + str(shot["id"])})
+    store.save_project(p)
+    monkeypatch.setattr(generation.google_flow, "configured", lambda: True)
+    return p, data
+
+
+async def turns_until(predicate):
+    # Deterministic event-loop yielding, no wall-clock waits or real network calls.
+    for _ in range(100):
+        if predicate():
+            return
+        await asyncio.sleep(0)
+    raise AssertionError("Expected mocked task transition did not happen")
+
+
+def test_flow_batch_bounded_three_reverse_results_preserve_all_receipts_and_pilot_reviews(workspace, monkeypatch):
+    p, data = concurrent_project(workspace, monkeypatch, "corrections")
+    active, maximum = 0, 0
+    entered, releases, returned = {}, {}, []
+
+    async def image(prompt, **kwargs):
+        nonlocal active, maximum
+        active += 1
+        maximum = max(maximum, active)
+        entered[prompt].set()
+        assert kwargs["provider"] == "google_flow" and kwargs["attempts"] == 1
+        assert kwargs["model"] == p["model_snapshot"]["image_model"] and len(kwargs["refs"]) == 1
+        kwargs["receipt"]["account"] = prompt
+        try:
+            await releases[prompt].wait()
+            returned.append(prompt)
+            return data
+        finally:
+            active -= 1
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        prompts = [shot["prompt"] for shot in p["scenes"][3:]]
+        entered.update({prompt: asyncio.Event() for prompt in prompts})
+        releases.update({prompt: asyncio.Event() for prompt in prompts})
+        await generation.start_batch(p["id"], batch_body(p, "corrections"))
+        batch = generation._batch_tasks[p["id"]]
+        await asyncio.gather(*(entered[prompt].wait() for prompt in prompts[:3]))
+        assert active == 3 and request.await_count == 3
+        for early, replacement in [(2, 3), (1, 4), (0, 5)]:
+            releases[prompts[early]].set()
+            await entered[prompts[replacement]].wait()
+            assert active == 3
+        for prompt in prompts:
+            releases[prompt].set()
+        await batch
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    assert maximum == 3 and active == 0
+    assert returned[:3] == [p["scenes"][i]["prompt"] for i in (5, 4, 3)]
+    assert request.await_count == 7
+    job = latest["workspace_batch"]
+    assert job["state"] == "done" and job["done"] == job["processed"] == 7
+    assert job["current_scene_ids"] == [] and job["concurrency"] == 3
+    paths = []
+    for shot in latest["scenes"][3:]:
+        receipt = shot["generation_receipt"]
+        assert receipt["prompt"] == shot["prompt"] and receipt["provider_receipt"]["account"] == shot["prompt"]
+        assert receipt["previous_image"]["generation_receipt"] == {"id": "old-" + str(shot["id"])}
+        assert len(shot["generation_history"]) == 1 and shot["human_review"]["state"] == "unreviewed"
+        assert latest["workspace_generations"][str(shot["id"])]["state"] == "generated_unreviewed"
+        paths.append(shot["image"])
+    assert len(set(paths)) == 7 and all((store.project_dir(p["id"]) / path).exists() for path in paths)
+    assert all(shot["image"] == "previous.png" and shot["human_review"]["state"] == "verified"
+               for shot in latest["scenes"][:3])
+    assert p["id"] not in generation._active_projects and not generation._other_generations(p["id"])
+
+
+@pytest.mark.parametrize("provider,phase", [("google_flow", "preview"), ("cli_proxy", "remaining")])
+def test_preview_and_cli_batches_remain_sequential(workspace, monkeypatch, provider, phase):
+    p, data = concurrent_project(workspace, monkeypatch, phase, provider)
+    active, maximum = 0, 0
+
+    async def image(*args, **kwargs):
+        nonlocal active, maximum
+        active += 1
+        maximum = max(maximum, active)
+        await asyncio.sleep(0)
+        active -= 1
+        return data
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        await generation.start_batch(p["id"], batch_body(p, phase))
+        await generation._batch_tasks[p["id"]]
+
+    asyncio.run(run())
+    assert maximum == 1 and active == 0
+    assert store.get_project(p["id"])["workspace_batch"]["concurrency"] == 1
+    assert request.await_count == (3 if phase == "preview" else 7)
+
+
+@pytest.mark.parametrize("action", ["stop", "cancel"])
+def test_flow_batch_stop_closes_admission_and_waits_for_three_live_calls(workspace, monkeypatch, action):
+    p, data = concurrent_project(workspace, monkeypatch)
+    active, entered_count, cancelled = 0, 0, []
+
+    async def image(*args, **kwargs):
+        nonlocal active, entered_count
+        active += 1
+        entered_count += 1
+        if entered_count == 3:
+            entered.set()
+        try:
+            await release.wait()
+            return data
+        except asyncio.CancelledError:
+            cancelled.append(True)
+            raise
+        finally:
+            active -= 1
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+    entered = release = None
+
+    async def run():
+        nonlocal entered, release
+        entered, release = asyncio.Event(), asyncio.Event()
+        await generation.start_batch(p["id"], batch_body(p, "remaining"))
+        batch = generation._batch_tasks[p["id"]]
+        await entered.wait()
+        current = api._project(p["id"])
+        if action == "stop":
+            generation._update_batch(p["id"], current["workspace_batch"]["id"], stop_requested=True, state="stopping")
+        else:
+            batch.cancel()
+            await asyncio.sleep(0)
+        assert generation.batch_running(p["id"]) and active == 3
+        with pytest.raises(HTTPException):
+            await generation.generate(p["id"], 11, {})
+        with pytest.raises(HTTPException):
+            api._project(p["id"], writable=True)
+        release.set()
+        await batch
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    assert latest["workspace_batch"]["state"] == ("stopped" if action == "stop" else "interrupted")
+    assert latest["workspace_batch"]["done"] == latest["workspace_batch"]["processed"] == 3
+    assert request.await_count == 3 and active == 0 and not cancelled
+    assert all(shot["image"] for shot in latest["scenes"][3:6])
+    assert all(not shot["image"] for shot in latest["scenes"][6:])
+    assert not generation.batch_running(p["id"]) and p["id"] not in generation._active_projects
+
+
+@pytest.mark.parametrize("phase", ["remaining", "corrections"])
+def test_parallel_quota_failure_no_retry_remaining_stops_corrections_continue(workspace, monkeypatch, phase):
+    p, data = concurrent_project(workspace, monkeypatch, phase)
+    entered_count = 0
+    first_prompt = p["scenes"][3]["prompt"]
+
+    async def image(prompt, **kwargs):
+        nonlocal entered_count
+        entered_count += 1
+        if entered_count == 3:
+            entered.set()
+        if prompt == first_prompt:
+            await fail.wait()
+            raise generation.google_flow.FlowError("Quota ou cadence Google Flow atteint.", 429)
+        await finish.wait()
+        return data
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+    entered = fail = finish = None
+
+    async def run():
+        nonlocal entered, fail, finish
+        entered, fail, finish = asyncio.Event(), asyncio.Event(), asyncio.Event()
+        await generation.start_batch(p["id"], batch_body(p, phase))
+        batch = generation._batch_tasks[p["id"]]
+        await entered.wait()
+        fail.set()
+        await turns_until(lambda: bool(store.get_project(p["id"])["workspace_batch"]["failed_scene_ids"]))
+        if phase == "remaining":
+            assert request.await_count == 3
+        finish.set()
+        await batch
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    job = latest["workspace_batch"]
+    assert job["state"] == ("failed" if phase == "remaining" else "done_with_errors")
+    assert job["done"] == (2 if phase == "remaining" else 6)
+    assert job["processed"] == request.await_count == (3 if phase == "remaining" else 7)
+    assert job["failed_scene_ids"] == [21] and "Quota" in job["scene_errors"]["21"]
+    assert sum(call.args[0] == first_prompt for call in request.await_args_list) == 1
+    if phase == "corrections":
+        assert latest["scenes"][3]["image"] == "previous.png"
+        assert latest["scenes"][3]["workspace_regeneration_required"] is True
+        assert latest["scenes"][3]["generation_receipt"] == {"id": "old-21"}
+    else:
+        assert all(not shot["image"] for shot in latest["scenes"][6:])
+
+
+@pytest.mark.parametrize("change", ["prompt", "reference", "missing-reference", "model", "invalid-registry", "preview-review"])
+def test_parallel_input_change_stops_admission_and_preserves_each_started_result(workspace, monkeypatch, change):
+    p, data = concurrent_project(workspace, monkeypatch, "corrections")
+    entered_count = 0
+
+    async def image(*args, **kwargs):
+        nonlocal entered_count
+        entered_count += 1
+        if entered_count == 3:
+            entered.set()
+        await release.wait()
+        return data
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+    entered = release = None
+
+    async def run():
+        nonlocal entered, release
+        entered, release = asyncio.Event(), asyncio.Event()
+        await generation.start_batch(p["id"], batch_body(p, "corrections"))
+        batch = generation._batch_tasks[p["id"]]
+        await entered.wait()
+        current = api._project(p["id"])
+        if change == "prompt":
+            current["scenes"][-1]["prompt"] = "Changed unopened shot during requests."
+        elif change == "reference":
+            Image.new("RGB", (32, 18), "red").save(store.project_dir(p["id"]) / "reference.png")
+        elif change == "missing-reference":
+            (store.project_dir(p["id"]) / "reference.png").unlink()
+        elif change == "model":
+            current["model_snapshot"]["image_model"] = "other-fixture-image"
+        elif change == "invalid-registry":
+            current["workspace_cast_registry"] = {"Atreus": {"variants": None}}
+        else:
+            current["scenes"][0]["human_review"] = {"state": "unreviewed"}
+        store.save_project(current)
+        release.set()
+        await batch
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    assert latest["workspace_batch"]["state"] == "failed" and request.await_count == 3
+    assert latest["workspace_batch"]["processed"] == 3
+    assert all(shot["image"] == "previous.png" for shot in latest["scenes"][6:])
+    if change in ("reference", "missing-reference", "model", "invalid-registry"):
+        assert all(shot["image"] == "previous.png" and shot["workspace_regeneration_required"] is True
+                   for shot in latest["scenes"][3:6])
+        assert len(latest["workspace_generation_history"]) == 3
+        assert all(receipt["state"] == "obsolete_unselected" for receipt in latest["workspace_generation_history"])
+        assert len({receipt["image"]["path"] for receipt in latest["workspace_generation_history"]}) == 3
+    else:
+        assert all(shot["image"] != "previous.png" for shot in latest["scenes"][3:6])
+
+
 def test_failure_stops_without_retry_and_resume_skips_successes(workspace, monkeypatch):
     _, p, data = batch_project(workspace)
     request = AsyncMock(side_effect=[data, RuntimeError("private failure"), data, data])

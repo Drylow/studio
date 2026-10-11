@@ -63,8 +63,11 @@ def _project(pid, writable=False):
     p = store.get_project(_identifier(pid))
     if not p or not p.get("codex_directed"):
         raise HTTPException(404, "Projet dirigé par Codex introuvable")
-    if writable and pipeline.is_running(pid):
-        raise HTTPException(409, "Une tâche est en cours sur ce projet")
+    if writable:
+        from . import workspace_generation as generation
+        if (pipeline.is_running(pid) or generation.batch_running(pid)
+                or pid in generation._active_projects):
+            raise HTTPException(409, "Une tâche est en cours sur ce projet")
     return copy.deepcopy(p)
 
 

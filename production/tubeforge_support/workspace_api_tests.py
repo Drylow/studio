@@ -85,6 +85,22 @@ def create(client, **changes):
     return response.json()
 
 
+@pytest.mark.parametrize('busy', ['batch', 'scene'])
+def test_project_writes_blocked_during_image_execution(workspace, monkeypatch, busy):
+    if DEPLOYED:
+        from app import workspace_generation as generation
+    else:
+        from tubeforge_support import workspace_generation as generation
+    client = workspace[0]
+    p = create(client, custom_script='Original supplied script.')
+    monkeypatch.setattr(generation, 'batch_running', lambda pid: busy == 'batch' and pid == p['id'])
+    monkeypatch.setattr(generation, '_active_projects', {p['id']} if busy == 'scene' else set())
+    with pytest.raises(Exception) as rejected:
+        api._project(p['id'], writable=True)
+    assert rejected.value.status_code == 409
+    assert api._project(p['id'])['script'] == 'Original supplied script.'
+
+
 def test_pasted_script_duration_is_estimated_and_target_is_ignored(workspace):
     client = workspace[0]
     script = '  ' + 'word '.join(['word'] * 145) + '\n'
