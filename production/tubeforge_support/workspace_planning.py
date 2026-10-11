@@ -132,9 +132,10 @@ async def prepare(p):
                 if (not isinstance(row.get("prompt"), str) or len(row["prompt"].strip()) < 80
                         or not isinstance(row.get("location_id"), str) or not row["location_id"].strip()
                         or not isinstance(row.get("characters"), list)
-                        or any(not isinstance(c, str) or not c.strip() for c in row["characters"])):
+                        or any(not isinstance(c, str) or not c.strip() for c in row["characters"])
+                        or len({c.strip().casefold() for c in row["characters"]}) != len(row["characters"])):
                     raise ValueError("Incomplete storyboard response")
-                prompt = composition.compose(row["prompt"], style.get("visuals", {}).get("art_style", ""))
+                prompt = composition.compose(row["prompt"], style.get("visuals", {}).get("art_style", ""), row["characters"])
                 if composition.contradictory(prompt):
                     raise ValueError("Contradictory image composition")
                 selected_refs = refs

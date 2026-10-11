@@ -253,6 +253,7 @@ def test_explicit_era_references_are_required_and_preserved(workspace, monkeypat
     assert all(s["references"] == [dict(ref, owner="style")] for s in p["scenes"])
     assert all("#FFFFFF" in s["prompt"] and "NO eyebrows" in s["prompt"] for s in p["scenes"])
     assert all("Kratos" not in s["prompt"] for s in p["scenes"])
+    assert all("Exactly ONE person in the ENTIRE image" in s["prompt"] for s in p["scenes"])
     p["scenes"] = []
     monkeypatch.setattr(llm, "chat", AsyncMock(return_value=answer(shots)))
     with pytest.raises(RuntimeError):
@@ -264,12 +265,23 @@ def test_explicit_era_references_are_required_and_preserved(workspace, monkeypat
 
 
 @pytest.mark.parametrize("prompt", ["Use a vertical composition.", "A translucent warrior reaches out.",
-                                   "The family appears as a distant memory."])
+                                   "The family appears as a distant memory.", "Draw two copies of the protagonist."])
 def test_contradictory_composition_never_publishes_a_plan(workspace, monkeypatch, prompt):
     p = fictional(workspace)
     _, _, _, shots = planning.inputs(p)
     response = json.loads(answer(shots))
     response["shots"][0]["prompt"] += " " + prompt
+    monkeypatch.setattr(llm, "chat", AsyncMock(return_value=json.dumps(response)))
+    with pytest.raises(RuntimeError):
+        asyncio.run(planning.prepare(p))
+    assert not p["scenes"]
+
+
+def test_duplicate_cast_is_rejected_before_publishing(workspace, monkeypatch):
+    p = fictional(workspace)
+    _, _, _, shots = planning.inputs(p)
+    response = json.loads(answer(shots))
+    response["shots"][0]["characters"] = ["Kratos", " KRATOS "]
     monkeypatch.setattr(llm, "chat", AsyncMock(return_value=json.dumps(response)))
     with pytest.raises(RuntimeError):
         asyncio.run(planning.prepare(p))

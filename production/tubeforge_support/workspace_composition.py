@@ -2,6 +2,18 @@
 import re
 
 
+CAST_RULES = (
+    "IDENTITY COUNT: Each named individual exists exactly ONCE in the entire image. "
+    "If the protagonist is present, draw exactly ONE protagonist body and ONE protagonist "
+    "head. The character reference depicts that SAME individual; it never adds another person. "
+    "Other characters must have their own distinct costumes and markings; NEVER give another "
+    "character the protagonist's red face stripe or identical hero outfit. Show one moment "
+    "from one viewpoint. No clones, doubles, younger-and-older copies, mirror/reflection copies, "
+    "dream versions, inset portraits or background duplicates of the same individual. "
+    "Do not add the reference avatar to a scene whose cast excludes the protagonist. "
+)
+
+
 RULES = (
     "ONE WIDE LANDSCAPE 16:9 illustration, a single physical scene filling the entire canvas "
     "edge to edge. Compose across the full width with readable environment on both sides. "
@@ -23,15 +35,27 @@ RULES = (
     "identities, floating face portraits, superimposed memories, spectral copies, collages, "
     "inset panels, letterboxing, blurred sidebars or filler borders. A past event is drawn as "
     "a normal physical scene, never as a translucent overlay. No captions or watermarks. "
-)
+) + CAST_RULES
 
 
-def compose(scene, style=""):
+def cast_rules(characters):
+    """Record identity counts while authoring, never change a prompt during execution."""
+    if characters == ["Kratos"]:
+        return (CAST_RULES + "SOLO CAST: Exactly ONE person in the ENTIRE image: the round-white-headed "
+                "warrior protagonist. One body, one head, two arms and two hands total. No other "
+                "people anywhere, including the background, doorway, bed, reflections or pictures. ")
+    cast = "; ".join(re.sub(r"\bKratos\b", "the round-white-headed warrior protagonist", c, flags=re.I)
+                     for c in (characters or []))
+    return CAST_RULES + ("Allowed cast identities or groups: " + cast + ". " if cast else "")
+
+
+def compose(scene, style="", characters=None):
     # Authoring only: the image executor sends this already-saved prompt unchanged.
     scene = re.sub(r"\bKratos\b", "the round-white-headed warrior protagonist", scene, flags=re.I)
     style = style.removeprefix(RULES)
     style = re.sub(r"Current universe:.*?(?:\.|$)", "", style)
-    return RULES + "\nDrawing style: " + style + "\nScene: " + scene.strip()
+    return RULES + "\nDrawing style: " + style + "\nScene: " + scene.strip() + (
+        "\n" + cast_rules(characters) if characters is not None else "")
 
 
 def contradictory(prompt):
@@ -39,6 +63,7 @@ def contradictory(prompt):
         r"\b(?:vertical|portrait|tall)\s+(?:composition|framing|layout|panel|format)\b",
         r"\b(?:as a distant memory|memory-like|appear ghostly|double[- ]exposure|split[- ]screen|multi[- ]panel)\b",
         r"\b(?:transparent|translucent|ghostly)\s+(?:character|figure|protagonist|warrior|face|body)\b",
+        r"\btwo copies of (?:the )?(?:same character|protagonist|hero|warrior)\b",
     )
     for pattern in patterns:
         for match in re.finditer(pattern, prompt, flags=re.I):
