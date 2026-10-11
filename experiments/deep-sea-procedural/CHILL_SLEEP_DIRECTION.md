@@ -1,12 +1,97 @@
-# Nouvelle chaîne sleep — ambiance douce et concept distinct
+# Nouvelle chaîne sleep — petits mondes naturels
 
 ## Demande actuelle
 
-Récits longs pour dormir, ambiance mignonne et apaisante. Le thème n’est plus
-forcément marin. L’utilisateur veut des concepts qui combinent sommeil et
-une seconde identité éditoriale, plutôt que reproduire le catalogue d’un autre
-créateur. Le nom **Depths After Dark** et l’avatar existants sont conservés pour
-l’instant ; aucun nouveau branding n’est proposé comme décision prise.
+Le 11 octobre 2026, l’utilisateur choisit explicitement les **petits mondes
+naturels** : récits longs pour dormir, destinés aux adultes, dans une ambiance
+mignonne, calme et apaisante. Mousse, feuilles, petits jardins, serres et bassins
+peuvent fournir des univers récurrents. Le nom **Quiet Little Worlds** est
+maintenant explicitement choisi. Le @**QuietLittleWorlds** n’est pas confirmé
+disponible ou réservé ; aucun compte YouTube n’est créé ni renommé ici.
+
+Le nouveau branding est maintenant demandé. **Depths After Dark** et son avatar
+marin sont des choix antérieurs, pas les références imposées de cette nouvelle
+direction. L’avatar fougère/lune est livré ; sa réception est confirmée, sans
+validation artistique explicite déduite de cette confirmation.
+Le kit actif et la bio sont dans
+[experiments/nature-sleep/README.md](../nature-sleep/README.md).
+Aucune chaîne ni configuration n’est renommée à cette étape.
+
+## Kit de branding livré — réception confirmée
+
+Le nom, la bio et l’avatar ont été envoyés sur le salon Discord dédié. Le
+contrôle API des pièces jointes n’a pas validé leur présence et aucun messageID
+n’est conservé, mais l’utilisateur confirme **« Oui, les trois sont là »**.
+Cette confirmation établit la réception du kit ; ne pas envoyer de doublon.
+Preuve publique : [BRANDING_DELIVERY.json](../nature-sleep/BRANDING_DELIVERY.json).
+
+Le webhook dédié est enregistré en privé, localement et sur le serveur, sous
+**DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS**. Ce salon est également la destination
+demandée pour les prochaines vidéos terminées et contrôlées. Aucune URL de
+webhook ni valeur de cette variable dans les documents publics. Le compte
+Google sera repris demain ; aucune création de chaîne, réservation de @,
+connexion Google ou publication YouTube réalisée ici.
+
+## Aperçu C livré — avis visuel attendu
+
+Trois propositions d’images ont été préparées pour comparer les styles :
+
+- **A — jardin nocturne cinématographique** : jardin de mousse accueillant,
+  feuillage et lumière calme. Peinture demandée, résultat proche du réalisme.
+- **B — macro réaliste** : petits paysages naturels, textures fines, gouttes
+  et profondeur de champ douce.
+- **C — illustration botanique** : formes naturelles précises, palette douce
+  et composition apaisante.
+
+Une proposition d’avatar sans texte, centrée autour d’une fougère et d’un
+croissant de lune, est préparée et livrée dans le kit. Réception confirmée ;
+**aucune approbation artistique explicite de l’avatar prétendue**.
+
+L’utilisateur délègue maintenant le choix du style le plus simple à animer et
+demande des mouvements **très légers**, inspirés de la référence Stephen Dalton.
+L’agent choisit **C — illustration botanique douce** pour l’aperçu. C’est un
+choix de réalisation délégué, **pas une validation visuelle explicite de l’image**.
+L’aperçu C est disponible pour avis : **https://gofile.io/d/VOaYXcYo**,
+`Quiet-Little-Worlds-Garden-24s.mp4`, **24 s, 1920×1080/30 fps, 720 images,
+sans audio**, 8 436 624 octets. SHA-256 :
+`ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e`.
+Le décor source fait 1672×941 ; export 1080p, pas un master natif 4K.
+
+Décodage complet passé et upload vérifié par taille/MD5. Revue auteur et
+indépendante : 16 captures sur planche et cinq vues natives ; revue root :
+16 captures sur planche et trois vues natives. **Pas de lecture continue
+prétendue.** Le cycle shader correspond exactement ; le MP4 présente des
+différences de compression au raccord, sans garantie de raccord imperceptible.
+Preuves : [PREVIEW_DELIVERY.json](../nature-sleep/PREVIEW_DELIVERY.json).
+
+**Avis visuel utilisateur attendu**, sans validation de l’animation déduite de
+son choix délégué du style. Aucun premier script, voix off, film de deux heures
+ou compte YouTube commencé. Le kit de branding seul a été envoyé sur Discord ;
+**aucun aperçu vidéo Discord envoyé**, aucune publication YouTube.
+Les anciens rendus marins restent des archives rejetées et ne servent pas de
+base visuelle.
+
+## Bio anglaise livrée
+
+Bio de référence : [bio-en.txt](../nature-sleep/bio-en.txt).
+
+> Slow stories. Small worlds. Deep rest.
+>
+> Gentle bedtime stories for adults, inspired by moss gardens, moonlit ponds,
+> quiet greenhouses, and the hidden wonders of nature.
+>
+> Settle into peaceful little worlds with soothing narration, soft natural
+> ambience, and calm visuals.
+>
+> Take a breath. Let the world grow quiet.
+
+La bio ne suppose aucun épisode déjà publié. Dans chaque futur épisode,
+annoncer simplement s’il s’agit d’un récit naturel documenté ou d’une promenade
+imaginaire. Vérifier les faits présentés comme réels ; ne pas transformer une
+fiction en observation scientifique. Les deux heures sont la cible retenue,
+pas un premier film déjà produit.
+
+## Références et recherche antérieure
 
 Références reçues :
 
@@ -24,22 +109,48 @@ une recherche, pas de prétendre avoir regardé ces vidéos. Aucun compteur de
 vues ou d’abonnés actuel inventé ; les chiffres vus par l’utilisateur sont
 ses propres observations, pas une mesure récupérée ici.
 
-## Critères pour les propositions
+## Critères conservés pour le concept choisi
 
 - Concept compréhensible en une phrase, identité récurrente, assez de sujets
   pour une série durable ; préciser faits réels et fiction.
 - Narration et ambiance sonore originales, calmes ; aucune tension ou horreur.
-- Fonds jolis avec mouvement discret. Pas de nouveau renderer 3D, de génération
-  vidéo ni de commande Algrow. Sources visuelles et droits à choisir une fois
-  le concept et les références examinés.
+- Fonds jolis avec mouvement discret. Le choix du style est délégué à l’agent :
+  C sert à l’aperçu autorisé, sans approbation visuelle utilisateur prétendue.
+  Pas de nouveau renderer 3D, de génération vidéo ni de commande Algrow.
+  Sources visuelles et droits à examiner pour le style retenu.
 - Ne pas affirmer qu’une niche est vide, que les vues sont garanties ou qu’un
   simple mouvement de caméra assure la monétisation.
 - Les deux heures restent une cible ; aucun premier épisode, texte ou voix
-  n’est en production tant que le nouveau concept n’est pas choisi.
+  n’est en production à l’étape de validation du nom, de l’avatar et du style.
 
-Peaky est un projet séparé, terminé et livré sur GoFile et Discord.
-Aucune publication YouTube effectuée. Voir PEAKY_SHELBY_DELIVERY.json dans
-experiments/conversation-chess/.
+## Chess — Peaky livré puis supprimé après un blocage Content ID
+
+Le kit Tommy/Alfie a été livré historiquement sur GoFile et Discord. L’utilisateur
+a ensuite publié la vidéo sur YouTube, signalé une réclamation **Content ID
+audiovisuelle avec blocage dans certains pays**, puis **supprimé la vidéo**.
+Elle n’est donc plus en ligne. L’ayant droit, les passages concernés et les pays
+ne sont pas connus ni récupérés ; ne pas attribuer le blocage à la musique.
+
+Le PASS technique/audio et les revues de captures attestent le contrôle du
+fichier livré, **pas une autorisation de droits, une absence de réclamation ou
+une garantie de monétisation**. Voir la livraison historique dans
+experiments/conversation-chess/PEAKY_SHELBY_DELIVERY.json.
+
+La **scène du strudel entre Landa et Shosanna dans Inglourious Basterds** reste
+un candidat pour une prochaine reprise, possiblement le 12 octobre 2026.
+Aucun téléchargement, script ou montage de ce film n’est lancé. Contrôler les
+droits des sources avant tout montage, puis effectuer un test YouTube privé
+avant sortie. Un contrôle initial sans alerte ne garantit pas l’absence de
+réclamation ultérieure ni la monétisation définitive. Les titres doivent
+contenir **Analyzed Like Chess**, avec un **z** ; choix final par l’utilisateur.
+
+Le protocole actif est
+[COPYRIGHT_RELEASE.md](../conversation-chess/COPYRIGHT_RELEASE.md).
+`deliver-discord.py` exige désormais, pour une livraison `final`, une revue de
+publication liée au SHA-256 du fichier, les preuves des droits vidéo/musique
+et des Checks YouTube initiaux terminés sans réclamation ni pays bloqué. Le
+helper contrôle la cohérence des preuves déclarées ; il ne valide pas seul
+une licence ni les Checks d’un compte. Aucun prochain test privé effectué.
 
 ## Ce que montre le catalogue officiel Stephen Dalton
 
@@ -78,12 +189,14 @@ YouTube n'a été obtenue. Certaines fiches MP3 réemploient une description
 générique incohérente avec leur titre : elles ne servent pas à déduire un
 scénario ou une durée spécifique.
 
-## Quatre concepts à comparer
+## Archive de recherche — quatre concepts comparés
 
-Les titres ci-dessous sont des exemples de promesse éditoriale, sans script,
-voix, image ou épisode lancé. L'anglais reste une langue envisagée.
+Les titres ci-dessous sont des exemples de promesse éditoriale préparés avant
+le choix. Le concept 1 est désormais choisi ; les trois autres restent des
+pistes non retenues. Aucun script, voix ou épisode n’est lancé. L’anglais reste
+une langue envisagée pour les épisodes ; une bio anglaise est proposée.
 
-### 1. Petits mondes végétaux — premier pilote recommandé
+### 1. Petits mondes naturels — concept choisi
 
 **Une phrase :** entrer dans un tout petit coin de nature et suivre sa vie lente
 au fil d'une nuit ou d'une saison. Le sommeil se combine à l'histoire naturelle
@@ -178,8 +291,9 @@ YouTube précise n'a pas été mesurée.
 Les deux heures restent une cible de format. Le coût dépendra surtout de la
 durée de narration originale, de la voix choisie et de la cadence visuelle.
 Aucun budget fournisseur ni coût réel de pilote n'a été vérifié. La
-recommandation végétale reste une proposition à choisir, pas une autorisation
-de production ni un changement de branding.
+direction naturelle et le nom Quiet Little Worlds sont maintenant choisis.
+Un aperçu très légèrement animé du style C est autorisé par délégation du
+choix à l’agent. Aucun épisode long, script ou voix n’est encore lancé.
 
 ## Autres sources primaires vérifiées
 

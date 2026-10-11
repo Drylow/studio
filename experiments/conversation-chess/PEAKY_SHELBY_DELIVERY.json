@@ -1,7 +1,7 @@
 {
   "schema": "peaky-shelby-final-delivery-v1",
   "delivered_utc": "2026-10-11T01:17:08.246239+00:00",
-  "status": "delivered_for_manual_youtube_publication",
+  "status": "user_reported_territorial_copyright_block_then_deleted_from_youtube",
   "film": {
     "filename": "Tommy-Alfie-Shelby-15m28.mp4",
     "bytes": 444369182,
@@ -100,11 +100,30 @@
   "recommended_title": "Tommy Shelby vs Alfie Solomons — The Baker’s Gambit",
   "title_options_user_approved": false,
   "music_attribution": "Sneaky Snitch and Scheming Weasel (faster version), Kevin MacLeod, CC BY 4.0; exact sources and credits included in delivered description and MUSIC_CREDITS.txt",
-  "youtube_uploaded": false,
+  "youtube_uploaded": true,
   "youtube_published": false,
   "limits": [
     "Native drama sources are 720p; graphic export is 1080p.",
     "Sampled review is not continuous human playback or listening.",
     "No Content ID or monetization clearance asserted."
-  ]
+  ],
+  "historical_delivery_status": "delivered_for_manual_youtube_publication",
+  "youtube_uploaded_by_agent": false,
+  "youtube_was_published_by_user": true,
+  "youtube_deleted_by_user": true,
+  "publication_allowed": false,
+  "copyright_incident": {
+    "reported_date": "2026-10-11",
+    "evidence": "User report; no claim screenshot or YouTube API confirmation available",
+    "claim_type_user_reported": "audiovisual",
+    "blocked_in_some_territories_user_reported": true,
+    "claimant": null,
+    "territories": null,
+    "timecodes": null,
+    "added_music_claimed": null,
+    "youtube_video_id": null,
+    "source_rights_verified": false,
+    "youtube_checks_clear": false,
+    "protocol": "COPYRIGHT_RELEASE.md"
+  }
 }

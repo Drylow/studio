@@ -1,22 +1,70 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Direction actuelle — sommeil doux, référence Stephen Dalton
+## Direction actuelle — petits mondes naturels pour dormir
 
-L’utilisateur abandonne les fonds marins inquiétants le 11 octobre 2026.
-Il cherche désormais une ambiance **mignonne, calme et apaisante**, peut-être
-au-delà du thème marin. Il demande une recherche de concepts sleep distincts
-inspirés du format Stephen Dalton, avec un angle éditorial propre. Aucun nouveau
-fond, script, voix, avatar ou changement du nom de chaîne lancé avant le choix.
-La recherche abyssale ci-dessous est conservée comme historique, pas direction
-active. Voir `experiments/deep-sea-procedural/CHILL_SLEEP_DIRECTION.md`.
+Le 11 octobre 2026, l’utilisateur choisit les **petits mondes naturels** pour
+une chaîne sleep adulte, **mignonne, calme et apaisante**, inspirée du format
+Stephen Dalton avec une identité propre. Nom **Quiet Little Worlds** maintenant
+explicitement choisi ; @**QuietLittleWorlds** encore non confirmé disponible.
+Aucune chaîne YouTube créée ou renommée. La nouvelle direction remplace
+Depths After Dark et ses visuels marins comme projet de branding.
 
-**Peaky est livré séparément.** La consigne « on coupe tout » a été
-immédiatement précisée par l’utilisateur : seule la production marine
-inquiétante s’arrête. Le nouveau MP4 Shelby de 15 min 27,900 s a passé sa QA
-technique/audio et les revues de captures réelles, dont celle du root.
-Kit GoFile : https://gofile.io/d/cCuEdqOv. Message Discord et trois pièces
-jointes confirmés le 11 octobre 2026. Aucune publication YouTube réalisée.
+Trois images fixes préparées : A jardin nocturne, B macro réaliste et C
+illustration botanique douce. L’utilisateur délègue le choix du style le plus
+simple à animer : l’agent choisit **C**, sans prétendre à une validation visuelle
+explicite de cette image. **Aperçu C livré pour avis :
+https://gofile.io/d/VOaYXcYo**, `Quiet-Little-Worlds-Garden-24s.mp4`, 24 s,
+1080p30, 720 images, sans audio, 8 436 624 octets. SHA-256 :
+`ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e`.
+Décor source 1672×941, export 1080p. Décodage complet passé, upload taille/MD5
+confirmé, revue auteur et indépendante (16 captures sur planche + cinq natives)
+et root (16 sur planche + trois natives). Pas de lecture continue prétendue ;
+cycle shader exact mais différences de compression du MP4 au raccord.
+Preuves : `experiments/nature-sleep/PREVIEW_DELIVERY.json`.
+**Avis visuel utilisateur attendu ; aucun aperçu envoyé sur Discord.** Les deux
+heures sont une cible ; aucun script, voix, long ou compte YouTube commencé.
+
+**Nom, bio et avatar fougère/lune livrés sur le Discord dédié.** Le contrôle API
+des pièces jointes a échoué et aucun messageID n’est conservé ; l’utilisateur
+confirme leur réception : « Oui, les trois sont là ». Ne pas envoyer de doublon.
+Cette réception ne constitue pas une validation artistique explicite de
+l’avatar. Reçu public : `experiments/nature-sleep/BRANDING_DELIVERY.json`.
+Webhook privé local et serveur : **DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS**,
+destination également demandée pour les futures vidéos terminées et contrôlées.
+Aucune valeur ni URL du webhook dans Git. Compte Google à reprendre demain ;
+pour Quiet Little Worlds, aucune chaîne créée/renommée, aucun @ réservé ni
+publication YouTube réalisée.
+Les faits naturels seront documentés ; les promenades imaginaires seront
+présentées comme telles. Kit actif : `experiments/nature-sleep/README.md` ;
+bio anglaise de référence : `experiments/nature-sleep/bio-en.txt`.
+Passation : `experiments/deep-sea-procedural/CHILL_SLEEP_DIRECTION.md`.
+La recherche abyssale ci-dessous reste une archive, sans nouvelle production.
+
+**Peaky : kit livré, vidéo publiée par l’utilisateur puis supprimée.** L’utilisateur
+signale une réclamation **Content ID audiovisuelle avec blocage dans certains
+pays** et a supprimé Tommy/Alfie. Elle n’est plus en ligne. L’ayant droit,
+les timecodes et les pays ne sont pas connus ni récupérés ; ne pas affirmer
+que la musique est en cause.
+
+Le MP4 Shelby de 15 min 27,900 s a passé sa QA technique/audio et les revues de
+captures réelles. Ces contrôles ne certifient **ni les droits, ni l’absence de
+Content ID, ni la monétisation**. Kit historique GoFile :
+https://gofile.io/d/cCuEdqOv ; livraison Discord confirmée le 11 octobre 2026.
 Voir `experiments/conversation-chess/PEAKY_SHELBY_DELIVERY.json`.
+
+Prochaine piste chess retenue pour une reprise ultérieure, possiblement le
+12 octobre : **Inglourious Basterds, scène du strudel Landa/Shosanna**. Aucun
+téléchargement, script ou montage lancé. Contrôler les droits des sources
+**avant montage**, puis tester la vidéo en privé sur YouTube avant sortie.
+Des checks initiaux sans alerte ne garantissent pas l’absence de réclamation
+ultérieure ou la monétisation définitive. Les titres doivent contenir
+**Analyzed Like Chess** (avec z) ; choix final par l’utilisateur.
+
+Protocole : `experiments/conversation-chess/COPYRIGHT_RELEASE.md`.
+`deliver-discord.py` exige désormais une revue liée au SHA-256 exact pour une
+livraison `final`, avec droits vidéo/musique documentés et Checks YouTube
+terminés sans réclamation ni pays bloqué. Le helper ne valide pas seul une
+licence ni les Checks d’un compte ; aucun nouveau test privé réalisé.
 
 ## Archive — remplacement provisoire par des vidéos marines réelles
 

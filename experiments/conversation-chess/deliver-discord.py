@@ -41,6 +41,26 @@ def prepare(manifest):
         raise ValueError("Le paquet doit être un aperçu, une vidéo finale ou une version à tester sur YouTube.")
     video = resolve("video")
     video_hash = digest(video)
+    if kind == "final":
+        if not data.get("publication_review"):
+            raise ValueError("Un montage vérifié ne suffit pas pour publier : fournir la revue des droits et des vérifications YouTube, ou livrer en youtube-test pour un test privé.")
+        publication = json.loads(resolve("publication_review").read_text(encoding="utf-8"))
+        if publication.get("sha256") != video_hash \
+                or publication.get("source_rights_verified") is not True \
+                or publication.get("music_rights_verified") is not True \
+                or publication.get("youtube_checks_complete") is not True \
+                or publication.get("youtube_copyright_status") != "clear" \
+                or publication.get("claims") != [] or publication.get("blocked_territories") != []:
+            raise ValueError("Publication bloquée : droits ou vérifications YouTube incomplets, fichier différent ou réclamation active.")
+        evidence = publication.get("evidence_files", [])
+        if not isinstance(evidence, list) or not evidence:
+            raise ValueError("Les droits et contrôles doivent avoir des preuves conservées, pas seulement des booléens.")
+        for name in evidence:
+            if not isinstance(name, str) or not name.strip():
+                raise ValueError("Chemin de preuve invalide.")
+            proof = (resolve("publication_review").parent / name).resolve()
+            if not proof.is_file() or not proof.stat().st_size:
+                raise ValueError("Preuve des droits ou des contrôles YouTube absente.")
     review = json.loads(resolve("review").read_text(encoding="utf-8"))
     if review.get("sha256") != video_hash or not review.get("full_video_audio_decode_ok") \
             or not review.get("finished_render_visual_reviewed"):
@@ -65,8 +85,8 @@ def prepare(manifest):
     if len(description) > 5000:
         raise ValueError("Description trop longue pour YouTube.")
     status = {"preview": "APERÇU — à regarder, pas destiné à publication",
-              "final": "Vidéo vérifiée — à publier manuellement",
-              "youtube-test": "VERSION À TESTER SUR YOUTUBE — épisode 8 retiré"}[kind]
+              "final": "DROITS ET CONTRÔLES INITIAUX REVUS — publication manuelle ; une réclamation ultérieure reste possible",
+              "youtube-test": "TEST PRIVÉ YOUTUBE — montage vérifié, droits et restrictions à contrôler avant publication"}[kind]
     options = []
     if "thumbnail_options" in data:
         if "thumbnail" in data:

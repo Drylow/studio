@@ -1,0 +1,56 @@
+{
+  "schema": "quiet-little-worlds-animation-preview-delivery-v1",
+  "status": "delivered_for_user_visual_review",
+  "gofile_url": "https://gofile.io/d/VOaYXcYo",
+  "filename": "Quiet-Little-Worlds-Garden-24s.mp4",
+  "sha256": "ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e",
+  "bytes": 8436624,
+  "duration_seconds": 24,
+  "export_dimensions": [
+    1920,
+    1080
+  ],
+  "source_dimensions": [
+    1672,
+    941
+  ],
+  "fps": 30,
+  "frames": 720,
+  "audio_streams": 0,
+  "native_4k": false,
+  "source_style": "C",
+  "style_chosen_by_user_delegation": true,
+  "user_visual_approval": false,
+  "rendered_shader_cycle_exact_match": true,
+  "encoded_seam_pixel_identical": false,
+  "complete_decode_passed": true,
+  "root_review": {
+    "contact_sheet_frames": 16,
+    "native_frames": [
+      0,
+      360,
+      719
+    ],
+    "continuous_playback": false
+  },
+  "independent_review": {
+    "contact_sheet_frames": 16,
+    "native_frames": [
+      0,
+      180,
+      360,
+      540,
+      719
+    ],
+    "continuous_playback": false
+  },
+  "upload_md5_and_size_verified": true,
+  "discord_video_sent": false,
+  "two_hour_episode_started": false,
+  "voiceover_started": false,
+  "limits": [
+    "MP4 boundary captures reviewed; no continuous playback or imperceptible seam guarantee",
+    "Artwork generated at 1672x941 and exported in 1080p",
+    "Actual Stephen Dalton video animation could not be inspected; movements are an original proposal"
+  ]
+}

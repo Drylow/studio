@@ -1,0 +1,23 @@
+{
+  "fingerprint": "fd6fb1515b548c0809203a34ad4fed5527c1bbd3274f7b943dbc97f56a283293",
+  "name": "Quiet Little Worlds",
+  "requested_attachments": [
+    "Quiet-Little-Worlds-Avatar.png",
+    "Description-chaine.txt",
+    "Nom-et-handle.txt"
+  ],
+  "avatar_sha256": "c47eb99ee69c02a5096d316456e8411e30c8f24b6999c6fa6abb6862e77419ea",
+  "bio_sha256": "4e9a6e130291e123ee0ca9796128418881980620cf3723b93d99397561080fdb",
+  "http_request_succeeded": true,
+  "api_attachment_validation_passed": false,
+  "message_id": null,
+  "user_confirmed_name_bio_avatar": true,
+  "user_confirmation": "Oui, les trois sont là",
+  "confirmed_utc": "2026-10-11T01:39:02.907919+00:00",
+  "no_duplicate_sent": true,
+  "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS",
+  "webhook_stored_privately_on_server": true,
+  "handle_availability": "not_confirmed",
+  "youtube_account_created": false,
+  "animation_video_delivered": false
+}

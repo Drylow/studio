@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiet Little Worlds — gentle garden preview</title>
+<style>html,body{margin:0;background:#10191b;width:100%;height:100%;overflow:hidden}canvas{display:block;position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}</style>
+<canvas width="1920" height="1080"></canvas>
+<script>
+'use strict';
+const CAPTURE_MODE = false;
+const embeddedSource = '__GARDEN_IMAGE_DATA_URL__';
+const source = embeddedSource.startsWith('data:') ? embeddedSource : '../branding/C-botanical-moss-garden.png';
+const PERIOD = 24;
+const canvas = document.querySelector('canvas');
+const gl = canvas.getContext('webgl2', {alpha:false,antialias:false,preserveDrawingBuffer:true});
+if (!gl) throw new Error('WebGL 2 is required for the garden preview.');
+const vertex = `#version 300 es
+in vec2 position;
+out vec2 uv;
+void main(){uv=position*.5+.5;gl_Position=vec4(position,0.,1.);}`;
+const fragment = `#version 300 es
+precision highp float;
+uniform sampler2D artwork;
+uniform sampler2D waterMask;
+uniform float phase;
+uniform vec2 resolution;
+in vec2 uv;
+out vec4 result;
+const float TAU=6.283185307179586;
+float ellipse(vec2 p,vec2 center,vec2 size){return 1.-smoothstep(.40,1.,length((p-center)/size));}
+// All coordinates are normalised top-down image coordinates. The water mask
+// stays inside the open pond, clear of the frog, snail, bank and lily pads.
+float pond(vec2 p){return texture(waterMask,vec2(p.x,1.-p.y)).r;}
+vec3 firefly(vec2 p,vec2 origin,vec2 span,float offset){
+  // Closed curves, constant core brightness: there are no flashes or pops.
+  vec2 point=origin+span*vec2(sin(phase+offset),cos(phase+offset)*.72);
+  vec2 pixels=(p-point)*resolution;
+  float distance=length(pixels);
+  if(distance>32.)return vec3(0.);
+  float core=exp(-distance*distance/2.0);
+  float halo=exp(-distance*distance/53.0);
+  return vec3(1.,.63,.20)*(core*.34+halo*.07);
+}
+void main(){
+  vec2 p=vec2(uv.x,1.-uv.y);
+  float water=pond(p);
+  vec2 offset=vec2(0.);
+  // Subpixel-to-1.7px optical movement, with a soft regional boundary.
+  offset.x+=water*(1.15*sin(p.y*90.+phase*2.)+.48*sin(p.y*49.-phase))/resolution.x;
+  offset.y+=water*.62*sin(p.x*64.+phase)/resolution.y;
+  float leftFern=ellipse(p,vec2(.36,.20),vec2(.19,.26));
+  float rightFern=ellipse(p,vec2(.925,.245),vec2(.16,.11));
+  offset.x+=(leftFern*1.2*sin(phase)+rightFern*.85*sin(phase+1.4))/resolution.x;
+  offset.y+=(leftFern*.38*sin(phase+1.1)+rightFern*.24*sin(phase))/resolution.y;
+  vec2 displaced=vec2(p.x+offset.x,1.-(p.y+offset.y));
+  vec3 color=texture(artwork,displaced).rgb;
+  // A very low-amplitude modulation of the existing painted reflection.
+  float skyReflection=ellipse(p,vec2(.611,.679),vec2(.152,.09));
+  color*=1.+water*skyReflection*.012*sin(p.y*55.-phase*2.);
+  color+=firefly(p,vec2(.511,.424),vec2(.012,.007),.7);
+  color+=firefly(p,vec2(.668,.421),vec2(.018,.009),2.4);
+  color+=firefly(p,vec2(.741,.479),vec2(.014,.007),4.1);
+  result=vec4(clamp(color,0.,1.),1.);
+}`;
+function compile(type, text){
+  const shader=gl.createShader(type);gl.shaderSource(shader,text);gl.compileShader(shader);
+  if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(shader));
+  return shader;
+}
+const program=gl.createProgram();
+gl.attachShader(program,compile(gl.VERTEX_SHADER,vertex));
+gl.attachShader(program,compile(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);
+if(!gl.getProgramParameter(program,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program));
+gl.useProgram(program);
+const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
+const positionLocation=gl.getAttribLocation(program,'position');gl.enableVertexAttribArray(positionLocation);
+gl.vertexAttribPointer(positionLocation,2,gl.FLOAT,false,0,0);
+const phaseLocation=gl.getUniformLocation(program,'phase');
+gl.uniform2f(gl.getUniformLocation(program,'resolution'),canvas.width,canvas.height);
+gl.uniform1i(gl.getUniformLocation(program,'artwork'),0);
+// The static soft water mask is calculated once, rather than running polygon
+// distances for every exported pixel and frame on a machine without a GPU.
+const maskCanvas=document.createElement('canvas');maskCanvas.width=canvas.width;maskCanvas.height=canvas.height;
+const maskContext=maskCanvas.getContext('2d');
+maskContext.fillStyle='black';maskContext.fillRect(0,0,maskCanvas.width,maskCanvas.height);
+maskContext.filter='blur(12px)';maskContext.fillStyle='white';maskContext.beginPath();
+[[.407,.591],[.652,.574],[.774,.635],[.721,.765],[.597,.799],[.466,.758],[.382,.699],[.348,.639]].forEach((point,index)=>{
+  const x=point[0]*canvas.width,y=point[1]*canvas.height;
+  if(index===0)maskContext.moveTo(x,y);else maskContext.lineTo(x,y);
+});
+maskContext.closePath();maskContext.fill();
+gl.activeTexture(gl.TEXTURE1);
+const maskTexture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,maskTexture);
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,maskCanvas);
+gl.uniform1i(gl.getUniformLocation(program,'waterMask'),1);
+gl.activeTexture(gl.TEXTURE0);
+const image=new Image();
+window.gardenReady=new Promise((resolve,reject)=>{
+  image.onerror=()=>reject(new Error('Could not load the original illustrated garden.'));
+  image.onload=()=>{
+    const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,image);
+    gl.viewport(0,0,canvas.width,canvas.height);
+    window.renderGardenAt=seconds=>{
+      if(!Number.isFinite(seconds)) throw new Error('Time must be finite.');
+      const wrapped=((seconds%PERIOD)+PERIOD)%PERIOD;
+      gl.uniform1f(phaseLocation,wrapped/PERIOD*Math.PI*2);
+      gl.drawArrays(gl.TRIANGLES,0,6);gl.finish();
+      if(gl.getError()!==gl.NO_ERROR) throw new Error('WebGL drawing failed.');
+      return {time:wrapped,period:PERIOD,width:canvas.width,height:canvas.height};
+    };
+    window.renderGardenAt(0);
+    resolve({width:image.naturalWidth,height:image.naturalHeight,period:PERIOD});
+    if(!CAPTURE_MODE){const began=performance.now();function tick(now){window.renderGardenAt((now-began)/1000);requestAnimationFrame(tick);}requestAnimationFrame(tick);}
+  };
+});
+image.src=source;
+</script>
+</html>

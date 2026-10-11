@@ -1,0 +1,76 @@
+{
+  "schema": "nature-sleep-brand-proposals-v1",
+  "concept_user_approved": true,
+  "brand_name_user_approved": true,
+  "visual_style_user_approved": false,
+  "avatar_user_approved": false,
+  "animation_started": true,
+  "youtube_channel_created": false,
+  "root_recommended_style": "C",
+  "assets": [
+    {
+      "proposal": "A",
+      "file": "branding/A-cinematic-moss-garden.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3153048,
+      "sha256": "1b6f4f5cae9c8d606784fd8eeb9ed5001c2272e8613a5bf4fb1631b940a2ab3a",
+      "user_approved": false,
+      "root_full_image_viewed": true
+    },
+    {
+      "proposal": "B",
+      "file": "branding/B-macro-moss-garden.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2682920,
+      "sha256": "6596ee5221045c87ae24595083beb220238b2ca9cbae4b2ed703fe4aa70770ea",
+      "user_approved": false,
+      "root_full_image_viewed": true
+    },
+    {
+      "proposal": "C",
+      "file": "branding/C-botanical-moss-garden.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 3628563,
+      "sha256": "7bcc13cc70816f53af3d0db1d519dd113a2819b6c76cca8e07a10d11a38f09a1",
+      "user_approved": false,
+      "root_full_image_viewed": true
+    },
+    {
+      "proposal": "avatar",
+      "file": "branding/avatar-fern-moon.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "bytes": 2168379,
+      "sha256": "c47eb99ee69c02a5096d316456e8411e30c8f24b6999c6fa6abb6862e77419ea",
+      "user_approved": false,
+      "root_full_image_viewed": true,
+      "circle_crop_analysis": {
+        "bright_pixels_outside_full_circle": 0,
+        "bright_bounds": [
+          254,
+          190,
+          997,
+          956
+        ],
+        "scope": "Pixel analysis only; image not modified. Manual visual review also needed."
+      }
+    }
+  ],
+  "status": "Name approved; branding user-confirmed on Discord; C animation preview delivered on GoFile for visual review",
+  "brand_name": "Quiet Little Worlds",
+  "proposed_handle": "QuietLittleWorlds",
+  "handle_availability": "not_confirmed",
+  "avatar_delivery_user_authorized": true,
+  "visual_style_selected_by_delegation": "C",
+  "visual_style_explicit_image_approval": false,
+  "branding_delivered_user_confirmed": true,
+  "animation_preview_delivered": true,
+  "animation_preview_user_approved": false
+}

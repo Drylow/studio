@@ -1,0 +1,73 @@
+{
+  "research_date": "2026-10-11",
+  "purpose": "Public name collision research only; no handle availability confirmation",
+  "recommendation": "Quiet Little Worlds",
+  "alternative": "Glowfern Stories",
+  "candidates": [
+    {
+      "name": "Quiet Little Worlds",
+      "proposed_handle": "QuietLittleWorlds",
+      "exact_collision_identified": false,
+      "handle_availability": "not_confirmed",
+      "evidence": [
+        "quiet-little-worlds.json",
+        "quiet-little-worlds-handle.json"
+      ],
+      "near_names": [
+        "Quiet Worlds",
+        "Quiet Little Places"
+      ]
+    },
+    {
+      "name": "Glowfern Stories",
+      "proposed_handle": "GlowfernStories",
+      "exact_collision_identified": false,
+      "handle_availability": "not_confirmed",
+      "evidence": [
+        "glowfern-stories.json",
+        "glowfern-stories-handle.json"
+      ],
+      "limited_queries": true,
+      "near_names": [
+        "Mira Glowfern (author)",
+        "Glowfern (fictional character)"
+      ]
+    },
+    {
+      "name": "Little Wilds Sleep",
+      "proposed_handle": "LittleWildsSleep",
+      "exact_collision_identified": false,
+      "handle_availability": "not_confirmed",
+      "evidence": [
+        "little-wilds.json",
+        "little-wilds-handle.json"
+      ],
+      "limited_queries": true,
+      "root_collision": "Little Wilds (Facebook)"
+    },
+    {
+      "name": "Mosslight Stories",
+      "proposed_handle": "MosslightStories",
+      "exact_collision_identified": false,
+      "handle_availability": "not_confirmed",
+      "evidence": [
+        "mosslight-stories.json",
+        "mosslight-stories-handle.json",
+        "mosslight-magazine-primary.txt"
+      ],
+      "recommendation": "reserve_only",
+      "root_collision": "MossLight literary magazine in adjacent nature and fiction category"
+    }
+  ],
+  "excluded": [
+    "Moss and Moon",
+    "The Sleep Garden",
+    "Moss and Hush"
+  ],
+  "limitations": [
+    "No exact collision identified is not exhaustive absence proof.",
+    "Some Brave searches relaxed exact operators or receivedHTTP429.",
+    "Direct YouTube access refused by session proxyHTTP403.",
+    "No channel or handle created/reserved."
+  ]
+}

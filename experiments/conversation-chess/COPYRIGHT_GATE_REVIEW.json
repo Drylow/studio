@@ -1,0 +1,26 @@
+{
+  "schema": "chess-release-gate-functional-checks-v1",
+  "network_posts_performed": false,
+  "cases": [
+    {
+      "case": "Actual Peaky kit without publication rights/checks review",
+      "passed": true,
+      "reason": "Un montage vérifié ne suffit pas pour publier : fournir la revue des droits et des vérifications YouTube, ou livrer en youtube-test pour un test privé."
+    },
+    {
+      "case": "Actual reviewed film prepared only as private YouTube test",
+      "passed": true,
+      "network_post": false
+    },
+    {
+      "case": "Matching film with claim and unestablished video rights",
+      "passed": true,
+      "reason": "Publication bloquée : droits ou vérifications YouTube incomplets, fichier différent ou réclamation active."
+    },
+    {
+      "case": "Original publication manifest remains unchanged",
+      "passed": true
+    }
+  ],
+  "scope": "Uses actual reviewed Peaky delivery inputs and a clearly marked blocked-review fixture; this does not validate rights or read YouTube Checks."
+}
