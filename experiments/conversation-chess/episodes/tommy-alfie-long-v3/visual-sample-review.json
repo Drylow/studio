@@ -1,0 +1,84 @@
+{
+  "schema": "conversation-chess-long-source-stills-review-v1",
+  "review_scope": "Actual sampled native source pictures and local VTT/word timings, not continuous playback or listening. The eight boards cover every authored source boundary and analysis point.",
+  "native_stills_examined": 67,
+  "cut_boundaries_examined": 44,
+  "annotation_samples_examined": 23,
+  "sources": {
+    "s02e02": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+    "s02e06": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+    "s03e06": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd"
+  },
+  "boards": [
+    {
+      "source_id": "s02e02",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-long-v3-editorial-review/s02e02/native-source-contactboard.jpg",
+      "observations": "All fourteen native source samples examined: first/last images of the four cuts and all six analyses. Opening picture shows Tommy. Cabinet analysis picture shows Tommy reacting to Alfie; finance/gun/rescue show Alfie reacting to Tommy. No visible burned subtitles, watermark, added crop or artificial resolution defect in these samples.",
+      "sha256": "dc0bd02a95f9af7434735257093d9bcc1e0e88801d1acec8b19d83cc3d71f846",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s02e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-01.jpg",
+      "sha256": "b5f366dfa88a0119065ef526123b3d8194b93e8637e139735c458da8b8b99b0a",
+      "observations": "Examined again for long V3. All twelve cells examined. The document and room are consistent; Tommy and Alfie are identifiable, with Ollie behind the desk. First and last samples preserve full frame proportions. No visible burned subtitles or watermark in these samples.",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s02e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-02.jpg",
+      "sha256": "c72285cff963dafe83f2bcf6a5016c70f6da46be2ad1d045a0c7d5be368fa990",
+      "observations": "Examined again for long V3. All twelve cells examined again after entering the shared-risk condition before the newly recognised If at562.56s. The requested first sample is562.433s. Camera positions remain consistent across the listed source cuts. The first-concession final sample contains source motion blur on Ollie; the moving raccord still needs review. No visible burned subtitles or watermark in these samples.",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s02e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-03.jpg",
+      "sha256": "f93edd18f55e64d93c8e48b256e392fcd63ca4aa60925ec6b4fbc039125c10bc",
+      "observations": "Examined again for long V3. All twelve cells examined. War and settlement samples remain in the same room and match the cast. All eight annotation samples shown on this board were examined; some are natural listener/reaction shots rather than the graded speaker. The legal-leverage point shows Tommy; the Why point shows Ollie reacting. No visible burned subtitles or watermark.",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s02e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-v3-editorial-review/board-04.jpg",
+      "sha256": "e1b17723d5bf291a387a307e5363fbc4cfb1ea19e09d25ec384364f8c95165c5",
+      "observations": "Examined again for long V3. The final annotation sample was examined again after moving the White closing-grade pause from781.60 to778.033 s. It now shows Tommy after his offer, before Alfie repeats the price. No visible burned subtitles or watermark.",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s03e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-long-v3-editorial-review/s03e06/board-01.jpg",
+      "observations": "All six samples examined. Tommy opens with the request for information, buyers-list ending and accusation beginning remain in the warehouse. A pointed gun is visible at the accusation start. Reaction pictures are not used to infer the speaker. No burned subtitles, watermark or changed picture proportions.",
+      "sha256": "9a5c454c7bb0ce6b691d35cb6b75c0cbf0e072e75af73bf7d1dac1d760825300",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s03e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-long-v3-editorial-review/s03e06/board-02.jpg",
+      "observations": "All six samples examined. Cut end/start have different threat/action positions, disclosed by the Michael intervention card. Visible blood remains on Tommy after the omitted intervention. Alfie is nearby during the counterattack. No subtitles or watermark visible; no claim that the omitted action disappears from the consequences.",
+      "sha256": "d506ae6fb4e561616d0a6fb442655ee0320fc98f413a5e070697a73846cf40e1",
+      "visually_examined": true
+    },
+    {
+      "source_id": "s03e06",
+      "file": "/workspace/studio/output/conversation-chess/tommy-alfie-long-v3-editorial-review/s03e06/board-03.jpg",
+      "observations": "All four populated samples examined. Michael is present at the final cut beginning. Alfie appears at the acknowledgement picture; the final clarification faces Tommy and Alfie. The source ending is a two-shot before the fade, without subtitles or watermark.",
+      "sha256": "8a65fa308b7357d73256e2c94915d709d78c5bf967493a041d572dc0d6c1b16c",
+      "visually_examined": true
+    }
+  ],
+  "sampled_no_visible_burned_subtitles": true,
+  "sampled_no_visible_watermark": true,
+  "native_aspect_ratio_preserved": true,
+  "source_master_encoded": false,
+  "continuous_motion_review_performed": false,
+  "listening_performed": false,
+  "final_render_review_performed": false,
+  "youtube_clearance_verified": false,
+  "copyright_guarantee": false,
+  "notes": [
+    "Source motion blur occurs in the first-concession Ollie reaction; continuity of that short cut must be checked in the prepared master.",
+    "The moral act contains pointed guns and visible blood on Tommy; no shooting is retained.",
+    "A speaking line can be carried over a listener shot. Speaker attribution follows the dialogue/transcript context, never just the visible face."
+  ]
+}

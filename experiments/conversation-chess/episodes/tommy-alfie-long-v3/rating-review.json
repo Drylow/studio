@@ -1,0 +1,34 @@
+{
+  "schema": "conversation-chess-long-rating-editorial-review-v1",
+  "scope": "Decision-specific interpretation of retained English dialogue. Editorial scores are not Stockfish ratings.",
+  "brilliant_count": 2,
+  "brilliant_decisions": [
+    {
+      "id": "negotiation-shared-downside",
+      "reason": "The prepared shared-risk condition changes the bargaining constraint from unilateral takeover to everyone depending on Tommy leaving. A costly prepared reply turns the exchange around; its contingencies remain visible in the following fragments."
+    },
+    {
+      "id": "moral-same-standard",
+      "reason": "Alfie uses the same standard against the accuser, changing who must defend a moral exception. The following full argument, Tommy acknowledgement and knowledge clarification remain visible rather than declaring a victory from a clipped sentence."
+    }
+  ],
+  "removed_overstatements": [
+    "No Brilliant for showing a telegram, demanding100%, covering the same exit twice, or merely agreeing35%.",
+    "The closing child clarification does not erase the earlier betrayal; the comment distinguishes knowledge from innocence."
+  ],
+  "neutral_best_great_scores_consistent": true,
+  "bar_direction_matches_rating_and_speaker": true,
+  "comments_fit7second_typewriter_reading_budget": true,
+  "counts": {
+    "brilliant": 2,
+    "great": 5,
+    "best": 8,
+    "excellent": 0,
+    "good": 2,
+    "book": 5,
+    "blunder": 0,
+    "mistake": 0,
+    "inaccuracy": 1
+  },
+  "final_render_review_performed": false
+}

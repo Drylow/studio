@@ -349,6 +349,23 @@ class NativeMediaTests(unittest.TestCase):
         self.assertFalse(planned['source_quality']['accepted_for_final'])
         self.assertEqual(planned['source_edit']['native_dimensions'], {'width': 1280, 'height': 720})
 
+    def test_last_pcm_packet_drains_on_a_non_packet_aligned_cut(self):
+        source = self.root / 'packet alignment source.mkv'
+        subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-n',
+                        '-f', 'lavfi', '-i', 'testsrc2=s=320x180:r=25:d=8',
+                        '-f', 'lavfi', '-i', 'sine=frequency=523:sample_rate=48000:duration=8',
+                        '-c:v', 'libx264', '-preset', 'ultrafast', '-threads', '2',
+                        '-c:a', 'pcm_s16le', '-ac', '2', str(source)], check=True)
+        cut = self.root / '176 frame cut.mkv'
+        HELPER.prepare_cut(source, {'in': 1.1333333333333333, 'frames': 176}, cut)
+        receipt = HELPER.verify_clock(cut, 176)
+        self.assertEqual(receipt['video_frames'], 176)
+        self.assertEqual(receipt['audio_samples_per_channel'], 281600)
+        pcm = subprocess.check_output(['ffmpeg', '-v', 'error', '-i', str(cut),
+                                       '-vn', '-f', 's16le', '-'])
+        self.assertEqual(len(pcm), 1126400)
+        self.assertLess(abs(float(HELPER.media_probe(cut)['format']['duration']) - 176 / 30), .002)
+
 
 if __name__ == '__main__':
     unittest.main()

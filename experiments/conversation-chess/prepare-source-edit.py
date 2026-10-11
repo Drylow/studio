@@ -1,7 +1,7 @@
 """Prepare explicitly authored scene cuts and remap native chess annotations.
 
 This prepares a source intermediate, not a final export. Final assembly remains
-in the existing Kdenlive workflow. No cropping, mirroring, rate change or quality
+in the existing Kdenlive workflow. No cropping, mirroring, playback-speed change or quality
 reduction is applied. Content ID clearance is not inferred from a local edit.
 """
 import argparse
@@ -22,11 +22,48 @@ def digest(file):
 
 
 def media_probe(file, count_frames=False):
-    args = ['ffprobe', '-v', 'error']
+    args = ['ffprobe', '-v', 'error', '-threads', '4']
     if count_frames:
         args.append('-count_frames')
     return json.loads(subprocess.check_output(args + [
         '-show_format', '-show_streams', '-of', 'json', str(file)]))
+
+
+def verify_clock(file, frames):
+    """Check decoded pictures AND samples; mux duration alone can hide truncation."""
+    decoded = json.loads(subprocess.check_output([
+        'ffprobe', '-v', 'error', '-threads', '4', '-show_frames', '-show_entries',
+        'frame=media_type,best_effort_timestamp_time,nb_samples', '-of', 'json', str(file)]))
+    pictures, samples, worst = 0, 0, 0.0
+    for frame in decoded['frames']:
+        if frame['media_type'] == 'video':
+            expected = pictures / 30
+            pictures += 1
+        elif frame['media_type'] == 'audio':
+            expected = samples / 48000
+            samples += int(frame['nb_samples'])
+        else:
+            raise RuntimeError('Unexpected decoded media stream.')
+        drift = abs(float(frame['best_effort_timestamp_time']) - expected)
+        worst = max(worst, drift)
+        if drift > .0011:
+            raise RuntimeError('Decoded frame/sample timestamps break the authored cadence.')
+    if pictures != frames or samples != frames * 1600:
+        raise RuntimeError('Decoded picture/audio totals disagree with the authored duration.')
+    return {'video_frames': pictures, 'audio_samples_per_channel': samples,
+            'maximum_timestamp_error_seconds': worst, 'timestamp_budget_seconds': .0011}
+
+
+def prepare_cut(source, cut, file):
+    duration = cut['frames'] / 30
+    # Both filters have finite output. A global -t can stop the mux before the
+    # final PCM packet drains, even when every authored picture was encoded.
+    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-n', '-ss', str(cut['in']), '-i', str(source),
+                    '-vf', f'fps=30,trim=end_frame={cut["frames"]},setpts=N/(30*TB),setsar=1',
+                    '-af', f'aresample=48000,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.02,afade=t=out:st={duration-.02}:d=0.02,apad,atrim=end_sample={cut["frames"]*1600},asetpts=N/SR/TB',
+                    '-c:v', 'libx264', '-crf', '16', '-preset', 'superfast', '-threads', '4', '-pix_fmt', 'yuv420p',
+                    '-enc_time_base:v', '1:30', '-fps_mode:v', 'passthrough', '-enc_time_base:a', '1:48000',
+                    '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', str(file)], check=True)
 
 
 def finite_timestamp(value):
@@ -238,14 +275,11 @@ def main():
     parts = out / 'parts'
     parts.mkdir()
     files = []
+    clock_receipts = []
     for i, cut in enumerate(cuts):
         file = parts / f'cut-{i:02}.mkv'
         duration = cut['frames'] / 30
-        subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-n', '-ss', str(cut['in']), '-i', str(source),
-                        '-vf', f'fps=30,trim=end_frame={cut["frames"]},setpts=N/(30*TB),setsar=1',
-                        '-af', f'aresample=48000,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.02,afade=t=out:st={duration-.02}:d=0.02,apad,atrim=end_sample={cut["frames"]*1600}',
-                        '-c:v', 'libx264', '-crf', '16', '-preset', 'superfast', '-threads', '4', '-pix_fmt', 'yuv420p',
-                        '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2', '-t', str(duration), str(file)], check=True)
+        prepare_cut(source, cut, file)
         meta = media_probe(file, count_frames=True)
         video = next(s for s in meta['streams'] if s['codec_type'] == 'video')
         if {k: video[k] for k in ('width', 'height')} != dimensions or int(video['nb_read_frames']) != cut['frames']:
@@ -254,18 +288,23 @@ def main():
             raise RuntimeError('Intermediate duration drift would shift later dialogue cuts.')
         if any(abs(float(s.get('start_time', 0))) > .002 for s in meta['streams']):
             raise RuntimeError('Intermediate tracks must start together at zero.')
+        clock_receipts.append({'cut': i, **verify_clock(file, cut['frames'])})
         files.append(file)
         print(f'Prepared cut {i+1}/{len(cuts)}', flush=True)
     concat = out / 'parts.txt'
-    concat.write_text(''.join(f"file 'parts/{f.name}'\n" for f in files), encoding='utf-8')
+    concat.write_text(''.join(f"file 'parts/{f.name}'\nduration {cut['frames']/30:.12f}\n"
+                              for f, cut in zip(files, cuts)), encoding='utf-8')
     edited = out / f'scene-edit-{dimensions["width"]}x{dimensions["height"]}.mkv'
     subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-n', '-f', 'concat', '-safe', '0', '-i', str(concat),
-                    '-c', 'copy', str(edited)], check=True)
+                    '-map', '0:v:0', '-map', '0:a:0', '-c:v', 'copy', '-r:v', '30',
+                    '-af', f'asetpts=N/SR/TB,apad,atrim=end_sample={cursor*1600}',
+                    '-enc_time_base:a', '1:48000', '-c:a', 'pcm_s16le', str(edited)], check=True)
     subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-xerror', '-i', str(edited), '-f', 'null', '-'], check=True)
     probe = media_probe(edited, count_frames=True)
     video = next(s for s in probe['streams'] if s['codec_type'] == 'video')
     if int(video['nb_read_frames']) != cursor or {k: video[k] for k in ('width', 'height')} != dimensions:
         raise RuntimeError('Edited picture must preserve dimensions and authored frame count.')
+    combined_clock = verify_clock(edited, cursor)
     base.update(source_sha256=digest(edited), source_in=0, source_out=cursor / 30, annotations=annotations)
     base['review_evidence'] = 'Explicit authored cuts; original source audio and key actions retained. Source cuts visually reviewed; full final-render review required. No clearance inferred.'
     base['source_edit'] = {'edit_file': str(editfile), 'original_source_sha256': edit['source_sha256'],
@@ -274,7 +313,8 @@ def main():
     timeline = out / 'timeline.json'
     timeline.write_text(json.dumps(base, indent=2) + '\n', encoding='utf-8')
     (out / 'cut-map.json').write_text(json.dumps({'original_source': str(source), 'edited_source': str(edited),
-                                                 'native_dimensions': dimensions, 'frames': cursor, 'cuts': cuts}, indent=2) + '\n', encoding='utf-8')
+                                                 'native_dimensions': dimensions, 'frames': cursor, 'cuts': cuts,
+                                                 'clock_verification': {'parts': clock_receipts, 'combined': combined_clock}}, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'source': str(edited), 'timeline': str(timeline), 'source_duration': cursor / 30,
                       'final_expected_seconds': cursor / 30 + base['intro_seconds'] + base['outro_seconds'] + sum(a['hold_seconds'] for a in annotations)}))
 

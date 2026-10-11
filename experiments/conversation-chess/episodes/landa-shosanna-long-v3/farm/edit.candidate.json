@@ -1,0 +1,288 @@
+{
+  "schema": "conversation-chess-source-edit-v1",
+  "status": "ready_for_native_source_edit",
+  "source_sha256": "4acdea1066ec9f14b1f92e66b5d701d3bfbcd821874fecde2799998b8290aad6",
+  "source_file": "output/conversation-chess/landa-shosanna-long-v3/farm-source-compiled/farm-compilation-1080p.mkv",
+  "source_dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "timeline": "timeline.candidate.json",
+  "purpose": "First of two authorised conversational duels. Preserve a procedural defence, a cover story, coercive rhetoric, admissions and the language trap. No killings or escape, no duplicated nickname/metaphor excerpts, no invented missing words. Remove all unrelated Heydrich comparison and truncated tails.",
+  "source_visually_reviewed": true,
+  "white_label": "Landa",
+  "black_label": "LaPadite",
+  "opening": {
+    "speaker": "white",
+    "label": "Landa",
+    "reviewed": true,
+    "source_at": 0.6,
+    "evidence": "The first retained line is Landa addressing Monsieur LaPadite and asking to change language. Acquired native images show Landa speaking, local original-French ASR begins1.06 and the official English VTT supplies translation. The farmer replies later. No continuous audio listening is asserted."
+  },
+  "cuts": [
+    {
+      "id": "language-frame",
+      "in": 0.6,
+      "out": 29.433333333333334,
+      "original_clip": "monsieur-lapadite-i-regret-to-inform-you-ive-exhausted-the-extent-of-my-french-to-continue-to-speak",
+      "original_clip_in": 0.6,
+      "original_clip_out": 29.4333333333,
+      "reason": "Retain the complete original-French pretext and English-permission request through last ASR word28.56. The following farmer consent is absent and not invented.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "procedural-shield",
+      "in": 67.43333333333334,
+      "out": 114.83333333333333,
+      "original_clip": "while-im-very-familiar-with-you-and-your-family-i-have-no-way-of-knowing-if-you-are-familiar-with-s1",
+      "original_clip_in": 37.5,
+      "original_clip_out": 84.9,
+      "reason": "Remove the clipped initial clause and duplicate identity introduction. Preserve the farmer’s prior-search defence, Landa’s administrative pretext and the complete close-file promise.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "missing-family",
+      "in": 116.33333333333333,
+      "out": 127.76666666666667,
+      "original_clip": "now-according-to-these-papers-all-the-jewish-families-in-this-area-have-been-accounted-for-except",
+      "original_clip_in": 0.5,
+      "original_clip_out": 11.9333333333,
+      "reason": "Retain the complete unaccounted-Dreyfus statement. Base.en identifies the final name region through11.32 despite lexical error; official VTT supplies the surname.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "rumor-question",
+      "in": 128.63333333333333,
+      "out": 134.5,
+      "original_clip": "so-monsieur-lapadite-what-rumors-have-you-heard-regarding-the-dreyfuses",
+      "original_clip_in": 0.5,
+      "original_clip_out": 6.3666666667,
+      "reason": "Keep the complete question asking what he has heard about the Dreyfuses, before the complete Spain answer.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "rumor-cover",
+      "in": 136.5,
+      "out": 147.36666666666667,
+      "original_clip": "again-this-is-just-a-rumor-but-we-heard-the-dreyfuses-had-made-their-way-into-spain",
+      "original_clip_in": 1.5,
+      "original_clip_out": 12.3666666667,
+      "reason": "Keep the explicit rumor qualification and Spain account; last ASR word11.80. Do not imply that the alleged escape is established fact.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "family-inventory",
+      "in": 147.76666666666668,
+      "out": 179.16666666666666,
+      "original_clip": "having-never-met-the-dreyfuses-would-you-confirm-for-me-the-exact-members-of-the-household-and-s1",
+      "original_clip_in": 0,
+      "original_clip_out": 31.4,
+      "reason": "Retain the actual household question and Jacob/Miriam/Bob answers. The public clip has no children; those come only from the acquired following excerpts.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "children-named",
+      "in": 180.1,
+      "out": 189.3,
+      "original_clip": "and-the-children-amos-and-shosanna",
+      "original_clip_in": 0.5,
+      "original_clip_out": 9.7,
+      "reason": "Keep the actual mention of Amos and Shosanna. Short multilingual ASR has poor proper-name recognition; wording is supplied by the official VTT, not treated as word-exact transcription.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "shosanna-age",
+      "in": 190.16666666666666,
+      "out": 200.1,
+      "original_clip": "and-shosanna",
+      "original_clip_in": 0.5,
+      "original_clip_out": 10.4333333333,
+      "reason": "Retain the question and hesitant18-or19 answer, with ASR last word9.84. This gives context for the later encounter without asserting recognition of an alias.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "reputation-pressure",
+      "in": 200.96666666666667,
+      "out": 241.56666666666666,
+      "original_clip": "RT-jew-hunter",
+      "original_clip_in": 0.3,
+      "original_clip_out": 40.9,
+      "reason": "Keep the nickname demand and the reluctant answer, including Precisely39.08. Remove the unrelated Heydrich moniker comparison that follows.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "metaphor-and-search",
+      "in": 264.46666666666664,
+      "out": 437.93333333333334,
+      "original_clip": "RT-jew-hunter",
+      "original_clip_in": 63.8,
+      "original_clip_out": 237.25,
+      "reason": "Keep Landa’s self-described method and racist analogy because the analysis examines how he turns it into pressure about hiding places. End after dignity236.68, before a possible next pipe syllable. No claim that the analogy is factual or morally admirable.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "direct-threat",
+      "in": 454.3,
+      "out": 463.26666666666665,
+      "original_clip": "and-conduct-a-thorough-search-before-i-can-officially-cross-your-familys-name-off-my-list-s1",
+      "original_clip_in": 7.0,
+      "original_clip_out": 15.9666666667,
+      "reason": "The preceding men-enter-house clause is unavailable. Omit its And conduct fragment and start before the complete irregularities sentence at7.38; keep the complete unless clause through15.56. Omit Now my job dictates and the standalone duplicated unless clip.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "nonpunishment-promise",
+      "in": 467.8666666666667,
+      "out": 476.46666666666664,
+      "original_clip": "i-might-add-also-that-any-information-that-makes-the-performance-of-my-duty-easier-will-not-be-met",
+      "original_clip_in": 0,
+      "original_clip_out": 8.6,
+      "reason": "Use the separate complete non-punishment statement. The public clip starts at its first word; clean initial phoneme has not been certified. Do not reuse the incomplete duplicate in the search clip tail.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "reward-promise",
+      "in": 477.5,
+      "out": 481.1,
+      "original_clip": "actually-quite-the-contrary",
+      "original_clip_in": 0.6,
+      "original_clip_out": 4.2,
+      "reason": "Keep the complete contrary/reward sentence, last word3.90. Remove the louder tail and do not invent the absent detailed reward for his family.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "leading-accusation",
+      "in": 483.06666666666666,
+      "out": 486.76666666666665,
+      "original_clip": "youre-sheltering-enemies-of-the-state-are-not",
+      "original_clip_in": 0.6,
+      "original_clip_out": 4.3,
+      "reason": "Keep the entire leading question about sheltering state enemies, last ASR word3.04. The following admission remains in its own real excerpt.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "admission-and-location",
+      "in": 488.8333333333333,
+      "out": 507.53333333333336,
+      "original_clip": "yes-s314",
+      "original_clip_in": 0.6,
+      "original_clip_out": 19.3,
+      "reason": "Keep both actual Yes answers, the floorboards question and instruction to point. The forced admission is not ranked as moral failure, and no later violence is shown.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    },
+    {
+      "id": "language-trap-revealed",
+      "in": 508.43333333333334,
+      "out": 526.3,
+      "original_clip": "since-i-havent-heard-any-disturbance",
+      "original_clip_in": 0.4,
+      "original_clip_out": 18.25,
+      "reason": "Keep the English explanation that those listening cannot understand, the switch-back instruction and last Yes17.92. Stop before the clipped French fake departure, before all gunfire and flight.",
+      "boundary_listened": false,
+      "boundary_word_alignment_method": "Local multilingual/base.en ASR, source VTT and waveform envelopes. No human audio listening or phoneme-exact certification."
+    }
+  ],
+  "annotations": [
+    {
+      "base_index": 0,
+      "original_at": 29.1
+    },
+    {
+      "base_index": 1,
+      "original_at": 82.66666666666667
+    },
+    {
+      "base_index": 2,
+      "original_at": 103.23333333333333
+    },
+    {
+      "base_index": 3,
+      "original_at": 114.33333333333333
+    },
+    {
+      "base_index": 4,
+      "original_at": 127.53333333333333
+    },
+    {
+      "base_index": 5,
+      "original_at": 147.13333333333333
+    },
+    {
+      "base_index": 6,
+      "original_at": 199.93333333333334
+    },
+    {
+      "base_index": 7,
+      "original_at": 219.4
+    },
+    {
+      "base_index": 8,
+      "original_at": 241.26666666666668
+    },
+    {
+      "base_index": 9,
+      "original_at": 302.06666666666666
+    },
+    {
+      "base_index": 10,
+      "original_at": 333.4
+    },
+    {
+      "base_index": 11,
+      "original_at": 346.6666666666667
+    },
+    {
+      "base_index": 12,
+      "original_at": 370.73333333333335
+    },
+    {
+      "base_index": 13,
+      "original_at": 389.93333333333334
+    },
+    {
+      "base_index": 14,
+      "original_at": 399.1666666666667
+    },
+    {
+      "base_index": 15,
+      "original_at": 420.93333333333334
+    },
+    {
+      "base_index": 16,
+      "original_at": 437.76666666666665
+    },
+    {
+      "base_index": 17,
+      "original_at": 463.03333333333336
+    },
+    {
+      "base_index": 18,
+      "original_at": 481.03333333333336
+    },
+    {
+      "base_index": 19,
+      "original_at": 506.93333333333334
+    },
+    {
+      "base_index": 20,
+      "original_at": 526.1333333333333
+    }
+  ],
+  "youtube_clearance_verified": false,
+  "source_review_scope": "Fifty-three exact ordinal native pause/boundary stills viewed as six boards. Corrected root CFR master preserves ordinal order; native source ASR, source VTT and waveform envelopes support boundaries. Caption audit independently checked, including Miriam spelling and the farmer’s enumeration And the children. No human audio listening or rights clearance."
+}

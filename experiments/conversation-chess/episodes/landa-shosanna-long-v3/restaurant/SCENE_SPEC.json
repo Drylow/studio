@@ -1,0 +1,16 @@
+{
+  "source_file": "/workspace/studio/output/conversation-chess/landa-shosanna/source-compiled/source-compilation-1080p.mkv",
+  "source_sha256": "6f03353c9c4accf2298ca4e8e5974e37e4cceba1f24a24cac207484deb715d52",
+  "source_frames": 2662,
+  "source_samples_per_channel": 4259200,
+  "source_is_raw_compilation": true,
+  "retained_scene_frames": 2115,
+  "retained_scene_seconds": 70.5,
+  "analysis_count": 9,
+  "analysis_hold_seconds_total": 81,
+  "chapter_seconds_without_shared_guide_recap": 151.5,
+  "caption_clock": "retained scene before intro/analysis holds",
+  "white": "Landa",
+  "black": "Shosanna",
+  "short_version_files_modified": false
+}

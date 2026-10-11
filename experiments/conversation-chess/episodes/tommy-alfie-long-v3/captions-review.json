@@ -1,0 +1,2965 @@
+{
+  "schema": "conversation-chess-edited-source-English-captions-review-v1",
+  "caption_file": "experiments/conversation-chess/episodes/tommy-alfie-long-v3/captions.source.en.srt",
+  "caption_sha256": "60891a126fc0fec720b5cc5b2fa451bb25785b12d20bcd3597282fa7af717661",
+  "source_clock": "Edited source master, 625.0666667 seconds, before the 16-second intro, 23 analysis pauses and 12-second outro. Supply this SRT to export-kdenlive.py --subtitles; the exporter maps only source dialogue intervals.",
+  "plan_sha256": "8208f9ee732f33c59ebb5f0c72cf314506ef5eaf0213436742f19481f83d45a5",
+  "timeline_sha256": "f0012d42d6c49e87d047ddf990d8904c7fae1cfe137ffbda7bb47476bae1b183",
+  "master_source_sha256": null,
+  "source_master_encoded_or_listened": false,
+  "native_master_frames": 18752,
+  "native_master_seconds": 625.0666666666667,
+  "fps": 30,
+  "inputs": {
+    "s02e02": {
+      "episode_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e02-english-acquired.mp4",
+      "episode_sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+      "episode_hash_verified_by": "preflight.validation.json exact original-source preflight; no episode modified for captions",
+      "vtt_file": "output/conversation-chess/peaky-source-cache/naka-s02e02/english-timing-reference.vtt",
+      "vtt_sha256": "117aff6982886bc046e74a2405fbc986e54267098372e086d553b1b2cc60055a",
+      "vtt_bytes": 40069,
+      "cue_count": 697,
+      "provenance": "Retained local English soft subtitle/timing reference from the episode source cache. No fresh acquisition and no independently certified official subtitle provenance.",
+      "time_basis": "Absolute original episode seconds; no source_start offset added."
+    },
+    "s02e06": {
+      "episode_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4",
+      "episode_sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+      "episode_hash_verified_by": "preflight.validation.json exact original-source preflight; no episode modified for captions",
+      "vtt_file": "output/conversation-chess/peaky-source-cache/naka-s02e06/english-timing-reference.vtt",
+      "vtt_sha256": "d093c289f8a9e56a34869730afe92c9d050ea3adcb91d397593433cf94c67c46",
+      "vtt_bytes": 39594,
+      "cue_count": 676,
+      "provenance": "Retained local English soft subtitle/timing reference from the episode source cache. No fresh acquisition and no independently certified official subtitle provenance.",
+      "time_basis": "Absolute original episode seconds; no source_start offset added."
+    },
+    "s03e06": {
+      "episode_file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s03e06-english-acquired.mp4",
+      "episode_sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+      "episode_hash_verified_by": "preflight.validation.json exact original-source preflight; no episode modified for captions",
+      "vtt_file": "output/conversation-chess/peaky-source-cache/naka-s03e06/english-timing-reference.vtt",
+      "vtt_sha256": "2cf49defede4beaf451774906d334df7556e18332801e644cde04eba691cc549",
+      "vtt_bytes": 39769,
+      "cue_count": 664,
+      "provenance": "Retained local English soft subtitle/timing reference from the episode source cache. No fresh acquisition and no independently certified official subtitle provenance.",
+      "time_basis": "Absolute original episode seconds; no source_start offset added."
+    }
+  },
+  "caption_count": 195,
+  "captioned_master_seconds": 481.3333333333333,
+  "first_caption": {
+    "index": 1,
+    "source_id": "s02e02",
+    "fragment": "police-opening",
+    "vtt_cue_index": 141,
+    "original_source_interval": [
+      692.56,
+      694.239
+    ],
+    "start_frame": 5,
+    "end_frame_exclusive": 55,
+    "text": "I have policemen on my payroll.",
+    "original_text": "I have policemen on my payroll."
+  },
+  "last_caption": {
+    "index": 195,
+    "source_id": "s03e06",
+    "fragment": "acknowledgement-and-clarification",
+    "vtt_cue_index": 369,
+    "original_source_interval": [
+      1444.72,
+      1446.165
+    ],
+    "start_frame": 18684,
+    "end_frame_exclusive": 18727,
+    "text": "I saw.",
+    "original_text": "I saw."
+  },
+  "source_cut_count": 22,
+  "chapter_card_count": 7,
+  "checks": {
+    "frame_coordinates_30fps": true,
+    "SRT_millisecond_roundtrip_maps_same_frames": true,
+    "ordered_without_overlap": true,
+    "no_captions_over_chapter_cards": true,
+    "no_caption_outside_retained_source_cut": true,
+    "maximum_time_inside625_0667_master": true,
+    "original_VTT_dialogue_not_ASR_reconstruction": true,
+    "no_caption_added_for_analysis_or_outro": true,
+    "human_audio_review_performed": false
+  },
+  "boundary_adjustments": [
+    {
+      "fragment": "telegram-finances-and-risk",
+      "source_id": "s02e02",
+      "vtt_cue_index": 161,
+      "source_interval": [
+        758.64,
+        760.719
+      ],
+      "text": "then you wouldn't have\nsent me the telegram.",
+      "action": "end-at-completed-analysis-pause",
+      "analysis_id": "bakery-telegram",
+      "new_source_end": 760.7,
+      "recognised_last_word": {
+        "start": 760.22,
+        "end": 760.66,
+        "word": " telegram."
+      },
+      "reason": "VTT display linger crosses the analysis pause after the completed recognised line. End at that pause so the line does not reappear on resume."
+    },
+    {
+      "fragment": "negotiation-legal-leverage",
+      "source_id": "s02e06",
+      "vtt_cue_index": 91,
+      "source_interval": [
+        413.9,
+        416.939
+      ],
+      "text": "and no one at Poplar Docks\nwill lift a canvas.",
+      "action": "end-at-completed-analysis-pause",
+      "analysis_id": "negotiation-legal-leverage",
+      "new_source_end": 416.4,
+      "recognised_last_word": {
+        "start": 415.8,
+        "end": 416.06,
+        "word": " canvas."
+      },
+      "reason": "VTT display linger crosses the analysis pause after the completed recognised line. End at that pause so the line does not reappear on resume."
+    },
+    {
+      "fragment": "negotiation-legal-leverage",
+      "source_id": "s02e06",
+      "vtt_cue_index": 94,
+      "source_interval": [
+        421.26,
+        424.739
+      ],
+      "text": "mate, I trust you. That's that. Done.",
+      "action": "clamped-display-tail",
+      "reason": "Full trust/done statement is recognised before423.98. Clamp only the subtitle display tail to cut-out424.233, keeping one caption instance."
+    },
+    {
+      "fragment": "negotiation-agreed-share",
+      "source_id": "s02e06",
+      "vtt_cue_index": 94,
+      "source_interval": [
+        421.26,
+        424.739
+      ],
+      "text": "mate, I trust you. That's that. Done.",
+      "action": "excluded-cross-boundary-cue",
+      "reason": "Whole trust/done statement recognised420.62–423.98, before the later clip begins424.433. Avoid repeated subtitle from the VTT display tail."
+    },
+    {
+      "fragment": "negotiation-coercion",
+      "source_id": "s02e06",
+      "vtt_cue_index": 115,
+      "source_interval": [
+        504.42,
+        506.699
+      ],
+      "text": "He's a big boy, he knows the road.\nNow, look,",
+      "action": "excluded-cross-boundary-cue",
+      "reason": "Mixed cue contains the omitted big-boy/road statement504.09–505.67 and Now,look whose exact retained portion is not recognised in available ASR. Omit this mixed boundary cue rather than invent/supply omitted words."
+    },
+    {
+      "fragment": "negotiation-coercion",
+      "source_id": "s02e06",
+      "vtt_cue_index": 120,
+      "source_interval": [
+        514.82,
+        517.179
+      ],
+      "text": "- With your pen.\n- I understand.",
+      "action": "clamped-display-tail",
+      "reason": "The retained With your pen/I understand pair is corroborated by local VTT and recognitions514.91–515.29 (misheard We depend) and516.29–516.77. Clamp display tail to end516.933; no text beyond the retained response."
+    },
+    {
+      "fragment": "negotiation-prepared-counterthreat",
+      "source_id": "s02e06",
+      "vtt_cue_index": 121,
+      "source_interval": [
+        517.18,
+        519.259
+      ],
+      "text": "Good. Get on with it.",
+      "action": "excluded-cross-boundary-cue",
+      "reason": "Good/Get on with it recognised517.11–518.83, before this retained clip begins519.0. No omitted command added to captions."
+    }
+  ],
+  "text_corrections": [],
+  "limits": [
+    "Local source VTT timing references were used; their official provenance has not been independently certified.",
+    "No human audio listening or final visual subtitle review was performed. Soft subtitle timings can be late/early.",
+    "One mixed subtitle cue at source 504.42–506.699 was conservatively omitted because the short retained fragment and absent ASR recognition do not establish which introductory words remain. The following clearly retained non-negotiable statement is captioned.",
+    "Source output uses 48-column wrapping where possible, up to 2 lines. Precise readable appearance must be checked in native titles after actual export.",
+    "The complete original episodes remain copyrighted; subtitles do not establish clearance."
+  ],
+  "cues": [
+    {
+      "index": 1,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 141,
+      "original_source_interval": [
+        692.56,
+        694.239
+      ],
+      "start_frame": 5,
+      "end_frame_exclusive": 55,
+      "text": "I have policemen on my payroll.",
+      "original_text": "I have policemen on my payroll."
+    },
+    {
+      "index": 2,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 142,
+      "original_source_interval": [
+        694.24,
+        695.679
+      ],
+      "start_frame": 55,
+      "end_frame_exclusive": 98,
+      "text": "Well, I don't like policemen",
+      "original_text": "Well, I don't like policemen"
+    },
+    {
+      "index": 3,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 143,
+      "original_source_interval": [
+        695.68,
+        698.639
+      ],
+      "start_frame": 98,
+      "end_frame_exclusive": 187,
+      "text": "because policemen, they can't be trusted.",
+      "original_text": "because policemen,\nthey can't be trusted."
+    },
+    {
+      "index": 4,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 144,
+      "original_source_interval": [
+        699.12,
+        702.159
+      ],
+      "start_frame": 202,
+      "end_frame_exclusive": 293,
+      "text": "Mr Sabini uses policemen all the time.",
+      "original_text": "Mr Sabini uses policemen all the time."
+    },
+    {
+      "index": 5,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 145,
+      "original_source_interval": [
+        702.16,
+        704.239
+      ],
+      "start_frame": 293,
+      "end_frame_exclusive": 355,
+      "text": "That's why he's winning the war in London",
+      "original_text": "That's why he's winning\nthe war in London"
+    },
+    {
+      "index": 6,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 146,
+      "original_source_interval": [
+        704.68,
+        706.159
+      ],
+      "start_frame": 368,
+      "end_frame_exclusive": 413,
+      "text": "and you are losing it.",
+      "original_text": "and you are losing it."
+    },
+    {
+      "index": 7,
+      "source_id": "s02e02",
+      "fragment": "police-opening",
+      "vtt_cue_index": 147,
+      "original_source_interval": [
+        706.16,
+        708.359
+      ],
+      "start_frame": 413,
+      "end_frame_exclusive": 479,
+      "text": "A war ain't over until it's over, mate.",
+      "original_text": "A war ain't over until it's over, mate."
+    },
+    {
+      "index": 8,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 156,
+      "original_source_interval": [
+        744.48,
+        746.599
+      ],
+      "start_frame": 575,
+      "end_frame_exclusive": 639,
+      "text": "That war was a long time ago.",
+      "original_text": "That war was a long time ago."
+    },
+    {
+      "index": 9,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 157,
+      "original_source_interval": [
+        747.48,
+        750.359
+      ],
+      "start_frame": 665,
+      "end_frame_exclusive": 752,
+      "text": "You need to be more realistic.",
+      "original_text": "You need to be more realistic."
+    },
+    {
+      "index": 10,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 158,
+      "original_source_interval": [
+        751.36,
+        752.9590000000001
+      ],
+      "start_frame": 782,
+      "end_frame_exclusive": 830,
+      "text": "Realistic, yeah?",
+      "original_text": "Realistic, yeah?"
+    },
+    {
+      "index": 11,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 159,
+      "original_source_interval": [
+        754.72,
+        755.919
+      ],
+      "start_frame": 883,
+      "end_frame_exclusive": 919,
+      "text": "Realistic?",
+      "original_text": "Realistic?"
+    },
+    {
+      "index": 12,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 160,
+      "original_source_interval": [
+        757.32,
+        758.639
+      ],
+      "start_frame": 961,
+      "end_frame_exclusive": 1000,
+      "text": "Well, if you weren't losing the war,",
+      "original_text": "Well, if you weren't losing the war,"
+    },
+    {
+      "index": 13,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 161,
+      "original_source_interval": [
+        758.64,
+        760.719
+      ],
+      "start_frame": 1000,
+      "end_frame_exclusive": 1062,
+      "text": "then you wouldn't have sent me the telegram.",
+      "original_text": "then you wouldn't have\nsent me the telegram."
+    },
+    {
+      "index": 14,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 162,
+      "original_source_interval": [
+        760.72,
+        762.039
+      ],
+      "start_frame": 1063,
+      "end_frame_exclusive": 1102,
+      "text": "Really?",
+      "original_text": "Really?"
+    },
+    {
+      "index": 15,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 163,
+      "original_source_interval": [
+        762.04,
+        765.239
+      ],
+      "start_frame": 1102,
+      "end_frame_exclusive": 1198,
+      "text": "You forget your fucking telegram. The telegram\njust said, \"Hello.\"",
+      "original_text": "You forget your fucking telegram.\nThe telegram just said, \"Hello.\""
+    },
+    {
+      "index": 16,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 164,
+      "original_source_interval": [
+        765.8,
+        769.039
+      ],
+      "start_frame": 1215,
+      "end_frame_exclusive": 1312,
+      "text": "Very simple, you want to sell me something.",
+      "original_text": "Very simple,\nyou want to sell me something."
+    },
+    {
+      "index": 17,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 165,
+      "original_source_interval": [
+        770.76,
+        771.999
+      ],
+      "start_frame": 1364,
+      "end_frame_exclusive": 1401,
+      "text": "What?",
+      "original_text": "What?"
+    },
+    {
+      "index": 18,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 166,
+      "original_source_interval": [
+        772.36,
+        774.719
+      ],
+      "start_frame": 1412,
+      "end_frame_exclusive": 1483,
+      "text": "- We join forces.\n- Fuck off.",
+      "original_text": "- We join forces.\n- Fuck off."
+    },
+    {
+      "index": 19,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 167,
+      "original_source_interval": [
+        775.72,
+        777.759
+      ],
+      "start_frame": 1513,
+      "end_frame_exclusive": 1574,
+      "text": "No! Categorical.",
+      "original_text": "No! Categorical."
+    },
+    {
+      "index": 20,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 168,
+      "original_source_interval": [
+        779.04,
+        780.279
+      ],
+      "start_frame": 1612,
+      "end_frame_exclusive": 1649,
+      "text": "Fucking ridiculous.",
+      "original_text": "Fucking ridiculous."
+    },
+    {
+      "index": 21,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 169,
+      "original_source_interval": [
+        781.6,
+        783.159
+      ],
+      "start_frame": 1689,
+      "end_frame_exclusive": 1736,
+      "text": "Mr Solomons.",
+      "original_text": "Mr Solomons."
+    },
+    {
+      "index": 22,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 170,
+      "original_source_interval": [
+        784.84,
+        788.319
+      ],
+      "start_frame": 1786,
+      "end_frame_exclusive": 1891,
+      "text": "Your distillery provides one-tenth of your\nincome.",
+      "original_text": "Your distillery provides\none-tenth of your income."
+    },
+    {
+      "index": 23,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 171,
+      "original_source_interval": [
+        788.88,
+        790.999
+      ],
+      "start_frame": 1907,
+      "end_frame_exclusive": 1971,
+      "text": "Protection is another 10%.",
+      "original_text": "Protection is another 10%."
+    },
+    {
+      "index": 24,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 172,
+      "original_source_interval": [
+        791.0,
+        793.479
+      ],
+      "start_frame": 1971,
+      "end_frame_exclusive": 2045,
+      "text": "And the rest you make from the race tracks.",
+      "original_text": "And the rest you make\nfrom the race tracks."
+    },
+    {
+      "index": 25,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 173,
+      "original_source_interval": [
+        794.76,
+        796.239
+      ],
+      "start_frame": 2084,
+      "end_frame_exclusive": 2128,
+      "text": "I know you keep a gun in the drawer.",
+      "original_text": "I know you keep a gun in the drawer."
+    },
+    {
+      "index": 26,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 174,
+      "original_source_interval": [
+        796.24,
+        797.799
+      ],
+      "start_frame": 2128,
+      "end_frame_exclusive": 2175,
+      "text": "I know you keep it beside the whisky.",
+      "original_text": "I know you keep it beside the whisky."
+    },
+    {
+      "index": 27,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 175,
+      "original_source_interval": [
+        797.8,
+        800.599
+      ],
+      "start_frame": 2175,
+      "end_frame_exclusive": 2259,
+      "text": "I know you offer a deal or death.",
+      "original_text": "I know you offer a deal or death."
+    },
+    {
+      "index": 28,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 176,
+      "original_source_interval": [
+        805.28,
+        807.719
+      ],
+      "start_frame": 2399,
+      "end_frame_exclusive": 2473,
+      "text": "I know what I'm saying makes you angry.",
+      "original_text": "I know what I'm saying makes you angry."
+    },
+    {
+      "index": 29,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 177,
+      "original_source_interval": [
+        807.88,
+        810.079
+      ],
+      "start_frame": 2477,
+      "end_frame_exclusive": 2543,
+      "text": "But I am offering you a solution.",
+      "original_text": "But I am offering you a solution."
+    },
+    {
+      "index": 30,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 178,
+      "original_source_interval": [
+        810.24,
+        815.119
+      ],
+      "start_frame": 2548,
+      "end_frame_exclusive": 2695,
+      "text": "You see, Mr Sabini is running all your bookies\noff your courses.",
+      "original_text": "You see, Mr Sabini is running\nall your bookies off your courses."
+    },
+    {
+      "index": 31,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 179,
+      "original_source_interval": [
+        816.36,
+        819.999
+      ],
+      "start_frame": 2732,
+      "end_frame_exclusive": 2841,
+      "text": "And he is closing down the premises that take\nyour rum.",
+      "original_text": "And he is closing down the premises\nthat take your rum."
+    },
+    {
+      "index": 32,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 180,
+      "original_source_interval": [
+        820.96,
+        823.399
+      ],
+      "start_frame": 2870,
+      "end_frame_exclusive": 2943,
+      "text": "And people don't trust your protection any more.",
+      "original_text": "And people don't trust\nyour protection any more."
+    },
+    {
+      "index": 33,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 181,
+      "original_source_interval": [
+        825.52,
+        827.719
+      ],
+      "start_frame": 3007,
+      "end_frame_exclusive": 3073,
+      "text": "You're the bloke who shot Billy Kimber, right?",
+      "original_text": "You're the bloke\nwho shot Billy Kimber, right?"
+    },
+    {
+      "index": 34,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 182,
+      "original_source_interval": [
+        829.92,
+        832.239
+      ],
+      "start_frame": 3139,
+      "end_frame_exclusive": 3208,
+      "text": "You did, you fucking shot him. That's you.",
+      "original_text": "You did, you fucking shot him.\nThat's you."
+    },
+    {
+      "index": 35,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 183,
+      "original_source_interval": [
+        833.44,
+        835.519
+      ],
+      "start_frame": 3244,
+      "end_frame_exclusive": 3307,
+      "text": "You fucking betrayed him, mate.",
+      "original_text": "You fucking betrayed him, mate."
+    },
+    {
+      "index": 36,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 184,
+      "original_source_interval": [
+        835.52,
+        836.919
+      ],
+      "start_frame": 3307,
+      "end_frame_exclusive": 3349,
+      "text": "So it'd be entirely appropriate",
+      "original_text": "So it'd be entirely appropriate"
+    },
+    {
+      "index": 37,
+      "source_id": "s02e02",
+      "fragment": "telegram-finances-and-risk",
+      "vtt_cue_index": 185,
+      "original_source_interval": [
+        836.92,
+        840.039
+      ],
+      "start_frame": 3349,
+      "end_frame_exclusive": 3442,
+      "text": "to do what I am thinking in my head to you right\nnow.",
+      "original_text": "to do what I am thinking\nin my head to you right now."
+    },
+    {
+      "index": 38,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 186,
+      "original_source_interval": [
+        842.08,
+        844.799
+      ],
+      "start_frame": 3452,
+      "end_frame_exclusive": 3534,
+      "text": "I can offer you 100 good men.",
+      "original_text": "I can offer you 100 good men."
+    },
+    {
+      "index": 39,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 187,
+      "original_source_interval": [
+        845.08,
+        846.639
+      ],
+      "start_frame": 3542,
+      "end_frame_exclusive": 3589,
+      "text": "All with weapons.",
+      "original_text": "All with weapons."
+    },
+    {
+      "index": 40,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 188,
+      "original_source_interval": [
+        847.32,
+        849.239
+      ],
+      "start_frame": 3610,
+      "end_frame_exclusive": 3667,
+      "text": "And a new relationship with the police.",
+      "original_text": "And a new relationship with the police."
+    },
+    {
+      "index": 41,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 189,
+      "original_source_interval": [
+        849.88,
+        851.479
+      ],
+      "start_frame": 3686,
+      "end_frame_exclusive": 3734,
+      "text": "Intelligence.",
+      "original_text": "Intelligence."
+    },
+    {
+      "index": 42,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 190,
+      "original_source_interval": [
+        852.44,
+        855.479
+      ],
+      "start_frame": 3763,
+      "end_frame_exclusive": 3854,
+      "text": "Intelligence is a very valuable thing, innit, my\nfriend?",
+      "original_text": "Intelligence is a very valuable thing,\ninnit, my friend?"
+    },
+    {
+      "index": 43,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 191,
+      "original_source_interval": [
+        855.48,
+        858.439
+      ],
+      "start_frame": 3854,
+      "end_frame_exclusive": 3943,
+      "text": "And usually it comes far too fucking late.",
+      "original_text": "And usually it comes\nfar too fucking late."
+    },
+    {
+      "index": 44,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 192,
+      "original_source_interval": [
+        861.48,
+        863.319
+      ],
+      "start_frame": 4034,
+      "end_frame_exclusive": 4090,
+      "text": "Let's say that I shot you already, right,",
+      "original_text": "Let's say that\nI shot you already, right,"
+    },
+    {
+      "index": 45,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 193,
+      "original_source_interval": [
+        863.32,
+        865.239
+      ],
+      "start_frame": 4090,
+      "end_frame_exclusive": 4147,
+      "text": "in the fucking face.",
+      "original_text": "in the fucking face."
+    },
+    {
+      "index": 46,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 194,
+      "original_source_interval": [
+        866.44,
+        870.119
+      ],
+      "start_frame": 4183,
+      "end_frame_exclusive": 4294,
+      "text": "And the bullet goes bone, mush, bone, cabinet\nover there.",
+      "original_text": "And the bullet goes bone, mush,\nbone, cabinet over there."
+    },
+    {
+      "index": 47,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 195,
+      "original_source_interval": [
+        870.48,
+        871.559
+      ],
+      "start_frame": 4304,
+      "end_frame_exclusive": 4337,
+      "text": "Which is a shame, innit,",
+      "original_text": "Which is a shame, innit,"
+    },
+    {
+      "index": 48,
+      "source_id": "s02e02",
+      "fragment": "offer-and-cabinet-threat",
+      "vtt_cue_index": 196,
+      "original_source_interval": [
+        871.56,
+        874.479
+      ],
+      "start_frame": 4337,
+      "end_frame_exclusive": 4424,
+      "text": "'cause that cabinet's fucked now and I got to\nget shot of it.",
+      "original_text": "'cause that cabinet's fucked now\nand I got to get shot of it."
+    },
+    {
+      "index": 49,
+      "source_id": "s02e02",
+      "fragment": "meeting-reopened",
+      "vtt_cue_index": 216,
+      "original_source_interval": [
+        938.76,
+        940.439
+      ],
+      "start_frame": 4527,
+      "end_frame_exclusive": 4577,
+      "text": "I'm sorry, go on.",
+      "original_text": "I'm sorry, go on."
+    },
+    {
+      "index": 50,
+      "source_id": "s02e02",
+      "fragment": "meeting-reopened",
+      "vtt_cue_index": 217,
+      "original_source_interval": [
+        941.28,
+        942.8389999999999
+      ],
+      "start_frame": 4602,
+      "end_frame_exclusive": 4649,
+      "text": "Tell us your plan.",
+      "original_text": "Tell us your plan."
+    },
+    {
+      "index": 51,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 88,
+      "original_source_interval": [
+        406.38,
+        408.499
+      ],
+      "start_frame": 4758,
+      "end_frame_exclusive": 4822,
+      "text": "Signed by the Minister of the Empire himself.",
+      "original_text": "Signed by\nthe Minister of the Empire himself."
+    },
+    {
+      "index": 52,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 89,
+      "original_source_interval": [
+        408.5,
+        410.659
+      ],
+      "start_frame": 4822,
+      "end_frame_exclusive": 4887,
+      "text": "Yeah? So it is.",
+      "original_text": "Yeah? So it is."
+    },
+    {
+      "index": 53,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 90,
+      "original_source_interval": [
+        411.14,
+        413.899
+      ],
+      "start_frame": 4901,
+      "end_frame_exclusive": 4984,
+      "text": "This means that you can put your rum in our\nshipments,",
+      "original_text": "This means that you can put\nyour rum in our shipments,"
+    },
+    {
+      "index": 54,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 91,
+      "original_source_interval": [
+        413.9,
+        416.939
+      ],
+      "start_frame": 4984,
+      "end_frame_exclusive": 5059,
+      "text": "and no one at Poplar Docks will lift a canvas.",
+      "original_text": "and no one at Poplar Docks\nwill lift a canvas."
+    },
+    {
+      "index": 55,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 92,
+      "original_source_interval": [
+        416.94,
+        419.499
+      ],
+      "start_frame": 5075,
+      "end_frame_exclusive": 5152,
+      "text": "You know what? I'm not even going to have my\nlawyer look at that.",
+      "original_text": "You know what? I'm not even going\nto have my lawyer look at that."
+    },
+    {
+      "index": 56,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 93,
+      "original_source_interval": [
+        419.5,
+        421.259
+      ],
+      "start_frame": 5152,
+      "end_frame_exclusive": 5205,
+      "text": "- I know, it's all legal.\n- You know what,",
+      "original_text": "- I know, it's all legal.\n- You know what,"
+    },
+    {
+      "index": 57,
+      "source_id": "s02e06",
+      "fragment": "negotiation-legal-leverage",
+      "vtt_cue_index": 94,
+      "original_source_interval": [
+        421.26,
+        424.739
+      ],
+      "start_frame": 5205,
+      "end_frame_exclusive": 5294,
+      "text": "mate, I trust you. That's that. Done.",
+      "original_text": "mate, I trust you. That's that. Done."
+    },
+    {
+      "index": 58,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 95,
+      "original_source_interval": [
+        424.74,
+        427.579
+      ],
+      "start_frame": 5303,
+      "end_frame_exclusive": 5388,
+      "text": "So, whisky...",
+      "original_text": "So, whisky..."
+    },
+    {
+      "index": 59,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 96,
+      "original_source_interval": [
+        428.58,
+        432.459
+      ],
+      "start_frame": 5418,
+      "end_frame_exclusive": 5535,
+      "text": "There is, one thing, though, that we do need to\ndiscuss.",
+      "original_text": "There is, one thing, though,\nthat we do need to discuss."
+    },
+    {
+      "index": 60,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 97,
+      "original_source_interval": [
+        432.46,
+        436.739
+      ],
+      "start_frame": 5535,
+      "end_frame_exclusive": 5663,
+      "text": "- What would that be?\n- It says here, \"20%\"",
+      "original_text": "- What would that be?\n- It says here, \"20%\""
+    },
+    {
+      "index": 61,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 98,
+      "original_source_interval": [
+        437.34,
+        439.979
+      ],
+      "start_frame": 5681,
+      "end_frame_exclusive": 5760,
+      "text": "\"paid to me of your export business.\"",
+      "original_text": "\"paid to me of your export business.\""
+    },
+    {
+      "index": 62,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 99,
+      "original_source_interval": [
+        440.86,
+        443.459
+      ],
+      "start_frame": 5787,
+      "end_frame_exclusive": 5865,
+      "text": "- As we agreed on the telephone...\n- No, no, no, no, no.",
+      "original_text": "- As we agreed on the telephone...\n- No, no, no, no, no."
+    },
+    {
+      "index": 63,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 100,
+      "original_source_interval": [
+        443.46,
+        447.139
+      ],
+      "start_frame": 5865,
+      "end_frame_exclusive": 5975,
+      "text": "See, I've had my lawyer draw this up...",
+      "original_text": "See, I've had my lawyer\ndraw this up..."
+    },
+    {
+      "index": 64,
+      "source_id": "s02e06",
+      "fragment": "negotiation-agreed-share",
+      "vtt_cue_index": 101,
+      "original_source_interval": [
+        447.54,
+        449.939
+      ],
+      "start_frame": 5987,
+      "end_frame_exclusive": 6059,
+      "text": "for us, just in case.",
+      "original_text": "for us, just in case."
+    },
+    {
+      "index": 65,
+      "source_id": "s02e06",
+      "fragment": "negotiation-whole-company-demand",
+      "vtt_cue_index": 102,
+      "original_source_interval": [
+        453.3,
+        458.619
+      ],
+      "start_frame": 6084,
+      "end_frame_exclusive": 6244,
+      "text": "It says that, here, that 100%",
+      "original_text": "It says that, here, that 100%"
+    },
+    {
+      "index": 66,
+      "source_id": "s02e06",
+      "fragment": "negotiation-whole-company-demand",
+      "vtt_cue_index": 103,
+      "original_source_interval": [
+        458.62,
+        462.299
+      ],
+      "start_frame": 6244,
+      "end_frame_exclusive": 6354,
+      "text": "of your business goes to me.",
+      "original_text": "of your business goes to me."
+    },
+    {
+      "index": 67,
+      "source_id": "s02e06",
+      "fragment": "negotiation-whole-company-demand",
+      "vtt_cue_index": 104,
+      "original_source_interval": [
+        465.62,
+        468.05899999999997
+      ],
+      "start_frame": 6454,
+      "end_frame_exclusive": 6527,
+      "text": "- I see.\n- It's there. Right.",
+      "original_text": "- I see.\n- It's there. Right."
+    },
+    {
+      "index": 68,
+      "source_id": "s02e06",
+      "fragment": "negotiation-whole-company-demand",
+      "vtt_cue_index": 105,
+      "original_source_interval": [
+        468.06,
+        470.939
+      ],
+      "start_frame": 6527,
+      "end_frame_exclusive": 6613,
+      "text": "Don't worry about it, right, 'cause it's totally\nlegal binding.",
+      "original_text": "Don't worry about it, right,\n'cause it's totally legal binding."
+    },
+    {
+      "index": 69,
+      "source_id": "s02e06",
+      "fragment": "negotiation-whole-company-demand",
+      "vtt_cue_index": 106,
+      "original_source_interval": [
+        470.94,
+        474.779
+      ],
+      "start_frame": 6613,
+      "end_frame_exclusive": 6728,
+      "text": "All you have to do is sign the document and\ntransfer the whole lot over to me.",
+      "original_text": "All you have to do is sign the document\nand transfer the whole lot over to me."
+    },
+    {
+      "index": 70,
+      "source_id": "s02e06",
+      "fragment": "negotiation-tommy-asks-why",
+      "vtt_cue_index": 112,
+      "original_source_interval": [
+        492.54,
+        493.779
+      ],
+      "start_frame": 6736,
+      "end_frame_exclusive": 6773,
+      "text": "Why?",
+      "original_text": "Why?"
+    },
+    {
+      "index": 71,
+      "source_id": "s02e06",
+      "fragment": "negotiation-coercion",
+      "vtt_cue_index": 116,
+      "original_source_interval": [
+        506.7,
+        508.779
+      ],
+      "start_frame": 6852,
+      "end_frame_exclusive": 6914,
+      "text": "it's just non-fucking-negotiable.",
+      "original_text": "it's just non-fucking-negotiable."
+    },
+    {
+      "index": 72,
+      "source_id": "s02e06",
+      "fragment": "negotiation-coercion",
+      "vtt_cue_index": 117,
+      "original_source_interval": [
+        508.78,
+        510.019
+      ],
+      "start_frame": 6914,
+      "end_frame_exclusive": 6952,
+      "text": "That's all you need to know.",
+      "original_text": "That's all you need to know."
+    },
+    {
+      "index": 73,
+      "source_id": "s02e06",
+      "fragment": "negotiation-coercion",
+      "vtt_cue_index": 118,
+      "original_source_interval": [
+        510.02,
+        513.3389999999999
+      ],
+      "start_frame": 6952,
+      "end_frame_exclusive": 7051,
+      "text": "So all you have to do is sign the fucking\ncontract.",
+      "original_text": "So all you have to do\nis sign the fucking contract."
+    },
+    {
+      "index": 74,
+      "source_id": "s02e06",
+      "fragment": "negotiation-coercion",
+      "vtt_cue_index": 119,
+      "original_source_interval": [
+        513.34,
+        514.819
+      ],
+      "start_frame": 7051,
+      "end_frame_exclusive": 7096,
+      "text": "- Right there.\n- Just sign here?",
+      "original_text": "- Right there.\n- Just sign here?"
+    },
+    {
+      "index": 75,
+      "source_id": "s02e06",
+      "fragment": "negotiation-coercion",
+      "vtt_cue_index": 120,
+      "original_source_interval": [
+        514.82,
+        517.179
+      ],
+      "start_frame": 7096,
+      "end_frame_exclusive": 7159,
+      "text": "- With your pen.\n- I understand.",
+      "original_text": "- With your pen.\n- I understand."
+    },
+    {
+      "index": 76,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 122,
+      "original_source_interval": [
+        519.26,
+        521.699
+      ],
+      "start_frame": 7167,
+      "end_frame_exclusive": 7240,
+      "text": "Well, I have an associate waiting for me at the\ndoor.",
+      "original_text": "Well, I have an associate\nwaiting for me at the door."
+    },
+    {
+      "index": 77,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 123,
+      "original_source_interval": [
+        523.9,
+        528.099
+      ],
+      "start_frame": 7306,
+      "end_frame_exclusive": 7432,
+      "text": "I know that he looks like a choir boy, but he is\nactually an anarchist",
+      "original_text": "I know that he looks like a choir boy,\nbut he is actually an anarchist"
+    },
+    {
+      "index": 78,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 124,
+      "original_source_interval": [
+        528.66,
+        530.819
+      ],
+      "start_frame": 7449,
+      "end_frame_exclusive": 7514,
+      "text": "- from Kentish Town.\n- Tommy...",
+      "original_text": "- from Kentish Town.\n- Tommy..."
+    },
+    {
+      "index": 79,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 125,
+      "original_source_interval": [
+        530.82,
+        533.259
+      ],
+      "start_frame": 7514,
+      "end_frame_exclusive": 7587,
+      "text": "I'm going to fucking shoot you.",
+      "original_text": "I'm going to fucking shoot you."
+    },
+    {
+      "index": 80,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 126,
+      "original_source_interval": [
+        533.26,
+        534.659
+      ],
+      "start_frame": 7587,
+      "end_frame_exclusive": 7629,
+      "text": "All right?",
+      "original_text": "All right?"
+    },
+    {
+      "index": 81,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 127,
+      "original_source_interval": [
+        534.66,
+        537.179
+      ],
+      "start_frame": 7629,
+      "end_frame_exclusive": 7704,
+      "text": "Now, when I came in here, Mr Solomons,",
+      "original_text": "Now, when I came in here, Mr Solomons,"
+    },
+    {
+      "index": 82,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 128,
+      "original_source_interval": [
+        537.18,
+        540.459
+      ],
+      "start_frame": 7704,
+      "end_frame_exclusive": 7803,
+      "text": "I stopped to tie my shoelace. Isn't that a fact?",
+      "original_text": "I stopped to tie my shoelace.\nIsn't that a fact?"
+    },
+    {
+      "index": 83,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 129,
+      "original_source_interval": [
+        540.46,
+        541.659
+      ],
+      "start_frame": 7803,
+      "end_frame_exclusive": 7839,
+      "text": "Ollie?",
+      "original_text": "Ollie?"
+    },
+    {
+      "index": 84,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 130,
+      "original_source_interval": [
+        541.9,
+        544.259
+      ],
+      "start_frame": 7846,
+      "end_frame_exclusive": 7917,
+      "text": "I stopped to tie my shoelace.",
+      "original_text": "I stopped to tie my shoelace."
+    },
+    {
+      "index": 85,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 131,
+      "original_source_interval": [
+        544.26,
+        545.699
+      ],
+      "start_frame": 7917,
+      "end_frame_exclusive": 7960,
+      "text": "And while I was doing it,",
+      "original_text": "And while I was doing it,"
+    },
+    {
+      "index": 86,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 132,
+      "original_source_interval": [
+        545.7,
+        548.299
+      ],
+      "start_frame": 7960,
+      "end_frame_exclusive": 8038,
+      "text": "I laid a hand grenade on one of your barrels,",
+      "original_text": "I laid a hand grenade\non one of your barrels,"
+    },
+    {
+      "index": 87,
+      "source_id": "s02e06",
+      "fragment": "negotiation-prepared-counterthreat",
+      "vtt_cue_index": 133,
+      "original_source_interval": [
+        548.98,
+        551.499
+      ],
+      "start_frame": 8058,
+      "end_frame_exclusive": 8134,
+      "text": "Mark 15, with wired trip.",
+      "original_text": "Mark 15, with wired trip."
+    },
+    {
+      "index": 88,
+      "source_id": "s02e06",
+      "fragment": "negotiation-shared-downside",
+      "vtt_cue_index": 138,
+      "original_source_interval": [
+        562.9,
+        566.499
+      ],
+      "start_frame": 8148,
+      "end_frame_exclusive": 8256,
+      "text": "If I don't walk out that door on the stroke of\n7:00,",
+      "original_text": "If I don't walk out that door\non the stroke of 7:00,"
+    },
+    {
+      "index": 89,
+      "source_id": "s02e06",
+      "fragment": "negotiation-shared-downside",
+      "vtt_cue_index": 139,
+      "original_source_interval": [
+        567.22,
+        570.579
+      ],
+      "start_frame": 8278,
+      "end_frame_exclusive": 8378,
+      "text": "he's going to trigger the grenade and...",
+      "original_text": "he's going to trigger the grenade and..."
+    },
+    {
+      "index": 90,
+      "source_id": "s02e06",
+      "fragment": "negotiation-shared-downside",
+      "vtt_cue_index": 140,
+      "original_source_interval": [
+        570.58,
+        575.779
+      ],
+      "start_frame": 8378,
+      "end_frame_exclusive": 8534,
+      "text": "your very combustible rum will blow us all to\nhell.",
+      "original_text": "your very combustible rum\nwill blow us all to hell."
+    },
+    {
+      "index": 91,
+      "source_id": "s02e06",
+      "fragment": "negotiation-clock",
+      "vtt_cue_index": 150,
+      "original_source_interval": [
+        605.66,
+        606.939
+      ],
+      "start_frame": 8548,
+      "end_frame_exclusive": 8586,
+      "text": "What are you doing?",
+      "original_text": "What are you doing?"
+    },
+    {
+      "index": 92,
+      "source_id": "s02e06",
+      "fragment": "negotiation-clock",
+      "vtt_cue_index": 151,
+      "original_source_interval": [
+        607.06,
+        609.499
+      ],
+      "start_frame": 8590,
+      "end_frame_exclusive": 8663,
+      "text": "Just checking the time. Carry on.",
+      "original_text": "Just checking the time. Carry on."
+    },
+    {
+      "index": 93,
+      "source_id": "s02e06",
+      "fragment": "negotiation-exit-covered",
+      "vtt_cue_index": 152,
+      "original_source_interval": [
+        610.58,
+        614.179
+      ],
+      "start_frame": 8671,
+      "end_frame_exclusive": 8779,
+      "text": "Right, Ollie, I want you to go outside, yeah,\nand shoot that boy in the face",
+      "original_text": "Right, Ollie, I want you to go outside,\nyeah, and shoot that boy in the face"
+    },
+    {
+      "index": 94,
+      "source_id": "s02e06",
+      "fragment": "negotiation-exit-covered",
+      "vtt_cue_index": 153,
+      "original_source_interval": [
+        614.18,
+        615.779
+      ],
+      "start_frame": 8779,
+      "end_frame_exclusive": 8827,
+      "text": "from the good family, all right?",
+      "original_text": "from the good family, all right?"
+    },
+    {
+      "index": 95,
+      "source_id": "s02e06",
+      "fragment": "negotiation-exit-covered",
+      "vtt_cue_index": 154,
+      "original_source_interval": [
+        615.78,
+        619.299
+      ],
+      "start_frame": 8827,
+      "end_frame_exclusive": 8933,
+      "text": "Anyone walks through that door except me, he\nblows the grenade.",
+      "original_text": "Anyone walks through that door\nexcept me, he blows the grenade."
+    },
+    {
+      "index": 96,
+      "source_id": "s02e06",
+      "fragment": "negotiation-credibility",
+      "vtt_cue_index": 156,
+      "original_source_interval": [
+        626.14,
+        628.859
+      ],
+      "start_frame": 8943,
+      "end_frame_exclusive": 9025,
+      "text": "I bet, 100 to 1,",
+      "original_text": "I bet, 100 to 1,"
+    },
+    {
+      "index": 97,
+      "source_id": "s02e06",
+      "fragment": "negotiation-credibility",
+      "vtt_cue_index": 157,
+      "original_source_interval": [
+        630.26,
+        633.939
+      ],
+      "start_frame": 9067,
+      "end_frame_exclusive": 9177,
+      "text": "you're fucking lying, mate. That's my money.",
+      "original_text": "you're fucking lying, mate.\nThat's my money."
+    },
+    {
+      "index": 98,
+      "source_id": "s02e06",
+      "fragment": "negotiation-credibility",
+      "vtt_cue_index": 158,
+      "original_source_interval": [
+        633.94,
+        636.379
+      ],
+      "start_frame": 9177,
+      "end_frame_exclusive": 9250,
+      "text": "Well, see, you've failed to consider the form.",
+      "original_text": "Well, see, you've failed\nto consider the form."
+    },
+    {
+      "index": 99,
+      "source_id": "s02e06",
+      "fragment": "negotiation-credibility",
+      "vtt_cue_index": 159,
+      "original_source_interval": [
+        636.86,
+        638.699
+      ],
+      "start_frame": 9265,
+      "end_frame_exclusive": 9320,
+      "text": "I did blow up me own pub...",
+      "original_text": "I did blow up me own pub..."
+    },
+    {
+      "index": 100,
+      "source_id": "s02e06",
+      "fragment": "negotiation-credibility",
+      "vtt_cue_index": 160,
+      "original_source_interval": [
+        639.02,
+        641.059
+      ],
+      "start_frame": 9330,
+      "end_frame_exclusive": 9391,
+      "text": "for the insurance.",
+      "original_text": "for the insurance."
+    },
+    {
+      "index": 101,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 161,
+      "original_source_interval": [
+        644.46,
+        647.059
+      ],
+      "start_frame": 9412,
+      "end_frame_exclusive": 9490,
+      "text": "OK right... Well, considering the form,",
+      "original_text": "OK right...\nWell, considering the form,"
+    },
+    {
+      "index": 102,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 162,
+      "original_source_interval": [
+        647.3,
+        650.219
+      ],
+      "start_frame": 9497,
+      "end_frame_exclusive": 9585,
+      "text": "I would say 65 to 1 . Very good odds.",
+      "original_text": "I would say 65 to 1 . Very good odds."
+    },
+    {
+      "index": 103,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 163,
+      "original_source_interval": [
+        650.22,
+        652.419
+      ],
+      "start_frame": 9585,
+      "end_frame_exclusive": 9651,
+      "text": "And I would be more than happy and agree",
+      "original_text": "And I would be more than happy\nand agree"
+    },
+    {
+      "index": 104,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 164,
+      "original_source_interval": [
+        652.42,
+        654.939
+      ],
+      "start_frame": 9651,
+      "end_frame_exclusive": 9726,
+      "text": "if you were to sign over 65% of your business to\nme.",
+      "original_text": "if you were to sign over\n65% of your business to me."
+    },
+    {
+      "index": 105,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 165,
+      "original_source_interval": [
+        654.94,
+        657.979
+      ],
+      "start_frame": 9726,
+      "end_frame_exclusive": 9817,
+      "text": "- Thank you.\n- Sixty-five? No deal.",
+      "original_text": "- Thank you.\n- Sixty-five? No deal."
+    },
+    {
+      "index": 106,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 166,
+      "original_source_interval": [
+        657.98,
+        659.859
+      ],
+      "start_frame": 9817,
+      "end_frame_exclusive": 9874,
+      "text": "- Ollie, what do you say?\n- Jesus Christ, Alfie.",
+      "original_text": "- Ollie, what do you say?\n- Jesus Christ, Alfie."
+    },
+    {
+      "index": 107,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 167,
+      "original_source_interval": [
+        659.86,
+        661.819
+      ],
+      "start_frame": 9874,
+      "end_frame_exclusive": 9933,
+      "text": "He tied his fucking lace, I saw him!",
+      "original_text": "He tied his fucking lace, I saw him!"
+    },
+    {
+      "index": 108,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 168,
+      "original_source_interval": [
+        661.82,
+        664.579
+      ],
+      "start_frame": 9933,
+      "end_frame_exclusive": 10015,
+      "text": "He planted a grenade, I know he did.",
+      "original_text": "He planted a grenade, I know he did."
+    },
+    {
+      "index": 109,
+      "source_id": "s02e06",
+      "fragment": "negotiation-first-concession-refused",
+      "vtt_cue_index": 169,
+      "original_source_interval": [
+        664.98,
+        666.739
+      ],
+      "start_frame": 10027,
+      "end_frame_exclusive": 10080,
+      "text": "Alfie, it's Tommy fucking Shelby...",
+      "original_text": "Alfie, it's Tommy fucking Shelby..."
+    },
+    {
+      "index": 110,
+      "source_id": "s02e06",
+      "fragment": "negotiation-counteroffer",
+      "vtt_cue_index": 181,
+      "original_source_interval": [
+        724.46,
+        726.059
+      ],
+      "start_frame": 10089,
+      "end_frame_exclusive": 10137,
+      "text": "forty-five percent.",
+      "original_text": "forty-five percent."
+    },
+    {
+      "index": 111,
+      "source_id": "s02e06",
+      "fragment": "negotiation-counteroffer",
+      "vtt_cue_index": 182,
+      "original_source_interval": [
+        726.06,
+        728.139
+      ],
+      "start_frame": 10137,
+      "end_frame_exclusive": 10199,
+      "text": "- Thirty.\n- Fuck off, Tommy.",
+      "original_text": "- Thirty.\n- Fuck off, Tommy."
+    },
+    {
+      "index": 112,
+      "source_id": "s02e06",
+      "fragment": "negotiation-counteroffer",
+      "vtt_cue_index": 183,
+      "original_source_interval": [
+        728.14,
+        729.699
+      ],
+      "start_frame": 10199,
+      "end_frame_exclusive": 10246,
+      "text": "That's far too little.",
+      "original_text": "That's far too little."
+    },
+    {
+      "index": 113,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 184,
+      "original_source_interval": [
+        733.5,
+        737.499
+      ],
+      "start_frame": 10259,
+      "end_frame_exclusive": 10379,
+      "text": "In France, Mr Solomons, while I was a tunneller,\na clay-kicker.",
+      "original_text": "In France, Mr Solomons,\nwhile I was a tunneller, a clay-kicker."
+    },
+    {
+      "index": 114,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 185,
+      "original_source_interval": [
+        737.5,
+        739.379
+      ],
+      "start_frame": 10379,
+      "end_frame_exclusive": 10435,
+      "text": "179.",
+      "original_text": "179."
+    },
+    {
+      "index": 115,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 186,
+      "original_source_interval": [
+        741.14,
+        742.979
+      ],
+      "start_frame": 10488,
+      "end_frame_exclusive": 10543,
+      "text": "I blew up Schwaben Höhe.",
+      "original_text": "I blew up Schwaben Höhe."
+    },
+    {
+      "index": 116,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 187,
+      "original_source_interval": [
+        744.86,
+        746.619
+      ],
+      "start_frame": 10600,
+      "end_frame_exclusive": 10653,
+      "text": "Same kit I'm using today.",
+      "original_text": "Same kit I'm using today."
+    },
+    {
+      "index": 117,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 188,
+      "original_source_interval": [
+        747.82,
+        749.219
+      ],
+      "start_frame": 10689,
+      "end_frame_exclusive": 10731,
+      "text": "It's funny, that.",
+      "original_text": "It's funny, that."
+    },
+    {
+      "index": 118,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 189,
+      "original_source_interval": [
+        751.7,
+        753.939
+      ],
+      "start_frame": 10805,
+      "end_frame_exclusive": 10872,
+      "text": "I do know the 179.",
+      "original_text": "I do know the 179."
+    },
+    {
+      "index": 119,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 190,
+      "original_source_interval": [
+        754.5,
+        757.059
+      ],
+      "start_frame": 10889,
+      "end_frame_exclusive": 10966,
+      "text": "And I heard they all got buried.",
+      "original_text": "And I heard they all got buried."
+    },
+    {
+      "index": 120,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 191,
+      "original_source_interval": [
+        758.26,
+        760.099
+      ],
+      "start_frame": 11002,
+      "end_frame_exclusive": 11057,
+      "text": "Three of us dug ourselves out.",
+      "original_text": "Three of us dug ourselves out."
+    },
+    {
+      "index": 121,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 192,
+      "original_source_interval": [
+        760.1,
+        762.3389999999999
+      ],
+      "start_frame": 11057,
+      "end_frame_exclusive": 11124,
+      "text": "Like you're digging yourself out now?",
+      "original_text": "Like you're digging yourself out now?"
+    },
+    {
+      "index": 122,
+      "source_id": "s02e06",
+      "fragment": "negotiation-war-record",
+      "vtt_cue_index": 193,
+      "original_source_interval": [
+        763.78,
+        765.539
+      ],
+      "start_frame": 11167,
+      "end_frame_exclusive": 11220,
+      "text": "Like I'm digging now.",
+      "original_text": "Like I'm digging now."
+    },
+    {
+      "index": 123,
+      "source_id": "s02e06",
+      "fragment": "negotiation-settlement",
+      "vtt_cue_index": 194,
+      "original_source_interval": [
+        768.9,
+        770.619
+      ],
+      "start_frame": 11231,
+      "end_frame_exclusive": 11283,
+      "text": "Fuck me.",
+      "original_text": "Fuck me."
+    },
+    {
+      "index": 124,
+      "source_id": "s02e06",
+      "fragment": "negotiation-settlement",
+      "vtt_cue_index": 195,
+      "original_source_interval": [
+        773.42,
+        775.859
+      ],
+      "start_frame": 11367,
+      "end_frame_exclusive": 11440,
+      "text": "Listen, I'll give you 35%.",
+      "original_text": "Listen, I'll give you 35%."
+    },
+    {
+      "index": 125,
+      "source_id": "s02e06",
+      "fragment": "negotiation-settlement",
+      "vtt_cue_index": 196,
+      "original_source_interval": [
+        776.26,
+        777.899
+      ],
+      "start_frame": 11452,
+      "end_frame_exclusive": 11501,
+      "text": "That's your lot.",
+      "original_text": "That's your lot."
+    },
+    {
+      "index": 126,
+      "source_id": "s02e06",
+      "fragment": "negotiation-settlement",
+      "vtt_cue_index": 197,
+      "original_source_interval": [
+        780.1,
+        781.459
+      ],
+      "start_frame": 11567,
+      "end_frame_exclusive": 11608,
+      "text": "Thirty-five.",
+      "original_text": "Thirty-five."
+    },
+    {
+      "index": 127,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 279,
+      "original_source_interval": [
+        1118.96,
+        1121.247
+      ],
+      "start_frame": 11727,
+      "end_frame_exclusive": 11795,
+      "text": "This is on the way to somewhere I need to be in\na hurry.",
+      "original_text": "This is on the way\nto somewhere I need to be in a hurry."
+    },
+    {
+      "index": 128,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 280,
+      "original_source_interval": [
+        1121.36,
+        1124.011
+      ],
+      "start_frame": 11799,
+      "end_frame_exclusive": 11878,
+      "text": "- Mmm.\n- What have you got for me?",
+      "original_text": "- Mmm.\n- What have you got for me?"
+    },
+    {
+      "index": 129,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 281,
+      "original_source_interval": [
+        1124.08,
+        1127.368
+      ],
+      "start_frame": 11880,
+      "end_frame_exclusive": 11979,
+      "text": "Well, seeing as you were prepared to pay such an\nexorbitant amount",
+      "original_text": "Well, seeing as you were prepared\nto pay such an exorbitant amount"
+    },
+    {
+      "index": 130,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 282,
+      "original_source_interval": [
+        1127.44,
+        1131.445
+      ],
+      "start_frame": 11981,
+      "end_frame_exclusive": 12101,
+      "text": "for this information, I decided to give you\nvalue for money.",
+      "original_text": "for this information, I decided\nto give you value for money."
+    },
+    {
+      "index": 131,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 283,
+      "original_source_interval": [
+        1131.8,
+        1135.725
+      ],
+      "start_frame": 12112,
+      "end_frame_exclusive": 12230,
+      "text": "So here are the names of all the men in England",
+      "original_text": "So here are the names\nof all the men in England"
+    },
+    {
+      "index": 132,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 284,
+      "original_source_interval": [
+        1135.88,
+        1139.68
+      ],
+      "start_frame": 12234,
+      "end_frame_exclusive": 12348,
+      "text": "whom I would approach, right, if I had a Fabergé\negg for sale.",
+      "original_text": "whom I would approach, right,\nif I had a Fabergé egg for sale."
+    },
+    {
+      "index": 133,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 285,
+      "original_source_interval": [
+        1139.8,
+        1141.37
+      ],
+      "start_frame": 12352,
+      "end_frame_exclusive": 12399,
+      "text": "Here you go.",
+      "original_text": "Here you go."
+    },
+    {
+      "index": 134,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 286,
+      "original_source_interval": [
+        1141.48,
+        1144.37
+      ],
+      "start_frame": 12402,
+      "end_frame_exclusive": 12489,
+      "text": "And then, here's all the men on that list,",
+      "original_text": "And then, here's all\nthe men on that list,"
+    },
+    {
+      "index": 135,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 287,
+      "original_source_interval": [
+        1144.48,
+        1146.448
+      ],
+      "start_frame": 12492,
+      "end_frame_exclusive": 12551,
+      "text": "you know, who would buy the old Fabergé egg,",
+      "original_text": "you know, who would buy\nthe old Fabergé egg,"
+    },
+    {
+      "index": 136,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 288,
+      "original_source_interval": [
+        1146.6,
+        1148.807
+      ],
+      "start_frame": 12556,
+      "end_frame_exclusive": 12622,
+      "text": "even if they knew that that item was stolen.",
+      "original_text": "even if they knew that\nthat item was stolen."
+    },
+    {
+      "index": 137,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 289,
+      "original_source_interval": [
+        1148.92,
+        1149.921
+      ],
+      "start_frame": 12626,
+      "end_frame_exclusive": 12656,
+      "text": "Here.",
+      "original_text": "Here."
+    },
+    {
+      "index": 138,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 290,
+      "original_source_interval": [
+        1150.52,
+        1153.649
+      ],
+      "start_frame": 12674,
+      "end_frame_exclusive": 12767,
+      "text": "Then comes your curious fucking gyppo question.",
+      "original_text": "Then comes your curious\nfucking gyppo question."
+    },
+    {
+      "index": 139,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 291,
+      "original_source_interval": [
+        1153.72,
+        1155.21
+      ],
+      "start_frame": 12770,
+      "end_frame_exclusive": 12814,
+      "text": "I won't ask but, erm...",
+      "original_text": "I won't ask but, erm..."
+    },
+    {
+      "index": 140,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 292,
+      "original_source_interval": [
+        1156.08,
+        1160.722
+      ],
+      "start_frame": 12840,
+      "end_frame_exclusive": 12980,
+      "text": "Here is a list of the men who would buy a\nFabergé",
+      "original_text": "Here is a list of the men\nwho would buy a Fabergé"
+    },
+    {
+      "index": 141,
+      "source_id": "s03e06",
+      "fragment": "buyers-criterion",
+      "vtt_cue_index": 293,
+      "original_source_interval": [
+        1160.8,
+        1163.121
+      ],
+      "start_frame": 12982,
+      "end_frame_exclusive": 13052,
+      "text": "because of their wife's obsession.",
+      "original_text": "because of their wife's obsession."
+    },
+    {
+      "index": 142,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 295,
+      "original_source_interval": [
+        1194.2,
+        1195.69
+      ],
+      "start_frame": 13146,
+      "end_frame_exclusive": 13191,
+      "text": "You left a name off the list, Alfie.",
+      "original_text": "You left a name off the list, Alfie."
+    },
+    {
+      "index": 143,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 296,
+      "original_source_interval": [
+        1195.76,
+        1197.091
+      ],
+      "start_frame": 13193,
+      "end_frame_exclusive": 13233,
+      "text": "- Did I?\n- Yeah.",
+      "original_text": "- Did I?\n- Yeah."
+    },
+    {
+      "index": 144,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 297,
+      "original_source_interval": [
+        1197.4,
+        1199.721
+      ],
+      "start_frame": 13242,
+      "end_frame_exclusive": 13312,
+      "text": "I've already spoken to my people in the\njewellery quarter.",
+      "original_text": "I've already spoken to my people\nin the jewellery quarter."
+    },
+    {
+      "index": 145,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 298,
+      "original_source_interval": [
+        1199.8,
+        1201.928
+      ],
+      "start_frame": 13314,
+      "end_frame_exclusive": 13378,
+      "text": "Experienced dealers.",
+      "original_text": "Experienced dealers."
+    },
+    {
+      "index": 146,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 299,
+      "original_source_interval": [
+        1202.0,
+        1204.89
+      ],
+      "start_frame": 13380,
+      "end_frame_exclusive": 13467,
+      "text": "They tell me there are only three men in Britain",
+      "original_text": "They tell me there are only\nthree men in Britain"
+    },
+    {
+      "index": 147,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 300,
+      "original_source_interval": [
+        1204.96,
+        1206.849
+      ],
+      "start_frame": 13469,
+      "end_frame_exclusive": 13525,
+      "text": "whose wives are obsessed with Fabergé.",
+      "original_text": "whose wives are obsessed with Fabergé."
+    },
+    {
+      "index": 148,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 301,
+      "original_source_interval": [
+        1206.92,
+        1208.649
+      ],
+      "start_frame": 13528,
+      "end_frame_exclusive": 13579,
+      "text": "Makes them good customers.",
+      "original_text": "Makes them good customers."
+    },
+    {
+      "index": 149,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 302,
+      "original_source_interval": [
+        1208.72,
+        1210.609
+      ],
+      "start_frame": 13582,
+      "end_frame_exclusive": 13638,
+      "text": "You missed the richest one off the list.",
+      "original_text": "You missed the richest one off the list."
+    },
+    {
+      "index": 150,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 303,
+      "original_source_interval": [
+        1210.68,
+        1212.603
+      ],
+      "start_frame": 13640,
+      "end_frame_exclusive": 13698,
+      "text": "Yeah, well, if you knew already",
+      "original_text": "Yeah, well, if you knew already"
+    },
+    {
+      "index": 151,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 304,
+      "original_source_interval": [
+        1212.68,
+        1215.809
+      ],
+      "start_frame": 13700,
+      "end_frame_exclusive": 13794,
+      "text": "how come you dragged me all the way out into the\nfucking oggin, mate?",
+      "original_text": "how come you dragged me all the way\nout into the fucking oggin, mate?"
+    },
+    {
+      "index": 152,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 305,
+      "original_source_interval": [
+        1215.88,
+        1217.723
+      ],
+      "start_frame": 13796,
+      "end_frame_exclusive": 13852,
+      "text": "Two reasons. Reason one.",
+      "original_text": "Two reasons. Reason one."
+    },
+    {
+      "index": 153,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 306,
+      "original_source_interval": [
+        1218.68,
+        1222.002
+      ],
+      "start_frame": 13880,
+      "end_frame_exclusive": 13980,
+      "text": "By withholding a name that you most certainly\nknow,",
+      "original_text": "By withholding a name\nthat you most certainly know,"
+    },
+    {
+      "index": 154,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 307,
+      "original_source_interval": [
+        1222.08,
+        1225.687
+      ],
+      "start_frame": 13982,
+      "end_frame_exclusive": 14091,
+      "text": "you've proven to me that you have done a deal\nwith the Odd Fellows.",
+      "original_text": "you've proven to me that you have\ndone a deal with the Odd Fellows."
+    },
+    {
+      "index": 155,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 308,
+      "original_source_interval": [
+        1225.76,
+        1228.525
+      ],
+      "start_frame": 14093,
+      "end_frame_exclusive": 14176,
+      "text": "It was you who told them about the tunnel.",
+      "original_text": "It was you who told them\nabout the tunnel."
+    },
+    {
+      "index": 156,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 309,
+      "original_source_interval": [
+        1228.6,
+        1232.844
+      ],
+      "start_frame": 14178,
+      "end_frame_exclusive": 14305,
+      "text": "You who told them about the fucking deal with\nthe Soviets.",
+      "original_text": "You who told them about the\nfucking deal with the Soviets."
+    },
+    {
+      "index": 157,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 310,
+      "original_source_interval": [
+        1232.92,
+        1233.921
+      ],
+      "start_frame": 14308,
+      "end_frame_exclusive": 14338,
+      "text": "Reason two.",
+      "original_text": "Reason two."
+    },
+    {
+      "index": 158,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 311,
+      "original_source_interval": [
+        1234.6,
+        1237.206
+      ],
+      "start_frame": 14358,
+      "end_frame_exclusive": 14436,
+      "text": "The name of the man that you're withholding must\nbe my enemy",
+      "original_text": "The name of the man that you're\nwithholding must be my enemy"
+    },
+    {
+      "index": 159,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 312,
+      "original_source_interval": [
+        1237.36,
+        1239.283
+      ],
+      "start_frame": 14441,
+      "end_frame_exclusive": 14498,
+      "text": "otherwise, you wouldn't be protecting him.",
+      "original_text": "otherwise,\nyou wouldn't be protecting him."
+    },
+    {
+      "index": 160,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 313,
+      "original_source_interval": [
+        1239.88,
+        1241.211
+      ],
+      "start_frame": 14516,
+      "end_frame_exclusive": 14556,
+      "text": "He is now a man I can use.",
+      "original_text": "He is now a man I can use."
+    },
+    {
+      "index": 161,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 314,
+      "original_source_interval": [
+        1241.96,
+        1244.85
+      ],
+      "start_frame": 14579,
+      "end_frame_exclusive": 14665,
+      "text": "Listen, sweetie, you can't take a man...",
+      "original_text": "Listen, sweetie, you can't take a man..."
+    },
+    {
+      "index": 162,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 315,
+      "original_source_interval": [
+        1244.92,
+        1247.685
+      ],
+      "start_frame": 14668,
+      "end_frame_exclusive": 14751,
+      "text": "You gave information in exchange for a share.",
+      "original_text": "You gave information\nin exchange for a share."
+    },
+    {
+      "index": 163,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 316,
+      "original_source_interval": [
+        1247.76,
+        1249.922
+      ],
+      "start_frame": 14753,
+      "end_frame_exclusive": 14818,
+      "text": "Tommy... Tommy there were things in that\ntreasury, right,",
+      "original_text": "Tommy... Tommy there were\nthings in that treasury, right,"
+    },
+    {
+      "index": 164,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 317,
+      "original_source_interval": [
+        1250.0,
+        1251.684
+      ],
+      "start_frame": 14820,
+      "end_frame_exclusive": 14871,
+      "text": "that God himself, He spoke to me,",
+      "original_text": "that God himself, He spoke to me,"
+    },
+    {
+      "index": 165,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 318,
+      "original_source_interval": [
+        1251.76,
+        1254.047
+      ],
+      "start_frame": 14873,
+      "end_frame_exclusive": 14941,
+      "text": "and He said, \"Alfie, you are meant to have these\nthings.\"",
+      "original_text": "and He said, \"Alfie, you are\nmeant to have these things.\""
+    },
+    {
+      "index": 166,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 319,
+      "original_source_interval": [
+        1254.12,
+        1255.281
+      ],
+      "start_frame": 14944,
+      "end_frame_exclusive": 14978,
+      "text": "You crossed the line, Alfie.",
+      "original_text": "You crossed the line, Alfie."
+    },
+    {
+      "index": 167,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 320,
+      "original_source_interval": [
+        1256.08,
+        1257.969
+      ],
+      "start_frame": 15002,
+      "end_frame_exclusive": 15059,
+      "text": "- You fucking what?\n- You crossed the line.",
+      "original_text": "- You fucking what?\n- You crossed the line."
+    },
+    {
+      "index": 168,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 321,
+      "original_source_interval": [
+        1258.04,
+        1260.93
+      ],
+      "start_frame": 15061,
+      "end_frame_exclusive": 15148,
+      "text": "- \"The line\"?\n- They are using my boy!",
+      "original_text": "- \"The line\"?\n- They are using my boy!"
+    },
+    {
+      "index": 169,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 322,
+      "original_source_interval": [
+        1266.16,
+        1267.446
+      ],
+      "start_frame": 15305,
+      "end_frame_exclusive": 15343,
+      "text": "Did you fucking know?",
+      "original_text": "Did you fucking know?"
+    },
+    {
+      "index": 170,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 323,
+      "original_source_interval": [
+        1267.52,
+        1269.363
+      ],
+      "start_frame": 15346,
+      "end_frame_exclusive": 15401,
+      "text": "Yeah, I knew, you know.",
+      "original_text": "Yeah, I knew, you know."
+    },
+    {
+      "index": 171,
+      "source_id": "s03e06",
+      "fragment": "deduction-accusation-and-child",
+      "vtt_cue_index": 324,
+      "original_source_interval": [
+        1269.44,
+        1273.24
+      ],
+      "start_frame": 15403,
+      "end_frame_exclusive": 15517,
+      "text": "But damned as I am, it made no fucking\ndifference to me, mate.",
+      "original_text": "But damned as I am, it made\nno fucking difference to me, mate."
+    },
+    {
+      "index": 172,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 343,
+      "original_source_interval": [
+        1332.16,
+        1336.484
+      ],
+      "start_frame": 15665,
+      "end_frame_exclusive": 15795,
+      "text": "I do not want him to spare me because of some\nfucking peace pact.",
+      "original_text": "I do not want him to spare me\nbecause of some fucking peace pact."
+    },
+    {
+      "index": 173,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 344,
+      "original_source_interval": [
+        1338.04,
+        1344.73
+      ],
+      "start_frame": 15841,
+      "end_frame_exclusive": 16042,
+      "text": "I want him to acknowledge that his anger is\nun-fucking justified!",
+      "original_text": "I want him to acknowledge that\nhis anger is un-fucking justified!"
+    },
+    {
+      "index": 174,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 345,
+      "original_source_interval": [
+        1344.8,
+        1348.486
+      ],
+      "start_frame": 16044,
+      "end_frame_exclusive": 16155,
+      "text": "I want him to acknowledge that he who fights by\nthe sword,",
+      "original_text": "I want him to acknowledge\nthat he who fights by the sword,"
+    },
+    {
+      "index": 175,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 346,
+      "original_source_interval": [
+        1348.56,
+        1350.562
+      ],
+      "start_frame": 16157,
+      "end_frame_exclusive": 16217,
+      "text": "he fucking dies by it, Tommy.",
+      "original_text": "he fucking dies by it, Tommy."
+    },
+    {
+      "index": 176,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 347,
+      "original_source_interval": [
+        1351.56,
+        1354.086
+      ],
+      "start_frame": 16247,
+      "end_frame_exclusive": 16323,
+      "text": "So what, they took your boy did they, eh?",
+      "original_text": "So what, they took\nyour boy did they, eh?"
+    },
+    {
+      "index": 177,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 348,
+      "original_source_interval": [
+        1354.16,
+        1355.366
+      ],
+      "start_frame": 16325,
+      "end_frame_exclusive": 16361,
+      "text": "They have got your boy?",
+      "original_text": "They have got your boy?"
+    },
+    {
+      "index": 178,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 349,
+      "original_source_interval": [
+        1355.48,
+        1358.768
+      ],
+      "start_frame": 16364,
+      "end_frame_exclusive": 16463,
+      "text": "What fucking \"line\" am I supposed to have\ncrossed?",
+      "original_text": "What fucking \"line\" am I\nsupposed to have crossed?"
+    },
+    {
+      "index": 179,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 350,
+      "original_source_interval": [
+        1361.88,
+        1364.963
+      ],
+      "start_frame": 16556,
+      "end_frame_exclusive": 16649,
+      "text": "How many fathers, right, how many sons, yeah,",
+      "original_text": "How many fathers, right,\nhow many sons, yeah,"
+    },
+    {
+      "index": 180,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 351,
+      "original_source_interval": [
+        1365.04,
+        1369.762
+      ],
+      "start_frame": 16651,
+      "end_frame_exclusive": 16793,
+      "text": "have you cut, killed, murdered fucking\nbutchered, innocent and guilty?",
+      "original_text": "have you cut, killed, murdered\nfucking butchered, innocent and guilty?"
+    },
+    {
+      "index": 181,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 352,
+      "original_source_interval": [
+        1369.84,
+        1371.808
+      ],
+      "start_frame": 16795,
+      "end_frame_exclusive": 16854,
+      "text": "You are going straight to fucking hell, ain't\nya?",
+      "original_text": "You are going straight to\nfucking hell, ain't ya?"
+    },
+    {
+      "index": 182,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 353,
+      "original_source_interval": [
+        1371.88,
+        1374.486
+      ],
+      "start_frame": 16856,
+      "end_frame_exclusive": 16935,
+      "text": "Just like me!",
+      "original_text": "Just like me!"
+    },
+    {
+      "index": 183,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 354,
+      "original_source_interval": [
+        1374.56,
+        1378.724
+      ],
+      "start_frame": 16937,
+      "end_frame_exclusive": 17062,
+      "text": "You fucking stand there, you, judging me,",
+      "original_text": "You fucking stand there,\nyou, judging me,"
+    },
+    {
+      "index": 184,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 355,
+      "original_source_interval": [
+        1378.8,
+        1382.85
+      ],
+      "start_frame": 17064,
+      "end_frame_exclusive": 17186,
+      "text": "stand there and talk to me about crossing some\nfucking line.",
+      "original_text": "stand there and talk to me about\ncrossing some fucking line."
+    },
+    {
+      "index": 185,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 356,
+      "original_source_interval": [
+        1385.72,
+        1388.007
+      ],
+      "start_frame": 17272,
+      "end_frame_exclusive": 17340,
+      "text": "If you pull that trigger, right,",
+      "original_text": "If you pull that trigger, right,"
+    },
+    {
+      "index": 186,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 357,
+      "original_source_interval": [
+        1388.08,
+        1391.163
+      ],
+      "start_frame": 17342,
+      "end_frame_exclusive": 17435,
+      "text": "you pull that trigger for a fucking honourable\nreason.",
+      "original_text": "you pull that trigger\nfor a fucking honourable reason."
+    },
+    {
+      "index": 187,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 358,
+      "original_source_interval": [
+        1391.24,
+        1395.006
+      ],
+      "start_frame": 17437,
+      "end_frame_exclusive": 17550,
+      "text": "Like an honourable man, not like some fucking\ncivilian",
+      "original_text": "Like an honourable man,\nnot like some fucking civilian"
+    },
+    {
+      "index": 188,
+      "source_id": "s03e06",
+      "fragment": "moral-counterattack",
+      "vtt_cue_index": 359,
+      "original_source_interval": [
+        1395.24,
+        1399.928
+      ],
+      "start_frame": 17557,
+      "end_frame_exclusive": 17698,
+      "text": "that does not understand the wicked way of our\nworld, mate.",
+      "original_text": "that does not understand\nthe wicked way of our world, mate."
+    },
+    {
+      "index": 189,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 363,
+      "original_source_interval": [
+        1414.8,
+        1416.211
+      ],
+      "start_frame": 17786,
+      "end_frame_exclusive": 17828,
+      "text": "Michael,",
+      "original_text": "Michael,"
+    },
+    {
+      "index": 190,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 364,
+      "original_source_interval": [
+        1419.16,
+        1422.323
+      ],
+      "start_frame": 17917,
+      "end_frame_exclusive": 18012,
+      "text": "go and call Inspector Moss. Tell him it's\nPalmer.",
+      "original_text": "go and call Inspector Moss.\nTell him it's Palmer."
+    },
+    {
+      "index": 191,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 365,
+      "original_source_interval": [
+        1429.44,
+        1431.363
+      ],
+      "start_frame": 18225,
+      "end_frame_exclusive": 18283,
+      "text": "Well said, Alfie.",
+      "original_text": "Well said, Alfie."
+    },
+    {
+      "index": 192,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 366,
+      "original_source_interval": [
+        1432.16,
+        1433.491
+      ],
+      "start_frame": 18307,
+      "end_frame_exclusive": 18347,
+      "text": "Well said.",
+      "original_text": "Well said."
+    },
+    {
+      "index": 193,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 367,
+      "original_source_interval": [
+        1440.16,
+        1442.003
+      ],
+      "start_frame": 18547,
+      "end_frame_exclusive": 18602,
+      "text": "I did not know about your boy, though.",
+      "original_text": "I did not know about your boy, though."
+    },
+    {
+      "index": 194,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 368,
+      "original_source_interval": [
+        1442.52,
+        1443.851
+      ],
+      "start_frame": 18618,
+      "end_frame_exclusive": 18658,
+      "text": "I know.",
+      "original_text": "I know."
+    },
+    {
+      "index": 195,
+      "source_id": "s03e06",
+      "fragment": "acknowledgement-and-clarification",
+      "vtt_cue_index": 369,
+      "original_source_interval": [
+        1444.72,
+        1446.165
+      ],
+      "start_frame": 18684,
+      "end_frame_exclusive": 18727,
+      "text": "I saw.",
+      "original_text": "I saw."
+    }
+  ],
+  "independent_read_only_audit": {
+    "passed": true,
+    "method": "Independent comparison against all local VTT input hashes, 198 VTT/cut intersections and the existing parse_srt/map_dialogue_cues implementation. Final intervals reconstructed in memory from the current authored timeline, not taken from a rendered manifest.",
+    "caption_count_by_episode": {
+      "s02e02": 50,
+      "s02e06": 76,
+      "s03e06": 69
+    },
+    "source_intersections": 198,
+    "documented_exclusions": 3,
+    "source_caption_count": 195,
+    "mapped_caption_count": 195,
+    "reconstructed_final_intervals": 49,
+    "reconstructed_final_frames": 24422,
+    "captions_split_at_analysis_pauses": 0,
+    "first_final_caption_frames": [
+      485,
+      535
+    ],
+    "last_final_caption_frames": [
+      23784,
+      23827
+    ],
+    "caption_duration_frames_preserved": 14440,
+    "captions_over_intro_analysis_outro": 0,
+    "captions_over_mapped_chapter_cards": 0,
+    "captions_outside_original_source_cuts": 0,
+    "maximum_source_end_seconds": 624.2333333333333,
+    "max_millisecond_serialization_error": 0.3333333333333333,
+    "source_caption_sha256": "60891a126fc0fec720b5cc5b2fa451bb25785b12d20bcd3597282fa7af717661",
+    "plan_and_timeline_unchanged": true,
+    "human_audio_review_performed": false,
+    "native_export_or_final_visual_review_performed": false
+  }
+}

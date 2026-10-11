@@ -1,0 +1,33 @@
+{
+  "schema": "conversation-chess-long-editorial-preflight-v1",
+  "all_three_source_shas_match_prior_edl": true,
+  "source_master_encoded": false,
+  "source_cut_count": 22,
+  "chapter_cards": 7,
+  "source_only_seconds": 568.7,
+  "chapter_card_seconds": 21.4,
+  "master_duration_frames": 17703,
+  "master_duration_seconds": 590.1,
+  "analysis_count": 23,
+  "analysis_seconds": 161,
+  "final_expected_frames": 23373,
+  "final_expected_seconds": 779.1,
+  "user_minimum_seconds": 600,
+  "inside_user_10_to_15_minute_range": true,
+  "rating_counts": {
+    "brilliant": 2,
+    "great": 5,
+    "best": 8,
+    "excellent": 0,
+    "good": 2,
+    "book": 5,
+    "blunder": 0,
+    "mistake": 0,
+    "inaccuracy": 1
+  },
+  "boundary_listening_performed": false,
+  "continuous_motion_reviewed": false,
+  "new_master_decoded": false,
+  "final_video_qa_complete": false,
+  "youtube_check_performed": false
+}

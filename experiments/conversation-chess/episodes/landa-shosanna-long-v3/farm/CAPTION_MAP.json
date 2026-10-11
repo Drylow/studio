@@ -1,0 +1,869 @@
+{
+  "caption_clock": "retained source before shared guide and9s analysis holds",
+  "cues": [
+    {
+      "start": 0.5333333333333333,
+      "end": 1.7,
+      "text": "Monsieur LaPadite",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 1.1333333333333333,
+      "source_end": 2.3
+    },
+    {
+      "start": 3.3666666666666667,
+      "end": 8.133333333333333,
+      "text": "I regret to inform you I've exhausted the extent of my French.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 3.966666666666667,
+      "source_end": 8.733333333333333
+    },
+    {
+      "start": 9.4,
+      "end": 13.166666666666666,
+      "text": "To continue to speak it so inadequately would only serve to embarrass me.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 10.0,
+      "source_end": 13.766666666666667
+    },
+    {
+      "start": 13.433333333333334,
+      "end": 17.266666666666666,
+      "text": "However, I've been led to believe you speak English quite well.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 14.033333333333333,
+      "source_end": 17.866666666666667
+    },
+    {
+      "start": 18.6,
+      "end": 19.633333333333333,
+      "text": "Yes.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 19.2,
+      "source_end": 20.233333333333334
+    },
+    {
+      "start": 19.733333333333334,
+      "end": 23.9,
+      "text": "Well, it just so happens, I do as well. This being your house",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 20.333333333333332,
+      "source_end": 24.5
+    },
+    {
+      "start": 24.166666666666668,
+      "end": 26.6,
+      "text": "I ask your permission to switch to English",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 24.766666666666666,
+      "source_end": 27.2
+    },
+    {
+      "start": 26.766666666666666,
+      "end": 28.433333333333334,
+      "text": "for the remainder of the conversation.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 27.366666666666667,
+      "source_end": 29.033333333333335
+    },
+    {
+      "start": 29.333333333333332,
+      "end": 33.0,
+      "text": "But the meaning of your visit,",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 67.93333333333334,
+      "source_end": 71.6
+    },
+    {
+      "start": 33.46666666666667,
+      "end": 37.666666666666664,
+      "text": "pleasant though it is, is mysterious to me.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 72.06666666666666,
+      "source_end": 76.26666666666667
+    },
+    {
+      "start": 39.3,
+      "end": 42.6,
+      "text": "The Germans looked through my house nine months ago for hiding Jews",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 77.9,
+      "source_end": 81.2
+    },
+    {
+      "start": 42.666666666666664,
+      "end": 44.3,
+      "text": "and found nothing.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 81.26666666666667,
+      "source_end": 82.9
+    },
+    {
+      "start": 46.1,
+      "end": 47.766666666666666,
+      "text": "I'm aware of that.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 84.7,
+      "source_end": 86.36666666666666
+    },
+    {
+      "start": 48.233333333333334,
+      "end": 50.733333333333334,
+      "text": "I've read the reports of this area.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 86.83333333333333,
+      "source_end": 89.33333333333333
+    },
+    {
+      "start": 52.766666666666666,
+      "end": 55.96666666666667,
+      "text": "But like any enterprise, when under new management,",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 91.36666666666666,
+      "source_end": 94.56666666666666
+    },
+    {
+      "start": 56.06666666666667,
+      "end": 59.13333333333333,
+      "text": "there is always a slight duplication of efforts,",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 94.66666666666667,
+      "source_end": 97.73333333333333
+    },
+    {
+      "start": 60.36666666666667,
+      "end": 65.03333333333333,
+      "text": "most of it being a complete waste of time, but needs to be done nevertheless.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 98.96666666666667,
+      "source_end": 103.63333333333334
+    },
+    {
+      "start": 66.03333333333333,
+      "end": 69.1,
+      "text": "I just have a few questions, monsieur LaPadite.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 104.63333333333334,
+      "source_end": 107.7
+    },
+    {
+      "start": 70.56666666666666,
+      "end": 72.86666666666666,
+      "text": "If you can assist me with answers,",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 109.16666666666667,
+      "source_end": 111.46666666666667
+    },
+    {
+      "start": 72.96666666666667,
+      "end": 76.03333333333333,
+      "text": "my department can close the file on your family.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 111.56666666666666,
+      "source_end": 114.63333333333334
+    },
+    {
+      "start": 76.43333333333334,
+      "end": 79.83333333333333,
+      "text": "According to these papers,",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 116.53333333333333,
+      "source_end": 119.93333333333334
+    },
+    {
+      "start": 79.83333333333333,
+      "end": 84.63333333333334,
+      "text": "all the Jewish families in this area\nhave been accounted for,",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 119.93333333333334,
+      "source_end": 124.73333333333333
+    },
+    {
+      "start": 84.73333333333333,
+      "end": 87.26666666666667,
+      "text": "except the Dreyfuses.",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 124.83333333333333,
+      "source_end": 127.36666666666666
+    },
+    {
+      "start": 87.86666666666666,
+      "end": 92.96666666666667,
+      "text": "What rumors have you heard\nabout the Dreyfuses?",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 128.83333333333334,
+      "source_end": 133.93333333333334
+    },
+    {
+      "start": 93.83333333333333,
+      "end": 97.23333333333333,
+      "text": "Again, this is only a rumor,",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 136.8,
+      "source_end": 140.2
+    },
+    {
+      "start": 97.23333333333333,
+      "end": 104.1,
+      "text": "but we heard they had made\ntheir way into Spain.",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 140.2,
+      "source_end": 147.06666666666666
+    },
+    {
+      "start": 104.63333333333334,
+      "end": 108.43333333333334,
+      "text": "Having never met the Dreyfuses, would you confirm for me",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 148.0,
+      "source_end": 151.8
+    },
+    {
+      "start": 108.53333333333333,
+      "end": 111.76666666666667,
+      "text": "the exact members of the household and their names?",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 151.9,
+      "source_end": 155.13333333333333
+    },
+    {
+      "start": 117.23333333333333,
+      "end": 119.2,
+      "text": "There were five of them.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 160.6,
+      "source_end": 162.56666666666666
+    },
+    {
+      "start": 121.4,
+      "end": 124.06666666666666,
+      "text": "The father, Jacob.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 164.76666666666668,
+      "source_end": 167.43333333333334
+    },
+    {
+      "start": 125.93333333333334,
+      "end": 128.43333333333334,
+      "text": "Wife, Miriam.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 169.3,
+      "source_end": 171.8
+    },
+    {
+      "start": 130.46666666666667,
+      "end": 134.1,
+      "text": "And her brother, Bob.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 173.83333333333334,
+      "source_end": 177.46666666666667
+    },
+    {
+      "start": 136.2,
+      "end": 138.9,
+      "text": "And the children,",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 180.5,
+      "source_end": 183.2
+    },
+    {
+      "start": 139.0,
+      "end": 144.2,
+      "text": "Amos and Shosanna.",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 183.3,
+      "source_end": 188.5
+    },
+    {
+      "start": 145.1,
+      "end": 147.0,
+      "text": "And Shosanna?",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 190.26666666666668,
+      "source_end": 192.16666666666666
+    },
+    {
+      "start": 147.0,
+      "end": 154.5,
+      "text": "Shosanna was 18 or 19.\nI’m not really sure.",
+      "method": "Official VTT wording, shortened idiomatically where appropriate; local original-media ASR and native samples. Weak proper names are not certified word-exact.",
+      "source_start": 192.16666666666666,
+      "source_end": 199.66666666666666
+    },
+    {
+      "start": 157.63333333333333,
+      "end": 158.8,
+      "text": "Monsieur LaPadite,",
+      "method": "English-only short-window ASR names phrase at3.20–4.00; VTT supplies the proper name.",
+      "source_start": 203.66666666666666,
+      "source_end": 204.83333333333334
+    },
+    {
+      "start": 158.83333333333334,
+      "end": 163.43333333333334,
+      "text": "are you aware of the nickname the people of France have given me?",
+      "method": "English-only short-window ASR recovers words4.20–8.44; VTT supplies exact wording.",
+      "source_start": 204.86666666666667,
+      "source_end": 209.46666666666667
+    },
+    {
+      "start": 167.13333333333333,
+      "end": 169.93333333333334,
+      "text": "I have no interest in such things.",
+      "method": "English-only short-window ASR recovers12.60–14.98.",
+      "source_start": 213.16666666666666,
+      "source_end": 215.96666666666667
+    },
+    {
+      "start": 171.13333333333333,
+      "end": 173.23333333333332,
+      "text": "But you are aware of what they call me.",
+      "method": "English-only short-window ASR recovers16.64–18.26; multilingual end18.44 supports a later caption tail.",
+      "source_start": 217.16666666666666,
+      "source_end": 219.26666666666668
+    },
+    {
+      "start": 176.3,
+      "end": 177.36666666666667,
+      "text": "I'm aware.",
+      "method": "Both short-window ASR models support21.68–22.48.",
+      "source_start": 222.33333333333334,
+      "source_end": 223.4
+    },
+    {
+      "start": 179.23333333333332,
+      "end": 181.13333333333333,
+      "text": "What are you aware of?",
+      "method": "Local word ASR final of26.24.",
+      "source_start": 225.26666666666668,
+      "source_end": 227.16666666666666
+    },
+    {
+      "start": 191.13333333333333,
+      "end": 192.93333333333334,
+      "text": "That they call you \"The Jew Hunter.\"",
+      "method": "VTT supplies lexical wording; two short-window ASRs consistently place the farmer response at36.42–38.14 but mishear its proper nickname.",
+      "source_start": 237.16666666666666,
+      "source_end": 238.96666666666667
+    },
+    {
+      "start": 193.16666666666666,
+      "end": 193.96666666666667,
+      "text": "Precisely.",
+      "method": "Correctly recovered by English-only and multilingual short-window ASR; last word ends39.08.",
+      "source_start": 239.2,
+      "source_end": 240.0
+    },
+    {
+      "start": 195.7,
+      "end": 199.73333333333332,
+      "text": "The feature that makes me such an effective hunter of the Jews is,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 264.6333333333333,
+      "source_end": 268.6666666666667
+    },
+    {
+      "start": 199.86666666666667,
+      "end": 202.5,
+      "text": "as opposed to most German soldiers,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 268.8,
+      "source_end": 271.43333333333334
+    },
+    {
+      "start": 202.56666666666666,
+      "end": 204.56666666666666,
+      "text": "I can think like a Jew",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 271.5,
+      "source_end": 273.5
+    },
+    {
+      "start": 205.23333333333332,
+      "end": 208.0,
+      "text": "where they can only think like a German.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 274.1666666666667,
+      "source_end": 276.93333333333334
+    },
+    {
+      "start": 208.36666666666667,
+      "end": 211.06666666666666,
+      "text": "More precisely, a German soldier.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 277.3,
+      "source_end": 280.0
+    },
+    {
+      "start": 217.5,
+      "end": 222.36666666666667,
+      "text": "Now, if one were to determine what attribute the German people share with a beast,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 286.43333333333334,
+      "source_end": 291.3
+    },
+    {
+      "start": 222.93333333333334,
+      "end": 226.5,
+      "text": "it would be the cunning and the predatory instinct of a hawk.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 291.8666666666667,
+      "source_end": 295.43333333333334
+    },
+    {
+      "start": 226.93333333333334,
+      "end": 230.8,
+      "text": "But if one were to determine what attributes the Jews share with a beast,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 295.8666666666667,
+      "source_end": 299.73333333333335
+    },
+    {
+      "start": 230.9,
+      "end": 233.03333333333333,
+      "text": "it would be that of the rat.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 299.8333333333333,
+      "source_end": 301.96666666666664
+    },
+    {
+      "start": 235.76666666666668,
+      "end": 239.63333333333333,
+      "text": "The Führer and Goebbels' propaganda have said pretty much the same thing.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 304.7,
+      "source_end": 308.56666666666666
+    },
+    {
+      "start": 239.73333333333332,
+      "end": 242.73333333333332,
+      "text": "But where our conclusions differ,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 308.6666666666667,
+      "source_end": 311.6666666666667
+    },
+    {
+      "start": 242.86666666666667,
+      "end": 245.86666666666667,
+      "text": "is I don't consider the comparison an insult.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 311.8,
+      "source_end": 314.8
+    },
+    {
+      "start": 248.36666666666667,
+      "end": 252.2,
+      "text": "Consider for a moment the world a rat lives in.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 317.3,
+      "source_end": 321.1333333333333
+    },
+    {
+      "start": 253.06666666666666,
+      "end": 255.23333333333332,
+      "text": "It's a hostile world, indeed.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 322.0,
+      "source_end": 324.1666666666667
+    },
+    {
+      "start": 256.1,
+      "end": 259.5,
+      "text": "If a rat were to scamper through your front door, right now,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 325.03333333333336,
+      "source_end": 328.43333333333334
+    },
+    {
+      "start": 259.6,
+      "end": 262.03333333333336,
+      "text": "would you greet it with hostility?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 328.53333333333336,
+      "source_end": 330.96666666666664
+    },
+    {
+      "start": 262.96666666666664,
+      "end": 264.8333333333333,
+      "text": "I suppose I would.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 331.9,
+      "source_end": 333.76666666666665
+    },
+    {
+      "start": 264.93333333333334,
+      "end": 269.8333333333333,
+      "text": "Has a rat ever done anything to you to create this animosity you feel toward them?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 333.8666666666667,
+      "source_end": 338.76666666666665
+    },
+    {
+      "start": 270.76666666666665,
+      "end": 273.3666666666667,
+      "text": "Rats spread disease. They bite people.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 339.7,
+      "source_end": 342.3
+    },
+    {
+      "start": 273.93333333333334,
+      "end": 277.7,
+      "text": "Rats were the cause of the bubonic plague, but that's some time ago.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 342.8666666666667,
+      "source_end": 346.6333333333333
+    },
+    {
+      "start": 277.76666666666665,
+      "end": 280.4,
+      "text": "I propose to you any disease a rat could spread,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 346.7,
+      "source_end": 349.3333333333333
+    },
+    {
+      "start": 280.46666666666664,
+      "end": 282.93333333333334,
+      "text": "a squirrel could equally carry.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 349.4,
+      "source_end": 351.8666666666667
+    },
+    {
+      "start": 283.03333333333336,
+      "end": 284.6666666666667,
+      "text": "Would you agree?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 351.96666666666664,
+      "source_end": 353.6
+    },
+    {
+      "start": 286.5,
+      "end": 289.06666666666666,
+      "text": "Yet, I assume you don't share the same animosity with squirrels",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 355.43333333333334,
+      "source_end": 358.0
+    },
+    {
+      "start": 289.1666666666667,
+      "end": 291.96666666666664,
+      "text": "- that you do with rats, do you? - No.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 358.1,
+      "source_end": 360.9
+    },
+    {
+      "start": 292.3666666666667,
+      "end": 294.8666666666667,
+      "text": "Yet, they're both rodents, are they not?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 361.3,
+      "source_end": 363.8
+    },
+    {
+      "start": 294.96666666666664,
+      "end": 298.96666666666664,
+      "text": "And except for the tail, they even rather look alike, don't they?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 363.9,
+      "source_end": 367.9
+    },
+    {
+      "start": 299.3333333333333,
+      "end": 302.1666666666667,
+      "text": "It's an interesting thought, Herr Colonel.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 368.26666666666665,
+      "source_end": 371.1
+    },
+    {
+      "start": 302.8666666666667,
+      "end": 304.93333333333334,
+      "text": "However interesting as the thought may be,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 371.8,
+      "source_end": 373.8666666666667
+    },
+    {
+      "start": 305.0,
+      "end": 308.3,
+      "text": "it makes not one bit of difference to how you feel.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 373.93333333333334,
+      "source_end": 377.23333333333335
+    },
+    {
+      "start": 310.6333333333333,
+      "end": 314.6666666666667,
+      "text": "If a rat were to walk in here, right now, as I'm talking",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 379.56666666666666,
+      "source_end": 383.6
+    },
+    {
+      "start": 315.8,
+      "end": 319.7,
+      "text": "would you greet it with a saucer of your delicious milk?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 384.73333333333335,
+      "source_end": 388.6333333333333
+    },
+    {
+      "start": 319.8,
+      "end": 321.23333333333335,
+      "text": "Probably not.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 388.73333333333335,
+      "source_end": 390.1666666666667
+    },
+    {
+      "start": 321.9,
+      "end": 323.56666666666666,
+      "text": "I didn't think so.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 390.8333333333333,
+      "source_end": 392.5
+    },
+    {
+      "start": 324.2,
+      "end": 325.73333333333335,
+      "text": "You don't like them.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 393.1333333333333,
+      "source_end": 394.6666666666667
+    },
+    {
+      "start": 325.8333333333333,
+      "end": 327.73333333333335,
+      "text": "You don't really know why you don't like them.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 394.76666666666665,
+      "source_end": 396.6666666666667
+    },
+    {
+      "start": 327.8333333333333,
+      "end": 330.53333333333336,
+      "text": "All you know is you find them repulsive.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 396.76666666666665,
+      "source_end": 399.46666666666664
+    },
+    {
+      "start": 332.73333333333335,
+      "end": 335.8333333333333,
+      "text": "Consequently, a German soldier conducts a search",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 401.6666666666667,
+      "source_end": 404.76666666666665
+    },
+    {
+      "start": 335.9,
+      "end": 338.4,
+      "text": "of a house suspected of hiding Jews.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 404.8333333333333,
+      "source_end": 407.3333333333333
+    },
+    {
+      "start": 339.3333333333333,
+      "end": 340.93333333333334,
+      "text": "Where does the hawk look?",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 408.26666666666665,
+      "source_end": 409.8666666666667
+    },
+    {
+      "start": 341.0,
+      "end": 344.2,
+      "text": "He looks in the barn, he looks in the attic, he looks in the cellar,",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 409.93333333333334,
+      "source_end": 413.1333333333333
+    },
+    {
+      "start": 344.3333333333333,
+      "end": 346.7,
+      "text": "he looks everywhere he would hide.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 413.26666666666665,
+      "source_end": 415.6333333333333
+    },
+    {
+      "start": 347.6666666666667,
+      "end": 351.8333333333333,
+      "text": "But there are so many places it would never occur to a hawk to hide.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 416.6,
+      "source_end": 420.76666666666665
+    },
+    {
+      "start": 354.1,
+      "end": 357.76666666666665,
+      "text": "However, the reason the Führer has brought me off my Alps in Austria",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 423.03333333333336,
+      "source_end": 426.7
+    },
+    {
+      "start": 357.8666666666667,
+      "end": 362.26666666666665,
+      "text": "and placed me in French cow country today is because it does occur to me.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 426.8,
+      "source_end": 431.2
+    },
+    {
+      "start": 363.53333333333336,
+      "end": 366.9,
+      "text": "Because I'm aware what tremendous feats human beings are capable of",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 432.46666666666664,
+      "source_end": 435.8333333333333
+    },
+    {
+      "start": 367.03333333333336,
+      "end": 369.0,
+      "text": "once they abandon dignity.",
+      "method": "Movie VTT offset estimate; locally adjusted where checked",
+      "source_start": 435.96666666666664,
+      "source_end": 437.93333333333334
+    },
+    {
+      "start": 369.43333333333334,
+      "end": 373.3666666666667,
+      "text": "And if there are any irregularities to be found, rest assured they will be.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 454.73333333333335,
+      "source_end": 458.6666666666667
+    },
+    {
+      "start": 373.43333333333334,
+      "end": 375.6666666666667,
+      "text": "That is unless you have something to tell me",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 458.73333333333335,
+      "source_end": 460.96666666666664
+    },
+    {
+      "start": 375.8,
+      "end": 377.96666666666664,
+      "text": "that makes the conducting of a search unnecessary.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 461.1,
+      "source_end": 464.03333333333336
+    },
+    {
+      "start": 378.53333333333336,
+      "end": 380.76666666666665,
+      "text": "I might add, also, that any information",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 468.43333333333334,
+      "source_end": 470.6666666666667
+    },
+    {
+      "start": 380.8666666666667,
+      "end": 385.53333333333336,
+      "text": "that makes the performance of my duty easier will not be met with punishment.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 470.76666666666665,
+      "source_end": 475.43333333333334
+    },
+    {
+      "start": 386.9,
+      "end": 390.1666666666667,
+      "text": "Actually, quite the contrary. It will be met with reward.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 477.8333333333333,
+      "source_end": 481.3666666666667
+    },
+    {
+      "start": 390.56666666666666,
+      "end": 393.8666666666667,
+      "text": "You're sheltering enemies of the state, are you not?",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 483.46666666666664,
+      "source_end": 486.8
+    },
+    {
+      "start": 394.2,
+      "end": 395.26666666666665,
+      "text": "Yes.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 489.1666666666667,
+      "source_end": 490.23333333333335
+    },
+    {
+      "start": 398.2,
+      "end": 402.1,
+      "text": "You're sheltering them underneath your floorboards, aren't you?",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 493.1666666666667,
+      "source_end": 497.06666666666666
+    },
+    {
+      "start": 404.6666666666667,
+      "end": 405.73333333333335,
+      "text": "Yes.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 499.6333333333333,
+      "source_end": 500.7
+    },
+    {
+      "start": 408.53333333333336,
+      "end": 411.56666666666666,
+      "text": "Point out to me the areas where they're hiding.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 503.5,
+      "source_end": 506.53333333333336
+    },
+    {
+      "start": 413.0,
+      "end": 414.3666666666667,
+      "text": "Since I haven't heard any disturbance,",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 508.8666666666667,
+      "source_end": 510.23333333333335
+    },
+    {
+      "start": 414.43333333333334,
+      "end": 418.1666666666667,
+      "text": "I assume, while they're listening, they don't speak English.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 510.3,
+      "source_end": 514.0333333333333
+    },
+    {
+      "start": 420.06666666666666,
+      "end": 421.1666666666667,
+      "text": "Yes.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 515.9333333333333,
+      "source_end": 517.0333333333333
+    },
+    {
+      "start": 423.2,
+      "end": 426.03333333333336,
+      "text": "I'm going to switch back to French now, and I want you to follow my masquerade.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 519.0666666666667,
+      "source_end": 521.9
+    },
+    {
+      "start": 426.1333333333333,
+      "end": 427.6333333333333,
+      "text": "Is that clear?",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 522.0,
+      "source_end": 523.5
+    },
+    {
+      "start": 429.53333333333336,
+      "end": 430.43333333333334,
+      "text": "Yes.",
+      "method": "Official English VTT translated/retimed by inspected native clip offset and local ASR; not phoneme-exact.",
+      "source_start": 525.4,
+      "source_end": 526.5
+    }
+  ]
+}

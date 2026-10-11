@@ -1,0 +1,81 @@
+{
+  "technical_preflight_valid": true,
+  "media_written": false,
+  "plan_sha256": "8208f9ee732f33c59ebb5f0c72cf314506ef5eaf0213436742f19481f83d45a5",
+  "timeline_sha256": "f0012d42d6c49e87d047ddf990d8904c7fae1cfe137ffbda7bb47476bae1b183",
+  "native_dimensions": [
+    1280,
+    720
+  ],
+  "source_fps": 25,
+  "master_fps": 30,
+  "source_cut_count": 22,
+  "chapter_card_count": 7,
+  "annotation_count": 23,
+  "master_frames": 18752,
+  "master_seconds": 625.0666666666667,
+  "final_expected_frames": 24422,
+  "final_expected_seconds": 814.0666666666667,
+  "source_hashes": {
+    "s02e02": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+    "s02e06": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+    "s03e06": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd"
+  },
+  "review_flags_inherited": {
+    "source_reviewed": true,
+    "accepted_for_final": true,
+    "opening_reviewed": true,
+    "annotation_reviewed": {
+      "bakery-telegram": true,
+      "bakery-finances": true,
+      "bakery-gun": true,
+      "bakery-rescue": true,
+      "bakery-cabinet": true,
+      "bakery-meeting": true,
+      "negotiation-legal-leverage": true,
+      "negotiation-whole-company-demand": true,
+      "negotiation-tommy-asks-why": true,
+      "negotiation-shared-downside": true,
+      "negotiation-exit-covered": true,
+      "negotiation-credibility": true,
+      "negotiation-first-concession-refused": true,
+      "negotiation-war-record": true,
+      "negotiation-settlement": true,
+      "moral-list": true,
+      "moral-checked-list": true,
+      "moral-useful-enemy": true,
+      "moral-child-stake": true,
+      "moral-no-truce-defence": true,
+      "moral-same-standard": true,
+      "moral-acknowledgement": true,
+      "moral-child-clarification": true
+    }
+  },
+  "visual_or_listening_review_performed": false,
+  "final_export_review_performed": false,
+  "youtube_clearance_verified": false,
+  "helper_sha256": "1a17a9d2f02000c6a8d8f37f9f3f57771d2181c560a435a217263de0c3c79f79",
+  "checks": {
+    "all_original_source_sha256_exact": true,
+    "all_original_source_dimensions_1280x720": true,
+    "original_cadence_25fps": true,
+    "original_stereo_audio_48000hz": true,
+    "contiguous_authored_frame_joins": true,
+    "cards_keep_authored_duration_frames": [
+      90,
+      90,
+      90,
+      90,
+      84,
+      126,
+      72
+    ],
+    "all_annotation_original_master_coordinates_match": true,
+    "no_replay_over_chapter_cards": true,
+    "global_camps": "Tommy White / Alfie Black",
+    "final_duration_600_to_900_seconds": true,
+    "media_preparation_executed": false,
+    "media_decode_or_master_sha_verified": false
+  },
+  "scope": "Read-only preflight of the current candidates and exact original sources. Inherited true review flags refer to authored samples/word evidence; this helper did not perform visual or listening review and no master has been encoded."
+}

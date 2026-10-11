@@ -1,0 +1,77 @@
+{
+  "s02e02": {
+    "file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e02-english-acquired.mp4",
+    "sha256": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
+    "sha_matches_original_edl": true,
+    "bytes": 879426237,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "fps": "25/1",
+    "duration_seconds": 3450.176,
+    "original_audio_present": true,
+    "stored_entitlement_record": {
+      "manifest_sha256": "2c69a99a3346efdd98f6d27822f0127f65bbb7eaae48c0f7f270f1442d528ae0",
+      "safe_items": [
+        {
+          "season": 2,
+          "episode": 2,
+          "quality": "720p",
+          "maxHeight": 720
+        }
+      ],
+      "fresh_network_response": false
+    }
+  },
+  "s02e06": {
+    "file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s02e06-english-acquired.mp4",
+    "sha256": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
+    "sha_matches_original_edl": true,
+    "bytes": 1051924004,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "fps": "25/1",
+    "duration_seconds": 3527.04,
+    "original_audio_present": true,
+    "stored_entitlement_record": {
+      "manifest_sha256": "cd7e2ff484880637f880ae8584f1dc561cf9d3d56b24a689f82fa403eedcb81d",
+      "safe_items": [
+        {
+          "season": 2,
+          "episode": 6,
+          "quality": "720p",
+          "maxHeight": 720
+        }
+      ],
+      "fresh_network_response": false
+    }
+  },
+  "s03e06": {
+    "file": "output/conversation-chess/peaky-resume-source/peaky-blinders-s03e06-english-acquired.mp4",
+    "sha256": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd",
+    "sha_matches_original_edl": true,
+    "bytes": 947696734,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "fps": "25/1",
+    "duration_seconds": 3443.264,
+    "original_audio_present": true,
+    "stored_entitlement_record": {
+      "manifest_sha256": "b66b760a076d32664dcb991e2c46d68115c41b1b0ec1df8b8c080f87b8820122",
+      "safe_items": [
+        {
+          "season": 3,
+          "episode": 6,
+          "quality": "720p",
+          "maxHeight": 720
+        }
+      ],
+      "fresh_network_response": false
+    }
+  }
+}
