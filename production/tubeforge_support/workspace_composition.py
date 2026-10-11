@@ -2,6 +2,16 @@
 import re
 
 
+ART_RULES = (
+    "All scenery and characters use the SAME hand-drawn flat 2D COMIC rendering: "
+    "clear dark ink outlines on architecture, furniture and props; matte color fills, "
+    "readable detailed environments, restrained textures and simple painted shadows. "
+    "Match the approved comic style reference's rendering, not its particular room or pose. "
+    "No photographic background, game-engine render, 3D materials or realistic fur texture. "
+    "Faces and exposed skin remain flat bright WHITE without shading. "
+)
+
+
 CAST_RULES = (
     "IDENTITY COUNT: Each named individual exists exactly ONCE in the entire image. "
     "If the protagonist is present, draw exactly ONE protagonist body and ONE protagonist "
@@ -36,7 +46,7 @@ RULES = (
     "identities, floating face portraits, superimposed memories, spectral copies, collages, "
     "inset panels, letterboxing, blurred sidebars or filler borders. A past event is drawn as "
     "a normal physical scene, never as a translucent overlay. No captions or watermarks. "
-) + CAST_RULES
+) + CAST_RULES + ART_RULES
 
 
 def cast_rules(characters):
