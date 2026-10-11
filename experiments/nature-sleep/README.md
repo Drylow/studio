@@ -2,11 +2,36 @@
 
 Concept choisi par l’utilisateur le 11 octobre 2026 : récits longs pour dormir
 destinés aux adultes, autour de mousse, jardins, serres et petits bassins.
-L’objectif reste deux heures. Trois images fixes et un avatar ont été présentés avant l’animation.
-L’aperçu C de 24 secondes est livré ; aucun premier récit, voix, film long ou
-publication YouTube lancé.
+L’objectif reste deux heures. Nom, bio et avatar sont déjà livrés sur Discord.
 
-## Décors proposés
+Le 11 octobre 2026, l’utilisateur rejette l’aperçu botanique C et demande
+une nouvelle DA **pixel art cozy, chill, couleurs pastel**. Il aime explicitement
+le nouveau décor de cottage/serre/mare, puis demande beaucoup plus d’animation
+et de détails. **Image fixe approuvée ; animation encore à valider.**
+
+Nouvel aperçu : **https://gofile.io/d/fzRYLiGv**, `Quiet-Little-Worlds-Pixel-Cottage-24s.mp4`,
+24 s, 1080p30, 720 images, sans son, 2 876 133 octets. SHA-256 :
+`694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c`.
+Animation codée : pluie, impacts dans la mare, reflets ondulants, saule,
+petites volutes, lucioles et papillon près de la lanterne. Caméra fixe.
+Source originale 1672×941, grille animée 480×270, agrandissement entier ×4.
+Décodage complet passé ; cinq planches/73 captures et trois vues natives
+revues, upload taille/MD5 confirmé. Pas de visionnage continu prétendu.
+Cycle natif exact, sans garantie de raccord imperceptible du MP4 compressé.
+Code et preuve : `experiments/nature-sleep/pixel-cozy/README.md` et `DELIVERY.json`.
+L’ancien aperçu C est **rejeté**, conservé uniquement en archive.
+Aucun aperçu envoyé sur Discord ; aucun long, script intégral ou voix lancé.
+
+L’utilisateur demande une explication précise du format de deux heures.
+**Proposition à discuter, non validée :** histoires originales en anglais pour
+adultes, imaginaires et apaisantes, dans de petits refuges naturels. Exemple :
+une nuit de pluie dans le cottage. Narration évolutive pendant près de deux
+heures et fond animé en boucle ; ne pas répéter le récit pour remplir la durée.
+Les faits naturels présentés comme réels seront vérifiés. Voir
+`experiments/nature-sleep/pixel-cozy/CHANNEL_FORMAT_PROPOSAL.md`.
+Ne pas présenter la fiction comme un choix utilisateur déjà confirmé.
+
+## Anciennes propositions — archives
 
 - **A — jardin nocturne cinématographique** : feuillage détaillé, mare,
   profondeur et lumière lunaire. Le prompt demandait de la peinture, mais
@@ -58,7 +83,7 @@ Dans chaque futur épisode, distinguer histoire naturelle documentée et
 promenade imaginaire. Vérifier les faits annoncés comme réels. La bio définit
 le thème de la chaîne sans prétendre que des épisodes sont déjà publiés.
 
-## Aperçu léger autorisé par délégation
+## Ancien aperçu C — rejeté par l’utilisateur
 
 Créer un aperçu court uniquement du style choisi : reflets légers, feuillage
 discret, lucioles lentes et, éventuellement, une dérive de caméra imperceptible.
@@ -72,7 +97,7 @@ eau, feuillage et petites lucioles très discrètement animés, cadrage fixe.
 Les 720 images ont été décodées sans erreur ; captures du film revues par
 l’auteur, un examinateur indépendant et le root. Le raccord du shader est
 exact ; celui du MP4 conserve les différences de compression. Aucune lecture
-continue revendiquée, avis utilisateur encore attendu. Voir
+continue revendiquée. L’utilisateur a depuis rejeté cet aperçu. Voir
 [preuve de livraison](PREVIEW_DELIVERY.json) et [moteur](animation/README.md).
 Le nom est choisi et le kit de branding est livré dans
 Discord, confirmé par l’utilisateur. Aucun film de deux heures ni voix lancé.

@@ -2,11 +2,11 @@
   "schema": "nature-sleep-brand-proposals-v1",
   "concept_user_approved": true,
   "brand_name_user_approved": true,
-  "visual_style_user_approved": false,
+  "visual_style_user_approved": true,
   "avatar_user_approved": false,
   "animation_started": true,
   "youtube_channel_created": false,
-  "root_recommended_style": "C",
+  "root_recommended_style": "cozy_pastel_pixel_art",
   "assets": [
     {
       "proposal": "A",
@@ -63,14 +63,18 @@
       }
     }
   ],
-  "status": "Name approved; branding user-confirmed on Discord; C animation preview delivered on GoFile for visual review",
+  "status": "Quiet Little Worlds branding retained; original pastel pixel cottage still approved; new 24-second animation delivered for user review; prior botanical animation rejected",
   "brand_name": "Quiet Little Worlds",
   "proposed_handle": "QuietLittleWorlds",
   "handle_availability": "not_confirmed",
   "avatar_delivery_user_authorized": true,
-  "visual_style_selected_by_delegation": "C",
-  "visual_style_explicit_image_approval": false,
+  "visual_style_selected_by_delegation": "C (historical, subsequently rejected)",
+  "visual_style_explicit_image_approval": true,
   "branding_delivered_user_confirmed": true,
   "animation_preview_delivered": true,
-  "animation_preview_user_approved": false
+  "animation_preview_user_approved": false,
+  "active_art_direction": "cozy_pastel_pixel_art",
+  "previous_style_C_rejected": true,
+  "pixel_cottage_source_user_approved": true,
+  "active_preview_receipt": "pixel-cozy/DELIVERY.json"
 }

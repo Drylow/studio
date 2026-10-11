@@ -1,6 +1,6 @@
 {
   "schema": "quiet-little-worlds-animation-preview-delivery-v1",
-  "status": "delivered_for_user_visual_review",
+  "status": "rejected_by_user_new_pixel_art_direction",
   "gofile_url": "https://gofile.io/d/VOaYXcYo",
   "filename": "Quiet-Little-Worlds-Garden-24s.mp4",
   "sha256": "ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e",
@@ -52,5 +52,9 @@
     "MP4 boundary captures reviewed; no continuous playback or imperceptible seam guarantee",
     "Artwork generated at 1672x941 and exported in 1080p",
     "Actual Stephen Dalton video animation could not be inspected; movements are an original proposal"
-  ]
+  ],
+  "user_rejection": {
+    "date": "2026-10-11",
+    "reason": "Animation judged poor and too subtle; complete art direction change to cozy pastel pixel art"
+  }
 }

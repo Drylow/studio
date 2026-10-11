@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiet Little Worlds — pastel pixel cottage</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#292c41}
+canvas{display:block;position:absolute;inset:0;margin:auto;width:100%;height:auto;max-height:100%;object-fit:contain;image-rendering:pixelated}
+</style>
+<canvas id="screen" width="1920" height="1080"></canvas>
+<script>
+'use strict';
+const CAPTURE_MODE=false;
+const SOURCE='__PIXEL_SOURCE__';
+const W=480,H=270,PERIOD=24,TAU=Math.PI*2;
+const screen=document.querySelector('#screen'),out=screen.getContext('2d',{alpha:false});
+const scene=document.createElement('canvas');scene.width=W;scene.height=H;
+const ctx=scene.getContext('2d',{alpha:false});ctx.imageSmoothingEnabled=false;
+out.imageSmoothingEnabled=false;
+const original=document.createElement('canvas');original.width=W;original.height=H;
+const art=original.getContext('2d',{alpha:false});art.imageSmoothingEnabled=false;
+let originalPixels,workingPixels;
+const pond=[[207,217],[230,204],[262,197],[287,192],[315,189],[346,185],[382,187],[413,190],[435,194],[435,205],[412,216],[407,232],[383,243],[354,244],[320,253],[302,267],[288,260],[273,253],[237,249],[216,241],[196,237]];
+function rand(index,salt=0){const a=Math.sin((index+1)*127.13+salt*311.7)*43758.5453;return a-Math.floor(a);}
+function pixel(x,y,w,h,color,alpha=1){ctx.globalAlpha=alpha;ctx.fillStyle=color;ctx.fillRect(Math.round(x),Math.round(y),w,h);}
+function polygon(points){ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();}
+function inside(x,y,points=pond){let c=false;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;}
+function clearWater(x,y){return inside(x,y)&&!(x<292&&y<214)&&!(x>389&&y>227)&&!(x<235&&y>232);}
+const waterPixels=[];
+for(let y=187;y<266;y++)for(let x=197;x<435;x++)if(clearWater(x,y)&&clearWater(x-2,y)&&clearWater(x+2,y))waterPixels.push([x,y]);
+const waterSpots=[];
+for(let i=0;waterSpots.length<20;i++){
+ const x=213+rand(i,2)*210,y=195+rand(i,3)*60;
+ // Keep droplets away from the painted lily clusters and foreground bank.
+ if(clearWater(x,y))waterSpots.push({x,y,phase:rand(i,4)});
+}
+const glints=[];
+for(let i=0;glints.length<45;i++){
+ const x=209+rand(i,6)*221,y=190+rand(i,7)*71;
+ if(clearWater(x,y))glints.push({x,y,length:2+Math.floor(rand(i,8)*7),phase:rand(i,9)*TAU});
+}
+const rain=Array.from({length:82},(_,i)=>({x:rand(i,11)*540-30,phase:rand(i,12),period:i<28?12:8,length:i<28?2:4,alpha:i<28?.22:.4}));
+const flies=[{x:185,y:147,a:8,b:5},{x:258,y:150,a:13,b:6},{x:350,y:157,a:9,b:5},{x:426,y:155,a:12,b:8},{x:118,y:179,a:10,b:4},{x:391,y:183,a:9,b:5}];
+function breeze(t){
+ workingPixels.data.set(originalPixels.data);
+ const source=originalPixels.data,target=workingPixels.data,p=t/PERIOD*TAU;
+ // Leaves move on the native pixel grid, anchored at the top and at the trunk.
+ for(let y=1;y<128;y++){
+  const left=338+y*.22,vertical=Math.sin(Math.PI*y/128);
+  for(let x=Math.ceil(left);x<473;x++){
+   const edge=Math.min(1,(x-left)/12,(473-x)/14);
+   const shift=Math.round(2.15*vertical*edge*Math.sin(p*2+y*.036));
+   if(!shift)continue;
+   const from=(y*W+x+shift)*4,to=(y*W+x)*4;
+   target[to]=source[from];target[to+1]=source[from+1];target[to+2]=source[from+2];
+  }
+ }
+ // Horizontal reflection bands undulate on clear water only; lilies stay intact.
+ for(const [x,y] of waterPixels){
+  const shift=Math.round(.78*Math.sin(p*3+y*.21)+.45*Math.sin(p*2+y*.43));
+  const from=(y*W+x+shift)*4,to=(y*W+x)*4;
+  target[to]=source[from];target[to+1]=source[from+1];target[to+2]=source[from+2];
+ }
+ ctx.putImageData(workingPixels,0,0);
+}
+function smoke(t){
+ for(let i=0;i<7;i++){
+  const u=(t/8+i/7)%1;
+  const x=75-11*u+2*Math.sin(u*TAU),y=6-19*u;
+  const alpha=.26*Math.sin(Math.PI*u);
+  pixel(x,y,2+Math.floor(u*4),2,'#cbc7d3',alpha);
+  pixel(x-1,y-1,3,1,'#e1d5dc',alpha*.65);
+ }
+}
+function water(t){
+ const p=t/PERIOD*TAU;
+ ctx.save();polygon(pond);ctx.clip();
+ for(const g of glints){
+  const shimmer=(Math.sin(p*3+g.phase)+1)/2;
+  const x=g.x+2.2*Math.sin(p*2+g.phase);
+  const warm=g.x<248;
+  pixel(x,g.y,g.length,1,warm?'#ffc99c':'#d4c6df',.08+shimmer*.16);
+  pixel(x+g.length-1,g.y+1,2,1,warm?'#bc977a':'#797fae',.11);
+ }
+ ctx.restore();
+}
+function ripple(x,y,age,alpha=1){
+ const radius=1+Math.floor(age*8),ry=Math.max(1,Math.floor(radius*.36));
+ const opacity=(1-age)*.47*alpha;
+ // Stepped, flat ellipses keep the same pixel language as the scene.
+ for(let row=-ry;row<=ry;row++){
+  const half=Math.round(radius*Math.sqrt(Math.max(0,1-row*row/(ry*ry+.01))));
+  if(Math.abs(row)===ry)pixel(x-half,y+row,Math.max(1,half*2),1,'#e4d6e9',opacity*.65);
+  else{pixel(x-half,y+row,1,1,'#e4d6e9',opacity);pixel(x+half,y+row,1,1,'#e4d6e9',opacity);}
+ }
+}
+function rainfall(t){
+ for(const d of rain){
+  const u=(t/d.period+d.phase)%1,y=u*(H+18)-10,x=d.x-u*22;
+  for(let j=0;j<d.length;j++)pixel(x+j*.33,y+j,1,1,'#d8cfed',d.alpha*(.6+.4*j/d.length));
+ }
+ for(const d of waterSpots){
+  const u=(t/8+d.phase)%1;
+  if(u<.84){
+   const progress=u/.84,y=-8+(d.y+8)*progress,x=d.x+(1-progress)*21;
+   pixel(x,y,1,2,'#e7d9ee',.32);
+   pixel(x-1,y+2,1,1,'#e7d9ee',.18);
+  }else{
+   ctx.save();polygon(pond);ctx.clip();
+   ripple(d.x,d.y,(u-.84)/.16);
+   ctx.restore();
+  }
+ }
+}
+function fireflies(t){
+ const p=t/PERIOD*TAU;
+ for(let i=0;i<flies.length;i++){
+  const f=flies[i],phase=p+i*1.9;
+  const x=f.x+Math.sin(phase)*f.a,y=f.y+Math.cos(phase*2+.4)*f.b;
+  const glow=.58+.18*Math.sin(phase);
+  pixel(x-1,y,3,1,'#f5deaa',.14*glow);
+  pixel(x,y-1,1,3,'#f5deaa',.14*glow);
+  pixel(x,y,1,1,'#fff0b8',glow);
+ }
+ // One small moth circles the outside lantern; its wings have four poses.
+ const a=t/PERIOD*TAU*3,x=27+6*Math.sin(a),y=83+5*Math.cos(a);
+ const wing=[2,1,0,1][Math.floor(t*8)%4];
+ pixel(x,y,1,1,'#a99c96',.8);
+ if(wing){pixel(x-wing,y-1,wing,1,'#f2dbc0',.7);pixel(x+1,y-1,wing,1,'#f2dbc0',.7);}
+}
+window.renderPixelAt=seconds=>{
+ if(!Number.isFinite(seconds))throw new Error('Time must be finite');
+ const t=((seconds%PERIOD)+PERIOD)%PERIOD;
+ ctx.globalAlpha=1;breeze(t);smoke(t);water(t);rainfall(t);fireflies(t);
+ ctx.globalAlpha=1;out.globalAlpha=1;out.drawImage(scene,0,0,screen.width,screen.height);
+ return{time:t,period:PERIOD,width:screen.width,height:screen.height,nativeGrid:[W,H]};
+};
+window.pixelFramePNG=()=>scene.toDataURL('image/png');
+const image=new Image();
+window.pixelReady=new Promise((resolve,reject)=>{
+ image.onerror=()=>reject(new Error('Pixel cottage source unavailable'));
+ image.onload=()=>{
+  art.drawImage(image,0,0,W,H);originalPixels=art.getImageData(0,0,W,H);
+  workingPixels=new ImageData(new Uint8ClampedArray(originalPixels.data),W,H);
+  window.renderPixelAt(0);resolve({sourceWidth:image.naturalWidth,sourceHeight:image.naturalHeight,nativeGrid:[W,H],duration:PERIOD});
+  if(!CAPTURE_MODE){const start=performance.now();const tick=now=>{window.renderPixelAt((now-start)/1000);requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+ };
+});
+image.src=SOURCE.startsWith('data:')?SOURCE:'assets/cottage-pastel-source.png';
+</script>
+</html>

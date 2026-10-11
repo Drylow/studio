@@ -32,44 +32,34 @@ webhook ni valeur de cette variable dans les documents publics. Le compte
 Google sera repris demain ; aucune création de chaîne, réservation de @,
 connexion Google ou publication YouTube réalisée ici.
 
-## Aperçu C livré — avis visuel attendu
+## Aperçu actif — cottage pastel en pixel art
 
-Trois propositions d’images ont été préparées pour comparer les styles :
+Le 11 octobre 2026, l’utilisateur rejette l’aperçu botanique C et demande
+une nouvelle DA **pixel art cozy, chill, couleurs pastel**. Il aime explicitement
+le nouveau décor de cottage/serre/mare, puis demande beaucoup plus d’animation
+et de détails. **Image fixe approuvée ; animation encore à valider.**
 
-- **A — jardin nocturne cinématographique** : jardin de mousse accueillant,
-  feuillage et lumière calme. Peinture demandée, résultat proche du réalisme.
-- **B — macro réaliste** : petits paysages naturels, textures fines, gouttes
-  et profondeur de champ douce.
-- **C — illustration botanique** : formes naturelles précises, palette douce
-  et composition apaisante.
+Nouvel aperçu : **https://gofile.io/d/fzRYLiGv**, `Quiet-Little-Worlds-Pixel-Cottage-24s.mp4`,
+24 s, 1080p30, 720 images, sans son, 2 876 133 octets. SHA-256 :
+`694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c`.
+Animation codée : pluie, impacts dans la mare, reflets ondulants, saule,
+petites volutes, lucioles et papillon près de la lanterne. Caméra fixe.
+Source originale 1672×941, grille animée 480×270, agrandissement entier ×4.
+Décodage complet passé ; cinq planches/73 captures et trois vues natives
+revues, upload taille/MD5 confirmé. Pas de visionnage continu prétendu.
+Cycle natif exact, sans garantie de raccord imperceptible du MP4 compressé.
+Code et preuve : `experiments/nature-sleep/pixel-cozy/README.md` et `DELIVERY.json`.
+L’ancien aperçu C est **rejeté**, conservé uniquement en archive.
+Aucun aperçu envoyé sur Discord ; aucun long, script intégral ou voix lancé.
 
-Une proposition d’avatar sans texte, centrée autour d’une fougère et d’un
-croissant de lune, est préparée et livrée dans le kit. Réception confirmée ;
-**aucune approbation artistique explicite de l’avatar prétendue**.
-
-L’utilisateur délègue maintenant le choix du style le plus simple à animer et
-demande des mouvements **très légers**, inspirés de la référence Stephen Dalton.
-L’agent choisit **C — illustration botanique douce** pour l’aperçu. C’est un
-choix de réalisation délégué, **pas une validation visuelle explicite de l’image**.
-L’aperçu C est disponible pour avis : **https://gofile.io/d/VOaYXcYo**,
-`Quiet-Little-Worlds-Garden-24s.mp4`, **24 s, 1920×1080/30 fps, 720 images,
-sans audio**, 8 436 624 octets. SHA-256 :
-`ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e`.
-Le décor source fait 1672×941 ; export 1080p, pas un master natif 4K.
-
-Décodage complet passé et upload vérifié par taille/MD5. Revue auteur et
-indépendante : 16 captures sur planche et cinq vues natives ; revue root :
-16 captures sur planche et trois vues natives. **Pas de lecture continue
-prétendue.** Le cycle shader correspond exactement ; le MP4 présente des
-différences de compression au raccord, sans garantie de raccord imperceptible.
-Preuves : [PREVIEW_DELIVERY.json](../nature-sleep/PREVIEW_DELIVERY.json).
-
-**Avis visuel utilisateur attendu**, sans validation de l’animation déduite de
-son choix délégué du style. Aucun premier script, voix off, film de deux heures
-ou compte YouTube commencé. Le kit de branding seul a été envoyé sur Discord ;
-**aucun aperçu vidéo Discord envoyé**, aucune publication YouTube.
-Les anciens rendus marins restent des archives rejetées et ne servent pas de
-base visuelle.
+L’utilisateur demande une explication précise du format de deux heures.
+**Proposition à discuter, non validée :** histoires originales en anglais pour
+adultes, imaginaires et apaisantes, dans de petits refuges naturels. Exemple :
+une nuit de pluie dans le cottage. Narration évolutive pendant près de deux
+heures et fond animé en boucle ; ne pas répéter le récit pour remplir la durée.
+Les faits naturels présentés comme réels seront vérifiés. Voir
+`experiments/nature-sleep/pixel-cozy/CHANNEL_FORMAT_PROPOSAL.md`.
+Ne pas présenter la fiction comme un choix utilisateur déjà confirmé.
 
 ## Bio anglaise livrée
 
@@ -114,10 +104,9 @@ ses propres observations, pas une mesure récupérée ici.
 - Concept compréhensible en une phrase, identité récurrente, assez de sujets
   pour une série durable ; préciser faits réels et fiction.
 - Narration et ambiance sonore originales, calmes ; aucune tension ou horreur.
-- Fonds jolis avec mouvement discret. Le choix du style est délégué à l’agent :
-  C sert à l’aperçu autorisé, sans approbation visuelle utilisateur prétendue.
+- Fonds pixel art pastel détaillés avec animation visible mais calme. L’image
+  du cottage est approuvée ; son animation reste à valider. L’ancien C est rejeté.
   Pas de nouveau renderer 3D, de génération vidéo ni de commande Algrow.
-  Sources visuelles et droits à examiner pour le style retenu.
 - Ne pas affirmer qu’une niche est vide, que les vues sont garanties ou qu’un
   simple mouvement de caméra assure la monétisation.
 - Les deux heures restent une cible ; aucun premier épisode, texte ou voix

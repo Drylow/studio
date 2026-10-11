@@ -1,0 +1,60 @@
+{
+  "schema": "quiet-little-worlds-pixel-preview-v1",
+  "status": "delivered_for_user_animation_review",
+  "brand_name": "Quiet Little Worlds",
+  "url": "https://gofile.io/d/fzRYLiGv",
+  "file": {
+    "name": "Quiet-Little-Worlds-Pixel-Cottage-24s.mp4",
+    "bytes": 2876133,
+    "sha256": "694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c",
+    "md5": "2f7db6cb2572712947fee756b8e32334"
+  },
+  "uploaded_at": "2026-10-11T02:21:50.597217+00:00",
+  "duration_seconds": 24,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "frames": 720,
+  "audio_streams": 0,
+  "source_file": "assets/cottage-pastel-source.png",
+  "source_sha256": "07538e6d9b0df3df87bb096c240eb7906e84f3717a1f05764dd1fa7d173d6a81",
+  "source_dimensions": [
+    1672,
+    941
+  ],
+  "animation_grid": [
+    480,
+    270
+  ],
+  "nearest_integer_scale": 4,
+  "source_image_user_approved": true,
+  "animation_user_approved": false,
+  "technical_pass": true,
+  "full_decode_ok": true,
+  "native_cycle_exact_match": true,
+  "md5_and_size_verified": true,
+  "visual_review": {
+    "sha256": "694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c",
+    "reviewed_at": "2026-10-11T02:21:46.923135+00:00",
+    "approved_for_preview_delivery": true,
+    "reviewer": "root",
+    "scope": "All five contact sheets containing 73 actual decoded MP4 captures; full-sized frames 0, 180 and 719 inspected. No continuous playback claimed.",
+    "observations": [
+      "Cottage geometry, shore and principal lily pads stay coherent across sampled captures.",
+      "Willow positions and open-water reflection bands change while architecture remains fixed.",
+      "Rain is small and pale; fireflies, moth and chimney smoke are deliberately small elements.",
+      "No blank frames, gross region jumps or global luminance changes observed in samples."
+    ],
+    "limitations": [
+      "This is a 24-second silent preview, not a five-minute or two-hour film.",
+      "Camera remains fixed.",
+      "User approval of animation is still pending; still-image approval does not establish animation approval.",
+      "Exact native cycle does not guarantee an imperceptible lossy MP4 join."
+    ]
+  },
+  "discord_sent": false,
+  "two_hour_episode_started": false,
+  "prior_botanical_C_preview_rejected": true
+}

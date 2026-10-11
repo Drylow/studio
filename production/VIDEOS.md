@@ -7,20 +7,32 @@ explicitement choisi ; @**QuietLittleWorlds** encore non confirmé disponible.
 Aucune chaîne YouTube créée ou renommée. La nouvelle direction remplace
 Depths After Dark et ses visuels marins comme projet de branding.
 
-Trois images fixes préparées : A jardin nocturne, B macro réaliste et C
-illustration botanique douce. L’utilisateur délègue le choix du style le plus
-simple à animer : l’agent choisit **C**, sans prétendre à une validation visuelle
-explicite de cette image. **Aperçu C livré pour avis :
-https://gofile.io/d/VOaYXcYo**, `Quiet-Little-Worlds-Garden-24s.mp4`, 24 s,
-1080p30, 720 images, sans audio, 8 436 624 octets. SHA-256 :
-`ceda3f813f23f67a7fd7b497c09b55c4919d9e08441e182d030ec59010dc9e6e`.
-Décor source 1672×941, export 1080p. Décodage complet passé, upload taille/MD5
-confirmé, revue auteur et indépendante (16 captures sur planche + cinq natives)
-et root (16 sur planche + trois natives). Pas de lecture continue prétendue ;
-cycle shader exact mais différences de compression du MP4 au raccord.
-Preuves : `experiments/nature-sleep/PREVIEW_DELIVERY.json`.
-**Avis visuel utilisateur attendu ; aucun aperçu envoyé sur Discord.** Les deux
-heures sont une cible ; aucun script, voix, long ou compte YouTube commencé.
+Le 11 octobre 2026, l’utilisateur rejette l’aperçu botanique C et demande
+une nouvelle DA **pixel art cozy, chill, couleurs pastel**. Il aime explicitement
+le nouveau décor de cottage/serre/mare, puis demande beaucoup plus d’animation
+et de détails. **Image fixe approuvée ; animation encore à valider.**
+
+Nouvel aperçu : **https://gofile.io/d/fzRYLiGv**, `Quiet-Little-Worlds-Pixel-Cottage-24s.mp4`,
+24 s, 1080p30, 720 images, sans son, 2 876 133 octets. SHA-256 :
+`694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c`.
+Animation codée : pluie, impacts dans la mare, reflets ondulants, saule,
+petites volutes, lucioles et papillon près de la lanterne. Caméra fixe.
+Source originale 1672×941, grille animée 480×270, agrandissement entier ×4.
+Décodage complet passé ; cinq planches/73 captures et trois vues natives
+revues, upload taille/MD5 confirmé. Pas de visionnage continu prétendu.
+Cycle natif exact, sans garantie de raccord imperceptible du MP4 compressé.
+Code et preuve : `experiments/nature-sleep/pixel-cozy/README.md` et `DELIVERY.json`.
+L’ancien aperçu C est **rejeté**, conservé uniquement en archive.
+Aucun aperçu envoyé sur Discord ; aucun long, script intégral ou voix lancé.
+
+L’utilisateur demande une explication précise du format de deux heures.
+**Proposition à discuter, non validée :** histoires originales en anglais pour
+adultes, imaginaires et apaisantes, dans de petits refuges naturels. Exemple :
+une nuit de pluie dans le cottage. Narration évolutive pendant près de deux
+heures et fond animé en boucle ; ne pas répéter le récit pour remplir la durée.
+Les faits naturels présentés comme réels seront vérifiés. Voir
+`experiments/nature-sleep/pixel-cozy/CHANNEL_FORMAT_PROPOSAL.md`.
+Ne pas présenter la fiction comme un choix utilisateur déjà confirmé.
 
 **Nom, bio et avatar fougère/lune livrés sur le Discord dédié.** Le contrôle API
 des pièces jointes a échoué et aucun messageID n’est conservé ; l’utilisateur
