@@ -1,0 +1,48 @@
+TEST D'ACCES ET DE GENERATION - 11 OCTOBRE 2026
+Fournisseur explicitement demande par l'utilisateur : useapi.net, compte Google Flow deja connecte.
+La configuration de production existante n'a pas ete modifiee.
+Les cles et identifiants de session/job/reference restent dans le .env ignore par git.
+
+CONTROLE TECHNIQUE
+- Lecture des comptes : HTTP 200, un compte, health OK, backend flow.
+- Upload de la reference utilisateur : HTTP 200.
+- Une seule demande de generation, count 1, reference_1 seule, ratio demande 16:9.
+- Generation : HTTP 200, une image, 25,9 secondes pour l'appel de generation.
+- Fichier reel : JPEG 1376 x 768, conserve sans conversion ni retouche.
+- Le temps indique ne comprend pas l'upload et le telechargement.
+- Le nombre de credits Google consommes n'a pas ete mesure. Ne pas affirmer un cout nul.
+- Aucun upscale, aucune autre generation, aucune publication.
+
+MISE EN SCENE
+Lieu : salle d'equipement d'une base industrielle fictive.
+Milo : veste et pantalon charbon, mallette orange, expression inquiete.
+Orin : tenue olive, indique le casier avec sa main.
+Ouvrier secondaire : porte une mallette grise dans le couloir chaud.
+Beat fictif de controle, pas une narration finale ni une scene historique documentee.
+Prompt ecrit par Codex : 01-prompt.txt.
+Ordre exact des images envoyees : 1. references/personnage-utilisateur.png.
+La reference ne definit pas le decor de cette nouvelle scene.
+
+RELECTURE VISUELLE PAR CODEX
+Image regardee et comparee a la reference du soldat utilisateur et au precedent essai de salle d'equipement.
+Reussites : trois tetes rondes blanches, tenues couvertes, mains blanches, echange lisible,
+casier ouvert, mallettes orange/grise, lumiere froide de la salle et chaude du couloir.
+Le dessin parait plus simple et mat que le precedent essai, avec moins de microtexture.
+Limites : tetes encore trop grosses, proportions proches de 3 a 4 tetes de haut plutot que
+les 5 demandees. Yeux noirs trop grands par rapport au soldat. Ombre grise marquee sur
+le bord des tetes malgre la demande de blanc plat. La bouche d'Orin est ouverte.
+La mallette orange est dans la main gauche de Milo alors que le prompt demandait la droite.
+Un panneau et des traits de papier sont presents a droite ; aucun texte lisible ou logo visible.
+Ce nouveau decor n'a pas recu l'ancien maitre en reference : aucune preservation de sa
+geometrie n'est revendiquee, ce test evalue l'acces API et le transfert du dessin des personnages.
+
+VALIDATION FINALE DE L'UTILISATEUR
+Retour du 11 octobre 2026 apres affichage de l'image :
+"Non, frerot, c'est parfait, c'est parfait, la."
+L'image et cette direction de style sont donc validees pour la chaine inspiree de Quota Ladder.
+La validation utilisateur remplace la reserve esthetique initiale de Codex ci-dessus :
+conserver ces proportions, ces yeux, ces ombres et ce rendu dans les prochains essais.
+Ne pas lancer la correction de proportions envisagee initialement.
+Cette image sert de reference de style approuvee, pas de preuve de coherence d'un episode entier.
+La main portant la mallette reste une observation de conformite au prompt, pas une demande
+de retouche de l'image validee. Aucun second appel de generation n'a ete lance.
