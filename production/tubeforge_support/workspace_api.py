@@ -45,6 +45,20 @@ def _text(value, field, required=False):
     return value
 
 
+def _visual_policy():
+    return read_json(config.DATA / "workspace-visual-policy.json", {}) or {}
+
+
+def _default_style_id():
+    return _identifier(_visual_policy().get("default_style_id", "pov-history"))
+
+
+def _check_image_provider(provider):
+    required = _visual_policy().get("image_provider")
+    if required and provider != required:
+        raise HTTPException(422, "Les images de ce studio utilisent uniquement Google Flow")
+
+
 def _project(pid, writable=False):
     p = store.get_project(_identifier(pid))
     if not p or not p.get("codex_directed"):
@@ -102,7 +116,7 @@ def _profiles(include_archived=False):
         c = saved.get(cid, {})
         if c.get("archived") and not include_archived:
             continue
-        sid = c.get("style_id", "pov-history")
+        sid = c.get("style_id", _default_style_id())
         style = store.get_style(_identifier(sid)) or {}
         refs = _style_references(style)
         for ref in refs:
@@ -151,6 +165,7 @@ def _styles(include_archived=False):
         if style:
             visuals = style.get("visuals", {})
             out.append({"id": sid, "name": style.get("name", sid),
+                        "is_default": sid == _default_style_id(),
                         "archived": bool(style.get("archived")),
                         "prompt": visuals.get("art_style", ""),
                         "background_direction": visuals.get("background_direction", ""),
@@ -164,7 +179,7 @@ def _styles(include_archived=False):
 
 
 def _default_models():
-    style = store.get_style("pov-history") or {}
+    style = store.get_style(_default_style_id()) or {}
     provider = config.get("IMAGE_PROVIDER") or "cli_proxy"
     return {"text_model": config.get("SCRIPT_MODEL") or config.get("FAST_MODEL"),
             "image_model": google_flow.setting("USEAPI_IMAGE_MODEL") if provider == "google_flow" else style.get("visuals", {}).get("image_model", ""),
@@ -229,7 +244,10 @@ async def _catalog():
     proxy_available = result["available"]
     for item in result["models"]:
         item["provider"] = "cli_proxy"
+        if _visual_policy().get("image_provider") == "google_flow":
+            item["capabilities"]["image"] = False
     flow = await google_flow.status()
+    result["image_provider_policy"] = _visual_policy().get("image_provider")
     result["providers"] = {"cli_proxy": {"available": proxy_available, "error": result["error"]},
                            "google_flow": flow}
     model = google_flow.setting("USEAPI_IMAGE_MODEL")
@@ -255,6 +273,7 @@ def _image_provider(body, catalog, defaults=None):
             provider = matches[0].get("provider", "cli_proxy") if len(matches) == 1 else "cli_proxy"
     if provider not in ("cli_proxy", "google_flow"):
         raise HTTPException(422, "Choisissez un fournisseur image disponible")
+    _check_image_provider(provider)
     return provider
 
 
@@ -610,7 +629,7 @@ def install(app):
         catalog = await _catalog()
         selected = _models(body, catalog)
         provider = _image_provider(body, catalog)
-        style = copy.deepcopy(store.get_style("pov-history"))
+        style = copy.deepcopy(store.get_style(_default_style_id()))
         if not style:
             raise HTTPException(409, "Le style commun des chaînes doit être préparé avant de changer les modèles")
         style["visuals"]["image_model"] = selected["image"]
