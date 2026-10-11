@@ -1,0 +1,217 @@
+PROCÉDÉ DE MONTAGE — ANALYSED LIKE CHESS
+Retour d'expérience Death Note V3, 11 octobre 2026
+À transmettre à un monteur ou à son IA pour adapter le format à d'autres séries.
+
+1. CE QUI A ÉTÉ FAIT ET CE QUI A ÉTÉ OBSERVÉ
+
+L'utilisateur rapporte que la V3 ne présente plus de problème de copyright dans
+son contrôle YouTube. Ce résultat n'a pas été vérifié directement dans son compte.
+Il concerne ce fichier et ce contrôle, pas toutes les séries ni tous les uploads.
+
+Fichier : L-Outsmarts-Light-Death-Note-V3.mp4
+SHA256 : b3e5d2fb3d6c438acc3587003bcbbf8c2c11c516984d2011fda93ebefe5033ec
+
+Avant : vidéo de 449,1 s, avec 372,1 s de scène jouée.
+Après : vidéo de 182,6 s, avec 105,6 s de scène jouée, en 13 extraits choisis.
+Cela retire 266,5 s, soit 71,6 % de la durée de scène jouée.
+La V3 garde 7 analyses de 7 s, un guide de 16 s et le bilan natif de 12 s.
+105,6 + 49 + 16 + 12 = 182,6 s.
+
+Attention au sens de ces chiffres : les 105,6 s désignent les passages de scène
+joués avec leur son. Les analyses comportent aussi des replays muets en fond ;
+ce chiffre ne mesure donc pas tout le temps d'affichage d'images de l'épisode.
+
+La source était déjà une réunion de quatre extraits publics YouTube en 1080p,
+avec le doublage anglais. On n'a pas remplacé cette source pour fabriquer la V3.
+Le résultat ne démontre donc pas que prendre un clip sur YouTube résout les droits.
+
+Le changement majeur est éditorial : raccourcir fortement la scène tout en
+conservant sa logique et les analyses. Plusieurs éléments ont changé ensemble ;
+aucun test isolé ne permet de dire pourquoi le contrôle a donné ce résultat.
+
+2. DÉCOUPER SELON LE RAPPORT DE FORCE
+
+Regarder la scène entière avant de couper. Écrire sa progression : situation,
+objectif de chacun, information cachée, provocation, décision, conséquence,
+révélation et nouvelle position. Le commentaire doit expliquer une décision,
+une erreur ou un avantage observable, plutôt que raconter simplement l'image.
+
+Dans Death Note, les passages retenus montrent :
+- la présentation du représentant à la télévision et la réaction de Light ;
+- la certitude de Light de ne pas pouvoir être retrouvé ;
+- la provocation qui touche son ego ;
+- l'écriture du nom, le compte à rebours et la mort du leurre ;
+- la célébration prématurée de Light ;
+- la révélation du condamné qui n'était pas L ;
+- le défi de tuer le véritable L, et l'impossibilité de le faire ;
+- la déduction sur les limites du pouvoir de Kira ;
+- le piège de la diffusion régionale au Kanto ;
+- l'acceptation du duel et la déclaration finale.
+
+Les réactions répétées de la foule, les interventions secondaires et certaines
+explications redondantes ont été retirées. On n'a pas supprimé mécaniquement les
+six plages revendiquées de l'ancienne vidéo : cela cassait l'histoire.
+
+Chaque extrait a une entrée, une sortie et une raison écrite. Le découpage exact
+est dans episodes/light-vs-l.edit.json. Les durées vont ici de 2,27 à 13,8 s :
+elles suivent le contenu. Il n'existe pas, dans ce procédé, de règle « moins de
+10 secondes = autorisé » ni de pourcentage à atteindre pour éviter une revendication.
+Pour Sopranos ou Peaky Blinders, choisir les nouvelles coupes sur leurs scènes,
+sans recopier les timestamps, la durée finale ou le nombre de coups de Death Note.
+
+3. CONSERVER LES RÉPLIQUES ET LES RACCORDS
+
+Aligner les mots du dialogue avec leurs timestamps, puis vérifier les limites
+de coupe contre cet alignement et à l'écoute. Une phrase importante doit finir,
+y compris son dernier mot. Garder la réaction ou le geste nécessaire pour que
+le raccord reste compréhensible. Un alignement automatique reste à contrôler.
+
+Pour cette V3, les 26 limites des 13 extraits ne traversent aucun mot aligné.
+Ce contrôle ne prouve pas à lui seul la fluidité : écouter aussi chaque raccord.
+De très courts fondus audio de 20 ms limitent les clics au bord des extraits.
+Ils ne remplacent pas le choix d'une bonne coupe et ne masquent pas la musique.
+Le dernier fondu image/son dure 0,5 s et commence après le dernier mot complet.
+
+4. RECALER LES ANALYSES SUR LA NOUVELLE SCÈNE
+
+Conserver une timeline source et un fichier de décisions de coupe séparés.
+Ne pas réutiliser les anciens timestamps après avoir retiré des passages.
+
+Pour une annotation située dans un extrait retenu :
+temps_scène_montée = début_extrait_dans_montage + temps_source - entrée_extrait
+
+Dans la vidéo finale :
+temps_final = durée_guide + temps_scène_montée + somme_des_pauses_précédentes
+
+Toutes les durées sont arrondies à des images entières à 30 images/s.
+Une annotation doit appartenir à un seul extrait conservé. Si la scène qui
+justifiait le commentaire disparaît, réécrire ou retirer le commentaire.
+Deux commentaires ont été adaptés dans cette V3 pour rester cohérents avec
+les coupes et avec la fausse annonce d'une diffusion mondiale.
+
+Définir les camps pour chaque nouvelle scène et conserver la même attribution
+dans les données, la barre, les pions et le bilan. Ici : L blanc, Light noir.
+Le pion du guide et du bilan est neutre. Les notes sont des jugements éditoriaux,
+pas des calculs d'un moteur d'échecs. Ne pas inventer une précision scientifique.
+
+5. UTILISER LE VRAI OUTIL ET GARDER UNE IMAGE PROPRE
+
+Le rendu de cette V3 utilise l'outil conversation-chess du collègue : scene.js
+pour les éléments visuels, puis Kdenlive/MLT pour le montage et l'export.
+Remotion et HyperFrames n'ont pas servi au rendu de cette version.
+
+Guide, barre, bulles, texte tapé, icônes Chess.com originales, pions par camp et
+bilan natif sont conservés. Pendant chaque analyse, le replay de fond est muet.
+Les replays floutés de l'outil existaient déjà dans la première version bloquée.
+Ils ne constituent pas une nouvelle méthode dont l'efficacité aurait été prouvée.
+
+La scène garde son doublage anglais et sa musique intégrée. Aucun changement
+de hauteur des voix, miroir, recadrage destiné à masquer la scène ou baisse de
+résolution n'a été appliqué. Sneaky Snitch joue seulement pendant le guide.
+Pas de musique ajoutée pendant les scènes ou analyses. Pas de Subscribe ni
+d'étiquette de qualité. Employer le bilan et le fondu natifs pour terminer.
+
+Paramètres effectivement utilisés :
+- image finale 1920×1080, 30 images/s, H264 CRF 17, preset medium ;
+- audio final AAC 192 kb/s, stéréo, 48 kHz ;
+- extraits intermédiaires H264 CRF 16, preset superfast, audio PCM 16 bits ;
+- remise à zéro des horloges image et son pour chaque extrait ;
+- nombre exact d'images et d'échantillons, puis concaténation des extraits ;
+- écart de durée et départ des pistes contrôlés à 2 ms près par extrait.
+
+Filtres de synchronisation utilisés :
+image : fps=30,setpts=N/(30*TB),setsar=1
+son : aresample=48000,asetpts=PTS-STARTPTS, puis fondus de 20 ms et durée bornée.
+Ils servent à éviter une dérive des raccords, pas à obtenir une autorisation.
+
+Une finition de +6 dB est appliquée uniquement aux plages de scène, en copiant
+le flux vidéo sans réencodage. Résultat mesuré : -19,2 LUFS, crête vraie -3,0 dBFS.
+Pour une autre source, mesurer le son et choisir son gain ; ne pas appliquer
+automatiquement +6 dB à un fichier déjà fort.
+
+6. REPRODUCTION ET ADAPTATION TECHNIQUE
+
+Dépôt : https://github.com/Drylow/studio/tree/main/experiments/conversation-chess
+Lire le README et les timelines existantes. Préserver les versions précédentes.
+Le script prepare-source-edit.py prépare une source coupée et sa timeline ;
+le rendu final reste dans l'outil natif. Les chemins ci-dessous sont relatifs
+à la racine du dépôt et utilisent un NOUVEAU dossier de sortie.
+
+python experiments/conversation-chess/prepare-source-edit.py --source work/chess-studio/death-note/sources/light-vs-l-broadcast-1080.mp4 --edit experiments/conversation-chess/episodes/light-vs-l.edit.json --out work/conversation-chess/death-note-new/source-edit
+
+powershell -ExecutionPolicy Bypass -File experiments/conversation-chess/chess.ps1 -Mode Render -Source work/conversation-chess/death-note-new/source-edit/scene-edit-1080.mkv -Timeline work/conversation-chess/death-note-new/source-edit/timeline.json -Out work/conversation-chess/death-note-new
+
+python experiments/conversation-chess/finish-dialogue-audio.py --bundle work/conversation-chess/death-note-new/kdenlive --out work/conversation-chess/death-note-new/L-Outsmarts-Light-Death-Note-V3.mp4 --gain-db 6
+
+Pour une autre série, fournir sa source revue, son empreinte SHA256, sa timeline,
+ses personnages, commentaires et coupes justifiées. Le helper actuel contrôle
+une source 1080p et contient un texte opening.evidence propre à L et Light :
+l'adapter explicitement pour le nouveau casting et vérifier la sortie.
+Ces commandes reproduisent l'exemple Death Note ; elles ne créent pas à elles
+seules une nouvelle analyse de Tony Soprano ou Tommy Shelby.
+
+7. CONTRÔLE AVANT LIVRAISON
+
+Vérifier le décodage complet, la durée, le nombre d'images, la synchronisation,
+les crêtes audio, les raccords et les phrases entières. Examiner les images de
+tout le rendu et des captures agrandies des textes, badges, pions et bilan.
+Ici : 28 planches couvrent les 5 478 images, plus 35 captures agrandies examinées.
+Conserver un reçu avec le hash du MP4 et les contrôles effectivement réalisés.
+Ne pas déclarer une écoute intégrale si seuls les raccords ont été écoutés.
+
+Livrer le MP4, la miniature, le titre, la description avec les attributions
+requises et le projet éditable avec ses médias. Le résultat du contrôle YouTube
+doit être consigné séparément : fichier exact, date, revendications éventuelles
+et provenance du constat. Ici, l'absence de problème est rapportée par l'utilisateur.
+
+Une vérification sans revendication ne garantit pas l'absence de revendication
+future. YouTube indique que les résultats des vérifications ne sont pas définitifs.
+Une vidéo déjà présente sur YouTube ou un extrait court ne donne pas automatiquement
+le droit de le réutiliser. Le workflow est réutilisable ; le statut dépend de chaque
+vidéo et des droits applicables. Ne jamais promettre « fonctionne pour tout ».
+Sources officielles consultées le 11 octobre 2026 :
+https://support.google.com/youtube/answer/57407?hl=fr
+https://support.google.com/youtube/answer/2797449?hl=fr
+
+8. PROMPT À COPIER POUR L'IA DU COLLÈGUE
+
+« Produis une analyse de [SCÈNE] dans [SÉRIE], au format Analysed like Chess,
+avec l'outil conversation-chess existant. Garde les vrais passages de scène,
+les dialogues complets et une image propre dans la résolution réelle disponible.
+Utilise une source dont la provenance et les conditions d'utilisation sont
+documentées. Ce travail est un montage d'analyse ; ne garantis pas un résultat
+Content ID à partir de la durée des extraits ou de leur présence sur YouTube.
+
+Regarde toute la scène. Écris sa progression stratégique : objectifs,
+information cachée, décisions, erreurs, retournements et conséquences.
+Choisis les seuls passages nécessaires à la compréhension de cette progression.
+Retire les répétitions et réactions secondaires, sans casser une réplique,
+un geste décisif ou un raccord. Chaque coupe doit avoir une raison écrite.
+Adapte les durées à la scène, sans seuil arbitraire ni quota d'extraits.
+
+Crée une timeline dédiée et un fichier de coupes avec entrée/sortie source,
+raison et annotations. Aligne le dialogue et vérifie les limites à l'écoute.
+Remappe tous les timestamps après les coupes, à l'image près. Réécris tout
+commentaire qui ne correspond plus aux passages réellement montrés.
+
+Rédige des analyses courtes et spécifiques aux décisions observables. Elles
+doivent expliquer le rapport de force, plutôt que paraphraser le dialogue.
+Définis [PERSONNAGE BLANC] et [PERSONNAGE NOIR], puis vérifie la cohérence des
+pions, de la barre et du bilan. Les évaluations restent éditoriales.
+
+Utilise les éléments natifs du tool : guide, icônes originales vérifiées,
+barre, replay muet sous les analyses, commentaires lisibles et bilan final.
+Conserve le son de scène. Respecte le choix musical du projet et les licences.
+N'ajoute pas de musique qui concurrence les dialogues. Pas de Subscribe.
+Le dernier mot finit avant le fondu. Ne dégrade pas l'image pour masquer la source.
+
+Prépare un nouvel intermédiaire sans écraser les archives. Remets chaque piste
+à zéro, borne les durées en images/échantillons et contrôle la dérive. Adapte
+les textes propres à Death Note dans le helper et les données au nouveau casting.
+Rends avec Kdenlive/MLT. Mesure le son avant de choisir son gain.
+
+Vérifie tout le rendu : décodage, raccords à l'écoute, images, textes, couleurs
+des camps, notations et bilan. Livre MP4, miniature, titre, description, projet
+éditable et reçu des contrôles. Rapporte séparément le résultat réel de YouTube
+pour ce fichier, sans confondre absence de revendication et autorisation générale.
+Ne publie pas et ne conteste pas une revendication sans instruction explicite. »
