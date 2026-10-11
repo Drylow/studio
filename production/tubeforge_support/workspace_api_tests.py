@@ -342,6 +342,62 @@ def test_correction_records_note_without_generation(workspace):
     assert result.json()["scenes"][0]["prompt"] == "Codex authored exact prompt."
 
 
+def test_scene_save_preserves_character_variants_when_ui_omits_them(workspace):
+    client = workspace[0]
+    p = media_project(client)
+    route = f"/api/workspace/projects/{p['id']}"
+    scene = dict(p["scenes"][0], character_variants={"named-worker": "work-clothes"})
+    result = client.put(route + "/scenes", json={"scenes": [scene]})
+    assert result.status_code == 200, result.text
+    assert result.json()["scenes"][0]["character_variants"] == {"named-worker": "work-clothes"}
+    reviewed = client.post(route + "/review", json={"scene_id": 1, "state": "verified"})
+    assert reviewed.status_code == 200, reviewed.text
+    before = reviewed.json()
+    previous_image = (store.project_dir(p["id"]) / "scene.png").read_bytes()
+
+    # The existing scene editor submits these fields, without the variant selector.
+    editable = {key: value for key, value in store.get_project(p["id"])["scenes"][0].items()
+                if key in ("id", "text", "prompt", "location_id", "characters", "references",
+                           "start", "end", "image", "motion")}
+    saved = client.put(route + "/scenes", json={"scenes": [editable]})
+    assert saved.status_code == 200, saved.text
+    after = saved.json()
+    assert after["scenes"][0]["character_variants"] == {"named-worker": "work-clothes"}
+    assert after["scenes"][0]["human_review"]["state"] == "verified"
+    assert after["scenes"][0]["human_review"]["evidence"] == before["scenes"][0]["human_review"]["evidence"]
+    assert after["generation_confirmation"] == before["generation_confirmation"]
+    assert (store.project_dir(p["id"]) / "scene.png").read_bytes() == previous_image
+
+
+@pytest.mark.parametrize("replacement", [{"named-worker": "winter-clothes"}, {}])
+def test_explicit_character_variant_change_invalidates_review_and_confirmation(workspace, replacement):
+    client = workspace[0]
+    p = media_project(client)
+    route = f"/api/workspace/projects/{p['id']}"
+    scene = dict(p["scenes"][0], character_variants={"named-worker": "work-clothes"})
+    initial = client.put(route + "/scenes", json={"scenes": [scene]})
+    assert initial.status_code == 200, initial.text
+    reviewed = client.post(route + "/review", json={"scene_id": 1, "state": "verified"})
+    assert reviewed.status_code == 200, reviewed.text
+    before = reviewed.json()
+    original_review = before["scenes"][0]["human_review"]
+    previous_image = (store.project_dir(p["id"]) / "scene.png").read_bytes()
+
+    scene["character_variants"] = replacement
+    saved = client.put(route + "/scenes", json={"scenes": [scene]})
+    assert saved.status_code == 200, saved.text
+    after = saved.json()
+    assert after["scenes"][0]["character_variants"] == replacement
+    assert after["scenes"][0]["human_review"]["state"] == "stale"
+    assert after["generation_confirmation"] != before["generation_confirmation"]
+    stored = store.get_project(p["id"])
+    new_evidence = api._scene_evidence(stored, stored["scenes"][0])
+    assert new_evidence["authoring_sha256"] != original_review["evidence"]["authoring_sha256"]
+    assert new_evidence["image_sha256"] == original_review["evidence"]["image_sha256"]
+    assert after["scenes"][0]["image"] == before["scenes"][0]["image"]
+    assert (store.project_dir(p["id"]) / "scene.png").read_bytes() == previous_image
+
+
 def test_uploads_are_unreviewed_ordered_and_shared(workspace):
     client, _, _, _ = workspace
     buf = io.BytesIO()

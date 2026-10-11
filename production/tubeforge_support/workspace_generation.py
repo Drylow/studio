@@ -45,16 +45,19 @@ def _scene(p, sid):
 
 
 def _signature(p, s):
+    from . import workspace_characters
     return api._hash({"script": p.get("script"), "models": p.get("model_snapshot"),
                       "style": p.get("style_id"),
+                      "cast_registry": workspace_characters.registry(p),
                       "aspect": p["settings"]["visuals"].get("aspect"),
                       "scene": {key: s.get(key) for key in (
                           "id", "text", "prompt", "prompt_author", "location_id", "characters",
-                          "references", "start", "end", "motion", "image")}})
+                          "references", "character_variants", "workspace_regeneration_required",
+                          "start", "end", "motion", "image")}})
 
 
 def _prepare(p, s, body):
-    from . import workspace_planning, workspace_composition
+    from . import workspace_planning, workspace_composition, workspace_characters
     prompt = s.get("prompt")
     if (not isinstance(prompt, str) or not prompt.strip() or "renderer-only import" in prompt.lower()
             or not (s.get("prompt_author") == "codex" or workspace_planning.authored(p, s)) or not s.get("location_id")
@@ -80,6 +83,8 @@ def _prepare(p, s, body):
     refs = s.get("references")
     if not isinstance(refs, list) or not refs or any(not isinstance(ref, dict) for ref in refs):
         raise HTTPException(422, "Enregistrez au moins une référence réelle, dans l'ordre exact à envoyer")
+    if workspace_planning.allowed(p):
+        workspace_characters.validate(p, s)
     payloads, sources, receipts = [], [], []
     for index, ref in enumerate(refs):
         path = api._reference_path(p, s, index)
@@ -93,6 +98,7 @@ def _prepare(p, s, body):
         sources.append((path, source_hash))
         receipts.append({"path": ref["path"], "owner": ref.get("owner", "project"),
                          "role": ref.get("role"), "sha256": source_hash,
+                         "character": ref.get("character"), "variant": ref.get("variant"),
                          "source_sha256": source_hash, "sent_sha256": hashlib.sha256(payload).hexdigest()})
     aspect = p["settings"]["visuals"].get("aspect", "16:9")
     if workspace_planning.allowed(p):
@@ -163,6 +169,7 @@ async def generate(pid, sid, body, *, batch_id=None):
         scene.update(image=relative, status="done", uploaded=False, error=None, generation_receipt=receipt,
                      sent_references=copy.deepcopy(references),
                      human_review={"state": "unreviewed", "notes": "Nouvelle image à regarder avec ses références"})
+        scene.pop("workspace_regeneration_required", None)
         scene.pop("clip", None)
         current["render"] = None
         if previous_render:
@@ -203,11 +210,13 @@ def _batch_signature(p):
     frozen = copy.deepcopy(p)
     for scene in frozen.get("scenes", []):
         scene.pop("image", None)
+        scene.pop("workspace_regeneration_required", None)
     return api._generation_confirmation(frozen)
 
 
 def _missing(p, scene):
-    return not api._file_digest(store.project_dir(p["id"]), scene.get("image"))
+    return scene.get("workspace_regeneration_required") is True or not api._file_digest(
+        store.project_dir(p["id"]), scene.get("image"))
 
 
 def _preview_verified(p):

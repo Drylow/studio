@@ -391,10 +391,20 @@ def _scene_evidence(p, s):
             return None
         refs.append({"path": path, "owner": owner, "sha256": digest,
                      "role": ref.get("role") if isinstance(ref, dict) else None})
-    return {"image_sha256": image_hash, "references": refs,
-            "authoring_sha256": _hash({k: s.get(k) for k in (
-                "text", "prompt", "start", "end", "location_id", "characters", "references", "motion", "codex_receipt")}),
-            "script_sha256": _hash(p.get("script")), "models_sha256": _hash(p.get("model_snapshot"))}
+    from . import workspace_characters
+    authoring_keys = ("text", "prompt", "start", "end", "location_id", "characters", "references", "motion", "codex_receipt")
+    if "character_variants" in s:
+        authoring_keys += ("character_variants",)
+    result = {"image_sha256": image_hash, "references": refs,
+              "authoring_sha256": _hash({k: s.get(k) for k in authoring_keys}),
+              "script_sha256": _hash(p.get("script")), "models_sha256": _hash(p.get("model_snapshot"))}
+    entries = workspace_characters.summary(p)
+    selected_variants = s.get("character_variants") or {}
+    if entries:
+        result["cast_registry_sha256"] = _hash({
+            name: entries[name]["variants"].get(key)
+            for name, key in selected_variants.items() if name in entries})
+    return result
 
 
 def _reference_path(p, s, index):
@@ -491,11 +501,13 @@ def _technical_issues(p, scene_evidence=None):
 
 
 def _generation_confirmation(p):
+    from . import workspace_characters
     return _hash({"script": p.get("script"), "models": p.get("model_snapshot"),
+                  "cast_registry": workspace_characters.registry(p),
                   "style": p.get("style_id"), "aspect": p["settings"]["visuals"].get("aspect"),
                   "scenes": [{k: s.get(k) for k in (
-                      "id", "text", "prompt", "prompt_author", "location_id", "characters",
-                      "references", "start", "end", "motion", "image")} for s in p.get("scenes", [])]})
+                      "id", "text", "prompt", "prompt_author", "location_id", "characters", "character_variants",
+                      "references", "start", "end", "motion", "image", "workspace_regeneration_required")} for s in p.get("scenes", [])]})
 
 
 def _duration_info(p):
@@ -798,13 +810,17 @@ def install(app):
             image = row.get("image")
             if image and not _file_digest(store.project_dir(pid), image):
                 raise HTTPException(422, "L'image du plan est absente ou hors du dossier du projet")
-            allowed = ("id", "text", "prompt", "location_id", "characters", "references", "start", "end", "image", "motion")
+            allowed = ("id", "text", "prompt", "location_id", "characters", "character_variants", "references", "start", "end", "image", "motion")
             scene = {k: copy.deepcopy(row[k]) for k in allowed if k in row}
             # Presentation URLs are not authoring input and cannot affect review hashes.
             scene["references"] = [{k: v for k, v in ref.items() if k != "url"} for ref in scene["references"]]
             if old.get(row["id"], {}).get("codex_receipt"):
                 scene["codex_receipt"] = copy.deepcopy(old[row["id"]]["codex_receipt"])
             previous = old.get(row["id"], {})
+            if "character_variants" not in row and previous.get("character_variants") is not None:
+                scene["character_variants"] = copy.deepcopy(previous["character_variants"])
+            if previous.get("workspace_regeneration_required"):
+                scene["workspace_regeneration_required"] = True
             if previous.get("generation_history"):
                 scene["generation_history"] = copy.deepcopy(previous["generation_history"])
             if image and image == previous.get("image"):
