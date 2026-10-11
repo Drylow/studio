@@ -63,7 +63,7 @@
       }
     }
   ],
-  "status": "Quiet Little Worlds branding retained; original pastel pixel cottage still approved; new 24-second animation delivered for user review; prior botanical animation rejected",
+  "status": "Branding retained; cottage still approved; continuous foliage and frog animation delivered for review after first pixel preview feedback",
   "brand_name": "Quiet Little Worlds",
   "proposed_handle": "QuietLittleWorlds",
   "handle_availability": "not_confirmed",
@@ -76,5 +76,5 @@
   "active_art_direction": "cozy_pastel_pixel_art",
   "previous_style_C_rejected": true,
   "pixel_cottage_source_user_approved": true,
-  "active_preview_receipt": "pixel-cozy/DELIVERY.json"
+  "active_preview_receipt": "pixel-cozy/SMOOTH_DELIVERY.json"
 }

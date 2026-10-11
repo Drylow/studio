@@ -81,3 +81,11 @@ activités pour renouveler les récits, pas seulement changer le titre et la cou
 
 État actuel : seul l’aperçu animé est rendu et livré pour avis. Aucun script
 intégral, voix payante, boucle de cinq minutes ou film de deux heures lancé.
+
+## Dernière demande de montage
+
+L’utilisateur veut revoir l’animation avant tout long et demande des idées de
+montage/voix/sous-titres. La proposition complémentaire dans
+[EDITING_AND_VOICE.md](EDITING_AND_VOICE.md) prévoit plusieurs tableaux liés au
+récit, chacun pouvant boucler. La boucle unique sur deux heures n’est plus
+la seule option proposée. Rien de ce montage n’est présenté comme validé.

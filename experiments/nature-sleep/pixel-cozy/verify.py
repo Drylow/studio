@@ -9,13 +9,15 @@ from PIL import Image, ImageChops, ImageDraw, ImageStat
 
 ROOT = Path(__file__).resolve().parents[3]
 folder = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / "output/nature-sleep/pixel-cozy-preview"
-movie = folder / "Quiet-Little-Worlds-Pixel-Cottage-24s.mp4"
 qa = folder / "qa"
 qa.mkdir(exist_ok=True, parents=True)
 receipt = json.loads((folder / "render-receipt.json").read_text())
+movie = folder / Path(receipt["movie"]).name
 sha = hashlib.sha256(movie.read_bytes()).hexdigest()
 assert sha == receipt["sha256"]
 assert hashlib.sha256(Path(receipt["source"]).read_bytes()).hexdigest() == receipt["source_sha256"]
+if "foliage" in receipt:
+    assert hashlib.sha256(Path(receipt["foliage"]).read_bytes()).hexdigest() == receipt["foliage_sha256"]
 probe = json.loads(subprocess.check_output([
     "ffprobe", "-v", "error", "-count_frames", "-show_streams", "-show_format", "-of", "json", str(movie)
 ], text=True))
@@ -50,6 +52,6 @@ seam=mad(by_index[719],by_index[0])
 adjacent=[mad(by_index[a],by_index[b]) for a,b in [(0,1),(1,2),(716,717),(717,718),(718,719)]]
 zones={"willow":[1360,0,1900,520],"pond":[860,780,1690,1020],"sky_rain":[890,70,1260,300]}
 motion={name:mad(by_index[0].crop(tuple(box)),by_index[180].crop(tuple(box))) for name,box in zones.items()}
-report={"technical_pass":True,"movie":str(movie),"sha256":sha,"bytes":movie.stat().st_size,"duration_seconds":24,"frames":720,"dimensions":[1920,1080],"fps":30,"audio_streams":0,"full_decode_ok":True,"native_cycle_exact_match":receipt["native_cycle_exact_match"],"seam_mean_rgb_difference_0_to_255":seam,"neighbor_frame_differences_0_to_255":adjacent,"six_second_motion_mean_rgb_difference_by_region":motion,"source_dimensions":[receipt["source_geometry"]["sourceWidth"],receipt["source_geometry"]["sourceHeight"]],"native_animation_grid":[480,270],"integer_enlargement":4,"actual_decoded_captures":records,"contact_sheets":len(list(qa.glob('contact-*.jpg'))),"human_continuous_playback":False,"visual_review":"pending; metrics do not replace inspecting captures"}
+report={"technical_pass":True,"movie":str(movie),"sha256":sha,"bytes":movie.stat().st_size,"duration_seconds":24,"frames":720,"dimensions":[1920,1080],"fps":30,"audio_streams":0,"full_decode_ok":True,"native_cycle_exact_match":receipt["native_cycle_exact_match"],"seam_mean_rgb_difference_0_to_255":seam,"neighbor_frame_differences_0_to_255":adjacent,"six_second_motion_mean_rgb_difference_by_region":motion,"source_dimensions":[receipt["source_geometry"]["sourceWidth"],receipt["source_geometry"]["sourceHeight"]],"native_animation_grid":receipt.get("native_grid"),"integer_enlargement":receipt.get("integer_scale"),"continuous_subpixel_motion":receipt.get("continuous_subpixel_motion",False),"actual_decoded_captures":records,"contact_sheets":len(list(qa.glob('contact-*.jpg'))),"human_continuous_playback":False,"visual_review":"pending; metrics do not replace inspecting captures"}
 (qa / "technical-review.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
 print(json.dumps({"technical_pass":True,"captures":len(records),"contact_sheets":report["contact_sheets"],"seam":seam,"motion":motion}))

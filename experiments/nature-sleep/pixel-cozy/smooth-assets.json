@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "reference": "assets/cottage-pastel-source.png",
+  "purpose": "Separate the foliage from the background so the sky does not distort during animation",
+  "assets": [
+    {
+      "file": "assets/cottage-clean-background.png",
+      "sha256": "f8877d1917fc51ce6766236403045c02228d699c9f21043158740ffcec54ea80",
+      "creation": "image generation/editing tool using the approved cottage source",
+      "prompt_summary": "Edit the original cottage to remove only the upper-right hanging willow leaves and reconstruct sky/mountains behind them; preserve the cottage, pond, garden and right trunk.",
+      "user_approval": false
+    },
+    {
+      "file": "assets/willow-foreground.png",
+      "sha256": "a11c2c28ff4d48d7e08953668250fe5b32b46c16dfaf7cb5ec6fa124bd7ad72c",
+      "creation": "image generation/editing tool using the approved cottage source",
+      "prompt_summary": "Create a transparent foreground layer of detailed olive/sage willow leaf curtains matching the reference, with organic varied branches and no background; preserve painterly pixel art.",
+      "user_approval": false
+    }
+  ]
+}

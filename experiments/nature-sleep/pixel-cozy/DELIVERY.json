@@ -1,6 +1,6 @@
 {
   "schema": "quiet-little-worlds-pixel-preview-v1",
-  "status": "delivered_for_user_animation_review",
+  "status": "superseded_after_user_requests_smoother_foliage_and_more_life",
   "brand_name": "Quiet Little Worlds",
   "url": "https://gofile.io/d/fzRYLiGv",
   "file": {
@@ -56,5 +56,16 @@
   },
   "discord_sent": false,
   "two_hour_episode_started": false,
-  "prior_botanical_C_preview_rejected": true
+  "prior_botanical_C_preview_rejected": true,
+  "user_feedback": {
+    "date": "2026-10-11",
+    "source_image_still_liked": true,
+    "animation_requires_revision": true,
+    "issues": [
+      "Upper-right willow looks glitched",
+      "Pixel art is a visual style; movement should be smooth",
+      "Add a small frog or similar life"
+    ],
+    "long_episode_after_new_preview_approval": true
+  }
 }

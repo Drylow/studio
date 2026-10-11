@@ -1,0 +1,54 @@
+{
+  "schema": "quiet-little-worlds-smooth-preview-v1",
+  "status": "delivered_for_user_review_before_long_episode",
+  "url": "https://gofile.io/d/rGAUzFXX",
+  "file": {
+    "name": "Quiet-Little-Worlds-Living-Cottage-24s.mp4",
+    "bytes": 8378235,
+    "sha256": "332485ac7f819fcb1dbfa52e506b8e85ee1197f9dd6a5829a55517616c973d6f",
+    "md5": "e8252ee2db2e2ccbb03067710d5e6d25"
+  },
+  "uploaded_at": "2026-10-11T02:41:50.325850+00:00",
+  "duration_seconds": 24,
+  "frames": 720,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "audio_streams": 0,
+  "continuous_subpixel_motion": true,
+  "source_dimensions": [
+    1672,
+    941
+  ],
+  "technical_pass": true,
+  "full_decode_ok": true,
+  "native_cycle_exact_match": true,
+  "md5_and_size_verified": true,
+  "source_sha256": "f8877d1917fc51ce6766236403045c02228d699c9f21043158740ffcec54ea80",
+  "foliage_sha256": "a11c2c28ff4d48d7e08953668250fe5b32b46c16dfaf7cb5ec6fa124bd7ad72c",
+  "visual_review": {
+    "sha256": "332485ac7f819fcb1dbfa52e506b8e85ee1197f9dd6a5829a55517616c973d6f",
+    "reviewed_at": "2026-10-11T02:41:44.022744+00:00",
+    "approved_for_preview_delivery": true,
+    "reviewer": "root",
+    "scope": "All five contact sheets (73 decoded MP4 captures), plus full-sized frames 264, 288 and 719. Additional source-render stills at 0 and 9.5 seconds reviewed before encoding.",
+    "observations": [
+      "Willow is separated from the sky; no background displacement or bands observed in reviewed captures.",
+      "Frog arc and resting positions stay above the foreground stone; feet, eye and leg pose visible in enlarged samples.",
+      "Foliage edges remain transparent with no opaque rectangle.",
+      "Rain and water move while cottage geometry stays stable.",
+      "No blank frames or global flashes observed in samples."
+    ],
+    "limitations": [
+      "Sampled visual review, not continuous human playback.",
+      "24-second silent preview; no long episode produced.",
+      "Compressed seam differs from exact native endpoint.",
+      "Animation approval remains with the user."
+    ]
+  },
+  "animation_user_approved": false,
+  "discord_sent": false,
+  "two_hour_episode_started": false
+}

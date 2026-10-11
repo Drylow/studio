@@ -9,18 +9,31 @@ une nouvelle DA **pixel art cozy, chill, couleurs pastel**. Il aime explicitemen
 le nouveau décor de cottage/serre/mare, puis demande beaucoup plus d’animation
 et de détails. **Image fixe approuvée ; animation encore à valider.**
 
-Nouvel aperçu : **https://gofile.io/d/fzRYLiGv**, `Quiet-Little-Worlds-Pixel-Cottage-24s.mp4`,
-24 s, 1080p30, 720 images, sans son, 2 876 133 octets. SHA-256 :
-`694455f9d28babda6f0544572a1fddced3dba2c54869153f8cf34faa8b34b72c`.
-Animation codée : pluie, impacts dans la mare, reflets ondulants, saule,
-petites volutes, lucioles et papillon près de la lanterne. Caméra fixe.
-Source originale 1672×941, grille animée 480×270, agrandissement entier ×4.
-Décodage complet passé ; cinq planches/73 captures et trois vues natives
-revues, upload taille/MD5 confirmé. Pas de visionnage continu prétendu.
-Cycle natif exact, sans garantie de raccord imperceptible du MP4 compressé.
-Code et preuve : `experiments/nature-sleep/pixel-cozy/README.md` et `DELIVERY.json`.
-L’ancien aperçu C est **rejeté**, conservé uniquement en archive.
-Aucun aperçu envoyé sur Discord ; aucun long, script intégral ou voix lancé.
+Nouvel aperçu révisé : **https://gofile.io/d/rGAUzFXX**, `Quiet-Little-Worlds-Living-Cottage-24s.mp4`,
+24 s, 1080p30, 720 images, sans son, 8378235 octets. SHA-256 :
+`332485ac7f819fcb1dbfa52e506b8e85ee1197f9dd6a5829a55517616c973d6f`.
+L’utilisateur a demandé de corriger le saule du premier aperçu pixel, qui
+bougeait par bandes, et d’ajouter une petite grenouille. Le pixel art concerne
+le dessin ; les mouvements doivent rester fluides. Nouveau rendu directement
+en 1080p, fond propre et calque de saule transparent animé séparément : le ciel
+reste fixe. Grenouille avec respiration, clignement, petits sauts et repos sur
+la pierre. Reflets, pluie, lucioles et papillon conservés. Caméra fixe.
+Sources générées 1672×941 ; aucun master natif 4K revendiqué.
+Décodage complet passé ; cinq planches/73 captures et trois vues natives revues ;
+upload confirmé par taille/MD5. Pas de visionnage continu prétendu.
+Cycle natif exact, sans garantie de raccord MP4 imperceptible.
+Code : `experiments/nature-sleep/pixel-cozy/render-smooth.mjs` ;
+reçu : `experiments/nature-sleep/pixel-cozy/SMOOTH_DELIVERY.json`.
+Les premiers essais restent en archives ; l’aperçu botanique C est rejeté.
+**Avis utilisateur attendu avant de commencer le long.** Aucun aperçu Discord,
+script intégral, voix ou film de deux heures lancé.
+
+Montage proposé : quatre à six vues liées au récit, transitions lentes,
+ambiance sonore adaptée et sous-titres activables ; essai de texte central
+sobre possible. Comparer deux courts essais de voix après l’animation.
+Ces ajouts ne garantissent pas la monétisation. Règles officielles YouTube
+consultées : https://support.google.com/youtube/answer/1311392?hl=en .
+Voir `experiments/nature-sleep/pixel-cozy/EDITING_AND_VOICE.md`.
 
 L’utilisateur demande une explication précise du format de deux heures.
 **Proposition à discuter, non validée :** histoires originales en anglais pour
