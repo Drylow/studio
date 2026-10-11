@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     web = root / 'app/web'
     legacy = web / 'legacy.html'
@@ -77,6 +77,9 @@ def deploy(root, seed=True):
         'workspace_generation.install(app)\n',
         'workspace_generation.install(app)\nfrom . import workspace_management\nworkspace_management.install(app)\n')
     replace_once(root, 'app/server.py',
+        'workspace_management.install(app)\n',
+        'workspace_management.install(app)\nfrom . import workspace_voice\nworkspace_voice.install(app)\n')
+    replace_once(root, 'app/server.py',
         'if request.url.path in ("/", "/index.html", "/app.js", "/style.css"):',
         'if request.url.path in ("/", "/index.html", "/legacy.html", "/app.js", "/style.css", "/workspace.js", "/workspace.css"):')
     replace_once(root, 'app/server.py',
@@ -114,6 +117,7 @@ def deploy(root, seed=True):
     for source, target in (('workspace_api_tests.py', 'test_workspace_api.py'),
                            ('workspace_generation_tests.py', 'test_workspace_generation.py'),
                            ('workspace_management_tests.py', 'test_workspace_management.py'),
+                           ('workspace_voice_tests.py', 'test_workspace_voice.py'),
                            ('google_flow_tests.py', 'test_google_flow.py')):
         shutil.copy2(support / source, root / 'tests' / target)
     if seed:

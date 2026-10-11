@@ -22,6 +22,17 @@ assert.throws(() => ui.validateProject({...row, title: 'x'.repeat(241)}, models,
 assert.throws(() => ui.validateScript('bad\0script'));
 assert.throws(() => ui.validateScript('x'.repeat(1024 * 1024 + 1)));
 assert.equal(ui.validateScript('  Exact script.\n'), '  Exact script.\n');
+assert.equal(ui.scriptDuration('word '.repeat(145)).seconds, 60);
+assert.equal(ui.scriptDuration(' \n ').kind, 'unknown');
+assert.equal(ui.durationLabel({kind: 'actual', seconds: 955}), 'Durée réelle : 15:55');
+assert.equal(ui.durationLabel({kind: 'estimated', seconds: 921}), 'Durée estimée : environ 15:21');
+assert.equal(ui.durationLabel({kind: 'target', seconds: 1320}), 'Durée cible : 22:00');
+assert.equal(ui.validateProject({...row, duration_minutes: undefined, custom_script: 'Pasted script.'}, models, profiles).custom_script, 'Pasted script.');
+assert.equal(ui.validateProject({...row, duration_minutes: 15, custom_script: 'Pasted script.'}, models, profiles).duration_minutes, 15);
+assert.throws(() => ui.validateProject({...row, duration_minutes: 15, custom_script: '  \n '}, models, profiles));
+assert.equal(ui.voiceProgressInfo({running:true,steps:{voiceover:{state:'running',done:0,total:1}}}).percent, null);
+assert.equal(ui.voiceProgressInfo({running:true,steps:{voiceover:{state:'running',done:325,total:1000}}}).percent, 32.5);
+assert.equal(ui.voiceProgressInfo({running:false,steps:{voiceover:{state:'done',done:1,total:1}}}).active, false);
 async function testImport() {
   const bytes = new TextEncoder().encode('  Exact imported script.\n');
   const file = {name: 'script.txt', size: bytes.length, arrayBuffer: async () => bytes.buffer};
@@ -30,7 +41,7 @@ async function testImport() {
   await assert.rejects(ui.readScriptFile({...file, name: 'script.pdf'}));
   await assert.rejects(ui.readScriptFile({...file, size: 1024 * 1024 + 1}));
   await assert.rejects(ui.readScriptFile({...file, arrayBuffer: async () => new Uint8Array([255]).buffer}));
-  console.log('32 workspace UI checks passed');
+  console.log('Workspace UI checks passed');
 }
 const directed = {codex_directed: true, mode: 'review', generation_confirmation: 'fixture-hash',
   model_snapshot: {image_model: 'fixture-image'}, scenes: [1, 2, 3, 4, 5].map((id) => ({id,

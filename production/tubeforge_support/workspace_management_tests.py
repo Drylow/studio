@@ -82,7 +82,7 @@ def test_channel_management_defaults_and_existing_project_unchanged(managed):
 
 def test_create_archive_restore_channel_and_style_without_deletion(managed):
     style = new_style(managed)
-    result = managed.post("/api/workspace/management/channels", json={"name": "My channel", "handle": "@Example", "style_id": style["id"]})
+    result = managed.post("/api/workspace/management/channels", json={"name": "My channel", "handle": "@Example", "style_id": style["id"], "voice": {"voice_id": "fixture-channel-voice", "provider": "algrow"}})
     assert result.status_code == 201, result.text
     c = result.json()
     assert c["id"] in {p["id"] for p in managed.get("/api/workspace/channels").json()}

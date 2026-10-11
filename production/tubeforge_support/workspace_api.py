@@ -128,6 +128,7 @@ def _profiles(include_archived=False):
                     "style_name": style.get("name", sid), "archived": bool(c.get("archived")),
                     "handle": c.get("handle", ""), "description": c.get("description", ""),
                     "language": c.get("language", "English"),
+                    "voice": dict(style.get("voice") or {}, **(c.get("voice") or {})),
                     "setting": c.get("setting", ""), "historical_profile": c.get("historical_profile", False),
                     "configured": bool(c and style and not style.get("archived")), "duration_minutes_min": 20,
                     "duration_minutes_max": 25,
@@ -309,12 +310,12 @@ def _prepare(body, catalog):
     sid = _identifier(body.get("style_id", profile["style_id"]))
     if not any(style["id"] == sid for style in _styles()):
         raise HTTPException(422, "Choisissez un style visuel disponible")
-    minutes = body.get("duration_minutes", profile.get("target_minutes", 22))
-    if (isinstance(minutes, bool) or not isinstance(minutes, (float, int))
-            or not math.isfinite(minutes) or not 20 <= minutes <= 25):
+    minutes = None if script.strip() else body.get("duration_minutes", profile.get("target_minutes", 22))
+    if (not script.strip() and (isinstance(minutes, bool) or not isinstance(minutes, (float, int))
+            or not math.isfinite(minutes) or not 20 <= minutes <= 25)):
         raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
     return {"profile": profile, "title": title, "topic": topic, "script": script, "style_id": sid,
-            "target_duration_seconds": minutes * 60, "models": _models(body, catalog),
+            "target_duration_seconds": minutes * 60 if minutes is not None else None, "models": _models(body, catalog),
             "image_provider": _image_provider(body, catalog)}
 
 
@@ -336,7 +337,8 @@ def _create(prepared, catalog):
     p["settings"]["voice"] = copy.deepcopy(channel_style["voice"])
     saved_channel = next((c for c in read_json(channels.FILE, []) if c.get("id") == profile["id"]), {})
     p["settings"]["voice"].update({k: v for k, v in saved_channel.get("voice", {}).items() if v not in (None, "")})
-    p["settings"]["voice"]["provider"] = "algrow"
+    if p["settings"]["voice"].get("provider") not in ("algrow", "ai33"):
+        p["settings"]["voice"]["provider"] = "algrow"
     p["settings"]["language"] = profile["language"]
     p.update(codex_directed=True, channel_id=profile["id"], profile_id=profile["id"],
              target_duration_seconds=prepared["target_duration_seconds"],
@@ -495,6 +497,23 @@ def _generation_confirmation(p):
                       "references", "start", "end", "motion", "image")} for s in p.get("scenes", [])]})
 
 
+def _duration_info(p):
+    words = len((p.get("script") or "").split())
+    voice = p.get("voiceover") or {}
+    duration = voice.get("duration")
+    if (not p.get("voiceover_stale") and type(duration) in (int, float)
+            and math.isfinite(duration) and duration > 0
+            and _file_digest(store.project_dir(p["id"]), voice.get("file"))):
+        return {"kind": "actual", "seconds": duration, "word_count": words}
+    if words:
+        return {"kind": "estimated", "seconds": words * 60 / 145, "word_count": words,
+                "words_per_minute": 145}
+    target = p.get("target_duration_seconds")
+    if type(target) in (int, float) and math.isfinite(target) and target > 0:
+        return {"kind": "target", "seconds": target, "word_count": 0}
+    return {"kind": "unknown", "seconds": None, "word_count": 0}
+
+
 def _full(p):
     out = copy.deepcopy(p)
     out.pop("script_history", None)
@@ -520,15 +539,16 @@ def _full(p):
     scopes = {scope: _review(p.get("human_reviews", {}).get(scope), _scope_evidence(p, scope, evidence))
               for scope in ("script", "voiceover", "render")}
     out["human_reviews"] = scopes
-    checks = [s["human_review"]["state"] for s in scenes] + [v["state"] for v in scopes.values()]
+    checks = [s["human_review"]["state"] for s in scenes] + [scopes[k]["state"] for k in ("voiceover", "render")]
     scenes_verified = bool(scenes) and all(s["human_review"]["state"] == "verified" for s in scenes)
     out["technical_issues"] = _technical_issues(p, evidence)
     out["technical_ready"] = not out["technical_issues"]
-    ready = scenes_verified and out["technical_ready"] and all(scopes[k]["state"] == "verified" for k in ("script", "voiceover"))
+    ready = scenes_verified and out["technical_ready"] and scopes["voiceover"]["state"] == "verified"
     out["publication_ready"] = bool(ready and scopes["render"]["state"] == "verified")
     from . import workspace_generation
     out["workspace_batch"] = workspace_generation.batch_status(p)
     out["generation_confirmation"] = _generation_confirmation(p)
+    out["script_hash"] = _hash(p.get("script") or "")
     out["running"] = pipeline.is_running(p["id"]) or workspace_generation.batch_running(p["id"])
     if out["running"]:
         state = "running"
@@ -557,7 +577,9 @@ def _full(p):
     else:
         state = "awaiting_review"
     out["review_state"] = state
-    out["duration_minutes"] = p.get("target_duration_seconds", 0) / 60
+    out["duration_info"] = _duration_info(p)
+    seconds = out["duration_info"]["seconds"]
+    out["duration_minutes"] = seconds / 60 if seconds is not None else None
     out["references"] = copy.deepcopy(p.get("workspace_references", []))
     for ref in out["references"]:
         ref["url"] = f"/media/{p['id']}/{ref['path']}"
@@ -567,10 +589,10 @@ def _full(p):
 def _summary(p):
     full = _full(p) if p.get("codex_directed") else p | {
         "publication_ready": False, "technical_ready": False, "technical_issues": [],
-        "running": pipeline.is_running(p["id"])}
+        "running": pipeline.is_running(p["id"]), "duration_info": _duration_info(p)}
     keys = ("id", "title", "profile_id", "channel_id", "style_id", "style_name", "created", "updated",
             "archived", "steps", "error", "running", "review_state", "publication_ready", "model_snapshot",
-            "target_duration_seconds", "duration_minutes", "workspace_queue", "render", "technical_ready", "technical_issues")
+            "target_duration_seconds", "duration_minutes", "duration_info", "workspace_queue", "render", "technical_ready", "technical_issues")
     return {k: full.get(k) for k in keys} | {"scenes": len(p.get("scenes", [])),
             "duration": (p.get("voiceover") or {}).get("duration"), "readonly": not p.get("codex_directed", False),
             "legacy_url": f"/legacy.html#/p/{p['id']}/script", "legacy_api_url": f"/api/projects/{p['id']}",

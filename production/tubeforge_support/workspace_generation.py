@@ -349,8 +349,8 @@ def install(app):
         full = api._full(p)
         if (not full["technical_ready"] or not full["scenes"]
                 or any(s["human_review"]["state"] != "verified" for s in full["scenes"])
-                or any(full["human_reviews"][scope]["state"] != "verified" for scope in ("script", "voiceover"))):
-            raise HTTPException(409, "Vérifiez le script, la voix, les images et les timings avant de lancer le montage")
+                or full["human_reviews"]["voiceover"]["state"] != "verified"):
+            raise HTTPException(409, "Vérifiez la voix, les images et les timings avant de lancer le montage")
         pipeline.start(pid, pipeline.do_render)
         return api._full(api._project(pid))
 

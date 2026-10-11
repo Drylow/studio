@@ -82,6 +82,9 @@ def _update_style(s, body):
 
 
 def _update_channel(c, body):
+    if "voice" in body:
+        from .workspace_voice import voice_settings
+        c["voice"] = dict(c.get("voice") or {}, **voice_settings(body["voice"]))
     for field, limit in (("name", 200), ("handle", 100), ("description", 5000), ("setting", 2000)):
         if field in body:
             c[field] = _text(body[field], field, limit, required=field == "name").strip()
@@ -163,6 +166,8 @@ def install(app):
 
     @router.post("/channels", status_code=201)
     async def create_channel(body: dict):
+        if not body.get("voice"):
+            raise HTTPException(422, "Indiquez l'ID de voix ElevenLabs de cette nouvelle chaîne")
         if not body.get("style_id"):
             raise HTTPException(422, "Choisissez le style par défaut de la chaîne")
         base = _style(api._default_style_id(), active=True)
