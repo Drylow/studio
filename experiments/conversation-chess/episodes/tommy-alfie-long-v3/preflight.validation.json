@@ -1,8 +1,11 @@
 {
   "technical_preflight_valid": true,
   "media_written": false,
+  "repository_root": "/workspace/studio",
+  "plan": "/workspace/studio/experiments/conversation-chess/episodes/tommy-alfie-long-v3/source-map.candidate.json",
   "plan_sha256": "8208f9ee732f33c59ebb5f0c72cf314506ef5eaf0213436742f19481f83d45a5",
-  "timeline_sha256": "f0012d42d6c49e87d047ddf990d8904c7fae1cfe137ffbda7bb47476bae1b183",
+  "timeline": "/workspace/studio/experiments/conversation-chess/episodes/tommy-alfie-long-v3/timeline.candidate.json",
+  "timeline_sha256": "6ab95ba59cf1d11e466d6631893ec3c52374ac7466f807828be5294ab5f470fc",
   "native_dimensions": [
     1280,
     720
@@ -20,6 +23,133 @@
     "s02e02": "095915ba798b8a6e19adb7349001f9ae9bd77b18529c2a77bb3de61ee6f6e400",
     "s02e06": "035f99d863698a9dfc253d700f56013bcb5b0662d46f49fd7ecae21369858579",
     "s03e06": "405ac7d933d9866cb5cb871a40e94a6f07d408a2fb3d22cff40bc7698ee012dd"
+  },
+  "replay_ranges": [
+    {
+      "id": "bakery-telegram",
+      "source_in_frames": 972,
+      "source_out_frames": 1062
+    },
+    {
+      "id": "bakery-finances",
+      "source_in_frames": 1959,
+      "source_out_frames": 2049
+    },
+    {
+      "id": "bakery-gun",
+      "source_in_frames": 2171,
+      "source_out_frames": 2261
+    },
+    {
+      "id": "bakery-rescue",
+      "source_in_frames": 2856,
+      "source_out_frames": 2946
+    },
+    {
+      "id": "bakery-cabinet",
+      "source_in_frames": 4339,
+      "source_out_frames": 4429
+    },
+    {
+      "id": "bakery-meeting",
+      "source_in_frames": 4563,
+      "source_out_frames": 4653
+    },
+    {
+      "id": "negotiation-legal-leverage",
+      "source_in_frames": 4969,
+      "source_out_frames": 5059
+    },
+    {
+      "id": "negotiation-whole-company-demand",
+      "source_in_frames": 6267,
+      "source_out_frames": 6357
+    },
+    {
+      "id": "negotiation-tommy-asks-why",
+      "source_in_frames": 6690,
+      "source_out_frames": 6780
+    },
+    {
+      "id": "negotiation-shared-downside",
+      "source_in_frames": 8447,
+      "source_out_frames": 8537
+    },
+    {
+      "id": "negotiation-exit-covered",
+      "source_in_frames": 8846,
+      "source_out_frames": 8936
+    },
+    {
+      "id": "negotiation-credibility",
+      "source_in_frames": 9311,
+      "source_out_frames": 9401
+    },
+    {
+      "id": "negotiation-first-concession-refused",
+      "source_in_frames": 9992,
+      "source_out_frames": 10082
+    },
+    {
+      "id": "negotiation-war-record",
+      "source_in_frames": 10879,
+      "source_out_frames": 10969
+    },
+    {
+      "id": "negotiation-settlement",
+      "source_in_frames": 11415,
+      "source_out_frames": 11505
+    },
+    {
+      "id": "moral-list",
+      "source_in_frames": 12966,
+      "source_out_frames": 13056
+    },
+    {
+      "id": "moral-checked-list",
+      "source_in_frames": 13549,
+      "source_out_frames": 13639
+    },
+    {
+      "id": "moral-useful-enemy",
+      "source_in_frames": 14473,
+      "source_out_frames": 14563
+    },
+    {
+      "id": "moral-child-stake",
+      "source_in_frames": 15060,
+      "source_out_frames": 15150
+    },
+    {
+      "id": "moral-no-truce-defence",
+      "source_in_frames": 16131,
+      "source_out_frames": 16221
+    },
+    {
+      "id": "moral-same-standard",
+      "source_in_frames": 17106,
+      "source_out_frames": 17196
+    },
+    {
+      "id": "moral-acknowledgement",
+      "source_in_frames": 18261,
+      "source_out_frames": 18351
+    },
+    {
+      "id": "moral-child-clarification",
+      "source_in_frames": 18644,
+      "source_out_frames": 18734
+    }
+  ],
+  "referenced_assets": {
+    "music.intro": {
+      "file": "/workspace/studio/experiments/conversation-chess/assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884"
+    },
+    "mascot": {
+      "file": "/workspace/studio/experiments/conversation-chess/assets/peaky/shelby-pawn-approved-2026-10-11.png",
+      "sha256": "de053ed15db958a0444d3327571c5223a2d53471cb876d49f11bb1011e7b3c04"
+    }
   },
   "review_flags_inherited": {
     "source_reviewed": true,
@@ -54,28 +184,5 @@
   "visual_or_listening_review_performed": false,
   "final_export_review_performed": false,
   "youtube_clearance_verified": false,
-  "helper_sha256": "1a17a9d2f02000c6a8d8f37f9f3f57771d2181c560a435a217263de0c3c79f79",
-  "checks": {
-    "all_original_source_sha256_exact": true,
-    "all_original_source_dimensions_1280x720": true,
-    "original_cadence_25fps": true,
-    "original_stereo_audio_48000hz": true,
-    "contiguous_authored_frame_joins": true,
-    "cards_keep_authored_duration_frames": [
-      90,
-      90,
-      90,
-      90,
-      84,
-      126,
-      72
-    ],
-    "all_annotation_original_master_coordinates_match": true,
-    "no_replay_over_chapter_cards": true,
-    "global_camps": "Tommy White / Alfie Black",
-    "final_duration_600_to_900_seconds": true,
-    "media_preparation_executed": false,
-    "media_decode_or_master_sha_verified": false
-  },
-  "scope": "Read-only preflight of the current candidates and exact original sources. Inherited true review flags refer to authored samples/word evidence; this helper did not perform visual or listening review and no master has been encoded."
+  "scope": "Read-only current candidate preflight after adding ending_fade_seconds=0.5. The source master was already encoded and remains unchanged; this preflight did not re-encode or listen to it."
 }

@@ -1,0 +1,31 @@
+{
+  "schema": "conversation-chess-native-ending-dialogue-evidence-v1",
+  "ending_fade_seconds": 0.5,
+  "last_source_master_interval": [
+    624.4666666666667,
+    625.0666666666667
+  ],
+  "last_source_original_interval": [
+    1446.4,
+    1447.0
+  ],
+  "fade_start_master_frame": 18737,
+  "fade_start_master_seconds": 624.5666666666667,
+  "fade_start_original_seconds": 1446.5,
+  "final_source_duration_frames": 18,
+  "final_source_samples_per_channel": 28800,
+  "last_complete_line": "I saw.",
+  "asr_last_word_end_original_seconds": 1445.24,
+  "asr_to_fade_margin_seconds": 1.26,
+  "asr_evidence_file": "/tmp/peaky-long-v3-targeted-s03-asr.json",
+  "asr_evidence_sha256": "eebbda1621a825bff66df1468ef28a7756c272f5ddc7a690a80dd83c196d590f",
+  "local_english_vtt_last_cue_end_original_seconds": 1446.165,
+  "vtt_to_fade_margin_seconds": 0.335,
+  "final_source_pcm_sha256_before_refresh": "133b9051121d7600667b88814044678bb9cab70b513192a361bcd30d0a3348da",
+  "final_source_pcm_peak_dbfs_before_refresh": -30.930005079567504,
+  "final_source_pcm_rms_dbfs_before_refresh": -43.14977027280909,
+  "tail_is_digital_silence": false,
+  "interpretation": "Complete final phrase ends before the fade according to recognized-word and local English cue timings; the native tail retains low ambient sound. Fade attenuates that ambience, not an intentionally truncated line. These timing and PCM measurements do not establish human listening.",
+  "human_audio_listening": false,
+  "final_render_reviewed": false
+}

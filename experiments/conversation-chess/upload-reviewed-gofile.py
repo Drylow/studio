@@ -8,6 +8,8 @@ sampled_visual_review.evidence_files relative to its own directory. A final kit
 also needs the publication_review used by deliver-discord.py; youtube-test does
 not assert copyright clearance. The five uploads are movie, thumbnail, titles,
 complete description and music credits. No automatic upload retries/resumption.
+--verify-existing-web explicitly reconciles five already-confirmed uploads using
+retained evidence from the unmodified official website; it never uses the network.
 """
 import argparse
 from datetime import datetime, timezone
@@ -28,6 +30,7 @@ from PIL import Image
 
 PAGE = re.compile(r"https://gofile\.io/d/[A-Za-z0-9]+")
 SHA = re.compile(r"[a-f0-9]{64}")
+CONTENT_ID = re.compile(r"[A-Za-z0-9-]+")
 
 
 def save(path, value, private=False):
@@ -365,7 +368,181 @@ def bind_delivery(kit, receipt_path, page):
         raise RuntimeError("Delivery manifest changed before binding the reviewed kit URL; inspect pending.")
     data = dict(kit["data"])
     data.update(gofile_url=page, upload_receipt=os.path.relpath(receipt_path, kit["manifest"].parent))
+    expected_sha = hashlib.sha256((json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode()).hexdigest()
     save(kit["manifest"], data)
+    if hashes(kit["manifest"])["sha256"] != expected_sha:
+        raise RuntimeError("Delivery manifest changed while binding; pending retained.")
+    # Only this known, verified local binding is allowed to change the frozen input.
+    kit["frozen"][kit["manifest"]] = expected_sha
+    kit["data"] = data
+
+
+def frozen_json(path, snapshots):
+    raw = path.read_bytes()
+    sha = hashlib.sha256(raw).hexdigest()
+    if path in snapshots and snapshots[path] != sha:
+        raise RuntimeError("Existing-upload evidence changed; pending retained.")
+    snapshots[path] = sha
+    value = json.loads(raw)
+    if not isinstance(value, dict):
+        raise ValueError("Existing-upload evidence must be a JSON object.")
+    return value
+
+
+def evidence_unchanged(snapshots):
+    if any(hashes(path)["sha256"] != sha for path, sha in snapshots.items()):
+        raise RuntimeError("Existing-upload evidence changed; pending retained.")
+
+
+def private_owner(path, snapshots):
+    ensure_private_ignored(path)
+    if path.stat().st_mode & 0o777 != 0o600:
+        raise ValueError("Existing owner credentials must remain private (mode 600).")
+    owner = frozen_json(path, snapshots)
+    if not isinstance(owner.get("folder_id"), str) or not CONTENT_ID.fullmatch(owner["folder_id"]) \
+            or not isinstance(owner.get("url"), str) or not PAGE.fullmatch(owner["url"]) \
+            or not isinstance(owner.get("owner_token"), str) or not owner["owner_token"]:
+        raise ValueError("Existing owner identity is incomplete; pending retained.")
+    return owner
+
+
+def official_web_readback(proof_path, owner, rows, snapshots):
+    """Validate retained normal-site evidence, never synthesize/replay website auth."""
+    proof_path = proof_path.resolve()
+    proof = frozen_json(proof_path, snapshots)
+    if type(proof.get("http_status")) is not int or proof["http_status"] != 200 \
+            or proof.get("api_status") != "ok" or proof.get("public_url") != owner["url"] \
+            or proof.get("folder_id") != owner["folder_id"] or proof.get("folder_type") != "folder":
+        raise RuntimeError("Official web readback did not confirm the expected public folder.")
+    if proof.get("public_listing_matched") is not True or proof.get("expected") != rows \
+            or type(proof.get("expected_file_count")) is not int or proof["expected_file_count"] != len(rows):
+        raise RuntimeError("Official web proof does not identify the exact reviewed kit.")
+    metadata = proof.get("metadata")
+    if not isinstance(metadata, dict) or any(type(metadata.get(k)) is not int for k in
+            ("totalCount", "totalPages", "page", "pageSize")) \
+            or metadata["totalCount"] != len(rows) or metadata["totalPages"] != 1 \
+            or metadata["page"] != 1 or metadata["pageSize"] < len(rows) \
+            or metadata.get("hasNextPage") is not False:
+        raise RuntimeError("Official web listing is incomplete or paginated; pending retained.")
+    files = proof.get("files")
+    if not isinstance(files, list) or len(files) != len(rows) or any(not isinstance(f, dict) for f in files):
+        raise RuntimeError("Official web readback file count differs; pending retained.")
+    ids = [f.get("id") for f in files]
+    if any(not isinstance(i, str) or not CONTENT_ID.fullmatch(i) for i in ids) or len(set(ids)) != len(ids):
+        raise RuntimeError("Official web listing contains missing or duplicate file IDs.")
+    # The same filename/type/bytes/MD5 controls apply to either readback method.
+    matched_readback({"id": owner["folder_id"], "type": "folder",
+                      "children": dict(zip(ids, files))}, owner["folder_id"], rows)
+    if proof.get("direct_premium_api_readback_complete") is not False \
+            or proof.get("blocked_mutations") != [] \
+            or not isinstance(proof.get("method"), str) or not proof["method"].strip():
+        raise RuntimeError("Official web evidence must distinguish its method and direct API limitation.")
+    screenshot = local(proof_path.parent, proof.get("screenshot_path", "public-listing.png"))
+    screenshot_sha = proof.get("screenshot_sha256")
+    if not isinstance(screenshot_sha, str) or not SHA.fullmatch(screenshot_sha) \
+            or hashes(screenshot)["sha256"] != screenshot_sha:
+        raise RuntimeError("Official web screenshot SHA differs from the retained proof.")
+    snapshots[screenshot] = screenshot_sha
+    image_proof(screenshot)
+    evidence_unchanged(snapshots)
+    return {"proof": {"path": str(proof_path), "sha256": snapshots[proof_path]},
+            "screenshot": {"path": str(screenshot), "sha256": screenshot_sha},
+            "http_status": 200, "status": "ok", "folder_id": owner["folder_id"],
+            "file_count": len(rows), "method": proof["method"],
+            "captured_at": proof.get("generated_utc")}
+
+
+def validated_existing_receipt(previous, kit, owner_path, snapshots):
+    if previous.get("fingerprint") != kit["fingerprint"] or previous.get("kind") != kit["data"]["kind"] \
+            or not isinstance(previous.get("url"), str) or not PAGE.fullmatch(previous["url"]):
+        raise RuntimeError("Previous receipt does not match this reviewed kit; inspect before uploading.")
+    if previous.get("official_web_client_readback_complete") is True:
+        evidence = previous.get("official_web_client_readback")
+        if previous.get("api_readback_complete") is not False \
+                or previous.get("direct_premium_api_readback_complete") is not False \
+                or previous.get("files") != [{**r, "official_web_client_readback_matched": True} for r in kit["files"]] \
+                or not isinstance(evidence, dict) or not isinstance(evidence.get("proof"), dict):
+            raise RuntimeError("Previous official web receipt is incomplete or falsely claims direct API success.")
+        owner = private_owner(owner_path, snapshots)
+        proof = local(kit["manifest"].parent, evidence["proof"].get("path"))
+        actual = official_web_readback(proof, owner, kit["files"], snapshots)
+        if owner["url"] != previous["url"] or actual != evidence:
+            raise RuntimeError("Previous official web evidence SHA/identity changed; inspect before uploading.")
+    elif previous.get("api_readback_complete") is not True \
+            or previous.get("files") != [{**r, "api_readback_matched": True} for r in kit["files"]]:
+        raise RuntimeError("Previous receipt does not match this reviewed kit; inspect before uploading.")
+    evidence_unchanged(snapshots)
+
+
+def reconcile_existing_web(kit, state, proof_path):
+    """Explicit local reconciliation only; preserves pending on any failed check."""
+    owner_path, pending_path, receipt_path = state
+    archived_pending = pending_path.with_name("gofile-pending-confirmed.json")
+    if archived_pending.exists():
+        raise RuntimeError("A pending archive already exists; inspect instead of overwriting it.")
+    snapshots = {}
+    pending = frozen_json(pending_path, snapshots)
+    if pending.get("fingerprint") != kit["fingerprint"] \
+            or pending.get("intended_files") != kit["files"] \
+            or pending.get("confirmed_files") != kit["files"]:
+        raise RuntimeError("Pending does not contain five exact confirmed uploads for this reviewed kit.")
+    owner = private_owner(owner_path, snapshots)
+    if pending.get("url") != owner["url"]:
+        raise RuntimeError("Pending and private owner public URL differ.")
+    evidence = official_web_readback(proof_path, owner, kit["files"], snapshots)
+    unchanged(kit)
+    evidence_unchanged(snapshots)
+    if receipt_path.exists():
+        previous = frozen_json(receipt_path, snapshots)
+        validated_existing_receipt(previous, kit, owner_path, snapshots)
+        if previous.get("official_web_client_readback") != evidence:
+            raise RuntimeError("An existing receipt identifies different web evidence; pending retained.")
+    else:
+        receipt = {"url": owner["url"], "kind": kit["data"]["kind"], "fingerprint": kit["fingerprint"],
+                   "files": [{**r, "official_web_client_readback_matched": True} for r in kit["files"]],
+                   "api_readback_complete": False, "direct_premium_api_readback_complete": False,
+                   "official_web_client_readback_complete": True, "official_web_client_readback": evidence,
+                   "source_dimensions": kit["source_dimensions"], "export_dimensions": kit["export_dimensions"],
+                   "verified_at": datetime.now(timezone.utc).isoformat()}
+        save(receipt_path, receipt)
+        expected_sha = hashlib.sha256((json.dumps(receipt, indent=2, ensure_ascii=False) + "\n").encode()).hexdigest()
+        if hashes(receipt_path)["sha256"] != expected_sha:
+            raise RuntimeError("Receipt changed while saving; pending retained.")
+        snapshots[receipt_path] = expected_sha
+    evidence_unchanged(snapshots)
+    unchanged(kit)
+    original_manifest = kit["manifest"].read_bytes()
+    original_sha = hashlib.sha256(original_manifest).hexdigest()
+    original_data = dict(kit["data"])
+    original_mode = kit["manifest"].stat().st_mode & 0o777
+    if original_sha != kit["frozen"][kit["manifest"]]:
+        raise RuntimeError("Delivery manifest changed before binding; pending retained.")
+    try:
+        bind_delivery(kit, receipt_path, owner["url"])
+        unchanged(kit)
+        evidence_unchanged(snapshots)
+    except (OSError, ValueError, RuntimeError):
+        bound_sha = kit["frozen"][kit["manifest"]]
+        # Undo only our exact binding; never replace somebody else's edited file.
+        if bound_sha != original_sha and hashes(kit["manifest"])["sha256"] == bound_sha:
+            fd, temporary = tempfile.mkstemp(prefix="delivery-binding-rollback.", dir=kit["manifest"].parent)
+            try:
+                os.fchmod(fd, original_mode)
+                with os.fdopen(fd, "wb") as stream:
+                    stream.write(original_manifest)
+                if hashes(kit["manifest"])["sha256"] == bound_sha:
+                    Path(temporary).replace(kit["manifest"])
+                    kit["frozen"][kit["manifest"]] = original_sha
+                    kit["data"] = original_data
+            finally:
+                Path(temporary).unlink(missing_ok=True)
+        raise
+    # Retain the exact POST confirmations rather than deleting the recovery record.
+    pending_path.rename(archived_pending)
+    archived_pending.chmod(0o600)
+    print(json.dumps({"status": "existing-upload-web-confirmed", "url": owner["url"],
+                      "files": len(kit["files"]), "api_readback_complete": False,
+                      "official_web_client_readback_complete": True}), flush=True)
 
 
 def upload(kit, state):
@@ -438,27 +615,36 @@ def upload(kit, state):
         print(json.dumps({"status": "upload-confirmed", "url": page, "files": len(files)}), flush=True)
 
 
-def run(manifest, do_upload=False):
+def run(manifest, do_upload=False, verify_existing_web=None):
     manifest = manifest.resolve()
     folder = manifest.parent
     owner, pending, receipt = [folder / name for name in
         ("gofile-owner-private.json", "gofile-pending.json", "gofile-receipt.json")]
     with (folder / "gofile.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
-        if pending.exists():
+        if pending.exists() and verify_existing_web is None:
             raise RuntimeError("Previous upload incomplete/uncertain; inspect pending before any retry.")
         kit = prepare(manifest)
-        if receipt.exists():
-            previous = report(receipt)
-            expected_rows = [{**r, "api_readback_matched": True} for r in kit["files"]]
-            if previous.get("fingerprint") != kit["fingerprint"] or previous.get("files") != expected_rows \
-                    or previous.get("api_readback_complete") is not True \
-                    or not isinstance(previous.get("url"), str) or not PAGE.fullmatch(previous["url"]):
-                raise RuntimeError("Previous receipt does not match this reviewed kit; inspect before uploading.")
+        if verify_existing_web is not None and pending.exists():
+            reconcile_existing_web(kit, (owner, pending, receipt), verify_existing_web)
+        elif receipt.exists():
+            snapshots = {}
+            previous = frozen_json(receipt, snapshots)
+            validated_existing_receipt(previous, kit, owner, snapshots)
+            if verify_existing_web is not None:
+                proof = previous.get("official_web_client_readback", {}).get("proof", {})
+                if previous.get("official_web_client_readback_complete") is not True \
+                        or proof.get("path") != str(verify_existing_web.resolve()):
+                    raise RuntimeError("Existing receipt does not identify this explicit web proof.")
             unchanged(kit)
-            if do_upload:
+            evidence_unchanged(snapshots)
+            if do_upload or verify_existing_web is not None:
                 bind_delivery(kit, receipt, previous["url"])
+                unchanged(kit)
+                evidence_unchanged(snapshots)
             print(json.dumps({"status": "already-uploaded", "url": previous["url"]}), flush=True)
+        elif verify_existing_web is not None:
+            raise RuntimeError("No confirmed pending upload or receipt exists; no network attempt made.")
         elif do_upload:
             upload(kit, (owner, pending, receipt))
         else:
@@ -472,8 +658,10 @@ def main():
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--upload", action="store_true")
     mode.add_argument("--dry-run", action="store_true", help="Validate offline (default).")
+    mode.add_argument("--verify-existing-web", type=Path, metavar="PROOF_PATH",
+                      help="Reconcile existing confirmed uploads using retained official web-client proof; no network.")
     args = parser.parse_args()
-    run(args.manifest, args.upload)
+    run(args.manifest, args.upload, args.verify_existing_web)
 
 
 if __name__ == "__main__":

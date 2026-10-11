@@ -1,18 +1,57 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Reprise chess — Landa / Shosanna d’abord
+## Reprise chess — deux longs livrés le 11 octobre 2026
 
-L’utilisateur confirme la scène du strudel d’Inglourious Basterds en premier,
-puis une nouvelle coupe Tommy–Alfie. Le procédé envoyé décrit une réduction
-éditoriale avec analyses, et un résultat Death Note rapporté pour un fichier
-précis. Aucune absence de claim n’est établie pour ces nouvelles vidéos.
-**Correction explicite : minimum dix minutes, cible dix à quinze.** Ne pas
-livrer les candidats courts Landa 2:24 ou Tommy 5:20. Ils sont conservés comme
-brouillons. La préparation longue reprend dans les dossiers distincts
-`episodes/landa-shosanna-long-v3/` et `episodes/tommy-alfie-long-v3/` sous
-`experiments/conversation-chess/`. Landa reste la première livraison demandée.
-Voir `experiments/conversation-chess/episodes/landa-shosanna/EDITORIAL.md`.
-Sources, coupes réelles, montage et vérification restent à terminer.
+Les deux montages demandés sont terminés et leurs kits ont été envoyés au
+Discord **Scene Analysis Guy**, Landa en premier. Chaque dossier GoFile contient
+le MP4 exact, la miniature approuvée, quatre titres anglais contenant
+**Analyzed Like Chess**, la description complète et les crédits musicaux.
+Les réponses Discord confirment le message et ses trois pièces jointes.
+
+| Film | Durée / images à 30 fps | Kit vérifié | SHA256 du MP4 |
+| --- | --- | --- | --- |
+| Landa — ferme puis strudel | 13:18,933 / 23 968 | https://gofile.io/d/JEZfRO10 | `42dcf2c2ced45ea1325b5986ec319923c682368ce9932ae90f3714d568225077` |
+| Tommy–Alfie — trois rencontres | 13:34,067 / 24 422 | https://gofile.io/d/uCNnoRLc | `e421b73ec7cc0a421f336a2c170fd5ff5955c5e043976c5cd5849e5b654a6c8b` |
+
+**Statut : `youtube-test`, pas une autorisation de publication sans contrôle.**
+Aucun upload YouTube, résultat de Checks ou droit commercial aux extraits
+n’est établi. Tester en privé le fichier exact livré avant de rendre public ;
+une revendication future reste possible. Le TXT décrit un résultat Death Note
+rapporté, pas un bypass prouvé. Les longs conservent davantage de scènes : voir
+le comparatif dans
+`experiments/conversation-chess/episodes/landa-shosanna-long-v3/METHOD_REVIEW.md`.
+Ne pas promettre l’absence de claim, de blocage territorial ou de perte de revenus.
+
+Les deux exports natifs Kdenlive/MLT sont en 1080p30, H264 CRF 17 medium et
+AAC stéréo 192 kb/s / 48 kHz. Les originaux Landa sont HD 1080p ; Peaky garde
+ses sources natives 720p, avec graphismes 1080p. Pas de voix off ajoutée.
+Pions et miniatures approuvés conservés, barre à gauche, Blancs en ouverture,
+icônes originales et compteurs exacts : 30 analyses Landa et 23 Peaky.
+
+La QA technique des deux MP4 passe, avec décodage audiovisuel intégral.
+Crêtes vraies : −3,2 dBTP Landa, −2,1 dBTP Peaky. La finition Peaky de +4 dB
+porte seulement sur les segments source ; son flux image reste identique au
+parent natif conservé. Son fondu final de 0,5 s a été préparé avant export.
+Revue finale **échantillonnée** : 172 captures / 24 planches pour Landa,
+140 / 22 pour Peaky. Aucune écoute humaine ni lecture continue revendiquée.
+
+Reprise technique dans `experiments/conversation-chess/episodes/` :
+`landa-shosanna-long-v3/{README.md,PUBLICATION.md,METHOD_REVIEW.md}` et
+`tommy-alfie-long-v3/{README.md,PUBLICATION.md}`. Les décisions et timelines
+précédentes sont conservées, y compris les candidats courts rejetés.
+Sur cette machine, les kits et reçus sont sous
+`output/conversation-chess/<épisode>-native/{qa,publication}/` ; les films sont
+sous `/tmp/<épisode>-native/`. Pour Peaky, utiliser **prepared-ending-fade/**,
+pas l’ancien manifest prepared/ qui n’avait pas le fondu final.
+
+GoFile a confirmé les cinq POST de chaque kit, puis son GET direct a demandé
+Premium. Le site officiel gratuit a donné une liste complète HTTP 200 avec
+les cinq noms, tailles et MD5 attendus et une capture réelle. Le nouveau mode
+`upload-reviewed-gofile.py --verify-existing-web PROOF_PATH` a réconcilié ces
+preuves sans nouveau téléversement ; `gofile-pending-confirmed.json` conserve
+les confirmations. Le reçu distingue explicitement réussite du client web et
+absence de lecture API Premium. Voir `UPLOAD_REVIEWED.md`.
+Ne jamais supprimer pending à l’aveugle ni renvoyer les kits Discord déjà reçus.
 
 ## Projet sleep annulé — 11 octobre 2026
 

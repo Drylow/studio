@@ -5,8 +5,7 @@ then Landa–Shosanna at the restaurant. The approved Landa pawn and native
 Chess.com graphics apply to both chapters. Landa speaks first and plays White;
 the Black label and evaluation reset when the restaurant starts.
 
-The measured source and analysis budget is **13:18.933**. Final native export
-must confirm that duration. The ten-minute user minimum is satisfied without
+The completed native export confirms **13:18.933**. The ten-minute user minimum is satisfied without
 slowing, looping or repeating dialogue. No massacre or flight is included.
 
 | Item | Farm | Restaurant |
@@ -70,8 +69,9 @@ corrected-clock samples near 241.267 and 526.133 seconds. Restaurant review is
 in `restaurant-exact-review/`. ASR, official VTT and measured waveform envelopes
 support the boundaries. No continuous human audio listening is claimed.
 
-The native delivery still needs final motion/audio raccord review, recap count
-confirmation and platform Checks. Public-player source access is not a
+Technical QA and sampled final-frame review are complete, including the recap
+counts. Continuous playback, human listening to the raccords and private
+YouTube Checks have not been performed. Public-player source access is not a
 commercial licence or a promise of no Content ID claim. No mirror, pitch,
 colour disguise, watermark removal or rejected-source workaround was used.
 
@@ -95,8 +95,41 @@ The assembly requires the actual native layout preflight receipt under
 `output/conversation-chess/landa-shosanna-long-v3-layout-review/`. It verifies
 that its counts and summary still match; it does not approve a final film.
 The resulting timeline requests a two-decibel dialogue reduction for peak
-headroom. Native final audio QA must still verify the mixed export.
+headroom. Each new export requires technical audio QA; the completed export
+below has passed that check.
 Pass its timeline and source to `render-clip.mjs --prepare-project
 --discard-frame-caches`, then export the native Kdenlive bundle with the merged
 source-clock SRT. `--hardlink-media` saves space when both directories share
 one filesystem and the linked assets remain immutable.
+
+## Completed native export and sampled final review
+
+The closed native MP4 measures **23 968 frames / 798.933333 s / 13:18.933**,
+1920×1080 at 30 fps; its SHA256 is
+`42dcf2c2ced45ea1325b5986ec319923c682368ce9932ae90f3714d568225077`
+and its size is 351 663 692 bytes. Full A/V decode, exact sample counts,
+65 prepared-audio correlations, 30 grade onsets and 30 quiet reading tails
+pass; measured mix true peak is −3.2 dBTP.
+
+The final-file review inspected 172 distinct decoded captures on 24 contact
+boards: 30 analyses, 130 native transitions, 5 guide states, 3 recap states and
+4 longest-caption samples. The second duel resets labels and score to 0.0
+at frame 19 063; the recap totals 30. Root reviewed transitions/captions, and
+an independent reviewer checked analyses/guide/recap. This is sampled
+visual inspection, not continuous playback or human audio listening.
+Retained proof is under
+`output/conversation-chess/landa-shosanna-long-v3-native/qa/`, especially
+`native-qa-handoff.json`, `delivery-review.json` and the component reviews.
+
+The five-file kit is uploaded to [GoFile](https://gofile.io/d/JEZfRO10).
+The official public web listing confirms the film, thumbnail, titles, complete
+description and music credits. The strict `--verify-existing-web` reconciliation
+passed and bound all five files to the delivery manifest; the pending state is
+archived. Discord delivery is confirmed by its own receipt: one message and
+three attachments. These are delivery confirmations, not a YouTube publication
+or commercial clearance.
+
+The publication candidate remains `youtube-test`; no platform Checks,
+commercial footage clearance or absence-of-claims guarantee is recorded.
+[The method comparison](METHOD_REVIEW.md) records how the supplied TXT was
+applied and the differences from its much shorter Death Note example.

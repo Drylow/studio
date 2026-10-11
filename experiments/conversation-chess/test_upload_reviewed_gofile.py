@@ -285,6 +285,284 @@ class ReviewedUploadTests(unittest.TestCase):
             HELPER.bind_delivery(kit, self.folder / "gofile-receipt.json", "https://gofile.io/d/Test123")
         self.assertNotIn("gofile_url", self.read("delivery.json"))
 
+    def web_fixture(self):
+        """Fresh pending POST acknowledgements plus retained official-browser evidence."""
+        for name in ("gofile-receipt.json", "gofile-pending-confirmed.json"):
+            (self.folder / name).unlink(missing_ok=True)
+        delivery = self.read("delivery.json")
+        delivery.pop("gofile_url", None)
+        delivery.pop("upload_receipt", None)
+        self.write("delivery.json", delivery)
+        kit = HELPER.prepare(self.manifest)
+        page, folder_id = "https://gofile.io/d/Test123", "folder-test"
+        HELPER.save(self.folder / "gofile-owner-private.json", {
+            "folder_id": folder_id, "url": page,
+            "owner_token": "PRIVATE_WEB_FIXTURE_TOKEN_DO_NOT_PRINT"}, private=True)
+        self.write("gofile-pending.json", {
+            "fingerprint": kit["fingerprint"], "intended_files": copy.deepcopy(kit["files"]),
+            "confirmed_files": copy.deepcopy(kit["files"]), "url": page})
+        screenshot = self.folder / "public-listing.png"
+        Image.new("RGB", (320, 180), "navy").save(screenshot)
+        proof = {
+            "public_url": page, "http_status": 200, "api_status": "ok",
+            "folder_id": folder_id, "folder_type": "folder",
+            "metadata": {"totalCount": 5, "totalPages": 1, "page": 1,
+                         "pageSize": 100, "hasNextPage": False},
+            "files": [{"id": "file-" + str(i), "type": "file", "name": row["filename"],
+                       "size": row["bytes"], "md5": row["md5"]}
+                      for i, row in enumerate(reversed(kit["files"]))],
+            "expected_file_count": 5, "public_listing_matched": True,
+            "expected": copy.deepcopy(kit["files"]),
+            "screenshot_sha256": HELPER.hashes(screenshot)["sha256"],
+            "generated_utc": "2026-10-11T12:00:00Z",
+            "method": "Unmodified official GoFile web client; local synthetic test fixture.",
+            "blocked_mutations": [],
+            "direct_premium_api_readback_complete": False}
+        self.write("public-browser-readback.json", proof)
+        return kit, self.folder / "public-browser-readback.json", screenshot
+
+    def reconcile_web(self, proof):
+        with patch.object(HELPER.requests, "Session", side_effect=AssertionError("No network in web reconciliation")), \
+                redirect_stdout(io.StringIO()) as output:
+            HELPER.run(self.manifest, do_upload=False, verify_existing_web=proof)
+        return output.getvalue()
+
+    def assert_pending_not_bound(self):
+        self.assertTrue((self.folder / "gofile-pending.json").is_file())
+        self.assertFalse((self.folder / "gofile-pending-confirmed.json").exists())
+        self.assertNotIn("gofile_url", self.read("delivery.json"))
+        self.assertNotIn("upload_receipt", self.read("delivery.json"))
+
+    def test_official_web_reconciliation_binds_only_the_exact_kit_and_is_offline_idempotent(self):
+        kit, proof, screenshot = self.web_fixture()
+        owner = self.folder / "gofile-owner-private.json"
+        frozen = {path: HELPER.hashes(path)["sha256"] for path in
+                  (proof, screenshot, owner, self.folder / "gofile-pending.json")}
+        pending_bytes = (self.folder / "gofile-pending.json").read_bytes()
+        with patch.object(HELPER, "ensure_private_ignored", wraps=HELPER.ensure_private_ignored) as ignored:
+            output = self.reconcile_web(proof)
+        ignored.assert_called_with(owner)
+        receipt = self.read("gofile-receipt.json")
+        self.assertEqual(receipt["fingerprint"], kit["fingerprint"])
+        self.assertTrue(receipt["official_web_client_readback_complete"])
+        self.assertIs(receipt["api_readback_complete"], False)
+        self.assertIs(receipt["direct_premium_api_readback_complete"], False)
+        self.assertEqual(receipt["files"], [{**row, "official_web_client_readback_matched": True}
+                                          for row in kit["files"]])
+        evidence = receipt["official_web_client_readback"]
+        self.assertEqual(evidence["folder_id"], "folder-test")
+        self.assertEqual(evidence["proof"], {"path": str(proof), "sha256": frozen[proof]})
+        self.assertEqual(evidence["screenshot"], {"path": str(screenshot), "sha256": frozen[screenshot]})
+        self.assertEqual(self.read("delivery.json")["gofile_url"], "https://gofile.io/d/Test123")
+        self.assertEqual(self.read("delivery.json")["upload_receipt"], "gofile-receipt.json")
+        self.assertFalse((self.folder / "gofile-pending.json").exists())
+        archive = self.folder / "gofile-pending-confirmed.json"
+        self.assertEqual(archive.read_bytes(), pending_bytes)
+        self.assertEqual(HELPER.hashes(owner)["sha256"], frozen[owner])
+        self.assertEqual(owner.stat().st_mode & 0o777, 0o600)
+        repeated = self.reconcile_web(proof)
+        self.assertEqual(self.read("gofile-receipt.json"), receipt)
+        self.assertEqual(archive.read_bytes(), pending_bytes)
+        self.assertNotIn("PRIVATE_WEB_FIXTURE_TOKEN", output + repeated + json.dumps(receipt)
+                         + self.manifest.read_text())
+
+    def test_web_reconciliation_rejects_incomplete_pending_changed_fresh_kit_and_unsafe_owner(self):
+        cases = ("missing-confirmation", "altered-intention", "old-fingerprint", "changed-fresh-kit",
+                 "public-owner", "unignored-owner")
+        titles = (self.folder / "Titles.txt").read_bytes()
+        for case in cases:
+            with self.subTest(case=case):
+                (self.folder / "Titles.txt").write_bytes(titles)
+                _, proof, _ = self.web_fixture()
+                pending = self.read("gofile-pending.json")
+                if case == "missing-confirmation":
+                    pending["confirmed_files"].pop()
+                elif case == "altered-intention":
+                    pending["intended_files"][0]["md5"] = "0" * 32
+                elif case == "old-fingerprint":
+                    pending["fingerprint"] = "0" * 64
+                elif case == "changed-fresh-kit":
+                    (self.folder / "Titles.txt").write_text("A newly edited title proposal\n")
+                elif case == "public-owner":
+                    (self.folder / "gofile-owner-private.json").chmod(0o644)
+                self.write("gofile-pending.json", pending)
+                pending_bytes = (self.folder / "gofile-pending.json").read_bytes()
+                if case == "unignored-owner":
+                    with patch.object(HELPER, "ensure_private_ignored",
+                                      side_effect=ValueError("Private owner-token path is not ignored")), \
+                            self.assertRaises((ValueError, RuntimeError)):
+                        self.reconcile_web(proof)
+                else:
+                    with self.assertRaises((ValueError, RuntimeError)):
+                        self.reconcile_web(proof)
+                self.assert_pending_not_bound()
+                self.assertFalse((self.folder / "gofile-receipt.json").exists())
+                self.assertEqual((self.folder / "gofile-pending.json").read_bytes(), pending_bytes)
+
+    def test_web_reconciliation_rejects_wrong_identity_status_and_duplicated_listing_entries(self):
+        cases = ("proof-url", "owner-url", "pending-url", "folder-id", "owner-folder", "folder-type",
+                 "http-error", "status-error", "duplicate-id", "duplicate-name", "nested-folder",
+                 "extra-file", "expected-rows", "matched-flag", "expected-count", "api-success-claim",
+                 "content-mutation", "missing-method")
+        for case in cases:
+            with self.subTest(case=case):
+                _, proof, _ = self.web_fixture()
+                data = self.read(proof.name)
+                if case == "proof-url":
+                    data["public_url"] = "https://gofile.io/d/Another"
+                elif case == "owner-url":
+                    self.change("gofile-owner-private.json", url="https://gofile.io/d/Another")
+                elif case == "pending-url":
+                    self.change("gofile-pending.json", url="https://gofile.io/d/Another")
+                elif case == "folder-id":
+                    data["folder_id"] = "another-folder"
+                elif case == "owner-folder":
+                    self.change("gofile-owner-private.json", folder_id="another-folder")
+                elif case == "folder-type":
+                    data["folder_type"] = "file"
+                elif case == "http-error":
+                    data["http_status"] = 401
+                elif case == "status-error":
+                    data["api_status"] = "error-notPremium"
+                elif case == "duplicate-id":
+                    data["files"][1]["id"] = data["files"][0]["id"]
+                elif case == "duplicate-name":
+                    data["files"][1]["name"] = data["files"][0]["name"]
+                elif case == "nested-folder":
+                    data["files"][0]["type"] = "folder"
+                elif case == "extra-file":
+                    data["files"].append({"id": "unwanted", "type": "file", "name": "extra.txt",
+                                          "size": 1, "md5": "0" * 32})
+                elif case == "expected-rows":
+                    data["expected"][0]["sha256"] = "0" * 64
+                elif case == "matched-flag":
+                    data["public_listing_matched"] = False
+                elif case == "expected-count":
+                    data["expected_file_count"] = 4
+                elif case == "api-success-claim":
+                    data["direct_premium_api_readback_complete"] = True
+                elif case == "content-mutation":
+                    data["blocked_mutations"] = [{"method": "DELETE", "path": "/contents/file-1"}]
+                elif case == "missing-method":
+                    data["method"] = ""
+                self.write(proof.name, data)
+                with self.assertRaises((ValueError, RuntimeError)):
+                    self.reconcile_web(proof)
+                self.assert_pending_not_bound()
+                self.assertFalse((self.folder / "gofile-receipt.json").exists())
+
+    def test_web_reconciliation_rechecks_actual_bytes_md5_and_complete_pagination(self):
+        cases = ("bytes", "md5", "total-count", "total-pages", "page", "page-size", "has-next-page")
+        for case in cases:
+            with self.subTest(case=case):
+                _, proof, _ = self.web_fixture()
+                data = self.read(proof.name)
+                if case == "bytes":
+                    data["files"][0]["size"] += 1
+                elif case == "md5":
+                    data["files"][0]["md5"] = "0" * 32
+                else:
+                    key, value = {"total-count": ("totalCount", 6), "total-pages": ("totalPages", 2),
+                                  "page": ("page", 2), "page-size": ("pageSize", 4),
+                                  "has-next-page": ("hasNextPage", True)}[case]
+                    data["metadata"][key] = value
+                self.write(proof.name, data)
+                with self.assertRaises((ValueError, RuntimeError)):
+                    self.reconcile_web(proof)
+                self.assert_pending_not_bound()
+                self.assertFalse((self.folder / "gofile-receipt.json").exists())
+
+    def test_web_evidence_requires_real_image_and_revalidates_proof_image_and_owner_on_repeat(self):
+        for case in ("wrong-image-sha", "not-an-image", "changed-proof-after-bind",
+                     "changed-image-after-bind", "changed-owner-after-bind"):
+            with self.subTest(case=case):
+                _, proof, screenshot = self.web_fixture()
+                if case.endswith("after-bind"):
+                    self.reconcile_web(proof)
+                    receipt_bytes = (self.folder / "gofile-receipt.json").read_bytes()
+                    manifest_bytes = self.manifest.read_bytes()
+                if case == "wrong-image-sha":
+                    self.change(proof.name, screenshot_sha256="0" * 64)
+                elif case == "not-an-image":
+                    screenshot.write_bytes(b"This is not a PNG screenshot")
+                    self.change(proof.name, screenshot_sha256=HELPER.hashes(screenshot)["sha256"])
+                elif case == "changed-proof-after-bind":
+                    self.change(proof.name, generated_utc="2026-10-11T12:00:01Z")
+                elif case == "changed-image-after-bind":
+                    Image.new("RGB", (320, 180), "red").save(screenshot)
+                    self.change(proof.name, screenshot_sha256=HELPER.hashes(screenshot)["sha256"])
+                else:
+                    owner = self.read("gofile-owner-private.json")
+                    owner["url"] = "https://gofile.io/d/Another"
+                    HELPER.save(self.folder / "gofile-owner-private.json", owner, private=True)
+                with self.assertRaises((OSError, ValueError, RuntimeError)):
+                    self.reconcile_web(proof)
+                if case.endswith("after-bind"):
+                    self.assertEqual((self.folder / "gofile-receipt.json").read_bytes(), receipt_bytes)
+                    self.assertEqual(self.manifest.read_bytes(), manifest_bytes)
+                else:
+                    self.assert_pending_not_bound()
+                    self.assertFalse((self.folder / "gofile-receipt.json").exists())
+
+    def test_web_binding_failure_preserves_pending_and_does_not_bind_an_unconfirmed_url(self):
+        _, proof, _ = self.web_fixture()
+        pending_bytes = (self.folder / "gofile-pending.json").read_bytes()
+        with patch.object(HELPER, "bind_delivery", side_effect=RuntimeError("Injected binding failure")), \
+                self.assertRaisesRegex(RuntimeError, "Injected binding failure"):
+            self.reconcile_web(proof)
+        self.assert_pending_not_bound()
+        self.assertEqual((self.folder / "gofile-pending.json").read_bytes(), pending_bytes)
+
+    def test_web_evidence_change_after_receipt_save_never_archives_pending_or_leaves_a_bound_url(self):
+        for target in ("proof", "screenshot", "owner", "pending"):
+            with self.subTest(changed=target):
+                _, proof, screenshot = self.web_fixture()
+                pending_bytes = (self.folder / "gofile-pending.json").read_bytes()
+                real_save = HELPER.save
+                injected = False
+                def changing_save(path, value, private=False):
+                    nonlocal injected
+                    real_save(path, value, private=private)
+                    if path == self.folder / "gofile-receipt.json" and not injected:
+                        injected = True
+                        if target == "proof":
+                            self.change(proof.name, generated_utc="2026-10-11T12:00:01Z")
+                        elif target == "screenshot":
+                            Image.new("RGB", (320, 180), "red").save(screenshot)
+                        elif target == "owner":
+                            owner = self.read("gofile-owner-private.json")
+                            owner["owner_token"] = "DIFFERENT_PRIVATE_WEB_FIXTURE_TOKEN"
+                            real_save(self.folder / "gofile-owner-private.json", owner, private=True)
+                        else:
+                            self.change("gofile-pending.json", url="https://gofile.io/d/Another")
+                with patch.object(HELPER, "save", side_effect=changing_save), \
+                        self.assertRaises((ValueError, RuntimeError)):
+                    self.reconcile_web(proof)
+                self.assertTrue(injected, "The evidence race must occur after a real receipt save")
+                self.assert_pending_not_bound()
+                if target != "pending":
+                    self.assertEqual((self.folder / "gofile-pending.json").read_bytes(), pending_bytes)
+
+    def test_web_evidence_change_during_binding_preserves_pending_without_a_stale_bound_url(self):
+        _, proof, _ = self.web_fixture()
+        pending_bytes = (self.folder / "gofile-pending.json").read_bytes()
+        original_manifest = self.manifest.read_bytes()
+        real_save = HELPER.save
+        injected = False
+        def changing_save(path, value, private=False):
+            nonlocal injected
+            real_save(path, value, private=private)
+            if path == self.manifest and not injected and "gofile_url" in value:
+                injected = True
+                self.change(proof.name, generated_utc="2026-10-11T12:00:01Z")
+        with patch.object(HELPER, "save", side_effect=changing_save), \
+                self.assertRaises((ValueError, RuntimeError)):
+            self.reconcile_web(proof)
+        self.assertTrue(injected, "The evidence race must occur after the real manifest binding")
+        self.assert_pending_not_bound()
+        self.assertEqual((self.folder / "gofile-pending.json").read_bytes(), pending_bytes)
+        self.assertEqual(self.manifest.read_bytes(), original_manifest)
+
 
 if __name__ == "__main__":
     unittest.main()

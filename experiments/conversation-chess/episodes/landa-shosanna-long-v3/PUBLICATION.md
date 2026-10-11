@@ -1,7 +1,8 @@
 # Landa long edition — publication text handoff
 
-Text kit prepared, 11 October 2026. Final film review and private YouTube Checks
-remain pending. Delivery status is **`youtube-test`**, not publication clearance.
+Text kit updated, 11 October 2026. Technical QA and sampled final-frame review
+are complete. Private YouTube Checks remain pending. Delivery status is
+**`youtube-test`**, not publication clearance.
 The short strudel-only kit is separate and unchanged.
 
 ## Scope and timing
@@ -12,25 +13,35 @@ excluded. Original multilingual dialogue has English subtitles and written
 analysis; there is no added voice-over. Landa’s recognition of Shosanna is not
 asserted.
 
-The planned edit totals **798.933 seconds, approximately 13:19**: 500.933 seconds
+The completed export totals **798.933333 seconds, approximately 13:19**: 500.933 seconds
 of retained dialogue, 30 analysis holds of nine seconds, a 16-second guide and
 a 12-second recap. There is no separate three-second transition card. The final
-render must confirm the duration; its SHA and completed review are not recorded
-in this text kit.
+render, its SHA and completed review are recorded below.
 
 The actual chapter timelines contain 21 farm analyses and nine restaurant
 analyses. Comment lengths measure 149–170 characters at the farm and 137–171 at
 the restaurant. The approved Landa pawn and
 [split-portrait thumbnail](../../thumbnails/landa-shosanna/Sopranos-style.jpg)
-are reused unchanged. The thumbnail shows Landa left and Shosanna right; titles
-and description explicitly identify the broader two-duel format.
+are reused unchanged. The thumbnail shows Landa left and Shosanna right; the
+description identifies both duels included in the film.
 
-## Title options
+## Current simple title proposals
+
+The user now wants the characters named directly rather than a clever reference
+to milk or strudel. These were proposed in chat after the original kit was sent;
+no final title choice has been recorded.
+
+1. **Hans Landa vs Shosanna | Analyzed Like Chess** — recommended.
+2. **Landa vs Shosanna Analyzed Like Chess | Inglourious Basterds**
+3. **Colonel Landa vs Shosanna | Analyzed Like Chess**
+
+## Earlier proposals included in the delivered kit
 
 All four contain the exact required phrase and are below 100 characters.
-These remain proposals, not a recorded final user choice.
+The retained transport receipt identifies these earlier files; do not rewrite
+them or resend the movie just to change a YouTube title.
 
-1. **Landa’s Mind Games Analyzed Like Chess | Inglourious Basterds** — recommended; 61 characters.
+1. **Landa’s Mind Games Analyzed Like Chess | Inglourious Basterds** — 61 characters.
 2. **Two Duels with Landa Analyzed Like Chess | Inglourious Basterds** — 63 characters.
 3. **Milk and Strudel Analyzed Like Chess | Inglourious Basterds** — 59 characters.
 4. **The Strudel Gambit: Landa’s Mind Games | Analyzed Like Chess** — 60 characters.
@@ -47,10 +58,10 @@ Spoilers for both scenes.
 
 ## Remaining publication checks
 
-Append only the music credits verified against the actual prepared long project.
-The draft description above deliberately contains no guessed or copied credits.
-Final frame/audio review, exact render SHA and any platform result remain
-separate from this text preparation. Protected-film access does not establish
+The delivered `description_with_credits.txt` includes the exact Sneaky Snitch
+attribution verified against the prepared long project; the presentation text
+above omits that separate credit block. Final technical and sampled visual
+review are recorded below. Protected-film access does not establish
 commercial reuse rights. Checks on a private upload of the exact final file
 must be recorded before publication; a result without issues at that time
 does not guarantee future claims, territorial availability or monetisation.
@@ -58,5 +69,21 @@ does not guarantee future claims, territorial availability or monetisation.
 The local ignored kit is under
 `output/conversation-chess/landa-shosanna-long-v3-native/publication/`:
 `Titres.txt`, `description.txt`, and `publication-metadata.json`. Metadata also
-contains tags and the proposed pinned comment. No upload, send or credentials
-are part of this handoff.
+contains tags and the proposed pinned comment. Transport proofs are separate
+from the text kit.
+
+## Actual completed movie
+
+The native export confirms 798.933333 s, 23 968 frames, 1920×1080 at 30 fps.
+SHA256: `42dcf2c2ced45ea1325b5986ec319923c682368ce9932ae90f3714d568225077`.
+Full A/V decoding and technical audio checks pass. Final visual review
+covers 172 distinct sampled frames on 24 contact boards; true peak measures
+−3.2 dBTP. No continuous playback or human listening is claimed.
+
+The film and its four accompanying files are uploaded to
+[GoFile](https://gofile.io/d/JEZfRO10), with the five-file listing confirmed
+through the official public website and strict local reconciliation completed.
+Discord delivery is confirmed: one message with three attachments. The local
+`gofile-receipt.json` and `discord_receipt.json` preserve those separate results;
+consult them before resending. This is a delivered `youtube-test` candidate,
+not a published YouTube video. YouTube Checks are not recorded.

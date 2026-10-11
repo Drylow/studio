@@ -99,9 +99,49 @@ conservée dans le rapport technique et dans le plan des captures.
 
 Après validation locale, la même commande avec `--upload` sélectionne un serveur
 GoFile officiel. Avant tout POST, elle écrit `gofile-pending.json`. Chaque
-réponse d’envoi doit confirmer MD5 et taille. Une lecture authentifiée du dossier
-via `/contents/<id>` doit confirmer les cinq noms, MD5 et tailles avant la création
-de `gofile-receipt.json` et l’ajout du lien dans `delivery.json`.
+réponse d’envoi doit confirmer MD5 et taille. La lecture du dossier doit ensuite
+confirmer les cinq noms, identifiants, MD5 et tailles avant la création de
+`gofile-receipt.json` et l’ajout du lien dans `delivery.json`.
+
+Le GET direct `/contents/<id>` est réservé aux comptes Premium dans l’API
+[officielle GoFile](https://gofile.io/api). Une réponse `error-notPremium`, même
+avec HTTP 401, ne prouve pas que les POST ont échoué ou que le jeton est invalide.
+Elle laisse l’opération en attente de confirmation ; ne pas refaire l’upload.
+
+Pour un dossier déjà envoyé, ouvrir son URL publique avec le site officiel
+GoFile dans un navigateur normal. Conserver la capture de la liste et le reçu
+JSON de cette lecture réelle, avec les cinq fichiers et la réponse complète.
+Le helper peut alors les réconcilier avec les POST et les fichiers locaux :
+
+```bash
+.venv/bin/python experiments/conversation-chess/upload-reviewed-gofile.py \
+  --manifest output/conversation-chess/film/publication/delivery.json \
+  --verify-existing-web output/conversation-chess/film/publication/gofile-web-verification/public-browser-readback.json
+```
+
+`--verify-existing-web` est exclusif de `--upload` et `--dry-run`. Cette opération
+est hors réseau et n’envoie aucun fichier. Elle refait les contrôles locaux,
+exige les cinq réponses POST réussies, puis compare l’URL et l’identifiant du
+dossier, les noms et identifiants des fichiers, les tailles et MD5. Elle vérifie
+aussi la liste complète sans pagination omise, les preuves HTTP 200 et
+l’empreinte de la capture. Une simple image, un lien ou une liste saisie à la
+main ne remplace pas la preuve de lecture du site officiel.
+
+Le reçu distingue cette méthode : `official_web_client_readback_complete: true`,
+`api_readback_complete: false` et `direct_premium_api_readback_complete: false`.
+Chaque fichier porte `official_web_client_readback_matched: true`. Le JSON et
+la capture sont liés par leur SHA au reçu. Aucun succès de l’API Premium n’est
+ainsi affirmé. Le navigateur conserve son fonctionnement officiel : ne pas
+fabriquer ni rejouer ses en-têtes internes pour imiter un autre accès.
+
+Le pending devient `gofile-pending-confirmed.json` seulement après écriture du
+reçu, liaison au manifeste et dernier contrôle des empreintes. Si un fichier
+change entre ces étapes, la liaison échoue et l’état pending est conservé.
+
+Ce mode a été exécuté avec succès pour le kit Landa long du 11 octobre 2026 :
+cinq fichiers confirmés, reçu lié au manifeste et pending archivé après le
+refus Premium de la lecture API directe. La livraison Discord a ensuite son
+propre reçu. Cet essai vérifie le transport ; il ne vaut pas contrôle YouTube.
 
 Le jeton propriétaire reste dans `gofile-owner-private.json`, permissions 600,
 dans un chemin ignoré par Git. Il n’est affiché ni dans la console ni dans le

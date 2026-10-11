@@ -16,7 +16,27 @@ minutes. Le candidat Landa de 2:24 et le court Tommy de 5:20 restent des
 brouillons techniques conservés ; ils ne doivent pas être livrés à sa place.
 La préparation longue reprend dans `episodes/landa-shosanna-long-v3/` et
 `episodes/tommy-alfie-long-v3/`. Les sources réellement disponibles et les
-analyses utiles déterminent le découpage ; aucun long n’est encore exporté.
+analyses utiles déterminent le découpage.
+
+**Landa long : 13:18,933, export natif terminé.** Le décodage audiovisuel
+intégral, la QA technique du mix et l’examen de 172 captures distinctes sur
+24 planches sont terminés. Le film et quatre fichiers de publication sont sur
+[GoFile](https://gofile.io/d/JEZfRO10), confirmés sur le site public officiel ;
+la réconciliation des cinq fichiers et l’envoi Discord sont confirmés par
+leurs reçus distincts. [État et preuves](episodes/landa-shosanna-long-v3/README.md).
+Il n’y a eu ni lecture continue ni écoute humaine, et aucun Checks YouTube.
+
+**Tommy–Alfie long : 13:34,067, export natif terminé.** Le fondu final absent
+au premier audit est corrigé avant cet export. La finition audio +4 dB des
+dialogues source est terminée, sans modifier l’image ; sa QA technique finale
+passe, avec décodage audiovisuel complet. La revue finale est confirmée sur
+140 captures distinctes réparties sur 22 planches. Le film est contrôlé pour
+sa livraison. Le kit est sur [GoFile](https://gofile.io/d/uCNnoRLc) : cinq
+fichiers réconciliés depuis la liste officielle et envoi Discord confirmé
+par ses reçus. [État et preuves](episodes/tommy-alfie-long-v3/README.md).
+Cette livraison n’est pas une publication YouTube ; aucun Checks, écoute
+humaine ou visionnage continu n’est attesté.
+
 Le [plan du strudel](episodes/landa-shosanna/EDITORIAL.md) est un brouillon
 lié aux événements, sans repères inventés. Le procédé V3 transmis rapporte
 un test Death Note favorable pour un fichier exact ; il décrit des coupes
@@ -29,6 +49,12 @@ l’export natif terminé, les preuves visuelles, le décodage intégral et les
 empreintes exactes. Une finition de dialogue conserve le parent Kdenlive et
 son flux image ; son gain est appliqué par échantillon uniquement dans les
 intervalles source, sans toucher les niveaux du guide et des bruitages.
+Si la lecture API GoFile répond `error-notPremium` après les cinq envois,
+conserver leur état pending. Le mode `--verify-existing-web` confirme la lecture
+du dossier par le site officiel à partir de ses preuves réelles, sans nouvel
+envoi ni accès Premium revendiqué. Le reçu GoFile et l’envoi Discord restent
+deux confirmations distinctes. Ce chemin gratuit a réellement confirmé les
+cinq fichiers du kit Landa, après un refus `error-notPremium` du GET direct.
 
 `prepare-source-edit.py` conserve désormais les dimensions réelles (720p ou
 1080p selon la source), exige les camps et l’ouverture du premier extrait,
@@ -98,7 +124,7 @@ Le titre et la miniature sont dans le kit après le montage. Tony/Janice reste u
 Nom de chaîne choisi : **Scene Analysis Guy**. [Avatar et bio](channel-profile/README.md)
 reprennent le pion approuvé et présentent un format ouvert aux séries/animés.
 La [livraison Discord](DISCORD_DELIVERY.md) envoie les aperçus et paquets finaux
-avecGoFile, titre, description, miniature et crédits dans le salon dédié.
+avec GoFile, titre, description, miniature et crédits dans le salon dédié.
 Son style v3 est validé ; les anciennes sources et l'ancien tableau sont rejetés.
 `pilot-tony-janice-v4.json` corrige les camps et prépare les règles, sans export
 du pilote complet. La capture du vrai tableau final Tuco fournie par l'utilisateur

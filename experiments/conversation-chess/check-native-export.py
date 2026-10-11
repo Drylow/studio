@@ -273,7 +273,10 @@ def visual_capture_plan(data, rating_schema, check):
     if master_path.is_file():
         master=json.loads(master_path.read_text())
         n=0
-        for row in master.get('source_map',[]):
+        source_map = master.get('source_map')
+        if source_map is None:
+            source_map = master.get('source_edit', {}).get('source_map', [])
+        for row in source_map:
             if row.get('kind')!='chapter_card':continue
             mf=row['master_in_frames']+row['duration_frames']//2
             for i,s in enumerate(segments):

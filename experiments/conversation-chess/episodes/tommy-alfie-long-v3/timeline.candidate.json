@@ -455,5 +455,6 @@
   ],
   "youtube_clearance_verified": false,
   "copyright_guarantee": false,
-  "review_evidence": "visual-sample-review.json and word-boundary-review.json define the actual source-still/editorial scope. source_reviewed does not certify a nonexistent prepared master or the final export."
+  "review_evidence": "visual-sample-review.json and word-boundary-review.json define the actual source-still/editorial scope. source_reviewed does not certify a nonexistent prepared master or the final export.",
+  "ending_fade_seconds": 0.5
 }

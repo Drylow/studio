@@ -4,9 +4,8 @@
   "caption_sha256": "60891a126fc0fec720b5cc5b2fa451bb25785b12d20bcd3597282fa7af717661",
   "source_clock": "Edited source master, 625.0666667 seconds, before the 16-second intro, 23 analysis pauses and 12-second outro. Supply this SRT to export-kdenlive.py --subtitles; the exporter maps only source dialogue intervals.",
   "plan_sha256": "8208f9ee732f33c59ebb5f0c72cf314506ef5eaf0213436742f19481f83d45a5",
-  "timeline_sha256": "f0012d42d6c49e87d047ddf990d8904c7fae1cfe137ffbda7bb47476bae1b183",
-  "master_source_sha256": null,
-  "source_master_encoded_or_listened": false,
+  "timeline_sha256": "6ab95ba59cf1d11e466d6631893ec3c52374ac7466f807828be5294ab5f470fc",
+  "master_source_sha256": "614beaf33498a54b198928fae48b3a33f5812d03990e8a2320a457ad9ca462b0",
   "native_master_frames": 18752,
   "native_master_seconds": 625.0666666666667,
   "fps": 30,
@@ -2961,5 +2960,38 @@
     "plan_and_timeline_unchanged": true,
     "human_audio_review_performed": false,
     "native_export_or_final_visual_review_performed": false
+  },
+  "generation_stage_source_master_encoded": false,
+  "source_master_encoded": true,
+  "source_master_listened": false,
+  "prepared_master_technical_binding": {
+    "master_file": "output/conversation-chess/tommy-alfie-long-v3-master/source-master-1280x720-30fps.mkv",
+    "master_sha256": "614beaf33498a54b198928fae48b3a33f5812d03990e8a2320a457ad9ca462b0",
+    "master_frames": 18752,
+    "duration_seconds": 625.0666666666667,
+    "native_dimensions": [
+      1280,
+      720
+    ],
+    "audio_samples_per_channel": 30003200,
+    "full_video_audio_decode_ok": true,
+    "captions_same_authored_clock": true,
+    "no_caption_content_changed": true,
+    "human_audio_review_performed": false,
+    "final_export_review_performed": false
+  },
+  "generation_timeline_sha256": "f0012d42d6c49e87d047ddf990d8904c7fae1cfe137ffbda7bb47476bae1b183",
+  "ending_fade_update": {
+    "seconds": 0.5,
+    "candidate_timeline_sha256": "6ab95ba59cf1d11e466d6631893ec3c52374ac7466f807828be5294ab5f470fc",
+    "caption_file_unchanged": true,
+    "caption_clock_unchanged": true,
+    "last_caption_end_frame_exclusive": 18727,
+    "fade_start_master_frame": 18737,
+    "last_caption_finishes_before_fade": true,
+    "margin_frames": 10,
+    "margin_seconds": 0.3333333333333333,
+    "native_preparation_derivative": "output/conversation-chess/tommy-alfie-long-v3-native/prepared-ending-fade/project-manifest.json",
+    "human_audio_listening": false
   }
 }
