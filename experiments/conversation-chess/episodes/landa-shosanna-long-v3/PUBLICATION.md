@@ -1,8 +1,9 @@
 # Landa long edition — publication text handoff
 
 Text kit updated, 11 October 2026. Technical QA and sampled final-frame review
-are complete. Private YouTube Checks remain pending. Delivery status is
-**`youtube-test`**, not publication clearance.
+are complete. The user now reports publication with Content ID claims and
+no reported block or strike; this result has not been independently checked.
+The retained delivery status is **`youtube-test`**, not publication clearance.
 The short strudel-only kit is separate and unchanged.
 
 ## Scope and timing
@@ -86,4 +87,13 @@ through the official public website and strict local reconciliation completed.
 Discord delivery is confirmed: one message with three attachments. The local
 `gofile-receipt.json` and `discord_receipt.json` preserve those separate results;
 consult them before resending. This is a delivered `youtube-test` candidate,
-not a published YouTube video. YouTube Checks are not recorded.
+not independent proof of YouTube publication or rights clearance.
+
+## YouTube outcome reported after delivery
+
+On 11 October 2026 the user reports having posted the Landa video and seeing
+claims similar to the Sopranos result, without a reported block or strike.
+No YouTube API result, complete claim details or screenshot for this upload
+has been collected here. This does not establish the claimant, territories,
+revenue destination or future availability. Preserve the delivered files and
+their receipts; do not mark this export claim-free or resend its kit.

@@ -1,5 +1,9 @@
 # Landa’s Mind Games — long editorial handoff
 
+Latest outcome, 11 October 2026: the user reports publication with Content ID
+claims, without a reported block or strike. No independent account check or
+rights clearance is established. [Reported outcome](PUBLICATION.md#youtube-outcome-reported-after-delivery).
+
 This edition contains two distinct verbal duels: Landa–LaPadite at the farm,
 then Landa–Shosanna at the restaurant. The approved Landa pawn and native
 Chess.com graphics apply to both chapters. Landa speaks first and plays White;

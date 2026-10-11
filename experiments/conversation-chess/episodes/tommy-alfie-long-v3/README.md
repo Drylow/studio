@@ -1,5 +1,10 @@
 # Tommy / Alfie — long V3
 
+**Peaky abandonné le 11 octobre 2026**, après le nouveau test utilisateur.
+Sa capture confirme un blocage dans certains territoires, sans strike.
+Ne pas relancer ou réenvoyer ce film ; la réussite technique ne valide pas
+les droits. [Résultat rapporté](PUBLICATION.md#youtube-outcome-reported-after-delivery).
+
 Ce film livré dure **13 min 34,067 s** avec le guide et les pauses, pour la
 nouvelle demande de vidéos de dix à quinze minutes. Il garde trois rencontres
 sur S02E02, S02E06 et S03E06. Landa–Shosanna reste prioritaire. Le master
@@ -7,7 +12,9 @@ intermédiaire est créé et contrôlé dans `output/`. Le montage natif et sa
 finition audio sont exportés, avec QA technique finale passée et revue de
 140 captures distinctes sur 22 planches. Le kit est livré via
 [GoFile](https://gofile.io/d/uCNnoRLc) et Discord, avec reçus confirmés.
-Il reste un candidat `youtube-test`, sans publication ni Checks YouTube attestés.
+Le reçu de livraison reste `youtube-test`. Le résultat ultérieur rapporté
+par l’utilisateur est défavorable ; aucun contrôle indépendant du compte
+YouTube n’a été effectué.
 
 `source-map.candidate.json` décrit les coordonnées des trois épisodes et les
 images du futur master. `timeline.candidate.json` contient 23 analyses originales

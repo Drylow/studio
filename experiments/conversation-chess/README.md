@@ -7,7 +7,25 @@ Déclinaison anime : [recette de production](ANIME_WORKFLOW.md) et
 guide16s et bilan12s. La pause après « opinion » laisse une respiration ; Tony
 est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
-## Reprise actuelle — Landa / Shosanna en premier
+## Reprise actuelle — Peaky arrêté, recherche Hannibal
+
+L’utilisateur rapporte **Landa publié avec des claims comparables aux Sopranos**,
+sans blocage ni strike déclaré. Ce retour n’est pas vérifié indépendamment dans
+le compte ou via API ; les claims ne valent pas autorisation ni garantie de revenus.
+
+**Peaky est abandonné sur sa demande après le nouveau test.** La capture confirme
+un blocage territorial, sans impact sur la chaîne et sans strike. L’utilisateur
+indique S02E02 bloqué en Russie seulement et un blocage associé à UGC dans de
+nombreux pays, dont la liste exacte reste inconnue. Ne pas relancer, recouper
+ou réenvoyer Peaky. Sa QA technique et sa livraison réussies ne valident pas
+les droits de publication.
+
+La prochaine piste confirmée est **Hannibal, la série TV avec Mads Mikkelsen**.
+[Recherche de faisabilité](HANNIBAL_FEASIBILITY.md) seulement : aucun montage,
+téléchargement ou test lancé. Le projet sleep reste annulé et les automatismes
+des autres chaînes sont inchangés.
+
+## Longs du 11 octobre 2026 — préparation et livraison conservées
 
 Le 11 octobre 2026, l’utilisateur annule la chaîne sleep et confirme :
 **strudel Landa–Shosanna d’abord**, puis une nouvelle version Tommy–Alfie.
@@ -24,7 +42,8 @@ intégral, la QA technique du mix et l’examen de 172 captures distinctes sur
 [GoFile](https://gofile.io/d/JEZfRO10), confirmés sur le site public officiel ;
 la réconciliation des cinq fichiers et l’envoi Discord sont confirmés par
 leurs reçus distincts. [État et preuves](episodes/landa-shosanna-long-v3/README.md).
-Il n’y a eu ni lecture continue ni écoute humaine, et aucun Checks YouTube.
+Il n’y a eu ni lecture continue ni écoute humaine. Aucun résultat de Checks
+n’est vérifié indépendamment ; le retour utilisateur plus récent est ci-dessus.
 
 **Tommy–Alfie long : 13:34,067, export natif terminé.** Le fondu final absent
 au premier audit est corrigé avant cet export. La finition audio +4 dB des
@@ -34,15 +53,17 @@ passe, avec décodage audiovisuel complet. La revue finale est confirmée sur
 sa livraison. Le kit est sur [GoFile](https://gofile.io/d/uCNnoRLc) : cinq
 fichiers réconciliés depuis la liste officielle et envoi Discord confirmé
 par ses reçus. [État et preuves](episodes/tommy-alfie-long-v3/README.md).
-Cette livraison n’est pas une publication YouTube ; aucun Checks, écoute
-humaine ou visionnage continu n’est attesté.
+Cette livraison ne constitue pas une autorisation de publication. Le test et
+son blocage territorial sont décrits ci-dessus ; aucun résultat de Checks
+n’est vérifié indépendamment dans le compte. Aucune écoute humaine ni lecture
+continue n’est attestée.
 
 Le [plan du strudel](episodes/landa-shosanna/EDITORIAL.md) est un brouillon
 lié aux événements, sans repères inventés. Le procédé V3 transmis rapporte
 un test Death Note favorable pour un fichier exact ; il décrit des coupes
 éditoriales et des analyses originales, pas une garantie pour d’autres films.
-Les nouvelles versions sont destinées à un premier contrôle privé YouTube,
-pas annoncées comme déjà exemptes de claims.
+Les kits ont été livrés pour contrôle privé YouTube ; les résultats rapportés
+depuis sont consignés ci-dessus. Aucun montage n’est déclaré exempt de claims.
 
 [Livraison GoFile contrôlée](UPLOAD_REVIEWED.md) : le nouveau helper exige
 l’export natif terminé, les preuves visuelles, le décodage intégral et les

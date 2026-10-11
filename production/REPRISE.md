@@ -1,6 +1,25 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Reprise chess — deux longs livrés le 11 octobre 2026
+## Reprise chess — Peaky arrêté, recherche Hannibal
+
+**Landa : l’utilisateur rapporte la vidéo publiée**, avec des claims comparables
+à ceux des Sopranos. Aucun blocage ni strike n’est déclaré. Publication et
+résultat YouTube ne sont pas vérifiés indépendamment dans le compte ou via API ;
+ces claims ne constituent pas une autorisation ni une garantie de revenus.
+
+**Peaky : abandon demandé après le nouveau test.** La capture confirme un
+blocage territorial, sans impact sur la chaîne et sans strike. L’utilisateur
+indique S02E02 bloqué en Russie seulement et un blocage associé à UGC dans de
+nombreux pays ; leur liste exacte n’a pas été récupérée. Ne pas relancer,
+recouper ou réenvoyer ce montage. La QA technique et la livraison réussies
+restent distinctes de ce résultat défavorable sur les droits.
+
+**Piste suivante : Hannibal, la série TV avec Mads Mikkelsen**, confirmée par
+l’utilisateur. [Recherche de faisabilité](../experiments/conversation-chess/HANNIBAL_FEASIBILITY.md)
+uniquement : aucun montage, téléchargement ou test YouTube lancé. Le projet
+sleep reste annulé ; les automatismes des autres chaînes ne sont pas modifiés.
+
+## Deux longs livrés le 11 octobre 2026 — preuves techniques conservées
 
 Les deux montages demandés sont terminés et leurs kits ont été envoyés au
 Discord **Scene Analysis Guy**, Landa en premier. Chaque dossier GoFile contient
@@ -13,9 +32,11 @@ Les réponses Discord confirment le message et ses trois pièces jointes.
 | Landa — ferme puis strudel | 13:18,933 / 23 968 | https://gofile.io/d/JEZfRO10 | `42dcf2c2ced45ea1325b5986ec319923c682368ce9932ae90f3714d568225077` |
 | Tommy–Alfie — trois rencontres | 13:34,067 / 24 422 | https://gofile.io/d/uCNnoRLc | `e421b73ec7cc0a421f336a2c170fd5ff5955c5e043976c5cd5849e5b654a6c8b` |
 
-**Statut : `youtube-test`, pas une autorisation de publication sans contrôle.**
-Aucun upload YouTube, résultat de Checks ou droit commercial aux extraits
-n’est établi. Tester en privé le fichier exact livré avant de rendre public ;
+**Classement des kits livrés : `youtube-test`, sans autorisation commerciale.**
+Les retours YouTube rapportés et la capture Peaky sont décrits ci-dessus ;
+aucun résultat de Checks n’est vérifié indépendamment dans le compte, et aucun
+droit commercial aux extraits n’est établi. Pour tout nouveau candidat,
+conserver le résultat du contrôle privé du fichier exact avant publication ;
 une revendication future reste possible. Le TXT décrit un résultat Death Note
 rapporté, pas un bypass prouvé. Les longs conservent davantage de scènes : voir
 le comparatif dans
