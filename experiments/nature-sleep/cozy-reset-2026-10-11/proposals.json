@@ -1,19 +1,19 @@
 {
   "schema": "quiet-little-worlds-cozy-reset-v1",
   "date": "2026-10-11",
-  "status": "three_stills_shown_awaiting_user_selection_before_animation",
+  "status": "A_selected_short_animation_delivered_awaiting_user_review",
   "brand_name": "Quiet Little Worlds",
   "previous_pixel_direction_abandoned_by_user": true,
   "old_cottage_reference_reused": false,
-  "active_animation_started": false,
+  "active_animation_started": true,
   "long_episode_started": false,
-  "recommended_proposal": "C",
-  "chosen_proposal": null,
+  "recommended_proposal": "A",
+  "chosen_proposal": "A",
   "proposals": [
     {
       "id": "A",
       "file": "A-cinematic-night-train.png",
-      "user_approved": false,
+      "user_approved": true,
       "prompt": "Create one exceptionally beautiful original widescreen 16:9 cinematic scene for an adult cozy sleep-story channel. NO text, NO labels, NO split panels. A sophisticated, intimate, wood-paneled sleeper-train reading compartment at blue hour in a misty evergreen forest. Art direction A: convincing high-end cinematic photorealism, physically plausible materials and architectural photography, exquisite soft bounced lighting, subtle film grain, tactile velvet, wool and polished walnut, not pixel art, not cartoon, not a game screenshot, no plastic CGI look. Camera from inside at seated eye level, wide enough to read the whole room but no extreme wide-angle distortion. The LEFT third has a welcoming moss-green velvet banquette with a rumpled cream wool blanket, two muted ochre cushions and a small shelf of old clothbound books. A single small ginger cat sleeping naturally curled on the left end of the bench, anatomically correct. A beautiful brass reading lamp casts a restrained pool of warm amber light. CENTER-right: a large clearly framed train window, with gently rain-streaked glass and deep blue-gray conifers receding into fog outside, a hint of the rail curve visible far ahead without a train coming toward us. Below the window a compact walnut table holds a small ceramic teapot, one steaming cup, a folded linen napkin and an open book with no legible text. Very subtle two or three wisps of steam. The last right edge shows another warm wall sconce and elegant joinery. Strong warm-inside/cool-outside contrast, richly layered depth, beautifully curated limited palette of warm honey, walnut, muted olive and soft slate blue. Peaceful shelter, authentic lived-in details, emotionally inviting, polished tasteful composition. More space and breathing room than clutter. No people, no threatening elements, no purple fantasy glow, no glitter or floating magic, no collage, no exterior cottage, no pond, no willow. The image should immediately feel like a place an adult wants to spend a long quiet evening. Favor an unobstructed window whose outdoor landscape can later move independently and distinct small elements for future rain/steam animation. Complete finished master still, full-bleed landscape.",
       "root_viewed": true,
       "dimensions": [
@@ -49,5 +49,8 @@
       "bytes": 2867490,
       "sha256": "8bbdcfb3d29b86fa54d0640f34a7c1acb3b6214cff0e1f9bb06dedc9071efe35"
     }
-  ]
+  ],
+  "animation_user_approved": false,
+  "channel_wide_style_adoption": "conditional_on_animation_approval",
+  "animation_delivery": "../night-train/DELIVERY.json"
 }

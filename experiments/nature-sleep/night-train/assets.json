@@ -1,0 +1,64 @@
+{
+  "schema": "night-train-assets-v1",
+  "selected_still": "../cozy-reset-2026-10-11/A-cinematic-night-train.png",
+  "selection": "Explicit user selection of A; adoption for all channel videos conditional on animation review.",
+  "artwork": [
+    {
+      "file": "assets/cabin-clean.png",
+      "role": "Approved cabin composition prepared as a keyed animation plate; flowers and static steam removed; frame and furniture preserved.",
+      "prompt": "Production clean plate for animating this EXACT selected photograph. Preserve this exact composition and camera framing and all interior objects, beautiful lighting, wood texture, upholstery, cat, blanket, books, lamps, cup, teapot and table. Edit ONLY: (1) remove all tea steam, leaving clear still air above the cup. (2) remove the small flower vase and its flowers on the right of the teapot and plausibly fill its small area with the same wood/table/window behind. (3) replace the entire outside view within the existing train window glass by a FLAT SOLID saturated pure magenta #FF00FF chroma screen, perfectly clean, with NO rain, NO reflection, NO forest and NO objects on that magenta glass. Preserve the brass and wooden window frame exactly. Interior entirely photorealistic high quality, unchanged. This is a technical animation plate, so the magenta window is intentional. Exactly same 16:9 composition.",
+      "sha256": "7e11b3791ae8dcd9247d1a4cc3db8200100de221927135971478074b2b9d5af4",
+      "bytes": 2072009,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "root_viewed": true
+    },
+    {
+      "file": "assets/forest-valley.png",
+      "role": "Distant static photographic valley behind moving near trees.",
+      "prompt": "Create a cinematic PHOTOREALISTIC landscape panorama animation background, 16:9. A remote misty alpine fir forest at blue hour, same blue-grey wet nighttime atmosphere as the scenery through a cozy sleeper train window. Camera overlooking a low forested valley from above, many distant dark spruce tree ridges, layers of slate blue atmospheric fog, high-detail individual trees. Distant hill crest at about 38 percent of frame height; sky subtle slate grey-blue with tiny muted peach light at the right horizon, no bright moon. Bottom 65 percent dense continuous conifer forest with wisps of pale blue fog in hollows. No sharp near foreground trees (those will be separate layers), no railway tracks, no buildings, no water body, no animals, no window or interior, no raindrops, no glass. Softly overcast sky, understated exposure, beautiful film still. Consistent forest ground elevation and sky colour at both LEFT and RIGHT edges so it can form a horizontally tiling panorama. Landscape extends outside all image boundaries. Very high photographic texture detail, natural tree scale and varied clustering, no illustration or painting.",
+      "sha256": "21e227a5530fff0c8b3190e00736fc8ce3b4ebf691bf3086a994cf32aefacd0e",
+      "bytes": 2069331,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "root_viewed": true
+    },
+    {
+      "file": "assets/spruce-atlas.png",
+      "role": "Four transparent photographic spruce sprites for three parallax distances.",
+      "prompt": "A production sprite atlas on a FULLY TRANSPARENT background. Four separate photorealistic mature European spruce trees, photographed in soft blue-hour night light, dark blue-green evergreen needles, detailed fine drooping branches, delicate irregular silhouette, natural rough dark bark. Four complete trees placed side by side with clear transparent gaps, no overlap. Each crown and full trunk visible. All four tall and narrow but distinct: first is a full dense triangular spruce, second slightly sparse and asymmetric, third tall slim elegant fir, fourth a wider spruce with naturally downward hanging branches. Camera approximately tree midheight, level, realistic proportions. Only faint cold slate-blue sky rim light. Dark realistic photographic needles, absolutely NOT flat cutout triangle silhouettes, NOT cartoon, NOT 3D toy, NOT illustrated. Natural blue-gray restrained palette matching a misty fir forest at dusk. No ground, no roots, no grass, no fog, no sky, no rain, no labels or borders. Each tree isolated with clean alpha all around for parallax compositing.",
+      "sha256": "1783c9b91e429940f1a22398eb4731c54d189b9c73fafbc1b9fed2b8855a005a",
+      "bytes": 2994234,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "root_viewed": true
+    }
+  ],
+  "animation": "Authored deterministic HTML/Canvas composition; no paid video generator.",
+  "audio": "No audio in this visual study.",
+  "long_episode_started": false,
+  "user_approved_animation": false,
+  "effects": {
+    "forest_layers": 3,
+    "tree_sprites": 4,
+    "sliding_droplets": 42,
+    "small_beads": 720,
+    "source_pixel_speeds": [
+      50,
+      90,
+      140
+    ],
+    "steam_period_seconds": 6,
+    "breathing_period_seconds": 4,
+    "cycle_seconds": 24
+  }
+}

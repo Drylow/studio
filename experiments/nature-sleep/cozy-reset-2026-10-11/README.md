@@ -10,7 +10,7 @@ Trois scènes nouvelles sont générées sans image de référence ancienne. Ell
 ont été affichées séparément dans la conversation, avec leur lettre et leur
 description. Prompts exacts, dimensions et empreintes dans `proposals.json`.
 Ce sont des images générées ; aucune prise de vue ou maquette physique réelle
-n’est revendiquée. Aucune animation de ces propositions n’a été lancée.
+n’est revendiquée. L’utilisateur a choisi A ; son extrait animé est livré, en attente de validation.
 
 | Choix | Image | Direction observée | Mouvements envisagés après choix |
 |---|---|---|---|
@@ -20,14 +20,13 @@ n’est revendiquée. Aucune animation de ces propositions n’a été lancée.
 
 Le prompt B demandait une peinture 2D franche ; l’image obtenue est plus
 réaliste et texturée. Décrire le résultat observé, pas uniquement le prompt.
-Le C est recommandé pour l’identité de petit monde naturel ; A pour l’immersion.
-**Aucun choix utilisateur enregistré à ce stade.** Une question A/B/C a été
-présentée après l’affichage des trois images. Ne pas déduire un choix du défaut
-préselectionné ou de l’absence de réponse.
+**L’utilisateur a choisi A — train de nuit.** L’adoption de ce style pour toute
+la chaîne dépend de sa validation de l’animation. Travail actif et calques :
+[train de nuit](../night-train/README.md). B et C restent des propositions non choisies.
 
 ## Prochain essai
 
-Après le choix, préparer un extrait animé court du décor retenu. Concevoir des
+Préparer l’extrait animé court du train retenu. Concevoir des
 éléments séparés, avec un fond propre, des attaches cohérentes et un mouvement
 continu. Éviter la déformation de pans entiers d’image, les déplacements par
 bandes et les gestes qui traversent le décor. Tester les poses et le mouvement

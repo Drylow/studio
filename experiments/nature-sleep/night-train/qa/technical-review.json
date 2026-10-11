@@ -1,0 +1,49 @@
+{
+  "technical_pass": true,
+  "sha256": "7245dd4f90b9606ce78ceec49dee2b115566b568868b64220ac739ffdff8d0f1",
+  "bytes": 17384336,
+  "duration_seconds": 24,
+  "frames": 720,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "audio_streams": 0,
+  "full_decode_ok": true,
+  "native_cycle_exact_match": true,
+  "seam_mean_rgb_difference_0_to_255": 1.8021624228395063,
+  "window_seam_mean_rgb_difference": 4.885154914529914,
+  "window_neighbor_differences": [
+    4.496952075702075,
+    4.441694902319902,
+    4.406074481074481,
+    4.3907684676434675,
+    4.406122557997558
+  ],
+  "static_cabin_seam_mean_rgb_difference": 0.7135166666666667,
+  "neighbor_frame_differences_0_to_255": [
+    1.1600292566872428,
+    1.1388104423868313,
+    1.1188560956790123,
+    1.1149443801440329,
+    1.1200604423868314
+  ],
+  "six_second_motion_mean_rgb_difference_by_region": {
+    "forest": 15.189577441077441,
+    "steam": 11.772987358616101,
+    "cat": 9.36595238095238,
+    "stable_cabin": 0.015070152119332448
+  },
+  "source_dimensions": [
+    1672,
+    941
+  ],
+  "native_animation_grid": null,
+  "integer_enlargement": null,
+  "continuous_subpixel_motion": true,
+  "contact_sheets": 5,
+  "human_continuous_playback": false,
+  "visual_review": "All five sheets and native detail frames reviewed by root; awaiting user review.",
+  "decoded_captures_reviewed": 73
+}

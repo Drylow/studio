@@ -1,0 +1,48 @@
+{
+  "schema": "quiet-little-worlds-night-train-delivery-v1",
+  "date": "2026-10-11",
+  "status": "preview_delivered_awaiting_user_animation_approval",
+  "url": "https://gofile.io/d/eIVTL3rq",
+  "file": {
+    "name": "Quiet-Little-Worlds-Night-Train-24s.mp4",
+    "bytes": 17384336,
+    "sha256": "7245dd4f90b9606ce78ceec49dee2b115566b568868b64220ac739ffdff8d0f1",
+    "md5": "39429744ebdd4c0dfb44967b013437a8"
+  },
+  "duration_seconds": 24,
+  "export_dimensions": [
+    1920,
+    1080
+  ],
+  "source_dimensions": [
+    1672,
+    941
+  ],
+  "fps": 30,
+  "silent": true,
+  "style_A_still_user_approved": true,
+  "animation_user_approved": false,
+  "channel_wide_adoption": "conditional_on_animation_approval",
+  "two_hour_episode_started": false,
+  "discord_sent": false,
+  "gofile_md5_and_size_verified": true,
+  "technical_pass": true,
+  "root_visual_review": "qa/visual-review.json",
+  "contact_sheets": [
+    "qa/contact-01.jpg",
+    "qa/contact-02.jpg",
+    "qa/contact-03.jpg",
+    "qa/contact-04.jpg",
+    "qa/contact-05.jpg"
+  ],
+  "native_cycle_exact_match": true,
+  "native_boundary_check": {
+    "native_last_to_first": 1.1491113683127574,
+    "native_first_to_second": 1.1520552019032921,
+    "native_second_to_third": 1.1488953189300413,
+    "stable_cabin_seam": 0.0,
+    "pass": true
+  },
+  "source_scene_sha256": "300fb16c207e40fa313627de6e2a1d757a13e5a0aa3fdc70408d76f8d3265d79",
+  "render_elapsed_seconds": 219
+}

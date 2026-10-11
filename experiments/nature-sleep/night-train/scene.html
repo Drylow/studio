@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Quiet Little Worlds — Night train motion study</title>
+<style>html,body{margin:0;background:#100e0c;overflow:hidden}canvas{width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id="screen" width="1920" height="1080"></canvas>
+<script>
+'use strict';
+const CAPTURE_MODE=false;
+const W=1672,H=941,PERIOD=24,TAU=Math.PI*2;
+const screen=document.getElementById('screen'),ctx=screen.getContext('2d');
+const canvas=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c;};
+const outdoor=canvas(W,H),o=outdoor.getContext('2d');
+const cabin=canvas(W,H),c=cabin.getContext('2d',{willReadFrequently:true});
+const rain=canvas(W,H),r=rain.getContext('2d');
+const glassMask=canvas(W,H),gm=glassMask.getContext('2d');
+const steam=canvas(220,280),s=steam.getContext('2d');
+const image=(src)=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=src;});
+const mod=(v,n)=>((v%n)+n)%n;
+const mix=(a,b,t)=>a+(b-a)*t;
+const smooth=(a,b,v)=>{const t=Math.max(0,Math.min(1,(v-a)/(b-a)));return t*t*(3-2*t);};
+function seeded(seed){return ()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const random=seeded(89231);
+const drops=Array.from({length:42},(_,i)=>({x:736+random()*760,phase:random(),duration:[8,12,24][i%3],size:1.4+random()*1.7,drift:5+random()*9,seed:random()*10}));
+const beads=Array.from({length:720},()=>({x:710+random()*810,y:random()*555,r:.5+random()*1.55,alpha:.22+random()*.5}));
+const treeBoxes=[[0,0,440,1024],[441,0,370,1024],[811,0,302,1024],[1111,0,425,1024]];
+const bands=[
+ {period:1200,count:13,minHeight:210,maxHeight:310,base:575,alpha:.68,haze:.34},
+ {period:2160,count:14,minHeight:310,maxHeight:550,base:640,alpha:.91,haze:.1},
+ {period:3360,count:5,minHeight:620,maxHeight:880,base:745,alpha:.97,haze:0}
+].map((band,layer)=>({...band,trees:Array.from({length:band.count},(_,i)=>({x:(i+.2+random()*.6)/band.count*band.period,height:mix(band.minHeight,band.maxHeight,random()),sprite:(i+layer)%4,widthScale:.86+random()*.25,base:band.base+random()*35,mirror:random()>.5}))}));
+let master,forest,atlas,treeSprites=[];
+function prepareCabin(){
+ c.drawImage(master,0,0,W,H);
+ const pixels=c.getImageData(0,0,W,H),mask=gm.createImageData(W,H);
+ let keyed=0;
+ for(let y=0;y<555;y++)for(let x=700;x<1520;x++){
+  const p=(y*W+x)*4,d=pixels.data,R=d[p],G=d[p+1],B=d[p+2];
+  const chroma=Math.min(R,B)-G;
+  if(chroma>22&&B>R*.55&&R>G*1.3){
+   const key=smooth(22,143,chroma),a=1-key;
+   d[p+3]=Math.round(a*255);mask.data[p+3]=Math.round(key*255);
+   if(a>.01){d[p]=Math.max(0,Math.min(255,(R-key*220)/a));d[p+2]=Math.max(0,Math.min(255,(B-key*220)/a));}
+   if(key>.99)keyed++;
+  }
+ }
+ c.putImageData(pixels,0,0);gm.putImageData(mask,0,0);
+ for(const box of treeBoxes){
+  const t=canvas(box[2],box[3]),tc=t.getContext('2d');tc.drawImage(atlas,...box,0,0,t.width,t.height);treeSprites.push(t);
+ }
+ return keyed;
+}
+function drawForest(time){
+ o.clearRect(0,0,W,H);
+ // A distant valley is effectively stationary over this short passage. All
+ // nearer trees move monotonically in the same direction at distinct speeds.
+ o.drawImage(forest,685,-24,845,604);
+ o.fillStyle='rgba(30,43,56,.06)';o.fillRect(700,0,820,555);
+ for(let b=0;b<bands.length;b++){
+  const band=bands[b],travel=time/PERIOD*band.period;
+  for(const tree of band.trees){
+   const sprite=treeSprites[tree.sprite],height=tree.height,width=height*sprite.width/sprite.height*tree.widthScale;
+   for(const copy of [-1,0,1]){
+   const x=mod(tree.x-travel,band.period)+700+copy*band.period;
+   if(x+width<690||x>1520)continue;
+   o.save();o.globalAlpha=band.alpha;
+   if(tree.mirror){o.translate(x+width,0);o.scale(-1,1);o.drawImage(sprite,0,tree.base-height,width,height);}
+   else o.drawImage(sprite,x,tree.base-height,width,height);
+   o.restore();
+   }
+  }
+  if(b<2){const haze=o.createLinearGradient(0,250,0,560);haze.addColorStop(0,'rgba(103,133,157,0)');haze.addColorStop(1,`rgba(103,133,157,${band.haze})`);o.fillStyle=haze;o.fillRect(700,200,820,370);}
+ }
+ // Two sparse, slow mist veils; they never obscure the whole landscape.
+ for(let i=0;i<3;i++){
+  const x=1090+Math.sin(TAU*time/PERIOD+i*1.9)*170,y=355+i*75;
+  o.save();o.translate(x,y);o.scale(4.8,.36);let g=o.createRadialGradient(0,0,2,0,0,85);g.addColorStop(0,'rgba(135,158,175,.075)');g.addColorStop(1,'rgba(135,158,175,0)');o.fillStyle=g;o.fillRect(-90,-90,180,180);o.restore();
+ }
+}
+function droplet(x,y,size,alpha,trail=0,phase=0){
+ if(trail>0){
+  r.beginPath();for(let j=0;j<=10;j++){let dy=trail*j/10,dx=Math.sin(dy*.055+phase)*.7; if(j===0)r.moveTo(x,y);else r.lineTo(x+dx,y-dy);}
+  r.strokeStyle=`rgba(196,211,225,${alpha*.16})`;r.lineWidth=size*.45;r.stroke();
+ }
+ r.save();r.translate(x,y);
+ r.fillStyle=`rgba(5,16,23,${alpha*.55})`;r.beginPath();r.ellipse(0,0,size*.72,size,0,0,TAU);r.fill();
+ r.strokeStyle=`rgba(207,227,242,${alpha*.78})`;r.lineWidth=.6;
+ r.beginPath();r.ellipse(-.2,.05,size*.62,size*.84,.2,.15,Math.PI*.88);r.stroke();
+ r.fillStyle=`rgba(232,239,244,${alpha*.7})`;r.beginPath();r.ellipse(-size*.23,-size*.36,size*.19,size*.12,-.5,0,TAU);r.fill();r.restore();
+}
+function drawRain(time){
+ r.clearRect(0,0,W,H);
+ for(const bead of beads)droplet(bead.x,bead.y,bead.r,bead.alpha);
+ for(const drop of drops){
+  const u=mod(time/drop.duration+drop.phase,1),y=-90+u*780;
+  const x=drop.x+Math.sin(u*7+drop.seed)*1.9+drop.drift*u;
+  // Refraction is sampled from the current moving forest, not from a still.
+  if(y>-4&&y<560){r.save();r.beginPath();r.ellipse(x,y,drop.size*.77,drop.size*1.45,0,0,TAU);r.clip();r.drawImage(outdoor,x-5,y-7,10,14,x-3.6,y-5.8,7.2,11.6);r.restore();}
+  droplet(x,y,drop.size,.74,12+drop.size*5,drop.seed);
+ }
+ // Fine rain beyond the window. Low contrast and only a few short streaks.
+ for(let i=0;i<54;i++){
+  const x=716+mod(i*143.731-time*33.75,810),y=mod(i*59.513+time*140,560);
+  r.strokeStyle='rgba(159,188,207,.11)';r.lineWidth=.65;r.beginPath();r.moveTo(x,y);r.lineTo(x-2.2,y+7);r.stroke();
+ }
+ // A soft fixed amber reflection locates the glass relative to the cabin.
+ let amber=r.createRadialGradient(755,330,2,755,330,52);amber.addColorStop(0,'rgba(247,184,102,.05)');amber.addColorStop(1,'rgba(247,184,102,0)');r.fillStyle=amber;r.fillRect(700,270,110,120);
+ r.globalCompositeOperation='destination-in';r.drawImage(glassMask,0,0);r.globalCompositeOperation='source-over';
+}
+function drawSteam(time){
+ s.clearRect(0,0,220,280);
+ // Fine translucent parcels rise and spread in a convecting plume. No drawn
+ // coils, hard outlines or stationary steam baked into the photograph.
+ for(let strand=0;strand<3;strand++)for(let i=0;i<65;i++){
+  const u=mod(time/6+i/65+strand*.173,1),height=u*206;
+  const curl=Math.sin(u*8.5-time/6*TAU+strand)*Math.pow(u,.7)*13;
+  const x=110+(strand-1)*6+curl+Math.sin(u*18+strand)*u*4,y=263-height;
+  const radius=2.6+u*13,alpha=Math.sin(Math.PI*u)**1.2*.064;
+  const g=s.createRadialGradient(x,y,0,x,y,radius);g.addColorStop(0,`rgba(220,225,228,${alpha})`);g.addColorStop(1,'rgba(220,225,228,0)');s.fillStyle=g;s.fillRect(x-radius,y-radius,radius*2,radius*2);
+ }
+ ctx.drawImage(steam,995,406,140,180);
+}
+function catBreath(time){
+ // A local two-pixel displacement of the torso, softly feathered. Head, ears,
+ // face, furniture and blanket contours remain at their original coordinates.
+ const lift=(1-Math.cos(TAU*time/4))*1.35;
+ if(lift<.00001)return;
+ const patch=canvas(292,158),pc=patch.getContext('2d');
+ pc.drawImage(master,22,572+lift,292,158,0,0,292,158);
+ pc.globalCompositeOperation='destination-in';pc.save();pc.translate(143,78);pc.scale(1,.54);
+ const g=pc.createRadialGradient(0,0,49,0,0,125);g.addColorStop(0,'white');g.addColorStop(1,'rgba(255,255,255,0)');pc.fillStyle=g;pc.fillRect(-150,-150,300,300);pc.restore();
+ ctx.drawImage(patch,22,572);
+}
+function renderAt(seconds){
+ const time=mod(seconds,PERIOD);
+ ctx.setTransform(screen.width/W,0,0,screen.height/H,0,0);
+ ctx.fillStyle='#141311';ctx.fillRect(0,0,W,H);
+ drawForest(time);ctx.drawImage(outdoor,0,0);ctx.drawImage(cabin,0,0);
+ drawRain(time);ctx.drawImage(rain,0,0);catBreath(time);drawSteam(time);
+}
+window.trainReady=(async()=>{
+ [master,forest,atlas]=await Promise.all([image('__CABIN_SOURCE__'),image('__FOREST_SOURCE__'),image('__TREE_SOURCE__')]);
+ const keyedPixels=prepareCabin();renderAt(0);
+ window.renderTrainAt=renderAt;window.trainFramePNG=()=>screen.toDataURL('image/png');
+ if(!CAPTURE_MODE){const start=performance.now();function tick(now){renderAt((now-start)/1000);requestAnimationFrame(tick);}requestAnimationFrame(tick);}
+ return {sourceWidth:master.width,sourceHeight:master.height,keyedPixels,windowApproximateBounds:[725,0,1504,537],duration:PERIOD,layers:bands.map(b=>({trees:b.count,pixelsPerSecond:b.period/PERIOD})),export:[screen.width,screen.height]};
+})();
+</script></html>

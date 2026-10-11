@@ -14,14 +14,19 @@ Trois images entièrement nouvelles affichées dans la conversation :
 - **B — maison de thé dans l’arbre** : illustration texturée, fenêtre ronde, poêle.
 - **C — refuge miniature** : petit monde sous les racines, matières de maquette.
 
-Dossier actif : `experiments/nature-sleep/cozy-reset-2026-10-11/README.md`.
-Sources, prompts et empreintes : `proposals.json` dans ce même dossier.
-C recommandé pour l’identité de la chaîne ; A pour l’immersion. Une question de
-choix a été présentée après les images. **Aucun style encore choisi par l’utilisateur.**
-Ne pas animer sur la base du défaut préselectionné, ni déduire une validation de
-l’absence de réponse. Aucun nouvel extrait animé ou film long lancé.
+Dossier actif : `experiments/nature-sleep/night-train/README.md`.
+L’utilisateur a maintenant **choisi A — train de nuit** et demandé l’extrait animé.
+Il gardera cette direction pour la chaîne **si l’animation lui convient** :
+le choix de l’image n’est pas une validation de l’animation ni de l’épisode long.
+Sources de l’image choisie : `cozy-reset-2026-10-11/proposals.json` ; calques,
+code et contrôles du train dans `night-train/`.
+Extrait **24 s, 1080p30, silencieux**, contrôlé et livré :
+https://gofile.io/d/eIVTL3rq — reçu `night-train/DELIVERY.json`.
+Forêt à plusieurs distances, pluie sur vitre, vapeur du thé, respiration discrète
+du chat. 720 images décodées, 73 captures sur cinq planches revues ; raccord natif
+contrôlé. **Validation utilisateur de l’animation encore attendue.**
 
-La cible reste deux heures, après choix de l’image puis validation de l’animation.
+La cible reste deux heures, après validation de l’animation.
 La proposition de fiction anglaise et les pistes de montage/voix précédentes
 restent des propositions non validées. Aucun script intégral ni voix lancé.
 Aucun nouvel envoi Discord ; nom/bio/avatar existants conservés.
