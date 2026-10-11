@@ -12,7 +12,7 @@
   "image_sha256": "c6c299efb19e38176ac3215002fde911ab7f25eff6cf1c0bf612b55f07ba2c39",
   "reference_images_sent": [],
   "concept": "One round white cartoon face with cyan and violet offset accents on black",
-  "review_state": "reviewed_by_codex_awaiting_user_feedback",
+  "review_state": "rejected_by_user",
   "user_approval": false,
   "uploaded_to_youtube": false,
   "visual_review": {
@@ -23,5 +23,9 @@
       96
     ],
     "result": "Face, expression and colored accents remain visible at these tested sizes."
+  },
+  "user_feedback": {
+    "date": "2026-10-11",
+    "reason": "User requests an even simpler logo without unusual effects."
   }
 }
