@@ -1,0 +1,106 @@
+{
+  "schema": "conversation-chess-public-qa-summary-v1",
+  "status": "reviewed_youtube_test_delivered",
+  "episode": "Hannibal S02E10 — Naka-Choko",
+  "title": "Hannibal Lecter vs Will Graham | Analyzed Like Chess",
+  "video": {
+    "sha256": "75bbf2f928ce8f25f29fd2c038bfc0f8c685b0d6bb4d7bbe8e937c7aa71e1cd9",
+    "bytes": 23839131,
+    "frames": 3540,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "picture_duration_seconds": 118,
+    "container_duration_seconds": 118.016,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2
+  },
+  "source": {
+    "master_sha256": "620089c215f07c6b9e96c5104fbaac6037ed86b1a0dc33b767a39ed76720e6de",
+    "retained_seconds": 58,
+    "clips": 3,
+    "chronological": true,
+    "omitted_spans_seconds": [
+      6,
+      39
+    ],
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "not_upscaled": true,
+    "approximate_original_video_bitrate_mbps": 0.33,
+    "quality_limitation": "Native 1080p with low original bitrate and softened facial detail. Accepted for this private pilot, not maximum-quality long-form production."
+  },
+  "technical_review": {
+    "full_video_audio_decode_ok": true,
+    "technical_audio_passed": true,
+    "failures": [],
+    "warnings": [],
+    "true_peak_dbtp": -4.9,
+    "evidence_names": [
+      "audio-technical-qa.json",
+      "delivery-review.json"
+    ],
+    "evidence_retained_privately": true
+  },
+  "sampled_visual_review": {
+    "completed": true,
+    "reviewed_images": 40,
+    "contact_sheets": 7,
+    "breakdown": {
+      "guide": 5,
+      "complete_analyses": 4,
+      "recap": 3,
+      "segment_boundaries": 20,
+      "additional_captions_and_ellipses": 8
+    },
+    "human_audio_listening": false,
+    "continuous_playback_reviewed": false,
+    "method": "Final-export contact sheets were actually inspected. This is sampled frame review, not continuous audiovisual playback."
+  },
+  "counter_review": {
+    "reviewed": true,
+    "total": 4,
+    "actual_read_back_matches": true,
+    "counts": {
+      "brilliant": 1,
+      "great": 1,
+      "best": 1,
+      "excellent": 0,
+      "good": 0,
+      "book": 1,
+      "inaccuracy": 0,
+      "mistake": 0,
+      "blunder": 0
+    }
+  },
+  "opening": {
+    "white": "Hannibal",
+    "black": "Will",
+    "first_speaker": "Hannibal",
+    "reviewed": true
+  },
+  "delivery": {
+    "gofile_confirmed": true,
+    "gofile_files": 5,
+    "official_web_client_readback_complete": true,
+    "api_readback_complete": false,
+    "direct_premium_api_readback_complete": false,
+    "discord_confirmed": true,
+    "discord_messages": 1,
+    "discord_attachments": 3,
+    "discord_sent_at": "2026-10-11T19:27:49.134702+00:00",
+    "pending_archived": true,
+    "confirmed": true
+  },
+  "publication": {
+    "kind": "youtube-test",
+    "youtube_checks_complete": false,
+    "rights_clearance_verified": false,
+    "published": false,
+    "long_production": "Conditional on the user's private test and a later decision. Mascot approval does not authorize an automatic long render."
+  }
+}

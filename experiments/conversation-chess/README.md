@@ -7,7 +7,7 @@ Déclinaison anime : [recette de production](ANIME_WORKFLOW.md) et
 guide16s et bilan12s. La pause après « opinion » laisse une respiration ; Tony
 est remplacé par un pion neutre provisoire. La source720p reste un aperçu.
 
-## Reprise actuelle — Peaky arrêté, acquisition Hannibal bloquée
+## Reprise actuelle — Peaky arrêté, test Hannibal livré pour contrôle privé
 
 L’utilisateur rapporte **Landa publié avec des claims comparables aux Sopranos**,
 sans blocage ni strike déclaré. Ce retour n’est pas vérifié indépendamment dans
@@ -23,18 +23,31 @@ les droits de publication.
 **Hannibal, série TV avec Mads Mikkelsen : aperçu de deux minutes autorisé.**
 Le [pion photographique](assets/hannibal/hannibal-pawn-approved-2026-10-11.png)
 est explicitement approuvé, son reçu JSON et SHA vérifiés ; il reste intact.
-**Source S02E08 indisponible : `source_not_ready`.** L’accès hors ligne Naka
-gratuit est accordé, avec métadonnées 720p / maximum 720p et audio anglais,
-mais le premier segment reçoit HTTP 403 du fournisseur Cloudflare, sans
-redirection. Aucun segment ni fichier vidéo téléchargé, aucun alignement audio
-anglais possible. L’emplacement hors ligne Peaky S02E06 a été remplacé ; tous
-les originaux et montages locaux sont conservés.
+**Source acquise : trois clips publics Clip.cafe du dîner S02E10.** Le master
+retient 58 s chronologiques, avec deux ellipses de 6 et 39 s en coupes sèches.
+1080p natif mais environ 0,33 Mb/s vidéo : détail limité, accepté pour cet
+aperçu privé, pas comme qualité maximale d’un long. SHA du master :
+`620089c215f07c6b9e96c5104fbaac6037ed86b1a0dc33b767a39ed76720e6de`.
+Quatre analyses Book/Best/Brilliant/Great de huit secondes, guide de 16 s et
+bilan de 12 s donnent **118 s d’image / 118,016 s de fichier final**.
+Export natif terminé : 3 540 images en 1080p30, H264/AAC 48 kHz stéréo, SHA256
+`75bbf2f928ce8f25f29fd2c038bfc0f8c685b0d6bb4d7bbe8e937c7aa71e1cd9`.
+Décodage audiovisuel et QA audio passent sans échec ni avertissement,
+crête vraie −4,9 dBTP. Revue finale de 40 captures sur sept planches, avec
+quatre notes et bilan vérifiés. Hannibal ouvre Blanc, Will est Noir.
+Sans écoute humaine ni lecture continue. **Kit `youtube-test` livré** : cinq
+fichiers GoFile confirmés par le site officiel et réconciliés, un message
+Discord avec trois pièces jointes. Les reçus privés sont conservés ; aucun
+lien ni identifiant de livraison dans le dépôt. L’upload privé YouTube par
+l’utilisateur et son résultat de Checks restent en attente.
+[Préparation, timeline et synthèse QA](episodes/hannibal-pilot/PREPARATION.md).
 
-NBC renvoie 403, YouTube est refusé par le proxy ; les métadonnées du clip AXN
-Dailymotion répondent 200 mais sa playlist 403. Aucune alternative HD vérifiée.
-Preuve privée : `output/conversation-chess/hannibal-source-cache/naka-s02e08/SOURCE_NOT_READY_SAFE.json`.
-Quatre annotations en brouillon et le kit texte sont prêts, ainsi que la chaîne
-d’export native ; aucun film Hannibal exporté, livré ou testé sur YouTube.
+L’ancien S02E08 Naka reste inutilisé : accès gratuit accordé mais premier
+segment 403 fournisseur sans redirection, reçu privé `SOURCE_NOT_READY_SAFE.json`
+conservé. NBC 403, YouTube refusé par le proxy et playlist AXN Dailymotion 403
+n’ont pas fourni de vidéo exploitable. Le remplacement hors ligne Peaky S02E06
+n’a supprimé aucun original ni montage local.
+
 Un long de dix à quinze minutes reste conditionnel au futur test privé :
 **valider le pion n’autorise pas un long automatique**. Aucune garantie
 d’absence de réclamation. [État et recherche initiale](HANNIBAL_FEASIBILITY.md).

@@ -1,0 +1,106 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Hannibal Lecter vs Will Graham | Analyzed Like Chess",
+  "demo": false,
+  "source_reviewed": true,
+  "source_in": 0,
+  "source_out": 58,
+  "intro_seconds": 16,
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "source_not_upscaled": true,
+    "source_metadata_note": "Three ordinary public-player clips, each measured 1920x1080 H264 at 24000/1001. Conformed without resize to 30fps; sampled authentic dinner frames reviewed, no burned captions or watermark seen. Low original video bitrate (~0.33Mb/s) softens facial detail. Accepted for this private two-minute transport/style test, not maximum-quality long-form production."
+  },
+  "white_label": "Hannibal",
+  "black_label": "Will",
+  "opening": {
+    "speaker": "white",
+    "label": "Hannibal",
+    "reviewed": true,
+    "source_at": 0,
+    "evidence": "First complete audible line starts at 1.07s: The meat has an interesting flavor. Actual local English speech alignment and Hannibal speaking frame at1.8s reviewed. White is Hannibal; Will is Black."
+  },
+  "initial_score_text": "0.0",
+  "initial_control": 0.5,
+  "analysis_background": "replay",
+  "analysis_pawn_by_speaker": false,
+  "show_source_quality_label": false,
+  "mascot": {
+    "file": "assets/hannibal/hannibal-pawn-approved-2026-10-11.png",
+    "overlay_file": "assets/hannibal/hannibal-pawn-approved-2026-10-11.png",
+    "badges": true,
+    "status": "Exact user-approved pawn, unchanged. Companion Chess.com SVG badges are added by the renderer."
+  },
+  "dialogue_gain": 1,
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  },
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "ending_fade_seconds": 0.5,
+  "outro_summary": "Hannibal opens with a tasting note and turns dinner into an interrogation. Will refuses the role of amateur: first a modest deflection, then a reply about behavior rather than good and evil. Hannibal wins the most unsettling line; Will keeps his composure. Four selected decisions, one very suspicious menu.",
+  "annotations": [
+    {
+      "id": "palate-opening",
+      "source_at": 3.3333333333333335,
+      "speaker": "white",
+      "rating": "book",
+      "comment": "Hannibal opens with a tasting note. Perfectly normal dinner talk, unless your host treats every ingredient like evidence.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "score_text": "0.2",
+      "control_after": 0.482008,
+      "reviewed": true,
+      "review_method": "Actual English source speech aligned locally, public transcript used to repair recognition wording; complete line boundary and speaking/reaction frames sampled. Editorial conversation analogy, not chess-engine analysis. No claim of continuous human listening."
+    },
+    {
+      "id": "modest-deflection",
+      "source_at": 12.7,
+      "speaker": "black",
+      "rating": "best",
+      "comment": "Will declines the palate contest. He gives Hannibal a compliment without giving him anything useful. A tidy defensive move.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "score_text": "0.2",
+      "control_after": 0.482008,
+      "reviewed": true,
+      "review_method": "Actual English source speech aligned locally, public transcript used to repair recognition wording; complete line boundary and speaking/reaction frames sampled. Editorial conversation analogy, not chess-engine analysis. No claim of continuous human listening."
+    },
+    {
+      "id": "frightened-meat",
+      "source_at": 27.233333333333334,
+      "speaker": "white",
+      "rating": "brilliant",
+      "comment": "Hannibal makes the meat a witness. A tasting note becomes a veiled accusation, and Will now has to answer without flinching.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "score_text": "1.2",
+      "control_after": 0.393584,
+      "reviewed": true,
+      "review_method": "Actual English source speech aligned locally, public transcript used to repair recognition wording; complete line boundary and speaking/reaction frames sampled. Editorial conversation analogy, not chess-engine analysis. No claim of continuous human listening."
+    },
+    {
+      "id": "behaviorism-reply",
+      "source_at": 56.7,
+      "speaker": "black",
+      "rating": "great",
+      "comment": "Will talks behavior, not good and evil. He keeps the conversation on observable actions instead of accepting Hannibal as a mystery.",
+      "hold_seconds": 8,
+      "replay_seconds": 3,
+      "score_text": "1.2",
+      "control_after": 0.393584,
+      "reviewed": true,
+      "review_method": "Actual English source speech aligned locally, public transcript used to repair recognition wording; complete line boundary and speaking/reaction frames sampled. Editorial conversation analogy, not chess-engine analysis. No claim of continuous human listening."
+    }
+  ],
+  "source_sha256": "620089c215f07c6b9e96c5104fbaac6037ed86b1a0dc33b767a39ed76720e6de"
+}

@@ -1,6 +1,6 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## Reprise chess — Peaky arrêté, Hannibal bloqué à l’acquisition
+## Reprise chess — Peaky arrêté, test Hannibal livré pour contrôle privé
 
 **Landa : l’utilisateur rapporte la vidéo publiée**, avec des claims comparables
 à ceux des Sopranos. Aucun blocage ni strike n’est déclaré. Publication et
@@ -17,23 +17,37 @@ restent distinctes de ce résultat défavorable sur les droits.
 **Hannibal : test d’environ deux minutes autorisé**, avec la série TV et Mads
 Mikkelsen. L’utilisateur valide explicitement le pion « Oui, utilise ce pion » :
 `experiments/conversation-chess/assets/hannibal/hannibal-pawn-approved-2026-10-11.png`,
-avec reçu JSON et SHA vérifié, conservé intact. **État : `source_not_ready`.**
-Naka a accordé l’accès hors ligne gratuit à S02E08 ; les métadonnées annoncent
-720p, maximum 720p et audio anglais. Mais le premier segment vidéo renvoie
-HTTP 403, page de blocage fournisseur Cloudflare, sans redirection. Aucun
-segment ni fichier vidéo disponible ; l’anglais ne peut pas être aligné sur
-l’audio. Seul l’emplacement hors ligne du Peaky S02E06 abandonné a été remplacé ;
-les originaux et montages locaux restent conservés.
+avec reçu JSON et SHA vérifié, conservé intact. **Source désormais acquise :
+trois clips publics Clip.cafe du dîner S02E10, *Naka-Choko*.** Les 58 secondes
+retenues restent chronologiques, avec deux ellipses de 6 et 39 secondes et
+des coupes sèches. Les fichiers sont 1080p natifs mais très compressés
+(environ 0,33 Mb/s vidéo) ; ce n’est pas la qualité maximale d’un long.
+SHA du master local : `620089c215f07c6b9e96c5104fbaac6037ed86b1a0dc33b767a39ed76720e6de`.
 
-Les alternatives n’ont pas fourni de source HD vérifiée : NBC 403, refus du
-proxy pour YouTube, métadonnées AXN sur Dailymotion accessibles (200) mais
-playlist refusée (403). Le reçu privé
-`output/conversation-chess/hannibal-source-cache/naka-s02e08/SOURCE_NOT_READY_SAFE.json`
-conserve ce diagnostic, sans URL de média publiée ici.
+La timeline réelle contient Book Hannibal, Best Will, Brilliant Hannibal et
+Great Will, quatre pauses de huit secondes, guide de 16 s et bilan de 12 s :
+**118 s d’image / 118,016 s de fichier final**, 3 540 images en 1080p30.
+L’export natif H264/AAC 48 kHz stéréo est terminé : SHA256
+`75bbf2f928ce8f25f29fd2c038bfc0f8c685b0d6bb4d7bbe8e937c7aa71e1cd9`.
+Décodage audiovisuel intégral et QA audio passent sans échec ni avertissement,
+crête vraie −4,9 dBTP. La revue finale a examiné 40 captures sur sept planches :
+quatre notes complètes, bilan totalisant quatre, sous-titres et ellipses.
+Hannibal ouvre Blanc, Will reste Noir. Revue échantillonnée, sans écoute humaine
+ni lecture continue. **Livraison `youtube-test` confirmée** : cinq fichiers
+GoFile réconciliés après lecture du site officiel, un message Discord et trois
+pièces jointes. Les reçus privés et le pending archivé sont conservés ; aucun
+lien ni identifiant de livraison n’est publié ici. L’utilisateur doit encore
+effectuer son upload privé YouTube ; aucun résultat de Checks n’est établi.
+Voir [préparation et timeline publique](../experiments/conversation-chess/episodes/hannibal-pilot/PREPARATION.md).
 
-Le pion, quatre annotations non alignées et le kit texte sont préparés ; la
-chaîne d’export native est prête. Aucun film Hannibal exporté, livré ou testé
-sur YouTube. Le long de dix à quinze minutes reste conditionnel au futur test
+L’échec S02E08 Naka reste historique et cette proposition n’est pas utilisée :
+manifest 200 mais premier segment 403 fournisseur, sans redirection. Le reçu
+privé `SOURCE_NOT_READY_SAFE.json` est conservé. NBC 403, YouTube refusé par le
+proxy et playlist AXN Dailymotion 403 n’ont pas donné de vidéo exploitable.
+Seul l’emplacement hors ligne Peaky S02E06 avait été remplacé ; tous les
+originaux et montages locaux restent conservés.
+
+Le long de dix à quinze minutes reste conditionnel au futur test
 privé ; **l’approbation du pion n’autorise pas son lancement automatique**.
 Aucune garantie Content ID ni droit de réutilisation établi.
 [État et recherche initiale](../experiments/conversation-chess/HANNIBAL_FEASIBILITY.md).
