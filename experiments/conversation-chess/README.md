@@ -24,6 +24,16 @@ et refuse les annotations situées dans un passage retiré. Onze tests, dont
 un vrai raccord vidéo/audio, vérifient le remapping et la durée. La sortie
 porte les dimensions mesurées : `scene-edit-1280x720.mkv` par exemple.
 
+Pour les dialogues qui nécessitent une traduction, `export-kdenlive.py` accepte
+`--subtitles chemin/edited-source-English.srt`. Ce SRT local doit suivre la
+source montée **avant** le guide et les pauses d’analyse. L’export recale les
+répliques sur une piste V4 de titres Kdenlive modifiables ; le guide, les replays
+et le bilan restent sans sous-titres. Les repères source et finaux ainsi que les
+empreintes sont conservés dans le bundle. Six tests et un vrai export natif de
+150 images ont vérifié que les titres apparaissent seulement pendant les
+dialogues concernés. L’option est facultative et ne change pas les projets
+anglais sans SRT.
+
 ## Archive — état des premiers longs
 
 **Tommy / Alfie est repris sur instruction de l'utilisateur**, qui a récupéré

@@ -20,6 +20,7 @@ from fractions import Fraction
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from urllib.parse import unquote
+from dialogue_subtitles import final_srt, map_dialogue_cues, native_title_xml, parse_srt
 
 
 def digest(path):
@@ -65,7 +66,7 @@ def reviewed_native_720_source(quality, video):
             and isinstance(review.get("reason"), str) and bool(review["reason"].strip()))
 
 
-def generate(manifest_path, bundle):
+def generate(manifest_path, bundle, subtitles_path=None):
     data = json.loads(manifest_path.read_text(encoding="utf-8"))
     if data.get("schema") != "conversation-chess-kdenlive-interchange-v1":
         raise ValueError("Expected the separate-media conversation-chess manifest")
@@ -122,6 +123,13 @@ def generate(manifest_path, bundle):
     source_hash = digest(original)
     if source_hash != data["source_sha256"]:
         raise ValueError("Source SHA256 differs from the reviewed manifest")
+    subtitle_cues = None
+    if subtitles_path is not None:
+        subtitles_path = subtitles_path.resolve(strict=True)
+        source_cues = parse_srt(subtitles_path, float(source_probe["format"]["duration"]))
+        subtitle_cues = map_dialogue_cues(source_cues, segments, fps, total)
+        if not subtitle_cues:
+            raise ValueError("The supplied subtitles do not overlap any retained dialogue scene")
 
     bundle.mkdir(parents=True, exist_ok=True)
     media = bundle / "media"
@@ -170,7 +178,8 @@ def generate(manifest_path, bundle):
         identity = "clip" + str(len(assets) + 10)
         bin_id = str(len(assets) + 10)
         image = path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp", ".svg")
-        info = probe(path) if not image else None
+        native_title = path.suffix.lower() == '.kdenlivetitle'
+        info = probe(path) if not (image or native_title) else None
         streams = info.get("streams", []) if info else []
         stream_duration = float(info.get("format", {}).get("duration", 0)) if info else 0
         length = max(needed_frames, math.ceil(stream_duration * fps), 1)
@@ -178,7 +187,7 @@ def generate(manifest_path, bundle):
         video_index = next((s["index"] for s in streams if s["codec_type"] == "video"), -1)
         audio_index = next((s["index"] for s in streams if s["codec_type"] == "audio"), -1)
         values = {
-            "resource": resource, "mlt_service": "qimage" if image else "avformat",
+            "resource": resource, "mlt_service": "kdenlivetitle" if native_title else "qimage" if image else "avformat",
             "length": length, "eof": "pause", "kdenlive:id": bin_id,
             "kdenlive:clipname": label, "kdenlive:folderid": 3, "kdenlive:proxy": "-",
             "kdenlive:duration": smpte(length, fps), "kdenlive:file_size": path.stat().st_size,
@@ -189,10 +198,13 @@ def generate(manifest_path, bundle):
                 raise ValueError(f"An audio asset must contain an audio stream: {label}")
             values.update({"audio_index": audio_index, "video_index": -1, "set.test_image": 1})
         elif role == "video":
-            values.update({"audio_index": -1, "video_index": 0 if image else video_index,
+            values.update({"audio_index": -1, "video_index": 0 if image or native_title else video_index,
                            "set.test_audio": 1, "mlt_image_format": "rgba"})
         if image:
             values.update({"ttl": 1, "loop": 1})
+        if native_title:
+            values.update({"xmldata": path.read_text(encoding='utf-8'),
+                           "kdenlive:producer_type": 5, "aspect_ratio": 1})
         props(producer, values)
         row = {"producer": identity, "bin_id": bin_id, "resource": resource,
                "original_path": str(path), "sha256": sha, "role": role, "frames": length}
@@ -214,6 +226,8 @@ def generate(manifest_path, bundle):
         ("replay", "V2 — Muted slow replays", "video"),
         ("graphics", "V3 — Intro / bar / rating / mascot / outro", "video"),
     ])
+    if subtitle_cues is not None:
+        track_specs.append(("subtitles", "V4 — English dialogue subtitles (editable titles)", "video"))
     track_index = {key: index for index, (key, _, _) in enumerate(track_specs)}
     track_entries = [[] for _ in track_specs]
     for index, segment in enumerate(segments):
@@ -238,6 +252,28 @@ def generate(manifest_path, bundle):
         if segment.get("music_file"):
             sound = asset(segment["music_file"], "audio", length, title + " — music")
             track_entries[track_index["music"]].append((start, length, sound))
+
+    subtitle_report = None
+    if subtitle_cues is not None:
+        subtitle_directory = bundle / 'subtitles'
+        subtitle_directory.mkdir(exist_ok=True)
+        original_srt = subtitle_directory / 'edited-source-English.srt'
+        if subtitles_path != original_srt.resolve():
+            shutil.copyfile(subtitles_path, original_srt)
+        final_srt_path = subtitle_directory / 'final-English.srt'
+        final_srt_path.write_text(final_srt(subtitle_cues, fps), encoding='utf-8')
+        for i, cue in enumerate(subtitle_cues, 1):
+            title_file = subtitle_directory / f'cue-{i:04}.kdenlivetitle'
+            title_file.write_text(native_title_xml(cue['text'], cue['duration_frames']), encoding='utf-8')
+            producer = asset(str(title_file), 'video', cue['duration_frames'], f'English subtitle {i:04}')
+            track_entries[track_index['subtitles']].append((cue['start_frame'], cue['duration_frames'], producer))
+        subtitle_report = {'source_file': 'subtitles/' + original_srt.name,
+                           'source_sha256': digest(original_srt),
+                           'source_timing': 'edited source, before guide and analysis pauses',
+                           'final_srt_file': 'subtitles/' + final_srt_path.name,
+                           'final_srt_sha256': digest(final_srt_path),
+                           'language': 'English', 'native_titles_editable': True,
+                           'dialogue_only': True, 'cues': subtitle_cues}
 
     for index, ((_, name, kind), entries) in enumerate(zip(track_specs, track_entries)):
         playlists = []
@@ -342,6 +378,9 @@ def generate(manifest_path, bundle):
         "music_segments": sum(bool(s.get("music_file")) for s in segments),
         "render_backend": "Kdenlive native application / MLT", "export_completed": False,
     }
+    if subtitle_report is not None:
+        report['dialogue_subtitles'] = subtitle_report
+        data['dialogue_subtitles'] = subtitle_report
     attribution = data.get("music_attribution")
     if attribution:
         credits_source = Path(attribution["file"]).resolve(strict=True)
@@ -357,6 +396,8 @@ def generate(manifest_path, bundle):
         f"Open project.kdenlive in Kdenlive to edit the {len(track_specs)} separate timeline tracks.\n"
         "The original HD source remains in the project bin; proxies are disabled.\n"
         "Animated captions are separate transparent clips, regenerated from the reviewed JSON timeline.\n"
+        + ("English dialogue subtitles are native editable titles on V4. Their source and final timings are in subtitles/.\n"
+           if subtitle_report is not None else "") +
         "The media/ folder must travel with the project. If the whole folder is moved, run:\n"
         "python /path/to/repository/experiments/conversation-chess/export-kdenlive.py "
         "--relocate --bundle /new/path/to/bundle\n"
@@ -500,6 +541,8 @@ def main():
     parser.add_argument("--render", type=Path)
     parser.add_argument("--display")
     parser.add_argument("--xauthority", type=Path)
+    parser.add_argument("--subtitles", type=Path,
+                        help="Optional local English SRT timed against the edited source, added as editable dialogue-only titles")
     parser.add_argument("--relocate", action="store_true", help="Rebase relative media paths after moving the whole bundle")
     args = parser.parse_args()
     bundle = args.bundle.resolve()
@@ -508,7 +551,7 @@ def main():
         return
     if not args.manifest:
         parser.error("--manifest is required unless --relocate is used")
-    project, report = generate(args.manifest.resolve(strict=True), bundle)
+    project, report = generate(args.manifest.resolve(strict=True), bundle, args.subtitles)
     print(json.dumps({"native_project": str(project), "frames": report["duration_frames"],
                       "tracks": report["tracks"], "source_segments": report["source_segments"],
                       "analysis_segments": report["analysis_segments"]}), flush=True)
