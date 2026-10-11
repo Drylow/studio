@@ -1,0 +1,73 @@
+TESTS QUOTA LADDER V3 — PERSONNAGES RAPPROCHÉS DE LA RÉFÉRENCE UTILISATEUR
+11 octobre 2026.
+
+Demande : les personnages doivent davantage ressembler au soldat dessiné
+dans la capture fournie par l'utilisateur. Tout le casting conserve une
+tête ronde blanche, avec des corps adultes habillés et des mains blanches.
+
+Correction recherchée : têtes moins grosses par rapport au corps, yeux noirs
+plus petits, expressions simples, mains moins gonflées, dessin des vêtements
+plus mat et ombres de BD plus simples. Garder les trois scènes et leurs décors.
+Le chiffre de réduction de 25 % est une consigne de travail pour le rendu,
+pas une mesure canonique des proportions du personnage de référence.
+
+Référence copiée intacte : references/personnage-utilisateur.png.
+Ce fichier provient de l'image jointe par l'utilisateur et correspond à la
+capture de Galactic Empire à 1:44 déjà présente dans le benchmark.
+Il sert au dessin des personnages ; pas à imposer son arme, son casque,
+son uniforme ou sa forêt dans nos trois scènes.
+
+Prompts écrits par Codex : 01-prompt.txt, 02-prompt.txt, 03-prompt.txt.
+Exécution : CLI du guide imagegen vers le CLI Proxy configuré dans .env,
+sans réécriture du prompt ni sélection automatique des références.
+
+01 — baie A. Milo, Orin et un travailleur au fond.
+Action fictive de contrôle : Orin indique le casier, Milo porte la caisse.
+Entrées prévues dans l'ordre : référence utilisateur, puis scène 01 de V2
+comme cible et maître du lieu. Nouvelle sortie : 01-echange.png.
+
+02 — baie A. Milo et Orin.
+Action fictive de contrôle : Milo tend la carte et porte toujours sa caisse.
+Entrées prévues dans l'ordre : référence utilisateur, scène 02 de V2 comme
+cible et maître du lieu, puis nouvelle scène 01 comme maître des personnages.
+Nouvelle sortie : 02-carte.png.
+
+03 — quai B. Milo, Orin et deux travailleurs au fond.
+Action fictive de contrôle : chargement d'une caisse sur le chariot.
+Entrées prévues dans l'ordre : référence utilisateur, scène 03 de V2 comme
+cible et maître du quai, puis nouvelle scène 01 comme maître des personnages.
+Nouvelle sortie : 03-quai.png.
+
+Les références réellement envoyées et leurs empreintes seront enregistrées
+dans registre.json après exécution. Les sorties sont regardées individuellement
+avant présentation. Ce test sans voix ne valide ni une animation, ni un film,
+ni l'approbation de cette nouvelle direction par l'utilisateur.
+Les versions précédentes restent conservées.
+
+AFFINAGE DU PREMIER ESSAI
+Le premier rendu réduit visiblement la taille des têtes et garde les trois
+personnes blanches. Les yeux restent plus grands que dans la référence.
+Une seconde requête précise des marques d'yeux nettement plus petites et
+des mains plus compactes, en conservant les nouvelles proportions.
+Prompt : 01-correction-prompt.txt ; entrées : référence utilisateur puis
+nouveau 01-echange.png. Sortie : 01-echange-corrige.png.
+Ce dernier fichier sera l'ancre de personnages envoyée aux scènes 02 et 03.
+Le premier rendu reste une archive du test, pas une version écrasée.
+
+SORTIES EXAMINÉES PAR CODEX
+La sélection à regarder contient 01-echange-corrige.png, 02-carte.png et
+03-quai.png. Le premier 01-echange.png reste conservé comme essai intermédiaire.
+Planche de comparaison : A-REGARDER.jpg, référence utilisateur en haut à gauche.
+
+Les trois sorties sélectionnées ont été regardées individuellement : trois
+têtes blanches dans 01, deux dans 02, quatre dans 03, y compris les gens du fond.
+Les têtes sont visiblement réduites face à V2 ; le dessin des yeux est plus petit,
+les corps paraissent moins enfantins et les aplats des tenues plus mats.
+Les scènes de dialogue, de carte et de chargement restent reconnaissables.
+
+Le rapprochement n'est pas une reproduction exacte : les yeux de 02 et 03
+restent proportionnellement un peu plus grands que dans le maître corrigé ;
+les mains sont encore plus épaisses que dans la capture. Des détails de manches,
+coutures, caisse et mains varient. Le fond garde le même lieu et le même rendu
+général, sans revendication d'identité de chaque trait ou pixel.
+Ce sont des essais de style proposés, pas une nouvelle direction approuvée.
