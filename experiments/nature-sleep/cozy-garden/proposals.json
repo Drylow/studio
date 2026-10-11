@@ -36,6 +36,7 @@
     "user_approved_animation": false
   },
   "full_episode_requested_seconds": 7200,
-  "delivery_state": "Long render paused at user request; animated preview awaiting approval",
-  "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS"
+  "delivery_state": "Cancelled by user; own render processes terminated; no final film delivered; sources preserved",
+  "webhook_binding": "DISCORD_WEBHOOK_QUIET_LITTLE_WORLDS",
+  "project_cancelled": true
 }

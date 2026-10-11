@@ -1,14 +1,15 @@
 # Silent Little Worlds — jardin des lanternes
 
-## Pause demandée — validation de l’animation attendue
+## Projet sleep annulé — 11 octobre 2026
 
-L’utilisateur a rappelé qu’il avait choisi l’image, mais pas validé cette
-animation. Le rendu long est suspendu et ne doit pas reprendre sans son avis.
-Un aperçu animé de 16 s en 1080p, avec voix, pluie, bassin, vapeur et forme
-centrale, est préparé pour cette validation. Le MP4 long partiel ne doit pas
-être livré. `cozy-garden/episode-01/HOLD.json` bloque nouvel export et livraison.
-Les processus suspendus sont consignés dans le résultat privé
-`garden-production/long-render-paused.json` ; ne pas les relancer automatiquement.
+L’utilisateur a explicitement arrêté cette chaîne et demandé de reprendre
+les vidéos chess. Les trois processus du rendu jardin ont été terminés après
+vérification de leur commande. `cozy-garden/episode-01/HOLD.json` garde
+`project_cancelled=true` et bloque tout nouvel export ou livraison.
+Le reçu privé `garden-production/cancellation-receipt.json` conserve cette
+interruption. Aucun long jardin n’a été terminé ou livré ; ne pas relancer
+les rendus train/jardin ni envoyer leur kit. Les sources et les textes sont
+conservés comme archives. Les états de production ci-dessous sont historiques.
 
 
 ## État actif — 11 octobre 2026
