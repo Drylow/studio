@@ -9,3 +9,6 @@ Smooth camera approach, pull-back for shell separation, inspection, extraction. 
 Fixed frontal cutaway, gently elevated orthographic camera. Components laid out horizontally in water-flow order. Permanent names above geometry, one causal headline and explanatory sentence per phase. No ornamental rotation.
 Three explicit fluid colors: cold blue, hot orange, extracted coffee brown. Flow arrows are large and directional. Pump piston and one-way valves move slowly enough to read. Water changes temperature, coffee bed wets downward, cup liquid rises. Heating/extraction timing remains editorial.
 Montserrat 67 px heading, 35 px explanation, 28 px component names, 23 px detail. Text contrast checked. Sage ceramic cup to keep its section readable against the warm studio floor.
+
+## V3 — 11 octobre 2026
+Dark studio, graphite housing, brushed metal, copper boiler, brass fittings, ceramic cup. Real perspective and nine moving camera takes. Typography remains a restrained left-hand guide; the object carries the visual interest. Physical exploded views and reassembly replace the fixed diagram. Reflective light cards, fine roughness, contact occlusion, MSAA and subtle depth of field. No stock or generated bitmap footage.

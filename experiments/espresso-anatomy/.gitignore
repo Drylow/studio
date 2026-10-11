@@ -6,5 +6,6 @@ qa/
 snapshots/
 check-report.json
 check-v2.json
+check-v3.json
 .thumbnails/
 *.log
