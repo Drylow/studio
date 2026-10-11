@@ -1,0 +1,119 @@
+{
+  "title": "Your Life as the God of War",
+  "channel": "Oddly Fictional Lives",
+  "language": "en",
+  "status": "complete_script_draft",
+  "narration_file": "script.txt",
+  "words": 2225,
+  "target_minutes_min": 15,
+  "target_minutes_max": 16,
+  "planning_wpm": 145,
+  "estimated_minutes_at_145_wpm": 15.34,
+  "recorded_duration": null,
+  "timings_status": "pending_recording_and_alignment",
+  "paragraph_count": 35,
+  "sections": [
+    {
+      "id": 0,
+      "heading": "HOOK",
+      "paragraph_start": 1,
+      "paragraph_end": 2,
+      "words": 88
+    },
+    {
+      "id": 1,
+      "heading": "The bargain and the commander",
+      "paragraph_start": 3,
+      "paragraph_end": 4,
+      "words": 102
+    },
+    {
+      "id": 2,
+      "heading": "Serving Ares and losing the family",
+      "paragraph_start": 5,
+      "paragraph_end": 7,
+      "words": 199
+    },
+    {
+      "id": 3,
+      "heading": "Olympus and the vacant throne",
+      "paragraph_start": 8,
+      "paragraph_end": 11,
+      "words": 246
+    },
+    {
+      "id": 4,
+      "heading": "Ruling through conquest",
+      "paragraph_start": 12,
+      "paragraph_end": 12,
+      "words": 56
+    },
+    {
+      "id": 5,
+      "heading": "Zeus and the broken family",
+      "paragraph_start": 13,
+      "paragraph_end": 14,
+      "words": 130
+    },
+    {
+      "id": 6,
+      "heading": "The end of Greece",
+      "paragraph_start": 15,
+      "paragraph_end": 16,
+      "words": 109
+    },
+    {
+      "id": 7,
+      "heading": "Another family",
+      "paragraph_start": 17,
+      "paragraph_end": 19,
+      "words": 224
+    },
+    {
+      "id": 8,
+      "heading": "The journey with Atreus",
+      "paragraph_start": 20,
+      "paragraph_end": 22,
+      "words": 197
+    },
+    {
+      "id": 9,
+      "heading": "Recovering the blades",
+      "paragraph_start": 23,
+      "paragraph_end": 25,
+      "words": 205
+    },
+    {
+      "id": 10,
+      "heading": "Teaching a young god",
+      "paragraph_start": 26,
+      "paragraph_end": 26,
+      "words": 72
+    },
+    {
+      "id": 11,
+      "heading": "Baldur and the ashes",
+      "paragraph_start": 27,
+      "paragraph_end": 29,
+      "words": 181
+    },
+    {
+      "id": 12,
+      "heading": "Winter and the approaching war",
+      "paragraph_start": 30,
+      "paragraph_end": 31,
+      "words": 140
+    },
+    {
+      "id": 13,
+      "heading": "Valhalla and the throne",
+      "paragraph_start": 32,
+      "paragraph_end": 35,
+      "words": 276
+    }
+  ],
+  "voice_generated": false,
+  "shots_authored": false,
+  "images_generated": false,
+  "user_script_approval": false
+}
