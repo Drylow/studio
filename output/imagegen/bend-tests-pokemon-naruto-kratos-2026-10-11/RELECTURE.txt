@@ -1,0 +1,73 @@
+TESTS VISUELS DE FRANCHISES - 11 OCTOBRE 2026
+
+DEMANDE
+Une image Pokemon, une image Naruto et une image Kratos, pour explorer notre
+style de videos inspire de Quota Ladder. Piste Kratos : Your Life as the God of War.
+Execution avec le fournisseur Google Flow via useapi demande par l'utilisateur.
+Prompts ecrits directement par Codex, sans appel a un modele de redaction.
+Transport d'images identique a celui integre a TubeForge. Aucune modification
+des styles, chaines, projets, reglages ou frontend pour produire ces essais.
+
+REFERENCES EFFECTIVEMENT ENVOYEES POUR LES TROIS GENERATIONS INITIALES
+1. references/01-style-valide.jpg : image validee par l'utilisateur, ancre
+   principale de dessin, proportions, expressions, mains, contours et couleurs.
+2. references/02-personnage-utilisateur.png : dessin du soldat fourni par
+   l'utilisateur, reference secondaire du traitement des personnages blancs.
+Les empreintes et l'ordre figurent dans registre.json.
+Les decors de ces essais sont nouveaux. Aucune conservation d'un decor maitre
+entre ces trois univers independants n'est revendiquee. Pour un episode complet,
+preparer et verifier les maitres de lieux et les references individuelles.
+
+CONTROLE TECHNIQUE
+Trois appels initiaux, count 1 chacun, format demande 16:9, deux references chacun.
+Un compte connecte different a ete utilise pour chacun des trois appels initiaux.
+Images JPEG 1376 x 768 verifiees et conservees sans conversion ni retouche locale.
+Temps par image incluant l'upload et le telechargement : Pokemon 42,22 secondes,
+Naruto 42,17 secondes et Kratos 44,18 secondes. Execution initiale en parallele.
+Une correction ciblee Naruto : count 1, 41,36 secondes. Quatre generations au total,
+trois images finales a regarder. Aucun upscale, film, voix ou publication.
+Les comptes et identifiants de jobs restent dans les recus prives du dossier work.
+Les cles et identifiants du modele restent dans la configuration privee .env.
+La consommation de credits Google et de captcha n'a pas ete mesuree.
+
+RELECTURE PAR CODEX
+Chaque image a ete regardee, avec les deux references inspectees auparavant.
+
+01-pokemon.jpg
+Deux humains adultes a tete ronde blanche, sans nez, oreilles ou cheveux visibles.
+Le dresseur agenouille porte la casquette, le sac est ouvert, la baie bleue est
+presentee et l'autre main soutient Pikachu. Le contact, l'inquietude et le compagnon
+fatigue sont lisibles. Mains blanches compactes, deux bras chacun, tenues couvertes.
+Pikachu conserve sa forme de creature jaune, oreilles noires, joues rouges et
+queue caracteristique ; il n'est pas transforme en bonhomme blanc. Cabane, banc,
+robinet et chemin forestier lisibles. Aucun texte ou logo marketing visible.
+
+02-naruto-corrige.jpg
+Trois humains adultes a tete ronde blanche. Les deux ninjas orange/noir partagent
+la tenue et les proportions, avec des poses distinctes. Le clone saisit l'avant-
+bras du ninja en desequilibre ; les mains appartiennent aux bras correspondants.
+La touche du pied dans l'eau, l'eclaboussure et le regard du formateur expriment
+l'action. Poteaux, ruisseau, cabane et arbres lisibles. La premiere version avait
+ajoute des emblemes graves et des ecussons malgre les consignes de bandeaux neutres.
+Ils sont retires dans la version corrigee. La scene et les gestes sont conserves
+visuellement ; pas d'identite pixel par pixel revendiquee. La correction ajoute
+un bandeau neutre au formateur, deja demande dans le prompt initial mais absent
+du premier rendu. Ancienne image archivee, non selectionnee pour la livraison.
+
+03-kratos.jpg
+Kratos et le voyageur ont tous deux une tete ronde blanche, sans visage humain.
+Tatouage rouge simplifie sur la tete, hache au dos, armure en cuir et ceinture
+rouge rendent Kratos reconnaissable dans notre dessin. Le tatouage est une marque
+graphique volontaire, pas une couleur de peau. Corps couvert et mains blanches.
+Le guerrier porte la dalle et le voyageur passe avec sa caisse : action et rapport
+de force lisibles. Porte, montagne, pins, neige et lumiere chaude du passage
+s'accordent au cadre nordique. La bande rouge apparait du cote droit de l'image
+alors que le prompt indiquait la gauche : reserve de conformite conservee, sans
+effet sur le style teste. Details graphiques sur la hache, pas de texte lisible
+identifie. Aucune affirmation de reproduction canonique exacte du costume ou lieu.
+
+ETAT
+Images techniquement et visuellement relues par Codex, en attente du choix et
+des retours de l'utilisateur. Aucun episode complet, coherence de sequence,
+timing cale sur une voix ou validation finale de franchise n'est revendique.
+Les phrases de narration sont des beats fictifs de controle, sans voix ni timings.
