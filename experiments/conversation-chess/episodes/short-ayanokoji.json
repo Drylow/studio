@@ -1,0 +1,133 @@
+{
+  "schema": "conversation-chess-short-v1",
+  "title": "Ayanokoji Outsmarts Ryuen Analysed like Chess | Classroom of the Elite",
+  "description": "Ryuen brought four fighters. Ayanokoji chose the battlefield. #ClassroomOfTheElite #ChessAnalysis",
+  "series": "Classroom of the Elite",
+  "hook": [
+    "FOUR AGAINST ONE.",
+    "WRONG OPPONENT."
+  ],
+  "sides": {
+    "white": "Ayanokoji",
+    "black": "Ryuen"
+  },
+  "opening": {
+    "speaker": "white",
+    "label": "Ayanokoji",
+    "reviewed": true,
+    "evidence": "Ayanokoji declares himself the mastermind in the first complete source line0.00-2.94."
+  },
+  "source_sha256": "bc08d61b58497d29fb2a087382d62a15082a645ce3938529a02de8a87039978d",
+  "source_url": "https://www.youtube.com/watch?v=ZMamsKeRgew",
+  "source_reviewed": true,
+  "source_quality": {
+    "accepted_for_final": true,
+    "note": "1920x1080 English-dub public clip. Original contains a small red creator mark in the extreme bottom-right. This is not a raw studio master. Shot-specific portrait framing excludes outer edges; no mark is painted out. Wide action shots use the explicitly recorded central1728x972 source rectangle at96,0. No source subtitles observed."
+  },
+  "recap": [
+    "Ryuen trusts his numbers.",
+    "Ayanokoji controls the encounter."
+  ],
+  "segments": [
+    {
+      "kind": "source",
+      "in": 0,
+      "out": 3.2,
+      "center_x": 665,
+      "context": "The mastermind finally steps forward.",
+      "boundary_review": "Full opening line ends2.94; next speaker3.52. Portrait retains Ayanokoji's whole face."
+    },
+    {
+      "kind": "source",
+      "in": 17.8666666667,
+      "out": 22.3333333333,
+      "center_x": 960,
+      "context": "Ryuen thinks he holds all the pieces.",
+      "boundary_review": "Complete threat18.00-22.12. Stops before question22.58."
+    },
+    {
+      "kind": "source",
+      "in": 44.2,
+      "out": 46.1666666667,
+      "center_x": 950,
+      "context": "Four fighters. One unmoved opponent.",
+      "boundary_review": "Complete reply44.42-49.48. No preceding negotiation fragment retained."
+    },
+    {
+      "kind": "source",
+      "in": 46.1666666667,
+      "out": 49.6666666667,
+      "center_x": 555,
+      "context": "Four fighters. One unmoved opponent.",
+      "boundary_review": "Contiguous source reframe after line ends46.06 and before next line46.34. Keeps both eyes in the close-up. Reply ends49.48."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "blunder",
+        "speaker": "black",
+        "score": 2,
+        "reviewed": true,
+        "comment": "Ryuen counts fighters, but misjudges his opponent."
+      },
+      "frame_source": {
+        "at": 19,
+        "center_x": 1000,
+        "reviewed": true,
+        "reason": "Native frame reviewed: Ryuen threatens the other players. Keeps both eyes rather than freezing Ayanokoji after his response."
+      }
+    },
+    {
+      "kind": "source",
+      "in": 51.9,
+      "out": 58.8,
+      "mode": "wide",
+      "context": "His numerical advantage starts to disappear.",
+      "boundary_review": "Short continuous action excerpt. Central wide frame preserves both fighters. No spoken dialogue cut."
+    },
+    {
+      "kind": "source",
+      "in": 78.5,
+      "out": 90.7333333333,
+      "center_x": 1210,
+      "context": "This was the confrontation Ayanokoji wanted.",
+      "boundary_review": "All three connected sentences78.72-90.58 retained; no cut between the closely joined sentences86.14."
+    },
+    {
+      "kind": "source",
+      "in": 90.7333333333,
+      "out": 95.9333333333,
+      "mode": "wide",
+      "context": "Ryuen realizes who set the terms.",
+      "boundary_review": "Contiguous with previous segment. Complete Ryuen response90.94-95.74; next spoken line98.02."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "brilliant",
+        "speaker": "white",
+        "score": 4,
+        "reviewed": true,
+        "comment": "He lets Ryuen choose the fight he already wants."
+      },
+      "frame_source": {
+        "at": 86,
+        "center_x": 1210,
+        "reviewed": true,
+        "reason": "Native frame reviewed: Ayanokoji explains the confrontation he chose. Keeps both eyes and avoids unrelated spectator reaction at the original endpoint."
+      }
+    },
+    {
+      "kind": "outro",
+      "seconds": 1.2,
+      "frame_source": {
+        "at": 86,
+        "center_x": 1210,
+        "reviewed": true,
+        "reason": "Uses the same reviewed Ayanokoji frame as the final assessment."
+      }
+    }
+  ]
+}
