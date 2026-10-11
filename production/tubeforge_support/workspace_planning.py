@@ -1,4 +1,5 @@
 """Prepare fictional-channel shots using the configured text proxy and real word clock."""
+import asyncio
 import copy
 import json
 import math
@@ -90,27 +91,46 @@ async def prepare(p):
             "aftermath, avoid showing violence against children. No image generation, only prompts."
         )
         try:
-            for offset in range(0, len(shots), 12):
-                batch = shots[offset:offset + 12]
-                progress(offset, len(shots), f"Préparation des plans {offset + 1} à {offset + len(batch)}")
+            limit = max(1, min(8, int(config.get("WORKSPACE_PLAN_CONCURRENCY") or 4)))
+        except (TypeError, ValueError):
+            limit = 4
+        semaphore = asyncio.Semaphore(limit)
+        completed = 0
+
+        async def batch_worker(offset):
+            nonlocal completed
+            batch = shots[offset:offset + 12]
+            async with semaphore:
                 raw = await llm.chat([
                     {"role": "system", "content": rules + "\nApproved style: " + style.get("visuals", {}).get("art_style", "")},
-                    {"role": "user", "content": json.dumps({"full_story": p["script"], "previous_shots": result[-2:],
+                    {"role": "user", "content": json.dumps({"full_story": p["script"],
+                        "context_before": [s["text"] for s in shots[max(0, offset - 2):offset]],
+                        "context_after": [s["text"] for s in shots[offset + len(batch):offset + len(batch) + 2]],
                         "requested_shots": [{"id": s["id"], "narration": s["text"]} for s in batch]}, ensure_ascii=False)}
-                ], model=model, effort="low", attempts=1, label="Préparation des plans")
-                rows = parse_json(raw).get("shots")
-                if not isinstance(rows, list) or [r.get("id") for r in rows if isinstance(r, dict)] != [s["id"] for s in batch]:
-                    raise ValueError("Invalid storyboard response")
-                for shot, row in zip(batch, rows):
-                    if (not isinstance(row.get("prompt"), str) or len(row["prompt"].strip()) < 80
-                            or not isinstance(row.get("location_id"), str) or not row["location_id"].strip()
-                            or not isinstance(row.get("characters"), list)
-                            or any(not isinstance(c, str) or not c.strip() for c in row["characters"])):
-                        raise ValueError("Incomplete storyboard response")
-                    prompt = style.get("visuals", {}).get("art_style", "") + "\nScene: " + row["prompt"].strip()
-                    result.append(dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
-                        characters=row["characters"], references=copy.deepcopy(refs), prompt_author="configured_text_proxy",
-                        status="idle", human_review={"state": "unreviewed"}))
+                ], model=model, effort="low", attempts=1, hedge=False, label="Préparation des plans")
+            prepared = []
+            rows = parse_json(raw).get("shots")
+            if not isinstance(rows, list) or [r.get("id") for r in rows if isinstance(r, dict)] != [s["id"] for s in batch]:
+                raise ValueError("Invalid storyboard response")
+            for shot, row in zip(batch, rows):
+                if (not isinstance(row.get("prompt"), str) or len(row["prompt"].strip()) < 80
+                        or not isinstance(row.get("location_id"), str) or not row["location_id"].strip()
+                        or not isinstance(row.get("characters"), list)
+                        or any(not isinstance(c, str) or not c.strip() for c in row["characters"])):
+                    raise ValueError("Incomplete storyboard response")
+                prompt = style.get("visuals", {}).get("art_style", "") + "\nScene: " + row["prompt"].strip()
+                prepared.append(dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
+                    characters=row["characters"], references=copy.deepcopy(refs), prompt_author="configured_text_proxy",
+                    status="idle", human_review={"state": "unreviewed"}))
+            completed += len(prepared)
+            progress(completed, len(shots), f"{completed}/{len(shots)} plans prêts · {limit} lots en parallèle")
+            return prepared
+
+        progress(0, len(shots), f"Préparation · {limit} lots en parallèle")
+        tasks = [asyncio.create_task(batch_worker(offset)) for offset in range(0, len(shots), 12)]
+        try:
+            batches = await asyncio.gather(*tasks)
+            result = [shot for batch in batches for shot in batch]
             inputs(p)  # Recheck physical reference files before publishing the complete plan.
             if signature(p) != stamp or p.get("scenes"):
                 raise ValueError("Project changed")
@@ -120,7 +140,12 @@ async def prepare(p):
             p.update(scenes=result, scenes_script_hash=timing.script_hash(p["script"]), render=None)
             progress(len(result), len(result), "Plans prêts : testez les trois premières images")
             store.save_project(p)
-        except Exception:
+        except BaseException as error:
+            for task in tasks:
+                task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
+            if not isinstance(error, Exception):
+                raise
             raise RuntimeError("La préparation a échoué. Aucun plan existant ni média n’a été remplacé ; vous pouvez réessayer") from None
     await pipeline._step(p, "planning", run)
 

@@ -17,13 +17,15 @@ else:
 from app import channels, llm, pipeline, store
 from app.util import write_json
 
+ORIGINAL_CHAT = llm.chat
 
-def fictional(workspace):
+
+def fictional(workspace, script="You pick up the axe.\nYou walk to the door."):
     client = workspace[0]
-    p = store.get_project(create(client, custom_script="You pick up the axe.\nYou walk to the door.")["id"])
+    p = store.get_project(create(client, custom_script=script)["id"])
     p["profile_id"] = "fictional-test"
     write_json(channels.FILE, [{"id": "fictional-test", "name": "Fiction", "style_id": "pov-history", "workspace_managed": True}])
-    p["voiceover"] = {"file": "voice.mp3", "duration": 12}
+    p["voiceover"] = {"file": "voice.mp3", "duration": max(12, len(script.split()))}
     (store.project_dir(p["id"]) / "voice.mp3").write_bytes(b"fixture voice")
     words = []
     cursor = 0
@@ -60,6 +62,7 @@ def test_prepare_preserves_script_voice_clock_refs_and_never_generates_images(wo
     assert all(not s.get("image") for s in p["scenes"])
     assert mock.call_args.kwargs["model"] == model
     assert mock.call_args.kwargs["attempts"] == 1
+    assert mock.call_args.kwargs["hedge"] is False
     p["scenes"][0]["prompt"] += " Changed"
     assert not planning.authored(p, p["scenes"][0])
 
@@ -128,3 +131,105 @@ def test_prepared_prompt_is_accepted_by_generation_but_changed_one_is_rejected(w
     body["confirm_prompt"] = scene["prompt"]
     with pytest.raises(HTTPException):
         generation._prepare(p, scene, body)
+
+
+def test_parallel_batches_are_bounded_and_published_in_order(workspace, monkeypatch):
+    p = fictional(workspace, "You lift the axe. " * 100)
+    _, _, _, shots = planning.inputs(p)
+    peak = active = 0
+    finished = []
+
+    async def exercise():
+        gate = asyncio.Event()
+
+        async def chat(messages, **kwargs):
+            nonlocal peak, active
+            batch = json.loads(messages[1]["content"])["requested_shots"]
+            active += 1
+            peak = max(peak, active)
+            if active == 4:
+                gate.set()
+            try:
+                await gate.wait()
+                if batch[0]["id"] == 1:
+                    await asyncio.sleep(.01)
+                finished.append(batch[0]["id"])
+                return answer(batch)
+            finally:
+                active -= 1
+
+        monkeypatch.setattr(llm, "chat", chat)
+        await planning.prepare(p)
+
+    asyncio.run(exercise())
+    assert peak == 4 and active == 0 and finished[0] != 1
+    assert [s["id"] for s in p["scenes"]] == [s["id"] for s in shots]
+    assert all(planning.authored(p, s) for s in p["scenes"])
+
+
+def test_parallel_failure_cancels_siblings_without_partial_publication(workspace, monkeypatch):
+    p = fictional(workspace, "You lift the axe. " * 100)
+    active = 0
+
+    async def exercise():
+        gate = asyncio.Event()
+        forever = asyncio.Event()
+
+        async def chat(messages, **kwargs):
+            nonlocal active
+            batch = json.loads(messages[1]["content"])["requested_shots"]
+            active += 1
+            if active == 4:
+                gate.set()
+            try:
+                await gate.wait()
+                if batch[0]["id"] == 1:
+                    raise ValueError("Fixture failure")
+                await forever.wait()
+            finally:
+                active -= 1
+
+        monkeypatch.setattr(llm, "chat", chat)
+        with pytest.raises(RuntimeError):
+            await planning.prepare(p)
+        assert active == 0
+
+    asyncio.run(exercise())
+    assert not p["scenes"] and not p.get("planning_receipt")
+
+
+def test_no_hedge_request_closes_stream_when_cancelled(workspace, monkeypatch):
+    closed = []
+
+    class Stream:
+        status_code = 200
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, *args):
+            closed.append(True)
+
+        async def aiter_lines(self):
+            entered.set()
+            await asyncio.Event().wait()
+            yield "unused"
+
+    class Client:
+        def stream(self, *args, **kwargs):
+            return Stream()
+
+    async def exercise():
+        nonlocal entered
+        entered = asyncio.Event()
+        monkeypatch.setattr(llm, "client", lambda: Client())
+        monkeypatch.setattr(llm, "chat", ORIGINAL_CHAT)
+        task = asyncio.create_task(llm.chat([], model="fixture-text", attempts=1, hedge=False))
+        await entered.wait()
+        task.cancel()
+        with pytest.raises(asyncio.CancelledError):
+            await task
+
+    entered = None
+    asyncio.run(exercise())
+    assert closed == [True]
