@@ -295,3 +295,21 @@ Son rendu historique par défaut reste identique par SHA256. Quatre sorties
 badge ne couvre les yeux ni les accroches. Alternatives créatives non testées
 en performance de clics. Paquet local `A-TESTER-V3/THUMBNAILS-4-STYLES/` avec
 comparatifs et titre. Ancienne miniature et MP4 conservés ; pas de publication.
+
+
+## 11 octobre 2026 — Deux Shorts anime chess
+
+Livraison de deux montages anglais indépendants : le leurre télévisé de L dans
+Death Note (44,63 s) et Ayanokoji contre Ryuen dans Classroom of the Elite
+(48,27 s). Format 1080 × 1920, 30 fps, deux évaluations originales par Short,
+icônes Chess.com vérifiées, pions selon les camps, aucune voix off ni musique
+ajoutée. Répliques et cadrages contrôlés ; pauses corrigées sur les personnages
+qui font les moves. Export natif Kdenlive ; dialogue relevé sans réencoder
+la vidéo. Contrôle des 1339 / 1448 images finales, décodage complet et mesures
+audio archivés. Tests portrait / paysage validés.
+
+Livraison locale : `work/conversation-chess/shorts/A-UPLOADER-2026-10-11/`.
+Vidéos, titres, descriptions, reçus QA et projets éditables conservés en local.
+Code, découpages et reprise : `experiments/conversation-chess/SHORTS.md`.
+Le clip Classroom public n'est pas un master raw ; les cadrages excluent le
+petit logo à son bord. Aucune publication ni vérification YouTube effectuée.

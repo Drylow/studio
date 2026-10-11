@@ -1,0 +1,114 @@
+{
+  "schema": "conversation-chess-short-v1",
+  "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+  "description": "Light takes the bait. L stays hidden. #DeathNote #ChessAnalysis",
+  "series": "Death Note",
+  "hook": [
+    "LIGHT TAKES",
+    "THE BAIT."
+  ],
+  "sides": {
+    "white": "L",
+    "black": "Light"
+  },
+  "opening": {
+    "speaker": "white",
+    "label": "L",
+    "reviewed": true,
+    "evidence": "The televised decoy opens on behalf of L's trap. Camps identify strategists, not the actor on the screen."
+  },
+  "source_sha256": "b932310e5cc3344effe7dd709b69806efe06f8d6c1d1db8dd1d7ae22bbd111e9",
+  "source_reviewed": true,
+  "source_quality": {
+    "accepted_for_final": true,
+    "note": "Existing reviewed English-dub 1920x1080 source, remastered upstream. No burned subtitles or distributor marks observed. No studio-master claim."
+  },
+  "recap": [
+    "Light reacts to the bait.",
+    "L keeps his identity hidden."
+  ],
+  "segments": [
+    {
+      "kind": "source",
+      "in": 86.7666666667,
+      "out": 90.4,
+      "center_x": 952,
+      "context": "A public challenge to an invisible killer.",
+      "boundary_review": "Complete clause starts86.98 and ends89.78. Cut leaves0.62s after the final word. TV and decoy stay in the portrait window."
+    },
+    {
+      "kind": "source",
+      "in": 95.6,
+      "out": 97.4,
+      "center_x": 870,
+      "context": "Light answers with pride.",
+      "boundary_review": "Full reply95.90-97.04. Both boundaries outside words."
+    },
+    {
+      "kind": "source",
+      "in": 115.7,
+      "out": 118.4,
+      "center_x": 960,
+      "context": "He writes the name from the broadcast.",
+      "boundary_review": "Silent notebook action. Keeps the cause before the televised consequence."
+    },
+    {
+      "kind": "source",
+      "in": 143.4,
+      "out": 146.3333333333,
+      "center_x": 1270,
+      "context": "The man on television collapses.",
+      "boundary_review": "Keeps the full countdown and collapse. Source reviewed; no intervening spoken sentence is truncated."
+    },
+    {
+      "kind": "source",
+      "in": 146.3333333333,
+      "out": 155.3,
+      "center_x": 960,
+      "context": "The man on television collapses.",
+      "boundary_review": "Contiguous source reframe after count ends146.22, before next count147.40. Keeps the clock and then the television centered through the collapse."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "blunder",
+        "speaker": "black",
+        "score": 2,
+        "reviewed": true,
+        "comment": "Light kills on cue. L now has evidence of Kira's power."
+      }
+    },
+    {
+      "kind": "source",
+      "in": 183.3666666667,
+      "out": 196.4,
+      "center_x": 715,
+      "context": "Then the real L speaks.",
+      "boundary_review": "Full explanation183.72-196.20, without deleting any words. Portrait keeps television and Light, rather than foreground Ryuk."
+    },
+    {
+      "kind": "source",
+      "in": 196.4,
+      "out": 197.1666666667,
+      "center_x": 1030,
+      "context": "The victim was a decoy.",
+      "boundary_review": "Contiguous with previous source segment. Entire reaction196.56-196.90 before next sentence197.53."
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "brilliant",
+        "speaker": "white",
+        "score": 4,
+        "reviewed": true,
+        "comment": "A decoy takes the risk. The real L stays out of reach."
+      }
+    },
+    {
+      "kind": "outro",
+      "seconds": 1.2
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-11",
+  "videos": [
+    {
+      "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+      "filename": "Death-Note-Chess-Short.mp4",
+      "sha256": "d27580f1b6973dccc56a339ba00b774852abb39767d895f3f43e171896d0690c",
+      "bytes": 12315466,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 1339,
+      "duration_seconds": 44.63333333333333,
+      "full_decode_passed": true,
+      "all_frames_visually_reviewed": true,
+      "all_frame_review_pages": 10,
+      "native_size_analysis_frames_reviewed": true,
+      "white_black_pawns_follow_speaker": true,
+      "dialogue_boundaries_reviewed": true,
+      "true_peak_dbfs": -2.3,
+      "integrated_loudness_lufs": -18.3,
+      "native_export": "Kdenlive vertical_hd_30",
+      "youtube_copyright_check_performed": false
+    },
+    {
+      "title": "Ayanokoji Outsmarts Ryuen Analysed like Chess | Classroom of the Elite",
+      "filename": "Ayanokoji-Chess-Short.mp4",
+      "sha256": "6495f0abb4b5e0f05298bc93b645d61f2389fca7246cdc8173bfef084edb3c3c",
+      "bytes": 8178816,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "frames": 1448,
+      "duration_seconds": 48.266666666666666,
+      "full_decode_passed": true,
+      "all_frames_visually_reviewed": true,
+      "all_frame_review_pages": 11,
+      "native_size_analysis_frames_reviewed": true,
+      "white_black_pawns_follow_speaker": true,
+      "dialogue_boundaries_reviewed": true,
+      "true_peak_dbfs": -2.5,
+      "integrated_loudness_lufs": -18.4,
+      "native_export": "Kdenlive vertical_hd_30",
+      "youtube_copyright_check_performed": false
+    }
+  ]
+}

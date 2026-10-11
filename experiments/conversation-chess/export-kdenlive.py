@@ -70,8 +70,9 @@ def generate(manifest_path, bundle):
     if data.get("schema") != "conversation-chess-kdenlive-interchange-v1":
         raise ValueError("Expected the separate-media conversation-chess manifest")
     fps = int(data["fps"])
-    if fps != 30 or int(data["width"]) != 1920 or int(data["height"]) != 1080:
-        raise ValueError("This project requires the reviewed 1920x1080, 30fps preparation")
+    width, height = int(data["width"]), int(data["height"])
+    if fps != 30 or (width, height) not in ((1920, 1080), (1080, 1920)):
+        raise ValueError("Use a reviewed 1920x1080 or 1080x1920 preparation at 30fps")
     total = int(data["duration_frames"])
     segments = data["segments"]
     cursor = 0
@@ -131,10 +132,11 @@ def generate(manifest_path, bundle):
         "LC_NUMERIC": "C", "producer": "main_bin", "root": str(bundle), "version": "7.30.0",
     })
     ET.SubElement(root, "profile", {
-        "colorspace": "709", "description": "HD 1080p 30 fps", "display_aspect_den": "9",
-        "display_aspect_num": "16", "frame_rate_den": "1", "frame_rate_num": str(fps),
-        "height": "1080", "progressive": "1", "sample_aspect_den": "1",
-        "sample_aspect_num": "1", "width": "1920",
+        "colorspace": "709", "description": "HD 1080p 30 fps" if width > height else "Vertical 1080 30 fps",
+        "display_aspect_den": "9" if width > height else "16",
+        "display_aspect_num": "16" if width > height else "9", "frame_rate_den": "1", "frame_rate_num": str(fps),
+        "height": str(height), "progressive": "1", "sample_aspect_den": "1",
+        "sample_aspect_num": "1", "width": str(width),
     })
     black = ET.SubElement(root, "producer", id="black", **{"in": "0", "out": str(total - 1)})
     props(black, {
@@ -305,7 +307,7 @@ def generate(manifest_path, bundle):
         "kdenlive:folder.-1.3": "Prepared media", "kdenlive:docproperties.audioChannels": 2,
         "kdenlive:docproperties.documentid": int(time.time() * 1000),
         "kdenlive:docproperties.kdenliveversion": "24.12.3", "kdenlive:docproperties.version": "1.1",
-        "kdenlive:docproperties.profile": "atsc_1080p_30", "kdenlive:docproperties.uuid": sequence_uuid,
+        "kdenlive:docproperties.profile": "atsc_1080p_30" if width > height else "vertical_hd_30", "kdenlive:docproperties.uuid": sequence_uuid,
         "kdenlive:docproperties.opensequences": sequence_uuid,
         "kdenlive:docproperties.activetimeline": sequence_uuid,
         "kdenlive:docproperties.sessionid": "{" + str(uuid.uuid4()) + "}",
@@ -327,6 +329,7 @@ def generate(manifest_path, bundle):
     temporary.replace(project)
     report = {
         "project": str(project), "fps": fps, "duration_frames": total, "duration_seconds": total / fps,
+        "output_dimensions": [width, height],
         "tracks": [name for _, name, _ in track_specs], "source_sha256": source_hash,
         "track_indices": track_index,
         "track_clips": {
@@ -460,7 +463,7 @@ def render(project, destination, report, display=None, xauthority=None):
         raise RuntimeError("Kdenlive ignored the requested quality preset; inspect native-render-job.mlt")
     final_probe = probe(destination)
     video = next(s for s in final_probe["streams"] if s["codec_type"] == "video")
-    if int(video["width"]) != 1920 or int(video["height"]) != 1080:
+    if [int(video["width"]), int(video["height"])] != report.get("output_dimensions", [1920, 1080]):
         raise RuntimeError("Kdenlive export profile changed unexpectedly")
     if int(video.get("nb_frames", 0)) != report["duration_frames"]:
         raise RuntimeError("Kdenlive output frame count differs from the reviewed timeline")
