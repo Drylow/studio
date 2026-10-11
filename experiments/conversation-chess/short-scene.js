@@ -37,21 +37,24 @@ window.ChessShort = (() => {
   }
   function frame(o) {
     ctx.clearRect(0,0,1080,1920);
-    text(o.series.toUpperCase(),68,105,29,'#a49e94');
-    o.hook.forEach((s,i)=>text(s,68,201+i*83,76));
-    ctx.fillStyle='#37332f';ctx.fillRect(68,311,862,2);
-    pawn(87,333,33,true);text(o.sides.white,115,361,27);
-    text('VS',442,361,22,'#77716a');
-    pawn(502,333,33,false);text(o.sides.black,529,361,27);
-    // The scene occupies x68,y392,940x1040. Leave the right platform rail clear.
+    const large=o.layout==='portrait-large-v1';
+    text(o.series.toUpperCase(),68,large?76:105,large?25:29,'#a49e94');
+    o.hook.forEach((s,i)=>text(s,68,(large?142:201)+i*(large?62:83),large?56:76));
+    ctx.fillStyle='#37332f';ctx.fillRect(68,large?229:311,862,2);
+    const sideY=large?246:333;
+    pawn(87,sideY,33,true);text(o.sides.white,115,sideY+28,27);
+    text('VS',442,sideY+28,22,'#77716a');
+    pawn(502,sideY,33,false);text(o.sides.black,529,sideY+28,27);
+    // The large layout gives the vertical scene most of the canvas height.
     const old=o.previous_score??o.score;
     const progress=o.kind==='analysis'?clamp((o.time-.25)/.5):1;
     const score=old+(o.score-old)*progress;
     const white=clamp(.5+Math.tanh(score/4)*.42);
-    ctx.fillStyle='#403c38';ctx.fillRect(22,540,26,728);
-    ctx.fillStyle='#fff';ctx.fillRect(22,540+728*(1-white),26,728*white);
-    ctx.strokeStyle='#8d867d';ctx.lineWidth=1;ctx.strokeRect(22,540,26,728);
-    text(score>0?'+'+score.toFixed(1):score.toFixed(1),17,1315,22,'#b6aea3');
+    const barY=large?420:540,barHeight=large?928:728;
+    ctx.fillStyle='#403c38';ctx.fillRect(22,barY,26,barHeight);
+    ctx.fillStyle='#fff';ctx.fillRect(22,barY+barHeight*(1-white),26,barHeight*white);
+    ctx.strokeStyle='#8d867d';ctx.lineWidth=1;ctx.strokeRect(22,barY,26,barHeight);
+    text(score>0?'+'+score.toFixed(1):score.toFixed(1),17,large?1395:1315,22,'#b6aea3');
     if(o.kind==='analysis') {
       const a=o.analysis,category=schema.categories.find(c=>c.id===a.rating);
       const entry=1-Math.pow(1-clamp(o.time/.35),3);

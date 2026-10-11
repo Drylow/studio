@@ -17,6 +17,38 @@ const schema=JSON.parse(await fs.readFile(path.join(here,'ratings.json'),'utf8')
 const ffmpeg=mediaBinary('ffmpeg'),ffprobe=mediaBinary('ffprobe');
 const meta=JSON.parse(run(ffprobe,['-v','error','-show_streams','-show_format','-of','json',source],true));
 const video=meta.streams.find(s=>s.codec_type==='video');
+const largePortrait=spec.layout==='portrait-large-v1';
+const sceneBox=largePortrait?{x:88,y:304,width:864,height:1152}:{x:68,y:392,width:940,height:1040};
+function cropGeometry(origin){
+ const height=origin.crop_height??video.height;
+ const width=Math.floor(height*sceneBox.width/sceneBox.height/2)*2;
+ return {height,width};
+}
+function validateCrop(origin){
+ const {height,width}=cropGeometry(origin);
+ if(!Number.isFinite(height)||height<2||height>video.height||height%2)throw new Error('Invalid reviewed crop height');
+ const points=origin.crop_regions??[{at:origin.in??origin.at,center_x:origin.center_x}];
+ if(!Array.isArray(points)||!points.length)throw new Error('Missing reviewed crop regions');
+ for(const [i,p] of points.entries()){
+  if(!Number.isFinite(p.center_x)||p.center_x<width/2||p.center_x>video.width-width/2||!Number.isFinite(p.at)||(i&&p.at<=points[i-1].at))throw new Error('Portrait crop exceeds frame or is unordered');
+ }
+ if(origin.crop_regions&&(points[0].at!==origin.in||points.some(p=>p.at<origin.in||p.at>=origin.out)))throw new Error('Crop regions must lie within their source passage');
+}
+function cropCenter(origin,at){
+ return (origin.crop_regions?.filter(p=>p.at<=at).at(-1)??origin).center_x;
+}
+function sourceFilter(origin,freezeAt){
+ if(origin.mode==='wide')return 'crop=1728:972:96:0,scale=940:528:flags=lanczos,pad=1080:1920:68:648:color=black';
+ const {height,width}=cropGeometry(origin);
+ let x=String(Math.round(cropCenter(origin,freezeAt??origin.in)-width/2));
+ if(freezeAt===undefined&&origin.crop_regions){
+  x=String(Math.round(origin.crop_regions.at(-1).center_x-width/2));
+  for(let i=origin.crop_regions.length-2;i>=0;i--){
+   x=`if(lt(t,${(origin.crop_regions[i+1].at-origin.in).toFixed(9)}),${Math.round(origin.crop_regions[i].center_x-width/2)},${x})`;
+  }
+ }
+ return `setpts=PTS-STARTPTS,crop=${width}:${height}:'${x}':0,scale=${sceneBox.width}:${sceneBox.height}:flags=lanczos,pad=1080:1920:${sceneBox.x}:${sceneBox.y}:color=black`;
+}
 const sha=createHash('sha256').update(await fs.readFile(source)).digest('hex');
 if(spec.schema!=='conversation-chess-short-v1'||spec.source_sha256!==sha||spec.source_reviewed!==true)throw new Error('Supply the exact visually reviewed source and short timeline');
 if(video.height<1080||spec.source_quality?.accepted_for_final!==true||!meta.streams.some(s=>s.codec_type==='audio'))throw new Error('Shorts need a reviewed HD source with original audio');
@@ -27,12 +59,15 @@ for(const s of spec.segments){
   if(!['source','analysis','outro'].includes(s.kind))throw new Error('Unknown short segment');
   if(s.kind==='source'){
     if(!Number.isFinite(s.in)||!Number.isFinite(s.out)||s.in<0||s.out<=s.in||s.out>Number(meta.format.duration)||!s.boundary_review)throw new Error('Review source cuts and dialogue boundaries');
-    if(s.mode!=='wide'&&(!Number.isFinite(s.center_x)||s.center_x<489||s.center_x>video.width-489))throw new Error('Portrait crop exceeds source frame');
+    if(s.mode!=='wide')validateCrop(s);
     if(s.transition_seconds!==undefined&&(!lastSource||!Number.isInteger(s.transition_seconds*30)||s.transition_seconds<=0||s.transition_seconds>.4))throw new Error('Review a short frame-aligned transition after an earlier source');
     lastSource=s;
   }else{
     if(!lastSource||!Number.isInteger(s.seconds*30)||s.seconds<=0)throw new Error('Review frame-aligned hold after source footage');
-    if(s.frame_source && (s.frame_source.reviewed!==true||!Number.isFinite(s.frame_source.at)||s.frame_source.at<0||s.frame_source.at>=Number(meta.format.duration)||!Number.isFinite(s.frame_source.center_x)||s.frame_source.center_x<489||s.frame_source.center_x>video.width-489))throw new Error('Review the explicit analysis/outro source frame and crop');
+    if(s.frame_source){
+     if(s.frame_source.reviewed!==true||!Number.isFinite(s.frame_source.at)||s.frame_source.at<0||s.frame_source.at>=Number(meta.format.duration))throw new Error('Review the explicit analysis/outro source frame');
+     if(s.frame_source.mode!=='wide')validateCrop(s.frame_source);
+    }
     if(s.kind==='analysis'){
       const a=s.analysis,r=schema.categories.find(r=>r.id===a.rating);
       if(!r||!['white','black'].includes(a.speaker)||!a.reviewed||a.comment.length>130||s.seconds<schema.bubble_delay_seconds+a.comment.length/schema.typewriter_cps+schema.minimum_reading_seconds)throw new Error('Analysis needs enough reading time and reviewed rating');
@@ -58,10 +93,8 @@ try{
   const frames=Math.round(seconds*30),stem=path.join(out,String(i+1).padStart(2,'0'));
   const background=stem+'-background.mp4',graphics=stem+(s.kind==='source'?'-graphics.png':'-graphics.mov');
   const origin=s.kind==='source'?s:s.frame_source?{...s.frame_source,out:s.frame_source.at+1/30}:previous;
-  const cropWidth=Math.floor(video.height*940/1040/2)*2;
-  // A reviewed central wide rectangle retains both actors in the action shots.
-  const filter=origin.mode==='wide'?`crop=1728:972:96:0,scale=940:528:flags=lanczos,pad=1080:1920:68:648:color=black`:
-   `crop=${cropWidth}:${video.height}:${Math.round(origin.center_x-cropWidth/2)}:0,scale=940:1040:flags=lanczos,pad=1080:1920:68:392:color=black`;
+  const freezeAt=origin.out-1/30;
+  const filter=sourceFilter(origin,s.kind==='source'?undefined:freezeAt);
   const fade=s.kind==='outro'?`,fade=t=out:st=${seconds-.4}:d=0.4`:'';
   if(s.kind==='source'){
    let videoArgs=['-vf',filter+',setsar=1'];
@@ -80,7 +113,7 @@ try{
    run(ffmpeg,['-v','error','-y','-loop','1','-framerate','30','-i',still,'-vf','null'+fade,'-frames:v',String(frames),'-an','-c:v','libx264','-pix_fmt','yuv420p','-crf','17','-preset','fast',background]);
   }
   const before=currentScore;if(s.kind==='analysis')currentScore=s.analysis.score;
-  const o={...s,series:spec.series,hook:spec.hook,sides:spec.sides,recap:spec.recap,score:currentScore,previous_score:before,seconds};
+  const o={...s,layout:spec.layout,series:spec.series,hook:spec.hook,sides:spec.sides,recap:spec.recap,score:currentScore,previous_score:before,seconds};
   const imageCount=s.kind==='source'?1:frames;
   const dir=stem+'-frames';if(imageCount>1)await fs.mkdir(dir,{recursive:true});
   for(let f=0;f<imageCount;f++){
@@ -101,7 +134,7 @@ try{
   if(s.transition_seconds)row.transition_seconds=s.transition_seconds;
   rows.push(row);cursor+=frames;previousBackground=background;previousFrames=frames;console.log(`${i+1}/${spec.segments.length} ${s.kind} ${frames} frames`);
  }
- const manifest={schema:'conversation-chess-kdenlive-interchange-v1',title:spec.title,fps:30,width:1080,height:1920,background_color:'#000000',duration_frames:cursor,original_source:source,source_sha256:sha,source_quality:{...spec.source_quality,minimum_height:1080,visually_reviewed:true},rating_schema_version:4,voiceover:false,demo:false,side_colors:spec.sides,opening:spec.opening,outro_layout_reviewed:true,segments:rows,published:false};
+ const manifest={schema:'conversation-chess-kdenlive-interchange-v1',title:spec.title,fps:30,width:1080,height:1920,layout:spec.layout,scene_box:sceneBox,background_color:'#000000',duration_frames:cursor,original_source:source,source_sha256:sha,source_quality:{...spec.source_quality,minimum_height:1080,visually_reviewed:true},rating_schema_version:4,voiceover:false,demo:false,side_colors:spec.sides,opening:spec.opening,outro_layout_reviewed:true,segments:rows,published:false};
  await fs.writeFile(path.join(out,'project-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
  await fs.copyFile(timeline,path.join(out,'authored-timeline.json'));
  console.log(`Prepared ${(cursor/30).toFixed(2)}s portrait project`);

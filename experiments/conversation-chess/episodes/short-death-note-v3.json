@@ -1,0 +1,243 @@
+{
+  "schema": "conversation-chess-short-v1",
+  "title": "L's Trap Analysed like Chess | Death Note #Shorts",
+  "description": "Light takes the bait. L stays hidden. #DeathNote #ChessAnalysis",
+  "series": "Death Note",
+  "hook": [
+    "LIGHT TAKES",
+    "THE BAIT."
+  ],
+  "sides": {
+    "white": "L",
+    "black": "Light"
+  },
+  "opening": {
+    "speaker": "white",
+    "label": "L",
+    "reviewed": true,
+    "evidence": "The televised decoy opens on behalf of L's trap. Camps identify strategists, not the actor on the screen."
+  },
+  "source_sha256": "b932310e5cc3344effe7dd709b69806efe06f8d6c1d1db8dd1d7ae22bbd111e9",
+  "source_reviewed": true,
+  "source_quality": {
+    "accepted_for_final": true,
+    "note": "Existing reviewed English-dub 1920x1080 source, remastered upstream. No burned subtitles or distributor marks observed. No studio-master claim."
+  },
+  "recap": [
+    "Light reacts to the bait.",
+    "L keeps his identity hidden."
+  ],
+  "segments": [
+    {
+      "kind": "source",
+      "in": 86.7666666667,
+      "out": 118.4,
+      "mode": "portrait",
+      "context": "Light takes the bait and writes the name.",
+      "boundary_review": "Complete provocation 86.98-89.78 and all connected Light replies 91.60-115.24. Includes the notebook action through118.40. No internal time deletions.",
+      "crop_height": 1080,
+      "crop_regions": [
+        {
+          "at": 86.7666666667,
+          "center_x": 960
+        },
+        {
+          "at": 88.9222,
+          "center_x": 960
+        },
+        {
+          "at": 89.7563,
+          "center_x": 1000
+        },
+        {
+          "at": 90.6739,
+          "center_x": 600
+        },
+        {
+          "at": 94.3442,
+          "center_x": 960
+        },
+        {
+          "at": 95.5955,
+          "center_x": 870
+        },
+        {
+          "at": 97.5558,
+          "center_x": 620
+        },
+        {
+          "at": 99.9332,
+          "center_x": 700
+        },
+        {
+          "at": 101.7683,
+          "center_x": 1050
+        },
+        {
+          "at": 103.2281,
+          "center_x": 1170
+        },
+        {
+          "at": 105.2301,
+          "center_x": 1170
+        },
+        {
+          "at": 107.0236,
+          "center_x": 1300
+        },
+        {
+          "at": 107.5658,
+          "center_x": 1300
+        },
+        {
+          "at": 108.108,
+          "center_x": 1100
+        },
+        {
+          "at": 108.7753,
+          "center_x": 950
+        },
+        {
+          "at": 111.2778,
+          "center_x": 1100
+        },
+        {
+          "at": 115.6989,
+          "center_x": 830
+        },
+        {
+          "at": 116.4914,
+          "center_x": 830
+        },
+        {
+          "at": 118.0346,
+          "center_x": 1100
+        }
+      ],
+      "center_x": 960
+    },
+    {
+      "kind": "source",
+      "in": 143.4,
+      "out": 155.3,
+      "mode": "portrait",
+      "transition_seconds": 0.2,
+      "context": "The countdown ends. The man on television dies.",
+      "boundary_review": "Full countdown and collapse retained. One six-frame dissolve marks the wait after the notebook, rather than several abrupt skips.",
+      "crop_height": 1080,
+      "crop_regions": [
+        {
+          "at": 143.4,
+          "center_x": 1100
+        },
+        {
+          "at": 144.5611,
+          "center_x": 1170
+        },
+        {
+          "at": 145.6038,
+          "center_x": 960
+        },
+        {
+          "at": 146.6048,
+          "center_x": 960
+        },
+        {
+          "at": 147.8143,
+          "center_x": 960
+        },
+        {
+          "at": 152.8193,
+          "center_x": 1000
+        },
+        {
+          "at": 155.1967,
+          "center_x": 900
+        }
+      ],
+      "center_x": 1100
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "blunder",
+        "speaker": "black",
+        "score": 2,
+        "reviewed": true,
+        "comment": "Light kills on cue. L now has evidence of Kira's power."
+      }
+    },
+    {
+      "kind": "source",
+      "in": 155.3,
+      "out": 197.1666666667,
+      "mode": "portrait",
+      "context": "The real L reveals that the victim was a decoy.",
+      "boundary_review": "Resumes at the exact source time following the previous excerpt. Keeps Light reaction159.94-162.16, L proof167.84-182.06, decoy explanation183.72-196.20 and Light reaction196.56-196.90, with all natural pauses.",
+      "crop_height": 1080,
+      "crop_regions": [
+        {
+          "at": 155.3,
+          "center_x": 900
+        },
+        {
+          "at": 156.1143,
+          "center_x": 940
+        },
+        {
+          "at": 159.8263,
+          "center_x": 1090
+        },
+        {
+          "at": 162.3288,
+          "center_x": 820
+        },
+        {
+          "at": 165.9575,
+          "center_x": 960
+        },
+        {
+          "at": 167.0419,
+          "center_x": 790
+        },
+        {
+          "at": 173.3398,
+          "center_x": 1040
+        },
+        {
+          "at": 179.1373,
+          "center_x": 960
+        },
+        {
+          "at": 183.2247,
+          "center_x": 750
+        },
+        {
+          "at": 196.2377,
+          "center_x": 650
+        }
+      ],
+      "center_x": 900
+    },
+    {
+      "kind": "analysis",
+      "seconds": 4.8,
+      "analysis": {
+        "rating": "brilliant",
+        "speaker": "white",
+        "score": 4,
+        "reviewed": true,
+        "comment": "A decoy takes the risk. The real L stays out of reach."
+      }
+    },
+    {
+      "kind": "outro",
+      "seconds": 1.2
+    }
+  ],
+  "background_color": "#000000",
+  "revision": "V3: larger vertical scene, shot-specific framing, approved V2 passages and audio retained",
+  "layout": "portrait-large-v1",
+  "framing_review": "Large vertical 3:4 scene box864x1152 at88,304. Manually authored shot framing follows native scene changes without cutting audio or changing passage durations. Prior wide exports remain archived."
+}

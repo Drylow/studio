@@ -1,5 +1,32 @@
 # Deux Shorts anime — 11 octobre 2026
 
+## Versions actives : clip vertical agrandi
+
+Retour suivant : le plan central horizontal reste trop petit. Death Note V3
+(`episodes/short-death-note-v3.json`) et Classroom V4
+(`episodes/short-ayanokoji-v4.json`) utilisent `portrait-large-v1` : clip
+vertical 3:4 de 864 × 1152 à x88,y304, dans la vidéo 1080 × 1920.
+Sa surface est doublée par rapport au cadre 940 × 528 précédent. Le titre
+est compacté, la barre allongée et les analyses restent sous la scène.
+Les sources, passages, durées et évaluations restent identiques. Les régions
+de recadrage sont écrites et contrôlées plan par plan ; leur changement suit
+le montage natif de l'anime et n'ajoute aucune coupure du dialogue.
+Death Note utilise toute la hauteur source1080 ; Classroom utilise972 pixels
+de hauteur pour son cadre central. Le fond extérieur reste noir pur.
+
+L'audio final validé de la version précédente est repris par copie AAC,
+vérifiée par empreinte du flux, sans nouvelle compression. Le flux vidéo du
+nouvel export natif est lui aussi conservé lors de l'assemblage final.
+Les projets éditables restent dans `death-note-v3/editable` et
+`ayanokoji-v4/editable`. Livraison :
+`work/conversation-chess/shorts/A-POSTER-VERTICAL-2026-10-11/`.
+Reçu final : `episodes/shorts-2026-10-11-portrait.qa.json`.
+
+Les 2886 / 1720 images finales sont revues sur 21 / 12 planches, avec les
+deux évaluations de chaque Short à taille native. Décodage complet validé,
+coin extérieur noir pur dans chaque image et audio identique par empreinte
+aux versions Death Note V2 / Classroom V3.
+
 ## Versions corrigées : passages continus et fond noir
 
 Retour utilisateur : trop de coupes soudaines, fond noir permanent, meilleure

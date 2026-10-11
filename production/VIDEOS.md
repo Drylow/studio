@@ -334,3 +334,23 @@ Projets natifs éditables conservés localement. Reprise et reçus :
 `experiments/conversation-chess/SHORTS.md` et
 `experiments/conversation-chess/episodes/shorts-2026-10-11-smooth.qa.json`.
 Aucune publication ni nouvelle vérification YouTube effectuée.
+
+
+## 11 octobre 2026 — Shorts chess : clip vertical agrandi
+
+Death Note V3 et Classroom V4 : clip central vertical 3:4 de 864 × 1152,
+deux fois la surface du cadre horizontal précédent, dans un export 9:16
+1080 × 1920 / 30 fps. Titre compacté, analyses sous le clip, fond noir.
+Recadrages écrits et revus plan par plan, suivant les coupes natives.
+Sources, passages et durées conservés : 96,20 s / 57,33 s.
+Audio final précédent repris par copie AAC et vérifié par empreinte ;
+aucune nouvelle compression du son ni du flux vidéo après le rendu natif.
+
+Contrôle visuel des 2886 / 1720 images finales, évaluations à taille native,
+décodage complet et fond extérieur noir testé dans chaque image.
+Livraison avec titres et descriptions :
+`work/conversation-chess/shorts/A-POSTER-VERTICAL-2026-10-11/`.
+Reprise et reçu : `experiments/conversation-chess/SHORTS.md` et
+`experiments/conversation-chess/episodes/shorts-2026-10-11-portrait.qa.json`.
+Projets natifs éditables et anciennes versions conservés localement.
+Aucune publication ni nouvelle vérification YouTube effectuée.
