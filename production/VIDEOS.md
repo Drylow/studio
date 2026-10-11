@@ -266,3 +266,17 @@ transcripts outside Git. Existing thumbnail/title/description included.
 The new cut still contains episode footage and soundtrack. Content ID has not
 been tested: do not describe the global block as resolved. No automatic upload,
 publication or dispute. Unrelated historical production changes preserved.
+
+
+## Death Note V3 — procédé transmis et retour YouTube, 11 octobre 2026
+
+L’utilisateur rapporte l’absence de problème de copyright après son contrôle
+YouTube de la V3. Retour conservé séparément du reçu QA initial dans
+`experiments/conversation-chess/episodes/light-vs-l.edit.youtube-report.json` ;
+aucune inspection indépendante du compte ni vérification du hash uploadé.
+Le guide `experiments/conversation-chess/PROCEDE-V3-A-TRANSMETTRE.txt` décrit
+le découpage réellement effectué (372,1 → 105,6 secondes de scène jouée),
+les sept analyses, le rendu natif et les contrôles. Il contient un prompt
+adaptable aux autres séries, sans promesse de résultat Content ID universel.
+Copie du guide et du retour dans le paquet local `A-TESTER-V3/`.
+Aucune modification du MP4, aucun upload ni contestation.

@@ -200,6 +200,20 @@ Le reçu `episodes/light-vs-l.edit.qa.json` conserve l'empreinte et les contrôl
 La V1 reste inchangée, vérifiée par son SHA256. Le projet V3 éditable se trouve
 dans `work/conversation-chess/death-note-light-l-v3-edit/kdenlive/` avec ses médias.
 Le paquet garde la miniature, le titre et la description déjà préparés.
-**Aucun contrôle Content ID de la V3 n'a été exécuté.** Ce montage ne constitue
-pas une confirmation de levée du blocage ; il contient encore des extraits de
-l'épisode et sa musique. Aucun upload, publication ou contestation automatique.
+Au moment de l'export, aucun contrôle Content ID de la V3 n'avait été exécuté
+par l'agent. Aucun upload, publication ou contestation automatique.
+
+### Retour utilisateur après le contrôle YouTube — 11 octobre 2026
+
+L'utilisateur rapporte ensuite que cette V3 ne présente plus de problème de
+copyright. Ce constat provient de son message, sans inspection indépendante
+de son compte ni nouvelle capture du résultat. Le reçu QA de l'export conserve
+son état historique ; `episodes/light-vs-l.edit.youtube-report.json` enregistre
+séparément ce retour et l'empreinte du fichier concerné.
+
+Le procédé exact, les paramètres et un prompt adaptable à d'autres séries sont
+dans `PROCEDE-V3-A-TRANSMETTRE.txt`. La modification principale est le découpage
+éditorial, avec 105,6 secondes de scène jouée au lieu de 372,1. Les replays muets
+des analyses restent également des images de l'épisode. Aucun test isolé ne
+permet d'attribuer le résultat à un réglage particulier ni de garantir le même
+statut pour d'autres séries ou pour un contrôle ultérieur.
