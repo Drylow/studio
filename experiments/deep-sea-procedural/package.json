@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node build.mjs",
     "build:sleep": "node build.mjs --sleep",
+    "build:forward": "node build.mjs --forward",
     "render:sleep": "node capture-loop.mjs",
     "render": "node capture.mjs"
   },

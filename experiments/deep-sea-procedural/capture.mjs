@@ -16,6 +16,7 @@ const stills=arg('--stills','');
 const fps=Number(arg('--fps','30')), duration=Number(arg('--duration','24'));
 if(!Number.isInteger(fps)||fps<1||fps>60||!Number.isFinite(duration)||duration<=0||duration>30)throw new Error('This prototype supports 0–30 seconds and 1–60 fps.');
 const executablePath=process.env.DEEPSEA_CHROMIUM || '/usr/bin/chromium';
+const canvasCpu=args.includes('--canvas-cpu');
 let lock;
 if(!stills){
   await mkdir(path.dirname(out),{recursive:true});
@@ -39,7 +40,7 @@ const origin=`http://127.0.0.1:${server.address().port}`;
 let browser,encoder;
 const errors=[];
 try{
-  browser=await chromium.launch({executablePath,headless:true,args:['--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+  browser=await chromium.launch({executablePath,headless:true,args:canvasCpu?['--disable-dev-shm-usage','--disable-gpu']:['--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
   const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());

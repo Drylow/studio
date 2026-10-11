@@ -1,4 +1,34 @@
-## Décision actuelle — repartir avec une illustration animée
+## Correction du 11 octobre — aperçu en avancée livré, avis attendu
+
+L’utilisateur aime l’ambiance illustrée récente, mais demande davantage de
+vie et une vraie avancée de la caméra. Nouveau parcours projeté 2.5D dans
+`sleep-forward-scene.mjs` et `sleep-forward-reef.mjs` : parcours de 600 unités
+en 300 secondes, projection par profondeur sans zoom global. Deux assets
+historiques conservés, aucune nouvelle génération, aucun Algrow.
+
+L’aperçu corrigé de 24 secondes est livré sur
+https://gofile.io/d/qsIDnkvK : 1080p, 30 images/s, 720 images. Les orientations
+sont progressives et les passages proches sortent naturellement du cadre.
+Décodage A/V complet et revue effective de captures générales et rapprochées
+passés ; aucune lecture continue ou écoute humaine prétendue. Voir
+[FORWARD_PREVIEW_CHECK.json](FORWARD_PREVIEW_CHECK.json) et
+[FORWARD_VISUAL_REVIEW.md](FORWARD_VISUAL_REVIEW.md). La scène source est
+contrôlée dans [FORWARD_SCENE_CHECK.json](FORWARD_SCENE_CHECK.json), la
+livraison dans [FORWARD_DELIVERY.json](FORWARD_DELIVERY.json).
+
+**La validation visuelle de l’utilisateur reste attendue.** Des motifs de
+récif se répètent, certains contours restent ceux de calques illustrés,
+le fond lointain est fixe et les animaux sont en 2.5D. Ne pas présenter ce
+rendu comme une simulation 3D ou comme parfait. Le nouveau rendu de cinq
+minutes est en cours, non terminé et sans QA du MP4 final ; le contrôle de
+l’aperçu ne vaut pas contrôle du raccord encodé de ce futur film.
+
+Le format final reste deux heures, avec narration documentée et texte central
+modéré après validation du fond. Le nombre d’animaux du monde ne suffit pas
+à prouver la présence de vie à l’écran. Le mouvement caméra ne garantit pas
+la monétisation YouTube.
+
+## Décision antérieure — repartir avec une illustration animée
 
 L’utilisateur demande de tout oublier sur la 3D et autorise n’importe quel
 style, pourvu que ce soit beau et différent du clip rejeté. Nouveau moteur
@@ -6,10 +36,11 @@ Canvas2D et récif nocturne illustré original, animaux et mouvement de caméra
 codés. Deux assets originaux préparés une fois ; aucun Algrow ou générateur
 vidéo, pas de génération à chaque image.
 
-La nouvelle boucle complète de cinq minutes est livrée pour avis sur
-https://gofile.io/d/95IFNFjM, avec fichier MP4 contrôlé et lecteur HTML
-autonome. La validation du nom et de l’avatar ne vaut pas approbation de
-ce fond ; avis visuel utilisateur attendu.
+La boucle illustrée de cinq minutes livrée sur
+https://gofile.io/d/95IFNFjM est une **archive remplacée** : l’utilisateur
+apprécie l’ambiance, mais juge la vie insuffisante et demande une caméra en
+avancée. Le MP4 et son lecteur HTML sont conservés à titre historique.
+La validation du nom et de l’avatar ne vaut pas approbation de ce fond.
 
 Les vidéos finales restent deux heures. Après validation du fond : voix off
 sur histoires marines vraies et texte lisible, discret et élégant au milieu
@@ -65,7 +96,7 @@ Les volumes réservés et le déplacement des rochers sont réalisés dans
 pas d'un système physique autonome permettant à tout nouvel animal d'éviter
 n'importe quel obstacle. Chaque nouvelle scène doit refaire ses contrôles.
 
-## Étape actuelle
+## Étape historique — refonte 3D abandonnée
 
 **Correction explicite après la livraison de cinq minutes : repartir sur une
 nouvelle direction artistique complète.** Le film GoFile `ixBAzbR6` est rejeté
@@ -95,8 +126,8 @@ de deux heures ni invitation de collaboration n'a été lancée.
 Cette variante privilégie une lumière stable, des mouvements lents, des
 passages espacés et une voix calme. La boucle doit raccorder réellement la
 caméra, les animaux, les particules et l'ambiance sonore. **L'aperçu actuel
-de 24 secondes reste une archive de cohérence. La première boucle de cinq
-minutes a été livrée puis rejetée visuellement ; la refonte n'est pas validée.**
+de 24 secondes en avancée est livré pour avis. Les anciennes boucles sont
+archivées ; le nouveau rendu de cinq minutes est en cours et non validé.**
 Une fois la boucle rendue, ses répétitions ne nécessiteront pas de recalculer
 la géométrie durant deux heures ; l'assemblage et le son resteront à exporter.
 

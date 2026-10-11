@@ -1,0 +1,214 @@
+{
+  "schema": "deep-sea-forward-loop-v1",
+  "passed": true,
+  "duration_seconds": 300,
+  "width": 1920,
+  "height": 1080,
+  "sample_hz": 2,
+  "samples": 601,
+  "endpoint_diagnostics_periodic": true,
+  "rewind_diagnostics_deterministic": true,
+  "endpoints_pixels_identical": true,
+  "endpoint_pixel_delta": {
+    "rms": 0,
+    "maximum_channel_difference": 0,
+    "changed_pixel_fraction": 0
+  },
+  "boundary_pixel_delta": {
+    "rms": 7.83957613605835,
+    "maximum_channel_difference": 152,
+    "changed_pixel_fraction": 0.4698017939814815
+  },
+  "ordinary_next_frame_delta": {
+    "rms": 7.872943863702987,
+    "maximum_channel_difference": 158,
+    "changed_pixel_fraction": 0.4774638310185185
+  },
+  "boundary_jump_suspected": false,
+  "rewind_pixels_identical": true,
+  "boundary_mean_rgb": 46.31606851201811,
+  "track_length": 600,
+  "camera_progress_delta": 600,
+  "monotone_camera_progress": true,
+  "constant_forward_speed": true,
+  "expected_forward_speed": 2,
+  "track_completed": true,
+  "static_projection_pairs": 215,
+  "perspective_depth_scale_consistent": true,
+  "camera_z_matches_unwrapped_progress": true,
+  "landmark_depth_matches_world_camera": true,
+  "reported_global_zoom": false,
+  "near_median_normalized_scale_growth": 0.06458331011865504,
+  "far_median_normalized_scale_growth": 0.014276307708779301,
+  "projection_examples": [
+    {
+      "time": 219,
+      "id": 123,
+      "depth": 15.483733569528795,
+      "depth_change": -2,
+      "scale_ratio": 1.1483268702757297,
+      "expected_scale_ratio": 1.1483268702757297,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 164.36475938414821
+    },
+    {
+      "time": 24,
+      "id": 35,
+      "depth": 15.57615788438693,
+      "depth_change": -2,
+      "scale_ratio": 1.1473170846296707,
+      "expected_scale_ratio": 1.1473170846296707,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 140.82737644520114
+    },
+    {
+      "time": 219,
+      "id": 104,
+      "depth": 16.260189104629944,
+      "depth_change": -2,
+      "scale_ratio": 1.1402505945275752,
+      "expected_scale_ratio": 1.1402505945275752,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 124.666490871862
+    },
+    {
+      "time": 111,
+      "id": 95,
+      "depth": 159.26525105673431,
+      "depth_change": -2,
+      "scale_ratio": 1.0127173675466201,
+      "expected_scale_ratio": 1.0127173675466203,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 1.1567720008248
+    },
+    {
+      "time": 219,
+      "id": 150,
+      "depth": 159.26707287955674,
+      "depth_change": -2,
+      "scale_ratio": 1.0127172202253152,
+      "expected_scale_ratio": 1.0127172202253152,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 1.3959018113879913
+    },
+    {
+      "time": 219,
+      "id": 24,
+      "depth": 159.45505030255663,
+      "depth_change": -2,
+      "scale_ratio": 1.0127020377952751,
+      "expected_scale_ratio": 1.012702037795275,
+      "consistent_depth": true,
+      "consistent_scale": true,
+      "screen_displacement": 1.0667286181185658
+    }
+  ],
+  "finite_diagnostics": true,
+  "invalid_diagnostics": [],
+  "invalid_projections": [],
+  "world_counts_stable": true,
+  "world_counts": {
+    "fish": 480,
+    "sharks": 8,
+    "jellies": 12,
+    "reef": 221
+  },
+  "visible_fish": {
+    "minimum": 112,
+    "median": 121,
+    "maximum": 128
+  },
+  "visible_life": {
+    "minimum": 116,
+    "median": 126,
+    "maximum": 134
+  },
+  "minimum_visible_fish_target": 80,
+  "independent_fish_corridor_check_available": true,
+  "checked_fish_poses": 288480,
+  "minimum_fish_extent_corridor_margin": 0.367790639856796,
+  "fish_extent_corridor_violations": [],
+  "water_corridor": {
+    "left": -6,
+    "right": 6
+  },
+  "fish_vertical_corridor_checked": false,
+  "elapsed_seconds": 5.3223000000119205,
+  "limits": "Discrete diagnostics and exact captured pixels. Perspective tests use scene-reported static landmarks and camera progress; this is not 3D collision testing, occlusion proof, continuous-time proof or artwork approval. Fish corridor margins are calculated from reported world positions, sprite half-extents and corridor bounds. No independent painted-rock pixel mask test or shark/jelly collision proof is claimed.",
+  "frames": [
+    {
+      "time": 0,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/0-0.00000.png",
+      "sha256": "4d366607647a3b7ec635564890ba9d7f8b25bb46b87e4dbb702e1564b148fec4"
+    },
+    {
+      "time": 300,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/1-300.00000.png",
+      "sha256": "4d366607647a3b7ec635564890ba9d7f8b25bb46b87e4dbb702e1564b148fec4"
+    },
+    {
+      "time": 299.96666666666664,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/2-299.96667.png",
+      "sha256": "054679cf1f039d56c683b6efa01f8444f126e74e73b7cb0e9bfe4539fe7900f8"
+    },
+    {
+      "time": 0.03333333333333333,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/3-0.03333.png",
+      "sha256": "5ba8e28c1f658ac475c8d980f33d8c11af5d81a5aa626fe62271f30db6996856"
+    },
+    {
+      "time": 111,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/4-111.00000.png",
+      "sha256": "77d357a758679f266794edadd9e73b96c76b4576c56fdc78d7c348956a88fbef"
+    },
+    {
+      "time": 6,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/5-6.00000.png",
+      "sha256": "5bc2e6fb49ded680ea8a4d2b9da0756885a925e2dcaff8e3b5edf657f44c2ac4"
+    },
+    {
+      "time": 12,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/6-12.00000.png",
+      "sha256": "f132397f1f684ff8bfb3eacc02e47df762378ae25d39964ac9cf2570231ff6b9"
+    },
+    {
+      "time": 18,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/7-18.00000.png",
+      "sha256": "e4b48f735281eef82283cc15c36f60cf956104002f385a39f10ccb072d1a8308"
+    },
+    {
+      "time": 24,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/8-24.00000.png",
+      "sha256": "bbedaa40a73657a7732be2e14de2a0ba1039f5f897474b963133c4f72621d350"
+    },
+    {
+      "time": 65,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/9-65.00000.png",
+      "sha256": "fac6c52a0acd21b3c4dcddd1c8d5716927c1af4094ce23ad8b4c719a2c3be813"
+    },
+    {
+      "time": 100,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/10-100.00000.png",
+      "sha256": "5e3bd608d0501601d1b91a3f3e87b8c1dbbfceceabad57355b3ca6bded01c0ce"
+    },
+    {
+      "time": 220,
+      "file": "/tmp/deepsea-forward-v3/scene-check-frames/11-220.00000.png",
+      "sha256": "e0c33a920f5652d74433b5a53c9af4c9fed17761694be51e5bf7b265fb67c0e2"
+    }
+  ],
+  "scene_bundle_sha256": "d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f",
+  "served_asset_hashes": {
+    "index.html": "e0125aeca325c83d8601fdc660cda4f8cd76f4e5ecfb100ddbcf4be50ed3e022",
+    "scene.js": "d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f"
+  },
+  "browser_errors": [],
+  "local_http_errors": [],
+  "blocked_external_requests": 0,
+  "assets_changed_during_check": []
+}

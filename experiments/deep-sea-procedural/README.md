@@ -1,13 +1,81 @@
 # Depths After Dark — fonds marins animés
 
-## Direction actuelle — récif nocturne illustré et animé
+## Aperçu corrigé livré — caméra en avancée et davantage de vie
+
+Retour utilisateur après le film `95IFNFjM` : ambiance appréciée, mais pas
+assez de vie et mouvement caméra en avant demandé explicitement. Cette boucle
+illustrée est une archive de test, pas le fond final validé.
+
+`npm run build:forward` prépare maintenant `dist-forward/` depuis
+`sleep-forward-scene.mjs`, `sleep-forward-reef.mjs` et `forward-index.html`.
+La caméra avance dans un parcours de 600 unités, bouclé en 300 secondes ;
+les éléments proches sont projetés par profondeur, sans simple zoom global.
+C’est une illustration **2.5D**, pas une géométrie 3D solide. Les deux images
+originales existantes sont réutilisées ; pas de nouvel appel de génération.
+480 poissons au total, huit requins et douze méduses : totaux du monde,
+pas nombres simultanément visibles. La présence dans le cadre est mesurée.
+
+**[Aperçu corrigé de 24 secondes sur GoFile](https://gofile.io/d/qsIDnkvK).**
+Fichier `Depths-After-Dark-Camera-Forward-24s.mp4` : **24 s, 1920×1080,
+30 images/s, 720 images, 34 172 536 octets**. SHA-256 :
+`38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84`.
+Le bundle contrôlé et utilisé par le rendu porte l’empreinte
+`d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f`.
+
+Les orientations évoluent progressivement ; les animaux proches quittent
+le cadre avant le plan de coupe de la caméra. Les éléments du récif ont été
+redistribués. Décodage A/V complet sans erreur, horodatages et 720 images
+vérifiés ; revue de 24 captures générales, 48 rapprochées natives, neuf
+planches et six vues natives supplémentaires. Le requin sort par le haut
+vers 6–7 s, la méduse par la gauche vers 7–7,5 s. Aucun saut miroir ni fondu
+central identifié dans ces échantillons. Audio fini, aucune saturation.
+Pas de lecture continue ni d’écoute humaine complète prétendue.
+
+Contrôle de la scène source sur 601 poses : pixels 0/300 s identiques,
+retour arrière déterministe, perspective cohérente et **112–128 poissons
+visibles**. La marge latérale indépendante des poissons vaut au minimum
+0,368 unité. Ce contrôle discret ne prouve pas des collisions 3D continues
+ni l’absence d’occultation ; le sol peint n’est pas contrôlé géométriquement.
+Preuves publiques : [FORWARD_SCENE_CHECK.json](FORWARD_SCENE_CHECK.json),
+[FORWARD_PREVIEW_CHECK.json](FORWARD_PREVIEW_CHECK.json),
+[FORWARD_VISUAL_REVIEW.md](FORWARD_VISUAL_REVIEW.md) et
+[FORWARD_DELIVERY.json](FORWARD_DELIVERY.json).
+
+**Avis visuel utilisateur attendu.** Les motifs de récif réutilisés et
+certains contours de calques restent reconnaissables ; les animaux sont
+en 2.5D et le fond lointain reste fixe. Le contrôle technique ne valide pas
+la direction artistique. Deux assets historiques sont réutilisés : **zéro
+nouvelle génération pour cet aperçu, zéro Algrow et zéro génération vidéo**.
+
+Le rendu corrigé de cinq minutes est **en cours**, non terminé et sans QA
+du MP4 final. Ne pas le déclarer livré ou validé à partir de cet aperçu.
+Aucun script, voix off ou épisode de deux heures n’est produit à cette étape.
+
+Pour reproduire dans un nouveau dossier de sortie, depuis ce dossier :
+
+```bash
+npm run build:forward
+node verify-forward-loop.mjs --dist dist-forward --min-visible-fish 80 \
+  --out /tmp/deepsea-forward/check.json
+node capture.mjs --dist dist-forward --canvas-cpu --duration 24 --fps 30 \
+  --out /tmp/deepsea-forward/preview.mp4 \
+  --audio /tmp/deepsea-sleep-5m/ambience-master.wav
+```
+
+Le mode CPU est requis ici pour ce Canvas2D ; SwiftShader entraînait un
+blocage lors du premier essai. Le contrôle source vérifie vrais pixels au
+raccord, retour arrière, perspective des repères et marges latérales des
+animaux. Il ne certifie ni collisions 3D continues ni qualité artistique.
+La QA d’un aperçu de 24 s ne certifie pas le raccord d’un MP4 de 300 s.
+
+## Archive récente — récif nocturne illustré et animé
 
 La boucle 3D livrée précédemment est **rejetée**. L’utilisateur abandonne
 ensuite toutes les contraintes de 3D et de style de jeu : il veut un beau
 fond marin vivant, immersif, très différent du rendu précédent.
 
-`npm run build:sleep` utilise maintenant **sleep-illustrated-scene.mjs**,
-un moteur Canvas2D neuf. Un récif nocturne original et une méduse détourée
+Cette archive utilise `npm run build:sleep` et **sleep-illustrated-scene.mjs**,
+un moteur Canvas2D. Un récif nocturne original et une méduse détourée
 sont animés par du code : panoramique/zoom lents, huit bancs (144 poissons
 au total), deux silhouettes de requins, trois méduses aux tissus ondulants,
 neige marine et frondes. Les anciennes scènes et modèles 3D ne sont pas
@@ -20,7 +88,7 @@ et l’export sont **1920×1080**. Ne pas prétendre que le décor est une sourc
 native 4K/1080p, ni que tout a été fabriqué sans générateur d’images.
 Le sprite provient de l’avatar original validé. Voir [ASSETS.md](ASSETS.md).
 
-**[Boucle complète de cinq minutes livrée sur GoFile](https://gofile.io/d/95IFNFjM).**
+**[Archive de cinq minutes remplacée par la correction ci-dessus](https://gofile.io/d/95IFNFjM).**
 Choisir `Depths-After-Dark-Boucle-5min.mp4` : **300 s, 1920×1080, 30 images/s,
 9 000 images, 393 133 259 octets**. SHA-256 :
 `bec3996016d93c4e994b72a15ef88b4d1ce531cfd7a5e12b79216e703c4389fa`.
@@ -40,7 +108,7 @@ Voir [ILLUSTRATED_RENDER_CHECK.json](ILLUSTRATED_RENDER_CHECK.json),
 [ILLUSTRATED_VISUAL_REVIEW.md](ILLUSTRATED_VISUAL_REVIEW.md) et
 [ILLUSTRATED_DELIVERY.json](ILLUSTRATED_DELIVERY.json).
 
-**Validation visuelle utilisateur encore attendue.** Les futurs épisodes
+**Ce fond est une archive : vie et mouvement caméra jugés insuffisants.** Les futurs épisodes
 feront deux heures, soit 24 répétitions, avec voix off et texte élégant et
 discret au milieu de l’écran après validation du fond. Aucun texte/voix de
 long ni publication lancés à cette étape. Pour le futur mix, utiliser le
@@ -142,10 +210,10 @@ créer l'ambiance originale avec la venv existante et NumPy :
 
 Les anciennes commandes qui associaient `build:sleep` à
 `verify-sleep-loop.mjs` concernaient le build 3D historique. L’entrée active
-est désormais illustrée : utiliser les commandes en tête de ce README et
-`verify-illustrated-loop.mjs`. L’ancien vérificateur exige des diagnostics
-3D absents de la nouvelle scène ; ne pas l’exécuter sur le build actuel.
-Pour le MP4 illustré terminé :
+de la correction est `build:forward` avec `verify-forward-loop.mjs`, décrite
+en tête de ce README. Les vérificateurs 3D exigent des diagnostics absents
+de la scène 2.5D ; ne pas les exécuter sur `dist-forward/`.
+Pour reproduire le contrôle du MP4 illustré historique :
 
 ```bash
 ../../.venv/bin/python verify-sleep-render.py \

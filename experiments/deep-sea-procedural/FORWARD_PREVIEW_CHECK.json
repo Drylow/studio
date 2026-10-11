@@ -1,0 +1,107 @@
+{
+  "schema": "deep-sea-final-preview-qa-v1",
+  "technical_passed": true,
+  "file": "Depths-After-Dark-Camera-Forward-24s.mp4",
+  "mp4_sha256": "38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84",
+  "bytes": 34172536,
+  "duration_seconds": 24.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "current_bundle_sha256": "d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f",
+  "expected_bundle_sha256": "d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f",
+  "bundle_matches_expected_and_scene_report": true,
+  "scene_report_passed": true,
+  "single_complete_av_decode": {
+    "performed": true,
+    "ffmpeg_exit_code": 0,
+    "additional_complete_decode_passes": 0,
+    "video_decoded_frames": 720,
+    "all_frame_pts_exact_0_to_719": true,
+    "frame_durations_one_30fps_tick": true,
+    "distinct_frame_md5": 720,
+    "profile_file": "/tmp/deepsea-forward-v3/qa/decoded-frames.md5"
+  },
+  "encoded_file_unchanged_during_qa": true,
+  "mp4_matches_render_sidecar_sha": true,
+  "visual_sample_review": {
+    "completed": true,
+    "general_captures": 24,
+    "general_times": "exact integer seconds0\u201323, frames0,30,...690",
+    "general_image_dimensions": [
+      960,
+      540
+    ],
+    "dense_native_captures": 48,
+    "dense_times": "6\u201313.833333s at6Hz, decoded frames180,185,...415",
+    "dense_dimensions": [
+      1920,
+      1080
+    ],
+    "contact_sheets_examined": 9,
+    "additional_native_images_examined_at_seconds": [
+      6,
+      6.5,
+      7.333333333333333,
+      8,
+      9.833333333333334,
+      12.5
+    ],
+    "sampled_blank_frames_observed": false,
+    "opaque_texture_rectangles_observed": false,
+    "unexplained_position_teleport_identified": false,
+    "near_animal_dissolve_inside_frame_identified": false,
+    "instant_mirror_turn_identified": false,
+    "animal_boundary_exits_observed": {
+      "shark": "crosses upper viewport edge across6\u20137s",
+      "jelly": "crosses left edge across7\u20137.5s",
+      "nearest_school": "moves across right edge before the former9.5s mirrored-turn point"
+    },
+    "continuous_human_playback_claimed": false
+  },
+  "audio": {
+    "pcm_finite": true,
+    "channels": 2,
+    "sample_rate_hz": 48000,
+    "decoded_duration_seconds": 24.0,
+    "per_channel_peak": [
+      0.06619285047054291,
+      0.06134430691599846
+    ],
+    "per_channel_rms_dbfs": [
+      -36.26766218780653,
+      -36.27332169869348
+    ],
+    "full_scale_samples": [
+      0,
+      0
+    ],
+    "per_channel_maximum_adjacent_sample_step": [
+      0.0028255702927708626,
+      0.0018074838444590569
+    ],
+    "human_listening_claimed": false,
+    "report": "/tmp/deepsea-forward-v3/qa/audio-qa.json"
+  },
+  "remaining_artistic_reservations": [
+    "Reef patches still reuse the same painting, with some recognizable cutout shapes and comparatively regular side-scene placement.",
+    "Some thin foreground reef structures remain conspicuous isolated silhouettes; how natural these look needs the user\u2019s judgement.",
+    "Wildlife yaw is stylized projected2.5D with a frontal ellipse, not articulated3D anatomy.",
+    "Far background is fixed while nearby coded layers advance; not all pixels represent a translating camera world."
+  ],
+  "limits": [
+    "The visual inspection covers24 general and48 dense decoded images, not every720frame at native size or continuous human playback.",
+    "No human listening, audible-click guarantee, audio-loop endpoint proof or loudness preference validation is claimed.",
+    "The existing scene report checks exact source pixels and discrete projected coordinates; this encoded preview QA does not prove3D collisions or continuous-time physics.",
+    "Technical PASS is not approval of the art direction, future300second export or user acceptance."
+  ],
+  "private_outputs_directory": "/tmp/deepsea-forward-v3/qa",
+  "sources_bundles_original_metadata_modified": false,
+  "new_film_or_generation_performed": false,
+  "sha256": "38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84",
+  "full_video_audio_decode_ok": true,
+  "finished_render_visual_reviewed": true,
+  "root_visual_review": "Root inspected all24 general samples across3contact sheets plus2native decoded views at7.5s and9s; matches independent sampled review. No continuous human playback or listening claimed.",
+  "source_scene_sha256": "d3460e0da70312fcfb26134c92ca09c696750ea02a62e11ffba77731c0c8ce5f",
+  "user_visual_approval": false
+}

@@ -13,6 +13,7 @@ const arg=(name,fallback)=>{const i=args.indexOf(name);return i<0?fallback:args[
 const out=path.resolve(arg('--out',path.join(here,'renders/sleep-5m.mp4')));
 const dist=path.resolve(here,arg('--dist','dist-sleep'));
 const sound=arg('--audio',null), resume=args.includes('--resume');
+const canvasCpu=args.includes('--canvas-cpu');
 const fps=30,duration=300,chunkSeconds=10,chunkFrames=fps*chunkSeconds,frames=fps*duration;
 const ffmpeg=process.env.DEEPSEA_FFMPEG||'ffmpeg';
 const work=out+'.chunks',lock=out+'.render-lock';
@@ -55,7 +56,7 @@ try{
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const origin=`http://127.0.0.1:${server.address().port}`;
   browser=await chromium.launch({executablePath:process.env.DEEPSEA_CHROMIUM||'/usr/bin/chromium',headless:true,
-    args:['--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+    args:canvasCpu?['--disable-dev-shm-usage','--disable-gpu']:['--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
   const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());

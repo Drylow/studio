@@ -1,6 +1,29 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
-## État actuel — boucle Sleep livrée pour avis, Chess en export parallèle
+## État actuel — aperçu Sleep corrigé livré, pion Tommy à refaire
+
+**Sleep** : l’aperçu corrigé avec caméra en avancée est livré :
+https://gofile.io/d/qsIDnkvK —24s,1080p30,720images,34 172 536octets.
+SHA-256 `38fc4e4e2f62514d00d91cf143eb10b6d25682e7230a7a8fff56535f44e7fa84`.
+Décodage A/V entier et captures effectivement contrôlés. Illustration2.5D,
+assets originaux réutilisés ; pas de nouvel appel de génération. La boucle
+complète de cinq minutes corrigée est en cours de rendu dans son dossier privé,
+pas terminée ni vérifiée. L’ancienne `95IFNFjM` reste une archive à corriger.
+Aucun récit, voix ou long de deux heures produit ; avis visuel utilisateur attendu.
+Voir les preuves `FORWARD_*` et le README de l’expérience.
+
+**Chess** : le premier MP4 Tommy/Alfie est terminé (15:27,900,1080p30),
+avec QA technique et captures contrôlées. Il contient encore Tony comme
+analyste : archive privée, **ne pas livrer**. L’utilisateur exige Thomas
+Shelby et doit valider le pion seul avant intégration. Les **cinq** premiers essais
+sont rejetés. Le sixième, édité avec le Tony et un portrait réel haute
+résolution, plaît enfin par son style. L’utilisateur demande encore une
+autre photo avec la tête plus droite avant de valider le pion pour le film.
+Aucun export Shelby lancé. Voir `SHELBY_ANALYST_README.md` et
+`TOMMY_ALFIE_PRODUCTION.md` dans `experiments/conversation-chess/`.
+Garder l’avatar Tony de la chaîne ; la revue interne ne remplace pas son choix.
+
+## État antérieur — boucle Sleep livrée pour avis, Chess en export parallèle
 
 **Depths After Dark** confirmé, avatar méduse validé, bio anglaise donnée.
 L’utilisateur abandonne explicitement toutes les contraintes de 3D ; le
