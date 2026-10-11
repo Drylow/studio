@@ -91,6 +91,9 @@ les coupes et avec la fausse annonce d'une diffusion mondiale.
 
 Définir les camps pour chaque nouvelle scène et conserver la même attribution
 dans les données, la barre, les pions et le bilan. Ici : L blanc, Light noir.
+L'outil exige une ouverture revue avec le camp blanc en premier : documenter
+le premier locuteur et son camp dans opening, y compris s'il est un représentant
+du stratège. Vérifier ce point sur la première réplique réellement conservée.
 Le pion du guide et du bilan est neutre. Les notes sont des jugements éditoriaux,
 pas des calculs d'un moteur d'échecs. Ne pas inventer une précision scientifique.
 
@@ -197,7 +200,8 @@ commentaire qui ne correspond plus aux passages réellement montrés.
 Rédige des analyses courtes et spécifiques aux décisions observables. Elles
 doivent expliquer le rapport de force, plutôt que paraphraser le dialogue.
 Définis [PERSONNAGE BLANC] et [PERSONNAGE NOIR], puis vérifie la cohérence des
-pions, de la barre et du bilan. Les évaluations restent éditoriales.
+pions, de la barre et du bilan. Documente l'ouverture revue avec le camp blanc
+en premier, conformément au contrat de l'outil. Les évaluations restent éditoriales.
 
 Utilise les éléments natifs du tool : guide, icônes originales vérifiées,
 barre, replay muet sous les analyses, commentaires lisibles et bilan final.
