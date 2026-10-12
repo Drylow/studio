@@ -27,8 +27,8 @@ SHORT_OVERRIDES = {
 }
 # appel à l'action par langue (modifiable dans le style : shorts.cta_*)
 CTA_DEFAULTS = {  # jamais « YouTube » en toutes lettres : TikTok le voit d'un mauvais œil
-    "French": {"spoken": "Si tu veux voir la suite, va voir mon réseau sur la plateforme rouge.",
-               "line1": "LA SUITE", "line2": "PLATEFORME ROUGE", "line3": "lien en bio"},
+    "French": {"spoken": "If you want to see what comes next, check out my network on the red platform.",
+               "line1": "THE REST", "line2": "PLATEFORME ROUGE", "line3": "lien en bio"},
     "English": {"spoken": "If you want to see more, check out my channel on the red platform.",
                 "line1": "FULL STORY", "line2": "ON THE RED PLATFORM", "line3": "link in bio"},
     "Spanish": {"spoken": "Si quieres ver más, busca mi canal en la plataforma roja.",
@@ -118,14 +118,14 @@ async def write_meta(p: dict) -> dict:
            "3) caption: the TikTok post caption (1-2 short lines, a hook + a question to drive comments);\n")
         + "4) hashtags: 5 to 8 relevant hashtags (mix broad and niche), without the # sign.\n"
         'Return JSON only: {"hook_text":"","hook_highlight":"","caption":"","hashtags":[]}')}],
-        model=config.get("FAST_MODEL"), effort="low", label="Accroche + légende TikTok"))
+        model=config.get("FAST_MODEL"), effort="low", label="Hook + TikTok caption"))
     meta = {"hook_text": (data.get("hook_text") or "").strip(),
             "hook_highlight": (data.get("hook_highlight") or "").strip(),
             "caption": (data.get("caption") or "").strip(),
             "hashtags": [h.strip().lstrip("#") for h in data.get("hashtags", []) if str(h).strip()]}
     p["short"] = (p.get("short") or {}) | meta
     store.save_project(p)
-    events.log(f"✓ Accroche à l'écran : « {meta['hook_text']} »", "ok")
+    events.log(f"✓ On-screen hook: “ {meta['hook_text']} »", "ok")
     return meta
 
 
@@ -147,7 +147,7 @@ async def shorts_from_url(url: str, count: int = 2, mode: str = "auto", kind: st
                           channel: dict | None = None) -> list[dict]:
     """Clipping d'une vidéo YouTube déjà en ligne : transcription + miniature -> shorts."""
     from . import youtube
-    events.log(f"Lecture de la vidéo YouTube {url}…", "step")
+    events.log(f"Reading YouTube video {url}…", "step")
     info = await youtube.info(url)
     script = await youtube.transcript(url)
     tmp = config.DATA / "previews" / f"yt_{youtube.video_id(url)}.jpg"
@@ -157,7 +157,7 @@ async def shorts_from_url(url: str, count: int = 2, mode: str = "auto", kind: st
     style = store.get_style(style_id) or store.list_styles()[0]
     settings = {k: copy.deepcopy(style[k]) for k in ("script", "voice", "visuals", "thumbnail", "shorts")}
     settings["language"] = style.get("language", "English")
-    events.log(f"✓ « {info['title']} » ({word_count(script)} mots de transcription)", "ok")
+    events.log(f"✓ « {info['title']} » ({word_count(script)} transcript words)", "ok")
     return await _make_shorts({
         "title": info["title"], "script": script, "language": None, "style_id": style["id"], "settings": settings,
         "parent_id": None, "source_url": url, "thumb": tmp if has_thumb else None, "characters": [],
@@ -169,7 +169,7 @@ async def _make_shorts(src: dict, count: int, mode: str, kind: str, channel: dic
     lang = (channel or {}).get("language") or src["language"] or "English"
     script = src["script"]
     if word_count(script) < 150:
-        raise ValueError("Le script de la vidéo est trop court pour en tirer des shorts")
+        raise ValueError("The video script is too short to make shorts from it")
     custom = dict(src["settings"].get("shorts") or {})
     for k in ("spoken", "line1", "line2", "line3"):
         if channel and (channel["cta"].get(k) or "").strip():
@@ -177,7 +177,7 @@ async def _make_shorts(src: dict, count: int, mode: str, kind: str, channel: dic
     cta = _cta(lang, custom)
     label = "shorts pub" if kind == "promo" else "TikToks autonomes"
     log_to = src.get("log_to")
-    events.log(f"Recherche des {count} meilleurs passages pour des {label}…", "step", log_to)
+    events.log(f"Searching for {count} best moments for {label}…", "step", log_to)
     translate = (f"\n- The source may be in another language: write every short directly in {lang} "
                  "(natural, idiomatic adaptation, never a literal translation).")
     if kind == "promo":
@@ -195,7 +195,7 @@ async def _make_shorts(src: dict, count: int, mode: str, kind: str, channel: dic
     data = parse_json(await llm.chat([{"role": "user", "content": (
         f"Here is the narration of a long YouTube video titled \"{src['title']}\".\n\n{script}\n\n"
         + ask + '\nReturn JSON only: {"shorts":[{"title":"short title for TikTok","script":"the full narration"}]}')}],
-        model=config.get("SCRIPT_MODEL"), effort="low", label=f"Écriture des {label}"))
+        model=config.get("SCRIPT_MODEL"), effort="low", label=f"Writing {label}"))
     items = (data.get("shorts") if isinstance(data, dict) else data) or []
     created = []
     for it in items[:count]:
@@ -229,10 +229,10 @@ async def _make_shorts(src: dict, count: int, mode: str, kind: str, channel: dic
             p["characters"].append(c)
         store.save_project(p)
         created.append(p)
-        events.log(f"✓ {'Short pub' if kind == 'promo' else 'TikTok'} créé : « {p['title']} » "
-                   f"({word_count(text)} mots{', ' + channel['name'] if channel else ''})", "ok", log_to)
+        events.log(f"✓ {'Short pub' if kind == 'promo' else 'TikTok'} created: “{p['title']} » "
+                   f"({word_count(text)} words{', ' + channel['name'] if channel else ''})", "ok", log_to)
     if not created:
-        raise RuntimeError("Aucun short n'a pu être tiré de cette vidéo")
+        raise RuntimeError("No short could be made from this video")
     if channel:
         from . import planner
         planner.assign(channel)
@@ -257,7 +257,7 @@ async def ideas(ch: dict, n: int = 30, theme: str = "") -> list[dict]:
           "channel's title format (e.g. 'POV: ...' / 'POV : Tu es ...'), max 70 characters. "
           "context = one line in English: the angle and 2-3 concrete facts to include.\n"
           'Return JSON only: {"ideas":[{"title":"","context":""}]}')}],
-        model=config.get("SCRIPT_MODEL"), effort="low", label=f"Idées TikTok ({ch['name']})"))
+        model=config.get("SCRIPT_MODEL"), effort="low", label=f"TikTok Ideas ({ch['name']})"))
     out = []
     for it in (data.get("ideas") if isinstance(data, dict) else data) or []:
         t = (it.get("title") or "").strip()

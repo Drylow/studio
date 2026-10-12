@@ -13,14 +13,14 @@ from . import workspace_api as api
 def _text(value, field, limit=200, required=False):
     result = api._text(value, field, required=required)
     if len(result) > limit or "\x00" in result:
-        raise HTTPException(422, f"Le champ {field} est trop long ou contient un caractère invalide")
+        raise HTTPException(422, f"The field {field} is too long or contains an invalid character")
     return result
 
 
 def _style(sid, active=False):
     s = store.get_style(api._identifier(sid))
     if not s or active and s.get("archived"):
-        raise HTTPException(404, "Style visuel introuvable ou archivé")
+        raise HTTPException(404, "Visual style not found or archived")
     s = copy.deepcopy(s)
     s["workspace_references"] = api._style_references(s)
     return s
@@ -42,25 +42,25 @@ def _save_channel(c):
 def _update_style(s, body):
     if "image_provider" in body:
         if body["image_provider"] not in ("cli_proxy", "google_flow"):
-            raise HTTPException(422, "Fournisseur image inconnu")
+            raise HTTPException(422, "Unknown image provider")
         s["workspace_image_provider"] = body["image_provider"]
     if "image_model" in body:
-        s["visuals"]["image_model"] = _text(body["image_model"], "modèle image", 200, required=True).strip()
+        s["visuals"]["image_model"] = _text(body["image_model"], "image model", 200, required=True).strip()
     for field, section, key in (("prompt", "visuals", "art_style"),
                                 ("background_direction", "visuals", "background_direction"),
                                 ("thumbnail_prompt", "thumbnail", "style")):
         if field in body:
             s[section][key] = _text(body[field], field, 60000, required=field == "prompt")
     if "name" in body:
-        s["name"] = _text(body["name"], "nom", required=True).strip()
+        s["name"] = _text(body["name"], "name", required=True).strip()
     if "references" in body:
         supplied = body["references"]
         current = {r["path"]: r for r in s.get("workspace_references", [])}
         if not isinstance(supplied, list) or any(not isinstance(r, dict) for r in supplied):
-            raise HTTPException(422, "Indiquez les références existantes dans leur ordre")
+            raise HTTPException(422, "Specify the existing references in their order")
         paths = [r.get("path") for r in supplied]
         if any(not isinstance(p, str) or p not in current for p in paths) or len(paths) != len(set(paths)):
-            raise HTTPException(422, "Les références doivent déjà exister et ne peuvent pas être répétées")
+            raise HTTPException(422, "References must already exist and cannot be repeated")
         s["workspace_references"] = [{k: v for k, v in current[p].items() if k not in ("url", "exists")} for p in paths]
         s["visuals"]["style_refs"] = paths
         s["visuals"]["reference_sources"] = copy.deepcopy(s["workspace_references"])
@@ -68,20 +68,20 @@ def _update_style(s, body):
         if field in body:
             path = body[field]
             if path is not None and not isinstance(path, str):
-                raise HTTPException(422, "L'aperçu doit être un chemin d'image existant")
+                raise HTTPException(422, "The preview must be an existing image path")
             allowed = {r["path"] for r in s.get("workspace_references", [])}
             allowed.add(s[section].get("preview"))
             if path and (path not in allowed or not api._file_digest(store.style_dir(s["id"]), path)):
-                raise HTTPException(422, "Choisissez un aperçu parmi les images de ce style")
+                raise HTTPException(422, "Choose a preview from this style's images")
             s[section]["preview"] = path or None
     if "archived" in body:
         if not isinstance(body["archived"], bool):
-            raise HTTPException(422, "Le statut archivé doit être vrai ou faux")
+            raise HTTPException(422, "Archived status must be true or false")
         if body["archived"]:
             if s["id"] == api._default_style_id():
-                raise HTTPException(409, "Le style commun du studio ne peut pas être archivé")
+                raise HTTPException(409, "The studio's shared style cannot be archived")
             if any(p["style_id"] == s["id"] for p in api._profiles()):
-                raise HTTPException(409, "Changez d'abord le style par défaut des chaînes qui utilisent ce style")
+                raise HTTPException(409, "First change the default style of the channels that use this style")
         s["archived"] = body["archived"]
     s["updated"] = now()
     return s
@@ -96,12 +96,12 @@ def _update_channel(c, body):
             c[field] = _text(body[field], field, limit, required=field == "name").strip()
     if "language" in body:
         if body["language"] not in ("English", "French", "Spanish", "German", "Italian", "Portuguese", "Japanese"):
-            raise HTTPException(422, "Choisissez une langue disponible")
+            raise HTTPException(422, "Choose an available language")
         c["language"] = body["language"]
     if "target_minutes" in body:
         minutes = body["target_minutes"]
-        if isinstance(minutes, bool) or not isinstance(minutes, (int, float)) or not math.isfinite(minutes) or not 20 <= minutes <= 25:
-            raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
+        if isinstance(minutes, bool) or not isinstance(minutes, (int, float)) or not math.isfinite(minutes) or not (20 if c.get("historical_profile") else 3) <= minutes <= (25 if c.get("historical_profile") else 30):
+            raise HTTPException(422, "Choose a target duration within this channel’s range")
         c["target_minutes"] = minutes
     if "style_id" in body:
         _style(body["style_id"], active=True)
@@ -113,7 +113,7 @@ def _update_channel(c, body):
         c["style_id"] = body["style_id"]
     if "archived" in body:
         if not isinstance(body["archived"], bool):
-            raise HTTPException(422, "Le statut archivé doit être vrai ou faux")
+            raise HTTPException(422, "Archived status must be true or false")
         if not body["archived"]:
             _style(c["style_id"], active=True)
         c["archived"] = body["archived"]
@@ -122,15 +122,15 @@ def _update_channel(c, body):
 
 
 def _character_fields(s, body):
-    name = _text(body.get("name", ""), "personnage", 100, required=True).strip()
+    name = _text(body.get("name", ""), "character", 100, required=True).strip()
     variant = api._identifier(body.get("variant", "default"))
-    description = _text(body.get("description", ""), "description du personnage", 6000, required=True).strip()
+    description = _text(body.get("description", ""), "character description", 6000, required=True).strip()
     entries = s.get("workspace_cast_registry") or {}
     if any(other != name and other.casefold() == name.casefold() for other in entries):
-        raise HTTPException(422, "Utilisez le nom exact du personnage existant")
+        raise HTTPException(422, "Use the exact name of the existing character")
     for field in ("is_main", "verify"):
         if field in body and type(body[field]) is not bool:
-            raise HTTPException(422, "Le choix du personnage principal et la validation doivent être explicites")
+            raise HTTPException(422, "The main character choice and validation must be explicit")
     return name, variant, description
 
 
@@ -140,7 +140,7 @@ def _save_character(s, name, variant, description, ref=None, is_main=None, verif
     selected = entry["variants"].get(variant)
     if selected is None:
         if not ref:
-            raise HTTPException(404, "Variante de personnage introuvable")
+            raise HTTPException(404, "Character variant not found")
         selected = entry["variants"][variant] = {"description": description, "references": []}
     selected["description"] = description
     if ref:
@@ -150,7 +150,7 @@ def _save_character(s, name, variant, description, ref=None, is_main=None, verif
         for image in selected["references"]:
             digest = api._file_digest(store.style_dir(s["id"]), image.get("path"))
             if not digest or digest != image.get("sha256"):
-                raise HTTPException(409, "Une référence a changé ou est introuvable ; importez une nouvelle image")
+                raise HTTPException(409, "A reference has changed or cannot be found; import a new image")
             image["review_state"] = "verified"
     if is_main:
         s["workspace_main_character"] = name
@@ -184,12 +184,12 @@ def install(app):
                 s[section][key] = []
             s["visuals"]["preview"] = None
             s["thumbnail"]["preview"] = None
-        name = _text(body.get("name", ""), "nom", required=True)
+        name = _text(body.get("name", ""), "name", required=True)
         if not body.get("base_id"):
-            _text(body.get("prompt", ""), "prompt vidéo", 60000, required=True)
+            _text(body.get("prompt", ""), "video prompt", 60000, required=True)
         s = _update_style(s, body | {"name": name})
         if not s["visuals"].get("art_style", "").strip():
-            raise HTTPException(422, "Le prompt du style vidéo est requis")
+            raise HTTPException(422, "The video style prompt is required")
         if body.get("base_id"):
             import shutil
             shutil.copytree(store.style_dir(base["id"]), store.style_dir(s["id"]))
@@ -234,21 +234,21 @@ def install(app):
     @router.post("/channels", status_code=201)
     async def create_channel(body: dict):
         if not body.get("voice"):
-            raise HTTPException(422, "Indiquez l'ID de voix ElevenLabs de cette nouvelle chaîne")
+            raise HTTPException(422, "Specify the ElevenLabs voice ID for this new channel")
         if not body.get("style_id"):
-            raise HTTPException(422, "Choisissez le style par défaut de la chaîne")
+            raise HTTPException(422, "Choose the channel's default style")
         base = _style(api._default_style_id(), active=True)
         c = {"id": "channel-" + uuid.uuid4().hex[:12], "name": "", "handle": "", "description": "",
              "language": "English", "kind": "long", "auto_resolve": False, "target_minutes": 22,
              "voice": copy.deepcopy(base["voice"]), "created": now(), "archived": False}
         c["voice"]["provider"] = "algrow"
-        return _save_channel(_update_channel(c, body | {"name": _text(body.get("name", ""), "nom", required=True)}))
+        return _save_channel(_update_channel(c, body | {"name": _text(body.get("name", ""), "name", required=True)}))
 
     @router.put("/channels/{cid}")
     async def update_channel(cid: str, body: dict):
         c = _channel(cid)
         if not c:
-            raise HTTPException(404, "Chaîne introuvable")
+            raise HTTPException(404, "Channel not found")
         return _save_channel(_update_channel(c, body))
 
     existing = list(app.router.routes)

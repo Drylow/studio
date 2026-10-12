@@ -22,24 +22,24 @@ def registry(p):
     for source in (style, p):
         entries = source.get("workspace_cast_registry") or {}
         if not isinstance(entries, dict):
-            raise HTTPException(422, "Le registre des personnages doit être un objet")
+            raise HTTPException(422, "The character registry must be an object")
         merged.update(copy.deepcopy(entries))
     if len({name.casefold() for name in merged if isinstance(name, str)}) != len(merged):
-        raise HTTPException(422, "Le registre doit distinguer chaque identité par un nom unique")
+        raise HTTPException(422, "The registry must distinguish each identity with a unique name")
     for name, entry in merged.items():
         if (not isinstance(name, str) or not name.strip() or name != name.strip()
                 or not isinstance(entry, dict) or type(entry.get("required", True)) is not bool
                 or not isinstance(entry.get("variants"), dict) or not entry["variants"]):
-            raise HTTPException(422, "Une identité du registre est invalide")
+            raise HTTPException(422, "A registry identity is invalid")
         if "prompt_label" in entry and (not isinstance(entry["prompt_label"], str)
                 or not entry["prompt_label"].strip() or entry["prompt_label"] != entry["prompt_label"].strip()):
-            raise HTTPException(422, "Le libellé visuel du personnage doit être un texte non vide, sans espaces aux extrémités")
+            raise HTTPException(422, "The character's visual label must be non-empty text, with no leading or trailing spaces")
         for key, variant in entry["variants"].items():
             if (not isinstance(key, str) or not key.strip() or key != key.strip()
                     or not isinstance(variant, dict) or not isinstance(variant.get("description"), str)
                     or not variant["description"].strip() or not isinstance(variant.get("references"), list)
                     or not variant["references"]):
-                raise HTTPException(422, "Une variante de personnage est incomplète")
+                raise HTTPException(422, "A character variant is incomplete")
     return merged
 
 
@@ -77,10 +77,10 @@ def _reference(p, ref, name, key):
             or ref.get("character") != name or ref.get("variant") != key or ref.get("role") != "identity"
             or ref.get("review_state") != "verified" or not isinstance(ref.get("sha256"), str)
             or len(ref["sha256"]) != 64):
-        raise HTTPException(422, "La référence d’identité doit être explicite, vérifiée et liée à sa variante")
+        raise HTTPException(422, "The identity reference must be explicit, verified, and linked to its variant")
     base = store.style_dir(p["style_id"]) if ref["owner"] == "style" else store.project_dir(p["id"])
     if api._file_digest(base, ref.get("path")) != ref["sha256"]:
-        raise HTTPException(409, "Une référence d’identité est absente ou a changé")
+        raise HTTPException(409, "An identity reference is missing or has changed")
     return copy.deepcopy(ref)
 
 
@@ -90,10 +90,10 @@ def selected(p, scene):
     variants = scene.get("character_variants") or {}
     if (not isinstance(cast, list) or any(not isinstance(name, str) for name in cast)
             or not isinstance(variants, dict) or any(name not in cast or name not in entries for name in variants)):
-        raise HTTPException(422, "Choisissez les variantes uniquement pour les personnages présents dans ce plan")
+        raise HTTPException(422, "Choose variants only for the characters present in this shot")
     if (len({name.strip().casefold() for name in cast}) != len(cast)
             or any(name not in entries and name.strip().casefold() in {key.casefold() for key in entries} for name in cast)):
-        raise HTTPException(422, "Utilisez les noms exacts du registre, une fois par identité")
+        raise HTTPException(422, "Use the exact registry names, once per identity")
     output = []
     for name in cast:
         entry = entries.get(name)
@@ -103,7 +103,7 @@ def selected(p, scene):
         if key is None and not entry.get("required", True):
             continue
         if not isinstance(key, str) or key not in entry["variants"]:
-            raise HTTPException(422, "Une variante explicite manque pour le personnage " + name)
+            raise HTTPException(422, "An explicit variant is missing for the character " + name)
         for ref in entry["variants"][key]["references"]:
             output.append(_reference(p, ref, name, key))
     return output
@@ -144,7 +144,7 @@ def author(p, scene, base_refs=()):
     seen = {(ref.get("owner"), ref.get("path")) for ref in refs}
     for ref in base_refs:
         if not isinstance(ref, dict):
-            raise HTTPException(422, "La liste ordonnée de références est invalide")
+            raise HTTPException(422, "The ordered list of references is invalid")
         if (ref.get("role") == "identity" or ref.get("character") and ref["character"] not in scene.get("characters", [])
                 or registry(p) and ref.get("role") == "protagonist-identity"):
             continue
@@ -163,10 +163,10 @@ def validate(p, scene):
     required = selected(p, scene)
     actual = [ref for ref in scene.get("references", []) if ref.get("role") == "identity"]
     if [_identity_key(ref) for ref in actual] != [_identity_key(ref) for ref in required]:
-        raise HTTPException(422, "Les références d’identité du plan ne correspondent pas à son casting et ses variantes")
+        raise HTTPException(422, "The shot's identity references do not match its cast and variants")
     # Both registry and actual attachment must remain reviewed and fingerprinted.
     for ref in actual:
         _reference(p, ref, ref["character"], ref["variant"])
     block = binding(p, scene)
     if block and block not in (scene.get("prompt") or ""):
-        raise HTTPException(422, "Le prompt enregistré doit lier les indices des références aux bonnes identités et tenues")
+        raise HTTPException(422, "The saved prompt must link the reference indices to the correct identities and outfits")

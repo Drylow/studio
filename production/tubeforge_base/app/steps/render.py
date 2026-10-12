@@ -154,9 +154,9 @@ async def render(p: dict, progress=None) -> dict:
     scenes = p["scenes"]
     missing = [s["id"] for s in scenes if not s.get("image") or not (pdir / s["image"]).exists()]
     if missing:
-        raise RuntimeError(f"Scènes sans image : {missing[:15]}{'…' if len(missing) > 15 else ''}")
+        raise RuntimeError(f"Scenes without image: {missing[:15]}{'…' if len(missing) > 15 else ''}")
     if not p.get("voiceover"):
-        raise RuntimeError("Pas de voix off")
+        raise RuntimeError("No voiceover")
     v = p["settings"]["visuals"]
     W, H = (1080, 1920) if v.get("aspect") == "9:16" else (1920, 1080)
     total = p["voiceover"]["duration"]
@@ -208,8 +208,8 @@ async def render(p: dict, progress=None) -> dict:
     progress_frames = [0] * len(chunks)
     t_render = time.time()
     last_decile = [-1]
-    events.log(f"Rendu : {len(scenes)} scènes, {total_frames} images vidéo ({W}×{H}, {FPS} i/s), "
-               f"{len(chunks)} processus en parallèle")
+    events.log(f"Rendu : {len(scenes)} scenes, {total_frames} video frames ({W}×{H}, {FPS} i/s), "
+               f"{len(chunks)} parallel processes")
 
     async def run_chunk(i: int, chunk: list[dict]) -> Path:
         out = out_dir / f"chunk_{i:02d}.mp4"
@@ -244,7 +244,7 @@ async def render(p: dict, progress=None) -> dict:
         code = await proc.wait()
         err = await err_task
         if code != 0:
-            raise RuntimeError(f"Rendu segment {i} échoué : {err.decode(errors='ignore')[-800:]}")
+            raise RuntimeError(f"Rendu segment {i} failed: {err.decode(errors='ignore')[-800:]}")
         jf.unlink(missing_ok=True)
         return out
 
@@ -255,12 +255,12 @@ async def render(p: dict, progress=None) -> dict:
         lst = out_dir / "chunks.txt"
         lst.write_text("".join(f"file '{o.name}'\n" for o in outs), encoding="utf-8")
         if progress:
-            progress(total_frames, total_frames, "Assemblage audio + vidéo…")
+            progress(total_frames, total_frames, "Assembling audio + video…")
         audio = (pdir / p["voiceover"]["file"]).resolve()
         if tiktok:  # voix + bruitages (whoosh, impact…) mixés à l'image près
             audio = (out_dir / "mix.wav").resolve()
             await asyncio.to_thread(mix_audio, (pdir / p["voiceover"]["file"]).resolve(), tiktok["sfx"], audio)
-            events.log(f"Bruitages : {len(tiktok['sfx'])} placés (accroche, coupes)")
+            events.log(f"Bruitages : {len(tiktok['sfx'])} placed (hook, cuts)")
         await run_cmd([config.get("FFMPEG"), "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "chunks.txt",
                        "-i", str(audio), "-map", "0:v", "-map", "1:a",
                        "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart",
@@ -273,6 +273,6 @@ async def render(p: dict, progress=None) -> dict:
                    "ts": now(), "width": W, "height": H, "download_name": f"{safe_title}.mp4"}
     store.save_project(p)
     size = (pdir / "render/final.mp4").stat().st_size / 1e6
-    events.log(f"✓ Vidéo rendue : {events.fmt_duration(total_frames / FPS)}, {size:.0f} Mo "
+    events.log(f"✓ Video rendered: {events.fmt_duration(total_frames / FPS)}, {size:.0f} Mo "
                f"(en {events.fmt_duration(time.time() - t_render)})", "ok")
     return p["render"]

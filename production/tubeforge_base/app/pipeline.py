@@ -49,7 +49,7 @@ def running_ids() -> list[str]:
 def start(pid: str, fn, *args) -> None:
     """Lance fn(p, *args) en tâche de fond (une seule tâche principale par projet)."""
     if is_running(pid):
-        raise Busy("Une génération est déjà en cours sur ce projet")
+        raise Busy("A generation is already in progress on this project")
     _jobs[pid] = asyncio.create_task(_wrap(pid, fn, *args))
 
 
@@ -72,14 +72,14 @@ async def _wrap(pid: str, fn, *args) -> None:
     try:
         await fn(p, *args)
     except asyncio.CancelledError:
-        events.log("■ Génération arrêtée", "warn")
+        events.log("■ Generation stopped", "warn")
         for st in p["steps"].values():
             if st["state"] == "running":
-                st.update(state="error", msg="Arrêté")
+                st.update(state="error", msg="Stopped")
         for s in p.get("scenes") or []:
             if s.get("status") in ("queued", "running"):
                 s["status"] = "idle"
-        p["error"] = "Génération arrêtée"
+        p["error"] = "Generation stopped"
     except Exception as e:  # noqa: BLE001
         log.debug("Projet %s : %s\n%s", pid, e, traceback.format_exc())
         events.log(f"✗ ERREUR : {str(e)[:400]}", "error")
@@ -106,8 +106,8 @@ def _progress(p: dict, key: str):
     return cb
 
 
-STEP_NAMES = {"script": "Script", "voiceover": "Voix off", "visuals": "Visuels", "render": "Rendu",
-              "thumbnail": "Miniatures", "resolve": "Montage DaVinci Resolve"}
+STEP_NAMES = {"script": "Script", "voiceover": "Voiceover", "visuals": "Visuels", "render": "Rendu",
+              "thumbnail": "Thumbnails", "resolve": "Montage DaVinci Resolve"}
 
 
 async def _step(p: dict, key: str, coro_fn, *args, **kw):
@@ -122,11 +122,11 @@ async def _step(p: dict, key: str, coro_fn, *args, **kw):
         raise
     except Exception as e:
         st.update(state="error", msg=str(e)[:500])
-        events.log(f"✗ {STEP_NAMES.get(key, key)} a échoué après {events.fmt_duration(time.time() - t0)}", "error")
+        events.log(f"✗ {STEP_NAMES.get(key, key)} failed after {events.fmt_duration(time.time() - t0)}", "error")
         store.save_project(p)
         raise
     st.update(state="done", msg="", took=round(time.time() - t0))
-    events.log(f"■ {STEP_NAMES.get(key, key)} terminé en {events.fmt_duration(time.time() - t0)}", "step")
+    events.log(f"■ {STEP_NAMES.get(key, key)} completed in {events.fmt_duration(time.time() - t0)}", "step")
     store.save_project(p)
     return res
 
@@ -143,7 +143,7 @@ def _invalidate_after_script(p: dict) -> None:
 
 async def do_script(p: dict) -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Projet dirige par Codex : importer un script valide, sans reecriture automatique")
+        raise RuntimeError("Codex-led project: import a valid script, with no automatic rewrite")
     if p.get("script"):  # « Tout réécrire » : on repart de zéro ; sinon on reprend l'écriture interrompue
         p.pop("script_job", None)
 
@@ -155,15 +155,15 @@ async def do_script(p: dict) -> None:
 
 async def do_voiceover(p: dict) -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Projet dirige par Codex : importer la narration et son decoupage valides")
+        raise RuntimeError("Codex-led project: import the valid narration and scene breakdown")
     if not p.get("script"):
         raise RuntimeError("Pas de script")
 
     async def run(progress):
-        progress(0, 1, "Synthèse vocale…")
+        progress(0, 1, "Text-to-speech…")
         vs = dict(p["settings"]["voice"], language=p["settings"].get("language", "English"))
         res = await tts.synthesize(p["script"], vs, store.project_dir(p["id"]),
-                                   progress=lambda d, t: progress(d, t, f"Voix {d}/{t} segments"))
+                                   progress=lambda d, t: progress(d, t, f"Voice {d}/{t} segments"))
         if (p.get("short") or {}).get("kind") == "promo":
             from .shorts import hold_tail
             res["duration"] = await hold_tail(store.project_dir(p["id"]) / res["file"])
@@ -202,7 +202,7 @@ def resplit(p: dict) -> None:
     """Redécoupe les scènes avec les durées actuelles (sans régénérer la voix)."""
     words = store.load_words(p["id"])
     if not words or not p.get("voiceover"):
-        raise RuntimeError("Il faut une voix off pour découper les scènes")
+        raise RuntimeError("A voice-over is needed to split the scenes")
     _split_scenes(p, words, p["voiceover"]["duration"])
     p["render"] = None
     p["steps"]["visuals"] = {"state": "idle", "msg": "", "done": 0, "total": 0}
@@ -212,35 +212,35 @@ def resplit(p: dict) -> None:
 
 async def do_detect_characters(p: dict) -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Projet dirige par Codex : personnages et references choisis manuellement")
+        raise RuntimeError("Project managed by Codex: characters and references chosen manually")
     from .steps import visuals as vis
 
     async def run(progress):
-        progress(0, 1, "Lecture du script et détection des personnages…")
+        progress(0, 1, "Reading the script and detecting characters…")
         added = await vis.detect_characters(p, max_n=8, generate_images=False)
-        progress(0, len(added), f"{len(added)} personnage(s) trouvé(s) — création des fiches…")
+        progress(0, len(added), f"{len(added)} character(s) found — creating profiles…")
         await vis.ensure_character_images(p, added)
-        p["steps"]["visuals"]["msg"] = f"{len(added)} personnage(s) ajouté(s) — décoche ceux à ne pas garder"
+        p["steps"]["visuals"]["msg"] = f"{len(added)} character(s) added — uncheck those you don\'t want to keep"
     await _step(p, "visuals", run)
-    p["steps"]["visuals"]["msg"] = "Personnages prêts — décoche ceux à ne pas garder"
+    p["steps"]["visuals"]["msg"] = "Characters ready — uncheck those not to keep"
     store.save_project(p)
 
 
 async def do_prompts(p: dict, only_missing: bool = True) -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Projet dirige par Codex : importer les prompts et references valides")
+        raise RuntimeError("Codex-led project: import the valid prompts and references")
     if not p.get("scenes"):
-        raise RuntimeError("Génère la voix off d'abord (les scènes en dépendent)")
+        raise RuntimeError("Generate the voice-over first (the scenes depend on it)")
     await _step(p, "visuals", visuals.write_prompts, p, only_missing=only_missing)
-    p["steps"]["visuals"]["msg"] = "Prompts prêts — vérifie-les puis génère les images"
+    p["steps"]["visuals"]["msg"] = "Prompts ready — review them then generate the images"
     store.save_project(p)
 
 
 async def do_images(p: dict, ids: list[int] | None = None, retry_failed: bool = True) -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Projet dirige par Codex : utiliser les images relues et leurs references explicites")
+        raise RuntimeError("Codex-led project: use the reviewed images and their explicit references")
     if not p.get("scenes"):
-        raise RuntimeError("Pas de scènes")
+        raise RuntimeError("No scenes")
     if any(not s.get("prompt") for s in p["scenes"] if ids is None or s["id"] in ids):
         await do_prompts(p)
     p["prompts_approved"] = True
@@ -253,7 +253,7 @@ async def do_images(p: dict, ids: list[int] | None = None, retry_failed: bool = 
             progress(0, len(failed), f"Nouvel essai de {len(failed)} image(s)…")
             res = await visuals.generate_images(p, failed, progress=progress)
         if res["failed"]:
-            raise RuntimeError(f"{res['failed']} image(s) en échec — voir les scènes en rouge")
+            raise RuntimeError(f"{res['failed']} image(s) failed — see the scenes in red")
     await _step(p, "visuals", run)
     p["render"] = None if p.get("render") and ids is None else p.get("render")
     store.save_project(p)
@@ -274,7 +274,7 @@ async def do_resolve(p: dict, render: bool = True) -> None:
 
 async def do_thumbnails(p: dict, count: int | None = None, instruction: str = "") -> None:
     if p.get("codex_directed"):
-        raise RuntimeError("Miniature dirigee par Codex : aucun concept automatique")
+        raise RuntimeError("Codex-led thumbnail: no automatic concept")
     await _step(p, "thumbnail", thumbs_step.generate, p, count=count, instruction=instruction)
 
 
@@ -283,9 +283,9 @@ async def run_all(p: dict, mode: str | None = None) -> None:
     mode = mode or p.get("mode", "auto")
     t_all = time.time()
     if project_slots().locked():
-        events.log(f"En file d'attente ({config.get_int('PROJECT_PARALLEL')} vidéos max en parallèle)…")
+        events.log(f"Queued ({config.get_int('PROJECT_PARALLEL')} videos max in parallel)…")
     async with project_slots():
-        events.log(f"══ Démarrage ({'Auto' if mode == 'auto' else 'Relecture'}) ══", "step")
+        events.log(f"══ Starting ({'Auto' if mode == 'auto' else 'Relecture'}) ══", "step")
         if not p.get("script"):
             await do_script(p)
         if not p.get("title"):
@@ -304,7 +304,7 @@ async def run_all(p: dict, mode: str | None = None) -> None:
         if not p["scenes"] or any(not s.get("prompt") for s in p["scenes"]):
             await do_prompts(p)
         if mode == "review" and not p.get("prompts_approved"):
-            p["steps"]["visuals"]["msg"] = "En attente de ta relecture des prompts"
+            p["steps"]["visuals"]["msg"] = "Waiting for your prompt review"
             store.save_project(p)
             return
         thumbs_needed = not p.get("thumbnails") and int(p["settings"]["thumbnail"].get("count", 0) or 0) > 0
@@ -313,18 +313,18 @@ async def run_all(p: dict, mode: str | None = None) -> None:
             try:
                 await do_thumbnails(p)
             except Exception as e:  # noqa: BLE001 — une miniature ratée ne bloque pas la vidéo
-                log.warning("miniatures %s : %s", p["id"], e)
+                log.warning("thumbnails %s: %s", p["id"], e)
 
         if any(not s.get("image") for s in p["scenes"]):
             await asyncio.gather(do_images(p), thumbs_safe() if thumbs_needed else asyncio.sleep(0))
         elif thumbs_needed:
             await thumbs_safe()
         if mode == "review":
-            p["steps"]["render"]["msg"] = "Images prêtes — vérifie-les puis lance le rendu"
+            p["steps"]["render"]["msg"] = "Images ready — review them then start rendering"
             store.save_project(p)
             return
         await do_render(p)
-        events.log(f"══ VIDÉO TERMINÉE en {events.fmt_duration(time.time() - t_all)} ══", "ok")
+        events.log(f"══ VIDEO COMPLETED in {events.fmt_duration(time.time() - t_all)} ══", "ok")
     from . import channels
     # short d'une chaîne : montage dans le projet Resolve de la chaîne (une seule timeline à la fois)
     ch = channels.get(p.get("channel_id"))
@@ -336,7 +336,7 @@ async def run_all(p: dict, mode: str | None = None) -> None:
             try:
                 await do_resolve(p, True)
             except Exception as e:  # noqa: BLE001 — la vidéo automatique reste publiable
-                events.log(f"⚠ Montage Resolve impossible ({str(e)[:200]}) — la vidéo automatique reste prête", "warn")
+                events.log(f"⚠ Montage Resolve impossible ({str(e)[:200]}) — the automatic video remains ready", "warn")
     # shorts pub TikTok automatiques une fois la vidéo longue terminée (hors du créneau de cette vidéo)
     n_promo = int(p.get("auto_promo_shorts") or 0)
     if n_promo > 0 and p.get("format") != "short" and p.get("render") and not p.get("promo_done"):
@@ -355,20 +355,20 @@ async def run_all(p: dict, mode: str | None = None) -> None:
 # ------------------------------------------------------------------ batch CSV
 
 ALIASES = {
-    "title": ["title", "titre", "nom", "name", "video", "vidéo"],
+    "title": ["title", "title", "name", "name", "video", "video"],
     "topic": ["topic", "sujet", "context", "contexte", "instructions", "notes", "description", "brief"],
     "style": ["style", "style_id"],
-    "words": ["words", "mots", "word_count", "longueur", "length", "nb_mots"],
+    "words": ["words", "words", "word_count", "longueur", "length", "nb_mots"],
     "video_url": ["video_url", "youtube", "url", "reference", "ref", "lien"],
-    "script": ["script", "texte", "custom_script"],
+    "script": ["script", "text", "custom_script"],
     "aspect": ["aspect", "format", "ratio"],
-    "voice_id": ["voice_id", "voice", "voix"],
-    "provider": ["provider", "tts", "fournisseur"],
+    "voice_id": ["voice_id", "voice", "voice"],
+    "provider": ["provider", "tts", "provider"],
     "language": ["language", "langue", "lang"],
-    "characters": ["characters", "personnages", "persos"],
+    "characters": ["characters", "characters", "persos"],
     "shorts": ["shorts", "shorts_pub", "promo", "nb_shorts", "count", "nombre"],
-    "channel": ["channel", "chaine", "chaîne", "compte", "account", "tiktok"],
-    "seconds": ["seconds", "secondes", "duree", "durée", "durée visée (s)", "duree visee (s)", "duration"],
+    "channel": ["channel", "channel", "channel", "compte", "account", "tiktok"],
+    "seconds": ["seconds", "secondes", "duree", "duration", "target duration (s)", "duree visee (s)", "duration"],
     "source": ["source", "clip", "clipper", "a_clipper", "from", "depuis"],
 }
 
@@ -412,7 +412,7 @@ def parse_csv(raw: bytes) -> list[dict]:
     return out
 
 
-LONG_WORDS = ("long", "longue", "youtube", "16:9", "video", "vidéo")
+LONG_WORDS = ("long", "longue", "youtube", "16:9", "video", "video")
 SHORT_WORDS = ("short", "tiktok", "court", "reel", "shorts", "9:16")
 
 
@@ -450,7 +450,7 @@ def create_from_rows(rows: list[dict], mode: str, default_style: str,
             names = [x.strip().lower() for x in re.split(r"[,;+/]", r["characters"]) if x.strip()]
             pool = styles[sid].get("characters", [])
             chars = [c["id"] for c in pool if c["id"].lower() in names or c["name"].lower() in names]
-            if any(n in ("aucun", "none", "non") for n in names):
+            if any(n in ("none", "none", "non") for n in names):
                 chars = []
         p = store.create_project(r.get("title", ""), sid, topic=r.get("topic", ""),
                                  video_url=r.get("video_url", ""), mode=mode,
@@ -497,7 +497,7 @@ async def clip_row(r: dict, mode: str, default_channel: str | None = None) -> li
     p_long = next((p for p in store.list_projects(None) if p["id"] == src or (p.get("title") or "").lower() == key
                    or (p.get("title") or "").lower().startswith(key)), None)
     if not p_long:
-        raise ValueError(f"Vidéo à clipper introuvable : « {src} »")
+        raise ValueError(f"Video to clip not found: \" {src} »")
     return await shorts.shorts_from_long(p_long, count, mode, kind=kind, channel=ch)
 
 

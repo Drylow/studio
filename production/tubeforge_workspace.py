@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_writing.py', 'workspace_access.py', 'studio_bridge.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     web = root / 'app/web'
@@ -32,6 +32,15 @@ def deploy(root, seed=True):
     for name in ('workspace.js', 'workspace.css'):
         shutil.copy2(support / name, web / name)
     shutil.copy2(support / 'workspace.html', web / 'index.html')
+    # Patch upgraded installations too; the portable base contains this already.
+    replace_once(root, 'app/store.py', '        "id": pid,\n',
+                 '        "id": pid,\n        "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),\n')
+    duplicate = root / 'app/store.py'
+    source = duplicate.read_text(encoding='utf-8')
+    if "from .workspace_identity import current_owner" not in source:
+        replace_once(root, 'app/store.py', '    p["steps"]["render"] = {"state": "idle", "msg": "", "done": 0, "total": 0}\n',
+                     '    from .workspace_identity import current_owner\n    p["owner_id"] = current_owner()\n'
+                     '    p["steps"]["render"] = {"state": "idle", "msg": "", "done": 0, "total": 0}\n')
     replace_once(root, 'app/config.py', 'SECRET_KEYS = ',
                  'DEFAULTS.update({"IMAGE_PROVIDER": "cli_proxy", "USEAPI_API_KEY": "",\n'
                  '                 "USEAPI_IMAGE_MODEL": "", "USEAPI_IMAGE_CONCURRENCY": "3"})\n\n'
@@ -56,7 +65,7 @@ def deploy(root, seed=True):
                  '        finally:\n'
                  '            STATS["image"]["active"] -= 1\n'
                  '    if provider not in (None, "cli_proxy"):\n'
-                 '        raise ApiError("Fournisseur image inconnu")\n'
+                 '        raise ApiError("Unknown image provider")\n'
                  '    size, ratio = ASPECTS.get(aspect, ASPECTS["16:9"])')
     replace_once(root, 'app/llm.py', '    _sems.clear()\n',
                  '    _sems.clear()\n    from . import google_flow\n    google_flow.reset()\n')
@@ -71,7 +80,8 @@ def deploy(root, seed=True):
                  '                                    label=f"Fiche {c[\'name\']}", provider=v.get("image_provider", "cli_proxy"))')
     replace_once(root, 'app/steps/visuals.py', '                                                label=f"Image #{s[\'id\']}")',
                  '                                                label=f"Image #{s[\'id\']}", provider=v.get("image_provider", "cli_proxy"))')
-    replace_once(root, 'app/steps/thumbnails.py', '                                           label="Miniature")',
+    if 'provider=t.get("image_provider", "cli_proxy")' not in (root / 'app/steps/thumbnails.py').read_text(encoding='utf-8'):
+      replace_once(root, 'app/steps/thumbnails.py', '                                           label="Miniature")',
                  '                                           label="Miniature", provider=t.get("image_provider", "cli_proxy"))')
     if 'workspace_api.install(app)' not in (root / 'app/server.py').read_text(encoding='utf-8'):
         replace_once(root, 'app/server.py',
@@ -99,19 +109,21 @@ def deploy(root, seed=True):
     replace_once(root, 'app/server.py',
         'if request.url.path in ("/", "/index.html", "/app.js", "/style.css"):',
         'if request.url.path in ("/", "/index.html", "/legacy.html", "/app.js", "/style.css", "/workspace.js", "/workspace.css"):')
-    replace_once(root, 'app/server.py',
+    if 'if p.get("codex_directed"):' not in (root / 'app/server.py').read_text(encoding='utf-8'):
+      replace_once(root, 'app/server.py',
         '    mode = body.get("mode", "same")\n',
         '    if p.get("codex_directed"):\n'
-        '        raise HTTPException(409, "Correction dirigee par Codex : conserver le prompt et les references explicites")\n'
+        '        raise HTTPException(409, "Preserve the authored prompt and explicit references for this shot")\n'
         '    mode = body.get("mode", "same")\n')
-    replace_once(root, 'app/pipeline.py',
+    if 'if p.get("codex_directed"):' not in (root / 'app/pipeline.py').read_text(encoding='utf-8'):
+      replace_once(root, 'app/pipeline.py',
         'async def do_thumbnails(p: dict, count: int | None = None, instruction: str = "") -> None:\n',
         'async def do_thumbnails(p: dict, count: int | None = None, instruction: str = "") -> None:\n'
         '    if p.get("codex_directed"):\n'
-        '        raise RuntimeError("Miniature dirigee par Codex : aucun concept automatique")\n')
+        '        raise RuntimeError("Authored thumbnail: automatic concepts are disabled")\n')
     replace_once(root, 'app/web/app.js',
         "  if (p.render) return '<span class=\"chip ok\">\u2713 Vid\u00e9o pr\u00eate</span>';",
-        "  if (p.render) return '<span class=\"chip\">Export disponible - a verifier</span>';"
+        "  if (p.render) return '<span class=\"chip\">Export available - needs review</span>';"
     )
     old_ui = web / 'app.js'
     old_ui.write_text(old_ui.read_text(encoding='utf-8').replace('videos pretes', 'exports disponibles')
@@ -122,6 +134,8 @@ def deploy(root, seed=True):
         '    selected = p["settings"]["script"].get("model")\n'
         '    if selected:\n'
         '        return selected, "low" if p["settings"]["script"].get("mode") == "fast" else "medium"\n')
+    replace_once(root, 'app/config.py', '    "LLM_CONCURRENCY": "36",\n',
+                 '    "LLM_CONCURRENCY": "36",\n    "WORKSPACE_PLAN_CONCURRENCY": "6",\n')
     # Existing per-project text calls must not silently ignore the saved selection.
     for name in ('script.py', 'visuals.py'):
         path = root / 'app/steps' / name

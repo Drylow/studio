@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "survivor-patch",
-  "name": "Patch Survives — cartoon simple",
+  "name": "Patch Survives — Simple cartoon",
   "language": "English",
   "main_character": "Patch",
   "image_provider": "cli_proxy",

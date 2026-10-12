@@ -94,7 +94,7 @@ def test_failed_synthesis_retains_old_audio_and_sanitizes_error(workspace, monke
     old = copy.deepcopy(p["voiceover"])
     scenes = copy.deepcopy(p["scenes"])
     monkeypatch.setattr(voice.tts, "synthesize", AsyncMock(side_effect=RuntimeError("fixture-secret")))
-    with pytest.raises(RuntimeError, match="narration précédente") as exc:
+    with pytest.raises(RuntimeError, match="previous narration") as exc:
         asyncio.run(voice.narrate(p))
     assert "fixture-secret" not in str(exc.value)
     assert p["voiceover"] == old and p["scenes"] == scenes

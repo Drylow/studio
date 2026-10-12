@@ -80,7 +80,7 @@ async def render(p, jobs_scenes, total_frames, width, height, fps, out_dir, prog
         'backend': 'ovni', 'render_seconds': result['render_seconds'], 'qa_pending': True,
         'publication_ready': False}
     store.save_project(p)
-    events.log(f"OVNI : {total_frames} images video, rendu en {result['render_seconds']:.1f} s", 'ok')
+    events.log(f"OVNI : {total_frames} video images, rendered in {result['render_seconds']:.1f} s", 'ok')
     return p['render']
 
 

@@ -12,14 +12,14 @@ services:
       - no-new-privileges:true
     cap_drop:
       - ALL
+    env_file:
+      - ${TUBEFORGE_HOME:-/opt/tubeforge}/config/worker.env
     environment:
       TUBEFORGE_REQUIRE_AUTH: "1"
-      TUBEFORGE_USERS_FILE: /run/tubeforge/users.json
     volumes:
       - ${TUBEFORGE_HOME:-/opt/tubeforge}/data:/opt/studio/work/TubeForge/data
       - ${TUBEFORGE_HOME:-/opt/tubeforge}/config/app.env:/opt/studio/work/TubeForge/.env
       - ${TUBEFORGE_HOME:-/opt/tubeforge}/config/studio.env:/opt/studio/.env:ro
-      - ${TUBEFORGE_HOME:-/opt/tubeforge}/config:/run/tubeforge:ro
     networks:
       - coolify
     labels:

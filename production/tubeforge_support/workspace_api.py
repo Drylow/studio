@@ -19,6 +19,7 @@ from PIL import Image, UnidentifiedImageError
 
 from app import channels, config, google_flow, llm, pipeline, store
 from app.util import now, read_json, write_json
+from .workspace_identity import current_owner, owner_of, personal_projects
 
 
 PROFILE_NAMES = {
@@ -35,13 +36,13 @@ MAX_SCRIPT = 1024 * 1024
 
 def _identifier(value):
     if not isinstance(value, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", value):
-        raise HTTPException(422, "Identifiant invalide")
+        raise HTTPException(422, "Invalid identifier")
     return value
 
 
 def _text(value, field, required=False):
     if not isinstance(value, str) or (required and not value.strip()):
-        raise HTTPException(422, f"Le champ {field} doit contenir du texte" + (" et ne peut pas être vide" if required else ""))
+        raise HTTPException(422, f"The field {field} must contain text" + (" and cannot be empty" if required else ""))
     return value
 
 
@@ -57,18 +58,18 @@ def _check_image_provider(provider, style_id=None):
     selected = store.get_style(style_id) if style_id else None
     required = (selected or {}).get("workspace_image_provider") or _visual_policy().get("image_provider")
     if required and provider != required:
-        raise HTTPException(422, "Utilisez le fournisseur image configuré pour ce style")
+        raise HTTPException(422, "Use the image provider configured for this style")
 
 
 def _project(pid, writable=False):
     p = store.get_project(_identifier(pid))
     if not p or not p.get("codex_directed"):
-        raise HTTPException(404, "Projet dirigé par Codex introuvable")
+        raise HTTPException(404, "Codex-led project not found")
     if writable:
         from . import workspace_generation as generation
         if (pipeline.is_running(pid) or generation.batch_running(pid)
                 or pid in generation._active_projects):
-            raise HTTPException(409, "Une tâche est en cours sur ce projet")
+            raise HTTPException(409, "A task is in progress on this project")
     return copy.deepcopy(p)
 
 
@@ -134,8 +135,8 @@ def _profiles(include_archived=False):
                     "language": c.get("language", "English"),
                     "voice": dict(style.get("voice") or {}, **(c.get("voice") or {})),
                     "setting": c.get("setting", ""), "historical_profile": c.get("historical_profile", False),
-                    "configured": bool(c and style and not style.get("archived")), "duration_minutes_min": 20,
-                    "duration_minutes_max": 25,
+                    "configured": bool(c and style and not style.get("archived")), "duration_minutes_min": 20 if c.get('historical_profile') else 3,
+                    "duration_minutes_max": 25 if c.get('historical_profile') else 30,
                     "target_minutes": c.get("target_minutes", 22),
                     "style_prompt": style.get("visuals", {}).get("art_style", ""),
                     "thumbnail_prompt": style.get("thumbnail", {}).get("style", ""),
@@ -143,7 +144,7 @@ def _profiles(include_archived=False):
                     "video_preview": video_preview, "thumbnail_preview": thumbnail_preview,
                     "video_preview_url": f"/style-media/{sid}/{video_preview}" if video_preview else None,
                     "thumbnail_preview_url": f"/style-media/{sid}/{thumbnail_preview}" if thumbnail_preview else None,
-                    "preview_label": c.get("preview_label", "Apercu existant"),
+                    "preview_label": c.get("preview_label", "Existing preview"),
                     "references": refs,
                     "reference_update_pending": style.get("visuals", {}).get("reference_update_pending", True),
                     "reference_status": c.get("reference_status", "waiting_for_user_references")})
@@ -153,9 +154,9 @@ def _profiles(include_archived=False):
 def _profile(cid):
     profile = next((p for p in _profiles() if p["id"] == cid), None)
     if not profile:
-        raise HTTPException(422, "Chaîne inconnue")
+        raise HTTPException(422, "Unknown channel")
     if not profile["configured"]:
-        raise HTTPException(409, "La chaîne et son style doivent être préparés avant de créer une vidéo")
+        raise HTTPException(409, "The channel and its style must be prepared before creating a video")
     return profile
 
 
@@ -215,13 +216,13 @@ async def _proxy_catalog():
               "checked_at": now(), "error": None, "generation_tested": False,
               "provider_connection": "not_tested"}
     if not config.get("PROXY_BASE_URL") or not config.get("PROXY_API_KEY"):
-        result["error"] = "Le CLI Proxy n'est pas configuré"
+        result["error"] = "The Proxy CLI is not configured"
         return result
     try:
         response = await llm.client().get(llm._url("/models"), headers=llm._headers(),
                                           timeout=15, follow_redirects=False)
         if response.status_code != 200:
-            result["error"] = f"Le catalogue du CLI Proxy est indisponible (erreur {response.status_code})"
+            result["error"] = f"The CLI Proxy catalog is unavailable (error {response.status_code})"
             return result
         payload = response.json()
         if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
@@ -245,7 +246,7 @@ async def _proxy_catalog():
         result["available"] = True
     except Exception:
         # Proxy errors may contain auth headers, credentials or upstream internals.
-        result["error"] = "Le catalogue du CLI Proxy est indisponible"
+        result["error"] = "The CLI Proxy catalog is unavailable"
     return result
 
 
@@ -283,7 +284,7 @@ def _image_provider(body, catalog, defaults=None):
             matches = [m for m in catalog["models"] if m["id"] == mid and m["capabilities"]["image"] is not False]
             provider = matches[0].get("provider", "cli_proxy") if len(matches) == 1 else "cli_proxy"
     if provider not in ("cli_proxy", "google_flow"):
-        raise HTTPException(422, "Choisissez un fournisseur image disponible")
+        raise HTTPException(422, "Choose an available image provider")
     _check_image_provider(provider, body.get("style_id"))
     return provider
 
@@ -299,31 +300,32 @@ def _models(body, catalog, defaults=None):
         provider = _image_provider(body, catalog, defaults) if role == "image" else "cli_proxy"
         entry = next((m for m in catalog["models"] if m["id"] == mid and m.get("provider", "cli_proxy") == provider), None)
         if not entry:
-            raise HTTPException(422, f"Choisissez {key} dans le catalogue actuel du fournisseur")
+            raise HTTPException(422, f"Choose {key} in the provider\'s current catalog")
         if entry["capabilities"][role] is False:
-            raise HTTPException(422, f"Le modèle choisi pour {key} ne propose pas ce type de sortie")
+            raise HTTPException(422, f"The model chosen for {key} ne propose pas ce type de sortie")
         selected[role] = mid
     return selected
 
 
 def _prepare(body, catalog):
     if body.get("auto_run") or body.get("mode", "review") != "review":
-        raise HTTPException(422, "Ces vidéos doivent être relues et ne démarrent pas automatiquement")
+        raise HTTPException(422, "These videos must be reviewed and do not start automatically")
     profile = _profile(body.get("profile_id", body.get("channel_id")))
     title = _text(body.get("title", ""), "title", required=True)
     if len(title.strip()) > 240:
-        raise HTTPException(422, "Le titre ne peut pas dépasser 240 caractères")
+        raise HTTPException(422, "The title cannot exceed 240 characters")
     topic = _text(body.get("topic", ""), "topic")
     script = _text(body.get("custom_script", ""), "custom_script")
     if len(script.encode("utf-8")) > MAX_SCRIPT or "\x00" in script:
-        raise HTTPException(422, "Le script doit être un texte UTF-8 de moins de 1 Mo, sans caractère nul")
+        raise HTTPException(422, "The script must be UTF-8 text under 1 MB, with no null character")
     sid = _identifier(body.get("style_id", profile["style_id"]))
     if not any(style["id"] == sid for style in _styles()):
-        raise HTTPException(422, "Choisissez un style visuel disponible")
+        raise HTTPException(422, "Choose an available visual style")
     minutes = None if script.strip() else body.get("duration_minutes", profile.get("target_minutes", 22))
+    lower, upper = profile['duration_minutes_min'], profile['duration_minutes_max']
     if (not script.strip() and (isinstance(minutes, bool) or not isinstance(minutes, (float, int))
-            or not math.isfinite(minutes) or not 20 <= minutes <= 25)):
-        raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
+            or not math.isfinite(minutes) or not lower <= minutes <= upper)):
+        raise HTTPException(422, f'Target duration must be between {lower} and {upper} minutes')
     selected = store.get_style(sid) or {}
     defaults = dict(catalog["defaults"])
     if selected.get("workspace_image_provider"):
@@ -430,23 +432,23 @@ def _reference_path(p, s, index):
     receipt = (s.get("codex_receipt") or {}).get("references", [])
     refs = s.get("references") or receipt
     if index < 0 or index >= len(refs) or not isinstance(refs[index], dict):
-        raise HTTPException(404, "Référence introuvable")
+        raise HTTPException(404, "Reference not found")
     ref = refs[index]
     owner = ref.get("owner", "studio" if refs is receipt else "project")
     if owner == "studio":
         root = config.get("STUDIO_ROOT")
         if not root or not ref.get("sha256"):
-            raise HTTPException(404, "Cette référence du studio n'a pas d'empreinte de fichier enregistrée")
+            raise HTTPException(404, "This studio reference has no saved file fingerprint")
         base = Path(root).resolve()
     elif owner == "style":
         base = store.style_dir(p["style_id"])
     elif owner == "project":
         base = store.project_dir(p["id"])
     else:
-        raise HTTPException(404, "Emplacement de référence inconnu")
+        raise HTTPException(404, "Unknown reference location")
     digest = _file_digest(base, ref.get("path"))
     if not digest or ref.get("sha256") and digest != ref["sha256"]:
-        raise HTTPException(409, "La référence est absente ou a été modifiée")
+        raise HTTPException(409, "The reference is missing or has been modified")
     return (base / ref["path"]).resolve()
 
 
@@ -478,23 +480,23 @@ def _review(record, evidence):
 def _technical_issues(p, scene_evidence=None):
     issues = []
     if p.get("technical_test"):
-        issues.append("Ce test ou cet extrait n'est pas un épisode complet à publier")
+        issues.append("This test or excerpt is not a complete episode to publish")
     voice = p.get("voiceover") or {}
     duration = voice.get("duration")
     if p.get("voiceover_stale"):
-        issues.append("La voix est à refaire après la modification du texte")
+        issues.append("The voice needs to be redone after the text change")
     if not _file_digest(store.project_dir(p["id"]), voice.get("file")):
-        issues.append("Le fichier de voix est absent")
+        issues.append("The voice file is missing")
     duration_valid = type(duration) in (int, float) and math.isfinite(duration) and duration > 0
     if not duration_valid:
-        issues.append("La durée réelle de la voix n'est pas enregistrée")
+        issues.append("The actual voice duration is not recorded")
     scenes = p.get("scenes", [])
     if not scenes:
-        issues.append("Le découpage écrit par Codex est absent")
+        issues.append("The cut written by Codex is missing")
     else:
         evidence = scene_evidence if scene_evidence is not None else [_scene_evidence(p, s) for s in scenes]
         if any(not item for item in evidence):
-            issues.append("Une image ou une référence de plan est absente ou a été modifiée")
+            issues.append("An image or shot reference is missing or has been modified")
         cursor = 0
         clock_valid = True
         for s in scenes:
@@ -505,17 +507,17 @@ def _technical_issues(p, scene_evidence=None):
                 break
             cursor = end
         if not clock_valid or not duration_valid or abs(cursor - duration) > 0.05:
-            issues.append("Les plans doivent couvrir toute la voix, sans trou ni chevauchement")
+            issues.append("The shots must cover the entire voice, with no gaps or overlaps")
         if " ".join(" ".join(s.get("text", "").split()) for s in scenes) != " ".join(p.get("script", "").split()):
-            issues.append("Les extraits des plans doivent reprendre tout le texte exact, dans l'ordre")
+            issues.append("The shot excerpts must reproduce all the exact text, in order")
     render = p.get("render")
     if render:
         if render.get("qa_pending"):
-            issues.append("Le contrôle technique du rendu reste à terminer")
+            issues.append("The technical render check remains to be completed")
         if not _file_digest(store.project_dir(p["id"]), render.get("file")):
-            issues.append("Le fichier du rendu est absent")
+            issues.append("The render file is missing")
     if p.get("error"):
-        issues.append("Une erreur de production reste à résoudre")
+        issues.append("A production error remains to be resolved")
     return issues
 
 
@@ -548,6 +550,7 @@ def _duration_info(p):
 
 def _full(p):
     out = copy.deepcopy(p)
+    out['owner_id'] = owner_of(p)
     out.pop("script_history", None)
     out.pop("video_context", None)
     scenes = out.get("scenes", [])
@@ -624,10 +627,10 @@ def _summary(p):
     full = _full(p) if p.get("codex_directed") else p | {
         "publication_ready": False, "technical_ready": False, "technical_issues": [],
         "running": pipeline.is_running(p["id"]), "duration_info": _duration_info(p)}
-    keys = ("id", "title", "profile_id", "channel_id", "style_id", "style_name", "created", "updated",
+    keys = ("id", "owner_id", "title", "profile_id", "channel_id", "style_id", "style_name", "created", "updated",
             "archived", "steps", "error", "running", "review_state", "publication_ready", "model_snapshot",
             "target_duration_seconds", "duration_minutes", "duration_info", "workspace_queue", "render", "technical_ready", "technical_issues")
-    return {k: full.get(k) for k in keys} | {"scenes": len(p.get("scenes", [])),
+    return {k: full.get(k) for k in keys} | {"owner_id": owner_of(p), "thumb": store.thumbnail_path(p), "scenes": len(p.get("scenes", [])),
             "duration": (p.get("voiceover") or {}).get("duration"), "readonly": not p.get("codex_directed", False),
             "legacy_url": f"/legacy.html#/p/{p['id']}/script", "legacy_api_url": f"/api/projects/{p['id']}",
             "codex_directed": p.get("codex_directed", False),
@@ -641,16 +644,16 @@ def _batches():
 async def _upload(file, base, role, label):
     data = await file.read(MAX_UPLOAD + 1)
     if not data or len(data) > MAX_UPLOAD:
-        raise HTTPException(422, "L'image de référence doit peser au maximum 10 Mo")
+        raise HTTPException(422, "The reference image must be at most 10 MB")
     try:
         with Image.open(io.BytesIO(data)) as image:
             if image.width * image.height > 20_000_000:
-                raise HTTPException(422, "L'image de référence dépasse 20 millions de pixels")
+                raise HTTPException(422, "The reference image exceeds 20 million pixels")
             image.load()
             buf = io.BytesIO()
             image.convert("RGB").save(buf, "PNG")
     except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError):
-        raise HTTPException(422, "Image de référence illisible") from None
+        raise HTTPException(422, "Reference image unreadable") from None
     relative = f"refs/{uuid.uuid4().hex}.png"
     path = base / relative
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -699,7 +702,7 @@ def install(app):
         provider = _image_provider(body, catalog)
         style = copy.deepcopy(store.get_style(_default_style_id()))
         if not style:
-            raise HTTPException(409, "Le style commun des chaînes doit être préparé avant de changer les modèles")
+            raise HTTPException(409, "The shared channel style must be prepared before changing models")
         style["visuals"]["image_model"] = selected["image"]
         style["thumbnail"]["model"] = selected["image"]
         store.save_style(style)
@@ -708,6 +711,29 @@ def install(app):
             changes["USEAPI_IMAGE_MODEL"] = selected["image"]
         config.update(changes)
         return _default_models()
+
+    @router.get('/performance')
+    async def performance():
+        return {key: config.get_int(key) for key in ('IMAGE_CONCURRENCY', 'LLM_CONCURRENCY',
+                'WORKSPACE_PLAN_CONCURRENCY', 'TTS_CONCURRENCY', 'PROJECT_PARALLEL', 'RENDER_CONCURRENCY')} | {
+                'flow_concurrency': min(3, max(1, config.get_int('USEAPI_IMAGE_CONCURRENCY'))),
+                'render_workers': config.get_int('RENDER_WORKERS')}
+
+    @router.put('/performance')
+    async def update_performance(body: dict):
+        limits = {'IMAGE_CONCURRENCY':36, 'LLM_CONCURRENCY':24, 'WORKSPACE_PLAN_CONCURRENCY':8,
+                  'TTS_CONCURRENCY':6, 'PROJECT_PARALLEL':12, 'RENDER_CONCURRENCY':2}
+        if not body or set(body) - set(limits):
+            raise HTTPException(422, 'Choose the available concurrency settings.')
+        if any(type(value) is not int or not 1 <= value <= limits[key] for key, value in body.items()):
+            raise HTTPException(422, 'Concurrency must be a whole number within the displayed limits.')
+        from . import workspace_generation
+        if any(llm.STATS[k]['active'] for k in ('llm','image')) or workspace_generation._batch_tasks or any(
+                pipeline.is_running(p['id']) for p in store.list_projects()):
+            raise HTTPException(409, 'Wait for active jobs to finish before changing concurrency.')
+        config.update({key:str(value) for key,value in body.items()})
+        llm.reset_limits()
+        return await performance()
 
     @router.put("/profiles/{cid}")
     async def update_profile(cid: str, body: dict):
@@ -721,10 +747,10 @@ def install(app):
             supplied = body["references"]
             existing = {r["path"]: r for r in profile["references"]}
             if not isinstance(supplied, list) or any(not isinstance(r, dict) for r in supplied):
-                raise HTTPException(422, "Indiquez les références existantes dans l'ordre souhaité")
+                raise HTTPException(422, "Specify the existing references in the desired order")
             paths = [r.get("path") for r in supplied]
             if any(not isinstance(path, str) or path not in existing for path in paths) or len(paths) != len(set(paths)):
-                raise HTTPException(422, "Une référence doit déjà exister et ne peut apparaître qu'une fois ; ajoutez d'abord les nouveaux fichiers")
+                raise HTTPException(422, "A reference must already exist and can appear only once; add the new files first")
             style["workspace_references"] = [{k: v for k, v in existing[path].items() if k != "url"} for path in paths]
             style["visuals"]["style_refs"] = paths
             style["visuals"]["reference_sources"] = copy.deepcopy(style["workspace_references"])
@@ -743,8 +769,10 @@ def install(app):
         return _profile(cid)
 
     @router.get("/projects")
-    async def projects(archived: bool = False):
-        return [_summary(p) for p in store.list_projects(archived)]
+    async def projects(archived: bool = False, scope: str = "mine"):
+        if scope not in ('mine', 'team'):
+            raise HTTPException(422, 'Choose mine or team for the video workspace.')
+        return [_summary(p) for p in personal_projects(store.list_projects(archived), scope)]
 
     @router.post("/projects", status_code=201)
     async def create_project(body: dict):
@@ -760,7 +788,7 @@ def install(app):
         p = _project(pid, True)
         text = _text(body.get("title", ""), "title", required=True).strip()
         if len(text) > 240:
-            raise HTTPException(422, "Le titre ne peut pas dépasser 240 caractères")
+            raise HTTPException(422, "The title cannot exceed 240 characters")
         p.update(title=text, title_auto=False)
         return _full(store.save_project(p))
 
@@ -769,7 +797,7 @@ def install(app):
         p = _project(pid)
         scene = next((s for s in p.get("scenes", []) if s["id"] == sid), None)
         if not scene:
-            raise HTTPException(404, "Plan introuvable")
+            raise HTTPException(404, "Plan not found")
         return FileResponse(_reference_path(p, scene, index), headers={"Cache-Control": "no-store"})
 
     @router.put("/projects/{pid}/script")
@@ -777,13 +805,13 @@ def install(app):
         p = _project(pid, True)
         text = _text(body.get("text"), "text")
         if len(text.encode("utf-8")) > MAX_SCRIPT or "\x00" in text:
-            raise HTTPException(422, "Le script doit être un texte UTF-8 de moins de 1 Mo, sans caractère nul")
+            raise HTTPException(422, "The script must be UTF-8 text under 1 MB, with no null character")
         if text != p.get("script"):
             p.update(script=text, custom_script=bool(text.strip()), voiceover_stale=bool(p.get("voiceover")),
                      render=None, prompts_approved=False)
             store.add_history(p, "codex_manual", text)
             for key in ("voiceover", "visuals", "render"):
-                p["steps"][key].update(state="idle", msg="Texte modifié : la voix et les images restent à vérifier")
+                p["steps"][key].update(state="idle", msg="Text modified: the voice and images still need checking")
         p["steps"]["script"].update(state="done" if text.strip() else "idle")
         return _full(store.save_project(p))
 
@@ -792,44 +820,44 @@ def install(app):
         p = _project(pid, True)
         rows = body.get("scenes")
         if not isinstance(rows, list) or len(rows) > 2000:
-            raise HTTPException(422, "Le découpage doit être une liste ordonnée de 2 000 plans maximum")
+            raise HTTPException(422, "The breakdown must be an ordered list of no more than 2,000 shots")
         output, seen = [], set()
         old = {s["id"]: s for s in p.get("scenes", [])}
         for row in rows:
             if not isinstance(row, dict) or type(row.get("id")) is not int or row["id"] <= 0 or row["id"] in seen:
-                raise HTTPException(422, "Chaque plan doit avoir un numéro positif et unique")
+                raise HTTPException(422, "Each shot must have a positive and unique number")
             seen.add(row["id"])
             for field in ("text", "prompt", "location_id"):
                 _text(row.get(field), field, required=True)
             if row["text"] not in p.get("script", ""):
-                raise HTTPException(422, "La narration du plan doit reprendre un extrait exact du texte écrit")
+                raise HTTPException(422, "The shot narration must include an exact excerpt from the written text")
             if not isinstance(row.get("characters"), list) or any(not isinstance(c, str) for c in row["characters"]):
-                raise HTTPException(422, "Indiquez la liste des personnages nommés du plan")
+                raise HTTPException(422, "Enter the list of named characters in the shot")
             refs = row.get("references")
             if not isinstance(refs, list):
-                raise HTTPException(422, "Indiquez les références du plan dans leur ordre exact")
+                raise HTTPException(422, "Enter the shot references in their exact order")
             for ref in refs:
                 if not isinstance(ref, dict) or ref.get("owner", "project") not in ("project", "style", "studio"):
-                    raise HTTPException(422, "Chaque référence doit indiquer son fichier et son dossier : projet, style ou studio")
+                    raise HTTPException(422, "Each reference must specify its file and folder: project, style, or studio")
                 if ref.get("owner") == "studio":
                     root = config.get("STUDIO_ROOT")
                     if not root or not ref.get("sha256"):
-                        raise HTTPException(422, "Une référence du studio nécessite le dossier configuré et l'empreinte du fichier d'origine")
+                        raise HTTPException(422, "A studio reference requires the configured folder and the original file fingerprint")
                     base = Path(root).resolve()
                 else:
                     base = store.style_dir(p["style_id"]) if ref.get("owner") == "style" else store.project_dir(pid)
                 digest = _file_digest(base, ref.get("path"))
                 if not digest or ref.get("sha256") and digest != ref["sha256"]:
-                    raise HTTPException(422, "Le fichier de référence est absent, modifié ou hors du dossier prévu")
+                    raise HTTPException(422, "The reference file is missing, modified, or outside the expected folder")
             timed = "start" in row or "end" in row
             if timed:
                 start, end = row.get("start"), row.get("end")
                 if (any(type(x) not in (float, int) or not math.isfinite(x) for x in (start, end))
                         or start < 0 or end <= start):
-                    raise HTTPException(422, "Le début et la fin du plan doivent être des durées valides, calées sur la voix réelle")
+                    raise HTTPException(422, "The shot start and end must be valid durations, aligned with the actual voice")
             image = row.get("image")
             if image and not _file_digest(store.project_dir(pid), image):
-                raise HTTPException(422, "L'image du plan est absente ou hors du dossier du projet")
+                raise HTTPException(422, "The shot image is missing or outside the project folder")
             allowed = ("id", "text", "prompt", "location_id", "characters", "character_variants", "references", "start", "end", "image", "motion")
             scene = {k: copy.deepcopy(row[k]) for k in allowed if k in row}
             # Presentation URLs are not authoring input and cannot affect review hashes.
@@ -862,19 +890,19 @@ def install(app):
         p = _project(pid, True)
         state = body.get("state")
         if state not in REVIEW_STATES:
-            raise HTTPException(422, "Choisissez un état : vérifié, à corriger ou à vérifier")
+            raise HTTPException(422, "Choose a status: verified, needs correction, or to be checked")
         scope = body.get("scope", "scene")
         if scope == "scene":
             s = next((s for s in p.get("scenes", []) if s["id"] == body.get("scene_id")), None)
             if not s:
-                raise HTTPException(404, "Plan introuvable")
+                raise HTTPException(404, "Plan not found")
             evidence = _scene_evidence(p, s)
         elif scope in ("script", "voiceover", "render"):
             evidence = _scope_evidence(p, scope)
         else:
-            raise HTTPException(422, "Élément à vérifier inconnu")
+            raise HTTPException(422, "Unknown item to check")
         if state == "verified" and not evidence:
-            raise HTTPException(409, "Validation impossible : le texte, un fichier ou une référence manque ou a été modifié")
+            raise HTTPException(409, "Validation impossible: the text, a file, or a reference is missing or has been modified")
         record = {"state": state, "notes": _text(body.get("notes", ""), "notes"),
                   "reviewer": _text(body.get("reviewer", "local_human"), "reviewer", required=True),
                   "source": "explicit_human_review", "reviewed_at": now(), "evidence": evidence}
@@ -888,7 +916,7 @@ def install(app):
     async def project_reference(pid: str, file: UploadFile = File(...), role: str = Form("location"), label: str = Form("")):
         _project(pid, True)
         if role not in ("location", "character", "pose", "style"):
-            raise HTTPException(422, "Type de référence inconnu")
+            raise HTTPException(422, "Unknown reference type")
         ref = await _upload(file, store.project_dir(pid), role, label)
         p = _project(pid, True)
         p.setdefault("workspace_references", []).append(ref)
@@ -902,7 +930,7 @@ def install(app):
     async def batch(body: dict):
         rows = body.get("rows")
         if not isinstance(rows, list) or not 1 <= len(rows) <= 100 or any(not isinstance(r, dict) for r in rows):
-            raise HTTPException(422, "Le lot doit contenir entre 1 et 100 vidéos")
+            raise HTTPException(422, "The batch must contain between 1 and 100 videos")
         name = _text(body.get("name", "Batch dirige"), "name", required=True)
         catalog = await _catalog()
         defaults = {key: body[key] for key in ("text_model", "image_model", "image_provider") if key in body}

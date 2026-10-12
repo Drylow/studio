@@ -12,7 +12,7 @@ HOMETOWNS = {
     "French": ["Marseille", "Lyon", "Toulouse", "Nantes", "Strasbourg", "Bordeaux", "Rennes", "Montpellier", "Brest",
                "Grenoble", "Dijon", "Perpignan", "Clermont-Ferrand", "Le Havre", "Metz", "Limoges", "Avignon",
                "Bayonne", "Tours", "Nice", "Saint-Étienne", "Rouen", "Amiens", "Poitiers", "Ajaccio",
-               "Pointe-à-Pitre", "Liège", "Genève", "Montréal", "Dakar", "Casablanca", "Alger", "Tunis", "Bruxelles"],
+               "Pointe-à-Pitre", "Liege", "Geneva", "Montreal", "Dakar", "Casablanca", "Alger", "Tunis", "Bruxelles"],
     "English": ["Ohio", "Texas", "Glasgow", "Manchester", "Brooklyn", "New Orleans", "Detroit", "Leeds", "Dublin",
                 "Atlanta", "Seattle", "Cardiff", "Phoenix", "Belfast", "Chicago", "Liverpool", "Denver", "Bristol",
                 "Toronto", "Melbourne", "Nashville", "Birmingham", "Boston", "Miami"],
@@ -111,14 +111,14 @@ def _models(p: dict) -> tuple[str, str]:
 
 async def ensure_context(p: dict) -> None:
     if p.get("video_url") and not p.get("video_context"):
-        events.log("Récupération de la transcription YouTube…")
+        events.log("Retrieving YouTube transcript…")
         try:
             p["video_context"] = await youtube.transcript(p["video_url"])
-            events.log(f"✓ Transcription YouTube : {len(p['video_context'].split())} mots", "ok")
+            events.log(f"✓ Transcription YouTube : {len(p['video_context'].split())} words", "ok")
         except Exception as e:  # noqa: BLE001
             p["video_context"] = ""
-            p["steps"]["script"]["msg"] = f"Transcription YouTube indisponible ({e}) — on continue sans."
-            events.log(f"⚠ Transcription YouTube indisponible ({e}) — on continue sans", "warn")
+            p["steps"]["script"]["msg"] = f"Transcription YouTube indisponible ({e}) — continuing without it."
+            events.log(f"⚠ Transcription YouTube indisponible ({e}) — continuing without it", "warn")
         store.save_project(p)
 
 
@@ -136,9 +136,9 @@ async def generate_title(p: dict) -> str:
           "Return only the title, no quotes."
     )
     title = await llm.chat([{"role": "user", "content": prompt}], model=p["settings"]["script"].get("model") or config.get("FAST_MODEL"), effort="low",
-                           label="Titre")
+                           label="Title")
     title = title.strip().strip('"').strip("«»").splitlines()[0][:100]
-    events.log(f"✓ Titre : {title}", "ok")
+    events.log(f"✓ Title: {title}", "ok")
     return title
 
 
@@ -159,11 +159,11 @@ async def generate(p: dict, progress=None) -> str:
     Reprenable : le plan et chaque partie terminée sont gardés dans p["script_job"] ; après un
     redémarrage, l'écriture reprend à la partie suivante."""
     if progress and p.get("video_url") and not p.get("video_context"):
-        progress(0, 1, "Récupération de la transcription YouTube…")
+        progress(0, 1, "Retrieving YouTube transcript…")
     await ensure_context(p)
     if not p.get("title"):
         if progress:
-            progress(0, 1, "Génération du titre…")
+            progress(0, 1, "Generating title…")
         p["title"] = await generate_title(p)
         p["title_auto"] = True
         store.save_project(p)
@@ -172,27 +172,27 @@ async def generate(p: dict, progress=None) -> str:
     model, effort = _models(p)
     system = _system(p)
     n_parts = max(1, math.ceil(target / WORDS_PER_PART))
-    events.log(f"Script : {target} mots visés en {lang}, {n_parts} partie(s), modèle {model}")
+    events.log(f"Script : {target} target words in {lang}, {n_parts} part(s), model {model}")
     p["script_draft"] = ""
 
     if n_parts == 1:
         if progress:
-            progress(0, 1, "Rédaction du script…")
+            progress(0, 1, "Writing script…")
         text = await llm.chat([
             {"role": "system", "content": system},
             {"role": "user", "content": f"Video title: {p['title']}\nWrite the full narration script, about "
                                         f"{target} words. Start with a strong hook in the very first sentence."},
-        ], model=model, effort=effort, label="Rédaction du script", on_delta=_live(p, ""))
+        ], model=model, effort=effort, label="Script writing", on_delta=_live(p, ""))
         text = _clean(text)
     else:
         job = p.get("script_job") or {}
         if job.get("title") != p["title"] or job.get("target") != target or job.get("lang") != lang:
             job = {"title": p["title"], "target": target, "lang": lang, "parts": None, "written": []}
         if job.get("written"):
-            events.log(f"↻ Reprise de l'écriture : {len(job['written'])} partie(s) déjà écrite(s)", "step")
+            events.log(f"↻ Resuming writing: {len(job['written'])} part(s) already written", "step")
         if not job.get("parts"):
             if progress:
-                progress(0, n_parts + 1, "Plan du script… (le modèle réfléchit, ~1-2 min)")
+                progress(0, n_parts + 1, "Script outline… (the model is thinking, ~1-2 min)")
             outline_raw = await llm.chat([
                 {"role": "system", "content": system},
                 {"role": "user", "content":
@@ -202,7 +202,7 @@ async def generate(p: dict, progress=None) -> str:
                     "emotional/narrative payoff. Return JSON only: "
                     '{"parts":[{"beats":"what happens in this part, key facts and moments, 2-4 sentences",'
                     '"words":<integer>}]} — the words must sum to about ' + str(target) + "."},
-            ], model=model, effort=effort, label="Plan du script")
+            ], model=model, effort=effort, label="Script outline")
             try:
                 job["parts"] = parse_json(outline_raw)["parts"]
             except Exception:  # noqa: BLE001
@@ -211,7 +211,7 @@ async def generate(p: dict, progress=None) -> str:
             p["script_job"] = job
             store.save_project(p)
             for i, x in enumerate(job["parts"]):
-                events.log(f"   Plan {i + 1}. {str(x.get('beats', ''))[:150]}")
+                events.log(f"   Outline {i + 1}. {str(x.get('beats', ''))[:150]}")
         parts = job["parts"]
         total_budget = sum(int(x.get("words") or 0) for x in parts) or target
         outline_txt = "\n".join(f"{i + 1}. {x.get('beats', '')}" for i, x in enumerate(parts))
@@ -221,7 +221,7 @@ async def generate(p: dict, progress=None) -> str:
                 continue
             budget = max(120, round(int(part.get("words") or target / len(parts)) * target / total_budget))
             if progress:
-                progress(i + 1, len(parts) + 1, f"Rédaction partie {i + 1}/{len(parts)}…")
+                progress(i + 1, len(parts) + 1, f"Writing part {i + 1}/{len(parts)}…")
             so_far = "\n\n".join(written)
             tail = " ".join(so_far.split()[-1400:])
             pos = ("This is the FIRST part: open with a powerful hook in the very first sentence, no greeting, "
@@ -237,17 +237,17 @@ async def generate(p: dict, progress=None) -> str:
                                                {"role": "user", "content": msg}], model=model, effort=effort,
                                               label=f"Partie {i + 1}/{len(parts)}", on_delta=_live(p, so_far)))
             if word_count(text_part) < budget * 0.7:
-                events.log(f"⚠ Partie {i + 1} trop courte ({word_count(text_part)}/{budget} mots) — réécriture", "warn")
+                events.log(f"⚠ Partie {i + 1} trop courte ({word_count(text_part)}/{budget} words) — rewriting", "warn")
                 text_part = _clean(await llm.chat([
                     {"role": "system", "content": system},
                     {"role": "user", "content": f"{msg}\n\nYour previous draft was too short "
                                                 f"({word_count(text_part)} words). Rewrite it at about {budget} "
                                                 f"words with more concrete detail:\n\n{text_part}"},
-                ], model=model, effort=effort, label=f"Partie {i + 1} (allongée)", on_delta=_live(p, so_far)))
+                ], model=model, effort=effort, label=f"Partie {i + 1} (extended)", on_delta=_live(p, so_far)))
             written.append(text_part)
             p["script_job"] = job
             store.save_project(p)
-            events.log(f"✓ Partie {i + 1}/{len(parts)} : {word_count(text_part)} mots "
+            events.log(f"✓ Partie {i + 1}/{len(parts)} : {word_count(text_part)} words "
                        f"(total {word_count(chr(10).join(written))}/{target})", "ok")
         text = "\n\n".join(written)
     p["script"] = text
@@ -255,7 +255,7 @@ async def generate(p: dict, progress=None) -> str:
     p.pop("script_job", None)
     store.add_history(p, "generate", text)
     store.save_project(p)
-    events.log(f"✓ Script terminé : {word_count(text)} mots (≈ {round(word_count(text) / 160)} min de voix)", "ok")
+    events.log(f"✓ Script finished: {word_count(text)} words (≈ {round(word_count(text) / 160)} min of voice)", "ok")
     return text
 
 
@@ -263,7 +263,7 @@ async def rewrite_selection(p: dict, start: int, end: int, action: str, instruct
     script = p["script"]
     sel = script[start:end]
     if not sel.strip():
-        raise ValueError("Sélection vide")
+        raise ValueError("Empty selection")
     n = word_count(sel)
     how = {
         "regenerate": "Rewrite it with fresh wording but the same meaning and roughly the same length.",
@@ -279,7 +279,7 @@ async def rewrite_selection(p: dict, start: int, end: int, action: str, instruct
                                     f"CONTEXT BEFORE:\n{before}\n\nPASSAGE TO CHANGE:\n{sel}\n\n"
                                     f"CONTEXT AFTER:\n{after}\n\n{how}\n"
                                     "It must flow seamlessly with the context. Return only the new passage."},
-    ], model=p["settings"]["script"].get("model") or config.get("SCRIPT_MODEL"), effort="low", label=f"Sélection ({action})")
+    ], model=p["settings"]["script"].get("model") or config.get("SCRIPT_MODEL"), effort="low", label=f"Selection ({action})")
     out = _clean(out)
     p["script"] = script[:start] + out + script[end:]
     store.add_history(p, f"selection:{action}", p["script"])

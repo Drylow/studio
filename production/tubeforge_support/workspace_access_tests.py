@@ -1,93 +1,68 @@
-"""Hosted access and revocation contracts without real credentials or API calls."""
-import base64
-import hashlib
-import json
+"""Trusted portal identity, equal capabilities and direct-worker isolation."""
+import base64,json,sys
 from pathlib import Path
-import sys
-
+import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-import pytest
-
-if Path(__file__).parent.name == "tests":
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+if Path(__file__).parent.name=='tests':
+    sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
     from app import workspace_access as access
+    from app.workspace_identity import current_owner,identity
 else:
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "work/TubeForge"))
-    from tubeforge_support import workspace_access as access
+    from . import workspace_access as access
+    from .workspace_identity import current_owner,identity
 
+TOKEN='fixture-private-connection-token-for-tests-only'
 
-def record(role="worker"):
-    salt = bytes.fromhex("0123456789abcdef0123456789abcdef")
-    hashed = hashlib.pbkdf2_hmac("sha256", b"fixture-long-password", salt, 100000).hex()
-    return {"role": role, "password_hash": f"pbkdf2_sha256$100000${salt.hex()}${hashed}"}
-
-
-def header(username="worker", password="fixture-long-password"):
-    return {"Authorization": "Basic " + base64.b64encode(f"{username}:{password}".encode()).decode()}
-
+def header(uid='member',name='Team member'):
+    return {'X-Worker-Token':TOKEN,'X-TubeForge-Member':base64.urlsafe_b64encode(json.dumps({'id':uid,'name':name}).encode()).decode().rstrip('=')}
 
 @pytest.fixture
-def gate(tmp_path, monkeypatch):
-    path = tmp_path / "users.json"
-    path.write_text(json.dumps({"worker": record(), "owner": record("admin")}), encoding="utf-8")
-    monkeypatch.setenv("TUBEFORGE_USERS_FILE", str(path))
-    monkeypatch.setenv("TUBEFORGE_REQUIRE_AUTH", "1")
-    app = FastAPI()
-    @app.get("/api/project")
-    async def project():
-        return {"id": "fixture"}
-    @app.put("/api/settings")
-    async def settings():
-        return {"ok": True}
-    access.install(app)
-    access.install(app)
-    return TestClient(app), path
+def gate(monkeypatch):
+    monkeypatch.setenv('TUBEFORGE_PROXY_TOKEN',TOKEN)
+    monkeypatch.setenv('TUBEFORGE_REQUIRE_AUTH','1')
+    app=FastAPI()
+    @app.get('/api/project')
+    async def project():return {'owner':current_owner()}
+    @app.put('/api/settings')
+    async def settings():return {'ok':True}
+    @app.get('/')
+    async def home():return {'html':'private worker'}
+    access.install(app);access.install(app)
+    return TestClient(app)
 
+def test_missing_connection_fails_closed(monkeypatch):
+    monkeypatch.delenv('TUBEFORGE_PROXY_TOKEN',raising=False)
+    monkeypatch.setenv('TUBEFORGE_REQUIRE_AUTH','1')
+    with pytest.raises(RuntimeError):access.install(FastAPI())
 
-def test_missing_gate_fails_closed(monkeypatch):
-    monkeypatch.delenv("TUBEFORGE_USERS_FILE", raising=False)
-    monkeypatch.setenv("TUBEFORGE_REQUIRE_AUTH", "1")
-    with pytest.raises(RuntimeError):
-        access.install(FastAPI())
+def test_local_studio_remains_optional(monkeypatch):
+    monkeypatch.delenv('TUBEFORGE_PROXY_TOKEN',raising=False)
+    monkeypatch.delenv('TUBEFORGE_REQUIRE_AUTH',raising=False)
+    app=FastAPI();access.install(app)
+    assert TestClient(app).get('/api/workspace/session').json()['username']=='admin'
 
+def test_browser_cannot_access_worker_directly(gate):
+    for headers in ({},{'X-Worker-Token':'wrong'},{'Authorization':'Basic fixture'},{'X-TubeForge-Member':header()['X-TubeForge-Member']}):
+        assert gate.get('/api/project',headers=headers).status_code==401
+        assert gate.get('/',headers=headers).status_code==401
+    assert gate.get('/healthz').json()=={'status':'ok'}
 
-def test_desktop_gate_remains_optional(monkeypatch):
-    monkeypatch.delenv("TUBEFORGE_USERS_FILE", raising=False)
-    monkeypatch.delenv("TUBEFORGE_REQUIRE_AUTH", raising=False)
-    app = FastAPI()
-    access.install(app)
-    assert not app.user_middleware
+def test_portal_members_have_equal_capabilities_and_separate_identity(gate):
+    for uid in ('admin','worker-a','worker-b'):
+        assert gate.get('/api/project',headers=header(uid)).json()['owner']==uid
+        assert gate.put('/api/settings',headers=header(uid)).status_code==200
+        session=gate.get('/api/workspace/session',headers=header(uid)).json()
+        assert session['username']==uid and session['capabilities']=='full' and session['auth_mode']=='portal'
+    assert identity.get() is None
 
+def test_no_duplicate_login_or_account_registry(gate):
+    for path in ('login','logout','team','team/example'):
+        assert gate.post('/api/workspace/'+path,headers=header()).status_code==404
+    assert 'password_hash' not in gate.get('/api/workspace/session',headers=header()).text
 
-def test_anonymous_and_wrong_password_cannot_read_project(gate):
-    client, _ = gate
-    for headers in ({}, header(password="wrong"), {"Authorization": "Basic invalid%%"}):
-        result = client.get("/api/project", headers=headers)
-        assert result.status_code == 401
-        assert "TubeForge" in result.headers["www-authenticate"]
-    assert client.get("/healthz").json() == {"status": "ok"}
-
-
-def test_worker_access_cannot_change_api_connections(gate):
-    client, _ = gate
-    assert client.get("/api/project", headers=header()).status_code == 200
-    assert client.put("/api/settings", headers=header()).status_code == 403
-    assert client.put("/api/settings", headers=header("owner")).status_code == 200
-    assert client.get("/api/workspace/session", headers=header()).json() == {"username": "worker", "role": "worker"}
-
-
-def test_cross_site_write_rejected(gate):
-    client, _ = gate
-    assert client.put("/api/settings", headers={**header("owner"), "Origin": "https://other.invalid"}).status_code == 403
-    assert client.put("/api/settings", headers={**header("owner"), "Sec-Fetch-Site": "cross-site"}).status_code == 403
-    assert client.put("/api/settings", headers={**header("owner"), "Origin": "http://testserver"}).status_code == 200
-
-
-def test_revocation_and_corrupt_registry_fail_closed(gate):
-    client, path = gate
-    assert client.get("/api/project", headers=header()).status_code == 200
-    path.write_text(json.dumps({"owner": record("admin")}), encoding="utf-8")
-    assert client.get("/api/project", headers=header()).status_code == 401
-    path.write_text("broken registry", encoding="utf-8")
-    assert client.get("/api/project", headers=header("owner")).status_code == 401
+def test_malformed_identity_is_rejected(gate):
+    for user in ({'id':'../admin','name':'Bad'},{'id':'admin','name':''},{'id':'admin','name':['bad']},{'id':'x'*129,'name':'Bad'}):
+        h={'X-Worker-Token':TOKEN,'X-TubeForge-Member':base64.urlsafe_b64encode(json.dumps(user).encode()).decode()}
+        assert gate.get('/api/project',headers=h).status_code==401
+    assert gate.get('/api/project',headers={'X-Worker-Token':TOKEN,'X-TubeForge-Member':'%%%' }).status_code==401

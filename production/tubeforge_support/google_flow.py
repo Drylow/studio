@@ -76,22 +76,22 @@ def _error(response):
                 "Configurez un fournisseur captcha dans les paramètres du compte useapi "
                 "et vérifiez ses crédits avant de relancer le lot.")
     elif "ZERO_BALANCE" in body:
-        text = "Crédits captcha épuisés : rechargez le fournisseur captcha dans useapi."
+        text = "Captcha credits exhausted: top up the captcha provider in useapi."
     elif "MODEL_ACCESS_DENIED" in body:
-        text = "Le compte Google sélectionné n'a pas accès au modèle demandé."
+        text = "The selected Google account does not have access to the requested model."
     elif code == 401:
-        text = "La clé useapi est refusée."
+        text = "The useapi key is rejected."
     elif code == 402:
-        text = "L'abonnement useapi est expiré ou ses crédits sont insuffisants."
+        text = "The useapi subscription has expired or its credits are insufficient."
     elif code == 429:
-        text = "Quota ou cadence Google Flow atteint. Réessayez après le délai indiqué par useapi."
+        text = "Google Flow quota or rate limit reached. Try again after the delay indicated by useapi."
         delay = response.headers.get("Retry-After", "")
         if delay.isdigit():
             text += f" Attente : {delay} secondes."
     elif code == 596:
-        text = "La session Google doit être reconnectée dans useapi."
+        text = "The Google session must be reconnected in useapi."
     else:
-        text = f"Google Flow est indisponible ou a refusé la requête (HTTP {code})."
+        text = f"Google Flow is unavailable or refused the request (HTTP {code})."
     return FlowError(text, code, global_configuration_error=missing_captcha_provider)
 
 
@@ -105,7 +105,7 @@ async def _get(path):
 async def status(force=False):
     global _accounts, _accounts_at
     if not configured():
-        return {"configured": False, "available": False, "accounts": [], "error": "Configurez la clé useapi et le modèle image dans le .env du studio."}
+        return {"configured": False, "available": False, "accounts": [], "error": "Configure the useapi key and image model in the studio .env."}
     try:
         if force or _accounts is None or time.monotonic() - _accounts_at > 20:
             data = await _get("/accounts")
@@ -116,7 +116,7 @@ async def status(force=False):
                          for email, item in data.items() if isinstance(item, dict) and isinstance(email, str) and "@" in email]
             _accounts_at = time.monotonic()
         return {"configured": True, "available": any(a["health"] == "OK" for a in _accounts),
-                "accounts": list(_accounts), "error": None if any(a["health"] == "OK" for a in _accounts) else "Aucun compte Google Flow connecté et disponible."}
+                "accounts": list(_accounts), "error": None if any(a["health"] == "OK" for a in _accounts) else "No connected and available Google Flow account."}
     except (httpx.HTTPError, ValueError, FlowError) as error:
         return {"configured": True, "available": False, "accounts": [],
                 "error": str(error) if isinstance(error, FlowError) else "Connexion useapi indisponible."}
@@ -127,7 +127,7 @@ async def _account():
     state = await status()
     healthy = [a["email"] for a in state["accounts"] if a["health"] == "OK" and _cooldowns.get(a["email"], 0) <= time.monotonic()]
     if not healthy:
-        raise FlowError(state["error"] or "Aucun compte Google Flow disponible ; vérifiez les sessions et les quotas.")
+        raise FlowError(state["error"] or "No Google Flow account available; check sessions and quotas.")
     account = healthy[_cursor % len(healthy)]
     _cursor += 1
     return account
@@ -143,7 +143,7 @@ async def _upload(account, payload):
             content_type = {"PNG": "image/png", "JPEG": "image/jpeg", "WEBP": "image/webp"}.get(image.format)
             image.verify()
         if not content_type or len(payload) > 20 * 1024 * 1024:
-            raise FlowError("Une référence dépasse la taille autorisée ou utilise un format non pris en charge.")
+            raise FlowError("A reference exceeds the allowed size or uses an unsupported format.")
         response = await client().post(BASE + "/assets/" + quote(account, safe=""), content=payload,
                                        headers={"Authorization": "Bearer " + setting("USEAPI_API_KEY"), "Content-Type": content_type})
         if response.status_code != 200:
@@ -151,7 +151,7 @@ async def _upload(account, payload):
             raise _error(response)
         ref = response.json().get("mediaGenerationId", {}).get("mediaGenerationId")
         if not isinstance(ref, str) or not ref:
-            raise FlowError("useapi n'a pas retourné l'identifiant de la référence.")
+            raise FlowError("useapi did not return the reference identifier.")
         _references[key] = ref
         return ref
 
@@ -165,14 +165,14 @@ def _cooldown(account, response):
 async def generate(prompt, model, aspect, refs=None, receipt=None):
     global _semaphore
     if not configured():
-        raise FlowError("Google Flow n'est pas configuré dans le studio.")
+        raise FlowError("Google Flow is not configured in the studio.")
     if not isinstance(model, str) or not re.fullmatch(r"[A-Za-z0-9_.+-]{1,100}", model):
-        raise FlowError("Le modèle Google Flow doit être renseigné explicitement.")
+        raise FlowError("The Google Flow model must be specified explicitly.")
     if aspect not in ("16:9", "9:16", "1:1", "4:3", "3:4"):
         raise FlowError("Format d'image Google Flow non pris en charge.")
     refs = refs or []
     if len(refs) > 10:
-        raise FlowError("Google Flow accepte au maximum 10 références : aucune ne sera supprimée automatiquement.")
+        raise FlowError("Google Flow accepts a maximum of 10 references: none will be removed automatically.")
     if _semaphore is None:
         try:
             limit = int(setting("USEAPI_IMAGE_CONCURRENCY") or 3)
@@ -195,14 +195,14 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
             result = response.json()
             media = result.get("media", [])
             if len(media) != 1:
-                raise FlowError("useapi n'a pas retourné exactement une image.")
+                raise FlowError("useapi did not return exactly one image.")
             generated = media[0]["image"]["generatedImage"]
             if generated.get("encodedImage"):
                 content = base64.b64decode(generated["encodedImage"], validate=True)
             elif generated.get("fifeUrl"):
                 url = generated["fifeUrl"]
                 if urlparse(url).scheme != "https":
-                    raise FlowError("Le lien de téléchargement de l'image est invalide.")
+                    raise FlowError("The image download link is invalid.")
                 # Separate client: no useapi credential is sent to the media host.
                 async with httpx.AsyncClient(timeout=120, follow_redirects=True) as download_client:
                     download = await download_client.get(url)
@@ -217,11 +217,11 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
                 receipt.update(account=account, job_id=result.get("jobId"), dimensions=dimensions,
                                seconds=round(time.monotonic() - started, 2), count=1)
             if not ratio_matches(dimensions, aspect):
-                raise FlowError("Google Flow a retourné une image au mauvais format. Elle n’est pas sélectionnée ; vérifiez l’historique avant de réessayer.")
+                raise FlowError("Google Flow returned an image in the wrong format. It is not selected; check the history before trying again.")
             return content
         except httpx.TimeoutException:
-            raise FlowError("Délai Google Flow dépassé. Vérifiez l'historique useapi avant de relancer : une image peut avoir été créée.") from None
+            raise FlowError("Google Flow timed out. Check the useapi history before restarting: an image may have been created.") from None
         except httpx.HTTPError:
-            raise FlowError("Connexion Google Flow interrompue. Vérifiez l'historique useapi avant de relancer.") from None
+            raise FlowError("Google Flow connection interrupted. Check the useapi history before restarting.") from None
         except (ValueError, KeyError, TypeError):
-            raise FlowError("Réponse Google Flow illisible. Vérifiez l'historique useapi avant de relancer.") from None
+            raise FlowError("Unreadable Google Flow response. Check the useapi history before restarting.") from None

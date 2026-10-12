@@ -1,80 +1,80 @@
-# TubeForge partagé sur VPS2
+# TubeForge / 2D Studio on tools.kanye.studio
 
-Point d'entrée de l'instance hébergée : **https://tubeforge.13-140-129-97.sslip.io/**.
-Les identifiants privés sont transmis au propriétaire dans un fichier local, jamais dans Git.
+Open **https://tools.kanye.studio/2d**. TubeForge uses the portal’s existing
+access-key login, session cookie, member IDs, navigation and light/dark theme.
+There is no second login, password database or team-management system. Existing
+portal authentication and permissions on other tools are unchanged.
 
-L'application complète est dans Git : `production/tubeforge_base/` et
-`production/tubeforge_support/`. Ni le Dockerfile ni l'installation PC ne nécessitent
-un ZIP privé. Lire [le guide complet](README_SURVIVOR_TUBEFORGE.md).
+## Team workflow
 
-## Organisation du serveur
+Create members with the existing **Channels & Team** page. Any signed-in member
+can use every TubeForge capability, including settings, shared channels/styles,
+character references, generation, verification and exports. TubeForge adds no
+owner/admin/worker permission gates. **My videos** shows the member’s own videos;
+**Team videos** lets any member open and edit all team productions. Existing
+videos belong to the portal’s `admin` identity. A copied video belongs to its creator.
 
-- Conteneur indépendant `drylow-tubeforge`, réseau Docker `coolify`.
-- HTTPS/redirect HTTP via le Traefik déjà présent ; aucun nouveau port hôte public.
-- Application avec un seul processus web : les jobs et verrous restent cohérents.
-- Rendu natif FFmpeg sur CPU, quatre processus de rendu, un rendu à la fois.
-  Plafond du conteneur : six CPU, 12 Go de RAM. Pas d'OVNI GPU sur ce VPS.
-- `/opt/tubeforge/data/` : styles, chaînes, projets, références, images, voix et rendus persistants.
-- `/opt/tubeforge/config/app.env` : réglages privés modifiables par le propriétaire dans TubeForge.
-- `/opt/tubeforge/config/studio.env` : clés privées du pont vocal/CLI, à administrer sur le serveur.
-- `/opt/tubeforge/config/users.json` : identités et empreintes de mots de passe, accessibles au conteneur.
-- `/opt/tubeforge/compose.env` : domaine et version de l'image utilisée.
-- `/opt/tubeforge/repository/` : clone de Git ; `/opt/tubeforge/releases/` : versions immuables pour les updates.
-- `/opt/tubeforge/backups/` : manifeste de migration et sauvegardes privées avant mises à jour.
+Channels/styles are a shared TubeForge library, not a copy per member. They are
+not duplicated into the portal’s separate script/voice channel database. Each
+new video freezes its style and cast settings, preserving existing productions.
 
-Les fichiers GPU intermédiaires `render/studio/` de l'ancien PC ne sont pas migrés :
-ils faisaient doublon avec les MP4 finaux. Ils restent conservés sur le PC. Les médias
-retenus sont transférés avec contrôle SHA256. La migration ne réécrit ni narration,
-ni prompts, ni images ; elle adapte les chemins de fichiers et le moteur des futurs rendus.
-Le PC conserve sa copie, mais les nouvelles productions doivent se faire sur le VPS :
-aucune synchronisation bidirectionnelle n'est activée entre les deux installations.
-Le raccourci bureau utilise `work/tubeforge-host.json` lorsqu'il est présent.
-Pour ouvrir volontairement l'archive locale : `production/tubeforge_desktop.ps1 -Local`.
+## Architecture and sources
 
-Le casting Survivor livré dans les presets est complété lors de la migration
-uniquement pour les identités manquantes : Mara côté zombies, Mara/Surveyor/Worker
-côté aliens. Les identités déjà modifiées par le propriétaire sont conservées.
+- VPS1 `185.249.225.176`: existing Node portal, `/opt/elevenlabs-studio`, container
+  `elevenlabs-studio`. Gateway `routes/2d.js`, native page `public/2d.html`, shared
+  workspace assets `public/2d-workspace.js` and `.css`. The source is bind-mounted;
+  restart only this container after editing. Never replace its existing auth module.
+- VPS2 `13.140.129.97`: TubeForge worker, container `drylow-tubeforge`, one web process.
+- The browser talks only to authenticated, same-origin `/api/2d/*` endpoints.
+  VPS1 supplies the immutable portal member identity and private worker token.
+  Browser-supplied identity/auth headers cannot override that identity. VPS2 rejects
+  direct unauthenticated calls to its APIs, media and HTML. `/healthz` reveals only health.
+- Portal integration sources: `production/tubeforge_portal/{2d.js,2d.html,install.py}`.
+  The installer preserves other tools, adds the rail link everywhere and a Hub card,
+  and backs up changed files. It writes the bind-mounted server file in place.
+- TubeForge base: `production/tubeforge_base`; maintained extensions/UI:
+  `production/tubeforge_support`; editable presets: `production/tubeforge_presets`.
 
-## Accès des workers
+Private connection data:
 
-Le navigateur demande un nom et un mot de passe à l'ouverture. Chaque worker peut
-avoir son propre accès ; il retrouve les mêmes chaînes, styles et projets que les
-autres. C'est un **workspace partagé**, sans séparation des données par worker.
-Les comptes worker peuvent produire et modifier les styles ; seuls les comptes
-admin peuvent modifier les connexions API dans Réglages.
+- VPS1 volume `/app/data/tubeforge-worker.json`: worker HTTPS base URL and shared token.
+- VPS2 `/opt/tubeforge/config/worker.env`: `TUBEFORGE_PROXY_TOKEN`, loaded by Compose.
+- VPS2 `/opt/tubeforge/config/app.env` and `studio.env`: private provider settings.
+- Tokens, portal sessions, provider keys and model IDs never belong in Git.
 
-Depuis une session SSH interactive sur le VPS :
+## Production speed
 
-```bash
-python3 /opt/tubeforge/repository/production/tubeforge_host/users.py add alice --role worker
-python3 /opt/tubeforge/repository/production/tubeforge_host/users.py list
-python3 /opt/tubeforge/repository/production/tubeforge_host/users.py remove alice
-```
+**Settings → Production speed** controls the team-wide limits: 24 CLI Proxy
+images, 8 text requests, 6 planning batches, 3 voice requests, 6 projects and 1
+native render. Google Flow has a separate limit of up to 3 images. Provider queues
+and quotas affect throughput; concurrency is not a fixed completion-time promise.
+Change limits when jobs are idle. The three-image preview is separate from the
+remaining batch. Every shot keeps its own prompt, ordered references and receipt.
+Stopping drains already-started requests; it does not issue duplicate paid retries.
 
-Le mot de passe est demandé sans l'afficher. Le changement est pris en compte sans
-redémarrage ; un compte révoqué perd aussi son accès en cache. Ne pas partager le
-compte admin avec les workers. Ne pas leur distribuer les clés des fournisseurs.
+The VPS2 container keeps its 6-CPU/12-GB limit and 4 native rendering workers.
+Previous desktop GPU render timings do not benchmark this CPU host.
 
-## Mises à jour
+## Persistent data and updates
 
-Modifier et pousser les sources, puis depuis SSH :
+`/opt/tubeforge/data` preserves all existing videos, voiceovers, images, references,
+styles and channels. `/opt/tubeforge/releases` contains immutable source releases;
+`/opt/tubeforge/backups` holds private backups. The PC is an archive, without
+bidirectional synchronization. Its desktop shortcut opens the portal.
+
+For a worker update after pushing sources:
 
 ```bash
 bash /opt/tubeforge/repository/production/tubeforge_host/update.sh
 ```
 
-Le script récupère `main`, construit une version séparée, refuse d'interrompre des
-jobs actifs, sauvegarde données/configuration et remplace uniquement TubeForge.
-Il conserve les styles modifiés dans l'interface et les médias existants. Les
-presets publics zombies/aliens restent modifiables sous `production/tubeforge_presets/`.
-Une sauvegarde ne déclenche aucune génération ni publication.
+The worker update requires its existing private connection file, checks active
+jobs, backs up private state and replaces only TubeForge. When changing portal
+sources, copy the published release to VPS1, run the portal installer against
+`/opt/elevenlabs-studio`, verify no active in-process portal jobs, then restart
+`elevenlabs-studio`. Never put the private connection JSON in the release.
 
-Après une update, vérifier la connexion, les aperçus, la voix et un petit rendu.
-Pour revenir à l'image précédente, reprendre `TUBEFORGE_IMAGE` dans le fichier
-`backups/compose-*.env` correspondant, puis relancer uniquement le service TubeForge
-avec la même commande Docker Compose. Ne pas restaurer les données par-dessus des
-nouvelles productions sans avoir vérifié et conservé celles-ci.
-
-Les conteneurs Coolify, AvatarForge, les autres applications et leurs volumes ne
-sont pas modifiés par ce déploiement. Ne pas exposer directement le port 8766,
-retirer l'authentification ou lancer plusieurs processus web avec ce store JSON.
+After updating, verify owner/member sessions, personal/team video history, shared
+styles, uploads, voice/image/video Range streaming, native rendering, dark mode
+and mobile layout. Keep other services and volumes unchanged. Roll back with the
+saved Compose image/release and the portal installer backup; preserve newer data.

@@ -18,9 +18,9 @@ log = logging.getLogger("tubeforge.server")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     store.reset_stale_running()
-    events.log(f"Serveur prêt — ouvre http://localhost:{config.get_int('PORT')} · proxy "
+    events.log(f"Server ready — open http://localhost:{config.get_int('PORT')} · proxy "
                f"{config.get('PROXY_BASE_URL')} · {config.get_int('IMAGE_CONCURRENCY')} images en parallèle · "
-               f"ElevenLabs {'OK' if config.get('ELEVENLABS_API_KEY') else 'non configuré'}", "step")
+               f"ElevenLabs {'OK' if config.get('ELEVENLABS_API_KEY') else "not configured"}", "step")
     yield
 
 
@@ -39,7 +39,7 @@ async def no_cache_ui(request, call_next):
 def _project(pid: str) -> dict:
     p = store.get_project(pid)
     if not p:
-        raise HTTPException(404, "Projet introuvable")
+        raise HTTPException(404, "Project not found")
     return p
 
 
@@ -47,7 +47,7 @@ def _scene(p: dict, sid: int) -> dict:
     for s in p["scenes"]:
         if s["id"] == sid:
             return s
-    raise HTTPException(404, "Scène introuvable")
+    raise HTTPException(404, "Scene not found")
 
 
 def _start(pid: str, fn, *args) -> dict:
@@ -70,7 +70,7 @@ def _deep_merge(dst: dict, src: dict) -> dict:
 def summary(p: dict) -> dict:
     f = store.features(p)
     return {
-        "id": p["id"], "title": p.get("title") or "(titre en cours…)", "created": p["created"],
+        "id": p["id"], "title": p.get("title") or "(title in progress…)", "created": p["created"],
         "updated": p.get("updated"), "archived": p.get("archived", False), "mode": p.get("mode"),
         "style_name": p.get("style_name"), "features": f, "thumb": store.thumbnail_path(p),
         "steps": p["steps"], "running": pipeline.is_running(p["id"]), "error": p.get("error"),
@@ -112,6 +112,16 @@ async def get_settings():
 async def put_settings(body: dict):
     changes = {k: str(v).strip() for k, v in body.items() if k in config.DEFAULTS and "…" not in str(v)
                and str(v).strip() != "•••"}
+    caps = {'IMAGE_CONCURRENCY':36, 'LLM_CONCURRENCY':36, 'WORKSPACE_PLAN_CONCURRENCY':8,
+            'TTS_CONCURRENCY':6, 'PROJECT_PARALLEL':12, 'RENDER_CONCURRENCY':2, 'RENDER_WORKERS':16}
+    for key, maximum in caps.items():
+        if key in changes:
+            try:
+                number = int(changes[key])
+            except ValueError:
+                raise HTTPException(422, 'Concurrency must be a whole number') from None
+            if not 1 <= number <= maximum:
+                raise HTTPException(422, f'{key} must be between 1 and {maximum}')
     config.update(changes)
     llm.reset_limits()
     return config.public_settings()
@@ -143,7 +153,7 @@ async def local_tts_add_voice(name: str = Form(...), file: UploadFile = File(...
     """Ajoute une voix de référence (10 à 20 s de parole propre suffisent)."""
     import re as _re
     import tempfile
-    safe = _re.sub(r'[\/:*?"<>|]+', "", name).strip()[:60] or "Ma voix"
+    safe = _re.sub(r'[\/:*?"<>|]+', "", name).strip()[:60] or "My voice"
     local_tts.VOICES_DIR.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(delete=False, suffix=Path(file.filename or "x.wav").suffix) as tmp:
         tmp.write(await file.read())
@@ -154,7 +164,7 @@ async def local_tts_add_voice(name: str = Form(...), file: UploadFile = File(...
                        "-af", "loudnorm=I=-18:TP=-2", str(out)])
     finally:
         Path(tmp.name).unlink(missing_ok=True)
-    events.log(f"Voix locale ajoutée : {safe}", "ok")
+    events.log(f"Local voice added: {safe}", "ok")
     return local_tts.list_voices()
 
 
@@ -196,12 +206,12 @@ async def voice_preview(body: dict):
     vs["language"] = body.get("language") or vs.get("language") or "English"
     text = (body.get("text") or "").strip()
     if not text:
-        text = ("Tu as dix-neuf ans, et ce soir, tout bascule. Personne ne t'a prévenu." if vs["language"] == "French"
+        text = ("You are nineteen, and tonight, everything changes. No one warned you." if vs["language"] == "French"
                 else "You're nineteen years old, and tonight, everything changes. Nobody warned you.")
     text = text[:400]
     if vs.get("provider") == "algrow" and len(text) < 200:
         if body.get("text", "").strip():
-            raise HTTPException(400, "Algrow demande au moins 200 caracteres pour un apercu vocal")
+            raise HTTPException(400, "Algrow requires at least 200 characters for a voice preview")
         text = ("You wake before sunrise. Outside, footsteps move along the narrow street, and a merchant opens "
                 "his shutters. By the river, workers unload the first baskets of the day. The city is already "
                 "awake, and your morning has only just begun." if vs["language"] != "French" else
@@ -229,7 +239,7 @@ async def voice_preview(body: dict):
             shutil.rmtree(tmp, ignore_errors=True)
             name = f"{_uuid.uuid4().hex[:8]}.mp3"
     except Exception as e:  # noqa: BLE001
-        raise HTTPException(400, f"Aperçu impossible : {e}")
+        raise HTTPException(400, f"Preview impossible: {e}")
     (out_dir / name).write_bytes(data)
     return {"url": f"/preview-audio/{name}"}
 
@@ -265,7 +275,7 @@ async def create_style(body: dict):
 async def get_style(sid: str):
     s = store.get_style(sid)
     if not s:
-        raise HTTPException(404, "Style introuvable")
+        raise HTTPException(404, "Style not found")
     return s
 
 
@@ -273,7 +283,7 @@ async def get_style(sid: str):
 async def put_style(sid: str, body: dict):
     s = store.get_style(sid)
     if not s:
-        raise HTTPException(404, "Style introuvable")
+        raise HTTPException(404, "Style not found")
     body.pop("id", None)
     _deep_merge(s, body)
     return store.save_style(s)
@@ -282,7 +292,7 @@ async def put_style(sid: str, body: dict):
 @app.delete("/api/styles/{sid}")
 async def del_style(sid: str):
     if len(store.list_styles()) <= 1:
-        raise HTTPException(400, "Impossible de supprimer le dernier style")
+        raise HTTPException(400, "Cannot delete the last style")
     store.delete_style(sid)
     return {"ok": True}
 
@@ -323,7 +333,7 @@ async def style_character_image(sid: str, cid: str):
     s = store.get_style(sid)
     c = next((c for c in s["characters"] if c["id"] == cid), None)
     if not c:
-        raise HTTPException(404, "Personnage introuvable")
+        raise HTTPException(404, "Character not found")
     fake = {"id": "_", "style_id": sid, "settings": {"visuals": s["visuals"]}}
     try:
         await visuals.generate_character_image(fake, c, owner_dir=store.style_dir(sid))
@@ -553,7 +563,7 @@ async def gen_images(pid: str, body: dict | None = None):
 async def resplit(pid: str, body: dict | None = None):
     p = _project(pid)
     if pipeline.is_running(pid):
-        raise HTTPException(409, "Une génération est en cours")
+        raise HTTPException(409, "A generation is in progress")
     for k in ("avg_scene_seconds", "min_scene_seconds", "max_scene_seconds"):
         if body and body.get(k) is not None:
             p["settings"]["visuals"][k] = float(body[k])
@@ -579,16 +589,16 @@ async def regen_scene(pid: str, sid: int, body: dict):
     p = _project(pid)
     s = _scene(p, sid)
     if p.get("codex_directed"):
-        raise HTTPException(409, "Correction dirigee par Codex : conserver le prompt et les references explicites")
+        raise HTTPException(409, "Codex-guided correction: keep the prompt and explicit references")
     mode = body.get("mode", "same")
     if s.get("status") == "running":
-        raise HTTPException(409, "Cette scène est déjà en cours")
+        raise HTTPException(409, "This scene is already in progress")
     s["status"] = "queued"
     store.save_project(p)
 
     if mode == "custom":
         if not (body.get("prompt") or "").strip():
-            raise HTTPException(400, "Écris un prompt")
+            raise HTTPException(400, "Write a prompt")
         s["prompt"] = body["prompt"].strip()
         s["critique"] = ""
 
@@ -603,7 +613,7 @@ async def regen_scene(pid: str, sid: int, body: dict):
             await visuals.generate_scene_image(p, s, body.get("instruction") if mode == "adjust" else None,
                                                use_prev=use_prev)
         except Exception as e:  # noqa: BLE001
-            log.warning("scène %s : %s", sid, e)
+            log.warning("scene %s: %s", sid, e)
         finally:
             store.save_project(p)
     pipeline.start_side(job(), p)
@@ -628,9 +638,9 @@ async def delete_scene(pid: str, sid: int):
     p = _project(pid)
     idx = next((i for i, s in enumerate(p["scenes"]) if s["id"] == sid), None)
     if idx is None:
-        raise HTTPException(404, "Scène introuvable")
+        raise HTTPException(404, "Scene not found")
     if len(p["scenes"]) == 1:
-        raise HTTPException(400, "Impossible de supprimer la dernière scène")
+        raise HTTPException(400, "Cannot delete the last scene")
     s = p["scenes"].pop(idx)
     if idx > 0:  # fusion avec la précédente pour garder le timing
         prev = p["scenes"][idx - 1]
@@ -675,7 +685,7 @@ async def put_character(pid: str, cid: str, body: dict):
     p = _project(pid)
     c = next((c for c in p["characters"] if c["id"] == cid), None)
     if not c:
-        raise HTTPException(404, "Personnage introuvable")
+        raise HTTPException(404, "Character not found")
     for k in ("name", "description", "every_image", "enabled"):
         if k in body:
             c[k] = body[k]
@@ -686,7 +696,7 @@ async def put_character(pid: str, cid: str, body: dict):
 async def detect_characters(pid: str):
     p = _project(pid)
     if not p.get("script"):
-        raise HTTPException(400, "Il faut un script pour détecter les personnages")
+        raise HTTPException(400, "A script is needed to detect characters")
     return _start(pid, pipeline.do_detect_characters)
 
 
@@ -704,7 +714,7 @@ async def character_image(pid: str, cid: str):
     p = _project(pid)
     c = next((c for c in p["characters"] if c["id"] == cid), None)
     if not c:
-        raise HTTPException(404, "Personnage introuvable")
+        raise HTTPException(404, "Character not found")
     async def job():
         await visuals.ensure_character_images(p, [c])
     c["status"] = "running"
@@ -736,7 +746,7 @@ async def thumbnails(pid: str, body: dict | None = None):
         try:
             await pipeline.do_thumbnails(p, b.get("count") or 2, b.get("instruction", ""))
         except Exception as e:  # noqa: BLE001
-            log.warning("miniatures : %s", e)
+            log.warning("thumbnails: %s", e)
     pipeline.start_side(job(), p)
     return {"ok": True}
 
@@ -753,14 +763,14 @@ async def select_thumb(pid: str, body: dict):
 def _tset(sid: str) -> dict:
     s = thumbstudio.get_set(sid)
     if not s:
-        raise HTTPException(404, "Série introuvable")
+        raise HTTPException(404, "Series not found")
     return s
 
 
 def _titem(s: dict, iid: str) -> dict:
     it = next((i for i in s["items"] if i["id"] == iid), None)
     if not it:
-        raise HTTPException(404, "Miniature introuvable")
+        raise HTTPException(404, "Thumbnail not found")
     return it
 
 
@@ -774,7 +784,7 @@ async def ts_create(title: str = Form(""), idea: str = Form(""), text: str = For
                     style_id: str = Form(""), aspect: str = Form("16:9"), style_text: str = Form(""),
                     file: UploadFile | None = File(None)):
     if not (title.strip() or idea.strip()):
-        raise HTTPException(400, "Donne au moins un titre ou une idée")
+        raise HTTPException(400, "Provide at least a title or an idea")
     ref = None
     if file is not None and file.filename:
         import io
@@ -798,7 +808,7 @@ async def ts_edit(sid: str, iid: str, body: dict):
     s = _tset(sid)
     it = _titem(s, iid)
     if not it.get("file"):
-        raise HTTPException(400, "Cette miniature n'a pas encore d'image")
+        raise HTTPException(400, "This thumbnail does not have an image yet")
     pipeline.start_side(thumbstudio.edit(s, it, body.get("instruction", "")))
     return s
 
@@ -837,7 +847,7 @@ async def ts_media(rel: str):
 
 @app.get("/thumbstudio-download/{rel:path}")
 async def ts_download(rel: str):
-    return FileResponse(_safe(thumbstudio.DIR, rel), filename=f"miniature-{rel.replace('/', '-')}")
+    return FileResponse(_safe(thumbstudio.DIR, rel), filename=f"thumbnail-{rel.replace('/', '-')}")
 
 
 # ------------------------------------------------------------------ chaînes + planning
@@ -845,7 +855,7 @@ async def ts_download(rel: str):
 def _channel(cid: str) -> dict:
     ch = channels.get(cid)
     if not ch:
-        raise HTTPException(404, "Chaîne introuvable")
+        raise HTTPException(404, "Channel not found")
     return ch
 
 
@@ -914,7 +924,7 @@ async def channel_clip(cid: str, body: dict):
     kind = body.get("kind") if body.get("kind") in ("promo", "standalone") else ch["kind"]
     mode = body.get("mode") or "auto"
     if not url and not pid:
-        raise HTTPException(400, "Donne un lien YouTube ou choisis une vidéo")
+        raise HTTPException(400, "Provide a YouTube link or choose a video")
     p_long = _project(pid) if pid else None
 
     async def job():
@@ -990,7 +1000,7 @@ async def resolve_template(body: dict | None = None):
 
     from . import resolve_export
     if not resolve_export.installed():
-        raise HTTPException(400, "DaVinci Resolve n'est pas installé")
+        raise HTTPException(400, "DaVinci Resolve is not installed")
     return await asyncio.to_thread(resolve_export.template, bool((body or {}).get("rebuild")))
 
 
@@ -1002,7 +1012,7 @@ async def batch(file: UploadFile | None = File(None), mode: str = Form("auto"), 
     raw = await file.read() if file else csv_text.encode("utf-8")
     rows = pipeline.parse_csv(raw)
     if not rows:
-        raise HTTPException(400, "CSV vide ou illisible (il faut au moins une colonne 'title' ou 'source')")
+        raise HTTPException(400, "Empty or unreadable CSV (at least one 'title' or 'source' column is required)")
     default_style = style_id or store.list_styles()[0]["id"]
     b, created = await pipeline.launch_batch(rows, mode, default_style,
                                              name or (file.filename if file else "") or "batch.csv",
@@ -1025,7 +1035,7 @@ async def batches():
 def _safe(base: Path, rel: str) -> Path:
     path = (base / rel).resolve()
     if not str(path).startswith(str(base.resolve())) or not path.is_file():
-        raise HTTPException(404, "Fichier introuvable")
+        raise HTTPException(404, "File not found")
     return path
 
 
@@ -1051,7 +1061,7 @@ async def download(pid: str, what: str = "video"):
     if what == "thumb":
         rel = store.thumbnail_path(p)
         if not rel:
-            raise HTTPException(404, "Pas de miniature")
+            raise HTTPException(404, "No thumbnail")
         return FileResponse(_safe(pdir, rel), filename=title.replace(".mp4", ".png"))
     if what == "montage":
         f = pdir / "render" / "MONTAGE.md"

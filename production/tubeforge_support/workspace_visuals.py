@@ -89,7 +89,7 @@ def activate(studio=None):
         style = copy.deepcopy(base)
         style.update(id=sid, name=name, archived=False, workspace_managed=True,
                      created=now(), updated=now(), characters=[])
-        style["script"].update(instructions="Scripts, decoupages et prompts ecrits par Codex. Aucune reecriture automatique.", references=[])
+        style["script"].update(instructions="Scripts, breakdowns, and prompts written by Codex. No automatic rewriting.", references=[])
         style["visuals"].update(art_style=(GOD_OF_WAR_ART_STYLE if theme == "god-of-war" else ART_STYLE) + " Current universe: " + name.split(" - ")[0] + ".",
             aspect="16:9",
             background_direction=BACKGROUND, image_provider="google_flow", image_model=model,

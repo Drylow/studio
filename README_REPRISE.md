@@ -4,7 +4,7 @@ Etat au 12 octobre 2026. Ce fichier est le point d'entree du travail en cours. L
 
 Nouveau PC / collegue aliens : lire [README_SURVIVOR_TUBEFORGE.md](README_SURVIVOR_TUBEFORGE.md). La base TubeForge complete, son installation sans archive privee et les presets zombies/aliens editables sont maintenant conserves dans Git sous `production/`.
 
-Hebergement partage sur VPS2 : [README_TUBEFORGE_VPS.md](README_TUBEFORGE_VPS.md). Le workspace du VPS devient la reference pour les nouvelles productions ; la copie PC est conservee comme archive. Les acces prives se trouvent dans le fichier bureau de connexion, jamais dans Git.
+TubeForge integre dans https://tools.kanye.studio/2d (comptes existants du portail, aucune seconde authentification). Calcul sur VPS2 : [README_TUBEFORGE_VPS.md](README_TUBEFORGE_VPS.md). Le workspace du VPS devient la reference pour les nouvelles productions ; la copie PC est conservee comme archive. Les acces prives se trouvent dans le fichier bureau de connexion, jamais dans Git.
 
 ## Lire dans cet ordre
 
@@ -221,3 +221,17 @@ Les sources/publications recentes sont poussees sur la branche de session et `ma
 ## Message a donner au prochain compte
 
 > Travaille dans ce dossier. Lis README_REPRISE.md, AGENTS.md et CLAUDE.md. Reprends les deux nouveaux projets Survivor depuis les scripts et notes de production existants : principale Patch, premier episode zombie au supermarche ; seconde aliens des le premier upload. Garde le personnage approuve et les decors simples. Ecris toi-meme les prompts avec references explicites, verifie les images reelles, puis prepare voix et clips cales pour CapCut. Preserve TubeForge, ses sources dans production/tubeforge_support et ses donnees locales. Ne relance pas les retouches God of War abandonnees.
+
+
+## Portal integration — 12 October 2026
+
+Open https://tools.kanye.studio/2d using the existing portal access key. Sources:
+`production/tubeforge_portal`; do not create a separate account registry. The
+existing portal is on VPS1 (185.249.225.176); TubeForge runs on VPS2 (13.140.129.97).
+`README_TUBEFORGE_VPS.md` documents private connection files, deployment and rollback.
+All TubeForge capabilities are available to any signed-in member. My videos uses
+the portal member ID; Team videos opens shared history. Styles/channels stay shared.
+The maintained UI and advanced tools are English. CLI image batches now use
+configured parallelism (deployed target 24), with 8 text calls and 6 planning batches.
+Google Flow retains its own limit (3). No new paid media generation is needed
+for deployment checks. Preserve the completed episodes and their references.

@@ -27,7 +27,7 @@ def allowed(p):
 def resources():
     root = Path(config.get("STUDIO_ROOT") or "")
     if not config.get("STUDIO_ROOT") or not root.is_dir():
-        raise HTTPException(409, "Le dossier des consignes du studio doit être configuré")
+        raise HTTPException(409, "The studio instructions folder must be configured")
     prompts = Path(__file__).parent / "scriptwriting"
     try:
         rules = "\n\n".join((root / "skills/facelessos" / name).read_text(encoding="utf-8") for name in SKILLS)
@@ -55,25 +55,25 @@ def resources():
                 "length_editor": (prompts / "length.txt").read_text(encoding="utf-8"),
                 "skills": rules, "anchors": anchors}
     except (OSError, ValueError):
-        raise HTTPException(409, "Consignes Faceless OS ou exemples d’écriture manquants") from None
+        raise HTTPException(409, "Missing Faceless OS instructions or writing examples") from None
 
 
 def request(p, body):
     if not allowed(p):
-        raise HTTPException(409, "L’écriture depuis un titre est disponible pour les deux styles Survivor")
+        raise HTTPException(409, "Writing from a title is available for both Survivor styles")
     if p.get("settings", {}).get("language", "English") != "English":
-        raise HTTPException(409, "Les références d’écriture actuelles sont en anglais")
+        raise HTTPException(409, "The current writing references are in English")
     if body.get("script_hash") != api._hash(p.get("script") or ""):
-        raise HTTPException(409, "Le texte a changé ; actualisez avant de demander un brouillon")
-    title = api._text(body.get("title", p.get("title", "")), "titre", required=True).strip()
+        raise HTTPException(409, "The text has changed; refresh before requesting a draft")
+    title = api._text(body.get("title", p.get("title", "")), "title", required=True).strip()
     brief = api._text(body.get("brief", ""), "consignes")
     minutes = body.get("minutes", 15)
     if (len(title) > 240 or len(brief) > 8000 or "\x00" in title + brief
             or type(minutes) not in (int, float) or not math.isfinite(minutes) or not 3 <= minutes <= 30):
-        raise HTTPException(422, "Titre de 240 caractères, consignes de 8 000 caractères et durée de 3 à 30 minutes maximum")
+        raise HTTPException(422, "240-character title, 8,000-character instructions, and maximum duration of 3 to 30 minutes")
     model = (p.get("model_snapshot") or {}).get("text_model")
     if not model or not config.get("PROXY_BASE_URL") or not config.get("PROXY_API_KEY"):
-        raise HTTPException(409, "Choisissez le modèle texte et configurez le CLI Proxy")
+        raise HTTPException(409, "Choose the text model and configure the CLI Proxy")
     source = resources()
     return {"title": title, "brief": brief, "minutes": minutes, "model": model,
             "script_hash": body["script_hash"], "title_before": p.get("title"), "source": source,
@@ -117,15 +117,15 @@ def output(raw, prepared, audited=False, strict_length=True):
 
 def apply(p, draft, expected_hash):
     if api._hash(p.get("script") or "") != expected_hash:
-        raise HTTPException(409, "Le texte a changé ; le brouillon ne le remplace pas")
+        raise HTTPException(409, "The text has changed; the draft does not replace it")
     if p.get("voiceover") or p.get("scenes") or p.get("render"):
-        raise HTTPException(409, "Ce projet a déjà des médias ; utilisez une nouvelle vidéo pour ce script")
+        raise HTTPException(409, "This project already has media; use a new video for this script")
     p.update(script=draft["script"], custom_script=False, title=draft["title"], title_auto=False,
              target_duration_seconds=None, prompts_approved=False,
              workspace_story_bible=copy.deepcopy(draft["story_bible"]))
     store.add_history(p, "configured_text_proxy", draft["script"])
     p.setdefault("human_reviews", {}).pop("script", None)
-    p["steps"]["script"].update(state="done", msg="Script écrit depuis le titre · à lire avant la voix")
+    p["steps"]["script"].update(state="done", msg="Script written from the title · read before voice")
     p["workspace_script_writer"]["applied_draft_id"] = draft["id"]
     return store.save_project(p)
 
@@ -171,10 +171,10 @@ async def generate(p, prepared):
             chars = sum(map(len, partial))
             if chars > last + 1200:
                 last = chars
-                progress(0, 2, f"Écriture en cours… environ {chars // 6} mots reçus")
+                progress(0, 2, f"Writing in progress… about {chars // 6} words received")
 
         try:
-            progress(0, 2, "Écriture depuis le titre…")
+            progress(0, 2, "Writing from the title…")
             priority = ("\n\nPRIORITY CONTRACT: The skill documents above are reference guidance, not a different output schema. "
                 "Return only the JSON required at the start. User word_count_window overrides ANY default word counts, "
                 "runtimes, source quotas or documentary templates in those documents. This is original fictional narration. "
@@ -182,44 +182,44 @@ async def generate(p, prepared):
             raw = await llm.chat([{"role": "system", "content": source["writer"] + "\n\nFACELESS OS RULES:\n" + source["skills"] + priority},
                 {"role": "user", "content": json.dumps(source_data, ensure_ascii=False)}],
                 model=prepared["model"], effort="medium", attempts=1, hedge=False,
-                timeout=900, on_delta=delta, label="Écriture du script")
+                timeout=900, on_delta=delta, label="Writing script")
             (folder / "draft-response.txt").write_text(raw, encoding="utf-8")
             first = output(raw, prepared)
-            progress(1, 2, "Vérification du rythme, de l’histoire et de la cohérence…")
+            progress(1, 2, "Checking pacing, story, and consistency…")
             raw = await llm.chat([{"role": "system", "content": source["reviewer"] + "\n\nFACELESS OS RULES:\n" + source["skills"] + priority},
                 {"role": "user", "content": json.dumps({**source_data, "draft": first,
                     "actual_draft_word_count": len(first["script"].split()),
                     "length_instruction": "Rewrite within the supplied word_count_window. Count narration only; shorten or expand the draft as needed."}, ensure_ascii=False)}],
                 model=prepared["model"], effort="medium", attempts=1, hedge=False,
-                timeout=900, label="Vérification du script")
+                timeout=900, label="Checking script")
             (folder / "review-response.txt").write_text(raw, encoding="utf-8")
             result = output(raw, prepared, audited=True, strict_length=False)
             total = 2
             count = len(result["script"].split())
             if not prepared["words_min"] - 5 <= count <= prepared["words_max"] + 5:
                 total = 3
-                progress(2, 3, "Ajustement de la longueur du script…")
+                progress(2, 3, "Adjusting script length…")
                 raw = await llm.chat([{"role": "system", "content": source["length_editor"]},
                     {"role": "user", "content": json.dumps({"reviewed_result": result,
                         "actual_narration_word_count": count,
                         "word_count_window": [prepared["words_min"], prepared["words_max"]],
                         "aim_for_words": round(prepared["minutes"] * 145)}, ensure_ascii=False)}],
                     model=prepared["model"], effort="medium", attempts=1, hedge=False,
-                    timeout=900, label="Ajustement de la durée du script")
+                    timeout=900, label="Adjusting script duration")
                 (folder / "length-response.txt").write_text(raw, encoding="utf-8")
                 result = output(raw, prepared, audited=True, strict_length=False)
                 count = len(result["script"].split())
                 if not prepared["words_min"] - 5 <= count <= prepared["words_max"] + 5:
                     result["audit"]["issues"].append(
-                        f"Longueur à ajuster : {count} mots, fenêtre demandée {prepared['words_min']}-{prepared['words_max']} mots")
+                        f"Length to adjust: {count} words, requested window {prepared['words_min']}-{prepared['words_max']} words")
             state = finish(p, prepared, result, folder)
-            progress(total, total, "Script prêt" if state == "applied" else "Brouillon prêt · texte existant conservé")
+            progress(total, total, "Script ready" if state == "applied" else "Draft ready · existing text kept")
         except asyncio.CancelledError:
             raise
         except Exception:
             p.setdefault("workspace_script_writer", {})["state"] = "error"
             # Never surface upstream text, headers or credentials through job errors.
-            raise RuntimeError("Écriture interrompue ou réponse incomplète. Le texte existant est conservé ; aucun nouvel appel automatique.") from None
+            raise RuntimeError("Writing stopped or response incomplete. Existing text is kept; no new automatic call.") from None
     await pipeline._step(p, "script", run)
 
 
@@ -237,7 +237,7 @@ def install(app):
         try:
             pipeline.start(pid, generate, prepared)
         except pipeline.Busy:
-            raise HTTPException(409, "Une opération est déjà en cours") from None
+            raise HTTPException(409, "An operation is already in progress") from None
         return api._full(p)
 
     @router.post("/{pid}/script/apply-draft")
@@ -245,7 +245,7 @@ def install(app):
         p = api._project(pid, True)
         draft = (p.get("workspace_script_writer") or {}).get("draft")
         if not allowed(p) or not draft or draft["id"] != body.get("draft_id"):
-            raise HTTPException(409, "Ce brouillon n’est plus disponible")
+            raise HTTPException(409, "This draft is no longer available")
         apply(p, draft, body.get("script_hash"))
         p["workspace_script_writer"]["state"] = "applied"
         return api._full(store.save_project(p))

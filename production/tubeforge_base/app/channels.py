@@ -69,7 +69,7 @@ def save(ch: dict) -> dict:
     chans = list_channels()
     ch = _normalize(ch)
     if not ch.get("id"):
-        ch["id"] = f"{slugify(ch.get('name') or 'chaine', 30)}-{uuid.uuid4().hex[:4]}"
+        ch["id"] = f"{slugify(ch.get('name') or "channel", 30)}-{uuid.uuid4().hex[:4]}"
     chans = [c for c in chans if c["id"] != ch["id"]] + [ch]
     write_json(FILE, chans)
     return ch

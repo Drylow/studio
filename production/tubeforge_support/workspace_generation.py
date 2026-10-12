@@ -19,6 +19,17 @@ _batch_permits = {}
 _batch_tasks = {}
 
 
+def batch_concurrency(provider, phase):
+    """Provider-wide semaphore remains the ceiling across all team projects."""
+    key = 'USEAPI_IMAGE_CONCURRENCY' if provider == 'google_flow' else 'IMAGE_CONCURRENCY'
+    ceiling = 3 if provider == 'google_flow' else 36
+    try:
+        value = max(1, min(ceiling, int(config.get(key) or ceiling)))
+    except (TypeError, ValueError):
+        value = ceiling
+    return min(value, 3) if phase == 'preview' else value
+
+
 def batch_running(pid):
     task = _batch_tasks.get(pid)
     return bool(task and not task.done())
@@ -27,7 +38,7 @@ def batch_running(pid):
 def batch_status(p):
     status = copy.deepcopy(p.get("workspace_batch"))
     if status and status.get("state") in ("queued", "running", "stopping") and not batch_running(p["id"]):
-        status.update(state="interrupted", error="Le serveur a été redémarré. Vérifiez le dernier plan avant de reprendre.")
+        status.update(state="interrupted", error="The server was restarted. Check the last shot before resuming.")
     return status
 
 
@@ -42,7 +53,7 @@ def _digest(path):
 def _scene(p, sid):
     scene = next((s for s in p.get("scenes", []) if s["id"] == sid), None)
     if not scene:
-        raise HTTPException(404, "Plan introuvable")
+        raise HTTPException(404, "Plan not found")
     return scene
 
 
@@ -74,25 +85,25 @@ def _prepare(p, s, body):
             or not isinstance(s.get("text"), str) or not s["text"].strip()
             or s["text"] not in p.get("script", "") or not isinstance(s.get("characters"), list)
             or any(not isinstance(c, str) or not c.strip() for c in s["characters"])):
-        raise HTTPException(422, "Ce plan doit avoir une narration, un lieu, des personnages nommés et un prompt écrit par Codex")
+        raise HTTPException(422, "This shot must have narration, a location, named characters, and a prompt written by Codex")
     if body.get("confirm_prompt") != prompt:
-        raise HTTPException(409, "Le prompt confirmé ne correspond pas au prompt exact enregistré")
+        raise HTTPException(409, "The confirmed prompt does not match the exact saved prompt")
     model = (p.get("model_snapshot") or {}).get("image_model")
     if not isinstance(model, str) or not model or body.get("image_model") != model:
-        raise HTTPException(409, "Confirmez le modèle image enregistré dans ce projet")
+        raise HTTPException(409, "Confirm the image model saved in this project")
     provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     if body.get("image_provider", provider) != provider:
-        raise HTTPException(409, "Le fournisseur confirmé ne correspond pas à celui du projet")
+        raise HTTPException(409, "The confirmed provider does not match the project's provider")
     api._check_image_provider(provider, p.get("style_id"))
     if provider == "google_flow" and not google_flow.configured():
-        raise HTTPException(503, "Google Flow n'est pas configuré")
+        raise HTTPException(503, "Google Flow is not configured")
     if provider == "cli_proxy" and (not config.get("PROXY_API_KEY") or not config.get("PROXY_BASE_URL")):
-        raise HTTPException(503, "Le CLI Proxy n'est pas configuré")
+        raise HTTPException(503, "The Proxy CLI is not configured")
     if provider not in ("cli_proxy", "google_flow"):
-        raise HTTPException(422, "Fournisseur image inconnu")
+        raise HTTPException(422, "Unknown image provider")
     refs = s.get("references")
     if not isinstance(refs, list) or not refs or any(not isinstance(ref, dict) for ref in refs):
-        raise HTTPException(422, "Enregistrez au moins une référence réelle, dans l'ordre exact à envoyer")
+        raise HTTPException(422, "Save at least one real reference, in the exact order to send")
     if workspace_planning.allowed(p):
         workspace_characters.validate(p, s)
     payloads, sources, receipts = [], [], []
@@ -100,10 +111,10 @@ def _prepare(p, s, body):
         path = api._reference_path(p, s, index)
         source_hash = _digest(path)
         if ref.get("sha256") and source_hash != ref["sha256"]:
-            raise HTTPException(409, "Une référence a été modifiée depuis sa préparation")
+            raise HTTPException(409, "A reference has been modified since it was prepared")
         payload = llm.png_for_upload(path)
         if _digest(path) != source_hash:
-            raise HTTPException(409, "Une référence a changé pendant sa lecture")
+            raise HTTPException(409, "A reference changed while it was being read")
         payloads.append(payload)
         sources.append((path, source_hash))
         receipts.append({"path": ref["path"], "owner": ref.get("owner", "project"),
@@ -113,9 +124,9 @@ def _prepare(p, s, body):
     aspect = p["settings"]["visuals"].get("aspect", "16:9")
     if workspace_planning.allowed(p):
         if aspect != "16:9" or workspace_composition.contradictory(prompt):
-            raise HTTPException(422, "Les plans de cette chaîne doivent être plein cadre paysage 16:9, sans composition verticale ni personnage en surimpression")
+            raise HTTPException(422, "Shots in this channel must be full-frame landscape 16:9, with no vertical composition or superimposed character")
     if aspect not in llm.ASPECTS:
-        raise HTTPException(422, "Le format d'image enregistré n'est pas pris en charge")
+        raise HTTPException(422, "The saved aspect ratio is not supported")
     return prompt, model, aspect, payloads, sources, receipts
 
 
@@ -131,8 +142,7 @@ async def generate(pid, sid, body, *, batch_id=None):
                         and (p.get("workspace_batch") or {}).get("id") == batch_id
                         and _batch_permits.get((pid, sid)) == batch_id)
     other = _other_generations(pid, sid)
-    limit = 3 if (p.get("model_snapshot") or {}).get("image_provider") == "google_flow" and (
-        p.get("workspace_batch") or {}).get("phase") != "preview" else 1
+    limit = (p.get('workspace_batch') or {}).get('concurrency', 1) if authorized_batch else 1
     if (pipeline.is_running(pid) or (pid, sid) in _active_generations
             or not authorized_batch and (pid in _active_projects or batch_running(pid)
                 or any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
@@ -142,14 +152,14 @@ async def generate(pid, sid, body, *, batch_id=None):
                 or any(step.get("state") == "running" for key, step in p.get("steps", {}).items() if key != "visuals")
                 or any(s.get("status") in ("running", "queued") and (pid, s["id"]) not in _active_generations
                        for s in p.get("scenes", [])))):
-        raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
+        raise HTTPException(409, "A task is already running on this project")
     s = _scene(p, sid)
     try:
         prompt, model, aspect, payloads, sources, references = _prepare(p, s, body)
     except HTTPException:
         raise
     except Exception:
-        raise HTTPException(422, "Une référence est illisible ; vérifiez les fichiers du plan") from None
+        raise HTTPException(422, "A reference is unreadable; check the shot files") from None
     signature = _signature(p, s)
     previous_image = {"path": s.get("image"), "sha256": api._file_digest(store.project_dir(pid), s.get("image")),
                       "human_review": copy.deepcopy(s.get("human_review")),
@@ -169,12 +179,12 @@ async def generate(pid, sid, body, *, batch_id=None):
         p["workspace_generation"] = {"id": job_id, "scene_id": sid, "state": "running", "batch_id": batch_id}
         p.setdefault("workspace_generations", {})[str(sid)] = copy.deepcopy(p["workspace_generation"])
         p["render"] = None
-        p["steps"]["visuals"].update(state="running", msg="Génération du plan confirmé")
+        p["steps"]["visuals"].update(state="running", msg="Confirmed shot generation")
         store.save_project(p)
         # Nonempty refs route this existing helper to /images/edits. No composition or rewrite.
         extra = {"provider": provider, "receipt": receipt.setdefault("provider_receipt", {})} if provider == "google_flow" else {}
         data = await llm.generate_image(prompt, model=model, aspect=aspect, refs=payloads,
-                                        attempts=1, label=f"Plan dirigé {sid}", **extra)
+                                        attempts=1, label=f"Directed shot {sid}", **extra)
         with Image.open(io.BytesIO(data)) as image:
             extension = {"PNG": ".png", "JPEG": ".jpg", "WEBP": ".webp"}.get(image.format)
             image.verify()
@@ -193,12 +203,12 @@ async def generate(pid, sid, body, *, batch_id=None):
             receipt["state"] = "obsolete_unselected"
             current.setdefault("workspace_generation_history", []).append(receipt)
             store.save_project(current)
-            raise HTTPException(409, "Le plan ou ses références ont changé ; l'image est conservée mais n'est pas sélectionnée")
+            raise HTTPException(409, "The shot or its references have changed; the image is kept but not selected")
         receipt["state"] = "generated_unreviewed"
         scene.setdefault("generation_history", []).append(copy.deepcopy(receipt))
         scene.update(image=relative, status="done", uploaded=False, error=None, generation_receipt=receipt,
                      sent_references=copy.deepcopy(references),
-                     human_review={"state": "unreviewed", "notes": "Nouvelle image à regarder avec ses références"})
+                     human_review={"state": "unreviewed", "notes": "New image to watch with its references"})
         scene.pop("workspace_regeneration_required", None)
         scene.pop("clip", None)
         current["render"] = None
@@ -213,8 +223,8 @@ async def generate(pid, sid, body, *, batch_id=None):
         current["steps"]["visuals"].update(
             state="running" if _other_generations(pid, sid) else (
                 "done" if all(x.get("image") for x in current["scenes"]) else "idle"),
-            msg="Nouvelle image à vérifier")
-        current["steps"]["render"].update(state="idle", msg="Image modifiée : le montage reste à refaire")
+            msg="New image to check")
+        current["steps"]["render"].update(state="idle", msg="Image modified: the edit still needs to be redone")
         store.save_project(current)
         succeeded = True
         return api._full(current)
@@ -228,7 +238,7 @@ async def generate(pid, sid, body, *, batch_id=None):
         safe.workspace_global_configuration_error = getattr(error, "global_configuration_error", False)
         raise safe from None
     except Exception:
-        raise HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée") from None
+        raise HTTPException(502, "Shot generation failed; no automatic correction was applied") from None
     finally:
         _active_generations.pop((pid, sid), None)
         if not _other_generations(pid):
@@ -239,7 +249,7 @@ async def generate(pid, sid, body, *, batch_id=None):
                 current = copy.deepcopy(current)
                 scene = next((x for x in current.get("scenes", []) if x["id"] == sid), None)
                 if scene and scene.get("generation_id") == job_id:
-                    scene.update(status="error", error="Génération interrompue ou échouée ; le plan précédent est conservé")
+                    scene.update(status="error", error="Generation interrupted or failed; the previous shot is kept")
                     if (not _other_generations(pid) and (not authorized_batch or limit == 1)
                             and _same_inputs(current, scene, signature) and current.get("render") is None):
                         current["render"] = previous_render
@@ -249,7 +259,7 @@ async def generate(pid, sid, body, *, batch_id=None):
                 if record.get("id") == job_id:
                     record["state"] = "failed"
                 current["steps"]["visuals"].update(
-                    state="running" if _other_generations(pid) else "error", msg="Ce plan reste à corriger")
+                    state="running" if _other_generations(pid) else "error", msg="This shot still needs correction")
                 store.save_project(current)
 
 
@@ -281,7 +291,7 @@ def _recover_batch(p):
                 for scene in p.get("scenes", []):
                     if scene.get("generation_id") != generation.get("id") or scene.get("status") != "running":
                         continue
-                    scene.update(status="error", error="Génération interrompue : vérifiez le résultat avant de reprendre")
+                    scene.update(status="error", error="Generation interrupted: check the result before resuming")
                 generation["state"] = "failed"
                 p["steps"]["visuals"].update(state="error")
         store.save_project(p)
@@ -290,31 +300,31 @@ def _recover_batch(p):
 async def start_batch(pid, body):
     p = api._project(pid, writable=True)
     if batch_running(pid) or pid in _active_projects:
-        raise HTTPException(409, "Une génération est déjà en cours sur ce projet")
+        raise HTTPException(409, "A generation is already in progress for this project")
     _recover_batch(p)
     if (any(s.get("status") in ("running", "queued") for s in p.get("scenes", []))
             or any(step.get("state") == "running" for step in p.get("steps", {}).values())):
-        raise HTTPException(409, "Une tâche est déjà en cours sur ce projet")
+        raise HTTPException(409, "A task is already running on this project")
     phase = body.get("phase")
     if phase not in ("preview", "remaining", "corrections"):
-        raise HTTPException(422, "Choisissez le test des trois premiers plans, les images restantes ou les corrections")
+        raise HTTPException(422, "Choose the test of the first three shots, the remaining images, or the corrections")
     if body.get("confirmation") != api._generation_confirmation(p):
-        raise HTTPException(409, "Le projet a changé. Actualisez avant de lancer la génération")
+        raise HTTPException(409, "The project has changed. Refresh before starting generation")
     scenes = p.get("scenes", [])
     if not scenes:
-        raise HTTPException(422, "Enregistrez d'abord le découpage et les prompts écrits par Codex")
+        raise HTTPException(422, "First save the breakdown and prompts written by Codex")
     if phase in ("remaining", "corrections") and not _preview_verified(p):
-        raise HTTPException(409, "Regardez et marquez vérifiés les trois premiers plans avant de continuer")
+        raise HTTPException(409, "Watch and mark the first three shots as verified before continuing")
     candidates = scenes[:3] if phase == "preview" else scenes[3:]
     targets = [s for s in candidates if (s.get("workspace_regeneration_required") is True
                                        if phase == "corrections" else _missing(p, s))]
     if not targets:
-        raise HTTPException(409, "Aucun plan n’est marqué à corriger" if phase == "corrections"
-                            else "Toutes les images de cette étape existent déjà")
+        raise HTTPException(409, "No shot is marked for correction" if phase == "corrections"
+                            else "All images for this step already exist")
     model = (p.get("model_snapshot") or {}).get("image_model")
     provider = (p.get("model_snapshot") or {}).get("image_provider", "cli_proxy")
     if body.get("image_model") != model or body.get("image_provider", provider) != provider:
-        raise HTTPException(409, "Le modèle ou le fournisseur du projet a changé")
+        raise HTTPException(409, "The project model or provider has changed")
     # Validate the entire requested batch before the first billable request.
     sources = {}
     for scene in targets:
@@ -325,11 +335,11 @@ async def start_batch(pid, body):
         except HTTPException:
             raise
         except Exception:
-            raise HTTPException(422, f"Une référence du plan {scene['id']} est illisible") from None
+            raise HTTPException(422, f"A reference for shot {scene['id']} is unreadable") from None
     job = {"id": uuid.uuid4().hex, "phase": phase, "state": "queued", "started_at": now(),
            "scene_ids": [s["id"] for s in targets], "done": 0, "total": len(targets),
            "current_scene_id": None, "current_scene_ids": [], "stop_requested": False, "error": None,
-           "concurrency": 3 if provider == "google_flow" and phase != "preview" else 1,
+           "concurrency": batch_concurrency(provider, phase),
            "processed": 0, "failed_scene_ids": [], "scene_errors": {}}
     if p.get("render") and p["render"] not in p.get("render_history", []):
         p.setdefault("render_history", []).append(copy.deepcopy(p["render"]))
@@ -342,7 +352,7 @@ async def start_batch(pid, body):
 def _update_batch(pid, job_id, **changes):
     p = api._project(pid)
     if (p.get("workspace_batch") or {}).get("id") != job_id:
-        raise HTTPException(409, "Le lot de génération a changé")
+        raise HTTPException(409, "The generation batch has changed")
     p["workspace_batch"].update(changes)
     store.save_project(p)
     return p
@@ -351,18 +361,18 @@ def _update_batch(pid, job_id, **changes):
 def _check_batch_inputs(p, signature, sources):
     if (_batch_signature(p) != signature
             or any(api._file_digest(path.parent, path.name) != digest for path, digest in sources.items())):
-        raise HTTPException(409, "Le découpage, le modèle ou les références ont changé. Le lot a été arrêté")
+        raise HTTPException(409, "The breakdown, model, or references have changed. The batch was stopped")
     if p["workspace_batch"]["phase"] in ("remaining", "corrections") and not _preview_verified(p):
-        raise HTTPException(409, "La validation des trois premiers plans a changé. Le lot a été arrêté")
+        raise HTTPException(409, "Validation of the first three shots has changed. The batch was stopped")
 
 
 def _correction_error(exc):
     if getattr(exc, "workspace_safe_detail", False):
         return str(exc.detail)[:500]
-    if exc.detail == "La génération du plan a échoué ; aucune correction automatique n'a été appliquée":
+    if exc.detail == "Shot generation failed; no automatic correction was applied":
         return exc.detail
     # A raw HTTPException from an upstream client must not expose its response body.
-    return f"La tentative de ce plan a échoué (HTTP {exc.status_code}). L’image précédente est conservée ; aucune nouvelle tentative automatique."
+    return f"The attempt for this shot failed (HTTP {exc.status_code}). The previous image is kept; no new automatic attempt."
 
 
 def _collect_batch_result(pid, job_id, sid, task):
@@ -373,7 +383,7 @@ def _collect_batch_result(pid, job_id, sid, task):
     except HTTPException as exc:
         failure = exc
     except BaseException:
-        failure = HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée")
+        failure = HTTPException(502, "Shot generation failed; no automatic correction was applied")
     current = api._project(pid)
     job = current["workspace_batch"]
     if failure:
@@ -405,7 +415,7 @@ async def _run_batch(pid, job_id, signature, sources):
                 scene = _scene(current, sid)
                 # Selected images only change for explicitly missing/flagged targets.
                 if not _missing(current, scene) or correction and scene.get("workspace_regeneration_required") is not True:
-                    raise HTTPException(409, "La sélection du plan a changé. Le lot a été arrêté")
+                    raise HTTPException(409, "The shot selection has changed. The batch was stopped")
                 _batch_permits[(pid, sid)] = job_id
                 task = asyncio.create_task(generate(pid, sid, {"confirm_prompt": scene["prompt"],
                     "image_model": current["model_snapshot"]["image_model"],
@@ -436,13 +446,13 @@ async def _run_batch(pid, job_id, signature, sources):
         latest = api._project(pid)
         if state == "done" and latest["workspace_batch"].get("failed_scene_ids"):
             state = "done_with_errors"
-            error = f"{len(latest['workspace_batch']['failed_scene_ids'])} plan(s) restent à corriger ; aucune nouvelle tentative automatique."
+            error = f"{len(latest['workspace_batch']['failed_scene_ids'])} shot(s) remain to be fixed; no new automatic attempt."
     except asyncio.CancelledError:
-        state, error = "interrupted", "Génération interrompue. Vérifiez les derniers plans avant de reprendre"
+        state, error = "interrupted", "Generation interrupted. Check the last shots before resuming"
     except HTTPException as exc:
         state, error = "failed", str(exc.detail)
     except Exception:
-        state, error = "failed", "Le lot a échoué. Les images terminées sont conservées ; aucune nouvelle tentative automatique"
+        state, error = "failed", "The batch failed. Completed images are kept; no new automatic attempt"
     finally:
         # Stop/cancel/input errors close admission, but already-started billable calls finish.
         if pending:
@@ -483,7 +493,7 @@ def install(app):
     async def stop_images(pid: str):
         p = api._project(pid)
         if not batch_running(pid):
-            raise HTTPException(409, "Aucun lot de génération n'est en cours")
+            raise HTTPException(409, "No generation batch is in progress")
         p["workspace_batch"].update(stop_requested=True, state="stopping")
         store.save_project(p)
         return api._full(p)
@@ -492,12 +502,12 @@ def install(app):
     async def render_project(pid: str):
         p = api._project(pid, writable=True)
         if batch_running(pid) or pid in _active_projects:
-            raise HTTPException(409, "Attendez la fin de la génération des images")
+            raise HTTPException(409, "Wait for image generation to finish")
         full = api._full(p)
         if (not full["technical_ready"] or not full["scenes"]
                 or any(s["human_review"]["state"] != "verified" for s in full["scenes"])
                 or full["human_reviews"]["voiceover"]["state"] != "verified"):
-            raise HTTPException(409, "Vérifiez la voix, les images et les timings avant de lancer le montage")
+            raise HTTPException(409, "Check the voice, images, and timings before starting the edit")
         pipeline.start(pid, pipeline.do_render)
         return api._full(api._project(pid))
 

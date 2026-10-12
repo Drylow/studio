@@ -16,20 +16,20 @@ from . import workspace_api as api, workspace_generation as generation, workspac
 
 def voice_settings(body):
     if not isinstance(body, dict):
-        raise HTTPException(422, "Choisissez une voix")
-    vid = api._text(body.get("voice_id"), "voix", required=True).strip()
-    name = api._text(body.get("voice_name", vid), "nom de voix").strip()
+        raise HTTPException(422, "Choose a voice")
+    vid = api._text(body.get("voice_id"), "voice", required=True).strip()
+    name = api._text(body.get("voice_name", vid), "voice name").strip()
     speed = body.get("speed", 1)
     if (len(vid) > 200 or any(c.isspace() for c in vid) or len(name) > 200
             or type(speed) not in (int, float) or not math.isfinite(speed) or not 0.7 <= speed <= 1.2):
-        raise HTTPException(422, "Choisissez une voix et une vitesse entre 0,7 et 1,2")
+        raise HTTPException(422, "Choose a voice and a speed between 0.7 and 1.2")
     provider = body.get("provider", "algrow")
     if provider not in ("algrow", "ai33"):
-        raise HTTPException(422, "Choisissez Algrow ou AI33 Pro avec une voix ElevenLabs")
+        raise HTTPException(422, "Choose Algrow or AI33 Pro with an ElevenLabs voice")
     if vid.startswith("elevenlabs_"):
         vid = vid[len("elevenlabs_"):]
     if "_" in vid:
-        raise HTTPException(422, "Indiquez un ID de voix ElevenLabs")
+        raise HTTPException(422, "Enter an ElevenLabs voice ID")
     return {"provider": provider, "voice_id": vid, "voice_name": name, "speed": speed}
 
 
@@ -37,14 +37,14 @@ def _key(provider="algrow"):
     root = config.get("STUDIO_ROOT")
     key = (dotenv_values(Path(root) / ".env").get("AI33_API_KEY" if provider == "ai33" else "ALGROW_API_KEY") if root else None)
     if not key:
-        raise HTTPException(409, "Configurez la connexion vocale du studio")
+        raise HTTPException(409, "Configure the studio voice connection")
     return key
 
 
 def _writable(pid):
     p = api._project(pid, writable=True)
     if generation.batch_running(pid) or pid in generation._active_projects:
-        raise HTTPException(409, "Attendez la fin de la génération des images")
+        raise HTTPException(409, "Wait for image generation to finish")
     return p
 
 
@@ -71,7 +71,7 @@ async def narrate(p):
                 from . import studio_bridge
                 synthesize = studio_bridge.voice
             result = await synthesize(script, voice, folder,
-                progress=lambda d, t: progress(d, t, "Synthèse vocale…"))
+                progress=lambda d, t: progress(d, t, "Text-to-speech…"))
             duration = result.get("duration")
             if (type(duration) not in (int, float) or not math.isfinite(duration) or duration <= 0
                     or not api._file_digest(folder, result.get("file"))):
@@ -96,7 +96,7 @@ async def narrate(p):
         except asyncio.CancelledError:
             raise
         except Exception:
-            raise RuntimeError("La génération de la voix a échoué. La narration précédente est conservée ; réessayez explicitement") from None
+            raise RuntimeError("Voice generation failed. The previous narration is kept; try again explicitly") from None
     await pipeline._step(p, "voiceover", run)
 
 
@@ -108,12 +108,12 @@ def install(app):
     @router.get("/voices")
     async def voices(search: str = "", language: str = "English", provider: str = "algrow"):
         if provider not in ("algrow", "ai33"):
-            raise HTTPException(422, "Choisissez Algrow ou AI33 Pro")
+            raise HTTPException(422, "Choose Algrow or AI33 Pro")
         key = _key(provider)
         langs = {"English": "en", "French": "fr", "Spanish": "es", "German": "de",
                  "Italian": "it", "Portuguese": "pt", "Japanese": "ja"}
         if len(search) > 200 or language not in langs:
-            raise HTTPException(422, "Recherche ou langue invalide")
+            raise HTTPException(422, "Invalid search or language")
         try:
             async with httpx.AsyncClient(timeout=30) as client:
                 response = await client.get("https://api.ai33.pro/v3/voices" if provider == "ai33" else "https://api.algrow.online/api/voices",
@@ -126,7 +126,7 @@ def install(app):
                 "accent": v.get("accent", ""), "preview_url": v.get("preview_url")}
                 for v in entries if isinstance(v, dict) and isinstance(v.get("voice_id"), str)]}
         except Exception:
-            raise HTTPException(502, "Le catalogue vocal est indisponible. Votre voix enregistrée reste utilisable") from None
+            raise HTTPException(502, "The voice catalog is unavailable. Your saved voice remains usable") from None
 
     @router.put("/projects/{pid}/voice")
     async def save_voice(pid: str, body: dict):
@@ -140,7 +140,7 @@ def install(app):
         voice = voice_settings(body)
         channel = management._channel(p.get("profile_id") or p.get("channel_id"))
         if not channel or channel.get("archived"):
-            raise HTTPException(409, "La chaîne n'est plus disponible")
+            raise HTTPException(409, "The channel is no longer available")
         channel["voice"] = dict(channel.get("voice") or {}, **voice)
         channel["updated"] = now()
         management._save_channel(channel)
@@ -151,9 +151,9 @@ def install(app):
     async def generate_voice(pid: str, body: dict):
         p = _writable(pid)
         if not (p.get("script") or "").strip():
-            raise HTTPException(409, "Collez et enregistrez le script avant de générer la voix")
+            raise HTTPException(409, "Paste and save the script before generating the voice")
         if body.get("script_hash") != api._hash(p["script"]):
-            raise HTTPException(409, "Le texte a changé. Actualisez le projet avant de générer la voix")
+            raise HTTPException(409, "The text has changed. Refresh the project before generating the voice")
         voice = voice_settings(body)
         _key(voice["provider"])
         _save_settings(p, voice)
