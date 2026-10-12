@@ -1,0 +1,55 @@
+{
+  "provider": "google_flow_via_useapi",
+  "operation": "native_flow_upscale",
+  "resolution_request": "2k",
+  "images": {
+    "pilot-001-v2": {
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-001-v2.jpg",
+      "source_sha256": "d32d6dda0cacc6ea2bbda8ba8c8dc6d083c206a90394fa541828f9592858e711",
+      "source_dimensions": [
+        1376,
+        768
+      ],
+      "request_started": true,
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-001-v2-2k.jpg",
+      "dimensions": [
+        2752,
+        1536
+      ],
+      "sha256": "9f2187da13e79ae5d2ebf7b568e0640df44203f9d465b20fc473a440c5ac6402",
+      "visual_review": "Inspected by Codex against the input: location geometry, wardrobe, count, flat white faces, Pokemon tail and pose preserved."
+    },
+    "pilot-002-v2": {
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-002-v2.jpg",
+      "source_sha256": "8868d481a903632cf6edd0afda61485a5cc1d05b453a53683c4815f6c3fe7f12",
+      "source_dimensions": [
+        1376,
+        768
+      ],
+      "request_started": true,
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-002-v2-2k.jpg",
+      "dimensions": [
+        2752,
+        1536
+      ],
+      "sha256": "3345d19092ff81184055c69bcafd90b164a4793a809c415fdde7092cdaed3b90",
+      "visual_review": "Inspected by Codex against the input: location geometry, wardrobe, count, flat white faces, Pokemon tail and pose preserved."
+    },
+    "pilot-003": {
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-003.jpg",
+      "source_sha256": "7248f7d179f23b9c5566174a7c8b6cfdeadfed5762d01612c67dff94cd08d40a",
+      "source_dimensions": [
+        1376,
+        768
+      ],
+      "request_started": true,
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-003-2k.jpg",
+      "dimensions": [
+        2752,
+        1536
+      ],
+      "sha256": "b70ce5f70d4c2c997dada168f3a712f94cd56462a262a8d9c0684e0ae4a3168a",
+      "visual_review": "Inspected by Codex against the input: location geometry, wardrobe, count, flat white faces, Pokemon tail and pose preserved."
+    }
+  }
+}

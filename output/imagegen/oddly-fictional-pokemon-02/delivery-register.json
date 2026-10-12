@@ -1,0 +1,82 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-001-v2-2k.jpg",
+      "source_dimensions": [
+        2752,
+        1536
+      ],
+      "operation": "Crop from the reviewed 2K Flow upscale, same camera and scene; no content repaint or character stretch.",
+      "crop_xywh": [
+        1200,
+        520,
+        1536,
+        864
+      ],
+      "filter": "crop=1536:864:1200:520,scale=1920:1080:flags=lanczos",
+      "image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/01.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "6ad0e9e76ac7ac759184fc0ee091f85b8d94035a94df6ac2c777b4ebbc0067d0",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Inspected 1920x1080 frame: subject, supporting contact, round white heads, no duplicate cast, action and location preserved by crop. No character stretched.",
+      "user_approval": false
+    },
+    {
+      "id": 2,
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-002-v2-2k.jpg",
+      "source_dimensions": [
+        2752,
+        1536
+      ],
+      "operation": "Crop from the reviewed 2K Flow upscale, same camera and scene; no content repaint or character stretch.",
+      "crop_xywh": [
+        1020,
+        260,
+        1728,
+        972
+      ],
+      "filter": "crop=1728:972:1020:260,scale=1920:1080:flags=lanczos",
+      "image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/02.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "f1949f39d1f6715b49508cb7a2561ae3eb7bf8951c4401779899af9841d64289",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Inspected 1920x1080 frame: subject, supporting contact, round white heads, no duplicate cast, action and location preserved by crop. No character stretched.",
+      "user_approval": false
+    },
+    {
+      "id": 3,
+      "source": "output/imagegen/oddly-fictional-pokemon-02/pilot-003-2k.jpg",
+      "source_dimensions": [
+        2752,
+        1536
+      ],
+      "operation": "Crop from the reviewed 2K Flow upscale, same camera and scene; no content repaint or character stretch.",
+      "crop_xywh": [
+        160,
+        400,
+        1728,
+        972
+      ],
+      "filter": "crop=1728:972:160:400,scale=1920:1080:flags=lanczos",
+      "image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/03.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2023ad7b8b66ab053194e68123e41d1e0de93f9d0037959b0daac8ed41644dae",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Inspected 1920x1080 frame: subject, supporting contact, round white heads, no duplicate cast, action and location preserved by crop. No character stretched.",
+      "user_approval": false
+    }
+  ]
+}

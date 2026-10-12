@@ -1,0 +1,48 @@
+{
+  "project_id": "your-life-as-a-pokemon-trainer-df03b3",
+  "url": "https://tools.kanye.studio/2d#/video/your-life-as-a-pokemon-trainer-df03b3/images",
+  "channel": "Oddly Fictional Lives",
+  "script_words": 3076,
+  "character_reference_count": 3,
+  "location_master_count": 2,
+  "image_provider": "google_flow",
+  "voice_provider": "algrow",
+  "voice_generated": false,
+  "remaining_images_generated": false,
+  "video_rendered": false,
+  "duration_state": "estimated_only",
+  "estimated_minutes_at_previous_pace": 15.67,
+  "images": [
+    {
+      "id": 1,
+      "source_image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/01.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "server_media": "images/pilot-001-hd.png",
+      "sha256": "6ad0e9e76ac7ac759184fc0ee091f85b8d94035a94df6ac2c777b4ebbc0067d0"
+    },
+    {
+      "id": 2,
+      "source_image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/02.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "server_media": "images/pilot-002-hd.png",
+      "sha256": "f1949f39d1f6715b49508cb7a2561ae3eb7bf8951c4401779899af9841d64289"
+    },
+    {
+      "id": 3,
+      "source_image": "output/imagegen/oddly-fictional-pokemon-02/A-REGARDER/03.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "server_media": "images/pilot-003-hd.png",
+      "sha256": "2023ad7b8b66ab053194e68123e41d1e0de93f9d0037959b0daac8ed41644dae"
+    }
+  ],
+  "human_review": "pending_user_review"
+}
