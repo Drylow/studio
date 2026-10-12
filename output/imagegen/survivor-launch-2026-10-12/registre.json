@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "image_calls": 3,
+  "channel_name_proposal": "Patch Survives",
+  "pilot_title_proposal": "Zombie Outbreak: 30 Days Trapped in a Supermarket",
+  "images": [
+    {
+      "image": "01-patch-character.png",
+      "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt": "01-patch-character-prompt.txt",
+      "prompt_sha256": "8960eade5a7cb54aea33b29c650c80071346866039e6773aaa9318606d7f1038",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "style-only",
+          "source_image": "output/imagegen/survival-styles-tests-2026-10-12/03-stickfallout.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "actual_full_image_viewed": true,
+      "review_notes": "Original mascot concept. Same white round head, orange forehead bandage, thin black limbs, white hands/shoes, simple orange flap bag. Actual master has an orange handle rather than the initially requested black crossbody strap. Proposed identity, not approved branding.",
+      "proposal_not_user_approved": true
+    },
+    {
+      "image": "02-supermarket-shutter.png",
+      "sha256": "cfaf7ca51550518d95518083ccb2d1d54bc6dfa651ef5de06a74afb2a48170b7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt": "02-supermarket-shutter-prompt.txt",
+      "prompt_sha256": "e94d2a8a8c5a4b58cbcc297989de1bc5f43e6a7f67bedd02f1b90c5aacd3a47c",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "source_image": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "source_image": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "actual_full_image_viewed": true,
+      "review_notes": "Actual full file viewed. One Patch retains original round white head, bandage side, black thin body and white hands/shoes; both hands grip the shutter handle. Orange single-flap bag placed on floor. Two distinct secondary sage-headed infected outside glass, no duplicate Patch. Frontal shop bay, simple counter, no deep aisles. Floor tiles have mild perspective, and bandage angle varies slightly.",
+      "proposal_not_user_approved": true
+    },
+    {
+      "image": "03-supermarket-power-out.png",
+      "sha256": "466bcb41c90d1b0fd1de7821ee6d550b1ff95dea4eaaf8471dca20e2ff0ccf01",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt": "03-supermarket-power-out-prompt.txt",
+      "prompt_sha256": "090530dbf91fff3aa8af5b92633e3eb3ff676dc890dcc9de1a2677bf2705455b",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "source_image": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "source_image": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "actual_full_image_viewed": true,
+      "review_notes": "Actual full file viewed. Same Patch identity and bandage side, white mittens/shoes, thin black body. One hand holds fridge door, other holds a closed unlabelled carton; no tasting or safety claim illustrated. Same orange flap bag on floor with a longer handle loop. Sparse break-room, one fridge/door/bulb, shallow setting. Face remains white, no added hat, shirt or second Patch.",
+      "proposal_not_user_approved": true
+    }
+  ]
+}

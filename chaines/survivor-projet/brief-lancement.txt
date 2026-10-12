@@ -1,0 +1,88 @@
+NOUVELLE CHAINE SURVIVOR - PROPOSITION CONCRETE DE LANCEMENT
+12 octobre 2026. Destination validee par l'utilisateur : nouvelle chaine dediee.
+Nom, personnage et premiere histoire ci-dessous : propositions de Codex, pas encore choix final de l'utilisateur.
+Etat : concept, personnage prototype et essais visuels. Aucun script final, voix, montage ou publication de ce pilote n'est encore termine.
+
+POSITIONNEMENT
+Un lieu familier parait etre le refuge ideal. Au fil des jours, ses avantages produisent aussi ses contraintes.
+Le spectateur vit l'histoire a la deuxieme personne, au travers du meme personnage.
+Chaque episode a une situation concrete, des choix avec consequences et une resolution propre, tout en ouvrant la suite de la serie.
+Premiere saison : refuges du quotidien pendant une epidemie de zombies. Les zombies et les evenements sont explicitement une fiction.
+Les faits pratiques sont verifies sur des sources officielles, introduits seulement lorsqu'ils expliquent une decision de l'histoire.
+
+PERSONNAGE PROPOSE : PATCH
+Nom de chaine de travail : Patch Survives. Aucun handle n'est declare disponible ou reserve.
+Tete parfaitement ronde blanche, petits yeux noirs, bouche courte. Corps en traits noirs tres fins.
+Pas de cheveux, bonnet, casquette, nez, oreilles, barbe ou peau coloree.
+Un petit pansement orange au-dessus de son oeil droit, donc a gauche pour le spectateur de face.
+Un petit sac orange simple : un rabat, un bouton noir, une anse orange. Mains et chaussures blanches.
+Reference originale : output/imagegen/survivor-launch-2026-10-12/01-patch-character.png.
+La reference visuelle de style venait de notre propre premier test sobre ; l'identite du personnage est nouvelle.
+La version sortie comporte une anse orange ; garder cette construction effectivement observee, pas une bandouliere noire inventee ensuite.
+
+PREMIER PILOTE
+Titre recommande : Zombie Outbreak: 30 Days Trapped in a Supermarket
+Alternative plus courte : Zombie Supermarket Survival: Day 1 to Day 30
+Promesse : beaucoup de nourriture, mais un batiment difficile a garder silencieux et a proteger.
+Angle : l'abondance visible masque les contraintes du lieu et les decisions humaines.
+Thumbnails a developper : Patch entre une courte etagere de conserves et une entree vitree menacee. Une action et une expression lisibles. Fond frontal simple.
+Texte de miniature possible : NOT SAFE. Le titre fournit le lieu et les trente jours ; le visuel fournit le danger.
+
+ACCROCHE ORIGINALE PROPOSEE
+Your shift ends in five minutes. A shopping cart hits the front window from the outside. The man pushing it keeps going. You pull the shutter closed. Then the delivery buzzer rings behind you. You have locked one entrance. The supermarket has four.
+Cette accroche est un brouillon de fiction original, pas un extrait des concurrents.
+
+TRAJECTOIRE DE L'EPISODE
+1. Nuit zero : fermer l'entree principale ne ferme pas les trois autres acces. Introduire les quatre acces sur le plan du lieu des le depart.
+2. Jour un : organiser un refuge avec le stock deja visible et choisir une zone facile a observer. Les outils et objets utiles sont poses avant leur payoff.
+3. Jours trois a sept : la coupure electrique change le stock utilisable. Montrer une decision concrete autour de la nourriture froide, pas un cours medical detache de l'histoire.
+4. Jours huit a quinze : un autre adulte arrive par la livraison. Le meme objet apporte de l'aide et une nouvelle obligation. Developper un choix de confiance avec une consequence verifiable dans le recit.
+5. Jours seize a vingt-quatre : le refuge devient moins viable. Eau, bruit, fatigue et acces sous pression se repondent ; pas d'objet providentiel sorti sans preparation.
+6. Jours vingt-cinq a trente : preparer la sortie par un acces deja etabli. Refermer les boucles de la premiere nuit. Une fin concrete, pas une radio surnaturelle ou trois coups recycles.
+Le detail des evenements reste a ecrire. Les jours sont le calendrier fictif du recit, pas des timestamps audio.
+
+LIEUX A FIGER AVANT UNE PRODUCTION COMPLETE
+Le supermarche est un batiment fictif, avec exactement quatre acces : entree publique, livraison, sortie personnel, sortie de secours sur parking.
+Quatre maitres distincts : entree/caisse ; courte zone de stockage ; petite salle du personnel avec frigo domestique ; quai de livraison/courette.
+Vue frontale ou legere trois-quarts, deux couches visuelles, un objet ou une interaction lisible par plan.
+Pas de longues allees profondes, murs qui changent, portes qui apparaissent, texte parasite ou grand decor cinematographique.
+Les deux essais actuels ne sont PAS encore les maitres valides de toute la video.
+Patch et l'adulte secondaire recurrent auront chacun leur reference ; les references de chaque lieu restent fixes.
+
+FORMAT DE PRODUCTION
+Narration en anglais, a la deuxieme personne. Ton concret, tendu et naturel, rythme varie.
+Cible proposee : environ 12-14 minutes pour ce pilote, adaptee au format observe. La voix reelle fixera les timings.
+Ne pas deduire la duree depuis un reglage de pipeline ni promettre une duree avant l'audio.
+Un extrait de 45-60 secondes et un second extrait avec un choix fort pourront etre prepares depuis le montage final pour Shorts/Reels.
+Les commentaires indiquent des arrivages depuis Reels, sans donner la part reelle du trafic.
+Aucune publication sur YouTube ou autre service tant qu'un film concret n'est pas monte et regarde.
+
+SUJETS POUR LA SUITE - IDEES, PAS RECHERCHE ACHEVEE
+- Zombie Outbreak: 30 Days Trapped in a Hotel : chambres disponibles, mais beaucoup d'acces et d'occupants.
+- Zombie Outbreak: 30 Days Inside a Furniture Store : de quoi dormir, mais peu de ressources utilisables.
+- Zombie Outbreak: 7 Days Stranded at a Train Station : un lieu de depart qui devient un refuge.
+L'angle reste celui du refuge et de ses contraintes ; ces histoires ne sont pas encore des scripts ou des promesses de vues.
+
+RESEARCH BRIEF - INTERFACE FACELESSOS
+TOPIC: Zombie outbreak survival for thirty days inside a supermarket.
+ANGLE: Hidden-cost. Food abundance does not establish that this particular fictional building is a sustainable refuge; each apparent advantage creates a specific choice and cost.
+PROOF BANK:
+-> Mr. Doomsday, Zombie Bunker Survival 1 Year : 250894 vues observees le 12 octobre, video du 7 octobre, duree 740 s. https://www.youtube.com/watch?v=N1FAy1ZjlPI
+-> StickFallout, Day 1 To Day 30 : 470019 vues observees le 12 octobre, video du 6 octobre, duree 927 s. https://www.youtube.com/watch?v=SIZXW0ABD9g
+-> Beanie Survives, 30 Days Trapped On The 30th Floor : 114616 vues observees le 12 octobre, video du 11 octobre, duree 492 s. https://www.youtube.com/watch?v=1AF04-V4Yao
+-> Les trois transcriptions ont ete ouvertes. Elles utilisent la deuxieme personne, une crise concrete, une chronologie par jours, des ressources qui changent et des fils d'intrigue recurrents. Les trois liens ci-dessus sont les sources ; aucune causalite de performance n'est mesuree.
+-> Les commentaires recuperes (76 + 100 + 100, echantillon classe par likes) contiennent des demandes de suite, des critiques d'incoherence visuelle et de voix monotone, et des mentions d'arrivee depuis Reels. Sources : commentaires des trois liens ci-dessus. Echantillon non representatif de toute l'audience.
+-> Lieux proposes absents des dix uploads recents recuperes pour les trois chaines ; cela n'etablit PAS une nouveaute a l'echelle de YouTube. Sources : liste recente de chaque chaine, dans le benchmark du meme dossier.
+HOOK DIRECTION: Lead with the ordinary end of a supermarket shift interrupted at the entrance, then reveal another established access. The viewer understands why food alone will not settle the situation.
+STRUCTURE HINT: Fictional second-person survival story with a documentary chronology spine; days advance through decisions and consequences. It is not a real disaster account.
+
+APPUI FACTUEL POUR L'ECRITURE FUTURE
+Sources officielles ouvertes le 12 octobre :
+https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods
+https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage
+Faits utilisables, en gardant leur contexte : un frigo domestique ferme garde le froid environ quatre heures ; un congelateur plein ferme environ quarante-huit heures, un demi-plein environ vingt-quatre ; apparence et odeur ne prouvent pas la securite d'un aliment ; des aliments perissables mal refroidis peuvent rendre malade meme apres cuisson ; les conserves gonflees, fuyantes ou gravement endommagees sont a jeter ; utiliser une source d'eau sure.
+Ces durees ne sont pas transposees automatiquement a des rayons frigorifiques ouverts ou a une chambre froide commerciale. Les faits sont a inserer au moment d'une decision, sans remplacer le recit par des recettes ou des dosages.
+
+PROCHAINE PRODUCTION CONCRETE
+Le pilote a ecrire est celui du supermarche. Etablir son plan et son inventaire fictifs, ecrire le script original, puis faire un court test de voix et trois plans avec Patch avant une generation longue.
+Ni les references des concurrents ni un nouveau couvre-chef ne suffisent a definir l'identite editoriale ; la difference vient du recit, de ses payoffs et de sa coherence.
