@@ -1,0 +1,54 @@
+ALIENS - PILOTE PROPOSE, SCRIPT V1
+Alien Invasion: 7 Days Trapped in a Gas Station
+Recit original de fiction, en anglais et a la deuxieme personne. La categorie aliens et la chaine distincte sont confirmees ; station-service, titre et design de Reed restent propositions.
+2075 mots dans cette V1. Les sept jours sont un calendrier invente, pas une duree audio.
+
+IDENTITES A FIGER AVANT IMAGES
+Reed : adulte humain, tete ronde pure blanche, petits yeux noirs, bouche courte, corps noir fin, mains et chaussures blanches. Foulard bleu-gris tres simple, sac gris avec un rabat. Pas de pansement de Patch ni de peau humaine realiste. Reference de corps entier et portrait a creer puis regarder.
+Surveyor : alien recurrent reconnaissable a une unique bande bleu sombre sur l'epaule. Tete ronde pale menthe et grands yeux sombres simples, corps couvert gris froid, proportions compactes, pas d'anatomie realiste. Son portrait et son corps entier sont a creer ; la photo de profil de la chaine n'est pas une reference approuvee du Surveyor.
+Les autres visiteurs n'ont PAS sa bande d'epaule et ne sont pas des copies du protagoniste. Nombre visible fixe dans chaque prompt.
+Loader : meme machine de levage recurrente, avec sa reference propre. Sa forme, les roues/appuis et les elements de prise sont a fixer avant de la mettre dans un plan. Pas de bras apparaissant selon le besoin de l'image.
+Voiture de Reed : une voiture compacte generique sans logo, identite visuelle a figer. Etat intact au depart, sans roues et demontage explicite au J6 ; ne pas lui rendre ses roues dans les plans suivants.
+Pas d'enfant, pas de personnage reel, pas de gore.
+
+PLAN FIXE
+Petite station fictive, deux pompes seulement sous une petite canopy. Boutique frontale avec porte clients, comptoir, distributeur lumineux pres de l'entree, passage vers local du personnel.
+Local personnel : banc, petit placard, fenetre courte vers cour arriere, porte vers cette cour. Ne pas inventer de lit ou cuisine.
+Cour arriere cloturee : portail ouvrant sur voie de service. Cette voie rejoint a une extremite la route/craft et a l'autre un chemin vers les arbres et la ferme.
+Craft : pose au bord de la grande route, jamais derriere la ferme dans un autre plan.
+Voiture enlevee au debut ; plus de voiture garée disponible pour la fuite. Les clefs restent sur le banc au J6.
+Acces possibles des le debut : entree clients vers forecourt occupe, porte personnel vers cour puis portail/voie de service. Pas de toit accessible, souterrain ou troisieme porte invente pour le climax.
+
+MAITRES ET VARIANTES EXPLICITES
+1. Boutique/comptoir/distributeur : vue courte, seulement objets narratifs ; variante lumieres de boutique eteintes puis vitrine brisee au J7.
+2. Local personnel avec fenetre, banc et porte fixes ; variante stocks/bag ne change pas la geometrie.
+3. Forecourt deux pompes/canopy : une pompe enlevee J4, canopy retiree progressivement J5-J6. Garder les ilots au sol.
+4. Cour et voie de service : crates/lamp initiaux J1, encombrement J3, deplacement et retrait progressifs J4-J7. Leur absence devient permanente apres chargement.
+5. Bord de route/craft/plateforme : voitures au chargement, voiture de Reed identifiee J6. Pas de spectaculaire panorama profond necessaire.
+6. Chemin/arbres et ferme : territoire nouveau relie a la carte initiale, horizon sobre.
+Les endroits sont differents, pas des variations du meme tableau. Un plan doit montrer une action, une observation nouvelle ou une consequence precise.
+
+REGLES DE LA FICTION
+Les visiteurs inspectent plusieurs objets lumineux et recuperent equipements/vehicules, puis le batiment. Ils ne jouent pas le role de zombies poursuivant automatiquement chaque humain.
+Reed deduit une attention a certaines lumieres a partir du distributeur, de la pompe et de l'interieur d'une voiture. Il ne sait PAS leur objectif complet ni s'ils peuvent le voir dans le noir ; ne pas transformer son hypothese en loi scientifique certaine.
+Les lampes alien peuvent passer sur une fenetre : Reed se retire parce qu'il ignore ce que leur faisceau detecte. Pas d'invisibilite garantie.
+La fuite utilise l'absence temporaire de l'ouvrier et le retrait des crates deja observes. Aucun bouton miracle, dispositif de piratage, recette ou bombe.
+Pas d'affirmation factuelle sur biologie extraterrestre, autonomie de batteries ou besoins alimentaires humains. Pas de faits techniques de survie a verifier dans cette V1 ; les observations alien sont explicitement inventees.
+
+BOUCLES ET PAYOFFS
+Voiture/clefs : hook et debut -> voiture sans roues J6 -> clefs laissees -> fuite a pied J7 ; pas attente d'une recuperation jamais payee.
+Destination : carte et ferme J1 -> tentative de sortie J5 -> chemin et arrivee J7. Aucun refuge sorti de nulle part.
+Attention aux lumieres : distributeur debut -> comparaison voiture/pompe/distributeur J2-J3 -> eviter le faisceau J5/J7. L'hypothese reste une hypothese, aucun savoir omniscient.
+Obstruction cour : observation nuit initiale -> crates J3 -> gap manque J4 -> essai J5 -> Surveyor reste J6 -> voie libre au chargement J7.
+Machine et ressources : deux pompes initiales -> premiere enlevee J4 -> canopy J5 -> vitrine/distributeur J7 -> toit enleve apres depart. Pas changement gratuit de decor.
+Bag pret trop tard J4 -> rangement et essai portes -> depart avec ce meme bag J7.
+Fin concrete : Reed est sorti, a rejoint la ferme de la carte et cherche une suite sur cette carte. Pas de coupure avant l'issue du confinement.
+
+RELECTURE FACELESSOS, ADAPTEE A LA FICTION
+A : premiere phrase donne la voiture enlevee et les clefs inutiles ; hook moins de cent mots avec lieu, menace et sept jours. Registre d'action en deuxieme personne compare aux trois transcriptions du benchmark deja ouvertes, sans copier leur contenu.
+B : revue causale nuit initiale puis J1-J7, chaque section apporte observation ou consequence ; ledger ci-dessus. Ni inventaire de bunker ni repiquage du script supermarche avec changement de monstres.
+C : lieux accessibles et obstacles visibles etablis avant sortie ; diction audio encore non testee. Aucune promesse de visiteurs expliques entierement.
+D : scanner execute : zero candidat de phrase et zero plancher mecanique antithese, deux alertes echo a examiner. "the service road and" reprend le meme chemin pour carte, observation puis depart : chaque usage fait progresser. "the blue striped visitor" identifie le meme intervenant avec nouvelles actions, conforme a H6 qui impose la meme appellation, plutot qu'une rotation de synonymes. Ces alertes ne sont pas des phrases copiees ou des repetitions d'une information identique. Scan par oeil : pas d'aphorisme de cloture ni de grappe de miroirs rhetoriques ; les contrastes expliquent des changements observes. Pas d'artefacts non-ASCII dans la narration.
+E : intrigue originale sur l'attention et la recuperation de materiel, pas trois coups/radio/neighbor-bite copies. Regles alien ouvertement fictives. Le score de documentaire a trois sources n'est pas une certification applicable aux evenements inventes ; aucune promesse de monetisation.
+Statut : script V1 ecrit et relu sur texte, pas encore approuve dans son integralite, pas de voix, reference ou image finale d'episode generee.
+Skills appliques : voice-anchoring, script-structures, retention-mechanics, humanizer, greenlight-audit et anti-slop checklist du master FacelessOS.

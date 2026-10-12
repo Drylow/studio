@@ -1,0 +1,41 @@
+ALIEN AFTERMATH - KIT DE CREATION DE CHAINE
+12 octobre 2026. Deuxieme chaine distincte autorisee ; premier upload aliens confirme par l'utilisateur.
+Nom propose : Alien Aftermath
+Handle propose : @AlienAftermath
+Alternatives si indisponible : @AlienAftermathStories / @WatchAlienAftermath
+Disponibilite a verifier dans le formulaire YouTube ; aucun handle reserve ni chaine creee par Codex.
+
+DESCRIPTION A COPIER
+The visitors are here. You're still on Earth.
+Experience alien invasions through original animated survival stories, where familiar places become strange and every discovery changes your next move.
+One person. One place. A world that no longer works the same way.
+
+PREMIER EPISODE PROPOSE
+Alien Invasion: 7 Days Trapped in a Gas Station
+Angle : un employe attend les secours dans une station-service isolee ; les visiteurs inspectent les points lumineux, puis commencent a demonter le lieu.
+La lumiere est une regle de CETTE espece fictive, etablie par plusieurs observations imparfaites. Pas une affirmation scientifique universelle sur les aliens.
+Le danger central se distingue des zombies : comprendre ce que les visiteurs cherchent et leur rythme de travail, puis quitter le batiment avant son demontage.
+Script anglais V1 ecrit : episode-01-gas-station/script-en.txt, 2075 mots. Environ 12-14 minutes a 145-170 mots/minute, a confirmer avec l'audio.
+Fin du brouillon : fuite par le portail arriere et le chemin presentes des le debut ; Reed atteint la ferme indiquee sur la carte alors que la station est demontee. Aucun sauveteur providentiel.
+
+STYLE ET IDENTITE DISTINCTE
+Meme discipline de simplicite : illustrations plates, contours nets, deux couches visuelles, pas de vastes paysages cinematographiques.
+Palette de marque proposee : violet sombre, gris froid et vert menthe. La palette orange de Patch reste propre a la principale.
+Personnage humain de travail : Reed, adulte a tete blanche ronde, petits yeux noirs, bouche courte, mains/chaussures blanches et corps noir fin. Petit foulard bleu-gris et sac gris simple, sans pansement orange. Reference a creer et regarder avant plans ; ce design n'est pas encore approuve.
+Les aliens sont des non-humains explicites avec une silhouette simple et repetable. Leur dessin ne doit pas changer entre les plans ; un alien recurrent a sa reference propre.
+La photo de profil proposee represente la menace alien dans le meme trait simple, pas une reference approuvee du personnage Reed.
+Photo de profil : output/imagegen/alien-channel-kit-2026-10-12/pfp.png. Prompt et registre dans le meme dossier. Aucun personnage d'episode n'est valide a partir de ce seul logo.
+
+LIEUX A FIGER
+Comptoir/boutique, petit local du personnel, forecourt avec deux pompes, porte arriere/cour et voie de depart voisine.
+Ne pas inventer une foret, un tunnel, un toit accessible ou une nouvelle sortie au moment de la fuite.
+Le plan est etabli avant les images : entree clients sur avant, porte personnel sur arriere, fenetre courte du local sur cote. Les pompes ne changent pas de nombre ou de place.
+Les changements dus au demontage alien sont des variantes explicites du maitre et deviennent persistants.
+
+SUITE POSSIBLE, PAS EPISODES APPROUVES
+Alien Invasion: 7 Days Trapped in an Airport
+Alien Invasion: 30 Days Inside an Underground Mall
+Chaque lieu impose des choix nouveaux ; ne pas remplacer simplement les zombies par des aliens dans le script du supermarche.
+
+STATUT
+Kit de chaine, premier angle et script V1 proposes. Aucun film, voix ou publication termine. L'utilisateur a choisi la categorie aliens, pas encore le titre precis ou le personnage Reed.

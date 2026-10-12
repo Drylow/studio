@@ -1,0 +1,40 @@
+PATCH SURVIVES - KIT DE CREATION DE CHAINE
+12 octobre 2026. Nouvelle chaine dediee autorisee. Personnage Patch approuve.
+Nom propose : Patch Survives
+Handle propose : @PatchSurvives
+Alternatives si indisponible : @PatchSurvivesYT / @WatchPatchSurvive
+Disponibilite a verifier dans le formulaire YouTube ; aucun handle reserve ni chaine creee par Codex.
+
+DESCRIPTION A COPIER
+One ordinary guy. One very bad situation.
+Follow Patch through zombie outbreaks, impossible refuges, and survival stories where every choice has consequences.
+Original animated fiction, one day at a time.
+
+PREMIER EPISODE SELECTIONNE PAR L'UTILISATEUR
+Zombie Outbreak: 30 Days Trapped in a Supermarket
+Script anglais V1 : episode-01-supermarket/script-en.txt
+2079 mots dans cette V1 relue. Duree estimee autour de 12-14 minutes a 145-170 mots/minute ; seule la voix produite etablira la duree reelle.
+Promesse : un employe enferme dans son supermarche doit choisir quoi proteger, qui accueillir et quand partir.
+Fin : Patch et Mara quittent le magasin au jour trente et atteignent les jardins de l'autre cote du canal. Pas de fin arretee en pleine revelation.
+
+PHOTO DE PROFIL
+output/imagegen/patch-channel-kit-2026-10-12/pfp.png
+Tete de Patch seulement : blanche ronde, pansement orange du bon cote, deux petits yeux noirs, bouche courte, fond bleu mat uni. Lisible en petit cercle.
+Reference personnage a conserver pour les episodes : output/imagegen/survivor-launch-2026-10-12/01-patch-character.png.
+La photo de profil ne remplace pas la reference de corps entier.
+
+IDENTITE VISUELLE
+Orange pour Patch, bleu/gris et beige mats pour les decors. Formes simples, traits noirs nets, faible profondeur.
+Un personnage reconnaissable, aucun costume ou visage changeant entre les plans.
+Pansement au-dessus de l'oeil anatomique droit, a gauche pour le spectateur de face. L'angle apparent peut varier avec la pose ; ne pas inverser son cote anatomique.
+Verifier mains, chaussures, proportion tete/corps et sac sur chaque image produite.
+
+COHERENCE A EXECUTER
+Une reference approuvee par personnage recurrent, une reference maitre par lieu, variantes de vues explicites.
+Map des portes fixee avant les plans, etat du lieu suivi dans le temps. La vitre brisee au jour dix-neuf reste brisee ensuite.
+Chaque prompt ecrit par Codex relie narration, action, lieu et personnages nommes ; registre des references reellement envoyees dans leur ordre.
+Comparer les images effectives aux maitres ; aucune promesse de coherence parfaite avant cette verification.
+Les images tests existantes sont des prototypes, pas la validation de tous les lieux du film.
+
+STATUT
+Kit de creation et script V1 disponibles. Aucun film termine, aucune voix du pilote generee, aucune publication externe.
