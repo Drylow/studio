@@ -33,18 +33,29 @@ def resources():
         rules = "\n\n".join((root / "skills/facelessos" / name).read_text(encoding="utf-8") for name in SKILLS)
         anchors = []
         for vid in ANCHORS:
-            text = (root / "work/survivor-launch-2026-10-12/reference-transcripts" / (vid + ".txt")).read_text(encoding="utf-8")
+            transcript = root / "work/survivor-launch-2026-10-12/reference-transcripts" / (vid + ".txt")
+            if not transcript.is_file():
+                continue
+            text = transcript.read_text(encoding="utf-8")
             words = text.split()
             if len(words) < 180:
                 raise ValueError("Missing real voice anchor")
             anchors.append({"url": "https://www.youtube.com/watch?v=" + vid,
+                            "source_kind": "local_competitor_transcript",
                             "raw_excerpt": " ".join(words[:210])})
+        if not anchors:
+            # A clone contains our own writing samples, never private third-party transcripts.
+            examples = json.loads((prompts / "house-voice-examples.json").read_text(encoding="utf-8"))
+            for example in examples:
+                if example.get("source_kind") != "original_house_narration" or len(example.get("excerpt", "").split()) < 180:
+                    raise ValueError("Invalid original writing sample")
+            anchors = examples
         return {"writer": (prompts / "survival.txt").read_text(encoding="utf-8"),
                 "reviewer": (prompts / "review.txt").read_text(encoding="utf-8"),
                 "length_editor": (prompts / "length.txt").read_text(encoding="utf-8"),
                 "skills": rules, "anchors": anchors}
     except (OSError, ValueError):
-        raise HTTPException(409, "Consignes Faceless OS ou transcriptions de référence manquantes") from None
+        raise HTTPException(409, "Consignes Faceless OS ou exemples d’écriture manquants") from None
 
 
 def request(p, body):
@@ -144,7 +155,7 @@ async def generate(p, prepared):
         source_data = {"title": prepared["title"], "brief": prepared["brief"],
             "language": "English", "desired_minutes": prepared["minutes"],
             "word_count_window": [prepared["words_min"], prepared["words_max"]],
-            "style_id": p["style_id"], "real_spoken_reference_data": source["anchors"]}
+            "style_id": p["style_id"], "voice_reference_data": source["anchors"]}
         folder = store.project_dir(p["id"]) / "script-generations" / uuid.uuid4().hex
         folder.mkdir(parents=True)
         write_json(folder / "request.json", {**source_data, "model": prepared["model"],

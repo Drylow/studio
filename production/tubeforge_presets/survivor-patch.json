@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "survivor-patch",
+  "name": "Patch Survives — cartoon simple",
+  "language": "English",
+  "main_character": "Patch",
+  "image_provider": "cli_proxy",
+  "authoring_mode": "codex",
+  "visuals": {
+    "aspect": "16:9",
+    "art_style": "Very simple flat 2D cartoon illustration with crisp black outlines and matte fills. Human adults have oversized perfectly circular smooth pure white heads, two small black oval eyes, tiny line mouths, no nose, ears, hair, eyebrows or realistic faces. Bodies and limbs are thin black stick lines, with pure white mitten hands and white oval shoes, exactly matching the supplied full-body reference proportions. No muscular bodies or bulky costumes. Every named individual appears once only; references depict the same individual, never an extra character. No duplicate identities, floating portraits or ghost overlays. Keep each character's own fixed markings, scarf and bag; do not transfer them to others. One landscape 16:9 scene, sparse shallow frontal setting, one readable action or interaction. No deep cinematic vistas, realistic rendering, gradients on white faces, text or watermarks. The background has few simple outlined props on a matte muted blue/gray/beige palette. Main character identity: Round white head; small orange bandage above anatomical RIGHT eye, viewer LEFT in frontal views. Thin black stick body, white mitten hands and oval shoes; separate normal orange school backpack standing upright on the floor beside its owner, main zipper and front zipped pocket, no body straps. No hair, hat or eyebrows. Preserve the exact head/body proportion of the approved identity.\nLiving humans including Patch keep PURE WHITE heads, mitten hands and oval feet. Infected zombies alone have flat pale desaturated GREEN heads, both mitten hands and both oval feet, target #A8BE87, matching their verified green references. Their bodies/limbs remain black stick lines and their own outfits remain unchanged. No hero bandage/bag on zombies; no green recoloring of living humans.\n\nBackpacks are SEPARATE props, never worn on the stick bodies. Patch's orange school backpack and Reed's gray school backpack stand upright on the floor beside their owner, bases in visible floor contact with a small contact shadow. No body straps, no floating bags, no duplicate bags. If narration requires a relocation, explicitly carry by the top handle with visible hand contact and put the same bag down at the destination. Thin black stick torsos/limbs and white heads, mitten hands and oval feet remain unchanged.",
+    "background_direction": "Simple shallow 2D locations. Establish one master image and fixed door/window/object positions for each distinct room; use that exact master for subsequent shots in that room. Explicit variants for new views or damage; destroyed objects never return intact. Every shot advances a narrated action, consequence, observation or exchange, not just another zoom of the same tableau.",
+    "avg_scene_seconds": 6,
+    "min_scene_seconds": 2.0,
+    "max_scene_seconds": 12.0,
+    "auto_characters": false,
+    "use_character_refs": true,
+    "use_style_refs": true,
+    "continuity": "off",
+    "captions": false,
+    "motion_strength": 1.0
+  },
+  "thumbnail_direction": "Very simple flat 2D cartoon illustration with crisp black outlines and matte fills. Human adults have oversized perfectly circular smooth pure white heads, two small black oval eyes, tiny line mouths, no nose, ears, hair, eyebrows or realistic faces. Bodies and limbs are thin black stick lines, with pure white mitten hands and white oval shoes, exactly matching the supplied full-body reference proportions. No muscular bodies or bulky costumes. Every named individual appears once only; references depict the same individual, never an extra character. No duplicate identities, floating portraits or ghost overlays. Keep each character's own fixed markings, scarf and bag; do not transfer them to others. One landscape 16:9 scene, sparse shallow frontal setting, one readable action or interaction. No deep cinematic vistas, realistic rendering, gradients on white faces, text or watermarks. The background has few simple outlined props on a matte muted blue/gray/beige palette. Simple readable thumbnail with one clear story conflict.\nLiving humans including Patch keep PURE WHITE heads, mitten hands and oval feet. Infected zombies alone have flat pale desaturated GREEN heads, both mitten hands and both oval feet, target #A8BE87, matching their verified green references. Their bodies/limbs remain black stick lines and their own outfits remain unchanged. No hero bandage/bag on zombies; no green recoloring of living humans.\n\nBackpacks are SEPARATE props, never worn on the stick bodies. Patch's orange school backpack and Reed's gray school backpack stand upright on the floor beside their owner, bases in visible floor contact with a small contact shadow. No body straps, no floating bags, no duplicate bags. If narration requires a relocation, explicitly carry by the top handle with visible hand contact and put the same bag down at the destination. Thin black stick torsos/limbs and white heads, mitten hands and oval feet remain unchanged.",
+  "voice": {
+    "provider": "algrow",
+    "speed": 1
+  },
+  "characters": {
+    "Patch": {
+      "files": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+        "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png"
+      ],
+      "description": "Patch: adult thin BLACK stick torso/arms/legs, pure WHITE perfectly round head, tiny black oval eyes, simple tiny line or small reaction mouth, orange bandage above anatomical RIGHT eye (viewer LEFT frontal), WHITE mitten hands and WHITE oval feet. Separate ORANGE school backpack stands on FLOOR by his feet when stationary, no straps on body. If moving a bag, one white mitten visibly grips its top handle, never floating or on shoulders. No hair, nose, ears, eyebrows or filled torso.",
+      "sha256": [
+        "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607",
+        "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+      ]
+    },
+    "Mara": {
+      "files": [
+        "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+      ],
+      "description": "Mara: adult thin BLACK stick torso/limbs, round pure WHITE head, small black oval eyes and tiny mouth, WHITE mittens/oval feet. ONE purple identification band on anatomical RIGHT forearm (viewer LEFT frontal), NO orange bandage or scarf. Separate TEAL school pack on FLOOR, or visible top-handle grip only when carrying. Keep proportions identical to her reference.",
+      "sha256": [
+        "2140444cd762e77841fbe18c8532333fae3e93832043e7a02d1355edbca1604f"
+      ]
+    },
+    "Cart Infected": {
+      "files": [
+        "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png"
+      ],
+      "description": "Cart Infected: adult thin black stick limbs, round pale desaturated GREEN #A8BE87 head, both GREEN mitten hands and both GREEN oval feet, small black oval eyes/short mouth, olive-gray ragged vest. No hero bandage/scarf/pack, no white infected skin, no hair/realistic face or gore.",
+      "sha256": [
+        "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+      ]
+    },
+    "Delivery Infected": {
+      "files": [
+        "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green-full.png"
+      ],
+      "description": "Delivery Infected: adult thin black stick limbs, round pale desaturated GREEN #A8BE87 head, both GREEN mittens and both GREEN oval feet, small black oval eyes/short mouth, dusty navy vest with two pockets. No orange bandage/hero pack/scarf, no hair/realistic face/gore. Distinct from olive Cart Infected.",
+      "sha256": [
+        "a9e3e236bb564220eca08e8f34a5aee8de6699620c7db5ec894f338667caed55"
+      ]
+    }
+  },
+  "location_masters": {
+    "front": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+    "front-closed": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-closed.png",
+    "front-broken": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-broken-v2.png",
+    "stockroom": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+    "stockroom-night": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-stockroom-night.png",
+    "staff": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/staff.png",
+    "parking": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-parking-closed.png",
+    "aisle": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-aisle.png",
+    "yard-blocked": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-yard-blocked.png",
+    "yard-clear": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png",
+    "canal": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/canal-v2.png",
+    "gardens": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/gardens.png"
+  },
+  "scene_contract": "Use case: illustration-story. ONE full-frame landscape 16:9 scene, NO panels, inset portraits, ghost overlays, split-screen, blurry sidebars or caption text. Very simple flat 2D cartoon with crisp black outlines and matte muted blue/gray/beige colors, sparse shallow settings and few readable props, not deep cinematic landscapes or elaborate textures. The subject's action or interaction must be clearly visible and tied to narration.\nALL living human faces are perfectly circular pure WHITE, with tiny black oval eyes, tiny line/small reaction mouth, no nose, ears, hair, eyebrows or realistic facial anatomy. ALL exposed human mitten hands and oval feet are pure WHITE too; torsos and limbs remain BLACK THIN STICK LINES as identity refs, no gray filled body or bulky costume. Adults, not toddlers. ZOMBIES alone have GREEN heads, both GREEN mittens and both GREEN oval feet, matching bound infected refs. ALIENS use their bound mint heads/hands and covered gray bodies, never recolor a human green. No gore.\nNamed individuals occur ONCE each only. White head circle/proportions/markings/outfit/pack color remain constant; never transfer bandage/stripe/scarf/purple band to another actor. ORANGE Patch pack, GRAY Reed pack and TEAL Mara pack are separate school backpacks: when stationary ONE bag per owner upright ON FLOOR with base contact/contact shadow, NO pack on back/shoulder, NO body straps, NO unsupported bag. For explicitly carrying action a CONNECTED visible white mitten grips the TOP HANDLE. In close-ups where feet are off-frame, omit bags rather than float them or force them into frame. Reference bags are NOT extra copies to add when owner already carries one. Objects/cars/machines match supplied props and are physically supported, not floating.\nImage 1 is the VERIFIED location master/explicit state variant, ALWAYS keep its room/world geometry. Crop its existing area for a close-up, never invent a new viewpoint/wall/exit. Additional identity sheets/prop images are only guides to their bound subject, no copying neutral sheet background. Breakage/removal/clearance is PERSISTENT. Follow scene action's explicit changes, no repaired glass/reappearing pumps/duplicate vehicles. No text, labels, logo, watermarks or realistic faces.\n\nKeep protagonists identifiable: show their simple eyes/mouth and own marking/scarf in front or three-quarter view, no blank faceless back-of-head with forehead markings. Where narration has no breakage, glazing stays INTACT: use only small short impact ticks, never spiderweb cracks. Damage occurs only in the explicit broken master variants.\n",
+  "review_provenance": "References inspected by Codex during the 12 October production; not human approval."
+}

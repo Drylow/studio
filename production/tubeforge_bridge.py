@@ -7,7 +7,7 @@ import re
 import shutil
 
 from common import REPO
-from services import media, render_ovni, tts
+from services import media, tts
 
 
 def save(path, value):
@@ -18,6 +18,7 @@ def save(path, value):
 
 
 def render(job):
+    from services import render_ovni
     actual = media.duration(job['voice'])
     if abs(actual - job['duration']) > 0.1:
         raise ValueError('TubeForge voice duration changed; remeasure the scene clock')

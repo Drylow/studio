@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "survivor-alien-aftermath",
+  "name": "Alien Aftermath — cartoon simple",
+  "language": "English",
+  "main_character": "Reed",
+  "image_provider": "cli_proxy",
+  "authoring_mode": "codex",
+  "visuals": {
+    "aspect": "16:9",
+    "art_style": "Very simple flat 2D cartoon illustration with crisp black outlines and matte fills. Human adults have oversized perfectly circular smooth pure white heads, two small black oval eyes, tiny line mouths, no nose, ears, hair, eyebrows or realistic faces. Bodies and limbs are thin black stick lines, with pure white mitten hands and white oval shoes, exactly matching the supplied full-body reference proportions. No muscular bodies or bulky costumes. Every named individual appears once only; references depict the same individual, never an extra character. No duplicate identities, floating portraits or ghost overlays. Keep each character's own fixed markings, scarf and bag; do not transfer them to others. One landscape 16:9 scene, sparse shallow frontal setting, one readable action or interaction. No deep cinematic vistas, realistic rendering, gradients on white faces, text or watermarks. The background has few simple outlined props on a matte muted blue/gray/beige palette. Main character identity: Round pure white head, small black oval eyes and short line mouth; no forehead bandage. Thin black stick body, white mitten hands and oval shoes, tiny dusty blue-gray scarf and separate normal gray school backpack standing upright on the floor beside its owner, main zipper and front zipped pocket, no body straps. Match the inspected whole-body identity reference.\n\nBackpacks are SEPARATE props, never worn on the stick bodies. Patch's orange school backpack and Reed's gray school backpack stand upright on the floor beside their owner, bases in visible floor contact with a small contact shadow. No body straps, no floating bags, no duplicate bags. If narration requires a relocation, explicitly carry by the top handle with visible hand contact and put the same bag down at the destination. Thin black stick torsos/limbs and white heads, mitten hands and oval feet remain unchanged.",
+    "background_direction": "Simple shallow 2D locations. Establish one master image and fixed door/window/object positions for each distinct room; use that exact master for subsequent shots in that room. Explicit variants for new views or damage; destroyed objects never return intact. Every shot advances a narrated action, consequence, observation or exchange, not just another zoom of the same tableau.",
+    "avg_scene_seconds": 6,
+    "min_scene_seconds": 2.0,
+    "max_scene_seconds": 12.0,
+    "auto_characters": false,
+    "use_character_refs": true,
+    "use_style_refs": true,
+    "continuity": "off",
+    "captions": false,
+    "motion_strength": 1.0
+  },
+  "thumbnail_direction": "Very simple flat 2D cartoon illustration with crisp black outlines and matte fills. Human adults have oversized perfectly circular smooth pure white heads, two small black oval eyes, tiny line mouths, no nose, ears, hair, eyebrows or realistic faces. Bodies and limbs are thin black stick lines, with pure white mitten hands and white oval shoes, exactly matching the supplied full-body reference proportions. No muscular bodies or bulky costumes. Every named individual appears once only; references depict the same individual, never an extra character. No duplicate identities, floating portraits or ghost overlays. Keep each character's own fixed markings, scarf and bag; do not transfer them to others. One landscape 16:9 scene, sparse shallow frontal setting, one readable action or interaction. No deep cinematic vistas, realistic rendering, gradients on white faces, text or watermarks. The background has few simple outlined props on a matte muted blue/gray/beige palette. Simple readable thumbnail with one clear story conflict.\n\nBackpacks are SEPARATE props, never worn on the stick bodies. Patch's orange school backpack and Reed's gray school backpack stand upright on the floor beside their owner, bases in visible floor contact with a small contact shadow. No body straps, no floating bags, no duplicate bags. If narration requires a relocation, explicitly carry by the top handle with visible hand contact and put the same bag down at the destination. Thin black stick torsos/limbs and white heads, mitten hands and oval feet remain unchanged.",
+  "voice": {
+    "provider": "algrow",
+    "speed": 1
+  },
+  "characters": {
+    "Reed": {
+      "files": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+      ],
+      "description": "Reed: adult thin BLACK stick torso/arms/legs, pure WHITE perfectly round head, tiny black oval eyes, tiny mouth, small blue-gray scarf, WHITE mitten hands and WHITE oval feet. NO bandage. Separate GRAY school backpack stands on FLOOR when stationary, no straps on body; carries only by top handle with real white mitten contact when explicit action requires it. No hair/nose/ears/eyebrows or filled torso.",
+      "sha256": [
+        "2b28b1e18362987171329084126d3b0e34d3270e88cf3ad1bf4502ba9986f270"
+      ]
+    },
+    "Mara": {
+      "files": [
+        "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+      ],
+      "description": "Mara: adult thin BLACK stick torso/limbs, round pure WHITE head, small black oval eyes and tiny mouth, WHITE mittens/oval feet. ONE purple identification band on anatomical RIGHT forearm (viewer LEFT frontal), NO orange bandage or scarf. Separate TEAL school pack on FLOOR, or visible top-handle grip only when carrying. Keep proportions identical to her reference.",
+      "sha256": [
+        "2140444cd762e77841fbe18c8532333fae3e93832043e7a02d1355edbca1604f"
+      ]
+    },
+    "Surveyor": {
+      "files": [
+        "output/imagegen/survivor-full-production-2026-10-12/characters/surveyor.png"
+      ],
+      "description": "Surveyor: ONE nonhuman mint round head with TWO large dark oval eyes and short mouth, compact charcoal-gray covered torso, thin black limbs, mint mitten hands, dark oval boots. ONE blue stripe on anatomical RIGHT shoulder (viewer LEFT frontal) and a small gray scanner. No scarf, bandage, pack or human white skin. Same alien every appearance, not a second visitor from reference.",
+      "sha256": [
+        "84df0161135c5e9019699f3df63de503187cd6a3bfdf1ed7cbab2b38a1af1c3b"
+      ]
+    },
+    "Worker": {
+      "files": [
+        "output/imagegen/survivor-full-production-2026-10-12/characters/worker.png"
+      ],
+      "description": "Worker: ONE nonhuman pale mint round head with two large dark oval eyes/short mouth, compact gray torso, thin black limbs, mint mittens/dark oval boots. NO blue shoulder stripe, scanner, scarf, bandage or pack. Distinct from Surveyor, never draw duplicates.",
+      "sha256": [
+        "ddc731b1f5fa6149d77593ef0453d42fceb8b1366656ab212f57029998ebd308"
+      ]
+    }
+  },
+  "location_masters": {
+    "shop": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png",
+    "shop-dark": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-dark.png",
+    "shop-broken": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png",
+    "shop-gone": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-gone-machine.png",
+    "staff": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff.png",
+    "staff-night": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff-night.png",
+    "yard": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png",
+    "yard-clear": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard-clear.png",
+    "forecourt": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png",
+    "forecourt-one": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-one-pump.png",
+    "forecourt-partial": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+    "craft": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft.png",
+    "craft-late": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft-late.png",
+    "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-path.png"
+  },
+  "scene_contract": "Use case: illustration-story. ONE full-frame landscape 16:9 scene, NO panels, inset portraits, ghost overlays, split-screen, blurry sidebars or caption text. Very simple flat 2D cartoon with crisp black outlines and matte muted blue/gray/beige colors, sparse shallow settings and few readable props, not deep cinematic landscapes or elaborate textures. The subject's action or interaction must be clearly visible and tied to narration.\nALL living human faces are perfectly circular pure WHITE, with tiny black oval eyes, tiny line/small reaction mouth, no nose, ears, hair, eyebrows or realistic facial anatomy. ALL exposed human mitten hands and oval feet are pure WHITE too; torsos and limbs remain BLACK THIN STICK LINES as identity refs, no gray filled body or bulky costume. Adults, not toddlers. ZOMBIES alone have GREEN heads, both GREEN mittens and both GREEN oval feet, matching bound infected refs. ALIENS use their bound mint heads/hands and covered gray bodies, never recolor a human green. No gore.\nNamed individuals occur ONCE each only. White head circle/proportions/markings/outfit/pack color remain constant; never transfer bandage/stripe/scarf/purple band to another actor. ORANGE Patch pack, GRAY Reed pack and TEAL Mara pack are separate school backpacks: when stationary ONE bag per owner upright ON FLOOR with base contact/contact shadow, NO pack on back/shoulder, NO body straps, NO unsupported bag. For explicitly carrying action a CONNECTED visible white mitten grips the TOP HANDLE. In close-ups where feet are off-frame, omit bags rather than float them or force them into frame. Reference bags are NOT extra copies to add when owner already carries one. Objects/cars/machines match supplied props and are physically supported, not floating.\nImage 1 is the VERIFIED location master/explicit state variant, ALWAYS keep its room/world geometry. Crop its existing area for a close-up, never invent a new viewpoint/wall/exit. Additional identity sheets/prop images are only guides to their bound subject, no copying neutral sheet background. Breakage/removal/clearance is PERSISTENT. Follow scene action's explicit changes, no repaired glass/reappearing pumps/duplicate vehicles. No text, labels, logo, watermarks or realistic faces.\n\nKeep protagonists identifiable: show their simple eyes/mouth and own marking/scarf in front or three-quarter view, no blank faceless back-of-head with forehead markings. Where narration has no breakage, glazing stays INTACT: use only small short impact ticks, never spiderweb cracks. Damage occurs only in the explicit broken master variants.\n",
+  "review_provenance": "References inspected by Codex during the 12 October production; not human approval."
+}

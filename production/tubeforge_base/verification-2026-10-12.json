@@ -1,0 +1,10 @@
+{
+  "installation_test": "Fresh private source staging with independent virtual environment, followed by idempotent overlay deployment",
+  "automated_tests": {"passed": 206, "failed": 0},
+  "http_smoke": ["UI", "OpenAPI", "state", "style management"],
+  "preset_checks": ["Both styles", "Full recurring cast", "Reference digests", "Preserve colleague edits on repeated import"],
+  "writer_check": "Original studio voice-writing examples load without private competitor transcripts",
+  "native_render_smoke": {"frames": 48, "fps": 24, "width": 1920, "height": 1080, "audio_tracks": 1},
+  "paid_api_calls": 0,
+  "limitations": ["Smoke render uses local synthetic fixtures, not new generated creative content", "No colleague credentials tested", "No new YouTube publication", "Optional OVNI environment not reinstalled in this verification"]
+}
