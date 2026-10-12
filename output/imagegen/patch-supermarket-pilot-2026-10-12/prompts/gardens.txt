@@ -1,0 +1,3 @@
+Use case: illustration-story. Asset: empty community-garden master, landscape 16:9.
+Image 1 is simple cartoon STYLE only; exclude its character and orange bag.
+Shallow flat 2D small community garden, side-on eye-level. Three low rectangular brown raised vegetable beds with just a few simple green leaf clusters. A small plain muted-brown wooden shed at RIGHT, one closed dark brown door and short low bench alongside. Short pale gray path enters at LEFT and crosses foreground to bench. Low bushes behind beds, pale blue sky, no skyline or distant architecture. Matte solid fills and clean black outlines, restrained simple objects, no wood-grain texture, cinematic light, deep perspective or gradients. No people, bags, lettering, signs, logos, giant plants or extra buildings.

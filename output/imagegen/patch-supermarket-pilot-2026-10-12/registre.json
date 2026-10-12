@@ -1,0 +1,374 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "scope": "six location masters, two side identities and three opening image tests; no bulk generation",
+  "script": "chaines/survivor-projet/episode-01-supermarket/script-en.txt",
+  "script_sha256": "f7206257310991455674d63ddb830d93f318d152884d928201d1db2061e07b00",
+  "assets": [
+    {
+      "prompt_sha256": "c4b0167f8271795ba80aab618567724008f561886c1828d819cb29a7c9ed1b27",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:02.167961+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542",
+      "id": "front",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/front.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : caisse gauche, facade porte gauche/vitre droite, logement rideau unique au-dessus, porte interne bleu-gris droite. Chariot initial dehors. Geometrie peu profonde et deux ouvertures sur facade seulement.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "873ae5485a82310a19d337b8d0025dab47ca46529f75609dc921c2b768640e79",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:02.167963+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164",
+      "id": "stockroom",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/stockroom.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : porte interne bleu-gris gauche, livraison olive-gris droite, indicateur dedans, etagere avec trois cartons/couverture teal, trois packs eau. Lateral gauche corridor interne. Pas de caisse transplantee.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "a7adfb3d788a4fd81142a8d3e83d820ed194e720d1f1fdc40d49688f3c17f0ad",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:41.203543+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "49a052d38154e19b922ead91b38bd362631c8420a7ee715baf19ac22483d172b",
+      "id": "staff",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/staff.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/staff.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : frigo gauche, table et deux chaises, sortie personnel droite a fenetre verticale, ouverture corridor gauche. Petit mur bas visible par fenetre, pas skyline.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "593837caaed83e40c43051dfda9bce073f98af6fedcb46803bf1d935ca3077a2",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:41.204131+00:00",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "67e196ddbaf246d13a5552fe473e450ea2caecd9f8d409bb74e67bef4fed24dd",
+      "id": "yard",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/yard.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : olive porte gauche vue externe, charnieres opposees a vue interne, deux palettes, portail droite, petits buissons et voie. Luminosite JOUR : pas maitre de nuit implicite.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "478ca42be63b2d6cfb872a503aecb2d5e892e7569b870ef909b6ea2fa4f8a6c7",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:41.223154+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "385c32bc1340c4478d395836c7db3f32fc96687a387394c73e40e2c31b010d73",
+      "id": "canal",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/canal.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/canal.txt",
+      "review_state": "rejected",
+      "visual_review": "REJETE : pont parallele au canal, pas traverse utilisable. Conserve archive.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "dfd4b48732d133925d8077e9e01611e1e1ccd6f352e71d56988883a1cede50a4",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/canal.png",
+          "sha256": "385c32bc1340c4478d395836c7db3f32fc96687a387394c73e40e2c31b010d73"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:10:47.106223+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "bd364adffa77a31b6ab32e3bc5cefe82de7816ca35e72fc552b5c18917a9c957",
+      "id": "canal-v2",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/canal-v2.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/canal-v2.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : canal entre berge gauche et droite, pont relie reellement les deux, chemin continue de chaque cote. Pas architecture lointaine. Etat JOUR.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "2a8aa7fa18f70ca27ba9f279e116a95db6ec6b9362392186ae460f74dcdcbb9b",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:41.226682+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b4a613649b53d3ee0a78e1f25c8bfd83a20c72ca594c470692a4c10b47593d8f",
+      "id": "gardens",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/gardens.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/gardens.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : trois bacs, abri et banc droite, chemin gauche; jardin distinct et simple. Etat JOUR.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "99b36a84cf907bc40ecc002ec2365c986cb1e8ed56a678306e04729154fc2fe1",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:02.167966+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "db907a81023d19dd37cb80d61a16295714947035f2e7713a693ec9b29ece7325",
+      "id": "cart-infected",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/cart-infected.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/cart-infected.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : cercle blanc, gilet olive ragged, corps trait noir, mains et chaussures blanches, pas de pansement/sac. Neutre avant pose scene, pas enfant.",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "2ae6939e66f5a10b7eac64bf1139e1f08c28d874144e2406389e1fc9bb972aa6",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:07:02.168102+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c8abd4572bcaa352ab4f0fe2a8df0bfd9ae325ce3257b78887cd0b186aea3cf5",
+      "id": "delivery-infected",
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/delivery-infected.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/delivery-infected.txt",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Vue regardee : cercle blanc, gilet navy avec deux poches, corps trait noir, pas pansement/sac. Une personne entiere.",
+      "user_approved": false
+    }
+  ],
+  "scenes": [
+    {
+      "prompt_sha256": "f4a3529abfcacc0b1fe2431c0dd4aeb902d03098691a57a0764883ce7249506f",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/cart-infected.png",
+          "sha256": "db907a81023d19dd37cb80d61a16295714947035f2e7713a693ec9b29ece7325"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:11:57.692214+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3e50656b40ec0643b9b6404df69124aea6153bf8e6110228dff1f89a13c7c9c8",
+      "id": 1,
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/A-REGARDER/01.png",
+      "native_file": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-01-v2.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/plan-01-v2.txt",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "narration": "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Regarde : Patch unique, pansement viewer-left, sac orange unique; infecte olive sans pansement; chariot frontal vers vitre, impact lisible, caisse/porte interne/facade conserves. Pas gore/texte. Ecart mineur : ticks blancs et expression infecte sobre.",
+      "user_approved": false,
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "delivery_sha256": "60dcf4c2916bc9f89a73212d00f3fbcd03d89bb609f82f98136ab57c1c4ffb65",
+      "delivery_transform": "FFmpeg fit/pad to exact 1920x1080; no content regeneration; native preserved"
+    },
+    {
+      "prompt_sha256": "d7e6e07d46fac7b2295db55bdc6519a36f8f784e615799c63461e615123e910b",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/cart-infected.png",
+          "sha256": "db907a81023d19dd37cb80d61a16295714947035f2e7713a693ec9b29ece7325"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-01-v2.png",
+          "sha256": "3e50656b40ec0643b9b6404df69124aea6153bf8e6110228dff1f89a13c7c9c8"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:14:26.226550+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b80f26b9ec0a9511b3fddf47f7bfbfcca51e009cb623baf615ae926e7812635e",
+      "id": 2,
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/A-REGARDER/02.png",
+      "native_file": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-02-v2.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/plan-02-v2.txt",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "narration": "Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down. The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Regarde : rideau recouvre porte publique ET vitre; porte interne distincte reste libre. Chariot frontal conserve, conducteur masque par rideau opaque. Patch a deux mains sur barre, sac au sol, cercle blanc et pansement visibles. Legere reduction de taille apparente liee a pose/proximite du rideau, pas enfant. Pas duplications.",
+      "user_approved": false,
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "delivery_sha256": "103107ffaf524f0760fa7c7f5d387295104ded1535e9b66e3100a2e9810acfe4",
+      "delivery_transform": "FFmpeg fit/pad to exact 1920x1080; no content regeneration; native preserved"
+    },
+    {
+      "prompt_sha256": "ba869268f197fb96efb45114a556608d46b8c0e996ef76cf98dba96522b46894",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/delivery-infected.png",
+          "sha256": "c8abd4572bcaa352ab4f0fe2a8df0bfd9ae325ce3257b78887cd0b186aea3cf5"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:09:36.858202+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "e297f69339b8867ed998cc81b15c5821745e3be2736f07ce2814105c7ff250ed",
+      "id": 3,
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/A-REGARDER/03.png",
+      "native_file": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-03.png",
+      "prompt": "output/imagegen/patch-supermarket-pilot-2026-10-12/prompts/plan-03.txt",
+      "location_id": "stockroom",
+      "characters": [
+        "Patch",
+        "Delivery Infected"
+      ],
+      "narration": "You run through the stockroom, past the bottled water that nobody finished unloading. A hand presses against the delivery door's little window. The driver outside has his face against the glass. He keeps pressing the buzzer even when you step away.",
+      "review_state": "inspected_by_codex",
+      "visual_review": "Regarde : portes reserve et livraison, etagere/trois cartons/couverture/trois packs conservent leur position. Patch entre depuis porte interne, unique avec meme pansement/sac. Un conducteur distinct derriere carreau et sa main, reste corps masque. Indicateur interieur orange. Ecart : Patch a gauche de tablette plutot que proche livraison; coherent avec entree dans reserve.",
+      "user_approved": false,
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "delivery_sha256": "65327442acf0127bf7ba53dd10a4228395ef8e2891927d836d5c9afc0b48855f",
+      "delivery_transform": "FFmpeg fit/pad to exact 1920x1080; no content regeneration; native preserved"
+    }
+  ],
+  "timings": null,
+  "voice_generated": false,
+  "notes": [
+    "Native outputs kept, landscape near 16:9; exact dimensions recorded.",
+    "Inspected by Codex does not mean user-approved or pixel-perfect.",
+    "Day courtyard/canal/gardens need explicit night variants for night scenes."
+  ],
+  "rejected_scene_attempts": [
+    {
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-01.png",
+      "reason": "Chariot parallele a vitre, impact peu lisible."
+    },
+    {
+      "file": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-02.png",
+      "reason": "Rideau ne couvre pas porte publique; Patch trop petit; chariot et infecte changent de position."
+    }
+  ],
+  "tubeforge_project_id": "zombie-outbreak-30-days-trapped-in-a-sup-e56f42",
+  "tubeforge_channel_id": "channel-c589e9b6a252",
+  "voice_setting": "Inherited studio voice provisionally; no audio generated; user can choose before production."
+}

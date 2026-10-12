@@ -1,0 +1,3 @@
+Use case: illustration-story. Asset: empty staff-room master, landscape 16:9.
+Image 1 is cartoon style only, draw none of its people or bags.
+Very simple flat 2D supermarket staff room, eye-level shallow composition, cream wall, pale gray floor, matte fills and clean black outlines. Small white domestic refrigerator at LEFT, short pale brown table and exactly two plain gray chairs at center. One CLOSED gray personnel exterior exit at RIGHT with a narrow vertical upper window showing only a dull blue side alley. One short interior corridor opening at far left edge leads back to stockroom, not exterior. Nothing else: no shopfront, shelves, lockers, extra doors, people, text, logos, dramatic shadows, textures or perspective tunnel. Leave clear floor for future actors.
