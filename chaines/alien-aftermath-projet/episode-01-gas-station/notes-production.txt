@@ -1,10 +1,10 @@
 ALIENS - PILOTE PROPOSE, SCRIPT V1
 Alien Invasion: 7 Days Trapped in a Gas Station
 Recit original de fiction, en anglais et a la deuxieme personne. La categorie aliens et la chaine distincte sont confirmees ; station-service, titre et design de Reed restent propositions.
-2075 mots dans cette V1. Les sept jours sont un calendrier invente, pas une duree audio.
+2078 mots dans cette V1. Les sept jours sont un calendrier invente, pas une duree audio.
 
 IDENTITES A FIGER AVANT IMAGES
-Reed : adulte humain, tete ronde pure blanche, petits yeux noirs, bouche courte, corps noir fin, mains et chaussures blanches. Foulard bleu-gris tres simple, sac a dos scolaire gris avec deux bretelles et fermeture eclair. Pas de pansement de Patch ni de peau humaine realiste. Reference de corps entier generee et regardee : output/imagegen/survivor-backpacks-2026-10-12/characters/reed.png, installee dans TubeForge. Portrait complementaire encore a preparer si necessaire ; nouvelle image pas encore approuvee explicitement par l'utilisateur.
+Reed : adulte humain, tete ronde pure blanche, petits yeux noirs, bouche courte, corps noir fin, mains et chaussures blanches. Foulard bleu-gris tres simple, sac a dos scolaire gris avec deux bretelles et fermeture eclair. Pas de pansement de Patch ni de peau humaine realiste. Reference de corps entier generee et regardee : output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png, installee dans TubeForge. Portrait complementaire encore a preparer si necessaire ; nouvelle image pas encore approuvee explicitement par l'utilisateur.
 Surveyor : alien recurrent reconnaissable a une unique bande bleu sombre sur l'epaule. Tete ronde pale menthe et grands yeux sombres simples, corps couvert gris froid, proportions compactes, pas d'anatomie realiste. Son portrait et son corps entier sont a creer ; la photo de profil de la chaine n'est pas une reference approuvee du Surveyor.
 Les autres visiteurs n'ont PAS sa bande d'epaule et ne sont pas des copies du protagoniste. Nombre visible fixe dans chaque prompt.
 Loader : meme machine de levage recurrente, avec sa reference propre. Sa forme, les roues/appuis et les elements de prise sont a fixer avant de la mettre dans un plan. Pas de bras apparaissant selon le besoin de l'image.
@@ -52,3 +52,5 @@ D : scanner execute : zero candidat de phrase et zero plancher mecanique antithe
 E : intrigue originale sur l'attention et la recuperation de materiel, pas trois coups/radio/neighbor-bite copies. Regles alien ouvertement fictives. Le score de documentaire a trois sources n'est pas une certification applicable aux evenements inventes ; aucune promesse de monetisation.
 Statut : script V1 ecrit et relu sur texte, pas encore approuve dans son integralite, pas de voix, reference ou image finale d'episode generee.
 Skills appliques : voice-anchoring, script-structures, retention-mechanics, humanizer, greenlight-audit et anti-slop checklist du master FacelessOS.
+
+Correction utilisateur : sac a dos scolaire gris comme OBJET SEPARE, pose debout au sol a cote de Reed, base en contact et ombre de contact. Aucun sac porte dans le dos, aucune bretelle sur le corps en traits fins. Pour un deplacement necessaire au recit : prise visible par la poignee puis sac repose au sol dans le nouveau lieu. Un seul sac. Les anciennes images avec sac suspendu sont rejetees et conservees comme archives.

@@ -1,0 +1,29 @@
+{
+  "preview_only": true,
+  "patch_words": 2083,
+  "scenes": [
+    {
+      "scene": 1,
+      "served_sha256": "23575a2f44e8cc04666d354b3869c11b8a1672a4df60552fcc6973d482002578",
+      "identity_bindings_valid": true,
+      "actual_ordered_reference_count": 5
+    },
+    {
+      "scene": 2,
+      "served_sha256": "72ff2f6bbcf7db828fcf22a7b67a612eb438f9eddab0247de52e29c57b61f99a",
+      "identity_bindings_valid": true,
+      "actual_ordered_reference_count": 6
+    },
+    {
+      "scene": 3,
+      "served_sha256": "867f57832d9a8d5c7f8be08abb76b9c81a5fa47e193762d8cc53414d92d1a263",
+      "identity_bindings_valid": true,
+      "actual_ordered_reference_count": 5
+    }
+  ],
+  "both_floor_prop_identities_verified": true,
+  "writer_prompt_deployed": true,
+  "provider_selection_unchanged": true,
+  "no_voice_or_batch_started": true,
+  "human_approval_pending": true
+}
