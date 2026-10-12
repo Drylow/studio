@@ -40,6 +40,12 @@ def _save_channel(c):
 
 
 def _update_style(s, body):
+    if "image_provider" in body:
+        if body["image_provider"] not in ("cli_proxy", "google_flow"):
+            raise HTTPException(422, "Fournisseur image inconnu")
+        s["workspace_image_provider"] = body["image_provider"]
+    if "image_model" in body:
+        s["visuals"]["image_model"] = _text(body["image_model"], "modèle image", 200, required=True).strip()
     for field, section, key in (("prompt", "visuals", "art_style"),
                                 ("background_direction", "visuals", "background_direction"),
                                 ("thumbnail_prompt", "thumbnail", "style")):
@@ -115,6 +121,46 @@ def _update_channel(c, body):
     return c
 
 
+def _character_fields(s, body):
+    name = _text(body.get("name", ""), "personnage", 100, required=True).strip()
+    variant = api._identifier(body.get("variant", "default"))
+    description = _text(body.get("description", ""), "description du personnage", 6000, required=True).strip()
+    entries = s.get("workspace_cast_registry") or {}
+    if any(other != name and other.casefold() == name.casefold() for other in entries):
+        raise HTTPException(422, "Utilisez le nom exact du personnage existant")
+    for field in ("is_main", "verify"):
+        if field in body and type(body[field]) is not bool:
+            raise HTTPException(422, "Le choix du personnage principal et la validation doivent être explicites")
+    return name, variant, description
+
+
+def _save_character(s, name, variant, description, ref=None, is_main=None, verify=False):
+    entries = s.setdefault("workspace_cast_registry", {})
+    entry = entries.setdefault(name, {"required": True, "variants": {}})
+    selected = entry["variants"].get(variant)
+    if selected is None:
+        if not ref:
+            raise HTTPException(404, "Variante de personnage introuvable")
+        selected = entry["variants"][variant] = {"description": description, "references": []}
+    selected["description"] = description
+    if ref:
+        selected["references"].append({**ref, "owner": "style", "role": "identity", "character": name,
+                                       "variant": variant, "review_state": "unreviewed"})
+    if verify:
+        for image in selected["references"]:
+            digest = api._file_digest(store.style_dir(s["id"]), image.get("path"))
+            if not digest or digest != image.get("sha256"):
+                raise HTTPException(409, "Une référence a changé ou est introuvable ; importez une nouvelle image")
+            image["review_state"] = "verified"
+    if is_main:
+        s["workspace_main_character"] = name
+    elif is_main is False and s.get("workspace_main_character") == name:
+        s.pop("workspace_main_character", None)
+    s["updated"] = now()
+    store.save_style(s)
+    return next(item for item in api._styles(True) if item["id"] == s["id"])
+
+
 def install(app):
     if getattr(app.state, "workspace_management_installed", False):
         return
@@ -131,6 +177,8 @@ def install(app):
         s["id"] = "style-" + uuid.uuid4().hex[:12]
         s.update(archived=False, created=now(), workspace_managed=True)
         if not body.get("base_id"):
+            for key in ("workspace_cast_registry", "workspace_main_character", "workspace_character_references"):
+                s.pop(key, None)
             s["workspace_references"] = []
             for section, key in (("visuals", "style_refs"), ("visuals", "reference_sources")):
                 s[section][key] = []
@@ -163,6 +211,25 @@ def install(app):
         s["visuals"]["reference_sources"] = copy.deepcopy(s["workspace_references"])
         store.save_style(s)
         return ref
+
+    @router.post("/styles/{sid}/characters")
+    async def upload_character(sid: str, file: UploadFile = File(...), name: str = Form(...),
+                               description: str = Form(...), variant: str = Form("default"),
+                               is_main: bool = Form(False)):
+        s = _style(sid, active=True)
+        name, variant, description = _character_fields(s, {"name": name, "variant": variant,
+                                                        "description": description, "is_main": is_main})
+        ref = await api._upload(file, store.style_dir(sid), "character", name)
+        s = _style(sid, active=True)
+        _character_fields(s, {"name": name, "variant": variant, "description": description, "is_main": is_main})
+        return _save_character(s, name, variant, description, ref=ref, is_main=is_main)
+
+    @router.put("/styles/{sid}/characters")
+    async def update_character(sid: str, body: dict):
+        s = _style(sid, active=True)
+        name, variant, description = _character_fields(s, body)
+        return _save_character(s, name, variant, description, is_main=body.get("is_main"),
+                               verify=body.get("verify", False))
 
     @router.post("/channels", status_code=201)
     async def create_channel(body: dict):

@@ -4,7 +4,7 @@ Recit original de fiction, en anglais et a la deuxieme personne. La categorie al
 2075 mots dans cette V1. Les sept jours sont un calendrier invente, pas une duree audio.
 
 IDENTITES A FIGER AVANT IMAGES
-Reed : adulte humain, tete ronde pure blanche, petits yeux noirs, bouche courte, corps noir fin, mains et chaussures blanches. Foulard bleu-gris tres simple, sac gris avec un rabat. Pas de pansement de Patch ni de peau humaine realiste. Reference de corps entier et portrait a creer puis regarder.
+Reed : adulte humain, tete ronde pure blanche, petits yeux noirs, bouche courte, corps noir fin, mains et chaussures blanches. Foulard bleu-gris tres simple, sac gris avec un rabat. Pas de pansement de Patch ni de peau humaine realiste. Reference de corps entier generee et regardee : output/imagegen/alien-main-reference-2026-10-12/reed.png, installee dans TubeForge. Portrait complementaire encore a preparer si necessaire ; nouvelle image pas encore approuvee explicitement par l'utilisateur.
 Surveyor : alien recurrent reconnaissable a une unique bande bleu sombre sur l'epaule. Tete ronde pale menthe et grands yeux sombres simples, corps couvert gris froid, proportions compactes, pas d'anatomie realiste. Son portrait et son corps entier sont a creer ; la photo de profil de la chaine n'est pas une reference approuvee du Surveyor.
 Les autres visiteurs n'ont PAS sa bande d'epaule et ne sont pas des copies du protagoniste. Nombre visible fixe dans chaque prompt.
 Loader : meme machine de levage recurrente, avec sa reference propre. Sa forme, les roues/appuis et les elements de prise sont a fixer avant de la mettre dans un plan. Pas de bras apparaissant selon le besoin de l'image.

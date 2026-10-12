@@ -16,7 +16,10 @@ from . import workspace_api as api
 def registry(p):
     """A project entry explicitly replaces the same exact name's style entry."""
     merged = {}
-    for source in (store.get_style(p.get("style_id")) or {}, p):
+    style = store.get_style(p.get("style_id")) or {}
+    if "style_cast_snapshot" in p:
+        style = {"workspace_cast_registry": p["style_cast_snapshot"]}
+    for source in (style, p):
         entries = source.get("workspace_cast_registry") or {}
         if not isinstance(entries, dict):
             raise HTTPException(422, "Le registre des personnages doit être un objet")
@@ -38,6 +41,25 @@ def registry(p):
                     or not variant["references"]):
                 raise HTTPException(422, "Une variante de personnage est incomplète")
     return merged
+
+
+def style_summary(style):
+    """Expose identities separately from scenery/style references."""
+    output = []
+    base = store.style_dir(style["id"])
+    for name, entry in (style.get("workspace_cast_registry") or {}).items():
+        variants = []
+        for key, variant in entry.get("variants", {}).items():
+            refs = []
+            for ref in variant.get("references", []):
+                digest = api._file_digest(base, ref.get("path"))
+                refs.append({**copy.deepcopy(ref), "url": f"/style-media/{style['id']}/{ref['path']}",
+                             "exists": bool(digest), "valid": bool(digest and digest == ref.get("sha256")
+                                                                    and ref.get("review_state") == "verified")})
+            variants.append({"id": key, "description": variant.get("description", ""), "references": refs})
+        output.append({"name": name, "required": entry.get("required", True),
+                       "main": name == style.get("workspace_main_character"), "variants": variants})
+    return output
 
 
 def summary(p):

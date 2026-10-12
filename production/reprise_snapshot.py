@@ -49,6 +49,9 @@ def collect():
     for name in (".env", ".env.example", "README.md", "requirements.txt", "start.bat", "batch.bat", "resolve_batch.py", "install_voix_locale.bat"):
         add(ROOT / "work/TubeForge" / name)
     add(ROOT / "output/channel-kits/survivor-launch-2026-10-12.zip")
+    tree("output/imagegen/alien-main-reference-2026-10-12")
+    tree("output/tubeforge-style-characters-2026-10-12")
+    tree("work/alien-main-reference-2026-10-12")
     skill = Path.home() / ".codex/skills/.system/imagegen"
     if skill.exists():
         for path in skill.rglob("*"):

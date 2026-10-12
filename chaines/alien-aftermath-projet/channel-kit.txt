@@ -21,7 +21,7 @@ Fin du brouillon : fuite par le portail arriere et le chemin presentes des le de
 STYLE ET IDENTITE DISTINCTE
 Meme discipline de simplicite : illustrations plates, contours nets, deux couches visuelles, pas de vastes paysages cinematographiques.
 Palette de marque proposee : violet sombre, gris froid et vert menthe. La palette orange de Patch reste propre a la principale.
-Personnage humain de travail : Reed, adulte a tete blanche ronde, petits yeux noirs, bouche courte, mains/chaussures blanches et corps noir fin. Petit foulard bleu-gris et sac gris simple, sans pansement orange. Reference a creer et regarder avant plans ; ce design n'est pas encore approuve.
+Personnage humain de travail : Reed, adulte a tete blanche ronde, petits yeux noirs, bouche courte, mains/chaussures blanches et corps noir fin. Petit foulard bleu-gris et sac gris simple, sans pansement orange. Reference generee et regardee : output/imagegen/alien-main-reference-2026-10-12/reed.png. Installee dans TubeForge sur demande d'integrer le personnage principal ; image pas encore approuvee explicitement par l'utilisateur.
 Les aliens sont des non-humains explicites avec une silhouette simple et repetable. Leur dessin ne doit pas changer entre les plans ; un alien recurrent a sa reference propre.
 La photo de profil proposee represente la menace alien dans le meme trait simple, pas une reference approuvee du personnage Reed.
 Photo de profil : output/imagegen/alien-channel-kit-2026-10-12/pfp.png. Prompt et registre dans le meme dossier. Aucun personnage d'episode n'est valide a partir de ce seul logo.

@@ -1,0 +1,7 @@
+Use case: illustration-story
+Asset type: full-body character identity reference for simple animated alien survival stories
+Input image 1: approved drawing style and head-to-body proportion reference ONLY. It depicts Patch, a different identity. Do not copy his orange bandage or orange bag.
+Subject: ONE adult stick figure named Reed, front view, entire body visible, centered on an empty flat pale gray backdrop. Perfectly circular oversized pure white smooth head, two small vertical oval black eyes, tiny neutral line mouth. No nose, ears, hair, eyebrows, hat or forehead marking. Thin black stick torso, thin black stick arms and legs, white simple mitten hands, white oval shoes. Exact same simple proportion system as image 1, no long realistic torso or muscle anatomy.
+Distinctive clothing/prop: a very small plain dusty blue-gray scarf around the neck, two short ends, and a small simple gray rectangular flap bag held beside his hip by a short gray handle, one black circular clasp. No orange, no lettering, no zipper details, no pockets added. Both hands clearly visible; one relaxed and one holding the bag handle.
+Style: extremely simple flat 2D cartoon, crisp black contours, matte fills, no shading on white face or hands, no realistic material or anatomy. Preserve the approved style rather than introducing a new illustration style.
+Framing: landscape 16:9 identity image with ample blank space, no environment, no extra head or side views, no second figure, no alien, no scenery, no text, no watermarks.

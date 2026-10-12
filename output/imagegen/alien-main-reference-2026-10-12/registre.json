@@ -1,0 +1,20 @@
+{
+  "provider": "configured_cli_proxy",
+  "image": "reed.png",
+  "sha256": "f570de9395b73ea48fad6b728b5a9ddc5a5c037b0cc263a0273c9e0801b5fc8c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt": "reed-prompt.txt",
+  "prompt_sha256": "fefcccdcefc8fae4e1aa0f1f432d1f9902d6055daa8cfffb4df2f340de63da8e",
+  "ordered_references": [
+    {
+      "path": "output\\imagegen\\survivor-launch-2026-10-12\\01-patch-character.png",
+      "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+    }
+  ],
+  "actual_full_image_viewed": true,
+  "user_approved": false,
+  "review_notes": "One full-bodied thin stick adult with round white face, black oval eyes, tiny gently curved mouth, white mittens/shoes, blue-gray scarf and gray flap bag; no bandage or alien face. Same simple proportions as Patch. Gray background has mild tonal texture. New identity generated and inspected for the requested alien style, not yet explicitly user approved."
+}
