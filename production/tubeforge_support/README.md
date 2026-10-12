@@ -2,6 +2,8 @@
 
 Etat au 12 octobre 2026. Lire `../../README_REPRISE.md` pour le travail editorial actif et `../../CLAUDE.md` pour les regles generales. L'application installee est dans `../../work/TubeForge/` ; ce dossier contient les modifications a conserver lors des deploiements.
 
+Pour un nouveau PC ou le collegue qui produit des aliens, commencer par [README_SURVIVOR_TUBEFORGE.md](../../README_SURVIVOR_TUBEFORGE.md). L'installation complete depuis Git est maintenant `../tubeforge_setup.py`, avec la base dans `../tubeforge_base/` et les deux styles modifiables dans `../tubeforge_presets/`. L'ancien installeur utilisant une archive privee n'est pas requis. Les patches d'archive historiques ne sont pas la voie d'installation publique.
+
 ## Carte des modules
 
 | Source | Role |
@@ -9,7 +11,7 @@ Etat au 12 octobre 2026. Lire `../../README_REPRISE.md` pour le travail editoria
 | `workspace.html`, `workspace.js`, `workspace.css` | Interface actuelle, pages chaine/projet, script colle, progression et outils avances |
 | `workspace_api.py`, `workspace_management.py` | Donnees et operations du workspace, gestion des chaines/styles/projets |
 | `workspace_voice.py` | Parcours de voix, fournisseurs et suivi des jobs |
-| `workspace_writing.py`, `scriptwriting/` | Ecriture Survivor depuis un titre : CLI Proxy, Faceless OS et ancres reelles, revision et bible de continuite |
+| `workspace_writing.py`, `scriptwriting/` | Ecriture Survivor depuis un titre : CLI Proxy, Faceless OS et exemples identifies par source, revision et bible de continuite |
 | `workspace_planning.py` | Preparation des plans/prompting du parcours general ; ne pas l'utiliser pour reecrire des prompts diriges par Codex |
 | `workspace_generation.py` | Generation individuelle et lot, test des trois premieres images, suite, stop, routes de rendu |
 | `workspace_characters.py` | References et variantes des personnages |
@@ -17,7 +19,7 @@ Etat au 12 octobre 2026. Lire `../../README_REPRISE.md` pour le travail editoria
 | `google_flow.py` | Transport Google Flow/useapi et comptes, distinct du chemin CLI Proxy |
 | `studio_bridge.py` | Pont avec les services du depot |
 | `workspace_seed.py` | Initialisation/migration des donnees ; ne pas reseeder un workspace existant pour une reprise |
-| `vendor.patch`, `voice_ui.json`, `main.py`, `__init__.py`, `import_review.py`, `benchmark.py` | Adaptations de l'installation initiale et outils additionnels |
+| `main.py`, `__init__.py`, `import_review.py`, `benchmark.py` | Outils additionnels et point d'entree, egalement conserves dans la base distribuable |
 | `*_tests.py`, `workspace_ui_tests.cjs`, `requirements.lock` | Verification ciblee et dependances de l'installation |
 
 Le script `../tubeforge_workspace.py` copie les modules maintenus dans `work/TubeForge/app/` et le frontend dans `app/web/`, puis applique les points d'integration. Il ne constitue pas une installation complete a lui seul.
@@ -67,7 +69,7 @@ Les deux styles Survivor ont leurs personnages principaux deja importes. Les reg
 
 ## Titre vers script
 
-L'etape Texte expose l'ecriture via le CLI Proxy pour les deux styles Survivor, en anglais. Deux calls sur le modele texte selectionne/fixe au projet : draft puis revision selon les cinq fichiers Faceless OS et les trois transcriptions reelles chargees depuis `STUDIO_ROOT`. Un troisieme call de redaction peut ajuster la longueur mesuree ; maximum trois, pas de retry de transport ni de hedge automatique. Un texte encore hors duree est conserve en brouillon avec un probleme signale, sans adoption automatique. Les prompts publics sont dans `scriptwriting/`; aucune cle ni nom de modele n'y est fige. Les documents de skills servent de methode, mais la fenetre de mots demandee et le format JSON/narration pure ont priorite sur leurs templates de longue video.
+L'etape Texte expose l'ecriture via le CLI Proxy pour les deux styles Survivor, en anglais. Deux calls sur le modele texte selectionne/fixe au projet : draft puis revision selon les cinq fichiers Faceless OS et les exemples d'ecriture. Les transcriptions locales sont utilisees si presentes ; sinon les trois exemples de `scriptwriting/house-voice-examples.json` sont nos narrations originales, explicitement identifiees ainsi et non comme transcriptions concurrentes. Un troisieme call de redaction peut ajuster la longueur mesuree ; maximum trois, pas de retry de transport ni de hedge automatique. Un texte encore hors duree est conserve en brouillon avec un probleme signale, sans adoption automatique. Les prompts publics sont dans `scriptwriting/`; aucune cle ni nom de modele n'y est fige. Les documents de skills servent de methode, mais la fenetre de mots demandee et le format JSON/narration pure ont priorite sur leurs templates de longue video.
 
 Le projet vide sans medias recoit le texte automatiquement si la revue ne signale pas de probleme. Un projet deja ecrit conserve son texte et recoit un brouillon. L'adoption refuse les medias existants et les empreintes de texte perimees. Voix/images ne suivent pas automatiquement. L'audit du modele reste distinct des validations humaines. Scripts, bibles, audits et requests sont sauves dans `script-generations/` du projet prive.
 
