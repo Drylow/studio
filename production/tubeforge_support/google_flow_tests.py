@@ -67,15 +67,18 @@ def test_exact_prompt_reference_order_and_account_rotation(provider):
                           "aspectRatio": "16:9", "count": 1, "reference_1": "ref-2", "reference_2": "ref-3"}
 
 
-@pytest.mark.parametrize("failure", ["timeout", "quota", "denied", "captcha"])
+@pytest.mark.parametrize("failure", ["timeout", "quota", "denied", "captcha", "captcha-missing"])
 def test_failure_does_not_replay_or_expose_credentials(provider, monkeypatch, failure):
     calls, client = provider
     async def post(*args, **kwargs):
         calls.append((args, kwargs))
         if failure == "timeout":
             raise httpx.ReadTimeout("private-test-key")
-        status = 429 if failure == "quota" else 403
-        body = "MODEL_ACCESS_DENIED" if failure == "denied" else "ZERO_BALANCE" if failure == "captcha" else "private-cookie"
+        status = 429 if failure == "quota" else 400 if failure == "captcha-missing" else 403
+        body = ("No captcha provider API keys configured. Add at least one at "
+                "https://example.invalid/private-cookie?key=private-test-key&email=account0@example.invalid"
+                if failure == "captcha-missing" else "MODEL_ACCESS_DENIED" if failure == "denied"
+                else "ZERO_BALANCE" if failure == "captcha" else "private-cookie")
         return httpx.Response(status, json={"error": body, "session": "private-test-key"}, headers={"Retry-After": "45"})
     monkeypatch.setattr(client, "post", post)
     with pytest.raises(flow.FlowError) as error:
@@ -84,6 +87,20 @@ def test_failure_does_not_replay_or_expose_credentials(provider, monkeypatch, fa
     assert "private-test-key" not in str(error.value) and "private-cookie" not in str(error.value)
     if failure == "quota":
         assert "account0@example.invalid" in flow._cooldowns
+    assert error.value.global_configuration_error is (failure == "captcha-missing")
+    if failure == "captcha-missing":
+        assert error.value.status == 400
+        assert "fournisseur captcha" in str(error.value) and "crédits" in str(error.value)
+        assert "account0@example.invalid" not in str(error.value) and "example.invalid" not in str(error.value)
+
+
+def test_isolated_captcha_refusal_is_not_a_global_configuration_error():
+    error = flow._error(httpx.Response(400, json={
+        "error": "Captcha verification failed for private-account@example.invalid",
+        "key": "private-provider-key"}))
+    assert error.global_configuration_error is False
+    assert str(error) == "Google Flow est indisponible ou a refusé la requête (HTTP 400)."
+    assert "private-" not in str(error)
 
 
 def test_reference_limit_rejects_before_network(provider):

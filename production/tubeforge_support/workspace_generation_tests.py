@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import AsyncMock
 from fastapi import HTTPException
 
+import httpx
 import pytest
 from PIL import Image
 
@@ -572,6 +573,73 @@ def test_flow_batch_stop_closes_admission_and_waits_for_three_live_calls(workspa
     assert all(shot["image"] for shot in latest["scenes"][3:6])
     assert all(not shot["image"] for shot in latest["scenes"][6:])
     assert not generation.batch_running(p["id"]) and p["id"] not in generation._active_projects
+
+
+@pytest.mark.parametrize("phase", ["remaining", "corrections"])
+def test_missing_captcha_configuration_stops_admission_and_drains_started_calls(workspace, monkeypatch, phase):
+    p, data = concurrent_project(workspace, monkeypatch, phase)
+    first, second, third = [shot["prompt"] for shot in p["scenes"][3:6]]
+    entered_count = 0
+    entered = fail = release_second = release_third = None
+    provider_error = generation.google_flow._error(httpx.Response(400, json={
+        "error": "No captcha provider API keys configured. Add at least one at "
+                 "https://example.invalid/?key=private-key&email=private-account@example.invalid"}))
+
+    async def image(prompt, **kwargs):
+        nonlocal entered_count
+        entered_count += 1
+        if entered_count == 3:
+            entered.set()
+        if prompt == first:
+            await fail.wait()
+            raise provider_error
+        await (release_second if prompt == second else release_third).wait()
+        return data
+
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm, "generate_image", request)
+
+    async def run():
+        nonlocal entered, fail, release_second, release_third
+        entered, fail, release_second, release_third = [asyncio.Event() for _ in range(4)]
+        await generation.start_batch(p["id"], batch_body(p, phase))
+        batch = generation._batch_tasks[p["id"]]
+        await entered.wait()
+        fail.set()
+        await turns_until(lambda: bool(store.get_project(p["id"])["workspace_batch"]["failed_scene_ids"]))
+        assert request.await_count == 3 and not batch.done()
+        release_second.set()
+        await turns_until(lambda: store.get_project(p["id"])["workspace_batch"]["done"] == 1)
+        # A newly free slot must not admit scene four while the third call drains.
+        assert request.await_count == 3 and not batch.done()
+        release_third.set()
+        await batch
+
+    asyncio.run(run())
+    latest = store.get_project(p["id"])
+    job = latest["workspace_batch"]
+    assert job["state"] == "failed" and job["done"] == 2
+    assert job["processed"] == request.await_count == 3
+    assert job["failed_scene_ids"] == [21] and job["scene_errors"] == {"21": str(provider_error)}
+    assert job["error"] == str(provider_error) and "fournisseur captcha" in job["error"]
+    assert "private-" not in str(job) and "example.invalid" not in str(job)
+    assert [call.args[0] for call in request.await_args_list] == [first, second, third]
+    assert all(call.kwargs["attempts"] == 1 and call.kwargs["provider"] == "google_flow"
+               and call.kwargs["model"] == p["model_snapshot"]["image_model"]
+               for call in request.await_args_list)
+    for shot in latest["scenes"][4:6]:
+        assert shot["image"] != "previous.png" and shot["generation_receipt"]["state"] == "generated_unreviewed"
+    if phase == "corrections":
+        assert latest["scenes"][3]["image"] == "previous.png"
+        assert latest["scenes"][3]["workspace_regeneration_required"] is True
+        assert latest["scenes"][3]["generation_receipt"] == {"id": "old-21"}
+        assert all(shot["image"] == "previous.png" and shot["workspace_regeneration_required"] is True
+                   for shot in latest["scenes"][6:])
+    else:
+        assert all(not shot["image"] for shot in latest["scenes"][6:])
+    assert job["current_scene_ids"] == [] and not generation.batch_running(p["id"])
+    assert p["id"] not in generation._active_projects
+    assert not any(key[0] == p["id"] for key in generation._batch_permits)
 
 
 @pytest.mark.parametrize("phase", ["remaining", "corrections"])
