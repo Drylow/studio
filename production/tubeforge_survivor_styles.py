@@ -25,6 +25,9 @@ ART = (
     "One landscape 16:9 scene, sparse shallow frontal setting, one readable action or interaction. "
     "No deep cinematic vistas, realistic rendering, gradients on white faces, text or watermarks. "
     "The background has few simple outlined props on a matte muted blue/gray/beige palette. "
+    "Living humans including Patch and Reed keep PURE WHITE heads. Infected ZOMBIES alone "
+    "have flat pale desaturated GREEN heads, mitten hands and oval feet (#A8BE87). "
+    "Do not recolor living humans or transfer hero markings to zombies. "
 )
 BACKGROUND = (
     "Simple shallow 2D locations. Establish one master image and fixed door/window/object positions "

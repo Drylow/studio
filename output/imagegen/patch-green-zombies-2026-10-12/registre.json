@@ -1,0 +1,309 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "user_direction": "Zombies: green head, both hands and both feet; living humans including Patch: white. Black stick bodies/outfits kept.",
+  "green_target": "#A8BE87",
+  "color_note": "Generated colors visually compared to reference; no claim of exact numeric fill everywhere.",
+  "assets": [
+    {
+      "prompt_sha256": "48c482c4881221cbb1392bbddc64a82f91afeaee0e684b8b2d3f5189812c1641",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/cart-infected.png",
+          "sha256": "db907a81023d19dd37cb80d61a16295714947035f2e7713a693ec9b29ece7325"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:25:47.945335+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f31004debaa59a00887fcd15bbe2bb16baafc6eff395114606def1db0fc5aff8",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/cart-green.txt",
+      "id": "cart-green",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "superseded_by_user_green_hands_and_feet_request",
+      "visual_review": "Inspected under earlier head-only request. Archived, not current after hands/feet correction."
+    },
+    {
+      "prompt_sha256": "90ba70b3d7a52f5e5db142a0ed5ebed12fbc3359f5897b1b71dc9f73f01aa4e4",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/characters/delivery-infected.png",
+          "sha256": "c8abd4572bcaa352ab4f0fe2a8df0bfd9ae325ce3257b78887cd0b186aea3cf5"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:25:47.944386+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3a1de8d99eaf90beff81bfb528b8b9c923c0d3246eca42195a791302fe2888c0",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/delivery-green.txt",
+      "id": "delivery-green",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "superseded_by_user_green_hands_and_feet_request",
+      "visual_review": "Inspected under earlier head-only request. Archived, not current after hands/feet correction."
+    },
+    {
+      "prompt_sha256": "7a23ccdaf6fc4a40d1651d974c305897775f1d6bdf523a57f66234c03a1542b6",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-01-v2.png",
+          "sha256": "3e50656b40ec0643b9b6404df69124aea6153bf8e6110228dff1f89a13c7c9c8"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green.png",
+          "sha256": "f31004debaa59a00887fcd15bbe2bb16baafc6eff395114606def1db0fc5aff8"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:31:39.172434+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "01434bfc5ab94d66b69267e2391cfe9ce5cd851d177efff95d18322fbd1b9c7a",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-01-green.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/plan-01-green.txt",
+      "id": "plan-01-green",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "superseded_by_user_green_hands_and_feet_request",
+      "visual_review": "Inspected under earlier head-only request. Archived, not current after hands/feet correction."
+    },
+    {
+      "prompt_sha256": "68cea605e39fb18b72399e65548f8b6ac43ac063a42b17b5ffb156d5efe92dff",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-03.png",
+          "sha256": "e297f69339b8867ed998cc81b15c5821745e3be2736f07ce2814105c7ff250ed"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green.png",
+          "sha256": "3a1de8d99eaf90beff81bfb528b8b9c923c0d3246eca42195a791302fe2888c0"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:31:39.172336+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7179de9434ae782423ac92e9498940c4b20e463d2b354c610be01e2244447c3f",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-03-green.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/plan-03-green.txt",
+      "id": "plan-03-green",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "superseded_by_user_green_hands_and_feet_request",
+      "visual_review": "Inspected under earlier head-only request. Archived, not current after hands/feet correction."
+    },
+    {
+      "prompt_sha256": "8d62d5ec5fe16f21294e4778ea0e58d5012fb90f29dab33ddc4110e6cee8dd36",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green.png",
+          "sha256": "f31004debaa59a00887fcd15bbe2bb16baafc6eff395114606def1db0fc5aff8"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:38:28.036007+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/cart-green-full.txt",
+      "id": "cart-green-full",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "current",
+      "visual_review": "Inspected: round green head, same vest/black stick proportions, green mitten hands and green oval feet; no hero bandage/bag."
+    },
+    {
+      "prompt_sha256": "ab8039b9e5aeadb8fd045cc759e437ec7013059f4da6f995b85e1b369623ff76",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green.png",
+          "sha256": "3a1de8d99eaf90beff81bfb528b8b9c923c0d3246eca42195a791302fe2888c0"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:38:28.041029+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "a9e3e236bb564220eca08e8f34a5aee8de6699620c7db5ec894f338667caed55",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green-full.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/delivery-green-full.txt",
+      "id": "delivery-green-full",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "current",
+      "visual_review": "Inspected: round green head, same vest/black stick proportions, green mitten hands and green oval feet; no hero bandage/bag."
+    },
+    {
+      "prompt_sha256": "d5276f25345a359e4039d53e72ba7ae9aac95deb3f59ce83fd27b52054ece300",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-01-green.png",
+          "sha256": "01434bfc5ab94d66b69267e2391cfe9ce5cd851d177efff95d18322fbd1b9c7a"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:41:42.689036+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5f961b43b2f9422a1fdf31f9b7a24b2c98277dfbcdebdc0551e0ee785834e6e2",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-01-green-full.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/plan-01-green-full.txt",
+      "id": "plan-01-green-full",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "current",
+      "visual_review": "Inspected: unchanged readable location/action; Patch white with bandage/bag; all visible infected head/hands/feet green. Plan 2 head/hands occluded; plan 3 body/feet occluded by closed door.",
+      "delivery_file": "output/imagegen/patch-green-zombies-2026-10-12/A-REGARDER/01.png",
+      "delivery_sha256": "191cc901a76e9ce63107ca023b283b286c3220cb641ac3931de550a28ad064e6",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "prompt_sha256": "530a64ef25825f5a87de60c3f27fbcb8936ee2a133338708624ea325562fb9e4",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/scenes/plan-02-v2.png",
+          "sha256": "b80f26b9ec0a9511b3fddf47f7bfbfcca51e009cb623baf615ae926e7812635e"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:41:42.690294+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "eca985921bbec7d02df45dad81f87a0a03fa3f4abe2ea6197afb20969724ad03",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-02-green-full.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/plan-02-green-full.txt",
+      "id": "plan-02-green-full",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "current",
+      "visual_review": "Inspected: unchanged readable location/action; Patch white with bandage/bag; all visible infected head/hands/feet green. Plan 2 head/hands occluded; plan 3 body/feet occluded by closed door.",
+      "delivery_file": "output/imagegen/patch-green-zombies-2026-10-12/A-REGARDER/02.png",
+      "delivery_sha256": "cc21a8c68d2faa62b2b5756f70f9c5df8c9aab8dec38ab5e9cae0ecfa30abaf1",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "prompt_sha256": "9b49f7747d3b0ca40f27ce3bc0117cc4d59e19337640816cee7d56da49a2411a",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-03-green.png",
+          "sha256": "7179de9434ae782423ac92e9498940c4b20e463d2b354c610be01e2244447c3f"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green-full.png",
+          "sha256": "a9e3e236bb564220eca08e8f34a5aee8de6699620c7db5ec894f338667caed55"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T11:41:42.724719+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "8a13104fceccd8fe05ee0b458afc648c99e61d8b65fa559cc867920ae39367f3",
+      "file": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-03-green-full.png",
+      "prompt": "output/imagegen/patch-green-zombies-2026-10-12/prompts/plan-03-green-full.txt",
+      "id": "plan-03-green-full",
+      "review_state": "inspected_by_codex",
+      "user_approved": false,
+      "status": "current",
+      "visual_review": "Inspected: unchanged readable location/action; Patch white with bandage/bag; all visible infected head/hands/feet green. Plan 2 head/hands occluded; plan 3 body/feet occluded by closed door.",
+      "delivery_file": "output/imagegen/patch-green-zombies-2026-10-12/A-REGARDER/03.png",
+      "delivery_sha256": "55b6270659bbff2e6d54716e7435df7f9cc05dd1840db53135fbd3b87423e110",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "tubeforge_project_id": "zombie-outbreak-30-days-trapped-in-a-sup-e56f42",
+  "original_assets_preserved": true,
+  "bulk_generation_started": false
+}
