@@ -15,7 +15,7 @@ Alien Invasion: 7 Days Trapped in a Gas Station
 Angle : un employe attend les secours dans une station-service isolee ; les visiteurs inspectent les points lumineux, puis commencent a demonter le lieu.
 La lumiere est une regle de CETTE espece fictive, etablie par plusieurs observations imparfaites. Pas une affirmation scientifique universelle sur les aliens.
 Le danger central se distingue des zombies : comprendre ce que les visiteurs cherchent et leur rythme de travail, puis quitter le batiment avant son demontage.
-Script anglais V1 ecrit : episode-01-gas-station/script-en.txt, 2078 mots. Environ 12-14 minutes a 145-170 mots/minute, a confirmer avec l'audio.
+Script anglais V1 ecrit : episode-01-gas-station/script-en.txt, 2083 mots. Environ 12-14 minutes a 145-170 mots/minute, a confirmer avec l'audio.
 Fin du brouillon : fuite par le portail arriere et le chemin presentes des le debut ; Reed atteint la ferme indiquee sur la carte alors que la station est demontee. Aucun sauveteur providentiel.
 
 STYLE ET IDENTITE DISTINCTE
@@ -41,3 +41,7 @@ STATUT
 Kit de chaine, premier angle et script V1 proposes. Aucun film, voix ou publication termine. L'utilisateur a choisi la categorie aliens, pas encore le titre precis ou le personnage Reed.
 
 Correction utilisateur : sac a dos scolaire gris comme OBJET SEPARE, pose debout au sol a cote de Reed, base en contact et ombre de contact. Aucun sac porte dans le dos, aucune bretelle sur le corps en traits fins. Pour un deplacement necessaire au recit : prise visible par la poignee puis sac repose au sol dans le nouveau lieu. Un seul sac. Les anciennes images avec sac suspendu sont rejetees et conservees comme archives.
+
+PRODUCTION COMPLETE DU PREMIER EPISODE - 12 OCTOBRE
+Script final 2083 mots ; voix reelle 11 min 27 s ; 108 plans. TubeForge utilise Algrow avec la voix fournie par l'utilisateur. Les references Mara/Surveyor/Worker/loader ont ete produites et inspectees par Codex dans output/imagegen/survivor-full-production-2026-10-12/. La validation par Codex ne signifie pas une validation humaine explicite.
+Les sacs a dos sont SEPARES et poses au sol, ou portes par une main qui tient leur poignee du haut lors d'un deplacement. Jamais de sac accroche au corps ou flottant.

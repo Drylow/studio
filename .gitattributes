@@ -1,0 +1,5 @@
+# Preserve generated evidence bytes and the hashes of the actual paid prompts.
+output/imagegen/survivor-full-production-2026-10-12/** -text whitespace=cr-at-eol
+output/imagegen/survivor-full-production-2026-10-12/prompts/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+output/videos/survivor-first-episodes-2026-10-12/** -text whitespace=cr-at-eol
+output/videos/survivor-first-episodes-2026-10-12/*/script-en.txt whitespace=cr-at-eol,-blank-at-eof

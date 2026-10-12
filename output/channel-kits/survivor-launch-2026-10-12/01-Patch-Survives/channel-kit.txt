@@ -13,7 +13,7 @@ Original animated fiction, one day at a time.
 PREMIER EPISODE SELECTIONNE PAR L'UTILISATEUR
 Zombie Outbreak: 30 Days Trapped in a Supermarket
 Script anglais V1 : episode-01-supermarket/script-en.txt
-2083 mots dans cette V1 relue. Duree estimee autour de 12-14 minutes a 145-170 mots/minute ; seule la voix produite etablira la duree reelle.
+Script final : 2081 mots. Voix reelle produite : 11 min 43 s, identifiant choisi par l'utilisateur. 108 plans, cadence moyenne 6,51 s.
 Promesse : un employe enferme dans son supermarche doit choisir quoi proteger, qui accueillir et quand partir.
 Fin : Patch et Mara quittent le magasin au jour trente et atteignent les jardins de l'autre cote du canal. Pas de fin arretee en pleine revelation.
 
@@ -40,3 +40,7 @@ STATUT
 Kit de creation et script V1 disponibles. Aucun film termine, aucune voix du pilote generee, aucune publication externe.
 
 Correction utilisateur : sac a dos scolaire orange comme OBJET SEPARE, pose debout au sol a cote de Patch, base en contact et ombre de contact. Aucun sac porte dans le dos, aucune bretelle sur le corps en traits fins. Pour un deplacement necessaire au recit : prise visible par la poignee puis sac repose au sol dans le nouveau lieu. Un seul sac. Les anciennes images avec sac suspendu sont rejetees et conservees comme archives.
+
+PRODUCTION COMPLETE DU PREMIER EPISODE - 12 OCTOBRE
+Script final 2081 mots ; voix reelle 11 min 43 s ; 108 plans. TubeForge utilise Algrow avec la voix fournie par l'utilisateur. Les references Mara/Surveyor/Worker/loader ont ete produites et inspectees par Codex dans output/imagegen/survivor-full-production-2026-10-12/. La validation par Codex ne signifie pas une validation humaine explicite.
+Les sacs a dos sont SEPARES et poses au sol, ou portes par une main qui tient leur poignee du haut lors d'un deplacement. Jamais de sac accroche au corps ou flottant.

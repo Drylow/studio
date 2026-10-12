@@ -1,0 +1,1971 @@
+{
+  "scenes": {
+    "patch-003": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-003.png",
+      "native_sha256": "c03f9f7d6d111d2e5e8af9a8d46bc9f335ec7c172fa16a0360c69704530d560e",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-004": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-004.png",
+      "native_sha256": "2a823bf2d2ed9732c344afbeca879df80ea8853b5c6c0bea68f9e7c23f7cfffc",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-006": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-006.png",
+      "native_sha256": "cd407ed44960439a529443c0267e96ad4a309308e7bb1aa4b7392fc33b03c55c",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-007": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-007.png",
+      "native_sha256": "d02fb397a526cdd0f71a919414f1ba89cae2b0244af1bb7df484834cb5f42c30",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-008": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-008.png",
+      "native_sha256": "d5b5dd37d673c65402e245dc84cdcb406504c8350786fb14b55bb2c85fc3262c",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-009": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-009.png",
+      "native_sha256": "523d2c61c83b412667e64eb8c92b5a61affefa99c21486c5f36ae997598647e9",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-010": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-010.png",
+      "native_sha256": "792c0175ff3cccd26399a1f8e757780ca606a83d1cb3d1196fb7f6593747ffd7",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-011": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-011.png",
+      "native_sha256": "f301791bdbfb8f486a8984c5985b1695cc30817093b19e53fd93c3dc2f0c2f13",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-012": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-012.png",
+      "native_sha256": "dce53e6e6e0cdfbb7fd6b79e0e25138268088909e3c1ea561460b6c91b109f7d",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-013": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-013.png",
+      "native_sha256": "c39027bc43b2d8b76cfd9940940118ab7965333c37e87656cb51ec6067ed2ea0",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-014": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-014.png",
+      "native_sha256": "5e6b363b34223c8ef50fcecf0a398203f9e51fd84407d2cc8bd4c1c5f43a53ff",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-015": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-015.png",
+      "native_sha256": "86b25e9fcb8dbfb07943eb6daeece55fc7756bdf1394a6b3abb2dee7cb7c2a76",
+      "notes": "Inspected actual image: white round protagonist with own orange bandage, thin stick body, white visible mittens/feet and separate grounded orange pack; fixed room geometry/action retained. One-off parking humans and occluded green infected checked; no duplicate protagonist, gray human skin, unsupported bags or premature glass breach.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-001": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-001.png",
+      "native_sha256": "ae6f9f1ad91836045309696089ec43003b91f9f3775e582945ff506115206411",
+      "notes": "Inspected: Reed white circle head/blue-gray scarf, gray pack on floor, green Surveyor outside glazing; car supported by consistent loader, no duplicates or unsupported bag. Same gas-station geometry.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-002": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-002.png",
+      "native_sha256": "0bc10b18e2b1be2e5d410443fc3a03830ce58c5b60cf029a30dbf5e466db0946",
+      "notes": "Inspected: Reed white circle head/blue-gray scarf, gray pack on floor, green Surveyor outside glazing; car supported by consistent loader, no duplicates or unsupported bag. Same gas-station geometry.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-003": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-003.png",
+      "native_sha256": "b45c677996fbcd27cc52a0a068a8fe085a372be022a60e6e64d55cb7e0586ff8",
+      "notes": "Inspected: Reed white circle head/blue-gray scarf, gray pack on floor, green Surveyor outside glazing; car supported by consistent loader, no duplicates or unsupported bag. Same gas-station geometry.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-001": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-01.png",
+      "native_sha256": "e86b01dc9feceaad1dd45a3b4433ea5aa04cfe35e7f2a601c03f8760c1fd3b33",
+      "notes": "Reinspected existing corrected preview: glass intact, frontal cart outside, green visible parts, Patch face and floor bag retained. Shutter stage correct.",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "reuse_registry": "output/imagegen/survivor-grounded-bags-2026-10-12/registre.json",
+      "reuse_asset": "plan-01"
+    },
+    "patch-002": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v3.png",
+      "native_sha256": "753534d161e66818860d6e989fadb7d06bd6ea407fb712531b43dd45b7b9c54b",
+      "notes": "Reinspected existing corrected preview: glass intact, frontal cart outside, green visible parts, Patch face and floor bag retained. Shutter stage correct.",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "reuse_registry": "output/imagegen/survivor-grounded-bags-2026-10-12/registre.json",
+      "reuse_asset": "plan-02-v3"
+    },
+    "alien-004": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-004.png",
+      "native_sha256": "c663cb4ff9bea9bbc0d60205e89b8f5fbe1c2673990ccc836c02b4bebfc57844",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-005": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-005.png",
+      "native_sha256": "8e35549f35c24f9c81d326b51252f61e3ff6dd1c585f8fc80580f3c83170fa56",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-006": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-006.png",
+      "native_sha256": "aae29085fde75ee5d9c1344dda9633c04ab27bea2fc80df5b6a26ee4ad75cf47",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-007": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-007.png",
+      "native_sha256": "66e24e423449a97a9555196fabb3af09ab57e81b62cc14ccc1b1c6c0aa27b91c",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-009": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-009.png",
+      "native_sha256": "a6e5f8470202a93d9531a2a9672a7fe7d9a7a2278abadf3fc8fc95b2c5e44dd6",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-010": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-010.png",
+      "native_sha256": "4e3c40a096ef25986097165e3e5094d37a7be6f407f500caf5d7116304882c87",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-011": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-011.png",
+      "native_sha256": "a496363e7f729af7a0bb83906716a45ffda62fc990a264296979143a4ded6620",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-012": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-012.png",
+      "native_sha256": "1846efcf51767cb60b056be5f14a2db896a939ccc4fe05acd07437bde3808a83",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-013": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-013.png",
+      "native_sha256": "c16276a61f2e34f156d7c777f56cad1ccde429a4208622f1b7a8051afc79cafd",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-014": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-014.png",
+      "native_sha256": "d21e4904bad1a6982e9dc76f97ffc099ef4f8e04fad79dd07b805f77b25ed209",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-015": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-015.png",
+      "native_sha256": "025437519757a56f91fd4be3e15c57060e6b44b50ec26587c2806caf67848c3c",
+      "notes": "Inspected actual scene: Reed white round head/scarf and separate grounded or hand-supported gray pack, Surveyor/Worker distinct mint identities, supported loader/car, fixed shop/staff/yard geometry. Rear door opening is inspection action before next close; no duplicate humans, teleporting pack or restored dismantled hardware.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-016": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-016.png",
+      "native_sha256": "62422a6edd743ec6aea1f01e990a3911c3dd86db6a764bc73303d9a40b28e6ed",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-017": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-017.png",
+      "native_sha256": "0b6a61af14a1f7d4e589f184ce110bb3f8849c5c654ad1420de3a0b045783943",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-018": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-018.png",
+      "native_sha256": "6f9b0fab0a4a8eecd9c1f35fd5df8f2fc38b9b5c38cbc21d85b46e738081fdea",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-019": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-019.png",
+      "native_sha256": "4580c0266fda46b67cd6cc08c733bd4a27b8471eefa997b24794f2ef4d86986b",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-020": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-020.png",
+      "native_sha256": "c21f13e1617abbace964340c5792cdb0ba08138d9900b51ba105a79e46a20f61",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-021": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-021.png",
+      "native_sha256": "5f6c404f0208caef165b19becfbf298c5763bfbeb156a4ac811e3de0edd9812b",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-022": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-022.png",
+      "native_sha256": "f304291920ead803a069d5e4d7b9613d322373cbcc8e361095413a41175b610f",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-024": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-024.png",
+      "native_sha256": "b2f8bc571644bdd088fbab8383b80ef9b4503f10fa0b1b3f271df07ede152638",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-025": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-025.png",
+      "native_sha256": "b22500e62e71a3359b17830a33cb9ccfd478f3b8f2744aada952fdc77d4fe826",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-026": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-026.png",
+      "native_sha256": "6388413fa876268eb55bcccf1d5af85a6fcde57e755c6b5082d602443194b29f",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-027": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-027.png",
+      "native_sha256": "017fd8c4604281ff8cab6bde4000f7da95be41cf08f183b6bcc4327ac660e91c",
+      "notes": "Inspected: Patch round white head/orange marking, thin black body, white visible hands/feet, orange pack grounded. Food/window/fridge/can-opener actions readable, persistent shutter/intact glass and reserve/staff/aisle door geometry maintained. Opened fridge is legitimate earlier action before outage.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-005": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-005-v2.png",
+      "native_sha256": "58e8e95cacbde0c79d42816a8898f00c41ca81363824c903fb10267ec51935bb",
+      "receipt_id": "patch-005-v2",
+      "notes": "Reinspected corrected output: detached hand on interior buzzer/wall removed. Green driver head and hand remain only behind closed delivery glass. Main white markings/grounded pack and reserve geometry retained.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-016": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-016.png",
+      "native_sha256": "7a97f4f6a526351c2c528e50784cd4363e13abab2153d015cb24d94d6951e6b8",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-017": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-017.png",
+      "native_sha256": "8c9cad0e037cf059fc265a2d5ca182bef2fa299c37ff3ac06093c5e89f48e683",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-018": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-018.png",
+      "native_sha256": "6afccf1a8e8c49f7a9fc32ff3497e5948a11a7efb627d11a6010fbdc2d392e3d",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-019": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-019.png",
+      "native_sha256": "646f0e8743ef2c0874abdb04f10c98b9e823b5b381d0bb377ec24549aa64967a",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-020": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-020.png",
+      "native_sha256": "00f5465d58bbf4f76b53bea384f59ae627338ae112cc56f4ac5de3fbde6a8294",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-021": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-021.png",
+      "native_sha256": "81dde5f0db53cc2a2331e427ecfbbb5d19e297aead48c79e374c98d6473f577b",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-022": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-022.png",
+      "native_sha256": "1bb41884764e589197c3e44ff08fd0b0e2402d6cf6f4315ea2bf3646c649fb9d",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-023": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-023.png",
+      "native_sha256": "b44af54e3a15e493083609c2144dcb0ce28fd777a9f954b353d49c2222e3310d",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-024": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-024.png",
+      "native_sha256": "f051520c85eec45968305aee50cab6376c9c622e70fcb038ffed67adab336af1",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-025": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-025.png",
+      "native_sha256": "5c5550bed56feae8dc98df53cce54783b49be2cfe3dad6f0e1dd7a894944f78b",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-026": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-026.png",
+      "native_sha256": "1bc35fdc57f2929d29808fb1342808e8a7ddc84c96f7be0f164b12e3236ce7fd",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-027": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-027.png",
+      "native_sha256": "f3e81242357960ddf6caf1f1ca6f6867fe90ba0f6424565cc11cb81e5e3466ff",
+      "notes": "Codex inspected: Reed white round head/scarf and floor backpack; staff/shop geometry and Surveyor green hands/blue stripe consistent. Actions match scene. No duplicated lead or torn borders.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "alien-008": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-008-v2.png",
+      "native_sha256": "f47248361628f9bfae5e776b698585c9e687fbd2fd6e74d1fd524493dbbf61ec",
+      "receipt_id": "alien-008-v2",
+      "notes": "Codex inspected corrected frame: complete clean canvas and exact forecourt pumps for alien; reserve doors restored around central shelf and small map for Patch. Identity and grounded props retained.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-023": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-023-v2.png",
+      "native_sha256": "b962067fb113bfdefd3ae981f57a670f36f9f1d448ed6182b289a75db123fef5",
+      "receipt_id": "patch-023-v2",
+      "notes": "Codex inspected corrected frame: complete clean canvas and exact forecourt pumps for alien; reserve doors restored around central shelf and small map for Patch. Identity and grounded props retained.",
+      "reviewer": "Codex",
+      "user_approved": false
+    },
+    "patch-028": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-028.png",
+      "native_sha256": "1c03a142e947287b30d841696365ac5991e5d40d375a1915c91912a9e59a30ff",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-029": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-029.png",
+      "native_sha256": "21e3c2f8a92a9e153f8381bc5e2779adcbe6a20c81513343dfa058790da848e3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-030": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-030.png",
+      "native_sha256": "15d55f7034835811775a789b05c118541079223aff0daedd7ba4ce2caba2bb18",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-031": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-031.png",
+      "native_sha256": "03598c5a8b70f80ed23dd3c39a2232234dccee61c2fddadd7b6336a81775a0fa",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-032": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-032.png",
+      "native_sha256": "545504ceef77efb1fbef1b83dad24e120519ae114c8f1842325cbed4829fb6a5",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-033": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-033.png",
+      "native_sha256": "88ad6fdc21458ded86380762642c221a30e1daf6022920c10afbb19ef30e5523",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-034": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-034.png",
+      "native_sha256": "e1dbc8dd92d297ed453ff1c4382fe59b015a11bdebe24f924fcb5138775b9244",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-035": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-035.png",
+      "native_sha256": "82380626b3a5be89ad8fbba5db0d9bf579022b6d4f66511e6aee02330da8ad45",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-036": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-036.png",
+      "native_sha256": "cf93ea35240147efd11415159a4837e447ff7f453645d3aab13675ff392dbac3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-037": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-037.png",
+      "native_sha256": "3f4b74498dddfb6bd6a9a85e8e378d2f75f706ab8b1ba305f518b07d8fe2ec08",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-038": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-038.png",
+      "native_sha256": "972419890c321a5921a8a2f517ae0eac9afb7a3ab0f6debb227ac000f200155d",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-039": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-039.png",
+      "native_sha256": "10f0c8ef5dc87e9364442dc4f8093fe2a9020fa99e4eb36e563665d1b10be2f9",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-040": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-040.png",
+      "native_sha256": "5bc7e83aa41810eb418e87693f344b3c4d8dcde2147b97e3f26b8f60d62c1a01",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-041": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-041.png",
+      "native_sha256": "7e5fc593d41665991321dcf2c8b9b1223f5cb8a211cb8101c8a55f957700af52",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-042": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-042.png",
+      "native_sha256": "34aa4d5613150cffb84fe4fc948a6920878fe272cbc39d6eeb9f99394504425e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-043": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-043.png",
+      "native_sha256": "72136d500ac893316a0c41f90d5cded72648fa88fa4cab811ba0db4bec1f5cba",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-044": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-044.png",
+      "native_sha256": "cd705bc8baa4d795230ea0b79d73deb3cb3fe32467681377596dca4fc909c534",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-045": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-045.png",
+      "native_sha256": "765343c0b0d9b8ce889c227b95b00d1e57d72dd8ed7921789ccc68f1d723ab70",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-046": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-046.png",
+      "native_sha256": "4cfb4935b35cd6577104bf6a59330d7b6088ca87584d816f594ab2b1d33f2182",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-047": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-047.png",
+      "native_sha256": "2584234fa39ade9ebdd4db057c0615259336eba305576acd56d1e4ff4ae378fa",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-048": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-048.png",
+      "native_sha256": "994e106e6f9c1a908efa00d4df386e35a87ec4503a63d1612b7ceec407f5dfd4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-049": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-049.png",
+      "native_sha256": "507753b3c9114e7c6c8588ad05e9c0fbd633decb13a2db69cc312bcda820c657",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-050": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-050.png",
+      "native_sha256": "f05f83477f911965cde1a18598f0fd95594c6473ef8775db70d9ee2dbc4b2bb1",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-051": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-051.png",
+      "native_sha256": "e33d267472e040f6531dd3382c69a0d3231c914dddbfb73c65081f5a626ca79b",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-052": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-052.png",
+      "native_sha256": "e8f13f9f22e1b279ab799f9394ba0e9f8bd5181d6985702ffc9388c4b6f0764e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-053": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-053.png",
+      "native_sha256": "f8f2e516059183ba267366a34b72f9833f7837bd1627131ab5db0d62ba7205f2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-054": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-054.png",
+      "native_sha256": "8dcaab3c8ac0b6fd48c58294dea208095cacb2239b4b4d9a272332c1f672e345",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-055": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-055.png",
+      "native_sha256": "25d41e6d0d900a573b9689d2001bd34a69b8d2e67e3b1f32fdb923bae2ae96ec",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-056": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-056.png",
+      "native_sha256": "c90c2ab268362ad639cfe862bec067c483da7185ee0e8c5cde56989f9c62bf7f",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-057": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-057.png",
+      "native_sha256": "836b419e5c8b877fbeb480e3b39c21075750886727d91af5902436bcfeae2c1e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-058": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-058.png",
+      "native_sha256": "50d6cc4a3f15bbbcb07aa8db29f26a99e4510a32a6aed4dc12a333b85d5811ed",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-062": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-062.png",
+      "native_sha256": "eac98b0cb0cd5366e82fcae5a5a222e82ce30c4f9973dd2aa8904d7a012e9d44",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-063": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-063.png",
+      "native_sha256": "ebfc282320a30d6b3c2daef9a628c94ba3cb940b695191976732ba8f6b321387",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-064": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-064.png",
+      "native_sha256": "f48c3c6f0aa2235a131c852c1d20e7a8b95f24005f9eab6a70022febe55f4f7e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-065": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-065.png",
+      "native_sha256": "68cfeda3f503c7cf1d6ce91aaf326264af06e43f500f8ed6415db76c2f249abd",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-066": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-066.png",
+      "native_sha256": "b3e57c44c1a5da00c4f60855bab16d0b0bcf87890cdefcf986a0d9ca96dad21e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-067": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-067.png",
+      "native_sha256": "ede250e566749cc1dae52536a65ab6d81f4c8dfca23e9aa86e7486f1e0bb8607",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-068": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-068.png",
+      "native_sha256": "9a500d6663b5556d6f1bb7f8301c91e88e03c607a4eff6ddb8270e0253e5bdfb",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-069": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-069.png",
+      "native_sha256": "4ddab83e39060f527cacde1ae76e7e07762d6a9d5ba8db62441ff434e1b11a47",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-070": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-070.png",
+      "native_sha256": "b25305fb80781da35e28821f072170b3e105df389eba82a3abcdcc3a1f475b12",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-071": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-071.png",
+      "native_sha256": "aa80388ef1e2b4710aee3f1fbef6f952cda5e7025f607c40a7f2c2d85402a23f",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-072": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-072.png",
+      "native_sha256": "d905e217a57d4a067ac8d021b3af624b816f901bca4be72a86c1c4abaf23cbdc",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-073": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-073.png",
+      "native_sha256": "89b1a64ba3cb80653e81e23e1873fb384a42461af18e54fe6fa6acabf4dd6133",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-074": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-074.png",
+      "native_sha256": "d0902ccd68eeea8a0f7f26c44133315473234d3050880ff03279cf2577d5e8e4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-075": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-075.png",
+      "native_sha256": "a46ca50b4f532df03a3ea2ec63e7635023a6b94d4486579c436217c70334c382",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-076": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-076.png",
+      "native_sha256": "8691d1d4cbbd670b70233ab4869e28157c4590400d176c340e70b42077f0972f",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-077": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-077.png",
+      "native_sha256": "1a872873d989672746ecdbd7385e08b44383e9e4454a6c4b38a4763d38e876eb",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-078": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-078.png",
+      "native_sha256": "1c6b7e71caa7a31ec22397c40789c5fc03fe3c45e24bf5a477189260064ba78d",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-079": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-079.png",
+      "native_sha256": "62546ebd698c58ed870da8667a8408fdba0544eaf54ec1115098deca5ed0c2df",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-080": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-080.png",
+      "native_sha256": "ce5818586e394aec81f7b9789f90eb8b19cdfe0cfff597d19a3e477a3fbc903e",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-081": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-081.png",
+      "native_sha256": "0e3b94f2baf41f686a2be2335525751788538abb06fe59d4c40443d165da2810",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-082": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-082.png",
+      "native_sha256": "321c0acfca9ca9ed4aba61a9b33b31f0837a62f6e98d0164b244e6e24bbaf8cd",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-083": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "native_sha256": "2ef356d12d9e19c3a5d0ed87e21bfa18989a8cbc5504e7765cfc678b481d8cc7",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-085": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-085.png",
+      "native_sha256": "5363d4c10bae0829b93a5b5dc1bd1a4fd8463c6b9d308ca0245dd384284efd58",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-086": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-086.png",
+      "native_sha256": "aacddffbc6434cfb0538dd9fcdd9cbf599874aabf6fcf82c4c50abec7c5287a4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-088": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-088.png",
+      "native_sha256": "e9970c2a8ce68220e6da780ed481b1e66fe7b8160d462ee6635423d8a9cb84b7",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-089": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-089.png",
+      "native_sha256": "72a08025e2678effc9c1c9917dc09b5e0071c3315e23cc2483e387f39e355fb2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-090": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-090.png",
+      "native_sha256": "af76a88df4dd86fbfcac32b3eabf81def5e927f2e1272a551defdeed20f89f9f",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-091": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-091.png",
+      "native_sha256": "4d0ee21b448a9c8c10e370338fcf56401876a8f4f2132ba01135c45709597f27",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-095": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-095.png",
+      "native_sha256": "60d41176d43300c1a356ca2bc3f276393757692799e23de9fbfb9d983f5e6d88",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-096": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-096.png",
+      "native_sha256": "1fc6d3af2152621399ddecc94598abce4d209aca27d241289d72be6e8e486b38",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-097": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-097.png",
+      "native_sha256": "410182241e0527fb3464221a2ea3d483c5849d5668ee9b5237b3ea016ec4456a",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-107": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-107.png",
+      "native_sha256": "a2cdbba4d6e2de96402475221b180c7d41567397cfb5f959ec69cce92bdae857",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "patch-108": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-108.png",
+      "native_sha256": "a4749fd5a30cd91925e13ec114fa3db9d7229afeb7856366de0a8321a8d97efc",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: Patch bandage/white skin, Mara purple band, green infected appendages; intact location architecture and explicit door/damage states; grounded bags or visible handle grip. Minor supply arrangement changes remain, no extra hero."
+    },
+    "alien-028": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-028.png",
+      "native_sha256": "b2865f48ad44ab3c5f186e3f07e4115e8e7aa955b8663edf6c5efb171b983915",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-029": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-029.png",
+      "native_sha256": "91ac4f9350f38978c7756587f07af44dc2556a16e2cc6137047073487aaca983",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-030": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-030.png",
+      "native_sha256": "68de589405e7000f4158672acb6c6b492947c30e1fc358a62db71f11407ba7db",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-031": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-031.png",
+      "native_sha256": "57bffd71197f6e1160f9aba9073d0ab1e4c44e1335f78280d087c313a2fcadce",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-032": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-032.png",
+      "native_sha256": "1acb3ba2faf71822997cb8143781eca60d8336bfca193c757c5f9347b5b9cc06",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-033": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-033.png",
+      "native_sha256": "c95569532986fdf6ea11873701b090137f328570facfdfe17d954a55113ddbea",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-034": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-034.png",
+      "native_sha256": "edfd08c07a2f2132ada11bbdb0f2347c83b18cf898391b9ed567ad3bfb8062f7",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-036": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-036.png",
+      "native_sha256": "921a37836a1ea0175a8754150e48bf7825d40f637d7ca63f01583d481dc43afc",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-037": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-037.png",
+      "native_sha256": "5142239f8c3555ed99f53c79587b159777f5f25ae6e488c87954bddc3aa14b0c",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-038": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-038.png",
+      "native_sha256": "3ce14b56d9aa9ce168f27e142fd7d8c45a1e1aa7a0abf23f4031364739483d7a",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-039": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-039.png",
+      "native_sha256": "7b1aacc1ee59d44262c7e1f382d1ff473fd990af9ec269e2f2652277efe02556",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-040": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-040.png",
+      "native_sha256": "ed32452753371e4ff796b1d4f91b0b90c8c2a6f50f840c3a53c7dd1847c84a65",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-041": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-041.png",
+      "native_sha256": "cfe8c8a5304853f63fcde7eb014b64ad32a363a9d0971294d2df258554ae0565",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-042": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-042.png",
+      "native_sha256": "86f16c19a6e5537c10b9cd94463962c7b30ccfbbfd605db475b7c0082ed5afe6",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-043": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-043.png",
+      "native_sha256": "ae483618115402123524605b72799b684bf208385e96958e40bc35bf8aba4102",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-044": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-044.png",
+      "native_sha256": "0500b0ef314c45977d667cfea298ee7a6e643668f9353ab23fa67d2c2c054205",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-045": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-045.png",
+      "native_sha256": "5560c847ef687b2a5b3246fd687d75b6ab49d8d1fdb92bca9634048a78c4f06c",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-046": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-046.png",
+      "native_sha256": "7a695d5fc85023a9b822dbe86d0bd5b311214b34512d63debaab64198495d1f1",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-047": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-047.png",
+      "native_sha256": "8f4d0841bd70bf12b47315b9be3b5493ebe7e10709d7578f114e02fed6cbfdb1",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-048": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-048.png",
+      "native_sha256": "2b618318786e9cdc0e50de88022aafbd3c689effff6a1212349ccb08a649e9b0",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-049": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-049.png",
+      "native_sha256": "dd745552aea7a534c8d321fdab3d79974852db8fd548c88b77d48a97839226e7",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-050": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-050.png",
+      "native_sha256": "b12533fc9e468c55cca7c3444f5cac74397fe3cb1ae44c4d83a1cc60fde6dad4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-051": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-051.png",
+      "native_sha256": "50bf8b7fc222738527e7f52ff8347785d2453efa5d0c64abca3332547e53fee5",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-052": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-052.png",
+      "native_sha256": "2e3d84be0b26b705a0972d0b5838dcdf96bfea8bdd04d79f400cf8ca6cb88962",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-053": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-053.png",
+      "native_sha256": "18da421fbfbac54d3cf2d7c35e9acfcbc35100d1709e2a54f1a20c38f92c4353",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-054": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-054.png",
+      "native_sha256": "7cb3d6842420a64ad7f4cefe188a9f42c55f5e611f8f80dfb8c9fa5918c5a28f",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-055": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-055.png",
+      "native_sha256": "35b2a83b3743f08681d31cbb6a0953840fb76b996753e530d21da5b736bae1fa",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-056": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-056.png",
+      "native_sha256": "8a1dc150c774eb5db5b69484d8fa7d7a408e5cf9cddb3afccac1722ba36f70d3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-057": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-057.png",
+      "native_sha256": "36a2c1c2d1bd486e9cd7bbcaa14957371a94223fff32b61e31e2af7f038b1a74",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-058": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-058.png",
+      "native_sha256": "fc9c84063c40fdcee9a68f6d9c4238845861ef38a71e21deb2eccaabdc2cb1c2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-059": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-059.png",
+      "native_sha256": "400f699b2e5e3308b2a790a12d31e0c78eb4fcf78b5e368c482870343fe2aa3a",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-061": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-061.png",
+      "native_sha256": "1e850ca84c968fa11f82ae7ba03827ea8ea6757fd282dd360e0018f667d03431",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-062": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-062.png",
+      "native_sha256": "76b023a9428149c5b25ba09936e18452fc606cd9fb443022c2a501fb50699123",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-063": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-063.png",
+      "native_sha256": "800452ff00c9e438e13352e5cf70cb534d1d4e036e4eb0b01679f6d696494095",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-064": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-064.png",
+      "native_sha256": "217ee87af294e5b40fb151708cf3f9444b6c9a21b24f82ca5bbb18d206f4dcdc",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-065": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-065.png",
+      "native_sha256": "4cbf0cbd2fad074fb1bcfed60d53a3e39e243407bdf736c59daa9a0915c57a9b",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-066": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-066.png",
+      "native_sha256": "11e997ad61c535b72a72f693cbb9a02d4fc76dca964734a13b13985a38e203a5",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-069": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-069.png",
+      "native_sha256": "312e788bf1eceecc7fc51035e9f75cb1dcdf0f64448dd23d2af528ee5c2689d5",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-070": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-070.png",
+      "native_sha256": "fce632ea788f2158a5d0090379b09089118bcd9dfb0b8f7a2601db2de775eede",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-071": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-071.png",
+      "native_sha256": "55c0db3d1a51d84a4586afce06f52f4b29273c55747c2e7f93337574ad9f438b",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-072": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-072.png",
+      "native_sha256": "736f07de07123cec09ddbb523ec4aae1a19e5ffa87ec18e6b92b3153daaf09dc",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-073": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-073.png",
+      "native_sha256": "e3c8d56fa6920e10e303883f8e05523d854b73ca33da3a0f93aed9f69da1f6b6",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-074": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-074.png",
+      "native_sha256": "cf3eee23c6ac495af7228bbe7a87f73355b604c7383e52ca9996fe542e7661da",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-075": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-075.png",
+      "native_sha256": "61b46e4d622b5bcd5cbe559a0b8277ac922936ee39088429bc2e99b1170f9ac2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-076": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-076.png",
+      "native_sha256": "7b83c21d741c96ad555af874872bc1e60229d823341289a5092e42c30648c609",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-077": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-077.png",
+      "native_sha256": "f169dcc9b0acffa8bb2181935c9e041f48611f6f0863b9af90ef05bdd4b371c2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-078": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-078.png",
+      "native_sha256": "b9db42e6becdc733665a85b4060931daf00eff571399480c53921e1e762afc38",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-079": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-079.png",
+      "native_sha256": "d0ec0b10ee34c53be3cf0483c5df31deee8f72d33e680633c765aed555e7b060",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-080": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-080.png",
+      "native_sha256": "254509e73ecf3289f06e2ddae2a4c488814ca71527648d71abb7dc42fc5b90d2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-081": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-081.png",
+      "native_sha256": "9fd00a931f48a82cc94194268eb5c560a317c71d528175cbef59f5e79ae041f1",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-082": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-082.png",
+      "native_sha256": "e85424fc8d81ea5154a77edfa8fb99c60b6ca6d1e290122dbb88e1b4d9c61a78",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-084": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-084.png",
+      "native_sha256": "c8e441d07b0446fba4173d91e6bb2b8e3e0464a75263e3366394b0a5a011fa77",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-085": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-085.png",
+      "native_sha256": "0b6f9266c87f57e5867c43fc79a5da303451c77a55ae4cc46e13e833e9979567",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-086": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-086.png",
+      "native_sha256": "733ac9c841d3784997b93774be57320202987ecdd19c7a130217dcb3c8e510ab",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-087": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-087.png",
+      "native_sha256": "25bedb8d5ebce009608ed2ddab4a1b22cc5022a787236c549690ae7e4e9f0f5c",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-088": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-088.png",
+      "native_sha256": "cd56c0b51609cf2d2e3a424396d0f0c7f4bab0c9fafa474998e13fd365f1d096",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-096": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-096.png",
+      "native_sha256": "23aaae79a2d8557b0b6b6dd3e103513b7caa19bb2c240cacec34f30a12784ee5",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-097": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-097.png",
+      "native_sha256": "cb885010a063829572ccd0cff00c24fb1972bbff8f375371809c5e83110b7f5b",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-098": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-098.png",
+      "native_sha256": "3e94e63840a674a79fc33da220bfeb17045b7c34479e0eae1bb5bd566f4b2d2d",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-099": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-099.png",
+      "native_sha256": "2df1c3faa85ad3eb1af40e9dba5e14421f5cb18bfcf3959051c20a2131dd2198",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-100": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-100.png",
+      "native_sha256": "0073d6fca1fc7f2bf242d9f29be249568fd6a0f7f3ffa9815a58b06623e163e8",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-101": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-101.png",
+      "native_sha256": "1da0ae3e1be5f5a61b309fa51f04110ee28472e9a8485f1c314b653a552ad9ef",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-102": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-102.png",
+      "native_sha256": "f7602b651a809b4a74c5d27e3efb04de9580dafce76d10626a9d7e875fa9e14b",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-103": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-103.png",
+      "native_sha256": "046393a33651eaed4462823ec163c41914a0dc8ede55ea41197e70fae78b3a8c",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-104": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-104.png",
+      "native_sha256": "c583d4d85dd6bc0b03515ce329a28772ba78f35e4a3a815a577dc19656ddabfb",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-105": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-105.png",
+      "native_sha256": "b04342401fd7e137f2a593fc5bd815f8c72f34992ea755d7bc332dfbdbde2d18",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-106": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-106.png",
+      "native_sha256": "12a7dc0b507104d1262746b527963ee00577623e8ebf8040747f61b19f580192",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "alien-108": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-108.png",
+      "native_sha256": "3023618be2b71cd4f9970b4c9278bfc7f41daa47eb883c55364b1393317c06a4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: white Reed scarf identity, green alien hands, fixed shop/staff/yard/path geometry; backpack on floor or visibly held by top handle. No lead duplicates or image border artifacts. Minor object perspective variation remains."
+    },
+    "patch-059": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-059-v2.png",
+      "native_sha256": "7e47585ba8f58aa868e8597713bf999c27e56b38160682a78cbda8aca82b3c20",
+      "receipt_id": "patch-059-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-060": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-060-v2.png",
+      "native_sha256": "f4fffabdfd518f4a7211a8c461780d4460dab9ca12dd1ea64eae9a7ce2976e68",
+      "receipt_id": "patch-060-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-061": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-061-v2.png",
+      "native_sha256": "05628f8be44e3c27ae57321b2f458a5e2c748b3f4d2b0bc8d4614d2a07a779c6",
+      "receipt_id": "patch-061-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-084": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-084-v2.png",
+      "native_sha256": "2ad1f25accff3979cbb5f6ac72683e4899ec353ceb7b1b8b1e27a710435d822f",
+      "receipt_id": "patch-084-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-092": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-092-v2.png",
+      "native_sha256": "2922fa65565cf966a39ee0dce6d2c3e9c7d1d96e24c661b5d83b30a273450a4f",
+      "receipt_id": "patch-092-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-098": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-098-v2.png",
+      "native_sha256": "621e8dc6eddca7ca8774c820c1b3a4e3e197893b9914d92f3d81bd3c896b8272",
+      "receipt_id": "patch-098-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-100": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-100-v2.png",
+      "native_sha256": "874c50d1877dfbd283de8a56277d8710938af1a47e72c2a9b4e255df4e04e621",
+      "receipt_id": "patch-100-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-101": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-101-v2.png",
+      "native_sha256": "f89f32597728810d857ed18e32b2e431f1d77c51622b6e4debf86369b086a8ec",
+      "receipt_id": "patch-101-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-102": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-102-v2.png",
+      "native_sha256": "a67123d1c4db253f65b0c93aa2f349c1573e396d2721667f7b0953908a397ae6",
+      "receipt_id": "patch-102-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-103": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-103-v2.png",
+      "native_sha256": "d33e4d24b3e2ab4bd16e52cca62dec193d446997f318384ebc98b932a408018a",
+      "receipt_id": "patch-103-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-104": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-104-v2.png",
+      "native_sha256": "a78a9dce2e87f21b403a063e4e9401ede26fc4305c58eb8d1034ee541af553eb",
+      "receipt_id": "patch-104-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-105": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-105-v2.png",
+      "native_sha256": "4e5dfb8e8f3c89f27eba712b6218ed586473d48dac79615bebc283a022cbe31f",
+      "receipt_id": "patch-105-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-106": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-106-v2.png",
+      "native_sha256": "39a0b1c71c656e323950b6cfe716684f17241f19ec66cf716af9253c9128d89e",
+      "receipt_id": "patch-106-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-060": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-060-v2.png",
+      "native_sha256": "c68eb8a1aa6454f4a83d59bd8823c79445be1c3174959f7d8568856e0c914968",
+      "receipt_id": "alien-060-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-067": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-067-v2.png",
+      "native_sha256": "11b9db0d943eae17f051deb521ba6a0a14c3ccec2d99e721f6c2788a4cc80390",
+      "receipt_id": "alien-067-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-068": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-068-v2.png",
+      "native_sha256": "53413e7c8d2474eea44c19557cd3132d987df845172a7b1333ab04bf1fc32244",
+      "receipt_id": "alien-068-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-083": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-083-v2.png",
+      "native_sha256": "064df10ac1573e3d5c5ab285feb46c0b4656d817dfcd745e656aa9e589afb8b6",
+      "receipt_id": "alien-083-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-089": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-089-v2.png",
+      "native_sha256": "d4cc928da7cef947b3cea561522dfab6b1b49cfc28365831b0ba1ea2ba2516f0",
+      "receipt_id": "alien-089-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-090": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-090-v2.png",
+      "native_sha256": "60473261530d932ae4f496b2d46eec7ac19f669df58c78b84a2b4b57f13b09da",
+      "receipt_id": "alien-090-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-091": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-091-v2.png",
+      "native_sha256": "f05b7f3b54c5cf9f0c18ae077206500b261c04353fcb75202c1cbb3728e4f967",
+      "receipt_id": "alien-091-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-092": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-092-v2.png",
+      "native_sha256": "92eca26352df43848e81b49b5826a1b214753287c293eaa95ff44d4560a92b0a",
+      "receipt_id": "alien-092-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-093": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-093-v2.png",
+      "native_sha256": "0197a6b626fb7401a849f44e63ff1989bb00380ddb2c60f0e24b5e34625a0d6a",
+      "receipt_id": "alien-093-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-094": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-094-v2.png",
+      "native_sha256": "db4b0018bb71034881f5ab79a1eaa580731a934f1bfb32e20a5e9f3ee507c72b",
+      "receipt_id": "alien-094-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-095": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-095-v2.png",
+      "native_sha256": "64a3f13bb6ac38123ad4fd6b7419290af64c0de84180f87957769912eef29f64",
+      "receipt_id": "alien-095-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "alien-107": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-107-v2.png",
+      "native_sha256": "d080ba4265e97055cf2b5625413fa2794f2d44b5ca16346c41213283955f368b",
+      "receipt_id": "alien-107-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected explicit correction: loaded cart/cases retained and wire basket identity restored for Patch; partial canopy, low gray alien loader and dark vending cargo retained for Alien. Original pose and human white identity maintained. No new duplicates."
+    },
+    "patch-087": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-087-v2.png",
+      "native_sha256": "f74c412b651b6abeec06cc464bee1cd7ac1a9d603083be1c381412997ba22454",
+      "receipt_id": "patch-087-v2",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: complete clean frame, loaded red cart retained and wrong Patch purple band removed for plan93; orange bag visibly supported for99; closed flush shop glass restored for alien35."
+    },
+    "patch-093": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-093-v3.png",
+      "native_sha256": "f19680f1823222335d491b41d510e9f87fa592d6bb590615c68a2e40259b30ee",
+      "receipt_id": "patch-093-v3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: complete clean frame, loaded red cart retained and wrong Patch purple band removed for plan93; orange bag visibly supported for99; closed flush shop glass restored for alien35."
+    },
+    "patch-099": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-099-v3.png",
+      "native_sha256": "b26b418672c8b96a23d26d8c2ac03bbe905f94a677f56dcf994fb56885e4ed6b",
+      "receipt_id": "patch-099-v3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: complete clean frame, loaded red cart retained and wrong Patch purple band removed for plan93; orange bag visibly supported for99; closed flush shop glass restored for alien35."
+    },
+    "alien-035": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-035-v3.png",
+      "native_sha256": "6017ec7e0c3647b1b5b16ee2c45fb0e39847fc0f994046fd3628df7cdf60ae5e",
+      "receipt_id": "alien-035-v3",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected: complete clean frame, loaded red cart retained and wrong Patch purple band removed for plan93; orange bag visibly supported for99; closed flush shop glass restored for alien35."
+    },
+    "patch-094": {
+      "state": "inspected",
+      "native_file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-094-v4.png",
+      "native_sha256": "6f3eec60c4e79075733103d89ee4c3dd8813dba0343b794aea10b57950f2c121",
+      "receipt_id": "patch-094-v4",
+      "reviewer": "Codex",
+      "user_approved": false,
+      "notes": "Codex inspected masked correction: purple band removed from left bandaged Patch, retained on Mara only; same loaded red cart, two tan cases, grounded teal pack, Patch visibly grips orange top handle. Frame and yard geometry unchanged."
+    }
+  },
+  "rejected": [
+    {
+      "name": "patch-001",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-001.png",
+      "reason": "Premature spiderweb glass break and side-on cart."
+    },
+    {
+      "name": "patch-002",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-002.png",
+      "reason": "Blank face/back view with forehead marking; wrong bag world position."
+    },
+    {
+      "name": "patch-005",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-005.png",
+      "reason": "Disconnected green hand reaches through solid door frame near buzzer."
+    },
+    {
+      "name": "alien-008",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-008.png",
+      "reason": "Severe torn black/red border artifact, not acceptable clean full-frame scene."
+    },
+    {
+      "name": "patch-023",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-023.png",
+      "reason": "Large map shifted delivery door and shelf from fixed master; correct geometry and reduce map."
+    },
+    {
+      "name": "patch-059",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-059.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-060",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-060.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-061",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-061.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-084",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-084.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-087",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-087.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-092",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-092.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-093",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-093.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-094",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-094.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-098",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-098.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-099",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-099.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-100",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-100.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-101",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-101.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-102",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-102.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-103",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-103.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-104",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-104.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-105",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-105.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "patch-106",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-106.png",
+      "reason": "Visible cart shape/load continuity or protagonist wearing Mara band"
+    },
+    {
+      "name": "alien-035",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-035.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-060",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-060.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-067",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-067.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-068",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-068.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-083",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-083.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-089",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-089.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-090",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-090.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-091",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-091.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-092",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-092.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-093",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-093.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-094",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-094.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-095",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-095.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "alien-107",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-107.png",
+      "reason": "Wrong industrial loader, restored canopy, wrong departing cargo or oversized inconsistent craft"
+    },
+    {
+      "name": "patch-093-v2",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-093-v2.png",
+      "reason": "Retake still retained incorrect purple Patch band, missing orange pack or open public glassdoor; superseded by inspected narrower correction."
+    },
+    {
+      "name": "patch-094-v2",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-094-v2.png",
+      "reason": "Retake still retained incorrect purple Patch band, missing orange pack or open public glassdoor; superseded by inspected narrower correction."
+    },
+    {
+      "name": "patch-094-v3",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-094-v3.png",
+      "reason": "Retake still retained incorrect purple Patch band, missing orange pack or open public glassdoor; superseded by inspected narrower correction."
+    },
+    {
+      "name": "patch-099-v2",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-099-v2.png",
+      "reason": "Retake still retained incorrect purple Patch band, missing orange pack or open public glassdoor; superseded by inspected narrower correction."
+    },
+    {
+      "name": "alien-035-v2",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-035-v2.png",
+      "reason": "Retake still retained incorrect purple Patch band, missing orange pack or open public glassdoor; superseded by inspected narrower correction."
+    }
+  ]
+}

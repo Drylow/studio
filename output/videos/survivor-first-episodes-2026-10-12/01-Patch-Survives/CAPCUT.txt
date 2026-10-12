@@ -1,0 +1,6 @@
+Importez les clips de clips-capcut dans l'ordre 001 a 108. Placez voiceover.mp3 au temps 00:00.
+Les clips sont muets et leurs longueurs couvrent exactement toute la voix, a 24 images/s.
+video.mp4 contient deja le montage et la voix. Ne superposez pas sa voix avec voiceover.mp3.
+Vous pouvez importer subtitles.srt separement. Ne modifiez pas les durees si vous voulez garder le calage.
+Les transitions ajoutees avec chevauchement peuvent modifier les timings.
+Animation legere de camera ; coupes franches. Aucune publication YouTube effectuee.

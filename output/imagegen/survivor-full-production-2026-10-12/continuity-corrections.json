@@ -1,0 +1,380 @@
+[
+  {
+    "name": "patch-059-v2",
+    "scene": "patch-059",
+    "reason": "Shopping cart transformed or lost load between adjacent plans",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nUse Image 2 ONLY for shopping CART identity and contents: silver wire BASKET cart with blue handle and FOUR wheels, SAME loaded bottled water, cans and packets as Image 2. Do not replace it with platform trolley, do not empty it. Keep can falling at display with snagging wheel; cart basket remains loaded.\nPatch has orange forehead bandage only, NO purple arm band. Do not import another pose/actor from references.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-059.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-058.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png"
+    ]
+  },
+  {
+    "name": "patch-060-v2",
+    "scene": "patch-060",
+    "reason": "Shopping cart transformed or lost load between adjacent plans",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nUse Image 2 ONLY for shopping CART identity and contents: silver wire BASKET cart with blue handle and FOUR wheels, SAME loaded bottled water, cans and packets as Image 2. Do not replace it with platform trolley, do not empty it. Patch freezes holding loaded wire-basket shopping cart as TWO green infected watch beyond glass.\nPatch has orange forehead bandage only, NO purple arm band. Do not import another pose/actor from references.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-060.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-058.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png"
+    ]
+  },
+  {
+    "name": "patch-061-v2",
+    "scene": "patch-061",
+    "reason": "Shopping cart transformed or lost load between adjacent plans",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nUse Image 2 ONLY for shopping CART identity and contents: silver wire BASKET cart with blue handle and FOUR wheels, SAME loaded bottled water, cans and packets as Image 2. Do not replace it with platform trolley, do not empty it. Patch crouches to free ONE caught wheel of loaded wire-basket shopping cart; Mara gestures from blue-gray internal reserve doorway. Keep both zombie heads and hands GREEN beyond glass.\nPatch has orange forehead bandage only, NO purple arm band. Do not import another pose/actor from references.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-061.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-058.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-084-v2",
+    "scene": "patch-084",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nKeep practice-pushing gesture but put TWO sealed tan cardboard supply cases physically on the RED cart platform. Packs stay inside reserve, so do not introduce packs in yard.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-084.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-087-v2",
+    "scene": "patch-087",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nKeep Patch at barely open right gate, Mara waiting. Cart remains RED with TWO tan cardboard cases; teal backpack stays on floor by Mara. Orange pack floor by Patch.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-087.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-092-v2",
+    "scene": "patch-092",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nReplace changed gray shopping trolley with RED low four-caster platform handcart, ONE gray U handle, TWO tan supply cases loaded. Mara waits behind Patch; dawn light at door pane. Orange and teal bags on floor.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-092.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-093-v2",
+    "scene": "patch-093",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nRemove PURPLE band from Patch completely. Only Mara has purple right forearm band. Keep Patch at delivery doorway surveying yard. Cart RED with TWO tan cardboard cases loaded, never empty.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-093.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-094-v2",
+    "scene": "patch-094",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nRemove PURPLE band from Patch completely; only Mara has it. Patch grips orange pack TOP handle in white mitten. Cart RED with TWO tan cardboard cases loaded. Teal pack grounded by Mara.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-094.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-098-v2",
+    "scene": "patch-098",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nCart has TWO tan supply cases on rear platform and ONE teal school backpack on front platform, physically supported. Patch orange bag in visible top-handle grip. Preserve exit through gate.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-098.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-099-v2",
+    "scene": "patch-099",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nDo NOT empty cart: add same TWO tan cardboard supply cases plus teal pack supported on RED platform. One caster contacts threshold. Patch grips orange pack top handle. Both look down street.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-099.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-100-v2",
+    "scene": "patch-100",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nCart has TWO tan cardboard supply cases plus teal school pack supported on RED platform. Orange backpack stays in Patch connected mitten TOP-handle grip, NOT duplicated on cart. Keep distant infected and gate gesture.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-100.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-101-v2",
+    "scene": "patch-101",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nCart has TWO tan cardboard supply cases plus teal pack on RED platform. Patch carries orange pack by connected mitten TOP-handle grip. Keep both approaching bridge from left.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-101.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-102-v2",
+    "scene": "patch-102",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nCart remains LOADED with TWO tan cardboard supply cases and teal backpack on RED platform while both lift FRONT edge over bridge lip. Patch orange bag temporarily on ground at his feet. No extra person or pack.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-102.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-103-v2",
+    "scene": "patch-103",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nReplace changed plastic crates with TWO sealed tan cardboard supply cases. Both orange and teal packs sit supported on same RED platform beside cases during bridge lift. Keep hands physically on cart, canal bridge intact.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-103.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-104-v2",
+    "scene": "patch-104",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nPreserve opposite-bank arrival, add TWO sealed tan cardboard supply cases behind orange and teal packs on RED platform. No supplies disappear.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-104.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-105-v2",
+    "scene": "patch-105",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nEnsure TWO sealed tan cardboard supply cases and orange/teal packs supported on RED platform on approach to shed. Keep three garden beds and shed exactly.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-105.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "patch-106-v2",
+    "scene": "patch-106",
+    "reason": "Cart load/body markers continuity",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nImage 2 defines the cart ONLY; Image 3 defines TAN CARDBOARD CASES only, not actors or reserve backdrop. Remaining references define identity only.\nDo NOT empty parked RED cart: TWO tan sealed cardboard supply cases remain on it. Orange backpack grounded beside seated Patch; teal backpack grounded beside Mara. Preserve shed and garden layout.\nPatch: orange forehead bandage, NEVER purple arm band. Mara: ONLY purple right forearm band, no forehead bandage. NO other people.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-106.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-083.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+      "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png"
+    ]
+  },
+  {
+    "name": "alien-035-v2",
+    "scene": "alien-035",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nCLOSE the glass public entrance fully, flush in original frame. Reed remains crouched INSIDE by glass, watching without opening the door. Do not change light or shelves.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-035.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-060-v2",
+    "scene": "alien-060",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nRemove the yellow industrial forklift/truck seen outside window. Replace with SAME low gray FOUR-wheel alien loader in Image 2 with two forks and slender lamp mast, carrying ONE gray crate outside yard window. No yellow vehicle, cabin or human machinery. Gray backpack held by Reed with top handle grip.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-060.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/loader.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-067-v2",
+    "scene": "alien-067",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside window the canopy is now PARTIALLY DISMANTLED: left bare post, short red roof fragment on right post, LEFT fuel pump missing, RIGHT pump present. A small gray panel passes outside, Reed steps back. Never restore full red canopy.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-067.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-068-v2",
+    "scene": "alien-068",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside window show PARTIALLY DISMANTLED canopy: left bare post, short red roof fragment on right post, LEFT pump absent, RIGHT pump present. Preserve Surveyor pointing and Reed hiding; no full canopy.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-068.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-083-v2",
+    "scene": "alien-083",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside window show partially dismantled canopy with only short right red roof remnant and bare left post, left pump gone/right pump present. Dust falls near window as remaining piece shifts, not a restored full roof.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-083.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-089-v2",
+    "scene": "alien-089",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nThe visible canopy outside is partially removed: bare left post, short right red roof fragment, LEFT pump gone, RIGHT pump present. Preserve dark vending cabinet LEFT of broken door and white Reed.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-089.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-090-v2",
+    "scene": "alien-090",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside shows bare left post, short right red canopy remnant and ONLY right fuel pump. Keep dark cabinet inside LEFT of broken entrance, loader entering, Surveyor supervising, Reed retreating left.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-090.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-091-v2",
+    "scene": "alien-091",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside has bare left post and short red right roof remnant, ONLY right pump. Keep loader bending remaining door frame, falling glass, Reed retreating, mint Surveyor and Worker. No full red canopy.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-091.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-092-v2",
+    "scene": "alien-092",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nOutside has bare left post, short right roof fragment, ONLY right pump. Keep ONE dark black vending cabinet supported on gray loader forks, not extra shelves. No full canopy.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-092.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-093-v2",
+    "scene": "alien-093",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nReplace the orange snack SHELVING on departing loader with ONE DARK BLACK VENDING CABINET: black rectangular enclosure, small gray keypad/dispensing slot, UNLIT dark rows, exactly cabinet visible in Image 3. It is physically on gray loader OUTSIDE. Leave blank wall spot LEFT of door. Outside roof partially dismantled/only right pump. Surveyor back toward Reed and left staff passage. No shelving.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-093.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-094-v2",
+    "scene": "alien-094",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nRemove truck and angular giant spacecraft from rear WINDOW. Through window show small distant SAME low gray four-wheel alien loader carrying ONE DARK VENDING CABINET toward low gray OVAL craft in Image 3. No wood crates/truck; craft low shallow oval with ramp, not a floating angular object. Preserve Reed visibly gripping gray backpack top handle and keys left on bench.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-094.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/loader.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft-late.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-095-v2",
+    "scene": "alien-095",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nReplace WOOD CRATES on departing loader with ONE DARK BLACK VENDING CABINET, physically supported on forks/platform. Original two gray yard crates are GONE leaving clear gate. Loader ahead on road moves LEFT toward craft. Preserve Reed inside yard/gray pack grounded.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-095.png",
+      "output/imagegen/survivor-full-production-2026-10-12/objects/loader.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  },
+  {
+    "name": "alien-107-v2",
+    "scene": "alien-107",
+    "reason": "Explicit mechanical/canopy/cargo continuity correction",
+    "prompt": "Edit Image 1 in place. Keep its camera, layout, gesture and simple shallow matte cartoon style. Correct only the listed continuity errors. 16:9 single full-width canvas, no borders/panels, no realistic people, no duplicate protagonist. Every human head, mitten hand and oval foot is pure white; thin black stick torso and limbs. A school backpack is a separate prop, on floor when stationary or with a visible mitten holding its top handle when explicitly carried; NEVER shoulder straps, attached or floating bags.\nSecondary references guide only the corrected object/state, not framing or extra characters.\nRemove enormous floating fantasy spaceship and dangling whole buildings. Far LEFT beyond hedge show only SMALL LOW GRAY OVAL craft on three landing legs with open right ramp; a small gray roof panel being loaded at ramp, shallow distant scale. Keep Reed seated drinking by low farm wall, gray bag on ground, exact farmhouse/trees.\nReed has blue-gray scarf, no bandage or purple band. Alien heads/hands mint green, covered gray bodies/dark boots. Do not add humans from refs or duplicates.",
+    "refs": [
+      "output/imagegen/survivor-full-production-2026-10-12/scenes/alien-107.png",
+      "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft-late.png",
+      "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+    ]
+  }
+]

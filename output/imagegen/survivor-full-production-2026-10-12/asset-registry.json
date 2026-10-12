@@ -1,0 +1,725 @@
+{
+  "assets": [
+    {
+      "prompt_sha256": "1091b8778d171fb1878a8f503ceff9ba6106816c008c4038e0c331d8106d84b8",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:56:58.158531+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "2140444cd762e77841fbe18c8532333fae3e93832043e7a02d1355edbca1604f",
+      "id": "mara",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/characters/mara.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/mara.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "591bfd61897465c249be5a2ce911a13028438299b77b4dce0af21905ba5c2222",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png",
+          "sha256": "2b28b1e18362987171329084126d3b0e34d3270e88cf3ad1bf4502ba9986f270"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:56:58.159955+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "84df0161135c5e9019699f3df63de503187cd6a3bfdf1ed7cbab2b38a1af1c3b",
+      "id": "surveyor",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/characters/surveyor.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/surveyor.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "6ecd5d360a5605212e9d8426a57e5ab06f2ad786eef75a8ce9706a0863314b97",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png",
+          "sha256": "2b28b1e18362987171329084126d3b0e34d3270e88cf3ad1bf4502ba9986f270"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:56:58.155776+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ddc731b1f5fa6149d77593ef0453d42fceb8b1366656ab212f57029998ebd308",
+      "id": "worker",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/characters/worker.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/worker.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "dc7e38b6b5bb383af3a9dfbddcee97a27fb7882b08a5b197d5ba268673d0ba22",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:56:58.155712+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "fc70402d13decf656a5ccf2b6f2b3d42163716f8ef5ea9026d97cc0a063dd689",
+      "id": "loader",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/objects/loader.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/loader.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "053d0c749b48cc0145918b6c680286afd5d0e5c85c3ed2998798dd46957f9a2f",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.080845+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ff0f231332bb0db6a712969c6011da110be7ee92538e04312c0187c36bed6663",
+      "id": "car",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/objects/car.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "3c0d87df1c3bf1bfbb8c7ae39cb21f4a6f2e544d827868718fbd1429998a45a3",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.080847+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9c215f4e29699be232c2c10beac5a67c3fd6f959a0ea99863ed477612dcd5798",
+      "id": "handcart",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/objects/handcart.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/handcart.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "474b5d30f07bced3b086a078f293a3b11a43b665fb85e57cb334f306f2130fad",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.095449+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "596a2f0b38f8933802a73c29b7de70bacecc5a2aa4b2fd85c1b070c6ff21c012",
+      "id": "patch-parking",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-parking.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-parking.txt",
+      "reviewer": "Codex",
+      "review_state": "rejected",
+      "user_approved": false,
+      "visual_review": "Open exit contradicted closed-door narration, replaced by patch-parking-closed."
+    },
+    {
+      "prompt_sha256": "b0584a45fd605b0549030ee278bbe52eafa0e981b722b245834979daa5c0d29c",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.258566+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "85ef7df13bcf93c23ec1f2a767791c665bbe74b6b5f4f90fc9b0858c4b144bcc",
+      "id": "patch-aisle",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-aisle.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-aisle.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "4e731bf738f417ec350089bb6abc77e82532af1096fb56036e623ff274efb50e",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.119355+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "57a2ca7f9cec939d211c92a9932ec5ad1b5b2e546b0006db1699499f9e9dff3d",
+      "id": "alien-shop",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "24c4b71b5f32924e58edf121763c50525abf8887ca70f109f80f78711cbe3961",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/staff.png",
+          "sha256": "49a052d38154e19b922ead91b38bd362631c8420a7ee715baf19ac22483d172b"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.147044+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6e5b8b01e408f01fc7f81f99a617af4d68a30f104d4ffd722a5839d90266d116",
+      "id": "alien-staff",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-staff.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "20c35ac364e41ea46529b5b9920425ee07b76b1d4bdb23389bfc96c89e99edb6",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png",
+          "sha256": "67e196ddbaf246d13a5552fe473e450ea2caecd9f8d409bb74e67bef4fed24dd"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.163153+00:00",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "16190e5caa777b8da5b77d47e06477353778054a309d1c19c767270bb3341bfe",
+      "id": "alien-yard",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-yard.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "0abacc8fc7105c6a4d6467d82d71e8918febf62e883458e0121652498c60a8e2",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/gardens.png",
+          "sha256": "b4a613649b53d3ee0a78e1f25c8bfd83a20c72ca594c470692a4c10b47593d8f"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T15:58:21.318374+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b7bc610c4eab190c3449093345b9edd7bc5176e6a50c9959b3eac9a16f7a2793",
+      "id": "alien-path",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-path.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-path.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "fc003bbe64e2f4d9bd426ba375041460c476700933263fe10abbec2a98abf9dc",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png",
+          "sha256": "57a2ca7f9cec939d211c92a9932ec5ad1b5b2e546b0006db1699499f9e9dff3d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.872016+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f9aa0abccd4550a0fbdb8fba2eb3a4172238a659cbed4e2dbd14764e29e4f53e",
+      "id": "alien-forecourt",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "1d5dfc28d7629404557566dc7745c3679f15faca20cc8c8346fe6f23431a57ad",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png",
+          "sha256": "16190e5caa777b8da5b77d47e06477353778054a309d1c19c767270bb3341bfe"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.876511+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5676e32c1c86abb00b145787ffa44f233b218ba85271f839939abfb9c3692eed",
+      "id": "alien-craft",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-craft.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "4da371f9554f27397a64db8fb10011d6d198e5a6f1adea1c895ab93462f15c1e",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v3.png",
+          "sha256": "753534d161e66818860d6e989fadb7d06bd6ea407fb712531b43dd45b7b9c54b"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.861432+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1302a6ab56a319bf8c89781213bf1d9bc597a500c009230630594b256e85d2fa",
+      "id": "patch-front-closed",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-closed.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-closed.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "a78fa683a344b88ea1182130279a858409a6c12aa5d5277bc46e13c259206575",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.855734+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7abf4e9ee748e736ea434ea73c4e9aa8d8ffc573cf6ec61860c6db93c0692e2e",
+      "id": "patch-front-broken",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-broken.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-broken.txt",
+      "reviewer": "Codex",
+      "review_state": "rejected",
+      "user_approved": false,
+      "visual_review": "Damaged shutter did not cover public door, replaced by patch-front-broken-v2."
+    },
+    {
+      "prompt_sha256": "fb60fc69d7eb0b27547dced7cbef4bf990c35132c3dc9b812d7c8787e613ac70",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.908143+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "16883d9c6a240c81f65c51fac85fbcf973ba825a82f21fac4cb329a7a44b65a1",
+      "id": "patch-stockroom-night",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-stockroom-night.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-stockroom-night.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "068f4c55eb3ff66060d1d44717435ceddaa44322eb0004231306b0bbd82ad8b1",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png",
+          "sha256": "67e196ddbaf246d13a5552fe473e450ea2caecd9f8d409bb74e67bef4fed24dd"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.910084+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "85c404fef3d3c47518cd0012824df61a711c9393e83b10944046abcc29e7d5b4",
+      "id": "patch-yard-night",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-yard-night.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-yard-night.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "3292f0999f21166ee8c76f316cf40e73528c7d0886010d279dfda0d6aa27bb6c",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png",
+          "sha256": "57a2ca7f9cec939d211c92a9932ec5ad1b5b2e546b0006db1699499f9e9dff3d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.931063+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "256455575202eb8e73e8dd148719b009f6adfb9dd70d3e6f7afa4413764f0bca",
+      "id": "alien-shop-dark",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-dark.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-dark.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "86d774f0a1be1a331c8981b5e74c415167ac6cfb32f1755174cabe876d97ee1a",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff.png",
+          "sha256": "6e5b8b01e408f01fc7f81f99a617af4d68a30f104d4ffd722a5839d90266d116"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:04.000248+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "aefe1538d2bef4f0f8eb6e138e5217321e062f127a14bf1f8a11cb7c06661e9e",
+      "id": "alien-staff-night",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff-night.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-staff-night.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "0ce7858f3d30ad763b3e8cf1162fa35769e54909383b9ce5dbc0d0fb3282deab",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png",
+          "sha256": "16190e5caa777b8da5b77d47e06477353778054a309d1c19c767270bb3341bfe"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:04.066384+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5d3efabe1833cc83be05ae5b77f826bf3096902a9fb1b9d74e9711377abc51ee",
+      "id": "alien-yard-clear",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard-clear.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-yard-clear.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "c98a41935963dfc45e445abccde0e11b194b52825c8f3545f47f9bf669403266",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png",
+          "sha256": "57a2ca7f9cec939d211c92a9932ec5ad1b5b2e546b0006db1699499f9e9dff3d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:01:03.988462+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f436e11c8306398d0c09cc85b2dae21d5079ab20fde37f45bc3bf0303ded181b",
+      "id": "alien-shop-broken",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-broken.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "6cc9ad68b082560b116c54e0b24690a131b4b567d07b9ab8cfbcd902837b1a0b",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-parking.png",
+          "sha256": "596a2f0b38f8933802a73c29b7de70bacecc5a2aa4b2fd85c1b070c6ff21c012"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:02:46.495112+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "35dac5734f38b6df8ee31fba202810235d59e4c0589e9998f343a560430f2365",
+      "id": "patch-parking-closed",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-parking-closed.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-parking-closed.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "f2d5809a22537fe15f848af810f4e1df3148b3a994ff6ab6e4f841e26dd64be5",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-closed.png",
+          "sha256": "1302a6ab56a319bf8c89781213bf1d9bc597a500c009230630594b256e85d2fa"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:08:03.793671+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "28139b1e0db3a8b12efa5b71c49ec9d107ea37f8eaf96997efeabb78d790e547",
+      "id": "patch-front-broken-v2",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-broken-v2.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-broken-v2.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "6536c5e88745aaa2f4ab35b2d21e349f76c95b276992f128b21d888e83d80ad9",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png",
+          "sha256": "f9aa0abccd4550a0fbdb8fba2eb3a4172238a659cbed4e2dbd14764e29e4f53e"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:08:03.769115+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b92c4fc0a4405d34c89e1ca64999af06700b50f34bd96a72b7e7cb2092e865c6",
+      "id": "alien-forecourt-one-pump",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-one-pump.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt-one-pump.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "2989b6109d848492a6b0a23eb7658d729ce97701ae9b673d738b23267ac632d1",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png",
+          "sha256": "f9aa0abccd4550a0fbdb8fba2eb3a4172238a659cbed4e2dbd14764e29e4f53e"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:08:03.826664+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9c582b1a2ebef6eac1a468890a6642705515e5a7db8f97fbeedf9b4643c7b5f4",
+      "id": "alien-forecourt-dismantled",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt-dismantled.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt-dismantled.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "18e0491c876e38532e2a4c9b44153172ffade9be82181d2e337c4f55f2dc4e35",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png",
+          "sha256": "f436e11c8306398d0c09cc85b2dae21d5079ab20fde37f45bc3bf0303ded181b"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:08:03.874463+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5c335f84b8a00222bd05817b2bef0af6d43267177adea107c644c84e1a4177e7",
+      "id": "alien-shop-gone-machine",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-gone-machine.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-gone-machine.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "126bcf635a4b1528f2f424c0108cf569913872f641f4766549d71030cb34d678",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft.png",
+          "sha256": "5676e32c1c86abb00b145787ffa44f233b218ba85271f839939abfb9c3692eed"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:08:03.979245+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5e6124fd97ca3d14ced6abcbdb37c3c28c5de5082684082a0310467815ba56e4",
+      "id": "alien-craft-late",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft-late.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-craft-late.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "875a2fbb1a17faf6604bd96fff897b4efaef4ae753302d7799ad80bcae62b06d",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png",
+          "sha256": "67e196ddbaf246d13a5552fe473e450ea2caecd9f8d409bb74e67bef4fed24dd"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:23:11.875947+00:00",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "4d668db3ccac305ced535e79a60a6a4a59ec2a1114f4f946317dc50451951a1e",
+      "id": "patch-yard-blocked",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/masters/patch-yard-blocked.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-yard-blocked.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. "
+    },
+    {
+      "prompt_sha256": "2ffd2ebd933071c3f520187abbcabc9e8bc7dbddf683002edb4fe079bae37827",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/objects/car.png",
+          "sha256": "ff0f231332bb0db6a712969c6011da110be7ee92538e04312c0187c36bed6663"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:23:11.876687+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "3a92a90cb1e251ce8ad6eb2ab8b4babc48bddf6a3b1cf8ba8187a2511f3c3593",
+      "id": "car-wheelless",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/objects/car-wheelless.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car-wheelless.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. Only tire-less brake hubs remain, no tires/wheels, blue dent retained."
+    },
+    {
+      "prompt_sha256": "1713495c0b1714948a02b72b4638b0d5c29ba597ebfc57895ee1cc8ddbab4ea7",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-full-production-2026-10-12/objects/car.png",
+          "sha256": "ff0f231332bb0db6a712969c6011da110be7ee92538e04312c0187c36bed6663"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T16:23:11.876686+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "4848f0ac3667a14d96278358c7ca8e9c4b609ff16cffc74e88e23f344b69f3f1",
+      "id": "car-dismantled",
+      "file": "output/imagegen/survivor-full-production-2026-10-12/objects/car-dismantled.png",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car-dismantled.txt",
+      "reviewer": "Codex",
+      "review_state": "inspected",
+      "user_approved": false,
+      "visual_review": "Inspected actual pixels against stated identity, simple style, fixed geometry/prop silhouette and explicit state. Native preserved; no claim of exact pixel-level consistency. Detached front body panel retains dent; mechanically disassembled, no explosion or human gore."
+    }
+  ]
+}

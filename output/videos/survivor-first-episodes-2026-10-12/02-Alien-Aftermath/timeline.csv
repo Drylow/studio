@@ -1,0 +1,109 @@
+﻿id,first_frame,end_frame_exclusive,frames,start,end,text,location
+1,0,151,151,0.0,6.291666666666667,"An alien is carrying your car away, and you're hiding behind a gas station counter with the keys still in your hand.",shop
+2,151,362,211,6.291666666666667,15.083333333333334,"You came here for coffee. Now a machine has lifted your car off the ground, and a pale figure is walking beside it, inspecting the headlights.",forecourt
+3,362,634,272,15.083333333333334,26.416666666666668,"You can see the front door. But crossing the forecourt would put you under the lights they're moving between the pumps. You stay behind the counter. Seven days later, they'll be taking the station apart as well.",shop
+4,634,822,188,26.416666666666668,34.25,"The cashier left when the first craft came down beside the highway. You followed him to the entrance, then saw what happened to the cars on the road.",forecourt
+5,822,950,128,34.25,39.583333333333336,"Machines stopped them, lifted them, and carried them toward the open side of the craft.",craft
+6,950,1056,106,39.583333333333336,44.0,You backed into the shop. Your car keys are still warm from your hand.,shop
+7,1056,1216,160,44.0,50.666666666666664,"Your phone is in the car, plugged into a charger. You were planning to pick it up after paying for the coffee.",forecourt
+8,1216,1376,160,50.666666666666664,57.333333333333336,"Outside, a pale visitor stands beside the nearest pump. Its dark eyes are pointed at the display.",forecourt
+9,1376,1621,245,57.333333333333336,67.54166666666667,"It places a flat piece of equipment against the casing, waits, and follows the machine carrying your car. You can still see the cup you left on the counter by the window.",shop
+10,1621,1762,141,67.54166666666667,73.41666666666667,"You lower yourself behind the shelves. From here, you can reach the passage into the staff room.",shop
+11,1762,1983,221,73.41666666666667,82.625,"The rear door opens into a little fenced yard. Beyond the yard is a service road, running behind the station and joining a footpath toward the trees.",staff
+12,1983,2118,135,82.625,88.25,"There are lights there, too. A visitor is placing one beside the road while another unloads crates.",yard
+13,2118,2238,120,88.25,93.25,"You close the rear door. For now, you've found another route you can't use.",staff
+14,2238,2395,157,93.25,99.79166666666667,The shop is still bright. Every refrigerated display has a glowing strip. The coffee machine has a screen.,shop
+15,2395,2551,156,99.79166666666667,106.29166666666667,"A toy beside the counter flashes when you touch it, and you put it down much more carefully than you picked it up.",shop
+16,2551,2715,164,106.29166666666667,113.125,"You find the ordinary light switches in the staff passage. When the shop lights go out, the place doesn't become dark.",shop
+17,2715,2838,123,113.125,118.25,The vending machine beside the front entrance stays lit. So does the pump display outside.,shop-dark
+18,2838,2997,159,118.25,124.875,A visitor approaches the glass. You lie still behind the counter while its shadow crosses the floor.,shop-dark
+19,2997,3110,113,124.875,129.58333333333334,"It pauses beside the vending machine, puts a hand against the window, and leaves.",shop-dark
+20,3110,3258,148,129.58333333333334,135.75,You don't know whether it saw you. You do know it stopped at the brightest thing in the room.,shop-dark
+21,3258,3428,170,135.75,142.83333333333334,"On day one, you move into the staff room. It has a bench, a cupboard, and a short window facing the rear yard.",staff
+22,3428,3614,186,142.83333333333334,150.58333333333334,"You bring sealed bottles and packets of food from the shop, keeping them away from the doorway so you won't trip over them in the dark.",staff
+23,3614,3795,181,150.58333333333334,158.125,"There's a paper map beside the staff noticeboard. It shows the station, the service road, and the footpath beyond the yard.",staff
+24,3795,3946,151,158.125,164.41666666666666,You recognize the road from the drive here. The path goes toward a farmhouse you passed before stopping for coffee.,staff
+25,3946,4129,183,164.41666666666666,172.04166666666666,You fold the map into your gray backpack. You carried it into the shop by its handle. It is on the floor beside your feet.,staff
+26,4129,4265,136,172.04166666666666,177.70833333333334,"Your clothes, your keys, and whatever you can carry from here are all you have access to now.",staff
+27,4265,4487,222,177.70833333333334,186.95833333333334,"That afternoon, a visitor brings a small crate up to the entrance. It has a dark blue stripe across its shoulder, and you've seen it inspecting the pumps before.",forecourt
+28,4487,4576,89,186.95833333333334,190.66666666666666,You start recognizing that one because it keeps coming back.,shop-dark
+29,4576,4722,146,190.66666666666666,196.75,It points a light at the vending machine through the glass. Another machine rolls into place outside the door.,shop-dark
+30,4722,4935,213,196.75,205.625,"The visitor doesn't try the handle. It checks the frame around the machine, records something on its equipment, and returns to the forecourt.",forecourt
+31,4935,5010,75,205.625,208.75,You keep waiting for an announcement you can understand.,staff
+32,5010,5172,162,208.75,215.5,All you hear is the movement of equipment and the occasional scrape of something heavy being dragged along the road.,yard
+33,5172,5371,199,215.5,223.79166666666666,"On day two, you watch them handle a car that still has its interior light on. They carry it toward a different group of vehicles.",craft
+34,5371,5481,110,223.79166666666666,228.375,The visitor with the blue stripe opens the door and removes something from inside.,craft
+35,5481,5612,131,228.375,233.83333333333334,You can't see what it takes. You stop pretending you understand the whole process.,shop-dark
+36,5612,5786,174,233.83333333333334,241.08333333333334,"You've seen them inspect a pump, a vending machine, and a light inside a car. That's enough to change where you sit.",shop-dark
+37,5786,5999,213,241.08333333333334,249.95833333333334,"You keep away from the lit displays and stay below the windows. At the rear door, the visitor placing equipment has gone, but its lamp remains.",staff
+38,5999,6154,155,249.95833333333334,256.4166666666667,"A machine moves along the service road underneath it, stops, and returns toward the highway.",yard
+39,6154,6295,141,256.4166666666667,262.2916666666667,"You watch that trip several times. When the machine is gone, you can see the start of the footpath.",yard
+40,6295,6451,156,262.2916666666667,268.7916666666667,"When it returns, its load fills the gap between the yard and the road. You aren't ready to try squeezing past it.",yard
+41,6451,6599,148,268.7916666666667,274.9583333333333,"You spend the night on the staff bench. It's too short to stretch out, so you keep changing position.",staff-night
+42,6599,6791,192,274.9583333333333,282.9583333333333,"Each time you wake, you listen before moving. Once, you hear a noise beside the rear door and stay upright until morning.",staff-night
+43,6791,6926,135,282.9583333333333,288.5833333333333,"On day three, you find the source. The machine has left a crate against the outside wall.",yard
+44,6926,7098,172,288.5833333333333,295.75,"A cable runs along the edge of the yard, and the rear gate opens onto equipment that wasn't there yesterday.",yard
+45,7098,7220,122,295.75,300.8333333333333,You can still open the gate. You can't get through it without walking into their working area.,staff
+46,7220,7370,150,300.8333333333333,307.0833333333333,You mark the crates on the paper map. The little drawing of an empty yard is already out of date.,staff
+47,7370,7467,97,307.0833333333333,311.125,"Through the front window, you see the blue-striped visitor returning.",forecourt
+48,7467,7637,170,311.125,318.2083333333333,"This time, the machine beside it carries part of a streetlight. They bring it alongside the glowing vending machine and compare them.",shop-dark
+49,7637,7783,146,318.2083333333333,324.2916666666667,"You look at the snacks behind its glass. Yesterday, you considered trying to get more of them.",shop-dark
+50,7783,8022,239,324.2916666666667,334.25,Now you leave the machine alone. You've already put food in your backpack. Standing beside that light for another packet would mean sharing the visitor's attention.,staff
+51,8022,8250,228,334.25,343.75,"Later, the rear lamp sweeps across the staff room window. You pull back into the corner. The light passes over the bench and returns to the yard without stopping.",staff-night
+52,8250,8329,79,343.75,347.0416666666667,You want to believe darkness makes you invisible.,staff-night
+53,8329,8513,184,347.0416666666667,354.7083333333333,But you haven't seen what would happen if you stood up while the light was passing. You stay in the corner until it moves away again.,staff-night
+54,8513,8583,70,354.7083333333333,357.625,"On day four, a machine removes the first pump.",forecourt-one
+55,8583,8769,186,357.625,365.375,You watch from the staff passage as the visitor checks the space around it. The machine lifts the casing and moves it toward the craft.,forecourt-one
+56,8769,8873,104,365.375,369.7083333333333,The pump island stays where it was. The object that stood on it is gone.,craft
+57,8873,9034,161,369.7083333333333,376.4166666666667,You'd been waiting for them to finish with the cars and leave. Now their work is moving closer to the building.,shop-dark
+58,9034,9129,95,376.4166666666667,380.375,You return to the rear door and look at the crates beside the gate.,staff
+59,9129,9220,91,380.375,384.1666666666667,One has disappeared. Another has moved toward the road.,yard
+60,9220,9463,243,384.1666666666667,394.2916666666667,"You can see a gap where the machine loaded them, but its lamp is still facing the yard. You wait, holding your backpack, until the machine comes back and fills that gap again.",staff
+61,9463,9608,145,394.2916666666667,400.3333333333333,You put the backpack down. You missed it because you were still deciding what to take.,staff
+62,9608,9726,118,400.3333333333333,405.25,"That evening, you pack it properly. Bottles sit low in the backpack.",staff
+63,9726,9961,235,405.25,415.0416666666667,"Food goes above them, and the map fits in the outer pocket. You put the car keys there as well, even though you haven't seen the car since the first night.",staff
+64,9961,10140,179,415.0416666666667,422.5,"You try walking around the bench without touching the cupboard. When the backpack catches a handle, you move its loose strap and try again.",staff
+65,10140,10221,81,422.5,425.875,You want the next gap to find you ready to move.,staff
+66,10221,10415,194,425.875,433.9583333333333,"On day five, the visitors start taking down the canopy over the pumps. Its shadow shifts across the front window while you're looking out.",forecourt-partial
+67,10415,10501,86,433.9583333333333,437.5416666666667,You step backward as a panel passes close to the glass.,shop-dark
+68,10501,10687,186,437.5416666666667,445.2916666666667,"The blue-striped visitor comes into view beside the entrance. It looks at the vending machine again, then points toward the shop's roof.",shop-dark
+69,10687,10791,104,445.2916666666667,449.625,You're still waiting for it to notice that somebody is living under that roof.,forecourt-partial
+70,10791,10976,185,449.625,457.3333333333333,"Behind the station, the loaded machine makes another trip toward the craft. You watch the visitor gather its equipment and follow.",yard
+71,10976,11095,119,457.3333333333333,462.2916666666667,"The yard is empty of people for a while, although the lamp is still standing there.",yard
+72,11095,11247,152,462.2916666666667,468.625,You open the rear door and step outside for the first time. The air feels colder than the room.,yard
+73,11247,11371,124,468.625,473.7916666666667,"You can see the service road, the footpath, and the trees beyond it.",yard
+74,11371,11415,44,473.7916666666667,475.625,A light moves across the fence.,yard
+75,11415,11663,248,475.625,485.9583333333333,"You retreat before it reaches you. Back on the bench, you look at the map until your hands stop shaking. You got as far as the yard. Next time, you need to keep moving.",staff
+76,11663,11725,62,485.9583333333333,488.5416666666667,"On day six, you see your car again.",craft-late
+77,11725,11872,147,488.5416666666667,494.6666666666667,"It's on a platform beside the craft, without its wheels. A machine is separating the front from the rest of it.",craft-late
+78,11872,11992,120,494.6666666666667,499.6666666666667,You recognize the little dent above the headlight from when you clipped a parking post last winter.,craft-late
+79,11992,12171,179,499.6666666666667,507.125,"You reach into the backpack for the keys. For a moment, you want to go out there and show someone that they're taking the wrong car.",staff
+80,12171,12289,118,507.125,512.0416666666666,"You look from the keys to the machine, then put them on the staff room bench.",staff
+81,12289,12403,114,512.0416666666666,516.7916666666666,The route on your map ends at a footpath. You've been preparing to walk it.,staff
+82,12403,12513,110,516.7916666666666,521.375,You stop making room for things that would only matter if you were driving home.,staff
+83,12513,12634,121,521.375,526.4166666666666,"At the front, another piece of the canopy comes down. Dust falls from the shop ceiling.",shop-dark
+84,12634,12799,165,526.4166666666666,533.2916666666666,"You close your backpack on the floor, stand beside the rear door, and wait for the next load to leave.",staff
+85,12799,12976,177,533.2916666666666,540.6666666666666,"The machine starts its trip. But the blue-striped visitor remains in the yard, examining the cable beside the wall.",yard
+86,12976,13166,190,540.6666666666666,548.5833333333334,"You can see its eyes through the window. You stay inside while it works, watching the exit you've spent days preparing to use.",staff
+87,13166,13222,56,548.5833333333334,550.9166666666666,It doesn't leave until the machine returns.,yard
+88,13222,13413,191,550.9166666666666,558.875,"You sit on the floor beside the backpack instead of unpacking it. During the night, you hear something scraping against the shop roof.",staff-night
+89,13413,13475,62,558.875,561.4583333333334,"On day seven, the vending machine goes dark.",shop-broken
+90,13475,13742,267,561.4583333333334,572.5833333333334,"You notice because the pale rectangle it cast across the passage disappears. A machine is standing beside the front entrance, and the visitor is moving its equipment toward the window.",shop-broken
+91,13742,13824,82,572.5833333333334,576.0,The frame bends. You step back as the glass falls inward.,shop-broken
+92,13824,13927,103,576.0,580.2916666666666,The machine reaches into the space where you were waiting on the first night.,shop-broken
+93,13927,14099,172,580.2916666666666,587.4583333333334,"It pulls the vending machine toward the broken entrance. The visitor watches its progress, with its back toward the staff passage.",shop-gone
+94,14099,14267,168,587.4583333333334,594.4583333333334,"You pick up the backpack by its handle. Through the rear window, you can see the loaded machine heading toward the craft.",staff
+95,14267,14473,206,594.4583333333334,603.0416666666666,"The crates beside the gate are gone. A gap runs from the yard to the service road, and the visitor who was working there yesterday is now at the front.",yard-clear
+96,14473,14659,186,603.0416666666666,610.7916666666666,"You open the rear door. Your backpack brushes the frame, and you stop long enough to draw it closer to your side.",yard-clear
+97,14659,14783,124,610.7916666666666,615.9583333333334,"Nothing turns toward you. You cross the yard, keeping the machine ahead of you in sight.",yard-clear
+98,14783,14925,142,615.9583333333334,621.875,"At the gate, you hesitate. A moving light passes along the service road and catches the fence.",yard-clear
+99,14925,15087,162,621.875,628.625,You stay beside the dark wall until it slides away. The machine keeps going toward the highway.,yard-clear
+100,15087,15170,83,628.625,632.0833333333334,You step through the gate and take the path in the other direction.,path
+101,15170,15291,121,632.0833333333334,637.125,The station is still close enough that you can hear the glass being moved. You want to run.,path
+102,15291,15451,160,637.125,643.7916666666666,"Instead, you watch where you're stepping until the path curves behind the trees and the forecourt disappears.",path
+103,15451,15569,118,643.7916666666666,648.7083333333334,"Only then do you stop and look back. Above the fence, part of the shop roof is lifting.",path
+104,15569,15752,183,648.7083333333334,656.3333333333334,You can see the space where the bench used to stand beneath it. You're carrying the backpack you packed before that room began coming apart.,path
+105,15752,15904,152,656.3333333333334,662.6666666666666,"Farther along the path, you reach the farmhouse shown on the map. Its windows are dark.",path
+106,15904,16056,152,662.6666666666666,669.0,"You approach from the trees, keeping the road in view, and stop beside the low wall at the edge of the yard.",path
+107,16056,16256,200,669.0,677.3333333333334,"You take a bottle from the backpack and sit while you drink. Across the fields, the craft is still loading pieces of the station.",path
+108,16256,16485,229,677.3333333333334,686.875,"Your car is somewhere among them. You put the bottle away, unfold the map against the wall, and mark where you're sitting before looking for the next road.",path
