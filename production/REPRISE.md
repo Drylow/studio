@@ -1,5 +1,10 @@
 # Reprise sur un autre compte Claude (état au 3 oct. 2026, 23 h 50 heure belge)
 
+> **Point de reprise actuel : [README_REPRISE.md](../README_REPRISE.md), 12 octobre 2026.**
+> Lire d'abord ce document pour les deux chaines Survivor et TubeForge.
+> Le contenu ci-dessous est conserve comme historique du 3-4 octobre ; ses jobs
+> et demandes ne sont pas automatiquement actifs aujourd'hui.
+
 L'utilisateur arrive au bout de son usage sur son compte et continue sur **le compte de son pote**, « comme
 si je travaillais ici ». Ce fichier dit **où on en est** et **comment démarrer**. Le guide de travail reste
 `CLAUDE.md` (à lire en entier) ; le journal des vidéos, `production/VIDEOS.md`.

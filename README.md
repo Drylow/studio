@@ -1,5 +1,10 @@
 # Drylow Studio
 
+**Reprise du travail en cours sur un autre compte : lire [README_REPRISE.md](README_REPRISE.md).**
+Etat du 12 octobre 2026 : deux nouvelles chaines Survivor, scripts et references,
+maintenance TubeForge et sauvegarde locale. Les sections suivantes decrivent le
+studio general ; elles ne remplacent pas les decisions recentes de ce point de reprise.
+
 Studio YouTube local (Flask). L'outil principal, **2D Videos** (`/tools/pov-studio`),
 fait des vidéos faceless en 2D façon TubeGen, entièrement sur ta machine.
 

@@ -1,5 +1,10 @@
 # Drylow Studio — guide pour Claude (à lire en entier avant de travailler)
 
+**Reprise actuelle, 12 octobre 2026 : lire aussi `README_REPRISE.md` a la racine.**
+Il fixe l'etat des deux nouveaux projets Survivor, les decisions utilisateur,
+les chemins de TubeForge et le snapshot prive. Conserver les regles generales
+ci-dessous, mais ne pas relancer des anciens travaux a partir de notes historiques.
+
 Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en bout : recherche, script,
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
 pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
