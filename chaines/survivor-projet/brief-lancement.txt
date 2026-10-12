@@ -1,6 +1,6 @@
 NOUVELLE CHAINE SURVIVOR - PROPOSITION CONCRETE DE LANCEMENT
 12 octobre 2026. Destination validee par l'utilisateur : nouvelle chaine dediee.
-Nom, personnage et premiere histoire ci-dessous : propositions de Codex, pas encore choix final de l'utilisateur.
+Le personnage Patch est valide par l'utilisateur. Le nom de chaine et la premiere histoire restent des propositions.
 Etat : concept, personnage prototype et essais visuels. Aucun script final, voix, montage ou publication de ce pilote n'est encore termine.
 
 POSITIONNEMENT
@@ -10,7 +10,7 @@ Chaque episode a une situation concrete, des choix avec consequences et une reso
 Premiere saison : refuges du quotidien pendant une epidemie de zombies. Les zombies et les evenements sont explicitement une fiction.
 Les faits pratiques sont verifies sur des sources officielles, introduits seulement lorsqu'ils expliquent une decision de l'histoire.
 
-PERSONNAGE PROPOSE : PATCH
+PERSONNAGE VALIDE : PATCH
 Nom de chaine de travail : Patch Survives. Aucun handle n'est declare disponible ou reserve.
 Tete parfaitement ronde blanche, petits yeux noirs, bouche courte. Corps en traits noirs tres fins.
 Pas de cheveux, bonnet, casquette, nez, oreilles, barbe ou peau coloree.

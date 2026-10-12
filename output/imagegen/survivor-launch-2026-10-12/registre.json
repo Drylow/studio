@@ -24,7 +24,8 @@
       ],
       "actual_full_image_viewed": true,
       "review_notes": "Original mascot concept. Same white round head, orange forehead bandage, thin black limbs, white hands/shoes, simple orange flap bag. Actual master has an orange handle rather than the initially requested black crossbody strap. Proposed identity, not approved branding.",
-      "proposal_not_user_approved": true
+      "mascot_user_approved": true,
+      "scene_prototype_only": false
     },
     {
       "image": "02-supermarket-shutter.png",
@@ -51,7 +52,8 @@
       ],
       "actual_full_image_viewed": true,
       "review_notes": "Actual full file viewed. One Patch retains original round white head, bandage side, black thin body and white hands/shoes; both hands grip the shutter handle. Orange single-flap bag placed on floor. Two distinct secondary sage-headed infected outside glass, no duplicate Patch. Frontal shop bay, simple counter, no deep aisles. Floor tiles have mild perspective, and bandage angle varies slightly.",
-      "proposal_not_user_approved": true
+      "mascot_user_approved": true,
+      "scene_prototype_only": true
     },
     {
       "image": "03-supermarket-power-out.png",
@@ -78,7 +80,10 @@
       ],
       "actual_full_image_viewed": true,
       "review_notes": "Actual full file viewed. Same Patch identity and bandage side, white mittens/shoes, thin black body. One hand holds fridge door, other holds a closed unlabelled carton; no tasting or safety claim illustrated. Same orange flap bag on floor with a longer handle loop. Sparse break-room, one fridge/door/bulb, shallow setting. Face remains white, no added hat, shirt or second Patch.",
-      "proposal_not_user_approved": true
+      "mascot_user_approved": true,
+      "scene_prototype_only": true
     }
-  ]
+  ],
+  "mascot_user_approved": true,
+  "mascot_approval_source": "Explicit user message: the character is good; proceed to ideation."
 }
