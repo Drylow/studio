@@ -1,86 +1,1029 @@
 {
-  "style_id": "fictional-pokemon",
-  "main_character": "Nico",
-  "prompt_file": "chaines/oddly-fictional-lives/videos/02-your-life-as-a-pokemon-trainer/visual-direction.txt",
-  "provider": "google_flow",
-  "model_source": "private_runtime_configuration",
-  "human_anatomy": "compact adults, perfect white circular heads, dot eyes, tiny line mouth, no eyebrows or skin shading",
-  "pokemon_anatomy": "recognizable creature species and colours",
-  "characters": [
-    {
-      "name": "Nico",
-      "variant": "default",
-      "main": true,
-      "file": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
-      "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
-      "review_state": "verified",
-      "reviewer": "Codex"
+  "direction": "Clean flat 2D comic illustration. Every HUMAN is an adult with compact comic proportions, approximately 3.2 head diameters in total height. Perfectly round oversized head, completely flat pure white #FFFFFF from edge to edge, small black dot eyes and one tiny line mouth. No eyebrows, hair, nose or ears. White mitten hands and white neck; all exposed HUMAN skin is the same pure white, never grey, beige or flesh-coloured, never shaded. Long sleeves and long trousers. Clothing and props may have restrained simple shadows; human heads and hands may not. Readable anime-inspired comic backgrounds, crisp black outlines, matte colours and restrained textures. Preserve the assigned references, covered outfit, colours, silhouette and equipment of each named human. No realistic anatomy or elongated bodies. Pokemon are nonhuman creatures and keep their recognizable species anatomy and colours; do not turn them into white humanoids. One instance of every listed named character per image, no duplicated protagonist, ghost, inset or reference-sheet collage. Compose concrete narrated action with the appropriate reviewed location master, not a generic repeated tableau. Mix establishing shots, medium interactions and close details; avoid leaving the characters tiny in excessive empty scenery. Full-bleed landscape 16:9, no blurred sidebars, text, lettering or watermark.",
+  "cast": {
+    "Milo": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult friendly rival. Green long-sleeve zip jacket, brown long trousers, dark brown boots, no hat, white round bald head. One red-white Poke Ball clipped at right hip. No backpack.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e1afc2dde16c0fa8-milo.jpg",
+              "role": "identity",
+              "sha256": "e1afc2dde16c0fa8b12470d6facb1059cebd8d2fc41f6fe7e902f5d93d430005",
+              "review_state": "verified",
+              "character": "Milo",
+              "variant": "default"
+            }
+          ]
+        }
+      }
     },
-    {
-      "name": "Charmander",
-      "variant": "default",
-      "main": false,
-      "file": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
-      "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
-      "review_state": "verified",
-      "reviewer": "Codex"
+    "Professor Oak": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact older adult scientist. White open lab coat over a lavender long-sleeve shirt, tan long trousers, brown shoes. White round bald head, dot eyes, tiny mouth, no hair or wrinkles. Holds a small closed red Pokedex in white mitten hand.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/9d3717f8952fd495-oak.jpg",
+              "role": "identity",
+              "sha256": "9d3717f8952fd495234d6b0a25fdc9087f35aa78369c0094a3c39120633c3fae",
+              "review_state": "verified",
+              "character": "Professor Oak",
+              "variant": "default"
+            }
+          ]
+        }
+      }
     },
-    {
-      "name": "Center nurse",
-      "variant": "default",
-      "main": false,
-      "file": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v3.jpg",
-      "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
-      "review_state": "verified",
-      "reviewer": "Codex"
+    "Brock": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Rock Gym Leader, orange vest over dark green LONG-SLEEVE shirt, khaki long trousers, brown boots. White circular bald head, two black DOT eyes, no hair, no eyebrows. No bare chest or short sleeves.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/19f2e3f6784e37ca-brock.jpg",
+              "role": "identity",
+              "sha256": "19f2e3f6784e37cab2415997b2da3835a9ef56bbe466b134622fd0d8cfdd97c8",
+              "review_state": "verified",
+              "character": "Brock",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Misty": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Water Gym Leader. Orange LONG-SLEEVE zip sports jacket, blue long trousers, dark aqua shoes. White round bald head, dot eyes. No hair, exposed waist or swimsuit. Outfit identifies the character while anatomy follows our style.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/34a2cde950af18d4-misty.jpg",
+              "role": "identity",
+              "sha256": "34a2cde950af18d46619121145c9434b4140701bc9753bfcd1548f6738785beb",
+              "review_state": "verified",
+              "character": "Misty",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Sabrina": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Psychic Gym Leader, deep red long-sleeve tunic/coat, dark long trousers, red boots, small turquoise wrist bands. Perfect round white bald head, black dot eyes and tiny line mouth, no supernatural human face, no hair.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e750dd1bf9350363-sabrina.jpg",
+              "role": "identity",
+              "sha256": "e750dd1bf9350363d788d2177801510727f7468340004e8286450410099590af",
+              "review_state": "verified",
+              "character": "Sabrina",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Giovanni": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Viridian Gym Leader, charcoal two-piece suit over a muted red long-sleeve shirt, polished black shoes. White circular bald head, dot eyes, tiny line mouth, no hair, eyebrows or realistic facial features.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/36800ccc336962cb-giovanni.jpg",
+              "role": "identity",
+              "sha256": "36800ccc336962cb8301faf80ac397443f5d1fada61607d27485884bffb60219",
+              "review_state": "verified",
+              "character": "Giovanni",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Lorelei": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Ice specialist. Royal blue long-sleeve high-neck top, black long trousers and shoes, red narrow scarf, simple BLACK rectangular glasses around SMALL BLACK DOT EYES. No hair. Perfect round white head remains flat white inside glasses.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/14b85b7e0721ccf6-lorelei.jpg",
+              "role": "identity",
+              "sha256": "14b85b7e0721ccf66fc0cd6e0a7d75c32e0b813df49592a519fd56666f2d4390",
+              "review_state": "verified",
+              "character": "Lorelei",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Bruno": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Fighting specialist, brown long-sleeve martial arts jacket and trousers, blue cloth belt, brown shoes. Compact adult proportions rather than realistic muscular body. White circular bald head, dot eyes. Fully covered torso, no skin-tone shading.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/40e5d44e8e3ab8e1-bruno.jpg",
+              "role": "identity",
+              "sha256": "40e5d44e8e3ab8e126289a10eeedd1aa4224e6cc01a38b48c79f180f4e4e8537",
+              "review_state": "verified",
+              "character": "Bruno",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Agatha": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Older adult Ghost specialist. Burgundy long-sleeve coat, lavender long trousers, brown shoes, one plain wooden walking cane in right white mitten hand. White circular bald head, dot eyes and line mouth, no hair, no wrinkles or face shading.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/ffae098cbb77ffc6-agatha.jpg",
+              "role": "identity",
+              "sha256": "ffae098cbb77ffc665e641200c447c40ba7282437380f6b1e329c36421f852f2",
+              "review_state": "verified",
+              "character": "Agatha",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Lance": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Dragon trainer. Dark navy long-sleeve suit and long trousers, dark boots, distinctive long RED cape fastened at collar. White circular bald head, black dot eyes, no hair or eyebrows. Exactly one cape, no dragon silhouette or creature drawn here.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7b5c170980eb1a66-lance.jpg",
+              "role": "identity",
+              "sha256": "7b5c170980eb1a66fa6e1f49681e37d48738b074f940727100833b782f2aa3bc",
+              "review_state": "verified",
+              "character": "Lance",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Rocket grunt": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult villain in black long-sleeve uniform, black long trousers, black peaked cap, grey belt and shoes, a red circular patch on chest. No text or letter R. White round face and white mitten hands. No realistic face, no weapon or captured Pokemon.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/fba6b28aa8e320e1-rocket-grunt.jpg",
+              "role": "identity",
+              "sha256": "fba6b28aa8e320e13c4f564e2d830a0f2c27668088c8fea3c06aa025e202d921",
+              "review_state": "verified",
+              "character": "Rocket grunt",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Jonah": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Young ADULT trainer, yellow long-sleeve jacket, navy long trousers, grey trainers, plain charcoal cap backward. Round white head and white mitten hands, no hair. No Pokemon or bag in this identity image.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/c47e8be750f425a6-jonah.jpg",
+              "role": "identity",
+              "sha256": "c47e8be750f425a6ef85a75a5f5c448565d77961bf2c894bba6619a975ace889",
+              "review_state": "verified",
+              "character": "Jonah",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Beginner": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Different young ADULT beginner, maroon long-sleeve hoodie, light grey long trousers, dark blue shoes, no hat. White round bald head, dot eyes and tiny mouth. No Pokemon, no map or backpack here.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/8171f47d72f3a02c-beginner.jpg",
+              "role": "identity",
+              "sha256": "8171f47d72f3a02cce40b7f3fb2bde282ea4d21b8c2831f2484553b217287342",
+              "review_state": "verified",
+              "character": "Beginner",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Trader": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult trader, coral long-sleeve jacket, slate long trousers and tan shoes, small plain navy cap. White round head and mitten hands. No Pokemon or bag.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0d4870d18715c211-trader.jpg",
+              "role": "identity",
+              "sha256": "0d4870d18715c2115fc0464b069aca55e82b85fece7cdd30356cebceeb7008e2",
+              "review_state": "verified",
+              "character": "Trader",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Squirtle": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small light blue bipedal turtle, round brown shell with cream trim, cream belly, single curled blue tail, expressive dark eyes. Recognizable Squirtle, no clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/805942489cfdbcba-squirtle.jpg",
+              "role": "identity",
+              "sha256": "805942489cfdbcba651bb6442d176cbed36f647e4c3c5d74b1568593a8abf00f",
+              "review_state": "verified",
+              "character": "Squirtle",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Wartortle": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Medium blue bipedal turtle, brown shell with cream trim, blue wing-shaped ears, single fluffy pale-blue curled tail, dark eyes. Recognizable Wartortle, no clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/d9a6b77676336f25-wartortle.jpg",
+              "role": "identity",
+              "sha256": "d9a6b77676336f25ddcddadd5ee376a1403587d2c084deea9e7fd2cb3a7a697d",
+              "review_state": "verified",
+              "character": "Wartortle",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Blastoise": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large sturdy blue bipedal turtle, brown shell, cream belly and two grey water cannons projecting from shoulders, short sturdy legs and arms, one small tail. Recognizable Blastoise, both cannon barrels correctly attached to shell. No clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/4ac027d033f04653-blastoise.jpg",
+              "role": "identity",
+              "sha256": "4ac027d033f0465333e17106a227fd3fc9b17fa1c8592e702992b94b8fc55fd1",
+              "review_state": "verified",
+              "character": "Blastoise",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charmeleon": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Red-orange bipedal lizard with cream belly, single short head horn, longer limbs than Charmander, one curved tail with one flame, dark turquoise eyes. Recognizable Charmeleon, no wing or clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7835d9e9c8383713-charmeleon.jpg",
+              "role": "identity",
+              "sha256": "7835d9e9c83837138b5f31b4136468d1c66cf907b6f385a89e0992d0649f85e7",
+              "review_state": "verified",
+              "character": "Charmeleon",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charizard": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large orange bipedal dragon-like Pokemon with cream belly, TWO orange wings with teal-blue inner membranes, two small swept head horns, short forearms and sturdy legs, one continuous tail ending in one flame. Recognizable normal Charizard, no mega evolution. No clothing or saddle.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/82c912b685322029-charizard-v2.jpg",
+              "role": "identity",
+              "sha256": "82c912b685322029e6a1cb17e229dade5775955e6d46f3455a9c553fc4b42ecd",
+              "review_state": "verified",
+              "character": "Charizard",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgey": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small brown-and-cream plump bird with short crest, compact feathered wings, pink feet and tiny beak, short brown tail. Recognizable Pidgey, not a human with bird head.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/76c254ec0d369d3e-pidgey.jpg",
+              "role": "identity",
+              "sha256": "76c254ec0d369d3e9a7ff25088bc1f61aa1f18ac9751707c6c73737192331a0f",
+              "review_state": "verified",
+              "character": "Pidgey",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgeotto": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Medium brown-and-cream bird, red swept-back head crest, red/yellow tail feathers, pink feet and tiny beak. Recognizable Pidgeotto, one head, two wings, no costume.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/441dfc3b6f275068-pidgeotto.jpg",
+              "role": "identity",
+              "sha256": "441dfc3b6f275068b2090074dfa6a93a4563f292fa27823363cd0a4b46912e74",
+              "review_state": "verified",
+              "character": "Pidgeotto",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgeot": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large tan-and-cream bird, long red and yellow flowing head crest, broad brown wings, red/brown tail feathers, pink feet. Recognizable Pidgeot, compact readable creature proportions.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/55b39f34739a6b5d-pidgeot.jpg",
+              "role": "identity",
+              "sha256": "55b39f34739a6b5dc5ea4421d12e7e37cdc33694b87d496a875675e864956b15",
+              "review_state": "verified",
+              "character": "Pidgeot",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Poliwag": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small rounded blue tadpole Pokemon, white belly disk with one continuous black spiral, pink lips, tiny white feet, one long flat translucent pale blue tail, NO arms. Recognizable Poliwag, not Poliwhirl.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/dc6677c0d7e4f81c-poliwag.jpg",
+              "role": "identity",
+              "sha256": "dc6677c0d7e4f81c54d1e1a4b44b30eed82deef35c3e425babab2f3aad350d08",
+              "review_state": "verified",
+              "character": "Poliwag",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Poliwhirl": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Round blue frog Pokemon, white belly disk with black spiral, TWO white glove-like fists attached to blue arms, blue feet, no tail. Recognizable Poliwhirl, not Poliwrath. Its naturally white fists are a species feature.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/550c30d9b5492bf2-poliwhirl.jpg",
+              "role": "identity",
+              "sha256": "550c30d9b5492bf274a7c458e71ef0a22178a7093ddba111f659cb53e99d64fd",
+              "review_state": "verified",
+              "character": "Poliwhirl",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Onix": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Long segmented grey rock snake, connected boulder segments tapering into tail, large angular rock head with one blunt horn and small black eyes. One continuous creature resting in a loose S curve, not three detached snakes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/28c4d9ff0d9f3276-onix.jpg",
+              "role": "identity",
+              "sha256": "28c4d9ff0d9f3276da69d4507d3a4e8d78166459144b0f3ad3e25df07a3812a1",
+              "review_state": "verified",
+              "character": "Onix",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Psyduck": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small yellow bipedal duck Pokemon, cream wide bill, three tiny black crown feathers, little webbed feet, short wings and one small tail. Recognizable Psyduck, no clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/be777cd1fd800c43-psyduck.jpg",
+              "role": "identity",
+              "sha256": "be777cd1fd800c432dd1082b03eef7e338f3817065499a6360e78cbd56404461",
+              "review_state": "verified",
+              "character": "Psyduck",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Raichu": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Orange-brown mouse Pokemon with cream belly, brown feet, curved brown/yellow ears, yellow round cheek patches and one long thin black tail ending in one yellow lightning-bolt shape. Recognizable Raichu, not Pikachu.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e9da06ffe02aeae8-raichu.jpg",
+              "role": "identity",
+              "sha256": "e9da06ffe02aeae86c859d1a59d8bb66a8fd1ef052793163d473ac9bebfd0e55",
+              "review_state": "verified",
+              "character": "Raichu",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Alakazam": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Yellow-brown bipedal Psychic Pokemon, angular fox-like head, long pale moustache, brown chest/shoulders, two spoons one in each hand. Recognizable Alakazam, no third spoon, no human clothes. Human no-hair/no-moustache rules do not apply to creature anatomy.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/c215ef9f6d057db7-alakazam.jpg",
+              "role": "identity",
+              "sha256": "c215ef9f6d057db7dfca6b4bb77b36439944ed1c193dac4b45b46377661917d9",
+              "review_state": "verified",
+              "character": "Alakazam",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Lapras": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large gentle blue aquatic Pokemon with pale cream belly, long curved neck, broad flippers, curled ear-like fins and a grey knobbed shell. Recognizable Lapras on neutral shallow water patch, not a humanoid.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/3ecedc3ae811748e-lapras.jpg",
+              "role": "identity",
+              "sha256": "3ecedc3ae811748e9dc870ed0ca05ada4aaf9b17989633a8bd620a647839ba5d",
+              "review_state": "verified",
+              "character": "Lapras",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Machamp": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Sturdy grey-blue Fighting Pokemon with FOUR arms, each ending in a hand; muscular creature anatomy with head ridges and small dark eyes, dark briefs and yellow belt. Recognizable Machamp. Four arms are its real species anatomy, not a human extra-limb error.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/186978c09c3b3426-machamp.jpg",
+              "role": "identity",
+              "sha256": "186978c09c3b3426addd32a75b2034e5bdc72aba1a091a851092208bd5997bad",
+              "review_state": "verified",
+              "character": "Machamp",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Gengar": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Short round purple Ghost Pokemon, two pointed ears, small red eyes, broad toothy grin, stubby arms and legs and short tail. Recognizable Gengar. These species face features are allowed on creatures, never copied onto humans.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/fa3c269ebd040894-gengar.jpg",
+              "role": "identity",
+              "sha256": "fa3c269ebd0408948f0c9b6d329e1d3a2c7a3b00d19bf6733b8d20f51f678d66",
+              "review_state": "verified",
+              "character": "Gengar",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Dragonite": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large friendly orange bipedal Dragon Pokemon with cream belly, two narrow antennae, small teal wings on its back, rounded muzzle, short arms and sturdy feet, thick single tapering tail. Recognizable Dragonite, not Charizard and NO tail flame.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/32d7af52578cc2b8-dragonite.jpg",
+              "role": "identity",
+              "sha256": "32d7af52578cc2b85a74824e274e009575f79051040e1d9e65e9fc78a8b88fd9",
+              "review_state": "verified",
+              "character": "Dragonite",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Koffing": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Single round purple floating Poison Pokemon, lumpy body with small crater-like vents and a cream skull-and-crossbones mark on belly, dark eyes and small mouth. A little purple gas beside vents, no humans or text.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0b0ebced7328745c-koffing.jpg",
+              "role": "identity",
+              "sha256": "0b0ebced7328745cea3a24b133c83756cf587040d247b1a0de890008398fc3c8",
+              "review_state": "verified",
+              "character": "Koffing",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Eevee": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small brown fox-like quadruped with cream fluffy neck ruff, large pointed ears, dark eyes, bushy brown tail with cream tip. Recognizable Eevee, no clothing, no extra tails or paws.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7f6bf1f1db7c36f1-eevee.jpg",
+              "role": "identity",
+              "sha256": "7f6bf1f1db7c36f1805bd38375bd68f8f9b7280e606dab8318a8ee58f7e35c0d",
+              "review_state": "verified",
+              "character": "Eevee",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Bulbasaur": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small blue-green quadruped with darker green body patches, broad head, two pointed ear-like corners, red eyes, short legs and one large GREEN plant bulb on its back. Recognizable Bulbasaur, no human clothes, no flowers on bulb yet.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/79ccd8ffdb449ea3-bulbasaur.jpg",
+              "role": "identity",
+              "sha256": "79ccd8ffdb449ea3288b016ea6e85d7bd94d28fa68c611b61233eceaa1947ade",
+              "review_state": "verified",
+              "character": "Bulbasaur",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Rhyhorn": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Single sturdy quadruped grey stone-armoured rhinoceros Pokemon with short legs, jagged rock plates and one short pointed nose horn, dark eyes. Recognizable Rhyhorn, not bipedal Rhydon, not Onix or an ordinary realistic rhino.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/d285f60590ae31ea-rhyhorn.jpg",
+              "role": "identity",
+              "sha256": "d285f60590ae31ea3a66f5573c776b156280a2db1aae5935d27fa33a8ea67784",
+              "review_state": "verified",
+              "character": "Rhyhorn",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Nico": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact young ADULT trainer, 3.2 heads tall including red cap. Blue long-sleeve zip jacket, charcoal long trousers, brown boots, plain red cap. Perfectly circular uniformly WHITE head, black dot eyes, tiny line mouth, white mitten hands. No eyebrows, hair, grey face rim or backpack. One closed ball at LEFT hip, move this ball to hand when action requires.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/ffa08e0488b4021a-nico-identity-v2.jpg",
+              "role": "identity",
+              "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+              "review_state": "verified",
+              "character": "Nico",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charmander": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small orange bipedal fire lizard with cream belly, dark eyes, short limbs, ONE continuous tail ending in ONE small flame; roughly one-third Nico height. No wings or clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/bc04359177f43ccf-charmander-identity.jpg",
+              "role": "identity",
+              "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+              "review_state": "verified",
+              "character": "Charmander",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Center nurse": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact adult nurse, flat circular pure-white head and white mittens, dot eyes, tiny line mouth. Mint long-sleeve coat, white long trousers, mint shoes, small white cap with simple red stripe, no hair or eyebrows.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0ed29b064c4fd81d-nurse-identity-v3.jpg",
+              "role": "identity",
+              "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
+              "review_state": "verified",
+              "character": "Center nurse",
+              "variant": "default"
+            }
+          ]
+        }
+      }
     }
-  ],
-  "location_masters": [
-    {
-      "label": "Viridian Center exterior",
-      "image": "output/imagegen/oddly-fictional-pokemon-02/center-exterior.jpg",
-      "sha256": "d389438a8125b138856b61e7d72294609d448ce9d1e07cf050951a785e27a1ea",
-      "visual_review": "Verified layout: red roof, central awning/door, flanking windows, steps, left hedge and right lamp. No people or distant fantasy towers."
+  },
+  "locations": {
+    "oak-lab": {
+      "description": "A compact friendly research room in Pallet Town. Cream walls, broad blue window LEFT, a wooden desk on RIGHT with three CLOSED red-white Poke Balls arranged left-to-right, a simple red book-shaped Pokedex, one wooden chair beside desk. Bookshelf on rear wall, ordinary door at back left. Pale wooden floor. No screens with writing, no capsules, fantasy towers or people.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/b274b97023f79f93-oak-lab.jpg",
+        "role": "location",
+        "sha256": "b274b97023f79f93574e04d6419d3507ab67df99de468fdf35441d2d48547984",
+        "review_state": "verified"
+      }
     },
-    {
-      "label": "Viridian Center treatment foyer",
-      "image": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
-      "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
-      "visual_review": "Verified layout: window/blue bench left, central doorway, mint counter/mat and healing unit right, red trim and tiled floor."
+    "pallet-court": {
+      "description": "A small outdoor packed-earth training court beside low cream houses with red roofs. Broad grassy strip and wood fence at back, path exits left, two modest shrubs at right. Thin white boundary marks on ground, no inscriptions. Afternoon warm daylight. Human-height three-quarter view. No people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/fc45bd454a0bbe64-pallet-court.jpg",
+        "role": "location",
+        "sha256": "fc45bd454a0bbe645a678cfad1ed20a5e229fafd456a2e157d4e8bb84a00c62e",
+        "review_state": "verified"
+      }
+    },
+    "route-fork": {
+      "description": "A clean woodland path forks in two at center background, low shrubs and modest trees frame both sides. Small simple wooden direction post at the fork, no letters. A fallen log on left foreground, low flat rock right. Moderate daylight, readable forest depth with restrained background detail. No people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/ba8bf3e8de14f635-route-fork.jpg",
+        "role": "location",
+        "sha256": "ba8bf3e8de14f63516d7baf7a9851e4bf95ab5199a66b61f5e9586e31dc0c67e",
+        "review_state": "verified"
+      }
+    },
+    "campsite-day": {
+      "description": "A woodland clearing off the northbound route. Low green triangular canvas tent on LEFT, two simple bowls (blue and orange) beside the entrance, a rolled tan sleeping mat partly visible inside. One sturdy fallen log on RIGHT and one low safe circular stone firepit at center foreground, unlit. Low shrubs and ordinary tree trunks behind, no deep fantasy landscape. Morning daylight, human-height wide view. No people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/36895ab370f5d504-campsite-day.jpg",
+        "role": "location",
+        "sha256": "36895ab370f5d504c462d83f022119e813613bb40a7912fe8bc93f1922c48751",
+        "review_state": "verified"
+      }
+    },
+    "pond": {
+      "description": "A quiet shallow pond behind Pewter City. Water takes RIGHT half of frame, flat stony grass bank LEFT, a small patch of reeds at far right, one low tree behind bank, ordinary grey rocks across rear bank. Clear late-morning daylight, no huge mountains, fountains or bridges. Human-height wide side view; no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/b810dbea4f1d49a9-pond.jpg",
+        "role": "location",
+        "sha256": "b810dbea4f1d49a97da43643d44a30347d947f019c82408520890deddfd93043",
+        "review_state": "verified"
+      }
+    },
+    "pewter-gym": {
+      "description": "Simple indoor Rock-type Gym with stone-grey walls, high rectangular windows on the LEFT, wide tan packed-earth battlefield across center, a few knee-high grey rocks on its edges. Modest elevated trainer platform on the FAR RIGHT, entry doorway on rear LEFT. Crisp white boundary marks without text. Warm even light, no pillars or throne. Empty, no Pokemon or people.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/87b342638b57048b-pewter-gym.jpg",
+        "role": "location",
+        "sha256": "87b342638b57048b22b1a294e1cb7bd37aedcee8fda77a9c4295b91c05059fad",
+        "review_state": "verified"
+      }
+    },
+    "cerulean-gym": {
+      "description": "Small indoor Water-type Gym. One rectangular blue pool CENTER and RIGHT, broad tan safe walkway along LEFT, narrow rectangular battle platform on right above water, tiled pale blue back wall with two high windows, entry rear left. Clean broad surfaces, no letters, dark tunnels or stadium crowd. Bright daylight. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/a608f8e71feefa6f-cerulean-gym.jpg",
+        "role": "location",
+        "sha256": "a608f8e71feefa6f979ca83f7d0849e233eaf61427037a6ddec1f625ea3fd4f6",
+        "review_state": "verified"
+      }
+    },
+    "electric-court": {
+      "description": "A modest industrial Gym training hall, grey-blue tiled floor with a yellow boundary rectangle, simple grey walls, one closed square double door behind, modest unmarked electrical cabinet FAR RIGHT, high window FAR LEFT. Even warm overhead lighting, ordinary architecture, no machinery maze or science-fiction starship. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/1394379d22c6d2a3-electric-court.jpg",
+        "role": "location",
+        "sha256": "1394379d22c6d2a39e9d0d5eb78cc7c1e3d6c5fcc68bedb7c034c1eb67c71d4a",
+        "review_state": "verified"
+      }
+    },
+    "celadon-street": {
+      "description": "A quiet side street in Celadon. Three modest pastel storefronts on rear wall, closed blank shutters with no writing. Broad tan pavement foreground, recessed alley opening CENTER LEFT, simple low planter RIGHT, one small closed wooden crate beside it. Soft afternoon light, no giant city skyline. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/90ddab752aac6234-celadon-street.jpg",
+        "role": "location",
+        "sha256": "90ddab752aac62346d5213660f6f883df5523eab6d4675c84b01f8763ea519d2",
+        "review_state": "verified"
+      }
+    },
+    "celadon-center": {
+      "description": "A DIFFERENT Pokemon Center from Viridian. Cream walls and mint furniture, healing counter on LEFT, blue waiting bench along RIGHT wall under one large window, closed treatment door on rear RIGHT, small unmarked mint healing machine on back-left counter. Pale blue tile floor with red trim. Bright afternoon light. Keep standardized palette but distinct furniture geography. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/ddd676904565e67c-celadon-center.jpg",
+        "role": "location",
+        "sha256": "ddd676904565e67c34dbdfaf92c56c51a896b52a6359ae8116ab93677de34fc8",
+        "review_state": "verified"
+      }
+    },
+    "saffron-gym": {
+      "description": "A small modern Psychic-type Gym, plain pale lavender walls, purple square battlefield on grey floor, two low square corner markers, tall rectangular window at back LEFT and a single plain doorway back RIGHT. Clean dark-purple trim. A modest trainer platform at far back. Soft even light, no neon symbols, galaxies, giant towers, magic text or floating architecture. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/04ff3141776990de-saffron-gym.jpg",
+        "role": "location",
+        "sha256": "04ff3141776990de677d2196c4271ef73880d62a8655f88b0b21a26ca0d9c8f5",
+        "review_state": "verified"
+      }
+    },
+    "viridian-gym": {
+      "description": "A modest Ground-type Gym, sand-coloured rectangular battlefield centered, olive-grey walls, high windows on RIGHT, dark wood trainer platform on back LEFT, plain entry door rear center. A few ordinary knee-high rocks at corners, no forest indoors, pillars or throne. Warm level lighting. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/e1bacad609910af2-viridian-gym.jpg",
+        "role": "location",
+        "sha256": "e1bacad609910af273e58200c913463ba989618363857119a56cf81118401023",
+        "review_state": "verified"
+      }
+    },
+    "victory-road": {
+      "description": "A credible rocky cave passage leading upward, rough grey stone floor, a few shallow boulders along LEFT, a gentle curving path to bright exit at upper RIGHT. Natural warm light at exit and cool ambient cave light. Readable stone geometry, no lava, giant fantasy arches, crystals or traps. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/9277a2e789274fd9-victory-road.jpg",
+        "role": "location",
+        "sha256": "9277a2e789274fd98f16f974fd75a7505c1e2c4253a58c6dbf2173a4f1c90ec0",
+        "review_state": "verified"
+      }
+    },
+    "league-foyer": {
+      "description": "Indigo Plateau League entrance hall. Clean cream stone walls, broad blue-grey floor, wide steps to one simple large double door CENTER rear, blue resting bench LEFT, plain recovery station/stand RIGHT. Low red banners without text or logos. Bright indirect daylight. Modest ceremonial scale, no throne, giant crowd or fantasy citadel. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/5ed37b1217cf5287-league-foyer.jpg",
+        "role": "location",
+        "sha256": "5ed37b1217cf528728f648dc9c89d4b98a087c156d6fcc812aa4a89f094dfc32",
+        "review_state": "verified"
+      }
+    },
+    "league-arena": {
+      "description": "A modest indoor championship battle court. Broad tan battlefield with clean white boundary lines, blue-grey walls, raised red trainer stand at FAR RIGHT and blue stand at FAR LEFT, simple doorway centered on rear wall. High windows bring even daylight. Small empty spectator rail at back, not a vast stadium. No letters, displays, trophy, giant crowd or additional arenas. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/a6c6accc5dbaa56e-league-arena.jpg",
+        "role": "location",
+        "sha256": "a6c6accc5dbaa56e126a3be547b8a2c4a70b3ce4b50e0779655484171356bcd4",
+        "review_state": "verified"
+      }
+    },
+    "hall-of-fame": {
+      "description": "A compact bright white-and-pale-blue recording room, simple low podium center, wooden desk LEFT with one plain closed laptop and red Pokedex, broad blue window RIGHT, unmarked wall display behind podium. Warm light, ordinary room scale, no trophies or dozens of Pokemon silhouettes. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/14f8ed16bf56824e-hall-of-fame.jpg",
+        "role": "location",
+        "sha256": "14f8ed16bf56824ee1c9115b10163badc3ccc9f27b42be0e0bb092dcfd456254",
+        "review_state": "verified"
+      }
+    },
+    "saffron-exterior": {
+      "description": "A modest grey building with muted lavender doorway and low purple border, normal-height centered entry door, one low cream stone wall extending at RIGHT where two people can sit, plain tan paving foreground, one low shrub LEFT. No lettering, fantasy towers, huge archways, real-world flags or crowd. Bright even daylight. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/ff336dd738e609b2-saffron-exterior.jpg",
+        "role": "location",
+        "sha256": "ff336dd738e609b2c1735ac67f26db207161b8019c19783eb229195edde9558a",
+        "review_state": "verified"
+      }
+    },
+    "viridian-exterior": {
+      "description": "A modest olive-grey Ground Gym facade, centered ordinary wood double door under low flat red-brown roof, pale sand-coloured paved approach, two knee-high grey rocks by LEFT edge, low green hedge RIGHT, no Pokemon Center sphere emblem. Bright even daylight. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/cd7e6f383f943dfe-viridian-exterior.jpg",
+        "role": "location",
+        "sha256": "cd7e6f383f943dfe24f38b98cdcc463264adf58a5ff75c3048935f969974319c",
+        "review_state": "verified"
+      }
+    },
+    "lorelei-arena": {
+      "description": "Compact Ice specialist League battle room: pale blue walls, one high window at rear LEFT, rectangular shallow blue pool on FAR RIGHT half and wide grey dry trainer platform LEFT, plain back-center door, simple icy-blue rail along rear wall. Room grounded, no glaciers or floating ice castles. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/9ffc3270d42ac441-lorelei-arena.jpg",
+        "role": "location",
+        "sha256": "9ffc3270d42ac4411cbe2123b3eab2c0b12b8772e930e1e4396efc5a62a0a253",
+        "review_state": "verified"
+      }
+    },
+    "bruno-arena": {
+      "description": "Compact Fighting specialist League battle room: warm tan stone floor, muted brown wall trim, square boundary white lines, low grey rock on RIGHT edge and small plain weight rack LEFT, centered ordinary door on back wall, two high windows at RIGHT. Modest room dimensions, no giant temple, gladiator statues or crowd. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/85a9147723410400-bruno-arena.jpg",
+        "role": "location",
+        "sha256": "85a9147723410400237be33a567764810c97286c3a47822680430c4fed2fc1b1",
+        "review_state": "verified"
+      }
+    },
+    "agatha-arena": {
+      "description": "Compact Ghost specialist League battle room: muted lavender tile floor with a plain rectangular battle boundary, deep grey-purple walls, one closed cream door rear LEFT, two simple warm wall lamps at rear RIGHT, low wooden trainer step across rear wall. Readable even ambient light, no coffins, ghosts, writing, spooky faces in walls or real graveyard. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/16c2595e26a6eb29-agatha-arena.jpg",
+        "role": "location",
+        "sha256": "16c2595e26a6eb299936a9573d84f5aedcbd2c58c9ad3b25b923f8ade6588133",
+        "review_state": "verified"
+      }
+    },
+    "lance-arena": {
+      "description": "Compact Dragon specialist League battle room: pale cream floor with a dark emerald boundary rectangle, plain cream walls with emerald trim, two high blue windows upper LEFT, one closed ordinary door back RIGHT, low red trainer step centered behind battle court. Bright even light, no giant dragon sculpture, fantasy towers, arena crowd or cosmic sky. Empty, no people or Pokemon.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/cc8d7aa9c4bebc8c-lance-arena.jpg",
+        "role": "location",
+        "sha256": "cc8d7aa9c4bebc8c9d76ce38b7e883eed9743533cfb537ba1e320e4ad5144636",
+        "review_state": "verified"
+      }
+    },
+    "center-exterior": {
+      "description": "ORIGINAL Viridian Center: low cream facade, red roof, central doorway and red awning, two windows, LEFT hedge, RIGHT lamp and three steps. Preserve this geometry.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/d389438a8125b138-center-exterior.jpg",
+        "role": "location",
+        "sha256": "d389438a8125b138856b61e7d72294609d448ce9d1e07cf050951a785e27a1ea",
+        "review_state": "verified"
+      }
+    },
+    "center-interior": {
+      "description": "ORIGINAL Viridian Center: LEFT window and blue bench, central rear treatment doorway, RIGHT mint counter with cream treatment mat and small healing unit. Preserve furniture geography.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/d81f69b9172eb559-center-interior.jpg",
+        "role": "location",
+        "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+        "review_state": "verified"
+      }
+    },
+    "campsite-night": {
+      "description": "A woodland clearing off the northbound route. Low green triangular canvas tent on LEFT, two simple bowls (blue and orange) beside the entrance, a rolled tan sleeping mat partly visible inside. One sturdy fallen log on RIGHT and one low safe circular stone firepit at center foreground, unlit. Low shrubs and ordinary tree trunks behind, no deep fantasy landscape. Morning daylight, human-height wide view. No people or Pokemon. Same geometry at night, firepit flame and subdued blue background. Human heads/hands remain flat PURE WHITE with no blue/orange skin lighting.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/7741d25cee4feb20-campsite-night.jpg",
+        "role": "location",
+        "sha256": "7741d25cee4feb20f192d6fd749d935edf33c49b616ce4d5a44129438902225c",
+        "review_state": "verified"
+      }
+    },
+    "route-practice-court": {
+      "description": "Distinct roadside dirt practice field: rear blue-grey fence, two low trees, path RIGHT, wooden bench LEFT. Not the earlier Pallet houses.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/f6fb347812645cd0-route-practice-court.jpg",
+        "role": "location",
+        "sha256": "f6fb347812645cd0a6b114471acc4171e31b26668b6e1fb1645b4c800ec86a56",
+        "review_state": "verified"
+      }
+    },
+    "pewter-center": {
+      "description": "Distinct Pewter Center: blue bench RIGHT, mint counter BACK CENTER, treatment door BACK LEFT, narrow LEFT window, grey tiles.",
+      "reference": {
+        "owner": "project",
+        "path": "production-v1/refs/9720b3d9fc54d263-pewter-center.jpg",
+        "role": "location",
+        "sha256": "9720b3d9fc54d263131bc01f4aff1385dc4c2dcfb5131b1f03c2de97d511b73e",
+        "review_state": "verified"
+      }
     }
+  },
+  "scene_count": 157,
+  "new_upscale": false,
+  "render_target": [
+    1920,
+    1080
   ],
-  "not_yet_generated": [
-    "Milo and Squirtle/Wartortle/Blastoise variants",
-    "Oak",
-    "Brock",
-    "Misty",
-    "Sabrina",
-    "Giovanni",
-    "Lorelei",
-    "Bruno",
-    "Agatha",
-    "Lance",
-    "Charmeleon",
-    "Charizard",
-    "Pidgey/Pidgeotto/Pidgeot",
-    "Poliwag/Poliwhirl",
-    "Rocket grunts and the trainers they threaten",
-    "other battle Pokemon and future locations"
+  "generation_native_dimensions": [
+    1376,
+    768
   ],
-  "quality": {
-    "source_pixels": [
-      1376,
-      768
-    ],
-    "flow_upscale_pixels": [
-      2752,
-      1536
-    ],
-    "selected_frame_pixels": [
-      1920,
-      1080
-    ],
-    "mode": "native Flow 2K upscale plus explicit crop/downscale",
-    "remaining_images_quality_request": "Use native Flow 2K upscale and inspect the result; do not substitute a plain resized source and call it 2K."
-  }
+  "notes": "Native source images; final 1080p formatting is technical render resampling, not extra generative detail or Flow upscale. Three existing approved HD pilots are reused. Every selected recurrent identity has an explicit reviewed reference; individual scene inspection remains required."
 }

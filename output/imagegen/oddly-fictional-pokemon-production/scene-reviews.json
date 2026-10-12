@@ -1,0 +1,25 @@
+{
+  "reviewer": "Codex",
+  "source": "delegated_agent_visual_review",
+  "user_review": false,
+  "scenes": {
+    "2": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/002.jpg",
+      "sha256": "1c4e4441c85615fc80659a64619b72867e8551020ee7cb1d61033cefdd8aecff",
+      "notes": "Viewed full frames: 1 approved white-headed Nico carries one tired Charmander by original Center. Corrected 2 has compact round white-headed green-jacket Milo and one Squirtle, court geometry preserved; wide view intentionally establishes previous loss."
+    },
+    "3": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/003.jpg",
+      "sha256": "f709bceaa6366df3930e4dfb827b47a448d8b4305e4025b49b2fe36c37b8c652",
+      "notes": "Viewed corrected single wide frame: ONE tired shut-eyed Charmander across Nicos supporting WHITE hands and blue sleeves, one continuous tail/flame, proper Center awning. Human head deliberately offscreen in this detail; no skin-tone face, duplicate panel or ghost. Hands have small cartoon fold/finger lines, not photorealistic anatomy."
+    },
+    "1": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/001.png",
+      "sha256": "6ad0e9e76ac7ac759184fc0ee091f85b8d94035a94df6ac2c777b4ebbc0067d0",
+      "notes": "Viewed full frames: 1 approved white-headed Nico carries one tired Charmander by original Center. Corrected 2 has compact round white-headed green-jacket Milo and one Squirtle, court geometry preserved; wide view intentionally establishes previous loss."
+    }
+  }
+}
