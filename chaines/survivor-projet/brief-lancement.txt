@@ -1,13 +1,15 @@
 NOUVELLE CHAINE SURVIVOR - PROPOSITION CONCRETE DE LANCEMENT
 12 octobre 2026. Destination validee par l'utilisateur : nouvelle chaine dediee.
-Le personnage Patch est valide par l'utilisateur. Le nom de chaine et la premiere histoire restent des propositions.
-Etat : concept, personnage prototype et essais visuels. Aucun script final, voix, montage ou publication de ce pilote n'est encore termine.
+Le personnage Patch et le premier episode au supermarche sont valides par l'utilisateur. Le nom de chaine reste une proposition.
+Deux chaines demandees le 12 octobre : principale avec Patch et pilote zombie au supermarche ; seconde dediee aux aliens des le premier upload, confirmee dans la reponse utilisateur.
+Etat : script anglais V1 du pilote zombie ecrit, personnage approuve et essais visuels. Pas encore de voix, montage ou publication du pilote. Script V1 dans episode-01-supermarket/script-en.txt.
 
 POSITIONNEMENT
 Un lieu familier parait etre le refuge ideal. Au fil des jours, ses avantages produisent aussi ses contraintes.
 Le spectateur vit l'histoire a la deuxieme personne, au travers du meme personnage.
 Chaque episode a une situation concrete, des choix avec consequences et une resolution propre, tout en ouvrant la suite de la serie.
-Premiere saison : refuges du quotidien pendant une epidemie de zombies. Les zombies et les evenements sont explicitement une fiction.
+Premiers sujets de la principale : refuges du quotidien pendant une epidemie de zombies. Les zombies et les evenements sont explicitement une fiction. La marque principale reste compatible avec d'autres catastrophes ; ne pas figer un nom exclusivement zombie.
+La seconde chaine commence directement avec les aliens, avec sa propre identite et ses propres lieux. Son kit est dans ../alien-aftermath-projet/channel-kit.txt.
 Les faits pratiques sont verifies sur des sources officielles, introduits seulement lorsqu'ils expliquent une decision de l'histoire.
 
 PERSONNAGE VALIDE : PATCH
@@ -39,7 +41,7 @@ TRAJECTOIRE DE L'EPISODE
 4. Jours huit a quinze : un autre adulte arrive par la livraison. Le meme objet apporte de l'aide et une nouvelle obligation. Developper un choix de confiance avec une consequence verifiable dans le recit.
 5. Jours seize a vingt-quatre : le refuge devient moins viable. Eau, bruit, fatigue et acces sous pression se repondent ; pas d'objet providentiel sorti sans preparation.
 6. Jours vingt-cinq a trente : preparer la sortie par un acces deja etabli. Refermer les boucles de la premiere nuit. Une fin concrete, pas une radio surnaturelle ou trois coups recycles.
-Le detail des evenements reste a ecrire. Les jours sont le calendrier fictif du recit, pas des timestamps audio.
+Le script V1 developpe ces evenements et finit par un depart concret au jour trente. Les jours sont le calendrier fictif du recit, pas des timestamps audio.
 
 LIEUX A FIGER AVANT UNE PRODUCTION COMPLETE
 Le supermarche est un batiment fictif, avec exactement quatre acces : entree publique, livraison, sortie personnel, sortie de secours sur parking.
@@ -84,5 +86,5 @@ Faits utilisables, en gardant leur contexte : un frigo domestique ferme garde le
 Ces durees ne sont pas transposees automatiquement a des rayons frigorifiques ouverts ou a une chambre froide commerciale. Les faits sont a inserer au moment d'une decision, sans remplacer le recit par des recettes ou des dosages.
 
 PROCHAINE PRODUCTION CONCRETE
-Le pilote a ecrire est celui du supermarche. Etablir son plan et son inventaire fictifs, ecrire le script original, puis faire un court test de voix et trois plans avec Patch avant une generation longue.
+Le pilote selectionne est celui du supermarche. Le script V1 est ecrit. Figer le plan du lieu et les references manquantes, puis faire un court test de voix et trois plans avec Patch avant une generation longue.
 Ni les references des concurrents ni un nouveau couvre-chef ne suffisent a definir l'identite editoriale ; la difference vient du recit, de ses payoffs et de sa coherence.

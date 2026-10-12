@@ -1,5 +1,10 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+> **Reprise Survivor/TubeForge : [README_REPRISE.md](../README_REPRISE.md), 12 octobre 2026.**
+> Ce point de reprise concerne les deux nouvelles chaines et leurs outils locaux.
+> Les autres productions et leurs decisions restent conservees ci-dessous.
+> Ne pas relancer automatiquement leurs anciens jobs en reprenant ce chat.
+
 ## Reprise chess — long Hannibal contrôlé et livré
 
 **Hannibal : le test de 118 secondes est déclaré sans détection par l’utilisateur.**

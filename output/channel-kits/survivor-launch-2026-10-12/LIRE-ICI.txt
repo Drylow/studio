@@ -1,0 +1,23 @@
+DEUX KITS DE CHAINE - 12 OCTOBRE 2026
+
+01-Patch-Survives : personnage approuve au pansement orange ; premier sujet zombie au supermarche selectionne.
+02-Alien-Aftermath : seconde chaine aliens confirmee ; nom, station-service et personnage Reed proposes.
+
+Dans chaque dossier :
+- channel-kit.txt : nom, handle propose, alternatives et description en anglais a copier.
+- pfp.png : photo de profil native carree, 1254 x 1254 pixels, utilisable directement.
+- script-en.txt : narration uniquement, sans notes ni timestamps, V1 relue sur texte.
+- notes-production.txt : carte des lieux, personnages et continuites a respecter avant images.
+- pfp-prompt.txt / avatar-registre.json : prompt final et references reellement envoyees pour le logo.
+
+Le dossier Patch inclut les references de personnage approuvees. Le logo alien ne remplace pas une reference du protagoniste Reed : son corps entier et les decors maitres restent a produire et verifier.
+
+Handles proposes, pas reserves : la disponibilite finale se verifie dans le formulaire YouTube.
+Environ 2079 mots pour le pilote zombie et 2075 pour le pilote alien. Estimation autour de 12-14 minutes selon la voix ; aucun audio ni montage de ces pilotes n'est encore genere.
+Les photos de profil sont des propositions nouvelles depuis les references ; elles ont ete regardees par Codex, pas encore approuvees par l'utilisateur.
+Les scenarios sont des fictions originales. Le second sujet precis n'est pas encore choisi par l'utilisateur.
+Aucune chaine creee ou video publiee depuis ce pack.
+
+DIRECTION VISUELLE
+Decors simples a faible profondeur, references de personnages constantes, un maitre par lieu et variantes explicites. Aucun plan final declare coherent avant inspection de l'image reelle.
+Les prompts sont ecrits par Codex ; execution via le CLI Proxy configure, sans changement silencieux de fournisseur.

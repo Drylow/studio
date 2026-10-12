@@ -1,0 +1,8 @@
+Use case: logo-brand
+Asset type: simple square YouTube profile picture for an original alien survival fiction channel
+Input image: Image 1 is a STYLE reference only, for the clean black outline, simple flat cartoon rendering and empty background. Do not reproduce its bandage or human face identity.
+Primary request: ONE minimal alien head, no body, on a plain dark muted purple background. This is a channel icon representing the visitors, not an approved character reference for a video protagonist.
+Subject: A round smooth pale mint alien head with a crisp black outline, two simple large solid black almond-shaped eyes angled slightly upward at the outer corners, and one very small straight black line mouth. No nose, ears, hair, eyebrows, bandage, hat or antennae. Calm and mysterious rather than angry.
+Composition: Face perfectly centered, entire outline visible, head about 74 percent of square width, generous even margins for a circular crop. No neck or shoulders.
+Style: Flat simple 2D illustration, smooth thick black contours, matte solid colors, readable at 48 pixels. No face shading, gradients or realistic skin texture.
+Avoid: text, letters, watermarks, extra decorative rings, stars, planets, spacecraft, glow, 3D, background scenery, multiple faces, human bandage, a skull, realistic creature anatomy.

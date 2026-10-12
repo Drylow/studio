@@ -864,3 +864,21 @@ Reprise et reçu : `experiments/conversation-chess/SHORTS.md` et
 `experiments/conversation-chess/episodes/shorts-2026-10-11-portrait.qa.json`.
 Projets natifs éditables et anciennes versions conservés localement.
 Aucune publication ni nouvelle vérification YouTube effectuée.
+
+
+## 12 octobre 2026 — Dix replays d'échecs supplémentaires
+
+Le dossier demandé contient cinq fichiers restants (06 à 10). Dix nouvelles
+parties complètes sont ajoutées sous les numéros 11 à 20, dans le même style
+Remotion : échiquier vert, fond sombre, notation à droite. Chaque export dure
+180 s, 1280 × 720 / 30 fps, sans audio. Titres dans l'ordre mis à jour pour
+les quinze fichiers disponibles. Empreintes des cinq vidéos conservées
+identiques avant et après livraison ; aucune vidéo supprimée recréée.
+
+Parties simulées 51 à 60 : coups légaux, PGN complets, aucun doublon avec les
+anciens lots. Décodage intégral des dix films ; 1289 positions affichées
+contrôlées sur 47 planches et vingt captures à taille native. Livraison :
+`C:/Users/ytbyt/Documents/Codex/2026-10-04/j/outputs/chess-10-ancien-style/`.
+Projet local `work/chess-remotion` sous le dossier `j`, exports et contrôles
+dans `exports-2026-10-12`. PGN et reçus sauvegardés dans
+`experiments/board-replays/batches/2026-10-12/`. Aucune publication effectuée.
