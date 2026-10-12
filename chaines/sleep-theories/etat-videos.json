@@ -1,6 +1,14 @@
 {
   "updated_date": "2026-10-12",
   "timezone": "Europe/Paris",
+  "deep_void_latest_user_report": {
+    "date": "2026-10-12",
+    "status": "four_videos_scheduled",
+    "source": "User confirms scheduling all four Deep Void videos",
+    "scheduled_dates": null,
+    "studio_verified": false,
+    "note": "This latest report supersedes the old batch status; individual screenshot states below are historical. Leto II had previously appeared public."
+  },
   "scope": [
     "Deep Void Theories",
     "Quiet Paradox"

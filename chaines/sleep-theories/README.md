@@ -26,10 +26,10 @@ Ne pas modifier le frontend du studio pour produire les contenus.
 - **Severance** : prochaine vidéo, titre et durée proposés ci-dessous.
   Le lancement dans Ultravid n'a pas été confirmé.
 - **Rotation obligatoire : Silo → FROM → Severance → Silo → FROM → Severance**.
-- **Deep Void Theories** : l'utilisateur s'occupe de l'upload et de la programmation.
-  Leto II est visible comme publié ; Sith et Vador étaient en brouillon sur la dernière
-  capture ; Thinking Machines a été annoncé en cours d'upload. Les dates programmées
-  et l'achèvement des opérations ne sont pas confirmés.
+- **Deep Void Theories** : le 12 octobre, l'utilisateur confirme avoir programmé
+  les quatre vidéos du lot. Les dates ne sont pas fournies et aucun contrôle Studio
+  n'a été effectué. Les anciennes captures restent historiques ; Leto II y apparaissait
+  déjà publié. La suite proposée est dans deep-void/SUITE-PROPOSEE.md.
 - Les deux nouvelles miniatures Sith et Vador ont été acceptées par l'utilisateur.
   Utiliser uniquement les copies du dossier deep-void/miniatures pour ces deux vidéos.
 

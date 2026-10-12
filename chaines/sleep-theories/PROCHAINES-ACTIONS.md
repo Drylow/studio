@@ -11,8 +11,9 @@
    n'est encore enregistrée comme approuvée.
 4. Donner titre, description et miniature de chaque vidéo dans un dossier simple.
    Ajouter des chapitres uniquement après mesure du montage final.
-5. Confirmer avec l'utilisateur ou dans YouTube Studio le statut de Sith, Vador et
-   Thinking Machines. Les dates de programmation n'ont pas été fournies.
+5. Le 12 octobre, l'utilisateur confirme la programmation des quatre vidéos Deep Void.
+   Ne pas les uploader ou programmer de nouveau. Les dates exactes restent à relever.
+   La suite proposée est dans deep-void/SUITE-PROPOSEE.md.
 6. Après Severance : retour à **Silo**, puis **FROM**, puis **Severance**.
    Les angles plus ciblés de RECHERCHE.md sont des propositions, pas des commandes.
 7. Mettre à jour etat-videos.json et ce README après chaque état confirmé.
