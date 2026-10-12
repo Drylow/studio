@@ -4,10 +4,12 @@ import json
 from pathlib import Path
 import subprocess
 import tempfile
+import sys
 from unittest.mock import patch
 
 import av
 from PIL import Image
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "work/TubeForge"))
 from app import config, store
 from app.steps import render
 

@@ -4,6 +4,8 @@ Etat au 12 octobre 2026. Ce fichier est le point d'entree du travail en cours. L
 
 Nouveau PC / collegue aliens : lire [README_SURVIVOR_TUBEFORGE.md](README_SURVIVOR_TUBEFORGE.md). La base TubeForge complete, son installation sans archive privee et les presets zombies/aliens editables sont maintenant conserves dans Git sous `production/`.
 
+Hebergement partage sur VPS2 : [README_TUBEFORGE_VPS.md](README_TUBEFORGE_VPS.md). Le workspace du VPS devient la reference pour les nouvelles productions ; la copie PC est conservee comme archive. Les acces prives se trouvent dans le fichier bureau de connexion, jamais dans Git.
+
 ## Lire dans cet ordre
 
 1. `AGENTS.md`, s'il est present, puis `CLAUDE.md` pour les regles du depot.

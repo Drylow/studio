@@ -28,6 +28,12 @@ retenus sont transférés avec contrôle SHA256. La migration ne réécrit ni na
 ni prompts, ni images ; elle adapte les chemins de fichiers et le moteur des futurs rendus.
 Le PC conserve sa copie, mais les nouvelles productions doivent se faire sur le VPS :
 aucune synchronisation bidirectionnelle n'est activée entre les deux installations.
+Le raccourci bureau utilise `work/tubeforge-host.json` lorsqu'il est présent.
+Pour ouvrir volontairement l'archive locale : `production/tubeforge_desktop.ps1 -Local`.
+
+Le casting Survivor livré dans les presets est complété lors de la migration
+uniquement pour les identités manquantes : Mara côté zombies, Mara/Surveyor/Worker
+côté aliens. Les identités déjà modifiées par le propriétaire sont conservées.
 
 ## Accès des workers
 
