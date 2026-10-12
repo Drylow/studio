@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "scene": "Single survivor checking three water bottles at a table",
+  "images": [
+    {
+      "image": "01-mr-doomsday.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "1041bd4e633e417efd87873cbab1a779cc1fcee44d98f4779dd6643822ef2068",
+      "channel_url": "https://www.youtube.com/@Mr.Doomsday2",
+      "source_videos": [
+        "https://www.youtube.com/watch?v=4jjqsG3mk_A",
+        "https://www.youtube.com/watch?v=fExJWllyRrM",
+        "https://www.youtube.com/watch?v=N1FAy1ZjlPI"
+      ],
+      "ordered_references": [
+        {
+          "role": "character",
+          "video_url": "https://www.youtube.com/watch?v=4jjqsG3mk_A",
+          "image_sha256": "edfd12c18ef25da86e3018ba10eee8ebfd70c02afa3dd5ec5169cf5d878e0b99"
+        },
+        {
+          "role": "room",
+          "video_url": "https://www.youtube.com/watch?v=4jjqsG3mk_A",
+          "image_sha256": "60bf7c2e90f48e41cfa943bcd8fde29d9382a4681081b4cfa84062f7cab1aa03"
+        }
+      ],
+      "prompt_file": "01-mr-doomsday-prompt.txt",
+      "prompt_sha256": "84e794f5fb62845231664f5d74eef2ee139b29f9531abc0e11a59e8399206443",
+      "actual_full_image_review": true
+    },
+    {
+      "image": "02-beanie-survives.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "ef7464725240df8c5d5309331a2855d22bb55eba3fc0301872107791266ee759",
+      "channel_url": "https://www.youtube.com/@BeanieSurvives",
+      "source_videos": [
+        "https://www.youtube.com/watch?v=1AF04-V4Yao"
+      ],
+      "ordered_references": [
+        {
+          "role": "character",
+          "video_url": "https://www.youtube.com/watch?v=1AF04-V4Yao",
+          "image_sha256": "17630b6421bb8bae8cd506daf5309054eba8610e0b2e9233a67dce8a9eb879ce"
+        },
+        {
+          "role": "room",
+          "video_url": "https://www.youtube.com/watch?v=1AF04-V4Yao",
+          "image_sha256": "cb140fc3d9b34458bdd1b2a71c659c93bb8f64547c98e6987fff7279dd92a7e4"
+        }
+      ],
+      "prompt_file": "02-beanie-survives-prompt.txt",
+      "prompt_sha256": "cc6ab62c0238b1c2c2acbfb9598fd840e117c470f30fd00fd013af3c67aa3aff",
+      "actual_full_image_review": true
+    },
+    {
+      "image": "03-stickfallout.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab",
+      "channel_url": "https://www.youtube.com/@stickfallout",
+      "source_videos": [
+        "https://www.youtube.com/watch?v=c3kzVvm5-HQ",
+        "https://www.youtube.com/watch?v=SIZXW0ABD9g"
+      ],
+      "ordered_references": [
+        {
+          "role": "character",
+          "video_url": "https://www.youtube.com/watch?v=c3kzVvm5-HQ",
+          "image_sha256": "48ca30d96116b45014088e46161452e66045989305c5f2bb78c79913bb1e2891"
+        },
+        {
+          "role": "room",
+          "video_url": "https://www.youtube.com/watch?v=c3kzVvm5-HQ",
+          "image_sha256": "283df2d1399505bfadfb988d46f2b7d8946a94879156b8055d597f3e66353a58"
+        }
+      ],
+      "prompt_file": "03-stickfallout-prompt.txt",
+      "prompt_sha256": "afcc4e18e51cf7818905056b9b87cae3936e735a3c75024580ccc83d72ec4dcc",
+      "actual_full_image_review": true
+    }
+  ]
+}

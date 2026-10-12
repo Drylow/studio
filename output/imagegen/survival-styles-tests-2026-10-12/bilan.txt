@@ -1,0 +1,43 @@
+TESTS DE STYLE - 12 OCTOBRE 2026
+
+Trois images originales generees par le CLI Proxy configure dans le .env.
+Un appel par style, deux references visuelles envoyees par appel, sans reecriture automatique des prompts.
+Taille demandee : 2048 x 1152. Taille effectivement renvoyee : 1672 x 941 pour les trois fichiers, paysage quasi 16:9.
+Les sorties natives sont conservees sans recadrage. Aucune substitution de fournisseur.
+Les images existantes de TubeForge et le montage God of War ne sont pas modifies.
+
+Les references viennent d'images a l'interieur des videos publiques, via leurs apercus storyboard, et pas seulement des miniatures.
+Mr. Doomsday : Plague Bunker Survival 1 Year et Zombie Bunker Survival 1 Year (Part 2).
+Beanie Survives : Zombie Outbreak: 30 Days Trapped On The 30th Floor.
+StickFallout : Zombie Outbreak Survival, parties 1 et 2.
+Echantillon visuel : 72 apercus regardes dans ces cinq videos. Ce n'est pas une analyse exhaustive de chaque chaine.
+
+ACTION COMMUNE
+Un survivant assis controle trois bouteilles d'eau a une table, avec une radio et un sac a dos.
+Cette scene originale commune permet de comparer les styles sans reproduire les scenes des concurrents.
+
+01 - MR. DOOMSDAY
+Tete blanche, frange noire et bob noir sans embleme, corps en traits noirs fins.
+Abri gris a paroi presque frontale, bois brun, radio rouge, quelques objets utiles.
+Controle du fichier entier : un personnage, une seule action lisible, trois bouteilles au total, pas de texte ni de duplication.
+Le resultat garde un peu de modelage sur les objets et l'eclairage de l'abri ; son espace reste peu profond.
+
+02 - BEANIE SURVIVES
+Tete blanche simple, bonnet ocre, petite echarpe mauve, corps en traits noirs fins.
+Palette douce vert/bleu/ocre, mur frontal, fenetre a silhouettes urbaines simples et bord de canape.
+Controle du fichier entier : un personnage, trois bouteilles au total, aucune perspective longue ou couloir, pas de texte.
+Une legere ombre grise reste sur le bord du visage, comme dans la reference ; ce test suit ce style et n'est pas une validation du style blanc strict de God of War.
+
+03 - STICKFALLOUT
+Tete blanche, frange brune, casquette rouge retournee, corps en traits noirs fins et chaussures blanches.
+Bleu desature, beige et gris ; mur plat, porte fermee, meuble simple.
+Controle du fichier entier : un personnage, action lisible, trois bouteilles, pas de texte, espace tres sobre sans perspective profonde.
+C'est le plus proche de la demande de fonds simples parmi ces trois tests.
+
+LIMITES
+Ces trois fichiers prouvent un premier transfert de style visuel sur une scene.
+Ils ne prouvent pas encore la constance du personnage sur une video complete ou plusieurs actions consecutives.
+Pour produire ensuite une serie, figer une reference originale de personnage et un decor propre a chaque lieu, puis verifier chaque nouvelle image.
+
+Les prompts exacts sont les trois fichiers *-prompt.txt du meme dossier.
+Le registre conserve les empreintes des sorties, des prompts et des references dans leur ordre d'envoi.
