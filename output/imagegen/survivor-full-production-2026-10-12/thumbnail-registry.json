@@ -1,0 +1,54 @@
+[
+  {
+    "prompt": "Create an ORIGINAL clickable YouTube thumbnail, landscape 16:9. Simple flat matte cartoon exactly matching reference style and character, clean black outlines, shallow supermarket backdrop. ONE large Patch in foreground RIGHT, perfect PURE WHITE round head, small black dot eyes and small shocked mouth, his orange forehead bandage above anatomical RIGHT eye (viewer LEFT), thin black stick torso/limbs, white mittens. Patch holds a single can against chest. ORANGE normal school backpack stands separately on FLOOR lower right with real contact, no straps/backpack worn. LEFT background a single supermarket window with THREE green round-headed zombies pressing GREEN mitten hands against glass; all exposed zombie feet green if visible, no orange markings. Torn olive/navy vests, tiny eyes, no realistic features/gore. Bold large compact lettering at upper LEFT reads exactly 30 DAYS in warm orange with thick black outline. Two words only, no other text/logos. Background spare beige wall/gray shelves just enough to read as supermarket. Foreground character dominates, window zombies clearly threatening, no split before/after panels, no second Patch or ghost portraits. Use reference 1 for Patch identity; reference 2 for drawing style and glass setting only, not its composition. High mobile readability, large white face and orange bandage, no deep cinematic lighting.\n",
+    "prompt_sha256": "516c640547386bfbc1f28e1328b3126f231c1073da5669748715c121b6db9e18",
+    "ordered_references": [
+      {
+        "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+        "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+      },
+      {
+        "path": "output/imagegen/survivor-full-production-2026-10-12/scenes/patch-060-v2.png",
+        "sha256": "f4fffabdfd518f4a7211a8c461780d4460dab9ca12dd1ea64eae9a7ce2976e68"
+      }
+    ],
+    "automatic_retries": 0,
+    "started_at": "2026-10-12T17:07:48.237559+00:00",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "f91ad88b7ecb06a963664b94073350f3654300d0e77f87064ff5326b470a8f51",
+    "user_approved": false,
+    "reviewer": "Codex",
+    "visual_notes": "Original single protagonist, identifiable white round head, separate floor school pack, green threat; readable 30 DAYS / 7 DAYS, no duplicate or logos."
+  },
+  {
+    "prompt": "Create an ORIGINAL YouTube thumbnail in shallow clean matte outlined cartoon style, landscape16:9. ONE Reed in foreground LEFT hiding behind a simple dark-gray gas-station counter: perfectly round PURE WHITE head, tiny black eyes, worried small mouth, blue-gray scarf, thin BLACK stick body, WHITE mitten hands. NO bandage, purple band, hair/realistic face. Separate GRAY normal school backpack stands visibly on FLOOR below counter with real support, never worn or floating. On RIGHT, ONE mint-green round-head alien with large black oval eyes, GREEN hands, covered compact gray suit/dark boots, blue right-shoulder stripe, scanning a dark vending cabinet with a tiny gray scanner. Beyond broken public glassdoor a LOW GRAY OVAL craft with short right ramp and three landing legs; modest background scale, simple blue sky, no space fantasy. Red short fuel canopy fragment/pump cue gives gas station. Bold compact large lettering upper center/right says exactly 7 DAYS in mint with thick black outline. No other text or logos. White face/gray scarf dominate foreground left; alien and stolen vending machine create story conflict right. No duplicates or giant portraits, no before/after panels, no realistic CGI car or human. Reference 1 is Reed identity, reference 2 Surveyor identity, reference 3 is shop style; choose distinct original composition, not a scene collage.\n",
+    "prompt_sha256": "3a33aeafb357a17c5505c749bf7dcc6e13b892daf4b24b39d2647e2e19f4f563",
+    "ordered_references": [
+      {
+        "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png",
+        "sha256": "2b28b1e18362987171329084126d3b0e34d3270e88cf3ad1bf4502ba9986f270"
+      },
+      {
+        "path": "output/imagegen/survivor-full-production-2026-10-12/characters/surveyor.png",
+        "sha256": "84df0161135c5e9019699f3df63de503187cd6a3bfdf1ed7cbab2b38a1af1c3b"
+      },
+      {
+        "path": "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png",
+        "sha256": "f436e11c8306398d0c09cc85b2dae21d5079ab20fde37f45bc3bf0303ded181b"
+      }
+    ],
+    "automatic_retries": 0,
+    "started_at": "2026-10-12T17:07:58.415304+00:00",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "8d223d55f308a2ae68cd48735558f7d56d72a95151fef4cf1275360b29e97317",
+    "user_approved": false,
+    "reviewer": "Codex",
+    "visual_notes": "Original single protagonist, identifiable white round head, separate floor school pack, green threat; readable 30 DAYS / 7 DAYS, no duplicate or logos."
+  }
+]

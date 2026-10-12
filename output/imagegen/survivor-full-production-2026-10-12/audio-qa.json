@@ -1,0 +1,24 @@
+{
+  "patch": {
+    "file_sha256": "13638596bd6036b7878a1dc10c961a6b91469830346261b584b67e09c7d7adaa",
+    "decoded_seconds": 702.98125,
+    "peak": 0.737736701965332,
+    "rms": 0.03938058763742447,
+    "longest_silence_seconds": 1.0,
+    "script_tokens": 2131,
+    "transcribed_tokens": 2133,
+    "matched_fraction": 0.9877991553261379,
+    "method": "Full local English ASR cross-check plus complete PCM decode; not a human listening approval"
+  },
+  "alien": {
+    "file_sha256": "4a5543af46a227369750b5b73fc165d733fcbdc12de96448a26a3a2058e9231f",
+    "decoded_seconds": 686.8898125,
+    "peak": 0.7053080797195435,
+    "rms": 0.03571779280900955,
+    "longest_silence_seconds": 0.5,
+    "script_tokens": 2120,
+    "transcribed_tokens": 2123,
+    "matched_fraction": 0.9971698113207547,
+    "method": "Full local English ASR cross-check plus complete PCM decode; not a human listening approval"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "project_id": "alien-invasion-7-days-trapped-in-a-gas-s-6bdb2e",
+  "render_sha256": "a4c58a37473f9b0724f15aebabd2e2d5e1e7d1979d6a488a2ec68d55d486d617",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "decoded_video_frames": 16485,
+  "video_seconds": 686.875,
+  "audio_seconds": 686.8906875,
+  "voice_seconds": 686.88,
+  "full_audio_similarity": 0.9997629523277283,
+  "audio_lag_seconds": 0.0,
+  "scenes": 108,
+  "decoded_video_without_errors": true,
+  "contact_sheets": [
+    "contact-001.jpg",
+    "contact-013.jpg",
+    "contact-025.jpg",
+    "contact-037.jpg",
+    "contact-049.jpg",
+    "contact-061.jpg",
+    "contact-073.jpg",
+    "contact-085.jpg",
+    "contact-097.jpg"
+  ],
+  "visual_review": "inspected",
+  "user_approved": false,
+  "reviewer": "Codex",
+  "notes": "Codex inspected all 108 rendered midpoint frames in nine contact sheets, after inspecting every native chosen frame and all selected continuity retakes. Reed white circle/scarf identity stays readable, supported gray backpack, mint aliens, correct low loader, partial canopy and departing dark vending cabinet. No broken borders, black gaps or unintended large panoramas. Complete decode 16485 frames at 24 fps; full audio correlation 0.99976. Minor prop/perspective differences remain; no pixel-perfect or human approval claim."
+}

@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex",
+  "kind": "manual editorial review adapted from Faceless OS to original fiction",
+  "narration_file": "chaines/alien-aftermath-projet/episode-01-gas-station/script-en.txt",
+  "words": 2083,
+  "script_sha256": "78471a708094d2a325b2536d22cf23404aeec69f5f19b897ec3c98343d7b7beb",
+  "hook_words": 85,
+  "anchors": [
+    "1AF04-V4Yao.txt",
+    "N1FAy1ZjlPI.txt",
+    "SIZXW0ABD9g.txt"
+  ],
+  "A": "First sentence presents concrete immediate danger; short hook maps supermarket four accesses/thirty days or stolen car/seven days station dismantling to the body. Invented calendar explicitly fiction, not real statistics.",
+  "B": "Escalation driven by consequences: Patch loses front refuge and escapes along established canal; Reed observes changing equipment route and leaves as building is dismantled. Each map/tool/route is planted before departure. Endings close refuge and car/key promises.",
+  "C": "Pure English TTS narration; no visual tags, timestamps, copied transcript hooks, hypothetical medical quantities or unsourced expert attribution. No rigid cliffhanger or promo CTA.",
+  "D": "Ordinary second-person action and observation, varied sentences; no cinematic prophecy or abstract moral. Compare anchor movement then consequence to concrete script actions; no attempt to clone a narrator identity.",
+  "D5": "Dates/days and counts of entrances/pumps are authored fictional world rules, not claims about real disaster survival. No real statistics used.",
+  "E": "Original distinct stories and drawn actions; source anchors teach shared spoken register only. No guarantee of views or retention. Fiction is labelled in package.",
+  "changes": "Removed unsupported institutional food-safety exposition and removed lingering shoulder-worn/bench backpack instructions.",
+  "human_approval": false,
+  "D4_artifact": {
+    "anchor_shapes": [
+      "You sprint to the woodshed.",
+      "Then you look up."
+    ],
+    "anchor_file": "N1FAy1ZjlPI.txt",
+    "matched_script_line": "You backed into the shop.",
+    "judgment": "Immediate physical action followed by observed consequence; not a quotation/copied hook in narration."
+  },
+  "machine_scan": {
+    "candidate_flags": 0,
+    "echo_candidates_reed": [
+      "the service road and",
+      "the blue striped visitor"
+    ],
+    "judgment": "Repeated route/identity labels are functional continuity, not decorative refrain; reviewed against sentence shape."
+  },
+  "number_ledger": {
+    "fictional_days": "Each narrated day is an invented event in the authored chronology, not real survival statistics.",
+    "fictional_geometry": "Four external accesses Patch; two pumps and one gate Alien. Defined by plan, not claimed measurements.",
+    "real_statistics": []
+  }
+}

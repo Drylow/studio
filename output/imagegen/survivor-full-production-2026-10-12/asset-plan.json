@@ -1,0 +1,285 @@
+{
+  "assets": [
+    {
+      "id": "mara",
+      "folder": "characters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/mara.txt",
+      "references": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "surveyor",
+      "folder": "characters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/surveyor.txt",
+      "references": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "worker",
+      "folder": "characters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/worker.txt",
+      "references": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "loader",
+      "folder": "objects",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/loader.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "car",
+      "folder": "objects",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "handcart",
+      "folder": "objects",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/handcart.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-parking",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-parking.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-aisle",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-aisle.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-shop",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-staff",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-staff.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/staff.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-yard",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-yard.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-path",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-path.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/gardens.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-forecourt",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-craft",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-craft.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-front-closed",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-closed.txt",
+      "references": [
+        "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v3.png",
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-front-broken",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-broken.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-stockroom-night",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-stockroom-night.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-yard-night",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-yard-night.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-shop-dark",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-dark.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-staff-night",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-staff-night.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-staff.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-yard-clear",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-yard-clear.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-yard.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-shop-broken",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-broken.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-parking-closed",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-parking-closed.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/patch-parking.png",
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-front-broken-v2",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-front-broken-v2.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/patch-front-closed.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-forecourt-one-pump",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt-one-pump.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-forecourt-dismantled",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-forecourt-dismantled.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-forecourt.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-shop-gone-machine",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-shop-gone-machine.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-shop-broken.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "alien-craft-late",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/alien-craft-late.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/masters/alien-craft.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "patch-yard-blocked",
+      "folder": "masters",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/patch-yard-blocked.txt",
+      "references": [
+        "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/yard.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "car-wheelless",
+      "folder": "objects",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car-wheelless.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/objects/car.png"
+      ],
+      "author": "Codex"
+    },
+    {
+      "id": "car-dismantled",
+      "folder": "objects",
+      "prompt": "output/imagegen/survivor-full-production-2026-10-12/prompts/assets/car-dismantled.txt",
+      "references": [
+        "output/imagegen/survivor-full-production-2026-10-12/objects/car.png"
+      ],
+      "author": "Codex"
+    }
+  ]
+}

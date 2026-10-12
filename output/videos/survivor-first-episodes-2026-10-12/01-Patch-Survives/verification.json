@@ -1,0 +1,30 @@
+{
+  "project_id": "zombie-outbreak-30-days-trapped-in-a-sup-e56f42",
+  "render_sha256": "081f71626802965be0a804c3a7a0a4cb8a33aec76051da5d5895350c13166124",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "decoded_video_frames": 16872,
+  "video_seconds": 703.0,
+  "audio_seconds": 702.9973125,
+  "voice_seconds": 702.98,
+  "full_audio_similarity": 0.9997238516807556,
+  "audio_lag_seconds": 0.0,
+  "scenes": 108,
+  "decoded_video_without_errors": true,
+  "contact_sheets": [
+    "contact-001.jpg",
+    "contact-013.jpg",
+    "contact-025.jpg",
+    "contact-037.jpg",
+    "contact-049.jpg",
+    "contact-061.jpg",
+    "contact-073.jpg",
+    "contact-085.jpg",
+    "contact-097.jpg"
+  ],
+  "visual_review": "inspected",
+  "user_approved": false,
+  "reviewer": "Codex",
+  "notes": "Codex inspected all 108 rendered midpoint frames in nine contact sheets, after inspecting every native chosen image and continuity retake. White Patch and Mara identities remain visible, purple band retained on Mara only, carts/cases stay supported, zombie appendages green; modest zoom keeps action readable. No broken borders or black gaps detected. Complete decode 16872 frames at 24 fps and full narration correlation 0.99972. Minor supply arrangement and expression differences remain; no claim of pixel-perfect consistency or human approval."
+}

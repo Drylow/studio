@@ -1,0 +1,109 @@
+﻿id,first_frame,end_frame_exclusive,frames,start,end,text,location
+1,0,118,118,0.0,4.916666666666667,"An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",front
+2,118,253,135,4.916666666666667,10.541666666666666,Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down.,front-closed
+3,253,486,233,10.541666666666666,20.25,"The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",stockroom
+4,486,685,199,20.25,28.541666666666668,"You run through the stockroom, past the bottled water that nobody finished unloading. A hand presses against the delivery door's little window.",stockroom
+5,685,834,149,28.541666666666668,34.75,The driver outside has his face against the glass. He keeps pressing the buzzer even when you step away.,stockroom
+6,834,969,135,34.75,40.375,You check the staff exit next. It opens onto the narrow alley beside the store.,staff
+7,969,1164,195,40.375,48.5,"Someone runs past, falls, and disappears behind the parked delivery van. You close the door before you see who follows.",staff
+8,1164,1343,179,48.5,55.958333333333336,"The emergency exit faces the customer parking lot. Through its window, you can see people moving between cars.",parking
+9,1343,1504,161,55.958333333333336,62.666666666666664,"A woman waves at a windshield. The person inside doesn't unlock the door. You leave that exit closed, too.",parking
+10,1504,1661,157,62.666666666666664,69.20833333333333,"Back at the checkout, your phone is still trying to send a message to your manager. You type that you're staying inside.",front-closed
+11,1661,1752,91,69.20833333333333,73.0,Then you delete it. You ask him to call you instead.,front-closed
+12,1752,1767,15,73.0,73.625,He doesn't.,front-closed
+13,1767,1860,93,73.625,77.5,You sit under the counter with your orange backpack between your feet.,front-closed
+14,1860,2039,179,77.5,84.95833333333333,"Something bumps the shutter, pauses, and bumps it again. For once, you don't care that you forgot to clock out.",front-closed
+15,2039,2276,237,84.95833333333333,94.83333333333333,"By morning, you've stopped expecting the police to arrive before breakfast. You eat crackers from a packet you tore open badly, spilling half of them into your lap.",front-closed
+16,2276,2344,68,94.83333333333333,97.66666666666667,"Outside, the man with the cart is still there.",front-closed
+17,2344,2493,149,97.66666666666667,103.875,"You work here. You know where the lights are, which cupboard sticks, and where the spare toilet paper lives.",staff
+18,2493,2639,146,103.875,109.95833333333333,That feels useful until you realize you've never checked how long you'd last if nobody made another delivery.,stockroom
+19,2639,2920,281,109.95833333333333,121.66666666666667,"On day one, you move sealed water, cans, and packets of ready-to-eat food into the stockroom. You leave a clear path to the delivery door and check the internal door back to the shop floor.",stockroom
+20,2920,3074,154,121.66666666666667,128.08333333333334,"It has a small window. From here, you can watch the checkout without standing beside the front glass.",stockroom
+21,3074,3301,227,128.08333333333334,137.54166666666666,"The room has no bed, so you put a folded blanket from the seasonal shelf on the floor. You bring in a manual can opener and try it before deciding you're finished.",stockroom
+22,3301,3406,105,137.54166666666666,141.91666666666666,The first can actually opens. You feel embarrassingly pleased about that.,stockroom
+23,3406,3569,163,141.91666666666666,148.70833333333334,"On the wall, there's a delivery map of the neighborhood. Across the canal, a footpath leads to the community gardens.",stockroom
+24,3569,3846,277,148.70833333333334,160.25,"You used to walk there after work. You mark the bridge, then mark the store's four exits. The delivery yard faces toward that path. You keep the map beside your blanket.",stockroom
+25,3846,3978,132,160.25,165.75,"You tell yourself it's only a backup. For now, you have an entire supermarket.",stockroom
+26,3978,4155,177,165.75,173.125,"On day three, the refrigerators stop humming while you're halfway through checking them. You wait for the lights to come back.",aisle
+27,4155,4252,97,173.125,177.16666666666666,"The emergency light above the staff door stays on for a while, then fades.",staff
+28,4252,4458,206,177.16666666666666,185.75,"You check the little fridge in the break room. There's somebody's milk, a sandwich, and a note asking people to stop stealing lunches.",staff
+29,4458,4572,114,185.75,190.5,You leave the door closed while you look for outage information saved on your phone.,staff
+30,4572,4747,175,190.5,197.79166666666666,The fridge looks exactly as it did yesterday. It isn't humming anymore. You close it without taking the milk.,staff
+31,4747,4898,151,197.79166666666666,204.08333333333334,"Later, you move the spoiled groceries away from your sleeping corner instead of adding them to your supplies.",stockroom
+32,4898,5089,191,204.08333333333334,212.04166666666666,"On the shop floor, you abandon the chilled shelves as a food source. The cans you've moved are suddenly much more important.",aisle
+33,5089,5264,175,212.04166666666666,219.33333333333334,"So are the bottles. You hadn't planned to use drinking water to wash a sticky can opener, and now you're keeping track of that as well.",stockroom
+34,5264,5460,196,219.33333333333334,227.5,"By day five, you can hear the shutter from your blanket. You sleep, wake up to a scrape, check the window, and try again.",stockroom-night
+35,5460,5618,158,227.5,234.08333333333334,You start placing things in the same spot because searching in the dark means wasting your flashlight battery.,stockroom-night
+36,5618,5789,171,234.08333333333334,241.20833333333334,"You still visit the checkout to look outside. But every time you go, someone near the window turns toward you.",front-closed
+37,5789,6008,219,241.20833333333334,250.33333333333334,You pull a curtain of cardboard over the lower glass and observe through the gap above it. The crowd stays. They know this building contains something.,front-closed
+38,6008,6096,88,250.33333333333334,254.0,"On day eight, somebody calls your name from the delivery yard.",stockroom
+39,6096,6218,122,254.0,259.0833333333333,You nearly answer before stopping yourself. A woman stands beyond the little window.,stockroom
+40,6218,6469,251,259.0833333333333,269.5416666666667,"She has a teal bag and a purple band around her sleeve. You recognize her as Mara, one of the drivers who used to complain that your manager never signed the paperwork.",yard-blocked
+41,6469,6514,45,269.5416666666667,271.4166666666667,She asks whether you're alone.,stockroom
+42,6514,6740,226,271.4166666666667,280.8333333333333,"You ask whether anyone followed her. She turns so you can see the yard behind her. There's nobody standing there, but you can't see beyond the street gate.",yard-blocked
+43,6740,6854,114,280.8333333333333,285.5833333333333,Mara says she climbed over it after waiting for the alley to clear. She wants water.,yard-blocked
+44,6854,7000,146,285.5833333333333,291.6666666666667,She also says the people who were gathering near the staff exit are starting to move around the building.,stockroom
+45,7000,7159,159,291.6666666666667,298.2916666666667,You look at your blanket and the cases stacked beside it. You've spent a week wishing someone would answer your phone.,stockroom
+46,7159,7232,73,298.2916666666667,301.3333333333333,"Now someone is here, and you're holding the door shut.",stockroom
+47,7232,7270,38,301.3333333333333,302.9166666666667,You let her in.,stockroom
+48,7270,7507,237,302.9166666666667,312.7916666666667,"She drinks from a bottle, sits on an empty crate, and starts crying before she can explain where she's been. You sit nearby without asking again.",stockroom
+49,7507,7852,345,312.7916666666667,327.1666666666667,"She spent the first week in the delivery warehouse, until the yard outside it became too crowded to stay. When she can talk about today, she tells you the road toward the canal was quieter than the main street. She passed the gardens on her way here.",stockroom
+50,7852,7880,28,327.1666666666667,328.3333333333333,You show her the map.,stockroom
+51,7880,8021,141,328.3333333333333,334.2083333333333,"She places a finger on the delivery yard, then the bridge. Neither of you says you're leaving yet.",stockroom
+52,8021,8101,80,334.2083333333333,337.5416666666667,"On day ten, you make space for a second blanket.",stockroom
+53,8101,8303,202,337.5416666666667,345.9583333333333,"Mara helps you count what you moved, and you realize your first list included food that needs cooking and things you don't actually know how to prepare.",stockroom
+54,8303,8426,123,345.9583333333333,351.0833333333333,She sets those aside. You eat from the stock you can use and keep the rest separate.,stockroom
+55,8426,8620,194,351.0833333333333,359.1666666666667,She doesn't invent a kitchen in the dark. You spend the afternoon bringing more sealed water through from the shop floor while the way is still clear.,aisle
+56,8620,8685,65,359.1666666666667,361.875,Having someone else here changes your routine.,stockroom-night
+57,8685,8925,240,361.875,371.875,"You can sleep while Mara watches the window. When she sleeps, you stop yourself from waking her every time the shutter rattles. She already knows it rattles.",stockroom-night
+58,8925,9072,147,371.875,378.0,"On day twelve, you load a shopping cart with supplies near the checkout. You're trying to save another trip.",front-closed
+59,9072,9183,111,378.0,382.625,"One wheel catches the edge of a display, and a can falls onto the tiles.",front-closed
+60,9183,9310,127,382.625,387.9166666666667,The noise brings faces toward the window. You freeze with your hands on the cart.,front-closed
+61,9310,9520,210,387.9166666666667,396.6666666666667,"Mara gestures from the stockroom door, but you try to free the wheel first. By the time you return, the glass is shaking beneath the shutter.",front-closed
+62,9520,9574,54,396.6666666666667,398.9166666666667,You leave the cart where it is.,front-closed
+63,9574,9866,292,398.9166666666667,411.0833333333333,"Later, when you tell Mara how much food was still on it, she asks whether you got back with both hands attached. You did. She's satisfied with that answer. You keep thinking about the cans.",stockroom
+64,9866,10043,177,411.0833333333333,418.4583333333333,"Over the next few days, the pressure at the front gets worse. You can see the frame shifting from the stockroom window.",stockroom
+65,10043,10216,173,418.4583333333333,425.6666666666667,"Mara checks the delivery yard. The street gate is intact, and the space inside it remains empty.",yard-blocked
+66,10216,10491,275,425.6666666666667,437.125,"On day sixteen, you move everything you'll need off the shop floor. You want to take another display of bottled water, but Mara insists you finish moving the stock already beside the door first.",stockroom
+67,10491,10564,73,437.125,440.1666666666667,The frame gives a sharp crack while you're carrying a case.,stockroom
+68,10564,10684,120,440.1666666666667,445.1666666666667,"You hurry through. This time, you don't go back for the next one.",stockroom
+69,10684,10750,66,445.1666666666667,447.9166666666667,"On day nineteen, the glass breaks.",front-broken
+70,10750,10932,182,447.9166666666667,455.5,"You hear it from the stockroom. A figure pushes through a gap under the damaged shutter, falls across the checkout, and gets up.",front-broken
+71,10932,11100,168,455.5,462.5,More hands appear behind it. You close and secure the internal door while Mara moves the last crate away from its swing.,stockroom
+72,11100,11260,160,462.5,469.1666666666667,"The little window fills with a face. You can still see the cart you abandoned, but you can't reach it anymore.",stockroom
+73,11260,11444,184,469.1666666666667,476.8333333333333,Mara draws a line through the front half of the building on your map. The public entrance and the emergency exit are now beyond the infected.,stockroom
+74,11444,11651,207,476.8333333333333,485.4583333333333,"You pull your blanket away from the internal door. You sleep beside the bottled water instead, with the delivery yard on the other side of the wall.",stockroom-night
+75,11651,11845,194,485.4583333333333,493.5416666666667,Sometimes you wake up expecting a customer to ask where the bread is. The sound you actually hear is someone trying that door.,stockroom-night
+76,11845,11992,147,493.5416666666667,499.6666666666667,"On day twenty-two, Mara says you need to prepare to leave. The staff exit still faces the crowded alley.",stockroom
+77,11992,12176,184,499.6666666666667,507.3333333333333,"The delivery yard gives you somewhere to stand outside the building, but you have to get through its street gate before you can head toward the canal.",yard-blocked
+78,12176,12351,175,507.3333333333333,514.625,You want to wait until the road looks completely empty. Mara asks what happens if the internal door fails while you're waiting.,stockroom
+79,12351,12444,93,514.625,518.5,"You look at the map, then at the supplies that would have to come with you.",stockroom
+80,12444,12470,26,518.5,519.5833333333334,You start packing.,stockroom
+81,12470,12681,211,519.5833333333334,528.375,"The first attempt is ridiculous. You fill your backpack until the zipper won't close, then lift it by the handle and almost lose your balance.",stockroom
+82,12681,12911,230,528.375,537.9583333333334,"Mara watches you unpack the spare things you insisted you'd need. You keep water, food you can open and eat, the can opener, and the flashlight.",stockroom
+83,12911,13078,167,537.9583333333334,544.9166666666666,Mara proposes using the store's small handcart for the heavier cases. You move it into the yard while the gate is closed.,stockroom
+84,13078,13277,199,544.9166666666666,553.2083333333334,"Its wheels roll much better than those on the shopping cart. You practice moving it together, keeping the delivery door in sight.",yard-blocked
+85,13277,13460,183,553.2083333333334,560.8333333333334,The gate is partly blocked by empty pallets left there before the outbreak. Clearing them means working near the street.,yard-blocked
+86,13460,13693,233,560.8333333333334,570.5416666666666,"You do a little, stop when movement appears beyond the bars, and return inside. The work takes several days because you keep choosing to stop.",yard-clear
+87,13693,13880,187,570.5416666666666,578.3333333333334,"By day twenty-six, you can open the gate. You try it, see people at the end of the alley, and close it again.",yard-clear
+88,13880,13962,82,578.3333333333334,581.75,The route is possible. Today isn't the day to use it.,yard-clear
+89,13962,14073,111,581.75,586.375,"That night, Mara catches you putting another can into your backpack.",stockroom-night
+90,14073,14263,190,586.375,594.2916666666666,"She takes it out and puts it on the handcart. You both laugh, briefly. You're still trying to carry the supermarket with you.",stockroom-night
+91,14263,14411,148,594.2916666666666,600.4583333333334,"On day twenty-nine, something hits the internal door hard enough to shift the crate beside it. You get up and stay up.",stockroom-night
+92,14411,14544,133,600.4583333333334,606.0,"Through the yard window, you watch the alley until the sky begins to brighten.",stockroom-night
+93,14544,14656,112,606.0,610.6666666666666,Day thirty. The people you watched last night have moved toward the main road.,yard-clear
+94,14656,14845,189,610.6666666666666,618.5416666666666,"You can see the turn toward the canal. Mara is standing beside the loaded handcart, waiting for you to decide whether you're ready.",yard-clear
+95,14845,14897,52,618.5416666666666,620.7083333333334,You fold the map into your backpack.,stockroom
+96,14897,15184,287,620.7083333333334,632.6666666666666,"Before opening the delivery door, you look through the internal window one last time. An infected man is standing beside the checkout, pressing the dead card reader with his palm.",front-broken
+97,15184,15217,33,632.6666666666666,634.0416666666666,You leave him there.,stockroom
+98,15217,15433,216,634.0416666666666,643.0416666666666,The yard feels much larger when you know you're crossing it for the last time. Mara guides the cart through the gate while you hold it clear.,yard-clear
+99,15433,15544,111,643.0416666666666,647.6666666666666,A wheel bumps the threshold. You both stop and look down the street.,yard-clear
+100,15544,15609,65,647.6666666666666,650.375,A figure near the main road turns.,yard-clear
+101,15609,15763,154,650.375,656.7916666666666,Mara keeps moving. You let the gate swing shut behind you and catch up before she reaches the canal path.,canal
+102,15763,15954,191,656.7916666666666,664.75,"At the bridge, the handcart is awkward on the narrow approach. You lift its front together and guide it onto the boards.",canal
+103,15954,16086,132,664.75,670.25,"Your hands hurt. You want to put it down, but you can see movement near the alley you just left.",canal
+104,16086,16130,44,670.25,672.0833333333334,You cross without dropping a case.,canal
+105,16130,16391,261,672.0833333333334,682.9583333333334,"The gardens are ahead, behind the low fence you remember. You follow the path between the empty plots until you find a shed with a dry patch beside it, out of sight of the road.",gardens
+106,16391,16493,102,682.9583333333334,687.2083333333334,Mara sets down the cart. You lower your backpack and sit against the wall.,gardens
+107,16493,16646,153,687.2083333333334,693.5833333333334,"You take out the packet of crackers you packed last night. Mara holds out her hand, and you give her half.",gardens
+108,16646,16872,226,693.5833333333334,703.0,"Across the canal, you can see the supermarket roof. You start to count how many cans you left inside, then stop and open a bottle for both of you.",gardens

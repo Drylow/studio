@@ -53,6 +53,8 @@ Modifier ici, puis deployer avec `--no-seed` ; une modification uniquement dans 
 
 La logique de references peut preparer/envoyer des fichiers, mais la coherence est validee par inspection visuelle de chaque image. Le pack CapCut existant emploie la duree reelle de la voix ; lire les modules de rendu/export avant toute duplication de cette logique.
 
+Les deux premiers episodes Survivor sont aussi documentes dans `README_REPRISE.md` : plans manuels compiles/importes par `production/tubeforge_survivor_episode.py`, montage lance par l'API TubeForge, controle et clips CapCut via `production/tubeforge_survivor_export.py`. La livraison est dans `output/videos/survivor-first-episodes-2026-10-12/`. Les reviews de cette production sont des inspections deleguees a Codex, distinctes d'une validation humaine. Aucun appel supplementaire de generation ni publication n'est necessaire pour recuperer les fichiers termines.
+
 Les integrations disponibles ne constituent pas une autorisation de changer de fournisseur. Les deux derniers kits Survivor emploient le CLI Proxy configure ; God of War utilisait Google Flow. Preserve ces choix par projet.
 
 ## References personnages par style
