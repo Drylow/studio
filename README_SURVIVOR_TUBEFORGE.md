@@ -2,6 +2,8 @@
 
 Ce dossier contient les sources complètes de TubeForge et notre méthode de production Survivor. Point d'entrée pour un nouveau PC ou un nouveau chat, état du 12 octobre 2026. Commencer par les **aliens** pour le travail du collègue.
 
+Instance partagée VPS : lire [README_TUBEFORGE_VPS.md](README_TUBEFORGE_VPS.md). `production/tubeforge_install.py` est également un alias de l'installation complète depuis Git ; il ne demande plus d'archive privée.
+
 ## Installer depuis un clone
 
 Windows, Python 3.12 ou plus récent et Git. Depuis la racine du clone :

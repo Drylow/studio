@@ -18,7 +18,7 @@ def algrow_configured():
 
 async def execute(payload, directory, progress=None):
     studio = Path(config.get('STUDIO_ROOT')).resolve()
-    python = studio / 'venv/Scripts/python.exe'
+    python = studio / ('venv/Scripts/python.exe' if os.name == 'nt' else 'venv/bin/python')
     if not python.is_file():
         raise RuntimeError('Studio Python missing; rerun the TubeForge setup')
     directory = Path(directory)
