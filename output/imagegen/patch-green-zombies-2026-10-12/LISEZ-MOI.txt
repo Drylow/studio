@@ -1,0 +1,14 @@
+REVISION ZOMBIES VERTS - 12 OCTOBRE
+
+Direction utilisateur finale : tete, deux mains et deux pieds des ZOMBIES verts, meme vert pale desature (#A8BE87 cible). Patch et humains vivants restent blancs. Tenues, corps en traits noirs, decors/actions conserves.
+Les fichiers *-green-full.png sont les versions actuelles. Les essais *-green.png tete seule sont archives apres les deux corrections utilisateur sur mains/pieds.
+
+A-REGARDER/01.png : zombie dehors vert dans les trois parties, Patch blanc dedans.
+A-REGARDER/02.png : pieds du zombie visibles verts; tete/mains masquees par rideau. Patch blanc.
+A-REGARDER/03.png : tete et main du conducteur vertes; corps/pieds masques par porte. Patch blanc.
+Trois PNG 1920 x 1080 exact ; natifs conserves et adaptes par fit/pad technique seulement.
+Chaque reference et image a ete regardee ; registre.json conserve prompts reels, fichiers envoyes dans leur ordre, SHA et notes de controle. Variation mineure de vert issue de generation, pas de promesse d'egalite pixel par pixel. Pas d'approbation utilisateur implicite de toute la serie.
+
+Import reproductible : production/tubeforge_patch_green.py. Les anciennes versions blanches et leurs recus/historiques restent archives. Aucune voix ou serie d'images complete lancee.
+Projet TubeForge : zombie-outbreak-30-days-trapped-in-a-sup-e56f42.
+L'ecriture depuis titre est disponible dans l'etape Texte pour les deux styles Survivor. Le script courant de 2079 mots reste intact.

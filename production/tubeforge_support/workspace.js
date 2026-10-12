@@ -539,10 +539,33 @@
     });
   }
   function renderText() {
-    $('#step-content').innerHTML = `<form id="script-form" class="editor"><div class="page-head"><h2>Script</h2></div><label>Collez ou modifiez votre script<textarea name="text" class="script-editor" spellcheck="true" placeholder="Collez votre script complet ici.">${esc(project.script || '')}</textarea></label>${scriptImportMarkup('edit-script-file')}<div class="form-actions"><button type="submit">Enregistrer le texte</button><button type="submit" name="action" value="next" class="primary">Enregistrer et passer à la voix →</button></div>${project.voiceover_stale ? '<div class="banner">La voix correspond à une version antérieure du texte.</div>' : ''}</form>`;
+    const writer = project.workspace_script_writer || {};
+    const draft = writer.draft;
+    const busy = project.running || project.readonly;
+    const applied = draft && writer.applied_draft_id === draft.id;
+    const assets = project.voiceover || project.scenes?.length || project.render;
+    const step = project.steps?.script || {};
+    const writing = project.can_write_script ? `<section class="section"><h2>Écrire depuis un titre</h2><p class="muted">Le CLI Proxy écrit le récit avec nos consignes Faceless OS et les références de narration, puis le vérifie et ajuste sa longueur si nécessaire. Le texte d’un projet existant est conservé.</p><form id="script-writer-form"><fieldset ${busy ? 'disabled' : ''}><label>Titre<input name="writing_title" value="${esc(project.title)}" maxlength="240" required></label><label>Durée souhaitée (minutes)<input name="writing_minutes" type="number" min="3" max="30" step="0.5" value="15" required></label><label>Consignes supplémentaires (facultatif)<textarea name="writing_brief" rows="2" maxlength="8000" placeholder="Lieu, menace, personnages ou angle…"></textarea></label><button type="submit" class="primary">${busy ? 'Écriture en cours…' : project.script?.trim() ? 'Proposer un autre script' : 'Écrire depuis le titre'}</button></fieldset></form>${busy ? `<p role="status">${esc(step.msg || 'Écriture…')}</p><progress max="${Math.max(2, step.total || 2)}" value="${step.done || 0}" aria-label="Écriture du script"></progress>` : ''}${writer.state === 'error' ? '<p class="error-text">L’écriture a été interrompue. Votre texte est conservé ; vous pouvez relancer.</p>' : ''}${draft && !applied ? `<section class="section"><h3>Brouillon · ${draft.word_count} mots</h3><p class="muted">${esc(durationLabel(scriptDuration(draft.script)))}</p><textarea class="script-editor" readonly aria-label="Brouillon généré">${esc(draft.script)}</textarea>${assets ? '<p class="muted">Ce projet a déjà des médias. Copiez ce brouillon dans une nouvelle vidéo pour conserver les plans actuels.</p>' : '<button id="apply-script-draft" type="button">Utiliser ce brouillon</button>'}${draft.audit?.issues?.length || draft.audit?.unsupported_claims?.length ? '<p class="muted">La vérification automatique signale des points à relire dans ce brouillon.</p>' : ''}</section>` : ''}</section>` : '';
+    $('#step-content').innerHTML = `${writing}<form id="script-form" class="editor"><fieldset ${busy ? 'disabled' : ''}><div class="page-head"><h2>Script</h2></div><label>Collez ou modifiez votre script<textarea name="text" class="script-editor" spellcheck="true" placeholder="Collez votre script complet ici.">${esc(project.script || '')}</textarea></label>${scriptImportMarkup('edit-script-file')}<div class="form-actions"><button type="submit">Enregistrer le texte</button><button type="submit" name="action" value="next" class="primary">Enregistrer et passer à la voix →</button></div>${project.voiceover_stale ? '<div class="banner">La voix correspond à une version antérieure du texte.</div>' : ''}</fieldset></form>`;
     const input = $('[name="text"]');
     bindScriptImport($('#script-form'), '[name="text"]');
     $('#script-form').onsubmit = (event) => { event.preventDefault(); const next = event.submitter?.value === 'next'; action(event.submitter, async () => { const text = validateScript(input.value); if (next && !text.trim()) throw new Error('Collez votre script pour passer à la voix.'); await api(`/api/workspace/projects/${encode(project.id)}/script`, { method: 'PUT', body: { text } }); dirty = false; if (next) location.hash = `/video/${encode(project.id)}/voix`; else await route(); }, 'Texte enregistré.'); };
+    const writerForm = $('#script-writer-form');
+    if (writerForm) writerForm.onsubmit = (event) => {
+      event.preventDefault();
+      action(event.submitter, async () => {
+        if (input.value !== (project.script || '')) throw new Error('Enregistrez le texte collé ou modifié avant de demander un brouillon.');
+        const fields = new FormData(writerForm);
+        await api(`/api/workspace/projects/${encode(project.id)}/script/generate`, {method:'POST',body:{title:fields.get('writing_title'),minutes:Number(fields.get('writing_minutes')),brief:fields.get('writing_brief'),script_hash:project.script_hash}});
+        dirty = false; await route();
+      }, 'Écriture lancée.');
+    };
+    const applyDraft = $('#apply-script-draft');
+    if (applyDraft) applyDraft.onclick = () => action(applyDraft, async () => {
+      if (input.value !== (project.script || '')) throw new Error('Enregistrez votre texte avant d’utiliser le brouillon.');
+      await api(`/api/workspace/projects/${encode(project.id)}/script/apply-draft`, {method:'POST',body:{draft_id:draft.id,script_hash:project.script_hash}});
+      dirty = false; await route();
+    }, 'Brouillon enregistré comme script.');
   }
   function renderVoice() {
     const voice = project.voiceover;

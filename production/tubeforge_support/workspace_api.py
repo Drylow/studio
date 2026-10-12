@@ -577,8 +577,9 @@ def _full(p):
     out["technical_ready"] = not out["technical_issues"]
     ready = scenes_verified and out["technical_ready"] and scopes["voiceover"]["state"] == "verified"
     out["publication_ready"] = bool(ready and scopes["render"]["state"] == "verified")
-    from . import workspace_generation, workspace_planning
+    from . import workspace_generation, workspace_planning, workspace_writing
     out["can_prepare_images"] = workspace_planning.allowed(p)
+    out["can_write_script"] = workspace_writing.allowed(p)
     out["workspace_batch"] = workspace_generation.batch_status(p)
     out["generation_confirmation"] = _generation_confirmation(p)
     out["script_hash"] = _hash(p.get("script") or "")

@@ -9,6 +9,7 @@ Etat au 12 octobre 2026. Lire `../../README_REPRISE.md` pour le travail editoria
 | `workspace.html`, `workspace.js`, `workspace.css` | Interface actuelle, pages chaine/projet, script colle, progression et outils avances |
 | `workspace_api.py`, `workspace_management.py` | Donnees et operations du workspace, gestion des chaines/styles/projets |
 | `workspace_voice.py` | Parcours de voix, fournisseurs et suivi des jobs |
+| `workspace_writing.py`, `scriptwriting/` | Ecriture Survivor depuis un titre : CLI Proxy, Faceless OS et ancres reelles, revision et bible de continuite |
 | `workspace_planning.py` | Preparation des plans/prompting du parcours general ; ne pas l'utiliser pour reecrire des prompts diriges par Codex |
 | `workspace_generation.py` | Generation individuelle et lot, test des trois premieres images, suite, stop, routes de rendu |
 | `workspace_characters.py` | References et variantes des personnages |
@@ -61,3 +62,11 @@ Dans Styles, ouvrir un style puis **References personnages**. Importer une ou pl
 Routes locales : `POST /api/workspace/management/styles/{sid}/characters` (multipart, images et fiche), `PUT /api/workspace/management/styles/{sid}/characters` (fiche, principal et validation). Les fichiers sont conserves, les variantes existantes ne sont pas ecrasees. Les nouveaux projets figent leur casting dans `style_cast_snapshot`; les plans n'envoient que les identites presentes, via le moteur `workspace_characters` existant.
 
 Les deux styles Survivor ont leurs personnages principaux deja importes. Les regler/editer ici ne lance aucune generation. Import initial reproductible avec `../tubeforge_survivor_styles.py`, sans seed global ni changement des autres styles. Le raccourci se recree avec `../tubeforge_shortcut.ps1`.
+
+## Titre vers script
+
+L'etape Texte expose l'ecriture via le CLI Proxy pour les deux styles Survivor, en anglais. Deux calls sur le modele texte selectionne/fixe au projet : draft puis revision selon les cinq fichiers Faceless OS et les trois transcriptions reelles chargees depuis `STUDIO_ROOT`. Un troisieme call de redaction peut ajuster la longueur mesuree ; maximum trois, pas de retry de transport ni de hedge automatique. Un texte encore hors duree est conserve en brouillon avec un probleme signale, sans adoption automatique. Les prompts publics sont dans `scriptwriting/`; aucune cle ni nom de modele n'y est fige. Les documents de skills servent de methode, mais la fenetre de mots demandee et le format JSON/narration pure ont priorite sur leurs templates de longue video.
+
+Le projet vide sans medias recoit le texte automatiquement si la revue ne signale pas de probleme. Un projet deja ecrit conserve son texte et recoit un brouillon. L'adoption refuse les medias existants et les empreintes de texte perimees. Voix/images ne suivent pas automatiquement. L'audit du modele reste distinct des validations humaines. Scripts, bibles, audits et requests sont sauves dans `script-generations/` du projet prive.
+
+Routes `POST /api/workspace/projects/{pid}/script/generate` et `.../script/apply-draft`. Tests : `workspace_writing_tests.py`, deployes vers `tests/test_workspace_writing.py`. Le deploy copie aussi le dossier `scriptwriting/`. Le code d'ecriture n'autorise pas la preparation automatique des images de styles Codex, ni l'ecriture sur les cinq profils historiques.
