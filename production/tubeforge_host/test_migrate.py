@@ -57,7 +57,7 @@ def test_team_upgrade_keeps_credentials_media_and_existing_attribution(tmp_path)
     migrate(home)
     assert not (home/'accounts').exists()
     assert json.loads((home/'config/users.json').read_text())['admin']['password_hash']==original_hash
-    updated=json.loads(project.read_text());assert updated=={**original,'owner_id':'admin'}
+    updated=json.loads(project.read_text());assert updated=={**original,'owner_id':'admin','owner_name':'Studio owner'}
     assert json.loads(another.read_text())['owner_id']=='bob'
     assert video.read_bytes()==b'media fixture'
     assert json.loads(style.read_text())['name']=='My custom style'

@@ -35,6 +35,11 @@ def deploy(root, seed=True):
     # Patch upgraded installations too; the portable base contains this already.
     replace_once(root, 'app/store.py', '        "id": pid,\n',
                  '        "id": pid,\n        "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),\n')
+    if '"owner_name":' not in (root / 'app/store.py').read_text(encoding='utf-8'):
+        replace_once(root, 'app/store.py',
+                     '        "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),\n',
+                     '        "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),\n'
+                     '        "owner_name": __import__(__package__ + ".workspace_identity", fromlist=["current_name"]).current_name(),\n')
     duplicate = root / 'app/store.py'
     source = duplicate.read_text(encoding='utf-8')
     if "from .workspace_identity import current_owner" not in source:

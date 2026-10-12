@@ -627,7 +627,7 @@ def _summary(p):
     full = _full(p) if p.get("codex_directed") else p | {
         "publication_ready": False, "technical_ready": False, "technical_issues": [],
         "running": pipeline.is_running(p["id"]), "duration_info": _duration_info(p)}
-    keys = ("id", "owner_id", "title", "profile_id", "channel_id", "style_id", "style_name", "created", "updated",
+    keys = ("id", "owner_id", "owner_name", "title", "profile_id", "channel_id", "style_id", "style_name", "created", "updated",
             "archived", "steps", "error", "running", "review_state", "publication_ready", "model_snapshot",
             "target_duration_seconds", "duration_minutes", "duration_info", "workspace_queue", "render", "technical_ready", "technical_issues")
     return {k: full.get(k) for k in keys} | {"owner_id": owner_of(p), "thumb": store.thumbnail_path(p), "scenes": len(p.get("scenes", [])),

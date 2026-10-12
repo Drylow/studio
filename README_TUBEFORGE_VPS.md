@@ -12,7 +12,7 @@ can use every TubeForge capability, including settings, shared channels/styles,
 character references, generation, verification and exports. TubeForge adds no
 owner/admin/worker permission gates. **My videos** shows the member’s own videos;
 **Team videos** lets any member open and edit all team productions. Existing
-videos belong to the portal’s `admin` identity. A copied video belongs to its creator.
+videos are mapped to the existing studio owner’s portal identity. A copied video belongs to its creator.
 
 Channels/styles are a shared TubeForge library, not a copy per member. They are
 not duplicated into the portal’s separate script/voice channel database. Each
