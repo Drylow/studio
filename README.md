@@ -1,5 +1,8 @@
 # Edgerunners Studio
 
+
+**Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
+
 **Reprise Survivor et TubeForge sur un autre compte : lire [README_REPRISE.md](README_REPRISE.md).**
 Etat de ce travail au 12 octobre 2026 : deux nouveaux projets, scripts et references,
 maintenance de TubeForge et sauvegarde locale. Les autres projets du studio

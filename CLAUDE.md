@@ -1,5 +1,8 @@
 # Edgerunners Studio — guide pour Claude (à lire en entier avant de travailler)
 
+
+**Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
+
 **Pour la reprise Survivor/TubeForge du 12 octobre 2026 : lire aussi `README_REPRISE.md`.**
 Ce document fixe les decisions et fichiers de ce chat, ainsi que la sauvegarde privee.
 Conserver les regles generales et les etats des autres projets ci-dessous ;

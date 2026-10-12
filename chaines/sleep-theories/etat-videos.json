@@ -1,0 +1,115 @@
+{
+  "updated_date": "2026-10-12",
+  "timezone": "Europe/Paris",
+  "scope": [
+    "Deep Void Theories",
+    "Quiet Paradox"
+  ],
+  "quiet_rotation": [
+    "Silo",
+    "FROM",
+    "Severance"
+  ],
+  "external_creation_tool": {
+    "name": "Ultravid",
+    "type": "website",
+    "confirmed_by": "user",
+    "url": null,
+    "project_ids": null,
+    "credentials_included": false
+  },
+  "videos": [
+    {
+      "id": "deep-sith",
+      "channel": "Deep Void Theories",
+      "title": "The Entire History of the Sith Explained to Fall Asleep To | Star Wars Lore",
+      "status": "uploaded_draft_last_seen",
+      "evidence": "YouTube Studio screenshot in chat",
+      "scheduled_date": null,
+      "thumbnail": "deep-void/miniatures/sith-acceptee.jpg",
+      "thumbnail_status": "user_accepted"
+    },
+    {
+      "id": "deep-leto",
+      "channel": "Deep Void Theories",
+      "title": "The Entire Story of Leto II, God Emperor of Dune Explained to Fall Asleep To | Dune Lore",
+      "status": "published_last_seen",
+      "published_date": "2026-10-10",
+      "duration_seconds": 9189,
+      "evidence": "YouTube Studio screenshot in chat: 2:33:09, public",
+      "thumbnail": "deep-void/miniatures/leto-ii-utilisee.jpg",
+      "thumbnail_status": "matches_published_screenshot"
+    },
+    {
+      "id": "deep-vader",
+      "channel": "Deep Void Theories",
+      "title": "The Tragic Life of Darth Vader Explained to Fall Asleep To | Star Wars Lore",
+      "status": "uploaded_draft_last_seen",
+      "evidence": "YouTube Studio screenshot in chat",
+      "scheduled_date": null,
+      "thumbnail": "deep-void/miniatures/vador-acceptee.jpg",
+      "thumbnail_status": "user_accepted"
+    },
+    {
+      "id": "deep-machines",
+      "channel": "Deep Void Theories",
+      "title": "The War Against the Thinking Machines Explained to Fall Asleep To | Dune Lore",
+      "status": "upload_announced_by_user",
+      "evidence": "User: Je l'upload; later asks for copy while scheduling",
+      "upload_finished": null,
+      "scheduled_date": null,
+      "thumbnail": "deep-void/miniatures/thinking-machines-proposition.jpg",
+      "thumbnail_status": "delivered_proposal_final_selection_unconfirmed"
+    },
+    {
+      "id": "quiet-silo",
+      "channel": "Quiet Paradox",
+      "rotation_position": 1,
+      "title": "2 Hours of Silo's Biggest Mysteries & Theories to Fall Asleep To",
+      "status": "published_last_seen",
+      "published_date": "2026-10-11",
+      "duration_seconds": 10531,
+      "views_at_screenshot": 55,
+      "comments_at_screenshot": 1,
+      "evidence": "YouTube Studio screenshot shared on 2026-10-12: 2:55:31, public",
+      "script_words": 21321,
+      "script_chapters": 22,
+      "thumbnail": "quiet-paradox/miniatures/silo-reference.jpg"
+    },
+    {
+      "id": "quiet-from",
+      "channel": "Quiet Paradox",
+      "rotation_position": 2,
+      "title": "2 Hours of FROM's Biggest Mysteries & Theories to Fall Asleep To",
+      "status": "creation_in_progress_user_report",
+      "target_duration_seconds": 9000,
+      "duration_choice_confirmed": true,
+      "evidence": "User confirmed 2 h 30 then creation in own tool",
+      "project_url": null,
+      "script_export": null,
+      "video_export": null,
+      "thumbnail_status": "not_created"
+    },
+    {
+      "id": "quiet-severance",
+      "channel": "Quiet Paradox",
+      "rotation_position": 3,
+      "title": "2 Hours of Severance's Biggest Mysteries & Theories to Fall Asleep To",
+      "status": "next_title_and_duration_proposed",
+      "target_duration_seconds": 9000,
+      "duration_choice_confirmed": false,
+      "creation_started": null,
+      "evidence": "User asked to move on to Severance; assistant supplied title and 2 h 30; no launch confirmation",
+      "project_url": null,
+      "script_export": null,
+      "video_export": null,
+      "thumbnail_status": "not_created"
+    }
+  ],
+  "notes": [
+    "Latest observed or reported states, not a live Studio synchronization",
+    "No final MP4 exports are included",
+    "Do not relaunch FROM",
+    "Quiet handle and website project links need confirmation"
+  ]
+}
