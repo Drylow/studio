@@ -1,0 +1,1354 @@
+{
+  "author": "Codex",
+  "provider": "google_flow_via_useapi",
+  "model_source": "private_runtime_configuration",
+  "voice_duration_seconds": 950.0,
+  "voice_before_images": true,
+  "upscale": false,
+  "assets": {
+    "milo": {
+      "role": "character",
+      "name": "Milo",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/milo.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/milo.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "e1afc2dde16c0fa8b12470d6facb1059cebd8d2fc41f6fe7e902f5d93d430005",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "oak": {
+      "role": "character",
+      "name": "Professor Oak",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/oak.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/oak.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "9d3717f8952fd495234d6b0a25fdc9087f35aa78369c0094a3c39120633c3fae",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "brock": {
+      "role": "character",
+      "name": "Brock",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/brock.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/brock.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "19f2e3f6784e37cab2415997b2da3835a9ef56bbe466b134622fd0d8cfdd97c8",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "misty": {
+      "role": "character",
+      "name": "Misty",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/misty.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/misty.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "34a2cde950af18d46619121145c9434b4140701bc9753bfcd1548f6738785beb",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "sabrina": {
+      "role": "character",
+      "name": "Sabrina",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/sabrina.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/sabrina.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "e750dd1bf9350363d788d2177801510727f7468340004e8286450410099590af",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "giovanni": {
+      "role": "character",
+      "name": "Giovanni",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/giovanni.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/giovanni.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "36800ccc336962cb8301faf80ac397443f5d1fada61607d27485884bffb60219",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "lorelei": {
+      "role": "character",
+      "name": "Lorelei",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/lorelei.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/lorelei.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "14b85b7e0721ccf66fc0cd6e0a7d75c32e0b813df49592a519fd56666f2d4390",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "bruno": {
+      "role": "character",
+      "name": "Bruno",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/bruno.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/bruno.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "40e5d44e8e3ab8e126289a10eeedd1aa4224e6cc01a38b48c79f180f4e4e8537",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "agatha": {
+      "role": "character",
+      "name": "Agatha",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/agatha.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/agatha.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ffae098cbb77ffc665e641200c447c40ba7282437380f6b1e329c36421f852f2",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "lance": {
+      "role": "character",
+      "name": "Lance",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/lance.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/lance.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "7b5c170980eb1a66fa6e1f49681e37d48738b074f940727100833b782f2aa3bc",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "rocket-grunt": {
+      "role": "character",
+      "name": "Rocket grunt",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/rocket-grunt.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/rocket-grunt.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "fba6b28aa8e320e13c4f564e2d830a0f2c27668088c8fea3c06aa025e202d921",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands."
+    },
+    "jonah": {
+      "role": "character",
+      "name": "Jonah",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/jonah.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/jonah.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "c47e8be750f425a6ef85a75a5f5c448565d77961bf2c894bba6619a975ace889",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "beginner": {
+      "role": "character",
+      "name": "Beginner",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/beginner.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/beginner.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "8171f47d72f3a02cce40b7f3fb2bde282ea4d21b8c2831f2484553b217287342",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "trader": {
+      "role": "character",
+      "name": "Trader",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/trader.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "style-only",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/trader.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "0d4870d18715c2115fc0464b069aca55e82b85fece7cdd30356cebceeb7008e2",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "squirtle": {
+      "role": "character",
+      "name": "Squirtle",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/squirtle.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/squirtle.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "805942489cfdbcba651bb6442d176cbed36f647e4c3c5d74b1568593a8abf00f",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "wartortle": {
+      "role": "character",
+      "name": "Wartortle",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/wartortle.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/wartortle.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "d9a6b77676336f25ddcddadd5ee376a1403587d2c084deea9e7fd2cb3a7a697d",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "blastoise": {
+      "role": "character",
+      "name": "Blastoise",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/blastoise.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/blastoise.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "4ac027d033f0465333e17106a227fd3fc9b17fa1c8592e702992b94b8fc55fd1",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "charmeleon": {
+      "role": "character",
+      "name": "Charmeleon",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/charmeleon.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/charmeleon.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "7835d9e9c83837138b5f31b4136468d1c66cf907b6f385a89e0992d0649f85e7",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons."
+    },
+    "charizard": {
+      "role": "character",
+      "name": "Charizard",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/charizard.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/charizard.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "a3b092a541f05d9bce25833e420af786e3823bce08da81203e367a609af20d91",
+      "review_state": "rejected",
+      "review_notes": "Ambiguous extra orange tail loop behind left leg. Replaced explicitly by charizard-v2."
+    },
+    "pidgey": {
+      "role": "character",
+      "name": "Pidgey",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pidgey.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pidgey.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "76c254ec0d369d3e9a7ff25088bc1f61aa1f18ac9751707c6c73737192331a0f",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "pidgeotto": {
+      "role": "character",
+      "name": "Pidgeotto",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pidgeotto.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pidgeotto.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "441dfc3b6f275068b2090074dfa6a93a4563f292fa27823363cd0a4b46912e74",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "pidgeot": {
+      "role": "character",
+      "name": "Pidgeot",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pidgeot.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pidgeot.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "55b39f34739a6b5dc5ea4421d12e7e37cdc33694b87d496a875675e864956b15",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "poliwag": {
+      "role": "character",
+      "name": "Poliwag",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/poliwag.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/poliwag.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "dc6677c0d7e4f81c54d1e1a4b44b30eed82deef35c3e425babab2f3aad350d08",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "poliwhirl": {
+      "role": "character",
+      "name": "Poliwhirl",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/poliwhirl.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/poliwhirl.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "550c30d9b5492bf274a7c458e71ef0a22178a7093ddba111f659cb53e99d64fd",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "onix": {
+      "role": "character",
+      "name": "Onix",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/onix.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/onix.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "28c4d9ff0d9f3276da69d4507d3a4e8d78166459144b0f3ad3e25df07a3812a1",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "psyduck": {
+      "role": "character",
+      "name": "Psyduck",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/psyduck.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/psyduck.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "be777cd1fd800c432dd1082b03eef7e338f3817065499a6360e78cbd56404461",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "raichu": {
+      "role": "character",
+      "name": "Raichu",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/raichu.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/raichu.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "e9da06ffe02aeae86c859d1a59d8bb66a8fd1ef052793163d473ac9bebfd0e55",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "alakazam": {
+      "role": "character",
+      "name": "Alakazam",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/alakazam.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/alakazam.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "c215ef9f6d057db7dfca6b4bb77b36439944ed1c193dac4b45b46377661917d9",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "lapras": {
+      "role": "character",
+      "name": "Lapras",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/lapras.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/lapras.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "3ecedc3ae811748e9dc870ed0ca05ada4aaf9b17989633a8bd620a647839ba5d",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "machamp": {
+      "role": "character",
+      "name": "Machamp",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/machamp.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/machamp.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "186978c09c3b3426addd32a75b2034e5bdc72aba1a091a851092208bd5997bad",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "gengar": {
+      "role": "character",
+      "name": "Gengar",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/gengar.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/gengar.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "fa3c269ebd0408948f0c9b6d329e1d3a2c7a3b00d19bf6733b8d20f51f678d66",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "dragonite": {
+      "role": "character",
+      "name": "Dragonite",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/dragonite.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/dragonite.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "32d7af52578cc2b85a74824e274e009575f79051040e1d9e65e9fc78a8b88fd9",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "koffing": {
+      "role": "character",
+      "name": "Koffing",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/koffing.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/koffing.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "0b0ebced7328745cea3a24b133c83756cf587040d247b1a0de890008398fc3c8",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "eevee": {
+      "role": "character",
+      "name": "Eevee",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/eevee.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/eevee.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "7f6bf1f1db7c36f1805bd38375bd68f8f9b7280e606dab8318a8ee58f7e35c0d",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "bulbasaur": {
+      "role": "character",
+      "name": "Bulbasaur",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/bulbasaur.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/bulbasaur.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "79ccd8ffdb449ea3288b016ea6e85d7bd94d28fa68c611b61233eceaa1947ade",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "rhyhorn": {
+      "role": "character",
+      "name": "Rhyhorn",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/rhyhorn.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "style-only",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/rhyhorn.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "d285f60590ae31ea3a66f5573c776b156280a2db1aae5935d27fa33a8ea67784",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding."
+    },
+    "oak-lab": {
+      "role": "location",
+      "name": "Oak laboratory",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/oak-lab.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/oak-lab.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "b274b97023f79f93574e04d6419d3507ab67df99de468fdf35441d2d48547984",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "pallet-court": {
+      "role": "location",
+      "name": "Pallet Town practice court",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pallet-court.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pallet-court.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "fc45bd454a0bbe645a678cfad1ed20a5e229fafd456a2e157d4e8bb84a00c62e",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "route-fork": {
+      "role": "location",
+      "name": "Route north from Viridian",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/route-fork.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/route-fork.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ba8bf3e8de14f63516d7baf7a9851e4bf95ab5199a66b61f5e9586e31dc0c67e",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "campsite-day": {
+      "role": "location",
+      "name": "Forest campsite daylight",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/campsite-day.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/campsite-day.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "36895ab370f5d504c462d83f022119e813613bb40a7912fe8bc93f1922c48751",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "pond": {
+      "role": "location",
+      "name": "Pewter training pond",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pond.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pond.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "b810dbea4f1d49a97da43643d44a30347d947f019c82408520890deddfd93043",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "pewter-gym": {
+      "role": "location",
+      "name": "Pewter Gym",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pewter-gym.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pewter-gym.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "87b342638b57048b22b1a294e1cb7bd37aedcee8fda77a9c4295b91c05059fad",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "cerulean-gym": {
+      "role": "location",
+      "name": "Cerulean Gym",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/cerulean-gym.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/cerulean-gym.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "a608f8e71feefa6f979ca83f7d0849e233eaf61427037a6ddec1f625ea3fd4f6",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "electric-court": {
+      "role": "location",
+      "name": "Electric Gym training hall",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/electric-court.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/electric-court.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "1394379d22c6d2a39e9d0d5eb78cc7c1e3d6c5fcc68bedb7c034c1eb67c71d4a",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "celadon-street": {
+      "role": "location",
+      "name": "Celadon side street",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/celadon-street.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/celadon-street.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "90ddab752aac62346d5213660f6f883df5523eab6d4675c84b01f8763ea519d2",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "celadon-center": {
+      "role": "location",
+      "name": "Celadon Center",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/celadon-center.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/celadon-center.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ddd676904565e67c34dbdfaf92c56c51a896b52a6359ae8116ab93677de34fc8",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT."
+    },
+    "saffron-gym": {
+      "role": "location",
+      "name": "Saffron Gym",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/saffron-gym.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/saffron-gym.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "04ff3141776990de677d2196c4271ef73880d62a8655f88b0b21a26ca0d9c8f5",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "viridian-gym": {
+      "role": "location",
+      "name": "Viridian Gym",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/viridian-gym.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/viridian-gym.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "e1bacad609910af273e58200c913463ba989618363857119a56cf81118401023",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "victory-road": {
+      "role": "location",
+      "name": "Victory Road",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/victory-road.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/victory-road.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "9277a2e789274fd98f16f974fd75a7505c1e2c4253a58c6dbf2173a4f1c90ec0",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "league-foyer": {
+      "role": "location",
+      "name": "League entry foyer",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/league-foyer.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/league-foyer.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "5ed37b1217cf528728f648dc9c89d4b98a087c156d6fcc812aa4a89f094dfc32",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "league-arena": {
+      "role": "location",
+      "name": "League battle arena",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/league-arena.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/league-arena.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "a6c6accc5dbaa56e126a3be547b8a2c4a70b3ce4b50e0779655484171356bcd4",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "hall-of-fame": {
+      "role": "location",
+      "name": "Hall of Fame recording room",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/hall-of-fame.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/hall-of-fame.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "14f8ed16bf56824ee1c9115b10163badc3ccc9f27b42be0e0bb092dcfd456254",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "saffron-exterior": {
+      "role": "location",
+      "name": "Saffron Gym courtyard",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/saffron-exterior.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/saffron-exterior.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ff336dd738e609b2c1735ac67f26db207161b8019c19783eb229195edde9558a",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "viridian-exterior": {
+      "role": "location",
+      "name": "Viridian Gym courtyard",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/viridian-exterior.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/viridian-exterior.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "cd7e6f383f943dfe24f38b98cdcc463264adf58a5ff75c3048935f969974319c",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "lorelei-arena": {
+      "role": "location",
+      "name": "Lorelei League chamber",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/lorelei-arena.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/lorelei-arena.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "9ffc3270d42ac4411cbe2123b3eab2c0b12b8772e930e1e4396efc5a62a0a253",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "bruno-arena": {
+      "role": "location",
+      "name": "Bruno League chamber",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/bruno-arena.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/bruno-arena.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "85a9147723410400237be33a567764810c97286c3a47822680430c4fed2fc1b1",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "agatha-arena": {
+      "role": "location",
+      "name": "Agatha League chamber",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/agatha-arena.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/agatha-arena.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "16c2595e26a6eb299936a9573d84f5aedcbd2c58c9ad3b25b923f8ade6588133",
+      "review_state": "codex_inspected",
+      "review_notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline."
+    },
+    "lance-arena": {
+      "role": "location",
+      "name": "Lance League chamber",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/lance-arena.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/lance-arena.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "cc8d7aa9c4bebc8c9d76ce38b7e883eed9743533cfb537ba1e320e4ad5144636",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing."
+    },
+    "badge-case": {
+      "role": "object",
+      "name": "Badge case",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/badge-case.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/badge-case.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "6350243b49608d897aadae7cc44a2849e5128ad576ddc0f10b3e0b899f131145",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing."
+    },
+    "pokedex": {
+      "role": "object",
+      "name": "Pokedex",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pokedex.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "style-only",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pokedex.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "5329e4508c8ddb9cedab67e2507bad12a82efafac0cc9d19a34c90e175da9d90",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing."
+    },
+    "charizard-v2": {
+      "role": "character",
+      "name": "Charizard",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/charizard-v2.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-production/charizard.jpg",
+          "role": "targeted-edit",
+          "sha256": "a3b092a541f05d9bce25833e420af786e3823bce08da81203e367a609af20d91"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/charizard-v2.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "82c912b685322029e6a1cb17e229dade5775955e6d46f3455a9c553fc4b42ecd",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT."
+    },
+    "campsite-night": {
+      "role": "location",
+      "name": "Forest campsite night",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/campsite-night.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-production/campsite-day.jpg",
+          "role": "location-light-variant",
+          "sha256": "36895ab370f5d504c462d83f022119e813613bb40a7912fe8bc93f1922c48751"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/campsite-night.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "7741d25cee4feb20f192d6fd749d935edf33c49b616ce4d5a44129438902225c",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT."
+    },
+    "route-practice-court": {
+      "role": "location",
+      "name": "Roadside practice court",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/route-practice-court.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-production/pallet-court.jpg",
+          "role": "style-only",
+          "sha256": "fc45bd454a0bbe645a678cfad1ed20a5e229fafd456a2e157d4e8bb84a00c62e"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/route-practice-court.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "f6fb347812645cd0a6b114471acc4171e31b26668b6e1fb1645b4c800ec86a56",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT."
+    },
+    "pewter-center": {
+      "role": "location",
+      "name": "Pewter Center waiting room",
+      "request_started": true,
+      "prompt_file": "output/imagegen/oddly-fictional-pokemon-production/prompts/references/pewter-center.txt",
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-production/celadon-center.jpg",
+          "role": "style-only",
+          "sha256": "ddd676904565e67c34dbdfaf92c56c51a896b52a6359ae8116ab93677de34fc8"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-production/pewter-center.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "9720b3d9fc54d263131bc01f4aff1385dc4c2dcfb5131b1f03c2de97d511b73e",
+      "review_state": "codex_inspected",
+      "review_notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT."
+    }
+  }
+}

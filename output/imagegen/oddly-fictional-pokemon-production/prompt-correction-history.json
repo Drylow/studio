@@ -1,0 +1,19 @@
+[
+  {
+    "2": {
+      "reason": "Reviewed output elongated Milo into roughly 4.5 heads; keep exact compact reference proportions.",
+      "prefix": "PRIORITY POSITIVE DESIGN: Milo is a compact comic adult matching Image 2 EXACTLY: very large WHITE circular head, short green-jacket torso, short brown-trouser legs, total height only THREE head diameters. Show him front three-quarter, stepping toward the LEFT exit while looking back toward the camera, with Squirtle at his boots. Do not shrink his head for a distant back view. All head/neck/hand fill is WHITE. One Milo, one Squirtle."
+    },
+    "3": {
+      "reason": "Reviewed output turned cropped human face peach and stopped carrying Charmander.",
+      "prefix": "PRIORITY SHOT: A medium close shot of Nico CARRYING the ONE tired Charmander horizontally across both WHITE mitten forearms. INCLUDE Nicos entire oversized PERFECT WHITE CIRCULAR face and red cap in the upper-left frame, dot eyes and tiny line mouth only. His head is a flat white paper circle, not an anime human face. Charmanders eyes closed, small tail flame safely to the right clear of sleeves. Reference 2 is Nico; copy its WHITE head and compact short torso exactly. The background is only a portion of the Center awning. No standing Charmander, no peach skin, no human ears or realistic jaw."
+    }
+  },
+  {
+    "3": {
+      "replace": true,
+      "reason": "Second attempt produced an unwanted split panel; replace long prompt with a single explicit horizontal close detail.",
+      "prefix": "Create ONE single horizontal 16:9 cinematic cartoon film frame. Camera close on the SINGLE tired Charmander held horizontally in Nicos TWO bright WHITE mitten hands. Nico wears the blue long-sleeve jacket from Image 2. His torso fills the LEFT edge; his head is ENTIRELY OUTSIDE the upper crop. Charmanders shut-eyed orange head is at LEFT CENTER, its cream belly and body extend horizontally to RIGHT CENTER, and its ONE continuous curled tail with ONE SMALL flame is on the RIGHT, safely away from clothing. One hand supports chest, other hand supports hindquarters. The small red awning and cream wall from location Image 1 are visible in the rear. Crisp black outlines, matte simple colour. Keep Charmander tiny rather than a large dragon, no wings. ONE continuous full-width image with ONE Charmander and ONE torso, no panel lines, second view, border, text or inset. Reference 1 supplies the setting, reference 2 Nicos clothing and WHITE mittens, reference 3 Charmanders identity. Narration moment: You nearly lost your first partner."
+    }
+  }
+]

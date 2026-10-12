@@ -16,12 +16,16 @@
   "proxy_editorial_verdict": "PASS",
   "proxy_edits_requested": 0,
   "policy_guarantee": false,
-  "duration_estimated_only": true,
-  "actual_voice_duration_checked": false,
+  "duration_estimated_only": false,
+  "actual_voice_duration_checked": true,
   "pilot_images": 3,
   "pilot_frames_exact_16_9": true,
   "visual_review_by_codex": true,
-  "user_hd_review_pending": true,
-  "full_storyboard_ready": false,
-  "video_rendered": false
+  "user_hd_review_pending": false,
+  "full_storyboard_ready": true,
+  "video_rendered": false,
+  "actual_voice_duration_seconds": 950,
+  "aligned_shots": 157,
+  "acoustic_alignment_verification": "voice-alignment-verification.json",
+  "remaining_images_state": "generation_started"
 }

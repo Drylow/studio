@@ -1,0 +1,446 @@
+{
+  "reviewer": "Codex",
+  "assets": {
+    "milo": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/milo.jpg",
+      "sha256": "e1afc2dde16c0fa8b12470d6facb1059cebd8d2fc41f6fe7e902f5d93d430005",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "oak": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/oak.jpg",
+      "sha256": "9d3717f8952fd495234d6b0a25fdc9087f35aa78369c0094a3c39120633c3fae",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "brock": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/brock.jpg",
+      "sha256": "19f2e3f6784e37cab2415997b2da3835a9ef56bbe466b134622fd0d8cfdd97c8",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "misty": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/misty.jpg",
+      "sha256": "34a2cde950af18d46619121145c9434b4140701bc9753bfcd1548f6738785beb",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "sabrina": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/sabrina.jpg",
+      "sha256": "e750dd1bf9350363d788d2177801510727f7468340004e8286450410099590af",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "giovanni": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/giovanni.jpg",
+      "sha256": "36800ccc336962cb8301faf80ac397443f5d1fada61607d27485884bffb60219",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "lorelei": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/lorelei.jpg",
+      "sha256": "14b85b7e0721ccf66fc0cd6e0a7d75c32e0b813df49592a519fd56666f2d4390",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "bruno": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/bruno.jpg",
+      "sha256": "40e5d44e8e3ab8e126289a10eeedd1aa4224e6cc01a38b48c79f180f4e4e8537",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "agatha": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/agatha.jpg",
+      "sha256": "ffae098cbb77ffc665e641200c447c40ba7282437380f6b1e329c36421f852f2",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "lance": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/lance.jpg",
+      "sha256": "7b5c170980eb1a66fa6e1f49681e37d48738b074f940727100833b782f2aa3bc",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "rocket-grunt": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/rocket-grunt.jpg",
+      "sha256": "fba6b28aa8e320e13c4f564e2d830a0f2c27668088c8fea3c06aa025e202d921",
+      "notes": "Inspected on enlarged identity sheet: each is one compact fully clothed adult with a round uniformly white head, white hands, dot eyes and no hair or eyebrows. The specified outfit colours and accessories distinguish identities; no grey face rim, extra people or realistic skin. Glasses belong only to Lorelei, cane only to Agatha, red cape only to Lance. Small mitten/fold line detail remains on a few hands.",
+      "user_review": false
+    },
+    "jonah": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/jonah.jpg",
+      "sha256": "c47e8be750f425a6ef85a75a5f5c448565d77961bf2c894bba6619a975ace889",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "beginner": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/beginner.jpg",
+      "sha256": "8171f47d72f3a02cce40b7f3fb2bde282ea4d21b8c2831f2484553b217287342",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "trader": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/trader.jpg",
+      "sha256": "0d4870d18715c2115fc0464b069aca55e82b85fece7cdd30356cebceeb7008e2",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "squirtle": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/squirtle.jpg",
+      "sha256": "805942489cfdbcba651bb6442d176cbed36f647e4c3c5d74b1568593a8abf00f",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "wartortle": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/wartortle.jpg",
+      "sha256": "d9a6b77676336f25ddcddadd5ee376a1403587d2c084deea9e7fd2cb3a7a697d",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "blastoise": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/blastoise.jpg",
+      "sha256": "4ac027d033f0465333e17106a227fd3fc9b17fa1c8592e702992b94b8fc55fd1",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "charmeleon": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/charmeleon.jpg",
+      "sha256": "7835d9e9c83837138b5f31b4136468d1c66cf907b6f385a89e0992d0649f85e7",
+      "notes": "Inspected individually in enlarged sheet: humans have compact proportions, flat white circle heads and white hands, distinct outfits, no duplicate actors. Starter turtle stages and red Charmeleon have the correct silhouette and one tail; Blastoise has two attached cannons.",
+      "user_review": false
+    },
+    "pidgey": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pidgey.jpg",
+      "sha256": "76c254ec0d369d3e9a7ff25088bc1f61aa1f18ac9751707c6c73737192331a0f",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "pidgeotto": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pidgeotto.jpg",
+      "sha256": "441dfc3b6f275068b2090074dfa6a93a4563f292fa27823363cd0a4b46912e74",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "pidgeot": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pidgeot.jpg",
+      "sha256": "55b39f34739a6b5dc5ea4421d12e7e37cdc33694b87d496a875675e864956b15",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "poliwag": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/poliwag.jpg",
+      "sha256": "dc6677c0d7e4f81c54d1e1a4b44b30eed82deef35c3e425babab2f3aad350d08",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "poliwhirl": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/poliwhirl.jpg",
+      "sha256": "550c30d9b5492bf274a7c458e71ef0a22178a7093ddba111f659cb53e99d64fd",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "onix": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/onix.jpg",
+      "sha256": "28c4d9ff0d9f3276da69d4507d3a4e8d78166459144b0f3ad3e25df07a3812a1",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "psyduck": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/psyduck.jpg",
+      "sha256": "be777cd1fd800c432dd1082b03eef7e338f3817065499a6360e78cbd56404461",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "raichu": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/raichu.jpg",
+      "sha256": "e9da06ffe02aeae86c859d1a59d8bb66a8fd1ef052793163d473ac9bebfd0e55",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "alakazam": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/alakazam.jpg",
+      "sha256": "c215ef9f6d057db7dfca6b4bb77b36439944ed1c193dac4b45b46377661917d9",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "lapras": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/lapras.jpg",
+      "sha256": "3ecedc3ae811748e9dc870ed0ca05ada4aaf9b17989633a8bd620a647839ba5d",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "gengar": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/gengar.jpg",
+      "sha256": "fa3c269ebd0408948f0c9b6d329e1d3a2c7a3b00d19bf6733b8d20f51f678d66",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "machamp": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/machamp.jpg",
+      "sha256": "186978c09c3b3426addd32a75b2034e5bdc72aba1a091a851092208bd5997bad",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "dragonite": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/dragonite.jpg",
+      "sha256": "32d7af52578cc2b85a74824e274e009575f79051040e1d9e65e9fc78a8b88fd9",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "eevee": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/eevee.jpg",
+      "sha256": "7f6bf1f1db7c36f1805bd38375bd68f8f9b7280e606dab8318a8ee58f7e35c0d",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "bulbasaur": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/bulbasaur.jpg",
+      "sha256": "79ccd8ffdb449ea3288b016ea6e85d7bd94d28fa68c611b61233eceaa1947ade",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "rhyhorn": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/rhyhorn.jpg",
+      "sha256": "d285f60590ae31ea3a66f5573c776b156280a2db1aae5935d27fa33a8ea67784",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "koffing": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/koffing.jpg",
+      "sha256": "0b0ebced7328745cea3a24b133c83756cf587040d247b1a0de890008398fc3c8",
+      "notes": "Visually inspected enlarged reference sheet. One creature each, species-specific colours and distinct evolution silhouettes; Machamp correctly has four arms, Alakazam two spoons, Raichu one tail and Lapras one shell. Dragonite includes a generic outdoor backdrop, explicitly ignore backdrop for scene identity binding.",
+      "user_review": false
+    },
+    "oak-lab": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/oak-lab.jpg",
+      "sha256": "b274b97023f79f93574e04d6419d3507ab67df99de468fdf35441d2d48547984",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "pallet-court": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pallet-court.jpg",
+      "sha256": "fc45bd454a0bbe645a678cfad1ed20a5e229fafd456a2e157d4e8bb84a00c62e",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "campsite-day": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/campsite-day.jpg",
+      "sha256": "36895ab370f5d504c462d83f022119e813613bb40a7912fe8bc93f1922c48751",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "route-fork": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/route-fork.jpg",
+      "sha256": "ba8bf3e8de14f63516d7baf7a9851e4bf95ab5199a66b61f5e9586e31dc0c67e",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "pond": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pond.jpg",
+      "sha256": "b810dbea4f1d49a97da43643d44a30347d947f019c82408520890deddfd93043",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "pewter-gym": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pewter-gym.jpg",
+      "sha256": "87b342638b57048b22b1a294e1cb7bd37aedcee8fda77a9c4295b91c05059fad",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "cerulean-gym": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/cerulean-gym.jpg",
+      "sha256": "a608f8e71feefa6f979ca83f7d0849e233eaf61427037a6ddec1f625ea3fd4f6",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "electric-court": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/electric-court.jpg",
+      "sha256": "1394379d22c6d2a39e9d0d5eb78cc7c1e3d6c5fcc68bedb7c034c1eb67c71d4a",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "celadon-center": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/celadon-center.jpg",
+      "sha256": "ddd676904565e67c34dbdfaf92c56c51a896b52a6359ae8116ab93677de34fc8",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "celadon-street": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/celadon-street.jpg",
+      "sha256": "90ddab752aac62346d5213660f6f883df5523eab6d4675c84b01f8763ea519d2",
+      "notes": "Inspected full-frame location sheet: simple matte comic architecture, empty rooms and routes, no crowd or unnecessary skyline. Recorded actual geography: Oak desk RIGHT/window LEFT; campsite tent LEFT/log RIGHT/firepit central; pond water RIGHT; Pewter rear-left door/far-right platform; Cerulean pool RIGHT/walkway LEFT; Celadon counter LEFT and bench RIGHT.",
+      "user_review": false
+    },
+    "saffron-gym": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/saffron-gym.jpg",
+      "sha256": "04ff3141776990de677d2196c4271ef73880d62a8655f88b0b21a26ca0d9c8f5",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "viridian-gym": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/viridian-gym.jpg",
+      "sha256": "e1bacad609910af273e58200c913463ba989618363857119a56cf81118401023",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "victory-road": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/victory-road.jpg",
+      "sha256": "9277a2e789274fd98f16f974fd75a7505c1e2c4253a58c6dbf2173a4f1c90ec0",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "league-foyer": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/league-foyer.jpg",
+      "sha256": "5ed37b1217cf528728f648dc9c89d4b98a087c156d6fcc812aa4a89f094dfc32",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "league-arena": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/league-arena.jpg",
+      "sha256": "a6c6accc5dbaa56e126a3be547b8a2c4a70b3ce4b50e0779655484171356bcd4",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "hall-of-fame": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/hall-of-fame.jpg",
+      "sha256": "14f8ed16bf56824ee1c9115b10163badc3ccc9f27b42be0e0bb092dcfd456254",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "saffron-exterior": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/saffron-exterior.jpg",
+      "sha256": "ff336dd738e609b2c1735ac67f26db207161b8019c19783eb229195edde9558a",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "viridian-exterior": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/viridian-exterior.jpg",
+      "sha256": "cd7e6f383f943dfe24f38b98cdcc463264adf58a5ff75c3048935f969974319c",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "lorelei-arena": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/lorelei-arena.jpg",
+      "sha256": "9ffc3270d42ac4411cbe2123b3eab2c0b12b8772e930e1e4396efc5a62a0a253",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "bruno-arena": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/bruno-arena.jpg",
+      "sha256": "85a9147723410400237be33a567764810c97286c3a47822680430c4fed2fc1b1",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "agatha-arena": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/agatha-arena.jpg",
+      "sha256": "16c2595e26a6eb299936a9573d84f5aedcbd2c58c9ad3b25b923f8ade6588133",
+      "notes": "Inspected entire landscape references: distinct room palettes/layouts and simple grounded depth. League foyer bench LEFT/recovery RIGHT/rear doors; arena blue trainer side LEFT/red RIGHT; Hall desk LEFT/window RIGHT; Lorelei pool RIGHT; Bruno rack LEFT/rock RIGHT; Agatha door LEFT/two lamps RIGHT. No people, Pokemon clones, text or giant fantasy skyline.",
+      "user_review": false
+    },
+    "lance-arena": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/lance-arena.jpg",
+      "sha256": "cc8d7aa9c4bebc8c9d76ce38b7e883eed9743533cfb537ba1e320e4ad5144636",
+      "notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing.",
+      "user_review": false
+    },
+    "badge-case": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/badge-case.jpg",
+      "sha256": "6350243b49608d897aadae7cc44a2849e5128ad576ddc0f10b3e0b899f131145",
+      "notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing.",
+      "user_review": false
+    },
+    "pokedex": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pokedex.jpg",
+      "sha256": "5329e4508c8ddb9cedab67e2507bad12a82efafac0cc9d19a34c90e175da9d90",
+      "notes": "Visually inspected: Lance chamber has emerald court, LEFT high windows, RIGHT door, central red step; no dragon statue. Badge case has eight empty recesses in two rows of four. Pokedex is one closed red handheld, blue lens, blank dark panel, no writing.",
+      "user_review": false
+    },
+    "charizard-v2": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/charizard-v2.jpg",
+      "sha256": "82c912b685322029e6a1cb17e229dade5775955e6d46f3455a9c553fc4b42ecd",
+      "notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT.",
+      "user_review": false
+    },
+    "campsite-night": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/campsite-night.jpg",
+      "sha256": "7741d25cee4feb20f192d6fd749d935edf33c49b616ce4d5a44129438902225c",
+      "notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT.",
+      "user_review": false
+    },
+    "route-practice-court": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/route-practice-court.jpg",
+      "sha256": "f6fb347812645cd0a6b114471acc4171e31b26668b6e1fb1645b4c800ec86a56",
+      "notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT.",
+      "user_review": false
+    },
+    "pewter-center": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/pewter-center.jpg",
+      "sha256": "9720b3d9fc54d263131bc01f4aff1385dc4c2dcfb5131b1f03c2de97d511b73e",
+      "notes": "Visually inspected four variants: Charizard v2 has a single continuous RIGHT tail/flame and empty ground behind LEFT leg, two teal wings. Campsite night retains LEFT tent/bowls/central firepit/RIGHT log and tree layout. New roadside court and Pewter Center have distinct approved geometry; Pewter bench RIGHT/counter rear center/door LEFT.",
+      "user_review": false
+    }
+  }
+}

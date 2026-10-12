@@ -1,0 +1,12 @@
+{
+  "method": "Existing local acoustic model transcribes the actual 15:50 tempo-adjusted MP3 with word timestamps; mapped to authored text",
+  "audio_sha256": "c003563c5225c0a2976016eb6f2cb8e29e810504ac1ee8dd85b9137bca26549d",
+  "transcribed_words": 3093,
+  "authored_words": 3076,
+  "normalized_token_match_ratio": 0.9736,
+  "first_word": 0.0,
+  "last_word": 949.22,
+  "maximum_word_seconds": 1.0,
+  "duration": 950,
+  "voice_before_images": true
+}
