@@ -4,18 +4,20 @@
 (function () {
   const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const encode = encodeURIComponent;
-  const stateLabels = { idle: 'À préparer', queued: 'En file', pending: 'En attente', running: 'En cours', done: 'Terminé', error: 'Erreur', failed: 'Échec', verified: 'Vérifié', correct: 'À corriger', unreviewed: 'À vérifier', stale: 'À revérifier', blocked: 'Bloqué', queued_for_authoring: 'En file · texte à préparer', waiting_for_script: 'Texte à préparer', waiting_for_voiceover: 'Voix à préparer', waiting_for_scenes: 'Découpage à préparer', waiting_for_images: 'Images à préparer', ready_to_render: 'Vérifié · montage à préparer', awaiting_review: 'À vérifier', needs_correction: 'À corriger', rendered_awaiting_review: 'Rendu disponible · à vérifier', publication_ready: 'Validé pour publication' };
-  const stateLabel = (state) => stateLabels[state] || (state ? String(state) : 'Non renseigné');
-  Object.assign(stateLabels, { technical_review_required: 'Contrôle technique requis', rendered_qa_pending: 'Rendu disponible · contrôle en attente', legacy_readonly: 'Projet de l’atelier avancé' });
+  const base = typeof window !== 'undefined' ? (window.TUBEFORGE_BASE || '') : '';
+  const backendPath = path => base && !path.startsWith(base + '/') ? base + path : path;
+  const stateLabels = { idle: "Not started", queued: "Queued", pending: "Pending", running: "In progress", done: "Done", error: "Error", failed: "Failed", verified: "Verified", correct: "Needs correction", unreviewed: "Needs review", stale: "Review again", blocked: "Blocked", queued_for_authoring: "Queued · script needed", waiting_for_script: "Script needed", waiting_for_voiceover: "Voiceover needed", waiting_for_scenes: "Shots needed", waiting_for_images: "Images needed", ready_to_render: "Verified · ready to edit", awaiting_review: "Needs review", needs_correction: "Needs correction", rendered_awaiting_review: "Export available · needs review", publication_ready: "Approved for publishing" };
+  const stateLabel = (state) => stateLabels[state] || (state ? String(state) : "Not specified");
+  Object.assign(stateLabels, { technical_review_required: "Technical check required", rendered_qa_pending: "Export available · check pending", legacy_readonly: "Advanced project" });
   const stepState = (project, key) => project.steps?.[key]?.state || 'idle';
   function projectStatus(project) {
     if (typeof project.review_state === 'string' && project.review_state) return { state: project.review_state, label: stateLabel(project.review_state) };
-    if (project.error) return { state: 'error', label: 'Erreur' };
-    if (project.running) return { state: 'running', label: 'En cours' };
-    if (project.publication_ready === true) return { state: 'verified', label: 'Validé pour publication' };
-    if (project.render?.file) return { state: 'unreviewed', label: 'Rendu disponible · à vérifier' };
+    if (project.error) return { state: 'error', label: "Error" };
+    if (project.running) return { state: 'running', label: "In progress" };
+    if (project.publication_ready === true) return { state: 'verified', label: "Approved for publishing" };
+    if (project.render?.file) return { state: 'unreviewed', label: "Export available · needs review" };
     const states = Object.values(project.steps || {}).map((step) => step.state);
-    if (states.includes('error')) return { state: 'error', label: 'Étape en erreur' };
+    if (states.includes('error')) return { state: 'error', label: "Step failed" };
     const actual = typeof project.review_state === 'string' ? project.review_state : project.status || project.workspace_queue?.state || 'idle';
     return { state: actual, label: stateLabel(actual) };
   }
@@ -23,20 +25,21 @@
     return (Array.isArray(catalog?.models) ? catalog.models : []).filter((m) => m && typeof m.id === 'string' && m.id.length);
   }
   function validateProject(row, models, profiles) {
-    if (!profiles.some((p) => p.id === row.profile_id)) throw new Error('Choisissez une chaîne disponible.');
-    if (!row.title.trim()) throw new Error('Indiquez le titre de la vidéo.');
-    if (row.title.trim().length > 240) throw new Error('Le titre est limité à 240 caractères.');
+    const profile = profiles.find(p => p.id === row.profile_id);
+    if (!profile) throw new Error("Choose an available channel.");
+    if (!row.title.trim()) throw new Error("Enter the video title.");
+    if (row.title.trim().length > 240) throw new Error("The title is limited to 240 characters.");
     if (row.custom_script !== undefined) validateScript(row.custom_script);
-    if (!row.custom_script?.trim() && (!Number.isFinite(row.duration_minutes) || row.duration_minutes < 20 || row.duration_minutes > 25)) throw new Error('La durée cible doit être comprise entre 20 et 25 minutes.');
+    if (!row.custom_script?.trim() && (!Number.isFinite(row.duration_minutes) || row.duration_minutes < (profile.duration_minutes_min || 3) || row.duration_minutes > (profile.duration_minutes_max || 30))) throw new Error("The target duration must be between 3 and 30 minutes.");
     for (const key of ['text_model', 'image_model']) {
       const entry = models.find((m) => m.id === row[key] && (key !== 'image_model' || !row.image_provider || (m.provider || 'cli_proxy') === row.image_provider));
-      if (!entry) throw new Error('Choisissez les deux modèles dans le catalogue du fournisseur.');
-      if (entry.capabilities?.[key === 'text_model' ? 'text' : 'image'] === false) throw new Error('Ce modèle n’annonce pas la capacité choisie. Sélectionnez un autre modèle.');
+      if (!entry) throw new Error("Choose both models from the provider catalog.");
+      if (entry.capabilities?.[key === 'text_model' ? 'text' : 'image'] === false) throw new Error("This model does not declare the selected capability. Select another model.");
     }
     return row;
   }
   function validateScript(text) {
-    if (typeof text !== 'string' || text.includes('\0') || new TextEncoder().encode(text).length > 1024 * 1024) throw new Error('Le script doit être un texte de moins de 1 Mo, sans caractère nul.');
+    if (typeof text !== 'string' || text.includes('\0') || new TextEncoder().encode(text).length > 1024 * 1024) throw new Error("The script must be text under 1 MB, with no null characters.");
     return text;
   }
   function scriptDuration(text) {
@@ -44,10 +47,10 @@
     return { kind: words ? 'estimated' : 'unknown', seconds: words ? words * 60 / 145 : null, word_count: words, words_per_minute: 145 };
   }
   function durationLabel(info) {
-    if (!info || !Number.isFinite(info.seconds) || info.seconds <= 0) return 'Durée à déterminer';
+    if (!info || !Number.isFinite(info.seconds) || info.seconds <= 0) return "Duration to be determined";
     const seconds = Math.max(1, Math.round(info.seconds));
     const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
-    return `${info.kind === 'actual' ? 'Durée réelle' : info.kind === 'estimated' ? 'Durée estimée : environ' : 'Durée cible'}${info.kind === 'estimated' ? ' ' : ' : '}${time}`;
+    return `${info.kind === 'actual' ? "Actual duration" : info.kind === 'estimated' ? "Estimated duration: about" : "Target duration"}${info.kind === 'estimated' ? ' ' : ': '}${time}`;
   }
   function voiceProgressInfo(p) {
     const step = p?.steps?.voiceover || {};
@@ -56,15 +59,15 @@
       started: Number.isFinite(step.started) ? step.started : null };
   }
   async function readScriptFile(file) {
-    if (!file || !/\.(txt|md)$/i.test(file.name) || file.size > 1024 * 1024) throw new Error('Choisissez un fichier .txt ou .md de moins de 1 Mo.');
+    if (!file || !/\.(txt|md)$/i.test(file.name) || file.size > 1024 * 1024) throw new Error("Choose a .txt or .md file under 1 MB.");
     let text;
     try { text = new TextDecoder('utf-8', { fatal: true }).decode(await file.arrayBuffer()); }
-    catch { throw new Error('Le fichier est illisible. Utilisez un texte enregistré en UTF-8.'); }
+    catch { throw new Error("The file is unreadable. Use text saved in UTF-8."); }
     return validateScript(text);
   }
   function safeUrl(value) {
     if (typeof value !== 'string' || !value || /[\x00-\x20\\]/.test(value)) return '';
-    if (value.startsWith('/') && !value.startsWith('//')) return value;
+    if (value.startsWith('/') && !value.startsWith('//')) return backendPath(value);
     return '';
   }
   function mediaUrl(kind, id, file) {
@@ -72,7 +75,7 @@
     if (file.startsWith('/')) return safeUrl(file);
     const parts = file.split('/');
     if (parts.some((part) => part === '..' || part === '.') || file.includes('\\') || file.includes(':')) return '';
-    return `/${kind}/${encode(id)}/${parts.map(encode).join('/')}`;
+    return backendPath(`/${kind}/${encode(id)}/${parts.map(encode).join('/')}`);
   }
   function referenceUrl(reference, project) {
     if (reference && typeof reference === 'object' && reference.url) return safeUrl(reference.url);
@@ -84,13 +87,13 @@
     return ({ waiting_for_script: 'queued', waiting_for_voiceover: 'queued', waiting_for_scenes: 'queued', waiting_for_images: 'queued', queued_for_authoring: 'queued', ready_to_render: 'queued', rendered_awaiting_review: 'unreviewed', rendered_qa_pending: 'unreviewed', technical_review_required: 'unreviewed', awaiting_review: 'unreviewed', needs_correction: 'correct', publication_ready: 'verified', failed: 'error' })[state] || state;
   }
   function generationBlockReason(project, scene, editedPrompt = scene?.prompt) {
-    if (project?.codex_directed !== true || project.readonly || project.mode !== 'review') return 'La génération d’un plan est réservée aux projets dirigés.';
-    if (project.running || (project.workspace_batch?.state !== 'interrupted' && ['running', 'queued'].includes(scene?.status))) return 'Une opération est déjà en cours sur ce projet.';
-    if (typeof scene?.prompt !== 'string' || !scene.prompt.trim() || /^renderer[- ]only\b/i.test(scene.prompt.trim())) return 'Ce plan n’a pas de prompt de génération explicite.';
-    if (editedPrompt !== scene.prompt) return 'Enregistrez le prompt avant de refaire ce plan.';
-    if (!sceneReferences(scene).length) return 'Ajoutez les références ordonnées du plan avant de le refaire.';
-    if (sceneReferences(scene).some((ref) => ref?.exists === false)) return 'Une référence du plan est manquante.';
-    if (!project.model_snapshot?.image_model) return 'Le modèle image du projet n’est pas renseigné.';
+    if (project?.codex_directed !== true || project.readonly || project.mode !== 'review') return "Generating an outline is reserved for guided projects.";
+    if (project.running || (project.workspace_batch?.state !== 'interrupted' && ['running', 'queued'].includes(scene?.status))) return "An operation is already in progress on this project.";
+    if (typeof scene?.prompt !== 'string' || !scene.prompt.trim() || /^renderer[- ]only\b/i.test(scene.prompt.trim())) return "This outline has no explicit generation prompt.";
+    if (editedPrompt !== scene.prompt) return "Save the prompt before remaking this outline.";
+    if (!sceneReferences(scene).length) return "Add the outline's ordered references before remaking it.";
+    if (sceneReferences(scene).some((ref) => ref?.exists === false)) return "An outline reference is missing.";
+    if (!project.model_snapshot?.image_model) return "The project's image model is not specified.";
     return '';
   }
   function generationBody(project, scene, editedPrompt = scene?.prompt) {
@@ -110,12 +113,12 @@
     const candidates = phase === 'preview' ? first : scenes.slice(3);
     const targets = candidates.filter((scene) => scene.workspace_regeneration_required === true || phase !== 'corrections' && !hasImage(scene));
     let reason = '';
-    if (!scenes.length) reason = 'Enregistrez d’abord le découpage, les prompts et les références.';
-    else if (project.running) reason = 'Une génération est déjà en cours.';
-    else if (phase !== 'preview' && first.some((scene) => !hasImage(scene) || scene.human_review?.state !== 'verified')) reason = 'Regardez et marquez vérifiés les trois premiers plans pour continuer.';
-    else if (!targets.length) reason = phase === 'corrections' ? 'Aucun plan marqué à refaire.' : 'Les images de cette étape existent déjà.';
+    if (!scenes.length) reason = "First save the breakdown, prompts, and references.";
+    else if (project.running) reason = "Generation is already in progress.";
+    else if (phase !== 'preview' && first.some((scene) => !hasImage(scene) || scene.human_review?.state !== 'verified')) reason = "Review and mark the first three shots as verified to continue.";
+    else if (!targets.length) reason = phase === 'corrections' ? "No shots marked to remake." : "The images for this step already exist.";
     else reason = targets.map((scene) => generationBlockReason(project, scene)).find(Boolean) || '';
-    if (!reason && !project.generation_confirmation) reason = 'Actualisez le projet avant de générer ses images.';
+    if (!reason && !project.generation_confirmation) reason = "Refresh the project before generating its images.";
     return { first, targets, reason };
   }
   const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
@@ -126,7 +129,7 @@
       let checks = 0;
       const check = (test) => { test(); checks++; };
       check(() => assert.equal(projectStatus({ review_state: 'needs_correction', render: { file: 'video.mp4' } }).state, 'needs_correction'));
-      check(() => assert.equal(projectStatus({ review_state: 'waiting_for_script' }).label, 'Texte à préparer'));
+      check(() => assert.equal(projectStatus({ review_state: 'waiting_for_script' }).label, "Script needed"));
       check(() => assert.notEqual(projectStatus({ render: { file: 'video.mp4' } }).state, 'verified'));
       check(() => assert.equal(projectStatus({ publication_ready: true }).state, 'verified'));
       for (const state of ['waiting_for_script', 'waiting_for_voiceover', 'waiting_for_scenes', 'waiting_for_images', 'ready_to_render', 'awaiting_review', 'needs_correction', 'rendered_awaiting_review', 'rendered_qa_pending', 'technical_review_required', 'legacy_readonly', 'publication_ready']) {
@@ -141,9 +144,9 @@
       check(() => assert.equal(mediaUrl('media', 'p', '../secret'), ''));
       const models = [{ id: 'catalog-text', capabilities: { text: true, image: false } }, { id: 'catalog-image', capabilities: { image: true, text: false } }, { id: 'catalog-unknown' }];
       const profiles = [{ id: 'profile' }];
-      const row = { profile_id: 'profile', title: 'Vidéo', duration_minutes: 22, text_model: 'catalog-text', image_model: 'catalog-image' };
+      const row = { profile_id: 'profile', title: "Video", duration_minutes: 22, text_model: 'catalog-text', image_model: 'catalog-image' };
       check(() => assert.equal(validateProject(row, models, profiles), row));
-      check(() => assert.throws(() => validateProject({ ...row, duration_minutes: 26 }, models, profiles)));
+      check(() => assert.throws(() => validateProject({ ...row, duration_minutes: 31 }, models, profiles)));
       check(() => assert.throws(() => validateProject({ ...row, image_model: 'catalog-text' }, models, profiles)));
       check(() => assert.throws(() => validateProject({ ...row, text_model: 'invented' }, models, profiles)));
       check(() => assert.equal(validateProject({ ...row, text_model: 'catalog-unknown' }, models, profiles).text_model, 'catalog-unknown'));
@@ -172,7 +175,7 @@
       const correctionProject = { ...directed, generation_confirmation: 'confirmed', scenes: [approved, approved, approved, repair, { ...authored, id: 5 }, { ...approved, id: 6 }] };
       check(() => assert.deepEqual(batchPlan(correctionProject, 'corrections').targets.map((s) => s.id), [4]));
       check(() => assert.equal(batchPlan(correctionProject, 'corrections').reason, ''));
-      check(() => assert.match(batchPlan({ ...correctionProject, scenes: [authored, approved, approved, repair] }, 'corrections').reason, /trois premiers/));
+      check(() => assert.match(batchPlan({ ...correctionProject, scenes: [authored, approved, approved, repair] }, 'corrections').reason, /first three/));
       process.stdout.write(`${checks} focused checks passed\n`);
     }
   }
@@ -184,16 +187,16 @@
   const esc = escapeHtml;
   const icon = (name) => `<span aria-hidden="true">${({ plus: '&#43;', refresh: '&#8635;', close: '&#215;', back: '&#8592;', next: '&#8594;', up: '&#8593;', down: '&#8595;', check: '&#10003;', edit: '&#9998;', download: '&#8595;', external: '&#8599;' })[name] || '&#183;'}</span>`;
   const badge = (state, label = stateLabel(state)) => `<span class="badge ${['verified', 'done', 'publication_ready'].includes(state) ? 'good' : ['error', 'failed'].includes(state) ? 'error' : ['correct', 'stale', 'blocked', 'needs_correction'].includes(state) ? 'warn' : ''}">${esc(label)}</span>`;
-  const legacy = (route, label) => `<a class="button" href="/legacy.html#/${route}">${icon('external')}${esc(label)}</a>`;
-  const advanced = (items) => `<details class="advanced"><summary>Outils avancés</summary><div class="inline">${items.map(([path, label]) => legacy(path, label)).join('')}</div></details>`;
+  const legacy = (route, label) => `<a class="button" href="${base}/legacy.html#/${route}">${icon('external')}${esc(label)}</a>`;
+  const advanced = (items) => `<details class="advanced"><summary>Advanced tools</summary><div class="inline">${items.map(([path, label]) => legacy(path, label)).join('')}</div></details>`;
   const fmtTime = (seconds) => {
-    if (!Number.isFinite(Number(seconds))) return 'Non aligné';
+    if (!Number.isFinite(Number(seconds))) return "Not aligned";
     const total = Math.max(0, Math.round(Number(seconds)));
     return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
   };
-  const fmtDate = (value) => value ? new Date(typeof value === 'number' ? value * 1000 : value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
-  const projectHref = (p) => p.readonly ? `/legacy.html#/p/${encode(p.id)}/script` : `#/video/${encode(p.id)}/texte`;
-  const profileName = (id) => data.profiles.find((p) => p.id === id)?.name || id || 'Sans chaîne';
+  const fmtDate = (value) => value ? new Date(typeof value === 'number' ? value * 1000 : value).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
+  const projectHref = (p) => p.readonly ? `${base}/legacy.html#/p/${encode(p.id)}/script` : `#/video/${encode(p.id)}/text`;
+  const profileName = (id) => data.profiles.find((p) => p.id === id)?.name || id || "No channel";
   let data = { profiles: [], styles: [], projects: [], batches: [], models: { models: [] }, settings: {}, connection: {} };
   let project = null;
   let epoch = 0;
@@ -203,21 +206,40 @@
   let batchRows = [];
   let management = { channels: [], styles: [] };
   let managementFilters = { channels: '', styles: '', archivedChannels: false, archivedStyles: false };
-  const STEPS = [['texte', 'Texte', 'script'], ['voix', 'Voix', 'voiceover'], ['images', 'Images', 'visuals'], ['verification', 'Vérification', null], ['export', 'Export', 'render']];
+  let session = null;
+  let workspaceScope = 'mine';
+  function renderAccount() {
+    $('#account').hidden = true;
+    const name = $('#me-name'), avatar = $('#me-avatar');
+    if (name && session) name.textContent = session.display_name;
+    if (avatar && session) { avatar.textContent = session.display_name.split(/\s+/).slice(0,2).map(p => p[0]).join('').toUpperCase(); avatar.title = session.display_name; }
+  }
+  function renderLogin() {
+    session = null; project = null;
+    $('#account').hidden = true;
+    if (typeof window.kanyeRequireLogin === 'function') window.kanyeRequireLogin();
+    main.innerHTML = '<div class="empty"><h2>Sign in to your studio</h2><p>Use your existing tools.kanye.studio access key.</p></div>';
+    main.setAttribute('aria-busy','false');
+  }
+  function renderTeam() {
+    main.innerHTML = header('Team','Accounts are managed by the existing portal.') + '<a class="button" href="/channels">Channels &amp; Team</a>';
+  }
+  const STEPS = [["text", "Script", 'script'], ["voice", "Voice", 'voiceover'], ['images', 'Images', 'visuals'], ['verification', "Verification", null], ['export', 'Export', 'render']];
 
   async function api(path, options = {}) {
     const request = { method: options.method || 'GET', headers: { Accept: 'application/json' }, cache: 'no-store' };
     if (options.body instanceof FormData) request.body = options.body;
     else if (options.body !== undefined) { request.body = JSON.stringify(options.body); request.headers['Content-Type'] = 'application/json'; }
-    const response = await fetch(path, request);
+    const response = await fetch(backendPath(path), request);
     let payload;
     try { payload = await response.json(); } catch { payload = null; }
     if (!response.ok) {
+      if (response.status === 401 && !path.endsWith('/login')) { session = null; const error = new Error('Sign in to TubeForge.'); error.status = 401; throw error; }
       const detail = payload?.detail || payload?.error;
-      const message = typeof detail === 'string' ? detail : Array.isArray(detail) ? detail.map((item) => item.msg || 'Donnée invalide').join(' · ') : `Erreur ${response.status}`;
-      throw new Error(`${message}${response.status === 404 ? ' · Cette fonction du studio est indisponible. Actualisez après sa mise à jour.' : ''}`);
+      const message = typeof detail === 'string' ? detail : Array.isArray(detail) ? detail.map((item) => item.msg || "Invalid data").join(' · ') : `Error ${response.status}`;
+      throw new Error(`${message}${response.status === 404 ? " · This studio feature is unavailable. Refresh after it has been updated." : ''}`);
     }
-    if (payload === null) throw new Error('Réponse du studio illisible. Vérifiez le serveur puis réessayez.');
+    if (payload === null) throw new Error("Unreadable studio response. Check the server, then try again.");
     return payload;
   }
   function notify(message, error = false) {
@@ -232,7 +254,7 @@
     submitting = true;
     if (button) button.disabled = true;
     try { await work(); if (message) notify(message); }
-    catch (error) { notify(error.message || 'Serveur inaccessible. Vérifiez sa connexion puis réessayez.', true); }
+    catch (error) { notify(error.message || "Server unreachable. Check its connection, then try again.", true); }
     finally { submitting = false; if (button?.isConnected) button.disabled = false; }
   }
   async function refreshData() {
@@ -240,26 +262,27 @@
     data = { ...data, ...result, profiles: result.profiles || [], projects: result.projects || [], models: result.models || { models: [] } };
     const available = data.models.available === true;
     const flow = data.models.providers?.google_flow;
-    $('#connection').textContent = flow?.available ? `Google Flow · ${flow.accounts.filter((a) => a.health === 'OK').length} comptes disponibles${data.models.providers?.cli_proxy?.available ? ' · CLI Proxy texte' : ''}` : available ? `Proxy · ${modelsFrom(data.models).length} modèles` : data.connection?.has_proxy ? 'Proxy · catalogue indisponible' : 'Proxy non connecté';
+    $('#connection').textContent = flow?.available ? `Google Flow · ${flow.accounts.filter((a) => a.health === 'OK').length} comptes disponibles${data.models.providers?.cli_proxy?.available ? " · Text CLI Proxy" : ''}` : available ? `Proxy · ${modelsFrom(data.models).length} models` : data.connection?.has_proxy ? 'Proxy · catalogue indisponible' : "Proxy not connected";
   }
   function modelOptions(selected = '', kind = '', selectedProvider = '') {
-    const models = modelsFrom(data.models).filter((m) => kind !== 'image' || !data.models.image_provider_policy || m.provider === data.models.image_provider_policy);
+    const imagePolicy = selectedProvider || data.models.image_provider_policy;
+    const models = modelsFrom(data.models).filter((m) => kind !== 'image' || !imagePolicy || m.provider === imagePolicy);
     const renderOption = (m) => {
       const capability = m.capabilities?.[kind];
-      const capabilityLabel = capability === false ? 'Usage non annoncé' : capability == null ? 'Capacité non confirmée' : 'Capacité annoncée dans le catalogue';
+      const capabilityLabel = capability === false ? "Usage not declared" : capability == null ? "Capacity not confirmed" : "Capacity declared in the catalog";
       return `<option value="${esc(m.id)}" data-provider="${esc(m.provider || 'cli_proxy')}" title="${capabilityLabel}" ${m.id === selected && (!selectedProvider || (m.provider || 'cli_proxy') === selectedProvider) ? 'selected' : ''} ${capability === false ? 'disabled' : ''}>${esc(m.label || 'CLI Proxy · ' + m.id)}</option>`;
     };
     const likely = models.filter((m) => m.capabilities?.[kind] === true || m.capabilities?.[kind] == null && m.suggested_role === kind);
     const others = models.filter((m) => !likely.includes(m));
-    const choices = `${likely.length ? `<optgroup label="${kind === 'image' ? 'Images' : 'Texte'} · usage annoncé ou suggéré">${likely.map(renderOption).join('')}</optgroup>` : ''}${others.length ? `<optgroup label="Autres modèles / capacité à confirmer">${others.map(renderOption).join('')}</optgroup>` : ''}`;
+    const choices = `${likely.length ? `<optgroup label="${kind === 'image' ? 'Images' : "Text"} · declared or suggested usage">${likely.map(renderOption).join('')}</optgroup>` : ''}${others.length ? `<optgroup label="Other models / capacity to confirm">${others.map(renderOption).join('')}</optgroup>` : ''}`;
     const unavailable = selected && !models.some((m) => m.id === selected && (!selectedProvider || (m.provider || 'cli_proxy') === selectedProvider)) ? `<option value="" selected>${esc(selected)} · indisponible</option>` : '';
-    return `${unavailable}<option value="" ${!selected ? 'selected' : ''}>${models.length ? 'Choisir un modèle' : 'Catalogue indisponible'}</option>${choices}`;
+    return `${unavailable}<option value="" ${!selected ? 'selected' : ''}>${models.length ? "Choose a model" : 'Catalogue indisponible'}</option>${choices}`;
   }
   function catalogNotice() {
-    return modelsFrom(data.models).length ? '' : `<div class="banner error">${esc(data.models.error || 'Le proxy ne fournit aucun modèle. Vérifiez sa connexion dans Réglages, puis actualisez le catalogue.')} <a href="#/settings">Réglages</a></div>`;
+    return modelsFrom(data.models).length ? '' : `<div class="banner error">${esc(data.models.error || "The proxy provides no models. Check its connection in Settings, then refresh the catalog.")} <a href="#/settings">Settings</a></div>`;
   }
   function catalogStatus() {
-    return modelsFrom(data.models).length ? '<p class="catalog-status small muted">Le fournisseur choisi est enregistré avec la vidéo. Les quotas dépendent du compte connecté.</p>' : '';
+    return modelsFrom(data.models).length ? "<p class=\"catalog-status small muted\">The chosen provider is saved with the video. Quotas depend on the connected account.</p>" : '';
   }
   function bindFormState(root = main) {
     $$('input, textarea, select', root).forEach((input) => {
@@ -278,25 +301,25 @@
       update();
     });
   }
-  function profileOptions(selected = '', empty = 'Choisir une chaîne') {
+  function profileOptions(selected = '', empty = "Choose a channel") {
     return `<option value="">${esc(empty)}</option>${data.profiles.map((p) => `<option value="${esc(p.id)}" ${p.id === selected ? 'selected' : ''}>${esc(p.name)}</option>`).join('')}`;
   }
   function preview(src, label) {
     const url = safeUrl(src);
-    return url ? `<button type="button" class="preview-open" data-preview="${esc(url)}" aria-label="Agrandir : ${esc(label)}"><img class="preview" src="${esc(url)}" alt="${esc(label)}" loading="lazy"></button>` : `<div class="preview-empty">Aucun aperçu</div>`;
+    return url ? `<button type="button" class="preview-open" data-preview="${esc(url)}" aria-label="Agrandir : ${esc(label)}"><img class="preview" src="${esc(url)}" alt="${esc(label)}" loading="lazy"></button>` : `<div class="preview-empty">No preview</div>`;
   }
   function bindPreviews(root = main) {
     $$('[data-preview]', root).forEach((button) => button.onclick = () => {
       const dialog = $('#preview-dialog');
       dialog.classList.remove('generation-dialog');
-      dialog.setAttribute('aria-label', 'Aperçu de l’image');
-      dialog.innerHTML = `<div class="dialog-head"><h2>Aperçu</h2><button class="icon-button" data-close title="Fermer" aria-label="Fermer">${icon('close')}</button></div><img src="${esc(button.dataset.preview)}" alt="Aperçu agrandi">`;
+      dialog.setAttribute('aria-label', "Image preview");
+      dialog.innerHTML = `<div class="dialog-head"><h2>Preview</h2><button class="icon-button" data-close title="Close" aria-label="Close">${icon('close')}</button></div><img src="${esc(button.dataset.preview)}" alt="Expanded preview">`;
       $('[data-close]', dialog).onclick = () => dialog.close();
       dialog.showModal();
     });
     $$('img', root).forEach((img) => img.addEventListener('error', () => {
       const message = document.createElement('span');
-      message.className = 'preview-empty'; message.textContent = 'Aperçu inaccessible';
+      message.className = 'preview-empty'; message.textContent = "Preview unavailable";
       img.replaceWith(message);
     }, { once: true }));
   }
@@ -304,14 +327,16 @@
     return `<div class="page-head"><div><h1>${esc(title)}</h1>${subtitle ? `<p>${esc(subtitle)}</p>` : ''}</div><div class="actions">${controls}</div></div>`;
   }
   function routeParts() {
-    return location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map((part) => { try { return decodeURIComponent(part); } catch { return part; } });
+    const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map((part) => { try { return decodeURIComponent(part); } catch { return part; } });
+    if (parts[0] === 'video') parts[2] = ({texte:'text', voix:'voice'})[parts[2]] || parts[2];
+    return parts;
   }
   async function route({ refresh = true } = {}) {
     const currentEpoch = ++epoch;
     let parts = routeParts();
     if (parts[0] === 'batch') { history.replaceState(null, '', '#/queue'); parts = ['queue']; }
     if (parts[0] === 'projects') parts = ['videos'];
-    if (parts[0] === 'p') parts = ['video', parts[1], ({ script: 'texte', voice: 'voix', visuals: 'images', render: 'export', thumbs: 'export' })[parts[2]] || 'texte'];
+    if (parts[0] === 'p') parts = ['video', parts[1], ({ script: "text", voice: "voice", visuals: 'images', render: 'export', thumbs: 'export' })[parts[2]] || "text"];
     const page = parts[0] || 'videos';
     $$('.primary-nav a').forEach((link) => {
       const active = link.dataset.nav === (page === 'video' || page === 'queue' ? 'videos' : page);
@@ -320,6 +345,10 @@
     main.setAttribute('aria-busy', 'true');
     if (!main.children.length) main.innerHTML = '<div class="empty">Chargement…</div>';
     try {
+      if (!session) {
+        session = await api('/api/workspace/session');
+        document.body.classList.remove('signed-out'); renderAccount();
+      }
       if (refresh) await refreshData();
       let detail = null;
       if (page === 'video') detail = await api(`/api/workspace/projects/${encode(parts[1] || '')}`);
@@ -329,36 +358,41 @@
       dirty = false;
       if (page === 'videos') renderDashboard();
       else if (page === 'queue') renderBatch();
-      else if (page === 'video') { project = detail; renderProject(parts[2] || 'texte'); }
+      else if (page === 'video') { project = detail; renderProject(parts[2] || "text"); }
       else if (page === 'channels') renderChannels(parts[1], parts[2]);
       else if (page === 'styles') renderStyles(parts[1]);
       else if (page === 'settings') renderSettings();
-      else main.innerHTML = `${header('Page introuvable', '')}<a href="#/videos">Revenir aux vidéos</a>`;
+      else if (page === 'team') await renderTeam();
+      else main.innerHTML = `${header("Page not found", '')}<a href="#/videos">Back to videos</a>`;
       bindPreviews();
       bindFormState();
-      document.title = `${page === 'video' ? project.title : ({ videos: 'Vidéos', queue: 'File de vidéos', channels: 'Chaînes', styles: 'Styles visuels', settings: 'Réglages' })[page] || 'Studio'} | TubeForge`;
+      document.title = `${page === 'video' ? project.title : ({ videos: "Videos", queue: "Video queue", channels: "Channels", styles: "Visual styles", settings: "Settings", team: 'Team' })[page] || 'Studio'} | TubeForge`;
     } catch (error) {
       if (currentEpoch === epoch) {
-        main.innerHTML = `${header('Studio indisponible', '')}<div class="banner error">${esc(error.message)}</div><button id="retry">${icon('refresh')}Réessayer</button>`;
+        if (error.status === 401) { renderLogin(); return; }
+        main.innerHTML = `${header("Studio unavailable", '')}<div class="banner error">${esc(error.message)}</div><button id="retry">${icon('refresh')}Try again</button>`;
         $('#retry').onclick = () => route();
       }
     } finally { if (currentEpoch === epoch) main.setAttribute('aria-busy', 'false'); }
   }
   function projectTable(projects) {
-    if (!projects.length) return '<div class="empty"><h2>Aucune vidéo</h2><p>Créez une vidéo ou préparez un lot pour cette chaîne.</p></div>';
-    return `<div class="table-wrap"><table><thead><tr><th scope="col">Vidéo</th><th scope="col">Chaîne</th><th scope="col">Durée</th><th scope="col">État</th><th scope="col">Mise à jour</th></tr></thead><tbody>${projects.map((p) => {
+    if (!projects.length) return "<div class=\"empty\"><h2>No videos</h2><p>Create a video or prepare a batch for this channel.</p></div>";
+    return `<div class="table-wrap"><table><thead><tr><th scope="col">Video</th><th scope="col">Channel</th><th scope="col">Duration</th><th scope="col">Status</th><th scope="col">Updated</th></tr></thead><tbody>${projects.map((p) => {
       const status = projectStatus(p);
       const thumb = mediaUrl('media', p.id, p.thumb || p.thumbnail?.file);
-      return `<tr><td><div class="project-cell">${thumb ? `<img src="${esc(thumb)}" alt="Miniature de ${esc(p.title)}" loading="lazy">` : '<span class="project-placeholder">Miniature absente</span>'}<div><a class="project-title" href="${esc(projectHref(p))}">${esc(p.title || 'Sans titre')}</a><div class="small muted">${p.scenes_count ?? (Array.isArray(p.scenes) ? p.scenes.length : p.scenes) ?? 0} plans</div></div></div></td><td>${esc(profileName(p.profile_id || p.channel_id))}</td><td>${esc(durationLabel(p.duration_info))}</td><td>${badge(status.state, status.label)}</td><td class="small muted">${esc(fmtDate(p.updated || p.created))}</td></tr>`;
+      return `<tr><td><div class="project-cell">${thumb ? `<img src="${esc(thumb)}" alt="Thumbnail for ${esc(p.title)}" loading="lazy">` : '<span class="project-placeholder">No thumbnail</span>'}<div><a class="project-title" href="${esc(projectHref(p))}">${esc(p.title || "Untitled")}</a><div class="small muted">${p.scenes_count ?? (Array.isArray(p.scenes) ? p.scenes.length : p.scenes) ?? 0} shots${p.owner_id ? ` · ${esc(p.owner_id)}` : ''}</div></div></div></td><td>${esc(profileName(p.profile_id || p.channel_id))}</td><td>${esc(durationLabel(p.duration_info))}</td><td>${badge(status.state, status.label)}</td><td class="small muted">${esc(fmtDate(p.updated || p.created))}</td></tr>`;
     }).join('')}</tbody></table></div>`;
   }
   function renderDashboard() {
-    main.innerHTML = `${header('Vidéos', 'Projets et file de production', `<a class="button" href="#/queue">${icon('plus')}Créer un lot</a><button class="primary" id="new-video">${icon('plus')}Nouvelle vidéo</button>`)}<div class="toolbar"><label class="search">Rechercher<input id="search" type="search" placeholder="Titre de la vidéo" value="${esc(listFilters.search)}"></label><label>Chaîne<select id="channel-filter">${profileOptions(listFilters.profile, 'Toutes les chaînes')}</select></label><label>État<select id="status-filter"><option value="">Tous les états</option>${['queued', 'running', 'unreviewed', 'correct', 'verified', 'error', 'legacy_readonly'].map((s) => `<option value="${s}" ${listFilters.status === s ? 'selected' : ''}>${stateLabel(s)}</option>`).join('')}</select></label><button id="refresh" class="icon-button" title="Actualiser les projets" aria-label="Actualiser les projets">${icon('refresh')}</button><span id="project-count" class="count"></span></div><div id="project-list"></div>${advanced([['projects', 'Projets avancés'], ['planning', 'Calendrier'], ['thumbs', 'Miniatures']])}`;
+    main.innerHTML = `${header("Videos", "Projects and production queue", `<a class="button" href="#/queue">${icon('plus')}Create batch</a><button class="primary" id="new-video">${icon('plus')}New video</button>`)}<div class="toolbar"><label class="search">Search<input id="search" type="search" placeholder="Video title" value="${esc(listFilters.search)}"></label><label>Channel<select id="channel-filter">${profileOptions(listFilters.profile, "All channels")}</select></label><label>Status<select id="status-filter"><option value="">All statuses</option>${['queued', 'running', 'unreviewed', 'correct', 'verified', 'error', 'legacy_readonly'].map((s) => `<option value="${s}" ${listFilters.status === s ? 'selected' : ''}>${stateLabel(s)}</option>`).join('')}</select></label><button id="refresh" class="icon-button" title="Refresh projects" aria-label="Refresh projects">${icon('refresh')}</button><span id="project-count" class="count"></span></div><div id="project-list"></div>${advanced([['projects', "Advanced projects"], ['planning', "Schedule"], ['thumbs', "Thumbnails"]])}`;
+    main.querySelector('.page-head p').textContent = 'Your production desk · Shared channels and styles';
+    main.querySelector('.toolbar').insertAdjacentHTML('beforebegin', `<div class="workspace-tabs" role="group" aria-label="Video workspace"><button data-scope="mine" aria-pressed="${workspaceScope === 'mine'}">My videos</button><button data-scope="team" aria-pressed="${workspaceScope === 'team'}">Team videos</button></div>`);
+    $$('[data-scope]').filter(b => b.matches('button')).forEach(button => button.onclick = () => { workspaceScope = button.dataset.scope; renderDashboard(); });
     const update = () => {
       listFilters = { search: $('#search').value, profile: $('#channel-filter').value, status: $('#status-filter').value };
-      const projects = data.projects.filter((p) => (!listFilters.search || (p.title || '').toLocaleLowerCase('fr').includes(listFilters.search.toLocaleLowerCase('fr'))) && (!listFilters.profile || (p.profile_id || p.channel_id) === listFilters.profile) && (!listFilters.status || statusGroup(projectStatus(p).state) === listFilters.status));
+      const projects = data.projects.filter((p) => (workspaceScope === 'team' || (p.owner_id || 'admin') === session?.username) && (!listFilters.search || (p.title || '').toLocaleLowerCase('en').includes(listFilters.search.toLocaleLowerCase('en'))) && (!listFilters.profile || (p.profile_id || p.channel_id) === listFilters.profile) && (!listFilters.status || statusGroup(projectStatus(p).state) === listFilters.status));
       $('#project-list').innerHTML = projectTable(projects);
-      $('#project-count').textContent = `${projects.length} vidéo${projects.length === 1 ? '' : 's'}`;
+      $('#project-count').textContent = `${projects.length} video${projects.length === 1 ? '' : 's'}`;
       bindPreviews($('#project-list'));
     };
     $('#new-video').onclick = () => openCreate();
@@ -369,7 +403,7 @@
     update();
   }
   function defaultRow(profile = '') {
-    return { profile_id: profile, title: '', duration_minutes: data.profiles.find((p) => p.id === profile)?.target_minutes || 22, text_model: data.models.defaults?.text_model || '', image_model: data.models.defaults?.image_model || '', image_provider: data.models.defaults?.image_provider || 'cli_proxy' };
+    return { profile_id: profile, title: '', duration_minutes: data.profiles.find((p) => p.id === profile)?.target_minutes || 15, text_model: data.models.defaults?.text_model || '', image_model: data.models.defaults?.image_model || '', image_provider: data.models.defaults?.image_provider || 'cli_proxy' };
   }
   function formRow(form) {
     const fields = new FormData(form);
@@ -381,14 +415,14 @@
     return row;
   }
   function scriptImportMarkup(id) {
-    return `<div class="script-tools"><label class="file-picker">${icon('up')}Ou importer un fichier<input id="${id}" type="file" accept=".txt,.md,text/plain,text/markdown"></label><span class="small muted" data-script-count></span></div><p class="small muted import-status" data-import-status role="status"></p><p class="script-duration small" data-script-duration role="status" aria-live="polite" hidden></p>`;
+    return `<div class="script-tools"><label class="file-picker">${icon('up')}Or import a file<input id="${id}" type="file" accept=".txt,.md,text/plain,text/markdown"></label><span class="small muted" data-script-count></span></div><p class="small muted import-status" data-import-status role="status"></p><p class="script-duration small" data-script-duration role="status" aria-live="polite" hidden></p>`;
   }
   function bindScriptImport(root, inputSelector) {
     const input = $(inputSelector, root);
     const fileInput = $('input[type="file"]', root);
     const count = () => {
       const estimate = scriptDuration(input.value);
-      $('[data-script-count]', root).textContent = `${estimate.word_count} mots`;
+      $('[data-script-count]', root).textContent = `${estimate.word_count} words`;
       const target = $('[name="duration_minutes"]', root);
       if (target) {
         target.closest('[data-target-duration]').hidden = estimate.word_count > 0;
@@ -398,7 +432,7 @@
       const duration = $('[data-script-duration]', root);
       const info = root.id === 'script-form' && input.value === project.script ? project.duration_info : estimate;
       duration.hidden = !estimate.word_count;
-      duration.textContent = durationLabel(info) + (info?.kind === 'estimated' ? ' · estimation à 145 mots/min ; la durée réelle dépendra de la voix.' : '');
+      duration.textContent = durationLabel(info) + (info?.kind === 'estimated' ? " · estimate at 145 words/min; actual duration will depend on the voice." : '');
     };
     count(); input.addEventListener('input', count);
     fileInput.onchange = async () => {
@@ -407,25 +441,25 @@
       const status = $('[data-import-status]', root);
       try {
         const text = await readScriptFile(file);
-        if (input.value.trim() && !confirm('Remplacer le texte actuel par le script importé ?')) return;
+        if (input.value.trim() && !confirm("Replace the current text with the imported script?")) return;
         input.value = text;
         input.dispatchEvent(new Event('input', { bubbles: true }));
-        status.textContent = `${file.name} · importé`;
+        status.textContent = `${file.name} · imported`;
         status.classList.remove('error-text');
       } catch (error) { status.textContent = error.message; status.classList.add('error-text'); }
       finally { fileInput.value = ''; }
     };
   }
   function openCreate(profile = '') {
-    if (dirty) { notify('Enregistrez vos modifications avant de créer une vidéo.', true); return; }
+    if (dirty) { notify("Save your changes before creating a video.", true); return; }
     const dialog = $('#create-dialog');
     dialog.className = 'create-video-dialog';
     const row = defaultRow(profile);
     const defaultStyle = data.profiles.find((p) => p.id === profile)?.style_id || data.profiles[0]?.style_id;
     const previousDirty = dirty;
     let dialogEdited = false;
-    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">Nouvelle vidéo</h2><button type="button" data-close class="icon-button" title="Fermer" aria-label="Fermer">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Projet</legend><div class="form-grid"><label class="full">Titre de la vidéo<input name="title" placeholder="What Did People in Edo Japan Actually Do All Day?" required maxlength="240" autocomplete="off"></label><label>Chaîne<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label data-target-duration>Durée cible (minutes)<input type="number" name="duration_minutes" min="20" max="25" step="0.5" value="22" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Collez votre script ici<textarea name="custom_script" rows="12" spellcheck="true" placeholder="Collez votre script complet ici. Aucun fichier TXT nécessaire."></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Style visuel</legend><label>Style de la vidéo<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Modèles de génération</legend><div class="form-grid"><label class="full">Modèle texte<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Modèle image<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Annuler</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Créer la vidéo</button></div></form>`;
-    const close = () => { if (dialogEdited && !confirm('Abandonner cette nouvelle vidéo ?')) return; dialog.close(); dirty = previousDirty; };
+    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">New video</h2><button type="button" data-close class="icon-button" title="Close" aria-label="Close">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Project</legend><div class="form-grid"><label class="full">Video title<input name="title" placeholder="Zombie Outbreak: 30 Days Trapped in a Supermarket" required maxlength="240" autocomplete="off"></label><label>Channel<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label data-target-duration>Target duration (minutes)<input type="number" name="duration_minutes" min="3" max="30" step="0.5" value="15" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Paste your script here<textarea name="custom_script" rows="12" spellcheck="true" placeholder="Paste your full script here. No TXT file needed."></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Visual style</legend><label>Video style<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Generation models</legend><div class="form-grid"><label class="full">Text model<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Image model<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Cancel</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Create video</button></div></form>`;
+    const close = () => { if (dialogEdited && !confirm("Discard this new video?")) return; dialog.close(); dirty = previousDirty; };
     $('#create-form', dialog).addEventListener('input', () => { dialogEdited = true; });
     $('#create-form', dialog).addEventListener('change', () => { dialogEdited = true; });
     $$('[data-close]', dialog).forEach((b) => b.onclick = close);
@@ -435,7 +469,7 @@
       const selectedProfile = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value);
       const owner = selectedProfile?.style_id === sid ? selectedProfile : data.profiles.find((p) => p.style_id === sid);
       const url = (owner ? profilePreview(owner, 'video') : '') || data.styles.find((s) => s.id === sid)?.video_preview_url || '';
-      $('#create-style-preview', dialog).innerHTML = url ? `<img class="preview" src="${esc(url)}" alt="Aperçu du style vidéo"><figcaption>${esc(data.styles.find((s) => s.id === sid)?.name || '')}</figcaption>` : '<div class="preview-empty">Aperçu non disponible</div>';
+      $('#create-style-preview', dialog).innerHTML = url ? `<img class="preview" src="${esc(safeUrl(url))}" alt="Video style preview"><figcaption>${esc(data.styles.find((s) => s.id === sid)?.name || '')}</figcaption>` : "<div class=\"preview-empty\">Preview unavailable</div>";
     };
     const applyStyleModel = () => {
       const selected = data.styles.find((s) => s.id === $('[name="style_id"]', dialog).value);
@@ -455,9 +489,9 @@
           const row = validateProject(formRow(event.target), modelsFrom(data.models), data.profiles);
           const created = await api('/api/workspace/projects', { method: 'POST', body: row });
           dialog.close(); dirty = false;
-          location.hash = `#/video/${encode(created.id)}/texte`;
+          location.hash = `#/video/${encode(created.id)}/text`;
         } catch (error) { $('#create-error', dialog).innerHTML = `<div class="banner error">${esc(error.message)}</div>`; throw error; }
-      }, 'Vidéo créée.');
+      }, "Video created.");
     };
     dialog.showModal();
     bindFormState(dialog);
@@ -469,7 +503,7 @@
   }
   function renderBatch() {
     if (!batchRows.length) batchRows = [defaultRow(), defaultRow()];
-    main.innerHTML = `${header('File de vidéos', 'Préparer plusieurs projets', '<a class="button" href="#/videos">Vidéos</a>')}${catalogNotice()}<form id="batch-form"><div class="table-wrap"><table class="batch-table"><thead><tr><th>Chaîne</th><th>Titre</th><th>Minutes</th><th>Modèle texte</th><th>Modèle image</th><th><span class="small">Retirer</span></th></tr></thead><tbody id="batch-body">${batchRows.map((row, index) => `<tr><td data-label="Chaîne"><select aria-label="Chaîne de la vidéo ${index + 1}" name="profile_id" required>${profileOptions(row.profile_id)}</select></td><td data-label="Titre"><input class="title-input" aria-label="Titre de la vidéo ${index + 1}" name="title" maxlength="240" required value="${esc(row.title)}"></td><td data-label="Durée cible (minutes)"><input class="duration-input" aria-label="Durée de la vidéo ${index + 1}" name="duration_minutes" type="number" min="20" max="25" step="0.5" required value="${row.duration_minutes}"></td><td data-label="Modèle texte"><select aria-label="Modèle texte de la vidéo ${index + 1}" name="text_model" required>${modelOptions(row.text_model, 'text')}</select></td><td data-label="Modèle image"><select aria-label="Modèle image de la vidéo ${index + 1}" name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></td><td><button type="button" data-remove="${index}" class="icon-button" aria-label="Retirer la vidéo ${index + 1}" title="Retirer cette ligne" ${batchRows.length === 1 ? 'disabled' : ''}>${icon('close')}</button></td></tr>`).join('')}</tbody></table></div>${catalogStatus()}<div class="form-actions"><button type="button" id="add-row">${icon('plus')}Ajouter une ligne</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length ? 'disabled' : ''}>${icon('plus')}Ajouter le lot à la file</button></div><div id="batch-error" role="alert"></div></form><section class="section"><h2>Lots enregistrés</h2>${data.batches?.length ? `<div class="table-wrap"><table><thead><tr><th>Lot</th><th>Vidéos</th><th>Création</th></tr></thead><tbody>${data.batches.map((batch) => `<tr><td>${esc(batch.name || batch.id)}</td><td>${(batch.projects || []).length}</td><td>${esc(fmtDate(batch.created))}</td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">Aucun lot enregistré.</p>'}</section>`;
+    main.innerHTML = `${header("Video queue", "Prepare multiple projects", "<a class=\"button\" href=\"#/videos\">Videos</a>")}${catalogNotice()}<form id="batch-form"><div class="table-wrap"><table class="batch-table"><thead><tr><th>Channel</th><th>Title</th><th>Minutes</th><th>Text model</th><th>Image model</th><th><span class="small">Remove</span></th></tr></thead><tbody id="batch-body">${batchRows.map((row, index) => `<tr><td data-label="Channel"><select aria-label="Video channel ${index + 1}" name="profile_id" required>${profileOptions(row.profile_id)}</select></td><td data-label="Title"><input class="title-input" aria-label="Video title ${index + 1}" name="title" maxlength="240" required value="${esc(row.title)}"></td><td data-label="Target duration (minutes)"><input class="duration-input" aria-label="Video duration ${index + 1}" name="duration_minutes" type="number" min="3" max="30" step="0.5" required value="${row.duration_minutes}"></td><td data-label="Text model"><select aria-label="Video text model ${index + 1}" name="text_model" required>${modelOptions(row.text_model, 'text')}</select></td><td data-label="Image model"><select aria-label="Video image model ${index + 1}" name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></td><td><button type="button" data-remove="${index}" class="icon-button" aria-label="Remove video ${index + 1}" title="Remove this row" ${batchRows.length === 1 ? 'disabled' : ''}>${icon('close')}</button></td></tr>`).join('')}</tbody></table></div>${catalogStatus()}<div class="form-actions"><button type="button" id="add-row">${icon('plus')}Add a row</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length ? 'disabled' : ''}>${icon('plus')}Add batch to queue</button></div><div id="batch-error" role="alert"></div></form><section class="section"><h2>Saved batches</h2>${data.batches?.length ? `<div class="table-wrap"><table><thead><tr><th>Batch</th><th>Videos</th><th>Created</th></tr></thead><tbody>${data.batches.map((batch) => `<tr><td>${esc(batch.name || batch.id)}</td><td>${(batch.projects || []).length}</td><td>${esc(fmtDate(batch.created))}</td></tr>`).join('')}</tbody></table></div>` : "<p class=\"muted\">No saved batches.</p>"}</section>`;
     $('#add-row').onclick = () => { captureBatch(); batchRows.push(defaultRow()); renderBatch(); };
     $$('#batch-body select[name="profile_id"]').forEach((select) => select.onchange = () => { const profile = data.profiles.find((p) => p.id === select.value); if (profile) $('[name="duration_minutes"]', select.closest('tr')).value = profile.target_minutes; });
     $$('[data-remove]').forEach((b) => b.onclick = () => { captureBatch(); batchRows.splice(Number(b.dataset.remove), 1); renderBatch(); });
@@ -481,7 +515,7 @@
           await api('/api/workspace/batches', { method: 'POST', body: { rows } });
           batchRows = []; dirty = false; location.hash = '#/videos';
         } catch (error) { $('#batch-error').innerHTML = `<div class="banner error">${esc(error.message)}</div>`; throw error; }
-      }, 'Lot ajouté à la file.');
+      }, "Batch added to queue.");
     };
     bindFormState();
   }
@@ -490,25 +524,25 @@
     return typeof review === 'string' ? review : review.state || scene.review_state || 'unreviewed';
   }
   function renderProject(selected) {
-    if (!STEPS.some(([key]) => key === selected)) selected = 'texte';
+    if (!STEPS.some(([key]) => key === selected)) selected = "text";
     const status = projectStatus(project);
     const verification = project.review_state?.state || (typeof project.review_state === 'string' ? project.review_state : 'unreviewed');
-    main.innerHTML = `<div class="breadcrumbs"><a href="#/videos">Vidéos</a><span>/</span><a href="#/channels/${encode(project.profile_id || project.channel_id || '')}">${esc(profileName(project.profile_id || project.channel_id))}</a></div>${header(project.title || 'Sans titre', `${esc(durationLabel(project.duration_info))} · ${profileName(project.profile_id || project.channel_id)}`, `${badge(status.state, status.label)}<button class="icon-button" id="refresh-project" title="Actualiser ce projet" aria-label="Actualiser ce projet">${icon('refresh')}</button>`)}${project.error ? `<div class="banner error">${esc(project.error)}</div>` : ''}<nav class="steps" aria-label="Étapes de la vidéo">${STEPS.map(([key, name, step], index) => `<a href="#/video/${encode(project.id)}/${key}" ${key === selected ? 'aria-current="step"' : ''}><span class="step-name"><span class="step-number">${index + 1}</span>${name}</span>${badge(key === 'verification' ? verification : stepState(project, step))}</a>`).join('')}</nav><div id="step-content"></div>${advanced([[`p/${encode(project.id)}/script`, 'Texte avancé'], [`p/${encode(project.id)}/voice`, 'Voix avancée'], [`p/${encode(project.id)}/visuals`, 'Images avancées'], [`p/${encode(project.id)}/render`, 'Montage'], [`p/${encode(project.id)}/thumbs`, 'Miniatures']])}`;
+    main.innerHTML = `<div class="breadcrumbs"><a href="#/videos">Videos</a><span>/</span><a href="#/channels/${encode(project.profile_id || project.channel_id || '')}">${esc(profileName(project.profile_id || project.channel_id))}</a></div>${header(project.title || "Untitled", `${esc(durationLabel(project.duration_info))} · ${profileName(project.profile_id || project.channel_id)}`, `${badge(status.state, status.label)}<button class="icon-button" id="refresh-project" title="Actualiser ce projet" aria-label="Actualiser ce projet">${icon('refresh')}</button>`)}${project.error ? `<div class="banner error">${esc(project.error)}</div>` : ''}<nav class="steps" aria-label="Video steps">${STEPS.map(([key, name, step], index) => `<a href="#/video/${encode(project.id)}/${key}" ${key === selected ? 'aria-current="step"' : ''}><span class="step-name"><span class="step-number">${index + 1}</span>${name}</span>${badge(key === 'verification' ? verification : stepState(project, step))}</a>`).join('')}</nav><div id="step-content"></div>${advanced([[`p/${encode(project.id)}/script`, "Advanced text"], [`p/${encode(project.id)}/voice`, "Advanced voice"], [`p/${encode(project.id)}/visuals`, "Advanced images"], [`p/${encode(project.id)}/render`, 'Montage'], [`p/${encode(project.id)}/thumbs`, "Thumbnails"]])}`;
     $('#refresh-project').onclick = (event) => action(event.currentTarget, () => route());
     if (project.style_name) $('.page-head p').textContent += ` · ${project.style_name}`;
-    $('#refresh-project').insertAdjacentHTML('beforebegin', `<button id="rename-video" class="icon-button" title="Modifier le titre" aria-label="Modifier le titre">${icon('edit')}</button>`);
+    $('#refresh-project').insertAdjacentHTML('beforebegin', `<button id="rename-video" class="icon-button" title="Edit title" aria-label="Edit title">${icon('edit')}</button>`);
     $('#rename-video').onclick = openRename;
-    if (selected === 'texte') renderText();
-    if (selected === 'voix') renderVoice();
+    if (selected === "text") renderText();
+    if (selected === "voice") renderVoice();
     if (selected === 'images' || selected === 'verification') renderScenes(selected === 'verification');
     if (selected === 'export') renderExport();
   }
   function openRename() {
-    if (dirty) { notify('Enregistrez vos modifications avant de changer le titre.', true); return; }
+    if (dirty) { notify("Save your changes before changing the title.", true); return; }
     const dialog = $('#create-dialog');
     dialog.className = '';
-    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">Modifier le titre</h2><button type="button" data-close class="icon-button" aria-label="Fermer" title="Fermer">${icon('close')}</button></div><form id="rename-form"><label>Titre de la vidéo<input name="title" value="${esc(project.title)}" maxlength="240" required></label><div class="form-actions"><button type="button" data-close>Annuler</button><button type="submit" class="primary">Enregistrer le titre</button></div></form>`;
-    const close = () => { if (dirty && !confirm('Abandonner la modification du titre ?')) return; dirty = false; dialog.close(); };
+    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">Edit title</h2><button type="button" data-close class="icon-button" aria-label="Close" title="Close">${icon('close')}</button></div><form id="rename-form"><label>Video title<input name="title" value="${esc(project.title)}" maxlength="240" required></label><div class="form-actions"><button type="button" data-close>Cancel</button><button type="submit" class="primary">Save title</button></div></form>`;
+    const close = () => { if (dirty && !confirm("Discard title change?")) return; dirty = false; dialog.close(); };
     $$('[data-close]', dialog).forEach((button) => button.onclick = close);
     dialog.oncancel = (event) => { event.preventDefault(); close(); };
     $('#rename-form').onsubmit = (event) => {
@@ -516,14 +550,14 @@
       action(event.submitter, async () => {
         await api(`/api/workspace/projects/${encode(project.id)}/title`, { method: 'PUT', body: { title: $('[name="title"]', dialog).value } });
         dialog.close(); dirty = false; await route();
-      }, 'Titre enregistré.');
+      }, "Title saved.");
     };
     bindFormState(dialog);
     dialog.showModal(); $('[name="title"]', dialog).focus();
   }
   function scopeReview(scope) {
     const entry = project.human_reviews?.[scope] || {};
-    return `${badge(entry.state || 'unreviewed')}<form class="scope-review" data-scope="${scope}"><label>Note de vérification<textarea name="notes" rows="2">${esc(entry.notes || '')}</textarea></label><div class="form-actions"><button type="submit" name="state" value="correct">${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary">${icon('check')}Marquer vérifié</button></div></form>`;
+    return `${badge(entry.state || 'unreviewed')}<form class="scope-review" data-scope="${scope}"><label>Review note<textarea name="notes" rows="2">${esc(entry.notes || '')}</textarea></label><div class="form-actions"><button type="submit" name="state" value="correct">${icon('edit')}Needs correction</button><button type="submit" name="state" value="verified" class="primary">${icon('check')}Mark verified</button></div></form>`;
   }
   function bindScopeReviews() {
     $$('.scope-review').forEach((form) => form.onsubmit = (event) => {
@@ -531,11 +565,11 @@
       const state = event.submitter?.value;
       action(event.submitter, async () => {
         const notes = $('[name="notes"]', form).value;
-        if (form.dataset.scope === 'script' && $('[name="text"]')?.value !== project.script) throw new Error('Enregistrez le texte avant de le vérifier.');
-        if (state === 'correct' && !notes.trim()) throw new Error('Précisez la correction demandée.');
+        if (form.dataset.scope === 'script' && $('[name="text"]')?.value !== project.script) throw new Error("Save the text before verifying it.");
+        if (state === 'correct' && !notes.trim()) throw new Error("Specify the requested correction.");
         await api(`/api/workspace/projects/${encode(project.id)}/review`, { method: 'POST', body: { scope: form.dataset.scope, state, notes } });
         await route();
-      }, state === 'verified' ? 'Vérification enregistrée.' : 'Demande de correction enregistrée.');
+      }, state === 'verified' ? "Verification saved." : "Correction request saved.");
     });
   }
   function renderText() {
@@ -545,27 +579,27 @@
     const applied = draft && writer.applied_draft_id === draft.id;
     const assets = project.voiceover || project.scenes?.length || project.render;
     const step = project.steps?.script || {};
-    const writing = project.can_write_script ? `<section class="section"><h2>Écrire depuis un titre</h2><p class="muted">Le CLI Proxy écrit le récit avec nos consignes Faceless OS et les références de narration, puis le vérifie et ajuste sa longueur si nécessaire. Le texte d’un projet existant est conservé.</p><form id="script-writer-form"><fieldset ${busy ? 'disabled' : ''}><label>Titre<input name="writing_title" value="${esc(project.title)}" maxlength="240" required></label><label>Durée souhaitée (minutes)<input name="writing_minutes" type="number" min="3" max="30" step="0.5" value="15" required></label><label>Consignes supplémentaires (facultatif)<textarea name="writing_brief" rows="2" maxlength="8000" placeholder="Lieu, menace, personnages ou angle…"></textarea></label><button type="submit" class="primary">${busy ? 'Écriture en cours…' : project.script?.trim() ? 'Proposer un autre script' : 'Écrire depuis le titre'}</button></fieldset></form>${busy ? `<p role="status">${esc(step.msg || 'Écriture…')}</p><progress max="${Math.max(2, step.total || 2)}" value="${step.done || 0}" aria-label="Écriture du script"></progress>` : ''}${writer.state === 'error' ? '<p class="error-text">L’écriture a été interrompue. Votre texte est conservé ; vous pouvez relancer.</p>' : ''}${draft && !applied ? `<section class="section"><h3>Brouillon · ${draft.word_count} mots</h3><p class="muted">${esc(durationLabel(scriptDuration(draft.script)))}</p><textarea class="script-editor" readonly aria-label="Brouillon généré">${esc(draft.script)}</textarea>${assets ? '<p class="muted">Ce projet a déjà des médias. Copiez ce brouillon dans une nouvelle vidéo pour conserver les plans actuels.</p>' : '<button id="apply-script-draft" type="button">Utiliser ce brouillon</button>'}${draft.audit?.issues?.length || draft.audit?.unsupported_claims?.length ? '<p class="muted">La vérification automatique signale des points à relire dans ce brouillon.</p>' : ''}</section>` : ''}</section>` : '';
-    $('#step-content').innerHTML = `${writing}<form id="script-form" class="editor"><fieldset ${busy ? 'disabled' : ''}><div class="page-head"><h2>Script</h2></div><label>Collez ou modifiez votre script<textarea name="text" class="script-editor" spellcheck="true" placeholder="Collez votre script complet ici.">${esc(project.script || '')}</textarea></label>${scriptImportMarkup('edit-script-file')}<div class="form-actions"><button type="submit">Enregistrer le texte</button><button type="submit" name="action" value="next" class="primary">Enregistrer et passer à la voix →</button></div>${project.voiceover_stale ? '<div class="banner">La voix correspond à une version antérieure du texte.</div>' : ''}</fieldset></form>`;
+    const writing = project.can_write_script ? `<section class="section"><h2>Write from a title</h2><p class="muted">The CLI Proxy writes the story with our Faceless OS guidelines and narration references, then checks it and adjusts its length if needed. The text of an existing project is preserved.</p><form id="script-writer-form"><fieldset ${busy ? 'disabled' : ''}><label>Title<input name="writing_title" value="${esc(project.title)}" maxlength="240" required></label><label>Desired duration (minutes)<input name="writing_minutes" type="number" min="3" max="30" step="0.5" value="15" required></label><label>Additional instructions (optional)<textarea name="writing_brief" rows="2" maxlength="8000" placeholder="Location, threat, characters, or angle…"></textarea></label><button type="submit" class="primary">${busy ? "Writing in progress…" : project.script?.trim() ? "Draft another script" : "Write from title"}</button></fieldset></form>${busy ? `<p role="status">${esc(step.msg || "Writing…")}</p><progress max="${Math.max(2, step.total || 2)}" value="${step.done || 0}" aria-label="Script writing"></progress>` : ''}${writer.state === 'error' ? "<p class=\"error-text\">Writing was interrupted. Your text is preserved; you can restart.</p>" : ''}${draft && !applied ? `<section class="section"><h3>Draft · ${draft.word_count} words</h3><p class="muted">${esc(durationLabel(scriptDuration(draft.script)))}</p><textarea class="script-editor" readonly aria-label="Generated draft">${esc(draft.script)}</textarea>${assets ? "<p class=\"muted\">This project already has media. Copy this draft to a new video to keep the current shots.</p>" : "<button id=\"apply-script-draft\" type=\"button\">Use this draft</button>"}${draft.audit?.issues?.length || draft.audit?.unsupported_claims?.length ? "<p class=\"muted\">The automatic check flags points to review in this draft.</p>" : ''}</section>` : ''}</section>` : '';
+    $('#step-content').innerHTML = `${writing}<form id="script-form" class="editor"><fieldset ${busy ? 'disabled' : ''}><div class="page-head"><h2>Script</h2></div><label>Paste or edit your script<textarea name="text" class="script-editor" spellcheck="true" placeholder="Paste your full script here.">${esc(project.script || '')}</textarea></label>${scriptImportMarkup('edit-script-file')}<div class="form-actions"><button type="submit">Save text</button><button type="submit" name="action" value="next" class="primary">Save and go to voice →</button></div>${project.voiceover_stale ? "<div class=\"banner\">The voice matches an earlier version of the text.</div>" : ''}</fieldset></form>`;
     const input = $('[name="text"]');
     bindScriptImport($('#script-form'), '[name="text"]');
-    $('#script-form').onsubmit = (event) => { event.preventDefault(); const next = event.submitter?.value === 'next'; action(event.submitter, async () => { const text = validateScript(input.value); if (next && !text.trim()) throw new Error('Collez votre script pour passer à la voix.'); await api(`/api/workspace/projects/${encode(project.id)}/script`, { method: 'PUT', body: { text } }); dirty = false; if (next) location.hash = `/video/${encode(project.id)}/voix`; else await route(); }, 'Texte enregistré.'); };
+    $('#script-form').onsubmit = (event) => { event.preventDefault(); const next = event.submitter?.value === 'next'; action(event.submitter, async () => { const text = validateScript(input.value); if (next && !text.trim()) throw new Error("Paste your script to proceed to voice."); await api(`/api/workspace/projects/${encode(project.id)}/script`, { method: 'PUT', body: { text } }); dirty = false; if (next) location.hash = `/video/${encode(project.id)}/voice`; else await route(); }, "Text saved."); };
     const writerForm = $('#script-writer-form');
     if (writerForm) writerForm.onsubmit = (event) => {
       event.preventDefault();
       action(event.submitter, async () => {
-        if (input.value !== (project.script || '')) throw new Error('Enregistrez le texte collé ou modifié avant de demander un brouillon.');
+        if (input.value !== (project.script || '')) throw new Error("Save the pasted or edited text before requesting a draft.");
         const fields = new FormData(writerForm);
         await api(`/api/workspace/projects/${encode(project.id)}/script/generate`, {method:'POST',body:{title:fields.get('writing_title'),minutes:Number(fields.get('writing_minutes')),brief:fields.get('writing_brief'),script_hash:project.script_hash}});
         dirty = false; await route();
-      }, 'Écriture lancée.');
+      }, "Writing started.");
     };
     const applyDraft = $('#apply-script-draft');
     if (applyDraft) applyDraft.onclick = () => action(applyDraft, async () => {
-      if (input.value !== (project.script || '')) throw new Error('Enregistrez votre texte avant d’utiliser le brouillon.');
+      if (input.value !== (project.script || '')) throw new Error("Save your text before using the draft.");
       await api(`/api/workspace/projects/${encode(project.id)}/script/apply-draft`, {method:'POST',body:{draft_id:draft.id,script_hash:project.script_hash}});
       dirty = false; await route();
-    }, 'Brouillon enregistré comme script.');
+    }, "Draft saved as script.");
   }
   function renderVoice() {
     const voice = project.voiceover;
@@ -573,7 +607,7 @@
     const step = project.steps?.voiceover || {};
     const chosen = project.settings?.voice || {};
     const blocked = project.running || project.readonly || !project.script?.trim();
-    $('#step-content').innerHTML = `${header('Voix', step.msg || '', badge(step.state || 'idle'))}${project.voiceover_stale ? '<div class="banner">La voix est à refaire : le texte ou le choix de voix a changé.</div>' : ''}<form id="voice-form" class="editor"><fieldset ${blocked ? 'disabled' : ''}><label>Fournisseur vocal<select name="provider"><option value="algrow" ${chosen.provider !== 'ai33' ? 'selected' : ''}>Algrow · ElevenLabs</option><option value="ai33" ${chosen.provider === 'ai33' ? 'selected' : ''}>AI33 Pro · ElevenLabs</option></select></label><label>ID de voix ElevenLabs<input name="manual_voice_id" value="${esc(chosen.voice_id || '')}" placeholder="Collez l’ID ElevenLabs de votre voix" maxlength="200" required></label><label>Rechercher une voix<div class="actions"><input id="voice-search" placeholder="Nom de voix, accent…"><button id="search-voices" type="button">Rechercher</button></div></label><label>Voix<select name="voice_id">${chosen.voice_id ? `<option value="${esc(chosen.voice_id)}">${esc(chosen.voice_name || chosen.voice_id)} · voix enregistrée</option>` : '<option value="">Choisir une voix</option>'}</select></label><p id="voice-catalog-status" class="muted small" role="status">Chargement du catalogue…</p><audio id="voice-sample" controls preload="none" hidden></audio><label>Vitesse<input type="number" name="speed" min="0.7" max="1.2" step="0.05" value="${esc(chosen.speed || 1)}"></label><p class="muted small">Langue : ${esc(project.settings?.language || 'English')}. L’aperçu est celui du catalogue ; la génération lit votre script enregistré.</p><div class="form-actions"><button type="submit" name="action" value="save">Enregistrer la voix du projet</button><button type="submit" name="action" value="default">Garder cette voix pour la chaîne</button><button type="submit" name="action" value="generate" class="primary">${project.running ? 'Génération en cours…' : voice ? 'Refaire la narration' : 'Générer la narration'}</button></div></fieldset></form>${!project.script?.trim() ? '<p class="banner">Collez et enregistrez votre texte à l’étape Texte.</p>' : ''}${url ? `<section class="section"><h2>Narration ${esc(voice.voice || '')}</h2><audio controls preload="metadata" src="${esc(url)}"></audio><p class="muted small">${project.voiceover_stale ? 'Durée de l’ancienne voix' : 'Durée réelle'} : ${fmtTime(voice.duration)}</p></section><section class="section editor"><h2>Écoute et vérification</h2>${scopeReview('voiceover')}</section>` : ''}<div class="form-actions"><a class="button" href="#/video/${encode(project.id)}/texte">← Texte</a>${url && !project.voiceover_stale && !project.running ? `<a class="button primary" href="#/video/${encode(project.id)}/images">Passer aux images →</a>` : ''}</div>`;
+    $('#step-content').innerHTML = `${header("Voice", step.msg || '', badge(step.state || 'idle'))}${project.voiceover_stale ? "<div class=\"banner\">The voice must be redone: the text or voice choice has changed.</div>" : ''}<form id="voice-form" class="editor"><fieldset ${blocked ? 'disabled' : ''}><label>Voice provider<select name="provider"><option value="algrow" ${chosen.provider !== 'ai33' ? 'selected' : ''}>Algrow · ElevenLabs</option><option value="ai33" ${chosen.provider === 'ai33' ? 'selected' : ''}>AI33 Pro · ElevenLabs</option></select></label><label>ElevenLabs voice ID<input name="manual_voice_id" value="${esc(chosen.voice_id || '')}" placeholder="Paste your ElevenLabs voice ID" maxlength="200" required></label><label>Search for a voice<div class="actions"><input id="voice-search" placeholder="Voice name, accent…"><button id="search-voices" type="button">Search</button></div></label><label>Voice<select name="voice_id">${chosen.voice_id ? `<option value="${esc(chosen.voice_id)}">${esc(chosen.voice_name || chosen.voice_id)} · voice saved</option>` : "<option value=\"\">Choose a voice</option>"}</select></label><p id="voice-catalog-status" class="muted small" role="status">Loading catalog…</p><audio id="voice-sample" controls preload="none" hidden></audio><label>Speed<input type="number" name="speed" min="0.7" max="1.2" step="0.05" value="${esc(chosen.speed || 1)}"></label><p class="muted small">Language: ${esc(project.settings?.language || 'English')}. The preview is from the catalog; generation reads your saved script.</p><div class="form-actions"><button type="submit" name="action" value="save">Save project voice</button><button type="submit" name="action" value="default">Keep this voice for the channel</button><button type="submit" name="action" value="generate" class="primary">${project.running ? "Generating…" : voice ? "Regenerate voiceover" : "Generate narration"}</button></div></fieldset></form>${!project.script?.trim() ? "<p class=\"banner\">Paste and save your text in the Text step.</p>" : ''}${url ? `<section class="section"><h2>Narration ${esc(voice.voice || '')}</h2><audio controls preload="metadata" src="${esc(url)}"></audio><p class="muted small">${project.voiceover_stale ? "Previous voice duration" : "Actual duration"} : ${fmtTime(voice.duration)}</p></section><section class="section editor"><h2>Listen and check</h2>${scopeReview('voiceover')}</section>` : ''}<div class="form-actions"><a class="button" href="#/video/${encode(project.id)}/text">← Text</a>${url && !project.voiceover_stale && !project.running ? `<a class="button primary" href="#/video/${encode(project.id)}/images">Continue to images →</a>` : ''}</div>`;
     const id = project.id;
     const form = $('#voice-form');
     const select = $('[name="voice_id"]', form);
@@ -599,9 +633,9 @@
         const current = { id: select.value, name: select.selectedOptions[0]?.textContent || chosen.voice_name };
         entries = result.voices || [];
         const options = current.id && !entries.some((v) => v.id === current.id) ? [current, ...entries] : entries;
-        select.innerHTML = `<option value="">Choisir une voix</option>${options.map((v) => `<option value="${esc(v.id)}">${esc(v.name)}${v.accent ? ` · ${esc(v.accent)}` : ''}</option>`).join('')}`;
+        select.innerHTML = `<option value="">Choose a voice</option>${options.map((v) => `<option value="${esc(v.id)}">${esc(v.name)}${v.accent ? ` · ${esc(v.accent)}` : ''}</option>`).join('')}`;
         select.value = current.id || '';
-        status.textContent = entries.length ? `${entries.length} voix disponibles. Sélectionnez une voix pour écouter son aperçu.` : 'Aucune voix trouvée. Essayez une autre recherche.';
+        status.textContent = entries.length ? `${entries.length} voices available. Select a voice to hear its preview.` : "No voices found. Try another search.";
         showSample();
       } catch (error) { if (form.isConnected && request === token) status.textContent = error.message; }
     };
@@ -621,7 +655,7 @@
         if (mode === 'generate') body.script_hash = project.script_hash;
         await api(`/api/workspace/projects/${encode(id)}/voice${suffix}`, { method: mode === 'save' ? 'PUT' : 'POST', body });
         dirty = false; await route();
-      }, mode === 'generate' ? 'Génération de la narration lancée.' : mode === 'default' ? 'Voix sauvegardée pour les prochaines vidéos de la chaîne.' : 'Voix du projet enregistrée.');
+      }, mode === 'generate' ? "Narration generation started." : mode === 'default' ? "Voice saved for the channel’s next videos." : "Project voice saved.");
     };
     loadVoices();
     form.insertAdjacentHTML('beforebegin', voiceProgressMarkup(project));
@@ -631,7 +665,7 @@
     const info = voiceProgressInfo(p);
     if (!info.active) return '<div id="voice-progress"></div>';
     const elapsed = info.started ? Math.max(0, Date.now() / 1000 - info.started) : 0;
-    return `<section id="voice-progress" class="voice-progress" aria-label="Génération de la narration"><div class="inline"><strong>Narration en cours</strong><span data-voice-elapsed data-started="${info.started || ''}">Temps écoulé : ${fmtTime(elapsed)}</span></div><progress max="100" ${info.percent !== null ? `value="${info.percent}"` : ''} aria-label="Progression de la voix"></progress><p class="small" role="status">${esc(p.steps?.voiceover?.msg || 'Synthèse vocale…')}${info.percent !== null ? ` · ${Math.round(info.percent)} %` : ''}</p><p class="muted small">${info.percent === null ? 'Le fournisseur ne transmet pas encore de pourcentage. ' : ''}La narration et sa durée réelle apparaîtront automatiquement ici.</p></section>`;
+    return `<section id="voice-progress" class="voice-progress" aria-label="Narration generation"><div class="inline"><strong>Narration in progress</strong><span data-voice-elapsed data-started="${info.started || ''}">Elapsed time: ${fmtTime(elapsed)}</span></div><progress max="100" ${info.percent !== null ? `value="${info.percent}"` : ''} aria-label="Voice progress"></progress><p class="small" role="status">${esc(p.steps?.voiceover?.msg || "Text-to-speech…")}${info.percent !== null ? ` · ${Math.round(info.percent)} %` : ''}</p><p class="muted small">${info.percent === null ? "The provider does not yet send a percentage. " : ''}The narration and its actual duration will appear here automatically.</p></section>`;
   }
   function sceneReferences(scene) {
     if (scene.display_references?.length) return scene.display_references;
@@ -648,7 +682,7 @@
   }
   function generationControl(scene) {
     if (generationBlockReason(project, scene)) return '';
-    return `<div class="actions"><button type="button" data-generate="${esc(scene.id)}">${icon('refresh')}${hasImage(scene) ? 'Refaire ce plan' : 'Générer ce plan'}</button></div>`;
+    return `<div class="actions"><button type="button" data-generate="${esc(scene.id)}">${icon('refresh')}${hasImage(scene) ? "Redo this shot" : "Generate this shot"}</button></div>`;
   }
   function batchMarkup(p = project) {
     if (!p.codex_directed || p.readonly) return '';
@@ -657,16 +691,16 @@
       const corrections = batchPlan(p, 'corrections');
     const job = p.workspace_batch;
     const active = ['queued', 'running', 'stopping'].includes(job?.state);
-      const labels = { queued: 'Démarrage', running: job?.phase === 'corrections' ? 'Correction des plans en cours' : 'Génération en cours', stopping: 'Arrêt après les plans en cours', done: 'Images générées · à vérifier', done_with_errors: 'Corrections terminées · certains plans restent à refaire', stopped: 'Génération arrêtée', failed: 'Génération arrêtée sur une erreur', interrupted: 'Génération interrompue' };
-      const correctionButton = corrections.targets.length ? `<button type="button" data-batch="corrections" ${corrections.reason ? 'disabled' : ''}>Refaire les plans incorrects · ${corrections.targets.length}</button>` : '';
+      const labels = { queued: "Starting", running: job?.phase === 'corrections' ? "Correcting shots" : "Generating images", stopping: "Stopping after active shots", done: "Images generated · needs review", done_with_errors: "Corrections complete · some shots need another attempt", stopped: "Generation stopped", failed: "Generation stopped on an error", interrupted: "Generation interrupted" };
+      const correctionButton = corrections.targets.length ? `<button type="button" data-batch="corrections" ${corrections.reason ? 'disabled' : ''}>Redo incorrect shots · ${corrections.targets.length}</button>` : '';
       const failedCount = job?.failed_scene_ids?.length || 0;
       const processed = (job?.done || 0) + failedCount;
       const activeIds = job?.current_scene_ids?.length ? job.current_scene_ids : job?.current_scene_id != null ? [job.current_scene_id] : [];
-    return `<section id="batch-workflow" class="section batch-workflow" aria-label="Tester puis générer les images"><h2>Tester les 3 premières, puis générer la suite</h2><p class="muted">Vérifiez le personnage, les décors et le style sur les trois premiers plans avant de lancer les images restantes. Les images réussies sont conservées. Les plans marqués à refaire sont régénérés avec leurs nouvelles références.</p><div class="actions"><button type="button" class="primary" data-batch="preview" ${test.reason ? 'disabled' : ''}>1. Tester les ${test.first.length || 3} premières images${test.targets.length ? ` · ${test.targets.length} à générer` : ''}</button><button type="button" class="primary" data-batch="remaining" ${rest.reason ? 'disabled' : ''}>2. Générer les images restantes${rest.targets.length ? ` · ${rest.targets.length}` : ''}</button>${correctionButton}${active ? `<button type="button" id="stop-images" ${job.stop_requested ? 'disabled' : ''}>Arrêter après les plans en cours</button>` : ''}</div>${test.reason && !active ? `<p class="small muted">Test : ${esc(test.reason)}</p>` : ''}${rest.reason && !active ? `<p class="small muted">Suite : ${esc(rest.reason)}</p>` : ''}${job ? `<div class="batch-progress" role="status" aria-live="polite"><strong>${esc(labels[job.state] || job.state)}</strong><span>${processed}/${job.total} plans traités · ${job.done} images générées${failedCount ? ` · ${failedCount} échec(s)` : ''}${activeIds.length ? ` · plans en cours : ${activeIds.map(esc).join(', ')}` : ''}</span><progress max="${Math.max(1, job.total)}" value="${processed}" aria-label="Plans traités"></progress>${job.error ? `<p class="error-text">${esc(job.error)}</p>` : ''}${failedCount ? `<p class="small error-text">À refaire : plans ${job.failed_scene_ids.map(esc).join(', ')}. Les anciennes images sont conservées.</p>` : ''}</div>` : ''}<p class="small muted">Après la génération, vérifiez toutes les images, puis lancez le montage dans l’onglet Export. La voix et les timings doivent être prêts.</p></section>`;
+    return `<section id="batch-workflow" class="section batch-workflow" aria-label="Test, then generate the images"><h2>Test the first 3, then generate the rest</h2><p class="muted">Check the character, settings, and style on the first three shots before launching the remaining images. Successful images are kept. Shots marked to redo are regenerated with their new references.</p><div class="actions"><button type="button" class="primary" data-batch="preview" ${test.reason ? 'disabled' : ''}>1. Test the ${test.first.length || 3} first images${test.targets.length ? ` · ${test.targets.length} to generate` : ''}</button><button type="button" class="primary" data-batch="remaining" ${rest.reason ? 'disabled' : ''}>2. Generate the remaining images${rest.targets.length ? ` · ${rest.targets.length}` : ''}</button>${correctionButton}${active ? `<button type="button" id="stop-images" ${job.stop_requested ? 'disabled' : ''}>Stop after current shots</button>` : ''}</div>${test.reason && !active ? `<p class="small muted">Test : ${esc(test.reason)}</p>` : ''}${rest.reason && !active ? `<p class="small muted">Suite : ${esc(rest.reason)}</p>` : ''}${job ? `<div class="batch-progress" role="status" aria-live="polite"><strong>${esc(labels[job.state] || job.state)}</strong><span>${processed}/${job.total} shots processed · ${job.concurrency || 1} images at once · ${job.done} images generated${failedCount ? ` · ${failedCount} failure(s)` : ''}${activeIds.length ? ` · shots in progress: ${activeIds.map(esc).join(', ')}` : ''}</span><progress max="${Math.max(1, job.total)}" value="${processed}" aria-label="Shots processed"></progress>${job.error ? `<p class="error-text">${esc(job.error)}</p>` : ''}${failedCount ? `<p class="small error-text">To redo: shots ${job.failed_scene_ids.map(esc).join(', ')}. The previous images are kept.</p>` : ''}</div>` : ''}<p class="small muted">After generation, check all images, then launch the edit in the Export tab. The voice and timings must be ready.</p></section>`;
   }
   function bindBatchControls() {
     $$('[data-batch]').forEach((button) => button.onclick = () => action(button, async () => {
-      if (dirty) throw new Error('Enregistrez les prompts et vos notes avant de lancer la génération.');
+      if (dirty) throw new Error("Save the prompts and your notes before launching generation.");
       const phase = button.dataset.batch;
       const plan = batchPlan(project, phase);
       if (plan.reason) throw new Error(plan.reason);
@@ -675,12 +709,12 @@
         image_provider: project.model_snapshot.image_provider || 'cli_proxy'
       } });
       renderScenes(routeParts()[2] === 'verification');
-    }, 'Génération lancée. Vous pouvez quitter cette page et revenir suivre le résultat.'));
+    }, "Generation started. You can leave this page and come back to check the result."));
     const stop = $('#stop-images');
     if (stop) stop.onclick = () => action(stop, async () => {
       project = await api(`/api/workspace/projects/${encode(project.id)}/images/stop`, { method: 'POST' });
       $('#batch-workflow').outerHTML = batchMarkup(); bindBatchControls();
-    }, 'Arrêt demandé : l’image en cours sera conservée.');
+    }, "Stop requested: the current image will be kept.");
   }
   function openGeneration(scene, article) {
     const editedPrompt = $('[name="prompt"]', article)?.value ?? scene.prompt;
@@ -692,8 +726,8 @@
     const confirmedOrder = referenceOrder(references);
     const dialog = $('#preview-dialog');
     dialog.classList.add('generation-dialog');
-    dialog.setAttribute('aria-label', 'Confirmer la génération du plan');
-    dialog.innerHTML = `<div class="dialog-head"><h2>Refaire ce plan</h2><button type="button" data-cancel class="icon-button" title="Fermer" aria-label="Fermer">${icon('close')}</button></div><dl class="metadata"><dt>Plan</dt><dd>${esc(scene.id)}</dd><dt>Modèle image</dt><dd>${esc(body.image_model)}</dd></dl><section class="section"><h3>Prompt exact enregistré</h3><pre class="exact-prompt">${esc(body.confirm_prompt)}</pre></section><section class="section"><h3>Références, dans l’ordre</h3><ol class="refs">${references.map((ref) => referenceView(typeof ref === 'string' ? ref : { ...ref, label: `${ref.label || ref.role || 'Référence'} · ${ref.path || ref.file || ref.image || ''}` })).join('')}</ol></section><p class="muted small">Une nouvelle version de cette image sera créée. La version précédente sera conservée ; le nouveau résultat sera à vérifier.</p><div id="generation-error" role="alert"></div><div class="form-actions"><button type="button" data-cancel>Annuler</button><button type="button" id="confirm-generation" class="primary">${icon('refresh')}Confirmer et refaire ce plan</button></div>`;
+    dialog.setAttribute('aria-label', "Confirm shot generation");
+    dialog.innerHTML = `<div class="dialog-head"><h2>Redo this shot</h2><button type="button" data-cancel class="icon-button" title="Close" aria-label="Close">${icon('close')}</button></div><dl class="metadata"><dt>Shot</dt><dd>${esc(scene.id)}</dd><dt>Image model</dt><dd>${esc(body.image_model)}</dd></dl><section class="section"><h3>Exact saved prompt</h3><pre class="exact-prompt">${esc(body.confirm_prompt)}</pre></section><section class="section"><h3>References, in order</h3><ol class="refs">${references.map((ref) => referenceView(typeof ref === 'string' ? ref : { ...ref, label: `${ref.label || ref.role || "Reference"} · ${ref.path || ref.file || ref.image || ''}` })).join('')}</ol></section><p class="muted small">A new version of this image will be created. The previous version will be kept; the new result will need to be checked.</p><div id="generation-error" role="alert"></div><div class="form-actions"><button type="button" data-cancel>Cancel</button><button type="button" id="confirm-generation" class="primary">${icon('refresh')}Confirm and redo this shot</button></div>`;
     $$('[data-cancel]', dialog).forEach((button) => button.onclick = () => { if (!submitting) dialog.close(); });
     const preventBusyClose = (event) => { if (submitting) event.preventDefault(); };
     dialog.addEventListener('cancel', preventBusyClose);
@@ -704,16 +738,16 @@
       try {
         const current = await api(`/api/workspace/projects/${encode(projectId)}`);
         const latest = current.scenes?.find((candidate) => candidate.id === scene.id);
-        if (!latest) throw new Error('Ce plan n’existe plus. Actualisez le projet.');
+        if (!latest) throw new Error("This shot no longer exists. Refresh the project.");
         const latestBody = generationBody(current, latest);
         if (latestBody.confirm_prompt !== body.confirm_prompt || latestBody.image_model !== body.image_model || JSON.stringify(referenceOrder(sceneReferences(latest))) !== JSON.stringify(confirmedOrder)) {
-          throw new Error('Le prompt, les références ou le modèle ont changé. Actualisez le projet avant de confirmer à nouveau.');
+          throw new Error("The prompt, references, or model have changed. Refresh the project before confirming again.");
         }
         const promptInput = $('[name="prompt"]', article);
-        if (promptInput && promptInput.value !== body.confirm_prompt) throw new Error('Enregistrez le prompt avant de refaire ce plan.');
+        if (promptInput && promptInput.value !== body.confirm_prompt) throw new Error("Save the prompt before remaking this outline.");
         await api(`/api/workspace/projects/${encode(projectId)}/scenes/${encode(scene.id)}/generate`, { method: 'POST', body });
         dialog.close();
-        notify('Nouvelle image demandée pour ce plan.');
+        notify("New image requested for this shot.");
         await route();
       } catch (error) {
         $('#generation-error', dialog).innerHTML = `<div class="banner error">${esc(error.message)}</div>`;
@@ -728,24 +762,24 @@
     if (project.scenes?.length) return '';
     const step = project.steps?.planning || {};
     const active = project.running;
-    return `<section class="section" id="planning-workflow"><h2>Préparer les images</h2><p>Ton script et ta voix sont enregistrés. Prépare les plans, leurs prompts et les références du style, puis teste les trois premières images.</p>${project.can_prepare_images ? `<button id="prepare-images" class="primary" ${active || project.duration_info?.kind !== 'actual' ? 'disabled' : ''}>${active ? 'Préparation en cours…' : 'Préparer les images'}</button>` : '<p>Le découpage de cette chaîne historique reste préparé par Codex.</p>'}${active ? `<p role="status">${esc(step.msg || 'Démarrage de la préparation…')}</p><progress max="${Math.max(1, step.total || 1)}" ${step.total ? `value="${step.done || 0}"` : ''} aria-label="Préparation des plans"></progress>` : ''}${step.state === 'error' ? `<p class="error-text">${esc(step.msg)}</p>` : ''}<p class="small muted">Cette étape prépare les prompts. Aucune image n’est encore générée.</p></section>`;
+    return `<section class="section" id="planning-workflow"><h2>Prepare images</h2><p>Your script and voice are saved. Prepare the shots, their prompts, and the style references, then test the first three images.</p>${project.can_prepare_images ? `<button id="prepare-images" class="primary" ${active || project.duration_info?.kind !== 'actual' ? 'disabled' : ''}>${active ? "Preparing…" : "Prepare images"}</button>` : "<p>The breakdown for this history channel is still prepared by Codex.</p>"}${active ? `<p role="status">${esc(step.msg || "Starting preparation…")}</p><progress max="${Math.max(1, step.total || 1)}" ${step.total ? `value="${step.done || 0}"` : ''} aria-label="Shot preparation"></progress>` : ''}${step.state === 'error' ? `<p class="error-text">${esc(step.msg)}</p>` : ''}<p class="small muted">This step prepares the prompts. No images are generated yet.</p></section>`;
   }
   function renderScenes(verification) {
     const scenes = project.scenes || [];
     const verified = scenes.filter((s) => reviewState(s) === 'verified').length;
-    $('#step-content').innerHTML = `${header(verification ? 'Vérification des images' : 'Plans et images', `${scenes.length} plans · ${verified} vérifiés`)}${scenes.length ? batchMarkup() : planningMarkup()}${!scenes.length ? '' : scenes.map((scene, index) => {
+    $('#step-content').innerHTML = `${header(verification ? "Image review" : "Shots and images", `${scenes.length} shots · ${verified} reviewed`)}${scenes.length ? batchMarkup() : planningMarkup()}${!scenes.length ? '' : scenes.map((scene, index) => {
       const references = sceneReferences(scene);
       const names = (scene.characters || []).map((id) => typeof id === 'object' ? id.name || id.id : project.characters?.find((c) => c.id === id)?.name || id);
       const image = safeUrl(scene.image_url) || mediaUrl('media', project.id, scene.image);
-      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Plan ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<details><summary>Références des personnages et du style</summary><h3>Références prévues pour ce plan, dans l’ordre</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : '<p class="muted small">Aucune référence enregistrée.</p>'}</details></div><div class="scene-data"><div class="scene-head"><h2>Plan ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : 'Voix non alignée'}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || 'Extrait manquant')}</p></div><details><summary>Détails du plan et prompt</summary><dl class="metadata"><dt>Lieu</dt><dd>${esc(scene.location_id || scene.location || 'Non renseigné')}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || 'Aucun personnage nommé')}</dd><dt>Variante</dt><dd>${esc(scene.variant || scene.camera_variant || 'Non renseignée')}</dd></dl>${verification ? `<details><summary>Prompt du plan</summary><p>${esc(scene.prompt || 'Prompt manquant')}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Enregistrer le prompt</button></div></form>`}</details>${generationControl(scene)}<form class="review-form"><label>Note de vérification<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}À corriger</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Marquer vérifié</button><button type="submit" name="state" value="unreviewed" title="Retirer la validation">À vérifier</button></div></form></div></article>`;
+      return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Shot ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<details><summary>Character and style references</summary><h3>References planned for this shot, in order</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : "<p class=\"muted small\">No reference saved.</p>"}</details></div><div class="scene-data"><div class="scene-head"><h2>Shot ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : "Voice not aligned"}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || "Missing excerpt")}</p></div><details><summary>Shot details and prompt</summary><dl class="metadata"><dt>Location</dt><dd>${esc(scene.location_id || scene.location || "Not specified")}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || "No named character")}</dd><dt>Variant</dt><dd>${esc(scene.variant || scene.camera_variant || "Not specified")}</dd></dl>${verification ? `<details><summary>Shot prompt</summary><p>${esc(scene.prompt || "Missing prompt")}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Save prompt</button></div></form>`}</details>${generationControl(scene)}<form class="review-form"><label>Review note<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}Needs fixing</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Mark as reviewed</button><button type="submit" name="state" value="unreviewed" title="Remove approval">To review</button></div></form></div></article>`;
     }).join('')}`;
     bindBatchControls();
     const prepare = $('#prepare-images');
     if (prepare) prepare.onclick = () => action(prepare, async () => {
-      if (dirty) throw new Error('Enregistrez vos modifications avant de préparer les plans.');
+      if (dirty) throw new Error("Save your changes before preparing the shots.");
       project = await api(`/api/workspace/projects/${encode(project.id)}/images/prepare`, {method: 'POST', body: {script_hash: project.script_hash}});
       renderScenes(verification);
-    }, 'Préparation lancée. Les images seront générées après votre test.');
+    }, "Preparation started. The images will be generated after your test.");
     $$('[data-generate]').forEach((button) => {
       const article = button.closest('[data-scene]');
       const scene = project.scenes.find((candidate) => String(candidate.id) === button.dataset.generate);
@@ -753,7 +787,7 @@
       $('[name="prompt"]', article)?.addEventListener('input', (event) => {
         const reason = generationBlockReason(project, scene, event.target.value);
         button.disabled = Boolean(reason);
-        button.title = reason || 'Refaire uniquement ce plan';
+        button.title = reason || "Redo this shot only";
       });
     });
     $$('.scene-form').forEach((form) => form.onsubmit = (event) => {
@@ -766,20 +800,20 @@
           return prompt ? { ...scene, prompt: prompt.value } : scene;
         });
         await api(`/api/workspace/projects/${encode(project.id)}/scenes`, { method: 'PUT', body: { scenes } }); await route();
-      }, 'Prompt enregistré.');
+      }, "Prompt saved.");
     });
     $$('.review-form').forEach((form) => form.onsubmit = (event) => {
       event.preventDefault();
       action(event.submitter, async () => {
         const notes = $('[name="notes"]', form).value;
         const state = event.submitter?.value;
-        if (state === 'correct' && !notes.trim()) throw new Error('Précisez la correction demandée pour cette image.');
+        if (state === 'correct' && !notes.trim()) throw new Error("Specify the requested correction for this image.");
         const sid = form.closest('[data-scene]').dataset.scene;
         const scene = project.scenes.find((s) => String(s.id) === sid);
         const authored = $('[name="prompt"]', form.closest('[data-scene]'));
-        if (authored && authored.value !== scene.prompt) throw new Error('Enregistrez le prompt avant de vérifier l’image.');
+        if (authored && authored.value !== scene.prompt) throw new Error("Save the prompt before reviewing the image.");
         await api(`/api/workspace/projects/${encode(project.id)}/review`, { method: 'POST', body: { scene_id: scene.id, state, notes } }); await route();
-      }, 'État de vérification enregistré.');
+      }, "Review status saved.");
     });
     bindFormState($('#step-content'));
     bindPreviews($('#step-content'));
@@ -789,14 +823,14 @@
     const url = mediaUrl('media', project.id, render.file);
     const srt = mediaUrl('media', project.id, render.srt);
     const status = projectStatus(project);
-    $('#step-content').innerHTML = `${header('Export', '', badge(status.state, status.label))}${project.technical_issues?.length ? `<div class="banner"><h3>Contrôles techniques à terminer</h3><ul>${project.technical_issues.map((issue) => `<li>${esc(issue)}</li>`).join('')}</ul></div>` : ''}${url ? `<video controls preload="metadata" src="${esc(url)}"></video><div class="actions"><a class="button" href="${esc(url)}" download>${icon('download')}Télécharger le rendu</a>${srt ? `<a class="button" href="${esc(srt)}" download>${icon('download')}Sous-titres</a>` : ''}</div>${project.publication_ready !== true ? '<div class="banner">Rendu disponible. La vérification avant publication reste à terminer.</div>' : '<div class="banner good">Validation avant publication enregistrée.</div>'}<section class="section editor"><h2>Vérification du rendu</h2>${scopeReview('render')}</section>` : '<div class="empty"><h2>Aucun rendu disponible</h2><p>Le projet attend son montage et son export.</p></div>'}<section class="section"><h2>Modèles du projet</h2><dl class="definition-list"><div><dt>Texte</dt><dd>${esc(project.model_snapshot?.text_model || project.settings?.script?.model || 'Non renseigné')}</dd></div><div><dt>Images</dt><dd>${esc(project.model_snapshot?.image_model || project.settings?.visuals?.image_model || 'Non renseigné')}</dd></div></dl></section>`;
+    $('#step-content').innerHTML = `${header('Export', '', badge(status.state, status.label))}${project.technical_issues?.length ? `<div class="banner"><h3>Technical checks to complete</h3><ul>${project.technical_issues.map((issue) => `<li>${esc(issue)}</li>`).join('')}</ul></div>` : ''}${url ? `<video controls preload="metadata" src="${esc(url)}"></video><div class="actions"><a class="button" href="${esc(url)}" download>${icon('download')}Download the render</a>${srt ? `<a class="button" href="${esc(srt)}" download>${icon('download')}Sous-titres</a>` : ''}</div>${project.publication_ready !== true ? "<div class=\"banner\">Render available. Pre-publication review still needs to be completed.</div>" : "<div class=\"banner good\">Pre-publication approval saved.</div>"}<section class="section editor"><h2>Render review</h2>${scopeReview('render')}</section>` : "<div class=\"empty\"><h2>No render available</h2><p>The project is waiting for editing and export.</p></div>"}<section class="section"><h2>Project models</h2><dl class="definition-list"><div><dt>Text</dt><dd>${esc(project.model_snapshot?.text_model || project.settings?.script?.model || "Not specified")}</dd></div><div><dt>Images</dt><dd>${esc(project.model_snapshot?.image_model || project.settings?.visuals?.image_model || "Not specified")}</dd></div></dl></section>`;
     bindScopeReviews();
     const ready = project.technical_ready && project.scenes?.length && project.scenes.every((s) => s.human_review?.state === 'verified') && project.human_reviews?.voiceover?.state === 'verified';
-    $('#step-content').insertAdjacentHTML('afterbegin', `<section class="section"><h2>Montage de la vidéo</h2><button id="render-video" type="button" class="primary" ${!ready || project.running ? 'disabled' : ''}>${project.running ? 'Montage en cours…' : 'Générer le montage vidéo'}</button>${!ready ? '<p class="small muted">Préparez la voix et les timings, puis vérifiez la voix et toutes les images pour lancer le montage.</p>' : ''}</section>`);
+    $('#step-content').insertAdjacentHTML('afterbegin', `<section class="section"><h2>Video editing</h2><button id="render-video" type="button" class="primary" ${!ready || project.running ? 'disabled' : ''}>${project.running ? "Editing in progress…" : "Generate video edit"}</button>${!ready ? "<p class=\"small muted\">Prepare the voice and timings, then check the voice and all images to start editing.</p>" : ''}</section>`);
     $('#render-video').onclick = (event) => action(event.currentTarget, async () => {
-      if (dirty) throw new Error('Enregistrez vos notes avant de lancer le montage.');
+      if (dirty) throw new Error("Save your notes before starting the edit.");
       await api(`/api/workspace/projects/${encode(project.id)}/render`, { method: 'POST' }); await route();
-    }, 'Montage lancé.');
+    }, "Editing started.");
   }
   function profilePreview(profile, kind) {
     const value = profile[`${kind}_preview`] || profile[`${kind}_preview_url`];
@@ -807,19 +841,19 @@
     return data.styles.map((s) => '<option value="' + esc(s.id) + '"' + (s.id === selected ? ' selected' : '') + '>' + esc(s.name) + '</option>').join('');
   }
   function channelFields(c = {}) {
-    const languages = {English: 'Anglais', French: 'Français', Spanish: 'Espagnol', German: 'Allemand', Italian: 'Italien', Portuguese: 'Portugais', Japanese: 'Japonais'};
-    return '<div class="form-grid"><label>Nom de la chaîne<input name="name" value="' + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + '" placeholder="@MaChaine" maxlength="100"></label><label>Langue<select name="language">' + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + '</select></label><label>Durée cible (minutes)<input name="target_minutes" type="number" min="20" max="25" step="0.5" value="' + (c.target_minutes || 22) + '" required></label><label class="full">Style par défaut<select name="style_id" required>' + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? '<option value="" selected>Style archivé · choisir un style actif</option>' : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label>Fournisseur vocal<select name="voice_provider"><option value="algrow"' + (c.voice?.provider !== 'ai33' ? ' selected' : '') + '>Algrow · ElevenLabs</option><option value="ai33"' + (c.voice?.provider === 'ai33' ? ' selected' : '') + '>AI33 Pro · ElevenLabs</option></select></label><label>ID de voix ElevenLabs<input name="voice_id" value="' + esc(c.voice?.voice_id || '') + '" placeholder="ID de voix propre à cette chaîne" maxlength="200" required></label><label class="full">Univers et époque<textarea name="setting" rows="3">' + esc(c.setting || '') + '</textarea></label><label class="full">Description de la chaîne<textarea name="description" rows="3">' + esc(c.description || '') + '</textarea></label></div>';
+    const languages = {English: "English", French: "French", Spanish: "Spanish", German: "German", Italian: "Italian", Portuguese: "Portuguese", Japanese: "Japanese"};
+    return "<div class=\"form-grid\"><label>Channel name<input name=\"name\" value=\"" + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + "\" placeholder=\"@MyChannel\" maxlength=\"100\"></label><label>Language<select name=\"language\">" + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + "</select></label><label>Target length (minutes)<input name=\"target_minutes\" type=\"number\" min=\"3\" max=\"30\" step=\"0.5\" value=\"" + (c.target_minutes || 22) + "\" required></label><label class=\"full\">Default style<select name=\"style_id\" required>" + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? "<option value=\"\" selected>Archived style · choose an active style</option>" : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label>Voice provider<select name="voice_provider"><option value="algrow"' + (c.voice?.provider !== 'ai33' ? ' selected' : '') + '>Algrow · ElevenLabs</option><option value="ai33"' + (c.voice?.provider === 'ai33' ? ' selected' : '') + ">AI33 Pro · ElevenLabs</option></select></label><label>ElevenLabs voice ID<input name=\"voice_id\" value=\"" + esc(c.voice?.voice_id || '') + "\" placeholder=\"Voice ID specific to this channel\" maxlength=\"200\" required></label><label class=\"full\">Setting and era<textarea name=\"setting\" rows=\"3\">" + esc(c.setting || '') + "</textarea></label><label class=\"full\">Channel description<textarea name=\"description\" rows=\"3\">" + esc(c.description || '') + '</textarea></label></div>';
   }
   function channelBody(form) {
     const fields = new FormData(form);
     return {name: fields.get('name'), handle: fields.get('handle'), language: fields.get('language'), target_minutes: Number(fields.get('target_minutes')), style_id: fields.get('style_id'), setting: fields.get('setting'), description: fields.get('description'), voice: {provider: fields.get('voice_provider'), voice_id: fields.get('voice_id'), voice_name: fields.get('voice_id') === form.dataset.savedVoiceId ? form.dataset.savedVoiceName : fields.get('voice_id'), speed: Number(form.dataset.savedVoiceSpeed || 1)}};
   }
   function managementDialog(title, fields, submit) {
-    if (dirty) { notify('Enregistrez vos modifications avant de continuer.', true); return; }
+    if (dirty) { notify("Save your changes before continuing.", true); return; }
     const dialog = $('#create-dialog');
     dialog.className = 'management-dialog';
-    dialog.innerHTML = '<div class="dialog-head"><h2 id="create-heading">' + esc(title) + '</h2><button type="button" data-close class="icon-button" aria-label="Fermer" title="Fermer">' + icon('close') + '</button></div><form id="management-form">' + fields + '<div id="management-error" role="alert"></div><div class="form-actions"><button type="button" data-close>Annuler</button><button type="submit" class="primary">' + icon('plus') + 'Créer</button></div></form>';
-    const close = () => { if (dirty && !confirm('Abandonner les modifications ?')) return; dirty = false; dialog.close(); };
+    dialog.innerHTML = '<div class="dialog-head"><h2 id="create-heading">' + esc(title) + "</h2><button type=\"button\" data-close class=\"icon-button\" aria-label=\"Close\" title=\"Close\">" + icon('close') + '</button></div><form id="management-form">' + fields + "<div id=\"management-error\" role=\"alert\"></div><div class=\"form-actions\"><button type=\"button\" data-close>Cancel</button><button type=\"submit\" class=\"primary\">" + icon('plus') + "Create</button></div></form>";
+    const close = () => { if (dirty && !confirm("Discard changes?")) return; dirty = false; dialog.close(); };
     $$('[data-close]', dialog).forEach((button) => button.onclick = close);
     dialog.oncancel = (event) => { event.preventDefault(); close(); };
     $('#management-form').onsubmit = (event) => {
@@ -827,32 +861,32 @@
       action(event.submitter, async () => {
         try { const destination = await submit(event.target); dialog.close(); dirty = false; location.hash = destination; }
         catch (error) { $('#management-error').innerHTML = '<div class="banner error">' + esc(error.message) + '</div>'; throw error; }
-      }, 'Création enregistrée.');
+      }, "Creation saved.");
     };
     bindFormState(dialog); dialog.showModal(); $('input', dialog).focus();
   }
   function newChannel() {
-    managementDialog('Nouvelle chaîne', channelFields(), async (form) => {
+    managementDialog("New channel", channelFields(), async (form) => {
       const result = await api('/api/workspace/management/channels', {method: 'POST', body: channelBody(form)});
       return '#/channels/' + encode(result.id) + '/settings';
     });
   }
   function archiveManaged(kind, item, archived) {
-    if (dirty) { notify('Enregistrez vos modifications avant de continuer.', true); return; }
-    if (!confirm((archived ? 'Archiver ' : 'Restaurer ') + '« ' + item.name + ' » ?')) return;
-    action(null, async () => { await api('/api/workspace/management/' + kind + '/' + encode(item.id), {method: 'PUT', body: {archived}}); await route(); }, archived ? 'Archivé. Les fichiers et les vidéos sont conservés.' : 'Restauré.');
+    if (dirty) { notify("Save your changes before continuing.", true); return; }
+    if (!confirm((archived ? 'Archiver ' : "Restore ") + '« ' + item.name + ' » ?')) return;
+    action(null, async () => { await api('/api/workspace/management/' + kind + '/' + encode(item.id), {method: 'PUT', body: {archived}}); await route(); }, archived ? "Archived. Files and videos are kept." : "Restored.");
   }
   function renderChannels(id, selected = 'videos') {
     const profile = management.channels.find((p) => p.id === id);
     if (profile) { renderChannel(profile, selected); return; }
-    if (id) { main.innerHTML = header('Chaîne introuvable', '') + '<a href="#/channels">Revenir aux chaînes</a>'; return; }
-    main.innerHTML = header('Chaînes', '', '<button id="new-channel" class="primary">' + icon('plus') + 'Nouvelle chaîne</button>') + '<div class="toolbar"><label class="search">Rechercher une chaîne<input id="channel-search" type="search" value="' + esc(managementFilters.channels) + '"></label><label class="checkbox-label"><input id="archived-channels" type="checkbox"' + (managementFilters.archivedChannels ? ' checked' : '') + '>Afficher les archives</label><span id="channels-count" class="count"></span></div><div id="channels-list"></div>';
+    if (id) { main.innerHTML = header("Channel not found", '') + "<a href=\"#/channels\">Back to channels</a>"; return; }
+    main.innerHTML = header("Channels", '', '<button id="new-channel" class="primary">' + icon('plus') + "New channel</button>") + "<div class=\"toolbar\"><label class=\"search\">Search a channel<input id=\"channel-search\" type=\"search\" value=\"" + esc(managementFilters.channels) + '"></label><label class="checkbox-label"><input id="archived-channels" type="checkbox"' + (managementFilters.archivedChannels ? ' checked' : '') + ">Show archives</label><span id=\"channels-count\" class=\"count\"></span></div><div id=\"channels-list\"></div>";
     const update = () => {
       managementFilters.channels = $('#channel-search').value;
       managementFilters.archivedChannels = $('#archived-channels').checked;
-      const items = management.channels.filter((c) => !!c.archived === managementFilters.archivedChannels && (c.name + ' ' + c.handle).toLocaleLowerCase('fr').includes(managementFilters.channels.toLocaleLowerCase('fr')));
-      $('#channels-count').textContent = items.length + ' chaîne' + (items.length === 1 ? '' : 's');
-      $('#channels-list').innerHTML = items.length ? '<div class="table-wrap"><table class="management-table"><thead><tr><th>Chaîne</th><th>Style par défaut</th><th>Langue</th><th>Vidéos</th><th>Actions</th></tr></thead><tbody>' + items.map((c) => '<tr><td data-label="Chaîne"><a class="project-title" href="#/channels/' + encode(c.id) + '">' + esc(c.name) + '</a><div class="small muted">' + esc(c.handle || 'Handle non renseigné') + '</div></td><td data-label="Style"><a href="#/styles/' + encode(c.style_id) + '">' + esc(c.style_name) + '</a></td><td data-label="Langue">' + esc(({English:'Anglais',French:'Français'})[c.language] || c.language) + '</td><td data-label="Vidéos">' + data.projects.filter((p) => (p.profile_id || p.channel_id) === c.id).length + '</td><td data-label="Actions"><div class="actions"><a class="button icon-button" href="#/channels/' + encode(c.id) + '/settings" title="Réglages de ' + esc(c.name) + '" aria-label="Réglages de ' + esc(c.name) + '">' + icon('edit') + '</a>' + (!c.archived ? '<button class="icon-button" data-create-channel="' + esc(c.id) + '" title="Nouvelle vidéo pour ' + esc(c.name) + '" aria-label="Nouvelle vidéo pour ' + esc(c.name) + '">' + icon('plus') + '</button>' : '<button data-restore-channel="' + esc(c.id) + '">Restaurer</button>') + '</div></td></tr>').join('') + '</tbody></table></div>' : '<div class="empty">Aucune chaîne dans cette liste.</div>';
+      const items = management.channels.filter((c) => !!c.archived === managementFilters.archivedChannels && (c.name + ' ' + c.handle).toLocaleLowerCase('en').includes(managementFilters.channels.toLocaleLowerCase('en')));
+      $('#channels-count').textContent = items.length + " channel" + (items.length === 1 ? '' : 's');
+      $('#channels-list').innerHTML = items.length ? "<div class=\"table-wrap\"><table class=\"management-table\"><thead><tr><th>Channel</th><th>Default style</th><th>Language</th><th>Videos</th><th>Actions</th></tr></thead><tbody>" + items.map((c) => "<tr><td data-label=\"Channel\"><a class=\"project-title\" href=\"#/channels/" + encode(c.id) + '">' + esc(c.name) + '</a><div class="small muted">' + esc(c.handle || "Handle not provided") + '</div></td><td data-label="Style"><a href="#/styles/' + encode(c.style_id) + '">' + esc(c.style_name) + "</a></td><td data-label=\"Language\">" + esc(({English:"English",French:"French"})[c.language] || c.language) + "</td><td data-label=\"Videos\">" + data.projects.filter((p) => (p.profile_id || p.channel_id) === c.id).length + '</td><td data-label="Actions"><div class="actions"><a class="button icon-button" href="#/channels/' + encode(c.id) + "/settings\" title=\"Settings for " + esc(c.name) + "\" aria-label=\"Settings for " + esc(c.name) + '">' + icon('edit') + '</a>' + (!c.archived ? '<button class="icon-button" data-create-channel="' + esc(c.id) + "\" title=\"New video for " + esc(c.name) + "\" aria-label=\"New video for " + esc(c.name) + '">' + icon('plus') + '</button>' : '<button data-restore-channel="' + esc(c.id) + "\">Restore</button>") + '</div></td></tr>').join('') + '</tbody></table></div>' : "<div class=\"empty\">No channels in this list.</div>";
       $$('[data-create-channel]').forEach((button) => button.onclick = () => openCreate(button.dataset.createChannel));
       $$('[data-restore-channel]').forEach((button) => button.onclick = () => archiveManaged('channels', items.find((c) => c.id === button.dataset.restoreChannel), false));
     };
@@ -861,39 +895,39 @@
   }
   function renderChannel(profile, selected) {
     const settings = selected === 'settings';
-    main.innerHTML = '<div class="breadcrumbs"><a href="#/channels">Chaînes</a><span>/</span>' + esc(profile.name) + '</div>' + header(profile.name, profile.handle || '', profile.archived ? '<button id="restore-channel">Restaurer la chaîne</button>' : '<button id="channel-create" class="primary">' + icon('plus') + 'Nouvelle vidéo</button>') + '<nav class="view-tabs" aria-label="Vues de la chaîne"><a href="#/channels/' + encode(profile.id) + '"' + (!settings ? ' aria-current="page"' : '') + '>Vidéos</a><a href="#/channels/' + encode(profile.id) + '/settings"' + (settings ? ' aria-current="page"' : '') + '>Réglages</a></nav><div id="channel-content"></div>';
+    main.innerHTML = "<div class=\"breadcrumbs\"><a href=\"#/channels\">Channels</a><span>/</span>" + esc(profile.name) + '</div>' + header(profile.name, profile.handle || '', profile.archived ? "<button id=\"restore-channel\">Restore channel</button>" : '<button id="channel-create" class="primary">' + icon('plus') + "New video</button>") + "<nav class=\"view-tabs\" aria-label=\"Channel views\"><a href=\"#/channels/" + encode(profile.id) + '"' + (!settings ? ' aria-current="page"' : '') + ">Videos</a><a href=\"#/channels/" + encode(profile.id) + '/settings"' + (settings ? ' aria-current="page"' : '') + ">Settings</a></nav><div id=\"channel-content\"></div>";
     if (profile.archived) $('#restore-channel').onclick = () => archiveManaged('channels', profile, false);
     else $('#channel-create').onclick = () => openCreate(profile.id);
     if (!settings) {
-      $('#channel-content').innerHTML = '<dl class="channel-summary"><div><dt>Style par défaut</dt><dd><a href="#/styles/' + encode(profile.style_id) + '">' + esc(profile.style_name) + '</a></dd></div><div><dt>Langue</dt><dd>' + esc(({English:'Anglais', French:'Français', Spanish:'Espagnol', German:'Allemand', Italian:'Italien', Portuguese:'Portugais', Japanese:'Japonais'})[profile.language] || profile.language) + '</dd></div><div><dt>Durée cible</dt><dd>' + profile.target_minutes + ' min</dd></div><div><dt>Voix</dt><dd>Algrow</dd></div></dl>' + projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id));
+      $('#channel-content').innerHTML = "<dl class=\"channel-summary\"><div><dt>Default style</dt><dd><a href=\"#/styles/" + encode(profile.style_id) + '">' + esc(profile.style_name) + "</a></dd></div><div><dt>Language</dt><dd>" + esc(({English:"English", French:"French", Spanish:"Spanish", German:"German", Italian:"Italian", Portuguese:"Portuguese", Japanese:"Japanese"})[profile.language] || profile.language) + "</dd></div><div><dt>Target duration</dt><dd>" + profile.target_minutes + " min</dd></div><div><dt>Voice</dt><dd>Algrow</dd></div></dl>" + projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id));
       return;
     }
-    $('#channel-content').innerHTML = '<div class="management-editor"><form id="channel-settings"><h2>Identité et réglages</h2>' + channelFields(profile) + '<div class="form-actions"><button type="submit" class="primary">Enregistrer la chaîne</button></div></form><aside><h2>Aperçus actuels</h2><figure>' + preview(profilePreview(profile, 'video'), 'Style vidéo') + '<figcaption>Vidéo · ' + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), 'Miniature') + '<figcaption>Miniature · proposition à valider</figcaption></figure><a class="button" href="#/styles/' + encode(profile.style_id) + '">' + icon('edit') + 'Modifier ce style</a></aside></div><section class="section"><h2>Statut de la chaîne</h2><div class="inline">' + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? 'Archivée' : 'Active') + '<button id="archive-channel">' + (profile.archived ? 'Restaurer' : 'Archiver la chaîne') + '</button></div></section>';
+    $('#channel-content').innerHTML = "<div class=\"management-editor\"><form id=\"channel-settings\"><h2>Identity and settings</h2>" + channelFields(profile) + "<div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save channel</button></div></form><aside><h2>Current previews</h2><figure>" + preview(profilePreview(profile, 'video'), "Video style") + "<figcaption>Video · " + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), "Thumbnail") + "<figcaption>Thumbnail · proposal to approve</figcaption></figure><a class=\"button\" href=\"#/styles/" + encode(profile.style_id) + '">' + icon('edit') + "Edit this style</a></aside></div><section class=\"section\"><h2>Channel status</h2><div class=\"inline\">" + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? "Archived" : "Active") + '<button id="archive-channel">' + (profile.archived ? "Restore" : "Archive channel") + '</button></div></section>';
     $('#channel-settings').dataset.savedVoiceId = profile.voice?.voice_id || '';
     $('#channel-settings').dataset.savedVoiceName = profile.voice?.voice_name || profile.voice?.voice_id || '';
     $('#channel-settings').dataset.savedVoiceSpeed = profile.voice?.speed || 1;
-    $('#channel-settings').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api('/api/workspace/management/channels/' + encode(profile.id), {method:'PUT', body:channelBody(event.target)}); await route(); }, 'Chaîne enregistrée.'); };
+    $('#channel-settings').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api('/api/workspace/management/channels/' + encode(profile.id), {method:'PUT', body:channelBody(event.target)}); await route(); }, "Channel saved."); };
     $('#archive-channel').onclick = () => archiveManaged('channels', profile, !profile.archived);
   }
   function newStyle() {
-    const fields = '<div class="form-grid"><label class="full">Nom du style<input name="name" maxlength="200" required></label><label class="full">Prompt vidéo<textarea name="prompt" rows="6" required></textarea></label><label class="full">Direction des décors<textarea name="background_direction" rows="3"></textarea></label><label class="full">Prompt miniature<textarea name="thumbnail_prompt" rows="3"></textarea></label></div>';
+    const fields = "<div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"6\" required></textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"3\"></textarea></label><label class=\"full\">Thumbnail prompt<textarea name=\"thumbnail_prompt\" rows=\"3\"></textarea></label></div>";
     managementDialog('Nouveau style visuel', fields, async (form) => { const result = await api('/api/workspace/management/styles', {method:'POST', body:Object.fromEntries(new FormData(form))}); return '#/styles/' + encode(result.id); });
   }
   function duplicateStyle(style) {
-    if (dirty) { notify('Enregistrez le style avant de le dupliquer.', true); return; }
-    action(null, async () => { const result = await api('/api/workspace/management/styles', {method:'POST', body:{name:style.name + ' (copie)', base_id:style.id}}); location.hash = '#/styles/' + encode(result.id); }, 'Style dupliqué avec ses références.');
+    if (dirty) { notify("Save the style before duplicating it.", true); return; }
+    action(null, async () => { const result = await api('/api/workspace/management/styles', {method:'POST', body:{name:style.name + " (copy)", base_id:style.id}}); location.hash = '#/styles/' + encode(result.id); }, "Style duplicated with its references.");
   }
   function renderStyles(id) {
     const style = management.styles.find((s) => s.id === id);
     if (style) { renderStyle(style); return; }
-    if (id) { main.innerHTML = header('Style introuvable', '') + '<a href="#/styles">Revenir aux styles</a>'; return; }
-    main.innerHTML = header('Styles visuels', '', '<button id="new-style" class="primary">' + icon('plus') + 'Nouveau style</button>') + '<div class="toolbar"><label class="search">Rechercher un style<input id="style-search" type="search" value="' + esc(managementFilters.styles) + '"></label><label class="checkbox-label"><input id="archived-styles" type="checkbox"' + (managementFilters.archivedStyles ? ' checked' : '') + '>Afficher les archives</label><span id="styles-count" class="count"></span></div><div id="styles-list"></div>';
+    if (id) { main.innerHTML = header("Style not found", '') + '<a href="#/styles">Revenir aux styles</a>'; return; }
+    main.innerHTML = header("Visual styles", '', '<button id="new-style" class="primary">' + icon('plus') + 'Nouveau style</button>') + "<div class=\"toolbar\"><label class=\"search\">Search for a style<input id=\"style-search\" type=\"search\" value=\"" + esc(managementFilters.styles) + '"></label><label class="checkbox-label"><input id="archived-styles" type="checkbox"' + (managementFilters.archivedStyles ? ' checked' : '') + ">Show archives</label><span id=\"styles-count\" class=\"count\"></span></div><div id=\"styles-list\"></div>";
     const update = () => {
       managementFilters.styles = $('#style-search').value;
       managementFilters.archivedStyles = $('#archived-styles').checked;
-      const items = management.styles.filter((s) => !!s.archived === managementFilters.archivedStyles && s.name.toLocaleLowerCase('fr').includes(managementFilters.styles.toLocaleLowerCase('fr')));
+      const items = management.styles.filter((s) => !!s.archived === managementFilters.archivedStyles && s.name.toLocaleLowerCase('en').includes(managementFilters.styles.toLocaleLowerCase('en')));
       $('#styles-count').textContent = items.length + ' style' + (items.length === 1 ? '' : 's');
-      $('#styles-list').innerHTML = items.length ? '<div class="style-grid">' + items.map((s) => '<article class="style-item"><a class="style-image" href="#/styles/' + encode(s.id) + '">' + (s.video_preview_url ? '<img src="' + esc(safeUrl(s.video_preview_url)) + '" alt="Aperçu de ' + esc(s.name) + '">' : '<span>Aucun aperçu</span>') + '</a><div class="style-item-content"><h2><a href="#/styles/' + encode(s.id) + '">' + esc(s.name) + '</a></h2><p class="small muted">' + management.channels.filter((c) => !c.archived && c.style_id === s.id).length + ' chaîne(s) · ' + s.references.length + ' référence(s)</p><div class="actions"><a class="button" href="#/styles/' + encode(s.id) + '">' + icon('edit') + 'Modifier</a>' + (!s.archived ? '<button data-duplicate="' + esc(s.id) + '">Dupliquer</button>' : '<button data-restore-style="' + esc(s.id) + '">Restaurer</button>') + '</div></div></article>').join('') + '</div>' : '<div class="empty">Aucun style dans cette liste.</div>';
+      $('#styles-list').innerHTML = items.length ? '<div class="style-grid">' + items.map((s) => '<article class="style-item"><a class="style-image" href="#/styles/' + encode(s.id) + '">' + (s.video_preview_url ? '<img src="' + esc(safeUrl(s.video_preview_url)) + "\" alt=\"Preview of " + esc(s.name) + '">' : "<span>No preview</span>") + '</a><div class="style-item-content"><h2><a href="#/styles/' + encode(s.id) + '">' + esc(s.name) + '</a></h2><p class="small muted">' + management.channels.filter((c) => !c.archived && c.style_id === s.id).length + " channel(s) · " + s.references.length + " reference(s)</p><div class=\"actions\"><a class=\"button\" href=\"#/styles/" + encode(s.id) + '">' + icon('edit') + "Edit</a>" + (!s.archived ? '<button data-duplicate="' + esc(s.id) + "\">Duplicate</button>" : '<button data-restore-style="' + esc(s.id) + "\">Restore</button>") + '</div></div></article>').join('') + '</div>' : "<div class=\"empty\">No styles in this list.</div>";
       $$('[data-duplicate]').forEach((button) => button.onclick = () => duplicateStyle(items.find((s) => s.id === button.dataset.duplicate)));
       $$('[data-restore-style]').forEach((button) => button.onclick = () => archiveManaged('styles', items.find((s) => s.id === button.dataset.restoreStyle), false));
     };
@@ -903,51 +937,51 @@
   function renderStyle(style) {
     const used = management.channels.filter((c) => !c.archived && c.style_id === style.id);
     const refs = style.references.map((r) => ({...r}));
-    main.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Styles visuels</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, 'chaîne') + ' · ' + countLabel(refs.length, 'référence'), !style.archived ? '<button id="duplicate-style">Dupliquer le style</button>' : '<button id="restore-style">Restaurer le style</button>') + '<div class="management-editor"><form id="visual-style-form"><h2>Réglages du style</h2><div class="form-grid"><label class="full">Nom du style<input name="name" value="' + esc(style.name) + '" maxlength="200" required></label><label class="full">Prompt vidéo<textarea name="prompt" rows="10" required>' + esc(style.prompt) + '</textarea></label><label class="full">Direction des décors<textarea name="background_direction" rows="4">' + esc(style.background_direction) + '</textarea></label><label class="full">Prompt miniature<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + '</textarea></label></div><div class="form-actions"><button type="submit" class="primary">Enregistrer le style</button></div></form><aside><h2>Aperçus du style</h2><figure>' + preview(style.video_preview_url, 'Style vidéo') + '<figcaption>Vidéo</figcaption></figure><figure>' + preview(style.thumbnail_preview_url, 'Style miniature') + '<figcaption>Miniature</figcaption></figure><h3>Chaînes associées</h3><ul class="linked-channels">' + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || '<li>Aucune chaîne associée</li>') + '</ul></aside></div><section class="section"><div class="page-head"><h2>Références visuelles</h2><button id="save-style-refs">Enregistrer les références</button></div><ol class="reference-list" id="style-references"></ol><form id="style-upload"><label>Ajouter des images<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required' + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + 'Ajouter les références</button></div><p id="upload-progress" class="small muted" role="status"></p></form></section><section class="section"><h2>Statut du style</h2><div class="inline">' + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? 'Archivé' : 'Actif') + (!style.is_default ? '<button id="archive-style">' + (style.archived ? 'Restaurer' : 'Archiver le style') + '</button>' : '') + '</div></section>';
+    main.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Visual styles</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, "channel") + ' · ' + countLabel(refs.length, "reference"), !style.archived ? "<button id=\"duplicate-style\">Duplicate style</button>" : "<button id=\"restore-style\">Restore style</button>") + "<div class=\"management-editor\"><form id=\"visual-style-form\"><h2>Style settings</h2><div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" value=\"" + esc(style.name) + "\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"10\" required>" + esc(style.prompt) + "</textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"4\">" + esc(style.background_direction) + '</textarea></label><label class="full">Thumbnail prompt<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + "</textarea></label></div><div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save style</button></div></form><aside><h2>Style previews</h2><figure>" + preview(style.video_preview_url, "Video style") + "<figcaption>Video</figcaption></figure><figure>" + preview(style.thumbnail_preview_url, "Thumbnail style") + "<figcaption>Thumbnail</figcaption></figure><h3>Linked channels</h3><ul class=\"linked-channels\">" + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || "<li>No linked channels</li>") + "</ul></aside></div><section class=\"section\"><div class=\"page-head\"><h2>Visual references</h2><button id=\"save-style-refs\">Save references</button></div><ol class=\"reference-list\" id=\"style-references\"></ol><form id=\"style-upload\"><label>Add images<input name=\"files\" type=\"file\" accept=\"image/png,image/jpeg,image/webp\" multiple required" + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + "Add references</button></div><p id=\"upload-progress\" class=\"small muted\" role=\"status\"></p></form></section><section class=\"section\"><h2>Style status</h2><div class=\"inline\">" + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? "Archived" : "Active") + (!style.is_default ? '<button id="archive-style">' + (style.archived ? "Restore" : "Archive style") + '</button>' : '') + '</div></section>';
     if (!style.archived) $('#duplicate-style').onclick = () => duplicateStyle(style);
     else $('#restore-style').onclick = () => archiveManaged('styles', style, false);
     if ($('#archive-style')) $('#archive-style').onclick = () => archiveManaged('styles', style, !style.archived);
     $('#visual-style-form').onsubmit = (event) => {
       event.preventDefault();
-      if (used.length > 1 && !confirm('Enregistrer ce style partagé par ' + used.length + ' chaînes ? Les vidéos déjà créées conservent leurs réglages.')) return;
-      action(event.submitter, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{...Object.fromEntries(new FormData(event.target)), references:refs}}); await route(); }, 'Style enregistré.');
+      if (used.length > 1 && !confirm("Save this style shared by " + used.length + " channels? Videos already created keep their settings.")) return;
+      action(event.submitter, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{...Object.fromEntries(new FormData(event.target)), references:refs}}); await route(); }, "Style saved.");
     };
     const renderRefs = () => {
-      $('#style-references').innerHTML = refs.length ? refs.map((ref, index) => '<li><span class="small muted">' + (index + 1) + '</span><img src="' + esc(safeUrl(ref.url)) + '" alt="Référence ' + (index + 1) + '"><span class="ref-label">' + esc(ref.label || ref.path) + (!ref.exists ? '<span class="error-text"> · fichier manquant</span>' : '') + '</span><div class="actions"><button type="button" class="icon-button" data-move="' + index + '" data-direction="-1" title="Monter" aria-label="Monter la référence ' + (index + 1) + '"' + (index === 0 ? ' disabled' : '') + '>' + icon('up') + '</button><button type="button" class="icon-button" data-move="' + index + '" data-direction="1" title="Descendre" aria-label="Descendre la référence ' + (index + 1) + '"' + (index === refs.length - 1 ? ' disabled' : '') + '>' + icon('down') + '</button><select data-preview-select="' + index + '" aria-label="Aperçu pour la référence ' + (index + 1) + '"><option value="">Choisir un aperçu</option><option value="video_preview">Vidéo</option><option value="thumbnail_preview">Miniature</option></select><button type="button" class="icon-button" data-remove-ref="' + index + '" title="Retirer de la liste" aria-label="Retirer la référence ' + (index + 1) + '">' + icon('close') + '</button></div></li>').join('') : '<li class="muted">Aucune référence enregistrée.</li>';
+      $('#style-references').innerHTML = refs.length ? refs.map((ref, index) => '<li><span class="small muted">' + (index + 1) + '</span><img src="' + esc(safeUrl(ref.url)) + "\" alt=\"Reference " + (index + 1) + '"><span class="ref-label">' + esc(ref.label || ref.path) + (!ref.exists ? '<span class="error-text"> · missing file</span>' : '') + '</span><div class="actions"><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"-1\" title=\"Move up\" aria-label=\"Move reference up " + (index + 1) + '"' + (index === 0 ? ' disabled' : '') + '>' + icon('up') + '</button><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"1\" title=\"Move down\" aria-label=\"Move reference down " + (index + 1) + '"' + (index === refs.length - 1 ? ' disabled' : '') + '>' + icon('down') + '</button><select data-preview-select="' + index + "\" aria-label=\"Preview for reference " + (index + 1) + "\"><option value=\"\">Choose a preview</option><option value=\"video_preview\">Video</option><option value=\"thumbnail_preview\">Thumbnail</option></select><button type=\"button\" class=\"icon-button\" data-remove-ref=\"" + index + "\" title=\"Remove from list\" aria-label=\"Remove reference " + (index + 1) + '">' + icon('close') + '</button></div></li>').join('') : "<li class=\"muted\">No references saved.</li>";
       $$('[data-move]').forEach((button) => button.onclick = () => { const from = Number(button.dataset.move), to = from + Number(button.dataset.direction); [refs[from],refs[to]] = [refs[to],refs[from]]; dirty = true; renderRefs(); });
       $$('[data-remove-ref]').forEach((button) => button.onclick = () => { refs.splice(Number(button.dataset.removeRef), 1); dirty = true; renderRefs(); });
-      $$('[data-preview-select]').forEach((select) => select.onchange = () => { const role = select.value; if (!role) return; if (dirty) { select.value = ''; notify('Enregistrez les modifications avant de choisir un aperçu.', true); return; } action(select, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{[role]:refs[Number(select.dataset.previewSelect)].path}}); await route(); }, 'Aperçu enregistré.'); });
+      $$('[data-preview-select]').forEach((select) => select.onchange = () => { const role = select.value; if (!role) return; if (dirty) { select.value = ''; notify("Save changes before choosing a preview.", true); return; } action(select, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{[role]:refs[Number(select.dataset.previewSelect)].path}}); await route(); }, "Preview saved."); });
     };
     renderRefs();
     renderStyleCharacters(style);
-    $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify('Enregistrez les réglages du style avant les références.', true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, 'Références enregistrées.'); };
+    $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify("Save the style settings before references.", true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, "References saved."); };
     $('#style-upload').onsubmit = (event) => {
       event.preventDefault();
-      if (dirty) { notify('Enregistrez vos modifications avant d’ajouter des images.', true); return; }
+      if (dirty) { notify("Save your changes before adding images.", true); return; }
       action(event.submitter, async () => {
         let uploaded = 0;
         const files = [...$('[name="files"]', event.target).files];
         for (const file of files) {
           const form = new FormData(); form.append('file',file); form.append('label',file.name);
           try { await api('/api/workspace/management/styles/' + encode(style.id) + '/references', {method:'POST',body:form}); }
-          catch (error) { throw new Error(uploaded + '/' + files.length + ' images enregistrées. ' + error.message); }
-          uploaded++; $('#upload-progress').textContent = uploaded + '/' + files.length + ' images enregistrées';
+          catch (error) { throw new Error(uploaded + '/' + files.length + " images saved. " + error.message); }
+          uploaded++; $('#upload-progress').textContent = uploaded + '/' + files.length + " images saved";
         }
         await route();
-      }, 'Images ajoutées dans l’ordre.');
+      }, "Images added in order.");
     };
   }
   function renderStyleCharacters(style) {
     const characters = style.characters || [];
     const disabled = style.archived ? ' disabled' : '';
-    $('.management-editor').insertAdjacentHTML('afterend', `<section class="section character-style-section"><h2>Références personnages</h2><p class="muted">Un personnage principal et des personnages récurrents par style. Importez leurs images, vérifiez-les, puis validez leurs références. Les nouveaux projets conservent leur casting.</p><div class="style-character-list">${characters.map((character) => character.variants.map((variant) => `<form class="style-character-card" data-character-form data-name="${esc(character.name)}" data-variant="${esc(variant.id)}"><div class="inline"><h3>${esc(character.name)} · ${esc(variant.id)}</h3>${character.main ? '<span class="badge verified">Principal</span>' : ''}</div><div class="character-reference-images">${variant.references.map((ref) => `<figure><a href="${esc(safeUrl(ref.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ref.url))}" alt="Référence de ${esc(character.name)}"></a><figcaption>${ref.valid ? 'Validée' : ref.exists ? 'À vérifier' : 'Fichier manquant'}</figcaption></figure>`).join('')}</div><label>Description fixe<textarea name="description" rows="3" required${disabled}>${esc(variant.description)}</textarea></label><label class="inline"><input name="is_main" type="checkbox"${character.main ? ' checked' : ''}${disabled}>Personnage principal du style</label><div class="form-actions"><button type="submit"${disabled}>Enregistrer</button><button type="submit" name="verify" value="true"${disabled}>Valider ces références</button></div></form>`).join('')).join('') || '<p class="muted">Aucun personnage enregistré.</p>'}</div><form id="style-character-upload"><h3>Ajouter un personnage ou une référence</h3><div class="form-grid"><label>Nom du personnage<input name="name" maxlength="100" required${disabled}></label><label>Variante<input name="variant" value="default" pattern="[A-Za-z0-9_-]+" maxlength="100" required${disabled}></label><label class="full">Description fixe<textarea name="description" rows="3" required${disabled}></textarea></label><label class="full">Images de référence<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required${disabled}></label><label class="inline"><input name="is_main" type="checkbox"${!characters.length ? ' checked' : ''}${disabled}>Personnage principal</label></div><div class="form-actions"><button type="submit"${disabled}>Importer les références du personnage</button></div><p class="small muted">Réutilisez le même nom et la même variante pour ajouter une image au personnage existant.</p></form></section>`);
+    $('.management-editor').insertAdjacentHTML('afterend', `<section class="section character-style-section"><h2>Character references</h2><p class="muted">One main character and recurring characters per style. Upload their images, check them, then validate their references. New projects keep their cast.</p><div class="style-character-list">${characters.map((character) => character.variants.map((variant) => `<form class="style-character-card" data-character-form data-name="${esc(character.name)}" data-variant="${esc(variant.id)}"><div class="inline"><h3>${esc(character.name)} · ${esc(variant.id)}</h3>${character.main ? "<span class=\"badge verified\">Main</span>" : ''}</div><div class="character-reference-images">${variant.references.map((ref) => `<figure><a href="${esc(safeUrl(ref.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ref.url))}" alt="Reference for ${esc(character.name)}"></a><figcaption>${ref.valid ? "Validated" : ref.exists ? "To review" : "Missing file"}</figcaption></figure>`).join('')}</div><label>Description fixe<textarea name="description" rows="3" required${disabled}>${esc(variant.description)}</textarea></label><label class="inline"><input name="is_main" type="checkbox"${character.main ? ' checked' : ''}${disabled}>Main style character</label><div class="form-actions"><button type="submit"${disabled}>Save</button><button type="submit" name="verify" value="true"${disabled}>Validate these references</button></div></form>`).join('')).join('') || "<p class=\"muted\">No character saved.</p>"}</div><form id="style-character-upload"><h3>Add a character or reference</h3><div class="form-grid"><label>Character name<input name="name" maxlength="100" required${disabled}></label><label>Variant<input name="variant" value="default" pattern="[A-Za-z0-9_-]+" maxlength="100" required${disabled}></label><label class="full">Description fixe<textarea name="description" rows="3" required${disabled}></textarea></label><label class="full">Reference images<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required${disabled}></label><label class="inline"><input name="is_main" type="checkbox"${!characters.length ? ' checked' : ''}${disabled}>Main character</label></div><div class="form-actions"><button type="submit"${disabled}>Import character references</button></div><p class="small muted">Reuse the same name and variant to add an image to the existing character.</p></form></section>`);
     $$('[data-character-form]').forEach((form) => form.onsubmit = (event) => {
       event.preventDefault();
       const fields = new FormData(form);
       action(event.submitter, async () => {
         await api('/api/workspace/management/styles/' + encode(style.id) + '/characters', {method:'PUT',body:{name:form.dataset.name,variant:form.dataset.variant,description:fields.get('description'),is_main:fields.has('is_main'),verify:event.submitter?.name === 'verify'}});
         await route();
-      }, event.submitter?.name === 'verify' ? 'Références du personnage validées.' : 'Personnage enregistré.');
+      }, event.submitter?.name === 'verify' ? "Character references approved." : "Character saved.");
     });
     $('#style-character-upload').onsubmit = (event) => {
       event.preventDefault();
@@ -959,51 +993,70 @@
           await api('/api/workspace/management/styles/' + encode(style.id) + '/characters', {method:'POST',body:payload});
         }
         await route();
-      }, 'Références importées : regardez-les, puis validez-les.');
+      }, "References imported: review them, then approve them.");
     };
   }
   function renderSettings() {
     const catalog = data.models;
-    main.innerHTML = `${header('Réglages', 'Modèles et connexion du studio', '<button id="reload-models">' + icon('refresh') + 'Actualiser le catalogue</button>')}${catalogNotice()}<div class="settings-layout"><section class="section"><h2>Modèles par défaut</h2><form id="defaults-form"><div class="form-grid"><label>Texte<select name="text_model" required>${modelOptions(catalog.defaults?.text_model, 'text')}</select></label><label>Images<select name="image_model" required>${modelOptions(catalog.defaults?.image_model, 'image', catalog.defaults?.image_provider)}</select></label></div><div class="form-actions"><button type="submit" class="primary" ${!modelsFrom(catalog).length ? 'disabled' : ''}>Enregistrer les modèles</button></div></form><section class="section"><h2>Catalogue des fournisseurs</h2><p class="muted small">Modèles disponibles via CLI Proxy et Google Flow. La disponibilité dépend des comptes et des quotas.</p>${modelsFrom(catalog).length ? `<div class="table-wrap"><table><thead><tr><th>Modèle</th><th>Fournisseur</th><th>Texte</th><th>Image</th></tr></thead><tbody>${modelsFrom(catalog).map((model) => `<tr><td>${esc(model.id)}</td><td>${model.provider === 'google_flow' ? 'Google Flow' : 'CLI Proxy'}</td><td>${model.capabilities?.text === true ? 'Annoncé' : model.capabilities?.text === false ? 'Non annoncé' : 'Non confirmé'}</td><td>${model.capabilities?.image === true ? 'Annoncé' : model.capabilities?.image === false ? 'Non annoncé' : 'Non confirmé'}</td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">Aucun modèle disponible.</p>'}</section></section><aside class="section"><h2>Connexion</h2><dl class="definition-list"><div><dt>CLI Proxy</dt><dd>${badge(catalog.providers?.cli_proxy?.available ? 'verified' : 'blocked', catalog.providers?.cli_proxy?.available ? 'Catalogue accessible' : data.connection?.has_proxy ? 'Configuré · catalogue indisponible' : 'À connecter')}</dd></div><div><dt>Catalogue</dt><dd>${modelsFrom(catalog).length} modèles disponibles</dd></div><div><dt>Production</dt><dd>Dirigée par Codex</dd></div></dl>${advanced([['settings', 'Connexion et outils avancés'], ['voices', 'Gestion des voix']])}</aside></div>`;
+    main.innerHTML = `${header("Settings", "Studio models and connection", '<button id="reload-models">' + icon('refresh') + 'Refresh catalog</button>')}${catalogNotice()}<div class="settings-layout"><section class="section"><h2>Default models</h2><form id="defaults-form"><div class="form-grid"><label>Text<select name="text_model" required>${modelOptions(catalog.defaults?.text_model, 'text')}</select></label><label>Images<select name="image_model" required>${modelOptions(catalog.defaults?.image_model, 'image', catalog.defaults?.image_provider)}</select></label></div><div class="form-actions"><button type="submit" class="primary" ${!modelsFrom(catalog).length ? 'disabled' : ''}>Save models</button></div></form><section class="section"><h2>Provider catalog</h2><p class="muted small">Models available via CLI Proxy and Google Flow. Availability depends on accounts and quotas.</p>${modelsFrom(catalog).length ? `<div class="table-wrap"><table><thead><tr><th>Model</th><th>Provider</th><th>Text</th><th>Image</th></tr></thead><tbody>${modelsFrom(catalog).map((model) => `<tr><td>${esc(model.id)}</td><td>${model.provider === 'google_flow' ? 'Google Flow' : 'CLI Proxy'}</td><td>${model.capabilities?.text === true ? "Announced" : model.capabilities?.text === false ? "Unannounced" : "Unconfirmed"}</td><td>${model.capabilities?.image === true ? "Announced" : model.capabilities?.image === false ? "Unannounced" : "Unconfirmed"}</td></tr>`).join('')}</tbody></table></div>` : "<p class=\"muted\">No models available.</p>"}</section></section><aside class="section"><h2>Connection</h2><dl class="definition-list"><div><dt>CLI Proxy</dt><dd>${badge(catalog.providers?.cli_proxy?.available ? 'verified' : 'blocked', catalog.providers?.cli_proxy?.available ? 'Catalog available' : data.connection?.has_proxy ? "Configured · catalog unavailable" : "To connect")}</dd></div><div><dt>Catalogue</dt><dd>${modelsFrom(catalog).length} models available</dd></div><div><dt>Production</dt><dd>Shared team workspace</dd></div></dl>${advanced([['settings', "Connection and advanced tools"], ['voices', "Voice management"]])}</aside></div>`;
     const flow = catalog.providers?.google_flow || {};
     const connection = $('.settings-layout aside');
-    connection.insertAdjacentHTML('beforeend', `<section class="section"><h2>Google Flow via useapi</h2>${badge(flow.available ? 'verified' : 'blocked', flow.available ? 'Connecté' : flow.configured ? 'Indisponible' : 'À configurer')}<p class="small muted">Répartition entre les comptes disponibles · jusqu’à 3 images simultanées · une image par plan.</p>${flow.error ? `<p class="error-text">${esc(flow.error)}</p>` : ''}${flow.accounts?.length ? `<ul>${flow.accounts.map((account) => `<li>${esc(account.email)} · ${account.health === 'OK' ? 'Connecté' : 'À reconnecter'}</li>`).join('')}</ul>` : ''}</section>`);
-    $('#reload-models').onclick = (event) => action(event.currentTarget, async () => { data.models = await api('/api/workspace/models/refresh', {method: 'POST'}); renderSettings(); }, 'Catalogue actualisé.');
+    connection.insertAdjacentHTML('beforeend', `<section class="section"><h2>Google Flow via useapi</h2>${badge(flow.available ? 'verified' : 'blocked', flow.available ? "Connected" : flow.configured ? 'Indisponible' : "To configure")}<p class="small muted">Distribution across available accounts · up to 3 simultaneous images · one image per shot.</p>${flow.error ? `<p class="error-text">${esc(flow.error)}</p>` : ''}${flow.accounts?.length ? `<ul>${flow.accounts.map((account) => `<li>${esc(account.email)} · ${account.health === 'OK' ? "Connected" : "To reconnect"}</li>`).join('')}</ul>` : ''}</section>`);
+    $('#reload-models').onclick = (event) => action(event.currentTarget, async () => { data.models = await api('/api/workspace/models/refresh', {method: 'POST'}); renderSettings(); }, "Catalog updated.");
     $('#defaults-form').onsubmit = (event) => {
       event.preventDefault();
       action(event.submitter, async () => {
         const form = new FormData(event.target);
         await api('/api/workspace/settings', { method: 'PUT', body: { text_model: form.get('text_model'), image_model: form.get('image_model'), image_provider: $('[name="image_model"]', event.target).selectedOptions[0]?.dataset.provider || 'cli_proxy' } }); await route();
-      }, 'Modèles par défaut enregistrés.');
+      }, "Default models saved.");
     };
+    renderPerformance();
     bindFormState();
+  }
+  async function renderPerformance() {
+    const root = $('.settings-layout > section');
+    if (!root) return;
+    root.insertAdjacentHTML('afterbegin', '<section class="section"><h2>Production speed</h2><p class="muted small">Images run in parallel across the team. Each shot keeps its own character and location references. The first three images are a separate preview.</p><div id="performance-settings" style="margin-top:18px">Loading concurrency settings…</div></section>');
+    try {
+      const limits = await api('/api/workspace/performance');
+      if (!root.isConnected) return;
+      const fields = [['IMAGE_CONCURRENCY','CLI Proxy images at once',36],['LLM_CONCURRENCY','Text requests at once',24],['WORKSPACE_PLAN_CONCURRENCY','Shot planning batches at once',8],['TTS_CONCURRENCY','Voice requests at once',6],['PROJECT_PARALLEL','Projects at once',12],['RENDER_CONCURRENCY','Video renders at once',2]];
+      $('#performance-settings').innerHTML = `<form id="performance-form"><div class="form-grid">${fields.map(([key,label,max]) => `<label>${label}<input name="${key}" type="number" min="1" max="${max}" value="${limits[key]}" required></label>`).join('')}</div><p class="small muted" style="margin-top:16px">Google Flow: ${limits.flow_concurrency} images at once. Native rendering: ${limits.render_workers} workers per render. Provider queues and quotas can affect waiting time.</p><div class="form-actions"><button type="submit" class="primary">Save production speed</button></div></form>`;
+      $('#performance-form').onsubmit = event => {
+        event.preventDefault(); action(event.submitter, async () => {
+          await api('/api/workspace/performance', {method:'PUT',body:Object.fromEntries([...new FormData(event.target)].map(([k,v]) => [k,Number(v)]))});
+          dirty = false; await route();
+        }, 'Concurrency saved. New jobs will use these limits.');
+      };
+      bindFormState($('#performance-form'));
+    } catch (error) { if (root.isConnected) $('#performance-settings').textContent = error.message; }
   }
   window.addEventListener('hashchange', () => route());
   window.addEventListener('beforeunload', (event) => { if (dirty) { event.preventDefault(); event.returnValue = ''; } });
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#/"]');
-    if (link && dirty && !window.confirm('Quitter cette page sans enregistrer les modifications ?')) event.preventDefault();
+    if (link && dirty && !window.confirm("Leave this page without saving changes?")) event.preventDefault();
   });
   let batchPolling = false;
   let voicePolling = false;
   setInterval(async () => {
     const parts = routeParts();
-    if (voicePolling || document.hidden || submitting || dirty || parts[0] !== 'video' || parts[2] !== 'voix' || !project?.running) return;
+    if (voicePolling || document.hidden || submitting || dirty || parts[0] !== 'video' || parts[2] !== "voice" || !project?.running) return;
     voicePolling = true;
     const id = project.id;
     try {
       const latest = await api(`/api/workspace/projects/${encode(id)}`);
-      if (routeParts()[1] !== id || routeParts()[2] !== 'voix' || dirty) return;
+      if (routeParts()[1] !== id || routeParts()[2] !== "voice" || dirty) return;
       const finished = !latest.running || latest.steps?.voiceover?.state !== project.steps?.voiceover?.state;
       project = latest;
-      if (finished) { renderProject('voix'); bindFormState(); }
+      if (finished) { renderProject("voice"); bindFormState(); }
       else if ($('#voice-progress')) $('#voice-progress').outerHTML = voiceProgressMarkup(latest);
     } catch { /* Read again on the next tick without launching another synthesis. */ }
     finally { voicePolling = false; }
   }, 3000);
   setInterval(() => {
     const timer = $('[data-voice-elapsed]');
-    if (timer && timer.dataset.started) timer.textContent = `Temps écoulé : ${fmtTime(Math.max(0, Date.now() / 1000 - Number(timer.dataset.started)))}`;
+    if (timer && timer.dataset.started) timer.textContent = `Elapsed time: ${fmtTime(Math.max(0, Date.now() / 1000 - Number(timer.dataset.started)))}`;
   }, 1000);
   setInterval(async () => {
     const parts = routeParts();
@@ -1021,7 +1074,7 @@
   }, 3000);
   setInterval(() => {
     const page = routeParts()[0] || 'videos';
-    if (document.hidden || dirty || submitting || $('#create-dialog').open || $('#preview-dialog').open || !['videos', 'video'].includes(page)) return;
+    if (!session || document.hidden || dirty || submitting || $('#create-dialog').open || $('#preview-dialog').open || !['videos', 'video'].includes(page)) return;
     if (main.contains(document.activeElement) && document.activeElement !== main) return;
     route();
   }, 15000);

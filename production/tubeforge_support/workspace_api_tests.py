@@ -34,7 +34,7 @@ else:
 @pytest.fixture
 def workspace(tmp_path, monkeypatch):
     values = {"PROXY_API_KEY": "private-fixture-key", "PROXY_BASE_URL": "https://fixture.invalid/v1",
-              "SCRIPT_MODEL": "fixture-text", "FAST_MODEL": "fixture-fast"}
+              "SCRIPT_MODEL": "fixture-text", "FAST_MODEL": "fixture-fast", "IMAGE_CONCURRENCY": "1", "USEAPI_IMAGE_CONCURRENCY": "3", "WORKSPACE_PLAN_CONCURRENCY":"6", "LLM_CONCURRENCY":"8", "TTS_CONCURRENCY":"3", "PROJECT_PARALLEL":"6", "RENDER_CONCURRENCY":"1", "RENDER_WORKERS":"4"}
     monkeypatch.setattr(config, "get", lambda key: values.get(key, ""))
     monkeypatch.setattr(config, "update", lambda changes: values.update(changes))
     monkeypatch.setattr(config, "DATA", tmp_path)
@@ -57,7 +57,7 @@ def workspace(tmp_path, monkeypatch):
     store.save_style(style)
     write_json(channels.FILE, [{"id": cid, "name": name, "language": "English", "style_id": "pov-history",
                                 "kind": "long", "historical_profile": True, "target_minutes": 22,
-                                "video_preview": "refs/preview.png", "preview_label": "Apercu existant"}
+                                "video_preview": "refs/preview.png", "preview_label": "Existing preview"}
                                for cid, name in api.PROFILE_NAMES.items()])
     proxy = AsyncMock()
     proxy.get.return_value = httpx.Response(200, json={"data": [
@@ -555,3 +555,38 @@ def test_reference_manifest_labels_preserved(workspace):
     assert profile["references"][0]["observed"] == "2026-10-05"
     assert profile["references"][0]["role"] == "style-only"
     assert profile["references"][0]["exists"]
+
+def test_member_video_history_and_shared_catalog(workspace):
+    from app.workspace_identity import identity
+    client = workspace[0]
+    token = identity.set({'username':'alice'})
+    try:
+        a = create(client, custom_script='Alice story.')
+    finally:
+        identity.reset(token)
+    token = identity.set({'username':'bob'})
+    try:
+        b = create(client, custom_script='Bob story.')
+        assert b['owner_id'] == 'bob' and a['owner_id'] == 'alice'
+        assert [p['id'] for p in client.get('/api/workspace/projects').json()] == [b['id']]
+        assert {p['id'] for p in client.get('/api/workspace/projects?scope=team').json()} == {a['id'],b['id']}
+        assert client.get('/api/workspace/projects?scope=wrong').status_code == 422
+        assert client.get('/api/workspace/projects/' + a['id']).status_code == 200
+        assert client.put('/api/workspace/projects/'+a['id']+'/title',json={'title':'Team edit'}).status_code == 200
+        duplicate = store.duplicate_project(a['id'])
+        assert duplicate['owner_id'] == 'bob'
+        assert client.get('/api/workspace/profiles').json()[0]['style_id'] == 'pov-history'
+    finally:
+        identity.reset(token)
+
+
+def test_performance_settings_validate_and_wait_for_jobs(workspace, monkeypatch):
+    client = workspace[0]
+    monkeypatch.setattr(llm,'reset_limits',lambda:None)
+    result = client.put('/api/workspace/performance',json={'IMAGE_CONCURRENCY':24,'LLM_CONCURRENCY':8})
+    assert result.status_code == 200 and result.json()['IMAGE_CONCURRENCY'] == 24
+    assert client.put('/api/workspace/performance',json={'IMAGE_CONCURRENCY':37}).status_code == 422
+    assert client.put('/api/workspace/performance',json={'IMAGE_CONCURRENCY':True}).status_code == 422
+    assert client.put('/api/workspace/performance',json={'UNKNOWN':1}).status_code == 422
+    monkeypatch.setitem(llm.STATS['image'],'active',1)
+    assert client.put('/api/workspace/performance',json={'IMAGE_CONCURRENCY':12}).status_code == 409

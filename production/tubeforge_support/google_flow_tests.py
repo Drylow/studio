@@ -99,13 +99,13 @@ def test_isolated_captcha_refusal_is_not_a_global_configuration_error():
         "error": "Captcha verification failed for private-account@example.invalid",
         "key": "private-provider-key"}))
     assert error.global_configuration_error is False
-    assert str(error) == "Google Flow est indisponible ou a refusé la requête (HTTP 400)."
+    assert str(error) == "Google Flow is unavailable or refused the request (HTTP 400)."
     assert "private-" not in str(error)
 
 
 def test_reference_limit_rejects_before_network(provider):
     calls, _ = provider
-    with pytest.raises(flow.FlowError, match="10 références"):
+    with pytest.raises(flow.FlowError, match="10 references"):
         asyncio.run(flow.generate("Exact", "fixture-image", "16:9", [picture()] * 11))
     assert calls == []
 

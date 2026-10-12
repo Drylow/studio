@@ -103,3 +103,11 @@ Pop-Location
 Les tests utilisent des fixtures et mocks, sans appeler les APIs payantes. Pour un nouveau chat :
 
 > Lis README_SURVIVOR_TUBEFORGE.md puis production/tubeforge_support/README.md. Travaille sur une nouvelle vidéo Alien Aftermath. Préserve les données existantes. Utilise les sources maintenues et les styles JSON publics, les références d'identité et un maître vérifié par lieu. Écris le script/découpage en appliquant Faceless OS. Inspecte trois images avant la suite et toutes les images avant le montage. Les clés/modèles sont dans les .env privés, jamais dans Git. Ne publie pas automatiquement sur YouTube.
+
+## Hosted team workspace
+
+The English UI is integrated at https://tools.kanye.studio/2d and uses the existing
+portal login. Each member has My videos; Team videos, channels and styles are shared.
+There is no separate TubeForge account system or permission hierarchy. See
+[hosting and updates](README_TUBEFORGE_VPS.md). Production speed is adjustable
+in Settings and CLI image batches respect the configured parallelism.

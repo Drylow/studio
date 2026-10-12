@@ -63,24 +63,24 @@ async def _render(s: dict, item: dict, concept: dict, refs: list[bytes] | None) 
     _save()
     try:
         img = await llm.generate_image(thumb_prompt(style, concept, bool(refs)), model, s["aspect"], refs,
-                                       label="Miniature (studio)")
+                                       label="Thumbnail (studio)")
         n = 1
         while (DIR / s["id"] / f"t{n:02d}.png").exists():
             n += 1
         rel = f"{s['id']}/t{n:02d}.png"
         (DIR / rel).write_bytes(img)
         item.update(file=rel, status="done", error=None)
-        events.log(f"✓ Studio miniatures « {s['title'] or s['idea'][:40]} » : miniature prête", "ok")
+        events.log(f"✓ Thumbnail studio « {s['title'] or s['idea'][:40]}”: thumbnail ready", "ok")
     except Exception as e:  # noqa: BLE001
         item.update(status="error", error=str(e)[:300])
-        events.log(f"✗ Studio miniatures : {str(e)[:160]}", "error")
+        events.log(f"✗ Thumbnail studio: {str(e)[:160]}", "error")
     _save()
 
 
 async def generate(s: dict, count: int | None = None) -> None:
     """Écrit des concepts puis génère les images en parallèle (sur les 36 comptes)."""
     count = count or s["count"]
-    events.log(f"Studio miniatures : {count} variante(s) pour « {s['title'] or s['idea'][:50]} »", "step")
+    events.log(f"Thumbnail studio: {count} variant(s) for “{s['title'] or s['idea'][:50]} »", "step")
     placeholders = [{"id": uuid.uuid4().hex[:8], "status": "queued", "file": None, "prompt": "", "text": ""}
                     for _ in range(count)]
     s["items"] = placeholders + s["items"]

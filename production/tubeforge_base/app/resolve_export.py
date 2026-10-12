@@ -30,7 +30,7 @@ RESOLVE_EXE = Path(r"C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.
 RESOLVE_MODULES = Path(r"C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\Developer\Scripting\Modules")
 RESOLVE_LIB = Path(r"C:\Program Files\Blackmagic Design\DaVinci Resolve\fusionscript.dll")
 FPS = render_step.FPS
-TEMPLATE_NAME = "TubeForge - Modèle TikTok"
+TEMPLATE_NAME = "TubeForge - TikTok Template"
 TEMPLATE_DRP = config.ROOT / "assets" / "resolve" / "TubeForge_Modele_TikTok.drp"
 PRESET = "TubeForge TikTok 1080x1920"
 PACK_DIRS = [config.ROOT / "assets" / "sfx" / "pack", config.ROOT / "assets" / "pack"]
@@ -132,12 +132,12 @@ async def prepare_assets(p: dict, progress=None) -> dict:
             if line.startswith(b"P "):
                 done_frames[i] = int(line.split()[1])
                 if progress:
-                    progress(sum(done_frames), total_frames, f"Clips des scènes pour Resolve {100 * sum(done_frames) // max(1, total_frames)}%")
+                    progress(sum(done_frames), total_frames, f"Scene clips for Resolve {100 * sum(done_frames) // max(1, total_frames)}%")
         err = await proc.stderr.read()
         if await proc.wait() != 0:
-            raise ResolveError(f"Clips des scènes : {err.decode(errors='ignore')[-500:]}")
+            raise ResolveError(f"Scene clips: {err.decode(errors='ignore')[-500:]}")
         jf.unlink(missing_ok=True)
-    events.log(f"Export Resolve : {len(scenes)} clips de scènes…")
+    events.log(f"Export Resolve : {len(scenes)} scene clips…")
     await asyncio.gather(*(run(i, c) for i, c in enumerate(chunks)))
 
     # 2) sous-titres : séquence PNG transparente image par image (mot prononcé en couleur, apparition
@@ -285,7 +285,7 @@ def _template(r, rebuild: bool = False) -> dict:
     if created:
         project = pm.CreateProject(TEMPLATE_NAME)
         if not project:
-            raise ResolveError("Impossible de créer le projet modèle dans Resolve")
+            raise ResolveError("Unable to create template project in Resolve")
     if created or rebuild:
         _configure(project, 1080, 1920, FPS)
     _ensure_preset(project, 1080, 1920)
@@ -306,7 +306,7 @@ def _channel_project(pm, pname: str, manifest: dict):
     if not project:
         project = pm.CreateProject(pname)
     if not project:
-        raise ResolveError(f"Impossible de créer le projet Resolve « {pname} »")
+        raise ResolveError(f"Unable to create Resolve project “ {pname} »")
     _configure(project, manifest["width"], manifest["height"], manifest["fps"])
     return project
 
@@ -338,7 +338,7 @@ def _build_timeline(p: dict, manifest: dict, render: bool = True) -> dict:
         if project is None:
             project = pm.CreateProject(pname)
             if not project:
-                raise ResolveError(f"Impossible de créer le projet Resolve « {pname} »")
+                raise ResolveError(f"Unable to create Resolve project “ {pname} »")
             _configure(project, manifest["width"], manifest["height"], manifest["fps"])
         tl_name = f"{safe_name(p.get('title') or 'Video', 45)} - {stamp}"
     mp = project.GetMediaPool()
@@ -383,7 +383,7 @@ def _build_timeline(p: dict, manifest: dict, render: bool = True) -> dict:
 
     timeline = mp.CreateEmptyTimeline(tl_name)
     if not timeline:
-        raise ResolveError("Impossible de créer la timeline")
+        raise ResolveError("Unable to create timeline")
     project.SetCurrentTimeline(timeline)
     while timeline.GetTrackCount("video") < (4 if end_item else 3):
         timeline.AddTrack("video")
@@ -401,10 +401,10 @@ def _build_timeline(p: dict, manifest: dict, render: bool = True) -> dict:
             sfx_slots.append(len(sfx_tracks) - 1)
     while timeline.GetTrackCount("audio") < 1 + max(1, len(sfx_tracks)):
         timeline.AddTrack("audio", "mono")
-    for i, name in ((1, "Scènes"), (2, "Sous-titres"), (3, "Accroche"), (4, "Fin YouTube")):
+    for i, name in ((1, "Scenes"), (2, "Sous-titres"), (3, "Accroche"), (4, "Fin YouTube")):
         if i <= timeline.GetTrackCount("video"):
             timeline.SetTrackName("video", i, name)
-    timeline.SetTrackName("audio", 1, "Voix off")
+    timeline.SetTrackName("audio", 1, "Voiceover")
     for i in range(len(sfx_tracks)):
         timeline.SetTrackName("audio", 2 + i, f"Bruitages {i + 1}")
     start = timeline.GetStartFrame()
@@ -455,7 +455,7 @@ def _build_timeline(p: dict, manifest: dict, render: bool = True) -> dict:
                                    "FormatWidth": manifest["width"], "FormatHeight": manifest["height"]})
         job = project.AddRenderJob()
         if not job or not project.StartRendering(job):
-            raise ResolveError("Resolve n'a pas pu lancer le rendu")
+            raise ResolveError("Resolve could not start rendering")
         t0 = time.time()
         while project.IsRenderingInProgress() and time.time() - t0 < 1800:
             time.sleep(2)
@@ -468,17 +468,17 @@ def _build_timeline(p: dict, manifest: dict, render: bool = True) -> dict:
 
 async def export(p: dict, render: bool = True, progress=None) -> dict:
     if not installed():
-        raise ResolveError("DaVinci Resolve n'est pas installé")
+        raise ResolveError("DaVinci Resolve is not installed")
     if not p.get("voiceover") or not all(s.get("image") for s in p["scenes"]):
-        raise ResolveError("Il faut la voix off et toutes les images avant l'export")
+        raise ResolveError("Voice-over and all images are required before export")
     manifest = await prepare_assets(p, progress)
     if progress:
-        progress(1, 1, "Construction de la timeline dans DaVinci Resolve…")
-    events.log("Construction de la timeline dans DaVinci Resolve…", "step")
+        progress(1, 1, "Building the timeline in DaVinci Resolve…")
+    events.log("Building the timeline in DaVinci Resolve…", "step")
     res = await asyncio.to_thread(build_timeline, p, manifest, render)
     p["resolve"] = res | {"ts": time.time()}
     store.save_project(p)
     events.log(f"✓ Resolve : projet « {res['project']} », timeline « {res['timeline']} » "
-               f"({res['placed']}/{res['expected']} éléments placés)"
+               f"({res['placed']}/{res['expected']} elements placed)"
                + (f", rendu : {res.get('render_status')}" if render else ""), "ok")
     return res

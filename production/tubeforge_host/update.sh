@@ -24,7 +24,12 @@ if busy: sys.exit("Wait for active jobs before updating TubeForge")
 '
 stamp=$(date +%Y%m%d-%H%M%S)
 umask 077
-tar -C "$home" -cf - data config compose.env | gzip -1 > "$home/backups/before-update-$stamp.tar.gz"
+if [ -d "$home/accounts" ]; then
+    tar -C "$home" -cf - data config accounts compose.env | gzip -1 > "$home/backups/before-update-$stamp.tar.gz"
+else
+    tar -C "$home" -cf - data config compose.env | gzip -1 > "$home/backups/before-update-$stamp.tar.gz"
+fi
+python3 "$release/production/tubeforge_host/portal_migrate.py" "$home"
 cp "$home/compose.env" "$home/backups/compose-$stamp.env"
 python3 - "$home/compose.env" "$tag" <<'PY'
 import pathlib,sys
@@ -33,6 +38,7 @@ rows.append('TUBEFORGE_IMAGE='+sys.argv[2]); p.write_text('\n'.join(rows)+'\n')
 PY
 docker compose --project-name tubeforge --env-file "$home/compose.env" \
     -f "$release/production/tubeforge_host/compose.yaml" up -d --no-deps tubeforge
+printf "%s\n" "$release" > "$home/active-release.txt"
 docker inspect drylow-tubeforge --format '{{.State.Status}}'
 printf 'TubeForge updated to %s. Check HTTPS, login and project media before further work.\n' "$revision"
 printf 'Previous image configuration: %s/backups/compose-%s.env\n' "$home" "$stamp"

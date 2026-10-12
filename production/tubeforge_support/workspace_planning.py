@@ -50,46 +50,46 @@ def authored(p, s):
 
 def inputs(p):
     if not allowed(p):
-        raise HTTPException(409, "Cette chaîne conserve son découpage et ses prompts écrits par Codex")
+        raise HTTPException(409, "This channel keeps its segmentation and prompts written by Codex")
     if p.get("scenes"):
-        raise HTTPException(409, "Les plans existants sont conservés ; la préparation ne les remplace pas")
+        raise HTTPException(409, "Existing shots are kept; preparation does not replace them")
     if api._duration_info(p)["kind"] != "actual":
-        raise HTTPException(409, "Générez d’abord la voix du script enregistré")
+        raise HTTPException(409, "First generate the voice for the saved script")
     if not config.get("PROXY_BASE_URL") or not config.get("PROXY_API_KEY"):
-        raise HTTPException(409, "Le proxy texte du studio doit être configuré")
+        raise HTTPException(409, "The studio text proxy must be configured")
     model = (p.get("model_snapshot") or {}).get("text_model") or p["settings"]["script"].get("model")
     if not model:
-        raise HTTPException(409, "Choisissez le modèle texte du projet")
+        raise HTTPException(409, "Choose the project's text model")
     words = store.load_words(p["id"])
     if (not words or any(type(w.get(k)) not in (int, float) or not math.isfinite(w[k]) for w in words for k in ("s", "e"))
             or any(type(w.get(k)) is not int for w in words for k in ("c0", "c1"))):
-        raise HTTPException(409, "L’alignement des mots de la voix est manquant")
+        raise HTTPException(409, "The voice word alignment is missing")
     if any(w["c0"] < 0 or w["c1"] > len(p["script"]) or w["c1"] <= w["c0"] for w in words):
-        raise HTTPException(409, "L’alignement des mots ne correspond pas au script")
+        raise HTTPException(409, "The word alignment does not match the script")
     if (any(w["s"] < 0 or w["e"] < w["s"] or w["e"] > p["voiceover"]["duration"] + .1 for w in words)
             or any(a["s"] > b["s"] or a["c1"] > b["c0"] for a, b in zip(words, words[1:]))
             or p["voiceover"].get("script_hash", api._hash(p["script"])) != api._hash(p["script"])):
-        raise HTTPException(409, "L’alignement et la voix doivent correspondre au script actuel")
+        raise HTTPException(409, "The alignment and voice must match the current script")
     style = store.get_style(p["style_id"]) or {}
     refs = copy.deepcopy(style.get("workspace_references") or [])
     if not refs:
-        raise HTTPException(409, "Ajoutez les références approuvées du style")
+        raise HTTPException(409, "Add the style's approved references")
     for ref in refs:
         ref["owner"] = "style"
         digest = api._file_digest(store.style_dir(p["style_id"]), ref.get("path"))
         if not digest or ref.get("sha256") != digest or ref.get("review_state") != "verified":
-            raise HTTPException(409, "Une référence du style est manquante ou a changé")
+            raise HTTPException(409, "A style reference is missing or has changed")
     entries = cast.registry(p)
     era_refs = {} if entries else style.get("workspace_character_references") or {}
     if not isinstance(era_refs, dict):
-        raise HTTPException(409, "Les références de personnages du style sont invalides")
+        raise HTTPException(409, "The style's character references are invalid")
     for selected in era_refs.values():
         if not isinstance(selected, list) or not selected:
-            raise HTTPException(409, "Chaque époque doit avoir une référence de personnage approuvée")
+            raise HTTPException(409, "Each era must have an approved character reference")
         for ref in selected:
             if (not isinstance(ref, dict) or ref.get("review_state") != "verified"
                     or not ref.get("sha256") or api._file_digest(store.style_dir(p["style_id"]), ref.get("path")) != ref["sha256"]):
-                raise HTTPException(409, "Une référence de personnage est manquante, non vérifiée ou a changé")
+                raise HTTPException(409, "A character reference is missing, unverified, or has changed")
     shots = timing.split(words, p["script"], p["voiceover"]["duration"], target=6)
     for i, shot in enumerate(shots, 1):
         shot.update(id=i, text=p["script"][shot["c0"]:shot["c1"]].strip())
@@ -144,7 +144,7 @@ async def prepare(p):
                         "context_before": [s["text"] for s in shots[max(0, offset - 2):offset]],
                         "context_after": [s["text"] for s in shots[offset + len(batch):offset + len(batch) + 2]],
                         "requested_shots": [{"id": s["id"], "narration": s["text"]} for s in batch]}, ensure_ascii=False)}
-                ], model=model, effort="low", attempts=1, hedge=False, label="Préparation des plans")
+                ], model=model, effort="low", attempts=1, hedge=False, label="Preparing shots")
             prepared = []
             rows = parse_json(raw).get("shots")
             if not isinstance(rows, list) or [r.get("id") for r in rows if isinstance(r, dict)] != [s["id"] for s in batch]:
@@ -181,10 +181,10 @@ async def prepare(p):
                     cast.validate(p, scene)
                 prepared.append(scene)
             completed += len(prepared)
-            progress(completed, len(shots), f"{completed}/{len(shots)} plans prêts · {limit} lots en parallèle")
+            progress(completed, len(shots), f"{completed}/{len(shots)} shots ready · {limit} batches in parallel")
             return prepared
 
-        progress(0, len(shots), f"Préparation · {limit} lots en parallèle")
+        progress(0, len(shots), f"Preparation · {limit} batches in parallel")
         tasks = [asyncio.create_task(batch_worker(offset)) for offset in range(0, len(shots), 12)]
         try:
             batches = await asyncio.gather(*tasks)
@@ -200,7 +200,7 @@ async def prepare(p):
             p["planning_receipt"] = {"input_hash": stamp, "text_model": model, "created_at": now(),
                 "shots": {str(s["id"]): api._hash(_shot_evidence(s)) for s in result}}
             p.update(scenes=result, scenes_script_hash=timing.script_hash(p["script"]), render=None)
-            progress(len(result), len(result), "Plans prêts : testez les trois premières images")
+            progress(len(result), len(result), "Shots ready: test the first three images")
             store.save_project(p)
         except BaseException as error:
             for task in tasks:
@@ -208,7 +208,7 @@ async def prepare(p):
             await asyncio.gather(*tasks, return_exceptions=True)
             if not isinstance(error, Exception):
                 raise
-            raise RuntimeError("La préparation a échoué. Aucun plan existant ni média n’a été remplacé ; vous pouvez réessayer") from None
+            raise RuntimeError("Preparation failed. No existing shots or media were replaced; you can try again") from None
     await pipeline._step(p, "planning", run)
 
 
@@ -221,9 +221,9 @@ def install(app):
     async def start(pid: str, body: dict):
         p = api._project(pid, writable=True)
         if generation.batch_running(pid) or pid in generation._active_projects:
-            raise HTTPException(409, "Une génération d’images est en cours")
+            raise HTTPException(409, "An image generation is in progress")
         if body.get("script_hash") != api._hash(p.get("script") or ""):
-            raise HTTPException(409, "Le script a changé ; actualisez le projet")
+            raise HTTPException(409, "The script has changed; refresh the project")
         inputs(p)
         pipeline.start(pid, prepare)
         return api._full(p)

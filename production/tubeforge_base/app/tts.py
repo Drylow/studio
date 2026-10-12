@@ -29,20 +29,20 @@ EDGE_BY_LANG = {"french": "fr-FR-RemyMultilingualNeural", "english": "en-US-Andr
                 "portuguese": "pt-BR-AntonioNeural", "arabic": "ar-SA-HamedNeural"}
 # Voix standard d'ElevenLabs (proposées si la clé n'a pas la permission de lister les voix)
 PREMADE_VOICES = [
-    {"voice_id": "nPczCjzI2devNBz1zQrb", "name": "Brian", "labels": "homme, américain, grave — narration"},
-    {"voice_id": "pNInz6obpgDQGcFmaJgB", "name": "Adam", "labels": "homme, américain, grave"},
+    {"voice_id": "nPczCjzI2devNBz1zQrb", "name": "Brian", "labels": "male, American, serious — narration"},
+    {"voice_id": "pNInz6obpgDQGcFmaJgB", "name": "Adam", "labels": "male, American, serious"},
     {"voice_id": "JBFqnCBsd6RMkjVDRZzb", "name": "George", "labels": "homme, britannique, chaleureux — narration"},
-    {"voice_id": "onwK4e9ZLuTAKqWW03F9", "name": "Daniel", "labels": "homme, britannique, posé — info"},
-    {"voice_id": "pqHfZKP75CvOlQylNhV4", "name": "Bill", "labels": "homme âgé, américain — documentaire"},
-    {"voice_id": "cjVigY5qzO86Huf0OWal", "name": "Eric", "labels": "homme, américain, doux"},
-    {"voice_id": "iP95p4xoKVk53GoZ742B", "name": "Chris", "labels": "homme, américain, décontracté"},
-    {"voice_id": "TX3LPaxmHKxFdv7VOQHJ", "name": "Liam", "labels": "jeune homme, américain"},
-    {"voice_id": "N2lVS1w4EtoT3dr4eOWO", "name": "Callum", "labels": "homme, voix rauque"},
-    {"voice_id": "CwhRBWXzGAHq8TQ4Fs17", "name": "Roger", "labels": "homme, américain, assuré"},
-    {"voice_id": "EXAVITQu4vr4xnSDxMaL", "name": "Sarah", "labels": "femme, américaine, douce"},
+    {"voice_id": "onwK4e9ZLuTAKqWW03F9", "name": "Daniel", "labels": "male, British, composed — info"},
+    {"voice_id": "pqHfZKP75CvOlQylNhV4", "name": "Bill", "labels": "older male, American — documentary"},
+    {"voice_id": "cjVigY5qzO86Huf0OWal", "name": "Eric", "labels": "male, American, gentle"},
+    {"voice_id": "iP95p4xoKVk53GoZ742B", "name": "Chris", "labels": "male, American, relaxed"},
+    {"voice_id": "TX3LPaxmHKxFdv7VOQHJ", "name": "Liam", "labels": "young male, American"},
+    {"voice_id": "N2lVS1w4EtoT3dr4eOWO", "name": "Callum", "labels": "male, raspy voice"},
+    {"voice_id": "CwhRBWXzGAHq8TQ4Fs17", "name": "Roger", "labels": "male, American, confident"},
+    {"voice_id": "EXAVITQu4vr4xnSDxMaL", "name": "Sarah", "labels": "female, American, gentle"},
     {"voice_id": "pFZP5JQG7iQjIQuC4Bku", "name": "Lily", "labels": "femme, britannique — narration"},
     {"voice_id": "Xb7hH8MSUJpSbSDYk0k2", "name": "Alice", "labels": "femme, britannique, claire"},
-    {"voice_id": "XrExE9yKIg1WjnnlVkGX", "name": "Matilda", "labels": "femme, américaine, chaleureuse"},
+    {"voice_id": "XrExE9yKIg1WjnnlVkGX", "name": "Matilda", "labels": "female, American, warm"},
 ]
 
 _tts_sem: asyncio.Semaphore | None = None
@@ -188,21 +188,21 @@ async def _eleven_chunk(offset: int, chunk: str, prev_text: str, next_text: str,
                     last = f"HTTP {r.status_code}: {r.text[:400]}"
                     if "quota_exceeded" in r.text:
                         m = re.search(r"(\d+) credits remaining, while (\d+) credits are required", r.text)
-                        left = f" Il reste {m.group(1)} crédits, ce morceau en demande {m.group(2)}." if m else ""
-                        raise TTSError("Crédits ElevenLabs épuisés." + left + " Les morceaux déjà générés sont "
+                        left = f" Il reste {m.group(1)} credits, this piece requires {m.group(2)}." if m else ""
+                        raise TTSError("ElevenLabs credits exhausted." + left + " Les morceaux déjà générés sont "
                                        "gardés en cache : relance quand tes crédits sont rechargés, ou choisis "
                                        "la voix de secours (Edge).")
                     if r.status_code in (401, 403, 404, 422) or (r.status_code == 400 and "busy" not in r.text):
-                        raise TTSError(f"ElevenLabs a refusé la requête — {last}")
+                        raise TTSError(f"ElevenLabs rejected the request — {last}")
                 except httpx.TransportError as e:
-                    last = f"réseau : {e}"
+                    last = f"network: {e}"
                 await asyncio.sleep(3 * 2 ** attempt)
             else:
-                raise TTSError(f"ElevenLabs indisponible après 5 essais — {last}")
+                raise TTSError(f"ElevenLabs unavailable after 5 attempts — {last}")
         data = r.json()
         al = data.get("alignment") or data.get("normalized_alignment")
         if not al:
-            raise TTSError("ElevenLabs n'a pas renvoyé d'alignement")
+            raise TTSError("ElevenLabs did not return alignment")
         mp3.write_bytes(base64.b64decode(data["audio_base64"]))
         js.write_text(json.dumps(al), encoding="utf-8")
     words = words_from_chars(chunk, offset, al["characters"], al["character_start_times_seconds"],
@@ -239,7 +239,7 @@ async def _edge_chunk(offset: int, chunk: str, vs: dict, cache: Path) -> dict:
                 except Exception as e:  # noqa: BLE001 — service gratuit parfois capricieux
                     mp3.unlink(missing_ok=True)
                     if attempt == 3:
-                        raise TTSError(f"Edge TTS a échoué : {e}")
+                        raise TTSError(f"Edge TTS failed: {e}")
                     await asyncio.sleep(2 * (attempt + 1))
         js.write_text(json.dumps(tokens), encoding="utf-8")
     return {"path": mp3, "words": align_tokens(chunk, offset, [tuple(t) for t in tokens])}
@@ -296,13 +296,13 @@ async def synthesize(text: str, vs: dict, out_dir: Path, progress=None) -> dict:
     cache.mkdir(parents=True, exist_ok=True)
     if provider == "elevenlabs":
         if not config.get("ELEVENLABS_API_KEY"):
-            raise TTSError("Clé ElevenLabs manquante : ajoute-la dans Réglages (ELEVENLABS_API_KEY).")
+            raise TTSError("Missing ElevenLabs key: add it in Settings (ELEVENLABS_API_KEY).")
         if not vs.get("voice_id"):
-            raise TTSError("Aucune voix ElevenLabs choisie.")
+            raise TTSError("No ElevenLabs voice selected.")
         chunks = split_text(text, 2400)
     elif provider == "local":
         if not local_tts.installed():
-            raise TTSError("Voix locale non installée.")
+            raise TTSError("Local voice not installed.")
         chunks = local_tts.split_for_local(text)
     else:
         chunks = split_text(text, 1500)
@@ -310,9 +310,9 @@ async def synthesize(text: str, vs: dict, out_dir: Path, progress=None) -> dict:
     t_start = time.time()
     who = (f"ElevenLabs ({vs.get('voice_name') or vs.get('voice_id')}, {vs.get('model_id')})"
            if provider == "elevenlabs" else
-           f"voix locale Chatterbox ({vs.get('local_voice') or local_tts.default_voice(vs.get('language'))})"
+           f"local Chatterbox voice ({vs.get('local_voice') or local_tts.default_voice(vs.get('language'))})"
            if provider == "local" else f"Edge ({vs.get('edge_voice')})")
-    events.log(f"Voix off : {len(text):,} caractères en {len(chunks)} segment(s) via {who}".replace(",", " "))
+    events.log(f"Voiceover: {len(text):,} characters in {len(chunks)} segment(s) via {who}".replace(",", " "))
 
     async def run(i, off, ch, pause=0.0):
         nonlocal done
@@ -327,7 +327,7 @@ async def synthesize(text: str, vs: dict, out_dir: Path, progress=None) -> dict:
         done += 1
         if provider != "local" or done % 10 == 0 or done == len(chunks):
             el = time.time() - t_start
-            events.log(f"✓ Segment voix {done}/{len(chunks)} — reste ≈ "
+            events.log(f"✓ Voice segment {done}/{len(chunks)} — reste ≈ "
                        f"{events.fmt_duration(el / done * (len(chunks) - done))}", "ok")
         if progress:
             progress(done, len(chunks))
@@ -366,7 +366,7 @@ async def synthesize(text: str, vs: dict, out_dir: Path, progress=None) -> dict:
     await run_cmd([config.get("FFMPEG"), "-y", "-v", "error", "-i", str(wav), *tempo, "-c:a", "libmp3lame",
                    "-b:a", "192k", str(mp3)])
     duration = ffprobe_duration(mp3)
-    events.log(f"✓ Voix off prête : {events.fmt_duration(duration)} d'audio, {len(words)} mots calés "
+    events.log(f"✓ Voiceover ready: {events.fmt_duration(duration)} d'audio, {len(words)} mots calés "
                f"(en {events.fmt_duration(time.time() - t_start)})", "ok")
     wav.unlink(missing_ok=True)
     used = {r["path"].stem for r in results}

@@ -84,11 +84,11 @@ def _error_from(r: httpx.Response) -> ApiError:
     msg = msg or f"HTTP {r.status_code}"
     low = msg.lower()
     if r.status_code in (400, 403, 422) and any(w in low for w in MODERATION_WORDS):
-        return ModerationError(f"Refus de modération : {msg}", r.status_code)
+        return ModerationError(f"Moderation refusal: {msg}", r.status_code)
     if r.status_code in RETRYABLE or "rate limit" in low or "quota" in low or "overloaded" in low:
         return ApiError(f"HTTP {r.status_code}: {msg}", r.status_code, retryable=True)
     if r.status_code in (401, 403):
-        return ApiError(f"Clé API refusée (HTTP {r.status_code}): {msg}", r.status_code, retryable=r.status_code == 403)
+        return ApiError(f"API key refused (HTTP {r.status_code}): {msg}", r.status_code, retryable=r.status_code == 403)
     return ApiError(f"HTTP {r.status_code}: {msg}", r.status_code)
 
 
@@ -104,21 +104,21 @@ async def _with_retry(kind: str, fn, attempts: int = 6, label: str = ""):
                 raise
             last = e
         except (httpx.TransportError, httpx.TimeoutException) as e:
-            last = ApiError(f"Erreur réseau : {type(e).__name__} {e}", retryable=True)
+            last = ApiError(f"Network error: {type(e).__name__} {e}", retryable=True)
         except (ValueError, KeyError, json.JSONDecodeError) as e:  # réponse illisible/vide
-            last = ApiError(f"Réponse invalide : {e}", retryable=True)
+            last = ApiError(f"Invalid response: {e}", retryable=True)
         STATS[kind]["retries"] += 1
         wait = min(90, 3 * 2 ** attempt) + random.uniform(0, 3)
-        events.log(f"⚠ {label or kind} : essai {attempt + 1}/{attempts} raté ({str(last)[:160]}) — nouvel essai dans "
+        events.log(f"⚠ {label or kind} : essai {attempt + 1}/{attempts} failed ({str(last)[:160]}) — retrying in "
                    f"{wait:.0f} s", "warn")
         await asyncio.sleep(wait)
-    raise last or ApiError("échec")
+    raise last or ApiError("failed")
 
 
 # ---------------------------------------------------------------- texte
 
 async def chat(messages: list[dict], model: str | None = None, effort: str | None = "low",
-               attempts: int = 6, timeout: float | None = None, label: str = "requête texte",
+               attempts: int = 6, timeout: float | None = None, label: str = "text prompt",
                on_delta=None, hedge: bool = True) -> str:
     """Appel chat/completions en streaming (évite les timeouts proxy sur les longues générations).
 
@@ -154,7 +154,7 @@ async def chat(messages: list[dict], model: str | None = None, effort: str | Non
                             on_delta(piece)
         text = "".join(parts).strip()
         if not text:
-            raise ValueError("réponse vide")
+            raise ValueError("empty response")
         return text
 
     slow = effort in ("medium", "high")
@@ -165,7 +165,7 @@ async def chat(messages: list[dict], model: str | None = None, effort: str | Non
         try:
             return await asyncio.wait_for(once(), deadline)
         except asyncio.TimeoutError:
-            raise ApiError(f"pas de réponse complète en {deadline:.0f}s", retryable=True)
+            raise ApiError(f"no complete response in {deadline:.0f}s", retryable=True)
 
     async def hedged() -> str:
         """Si un compte traîne, on relance en parallèle sur un autre et on garde la 1re réponse."""
@@ -176,7 +176,7 @@ async def chat(messages: list[dict], model: str | None = None, effort: str | Non
         if first in done:
             return first.result()
         STATS["llm"]["hedges"] = STATS["llm"].get("hedges", 0) + 1
-        events.log(f"⏳ {label} : pas de réponse après {hedge_after} s — une requête jumelle part sur un autre "
+        events.log(f"⏳ {label} : no response after {hedge_after} s — une requête jumelle part sur un autre "
                    "compte, on garde la plus rapide", "warn")
         pending = {first, asyncio.create_task(once_bounded())}
         err: BaseException | None = None
@@ -195,11 +195,11 @@ async def chat(messages: list[dict], model: str | None = None, effort: str | Non
     async with sem("llm"):
         STATS["llm"]["active"] += 1
         t0 = time.time()
-        events.log(f"→ {label} · {payload['model']}" + (f" (réflexion {effort})" if effort else "") + " …", "api")
+        events.log(f"→ {label} · {payload['model']}" + (f" (thinking {effort})" if effort else "") + " …", "api")
         try:
             out = await _with_retry("llm", hedged, attempts, label)
             STATS["llm"]["done"] += 1
-            events.log(f"← {label} : {len(out.split())} mots reçus en {events.fmt_duration(time.time() - t0)}", "api")
+            events.log(f"← {label} : {len(out.split())} words received in {events.fmt_duration(time.time() - t0)}", "api")
             return out
         except Exception as e:
             STATS["llm"]["errors"] += 1
@@ -232,7 +232,7 @@ async def _image_bytes_from(r: httpx.Response) -> bytes:
         elif item.get("url"):
             data = (await client().get(item["url"], timeout=120)).content
         else:
-            raise ValueError(f"pas d'image dans la réponse : {str(body)[:300]}")
+            raise ValueError(f"no image in response: {str(body)[:300]}")
     Image.open(io.BytesIO(data)).verify()  # lève si l'image est corrompue
     return data
 
@@ -255,7 +255,7 @@ async def generate_image(prompt: str, model: str = "", aspect: str = "16:9",
         finally:
             STATS["image"]["active"] -= 1
     if provider not in (None, "cli_proxy"):
-        raise ApiError("Fournisseur image inconnu")
+        raise ApiError("Unknown image provider")
     size, ratio = ASPECTS.get(aspect, ASPECTS["16:9"])
     model = model or config.get("IMAGE_MODEL")
     if not model:
@@ -275,7 +275,7 @@ async def generate_image(prompt: str, model: str = "", aspect: str = "16:9",
         try:
             return await asyncio.wait_for(once(), 360)
         except asyncio.TimeoutError:
-            raise ApiError("image : pas de réponse en 360s", retryable=True)
+            raise ApiError("image: no response in 360s", retryable=True)
 
     async def hedged() -> bytes:
         """Image anormalement lente (> 150 s) : une jumelle part sur un autre compte."""
@@ -284,7 +284,7 @@ async def generate_image(prompt: str, model: str = "", aspect: str = "16:9",
         if first in done:
             return first.result()
         STATS["image"]["hedges"] = STATS["image"].get("hedges", 0) + 1
-        events.log(f"⏳ {label} : lente (> 150 s) — une jumelle part sur un autre compte", "warn")
+        events.log(f"⏳ {label} : slow (> 150 s) — a twin is sent on another account", "warn")
         pending = {first, asyncio.create_task(once_bounded())}
         err: BaseException | None = None
         try:

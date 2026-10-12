@@ -496,7 +496,8 @@ def test_flow_batch_bounded_three_reverse_results_preserve_all_receipts_and_pilo
 
 
 @pytest.mark.parametrize("provider,phase", [("google_flow", "preview"), ("cli_proxy", "remaining")])
-def test_preview_and_cli_batches_remain_sequential(workspace, monkeypatch, provider, phase):
+def test_low_concurrency_configuration_keeps_batches_sequential(workspace, monkeypatch, provider, phase):
+    api.config.update({"IMAGE_CONCURRENCY":"1", "USEAPI_IMAGE_CONCURRENCY":"1"})
     p, data = concurrent_project(workspace, monkeypatch, phase, provider)
     active, maximum = 0, 0
 
@@ -874,3 +875,50 @@ def test_prompt_correction_keeps_existing_generation_receipts(workspace, monkeyp
     scene = response.json()["scenes"][0]
     for key in ("image", "generation_receipt", "generation_history", "sent_references"):
         assert scene[key] == old_scene[key]
+
+def test_cli_images_run_in_parallel_with_separate_references_and_receipts(workspace, monkeypatch):
+    api.config.update({'IMAGE_CONCURRENCY':'12'})
+    p, data = concurrent_project(workspace, monkeypatch, 'remaining', 'cli_proxy')
+    active, maximum, entered_count = 0, 0, 0
+    entered, release = None, None
+    async def image(prompt, **kwargs):
+        nonlocal active, maximum, entered_count
+        active += 1
+        entered_count += 1
+        maximum = max(maximum, active)
+        assert kwargs['attempts'] == 1 and len(kwargs['refs']) == 1
+        if entered_count == 7:
+            entered.set()
+        await release.wait()
+        active -= 1
+        return data
+    request = AsyncMock(side_effect=image)
+    monkeypatch.setattr(llm,'generate_image',request)
+    async def run():
+        nonlocal entered, release
+        entered, release = asyncio.Event(), asyncio.Event()
+        await generation.start_batch(p['id'], batch_body(p, 'remaining'))
+        await asyncio.wait_for(entered.wait(), timeout=5)
+        assert active == 7
+        release.set()
+        await generation._batch_tasks[p['id']]
+    asyncio.run(run())
+    latest = store.get_project(p['id'])
+    assert maximum == 7 and latest['workspace_batch']['concurrency'] == 12
+    assert latest['workspace_batch']['done'] == 7
+    assert len({s['image'] for s in latest['scenes'][3:]}) == 7
+    for scene in latest['scenes'][3:]:
+        assert scene['generation_receipt']['prompt'] == scene['prompt']
+        assert scene['generation_receipt']['references'][0]['path'] == 'reference.png'
+    assert not generation._active_projects and not generation._active_generations
+
+
+def test_batch_concurrency_respects_provider_and_preview_limits(workspace):
+    api.config.update({'IMAGE_CONCURRENCY':'24','USEAPI_IMAGE_CONCURRENCY':'3'})
+    assert generation.batch_concurrency('cli_proxy','remaining') == 24
+    assert generation.batch_concurrency('cli_proxy','preview') == 3
+    assert generation.batch_concurrency('google_flow','remaining') == 3
+    assert generation.batch_concurrency('google_flow','preview') == 3
+    api.config.update({'IMAGE_CONCURRENCY':'100','USEAPI_IMAGE_CONCURRENCY':'100'})
+    assert generation.batch_concurrency('cli_proxy','corrections') == 36
+    assert generation.batch_concurrency('google_flow','corrections') == 3

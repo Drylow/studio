@@ -26,7 +26,7 @@ DEFAULT_THUMB_STYLE = (
 )
 
 
-def default_style(style_id: str = "default", name: str = "Style par défaut") -> dict:
+def default_style(style_id: str = "default", name: str = "Style par dÃ©faut") -> dict:
     return {
         "id": style_id,
         "name": name,
@@ -129,7 +129,7 @@ def delete_style(style_id: str) -> None:
 # ------------------------------------------------------------------ projets
 
 _cache: dict[str, dict] = {}
-_mtimes: dict[str, float] = {}  # date du fichier lors de notre dernière lecture/écriture
+_mtimes: dict[str, float] = {}  # date du fichier lors de notre derniÃ¨re lecture/Ã©criture
 
 
 def project_dir(pid: str) -> Path:
@@ -144,7 +144,7 @@ def _mtime(f: Path) -> float:
 
 
 def _load_all() -> None:
-    """Recharge les projets modifiés par un autre processus (ex. batch en ligne de commande)."""
+    """Recharge les projets modifiÃ©s par un autre processus (ex. batch en ligne de commande)."""
     seen = set()
     for f in config.PROJECTS_DIR.glob("*/project.json"):
         pid = f.parent.name
@@ -190,7 +190,7 @@ _last_save: dict[str, float] = {}
 
 
 def save_throttled(p: dict, force: bool = False) -> None:
-    """Sauvegarde au plus toutes les 1,5 s (progression, texte en direct…)."""
+    """Sauvegarde au plus toutes les 1,5 s (progression, texte en directâ€¦)."""
     t = now()
     if force or t - _last_save.get(p["id"], 0) > 1.5:
         _last_save[p["id"]] = t
@@ -204,7 +204,7 @@ def new_steps() -> dict:
 def create_project(title: str, style_id: str, *, topic: str = "", video_url: str = "", mode: str = "auto",
                    custom_script: str = "", overrides: dict | None = None,
                    characters: list[str] | None = None) -> dict:
-    """characters = ids des personnages permanents du style à inclure (None = ceux « inclus par défaut »)."""
+    """characters = ids des personnages permanents du style Ã  inclure (None = ceux Â« inclus par dÃ©faut Â»)."""
     _load_all()
     style = get_style(style_id) or list_styles()[0]
     pid = f"{slugify(title or topic or 'video', 40)}-{uuid.uuid4().hex[:6]}"
@@ -242,6 +242,7 @@ def create_project(title: str, style_id: str, *, topic: str = "", video_url: str
         characters.append(c)
     p = {
         "id": pid,
+        "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),
         "title": title.strip(),
         "title_auto": not title.strip(),
         "topic": topic.strip(),
@@ -274,11 +275,11 @@ def create_project(title: str, style_id: str, *, topic: str = "", video_url: str
 
 
 def add_style_character(p: dict, style_char_id: str) -> dict:
-    """Ajoute au projet un personnage permanent du style (bibliothèque), avec sa fiche."""
+    """Ajoute au projet un personnage permanent du style (bibliothÃ¨que), avec sa fiche."""
     style = get_style(p["style_id"]) or {}
     c = next((x for x in style.get("characters", []) if x["id"] == style_char_id), None)
     if not c:
-        raise KeyError("Personnage introuvable dans le style")
+        raise KeyError("Character not found in style")
     if any(x["id"] == c["id"] for x in p["characters"]):
         return p
     c = copy.deepcopy(c)
@@ -313,8 +314,10 @@ def duplicate_project(pid: str) -> dict:
     new_id = f"{pid.rsplit('-', 1)[0]}-{uuid.uuid4().hex[:6]}"
     shutil.copytree(project_dir(pid), project_dir(new_id), ignore=shutil.ignore_patterns("render", "*.tmp"))
     p = copy.deepcopy(src)
-    p.update(id=new_id, title=(src["title"] or "Sans titre") + " (copie)", created=now(), archived=False,
+    p.update(id=new_id, title=(src["title"] or "Untitled") + " (copie)", created=now(), archived=False,
              render=None, error=None)
+    from .workspace_identity import current_owner
+    p['owner_id'] = current_owner()
     for k, st in p["steps"].items():
         if st["state"] == "running":
             st.update(state="idle", msg="")
@@ -358,15 +361,15 @@ def save_words(pid: str, words: list[dict]) -> None:
 
 
 def reset_stale_running() -> None:
-    """Au démarrage : les étapes marquées 'running' d'une session précédente sont interrompues."""
+    """Au dÃ©marrage : les Ã©tapes marquÃ©es 'running' d'une session prÃ©cÃ©dente sont interrompues."""
     for p in list_projects():
         if now() - (p.get("updated") or 0) < 120:  # probablement en cours dans un autre processus (batch CLI)
             continue
         changed = False
         for st in p["steps"].values():
             if st["state"] == "running":
-                st.update(state="error", msg="Interrompu (serveur redémarré) — clique sur ▶ Reprendre : "
-                                             "ça repart là où ça s'était arrêté")
+                st.update(state="error", msg="Interrompu (serveur redÃ©marrÃ©) â€” clique sur â–¶ Reprendre : "
+                                             "Ã§a repart lÃ  oÃ¹ Ã§a s'Ã©tait arrÃªtÃ©")
                 changed = True
         for s in p.get("scenes") or []:
             if s.get("status") in ("running", "queued"):

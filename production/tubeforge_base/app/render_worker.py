@@ -168,7 +168,7 @@ def main(job_path: str) -> None:
                     print(f"P {written}", flush=True)
             proc.stdin.close()
             if proc.wait() != 0:
-                sys.exit(f"ffmpeg a échoué sur {sc['out']}")
+                sys.exit(f"ffmpeg failed on {sc['out']}")
         print(f"P {written}", flush=True)
         return
     proc = encoder(job["out"])
@@ -207,7 +207,7 @@ def main(job_path: str) -> None:
     code = proc.wait()
     print(f"P {written}", flush=True)
     if code != 0:
-        sys.exit(f"ffmpeg a échoué ({code})")
+        sys.exit(f"ffmpeg failed ({code})")
 
 
 if __name__ == "__main__":

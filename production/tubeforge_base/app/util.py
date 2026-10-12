@@ -57,7 +57,7 @@ def parse_json(text: str):
         pass
     starts = [i for i in (text.find("{"), text.find("[")) if i >= 0]
     if not starts:
-        raise ValueError("Pas de JSON dans la réponse")
+        raise ValueError("No JSON in the response")
     start = min(starts)
     closer = "}" if text[start] == "{" else "]"
     end = text.rfind(closer)
@@ -85,7 +85,7 @@ async def run_cmd(args: list[str], cwd: Path | None = None) -> str:
     )
     out, err = await proc.communicate()
     if proc.returncode != 0:
-        raise RuntimeError(f"{Path(str(args[0])).name} a échoué ({proc.returncode}): {err.decode(errors='ignore')[-1500:]}")
+        raise RuntimeError(f"{Path(str(args[0])).name} failed ({proc.returncode}): {err.decode(errors='ignore')[-1500:]}")
     return out.decode(errors="ignore")
 
 

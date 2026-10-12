@@ -136,7 +136,7 @@ SAMPLES_DIR = VOICES_DIR / "samples"
 ACCENT_LANG = {"FR": "fr", "CA": "fr", "BE": "fr", "CH": "fr", "EN": "en", "US": "en", "UK": "en", "GB": "en",
                "AU": "en", "IE": "en"}
 # la même phrase pour toutes les voix d'une langue, pour pouvoir les comparer
-SAMPLE_TEXT = {"fr": "Tu as exactement dix secondes pour décider. Derrière cette porte, quelqu'un connaît ton vrai nom.",
+SAMPLE_TEXT = {"fr": "You have exactly ten seconds to decide. Behind this door, someone knows your real name.",
                "en": "You have exactly ten seconds to decide. Behind that door, someone knows your real name."}
 _sampling = {"running": False, "done": 0, "total": 0}
 
@@ -158,7 +158,7 @@ def list_voices() -> list[dict]:
         lang = meta.get("lang") or (ACCENT_LANG[m.group(1)] if m else "")
         out.append({"id": f.name, "name": f.stem, "lang": lang, "label": meta.get("label") or f.stem,
                     "accent": meta.get("accent") or (m.group(1) if m else ""), "gender": meta.get("gender", ""),
-                    "desc": meta.get("desc", "ta voix" if not meta else ""), "default": bool(meta.get("default")),
+                    "desc": meta.get("desc", "your voice" if not meta else ""), "default": bool(meta.get("default")),
                     "sample": (SAMPLES_DIR / f"{f.stem}.mp3").exists()})
     return out
 
@@ -194,7 +194,7 @@ async def make_samples(force: bool = False) -> int:
                             str(SAMPLES_DIR / f"{v['name']}.mp3")], check=True)
             tmp.unlink(missing_ok=True)
             _sampling["done"] += 1
-            events.log(f"✓ Échantillon de voix : {v['label']} ({_sampling['done']}/{len(todo)})", "ok")
+            events.log(f"✓ Voice sample: {v['label']} ({_sampling['done']}/{len(todo)})", "ok")
     finally:
         _sampling["running"] = False
     return len(todo)
@@ -221,7 +221,7 @@ async def ensure_server(engine: str | None = None) -> dict:
     """Démarre les processus de voix locale s'ils ne tournent pas et charge le modèle demandé."""
     global _free, _start_lock
     if not installed():
-        raise LocalTTSError("Voix locale non installée (environnement TubeForge/tts-venv manquant).")
+        raise LocalTTSError("Local voice not installed (TubeForge/tts-venv environment missing).")
     if _start_lock is None:
         _start_lock = asyncio.Lock()
     async with _start_lock:
@@ -241,7 +241,7 @@ async def ensure_server(engine: str | None = None) -> dict:
                     creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
                 started.append(port)
         if started:
-            events.log(f"Démarrage de la voix locale : {len(started)} processus Chatterbox sur la carte AMD "
+            events.log(f"Starting local voice: {len(started)} processus Chatterbox on la carte AMD "
                        f"(≤ {per_proc_vram:.1f} Go chacun)…", "step")
         t0 = time.time()
         for port in ps:
@@ -250,7 +250,7 @@ async def ensure_server(engine: str | None = None) -> dict:
                     tail = (ROOT / f"server_{port}.log").read_text(encoding="utf-8", errors="replace")[-1500:]
                     raise LocalTTSError(f"Le moteur de voix locale s'est arrêté :\n{tail}")
                 if time.time() - t0 > 300:
-                    raise LocalTTSError("Le moteur de voix locale ne démarre pas (voir local_tts/server_*.log)")
+                    raise LocalTTSError("The local voice engine does not start (see local_tts/server_*.log)")
                 await asyncio.sleep(1)
         if _free is None:
             _free = asyncio.Queue()
@@ -262,16 +262,16 @@ async def ensure_server(engine: str | None = None) -> dict:
             todo = [p for p in ps if engine not in ((await _health(p)) or {}).get("loaded", [])]
             if todo:
                 t1 = time.time()
-                events.log(f"Chargement du modèle Chatterbox {engine} sur {len(todo)} processus "
+                events.log(f"Loading Chatterbox model {engine} on {len(todo)} processus "
                            "(~20 s, plus long au tout premier lancement)…")
 
                 async def load(port):
                     async with httpx.AsyncClient(timeout=httpx.Timeout(1800, connect=10)) as c:
                         r = await c.post(f"http://127.0.0.1:{port}/load", json={"engine": engine})
                     if r.status_code != 200:
-                        raise LocalTTSError(f"Chargement du modèle impossible : {r.text[:300]}")
+                        raise LocalTTSError(f"Unable to load model: {r.text[:300]}")
                 await asyncio.gather(*(load(p) for p in todo))
-                events.log(f"✓ Voix locale prête ({engine}, {events.fmt_duration(time.time() - t1)})", "ok")
+                events.log(f"✓ Local voice ready ({engine}, {events.fmt_duration(time.time() - t1)})", "ok")
     return await health() or {}
 
 
@@ -307,16 +307,16 @@ async def _synth_on_worker(body: dict, meta: dict | None) -> bytes:
         finally:
             _free.put_nowait(port)
         if attempt < 2:
-            events.log(f"⚠ Voix locale : nouvel essai ({(last or '')[:120]})", "warn")
+            events.log(f"⚠ Local voice: retrying ({(last or '')[:120]})", "warn")
             await ensure_server()
             await asyncio.sleep(2)
-    raise LocalTTSError(f"Voix locale : échec — {last}")
+    raise LocalTTSError(f"Local voice: failed — {last}")
 
 
 # ------------------------------------------------------------------ texte prononçable
 
 _CUR = {"en": {"$": "dollars", "€": "euros", "£": "pounds"}, "fr": {"$": "dollars", "€": "euros", "£": "livres"}}
-_PCT = {"en": "percent", "fr": "pour cent", "es": "por ciento", "de": "Prozent", "it": "per cento", "pt": "por cento"}
+_PCT = {"en": "percent", "fr": "percent", "es": "por ciento", "de": "Prozent", "it": "per cento", "pt": "por cento"}
 
 
 def speakable(text: str, language: str | None) -> str:
@@ -343,7 +343,7 @@ def speakable(text: str, language: str | None) -> str:
     if code == "en":
         text = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: n2w(int(m.group(1)), to="ordinal"), text)
     elif code == "fr":
-        text = re.sub(r"\b(\d+)(er|re|e|ème|eme)\b",
+        text = re.sub("\\b(\\d+)(er|re|e|ème|eme)\\b",
                       lambda m: "premier" if m.group(1) == "1" and m.group(2) == "er" else n2w(int(m.group(1)), to="ordinal"),
                       text)
     # années (1000-2099), sauf si suivies d'une unité monétaire déjà traitée
@@ -477,7 +477,7 @@ async def chunk_audio(offset: int, chunk: str, pause: float, vs: dict, cache: Pa
             raw = await synth(said, lang, voice, engine=engine, seed=None if attempt == 0 else 1000 + attempt,
                               verify=verify, meta=info, **params)
             if info.get("attempts", 1) > 1:
-                events.log(f"↻ Phrase régénérée {info['attempts'] - 1}× (contrôle Whisper) : « {chunk[:50]}… »", "warn")
+                events.log(f"↻ Phrase regenerated {info['attempts'] - 1}× (Whisper check): “ {chunk[:50]}… »", "warn")
             secs = wav_seconds(raw)
             ratio = secs / max(expected, 0.5)
             gap = abs(1 - ratio)
@@ -485,7 +485,7 @@ async def chunk_audio(offset: int, chunk: str, pause: float, vs: dict, cache: Pa
                 best, best_gap = raw, gap
             if 0.45 <= ratio <= 2.2:
                 break
-            events.log(f"⚠ Phrase à refaire (durée {secs:.1f} s au lieu de ~{expected:.1f} s) : « {chunk[:50]}… »",
+            events.log(f"⚠ Phrase to redo (duration {secs:.1f} s au lieu de ~{expected:.1f} s) : « {chunk[:50]}… »",
                        "warn")
         padded, speech, total = pad_wav(best, pause)
         wav_path.write_bytes(padded)

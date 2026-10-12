@@ -21,7 +21,7 @@ async def write_concepts(title: str, context: str, style: str, count: int, instr
         + 'Return JSON only: {"thumbnails":[{"prompt":"detailed image description, 50-100 words","text":""}]}'
     )
     data = parse_json(await llm.chat([{"role": "user", "content": msg}], model=config.get("FAST_MODEL"),
-                                     effort="low", label="Concepts de miniatures"))
+                                     effort="low", label="Thumbnail concepts"))
     items = (data.get("thumbnails") if isinstance(data, dict) else data) or []
     out = []
     for c in items[:count]:
@@ -59,9 +59,9 @@ async def generate(p: dict, count: int | None = None, progress=None, instruction
         nonlocal done
         try:
             img = await llm.generate_image(thumb_prompt(t["style"], c), t.get("model", config.get("IMAGE_MODEL")), "16:9",
-                                           label="Miniature", provider=t.get("image_provider", "cli_proxy"))
+                                           label="Thumbnail", provider=t.get("image_provider", "cli_proxy"))
         except Exception as e:  # noqa: BLE001
-            events.log(f"✗ Miniature : {str(e)[:160]}", "error")
+            events.log(f"✗ Thumbnail: {str(e)[:160]}", "error")
             return None
         n = 1
         while (pdir / "thumbs" / f"thumb_{n:02d}.png").exists():
@@ -69,14 +69,14 @@ async def generate(p: dict, count: int | None = None, progress=None, instruction
         rel = f"thumbs/thumb_{n:02d}.png"
         (pdir / rel).write_bytes(img)
         done += 1
-        events.log(f"✓ Miniature {done}/{len(concepts)}" + (f" « {c['text']} »" if c.get("text") else ""), "ok")
+        events.log(f"✓ Thumbnail {done}/{len(concepts)}" + (f" « {c['text']} »" if c.get("text") else ""), "ok")
         if progress:
-            progress(done, len(concepts), f"Miniatures {done}/{len(concepts)}")
+            progress(done, len(concepts), f"Thumbnails {done}/{len(concepts)}")
         return {"file": rel, "prompt": c["prompt"], "text": c.get("text", "")}
 
     results = [r for r in await asyncio.gather(*(one(c) for c in concepts)) if r]
     p["thumbnails"] = (p.get("thumbnails") or []) + results
     store.save_project(p)
     if not results:
-        raise RuntimeError("Aucune miniature n'a pu être générée")
+        raise RuntimeError("No thumbnail could be generated")
     return results

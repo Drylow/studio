@@ -73,7 +73,7 @@ async def detect_characters(p: dict, max_n: int = 8, generate_images: bool = Tru
         f"\n\nART STYLE:\n{v['art_style']}\n\nTITLE: {p['title']}\n\nSCRIPT:\n{p['script']}"
     )
     data = parse_json(await llm.chat([{"role": "user", "content": prompt}],
-                                     model=p["settings"]["script"].get("model") or config.get("FAST_MODEL"), effort="medium", label="Détection des personnages"))
+                                     model=p["settings"]["script"].get("model") or config.get("FAST_MODEL"), effort="medium", label="Character detection"))
     items = data.get("characters", []) if isinstance(data, dict) else data
     ids = {c["id"] for c in existing}
     names = {c["name"].lower() for c in existing}
@@ -89,7 +89,7 @@ async def detect_characters(p: dict, max_n: int = 8, generate_images: bool = Tru
         added.append(ch)
         ids.add(cid)
     store.save_project(p)
-    events.log(f"✓ Personnages : {', '.join(c['name'] for c in added) or 'aucun nouveau'}", "ok")
+    events.log(f"✓ Characters: {', '.join(c['name'] for c in added) or "no new ones"}", "ok")
     if generate_images and added and v.get("use_character_refs", True):
         await ensure_character_images(p, added)
     return added
@@ -126,7 +126,7 @@ async def ensure_character_images(p: dict, only: list[dict] | None = None) -> No
         try:
             await generate_character_image(p, c)
             c["status"], c["error"] = "done", None
-            events.log(f"✓ Fiche personnage « {c['name']} » dessinée ({events.fmt_duration(time.time() - t0)})", "ok")
+            events.log(f"✓ Character sheet « {c['name']} » drawn ({events.fmt_duration(time.time() - t0)})", "ok")
         except Exception as e:  # noqa: BLE001 — un personnage sans référence n'est pas bloquant
             c["status"], c["error"] = "error", str(e)[:300]
             events.log(f"✗ Fiche « {c['name']} » : {str(e)[:160]}", "error")
@@ -189,7 +189,7 @@ async def _prompts_for_chunk(p: dict, chunk: list[dict], before: list[dict], aft
         try:
             data = parse_json(await llm.chat([{"role": "user", "content": msg}],
                                              model=p["settings"]["script"].get("model") or config.get("FAST_MODEL"), effort="low",
-                                             label=f"Prompts scènes {chunk[0]['id']}–{chunk[-1]['id']}"))
+                                             label=f"Scene prompts {chunk[0]['id']}–{chunk[-1]['id']}"))
             items = data["scenes"] if isinstance(data, dict) else data
             out = {int(x["id"]): x for x in items if x.get("prompt")}
             if all(s["id"] in out for s in chunk):
@@ -211,12 +211,12 @@ def _fix_motions(scenes: list[dict]) -> None:
 async def write_prompts(p: dict, progress=None, only_missing: bool = True) -> None:
     if not p.get("bible"):
         if progress:
-            progress(0, 1, "Bible visuelle et personnages…")
+            progress(0, 1, "Visual Bible and characters…")
         await build_bible(p)
     scenes = p["scenes"]
     targets = [s for s in scenes if not (only_missing and s.get("prompt"))]
     chunks = [targets[i:i + CHUNK] for i in range(0, len(targets), CHUNK)]
-    events.log(f"Écriture de {len(targets)} prompts d'images en {len(chunks)} lots parallèles")
+    events.log(f"Writing {len(targets)} prompts d'images en {len(chunks)} parallel batches")
     ids = {s["id"]: k for k, s in enumerate(scenes)}
     done = 0
     char_ids = {c["id"] for c in active_chars(p)}
@@ -292,7 +292,7 @@ async def _safer_prompt(p: dict, prompt: str) -> str:
         "acceptable: remove gore, blood, wounds, corpses, explicit violence, weapons aimed at people, hate "
         "symbols and real people's names, while keeping the scene's meaning and mood (imply danger indirectly). "
         f"Return only the new prompt.\n\nPROMPT:\n{prompt}"}], model=p["settings"]["script"].get("model") or config.get("FAST_MODEL"), effort="low",
-        label="Prompt adouci (modération)")).strip()
+        label="Softened prompt (moderation)")).strip()
 
 
 def _next_image_name(pdir: Path, s: dict) -> str:
@@ -328,7 +328,7 @@ async def generate_scene_image(p: dict, s: dict, edit_instruction: str | None = 
     try:
         if edit_instruction:
             if not s.get("image"):
-                raise ValueError("Pas d'image à ajuster")
+                raise ValueError("No image to adjust")
             prompt = (f"Edit this image: {edit_instruction}. Keep the same art style, characters and overall "
                       "composition unless the instruction says otherwise. No text, no watermark.")
             refs = [llm.png_for_upload(pdir / s["image"])]
@@ -361,7 +361,7 @@ async def generate_scene_image(p: dict, s: dict, edit_instruction: str | None = 
             except llm.ModerationError:
                 if attempt == 2:
                     raise
-                events.log(f"⚠ Image #{s['id']} refusée par la modération — prompt adouci, nouvel essai", "warn")
+                events.log(f"⚠ Image #{s['id']} rejected by moderation — prompt softened, trying again", "warn")
                 safer = await _safer_prompt(p, s.get("prompt") or s["text"])
                 s["prompt"] = safer
                 if not edit_instruction:
@@ -385,7 +385,7 @@ async def generate_images(p: dict, scene_ids: list[int] | None = None, progress=
     done, failed = 0, 0
     t_start = time.time()
     if scenes:
-        events.log(f"Génération de {len(scenes)} image(s) — jusqu'à {config.get_int('IMAGE_CONCURRENCY')} en "
+        events.log(f"Generating {len(scenes)} image(s) — up to {config.get_int('IMAGE_CONCURRENCY')} en "
                    "parallèle sur les comptes du proxy")
 
     # Continuité : une scène liée à la précédente attend que celle-ci soit dessinée pour la prendre en
@@ -413,13 +413,13 @@ async def generate_images(p: dict, scene_ids: list[int] | None = None, progress=
             events.log(f"✓ Image #{s['id']} ({events.fmt_duration(time.time() - t0)}) — {done}/{len(scenes)}, "
                        f"{rate:.0f} img/min, reste ≈ {events.fmt_duration(left)}", "ok")
         if progress:
-            progress(done, len(scenes), f"Images {done}/{len(scenes)}" + (f" — {failed} échec(s)" if failed else ""))
+            progress(done, len(scenes), f"Images {done}/{len(scenes)}" + (f" — {failed} failure(s)" if failed else ""))
         save_throttled(p)
         ready[s["id"]].set()
 
     chains = sum(1 for s in scenes if wants_prev_ref(p, s))
     if chains:
-        events.log(f"Continuité : {chains} image(s) dessinée(s) à partir de l'image précédente ({continuity_mode(p)})")
+        events.log(f"Continuity: {chains} image(s) drawn from the previous image ({continuity_mode(p)})")
     await asyncio.gather(*(one(s) for s in sorted(scenes, key=lambda x: order.get(x["id"], 0))))
     save_throttled(p, force=True)
     return {"done": done - failed, "failed": failed}

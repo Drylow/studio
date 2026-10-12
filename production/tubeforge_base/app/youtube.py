@@ -27,7 +27,7 @@ def _fetch(vid: str) -> str:
 async def transcript(url: str) -> str:
     vid = video_id(url)
     if not vid:
-        raise ValueError("URL YouTube invalide")
+        raise ValueError("Invalid YouTube URL")
     return await asyncio.to_thread(_fetch, vid)
 
 

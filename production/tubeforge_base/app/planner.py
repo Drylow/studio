@@ -113,7 +113,7 @@ def items(ch: dict) -> list[dict]:
         running = pipeline.is_running(p["id"])
         step = next((k for k, s in p["steps"].items() if s.get("state") == "running"), None)
         out.append({
-            "id": p["id"], "title": p.get("title") or "(titre en cours…)", "slot": po.get("slot"),
+            "id": p["id"], "title": p.get("title") or "(title in progress…)", "slot": po.get("slot"),
             "posted": po.get("posted"), "status": st, "running": running, "step": step,
             "kind": (p.get("short") or {}).get("kind") or "standalone",
             "parent_title": (p.get("short") or {}).get("parent_title"),
@@ -143,7 +143,7 @@ def move(p: dict, direction: int) -> None:
     """Échange le créneau d'un short avec son voisin (direction -1 = plus tôt, +1 = plus tard)."""
     ch = channels.get(p.get("channel_id"))
     if not ch:
-        raise ValueError("Ce short n'est rattaché à aucune chaîne")
+        raise ValueError("This short is not linked to any channel")
     seq = [x for x in _sorted(channels.projects_of(ch["id"]))
            if (x.get("post") or {}).get("slot") and not x["post"].get("posted")]
     idx = next((i for i, x in enumerate(seq) if x["id"] == p["id"]), None)
@@ -200,7 +200,7 @@ def export(ch: dict) -> dict:
         rows.append([it["slot"], it["title"], it["caption"].replace("\n", " "), str(target)])
     buf = io.StringIO()
     w = csv.writer(buf, delimiter=";")
-    w.writerow(["creneau", "titre", "legende", "fichier"])
+    w.writerow(["creneau", "title", "legende", "fichier"])
     w.writerows(rows)
     (root / "planning.csv").write_text(buf.getvalue(), encoding="utf-8-sig")
     return {"dir": str(root), "count": len(rows), "copied": n}
