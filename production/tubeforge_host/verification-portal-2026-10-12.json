@@ -1,0 +1,76 @@
+{
+  "url": "https://tools.kanye.studio/2d",
+  "anonymous_api": 401,
+  "worker_direct": 401,
+  "checks": {
+    "owner": {
+      "session": true,
+      "personal_videos": 3,
+      "team_videos": 3,
+      "shared_styles": 5,
+      "settings_access": true,
+      "concurrency": {
+        "IMAGE_CONCURRENCY": 24,
+        "LLM_CONCURRENCY": 8,
+        "WORKSPACE_PLAN_CONCURRENCY": 6,
+        "TTS_CONCURRENCY": 3,
+        "PROJECT_PARALLEL": 6,
+        "RENDER_CONCURRENCY": 1,
+        "flow_concurrency": 3,
+        "render_workers": 4
+      }
+    },
+    "worker": {
+      "session": true,
+      "personal_videos": 0,
+      "team_videos": 3,
+      "shared_styles": 5,
+      "settings_access": true,
+      "concurrency": {
+        "IMAGE_CONCURRENCY": 24,
+        "LLM_CONCURRENCY": 8,
+        "WORKSPACE_PLAN_CONCURRENCY": 6,
+        "TTS_CONCURRENCY": 3,
+        "PROJECT_PARALLEL": 6,
+        "RENDER_CONCURRENCY": 1,
+        "flow_concurrency": 3,
+        "render_workers": 4
+      }
+    }
+  },
+  "existing_videos": [
+    {
+      "id": "zombie-outbreak-30-days-trapped-in-a-sup-e56f42",
+      "scenes": 108,
+      "voice_seconds": 702.98,
+      "technical_ready": true,
+      "publication_ready": true
+    },
+    {
+      "id": "alien-invasion-7-days-trapped-in-a-gas-s-6bdb2e",
+      "scenes": 108,
+      "voice_seconds": 686.88,
+      "technical_ready": true,
+      "publication_ready": true
+    }
+  ],
+  "linux_tests_passed": 215,
+  "migration_tests_passed": 3,
+  "portal_auth_reused": true,
+  "new_account_registry": false,
+  "portal_native_light_dark_mobile_verified": true,
+  "worker_created_personal_project": true,
+  "multipart_reference_upload_verified": true,
+  "temporary_test_project_removed": true,
+  "native_render": {
+    "frames": 48,
+    "fps": 24,
+    "size": [
+      1920,
+      1080
+    ],
+    "audio": true
+  },
+  "paid_media_generation_calls": 0,
+  "deployed_worker_code_revision": "e562a29f3b73a10a08c419d905ed8cfec29ae97d"
+}
