@@ -1,0 +1,61 @@
+{
+  "author": "Codex",
+  "timing_state": "untimed_visual_pilot",
+  "scope": "opening_three_beats_only",
+  "shots": [
+    {
+      "id": 1,
+      "key": "pilot-001",
+      "name": "Carrying Charmander to the Center",
+      "text": "Your first Pokemon battle ends with you carrying Charmander into a Pokemon Center. The trainer who beat you is already on his way to the next town. You're holding your partner's tail clear of your jacket, trying to remember whether its flame looked this small before the fight. You wanted eight badges and a shot at the Kanto League. But right now, you'd settle for Charmander opening its eyes. That trip to the Champion starts here, with you waiting outside the treatment room.",
+      "location_id": "center-exterior",
+      "characters": [
+        "Nico",
+        "Charmander"
+      ],
+      "reference_paths": [
+        "output/imagegen/oddly-fictional-pokemon-02/center-exterior.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg"
+      ],
+      "prompt": "Create one full-bleed LANDSCAPE 16:9 animation storyboard frame, clean 2D flat comic. Image 1 is the fixed LOCATION MASTER: preserve its walls, doors, windows, furniture, palette, camera and lighting exactly. Each subsequent image is a SINGLE CHARACTER IDENTITY, not a scene to collage or extra portrait. Humans must have perfect round PURE WHITE flat paper-circle heads, tiny black dot eyes, tiny line mouth, no eyebrows, hair, ears or nose. The whole head interior is uninterrupted #FFFFFF, with no gray crescent, volume, lighting, face shading or gradient. White mitten hands, white neck and all human exposed skin; short compact adult bodies matching the supplied identities, long sleeves and long trousers. Every named character appears EXACTLY ONCE. Pokemon keep recognizable creature anatomy and colours. No extra people or creatures, no ghost, inset, portrait overlay, reference sheet, frame, collage, writing, logos or watermark. Keep natural supporting contact between hands, Pokemon and surfaces; do not add straps or backpacks. Clothing can have a simple shadow, faces and hands remain completely flat white. Image 2=Nico, exactly this red cap, blue long-sleeved zip jacket, charcoal trousers, brown boots, one ball on left hip. Image 3=Charmander. Add Nico at the foot of the entrance steps, walking towards the door, seen in a readable three-quarter view. He carefully carries ONE small exhausted Charmander across both forearms at chest height, eyes closed, body limp but alive, no wounds or gore. Charmander is small enough to carry, about half the height of Nico torso, not adult-sized. Its one tail hangs safely clear of the jacket with a small orange flame at its tip. Nico has a concerned tiny mouth but NO expressive eyebrows or giant anime eyes. Both white hands visibly support its body. Keep the entire building and street composition from the master, Nico not oversized relative to door.",
+      "prompt_author": "codex"
+    },
+    {
+      "id": 2,
+      "key": "pilot-002",
+      "name": "The nurse checks Charmander",
+      "text": "The nurse takes Charmander from your arms and asks what happened. You explain the battle against Squirtle, the water attack, and the command you gave after Charmander stumbled. She asks why you didn't call it back. You have an answer ready about getting through the opponent's defenses. It sounds ridiculous while she checks your Pokemon. She takes it through the doorway, and you sit down with an unused Potion in your pocket. You packed it that morning. You forgot it existed when someone challenged you.",
+      "location_id": "center-interior",
+      "characters": [
+        "Nico",
+        "Charmander",
+        "Center nurse"
+      ],
+      "reference_paths": [
+        "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v3.jpg"
+      ],
+      "prompt": "Create one full-bleed LANDSCAPE 16:9 animation storyboard frame, clean 2D flat comic. Image 1 is the fixed LOCATION MASTER: preserve its walls, doors, windows, furniture, palette, camera and lighting exactly. Each subsequent image is a SINGLE CHARACTER IDENTITY, not a scene to collage or extra portrait. Humans must have perfect round PURE WHITE flat paper-circle heads, tiny black dot eyes, tiny line mouth, no eyebrows, hair, ears or nose. The whole head interior is uninterrupted #FFFFFF, with no gray crescent, volume, lighting, face shading or gradient. White mitten hands, white neck and all human exposed skin; short compact adult bodies matching the supplied identities, long sleeves and long trousers. Every named character appears EXACTLY ONCE. Pokemon keep recognizable creature anatomy and colours. No extra people or creatures, no ghost, inset, portrait overlay, reference sheet, frame, collage, writing, logos or watermark. Keep natural supporting contact between hands, Pokemon and surfaces; do not add straps or backpacks. Clothing can have a simple shadow, faces and hands remain completely flat white. Image 2=Nico; Image 3=Charmander; Image 4=Center nurse in mint long-sleeve uniform and striped white nurse cap. Keep all furniture positions and proportions from Image 1. Nurse stands BEHIND the RIGHT counter near the cream examination mat, visible upper body over counter, leaning a little forward to check ONE small Charmander resting on the cream mat. White mitten hand lightly supports its shoulder. Nico stands on the PATIENT SIDE at the left end of the counter near the central doorway, hands now lowered, worried tiny line mouth. Charmander eyes closed and tired, no blood or bandages, one tail laid along the mat with a small flame clear of people. One nurse, one trainer, one Charmander. Counter does not move and no bench or window disappears. Nurse head completely flat WHITE even at its right edge.",
+      "prompt_author": "codex"
+    },
+    {
+      "id": 3,
+      "key": "pilot-003",
+      "name": "Waiting with the route map",
+      "text": "Through the waiting-room window, you can see the road leaving Viridian City. Other trainers pass with partners walking beside them. Your map is spread across your knees, with Pewter City circled. You were supposed to get there before your rival, Milo. Eventually, the nurse comes back. Charmander will recover. You get to bring it home with you, and she suggests learning when to stop a battle before starting another one. Charmander reaches for your sleeve when you pick it up. You stay until it can walk without leaning against your leg.",
+      "location_id": "center-interior",
+      "characters": [
+        "Nico"
+      ],
+      "reference_paths": [
+        "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+        "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg"
+      ],
+      "prompt": "Create one full-bleed LANDSCAPE 16:9 animation storyboard frame, clean 2D flat comic. Image 1 is the fixed LOCATION MASTER: preserve its walls, doors, windows, furniture, palette, camera and lighting exactly. Each subsequent image is a SINGLE CHARACTER IDENTITY, not a scene to collage or extra portrait. Humans must have perfect round PURE WHITE flat paper-circle heads, tiny black dot eyes, tiny line mouth, no eyebrows, hair, ears or nose. The whole head interior is uninterrupted #FFFFFF, with no gray crescent, volume, lighting, face shading or gradient. White mitten hands, white neck and all human exposed skin; short compact adult bodies matching the supplied identities, long sleeves and long trousers. Every named character appears EXACTLY ONCE. Pokemon keep recognizable creature anatomy and colours. No extra people or creatures, no ghost, inset, portrait overlay, reference sheet, frame, collage, writing, logos or watermark. Keep natural supporting contact between hands, Pokemon and surfaces; do not add straps or backpacks. Clothing can have a simple shadow, faces and hands remain completely flat white. Image 2=Nico ONLY. Exactly one human. NO Charmander and NO nurse in this frame: they are in the offscreen treatment room. Nico sits on the LEFT blue waiting bench under the blue window. A folded cream route map rests across his knees, held with both white mitten hands. The map has a simple coloured path and one red circle, NO text or labels. His gaze points down at the map. Keep the RIGHT mint counter, cream mat, healing machine, central doorway, red wall bands and tiled floor in their original positions. This is the same room from the exact same camera as image 1; change the seated action only. No new poster or furniture. Blue jacket and red cap identical, head perfectly round and flat white. Feet contact floor, knees bent naturally, no doubled hands.",
+      "prompt_author": "codex"
+    }
+  ]
+}

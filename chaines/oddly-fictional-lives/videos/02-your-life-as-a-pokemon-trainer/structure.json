@@ -1,0 +1,75 @@
+{
+  "title": "Your Life as a Pokémon Trainer",
+  "format": "original immersive second-person fictional Kanto journey",
+  "words": 3076,
+  "duration_estimate_seconds": 940.1,
+  "timings": "not aligned; actual narration required",
+  "chapters": [
+    {
+      "name": "The first loss",
+      "paragraph_start": 1,
+      "paragraph_end": 3,
+      "words": 259
+    },
+    {
+      "name": "Choosing your partner",
+      "paragraph_start": 4,
+      "paragraph_end": 5,
+      "words": 190
+    },
+    {
+      "name": "Learning the daily work",
+      "paragraph_start": 6,
+      "paragraph_end": 9,
+      "words": 368
+    },
+    {
+      "name": "Your first badge",
+      "paragraph_start": 10,
+      "paragraph_end": 12,
+      "words": 277
+    },
+    {
+      "name": "Building a team",
+      "paragraph_start": 13,
+      "paragraph_end": 17,
+      "words": 466
+    },
+    {
+      "name": "The detour and your rival",
+      "paragraph_start": 18,
+      "paragraph_end": 20,
+      "words": 284
+    },
+    {
+      "name": "The next hard lesson",
+      "paragraph_start": 21,
+      "paragraph_end": 24,
+      "words": 379
+    },
+    {
+      "name": "Eight badges are not enough",
+      "paragraph_start": 25,
+      "paragraph_end": 27,
+      "words": 294
+    },
+    {
+      "name": "The Elite Four",
+      "paragraph_start": 28,
+      "paragraph_end": 29,
+      "words": 188
+    },
+    {
+      "name": "Your rival as Champion",
+      "paragraph_start": 30,
+      "paragraph_end": 32,
+      "words": 277
+    },
+    {
+      "name": "Back at the Center",
+      "paragraph_start": 33,
+      "paragraph_end": 33,
+      "words": 94
+    }
+  ]
+}

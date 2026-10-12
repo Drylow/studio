@@ -1,0 +1,342 @@
+{
+  "provider": "google_flow_via_useapi",
+  "model_source": "private_runtime_configuration",
+  "author": "Codex",
+  "assets": {
+    "nico-identity": {
+      "role": "character",
+      "label": "Nico",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/nico-identity.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "style-only",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/nico-identity.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "6405caed519bb354ffd4bbd814d2f56a6c9e173f920b5de5516f2d5aed0eb280",
+      "review_state": "archived_not_selected",
+      "visual_review": "Superseded: proportions, grey face rim or eyebrows corrected in later version.",
+      "user_approval": false
+    },
+    "charmander-identity": {
+      "role": "character",
+      "label": "Charmander",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/charmander-identity.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "style-only",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Recognizable Charmander, orange/cream, continuous single tail and flame, no human white-head constraint on creatures.",
+      "user_approval": false
+    },
+    "nurse-identity": {
+      "role": "character",
+      "label": "Center nurse",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/nurse-identity.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "style-only",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "caccef2777b8651ec932bb7e004e742e2351f06051b5ae989e5ac0fceb2fb0f9",
+      "review_state": "archived_not_selected",
+      "visual_review": "Superseded: proportions, grey face rim or eyebrows corrected in later version.",
+      "user_approval": false
+    },
+    "center-exterior": {
+      "role": "location",
+      "label": "Viridian Center exterior",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/center-exterior.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "style-only",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/center-exterior.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "d389438a8125b138856b61e7d72294609d448ce9d1e07cf050951a785e27a1ea",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Verified layout: red roof, central awning/door, flanking windows, steps, left hedge and right lamp. No people or distant fantasy towers.",
+      "user_approval": false
+    },
+    "center-interior": {
+      "role": "location",
+      "label": "Viridian Center treatment foyer",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/center-interior.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/bend-tests-pokemon-naruto-kratos-2026-10-11/01-pokemon.jpg",
+          "role": "style-only",
+          "sha256": "44320beeba47574d593bfafa8310706f2a9a50d73901ba6bf774c10fceb12652"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Verified layout: window/blue bench left, central doorway, mint counter/mat and healing unit right, red trim and tiled floor.",
+      "user_approval": false
+    },
+    "nico-identity-v2": {
+      "role": "character",
+      "label": "Nico",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/nico-identity-v2.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity.jpg",
+          "role": "edit-target",
+          "sha256": "6405caed519bb354ffd4bbd814d2f56a6c9e173f920b5de5516f2d5aed0eb280"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Round flat-white head, unchanged red cap/blue jacket/charcoal trousers/brown boots. Compact rather than elongated proportions. Tiny hand line details remain; simplify them in future scenes.",
+      "user_approval": false
+    },
+    "nurse-identity-v2": {
+      "role": "character",
+      "label": "Center nurse",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/nurse-identity-v2.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity.jpg",
+          "role": "edit-target",
+          "sha256": "caccef2777b8651ec932bb7e004e742e2351f06051b5ae989e5ac0fceb2fb0f9"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v2.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "cdc6565490dd24f8b036e7c26693f32f705ae916cfb521cc3538abd192379622",
+      "review_state": "archived_not_selected",
+      "visual_review": "Superseded: proportions, grey face rim or eyebrows corrected in later version.",
+      "user_approval": false
+    },
+    "nurse-identity-v3": {
+      "role": "character",
+      "label": "Center nurse",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/nurse-identity-v3.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v2.jpg",
+          "role": "edit-target",
+          "sha256": "cdc6565490dd24f8b036e7c26693f32f705ae916cfb521cc3538abd192379622"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v3.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "Compact mint nurse. Third version removes the previously rejected grey head crescent. One uniformly white round head.",
+      "user_approval": false
+    },
+    "pilot-001": {
+      "role": "pilot",
+      "label": "Carrying Charmander to the Center",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/pilot-001.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-exterior.jpg",
+          "role": "location",
+          "sha256": "d389438a8125b138856b61e7d72294609d448ce9d1e07cf050951a785e27a1ea",
+          "label": "Center location master"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "identity",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+          "label": "Nico"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "identity",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+          "label": "Charmander"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-001.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "73d8217e2cbc361b94efe356059ddbbeb3e78bcbafab80476b0e98b15b3df496",
+      "review_state": "archived_not_selected",
+      "visual_review": "Superseded: proportions, grey face rim or eyebrows corrected in later version.",
+      "user_approval": false
+    },
+    "pilot-002": {
+      "role": "pilot",
+      "label": "The nurse checks Charmander",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/pilot-002.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "location",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+          "label": "Center location master"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "identity",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+          "label": "Nico"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+          "role": "identity",
+          "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+          "label": "Charmander"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v3.jpg",
+          "role": "identity",
+          "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
+          "label": "Center nurse"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-002.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "ddd3cc12bcbf9a4bd2eeb12f1739b7a61bcf8a75a75afbb7f9cf500b6dfbaf1e",
+      "review_state": "archived_not_selected",
+      "visual_review": "Superseded: proportions, grey face rim or eyebrows corrected in later version.",
+      "user_approval": false
+    },
+    "pilot-003": {
+      "role": "pilot",
+      "label": "Waiting with the route map",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/pilot-003.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+          "role": "location",
+          "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+          "label": "Center location master"
+        },
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+          "role": "identity",
+          "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+          "label": "Nico"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-003.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "7248f7d179f23b9c5566174a7c8b6cfdeadfed5762d01612c67dff94cd08d40a",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "One Nico sits with map; no offscreen nurse/Charmander duplicated. Same room and wardrobe. Map symbols only, no writing.",
+      "user_approval": false
+    },
+    "pilot-001-v2": {
+      "role": "pilot",
+      "label": "Remove unsupported facial features",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/pilot-001-v2.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/pilot-001.jpg",
+          "role": "location",
+          "sha256": "73d8217e2cbc361b94efe356059ddbbeb3e78bcbafab80476b0e98b15b3df496",
+          "label": "Center location master"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-001-v2.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "d32d6dda0cacc6ea2bbda8ba8c8dc6d083c206a90394fa541828f9592858e711",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "One Nico carries one Charmander. Red cap/blue jacket/white face match references. Eyebrows removed; door/windows/steps unchanged against master.",
+      "user_approval": false
+    },
+    "pilot-002-v2": {
+      "role": "pilot",
+      "label": "Remove unsupported facial features",
+      "prompt": "output/imagegen/oddly-fictional-pokemon-02/prompts/pilot-002-v2.txt",
+      "request_started": true,
+      "references": [
+        {
+          "path": "output/imagegen/oddly-fictional-pokemon-02/pilot-002.jpg",
+          "role": "location",
+          "sha256": "ddd3cc12bcbf9a4bd2eeb12f1739b7a61bcf8a75a75afbb7f9cf500b6dfbaf1e",
+          "label": "Center location master"
+        }
+      ],
+      "image": "output/imagegen/oddly-fictional-pokemon-02/pilot-002-v2.jpg",
+      "dimensions": [
+        1376,
+        768
+      ],
+      "sha256": "8868d481a903632cf6edd0afda61485a5cc1d05b453a53683c4815f6c3fe7f12",
+      "review_state": "verified",
+      "reviewer": "Codex",
+      "visual_review": "One Nico, one nurse, one Charmander. White round faces, correct mint uniform. Same bench/window/doorway/counter/healing unit as master. Eyebrows removed.",
+      "user_approval": false
+    }
+  }
+}

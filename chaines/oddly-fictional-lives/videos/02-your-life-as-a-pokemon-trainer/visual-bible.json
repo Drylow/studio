@@ -1,0 +1,86 @@
+{
+  "style_id": "fictional-pokemon",
+  "main_character": "Nico",
+  "prompt_file": "chaines/oddly-fictional-lives/videos/02-your-life-as-a-pokemon-trainer/visual-direction.txt",
+  "provider": "google_flow",
+  "model_source": "private_runtime_configuration",
+  "human_anatomy": "compact adults, perfect white circular heads, dot eyes, tiny line mouth, no eyebrows or skin shading",
+  "pokemon_anatomy": "recognizable creature species and colours",
+  "characters": [
+    {
+      "name": "Nico",
+      "variant": "default",
+      "main": true,
+      "file": "output/imagegen/oddly-fictional-pokemon-02/nico-identity-v2.jpg",
+      "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+      "review_state": "verified",
+      "reviewer": "Codex"
+    },
+    {
+      "name": "Charmander",
+      "variant": "default",
+      "main": false,
+      "file": "output/imagegen/oddly-fictional-pokemon-02/charmander-identity.jpg",
+      "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+      "review_state": "verified",
+      "reviewer": "Codex"
+    },
+    {
+      "name": "Center nurse",
+      "variant": "default",
+      "main": false,
+      "file": "output/imagegen/oddly-fictional-pokemon-02/nurse-identity-v3.jpg",
+      "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
+      "review_state": "verified",
+      "reviewer": "Codex"
+    }
+  ],
+  "location_masters": [
+    {
+      "label": "Viridian Center exterior",
+      "image": "output/imagegen/oddly-fictional-pokemon-02/center-exterior.jpg",
+      "sha256": "d389438a8125b138856b61e7d72294609d448ce9d1e07cf050951a785e27a1ea",
+      "visual_review": "Verified layout: red roof, central awning/door, flanking windows, steps, left hedge and right lamp. No people or distant fantasy towers."
+    },
+    {
+      "label": "Viridian Center treatment foyer",
+      "image": "output/imagegen/oddly-fictional-pokemon-02/center-interior.jpg",
+      "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+      "visual_review": "Verified layout: window/blue bench left, central doorway, mint counter/mat and healing unit right, red trim and tiled floor."
+    }
+  ],
+  "not_yet_generated": [
+    "Milo and Squirtle/Wartortle/Blastoise variants",
+    "Oak",
+    "Brock",
+    "Misty",
+    "Sabrina",
+    "Giovanni",
+    "Lorelei",
+    "Bruno",
+    "Agatha",
+    "Lance",
+    "Charmeleon",
+    "Charizard",
+    "Pidgey/Pidgeotto/Pidgeot",
+    "Poliwag/Poliwhirl",
+    "Rocket grunts and the trainers they threaten",
+    "other battle Pokemon and future locations"
+  ],
+  "quality": {
+    "source_pixels": [
+      1376,
+      768
+    ],
+    "flow_upscale_pixels": [
+      2752,
+      1536
+    ],
+    "selected_frame_pixels": [
+      1920,
+      1080
+    ],
+    "mode": "native Flow 2K upscale plus explicit crop/downscale",
+    "remaining_images_quality_request": "Use native Flow 2K upscale and inspect the result; do not substitute a plain resized source and call it 2K."
+  }
+}

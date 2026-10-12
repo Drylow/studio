@@ -1,0 +1,27 @@
+{
+  "script_sha256": "127c659bd3f79e7fbe24d292b83c8f4141cc81768580022e87f0b76348f03197",
+  "words": 3076,
+  "hook_words": 83,
+  "ascii_only": true,
+  "clean_narration_only": true,
+  "paragraphs": 33,
+  "chapter_paragraph_coverage_complete": true,
+  "reference_nine_word_matches": {
+    "9BB4oCJ6cR4-transcript.txt": [],
+    "diftQzzcm9E-transcript.txt": [],
+    "Qb-h3lfgW7M-transcript.txt": []
+  },
+  "mechanical_scanner_candidate_flags": 0,
+  "mechanical_antithesis_floor": 0,
+  "proxy_editorial_verdict": "PASS",
+  "proxy_edits_requested": 0,
+  "policy_guarantee": false,
+  "duration_estimated_only": true,
+  "actual_voice_duration_checked": false,
+  "pilot_images": 3,
+  "pilot_frames_exact_16_9": true,
+  "visual_review_by_codex": true,
+  "user_hd_review_pending": true,
+  "full_storyboard_ready": false,
+  "video_rendered": false
+}
