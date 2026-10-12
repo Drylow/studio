@@ -53,3 +53,11 @@ Modifier ici, puis deployer avec `--no-seed` ; une modification uniquement dans 
 La logique de references peut preparer/envoyer des fichiers, mais la coherence est validee par inspection visuelle de chaque image. Le pack CapCut existant emploie la duree reelle de la voix ; lire les modules de rendu/export avant toute duplication de cette logique.
 
 Les integrations disponibles ne constituent pas une autorisation de changer de fournisseur. Les deux derniers kits Survivor emploient le CLI Proxy configure ; God of War utilisait Google Flow. Preserve ces choix par projet.
+
+## References personnages par style
+
+Dans Styles, ouvrir un style puis **References personnages**. Importer une ou plusieurs images avec nom, variante et description fixe ; choisir le personnage principal. Les uploads restent a verifier jusqu'a une validation explicite des images. La validation controle aussi que leurs fichiers/SHA256 sont toujours ceux importes. Les images de personnages sont distinctes des references generales du style.
+
+Routes locales : `POST /api/workspace/management/styles/{sid}/characters` (multipart, images et fiche), `PUT /api/workspace/management/styles/{sid}/characters` (fiche, principal et validation). Les fichiers sont conserves, les variantes existantes ne sont pas ecrasees. Les nouveaux projets figent leur casting dans `style_cast_snapshot`; les plans n'envoient que les identites presentes, via le moteur `workspace_characters` existant.
+
+Les deux styles Survivor ont leurs personnages principaux deja importes. Les regler/editer ici ne lance aucune generation. Import initial reproductible avec `../tubeforge_survivor_styles.py`, sans seed global ni changement des autres styles. Le raccourci se recree avec `../tubeforge_shortcut.ps1`.

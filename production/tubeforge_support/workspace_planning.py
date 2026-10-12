@@ -14,6 +14,8 @@ from . import workspace_characters as cast
 
 
 def allowed(p):
+    if (store.get_style(p.get("style_id")) or {}).get("workspace_authoring_mode") == "codex":
+        return False
     cid = p.get("profile_id") or p.get("channel_id")
     if not cid:
         return False

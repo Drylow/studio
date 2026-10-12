@@ -138,3 +138,66 @@ def test_existing_style_references_survive_management_and_duplication(managed):
     assert clone["references"][0]["path"] == "original.png"
     uploaded = upload(managed, "pov-history")
     assert store.get_style("pov-history")["visuals"]["style_refs"] == ["original.png", uploaded["path"]]
+
+
+def character_upload(client, sid, **changes):
+    picture = io.BytesIO()
+    Image.new("RGB", (64, 64), "white").save(picture, "PNG")
+    return client.post(f"/api/workspace/management/styles/{sid}/characters",
+                       data={"name": "Patch", "variant": "default", "description": "Round white head, orange bandage.",
+                             "is_main": "true", **changes},
+                       files={"file": ("identity.png", picture.getvalue(), "image/png")})
+
+
+def test_character_images_separate_from_style_images_and_explicitly_validated(managed):
+    style = new_style(managed)
+    result = character_upload(managed, style["id"])
+    assert result.status_code == 200, result.text
+    item = result.json()
+    assert item["main_character"] == "Patch" and item["references"] == []
+    ref = item["characters"][0]["variants"][0]["references"][0]
+    assert ref["exists"] and not ref["valid"] and ref["role"] == "identity"
+    url = f"/api/workspace/management/styles/{style['id']}/characters"
+    saved = managed.put(url, json={"name": "Patch", "variant": "default", "description": "Same identity.", "verify": True})
+    assert saved.status_code == 200 and saved.json()["characters"][0]["variants"][0]["references"][0]["valid"]
+    assert saved.json()["main_character"] == "Patch"
+    unset = managed.put(url, json={"name": "Patch", "description": "Same identity.", "is_main": False})
+    assert unset.status_code == 200 and unset.json()["main_character"] is None
+    (store.style_dir(style["id"]) / ref["path"]).write_bytes(b"changed")
+    assert managed.put(url, json={"name": "Patch", "description": "Same identity.", "verify": True}).status_code == 409
+
+
+def test_project_cast_snapshot_survives_later_style_edits(managed):
+    style = new_style(managed)
+    assert character_upload(managed, style["id"]).status_code == 200
+    url = f"/api/workspace/management/styles/{style['id']}/characters"
+    body = {"name": "Patch", "description": "Original identity.", "verify": True}
+    assert managed.put(url, json=body).status_code == 200
+    p = create(managed, style_id=style["id"], custom_script="You survive.")
+    saved = store.get_project(p["id"])
+    assert saved["main_character"] == "Patch"
+    before = saved["style_cast_snapshot"]
+    assert managed.put(url, json=body | {"description": "Changed identity."}).status_code == 200
+    assert store.get_project(p["id"])["style_cast_snapshot"] == before
+    later = create(managed, style_id=style["id"], custom_script="Later episode.")
+    assert store.get_project(later["id"])["style_cast_snapshot"]["Patch"]["variants"]["default"]["description"] == "Changed identity."
+
+
+def test_character_validation_rejects_aliases_and_preserves_registry(managed):
+    style = new_style(managed)
+    assert character_upload(managed, style["id"]).status_code == 200
+    before = store.get_style(style["id"])["workspace_cast_registry"]
+    assert character_upload(managed, style["id"], name="patch").status_code == 422
+    url = f"/api/workspace/management/styles/{style['id']}/characters"
+    assert managed.put(url, json={"name": "Patch", "description": "Identity", "verify": "yes"}).status_code == 422
+    assert store.get_style(style["id"])["workspace_cast_registry"] == before
+
+
+def test_style_provider_opt_in_keeps_global_and_other_style_policy(managed, monkeypatch):
+    monkeypatch.setattr(api, "_visual_policy", lambda: {"image_provider": "google_flow"})
+    style = new_style(managed, image_provider="cli_proxy", image_model="fixture-image")
+    p = create(managed, style_id=style["id"], custom_script="Script.", image_provider="cli_proxy")
+    assert store.get_project(p["id"])["model_snapshot"]["image_provider"] == "cli_proxy"
+    rejected = managed.post("/api/workspace/projects", json={"profile_id": "edo-daily", "title": "Other style",
+                                                            "custom_script": "Script.", "image_provider": "cli_proxy"})
+    assert rejected.status_code == 422

@@ -46,13 +46,13 @@
   },
   {
     "path": "02-Alien-Aftermath/channel-kit.txt",
-    "sha256": "4ce920c7b6380c79e89138fd0f45c4e71f6ec51f2df6d6599f8a66b0d3611b8e",
-    "bytes": 3612
+    "sha256": "9fb2d6d10bedfeb6aa4234b9935963c9c363fb6c9912b7913130c1d7e0d4af5c",
+    "bytes": 3755
   },
   {
     "path": "02-Alien-Aftermath/notes-production.txt",
-    "sha256": "c43b1bfc0c86e20c540dc40a383a7c0180e359183fc4d73e5581dd457f6f8029",
-    "bytes": 7362
+    "sha256": "746c02466dea50502f175d6dff82e1af786d01694b58f4102c68b3d4de3d4036",
+    "bytes": 7560
   },
   {
     "path": "02-Alien-Aftermath/pfp-prompt.txt",
@@ -63,6 +63,11 @@
     "path": "02-Alien-Aftermath/pfp.png",
     "sha256": "ed24853898cb181568ebe4e45936dc877de97fd2b6a2f44a330c1af441fee39f",
     "bytes": 1219867
+  },
+  {
+    "path": "02-Alien-Aftermath/reference-personnage-reed.png",
+    "sha256": "f570de9395b73ea48fad6b728b5a9ddc5a5c037b0cc263a0273c9e0801b5fc8c",
+    "bytes": 1488495
   },
   {
     "path": "02-Alien-Aftermath/script-en.txt",
@@ -76,7 +81,7 @@
   },
   {
     "path": "LIRE-ICI.txt",
-    "sha256": "69cd4e7da7d7bdc29123c918d42acc2984de3fe0427933207e22d978bd88e20b",
-    "bytes": 1884
+    "sha256": "37816bbda2e5e147c71bf05db73f67e580c78657446300e2e0edc23a85eeaba4",
+    "bytes": 1955
   }
 ]

@@ -54,7 +54,15 @@ Ouvrir `output/imagegen/survivor-launch-2026-10-12/01-patch-character.png` avant
 
 Pour Survivor : decors tres simples et peu profonds, contours nets, aplats mats, un geste ou objet lisible par plan. Cela differe des decors plus riches des chaines historiques. L'utilisateur a approuve les essais simples, pas une nouvelle direction cinematographique.
 
-Le logo alien est un symbole de chaine. Le protagoniste humain Reed et l'alien recurrent de l'episode ont encore besoin de leurs propres references. Le design mint du symbole ne transforme pas tous les personnages humains en aliens.
+Le logo alien est un symbole de chaine. Le protagoniste humain Reed a maintenant sa reference de corps entier ; l'alien recurrent de l'episode a encore besoin de ses propres references. Le design mint du symbole ne transforme pas tous les personnages humains en aliens.
+
+Mise a jour TubeForge du 12 octobre : une reference de corps entier de Reed a maintenant ete generee et regardee, dans `output/imagegen/alien-main-reference-2026-10-12/reed.png`. Elle est installee dans le nouveau style, sur demande de l'utilisateur, mais son image n'a pas encore ete approuvee explicitement par celui-ci. Surveyor et les autres personnages secondaires restent a produire.
+
+Les deux styles sont installes sous les IDs `survivor-patch` et `survivor-alien-aftermath`. Chacun a son `workspace_main_character` et son `workspace_cast_registry` : Patch a deux references (corps entier et tete), Reed une reference de corps entier. La page Styles expose maintenant une section **References personnages** pour importer plusieurs images par personnage/variante, enregistrer sa description, choisir le principal et valider les images apres inspection. Les nouveaux projets avec un casting en heritent via `style_cast_snapshot` ; les changements ulterieurs du style ne remplacent pas ce casting. L'auteur des plans selectionne seulement les identites effectivement presentes.
+
+Ces styles sont configures pour le CLI Proxy et des prompts ecrits par Codex (`workspace_authoring_mode=codex`), sans appliquer les regles automatiques de proportions/tatouage de God of War. La configuration globale Google Flow des autres styles est preservee. Les definitions de chaines YouTube/voix ne sont pas creees par cet import de styles.
+
+Import idempotent : `production/tubeforge_survivor_styles.py`, a lancer avec le Python de TubeForge apres deploiement. Il preserve un style deja installe et les edits existants. Le raccourci bureau `TubeForge.lnk` appelle `production/tubeforge_desktop.ps1` : lancement local si necessaire, puis ouverture du navigateur. Recreation du raccourci : `production/tubeforge_shortcut.ps1`. Le bureau reel est resolu via Windows, pas suppose dans un chemin fixe.
 
 ## Coherence : methode a executer
 
@@ -119,7 +127,7 @@ Profil Kratos : `output/imagegen/kratos-pfp-round-head-2026-10-12/pfp.png`. Ce p
 
 ## Prochaine action utile
 
-Continuer les deux pilotes depuis les scripts V1, sans re-ideation de Patch. Pour le supermarche selectionne : etablir plan et maitres des lieux, creer/inspecter la reference de Mara et les infectes, puis test de trois plans bien differents avec references explicites avant un grand lot. Pour la seconde : conserver l'option station-service comme proposition tant que l'utilisateur n'a pas choisi un autre lieu ; figer Reed, le Surveyor, la machine et le plan avant images.
+Continuer les deux pilotes depuis les scripts V1, sans re-ideation de Patch. Pour le supermarche selectionne : etablir plan et maitres des lieux, creer/inspecter la reference de Mara et les infectes, puis test de trois plans bien differents avec references explicites avant un grand lot. Pour la seconde : conserver l'option station-service comme proposition tant que l'utilisateur n'a pas choisi un autre lieu ; reutiliser la reference de Reed installee et figer le Surveyor, la machine et le plan avant images.
 
 La voix doit preceder le calage final : utiliser sa duree reelle et ses timings. Le futur pack CapCut comporte clips MP4 numerotes dans l'ordre, chaque duree calee sur la voix, voix originale, SRT et timestamps ; ne pas fabriquer tous les clips avec une duree fixe estimee. La logique d'export existe deja dans les outils, a lire avant de la reimplementer.
 

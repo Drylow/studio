@@ -437,9 +437,14 @@
       const url = (owner ? profilePreview(owner, 'video') : '') || data.styles.find((s) => s.id === sid)?.video_preview_url || '';
       $('#create-style-preview', dialog).innerHTML = url ? `<img class="preview" src="${esc(url)}" alt="Aperçu du style vidéo"><figcaption>${esc(data.styles.find((s) => s.id === sid)?.name || '')}</figcaption>` : '<div class="preview-empty">Aperçu non disponible</div>';
     };
-    $('[name="style_id"]', dialog).onchange = updatePreview;
-    $('[name="profile_id"]', dialog).onchange = () => { const selected = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value); if (selected) $('[name="style_id"]', dialog).value = selected.style_id; updatePreview(); };
-    updatePreview();
+    const applyStyleModel = () => {
+      const selected = data.styles.find((s) => s.id === $('[name="style_id"]', dialog).value);
+      if (selected?.image_provider && selected.image_model) $('[name="image_model"]', dialog).innerHTML = modelOptions(selected.image_model, 'image', selected.image_provider);
+      updatePreview();
+    };
+    $('[name="style_id"]', dialog).onchange = applyStyleModel;
+    $('[name="profile_id"]', dialog).onchange = () => { const selected = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value); if (selected) $('[name="style_id"]', dialog).value = selected.style_id; applyStyleModel(); };
+    applyStyleModel();
     $('[name="duration_minutes"]', dialog).value = row.duration_minutes;
     $('[name="profile_id"]', dialog).addEventListener('change', () => { const selected = data.profiles.find((p) => p.id === $('[name="profile_id"]', dialog).value); if (selected) $('[name="duration_minutes"]', dialog).value = selected.target_minutes; });
     bindScriptImport($('#create-form', dialog), '[name="custom_script"]');
@@ -891,6 +896,7 @@
       $$('[data-preview-select]').forEach((select) => select.onchange = () => { const role = select.value; if (!role) return; if (dirty) { select.value = ''; notify('Enregistrez les modifications avant de choisir un aperçu.', true); return; } action(select, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{[role]:refs[Number(select.dataset.previewSelect)].path}}); await route(); }, 'Aperçu enregistré.'); });
     };
     renderRefs();
+    renderStyleCharacters(style);
     $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify('Enregistrez les réglages du style avant les références.', true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, 'Références enregistrées.'); };
     $('#style-upload').onsubmit = (event) => {
       event.preventDefault();
@@ -906,6 +912,31 @@
         }
         await route();
       }, 'Images ajoutées dans l’ordre.');
+    };
+  }
+  function renderStyleCharacters(style) {
+    const characters = style.characters || [];
+    const disabled = style.archived ? ' disabled' : '';
+    $('.management-editor').insertAdjacentHTML('afterend', `<section class="section character-style-section"><h2>Références personnages</h2><p class="muted">Un personnage principal et des personnages récurrents par style. Importez leurs images, vérifiez-les, puis validez leurs références. Les nouveaux projets conservent leur casting.</p><div class="style-character-list">${characters.map((character) => character.variants.map((variant) => `<form class="style-character-card" data-character-form data-name="${esc(character.name)}" data-variant="${esc(variant.id)}"><div class="inline"><h3>${esc(character.name)} · ${esc(variant.id)}</h3>${character.main ? '<span class="badge verified">Principal</span>' : ''}</div><div class="character-reference-images">${variant.references.map((ref) => `<figure><a href="${esc(safeUrl(ref.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ref.url))}" alt="Référence de ${esc(character.name)}"></a><figcaption>${ref.valid ? 'Validée' : ref.exists ? 'À vérifier' : 'Fichier manquant'}</figcaption></figure>`).join('')}</div><label>Description fixe<textarea name="description" rows="3" required${disabled}>${esc(variant.description)}</textarea></label><label class="inline"><input name="is_main" type="checkbox"${character.main ? ' checked' : ''}${disabled}>Personnage principal du style</label><div class="form-actions"><button type="submit"${disabled}>Enregistrer</button><button type="submit" name="verify" value="true"${disabled}>Valider ces références</button></div></form>`).join('')).join('') || '<p class="muted">Aucun personnage enregistré.</p>'}</div><form id="style-character-upload"><h3>Ajouter un personnage ou une référence</h3><div class="form-grid"><label>Nom du personnage<input name="name" maxlength="100" required${disabled}></label><label>Variante<input name="variant" value="default" pattern="[A-Za-z0-9_-]+" maxlength="100" required${disabled}></label><label class="full">Description fixe<textarea name="description" rows="3" required${disabled}></textarea></label><label class="full">Images de référence<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required${disabled}></label><label class="inline"><input name="is_main" type="checkbox"${!characters.length ? ' checked' : ''}${disabled}>Personnage principal</label></div><div class="form-actions"><button type="submit"${disabled}>Importer les références du personnage</button></div><p class="small muted">Réutilisez le même nom et la même variante pour ajouter une image au personnage existant.</p></form></section>`);
+    $$('[data-character-form]').forEach((form) => form.onsubmit = (event) => {
+      event.preventDefault();
+      const fields = new FormData(form);
+      action(event.submitter, async () => {
+        await api('/api/workspace/management/styles/' + encode(style.id) + '/characters', {method:'PUT',body:{name:form.dataset.name,variant:form.dataset.variant,description:fields.get('description'),is_main:fields.has('is_main'),verify:event.submitter?.name === 'verify'}});
+        await route();
+      }, event.submitter?.name === 'verify' ? 'Références du personnage validées.' : 'Personnage enregistré.');
+    });
+    $('#style-character-upload').onsubmit = (event) => {
+      event.preventDefault();
+      const fields = new FormData(event.target);
+      const files = [...$('[name="files"]',event.target).files];
+      action(event.submitter, async () => {
+        for (const file of files) {
+          const payload = new FormData(); payload.append('file',file); payload.append('name',fields.get('name')); payload.append('variant',fields.get('variant')); payload.append('description',fields.get('description')); payload.append('is_main',fields.has('is_main') ? 'true' : 'false');
+          await api('/api/workspace/management/styles/' + encode(style.id) + '/characters', {method:'POST',body:payload});
+        }
+        await route();
+      }, 'Références importées : regardez-les, puis validez-les.');
     };
   }
   function renderSettings() {

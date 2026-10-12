@@ -53,10 +53,11 @@ def _default_style_id():
     return _identifier(_visual_policy().get("default_style_id", "pov-history"))
 
 
-def _check_image_provider(provider):
-    required = _visual_policy().get("image_provider")
+def _check_image_provider(provider, style_id=None):
+    selected = store.get_style(style_id) if style_id else None
+    required = (selected or {}).get("workspace_image_provider") or _visual_policy().get("image_provider")
     if required and provider != required:
-        raise HTTPException(422, "Les images de ce studio utilisent uniquement Google Flow")
+        raise HTTPException(422, "Utilisez le fournisseur image configuré pour ce style")
 
 
 def _project(pid, writable=False):
@@ -159,6 +160,7 @@ def _profile(cid):
 
 
 def _styles(include_archived=False):
+    from . import workspace_characters as cast
     out = []
     for path in sorted(config.STYLES_DIR.glob("*/style.json")):
         raw = read_json(path, {})
@@ -169,6 +171,10 @@ def _styles(include_archived=False):
         if style:
             visuals = style.get("visuals", {})
             out.append({"id": sid, "name": style.get("name", sid),
+                        "characters": cast.style_summary(style),
+                        "main_character": style.get("workspace_main_character"),
+                        "image_provider": style.get("workspace_image_provider"),
+                        "image_model": visuals.get("image_model", ""),
                         "is_default": sid == _default_style_id(),
                         "archived": bool(style.get("archived")),
                         "prompt": visuals.get("art_style", ""),
@@ -248,7 +254,8 @@ async def _catalog():
     proxy_available = result["available"]
     for item in result["models"]:
         item["provider"] = "cli_proxy"
-        if _visual_policy().get("image_provider") == "google_flow":
+        if (_visual_policy().get("image_provider") == "google_flow"
+                and not any(s.get("image_provider") == "cli_proxy" for s in _styles())):
             item["capabilities"]["image"] = False
     flow = await google_flow.status()
     result["image_provider_policy"] = _visual_policy().get("image_provider")
@@ -277,7 +284,7 @@ def _image_provider(body, catalog, defaults=None):
             provider = matches[0].get("provider", "cli_proxy") if len(matches) == 1 else "cli_proxy"
     if provider not in ("cli_proxy", "google_flow"):
         raise HTTPException(422, "Choisissez un fournisseur image disponible")
-    _check_image_provider(provider)
+    _check_image_provider(provider, body.get("style_id"))
     return provider
 
 
@@ -317,9 +324,15 @@ def _prepare(body, catalog):
     if (not script.strip() and (isinstance(minutes, bool) or not isinstance(minutes, (float, int))
             or not math.isfinite(minutes) or not 20 <= minutes <= 25)):
         raise HTTPException(422, "La durée cible doit être comprise entre 20 et 25 minutes")
+    selected = store.get_style(sid) or {}
+    defaults = dict(catalog["defaults"])
+    if selected.get("workspace_image_provider"):
+        defaults.update(image_provider=selected["workspace_image_provider"],
+                        image_model=selected.get("visuals", {}).get("image_model", ""))
+    model_body = body | {"style_id": sid}
     return {"profile": profile, "title": title, "topic": topic, "script": script, "style_id": sid,
-            "target_duration_seconds": minutes * 60 if minutes is not None else None, "models": _models(body, catalog),
-            "image_provider": _image_provider(body, catalog)}
+            "target_duration_seconds": minutes * 60 if minutes is not None else None, "models": _models(model_body, catalog, defaults),
+            "image_provider": _image_provider(model_body, catalog, defaults)}
 
 
 def _create(prepared, catalog):
@@ -345,6 +358,7 @@ def _create(prepared, catalog):
         p["settings"]["voice"]["provider"] = "algrow"
     p["settings"]["language"] = profile["language"]
     p.update(codex_directed=True, channel_id=profile["id"], profile_id=profile["id"],
+             main_character=selected_style.get("workspace_main_character"),
              target_duration_seconds=prepared["target_duration_seconds"],
              script=prepared["script"], auto_promo_shorts=0, prompts_approved=False,
              workspace_queue={"state": "queued_for_authoring", "created": now()},
@@ -362,6 +376,8 @@ def _create(prepared, catalog):
                              "background_direction": selected_style["visuals"].get("background_direction", "")})
     if p.get("script_history"):
         p["script_history"][-1]["text"] = prepared["script"]
+    if selected_style.get("workspace_cast_registry"):
+        p["style_cast_snapshot"] = copy.deepcopy(selected_style["workspace_cast_registry"])
     return store.save_project(p)
 
 
