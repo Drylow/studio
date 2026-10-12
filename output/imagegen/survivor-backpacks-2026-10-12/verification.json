@@ -1,0 +1,32 @@
+{
+  "preview_only": true,
+  "voiceover": false,
+  "patch_words": 2080,
+  "scenes": [
+    {
+      "scene": 1,
+      "served_sha256": "1f135cdb1a78f7d418145c87995b6c11c207387482da75200f4df21a286f3ddb",
+      "future_bindings_valid": true,
+      "actual_edit_references": 4,
+      "future_reference_count": 5
+    },
+    {
+      "scene": 2,
+      "served_sha256": "aaecbc9a671d0b0d6c1dd718a0d6fb1888efb09d697c29d9a1189dd7489a3442",
+      "future_bindings_valid": true,
+      "actual_edit_references": 4,
+      "future_reference_count": 5
+    },
+    {
+      "scene": 3,
+      "served_sha256": "730c505389643992bdb93593c44c06e125bfecc14699f352a1f1550e20aae9ba",
+      "future_bindings_valid": true,
+      "actual_edit_references": 4,
+      "future_reference_count": 5
+    }
+  ],
+  "both_style_identities_verified": true,
+  "writer_prompt_deployed": true,
+  "bulk_generation_started": false,
+  "human_approval_pending": true
+}

@@ -1,0 +1,220 @@
+{
+  "purpose": "User-requested ordinary school backpacks for both protagonists, no bulk generation.",
+  "assets": [
+    {
+      "prompt_sha256": "c8b787cafd3018b079c7db117fad652ad872f8bf7b07c465bc8ab306dce658c5",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:39:50.735413+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "a605c4034db28211c545abeb83dd6bc806f9bc16811f0edcb82c7ca22178084a",
+      "id": "patch",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/patch.txt",
+      "visual_review": "Rejected: gray filled torso introduced, replaced with inspected patch-v2.",
+      "state": "rejected",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "ec601f7f61d205f77c6d40f6da05d19f0c2c6e36a5d86739c00c9f3385eedb73",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch.png",
+          "sha256": "a605c4034db28211c545abeb83dd6bc806f9bc16811f0edcb82c7ca22178084a"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+          "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:42:01.207742+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c",
+      "id": "patch-v2",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/patch-v2.txt",
+      "visual_review": "Inspected: original white circular head, orange forehead bandage, black thin stick torso and limbs, white mittens/feet, orange school backpack with shoulder straps, main zip and front pocket.",
+      "state": "inspected",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "c91901d38122e79b25c41e3412da922be6ded648e28f2b01af2aa44ed756d141",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/alien-main-reference-2026-10-12/reed.png",
+          "sha256": "f570de9395b73ea48fad6b728b5a9ddc5a5c037b0cc263a0273c9e0801b5fc8c"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:39:50.735775+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c9161b7e4f26965f55cfaa2fdc684f7deb3799adfe6302691df550ff08729ea4",
+      "id": "reed",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/characters/reed.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/reed.txt",
+      "visual_review": "Inspected: white round head, blue-gray scarf, black thin stick torso and limbs, white mittens/feet, gray school backpack with shoulder straps and zips.",
+      "state": "inspected",
+      "user_approved": false
+    },
+    {
+      "prompt_sha256": "ca0e09fd1032a4e0ee82a3800b380fbcd9941d675d33cdd4e786fc2bbaa20dae",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-01-green-full.png",
+          "sha256": "5f961b43b2f9422a1fdf31f9b7a24b2c98277dfbcdebdc0551e0ee785834e6e2"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
+          "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:44:03.398105+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "911dba9d1e349fa4dc0b937584221d9dc350036c13b9d09eddfd853185fd0706",
+      "id": "plan-01",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-01.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/plan-01.txt",
+      "visual_review": "Inspected: orange backpack on Patch, strap held, stick body and white exposed parts preserved. Outside infected green head, hands and feet. Front glass/door/checkout geometry and frontal cart retained.",
+      "state": "inspected",
+      "user_approved": false,
+      "delivery": "output/imagegen/survivor-backpacks-2026-10-12/A-REGARDER/01.png",
+      "delivery_sha256": "1f135cdb1a78f7d418145c87995b6c11c207387482da75200f4df21a286f3ddb",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080; native retained; no content alteration.",
+      "narration": "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "action": "Patch hears outside infected shopping cart strike front glass."
+    },
+    {
+      "prompt_sha256": "787a9c100dfb9af00c878124d4a6c8a844ed88a7b2ad894d7f3f5f2c42b2b807",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-02-green-full.png",
+          "sha256": "eca985921bbec7d02df45dad81f87a0a03fa3f4abe2ea6197afb20969724ad03"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
+          "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:44:03.394964+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "9905824f4d428c814f78748aac873c9d14d522c8de921133cb2ea985c14749ad",
+      "id": "plan-02",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-02.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/plan-02.txt",
+      "visual_review": "Inspected: backpack worn, both mittens still grip full-width shutter. Floor handbag removed. Infected green feet visible below shutter; head/hands occluded. Front room geometry retained.",
+      "state": "inspected",
+      "user_approved": false,
+      "delivery": "output/imagegen/survivor-backpacks-2026-10-12/A-REGARDER/02.png",
+      "delivery_sha256": "aaecbc9a671d0b0d6c1dd718a0d6fb1888efb09d697c29d9a1189dd7489a3442",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080; native retained; no content alteration.",
+      "narration": "Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down. The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "action": "Patch lowers the full-width shutter with both hands."
+    },
+    {
+      "prompt_sha256": "6f7e9495d8d723bfde812168f1bd6df1fc89bce3fd0f8424cb91899c6ef5f76f",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/scenes/plan-03-green-full.png",
+          "sha256": "8a13104fceccd8fe05ee0b458afc648c99e61d8b65fa559cc867920ae39367f3"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        },
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
+          "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T13:44:03.420891+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "7b08cfcc655c7bc7349352f6a1a3e7fecddd7f799f59b4286aa2263d18dab896",
+      "id": "plan-03",
+      "file": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-03.png",
+      "prompt": "output/imagegen/survivor-backpacks-2026-10-12/prompts/plan-03.txt",
+      "visual_review": "Inspected: backpack worn, hands lowered, stick body and white exposed parts preserved. Driver green head and hand through closed delivery door; feet occluded. Reserve door, shelves, boxes, water and button retained.",
+      "state": "inspected",
+      "user_approved": false,
+      "delivery": "output/imagegen/survivor-backpacks-2026-10-12/A-REGARDER/03.png",
+      "delivery_sha256": "730c505389643992bdb93593c44c06e125bfecc14699f352a1f1550e20aae9ba",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080; native retained; no content alteration.",
+      "narration": "You run through the stockroom, past the bottled water that nobody finished unloading. A hand presses against the delivery door's little window. The driver outside has his face against the glass. He keeps pressing the buzzer even when you step away.",
+      "location_id": "stockroom",
+      "characters": [
+        "Patch",
+        "Delivery Infected"
+      ],
+      "action": "Patch sees the infected driver at closed delivery door."
+    }
+  ],
+  "future_regeneration_note": "Actual edits used exactly four listed references. TubeForge future prompts additionally bind the green infected identity as attachment 5; that future reference was not sent in these edits."
+}

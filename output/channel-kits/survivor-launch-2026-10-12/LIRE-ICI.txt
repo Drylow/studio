@@ -13,7 +13,7 @@ Dans chaque dossier :
 Le dossier Patch inclut les references de personnage approuvees. Le logo alien ne remplace pas une reference du protagoniste Reed : une reference de corps entier de Reed est maintenant incluse et installee dans TubeForge ; les decors maitres restent a produire et verifier.
 
 Handles proposes, pas reserves : la disponibilite finale se verifie dans le formulaire YouTube.
-Environ 2079 mots pour le pilote zombie et 2075 pour le pilote alien. Estimation autour de 12-14 minutes selon la voix ; aucun audio ni montage de ces pilotes n'est encore genere.
+Environ 2080 mots pour le pilote zombie et 2075 pour le pilote alien. Estimation autour de 12-14 minutes selon la voix ; aucun audio ni montage de ces pilotes n'est encore genere.
 Les photos de profil sont des propositions nouvelles depuis les references ; elles ont ete regardees par Codex, pas encore approuvees par l'utilisateur.
 Les scenarios sont des fictions originales. Le second sujet precis n'est pas encore choisi par l'utilisateur.
 Aucune chaine creee ou video publiee depuis ce pack.
@@ -21,3 +21,5 @@ Aucune chaine creee ou video publiee depuis ce pack.
 DIRECTION VISUELLE
 Decors simples a faible profondeur, references de personnages constantes, un maitre par lieu et variantes explicites. Aucun plan final declare coherent avant inspection de l'image reelle.
 Les prompts sont ecrits par Codex ; execution via le CLI Proxy configure, sans changement silencieux de fournisseur.
+
+Revision : personnages equipes de sacs a dos scolaires normaux, orange Patch / gris Reed. Trois apercus Patch actualises dans TubeForge.

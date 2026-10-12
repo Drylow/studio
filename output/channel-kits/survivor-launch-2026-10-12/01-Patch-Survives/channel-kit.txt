@@ -13,14 +13,14 @@ Original animated fiction, one day at a time.
 PREMIER EPISODE SELECTIONNE PAR L'UTILISATEUR
 Zombie Outbreak: 30 Days Trapped in a Supermarket
 Script anglais V1 : episode-01-supermarket/script-en.txt
-2079 mots dans cette V1 relue. Duree estimee autour de 12-14 minutes a 145-170 mots/minute ; seule la voix produite etablira la duree reelle.
+2080 mots dans cette V1 relue. Duree estimee autour de 12-14 minutes a 145-170 mots/minute ; seule la voix produite etablira la duree reelle.
 Promesse : un employe enferme dans son supermarche doit choisir quoi proteger, qui accueillir et quand partir.
 Fin : Patch et Mara quittent le magasin au jour trente et atteignent les jardins de l'autre cote du canal. Pas de fin arretee en pleine revelation.
 
 PHOTO DE PROFIL
 output/imagegen/patch-channel-kit-2026-10-12/pfp.png
 Tete de Patch seulement : blanche ronde, pansement orange du bon cote, deux petits yeux noirs, bouche courte, fond bleu mat uni. Lisible en petit cercle.
-Reference personnage a conserver pour les episodes : output/imagegen/survivor-launch-2026-10-12/01-patch-character.png.
+Reference personnage a conserver pour les episodes : output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png.
 La photo de profil ne remplace pas la reference de corps entier.
 
 IDENTITE VISUELLE
