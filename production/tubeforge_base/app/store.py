@@ -341,7 +341,11 @@ def thumbnail_path(p: dict) -> str | None:
     thumbs = p.get("thumbnails") or []
     if thumbs:
         i = min(p.get("thumbnail_selected", 0), len(thumbs) - 1)
-        return thumbs[i]["file"]
+        selected = thumbs[i]
+        if isinstance(selected, str) and selected:
+            return selected
+        if isinstance(selected, dict) and (selected.get("file") or selected.get("path")):
+            return selected.get("file") or selected.get("path")
     for s in p.get("scenes") or []:
         if s.get("image"):
             return s["image"]

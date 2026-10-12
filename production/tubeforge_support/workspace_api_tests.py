@@ -590,3 +590,13 @@ def test_performance_settings_validate_and_wait_for_jobs(workspace, monkeypatch)
     assert client.put('/api/workspace/performance',json={'UNKNOWN':1}).status_code == 422
     monkeypatch.setitem(llm.STATS['image'],'active',1)
     assert client.put('/api/workspace/performance',json={'IMAGE_CONCURRENCY':12}).status_code == 409
+
+def test_project_summaries_accept_historical_thumbnail_formats(workspace):
+    client = workspace[0]
+    p = create(client, custom_script='Fixture narration.')
+    for selected in ('thumbnail.jpg',{'file':'thumbnail.jpg'},{'path':'thumbnail.jpg'},{}):
+        stored=store.get_project(p['id']);stored['thumbnails']=[selected];store.save_project(stored)
+        response=client.get('/api/workspace')
+        assert response.status_code==200
+        summary=next(r for r in response.json()['projects'] if r['id']==p['id'])
+        assert summary['thumb']==('thumbnail.jpg' if selected else None)
