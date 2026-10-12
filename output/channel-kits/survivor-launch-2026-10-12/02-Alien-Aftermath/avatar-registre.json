@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "image_calls": 1,
+  "asset": "pfp.png",
+  "sha256": "ed24853898cb181568ebe4e45936dc877de97fd2b6a2f44a330c1af441fee39f",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "prompt": "pfp-prompt.txt",
+  "prompt_sha256": "39637149e9a3aa090beec1c76430cd987cfacd322666f35738932a0480791a9d",
+  "ordered_references": [
+    {
+      "path": "output\\imagegen\\patch-channel-kit-2026-10-12\\pfp.png",
+      "role": "style-only",
+      "sha256": "f4fa958dc0800b49481fff6d4b53f6c6487c65614f3b1ff818fcf70fd8a7906a"
+    }
+  ],
+  "actual_full_image_viewed": true,
+  "review_notes": "One circular pale mint alien face, simple black almond eyes and short line mouth, purple backdrop, comfortable crop margins. No bandage, ears, hair, nose, body, text or extra characters. Slight tonal texture remains on backdrop and face, no change requested because the original very simple silhouette is clearly readable.",
+  "user_approved": false,
+  "role": "channel-icon-proposal-not-episode-character-reference"
+}

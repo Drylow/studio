@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "image_calls": 1,
+  "asset": "pfp.png",
+  "sha256": "f4fa958dc0800b49481fff6d4b53f6c6487c65614f3b1ff818fcf70fd8a7906a",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "prompt": "pfp-prompt.txt",
+  "prompt_sha256": "7fef9080a3cde85b1b2267ed665ce850300bfd35b410c73f0b0c39041e878bdd",
+  "ordered_references": [
+    {
+      "path": "output\\imagegen\\survivor-launch-2026-10-12\\references\\patch-head.png",
+      "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+    },
+    {
+      "path": "output\\imagegen\\survivor-launch-2026-10-12\\01-patch-character.png",
+      "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236"
+    }
+  ],
+  "actual_full_image_viewed": true,
+  "review_notes": "One full round white face, black oval eyes and short gently smiling mouth; orange bandage remains above anatomical right eye on viewer left. No body, nose, ears, hair, letters or extra character. Comfortable circular crop margins. Actual blue background has subtle tonal variation, despite requested solid color; visually simple and suitable for the avatar.",
+  "character_identity_user_approved": true,
+  "new_avatar_user_approved": false
+}

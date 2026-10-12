@@ -1,0 +1,70 @@
+EPISODE 01 - REGISTRE D'ECRITURE ET DE CONTINUITE
+Titre selectionne : Zombie Outbreak: 30 Days Trapped in a Supermarket
+Fiction originale en anglais, deuxieme personne. Calendrier de trente jours invente pour le recit, pas compte rendu reel.
+Script V1 : script-en.txt. Ne pas envoyer cette note a la synthese vocale.
+
+CAST
+Patch : personnage approuve, tete blanche ronde, petits yeux noirs, bouche courte, pansement orange anatomiquement a droite, corps fin noir, mains/chaussures blanches, sac orange. Reference source existante conservee.
+Mara : adulte, conductrice de livraison connue de Patch. Tete blanche ronde, petits yeux noirs, bouche courte, corps fin noir, mains/chaussures blanches. Sac teal et bande violette sur un bras pour l'identifier. Sa reference est a creer et regarder ; pas encore produite ni approuvee.
+Infectes : personnages de fiction distincts, pas de clones de Patch ou Mara, proportions sobres coherentes avec la serie ; leurs references sont a preparer. Pas de gore.
+Pas d'enfant dans cet episode.
+
+GEOMETRIE DU BATIMENT
+Batiment fictif et unique. Exactement quatre acces EXTERIEURS, presentes des la premiere nuit :
+A. entree publique vitree avec rideau metallique sur la rue principale ;
+B. livraison donnant sur une cour fermee avec portail vers la petite voie du canal ;
+C. sortie personnel sur l'alley lateral encombre ;
+D. sortie de secours donnant sur le parking clients.
+La porte INTERNE vitree entre reserve et surface de vente n'est pas un cinquieme acces exterieur.
+La reserve rejoint le quai de livraison et la salle du personnel. Les plans ne doivent pas inventer une sortie de toit, un tunnel ou une seconde cour.
+Jour dix-neuf : entree publique endommagee, infectes sur surface de vente, porte interne fermee. Les acces A et D deviennent inaccessibles depuis le refuge. C reste trop expose. B est la route de depart.
+Le quartier exterieur est a figer sur un schema : cour -> voie laterale -> chemin du canal -> pont pieton -> jardins. Pas de teleportation du portail au pont.
+
+MAITRES NECESSAIRES
+1. Caisse/entree publique, disposition tres simple et courte. Etat intact puis variante endommagee explicite.
+2. Reserve, porte interne vitree, stock d'eau suivi, emplacement des couvertures constant.
+3. Salle du personnel avec petit frigo domestique et porte du personnel.
+4. Cour de livraison, portail sur rue, palettes initiales, porte vers reserve.
+5. Acces au pont et canal, horizon sobre, aucun gratte-ciel de fantaisie.
+6. Jardins et abri final, debut d'une nouvelle zone, pas reproduction du magasin.
+Les deux scenes prototypes disponibles ne suffisent pas a ces six maitres. Ne pas utiliser le plan de la salle du personnel comme reserve.
+
+TRAJECTOIRE ET OBJETS
+Nuit initiale : crise sur A, B, C et D ; isolement, sac orange introduit.
+J1 : stock utile, ouvre-boite manuel essaye, couvertures, porte interne, map canal/jardins. Route finale plantee.
+J3 : panne, perte du froid. J5 : fatigue, economie de lampe, observations depuis caisse.
+J8 : accueil de Mara par B ; elle confirme avoir vu le chemin vers les jardins, sans promettre qu'il est sur.
+J10 : inventaire utile a deux, eau deplacee AVANT perte de la boutique.
+J12 : chariot coince, nourriture abandonnee, bruit et attention des infectes.
+J16 : pression sur facade, retraite avec dernier stock deplace. J19 : vitre cede, perte effective de la boutique.
+J22 : plan de sortie, choix des charges. Petit chariot de manutention introduit et essaye en cour.
+J26 : portail degage, renoncement au depart car voie occupee. Pas de deblocage miracle au climax.
+J29 : pression sur porte interne. J30 : voie observee plus libre, depart avec sac/carte/lampe/ouvre-boite/chariot, traversée du pont, arrivee aux jardins.
+Chaque retour dans un lieu apporte un changement ou une action. Les plans rapproches ne comptent pas comme nouveaux evenements a eux seuls.
+
+APPUI FACTUEL LIMITE
+Source ouverte le 12 octobre : FDA, Food and Water Safety During Power Outages and Floods.
+https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods
+Passage concerne : l'apparence et l'odeur ne prouvent pas qu'un aliment reste sur ; des denrees perissables mal conservees peuvent rendre malade. La FDA est nommee dans la narration.
+Verification secondaire ouverte : FoodSafety.gov, Food Safety During Power Outage.
+https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage
+Pas de durees de froid commercial inventees, de ration minimale annoncee, de volume quotidien de survie, de recettes de desinfection, de doses medicales ou de technique d'effraction.
+Nombre d'acces, jours, personnages, stocks et trajets sont des faits INTERNES de fiction explicitement definis ici, pas des statistiques de catastrophe reelle.
+
+REGISTRE DES BOUCLES
+Quatre acces : ouverts au hook et nuit initiale ; consequences au J19 et choix B au J22 ; depart via B au J30.
+Abondance trompeuse : stocks J1 -> perte du froid J3 -> aliments utilisables J10 -> perte boutique J19 -> charge transportable J22 -> abandon au J30.
+Map/jardins : plantee J1, confirme par Mara J8, choix J22, pont et arrivee J30.
+Solitude : telephone sans reponse nuit initiale, choix de confiance J8, veille alternee J10, partage final J30.
+Chariot abandonne : echec J12, visible inaccessible J19 ; autre outil introduit avant depart, pas meme chariot recupere magiquement.
+Porte interne : presente J1, observation jusqu'au J19, dernier obstacle J29, abandon J30.
+
+RELECTURE FACELESSOS - ADAPTATION EXPLICITE A LA FICTION
+A : hook original sous cent mots, menace concrete des la premiere phrase et promesse trente jours/quatre acces payee par le recit. Ancres reelles ouvertes : Mr. Doomsday N1FAy1ZjlPI, StickFallout SIZXW0ABD9g et Beanie 1AF04-V4Yao ; aucune accroche recopiee.
+B : relecture causale de toutes les sections ; progression par perte de ressources/espace, confiance puis choix de depart. Boucles ci-dessus fermees. Pas de cliffhanger imposant un episode deux pour finir le premier.
+C : langage simple et geographie fixe ; calendrier parle et non timestamps estimes. Pas de lecture audio realisee : la diction doit encore etre ecoutee avec la voix choisie.
+D : scanner execute sur les paragraphes de narration : zero candidat, zero plancher mecanique d'antithese ; cela ne prouve pas a lui seul le naturel de la voix. Scan visuel complementaire : pas de reframing symetrique repete, pas de conclusion aphoristique, pas d'artefacts Unicode. Registre ancre sur action a la deuxieme personne et observations concretes.
+Exemples de formes d'ancrage, citations courtes privees a la relecture : Mr. Doomsday "You kill the phone. They don't stop." ; StickFallout "You close the curtains before anyone can see movement in your apartment." ; Beanie "You count the food." Comparaison de forme, pas phrases integrees au script.
+E : recit et personnages originaux, pas d'intrigue de radio, trois coups ou sister-stones copiee ; sources factuelles propres pour la nourriture. Le score documentaire trois sources/top-cinq ne sert pas a certifier une fiction originale, et aucune garantie de monetisation ou de retention n'est revendiquee.
+Statut : V1 ecrite et relue sur texte. Pas de certification de diction audio, de verification d'images finales ni d'approbation utilisateur du script integral.
+Skills appliques : READ ME FIRST, voice-anchoring, script-structures, retention-mechanics, humanizer, greenlight-audit, anti-slop checklist du master FacelessOS.

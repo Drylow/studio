@@ -1,0 +1,9 @@
+Use case: identity-preserve
+Asset type: square YouTube profile picture, readable at tiny circular avatar size
+Primary request: Create a simple close-up profile picture of the EXACT approved Patch character from the supplied reference images.
+Input images: Image 1 is the approved face identity crop. Image 2 is the approved full character, for the same drawing style. Use them as identity references, not as the composition to reproduce.
+Subject: ONE perfectly circular pure bright white cartoon head with a clean thick black outline, the same two small vertical black oval eyes and the same tiny subtly smiling line mouth. The original little orange bandage is diagonally above his anatomical RIGHT eye, on the viewer's LEFT side. Preserve its orange rectangular shape, two small black end dots, and center pad. The bandage stays inside the head outline. No nose, ears, hair or eyebrows.
+Composition: Front view, entire head centered and completely visible, occupying about 76 percent of the square width, comfortable equal margins so a circular platform crop cannot cut the head or bandage. HEAD ONLY, no neck, shoulders, hands, body or bag.
+Background: One solid muted dusty blue background, flat and untextured.
+Style: The same simple flat digital cartoon as the approved character, crisp smooth outlines, pure white face without gradients or skin shading, solid orange bandage. Keep the original friendly neutral expression.
+Avoid: text, letters, watermark, logos, decorative border, extra circles, scenery, zombie, alien, realistic skull, stitches on the face, added features, multiple characters, 3D effects, glowing light, black forehead band, a hat, tiny body under the head.
