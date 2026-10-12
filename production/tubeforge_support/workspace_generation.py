@@ -225,6 +225,7 @@ async def generate(pid, sid, body, *, batch_id=None):
     except google_flow.FlowError as error:
         safe = HTTPException(502, str(error))
         safe.workspace_safe_detail = True  # FlowError is already sanitized by our transport.
+        safe.workspace_global_configuration_error = getattr(error, "global_configuration_error", False)
         raise safe from None
     except Exception:
         raise HTTPException(502, "La génération du plan a échoué ; aucune correction automatique n'a été appliquée") from None
@@ -420,7 +421,10 @@ async def _run_batch(pid, job_id, signature, sources):
             for task in sorted(completed, key=lambda item: scene_ids.index(pending[item])):
                 sid = pending.pop(task)
                 failure = _collect_batch_result(pid, job_id, sid, task)
-                if failure and not correction:
+                # Global account configuration cannot be fixed by trying another scene.
+                # Close admission, but drain the already-started billable calls as usual.
+                if failure and (getattr(failure, "workspace_global_configuration_error", False)
+                                or not correction and not halted):
                     state, error, halted = "failed", _correction_error(failure), True
             current = api._project(pid)
             active_ids = list(pending.values())

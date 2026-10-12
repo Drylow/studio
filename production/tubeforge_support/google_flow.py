@@ -27,9 +27,10 @@ _cooldowns = {}
 
 
 class FlowError(Exception):
-    def __init__(self, message, status=None):
+    def __init__(self, message, status=None, *, global_configuration_error=False):
         super().__init__(message)
         self.status = status
+        self.global_configuration_error = global_configuration_error
 
 
 def setting(key):
@@ -69,7 +70,12 @@ def _error(response):
     except ValueError:
         body = ""
     code = response.status_code
-    if "ZERO_BALANCE" in body:
+    missing_captcha_provider = "no captcha provider api keys configured" in body.lower()
+    if missing_captcha_provider:
+        text = ("Aucun fournisseur captcha n'est configuré dans useapi. "
+                "Configurez un fournisseur captcha dans les paramètres du compte useapi "
+                "et vérifiez ses crédits avant de relancer le lot.")
+    elif "ZERO_BALANCE" in body:
         text = "Crédits captcha épuisés : rechargez le fournisseur captcha dans useapi."
     elif "MODEL_ACCESS_DENIED" in body:
         text = "Le compte Google sélectionné n'a pas accès au modèle demandé."
@@ -86,7 +92,7 @@ def _error(response):
         text = "La session Google doit être reconnectée dans useapi."
     else:
         text = f"Google Flow est indisponible ou a refusé la requête (HTTP {code})."
-    return FlowError(text, code)
+    return FlowError(text, code, global_configuration_error=missing_captcha_provider)
 
 
 async def _get(path):
