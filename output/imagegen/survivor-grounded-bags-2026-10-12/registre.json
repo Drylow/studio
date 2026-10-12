@@ -1,0 +1,323 @@
+{
+  "purpose": "User rejected suspended body bags: ordinary school backpacks are separate grounded floor props. Main identity markings and style preserved.",
+  "assets": [
+    {
+      "prompt_sha256": "9fb0c1af507f49544424551f38a94f0a0d1fc7943a0b1bc1d754cd85dadc15fc",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
+          "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c"
+        },
+        {
+          "path": "output/imagegen/survival-styles-tests-2026-10-12/03-stickfallout.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:02:36.878035+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607",
+      "id": "patch",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/patch.txt",
+      "visual_review": "Inspected: orange school backpack is a separate upright floor prop, base and contact shadow on floor beside white oval foot. No connection to stick torso/arms. White round head/orange bandage, black thin body/limbs, white mittens/feet retained.",
+      "user_approved": false,
+      "state": "inspected"
+    },
+    {
+      "prompt_sha256": "0808609dc36a54eb3374b274b573e5331670977539103bd66aaab349e9233ae2",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/characters/reed.png",
+          "sha256": "c9161b7e4f26965f55cfaa2fdc684f7deb3799adfe6302691df550ff08729ea4"
+        },
+        {
+          "path": "output/imagegen/survival-styles-tests-2026-10-12/03-stickfallout.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:02:36.875556+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "2b28b1e18362987171329084126d3b0e34d3270e88cf3ad1bf4502ba9986f270",
+      "id": "reed",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/reed.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/reed.txt",
+      "visual_review": "Inspected: gray school backpack separate on floor, base grounded with contact shadow, no body straps. White round head, blue-gray scarf, thin black body and white mittens/feet retained.",
+      "user_approved": false,
+      "state": "inspected"
+    },
+    {
+      "prompt_sha256": "8f7374676251e4f8e542b5c94bc00bf461be7ac3b2b83cb2590f83f4168a1bfe",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-01.png",
+          "sha256": "911dba9d1e349fa4dc0b937584221d9dc350036c13b9d09eddfd853185fd0706"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:05:31.493002+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "e86b01dc9feceaad1dd45a3b4433ea5aa04cfe35e7f2a601c03f8760c1fd3b33",
+      "id": "plan-01",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-01.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/plan-01.txt",
+      "visual_review": "Inspected: one orange backpack on interior floor beside Patch, both hands free and no body straps. Green infected head, hands and feet, cart impact and storefront geometry retained.",
+      "user_approved": false,
+      "state": "inspected",
+      "scene_id": 1,
+      "current": true,
+      "narration": "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "delivery": "output/imagegen/survivor-grounded-bags-2026-10-12/A-REGARDER/01.png",
+      "delivery_sha256": "23575a2f44e8cc04666d354b3869c11b8a1672a4df60552fcc6973d482002578",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080, original native preserved, no content editing."
+    },
+    {
+      "prompt_sha256": "2a378fa95ea6c34b0a237c93ed7f7d00f4348a01b8e4f83b39a132e6af090d13",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-02.png",
+          "sha256": "9905824f4d428c814f78748aac873c9d14d522c8de921133cb2ea985c14749ad"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:05:31.490589+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d539e511f39bdd39a08bd40810464931ed4e0ac3e522ae7fb8e244f87f8d2a8e",
+      "id": "plan-02",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/plan-02.txt",
+      "visual_review": "Archived: backpack is grounded but relocated toward the public door without an action explaining its displacement. Not current.",
+      "user_approved": false,
+      "state": "rejected",
+      "scene_id": 2,
+      "current": false,
+      "narration": "Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down. The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ]
+    },
+    {
+      "prompt_sha256": "4fc4528c40f7a026a448667f7344401ce989e3b44fc7e7f1a5c7a6eaf4e4bca4",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02.png",
+          "sha256": "d539e511f39bdd39a08bd40810464931ed4e0ac3e522ae7fb8e244f87f8d2a8e"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-01.png",
+          "sha256": "e86b01dc9feceaad1dd45a3b4433ea5aa04cfe35e7f2a601c03f8760c1fd3b33"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:07:53.753039+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "37bf2311be893290bb96828ea540bc597d44340fd4d900176ab13ee1725fd66c",
+      "id": "plan-02-v2",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v2.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/plan-02-v2.txt",
+      "visual_review": "Archived: bag still displaced toward door relative to first shot, despite partial correction. Not current.",
+      "user_approved": false,
+      "state": "rejected",
+      "scene_id": 2,
+      "current": false,
+      "narration": "Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down. The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ]
+    },
+    {
+      "prompt_sha256": "0300b4d777a89a1b43fffd8d6cf35b003098145402cea06e3f4d25c60167c9d5",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-01.png",
+          "sha256": "e86b01dc9feceaad1dd45a3b4433ea5aa04cfe35e7f2a601c03f8760c1fd3b33"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v2.png",
+          "sha256": "37bf2311be893290bb96828ea540bc597d44340fd4d900176ab13ee1725fd66c"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/front.png",
+          "sha256": "266266f864e317241db4d081ff51fe6ebf8a8ce38fac96f5d614a84d03146542"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/cart-green-full.png",
+          "sha256": "bca891f3c7547f56f5bcfa13852eadc4123429cb26f5b17efe84a705c02feff1"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:09:58.735986+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "753534d161e66818860d6e989fadb7d06bd6ea407fb712531b43dd45b7b9c54b",
+      "id": "plan-02-v3",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-02-v3.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/plan-02-v3.txt",
+      "visual_review": "Inspected against plan 1: backpack position and scale retained near foreground checkout side. Patch pulls full-width shutter with both hands, no body straps. Green infected feet visible, head/hands occluded; cart and room geometry retained.",
+      "user_approved": false,
+      "state": "inspected",
+      "scene_id": 2,
+      "current": true,
+      "narration": "Your shift ends in five minutes. You reach the shutter before the glass gives way and pull it down. The delivery buzzer rings behind you. You've closed one entrance. This place has four, and you're about to spend thirty days finding out whether you can keep the others shut.",
+      "location_id": "front",
+      "characters": [
+        "Patch",
+        "Cart Infected"
+      ],
+      "delivery": "output/imagegen/survivor-grounded-bags-2026-10-12/A-REGARDER/02.png",
+      "delivery_sha256": "72ff2f6bbcf7db828fcf22a7b67a612eb438f9eddab0247de52e29c57b61f99a",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080, original native preserved, no content editing."
+    },
+    {
+      "prompt_sha256": "9e9153d790b6f457c54490b056d0a914d43d52623fda9ec2d5c3f931319c3cc8",
+      "ordered_references": [
+        {
+          "path": "output/imagegen/survivor-backpacks-2026-10-12/scenes/plan-03.png",
+          "sha256": "7b08cfcc655c7bc7349352f6a1a3e7fecddd7f799f59b4286aa2263d18dab896"
+        },
+        {
+          "path": "output/imagegen/patch-supermarket-pilot-2026-10-12/masters/stockroom.png",
+          "sha256": "79ff56322183807be8def2297668085df92317cd68825701ea3dd7adca01f164"
+        },
+        {
+          "path": "output/imagegen/survivor-grounded-bags-2026-10-12/characters/patch.png",
+          "sha256": "33ebd3c93837389b544e3dfd64366cb95495eac42154879c9ee83c3d3768e607"
+        },
+        {
+          "path": "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png",
+          "sha256": "519a5a666662a41b21b76f73ca59d8df3f4ecd1224957b3066d303d3e1d6c38d"
+        },
+        {
+          "path": "output/imagegen/patch-green-zombies-2026-10-12/characters/delivery-green-full.png",
+          "sha256": "a9e3e236bb564220eca08e8f34a5aee8de6699620c7db5ec894f338667caed55"
+        }
+      ],
+      "automatic_retries": 0,
+      "started_at": "2026-10-12T14:05:31.516557+00:00",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "75efef66e383b53f4a02d67769af0e5c34882dbe09aa78ff3d1145243e6303a4",
+      "id": "plan-03",
+      "file": "output/imagegen/survivor-grounded-bags-2026-10-12/scenes/plan-03.png",
+      "prompt": "output/imagegen/survivor-grounded-bags-2026-10-12/prompts/plan-03.txt",
+      "visual_review": "Inspected: backpack separate on reserve floor, base touching floor with contact shadow, no body straps. White main and green driver head/hand retained; reserve doors, shelf, boxes, water and buzzer retained. Actor feet/body of infected occluded.",
+      "user_approved": false,
+      "state": "inspected",
+      "scene_id": 3,
+      "current": true,
+      "narration": "You run through the stockroom, past the bottled water that nobody finished unloading. A hand presses against the delivery door's little window. The driver outside has his face against the glass. He keeps pressing the buzzer even when you step away.",
+      "location_id": "stockroom",
+      "characters": [
+        "Patch",
+        "Delivery Infected"
+      ],
+      "delivery": "output/imagegen/survivor-grounded-bags-2026-10-12/A-REGARDER/03.png",
+      "delivery_sha256": "867f57832d9a8d5c7f8be08abb76b9c81a5fa47e193762d8cc53414d92d1a263",
+      "delivery_dimensions": [
+        1920,
+        1080
+      ],
+      "technical_conversion": "Fit/pad to exact 1920x1080, original native preserved, no content editing."
+    }
+  ],
+  "current_scene_versions": {
+    "1": "plan-01",
+    "2": "plan-02-v3",
+    "3": "plan-03"
+  },
+  "provider": "configured CLI Proxy",
+  "timings": "No voiceover, these remain untimed preview beats."
+}
