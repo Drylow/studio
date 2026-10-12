@@ -1,0 +1,125 @@
+{
+  "checked_on": "2026-10-12",
+  "scope": "Ten recent videos on the three user-supplied channels. View counts are a snapshot, not measured growth or a forecast.",
+  "channels": [
+    {
+      "channel_id": "UCHdcTuCXiomwsY-Hd4ejGVw",
+      "channel_name": "Mr. Doomsday",
+      "channel_url": "https://www.youtube.com/channel/UCHdcTuCXiomwsY-Hd4ejGVw",
+      "checked_on": "2026-10-12",
+      "videos": [
+        {
+          "title": "Plague Bunker Survival 1 Year",
+          "video_id": "4jjqsG3mk_A",
+          "url": "https://www.youtube.com/watch?v=4jjqsG3mk_A",
+          "views": 11084,
+          "duration_seconds": 706,
+          "upload_date": "2026-10-11T15:00:29Z"
+        },
+        {
+          "title": "Zombie Bunker Survival 1 Year (Part 2)",
+          "video_id": "fExJWllyRrM",
+          "url": "https://www.youtube.com/watch?v=fExJWllyRrM",
+          "views": 69380,
+          "duration_seconds": 719,
+          "upload_date": "2026-10-09T15:00:24Z"
+        },
+        {
+          "title": "Zombie Bunker Survival 1 Year",
+          "video_id": "N1FAy1ZjlPI",
+          "url": "https://www.youtube.com/watch?v=N1FAy1ZjlPI",
+          "views": 250894,
+          "duration_seconds": 740,
+          "upload_date": "2026-10-07T15:00:12Z"
+        },
+        {
+          "title": "Abandoned City Survival 1 Year",
+          "video_id": "fVbKzfeLBEI",
+          "url": "https://www.youtube.com/watch?v=fVbKzfeLBEI",
+          "views": 17116,
+          "duration_seconds": 1037,
+          "upload_date": "2026-10-06T15:00:09Z"
+        },
+        {
+          "title": "Stranded On A Reef Island 1 Year",
+          "video_id": "3rTyE8FzpAY",
+          "url": "https://www.youtube.com/watch?v=3rTyE8FzpAY",
+          "views": 12524,
+          "duration_seconds": 1065,
+          "upload_date": "2026-10-04T15:00:12Z"
+        },
+        {
+          "title": "Bunker Survival 1 Year (Part 2)",
+          "video_id": "HbHCIT2wIPQ",
+          "url": "https://www.youtube.com/watch?v=HbHCIT2wIPQ",
+          "views": 33237,
+          "duration_seconds": 1012,
+          "upload_date": "2026-10-03T15:00:10Z"
+        },
+        {
+          "title": "Bunker Survival 100 Days",
+          "video_id": "WZEeV2xE2sI",
+          "url": "https://www.youtube.com/watch?v=WZEeV2xE2sI",
+          "views": 43881,
+          "duration_seconds": 821,
+          "upload_date": "2026-10-02T15:00:21Z"
+        }
+      ]
+    },
+    {
+      "channel_id": "UCGj5HppBXUUFZ7CoyNUNu2Q",
+      "channel_name": "Beanie Survives",
+      "channel_url": "https://www.youtube.com/channel/UCGj5HppBXUUFZ7CoyNUNu2Q",
+      "checked_on": "2026-10-12",
+      "videos": [
+        {
+          "title": "Zombie Outbreak: 30 Days Trapped On The 30th Floor",
+          "video_id": "1AF04-V4Yao",
+          "url": "https://www.youtube.com/watch?v=1AF04-V4Yao",
+          "views": 114616,
+          "duration_seconds": 492,
+          "upload_date": "2026-10-11T12:00:14Z"
+        }
+      ]
+    },
+    {
+      "channel_id": "UCicbtwGtKwc0zzOinD5d_mQ",
+      "channel_name": "StickFallout",
+      "channel_url": "https://www.youtube.com/channel/UCicbtwGtKwc0zzOinD5d_mQ",
+      "checked_on": "2026-10-12",
+      "videos": [
+        {
+          "title": "Zombie Outbreak Survival: Day 31 To Day 60 (Part 2)",
+          "video_id": "c3kzVvm5-HQ",
+          "url": "https://www.youtube.com/watch?v=c3kzVvm5-HQ",
+          "views": 114879,
+          "duration_seconds": 989,
+          "upload_date": "2026-10-10T15:15:11Z"
+        },
+        {
+          "title": "Zombie Outbreak Survival: Day 1 To Day 30",
+          "video_id": "SIZXW0ABD9g",
+          "url": "https://www.youtube.com/watch?v=SIZXW0ABD9g",
+          "views": 470019,
+          "duration_seconds": 927,
+          "upload_date": "2026-10-06T14:50:34Z"
+        }
+      ]
+    }
+  ],
+  "transcript_videos": [
+    "N1FAy1ZjlPI",
+    "SIZXW0ABD9g",
+    "1AF04-V4Yao"
+  ],
+  "comment_sample": {
+    "total": 276,
+    "by_video": {
+      "N1FAy1ZjlPI": 76,
+      "SIZXW0ABD9g": 100,
+      "1AF04-V4Yao": 100
+    },
+    "sorting": "top by likes",
+    "representative": false
+  }
+}
