@@ -42,7 +42,7 @@ La marque principale peut accueillir d'autres catastrophes plus tard. Son premie
 | `output/channel-kits/survivor-launch-2026-10-12/` | Copies de livraison des deux kits, profils, scripts et notes ; les sources editoriales restent dans `chaines/` |
 | `output/channel-kits/survivor-launch-2026-10-12.zip` | ZIP de ces kits, contenu verifie fichier par fichier |
 
-Les scripts sont ECRITS et relus sur texte, pas des films produits. Estimation autour de 12-14 minutes selon la voix ; ne pas promettre une duree precise avant l'audio. Aucun des deux pilotes n'a encore de voix, de plans complets, de decors maitres verifies, de serie d'images finale ou de montage. Les scripts propres ne contiennent pas de notes a faire lire au TTS.
+Les scripts sont ECRITS et relus sur texte, pas des films produits. Estimation autour de 12-14 minutes selon la voix ; ne pas promettre une duree precise avant l'audio. Aucun des deux pilotes n'a encore de voix, de plans complets, de serie d'images complete ou de montage. Patch a maintenant six decors maitres inspectes et trois images d'ouverture, decrits ci-dessous ; le pilote alien n'a pas encore ses decors. Les scripts propres ne contiennent pas de notes a faire lire au TTS.
 
 Les images et registres indiquent ce qui a ete regarde par Codex. L'approbation du personnage Patch ne vaut pas approbation automatique des scenes, de la marque, du script ou du nouveau profil.
 
@@ -60,7 +60,25 @@ Mise a jour TubeForge du 12 octobre : une reference de corps entier de Reed a ma
 
 Les deux styles sont installes sous les IDs `survivor-patch` et `survivor-alien-aftermath`. Chacun a son `workspace_main_character` et son `workspace_cast_registry` : Patch a deux references (corps entier et tete), Reed une reference de corps entier. La page Styles expose maintenant une section **References personnages** pour importer plusieurs images par personnage/variante, enregistrer sa description, choisir le principal et valider les images apres inspection. Les nouveaux projets avec un casting en heritent via `style_cast_snapshot` ; les changements ulterieurs du style ne remplacent pas ce casting. L'auteur des plans selectionne seulement les identites effectivement presentes.
 
-Ces styles sont configures pour le CLI Proxy et des prompts ecrits par Codex (`workspace_authoring_mode=codex`), sans appliquer les regles automatiques de proportions/tatouage de God of War. La configuration globale Google Flow des autres styles est preservee. Les definitions de chaines YouTube/voix ne sont pas creees par cet import de styles.
+Ces styles sont configures pour le CLI Proxy et des prompts ecrits par Codex (`workspace_authoring_mode=codex`), sans appliquer les regles automatiques de proportions/tatouage de God of War. La configuration globale Google Flow des autres styles est preservee. L'import initial de styles ne cree pas de chaines YouTube. Le test Patch a depuis cree une fiche LOCALE TubeForge, avec la voix existante du studio heritee provisoirement et aucun appel de voix.
+
+## Pilote visuel Patch : trois images, arret avant la suite
+
+Projet local : `zombie-outbreak-30-days-trapped-in-a-sup-e56f42`, chaine locale `channel-c589e9b6a252` (Patch Survives). Page : `http://127.0.0.1:8766/#/video/zombie-outbreak-30-days-trapped-in-a-sup-e56f42/images`.
+
+Sources editoriales : `chaines/survivor-projet/episode-01-supermarket/pilote-visuel.txt` et `references-refresh-2026-10-12.json`. Script V1 conserve apres relecture de son hook et de sa causalite avec Faceless OS et les trois transcriptions deja sauvegardees. Vues observees : Mr. Doomsday 254780, StickFallout 475605 ; Beanie 114616 dans le snapshot recent precedent. Pas de score outlier mesure ni de retention privee.
+
+Assets : `output/imagegen/patch-supermarket-pilot-2026-10-12/`. Regarder `trois-plans.jpg` puis les trois PNG de `A-REGARDER/` (1920 x 1080 exact). Les natifs dans `scenes/` sont preserves ; mise au format par fit/pad technique seulement. Le `registre.json` contient SHA, narration exacte, prompts reels, ordre des fichiers reellement envoyes et notes d'inspection. `plan-lieux.svg` donne les connexions des quatre acces externes et portes internes, sans pretendre etre un plan a l'echelle.
+
+Six maitres inspectes : `masters/front.png`, `stockroom.png`, `staff.png`, `yard.png`, `canal-v2.png`, `gardens.png`. Le premier `canal.png` est REJETE (pont longeant le canal) ; ne pas le reutiliser. La cour/canal/jardins sont des vues de JOUR ; des plans nocturnes exigeront leurs variantes explicites. Deux secondaires individuels dans `characters/` : Cart Infected (gilet olive) et Delivery Infected (gilet navy). Aucun ne porte le pansement/sac de Patch. Mara reste a produire avant son apparition.
+
+Images retenues pour montrer a l'utilisateur : `plan-01-v2.png`, `plan-02-v2.png`, `plan-03.png`. Premiers essais 1/2 conserves comme REJETES : chariot parallele a vitre, puis rideau ne couvrant pas porte publique et proportions trop petites. Correction manuelle des prompts et nouveaux appels explicites, aucun retry automatique. Les images retenues sont inspectees par Codex, PAS encore approuvees par l'utilisateur.
+
+TubeForge contient exactement TROIS moments visuels d'ouverture non minutes, pas un decoupage couvrant les 2079 mots. Pas de voix, pas de timestamps inventes, pas de rendu. `workspace_preview_only=true`, file `waiting_for_preview_review`, references copiees avec verification des SHA et media servis verifies. Voix heritee du studio via Algrow, a choisir/confirmer avant production sonore ; aucune synthese lancee.
+
+Dans les prompts TubeForge, un bloc technique d'identites a ete ajoute pour les FUTURS retries API. Le prompt exact effectivement envoye au CLI reste conserve separement (`original_cli_prompt`, `workspace_external_generation`, fichier prompt source et recu prive). Ne pas pretendre que le bloc ajoute a ete envoye lors de la generation des apercus. Chaque plan garde l'ordre et les octets des references originales, plus la scene precedente pour le deuxieme plan, avec le decor maitre toujours present. Les validations humaines restent a verifier.
+
+Reprise : attendre le retour visuel utilisateur sur ces trois tests avant de generer la suite. Ensuite, preparer Mara et les variantes necessaires, choisir/generer la voix, decouper manuellement TOUT le texte avec timings reels, puis seulement envoyer le lot autorise. Ne pas traiter les trois images comme une video complete ou reutiliser la geometrie facade dans chaque piece.
 
 Import idempotent : `production/tubeforge_survivor_styles.py`, a lancer avec le Python de TubeForge apres deploiement. Il preserve un style deja installe et les edits existants. Le raccourci bureau `TubeForge.lnk` appelle `production/tubeforge_desktop.ps1` : lancement local si necessaire, puis ouverture du navigateur. Recreation du raccourci : `production/tubeforge_shortcut.ps1`. Le bureau reel est resolu via Windows, pas suppose dans un chemin fixe.
 

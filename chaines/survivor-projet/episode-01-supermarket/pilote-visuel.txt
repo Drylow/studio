@@ -1,0 +1,31 @@
+PILOTE VISUEL DU 12 OCTOBRE 2026
+Demande : decors coherents et trois premieres images de test, puis arret avant le lot complet.
+Script utilise : script-en.txt, V1, 2079 mots. Pas de nouvelle voix ni de minutage invente.
+Les trois images sont des moments visuels d'ouverture ; le decoupage definitif en plans courts sera cale sur la voix reelle.
+
+RELECTURE FACELESS OS ET REFERENCES
+Recherche recente sauvegardee dans references-refresh-2026-10-12.json.
+Mr. Doomsday, N1FAy1ZjlPI : 254780 vues observees au 12 octobre, 740 secondes.
+StickFallout, SIZXW0ABD9g : 475605 vues observees, 927 secondes.
+Beanie, 1AF04-V4Yao : 114616 vues dans le snapshot precedent, 492 secondes ; le nouveau classement populaire retourne une liste vide, pas une baisse a zero des vues.
+Transcriptions deja lues et conservees dans work/survivor-launch-2026-10-12/reference-transcripts/.
+Emprunts de FORME : menace observable des la premiere phrase, deuxieme personne, lieu qui devient un piege, progression par consequences, pertes de ressources, choix social, fin payee.
+Differences de RECIT : quatre portes, livraison, Mara, perte progressive de boutique, nourriture transportable et depart vers les jardins. Aucune reprise des intrigues radio, trois coups, soeur ou pierres.
+Ne pas affirmer un multiplicateur outlier, de la retention ou un CTR : ces donnees ne sont pas disponibles.
+Faceless OS : ancrage de voix, structure, retention, humanizer et audit de fiction dans notes-production.txt. Ouverture conservee ; aucun generateur ne reecrit le script ni les prompts.
+
+GEOMETRIE ET MAITRES
+Vue facade depuis INTERIEUR boutique : caisse a gauche, entree vitree a gauche de la grande vitre, un rideau sur les deux, porte interne bleu-gris a droite. Chariot dehors face a la grande vitre.
+Reserve : porte interne bleu-gris a gauche, porte livraison olive-gris a droite, indicateur de buzzer dedans a gauche de cette porte, etagere entre portes et trois packs d'eau au sol.
+Salle personnel : frigo gauche, table milieu, sortie personnel droite.
+Cour : porte livraison gauche, deux palettes, portail droite vers voie du canal.
+Canal : chemin arrive a gauche, pont traverse vers droite, horizon bas.
+Jardins : lits de culture, abri droite, chemin arrive gauche.
+Quatre acces EXTERIEURS au total : public A, livraison B, personnel C, secours D. Porte reserve/boutique INTERNE distincte. La sortie de secours n'est pas dans l'angle facade ; ne pas l'ajouter dans ce champ.
+Les maitres sont des fichiers visuels distincts, sans personnages. Etat initial intact. Panne/casse/objets deplaces demandent des variantes explicites.
+
+PLAN 1 : chariot pousse contre vitre ; Patch temoin a l'interieur.
+PLAN 2 : meme facade ; Patch baisse le rideau ; nouvelle action, pas simple zoom.
+PLAN 3 : reserve ; Patch interrompt sa course et observe conducteur infecte derriere le petit carreau de livraison ; buzzer allume.
+Registre des fichiers, prompts, references ordonnees et controles visuels : output/imagegen/patch-supermarket-pilot-2026-10-12/registre.json.
+Les personnages doivent rester distincts et ne pas porter le pansement de Patch. Mara est absente de ces trois images, sa reference reste a creer avant ses scenes.

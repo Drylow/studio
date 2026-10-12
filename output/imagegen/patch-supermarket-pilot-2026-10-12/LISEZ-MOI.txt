@@ -1,0 +1,25 @@
+PATCH - TROIS IMAGES D'OUVERTURE A EXAMINER
+
+A-REGARDER/01.png : l'infecte pousse le chariot face a la vitre, Patch dans la boutique.
+A-REGARDER/02.png : Patch baisse le rideau sur l'entree et la vitre; sac pose au sol.
+A-REGARDER/03.png : Patch dans la reserve, conducteur derriere la porte de livraison, buzzer.
+Les trois PNG sont exactement 1920 x 1080. Natifs conserves dans scenes/.
+trois-plans.jpg rassemble les trois, avec titres de lecture seulement (pas incrustes dans les PNG).
+
+maitres inspectes : front, stockroom, staff, yard, canal-v2, gardens.
+canal.png REJETE : pont ne traversait pas l'eau. Les premiers plan-01/plan-02 sont aussi archives rejetes.
+Cour/canal/jardins = jour; produire des variantes depuis maitres pour les nuits.
+Personnage principal : reference Patch approuvee conservee dans survivor-launch-2026-10-12.
+Secondaires : deux infectes distincts. Mara reste a preparer avant sa premiere scene.
+registre.json : narration exacte, prompts reels, references dans leur vrai ordre, empreintes, inspections et limites.
+plan-lieux.svg : geographie de fiction; ce n'est pas une image de la video.
+
+SCRIPT : chaines/survivor-projet/episode-01-supermarket/script-en.txt, V1, 2079 mots.
+Pas de voix ni timings reels. Ces trois moments de test ne couvrent pas le script entier.
+Inspection Codex realisee; approbation visuelle utilisateur encore attendue. Suite NON generee.
+CLI Proxy configure utilise, sans changement de fournisseur et sans retries automatiques.
+
+TubeForge : http://127.0.0.1:8766/#/video/zombie-outbreak-30-days-trapped-in-a-sup-e56f42/images
+La chaine locale Patch Survives n'est pas une chaine YouTube creee/publication faite.
+La voix du studio a ete heritee provisoirement; aucun audio genere.
+Les sources de prompts et les recus conservent le texte exact du call initial. TubeForge ajoute seulement un bloc technique d'identite pour futurs retries; ce bloc n'a pas ete envoye pour les apercus actuels.

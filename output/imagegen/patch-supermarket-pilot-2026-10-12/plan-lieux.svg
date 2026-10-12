@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#faf8f2"/><g font-family="Arial" fill="#17282e">
+<text x="40" y="40" font-size="26">Patch — géographie de fiction fixe</text>
+<text x="40" y="67" font-size="16">Schéma des connexions, pas un plan architectural à l'échelle.</text>
+<g stroke="#17282e" stroke-width="3" fill="#e5ecea"><rect x="290" y="130" width="330" height="290"/><rect x="290" y="420" width="330" height="140"/><rect x="620" y="420" width="220" height="140"/><rect x="290" y="560" width="330" height="100"/></g>
+<g font-size="18"><text x="340" y="270">Boutique / caisse</text><text x="380" y="482">Réserve</text><text x="650" y="482">Salle personnel</text><text x="348" y="614">Cour livraison</text><text x="350" y="104">Rue principale</text><text x="875" y="295">Parking clients</text><text x="875" y="501">Alley latéral</text><text x="40" y="485">Voie → canal</text><text x="40" y="515">→ pont → jardins</text></g>
+<g stroke="#f08b4d" stroke-width="10"><path d="M420 130h70"/><path d="M620 250v60"/><path d="M840 470v60"/><path d="M420 560h70"/></g>
+<g font-size="16"><text x="425" y="157">A public</text><text x="635" y="285">D secours</text><text x="650" y="541">C personnel</text><text x="425" y="585">B livraison</text></g>
+<g stroke="#547a93" stroke-width="8"><path d="M420 420h70"/><path d="M620 470v50"/></g>
+<text x="310" y="401" font-size="15">Porte interne bleu-gris, pas un 5e accès</text>
+<path d="M290 610H220V480H140" fill="none" stroke="#527357" stroke-width="4"/><text x="178" y="651" font-size="16">Portail cour</text>
+<text x="40" y="698" font-size="16">Orange = quatre accès extérieurs. Bleu = connexions intérieures. Vert = route finale.</text>
+</g></svg>
