@@ -11,7 +11,7 @@ Etat au 12 octobre 2026. Ce fichier est le point d'entree du travail en cours. L
 5. Les deux `notes-production.txt` a cote des scripts, puis les images de reference elles-memes.
 6. `production/tubeforge_support/README.md` avant toute modification de TubeForge.
 
-La suite de `production/REPRISE.md` contient aussi de l'historique du 3-4 octobre. Ne pas relancer ses anciens travaux comme s'ils etaient les demandes actuelles. Les regles des cinq chaines historiques ne remplacent pas la direction visuelle Survivor choisie ici.
+La suite de `production/REPRISE.md` contient l'etat d'autres productions et de l'historique. Le conserver : la reprise de ce chat ne relance ni n'annule ces travaux. Les regles des cinq chaines historiques ne remplacent pas la direction visuelle Survivor choisie ici.
 
 ## Demande actuelle et decisions acquises
 

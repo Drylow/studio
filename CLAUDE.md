@@ -1,30 +1,57 @@
-# Drylow Studio — guide pour Claude (à lire en entier avant de travailler)
+# Edgerunners Studio — guide pour Claude (à lire en entier avant de travailler)
 
-**Reprise actuelle, 12 octobre 2026 : lire aussi `README_REPRISE.md` a la racine.**
-Il fixe l'etat des deux nouveaux projets Survivor, les decisions utilisateur,
-les chemins de TubeForge et le snapshot prive. Conserver les regles generales
-ci-dessous, mais ne pas relancer des anciens travaux a partir de notes historiques.
+**Pour la reprise Survivor/TubeForge du 12 octobre 2026 : lire aussi `README_REPRISE.md`.**
+Ce document fixe les decisions et fichiers de ce chat, ainsi que la sauvegarde privee.
+Conserver les regles generales et les etats des autres projets ci-dessous ;
+la reprise de ce chat ne doit pas relancer ou annuler leurs travaux.
 
 Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en bout : recherche, script,
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
 pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
 
-**Reprise sur un autre compte / nouvelle session : lire d'abord `production/REPRISE.md`** (état au 3 oct., ce qui
-est en cours, ce qu'il veut ensuite, comment brancher GitHub, les secrets et NexLev). Au début de chaque session
-cloud : `bash production/session_start.sh` (installe le hook git et recrée `.env` depuis les variables
-d'environnement du compte s'il manque).
+**Reprise demandée par l'utilisateur le 7 octobre 2026 : lire d'abord
+[le dossier de passation](production/CLAUDE_HANDOFF_2026-10-07.md), puis
+[REPRISE](production/REPRISE.md).** Le dossier rassemble l'état déployé, les changements,
+les preuves, les accès privés et les blocages. Les sections plus anciennes sont historiques.
+Priorité : publication réellement automatique de Cage Dispatch et Pitch Dispatch, gratuite,
+sans nouvelle installation sur son PC. **En ligne depuis le 8 oct. 2026 (23 h 04, Paris)** :
+connexions Google faites le 7 oct. (application en *Testing* : reconnexion tous les 7 jours),
+pilote `studio/autonews.py`, 2 vidéos max par jour et par chaîne ; état dans `REPRISE.md`.
+
+**Codex (depuis le 9 oct. au soir)** : lire d'abord la section de reprise en tête de `AGENTS.md`.
+Le dépôt est public : les clés sont dans le `.env` du serveur, et `production/server_env.py` les
+copie à partir des seuls accès cPanel.
+
+**Session lancée par Delamain** (bloc `routine-fire-payload` commençant par « Demande Delamain ») :
+suivre uniquement [production/DELAMAIN_ROUTINE.md](production/DELAMAIN_ROUTINE.md) ; ne pas lancer
+`session_start.sh`, ne jamais pousser sur `main`, un seul push sur la branche indiquée.
+
+Au début d'une session cloud Claude, examiner `production/session_start.sh` avant de le lancer :
+il installe un hook qui pousse automatiquement et, si `.env` manque, le recrée depuis les
+variables disponibles. Les secrets d'une session Codex ne sont pas transférés par GitHub.
 
 ## 1. L'utilisateur et la façon de lui parler
 
 - Il parle **français, familier** (« frérot », souvent dicté à la voix, donc parfois haché). Réponds en
   français, simple, court, direct. Pas d'anglais, pas de jargon, pas de pavé.
+- **Quand tu lui demandes de faire quelque chose, explique exactement comment** : chemin,
+  bouton, contenu à saisir et résultat attendu. Donne des nouvelles pendant le travail.
 - Il est souvent sur téléphone : statut en une ligne quand il demande « ça dit quoi ? ». **Jamais d'heure UTC**
   (l'utilisateur, 3 oct. : « je comprends rien ») : dis « dans 20 min » + l'heure de **Belgique** (UTC+2 l'été,
   UTC+1 l'hiver), et des chiffres concrets (images 86/123, rendu en cours…).
 - Il décide des titres, miniatures et du calendrier ; propose 2-4 options visuelles (planches d'images),
   recommande-en une, puis applique son choix sans redemander.
+  **Exception confirmée le 5 oct. pour le futur dashboard** : le mode est réglable par chaîne.
+  Sur une chaîne en automatique (notamment Cage Dispatch et Pitch Dispatch), l'agent choisit et publie
+  dans les règles de la chaîne, sans validation à chaque vidéo. Les contrôles de faits, droits et
+  qualité restent obligatoires. Voir `production/DASHBOARD_PLAN.md`.
 - **Git : commit + push après chaque changement, sans qu'il ait à le demander** (voir §8). Ne lui dis
   jamais que « c'est local » ou que tu « ne peux pas pousser ».
+- **7 octobre : aucun programme à installer sur son PC pour publier.** Les parcours PC sont retirés.
+  La publication passe par l'API YouTube, côté serveur (o2switch). Le blocage Google est levé
+  depuis le 7 oct. (application en *Testing*, son Gmail en utilisateur de test) : Cage et Pitch
+  sont connectées et une vraie publication est validée. L'écran Firefox privé du VPS ne sert
+  pas à publier (aucun envoi par navigateur, contraire aux conditions YouTube).
 
 ## 2. Règles absolues
 
@@ -163,6 +190,42 @@ La publication sur TikTok / YouTube reste manuelle.
 
 ## 9. Carte du code
 
+- **Nouveau site (5 oct.)** : `production/DASHBOARD_STATUS.md` décrit la première version construite,
+  les essais et ce qui reste à terminer. `production/DASHBOARD_PLAN.md` conserve le cadrage complet.
+  Interface React dans `frontend/src/`, bundle servi depuis `static/studio/`, backend et migrations
+  dans `studio/`, entrée `app.py`. Toutes les anciennes interfaces sont supprimées ; leurs liens
+  redirigent vers le nouveau studio. Les outils récents, données et références sont conservés.
+  `studio/newsroom.py` collecte les flux datés et prépare des fiches de recherche ;
+  les sources et intervalles sont configurables, collecte permanente désactivée par défaut.
+  Les choix éditoriaux, la vérification des faits et les contrôles autonomes restent à construire ;
+  aucune chaîne automatique n'est activée. Ne pas confondre le mode configuré avec une
+  automatisation opérationnelle. Nom retenu : Edgerunners Studio, en un mot avec un S.
+  Le 6 octobre, l'utilisateur choisit `publication_mode=news` pour Cage Dispatch et
+  Pitch Dispatch : selon l'actualité, sans heure fixe, cadence ou stock cible.
+  Ne pas inventer de créneaux pour ces chaînes ni remettre une publication quotidienne.
+  Simplification demandée le 6 octobre, puis ajout explicite de Statistiques : sept
+  entrées principales (Accueil, Chaînes, Statistiques, Vidéos, Calendrier, Tâches, Delamain), puis « Autres outils » pour radar, studio vidéo,
+  bibliothèque et contrôle. Réglages accessibles en bas du menu. Accueil limité aux
+  actions utiles et dernières vidéos ; détails techniques repliés, accessibles au besoin.
+  Ne pas réintroduire des panneaux ou indicateurs supplémentaires sur l'accueil.
+  Liste des vidéos et agenda par défaut sur ordinateur comme sur téléphone.
+  `studio/control.py` fournit les alertes locales, accusés de lecture par compte,
+  routines partagées sans doublons et export du calendrier. Les routines ne remplacent
+  jamais les contrôles de droits/qualité. Les indications de configuration ne sont
+  pas des appels réseau de vérification. Six parcours navigateur existent : smoke,
+  smoke:news, smoke:control, smoke:team, smoke:mobile et smoke:youtube, uniquement sur une base dédiée.
+  Ring Dispatch (`boxing_en`) est retirée à la demande de l'utilisateur le 5 oct. :
+  sept chaînes actives, historique conservé, ne pas relancer ses anciennes productions.
+  Delamain gère maintenant chaînes, attribution, tâches, programmation et étapes vidéo
+  via les mêmes routes protégées que l'interface ; il montre les miniatures existantes.
+  Il ne remplace ni OAuth, ni les droits, ni la relecture, ni la génération des futures
+  miniatures sportives. Les vues Agenda/Liste sont celles par défaut sur téléphone.
+  Connexion YouTube par bouton explicite sur chaque chaîne, test réel de l'accès et
+  déconnexion avec suspension ; aucun compte Google connecté dans cette session.
+  `DEPLOY_O2SWITCH.md` décrit désormais le nouveau site et le worker indépendant.
+  Delamain n'est pas l'agent de développement de cette conversation : un exécuteur
+  capable de modifier et déployer le code depuis son chat reste à connecter.
+
 - `services/pov_engine.py` : chaînes/modèles (`TEMPLATES`, `TEMPLATE_BIBLES`), projets, jobs (script, voix,
   casting, images + contrôle en vision, réalisateur du montage `plan_montage`, cartes de partie
   `chapter_card`, ticket juste `check_receipts`, rendu, métadonnées, miniatures).
@@ -176,7 +239,7 @@ La publication sur TikTok / YouTube reste manuelle.
 - **History Docs** (format à part, §10) : `services/history.py` (pipeline + montage), `history_ai.py`
   (script, plan visuel, styles d'image), `history_geo.py` (cartes), `history_sources.py` (vraies archives),
   `history_audio.py` (musique + bruitages), `align.py` (Whisper), `routes/history.py`,
-  `tool_apps/history-studio/`, moteur Remotion `history_engine/`.
+  adaptateur `studio/jobs.py`, moteur Remotion `history_engine/`.
 
 ## 10. History Docs (format Histoire, `/tools/history-studio`)
 
@@ -188,7 +251,7 @@ mot pour mot) et **Frontier Blood** (`frontier_blood`, @FrontierBlood : la front
 Script : **FacelessOS** (format `history_doc`, référence de voix `skills/references/EDGm3821yE8.txt`) + 2 tours
 d'audit en plus ; recherche avec les vraies sources (mémoires du domaine public) dans les notes.
 Indépendant des chaînes 2D : ne pas mélanger avec `pov_engine.py`. Détail des étapes et des
-templates : section History Docs du `README.md`.
+templates : `services/history.py` et `services/history_channels.py`.
 
 - **Pipeline** : script → voix (ElevenLabs via ai33pro, **Earl** à 0,9 validé par l'utilisateur ; `AI33_API_KEY`) → sous-titres calés par Whisper local sur
   l'orthographe du script → plan visuel IA + passe « monteur image » (variété des plans) → images (portraits
@@ -347,6 +410,13 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   mot fort + contour en **bleu clair de la chaîne** (`thumb_accent` #40DCF8, bannière @CageDispatch) ; jamais une
   photo à plusieurs combattants (la vision a pris Oliveira pour Tsarukyan) : regarder qui est sur la photo ; refaire
   une miniature garde les photos validées (en tête de `photos.json`).
+  **Style des prochaines miniatures (5 oct., utilisateur)** : conserver exactement le thème des deux
+  dernières miniatures approuvées (« elles sont parfaites »). Références dans
+  `presets/news_thumbnails/approved_2026-10-05/`. Regarder ces références avant les prochaines créations.
+  Ne pas relancer de variantes pour les trois vidéos actuelles : l'utilisateur a demandé d'arrêter.
+  **Droits avant automatisation (5 oct., utilisateur)** : une absence de réclamation YouTube ne constitue
+  pas une licence. Chaque photo, extrait, musique et voix doit avoir des droits de réutilisation établis ;
+  droits absents ou ambigus = automatisation bloquée. `production/NEWS_BRIEFS.md` décrit le contrôle.
   Test sans YouTube : fausse source (image `i.ytimg.com/vi/<id>/maxres2.jpg` en boucle + une voix off) →
   `render_clip` / `render_narration` / `render_sting`, puis regarder les images.
 - **Montage sur le VPS (prioritaire, rien à faire pour l'utilisateur)** : serveur `production/news_worker.py`
@@ -382,3 +452,22 @@ ouverture de ~60 s sans voix off (les phrases chocs), fin « drop your thoughts 
   (toujours `encoding="utf-8"`), le dossier du script n'est pas dans sys.path (ajouté dans le `._pth`).
 - **Après le montage PC** : `git pull`, regarder `check/sheet_*.jpg` (+ `build.log`), puis
   `python production/news.py send <dossier>` (Discord) seulement si tout est bon.
+
+## 12. Octave Histoire (compte TikTok @octave.histoire) : `tiktok_engine/`
+
+Outil à part pour le compte TikTok français **Octave Histoire** : des personnages historiques et un
+fait surprenant chiffré, dans le style visuel de @archibald.media (pixel, fond noir, un seul bleu
+vif à la place de son rouge), vidéos codées en HTML/JavaScript, voix ElevenLabs v4 via Algrow.
+Tout est décrit dans [tiktok_engine/README.md](tiktok_engine/README.md) : règles de l'utilisateur,
+moteur, paquet livré (vidéo qualité max + 3 miniatures + description), coût par vidéo, vidéos livrées.
+Fabrication automatique : routine quotidienne (vers 8 h 47) qui suit
+[tiktok_engine/ROUTINE.md](tiktok_engine/ROUTINE.md) et garde une semaine d'avance, 2 vidéos par jour
+publiées toutes seules à 7 h et 19 h par **Zernio** (`tiktok_engine/zernio.py`, clé `ZERNIO_API_KEY`).
+Une vidéo à la main :
+- `bash tiktok_engine/setup.sh` (copie les clés Algrow et Zernio depuis le `.env` du serveur) ;
+- `art.py algrow tiktok_engine/videos/<nom>/script.json` (images, 1 crédit chacune), puis regarder
+  `art_review.jpg` (mains !) ;
+- `build.py work/tiktok/<nom> --script tiktok_engine/videos/<nom>/script.json` (voix, montage, planches) ;
+- `zernio.py schedule work/tiktok/<nom> --at AAAA-MM-JJTHH:MM` (refuse une vidéo de moins de 61 s).
+
+Faits vérifiés avant la voix, comme partout. L'API TikTok ne convient pas (voir le README).
