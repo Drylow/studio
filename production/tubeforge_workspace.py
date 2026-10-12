@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_writing.py', 'studio_bridge.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_writing.py', 'workspace_access.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     web = root / 'app/web'
@@ -94,6 +94,9 @@ def deploy(root, seed=True):
         'workspace_planning.install(app)\n',
         'workspace_planning.install(app)\nfrom . import workspace_writing\nworkspace_writing.install(app)\n')
     replace_once(root, 'app/server.py',
+        'workspace_writing.install(app)\n',
+        'workspace_writing.install(app)\nfrom . import workspace_access\nworkspace_access.install(app)\n')
+    replace_once(root, 'app/server.py',
         'if request.url.path in ("/", "/index.html", "/app.js", "/style.css"):',
         'if request.url.path in ("/", "/index.html", "/legacy.html", "/app.js", "/style.css", "/workspace.js", "/workspace.css"):')
     replace_once(root, 'app/server.py',
@@ -135,10 +138,12 @@ def deploy(root, seed=True):
                            ('workspace_planning_tests.py', 'test_workspace_planning.py'),
                            ('workspace_characters_tests.py', 'test_workspace_characters.py'),
                            ('workspace_writing_tests.py', 'test_workspace_writing.py'),
+                           ('workspace_access_tests.py', 'test_workspace_access.py'),
                            ('google_flow_tests.py', 'test_google_flow.py')):
         shutil.copy2(support / source, root / 'tests' / target)
     if seed:
-        subprocess.run([str(root / '.venv/Scripts/python.exe'), '-m', 'app.workspace_seed'], cwd=root, check=True)
+        python = root / ('.venv/Scripts/python.exe' if __import__('os').name == 'nt' else '.venv/bin/python')
+        subprocess.run([str(python), '-m', 'app.workspace_seed'], cwd=root, check=True)
 
 
 if __name__ == '__main__':

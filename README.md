@@ -1,5 +1,7 @@
 # Edgerunners Studio
 
+**TubeForge complet : [installation sans ZIP](README_SURVIVOR_TUBEFORGE.md), [instance VPS et accès workers](README_TUBEFORGE_VPS.md).** Base de l’application dans `production/tubeforge_base/`, ajouts dans `production/tubeforge_support/`, styles zombies/aliens modifiables dans `production/tubeforge_presets/`.
+
 **Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
 
 **Reprise Survivor et TubeForge sur un autre compte : lire [README_REPRISE.md](README_REPRISE.md).**

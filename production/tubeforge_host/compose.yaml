@@ -1,0 +1,50 @@
+services:
+  tubeforge:
+    image: ${TUBEFORGE_IMAGE:-drylow-tubeforge:current}
+    container_name: drylow-tubeforge
+    restart: unless-stopped
+    init: true
+    cpus: 6
+    mem_limit: 12g
+    pids_limit: 256
+    stop_grace_period: 30s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    environment:
+      TUBEFORGE_REQUIRE_AUTH: "1"
+      TUBEFORGE_USERS_FILE: /run/tubeforge/users.json
+    volumes:
+      - ${TUBEFORGE_HOME:-/opt/tubeforge}/data:/opt/studio/work/TubeForge/data
+      - ${TUBEFORGE_HOME:-/opt/tubeforge}/config/app.env:/opt/studio/work/TubeForge/.env
+      - ${TUBEFORGE_HOME:-/opt/tubeforge}/config/studio.env:/opt/studio/.env:ro
+      - ${TUBEFORGE_HOME:-/opt/tubeforge}/config:/run/tubeforge:ro
+    networks:
+      - coolify
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: coolify
+      traefik.http.routers.tubeforge-https.rule: Host(`${TUBEFORGE_DOMAIN}`)
+      traefik.http.routers.tubeforge-https.entrypoints: https
+      traefik.http.routers.tubeforge-https.tls: "true"
+      traefik.http.routers.tubeforge-https.tls.certresolver: letsencrypt
+      traefik.http.routers.tubeforge-https.service: tubeforge
+      traefik.http.routers.tubeforge-https.middlewares: tubeforge-headers
+      traefik.http.routers.tubeforge-http.rule: Host(`${TUBEFORGE_DOMAIN}`)
+      traefik.http.routers.tubeforge-http.entrypoints: http
+      traefik.http.routers.tubeforge-http.middlewares: tubeforge-redirect
+      traefik.http.routers.tubeforge-http.service: tubeforge
+      traefik.http.middlewares.tubeforge-redirect.redirectscheme.scheme: https
+      traefik.http.middlewares.tubeforge-redirect.redirectscheme.permanent: "true"
+      traefik.http.middlewares.tubeforge-headers.headers.contenttypenosniff: "true"
+      traefik.http.middlewares.tubeforge-headers.headers.referrerpolicy: same-origin
+      traefik.http.services.tubeforge.loadbalancer.server.port: "8766"
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+networks:
+  coolify:
+    external: true
