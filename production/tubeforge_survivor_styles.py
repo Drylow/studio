@@ -38,15 +38,17 @@ BACKGROUND = (
 STYLES = (
     ("survivor-patch", "Patch Survives — cartoon simple", "Patch",
      "Round white head; small orange bandage above anatomical RIGHT eye, viewer LEFT in frontal views. "
-     "Thin black stick body, white mitten hands and oval shoes; small orange flap bag, black clasp, orange handle. "
+     "Thin black stick body, white mitten hands and oval shoes; normal orange school backpack worn on the back, "
+     "two shoulder straps, main zipper and front zipped pocket. No handbag or flap/clasp bag. "
      "No hair, hat or eyebrows. Preserve the exact head/body proportion of the approved identity.",
-     ["output/imagegen/survivor-launch-2026-10-12/01-patch-character.png",
+     ["output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png",
       "output/imagegen/survivor-launch-2026-10-12/references/patch-head.png"]),
     ("survivor-alien-aftermath", "Alien Aftermath — cartoon simple", "Reed",
      "Round pure white head, small black oval eyes and short line mouth; no forehead bandage. "
-     "Thin black stick body, white mitten hands and oval shoes, tiny dusty blue-gray scarf and small gray flap bag "
-     "with short gray handle and one black clasp. Match the inspected whole-body identity reference.",
-     ["output/imagegen/alien-main-reference-2026-10-12/reed.png"]),
+     "Thin black stick body, white mitten hands and oval shoes, tiny dusty blue-gray scarf and normal gray school "
+     "backpack worn on the back with two shoulder straps, main zipper and front zipped pocket. "
+     "No handbag or flap/clasp bag. Match the inspected whole-body identity reference.",
+     ["output/imagegen/survivor-backpacks-2026-10-12/characters/reed.png"]),
 )
 
 

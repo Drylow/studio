@@ -4,7 +4,7 @@ Fiction originale en anglais, deuxieme personne. Calendrier de trente jours inve
 Script V1 : script-en.txt. Ne pas envoyer cette note a la synthese vocale.
 
 CAST
-Patch : personnage approuve, tete blanche ronde, petits yeux noirs, bouche courte, pansement orange anatomiquement a droite, corps fin noir, mains/chaussures blanches, sac orange. Reference source existante conservee.
+Patch : personnage approuve, tete blanche ronde, petits yeux noirs, bouche courte, pansement orange anatomiquement a droite, corps fin noir, mains/chaussures blanches, sac a dos scolaire orange, deux bretelles, fermeture eclair et poche avant zippee. Nouvelle reference : output/imagegen/survivor-backpacks-2026-10-12/characters/patch-v2.png. Ancienne version a rabat archivee.
 Mara : adulte, conductrice de livraison connue de Patch. Tete blanche ronde, petits yeux noirs, bouche courte, corps fin noir, mains/chaussures blanches. Sac teal et bande violette sur un bras pour l'identifier. Sa reference est a creer et regarder ; pas encore produite ni approuvee.
 Infectes : personnages de fiction distincts, pas de clones de Patch ou Mara, proportions sobres coherentes avec la serie ; leurs references sont a preparer. Pas de gore.
 Pas d'enfant dans cet episode.

@@ -6,13 +6,13 @@
   },
   {
     "path": "01-Patch-Survives/channel-kit.txt",
-    "sha256": "44a8136127dad4833f32c08b4379c7ef09de9b4c901e5aca295b7d4cb2fbd9bf",
-    "bytes": 2785
+    "sha256": "eca600dbd62a96cff0c9cda2936c19f09e5058f36720ff3b77c16ccc44dfa5a4",
+    "bytes": 2789
   },
   {
     "path": "01-Patch-Survives/notes-production.txt",
-    "sha256": "588dd33305d2bb7f026ffc66a78c8522fb5bc678205f2d8132c4f7bdde13d2e4",
-    "bytes": 7456
+    "sha256": "bc7ddea9aa0d6ae4711057b43c1c2a53a5724e9e76dfe7bb1affc1e413670c40",
+    "bytes": 7686
   },
   {
     "path": "01-Patch-Survives/pfp-prompt.txt",
@@ -25,9 +25,14 @@
     "bytes": 1210692
   },
   {
+    "path": "01-Patch-Survives/REFERENCE-ACTUELLE.txt",
+    "sha256": "71b92e04ad332cd87a57e10c0738d6450abed8b31ff441e4c1f0c385fcb9e800",
+    "bytes": 339
+  },
+  {
     "path": "01-Patch-Survives/reference-personnage-approuve.png",
-    "sha256": "30248650daf50a7ed37e3d440110d6bcb47a9962ee1fe84b66909966add8a236",
-    "bytes": 1315792
+    "sha256": "618b3cdc8508d1a9efd32315db513c6fef01a0c72f37e1d90d6aec70b6e2145c",
+    "bytes": 1531169
   },
   {
     "path": "01-Patch-Survives/reference-tete-approuvee.png",
@@ -36,8 +41,8 @@
   },
   {
     "path": "01-Patch-Survives/script-en.txt",
-    "sha256": "f7206257310991455674d63ddb830d93f318d152884d928201d1db2061e07b00",
-    "bytes": 11598
+    "sha256": "5ce609a5cc7ad048e7ea089345c36069b10a113f5f82ce77df6cebb8cdfac268",
+    "bytes": 11743
   },
   {
     "path": "02-Alien-Aftermath/avatar-registre.json",
@@ -46,13 +51,13 @@
   },
   {
     "path": "02-Alien-Aftermath/channel-kit.txt",
-    "sha256": "9fb2d6d10bedfeb6aa4234b9935963c9c363fb6c9912b7913130c1d7e0d4af5c",
-    "bytes": 3755
+    "sha256": "1aad3387ab7a61c0c55c4b3c261a3be91bd48d4323523407d3f72edcec8a3278",
+    "bytes": 3850
   },
   {
     "path": "02-Alien-Aftermath/notes-production.txt",
-    "sha256": "746c02466dea50502f175d6dff82e1af786d01694b58f4102c68b3d4de3d4036",
-    "bytes": 7560
+    "sha256": "6f3214e77c72ca535523fb84038eb0462d85787f55990fb3f048ba11434ac43e",
+    "bytes": 7664
   },
   {
     "path": "02-Alien-Aftermath/pfp-prompt.txt",
@@ -65,14 +70,19 @@
     "bytes": 1219867
   },
   {
+    "path": "02-Alien-Aftermath/REFERENCE-ACTUELLE.txt",
+    "sha256": "71b92e04ad332cd87a57e10c0738d6450abed8b31ff441e4c1f0c385fcb9e800",
+    "bytes": 339
+  },
+  {
     "path": "02-Alien-Aftermath/reference-personnage-reed.png",
-    "sha256": "f570de9395b73ea48fad6b728b5a9ddc5a5c037b0cc263a0273c9e0801b5fc8c",
-    "bytes": 1488495
+    "sha256": "c9161b7e4f26965f55cfaa2fdc684f7deb3799adfe6302691df550ff08729ea4",
+    "bytes": 1448193
   },
   {
     "path": "02-Alien-Aftermath/script-en.txt",
-    "sha256": "593d2c0531ece051d0a12d07b82c349bd1213befb2ed4eda9d1efeaedd057187",
-    "bytes": 11437
+    "sha256": "ad0306ff9f90c30f8f54ce8450be613f1bd96c443fc8b5176f105d6242e8da4e",
+    "bytes": 11622
   },
   {
     "path": "apercu-profils.jpg",
@@ -81,7 +91,7 @@
   },
   {
     "path": "LIRE-ICI.txt",
-    "sha256": "37816bbda2e5e147c71bf05db73f67e580c78657446300e2e0edc23a85eeaba4",
-    "bytes": 1955
+    "sha256": "ff0e140683ae979091a82810744198f760020cc4a1053c119d4efc0847afe9e6",
+    "bytes": 2095
   }
 ]

@@ -56,6 +56,8 @@ def collect():
     tree("work/patch-supermarket-pilot-2026-10-12")
     tree("output/imagegen/patch-green-zombies-2026-10-12")
     tree("work/patch-green-zombies-2026-10-12")
+    tree("output/imagegen/survivor-backpacks-2026-10-12")
+    tree("work/survivor-backpacks-2026-10-12")
     skill = Path.home() / ".codex/skills/.system/imagegen"
     if skill.exists():
         for path in skill.rglob("*"):
