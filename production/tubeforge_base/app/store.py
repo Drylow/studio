@@ -243,6 +243,7 @@ def create_project(title: str, style_id: str, *, topic: str = "", video_url: str
     p = {
         "id": pid,
         "owner_id": __import__(__package__ + ".workspace_identity", fromlist=["current_owner"]).current_owner(),
+        "owner_name": __import__(__package__ + ".workspace_identity", fromlist=["current_name"]).current_name(),
         "title": title.strip(),
         "title_auto": not title.strip(),
         "topic": topic.strip(),
@@ -318,6 +319,8 @@ def duplicate_project(pid: str) -> dict:
              render=None, error=None)
     from .workspace_identity import current_owner
     p['owner_id'] = current_owner()
+    from .workspace_identity import current_name
+    p['owner_name'] = current_name()
     for k, st in p["steps"].items():
         if st["state"] == "running":
             st.update(state="idle", msg="")

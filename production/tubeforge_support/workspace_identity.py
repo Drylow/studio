@@ -15,3 +15,7 @@ def owner_of(project):
 
 def personal_projects(projects, scope="mine"):
     return projects if scope == "team" else [p for p in projects if owner_of(p) == current_owner()]
+
+
+def current_name():
+    return (identity.get() or {}).get('display_name') or current_owner()
