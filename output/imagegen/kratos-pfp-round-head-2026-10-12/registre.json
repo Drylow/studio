@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "image": "pfp.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "sha256": "c05f3db07caeb02fb5b900142a0c3056a88284d8c208fb2b59f30b31f92693ab",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "c98c22bd63a0a5ba71acc63f3499f2fe8cb9461a38738c09988264300c52db50",
+  "ordered_references": [
+    {
+      "order": 1,
+      "role": "approved_character_identity",
+      "image": "references/approved-character-head.png",
+      "sha256": "68a4bd79ad0ba9f1d0d75dccc961eb9532ab84bd2d21f6ae53c12d14a322a232"
+    }
+  ],
+  "actual_full_image_viewed": true,
+  "review_notes": "Actual full output viewed: one centered bald white circular head, black outline, two black eyes, simple mouth, red angular tattoo on viewer right across the correct eye; no human features, beard, body, text or duplicate. Square with safe circular-profile margins."
+}
