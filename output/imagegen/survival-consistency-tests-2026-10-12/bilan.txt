@@ -1,0 +1,43 @@
+TEST DE COHERENCE - TROIS STYLES, TROIS SITUATIONS
+12 octobre 2026
+
+Le comparatif comporte quatre colonnes : reference initiale, porte barricadee, conserves dans une boutique, marche sous la pluie.
+Trois lignes : Mr. Doomsday, Beanie, StickFallout.
+Il y a neuf nouvelles images selectionnees, avec les trois ancres initiales pour comparaison.
+
+METHODE
+Toutes les generations utilisent le CLI Proxy et le meme modele image configure dans le .env.
+Chaque premier essai recoit les MEMES deux fichiers de son personnage, dans le meme ordre :
+1. Gros plan du visage et du couvre-chef decoupe de notre premier test.
+2. Premier test entier, comme reference de proportions, mains, chaussures, palette et sac.
+On ne remplace jamais cette ancre par une generation recente : pas de derive cumulee.
+Les neuf prompts sont ecrits par Codex, figes avant les appels, sans augmentation automatique.
+Chaque situation comporte une action et un lieu nouveaux ; ce ne sont pas des zooms d'une meme scene.
+
+RESULTATS REGARDES IMAGE PAR IMAGE
+Sept images sur neuf conservees au premier passage.
+Deux scenes de pluie avaient ajoute un vetement ou un torse rempli : Beanie et StickFallout.
+Deux corrections locales explicites ont retire ces ajouts en conservant le visage, le couvre-chef, les membres, le sac, l'action et le decor.
+Les deux sorties corrigees ont ete regardees entierement ; le torse StickFallout a aussi ete inspecte agrandi.
+Total : onze appels image, aucun retry automatique ni changement de fournisseur.
+
+Les visages et silhouettes restent reconnaissables :
+- Mr. Doomsday : bob noir, frange noire, petite marque de nez, corps noir tres fin, mains/pieds noirs.
+- Beanie : bonnet ocre et son revers, echarpe mauve, tete pale, corps noir tres fin, mains/pieds noirs.
+- StickFallout : casquette rouge retournee, frange brune, petits sourcils, corps noir tres fin, mains/chaussures blanches.
+Chaque plan comporte un seul personnage, deux bras et deux jambes, sans copie ou visage humain realiste.
+Les fonds sont frontaux et peu profonds : un mur et une porte, une etagere courte, une facade fermee. Pas de couloir ou rue en perspective lointaine.
+
+LIMITE ENCORE VISIBLE
+Le nombre et la disposition des poches/fermetures des sacs varient un peu entre les plans.
+L'identite des personnages est plus stable que ces petits details d'objet.
+Les scenes de pluie gardent un peu plus de texture au sol et dans les reflets que les interieurs, tout en restant peu profondes.
+Le test montre une serie courte exploitable avec controle visuel ; il ne prouve pas que cent images sortiront toutes correctement sans correction.
+
+FICHIERS
+Les neuf images selectionnees sont a la racine ; les scenes de pluie Beanie et StickFallout portent le suffixe -v2.
+Les deux premiers essais refuses restent dans essais-premier-passage/.
+Les six references effectivement utilisees sont dans references/.
+Les prompts exacts et les prompts de correction sont conserves a cote des images.
+registre.json donne pour chaque sortie l'extrait de narration, le lieu, l'ordre des references et les empreintes exactes.
+Les donnees et images de TubeForge et de la video God of War sont preservees.
