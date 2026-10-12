@@ -1,5 +1,8 @@
 # Edgerunners Studio
 
+
+**Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
+
 Un seul studio pour organiser les chaînes YouTube, préparer leurs vidéos et suivre
 leur publication. Interface Cyberpunk en français, backend Flask et moteurs de
 production conservés. État détaillé : [DASHBOARD_STATUS](production/DASHBOARD_STATUS.md).

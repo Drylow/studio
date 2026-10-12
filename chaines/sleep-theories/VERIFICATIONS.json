@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "timezone": "Europe/Paris",
+  "checks": [
+    "All saved recipe references exist in the bundle",
+    "Six recipes validated offline; zero API submissions",
+    "Saved FacelessOS module loads and finds the complete skill pack",
+    "Silo final narration: 21321 whitespace-separated words",
+    "All JSON files parse",
+    "No known local private credential value or API key detected in text files",
+    "No .env or cookies copied",
+    "Accepted thumbnails copied byte-for-byte",
+    "No frontend or unrelated production file edited"
+  ],
+  "limitations": [
+    "No full video exports or private Ultravid projects were provided",
+    "No authenticated Ultravid session exported",
+    "Generation runner's live API path was not executed during backup",
+    "Public views and upload states are snapshots, not live data"
+  ]
+}

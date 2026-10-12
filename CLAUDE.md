@@ -1,5 +1,8 @@
 # Edgerunners Studio — guide pour Claude (à lire en entier avant de travailler)
 
+
+**Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
+
 Studio YouTube faceless (Flask, Python) qui fabrique des vidéos 2D de bout en bout : recherche, script,
 voix, images, montage animé, rendu, miniature, publication. Ce fichier dit **comment on travaille ici**,
 pour qu'une nouvelle session (ou le compte d'un collègue) continue exactement pareil.
