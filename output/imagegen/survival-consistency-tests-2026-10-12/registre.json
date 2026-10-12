@@ -1,0 +1,375 @@
+{
+  "date": "2026-10-12",
+  "provider": "configured_cli_proxy",
+  "image_calls": 11,
+  "initial_calls": 9,
+  "local_correction_calls": 2,
+  "no_automatic_retry": true,
+  "frozen_identity_reference_count": 3,
+  "images": [
+    {
+      "slug": "01-mr-doomsday-a-door",
+      "style_key": "mr-doomsday",
+      "name": "Mr. Doomsday",
+      "source": "01-mr-doomsday.png",
+      "scene_key": "a-door",
+      "scene_name": "Barricader une porte",
+      "location": "small shelter entry alcove",
+      "narration": "You hear something outside. You push the storage crate against the closed door.",
+      "image": "01-mr-doomsday-a-door.png",
+      "sha256": "a1d011adb772492838f4b7f60b3f275ff9e76753f3ae751c09d541796e26e1fe",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "01-mr-doomsday-a-door-prompt.txt",
+      "prompt_sha256": "e0b7cf35b581cba92018eb2f2ff6fbc7a1a30e173bf2742d996f0f93c03fd09b",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/mr-doomsday-head.png",
+          "sha256": "fb662916628b005569030fd0d99c7141441514990bac8bd1bd0e8353a6d4e8c8"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/mr-doomsday-full.png",
+          "sha256": "1041bd4e633e417efd87873cbab1a779cc1fcee44d98f4779dd6643822ef2068"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Black bucket hat, jagged black fringe, vertical eyes and tiny nose remain recognizable against the initial anchor. Thin black body and black hands/feet preserved. Two hands contact a single crate; two separate feet. Shallow frontal panel wall and closed door. Olive bag retains front and side pouches, with a small drawing variation."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "01-mr-doomsday-b-shop",
+      "style_key": "mr-doomsday",
+      "name": "Mr. Doomsday",
+      "source": "01-mr-doomsday.png",
+      "scene_key": "b-shop",
+      "scene_name": "R\u00e9cup\u00e9rer de la nourriture",
+      "location": "small abandoned corner shop",
+      "narration": "You find a few cans. You check one before putting it in your pack.",
+      "image": "01-mr-doomsday-b-shop.png",
+      "sha256": "b42f7983a7379cb18c1dfcd992b80d9dfbb867381af0b774da1715d41da6b6df",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "01-mr-doomsday-b-shop-prompt.txt",
+      "prompt_sha256": "b1aee3c26743393480ee24ea04de150e4cebd28912c50c462b57ee488379a8ba",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/mr-doomsday-head.png",
+          "sha256": "fb662916628b005569030fd0d99c7141441514990bac8bd1bd0e8353a6d4e8c8"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/mr-doomsday-full.png",
+          "sha256": "1041bd4e633e417efd87873cbab1a779cc1fcee44d98f4779dd6643822ef2068"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Black bob/fringe, white round face, narrow oval eyes, tiny nose and line mouth match. Same thin black body/hands/feet and kneeling pose. One can in hand, three on shelf, one bag. No text or deep shop aisle. Bag front pockets drift from original three-part arrangement to two broad front pouches; recognizable olive bag but not pixel-identical prop continuity."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "01-mr-doomsday-c-rain",
+      "style_key": "mr-doomsday",
+      "name": "Mr. Doomsday",
+      "source": "01-mr-doomsday.png",
+      "scene_key": "c-rain",
+      "scene_name": "Avancer sous la pluie",
+      "location": "short street section outside a closed shop",
+      "narration": "You leave before dawn, keeping the light low and the pack close.",
+      "image": "01-mr-doomsday-c-rain.png",
+      "sha256": "4047e75ea0bc177768faf0947fe2af5faf83dafedf3c6e8b268993f08f571b8c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "01-mr-doomsday-c-rain-prompt.txt",
+      "prompt_sha256": "4b45907652f9334f772e7c566efafce2efd9f50890911623e4bc48ffa93e2cca",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/mr-doomsday-head.png",
+          "sha256": "fb662916628b005569030fd0d99c7141441514990bac8bd1bd0e8353a6d4e8c8"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/mr-doomsday-full.png",
+          "sha256": "1041bd4e633e417efd87873cbab1a779cc1fcee44d98f4779dd6643822ef2068"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Black bucket hat, jagged fringe, white face/oval eyes/tiny nose remain the same. Actual torso stays a single black stick line with no added shirt; black hands and black feet retained. One bag worn, one flashlight, one person. Frontal shopfront and no deep perspective; slightly more wet pavement/reflection detail than indoors but still sparse."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "02-beanie-a-door",
+      "style_key": "beanie",
+      "name": "Beanie",
+      "source": "02-beanie-survives.png",
+      "scene_key": "a-door",
+      "scene_name": "Barricader une porte",
+      "location": "small shelter entry alcove",
+      "narration": "You hear something outside. You push the storage crate against the closed door.",
+      "image": "02-beanie-a-door.png",
+      "sha256": "da99747542390394782caaaa148a7fe8b4e5e6019098dbca63f0990ffd7ecb9f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "02-beanie-a-door-prompt.txt",
+      "prompt_sha256": "199bfa21c81f3226340d31d79371aa8043dc66087526d7d06d2cffa1987711d1",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/beanie-head.png",
+          "sha256": "32d57661c4beacc82f7d95bbb8e547c71e9b94001ae4a5da854c59c563014df8"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/beanie-full.png",
+          "sha256": "ef7464725240df8c5d5309331a2855d22bb55eba3fc0301872107791266ee759"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Mustard beanie cuff, lavender scarf and pale round face match the anchor. Thin black arms/legs and black hands/feet preserved. Both hands push one crate at a closed door. Sparse frontal wall and narrow floor, no deep perspective. Scarf tail and fold direction adapt to the forward lean."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "02-beanie-b-shop",
+      "style_key": "beanie",
+      "name": "Beanie",
+      "source": "02-beanie-survives.png",
+      "scene_key": "b-shop",
+      "scene_name": "R\u00e9cup\u00e9rer de la nourriture",
+      "location": "small abandoned corner shop",
+      "narration": "You find a few cans. You check one before putting it in your pack.",
+      "image": "02-beanie-b-shop.png",
+      "sha256": "02e34fa36f34fe57756c263b2e1b464873ab561ed0490446a606645ddfe4bb07",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "02-beanie-b-shop-prompt.txt",
+      "prompt_sha256": "ff05677c3473554106c4471b826b1059fdf60da1b172a1e1790ecb0dfa1cee10",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/beanie-head.png",
+          "sha256": "32d57661c4beacc82f7d95bbb8e547c71e9b94001ae4a5da854c59c563014df8"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/beanie-full.png",
+          "sha256": "ef7464725240df8c5d5309331a2855d22bb55eba3fc0301872107791266ee759"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Ochre cuffed beanie, lavender scarf and simple pale head match the source. Thin black torso/limbs, small black hands/feet, clear kneeling pose. Sparse frontal shelf/window/wall, one person, no text. Original center bag pouch becomes two front pouches: visible prop drift to report, not an identity change."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "02-beanie-c-rain",
+      "style_key": "beanie",
+      "name": "Beanie",
+      "source": "02-beanie-survives.png",
+      "scene_key": "c-rain",
+      "scene_name": "Avancer sous la pluie",
+      "location": "short street section outside a closed shop",
+      "narration": "You leave before dawn, keeping the light low and the pack close.",
+      "image": "02-beanie-c-rain-v2.png",
+      "sha256": "b7a0475ccf682c91d4a07bbf581db34eb4c75a53ac67855c8ef394747e24a45b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "02-beanie-c-rain-v2-prompt.txt",
+      "prompt_sha256": "37811c5bc2a36a403785e594a3067a1fadc3dbbc683b587e53df35bab302dd69",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "edit-target",
+          "image": "essais-premier-passage/02-beanie-c-rain.png",
+          "sha256": "cd719d52cd2397e93ba2767658d0fc5fbbc0d88fe286bd724444340a42948298"
+        },
+        {
+          "order": 2,
+          "role": "head-identity",
+          "image": "references/beanie-head.png",
+          "sha256": "32d57661c4beacc82f7d95bbb8e547c71e9b94001ae4a5da854c59c563014df8"
+        },
+        {
+          "order": 3,
+          "role": "full-body-and-style",
+          "image": "references/beanie-full.png",
+          "sha256": "ef7464725240df8c5d5309331a2855d22bb55eba3fc0301872107791266ee759"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Actual full v2 viewed. The invented white/gray shirt piece is removed, body restored to a single thin black stick line under the unchanged lavender scarf. Ochre beanie, face, black hands/feet, walking pose, olive bag, flashlight and shallow shopfront preserved. Strong first-pass-to-v2 scene preservation. Minor bag-pouch arrangement variations remain across scenes."
+      },
+      "correction_required": true
+    },
+    {
+      "slug": "03-stickfallout-a-door",
+      "style_key": "stickfallout",
+      "name": "StickFallout",
+      "source": "03-stickfallout.png",
+      "scene_key": "a-door",
+      "scene_name": "Barricader une porte",
+      "location": "small shelter entry alcove",
+      "narration": "You hear something outside. You push the storage crate against the closed door.",
+      "image": "03-stickfallout-a-door.png",
+      "sha256": "4fb4ad28f597c6b261d0bac2579029bc63f061d3fccb888d138117f13916fa69",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "03-stickfallout-a-door-prompt.txt",
+      "prompt_sha256": "ad88b524324ca8b1ccd4de4c486fb4209d7a676a92da98d64007f3b872a8c848",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/stickfallout-head.png",
+          "sha256": "0a4336cef90a4917dcddad53d18cc01ea6b12d2af1d491e2052ee09dbb54ad58"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/stickfallout-full.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Red cap stays backwards, brown jagged fringe and worried line mouth remain consistent. Thin black body, white small hands and oval white shoes preserved. One crate, one person with two arms/legs, readable pushing pose. Flat dusty-blue wall/cream door, simple beige floor. Bag pouch placement varies slightly but color, silhouette and main front pouch match."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "03-stickfallout-b-shop",
+      "style_key": "stickfallout",
+      "name": "StickFallout",
+      "source": "03-stickfallout.png",
+      "scene_key": "b-shop",
+      "scene_name": "R\u00e9cup\u00e9rer de la nourriture",
+      "location": "small abandoned corner shop",
+      "narration": "You find a few cans. You check one before putting it in your pack.",
+      "image": "03-stickfallout-b-shop.png",
+      "sha256": "9c97a7fbfe7a85f23ffedca209cd0d19b04418bf778fcff4f8d230c761b94f58",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "03-stickfallout-b-shop-prompt.txt",
+      "prompt_sha256": "bd1ba143ee7c5bc8af1d2b1c9a9b71808d1227f1b19bc3dc27db2f50f2d58880",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "head-identity",
+          "image": "references/stickfallout-head.png",
+          "sha256": "0a4336cef90a4917dcddad53d18cc01ea6b12d2af1d491e2052ee09dbb54ad58"
+        },
+        {
+          "order": 2,
+          "role": "full-body-and-style",
+          "image": "references/stickfallout-full.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Backwards red cap, dark brown fringe, pale face, eyebrows and worried line mouth match. Thin black torso/limbs and white hands/oval shoes maintained. Clear kneeling pose and unlabeled can, three on shelf. Sparse dusty-blue backdrop with no aisle depth. Bag center pouch is vertically split into two zipper compartments instead of original simple one: report minor prop continuity drift."
+      },
+      "correction_required": false
+    },
+    {
+      "slug": "03-stickfallout-c-rain",
+      "style_key": "stickfallout",
+      "name": "StickFallout",
+      "source": "03-stickfallout.png",
+      "scene_key": "c-rain",
+      "scene_name": "Avancer sous la pluie",
+      "location": "short street section outside a closed shop",
+      "narration": "You leave before dawn, keeping the light low and the pack close.",
+      "image": "03-stickfallout-c-rain-v2.png",
+      "sha256": "d73d41a9cb0118337dd7f78c262d04bdfed64c60ab342fb2625d99b7643fb7de",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_file": "03-stickfallout-c-rain-v2-prompt.txt",
+      "prompt_sha256": "7d0ab281c3f989fba7520d8c9c8b52be69c26ca7eb384d2df25d323392edd6e8",
+      "ordered_references": [
+        {
+          "order": 1,
+          "role": "edit-target",
+          "image": "essais-premier-passage/03-stickfallout-c-rain.png",
+          "sha256": "faee6002e6da5126024763f67176ed4e3581125d8505c7ef8e3cef72a476f938"
+        },
+        {
+          "order": 2,
+          "role": "head-identity",
+          "image": "references/stickfallout-head.png",
+          "sha256": "0a4336cef90a4917dcddad53d18cc01ea6b12d2af1d491e2052ee09dbb54ad58"
+        },
+        {
+          "order": 3,
+          "role": "full-body-and-style",
+          "image": "references/stickfallout-full.png",
+          "sha256": "f721fa241f65f4634b645241ffea94dd912341c10607049611a09e607aac5cab"
+        }
+      ],
+      "visual_review": {
+        "state": "verified",
+        "reviewer": "codex",
+        "actual_full_image_viewed": true,
+        "notes": "Actual full v2 viewed and torso inspected enlarged. The filled blue-gray vest is removed; shopfront shows through around the single thin black line torso and separate backpack/arm/strap. Same red backwards cap, brown fringe, face, white hands/shoes and original scene retained. Minor bag detail variations remain across scenes."
+      },
+      "correction_required": true
+    }
+  ],
+  "remaining_limit": "Bag pocket and zipper details still vary slightly; character identity is more stable than exact prop detail."
+}
