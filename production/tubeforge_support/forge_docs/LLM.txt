@@ -1,0 +1,271 @@
+TUBEFORGE PRODUCTION API — VERSION 1
+
+Website: https://tools.kanye.studio/2d
+Simple API: https://tools.kanye.studio/api/forge/v1
+Native API: https://tools.kanye.studio/api/2d (append the complete native path,
+for example /api/workspace/projects). All generation and rendering execute on
+the existing VPS. Never render locally or move the pipeline into ChatGPT cloud.
+
+AUTHENTICATION
+Use your own portal member access key, supplied privately by the owner.
+POST https://tools.kanye.studio/api/auth with JSON {"accessKey":"YOUR_KEY"}.
+Save the kt_session Set-Cookie value. Pass Cookie: kt_session=... OR
+Authorization: Bearer SESSION_VALUE on ALL subsequent calls and downloads.
+The access key is NOT the Bearer token. Sessions expire after 30 days of
+inactivity; log in again on 401. Do not endlessly retry rejected credentials.
+Never use/share the owner's session, provider keys or the worker trust token.
+All TubeForge members can edit shared presets and team projects. My videos
+shows your creations; scope=team exposes existing team productions.
+
+FAST WORKFLOW (explicit asynchronous stages, not a single automatic job)
+1. GET /presets. Read the channel's style, voice, character references, scenery
+   mode, can_write_script and can_prepare_images. Reuse the saved preset.
+2. POST /videos with channel_id, title, script, optional brief/minutes and a
+   UNIQUE idempotency_key. Repeating the exact request returns the same video;
+   changing its payload with the same key gives 409. Creation never bills media.
+   Example: {"channel_id":"CHANNEL_ID_FROM_PRESETS","title":"Alien Invasion:
+   30 Days Trapped in an Airport","script":"Your reviewed English narration...",
+   "idempotency_key":"airport-episode-01"}. Use a valid single-line JSON title.
+3. For an empty script and can_write_script=true: POST
+   /videos/ID/actions/write-script with {"minutes":15,"brief":"Story constraints"}.
+   Poll /videos/ID/status every 5 seconds. Read/revise the result; do not treat
+   the automated writing audit as a human review. Deep Sea and historical
+   channels may require an externally written script: capability flags decide.
+   Native PUT /api/workspace/projects/ID/script accepts {"text":"..."}.
+4. POST /videos/ID/actions/voice with {} uses the saved voice. Wait for completion.
+   A completed current voice is reused; {"regenerate":true} explicitly bills a
+   new attempt. GET /videos/ID/transcript provides actual word timings (seconds).
+   Audio determines duration and shot timing; never generate shots before audio.
+5. POST /videos/ID/actions/prepare with {} if can_prepare_images=true. Otherwise
+   author shots yourself and save via native PUT /api/workspace/projects/ID/scenes.
+   Automatic preparation never replaces an existing shot list. Check narration,
+   pacing, characters, locations, viewpoints and reference sources before images.
+6. Read GET /videos/ID. Supply missing cast/location/drawing references via the
+   native reference upload and location/scene routes. Reference URLs must be
+   downloaded using portal authentication. Preserve SHA256 and ordered references.
+   Character identity is reused in both free and consistent scenery modes.
+   A recurring character needs its own reference. For consistent scenery, import
+   inspected location masters/views and the location registry; text alone is not
+   proof of consistency. Full project technical_issues explains missing inputs.
+7. POST /videos/ID/actions/preview with {} generates the first three shots.
+   Download and ACTUALLY inspect all three images. Check 16:9, style, anatomy,
+   main-character identity, duplicate characters, scene relevance and references.
+   POST /videos/ID/review for EACH inspected scene with {"scope":"scene",
+   "scene_id":1,"state":"verified","reviewer":"Colleague AI",
+   "source":"delegated_ai_inspection","notes":"Concrete observations..."}.
+   Never fabricate inspection notes or call AI review human approval.
+8. POST /videos/ID/actions/images with {} generates only remaining missing shots.
+   Existing images are kept. Poll status. ACTUALLY inspect every generated image,
+   and submit reviews. For individual corrections use native POST
+   /api/workspace/projects/ID/scenes/SHOT/generate with confirm_prompt equal to
+   the exact saved prompt and image_model/image_provider from model_snapshot.
+   Read the native schema and guard responses; do not switch model/provider.
+9. Listen/check the audio and its timing; POST /videos/ID/review with scope
+   voiceover and honest reviewer/source/notes. Review script separately as needed.
+10. POST /videos/ID/actions/render with {}. Existing technical, reference,
+   image and voice review checks remain enforced. Render = VPS CPU, native
+   FFmpeg, shared render limit. No local clips or rendering fallback.
+11. GET /videos/ID/outputs. Download video/voice/shot URLs with auth. MP4 existence
+   does NOT mean publication approval. Check final edit/audio before render review.
+   publication_ready becomes true only when current evidence and reviews pass.
+
+SIMPLE ENDPOINTS (relative to https://tools.kanye.studio/api/forge/v1)
+GET /health                 Service/capabilities; protected, no paid provider call.
+GET /presets                Shared channels, saved styles/cast/voice/capabilities.
+GET /videos?scope=mine|team&archived=false   Lightweight video list.
+POST /videos                Create, freeze preset, idempotent member-scoped key.
+GET /videos/ID              Full current project with evidence validation.
+GET /videos/ID/status       Lightweight progress; poll every 5 seconds.
+GET /videos/ID/transcript   Actual audio word timings after voice generation.
+POST /videos/ID/actions/ACTION  JSON body required ({} is valid).
+  ACTION: write-script, voice, prepare, preview, images, corrections, render.
+POST /videos/ID/stop        Stop main job / drain already submitted image requests.
+POST /videos/ID/review      Record an actual inspection with source and notes.
+GET /videos/ID/outputs      Fresh validation, ordered shots/timings and download URLs.
+GET /videos/ID/download?kind=video|voice|subtitles   Authenticated file download.
+GET /endpoints             COMPLETE live route inventory, methods and public URLs.
+GET /openapi.json          COMPLETE live schemas, query/path/body/multipart params.
+GET /LLM.txt               This guide plus COMPLETE live endpoint inventory.
+
+NATIVE EXTENDED AUTHORING
+Use /endpoints and /openapi.json for every installed endpoint, including shared
+channel/preset editing, style/cast uploads, script updates, location registries,
+ordered shots, voice overrides, individual image generation and performance limits.
+Most native workspace authoring bodies are free-form dictionaries: read the
+request contracts in the companion README before writing. Original vendor
+endpoints are labeled legacy in the inventory. Never use legacy automatic
+run-all/generate paths on authored projects or bypass workspace review checks.
+Native API responses may contain root-relative /media or /style-media URLs;
+prefix those with /api/2d. Simple project/preset responses do this for you.
+
+FAILURE / RETRY / COST
+201=create; 202=stage accepted (not finished); 401=login again; 409=busy/stale/
+missing validation or capability; 422=invalid input; 404=not found; 502=upstream.
+Status is running, idle, failed or interrupted. idle alone does not mean video
+complete: inspect steps, images and outputs. Interruption is not a durable queue;
+reconnect, inspect saved artifacts and explicitly resume the missing stage.
+No automatic repeated paid generation and no blind POST retry after a timeout:
+poll first, inspect artifacts, then decide. Only POST creation is idempotent
+by key; generation actions are not exactly-once and may bill a new request.
+Already submitted paid provider calls may finish after cancellation.
+Respect existing shared concurrency; do not launch unmanaged rendering processes.
+Image status counts stored paths; outputs verifies actual files/evidence.
+Metadata discovery and fixture tests do not generate paid images/voice.
+Uploading references accepts multipart files, max 10 MB per image.
+There is no API YouTube publication action in this workflow.
+
+VPS MAINTENANCE (when the owner has separately provided SSH credentials)
+Portal VPS: 185.249.225.176, /opt/elevenlabs-studio, container elevenlabs-studio.
+Worker VPS: 13.140.129.97, container drylow-tubeforge.
+Worker application: /opt/studio/work/TubeForge inside the container.
+Persistent host data: /opt/tubeforge/data; source repo /opt/tubeforge/repository.
+Private config is under /opt/tubeforge/config. Never expose it or commit it.
+Maintained sources: production/tubeforge_support; gateway production/tubeforge_portal.
+Deployment: bash /opt/tubeforge/repository/production/tubeforge_host/update.sh.
+Check active jobs before restarting; preserve data/config/style/project references.
+Do not modify the runtime application alone; maintain patches in source and deploy.
+The owner's SSH ZIP is supplied separately. No SSH private keys are in this kit.
+
+INITIAL COMPLETE ENDPOINT INVENTORY
+POST /api/2d/api/batch [legacy]
+GET /api/2d/api/batches [legacy]
+GET /api/2d/api/channels [legacy]
+POST /api/2d/api/channels [legacy]
+DELETE /api/2d/api/channels/{cid} [legacy]
+PUT /api/2d/api/channels/{cid} [legacy]
+POST /api/2d/api/channels/{cid}/assign [legacy]
+POST /api/2d/api/channels/{cid}/clip [legacy]
+POST /api/2d/api/channels/{cid}/export [legacy]
+POST /api/2d/api/channels/{cid}/ideas [legacy]
+POST /api/2d/api/channels/{cid}/open [legacy]
+GET /api/2d/api/channels/{cid}/plan [legacy]
+POST /api/2d/api/channels/{cid}/resolve-all [legacy]
+GET /api/2d/api/elevenlabs/voices [legacy]
+GET /api/2d/api/local-tts [legacy]
+POST /api/2d/api/local-tts/start [legacy]
+POST /api/2d/api/local-tts/voices [legacy]
+DELETE /api/2d/api/local-tts/voices/{name} [legacy]
+GET /api/2d/api/projects [legacy]
+POST /api/2d/api/projects [legacy]
+DELETE /api/2d/api/projects/{pid} [legacy]
+GET /api/2d/api/projects/{pid} [legacy]
+PATCH /api/2d/api/projects/{pid} [legacy]
+POST /api/2d/api/projects/{pid}/channel [legacy]
+POST /api/2d/api/projects/{pid}/characters [legacy]
+POST /api/2d/api/projects/{pid}/characters/detect [legacy]
+POST /api/2d/api/projects/{pid}/characters/from-style [legacy]
+DELETE /api/2d/api/projects/{pid}/characters/{cid} [legacy]
+PUT /api/2d/api/projects/{pid}/characters/{cid} [legacy]
+POST /api/2d/api/projects/{pid}/characters/{cid}/image [legacy]
+POST /api/2d/api/projects/{pid}/context/fetch [legacy]
+POST /api/2d/api/projects/{pid}/duplicate [legacy]
+POST /api/2d/api/projects/{pid}/move [legacy]
+POST /api/2d/api/projects/{pid}/post [legacy]
+POST /api/2d/api/projects/{pid}/render [legacy]
+POST /api/2d/api/projects/{pid}/resolve [legacy]
+POST /api/2d/api/projects/{pid}/run [legacy]
+DELETE /api/2d/api/projects/{pid}/scenes/{sid} [legacy]
+PUT /api/2d/api/projects/{pid}/scenes/{sid} [legacy]
+POST /api/2d/api/projects/{pid}/scenes/{sid}/regenerate [legacy]
+POST /api/2d/api/projects/{pid}/scenes/{sid}/upload [legacy]
+PUT /api/2d/api/projects/{pid}/script [legacy]
+POST /api/2d/api/projects/{pid}/script/generate [legacy]
+GET /api/2d/api/projects/{pid}/script/history [legacy]
+POST /api/2d/api/projects/{pid}/script/restore [legacy]
+POST /api/2d/api/projects/{pid}/script/selection [legacy]
+POST /api/2d/api/projects/{pid}/shorts [legacy]
+POST /api/2d/api/projects/{pid}/stop [legacy]
+POST /api/2d/api/projects/{pid}/thumbnails [legacy]
+POST /api/2d/api/projects/{pid}/thumbnails/select [legacy]
+POST /api/2d/api/projects/{pid}/title/generate [legacy]
+POST /api/2d/api/projects/{pid}/visuals/images [legacy]
+POST /api/2d/api/projects/{pid}/visuals/prompts [legacy]
+POST /api/2d/api/projects/{pid}/visuals/resplit [legacy]
+POST /api/2d/api/projects/{pid}/voiceover/generate [legacy]
+POST /api/2d/api/resolve/template [legacy]
+GET /api/2d/api/settings [legacy]
+PUT /api/2d/api/settings [legacy]
+GET /api/2d/api/state [legacy]
+GET /api/2d/api/styles [legacy]
+POST /api/2d/api/styles [legacy]
+DELETE /api/2d/api/styles/{sid} [legacy]
+GET /api/2d/api/styles/{sid} [legacy]
+PUT /api/2d/api/styles/{sid} [legacy]
+POST /api/2d/api/styles/{sid}/characters/{cid}/image [legacy]
+POST /api/2d/api/styles/{sid}/references/youtube [legacy]
+POST /api/2d/api/styles/{sid}/refs [legacy]
+DELETE /api/2d/api/styles/{sid}/refs/{name} [legacy]
+GET /api/2d/api/thumbstudio [legacy]
+POST /api/2d/api/thumbstudio [legacy]
+DELETE /api/2d/api/thumbstudio/{sid} [legacy]
+DELETE /api/2d/api/thumbstudio/{sid}/items/{iid} [legacy]
+POST /api/2d/api/thumbstudio/{sid}/items/{iid}/edit [legacy]
+POST /api/2d/api/thumbstudio/{sid}/items/{iid}/to-project [legacy]
+POST /api/2d/api/thumbstudio/{sid}/items/{iid}/variations [legacy]
+POST /api/2d/api/thumbstudio/{sid}/more [legacy]
+POST /api/2d/api/voice/preview [legacy]
+GET /api/2d/api/voices/gallery [legacy]
+POST /api/2d/api/voices/gallery/samples [legacy]
+GET /api/2d/api/workspace [workspace]
+GET /api/2d/api/workspace/batches [workspace]
+POST /api/2d/api/workspace/batches [workspace]
+GET /api/2d/api/workspace/channels [workspace]
+GET /api/2d/api/workspace/management [workspace]
+POST /api/2d/api/workspace/management/channels [workspace]
+PUT /api/2d/api/workspace/management/channels/{cid} [workspace]
+POST /api/2d/api/workspace/management/presets [workspace]
+PUT /api/2d/api/workspace/management/presets/{cid} [workspace]
+POST /api/2d/api/workspace/management/styles [workspace]
+PUT /api/2d/api/workspace/management/styles/{sid} [workspace]
+POST /api/2d/api/workspace/management/styles/{sid}/characters [workspace]
+PUT /api/2d/api/workspace/management/styles/{sid}/characters [workspace]
+POST /api/2d/api/workspace/management/styles/{sid}/references [workspace]
+GET /api/2d/api/workspace/models [workspace]
+POST /api/2d/api/workspace/models/refresh [workspace]
+GET /api/2d/api/workspace/performance [workspace]
+PUT /api/2d/api/workspace/performance [workspace]
+GET /api/2d/api/workspace/profiles [workspace]
+PUT /api/2d/api/workspace/profiles/{cid} [workspace]
+POST /api/2d/api/workspace/profiles/{cid}/references [workspace]
+GET /api/2d/api/workspace/projects [workspace]
+POST /api/2d/api/workspace/projects [workspace]
+GET /api/2d/api/workspace/projects/{pid} [workspace]
+POST /api/2d/api/workspace/projects/{pid}/images/generate [workspace]
+POST /api/2d/api/workspace/projects/{pid}/images/prepare [workspace]
+POST /api/2d/api/workspace/projects/{pid}/images/stop [workspace]
+PUT /api/2d/api/workspace/projects/{pid}/locations [workspace]
+POST /api/2d/api/workspace/projects/{pid}/references [workspace]
+POST /api/2d/api/workspace/projects/{pid}/render [workspace]
+POST /api/2d/api/workspace/projects/{pid}/review [workspace]
+PUT /api/2d/api/workspace/projects/{pid}/scenes [workspace]
+POST /api/2d/api/workspace/projects/{pid}/scenes/{sid}/generate [workspace]
+GET /api/2d/api/workspace/projects/{pid}/scenes/{sid}/references/{index} [workspace]
+PUT /api/2d/api/workspace/projects/{pid}/script [workspace]
+POST /api/2d/api/workspace/projects/{pid}/script/apply-draft [workspace]
+POST /api/2d/api/workspace/projects/{pid}/script/generate [workspace]
+PUT /api/2d/api/workspace/projects/{pid}/title [workspace]
+PUT /api/2d/api/workspace/projects/{pid}/voice [workspace]
+POST /api/2d/api/workspace/projects/{pid}/voice/channel-default [workspace]
+POST /api/2d/api/workspace/projects/{pid}/voice/generate [workspace]
+GET /api/2d/api/workspace/session [workspace]
+PUT /api/2d/api/workspace/settings [workspace]
+GET /api/2d/api/workspace/styles [workspace]
+GET /api/2d/api/workspace/voices [workspace]
+GET /api/2d/api/youtube/transcript [legacy]
+GET /api/2d/media/{pid}/{rel:path} [legacy]
+GET /api/2d/style-media/{sid}/{rel:path} [legacy]
+GET /api/forge/v1/LLM.txt [forge]
+GET /api/forge/v1/endpoints [forge]
+GET /api/forge/v1/health [forge]
+GET /api/forge/v1/openapi.json [forge]
+GET /api/forge/v1/presets [forge]
+GET /api/forge/v1/videos [forge]
+POST /api/forge/v1/videos [forge]
+GET /api/forge/v1/videos/{pid} [forge]
+POST /api/forge/v1/videos/{pid}/actions/{action} [forge]
+GET /api/forge/v1/videos/{pid}/download [forge]
+GET /api/forge/v1/videos/{pid}/outputs [forge]
+POST /api/forge/v1/videos/{pid}/review [forge]
+GET /api/forge/v1/videos/{pid}/status [forge]
+POST /api/forge/v1/videos/{pid}/stop [forge]
+GET /api/forge/v1/videos/{pid}/transcript [forge]

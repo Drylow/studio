@@ -1,0 +1,998 @@
+{
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/batch",
+      "public_path": "/api/2d/api/batch",
+      "name": "batch",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/batches",
+      "public_path": "/api/2d/api/batches",
+      "name": "batches",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/channels",
+      "public_path": "/api/2d/api/channels",
+      "name": "list_channels",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels",
+      "public_path": "/api/2d/api/channels",
+      "name": "create_channel",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/channels/{cid}",
+      "public_path": "/api/2d/api/channels/{cid}",
+      "name": "delete_channel",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/channels/{cid}",
+      "public_path": "/api/2d/api/channels/{cid}",
+      "name": "update_channel",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/assign",
+      "public_path": "/api/2d/api/channels/{cid}/assign",
+      "name": "channel_assign",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/clip",
+      "public_path": "/api/2d/api/channels/{cid}/clip",
+      "name": "channel_clip",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/export",
+      "public_path": "/api/2d/api/channels/{cid}/export",
+      "name": "channel_export",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/ideas",
+      "public_path": "/api/2d/api/channels/{cid}/ideas",
+      "name": "channel_ideas",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/open",
+      "public_path": "/api/2d/api/channels/{cid}/open",
+      "name": "channel_open",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/channels/{cid}/plan",
+      "public_path": "/api/2d/api/channels/{cid}/plan",
+      "name": "channel_plan",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/channels/{cid}/resolve-all",
+      "public_path": "/api/2d/api/channels/{cid}/resolve-all",
+      "name": "channel_resolve_all",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/elevenlabs/voices",
+      "public_path": "/api/2d/api/elevenlabs/voices",
+      "name": "eleven_voices",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/local-tts",
+      "public_path": "/api/2d/api/local-tts",
+      "name": "local_tts_status",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/local-tts/start",
+      "public_path": "/api/2d/api/local-tts/start",
+      "name": "local_tts_start",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/local-tts/voices",
+      "public_path": "/api/2d/api/local-tts/voices",
+      "name": "local_tts_add_voice",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/local-tts/voices/{name}",
+      "public_path": "/api/2d/api/local-tts/voices/{name}",
+      "name": "local_tts_del_voice",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/projects",
+      "public_path": "/api/2d/api/projects",
+      "name": "projects",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects",
+      "public_path": "/api/2d/api/projects",
+      "name": "create_project",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/projects/{pid}",
+      "public_path": "/api/2d/api/projects/{pid}",
+      "name": "delete_project",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/projects/{pid}",
+      "public_path": "/api/2d/api/projects/{pid}",
+      "name": "get_project",
+      "family": "legacy"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/projects/{pid}",
+      "public_path": "/api/2d/api/projects/{pid}",
+      "name": "patch_project",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/channel",
+      "public_path": "/api/2d/api/projects/{pid}/channel",
+      "name": "project_channel",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/characters",
+      "public_path": "/api/2d/api/projects/{pid}/characters",
+      "name": "add_character",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/characters/detect",
+      "public_path": "/api/2d/api/projects/{pid}/characters/detect",
+      "name": "detect_characters",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/characters/from-style",
+      "public_path": "/api/2d/api/projects/{pid}/characters/from-style",
+      "name": "add_character_from_style",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/projects/{pid}/characters/{cid}",
+      "public_path": "/api/2d/api/projects/{pid}/characters/{cid}",
+      "name": "del_character",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/projects/{pid}/characters/{cid}",
+      "public_path": "/api/2d/api/projects/{pid}/characters/{cid}",
+      "name": "put_character",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/characters/{cid}/image",
+      "public_path": "/api/2d/api/projects/{pid}/characters/{cid}/image",
+      "name": "character_image",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/context/fetch",
+      "public_path": "/api/2d/api/projects/{pid}/context/fetch",
+      "name": "fetch_context",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/duplicate",
+      "public_path": "/api/2d/api/projects/{pid}/duplicate",
+      "name": "duplicate",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/move",
+      "public_path": "/api/2d/api/projects/{pid}/move",
+      "name": "project_move",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/post",
+      "public_path": "/api/2d/api/projects/{pid}/post",
+      "name": "project_posted",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/render",
+      "public_path": "/api/2d/api/projects/{pid}/render",
+      "name": "render",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/resolve",
+      "public_path": "/api/2d/api/projects/{pid}/resolve",
+      "name": "to_resolve",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/run",
+      "public_path": "/api/2d/api/projects/{pid}/run",
+      "name": "run",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/projects/{pid}/scenes/{sid}",
+      "public_path": "/api/2d/api/projects/{pid}/scenes/{sid}",
+      "name": "delete_scene",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/projects/{pid}/scenes/{sid}",
+      "public_path": "/api/2d/api/projects/{pid}/scenes/{sid}",
+      "name": "put_scene",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/scenes/{sid}/regenerate",
+      "public_path": "/api/2d/api/projects/{pid}/scenes/{sid}/regenerate",
+      "name": "regen_scene",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/scenes/{sid}/upload",
+      "public_path": "/api/2d/api/projects/{pid}/scenes/{sid}/upload",
+      "name": "upload_scene",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/projects/{pid}/script",
+      "public_path": "/api/2d/api/projects/{pid}/script",
+      "name": "put_script",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/script/generate",
+      "public_path": "/api/2d/api/projects/{pid}/script/generate",
+      "name": "gen_script",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/projects/{pid}/script/history",
+      "public_path": "/api/2d/api/projects/{pid}/script/history",
+      "name": "script_history",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/script/restore",
+      "public_path": "/api/2d/api/projects/{pid}/script/restore",
+      "name": "script_restore",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/script/selection",
+      "public_path": "/api/2d/api/projects/{pid}/script/selection",
+      "name": "script_selection",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/shorts",
+      "public_path": "/api/2d/api/projects/{pid}/shorts",
+      "name": "make_shorts",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/stop",
+      "public_path": "/api/2d/api/projects/{pid}/stop",
+      "name": "stop",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/thumbnails",
+      "public_path": "/api/2d/api/projects/{pid}/thumbnails",
+      "name": "thumbnails",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/thumbnails/select",
+      "public_path": "/api/2d/api/projects/{pid}/thumbnails/select",
+      "name": "select_thumb",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/title/generate",
+      "public_path": "/api/2d/api/projects/{pid}/title/generate",
+      "name": "gen_title",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/visuals/images",
+      "public_path": "/api/2d/api/projects/{pid}/visuals/images",
+      "name": "gen_images",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/visuals/prompts",
+      "public_path": "/api/2d/api/projects/{pid}/visuals/prompts",
+      "name": "gen_prompts",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/visuals/resplit",
+      "public_path": "/api/2d/api/projects/{pid}/visuals/resplit",
+      "name": "resplit",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/projects/{pid}/voiceover/generate",
+      "public_path": "/api/2d/api/projects/{pid}/voiceover/generate",
+      "name": "gen_voice",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/resolve/template",
+      "public_path": "/api/2d/api/resolve/template",
+      "name": "resolve_template",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/settings",
+      "public_path": "/api/2d/api/settings",
+      "name": "get_settings",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/settings",
+      "public_path": "/api/2d/api/settings",
+      "name": "put_settings",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state",
+      "public_path": "/api/2d/api/state",
+      "name": "state",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/styles",
+      "public_path": "/api/2d/api/styles",
+      "name": "styles",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/styles",
+      "public_path": "/api/2d/api/styles",
+      "name": "create_style",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/styles/{sid}",
+      "public_path": "/api/2d/api/styles/{sid}",
+      "name": "del_style",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/styles/{sid}",
+      "public_path": "/api/2d/api/styles/{sid}",
+      "name": "get_style",
+      "family": "legacy"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/styles/{sid}",
+      "public_path": "/api/2d/api/styles/{sid}",
+      "name": "put_style",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/styles/{sid}/characters/{cid}/image",
+      "public_path": "/api/2d/api/styles/{sid}/characters/{cid}/image",
+      "name": "style_character_image",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/styles/{sid}/references/youtube",
+      "public_path": "/api/2d/api/styles/{sid}/references/youtube",
+      "name": "add_style_reference_youtube",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/styles/{sid}/refs",
+      "public_path": "/api/2d/api/styles/{sid}/refs",
+      "name": "add_style_ref",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/styles/{sid}/refs/{name}",
+      "public_path": "/api/2d/api/styles/{sid}/refs/{name}",
+      "name": "del_style_ref",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/thumbstudio",
+      "public_path": "/api/2d/api/thumbstudio",
+      "name": "ts_list",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/thumbstudio",
+      "public_path": "/api/2d/api/thumbstudio",
+      "name": "ts_create",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/thumbstudio/{sid}",
+      "public_path": "/api/2d/api/thumbstudio/{sid}",
+      "name": "ts_del",
+      "family": "legacy"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/thumbstudio/{sid}/items/{iid}",
+      "public_path": "/api/2d/api/thumbstudio/{sid}/items/{iid}",
+      "name": "ts_del_item",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/thumbstudio/{sid}/items/{iid}/edit",
+      "public_path": "/api/2d/api/thumbstudio/{sid}/items/{iid}/edit",
+      "name": "ts_edit",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/thumbstudio/{sid}/items/{iid}/to-project",
+      "public_path": "/api/2d/api/thumbstudio/{sid}/items/{iid}/to-project",
+      "name": "ts_to_project",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/thumbstudio/{sid}/items/{iid}/variations",
+      "public_path": "/api/2d/api/thumbstudio/{sid}/items/{iid}/variations",
+      "name": "ts_var",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/thumbstudio/{sid}/more",
+      "public_path": "/api/2d/api/thumbstudio/{sid}/more",
+      "name": "ts_more",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/voice/preview",
+      "public_path": "/api/2d/api/voice/preview",
+      "name": "voice_preview",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/voices/gallery",
+      "public_path": "/api/2d/api/voices/gallery",
+      "name": "voices_gallery",
+      "family": "legacy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/voices/gallery/samples",
+      "public_path": "/api/2d/api/voices/gallery/samples",
+      "name": "voices_gallery_samples",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace",
+      "public_path": "/api/2d/api/workspace",
+      "name": "workspace",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/batches",
+      "public_path": "/api/2d/api/workspace/batches",
+      "name": "batches",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/batches",
+      "public_path": "/api/2d/api/workspace/batches",
+      "name": "batch",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/channels",
+      "public_path": "/api/2d/api/workspace/channels",
+      "name": "profiles",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/management",
+      "public_path": "/api/2d/api/workspace/management",
+      "name": "index",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/management/channels",
+      "public_path": "/api/2d/api/workspace/management/channels",
+      "name": "create_channel",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/management/channels/{cid}",
+      "public_path": "/api/2d/api/workspace/management/channels/{cid}",
+      "name": "update_channel",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/management/presets",
+      "public_path": "/api/2d/api/workspace/management/presets",
+      "name": "create_preset",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/management/presets/{cid}",
+      "public_path": "/api/2d/api/workspace/management/presets/{cid}",
+      "name": "update_preset",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/management/styles",
+      "public_path": "/api/2d/api/workspace/management/styles",
+      "name": "create_style",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/management/styles/{sid}",
+      "public_path": "/api/2d/api/workspace/management/styles/{sid}",
+      "name": "update_style",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/management/styles/{sid}/characters",
+      "public_path": "/api/2d/api/workspace/management/styles/{sid}/characters",
+      "name": "upload_character",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/management/styles/{sid}/characters",
+      "public_path": "/api/2d/api/workspace/management/styles/{sid}/characters",
+      "name": "update_character",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/management/styles/{sid}/references",
+      "public_path": "/api/2d/api/workspace/management/styles/{sid}/references",
+      "name": "reference",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/models",
+      "public_path": "/api/2d/api/workspace/models",
+      "name": "models",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/models/refresh",
+      "public_path": "/api/2d/api/workspace/models/refresh",
+      "name": "refresh_models",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/performance",
+      "public_path": "/api/2d/api/workspace/performance",
+      "name": "performance",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/performance",
+      "public_path": "/api/2d/api/workspace/performance",
+      "name": "update_performance",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/profiles",
+      "public_path": "/api/2d/api/workspace/profiles",
+      "name": "profiles",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/profiles/{cid}",
+      "public_path": "/api/2d/api/workspace/profiles/{cid}",
+      "name": "update_profile",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/profiles/{cid}/references",
+      "public_path": "/api/2d/api/workspace/profiles/{cid}/references",
+      "name": "profile_reference",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/projects",
+      "public_path": "/api/2d/api/workspace/projects",
+      "name": "projects",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects",
+      "public_path": "/api/2d/api/workspace/projects",
+      "name": "create_project",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/projects/{pid}",
+      "public_path": "/api/2d/api/workspace/projects/{pid}",
+      "name": "project",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/images/generate",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/images/generate",
+      "name": "generate_images",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/images/prepare",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/images/prepare",
+      "name": "start",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/images/stop",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/images/stop",
+      "name": "stop_images",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/projects/{pid}/locations",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/locations",
+      "name": "location_registry",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/references",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/references",
+      "name": "project_reference",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/render",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/render",
+      "name": "render_project",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/review",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/review",
+      "name": "review",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/projects/{pid}/scenes",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/scenes",
+      "name": "scenes",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/scenes/{sid}/generate",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/scenes/{sid}/generate",
+      "name": "generate_scene",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/projects/{pid}/scenes/{sid}/references/{index}",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/scenes/{sid}/references/{index}",
+      "name": "scene_reference",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/projects/{pid}/script",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/script",
+      "name": "script",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/script/apply-draft",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/script/apply-draft",
+      "name": "adopt",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/script/generate",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/script/generate",
+      "name": "write",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/projects/{pid}/title",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/title",
+      "name": "title",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/projects/{pid}/voice",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/voice",
+      "name": "save_voice",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/voice/channel-default",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/voice/channel-default",
+      "name": "save_default",
+      "family": "workspace"
+    },
+    {
+      "method": "POST",
+      "path": "/api/workspace/projects/{pid}/voice/generate",
+      "public_path": "/api/2d/api/workspace/projects/{pid}/voice/generate",
+      "name": "generate_voice",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/session",
+      "public_path": "/api/2d/api/workspace/session",
+      "name": "local_session",
+      "family": "workspace"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/workspace/settings",
+      "public_path": "/api/2d/api/workspace/settings",
+      "name": "settings",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/styles",
+      "public_path": "/api/2d/api/workspace/styles",
+      "name": "styles",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/workspace/voices",
+      "public_path": "/api/2d/api/workspace/voices",
+      "name": "voices",
+      "family": "workspace"
+    },
+    {
+      "method": "GET",
+      "path": "/api/youtube/transcript",
+      "public_path": "/api/2d/api/youtube/transcript",
+      "name": "yt_transcript",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/media/{pid}/{rel:path}",
+      "public_path": "/api/2d/media/{pid}/{rel:path}",
+      "name": "media",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/style-media/{sid}/{rel:path}",
+      "public_path": "/api/2d/style-media/{sid}/{rel:path}",
+      "name": "style_media",
+      "family": "legacy"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/LLM.txt",
+      "public_path": "/api/forge/v1/LLM.txt",
+      "name": "llm",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/endpoints",
+      "public_path": "/api/forge/v1/endpoints",
+      "name": "endpoints",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/health",
+      "public_path": "/api/forge/v1/health",
+      "name": "health",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/openapi.json",
+      "public_path": "/api/forge/v1/openapi.json",
+      "name": "schema",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/presets",
+      "public_path": "/api/forge/v1/presets",
+      "name": "presets",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos",
+      "public_path": "/api/forge/v1/videos",
+      "name": "videos",
+      "family": "forge"
+    },
+    {
+      "method": "POST",
+      "path": "/api/forge/v1/videos",
+      "public_path": "/api/forge/v1/videos",
+      "name": "create",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos/{pid}",
+      "public_path": "/api/forge/v1/videos/{pid}",
+      "name": "project",
+      "family": "forge"
+    },
+    {
+      "method": "POST",
+      "path": "/api/forge/v1/videos/{pid}/actions/{action}",
+      "public_path": "/api/forge/v1/videos/{pid}/actions/{action}",
+      "name": "action",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos/{pid}/download",
+      "public_path": "/api/forge/v1/videos/{pid}/download",
+      "name": "download",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos/{pid}/outputs",
+      "public_path": "/api/forge/v1/videos/{pid}/outputs",
+      "name": "outputs",
+      "family": "forge"
+    },
+    {
+      "method": "POST",
+      "path": "/api/forge/v1/videos/{pid}/review",
+      "public_path": "/api/forge/v1/videos/{pid}/review",
+      "name": "review",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos/{pid}/status",
+      "public_path": "/api/forge/v1/videos/{pid}/status",
+      "name": "progress",
+      "family": "forge"
+    },
+    {
+      "method": "POST",
+      "path": "/api/forge/v1/videos/{pid}/stop",
+      "public_path": "/api/forge/v1/videos/{pid}/stop",
+      "name": "stop",
+      "family": "forge"
+    },
+    {
+      "method": "GET",
+      "path": "/api/forge/v1/videos/{pid}/transcript",
+      "public_path": "/api/forge/v1/videos/{pid}/transcript",
+      "name": "transcript",
+      "family": "forge"
+    }
+  ]
+}
