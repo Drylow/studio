@@ -4,6 +4,7 @@ import copy
 import hashlib
 import io
 import uuid
+from collections import OrderedDict
 
 from fastapi import APIRouter, HTTPException
 from PIL import Image
@@ -17,6 +18,26 @@ _active_projects = set()
 _active_generations = {}
 _batch_permits = {}
 _batch_tasks = {}
+_reference_payloads = OrderedDict()
+_reference_payload_bytes = 0
+_REFERENCE_PAYLOAD_LIMIT = 64 * 1024 * 1024
+
+
+def _reference_payload(path, source_hash):
+    """Reuse upload encoding only after the caller verifies the exact source bytes."""
+    global _reference_payload_bytes
+    key = (str(path.resolve()), source_hash)
+    if key in _reference_payloads:
+        _reference_payloads.move_to_end(key)
+        return _reference_payloads[key]
+    payload = llm.png_for_upload(path)
+    if len(payload) <= _REFERENCE_PAYLOAD_LIMIT:
+        while _reference_payloads and _reference_payload_bytes + len(payload) > _REFERENCE_PAYLOAD_LIMIT:
+            _, previous = _reference_payloads.popitem(last=False)
+            _reference_payload_bytes -= len(previous)
+        _reference_payloads[key] = payload
+        _reference_payload_bytes += len(payload)
+    return payload
 
 
 def batch_concurrency(provider, phase):
@@ -119,7 +140,7 @@ def _prepare(p, s, body):
         source_hash = _digest(path)
         if ref.get("sha256") and source_hash != ref["sha256"]:
             raise HTTPException(409, "A reference has been modified since it was prepared")
-        payload = llm.png_for_upload(path)
+        payload = _reference_payload(path, source_hash)
         if _digest(path) != source_hash:
             raise HTTPException(409, "A reference changed while it was being read")
         payloads.append(payload)

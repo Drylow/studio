@@ -70,6 +70,8 @@ Project screen reads use `GET /api/workspace/projects/{id}?view=ui`, excluding a
 
 Images and review screens render 24 shots per page to avoid constructing hundreds of image cards, reference lists and prompt editors at once. Pagination is local and preserves the entire project for generation/review checks. Off-page prompts remain unchanged when saving; page changes refuse unsaved edits.
 
+Image execution reuses reference upload encoding in a bounded 64 MiB memory cache, keyed by resolved file path and verified source SHA256. Every call still reads and checks the source file before and after obtaining its payload. Changed bytes cause a fresh encoding; prompts, reference order, model choice and review evidence are untouched. This avoids repeatedly encoding identical character/drawing/location references in large shot batches.
+
 **Channels & presets → Preset & settings → Background mode** offers two independent scenery choices:
 
 - **Free backgrounds** (`free`, default): every image can use a different setting.
