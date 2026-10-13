@@ -1,0 +1,452 @@
+{
+  "title": "Chess Analysis - Attack on Titan | Eren VS Reiner",
+  "edition": "V2",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_seconds": 433.1,
+  "frames": 12993,
+  "source_sha256": "5c5919be31cc880d2d1c373c2aa3d9e2a333c2c2ad30ef6e39b6253059c4f0f8",
+  "final_file": {
+    "filename": "EREN-VS-REINER-FINAL.mp4",
+    "bytes": 161930252,
+    "sha256": "ed652b917666451e39bd96ab5a6ba7dd1f654f2599d48e61d61e424689820844",
+    "picture_stream_unchanged": true,
+    "picture_stream_sha256": "SHA256=123549a3d89d3b0aebf47550913e61b5d06a360b6689855ddd51b29bc3112dc2",
+    "source_only_filter": "acompressor=threshold=0.125:ratio=2.5:attack=20:release=220:makeup=1.584893,alimiter=limit=0.794328:level=false:latency=true",
+    "guide_analysis_outro_pcm_unchanged": true,
+    "true_peak_dbfs": -1.9,
+    "integrated_loudness_lufs": -19.0,
+    "full_decode_passed": true,
+    "source_ranges_seconds": [
+      [
+        16.0,
+        23.466666666666665
+      ],
+      [
+        30.466666666666665,
+        75.03333333333333
+      ],
+      [
+        82.03333333333333,
+        102.43333333333334
+      ],
+      [
+        109.43333333333334,
+        206.83333333333334
+      ],
+      [
+        213.83333333333334,
+        275.1666666666667
+      ],
+      [
+        282.1666666666667,
+        342.06666666666666
+      ],
+      [
+        349.06666666666666,
+        402.26666666666665
+      ],
+      [
+        409.26666666666665,
+        421.1
+      ]
+    ]
+  },
+  "native_render_sha256": "41b8046c69cb05bc8053067e9f0943b4cd2c99d07e4a7ef0dcc6677e04eae03f",
+  "visual_review": {
+    "frames": 12993,
+    "sheets": [
+      "frames-00.jpg",
+      "frames-01.jpg",
+      "frames-02.jpg",
+      "frames-03.jpg",
+      "frames-04.jpg",
+      "frames-05.jpg",
+      "frames-06.jpg",
+      "frames-07.jpg",
+      "frames-08.jpg",
+      "frames-09.jpg",
+      "frames-10.jpg",
+      "frames-11.jpg",
+      "frames-12.jpg",
+      "frames-13.jpg",
+      "frames-14.jpg",
+      "frames-15.jpg",
+      "frames-16.jpg",
+      "frames-17.jpg",
+      "frames-18.jpg",
+      "frames-19.jpg",
+      "frames-20.jpg",
+      "frames-21.jpg",
+      "frames-22.jpg",
+      "frames-23.jpg",
+      "frames-24.jpg",
+      "frames-25.jpg",
+      "frames-26.jpg",
+      "frames-27.jpg",
+      "frames-28.jpg",
+      "frames-29.jpg",
+      "frames-30.jpg",
+      "frames-31.jpg",
+      "frames-32.jpg",
+      "frames-33.jpg",
+      "frames-34.jpg",
+      "frames-35.jpg",
+      "frames-36.jpg",
+      "frames-37.jpg",
+      "frames-38.jpg",
+      "frames-39.jpg",
+      "frames-40.jpg",
+      "frames-41.jpg",
+      "frames-42.jpg",
+      "frames-43.jpg",
+      "frames-44.jpg",
+      "frames-45.jpg",
+      "frames-46.jpg",
+      "frames-47.jpg",
+      "frames-48.jpg",
+      "frames-49.jpg",
+      "frames-50.jpg",
+      "frames-51.jpg",
+      "frames-52.jpg",
+      "frames-53.jpg",
+      "frames-54.jpg",
+      "frames-55.jpg",
+      "frames-56.jpg",
+      "frames-57.jpg",
+      "frames-58.jpg",
+      "frames-59.jpg",
+      "frames-60.jpg",
+      "frames-61.jpg",
+      "frames-62.jpg",
+      "frames-63.jpg",
+      "frames-64.jpg"
+    ],
+    "no_frames_skipped_in_contact_sheets": true,
+    "native_frames": [
+      3,
+      10,
+      18,
+      24.983333000000002,
+      28.983333000000002,
+      30.283333000000002,
+      30.533333000000002,
+      76.533333,
+      80.533333,
+      81.833333,
+      82.083333,
+      103.933333,
+      107.933333,
+      109.233333,
+      109.483333,
+      208.333333,
+      212.333333,
+      213.63333300000002,
+      213.88333300000002,
+      276.683333,
+      280.683333,
+      281.983333,
+      282.233333,
+      343.583333,
+      347.583333,
+      348.883333,
+      349.133333,
+      403.783333,
+      407.783333,
+      409.08333300000004,
+      409.33333300000004,
+      420.48333333333335,
+      420.6833333333334,
+      420.9333333333334,
+      421.1833333333334,
+      423.08333333333337,
+      431.08333333333337,
+      432.98333333333335
+    ],
+    "sfx_reading_tails": [
+      {
+        "annotation": 0,
+        "reading_tail_seconds": 3.42,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 1,
+        "reading_tail_seconds": 3.08,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 2,
+        "reading_tail_seconds": 3.14,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 3,
+        "reading_tail_seconds": 3.14,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 4,
+        "reading_tail_seconds": 2.84,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 5,
+        "reading_tail_seconds": 3.28,
+        "reading_tail_peak": 0
+      },
+      {
+        "annotation": 6,
+        "reading_tail_seconds": 3.12,
+        "reading_tail_peak": 0
+      }
+    ],
+    "output_sha256": "41b8046c69cb05bc8053067e9f0943b4cd2c99d07e4a7ef0dcc6677e04eae03f",
+    "bytes": 161922207,
+    "visual_review_complete": true,
+    "reviewed_sheets": [
+      "frames-00.jpg",
+      "frames-01.jpg",
+      "frames-02.jpg",
+      "frames-03.jpg",
+      "frames-04.jpg",
+      "frames-05.jpg",
+      "frames-06.jpg",
+      "frames-07.jpg",
+      "frames-08.jpg",
+      "frames-09.jpg",
+      "frames-10.jpg",
+      "frames-11.jpg",
+      "frames-12.jpg",
+      "frames-13.jpg",
+      "frames-14.jpg",
+      "frames-15.jpg",
+      "frames-16.jpg",
+      "frames-17.jpg",
+      "frames-18.jpg",
+      "frames-19.jpg",
+      "frames-20.jpg",
+      "frames-21.jpg",
+      "frames-22.jpg",
+      "frames-23.jpg",
+      "frames-24.jpg",
+      "frames-25.jpg",
+      "frames-26.jpg",
+      "frames-27.jpg",
+      "frames-28.jpg",
+      "frames-29.jpg",
+      "frames-30.jpg",
+      "frames-31.jpg",
+      "frames-32.jpg",
+      "frames-33.jpg",
+      "frames-34.jpg",
+      "frames-35.jpg",
+      "frames-36.jpg",
+      "frames-37.jpg",
+      "frames-38.jpg",
+      "frames-39.jpg",
+      "frames-40.jpg",
+      "frames-41.jpg",
+      "frames-42.jpg",
+      "frames-43.jpg",
+      "frames-44.jpg",
+      "frames-45.jpg",
+      "frames-46.jpg",
+      "frames-47.jpg",
+      "frames-48.jpg",
+      "frames-49.jpg",
+      "frames-50.jpg",
+      "frames-51.jpg",
+      "frames-52.jpg",
+      "frames-53.jpg",
+      "frames-54.jpg",
+      "frames-55.jpg",
+      "frames-56.jpg",
+      "frames-57.jpg",
+      "frames-58.jpg",
+      "frames-59.jpg",
+      "frames-60.jpg",
+      "frames-61.jpg",
+      "frames-62.jpg",
+      "frames-63.jpg",
+      "frames-64.jpg"
+    ],
+    "reviewed_native_groups": [
+      "native-review-0.jpg",
+      "native-review-1.jpg",
+      "native-review-2.jpg",
+      "native-review-3.jpg",
+      "native-review-4.jpg",
+      "native-review-5.jpg",
+      "native-review-6.jpg"
+    ],
+    "reviewed_original_size": [
+      "native-80.533.png",
+      "native-212.333.png",
+      "native-407.783.png",
+      "native-423.083.png"
+    ],
+    "reviewed_at": "2026-10-13T17:44:03.873213+02:00",
+    "final_audio_receipt": {
+      "filename": "EREN-VS-REINER-FINAL.mp4",
+      "bytes": 161930252,
+      "sha256": "ed652b917666451e39bd96ab5a6ba7dd1f654f2599d48e61d61e424689820844",
+      "picture_stream_unchanged": true,
+      "picture_stream_sha256": "SHA256=123549a3d89d3b0aebf47550913e61b5d06a360b6689855ddd51b29bc3112dc2",
+      "source_only_filter": "acompressor=threshold=0.125:ratio=2.5:attack=20:release=220:makeup=1.584893,alimiter=limit=0.794328:level=false:latency=true",
+      "guide_analysis_outro_pcm_unchanged": true,
+      "true_peak_dbfs": -1.9,
+      "integrated_loudness_lufs": -19.0,
+      "full_decode_passed": true,
+      "source_ranges_seconds": [
+        [
+          16.0,
+          23.466666666666665
+        ],
+        [
+          30.466666666666665,
+          75.03333333333333
+        ],
+        [
+          82.03333333333333,
+          102.43333333333334
+        ],
+        [
+          109.43333333333334,
+          206.83333333333334
+        ],
+        [
+          213.83333333333334,
+          275.1666666666667
+        ],
+        [
+          282.1666666666667,
+          342.06666666666666
+        ],
+        [
+          349.06666666666666,
+          402.26666666666665
+        ],
+        [
+          409.26666666666665,
+          421.1
+        ]
+      ]
+    }
+  },
+  "counts": {
+    "brilliant": 3,
+    "great": 1,
+    "book": 2,
+    "blunder": 1
+  },
+  "sides": {
+    "white": "Eren",
+    "black": "Reiner"
+  },
+  "annotation_seconds": 7,
+  "music_only_in_guide": true,
+  "no_voiceover": true,
+  "english_dub": true,
+  "outro": "native recap12s, no Subscribe, final fade",
+  "source_limitations": "Compressed broadcast copies. Adult Swim logo retained under explicit user instruction; source softness and small borders vary.",
+  "youtube_checks_performed": false,
+  "thumbnails": [
+    {
+      "base_file": "A-duel.base.png",
+      "base_sha256": "3b9b78bc5839410fd46e15ec0a661316a7d21e8a9dc783c140024aa2446ddc7e",
+      "output_file": "A-duel.jpg",
+      "output_sha256": "ecd46319f8ce2cbf0a8c384c773b05b2241192de233ea77dc187eef1dec8d5c6",
+      "bytes": 243914,
+      "width": 1280,
+      "height": 720,
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "crop": {
+        "x": 0,
+        "y": -0.19138755980861788,
+        "width": 1280,
+        "height": 720.3827751196172
+      },
+      "placements": [
+        {
+          "x": 24,
+          "y": 20,
+          "width": 192,
+          "height": 202.66666666666666,
+          "rotation": 10
+        },
+        {
+          "x": 1064,
+          "y": 20,
+          "width": 192,
+          "height": 202.66666666666666,
+          "rotation": -10
+        }
+      ],
+      "changesOutsideBadges": 0,
+      "changesOutsideCorners": 0,
+      "icons": [
+        {
+          "id": "brilliant",
+          "file": "assets/chesscom/brilliant.svg",
+          "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+        },
+        {
+          "id": "blunder",
+          "file": "assets/chesscom/blunder.svg",
+          "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+        }
+      ],
+      "comparison_stage": "Before lossy JPEG encoding"
+    },
+    {
+      "base_file": "B-manga.base.png",
+      "base_sha256": "8c85a0bbc2aa3cd7e42856148d50260398fceedc9dfddd96faee88667c7cbae9",
+      "output_file": "B-manga.jpg",
+      "output_sha256": "bb4eb5710c5cecbb12ecc7fe6066e09d8d4e924b544bd2c3935cf9ee542c8a68",
+      "bytes": 375438,
+      "width": 1280,
+      "height": 720,
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "crop": {
+        "x": 0,
+        "y": -0.19138755980861788,
+        "width": 1280,
+        "height": 720.3827751196172
+      },
+      "placements": [
+        {
+          "x": 24,
+          "y": 20,
+          "width": 192,
+          "height": 202.66666666666666,
+          "rotation": 10
+        },
+        {
+          "x": 1064,
+          "y": 20,
+          "width": 192,
+          "height": 202.66666666666666,
+          "rotation": -10
+        }
+      ],
+      "changesOutsideBadges": 0,
+      "changesOutsideCorners": 0,
+      "icons": [
+        {
+          "id": "brilliant",
+          "file": "assets/chesscom/brilliant.svg",
+          "sha256": "ca8994be1789bc07e9cec13f80525fc45cde340c73020e608efec97164852390"
+        },
+        {
+          "id": "blunder",
+          "file": "assets/chesscom/blunder.svg",
+          "sha256": "2f40becb1c129b671095e2bf4d0edbdf0b97959d781f338aee04e09d0167a311"
+        }
+      ],
+      "comparison_stage": "Before lossy JPEG encoding"
+    }
+  ]
+}

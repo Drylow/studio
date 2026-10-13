@@ -372,3 +372,26 @@ contrôlées sur 47 planches et vingt captures à taille native. Livraison :
 Projet local `work/chess-remotion` sous le dossier `j`, exports et contrôles
 dans `exports-2026-10-12`. PGN et reçus sauvegardés dans
 `experiments/board-replays/batches/2026-10-12/`. Aucune publication effectuée.
+
+
+## 13 octobre 2026 — Chess Analysis, Eren VS Reiner
+
+Attack on Titan : confrontation dans la cave de Liberio, doublage anglais,
+sans voiceover, outil conversation-chess conservé. Montage final V2 : 7 min
+13,1 s, 1920 × 1080 / 30 fps. Sept analyses : Eren blanc, Reiner noir,
+pions selon le camp, pauses après les répliques, replay muet, guide16s
+avec Sneaky Snitch et bilan natif12s sans Subscribe. Le passage enregistré
+avec curseur/chargement a été remplacé par une acquisition indépendante1080p.
+Logo Adult Swim conservé selon l'autorisation explicite de l'utilisateur.
+
+Contrôle des12 993 images sur65 planches,38 captures clés et cadres natifs.
+Décodage intégral, flux image inchangé après finition sonore limitée aux
+scènes : −19 LUFS, pic réel −1,9dBFS. Deux miniatures anime/manga avec les
+SVG Chess.com originaux inclinés. Projet Kdenlive portable,51 médias vérifiés.
+Titre, description courte et description avec attribution musicale livrés.
+
+Livraison : `outputs/chess-eren-reiner-2026-10-13/`.
+Timeline, reçus et reprise : `experiments/conversation-chess/ATTACK_ON_TITAN.md`,
+`episodes/eren-vs-reiner*`, `thumbnails/eren-reiner/` dans ce même outil.
+Sources et contrôles détaillés privés dans `work/`. Aucun upload ou contrôle
+Content ID effectué pour cet épisode ; la validation porte sur le fichier local.
