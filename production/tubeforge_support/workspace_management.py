@@ -40,6 +40,10 @@ def _save_channel(c):
 
 
 def _update_style(s, body):
+    if 'background_mode' in body:
+        if body['background_mode'] not in ('free', 'consistent'):
+            raise HTTPException(422, 'Choose free backgrounds or consistent locations')
+        s['visuals']['background_mode'] = body['background_mode']
     if "image_provider" in body:
         if body["image_provider"] not in ("cli_proxy", "google_flow"):
             raise HTTPException(422, "Unknown image provider")
@@ -177,6 +181,7 @@ def install(app):
         s["id"] = "style-" + uuid.uuid4().hex[:12]
         s.update(archived=False, created=now(), workspace_managed=True)
         if not body.get("base_id"):
+            s['visuals']['background_mode'] = 'free'
             for key in ("workspace_cast_registry", "workspace_main_character", "workspace_character_references"):
                 s.pop(key, None)
             s["workspace_references"] = []

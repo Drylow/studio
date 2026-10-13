@@ -20,6 +20,20 @@ from app.util import write_json
 ORIGINAL_CHAT = llm.chat
 
 
+@pytest.fixture(autouse=True)
+def isolate_camera_plan(monkeypatch):
+    """Existing prompt tests isolate the new prepass; its real contract has separate tests."""
+    async def plan(p, shots, model):
+        views = {key: {'description': 'Same cabin seen from ' + key, 'angle': key}
+                 for key in ('entrance', 'side-wall', 'opposite-wall')}
+        return {'locations': {'cabin': {'description': 'Wooden cabin', 'layout': 'Door on north wall',
+                'anchors': ['Door on north wall'], 'views': views}}, 'shots': [
+                {'id': s['id'], 'location_id': 'cabin', 'location_view': list(views)[i % 3],
+                 'shot_type': 'wide' if i % 2 else 'medium', 'visual_beat': 'A new exact narrated action'}
+                for i, s in enumerate(shots)]}
+    monkeypatch.setattr(planning.locations, 'plan', plan)
+
+
 def fictional(workspace, script="You pick up the axe.\nYou walk to the door."):
     client = workspace[0]
     p = store.get_project(create(client, custom_script=script)["id"])

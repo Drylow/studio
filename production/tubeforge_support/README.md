@@ -15,6 +15,7 @@ Pour un nouveau PC ou le collegue qui produit des aliens, commencer par [README_
 | `workspace_planning.py` | Preparation des plans/prompting du parcours general ; ne pas l'utiliser pour reecrire des prompts diriges par Codex |
 | `workspace_generation.py` | Generation individuelle et lot, test des trois premieres images, suite, stop, routes de rendu |
 | `workspace_characters.py` | References et variantes des personnages |
+| `workspace_locations.py` | Deux modes de decor, registre des lieux et vues nommees, plan de camera global et audit de variete |
 | `workspace_visuals.py`, `workspace_composition.py` | Contrats visuels, composition, proportions et protection contre doublons |
 | `google_flow.py` | Transport Google Flow/useapi et comptes, distinct du chemin CLI Proxy |
 | `studio_bridge.py` | Pont avec les services du depot |
@@ -58,6 +59,49 @@ La logique de references peut preparer/envoyer des fichiers, mais la coherence e
 Les deux premiers episodes Survivor sont aussi documentes dans `README_REPRISE.md` : plans manuels compiles/importes par `production/tubeforge_survivor_episode.py`, montage lance par l'API TubeForge, controle et clips CapCut via `production/tubeforge_survivor_export.py`. La livraison est dans `output/videos/survivor-first-episodes-2026-10-12/`. Les reviews de cette production sont des inspections deleguees a Codex, distinctes d'une validation humaine. Aucun appel supplementaire de generation ni publication n'est necessaire pour recuperer les fichiers termines.
 
 Les integrations disponibles ne constituent pas une autorisation de changer de fournisseur. Les deux derniers kits Survivor emploient le CLI Proxy configure ; God of War utilisait Google Flow. Preserve ces choix par projet.
+
+## Background modes — 13 October 2026
+
+**Styles → Edit → Background mode** offers two independent scenery choices:
+
+- **Free backgrounds** (`free`, default): every image can use a different setting.
+  No location registry or camera continuity is imposed. Character identity references
+  and explicit costume variants still apply, using the same character engine.
+- **Consistent locations** (`consistent`, opt-in): the automated fictional planning
+  path first plans concrete spaces, fixed world-space landmarks and named viewpoints
+  across the WHOLE narration, then writes prompt batches against that shared plan.
+  Recurring spaces used in six or more shots need three physical viewpoints;
+  changing a crop or shot size alone does not qualify. More than two consecutive
+  shots from the same viewpoint is rejected before publishing a partial plan.
+  Every shot also contains a new narrated action, object, reaction or consequence.
+
+The choice is saved in the style, copied into a new project's visual settings and
+style snapshot, and preserved when the shared style changes later. Existing
+projects/media are not migrated or regenerated. New blank styles default to free;
+duplicating a style preserves its selected mode. No supplier or model is changed.
+
+`workspace_location_plan` stores the planned geometry, viewpoints and visual beats;
+`workspace_camera_audit` records viewpoint distribution, exposed in the Images tab.
+Planning text is not proof of visual consistency: inspect generated images.
+
+For reference-backed consistency, import inspected master/view files using the
+existing project reference upload, then save a `workspace_location_registry` via
+`PUT /api/workspace/projects/{pid}/locations` with `previous_hash` equal to the
+project's `location_registry_hash`. Each location has `description`, `layout`,
+`anchors`, a verified `master`, and named `views` with `description`, physical
+`angle`, and an optional verified `reference`. Reference records specify owner,
+path, SHA256, location_id and role `location-master` or `location-view`; a view
+reference also specifies `location_view`. This API performs no image generation.
+No reference is marked visually approved by planning. The member must actually
+inspect an image before recording `review_state=verified`.
+
+When registered, authoring binds the same master plus the chosen approved view
+before execution. The generator sends the saved reference order without swapping
+views, rewriting prompts or truncating files. Changed geometry, camera metadata
+or file hashes invalidate review/generation evidence. Without registered images,
+the camera plan is a text layout guide, not a verified image reference kit.
+Codex-directed/historical styles still keep manual scene authoring; this update
+does not start their automatic writer or modify a completed episode.
 
 ## References personnages par style
 

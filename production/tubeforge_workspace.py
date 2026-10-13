@@ -22,7 +22,7 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
     web = root / 'app/web'
@@ -126,6 +126,9 @@ def deploy(root, seed=True):
         'async def do_thumbnails(p: dict, count: int | None = None, instruction: str = "") -> None:\n'
         '    if p.get("codex_directed"):\n'
         '        raise RuntimeError("Authored thumbnail: automatic concepts are disabled")\n')
+    old_ui = web / 'app.js'
+    old_ui.write_text(old_ui.read_text(encoding='utf-8').replace('Export disponible - a verifier',
+                      'Export available - needs review'), encoding='utf-8', newline='\n')
     replace_once(root, 'app/web/app.js',
         "  if (p.render) return '<span class=\"chip ok\">\u2713 Vid\u00e9o pr\u00eate</span>';",
         "  if (p.render) return '<span class=\"chip\">Export available - needs review</span>';"
@@ -155,6 +158,7 @@ def deploy(root, seed=True):
                            ('workspace_management_tests.py', 'test_workspace_management.py'),
                            ('workspace_voice_tests.py', 'test_workspace_voice.py'),
                            ('workspace_planning_tests.py', 'test_workspace_planning.py'),
+                           ('workspace_locations_tests.py', 'test_workspace_locations.py'),
                            ('workspace_characters_tests.py', 'test_workspace_characters.py'),
                            ('workspace_writing_tests.py', 'test_workspace_writing.py'),
                            ('workspace_access_tests.py', 'test_workspace_access.py'),

@@ -180,6 +180,7 @@ def _styles(include_archived=False):
                         "archived": bool(style.get("archived")),
                         "prompt": visuals.get("art_style", ""),
                         "background_direction": visuals.get("background_direction", ""),
+                        "background_mode": visuals.get('background_mode', 'free'),
                         "thumbnail_prompt": style.get("thumbnail", {}).get("style", ""),
                         "video_preview_url": f"/style-media/{sid}/{visuals['preview']}" if visuals.get("preview") else None,
                         "thumbnail_preview_url": f"/style-media/{sid}/{style['thumbnail']['preview']}" if style.get("thumbnail", {}).get("preview") else None,
@@ -351,6 +352,7 @@ def _create(prepared, catalog):
                                  "thumbnail.image_provider": prepared["image_provider"],
                                  "thumbnail.model": models["image"], "thumbnail.count": 0,
                                  "visuals.auto_characters": False, "visuals.continuity": "off",
+                                 "visuals.background_mode": selected_style.get('visuals', {}).get('background_mode', 'free'),
                              })
     # A visual preset must not replace the channel's configured voice provider.
     p["settings"]["voice"] = copy.deepcopy(channel_style["voice"])
@@ -376,6 +378,7 @@ def _create(prepared, catalog):
                              "selected_at": now(),
                              "prompt": selected_style["visuals"].get("art_style", ""),
                              "background_direction": selected_style["visuals"].get("background_direction", "")})
+    p['style_snapshot']['background_mode'] = p['settings']['visuals']['background_mode']
     if p.get("script_history"):
         p["script_history"][-1]["text"] = prepared["script"]
     if selected_style.get("workspace_cast_registry"):
@@ -412,10 +415,16 @@ def _scene_evidence(p, s):
             return None
         refs.append({"path": path, "owner": owner, "sha256": digest,
                      "role": ref.get("role") if isinstance(ref, dict) else None})
-    from . import workspace_characters
+    from . import workspace_characters, workspace_locations
     authoring_keys = ("text", "prompt", "start", "end", "location_id", "characters", "references", "motion", "codex_receipt")
     if "character_variants" in s:
         authoring_keys += ("character_variants",)
+    authoring_keys += tuple(key for key in workspace_locations.SCENE_KEYS if key in s)
+    if workspace_locations.mode(p) == 'consistent' and workspace_locations.registry(p):
+        try:
+            workspace_locations.validate(p, s)
+        except HTTPException:
+            return None
     result = {"image_sha256": image_hash, "references": refs,
               "authoring_sha256": _hash({k: s.get(k) for k in authoring_keys}),
               "script_sha256": _hash(p.get("script")), "models_sha256": _hash(p.get("model_snapshot"))}
@@ -425,6 +434,8 @@ def _scene_evidence(p, s):
         result["cast_registry_sha256"] = _hash({
             name: entries[name]["variants"].get(key)
             for name, key in selected_variants.items() if name in entries})
+    if workspace_locations.mode(p) == 'consistent' and workspace_locations.registry(p):
+        result['location_registry_sha256'] = _hash(workspace_locations.summary(p).get(s.get('location_id')))
     return result
 
 
@@ -549,7 +560,11 @@ def _duration_info(p):
 
 
 def _full(p):
+    from . import workspace_locations
     out = copy.deepcopy(p)
+    if any(s.get('location_view') for s in p.get('scenes') or []):
+        out['workspace_camera_audit'] = workspace_locations.audit(p['scenes'])
+    out['location_registry_hash'] = _hash(p.get('workspace_location_registry') or {})
     out['owner_id'] = owner_of(p)
     out.pop("script_history", None)
     out.pop("video_context", None)
@@ -858,7 +873,8 @@ def install(app):
             image = row.get("image")
             if image and not _file_digest(store.project_dir(pid), image):
                 raise HTTPException(422, "The shot image is missing or outside the project folder")
-            allowed = ("id", "text", "prompt", "location_id", "characters", "character_variants", "references", "start", "end", "image", "motion")
+            from . import workspace_locations
+            allowed = ("id", "text", "prompt", "location_id", "characters", "character_variants", "references", "start", "end", "image", "motion") + workspace_locations.SCENE_KEYS
             scene = {k: copy.deepcopy(row[k]) for k in allowed if k in row}
             # Presentation URLs are not authoring input and cannot affect review hashes.
             scene["references"] = [{k: v for k, v in ref.items() if k != "url"} for ref in scene["references"]]
@@ -879,6 +895,7 @@ def install(app):
                          human_review=old.get(row["id"], {}).get("human_review"))
             if previous.get("prompt_author") == "configured_text_proxy" and scene.get("prompt") == previous.get("prompt"):
                 scene["prompt_author"] = "configured_text_proxy"
+            workspace_locations.validate(p, scene)
             output.append(scene)
         p.update(scenes=output, render=None, prompts_approved=False)
         p["steps"]["visuals"].update(state="done" if output and all(s.get("image") for s in output) else "idle")
@@ -910,6 +927,23 @@ def install(app):
             s["human_review"] = record
         else:
             p.setdefault("human_reviews", {})[scope] = record
+        return _full(store.save_project(p))
+
+    @router.put('/projects/{pid}/locations')
+    async def location_registry(pid: str, body: dict):
+        from . import workspace_locations
+        p = _project(pid, True)
+        if body.get('previous_hash') != _hash(p.get('workspace_location_registry') or {}):
+            raise HTTPException(409, 'The location registry changed; refresh before saving')
+        proposed = copy.deepcopy(p)
+        proposed['workspace_location_registry'] = body.get('locations')
+        if not isinstance(body.get('locations'), dict):
+            raise HTTPException(422, 'Enter the complete authored location registry')
+        workspace_locations.check_registry(proposed)
+        # Preserve selected source media and old receipts. Changed geometry invalidates review evidence.
+        if p.get('render'):
+            p.setdefault('render_history', []).append(copy.deepcopy(p['render']))
+        p.update(workspace_location_registry=copy.deepcopy(body['locations']), render=None)
         return _full(store.save_project(p))
 
     @router.post("/projects/{pid}/references")
