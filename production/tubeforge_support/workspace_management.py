@@ -68,6 +68,14 @@ def _update_style(s, body):
         s["workspace_references"] = [{k: v for k, v in current[p].items() if k not in ("url", "exists")} for p in paths]
         s["visuals"]["style_refs"] = paths
         s["visuals"]["reference_sources"] = copy.deepcopy(s["workspace_references"])
+    if 'drawing_reference_path' in body:
+        path = body['drawing_reference_path']
+        ref = next((row for row in s.get('workspace_references', []) if row.get('path') == path), None)
+        if not ref or api._file_digest(store.style_dir(s['id']), path) != ref.get('sha256'):
+            raise HTTPException(422, 'Choose an existing drawing reference that has not changed')
+        ref.update(review_state='verified', role='style-only', owner='style')
+        s['workspace_drawing_reference'] = copy.deepcopy(ref)
+        s['visuals']['reference_sources'] = copy.deepcopy(s['workspace_references'])
     for field, section in (("video_preview", "visuals"), ("thumbnail_preview", "thumbnail")):
         if field in body:
             path = body[field]
@@ -182,7 +190,7 @@ def install(app):
         s.update(archived=False, created=now(), workspace_managed=True)
         if not body.get("base_id"):
             s['visuals']['background_mode'] = 'free'
-            for key in ("workspace_cast_registry", "workspace_main_character", "workspace_character_references"):
+            for key in ("workspace_cast_registry", "workspace_main_character", "workspace_character_references", "workspace_drawing_reference"):
                 s.pop(key, None)
             s["workspace_references"] = []
             for section, key in (("visuals", "style_refs"), ("visuals", "reference_sources")):
@@ -255,6 +263,95 @@ def install(app):
         if not c:
             raise HTTPException(404, "Channel not found")
         return _save_channel(_update_channel(c, body))
+
+    @router.post('/presets', status_code=201)
+    async def create_preset(body: dict):
+        if not body.get('voice'):
+            raise HTTPException(422, 'Specify the ElevenLabs voice for this channel')
+        visual = body.get('preset', {})
+        if not isinstance(visual, dict):
+            raise HTTPException(422, 'Enter the visual preset settings')
+        name = _text(body.get('name', ''), 'name', required=True).strip()
+        template = body.get('template_style_id')
+        base = _style(template or api._default_style_id(), active=True)
+        c = {'id': 'channel-' + uuid.uuid4().hex[:12], 'name': name, 'handle': '', 'description': '',
+             'language': 'English', 'kind': 'long', 'auto_resolve': False, 'target_minutes': 15,
+             'voice': copy.deepcopy(base['voice']), 'created': now(), 'archived': False}
+        # Validate channel inputs before creating files; no voice/image calls happen here.
+        c = _update_channel(c, {k: v for k, v in body.items() if k != 'style_id'})
+        style_body = visual | {'name': name}
+        if template:
+            style_body['base_id'] = template
+        else:
+            style_body.pop('base_id', None)
+        previous_channels = read_json(channels.FILE, [])
+        style = await create_style(style_body)
+        c['style_id'] = style['id']
+        try:
+            return {'channel': _save_channel(c), 'preset': style}
+        except Exception:
+            write_json(channels.FILE, previous_channels)
+            # Keep imported files recoverable rather than permanently deleting them.
+            orphan = _style(style['id'])
+            orphan['archived'] = True
+            store.save_style(orphan)
+            raise
+
+    @router.put('/presets/{cid}')
+    async def update_preset(cid: str, body: dict):
+        c = _channel(cid)
+        if not c:
+            raise HTTPException(404, 'Channel not found')
+        visual = body.get('preset', {})
+        if not isinstance(visual, dict):
+            raise HTTPException(422, 'Enter the visual preset settings')
+        original = _style(c['style_id'])
+        updated_channel = _update_channel(copy.deepcopy(c), {k: v for k, v in body.items() if k != 'style_id'})
+        # Every field is validated before any existing record is written.
+        updated_style = _update_style(copy.deepcopy(original), visual | {'name': updated_channel['name']})
+        edits = body.get('characters', [])
+        if not isinstance(edits, list) or len(edits) > 500 or any(not isinstance(item, dict) for item in edits):
+            raise HTTPException(422, 'Enter the existing character variants')
+        main_names = set()
+        for item in edits:
+            name, variant, description = _character_fields(updated_style, item)
+            selected = (updated_style.get('workspace_cast_registry', {}).get(name, {}).get('variants', {}).get(variant))
+            if not selected:
+                raise HTTPException(404, 'Import this character variant before saving it')
+            selected['description'] = description
+            if item.get('verify'):
+                for ref in selected['references']:
+                    if api._file_digest(store.style_dir(original['id']), ref.get('path')) != ref.get('sha256'):
+                        raise HTTPException(409, 'The character reference changed; import a new image')
+                    ref['review_state'] = 'verified'
+            if item.get('is_main'):
+                main_names.add(name)
+        if len(main_names) > 1:
+            raise HTTPException(422, 'Choose one main character for this preset')
+        if main_names:
+            updated_style['workspace_main_character'] = next(iter(main_names))
+        elif any(item.get('name') == updated_style.get('workspace_main_character') and item.get('is_main') is False for item in edits):
+            updated_style.pop('workspace_main_character', None)
+        others = [row for row in api._profiles(True) if row['id'] != cid and row['style_id'] == original['id']]
+        if others:
+            import shutil
+            updated_style['id'] = 'style-' + uuid.uuid4().hex[:12]
+            updated_style.update(is_default=False, workspace_managed=True, archived=False, created=now())
+            shutil.copytree(store.style_dir(original['id']), store.style_dir(updated_style['id']))
+            updated_channel['style_id'] = updated_style['id']
+        previous_channels = read_json(channels.FILE, [])
+        store.save_style(updated_style)
+        try:
+            channel = _save_channel(updated_channel)
+        except Exception:
+            write_json(channels.FILE, previous_channels)
+            if others:
+                updated_style['archived'] = True
+                store.save_style(updated_style)
+            else:
+                store.save_style(original)
+            raise
+        return {'channel': channel, 'preset': next(row for row in api._styles(True) if row['id'] == updated_style['id'])}
 
     existing = list(app.router.routes)
     app.include_router(router)

@@ -1,0 +1,146 @@
+[
+  {
+    "id": 3,
+    "text": "Style test: checking a rope on the foredeck in daylight.",
+    "location_view": "bow-to-stern",
+    "shot_type": "medium",
+    "visual_beat": "The survivor examines a frayed rope held between his white mitten hands.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDAYLIGHT. ONE Marin stands on the open wooden foredeck, examining a short visibly frayed rope between both WHITE mitten hands. Medium three-quarter framing, camera near the BOW looking back toward the STERN cabin. Yellow vest and navy cap clearly visible, thin black stick arms/legs. Pale dusty blue sea visible over the low rail, cream cabin and teal forward-facing door behind him. Preserve the small repeatable fishing boat from the master; only the camera changes. Few simple props, no monster in this calm setup. One readable action, no text.\nSTYLE BINDING: Image 3 is the canonical DAYLIGHT drawing guide. Borrow its art technique and exact character shape; do not copy its rope action, camera or daytime environment.\nLOCATION AND CAMERA CONTRACT:\nSpace: The same small wooden fishing boat\nFixed layout: Low stern cabin; open foredeck toward bow; one square hatch centered in the foredeck; orange lifebuoy on starboard cabin wall.\nPermanent world-space anchors: Cream low cabin at stern; Teal door on forward cabin wall with one square forward window beside it; One square visible starboard window with orange lifebuoy below it; one square port side window is an explicit planned opposite-wall variant; Rusty red hull with cream trim; One orange lifebuoy on starboard cabin wall; Square hatch centered on open foredeck\nCamera position and direction: Camera on bow looking aft toward the stern cabin\nVisible view: Open foredeck with stern cabin behind the actor\nFraming: medium\nNew narrated information: The survivor examines a frayed rope held between his white mitten hands.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: fishing-boat; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.",
+    "location_id": "fishing-boat",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "references": [
+      {
+        "owner": "project",
+        "path": "images/001-directed-a0872bba3fb94350911dfb73775e97a2.png",
+        "role": "identity",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "owner": "project",
+        "path": "images/002-directed-7cdda39bec604fab801bb5015c9f3e24.png",
+        "role": "location-master",
+        "location_id": "fishing-boat",
+        "review_state": "verified",
+        "sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "id": "852e30b7f6ee4f20897c9224cb3f8978",
+        "path": "refs/5ac0f488f42049d289d17a1856ab6591.png",
+        "role": "style-only",
+        "label": "Canonical daylight drawing guide: illustration language only, not scene geometry",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791899763.2407222,
+        "owner": "project",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual approved daylight drawing"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Style test: something reaches the boat after dark.",
+    "location_view": "bow-to-stern",
+    "shot_type": "wide",
+    "visual_beat": "The survivor turns toward one enormous purple tentacle reaching over the port rail.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nNIGHT on the same fishing boat. A medium-wide view from the bow toward the stern cabin, not a distant tiny figure. ONE Marin is clearly readable in the foreground, round white head with two tiny black eyes and a short worried mouth, navy cap and yellow two-panel life vest exactly matching the identity/drawing guides. Both white mitten hands grip the low starboard rail. ONE enormous desaturated purple tentacle with a few large simple suction cups rises from the water beyond the rail, towering over him. Preserve the master cabin, teal door/windows, lifebuoy, rusty red hull, foredeck hatch and low rail geometry. A simple dark navy sky and sparse teal water, one pale moon. Match the canonical daytime illustration technique even though the environment is dark. No detailed moody lighting on character or boat, no smoothed oval face, no tiny chibi redesign, no glow, no gradients across white skin. One continuous full-frame 16:9 view, no words.\nSTYLE BINDING: Image 3 is the canonical DAYLIGHT drawing guide. Borrow its art technique and exact character shape; do not copy its rope action, camera or daytime environment.\nLOCATION AND CAMERA CONTRACT:\nSpace: The same small wooden fishing boat\nFixed layout: Low stern cabin; open foredeck toward bow; one square hatch centered in the foredeck; orange lifebuoy on starboard cabin wall.\nPermanent world-space anchors: Cream low cabin at stern; Teal door on forward cabin wall with one square forward window beside it; One square visible starboard window with orange lifebuoy below it; one square port side window is an explicit planned opposite-wall variant; Rusty red hull with cream trim; One orange lifebuoy on starboard cabin wall; Square hatch centered on open foredeck\nCamera position and direction: Camera on bow looking aft toward the stern cabin\nVisible view: Open foredeck with stern cabin behind the actor\nFraming: wide\nNew narrated information: The survivor turns toward one enormous purple tentacle reaching over the port rail.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: fishing-boat; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.",
+    "location_id": "fishing-boat",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "references": [
+      {
+        "owner": "project",
+        "path": "images/001-directed-a0872bba3fb94350911dfb73775e97a2.png",
+        "role": "identity",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "owner": "project",
+        "path": "images/002-directed-7cdda39bec604fab801bb5015c9f3e24.png",
+        "role": "location-master",
+        "location_id": "fishing-boat",
+        "review_state": "verified",
+        "sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "id": "852e30b7f6ee4f20897c9224cb3f8978",
+        "path": "refs/5ac0f488f42049d289d17a1856ab6591.png",
+        "role": "style-only",
+        "label": "Canonical daylight drawing guide: illustration language only, not scene geometry",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791899763.2407222,
+        "owner": "project",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual approved daylight drawing"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Style test: the creature beneath the fishing boat.",
+    "location_view": "starboard-waterline",
+    "shot_type": "wide",
+    "visual_beat": "A continuous ocean cutaway reveals a huge dark teal creature beneath the tiny occupied boat.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nONE continuous simplified ocean cutaway illustration, not separate panels. Wide STARBOARD side view of the same small rusty-red-hulled fishing boat above the horizontal water surface; low cream stern cabin, teal door, one square side window, orange lifebuoy, open foredeck and square hatch in the same physical positions. ONE small Marin stands on the deck looking over the rail, navy cap and yellow vest visible. Below the surface is ONE enormous deep-sea creature, a long dark teal leviathan silhouette with a broad rounded head, one small pale yellow eye and a few large triangular teeth. The creature is partly lost in the dark blue lower portion, immense compared with the little boat, with a clear readable head silhouette. Very sparse flat water, no coral forest, underwater city, detailed scales or complex lighting. Calm small boat above, terrifying scale below, no attack or gore. No text or diagram labels.\nSTYLE BINDING: Image 3 is the canonical DAYLIGHT drawing guide. Borrow its art technique and exact character shape; do not copy its rope action, camera or daytime environment.\nLOCATION AND CAMERA CONTRACT:\nSpace: The same small wooden fishing boat\nFixed layout: Low stern cabin; open foredeck toward bow; one square hatch centered in the foredeck; orange lifebuoy on starboard cabin wall.\nPermanent world-space anchors: Cream low cabin at stern; Teal door on forward cabin wall with one square forward window beside it; One square visible starboard window with orange lifebuoy below it; one square port side window is an explicit planned opposite-wall variant; Rusty red hull with cream trim; One orange lifebuoy on starboard cabin wall; Square hatch centered on open foredeck\nCamera position and direction: Camera outside starboard hull at waterline looking broadside\nVisible view: External side profile and continuous below-water view\nFraming: wide\nNew narrated information: A continuous ocean cutaway reveals a huge dark teal creature beneath the tiny occupied boat.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: fishing-boat; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.",
+    "location_id": "fishing-boat",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "references": [
+      {
+        "owner": "project",
+        "path": "images/001-directed-a0872bba3fb94350911dfb73775e97a2.png",
+        "role": "identity",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "owner": "project",
+        "path": "images/002-directed-7cdda39bec604fab801bb5015c9f3e24.png",
+        "role": "location-master",
+        "location_id": "fishing-boat",
+        "review_state": "verified",
+        "sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+        "review_source": "Codex inspected; proposal, not user approval"
+      },
+      {
+        "id": "852e30b7f6ee4f20897c9224cb3f8978",
+        "path": "refs/5ac0f488f42049d289d17a1856ab6591.png",
+        "role": "style-only",
+        "label": "Canonical daylight drawing guide: illustration language only, not scene geometry",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791899763.2407222,
+        "owner": "project",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual approved daylight drawing"
+      }
+    ]
+  }
+]

@@ -174,6 +174,7 @@ def _styles(include_archived=False):
             out.append({"id": sid, "name": style.get("name", sid),
                         "characters": cast.style_summary(style),
                         "main_character": style.get("workspace_main_character"),
+                        "drawing_reference_path": (style.get('workspace_drawing_reference') or {}).get('path'),
                         "image_provider": style.get("workspace_image_provider"),
                         "image_model": visuals.get("image_model", ""),
                         "is_default": sid == _default_style_id(),
@@ -383,7 +384,25 @@ def _create(prepared, catalog):
         p["script_history"][-1]["text"] = prepared["script"]
     if selected_style.get("workspace_cast_registry"):
         p["style_cast_snapshot"] = copy.deepcopy(selected_style["workspace_cast_registry"])
+    p['drawing_reference_snapshot'] = copy.deepcopy(selected_style.get('workspace_drawing_reference'))
     return store.save_project(p)
+
+
+def _validate_drawing_reference(p, scene):
+    guide = p.get('drawing_reference_snapshot')
+    if not guide:
+        return
+    expected = _file_digest(store.style_dir(p['style_id']), guide.get('path'))
+    if not expected or expected != guide.get('sha256') or guide.get('review_state') != 'verified':
+        raise HTTPException(409, 'The preset drawing guide is missing or changed')
+    for ref in scene.get('references') or []:
+        if not isinstance(ref, dict) or ref.get('role') not in ('style', 'style-only'):
+            continue
+        folder = store.style_dir(p['style_id']) if ref.get('owner') == 'style' else store.project_dir(p['id'])
+        if (ref.get('sha256') == expected and ref.get('review_state') == 'verified'
+                and _file_digest(folder, ref.get('path')) == expected):
+            return
+    raise HTTPException(422, 'Attach the preset drawing guide to this shot; character references alone are insufficient')
 
 
 def _scene_evidence(p, s):
