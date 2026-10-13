@@ -1,0 +1,41 @@
+{
+  "reviewer": "Codex",
+  "user_approved": false,
+  "selected": [
+    "boat-brokenrail-v2",
+    "boat-dented-v3",
+    "boat-windowbroken-v3",
+    "boat-flooded-v3",
+    "cabin-dry",
+    "cabin-damaged",
+    "raft",
+    "buoy",
+    "buoy-storm",
+    "pickup",
+    "ship-ladder",
+    "leviathan",
+    "shark",
+    "octopus",
+    "crew",
+    "fisher"
+  ],
+  "notes": [
+    "All selected images actually inspected on contact sheets; Fisher and corrected boat states also inspected separately.",
+    "References contain no unintended people in empty masters; six cast designs are distinct.",
+    "Final boat masters keep one starboard rail gap, damaged starboard side window above lifebuoy, and intact forward window beside teal door.",
+    "Minor prop positions and dent shape vary between boat state references; actual scenes require checking and are not declared perfectly consistent."
+  ],
+  "rejected": [
+    "boat-brokenrail",
+    "boat-dented",
+    "boat-windowbroken",
+    "boat-flooded",
+    "boat-dented-v2",
+    "boat-windowbroken-v2",
+    "boat-flooded-v2"
+  ],
+  "continuity_variants": {
+    "marin-no-vest": "Actually inspected: same circle head/navy cap/black stick anatomy/white mittens and feet, no yellow on body. Used only while jacket held up.",
+    "raft-empty": "Actually inspected: one empty orange raft, grey floor, attached white tether, no bag/oar/person. Used before loading and as empty storm raft support."
+  }
+}

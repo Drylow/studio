@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. EMPTY dark-blue cargo ship flank with cream upper trim, a long simple rope boarding ladder descending from a low visible deck edge into teal water. Camera at waterline looking slightly up the vertical hull. At top of ladder, grey rail and small cream deck door. Only this modest section of ship visible; no fantasy tower or skyline, no lettering, humans, creatures or fishing boat. Flat cartoon shapes and shallow perspective.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "005a011d5e9bff14882c9a460cc5b5a35b55ab32123e415369c4935a7b13b80a",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

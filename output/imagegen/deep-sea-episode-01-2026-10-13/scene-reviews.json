@@ -1,0 +1,38 @@
+{
+  "reviewer": "Codex",
+  "user_approved": false,
+  "inspected_ranges": [
+    [
+      1,
+      152
+    ]
+  ],
+  "pending": [],
+  "correction_required": [],
+  "notes": {
+    "56": "Life jacket appears both worn and held overhead; keep only the jacket in his hands until he fastens it again at shot58.",
+    "88": "Supply bag/oar prematurely present in deployed raft before the transfer at shot93. Raft must be empty here.",
+    "108": "Distant buoy red frame deviates from the registered dark steel bell frame; attach actual buoy master as supporting geometry.",
+    "112": "Blue supply bag changes to green on upper frame; restore the same blue waterproof bag.",
+    "114": "Blue waterproof bag changes into a grey backpack on platform; restore blue supply bag.",
+    "118": "Blue bag is back inside raft despite previous transfer onto buoy; keep it secured to upper frame and raft empty."
+  },
+  "general_findings": [
+    "All151 available images were actually inspected: pages1-13, plus separate007/039/046/018 and first three previews.",
+    "Marin consistently retains white round head, navy cap, yellow vest, thin black anatomy and white hands/feet. Rook and Fisher use distinct cap colours; no duplicate Marin found in the inspected frames.",
+    "The red fishing boat is gone after shot101. Raft, buoy and rescue craft then appear in the appropriate story sections.",
+    "Day/night environment changes preserve the character drawing language. No remaining partial transparency found in decoded available images.",
+    "Some viewpoints mirror interior screen positions and small props/monster silhouettes vary. These are not claimed pixel-identical; major chronology and named character appearance were checked.",
+    "Shot124 succeeded on explicit retry and was individually inspected. Six continuity retakes inspected; final118 shows blue supply bag and oar tied above water, empty raft below. Rendering inspected separately.",
+    "Shot124 succeeded on explicit retry and was individually inspected. Six continuity retakes inspected; final118 shows blue supply bag and oar tied above water, empty raft below. Rendering inspected separately."
+  ],
+  "corrected_and_reinspected": [
+    56,
+    88,
+    108,
+    112,
+    114,
+    118
+  ],
+  "total_selected": 152
+}

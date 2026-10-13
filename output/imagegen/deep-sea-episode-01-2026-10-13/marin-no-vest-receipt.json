@@ -1,0 +1,22 @@
+{
+  "state": "generated_unreviewed",
+  "prompt": "Clean simple flat black outlined 2D matching the attached canonical drawing guide, matte colours, full opaque 16:9 landscape frame, no text, panels, borders, gradients or transparency. Image1 is the ONE same Marin identity and Image2 drawing language only. Draw ONE Marin full body on plain pale grey background, perfectly circular pure WHITE head, tiny black oval eyes, short mouth, navy short-brim fisherman cap, BLACK thin stick torso and limbs, WHITE mitten hands and oval feet. Precisely preserve his proportions and cap. In this specific costume state Marin has REMOVED his life jacket: his torso is a single thin BLACK line, completely bare of clothes/accessories. NO yellow vest, NO yellow garment, NO jacket held in hands, NO yellow anywhere. This is an identity-only costume variant, never another character or realistic human.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "af92340ba8cb1cf6a90c308eaa79571afb9205ac910d542a93ada47d7238a21e",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/01.png",
+      "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ]
+}

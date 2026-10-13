@@ -1,0 +1,26 @@
+[
+  {
+    "name": "boat-dented-v3",
+    "prompt": "IMAGE BINDING: Image 1 gives our flat outlined drawing technique ONLY. Image 2 is the EXACT empty boat geometry and current camera. Recreate Image 2 boat from the SAME elevated STARBOARD view, same cabin orientation, same hull, central hatch and SAME SINGLE open gap in the foreground starboard rail just forward of the hatch. All PORT background rail stays continuous and intact: NEVER create a second gap. No people, monsters or net. Preserve a single cream low stern cabin with teal forward door and blue forward window, one blue side window above the orange side lifebuoy. Sparse flat sea, full-frame 16:9, no words. The ONLY new changes are ONE shallow leaking dent/crack on the STARBOARD red hull under the cabin, and ONE cream BLUE-LIDDED portable cooler with cracked corner on foredeck next to the existing starboard rail gap. All windows and roof stay intact. Keep the same view and only one rail gap.",
+    "references": [
+      "drawing",
+      "boat"
+    ]
+  },
+  {
+    "name": "boat-windowbroken-v3",
+    "prompt": "IMAGE BINDING: Image 1 gives our flat outlined drawing technique ONLY. Image 2 is the EXACT empty boat geometry and current camera. Recreate Image 2 boat from the SAME elevated STARBOARD view, same cabin orientation, same hull, central hatch and SAME SINGLE open gap in the foreground starboard rail just forward of the hatch. All PORT background rail stays continuous and intact: NEVER create a second gap. No people, monsters or net. Preserve a single cream low stern cabin with teal forward door and blue forward window, one blue side window above the orange side lifebuoy. Sparse flat sea, full-frame 16:9, no words. Damage stage after tentacle: same starboard hull dent, same cream BLUE-LIDDED cracked cooler by starboard gap. Break ONLY SIDE window ABOVE orange lifebuoy, with dark empty shattered opening. FORWARD square window next to teal door stays intact BLUE. Low cabin roof slightly sags. Do not relocate cooler behind cabin. All rails except SAME foreground starboard gap stay intact.",
+    "references": [
+      "drawing",
+      "boat"
+    ]
+  },
+  {
+    "name": "boat-flooded-v3",
+    "prompt": "IMAGE BINDING: Image 1 gives our flat outlined drawing technique ONLY. Image 2 is the EXACT empty boat geometry and current camera. Recreate Image 2 boat from the SAME elevated STARBOARD view, same cabin orientation, same hull, central hatch and SAME SINGLE open gap in the foreground starboard rail just forward of the hatch. All PORT background rail stays continuous and intact: NEVER create a second gap. No people, monsters or net. Preserve a single cream low stern cabin with teal forward door and blue forward window, one blue side window above the orange side lifebuoy. Sparse flat sea, full-frame 16:9, no words. Day eighteen: same starboard hull crack, starboard side window ABOVE lifebuoy broken black, FORWARD window next to teal door still intact blue, low sagging roof. The stern sits low and boat LISTS to starboard, water covers half the foredeck. Preserve SAME single starboard rail gap, no second gap. Cabin not rotated or rebuilt. Cooler on deck can be partly submerged. No raft or people.",
+    "references": [
+      "drawing",
+      "boat"
+    ]
+  }
+]

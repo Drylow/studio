@@ -1,0 +1,1045 @@
+[
+  {
+    "id": 56,
+    "location_id": "boat-dented",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "no-vest",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.",
+    "start": 327.778,
+    "end": 333.825,
+    "text": "Then the dark shape beneath you rolls away and crosses toward them. You wave harder, trying to make them stop.",
+    "references": [
+      {
+        "owner": "project",
+        "path": "production-refs/marin-no-vest.png",
+        "role": "identity",
+        "sha256": "af92340ba8cb1cf6a90c308eaa79571afb9205ac910d542a93ada47d7238a21e",
+        "review_state": "verified",
+        "review_source": "Codex actual-image inspection of explicit continuity variant",
+        "character": "Marin",
+        "variant": "no-vest"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/leviathan.png",
+        "role": "identity",
+        "sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "character": "Leviathan",
+        "variant": "default"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/boat-dented.png",
+        "role": "location-master",
+        "sha256": "6a1ba10bd89f1877c213c80ca72835b49c84ea3ae716109f36070d708d74692d",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": "boat-dented"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Marin fishing boat — boat-dented\nFixed layout: Small rusty RED wooden fishing boat, cream trim, low cream STERN cabin with TEAL forward door and adjacent intact forward blue window; STARBOARD side window above orange lifebuoy; open wooden foredeck toward BOW with single centered square hatch. PORT rail continuous. Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nPermanent world-space anchors: Red hull, cream low stern cabin and teal forward door; Centered foredeck hatch; Orange lifebuoy below starboard side window; Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nCamera position and direction: Camera outside starboard hull near water surface looking broadside\nVisible view: Starboard hull at water surface\nFraming: wide\nNew narrated information: Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, the SAME life jacket, worn or removed exactly as explicitly narrated, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.\nVISIBLE NAMED CAST ONLY: Marin, Leviathan. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: ONE life jacket exists, both yellow panels belong to the jacket HELD above Marin's head. His torso is a thin BLACK line with NO yellow clothing on his body. He has taken the jacket OFF and waves it urgently toward the distant green boat. Preserve the dark teal leviathan moving toward that distant boat, not a second human or a second jacket.\nDRAWING GUIDE: Image 4 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Marin fishing boat — boat-dented\nFixed layout: Small rusty RED wooden fishing boat, cream trim, low cream STERN cabin with TEAL forward door and adjacent intact forward blue window; STARBOARD side window above orange lifebuoy; open wooden foredeck toward BOW with single centered square hatch. PORT rail continuous. Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nPermanent world-space anchors: Red hull, cream low stern cabin and teal forward door; Centered foredeck hatch; Orange lifebuoy below starboard side window; Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nCamera position and direction: Camera outside starboard hull near water surface looking broadside\nVisible view: Starboard hull at water surface\nFraming: wide\nNew narrated information: Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"no-vest\"; ONE same Marin: perfect circular pure WHITE head, two tiny black oval eyes, short mouth, navy short-brim cap, BLACK thin stick torso and limbs, WHITE mitten hands and oval feet. Same exact drawing proportions. Life jacket temporarily removed: NO clothes or yellow on torso, jacket only exists if specifically held in scene action. No backpack, second human or realistic anatomy.\nImage 2: Leviathan; variant \"default\"; ONE immense dark TEAL elongated sea leviathan, tapering tail, two small side fins, blunt rounded head, large PALE YELLOW eye, few broad pale triangular teeth. No tentacles, legs or goofy smile; always this same creature.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 3: boat-dented; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+    "motion": "zoom_out",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/056-directed-9b6b97b1fce648098f8f71950f496ffe.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "9b6b97b1fce648098f8f71950f496ffe",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "9b6b97b1fce648098f8f71950f496ffe",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.\nVISIBLE NAMED CAST ONLY: Marin, Leviathan. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 4 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Marin fishing boat — boat-dented\nFixed layout: Small rusty RED wooden fishing boat, cream trim, low cream STERN cabin with TEAL forward door and adjacent intact forward blue window; STARBOARD side window above orange lifebuoy; open wooden foredeck toward BOW with single centered square hatch. PORT rail continuous. Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nPermanent world-space anchors: Red hull, cream low stern cabin and teal forward door; Centered foredeck hatch; Orange lifebuoy below starboard side window; Same single starboard rail gap; starboard hull dent/leak below cabin; cracked cream BLUE-LIDDED cooler next to gap; windows and roof intact.\nCamera position and direction: Camera outside starboard hull near water surface looking broadside\nVisible view: Starboard hull at water surface\nFraming: wide\nNew narrated information: Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nImage 2: Leviathan; variant \"default\"; ONE immense dark TEAL elongated sea leviathan, tapering tail, two small side fins, blunt rounded head, large PALE YELLOW eye, few broad pale triangular teeth. No tentacles, legs or goofy smile; always this same creature.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 3: boat-dented; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+          "owner": "style",
+          "role": "identity",
+          "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "character": "Marin",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+        },
+        {
+          "path": "production-refs/leviathan.png",
+          "owner": "project",
+          "role": "identity",
+          "sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+          "character": "Leviathan",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+          "sent_sha256": "ba8347255c114d537adbcd6c33120857222945de920c59ecdb826a590d53334f"
+        },
+        {
+          "path": "production-refs/boat-dented.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "6a1ba10bd89f1877c213c80ca72835b49c84ea3ae716109f36070d708d74692d",
+          "character": null,
+          "variant": null,
+          "location_id": "boat-dented",
+          "location_view": null,
+          "source_sha256": "6a1ba10bd89f1877c213c80ca72835b49c84ea3ae716109f36070d708d74692d",
+          "sent_sha256": "974d1cc7295f5f6797e0f2e172f5d46c9519d0203b9390c558ee51a22cb68a78"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916780.1991065,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/056-directed-9b6b97b1fce648098f8f71950f496ffe.png",
+        "sha256": "b9d09e2f4aa72f0981029947a8af743683975bdb0f990adf5a99feb1fdcf50ad"
+      },
+      "finished_at": 1791916819.930717
+    },
+    "sent_references": [
+      {
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "owner": "style",
+        "role": "identity",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "character": "Marin",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+      },
+      {
+        "path": "production-refs/leviathan.png",
+        "owner": "project",
+        "role": "identity",
+        "sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+        "character": "Leviathan",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+        "sent_sha256": "ba8347255c114d537adbcd6c33120857222945de920c59ecdb826a590d53334f"
+      },
+      {
+        "path": "production-refs/boat-dented.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "6a1ba10bd89f1877c213c80ca72835b49c84ea3ae716109f36070d708d74692d",
+        "character": null,
+        "variant": null,
+        "location_id": "boat-dented",
+        "location_view": null,
+        "source_sha256": "6a1ba10bd89f1877c213c80ca72835b49c84ea3ae716109f36070d708d74692d",
+        "sent_sha256": "974d1cc7295f5f6797e0f2e172f5d46c9519d0203b9390c558ee51a22cb68a78"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      }
+    ],
+    "workspace_regeneration_required": true
+  },
+  {
+    "id": 88,
+    "location_id": "raft-empty",
+    "location_view": "overhead",
+    "shot_type": "wide",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.",
+    "start": 520.564,
+    "end": 525.805,
+    "text": "It opens beside the boat, bright orange against the dark sea.\n\nThe raft is ready.",
+    "references": [
+      {
+        "owner": "project",
+        "path": "production-refs/raft-empty.png",
+        "role": "location-master",
+        "sha256": "e11fb8d758ae9777b37523dbb51e80053ebc55baf78af9110c85b5fd035e6500",
+        "review_state": "verified",
+        "review_source": "Codex actual-image inspection of explicit continuity variant",
+        "location_id": "raft-empty"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/boat-flooded.png",
+        "role": "supporting-geometry",
+        "sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": null
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Same orange raft before loading supplies\nFixed layout: ONE small oval orange inflatable raft with completely EMPTY grey floor, no bag, oar, supplies or people inside. White tether attaches raft loop to the remaining rail of damaged fishing boat. Supplies still aboard fishing boat until transfer at shot93.\nPermanent world-space anchors: One orange oval float tube; Bare grey floor, no supplies; White tether attached to red fishing boat\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: wide\nNew narrated information: EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.\nVISIBLE NAMED CAST ONLY: NONE: draw no humans. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: The just-deployed orange raft is COMPLETELY EMPTY: no bag, oar, bottles, supplies or person inside. Its grey floor is bare. The BLUE bag and wooden oar are still aboard the RED damaged fishing boat and will only be loaded later. Show ONE orange raft tethered to the remaining rail of that flooded red boat, no humans.\nDRAWING GUIDE: Image 2 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Same orange raft before loading supplies\nFixed layout: ONE small oval orange inflatable raft with completely EMPTY grey floor, no bag, oar, supplies or people inside. White tether attaches raft loop to the remaining rail of damaged fishing boat. Supplies still aboard fishing boat until transfer at shot93.\nPermanent world-space anchors: One orange oval float tube; Bare grey floor, no supplies; White tether attached to red fishing boat\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: wide\nNew narrated information: EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\n\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 1: raft-empty; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+    "motion": "zoom_out",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/088-directed-8bb1e69fd31e4657b663f94d76aeff8e.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "8bb1e69fd31e4657b663f94d76aeff8e",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "8bb1e69fd31e4657b663f94d76aeff8e",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.\nVISIBLE NAMED CAST ONLY: NONE: draw no humans. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 2 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Orange emergency raft after deployment\nFixed layout: ONE small oval ORANGE inflatable raft, grey floor, wooden oar and BLUE waterproof bag resting physically inside. White tether attached only before shot 99. No cabin, motor or roof. Fishing boat exists beside raft only through shot 101, then permanently gone.\nPermanent world-space anchors: One orange oval float tube; Grey floor; Brown wooden oar; Blue separate waterproof bag\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: wide\nNew narrated information: EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\n\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 1: raft; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "production-refs/raft.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "character": null,
+          "variant": null,
+          "location_id": "raft",
+          "location_view": null,
+          "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        },
+        {
+          "path": "production-refs/boat-flooded.png",
+          "owner": "project",
+          "role": "supporting-geometry",
+          "sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+          "sent_sha256": "5ef7521db749f57be026cb42880cc79130f74da0868104378f8e38ae6eb23a01"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916838.5972927,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/088-directed-8bb1e69fd31e4657b663f94d76aeff8e.png",
+        "sha256": "79d65592575604ee337c3273031dfb10a6e11d41a2519450ff8e1071506ec73a"
+      },
+      "finished_at": 1791916872.8711255
+    },
+    "sent_references": [
+      {
+        "path": "production-refs/raft.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "character": null,
+        "variant": null,
+        "location_id": "raft",
+        "location_view": null,
+        "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      },
+      {
+        "path": "production-refs/boat-flooded.png",
+        "owner": "project",
+        "role": "supporting-geometry",
+        "sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+        "sent_sha256": "5ef7521db749f57be026cb42880cc79130f74da0868104378f8e38ae6eb23a01"
+      }
+    ],
+    "workspace_regeneration_required": true
+  },
+  {
+    "id": 108,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.",
+    "start": 646.363,
+    "end": 652.712,
+    "text": "That gives you room to paddle. It also means your destination already has something waiting beneath it.",
+    "references": [
+      {
+        "id": "d5d8586f3df54c2ca3e6eca306cdbeb3",
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "role": "identity",
+        "label": "Marin",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "state": "unreviewed",
+        "uploaded_at": 1791896259.9946885,
+        "owner": "style",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "review_source": "Codex actual-image identity inspection; user accepted visual direction on 13 October 2026"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/raft.png",
+        "role": "location-master",
+        "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": "raft"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/buoy.png",
+        "role": "supporting-geometry",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": null
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Orange emergency raft after deployment\nFixed layout: ONE small oval ORANGE inflatable raft, grey floor, wooden oar and BLUE waterproof bag resting physically inside. White tether attached only before shot 99. No cabin, motor or roof. Fishing boat exists beside raft only through shot 101, then permanently gone.\nPermanent world-space anchors: One orange oval float tube; Grey floor; Brown wooden oar; Blue separate waterproof bag\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: medium\nNew narrated information: Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: The distant bell buoy is exactly the supplied buoy master: RED cylindrical FLOAT, open DARK GREY steel four-leg upper FRAME, ONE BRASS bell in the middle. Never a red tower, red metal cage, lighthouse or solid red upper frame. Marin reaches this buoy from his orange raft with blue supply bag and wooden oar.\nDRAWING GUIDE: Image 3 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Orange emergency raft after deployment\nFixed layout: ONE small oval ORANGE inflatable raft, grey floor, wooden oar and BLUE waterproof bag resting physically inside. White tether attached only before shot 99. No cabin, motor or roof. Fishing boat exists beside raft only through shot 101, then permanently gone.\nPermanent world-space anchors: One orange oval float tube; Grey floor; Brown wooden oar; Blue separate waterproof bag\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: medium\nNew narrated information: Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: raft; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.\nImage 4 fixes the DISTANT BUOY geometry only, scaled appropriately far away. Do not copy its camera or add a second buoy.",
+    "motion": "zoom_out",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/108-directed-9bfe1c58ef8347b09fc51b75cecbcc5e.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "9bfe1c58ef8347b09fc51b75cecbcc5e",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "9bfe1c58ef8347b09fc51b75cecbcc5e",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 3 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Orange emergency raft after deployment\nFixed layout: ONE small oval ORANGE inflatable raft, grey floor, wooden oar and BLUE waterproof bag resting physically inside. White tether attached only before shot 99. No cabin, motor or roof. Fishing boat exists beside raft only through shot 101, then permanently gone.\nPermanent world-space anchors: One orange oval float tube; Grey floor; Brown wooden oar; Blue separate waterproof bag\nCamera position and direction: Camera above the open deck looking vertically down\nVisible view: Deck objects and people from above\nFraming: medium\nNew narrated information: Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: raft; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+          "owner": "style",
+          "role": "identity",
+          "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "character": "Marin",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+        },
+        {
+          "path": "production-refs/raft.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "character": null,
+          "variant": null,
+          "location_id": "raft",
+          "location_view": null,
+          "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916880.9296658,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/108-directed-9bfe1c58ef8347b09fc51b75cecbcc5e.png",
+        "sha256": "ce0ed00f42169ccb1adcfbb77d75a0ea80cb6935844fa54af8c446dc4db51a2d"
+      },
+      "finished_at": 1791916913.8934476
+    },
+    "sent_references": [
+      {
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "owner": "style",
+        "role": "identity",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "character": "Marin",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+      },
+      {
+        "path": "production-refs/raft.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "character": null,
+        "variant": null,
+        "location_id": "raft",
+        "location_view": null,
+        "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      }
+    ],
+    "workspace_regeneration_required": true
+  },
+  {
+    "id": 112,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.",
+    "start": 670.67,
+    "end": 674.984,
+    "text": "You climb higher, above the bell. The steel shakes with each wave.",
+    "references": [
+      {
+        "id": "d5d8586f3df54c2ca3e6eca306cdbeb3",
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "role": "identity",
+        "label": "Marin",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "state": "unreviewed",
+        "uploaded_at": 1791896259.9946885,
+        "owner": "style",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "review_source": "Codex actual-image identity inspection; user accepted visual direction on 13 October 2026"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/buoy.png",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": "buoy"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside steel frame at upper crossbar height looking inward toward seated survivor\nVisible view: Upper crossbar and open frame\nFraming: medium\nNew narrated information: Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: The supply bag fixed to the UPPER dark steel buoy crossbar is the same plain BLUE waterproof supply bag, with short dark closure and no shoulder straps. It must be BLUE, never green, grey, khaki or a backpack. Show it physically secured high above the sea with a short visible tie; wooden oar also secured on buoy. Orange raft below remains empty.\nDRAWING GUIDE: Image 3 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside steel frame at upper crossbar height looking inward toward seated survivor\nVisible view: Upper crossbar and open frame\nFraming: medium\nNew narrated information: Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+    "motion": "zoom_out",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/112-directed-c282ab700e2e47bc834427f7977912ce.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "c282ab700e2e47bc834427f7977912ce",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "c282ab700e2e47bc834427f7977912ce",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 3 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside steel frame at upper crossbar height looking inward toward seated survivor\nVisible view: Upper crossbar and open frame\nFraming: medium\nNew narrated information: Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+          "owner": "style",
+          "role": "identity",
+          "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "character": "Marin",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+        },
+        {
+          "path": "production-refs/buoy.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "character": null,
+          "variant": null,
+          "location_id": "buoy",
+          "location_view": null,
+          "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916889.5370228,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/112-directed-c282ab700e2e47bc834427f7977912ce.png",
+        "sha256": "fbdb41dae3b6b5877535035c50fe2850667e11a3868ba921e7c492547b4ff6e9"
+      },
+      "finished_at": 1791916924.107488
+    },
+    "sent_references": [
+      {
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "owner": "style",
+        "role": "identity",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "character": "Marin",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+      },
+      {
+        "path": "production-refs/buoy.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "character": null,
+        "variant": null,
+        "location_id": "buoy",
+        "location_view": null,
+        "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      }
+    ],
+    "workspace_regeneration_required": true
+  },
+  {
+    "id": 114,
+    "location_id": "buoy",
+    "location_view": "radio-pov",
+    "shot_type": "close_up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.",
+    "start": 679.687,
+    "end": 685.79,
+    "text": "You open the handheld radio and make a short call. A voice answers clearly enough to understand.",
+    "references": [
+      {
+        "id": "d5d8586f3df54c2ca3e6eca306cdbeb3",
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "role": "identity",
+        "label": "Marin",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "state": "unreviewed",
+        "uploaded_at": 1791896259.9946885,
+        "owner": "style",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "review_source": "Codex actual-image identity inspection; user accepted visual direction on 13 October 2026"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/buoy.png",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": "buoy"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera beside actor shoulder looking directly toward the radio or handheld object in front of actor\nVisible view: Radio, hands and adjoining frame\nFraming: close_up\nNew narrated information: Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: Keep the ONE supply bag BLUE and WATERPROOF, plain compact rectangular soft blue dry bag with folded top and no backpack straps, sitting physically on buoy platform beside Marin. NO grey backpack, NO green bag. Marin wears ONLY his navy cap/yellow life jacket on black stick body. Buoy steel frame is dark grey, float red, bell brass.\nDRAWING GUIDE: Image 3 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera beside actor shoulder looking directly toward the radio or handheld object in front of actor\nVisible view: Radio, hands and adjoining frame\nFraming: close_up\nNew narrated information: Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+    "motion": "zoom_in",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/114-directed-731c46481c8f4d1ba3056af6c3c47c5e.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "731c46481c8f4d1ba3056af6c3c47c5e",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "731c46481c8f4d1ba3056af6c3c47c5e",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 3 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera beside actor shoulder looking directly toward the radio or handheld object in front of actor\nVisible view: Radio, hands and adjoining frame\nFraming: close_up\nNew narrated information: Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: DAYLIGHT with a simple pale blue or storm-grey sky; NO moon, stars or nighttime sky. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+          "owner": "style",
+          "role": "identity",
+          "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "character": "Marin",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+        },
+        {
+          "path": "production-refs/buoy.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "character": null,
+          "variant": null,
+          "location_id": "buoy",
+          "location_view": null,
+          "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916907.3496583,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/114-directed-731c46481c8f4d1ba3056af6c3c47c5e.png",
+        "sha256": "1e96a0ae1f4208651c14d180411443e2adb1580e93d5b14d8e290cc747de0b5d"
+      },
+      "finished_at": 1791916934.221668
+    },
+    "sent_references": [
+      {
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "owner": "style",
+        "role": "identity",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "character": "Marin",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+      },
+      {
+        "path": "production-refs/buoy.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "character": null,
+        "variant": null,
+        "location_id": "buoy",
+        "location_view": null,
+        "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      }
+    ],
+    "workspace_regeneration_required": true
+  },
+  {
+    "id": 118,
+    "location_id": "buoy",
+    "location_view": "wide-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.",
+    "start": 702.344,
+    "end": 707.969,
+    "text": "On day twenty-five, a storm makes the buoy swing so hard that you cannot stay on the platform.",
+    "references": [
+      {
+        "id": "d5d8586f3df54c2ca3e6eca306cdbeb3",
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "role": "identity",
+        "label": "Marin",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "state": "unreviewed",
+        "uploaded_at": 1791896259.9946885,
+        "owner": "style",
+        "character": "Marin",
+        "variant": "default",
+        "review_state": "verified",
+        "review_source": "Codex actual-image identity inspection; user accepted visual direction on 13 October 2026"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/buoy.png",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "review_state": "verified",
+        "review_source": "Codex inspection of actual generated reference",
+        "location_id": "buoy"
+      },
+      {
+        "id": "9ea33c5c8cf24535828ab8b8dbc5b45f",
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "role": "style-only",
+        "label": "Deep sea drawing guide 3: style only; do not copy action, boat layout or camera",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "state": "unreviewed",
+        "uploaded_at": 1791896260.9422657,
+        "owner": "style",
+        "review_state": "verified",
+        "review_source": "Codex inspection of approved daylight drawing"
+      },
+      {
+        "owner": "project",
+        "path": "production-refs/raft-empty.png",
+        "role": "supporting-geometry",
+        "sha256": "e11fb8d758ae9777b37523dbb51e80053ebc55baf78af9110c85b5fd035e6500",
+        "review_state": "verified",
+        "review_source": "Codex actual-image inspection of explicit continuity variant",
+        "location_id": null
+      }
+    ],
+    "location_contract": "LOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside buoy near its ladder side looking at whole marker\nVisible view: Whole navigation marker and sea\nFraming: wide\nNew narrated information: Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.",
+    "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap. Life jacket worn by default, EXCEPT when removed and held in this shot; the exact bound variant overrides costume for this shot. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nCONTINUITY CORRECTION: The BLUE waterproof supply bag and wooden oar are already SECURED TO THE UPPER steel buoy frame with a short visible tie. They stay high on buoy as Marin climbs during the storm. The orange raft whipping against the lower ladder has an EMPTY GREY FLOOR: NO bag, oar, supplies or second Marin inside raft. Night rain changes surrounding colours only, Marin remains pure white round head/hands/feet and black stick limbs.\nDRAWING GUIDE: Image 3 is drawing language ONLY; never copy its people, action, pose or costume state. The explicitly bound identity variant controls this shot.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside buoy near its ladder side looking at whole marker\nVisible view: Whole navigation marker and sea\nFraming: wide\nNew narrated information: Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: NIGHT with simple muted navy surroundings. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.\nImage 4 fixes the EMPTY orange raft beside the buoy, with no supplies in it.",
+    "motion": "zoom_in",
+    "prompt_author": "codex",
+    "status": "done",
+    "image": "images/118-directed-9b21411b2a28455da4b956d6c03e9596.png",
+    "human_review": {
+      "state": "unreviewed"
+    },
+    "generation_id": "9b21411b2a28455da4b956d6c03e9596",
+    "error": null,
+    "uploaded": false,
+    "generation_receipt": {
+      "id": "9b21411b2a28455da4b956d6c03e9596",
+      "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nSCENE ACTION: Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.\nVISIBLE NAMED CAST ONLY: Marin. Each named individual appears exactly ONCE. No duplicate protagonist, memory portrait, transparent character or face pasted over a scene. Only humans have white circle heads; sea creatures retain their bound animal design.\nDRAWING GUIDE: Image 3 is drawing language ONLY. Never copy its people, daytime rope action, pose, place or camera. Night changes surroundings, not skin colour or illustration technique.\nLOCATION AND CAMERA CONTRACT:\nSpace: Red bell navigation buoy before storm damage\nFixed layout: Red cylindrical float, small lower maintenance platform, near steel ladder from water, open four-leg dark-grey steel upper frame with sitting crossbar, one brass bell swinging freely in middle. Orange raft tied to near ladder from shots111 to119 only.\nPermanent world-space anchors: Red cylindrical float; Near ladder and lower platform; Open four-leg steel frame and upper crossbar; One freely swinging brass bell\nCamera position and direction: Camera outside buoy near its ladder side looking at whole marker\nVisible view: Whole navigation marker and sea\nFraming: wide\nNew narrated information: Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. DRAWING CONSISTENCY LOCK: The approved DAYLIGHT ROPE scene is the single canonical drawing-language guide. Match its clean outlined 2D shapes, simple face, navy cap shape, yellow vest panels/buckle, pure white face/hands/feet, black stick anatomy and head-to-body proportions in every shot. Changes of action, camera or environment never authorize changing the character design or illustration technique. Night and underwater descriptions change the environment palette only; the character stays flat pure white with the same navy/yellow clothes. No oval/profile/beaked face, extra anatomy, thicker limbs, glossy shading, bloom, rim light, painterly texture, 3D lighting, chibi redesign or realistic rendering. Use two tiny black eyes and a short simple mouth, no drawn human features. Keep a readable front or three-quarter round head when the face is visible. Sea creatures use the same outlined flat illustration language, simple threatening shapes, not goofy smiling faces. Background coherence and drawing consistency are independent; free backgrounds still keep this same drawing language.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: buoy; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.\nEXPLICIT SCENE LIGHTING: NIGHT with simple muted navy surroundings. Human faces, hands and feet remain PURE WHITE without any shading; never change the drawing technique with the time of day.\nOUTPUT FRAME: A fully finished OPAQUE rectangular film frame, every pixel painted including the complete sky and all four corners. NO transparency, alpha cutouts, transparent gradients, unfinished mask, noisy glitch pixels, dark smeared sky or vignette. Clean simple sky and water shapes only.",
+      "aspect": "16:9",
+      "references": [
+        {
+          "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+          "owner": "style",
+          "role": "identity",
+          "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "character": "Marin",
+          "variant": "default",
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+          "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+        },
+        {
+          "path": "production-refs/buoy.png",
+          "owner": "project",
+          "role": "location-master",
+          "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "character": null,
+          "variant": null,
+          "location_id": "buoy",
+          "location_view": null,
+          "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+          "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+        },
+        {
+          "path": "refs/33615e649ded49eab335aa894d553f52.png",
+          "owner": "style",
+          "role": "style-only",
+          "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+          "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+        },
+        {
+          "path": "production-refs/raft.png",
+          "owner": "project",
+          "role": "supporting-geometry",
+          "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "character": null,
+          "variant": null,
+          "location_id": null,
+          "location_view": null,
+          "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+          "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+        }
+      ],
+      "transport": "cli_proxy",
+      "started_at": 1791916913.0261283,
+      "state": "generated_unreviewed",
+      "previous_image": {
+        "path": null,
+        "sha256": null,
+        "human_review": {
+          "state": "unreviewed"
+        },
+        "generation_receipt": null
+      },
+      "image": {
+        "path": "images/118-directed-9b21411b2a28455da4b956d6c03e9596.png",
+        "sha256": "616b2c3158d51fb494bf7796c6e8ed02889f31883a763f4635135dc91f69fce3"
+      },
+      "finished_at": 1791916966.2534025
+    },
+    "sent_references": [
+      {
+        "path": "refs/8fe61236a2c549fabb1aa329e0d875dc.png",
+        "owner": "style",
+        "role": "identity",
+        "sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "character": "Marin",
+        "variant": "default",
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "d79f8d69f160b8b5042c1b9073a0e0217e1b6afb7a53b1de7a432d7f19ca92f6",
+        "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+      },
+      {
+        "path": "production-refs/buoy.png",
+        "owner": "project",
+        "role": "location-master",
+        "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "character": null,
+        "variant": null,
+        "location_id": "buoy",
+        "location_view": null,
+        "source_sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+        "sent_sha256": "5e17af4e5fef0554ea044f16999421eb25d3647712b6d331a4f4e776d3b0dbf9"
+      },
+      {
+        "path": "refs/33615e649ded49eab335aa894d553f52.png",
+        "owner": "style",
+        "role": "style-only",
+        "sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "94e07c8d763d25b9c40cc2a03acdb98d7d5e057a297e107f544b9a965965b9fd",
+        "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+      },
+      {
+        "path": "production-refs/raft.png",
+        "owner": "project",
+        "role": "supporting-geometry",
+        "sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "character": null,
+        "variant": null,
+        "location_id": null,
+        "location_view": null,
+        "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+        "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+      }
+    ],
+    "workspace_regeneration_required": true
+  }
+]

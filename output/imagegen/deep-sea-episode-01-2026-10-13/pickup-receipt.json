@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. EMPTY ordinary small grey rescue pickup launch in shallow three-quarter view on flat pale sea. Low grey hull, open blue-grey cockpit, short simple side rail, yellow rescue ring, one plain floating WHITE LINE coiled inside, one ordinary open blue supply bag and white water bottle on floor. Small outboard motor at stern. No tall cabin, mast or ship lettering. Clearly different from Marin's red wooden fishing boat. No people or creatures.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "cf5aa607d48903ed317f63e9dded19eea2123c32e1694be09f980155b739dddc",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

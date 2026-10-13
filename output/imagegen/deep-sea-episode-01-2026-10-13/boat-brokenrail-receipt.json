@@ -1,0 +1,22 @@
+{
+  "state": "generated_unreviewed",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. Image 2 fixes the small fishing boat geometry: rusty red hull, cream trim and low cream STERN cabin, teal forward door, square side windows, orange starboard lifebuoy, wooden open foredeck, central square hatch, low rails. Keep its ordinary scale. EMPTY boat at calm dusty-blue sea, elevated starboard broadside three-quarter view. A short section of the starboard foredeck rail is visibly torn out with jagged posts and a frayed net hanging at that gap. Everything else is intact: sound low cabin, intact square windows and roof, no flooding. Square hatch and lifebuoy visible. No people or creatures.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "3e4e74a15bbc591f6c90390d9f45e79dcd300962313ca9fb79c2df3c0e84f995",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/02.png",
+      "source_sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+      "sent_sha256": "0abb3b3bf7d6fa0b965954e4d583a328de7e8464067fb63a37c45f15daa6c44f"
+    }
+  ]
+}

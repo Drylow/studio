@@ -1,0 +1,18 @@
+[
+  {
+    "name": "marin-no-vest",
+    "references": [
+      "identity",
+      "drawing"
+    ],
+    "prompt": "Clean simple flat black outlined 2D matching the attached canonical drawing guide, matte colours, full opaque 16:9 landscape frame, no text, panels, borders, gradients or transparency. Image1 is the ONE same Marin identity and Image2 drawing language only. Draw ONE Marin full body on plain pale grey background, perfectly circular pure WHITE head, tiny black oval eyes, short mouth, navy short-brim fisherman cap, BLACK thin stick torso and limbs, WHITE mitten hands and oval feet. Precisely preserve his proportions and cap. In this specific costume state Marin has REMOVED his life jacket: his torso is a single thin BLACK line, completely bare of clothes/accessories. NO yellow vest, NO yellow garment, NO jacket held in hands, NO yellow anywhere. This is an identity-only costume variant, never another character or realistic human."
+  },
+  {
+    "name": "raft-empty",
+    "references": [
+      "drawing",
+      "raft"
+    ],
+    "prompt": "Clean simple flat black outlined 2D matching the attached canonical drawing guide, matte colours, full opaque 16:9 landscape frame, no text, panels, borders, gradients or transparency. Image2 fixes the same ONE small oval orange inflatable raft, grey flat floor and orange side tubes. Draw that identical raft EMPTY of supplies on calm teal sea, slight overhead three-quarter view, short plain white tether secured to outer loop. REMOVE both the blue bag and wooden oar from Image2. Absolutely NO bag, backpack, oar, bottle, supplies, people, fish or second boat anywhere. Just ONE empty orange raft, grey floor, white tether and simple water/sky. This is the pre-loading raft state."
+  }
+]

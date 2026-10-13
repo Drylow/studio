@@ -1,0 +1,672 @@
+{
+  "title": "Sea Monster Survival: 30 Days Stranded at Sea",
+  "project_id": "sea-monster-survival-30-days-stranded-at-3aeecc",
+  "video_seconds": 906.0416666666666,
+  "voice_seconds": 906.05,
+  "clips": 152,
+  "clip_frames_sum": 21745,
+  "fps": 24,
+  "published": false,
+  "files": {
+    "CAPCUT.txt": {
+      "sha256": "ae98cc67fc16147913a028f113d682bac5415255b426034e61451c6ee6aa7610",
+      "bytes": 447
+    },
+    "script-en.txt": {
+      "sha256": "154e4641b221e73ff38c95192d87f478c0b3ae223d4b7c99208a9a6eee344c19",
+      "bytes": 15220
+    },
+    "subtitles.srt": {
+      "sha256": "6c86837aa9aa587cb7eb275cb955f817771ee489f898f35dc5f8cfddb64632a4",
+      "bytes": 31803
+    },
+    "timeline.csv": {
+      "sha256": "0b160285591282047db1d7d0ee9031afb2a979cc08e3c829473f9537109d1e33",
+      "bytes": 24503
+    },
+    "upload-metadata.json": {
+      "sha256": "3000781bad327ce9645a85d7ab173d2ba8549df7b7274bd1aed988885ef8c913",
+      "bytes": 905
+    },
+    "UPLOAD.txt": {
+      "sha256": "07c71220d8485eefe7c6a9aeac33cbe431411c60c9fae0510c0f1f39ebfdfe94",
+      "bytes": 715
+    },
+    "verification.json": {
+      "sha256": "dcbeaf3fe50e47d38b15e8fbded8bced552bce038b7a90801986b3de69b1ce06",
+      "bytes": 1397
+    },
+    "video.mp4": {
+      "sha256": "4e13446b97547ecd8b67f68a9a8c2017f1002863e2502f96df938965300d6eb6",
+      "bytes": 257620589
+    },
+    "voiceover.mp3": {
+      "sha256": "2326c0ff0796b123b5ff8c352698cb5fb270f8b4936919f4cb219fb1c972a592",
+      "bytes": 21746668
+    },
+    "clips-capcut/001.mp4": {
+      "sha256": "2f48e16ab2b2debce680dc963b269277cc334071b71196e024e82d5271bfb98a",
+      "bytes": 11407371
+    },
+    "clips-capcut/002.mp4": {
+      "sha256": "a8213a390d34cf64197b71cd361dfb89b82b47204379d56cf7863ab868ac3002",
+      "bytes": 8651192
+    },
+    "clips-capcut/003.mp4": {
+      "sha256": "d5c2d136d7ea507b4acfa15659363f157ae61029786242fd7e7cf4451b0a7479",
+      "bytes": 8472065
+    },
+    "clips-capcut/004.mp4": {
+      "sha256": "bfaf5e05e4d0f15367559f7d719888169cf1ab8ce1bce691e7db17081c985903",
+      "bytes": 10086604
+    },
+    "clips-capcut/005.mp4": {
+      "sha256": "f8078362512d9ae0bddac18e8dcf8f9415c4011d9ae18e4868bb5a299c1cf136",
+      "bytes": 9183947
+    },
+    "clips-capcut/006.mp4": {
+      "sha256": "63c6152616715991223a661c669900a4d05ed71059ad0004a4fbaa28a9e1580c",
+      "bytes": 9214660
+    },
+    "clips-capcut/007.mp4": {
+      "sha256": "4bf909d6ee0cd2d707d2687e691dfa869e01e39a8ba194f53231738bdb1abc83",
+      "bytes": 7614192
+    },
+    "clips-capcut/008.mp4": {
+      "sha256": "95d59737768e2c316c6cfdef0aa34daed291d65691fe63f4e80c89c08f67587a",
+      "bytes": 7183931
+    },
+    "clips-capcut/009.mp4": {
+      "sha256": "4dc823b84124e08df2d61b489ece8d7c99fb157b11b5df2d94f00d2fa801fdaf",
+      "bytes": 10158768
+    },
+    "clips-capcut/010.mp4": {
+      "sha256": "35215b7761fd963f60a3ee10cf51c8bad3cf3b323dd501121153fe27ee725abd",
+      "bytes": 6610493
+    },
+    "clips-capcut/011.mp4": {
+      "sha256": "391700ea7a270132775d31283792003cf0a13cb2f62ee9e6271023e8b1fec62a",
+      "bytes": 8614167
+    },
+    "clips-capcut/012.mp4": {
+      "sha256": "65dcf52628b775a8bc84e33b42a4197fca5516948482abb5dc3221dd0a44ca0c",
+      "bytes": 6666038
+    },
+    "clips-capcut/013.mp4": {
+      "sha256": "9671d5509bfe04753e3e0bf4b768517c59fabf5a37968c174fdc19062be46999",
+      "bytes": 8697729
+    },
+    "clips-capcut/014.mp4": {
+      "sha256": "179230b28d94e8860a71c5cb7cc4e838a13d04fc5907d54edd50d618ad436dbe",
+      "bytes": 11541382
+    },
+    "clips-capcut/015.mp4": {
+      "sha256": "cbcd1128ad154b20b8aa3ba8755560a25180c8183d73f876e5aa8af2e80ae6bc",
+      "bytes": 9195202
+    },
+    "clips-capcut/016.mp4": {
+      "sha256": "d9dbf829893c13bf1c941ac25c0b893ddb1183e595efa61c6d4f64c611d5b49d",
+      "bytes": 6304340
+    },
+    "clips-capcut/017.mp4": {
+      "sha256": "65616a7f8d93be34b66bb2f0fd8222a811e97ae6611aba62e65db06aa7c625f8",
+      "bytes": 5942632
+    },
+    "clips-capcut/018.mp4": {
+      "sha256": "d8512ea334959c2c48a1f8b932e88c25ff8392f5348949aa8399174db6e1c9ac",
+      "bytes": 9127056
+    },
+    "clips-capcut/019.mp4": {
+      "sha256": "b6deaedf848c9badd01ee1020d226f334cb6096349fa21161409ea653daa32a2",
+      "bytes": 4194888
+    },
+    "clips-capcut/020.mp4": {
+      "sha256": "b2a0b52ed5aae5ef28ddf35a1d7fe1153c84d6feb15aefae46563645efc2cb2d",
+      "bytes": 7219717
+    },
+    "clips-capcut/021.mp4": {
+      "sha256": "9d42253eb06eda4140f54a4a0267a26849cddb5c19d103e693890fd869870804",
+      "bytes": 8133313
+    },
+    "clips-capcut/022.mp4": {
+      "sha256": "a17bed6667f5533aa9dcf00a9f312f5dadf6b8a968ea7b01e5fa3403a562e2a1",
+      "bytes": 9534957
+    },
+    "clips-capcut/023.mp4": {
+      "sha256": "fab87e82d2a03c1929868a1395ae5b4231cf8390d163ed48ef9af430bf996eeb",
+      "bytes": 9251140
+    },
+    "clips-capcut/024.mp4": {
+      "sha256": "107292ccfe67a5662e3e2ea2f6ff518fcff2beac88c07640b03fd146c9861d63",
+      "bytes": 8193927
+    },
+    "clips-capcut/025.mp4": {
+      "sha256": "80fece8fd4802dd07b345e30ec569fdd2778a026b3efffdd61eec41a63a1097d",
+      "bytes": 8920018
+    },
+    "clips-capcut/026.mp4": {
+      "sha256": "05e4b3b65b247cc2f5d001aa546e8bc91c9619ee3a40497db1603787c6a3749a",
+      "bytes": 9910352
+    },
+    "clips-capcut/027.mp4": {
+      "sha256": "7822173f446b23eaf61207ddc8e045032b8c726a464df9852606b1726130bf62",
+      "bytes": 11881094
+    },
+    "clips-capcut/028.mp4": {
+      "sha256": "98b740e3985db7fdde4f67a44d4daf592723fa3788ea472a2bacbfe1f135be1e",
+      "bytes": 10906484
+    },
+    "clips-capcut/029.mp4": {
+      "sha256": "f3f30b0223dda4dfb4d544a5c4bbe019e22634e8d7eb6184a9ce99dbdea00dde",
+      "bytes": 7887256
+    },
+    "clips-capcut/030.mp4": {
+      "sha256": "7d4bc2dbeff5b843760071070b6d55eeef214356bcf12efe32805c302cc47ed8",
+      "bytes": 7312675
+    },
+    "clips-capcut/031.mp4": {
+      "sha256": "820982c18000b0d49687a098b761c3ea7f985e4ef42ebd54258fc416a11f0ed6",
+      "bytes": 6533027
+    },
+    "clips-capcut/032.mp4": {
+      "sha256": "4ff9ce52e15db61dafdb99d0b7e9cdad5f7d16509fe3baa526c39843cbb567a2",
+      "bytes": 7423616
+    },
+    "clips-capcut/033.mp4": {
+      "sha256": "ddf3b2b320995ffe5e3a868f37df3a3920dcc9174c236b6e4a16e797f3c2c1d2",
+      "bytes": 7099395
+    },
+    "clips-capcut/034.mp4": {
+      "sha256": "3d64e31b42acf8d8cb37586af9fe3997fefab519e5b3d8b5ffb1b79224735757",
+      "bytes": 6467858
+    },
+    "clips-capcut/035.mp4": {
+      "sha256": "903bfe9b0d42ad39b74fb875c221940bcc3515c908ffea3a15f011e2ccd98004",
+      "bytes": 6608958
+    },
+    "clips-capcut/036.mp4": {
+      "sha256": "301808db416a5d87f6ffe0404e23028c465f9ebe864364659f88c13ae115c8a0",
+      "bytes": 9844315
+    },
+    "clips-capcut/037.mp4": {
+      "sha256": "a283280898e985018da944d41adeb41c923ea2ede20d54f3cd1c121b06e85d5e",
+      "bytes": 9124388
+    },
+    "clips-capcut/038.mp4": {
+      "sha256": "73a6661157756dedfee0ba18e524d5d7f4fe1c341021eeda0d54493986c183d6",
+      "bytes": 9265679
+    },
+    "clips-capcut/039.mp4": {
+      "sha256": "961073f584febf200f8daf7fc1f9f3dbc24c061abbe70bd2dde590db1345c284",
+      "bytes": 9953781
+    },
+    "clips-capcut/040.mp4": {
+      "sha256": "58625cd737f6fbd7106d46ae45c35476cc61a44e38e8b6a2b87d9ec0046f793e",
+      "bytes": 9126364
+    },
+    "clips-capcut/041.mp4": {
+      "sha256": "ba8586072a58a5a39115778ceb578de85c77810c34bc924f5d6d776b250f58bd",
+      "bytes": 8476592
+    },
+    "clips-capcut/042.mp4": {
+      "sha256": "61378647ea809e4415933820dcb9931e92c107bb8bffdd88b7b58509cfa9425b",
+      "bytes": 10616416
+    },
+    "clips-capcut/043.mp4": {
+      "sha256": "7270a2f01b313c5fa4438adcda8825cfcad1639a1af4ef062510046a65fc3891",
+      "bytes": 7295567
+    },
+    "clips-capcut/044.mp4": {
+      "sha256": "fe4095620fd62a75fe9a91ef7cafdb7daa3d6d33daa420766163e92d23fc1704",
+      "bytes": 9262688
+    },
+    "clips-capcut/045.mp4": {
+      "sha256": "d6e8f601b6c01162990ed5b34e9902e2d1bd6237db66b3c3c55383079fd5e7f9",
+      "bytes": 9170725
+    },
+    "clips-capcut/046.mp4": {
+      "sha256": "c28841b3d37f1efcf956a575138ad5fff8a488d79eed42c13919a645b02f0549",
+      "bytes": 11824007
+    },
+    "clips-capcut/047.mp4": {
+      "sha256": "6188bcb19d5587bc50ca9bf1c933dd49e518e78977925348d49d75abab400458",
+      "bytes": 6810223
+    },
+    "clips-capcut/048.mp4": {
+      "sha256": "7952cea8adbbe0a423506e50cb5c11101169680f2dcc14d0ac2c755d056c076e",
+      "bytes": 9951458
+    },
+    "clips-capcut/049.mp4": {
+      "sha256": "a77e9b8fb016742ea8b1d9d071e6117bdf46ba4274c0aa12f6a53ec0546493fe",
+      "bytes": 6634713
+    },
+    "clips-capcut/050.mp4": {
+      "sha256": "6ab02cd63627c073c3ac407fba2bfec04bbe69d207df499e69b0d18e47d9580a",
+      "bytes": 7903614
+    },
+    "clips-capcut/051.mp4": {
+      "sha256": "9184b31cb4779d38a40a6e9c936b70be15ef5be9037df42542278d977667f093",
+      "bytes": 10658025
+    },
+    "clips-capcut/052.mp4": {
+      "sha256": "da513a8855794ebbd2336cf8d3fdc3d430bfd0fab854ca1ec3ca81c1013cf2f3",
+      "bytes": 5729229
+    },
+    "clips-capcut/053.mp4": {
+      "sha256": "e7519b54b1f1ee1b0f037adb81e384f65c18fdad3876b6f349f683c6b0657fe9",
+      "bytes": 11634435
+    },
+    "clips-capcut/054.mp4": {
+      "sha256": "0a06affa2cce81b73ebc6a058fa550c856b95d0ed3aefe0c437a06aa905aa9d1",
+      "bytes": 8549696
+    },
+    "clips-capcut/055.mp4": {
+      "sha256": "19e10276e9f6431c48777f78e02cbee8ac9cc1ffa786bc21e93c4b01d0420b9f",
+      "bytes": 9165634
+    },
+    "clips-capcut/056.mp4": {
+      "sha256": "7b2586d930ad79ab7a8e91a79f0df4a4f2136596782482670bafa2e5cae3d2ca",
+      "bytes": 8579275
+    },
+    "clips-capcut/057.mp4": {
+      "sha256": "5bf309256b80cbaf0a5dcf9f53c2d2e66ba706345df3505a2bfe3f9f7209a158",
+      "bytes": 12079276
+    },
+    "clips-capcut/058.mp4": {
+      "sha256": "700a60f9ac8303440e3fcc156fe1777a171dab82b229f565d2445e6b328bc2b7",
+      "bytes": 10526619
+    },
+    "clips-capcut/059.mp4": {
+      "sha256": "47306f5c4076a02ab1905042aedc52d3ea01487c19c100e99f27614573ccb737",
+      "bytes": 8512738
+    },
+    "clips-capcut/060.mp4": {
+      "sha256": "ebad69cfcbd9a8df25a0d9ceb9504caf4b1b9f6be831c4a0ed4f1e0277da1b9a",
+      "bytes": 11672903
+    },
+    "clips-capcut/061.mp4": {
+      "sha256": "ed8e12024b7c8275f32c1ab11f4aad75355152965c76e3213a2127ef5ded54e3",
+      "bytes": 11639082
+    },
+    "clips-capcut/062.mp4": {
+      "sha256": "281551b018969c268947dd037bb626be41058bf1b814e35bab96882a203c49fe",
+      "bytes": 11111589
+    },
+    "clips-capcut/063.mp4": {
+      "sha256": "117c4569a03fd17335ee77e8567cf52a0f4fc5dc03fce4a8fb86d8b127fca4a9",
+      "bytes": 9368863
+    },
+    "clips-capcut/064.mp4": {
+      "sha256": "9236a22d0f954401a186222c4fbb6a16761fbf624953dcb1cbbafce56a919cae",
+      "bytes": 6283085
+    },
+    "clips-capcut/065.mp4": {
+      "sha256": "c48c5e70beb9e28c418bee809edbc972724935f6ceb8eac65137af619368804e",
+      "bytes": 8760810
+    },
+    "clips-capcut/066.mp4": {
+      "sha256": "0d36157683ed37f4f0a4842d01832245d03067e0b67a866ab260c535cdd6b615",
+      "bytes": 10818283
+    },
+    "clips-capcut/067.mp4": {
+      "sha256": "170387a3b762e5cc39a9c95bca3a3e0a8c25ef7fecfc8f86f38991c8fa50865a",
+      "bytes": 12520890
+    },
+    "clips-capcut/068.mp4": {
+      "sha256": "799791ba6d25a26e27017626e690d15c8a5f8971449763afba33a7d6ab9f9c53",
+      "bytes": 9062864
+    },
+    "clips-capcut/069.mp4": {
+      "sha256": "906ba855b1595419796d45fa88c056c5855fb5ad138987aa5afd2a4bedd6ee24",
+      "bytes": 13134026
+    },
+    "clips-capcut/070.mp4": {
+      "sha256": "601bb2a17af8c40d2fa39143d16bcfbc99a7d886689f715991406d954a61bd43",
+      "bytes": 6347721
+    },
+    "clips-capcut/071.mp4": {
+      "sha256": "08013d7db0026a6f32ad7c9a1b2b446707f89feb8e467dd608634cf87284b9f7",
+      "bytes": 8629607
+    },
+    "clips-capcut/072.mp4": {
+      "sha256": "72c4b9fddf84862fbb301cd86f5b7831cdc92b7eebf2a796e83756a432827a97",
+      "bytes": 8521145
+    },
+    "clips-capcut/073.mp4": {
+      "sha256": "686acb2e56fd0b12ed8b6c92e98d84ed3bd98eab1c59fecdd30d396f1e36a8a7",
+      "bytes": 7144557
+    },
+    "clips-capcut/074.mp4": {
+      "sha256": "0e8798945f9a3381ededd5223ffd3079eb24141bb8d7c0d716a45454c08d530d",
+      "bytes": 8606606
+    },
+    "clips-capcut/075.mp4": {
+      "sha256": "74f2cf795d3068b375b9a8d2474bd0217a01114f295f4948ce3a312af8ae9ae5",
+      "bytes": 5790062
+    },
+    "clips-capcut/076.mp4": {
+      "sha256": "ee86283468dd366de3fedaefc8b117829d3caf9959101811daac614b2800a8a4",
+      "bytes": 7512147
+    },
+    "clips-capcut/077.mp4": {
+      "sha256": "bebb7de7ec6e1379468eb492ced1c1d21ecb48447a0ac0dba53d88a2c2cfb3df",
+      "bytes": 12284528
+    },
+    "clips-capcut/078.mp4": {
+      "sha256": "70e996413cd2100fcda6803edb8026674f34971251ea7c93598fa5e11d36d48a",
+      "bytes": 6713234
+    },
+    "clips-capcut/079.mp4": {
+      "sha256": "93e975be6efbf4c967ae8db16b250a1455e2c4b679273b46b2bde20316cb0275",
+      "bytes": 8538676
+    },
+    "clips-capcut/080.mp4": {
+      "sha256": "5776aa688accdf299e9170a198162abae29049b5f76a4eef8616c902560d044a",
+      "bytes": 7522554
+    },
+    "clips-capcut/081.mp4": {
+      "sha256": "c162731b2f3a8e377af6c466e477b69e88aeb67ffe8bc07eaa56ebe38302d4dc",
+      "bytes": 8554612
+    },
+    "clips-capcut/082.mp4": {
+      "sha256": "2bec497a410448f3a72437b5d9afbe6f09f42d5dfd6d6e3c467fc581a965cc1b",
+      "bytes": 8981906
+    },
+    "clips-capcut/083.mp4": {
+      "sha256": "24304e061907248f44618e7de60de3a0320dc2b70ceb86f0f510c2fbc1bec523",
+      "bytes": 9232971
+    },
+    "clips-capcut/084.mp4": {
+      "sha256": "2f779b6de1463b5564497ab574b528ebd1182c3ba79dbb62c28a38f21a623298",
+      "bytes": 8201209
+    },
+    "clips-capcut/085.mp4": {
+      "sha256": "22ea34ea3c1f099fec524d6fddd48d7544841e17f867888f13a34d2e7b0056ea",
+      "bytes": 7765376
+    },
+    "clips-capcut/086.mp4": {
+      "sha256": "972097ef3db2dd418067bfef4463dac6878c2920e764eb5e1367344355368764",
+      "bytes": 11154998
+    },
+    "clips-capcut/087.mp4": {
+      "sha256": "7a312c98841a2ba93b1a976342828f5680a6d0d0ff03756c1c68caf5bc041344",
+      "bytes": 10516749
+    },
+    "clips-capcut/088.mp4": {
+      "sha256": "0eb016941e436f0a242bff64511040bbd93db0962371ed2486e84ea72b0168ad",
+      "bytes": 8730435
+    },
+    "clips-capcut/089.mp4": {
+      "sha256": "15b00b4a2813006919c8ba3fe32b375e2d8e97ba90543435b99a23a4ac587b7c",
+      "bytes": 8609230
+    },
+    "clips-capcut/090.mp4": {
+      "sha256": "82ba6c35498ccc329c124e8f37dc3871bc74a518d1d7ee2889440827b9336ff2",
+      "bytes": 5864518
+    },
+    "clips-capcut/091.mp4": {
+      "sha256": "d7d293425281f268336586e8c3614f427bf9c92798056fe3e7ab89413122861b",
+      "bytes": 7202441
+    },
+    "clips-capcut/092.mp4": {
+      "sha256": "be01f7c9093e116a0f33d6951a1118ea1850e58cfc0836568351f9c112dfc57b",
+      "bytes": 10262864
+    },
+    "clips-capcut/093.mp4": {
+      "sha256": "59f97cfc41045730a6c2934d7b5497dba653e06001db5b9f08789d5d14eae808",
+      "bytes": 12737710
+    },
+    "clips-capcut/094.mp4": {
+      "sha256": "298175e01835f66698b218d8bf71dedc1ea2ac51fdb5f1e626297063f7f8ea54",
+      "bytes": 11007265
+    },
+    "clips-capcut/095.mp4": {
+      "sha256": "a3c58725f7e1c7c1a9927d21293e2ab4f95f6db7aaed83b6b8ea05209a4405a6",
+      "bytes": 10156613
+    },
+    "clips-capcut/096.mp4": {
+      "sha256": "d3c135fcdd9770bbc3a0f9061db408e669f7c740a872e8e43bac7ea88a8df0b4",
+      "bytes": 10036872
+    },
+    "clips-capcut/097.mp4": {
+      "sha256": "222996b5c59e1cff2c9551eed4754a30caf3b2c96a696e283c5cc8f40cd3c829",
+      "bytes": 7912667
+    },
+    "clips-capcut/098.mp4": {
+      "sha256": "39172348575a2fddd0e6968aebfc683dded960461411e72b158817389296ca94",
+      "bytes": 9947015
+    },
+    "clips-capcut/099.mp4": {
+      "sha256": "41a4c762c6cd47c5052468d74a996f707280fb04eaed3d943cb3714da30a3de5",
+      "bytes": 11050905
+    },
+    "clips-capcut/100.mp4": {
+      "sha256": "2e16ac05139c044ec85fb3e59cf70cac538f9e20e00c785ce1aab0e76d5b1932",
+      "bytes": 7279381
+    },
+    "clips-capcut/101.mp4": {
+      "sha256": "c601ab6969cce5caa236fb98cf92b2abd75d8e9ed96eec1d070343f2b4951c2b",
+      "bytes": 10683431
+    },
+    "clips-capcut/102.mp4": {
+      "sha256": "3d236e3f4e2fe3a6c7b355ed9eae4776facb9193995a94807be87cbb682e010b",
+      "bytes": 7853089
+    },
+    "clips-capcut/103.mp4": {
+      "sha256": "19c4b37efacda0bc6cfa613eba365e7fe5bd574fa9e083f9080cd8e201b22989",
+      "bytes": 8120421
+    },
+    "clips-capcut/104.mp4": {
+      "sha256": "00642072b2a5b2f144578f18e70784af5abb49a8be8c06174b74fc0e5474a9a0",
+      "bytes": 9111993
+    },
+    "clips-capcut/105.mp4": {
+      "sha256": "06f737e15f2afe04c3a7324ae8b61a2b58307c1269d1117ab3dbcedee604d41d",
+      "bytes": 8979545
+    },
+    "clips-capcut/106.mp4": {
+      "sha256": "46777033f31222f51edd32b1bac4f6bb3b0e1b8512ffcc371acd7a325e91934d",
+      "bytes": 6321013
+    },
+    "clips-capcut/107.mp4": {
+      "sha256": "1fa9d6da91113c580f289ad43da9f27c740eaaf72de6f74c588cef11924aefc4",
+      "bytes": 10767410
+    },
+    "clips-capcut/108.mp4": {
+      "sha256": "dd94a0f2cd9286a7520a68865618ed1d217345967e4cf64e30cb386477112a07",
+      "bytes": 9348237
+    },
+    "clips-capcut/109.mp4": {
+      "sha256": "24698c9b297e2a648706f98c64bae1c11e22c50e607fceb24c66418cd9824ed3",
+      "bytes": 6926663
+    },
+    "clips-capcut/110.mp4": {
+      "sha256": "d78a9e8f92dc6927197256e5d3a96770dc1e78aa15da00e8551410ea69a3b26f",
+      "bytes": 9766994
+    },
+    "clips-capcut/111.mp4": {
+      "sha256": "8d8e8eed6008662d9c9eb1e8518bd7cf689bd17e2b1c7e8dd51a7a7e7960964e",
+      "bytes": 9283211
+    },
+    "clips-capcut/112.mp4": {
+      "sha256": "1c1431c8b498a8c76dae9d02ab40e0e92b026edf3440d5b552430212037f7f0a",
+      "bytes": 6330191
+    },
+    "clips-capcut/113.mp4": {
+      "sha256": "05ade838a1270bc01061ddfe1d19ddc8284b333389e651c8d81d8e170367d08d",
+      "bytes": 5721430
+    },
+    "clips-capcut/114.mp4": {
+      "sha256": "60291f8fdaca4f54afa9718a1974511e64245d2063e5cec477c939f3891c5bc5",
+      "bytes": 8713604
+    },
+    "clips-capcut/115.mp4": {
+      "sha256": "fa87cfa2c030d00d99c21456b7407c1905fb4930db8d70c543712d04b17fd458",
+      "bytes": 9347512
+    },
+    "clips-capcut/116.mp4": {
+      "sha256": "0426e3eb0e5f265ebf5365bd8c7c468daaab99c1e6e93aeae0b4a73cbf4d0d9d",
+      "bytes": 6552180
+    },
+    "clips-capcut/117.mp4": {
+      "sha256": "88d916c18f2eae44e69bad91a299aaec501e730e24fbe0eee471fb380b1fc83d",
+      "bytes": 6818620
+    },
+    "clips-capcut/118.mp4": {
+      "sha256": "5b31a48617126413692031752c0ee3f28c9145e8c4d91bbab9a87110aec355dd",
+      "bytes": 10356553
+    },
+    "clips-capcut/119.mp4": {
+      "sha256": "eddeb47df747b96703e676dc4c82df5ebc2174e28404c66277014ea53976c147",
+      "bytes": 8477110
+    },
+    "clips-capcut/120.mp4": {
+      "sha256": "d3be754853e0117dd8168340f16468c542bc94cba1f5481cb3fc0a76022395e6",
+      "bytes": 7526514
+    },
+    "clips-capcut/121.mp4": {
+      "sha256": "48edbab9df64f7032cb676e75f6a1ef28eaadb2eb61566e19698054a67b68b81",
+      "bytes": 8692595
+    },
+    "clips-capcut/122.mp4": {
+      "sha256": "9317ee4c276811867f97693359dcb53795d4e128b5af171d00b4d42c016378ae",
+      "bytes": 8276687
+    },
+    "clips-capcut/123.mp4": {
+      "sha256": "a62653a0ba20b0171c4e54ed30e80e5d266086552af3fa11d04e649b90ddd6da",
+      "bytes": 7341968
+    },
+    "clips-capcut/124.mp4": {
+      "sha256": "562abe7f075047fc92e1db107da6bad6857b167144d8b59e33036dace95cb76a",
+      "bytes": 8150218
+    },
+    "clips-capcut/125.mp4": {
+      "sha256": "62ef8bb72996c27f6d750ffc78e5daac70cfb2bcd2fc87d7cdea27f24983b3ac",
+      "bytes": 7647408
+    },
+    "clips-capcut/126.mp4": {
+      "sha256": "28f6be82062cd5ecd89e924944939c1f7f95bb6e6411f6eecbdd0b0db12324d8",
+      "bytes": 6429379
+    },
+    "clips-capcut/127.mp4": {
+      "sha256": "9e276365d6adc197c483cb2479fe12b2c2c92bdf613cc6db6e9b406370583d7c",
+      "bytes": 6489217
+    },
+    "clips-capcut/128.mp4": {
+      "sha256": "703575e6002c0512c963a247cbfb89603f3a9e69d04ce8c1951e3ebf9db7b4af",
+      "bytes": 8686104
+    },
+    "clips-capcut/129.mp4": {
+      "sha256": "433bcc318e8097502100dccff12e98d7ff399a61f48a6b8ddc766ae1c511e59b",
+      "bytes": 6074274
+    },
+    "clips-capcut/130.mp4": {
+      "sha256": "4cae1ea58bd1bd6931bd25377f004b4077f0e077f85ecc5961e9dac881135330",
+      "bytes": 7053517
+    },
+    "clips-capcut/131.mp4": {
+      "sha256": "5e645983a97df3b00aa8d2ce818e4155270aab15ae826047121c93f1723ed5db",
+      "bytes": 5630938
+    },
+    "clips-capcut/132.mp4": {
+      "sha256": "8618d0257394f5e6c5fb3c98522726c23d263697712f1b4e75ffb7ebba7528d2",
+      "bytes": 7605003
+    },
+    "clips-capcut/133.mp4": {
+      "sha256": "b113dab1f9f3bd72a3a0166d8d27be245518bcb0abae95ddb323b612444f5029",
+      "bytes": 6222664
+    },
+    "clips-capcut/134.mp4": {
+      "sha256": "f7ad6a448ad08662efbb61ab64eea60994b29a135bd05f786d841853add5a31b",
+      "bytes": 6614432
+    },
+    "clips-capcut/135.mp4": {
+      "sha256": "d8227e4a102f1a5c3f53bda085d0b0d9636b23b5726fb64f2cb45a52482d8635",
+      "bytes": 9271968
+    },
+    "clips-capcut/136.mp4": {
+      "sha256": "5802e1a070ab5798a71545e2e1eeea0737db74375cbb9ec3ad1d4a2f0831c3e5",
+      "bytes": 8305344
+    },
+    "clips-capcut/137.mp4": {
+      "sha256": "0b755dee78d9151a704c7f62a55f276bc39e24bd9d55a3bdd5a4593b48373ebe",
+      "bytes": 7339613
+    },
+    "clips-capcut/138.mp4": {
+      "sha256": "d90b356fd9798a5ebdb5e9cf8a21b0287a81025e4a043cf812ab1f7d2355bf64",
+      "bytes": 9065076
+    },
+    "clips-capcut/139.mp4": {
+      "sha256": "420563aa1f479afe29c476b805a0c86a4078ec39ff508020f442bf731ffef194",
+      "bytes": 7323770
+    },
+    "clips-capcut/140.mp4": {
+      "sha256": "6c6f55fda15f4816b28cd8fd521aa234cdfa72e54fdb2896db3ef2caeadb87df",
+      "bytes": 9912570
+    },
+    "clips-capcut/141.mp4": {
+      "sha256": "46e445a0a21074537670b94eb17b8ce0bab48019487b929785ac28f19969dd71",
+      "bytes": 8436801
+    },
+    "clips-capcut/142.mp4": {
+      "sha256": "ffc606426474e3e1d5c42b283888ddf6a269198babcb21ebb137dcdf32b90b1c",
+      "bytes": 7055613
+    },
+    "clips-capcut/143.mp4": {
+      "sha256": "a7d5f878bbe4781685819de1eb6faa3b92b624b8ac0c8efebde7723c6cb124bd",
+      "bytes": 8472325
+    },
+    "clips-capcut/144.mp4": {
+      "sha256": "28319a4c91d031bc5147ade71f37dd15b12ddeb8c1b5c7bf3034426cde1d8bf5",
+      "bytes": 7245204
+    },
+    "clips-capcut/145.mp4": {
+      "sha256": "749897ae80bf6edda0c15b7f0c5f275cfa2989585a9db2ed48a3931124056806",
+      "bytes": 5126623
+    },
+    "clips-capcut/146.mp4": {
+      "sha256": "e8884a617a210167f14edc8d74954a9e4e94f5b18fa379c2760d6aade4d3f7e3",
+      "bytes": 7001430
+    },
+    "clips-capcut/147.mp4": {
+      "sha256": "1dfbf81d01c8a3ae57035b099774d23575710a5a4a7c619b64406e24ffdeec6e",
+      "bytes": 6210032
+    },
+    "clips-capcut/148.mp4": {
+      "sha256": "0373a63fed3350bd75f115b4bd792f28a38441c6193fcc2d50d04291492726f7",
+      "bytes": 10659370
+    },
+    "clips-capcut/149.mp4": {
+      "sha256": "e5ccae99516557bcf32daab3d51e3df2a03f8a7e6b077168a2064605c1a569df",
+      "bytes": 9397280
+    },
+    "clips-capcut/150.mp4": {
+      "sha256": "82de2251b62b060b288f5d4c7b9e74b79c68c5281a92bea7aff46aa576186a3a",
+      "bytes": 9872594
+    },
+    "clips-capcut/151.mp4": {
+      "sha256": "27d522cdb88b5b622a206a46a406789faa86472c33c62163143bc4a56cd616ef",
+      "bytes": 7254750
+    },
+    "clips-capcut/152.mp4": {
+      "sha256": "39604a10097100ba78107d5e8d3c95c22509d829bafb9be8ef9e6af0e219167b",
+      "bytes": 6369559
+    },
+    "thumbnails/A-monster-below.jpg": {
+      "sha256": "9d309eafde77956f8209ea9b5e501d7309fa2fff410cd31031a465f63ff78426",
+      "bytes": 259387
+    },
+    "thumbnails/B-tentacle-attack.jpg": {
+      "sha256": "bbd4137a6a43e893545126aa99843c2ed5625620ed7ea7d42d32596753cf44fb",
+      "bytes": 360586
+    },
+    "thumbnails/C-last-refuge.jpg": {
+      "sha256": "68fd6371b11689f900fbd4d01e42fecb97def1c9ebd19867924bf676e0b14b0f",
+      "bytes": 365187
+    },
+    "thumbnails/comparison.jpg": {
+      "sha256": "9da191398f863c2fda4f7dae829d7b376ee33be5f8db28d54c62bec3607605a2",
+      "bytes": 227364
+    }
+  }
+}

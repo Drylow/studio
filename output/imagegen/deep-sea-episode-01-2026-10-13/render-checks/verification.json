@@ -1,0 +1,19 @@
+{
+  "project_id": "sea-monster-survival-30-days-stranded-at-3aeecc",
+  "render_sha256": "4e13446b97547ecd8b67f68a9a8c2017f1002863e2502f96df938965300d6eb6",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24,
+  "decoded_video_frames": 21745,
+  "video_seconds": 906.0416666666666,
+  "audio_seconds": 906.065875,
+  "voice_seconds": 906.05,
+  "full_audio_similarity": 0.9999492764472961,
+  "audio_lag_seconds": 0.0,
+  "scenes": 152,
+  "decoded_video_without_errors": true,
+  "visual_review": "inspected",
+  "user_approved": false,
+  "reviewer": "Codex",
+  "notes": "All13 rendered contact sheets inspected, covering all152 scenes. No missing or black frames, accidental captions, duplicate Marin or montage crop failure. Same round-white-headed navy-cap stick drawing throughout; concrete sinking then raft/buoy/rescue. Six corrected shots confirmed in the actual rendered frames, including empty pre-loading raft, single held jacket, blue supply bag and storm props. Minor rail/window shapes, distant buoy-frame colour and oar/bag positions still vary in some shots; temporary jacket state also varies around shots54-56. These are recorded as remaining illustration variations, not a claim of perfect physical continuity. Full21745-frame decode passed; original narration correlates0.999949 with the rendered audio at zero measured lag. No human listening or user approval claimed."
+}

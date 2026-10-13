@@ -1,0 +1,28 @@
+{
+  "state": "codex_thumbnail_inspected_user_selection_pending",
+  "prompt": "Create a 16:9 YouTube thumbnail for \"Sea Monster Survival: 30 Days Stranded at Sea\". Image 1 is Marin's exact IDENTITY, Image 2 is our canonical DRAWING style, Image 3 is a competing channel's PACKAGING reference only: borrow its giant readable foreground survivor and bold short duration label, not its character, scenery, composition or branded objects. Our ONE Marin has a circular pure WHITE head, two small black oval eyes, short worried mouth, navy short-brim cap, yellow two-panel life vest, BLACK stick limbs and WHITE mittens/feet. No hair, ears, nose, eyebrows, duplicate Marin, human muscular torso or unrelated zombies. Clean crisp black outlines, simple flat matte 2D, shallow backgrounds, strong clear silhouette, no photorealism, 3D, gradients across face or glow. The ONLY text is \"30 DAYS\", huge white condensed uppercase letters with thick black outline, safely inside frame. No other text or logos. Original composition: a continuous ocean cutaway, ONE Marin and his tiny RED fishing boat occupy the upper RIGHT third; Marin visible leaning over the rail, large enough to read his frightened face. Below the waterline on LEFT, an enormous dark teal leviathan head with one PALE YELLOW EYE and a few giant triangular teeth occupies most of the lower frame. Its scale dwarfs the boat. Its body fades into solid dark teal water through simple shape contrast, not detailed realistic atmosphere. Empty sky at upper LEFT holds \"30 DAYS\". Cream low stern cabin, teal door and orange lifebuoy identify our boat. One continuous scene, no split panels, no second portrait floating in the sky.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "64032c63940b34f8fee9b18d3e52118d6ed472f0cae2f3b342b018b3dc9eb982",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/01.png",
+      "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "work/deep-sea-production-2026-10-13/thumbnail-references/mr-doomsday.jpg",
+      "source_sha256": "3c98e656ee96441007b0daa7a7836060886f910e1ba0a193dd37893093db4b68",
+      "sent_sha256": "16fe65ac826df3e0f0bc9cd60dae5c811a67283070e502bf4c725fbf05fa3200"
+    }
+  ],
+  "review_notes": "ONE recognizable Marin, white face/hands, navy cap and yellow vest; duration text 30 DAYS correct and readable. Three distinct compositions inspected. A recommended; user has not selected."
+}

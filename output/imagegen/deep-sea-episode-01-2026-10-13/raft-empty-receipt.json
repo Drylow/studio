@@ -1,0 +1,22 @@
+{
+  "state": "generated_unreviewed",
+  "prompt": "Clean simple flat black outlined 2D matching the attached canonical drawing guide, matte colours, full opaque 16:9 landscape frame, no text, panels, borders, gradients or transparency. Image2 fixes the same ONE small oval orange inflatable raft, grey flat floor and orange side tubes. Draw that identical raft EMPTY of supplies on calm teal sea, slight overhead three-quarter view, short plain white tether secured to outer loop. REMOVE both the blue bag and wooden oar from Image2. Absolutely NO bag, backpack, oar, bottle, supplies, people, fish or second boat anywhere. Just ONE empty orange raft, grey floor, white tether and simple water/sky. This is the pre-loading raft state.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "e11fb8d758ae9777b37523dbb51e80053ebc55baf78af9110c85b5fd035e6500",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-episode-01-2026-10-13/raft.png",
+      "source_sha256": "2d7a8df41c77100094e940c546dc9512498d94e99504e130214702ac6a4635a5",
+      "sent_sha256": "f023ec8065cbba1e4d5c8b5a8d3045d7f3627619a037877a5768b145ddc6b3c8"
+    }
+  ]
+}

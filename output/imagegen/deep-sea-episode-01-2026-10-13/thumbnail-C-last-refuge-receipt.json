@@ -1,0 +1,28 @@
+{
+  "state": "codex_thumbnail_inspected_user_selection_pending",
+  "prompt": "Create a 16:9 YouTube thumbnail for \"Sea Monster Survival: 30 Days Stranded at Sea\". Image 1 is Marin's exact IDENTITY, Image 2 is our canonical DRAWING style, Image 3 is a competing channel's PACKAGING reference only: borrow its giant readable foreground survivor and bold short duration label, not its character, scenery, composition or branded objects. Our ONE Marin has a circular pure WHITE head, two small black oval eyes, short worried mouth, navy short-brim cap, yellow two-panel life vest, BLACK stick limbs and WHITE mittens/feet. No hair, ears, nose, eyebrows, duplicate Marin, human muscular torso or unrelated zombies. Clean crisp black outlines, simple flat matte 2D, shallow backgrounds, strong clear silhouette, no photorealism, 3D, gradients across face or glow. The ONLY text is \"30 DAYS\", huge white condensed uppercase letters with thick black outline, safely inside frame. No other text or logos. Original composition: ONE Marin clings with both white mitten hands to the narrow ladder of a large RED BELL BUOY near the LEFT foreground, navy cap and yellow vest visible, feet lifted above water. One grey giant shark with huge open mouth rises diagonally from the water at RIGHT toward the buoy; teeth large simple pale triangles, no gore. The buoy has a red float, small platform and an open dark steel frame with one brass bell; it is clearly a marker buoy, not a lighthouse. A small torn ORANGE empty raft drifts away at lower left, no intact fishing boat after sinking. Sparse pale grey-blue sky, deep teal sea, no city. \"30 DAYS\" at upper RIGHT above shark, safely inset. Immediate danger and lost shelter, no duplicate Marin or comparison panels.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "ec1a41bc226adcb80fd0d54194165ac63f61d1f28cd2bce966d80e4c01ee3b50",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/01.png",
+      "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "work/deep-sea-production-2026-10-13/thumbnail-references/stickfallout.jpg",
+      "source_sha256": "e38010fc4f6720f61547c8284b0127966267033e0c6b9129319438245d7e8b4b",
+      "sent_sha256": "203a550f87c6660c62f71a12046af1975a492bc523f39137d1c28ef2da2c25f8"
+    }
+  ],
+  "review_notes": "ONE recognizable Marin, white face/hands, navy cap and yellow vest; duration text 30 DAYS correct and readable. Three distinct compositions inspected. A recommended; user has not selected."
+}

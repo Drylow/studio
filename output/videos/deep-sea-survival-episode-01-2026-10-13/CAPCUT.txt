@@ -1,0 +1,4 @@
+Importez les 152 clips muets de clips-capcut dans l'ordre 001 a 152. Placez voiceover.mp3 au temps 00:00. Les clips couvrent exactement la voix a 24 images/s.
+video.mp4 contient deja le montage et la voix: ne superposez pas les deux voix.
+subtitles.srt est facultatif. Les transitions avec chevauchement modifient le calage.
+Les trois miniatures sont dans thumbnails/. A est recommandee, votre choix reste libre. Aucune publication effectuee.

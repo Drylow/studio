@@ -1,0 +1,2756 @@
+[
+  {
+    "id": 1,
+    "location_id": "boat-intact",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin braces on foredeck pulling a fishing net rope with both white hands; black patch spreads under water beside hull. Rope has not broken rail yet.",
+    "authored_action": "Marin braces on foredeck pulling a fishing net rope with both white hands; black patch spreads under water beside hull. Rope has not broken rail yet.",
+    "start": 0.0,
+    "end": 7.193,
+    "c0": 0,
+    "c1": 142
+  },
+  {
+    "id": 2,
+    "location_id": "boat-intact",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin drops the tight rope; it slides physically across wooden deck toward his white foot. His hands visibly release it, no rope wound around his ankle.",
+    "authored_action": "Marin drops the tight rope; it slides physically across wooden deck toward his white foot. His hands visibly release it, no rope wound around his ankle.",
+    "start": 7.193,
+    "end": 12.726,
+    "c0": 143,
+    "c1": 238
+  },
+  {
+    "id": 3,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin jumps up onto forward cabin step as taut fishing rope tears one short starboard foredeck rail section free. Show torn posts and net pulling outward; one hero.",
+    "authored_action": "Marin jumps up onto forward cabin step as taut fishing rope tears one short starboard foredeck rail section free. Show torn posts and net pulling outward; one hero.",
+    "start": 12.726,
+    "end": 18.441,
+    "c0": 240,
+    "c1": 334
+  },
+  {
+    "id": 4,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Boat tilts starboard; plain empty bucket falls off deck and the leviathan mouth closes around bucket below the surface, hero holds doorframe above. Continuous water cutaway.",
+    "authored_action": "Boat tilts starboard; plain empty bucket falls off deck and the leviathan mouth closes around bucket below the surface, hero holds doorframe above. Continuous water cutaway.",
+    "start": 18.441,
+    "end": 25.5,
+    "c0": 335,
+    "c1": 436
+  },
+  {
+    "id": 5,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "close-up",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Enormous pale yellow leviathan eye surfaces beside cream cabin window at waterline, eye larger than window; net vanishes into dark water. No floating hero portrait.",
+    "authored_action": "Enormous pale yellow leviathan eye surfaces beside cream cabin window at waterline, eye larger than window; net vanishes into dark water. No floating hero portrait.",
+    "start": 25.5,
+    "end": 33.094,
+    "c0": 437,
+    "c1": 537
+  },
+  {
+    "id": 6,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin stands shaken on cabin step looking at missing starboard rail posts, short loose net end on deck. Another small green fishing boat remains distant at left.",
+    "authored_action": "Marin stands shaken on cabin step looking at missing starboard rail posts, short loose net end on deck. Another small green fishing boat remains distant at left.",
+    "start": 33.094,
+    "end": 39.329,
+    "c0": 538,
+    "c1": 634
+  },
+  {
+    "id": 7,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "POV from Marin's rail: distant GREEN fishing boat stern rises upright, bow sinking into sea; NO duplicate red hero boat and no visible humans.",
+    "authored_action": "POV from Marin's rail: distant GREEN fishing boat stern rises upright, bow sinking into sea; NO duplicate red hero boat and no visible humans.",
+    "start": 39.329,
+    "end": 44.677,
+    "c0": 635,
+    "c1": 710
+  },
+  {
+    "id": 8,
+    "location_id": "cabin-dry",
+    "location_view": "door-inward",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin holds the fixed dark boat radio handset beside starboard radio wall and reaches for push-to-talk button, nervous white face turned toward it.",
+    "authored_action": "Marin holds the fixed dark boat radio handset beside starboard radio wall and reaches for push-to-talk button, nervous white face turned toward it.",
+    "start": 44.677,
+    "end": 49.293,
+    "c0": 711,
+    "c1": 772
+  },
+  {
+    "id": 9,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "White mitten presses radio transmitter while other hand grips handset, anxious round face partly visible; radio unlabelled, no speech bubbles.",
+    "authored_action": "White mitten presses radio transmitter while other hand grips handset, anxious round face partly visible; radio unlabelled, no speech bubbles.",
+    "start": 49.293,
+    "end": 55.766,
+    "c0": 773,
+    "c1": 880
+  },
+  {
+    "id": 10,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin crouches beside ordinary engine control at stern cabin step, turns switch; simple tiny smoke puff and stalled motor, no fantasy machinery.",
+    "authored_action": "Marin crouches beside ordinary engine control at stern cabin step, turns switch; simple tiny smoke puff and stalled motor, no fantasy machinery.",
+    "start": 55.766,
+    "end": 60.973,
+    "c0": 882,
+    "c1": 950
+  },
+  {
+    "id": 11,
+    "location_id": "boat-brokenrail",
+    "location_view": "underwater",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "Underwater side view of small stern propeller wrapped tightly in torn fishing net, hull above, simple teal water. No human underwater or extra monster.",
+    "authored_action": "Underwater side view of small stern propeller wrapped tightly in torn fishing net, hull above, simple teal water. No human underwater or extra monster.",
+    "start": 60.973,
+    "end": 67.318,
+    "c0": 951,
+    "c1": 1056
+  },
+  {
+    "id": 12,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin leans over remaining rail, sees gigantic pale eye immediately below red hull, recoils. One small hero above, one massive monster below, not ghost overlay.",
+    "authored_action": "Marin leans over remaining rail, sees gigantic pale eye immediately below red hull, recoils. One small hero above, one massive monster below, not ghost overlay.",
+    "start": 67.318,
+    "end": 72.463,
+    "c0": 1057,
+    "c1": 1134
+  },
+  {
+    "id": 13,
+    "location_id": "cabin-dry",
+    "location_view": "door-inward",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin steps back through forward teal door into dry cabin, points away from engine with simple worried face, no action at radio.",
+    "authored_action": "Marin steps back through forward teal door into dry cabin, points away from engine with simple worried face, no action at radio.",
+    "start": 72.463,
+    "end": 77.944,
+    "c0": 1135,
+    "c1": 1220
+  },
+  {
+    "id": 14,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin checks supplies: white water bottles under port bench, repair-pad pouch on floor, cooler visible through forward door on deck and packed orange raft container beside cabin. Each item physical, no infographic.",
+    "authored_action": "Marin checks supplies: white water bottles under port bench, repair-pad pouch on floor, cooler visible through forward door on deck and packed orange raft container beside cabin. Each item physical, no infographic.",
+    "start": 77.944,
+    "end": 85.196,
+    "c0": 1221,
+    "c1": 1340
+  },
+  {
+    "id": 15,
+    "location_id": "boat-brokenrail",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin kneels beside squat orange emergency raft container behind cabin, deliberately leaves it packed and accessible rather than moving it. No deployed raft yet.",
+    "authored_action": "Marin kneels beside squat orange emergency raft container behind cabin, deliberately leaves it packed and accessible rather than moving it. No deployed raft yet.",
+    "start": 85.196,
+    "end": 90.878,
+    "c0": 1341,
+    "c1": 1420
+  },
+  {
+    "id": 16,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "At sunset Marin reaches up to click OFF plain cabin ceiling lamp, environment dims but his face and mittens stay flat white.",
+    "authored_action": "At sunset Marin reaches up to click OFF plain cabin ceiling lamp, environment dims but his face and mittens stay flat white.",
+    "start": 90.878,
+    "end": 95.716,
+    "c0": 1422,
+    "c1": 1497
+  },
+  {
+    "id": 17,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin viewed from behind at remaining rail facing several tiny distant dark green and grey boats at dusk. Quiet open sea, no crowds or monster yet.",
+    "authored_action": "Marin viewed from behind at remaining rail facing several tiny distant dark green and grey boats at dusk. Quiet open sea, no crowds or monster yet.",
+    "start": 95.716,
+    "end": 100.285,
+    "c0": 1498,
+    "c1": 1584
+  },
+  {
+    "id": 18,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Octopus"
+    ],
+    "character_variants": {
+      "Octopus": "default"
+    },
+    "visual_beat": "Distant GREEN boat cabin crushed sideways by one huge purple tentacle, water spray around it; view from hero boat rail edge. No Marin portrait or red duplicate boat.",
+    "authored_action": "Distant GREEN boat cabin crushed sideways by one huge purple tentacle, water spray around it; view from hero boat rail edge. No Marin portrait or red duplicate boat.",
+    "start": 100.285,
+    "end": 106.082,
+    "c0": 1585,
+    "c1": 1668
+  },
+  {
+    "id": 19,
+    "location_id": "boat-brokenrail",
+    "location_view": "underwater",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "Distant green sunken cabin and radio box fall below waterline; a few bubbles and dark cables, no human faces, no visual sound text.",
+    "authored_action": "Distant green sunken cabin and radio box fall below waterline; a few bubbles and dark cables, no human faces, no visual sound text.",
+    "start": 106.082,
+    "end": 110.287,
+    "c0": 1669,
+    "c1": 1736
+  },
+  {
+    "id": 20,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin's mitten hovers just short of radio push-to-talk as he turns round head toward the wall after a knock; other hand braces bench. One hero.",
+    "authored_action": "Marin's mitten hovers just short of radio push-to-talk as he turns round head toward the wall after a knock; other hand braces bench. One hero.",
+    "start": 110.287,
+    "end": 115.927,
+    "c0": 1738,
+    "c1": 1832
+  },
+  {
+    "id": 21,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Daylight: Marin bends from side deck to inspect deep long scrapes on starboard red hull beneath cabin. No new dent yet.",
+    "authored_action": "Daylight: Marin bends from side deck to inspect deep long scrapes on starboard red hull beneath cabin. No new dent yet.",
+    "start": 115.927,
+    "end": 121.257,
+    "c0": 1834,
+    "c1": 1932
+  },
+  {
+    "id": 22,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin clicks fixed radio power ON, black battery clearly mounted immediately beneath box on starboard cabin wall. No second radio or invented screen words.",
+    "authored_action": "Marin clicks fixed radio power ON, black battery clearly mounted immediately beneath box on starboard cabin wall. No second radio or invented screen words.",
+    "start": 121.257,
+    "end": 127.992,
+    "c0": 1933,
+    "c1": 2054
+  },
+  {
+    "id": 23,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin clicks radio OFF after floor tremor, looks down toward starboard wall with skeptical simple line mouth, both feet white.",
+    "authored_action": "Marin clicks radio OFF after floor tremor, looks down toward starboard wall with skeptical simple line mouth, both feet white.",
+    "start": 127.992,
+    "end": 134.165,
+    "c0": 2055,
+    "c1": 2153
+  },
+  {
+    "id": 24,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin reluctantly switches same boat radio ON again for a brief call, grips handset. Simple tight framing on mitten and fearful round face.",
+    "authored_action": "Marin reluctantly switches same boat radio ON again for a brief call, grips handset. Simple tight framing on mitten and fearful round face.",
+    "start": 134.165,
+    "end": 139.891,
+    "c0": 2154,
+    "c1": 2244
+  },
+  {
+    "id": 25,
+    "location_id": "cabin-dry",
+    "location_view": "door-inward",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Cabin floor tilts; Marin drops low and crawls away from radio wall toward forward door while reaching to turn radio off. Thin stick anatomy, no extra arms.",
+    "authored_action": "Cabin floor tilts; Marin drops low and crawls away from radio wall toward forward door while reaching to turn radio off. Thin stick anatomy, no extra arms.",
+    "start": 139.891,
+    "end": 145.269,
+    "c0": 2245,
+    "c1": 2337
+  },
+  {
+    "id": 26,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin quietly opens single drawer beneath port bench and lifts folded cream navigation chart, radio behind him visibly off.",
+    "authored_action": "Marin quietly opens single drawer beneath port bench and lifts folded cream navigation chart, radio behind him visibly off.",
+    "start": 145.269,
+    "end": 152.01,
+    "c0": 2338,
+    "c1": 2440
+  },
+  {
+    "id": 27,
+    "location_id": "cabin-dry",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Overhead white mitten hands unfold cream chart on port bench; simple coastline, buoy dots and rocky island icon, no legible text or added face on map.",
+    "authored_action": "Overhead white mitten hands unfold cream chart on port bench; simple coastline, buoy dots and rocky island icon, no legible text or added face on map.",
+    "start": 152.01,
+    "end": 159.645,
+    "c0": 2441,
+    "c1": 2578
+  },
+  {
+    "id": 28,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin looks toward small distant ordinary rocky island with low service landing; water current carries boat diagonally away. No fantasy cliffs/towers.",
+    "authored_action": "Marin looks toward small distant ordinary rocky island with low service landing; water current carries boat diagonally away. No fantasy cliffs/towers.",
+    "start": 159.645,
+    "end": 166.966,
+    "c0": 2579,
+    "c1": 2706
+  },
+  {
+    "id": 29,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin paddles with brown wooden spare oar from side deck, both white hands hold shaft, distant island small. One oar only.",
+    "authored_action": "Marin paddles with brown wooden spare oar from side deck, both white hands hold shaft, distant island small. One oar only.",
+    "start": 166.966,
+    "end": 172.406,
+    "c0": 2708,
+    "c1": 2791
+  },
+  {
+    "id": 30,
+    "location_id": "boat-brokenrail",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin compares folded chart to receding small island over rail, one hand holds chart and other braces rail, oar rests on deck.",
+    "authored_action": "Marin compares folded chart to receding small island over rail, one hand holds chart and other braces rail, oar rests on deck.",
+    "start": 172.406,
+    "end": 177.445,
+    "c0": 2792,
+    "c1": 2885
+  },
+  {
+    "id": 31,
+    "location_id": "boat-brokenrail",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Broad underwater side view: leviathan dark teal bulk glides beside red hull just below surface, only one creature, no tentacles.",
+    "authored_action": "Broad underwater side view: leviathan dark teal bulk glides beside red hull just below surface, only one creature, no tentacles.",
+    "start": 177.445,
+    "end": 183.969,
+    "c0": 2887,
+    "c1": 2985
+  },
+  {
+    "id": 32,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "One leviathan rounded back briefly breaks surface beside boat then dips into deeper blue, simple large silhouette, no repeated creature portraits.",
+    "authored_action": "One leviathan rounded back briefly breaks surface beside boat then dips into deeper blue, simple large silhouette, no repeated creature portraits.",
+    "start": 183.969,
+    "end": 189.134,
+    "c0": 2986,
+    "c1": 3058
+  },
+  {
+    "id": 33,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin lifts both white feet onto cabin step, then drops ONE loose metal rail piece over stern with one hand, other gripping doorframe.",
+    "authored_action": "Marin lifts both white feet onto cabin step, then drops ONE loose metal rail piece over stern with one hand, other gripping doorframe.",
+    "start": 189.134,
+    "end": 194.544,
+    "c0": 3059,
+    "c1": 3148
+  },
+  {
+    "id": 34,
+    "location_id": "boat-brokenrail",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Loose rail piece scrapes red hull and sinks diagonally; leviathan turns its broad head toward the metal, away from hull. No hero underwater.",
+    "authored_action": "Loose rail piece scrapes red hull and sinks diagonally; leviathan turns its broad head toward the metal, away from hull. No hero underwater.",
+    "start": 194.544,
+    "end": 200.313,
+    "c0": 3149,
+    "c1": 3250
+  },
+  {
+    "id": 35,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin looks down into now CLEAR patch beneath hull, white face over rail and empty teal water, no visible monster.",
+    "authored_action": "Marin looks down into now CLEAR patch beneath hull, white face over rail and empty teal water, no visible monster.",
+    "start": 200.313,
+    "end": 205.449,
+    "c0": 3251,
+    "c1": 3334
+  },
+  {
+    "id": 36,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin pushes hard with wooden oar; dark leviathan shadow returning at distance behind stern, no literal giant eye beside head.",
+    "authored_action": "Marin pushes hard with wooden oar; dark leviathan shadow returning at distance behind stern, no literal giant eye beside head.",
+    "start": 205.449,
+    "end": 211.507,
+    "c0": 3336,
+    "c1": 3427
+  },
+  {
+    "id": 37,
+    "location_id": "boat-brokenrail",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin sits tired on wooden deck, oar laid beside him, studies few remaining loose rail pieces without throwing them. Water sparse.",
+    "authored_action": "Marin sits tired on wooden deck, oar laid beside him, studies few remaining loose rail pieces without throwing them. Water sparse.",
+    "start": 211.507,
+    "end": 217.788,
+    "c0": 3428,
+    "c1": 3531
+  },
+  {
+    "id": 38,
+    "location_id": "boat-brokenrail",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin's white hand touches remaining sound rail as he weighs removing more pieces; a grey shark fin visible beyond rail at edge, no creature body needed.",
+    "authored_action": "Marin's white hand touches remaining sound rail as he weighs removing more pieces; a grey shark fin visible beyond rail at edge, no creature body needed.",
+    "start": 217.788,
+    "end": 224.36,
+    "c0": 3532,
+    "c1": 3640
+  },
+  {
+    "id": 39,
+    "location_id": "boat-brokenrail",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Shark"
+    ],
+    "character_variants": {
+      "Shark": "default"
+    },
+    "visual_beat": "One GREY shark fin crosses between boat and floating net scraps; a second distant fin indicates another shark in background without two giant heads. Marin out of frame.",
+    "authored_action": "One GREY shark fin crosses between boat and floating net scraps; a second distant fin indicates another shark in background without two giant heads. Marin out of frame.",
+    "start": 224.36,
+    "end": 231.419,
+    "c0": 3641,
+    "c1": 3760
+  },
+  {
+    "id": 40,
+    "location_id": "boat-brokenrail",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Shark"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Shark": "default"
+    },
+    "visual_beat": "Marin watches from teal doorway as giant GREY shark jaw rises off stern and bites dangling rope; shark distinct from dark teal leviathan.",
+    "authored_action": "Marin watches from teal doorway as giant GREY shark jaw rises off stern and bites dangling rope; shark distinct from dark teal leviathan.",
+    "start": 231.419,
+    "end": 237.732,
+    "c0": 3761,
+    "c1": 3869
+  },
+  {
+    "id": 41,
+    "location_id": "boat-brokenrail",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin pulls loose trailing lines onto deck with both white hands, one taut rope still runs under hull. Clear hand-to-rope contact, no extra arms.",
+    "authored_action": "Marin pulls loose trailing lines onto deck with both white hands, one taut rope still runs under hull. Clear hand-to-rope contact, no extra arms.",
+    "start": 237.732,
+    "end": 242.441,
+    "c0": 3871,
+    "c1": 3946
+  },
+  {
+    "id": 42,
+    "location_id": "boat-dented",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Shark"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Shark": "default"
+    },
+    "visual_beat": "Grey shark impacts starboard hull creating dent; Marin falls backward onto foredeck, cracked cooler hits broken rail. No gore or dismemberment.",
+    "authored_action": "Grey shark impacts starboard hull creating dent; Marin falls backward onto foredeck, cracked cooler hits broken rail. No gore or dismemberment.",
+    "start": 242.441,
+    "end": 248.611,
+    "c0": 3947,
+    "c1": 4056
+  },
+  {
+    "id": 43,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin releases caught rope and stays safely on deck as first sparse rain begins; his arms remain attached and white hands intact.",
+    "authored_action": "Marin releases caught rope and stays safely on deck as first sparse rain begins; his arms remain attached and white hands intact.",
+    "start": 248.611,
+    "end": 253.763,
+    "c0": 4057,
+    "c1": 4136
+  },
+  {
+    "id": 44,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "In rain Marin braces teal door with one mitten while placing clean water containers on deck with the other. Small open bottles catch rain, no complex storm lighting.",
+    "authored_action": "In rain Marin braces teal door with one mitten while placing clean water containers on deck with the other. Small open bottles catch rain, no complex storm lighting.",
+    "start": 253.763,
+    "end": 259.391,
+    "c0": 4137,
+    "c1": 4235
+  },
+  {
+    "id": 45,
+    "location_id": "boat-dented",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Morning: Marin looks toward a solitary distant green mast sticking above water; island very small far behind, red hero boat still afloat.",
+    "authored_action": "Morning: Marin looks toward a solitary distant green mast sticking above water; island very small far behind, red hero boat still afloat.",
+    "start": 259.391,
+    "end": 266.756,
+    "c0": 4236,
+    "c1": 4356
+  },
+  {
+    "id": 46,
+    "location_id": "boat-dented",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "White hands open blue cooler lid beside broken rail, seawater pooled inside and cracked lower corner visible. Food packets are ordinary sealed neutral items, no labels.",
+    "authored_action": "White hands open blue cooler lid beside broken rail, seawater pooled inside and cracked lower corner visible. Food packets are ordinary sealed neutral items, no labels.",
+    "start": 266.756,
+    "end": 274.55,
+    "c0": 4358,
+    "c1": 4491
+  },
+  {
+    "id": 47,
+    "location_id": "cabin-dry",
+    "location_view": "door-inward",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin carries intact sealed food packets from deck cooler through teal doorway to port bench; empty damaged cooler outside. Do not add shopping bags.",
+    "authored_action": "Marin carries intact sealed food packets from deck cooler through teal doorway to port bench; empty damaged cooler outside. Do not add shopping bags.",
+    "start": 274.55,
+    "end": 278.788,
+    "c0": 4492,
+    "c1": 4569
+  },
+  {
+    "id": 48,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Shark"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Shark": "default"
+    },
+    "visual_beat": "Discarded spoiled food splashes off stern; grey fins gather beyond rail while Marin pulls teal door shut from inside. No zombie creatures.",
+    "authored_action": "Discarded spoiled food splashes off stern; grey fins gather beyond rail while Marin pulls teal door shut from inside. No zombie creatures.",
+    "start": 278.788,
+    "end": 285.166,
+    "c0": 4570,
+    "c1": 4681
+  },
+  {
+    "id": 49,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "BEFORE window attack, windows and roof intact: Marin wipes a small puddle creeping from below port bench with cloth. Shallow leak only.",
+    "authored_action": "BEFORE window attack, windows and roof intact: Marin wipes a small puddle creeping from below port bench with cloth. Shallow leak only.",
+    "start": 285.166,
+    "end": 289.354,
+    "c0": 4683,
+    "c1": 4749
+  },
+  {
+    "id": 50,
+    "location_id": "boat-dented",
+    "location_view": "waterline",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "Starboard exterior red hull dent with thin leak crack just below cabin, low side view; broken foredeck rail gap persists. No humans or monsters.",
+    "authored_action": "Starboard exterior red hull dent with thin leak crack just below cabin, low side view; broken foredeck rail gap persists. No humans or monsters.",
+    "start": 289.354,
+    "end": 295.142,
+    "c0": 4750,
+    "c1": 4839
+  },
+  {
+    "id": 51,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin presses cream repair pad on starboard inner hull leak near floor and sets plain bucket below it, port bench opposite. Day-six windows and roof INTACT.",
+    "authored_action": "Marin presses cream repair pad on starboard inner hull leak near floor and sets plain bucket below it, port bench opposite. Day-six windows and roof INTACT.",
+    "start": 295.142,
+    "end": 302.233,
+    "c0": 4841,
+    "c1": 4951
+  },
+  {
+    "id": 52,
+    "location_id": "cabin-dry",
+    "location_view": "door-inward",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Night environment: Marin wakes on port bench as bucket slides on tilted wooden floor. Repair pad remains on starboard lower wall, windows intact, face white without shading.",
+    "authored_action": "Night environment: Marin wakes on port bench as bucket slides on tilted wooden floor. Repair pad remains on starboard lower wall, windows intact, face white without shading.",
+    "start": 302.233,
+    "end": 307.885,
+    "c0": 4952,
+    "c1": 5042
+  },
+  {
+    "id": 53,
+    "location_id": "cabin-dry",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin empties plain bucket through forward doorway, braces bucket against bench afterward as distant green fishing launch approaches at morning horizon.",
+    "authored_action": "Marin empties plain bucket through forward doorway, braces bucket against bench afterward as distant green fishing launch approaches at morning horizon.",
+    "start": 307.885,
+    "end": 315.634,
+    "c0": 5043,
+    "c1": 5149
+  },
+  {
+    "id": 54,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin stands on cabin step and waves his YELLOW life jacket ABOVE his head with two white hands. Vest temporarily removed, exposed torso remains simple BLACK stick line, not human chest. Navy cap stays.",
+    "authored_action": "Marin stands on cabin step and waves his YELLOW life jacket ABOVE his head with two white hands. Vest temporarily removed, exposed torso remains simple BLACK stick line, not human chest. Navy cap stays.",
+    "start": 315.634,
+    "end": 322.052,
+    "c0": 5150,
+    "c1": 5267
+  },
+  {
+    "id": 55,
+    "location_id": "boat-dented",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Fisher"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Fisher": "default"
+    },
+    "visual_beat": "Over Marin shoulder: distant small GREEN fishing boat turns toward him; Fisher, a tiny white round-headed driver with GREY cap and DARK GREEN vest, visible once at wheel behind green boat window. Marin foreground is ONE hero, not two versions. Fisher has no yellow vest/navy cap.",
+    "authored_action": "Over Marin shoulder: distant small GREEN fishing boat turns toward him; Fisher, a tiny white round-headed driver with GREY cap and DARK GREEN vest, visible once at wheel behind green boat window. Marin foreground is ONE hero, not two versions. Fisher has no yellow vest/navy cap.",
+    "start": 322.052,
+    "end": 327.778,
+    "c0": 5268,
+    "c1": 5353
+  },
+  {
+    "id": 56,
+    "location_id": "boat-dented",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.",
+    "authored_action": "Marin waves urgently at green boat while dark teal leviathan shadow leaves red hull and crosses toward approaching boat. Life vest still visibly held in hands above head.",
+    "start": 327.778,
+    "end": 333.825,
+    "c0": 5355,
+    "c1": 5465
+  },
+  {
+    "id": 57,
+    "location_id": "boat-dented",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "POV from red rail: huge swell rises under distant GREEN boat bow, spray wall obscures its driver completely. No visible humans; one attacking leviathan.",
+    "authored_action": "POV from red rail: huge swell rises under distant GREEN boat bow, spray wall obscures its driver completely. No visible humans; one attacking leviathan.",
+    "start": 333.825,
+    "end": 340.385,
+    "c0": 5466,
+    "c1": 5574
+  },
+  {
+    "id": 58,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin buckles yellow vest back onto black stick torso, in background distant GREEN boat bow points up helplessly. Same navy cap, no rescuer nearby.",
+    "authored_action": "Marin buckles yellow vest back onto black stick torso, in background distant GREEN boat bow points up helplessly. Same navy cap, no rescuer nearby.",
+    "start": 340.385,
+    "end": 347.553,
+    "c0": 5575,
+    "c1": 5687
+  },
+  {
+    "id": 59,
+    "location_id": "boat-dented",
+    "location_view": "sea-facing",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin sits alone looking at empty horizon where failed rescue was; only faint green wreckage distant, red boat intact except existing dent/rail gap.",
+    "authored_action": "Marin sits alone looking at empty horizon where failed rescue was; only faint green wreckage distant, red boat intact except existing dent/rail gap.",
+    "start": 347.553,
+    "end": 354.047,
+    "c0": 5688,
+    "c1": 5784
+  },
+  {
+    "id": 60,
+    "location_id": "boat-dented",
+    "location_view": "deck-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Octopus"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Octopus": "default"
+    },
+    "visual_beat": "Purple tentacle drags across cream cabin roof, tip reaches starboard window. Marin crouches in doorway looking up. Glass still intact at this moment.",
+    "authored_action": "Purple tentacle drags across cream cabin roof, tip reaches starboard window. Marin crouches in doorway looking up. Glass still intact at this moment.",
+    "start": 354.047,
+    "end": 362.065,
+    "c0": 5786,
+    "c1": 5919
+  },
+  {
+    "id": 61,
+    "location_id": "cabin-dry",
+    "location_view": "radio-pov",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Octopus"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Octopus": "default"
+    },
+    "visual_beat": "Inside cabin: large purple suction cups press against STARBOARD window viewer left, another part of SAME tentacle curls across forward doorway; Marin crawls toward still-blocked doorway. No second octopus.",
+    "authored_action": "Inside cabin: large purple suction cups press against STARBOARD window viewer left, another part of SAME tentacle curls across forward doorway; Marin crawls toward still-blocked doorway. No second octopus.",
+    "start": 362.065,
+    "end": 368.824,
+    "c0": 5920,
+    "c1": 6039
+  },
+  {
+    "id": 62,
+    "location_id": "boat-dented",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin squeezes through intact PORT side window onto narrow port side deck, navy cap catches frame edge and his hand pulls it free. Opposite starboard window attack offscreen.",
+    "authored_action": "Marin squeezes through intact PORT side window onto narrow port side deck, navy cap catches frame edge and his hand pulls it free. Opposite starboard window attack offscreen.",
+    "start": 368.824,
+    "end": 375.845,
+    "c0": 6041,
+    "c1": 6167
+  },
+  {
+    "id": 63,
+    "location_id": "cabin-damaged",
+    "location_view": "door-inward",
+    "shot_type": "wide",
+    "characters": [
+      "Octopus"
+    ],
+    "character_variants": {
+      "Octopus": "default"
+    },
+    "visual_beat": "Purple tentacle breaks STARBOARD window on viewer LEFT, simple glass shards fall onto bench floor; port window opposite stays intact. NO Marin in cabin now; he escaped outside.",
+    "authored_action": "Purple tentacle breaks STARBOARD window on viewer LEFT, simple glass shards fall onto bench floor; port window opposite stays intact. NO Marin in cabin now; he escaped outside.",
+    "start": 375.845,
+    "end": 381.732,
+    "c0": 6168,
+    "c1": 6273
+  },
+  {
+    "id": 64,
+    "location_id": "boat-windowbroken",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin grabs ordinary METAL PAN at teal doorway and throws it through missing starboard rail section, one hand releases pan, other braces doorframe.",
+    "authored_action": "Marin grabs ordinary METAL PAN at teal doorway and throws it through missing starboard rail section, one hand releases pan, other braces doorframe.",
+    "start": 381.732,
+    "end": 386.025,
+    "c0": 6275,
+    "c1": 6350
+  },
+  {
+    "id": 65,
+    "location_id": "boat-windowbroken",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Octopus"
+    ],
+    "character_variants": {
+      "Octopus": "default"
+    },
+    "visual_beat": "One metal pan splashes next to stern and massive purple tentacle loosens its grip on broken window, curls toward pan splash. No human in water.",
+    "authored_action": "One metal pan splashes next to stern and massive purple tentacle loosens its grip on broken window, curls toward pan splash. No human in water.",
+    "start": 386.025,
+    "end": 391.264,
+    "c0": 6351,
+    "c1": 6437
+  },
+  {
+    "id": 66,
+    "location_id": "boat-windowbroken",
+    "location_view": "deck-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin runs toward BOW away from sagging stern cabin roof; purple tentacle tip sinks behind stern at distance. Strong clear action, black stick legs, one hero.",
+    "authored_action": "Marin runs toward BOW away from sagging stern cabin roof; purple tentacle tip sinks behind stern at distance. Strong clear action, black stick legs, one hero.",
+    "start": 391.264,
+    "end": 398.035,
+    "c0": 6438,
+    "c1": 6556
+  },
+  {
+    "id": 67,
+    "location_id": "boat-windowbroken",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin drags squat orange packed raft CONTAINER by its handle onto open foredeck beside central hatch. Still packed, not inflated; cabin damaged behind.",
+    "authored_action": "Marin drags squat orange packed raft CONTAINER by its handle onto open foredeck beside central hatch. Still packed, not inflated; cabin damaged behind.",
+    "start": 398.035,
+    "end": 405.079,
+    "c0": 6558,
+    "c1": 6679
+  },
+  {
+    "id": 68,
+    "location_id": "boat-windowbroken",
+    "location_view": "sea-facing",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin looks from foredeck at empty horizon, island entirely gone; damaged cabin roof behind, no safe sleeping bench use.",
+    "authored_action": "Marin looks from foredeck at empty horizon, island entirely gone; damaged cabin roof behind, no safe sleeping bench use.",
+    "start": 405.079,
+    "end": 411.816,
+    "c0": 6680,
+    "c1": 6798
+  },
+  {
+    "id": 69,
+    "location_id": "boat-windowbroken",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin spreads same cream chart on deck near orange raft container and points to red buoy dot near outer shipping lane. No legible labels or new objects.",
+    "authored_action": "Marin spreads same cream chart on deck near orange raft container and points to red buoy dot near outer shipping lane. No legible labels or new objects.",
+    "start": 411.816,
+    "end": 418.917,
+    "c0": 6799,
+    "c1": 6913
+  },
+  {
+    "id": 70,
+    "location_id": "buoy",
+    "location_view": "wide-front",
+    "shot_type": "wide",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "A distant view of empty RED bell buoy establishes maintenance platform, ladder and open steel frame holding brass bell. No Marin magically already on buoy.",
+    "authored_action": "A distant view of empty RED bell buoy establishes maintenance platform, ladder and open steel frame holding brass bell. No Marin magically already on buoy.",
+    "start": 418.917,
+    "end": 424.994,
+    "c0": 6914,
+    "c1": 7019
+  },
+  {
+    "id": 71,
+    "location_id": "buoy",
+    "location_view": "bell-side",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "Brass bell swings freely inside open steel frame over red buoy platform, readable clearance around bell, sparse teal sea. No animal or humans.",
+    "authored_action": "Brass bell swings freely inside open steel frame over red buoy platform, readable clearance around bell, sparse teal sea. No animal or humans.",
+    "start": 424.994,
+    "end": 431.454,
+    "c0": 7020,
+    "c1": 7124
+  },
+  {
+    "id": 72,
+    "location_id": "boat-windowbroken",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin stands on foredeck with small BLACK binoculars raised in both white hands, yellow vest and navy cap unchanged; damaged cabin behind.",
+    "authored_action": "Marin stands on foredeck with small BLACK binoculars raised in both white hands, yellow vest and navy cap unchanged; damaged cabin behind.",
+    "start": 431.454,
+    "end": 436.939,
+    "c0": 7125,
+    "c1": 7220
+  },
+  {
+    "id": 73,
+    "location_id": "boat-windowbroken",
+    "location_view": "binocular-pov",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "POV with ordinary unobstructed full-frame telephoto view, tiny red buoy marker emerges between simple waves at orange sunset. No circular binocular vignette, frame border or text.",
+    "authored_action": "POV with ordinary unobstructed full-frame telephoto view, tiny red buoy marker emerges between simple waves at orange sunset. No circular binocular vignette, frame border or text.",
+    "start": 436.939,
+    "end": 443.142,
+    "c0": 7221,
+    "c1": 7311
+  },
+  {
+    "id": 74,
+    "location_id": "boat-windowbroken",
+    "location_view": "sea-facing",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin lowers shaking white hands holding binoculars, fixes gaze on distant red marker ahead. One hero, damaged boat, no glowing face.",
+    "authored_action": "Marin lowers shaking white hands holding binoculars, fixes gaze on distant red marker ahead. One hero, damaged boat, no glowing face.",
+    "start": 443.142,
+    "end": 448.925,
+    "c0": 7312,
+    "c1": 7415
+  },
+  {
+    "id": 75,
+    "location_id": "boat-windowbroken",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Red damaged boat drifts with current toward tiny red bell buoy, outboard engine OFF, Marin sits watching course from bow. No paddling action here.",
+    "authored_action": "Red damaged boat drifts with current toward tiny red bell buoy, outboard engine OFF, Marin sits watching course from bow. No paddling action here.",
+    "start": 448.925,
+    "end": 452.918,
+    "c0": 7416,
+    "c1": 7479
+  },
+  {
+    "id": 76,
+    "location_id": "cabin-damaged",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin packs dark BLUE waterproof supply bag on port bench, broken starboard window opposite and sagging ceiling persist. Bag sits physically on bench, no straps attached to body.",
+    "authored_action": "Marin packs dark BLUE waterproof supply bag on port bench, broken starboard window opposite and sagging ceiling persist. Bag sits physically on bench, no straps attached to body.",
+    "start": 452.918,
+    "end": 457.745,
+    "c0": 7481,
+    "c1": 7561
+  },
+  {
+    "id": 77,
+    "location_id": "boat-windowbroken",
+    "location_view": "overhead",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin white hands organize sealed food, water bottle, folded chart, small handheld radio and short signal light beside open blue bag on deck. All ordinary unbranded props, no extra portrait.",
+    "authored_action": "Marin white hands organize sealed food, water bottle, folded chart, small handheld radio and short signal light beside open blue bag on deck. All ordinary unbranded props, no extra portrait.",
+    "start": 457.745,
+    "end": 464.795,
+    "c0": 7562,
+    "c1": 7659
+  },
+  {
+    "id": 78,
+    "location_id": "cabin-damaged",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "One white hand switches fixed boat radio OFF, the other holds separate small dark handheld radio visibly OFF. No display lettering, two devices intentionally distinct.",
+    "authored_action": "One white hand switches fixed boat radio OFF, the other holds separate small dark handheld radio visibly OFF. No display lettering, two devices intentionally distinct.",
+    "start": 464.795,
+    "end": 469.094,
+    "c0": 7660,
+    "c1": 7716
+  },
+  {
+    "id": 79,
+    "location_id": "boat-windowbroken",
+    "location_view": "overhead",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin sleeps curled on open foredeck beside packed orange raft container and waterproof BLUE bag; one oar rests nearby, cabin damaged and empty behind him.",
+    "authored_action": "Marin sleeps curled on open foredeck beside packed orange raft container and waterproof BLUE bag; one oar rests nearby, cabin damaged and empty behind him.",
+    "start": 469.094,
+    "end": 474.549,
+    "c0": 7717,
+    "c1": 7805
+  },
+  {
+    "id": 80,
+    "location_id": "cabin-damaged",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin laboriously lifts bucket of leak water away from low starboard repair pad, tired shoulders, shallow floor water increased, broken window remains.",
+    "authored_action": "Marin laboriously lifts bucket of leak water away from low starboard repair pad, tired shoulders, shallow floor water increased, broken window remains.",
+    "start": 474.549,
+    "end": 479.495,
+    "c0": 7807,
+    "c1": 7900
+  },
+  {
+    "id": 81,
+    "location_id": "cabin-damaged",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "White mitten marks ONE short horizontal water-level line on starboard inner wall beside repair pad; shallow water has reached line, no written numbers.",
+    "authored_action": "White mitten marks ONE short horizontal water-level line on starboard inner wall beside repair pad; shallow water has reached line, no written numbers.",
+    "start": 479.495,
+    "end": 485.46,
+    "c0": 7901,
+    "c1": 7996
+  },
+  {
+    "id": 82,
+    "location_id": "boat-windowbroken",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin sets waterproof blue bag and raft container on raised forward cabin step, bucket floats under bench visible through door. No floating supply bag.",
+    "authored_action": "Marin sets waterproof blue bag and raft container on raised forward cabin step, bucket floats under bench visible through door. No floating supply bag.",
+    "start": 485.46,
+    "end": 491.642,
+    "c0": 7997,
+    "c1": 8095
+  },
+  {
+    "id": 83,
+    "location_id": "boat-windowbroken",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Sea becomes smooth: Marin leans over remaining port rail to look straight down, black stick limbs and white hands/feet, calm flat water around hull.",
+    "authored_action": "Sea becomes smooth: Marin leans over remaining port rail to look straight down, black stick limbs and white hands/feet, calm flat water around hull.",
+    "start": 491.642,
+    "end": 497.573,
+    "c0": 8097,
+    "c1": 8189
+  },
+  {
+    "id": 84,
+    "location_id": "boat-windowbroken",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Continuous underwater side view: one huge dark teal leviathan lies directly beneath damaged red hull, broad back blocks light, no multiple monsters or tentacles.",
+    "authored_action": "Continuous underwater side view: one huge dark teal leviathan lies directly beneath damaged red hull, broad back blocks light, no multiple monsters or tentacles.",
+    "start": 497.573,
+    "end": 503.977,
+    "c0": 8190,
+    "c1": 8299
+  },
+  {
+    "id": 85,
+    "location_id": "boat-flooded",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Leviathan back lifts whole damaged boat slightly above waterline; Marin holds rail, cream repair pad visible loose through door. Huge scale, not realistic splash effects.",
+    "authored_action": "Leviathan back lifts whole damaged boat slightly above waterline; Marin holds rail, cream repair pad visible loose through door. Huge scale, not realistic splash effects.",
+    "start": 503.977,
+    "end": 509.131,
+    "c0": 8300,
+    "c1": 8373
+  },
+  {
+    "id": 86,
+    "location_id": "boat-flooded",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Boat remains listing after creature drops away; Marin braces across wet sloping foredeck as water rushes from cabin floor. Red hull/teal door intact geometry despite water.",
+    "authored_action": "Boat remains listing after creature drops away; Marin braces across wet sloping foredeck as water rushes from cabin floor. Red hull/teal door intact geometry despite water.",
+    "start": 509.131,
+    "end": 514.879,
+    "c0": 8374,
+    "c1": 8466
+  },
+  {
+    "id": 87,
+    "location_id": "boat-flooded",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin pulls orange raft container over low remaining rail and lowers it into water with its short WHITE tether clearly secured to red boat. Bag remains on raised step.",
+    "authored_action": "Marin pulls orange raft container over low remaining rail and lowers it into water with its short WHITE tether clearly secured to red boat. Bag remains on raised step.",
+    "start": 514.879,
+    "end": 520.564,
+    "c0": 8467,
+    "c1": 8559
+  },
+  {
+    "id": 88,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "wide",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.",
+    "authored_action": "EMPTY bright orange raft opens floating beside listing red boat, tether visibly connects raft loop to remaining rail; no duplicate inflated rafts or Marin yet inside.",
+    "start": 520.564,
+    "end": 525.805,
+    "c0": 8560,
+    "c1": 8641
+  },
+  {
+    "id": 89,
+    "location_id": "boat-flooded",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Night: Marin stays sitting on raised cabin step above deck water with binoculars, orange EMPTY raft tethered beside boat and far distant red buoy.",
+    "authored_action": "Night: Marin stays sitting on raised cabin step above deck water with binoculars, orange EMPTY raft tethered beside boat and far distant red buoy.",
+    "start": 525.805,
+    "end": 532.168,
+    "c0": 8642,
+    "c1": 8754
+  },
+  {
+    "id": 90,
+    "location_id": "boat-flooded",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "One red listing boat forms barrier between Marin on high foredeck and giant leviathan below, orange empty raft beside hull. Continuous cutaway, no duplicated hero below water.",
+    "authored_action": "One red listing boat forms barrier between Marin on high foredeck and giant leviathan below, orange empty raft beside hull. Continuous cutaway, no duplicated hero below water.",
+    "start": 532.168,
+    "end": 537.1,
+    "c0": 8755,
+    "c1": 8840
+  },
+  {
+    "id": 91,
+    "location_id": "cabin-damaged",
+    "location_view": "door-inward",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "DAY EIGHTEEN: cabin now floods to bench seat level, Marin wades carefully to move last supplies through teal doorway. Broken window, sagging roof and off boat radio remain. No intact dry cabin.",
+    "authored_action": "DAY EIGHTEEN: cabin now floods to bench seat level, Marin wades carefully to move last supplies through teal doorway. Broken window, sagging roof and off boat radio remain. No intact dry cabin.",
+    "start": 537.1,
+    "end": 541.477,
+    "c0": 8842,
+    "c1": 8922
+  },
+  {
+    "id": 92,
+    "location_id": "cabin-damaged",
+    "location_view": "bench-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Wave enters broken starboard window, pushes port bench loose from wall; blue bag slides toward it, Marin reaches with wooden oar to stop bag. Strong action, no second actor.",
+    "authored_action": "Wave enters broken starboard window, pushes port bench loose from wall; blue bag slides toward it, Marin reaches with wooden oar to stop bag. Strong action, no second actor.",
+    "start": 541.477,
+    "end": 547.217,
+    "c0": 8923,
+    "c1": 9024
+  },
+  {
+    "id": 93,
+    "location_id": "boat-flooded",
+    "location_view": "deck-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin uses wooden oar to pull blue bag clear then throws ONE bag into orange raft beside rail while wet deck tilts under feet. Hands visibly hold oar, bag midair headed into raft.",
+    "authored_action": "Marin uses wooden oar to pull blue bag clear then throws ONE bag into orange raft beside rail while wet deck tilts under feet. Hands visibly hold oar, bag midair headed into raft.",
+    "start": 547.217,
+    "end": 553.959,
+    "c0": 9025,
+    "c1": 9139
+  },
+  {
+    "id": 94,
+    "location_id": "boat-flooded",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Wave sweeps Marin through existing starboard rail gap into water, yellow life vest lifts his single body toward surface; navy cap retained, not an extra ghost above.",
+    "authored_action": "Wave sweeps Marin through existing starboard rail gap into water, yellow life vest lifts his single body toward surface; navy cap retained, not an extra ghost above.",
+    "start": 553.959,
+    "end": 560.445,
+    "c0": 9140,
+    "c1": 9254
+  },
+  {
+    "id": 95,
+    "location_id": "boat-flooded",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin breaks surface beside red hull, one white mitten stretches toward orange raft now beyond bow and falls short. Other hand paddles, no extra limbs.",
+    "authored_action": "Marin breaks surface beside red hull, one white mitten stretches toward orange raft now beyond bow and falls short. Other hand paddles, no extra limbs.",
+    "start": 560.445,
+    "end": 566.597,
+    "c0": 9255,
+    "c1": 9353
+  },
+  {
+    "id": 96,
+    "location_id": "boat-flooded",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Continuous waterline view: Marin at surface kicks toward orange raft around red bow; broad pale leviathan teeth are visible below his white feet without gore. ONE hero at surface, no ghost overlay.",
+    "authored_action": "Continuous waterline view: Marin at surface kicks toward orange raft around red bow; broad pale leviathan teeth are visible below his white feet without gore. ONE hero at surface, no ghost overlay.",
+    "start": 566.597,
+    "end": 574.149,
+    "c0": 9354,
+    "c1": 9472
+  },
+  {
+    "id": 97,
+    "location_id": "raft",
+    "location_view": "waterline",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin grips WHITE tether with both white mittens and pulls toward orange raft tube, dark teeth silhouette deep below. Tether still attached to red boat out of crop.",
+    "authored_action": "Marin grips WHITE tether with both white mittens and pulls toward orange raft tube, dark teeth silhouette deep below. Tether still attached to red boat out of crop.",
+    "start": 574.149,
+    "end": 581.704,
+    "c0": 9473,
+    "c1": 9594
+  },
+  {
+    "id": 98,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin hauls his single body over orange tube and lies coughing onto grey raft floor beside BLUE supply bag, oar within reach; boat stern sinks nearby.",
+    "authored_action": "Marin hauls his single body over orange tube and lies coughing onto grey raft floor beside BLUE supply bag, oar within reach; boat stern sinks nearby.",
+    "start": 581.704,
+    "end": 588.393,
+    "c0": 9595,
+    "c1": 9709
+  },
+  {
+    "id": 99,
+    "location_id": "raft",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin releases WHITE connecting tether from orange raft loop and pushes away with wooden oar as red boat bow rises steeply. Rope no longer linked to raft after this action.",
+    "authored_action": "Marin releases WHITE connecting tether from orange raft loop and pushes away with wooden oar as red boat bow rises steeply. Rope no longer linked to raft after this action.",
+    "start": 588.393,
+    "end": 595.257,
+    "c0": 9710,
+    "c1": 9831
+  },
+  {
+    "id": 100,
+    "location_id": "raft",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "From orange raft, Marin looks at nearly upright red fishing boat ahead, its stern submerged; navy cap firmly on white head. No second survivor on doomed boat.",
+    "authored_action": "From orange raft, Marin looks at nearly upright red fishing boat ahead, its stern submerged; navy cap firmly on white head. No second survivor on doomed boat.",
+    "start": 595.257,
+    "end": 600.016,
+    "c0": 9832,
+    "c1": 9917
+  },
+  {
+    "id": 101,
+    "location_id": "raft",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Leviathan's huge yellow eye aligns beside doomed cream cabin window as LAST red bow section disappears beneath sea. Marin watches from orange raft at side, one hero, no intact fishing boat.",
+    "authored_action": "Leviathan's huge yellow eye aligns beside doomed cream cabin window as LAST red bow section disappears beneath sea. Marin watches from orange raft at side, one hero, no intact fishing boat.",
+    "start": 600.016,
+    "end": 606.675,
+    "c0": 9919,
+    "c1": 10047
+  },
+  {
+    "id": 102,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "After sinking, only plain BUCKET bobs on water beside orange raft; Marin looks at it with exhausted white face. NO red fishing boat, cabin, hull or rail anywhere.",
+    "authored_action": "After sinking, only plain BUCKET bobs on water beside orange raft; Marin looks at it with exhausted white face. NO red fishing boat, cabin, hull or rail anywhere.",
+    "start": 606.675,
+    "end": 612.815,
+    "c0": 10048,
+    "c1": 10145
+  },
+  {
+    "id": 103,
+    "location_id": "raft",
+    "location_view": "sea-facing",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin barely touches oar against orange tube; simple dark wake forms behind raft. Only orange raft and BLUE bag remain, NO fishing boat after day eighteen.",
+    "authored_action": "Marin barely touches oar against orange tube; simple dark wake forms behind raft. Only orange raft and BLUE bag remain, NO fishing boat after day eighteen.",
+    "start": 612.815,
+    "end": 619.25,
+    "c0": 10147,
+    "c1": 10250
+  },
+  {
+    "id": 104,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin lets current drift orange raft toward distant RED bell buoy, oar laid across grey floor and BLUE bag at his feet. NO fishing boat.",
+    "authored_action": "Marin lets current drift orange raft toward distant RED bell buoy, oar laid across grey floor and BLUE bag at his feet. NO fishing boat.",
+    "start": 619.25,
+    "end": 626.071,
+    "c0": 10251,
+    "c1": 10368
+  },
+  {
+    "id": 105,
+    "location_id": "raft",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "From orange raft Marin watches dark wake change course toward now-nearer RED bell buoy; no physical monster head needed, no old boat.",
+    "authored_action": "From orange raft Marin watches dark wake change course toward now-nearer RED bell buoy; no physical monster head needed, no old boat.",
+    "start": 626.071,
+    "end": 632.973,
+    "c0": 10369,
+    "c1": 10473
+  },
+  {
+    "id": 106,
+    "location_id": "raft",
+    "location_view": "underwater",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "One giant dark teal shape passes BENEATH orange raft and continues toward red buoy in distance; Marin braces inside raft, no collision yet, no fishing boat.",
+    "authored_action": "One giant dark teal shape passes BENEATH orange raft and continues toward red buoy in distance; Marin braces inside raft, no collision yet, no fishing boat.",
+    "start": 632.973,
+    "end": 639.099,
+    "c0": 10474,
+    "c1": 10577
+  },
+  {
+    "id": 107,
+    "location_id": "buoy",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Leviathan swell climbs side of RED buoy float under freely swinging brass bell then subsides. Buoy geometry clear, Marin out of frame still on raft elsewhere.",
+    "authored_action": "Leviathan swell climbs side of RED buoy float under freely swinging brass bell then subsides. Buoy geometry clear, Marin out of frame still on raft elsewhere.",
+    "start": 639.099,
+    "end": 646.363,
+    "c0": 10578,
+    "c1": 10715
+  },
+  {
+    "id": 108,
+    "location_id": "raft",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.",
+    "authored_action": "Marin paddles orange raft vigorously toward red buoy using ONE wooden oar, both mittens gripping shaft; bag physical on grey raft floor, boat gone.",
+    "start": 646.363,
+    "end": 652.712,
+    "c0": 10716,
+    "c1": 10819
+  },
+  {
+    "id": 109,
+    "location_id": "buoy",
+    "location_view": "ladder-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin arrives in orange raft at algae-streaked near LADDER of red buoy, holds lower rung with mitten while raft lifts; blue bag and oar on raft floor.",
+    "authored_action": "Marin arrives in orange raft at algae-streaked near LADDER of red buoy, holds lower rung with mitten while raft lifts; blue bag and oar on raft floor.",
+    "start": 652.712,
+    "end": 657.41,
+    "c0": 10821,
+    "c1": 10916
+  },
+  {
+    "id": 110,
+    "location_id": "buoy",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin climbs same near ladder onto lower platform, one hand grips rung, BLUE bag visibly held by top handle in other; wooden oar tucked securely against ladder, not floating from back.",
+    "authored_action": "Marin climbs same near ladder onto lower platform, one hand grips rung, BLUE bag visibly held by top handle in other; wooden oar tucked securely against ladder, not floating from back.",
+    "start": 657.41,
+    "end": 664.27,
+    "c0": 10917,
+    "c1": 11030
+  },
+  {
+    "id": 111,
+    "location_id": "buoy",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin ties orange raft to lower ladder with white tether; enormous pale eye visible beneath red buoy frame. Bag and oar sit on platform, no fishing boat.",
+    "authored_action": "Marin ties orange raft to lower ladder with white tether; enormous pale eye visible beneath red buoy frame. Bag and oar sit on platform, no fishing boat.",
+    "start": 664.27,
+    "end": 670.67,
+    "c0": 11031,
+    "c1": 11138
+  },
+  {
+    "id": 112,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.",
+    "authored_action": "Marin climbs above hanging brass bell inside open steel frame, white hands grip steel, one body only. Raft tied below, bag moved onto upper crossbar.",
+    "start": 670.67,
+    "end": 674.984,
+    "c0": 11140,
+    "c1": 11206
+  },
+  {
+    "id": 113,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin stretches black stick legs while sitting safely on upper crossbar above bell, blue bag and oar secured beside him. Same red buoy, not new cabin.",
+    "authored_action": "Marin stretches black stick legs while sitting safely on upper crossbar above bell, blue bag and oar secured beside him. Same red buoy, not new cabin.",
+    "start": 674.984,
+    "end": 679.687,
+    "c0": 11207,
+    "c1": 11283
+  },
+  {
+    "id": 114,
+    "location_id": "buoy",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.",
+    "authored_action": "Marin seated high on buoy speaks into small HANDHELD radio gripped by white mitten; off bag zipper and signal light visible beside him, no boat fixed radio.",
+    "start": 679.687,
+    "end": 685.79,
+    "c0": 11284,
+    "c1": 11380
+  },
+  {
+    "id": 115,
+    "location_id": "buoy",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Over Marin shoulder from upper frame: distant ordinary cargo ships pass outer lane, none within rescue distance. Buoy rails foreground, raft below remains tied.",
+    "authored_action": "Over Marin shoulder from upper frame: distant ordinary cargo ships pass outer lane, none within rescue distance. Buoy rails foreground, raft below remains tied.",
+    "start": 685.79,
+    "end": 691.761,
+    "c0": 11382,
+    "c1": 11483
+  },
+  {
+    "id": 116,
+    "location_id": "buoy",
+    "location_view": "radio-pov",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin holds handheld radio and looks at small unlabelled buoy identification plate beside rail, then gestures to dark eye below frame. Do not generate arbitrary written buoy number.",
+    "authored_action": "Marin holds handheld radio and looks at small unlabelled buoy identification plate beside rail, then gestures to dark eye below frame. Do not generate arbitrary written buoy number.",
+    "start": 691.761,
+    "end": 696.19,
+    "c0": 11484,
+    "c1": 11570
+  },
+  {
+    "id": 117,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin switches handheld OFF and tucks it into BLUE waterproof bag on upper crossbar, oar tied beside it, bell below still clear to swing.",
+    "authored_action": "Marin switches handheld OFF and tucks it into BLUE waterproof bag on upper crossbar, oar tied beside it, bell below still clear to swing.",
+    "start": 696.19,
+    "end": 702.344,
+    "c0": 11571,
+    "c1": 11666
+  },
+  {
+    "id": 118,
+    "location_id": "buoy",
+    "location_view": "wide-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.",
+    "authored_action": "Storm rocks red buoy, Marin abandons exposed lower platform and reaches toward upper frame, orange raft whips alongside lower ladder. Sparse stylized rain, white skin stays unshaded.",
+    "start": 702.344,
+    "end": 707.969,
+    "c0": 11668,
+    "c1": 11762
+  },
+  {
+    "id": 119,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin clings inside upper frame above bell with both mittens, orange raft repeatedly strikes lower ladder below. BLUE bag strap looped visibly around steel crossbar.",
+    "authored_action": "Marin clings inside upper frame above bell with both mittens, orange raft repeatedly strikes lower ladder below. BLUE bag strap looped visibly around steel crossbar.",
+    "start": 707.969,
+    "end": 713.646,
+    "c0": 11763,
+    "c1": 11853
+  },
+  {
+    "id": 120,
+    "location_id": "buoy",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "The single WHITE rope tying orange raft to ladder SNAPS, orange raft drifts empty into simple spray. Marin out of crop above, no fishing boat or second raft.",
+    "authored_action": "The single WHITE rope tying orange raft to ladder SNAPS, orange raft drifts empty into simple spray. Marin out of crop above, no fishing boat or second raft.",
+    "start": 713.646,
+    "end": 720.528,
+    "c0": 11854,
+    "c1": 11951
+  },
+  {
+    "id": 121,
+    "location_id": "buoy",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin pulls BLUE bag onto knees while its short strap is visibly secured around steel frame, wooden oar stays secured nearby. Storm easing, no bag attached to hero back.",
+    "authored_action": "Marin pulls BLUE bag onto knees while its short strap is visibly secured around steel frame, wooden oar stays secured nearby. Storm easing, no bag attached to hero back.",
+    "start": 720.528,
+    "end": 728.172,
+    "c0": 11952,
+    "c1": 12086
+  },
+  {
+    "id": 122,
+    "location_id": "buoy",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Octopus"
+    ],
+    "character_variants": {
+      "Octopus": "default"
+    },
+    "visual_beat": "One enormous PURPLE tentacle rises beside brass bell during rain then curves down into water. Buoy same shape, no crew or Marin portrait.",
+    "authored_action": "One enormous PURPLE tentacle rises beside brass bell during rain then curves down into water. Buoy same shape, no crew or Marin portrait.",
+    "start": 728.172,
+    "end": 734.25,
+    "c0": 12087,
+    "c1": 12185
+  },
+  {
+    "id": 123,
+    "location_id": "buoy-storm",
+    "location_view": "bell-side",
+    "shot_type": "close-up",
+    "characters": [],
+    "character_variants": {},
+    "visual_beat": "Morning: brass bell rests JAMMED against inward-bent bracket of dark steel frame; lower platform bent down. Orange raft GONE, no ringing motion or added bell.",
+    "authored_action": "Morning: brass bell rests JAMMED against inward-bent bracket of dark steel frame; lower platform bent down. Orange raft GONE, no ringing motion or added bell.",
+    "start": 734.25,
+    "end": 740.999,
+    "c0": 12187,
+    "c1": 12292
+  },
+  {
+    "id": 124,
+    "location_id": "buoy-storm",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin's white foot slips against steel rung, huge pale yellow eye turns back toward buoy just below him. He lifts foot rapidly, one actor, raft gone.",
+    "authored_action": "Marin's white foot slips against steel rung, huge pale yellow eye turns back toward buoy just below him. He lifts foot rapidly, one actor, raft gone.",
+    "start": 740.999,
+    "end": 747.2,
+    "c0": 12293,
+    "c1": 12394
+  },
+  {
+    "id": 125,
+    "location_id": "buoy-storm",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin high in upper frame looks toward distant large dark-blue cargo ship in shipping lane, damaged platform and silent bell foreground. No rescue boat yet.",
+    "authored_action": "Marin high in upper frame looks toward distant large dark-blue cargo ship in shipping lane, damaged platform and silent bell foreground. No rescue boat yet.",
+    "start": 747.2,
+    "end": 753.409,
+    "c0": 12396,
+    "c1": 12498
+  },
+  {
+    "id": 126,
+    "location_id": "buoy-storm",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin points small SIGNAL LIGHT toward distant cargo ship bridge with white hand, simple bright light spot only; other hand grips frame, no goggles or face shading.",
+    "authored_action": "Marin points small SIGNAL LIGHT toward distant cargo ship bridge with white hand, simple bright light spot only; other hand grips frame, no goggles or face shading.",
+    "start": 753.409,
+    "end": 758.985,
+    "c0": 12499,
+    "c1": 12592
+  },
+  {
+    "id": 127,
+    "location_id": "buoy-storm",
+    "location_view": "radio-pov",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin hears reply on small HANDHELD radio held beside round white face while signal light lies on blue bag. No arbitrary screen text.",
+    "authored_action": "Marin hears reply on small HANDHELD radio held beside round white face while signal light lies on blue bag. No arbitrary screen text.",
+    "start": 758.985,
+    "end": 763.92,
+    "c0": 12593,
+    "c1": 12669
+  },
+  {
+    "id": 128,
+    "location_id": "pickup",
+    "location_view": "overhead",
+    "shot_type": "wide",
+    "characters": [
+      "Rook"
+    ],
+    "character_variants": {
+      "Rook": "default"
+    },
+    "visual_beat": "Crewman ROOK in RED cap and yellow vest prepares small GREY pickup launch beside dark-blue cargo hull, coils white floating line and checks open blue supply bag. NO Marin in this preparatory shot.",
+    "authored_action": "Crewman ROOK in RED cap and yellow vest prepares small GREY pickup launch beside dark-blue cargo hull, coils white floating line and checks open blue supply bag. NO Marin in this preparatory shot.",
+    "start": 763.92,
+    "end": 769.236,
+    "c0": 12670,
+    "c1": 12769
+  },
+  {
+    "id": 129,
+    "location_id": "buoy-storm",
+    "location_view": "radio-pov",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin warns rescue over handheld, points down at dark teal wake below silent bell; oar and blue bag secured on frame. Red cap crewman NOT present here.",
+    "authored_action": "Marin warns rescue over handheld, points down at dark teal wake below silent bell; oar and blue bag secured on frame. Red cap crewman NOT present here.",
+    "start": 769.236,
+    "end": 774.399,
+    "c0": 12770,
+    "c1": 12848
+  },
+  {
+    "id": 130,
+    "location_id": "buoy-storm",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin watches small GREY pickup launch stop far SHORT of red buoy, generous visible water gap; no crew closeup or magical touching boats, raft gone.",
+    "authored_action": "Marin watches small GREY pickup launch stop far SHORT of red buoy, generous visible water gap; no crew closeup or magical touching boats, raft gone.",
+    "start": 774.399,
+    "end": 779.857,
+    "c0": 12849,
+    "c1": 12949
+  },
+  {
+    "id": 131,
+    "location_id": "buoy-storm",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin looks down at empty water where raft was, leviathan yellow eye beneath silent jammed bell, no orange raft or red boat restored.",
+    "authored_action": "Marin looks down at empty water where raft was, leviathan yellow eye beneath silent jammed bell, no orange raft or red boat restored.",
+    "start": 779.857,
+    "end": 786.096,
+    "c0": 12951,
+    "c1": 13055
+  },
+  {
+    "id": 132,
+    "location_id": "buoy-storm",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin climbs partway down near ladder to inspect bent bell bracket, one mitten grips rung while other reaches bracket, then raised foot poised to retreat. Single moment, not two copies.",
+    "authored_action": "Marin climbs partway down near ladder to inspect bent bell bracket, one mitten grips rung while other reaches bracket, then raised foot poised to retreat. Single moment, not two copies.",
+    "start": 786.096,
+    "end": 792.337,
+    "c0": 13056,
+    "c1": 13167
+  },
+  {
+    "id": 133,
+    "location_id": "buoy-storm",
+    "location_view": "bell-side",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin looks at jammed brass bell and inward bent bracket, wooden oar brought within reach; face calm focused, white mittens and black thin arms.",
+    "authored_action": "Marin looks at jammed brass bell and inward bent bracket, wooden oar brought within reach; face calm focused, white mittens and black thin arms.",
+    "start": 792.337,
+    "end": 796.582,
+    "c0": 13168,
+    "c1": 13236
+  },
+  {
+    "id": 134,
+    "location_id": "buoy-storm",
+    "location_view": "bell-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin inserts blunt end of saved WOODEN OAR between bent bracket and steel frame, uses both white mittens to lever bracket. Exact one oar, no screwdriver invented.",
+    "authored_action": "Marin inserts blunt end of saved WOODEN OAR between bent bracket and steel frame, uses both white mittens to lever bracket. Exact one oar, no screwdriver invented.",
+    "start": 796.582,
+    "end": 801.352,
+    "c0": 13238,
+    "c1": 13338
+  },
+  {
+    "id": 135,
+    "location_id": "buoy-storm",
+    "location_view": "upper-frame",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin braces one white foot on crossbar and pushes brown oar lever against bracket, blue bag securely looped beside him. Black stick legs, not long human body.",
+    "authored_action": "Marin braces one white foot on crossbar and pushes brown oar lever against bracket, blue bag securely looped beside him. Black stick legs, not long human body.",
+    "start": 801.352,
+    "end": 808.501,
+    "c0": 13339,
+    "c1": 13470
+  },
+  {
+    "id": 136,
+    "location_id": "buoy-storm",
+    "location_view": "bell-side",
+    "shot_type": "close-up",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin pauses with oar under strain against barely moved bracket, tiny wood flex but unbroken, waits as approaching wave lifts buoy. No other person.",
+    "authored_action": "Marin pauses with oar under strain against barely moved bracket, tiny wood flex but unbroken, waits as approaching wave lifts buoy. No other person.",
+    "start": 808.501,
+    "end": 814.326,
+    "c0": 13471,
+    "c1": 13561
+  },
+  {
+    "id": 137,
+    "location_id": "buoy-storm",
+    "location_view": "bell-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "As buoy rolls with wave Marin pushes oar, bent bracket moves clear and frees BRASS bell to swing. Explicit repaired-state action, keep platform damage and frame geometry.",
+    "authored_action": "As buoy rolls with wave Marin pushes oar, bent bracket moves clear and frees BRASS bell to swing. Explicit repaired-state action, keep platform damage and frame geometry.",
+    "start": 814.326,
+    "end": 819.92,
+    "c0": 13562,
+    "c1": 13654
+  },
+  {
+    "id": 138,
+    "location_id": "buoy-storm",
+    "location_view": "ladder-front",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Freed brass bell swings with CLEARANCE now; dark swell moves under damaged lower platform, Marin lifts white feet onto ladder and climbs away. No jammed bell after repair.",
+    "authored_action": "Freed brass bell swings with CLEARANCE now; dark swell moves under damaged lower platform, Marin lifts white feet onto ladder and climbs away. No jammed bell after repair.",
+    "start": 819.92,
+    "end": 826.873,
+    "c0": 13655,
+    "c1": 13771
+  },
+  {
+    "id": 139,
+    "location_id": "buoy-storm",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Day thirty: small GREY pickup launch waits beyond buoy with motor quiet, Marin high on same damaged buoy, brass bell now freely swinging. Raft and fishing boat permanently gone.",
+    "authored_action": "Day thirty: small GREY pickup launch waits beyond buoy with motor quiet, Marin high on same damaged buoy, brass bell now freely swinging. Raft and fishing boat permanently gone.",
+    "start": 826.873,
+    "end": 831.928,
+    "c0": 13773,
+    "c1": 13855
+  },
+  {
+    "id": 140,
+    "location_id": "pickup",
+    "location_view": "crew-side",
+    "shot_type": "medium",
+    "characters": [
+      "Rook"
+    ],
+    "character_variants": {
+      "Rook": "default"
+    },
+    "visual_beat": "ROOK in RED cap and yellow life vest throws WHITE floating rescue line toward distant red buoy; throw falls SHORT in water. Marin out of this crop, no second crew copy.",
+    "authored_action": "ROOK in RED cap and yellow life vest throws WHITE floating rescue line toward distant red buoy; throw falls SHORT in water. Marin out of this crop, no second crew copy.",
+    "start": 831.928,
+    "end": 838.297,
+    "c0": 13856,
+    "c1": 13971
+  },
+  {
+    "id": 141,
+    "location_id": "buoy-storm",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Leviathan": "default"
+    },
+    "visual_beat": "Second white rescue line reaches near ladder; Marin catches it with one mitten while other holds rung, leviathan eye turning below buoy. Bell free now, no old fishing boat.",
+    "authored_action": "Second white rescue line reaches near ladder; Marin catches it with one mitten while other holds rung, leviathan eye turning below buoy. Bell free now, no old fishing boat.",
+    "start": 838.297,
+    "end": 844.522,
+    "c0": 13972,
+    "c1": 14066
+  },
+  {
+    "id": 142,
+    "location_id": "buoy-storm",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Freely swinging brass bell strikes, dark teal leviathan swell goes to FAR side of red float, near ladder and rescue line clear. Marin above crop, no boat restoration.",
+    "authored_action": "Freely swinging brass bell strikes, dark teal leviathan swell goes to FAR side of red float, near ladder and rescue line clear. Marin above crop, no boat restoration.",
+    "start": 844.522,
+    "end": 850.075,
+    "c0": 14067,
+    "c1": 14169
+  },
+  {
+    "id": 143,
+    "location_id": "buoy-storm",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin"
+    ],
+    "character_variants": {
+      "Marin": "default"
+    },
+    "visual_beat": "Marin descends near ladder with WHITE rescue line draped over shoulder and held, steps into teal water; YELLOW vest lifts him, one single body at surface. No ghost above ladder.",
+    "authored_action": "Marin descends near ladder with WHITE rescue line draped over shoulder and held, steps into teal water; YELLOW vest lifts him, one single body at surface. No ghost above ladder.",
+    "start": 850.075,
+    "end": 857.368,
+    "c0": 14170,
+    "c1": 14300
+  },
+  {
+    "id": 144,
+    "location_id": "pickup",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Rook"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Rook": "default"
+    },
+    "visual_beat": "ROOK at grey launch rail pulls taut WHITE rescue line, Marin floats at other end with white feet near surface and yellow vest; red buoy farther behind, one of each person.",
+    "authored_action": "ROOK at grey launch rail pulls taut WHITE rescue line, Marin floats at other end with white feet near surface and yellow vest; red buoy farther behind, one of each person.",
+    "start": 857.368,
+    "end": 862.55,
+    "c0": 14301,
+    "c1": 14394
+  },
+  {
+    "id": 145,
+    "location_id": "buoy-storm",
+    "location_view": "waterline",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Dark wake curves toward taut white rescue line in foreground, brass bell swings behind on red buoy, no person or extra shark portrait.",
+    "authored_action": "Dark wake curves toward taut white rescue line in foreground, brass bell swings behind on red buoy, no person or extra shark portrait.",
+    "start": 862.55,
+    "end": 866.557,
+    "c0": 14395,
+    "c1": 14451
+  },
+  {
+    "id": 146,
+    "location_id": "buoy-storm",
+    "location_view": "waterline",
+    "shot_type": "close-up",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Leviathan yellow eye turns back around red buoy float beneath damaged platform as bell swings freely, rescue line retreats out of frame. No Marin double.",
+    "authored_action": "Leviathan yellow eye turns back around red buoy float beneath damaged platform as bell swings freely, rescue line retreats out of frame. No Marin double.",
+    "start": 866.557,
+    "end": 872.934,
+    "c0": 14452,
+    "c1": 14558
+  },
+  {
+    "id": 147,
+    "location_id": "pickup",
+    "location_view": "crew-side",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Rook"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Rook": "default"
+    },
+    "visual_beat": "RED-capped ROOK grips Marin's yellow vest with both white mittens and lifts navy-capped Marin over low GREY launch rail. Exactly two DIFFERENT named humans, no duplicated Marin.",
+    "authored_action": "RED-capped ROOK grips Marin's yellow vest with both white mittens and lifts navy-capped Marin over low GREY launch rail. Exactly two DIFFERENT named humans, no duplicated Marin.",
+    "start": 872.934,
+    "end": 876.812,
+    "c0": 14560,
+    "c1": 14624
+  },
+  {
+    "id": 148,
+    "location_id": "pickup",
+    "location_view": "overhead",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Rook"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Rook": "default"
+    },
+    "visual_beat": "Marin sits exhausted on grey pickup floor beside ordinary open blue supply bag; ROOK's white hand gives him white water bottle. Different cap colours visible; no old wooden cabin.",
+    "authored_action": "Marin sits exhausted on grey pickup floor beside ordinary open blue supply bag; ROOK's white hand gives him white water bottle. Different cap colours visible; no old wooden cabin.",
+    "start": 876.812,
+    "end": 882.953,
+    "c0": 14625,
+    "c1": 14720
+  },
+  {
+    "id": 149,
+    "location_id": "pickup",
+    "location_view": "sea-facing",
+    "shot_type": "wide",
+    "characters": [
+      "Marin",
+      "Rook"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Rook": "default"
+    },
+    "visual_beat": "From GREY launch Marin and Rook see dark-blue cargo hull and ROPE boarding ladder ahead at waterline. Marin holds water bottle, Rook at controls; no red fishing boat.",
+    "authored_action": "From GREY launch Marin and Rook see dark-blue cargo hull and ROPE boarding ladder ahead at waterline. Marin holds water bottle, Rook at controls; no red fishing boat.",
+    "start": 882.953,
+    "end": 888.922,
+    "c0": 14721,
+    "c1": 14820
+  },
+  {
+    "id": 150,
+    "location_id": "pickup",
+    "location_view": "crew-side",
+    "shot_type": "medium",
+    "characters": [
+      "Rook",
+      "Marin"
+    ],
+    "character_variants": {
+      "Rook": "default",
+      "Marin": "default"
+    },
+    "visual_beat": "ROOK hauls WHITE rescue line back into grey launch while Marin sits with bottle; red bell buoy now recedes behind, bell free. One of each actor, no crowd.",
+    "authored_action": "ROOK hauls WHITE rescue line back into grey launch while Marin sits with bottle; red bell buoy now recedes behind, bell free. One of each actor, no crowd.",
+    "start": 888.922,
+    "end": 894.969,
+    "c0": 14822,
+    "c1": 14913
+  },
+  {
+    "id": 151,
+    "location_id": "buoy-storm",
+    "location_view": "wide-front",
+    "shot_type": "wide",
+    "characters": [
+      "Leviathan"
+    ],
+    "character_variants": {
+      "Leviathan": "default"
+    },
+    "visual_beat": "Marin POV looking back: EMPTY damaged red buoy platform, freely swinging brass bell, dark leviathan swell circling below. No Marin magically still at refuge.",
+    "authored_action": "Marin POV looking back: EMPTY damaged red buoy platform, freely swinging brass bell, dark leviathan swell circling below. No Marin magically still at refuge.",
+    "start": 894.969,
+    "end": 901.096,
+    "c0": 14914,
+    "c1": 15010
+  },
+  {
+    "id": 152,
+    "location_id": "ship-ladder",
+    "location_view": "ladder-front",
+    "shot_type": "medium",
+    "characters": [
+      "Marin",
+      "Rook"
+    ],
+    "character_variants": {
+      "Marin": "default",
+      "Rook": "default"
+    },
+    "visual_beat": "At dark-blue cargo ship boarding ladder ROOK in RED cap reaches down from low ship rail to grasp navy-capped Marin's white mitten on first ladder rung. Marin wears same yellow vest; two distinct humans, actual successful rescue.",
+    "authored_action": "At dark-blue cargo ship boarding ladder ROOK in RED cap reaches down from low ship rail to grasp navy-capped Marin's white mitten on first ladder rung. Marin wears same yellow vest; two distinct humans, actual successful rescue.",
+    "start": 901.096,
+    "end": 906.05,
+    "c0": 15011,
+    "c1": 15100
+  }
+]
