@@ -5,6 +5,21 @@ access-key login, session cookie, member IDs, navigation and light/dark theme.
 There is no second login, password database or team-management system. Existing
 portal authentication and permissions on other tools are unchanged.
 
+## Colleague AI / command-line production API
+
+The simple authenticated API is **https://tools.kanye.studio/api/forge/v1**.
+Read [the API and CLI guide](production/tubeforge_support/forge_docs/README.md)
+and [LLM.txt](production/tubeforge_support/forge_docs/LLM.txt). The served guide
+adds the complete live endpoint inventory; `/endpoints` and `/openapi.json`
+provide the machine-readable inventory and schemas. The dependency-free
+`forge.py` client logs in with the colleague's own portal access key.
+
+Creation freezes shared presets and uses a member-scoped idempotency key.
+Voice, timestamped planning, preview, remaining images and rendering are explicit
+asynchronous actions on VPS2. Progress polling is lightweight. The colleague's AI
+must actually inspect media and record reviews before rendering; the API does
+not fabricate reviews or introduce a separate automatic production queue.
+
 ## Team workflow
 
 Create members with the existing **Channels & Team** page. Any signed-in member

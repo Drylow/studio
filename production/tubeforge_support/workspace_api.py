@@ -957,9 +957,12 @@ def install(app):
             raise HTTPException(422, "Unknown item to check")
         if state == "verified" and not evidence:
             raise HTTPException(409, "Validation impossible: the text, a file, or a reference is missing or has been modified")
+        source = body.get("source", "explicit_human_review")
+        if source not in ("explicit_human_review", "delegated_ai_inspection"):
+            raise HTTPException(422, "Specify explicit_human_review or delegated_ai_inspection")
         record = {"state": state, "notes": _text(body.get("notes", ""), "notes"),
                   "reviewer": _text(body.get("reviewer", "local_human"), "reviewer", required=True),
-                  "source": "explicit_human_review", "reviewed_at": now(), "evidence": evidence}
+                  "source": source, "reviewed_at": now(), "evidence": evidence}
         if scope == "scene":
             s["human_review"] = record
         else:

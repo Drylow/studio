@@ -19,10 +19,10 @@ export function workerPath(raw) {
 }
 
 export default function mount2D(app, auth) {
-  app.use(PREFIX, auth, async (req, res) => {
+  app.use([PREFIX, '/api/forge'], auth, async (req, res) => {
     let controller
     try {
-      const target = workerPath(req.url)
+      const target = workerPath(req.baseUrl === '/api/forge' ? '/api/forge' + req.url : req.url)
       if (!['GET','HEAD','POST','PUT','PATCH','DELETE','OPTIONS'].includes(req.method)) return res.status(405).json({error:'Method not allowed'})
       const origin = req.get('origin')
       if (!['GET','HEAD','OPTIONS'].includes(req.method) && (req.get('sec-fetch-site') === 'cross-site' || origin && new URL(origin).host !== req.get('host'))) {

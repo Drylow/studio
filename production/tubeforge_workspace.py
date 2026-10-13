@@ -22,9 +22,10 @@ def deploy(root, seed=True):
     if not root.is_relative_to((Path(REPO) / 'work').resolve()):
         raise ValueError('Workspace installation must stay in the private work directory')
     support = Path(REPO) / 'production/tubeforge_support'
-    for name in ('workspace_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
+    for name in ('workspace_api.py', 'forge_api.py', 'workspace_seed.py', 'workspace_generation.py', 'workspace_management.py', 'workspace_visuals.py', 'workspace_voice.py', 'workspace_planning.py', 'workspace_composition.py', 'workspace_characters.py', 'workspace_locations.py', 'workspace_writing.py', 'workspace_access.py', 'workspace_identity.py', 'studio_bridge.py', 'google_flow.py'):
         shutil.copy2(support / name, root / 'app' / name)
     shutil.copytree(support / 'scriptwriting', root / 'app/scriptwriting', dirs_exist_ok=True)
+    shutil.copytree(support / 'forge_docs', root / 'app/forge_docs', dirs_exist_ok=True)
     web = root / 'app/web'
     legacy = web / 'legacy.html'
     if not legacy.exists():
@@ -112,6 +113,9 @@ def deploy(root, seed=True):
         'workspace_writing.install(app)\n',
         'workspace_writing.install(app)\nfrom . import workspace_access\nworkspace_access.install(app)\n')
     replace_once(root, 'app/server.py',
+        'workspace_access.install(app)\n',
+        'workspace_access.install(app)\nfrom . import forge_api\nforge_api.install(app)\n')
+    replace_once(root, 'app/server.py',
         'if request.url.path in ("/", "/index.html", "/app.js", "/style.css"):',
         'if request.url.path in ("/", "/index.html", "/legacy.html", "/app.js", "/style.css", "/workspace.js", "/workspace.css"):')
     if 'if p.get("codex_directed"):' not in (root / 'app/server.py').read_text(encoding='utf-8'):
@@ -154,6 +158,7 @@ def deploy(root, seed=True):
                                 'model=p["settings"]["script"].get("model") or config.get("SCRIPT_MODEL")')
         path.write_text(source, encoding='utf-8', newline='\n')
     for source, target in (('workspace_api_tests.py', 'test_workspace_api.py'),
+                           ('forge_api_tests.py', 'test_forge_api.py'),
                            ('workspace_generation_tests.py', 'test_workspace_generation.py'),
                            ('workspace_management_tests.py', 'test_workspace_management.py'),
                            ('workspace_voice_tests.py', 'test_workspace_voice.py'),
