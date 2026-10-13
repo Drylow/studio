@@ -1,6 +1,15 @@
 # Marine survival — visual direction proposal
 
-Draft, 13 October 2026. These are inspected style tests, not user-approved assets or a finished episode.
+13 October 2026. The user accepted this visual direction after seeing the tests. Individual images remain style studies, not a finished episode or fully approved camera masters.
+
+## Shared website style
+
+Registered in the VPS TubeForge shared library as **Deep Sea Survival**:
+https://tools.kanye.studio/2d/#/styles/style-589894d7345e
+
+Main character: Marin, with inspected identity image 01. Drawing references: 03, 04 and 05, explicitly bound as style-only guidance, not fixed scene layouts. Files and reference hashes were verified after import. Consistent locations is currently selected and remains configurable. Model/provider settings were preserved.
+
+For a new video, select this style, paste and save the script, generate voiceover, then prepare shots using the aligned narration. A script alone does not establish actual shot durations. Register episode-specific boat masters and verified camera variants separately; the library's drawing examples do not prove location geometry.
 
 Recommended direction: simple outlined maritime cartoon, a small recognizable survivor contrasted with enormous sea creatures. Round white head, tiny black eyes and neutral mouth; thin black stick body, white mitten hands and oval feet. Navy short-brim cap and yellow life jacket. No backpack, bandage or inherited scarf. Working character name: Marin.
 
@@ -18,6 +27,6 @@ All five images were generated through the configured CLI Proxy provider in the 
 
 Images 03–05 used the same inspected character and boat references. Character costume and boat anchors are broadly recognizable. This does not establish perfect continuity across a whole film. In particular, image 04 did not achieve the requested reversed stern-to-bow view; do not reuse it as a verified opposite-angle master. Mild gradients remain in these proposals.
 
-Detailed actual-image reviews: reference-reviews.json and scene-reviews.json. User approval remains false. No production script, voiceover, full episode render or publication was performed for this proposal.
+Detailed actual-image reviews: reference-reviews.json and scene-reviews.json. Their user_approved flags describe individual assets at initial inspection, before the subsequent acceptance of the overall visual direction. No production script, voiceover, full episode render or publication was performed for this proposal.
 
 For a future boat episode, choose Consistent locations explicitly, then author and inspect distinct physical views before binding them to shots. Each shot needs a new action, object, reaction or consequence. The Free backgrounds style option remains available; character identity references are independent of that choice.
