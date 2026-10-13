@@ -68,6 +68,8 @@ Hash navigation reuses short-lived in-memory workspace, management and project r
 
 Project screen reads use `GET /api/workspace/projects/{id}?view=ui`, excluding archival histories and planning receipts from the response. Default API reads retain full history. Stored metadata, prompts, ordered references and review evidence are preserved; current status is still calculated before building either response. Navigation cache tests: `node production/tubeforge_support/workspace_navigation_tests.cjs`.
 
+Images and review screens render 24 shots per page to avoid constructing hundreds of image cards, reference lists and prompt editors at once. Pagination is local and preserves the entire project for generation/review checks. Off-page prompts remain unchanged when saving; page changes refuse unsaved edits.
+
 **Styles → Edit → Background mode** offers two independent scenery choices:
 
 - **Free backgrounds** (`free`, default): every image can use a different setting.

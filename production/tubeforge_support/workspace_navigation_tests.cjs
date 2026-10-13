@@ -1,8 +1,15 @@
 'use strict';
 const assert = require('node:assert/strict');
-const { createReadCache } = require('./workspace.js');
+const { createReadCache, scenePage } = require('./workspace.js');
 
 (async () => {
+  const shots = Array.from({length:157}, (_, i) => ({id:i + 1, prompt:'Saved prompt ' + i}));
+  assert.equal(scenePage(shots).rows.length, 24);
+  assert.equal(scenePage(shots, 99).rows.length, 13);
+  assert.equal(scenePage(shots, -4).page, 0);
+  const paged = Array.from({length:7}, (_, i) => scenePage(shots, i).rows).flat();
+  assert.deepEqual(paged, shots, 'pagination keeps every shot exactly once, in order');
+  assert.equal(scenePage([], 3).rows.length, 0);
   let clock = 0, count = 0;
   const cache = createReadCache(async path => ({ path, request: ++count }), 15, () => clock);
   const first = await Promise.all([cache.get('/video'), cache.get('/video')]);

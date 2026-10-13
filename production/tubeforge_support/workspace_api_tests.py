@@ -105,6 +105,7 @@ def test_ui_project_preserves_live_fields_and_stored_history(workspace):
 
 def test_ui_project_keeps_scene_references_and_review_evidence():
     full = {'scenes': [{'id': 1, 'prompt': 'Exact saved prompt', 'references': [{'path': 'refs/main.png'}],
+                        'generation_receipt': {'prompt': 'Exact saved prompt', 'references': [{'path': 'refs/main.png'}]},
                         'authored_prompt_history': ['old prompt'],
                         'human_review': {'state': 'verified', 'evidence': 'current-hash', 'history': ['old review']}}]}
     screen = api._ui_project(full)
@@ -112,6 +113,8 @@ def test_ui_project_keeps_scene_references_and_review_evidence():
     assert screen['scenes'][0]['references'] == full['scenes'][0]['references']
     assert screen['scenes'][0]['human_review'] == {'state': 'verified', 'evidence': 'current-hash'}
     assert full['scenes'][0]['authored_prompt_history'] == ['old prompt']
+    assert 'generation_receipt' not in screen['scenes'][0]
+    assert full['scenes'][0]['generation_receipt']['prompt'] == 'Exact saved prompt'
     assert full['scenes'][0]['human_review']['history'] == ['old review']
 
 
