@@ -87,6 +87,20 @@ GET /endpoints             COMPLETE live route inventory, methods and public URL
 GET /openapi.json          COMPLETE live schemas, query/path/body/multipart params.
 GET /LLM.txt               This guide plus COMPLETE live endpoint inventory.
 
+PRODUCTION QUEUE
+POST /queue with {"project_ids":["EXISTING_VIDEO_ID"],"automatic_plans":true}.
+GET /queue shows resource usage, limits, job states and next steps.
+POST /queue/JOB_ID/cancel stops admission and drains submitted requests.
+POST /queue/JOB_ID/resume acknowledges inspected failed/interrupted/changed input.
+Queue entries persist on VPS. Separate voice, planning, image and render lanes
+avoid blocking another video on missing reviews/authoring. Two image batches
+share the configured global image ceiling; one render normally runs at a time.
+External native jobs consume capacity too. Existing assets are reused. The queue
+parks for preview, image, audio and final inspections; it never invents reviews.
+automatic_plans=false waits for authored shots. After restart an active reserved
+stage is held as interrupted for inspection rather than replayed automatically.
+The website's Video queue page offers Start/Stop/Resume and progress.
+
 NATIVE EXTENDED AUTHORING
 Use /endpoints and /openapi.json for every installed endpoint, including shared
 channel/preset editing, style/cast uploads, script updates, location registries,

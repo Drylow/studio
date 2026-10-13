@@ -575,6 +575,14 @@
   function renderBatch() {
     if (!batchRows.length) batchRows = [defaultRow(), defaultRow()];
     main.innerHTML = `${header("Video queue", "Prepare multiple projects", "<a class=\"button\" href=\"#/videos\">Videos</a>")}${catalogNotice()}<form id="batch-form"><div class="table-wrap"><table class="batch-table"><thead><tr><th>Channel</th><th>Title</th><th>Minutes</th><th>Text model</th><th>Image model</th><th><span class="small">Remove</span></th></tr></thead><tbody id="batch-body">${batchRows.map((row, index) => `<tr><td data-label="Channel"><select aria-label="Video channel ${index + 1}" name="profile_id" required>${profileOptions(row.profile_id)}</select></td><td data-label="Title"><input class="title-input" aria-label="Video title ${index + 1}" name="title" maxlength="240" required value="${esc(row.title)}"></td><td data-label="Target duration (minutes)"><input class="duration-input" aria-label="Video duration ${index + 1}" name="duration_minutes" type="number" min="3" max="30" step="0.5" required value="${row.duration_minutes}"></td><td data-label="Text model"><select aria-label="Video text model ${index + 1}" name="text_model" required>${modelOptions(row.text_model, 'text')}</select></td><td data-label="Image model"><select aria-label="Video image model ${index + 1}" name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></td><td><button type="button" data-remove="${index}" class="icon-button" aria-label="Remove video ${index + 1}" title="Remove this row" ${batchRows.length === 1 ? 'disabled' : ''}>${icon('close')}</button></td></tr>`).join('')}</tbody></table></div>${catalogStatus()}<div class="form-actions"><button type="button" id="add-row">${icon('plus')}Add a row</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length ? 'disabled' : ''}>${icon('plus')}Add batch to queue</button></div><div id="batch-error" role="alert"></div></form><section class="section"><h2>Saved batches</h2>${data.batches?.length ? `<div class="table-wrap"><table><thead><tr><th>Batch</th><th>Videos</th><th>Created</th></tr></thead><tbody>${data.batches.map((batch) => `<tr><td>${esc(batch.name || batch.id)}</td><td>${(batch.projects || []).length}</td><td>${esc(fmtDate(batch.created))}</td></tr>`).join('')}</tbody></table></div>` : "<p class=\"muted\">No saved batches.</p>"}</section>`;
+    $('#batch-form').insertAdjacentHTML('beforebegin', `<section class="section"><h2>Production queue</h2><p class="muted">Voice first, then shots and images. Reviews remain required. Two image batches share the provider limit; renders wait their turn.</p><div class="toolbar"><label>Existing videos<select id="production-selection" multiple size="5">${data.projects.filter(p => p.codex_directed && !p.archived && !p.render).map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('')}</select></label><button id="enqueue-production" class="primary">Start selected videos</button></div><div id="production-jobs" aria-live="polite"><p role="status">Loading production queue…</p></div></section>`);
+    $('#enqueue-production').onclick = event => action(event.currentTarget, async () => {
+      const ids = Array.from($('#production-selection').selectedOptions, option => option.value);
+      if (!ids.length) throw new Error('Choose at least one existing video.');
+      await api('/api/forge/v1/queue', {method:'POST', body:{project_ids:ids}});
+      await renderProductionQueue();
+    }, 'Videos added to the production queue.');
+    renderProductionQueue();
     $('#add-row').onclick = () => { captureBatch(); batchRows.push(defaultRow()); renderBatch(); };
     $$('#batch-body select[name="profile_id"]').forEach((select) => select.onchange = () => { const profile = data.profiles.find((p) => p.id === select.value); if (profile) $('[name="duration_minutes"]', select.closest('tr')).value = profile.target_minutes; });
     $$('[data-remove]').forEach((b) => b.onclick = () => { captureBatch(); batchRows.splice(Number(b.dataset.remove), 1); renderBatch(); });
@@ -590,6 +598,24 @@
     };
     bindFormState();
   }
+  let productionQueueReading = false;
+  async function renderProductionQueue() {
+    const box = $('#production-jobs');
+    if (!box || productionQueueReading) return;
+    productionQueueReading = true;
+    try {
+      const result = await api('/api/forge/v1/queue');
+      if (!box.isConnected) return;
+      box.innerHTML = `<p class="small muted">Voice: ${result.usage.voice}/${result.limits.voice} · Image batches: ${result.usage.images}/${result.limits.images} · Render: ${result.usage.render}/${result.limits.render}</p>${result.jobs.length ? `<div class="table-wrap"><table><thead><tr><th>Video</th><th>Status</th><th>Next step</th><th>Actions</th></tr></thead><tbody>${result.jobs.map(job => `<tr><td><a href="#/video/${encode(job.project_id)}/images">${esc(job.title)}</a></td><td>${job.state === 'running' ? '<span class="queue-spinner" aria-hidden="true"></span>' : ''}${esc(job.state.replaceAll('_',' '))}</td><td>${esc(job.message)}</td><td>${['failed','interrupted','changed','blocked'].includes(job.state) ? `<button data-resume-queue="${esc(job.id)}">Resume after checking</button>` : ''}${!['done','cancelled'].includes(job.state) ? `<button data-cancel-queue="${esc(job.id)}">Stop</button>` : ''}</td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">No production jobs yet.</p>'}`;
+      $$('[data-resume-queue]', box).forEach(button => button.onclick = event => action(event.currentTarget, async () => {
+        await api(`/api/forge/v1/queue/${encode(button.dataset.resumeQueue)}/resume`, {method:'POST',body:{}}); await renderProductionQueue();
+      }, 'Queue job resumed.'));
+      $$('[data-cancel-queue]', box).forEach(button => button.onclick = event => action(event.currentTarget, async () => {
+        await api(`/api/forge/v1/queue/${encode(button.dataset.cancelQueue)}/cancel`, {method:'POST',body:{}}); await renderProductionQueue();
+      }, 'Queue job stopped.'));
+    } catch (error) { if (box.isConnected) box.textContent = error.message; }
+    finally { productionQueueReading = false; }
+  }
   function reviewState(scene) {
     const review = scene.review || scene.human_review || {};
     return typeof review === 'string' ? review : review.state || scene.review_state || 'unreviewed';
@@ -603,6 +629,12 @@
     if (project.style_name) $('.page-head p').textContent += ` · ${project.style_name}`;
     $('#refresh-project').insertAdjacentHTML('beforebegin', `<button id="rename-video" class="icon-button" title="Edit title" aria-label="Edit title">${icon('edit')}</button>`);
     $('#rename-video').onclick = openRename;
+    $('#refresh-project').insertAdjacentHTML('beforebegin', '<button id="queue-video">Queue production</button>');
+    $('#queue-video').onclick = event => action(event.currentTarget, async () => {
+      if (dirty) throw new Error('Save your changes before queueing production.');
+      await api('/api/forge/v1/queue', {method:'POST',body:{project_ids:[project.id]}});
+      location.hash = '#/queue';
+    }, 'Production queued.');
     if (selected === "text") renderText();
     if (selected === "voice") renderVoice();
     if (selected === 'images' || selected === 'verification') renderScenes(selected === 'verification');
@@ -1297,5 +1329,8 @@
     if (main.contains(document.activeElement) && document.activeElement !== main) return;
     route();
   }, 15000);
+  setInterval(() => {
+    if (session && !document.hidden && !submitting && routeParts()[0] === 'queue') renderProductionQueue();
+  }, 5000);
   route();
 })();

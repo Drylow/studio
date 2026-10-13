@@ -62,8 +62,12 @@ Create JSON: `channel_id`, `title`, `script` (optional), `brief` (optional),
 `minutes` (default 15; ignored for supplied narration duration) and required
 `idempotency_key`. Reuse the same key only for the exact same creation payload.
 Channel choice freezes its style, provider, cast and voice settings. Style changes
-later do not silently change an existing production. There is no one-call
-autonomous queue: the colleague's AI orchestrates explicit stages and inspections.
+later do not silently change an existing production. The optional production queue
+orchestrates ready stages and parks for inspections: `POST /queue` with
+`{"project_ids":["VIDEO_ID"],"automatic_plans":true}`; `GET /queue`;
+`POST /queue/JOB_ID/resume` or `/cancel`. Jobs persist on VPS, share resource limits
+and never fabricate inspections or replay uncertain paid requests after restart.
+The colleague's AI still inspects assets and authors missing references.
 
 ## Native authoring contracts
 

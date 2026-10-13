@@ -15,10 +15,12 @@ provide the machine-readable inventory and schemas. The dependency-free
 `forge.py` client logs in with the colleague's own portal access key.
 
 Creation freezes shared presets and uses a member-scoped idempotency key.
-Voice, timestamped planning, preview, remaining images and rendering are explicit
-asynchronous actions on VPS2. Progress polling is lightweight. The colleague's AI
-must actually inspect media and record reviews before rendering; the API does
-not fabricate reviews or introduce a separate automatic production queue.
+Voice, timestamped planning, preview, remaining images and rendering are
+asynchronous actions on VPS2. The persistent production queue shares voice,
+planning, image and rendering capacity, reuses saved outputs, and parks for
+authoring/reviews without blocking other videos. Two image batches share the
+global provider limit. Interrupted dispatches need explicit inspection/resume.
+Progress polling is lightweight; no reviews or publication approvals are invented.
 
 ## Team workflow
 
