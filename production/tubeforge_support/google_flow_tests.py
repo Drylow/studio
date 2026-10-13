@@ -1,6 +1,7 @@
 """Provider contracts: exact references, no duplicate paid request, secret isolation."""
 import asyncio
 import base64
+from datetime import datetime, timezone
 import io
 import json
 from pathlib import Path
@@ -37,6 +38,8 @@ def provider(monkeypatch):
                 "health": "OK", "backend": "flow", "cookie": "private-cookie"} for i in range(3)})
         if "/assets/" in request.url.path:
             return httpx.Response(200, json={"mediaGenerationId": {"mediaGenerationId": "ref-" + str(len(calls))}})
+        if '/jobs/' in request.url.path:
+            return httpx.Response(200, json={'images': {'history': {}, 'executing': {}}})
         assert request.url.path.endswith("/images")
         return httpx.Response(200, json={"jobId": "test-job", "media": [{"image": {"generatedImage": {
             "encodedImage": base64.b64encode(picture()).decode()}}}]})
@@ -156,3 +159,37 @@ def test_portrait_output_rejected_without_paid_retry(provider, monkeypatch):
     assert calls.count("paid image request") == 1
     assert receipt["dimensions"] == [18, 32]
     assert receipt["job_id"] == "wrong-shape"
+
+
+@pytest.mark.parametrize('outcome', ['unique', 'wrong-reference', 'ambiguous', 'old', 'pending'])
+def test_lost_paid_response_recovers_only_exact_unique_completed_job(provider, monkeypatch, outcome):
+    calls, client = provider
+    paid = []
+    async def post(url, **kwargs):
+        assert url.endswith('/images')
+        paid.append(dict(kwargs['json']))
+        raise httpx.ReadTimeout('do not repeat this paid request')
+    monkeypatch.setattr(client, 'post', post)
+    async def read(path):
+        assert paid
+        if path.startswith('/jobs/?'):
+            ids = ['candidate', 'duplicate'] if outcome == 'ambiguous' else ['candidate']
+            return {'images': {'history': {key: {} for key in ids}, 'executing': {}}}
+        request = dict(paid[0])
+        if outcome == 'wrong-reference':
+            request['reference_1'] = 'different-asset'
+        timestamp = '2000-01-01T00:00:00Z' if outcome == 'old' else datetime.now(timezone.utc).isoformat()
+        return {'type': 'image', 'created': timestamp, 'jobid': path.rsplit('/', 1)[-1],
+            'request': request, 'status': 'executing' if outcome == 'pending' else 'completed',
+            'response': {'media': [{'image': {'generatedImage': {
+                'encodedImage': base64.b64encode(picture()).decode()}}}]}}
+    monkeypatch.setattr(flow, '_get', read)
+    monkeypatch.setattr(flow, '_account', AsyncMock(return_value='account0@example.invalid'))
+    receipt = {}
+    if outcome == 'unique':
+        assert asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', receipt=receipt)) == picture()
+        assert receipt['recovered_completed_job'] and receipt['job_id'] == 'candidate'
+    else:
+        with pytest.raises(flow.FlowError):
+            asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', receipt=receipt))
+    assert len(paid) == 1

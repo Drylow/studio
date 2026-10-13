@@ -247,6 +247,12 @@ async def generate(pid, sid, body, *, batch_id=None):
             current = store.get_project(pid)
             if current:
                 current = copy.deepcopy(current)
+                # Keep known upstream outcomes recoverable without replaying a paid call.
+                # The transport can know a job ID before a subsequent media read fails.
+                history = current.setdefault('workspace_generation_history', [])
+                if not any(item.get('id') == job_id for item in history):
+                    receipt.update(state='failed_unselected', finished_at=now())
+                    history.append(copy.deepcopy(receipt))
                 scene = next((x for x in current.get("scenes", []) if x["id"] == sid), None)
                 if scene and scene.get("generation_id") == job_id:
                     scene.update(status="error", error="Generation interrupted or failed; the previous shot is kept")

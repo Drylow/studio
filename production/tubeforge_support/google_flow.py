@@ -1,6 +1,7 @@
 """Image transport for connected Flow accounts; no prompt authoring or fallback."""
 import asyncio
 import base64
+from datetime import datetime
 import hashlib
 import io
 from pathlib import Path
@@ -162,6 +163,45 @@ def _cooldown(account, response):
         _cooldowns[account] = time.monotonic() + (int(delay) if delay.isdigit() else 1800)
 
 
+async def _recover_completed(body, submitted_at):
+    """Read a uniquely matching completed job; never submit another paid request.
+
+    A lost synchronous response can follow a successful generation. Match the
+    exact account, prompt, model, aspect, count and ordered asset identifiers,
+    as well as the submission window. Ambiguous or pending outcomes stay errors.
+    """
+    try:
+        stats = await _get('/jobs/?options=history')
+        images = stats.get('images') or {}
+        candidates = dict(images.get('history') or {})
+        candidates.update(images.get('executing') or {})
+        matches = []
+        for job_id in candidates:
+            if not isinstance(job_id, str):
+                continue
+            job = await _get('/jobs/' + quote(job_id, safe=''))
+            request = job.get('request') or {}
+            if not isinstance(request, dict) or job.get('type') != 'image':
+                continue
+            if any(request.get(key) != value for key, value in body.items()):
+                continue
+            if ({key for key in request if key.startswith('reference_')}
+                    != {key for key in body if key.startswith('reference_')}):
+                continue
+            created = datetime.fromisoformat(job['created'].replace('Z', '+00:00')).timestamp()
+            if not submitted_at - 2 <= created <= time.time() + 2:
+                continue
+            matches.append(job)
+        if len(matches) != 1 or matches[0].get('status') != 'completed':
+            return None
+        result = matches[0].get('response')
+        if not isinstance(result, dict):
+            return None
+        return dict(result, jobId=matches[0]['jobid'], recovered_completed_job=True)
+    except (httpx.HTTPError, FlowError, ValueError, TypeError, KeyError):
+        return None
+
+
 async def generate(prompt, model, aspect, refs=None, receipt=None):
     global _semaphore
     if not configured():
@@ -187,12 +227,25 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
             for number, payload in enumerate(refs, 1):
                 body[f"reference_{number}"] = await _upload(account, payload)
             # One POST only. No hedge, replay after timeout, model switch or proxy fallback.
-            response = await client().post(BASE + "/images", json=body,
-                                           headers={"Authorization": "Bearer " + setting("USEAPI_API_KEY")})
-            if response.status_code != 200:
-                _cooldown(account, response)
-                raise _error(response)
-            result = response.json()
+            submitted_at = time.time()
+            if receipt is not None:
+                receipt.update(account=account, submitted_at=submitted_at)
+            try:
+                response = await client().post(BASE + "/images", json=body, timeout=90,
+                    headers={"Authorization": "Bearer " + setting("USEAPI_API_KEY")})
+            except httpx.HTTPError:
+                result = await _recover_completed(body, submitted_at)
+                if result is None:
+                    raise
+            else:
+                if response.status_code != 200:
+                    _cooldown(account, response)
+                    raise _error(response)
+                result = response.json()
+            # Preserve the known paid outcome even if downloading its media fails.
+            if receipt is not None:
+                receipt.update(job_id=result.get('jobId'),
+                    recovered_completed_job=bool(result.get('recovered_completed_job')))
             media = result.get("media", [])
             if len(media) != 1:
                 raise FlowError("useapi did not return exactly one image.")
@@ -204,10 +257,17 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
                 if urlparse(url).scheme != "https":
                     raise FlowError("The image download link is invalid.")
                 # Separate client: no useapi credential is sent to the media host.
-                async with httpx.AsyncClient(timeout=120, follow_redirects=True) as download_client:
-                    download = await download_client.get(url)
-                    download.raise_for_status()
-                    content = download.content
+                # Only media reads may be repeated; never the image-generation POST.
+                for attempt in range(2):
+                    try:
+                        async with httpx.AsyncClient(timeout=45, follow_redirects=True) as download_client:
+                            download = await download_client.get(url)
+                            download.raise_for_status()
+                            content = download.content
+                        break
+                    except httpx.TimeoutException:
+                        if attempt:
+                            raise
             else:
                 raise FlowError("useapi n'a pas fourni de fichier image.")
             with Image.open(io.BytesIO(content)) as image:
