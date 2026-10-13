@@ -1,0 +1,39 @@
+{
+  "state": "style_inspected",
+  "source": "VPS TubeForge CLI Proxy",
+  "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nDAYLIGHT. ONE Marin stands on the open wooden foredeck, examining a short visibly frayed rope between both WHITE mitten hands. Medium three-quarter framing, camera near the BOW looking back toward the STERN cabin. Yellow vest and navy cap clearly visible, thin black stick arms/legs. Pale dusty blue sea visible over the low rail, cream cabin and teal forward-facing door behind him. Preserve the small repeatable fishing boat from the master; only the camera changes. Few simple props, no monster in this calm setup. One readable action, no text.\nLOCATION AND CAMERA CONTRACT:\nSpace: The same small wooden fishing boat\nFixed layout: Low stern cabin; open foredeck toward bow; one square hatch centered in the foredeck; orange lifebuoy on starboard cabin wall.\nPermanent world-space anchors: Cream low cabin at stern; Teal door on forward cabin wall with one square forward window beside it; One square visible starboard window with orange lifebuoy below it; one square port side window is an explicit planned opposite-wall variant; Rusty red hull with cream trim; One orange lifebuoy on starboard cabin wall; Square hatch centered on open foredeck\nCamera position and direction: Camera on bow looking aft toward the stern cabin\nVisible view: Open foredeck with stern cabin behind the actor\nFraming: medium\nNew narrated information: The survivor examines a frayed rope held between his white mitten hands.\nPreserve this place's topology, object colours and permanent landmarks. Screen positions change naturally with the camera. Recreate the requested view rather than copy a reference composition. Keep the same architecture; do not invent windows, doors or furniture. Moving objects, damage and light change only when this scene explicitly calls for it.\nIDENTITY REFERENCE BINDINGS (exact ordered attachments):\nImage 1: Marin; variant \"default\"; Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs.\nEach identity image depicts that same single named individual, not another person. Match the assigned costume and appearance only to its bound identity. Multiple views on an identity sheet show ONE person from different angles: choose the scene's angle and draw that identity exactly once, never copy the sheet layout, its second portrait or its plain background. Draw only this scene's listed cast; reference backgrounds never add people.\nLOCATION IMAGE BINDINGS (exact attachment order):\nImage 2: fishing-boat; permanent geometry master.\nThese images fix the same physical space, not the actor pose or screen composition. Use the saved camera contract. Never import people from a location image.",
+  "references": [
+    {
+      "path": "images/001-directed-a0872bba3fb94350911dfb73775e97a2.png",
+      "owner": "project",
+      "role": "identity",
+      "sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "character": "Marin",
+      "variant": "default",
+      "location_id": null,
+      "location_view": null,
+      "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+    },
+    {
+      "path": "images/002-directed-7cdda39bec604fab801bb5015c9f3e24.png",
+      "owner": "project",
+      "role": "location-master",
+      "sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+      "character": null,
+      "variant": null,
+      "location_id": "fishing-boat",
+      "location_view": null,
+      "source_sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+      "sent_sha256": "0abb3b3bf7d6fa0b965954e4d583a328de7e8464067fb63a37c45f15daa6c44f"
+    }
+  ],
+  "dimensions": [
+    1672,
+    941
+  ],
+  "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+  "user_approved": false,
+  "review_file": "scene-reviews.json",
+  "camera_compliant": true
+}

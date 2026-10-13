@@ -1,0 +1,26 @@
+{
+  "state": "reference_inspected",
+  "source": "VPS TubeForge CLI Proxy",
+  "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nEMPTY small ordinary wooden fishing boat seen from a shallow elevated starboard three-quarter angle, whole boat visible on calm dusty blue sea. Establish a simple repeatable boat layout: rusty red hull with one cream upper trim stripe; low cream cabin at the STERN, teal cabin door on the forward wall, one square window on the port cabin wall and one on starboard wall; simple open wooden foredeck toward the BOW; ONE square hatch centered in the foredeck; short rail around the deck; ONE orange lifebuoy on the starboard cabin wall. No mast, extra storeys, fishing crane or other boat. Bow to stern geometry is coherent and legible. Minimal water ripple lines, simple horizontal sky strip, no distant buildings. Use attached reference for flat outlined illustration language ONLY; draw NO people, faces, white circular heads, bags or animals anywhere.",
+  "references": [
+    {
+      "path": "refs/5718ebec0c4143d89c83b78c43832f98.png",
+      "owner": "project",
+      "role": "style-only",
+      "sha256": "32c396f77755643943355acf6a408a25f35cca161b2933db838fce91df560b55",
+      "character": null,
+      "variant": null,
+      "location_id": null,
+      "location_view": null,
+      "source_sha256": "32c396f77755643943355acf6a408a25f35cca161b2933db838fce91df560b55",
+      "sent_sha256": "5d875044f167aed7ab08db24a4527e8746f1f3ea49c532905f8aaf6597d2df1c"
+    }
+  ],
+  "dimensions": [
+    1672,
+    941
+  ],
+  "source_sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+  "user_approved": false,
+  "review_file": "reference-reviews.json"
+}
