@@ -348,3 +348,7 @@ body.signed-out .primary-nav, body.signed-out .connection, body.signed-out .acco
  .team-panel { padding: 20px; } .workspace-tabs { width: 100%; } .workspace-tabs button { flex: 1; }
  .team-table th:nth-child(2), .team-table td:nth-child(2) { display: none; }
 }
+ .queue-spinner { display:inline-block; width:12px; height:12px; margin-right:8px; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:queue-spin .8s linear infinite; }
+ #production-selection { width:100%; min-width:0; max-width:680px; }
+ @keyframes queue-spin { to { transform:rotate(360deg); } }
+ @media (prefers-reduced-motion:reduce) { .queue-spinner { animation:none; } }

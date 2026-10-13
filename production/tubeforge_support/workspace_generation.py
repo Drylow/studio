@@ -376,6 +376,10 @@ async def start_batch(pid, body):
            "current_scene_id": None, "current_scene_ids": [], "stop_requested": False, "error": None,
            "concurrency": batch_concurrency(provider, phase),
            "processed": 0, "failed_scene_ids": [], "scene_errors": {}}
+    requested = body.get('concurrency', job['concurrency'])
+    if type(requested) is not int or not 1 <= requested <= job['concurrency']:
+        raise HTTPException(422, 'Batch concurrency must be a positive integer within the shared limit')
+    job['concurrency'] = requested
     if p.get("render") and p["render"] not in p.get("render_history", []):
         p.setdefault("render_history", []).append(copy.deepcopy(p["render"]))
     p["workspace_batch"] = job
