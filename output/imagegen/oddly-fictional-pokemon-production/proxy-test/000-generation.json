@@ -1,0 +1,34 @@
+{
+  "scene_id": 0,
+  "provider": "cli_proxy",
+  "source": "bundled_image_cli_user_requested_proxy_test",
+  "prompt": "A simple clean flat 2D cartoon illustration of an EMPTY waiting room, using Image 1 as the visual reference. Cream walls, a blue waiting bench beneath a large window on the left, one plain doorway centered on the rear wall, a mint counter on the right and a pale blue tiled floor. Crisp black ink contours, matte flat colours, shallow readable room perspective. No people, animals, text or logos. One continuous full-width landscape frame, entirely drawn, no photographic material.",
+  "references": [
+    {
+      "owner": "project",
+      "path": "production-v1/refs/d81f69b9172eb559-center-interior.jpg",
+      "role": "location",
+      "sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd",
+      "review_state": "verified",
+      "source": "work/pokemon-episode-02/project-cache/production-v1/refs/d81f69b9172eb559-center-interior.jpg",
+      "sent_sha256": "d81f69b9172eb5595fc0ef7265da5884b68fd3253892c27efa8cc35d3671f5bd"
+    }
+  ],
+  "requested_size": [
+    2048,
+    1152
+  ],
+  "quality": "high",
+  "scene_narration": "Technical control only: empty drawn setting; not an episode shot.",
+  "scene_start": 55.98,
+  "scene_end": 63.08,
+  "state": "generated_unreviewed",
+  "new_upscale": false,
+  "dimensions": [
+    1678,
+    937
+  ],
+  "seconds": 29,
+  "image_sha256": "ba7310e305f60122720efed46e5d8179893c567117be829224414288b9260b75",
+  "image_source": "output/imagegen/oddly-fictional-pokemon-production/proxy-test/000.png"
+}

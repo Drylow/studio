@@ -274,5 +274,27 @@
       "reason": "Actual main eyebrows",
       "correction": "Erase all human eyebrow strokes and any grey cap-shadow crescent inside Nicos head. Fill with the same pure WHITE paper face colour, retain TWO small BLACK DOT eyes and one tiny black line mouth. Keep red cap/blue outfit, food packet, ONE Charizard, ONE Pidgeot, ONE Poliwhirl, same Hall room geometry."
     }
+  },
+  {
+    "20": {
+      "reason": "Two copies of the same Pokedex device.",
+      "correction": "Remove ONLY the red Pokedex lying on the table. Keep the single red Pokedex being handed to Nico and every person, Pokemon, pose and other object unchanged."
+    },
+    "21": {
+      "reason": "Extra eyebrows on the otherwise correct Nico identity.",
+      "correction": "Erase ONLY the two eyebrow strokes above Nico's dot eyes. Keep his eyes, mouth, perfectly round white head, cap, outfit, pose and the entire scene unchanged."
+    },
+    "111": {
+      "reason": "Duplicate partial protagonist behind Pidgeot.",
+      "correction": "Remove ONLY the extra partial blue-jacket trainer behind Pidgeot, including the visible blue torso, white hand, trouser legs and boots under the bird. There is exactly ONE Nico: the unobstructed red-cap trainer standing at left. Keep that left Nico and Pidgeot unchanged. Restore the original unobstructed sand floor behind the bird."
+    },
+    "143": {
+      "reason": "Unrequested third battling Pokemon.",
+      "correction": "Remove ONLY the extra small blue spiral-belly Poliwhirl in the foreground. Keep the single Pidgeot, the single Blastoise, red-cap Nico and green-jacket Milo unchanged. Keep the battle court and water attack from Blastoise directed toward Pidgeot."
+    },
+    "151": {
+      "reason": "Nico reverted to a human head and tall proportions.",
+      "correction": "Replace ONLY Nico, the red-cap blue-jacket trainer beside Charizard, using his supplied identity reference: compact body about 2.6 head diameters tall overall, perfectly circular oversized PURE WHITE head, tiny black dot eyes, tiny line mouth, NO hair, NO ears, NO nose, NO human skin colour. Red cap, blue zip jacket, dark trousers, brown boots and white mitten hands. Keep his position and all other characters, three Pokemon, furnishings, lighting and composition unchanged."
+    }
   }
 ]

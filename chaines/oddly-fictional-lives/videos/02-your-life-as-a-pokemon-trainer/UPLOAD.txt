@@ -1,0 +1,22 @@
+TITLE
+Your Life as a Pokémon Trainer
+
+DESCRIPTION
+Your first battle goes wrong. Your journey starts in a Pokémon Center.
+
+From choosing Charmander to facing the Kanto League, live through the battles, mistakes, evolutions, and everyday work of becoming a Pokémon Trainer.
+
+An original illustrated story from Oddly Fictional Lives.
+
+#Pokemon #PokemonTrainer #OddlyFictionalLives
+
+TAGS
+pokemon, pokemon trainer, your life as a pokemon trainer, pokemon story, kanto, charmander, charizard, pokemon league, oddly fictional lives
+
+EDITING
+Use the completed movie with its existing narration, or place clips 001–157
+in numerical order with voiceover.mp3 at 00:00. Actual running time: 15:50.
+chapters.txt contains the measured narration chapter timestamps.
+
+STATUS
+Upload text prepared. No YouTube upload performed by Codex.
