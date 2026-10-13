@@ -85,6 +85,36 @@ def create(client, **changes):
     return response.json()
 
 
+def test_ui_project_preserves_live_fields_and_stored_history(workspace):
+    client, _, _, _ = workspace
+    created = create(client)
+    saved = store.get_project(created['id'])
+    saved['workspace_generation_history'] = [{'large_archived_payload': 'x' * 10000}]
+    saved['planning_receipt'] = {'shots': {'1': 'archived-evidence'}}
+    store.save_project(saved)
+    complete = client.get('/api/workspace/projects/' + created['id']).json()
+    screen = client.get('/api/workspace/projects/' + created['id'] + '?view=ui').json()
+    assert 'workspace_generation_history' in complete and 'planning_receipt' in complete
+    assert 'workspace_generation_history' not in screen and 'planning_receipt' not in screen
+    for key in ('id', 'script', 'human_reviews', 'review_state', 'generation_confirmation', 'technical_ready',
+                'publication_ready', 'scenes', 'duration_info', 'model_snapshot'):
+        assert screen[key] == complete[key]
+    assert store.get_project(created['id'])['workspace_generation_history'] == saved['workspace_generation_history']
+    assert client.get('/api/workspace/projects/' + created['id'] + '?view=unknown').status_code == 422
+
+
+def test_ui_project_keeps_scene_references_and_review_evidence():
+    full = {'scenes': [{'id': 1, 'prompt': 'Exact saved prompt', 'references': [{'path': 'refs/main.png'}],
+                        'authored_prompt_history': ['old prompt'],
+                        'human_review': {'state': 'verified', 'evidence': 'current-hash', 'history': ['old review']}}]}
+    screen = api._ui_project(full)
+    assert screen['scenes'][0]['prompt'] == 'Exact saved prompt'
+    assert screen['scenes'][0]['references'] == full['scenes'][0]['references']
+    assert screen['scenes'][0]['human_review'] == {'state': 'verified', 'evidence': 'current-hash'}
+    assert full['scenes'][0]['authored_prompt_history'] == ['old prompt']
+    assert full['scenes'][0]['human_review']['history'] == ['old review']
+
+
 @pytest.mark.parametrize('busy', ['batch', 'scene'])
 def test_project_writes_blocked_during_image_execution(workspace, monkeypatch, busy):
     if DEPLOYED:

@@ -62,6 +62,12 @@ Les integrations disponibles ne constituent pas une autorisation de changer de f
 
 ## Background modes — 13 October 2026
 
+### Navigation performance
+
+Hash navigation reuses short-lived in-memory workspace, management and project reads, with deduplicated requests and stale-while-revalidate behavior. Independent page dependencies load concurrently. Successful writes and logout clear the cache; manual refresh and job polling always fetch current data. No credentials or project payloads are persisted in browser storage by this cache.
+
+Project screen reads use `GET /api/workspace/projects/{id}?view=ui`, excluding archival histories and planning receipts from the response. Default API reads retain full history. Stored metadata, prompts, ordered references and review evidence are preserved; current status is still calculated before building either response. Navigation cache tests: `node production/tubeforge_support/workspace_navigation_tests.cjs`.
+
 **Styles → Edit → Background mode** offers two independent scenery choices:
 
 - **Free backgrounds** (`free`, default): every image can use a different setting.
