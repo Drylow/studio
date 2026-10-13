@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "method": "built-in-image-generation",
+  "recommended": "B-portraits-references.png",
+  "acceptedByUser": false,
+  "outputs": [
+    {
+      "file": "A-premier-essai.png",
+      "review": "Layout and text correct; Mark and Helly identities too generic; not recommended",
+      "referencesInOrder": [
+        "references/silo-style.jpg"
+      ]
+    },
+    {
+      "file": "B-portraits-references.png",
+      "review": "Visually checked: Mark and Helly closer to supplied identities, all four words spelled correctly, brown/amber/cream style retained, full readable portraits and corridor. Minor distant LUMON text present. No duration badge. Recommended proposal.",
+      "referencesInOrder": [
+        "references/silo-style.jpg",
+        "references/mark-portrait-candidate.jpg",
+        "references/ATV_Severance_Photo_010102.jpg"
+      ]
+    }
+  ],
+  "scriptScope": "Final Ultravid script not provided; generic description"
+}

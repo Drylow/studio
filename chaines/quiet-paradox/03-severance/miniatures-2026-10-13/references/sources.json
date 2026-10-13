@@ -1,0 +1,23 @@
+{
+  "page": "https://www.apple.com/tv-pr/originals/severance/episodes-images/",
+  "date": "2026-10-13",
+  "used": [
+    {
+      "role": "Mark identity",
+      "url": "https://www.apple.com/tv-pr/shows-and-films/s/severance/images/season-02/unit-photos/episode-01/photo-020103/Severance_Photo_020103.jpg",
+      "local": "mark-portrait-candidate.jpg"
+    },
+    {
+      "name": "ATV_Severance_Photo_010102.jpg",
+      "url": "https://www.apple.com/tv-pr/shows-and-films/s/severance/images/season-01/unit-photos/episode-01/photo-010102/ATV_Severance_Photo_010102.jpg",
+      "path": "C:/Users/ytbyt/Documents/ChatGPT/2D Slop/chaines/quiet-paradox/03-severance/miniatures-2026-10-13/references/ATV_Severance_Photo_010102.jpg"
+    }
+  ],
+  "unusedScoutingFiles": [
+    "mark.jpg",
+    "helly.jpg",
+    "ATV_Severance_Photo_010104.jpg",
+    "Severance_Photo_010101.jpg",
+    "ATV_Severance_Photo_010108.jpg"
+  ]
+}
