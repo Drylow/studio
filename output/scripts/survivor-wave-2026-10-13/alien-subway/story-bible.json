@@ -1,0 +1,40 @@
+{
+  "premise": "Hiding underground trades visible danger for a sensory predator and rising water. Moving supplies creates the very vibrations that expose the refuge.",
+  "cast": [
+    "Reed: saved scarf/white-circle/black-stick identity, grounded grey school pack.",
+    "Mina: adult cleaner, olive work vest, station keys, white head/hands/feet.",
+    "Ash: adult commuter, burgundy work shirt then recovered charcoal coat; white head/hands/feet; laptop bag/photo sleeve.",
+    "Clatter: recurring charcoal plated quadruped, two feeler plates; use one newly prepared visual identity.",
+    "Surveyor: existing saved alien identity marking surface infrastructure."
+  ],
+  "locations": [
+    "Entrance/ticket hall -> platform and stranded train.",
+    "Staff passage -> maintenance room/platform gate -> northern concrete access tunnel.",
+    "Junction: east low rail tunnel; west concrete stairs to dry landing BEFORE exposed metal grid.",
+    "Grid -> high concrete walkway -> surface hatch and depot yard -> known warehouse shelter."
+  ],
+  "chronology": [
+    "Days1-5: observe Clatter; soft rail/tile tests; Surveyor at entrance.",
+    "Days6-10: maintenance, train supplies/map, connected-grid and separate-rail soft tests.",
+    "Days11-14: cart falls to rail, refuge found, explicit cart recovery and northern move.",
+    "Days16-21: Surveyor pressure, rising water, loud separate-rail test observed.",
+    "Day23: Ash breaks recovered cart attempting to leave; burden changes.",
+    "Days24-29: supplies moved, handle recovered, hatch watched while occupied.",
+    "Day30: tested local-clang diversion, grid crossing, hatch exit and shelter checked."
+  ],
+  "setups_and_payoffs": [
+    "Connected grid blocks departure; distinct local clang test permits last crossing.",
+    "Ash's attempted belongings recovery costs cart; later shares carrying burden.",
+    "Both flooding and Surveyor occupancy constrain timing; warehouse shelter planted before ending."
+  ],
+  "persistent_states": [
+    "Cart first abandoned, then explicitly retrieved, then wheel permanently broken; no teleportation.",
+    "Clatter detects track signals at distance and loud nearby clang separately; no vibration footprints or mind reading.",
+    "Separate rail stays disconnected on rubber blocks; tests occur on-page.",
+    "Landing is before crossing, so earlier refuge does not skip final obstacle.",
+    "Hatch under original street debris remains unusable; final depot hatch is a distinct exit.",
+    "Ash keeps surviving photo sleeve but never reaches apartment; accepts escape rather than promises later retrieval."
+  ],
+  "style_id": "survivor-alien-aftermath",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

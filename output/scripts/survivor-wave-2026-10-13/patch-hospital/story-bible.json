@@ -1,0 +1,41 @@
+{
+  "premise": "An injured survivor has to help evacuate someone less mobile than himself. The safest-looking floor becomes dangerous when it loses power.",
+  "cast": [
+    "Patch: existing bandage identity; injured hand wrapped separately, white head/hands/feet, grounded orange bag.",
+    "Jo: adult orderly in blue-grey work vest, white round head/hands/feet, black stick limbs.",
+    "Len: adult maintenance worker/patient, mustard hospital blanket over grey clothes, right leg braced; white round head/hands/feet.",
+    "Infected hospital workers/patients: pale-green heads, hands and exposed feet."
+  ],
+  "locations": [
+    "Emergency department -> staff corridor -> outpatient corner -> ground-floor maintenance store.",
+    "Main staff stairs -> third-floor south ward, nurses station, storeroom and roof service landing.",
+    "Far service stairs -> ground-floor imaging fire door -> receiving -> loading ramp.",
+    "Delivery hatch is on cafeteria side, separated from receiving escape path.",
+    "Bay office holds van key; ramp -> transport van -> yard gate -> checked bus depot office."
+  ],
+  "chronology": [
+    "Day1: hand injury unrelated to infection; bay keys noticed; Jo and Len join.",
+    "Days2-6: relocation to store; chime tested and retrieved; transfer from ordinary chair to evacuation chair.",
+    "Days7-11: third-floor ward and ground-level escape mapped.",
+    "Days12-22: power/water access fail; main stairs unsafe; roof leak forces departure.",
+    "Day23: far-stair descent and imaging attempt fail; climb back shown.",
+    "Days24-29: battery chime plan, hatch scouted and route cleared.",
+    "Day30: far stairs, diversion, ramp/van/gate; depot shelter."
+  ],
+  "setups_and_payoffs": [
+    "Len's maintenance knowledge becomes specific route/gate knowledge, not magical access.",
+    "Tested chime provides diversion; known keys/van provide actual exit.",
+    "Hand injury and Len's mobility constraint remain in final shelter."
+  ],
+  "persistent_states": [
+    "Same injured hand throughout; injury not magically cured.",
+    "Ordinary chair left downstairs; evacuation chair used thereafter and folded into van.",
+    "Len keeps leg brace and cannot suddenly run.",
+    "Battery chime comes from maintenance store and works independently of main-power failure.",
+    "Chime is placed at cafeteria hatch, not in the receiving route characters need.",
+    "No single hand simultaneously carries the bag and pushes both chair handles; Jo/Len share tasks.",
+    "Van keys planted before rescue need and physically retrieved; no helicopter arrival."
+  ],
+  "style_id": "survivor-patch",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

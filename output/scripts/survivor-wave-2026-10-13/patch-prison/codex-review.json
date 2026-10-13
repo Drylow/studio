@@ -1,0 +1,128 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2686,
+  "sha256": "32251367b8e11505a367fc1536fc92325638b73ef938daeb59091738d9ad017f",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Fixed infected guard entering the holding cell before Nia locks it.",
+    "Mapped a rear staff passage for Cal trades and courtyard access, avoiding unexplained crossings of an infected cafeteria.",
+    "Removed key ownership morals and excess grounded-bag stage directions from narration.",
+    "Added an observed infected group outside the laundry exit to explain waiting until day30.",
+    "Retained four adult survivors and made shelter admission concrete rather than a moralizing dialogue."
+  ],
+  "source_paragraph_count": 138,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.122571520102515,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "An infected guard is dragging a key ring past your cell, and the food is locked two blocks away.",
+      "opening_paragraph_words": 19,
+      "promise": "Zombie Prison Survival: Day 1 to Day 30",
+      "payoff": "Nia shares the food you brought with the adults who let you in. Cal sits beside Vale instead of beside the door. You can still hear people walking in the hall, but nobody is rattling bars. You close your eyes while someone brings another mat.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Cell key solves first confinement; shared key access resolves Cal's control conflict.",
+        "Planted laundry exit becomes escape after transport attempt fails.",
+        "Food sharing progresses from conditional trade to taking injured Vale along."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "You arrived for a visitor appointment. When someone attacked a guard in reception, another officer put you behind the holding-cell bars and went for help. He never came back. Now the visitor wing is sealed. But the infected guard outside still has the keys to your door.",
+            "word_offset": 19
+          },
+          "closes": {
+            "quote": "You retreat toward the far bench with your bag. The guard pushes through the open cell doorway after you. Nia strikes the bars from outside, making him turn back toward her. You slip past his side before he reaches the doorway again. Nia pulls the bars shut. Both of you retreat into the staff passage while he strikes the gate behind you.",
+            "word_offset": 374
+          }
+        },
+        {
+          "opens": {
+            "quote": "He lets you and Nia through the rear staff passage and into the yard. He keeps the courtyard key in his hand and counts how long you stay. Nia refuses to hand over more supplies while he is watching the clock.",
+            "word_offset": 858
+          },
+          "closes": {
+            "quote": "Cal closes the door behind the group. He turns the key, then hands it to Nia instead of keeping it. You move off the road before the distant infected turn back toward the laundry wall.",
+            "word_offset": 2463
+          }
+        },
+        {
+          "opens": {
+            "quote": "The broken window admits infected inmates into the cafeteria. You bolt its kitchen door while Cal moves the supplies into the rear passage. Outside, the wind has stopped and the group along the fence is moving away from the laundry exit. You wait for daylight so Vale can see the service road from the high window.",
+            "word_offset": 2179
+          },
+          "closes": {
+            "quote": "Nia looks through the high window. The infected group is farther along the fence, following a loose panel toward the front gate. Vale opens the staff exit a crack. The service road immediately outside is clear. He leads you onto it while Nia watches the bend.",
+            "word_offset": 2417
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-2: cell, key retrieval, guard follows inside before cell is locked.",
+        "Days2-10: kitchen supplies, gated food/access trade and blocked loading route.",
+        "Days11-15: Vale rescued from fire; old service route lost.",
+        "Days16-21: infected pressure, water-container loss, cooperation and vehicle inspection.",
+        "Days22-26: equipment clearing; vehicle trial fails; Cal shares gate key.",
+        "Days27-29: laundry route tested; infected group outside delays departure until dawn.",
+        "Day30: four leave, walk fields, enter church shelter."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Visitor cell -> reception -> staff hall -> kitchen.",
+        "Cafeteria is infected; rear staff passage avoids it and reaches Cal's courtyard gate.",
+        "Administrative fire wing connects through separation door; resealed after Vale arrives.",
+        "Courtyard -> loading passage -> failed transport vehicle -> narrow rear gap -> laundry.",
+        "Laundry exit crosses perimeter wall to service road, fields and inspected church shelter."
+      ],
+      "state_checked": [
+        "Nia recovers reception/kitchen key ring; Cal's courtyard key is a separate object.",
+        "Guard actually enters original cell before Nia locks him inside.",
+        "Fire-wing door sealed after rescue; no later shortcut through it.",
+        "Transport vehicle damages its front corner and remains unusable across loading.",
+        "Backpack pocket catches on van bumper and is freed; small damage persists.",
+        "Gate key is handed to Nia rather than mysteriously discarded or duplicated.",
+        "Four adults survive and walk out; Vale still limps."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+        "You check the staff exit next."
+      ],
+      "matched_script_line": "You arrived for a visitor appointment. When someone attacked a guard in reception, another officer put you behind the holding-cell bars and went for help. He never came back. Now the visitor wing is sealed. But the infected guard outside still has the keys to your door.",
+      "scanner_adjudication": "Vale's short statements describe an immediate fire emergency rather than a trailer verdict. Repeated vehicle/door terms name the same obstacle as its state changes.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

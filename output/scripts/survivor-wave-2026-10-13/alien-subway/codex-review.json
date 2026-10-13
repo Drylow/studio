@@ -1,0 +1,127 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2741,
+  "sha256": "a13290060a968154a13b8b3a9293b28cf1696f9a98f20df78567ceb47046ad99",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Fixed cart teleportation with an explicit recovery before its final wheel failure.",
+    "Removed retrospective memory of an unshown training-rail test; both soft and loud tests occur on page.",
+    "Defined rail sensing at distance and response to a loud nearby clang separately; no stored-vibration or psychic tracking.",
+    "Mapped a safe stair landing before the exposed crossing, keeping the final crossing a real obstacle.",
+    "Made Surveyor occupancy and rising water explain the delayed exit.",
+    "Replaced burden morals with practical cooperation and an inspected shelter ending."
+  ],
+  "source_paragraph_count": 133,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.064314930388864,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "You reach the subway stairs as a white beam sweeps across the street behind you, lifting parked cars and tearing signs off storefronts.",
+      "opening_paragraph_words": 23,
+      "promise": "Alien Invasion: 30 Days Hiding in the Subway",
+      "payoff": "At the warehouse shelter, Mina checks the low door beneath the awning. It opens into the room she remembers from the drills. Ash looks inside with her while you watch the road. There are mats, empty shelving and a second door to a courtyard. You move the supplies inside and close the street entrance. Ash puts his surviving photo sleeve on the shelf and places the water beside it. His other belongings are still across the occupied city. He sits down with you and Mina instead of asking to return.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Connected grid blocks departure; distinct local clang test permits last crossing.",
+        "Ash's attempted belongings recovery costs cart; later shares carrying burden.",
+        "Both flooding and Surveyor occupancy constrain timing; warehouse shelter planted before ending."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "Mina tests that metal crossing with a loose bolt on day ten. Clatter responds from the track beneath it. Beside the junction wall is a short training rail resting on rubber blocks, disconnected from the running rails. A soft tap on that piece brings no response. Mina marks both results on the map.",
+            "word_offset": 1074
+          },
+          "closes": {
+            "quote": "Clatter reaches the loud metal piece and lowers its feelers to it. Ash pulls again while Mina crosses the grid with the first bundle. You follow with the bag held clear of the floor. Ash releases the cloth only when you are over the connected metal, then carries the last container across after you.",
+            "word_offset": 2553
+          }
+        },
+        {
+          "opens": {
+            "quote": "The next day, you find a cleaner's cart wedged between carriage seats. Its rubber wheels let you move supplies without dragging the bags. Mina checks one damaged wheel and tells Ash to guide that side while you push along the platform wall.",
+            "word_offset": 1178
+          },
+          "closes": {
+            "quote": "At the warehouse shelter, Mina checks the low door beneath the awning. It opens into the room she remembers from the drills. Ash looks inside with her while you watch the road. There are mats, empty shelving and a second door to a courtyard. You move the supplies inside and close the street entrance. Ash puts his surviving photo sleeve on the shelf and places the water beside it. His other belongings are still across the occupied city. He sits down with you and Mina instead of asking to return.",
+            "word_offset": 2651
+          }
+        },
+        {
+          "opens": {
+            "quote": "The room has a platform service gate, a passage back toward the ticket hall and a concrete tunnel heading north. A ladder reaches a hatch jammed beneath street debris. Mina has already tried that hatch and shows you the bent handle. On the wall is a staff evacuation sheet. It marks the northern walkway and a warehouse shelter beyond the bus depot. Mina remembers doing a drill there in daylight. She keeps the sheet with the station map, but warns Ash that the printed route does not show what the aliens have blocked outside.",
+            "word_offset": 742
+          },
+          "closes": {
+            "quote": "At the warehouse shelter, Mina checks the low door beneath the awning. It opens into the room she remembers from the drills. Ash looks inside with her while you watch the road. There are mats, empty shelving and a second door to a courtyard. You move the supplies inside and close the street entrance. Ash puts his surviving photo sleeve on the shelf and places the water beside it. His other belongings are still across the occupied city. He sits down with you and Mina instead of asking to return.",
+            "word_offset": 2651
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-5: observe Clatter; soft rail/tile tests; Surveyor at entrance.",
+        "Days6-10: maintenance, train supplies/map, connected-grid and separate-rail soft tests.",
+        "Days11-14: cart falls to rail, refuge found, explicit cart recovery and northern move.",
+        "Days16-21: Surveyor pressure, rising water, loud separate-rail test observed.",
+        "Day23: Ash breaks recovered cart attempting to leave; burden changes.",
+        "Days24-29: supplies moved, handle recovered, hatch watched while occupied.",
+        "Day30: tested local-clang diversion, grid crossing, hatch exit and shelter checked."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Entrance/ticket hall -> platform and stranded train.",
+        "Staff passage -> maintenance room/platform gate -> northern concrete access tunnel.",
+        "Junction: east low rail tunnel; west concrete stairs to dry landing BEFORE exposed metal grid.",
+        "Grid -> high concrete walkway -> surface hatch and depot yard -> known warehouse shelter."
+      ],
+      "state_checked": [
+        "Cart first abandoned, then explicitly retrieved, then wheel permanently broken; no teleportation.",
+        "Clatter detects track signals at distance and loud nearby clang separately; no vibration footprints or mind reading.",
+        "Separate rail stays disconnected on rubber blocks; tests occur on-page.",
+        "Landing is before crossing, so earlier refuge does not skip final obstacle.",
+        "Hatch under original street debris remains unusable; final depot hatch is a distinct exit.",
+        "Ash keeps surviving photo sleeve but never reaches apartment; accepts escape rather than promises later retrieval."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "You came here for coffee.",
+        "You backed into the shop."
+      ],
+      "matched_script_line": "You squeeze past the fallen map board with your gray bag in one hand. Below, the platform looks empty. But a metallic tap travels along the track toward the stairs. You stop before touching the railing. The next tap is closer, while the beam above you reaches the entrance windows.",
+      "scanner_adjudication": "Mina's rail/pipes discussion is a character testing uncertain sensory behavior, not a narrator law. Location and training-rail repeats progress from tests through final use.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "premise": "A luxury ship offers abundant supplies but becomes progressively smaller as infected decks are sealed and lower machinery spaces flood.",
+  "cast": [
+    "Patch: existing orange forehead bandage identity, white circular head/white hands/feet, one grounded orange school backpack.",
+    "Mara: adult steward, dark blue work jacket and service keys; white circular head/white hands/feet, black stick limbs.",
+    "Ellis: adult passenger, burgundy sweater and dark trousers; white circular head/white hands/feet; sore knee after chute descent.",
+    "Infected passengers: green heads, hands and exposed feet, same pale green; no Patch bandage."
+  ],
+  "locations": [
+    "Port cabins connect by balconies; hidden laundry passage joins pantry and crew stairs.",
+    "Guest pantry and galley lost; second laundry barricade preserves upper service access.",
+    "Forward stairs lead to bridge; lower workshop inaccessible through warped watertight door.",
+    "Numbered crew locker contains linen chute to workshop alcove.",
+    "Workshop ladder reaches starboard promenade and boat-three gate.",
+    "Starboard lifeboat reaches inlet beach and checked boathouse."
+  ],
+  "chronology": [
+    "Days1-5: cabins, Mara, pantry, Ellis and lifeboat observation.",
+    "Day6: Ellis opens galley; pantry lost, second laundry barrier installed.",
+    "Days7-16: recovered keys, limited crew supplies, bridge and missing release handle; storm.",
+    "Days18-20: cabins abandoned; failed workshop route and flashlight lost.",
+    "Days21-26: inspect alternate route, locker/chute/workshop, handle recovered, sore knee, promenade access.",
+    "Days27-29: rough water and snagged lowering line delay launch; final supplies.",
+    "Day30: three launch together, land and inspect boathouse."
+  ],
+  "setups_and_payoffs": [
+    "Intact starboard boat is seen before the missing handle is discovered and recovered.",
+    "Ellis causes pantry breach; later waits quietly at hatch and helps gate/boat crossing.",
+    "Storm closes cabin refuge and forces workshop/boat plan; launch ends the drifting-ship threat."
+  ],
+  "persistent_states": [
+    "Pantry never becomes safe again; second cart is distinct from tipped pantry cart.",
+    "Mara keeps the returned spare keys; no second unexplained handover.",
+    "Flashlight crushed on failed descent and never restored.",
+    "Ellis carries sister's shoe and leaves it before departure; her fate remains unknown, no rescue promised.",
+    "Released boat-three handle recovered from workshop and installed at access gate.",
+    "Crew meal packs and drinks replace lost pantry supplies; no unshown food reset.",
+    "Backpack carried by visible handle only during movement; grounded when resting; never worn or duplicated."
+  ],
+  "style_id": "survivor-patch",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

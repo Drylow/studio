@@ -1,0 +1,41 @@
+{
+  "premise": "The airport functions like a brightly lit collection point. Reed must understand a surveying alien's patrol pattern before crossing the runway.",
+  "cast": [
+    "Reed: existing blue-grey scarf identity, white circular head/hands/feet, black stick body, grey grounded school backpack.",
+    "Ada: adult baggage handler in orange safety vest; white head/hands/feet.",
+    "Tomas: adult pilot in tan flight jacket; white head/hands/feet.",
+    "Surveyor: use existing saved identity reference; carries black panel and marks powered/visible infrastructure.",
+    "Loader: use existing broad alien identity with heavy harness; directs separate lifting machine."
+  ],
+  "locations": [
+    "Departure hall -> baggage sorting chute -> maintenance corridor -> arrivals.",
+    "Terminal north of runway; hangar/fuel yard south; tower overlooks patrol.",
+    "Jet-bridge-covered drainage approach reaches hangar until demolition exposes it.",
+    "Baggage tug and later moved work-light stand lie on opposite apron.",
+    "Inspected runway strip leads to flight toward previously described rural airstrip and checked sheds."
+  ],
+  "chronology": [
+    "Days1-6: scan, Ada, observed line-of-sight tests and Tomas reached.",
+    "Days7-14: map/tower, hangar inspection, four-seat aircraft, spare battery and work light.",
+    "Days18-22: jet bridge/baggage demolished; route and refuge lost.",
+    "Days23-27: fuel carried, light changes patrol, same stand repositioned; hangar rail bent.",
+    "Days28-29: spare battery installed, engine test exposes risk, runway inspected.",
+    "Day30: light pulls Surveyor away, three board and take off, airstrip/sheds inspected."
+  ],
+  "setups_and_payoffs": [
+    "Early Surveyor tests pay off at fuel crossing and final flight, with patrol consequences.",
+    "Fuel/weak battery/blocked route all solved before final start.",
+    "Rural airstrip named before takeoff; shelter checked rather than a surprise rescue."
+  ],
+  "persistent_states": [
+    "Four-seat plane holds all three adults; no two-seat trainer overcrowding.",
+    "Weak aircraft battery explicitly replaced with spare found during first inspection.",
+    "Same work light and maintenance cloth throughout; no late runway lamp.",
+    "Reed keeps signature scarf; cloth lure is separate.",
+    "Tug light test creates a mark and changes later patrol; old route is not reused blindly.",
+    "Hangar door rail remains bent; Ada holds it clear.",
+    "Food/grey bag secured outside controls; no duplicate main character or floating bag."
+  ],
+  "style_id": "survivor-alien-aftermath",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

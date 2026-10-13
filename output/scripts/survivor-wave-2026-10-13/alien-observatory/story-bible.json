@@ -1,0 +1,38 @@
+{
+  "premise": "A receiver intended to request help keeps attracting visitors. Reed must decide whether an answer is a rescue message or a survey command.",
+  "cast": [
+    "Reed: saved scarf/white-circle/black-stick identity, grounded grey school pack.",
+    "Eve: adult technician in rust work vest, white head/hands/feet; ankle injury late.",
+    "Malik: adult caretaker in olive jacket, white head/hands/feet; sleeve torn during descent.",
+    "One canonical Surveyor and one canonical Loader with lifting machine; no late unexplained costume variants."
+  ],
+  "locations": [
+    "Dome/public entrance -> hall/radio room -> caretaker kitchen -> service cupboard.",
+    "Cupboard trench hatch -> under-yard trench -> supply-shed grate.",
+    "Shed -> fallen signpost/loose step -> weather mast -> descent below ruined road bridge.",
+    "Lower-road service gate -> ski-lodge service entrance."
+  ],
+  "chronology": [
+    "Days1-7: radio echo; passive receiving separated from beacon/transmission; tests.",
+    "Days8-17: portable set/spare battery/trail inspected; Loader destroys road bridge.",
+    "Days18-22: shed marks, Eve sends call, refuge shifts; emergency-power reset restarts beacon.",
+    "Days23-28: portable set recovered and tested; route and equipment prepared.",
+    "Day29: Eve/Malik place portable transmitter while Reed stays at observatory.",
+    "Day30: remote check-in, roof beacon shut, Reed follows trench/path, group descends and reaches lodge."
+  ],
+  "setups_and_payoffs": [
+    "False answer hope becomes evidence-based transmitter plan.",
+    "Bridge destruction makes planted foot trail necessary.",
+    "Eve's broadcast mistake changes behavior; observed portable test and Reed's cutoff enable exit."
+  ],
+  "persistent_states": [
+    "Passive receiver does not magically transmit; main automatic beacon restarts only after demonstrated supply reset.",
+    "Repeated recorded human call is an echo, not a translated alien-language command.",
+    "Portable RADIO transmitter uses previously found spare battery; recorder alone does not emit radio.",
+    "Trench hatch and weather trail planted in early map.",
+    "Reed stays behind until agreed remote signal, shuts beacon and joins; no redundant return trip.",
+    "Trail rope remains securing remote case; injuries/sleeve damage persist; no rescue aircraft."
+  ],
+  "style_id": "survivor-alien-aftermath",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

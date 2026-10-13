@@ -1,0 +1,129 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2749,
+  "sha256": "8f87f058fedf97ff9948a0a77bf211c56939aaef3146658f980cc38e9821c7ef",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Standardized the final episode to second-person present-tense house narration after the full reread.",
+    "Removed backpack blocking and floor-shadow instructions from spoken copy.",
+    "Specified a four-seat aircraft so all three adults fit.",
+    "Planted and installed a spare aircraft battery before final engine start.",
+    "Reused the established work light rather than introducing a late new runway lamp.",
+    "Retained Reed's signature scarf instead of abandoning it as a lure.",
+    "Surveyor responds to observed light/motion; escape uses mapped patrol gap, not alien omniscience or a surprise ability."
+  ],
+  "source_paragraph_count": 135,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.108282285165629,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "A silent craft settles across the runway as the departure board goes blank.",
+      "opening_paragraph_words": 65,
+      "promise": "Alien Invasion: 30 Days Trapped in an Airport",
+      "payoff": "Tomas shuts the engine down. You and Ada climb out while he stays in the seat long enough to catch his breath. You inspect the two dark sheds beside the strip before moving the supplies inside. You set your bag by the wall. Ada opens a drink and hands it to Tomas, who is still gripping his flight map. The airstrip is quiet. All three have made it out of the airport.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Early Surveyor tests pay off at fuel crossing and final flight, with patrol consequences.",
+        "Fuel/weak battery/blocked route all solved before final start.",
+        "Rural airstrip named before takeoff; shelter checked rather than a surprise rescue."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "A silent craft settles across the runway as the departure board goes blank. You reach the terminal doors just as they lock. A pale scan passes over the glass. You move behind the check-in counters before it reaches you, but the baggage belt beyond them is still running toward the open hall. You need somewhere to hide that the airport will not expose for you.",
+            "word_offset": 0
+          },
+          "closes": {
+            "quote": "Tomas shuts the engine down. You and Ada climb out while he stays in the seat long enough to catch his breath. You inspect the two dark sheds beside the strip before moving the supplies inside. You set your bag by the wall. Ada opens a drink and hands it to Tomas, who is still gripping his flight map. The airstrip is quiet. All three have made it out of the airport.",
+            "word_offset": 2677
+          }
+        },
+        {
+          "opens": {
+            "quote": "Ada finds a portable work light on a wheeled stand, powered by its own battery. She switches it on inside the hangar, then stops when the beam hits the open doorway. You point toward an empty baggage tug across the apron. You want to test whether the light can draw the Surveyor there.",
+            "word_offset": 1163
+          },
+          "closes": {
+            "quote": "Before dawn on day thirty, you uncover the work light at its new position beyond the tug. The Surveyor crosses toward that light while the Loader is carrying equipment back to the craft. Ada watches both from the hangar doorway. She signals you to return as soon as the service road clears.",
+            "word_offset": 2320
+          }
+        },
+        {
+          "opens": {
+            "quote": "On day six, you reach Tomas through that passage. He follows Ada back behind the sorting chute and shows her the hangar marked on his clipboard. A four-seat training aircraft was inside when the airport closed. He knows how to fly it, but has not seen whether it is still usable.",
+            "word_offset": 526
+          },
+          "closes": {
+            "quote": "The rural strip appears beside two dark sheds and a line of trees. Tomas brings the plane down hard enough to make Ada curse. Its wheels hold, and he rolls to a stop near the weeds at the far end.",
+            "word_offset": 2637
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-6: scan, Ada, observed line-of-sight tests and Tomas reached.",
+        "Days7-14: map/tower, hangar inspection, four-seat aircraft, spare battery and work light.",
+        "Days18-22: jet bridge/baggage demolished; route and refuge lost.",
+        "Days23-27: fuel carried, light changes patrol, same stand repositioned; hangar rail bent.",
+        "Days28-29: spare battery installed, engine test exposes risk, runway inspected.",
+        "Day30: light pulls Surveyor away, three board and take off, airstrip/sheds inspected."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Departure hall -> baggage sorting chute -> maintenance corridor -> arrivals.",
+        "Terminal north of runway; hangar/fuel yard south; tower overlooks patrol.",
+        "Jet-bridge-covered drainage approach reaches hangar until demolition exposes it.",
+        "Baggage tug and later moved work-light stand lie on opposite apron.",
+        "Inspected runway strip leads to flight toward previously described rural airstrip and checked sheds."
+      ],
+      "state_checked": [
+        "Four-seat plane holds all three adults; no two-seat trainer overcrowding.",
+        "Weak aircraft battery explicitly replaced with spare found during first inspection.",
+        "Same work light and maintenance cloth throughout; no late runway lamp.",
+        "Reed keeps signature scarf; cloth lure is separate.",
+        "Tug light test creates a mark and changes later patrol; old route is not reused blindly.",
+        "Hangar door rail remains bent; Ada holds it clear.",
+        "Food/grey bag secured outside controls; no duplicate main character or floating bag."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "You came here for coffee.",
+        "You backed into the shop."
+      ],
+      "matched_script_line": "The craft has landed between the runway and its far service road. It blocks the direct path to the small-aircraft hangars. Screens around the terminal flicker, and people keep pressing the locked front doors while the scan crosses them.",
+      "scanner_adjudication": "Container checking and road watching are simultaneous roles, not artificial triads. Repeated Surveyor turns carry new stimuli and costs. Narration standardized to second-person present tense.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}
