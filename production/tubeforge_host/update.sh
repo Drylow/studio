@@ -18,7 +18,7 @@ import pathlib,json,sys
 busy=[]
 for p in pathlib.Path("data/projects").glob("*/project.json"):
  d=json.loads(p.read_text()); batch=d.get("workspace_batch") or {}; external=d.get("workspace_external_execution") or {}
- if (any(s.get("state")=="running" for s in d.get("steps",{}).values())
+ if (any((s or {}).get("state")=="running" for s in (d.get("steps") or {}).values())
      or batch.get("state") in ("queued","running","stopping")
      or external.get("state") in ("queued","running","stopping")):
   busy.append(d["id"])

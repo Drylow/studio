@@ -126,13 +126,14 @@
     let revision = 0;
     return {
       clear() { revision++; entries.clear(); },
+      peek(path) { return entries.get(path)?.value; },
       get(path, refresh = false) {
         const previous = entries.get(path);
         if (!refresh && previous && (previous.pending || now() - previous.time < ttl)) return staleWhileRevalidate && previous.cachedPromise ? previous.cachedPromise : previous.promise;
         const version = revision;
-        const entry = { pending: true, time: now(), promise: null, cachedPromise: previous?.cachedPromise || null };
+        const entry = { pending: true, time: now(), promise: null, cachedPromise: previous?.cachedPromise || null, value: previous?.value };
         entry.promise = Promise.resolve().then(() => read(path)).then(value => {
-          if (version === revision && entries.get(path) === entry) { entry.pending = false; entry.time = now(); entry.cachedPromise = entry.promise; }
+          if (version === revision && entries.get(path) === entry) { entry.pending = false; entry.time = now(); entry.cachedPromise = entry.promise; entry.value = value; }
           return value;
         }, error => {
           if (entries.get(path) === entry) entries.delete(path);
@@ -233,6 +234,7 @@
   let management = { channels: [], styles: [] };
   let managementFilters = { channels: '', styles: '', archivedChannels: false, archivedStyles: false };
   let session = null;
+  let dataReady = false;
   let workspaceScope = 'mine';
   function renderAccount() {
     $('#account').hidden = true;
@@ -245,6 +247,7 @@
     navigationReads.clear();
     data = { profiles: [], styles: [], projects: [], batches: [], models: { models: [] }, settings: {}, connection: {} };
     management = { channels: [], styles: [] };
+    dataReady = false;
     $('#account').hidden = true;
     if (typeof window.kanyeRequireLogin === 'function') window.kanyeRequireLogin();
     main.innerHTML = '<div class="empty"><h2>Sign in to your studio</h2><p>Use your existing tools.kanye.studio access key.</p></div>';
@@ -295,6 +298,7 @@
   async function refreshData(refresh = true) {
     const result = await navigationReads.get('/api/workspace', refresh);
     data = { ...data, ...result, profiles: result.profiles || [], projects: result.projects || [], models: result.models || { models: [] } };
+    dataReady = true;
     const available = data.models.available === true;
     const flow = data.models.providers?.google_flow;
     $('#connection').textContent = flow?.available ? `Google Flow · ${flow.accounts.filter((a) => a.health === 'OK').length} comptes disponibles${data.models.providers?.cli_proxy?.available ? " · Text CLI Proxy" : ''}` : available ? `Proxy · ${modelsFrom(data.models).length} models` : data.connection?.has_proxy ? 'Proxy · catalogue indisponible' : "Proxy not connected";
@@ -366,6 +370,18 @@
     if (parts[0] === 'video') parts[2] = ({texte:'text', voix:'voice'})[parts[2]] || parts[2];
     return parts;
   }
+  function paintPage(page, parts, detail) {
+    if (page === 'videos') renderDashboard();
+    else if (page === 'queue') renderBatch();
+    else if (page === 'video') { project = detail; renderProject(parts[2] || 'text'); }
+    else if (page === 'channels') renderChannels(parts[1], parts[2]);
+    else if (page === 'styles') renderStyles(parts[1]);
+    else if (page === 'settings') renderSettings();
+    else if (page === 'team') renderTeam();
+    else main.innerHTML = `${header('Page not found', '')}<a href="#/videos">Back to videos</a>`;
+    bindPreviews();
+    bindFormState();
+  }
   async function route({ refresh = true } = {}) {
     const currentEpoch = ++epoch;
     let parts = routeParts();
@@ -378,7 +394,22 @@
       if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
     });
     main.setAttribute('aria-busy', 'true');
-    if (!main.children.length) main.innerHTML = '<div class="empty">Loading…</div>';
+    let painted = false;
+    if (!refresh && session && dataReady) {
+      const cachedProject = page === 'video' ? navigationReads.peek(projectReadPath(parts[1] || '')) : null;
+      const cachedManagement = navigationReads.peek('/api/workspace/management');
+      if (cachedManagement) management = cachedManagement;
+      if ((page !== 'video' || cachedProject) && (!['channels', 'styles'].includes(page) || cachedManagement)) {
+        dirty = false;
+        paintPage(page, parts, cachedProject);
+        painted = true;
+      }
+    }
+    if (!painted && (!refresh || !main.children.length)) {
+      const title = page === 'video' ? data.projects.find(p => p.id === parts[1])?.title || 'Video' :
+        ({ videos: 'Videos', queue: 'Video queue', channels: 'Channels', styles: 'Visual styles', settings: 'Settings', team: 'Team' })[page] || 'Studio';
+      main.innerHTML = header(title, '') + '<div class="empty" role="status">Loading details…</div>';
+    }
     try {
       if (!session) {
         session = await api('/api/workspace/session');
@@ -390,18 +421,12 @@
         ['channels', 'styles'].includes(page) ? navigationReads.get('/api/workspace/management', refresh) : null
       ]);
       if (currentEpoch !== epoch) return;
+      if (painted && (dirty || $('#preview-dialog').open || $('#create-dialog').open)) return;
       if (managed) management = managed;
       dirty = false;
-      if (page === 'videos') renderDashboard();
-      else if (page === 'queue') renderBatch();
-      else if (page === 'video') { project = detail; renderProject(parts[2] || "text"); }
-      else if (page === 'channels') renderChannels(parts[1], parts[2]);
-      else if (page === 'styles') renderStyles(parts[1]);
-      else if (page === 'settings') renderSettings();
-      else if (page === 'team') await renderTeam();
-      else main.innerHTML = `${header("Page not found", '')}<a href="#/videos">Back to videos</a>`;
-      bindPreviews();
-      bindFormState();
+      paintPage(page, parts, detail);
+      if (!refresh && painted) main.dataset.navigation = 'cached';
+      navigationReads.get('/api/workspace/management').catch(error => { if (error.status === 401) renderLogin(); });
       document.title = `${page === 'video' ? project.title : ({ videos: "Videos", queue: "Video queue", channels: "Channels", styles: "Visual styles", settings: "Settings", team: 'Team' })[page] || 'Studio'} | TubeForge`;
     } catch (error) {
       if (currentEpoch === epoch) {
@@ -1085,6 +1110,14 @@
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#/"]');
     if (link && dirty && !window.confirm("Leave this page without saving changes?")) event.preventDefault();
+  });
+  document.addEventListener('pointerover', event => {
+    const href = event.target.closest('a[href^="#/"]')?.getAttribute('href');
+    if (!session || !href) return;
+    const parts = href.slice(2).split('/');
+    const path = parts[0] === 'video' && parts[1] ? projectReadPath(decodeURIComponent(parts[1])) :
+      ['styles', 'channels'].includes(parts[0]) ? '/api/workspace/management' : null;
+    if (path) navigationReads.get(path).catch(error => { if (error.status === 401) renderLogin(); });
   });
   let batchPolling = false;
   let voicePolling = false;
