@@ -11,6 +11,7 @@ from app.util import parse_json, now
 from . import workspace_api as api, workspace_management as management, workspace_generation as generation
 from . import workspace_composition as composition
 from . import workspace_characters as cast
+from . import workspace_locations as locations
 
 
 def allowed(p):
@@ -25,11 +26,15 @@ def allowed(p):
 
 def signature(p):
     style = store.get_style(p.get("style_id")) or {}
+    style = copy.deepcopy(style)
+    style.get('visuals', {}).pop('background_mode', None)
     evidence = {"script": p.get("script"), "voice": p.get("voiceover"),
                 "style": style, "models": p.get("model_snapshot"), "settings": p.get("settings")}
     entries = cast.registry(p)
     if entries:
         evidence["cast_registry"] = entries
+    if locations.mode(p) == 'consistent' and locations.registry(p):
+        evidence['location_registry'] = locations.registry(p)
     return api._hash(evidence)
 
 
@@ -38,6 +43,7 @@ def _shot_evidence(s):
     # Retain valid pre-registry receipts for projects that have no variant field.
     if "character_variants" in s:
         keys += ("character_variants",)
+    keys += tuple(key for key in locations.SCENE_KEYS if key in s)
     return {key: s.get(key) for key in keys}
 
 
@@ -71,6 +77,8 @@ def inputs(p):
             or p["voiceover"].get("script_hash", api._hash(p["script"])) != api._hash(p["script"])):
         raise HTTPException(409, "The alignment and voice must match the current script")
     style = store.get_style(p["style_id"]) or {}
+    if locations.mode(p) == 'consistent':
+        locations.check_registry(p)
     refs = copy.deepcopy(style.get("workspace_references") or [])
     if not refs:
         raise HTTPException(409, "Add the style's approved references")
@@ -101,6 +109,12 @@ async def prepare(p):
         model, style, refs, shots = inputs(p)
         stamp = signature(p)
         result = []
+        coherent = locations.mode(p) == 'consistent'
+        camera_plan, camera_rows = None, {}
+        if coherent:
+            progress(0, len(shots), 'Planning locations, fixed landmarks and varied camera views')
+            camera_plan = await locations.plan(p, shots, model)
+            camera_rows = {row['id']: row for row in camera_plan['shots']}
         rules = (
             "Write concrete varied storyboard image prompts for the supplied fictional story. "
             "Return JSON {shots:[{id,location_id,characters:[named identities],character_variants:{exact_character_name:exact_variant_key},prompt}]}. "
@@ -126,6 +140,13 @@ async def prepare(p):
             "character's scene description; never swap another character's costume or hero marking."
         )
         try:
+            rules += ('\nBACKGROUND MODE: CONSISTENT. Follow the location_camera_plan exactly. '
+                'Preserve world-space geometry while showing the planned physical camera position, '
+                'framing and new visual beat. Never copy one reference composition into every frame.' if coherent else
+                '\nBACKGROUND MODE: FREE. Backgrounds may change independently from image to image. '
+                'Choose the environment and viewpoint that best illustrate each narrated beat. Do not '
+                'force recurring room geometry or copy scenery from style/character reference images. '
+                'Character identities, variants and costumes MUST remain consistent independently of scenery.')
             limit = max(1, min(8, int(config.get("WORKSPACE_PLAN_CONCURRENCY") or 4)))
         except (TypeError, ValueError):
             limit = 4
@@ -137,10 +158,13 @@ async def prepare(p):
             batch = shots[offset:offset + 12]
             async with semaphore:
                 raw = await llm.chat([
-                    {"role": "system", "content": rules + "\nApproved style: " + style.get("visuals", {}).get("art_style", "")},
+                    {"role": "system", "content": rules + "\nApproved style: " + style.get("visuals", {}).get("art_style", "")
+                        + '\nBackground drawing direction: ' + style.get('visuals', {}).get('background_direction', '')},
                     {"role": "user", "content": json.dumps({"full_story": p["script"],
                         "character_reference_eras": [] if cast.registry(p) else list(style.get("workspace_character_references", {})),
                         "cast_registry": cast.summary(p),
+                        "location_camera_plan": {"locations": camera_plan['locations'],
+                            "shots": [camera_rows[s['id']] for s in batch]} if coherent else None,
                         "context_before": [s["text"] for s in shots[max(0, offset - 2):offset]],
                         "context_after": [s["text"] for s in shots[offset + len(batch):offset + len(batch) + 2]],
                         "requested_shots": [{"id": s["id"], "narration": s["text"]} for s in batch]}, ensure_ascii=False)}
@@ -170,15 +194,28 @@ async def prepare(p):
                         ref["owner"] = "style"
                         if api._file_digest(store.style_dir(p["style_id"]), ref["path"]) != ref.get("sha256"):
                             raise ValueError("Character reference changed")
-                scene = dict(shot, prompt=prompt, location_id=row["location_id"].strip(),
+                camera = camera_rows.get(shot['id'])
+                if coherent and row['location_id'].strip() != camera['location_id']:
+                    raise ValueError('The prompt batch changed the globally planned location')
+                scene = dict(shot, prompt=prompt, location_id=camera['location_id'] if coherent else row['location_id'].strip(),
                     characters=row["characters"], references=copy.deepcopy(selected_refs), prompt_author="configured_text_proxy",
                     status="idle", human_review={"state": "unreviewed"})
+                if coherent:
+                    scene.update({key: camera[key] for key in ('location_view', 'shot_type', 'visual_beat')})
+                    scene['location_contract'] = locations.contract(camera_plan, scene)
+                    scene['prompt'] += '\n' + scene['location_contract']
+                selected_refs = locations.author(p, scene, selected_refs)
+                scene['references'] = copy.deepcopy(selected_refs)
                 if cast.registry(p):
                     scene["character_variants"] = copy.deepcopy(row.get("character_variants") or {})
                     scene["references"], block = cast.author(p, scene, selected_refs)
                     if block:
                         scene["prompt"] += "\n" + block
                     cast.validate(p, scene)
+                block = locations.binding(p, scene)
+                if block:
+                    scene['prompt'] += '\n' + block
+                locations.validate(p, scene)
                 prepared.append(scene)
             completed += len(prepared)
             progress(completed, len(shots), f"{completed}/{len(shots)} shots ready · {limit} batches in parallel")
@@ -195,11 +232,14 @@ async def prepare(p):
                         store.style_dir(p["style_id"]), r["path"]) != r.get("sha256") for r in shot["references"]):
                     raise ValueError("Reference changed during preparation")
                 cast.validate(p, shot)
+                locations.validate(p, shot)
             if signature(p) != stamp or p.get("scenes"):
                 raise ValueError("Project changed")
             p["planning_receipt"] = {"input_hash": stamp, "text_model": model, "created_at": now(),
                 "shots": {str(s["id"]): api._hash(_shot_evidence(s)) for s in result}}
             p.update(scenes=result, scenes_script_hash=timing.script_hash(p["script"]), render=None)
+            if coherent:
+                p.update(workspace_location_plan=camera_plan, workspace_camera_audit=locations.audit(result))
             progress(len(result), len(result), "Shots ready: test the first three images")
             store.save_project(p)
         except BaseException as error:

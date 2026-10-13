@@ -58,6 +58,27 @@ def test_style_create_upload_previews_reorder_and_duplicate(managed):
     assert len(next(s for s in api._styles() if s["id"] == clone["id"])["references"]) == 2
 
 
+def test_background_modes_are_explicit_and_frozen_per_project(managed):
+    style=new_style(managed)
+    assert style['background_mode']=='free'
+    channel=managed.post('/api/workspace/management/channels',json={
+        'name':'Fictional test channel','style_id':style['id'],'language':'English','target_minutes':15,
+        'voice':{'provider':'algrow','voice_id':'fixture-voice'}}).json()
+    first=managed.post('/api/workspace/projects',json={'profile_id':channel['id'],
+        'title':'First','custom_script':'A complete imported story.'}).json()
+    assert first['settings']['visuals']['background_mode']=='free'
+    url=f'/api/workspace/management/styles/{style["id"]}'
+    assert managed.put(url,json={'background_mode':'unexpected'}).status_code==422
+    assert managed.put(url,json={'background_mode':'consistent'}).json()['background_mode']=='consistent'
+    assert managed.get(f'/api/workspace/projects/{first["id"]}').json()['settings']['visuals']['background_mode']=='free'
+    second=managed.post('/api/workspace/projects',json={'profile_id':channel['id'],
+        'title':'Second','custom_script':'Another complete imported story.'}).json()
+    assert second['settings']['visuals']['background_mode']=='consistent'
+    assert second['style_snapshot']['background_mode']=='consistent'
+    assert new_style(managed,name='New blank style')['background_mode']=='free'
+    assert new_style(managed,name='Clone',base_id=style['id'])['background_mode']=='consistent'
+
+
 def test_channel_management_defaults_and_existing_project_unchanged(managed):
     previous = create(managed, custom_script="Existing episode.")
     original = (store.project_dir(previous["id"]) / "project.json").read_bytes()

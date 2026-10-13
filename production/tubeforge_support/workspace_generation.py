@@ -59,14 +59,19 @@ def _scene(p, sid):
 
 def _signature(p, s):
     from . import workspace_characters
-    return api._hash({"script": p.get("script"), "models": p.get("model_snapshot"),
+    from . import workspace_locations
+    evidence = {"script": p.get("script"), "models": p.get("model_snapshot"),
                       "style": p.get("style_id"),
                       "cast_registry": workspace_characters.registry(p),
                       "aspect": p["settings"]["visuals"].get("aspect"),
                       "scene": {key: s.get(key) for key in (
                           "id", "text", "prompt", "prompt_author", "location_id", "characters",
                           "references", "character_variants", "workspace_regeneration_required",
-                          "start", "end", "motion", "image")}})
+                          "start", "end", "motion", "image")}}
+    evidence['scene'].update({key: s[key] for key in workspace_locations.SCENE_KEYS if key in s})
+    if workspace_locations.mode(p) == 'consistent' and workspace_locations.registry(p):
+        evidence['location_registry'] = workspace_locations.registry(p)
+    return api._hash(evidence)
 
 
 def _same_inputs(p, scene, signature):
@@ -78,7 +83,7 @@ def _same_inputs(p, scene, signature):
 
 
 def _prepare(p, s, body):
-    from . import workspace_planning, workspace_composition, workspace_characters
+    from . import workspace_planning, workspace_composition, workspace_characters, workspace_locations
     prompt = s.get("prompt")
     if (not isinstance(prompt, str) or not prompt.strip() or "renderer-only import" in prompt.lower()
             or not (s.get("prompt_author") == "codex" or workspace_planning.authored(p, s)) or not s.get("location_id")
@@ -106,6 +111,7 @@ def _prepare(p, s, body):
         raise HTTPException(422, "Save at least one real reference, in the exact order to send")
     if workspace_planning.allowed(p):
         workspace_characters.validate(p, s)
+    workspace_locations.validate(p, s)
     payloads, sources, receipts = [], [], []
     for index, ref in enumerate(refs):
         path = api._reference_path(p, s, index)
@@ -120,6 +126,7 @@ def _prepare(p, s, body):
         receipts.append({"path": ref["path"], "owner": ref.get("owner", "project"),
                          "role": ref.get("role"), "sha256": source_hash,
                          "character": ref.get("character"), "variant": ref.get("variant"),
+                         "location_id": ref.get("location_id"), "location_view": ref.get("location_view"),
                          "source_sha256": source_hash, "sent_sha256": hashlib.sha256(payload).hexdigest()})
     aspect = p["settings"]["visuals"].get("aspect", "16:9")
     if workspace_planning.allowed(p):
