@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "method": "built-in-image-generation",
+  "recommended": "B-corrigee.png",
+  "acceptedByUser": false,
+  "outputs": [
+    {
+      "file": "A-premier-essai.png",
+      "referencesInOrder": [
+        "references/silo-style.jpg",
+        "references/boyd.jpg",
+        "references/victor.jpg"
+      ],
+      "review": "Recognizable Boyd and Victor, readable title and warm style; invented FROM-labelled water tower removed in B."
+    },
+    {
+      "file": "B-corrigee.png",
+      "referencesInOrder": [
+        "A-premier-essai.png"
+      ],
+      "review": "Inspected visually: water tower removed, grey flecks in beard/hair; faces and text retained, forest/town warm background, no gore. Some generated skin texture remains stylized."
+    }
+  ],
+  "scriptScope": "Actual Ultravid script not provided. Description generic; no episode cut-off invented."
+}
