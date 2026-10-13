@@ -33,6 +33,35 @@ def prepared_plan(workspace):
     return client, p
 
 
+def test_reference_encoding_reuses_only_the_same_path_and_source_bytes(tmp_path, monkeypatch):
+    monkeypatch.setattr(generation, '_reference_payloads', type(generation._reference_payloads)())
+    monkeypatch.setattr(generation, '_reference_payload_bytes', 0)
+    encoded = []
+    monkeypatch.setattr(llm, 'png_for_upload', lambda path: encoded.append(path.read_bytes()) or path.read_bytes())
+    path = tmp_path / 'reference.png'
+    path.write_bytes(b'first-image')
+    digest = generation._digest(path)
+    assert generation._reference_payload(path, digest) == b'first-image'
+    assert generation._reference_payload(path, digest) == b'first-image'
+    path.write_bytes(b'changed-image')
+    assert generation._reference_payload(path, generation._digest(path)) == b'changed-image'
+    assert encoded == [b'first-image', b'changed-image']
+
+
+def test_reference_encoding_cache_evicts_to_a_bounded_byte_budget(tmp_path, monkeypatch):
+    monkeypatch.setattr(generation, '_reference_payloads', type(generation._reference_payloads)())
+    monkeypatch.setattr(generation, '_reference_payload_bytes', 0)
+    monkeypatch.setattr(generation, '_REFERENCE_PAYLOAD_LIMIT', 6)
+    calls = []
+    monkeypatch.setattr(llm, 'png_for_upload', lambda path: calls.append(path.name) or b'1234')
+    for name in ['a', 'b', 'a']:
+        path = tmp_path / name; path.write_bytes(name.encode())
+        generation._reference_payload(path, generation._digest(path))
+    assert calls == ['a', 'b', 'a']
+    assert generation._reference_payload_bytes == 4
+    assert len(generation._reference_payloads) == 1
+
+
 def test_confirmed_plan_uses_exact_prompt_and_keeps_previous_image(workspace, monkeypatch):
     client, p = prepared_plan(workspace)
     stream = io.BytesIO()
