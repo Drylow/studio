@@ -1,0 +1,24 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "IMAGE BINDING: Image 1 gives our flat outlined drawing technique ONLY. Image 2 is the EXACT empty boat geometry and current camera. Recreate Image 2 boat from the SAME elevated STARBOARD view, same cabin orientation, same hull, central hatch and SAME SINGLE open gap in the foreground starboard rail just forward of the hatch. All PORT background rail stays continuous and intact: NEVER create a second gap. No people, monsters or net. Preserve a single cream low stern cabin with teal forward door and blue forward window, one blue side window above the orange side lifebuoy. Sparse flat sea, full-frame 16:9, no words. Damage stage after tentacle: same starboard hull dent, same cream BLUE-LIDDED cracked cooler by starboard gap. Break ONLY SIDE window ABOVE orange lifebuoy, with dark empty shattered opening. FORWARD square window next to teal door stays intact BLUE. Low cabin roof slightly sags. Do not relocate cooler behind cabin. All rails except SAME foreground starboard gap stay intact.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "51eac67c3ca12b22941485abba1c5a9880ae30434d635a1655d6a646d5830562",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-episode-01-2026-10-13/boat-brokenrail-v2.png",
+      "source_sha256": "d4a0bdca7e25f0222f74a31107b6703257c0ad7dd4b106543f6dff5258a8195f",
+      "sent_sha256": "519ab82de1af79d7b333d6a38ab6cc53d6311eaecbe8d145b0fc9e6e7e112381"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

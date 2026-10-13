@@ -1,0 +1,22 @@
+{
+  "state": "generated_unreviewed",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. Image 2 fixes the small fishing boat geometry: rusty red hull, cream trim and low cream STERN cabin, teal forward door, square side windows, orange starboard lifebuoy, wooden open foredeck, central square hatch, low rails. Keep its ordinary scale. EMPTY same boat in daylight, starboard broadside view near waterline. The same short starboard foredeck rail gap remains. A single shallow dent and dark leak crack on starboard hull below the cabin. A cream blue-lidded cooler with one visibly cracked lower corner sits beside the broken rail, still a separate ordinary portable object. Cabin windows and roof intact. No people, creatures or added cabin floors.\nDAMAGE CORRECTION: The missing rail is essential, not a decorative bent post: remove ONE whole contiguous 1.5 metre section of starboard FOREDECK rail, including horizontal tubes, between two surviving posts, leaving a clearly visible OPEN GAP next to the central hatch. Draw no horizontal bar across that gap. Other rail sections remain. No fishing net in later dented/window/flooded state; it was lost earlier. ",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "efefb7a1b6fd18251a47b1ab0387802203f4a55e031b1eac923b88ad887d48ad",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/02.png",
+      "source_sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+      "sent_sha256": "0abb3b3bf7d6fa0b965954e4d583a328de7e8464067fb63a37c45f15daa6c44f"
+    }
+  ]
+}

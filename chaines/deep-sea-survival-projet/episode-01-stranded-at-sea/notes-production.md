@@ -1,6 +1,6 @@
-# First episode — editorial draft
+# First episode — completed production
 
-Working title: **Sea Monster Survival: 30 Days Stranded at Sea**. Fiction, English second-person narration. User accepted the simple marine drawing direction; script is a first draft for discussion, not user-approved narration.
+Working title: **Sea Monster Survival: 30 Days Stranded at Sea**. Fiction, English second-person narration. User accepted the simple marine drawing direction; Full production was explicitly authorized by the user; completed and inspected by Codex. No user approval of the final montage is claimed.
 
 Narrative spine: a small boat initially appears safer than the water. Repeated attacks remove that shelter. The survivor learns that the fictional leviathan tracks vibration, then uses an established bell buoy to redirect it during a rescue. The rule belongs to this invented story, not actual animal behavior or survival advice.
 
@@ -21,11 +21,11 @@ Hero: Marin, exact registered navy cap, yellow life vest, round white head, tiny
 
 Keep the raft OR boat appropriate to chronology. Boat states: intact setup -> broken starboard rail -> hull/cooler dent and leak -> broken cabin window/sagging roof -> flooded/listing -> sinking -> gone. Register inspected state variants and named physical views before using them. Do not send the intact boat master as literal geometry guidance for later raft/buoy shots.
 
-Locations: open foredeck; narrow side deck; cabin bench/radio wall; submerged propeller/hull; exterior hull at waterline; ocean cutaway; floating emergency raft; distant island/old landing as goal only; red bell buoy lower platform/upper frame; pickup boat; cargo ship boarding ladder. Distinct actions, POV, hand/object closeups and exterior/submerged views. No string of repeated wide deck tableaux.
+Locations: open foredeck; narrow side deck; cabin bench/radio wall; submerged propeller/hull; exterior hull at waterline; ocean cutaway; floating emergency raft; red bell buoy lower platform/upper frame; pickup boat; cargo ship boarding ladder. Distinct actions, POV, hand/object closeups and exterior/submerged views. No string of repeated wide deck tableaux.
 
 Recurring creatures need separate identity references before production: dark teal large-eyed leviathan; desaturated purple tentacled creature; gray giant shark. Avoid making the leviathan grow tentacles by mixing their references. Ships' distant crew have the same white-round-head stick anatomy; recognizable recurring rescue crew require references if shown repeatedly.
 
-Images are not prepared from invented timings. Generate approved narration first, use word alignment for six-second shot targets, then prepare storyboard prompts and references. First three images remain a review gate. No voice, image batch or video render has been launched for this draft.
+Images are not prepared from invented timings. Generate approved narration first, use word alignment for six-second shot targets, then prepare storyboard prompts and references. First three images were generated and inspected before the rest. Complete voice: 906.05 seconds. All152 selected images and rendered midframes were inspected, full video decoded and whole narration compared. See workspace.json and the final verification report.
 
 ## Source method
 

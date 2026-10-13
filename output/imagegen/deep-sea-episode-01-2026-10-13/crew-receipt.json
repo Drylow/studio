@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. Rescue character IDENTITY reference, ONE adult crew member named Rook standing full body on plain pale grey background. Perfectly circular oversized WHITE head, two tiny black oval eyes, short neutral mouth, no ears/nose/hair/eyebrows/beard. Thin BLACK stick arms and legs, WHITE mitten hands and oval feet. Plain muted RED crew cap with short brim and a small YELLOW life vest with two flat panels and black buckle. No navy fisherman cap, orange bandage, scarf, bag or other person. Same compact drawing proportions as Marin in Image 1; this is a DIFFERENT named person from Marin, identified by red cap. No realistic anatomy.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "efa02d70b5eb17c06edfb0bbb2393f2c45c80bdccc07ffb64b5f39851d0c6145",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

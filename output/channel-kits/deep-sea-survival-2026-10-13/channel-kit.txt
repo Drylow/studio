@@ -37,7 +37,7 @@ PREMIER EPISODE
 Sea Monster Survival: 30 Days Stranded at Sea
 Script anglais : episode-01-stranded-at-sea/script-en.txt, 2779 mots.
 Projet : https://tools.kanye.studio/2d/#/video/sea-monster-survival-30-days-stranded-at-3aeecc/text
-Statut : brouillon enregistre ; voix et images de production pas encore generees. Le bateau coule reellement dans le recit, puis Marin poursuit sur un radeau et une bouee. Aucune publication YouTube effectuee.
+Statut : episode complet, voix 15:06, 152 images inspectees, montage 1080p verifie. Dossier : output/videos/deep-sea-survival-episode-01-2026-10-13/. Le bateau coule reellement dans le recit, puis Marin poursuit sur un radeau et une bouee. Aucune publication YouTube effectuee.
 
 MISE EN PLACE
 Creer la chaine avec le nom, choisir un handle disponible, copier la description et importer pfp.png comme photo de profil. Aucun compte, credential ou cle API n'est inclus dans ce kit.

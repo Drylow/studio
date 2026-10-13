@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. EMPTY red bell navigation buoy on simple calm teal sea, whole marker visible in shallow three-quarter view. A short wide red cylindrical FLOAT supports a small red maintenance platform encircled by low dark steel rail. One narrow dark steel LADDER runs up its near side from water to platform; above it a tall open four-leg dark-grey STEEL FRAME holds one plain brass BELL, suspended in middle with clearance to swing. Upper frame has a small horizontal support where someone could sit. No cabin, roof, sign words, island, boat, human or monster. Fixed simple geometry readable, not a lighthouse.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "2596b7098b7da7c25fae75ad7306f2b2d1dfdb6b46ca4f502eb764ffb09fc7db",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

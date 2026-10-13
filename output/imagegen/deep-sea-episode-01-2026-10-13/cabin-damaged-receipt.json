@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. EMPTY same compact cabin interior. Camera at forward doorway looking aft: brown PORT bench at viewer RIGHT, fixed dark radio and black battery on STARBOARD wall at viewer LEFT. STARBOARD square window viewer LEFT is broken with simple jagged empty frame, port window remains intact. Ceiling sags slightly; shallow water creeps across wooden floor below bench. A cream repair pad covers one dark leak in the starboard inner wall near floor; plain bucket on floor below it. No rear door, extra window or added floor. No people or creatures.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "5578348a442a6e4d6df5cb4ae24f7c7e84408f1e43f70b3b3c55c30c6f0cc808",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

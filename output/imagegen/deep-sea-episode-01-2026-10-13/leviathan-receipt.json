@@ -1,0 +1,19 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. Creature IDENTITY reference, ONE immense dark TEAL sea leviathan viewed fully in clear side profile on plain pale blue background. Thick elongated eel-like body, tapering tail, two small flat side fins, broad blunt rounded head, ONE large pale yellow eye visible on this side, mouth with a few broad pale triangular teeth. BLACK outlined simple matte silhouette, no tiny scales, tentacles, legs or hair. Threatening through immense bulk and teeth, not a goofy smile. No boat, humans, text, water cross-section or diagram. This is one creature, never two portraits.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "d607ef830b93a75a0400dbd234f8cc5d9fe4981f37aa0a204d48eda79f645c8f",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}

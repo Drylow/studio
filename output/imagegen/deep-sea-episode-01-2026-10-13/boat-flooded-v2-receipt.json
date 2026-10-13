@@ -1,0 +1,22 @@
+{
+  "state": "generated_unreviewed",
+  "prompt": "Simple flat outlined 2D marine survival cartoon matching Image 1, the approved drawing guide. Crisp black outlines, matte simple colours, shallow readable spaces, very little texture. No painterly or realistic rendering, dramatic glow or human anatomy. Borrow drawing language only: never reproduce the guide's people, rope pose or composition. One continuous full-frame landscape 16:9, no text, captions, diagrams, split panels or decorative border. Image 2 fixes the small fishing boat geometry: rusty red hull, cream trim and low cream STERN cabin, teal forward door, square side windows, orange starboard lifebuoy, wooden open foredeck, central square hatch, low rails. Keep its ordinary scale. EMPTY same already damaged boat listing to starboard in grey sea. Broken starboard rail, dented hull, broken starboard cabin window, sagging low cabin roof retained. Water visibly covers part of the wooden foredeck; stern cabin sinks low while bow is higher. The central hatch remains recognizable, orange lifebuoy still beside the broken side window. This is the flooding state before final disappearance, not an intact replacement boat. No people or monsters.\nDAMAGE CORRECTION: The missing rail is essential, not a decorative bent post: remove ONE whole contiguous 1.5 metre section of starboard FOREDECK rail, including horizontal tubes, between two surviving posts, leaving a clearly visible OPEN GAP next to the central hatch. Draw no horizontal bar across that gap. Other rail sections remain. No fishing net in later dented/window/flooded state; it was lost earlier. BREAK ONLY the STARBOARD SIDE WINDOW on the wall carrying the orange lifebuoy: this wall is perpendicular to the forward teal-door wall. The square window BESIDE the teal door on the FORWARD wall must remain INTACT BLUE GLASS. The square starboard side window ABOVE the lifebuoy must be EMPTY SHATTERED BLACK with jagged frame. Preserve this distinction. Slightly sagging low roof, not extra roof tiers. ",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "507b9dfc80ed27ac367f8615fc3b88cee2d48d864a51025e2f149c409c2d6115",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/02.png",
+      "source_sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+      "sent_sha256": "0abb3b3bf7d6fa0b965954e4d583a328de7e8464067fb63a37c45f15daa6c44f"
+    }
+  ]
+}

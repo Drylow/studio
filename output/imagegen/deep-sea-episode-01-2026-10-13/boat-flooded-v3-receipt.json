@@ -1,0 +1,24 @@
+{
+  "state": "codex_reference_inspected",
+  "prompt": "IMAGE BINDING: Image 1 gives our flat outlined drawing technique ONLY. Image 2 is the EXACT empty boat geometry and current camera. Recreate Image 2 boat from the SAME elevated STARBOARD view, same cabin orientation, same hull, central hatch and SAME SINGLE open gap in the foreground starboard rail just forward of the hatch. All PORT background rail stays continuous and intact: NEVER create a second gap. No people, monsters or net. Preserve a single cream low stern cabin with teal forward door and blue forward window, one blue side window above the orange side lifebuoy. Sparse flat sea, full-frame 16:9, no words. Day eighteen: same starboard hull crack, starboard side window ABOVE lifebuoy broken black, FORWARD window next to teal door still intact blue, low sagging roof. The stern sits low and boat LISTS to starboard, water covers half the foredeck. Preserve SAME single starboard rail gap, no second gap. Cabin not rotated or rebuilt. Cooler on deck can be partly submerged. No raft or people.",
+  "aspect": "16:9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "11cbb3aa5d73cb71e5901608cb1cd8b52a50c559953043eb3c48684f34ee4224",
+  "references": [
+    {
+      "source_path": "output/imagegen/deep-sea-style-2026-10-13/03.png",
+      "source_sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+      "sent_sha256": "3b2fcf884bbbf43aec7b3466e359273f6c33970970cce89aa8a25b1b8a055777"
+    },
+    {
+      "source_path": "output/imagegen/deep-sea-episode-01-2026-10-13/boat-brokenrail-v2.png",
+      "source_sha256": "d4a0bdca7e25f0222f74a31107b6703257c0ad7dd4b106543f6dff5258a8195f",
+      "sent_sha256": "519ab82de1af79d7b333d6a38ab6cc53d6311eaecbe8d145b0fc9e6e7e112381"
+    }
+  ],
+  "review_file": "reference-reviews.json",
+  "user_approved": false
+}
