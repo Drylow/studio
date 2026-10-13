@@ -57,3 +57,12 @@ The transport fix now keeps generation POSTs open for several minutes during
 captcha retries. It still sends ONE paid POST, and only recovers exact unique
 completed history matches. Combined transport/generation checks: **74 passed**.
 Provider job IDs, account data and literal configured model values remain private.
+
+VPS deployment verified after this checkpoint: portal and authenticated project
+return successfully, all 157 image selections remain, and downloaded final voice
+and rebuilt shot 46 match their local byte hashes. The installed transport contains
+the longer generation timeout. For a future host update, use the `update.sh`
+inside the release directory recorded by `/opt/tubeforge/active-release.txt`.
+The older bootstrap repository has unrelated local changes and was preserved;
+do not reset it or overwrite its files. The release updater handles an empty
+image batch and refuses active or queued jobs before restarting the application.
