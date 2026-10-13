@@ -148,7 +148,13 @@
       }
     };
   }
-  const helpers = { createReadCache, escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
+  function scenePage(scenes, requested = 0, size = 24) {
+    const pages = Math.max(1, Math.ceil(scenes.length / size));
+    const page = Math.min(pages - 1, Math.max(0, Number.isFinite(requested) ? Math.floor(requested) : 0));
+    const start = page * size;
+    return { page, pages, start, end: Math.min(scenes.length, start + size), rows: scenes.slice(start, start + size) };
+  }
+  const helpers = { createReadCache, scenePage, escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = helpers;
     if (require.main === module && process.argv.includes('--test')) {
@@ -226,6 +232,7 @@
   const profileName = (id) => data.profiles.find((p) => p.id === id)?.name || id || "No channel";
   let data = { profiles: [], styles: [], projects: [], batches: [], models: { models: [] }, settings: {}, connection: {} };
   let project = null;
+  const scenePages = new Map();
   let epoch = 0;
   let dirty = false;
   let submitting = false;
@@ -836,13 +843,29 @@
   function renderScenes(verification) {
     const scenes = project.scenes || [];
     const verified = scenes.filter((s) => reviewState(s) === 'verified').length;
-    $('#step-content').innerHTML = `${header(verification ? "Image review" : "Shots and images", `${scenes.length} shots · ${verified} reviewed`)}${scenes.length ? batchMarkup() : planningMarkup()}${!scenes.length ? '' : scenes.map((scene, index) => {
+    const pageKey = project.id + ':' + Boolean(verification);
+    const view = scenePage(scenes, scenePages.get(pageKey) || 0);
+    const pages = scenes.length > 24 ? `<nav class="inline" aria-label="Shot pages"><button data-shot-page="${view.page - 1}" ${view.page === 0 ? 'disabled' : ''}>← Previous</button><label>Page<select id="shot-page">${Array.from({length:view.pages}, (_, i) => `<option value="${i}" ${i === view.page ? 'selected' : ''}>${i + 1} / ${view.pages}</option>`).join('')}</select></label><span class="small">Shots ${view.start + 1}–${view.end} of ${scenes.length}</span><button data-shot-page="${view.page + 1}" ${view.page === view.pages - 1 ? 'disabled' : ''}>Next →</button></nav>` : '';
+    $('#step-content').innerHTML = `${header(verification ? "Image review" : "Shots and images", `${scenes.length} shots · ${verified} reviewed`)}${scenes.length ? batchMarkup() : planningMarkup()}${pages}${!scenes.length ? '' : view.rows.map((scene, localIndex) => {
+      const index = view.start + localIndex;
       const references = sceneReferences(scene);
       const names = (scene.characters || []).map((id) => typeof id === 'object' ? id.name || id.id : project.characters?.find((c) => c.id === id)?.name || id);
       const image = safeUrl(scene.image_url) || mediaUrl('media', project.id, scene.image);
       return `<article class="scene" data-scene="${esc(scene.id)}"><div class="scene-media">${preview(image, `Shot ${index + 1}`)}<div class="inline">${badge(scene.status || 'idle', scene.image ? `Image · ${stateLabel(scene.status || 'done')}` : stateLabel(scene.status || 'idle'))}${badge(reviewState(scene))}</div>${scene.error ? `<div class="banner error">${esc(scene.error)}</div>` : ''}<details><summary>Character and style references</summary><h3>References planned for this shot, in order</h3>${references.length ? `<ol class="refs">${references.map(referenceView).join('')}</ol>` : "<p class=\"muted small\">No reference saved.</p>"}</details></div><div class="scene-data"><div class="scene-head"><h2>Shot ${index + 1}</h2><span class="small muted">${scene.start != null && scene.end != null ? `${fmtTime(scene.start)} → ${fmtTime(scene.end)}` : "Voice not aligned"}</span></div><div class="narration"><h3>Narration</h3><p>${esc(scene.text || scene.narration || "Missing excerpt")}</p></div><details><summary>Shot details and prompt</summary><dl class="metadata"><dt>Location</dt><dd>${esc(scene.location_id || scene.location || "Not specified")}</dd><dt>Personnages</dt><dd>${esc(names.join(', ') || "No named character")}</dd><dt>Variant</dt><dd>${esc([scene.location_view, scene.shot_type].filter(Boolean).join(" · ") || scene.variant || scene.camera_variant || "Not specified")}</dd></dl>${verification ? `<details><summary>Shot prompt</summary><p>${esc(scene.prompt || "Missing prompt")}</p></details>` : `<form class="scene-form"><label>Prompt exact<textarea name="prompt">${esc(scene.prompt || '')}</textarea></label><div class="form-actions"><button type="submit">Save prompt</button></div></form>`}</details>${generationControl(scene)}<form class="review-form"><label>Review note<textarea name="notes">${esc(scene.review?.notes || scene.human_review?.notes || '')}</textarea></label><div class="actions"><button type="submit" name="state" value="correct" ${!image ? 'disabled' : ''}>${icon('edit')}Needs fixing</button><button type="submit" name="state" value="verified" class="primary" ${!image ? 'disabled' : ''}>${icon('check')}Mark as reviewed</button><button type="submit" name="state" value="unreviewed" title="Remove approval">To review</button></div></form></div></article>`;
     }).join('')}`;
     $('#step-content').insertAdjacentHTML('afterbegin', cameraPlanMarkup());
+    const changePage = page => {
+      if (dirty) { notify('Save your prompts or notes before changing page.', true); return; }
+      scenePages.set(pageKey, Number(page));
+      renderScenes(verification);
+      $('#step-content').scrollIntoView({block:'start'});
+    };
+    $$('[data-shot-page]').forEach(button => button.onclick = () => changePage(button.dataset.shotPage));
+    const selectPage = $('#shot-page');
+    if (selectPage) selectPage.onchange = () => {
+      if (dirty) { selectPage.value = String(view.page); notify('Save your prompts or notes before changing page.', true); return; }
+      changePage(selectPage.value);
+    };
     bindBatchControls();
     const prepare = $('#prepare-images');
     if (prepare) prepare.onclick = () => action(prepare, async () => {
@@ -866,7 +889,7 @@
       action(event.submitter, async () => {
         const scenes = project.scenes.map((scene) => {
           const article = $$('[data-scene]').find((element) => element.dataset.scene === String(scene.id));
-          const prompt = $('[name="prompt"]', article);
+          const prompt = article ? $('[name="prompt"]', article) : null;
           return prompt ? { ...scene, prompt: prompt.value } : scene;
         });
         await api(`/api/workspace/projects/${encode(project.id)}/scenes`, { method: 'PUT', body: { scenes } }); await route();

@@ -654,7 +654,7 @@ def _summary(p):
 
 def _ui_project(full):
     """Omit archival payload from screen reads; keep stored evidence untouched."""
-    omitted = {"history", "planning_receipt", "workspace_generations", "reference_preparation_scenes"}
+    omitted = {"history", "planning_receipt", "generation_receipt", "workspace_generations", "reference_preparation_scenes"}
 
     def compact(value):
         if isinstance(value, dict):
