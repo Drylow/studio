@@ -6,6 +6,7 @@ Creation keys live in each project so reconnecting clients do not duplicate it.
 import asyncio
 import copy
 import inspect
+import io
 import re
 from urllib.parse import quote
 
@@ -223,6 +224,61 @@ def install(app):
         if not body.get("reviewer") or not body.get("source") or not body.get("notes"):
             raise HTTPException(422, "Supply reviewer, source and actual inspection notes")
         return external_urls(await invoke(app, "/api/workspace/projects/{pid}/review", pid=pid, body=body))
+
+    @router.post('/videos/{pid}/references/generate', status_code=202)
+    async def generate_reference(pid: str, body: dict):
+        """Authored reference work uses the same server/provider image semaphore."""
+        from app import llm
+        from app.util import now
+        from PIL import Image
+        p = api._project(pid, writable=True)
+        asset = api._identifier(body.get('asset_id'))
+        prompt = api._text(body.get('prompt'), 'prompt', required=True)
+        refs = body.get('references')
+        if len(prompt) > 30000 or not isinstance(refs, list) or not 1 <= len(refs) <= 12:
+            raise HTTPException(422, 'Supply an authored prompt and 1–12 ordered inspected references')
+        sources = []
+        for ref in refs:
+            if not isinstance(ref, dict) or ref.get('owner') not in ('project', 'style') or ref.get('review_state') != 'verified':
+                raise HTTPException(422, 'Reference sources must be explicitly inspected and bound')
+            base = store.style_dir(p['style_id']) if ref['owner'] == 'style' else store.project_dir(pid)
+            if not ref.get('sha256') or api._file_digest(base, ref.get('path')) != ref['sha256']:
+                raise HTTPException(409, 'A reference source is missing or changed')
+            sources.append((base / ref['path'], ref['sha256']))
+        signature = api._hash({'prompt': prompt, 'refs': refs, 'models': p.get('model_snapshot')})
+        previous = (p.get('workspace_reference_jobs') or {}).get(asset)
+        if previous:
+            if previous.get('input_hash') != signature:
+                raise HTTPException(409, 'Use a new asset_id for changed reference inputs')
+            if previous.get('state') == 'done' and api._file_digest(store.project_dir(pid), previous.get('path')) == previous.get('sha256'):
+                return {'asset': previous, 'reused': True}
+            raise HTTPException(409, 'An attempt already exists; inspect its result before an explicit new asset_id')
+        async def generate(p):
+            async def work(progress):
+                record = p['workspace_reference_jobs'][asset]
+                payloads = [generation._reference_payload(path, digest) for path, digest in sources]
+                if any(api._file_digest(path.parent, path.name) != digest for path, digest in sources):
+                    raise RuntimeError('Reference source changed before dispatch')
+                receipt = {}
+                data = await llm.generate_image(prompt, model=p['model_snapshot']['image_model'], aspect='16:9',
+                    refs=payloads, provider=p['model_snapshot'].get('image_provider', 'cli_proxy'),
+                    label='Reference ' + asset, receipt=receipt, attempts=1)
+                with Image.open(io.BytesIO(data)) as image:
+                    image.load()
+                    if image.width * image.height > 20000000 or abs(image.width / image.height - 16/9) > .06:
+                        raise RuntimeError('Reference image must be full-frame landscape 16:9')
+                    buf=io.BytesIO(); image.convert('RGB').save(buf, 'PNG')
+                relative='refs/generated-'+asset+'.png'
+                target=store.project_dir(pid)/relative;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(buf.getvalue())
+                record.update(state='done', path=relative, sha256=api._file_digest(store.project_dir(pid),relative), receipt=receipt)
+                p.setdefault('workspace_references', []).append({'path':relative,'owner':'project','role':'character',
+                    'label':asset,'sha256':record['sha256'],'review_state':'unreviewed','created':now()})
+                progress(1,1,'Reference generated; actual inspection required')
+            await pipeline._step(p,'references',work)
+        p.setdefault('workspace_reference_jobs', {})[asset]={'state':'queued','input_hash':signature,'prompt':prompt,
+            'references':copy.deepcopy(refs),'created':now()}
+        store.save_project(p);pipeline.start(pid,generate)
+        return {'asset_id':asset,'state':'queued','reused':False}
 
     @router.get("/videos/{pid}/outputs")
     async def outputs(pid: str):

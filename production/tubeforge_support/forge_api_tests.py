@@ -135,3 +135,18 @@ def test_media_urls_get_public_gateway_prefix():
         "url": "/api/workspace/projects/one/scenes/1/references/0"}]}) == {
         "image_url": "/api/2d/media/one/image.png", "references": [{
         "url": "/api/2d/api/workspace/projects/one/scenes/1/references/0"}]}
+
+
+def test_reference_sources_are_guarded_and_attempt_is_not_replayed(client, monkeypatch):
+    pid = create(client).json()['id']
+    endpoint = BASE + f'/videos/{pid}/references/generate'
+    assert client.post(endpoint, json={'asset_id':'cast-a','prompt':'One adult','references':[]}).status_code == 422
+    assert client.post(endpoint, json={'asset_id':'cast-a','prompt':'One adult','references':[{
+        'owner':'project','path':'missing.png','sha256':'missing','review_state':'verified'}]}).status_code == 409
+    base=store.project_dir(pid);(base/'guide.png').write_bytes(b'fixture source')
+    ref={'owner':'project','path':'guide.png','sha256':forge.api._file_digest(base,'guide.png'),'review_state':'verified'}
+    calls=[];monkeypatch.setattr(pipeline,'start',lambda *args:calls.append(args))
+    body={'asset_id':'cast-a','prompt':'One adult','references':[ref]}
+    assert client.post(endpoint,json=body).status_code==202
+    assert client.post(endpoint,json=body).status_code==409
+    assert len(calls)==1 and not store.get_project(pid)['workspace_reference_jobs']['cast-a'].get('sha256')
