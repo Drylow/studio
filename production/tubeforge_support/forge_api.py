@@ -234,6 +234,9 @@ def install(app):
         p = api._project(pid, writable=True)
         asset = api._identifier(body.get('asset_id'))
         prompt = api._text(body.get('prompt'), 'prompt', required=True)
+        role = body.get('role', 'character')
+        if role not in ('character', 'location', 'pose', 'style'):
+            raise HTTPException(422, 'Choose character, location, pose or style')
         refs = body.get('references')
         if len(prompt) > 30000 or not isinstance(refs, list) or not 1 <= len(refs) <= 12:
             raise HTTPException(422, 'Supply an authored prompt and 1–12 ordered inspected references')
@@ -245,7 +248,7 @@ def install(app):
             if not ref.get('sha256') or api._file_digest(base, ref.get('path')) != ref['sha256']:
                 raise HTTPException(409, 'A reference source is missing or changed')
             sources.append((base / ref['path'], ref['sha256']))
-        signature = api._hash({'prompt': prompt, 'refs': refs, 'models': p.get('model_snapshot')})
+        signature = api._hash({'prompt': prompt, 'refs': refs, 'role': role, 'models': p.get('model_snapshot')})
         previous = (p.get('workspace_reference_jobs') or {}).get(asset)
         if previous:
             if previous.get('input_hash') != signature:
@@ -271,7 +274,7 @@ def install(app):
                 relative='refs/generated-'+asset+'.png'
                 target=store.project_dir(pid)/relative;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(buf.getvalue())
                 record.update(state='done', path=relative, sha256=api._file_digest(store.project_dir(pid),relative), receipt=receipt)
-                p.setdefault('workspace_references', []).append({'path':relative,'owner':'project','role':'character',
+                p.setdefault('workspace_references', []).append({'path':relative,'owner':'project','role':role,
                     'label':asset,'sha256':record['sha256'],'review_state':'unreviewed','created':now()})
                 progress(1,1,'Reference generated; actual inspection required')
             await pipeline._step(p,'references',work)
