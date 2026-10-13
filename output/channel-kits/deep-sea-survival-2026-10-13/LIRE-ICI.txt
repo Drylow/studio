@@ -1,0 +1,7 @@
+DEEP SEA SURVIVAL - KIT PRET A COPIER
+
+1. Ouvrir channel-kit.txt : nom, handle propose, description anglaise, mots-cles et liens TubeForge.
+2. Importer pfp.png comme photo de profil YouTube : PNG natif 1254 x 1254, composition prevue pour le cercle.
+3. Le handle reste a choisir dans YouTube ; il n'a pas ete reserve.
+
+Le prompt et le recu des trois references reellement envoyees sont conserves. La photo a ete inspectee par Codex ; elle n'a pas encore ete approuvee explicitement par l'utilisateur. La chaine YouTube n'a pas ete creee et le premier episode reste un brouillon sans voix ni images de production.
