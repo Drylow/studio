@@ -1,0 +1,41 @@
+{
+  "state": "codex_inspected_user_approval_pending",
+  "prompt": "Create one square YouTube profile icon matching our existing survival-channel icon family.\nREFERENCE BINDINGS IN EXACT ATTACHMENT ORDER:\nImage 1 is Marin's IDENTITY: keep his perfectly round pure WHITE head, two tiny simple black oval eyes, small neutral line mouth, and the same plain NAVY BLUE short-brim fisherman cap. Show ONLY his head and cap; remove his body and life jacket from this icon.\nImage 2 is the Patch profile STYLE AND COMPOSITION guide: use its centered large round face, heavy smooth BLACK outer contour, minimal facial marks, generous margins, empty matte background and readability at small sizes. Do NOT copy its orange bandage or blue background.\nImage 3 is the Alien Aftermath profile STYLE AND COMPOSITION guide only: same minimal flat cartoon icon family. Do NOT copy the alien's green skin, almond-shaped eyes or purple background.\nDraw ONE Marin head with cap, front-facing, two small eyes visible, calm neutral expression. Face must remain circular, pure #FFFFFF white, with no shading. Black crisp outline. Keep cap plain navy with one simple seam and short brim; no badge or writing. Face plus cap occupy about 75 percent of the square height; leave ample margin on every side so the whole cap and chin survive a circular crop. No neck, shoulders, torso, clothes, hands or tiny body.\nBackground is one plain muted DEEP OCEAN TEAL (#315B65), matte solid colour. Flat clean 2D digital cartoon illustration, no text and no extra decorative circle.\nNo hair, ears, nose, eyebrows, beard, bandage, gills, alien eyes, skull, scars, bag, ocean scenery, boat, waves, creature, tentacle, vignette, texture, gradients, 3D, glow, dramatic light, watermark or logo lettering. Single centered face, not a contact sheet. Square 1:1 output.",
+  "aspect": "1:1",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "sha256": "3b01a66107c46a5faf92fdf8636221bcc547ec21a6349cba46993beba4fe8f16",
+  "references": [
+    {
+      "path": "output/imagegen/deep-sea-style-2026-10-13/01.png",
+      "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+      "sent_sha256": "830c95b41206cf21a9da16fc171722dc12e2f28730a1988e954560ccd335756d"
+    },
+    {
+      "path": "output/imagegen/patch-channel-kit-2026-10-12/pfp.png",
+      "source_sha256": "f4fa958dc0800b49481fff6d4b53f6c6487c65614f3b1ff818fcf70fd8a7906a",
+      "sent_sha256": "6b97467e781bc5e09715ca139c77ff6e418c6873ef8af9815c05c8c15afc5fc4"
+    },
+    {
+      "path": "output/imagegen/alien-channel-kit-2026-10-12/pfp.png",
+      "source_sha256": "ed24853898cb181568ebe4e45936dc877de97fd2b6a2f44a330c1af441fee39f",
+      "sent_sha256": "0951f227fa878336641ac50c8caae1409ba71e8c83afa0ba613d6080feb3c3c6"
+    }
+  ],
+  "review": {
+    "reviewer": "Codex",
+    "notes": [
+      "One centered white round head with navy fisherman cap",
+      "Two small black oval eyes and short neutral mouth; no extra human or alien features",
+      "Heavy black outline, simple teal background, same centered icon family as the two prior kits",
+      "No torso, text, bandage, scenery or decorative ring",
+      "Full cap and chin fit inside a circular crop"
+    ],
+    "minor_variations": [
+      "Very mild colour variation in cap/background; similar to existing profile assets"
+    ],
+    "user_approved": false
+  }
+}
