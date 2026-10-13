@@ -1,0 +1,16 @@
+{
+  "1": {
+    "state": "inspected",
+    "reviewer": "Codex",
+    "user_approved": false,
+    "sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+    "notes": "Actually inspected: single round white-headed stick figure, navy short-brim cap, small yellow buckled vest, thin black limbs, white mittens/oval feet. No inherited bandage, scarf or bag. Mild shading on cap/vest and gray reference backdrop, white face remains readable. Proposal not user-approved."
+  },
+  "2": {
+    "state": "inspected",
+    "reviewer": "Codex",
+    "user_approved": false,
+    "sha256": "929e39b43ef50f3757b9cd82463c41e023d22c8277935cabab06124f99eaa247",
+    "notes": "Actually inspected: one empty rusty-red boat, cream trim and low stern cabin, teal forward door, one front window beside door and one visible starboard side window with orange lifebuoy, central foredeck hatch and low rail. No people, monsters or added boats. Mild fill gradients in water/hull remain. The observed forward window becomes an explicit fixed anchor. Proposal not user-approved."
+  }
+}

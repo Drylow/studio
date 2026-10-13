@@ -1,0 +1,26 @@
+{
+  "state": "reference_inspected",
+  "source": "VPS TubeForge CLI Proxy",
+  "prompt": "Very simple flat 2D maritime survival cartoon. Crisp black outlines, matte solid colours, sparse shallow backgrounds and few large readable props. No photorealism, deep perspective, cinematic realism, elaborate textures or gradients on faces. Human has a perfectly round oversized PURE WHITE head, tiny black oval eyes and small line mouth, no hair, ears, nose, eyebrows or face shading. Thin BLACK stick torso and limbs, WHITE mitten hands and WHITE oval feet. One navy-blue short-brim fisherman cap and a small flat yellow life jacket with two padded flaps and one simple buckle over the thin stick torso. No scarf, bandage or backpack. Compact stick figure matching the approved line-body reference proportions. Adults, not babies. One named individual appears once. Sea creatures have bold simple silhouettes and their own dark teal or desaturated purple colours, huge compared with the small boat, scary through scale and partial visibility rather than gore. Palette: pale dusty blue/cream by day, desaturated navy/teal at night, yellow hero accent. One continuous landscape 16:9 film frame, no words, borders or panels.\nUse the attached image ONLY as a guide for the round white head, thin black line-body, mitten hands and oval feet. Draw ONE new marine survivor, full body standing in a neutral three-quarter pose on a plain pale gray background. Marin: ONE adult with oversized perfectly circular pure WHITE head, two tiny black oval eyes and tiny neutral line mouth. Thin BLACK stick torso/arms/legs, WHITE mittens and WHITE oval feet. Small navy-blue fisherman cap with short brim, small yellow life jacket with two rectangular flaps and one buckle. No hair, ears, nose, eyebrows, beard, forehead bandage, scarf, backpack, muscular human torso or fingers. Keep head/body proportions like the supplied approved stick figure; the yellow vest is a small accessory and does not thicken the black stick limbs. Remove the source character's orange bandage and bag completely. No boat or creature. This is a clean single-person reference, not a multi-view sheet.",
+  "references": [
+    {
+      "path": "refs/5718ebec0c4143d89c83b78c43832f98.png",
+      "owner": "project",
+      "role": "style-only",
+      "sha256": "32c396f77755643943355acf6a408a25f35cca161b2933db838fce91df560b55",
+      "character": null,
+      "variant": null,
+      "location_id": null,
+      "location_view": null,
+      "source_sha256": "32c396f77755643943355acf6a408a25f35cca161b2933db838fce91df560b55",
+      "sent_sha256": "5d875044f167aed7ab08db24a4527e8746f1f3ea49c532905f8aaf6597d2df1c"
+    }
+  ],
+  "dimensions": [
+    1672,
+    941
+  ],
+  "source_sha256": "3ea679529dc233d859c9012307ff34a11ba6957578f33d3a22a062f06dc9f16f",
+  "user_approved": false,
+  "review_file": "reference-reviews.json"
+}

@@ -1,0 +1,26 @@
+{
+  "3": {
+    "state": "style_inspected",
+    "reviewer": "Codex",
+    "user_approved": false,
+    "camera_compliant": true,
+    "sha256": "6bc98ef1d72cfaa0aeb37a4270b48726b527933fb133c2dcd2173cb6eecc2b93",
+    "notes": "Inspected actual image: round white face, navy cap, yellow vest, thin black limbs and white mittens/feet. Rope held by both hands. Cabin, door, windows, lifebuoy and deck hatch broadly preserved in closer bow-to-stern framing. Mild gradients remain. Suitable visual-direction proposal; not proof of exact spatial continuity."
+  },
+  "4": {
+    "state": "style_inspected",
+    "reviewer": "Codex",
+    "user_approved": false,
+    "camera_compliant": false,
+    "sha256": "8bf46acb87788149a769d75dd91a701fe5c505c61ccf6bd48d5a79d82841a1d6",
+    "notes": "Inspected actual image: same recognizable survivor costume and stick anatomy; white hands contact rail. One enormous purple tentacle outside the boat; simple night palette and clear scale contrast. Cabin anchors broadly preserved, but requested stern-to-bow camera reversal was NOT achieved: image retains a similar diagonal toward the cabin. Useful style test, not an approved opposite-view master."
+  },
+  "5": {
+    "state": "style_inspected",
+    "reviewer": "Codex",
+    "user_approved": false,
+    "camera_compliant": true,
+    "sha256": "7ce8f252cb25555f339166b777c8d7092d7f6e3d44c2fa9fc20aab2e40c3e3c7",
+    "notes": "Inspected actual image: same recognizable boat and small capped yellow-vest survivor above a huge dark teal leviathan. Clear continuous ocean cutaway and size contrast. Sparse creature contours, eye and teeth, mild gradients. Suitable fictional visual-direction proposal; not a factual marine illustration or verified full-video continuity."
+  }
+}
