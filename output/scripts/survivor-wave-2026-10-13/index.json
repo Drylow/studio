@@ -1,0 +1,82 @@
+[
+  {
+    "key": "patch-cruise",
+    "channel": "Patch Survives",
+    "title": "Zombie Outbreak: 30 Days Trapped on a Cruise Ship",
+    "style_id": "survivor-patch",
+    "words": 2684,
+    "estimated_duration": "15:07",
+    "script_sha256": "895faf2fa19e7ed25023cf54e56230b9395c11cae1964b50ea721329842d73c4",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "patch-prison",
+    "channel": "Patch Survives",
+    "title": "Zombie Prison Survival: Day 1 to Day 30",
+    "style_id": "survivor-patch",
+    "words": 2686,
+    "estimated_duration": "15:07",
+    "script_sha256": "32251367b8e11505a367fc1536fc92325638b73ef938daeb59091738d9ad017f",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "patch-hospital",
+    "channel": "Patch Survives",
+    "title": "30 Days in a Zombie-Infested Hospital",
+    "style_id": "survivor-patch",
+    "words": 2761,
+    "estimated_duration": "15:33",
+    "script_sha256": "0f11aaef01bfb6c9536af24ced9a8e1923b05607146664b7ffabe914a5aacbda",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "alien-airport",
+    "channel": "Alien Aftermath",
+    "title": "Alien Invasion: 30 Days Trapped in an Airport",
+    "style_id": "survivor-alien-aftermath",
+    "words": 2749,
+    "estimated_duration": "15:06",
+    "script_sha256": "8f87f058fedf97ff9948a0a77bf211c56939aaef3146658f980cc38e9821c7ef",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "alien-subway",
+    "channel": "Alien Aftermath",
+    "title": "Alien Invasion: 30 Days Hiding in the Subway",
+    "style_id": "survivor-alien-aftermath",
+    "words": 2741,
+    "estimated_duration": "15:04",
+    "script_sha256": "a13290060a968154a13b8b3a9293b28cf1696f9a98f20df78567ceb47046ad99",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "alien-observatory",
+    "channel": "Alien Aftermath",
+    "title": "Alien Invasion: 30 Days Inside a Mountain Observatory",
+    "style_id": "survivor-alien-aftermath",
+    "words": 2740,
+    "estimated_duration": "15:04",
+    "script_sha256": "b383b569c62c31c54cf64d7c9e2cee360bfa793ea9a3afcf4917978cefaee1df",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "sea-oil-rig",
+    "channel": "Deep Sea Survival",
+    "title": "Sea Monster Survival: 30 Days Trapped on an Oil Rig",
+    "style_id": "style-589894d7345e",
+    "words": 2824,
+    "estimated_duration": "15:21",
+    "script_sha256": "3565e83ecf15dea32f4599396b8c35ebc077fc97a83237242f9d7182cac5286f",
+    "writing_state": "codex_review_complete"
+  },
+  {
+    "key": "sea-life-raft",
+    "channel": "Deep Sea Survival",
+    "title": "Sea Monster Survival: 30 Days on a Life Raft",
+    "style_id": "style-589894d7345e",
+    "words": 2827,
+    "estimated_duration": "15:22",
+    "script_sha256": "feebfe1ea2e8b3369ae83ac86a8cf921c35e81680545ac8acd9f955c4a7cde81",
+    "writing_state": "codex_review_complete"
+  }
+]

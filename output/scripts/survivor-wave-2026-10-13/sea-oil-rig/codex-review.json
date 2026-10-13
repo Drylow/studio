@@ -1,0 +1,128 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2824,
+  "sha256": "3565e83ecf15dea32f4599396b8c35ebc077fc97a83237242f9d7182cac5286f",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Removed realistic hair/ears and spoken descriptions of mitten hands/oval feet.",
+    "Planted the east walkway as physically blocked, then made structural movement open it; not ignored merely because it was longer.",
+    "Explained why one-person launch inspection does not solve the three-person crossing and why that frame becomes unusable.",
+    "Limited creature response to observed repeated steel impacts instead of claiming intelligence or attraction to all engine sounds.",
+    "Tracked crane, lower cage, fuel, generator location, wrench loss and boat key through their changes.",
+    "Added late-day29 departure and day30 inspected shore refuge, preserving distinct shark/leviathan identities."
+  ],
+  "source_paragraph_count": 136,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.345359241933549,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "A blow comes up through the rig floor, and the coffee in your cup jumps onto your hand.",
+      "opening_paragraph_words": 87,
+      "promise": "Sea Monster Survival: 30 Days Trapped on an Oil Rig",
+      "payoff": "A service road climbs inland from the ramp. Bea lifts one handle of the bin, Oren takes the other, and you check the first bend before they follow. There is a small maintenance shed above the inlet. You inspect it together, then bring the food inside. The launch remains below, tied where you can reach it. Oren sets its key beside the map. When Bea puts the bin down, nobody has to catch it sliding across a tilted floor.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Boat exists from day1; routes/crossing and fuel solved before departure.",
+        "Repeated steel impacts tested twice pay off in generator diversion.",
+        "Oren abandons crane fixation and cooperates with Bea; rig collapse fulfills escalating threat."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "From the rail, you can see the ladder landing hanging crooked below the main deck. Beyond it, on the far side, the small maintenance launch sits in its berth like a toy boat trapped in a cage.",
+            "word_offset": 271
+          },
+          "closes": {
+            "quote": "Bea laughs once as the boat reaches the ramp, then presses her hands against her face. Oren climbs out and keeps the bow line steady while you step ashore. You help Bea over the side and wait until she is standing beside you on the concrete.",
+            "word_offset": 2652
+          }
+        },
+        {
+          "opens": {
+            "quote": "By day six, you have moved sealed food and drinks to the top deck. Oren brings a portable generator from the machinery bay. Its loose frame knocks against the post beside it when he tests the engine. The teal shadow moves beneath that side of the rig. He stops the engine before the creature reaches the leg.",
+            "word_offset": 575
+          },
+          "closes": {
+            "quote": "As daylight fades on day twenty-nine, you start the generator. Its loose frame knocks against the western post. The teal body turns beneath that leg. You leave the running set and meet Bea and Oren at the machinery-bay door.",
+            "word_offset": 2098
+          }
+        },
+        {
+          "opens": {
+            "quote": "You draw the rig on a meal box while Oren names the routes between its decks. He marks the machinery-bay floor hatch and an older east maintenance path behind the pipe racks. A heavy rack has fallen against that path's entrance. All three of you try shifting it, but it is pinned under a bent support. You leave it marked as blocked.",
+            "word_offset": 360
+          },
+          "closes": {
+            "quote": "Over the following days, you clear the old maintenance walkway in sections. It begins behind the machinery bay, wraps around the east pipe racks and descends toward the launch berth from the opposite side. It remained blocked when the direct crossing failed. Oren tests the grates before Bea marks them with cloth strips.",
+            "word_offset": 1621
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-6: supply boat lost, systems shut down, launch observed, blocked east route and generator tested.",
+        "Days7-11: steel-impact observation, fuel cage run, direct route fails, crane proposed.",
+        "Days12-17: storm destroys crane/cage; lone inspection fuels launch; short frame then fails.",
+        "Days18-23: structural tilt opens east route, gate/wrench attempt fails.",
+        "Days24-28: wrench lost, generator repositioned, route prepared, support breaks.",
+        "Late day29: generator distraction and launch; day30 inlet landing and shelter."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Top helipad -> galley/bunks -> machinery bay floor hatch/service ladder -> lower cage.",
+        "Damaged direct walkway/short frame -> launch berth.",
+        "Old east pipe-rack route initially physically blocked; structural shift clears entrance.",
+        "Bent gate -> berth; generator western post opposite east escape route.",
+        "Launch passes rig legs -> coastal inlet ramp -> inspected maintenance shed."
+      ],
+      "state_checked": [
+        "No main pumps continuing while platform becomes quiet; generator is a separate portable unit.",
+        "Fuel moved before lower cage loss; generator reserve separate; launch explicitly fuelled.",
+        "Crane remains unusable, cage lost, direct walkway and short frame remain broken.",
+        "East route not ignored because long: blocking rack cleared by observed structural shift.",
+        "Wrench dropped into sea and never retrieved.",
+        "Generator moves west, stays until collapse; launch key physically recovered.",
+        "Food bin transferred aboard; no new coast rescue."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "You jump onto the cabin step.",
+        "The rope tightens against the railing and tears the metal loose."
+      ],
+      "matched_script_line": "Oren reaches the rail in his orange hard hat. Bea comes from the galley carrying a tray towel. She asks where the supply boat went. Oren pulls her back from the edge as the bent ladder strikes a platform leg.",
+      "scanner_adjudication": "Short clauses enumerate concrete observed vessel damage or coordinated ladder actions. Geography repeats serve changing blocked/open routes, not empty emphasis.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

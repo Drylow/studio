@@ -1,0 +1,42 @@
+{
+  "premise": "The prison's locks initially protect survivors, then turn every escape route into a negotiation. The central conflict is who controls the route, rather than another broken radio.",
+  "cast": [
+    "Patch: existing bandage identity, white head/hands/feet, orange grounded school backpack.",
+    "Nia: adult kitchen worker, olive work apron, white head/hands/feet, black stick limbs.",
+    "Cal: adult inmate, charcoal prison clothing, white head/hands/feet; courtyard key.",
+    "Vale: older adult guard, initially grey uniform then kitchen jacket; white head/hands/feet; cough and later limp persist.",
+    "Infected guards/inmates: pale-green heads, hands and exposed feet; ordinary simplified black limbs."
+  ],
+  "locations": [
+    "Visitor cell -> reception -> staff hall -> kitchen.",
+    "Cafeteria is infected; rear staff passage avoids it and reaches Cal's courtyard gate.",
+    "Administrative fire wing connects through separation door; resealed after Vale arrives.",
+    "Courtyard -> loading passage -> failed transport vehicle -> narrow rear gap -> laundry.",
+    "Laundry exit crosses perimeter wall to service road, fields and inspected church shelter."
+  ],
+  "chronology": [
+    "Days1-2: cell, key retrieval, guard follows inside before cell is locked.",
+    "Days2-10: kitchen supplies, gated food/access trade and blocked loading route.",
+    "Days11-15: Vale rescued from fire; old service route lost.",
+    "Days16-21: infected pressure, water-container loss, cooperation and vehicle inspection.",
+    "Days22-26: equipment clearing; vehicle trial fails; Cal shares gate key.",
+    "Days27-29: laundry route tested; infected group outside delays departure until dawn.",
+    "Day30: four leave, walk fields, enter church shelter."
+  ],
+  "setups_and_payoffs": [
+    "Cell key solves first confinement; shared key access resolves Cal's control conflict.",
+    "Planted laundry exit becomes escape after transport attempt fails.",
+    "Food sharing progresses from conditional trade to taking injured Vale along."
+  ],
+  "persistent_states": [
+    "Nia recovers reception/kitchen key ring; Cal's courtyard key is a separate object.",
+    "Guard actually enters original cell before Nia locks him inside.",
+    "Fire-wing door sealed after rescue; no later shortcut through it.",
+    "Transport vehicle damages its front corner and remains unusable across loading.",
+    "Backpack pocket catches on van bumper and is freed; small damage persists.",
+    "Gate key is handed to Nia rather than mysteriously discarded or duplicated.",
+    "Four adults survive and walk out; Vale still limps."
+  ],
+  "style_id": "survivor-patch",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

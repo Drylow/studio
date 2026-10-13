@@ -1,0 +1,128 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2827,
+  "sha256": "feebfe1ea2e8b3369ae83ac86a8cf921c35e81680545ac8acd9f955c4a7cde81",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Removed human hair/ears and kept Marin's navy cap throughout instead of lending away his signature identity.",
+    "Planted Tess's crew card in the opening and paid it off after landing.",
+    "Kept cooler lid aboard rather than making the same lost prop magically reappear two weeks later.",
+    "Removed late untested mirror distraction and fake certainty about storm/monster sensing.",
+    "Preserved lost paddle, crate, rod and canopy states; repair kit and hand pump remain limited temporary supports.",
+    "Retained a failed reef approach, practiced steering and observed creature turn without presenting precise sea-navigation advice.",
+    "Distinct from existing fishing-boat pilot: cargo ship sinks at opening, two-person raft relationship, reef landing rather than buoy rescue."
+  ],
+  "source_paragraph_count": 145,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.361660969173563,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "You drag yourself into the life raft while the cargo ship tilts behind you.",
+      "opening_paragraph_words": 72,
+      "promise": "Sea Monster Survival: 30 Days on a Life Raft",
+      "payoff": "You inspect the shade above the beach before bringing the bag there. Tess checks the canopy scraps and places her crew card beside the drinks. You set the paddle down within reach of the secured raft. Outside the reef, the teal back passes through the surf without entering the inlet. Tess says your name, Marin, and asks you to help move the food into the shade. You lift one side of the bag while she takes the other. Neither of you has to balance against a sinking deck to carry it.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Saving bag and Tess in hook pays off through shared supplies/crew-card ending.",
+        "Paddle loss and failed approach lead to practice with already retained lid.",
+        "Observed monster movement and shallower passage permit escape without killing beast or surprise rescue."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "The deckhand is Tess. She clings to the ladder and calls for you to release the raft line before the sinking hull pulls it under. Her laminated crew card catches against a rung as she lowers herself. She tears it free and puts it inside her vest.",
+            "word_offset": 121
+          },
+          "closes": {
+            "quote": "You inspect the shade above the beach before bringing the bag there. Tess checks the canopy scraps and places her crew card beside the drinks. You set the paddle down within reach of the secured raft. Outside the reef, the teal back passes through the surf without entering the inlet. Tess says your name, Marin, and asks you to help move the food into the shade. You lift one side of the bag while she takes the other. Neither of you has to balance against a sinking deck to carry it.",
+            "word_offset": 2736
+          }
+        },
+        {
+          "opens": {
+            "quote": "On day three, you hook a floating cooler lid with a paddle. Tess brings it aboard and leaves it flat beneath the supplies. A blue tarp drifts close enough to recover later. She secures it above the canopy frame so you can sit out of the strongest sun. Neither piece came from a rescue vessel. You still have to move through the cargo wreckage around you.",
+            "word_offset": 430
+          },
+          "closes": {
+            "quote": "Inside the hooked rock, the surf is weaker. Tess lowers the cloth while you guide toward the beach. The lid catches on a submerged branch, and she releases its line before it can turn the raft back. You use the paddle alone for the last short approach. The sand touches the raft floor.",
+            "word_offset": 2577
+          }
+        },
+        {
+          "opens": {
+            "quote": "You drag yourself into the life raft while the cargo ship tilts behind you. A teal creature strikes its stern, and containers slide into the sea. Your supply bag is still attached beside the emergency ladder. But a deckhand is climbing down that same ladder as the ship sinks. You have to get her aboard before you cut the raft loose, without leaving the supplies that may keep both of you alive.",
+            "word_offset": 0
+          },
+          "closes": {
+            "quote": "You inspect the shade above the beach before bringing the bag there. Tess checks the canopy scraps and places her crew card beside the drinks. You set the paddle down within reach of the secured raft. Outside the reef, the teal back passes through the surf without entering the inlet. Tess says your name, Marin, and asks you to help move the food into the shade. You lift one side of the bag while she takes the other. Neither of you has to balance against a sinking deck to carry it.",
+            "word_offset": 2736
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-3: ship sinks immediately, bag freed, Tess rescued, lid/tarp recovered.",
+        "Days5-11: padded frame/canopy, disturbances observed, paddle lost to shark, rain collected.",
+        "Days14-20: island sighted, storm tears tarp/bends rod/loses crate; tube repaired and pumped.",
+        "Days21-25: first reef approach damages remaining paddle; kept cooler lid tested as steering surface.",
+        "Days26-29: shared practice, shark return, wrong wind postpones approach, crew-card conversation.",
+        "Day30: observed creature turn, reef crossing, lid released at snag, landing and raft secured."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Opening cargo emergency ladder -> detached raft.",
+        "Cargo-debris field -> storm-damaged raft -> outer island reef.",
+        "First failed rock passage -> observed inlet beside hooked rock -> sheltered beach/shade."
+      ],
+      "state_checked": [
+        "Cargo ship never reappears and is never reclaimed.",
+        "Supply bag freed before line cut; Tess rescued with released line; crew card planted at ladder.",
+        "Cooler lid stays aboard throughout; no miraculous reappearance of a lost prop.",
+        "First paddle blade gone; second blade loses corner but remains usable; broken piece retained.",
+        "Crate abandoned in storm; rod bent/inactive among damaged raft gear; tarp torn but usable scrap remains.",
+        "Patch is temporary; hand pump used repeatedly; no miracle permanent repair.",
+        "No chart exists, no late magic mirror distraction, no exact tide timetable or real-world survival advice.",
+        "Signature cap not borrowed away; beach is distinct from prior fishing-boat/buoy-rescue pilot."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "You jump onto the cabin step.",
+        "The rope tightens against the railing and tears the metal loose."
+      ],
+      "matched_script_line": "The rope jerks tight. The raft bumps the hull. The red supply bag hangs above the water near the emergency station, close enough to reach only when the raft lifts on a swell.",
+      "scanner_adjudication": "Repeated remaining-paddle/creature terms carry different damage or position states. Removed mirrored patch/paddle contrast and recap moral.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

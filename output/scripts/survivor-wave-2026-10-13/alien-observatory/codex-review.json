@@ -1,0 +1,127 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2740,
+  "sha256": "b383b569c62c31c54cf64d7c9e2cee360bfa793ea9a3afcf4917978cefaee1df",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Separated passive receiving from active beacon/transmission; no antenna magically broadcasts by listening.",
+    "Used repeated recorded human call as evidence of echo rather than invented alien-language translation.",
+    "Kept one canonical Surveyor and Loader with its lifting machine, avoiding three late variants and actor/machine confusion.",
+    "Planted trench hatch and lower trail in early geography.",
+    "Used a previously tested portable transmitter and spare battery, not an audio recorder magically connected to a coil.",
+    "Reed stays at observatory until remote set runs, then shuts main beacon and joins companions; removed unnecessary return trip and timed-clicker miracle.",
+    "Added day30 descent, injury persistence and an inspected lodge ending."
+  ],
+  "source_paragraph_count": 142,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.058819011041768,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "The radio repeats your mountain coordinates while a light climbs the closed access road.",
+      "opening_paragraph_words": 63,
+      "promise": "Alien Invasion: 30 Days Inside a Mountain Observatory",
+      "payoff": "The weather set still draws the Surveyor toward the mast. It will not keep doing that forever. Malik can see the lodge roof beyond the next bend, so you help Eve stand and continue. At its service entrance, he checks the dark hallway before opening the door for her. You bring the supplies inside and close it behind you. Eve sets the folded map on the reception counter. This time, she sits down without reaching for a microphone.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "False answer hope becomes evidence-based transmitter plan.",
+        "Bridge destruction makes planted foot trail necessary.",
+        "Eve's broadcast mistake changes behavior; observed portable test and Reed's cutoff enable exit."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "You watch it raise its panel toward the mast. Eve looks at the radio controls. The station beacon is still on, automatically sending the observatory's identification between her attempts to call for help. She switches that transmission off. The receiver stays quiet enough for you to hear the machine moving outside.",
+            "word_offset": 267
+          },
+          "closes": {
+            "quote": "You leave the platform and return to the radio controls. The main beacon relay has begun another cycle on the remaining emergency power. Its click makes the Surveyor hesitate in the yard. You pull the beacon's breaker down. The receiver goes quiet with the roof equipment. The portable set on the ridge keeps transmitting.",
+            "word_offset": 2331
+          }
+        },
+        {
+          "opens": {
+            "quote": "In the supply shed, you find blankets, an orange trail rope and a portable radio case. Eve checks its battery against the spare unit you carried in on the first night. She can power the portable set away from the observatory. A map attached to the weather equipment shows the old mast beside the foot trail. Malik remembers the trail continuing beneath the broken road bend. He takes you as far as the fallen signpost that afternoon. Beyond it, a loose stone step shifts under your weight. You return while the path is still visible and mark that step on the map. Eve asks whether Malik could carry a case across it. He says he could, if someone watched the ridge instead of carrying another load. You leave the rope beside the portable set for that trip.",
+            "word_offset": 924
+          },
+          "closes": {
+            "quote": "At the observatory, the receiver picks up that call. You recognize Eve's recording. Through the platform window, you see the Surveyor leave the dome track and turn toward the ridge. Malik and Eve are already starting down the trail. The signal is the agreed confirmation that their set is running.",
+            "word_offset": 2281
+          }
+        },
+        {
+          "opens": {
+            "quote": "On the visitor map, Eve marks the public dome, radio room, kitchen and rear service yard. Malik adds the supply shed and the trench beneath the yard. A low hatch in the kitchen service cupboard gives access to that trench. Beyond the shed, a narrow path reaches an old weather mast, then a maintenance trail descending to the lower road. Malik points to the ski lodge marked there, below the road bridge.",
+            "word_offset": 470
+          },
+          "closes": {
+            "quote": "The weather set still draws the Surveyor toward the mast. It will not keep doing that forever. Malik can see the lodge roof beyond the next bend, so you help Eve stand and continue. At its service entrance, he checks the dark hallway before opening the door for her. You bring the supplies inside and close it behind you. Eve sets the folded map on the reception counter. This time, she sits down without reaching for a microphone.",
+            "word_offset": 2662
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-7: radio echo; passive receiving separated from beacon/transmission; tests.",
+        "Days8-17: portable set/spare battery/trail inspected; Loader destroys road bridge.",
+        "Days18-22: shed marks, Eve sends call, refuge shifts; emergency-power reset restarts beacon.",
+        "Days23-28: portable set recovered and tested; route and equipment prepared.",
+        "Day29: Eve/Malik place portable transmitter while Reed stays at observatory.",
+        "Day30: remote check-in, roof beacon shut, Reed follows trench/path, group descends and reaches lodge."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Dome/public entrance -> hall/radio room -> caretaker kitchen -> service cupboard.",
+        "Cupboard trench hatch -> under-yard trench -> supply-shed grate.",
+        "Shed -> fallen signpost/loose step -> weather mast -> descent below ruined road bridge.",
+        "Lower-road service gate -> ski-lodge service entrance."
+      ],
+      "state_checked": [
+        "Passive receiver does not magically transmit; main automatic beacon restarts only after demonstrated supply reset.",
+        "Repeated recorded human call is an echo, not a translated alien-language command.",
+        "Portable RADIO transmitter uses previously found spare battery; recorder alone does not emit radio.",
+        "Trench hatch and weather trail planted in early map.",
+        "Reed stays behind until agreed remote signal, shuts beacon and joins; no redundant return trip.",
+        "Trail rope remains securing remote case; injuries/sleeve damage persist; no rescue aircraft."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "You came here for coffee.",
+        "You backed into the shop."
+      ],
+      "matched_script_line": "Eve is the observatory technician. Malik maintains the building and its steep service paths. You stayed when the telescope visit was canceled, helping Eve move a battery unit into the radio room. Now she turns the receiver volume down while Malik brings the entrance keys back to the desk.",
+      "scanner_adjudication": "Repeated platform/shed/mast terms preserve real geography while each paragraph adds test, cost or move. No unsupported language translation or abstract moral.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

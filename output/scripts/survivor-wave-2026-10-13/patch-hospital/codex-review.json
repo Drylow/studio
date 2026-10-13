@@ -1,0 +1,129 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2761,
+  "sha256": "0f11aaef01bfb6c9536af24ced9a8e1923b05607146664b7ffabe914a5aacbda",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Planted van keys before the first escape attempt instead of retrospective convenience.",
+    "Mapped an actual descent from third floor through the far stairs to ground-floor imaging and receiving.",
+    "Replaced unpowered electric relay miracle with a battery delivery chime observed and retrieved earlier.",
+    "Kept chime lure on cafeteria side, away from receiving escape route.",
+    "Fixed bag-carrying and chair-pushing hand conflicts by assigning Jo and Len clear roles.",
+    "Moved final departure to day30 and retained hand/leg injuries at ending; no miracle cure."
+  ],
+  "source_paragraph_count": 162,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.544832452346627,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "The emergency-room doors crash open while Jo is wrapping your injured hand, and the elevator behind you stops with its doors open.",
+      "opening_paragraph_words": 22,
+      "promise": "30 Days in a Zombie-Infested Hospital",
+      "payoff": "Your hand still hurts. Len still needs the chair. Jo sits on the van step until his arms stop trembling, then asks whether you can help him bring the supplies into the office. You set the bag down beside Len and open the water containers. The hospital is no longer visible from the depot. When rain begins again, it lands outside the closed office door.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Len's maintenance knowledge becomes specific route/gate knowledge, not magical access.",
+        "Tested chime provides diversion; known keys/van provide actual exit.",
+        "Hand injury and Len's mobility constraint remain in final shelter."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "Inside the store, Jo finds a portable delivery chime beside a toolbox and spare batteries. He presses its button. The alarm repeats until Len tells him how to stop it. A cart begins rattling in the corridor outside. All three of you stay still until it passes. Jo puts the chime and batteries in the supply bundle.",
+            "word_offset": 696
+          },
+          "closes": {
+            "quote": "The battery chime sounds through the delivery opening on the cafeteria side.",
+            "word_offset": 2110
+          }
+        },
+        {
+          "opens": {
+            "quote": "On day two, Len describes a service corridor behind imaging. It reaches the pharmacy window, the staff stairs and the back of the building. He worked maintenance here before his leg injury and knows which doors connect. Jo checks his route through the window before opening the outpatient door.",
+            "word_offset": 438
+          },
+          "closes": {
+            "quote": "The engine starts. Infected heads turn across the yard. Jo reaches the gate and stops because its latch is still closed. Len points to the release on the left post. He worked on that gate when delivery trucks damaged it, and he can see the handle from his seat.",
+            "word_offset": 2523
+          }
+        },
+        {
+          "opens": {
+            "quote": "You take your bag with your good hand. You came in through the ambulance yard and watched a transport driver hang his keys in the bay office. Now the staff door beside the curtains is your only clear route back toward that yard. Jo opens it before another body reaches the window.",
+            "word_offset": 63
+          },
+          "closes": {
+            "quote": "Jo drives until the streets thin into workshops and storage yards. He stops beside a bus depot with a fenced office. You inspect its doorway while he keeps the engine running. When Len says he can see nobody moving inside, Jo parks behind the buses and helps you close the depot gate.",
+            "word_offset": 2644
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Day1: hand injury unrelated to infection; bay keys noticed; Jo and Len join.",
+        "Days2-6: relocation to store; chime tested and retrieved; transfer from ordinary chair to evacuation chair.",
+        "Days7-11: third-floor ward and ground-level escape mapped.",
+        "Days12-22: power/water access fail; main stairs unsafe; roof leak forces departure.",
+        "Day23: far-stair descent and imaging attempt fail; climb back shown.",
+        "Days24-29: battery chime plan, hatch scouted and route cleared.",
+        "Day30: far stairs, diversion, ramp/van/gate; depot shelter."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Emergency department -> staff corridor -> outpatient corner -> ground-floor maintenance store.",
+        "Main staff stairs -> third-floor south ward, nurses station, storeroom and roof service landing.",
+        "Far service stairs -> ground-floor imaging fire door -> receiving -> loading ramp.",
+        "Delivery hatch is on cafeteria side, separated from receiving escape path.",
+        "Bay office holds van key; ramp -> transport van -> yard gate -> checked bus depot office."
+      ],
+      "state_checked": [
+        "Same injured hand throughout; injury not magically cured.",
+        "Ordinary chair left downstairs; evacuation chair used thereafter and folded into van.",
+        "Len keeps leg brace and cannot suddenly run.",
+        "Battery chime comes from maintenance store and works independently of main-power failure.",
+        "Chime is placed at cafeteria hatch, not in the receiving route characters need.",
+        "No single hand simultaneously carries the bag and pushes both chair handles; Jo/Len share tasks.",
+        "Van keys planted before rescue need and physically retrieved; no helicopter arrival."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+        "You check the staff exit next."
+      ],
+      "matched_script_line": "You pull back before the tape is finished. Jo yanks the curtain around the outpatient bed, and the metal rings scrape across the rail. The noise at the entrance comes again. People in the waiting area stop shouting all at once.",
+      "scanner_adjudication": "Len's list of mops/batteries/signs is a concrete spoken enumeration. Repeated pointing names different mapped obstacles and actions. Removed negative-fragment cadence.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

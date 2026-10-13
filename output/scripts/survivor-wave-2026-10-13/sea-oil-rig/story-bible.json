@@ -1,0 +1,41 @@
+{
+  "premise": "A high platform feels safe from something under the water until the creature begins removing the supports.",
+  "cast": [
+    "Marin: saved navy cap/yellow vest, white round head/white hands/feet, thin black limbs.",
+    "Oren: adult mechanic, orange hard hat and grey work vest; same white-head stick style, no hair/ears.",
+    "Bea: adult cook, burgundy work apron over dark simple clothing; white head/hands/feet.",
+    "Leviathan: canonical teal body and pale-yellow eye.",
+    "Giant shark: separate canonical grey creature, never recoloured leviathan."
+  ],
+  "locations": [
+    "Top helipad -> galley/bunks -> machinery bay floor hatch/service ladder -> lower cage.",
+    "Damaged direct walkway/short frame -> launch berth.",
+    "Old east pipe-rack route initially physically blocked; structural shift clears entrance.",
+    "Bent gate -> berth; generator western post opposite east escape route.",
+    "Launch passes rig legs -> coastal inlet ramp -> inspected maintenance shed."
+  ],
+  "chronology": [
+    "Days1-6: supply boat lost, systems shut down, launch observed, blocked east route and generator tested.",
+    "Days7-11: steel-impact observation, fuel cage run, direct route fails, crane proposed.",
+    "Days12-17: storm destroys crane/cage; lone inspection fuels launch; short frame then fails.",
+    "Days18-23: structural tilt opens east route, gate/wrench attempt fails.",
+    "Days24-28: wrench lost, generator repositioned, route prepared, support breaks.",
+    "Late day29: generator distraction and launch; day30 inlet landing and shelter."
+  ],
+  "setups_and_payoffs": [
+    "Boat exists from day1; routes/crossing and fuel solved before departure.",
+    "Repeated steel impacts tested twice pay off in generator diversion.",
+    "Oren abandons crane fixation and cooperates with Bea; rig collapse fulfills escalating threat."
+  ],
+  "persistent_states": [
+    "No main pumps continuing while platform becomes quiet; generator is a separate portable unit.",
+    "Fuel moved before lower cage loss; generator reserve separate; launch explicitly fuelled.",
+    "Crane remains unusable, cage lost, direct walkway and short frame remain broken.",
+    "East route not ignored because long: blocking rack cleared by observed structural shift.",
+    "Wrench dropped into sea and never retrieved.",
+    "Generator moves west, stays until collapse; launch key physically recovered.",
+    "Food bin transferred aboard; no new coast rescue."
+  ],
+  "style_id": "style-589894d7345e",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}

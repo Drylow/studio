@@ -1,0 +1,130 @@
+{
+  "authoring": "Codex explicit paragraph rewrites and deletions from archived proxy draft",
+  "word_count": 2684,
+  "sha256": "895faf2fa19e7ed25023cf54e56230b9395c11cae1964b50ea721329842d73c4",
+  "actual_reader": "Codex",
+  "user_approved": false,
+  "state": "codex_fiction_review_complete",
+  "changes": [
+    "Removed repeated backpack choreography and narrator morals from narration; visual prop states retained separately.",
+    "Fixed pantry barricade contradiction by introducing a second laundry barrier during escape.",
+    "Fixed spare-key custody: Mara keeps recovered keys and identifies the locker route herself.",
+    "Moved workshop descent to day 26 so the group does not spend unexplained days in a flooding alcove.",
+    "Made rough sea and snagged lowering line explain waiting before day 30 launch.",
+    "Removed unearned answering rescuer from the landing; group reaches and checks the established shore shelter itself."
+  ],
+  "source_paragraph_count": 106,
+  "method": "Full-script reading, explicit revisions, then fresh A-E sweep and mechanical scan",
+  "estimated_minutes": 15.111311228576005,
+  "actual_audio_duration": null,
+  "files_used": [
+    "voice-anchoring-skill.md",
+    "script-structures-skill.md",
+    "retention-mechanics-skill.md",
+    "humanizer-skill.md",
+    "greenlight-audit-skill.md",
+    "faceless-scripts-os-master.md",
+    "trailer-voice-scan.py"
+  ],
+  "groups": {
+    "A": {
+      "first_sentence": "A passenger slams into your cabin door with one green hand caught in the gap, and the ship keeps sailing away from shore.",
+      "opening_paragraph_words": 23,
+      "promise": "Zombie Outbreak: 30 Days Trapped on a Cruise Ship",
+      "payoff": "For the first time in thirty days, the floor beneath you does not move.",
+      "comparison": "Compared immediate problems/constraints against actual saved bunker, day1-outbreak and 30th-floor openings. No view/retention prediction."
+    },
+    "B": {
+      "loop_ledger": [
+        "Intact starboard boat is seen before the missing handle is discovered and recovered.",
+        "Ellis causes pantry breach; later waits quietly at hatch and helps gate/boat crossing.",
+        "Storm closes cabin refuge and forces workshop/boat plan; launch ends the drifting-ship threat."
+      ],
+      "quoted_loop_evidence": [
+        {
+          "opens": {
+            "quote": "You force the door shut and hold it until the latch catches. Across the ship, a lifeboat still hangs on the starboard side. But the corridor between you and it is filling with infected passengers. You have to reach that boat before this ship carries you beyond any chance of getting ashore.",
+            "word_offset": 23
+          },
+          "closes": {
+            "quote": "Before sunset, the lifeboat scrapes sand. Ellis climbs out and holds the bow line while you and Mara step ashore. He can still walk on his sore knee. You carry the supplies clear of the water and help pull the boat higher.",
+            "word_offset": 2535
+          }
+        },
+        {
+          "opens": {
+            "quote": "A note on the lifeboat board identifies the covered boat you saw earlier as starboard boat three. Its release handle was taken to the lower workshop for repair before departure. The other starboard boats were damaged during boarding. This one is intact because nobody could launch it.",
+            "word_offset": 1041
+          },
+          "closes": {
+            "quote": "Mara fits the recovered handle into its marked socket. Ellis holds the access gate while you brace it with a fallen lounge chair. By the time the infected return, all three of you are behind the barrier.",
+            "word_offset": 2119
+          }
+        },
+        {
+          "opens": {
+            "quote": "Ellis is beyond it, calling his sister's name in a harsh whisper that carries too far. An infected crewman turns from the dish station. Then another rises behind the counter. Ellis backs toward you, empty handed, and for a second you think he has found her.",
+            "word_offset": 687
+          },
+          "closes": {
+            "quote": "Ellis does not call out. He throws the empty cloth bag toward the far end of the promenade. It flutters, lands, and slides. The infected follow the motion just long enough for Mara to open the lifeboat access gate.",
+            "word_offset": 2080
+          }
+        }
+      ],
+      "chronological_payoffs": [
+        "Days1-5: cabins, Mara, pantry, Ellis and lifeboat observation.",
+        "Day6: Ellis opens galley; pantry lost, second laundry barrier installed.",
+        "Days7-16: recovered keys, limited crew supplies, bridge and missing release handle; storm.",
+        "Days18-20: cabins abandoned; failed workshop route and flashlight lost.",
+        "Days21-26: inspect alternate route, locker/chute/workshop, handle recovered, sore knee, promenade access.",
+        "Days27-29: rough water and snagged lowering line delay launch; final supplies.",
+        "Day30: three launch together, land and inspect boathouse."
+      ],
+      "finding": "No central escape promise replaced by an unintroduced rescue. Waiting has observed constraints."
+    },
+    "C": {
+      "geography_checked": [
+        "Port cabins connect by balconies; hidden laundry passage joins pantry and crew stairs.",
+        "Guest pantry and galley lost; second laundry barricade preserves upper service access.",
+        "Forward stairs lead to bridge; lower workshop inaccessible through warped watertight door.",
+        "Numbered crew locker contains linen chute to workshop alcove.",
+        "Workshop ladder reaches starboard promenade and boat-three gate.",
+        "Starboard lifeboat reaches inlet beach and checked boathouse."
+      ],
+      "state_checked": [
+        "Pantry never becomes safe again; second cart is distinct from tipped pantry cart.",
+        "Mara keeps the returned spare keys; no second unexplained handover.",
+        "Flashlight crushed on failed descent and never restored.",
+        "Ellis carries sister's shoe and leaves it before departure; her fate remains unknown, no rescue promised.",
+        "Released boat-three handle recovered from workshop and installed at access gate.",
+        "Crew meal packs and drinks replace lost pantry supplies; no unshown food reset.",
+        "Backpack carried by visible handle only during movement; grounded when resting; never worn or duplicated."
+      ],
+      "spoken_copy": "Plain narration, no scene labels, timestamps or audit text."
+    },
+    "D": {
+      "voice_reference": "Actual saved approved channel pilot narration plus source competitor openings, used for spoken shapes only.",
+      "quoted_house_voice_anchor": [
+        "An infected man is pushing a shopping cart into your supermarket window, and he won't stop.",
+        "You check the staff exit next."
+      ],
+      "matched_script_line": "You force the door shut and hold it until the latch catches. Across the ship, a lifeboat still hangs on the starboard side. But the corridor between you and it is filling with infected passengers. You have to reach that boat before this ship carries you beyond any chance of getting ashore.",
+      "scanner_adjudication": "Remaining short action clauses describe slipping, a door opening and infected turning; each changes a physical state. No rhythm-only fragment cascade or stylized antithesis remains.",
+      "hard_banned_phrases": 0,
+      "em_dashes": 0,
+      "D5_numbers": "Day markers, counts of fictional adults/props and story floors are internal fiction. No medical dosage, survival threshold, expert/statistical claim or invented citation.",
+      "D7": "Full by-eye sweep: no stylized mirrored antithesis or abstract aphoristic closer kept. Concrete distinctions and literal outcomes remain; not every but/not is an antithesis."
+    },
+    "E": {
+      "originality": "Distinct premise, supporting cast, route, setback mechanism and concrete ending; not duplicate scripts across brands.",
+      "human_review_signal": 0,
+      "explanation": "Codex authored/reviewed edits; no claim of a human buyer audit. Documentary source scoring does not apply to authorized fiction. No publication cadence is set."
+    }
+  },
+  "limitations": [
+    "Duration is estimated from the actual previous channel voiceover; final timing comes from new audio.",
+    "Writing review is not audio audition, visual inspection, user approval or a monetization guarantee.",
+    "No voice, images or video generated for these new eight yet."
+  ]
+}

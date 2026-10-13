@@ -1,0 +1,39 @@
+{
+  "premise": "A monster sinks a cargo ship in the opening; the survivor's home keeps breaking and shrinking as he tries to reach an island surrounded by dangerous reefs.",
+  "cast": [
+    "Marin: navy cap always retained, yellow vest, white round head/white hands/feet, thin black limbs.",
+    "Tess: adult deckhand in coral safety vest over dark simplified clothing; white circular head/hands/feet; one crew card.",
+    "Leviathan: canonical teal/pale-yellow-eye identity.",
+    "Giant shark: distinct grey creature."
+  ],
+  "locations": [
+    "Opening cargo emergency ladder -> detached raft.",
+    "Cargo-debris field -> storm-damaged raft -> outer island reef.",
+    "First failed rock passage -> observed inlet beside hooked rock -> sheltered beach/shade."
+  ],
+  "chronology": [
+    "Days1-3: ship sinks immediately, bag freed, Tess rescued, lid/tarp recovered.",
+    "Days5-11: padded frame/canopy, disturbances observed, paddle lost to shark, rain collected.",
+    "Days14-20: island sighted, storm tears tarp/bends rod/loses crate; tube repaired and pumped.",
+    "Days21-25: first reef approach damages remaining paddle; kept cooler lid tested as steering surface.",
+    "Days26-29: shared practice, shark return, wrong wind postpones approach, crew-card conversation.",
+    "Day30: observed creature turn, reef crossing, lid released at snag, landing and raft secured."
+  ],
+  "setups_and_payoffs": [
+    "Saving bag and Tess in hook pays off through shared supplies/crew-card ending.",
+    "Paddle loss and failed approach lead to practice with already retained lid.",
+    "Observed monster movement and shallower passage permit escape without killing beast or surprise rescue."
+  ],
+  "persistent_states": [
+    "Cargo ship never reappears and is never reclaimed.",
+    "Supply bag freed before line cut; Tess rescued with released line; crew card planted at ladder.",
+    "Cooler lid stays aboard throughout; no miraculous reappearance of a lost prop.",
+    "First paddle blade gone; second blade loses corner but remains usable; broken piece retained.",
+    "Crate abandoned in storm; rod bent/inactive among damaged raft gear; tarp torn but usable scrap remains.",
+    "Patch is temporary; hand pump used repeatedly; no miracle permanent repair.",
+    "No chart exists, no late magic mirror distraction, no exact tide timetable or real-world survival advice.",
+    "Signature cap not borrowed away; beach is distinct from prior fishing-boat/buoy-rescue pilot."
+  ],
+  "style_id": "style-589894d7345e",
+  "visual_reference_status": "Use existing preset main/drawing guide; prepare and inspect recurring side-character and new-location references before scenes."
+}
