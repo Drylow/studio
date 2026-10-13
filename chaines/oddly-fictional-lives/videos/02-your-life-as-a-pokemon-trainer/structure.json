@@ -1,75 +1,99 @@
 {
-  "title": "Your Life as a Pokémon Trainer",
+  "title": "Your Life as a Pok\u00c3\u00a9mon Trainer",
   "format": "original immersive second-person fictional Kanto journey",
   "words": 3076,
   "duration_estimate_seconds": 940.1,
-  "timings": "not aligned; actual narration required",
+  "timings": "Actual final voice acoustically transcribed and mapped to narrated shots; rounded at 24 fps for editing.",
   "chapters": [
     {
       "name": "The first loss",
       "paragraph_start": 1,
       "paragraph_end": 3,
-      "words": 259
+      "words": 259,
+      "start_seconds": 0,
+      "end_seconds": 85.4
     },
     {
       "name": "Choosing your partner",
       "paragraph_start": 4,
       "paragraph_end": 5,
-      "words": 190
+      "words": 190,
+      "start_seconds": 85.4,
+      "end_seconds": 145.58
     },
     {
       "name": "Learning the daily work",
       "paragraph_start": 6,
       "paragraph_end": 9,
-      "words": 368
+      "words": 368,
+      "start_seconds": 145.58,
+      "end_seconds": 255.14
     },
     {
       "name": "Your first badge",
       "paragraph_start": 10,
       "paragraph_end": 12,
-      "words": 277
+      "words": 277,
+      "start_seconds": 255.14,
+      "end_seconds": 339.68
     },
     {
       "name": "Building a team",
       "paragraph_start": 13,
       "paragraph_end": 17,
-      "words": 466
+      "words": 466,
+      "start_seconds": 339.68,
+      "end_seconds": 479.62
     },
     {
       "name": "The detour and your rival",
       "paragraph_start": 18,
       "paragraph_end": 20,
-      "words": 284
+      "words": 284,
+      "start_seconds": 479.62,
+      "end_seconds": 566.78
     },
     {
       "name": "The next hard lesson",
       "paragraph_start": 21,
       "paragraph_end": 24,
-      "words": 379
+      "words": 379,
+      "start_seconds": 566.78,
+      "end_seconds": 684.14
     },
     {
       "name": "Eight badges are not enough",
       "paragraph_start": 25,
       "paragraph_end": 27,
-      "words": 294
+      "words": 294,
+      "start_seconds": 684.14,
+      "end_seconds": 773.54
     },
     {
       "name": "The Elite Four",
       "paragraph_start": 28,
       "paragraph_end": 29,
-      "words": 188
+      "words": 188,
+      "start_seconds": 773.54,
+      "end_seconds": 832.1
     },
     {
       "name": "Your rival as Champion",
       "paragraph_start": 30,
       "paragraph_end": 32,
-      "words": 277
+      "words": 277,
+      "start_seconds": 832.1,
+      "end_seconds": 921.88
     },
     {
       "name": "Back at the Center",
       "paragraph_start": 33,
       "paragraph_end": 33,
-      "words": 94
+      "words": 94,
+      "start_seconds": 921.88,
+      "end_seconds": 950
     }
-  ]
+  ],
+  "actual_duration_seconds": 950,
+  "duration_estimated_only": false
 }
