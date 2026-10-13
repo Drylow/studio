@@ -652,6 +652,21 @@ def _summary(p):
             "review_state": full["review_state"] if p.get("codex_directed") else "legacy_readonly"}
 
 
+def _ui_project(full):
+    """Omit archival payload from screen reads; keep stored evidence untouched."""
+    omitted = {"history", "planning_receipt", "workspace_generations", "reference_preparation_scenes"}
+
+    def compact(value):
+        if isinstance(value, dict):
+            return {key: compact(item) for key, item in value.items()
+                    if key not in omitted and not key.endswith("_history")}
+        if isinstance(value, list):
+            return [compact(item) for item in value]
+        return value
+
+    return compact(full)
+
+
 def _batches():
     return [b for b in pipeline.list_batches() if b.get("workspace_directed")]
 
@@ -795,8 +810,11 @@ def install(app):
         return _full(_create(_prepare(body, catalog), catalog))
 
     @router.get("/projects/{pid}")
-    async def project(pid: str):
-        return _full(_project(pid))
+    async def project(pid: str, view: str = "full"):
+        if view not in ("full", "ui"):
+            raise HTTPException(422, "Choose full or ui project data")
+        full = _full(_project(pid))
+        return _ui_project(full) if view == "ui" else full
 
     @router.put("/projects/{pid}/title")
     async def title(pid: str, body: dict):

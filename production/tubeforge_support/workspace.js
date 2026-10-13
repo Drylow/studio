@@ -121,7 +121,33 @@
     if (!reason && !project.generation_confirmation) reason = "Refresh the project before generating its images.";
     return { first, targets, reason };
   }
-  const helpers = { escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
+  function createReadCache(read, ttl = 15000, now = Date.now, { staleWhileRevalidate = false, onError = () => {} } = {}) {
+    const entries = new Map();
+    let revision = 0;
+    return {
+      clear() { revision++; entries.clear(); },
+      get(path, refresh = false) {
+        const previous = entries.get(path);
+        if (!refresh && previous && (previous.pending || now() - previous.time < ttl)) return staleWhileRevalidate && previous.cachedPromise ? previous.cachedPromise : previous.promise;
+        const version = revision;
+        const entry = { pending: true, time: now(), promise: null, cachedPromise: previous?.cachedPromise || null };
+        entry.promise = Promise.resolve().then(() => read(path)).then(value => {
+          if (version === revision && entries.get(path) === entry) { entry.pending = false; entry.time = now(); entry.cachedPromise = entry.promise; }
+          return value;
+        }, error => {
+          if (entries.get(path) === entry) entries.delete(path);
+          throw error;
+        });
+        entries.set(path, entry);
+        if (!refresh && staleWhileRevalidate && entry.cachedPromise) {
+          entry.promise.catch(onError);
+          return entry.cachedPromise;
+        }
+        return entry.promise;
+      }
+    };
+  }
+  const helpers = { createReadCache, escapeHtml, projectStatus, modelsFrom, validateProject, validateScript, readScriptFile, safeUrl, mediaUrl, stateLabel, referenceUrl, statusGroup, generationBlockReason, generationBody, referenceOrder, batchPlan, scriptDuration, durationLabel, voiceProgressInfo };
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = helpers;
     if (require.main === module && process.argv.includes('--test')) {
@@ -216,6 +242,9 @@
   }
   function renderLogin() {
     session = null; project = null;
+    navigationReads.clear();
+    data = { profiles: [], styles: [], projects: [], batches: [], models: { models: [] }, settings: {}, connection: {} };
+    management = { channels: [], styles: [] };
     $('#account').hidden = true;
     if (typeof window.kanyeRequireLogin === 'function') window.kanyeRequireLogin();
     main.innerHTML = '<div class="empty"><h2>Sign in to your studio</h2><p>Use your existing tools.kanye.studio access key.</p></div>';
@@ -240,8 +269,14 @@
       throw new Error(`${message}${response.status === 404 ? " · This studio feature is unavailable. Refresh after it has been updated." : ''}`);
     }
     if (payload === null) throw new Error("Unreadable studio response. Check the server, then try again.");
+    if (request.method !== 'GET') navigationReads.clear();
     return payload;
   }
+  const navigationReads = createReadCache(path => api(path), 15000, Date.now, {
+    staleWhileRevalidate: true,
+    onError: error => { if (error.status === 401) renderLogin(); }
+  });
+  const projectReadPath = id => `/api/workspace/projects/${encode(id)}?view=ui`;
   function notify(message, error = false) {
     const element = document.createElement('div');
     element.className = `notification${error ? ' error' : ''}`;
@@ -257,8 +292,8 @@
     catch (error) { notify(error.message || "Server unreachable. Check its connection, then try again.", true); }
     finally { submitting = false; if (button?.isConnected) button.disabled = false; }
   }
-  async function refreshData() {
-    const result = await api('/api/workspace');
+  async function refreshData(refresh = true) {
+    const result = await navigationReads.get('/api/workspace', refresh);
     data = { ...data, ...result, profiles: result.profiles || [], projects: result.projects || [], models: result.models || { models: [] } };
     const available = data.models.available === true;
     const flow = data.models.providers?.google_flow;
@@ -343,16 +378,17 @@
       if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
     });
     main.setAttribute('aria-busy', 'true');
-    if (!main.children.length) main.innerHTML = '<div class="empty">Chargement…</div>';
+    if (!main.children.length) main.innerHTML = '<div class="empty">Loading…</div>';
     try {
       if (!session) {
         session = await api('/api/workspace/session');
         document.body.classList.remove('signed-out'); renderAccount();
       }
-      if (refresh) await refreshData();
-      let detail = null;
-      if (page === 'video') detail = await api(`/api/workspace/projects/${encode(parts[1] || '')}`);
-      const managed = ['channels', 'styles'].includes(page) ? await api('/api/workspace/management') : null;
+      const [, detail, managed] = await Promise.all([
+        refreshData(refresh),
+        page === 'video' ? navigationReads.get(projectReadPath(parts[1] || ''), refresh) : null,
+        ['channels', 'styles'].includes(page) ? navigationReads.get('/api/workspace/management', refresh) : null
+      ]);
       if (currentEpoch !== epoch) return;
       if (managed) management = managed;
       dirty = false;
@@ -1044,7 +1080,7 @@
       bindFormState($('#performance-form'));
     } catch (error) { if (root.isConnected) $('#performance-settings').textContent = error.message; }
   }
-  window.addEventListener('hashchange', () => route());
+  window.addEventListener('hashchange', () => route({ refresh: false }));
   window.addEventListener('beforeunload', (event) => { if (dirty) { event.preventDefault(); event.returnValue = ''; } });
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#/"]');
@@ -1058,7 +1094,7 @@
     voicePolling = true;
     const id = project.id;
     try {
-      const latest = await api(`/api/workspace/projects/${encode(id)}`);
+      const latest = await navigationReads.get(projectReadPath(id), true);
       if (routeParts()[1] !== id || routeParts()[2] !== "voice" || dirty) return;
       const finished = !latest.running || latest.steps?.voiceover?.state !== project.steps?.voiceover?.state;
       project = latest;
@@ -1077,7 +1113,7 @@
     batchPolling = true;
     const id = project.id;
     try {
-      const latest = await api(`/api/workspace/projects/${encode(id)}`);
+      const latest = await navigationReads.get(projectReadPath(id), true);
       if (routeParts()[1] !== id || (!$('#batch-workflow') && !$('#planning-workflow'))) return;
       if (dirty || $('#preview-dialog').open || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
         if ($('#batch-workflow')) { $('#batch-workflow').outerHTML = batchMarkup(latest); bindBatchControls(); }
