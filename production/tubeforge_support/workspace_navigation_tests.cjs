@@ -8,6 +8,7 @@ const { createReadCache } = require('./workspace.js');
   const first = await Promise.all([cache.get('/video'), cache.get('/video')]);
   assert.equal(count, 1, 'simultaneous reads share one request');
   assert.equal(first[0], first[1]);
+  assert.equal(cache.peek('/video'), first[0], 'cached page can paint synchronously');
   assert.equal(await cache.get('/video'), first[0], 'switching steps reuses the video');
   await cache.get('/styles');
   assert.equal(count, 2, 'different endpoints remain separate');
@@ -16,6 +17,7 @@ const { createReadCache } = require('./workspace.js');
   const fresh = await cache.get('/video', true);
   assert.equal(fresh.request, 4, 'explicit refresh bypasses cached data');
   cache.clear();
+  assert.equal(cache.peek('/video'), undefined, 'logout and writes remove synchronous cached payload');
   assert.equal((await cache.get('/video')).request, 5, 'writes invalidate navigation reads');
 
   let resolveOld, reads = 0;
