@@ -183,7 +183,13 @@ async def _recover_completed(body, submitted_at):
             request = job.get('request') or {}
             if not isinstance(request, dict) or job.get('type') != 'image':
                 continue
-            if any(request.get(key) != value for key, value in body.items()):
+            # Job journals may expand a submitted asset string into metadata.
+            # Only its original referenceId is an exact match, never a guessed ID.
+            actual = dict(request)
+            for key, value in actual.items():
+                if key.startswith('reference_') and isinstance(value, dict):
+                    actual[key] = value.get('referenceId')
+            if any(actual.get(key) != value for key, value in body.items()):
                 continue
             if ({key for key in request if key.startswith('reference_')}
                     != {key for key in body if key.startswith('reference_')}):
@@ -231,7 +237,9 @@ async def generate(prompt, model, aspect, refs=None, receipt=None):
             if receipt is not None:
                 receipt.update(account=account, submitted_at=submitted_at)
             try:
-                response = await client().post(BASE + "/images", json=body, timeout=90,
+                # The provider solves/retries captcha while this POST remains open.
+                # Closing at 90 seconds strands a created job; allow several minutes.
+                response = await client().post(BASE + "/images", json=body, timeout=600,
                     headers={"Authorization": "Bearer " + setting("USEAPI_API_KEY")})
             except httpx.HTTPError:
                 result = await _recover_completed(body, submitted_at)

@@ -28,8 +28,11 @@ Use the existing tools.kanye.studio account. Project: `your-life-as-a-pokemon-tr
 - `reference-register.json`, `reference-reviews.json` and `scene-reviews.json`
   record actual image inspection and explicit corrections. Codex inspection is
   not a claim of per-frame human approval or perfect generative consistency.
-- Current production: references inspected, voice clock installed, first three
-  scene images inspected; remaining images generating. Final render NOT yet done.
+- Current production: all 157 selected source images inspected; **117 accepted**,
+  **40 explicit repairs still required**. 64 first-round repairs returned images.
+  All three connected accounts reached a provider quota/rate-limit delay.
+  Earliest retry: **14 October, 02:00 Paris time**. Final render NOT yet done.
+  Do not label this production complete or publish its current rejected frames.
 - Final local delivery target: `output/videos/oddly-fictional-pokemon-02/`:
   movie, final voice, subtitles, ordered silent CapCut clips and timing CSV.
 

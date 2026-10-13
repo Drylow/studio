@@ -76,6 +76,7 @@ def test_failure_does_not_replay_or_expose_credentials(provider, monkeypatch, fa
     async def post(*args, **kwargs):
         calls.append((args, kwargs))
         if failure == "timeout":
+            assert kwargs["timeout"] >= 300  # captcha retries must retain the connection
             raise httpx.ReadTimeout("private-test-key")
         status = 429 if failure == "quota" else 400 if failure == "captcha-missing" else 403
         body = ("No captcha provider API keys configured. Add at least one at "
@@ -161,7 +162,7 @@ def test_portrait_output_rejected_without_paid_retry(provider, monkeypatch):
     assert receipt["job_id"] == "wrong-shape"
 
 
-@pytest.mark.parametrize('outcome', ['unique', 'wrong-reference', 'ambiguous', 'old', 'pending'])
+@pytest.mark.parametrize('outcome', ['unique', 'unique-expanded', 'missing-reference-id', 'wrong-reference', 'ambiguous', 'old', 'pending'])
 def test_lost_paid_response_recovers_only_exact_unique_completed_job(provider, monkeypatch, outcome):
     calls, client = provider
     paid = []
@@ -176,6 +177,11 @@ def test_lost_paid_response_recovers_only_exact_unique_completed_job(provider, m
             ids = ['candidate', 'duplicate'] if outcome == 'ambiguous' else ['candidate']
             return {'images': {'history': {key: {} for key in ids}, 'executing': {}}}
         request = dict(paid[0])
+        if outcome == 'unique-expanded':
+            request['reference_1'] = {'type': 'image', 'id': 'internal-id',
+                'referenceId': 'asset-current', 'user': 1, 'email': request['email']}
+        if outcome == 'missing-reference-id':
+            request['reference_1'] = {'type': 'image', 'id': 'asset-current'}
         if outcome == 'wrong-reference':
             request['reference_1'] = 'different-asset'
         timestamp = '2000-01-01T00:00:00Z' if outcome == 'old' else datetime.now(timezone.utc).isoformat()
@@ -185,11 +191,12 @@ def test_lost_paid_response_recovers_only_exact_unique_completed_job(provider, m
                 'encodedImage': base64.b64encode(picture()).decode()}}}]}}
     monkeypatch.setattr(flow, '_get', read)
     monkeypatch.setattr(flow, '_account', AsyncMock(return_value='account0@example.invalid'))
+    monkeypatch.setattr(flow, '_upload', AsyncMock(return_value='asset-current'))
     receipt = {}
-    if outcome == 'unique':
-        assert asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', receipt=receipt)) == picture()
+    if outcome in ('unique', 'unique-expanded'):
+        assert asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', [picture()], receipt=receipt)) == picture()
         assert receipt['recovered_completed_job'] and receipt['job_id'] == 'candidate'
     else:
         with pytest.raises(flow.FlowError):
-            asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', receipt=receipt))
+            asyncio.run(flow.generate('Exact saved prompt', 'fixture-image', '16:9', [picture()], receipt=receipt))
     assert len(paid) == 1

@@ -48,8 +48,8 @@
     "4": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/004.jpg",
-      "sha256": "a73a1ee28b848f2c9a7201f2f58b8d67d58c2faa6a2e1388ab7c90eb5f74cc98",
-      "notes": "Correct cast and Center facade, but frame is too wide for the intended face-and-partner beat; close interaction needs a more useful framing."
+      "sha256": "e46fcd4a9544439bdd784c1827f1e3aae045bc847f29ecae2ca7e8c4f67f890f",
+      "notes": "Correction inspected: medium close composition and rival eyebrow removal improved, but a visible grey inner head crescent/cap shadow remains. Needs flat white fill, preserve approved scene."
     },
     "13": {
       "state": "inspected",
@@ -60,20 +60,20 @@
     "7": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/007.jpg",
-      "sha256": "87fb3237a2577aac3d347471b0b69f456c7f23b29ec7e2199dd1afead1b51fb4",
-      "notes": "Specific visible issues from actual sheet: 7 rival gained eyebrows; 9 nurse lost striped cap; 10 large grey crescent inside main face. Preserve cast/action/background with a targeted corrective edit after the active batch."
+      "sha256": "ef34b3d866d8aecfa420ff613561e09955026440d360d221e228b392cf353e1e",
+      "notes": "Correction inspected: medium close composition and rival eyebrow removal improved, but a visible grey inner head crescent/cap shadow remains. Needs flat white fill, preserve approved scene."
     },
     "9": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/009.jpg",
-      "sha256": "6aeb8d29a0f7030d28e0ea3e80bc1a2e871407ac5ee2007e7799c56fc60986a6",
-      "notes": "Specific visible issues from actual sheet: 7 rival gained eyebrows; 9 nurse lost striped cap; 10 large grey crescent inside main face. Preserve cast/action/background with a targeted corrective edit after the active batch."
+      "sha256": "eb1e0befe7c31b5fd1d81da5c62f82168b6db1fa24e2e925af235e6812d997d5",
+      "notes": "Corrected nurse cap/red stripe and original Center geography inspected. Two eye dots and short mouths, white heads/hands, one Charmander. Medium close potion shot is legible without duplicate hero."
     },
     "10": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/010.jpg",
-      "sha256": "9d33af58930eb6201909fad8f82e351fa14df9a6859e45753b64cfa245df2f6a",
-      "notes": "Specific visible issues from actual sheet: 7 rival gained eyebrows; 9 nurse lost striped cap; 10 large grey crescent inside main face. Preserve cast/action/background with a targeted corrective edit after the active batch."
+      "sha256": "1a837745676f934fc9aa139aa754c112b65d834a20f118757b9444a6ce0e9ef5",
+      "notes": "Corrected nurse cap/red stripe and original Center geography inspected. Two eye dots and short mouths, white heads/hands, one Charmander. Medium close potion shot is legible without duplicate hero."
     },
     "15": {
       "state": "inspected",
@@ -84,32 +84,32 @@
     "11": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/011.jpg",
-      "sha256": "bd52d53a246d35d2c16ed06058fd17d8b6afb3fb0c06f4ce1e77450c0befe749",
-      "notes": "Actual review: 11 incorrectly placed passing trainers INSIDE waiting room instead of outside its window. 14 added eyebrow strokes to Nico; preserve the successful sleeve-contact pose and background while removing strokes."
+      "sha256": "44c5d22f42dac841e81cb0a0db388a345277dc4e04ce62aacd123ee7f1ab88ef",
+      "notes": "POV reframing inspected: correct window/outside relation and species, but generation changed the background into a photograph and elongated the two humans. Full 2D rebuild from approved references required."
     },
     "14": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/014.jpg",
-      "sha256": "f1c7b0b06768dbe500e5db4f5d9ebb0688580668d6a8914e5dc3d23e268bd430",
-      "notes": "Actual review: 11 incorrectly placed passing trainers INSIDE waiting room instead of outside its window. 14 added eyebrow strokes to Nico; preserve the successful sleeve-contact pose and background while removing strokes."
+      "sha256": "b35db83cfd04fbaa6c22fc80e5ad3b2e4da77a2633128df2b0a385ae5f841aa7",
+      "notes": "Corrected flat white face inspected, but trainer red cap disappeared. Restore exact red cap while preserving all other scene/action and the flat white face."
     },
     "16": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/016.jpg",
-      "sha256": "c3a6275b441d5d7bd40fbdc474da4fed23652b02306f285f913854a36d495b50",
-      "notes": "Actual review found grey crescents inside human heads, require flat white restoration. Preserve lab geography, outfits and starter poses. Additionally 16 has an extra detached brown boot near Squirtle; remove only that extra boot. 18 hand-help framing should show actual supporting contact and no nose-like extra marks."
+      "sha256": "6aba13ebf8925541f47bf0745d0cb4cf392ea8db686c06a0d139f3f8e92f1fe4",
+      "notes": "Extra detached boot removed; one rival with two attached boots, Squirtle and Bulbasaur retained in original lab. Flat white face inspected."
     },
     "17": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/017.jpg",
-      "sha256": "fcf204621e8391717b07034a51264f7b23b32da711d6f0a3528f8d3913f4e03e",
-      "notes": "Actual review found grey crescents inside human heads, require flat white restoration. Preserve lab geography, outfits and starter poses. Additionally 16 has an extra detached brown boot near Squirtle; remove only that extra boot. 18 hand-help framing should show actual supporting contact and no nose-like extra marks."
+      "sha256": "a4bed999e21ab87a18815b2f923a5990be197bb667a6181fd38a8b8ad408dfd2",
+      "notes": "Correction inspected: a visible grey crescent remains inside the main white face. Preserve lab action, remove this grey inner-face fill."
     },
     "18": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/018.jpg",
-      "sha256": "6b1ce48018246b8068c4bac11977891b30ab660cf7da9ef7436fea979f0fc22b",
-      "notes": "Actual review found grey crescents inside human heads, require flat white restoration. Preserve lab geography, outfits and starter poses. Additionally 16 has an extra detached brown boot near Squirtle; remove only that extra boot. 18 hand-help framing should show actual supporting contact and no nose-like extra marks."
+      "sha256": "edf17272b2889683d49f37f71777eddd1566b0dbd78237ddf960608cb86e4ae9",
+      "notes": "Second source review: grey face crescent/cap shadow remains. Lab handoff now has one correct Pokedex and the mentor is bald, but flat white face fill is still required; shot 18 also retains overly elongated torso/legs."
     },
     "19": {
       "state": "inspected",
@@ -120,32 +120,32 @@
     "20": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/020.jpg",
-      "sha256": "6cf2eba65136c36b5eceef9e8cb63597849ccf7d683d6c9093c0082cc2d3f5ce",
-      "notes": "Actual review: 20 gave Oak a red Nico cap and duplicated Pokedex, needs cap/device cleanup. 21 produced large toothy human smile/eyebrows and face shading. 22/24 have eyebrows and shaded faces. 23 added two literal dialogue bubbles and eyebrows. Keep correct partner counts, court/lab geometry and actions where possible."
+      "sha256": "c9a3da6b4060ab6db231865f92c567c36235dc0215edec083eea94dfd22c7a1a",
+      "notes": "Second source review: grey face crescent/cap shadow remains. Lab handoff now has one correct Pokedex and the mentor is bald, but flat white face fill is still required; shot 18 also retains overly elongated torso/legs."
     },
     "21": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/021.jpg",
-      "sha256": "ecb3a1894edd5816ef3091cfc14fb86ec80d04c6ac8a70d214b49e673cd153dc",
-      "notes": "Actual review: 20 gave Oak a red Nico cap and duplicated Pokedex, needs cap/device cleanup. 21 produced large toothy human smile/eyebrows and face shading. 22/24 have eyebrows and shaded faces. 23 added two literal dialogue bubbles and eyebrows. Keep correct partner counts, court/lab geometry and actions where possible."
+      "sha256": "4733b864de0caee6af60ba06da2559a6700574463d157dc84797272e58ed8aa6",
+      "notes": "Second source review: grey face crescent/cap shadow remains. Lab handoff now has one correct Pokedex and the mentor is bald, but flat white face fill is still required; shot 18 also retains overly elongated torso/legs."
     },
     "22": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/022.jpg",
-      "sha256": "525df62692fb04529dae5e908039b51a766d114ecbf6028e764ae5192beecb18",
-      "notes": "Actual review: 20 gave Oak a red Nico cap and duplicated Pokedex, needs cap/device cleanup. 21 produced large toothy human smile/eyebrows and face shading. 22/24 have eyebrows and shaded faces. 23 added two literal dialogue bubbles and eyebrows. Keep correct partner counts, court/lab geometry and actions where possible."
+      "sha256": "4ec71d8b0f8fc4cff973602cd9302bf629f471b485e15557fd6ea198e728aed9",
+      "notes": "Inspected corrected action: trainer heads still have wide grey inner crescents. Keep action and room, flatten white disk fill."
     },
     "23": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/023.jpg",
-      "sha256": "c9a8ca9973ef822651b4adfa10de3be4d80b37829ebcb3b88563a101b29fb577",
-      "notes": "Actual review: 20 gave Oak a red Nico cap and duplicated Pokedex, needs cap/device cleanup. 21 produced large toothy human smile/eyebrows and face shading. 22/24 have eyebrows and shaded faces. 23 added two literal dialogue bubbles and eyebrows. Keep correct partner counts, court/lab geometry and actions where possible."
+      "sha256": "a6455f5bdd43bf2ed942bb21d917f9c587426e53863d9a445b55d778974e2a61",
+      "notes": "Actual corrections inspected: speech bubbles removed from the aftermath court, two distinct trainers with one partner each; forest fork has one map and one potion with the original sign/log/rock. No eyebrows/hair/flesh faces. Minor outline-adjacent grey remains and is retained without claiming pixel-perfect white fill."
     },
     "24": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/024.jpg",
-      "sha256": "0ca0c5e0b20ff753363e52dca8c8f75ab9fa4bd12df4b67debb486fbeee572fc",
-      "notes": "Actual review: 20 gave Oak a red Nico cap and duplicated Pokedex, needs cap/device cleanup. 21 produced large toothy human smile/eyebrows and face shading. 22/24 have eyebrows and shaded faces. 23 added two literal dialogue bubbles and eyebrows. Keep correct partner counts, court/lab geometry and actions where possible."
+      "sha256": "e596af3ee3c6ea1889f87fe69363ee2b406626eabbb0783103a32254ee7c9d3e",
+      "notes": "Corrected handling pose and removed expression marks inspected. One trainer checks one tired Charmander on the original court. Small cap-adjacent grey trim remains, but no human skin/hair, eyebrow or duplicate; retained as a minor generative difference."
     },
     "25": {
       "state": "inspected",
@@ -184,16 +184,16 @@
       "notes": "Viewed all full frames: route master fork/log/rock preserved through pause, recall, map actions; no duplicated hero/partner. Campsite tent LEFT/log RIGHT/firepit center preserved while pitching and arranging sleeping mat. 31 explicitly matches rubbing-shoe narration: ONE loosened boot beside the log, other worn, one white sock, map on knees. 29 adds one small spare bowl; does not contradict narrated care."
     },
     "28": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/028.jpg",
-      "sha256": "bf46e2aad336f66622d03ec98262fc574d526b96cc094d89e0bc316e67a0d660",
-      "notes": "Viewed useful route/camp actions but clear grey crescent appears inside Nicos circular face. Target only flat white fill, preserving flame, props, outfit and day/night layout."
+      "sha256": "2b91956ce29610fd9f6e6857c5864d709d773a7affe5683911a8e352eca16701",
+      "notes": "Actual corrections inspected: speech bubbles removed from the aftermath court, two distinct trainers with one partner each; forest fork has one map and one potion with the original sign/log/rock. No eyebrows/hair/flesh faces. Minor outline-adjacent grey remains and is retained without claiming pixel-perfect white fill."
     },
     "32": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/032.jpg",
-      "sha256": "d7676041f8f13638e576bf1a193b49677844a4f99d18259c61ea817751d34080",
-      "notes": "Viewed useful route/camp actions but clear grey crescent appears inside Nicos circular face. Target only flat white fill, preserving flame, props, outfit and day/night layout."
+      "sha256": "11745d9758f9c135cc821e5fad8515a9fff3a254dcf41ae55b35d8dafd845f6d",
+      "notes": "Night action and campsite geography preserved, but a broad grey head rim still remains under the red cap; remove it while retaining the night setting and sleeping Charmander."
     },
     "33": {
       "state": "inspected",
@@ -204,8 +204,8 @@
     "34": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/034.jpg",
-      "sha256": "8cb5904aeb89f43f0609bc8da0b5bc744e36d7056fcbb8aebf278136e378fd64",
-      "notes": "Recovered completed output actually inspected. Useful closer woodland frame and correct three species/identities, but face has a grey crescent and trouser legs too long relative to identity; an additional active ball remains in hand after the thrown ball landed. Targeted correction should flatten face, shorten legs to reference and remove hand-held active ball."
+      "sha256": "38bbc5fe32b600b1c42a199d2f62be714f1f32d0858dae1e38598d4ed40b0002",
+      "notes": "34 retains strongly elongated trainer body despite shortened silhouette instruction. 35 keeps a broad grey facial crescent. Original actions and species counts are legible, but those specific defects remain."
     },
     "37": {
       "state": "inspected",
@@ -228,20 +228,20 @@
     "35": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/035.jpg",
-      "sha256": "bc4843cfeba4130f985516676a5ebb9f814409a8a7291fbbd50a22c8d791b6ed",
-      "notes": "Inspected new prompt results: 35 has visible shaded face crescent; 36/40 omit the tiny mouth and stretch the trainer silhouette relative to his reference. Correct head fill/mouth and shorten torso/legs to the actual supplied silhouette, preserving the useful new action and backgrounds."
+      "sha256": "8bc5bd7f628055481eced757699555f2b7764cd9fb24466bbf3985064a0d4332",
+      "notes": "34 retains strongly elongated trainer body despite shortened silhouette instruction. 35 keeps a broad grey facial crescent. Original actions and species counts are legible, but those specific defects remain."
     },
     "36": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/036.jpg",
-      "sha256": "bfc66fce3d4b769bed384422078c0f77d2c11d431baac73a3bd1bf02ca2a8ecf",
-      "notes": "Inspected new prompt results: 35 has visible shaded face crescent; 36/40 omit the tiny mouth and stretch the trainer silhouette relative to his reference. Correct head fill/mouth and shorten torso/legs to the actual supplied silhouette, preserving the useful new action and backgrounds."
+      "sha256": "b3cb7e44f0eae3cf67b0206332e32d062488915aae6817e180bccf725d90a136",
+      "notes": "Inspected corrected forest introduction: flat white face without eyebrow, grounded one trainer plus Charmander and Pidgey on original rock, no duplicate."
     },
     "40": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/040.jpg",
-      "sha256": "c4a8006b1b7154209840255ce502f5921523377c0c0e1bbe53210343c222f90c",
-      "notes": "Inspected new prompt results: 35 has visible shaded face crescent; 36/40 omit the tiny mouth and stretch the trainer silhouette relative to his reference. Correct head fill/mouth and shorten torso/legs to the actual supplied silhouette, preserving the useful new action and backgrounds."
+      "sha256": "7a11d35529e83b4206ee7b70c78ce270f94a00be88cef8ca18b104ea30a6f467",
+      "notes": "Actual corrected campsite lookout and Rock Gym challenge inspected: circular white heads, no eyebrows, one of each partner and matching master geometry. Small line-adjacent shadow retained on wide shot without promising identical pixels."
     },
     "42": {
       "state": "inspected",
@@ -270,32 +270,32 @@
     "41": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/041.jpg",
-      "sha256": "432c814c4160bf8f6a8cfe9bd7d4b54e56fa13fcdbf0a02430e0f1f2f26a3e86",
-      "notes": "Actual inspection: 41/44 human eyebrows/face shading; 46 entirely reverted to anime human hair and flesh skin on both humans and changed room architecture, needs regeneration from verified master/identities; 47 stretches Nico with a small head. Preserve accepted locations and other actions, correct reference silhouette."
+      "sha256": "85d62f7fba4716c4f0ba049d82e0315180f8d71bb8e16fe5efa28dea8e985450",
+      "notes": "Face correction succeeded, but bowl inventory duplicates: two extra empty bowls held while the same orange and blue pair remain on ground. Keep exactly one orange and one blue bowl, use a small neutral scoop or food pouch instead."
     },
     "44": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/044.jpg",
-      "sha256": "71218074a74f75b841d93165b6d5aef9637adbd9d5998ed2a5a6416e3782bab9",
-      "notes": "Actual inspection: 41/44 human eyebrows/face shading; 46 entirely reverted to anime human hair and flesh skin on both humans and changed room architecture, needs regeneration from verified master/identities; 47 stretches Nico with a small head. Preserve accepted locations and other actions, correct reference silhouette."
+      "sha256": "f43bfab21676a64c932f3b692e47c60a420ea30f4c47df548c4298dac023da9e",
+      "notes": "Actual corrected campsite lookout and Rock Gym challenge inspected: circular white heads, no eyebrows, one of each partner and matching master geometry. Small line-adjacent shadow retained on wide shot without promising identical pixels."
     },
     "46": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/046.jpg",
-      "sha256": "f776f8dd041fd0bf38dc5d6581c7251e5638d7053a5729a955b8653f7d99fbbe",
-      "notes": "Actual inspection: 41/44 human eyebrows/face shading; 46 entirely reverted to anime human hair and flesh skin on both humans and changed room architecture, needs regeneration from verified master/identities; 47 stretches Nico with a small head. Preserve accepted locations and other actions, correct reference silhouette."
+      "sha256": "49bdf4365237147f359e4d4719f773cfce2f5c3d9531da657fba8568f4d6577f",
+      "notes": "Full rebuild inspected: two compact white-circle humans replace rejected anime faces, correct covered outfits, one closed recall ball, no visible Pokemon, original Rock Gym restored."
     },
     "47": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/047.jpg",
-      "sha256": "202667776d333502e14f9707f1c40e4edb29dc9922133db3e4e62d26e8a780f3",
-      "notes": "Actual inspection: 41/44 human eyebrows/face shading; 46 entirely reverted to anime human hair and flesh skin on both humans and changed room architecture, needs regeneration from verified master/identities; 47 stretches Nico with a small head. Preserve accepted locations and other actions, correct reference silhouette."
+      "sha256": "5cb16a3102d60a0c7125f0837d81a5a30f51762336726f91b7c6d56f3cbb13a0",
+      "notes": "Retouch inspected: main body remains elongated and long trousers changed to shorts with white bare calves. Must rebuild compact reference silhouette with fully covered legs, preserve Rock Gym/Pokedex lesson."
     },
     "49": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/049.jpg",
-      "sha256": "74a22c7200b36ad8713ef0d318c53bf679ff1a8df8afd31e80343410f4e1449e",
-      "notes": "Viewed full landscape pond: correct shoreline/reeds/tree and one Poliwag swimming. Main trainer standing silhouette has narrow head/long legs compared with the approved identity; shorten covered torso/legs and widen head to the locked compact proportions. Preserve pose and pond geometry."
+      "sha256": "dbd8b11f1bf69d953ac4aa9fd19790689759cb6b1df8c230391fd94f5a66e6ae",
+      "notes": "Flat face corrected but main trainer red cap vanished; restore it from exact identity. Pond geography, one Poliwag and trainer outfit retained."
     },
     "50": {
       "state": "inspected",
@@ -334,34 +334,34 @@
       "notes": "Full-frame inspection: coherent stone Gym and rematch partner placement, one Poliwag Water move toward one Onix; no earlier/evolved duplicates. Close badge handoff has distinct all-white faces and proper costumes. Pewter Center correctly differs from Viridian (counter rear, bench RIGHT); small case shows ONE earned badge and seven empty slots, Charmander eating. Compact reference silhouette maintained."
     },
     "52": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/052.jpg",
-      "sha256": "94baed25406346851ea9a3548633f9f8bd1354304c48faa300e899b8c1219542",
-      "notes": "Actual visual issues: 52 main face lacks two black dot eyes and line mouth, shows one central outlined oval. 57 added eyebrow strokes. 58 stretched both human bodies and adds facial shades. 59 has an unwanted black/white picture frame, rival eyebrows and an omitted main mouth. Keep correct species/court placement; correct face/silhouette/frame only."
+      "sha256": "7e2efe1b4852c4249317bb67df9dc32ebe5300f241b8c7117d95bbd5b1e38280",
+      "notes": "Corrected face inspected: Pokedex-like zero eye removed, two eye dots and short mouth restored. One trainer on bank, one seated Charmander and one swimming Poliwag; small outline-adjacent face rim remains as minor difference."
     },
     "57": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/057.jpg",
-      "sha256": "4516efea2338960a805536c40c64b72640b1d7ab7550c0a706dacd6e507240c9",
-      "notes": "Actual visual issues: 52 main face lacks two black dot eyes and line mouth, shows one central outlined oval. 57 added eyebrow strokes. 58 stretched both human bodies and adds facial shades. 59 has an unwanted black/white picture frame, rival eyebrows and an omitted main mouth. Keep correct species/court placement; correct face/silhouette/frame only."
+      "sha256": "1b96913d2515cdf6aaa5970b0796b97e0ec7c2d653383453c76734df77a6e4ad",
+      "notes": "Retouch inspected: flat white circular faces without eyebrows, compact two trainers, white hands and assigned red-cap/blue versus bald/green identities. Distinct roadside court with bench/fence preserved."
     },
     "58": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/058.jpg",
-      "sha256": "143d5edd22c43d6e4e5c49fbb3b958bf13dc35a4cbbccf03dcbca71f00817e0d",
-      "notes": "Actual visual issues: 52 main face lacks two black dot eyes and line mouth, shows one central outlined oval. 57 added eyebrow strokes. 58 stretched both human bodies and adds facial shades. 59 has an unwanted black/white picture frame, rival eyebrows and an omitted main mouth. Keep correct species/court placement; correct face/silhouette/frame only."
+      "sha256": "f979e2673da7e767459d62c4efd5566d5370c68687af6956c705f50b5bfa7f89",
+      "notes": "Face marks improved but both trainers stay four-head-diameters tall; main boots became black sneakers. Rebuild exact compact covered silhouettes from identities."
     },
     "59": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/059.jpg",
-      "sha256": "ceeccc088aadf9adbb2ef3b5d05d7ecd020c91df3dfcb2215dee99979109686b",
-      "notes": "Actual visual issues: 52 main face lacks two black dot eyes and line mouth, shows one central outlined oval. 57 added eyebrow strokes. 58 stretched both human bodies and adds facial shades. 59 has an unwanted black/white picture frame, rival eyebrows and an omitted main mouth. Keep correct species/court placement; correct face/silhouette/frame only."
+      "sha256": "5c7f9dc5feabcf25ab43a476e54ceced5fdf4deca79679427a64166db5ea5448",
+      "notes": "Border removed and rival compact, but main trainer still has tiny head on a four-head-height body. Rebuild main short reference silhouette; retain active bird/turtle challenge."
     },
     "60": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/060.jpg",
-      "sha256": "a1154f1ec33c34c3aaee017cab742cc088d3c73e70587fb2839cbf78f5151fa8",
-      "notes": "Actual review: 60 useful rival/bird battle but both human eyebrow strokes and large main mouth must become the simple dot-eye/line-mouth design. 61 correct night camp and one sleeping Charmander but grey crescent inside main face needs white fill restoration. Keep actions, poses and props."
+      "sha256": "76e1a57963c9287a52adf48ae638d468fd7e0f2e72ece9193109bd259b79a411",
+      "notes": "Battle reaction retouch inspected: eyebrow strokes removed, white heads with simple expressions, one Pidgey and one moving Squirtle, no border or duplicate. Simple open mouth retained without teeth."
     },
     "61": {
       "state": "rejected",
@@ -390,32 +390,560 @@
     "62": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/062.jpg",
-      "sha256": "d55cd987e75b9f65888ccaf6a0be03cd5bd42adc07205feb2b8d2c3a7c589fb7",
-      "notes": "Actual review: 62/64 added human eyebrows/shaded head; 69 clear inner grey crescent. 66/67 reverted main trainer to human peach skin/ears/hair, unacceptable. 66 also made Charmeleon taller than trainer instead of about half his height; correct to referenced human/creature silhouettes while preserving appropriate campsite geometry."
+      "sha256": "71cbf9b0b5b1e6131a263501037a4aeec9c326e6cc1f6ffb0bbef58d2cef0261",
+      "notes": "Retouch inspected: main trainer still has eyebrow strokes and elongated body. Rebuild compact identity while preserving Water Gym action/species and orange-coated white-headed coach."
     },
     "64": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/064.jpg",
-      "sha256": "b2ef93b3342f8f81674ac25dfe4a3233834b0cba8c1e4980e810b120ba460568",
-      "notes": "Actual review: 62/64 added human eyebrows/shaded head; 69 clear inner grey crescent. 66/67 reverted main trainer to human peach skin/ears/hair, unacceptable. 66 also made Charmeleon taller than trainer instead of about half his height; correct to referenced human/creature silhouettes while preserving appropriate campsite geometry."
+      "sha256": "80d5cf412a5f59c295929644c6c269835e844c50e6271e7ae95f577bdc818e46",
+      "notes": "Inspected recall-before-electric-hit action: one compact white-headed trainer, one Pidgey and one Raichu, beam aimed at bird, correct grey/yellow training hall. No eyebrows; minor thin outline rim retained."
     },
     "66": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/066.jpg",
-      "sha256": "e5c47f36efd05ac5dd397d6d313123b1507274d11e6356e30463034e6dcfa626",
-      "notes": "Actual review: 62/64 added human eyebrows/shaded head; 69 clear inner grey crescent. 66/67 reverted main trainer to human peach skin/ears/hair, unacceptable. 66 also made Charmeleon taller than trainer instead of about half his height; correct to referenced human/creature silhouettes while preserving appropriate campsite geometry."
+      "sha256": "b7f4649f19218b9327ea4206336bb9da1857bf50ece53543ebd9c9d5e6296d3e",
+      "notes": "Corrected evolution and pond lesson inspected: main trainer restored to white round face/cap/blue covered outfit, one red horned Charmeleon with one flame tail. Original campsite/pond props retained; creature scale varies modestly between camera setups, no extra form or anime human."
     },
     "67": {
       "state": "rejected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/067.jpg",
-      "sha256": "3250f13eb257206dda1801aa87b117439b283838e56a4141dbd12faee21cdea0",
-      "notes": "Actual review: 62/64 added human eyebrows/shaded head; 69 clear inner grey crescent. 66/67 reverted main trainer to human peach skin/ears/hair, unacceptable. 66 also made Charmeleon taller than trainer instead of about half his height; correct to referenced human/creature silhouettes while preserving appropriate campsite geometry."
+      "sha256": "d6d40fa08accf179f50344884ced7c3fc822c9b6c28b3cc0229eb2f94cb3ee64",
+      "notes": "Retouches inspected: long human torsos/legs remain rather than exact compact references. Trader also lost its navy cap in 77. Rebuild from selected master/identities, retain the concrete partner-rest/conversation actions."
     },
     "69": {
-      "state": "rejected",
+      "state": "inspected",
       "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/069.jpg",
-      "sha256": "8cbc14c2675fc1bdded99907637510be3992f7ecda8930aa96a5afffeed88afc",
-      "notes": "Actual review: 62/64 added human eyebrows/shaded head; 69 clear inner grey crescent. 66/67 reverted main trainer to human peach skin/ears/hair, unacceptable. 66 also made Charmeleon taller than trainer instead of about half his height; correct to referenced human/creature silhouettes while preserving appropriate campsite geometry."
+      "sha256": "4e13c0a264151ba2b42cb7999b0c94dc0aebe366e9b6d06b7d016526665f2c4c",
+      "notes": "Corrected evolution and pond lesson inspected: main trainer restored to white round face/cap/blue covered outfit, one red horned Charmeleon with one flame tail. Original campsite/pond props retained; creature scale varies modestly between camera setups, no extra form or anime human."
+    },
+    "70": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/070.jpg",
+      "sha256": "6c03e22a9c8cd883c7b2d9ca29b835ae03c0690a26140d8c1e0655abdc76695c",
+      "notes": "Inspected full native/recovered frames: main retains compact red-cap blue-jacket silhouette, pure white circular head and small face, correct one partner per species. Evolution states are distinct: Pidgeotto red crest and Poliwhirl white fists/no tail, no earlier forms copied. Camp tent/log/firepit and pond shoreline/reeds are preserved. Extra feeding bowl on 73 is a movable prop, not new room geometry."
+    },
+    "71": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/071.jpg",
+      "sha256": "726dbf25805fccc82f29c97ae5bb2aa5893a26489b09e83171170506b6718842",
+      "notes": "Inspected full native/recovered frames: main retains compact red-cap blue-jacket silhouette, pure white circular head and small face, correct one partner per species. Evolution states are distinct: Pidgeotto red crest and Poliwhirl white fists/no tail, no earlier forms copied. Camp tent/log/firepit and pond shoreline/reeds are preserved. Extra feeding bowl on 73 is a movable prop, not new room geometry."
+    },
+    "72": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/072.jpg",
+      "sha256": "3f79d2fec115721c35c6dd483bf3f194be105b8044e1f77be7b6e76eaab6b750",
+      "notes": "Inspected full native/recovered frames: main retains compact red-cap blue-jacket silhouette, pure white circular head and small face, correct one partner per species. Evolution states are distinct: Pidgeotto red crest and Poliwhirl white fists/no tail, no earlier forms copied. Camp tent/log/firepit and pond shoreline/reeds are preserved. Extra feeding bowl on 73 is a movable prop, not new room geometry."
+    },
+    "73": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/073.jpg",
+      "sha256": "3d08f4d457f1aa7a0ee76537f4825cf571a1e4d6100aa162e726c8d3775aeab4",
+      "notes": "Inspected full native/recovered frames: main retains compact red-cap blue-jacket silhouette, pure white circular head and small face, correct one partner per species. Evolution states are distinct: Pidgeotto red crest and Poliwhirl white fists/no tail, no earlier forms copied. Camp tent/log/firepit and pond shoreline/reeds are preserved. Extra feeding bowl on 73 is a movable prop, not new room geometry."
+    },
+    "74": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/074.jpg",
+      "sha256": "26349d74da56cc6ff16c905e27a8f2eba0e0cdd9c9e728a5a650fd2c35c8fe8a",
+      "notes": "Viewed full frames: compact all-white Nico caring for one resting Charmeleon at camp, then one trainer and partner walking with a small plain supply packet on the distinct Celadon street. Existing place geometry retained, no human hair/skin-tone face or duplicate avatar. 74 has a very thin ink line at the extreme image edge, not a separate boxed panel; native render framing handles this edge."
+    },
+    "78": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/078.jpg",
+      "sha256": "9b7331817ab2bb3a1f161b339c24cc34841eb22857e74b20184135652e76cf22",
+      "notes": "Viewed full frames: compact all-white Nico caring for one resting Charmeleon at camp, then one trainer and partner walking with a small plain supply packet on the distinct Celadon street. Existing place geometry retained, no human hair/skin-tone face or duplicate avatar. 74 has a very thin ink line at the extreme image edge, not a separate boxed panel; native render framing handles this edge."
+    },
+    "75": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/075.jpg",
+      "sha256": "4091e27a19333b4a2afc4dbe421cb04be6f5c043a68e8acccaebb07f701ed3ae",
+      "notes": "Actual feeding and city exchange corrections inspected: human eyebrow/large grin strokes removed, white circle faces and assigned caps/outfits, distinct Pokemon count, green campsite and shuttered street retained. Minor cap-adjacent grey trim retained."
+    },
+    "76": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/076.jpg",
+      "sha256": "303e21f14e851212a271be5c053a56cdb566bc27e1358c377c911b9db2a2cb51",
+      "notes": "Actual feeding and city exchange corrections inspected: human eyebrow/large grin strokes removed, white circle faces and assigned caps/outfits, distinct Pokemon count, green campsite and shuttered street retained. Minor cap-adjacent grey trim retained."
+    },
+    "77": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/077.jpg",
+      "sha256": "763e58fda3af73e8b6df14de21f280f974c8c05090078ffe8324b719abd696d4",
+      "notes": "Retouches inspected: long human torsos/legs remain rather than exact compact references. Trader also lost its navy cap in 77. Rebuild from selected master/identities, retain the concrete partner-rest/conversation actions."
+    },
+    "79": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/079.jpg",
+      "sha256": "ef876d90276180ab5b6a66867bbba242768ce2eadc317a7b063a1c8356259c20",
+      "notes": "Dialogue hand gesture preserved but main face retains a broad grey crescent. Needs flat white fill from source identity."
+    },
+    "80": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/080.jpg",
+      "sha256": "2f98ba29ddc95d9138c82e7e6b5b2153551693dad5d0ac34289d408bb01da96e",
+      "notes": "Street theft and smoke action retouches inspected: distinct black-uniform thief/yellow-coat trainer, one Eevee and then one Koffing. Human faces round and white with no eyebrows; minor cap-edge trim remains. Shuttered storefront/planter geometry retained."
+    },
+    "81": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/081.jpg",
+      "sha256": "74ddf0131b6ca3de864eee307db951749936b198d38200f2d110da2b790884dd",
+      "notes": "Corrected street departure inspected: main trainer has flat white round face, no eyebrows, one Charmeleon, existing shop/planter geography. Compact silhouette and same outfit retained."
+    },
+    "84": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/084.jpg",
+      "sha256": "8f883d91481b20734ceafac1a7add9724e8cdd7eeed85c3892ee36043691cafb",
+      "notes": "Inspected full action/clinic/exterior frames: one partner each and original Celadon Clinic layout (counter LEFT, window/bench RIGHT). 84 shows controlled fire clearing path while Jonah holds recalled Eevee ball, no Eevee simultaneously visible; 85 heals larger partner on moved floor mat. 86 handshake/sniff, 87 blank communicator, 89 quiet coaching interaction. White circular faces, consistent outfits and no text panels/realistic people; very small outline-adjacent grey highlights remain on some caps/edges."
+    },
+    "85": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/085.jpg",
+      "sha256": "24a3b65d260e343628799c00dc3232fdc43c10297432c235fbed2cfd09d6dba1",
+      "notes": "Inspected full action/clinic/exterior frames: one partner each and original Celadon Clinic layout (counter LEFT, window/bench RIGHT). 84 shows controlled fire clearing path while Jonah holds recalled Eevee ball, no Eevee simultaneously visible; 85 heals larger partner on moved floor mat. 86 handshake/sniff, 87 blank communicator, 89 quiet coaching interaction. White circular faces, consistent outfits and no text panels/realistic people; very small outline-adjacent grey highlights remain on some caps/edges."
+    },
+    "86": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/086.jpg",
+      "sha256": "346b756f2f86f3142cd8953ff6429c781ced6fa11f6f8302cbbbbcbe4fc2d14a",
+      "notes": "Inspected full action/clinic/exterior frames: one partner each and original Celadon Clinic layout (counter LEFT, window/bench RIGHT). 84 shows controlled fire clearing path while Jonah holds recalled Eevee ball, no Eevee simultaneously visible; 85 heals larger partner on moved floor mat. 86 handshake/sniff, 87 blank communicator, 89 quiet coaching interaction. White circular faces, consistent outfits and no text panels/realistic people; very small outline-adjacent grey highlights remain on some caps/edges."
+    },
+    "87": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/087.jpg",
+      "sha256": "5db05cb9eb52b581e8e36f1f8b83b6797593dcc05da2007fcf2e1b8bd0a776a3",
+      "notes": "Inspected full action/clinic/exterior frames: one partner each and original Celadon Clinic layout (counter LEFT, window/bench RIGHT). 84 shows controlled fire clearing path while Jonah holds recalled Eevee ball, no Eevee simultaneously visible; 85 heals larger partner on moved floor mat. 86 handshake/sniff, 87 blank communicator, 89 quiet coaching interaction. White circular faces, consistent outfits and no text panels/realistic people; very small outline-adjacent grey highlights remain on some caps/edges."
+    },
+    "89": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/089.jpg",
+      "sha256": "9369c23f5d205f2556104724426815cc1be43724439fc86003ab149f22328c1c",
+      "notes": "Inspected full action/clinic/exterior frames: one partner each and original Celadon Clinic layout (counter LEFT, window/bench RIGHT). 84 shows controlled fire clearing path while Jonah holds recalled Eevee ball, no Eevee simultaneously visible; 85 heals larger partner on moved floor mat. 86 handshake/sniff, 87 blank communicator, 89 quiet coaching interaction. White circular faces, consistent outfits and no text panels/realistic people; very small outline-adjacent grey highlights remain on some caps/edges."
+    },
+    "82": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/082.jpg",
+      "sha256": "b88283732b1136c67115d029dfe42868e93ac9cf78c3837cab29a9d7908d6911",
+      "notes": "Street geometry repaired, but main trainer remains long/thin with black shoes/open jacket instead of compact blue zip/brown boots identity. Full rebuild of exact identities required."
+    },
+    "83": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/083.jpg",
+      "sha256": "9452a9e3a6eb69fc92890978d7a9b6fb0248e600b217a3230f62a604b877c656",
+      "notes": "Street theft and smoke action retouches inspected: distinct black-uniform thief/yellow-coat trainer, one Eevee and then one Koffing. Human faces round and white with no eyebrows; minor cap-edge trim remains. Shuttered storefront/planter geometry retained."
+    },
+    "88": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/088.jpg",
+      "sha256": "200bd3fbdf88c60773740b55049f875b6121c36d5f3f88e7a8f2dc27a88d0c9b",
+      "notes": "Faces simplified but Nicos red cap disappeared in both images; main body is also elongated. Rebuild exact compact covered trainer while retaining recovery/conversation and original rooms."
+    },
+    "90": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/090.jpg",
+      "sha256": "f454dc3acd8fea88190ec806dc2066f4d4e6fec959e083692ccde7ce88472ca2",
+      "notes": "Actually viewed all frames: same lavender training/Gym court geometry and exterior low wall, one trainer/partner per assigned role. Wartortle/Poliwhirl distinct, no earlier-form duplicates; solo practice, opening challenge, single Alakazam reposition and outside coaching match narration. Human faces round white with small dot/line design, no hair/skin-tone humans; 95 has controlled small fire/motion marks around creature, not an extra creature."
+    },
+    "92": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/092.jpg",
+      "sha256": "6299b2c0bc58d13c66cb8a0d60625c5263902c543ec0c36569f810dea37a8814",
+      "notes": "Actually viewed all frames: same lavender training/Gym court geometry and exterior low wall, one trainer/partner per assigned role. Wartortle/Poliwhirl distinct, no earlier-form duplicates; solo practice, opening challenge, single Alakazam reposition and outside coaching match narration. Human faces round white with small dot/line design, no hair/skin-tone humans; 95 has controlled small fire/motion marks around creature, not an extra creature."
+    },
+    "94": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/094.jpg",
+      "sha256": "928546c402a7b6ae83989adee905049081afffcef1c9f6c239c875343f42f59c",
+      "notes": "Actually viewed all frames: same lavender training/Gym court geometry and exterior low wall, one trainer/partner per assigned role. Wartortle/Poliwhirl distinct, no earlier-form duplicates; solo practice, opening challenge, single Alakazam reposition and outside coaching match narration. Human faces round white with small dot/line design, no hair/skin-tone humans; 95 has controlled small fire/motion marks around creature, not an extra creature."
+    },
+    "95": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/095.jpg",
+      "sha256": "9cf5e7a4def54675833b259216ae0aaf769ca211bc7da883694c95dd027b3260",
+      "notes": "Actually viewed all frames: same lavender training/Gym court geometry and exterior low wall, one trainer/partner per assigned role. Wartortle/Poliwhirl distinct, no earlier-form duplicates; solo practice, opening challenge, single Alakazam reposition and outside coaching match narration. Human faces round white with small dot/line design, no hair/skin-tone humans; 95 has controlled small fire/motion marks around creature, not an extra creature."
+    },
+    "97": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/097.jpg",
+      "sha256": "7c165bdfd9c1bf1f89476cc5d6ea76ef177b97bc237727d439a186421850daef",
+      "notes": "Actually viewed all frames: same lavender training/Gym court geometry and exterior low wall, one trainer/partner per assigned role. Wartortle/Poliwhirl distinct, no earlier-form duplicates; solo practice, opening challenge, single Alakazam reposition and outside coaching match narration. Human faces round white with small dot/line design, no hair/skin-tone humans; 95 has controlled small fire/motion marks around creature, not an extra creature."
+    },
+    "91": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/091.jpg",
+      "sha256": "3405dedca062690f6168877efb40aee7572b0a107db69502796d0967dfbb19e3",
+      "notes": "Psychic Gym approach retouch inspected: round flat white face, no eyebrow, red cap/blue zip outfit retained, one red Charmeleon, original lavender square/window/door geography."
+    },
+    "93": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/093.jpg",
+      "sha256": "d20cd2cd0a82ec3d9fb0c18e99b8bb74d741d8496e6dd3b968c3bc8a1662f313",
+      "notes": "Faces simplified but Nicos red cap disappeared in both images; main body is also elongated. Rebuild exact compact covered trainer while retaining recovery/conversation and original rooms."
+    },
+    "96": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/096.jpg",
+      "sha256": "a6f76d0329d1bcde5e92a0a0dd35986f236caa4edf0f73237be7f569c6bf7b53",
+      "notes": "Actual rebuilt Psychic loss and Charizard evolution inspected: compact white-circle trainer/rival with correct outfits, one Charmeleon or one orange two-winged Charizard, no duplicate/hybrid. Original Gym and green camp retained. Dragon scale now proportionate to compact trainer."
+    },
+    "98": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/098.jpg",
+      "sha256": "e88d79402000efa7a40446d8961de69a4f429e1fdd9839984ec7a70a2f5d057e",
+      "notes": "Viewed full frames: solo recall practice, calm badge/rest break, repeated sleeve contact and quiet pause all keep the same Gym exterior and assigned one-person/partner identities. Round white main faces, compact covered proportions, no hair/realistic skin or overlays. 104 introduces ONE evolved Charizard and moved mat, no earlier starter duplicated; green tent/right log/firepit remain."
+    },
+    "100": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/100.jpg",
+      "sha256": "c6cdb78ce1329fe35ca80135b38143091d74a6b4d4e61c85dd55a0d27cd6e10c",
+      "notes": "Viewed full frames: solo recall practice, calm badge/rest break, repeated sleeve contact and quiet pause all keep the same Gym exterior and assigned one-person/partner identities. Round white main faces, compact covered proportions, no hair/realistic skin or overlays. 104 introduces ONE evolved Charizard and moved mat, no earlier starter duplicated; green tent/right log/firepit remain."
+    },
+    "101": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/101.jpg",
+      "sha256": "60c21b846c06a0ae2704f743f39da0dd4ff4c79d3e434ebab4c3bac8b1bcb8ed",
+      "notes": "Viewed full frames: solo recall practice, calm badge/rest break, repeated sleeve contact and quiet pause all keep the same Gym exterior and assigned one-person/partner identities. Round white main faces, compact covered proportions, no hair/realistic skin or overlays. 104 introduces ONE evolved Charizard and moved mat, no earlier starter duplicated; green tent/right log/firepit remain."
+    },
+    "102": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/102.jpg",
+      "sha256": "40e9120fd9cb471216ed753de56b6a81b98649ccc660cdf67c23f5028cd0ff32",
+      "notes": "Viewed full frames: solo recall practice, calm badge/rest break, repeated sleeve contact and quiet pause all keep the same Gym exterior and assigned one-person/partner identities. Round white main faces, compact covered proportions, no hair/realistic skin or overlays. 104 introduces ONE evolved Charizard and moved mat, no earlier starter duplicated; green tent/right log/firepit remain."
+    },
+    "104": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/104.jpg",
+      "sha256": "d4451592df9991b4a11202bbfe66d2d9d18d5f6eb10f7d738c041f0e291e6761",
+      "notes": "Viewed full frames: solo recall practice, calm badge/rest break, repeated sleeve contact and quiet pause all keep the same Gym exterior and assigned one-person/partner identities. Round white main faces, compact covered proportions, no hair/realistic skin or overlays. 104 introduces ONE evolved Charizard and moved mat, no earlier starter duplicated; green tent/right log/firepit remain."
+    },
+    "99": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/099.jpg",
+      "sha256": "10d456bcaa71e55a05c1e128a4240124cfc66e5291e31b28794f524e97127c2c",
+      "notes": "Eyebrows removed and cast correct, but main red cap disappeared. Restore exact main identity with cap, retain battle geometry and one frog/one psychic creature."
+    },
+    "103": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/103.jpg",
+      "sha256": "98b41d90080f44b6b169bd2aba2a61b82764b7b791a576d049d15c762fcf6397",
+      "notes": "Actual rebuilt Psychic loss and Charizard evolution inspected: compact white-circle trainer/rival with correct outfits, one Charmeleon or one orange two-winged Charizard, no duplicate/hybrid. Original Gym and green camp retained. Dragon scale now proportionate to compact trainer."
+    },
+    "105": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/105.jpg",
+      "sha256": "cea05902e38b153eb0b910f619710b7531bcbc5a603777a73c4e5acda32603d3",
+      "notes": "Full rebuilds inspected: white-circle compact red-cap trainer instead of anime flesh face, one dragon per continuous frame, no human-dragon hybrid, orange dragon with two teal wings and one flaming tail. Correct green tent/map/bird branch or training/Ground Gym geography. Dragon apparent size varies by pose/setup; minor tail-base curvature retained."
+    },
+    "106": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/106.jpg",
+      "sha256": "7e0a7b6cb0a08918baa5010aa36650c8dceab29778dc3684eb7241446ea3d8e9",
+      "notes": "Inspected full frames: one flying Charizard over established campsite, no rider/extra trainer; Ground Gym preserves RIGHT windows/LEFT platform/sand court, one Poliwhirl water move toward Rhyhorn and one returning Pidgeotto. Compact white-headed trainer, consistent costumes, no human hair or flesh skin."
+    },
+    "109": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/109.jpg",
+      "sha256": "e0174caddea7dc8f50d113770cc420b7dcf042d4d458247743d5ea96db461e57",
+      "notes": "Inspected full frames: one flying Charizard over established campsite, no rider/extra trainer; Ground Gym preserves RIGHT windows/LEFT platform/sand court, one Poliwhirl water move toward Rhyhorn and one returning Pidgeotto. Compact white-headed trainer, consistent costumes, no human hair or flesh skin."
+    },
+    "110": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/110.jpg",
+      "sha256": "3d5aac08e02fe60c0239fc1f6326a5384be3f1f56976b750e730caa4e26631cd",
+      "notes": "Inspected full frames: one flying Charizard over established campsite, no rider/extra trainer; Ground Gym preserves RIGHT windows/LEFT platform/sand court, one Poliwhirl water move toward Rhyhorn and one returning Pidgeotto. Compact white-headed trainer, consistent costumes, no human hair or flesh skin."
+    },
+    "107": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/107.jpg",
+      "sha256": "d7994f75e24aec3741984fadefaf47212af1c4855be4b5d7d13af1c1f8dd7e5a",
+      "notes": "Full rebuilds inspected: white-circle compact red-cap trainer instead of anime flesh face, one dragon per continuous frame, no human-dragon hybrid, orange dragon with two teal wings and one flaming tail. Correct green tent/map/bird branch or training/Ground Gym geography. Dragon apparent size varies by pose/setup; minor tail-base curvature retained."
+    },
+    "108": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/108.jpg",
+      "sha256": "73f1417b385d813e711c3878d222949bb0eafe67773f4ea91de43ef0d35db1d1",
+      "notes": "Full rebuilds inspected: white-circle compact red-cap trainer instead of anime flesh face, one dragon per continuous frame, no human-dragon hybrid, orange dragon with two teal wings and one flaming tail. Correct green tent/map/bird branch or training/Ground Gym geography. Dragon apparent size varies by pose/setup; minor tail-base curvature retained."
+    },
+    "111": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/111.jpg",
+      "sha256": "50cd0bdae48b74001eb98295c7f515f467e055a33eaca4361d58939248837a25",
+      "notes": "Border removed but main trainer has broad grey facial crescent and elongated trouser body. Rebuild compact reference trainer while keeping the bird evolution/Ground Gym action."
+    },
+    "112": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/112.jpg",
+      "sha256": "03b03112fc997493f87527051cf252677f41d8745fa92ffead6f4d5a1816f521",
+      "notes": "Full rebuild of badge handoff inspected: exactly two white-circle compact humans with correct covered clothes, tiny green badge in physical white hands, original Ground Gym; no 3D mannequin or anime face."
+    },
+    "113": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/113.jpg",
+      "sha256": "53c608c78d1c4d5173333935615b62cc1ce8cb69b44fc698285265df627a4450",
+      "notes": "Full rebuilt eight-badge team shot inspected: one white-circle red-cap trainer and one each dragon/bird/blue frog, open physical badge case in hands, one food bowl, correct Ground Gym door/hedge facade. No inset or anime human."
+    },
+    "117": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/117.jpg",
+      "sha256": "df6a2d658bf14a0e7b7d8b9cda18abb650f6b1213b539caf235d2b760f175c6f",
+      "notes": "Full-frame inspection: two correctly costumed white-headed trainers resting in referenced foyer; Ice arena preserves pool RIGHT/dry platform LEFT and original rail/window. Correct unique Charizard/Lapras and mentor glasses/red scarf, no earlier/evolved duplicate or human hair/skin. 119 shows Water move toward one partner and recall preparation."
+    },
+    "118": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/118.jpg",
+      "sha256": "2a1afb4b7a272394f44106c02b6daf34819a0f00b60310dda6d54d5731dbd438",
+      "notes": "Full-frame inspection: two correctly costumed white-headed trainers resting in referenced foyer; Ice arena preserves pool RIGHT/dry platform LEFT and original rail/window. Correct unique Charizard/Lapras and mentor glasses/red scarf, no earlier/evolved duplicate or human hair/skin. 119 shows Water move toward one partner and recall preparation."
+    },
+    "119": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/119.jpg",
+      "sha256": "a5b8cccd4b231cbc07a82c62d080542b072f9dc9d4037135f17028cd88744c08",
+      "notes": "Full-frame inspection: two correctly costumed white-headed trainers resting in referenced foyer; Ice arena preserves pool RIGHT/dry platform LEFT and original rail/window. Correct unique Charizard/Lapras and mentor glasses/red scarf, no earlier/evolved duplicate or human hair/skin. 119 shows Water move toward one partner and recall preparation."
+    },
+    "114": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/114.jpg",
+      "sha256": "6e686e66e5acf4cadc15a67f4ac84f1c99f9d30bab4938a7b461262a4e942092",
+      "notes": "Victory cave correction inspected: both trainers compact and separately identified by red/navy caps and blue/coral coats, one Pidgeot and one four-armed Machamp, readable stone tunnel and original rear opening. No human skin/long realistic body."
+    },
+    "115": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/115.jpg",
+      "sha256": "35fd306010735fdebd59e37b8b810f1b30a8707da9018935b5a1174c14bcfc3f",
+      "notes": "Actual defects: 114/116 elongate human body/narrow head relative to reference; 115/120 added eyebrows and face shadows. 121 reverted to anime human and an inset badge-case panel/text/number, must regenerate from foyer/identity/object references."
+    },
+    "116": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/116.jpg",
+      "sha256": "90a5d55c2cc7583312229a08a578c08f119f595e8230dbab5fc15c355d250d84",
+      "notes": "Actual defects: 114/116 elongate human body/narrow head relative to reference; 115/120 added eyebrows and face shadows. 121 reverted to anime human and an inset badge-case panel/text/number, must regenerate from foyer/identity/object references."
+    },
+    "120": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/120.jpg",
+      "sha256": "fcf1d6532d2a56051909bdcca6409161d39e62cb0acdee0aa69fb16f4376f512",
+      "notes": "Ice-room correction inspected: no eyebrows/grey crescent, original blue room and pool, one white-circle trainer, one blue spiral frog on dry platform and one Lapras in water. No duplicated identity."
+    },
+    "121": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/121.jpg",
+      "sha256": "63bc418496b8e287d4f284e8d88dd7a8501ee23784a452696ec95db33fdf22f1",
+      "notes": "Full rebuilt defeated trainer inspected: one compact white-circle red-cap trainer holding physical open case on foyer steps, left bench/right recovery counter retained. No panel, printed count, anime human or visible Pokemon."
+    },
+    "122": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/122.jpg",
+      "sha256": "fc8b5757836ba7d026cddee38fc28c13892cb55d598671ba8ddce5fbd40d35d7",
+      "notes": "Actually inspected: foyer layout remains blue bench LEFT/recovery RIGHT/doors rear; notes/closed case and rival with one attached-cannon Blastoise look correct. Resting Charizard one tail/two wings, no earlier form. Fighting chamber keeps rack LEFT/rock RIGHT and ONE four-armed Machamp; white round-faced covered brown-gi coach and main trainer match references. Notebook has abstract marks, no overlay caption."
+    },
+    "123": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/123.jpg",
+      "sha256": "addb9f732ba59507ae4a22e1d0c92d4afb8986b9fb4a1c1462b92f1aeffb71d3",
+      "notes": "Actually inspected: foyer layout remains blue bench LEFT/recovery RIGHT/doors rear; notes/closed case and rival with one attached-cannon Blastoise look correct. Resting Charizard one tail/two wings, no earlier form. Fighting chamber keeps rack LEFT/rock RIGHT and ONE four-armed Machamp; white round-faced covered brown-gi coach and main trainer match references. Notebook has abstract marks, no overlay caption."
+    },
+    "126": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/126.jpg",
+      "sha256": "f252f1b70cc0b96eb12a4bec10a9039eeadc1f52d4e16d8fac5d7a9ae4fc09d5",
+      "notes": "Actually inspected: foyer layout remains blue bench LEFT/recovery RIGHT/doors rear; notes/closed case and rival with one attached-cannon Blastoise look correct. Resting Charizard one tail/two wings, no earlier form. Fighting chamber keeps rack LEFT/rock RIGHT and ONE four-armed Machamp; white round-faced covered brown-gi coach and main trainer match references. Notebook has abstract marks, no overlay caption."
+    },
+    "129": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/129.jpg",
+      "sha256": "096b8feadb8e05d3796e4b1ee4aadc4288944f37556a7143f2e8b7feebb133e5",
+      "notes": "Actually inspected: foyer layout remains blue bench LEFT/recovery RIGHT/doors rear; notes/closed case and rival with one attached-cannon Blastoise look correct. Resting Charizard one tail/two wings, no earlier form. Fighting chamber keeps rack LEFT/rock RIGHT and ONE four-armed Machamp; white round-faced covered brown-gi coach and main trainer match references. Notebook has abstract marks, no overlay caption."
+    },
+    "124": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/124.jpg",
+      "sha256": "3339482c38eb4b3176e709668ce11661d17fdfb45b59cc236ee2c0fcfabc0d40",
+      "notes": "Corrected rival conversation and rebuilt team readiness inspected: round flat white human faces, assigned outfits, foyer bench/steps/counter geometry, no recovery label, one of each waiting partner. Some relative Pokemon scale variation retained without claiming perfect identity."
+    },
+    "125": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/125.jpg",
+      "sha256": "b7a4aadda31c30a2fc8787a8c086284cf6e94eadd61109091c8760f76cac0fa9",
+      "notes": "Eyebrows simplified but main trainer still elongated with tiny head on tall torso/legs. Rebuild compact identity in the same champion arena; keep one Pidgeot and one Blastoise."
+    },
+    "127": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/127.jpg",
+      "sha256": "c5aaa5ca32d5043822a5dd47f44a8a195df83d0d564a15f2f9f3f125f3c2e845",
+      "notes": "Corrected rival conversation and rebuilt team readiness inspected: round flat white human faces, assigned outfits, foyer bench/steps/counter geometry, no recovery label, one of each waiting partner. Some relative Pokemon scale variation retained without claiming perfect identity."
+    },
+    "128": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/128.jpg",
+      "sha256": "bdc54d7e1fa7c338dcc786d1c13895d1aab4ba365b279d0bd56f75f1a6c08490",
+      "notes": "Actual issues: 124/125 human eyebrows and ear-like side protrusion on rival. 127 changed foyer geometry and wrote a recovery label; regenerate using real master. 128 main trainer reverted to anime hair/skin; replace only human with exact white-circle identity while preserving Water arena/partners."
+    },
+    "130": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/130.jpg",
+      "sha256": "41135f6eacffc9cc2c278a45888a1a474ff2ce25bff268fc20c280e91ac371e6",
+      "notes": "Viewed all: Ghost chamber preserves left door/right lamps, one cane coach/Gengar and assigned trainer/Charizard. Foyer between-room care shows one bottle and all three partners with no duplicates. Dragon chamber ending keeps correct emerald geometry, one cape coach and the three separate partners, flat white human faces and original covered outfits."
+    },
+    "131": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/131.jpg",
+      "sha256": "5d06e2a9a56ee8b852ec1d1b0945e4ee650e413856c22122149686b0049e9120",
+      "notes": "Viewed all: Ghost chamber preserves left door/right lamps, one cane coach/Gengar and assigned trainer/Charizard. Foyer between-room care shows one bottle and all three partners with no duplicates. Dragon chamber ending keeps correct emerald geometry, one cape coach and the three separate partners, flat white human faces and original covered outfits."
+    },
+    "137": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/137.jpg",
+      "sha256": "f380523833349bda557a929bf73a91d6d08d50dba355b3e00efe8b9bd838036b",
+      "notes": "Viewed all: Ghost chamber preserves left door/right lamps, one cane coach/Gengar and assigned trainer/Charizard. Foyer between-room care shows one bottle and all three partners with no duplicates. Dragon chamber ending keeps correct emerald geometry, one cape coach and the three separate partners, flat white human faces and original covered outfits."
+    },
+    "132": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/132.jpg",
+      "sha256": "a90762d84b092f288aba335b5068f76533247909ea34580143fa52648a074dd9",
+      "notes": "Dragon League retouches inspected: anime flesh/hair replaced with bound compact white-circle trainer and red-cape coach; one Dragonite, or one frog using an ice-coloured attack against one Dragonite. Original emerald boundary/window/door/step room preserved, no eyebrows/duplicate."
+    },
+    "133": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/133.jpg",
+      "sha256": "78d1fc5f7679af635b564b48b2adccaa87ae072e48122d11a2e16963838ff74b",
+      "notes": "Actual review: 132/135 revert human trainers to anime hair/skin; replace human figures using exact white-circle identities. 133 main proportions elongated; 134/136 added eyebrows/shadows. Species counts and emerald room remain usable; preserve them during targeted corrections."
+    },
+    "134": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/134.jpg",
+      "sha256": "f4f5357621765d8bb41ce386fea72067c80afffe56e1e4535eae55c6670bf2aa",
+      "notes": "Dragon League retouches inspected: anime flesh/hair replaced with bound compact white-circle trainer and red-cape coach; one Dragonite, or one frog using an ice-coloured attack against one Dragonite. Original emerald boundary/window/door/step room preserved, no eyebrows/duplicate."
+    },
+    "135": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/135.jpg",
+      "sha256": "c9ed579ee0abf9fa2df7aa4c922ab0eb64e3d2cef09239d1dba13f29dea38d47",
+      "notes": "Replaced anime human inspected: compact white-circle red-cap trainer restored behind the arena boundary, one moving Pidgeot and one Dragonite, matching emerald room. No human eyebrows/hair/flesh."
+    },
+    "136": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/136.jpg",
+      "sha256": "babd40f68ef28361bfb3108150b56e5b2d1a5c813b344af7efd9e1731e1461d6",
+      "notes": "Actual review: 132/135 revert human trainers to anime hair/skin; replace human figures using exact white-circle identities. 133 main proportions elongated; 134/136 added eyebrows/shadows. Species counts and emerald room remain usable; preserve them during targeted corrections."
+    },
+    "139": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/139.jpg",
+      "sha256": "ee3372beeab024b766af3ceb5979e3d223f0e1b8c6927d30f2fcf368a540b077",
+      "notes": "Viewed full League court: fixed blue trainer side LEFT/red RIGHT/rear central door/high windows. One main, one green rival, one Blastoise with attached cannons; 144 one Poliwhirl and one opposing turtle, circular marks represent quick movement rather than new terrain. Flat white human faces and appropriate costumes, no hair/skin-tone portraits."
+    },
+    "140": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/140.jpg",
+      "sha256": "588c4f56e4561928eae0ea8890703e52f2e45acf67a498c1de73f59c522184c8",
+      "notes": "Viewed full League court: fixed blue trainer side LEFT/red RIGHT/rear central door/high windows. One main, one green rival, one Blastoise with attached cannons; 144 one Poliwhirl and one opposing turtle, circular marks represent quick movement rather than new terrain. Flat white human faces and appropriate costumes, no hair/skin-tone portraits."
+    },
+    "144": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/144.jpg",
+      "sha256": "ed8ac2e4ed088755a921e74514521850b235ee9b9fd4869991f62322e41f26d2",
+      "notes": "Viewed full League court: fixed blue trainer side LEFT/red RIGHT/rear central door/high windows. One main, one green rival, one Blastoise with attached cannons; 144 one Poliwhirl and one opposing turtle, circular marks represent quick movement rather than new terrain. Flat white human faces and appropriate costumes, no hair/skin-tone portraits."
+    },
+    "138": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/138.jpg",
+      "sha256": "70e7dd07025b081248cb8ae2e6799c6fd29cf1ef0bd1bc2612547114bcb3d4da",
+      "notes": "Actual review: 138 changed foyer door/console and used elongated human, regenerate true master. 141/142/143 eyebrows on humans require removal; 143 Water stream intersects bird despite voice describing timely recall, move stream into vacated space beside bird. 145 both humans become flesh/anime, replace from supplied identities while retaining arena/creatures."
+    },
+    "141": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/141.jpg",
+      "sha256": "0edf87fc2e1a6edb26dc85223147208519fd4a422bd724d4ca02d0f373719ec9",
+      "notes": "Actual review: 138 changed foyer door/console and used elongated human, regenerate true master. 141/142/143 eyebrows on humans require removal; 143 Water stream intersects bird despite voice describing timely recall, move stream into vacated space beside bird. 145 both humans become flesh/anime, replace from supplied identities while retaining arena/creatures."
+    },
+    "142": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/142.jpg",
+      "sha256": "77666cae5acc456fcbc0154a1ff7f982e4d0c2e2c8010e24a5c088c917fc86a6",
+      "notes": "Actual review: 138 changed foyer door/console and used elongated human, regenerate true master. 141/142/143 eyebrows on humans require removal; 143 Water stream intersects bird despite voice describing timely recall, move stream into vacated space beside bird. 145 both humans become flesh/anime, replace from supplied identities while retaining arena/creatures."
+    },
+    "143": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/143.jpg",
+      "sha256": "c18f3407b14dbb0e5fead842fa43a296b293af10c12ed3a21281816c4643d0d8",
+      "notes": "Actual review: 138 changed foyer door/console and used elongated human, regenerate true master. 141/142/143 eyebrows on humans require removal; 143 Water stream intersects bird despite voice describing timely recall, move stream into vacated space beside bird. 145 both humans become flesh/anime, replace from supplied identities while retaining arena/creatures."
+    },
+    "145": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/145.jpg",
+      "sha256": "e9a556af20abfab6ea0814c833caec7373ebc23891ddc8419c53dbcea9c436d4",
+      "notes": "Actual review: 138 changed foyer door/console and used elongated human, regenerate true master. 141/142/143 eyebrows on humans require removal; 143 Water stream intersects bird despite voice describing timely recall, move stream into vacated space beside bird. 145 both humans become flesh/anime, replace from supplied identities while retaining arena/creatures."
+    },
+    "146": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/146.jpg",
+      "sha256": "eaf060b025f6c107c86bc014fc69f761e0cf9054e8bd1b806ae72fe79cc33089",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "147": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/147.jpg",
+      "sha256": "7d03adc56b592ef69f25eaafa891e806b24c08fe3dfe6417bfe44bbe2c108d2e",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "148": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/148.jpg",
+      "sha256": "24ef294e750acac0f7ff3107104442fc86207db846fced57504de244916c2042",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "149": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/149.jpg",
+      "sha256": "c642feac05c4998282f1e22fd61973a1f928f9ffc40e2cb0a55c7e5d62ab5cad",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "150": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/150.jpg",
+      "sha256": "1360fb9409fae369d7f73287de6b61b4b3eb441fc5b6631898277d5abeb5b23e",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "153": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/153.jpg",
+      "sha256": "ad214e55d46c3a3382cee14ddea5efd48f87c075a6b2fed70eed2ebc969a0333",
+      "notes": "Full-frame inspection: final court retains blue LEFT/red RIGHT/central door, one white-headed trainer/rival, correct distinct Charizard and Blastoise, no earlier forms/hybrid. Human/partner affection and team group remain one of each; returning original Center retains red roof/central awning/windows/LEFT hedge/RIGHT lamp/steps, same main outfit. 153 has a small outline-adjacent cap highlight, not a realistic human face."
+    },
+    "151": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/151.jpg",
+      "sha256": "bed62dcef960675ead694b0e9204e94a994cfa275b4b002ae478edd454cee205",
+      "notes": "Actually inspected: 151 duplicated the red Pokedex on desk and in mentor hand. 152 adds main eyebrow strokes. Preserve otherwise useful Hall room layout, one-of-each team and outfits."
+    },
+    "152": {
+      "state": "rejected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/152.jpg",
+      "sha256": "a516a4f59bf05da8b269f0ffd35ad70a5555a632647819011b540044be7e0b3d",
+      "notes": "Actually inspected: 151 duplicated the red Pokedex on desk and in mentor hand. 152 adds main eyebrow strokes. Preserve otherwise useful Hall room layout, one-of-each team and outfits."
+    },
+    "154": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/154.jpg",
+      "sha256": "14c5c71a2a9a8fe73ea69f16f29a577a1167d0448ae464caf0444bf464ee39fd",
+      "notes": "Inspected ending: nurse with adult orange dragon outside the original red-roof Center, novice with map and one small brown Eevee in the matching cream-and-red interior, solitary orange dragon waiting outside, and two distinct white round-headed trainers reviewing the route map. Flat white faces, legible continuous landscape scenes; minor simple open mouths retained."
+    },
+    "155": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/155.jpg",
+      "sha256": "b70ff790f77dbad397896983ffaef0aeaf2302d0d8841bddb82248025d1ce929",
+      "notes": "Inspected ending: nurse with adult orange dragon outside the original red-roof Center, novice with map and one small brown Eevee in the matching cream-and-red interior, solitary orange dragon waiting outside, and two distinct white round-headed trainers reviewing the route map. Flat white faces, legible continuous landscape scenes; minor simple open mouths retained."
+    },
+    "156": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/156.jpg",
+      "sha256": "8820ca0833d5bb7a9e65d00a5348edcc75d0ddc959f141ae18f1a262917253d1",
+      "notes": "Inspected ending: nurse with adult orange dragon outside the original red-roof Center, novice with map and one small brown Eevee in the matching cream-and-red interior, solitary orange dragon waiting outside, and two distinct white round-headed trainers reviewing the route map. Flat white faces, legible continuous landscape scenes; minor simple open mouths retained."
+    },
+    "157": {
+      "state": "inspected",
+      "source": "output/imagegen/oddly-fictional-pokemon-production/scenes/157.jpg",
+      "sha256": "844b1556e0dd8324dbf754283821daa29b58749c34653d972325c15f7c095a02",
+      "notes": "Inspected ending: nurse with adult orange dragon outside the original red-roof Center, novice with map and one small brown Eevee in the matching cream-and-red interior, solitary orange dragon waiting outside, and two distinct white round-headed trainers reviewing the route map. Flat white faces, legible continuous landscape scenes; minor simple open mouths retained."
     }
   }
 }

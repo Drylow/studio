@@ -1025,5 +1025,758 @@
     1376,
     768
   ],
-  "notes": "Native source images; final 1080p formatting is technical render resampling, not extra generative detail or Flow upscale. Three existing approved HD pilots are reused. Every selected recurrent identity has an explicit reviewed reference; individual scene inspection remains required."
+  "notes": "Native source images; final 1080p formatting is technical render resampling, not extra generative detail or Flow upscale. Three existing approved HD pilots are reused. Every selected recurrent identity has an explicit reviewed reference; individual scene inspection remains required.",
+  "characters": {
+    "Milo": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult friendly rival. Green long-sleeve zip jacket, brown long trousers, dark brown boots, no hat, white round bald head. One red-white Poke Ball clipped at right hip. No backpack.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e1afc2dde16c0fa8-milo.jpg",
+              "role": "identity",
+              "sha256": "e1afc2dde16c0fa8b12470d6facb1059cebd8d2fc41f6fe7e902f5d93d430005",
+              "review_state": "verified",
+              "character": "Milo",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Professor Oak": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact older adult scientist. White open lab coat over a lavender long-sleeve shirt, tan long trousers, brown shoes. White round bald head, dot eyes, tiny mouth, no hair or wrinkles. Holds a small closed red Pokedex in white mitten hand.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/9d3717f8952fd495-oak.jpg",
+              "role": "identity",
+              "sha256": "9d3717f8952fd495234d6b0a25fdc9087f35aa78369c0094a3c39120633c3fae",
+              "review_state": "verified",
+              "character": "Professor Oak",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed laboratory mentor"
+    },
+    "Brock": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Rock Gym Leader, orange vest over dark green LONG-SLEEVE shirt, khaki long trousers, brown boots. White circular bald head, two black DOT eyes, no hair, no eyebrows. No bare chest or short sleeves.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/19f2e3f6784e37ca-brock.jpg",
+              "role": "identity",
+              "sha256": "19f2e3f6784e37cab2415997b2da3835a9ef56bbe466b134622fd0d8cfdd97c8",
+              "review_state": "verified",
+              "character": "Brock",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Rock Gym coach"
+    },
+    "Misty": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Water Gym Leader. Orange LONG-SLEEVE zip sports jacket, blue long trousers, dark aqua shoes. White round bald head, dot eyes. No hair, exposed waist or swimsuit. Outfit identifies the character while anatomy follows our style.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/34a2cde950af18d4-misty.jpg",
+              "role": "identity",
+              "sha256": "34a2cde950af18d46619121145c9434b4140701bc9753bfcd1548f6738785beb",
+              "review_state": "verified",
+              "character": "Misty",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Water Gym coach"
+    },
+    "Sabrina": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Psychic Gym Leader, deep red long-sleeve tunic/coat, dark long trousers, red boots, small turquoise wrist bands. Perfect round white bald head, black dot eyes and tiny line mouth, no supernatural human face, no hair.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e750dd1bf9350363-sabrina.jpg",
+              "role": "identity",
+              "sha256": "e750dd1bf9350363d788d2177801510727f7468340004e8286450410099590af",
+              "review_state": "verified",
+              "character": "Sabrina",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Psychic Gym coach"
+    },
+    "Giovanni": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Viridian Gym Leader, charcoal two-piece suit over a muted red long-sleeve shirt, polished black shoes. White circular bald head, dot eyes, tiny line mouth, no hair, eyebrows or realistic facial features.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/36800ccc336962cb-giovanni.jpg",
+              "role": "identity",
+              "sha256": "36800ccc336962cb8301faf80ac397443f5d1fada61607d27485884bffb60219",
+              "review_state": "verified",
+              "character": "Giovanni",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Ground Gym coach"
+    },
+    "Lorelei": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Ice specialist. Royal blue long-sleeve high-neck top, black long trousers and shoes, red narrow scarf, simple BLACK rectangular glasses around SMALL BLACK DOT EYES. No hair. Perfect round white head remains flat white inside glasses.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/14b85b7e0721ccf6-lorelei.jpg",
+              "role": "identity",
+              "sha256": "14b85b7e0721ccf66fc0cd6e0a7d75c32e0b813df49592a519fd56666f2d4390",
+              "review_state": "verified",
+              "character": "Lorelei",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Ice League coach"
+    },
+    "Bruno": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Fighting specialist, brown long-sleeve martial arts jacket and trousers, blue cloth belt, brown shoes. Compact adult proportions rather than realistic muscular body. White circular bald head, dot eyes. Fully covered torso, no skin-tone shading.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/40e5d44e8e3ab8e1-bruno.jpg",
+              "role": "identity",
+              "sha256": "40e5d44e8e3ab8e126289a10eeedd1aa4224e6cc01a38b48c79f180f4e4e8537",
+              "review_state": "verified",
+              "character": "Bruno",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Fighting League coach"
+    },
+    "Agatha": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Older adult Ghost specialist. Burgundy long-sleeve coat, lavender long trousers, brown shoes, one plain wooden walking cane in right white mitten hand. White circular bald head, dot eyes and line mouth, no hair, no wrinkles or face shading.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/ffae098cbb77ffc6-agatha.jpg",
+              "role": "identity",
+              "sha256": "ffae098cbb77ffc665e641200c447c40ba7282437380f6b1e329c36421f852f2",
+              "review_state": "verified",
+              "character": "Agatha",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Ghost League coach"
+    },
+    "Lance": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult Dragon trainer. Dark navy long-sleeve suit and long trousers, dark boots, distinctive long RED cape fastened at collar. White circular bald head, black dot eyes, no hair or eyebrows. Exactly one cape, no dragon silhouette or creature drawn here.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7b5c170980eb1a66-lance.jpg",
+              "role": "identity",
+              "sha256": "7b5c170980eb1a66fa6e1f49681e37d48738b074f940727100833b782f2aa3bc",
+              "review_state": "verified",
+              "character": "Lance",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed Dragon League coach"
+    },
+    "Rocket grunt": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult villain in black long-sleeve uniform, black long trousers, black peaked cap, grey belt and shoes, a red circular patch on chest. No text or letter R. White round face and white mitten hands. No realistic face, no weapon or captured Pokemon.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/fba6b28aa8e320e1-rocket-grunt.jpg",
+              "role": "identity",
+              "sha256": "fba6b28aa8e320e13c4f564e2d830a0f2c27668088c8fea3c06aa025e202d921",
+              "review_state": "verified",
+              "character": "Rocket grunt",
+              "variant": "default"
+            }
+          ]
+        }
+      },
+      "prompt_label": "the white-circle-headed black-uniform thief"
+    },
+    "Jonah": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Young ADULT trainer, yellow long-sleeve jacket, navy long trousers, grey trainers, plain charcoal cap backward. Round white head and white mitten hands, no hair. No Pokemon or bag in this identity image.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/c47e8be750f425a6-jonah.jpg",
+              "role": "identity",
+              "sha256": "c47e8be750f425a6ef85a75a5f5c448565d77961bf2c894bba6619a975ace889",
+              "review_state": "verified",
+              "character": "Jonah",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Beginner": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Different young ADULT beginner, maroon long-sleeve hoodie, light grey long trousers, dark blue shoes, no hat. White round bald head, dot eyes and tiny mouth. No Pokemon, no map or backpack here.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/8171f47d72f3a02c-beginner.jpg",
+              "role": "identity",
+              "sha256": "8171f47d72f3a02cce40b7f3fb2bde282ea4d21b8c2831f2484553b217287342",
+              "review_state": "verified",
+              "character": "Beginner",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Trader": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Adult trader, coral long-sleeve jacket, slate long trousers and tan shoes, small plain navy cap. White round head and mitten hands. No Pokemon or bag.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0d4870d18715c211-trader.jpg",
+              "role": "identity",
+              "sha256": "0d4870d18715c2115fc0464b069aca55e82b85fece7cdd30356cebceeb7008e2",
+              "review_state": "verified",
+              "character": "Trader",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Squirtle": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small light blue bipedal turtle, round brown shell with cream trim, cream belly, single curled blue tail, expressive dark eyes. Recognizable Squirtle, no clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/805942489cfdbcba-squirtle.jpg",
+              "role": "identity",
+              "sha256": "805942489cfdbcba651bb6442d176cbed36f647e4c3c5d74b1568593a8abf00f",
+              "review_state": "verified",
+              "character": "Squirtle",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Wartortle": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Medium blue bipedal turtle, brown shell with cream trim, blue wing-shaped ears, single fluffy pale-blue curled tail, dark eyes. Recognizable Wartortle, no clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/d9a6b77676336f25-wartortle.jpg",
+              "role": "identity",
+              "sha256": "d9a6b77676336f25ddcddadd5ee376a1403587d2c084deea9e7fd2cb3a7a697d",
+              "review_state": "verified",
+              "character": "Wartortle",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Blastoise": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large sturdy blue bipedal turtle, brown shell, cream belly and two grey water cannons projecting from shoulders, short sturdy legs and arms, one small tail. Recognizable Blastoise, both cannon barrels correctly attached to shell. No clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/4ac027d033f04653-blastoise.jpg",
+              "role": "identity",
+              "sha256": "4ac027d033f0465333e17106a227fd3fc9b17fa1c8592e702992b94b8fc55fd1",
+              "review_state": "verified",
+              "character": "Blastoise",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charmeleon": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Red-orange bipedal lizard with cream belly, single short head horn, longer limbs than Charmander, one curved tail with one flame, dark turquoise eyes. Recognizable Charmeleon, no wing or clothing.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7835d9e9c8383713-charmeleon.jpg",
+              "role": "identity",
+              "sha256": "7835d9e9c83837138b5f31b4136468d1c66cf907b6f385a89e0992d0649f85e7",
+              "review_state": "verified",
+              "character": "Charmeleon",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charizard": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large orange bipedal dragon-like Pokemon with cream belly, TWO orange wings with teal-blue inner membranes, two small swept head horns, short forearms and sturdy legs, one continuous tail ending in one flame. Recognizable normal Charizard, no mega evolution. No clothing or saddle.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/82c912b685322029-charizard-v2.jpg",
+              "role": "identity",
+              "sha256": "82c912b685322029e6a1cb17e229dade5775955e6d46f3455a9c553fc4b42ecd",
+              "review_state": "verified",
+              "character": "Charizard",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgey": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small brown-and-cream plump bird with short crest, compact feathered wings, pink feet and tiny beak, short brown tail. Recognizable Pidgey, not a human with bird head.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/76c254ec0d369d3e-pidgey.jpg",
+              "role": "identity",
+              "sha256": "76c254ec0d369d3e9a7ff25088bc1f61aa1f18ac9751707c6c73737192331a0f",
+              "review_state": "verified",
+              "character": "Pidgey",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgeotto": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Medium brown-and-cream bird, red swept-back head crest, red/yellow tail feathers, pink feet and tiny beak. Recognizable Pidgeotto, one head, two wings, no costume.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/441dfc3b6f275068-pidgeotto.jpg",
+              "role": "identity",
+              "sha256": "441dfc3b6f275068b2090074dfa6a93a4563f292fa27823363cd0a4b46912e74",
+              "review_state": "verified",
+              "character": "Pidgeotto",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Pidgeot": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large tan-and-cream bird, long red and yellow flowing head crest, broad brown wings, red/brown tail feathers, pink feet. Recognizable Pidgeot, compact readable creature proportions.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/55b39f34739a6b5d-pidgeot.jpg",
+              "role": "identity",
+              "sha256": "55b39f34739a6b5dc5ea4421d12e7e37cdc33694b87d496a875675e864956b15",
+              "review_state": "verified",
+              "character": "Pidgeot",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Poliwag": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small rounded blue tadpole Pokemon, white belly disk with one continuous black spiral, pink lips, tiny white feet, one long flat translucent pale blue tail, NO arms. Recognizable Poliwag, not Poliwhirl.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/dc6677c0d7e4f81c-poliwag.jpg",
+              "role": "identity",
+              "sha256": "dc6677c0d7e4f81c54d1e1a4b44b30eed82deef35c3e425babab2f3aad350d08",
+              "review_state": "verified",
+              "character": "Poliwag",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Poliwhirl": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Round blue frog Pokemon, white belly disk with black spiral, TWO white glove-like fists attached to blue arms, blue feet, no tail. Recognizable Poliwhirl, not Poliwrath. Its naturally white fists are a species feature.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/550c30d9b5492bf2-poliwhirl.jpg",
+              "role": "identity",
+              "sha256": "550c30d9b5492bf274a7c458e71ef0a22178a7093ddba111f659cb53e99d64fd",
+              "review_state": "verified",
+              "character": "Poliwhirl",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Onix": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Long segmented grey rock snake, connected boulder segments tapering into tail, large angular rock head with one blunt horn and small black eyes. One continuous creature resting in a loose S curve, not three detached snakes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/28c4d9ff0d9f3276-onix.jpg",
+              "role": "identity",
+              "sha256": "28c4d9ff0d9f3276da69d4507d3a4e8d78166459144b0f3ad3e25df07a3812a1",
+              "review_state": "verified",
+              "character": "Onix",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Psyduck": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small yellow bipedal duck Pokemon, cream wide bill, three tiny black crown feathers, little webbed feet, short wings and one small tail. Recognizable Psyduck, no clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/be777cd1fd800c43-psyduck.jpg",
+              "role": "identity",
+              "sha256": "be777cd1fd800c432dd1082b03eef7e338f3817065499a6360e78cbd56404461",
+              "review_state": "verified",
+              "character": "Psyduck",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Raichu": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Orange-brown mouse Pokemon with cream belly, brown feet, curved brown/yellow ears, yellow round cheek patches and one long thin black tail ending in one yellow lightning-bolt shape. Recognizable Raichu, not Pikachu.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/e9da06ffe02aeae8-raichu.jpg",
+              "role": "identity",
+              "sha256": "e9da06ffe02aeae86c859d1a59d8bb66a8fd1ef052793163d473ac9bebfd0e55",
+              "review_state": "verified",
+              "character": "Raichu",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Alakazam": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Yellow-brown bipedal Psychic Pokemon, angular fox-like head, long pale moustache, brown chest/shoulders, two spoons one in each hand. Recognizable Alakazam, no third spoon, no human clothes. Human no-hair/no-moustache rules do not apply to creature anatomy.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/c215ef9f6d057db7-alakazam.jpg",
+              "role": "identity",
+              "sha256": "c215ef9f6d057db7dfca6b4bb77b36439944ed1c193dac4b45b46377661917d9",
+              "review_state": "verified",
+              "character": "Alakazam",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Lapras": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large gentle blue aquatic Pokemon with pale cream belly, long curved neck, broad flippers, curled ear-like fins and a grey knobbed shell. Recognizable Lapras on neutral shallow water patch, not a humanoid.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/3ecedc3ae811748e-lapras.jpg",
+              "role": "identity",
+              "sha256": "3ecedc3ae811748e9dc870ed0ca05ada4aaf9b17989633a8bd620a647839ba5d",
+              "review_state": "verified",
+              "character": "Lapras",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Machamp": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Sturdy grey-blue Fighting Pokemon with FOUR arms, each ending in a hand; muscular creature anatomy with head ridges and small dark eyes, dark briefs and yellow belt. Recognizable Machamp. Four arms are its real species anatomy, not a human extra-limb error.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/186978c09c3b3426-machamp.jpg",
+              "role": "identity",
+              "sha256": "186978c09c3b3426addd32a75b2034e5bdc72aba1a091a851092208bd5997bad",
+              "review_state": "verified",
+              "character": "Machamp",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Gengar": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Short round purple Ghost Pokemon, two pointed ears, small red eyes, broad toothy grin, stubby arms and legs and short tail. Recognizable Gengar. These species face features are allowed on creatures, never copied onto humans.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/fa3c269ebd040894-gengar.jpg",
+              "role": "identity",
+              "sha256": "fa3c269ebd0408948f0c9b6d329e1d3a2c7a3b00d19bf6733b8d20f51f678d66",
+              "review_state": "verified",
+              "character": "Gengar",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Dragonite": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Large friendly orange bipedal Dragon Pokemon with cream belly, two narrow antennae, small teal wings on its back, rounded muzzle, short arms and sturdy feet, thick single tapering tail. Recognizable Dragonite, not Charizard and NO tail flame.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/32d7af52578cc2b8-dragonite.jpg",
+              "role": "identity",
+              "sha256": "32d7af52578cc2b85a74824e274e009575f79051040e1d9e65e9fc78a8b88fd9",
+              "review_state": "verified",
+              "character": "Dragonite",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Koffing": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Single round purple floating Poison Pokemon, lumpy body with small crater-like vents and a cream skull-and-crossbones mark on belly, dark eyes and small mouth. A little purple gas beside vents, no humans or text.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0b0ebced7328745c-koffing.jpg",
+              "role": "identity",
+              "sha256": "0b0ebced7328745cea3a24b133c83756cf587040d247b1a0de890008398fc3c8",
+              "review_state": "verified",
+              "character": "Koffing",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Eevee": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small brown fox-like quadruped with cream fluffy neck ruff, large pointed ears, dark eyes, bushy brown tail with cream tip. Recognizable Eevee, no clothing, no extra tails or paws.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/7f6bf1f1db7c36f1-eevee.jpg",
+              "role": "identity",
+              "sha256": "7f6bf1f1db7c36f1805bd38375bd68f8f9b7280e606dab8318a8ee58f7e35c0d",
+              "review_state": "verified",
+              "character": "Eevee",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Bulbasaur": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small blue-green quadruped with darker green body patches, broad head, two pointed ear-like corners, red eyes, short legs and one large GREEN plant bulb on its back. Recognizable Bulbasaur, no human clothes, no flowers on bulb yet.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/79ccd8ffdb449ea3-bulbasaur.jpg",
+              "role": "identity",
+              "sha256": "79ccd8ffdb449ea3288b016ea6e85d7bd94d28fa68c611b61233eceaa1947ade",
+              "review_state": "verified",
+              "character": "Bulbasaur",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Rhyhorn": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Single sturdy quadruped grey stone-armoured rhinoceros Pokemon with short legs, jagged rock plates and one short pointed nose horn, dark eyes. Recognizable Rhyhorn, not bipedal Rhydon, not Onix or an ordinary realistic rhino.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/d285f60590ae31ea-rhyhorn.jpg",
+              "role": "identity",
+              "sha256": "d285f60590ae31ea3a66f5573c776b156280a2db1aae5935d27fa33a8ea67784",
+              "review_state": "verified",
+              "character": "Rhyhorn",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Nico": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact young ADULT trainer, about 2.6 round head diameters tall INCLUDING cap and boots; head wider than shoulders, short torso and short trouser legs, match supplied silhouette rather than realistic adult anatomy. Blue long-sleeve zip jacket, charcoal long trousers, brown boots, plain red cap. Perfectly circular uniformly WHITE head, black dot eyes, tiny line mouth, white mitten hands. No eyebrows, hair, grey face rim or backpack. One closed ball at LEFT hip, move this ball to hand when action requires.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/ffa08e0488b4021a-nico-identity-v2.jpg",
+              "role": "identity",
+              "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+              "review_state": "verified",
+              "character": "Nico",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Charmander": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Small orange bipedal fire lizard with cream belly, dark eyes, short limbs, ONE continuous tail ending in ONE small flame; roughly one-third Nico height. No wings or clothes.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/bc04359177f43ccf-charmander-identity.jpg",
+              "role": "identity",
+              "sha256": "bc04359177f43ccf893640288613fba9cf463aaec4475bb76a5dd96a7738cda4",
+              "review_state": "verified",
+              "character": "Charmander",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    },
+    "Center nurse": {
+      "required": true,
+      "variants": {
+        "default": {
+          "description": "Compact adult nurse, flat circular pure-white head and white mittens, dot eyes, tiny line mouth. Mint long-sleeve coat, white long trousers, mint shoes, small white cap with simple red stripe, no hair or eyebrows.",
+          "references": [
+            {
+              "owner": "project",
+              "path": "production-v1/refs/0ed29b064c4fd81d-nurse-identity-v3.jpg",
+              "role": "identity",
+              "sha256": "0ed29b064c4fd81d39a42cbec63c63345821594a659b6bcb2de7f29560e67ace",
+              "review_state": "verified",
+              "character": "Center nurse",
+              "variant": "default"
+            }
+          ]
+        }
+      }
+    }
+  }
 }
