@@ -100,6 +100,7 @@ def _prepare(p, s, body):
     if body.get("image_provider", provider) != provider:
         raise HTTPException(409, "The confirmed provider does not match the project's provider")
     api._check_image_provider(provider, p.get("style_id"))
+    api._validate_drawing_reference(p, s)
     if provider == "google_flow" and not google_flow.configured():
         raise HTTPException(503, "Google Flow is not configured")
     if provider == "cli_proxy" and (not config.get("PROXY_API_KEY") or not config.get("PROXY_BASE_URL")):

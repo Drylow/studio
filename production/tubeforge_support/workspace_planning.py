@@ -80,6 +80,9 @@ def inputs(p):
     if locations.mode(p) == 'consistent':
         locations.check_registry(p)
     refs = copy.deepcopy(style.get("workspace_references") or [])
+    if p.get('drawing_reference_snapshot'):
+        # A frozen drawing guide is independent of changing scenery or gallery examples.
+        refs = [copy.deepcopy(p['drawing_reference_snapshot'])]
     if not refs:
         raise HTTPException(409, "Add the style's approved references")
     for ref in refs:

@@ -327,6 +327,8 @@ body.signed-out .primary-nav, body.signed-out .connection, body.signed-out .acco
 .workspace-tabs button { border: 0; background: transparent; color: var(--muted); min-height: 34px; }
 .workspace-tabs button[aria-pressed=true] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgb(20 35 42 / .08); }
 .team-layout { display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 32px; align-items: start; }
+.channel-identity-editor { grid-template-columns: minmax(0, 1fr); }
+#channel-preset-editor { margin-top: 28px; }
 .team-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; }
 .team-panel h2 { margin-bottom: 18px; }
 .team-panel form { display: grid; gap: 16px; }

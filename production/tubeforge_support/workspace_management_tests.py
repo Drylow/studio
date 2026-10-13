@@ -40,6 +40,125 @@ def upload(client, sid):
     return response.json()
 
 
+def test_create_channel_preset_copies_template_and_references(managed):
+    template = new_style(managed)
+    ref = upload(managed, template['id'])
+    response = managed.post('/api/workspace/management/presets', json={
+        'name': 'Marine channel', 'template_style_id': template['id'], 'language': 'English',
+        'voice': {'provider': 'algrow', 'voice_id': 'fixture-voice'},
+        'preset': {'background_mode': 'consistent'}})
+    assert response.status_code == 201, response.text
+    result = response.json()
+    assert result['channel']['style_id'] == result['preset']['id'] != template['id']
+    assert result['preset']['name'] == result['channel']['name'] == 'Marine channel'
+    assert result['preset']['background_mode'] == 'consistent'
+    assert result['preset']['references'][0]['path'] == ref['path']
+    assert result['preset']['references'][0]['exists']
+    assert store.get_style(template['id'])['visuals']['background_mode'] == 'free'
+
+
+def test_invalid_channel_preset_does_not_create_style_or_channel(managed):
+    previous = managed.get('/api/workspace/management').json()
+    response = managed.post('/api/workspace/management/presets', json={
+        'name': 'Invalid preset', 'voice': {'provider': 'unknown', 'voice_id': 'fixture-voice'},
+        'preset': {'prompt': 'A drawing prompt.'}})
+    assert response.status_code == 422
+    assert managed.get('/api/workspace/management').json() == previous
+
+
+def test_channel_and_visual_preset_save_together_and_preserve_existing_project(managed):
+    created = managed.post('/api/workspace/management/presets', json={
+        'name': 'Marine', 'voice': {'provider': 'algrow', 'voice_id': 'fixture-voice'},
+        'preset': {'prompt': 'Original marine drawing.', 'image_model': 'fixture-image'}}).json()
+    cid = created['channel']['id']
+    project = managed.post('/api/workspace/projects', json={
+        'profile_id': cid, 'title': 'Existing film', 'custom_script': 'Saved original narration.'}).json()
+    previous = store.get_project(project['id']).copy()
+    result = managed.put('/api/workspace/management/presets/' + cid, json={
+        'name': 'Marine renamed', 'description': 'New description.',
+        'preset': {'prompt': 'Updated visual language.', 'background_mode': 'consistent'}})
+    assert result.status_code == 200, result.text
+    assert result.json()['channel']['name'] == result.json()['preset']['name'] == 'Marine renamed'
+    assert result.json()['preset']['prompt'] == 'Updated visual language.'
+    assert store.get_project(project['id']) == previous
+    invalid = managed.put('/api/workspace/management/presets/' + cid, json={
+        'name': 'Must not be adopted', 'preset': {'background_mode': 'invalid'}})
+    assert invalid.status_code == 422
+    assert next(row for row in api._profiles() if row['id'] == cid)['name'] == 'Marine renamed'
+
+
+def test_shared_style_is_isolated_before_channel_preset_edit(managed):
+    style = new_style(managed)
+    channels_created = [managed.post('/api/workspace/management/channels', json={
+        'name': name, 'style_id': style['id'], 'voice': {'voice_id': 'fixture-voice'}}).json()
+        for name in ('First', 'Second')]
+    result = managed.put('/api/workspace/management/presets/' + channels_created[0]['id'], json={
+        'preset': {'prompt': 'Only the first channel changes.'}})
+    assert result.status_code == 200, result.text
+    assert result.json()['channel']['style_id'] != style['id']
+    assert next(row for row in api._profiles() if row['id'] == channels_created[1]['id'])['style_id'] == style['id']
+    assert store.get_style(style['id'])['visuals']['art_style'] == 'Exact visual prompt.'
+
+
+def test_drawing_guide_is_frozen_and_required_independently_of_character_refs(managed):
+    style = new_style(managed)
+    ref = upload(managed, style['id'])
+    selected = managed.put('/api/workspace/management/styles/' + style['id'], json={
+        'drawing_reference_path': ref['path']})
+    assert selected.status_code == 200, selected.text
+    assert selected.json()['drawing_reference_path'] == ref['path']
+    channel = managed.post('/api/workspace/management/channels', json={
+        'name': 'Marine', 'style_id': style['id'], 'voice': {'voice_id': 'fixture-voice'}}).json()
+    project = managed.post('/api/workspace/projects', json={
+        'profile_id': channel['id'], 'title': 'A story', 'custom_script': 'Saved narration.'}).json()
+    guide = project['drawing_reference_snapshot']
+    assert guide['sha256'] == ref['sha256'] and guide['review_state'] == 'verified'
+    valid = dict(guide, owner='style', role='style-only')
+    api._validate_drawing_reference(project, {'references': [valid]})
+    with pytest.raises(Exception, match='drawing guide'):
+        api._validate_drawing_reference(project, {'references': [dict(valid, role='identity')]})
+    with pytest.raises(Exception, match='drawing guide'):
+        api._validate_drawing_reference(project, {'references': []})
+    (store.style_dir(style['id']) / ref['path']).write_bytes(b'modified source')
+    with pytest.raises(Exception, match='missing or changed'):
+        api._validate_drawing_reference(project, {'references': [valid]})
+
+
+def test_existing_character_edits_save_with_channel_without_implicit_validation(managed):
+    style = new_style(managed)
+    image = io.BytesIO()
+    Image.new('RGB', (32, 32), 'white').save(image, format='PNG')
+    imported = managed.post('/api/workspace/management/styles/' + style['id'] + '/characters',
+        files={'file': ('hero.png', image.getvalue(), 'image/png')},
+        data={'name': 'Hero', 'description': 'Original character', 'is_main': 'true'})
+    assert imported.status_code == 200
+    channel = managed.post('/api/workspace/management/channels', json={
+        'name': 'Marine', 'style_id': style['id'], 'voice': {'voice_id': 'fixture-voice'}}).json()
+    result = managed.put('/api/workspace/management/presets/' + channel['id'], json={
+        'description': 'New channel description', 'characters': [{'name': 'Hero', 'variant': 'default',
+        'description': 'Exact revised character', 'is_main': True}]})
+    assert result.status_code == 200, result.text
+    character = result.json()['preset']['characters'][0]['variants'][0]
+    assert character['description'] == 'Exact revised character'
+    assert character['references'][0]['review_state'] == 'unreviewed'
+
+
+def test_preset_write_failure_restores_existing_records(managed, monkeypatch):
+    created = managed.post('/api/workspace/management/presets', json={
+        'name': 'Marine', 'voice': {'voice_id': 'fixture-voice'}, 'preset': {'prompt': 'Original drawing'}}).json()
+    cid = created['channel']['id']
+    before = managed.get('/api/workspace/management').json()
+    original = management._save_channel
+    def failing(channel):
+        original(channel)
+        raise RuntimeError('fixture write failure')
+    monkeypatch.setattr(management, '_save_channel', failing)
+    with pytest.raises(RuntimeError, match='fixture write failure'):
+        managed.put('/api/workspace/management/presets/' + cid, json={
+            'name': 'Must be rolled back', 'preset': {'prompt': 'Must be rolled back'}})
+    assert managed.get('/api/workspace/management').json() == before
+
+
 def test_style_create_upload_previews_reorder_and_duplicate(managed):
     style = new_style(managed)
     assert style["prompt"] == "Exact visual prompt." and not style["references"]

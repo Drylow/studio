@@ -70,7 +70,7 @@ Project screen reads use `GET /api/workspace/projects/{id}?view=ui`, excluding a
 
 Images and review screens render 24 shots per page to avoid constructing hundreds of image cards, reference lists and prompt editors at once. Pagination is local and preserves the entire project for generation/review checks. Off-page prompts remain unchanged when saving; page changes refuse unsaved edits.
 
-**Styles → Edit → Background mode** offers two independent scenery choices:
+**Channels & presets → Preset & settings → Background mode** offers two independent scenery choices:
 
 - **Free backgrounds** (`free`, default): every image can use a different setting.
   No location registry or camera continuity is imposed. Character identity references
@@ -111,9 +111,17 @@ the camera plan is a text layout guide, not a verified image reference kit.
 Codex-directed/historical styles still keep manual scene authoring; this update
 does not start their automatic writer or modify a completed episode.
 
+## Channel / preset configuration
+
+The primary management entry is **Channels & presets**. Creating a channel creates its drawing preset at the same time, optionally copying a template's drawings and character references. **Preset & settings** groups the channel identity, voice, drawing instructions, background mode, visual guide and cast. **Save channel / preset** saves these settings together. Editing a channel whose legacy style is shared first makes a private preset copy; other channels and existing project snapshots remain unchanged. Legacy style URLs and per-video advanced overrides remain compatible.
+
+Paired management routes: `POST /api/workspace/management/presets` and `PUT /api/workspace/management/presets/{cid}`. Input validation precedes writes; channel write failures roll back the metadata and archive any orphaned new preset. Character approval is explicit and distinct from saving its description.
+
+Choose **Use as drawing guide** on an inspected visual reference to freeze its file/hash in new projects' `drawing_reference_snapshot`. Planning uses that single guide for drawing language, alongside independent character and location references. Before generation, `_validate_drawing_reference` requires the exact reviewed guide among the shot's saved ordered attachments. Execution never silently appends or replaces attachments. Older projects without this optional snapshot retain their existing contract. Drawing consistency still requires actual image inspection and is independent of free/consistent background mode.
+
 ## References personnages par style
 
-Dans Styles, ouvrir un style puis **References personnages**. Importer une ou plusieurs images avec nom, variante et description fixe ; choisir le personnage principal. Les uploads restent a verifier jusqu'a une validation explicite des images. La validation controle aussi que leurs fichiers/SHA256 sont toujours ceux importes. Les images de personnages sont distinctes des references generales du style.
+Dans **Channels & presets**, ouvrir **Preset & settings** puis **Character references**. Importer une ou plusieurs images avec nom, variante et description fixe ; choisir le personnage principal. Les uploads restent a verifier jusqu'a une validation explicite des images. La validation controle aussi que leurs fichiers/SHA256 sont toujours ceux importes. Les images de personnages sont distinctes des references generales du style.
 
 Routes locales : `POST /api/workspace/management/styles/{sid}/characters` (multipart, images et fiche), `PUT /api/workspace/management/styles/{sid}/characters` (fiche, principal et validation). Les fichiers sont conserves, les variantes existantes ne sont pas ecrasees. Les nouveaux projets figent leur casting dans `style_cast_snapshot`; les plans n'envoient que les identites presentes, via le moteur `workspace_characters` existant.
 

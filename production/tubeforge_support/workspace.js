@@ -217,6 +217,9 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const main = $('#main');
+  $('.primary-nav a[data-nav="styles"]')?.remove();
+  const channelNavigation = $('.primary-nav a[data-nav="channels"]');
+  if (channelNavigation) channelNavigation.textContent = 'Channels & presets';
   const esc = escapeHtml;
   const icon = (name) => `<span aria-hidden="true">${({ plus: '&#43;', refresh: '&#8635;', close: '&#215;', back: '&#8592;', next: '&#8594;', up: '&#8593;', down: '&#8595;', check: '&#10003;', edit: '&#9998;', download: '&#8595;', external: '&#8599;' })[name] || '&#183;'}</span>`;
   const badge = (state, label = stateLabel(state)) => `<span class="badge ${['verified', 'done', 'publication_ready'].includes(state) ? 'good' : ['error', 'failed'].includes(state) ? 'error' : ['correct', 'stale', 'blocked', 'needs_correction'].includes(state) ? 'warn' : ''}">${esc(label)}</span>`;
@@ -313,7 +316,7 @@
   function modelOptions(selected = '', kind = '', selectedProvider = '') {
     const imagePolicy = selectedProvider || data.models.image_provider_policy;
     const models = modelsFrom(data.models).filter((m) => kind !== 'image' || !imagePolicy || m.provider === imagePolicy);
-    const renderOption = (m) => {
+      const renderOption = (m) => {
       const capability = m.capabilities?.[kind];
       const capabilityLabel = capability === false ? "Usage not declared" : capability == null ? "Capacity not confirmed" : "Capacity declared in the catalog";
       return `<option value="${esc(m.id)}" data-provider="${esc(m.provider || 'cli_proxy')}" title="${capabilityLabel}" ${m.id === selected && (!selectedProvider || (m.provider || 'cli_proxy') === selectedProvider) ? 'selected' : ''} ${capability === false ? 'disabled' : ''}>${esc(m.label || 'CLI Proxy · ' + m.id)}</option>`;
@@ -397,7 +400,7 @@
     if (parts[0] === 'p') parts = ['video', parts[1], ({ script: "text", voice: "voice", visuals: 'images', render: 'export', thumbs: 'export' })[parts[2]] || "text"];
     const page = parts[0] || 'videos';
     $$('.primary-nav a').forEach((link) => {
-      const active = link.dataset.nav === (page === 'video' || page === 'queue' ? 'videos' : page);
+      const active = link.dataset.nav === (page === 'video' || page === 'queue' ? 'videos' : page === 'styles' ? 'channels' : page);
       if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
     });
     main.setAttribute('aria-busy', 'true');
@@ -526,7 +529,7 @@
     const defaultStyle = data.profiles.find((p) => p.id === profile)?.style_id || data.profiles[0]?.style_id;
     const previousDirty = dirty;
     let dialogEdited = false;
-    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">New video</h2><button type="button" data-close class="icon-button" title="Close" aria-label="Close">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Project</legend><div class="form-grid"><label class="full">Video title<input name="title" placeholder="Zombie Outbreak: 30 Days Trapped in a Supermarket" required maxlength="240" autocomplete="off"></label><label>Channel<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label data-target-duration>Target duration (minutes)<input type="number" name="duration_minutes" min="3" max="30" step="0.5" value="15" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Paste your script here<textarea name="custom_script" rows="12" spellcheck="true" placeholder="Paste your full script here. No TXT file needed."></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Visual style</legend><label>Video style<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Generation models</legend><div class="form-grid"><label class="full">Text model<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Image model<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Cancel</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Create video</button></div></form>`;
+    dialog.innerHTML = `<div class="dialog-head"><h2 id="create-heading">New video</h2><button type="button" data-close class="icon-button" title="Close" aria-label="Close">${icon('close')}</button></div>${catalogNotice()}<form id="create-form"><div class="create-layout"><div><fieldset><legend>Project</legend><div class="form-grid"><label class="full">Video title<input name="title" placeholder="Zombie Outbreak: 30 Days Trapped in a Supermarket" required maxlength="240" autocomplete="off"></label><label>Channel<select name="profile_id" required>${profileOptions(row.profile_id)}</select></label><label data-target-duration>Target duration (minutes)<input type="number" name="duration_minutes" min="3" max="30" step="0.5" value="15" required></label></div></fieldset><fieldset class="create-section"><legend>Script</legend>${scriptImportMarkup('create-script-file')}<label>Paste your script here<textarea name="custom_script" rows="12" spellcheck="true" placeholder="Paste your full script here. No TXT file needed."></textarea></label></fieldset></div><div class="create-options"><fieldset><legend>Channel preset</legend><details class="advanced"><summary>Override drawing preset for this video</summary><label>Drawing preset<select name="style_id" required>${data.styles.map((s) => `<option value="${esc(s.id)}" ${s.id === defaultStyle ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label></details><figure id="create-style-preview" class="create-style-preview"></figure></fieldset><fieldset class="create-section"><legend>Generation models</legend><div class="form-grid"><label class="full">Text model<select name="text_model" required>${modelOptions(row.text_model, 'text')}</select></label><label class="full">Image model<select name="image_model" required>${modelOptions(row.image_model, 'image', row.image_provider)}</select></label></div></fieldset>${catalogStatus()}</div></div><div id="create-error" role="alert"></div><div class="form-actions create-footer"><button type="button" data-close>Cancel</button><button class="primary" type="submit" ${!modelsFrom(data.models).length || !data.profiles.length || !data.styles.length ? 'disabled' : ''}>${icon('plus')}Create video</button></div></form>`;
     const close = () => { if (dialogEdited && !confirm("Discard this new video?")) return; dialog.close(); dirty = previousDirty; };
     $('#create-form', dialog).addEventListener('input', () => { dialogEdited = true; });
     $('#create-form', dialog).addEventListener('change', () => { dialogEdited = true; });
@@ -933,13 +936,26 @@
   function styleOptions(selected) {
     return data.styles.map((s) => '<option value="' + esc(s.id) + '"' + (s.id === selected ? ' selected' : '') + '>' + esc(s.name) + '</option>').join('');
   }
-  function channelFields(c = {}) {
+  function channelFields(c = {}, includeStyle = true) {
     const languages = {English: "English", French: "French", Spanish: "Spanish", German: "German", Italian: "Italian", Portuguese: "Portuguese", Japanese: "Japanese"};
-    return "<div class=\"form-grid\"><label>Channel name<input name=\"name\" value=\"" + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + "\" placeholder=\"@MyChannel\" maxlength=\"100\"></label><label>Language<select name=\"language\">" + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + "</select></label><label>Target length (minutes)<input name=\"target_minutes\" type=\"number\" min=\"3\" max=\"30\" step=\"0.5\" value=\"" + (c.target_minutes || 22) + "\" required></label><label class=\"full\">Default style<select name=\"style_id\" required>" + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? "<option value=\"\" selected>Archived style · choose an active style</option>" : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label>Voice provider<select name="voice_provider"><option value="algrow"' + (c.voice?.provider !== 'ai33' ? ' selected' : '') + '>Algrow · ElevenLabs</option><option value="ai33"' + (c.voice?.provider === 'ai33' ? ' selected' : '') + ">AI33 Pro · ElevenLabs</option></select></label><label>ElevenLabs voice ID<input name=\"voice_id\" value=\"" + esc(c.voice?.voice_id || '') + "\" placeholder=\"Voice ID specific to this channel\" maxlength=\"200\" required></label><label class=\"full\">Setting and era<textarea name=\"setting\" rows=\"3\">" + esc(c.setting || '') + "</textarea></label><label class=\"full\">Channel description<textarea name=\"description\" rows=\"3\">" + esc(c.description || '') + '</textarea></label></div>';
+    const markup = "<div class=\"form-grid\"><label>Channel name<input name=\"name\" value=\"" + esc(c.name || '') + '" maxlength="200" required></label><label>Handle<input name="handle" value="' + esc(c.handle || '') + "\" placeholder=\"@MyChannel\" maxlength=\"100\"></label><label>Language<select name=\"language\">" + Object.entries(languages).map(([key, label]) => '<option value="' + key + '"' + (key === (c.language || 'English') ? ' selected' : '') + '>' + label + '</option>').join('') + "</select></label><label>Target length (minutes)<input name=\"target_minutes\" type=\"number\" min=\"3\" max=\"30\" step=\"0.5\" value=\"" + (c.target_minutes || 22) + "\" required></label><label class=\"full\">Default style<select name=\"style_id\" required>" + (c.style_id && !data.styles.some((s) => s.id === c.style_id) ? "<option value=\"\" selected>Archived style · choose an active style</option>" : '') + styleOptions(c.style_id || data.styles[0]?.id) + '</select></label><label>Voice provider<select name="voice_provider"><option value="algrow"' + (c.voice?.provider !== 'ai33' ? ' selected' : '') + '>Algrow · ElevenLabs</option><option value="ai33"' + (c.voice?.provider === 'ai33' ? ' selected' : '') + ">AI33 Pro · ElevenLabs</option></select></label><label>ElevenLabs voice ID<input name=\"voice_id\" value=\"" + esc(c.voice?.voice_id || '') + "\" placeholder=\"Voice ID specific to this channel\" maxlength=\"200\" required></label><label class=\"full\">Setting and era<textarea name=\"setting\" rows=\"3\">" + esc(c.setting || '') + "</textarea></label><label class=\"full\">Channel description<textarea name=\"description\" rows=\"3\">" + esc(c.description || '') + '</textarea></label></div>';
+    return includeStyle ? markup : markup.replace(/<label[^>]*>Default style<select name="style_id" required>[\s\S]*?<\/select><\/label>/, "");
   }
   function channelBody(form) {
     const fields = new FormData(form);
     return {name: fields.get('name'), handle: fields.get('handle'), language: fields.get('language'), target_minutes: Number(fields.get('target_minutes')), style_id: fields.get('style_id'), setting: fields.get('setting'), description: fields.get('description'), voice: {provider: fields.get('voice_provider'), voice_id: fields.get('voice_id'), voice_name: fields.get('voice_id') === form.dataset.savedVoiceId ? form.dataset.savedVoiceName : fields.get('voice_id'), speed: Number(form.dataset.savedVoiceSpeed || 1)}};
+  }
+  function channelPresetBody() {
+    const body = channelBody($('#channel-settings'));
+    delete body.style_id;
+    const visual = $('#visual-style-form');
+    body.preset = visual ? {...Object.fromEntries(new FormData(visual)), references:visual.orderedReferences} : {};
+    const verify = $('#channel-settings').verifyCharacter;
+    body.characters = $$('[data-character-form]').map(form => ({name:form.dataset.name, variant:form.dataset.variant,
+      description:$('[name="description"]', form).value, is_main:$('[name="is_main"]', form).checked,
+      verify:verify?.name === form.dataset.name && verify?.variant === form.dataset.variant}));
+    $('#channel-settings').verifyCharacter = null;
+    return body;
   }
   function managementDialog(title, fields, submit) {
     if (dirty) { notify("Save your changes before continuing.", true); return; }
@@ -959,10 +975,23 @@
     bindFormState(dialog); dialog.showModal(); $('input', dialog).focus();
   }
   function newChannel() {
-    managementDialog("New channel", channelFields(), async (form) => {
-      const result = await api('/api/workspace/management/channels', {method: 'POST', body: channelBody(form)});
-      return '#/channels/' + encode(result.id) + '/settings';
+    const fields = channelFields({}, false) + `<fieldset class="create-section"><legend>Drawing preset</legend><label>Start from<select name="template_style_id"><option value="">Blank preset</option>${data.styles.map(style => `<option value="${esc(style.id)}">${esc(style.name)}</option>`).join('')}</select></label><label>Drawing instructions<textarea name="preset_prompt" rows="5" required></textarea></label><label>Background direction<textarea name="preset_background_direction" rows="3"></textarea></label>${backgroundModeField()}<details class="advanced"><summary>Thumbnail instructions</summary><textarea name="preset_thumbnail_prompt" rows="3"></textarea></details></fieldset>`;
+    managementDialog('New channel / preset', fields, async form => {
+      const values = new FormData(form);
+      const body = channelBody(form);
+      delete body.style_id;
+      body.template_style_id = values.get('template_style_id') || null;
+      body.preset = {prompt:values.get('preset_prompt'), background_direction:values.get('preset_background_direction'),
+        background_mode:values.get('background_mode'), thumbnail_prompt:values.get('preset_thumbnail_prompt')};
+      const result = await api('/api/workspace/management/presets', {method:'POST', body});
+      return '#/channels/' + encode(result.channel.id) + '/settings';
     });
+    $('[name="template_style_id"]', $('#management-form')).onchange = event => {
+      const selected = data.styles.find(style => style.id === event.target.value);
+      for (const [field, value] of Object.entries({preset_prompt:selected?.prompt || '',
+        preset_background_direction:selected?.background_direction || '', background_mode:selected?.background_mode || 'free',
+        preset_thumbnail_prompt:selected?.thumbnail_prompt || ''})) $('[name="' + field + '"]', $('#management-form')).value = value;
+    };
   }
   function archiveManaged(kind, item, archived) {
     if (dirty) { notify("Save your changes before continuing.", true); return; }
@@ -973,13 +1002,13 @@
     const profile = management.channels.find((p) => p.id === id);
     if (profile) { renderChannel(profile, selected); return; }
     if (id) { main.innerHTML = header("Channel not found", '') + "<a href=\"#/channels\">Back to channels</a>"; return; }
-    main.innerHTML = header("Channels", '', '<button id="new-channel" class="primary">' + icon('plus') + "New channel</button>") + "<div class=\"toolbar\"><label class=\"search\">Search a channel<input id=\"channel-search\" type=\"search\" value=\"" + esc(managementFilters.channels) + '"></label><label class="checkbox-label"><input id="archived-channels" type="checkbox"' + (managementFilters.archivedChannels ? ' checked' : '') + ">Show archives</label><span id=\"channels-count\" class=\"count\"></span></div><div id=\"channels-list\"></div>";
+    main.innerHTML = header("Channels / presets", '', '<button id="new-channel" class="primary">' + icon('plus') + "New channel / preset</button>") + "<div class=\"toolbar\"><label class=\"search\">Search a channel<input id=\"channel-search\" type=\"search\" value=\"" + esc(managementFilters.channels) + '"></label><label class="checkbox-label"><input id="archived-channels" type="checkbox"' + (managementFilters.archivedChannels ? ' checked' : '') + ">Show archives</label><span id=\"channels-count\" class=\"count\"></span></div><div id=\"channels-list\"></div>";
     const update = () => {
       managementFilters.channels = $('#channel-search').value;
       managementFilters.archivedChannels = $('#archived-channels').checked;
       const items = management.channels.filter((c) => !!c.archived === managementFilters.archivedChannels && (c.name + ' ' + c.handle).toLocaleLowerCase('en').includes(managementFilters.channels.toLocaleLowerCase('en')));
       $('#channels-count').textContent = items.length + " channel" + (items.length === 1 ? '' : 's');
-      $('#channels-list').innerHTML = items.length ? "<div class=\"table-wrap\"><table class=\"management-table\"><thead><tr><th>Channel</th><th>Default style</th><th>Language</th><th>Videos</th><th>Actions</th></tr></thead><tbody>" + items.map((c) => "<tr><td data-label=\"Channel\"><a class=\"project-title\" href=\"#/channels/" + encode(c.id) + '">' + esc(c.name) + '</a><div class="small muted">' + esc(c.handle || "Handle not provided") + '</div></td><td data-label="Style"><a href="#/styles/' + encode(c.style_id) + '">' + esc(c.style_name) + "</a></td><td data-label=\"Language\">" + esc(({English:"English",French:"French"})[c.language] || c.language) + "</td><td data-label=\"Videos\">" + data.projects.filter((p) => (p.profile_id || p.channel_id) === c.id).length + '</td><td data-label="Actions"><div class="actions"><a class="button icon-button" href="#/channels/' + encode(c.id) + "/settings\" title=\"Settings for " + esc(c.name) + "\" aria-label=\"Settings for " + esc(c.name) + '">' + icon('edit') + '</a>' + (!c.archived ? '<button class="icon-button" data-create-channel="' + esc(c.id) + "\" title=\"New video for " + esc(c.name) + "\" aria-label=\"New video for " + esc(c.name) + '">' + icon('plus') + '</button>' : '<button data-restore-channel="' + esc(c.id) + "\">Restore</button>") + '</div></td></tr>').join('') + '</tbody></table></div>' : "<div class=\"empty\">No channels in this list.</div>";
+      $('#channels-list').innerHTML = items.length ? "<div class=\"table-wrap\"><table class=\"management-table\"><thead><tr><th>Channel</th><th>Drawing preset</th><th>Language</th><th>Videos</th><th>Actions</th></tr></thead><tbody>" + items.map((c) => "<tr><td data-label=\"Channel\"><a class=\"project-title\" href=\"#/channels/" + encode(c.id) + '">' + esc(c.name) + '</a><div class="small muted">' + esc(c.handle || "Handle not provided") + '</div></td><td data-label="Drawing preset"><a href="#/styles/' + encode(c.style_id) + '">' + esc(c.style_name) + "</a></td><td data-label=\"Language\">" + esc(({English:"English",French:"French"})[c.language] || c.language) + "</td><td data-label=\"Videos\">" + data.projects.filter((p) => (p.profile_id || p.channel_id) === c.id).length + '</td><td data-label="Actions"><div class="actions"><a class="button icon-button" href="#/channels/' + encode(c.id) + "/settings\" title=\"Settings for " + esc(c.name) + "\" aria-label=\"Settings for " + esc(c.name) + '">' + icon('edit') + '</a>' + (!c.archived ? '<button class="icon-button" data-create-channel="' + esc(c.id) + "\" title=\"New video for " + esc(c.name) + "\" aria-label=\"New video for " + esc(c.name) + '">' + icon('plus') + '</button>' : '<button data-restore-channel="' + esc(c.id) + "\">Restore</button>") + '</div></td></tr>').join('') + '</tbody></table></div>' : "<div class=\"empty\">No channels in this list.</div>";
       $$('[data-create-channel]').forEach((button) => button.onclick = () => openCreate(button.dataset.createChannel));
       $$('[data-restore-channel]').forEach((button) => button.onclick = () => archiveManaged('channels', items.find((c) => c.id === button.dataset.restoreChannel), false));
     };
@@ -988,18 +1017,37 @@
   }
   function renderChannel(profile, selected) {
     const settings = selected === 'settings';
-    main.innerHTML = "<div class=\"breadcrumbs\"><a href=\"#/channels\">Channels</a><span>/</span>" + esc(profile.name) + '</div>' + header(profile.name, profile.handle || '', profile.archived ? "<button id=\"restore-channel\">Restore channel</button>" : '<button id="channel-create" class="primary">' + icon('plus') + "New video</button>") + "<nav class=\"view-tabs\" aria-label=\"Channel views\"><a href=\"#/channels/" + encode(profile.id) + '"' + (!settings ? ' aria-current="page"' : '') + ">Videos</a><a href=\"#/channels/" + encode(profile.id) + '/settings"' + (settings ? ' aria-current="page"' : '') + ">Settings</a></nav><div id=\"channel-content\"></div>";
+    main.innerHTML = "<div class=\"breadcrumbs\"><a href=\"#/channels\">Channels &amp; presets</a><span>/</span>" + esc(profile.name) + '</div>' + header(profile.name, profile.handle || '', profile.archived ? "<button id=\"restore-channel\">Restore channel</button>" : '<button id="channel-create" class="primary">' + icon('plus') + "New video</button>") + "<nav class=\"view-tabs\" aria-label=\"Channel views\"><a href=\"#/channels/" + encode(profile.id) + '"' + (!settings ? ' aria-current="page"' : '') + ">Videos</a><a href=\"#/channels/" + encode(profile.id) + '/settings"' + (settings ? ' aria-current="page"' : '') + ">Preset &amp; settings</a></nav><div id=\"channel-content\"></div>";
     if (profile.archived) $('#restore-channel').onclick = () => archiveManaged('channels', profile, false);
     else $('#channel-create').onclick = () => openCreate(profile.id);
     if (!settings) {
-      $('#channel-content').innerHTML = "<dl class=\"channel-summary\"><div><dt>Default style</dt><dd><a href=\"#/styles/" + encode(profile.style_id) + '">' + esc(profile.style_name) + "</a></dd></div><div><dt>Language</dt><dd>" + esc(({English:"English", French:"French", Spanish:"Spanish", German:"German", Italian:"Italian", Portuguese:"Portuguese", Japanese:"Japanese"})[profile.language] || profile.language) + "</dd></div><div><dt>Target duration</dt><dd>" + profile.target_minutes + " min</dd></div><div><dt>Voice</dt><dd>Algrow</dd></div></dl>" + projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id));
+      $('#channel-content').innerHTML = "<dl class=\"channel-summary\"><div><dt>Drawing preset</dt><dd><a href=\"#/styles/" + encode(profile.style_id) + '">' + esc(profile.style_name) + "</a></dd></div><div><dt>Language</dt><dd>" + esc(({English:"English", French:"French", Spanish:"Spanish", German:"German", Italian:"Italian", Portuguese:"Portuguese", Japanese:"Japanese"})[profile.language] || profile.language) + "</dd></div><div><dt>Target duration</dt><dd>" + profile.target_minutes + " min</dd></div><div><dt>Voice</dt><dd>Algrow</dd></div></dl>" + projectTable(data.projects.filter((p) => (p.profile_id || p.channel_id) === profile.id));
       return;
     }
-    $('#channel-content').innerHTML = "<div class=\"management-editor\"><form id=\"channel-settings\"><h2>Identity and settings</h2>" + channelFields(profile) + "<div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save channel</button></div></form><aside><h2>Current previews</h2><figure>" + preview(profilePreview(profile, 'video'), "Video style") + "<figcaption>Video · " + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), "Thumbnail") + "<figcaption>Thumbnail · proposal to approve</figcaption></figure><a class=\"button\" href=\"#/styles/" + encode(profile.style_id) + '">' + icon('edit') + "Edit this style</a></aside></div><section class=\"section\"><h2>Channel status</h2><div class=\"inline\">" + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? "Archived" : "Active") + '<button id="archive-channel">' + (profile.archived ? "Restore" : "Archive channel") + '</button></div></section>';
+    $('#channel-content').innerHTML = "<div class=\"management-editor\"><form id=\"channel-settings\"><h2>Identity and settings</h2>" + channelFields(profile, false) + "<div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save channel</button></div></form><aside><h2>Current previews</h2><figure>" + preview(profilePreview(profile, 'video'), "Video style") + "<figcaption>Video · " + esc(profile.style_name) + '</figcaption></figure><figure>' + preview(profilePreview(profile, 'thumbnail'), "Thumbnail") + "<figcaption>Thumbnail · proposal to approve</figcaption></figure><a class=\"button\" href=\"#/styles/" + encode(profile.style_id) + '">' + icon('edit') + "Edit this style</a></aside></div><section class=\"section\"><h2>Channel status</h2><div class=\"inline\">" + badge(profile.archived ? 'unreviewed' : 'verified', profile.archived ? "Archived" : "Active") + '<button id="archive-channel">' + (profile.archived ? "Restore" : "Archive channel") + '</button></div></section>';
     $('#channel-settings').dataset.savedVoiceId = profile.voice?.voice_id || '';
     $('#channel-settings').dataset.savedVoiceName = profile.voice?.voice_name || profile.voice?.voice_id || '';
     $('#channel-settings').dataset.savedVoiceSpeed = profile.voice?.speed || 1;
-    $('#channel-settings').onsubmit = (event) => { event.preventDefault(); action(event.submitter, async () => { await api('/api/workspace/management/channels/' + encode(profile.id), {method:'PUT', body:channelBody(event.target)}); await route(); }, "Channel saved."); };
+    const preset = management.styles.find(style => style.id === profile.style_id);
+    const styleLink = $('#channel-content aside a[href^="#/styles/"]');
+    styleLink?.remove();
+    $('#channel-content > .management-editor > aside')?.remove();
+    $('#channel-content > .management-editor')?.classList.add('channel-identity-editor');
+    $('#channel-content').insertAdjacentHTML('beforeend', '<section id="channel-preset-editor"></section>');
+    if (preset) renderStyle(preset, $('#channel-preset-editor'), profile);
+    $('#channel-settings button[type="submit"]').remove();
+    $('.page-head .actions').insertAdjacentHTML('beforeend', '<button type="submit" form="channel-settings" class="primary">Save channel / preset</button>');
+    $('#channel-settings').onsubmit = event => {
+      event.preventDefault();
+      const visualForm = $('#visual-style-form');
+      if (visualForm && !visualForm.reportValidity()) return;
+      if ($$('[data-character-form]').some(form => !form.reportValidity())) return;
+      action(event.submitter, async () => {
+        const body = channelPresetBody();
+        await api('/api/workspace/management/presets/' + encode(profile.id), {method:'PUT', body});
+        await route();
+      }, 'Channel / preset saved.');
+    };
     $('#archive-channel').onclick = () => archiveManaged('channels', profile, !profile.archived);
   }
   function backgroundModeField(mode = 'free') {
@@ -1014,6 +1062,8 @@
     action(null, async () => { const result = await api('/api/workspace/management/styles', {method:'POST', body:{name:style.name + " (copy)", base_id:style.id}}); location.hash = '#/styles/' + encode(result.id); }, "Style duplicated with its references.");
   }
   function renderStyles(id) {
+    const linked = management.channels.filter(channel => !channel.archived && channel.style_id === id);
+    if (id && linked.length === 1) { renderChannel(linked[0], 'settings'); return; }
     const style = management.styles.find((s) => s.id === id);
     if (style) { renderStyle(style); return; }
     if (id) { main.innerHTML = header("Style not found", '') + '<a href="#/styles">Revenir aux styles</a>'; return; }
@@ -1030,10 +1080,10 @@
     $('#new-style').onclick = newStyle;
     $('#style-search').oninput = update; $('#archived-styles').onchange = update; update();
   }
-  function renderStyle(style) {
+  function renderStyle(style, root = main, channel = null) {
     const used = management.channels.filter((c) => !c.archived && c.style_id === style.id);
     const refs = style.references.map((r) => ({...r}));
-    main.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Visual styles</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, "channel") + ' · ' + countLabel(refs.length, "reference"), !style.archived ? "<button id=\"duplicate-style\">Duplicate style</button>" : "<button id=\"restore-style\">Restore style</button>") + "<div class=\"management-editor\"><form id=\"visual-style-form\"><h2>Style settings</h2><div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" value=\"" + esc(style.name) + "\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"10\" required>" + esc(style.prompt) + "</textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"4\">" + esc(style.background_direction) + '</textarea></label><label class="full">Thumbnail prompt<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + "</textarea></label></div><div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save style</button></div></form><aside><h2>Style previews</h2><figure>" + preview(style.video_preview_url, "Video style") + "<figcaption>Video</figcaption></figure><figure>" + preview(style.thumbnail_preview_url, "Thumbnail style") + "<figcaption>Thumbnail</figcaption></figure><h3>Linked channels</h3><ul class=\"linked-channels\">" + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || "<li>No linked channels</li>") + "</ul></aside></div><section class=\"section\"><div class=\"page-head\"><h2>Visual references</h2><button id=\"save-style-refs\">Save references</button></div><ol class=\"reference-list\" id=\"style-references\"></ol><form id=\"style-upload\"><label>Add images<input name=\"files\" type=\"file\" accept=\"image/png,image/jpeg,image/webp\" multiple required" + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + "Add references</button></div><p id=\"upload-progress\" class=\"small muted\" role=\"status\"></p></form></section><section class=\"section\"><h2>Style status</h2><div class=\"inline\">" + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? "Archived" : "Active") + (!style.is_default ? '<button id="archive-style">' + (style.archived ? "Restore" : "Archive style") + '</button>' : '') + '</div></section>';
+    root.innerHTML = '<div class="breadcrumbs"><a href="#/styles">Visual styles</a><span>/</span>' + esc(style.name) + '</div>' + header(style.name, countLabel(used.length, "channel") + ' · ' + countLabel(refs.length, "reference"), !style.archived ? "<button id=\"duplicate-style\">Duplicate style</button>" : "<button id=\"restore-style\">Restore style</button>") + "<div class=\"management-editor\"><form id=\"visual-style-form\"><h2>Style settings</h2><div class=\"form-grid\"><label class=\"full\">Style name<input name=\"name\" value=\"" + esc(style.name) + "\" maxlength=\"200\" required></label><label class=\"full\">Video prompt<textarea name=\"prompt\" rows=\"10\" required>" + esc(style.prompt) + "</textarea></label><label class=\"full\">Background direction<textarea name=\"background_direction\" rows=\"4\">" + esc(style.background_direction) + '</textarea></label><label class="full">Thumbnail prompt<textarea name="thumbnail_prompt" rows="5">' + esc(style.thumbnail_prompt) + "</textarea></label></div><div class=\"form-actions\"><button type=\"submit\" class=\"primary\">Save style</button></div></form><aside><h2>Style previews</h2><figure>" + preview(style.video_preview_url, "Video style") + "<figcaption>Video</figcaption></figure><figure>" + preview(style.thumbnail_preview_url, "Thumbnail style") + "<figcaption>Thumbnail</figcaption></figure><h3>Linked channels</h3><ul class=\"linked-channels\">" + (used.map((c) => '<li><a href="#/channels/' + encode(c.id) + '/settings">' + esc(c.name) + '</a></li>').join('') || "<li>No linked channels</li>") + "</ul></aside></div><section class=\"section\"><div class=\"page-head\"><h2>Visual references</h2><button id=\"save-style-refs\">Save references</button></div><ol class=\"reference-list\" id=\"style-references\"></ol><form id=\"style-upload\"><label>Add images<input name=\"files\" type=\"file\" accept=\"image/png,image/jpeg,image/webp\" multiple required" + (style.archived ? ' disabled' : '') + '></label><div class="form-actions"><button type="submit"' + (style.archived ? ' disabled' : '') + '>' + icon('plus') + "Add references</button></div><p id=\"upload-progress\" class=\"small muted\" role=\"status\"></p></form></section><section class=\"section\"><h2>Style status</h2><div class=\"inline\">" + badge(style.archived ? 'unreviewed' : 'verified', style.archived ? "Archived" : "Active") + (!style.is_default ? '<button id="archive-style">' + (style.archived ? "Restore" : "Archive style") + '</button>' : '') + '</div></section>';
     $('#visual-style-form .form-grid').insertAdjacentHTML('beforeend', backgroundModeField(style.background_mode));
     if (!style.archived) $('#duplicate-style').onclick = () => duplicateStyle(style);
     else $('#restore-style').onclick = () => archiveManaged('styles', style, false);
@@ -1044,13 +1094,30 @@
       action(event.submitter, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{...Object.fromEntries(new FormData(event.target)), references:refs}}); await route(); }, "Style saved.");
     };
     const renderRefs = () => {
-      $('#style-references').innerHTML = refs.length ? refs.map((ref, index) => '<li><span class="small muted">' + (index + 1) + '</span><img src="' + esc(safeUrl(ref.url)) + "\" alt=\"Reference " + (index + 1) + '"><span class="ref-label">' + esc(ref.label || ref.path) + (!ref.exists ? '<span class="error-text"> · missing file</span>' : '') + '</span><div class="actions"><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"-1\" title=\"Move up\" aria-label=\"Move reference up " + (index + 1) + '"' + (index === 0 ? ' disabled' : '') + '>' + icon('up') + '</button><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"1\" title=\"Move down\" aria-label=\"Move reference down " + (index + 1) + '"' + (index === refs.length - 1 ? ' disabled' : '') + '>' + icon('down') + '</button><select data-preview-select="' + index + "\" aria-label=\"Preview for reference " + (index + 1) + "\"><option value=\"\">Choose a preview</option><option value=\"video_preview\">Video</option><option value=\"thumbnail_preview\">Thumbnail</option></select><button type=\"button\" class=\"icon-button\" data-remove-ref=\"" + index + "\" title=\"Remove from list\" aria-label=\"Remove reference " + (index + 1) + '">' + icon('close') + '</button></div></li>').join('') : "<li class=\"muted\">No references saved.</li>";
+      $('#style-references').innerHTML = refs.length ? refs.map((ref, index) => '<li><span class="small muted">' + (index + 1) + '</span><img src="' + esc(safeUrl(ref.url)) + "\" alt=\"Reference " + (index + 1) + '"><span class="ref-label">' + esc(ref.label || ref.path) + (!ref.exists ? '<span class="error-text"> · missing file</span>' : '') + '</span><div class="actions"><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"-1\" title=\"Move up\" aria-label=\"Move reference up " + (index + 1) + '"' + (index === 0 ? ' disabled' : '') + '>' + icon('up') + '</button><button type="button" class="icon-button" data-move="' + index + "\" data-direction=\"1\" title=\"Move down\" aria-label=\"Move reference down " + (index + 1) + '"' + (index === refs.length - 1 ? ' disabled' : '') + '>' + icon('down') + '</button><select data-preview-select="' + index + "\" aria-label=\"Preview for reference " + (index + 1) + "\"><option value=\"\">Choose a preview</option><option value=\"video_preview\">Video</option><option value=\"thumbnail_preview\">Thumbnail</option><option value=\"drawing_reference_path\">Use as drawing guide</option></select><button type=\"button\" class=\"icon-button\" data-remove-ref=\"" + index + "\" title=\"Remove from list\" aria-label=\"Remove reference " + (index + 1) + '">' + icon('close') + '</button></div></li>').join('') : "<li class=\"muted\">No references saved.</li>";
       $$('[data-move]').forEach((button) => button.onclick = () => { const from = Number(button.dataset.move), to = from + Number(button.dataset.direction); [refs[from],refs[to]] = [refs[to],refs[from]]; dirty = true; renderRefs(); });
       $$('[data-remove-ref]').forEach((button) => button.onclick = () => { refs.splice(Number(button.dataset.removeRef), 1); dirty = true; renderRefs(); });
-      $$('[data-preview-select]').forEach((select) => select.onchange = () => { const role = select.value; if (!role) return; if (dirty) { select.value = ''; notify("Save changes before choosing a preview.", true); return; } action(select, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{[role]:refs[Number(select.dataset.previewSelect)].path}}); await route(); }, "Preview saved."); });
+      $$('[data-preview-select]').forEach((select) => select.onchange = () => {
+        const role = select.value;
+        if (!role) return;
+        action(select, async () => {
+          const path = refs[Number(select.dataset.previewSelect)].path;
+          if (channel) {
+            const body = channelPresetBody(); body.preset[role] = path;
+            await api('/api/workspace/management/presets/' + encode(channel.id), {method:'PUT',body});
+          } else {
+            await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{...Object.fromEntries(new FormData($('#visual-style-form'))), references:refs, [role]:path}});
+          }
+          await route();
+        }, role === 'drawing_reference_path' ? "Drawing guide saved." : "Preview saved.");
+      });
+      if (style.drawing_reference_path) {
+        const index = refs.findIndex(ref => ref.path === style.drawing_reference_path);
+        if (index >= 0) $$('[data-preview-select]')[index].closest('li').querySelector('.ref-label').insertAdjacentHTML('beforeend', '<span class="badge verified">Drawing guide</span>');
+      }
     };
     renderRefs();
-    renderStyleCharacters(style);
+    renderStyleCharacters(style, root);
     $('#save-style-refs').onclick = (event) => { if ($('#visual-style-form [name="background_mode"]').value !== (style.background_mode || "free") || $('#visual-style-form [name="prompt"]').value !== style.prompt || $('#visual-style-form [name="name"]').value !== style.name || $('#visual-style-form [name="background_direction"]').value !== style.background_direction || $('#visual-style-form [name="thumbnail_prompt"]').value !== style.thumbnail_prompt) { notify("Save the style settings before references.", true); return; } action(event.currentTarget, async () => { await api('/api/workspace/management/styles/' + encode(style.id), {method:'PUT', body:{references:refs}}); await route(); }, "References saved."); };
     $('#style-upload').onsubmit = (event) => {
       event.preventDefault();
@@ -1067,11 +1134,58 @@
         await route();
       }, "Images added in order.");
     };
+    $('#visual-style-form').orderedReferences = refs;
+    if (channel) {
+      $('.breadcrumbs', root)?.remove();
+      $('.page-head', root)?.remove();
+      const name = $('#visual-style-form [name="name"]');
+      name.closest('label').hidden = true;
+      $('#visual-style-form h2').textContent = 'Drawing and background';
+      $('#visual-style-form [name="prompt"]').closest('label').firstChild.textContent = 'Drawing instructions';
+      $('#visual-style-form button[type="submit"]').hidden = true;
+      $('#visual-style-form').onsubmit = event => { event.preventDefault(); $('#channel-settings').requestSubmit(); };
+      $('#save-style-refs').onclick = () => $('#channel-settings').requestSubmit();
+      $$('[data-character-form]', root).forEach(form => form.onsubmit = event => {
+        event.preventDefault();
+        $('#channel-settings').verifyCharacter = event.submitter?.name === 'verify' ? {name:form.dataset.name, variant:form.dataset.variant} : null;
+        $('#channel-settings').requestSubmit();
+      });
+      $('#style-upload').onsubmit = event => {
+        event.preventDefault();
+        const files = [...$('[name="files"]', event.target).files];
+        action(event.submitter, async () => {
+          const saved = await api('/api/workspace/management/presets/' + encode(channel.id), {method:'PUT',body:channelPresetBody()});
+          for (const file of files) {
+            const payload = new FormData(); payload.append('file', file); payload.append('label', file.name);
+            await api('/api/workspace/management/styles/' + encode(saved.preset.id) + '/references', {method:'POST',body:payload});
+          }
+          await route();
+        }, 'Drawing references imported.');
+      };
+      $('#style-character-upload').onsubmit = event => {
+        event.preventDefault();
+        const fields = new FormData(event.target), files = [...$('[name="files"]', event.target).files];
+        action(event.submitter, async () => {
+          const saved = await api('/api/workspace/management/presets/' + encode(channel.id), {method:'PUT',body:channelPresetBody()});
+          for (const file of files) {
+            const payload = new FormData(); payload.append('file',file);
+            for (const key of ['name','variant','description']) payload.append(key,fields.get(key));
+            payload.append('is_main',fields.has('is_main') ? 'true' : 'false');
+            await api('/api/workspace/management/styles/' + encode(saved.preset.id) + '/characters', {method:'POST',body:payload});
+          }
+          await route();
+        }, 'Character references imported. Review and validate them here.');
+      };
+      const linked = $('.linked-channels', root);
+      linked?.previousElementSibling?.remove(); linked?.remove();
+      $('#archive-style')?.closest('.section')?.remove();
+    }
+
   }
-  function renderStyleCharacters(style) {
+  function renderStyleCharacters(style, root = main) {
     const characters = style.characters || [];
     const disabled = style.archived ? ' disabled' : '';
-    $('.management-editor').insertAdjacentHTML('afterend', `<section class="section character-style-section"><h2>Character references</h2><p class="muted">One main character and recurring characters per style. Upload their images, check them, then validate their references. New projects keep their cast.</p><div class="style-character-list">${characters.map((character) => character.variants.map((variant) => `<form class="style-character-card" data-character-form data-name="${esc(character.name)}" data-variant="${esc(variant.id)}"><div class="inline"><h3>${esc(character.name)} · ${esc(variant.id)}</h3>${character.main ? "<span class=\"badge verified\">Main</span>" : ''}</div><div class="character-reference-images">${variant.references.map((ref) => `<figure><a href="${esc(safeUrl(ref.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ref.url))}" alt="Reference for ${esc(character.name)}"></a><figcaption>${ref.valid ? "Validated" : ref.exists ? "To review" : "Missing file"}</figcaption></figure>`).join('')}</div><label>Description fixe<textarea name="description" rows="3" required${disabled}>${esc(variant.description)}</textarea></label><label class="inline"><input name="is_main" type="checkbox"${character.main ? ' checked' : ''}${disabled}>Main style character</label><div class="form-actions"><button type="submit"${disabled}>Save</button><button type="submit" name="verify" value="true"${disabled}>Validate these references</button></div></form>`).join('')).join('') || "<p class=\"muted\">No character saved.</p>"}</div><form id="style-character-upload"><h3>Add a character or reference</h3><div class="form-grid"><label>Character name<input name="name" maxlength="100" required${disabled}></label><label>Variant<input name="variant" value="default" pattern="[A-Za-z0-9_-]+" maxlength="100" required${disabled}></label><label class="full">Description fixe<textarea name="description" rows="3" required${disabled}></textarea></label><label class="full">Reference images<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required${disabled}></label><label class="inline"><input name="is_main" type="checkbox"${!characters.length ? ' checked' : ''}${disabled}>Main character</label></div><div class="form-actions"><button type="submit"${disabled}>Import character references</button></div><p class="small muted">Reuse the same name and variant to add an image to the existing character.</p></form></section>`);
+    $('.management-editor', root).insertAdjacentHTML('afterend', `<section class="section character-style-section"><h2>Character references</h2><p class="muted">One main character and recurring characters per style. Upload their images, check them, then validate their references. New projects keep their cast.</p><div class="style-character-list">${characters.map((character) => character.variants.map((variant) => `<form class="style-character-card" data-character-form data-name="${esc(character.name)}" data-variant="${esc(variant.id)}"><div class="inline"><h3>${esc(character.name)} · ${esc(variant.id)}</h3>${character.main ? "<span class=\"badge verified\">Main</span>" : ''}</div><div class="character-reference-images">${variant.references.map((ref) => `<figure><a href="${esc(safeUrl(ref.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ref.url))}" alt="Reference for ${esc(character.name)}"></a><figcaption>${ref.valid ? "Validated" : ref.exists ? "To review" : "Missing file"}</figcaption></figure>`).join('')}</div><label>Fixed description<textarea name="description" rows="3" required${disabled}>${esc(variant.description)}</textarea></label><label class="inline"><input name="is_main" type="checkbox"${character.main ? ' checked' : ''}${disabled}>Main character</label><div class="form-actions"><button type="submit"${disabled}>Save</button><button type="submit" name="verify" value="true"${disabled}>Validate these references</button></div></form>`).join('')).join('') || "<p class=\"muted\">No character saved.</p>"}</div><form id="style-character-upload"><h3>Add a character or reference</h3><div class="form-grid"><label>Character name<input name="name" maxlength="100" required${disabled}></label><label>Variant<input name="variant" value="default" pattern="[A-Za-z0-9_-]+" maxlength="100" required${disabled}></label><label class="full">Fixed description<textarea name="description" rows="3" required${disabled}></textarea></label><label class="full">Reference images<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple required${disabled}></label><label class="inline"><input name="is_main" type="checkbox"${!characters.length ? ' checked' : ''}${disabled}>Main character</label></div><div class="form-actions"><button type="submit"${disabled}>Import character references</button></div><p class="small muted">Reuse the same name and variant to add an image to the existing character.</p></form></section>`);
     $$('[data-character-form]').forEach((form) => form.onsubmit = (event) => {
       event.preventDefault();
       const fields = new FormData(form);
