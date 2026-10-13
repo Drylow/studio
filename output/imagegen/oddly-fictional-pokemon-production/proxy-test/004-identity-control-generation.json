@@ -1,0 +1,36 @@
+{
+  "scene_id": 4,
+  "provider": "cli_proxy",
+  "source": "bundled_image_cli_user_requested_proxy_test",
+  "prompt": "Draw this same original cartoon character from Image 1 standing alone on a plain light grey background, waving one white mitten hand. Keep his exact large circular white head, two small black dot eyes, tiny short mouth, short compact clothed body, red cap, blue zip jacket, charcoal long trousers and brown boots. Clean black outlines and flat colours, head white without shading, all exposed hands and neck white. Full figure in one landscape 2D illustration.",
+  "references": [
+    {
+      "owner": "project",
+      "path": "production-v1/refs/ffa08e0488b4021a-nico-identity-v2.jpg",
+      "role": "identity",
+      "sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57",
+      "character": "Nico",
+      "variant": "default",
+      "review_state": "verified",
+      "source": "work/pokemon-episode-02/project-cache/production-v1/refs/ffa08e0488b4021a-nico-identity-v2.jpg",
+      "sent_sha256": "ffa08e0488b4021ab639edbe34a0f518f0482d8f8f8416702cbe2c4ad0f13e57"
+    }
+  ],
+  "requested_size": [
+    2048,
+    1152
+  ],
+  "quality": "high",
+  "scene_narration": "Technical control only: custom trainer identity, not an episode shot.",
+  "scene_start": 16.04,
+  "scene_end": 23.38,
+  "state": "generated_unreviewed",
+  "new_upscale": false,
+  "dimensions": [
+    1678,
+    937
+  ],
+  "seconds": 23,
+  "image_sha256": "65979530f17579ce0d596804ae5924ecadc5acc9c1c4b38df203544c2b641643",
+  "image_source": "output/imagegen/oddly-fictional-pokemon-production/proxy-test/004-identity-control.png"
+}

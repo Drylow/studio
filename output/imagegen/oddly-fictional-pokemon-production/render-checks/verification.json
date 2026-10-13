@@ -1,0 +1,21 @@
+{
+  "project_id": "your-life-as-a-pokemon-trainer-df03b3",
+  "render_sha256": "99511f7da5564a8abf93dee63636e09265161613d22a60cfb37600e594086968",
+  "decoded_video_frames": 22800,
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "video_seconds": 950.0,
+  "audio_seconds": 950.02125,
+  "voice_seconds": 950,
+  "full_audio_similarity": 0.999946117401123,
+  "audio_lag_seconds": 0.0,
+  "black_samples": [],
+  "scene_count": 157,
+  "visual_review": "inspected",
+  "published": false,
+  "new_generation_upscale": false,
+  "reviewer": "Codex",
+  "user_approved": false,
+  "notes": "Actually viewed all 157 rendered shot midpoint images and the final frame. Landscape full-frame scenes and narration coverage remain intact. Minor expression and occasional body proportion variations remain; no claim of perfect identity. Full decode and measured full voice correlation verified."
+}
