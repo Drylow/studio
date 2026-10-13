@@ -1,0 +1,200 @@
+{
+  "schema": "conversation-chess-clip-v1",
+  "title": "Chess Analysis - Attack on Titan | Eren VS Reiner",
+  "demo": false,
+  "source_reviewed": true,
+  "show_source_quality_label": false,
+  "analysis_pawn_by_speaker": true,
+  "source_sha256": "5c5919be31cc880d2d1c373c2aa3d9e2a333c2c2ad30ef6e39b6253059c4f0f8",
+  "source_url": "https://www.youtube.com/watch?v=8HkZD0yI2qM",
+  "source_quality": {
+    "quality_target": 1080,
+    "accepted_for_final": true,
+    "note": "Four distinct acquired1920x1080 English-dub files. Adult Swim logo retained under explicit user authorization2026-10-13. No burned subtitles observed. Small borders and partial upper broadcaster inscription remain in the short recorded reunion and question passages. The recorded threat passage was rejected in full-frame review and replaced with a separate clean1080p acquisition, without painting over the cursor or reconstructing detail. Broadcast copies with varying softness, not raw studio masters."
+  },
+  "source_in": 0,
+  "source_out": 356.08333333333337,
+  "intro_seconds": 16,
+  "initial_control": 0.5,
+  "initial_score_text": "0.0",
+  "white_label": "Eren",
+  "black_label": "Reiner",
+  "opening": {
+    "speaker": "white",
+    "label": "Eren",
+    "reviewed": true,
+    "evidence": "First selected source frame at original16.7667s. Eren starts Yeah at16.80s and continues we have a whole lot to catch up on. Falco next speaks21.86s. Camps remain fixed; Falco and Willy are contextual speakers, not scored players."
+  },
+  "analysis_background": "replay",
+  "dialogue_gain": 1,
+  "annotations": [
+    {
+      "source_at": 7.483333,
+      "rating": "book",
+      "speaker": "white",
+      "score_text": "+0.3",
+      "control_after": 0.473037,
+      "comment": "Eren opens like an old friend. His calm tone sets the pace while Reiner struggles to respond. The reunion begins on Eren's terms.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Original opening: catch up on ends20.90s; Falco finishes start at23.80s; pause24.25s; next Reiner line26.70s. Selected-source alignment: start ends7.12s; pause7.483s."
+    },
+    {
+      "source_at": 52.033333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+2.2",
+      "control_after": 0.315472,
+      "comment": "Families are upstairs; Eren's hand is already cut. Reiner understands the threat without a shouted ultimatum. One quiet command pins him in place.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Replacement threat source: final sit ends39.18s; pause39.60s leaves0.42s. Joined at52.033333s. Falco resumes44.74s. Whole recorded threat passage removed."
+    },
+    {
+      "source_at": 72.433333,
+      "rating": "great",
+      "speaker": "white",
+      "score_text": "+2.2",
+      "control_after": 0.315472,
+      "comment": "Eren keeps Falco in the room, and Reiner tells him to obey. Reiner cannot even end the meeting. Eren keeps control of who stays and who leaves.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Original Falco Okay ends88.72s; questions resume87.30s. Pause at original89.25s / joined72.433333s leaves0.53s; next Hey90.18s. Great neutral."
+    },
+    {
+      "source_at": 169.833333,
+      "rating": "book",
+      "speaker": "black",
+      "score_text": "+1.8",
+      "control_after": 0.345583,
+      "comment": "Reiner falls back on his mission: take the Founder to save the world. It is the explanation he was trained to give, and Eren lets him state it.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Second source much choice ends58.80s; pause59.15s leaves0.35s; Reiner resumes62.62s. The Book rating evaluates the familiar mission defense already stated48.58-51.72s. Selected-source alignment: choice ends169.52s; pause169.883s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain."
+    },
+    {
+      "source_at": 231.183333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+3.4",
+      "control_after": 0.23868,
+      "comment": "Eren replaces the monster story with people on both sides. He even acknowledges Reiner's childhood conditioning. The accusation becomes harder to hide behind.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Second source training ends120.12s; pause120.50s leaves0.38s. Next As young as you were begins only in the following source part after121.20s. Selected-source alignment: training ends230.80s; pause231.233s; As begins232.30s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain."
+    },
+    {
+      "source_at": 291.083333,
+      "rating": "blunder",
+      "speaker": "black",
+      "score_text": "+4.2",
+      "control_after": 0.199155,
+      "comment": "Reiner asks to die instead of addressing the threat above him. He abandons negotiation, leaving Eren to decide when this encounter ends.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Third source kill me ends58.60s; pause59.20s leaves0.60s. Source ends60.00s; the later offstage speech is omitted before the response. This judges lost negotiating position, not the moral value of honesty. Selected-source alignment: me ends290.60s; pause291.133s; next detected speech292.00s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain."
+    },
+    {
+      "source_at": 344.283333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "score_text": "+5.5",
+      "control_after": 0.15266,
+      "comment": "The handshake is no ceasefire. Eren transforms beneath the building while Reiner shields Falco. The conversation was preparation for the attack.",
+      "hold_seconds": 7,
+      "replay_seconds": 3,
+      "reviewed": true,
+      "boundary_evidence": "Final part: declaration ends original138.76s; transformation occurs129-139s. Pause at149.00s follows the attack reveal, with no dialogue crossing it; the concluding attack shot remains after analysis. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain."
+    }
+  ],
+  "outro_seconds": 12,
+  "outro_style": "recap",
+  "outro_layout_reviewed": true,
+  "outro_review_evidence": "Actual1920x1080 native scene.js recap rendered and visually inspected: entire summary inside bubble; correct counts3brilliant,1great,2book,1blunder; original SVGs; neutral pawn; no Subscribe. Private capture work/chess-studio/attack-on-titan/source-review/outro-review.png.",
+  "outro_summary": "Eren chooses the room, reveals the threat, and sets the pace. Reiner first cites his mission, then admits his own ambition. Eren understands him but offers no truce: the handshake becomes an attack. Seven moves. Eren takes the initiative; understanding does not end the violence.",
+  "ending_fade_seconds": 0.5,
+  "mascot": {
+    "file": "assets/neutral-pawn.png",
+    "overlay_file": "assets/neutral-pawn.png",
+    "status": "Neutral pawn in the guide and recap. Analysis pawns follow the speaker's camp. No Tony portrait."
+  },
+  "review_evidence": "V1 full-frame review identified a recorded loading indicator and mouse pointer. The entire threat passage is replaced by independent acquired1080p footage. Opening16.7667-30.60s and questions87.30-127.50s retain reviewed clean portions of the initial recording. Six selected ranges from four distinct files, in story order. Exact sources, alignment and review images remain private in work/chess-studio/attack-on-titan.",
+  "source_parts": [
+    {
+      "file": "eren-reiner-english-1080.mp4",
+      "url": "https://www.youtube.com/watch?v=8HkZD0yI2qM",
+      "source_in": 16.766666666666666,
+      "source_out": 30.6,
+      "joined_in": 0,
+      "joined_out": 13.833333333333336,
+      "note": "Opening after player controls, stopping before the small recorded loading indicator.",
+      "sha256": "32bd55a95be5196d94ca9c6028f8839ede33a3dc2167640c260e0f60d5cb8e18"
+    },
+    {
+      "file": "threat-otaku.mp4",
+      "url": "https://www.youtube.com/watch?v=CyFUlxiWbcM",
+      "source_in": 1.4,
+      "source_out": 58.05,
+      "joined_in": 13.833333333333336,
+      "joined_out": 70.48333333333332,
+      "note": "Independent 1080p acquisition replaces the recorded-player threat passage; retain whole words through alright.",
+      "sha256": "7472db1fe9fa4d060d5de57c0d721c25a669231ff969d093f81a2f8ad73b326e"
+    },
+    {
+      "file": "eren-reiner-english-1080.mp4",
+      "url": "https://www.youtube.com/watch?v=8HkZD0yI2qM",
+      "source_in": 87.3,
+      "source_out": 127.5,
+      "joined_in": 70.48333333333333,
+      "joined_out": 110.68333333333335,
+      "note": "Resume before Falco Okay; full question and response, stopping before the later recorded-player interruption.",
+      "sha256": "32bd55a95be5196d94ca9c6028f8839ede33a3dc2167640c260e0f60d5cb8e18"
+    },
+    {
+      "file": "reiner-begs-otaku.mp4",
+      "url": "https://www.youtube.com/watch?v=BXr5Av_2MVo",
+      "source_in": 0,
+      "source_out": 121.2,
+      "joined_in": 110.68333333333334,
+      "joined_out": 231.88333333333333,
+      "note": "Complete questions about the wall, mission and humanizing reply; end after training, before duplicate As young as you were.",
+      "sha256": "42f6eb3cb6fd8e69f054b07a40dbc153d12509c7e806c34d3924496428ecae68"
+    },
+    {
+      "file": "reiner-begs-clean.mp4",
+      "url": "https://www.youtube.com/watch?v=vO3K-W7PLlI",
+      "source_in": 0,
+      "source_out": 60,
+      "joined_in": 231.88333333333333,
+      "joined_out": 291.8833333333333,
+      "note": "Continue the same sentence into the uninterrupted confession; end after kill me and breathing room.",
+      "sha256": "602790893794fee4f66b64106af30eb9fc0ad9350e03b2f62681404ce9da93c1"
+    },
+    {
+      "file": "reiner-begs-clean.mp4",
+      "url": "https://www.youtube.com/watch?v=vO3K-W7PLlI",
+      "source_in": 96.6,
+      "source_out": 160.8,
+      "joined_in": 291.8833333333333,
+      "joined_out": 356.08333333333337,
+      "note": "Resume before I was right; retain handshake, declaration, transformation and attack payoff. Remove preceding offstage speech and subsequent To be continued card.",
+      "sha256": "602790893794fee4f66b64106af30eb9fc0ad9350e03b2f62681404ce9da93c1"
+    }
+  ],
+  "music": {
+    "intro": {
+      "file": "assets/music/sneaky-snitch.mp3",
+      "title": "Sneaky Snitch",
+      "license": "CC BY 4.0",
+      "sha256": "db1710333d68a215277f77e4e17e1a64bf4ed38f87c70f8d0f56b16b6aa4f884",
+      "gain": 0.65,
+      "start_seconds": 66.104
+    }
+  }
+}

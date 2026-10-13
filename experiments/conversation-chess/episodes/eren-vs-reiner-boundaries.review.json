@@ -1,0 +1,47 @@
+{
+  "source_sha256": "5c5919be31cc880d2d1c373c2aa3d9e2a333c2c2ad30ef6e39b6253059c4f0f8",
+  "annotations": [
+    {
+      "source_at": 7.483333,
+      "rating": "book",
+      "speaker": "white",
+      "boundary_evidence": "Original opening: catch up on ends20.90s; Falco finishes start at23.80s; pause24.25s; next Reiner line26.70s. Selected-source alignment: start ends7.12s; pause7.483s. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 52.033333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "boundary_evidence": "Replacement threat source: final sit ends39.18s; pause39.60s leaves0.42s. Joined at52.033333s. Falco resumes44.74s. Whole recorded threat passage removed. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 72.433333,
+      "rating": "great",
+      "speaker": "white",
+      "boundary_evidence": "Original Falco Okay ends88.72s; questions resume87.30s. Pause at original89.25s / joined72.433333s leaves0.53s; next Hey90.18s. Great neutral. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 169.833333,
+      "rating": "book",
+      "speaker": "black",
+      "boundary_evidence": "Second source much choice ends58.80s; pause59.15s leaves0.35s; Reiner resumes62.62s. The Book rating evaluates the familiar mission defense already stated48.58-51.72s. Selected-source alignment: choice ends169.52s; pause169.883s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 231.183333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "boundary_evidence": "Second source training ends120.12s; pause120.50s leaves0.38s. Next As young as you were begins only in the following source part after121.20s. Selected-source alignment: training ends230.80s; pause231.233s; As begins232.30s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 291.083333,
+      "rating": "blunder",
+      "speaker": "black",
+      "boundary_evidence": "Third source kill me ends58.60s; pause59.20s leaves0.60s. Source ends60.00s; the later offstage speech is omitted before the response. This judges lost negotiating position, not the moral value of honesty. Selected-source alignment: me ends290.60s; pause291.133s; next detected speech292.00s. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain. Exact V2 alignment checked: no word crosses the pause."
+    },
+    {
+      "source_at": 344.283333,
+      "rating": "brilliant",
+      "speaker": "white",
+      "boundary_evidence": "Final part: declaration ends original138.76s; transformation occurs129-139s. Pause at149.00s follows the attack reveal, with no dialogue crossing it; the concluding attack shot remains after analysis. V2 earlier replacement changes subsequent joined times by minus0.05s; original dialogue margins remain. The recognizer hallucinated duration across the final Titan roar; rejected as non-dialogue based on the inspected transformation footage and the original part alignment. Last actual spoken declaration precedes the attack. Exact V2 alignment checked: no word crosses the pause."
+    }
+  ]
+}
