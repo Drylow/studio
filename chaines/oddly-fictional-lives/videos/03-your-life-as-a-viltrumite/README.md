@@ -14,3 +14,15 @@ Script and editorial review are saved here. Private production receipts, image r
 
 
 Background rebuild: all 153 current frames were individually inspected against the references after explicit corrections. `visual-plan.json` contains primary-authored shot actions, exact original voice timings and ordered image bindings. `locations/` contains inspected empty masters and explicit crop/state variants; `cast/cast-variants.json` records the selected outfits. The older cast defaults are historical, not instructions to restore a superseded outfit. `objects/` and `scene-references/` retain selected prop and pose anchors. Hashes attest provenance, not pixel-perfect visual identity. Original voice retained: 15:37. Final exports require their separate render and delivery checks. Follow the shared export-retention procedure after a verified local transfer.
+
+## Thumbnail — close reference composition
+
+User refinement14October: attach the privately supplied two-character thumbnail as the composition/style reference. Keep the worried-left/confident-right hierarchy, adapting the named cast and setting.
+
+```text
+Recreate this reference thumbnail as a Viltrumite recruit-and-commander scene. Keep its close 16:9 framing, smaller worried character on the LEFT, larger confident character on the RIGHT, expressive white round faces, bold clean outlines and open space between them. Make only modest changes to the composition.
+
+LEFT: Varen, a nervous young ADULT recruit in a fully covered pale-grey superhero suit, RED collar, RED belt and RED boots, slightly hunched with white hands hanging down. RIGHT: Rusk, a distinct powerful commander in a BLACK uniform with GOLD collar, belt and trim, standing upright with a confident smug expression and one white hand on his waist. Both have oversized circular pure-white heads and pure-white hands, compact adult bodies, no hair, beard, nose or Kratos markings. Exactly one Varen and one Rusk, not two versions of the same character.
+
+Background: a readable imperial training courtyard, simple geometric walls, dark banners with small gold circular emblems, and one grey angular transport high in the blue sky. Keep the reference's strong foreground/background separation and cool daylight, but adapt the setting to Invincible instead of copying Star Wars buildings. Matte 2D cartoon colours, bright white faces, restrained background detail. No text or watermark.
+```
