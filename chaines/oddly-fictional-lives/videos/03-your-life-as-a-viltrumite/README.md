@@ -11,3 +11,6 @@ Studio: https://tools.kanye.studio/2d#/video/your-life-as-a-viltrumite-0484f2/te
 Canon anchors: the Viltrum Empire's conquest mission and the conflict between imperial service and attachment to another world, from the official Omni-Man biography: https://invinciblevs.com/omni-man . Series context: https://www.skybound.com/invincible . Neither source establishes Varen or Lethra; those are original fiction. No fabricated species statistics or compulsory rank ladder.
 
 Script and editorial review are saved here. Private production receipts, image requests, inspection notes and API state: `work/oddly-fictional-wave-2026-10-14/`. Scripts are authored and edited by Codex; the proxy executes voice/image requests and storyboard preparation. Production is not complete until the final media has been inspected.
+
+
+Background rebuild: the original full visual version was rejected for changing location geometry. `visual-plan.json` contains primary-authored shot actions, exact original voice timings and the inspected empty locations in `locations/`. Keep an established axis during continuous action; explicit derived views/damage states remain bound to their original space. Image generation and render remain on the hosted studio. Characters and voices are retained; new scene frames must be inspected before rendering.

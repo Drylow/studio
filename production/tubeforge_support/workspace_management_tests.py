@@ -198,6 +198,25 @@ def test_background_modes_are_explicit_and_frozen_per_project(managed):
     assert new_style(managed,name='Clone',base_id=style['id'])['background_mode']=='consistent'
 
 
+def test_camera_policy_changes_are_per_preset_and_do_not_change_existing_films(managed):
+    style=new_style(managed)
+    channel=managed.post('/api/workspace/management/channels',json={
+        'name':'Stable fictional channel','style_id':style['id'],'language':'English','target_minutes':15,
+        'voice':{'provider':'algrow','voice_id':'fixture-voice'}}).json()
+    first=managed.post('/api/workspace/projects',json={'profile_id':channel['id'],
+        'title':'Existing film','custom_script':'A complete story.'}).json()
+    url=f'/api/workspace/management/styles/{style["id"]}'
+    assert first['settings']['visuals']['camera_policy']=='varied'
+    assert managed.put(url,json={'camera_policy':'invalid'}).status_code==422
+    assert managed.put(url,json={'camera_policy':'stable'}).json()['camera_policy']=='stable'
+    assert managed.get(f'/api/workspace/projects/{first["id"]}').json()['settings']['visuals']['camera_policy']=='varied'
+    second=managed.post('/api/workspace/projects',json={'profile_id':channel['id'],
+        'title':'New film','custom_script':'Another complete story.'}).json()
+    assert second['settings']['visuals']['camera_policy']=='stable'
+    assert second['style_snapshot']['camera_policy']=='stable'
+    assert new_style(managed,name='Other channel style')['camera_policy']=='varied'
+
+
 def test_channel_management_defaults_and_existing_project_unchanged(managed):
     previous = create(managed, custom_script="Existing episode.")
     original = (store.project_dir(previous["id"]) / "project.json").read_bytes()
