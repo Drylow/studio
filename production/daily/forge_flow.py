@@ -78,8 +78,12 @@ def run(video_id, action, body):
 
 
 def native(path):
-    return path if path.startswith("http") else NATIVE + path if path.startswith("/api/") or path.startswith("/media") \
-        else forge.HOST + path
+    """Adresse complète d'un média ou d'une route : /api/2d/… et /api/forge/… tels quels, le reste sous /api/2d."""
+    if path.startswith("http"):
+        return path
+    if path.startswith(("/api/2d/", "/api/forge/")):
+        return forge.HOST + path
+    return NATIVE + path
 
 
 def fetch(url, out):
