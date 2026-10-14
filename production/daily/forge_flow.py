@@ -185,18 +185,30 @@ def regen(video_id, ids):
                 "image_provider": snap.get("image_provider", "cli_proxy")}
         try:
             api("POST", url % i, body)
-            return i, "ok"
+            return "ok"
         except SystemExit as e:
-            return i, str(e)[:120]
+            return str(e)
 
-    # Le VPS n'accepte qu'une génération à la fois par projet : on les enchaîne, en réessayant si occupé.
+    def started(i):
+        s = next(x for x in api("GET", vid(video_id)).get("scenes") or [] if x["id"] == i)
+        return s.get("status") not in (None, "idle") or s.get("image_available")
+
+    # Le VPS n'accepte qu'une génération à la fois par projet (409 tant qu'une autre tourne) : on les enchaîne.
+    # Après une coupure (502…), on regarde si la génération est partie avant de la redemander, jamais deux fois.
     for i in ids:
-        for attempt in range(30):
-            _, r = one(i)
-            if not r.startswith("409") or "in progress" not in r and "generation" not in r.lower():
-                break
-            time.sleep(10)
-        print(f"#{i} {r}", flush=True)
+        for attempt in range(60):
+            r = one(i)
+            if r.startswith("409"):
+                time.sleep(15)
+                continue
+            if r.startswith(("502", "503", "504", "connexion")):
+                time.sleep(30)
+                if started(i):
+                    r = "partie malgré la coupure"
+                    break
+                continue
+            break
+        print(f"#{i} {r[:160]}", flush=True)
 
 
 def main():
