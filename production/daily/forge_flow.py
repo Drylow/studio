@@ -58,7 +58,13 @@ def wait(video_id, every=10, limit=4 * 3600):
     start, last = time.time(), ""
     time.sleep(5)
     while time.time() - start < limit:
-        s = status(video_id)
+        try:
+            s = status(video_id)
+        except (SystemExit, OSError) as e:   # VPS momentanément indisponible (502/503, coupure) : on relit plus tard
+            if not str(e)[:3] in ("502", "503", "504") and not isinstance(e, OSError):
+                raise
+            time.sleep(every * 3)
+            continue
         line = summary(s)
         if line != last:
             print(time.strftime("%H:%M:%S"), line, flush=True)
@@ -70,7 +76,13 @@ def wait(video_id, every=10, limit=4 * 3600):
 
 
 def run(video_id, action, body):
-    api("POST", vid(video_id) + "/actions/" + action, body or {})
+    current = status(video_id)
+    if current.get("running"):
+        print("une étape tourne déjà : on attend sa fin sans rien relancer", flush=True)
+    elif action == "voice" and (current.get("steps") or {}).get("voiceover", {}).get("state") == "done":
+        print("voix déjà faite : réutilisée", flush=True)
+    else:
+        api("POST", vid(video_id) + "/actions/" + action, body or {})
     s = wait(video_id)
     if s.get("error") or s.get("state") in ("failed", "interrupted"):
         raise SystemExit(f"étape {action} : {s.get('state')} {s.get('error')}")
