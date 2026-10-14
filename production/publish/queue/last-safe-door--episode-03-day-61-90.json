@@ -1,0 +1,16 @@
+{
+  "channel": "Last Safe Door",
+  "title": "Zombie Bunker Survival: Day 61 to Day 90",
+  "description_file": "chaines/last-safe-door/episode-03-day-61-90/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/mZInOMRb",
+    "file": "final.mp4",
+    "sha256": "e99f36714fda0be572b19fa59738c11fdce933146cfd3143f95acbc01a81faf0"
+  },
+  "thumbnail": "chaines/last-safe-door/episode-03-day-61-90/thumbnail.jpg",
+  "captions": "chaines/last-safe-door/episode-03-day-61-90/English-Captions.srt",
+  "tags_file": "chaines/last-safe-door/episode-03-day-61-90/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
+  "tubeforge_video_id": "zombie-bunker-survival-day-61-to-day-90-e745f0"
+}
