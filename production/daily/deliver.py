@@ -110,6 +110,9 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(fiche, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"son {level} → {after} LUFS | sha256 {digest[:16]}… | {link} | fiche {out.relative_to(ROOT)}")
+    # Lien direct sur le serveur du studio : le PC le prend avant Gofile (Gofile bloque ses téléchargements).
+    import host_video
+    host_video.host(out)
 
 
 if __name__ == "__main__":
