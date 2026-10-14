@@ -7,6 +7,8 @@ Each channel preset has two independent visual settings:
 
 The default remains `varied` for existing presets. Set `stable` for the fictional-life episodes; do not globally remove survival-channel angle variety. Character identity references remain independent of both settings.
 
+User clarification: the stable-axis choice applies to Oddly Fictional Lives. Zombie and alien survival presets retain their varied-view policy. A damaged, cleared or landed state is a continuity change on the same axis, not a reason to rotate the camera. Keep that state in subsequent shots until the action changes it again.
+
 Update a preset through `PUT /api/workspace/management/styles/{style_id}` with these fields, or through the channel/preset settings form. New projects freeze both values in `settings.visuals` and `style_snapshot`; changing a preset does not silently change existing films.
 
 For consistent scenery, author a concrete location registry at `PUT /api/workspace/projects/{project_id}/locations` using the current `previous_hash`. Each space needs a fixed layout, world-space anchors, inspected/fingerprinted master and named views. Every selected view needs an inspected `location-view` image binding; the establishing view may bind the master image itself. A different angle is generated from the original master, inspected, named and retained before it is used in shots. Repeated stable views are permitted; inventing a reverse-side room is not.

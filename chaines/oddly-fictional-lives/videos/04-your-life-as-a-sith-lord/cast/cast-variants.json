@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Soren",
+    "variant": "default",
+    "description": "Original adult Sith protagonist. Compact white round-head adult, total height and compact body proportions exactly as the attached inspected identity, WHITE mitten hands, tiny black dot eyes and tiny line mouth, no nose, ears, hair, beard, eyebrows, tattoo, face stripe or other marking. CHARCOAL long-sleeve tunic and short open-front outer robe with a hood framing the PERFECT WHITE CIRCLE without hiding the face, BLACK long trousers and BLACK boots, muted MAROON waist sash. One short plain SILVER lightsaber hilt secured to sash, blade OFF. No armour, skull mask or horns. Full body neutral standing pose.",
+    "references": [
+      {
+        "file": "cast/Soren-default.png",
+        "sha256": "de38d5dcfacb7d3615e93eca0548476a27ce73d7cb62f36681b2d09f280fe0dd",
+        "inspection": "Previously actually inspected neutral identity."
+      }
+    ]
+  },
+  {
+    "name": "Soren",
+    "variant": "mechanic",
+    "description": "Same adult Soren in earlier dock mechanic clothing: compact adult body with short sturdy legs, perfectly round pure WHITE head, tiny dot eyes, tiny line mouth, white mitten hands. Plain charcoal long-sleeve work tunic, black trousers, black boots. NO outer robe, hood, maroon sash, weapon or belt hilt. Exact proportions of inspected reference.",
+    "references": [
+      {
+        "file": "cast/Soren-mechanic.png",
+        "sha256": "a8c2f71f1a4a17cbee3c94a8551bd915b7c3775478078ea4095240c7b1df53c1",
+        "inspection": "Primary Codex viewed actual neutral reference: same round white face and hands, compact black-booted body, correct explicitly narrated wardrobe; no weapon."
+      }
+    ]
+  },
+  {
+    "name": "Soren",
+    "variant": "apprentice_unarmed",
+    "description": "Same adult Soren in charcoal long-sleeve tunic, short open-front hooded outer robe, black trousers and black boots, muted maroon waist sash. Compact body and perfectly round white head/dot eyes/tiny mouth/white mitten hands match inspected reference. No personal weapon or belt hilt: this is before building his lightsaber.",
+    "references": [
+      {
+        "file": "cast/Soren-apprentice_unarmed.png",
+        "sha256": "b3dc2c1fe696ecf198c420494df1b76872a03903fccf795c3af669e1ac700ed1",
+        "inspection": "Primary Codex viewed actual neutral reference: same round white face and hands, compact black-booted body, correct explicitly narrated wardrobe; no weapon."
+      }
+    ]
+  },
+  {
+    "name": "Soren",
+    "variant": "robe_empty_belt",
+    "description": "Same inspected compact adult Soren, oversized pure-white round head/dot eyes/tiny mouth and WHITE mitten hands; charcoal long-sleeve apprentice robe/hood, muted MAROON sash, black trousers/boots. EMPTY belt/hips and empty hands in this neutral identity sheet; actual scene weapons are assigned only by the shot, no duplicate hilt.",
+    "references": [
+      {
+        "file": "cast/Soren-robe_empty_belt.png",
+        "sha256": "b3dc2c1fe696ecf198c420494df1b76872a03903fccf795c3af669e1ac700ed1",
+        "inspection": "Primary Codex viewed actual neutral reference: same round white face and hands, compact black-booted body, correct explicitly narrated wardrobe; no weapon."
+      }
+    ]
+  },
+  {
+    "name": "Varek",
+    "variant": "default",
+    "description": "Distinct adult Sith master. Same compact PURE WHITE perfectly round head with tiny black dots/line mouth, white mitten hands, no nose/hair/ears/beard/markings. BLACK long-sleeve robes over BLACK trousers/boots, SILVER GREY shoulder mantle and GREY waist sash. Open hood framing visible white round face. One dark curved lightsaber hilt at waist, blade OFF. Never a maroon hero sash or helmet. Full body neutral standing pose.",
+    "references": [
+      {
+        "file": "cast/Varek-default.png",
+        "sha256": "bcbecbbb4d1ffd9fc728e67594e2473e4bce364a71de182d43cda9835133fb4a",
+        "inspection": "Previously actually inspected neutral identity."
+      }
+    ]
+  },
+  {
+    "name": "Varek",
+    "variant": "empty_belt",
+    "description": "Same inspected compact adult Varek: oversized perfectly round PURE WHITE head, black dot eyes/tiny line mouth, WHITE mitten hands, no human nose/hair/ears/beard/markings. Charcoal BLACK long-sleeve hooded robes, GREY shoulder mantle and GREY waist sash, black trousers/boots. Neutral identity sheet has EMPTY waist/hips/hands; one curved dark hilt only where the shot assigns it.",
+    "references": [
+      {
+        "file": "cast/Varek-empty_belt.png",
+        "sha256": "700cb76ce04cde38ea6f5f2b6a6feb7e58dd456b85bba230b03820f33fe588e9",
+        "inspection": "Primary actually viewed ONE neutral compact adult, perfectly round pure-white head/dot eyes/tiny mouth, pure-white mitten hands, original charcoal hooded robe and grey mantle, black boots, waist and both hands completely empty; no duplicate pose/hilt or prior warrior tattoo."
+      }
+    ]
+  },
+  {
+    "name": "Neris",
+    "variant": "default",
+    "description": "Distinct adult aspiring Sith apprentice. Same compact perfectly round WHITE head, white mitten hands, tiny black dot eyes/line mouth, no hair/nose/ears/markings. Deep NAVY long-sleeve tunic, a muted VIOLET waist sash, CHARCOAL trousers and BLACK boots. Hood DOWN, whole smooth white head visible. Plain dark lightsaber hilt on sash, blade OFF. No other character costume. Full body neutral standing pose.",
+    "references": [
+      {
+        "file": "cast/Neris-default.png",
+        "sha256": "c88b58ba0482546ef94bec6f11729d43b590016bc4a6d480828c12c7cf5b5308",
+        "inspection": "Previously actually inspected neutral identity."
+      }
+    ]
+  },
+  {
+    "name": "Neris",
+    "variant": "empty_belt",
+    "description": "Same inspected compact adult Neris: perfectly round oversized PURE WHITE head, black dot eyes/tiny line mouth, no hood, hair, nose, ears or markings. Deep NAVY long-sleeve tunic, muted VIOLET sash, charcoal trousers, black boots, WHITE mitten hands. Neutral identity sheet has EMPTY waist/hips/hands; weapons are separately assigned by the current shot, never duplicated.",
+    "references": [
+      {
+        "file": "cast/Neris-empty_belt.png",
+        "sha256": "e2763583485c15922f3eecc63d38bd8fa807e533be62c69e733fe9869f1f9d5c",
+        "inspection": "Primary actually viewed ONE neutral compact adult, perfectly round pure-white head/dot eyes/tiny mouth, pure-white mitten hands, original navy/violet tunic, black boots, waist and both hands completely empty; no duplicate pose/hilt or prior warrior tattoo."
+      }
+    ]
+  },
+  {
+    "name": "Lysa",
+    "variant": "default",
+    "description": "Distinct adult courier and pilot. Same compact perfectly round WHITE head, white mitten hands, black dot eyes/line mouth, no hair/nose/ears/beard. OLIVE green long-sleeve flight jacket, TAN trousers and BROWN boots. Plain brown waist utility pouch, no gun, lightsaber, hood or cape. Full-body neutral standing pose.",
+    "references": [
+      {
+        "file": "cast/Lysa-default.png",
+        "sha256": "ff9ec75f67801156155f009a51f165a61d83c45ac4ccc67a6be8f87ba4de71c8",
+        "inspection": "Previously actually inspected neutral identity."
+      }
+    ]
+  },
+  {
+    "name": "CheckpointGuard",
+    "variant": "default",
+    "description": "ONE compact round-white adult checkpoint guard, GREY cap/GREY uniform/BLACK armour vest/black boots/white mitten hands, no olive civilian jacket. Weapon only when action calls it.",
+    "references": [
+      {
+        "file": "cast/CheckpointGuard-default.png",
+        "sha256": "19c94f3d38d4b1989f94bdfc19284fb55a456801a3a3cc8b7332ce5e0774f355",
+        "inspection": "Actually viewed: one compact round-white adult guard, same grey cap/grey uniform/black vest+boots, empty white hands, no tan pants/extra person."
+      }
+    ]
+  }
+]
