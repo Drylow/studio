@@ -117,8 +117,15 @@ def native(path):
 
 
 def fetch(url, out):
-    with forge.request("GET", native(url)) as res:
-        out.write_bytes(res.read())
+    for attempt in range(5):   # le VPS coupe parfois un téléchargement en cours
+        try:
+            with forge.request("GET", native(url)) as res:
+                out.write_bytes(res.read())
+            return
+        except (OSError, http.client.HTTPException):
+            if attempt == 4:
+                raise
+            time.sleep(5 * (attempt + 1))
 
 
 def shots(video_id, folder, ids=None):
@@ -127,17 +134,11 @@ def shots(video_id, folder, ids=None):
     p = api("GET", vid(video_id))
     folder = Path(folder)
     folder.mkdir(parents=True, exist_ok=True)
-    got = []
-    for s in p.get("scenes") or []:
-        if ids and s["id"] not in ids:
-            continue
-        url = s.get("image_url")
-        if not url or not s.get("image_available"):
-            continue
-        out = folder / f"s{s['id']:03d}.png"
-        if not out.exists():
-            fetch(url, out)
-        got.append((s, out))
+    got = [(s, folder / f"s{s['id']:03d}.png") for s in p.get("scenes") or []
+           if (not ids or s["id"] in ids) and s.get("image_url") and s.get("image_available")]
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(8) as pool:
+        list(pool.map(lambda x: x[1].exists() or fetch(x[0]["image_url"], x[1]), got))
     try:
         font = ImageFont.truetype("DejaVuSans.ttf", 16)
     except OSError:

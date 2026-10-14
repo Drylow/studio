@@ -18,6 +18,7 @@ Le Claude du cloud prépare les vidéos et dépose une fiche par vidéo dans `qu
   "video": {"gofile": "https://gofile.io/d/…", "file": "nom.mp4", "sha256": "…"},
   "thumbnail": "chemin/vers/miniature.jpg",
   "captions": "chaines/viking-chapters/episode-01/delivery/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-02/tags.txt (facultatif)",
   "visibility": "unlisted | private | public | scheduled",
   "publish_at": "2026-10-16T18:00 (heure de Bruxelles, seulement si scheduled)"
 }

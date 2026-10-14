@@ -80,6 +80,7 @@ publie pas et note pourquoi.
    - fichier ;
    - titre, description et miniature de la fiche ;
    - « Non, cette vidéo n'est pas conçue pour les enfants » ;
+   - tags du fichier `tags_file` s'il est dans la fiche (« Afficher plus » → Tags, séparés par des virgules) ;
    - sous-titres SRT s'il y en a ;
    - visibilité ou date de programmation de la fiche (heure de Bruxelles).
 5. Attends la fin de l'envoi. Relève le lien de la vidéo et l'état des droits d'auteur (vérification

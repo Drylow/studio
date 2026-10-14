@@ -1,0 +1,15 @@
+{
+  "channel": "One Stick Left",
+  "title": "Alien Outbreak Survival: Day 31 to Day 60",
+  "description_file": "chaines/alien-outbreak-survival/episode-02-day-31-60/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/CNz6dHt0",
+    "file": "final.mp4",
+    "sha256": "80327eb2c68c921ff4d9efdab36ded5f4d23f4076f44dddf8082ccfe146dd584"
+  },
+  "thumbnail": "chaines/alien-outbreak-survival/episode-02-day-31-60/thumbnail.jpg",
+  "captions": "chaines/alien-outbreak-survival/episode-02-day-31-60/English-Captions.srt",
+  "tags_file": "chaines/alien-outbreak-survival/episode-02-day-31-60/tags.txt",
+  "visibility": "public",
+  "tubeforge_video_id": "alien-outbreak-survival-day-31-to-day-60-8a66e4"
+}

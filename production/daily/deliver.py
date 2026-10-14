@@ -100,6 +100,7 @@ def main():
         "video": {"gofile": link, "file": final.name, "sha256": digest},
         "thumbnail": str(thumb.relative_to(ROOT)),
         "captions": str((episode / "English-Captions.srt").relative_to(ROOT)),
+        **({"tags_file": str((episode / "tags.txt").relative_to(ROOT))} if (episode / "tags.txt").exists() else {}),
         "visibility": a.visibility,
         **({"publish_at": a.publish_at} if a.publish_at else {}),
         "tubeforge_video_id": a.video_id,
