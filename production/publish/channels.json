@@ -6,14 +6,16 @@
       "app": "fury",
       "profile": "Last Safe Door",
       "youtube_channel_id": "UCsHoo9lHf44MwAeevHdoApw",
-      "published_thumbnail": "production/publish/published-thumbnails/lsd.jpg"
+      "published_thumbnail": "production/publish/published-thumbnails/lsd.jpg",
+      "tubeforge_channel_id": "channel-e26fb87b6f07"
     },
     {
       "name": "One Stick Left",
       "app": "fury",
       "profile": "One Stick Left",
       "youtube_channel_id": "UCItgDwf_e3GIvqlH-OtxsbQ",
-      "published_thumbnail": "production/publish/published-thumbnails/osl.jpg"
+      "published_thumbnail": "production/publish/published-thumbnails/osl.jpg",
+      "tubeforge_channel_id": "channel-94fb9d3c1def"
     },
     {
       "name": "Scene Analysis Guy",
@@ -34,14 +36,16 @@
       "app": "adspower",
       "profile": "Viking Chapters",
       "youtube_channel_id": "UCUqIXYHY6pdv3IO5J4_hr5w",
-      "published_thumbnail": "production/publish/published-thumbnails/viking.jpg"
+      "published_thumbnail": "production/publish/published-thumbnails/viking.jpg",
+      "tubeforge_channel_id": "channel-5001437ebc14"
     },
     {
       "name": "Pirate Pages",
       "app": "adspower",
       "profile": "Pirate Pages",
       "youtube_channel_id": "UCh_jI9tSDMZTD_GLM7XkGVA",
-      "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg"
+      "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg",
+      "tubeforge_channel_id": "channel-71bce3373faf"
     }
   ],
   "_thumbnails": "Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature garde EXACTEMENT le style visuel de la miniature publiée de la chaîne (dessin, couleurs, police, couleur et place du texte) mais montre une scène NOUVELLE tirée de l'épisode ; jamais la même image avec un autre texte. production/daily/thumbs.py --adapt --ref <published_thumbnail> ..."
