@@ -16,6 +16,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "production" / "daily"))
 import forge_flow as ff  # noqa: E402
+sys.path.insert(0, str(ROOT))
+from services import ai  # noqa: E402
 
 CLI = str(ROOT / "production/tubeforge_support/forge_docs/forge.py")
 
@@ -30,7 +32,7 @@ def main():
     base = ff.NATIVE + "/api/workspace/management"
     s = ff.api("POST", base + "/styles", {
         "name": spec["name"], "prompt": spec["prompt"], "background_direction": spec["background_direction"],
-        "thumbnail_prompt": spec["thumbnail_prompt"], "image_provider": "cli_proxy", "image_model": "gpt-image-2",
+        "thumbnail_prompt": spec["thumbnail_prompt"], "image_provider": "cli_proxy", "image_model": ai.image_model(),
         "camera_policy": "varied"})
     sid = s["id"]
     ref = upload(f"/api/2d/api/workspace/management/styles/{sid}/references", ROOT / spec["drawing_guide"],

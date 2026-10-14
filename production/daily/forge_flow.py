@@ -4,7 +4,8 @@
     python production/daily/forge_flow.py run <video_id> voice|prepare|preview|images|render [--json body.json]
     python production/daily/forge_flow.py status <video_id>
     python production/daily/forge_flow.py shots <video_id> <dossier> [--ids 1,2,3]   # images + planches à regarder
-    python production/daily/forge_flow.py review <video_id> <scene_id|all> "<constat réel>"
+    python production/daily/forge_flow.py review <video_id> <scene_id|all|pending> "<constat réel>"
+    python production/daily/forge_flow.py review-voice <video_id> "<constat réel>"
     python production/daily/forge_flow.py regen <video_id> 12,40,77                 # refait ces images
     python production/daily/forge_flow.py thumbs <video_id> [--count 4] [--instruction "..."]
     python production/daily/forge_flow.py download <video_id> <fichier.mp4>
@@ -16,6 +17,7 @@ une étape payante tout seul. Après une coupure : `status`, puis décider.
 import argparse
 import http.client
 import json
+import os
 import sys
 import time
 import urllib.error
@@ -23,11 +25,14 @@ import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tubeforge_support" / "forge_docs"))
+from dotenv import load_dotenv  # noqa: E402
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 import forge  # noqa: E402
 
 V1 = forge.BASE
 NATIVE = forge.HOST + "/api/2d"
-TEXT_MODEL = "gpt-6-sol"   # découpage en plans ; doit figurer dans GET /api/workspace/models
+# Modèle de texte du découpage en plans (dans .env, jamais dans le dépôt) ; doit figurer dans GET /api/workspace/models.
+TEXT_MODEL = os.environ.get("FORGE_TEXT_MODEL", "")
 
 
 def api(method, url, body=None):
@@ -152,8 +157,15 @@ def shots(video_id, folder, ids=None):
 
 
 def review(video_id, scene, notes):
+    """scene : « all », « pending » (seulement les plans pas encore vérifiés, après une coupure) ou « 1,2,3 »."""
     p = api("GET", vid(video_id))
-    ids = [s["id"] for s in p.get("scenes") or []] if scene == "all" else [int(x) for x in scene.split(",")]
+    scenes = p.get("scenes") or []
+    if scene == "all":
+        ids = [s["id"] for s in scenes]
+    elif scene == "pending":
+        ids = [s["id"] for s in scenes if (s.get("human_review") or {}).get("state") != "verified"]
+    else:
+        ids = [int(x) for x in scene.split(",")]
     for i in ids:
         api("POST", vid(video_id) + "/review", {"scope": "scene", "scene_id": i, "state": "verified",
                                                 "reviewer": "Claude (cloud)", "source": "delegated_ai_inspection",
@@ -200,6 +212,8 @@ def main():
         # Passe par un lot natif d'une vidéo : la création simple (v1) refuse tant que le modèle de texte par
         # défaut du serveur n'est plus au catalogue. Le lot permet de choisir un modèle qui y est.
         channel, title, script, key = a.args
+        if not TEXT_MODEL:
+            raise SystemExit("FORGE_TEXT_MODEL absent du .env")
         r = api("POST", NATIVE + "/api/workspace/batches", {
             "name": key, "text_model": TEXT_MODEL,
             "rows": [{"channel_id": channel, "title": title, "mode": "review",
@@ -215,6 +229,10 @@ def main():
         shots(a.args[0], a.args[1], [int(x) for x in a.ids.split(",")] if a.ids else None)
     elif a.cmd == "review":
         review(*a.args)
+    elif a.cmd == "review-voice":   # après avoir comparé la voix au script et vérifié ses timings
+        api("POST", vid(a.args[0]) + "/review", {"scope": "voiceover", "state": "verified", "reviewer": "Claude (cloud)",
+                                                 "source": "delegated_ai_inspection", "notes": a.args[1]})
+        print("revue de la voix enregistrée")
     elif a.cmd == "regen":
         regen(a.args[0], [int(x) for x in a.args[1].split(",")])
     elif a.cmd == "thumbs":

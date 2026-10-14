@@ -2,7 +2,8 @@
 
     python production/daily/fix_shots.py <video_id> fixes.json
 
-fixes.json : {"41": {"replace": [["ancien texte", "nouveau texte"], ...], "append": "phrase ajoutée", "characters": [...]}, ...}
+fixes.json : {"41": {"replace": [["ancien texte", "nouveau texte"], ...], "append": "phrase ajoutée", "characters": [...],
+                     "drop": ["Nom"]}, ...}   # drop : retire ce personnage et sa référence (corriger aussi le prompt)
 Les autres plans sont renvoyés tels quels (image et revue conservées).
 """
 import json
@@ -33,6 +34,10 @@ def main():
                 row["prompt"] = row["prompt"].rstrip() + "\n" + fix["append"]
             if "characters" in fix:
                 row["characters"] = fix["characters"]
+            for name in fix.get("drop", []):   # personnage à retirer du plan, avec son image de référence
+                row["characters"] = [c for c in row.get("characters") or [] if c != name]
+                row.get("character_variants", {}).pop(name, None)
+                row["references"] = [r for r in row["references"] if r.get("character") != name]
             row.pop("image", None)
         rows.append(row)
     ff.api("PUT", ff.NATIVE + f"/api/workspace/projects/{video_id}/scenes", {"scenes": rows})

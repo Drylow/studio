@@ -50,7 +50,7 @@ def main():
         path = out / f"proposal-{letter}.jpg"
         idea = {"text_style": "YELLOW rounded comic letters with a thick BLACK outline, top-left"} | idea
         blob = ai.generate_image((ADAPT if a.adapt else RULES).format(**idea), width=1536, height=1024, refs=a.ref, quality="high",
-                                 model="gpt-image-2", timeout=400)
+                                 timeout=400)
         ai.fit_cover(blob, 1280, 720, str(path), quality=90)
         return letter, path
 
