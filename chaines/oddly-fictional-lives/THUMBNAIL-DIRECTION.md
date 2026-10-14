@@ -1,5 +1,7 @@
 # Thumbnail direction
 
+User refinement, 2026-10-14: for the Viltrumite and Sith episodes, retain the supplied thumbnail's foreground hierarchy more closely: smaller worried recruit/apprentice on the LEFT, larger confident commander/master on the RIGHT, open space between them and a readable courtyard/transport backdrop. Adapt costumes, setting and a few props rather than inventing an entirely different composition. The two figures are distinct named characters, never two unexplained copies of the protagonist. Expressive eyes/eyebrows are allowed on these thumbnails; heads/hands remain pure white and no human hair is copied from the reference officer. This episode-specific thumbnail choice does not change the videos' identity or camera policy. The original user-supplied reference is retained privately; it is not a new project scenery master.
+
 User correction, 2026-10-11: the attempted God of War thumbnail contains two Kratos figures and follows the reference's small character / large character composition too closely. Do not retain that as the channel's default layout.
 
 Keep the approved white round-headed cartoon characters, recognizable outfits, clean outlines, strong facial readability, and clear separation from the background. Each thumbnail needs its own situation drawn from its script.

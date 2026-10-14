@@ -14,3 +14,15 @@ Script and editorial review are saved here. Private production receipts, image r
 
 
 Background rebuild: all 151 current frames were individually inspected against the references after explicit corrections. `visual-plan.json` contains primary-authored shot actions, exact original voice timings and ordered image bindings. `locations/` contains inspected empty masters and explicit crop/state variants; `cast/cast-variants.json` records the selected outfits. Use the selected empty-belt variants when a weapon is held; older cast defaults are historical. `objects/` and `scene-references/` retain selected prop and pose anchors. Hashes attest provenance, not pixel-perfect visual identity. Original voice retained: 15:17. Final exports require their separate render and delivery checks. Follow the shared export-retention procedure after a verified local transfer.
+
+## Thumbnail — close reference composition
+
+User refinement14October: attach the privately supplied two-character thumbnail as the composition/style reference. Keep the worried-left/confident-right hierarchy, adapting the named cast and setting.
+
+```text
+Recreate this reference thumbnail as a Sith master-and-apprentice scene. Keep its close 16:9 framing, smaller worried character on the LEFT, larger confident character on the RIGHT, expressive white round faces, bold clean outlines and clear open space between them. Make only modest changes to the composition.
+
+LEFT: Soren, a nervous apprentice in charcoal hooded robes, dark-maroon sash and black boots, slightly hunched with empty white hands. RIGHT: Varek, his distinct imposing master in black hooded robes with a GREY shoulder mantle and sash, upright with a controlled smug expression. One white hand rests on his waist; the other holds ONE dark lightsaber handle with a perfectly straight RED blade along the far-right edge, clear of both faces. Both have smooth circular pure-white heads and pure-white hands, no human hair, beard or nose. Use the additional character sheets for costumes and proportions, but the thumbnail reference for facial expressions and illustration style.
+
+Background: a readable stone courtyard outside a low Sith residence, red hanging banners and one small grey spacecraft farther back. Preserve the reference's strong foreground/background separation without copying its military officers, soldiers or exact buildings. Matte 2D cartoon colours, bright white faces, restrained background detail. Two distinct foreground characters, one of each, no duplicate protagonist. No text or watermark.
+```
