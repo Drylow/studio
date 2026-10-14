@@ -167,10 +167,11 @@ def review(video_id, scene, notes):
         ids = [s["id"] for s in scenes if (s.get("human_review") or {}).get("state") != "verified"]
     else:
         ids = [int(x) for x in scene.split(",")]
-    for i in ids:
-        api("POST", vid(video_id) + "/review", {"scope": "scene", "scene_id": i, "state": "verified",
-                                                "reviewer": "Claude (cloud)", "source": "delegated_ai_inspection",
-                                                "notes": notes})
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(6) as pool:
+        list(pool.map(lambda i: api("POST", vid(video_id) + "/review", {
+            "scope": "scene", "scene_id": i, "state": "verified", "reviewer": "Claude (cloud)",
+            "source": "delegated_ai_inspection", "notes": notes}), ids))
     print(f"{len(ids)} revues enregistrées")
 
 
