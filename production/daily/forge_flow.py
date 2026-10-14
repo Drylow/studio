@@ -14,6 +14,7 @@ Session : FORGE_SESSION_FILE (fichier privé hors du dépôt, créé par `forge.
 une étape payante tout seul. Après une coupure : `status`, puis décider.
 """
 import argparse
+import http.client
 import json
 import sys
 import time
@@ -30,13 +31,24 @@ TEXT_MODEL = "gpt-6-sol"   # découpage en plans ; doit figurer dans GET /api/wo
 
 
 def api(method, url, body=None):
+    """Appel au portail. Les lectures et les revues sont réessayées si le VPS coupe ; jamais une étape payante."""
     data = json.dumps(body).encode() if body is not None else None
-    try:
-        with forge.request(method, url, data) as res:
-            raw = res.read().decode("utf-8")
-            return json.loads(raw) if raw else {}
-    except urllib.error.HTTPError as e:
-        raise SystemExit(f"{e.code} sur {url.replace(forge.HOST, '')} : {e.read().decode('utf-8', 'replace')[:600]}")
+    retry = method == "GET" or url.endswith("/review")
+    for attempt in range(6 if retry else 1):
+        try:
+            with forge.request(method, url, data) as res:
+                raw = res.read().decode("utf-8")
+                return json.loads(raw) if raw else {}
+        except urllib.error.HTTPError as e:
+            if retry and e.code in (502, 503, 504) and attempt < 5:
+                time.sleep(10 * (attempt + 1))
+                continue
+            raise SystemExit(f"{e.code} sur {url.replace(forge.HOST, '')} : {e.read().decode('utf-8', 'replace')[:600]}")
+        except (OSError, http.client.HTTPException) as e:
+            if retry and attempt < 5:
+                time.sleep(10 * (attempt + 1))
+                continue
+            raise SystemExit(f"connexion coupée sur {url.replace(forge.HOST, '')} : {e}")
 
 
 def vid(video_id):
@@ -151,7 +163,6 @@ def review(video_id, scene, notes):
 
 def regen(video_id, ids):
     """Refait les images ratées, une par une, avec leur prompt exact et le modèle figé du projet."""
-    from concurrent.futures import ThreadPoolExecutor
     p = api("GET", vid(video_id))
     snap = p.get("model_snapshot") or {}
     scenes = {s["id"]: s for s in p.get("scenes") or []}
@@ -166,9 +177,14 @@ def regen(video_id, ids):
         except SystemExit as e:
             return i, str(e)[:120]
 
-    with ThreadPoolExecutor(6) as pool:
-        for i, r in pool.map(one, ids):
-            print(f"#{i} {r}", flush=True)
+    # Le VPS n'accepte qu'une génération à la fois par projet : on les enchaîne, en réessayant si occupé.
+    for i in ids:
+        for attempt in range(30):
+            _, r = one(i)
+            if not r.startswith("409") or "in progress" not in r and "generation" not in r.lower():
+                break
+            time.sleep(10)
+        print(f"#{i} {r}", flush=True)
 
 
 def main():
