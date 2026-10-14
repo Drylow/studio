@@ -23,4 +23,15 @@ Le Claude du cloud prépare les vidéos et dépose une fiche par vidéo dans `qu
 }
 ```
 
-La miniature et la date sont choisies par l'utilisateur. Une fiche sans choix de miniature ne part pas.
+Le PC refuse une fiche dans ces cas :
+- `sha256` absent ;
+- miniature absente ;
+- `channel` qui n'est pas exactement un des 6 noms ;
+- `publish_at` déjà passé.
+
+Il passe à 8 h, 11 h, 14 h, 17 h, 20 h et 23 h (heure de Belgique). Une vidéo programmée doit
+donc être poussée sur `main` au moins un passage avant son heure. Pour 10 h, il faut la pousser
+avant 8 h.
+
+Le PC n'a pas encore d'accès GitHub, donc son journal reste sur le PC (`work/publish/log.jsonl`).
+Pour savoir si une vidéo est partie, il faut regarder la chaîne.

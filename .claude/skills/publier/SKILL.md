@@ -19,26 +19,37 @@ Deep Sea Survival, Oddly Fictional Lives…) ne te concernent pas.
 - AdsPower : **Viking Chapters**, **Pirate Pages**.
 - Fury : **Last Safe Door**, **One Stick Left**, **Scene Analysis Guy**, **Samurai Chapters**.
 
-## Étape 1 : trouver comment piloter Fury et AdsPower (lecture seule)
+## Étape 1 : le PC et ses outils (en place depuis le 14 oct.)
 
-- **AdsPower** a une API locale. L'adresse est affichée dans AdsPower, menu Paramètres → Local API,
-  souvent `http://local.adspower.net:50325` ou `http://127.0.0.1:50325`. Routes connues, à vérifier sur
-  la version installée :
-  - `GET /status` ;
-  - `GET /api/v1/user/list?page_size=100` liste les profils (nom, `user_id`) ;
-  - `GET /api/v1/browser/start?user_id=…` ouvre le profil et rend `data.ws.puppeteer` ;
-  - `GET /api/v1/browser/stop?user_id=…` le ferme.
-  Si l'API demande une clé, l'utilisateur la met dans le `.env` de ce dossier (`ADSPOWER_API_KEY=`),
-  jamais dans le chat. Explique-lui où la trouver dans AdsPower.
-- **Fury** : application dans `C:/Users/ytbyt/AppData/Local/Fury/`, données dans
-  `C:/Users/ytbyt/AppData/Roaming/Fury/`. Une autre session a déjà listé ses profils par le canal
-  local de l'application (named pipe `fury-df3984eb`, méthodes `profiles.list`, `proxies.list`) avec
-  `C:/Users/ytbyt/Documents/Codex/2026-10-04/j/work/create-fury-test-profiles.ps1`. Son MCP local
-  (`.../work/fury-mcp/tools/mcp/fury-mcp.py`) propose `status`, `profiles`, `start_profile`,
-  `stop_profile`. **Lis ces fichiers avant de t'en servir.** Ne relance aucun script de création de
-  profils, ne lis ni ne copie jamais `fury.db`, `profiles/`, `api-token`, cookies ou sessions.
-- Écris la correspondance chaîne → application → identifiant du profil dans
-  `work/publish/profiles.json` (ignoré par git), puis montre-la à l'utilisateur.
+Notice locale du PC : `work/publish/LISEZMOI-PC.md` (pas dans git). L'essentiel :
+- PC Windows, utilisateur `drylo`. Clone : `C:\Users\drylo\Bureau\2D slop\studio`, depth 1, sparse
+  (`/CLAUDE.md /AGENTS.md /.claude/ /production/publish/`). Ajoute au sparse les chemins cités par une
+  fiche (description, SRT, miniature) avant de la traiter.
+- Venv `work/venv` : Python 3.13 + Playwright, branché en CDP sur les profils. Aucun navigateur
+  téléchargé.
+- `work/publish/profile.py open|close|status "<Chaîne>"` ouvre le profil et donne l'adresse CDP pour
+  `connect_over_cdp`. Correspondance chaîne → profil dans `work/publish/profiles.json` (local).
+- **Fury 0.2.23** : `%LOCALAPPDATA%\Fury\fury-agent.exe mcp`, un serveur MCP stdio qui pilote
+  seulement les profils locaux.
+  - Les 4 chaînes Fury utilisent les copies locales « <Chaîne> - local import », chacune avec son
+    proxy. Ne plus utiliser les copies d'équipe.
+  - `fury_start_profile` ne donne pas l'adresse CDP : le navigateur part avec
+    `--remote-debugging-port=0`. Le vrai port est celui qu'écoute, sur 127.0.0.1, le processus
+    principal (exe sous `%APPDATA%\Fury\core.bundle\`, sans `--type=`) et qui répond à `/json/version`.
+  - Un seul profil Fury ouvert à la fois.
+- **AdsPower 7.12** : API locale.
+  - Port variable, retrouvé automatiquement.
+  - En-tête `Authorization: Bearer <clé du .env>`, environ 1 requête par seconde au maximum.
+  - Routes : `/api/v1/browser/start|stop?user_id=…`, puis `data.ws.puppeteer`.
+- **YouTube Studio** (interface en anglais sur les 6 chaînes) :
+  - nom de la chaîne : `#entity-name` après la redirection vers `/channel/UC…` ;
+  - langue : `document.documentElement.lang` ;
+  - proxys parfois lents : `wait_until="commit"`.
+- Jamais lus ni copiés : `%APPDATA%\Fury\profiles\`, `fury.db`, cookies, `api-token`.
+
+**Passages programmés** : une tâche de l'appli Claude passe toutes les 3 h, de 8 h à 23 h (heure de
+Belgique). Elle fait `git pull` puis relit ce fichier et traite les fiches de `production/publish/queue/`.
+Fury et AdsPower sont relancés au besoin. Le PC doit être allumé, avec l'appli Claude ouverte.
 
 ## Étape 2 : contrôle sans rien publier
 
@@ -56,8 +67,9 @@ ne publie rien dessus. Ne touche à aucun réglage du compte, du profil ou de la
 
 Une vidéo à publier = un fichier `production/publish/queue/<chaîne>--<vidéo>.json` préparé par le
 Claude du cloud (format dans `production/publish/README.md`). **Une vidéo à la fois, un profil ouvert à
-la fois.** Le premier envoi sur chaque chaîne se fait avec l'utilisateur qui regarde, en non
-répertorié ou en programmé, comme il le demande.
+la fois.** Avant le bouton final, fais une capture de l'écran et relis-la : bonne chaîne, bon
+titre, bonne miniature, « not made for kids », bonne visibilité et bonne date. Au moindre doute, ne
+publie pas et note pourquoi.
 
 1. Récupère le MP4 (lien Gofile, ou le fichier déjà sur ce PC), puis vérifie son SHA-256 avec celui
    de la fiche. Différent : stop.
@@ -72,8 +84,11 @@ répertorié ou en programmé, comme il le demande.
    - visibilité ou date de programmation de la fiche (heure de Bruxelles).
 5. Attends la fin de l'envoi. Relève le lien de la vidéo et l'état des droits d'auteur (vérification
    YouTube). Ferme le profil.
-6. Ajoute une ligne à `production/publish/log.jsonl` : chaîne, titre, SHA-256, `video_id`, visibilité,
-   date, état des droits. Commit en anglais, `git pull --rebase`, push sur `main`.
+6. Ajoute une ligne au journal : chaîne, titre, SHA-256, `video_id`, visibilité, date, état des
+   droits. Pour l'instant, c'est le journal local `work/publish/log.jsonl`, car le PC n'a pas
+   d'accès GitHub. Quand GitHub sera connecté sur le PC : `production/publish/log.jsonl`, commit en
+   anglais, `git pull --rebase`, push sur `main`.
+   Une fiche déjà traitée (publiée ou refusée) ne se retraite jamais : le journal fait foi.
 7. Un envoi coupé au milieu : **ne recommence pas à l'aveugle**. Regarde d'abord dans Studio si la
    vidéo existe déjà (brouillon compris).
 
