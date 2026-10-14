@@ -300,3 +300,30 @@ def test_duplicate_cast_is_rejected_before_publishing(workspace, monkeypatch):
     with pytest.raises(RuntimeError):
         asyncio.run(planning.prepare(p))
     assert not p["scenes"]
+
+
+def test_hospital_authoring_keeps_its_setting_and_nonhuman_colours(workspace, monkeypatch):
+    p = fictional(workspace, 'You barricade the hospital ward. The green infected reaches its blue door.')
+    style = store.get_style(p['style_id'])
+    style['visuals']['art_style'] = 'Thin black stick people, white humans and green infected with green hands and feet.'
+    store.save_style(style)
+    _, _, _, shots = planning.inputs(p)
+    response = {'shots': [dict(id=s['id'], location_id='hospital-ward', characters=['Patch', 'Infected'],
+        prompt='Patch barricades the blue hospital ward door beside its medical beds; the green infected is outside, with green hands and feet.') for s in shots]}
+    mock = AsyncMock(return_value=json.dumps(response))
+    monkeypatch.setattr(llm, 'chat', mock)
+    asyncio.run(planning.prepare(p))
+    system = mock.call_args.args[0][0]['content']
+    assert 'Kratos' not in system and '3 to 3.5' not in system
+    assert 'THIS episode' in system and 'does not repair broken scenery' in system
+    assert all('hospital-ward' == s['location_id'] for s in p['scenes'])
+    assert all('green hands and feet' in s['prompt'] and 'red painted graphic' not in s['prompt'] for s in p['scenes'])
+    assert all('hospital ward' in s['prompt'] and '3 to 3.5' not in s['prompt'] for s in p['scenes'])
+
+
+def test_style_contract_does_not_add_a_hero_to_an_empty_ship_view():
+    prompt = planning.composition.compose('Empty cruise ship engine room with the broken red pipe.',
+        'Flat maritime cartoon, shallow backgrounds.', [], style_contract=True)
+    assert 'EMPTY CAST: zero people' in prompt
+    assert 'engine room' in prompt and 'broken red pipe' in prompt
+    assert 'Kratos' not in prompt and 'red painted graphic' not in prompt
