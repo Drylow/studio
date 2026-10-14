@@ -1,5 +1,10 @@
 # Reprise sur un autre compte Claude (historique et état actuel)
 
+> **14 octobre 2026, 16 h 00 : Cage Dispatch et Pitch Dispatch en pause** (`paused=1`, demande de
+> l'utilisateur, connexion Google non renouvelée ; sauvegarde `before-pause-cage-pitch-20261014T155951.db`).
+> Bilan du 9 au 14 oct. : Cage 1 vidéo publiée, Pitch 4 ; les autres sujets bloqués par les contrôles
+> (miniature, faits, texte superposé à 3:30/1:20) ou par les crédits Algrow le 10 oct.
+
 > **Reprise Survivor/TubeForge : [README_REPRISE.md](../README_REPRISE.md), 12 octobre 2026.**
 > Ce point de reprise concerne les deux nouvelles chaines et leurs outils locaux.
 > Les autres productions et leurs decisions restent conservees ci-dessous.

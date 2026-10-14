@@ -17,10 +17,11 @@ Belgique, jamais UTC), le haut de `production/REPRISE.md` (état en ligne), puis
 `tiktok_engine/README.md` et `tiktok_engine/ROUTINE.md` (TikTok).
 
 **Ce qui tourne tout seul, sans agent :**
-- **Cage Dispatch et Pitch Dispatch** : pilote `studio/autonews.py` sur le serveur o2switch
-  (worker lancé par cron). Il publie au plus 2 vidéos par jour et par chaîne, seulement les
-  sujets notés 7/10 ou plus. Rien à lancer. Pour couper : `NEWS_AUTO_DRY=1` dans le `.env` du
-  serveur.
+- **Cage Dispatch et Pitch Dispatch : EN PAUSE depuis le 14 oct. (16 h 00)**, à la demande de
+  l'utilisateur (« oublie, on laisse ») : connexion Google non renouvelée, pour ne pas brûler de
+  crédits Algrow. Pilote `studio/autonews.py` sur le serveur o2switch ; ne pas les relancer ni
+  rappeler la reconnexion sans qu'il le demande. Relance : reconnecter YouTube sur le site, puis
+  lever la pause des deux chaînes.
 - **TikTok @octave.histoire** : file du 9 au 22 octobre, à 7 h et 19 h (Bruxelles).
   Les deux du 9 sont publiés ; 26 autres sont programmés. Les 14 du 16 au 22 ont été
   produites et contrôlées le 10 octobre, puis vérifiées directement chez Zernio.
@@ -33,9 +34,6 @@ Belgique, jamais UTC), le haut de `production/REPRISE.md` (état en ligne), puis
   - Une routine Claude (vers 8 h 47) le fait aussi, tant que l'utilisateur a de l'usage Claude.
   - Avant de prendre un créneau : `git pull`, lire les `zernio.json`, et `zernio.py posts`
     (l'état réel chez Zernio). Jamais deux vidéos sur un même créneau.
-- **Avant le 14 oct. au soir, rappeler à l'utilisateur de reconnecter Cage et Pitch.** Google est
-  en mode *Testing* et coupe l'accès au bout de 7 jours. Sur le site : Chaînes → la chaîne →
-  Connecter YouTube → Autre méthode : API Google.
 
 **Clés.** Le dépôt est **PUBLIC** : jamais une clé dans git ni dans un message.
 - Dans l'environnement Codex, seulement 3 **variables d'environnement** : `CPANEL_URL`,
