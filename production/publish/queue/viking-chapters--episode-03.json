@@ -1,0 +1,16 @@
+{
+  "channel": "Viking Chapters",
+  "title": "Why Being a Viking Woman Was Worse Than You Think",
+  "description_file": "chaines/viking-chapters/episode-03/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/9kjfYEBV",
+    "file": "final.mp4",
+    "sha256": "f7d5125af71bdccdff13c19bd2666c22f60ec9880e624e5b56143837e192097f"
+  },
+  "thumbnail": "chaines/viking-chapters/episode-03/thumbnail.jpg",
+  "captions": "chaines/viking-chapters/episode-03/English-Captions.srt",
+  "tags_file": "chaines/viking-chapters/episode-03/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-15T10:00",
+  "tubeforge_video_id": "why-being-a-viking-woman-was-worse-than-9a699f"
+}
