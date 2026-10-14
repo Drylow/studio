@@ -38,9 +38,9 @@ Pour savoir si une vidéo est partie, il faut regarder la chaîne.
 
 ## Miniatures
 
-Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature reprend **exactement** la miniature déjà
-publiée sur la chaîne (style, mise en page, police, couleur et place du texte), adaptée au nouveau
-titre. Les miniatures publiées sont dans `published-thumbnails/` (lues sur YouTube le 14 oct.) et
+Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature garde **exactement le style visuel** de la
+miniature déjà publiée sur la chaîne (dessin, couleurs, police, couleur et place du texte), mais avec une
+**scène vraiment nouvelle** tirée du nouvel épisode. Jamais la même image avec un autre texte. Les miniatures publiées sont dans `published-thumbnails/` (lues sur YouTube le 14 oct.) et
 `channels.json` les relie à chaque chaîne :
 
 ```bash

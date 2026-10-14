@@ -20,10 +20,11 @@ load_dotenv(ROOT / ".env")
 from services import ai  # noqa: E402
 from PIL import Image, ImageDraw  # noqa: E402
 
-ADAPT = ("Edit the FIRST reference image, which is a thumbnail already published on this YouTube channel. Keep "
-         "EXACTLY its art style, colours, camera, layout, character drawing, text font, text colour, outline and text "
-         "position, so both thumbnails clearly belong to the same channel. Replace the text with '{text}' (perfectly "
-         "spelled, nothing else written). Change only what the new episode needs: {picture} The other reference images "
+ADAPT = ("The FIRST reference image is a thumbnail already published on this YouTube channel. Copy its visual "
+         "STYLE only: rendering, colour palette, line work, character drawing, very expressive faces, and the exact "
+         "text font, colour, outline, size and corner. Do NOT copy its scene: draw a COMPLETELY NEW picture with a "
+         "different setting, camera, composition and action, so it is clearly a new episode of the same channel. "
+         "Text: '{text}' (perfectly spelled, nothing else written). New scene: {picture} The other reference images "
          "show the exact look of the characters. No logos, no watermark, no real people.")
 
 RULES = ("YouTube thumbnail, 16:9, in EXACTLY the same flat 2D cartoon style, character design and colours as the "

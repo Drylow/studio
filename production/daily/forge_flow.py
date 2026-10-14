@@ -25,7 +25,7 @@ import forge  # noqa: E402
 
 V1 = forge.BASE
 NATIVE = forge.HOST + "/api/2d"
-TEXT_MODEL = "claude-sonnet-5-5-high"   # découpage en plans ; doit figurer dans GET /api/workspace/models
+TEXT_MODEL = "gpt-6-sol"   # découpage en plans ; doit figurer dans GET /api/workspace/models
 
 
 def api(method, url, body=None):

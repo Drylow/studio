@@ -42,5 +42,5 @@
       "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg"
     }
   ],
-  "_thumbnails": "Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature reprend EXACTEMENT la miniature déjà publiée de la chaîne (style, mise en page, police, couleur et place du texte) et l'adapte au nouveau titre. production/daily/thumbs.py --adapt --ref <published_thumbnail> ..."
+  "_thumbnails": "Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature garde EXACTEMENT le style visuel de la miniature publiée de la chaîne (dessin, couleurs, police, couleur et place du texte) mais montre une scène NOUVELLE tirée de l'épisode ; jamais la même image avec un autre texte. production/daily/thumbs.py --adapt --ref <published_thumbnail> ..."
 }
