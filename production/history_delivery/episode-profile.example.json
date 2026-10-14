@@ -1,0 +1,15 @@
+{
+  "schema": "history-episode-profile-v1",
+  "episode": "viking-episode-01",
+  "base": "/your/private/work/viking/episode-01",
+  "scenes": 88,
+  "words": 2742,
+  "frames": 27980,
+  "fps": 24,
+  "duration": 1165.84,
+  "project_id": "YOUR_CURRENT_OWNED_TUBEFORGE_PROJECT_ID",
+  "title": "Why Being a Viking Was Worse Than You Think",
+  "brand": "Viking Chapters",
+  "reviewer": "YOUR_ACTUAL_THUMBNAIL_REVIEWER",
+  "portal_origin": "https://tools.kanye.studio"
+}

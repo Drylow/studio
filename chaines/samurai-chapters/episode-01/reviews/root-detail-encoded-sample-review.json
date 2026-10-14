@@ -1,0 +1,42 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "add0e119149ed9a7d98ca3e2166c74f59b71d4a73156607e6f6f214902feb02e",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/root-detail-encoded-sample-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "records": [
+      {
+        "scene_id": 17,
+        "frame": 4131,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04131.jpg",
+        "sha256": "bb6393e97346bc44606a0a84fb1e9fe14de53079a8ea1b91fab52ff5fffb2ab7",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full captured frame from final MP4 viewed with view_image; not a source PNG",
+        "notes": "FATHER grey/brown identity preserved, exactly two swords per man, sandals visible, no crop of bodies or feet; coherent gate roof/cabinet."
+      },
+      {
+        "scene_id": 21,
+        "frame": 5122,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05122.jpg",
+        "sha256": "125a01f6bfd29b55fa49004869700fb7bd118a8df2a157e234b391aeb45f433b",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full captured frame from final MP4 viewed with view_image; not a source PNG",
+        "notes": "Book-carrying pose and two worn scabbards retained after correction, coherent office, no clipping of Kenji head or hands."
+      },
+      {
+        "scene_id": 65,
+        "frame": 16408,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-16408.jpg",
+        "sha256": "733e39c167074aab67e4b7f8e94f66e479254bf9e288bcb00e98ff8526162264",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full captured frame from final MP4 viewed with view_image; not a source PNG",
+        "notes": "Kenji/Father/Hana/Mother identities and fixed HOME geometry preserved, four steel swords only on the men, ledger and black mitten hands clear."
+      }
+    ],
+    "full_movie_release": false
+  }
+}

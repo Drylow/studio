@@ -1,0 +1,44 @@
+{
+  "schema": "tubeforge-encrypted-personal-access-v1",
+  "algorithm": "AES-256-GCM",
+  "key_bits": 256,
+  "nonce_bytes": 12,
+  "tag_bytes": 16,
+  "aad": "Versioned format signature plus personal-access context",
+  "ciphertext": {
+    "name": "tubeforge-personal-access.aesgcm",
+    "bytes": 32134,
+    "sha256": "92109527c53ae3f01e91597f282e57806e04fb962a1e8a465d004e504b5744c9"
+  },
+  "original_file_count": 5,
+  "original_files": [
+    {
+      "name": "ssh.zip",
+      "bytes": 11649,
+      "sha256": "3d2aa30205c1ef884a2b4541eee8907da884f89cdff8d395ef4ad7ad03db4b39"
+    },
+    {
+      "name": "TUBEFORGE_API_HANDOFF.md",
+      "bytes": 30042,
+      "sha256": "d844fd7c57b89f1258dc6c26e1c2e407c358325378a826932d7df047d475c470"
+    },
+    {
+      "name": "LLM.txt",
+      "bytes": 16475,
+      "sha256": "bcc0955c9b6431f8096f1c37300a0da11b2d2ca9bfa21fe532b0434122728190"
+    },
+    {
+      "name": "endpoints.json",
+      "bytes": 29070,
+      "sha256": "622b6c82f401aa44b5e8e21b7fb3ae741955e2be6dec5269341705fa0a38376b"
+    },
+    {
+      "name": "forge.py",
+      "bytes": 7343,
+      "sha256": "6cd9c167a9f6a38606bd6f88c1395de5d12da1ba867fee958ec6944d42b3bc1d"
+    }
+  ],
+  "key_in_repository": false,
+  "clear_credentials_in_repository": false,
+  "ephemeral_api_session_export_included": false
+}

@@ -1,4 +1,13 @@
 # Preserve generated evidence bytes and the hashes of the actual paid prompts.
+chaines/samurai-chapters/** -text
+chaines/viking-chapters/** -text
+chaines/pirate-pages/** -text
+chaines/alien-outbreak-survival/** -text
+production/handoff/access/*.aesgcm -text
+# Keep literal original prompt whitespace and intentional Markdown hard breaks.
+chaines/samurai-chapters/episode-01/prompts/** whitespace=-blank-at-eol,-blank-at-eof
+chaines/samurai-chapters/episode-01/visual-bible.txt whitespace=-blank-at-eof
+chaines/pirate-pages/episode-01/README.md whitespace=-blank-at-eol
 output/imagegen/survivor-full-production-2026-10-12/** -text whitespace=cr-at-eol
 output/imagegen/survivor-full-production-2026-10-12/prompts/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 output/videos/survivor-first-episodes-2026-10-12/** -text whitespace=cr-at-eol

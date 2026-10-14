@@ -1,0 +1,12 @@
+{
+  "source": "actual native TubeForge VPS voice used for delivered film",
+  "file": "narration-api.mp3",
+  "bytes": 27981574,
+  "sha256": "865da8fcc7d315f02cc7d59168e7f97c3e5f6edfae6a625c480eb95050b66028",
+  "project_id": "why-being-a-viking-was-worse-than-you-th-cca49f",
+  "duration_seconds": 1165.84,
+  "decoded_samples": 51413760,
+  "sample_rate": 44100,
+  "final_native_frame_count": 27980,
+  "notice": "Original official API narration. The final film used separately measured level-only normalization; normalization does not change this original MP3 or its timing."
+}

@@ -1,0 +1,1262 @@
+{
+  "schema": "portable-reviewed-master-registry-v1",
+  "actual_master_generation_metadata": [
+    {
+      "id": "TOM",
+      "type": "character",
+      "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create a NEW original individual character master for TOM, an ordinary poor adult sailor in the Caribbean around 1715, in the exact clean flat 2D cartoon character language of the attached references. Image 1 defines the adult proportions, huge round warm CREAM face, black dot eyes, tiny line nose and small neutral line mouth, thin black LINE forearms and small solid BLACK mitten hands. Image 2 defines the Pirate Pages brand's matching cream-face drawing style; its rich captain clothing and hat are NOT Tom's clothing. Tom is a different original man: short slightly tousled warm medium BROWN hair, clean shaven, round cream face, small ears, neutral mildly tired adult expression. No hat and no headcloth. Plain warm cream loose linen shirt with sleeves rolled to the elbows, simple sleeveless muted NAVY BLUE waistcoat with only three small dull brown buttons, brown narrow waist belt, plain charcoal knee breeches, unadorned brown mid-calf boots. Exposed forearms are single very thin BLACK lines ending in very small black mitten hands, matching image 1. No flesh-colored filled forearms. No realistic human fingers. Two arms, two hands, two legs. One full-body character only, centered, feet fully visible, facing almost front with a very slight three-quarter angle, relaxed arms at his sides. Adult torso and stance despite the large round head, not a child. Crisp dark outlines, matte flat fills, at most one simple shade per garment, plain pale cream background. No weapons, no props, no ornate gold trim, no fancy captain coat, no tricorn, no skull, no beard, no Viking helmet or cape, no lettering, no logos, no panel grid. Preserve the simple round cream-face visual language while making this NEW identity and the specified sailor outfit.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Round cream face, dot eyes, neutral tiny mouth, short warm brown hair, shaved, no headcloth.",
+        "Cream elbow-rolled shirt, navy plain waistcoat, charcoal breeches, brown boots. Thin black line forearms and small black mitten hands. No ornate captain clothing, props, text or logo."
+      ],
+      "root_review_status": "PASS_ROOT_ACTUALLY_VIEWED",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/references/53c05a1ab91b-exec-70f3fe8e-b655-4f6c-a87f-a3d3a0672475.png"
+        },
+        {
+          "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/references/1654de83828d-exec-1f9b9e66-c88c-4801-b9df-358fcafb4c34.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TOM-master.prompt.txt",
+      "prompt_sha256": "de7c4062c0b1251a70f03aeb1c1d1b8d10cfe2b8db0f10c4256fa8870a0b5b00",
+      "original_image_identifier": "exec-7f2b5993-6365-451e-92b4-7231a92e466f.png"
+    },
+    {
+      "id": "DECK",
+      "type": "empty_environment",
+      "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "Create a NEW empty environment master, 16:9 landscape, for a modest Caribbean wooden one-masted sailing sloop around 1715. The attached Viking HOME and FARM images define ONLY the sober drawn 2D background style: clear black/brown line work, useful wood and rope detail, matte colors, simple shadows, no photography or 3D rendering. Do not copy their buildings or northern vegetation. Draw an empty open wooden deck viewed from near the stern, camera at adult eye height looking forward toward the bow. Fixed logical ship geometry: low plank rails run along both sides and converge towards the small bow; ONE single sturdy mast stands on the centerline in the middle distance near the forward half of the deck. Directly AFT of that mast (between viewer and mast) is ONE rectangular open-access wooden hatch with a raised low dark coaming, its lid currently CLOSED flush across the opening; this hatch will lead down into the small hold. Leave walking room around it. Two small iron muzzle-loading cannons total, one port left and one starboard right, aligned symmetrically beside the hatch and pointing OUTBOARD through simple gunports, each on a small wooden truck carriage with plain thick restraint ropes. No extra guns. Foreground stern steering: a simple long wooden TILLER arm attached to a visible squat rudder-head at the rear center foreground, its arm angled toward the left; absolutely no ship steering wheel, no metal modern fittings. Modest single-mast FORE-AND-AFT gaff rig: the mast's main gaff sail and its wooden boom occupy upper-right overhead aft of mast, a small triangular jib visible beyond the mast toward the bow on a stay to a short bowsprit. No second or third mast, no array of square sails, no huge galleon superstructure. Mainmast rigging is spare clear taut ropes leading consistently to each rail, no impossible rope tangle. Coiled rope fixed beside the mast foot on the left, a plain small wooden pail fixed against the right rail in the foreground. Wooden boards warm worn honey brown, cannons dark charcoal, sail unbleached cream. Bright Caribbean late-morning daylight comes from the upper left and gives simple soft shadows to lower right. Beyond the low rail is blue-green sea, a modest low distant green island on the LEFT horizon only, pale sky with small clouds. No towering castles, invented monumental skyline, modern port, flags or skull motifs. No people, no silhouettes, no animals. No text, captions, logos, grids or labels. Entire image is a controllable clear story set, detailed enough for work on ropes, food, discipline and repairs, not an epic fantasy ship or luxury yacht.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Empty moderate wooden single-mast sloop deck, camera aft toward bow. Mast at center forward half, single hatch immediately aft, 2 guns outward port/starboard.",
+        "Rudder-head and wooden tiller fixed stern foreground angled left, no wheel. Rope coil mast-left; pail against right rail foreground.",
+        "Drawn detailed 2D wood/ropes, cream sail, modest low green left horizon, no giant distant architecture.",
+        "Single-mast fore-and-aft rig visible; upper gaff edge cropped above the frame. Deck proportions are a designed set, not a reconstruction of a named historical vessel."
+      ],
+      "root_review_status": "PASS_ROOT_ACTUALLY_VIEWED",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png"
+        },
+        {
+          "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK-master.prompt.txt",
+      "prompt_sha256": "8522fddf511757083eac1b81661c101974d9c0ee901b082f8002c227487f363f",
+      "original_image_identifier": "exec-58662e42-6798-463d-a776-149302aaf5fb.png"
+    },
+    {
+      "id": "CAPTAIN",
+      "type": "character",
+      "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create an original CAPTAIN individual master for a fictional Caribbean pirate crew around 1715. Use the attached TOM master only as the exact visual style/proportion anchor, not as this new person's identity or clothes: a huge round warm CREAM face, small ears, black dot eyes, tiny line nose and tiny line mouth, crisp dark outlines, matte flat clothing, adult covered torso and stance, thin single BLACK LINE forearms and very small solid black mitten hands. No realistic fingers or flesh-filled forearms. Two arms, two hands, two legs. One original full-body adult individual only, centered nearly front-facing with relaxed arms down and feet completely visible on a plain pale cream background. No props, weapons, lettering, logos or extra characters. No Viking clothing. Keep character simplicity exactly compatible with TOM. Different identity from Tom: a broad round cream head, short dark brown hair mostly under a PLAIN black tricorn without feather or trim, a neatly squared medium BROWN full beard with a small cream mouth opening and tiny neutral line mouth. Plain dark BURGUNDY long captain's coat ending at the knees, simple cream shirt beneath, a dull brown waist belt with plain square buckle, charcoal knee breeches, dark brown boots. Only a short row of small dull brass buttons, no decorative gold braid. Build a sturdier adult stance with shoulders a little wider than TOM, while preserving the simple large round face and thin black forearms visible after the coat cuffs. No eyepatch, no red headcloth, no skull, no spyglass, no flourish. This is an original fictional older working captain, not a real famous pirate or a duplicate of the branded mascot.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Black plain tricorn, short brown hair, medium full brown beard, burgundy knee coat and brown boots. Black line forearms/mitten hands, full adult body, no props/text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTAIN-master.prompt.txt",
+      "prompt_sha256": "600842398f90f363b0594acd8d56600a1fe8159bf69ca0300bffc31f0b149a45",
+      "original_image_identifier": "exec-ded60f63-8ae8-4c74-83ca-dfbd878fcd6f.png"
+    },
+    {
+      "id": "QUARTERMASTER",
+      "type": "character",
+      "sha256": "cebe396a6342370faab76e4f7c93bc3d47bba9d006386d8f9534cffb7ca8ef36",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create an original QUARTERMASTER individual master for a fictional Caribbean pirate crew around 1715. Use the attached TOM master only as the exact visual style/proportion anchor, not as this new person's identity or clothes: a huge round warm CREAM face, small ears, black dot eyes, tiny line nose and tiny line mouth, crisp dark outlines, matte flat clothing, adult covered torso and stance, thin single BLACK LINE forearms and very small solid black mitten hands. No realistic fingers or flesh-filled forearms. Two arms, two hands, two legs. One original full-body adult individual only, centered nearly front-facing with relaxed arms down and feet completely visible on a plain pale cream background. No props, weapons, lettering, logos or extra characters. No Viking clothing. Keep character simplicity exactly compatible with TOM. Different identity from Tom: neatly parted short DARK BROWN hair, short subtle dark brown beard stubble drawn as a simple short fringe around the lower cream jaw, calm firm neutral line mouth. Sleeves rolled to the elbow on a plain muted off-white linen shirt; sleeveless gray-BROWN work waistcoat with three dull buttons, a broader brown belt with plain buckle, dull brown knee breeches and plain dark brown low boots. No hat or headcloth. Clothes look serviceable but modest. Forearms below rolled sleeves must be very thin black lines with little black mitten hands. No rich captain coat, no tricorn, no feathers, no bright blue waistcoat, no tools in hands.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Dark brown short parted hair, short simple stubble, graybrown sleeveless vest, cream rolled sleeves, brown breeches and boots. Distinct from TOM, same round cream face/black line forearms and mittens."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/QUARTERMASTER.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/QUARTERMASTER-master.prompt.txt",
+      "prompt_sha256": "f531dd3c51b2f078050af993cdc4e101b7f1a5187cf7ca09a6748f29b98e16c1",
+      "original_image_identifier": "QUARTERMASTER-imagegen-return.png"
+    },
+    {
+      "id": "CREWMATE",
+      "type": "character",
+      "sha256": "8de63d23cc453e731116629402470e662bc5741f2c346d82379014bd19086537",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create an original CREWMATE individual master for a fictional Caribbean pirate crew around 1715. Use the attached TOM master only as the exact visual style/proportion anchor, not as this new person's identity or clothes: a huge round warm CREAM face, small ears, black dot eyes, tiny line nose and tiny line mouth, crisp dark outlines, matte flat clothing, adult covered torso and stance, thin single BLACK LINE forearms and very small solid black mitten hands. No realistic fingers or flesh-filled forearms. Two arms, two hands, two legs. One original full-body adult individual only, centered nearly front-facing with relaxed arms down and feet completely visible on a plain pale cream background. No props, weapons, lettering, logos or extra characters. No Viking clothing. Keep character simplicity exactly compatible with TOM. Different identity from Tom: short BLACK hair gathered into a very small neat queue at the nape, no beard, no hat or headcloth, small neutral line mouth with a subtly tired adult expression. Plain muted dusty GREEN long linen work shirt, collar open modestly, sleeves rolled to the elbows, narrow dark brown belt, dark charcoal knee breeches, plain brown ankle boots. No waistcoat, no fancy coat, no bright red sash. The exposed forearms below sleeves are thin BLACK lines ending in very small black mitten hands. The large round cream face and matte drawn simplicity exactly match Tom but hairstyle and green wardrobe are clearly different.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Black hair short with tiny queue, clean shaven, olive/dusty green rolled shirt, charcoal breeches and brown boots. No waistcoat/hat, full adult body and same cream face/line arms/mittens."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CREWMATE.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CREWMATE-master.prompt.txt",
+      "prompt_sha256": "e228d33520f71587bdd2e016bacacda50d7606fdb14e65736a9d0784ad4c88f5",
+      "original_image_identifier": "exec-8155ecb7-9182-4dbb-9357-6a2fdfad4d61.png"
+    },
+    {
+      "id": "DEALER",
+      "type": "character",
+      "sha256": "a3022eac6d03149991c8e7cb2331807d627df61d01b417bd02429744025637e0",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create an original DEALER individual master, a modest adult waterfront trader in a fictional Caribbean port around 1715. Use the attached TOM master only as the exact visual style/proportion anchor, not as this new person's identity or clothes: a huge round warm CREAM face, small ears, black dot eyes, tiny line nose and tiny line mouth, crisp dark outlines, matte flat clothing, adult covered torso and stance, thin single BLACK LINE forearms and very small solid black mitten hands. No realistic fingers or flesh-filled forearms. Two arms, two hands, two legs. One original full-body adult individual only, centered nearly front-facing with relaxed arms down and feet completely visible on a plain pale cream background. No props, weapons, lettering, logos or extra characters. No Viking clothing. Keep character simplicity exactly compatible with TOM. Different identity from Tom: short sandy BLOND hair in a simple side part, clean shaven, no hat or headcloth, small neutral line mouth. Plain dull OLIVE GREEN knee-length trade coat with simple straight cuffs and only three small brown buttons, cream shirt underneath, narrow brown belt, simple tan brown knee breeches, unadorned dark brown shoes with no shiny buckles. Thin black forearms visible below cuffs ending in little black mitten hands. Modest work clothes, not a noble's tunic or pirate captain finery. No money bag, scales, shop counter or hand-held object; individual reference only.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Short sandy blond hair, clean shaven, dark olive trade coat cream shirt tan breeches dark shoes. Same round cream head/dot eyes and black line arms/mitten hands; no props/text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/DEALER.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DEALER-master.prompt.txt",
+      "prompt_sha256": "fe7f6fc5f703923e2ccba65f0d964656e7ba8661d44c8df4d2d3872985cd9b8c",
+      "original_image_identifier": "exec-ad031df2-42c8-4552-a8d5-452e1e629189.png"
+    },
+    {
+      "id": "PORT",
+      "type": "empty_environment",
+      "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "Create a NEW EMPTY PORT environment master, 16:9 landscape, for a fictional modest Caribbean harbor around 1715. Use the two attached Viking HOME and FARM images ONLY for sober drawn 2D background style: crisp line work, detailed useful architecture, wood and stone, muted matte colors, simple shadows, limited texture. Do not copy the northern buildings, turf roofs or Viking geography. Human-height camera on a short weathered WOODEN QUAY looking diagonally toward the land. Blue-green harbor water occupies the entire LEFT third. The broad plank quay in the foreground has two plain squat mooring posts on its left water edge; a single spare coil of rope sits beside the nearest one. The quay leads to a compact shore street on the RIGHT half. Low one and two story Caribbean timber and whitewashed buildings of credible early eighteenth-century size: a modest tavern at rear-center with off-white plaster, dark GREEN shutters, a simple weathered WOODEN door, small shingle roof and NO written sign; adjacent plain ochre single-story merchant store farther right with dark brown shutters. A few low shingle-roof storerooms extend behind; useful roof and window detail, no enormous fantasy castle or Victorian facade. Quiet restrained warm Caribbean daylight from upper left, simple shadows lower right. A few small palms on land far right, low coastline beyond water, no huge towers or modern cruise port. Keep ample clear quay and street space for meetings, carrying supplies and boarding scenes. No ship moored in the foreground in this empty location master; clear water space available for future ship insertion. No people, animals, silhouettes, flags, text, logos or modern elements.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Broad wood quay waterleft, squat mooringpost with ropeforegroundleft. Rearcenter whitewashed two-story tavern green shutters/shingle roof, merchantochre store right, small woodwarehousesleft. Low distant coast, no giant fantasyarchitecture, noactors."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png"
+        },
+        {
+          "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT-master.prompt.txt",
+      "prompt_sha256": "4d17cd30b9e1a7e1ef9644c6b496e22b0621ba4d92215a6bd066d0ffdd04319e",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg",
+      "original_image_identifier": "exec-7703b03e-bad4-4d5a-81b1-be3c20d6e4ba.png"
+    },
+    {
+      "id": "TAVERN",
+      "type": "empty_environment",
+      "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "Create a NEW EMPTY TAVERN interior environment master, 16:9 landscape, a small waterfront tavern in a fictional Caribbean port around 1715. The attached Viking HOME master defines ONLY the sober 2D drawn wood/room style, not the architecture or furniture layout. Detailed believable modest tavern, clean line drawing, matte flat color blocks and simple shadows, reduced texture, no photorealism or 3D. Fixed layout: a single low rectangular room, cream whitewashed walls above a low dark wood dado, exposed plain timber ceiling beams, warm brown plank floor. One small window with dark GREEN painted shutters is on the LEFT wall, providing daylight from upper left toward lower right. A plain wooden external door is at the REAR CENTER slightly right, CLOSED. A simple wood serving bar runs along the REAR RIGHT wall, with shelves behind holding three plain earthenware jugs and four dull ceramic mugs; no modern branded bottles. Foreground LEFT is a rectangular wood table with a long bench on the left and two plain stools on the right. Midground RIGHT is a second smaller round wood table with two stools, leaving a clear central walkway to the door. A modest closed wooden barrel stands against the rear-left wall. One small UNLIT oil lantern hangs from the center beam, no electric lights. Restrained daylight only, visible clear fixed architecture. No huge palace windows, fireplace banquet hall, skull decor or fantasy pirate flags. No people, animals, text, signs, lettering or logos.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Cream plaster timberbeams woodfloor, green-shutter leftwindow, closed rearcenter-right door, rear-right bar with threejug/sixmugs, left rectangular table bench+2stools, right roundtable two stools, rearleft barrel, unlit overheadlantern. Empty and no text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN-master.prompt.txt",
+      "prompt_sha256": "e6e3ccda7f2b86e6e5c76011ada53f5820efa37842a2e28928b540364841ff50",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg",
+      "original_image_identifier": "exec-8a237c2b-b875-4729-81b7-60ec80c127e9.png"
+    },
+    {
+      "id": "BELOWDECK",
+      "type": "empty_environment",
+      "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "literal_prompt": "Create a NEW EMPTY BELOWDECK master, 16:9 landscape, for the cramped sleeping/storage hold of the EXACT modest wooden one-masted Caribbean sloop in attached image 1 DECK. Image 1 is the fixed actual ship geometry reference; image 2 Viking HOME is ONLY the sober 2D drawn wood interior style. Draw the space as a plausible small low-ceiling hold of a circa1715 wooden sloop, not a large multi-level galleon or room in a house. Camera is toward the stern looking FORWARD along the ship centerline, below the same deck view. Low curved dark wooden ribs run across both side walls and overhead, warm dark brown hull planks and low ceiling beams. ONE mast trunk descends through the ceiling in the centerline at the FORWARD HALF of the hold, matching deck mast. The ONE rectangular hatch opening in the ceiling is directly AFT of the mast, in the nearer CENTER overhead. For this belowdeck master the hatch lid is OPEN, with clear daylight from above and a short plain wooden ladder descending from that aperture to the center walkway; this is the explicit OPEN-HATCH state of the deck master whose lid is closed. No sidewall door or second hatch. Keep the central walkway clear from ladder toward mast. One rolled empty cream canvas hammock rigged along LEFT aft wall and one empty sagging cream canvas hammock along RIGHT aft wall at useful sleeping height, each securely suspended to beams. Fixed provisions are FORWARD of mast: two water casks strapped against the forward-left wall, three pale cloth sacks stacked low against the forward-right wall, one small plain wooden chest aft-right beneath the right hammock. One small wooden bucket on the floor aft-left below the left hammock. Main light through overhead hatch at center-left, dim simple warm shadows, no bright electric or modern gas lighting. Cramped usable deck height with logical mast/hatch/ladder positions, not a cathedral. No cannons below, no wheel, no ship model, no modern plumbing, no windows or extra exit. Detailed but sober line-drawn 2D style, matte colors, minimal texture. No people, silhouettes, animals, lettering or logos.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Cramped curved-rib woodenhold, one mast centerforward, one open overhead hatch aftmast, ladder descendcenter-left, logical aligned with deck. Empty left/right cream hammocks, watercaskforwardleft, sacksforwardright, chestaftright, bucketforeleft. Hatch explicitOPEN state, masterDECK lidclosed. Noactors/text/extra door."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png"
+        },
+        {
+          "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK-master.prompt.txt",
+      "prompt_sha256": "1200d45e3e9e01e49e4db4b10f19776b9618caa8ae1b7e31e405777fc883f08f",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg",
+      "original_image_identifier": "exec-ec188ada-feb7-47ec-90fd-f71deb2c1694.png"
+    },
+    {
+      "id": "CAPTURED_SAILORS",
+      "type": "supporting_group",
+      "sha256": "075a258250c6fe17d07b9fb9102e6a48fdb6c67af58deb4ef5a966e951f203b1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create one original supporting character-reference image, TWO covered adult ordinary merchant sailors around 1715, side by side with ample clear space between them, both full-body and feet entirely visible, plain pale cream background. Attached TOM defines ONLY the exact cartoon drawing style, never their identity or blue outfit: huge round warm cream heads, black dot eyes, tiny line noses and tiny neutral mouths, dark crisp outlines, matte garment fills, adult torso and stance, very thin single black line forearms and tiny solid black mitten hands. Exactly TWO people total, two arms and two legs each, no realistic fingers. LEFT person SAILOR_A: reddish-brown short curly hair and a short tidy reddish-brown beard along lower jaw, plain muted GRAY shirt with sleeves rolled to elbow, charcoal knee breeches, simple dark brown ankle boots, plain narrow belt. RIGHT person SAILOR_B: high balding forehead with short dark brown hair at sides, clean shaven, plain dusty BROWN rolled work shirt, faded tan knee breeches, simple dark brown boots and narrow belt. Their round cream faces and hair silhouettes must differ from every maincast character and from each other; no duplicated TOM face/hair/waistcoat. They stand soberly and somewhat apprehensively, eyebrows subtly lifted or tilted, small mouths, no exaggerated comedy or joy. No hats, waistcoats, weapons, props, chains, shackles, ropes tying bodies, injury, blood, logos, labels, text, panels or symbolic pirate motifs. They are two original fictional adult supporting workers/victims for educational historical asides, not named real persons, not heroic pirates. Keep same simple adult cream-face black-line-arm black-mitten style as TOM.",
+      "transparent_background": false,
+      "group_count": 2,
+      "identities": {
+        "left": "SAILOR_A reddish curly hair short beard gray shirt charcoal breeches",
+        "right": "SAILOR_B balding brown sidehair clean-shaven dusty brown shirt tan breeches"
+      },
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Two covered adult supporting merchant workers, original faces distinct from maincast. Left redcurlyhair gray; right balding brown. Same creamface linearms mittens, sober worried expressions. Nochains/gore/text. Select explicitleft/right if scene needs one person."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTURED_SAILORS.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTURED_SAILORS-master.prompt.txt",
+      "prompt_sha256": "c41879083771ba746c91b6f45027a3e83ef95c1a692c7a27d718e61d27b3de18",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg",
+      "original_image_identifier": "exec-e3c95305-af1c-4544-b73a-134438b75c09.png"
+    },
+    {
+      "id": "ENSLAVED_ASIDE",
+      "type": "supporting_group",
+      "sha256": "2c46432e8eb050f64c418c490b65416a02b1b36469759c0f81552a37d53ce553",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "literal_prompt": "Create one original supporting character-reference image, TWO sober covered adult people for a brief educational historical aside concerning the harm done to enslaved people during Atlantic piracy around 1715. Plain pale cream background, full bodies and feet visible, space between the two people. Attached TOM defines ONLY the exact historical video's simple cartoon visual family: round warm CREAM heads, small black dot eyes, tiny line noses and tiny line mouths, crisp dark outlines, matte flat fills, adult covered torsos, exposed forearms rendered as very thin black lines ending in very small solid black mitten hands. No realistic fingers or realistic skin detailing. Everyone belongs to this same symbolic cream-face cartoon family; no racial caricatures, exaggerated racial features or stereotyped adornment. Exactly two adults, two arms and two legs each. LEFT adult ASIDE_A has short closely cropped dark hair, plain undyed oatmeal linen work shirt covering the torso with elbow-length sleeves, plain brown knee breeches and simple dark brown shoes. Head turned slightly toward image left, subdued concerned brows and small downturned line mouth; guarded restrained posture. RIGHT adult ASIDE_B has a plainly shaved head with a small neutral hair shadow at the nape, a plain undyed light tan work shirt with sleeves covering to elbows, dull charcoal full-length loose work trousers and plain brown shoes. Head turned slightly to image right, sober worried expression and reserved posture. Do not clone TOM or any maincast person, no fashionable waistcoats or rich coat. No nudity, chains, shackles, restraints, injury, gore, weapons, money, cargo, labels, text, trader, savior, crowd, logos, props or background scene. Treat both as recognizable adults with restrained human fear, never as objects or spectacle. Plain original fictional supporting references only, compatible with the modest clean 2D round-cream-face style.",
+      "transparent_background": false,
+      "group_count": 2,
+      "identities": {
+        "left": "ASIDE_A short dark curled/cropped hair cream shirt brown knee breeches, facing left",
+        "right": "ASIDE_B shaved head tan shirt charcoal full trousers facing right"
+      },
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Two adult covered supporting victims, separate identities partlyturningaway and restrained concern. Same symboliccreamfacefamily/linearms/mittens. Nochains/injury/nudity/gore/adornment/racialcaricature or savior."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/ENSLAVED_ASIDE-master.prompt.txt",
+      "prompt_sha256": "2846bd946dcfa5d5c4118b5fbe6094d8c80ebddcd22ebcf59868f04bc1657848",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg",
+      "original_image_identifier": "exec-e00bb0e0-65b6-496c-b17b-e6b0484a085b.png"
+    },
+    {
+      "id": "MARKET",
+      "type": "empty_environment",
+      "sha256": "674d0a69d9ec423cc21bc377a78f494d02beac24b1655f93bee56adcbb521f58",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "Create a NEW EMPTY MARKET environment master, 16:9 landscape, a modest waterfront trader's stall in the SAME fictional Caribbean port around 1715 as attached image1 PORT. Image1 establishes exact local architecture, daylight direction and colors; attached image2 Viking FARM is only the sober line-drawn background detail style. Use the PORT master's small ochre merchant store with dark brown shutters, now seen close from the shore street at human height. Keep a credible early eighteenth-century simple one-story ochre plastered/timber store, small worn shingle roof, plain doorway at REAR LEFT, one dark brown shuttered window at REAR RIGHT. A plain beige canvas sunshade extends above ONE simple rectangular wooden trading counter across the midground; four plain wood support poles. Fixed stall objects: at counter LEFT a small brass beam balance with two shallow pans; center has two neat bolts of plain muted blue and cream cloth; RIGHT has one wooden basket of a few fresh green/yellow limes and onions. Behind the counter at RIGHT under the window are two plain closed wood cargo crates, one bigger below and one smaller above; at LEFT beside the doorway stands a single plain closed barrel. Floor is packed sandy dirt with small stones, clear foreground for two or three adults exchanging goods. A modest adjacent whitewashed low building at far-left with dark GREEN shutters helps link the same port, no written shop signs. Bright daylight from upper left, simple shadows lower right. No people, animals, mannequins, coin symbols, price text, labels, signage, logo, giant architecture, modern packaged goods or Victorian shopfront. Useful detailed sober 2D drawn architecture, matte colors, restrained texture.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Matched ochre storefront brownshutters shingleroof, neighboring whitegreen tavernleft, beige fourpost sunshade, leftdoor barrel/scales, bluecream clothcenter, produce right, two stackedcrates rear-right. Empty same daylight plausible lowport, no text/actors."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/MARKET.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png"
+        },
+        {
+          "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/MARKET-master.prompt.txt",
+      "prompt_sha256": "7c545014bf7c64cfe4cfefed7a733c73a304a37ac7f4a6d806db1472a022d354",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg",
+      "original_image_identifier": "exec-c2f6657a-696c-4282-85a2-6e76f64d1dc2.png"
+    },
+    {
+      "id": "PORT_MOORED_SLOOP",
+      "type": "environment_variant",
+      "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 PORT into an EMPTY explicit moored-ship variant of that exact port. Preserve its exact camera, broad plank quay, left wateredge/mooringposts/foregroundrope, whitewashed green-shutter tavern rearcenter, ochre store right, small woodwarehouse architecture, left low coastline, daytime colors and direction of light. Do not redesign the buildings, move posts or invent another city. Image2 DECK defines the ACTUAL small one-masted wooden sloop which must be added to image1's vacant water LEFT alongside the wooden quay. One modest working sloop only, low warm honey-brown wooden hull, no high castles/decks, no giant galleon. Ship stern near lower-left and bow points away along the quay toward rear-left; viewed from the quay at a readable elevated three-quarter angle. Clearly ONE mast on the centerline toward forward half. Ship deck matches image2's distinctive geometry: a single rectangular hatch immediately aft of mast, two small outboard muzzle-loading cannons total one on each side of that hatch, simple low rails, rope coil mast-left, pail stern-right, wooden rudderhead+tiller at stern angled toward the ship's left, NO steering wheel. Near cannon readable, far cannon may be partly hidden by opposite low rail, do not add guns. Its single-mast FORE-AND-AFT gaff rig has ONE long boom extending aft toward stern and one sloping gaff aloft; unbleached cream main sail now neatly FURLED on the boom, small jib FURLED on the bow stay to the short bowsprit. This is the explicit docked FURLED-SAIL state of the same ship, no square sails or extra masts. Mooring line to nearest quaypost. Add ONE narrow plain wooden boarding plank from quay's left edge to the sloop's starboard rear deck at a safe gentle slope, leaving walking space at both ends. Entire hull and single mast must be readable without dwarfing the town, port remains primary setting. Same sober detailed 2D line-drawn matte artwork, simple shadows and restrained texture as images1/2. No people, animals, silhouettes, flags, skull motifs, text or logos. No modernwheel/motor/metal gangway, no fantasyship. Exact PORT architecture and this exact DECK ship identity take precedence over decorative additions.",
+      "transparent_background": false,
+      "parent_ids": [
+        "PORT",
+        "DECK"
+      ],
+      "object_state": "Sloop moored; sails furled; one boarding plank; hatch closed.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actual PORT buildings/post/coil/camera retained. One modest lowhull sloop on leftwater, ONE mast, two smalldeckguns, singlehatch aftmast, tiller stern, boom foreandaft furledsails. One simplewood boardingplank to rightquay. Noactors/text/wheel/giantship. Exact unnamed designedsloop, not namedhistoricalreconstruction."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png"
+        },
+        {
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_MOORED_SLOOP-master.prompt.txt",
+      "prompt_sha256": "d862f80fbd0fd644f6fe08d20432108450c08a9fc9f042ed4a76cf7a496c0e4c",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg",
+      "original_image_identifier": "exec-81b0d46d-7c8a-4971-949f-ca9308ee2dc5.png"
+    },
+    {
+      "id": "SHORE",
+      "type": "empty_environment",
+      "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "Create a NEW EMPTY SHORE environment master, 16:9 landscape, a small isolated sheltered Caribbean repair beach around 1715, a distinct location away from the town. The attached Viking FARM is ONLY the sober detailed drawn 2D environment style; do not copy its northern vegetation, turf house or farm. Human-height camera on gently sloping pale tan sand with scattered small smooth stones, looking diagonally along the shallow bay. Fixed layout: calm blue-green shallow water occupies RIGHT third, curving away to a low rocky point rear-right. The central and foreground sandy working area is OPEN and clear. LEFT foreground holds two low plain timber sawhorse supports with one small worn sailcloth folded on the rear support, and a small closed wooden tool chest on the sand beside the near support. At rear LEFT are exactly three small modest palms with scrub around their feet, behind them an unremarkable low green thicket; no giant rainforest fantasy cliffs. A few short pieces of driftwood lie near the left edge; no piles of treasure. Bright simple daylight from upper left, shadows lower right. No boat or ship placed in this empty location master, keep clear beach/water room available for later named ship work. No town buildings, monuments, forts, shipwreck, skulls, giant horizon towers, people, animals, text, signs or logos. Matte colors, clean useful line detail, simple shadows, no photographic water or 3D.",
+      "transparent_background": false,
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Clear sandworkingarea, shallowwaterright curvedlowrockpoint,3smallpalms rearleft,2plain timber supports left with foldedcloth on rear, chestforegroundleft. Empty useful distinct repairbeach, no giantcliffs or architecture."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE-master.prompt.txt",
+      "prompt_sha256": "d05a42837b213c1fcaf8eb1495ac0c3c06c15ea29268830351852e160c4f6ae4",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg",
+      "original_image_identifier": "exec-79bf4eb9-9d7f-40fb-98ed-33394e87a613.png"
+    },
+    {
+      "id": "DECK_RAIN",
+      "type": "environment_variant",
+      "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT the attached actual DECK master only to create its EMPTY RAIN variant for the fictional modest circa1715 Caribbean single-mast wooden sloop. Preserve EXACT same stern-to-bow camera, central one mast and forward jib, fore-and-aft boom upperright, exactly2 small outboard cannons at left/right hatch sides, one rectangular closed central hatch aftmast, low plank rails, rope coil mast-left, rightforeground wooden bucket and sternforeground rudderhead with wooden tiller angledleft. No redesign of ship geometry or rope network, no additional mast/gun/wheel/hatch/actors. Change environment to a moderate dark cloudy rain squall, not a shipwreck: grayblue overcast sky, falling rain angled slightly right, darker teal gently agitated sea, restrained wet wood sheen in the same drawn 2D matte language. The low green island left is still faintly visible through the rain. Light is diffuse from aboveleft, simple darkershadows. Preserve mast and boom positions while the cream mainsail is conservatively REDUCED/REEFED for rain, attached logically to same rig, cloth bundled neatly along boom; jib reduced as well. No sailtear yet in this RAIN master, no dramatic waves over deck, lightning, catastrophe or brokenmast. No loose object in this master; later scene places/retrieves mallet explicitly. Everything else unchanged as physically possible. Sober 2D line drawing, no photographic effects, no text, labels, flags, skulls or logos.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK"
+      ],
+      "object_state": "Rain; mainsail reduced/furled on boom, no tear yet; hatch closed; all fixed deck objects retained.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actualcompare source in samecontact. Same stern-to-bow deckgeometry singlemast hatch2guns leftcoil rightpail sternleftangledtiller. Darkovercast rain wetdrawnwood, no shipwreck/brokenmast/extraobjects/actors. Sailreduced explicitweatherstate."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_RAIN.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_RAIN-master.prompt.txt",
+      "prompt_sha256": "6f1f75cdd910db71fdef3612ce14f13ab0ae8aaf7e320a315a4cc70a7d634dfe",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg",
+      "original_image_identifier": "exec-eefd4d1c-9ca8-4773-a290-c5041a8b258d.png"
+    },
+    {
+      "id": "DECK_HARBOR",
+      "type": "environment_variant",
+      "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 actual DECK into an EMPTY HARBOR variant of the EXACT same small circa1715 single-masted sloop. Image1 controls exact camera and all ship geometry. Image2 actual PORT_MOORED_SLOOP controls the matching port architecture and the relation of ship to quay. Preserve image1 exactly: adult-eye stern-to-bow camera, one central mast, one closed rectangular hatch aftmast, exactly2 small outboardguns sidesofhatch, railposts and spare rigging, ropecoil mastleft, woodenbucket rightforeground, sternforeground rudderhead and wooden tiller angledleft, same cream raised fore-and-aft mainsail/boom upperright and small jib forward. No newmast/gun/wheel/door/hatch or redesigned fittings. Add the restrained low shoreline of image2's port outside the RIGHT/starboard rail in the mid-to-far distance: modest wooden quay/mooringposts, the small whitewashed green-shutter tavern beside ochre store, low woodenwarehouses. Their scale must remain modest and geometry recognizable, not large palace/fort/cruiseport. Town/quay is to ship's RIGHT as in image2; original lowgreenisland can remain faint on LEFT horizon. This is an explicit READY-TO-DEPART harbor moment with sails raised in preparation, NOT a contradictory new rig. No boardingplank visible from this interior camera, no mooringline crossingwalkway. Same daytime upperleft sun and simple shades; entire deck remains open for actors later. Same sober detailed drawn2D matte style. Nopeople/silhouettes/animals/flags/text/logos. All main fixed objects and rig identity remain at identical image1 positions.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK",
+        "PORT_MOORED_SLOOP"
+      ],
+      "object_state": "Harbor ready-to-depart raised sails; hatch closed; right shore port.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actual deckgeometry fixed mast/hatch/two outboardguns/coil/pail/tiller retained. Matching whitegreen tavern and ochrestore/quay visibleRIGHT beyond starboardrail, left greenisland retained. Raisedcream main sail same rig as baseline, no actors/text. Use departure28, not dockedfurled first12–27."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png"
+        },
+        {
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR-master.prompt.txt",
+      "prompt_sha256": "18a043277ac439a792b970d135040301b366844d48eca2827db244ecb981e4d2",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg",
+      "original_image_identifier": "exec-3d9f5bdb-0fc5-4baa-917a-38795d2272a3.png"
+    },
+    {
+      "id": "DECK_AFTER_RAIN",
+      "type": "environment_variant",
+      "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 actual DECK_RAIN into an EMPTY AFTER-RAIN DAMAGED-SAIL variant of the EXACT small circa1715 sloop. Image2 actual undamaged DECK is the original raised-sail reference. Preserve exact stern-to-bow camera, one central mast and rigging, one closed central hatch aftmast, exactly2 smallguns pointingoutboard at hatchsides, ropecoil mastleft, bucket rightforeground, foregroundrudderhead+tiller angledleft, rails/boards/camera from both actual masters. Rain has STOPPED, sky soft palegray with opening blue, diffuse brighter daylight from aboveleft, wetdeck remains dark but not glossyphotographic, sea calmer. Raise/unreef the same cream fore-and-aft mainsail and jib back to image2's positions, keeping exact boom upperright. Add ONE modest small VERTICAL seam tear in the lower half of visible cream mainsail near its RIGHT outer area just above the boom (about screen x=80%, y=12%). Only a few centimeters in the fictional fabric, clear small darker split with two short frayed edges; no enormous hole, giant raggedflag or brokenmast. This ONE tear is the permanent damage identifier through later prize/return scenes until explicitly patched. Do not add any other damage. Keep all remaining objects unchanged, no loosemallet in empty master. Same sober2D drawnmatte style, noactors/text/labels/logos/skullflag.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK_RAIN",
+        "DECK"
+      ],
+      "object_state": "Rain stopped; wetdeck; raisedmainsail ONE seamtear aboveboom near right edge, persists47–70.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Same exact deckfixedobjects and rig; rainsgone grayblue openingsky, wetwood same drawnlanguage. ONE small darkvertical split in cream mainsail visibleupperright aboveboom, not gianttear, nobrokenmast. Preservethisdamage until repair71."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_RAIN.png"
+        },
+        {
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_AFTER_RAIN-master.prompt.txt",
+      "prompt_sha256": "d5ae595e6e249002703d31682e1ab9ecb851684c95dd7ef4088329fcbcaa169b",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg",
+      "original_image_identifier": "exec-784bb29e-fc4a-4b9c-805c-afbb68019408.png"
+    },
+    {
+      "id": "BELOWDECK_NIGHT",
+      "type": "environment_variant",
+      "sha256": "fa6609000f4c7a091995e6825f83612ba3cfff335dbbdfbd997ea4d2d802665a",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "literal_prompt": "EDIT the actual EMPTY BELOWDECK master into its NIGHT light variant, no camera or architecture change. Preserve EXACT low curvedribs and woodceiling, one forwardcenter mast, single OPEN overhead hatch aftmast, center-left ladder, left/right empty hammocks, forwardleft watercasks, forwardright sacks, aft-right chest and aft-left bucket at identical positions. The deckhatch remains OPEN but sky through it is dark blue with a little dim moonlight, no daytime sunbeam. Add ONE small plain historicallyplausible oil lantern hung securely from the existing beam to the RIGHT of the mast, away from canvas, with a modest warm flame behind simple glass/metal frame. This single lantern is an explicit temporary night object/light state and provides subdued amber light onto the mast and nearby floor, while corners/hammocks remain darker. No electriclight, LED, modern fixture, largefire, blue laser or chandelier. Readable sober nighttimeroom, restrained darkmatte colors with simple shadows, SAME 2D drawnline style, no photographicglow. No sleepingpeople, added silhouettes, animals, text, labels or logos. No secondhatch/door/window or changed shipdimensions.",
+      "transparent_background": false,
+      "parent_ids": [
+        "BELOWDECK"
+      ],
+      "object_state": "Night with hatchOPEN, moonvisible; one temporary oil lantern mast-right lit.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Sourcecompareactual: same hatch/ladder/mast/hammocks/casks/sacks/chest/bucket positions. Darkblue sky overhead and one small secureoil lantern rightofmast create subduedwarmnight, noactors/extraexit/modernlight/text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/BELOWDECK_NIGHT.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK_NIGHT-master.prompt.txt",
+      "prompt_sha256": "ba879737e387c7ed26648e479051dc2a78a1c7dec1b9a12326e167240cc60715",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg",
+      "original_image_identifier": "exec-c2dfc354-af11-4d37-baa2-78ec4712f282.png"
+    },
+    {
+      "id": "DECK_HARBOR_FURLED",
+      "type": "environment_variant",
+      "sha256": "3f985075de4ee30f24fcc2dea99819257cc2799285774e801706a72932470a0d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 actual DECK_HARBOR into an EMPTY DOCKED FURLED-SAIL variant. Image2 actual PORT_MOORED_SLOOP supplies that exact boat's docked sailstate. Preserve image1 EXACT camera and fixed shipobjects: central singlemast, singleclosedhatch aftmast, exactly2 smalloutboardguns hatchsides, rails/posts/ropestays, ropecoil mastleft, woodenbucket rightforeground, sternforeground rudderhead with wooden tiller angledleft. Preserve matched PORT coastline/quay/whitegreen tavern/ochrestore on RIGHT beyond starboardrail and lowgreenisland on LEFT, identical daytime upperleft light. Only change the unbleached cream fore-and-aft sails from RAISED to properly FURLED: the main cloth neatly lashed along the existing upperright boom, gaff lowered securely toward boom in the same rig; forward jib neatly furled along its existing forward stay to bowsprit. ONE mast only, no square sail or extra boom. This is early docked ship before departure; no sailtear yet. Do not move mast/boom/rails or recreate room. No boardingplank needvisible from interior view, no people, animals, flags, text, captions or logos. Same sober detailed drawn2D matte artwork and simple shades. Exact geometry/port identity/empty deck take priority.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK_HARBOR",
+        "PORT_MOORED_SLOOP"
+      ],
+      "object_state": "Docked before departure, mainsail+jib furled, no tear, hatchclosed.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actual exactdeckobjects mast/hatch/2outboardguns/leftcoil/rightpail/sterntiller retained, portRIGHT/greenislandLEFT same. Mainclothfurledlashed existingboom, jibfurled existingstay, consistentexternalPORT_MOORED. Empty correctfirst12–27state."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR_FURLED.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png"
+        },
+        {
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR_FURLED-master.prompt.txt",
+      "prompt_sha256": "47920b53e1e942edf7cb5ebf47937592c20dcb1e1cc2a0a1b08daec9133dbe64",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg",
+      "original_image_identifier": "exec-f7a2727a-bab5-47ff-bdea-2929912ae469.png"
+    },
+    {
+      "id": "TAVERN_EVENING",
+      "type": "environment_variant",
+      "sha256": "1626483a1525371d769f91502bc77bb03b31fc3ae0dbc49a4d6f199b74efef0a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT the actual TAVERN master into its EMPTY EVENING light variant only. Preserve EXACT camera, leftwall green-shutter window, rearcenter-right closed wooddoor, rear-right woodenbar and shelfjugs/mugs, rearleft barrel, rectangular foregroundleft table/bench/two stools, roundright table/stools, plaster/timber/woodfloor and allbeam positions. Outside leftwindow it is deepening blue dusk, no noon sunlight. The EXISTING small oil lantern hanging from the center ceilingbeam is now LIT with a modest warm flame, casting simple subdued amberlight and soft shadows across tables/bar; corners darker but readable. No additional lights, candles, lamps or bar furniture, no modernbranding/bottles. Same sober matte drawn2D style, simple shades and restrainedtexture, no photoreal bloom. Keep room entirely EMPTY, no people/silhouettes/animals/text/signs/logos. Do not rearrange any object or doorway.",
+      "transparent_background": false,
+      "parent_ids": [
+        "TAVERN"
+      ],
+      "object_state": "Duskoutsidewindow, existingonecentraloil lanternlit.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Exacttavern layout/door/table/bar/jugs/mugs/stools/barrel retained. Existinglanternlit warmamberlight, leftwindowdarkblue. Empty, no newobjects/electricglow/text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/TAVERN_EVENING.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN_EVENING-master.prompt.txt",
+      "prompt_sha256": "d38f87fb08355e1a6b9eae30683ff2f1e72ce57dc26687f5426267dcde2ef4de",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg",
+      "original_image_identifier": "exec-68846073-c48f-4158-b3fe-6dfbd98a3930.png"
+    },
+    {
+      "id": "PORT_SHIP_DANGER",
+      "type": "environment_variant",
+      "sha256": "3db33965133011d2e0ed482ada608316291dbd667ab05f84932c12661d87588e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT the actual PORT_MOORED_SLOOP master into one EMPTY SHIP-DANGER offshore variant, preserving EXACT camera/quay/buildingposts/foregroundrope/daytimecolors and the actual small single-masted pirate sloop mooredLEFT with furledcream fore-and-aft sails, two smalldeckguns, singlehatch/tiller and boardingplank. No change to this existing ship or port. Add ONE separate historicallyplausible unnamed larger ARMED sailing vessel far offshore on the LEFT horizon beyond the mooredsloop, visibly offshore and clearly separate from foregroundrigging. A modest early-eighteenth-century two-masted armed brig outline at distant scale, low darkwood hull, small row of gunports, two clear masts with simple cream square sails; enough to read as moreformidable than the littleforegroundsloop, but never hugegalleon/castle/skyscraper or modernwarship. It occupies no more than about12% of framewidth at horizon, no invented namedflag/royalcoatofarms/text/logo, no people visible on either vessel. This is a warning of an offshore armed vessel, no battle, gunfire, cannon smoke, wreck or storm. Same clear upperleft daylight and sober drawn2D matte style. Main PORT geometry and original smallsloop fixedidentity must remain exactly readable.",
+      "transparent_background": false,
+      "parent_ids": [
+        "PORT_MOORED_SLOOP"
+      ],
+      "object_state": "Same mooredsloop; one separate distant formidablearmedvessel atleft horizon.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actual mooredsourcecompare: PORTarchitecture/camera/posts/coil and foregroundsloop/plank retained. One small separate periodwooden armedsailingvessel farleft offshore, cream square sails and severalmasts read as3 in actualoutput; promptrequested2 but actualunnamed3mastperiodship is plausible and narration doesnotname rig. No giantship/wheel/battle/actors/flags/text."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SHIP_DANGER.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SHIP_DANGER-master.prompt.txt",
+      "prompt_sha256": "7c8a198842d6dacd7950231c468cf3d85df8efa5bcfca78e941e4e35155f13c6",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg",
+      "original_image_identifier": "exec-9d3bb665-fead-4d21-8f8b-915bec448f61.png"
+    },
+    {
+      "id": "DECK_MERCHANT_ENCOUNTER",
+      "type": "environment_variant",
+      "sha256": "d194d6059e9064f52d37cf0824dca60af36a99ce1e64908e4d634ab28d41c2d9",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "literal_prompt": "EDIT the actual DECK_AFTER_RAIN into an EMPTY merchant-encounter distant-ship variant only. Preserve EXACT stern-to-bow camera, one mainmast/rig/boom and creamraised mainsail, ONE SMALL VERTICAL SEAM TEAR near visible sail's rightarea just aboveboom at same actual location/shape, wetwood, hatchclosed,2smalloutboardguns, leftmastcoil, rightforegroundpail, sternrudderhead+tiller angledleft, rails and allfixedobjects. The tear MUST remain: do not repair, hide or remove it. Keep afterrain grayblue sky/no fallingrain and original lowgreenislandleft. Add ONE separate modest period wooden merchant sailingvessel on the RIGHT offshore horizon outside ownshiprail/rigging, small distant two-masted cargo brig with mutedbrownlowhull and two plaincream sails. Small enough tooccupy about10%width, logical distance and readable as anotherworkingvessel, not a fantasy warpalace or mirrorcopy of our foregroundsloop. No people visible at thisdistance, no flags/skulls/text/lettering/logos. No gunfire/smoke/wreck/battle or addedcannon. Same drawn2D matte style, simple shades. This variant establishes another sail before encounter; all foregroundship/damage identity MUST stay identical.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK_AFTER_RAIN"
+      ],
+      "object_state": "Afterrainwithsingletear unchanged; one separate smallmerchant sail at offshoreRIGHT horizon.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Same exactdeckobjects/camera/wetwood and SINGLE seamtear upperright retained, no silentrepair. One distant lowwood merchantvessel right sea, actualtwo-masted fore-and-aft-looking rig (promptbrig but narrationdoesnotname rig), smallperiodplausible, noactors/text/battle."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_MERCHANT_ENCOUNTER.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_MERCHANT_ENCOUNTER-master.prompt.txt",
+      "prompt_sha256": "8dcafdaa7173d961693dd64196ba5ccc2d8fc45a10df56f3c447ca00192ca3dc",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg",
+      "original_image_identifier": "exec-3aeaa24a-1f1e-41ed-8e9b-0e10281b1e1d.png"
+    },
+    {
+      "id": "DECK_SAIL_REPAIR",
+      "type": "environment_variant",
+      "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 actual DECK_AFTER_RAIN into the EMPTY DOCKED SAIL-REPAIR morning state. Image1 controls same smallsloop fixedgeometry and the SINGLE seamtear in its creamfore-and-aft mainsail. Image2 actual DECK_HARBOR controls matching town/coast: whitegreen tavern/ochrestore/quay on RIGHT starboardshore, lowgreenislandLEFT. Keep exact stern-to-bow camera,1mast,1closedhatch aftmast,2smalloutboardguns at hatchsides, leftmastcoil,rightforegroundbucket, sterntillerangledleft, rails/posts/rope network. Ship is now back at that matchingport, bright restrained morning upperleft light, wooden deckmostlydry. Lower/furl the same mainsail onto existing boom, keeping the logical SINGLE original rig. A small loose reachable section of that ONE cream mainsail is draped down from boom/mast and across the RIGHT edge of the closed central hatch as a work surface; its SAME short vertical seamtear remains clearly visible near the loose fabric's rightedge. This is accessible fabric awaiting patch71, no repairpatchyet. No second sail/newcanvas prop unrelated to mainsail, no hugepile blockingentiredeck. Forwardjibfurled on existingstay. No needle/scissors/tools unless physically needed, no actors; storyscene will add workers. Same sober detailed drawn2D matte style, no photorealism, text, logos, flags, newgun/mast/wheel or architecturechange. Keep all fixeddeckobjects at samepositions and the tornmaterial identifiable.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK_AFTER_RAIN",
+        "DECK_HARBOR"
+      ],
+      "object_state": "ReturnedharborRIGHT coast, morningdrydeck; one originalmaincloth lowered acrossrightclosedhatch with same tearaccessible, no patchyet.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Exactdeckgeometry retained, right matchingport restored. Sameone mast/boom, maincloth partlyfurled with one loosefabricsection draped onto rightofhatch, single darkvertical seamtear visible near looseclothrightedge. No separateextrasail, no actors, logical accessibleworkcloth for71."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_SAIL_REPAIR.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png"
+        },
+        {
+          "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_SAIL_REPAIR-master.prompt.txt",
+      "prompt_sha256": "5dff4f354d353fb4f6c081c19932889b1a13ff26a28279948abd3628ac43daf5",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg",
+      "original_image_identifier": "exec-3b15ed58-db42-4ef3-a6ec-55f08a80e81c.png"
+    },
+    {
+      "id": "SHORE_SLOOP_MAINTENANCE",
+      "type": "environment_variant",
+      "sha256": "4dd323922bd8ef8423c07f097cc9151b7b423a2b0634e10c8d4faed1f5d5fff8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT image1 actual SHORE into an EMPTY SAME-SLOOP-MAINTENANCE variant. Preserve EXACT repairbeach camera, clear pale sand, THREE smallpalms/scrub rearleft,2timbersupports leftwithfoldedcloth, closedtoolchest besideleftsupport, driftwood/stones and shallowturquoisewaterRIGHT/lowrockpointrear-right. Image2 actual PORT_MOORED_SLOOP defines the ship's actual modestlowwoodenhull/singlemast/two deckguns/hatch/sterntiller/fore-and-aft furledboom. Add that SAME smallsloop alongside the RIGHT beach in veryshallowwater, stern nearer viewer at midright and bow points away toward rear-right, gently afloat grounded nearshore with hull just accessible at the shallow waterline for simple inspection/work. Not a dramaticfullcareening technique or shipwreck: keep hullupright, no extremeheel, no poles/hoists/giantshoreconstruction. ONE mast, warmbrownlowhull, one longboom with creammainclothFURLED and forwardjibfurled, no squaremasts/wheel/highdecks. Exactlytwo smallguns on its deck, same closedhatchaftmast and basicsternlayout maybepartlyhidden at thisangle. Leave centralbeachworkarea clear. Ship may be slightly croppedrightedge but must be recognizable, scalecredible relativetimbersupports. Daylightupperleft same as source. No actors, silhouettes, animals, flags, smoke, text, logos, treasurechests, newstructures or extra ships. Same sober detailed line-drawn2D matte art, simple shadows. This location permits hullattention without prescribing a namedhistoricalvessel or fullcareeningmethod.",
+      "transparent_background": false,
+      "parent_ids": [
+        "SHORE",
+        "PORT_MOORED_SLOOP"
+      ],
+      "object_state": "Same smallsloop at shallowwaterRIGHT beach, uprightnearshore furledsails; no fullcareeningmethod specified.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actualsourcecompare:3palms leftsupports/chest/beach/lowrightpoint retained. Same lowwood smallsloop singlemast/twoworkguns/singlehatch/sterntiller foreandaft furledcloth inrightshallowwater upright, accessibleupperhull/noextremeheel/shipwreck/extraactors."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_SLOOP_MAINTENANCE.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png"
+        },
+        {
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+          "order": 2,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_SLOOP_MAINTENANCE-master.prompt.txt",
+      "prompt_sha256": "0788846df2bf9162315e08cabfe597a358063e4e45e38f83fcc05ab3a12cb337",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg",
+      "original_image_identifier": "exec-b4aac944-4faf-4de7-a311-5813f237fe84.png"
+    },
+    {
+      "id": "DECK_PATCHED",
+      "type": "environment_variant",
+      "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT actual DECK_SAIL_REPAIR into the EMPTY PATCHED DOCKED state immediately after the repair71. Preserve exactcamera and same returnedharborRIGHT whitegreen tavern/ochrestore/quay, leftgreenisland, upperleftmorninglight,1mast,1closedhatch aftmast,2outboardguns, ropecoil mastleft, bucket rightforeground, rails/post/rigging and sterntillerangledleft. The SINGLE seamtear in the loose cream maincloth is now successfully closed by ONE small plain cream rectangular fabric patch with a few simple dark stitchdots around its border, no writing. Secure the maincloth back FURLED along its same existing fore-and-aft boom and remove its loose hanging section from the hatch; cleardeckwalkingarea restored. Place that same small repairpatch visibly on the exposed rightthird of the bundled cloth along boom (it moved naturally with the same sail being refurled); no holes/tears remain. No unrelated secondpatch, newmain/square sail or addedmast. Forwardjib remainsfurled, ship remains docked. Cloth/patch compatible with original cream sail, simple functionalrepair not magicaldifferentmaterial. No toolsleftbehind, no workers/actors/animals, no text/logos/flags. Exact ship/portidentity unchanged, sober2D drawnmatte style and simple shadows. This explicitrepaired sailstate is used73 onward and remainsinfinalevening.",
+      "transparent_background": false,
+      "parent_ids": [
+        "DECK_SAIL_REPAIR"
+      ],
+      "object_state": "Dockedharbor daylight afterrepair71, mainsailrefurled with ONE visible smallcream stitchedpatch, hatchclear, no open tear.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Exact deckgeometry/portRIGHT retained. No loosecloth acrosshatch, existingboomfurled with ONE small rectangularstitched cream repairpatch rightthird. Originaltear gone afterexplicitrepair, no extra patches or newrig. Empty."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_PATCHED.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_SAIL_REPAIR.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_PATCHED-master.prompt.txt",
+      "prompt_sha256": "b666b6d61bae4513bd4ea1a3cc942912327b6faa52a33c8c85c518f2be7c7199",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg",
+      "original_image_identifier": "exec-805bbdc6-6b86-45e4-a078-ae7499fe66fb.png"
+    },
+    {
+      "id": "PORT_SUNSET",
+      "type": "environment_variant",
+      "sha256": "7e38266db8df2d694e1c14507afa34a4e6ee86be86d38ba0393e8b82f5481529",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT the actual PORT_MOORED_SLOOP master into its EMPTY SUNSET light variant only. Preserve EXACT camera/quay/buildings/mooringposts/foregroundrope and exact small1mastwooden sloop mooredLEFT alongsidequay, its two smallguns/hatch/sterntiller/fore-and-aft furledsails and ONE woodboardingplank. Nothingmoves and no newship. Change sun to a low warm setting light from LEFT overharbor, paleorange/pink sky and calmer darker bluegreenwater, longsimpleshadows fromsameleftdirection acrossplanks/street, whitegreen tavern/ochrestore/warehouses stillclearly recognizable with warmmutedtones. Farcoast low only, no fort or toweringarchitecture. Furledsail exterior doesnotdisplay an open tear; anystorydamage ishidden inroll and thislightvariantmakes no repaired/unrepairedclaim. Same sober detailed drawn2D matte artwork, no photorealglow/lensflare. No people/silhouettes/animals/text/logos/flags and no armedoffshorevessel in this sunsetvariant. Boat and townidentity takepriority.",
+      "transparent_background": false,
+      "parent_ids": [
+        "PORT_MOORED_SLOOP"
+      ],
+      "object_state": "Sunsetlight fromLEFT, same mooredboat furledsails/boardingplank, no offshorearmedship.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "PORT building/shore/woodquay/posts/coil and exactsmallforeaft1mastboat readable as samegeometry. Low warm leftsun orangeclouds longerconsistent shadows, empty no giantbuilding or actors. Furledcloth makesdamagehidden not silentrepairclaim."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SUNSET.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SUNSET-master.prompt.txt",
+      "prompt_sha256": "da037cc30a504ba60d75f2f34067addb5833e3a8b5c59ec3ed5d4ba6397f524e",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg",
+      "original_image_identifier": "exec-702d162e-94a7-4d89-a6fb-6430156389b7.png"
+    },
+    {
+      "id": "SHORE_ISOLATED",
+      "type": "environment_variant",
+      "sha256": "30e01c55f65d31cf6f1d7bbbe9d5d0145636c655e833fef8d107d9833e9de9bc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "literal_prompt": "EDIT actual EMPTY SHORE master into an ISOLATED UNINHABITED SHORE educational-aside variant. Preserve EXACT camera and natural geography: THREE modestpalms rearleft, scrub/thicket, pale sand/smallstones/driftwood, calm shallowturquoisewaterRIGHT curving to same lowrockypoint. REMOVE ONLY the two manmade timbersupports/sawhorses, foldedcloth and toolchest from LEFT foreground, leaving plain undisturbedsand and matching simpleshadows. No substitutedcampgear, footprints, boat, ship, pier, settlement, ruin, monument, person or animal. It is a quiet empty isolatedshore, used as an imagined possibility of abandonment, not a named actualmarooninglocation or biography. Same upperleftdaylight, sober detailed drawn2D mattecolors, modestpalms/lowcoast, no giantcastle/cliff/horizonship. No text, labels, symbols or logos. Do not zoom/reframe or redrawnaturalgeometry; just remove manmade repairitems.",
+      "transparent_background": false,
+      "parent_ids": [
+        "SHORE"
+      ],
+      "object_state": "Isolatedempty educationalaside shore, all manmaderepairpropsremoved, no ship/cast.",
+      "review_status": "PASS_PERSONALLY_VIEWED",
+      "reviewer": "pirate_visual_masters",
+      "review_observations": [
+        "Actualsame natural3palms/lowthicket/sand/rocks/rightshallowbay geography. Bothsupports, foldedcloth and chest actuallyremoved. Emptyquietisolatedaside withoutboat/manmadestructure/actors, soberdaylight."
+      ],
+      "root_review_status": "PENDING",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_ISOLATED.png",
+      "ordered_actual_reference_paths": [
+        {
+          "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc",
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png"
+        }
+      ],
+      "prompt_path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_ISOLATED-master.prompt.txt",
+      "prompt_sha256": "236d780189e2b726cd4263b769950e75e9c1a7a8b3199f20c06a37655d02cda6",
+      "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg",
+      "original_image_identifier": "exec-e49938e6-a5e6-46b8-946a-7f922130f082.png"
+    },
+    {
+      "id": "DECK_EVENING",
+      "type": "environment_variant",
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_EVENING.png",
+      "sha256": "8a3b9c8bac1cc528cc4f17d95962d71871015145a2972b186af49d1f573c2c32",
+      "literal_prompt": "Create ONE finished WIDE 16:9 original background-only 2D ink/cel illustration. Use referenced DECK_PATCHED as the EXACT physical master of the same modest early18th-century Caribbean sloop. Preserve its aft-to-bow view, central single mast, gaff/jib rig, completely furled cream sail along right boom, existing closed central hatch, stern tiller foreground, TWO modest outboard guns/carriages, left rig/rope coil, wooden bucket foregroundRIGHT, same ship planks/rails and same low stone quay/right harbor houses. Preserve the ONE small repaired cream stitched patch on the refurled sail in the RIGHT third; do not reopen the old tear or unfold sails. Change ONLY light/time to peaceful EARLY EVENING after work: muted soft violet-blue sky, warm low amber horizon glow, subtler low daylight reflections on sea, same visible readable wood/geography without dark silhouettes or black frame. Restrained matte flat 2D cel shadows and clear drawn detail, not photorealism/3D or dramatic neon sunset. No people, human shadows, text, words, labels, border, watermark, new vessel, flag, navy guards, extra mast, guns, tropical palace, lantern or new props. Exactly the same harbor/background layout and physical object positions. This is the DECK_EVENING lighting variant derived from the genuinely reviewed repaired/furled harbor state, not a redesigned environment.",
+      "ordered_actual_reference_paths": [
+        {
+          "order": 1,
+          "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_PATCHED.png",
+          "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6"
+        }
+      ],
+      "transparent_background": false,
+      "actual_generation_argument_association": "confirmed_saved_root_request",
+      "original_request_sha256": "4f4d14a671823cb1378093be75ec0e0fc43da1933b55be5a869d6eea95744d7b",
+      "root_selected_review_state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "review_note": "Exact deckgeometry/portRIGHT retained. No loosecloth acrosshatch, existingboomfurled with ONE small rectangularstitched cream repairpatch rightthird. Originaltear gone afterexplicitrepair, no extra patches or newrig. Empty."
+    }
+  ],
+  "root_selected_assets": {
+    "cast": {
+      "TOM": {
+        "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PASS_ROOT_ACTUALLY_VIEWED",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "CAPTAIN": {
+        "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PENDING",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "QUARTERMASTER": {
+        "sha256": "cebe396a6342370faab76e4f7c93bc3d47bba9d006386d8f9534cffb7ca8ef36",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PENDING",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/QUARTERMASTER.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "CREWMATE": {
+        "sha256": "8de63d23cc453e731116629402470e662bc5741f2c346d82379014bd19086537",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PENDING",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CREWMATE.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "DEALER": {
+        "sha256": "a3022eac6d03149991c8e7cb2331807d627df61d01b417bd02429744025637e0",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PENDING",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/DEALER.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "CAPTURED_SAILORS": {
+        "sha256": "075a258250c6fe17d07b9fb9102e6a48fdb6c67af58deb4ef5a966e951f203b1",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Two covered adult supporting merchant workers, original faces distinct from maincast. Left redcurlyhair gray; right balding brown. Same creamface linearms mittens, sober worried expressions. Nochains/gore/text. Select explicitleft/right if scene needs one person.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTURED_SAILORS.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg"
+      },
+      "ENSLAVED_ASIDE": {
+        "sha256": "2c46432e8eb050f64c418c490b65416a02b1b36469759c0f81552a37d53ce553",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Two adult covered supporting victims, separate identities partlyturningaway and restrained concern. Same symboliccreamfacefamily/linearms/mittens. Nochains/injury/nudity/gore/adornment/racialcaricature or savior.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg"
+      }
+    },
+    "locations": {
+      "DECK": {
+        "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex history_prompt_director actual first-six contact; pirate_visual_masters actual individual review",
+        "source_registry_root_review_status": "PASS_ROOT_ACTUALLY_VIEWED",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg"
+      },
+      "PORT": {
+        "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Broad wood quay waterleft, squat mooringpost with ropeforegroundleft. Rearcenter whitewashed two-story tavern green shutters/shingle roof, merchantochre store right, small woodwarehousesleft. Low distant coast, no giant fantasyarchitecture, noactors.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg"
+      },
+      "TAVERN": {
+        "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Cream plaster timberbeams woodfloor, green-shutter leftwindow, closed rearcenter-right door, rear-right bar with threejug/sixmugs, left rectangular table bench+2stools, right roundtable two stools, rearleft barrel, unlit overheadlantern. Empty and no text.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg"
+      },
+      "BELOWDECK": {
+        "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Cramped curved-rib woodenhold, one mast centerforward, one open overhead hatch aftmast, ladder descendcenter-left, logical aligned with deck. Empty left/right cream hammocks, watercaskforwardleft, sacksforwardright, chestaftright, bucketforeleft. Hatch explicitOPEN state, masterDECK lidclosed. Noactors/text/extra door.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg"
+      },
+      "MARKET": {
+        "sha256": "674d0a69d9ec423cc21bc377a78f494d02beac24b1655f93bee56adcbb521f58",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Matched ochre storefront brownshutters shingleroof, neighboring whitegreen tavernleft, beige fourpost sunshade, leftdoor barrel/scales, bluecream clothcenter, produce right, two stackedcrates rear-right. Empty same daylight plausible lowport, no text/actors.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/MARKET.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg"
+      },
+      "SHORE": {
+        "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Clear sandworkingarea, shallowwaterright curvedlowrockpoint,3smallpalms rearleft,2plain timber supports left with foldedcloth on rear, chestforegroundleft. Empty useful distinct repairbeach, no giantcliffs or architecture.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg"
+      }
+    },
+    "variants": {
+      "PORT_MOORED_SLOOP": {
+        "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actual PORT buildings/post/coil/camera retained. One modest lowhull sloop on leftwater, ONE mast, two smalldeckguns, singlehatch aftmast, tiller stern, boom foreandaft furledsails. One simplewood boardingplank to rightquay. Noactors/text/wheel/giantship. Exact unnamed designedsloop, not namedhistoricalreconstruction.",
+        "parent_ids": [
+          "PORT",
+          "DECK"
+        ],
+        "object_state": "Sloop moored; sails furled; one boarding plank; hatch closed.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg"
+      },
+      "DECK_RAIN": {
+        "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actualcompare source in samecontact. Same stern-to-bow deckgeometry singlemast hatch2guns leftcoil rightpail sternleftangledtiller. Darkovercast rain wetdrawnwood, no shipwreck/brokenmast/extraobjects/actors. Sailreduced explicitweatherstate.",
+        "parent_ids": [
+          "DECK"
+        ],
+        "object_state": "Rain; mainsail reduced/furled on boom, no tear yet; hatch closed; all fixed deck objects retained.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_RAIN.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg"
+      },
+      "DECK_HARBOR": {
+        "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actual deckgeometry fixed mast/hatch/two outboardguns/coil/pail/tiller retained. Matching whitegreen tavern and ochrestore/quay visibleRIGHT beyond starboardrail, left greenisland retained. Raisedcream main sail same rig as baseline, no actors/text. Use departure28, not dockedfurled first12–27.",
+        "parent_ids": [
+          "DECK",
+          "PORT_MOORED_SLOOP"
+        ],
+        "object_state": "Harbor ready-to-depart raised sails; hatch closed; right shore port.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg"
+      },
+      "DECK_AFTER_RAIN": {
+        "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Same exact deckfixedobjects and rig; rainsgone grayblue openingsky, wetwood same drawnlanguage. ONE small darkvertical split in cream mainsail visibleupperright aboveboom, not gianttear, nobrokenmast. Preservethisdamage until repair71.",
+        "parent_ids": [
+          "DECK_RAIN",
+          "DECK"
+        ],
+        "object_state": "Rain stopped; wetdeck; raisedmainsail ONE seamtear aboveboom near right edge, persists47–70.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg"
+      },
+      "BELOWDECK_NIGHT": {
+        "sha256": "fa6609000f4c7a091995e6825f83612ba3cfff335dbbdfbd997ea4d2d802665a",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Sourcecompareactual: same hatch/ladder/mast/hammocks/casks/sacks/chest/bucket positions. Darkblue sky overhead and one small secureoil lantern rightofmast create subduedwarmnight, noactors/extraexit/modernlight/text.",
+        "parent_ids": [
+          "BELOWDECK"
+        ],
+        "object_state": "Night with hatchOPEN, moonvisible; one temporary oil lantern mast-right lit.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/BELOWDECK_NIGHT.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg"
+      },
+      "DECK_HARBOR_FURLED": {
+        "sha256": "3f985075de4ee30f24fcc2dea99819257cc2799285774e801706a72932470a0d",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actual exactdeckobjects mast/hatch/2outboardguns/leftcoil/rightpail/sterntiller retained, portRIGHT/greenislandLEFT same. Mainclothfurledlashed existingboom, jibfurled existingstay, consistentexternalPORT_MOORED. Empty correctfirst12–27state.",
+        "parent_ids": [
+          "DECK_HARBOR",
+          "PORT_MOORED_SLOOP"
+        ],
+        "object_state": "Docked before departure, mainsail+jib furled, no tear, hatchclosed.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR_FURLED.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg"
+      },
+      "TAVERN_EVENING": {
+        "sha256": "1626483a1525371d769f91502bc77bb03b31fc3ae0dbc49a4d6f199b74efef0a",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Exacttavern layout/door/table/bar/jugs/mugs/stools/barrel retained. Existinglanternlit warmamberlight, leftwindowdarkblue. Empty, no newobjects/electricglow/text.",
+        "parent_ids": [
+          "TAVERN"
+        ],
+        "object_state": "Duskoutsidewindow, existingonecentraloil lanternlit.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/TAVERN_EVENING.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg"
+      },
+      "PORT_SHIP_DANGER": {
+        "sha256": "3db33965133011d2e0ed482ada608316291dbd667ab05f84932c12661d87588e",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actual mooredsourcecompare: PORTarchitecture/camera/posts/coil and foregroundsloop/plank retained. One small separate periodwooden armedsailingvessel farleft offshore, cream square sails and severalmasts read as3 in actualoutput; promptrequested2 but actualunnamed3mastperiodship is plausible and narration doesnotname rig. No giantship/wheel/battle/actors/flags/text.",
+        "parent_ids": [
+          "PORT_MOORED_SLOOP"
+        ],
+        "object_state": "Same mooredsloop; one separate distant formidablearmedvessel atleft horizon.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SHIP_DANGER.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg"
+      },
+      "DECK_MERCHANT_ENCOUNTER": {
+        "sha256": "d194d6059e9064f52d37cf0824dca60af36a99ce1e64908e4d634ab28d41c2d9",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Same exactdeckobjects/camera/wetwood and SINGLE seamtear upperright retained, no silentrepair. One distant lowwood merchantvessel right sea, actualtwo-masted fore-and-aft-looking rig (promptbrig but narrationdoesnotname rig), smallperiodplausible, noactors/text/battle.",
+        "parent_ids": [
+          "DECK_AFTER_RAIN"
+        ],
+        "object_state": "Afterrainwithsingletear unchanged; one separate smallmerchant sail at offshoreRIGHT horizon.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_MERCHANT_ENCOUNTER.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg"
+      },
+      "DECK_SAIL_REPAIR": {
+        "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Exactdeckgeometry retained, right matchingport restored. Sameone mast/boom, maincloth partlyfurled with one loosefabricsection draped onto rightofhatch, single darkvertical seamtear visible near looseclothrightedge. No separateextrasail, no actors, logical accessibleworkcloth for71.",
+        "parent_ids": [
+          "DECK_AFTER_RAIN",
+          "DECK_HARBOR"
+        ],
+        "object_state": "ReturnedharborRIGHT coast, morningdrydeck; one originalmaincloth lowered acrossrightclosedhatch with same tearaccessible, no patchyet.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_SAIL_REPAIR.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg"
+      },
+      "SHORE_SLOOP_MAINTENANCE": {
+        "sha256": "4dd323922bd8ef8423c07f097cc9151b7b423a2b0634e10c8d4faed1f5d5fff8",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actualsourcecompare:3palms leftsupports/chest/beach/lowrightpoint retained. Same lowwood smallsloop singlemast/twoworkguns/singlehatch/sterntiller foreandaft furledcloth inrightshallowwater upright, accessibleupperhull/noextremeheel/shipwreck/extraactors.",
+        "parent_ids": [
+          "SHORE",
+          "PORT_MOORED_SLOOP"
+        ],
+        "object_state": "Same smallsloop at shallowwaterRIGHT beach, uprightnearshore furledsails; no fullcareeningmethod specified.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_SLOOP_MAINTENANCE.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg"
+      },
+      "PORT_RETURN": {
+        "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "review_note": "Explicit actualpixelreviewed exterior alias permitted for PORT_RETURN. Same town/quay/ship/plank geometry; no duplicated generation.",
+        "object_state": "Returned moored ship exterior with sailsFURLED: tear47–70 remains hidden in roll; this alias makes no repairclaim.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg"
+      },
+      "DECK_PATCHED": {
+        "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Exact deckgeometry/portRIGHT retained. No loosecloth acrosshatch, existingboomfurled with ONE small rectangularstitched cream repairpatch rightthird. Originaltear gone afterexplicitrepair, no extra patches or newrig. Empty.",
+        "parent_ids": [
+          "DECK_SAIL_REPAIR"
+        ],
+        "object_state": "Dockedharbor daylight afterrepair71, mainsailrefurled with ONE visible smallcream stitchedpatch, hatchclear, no open tear.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_PATCHED.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg"
+      },
+      "PORT_SUNSET": {
+        "sha256": "7e38266db8df2d694e1c14507afa34a4e6ee86be86d38ba0393e8b82f5481529",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "PORT building/shore/woodquay/posts/coil and exactsmallforeaft1mastboat readable as samegeometry. Low warm leftsun orangeclouds longerconsistent shadows, empty no giantbuilding or actors. Furledcloth makesdamagehidden not silentrepairclaim.",
+        "parent_ids": [
+          "PORT_MOORED_SLOOP"
+        ],
+        "object_state": "Sunsetlight fromLEFT, same mooredboat furledsails/boardingplank, no offshorearmedship.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SUNSET.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg"
+      },
+      "SHORE_ISOLATED": {
+        "sha256": "30e01c55f65d31cf6f1d7bbbe9d5d0145636c655e833fef8d107d9833e9de9bc",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "pirate_visual_masters",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Actualsame natural3palms/lowthicket/sand/rocks/rightshallowbay geography. Bothsupports, foldedcloth and chest actuallyremoved. Emptyquietisolatedaside withoutboat/manmadestructure/actors, soberdaylight.",
+        "parent_ids": [
+          "SHORE"
+        ],
+        "object_state": "Isolatedempty educationalaside shore, all manmaderepairpropsremoved, no ship/cast.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_ISOLATED.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg"
+      },
+      "DECK_EVENING": {
+        "sha256": "8a3b9c8bac1cc528cc4f17d95962d71871015145a2972b186af49d1f573c2c32",
+        "state": "PASS_ACTUAL_PIXEL_REVIEW",
+        "reviewer": "Codex /root actual original pixel view",
+        "source_registry_root_review_status": "PENDING",
+        "review_note": "Exact deckgeometry/portRIGHT retained. No loosecloth acrosshatch, existingboomfurled with ONE small rectangularstitched cream repairpatch rightthird. Originaltear gone afterexplicitrepair, no extra patches or newrig. Empty.",
+        "parent_ids": [
+          "DECK_SAIL_REPAIR"
+        ],
+        "object_state": "Dockedharbor daylight afterrepair71, mainsailrefurled with ONE visible smallcream stitchedpatch, hatchclear, no open tear.",
+        "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_EVENING.png",
+        "review_contact_path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg"
+      }
+    }
+  },
+  "selection_note": "Exact assets actually viewed by Codex prompt director in first-six contact under root-directed production; root batch release still required. Root actual review status copied honestly from worker registry, not inferred."
+}

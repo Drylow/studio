@@ -1,0 +1,4265 @@
+{
+  "schema": "portable-production-asset-provenance-v1",
+  "channel": "Pirate Pages",
+  "episode": "episode-01",
+  "scope_notice": "Manifest records every other packaged file; this manifest cannot contain its own final byte hash. All historical originals outside this package left unchanged. Root-added official narration and API/delivery documents have their own media/provenance binding; they are outside this subpackage manifest until integrated by the root handoff.",
+  "files": [
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+      "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368",
+      "bytes": 1308393,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TOM-master.png",
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+      "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c",
+      "bytes": 1220651,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CAPTAIN-master.png",
+          "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/QUARTERMASTER.png",
+      "sha256": "cebe396a6342370faab76e4f7c93bc3d47bba9d006386d8f9534cffb7ca8ef36",
+      "bytes": 1288792,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/QUARTERMASTER-master.png",
+          "sha256": "cebe396a6342370faab76e4f7c93bc3d47bba9d006386d8f9534cffb7ca8ef36"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CREWMATE.png",
+      "sha256": "8de63d23cc453e731116629402470e662bc5741f2c346d82379014bd19086537",
+      "bytes": 1268145,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CREWMATE-master.png",
+          "sha256": "8de63d23cc453e731116629402470e662bc5741f2c346d82379014bd19086537"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/DEALER.png",
+      "sha256": "a3022eac6d03149991c8e7cb2331807d627df61d01b417bd02429744025637e0",
+      "bytes": 1315246,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DEALER-master.png",
+          "sha256": "a3022eac6d03149991c8e7cb2331807d627df61d01b417bd02429744025637e0"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTURED_SAILORS.png",
+      "sha256": "075a258250c6fe17d07b9fb9102e6a48fdb6c67af58deb4ef5a966e951f203b1",
+      "bytes": 1352307,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CAPTURED_SAILORS-master.png",
+          "sha256": "075a258250c6fe17d07b9fb9102e6a48fdb6c67af58deb4ef5a966e951f203b1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+      "sha256": "2c46432e8eb050f64c418c490b65416a02b1b36469759c0f81552a37d53ce553",
+      "bytes": 1431185,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/ENSLAVED_ASIDE-master.png",
+          "sha256": "2c46432e8eb050f64c418c490b65416a02b1b36469759c0f81552a37d53ce553"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+      "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76",
+      "bytes": 3012567,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK-master.png",
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png",
+      "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86",
+      "bytes": 2869657,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT-master.png",
+          "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+      "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3",
+      "bytes": 2232763,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TAVERN-master.png",
+          "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+      "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75",
+      "bytes": 2595753,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/BELOWDECK-master.png",
+          "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/MARKET.png",
+      "sha256": "674d0a69d9ec423cc21bc377a78f494d02beac24b1655f93bee56adcbb521f58",
+      "bytes": 3004524,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/MARKET-master.png",
+          "sha256": "674d0a69d9ec423cc21bc377a78f494d02beac24b1655f93bee56adcbb521f58"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png",
+      "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc",
+      "bytes": 3081202,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE-master.png",
+          "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png",
+      "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5",
+      "bytes": 2817080,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_MOORED_SLOOP-master.png",
+          "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_RAIN.png",
+      "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad",
+      "bytes": 3095495,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_RAIN-master.png",
+          "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png",
+      "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be",
+      "bytes": 2881940,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_HARBOR-master.png",
+          "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png",
+      "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a",
+      "bytes": 2895428,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_AFTER_RAIN-master.png",
+          "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/BELOWDECK_NIGHT.png",
+      "sha256": "fa6609000f4c7a091995e6825f83612ba3cfff335dbbdfbd997ea4d2d802665a",
+      "bytes": 2120233,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/BELOWDECK_NIGHT-master.png",
+          "sha256": "fa6609000f4c7a091995e6825f83612ba3cfff335dbbdfbd997ea4d2d802665a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR_FURLED.png",
+      "sha256": "3f985075de4ee30f24fcc2dea99819257cc2799285774e801706a72932470a0d",
+      "bytes": 2678548,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_HARBOR_FURLED-master.png",
+          "sha256": "3f985075de4ee30f24fcc2dea99819257cc2799285774e801706a72932470a0d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/TAVERN_EVENING.png",
+      "sha256": "1626483a1525371d769f91502bc77bb03b31fc3ae0dbc49a4d6f199b74efef0a",
+      "bytes": 1956678,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TAVERN_EVENING-master.png",
+          "sha256": "1626483a1525371d769f91502bc77bb03b31fc3ae0dbc49a4d6f199b74efef0a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SHIP_DANGER.png",
+      "sha256": "3db33965133011d2e0ed482ada608316291dbd667ab05f84932c12661d87588e",
+      "bytes": 2627039,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_SHIP_DANGER-master.png",
+          "sha256": "3db33965133011d2e0ed482ada608316291dbd667ab05f84932c12661d87588e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_MERCHANT_ENCOUNTER.png",
+      "sha256": "d194d6059e9064f52d37cf0824dca60af36a99ce1e64908e4d634ab28d41c2d9",
+      "bytes": 2758239,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_MERCHANT_ENCOUNTER-master.png",
+          "sha256": "d194d6059e9064f52d37cf0824dca60af36a99ce1e64908e4d634ab28d41c2d9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_SAIL_REPAIR.png",
+      "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76",
+      "bytes": 2755195,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_SAIL_REPAIR-master.png",
+          "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_SLOOP_MAINTENANCE.png",
+      "sha256": "4dd323922bd8ef8423c07f097cc9151b7b423a2b0634e10c8d4faed1f5d5fff8",
+      "bytes": 3013571,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE_SLOOP_MAINTENANCE-master.png",
+          "sha256": "4dd323922bd8ef8423c07f097cc9151b7b423a2b0634e10c8d4faed1f5d5fff8"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_PATCHED.png",
+      "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6",
+      "bytes": 2681629,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_PATCHED-master.png",
+          "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SUNSET.png",
+      "sha256": "7e38266db8df2d694e1c14507afa34a4e6ee86be86d38ba0393e8b82f5481529",
+      "bytes": 2657461,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_SUNSET-master.png",
+          "sha256": "7e38266db8df2d694e1c14507afa34a4e6ee86be86d38ba0393e8b82f5481529"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_ISOLATED.png",
+      "sha256": "30e01c55f65d31cf6f1d7bbbe9d5d0145636c655e833fef8d107d9833e9de9bc",
+      "bytes": 2826790,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE_ISOLATED-master.png",
+          "sha256": "30e01c55f65d31cf6f1d7bbbe9d5d0145636c655e833fef8d107d9833e9de9bc"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_EVENING.png",
+      "sha256": "8a3b9c8bac1cc528cc4f17d95962d71871015145a2972b186af49d1f573c2c32",
+      "bytes": 2678643,
+      "kind": "reviewed_master",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_EVENING-master.png",
+          "sha256": "8a3b9c8bac1cc528cc4f17d95962d71871015145a2972b186af49d1f573c2c32"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/001.png",
+      "sha256": "824a3fa5c9e86f827ed225f8e03bf4e7636bdaee9e9996eaa20bd4be65a26f44",
+      "bytes": 2326625,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0001/image.png",
+          "sha256": "824a3fa5c9e86f827ed225f8e03bf4e7636bdaee9e9996eaa20bd4be65a26f44"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0001/image.png",
+          "sha256": "824a3fa5c9e86f827ed225f8e03bf4e7636bdaee9e9996eaa20bd4be65a26f44"
+        },
+        {
+          "collection_identifier": "generated_images/exec-4fc23261-fc26-40b7-98d0-e33b52b5eaa5.png",
+          "sha256": "824a3fa5c9e86f827ed225f8e03bf4e7636bdaee9e9996eaa20bd4be65a26f44"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/002.png",
+      "sha256": "5d804b008081d3e84ba527e4c00bb3585e721cf55954493e5fdd8a56929003e4",
+      "bytes": 2718738,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0002/image.png",
+          "sha256": "5d804b008081d3e84ba527e4c00bb3585e721cf55954493e5fdd8a56929003e4"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0002/image.png",
+          "sha256": "5d804b008081d3e84ba527e4c00bb3585e721cf55954493e5fdd8a56929003e4"
+        },
+        {
+          "collection_identifier": "generated_images/exec-cccc47be-5bcd-40ba-8bc5-1da3ab7ac656.png",
+          "sha256": "5d804b008081d3e84ba527e4c00bb3585e721cf55954493e5fdd8a56929003e4"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/003.png",
+      "sha256": "9fb338ed6cfc4c3efe0713321a99cb5b9d57e683023f677a44e8f2c8369fc7a6",
+      "bytes": 2644052,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0003/image.png",
+          "sha256": "9fb338ed6cfc4c3efe0713321a99cb5b9d57e683023f677a44e8f2c8369fc7a6"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0003/image.png",
+          "sha256": "9fb338ed6cfc4c3efe0713321a99cb5b9d57e683023f677a44e8f2c8369fc7a6"
+        },
+        {
+          "collection_identifier": "generated_images/exec-62cfdcf6-7462-4b58-97f9-778a6342bbff.png",
+          "sha256": "9fb338ed6cfc4c3efe0713321a99cb5b9d57e683023f677a44e8f2c8369fc7a6"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/004.png",
+      "sha256": "e9a7151460d007ed4621a0ccb5bc3d4db0c01523f6700bca966fb0fe9e4724d3",
+      "bytes": 2635016,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0004/image.png",
+          "sha256": "e9a7151460d007ed4621a0ccb5bc3d4db0c01523f6700bca966fb0fe9e4724d3"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0004/image.png",
+          "sha256": "e9a7151460d007ed4621a0ccb5bc3d4db0c01523f6700bca966fb0fe9e4724d3"
+        },
+        {
+          "collection_identifier": "generated_images/exec-a4d58090-eda2-423b-abd8-92570eaf61b5.png",
+          "sha256": "e9a7151460d007ed4621a0ccb5bc3d4db0c01523f6700bca966fb0fe9e4724d3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/005.png",
+      "sha256": "b4678fdbac2a8f41344c7d8f6cb03e89ccd4032da7618162eba1d3795d0ce352",
+      "bytes": 2618788,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0005/image.png",
+          "sha256": "b4678fdbac2a8f41344c7d8f6cb03e89ccd4032da7618162eba1d3795d0ce352"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0005/image.png",
+          "sha256": "b4678fdbac2a8f41344c7d8f6cb03e89ccd4032da7618162eba1d3795d0ce352"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c9215a95-d9a0-471d-8836-047104793099.png",
+          "sha256": "b4678fdbac2a8f41344c7d8f6cb03e89ccd4032da7618162eba1d3795d0ce352"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/006.png",
+      "sha256": "3e5f86d7d58127e9f57f905b49aff4a04e10ad95824f081502cfa4940300fb15",
+      "bytes": 2620605,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0006/image.png",
+          "sha256": "3e5f86d7d58127e9f57f905b49aff4a04e10ad95824f081502cfa4940300fb15"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0006/image.png",
+          "sha256": "3e5f86d7d58127e9f57f905b49aff4a04e10ad95824f081502cfa4940300fb15"
+        },
+        {
+          "collection_identifier": "generated_images/exec-6329f8f9-a179-40a9-83ee-2aa8c4e8fa8d.png",
+          "sha256": "3e5f86d7d58127e9f57f905b49aff4a04e10ad95824f081502cfa4940300fb15"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/007.png",
+      "sha256": "aac6ce526a5cff6438a4a6b9d67a33cd66c285fbb1807baac2e0f07adb2dc7f3",
+      "bytes": 2588668,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0007/image.png",
+          "sha256": "aac6ce526a5cff6438a4a6b9d67a33cd66c285fbb1807baac2e0f07adb2dc7f3"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0007/image.png",
+          "sha256": "aac6ce526a5cff6438a4a6b9d67a33cd66c285fbb1807baac2e0f07adb2dc7f3"
+        },
+        {
+          "collection_identifier": "generated_images/exec-66057041-78e3-431e-b4db-7febe7ae5275.png",
+          "sha256": "aac6ce526a5cff6438a4a6b9d67a33cd66c285fbb1807baac2e0f07adb2dc7f3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/008.png",
+      "sha256": "cfdaf86de5d92e604247d730c53e193887170b5809088e75a490e32d6f3411ab",
+      "bytes": 2614492,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0008/image.png",
+          "sha256": "cfdaf86de5d92e604247d730c53e193887170b5809088e75a490e32d6f3411ab"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0008/image.png",
+          "sha256": "cfdaf86de5d92e604247d730c53e193887170b5809088e75a490e32d6f3411ab"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c824c1c2-b8f9-4850-beb6-a1f4bab20fe8.png",
+          "sha256": "cfdaf86de5d92e604247d730c53e193887170b5809088e75a490e32d6f3411ab"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/009.png",
+      "sha256": "97a7ea137b752c333f2c164672fe780e5e4044ce22bdfa71c333a2b54f38a883",
+      "bytes": 2121706,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0009/image.png",
+          "sha256": "97a7ea137b752c333f2c164672fe780e5e4044ce22bdfa71c333a2b54f38a883"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0009/image.png",
+          "sha256": "97a7ea137b752c333f2c164672fe780e5e4044ce22bdfa71c333a2b54f38a883"
+        },
+        {
+          "collection_identifier": "generated_images/exec-730a7cbe-d9fa-4a8f-8864-868f3c087e01.png",
+          "sha256": "97a7ea137b752c333f2c164672fe780e5e4044ce22bdfa71c333a2b54f38a883"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/010.png",
+      "sha256": "4ec498432642a21a97f68aae8a72eeb1f8bba0c4d2d05c9ce5452af86be53b63",
+      "bytes": 2711579,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0010/image.png",
+          "sha256": "4ec498432642a21a97f68aae8a72eeb1f8bba0c4d2d05c9ce5452af86be53b63"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0010/image.png",
+          "sha256": "4ec498432642a21a97f68aae8a72eeb1f8bba0c4d2d05c9ce5452af86be53b63"
+        },
+        {
+          "collection_identifier": "generated_images/exec-7815597b-451f-455f-89c7-4bd25daf28cc.png",
+          "sha256": "4ec498432642a21a97f68aae8a72eeb1f8bba0c4d2d05c9ce5452af86be53b63"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/011.png",
+      "sha256": "59986e98975e4a06f68cc7097823661581daf5c585826e7397a119cd93fbada4",
+      "bytes": 2653474,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0011/image.png",
+          "sha256": "59986e98975e4a06f68cc7097823661581daf5c585826e7397a119cd93fbada4"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0011/image.png",
+          "sha256": "59986e98975e4a06f68cc7097823661581daf5c585826e7397a119cd93fbada4"
+        },
+        {
+          "collection_identifier": "generated_images/exec-56fc27cd-11c0-435c-8a9e-e5168eef3dce.png",
+          "sha256": "59986e98975e4a06f68cc7097823661581daf5c585826e7397a119cd93fbada4"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/012.png",
+      "sha256": "6b2d70b127f62a037df68632aae86d80ace9d9f34f08903d16466ef6f1def934",
+      "bytes": 2640181,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0012/image.png",
+          "sha256": "6b2d70b127f62a037df68632aae86d80ace9d9f34f08903d16466ef6f1def934"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0012/image.png",
+          "sha256": "6b2d70b127f62a037df68632aae86d80ace9d9f34f08903d16466ef6f1def934"
+        },
+        {
+          "collection_identifier": "generated_images/exec-e81d6449-2125-4296-8262-8090539a25b8.png",
+          "sha256": "6b2d70b127f62a037df68632aae86d80ace9d9f34f08903d16466ef6f1def934"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/013.png",
+      "sha256": "e9d4296598124fc5168ef170e5e2a76f61ca8e5144183638144107b77a8c927d",
+      "bytes": 2527439,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0013/image.png",
+          "sha256": "e9d4296598124fc5168ef170e5e2a76f61ca8e5144183638144107b77a8c927d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0013/image.png",
+          "sha256": "e9d4296598124fc5168ef170e5e2a76f61ca8e5144183638144107b77a8c927d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-2619a731-7a1d-460b-ab1c-9173c943feda.png",
+          "sha256": "e9d4296598124fc5168ef170e5e2a76f61ca8e5144183638144107b77a8c927d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/014.png",
+      "sha256": "b9ccd1485b1f87fd1229e2a0540628b448da4fbcd87655cfac0af8348d9e9073",
+      "bytes": 2672261,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0014/image.png",
+          "sha256": "b9ccd1485b1f87fd1229e2a0540628b448da4fbcd87655cfac0af8348d9e9073"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0014/image.png",
+          "sha256": "b9ccd1485b1f87fd1229e2a0540628b448da4fbcd87655cfac0af8348d9e9073"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f82c6d01-77ab-4063-8f36-d804f56e1c5a.png",
+          "sha256": "b9ccd1485b1f87fd1229e2a0540628b448da4fbcd87655cfac0af8348d9e9073"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/015.png",
+      "sha256": "31118d7e851a675b0bc5a0a53b0d34dfffd692c6c1b8563c45fc1c7cd5db6336",
+      "bytes": 2381071,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0015/image.png",
+          "sha256": "31118d7e851a675b0bc5a0a53b0d34dfffd692c6c1b8563c45fc1c7cd5db6336"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0015/image.png",
+          "sha256": "31118d7e851a675b0bc5a0a53b0d34dfffd692c6c1b8563c45fc1c7cd5db6336"
+        },
+        {
+          "collection_identifier": "generated_images/exec-0dd6594f-4510-4655-bcc4-6c807522b539.png",
+          "sha256": "31118d7e851a675b0bc5a0a53b0d34dfffd692c6c1b8563c45fc1c7cd5db6336"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/016.png",
+      "sha256": "0fc6179b17c84ae5501d616d71a6cf836b3128087de274b5486a70211ee1f9d3",
+      "bytes": 2428345,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0016/image.png",
+          "sha256": "0fc6179b17c84ae5501d616d71a6cf836b3128087de274b5486a70211ee1f9d3"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0016/image.png",
+          "sha256": "0fc6179b17c84ae5501d616d71a6cf836b3128087de274b5486a70211ee1f9d3"
+        },
+        {
+          "collection_identifier": "generated_images/exec-99f3aa2a-12ab-48e5-ad4c-00711531f656.png",
+          "sha256": "0fc6179b17c84ae5501d616d71a6cf836b3128087de274b5486a70211ee1f9d3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/017.png",
+      "sha256": "be3bf63ade8453049bf1cb6a8e05b9e0a36b2022269d8f1726f0744c120e8793",
+      "bytes": 2609766,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0017/image.png",
+          "sha256": "be3bf63ade8453049bf1cb6a8e05b9e0a36b2022269d8f1726f0744c120e8793"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0017/image.png",
+          "sha256": "be3bf63ade8453049bf1cb6a8e05b9e0a36b2022269d8f1726f0744c120e8793"
+        },
+        {
+          "collection_identifier": "generated_images/exec-7cb39524-fc0a-48e5-8ba7-7ff92d483ba2.png",
+          "sha256": "be3bf63ade8453049bf1cb6a8e05b9e0a36b2022269d8f1726f0744c120e8793"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/018.png",
+      "sha256": "b5018cef164cb9f0d85e456093faabe5654e6a1eb7d7ae587a5264ad9b705559",
+      "bytes": 2637789,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0018/image.png",
+          "sha256": "b5018cef164cb9f0d85e456093faabe5654e6a1eb7d7ae587a5264ad9b705559"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0018/image.png",
+          "sha256": "b5018cef164cb9f0d85e456093faabe5654e6a1eb7d7ae587a5264ad9b705559"
+        },
+        {
+          "collection_identifier": "generated_images/exec-675bb82f-acc0-4f9c-9946-433b7cf4ba1c.png",
+          "sha256": "b5018cef164cb9f0d85e456093faabe5654e6a1eb7d7ae587a5264ad9b705559"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/019.png",
+      "sha256": "0873030452fbd2505dbc07853e3ffcd3af1b34bbd8b95aa6f3b435a95fa0480e",
+      "bytes": 2353915,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0019/image.png",
+          "sha256": "0873030452fbd2505dbc07853e3ffcd3af1b34bbd8b95aa6f3b435a95fa0480e"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0019/image.png",
+          "sha256": "0873030452fbd2505dbc07853e3ffcd3af1b34bbd8b95aa6f3b435a95fa0480e"
+        },
+        {
+          "collection_identifier": "generated_images/exec-b6d0e3dc-05a1-4978-b7f9-b6898e2c757e.png",
+          "sha256": "0873030452fbd2505dbc07853e3ffcd3af1b34bbd8b95aa6f3b435a95fa0480e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/020.png",
+      "sha256": "e5514507506ddeb711a99a1a5bfb4e01bd8d35e2257799a3cc38b98a0802ca89",
+      "bytes": 2524247,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0020/image.png",
+          "sha256": "e5514507506ddeb711a99a1a5bfb4e01bd8d35e2257799a3cc38b98a0802ca89"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0020/image.png",
+          "sha256": "e5514507506ddeb711a99a1a5bfb4e01bd8d35e2257799a3cc38b98a0802ca89"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f23d223d-f02c-40e0-a6c8-ffdfe4168857.png",
+          "sha256": "e5514507506ddeb711a99a1a5bfb4e01bd8d35e2257799a3cc38b98a0802ca89"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/021.png",
+      "sha256": "28996d4f045f1297446a90edc71a3824593c6582ea140c320a780cea2709ecdd",
+      "bytes": 2629758,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0021/image.png",
+          "sha256": "28996d4f045f1297446a90edc71a3824593c6582ea140c320a780cea2709ecdd"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0021/image.png",
+          "sha256": "28996d4f045f1297446a90edc71a3824593c6582ea140c320a780cea2709ecdd"
+        },
+        {
+          "collection_identifier": "generated_images/exec-6b1f0cdd-29a6-40c2-92f4-405480d0c0dc.png",
+          "sha256": "28996d4f045f1297446a90edc71a3824593c6582ea140c320a780cea2709ecdd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/022.png",
+      "sha256": "d925a360d42d643e5d9f5a0cf63be5aabe350b1f9cff40001f6b75b249a44d8d",
+      "bytes": 2500044,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0022/image.png",
+          "sha256": "d925a360d42d643e5d9f5a0cf63be5aabe350b1f9cff40001f6b75b249a44d8d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0022/image.png",
+          "sha256": "d925a360d42d643e5d9f5a0cf63be5aabe350b1f9cff40001f6b75b249a44d8d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f1cd4c6d-5a95-48dd-8dcd-bd6c2f9ef108.png",
+          "sha256": "d925a360d42d643e5d9f5a0cf63be5aabe350b1f9cff40001f6b75b249a44d8d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/023.png",
+      "sha256": "4d46e533d01adb8b453d06c11f29a09642782a5dc427da8343defb4436ff1c06",
+      "bytes": 2683547,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0023/image.png",
+          "sha256": "4d46e533d01adb8b453d06c11f29a09642782a5dc427da8343defb4436ff1c06"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0023/image.png",
+          "sha256": "4d46e533d01adb8b453d06c11f29a09642782a5dc427da8343defb4436ff1c06"
+        },
+        {
+          "collection_identifier": "generated_images/exec-462e010d-e4a7-428d-a9f7-4f02a4a5513b.png",
+          "sha256": "4d46e533d01adb8b453d06c11f29a09642782a5dc427da8343defb4436ff1c06"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/024.png",
+      "sha256": "05fac459424f793c950f60ac04cf020c24cc7c6152b0b36e522fd4ef393f6023",
+      "bytes": 2309576,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0024/image.png",
+          "sha256": "05fac459424f793c950f60ac04cf020c24cc7c6152b0b36e522fd4ef393f6023"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0024/image.png",
+          "sha256": "05fac459424f793c950f60ac04cf020c24cc7c6152b0b36e522fd4ef393f6023"
+        },
+        {
+          "collection_identifier": "generated_images/exec-517d892b-bb1e-4b98-a48a-4f5199cf80a3.png",
+          "sha256": "05fac459424f793c950f60ac04cf020c24cc7c6152b0b36e522fd4ef393f6023"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/025.png",
+      "sha256": "35bdf3fbfb4355c820ad6deecbfb0d5b73324890f750200fcd69700040e75356",
+      "bytes": 2567682,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0025/image.png",
+          "sha256": "35bdf3fbfb4355c820ad6deecbfb0d5b73324890f750200fcd69700040e75356"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0025/image.png",
+          "sha256": "35bdf3fbfb4355c820ad6deecbfb0d5b73324890f750200fcd69700040e75356"
+        },
+        {
+          "collection_identifier": "generated_images/exec-5ed8808f-0904-441d-bc94-97c33ef51893.png",
+          "sha256": "35bdf3fbfb4355c820ad6deecbfb0d5b73324890f750200fcd69700040e75356"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/026.png",
+      "sha256": "b0ca479f1b42aa6854ab73ec82bc7ec929c0c78c8ff5750089fa686cfb4807d0",
+      "bytes": 2604871,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0026/image.png",
+          "sha256": "b0ca479f1b42aa6854ab73ec82bc7ec929c0c78c8ff5750089fa686cfb4807d0"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0026/image.png",
+          "sha256": "b0ca479f1b42aa6854ab73ec82bc7ec929c0c78c8ff5750089fa686cfb4807d0"
+        },
+        {
+          "collection_identifier": "generated_images/exec-47127e4b-f430-49c2-b9e3-3cb000383314.png",
+          "sha256": "b0ca479f1b42aa6854ab73ec82bc7ec929c0c78c8ff5750089fa686cfb4807d0"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/027.png",
+      "sha256": "06aafa1347721d32add0e38c46d432c5970ddd4f82f3b93f5c3593e09027b5c1",
+      "bytes": 2557915,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0027/image.png",
+          "sha256": "06aafa1347721d32add0e38c46d432c5970ddd4f82f3b93f5c3593e09027b5c1"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0027/image.png",
+          "sha256": "06aafa1347721d32add0e38c46d432c5970ddd4f82f3b93f5c3593e09027b5c1"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d982511e-d18a-44fc-aebe-343eac68d10a.png",
+          "sha256": "06aafa1347721d32add0e38c46d432c5970ddd4f82f3b93f5c3593e09027b5c1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/028.png",
+      "sha256": "55319337e014ed2bedfaf9cf861a5c4b5e5fb8d36fa4ac5fcdd94ca579a2cfd1",
+      "bytes": 2757387,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0028/image.png",
+          "sha256": "55319337e014ed2bedfaf9cf861a5c4b5e5fb8d36fa4ac5fcdd94ca579a2cfd1"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0028/image.png",
+          "sha256": "55319337e014ed2bedfaf9cf861a5c4b5e5fb8d36fa4ac5fcdd94ca579a2cfd1"
+        },
+        {
+          "collection_identifier": "generated_images/exec-6bad6dd5-642a-4c71-9c89-e299c7e5b7b7.png",
+          "sha256": "55319337e014ed2bedfaf9cf861a5c4b5e5fb8d36fa4ac5fcdd94ca579a2cfd1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/029.png",
+      "sha256": "864fc56b637c4e8c4f143275fd5eded0146b8a12e857faa1525ece576015720a",
+      "bytes": 2835128,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0029/image.png",
+          "sha256": "864fc56b637c4e8c4f143275fd5eded0146b8a12e857faa1525ece576015720a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0029/image.png",
+          "sha256": "864fc56b637c4e8c4f143275fd5eded0146b8a12e857faa1525ece576015720a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d3cc6611-5eab-430f-b0a9-5e8abc464bd8.png",
+          "sha256": "864fc56b637c4e8c4f143275fd5eded0146b8a12e857faa1525ece576015720a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/030.png",
+      "sha256": "cf4064448e1c357b2ce3b2e087bca823fb4e0166578d508c9f17a8f70652605a",
+      "bytes": 2707379,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0030/image.png",
+          "sha256": "cf4064448e1c357b2ce3b2e087bca823fb4e0166578d508c9f17a8f70652605a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0030/image.png",
+          "sha256": "cf4064448e1c357b2ce3b2e087bca823fb4e0166578d508c9f17a8f70652605a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-64fc2852-a08e-467c-9d17-f1d4e88fe36f.png",
+          "sha256": "cf4064448e1c357b2ce3b2e087bca823fb4e0166578d508c9f17a8f70652605a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/031.png",
+      "sha256": "98e1c32a7c3ff2851f08b799dc4f29981722babf2a9c62c83d492f10cbe961b7",
+      "bytes": 2851292,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0031/image.png",
+          "sha256": "98e1c32a7c3ff2851f08b799dc4f29981722babf2a9c62c83d492f10cbe961b7"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0031/image.png",
+          "sha256": "98e1c32a7c3ff2851f08b799dc4f29981722babf2a9c62c83d492f10cbe961b7"
+        },
+        {
+          "collection_identifier": "generated_images/exec-fd42e276-0ed3-4f53-91ac-76ea062006e1.png",
+          "sha256": "98e1c32a7c3ff2851f08b799dc4f29981722babf2a9c62c83d492f10cbe961b7"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/032.png",
+      "sha256": "31b2c7c5121a061b3d3135d81a0619e6e63e781fb1c2cf17898eb180322abb9b",
+      "bytes": 2819205,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0032/image.png",
+          "sha256": "31b2c7c5121a061b3d3135d81a0619e6e63e781fb1c2cf17898eb180322abb9b"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0032/image.png",
+          "sha256": "31b2c7c5121a061b3d3135d81a0619e6e63e781fb1c2cf17898eb180322abb9b"
+        },
+        {
+          "collection_identifier": "generated_images/exec-ba9925a9-5f46-418f-921d-0ed504b078c1.png",
+          "sha256": "31b2c7c5121a061b3d3135d81a0619e6e63e781fb1c2cf17898eb180322abb9b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/033.png",
+      "sha256": "64efcbde950df456fbdaed87cfe3aedc59fab18328cd3e0e0ebf8f0f58233b16",
+      "bytes": 2348598,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0033/image.png",
+          "sha256": "64efcbde950df456fbdaed87cfe3aedc59fab18328cd3e0e0ebf8f0f58233b16"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0033/image.png",
+          "sha256": "64efcbde950df456fbdaed87cfe3aedc59fab18328cd3e0e0ebf8f0f58233b16"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d9d19d76-3535-45d6-ae49-46f2240767b2.png",
+          "sha256": "64efcbde950df456fbdaed87cfe3aedc59fab18328cd3e0e0ebf8f0f58233b16"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/034.png",
+      "sha256": "d3435bc878213d7476292bad90405bf84fe04a8e81c4e4e728476c3471678cbc",
+      "bytes": 2460546,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0034/image.png",
+          "sha256": "d3435bc878213d7476292bad90405bf84fe04a8e81c4e4e728476c3471678cbc"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0034/image.png",
+          "sha256": "d3435bc878213d7476292bad90405bf84fe04a8e81c4e4e728476c3471678cbc"
+        },
+        {
+          "collection_identifier": "generated_images/exec-bb3bbd1b-7a37-4d36-a9c3-ecfbcc527603.png",
+          "sha256": "d3435bc878213d7476292bad90405bf84fe04a8e81c4e4e728476c3471678cbc"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/035.png",
+      "sha256": "01c96d4d666d9cc4f89a6242bdb291854c4299d1dde8f92daaf724879e7e71c9",
+      "bytes": 2297799,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0035/image.png",
+          "sha256": "01c96d4d666d9cc4f89a6242bdb291854c4299d1dde8f92daaf724879e7e71c9"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0035/image.png",
+          "sha256": "01c96d4d666d9cc4f89a6242bdb291854c4299d1dde8f92daaf724879e7e71c9"
+        },
+        {
+          "collection_identifier": "generated_images/exec-894ee208-0a15-47bd-967d-f94d3af21941.png",
+          "sha256": "01c96d4d666d9cc4f89a6242bdb291854c4299d1dde8f92daaf724879e7e71c9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/036.png",
+      "sha256": "ce0a5fcdc17e7dc8e5a498a6288959ace6a81ce2e8ed0dace9fcabe24fe703d5",
+      "bytes": 2320896,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0036/image.png",
+          "sha256": "ce0a5fcdc17e7dc8e5a498a6288959ace6a81ce2e8ed0dace9fcabe24fe703d5"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0036/image.png",
+          "sha256": "ce0a5fcdc17e7dc8e5a498a6288959ace6a81ce2e8ed0dace9fcabe24fe703d5"
+        },
+        {
+          "collection_identifier": "generated_images/exec-84e1fa84-82f6-4d5b-81c9-3a4b356f32fe.png",
+          "sha256": "ce0a5fcdc17e7dc8e5a498a6288959ace6a81ce2e8ed0dace9fcabe24fe703d5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/037.png",
+      "sha256": "ba87716745778c18be0359a9ddd5b7422ff0c676a87cfa6afc4eeaa20c45de8c",
+      "bytes": 2326257,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0037/image.png",
+          "sha256": "ba87716745778c18be0359a9ddd5b7422ff0c676a87cfa6afc4eeaa20c45de8c"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0037/image.png",
+          "sha256": "ba87716745778c18be0359a9ddd5b7422ff0c676a87cfa6afc4eeaa20c45de8c"
+        },
+        {
+          "collection_identifier": "generated_images/exec-3837f01a-f5f6-4bdb-bba5-4cf6bbc35ab3.png",
+          "sha256": "ba87716745778c18be0359a9ddd5b7422ff0c676a87cfa6afc4eeaa20c45de8c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/038.png",
+      "sha256": "da2ed20dfb431c8c65db5e667c32e3c979a3198a4bd10545016af812c457848c",
+      "bytes": 2795888,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0038/image.png",
+          "sha256": "da2ed20dfb431c8c65db5e667c32e3c979a3198a4bd10545016af812c457848c"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0038/image.png",
+          "sha256": "da2ed20dfb431c8c65db5e667c32e3c979a3198a4bd10545016af812c457848c"
+        },
+        {
+          "collection_identifier": "generated_images/exec-4cea2314-a873-4211-9d0f-6f9608c381f9.png",
+          "sha256": "da2ed20dfb431c8c65db5e667c32e3c979a3198a4bd10545016af812c457848c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/039.png",
+      "sha256": "1e77bd325c9b044128afc9dc01d863017d85ff17e52ae0993156caf19a010b0f",
+      "bytes": 2380804,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0039/image.png",
+          "sha256": "1e77bd325c9b044128afc9dc01d863017d85ff17e52ae0993156caf19a010b0f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0039/image.png",
+          "sha256": "1e77bd325c9b044128afc9dc01d863017d85ff17e52ae0993156caf19a010b0f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-724bb609-8f6d-4538-b7f6-c1e4c4aca10d.png",
+          "sha256": "1e77bd325c9b044128afc9dc01d863017d85ff17e52ae0993156caf19a010b0f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/040.png",
+      "sha256": "cbbf3c290862e074561b99ea9c1aab4ecf4f7caa86169bfdd0aa02b00a1e3bfe",
+      "bytes": 2284442,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0040/image.png",
+          "sha256": "cbbf3c290862e074561b99ea9c1aab4ecf4f7caa86169bfdd0aa02b00a1e3bfe"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0040/image.png",
+          "sha256": "cbbf3c290862e074561b99ea9c1aab4ecf4f7caa86169bfdd0aa02b00a1e3bfe"
+        },
+        {
+          "collection_identifier": "generated_images/exec-141327cc-e7af-429c-a8a7-aa83ed78c86f.png",
+          "sha256": "cbbf3c290862e074561b99ea9c1aab4ecf4f7caa86169bfdd0aa02b00a1e3bfe"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/041.png",
+      "sha256": "1a58b0a1629519c1fb356b06a6e69bc18f2fcf0a4af9172dd9fac08c94f07c89",
+      "bytes": 2370359,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0041/image.png",
+          "sha256": "1a58b0a1629519c1fb356b06a6e69bc18f2fcf0a4af9172dd9fac08c94f07c89"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0041/image.png",
+          "sha256": "1a58b0a1629519c1fb356b06a6e69bc18f2fcf0a4af9172dd9fac08c94f07c89"
+        },
+        {
+          "collection_identifier": "generated_images/exec-1f6ade01-3750-487c-aaef-d22e30a50566.png",
+          "sha256": "1a58b0a1629519c1fb356b06a6e69bc18f2fcf0a4af9172dd9fac08c94f07c89"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/042.png",
+      "sha256": "3c00ab31616b9f7583b6acd7373fb6b49023aec71c579ccd03d3dfb4cdf45e6f",
+      "bytes": 2692610,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0042/image.png",
+          "sha256": "3c00ab31616b9f7583b6acd7373fb6b49023aec71c579ccd03d3dfb4cdf45e6f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0042/image.png",
+          "sha256": "3c00ab31616b9f7583b6acd7373fb6b49023aec71c579ccd03d3dfb4cdf45e6f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-e13b1cd5-a1f1-47c7-a335-693f48605aff.png",
+          "sha256": "3c00ab31616b9f7583b6acd7373fb6b49023aec71c579ccd03d3dfb4cdf45e6f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/043.png",
+      "sha256": "cd1279d003a395fc1e72d2cb53292e8e990d581edc0b58d4330c80ba9a33e1d9",
+      "bytes": 2059312,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0043/image.png",
+          "sha256": "cd1279d003a395fc1e72d2cb53292e8e990d581edc0b58d4330c80ba9a33e1d9"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0043/image.png",
+          "sha256": "cd1279d003a395fc1e72d2cb53292e8e990d581edc0b58d4330c80ba9a33e1d9"
+        },
+        {
+          "collection_identifier": "generated_images/exec-28ecb678-dea8-4388-8cbd-38af3b13b295.png",
+          "sha256": "cd1279d003a395fc1e72d2cb53292e8e990d581edc0b58d4330c80ba9a33e1d9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/044.png",
+      "sha256": "a8580de7e263c71ad0aa5f6df80354597db723ec9c99b60fca2e9bdc60335c63",
+      "bytes": 2064971,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0044/image.png",
+          "sha256": "a8580de7e263c71ad0aa5f6df80354597db723ec9c99b60fca2e9bdc60335c63"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0044/image.png",
+          "sha256": "a8580de7e263c71ad0aa5f6df80354597db723ec9c99b60fca2e9bdc60335c63"
+        },
+        {
+          "collection_identifier": "generated_images/exec-350c695d-e950-4bc5-844d-5af23f670a12.png",
+          "sha256": "a8580de7e263c71ad0aa5f6df80354597db723ec9c99b60fca2e9bdc60335c63"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/045.png",
+      "sha256": "545e7b6f03063440b4cadaaa33ffc00214aef38f9e64ab6db3e1bd8a4049cd55",
+      "bytes": 2702396,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0045/image.png",
+          "sha256": "545e7b6f03063440b4cadaaa33ffc00214aef38f9e64ab6db3e1bd8a4049cd55"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0045/image.png",
+          "sha256": "545e7b6f03063440b4cadaaa33ffc00214aef38f9e64ab6db3e1bd8a4049cd55"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d9883ffe-041c-4428-b22a-c0c247f2cda4.png",
+          "sha256": "545e7b6f03063440b4cadaaa33ffc00214aef38f9e64ab6db3e1bd8a4049cd55"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/046.png",
+      "sha256": "a96d94aa50ccec72e734ec637a372a8b97b9f1fadc42ac32b17a750c940773d7",
+      "bytes": 2689895,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0046/image.png",
+          "sha256": "a96d94aa50ccec72e734ec637a372a8b97b9f1fadc42ac32b17a750c940773d7"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0046/image.png",
+          "sha256": "a96d94aa50ccec72e734ec637a372a8b97b9f1fadc42ac32b17a750c940773d7"
+        },
+        {
+          "collection_identifier": "generated_images/exec-9520e8bb-bb6f-4259-b60a-bd810ee2a838.png",
+          "sha256": "a96d94aa50ccec72e734ec637a372a8b97b9f1fadc42ac32b17a750c940773d7"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/047.png",
+      "sha256": "98242f87a51316e8d4f5d1f6cdd5b6932613171fe5a1e0097f8f049d3dcd4ffd",
+      "bytes": 2615374,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0047/image.png",
+          "sha256": "98242f87a51316e8d4f5d1f6cdd5b6932613171fe5a1e0097f8f049d3dcd4ffd"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0047/image.png",
+          "sha256": "98242f87a51316e8d4f5d1f6cdd5b6932613171fe5a1e0097f8f049d3dcd4ffd"
+        },
+        {
+          "collection_identifier": "generated_images/exec-4b4070ee-2349-4112-bfb0-f627bd79060e.png",
+          "sha256": "98242f87a51316e8d4f5d1f6cdd5b6932613171fe5a1e0097f8f049d3dcd4ffd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/048.png",
+      "sha256": "b596d10e3ed6b6bcd427bd5e50e1ba33bb6fff68ac950fcf3cca2cabc97cd805",
+      "bytes": 2387020,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0048/image.png",
+          "sha256": "b596d10e3ed6b6bcd427bd5e50e1ba33bb6fff68ac950fcf3cca2cabc97cd805"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0048/image.png",
+          "sha256": "b596d10e3ed6b6bcd427bd5e50e1ba33bb6fff68ac950fcf3cca2cabc97cd805"
+        },
+        {
+          "collection_identifier": "generated_images/exec-248b2098-2c4b-465b-bd45-005ffd4edf2d.png",
+          "sha256": "b596d10e3ed6b6bcd427bd5e50e1ba33bb6fff68ac950fcf3cca2cabc97cd805"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/049.png",
+      "sha256": "fd66556cdd826cf2f49308817e9e0324a05e34f37b7b89099ba09493ed035f1b",
+      "bytes": 2652432,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0049/image.png",
+          "sha256": "fd66556cdd826cf2f49308817e9e0324a05e34f37b7b89099ba09493ed035f1b"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0049/image.png",
+          "sha256": "fd66556cdd826cf2f49308817e9e0324a05e34f37b7b89099ba09493ed035f1b"
+        },
+        {
+          "collection_identifier": "generated_images/exec-a5135152-21cb-4b76-b0b3-f71f57c7dddf.png",
+          "sha256": "fd66556cdd826cf2f49308817e9e0324a05e34f37b7b89099ba09493ed035f1b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/050.png",
+      "sha256": "c5e3d6d7764d8ab6401eda864b6f03ee5aa397347b3c4717faceeca351420883",
+      "bytes": 2584197,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0050/image.png",
+          "sha256": "c5e3d6d7764d8ab6401eda864b6f03ee5aa397347b3c4717faceeca351420883"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0050/image.png",
+          "sha256": "c5e3d6d7764d8ab6401eda864b6f03ee5aa397347b3c4717faceeca351420883"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c9e264fa-f635-444c-8743-c05fab4de7c5.png",
+          "sha256": "c5e3d6d7764d8ab6401eda864b6f03ee5aa397347b3c4717faceeca351420883"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/051.png",
+      "sha256": "32d90c0469c6a089ffbd9f52f3f08f6e0d1d52d21c435ee0db694a7978845b98",
+      "bytes": 2637877,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0051/image.png",
+          "sha256": "32d90c0469c6a089ffbd9f52f3f08f6e0d1d52d21c435ee0db694a7978845b98"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0051/image.png",
+          "sha256": "32d90c0469c6a089ffbd9f52f3f08f6e0d1d52d21c435ee0db694a7978845b98"
+        },
+        {
+          "collection_identifier": "generated_images/exec-ec936d6d-dc03-4e5a-91b9-d2a816760b8a.png",
+          "sha256": "32d90c0469c6a089ffbd9f52f3f08f6e0d1d52d21c435ee0db694a7978845b98"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/052.png",
+      "sha256": "08534e96d5484afe9cb623bf1f7d8e021abad0cac9a38a033465de0302326bd9",
+      "bytes": 2621412,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0052/image.png",
+          "sha256": "08534e96d5484afe9cb623bf1f7d8e021abad0cac9a38a033465de0302326bd9"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0052/image.png",
+          "sha256": "08534e96d5484afe9cb623bf1f7d8e021abad0cac9a38a033465de0302326bd9"
+        },
+        {
+          "collection_identifier": "generated_images/exec-dce6a3ea-43ed-41e7-8e56-faab2b17dd30.png",
+          "sha256": "08534e96d5484afe9cb623bf1f7d8e021abad0cac9a38a033465de0302326bd9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/053.png",
+      "sha256": "b391121895520c5b0d02825323a4bcf8d1ce744e0b65046bf19d7340bf954c8d",
+      "bytes": 2426859,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0053/image.png",
+          "sha256": "b391121895520c5b0d02825323a4bcf8d1ce744e0b65046bf19d7340bf954c8d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0053/image.png",
+          "sha256": "b391121895520c5b0d02825323a4bcf8d1ce744e0b65046bf19d7340bf954c8d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-76f1f7d5-5772-4c7b-a41c-805b5dd118c4.png",
+          "sha256": "b391121895520c5b0d02825323a4bcf8d1ce744e0b65046bf19d7340bf954c8d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/054.png",
+      "sha256": "3f49641713e36723829ec54a3d9a582f35cffff43ca20c6deecb2e2e5bb6f17d",
+      "bytes": 2735638,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0054/image.png",
+          "sha256": "3f49641713e36723829ec54a3d9a582f35cffff43ca20c6deecb2e2e5bb6f17d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0054/image.png",
+          "sha256": "3f49641713e36723829ec54a3d9a582f35cffff43ca20c6deecb2e2e5bb6f17d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-e8770f8a-5a71-4eed-84e1-d3e6d9e8dad0.png",
+          "sha256": "3f49641713e36723829ec54a3d9a582f35cffff43ca20c6deecb2e2e5bb6f17d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/055.png",
+      "sha256": "3a8e7477c2737895fc248418aa068009eac5376f6b6730e4c4d02f6880c6c036",
+      "bytes": 2438921,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0055/image.png",
+          "sha256": "3a8e7477c2737895fc248418aa068009eac5376f6b6730e4c4d02f6880c6c036"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0055/image.png",
+          "sha256": "3a8e7477c2737895fc248418aa068009eac5376f6b6730e4c4d02f6880c6c036"
+        },
+        {
+          "collection_identifier": "generated_images/exec-13cc435a-eeba-4562-b859-ea3505c4728f.png",
+          "sha256": "3a8e7477c2737895fc248418aa068009eac5376f6b6730e4c4d02f6880c6c036"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/056.png",
+      "sha256": "d5c1dc2ee2ed18e0f6e45692799e1267d3e56392bdceed59fcc34cd2362886a1",
+      "bytes": 2377524,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0056/image.png",
+          "sha256": "d5c1dc2ee2ed18e0f6e45692799e1267d3e56392bdceed59fcc34cd2362886a1"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0056/image.png",
+          "sha256": "d5c1dc2ee2ed18e0f6e45692799e1267d3e56392bdceed59fcc34cd2362886a1"
+        },
+        {
+          "collection_identifier": "generated_images/exec-b98ea186-3a91-47fc-ab7b-f9f2a52386d3.png",
+          "sha256": "d5c1dc2ee2ed18e0f6e45692799e1267d3e56392bdceed59fcc34cd2362886a1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/057.png",
+      "sha256": "fab62cb58b69009d56d44363ae80f40f0ee4778d2bb213f729301cfd0e22e1b9",
+      "bytes": 2536651,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0057/image.png",
+          "sha256": "fab62cb58b69009d56d44363ae80f40f0ee4778d2bb213f729301cfd0e22e1b9"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0057/image.png",
+          "sha256": "fab62cb58b69009d56d44363ae80f40f0ee4778d2bb213f729301cfd0e22e1b9"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d7dd7a2e-543c-495e-a6e6-643869ee4358.png",
+          "sha256": "fab62cb58b69009d56d44363ae80f40f0ee4778d2bb213f729301cfd0e22e1b9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/058.png",
+      "sha256": "2dbf33bceaef77f75a80c80e0c504b9fe9a3d594e08134204e44d6973f380998",
+      "bytes": 2550031,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0058/image.png",
+          "sha256": "2dbf33bceaef77f75a80c80e0c504b9fe9a3d594e08134204e44d6973f380998"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0058/image.png",
+          "sha256": "2dbf33bceaef77f75a80c80e0c504b9fe9a3d594e08134204e44d6973f380998"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d3d23ac9-b191-4f9a-a67c-4802c73a46c3.png",
+          "sha256": "2dbf33bceaef77f75a80c80e0c504b9fe9a3d594e08134204e44d6973f380998"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/059.png",
+      "sha256": "a48e5d0847adff58655e31fd70e7b59e17b7d681c206121fa57391c0132a3aa3",
+      "bytes": 2778505,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0059/image.png",
+          "sha256": "a48e5d0847adff58655e31fd70e7b59e17b7d681c206121fa57391c0132a3aa3"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0059/image.png",
+          "sha256": "a48e5d0847adff58655e31fd70e7b59e17b7d681c206121fa57391c0132a3aa3"
+        },
+        {
+          "collection_identifier": "generated_images/exec-fee0fe24-3b5f-427c-b895-3f65f20def84.png",
+          "sha256": "a48e5d0847adff58655e31fd70e7b59e17b7d681c206121fa57391c0132a3aa3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/060.png",
+      "sha256": "44262ee5105408ee95da8bf9f1228cb23583c5439301255fa90fa1f298b4bbd3",
+      "bytes": 2748921,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0060/image.png",
+          "sha256": "44262ee5105408ee95da8bf9f1228cb23583c5439301255fa90fa1f298b4bbd3"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0060/image.png",
+          "sha256": "44262ee5105408ee95da8bf9f1228cb23583c5439301255fa90fa1f298b4bbd3"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c882486b-ad10-4a24-a255-a3a852dc0dae.png",
+          "sha256": "44262ee5105408ee95da8bf9f1228cb23583c5439301255fa90fa1f298b4bbd3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/061.png",
+      "sha256": "227734b6314661766136191f951f4ee7b031c22c77335e6f23cf2e65d710225b",
+      "bytes": 2698408,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0061/image.png",
+          "sha256": "227734b6314661766136191f951f4ee7b031c22c77335e6f23cf2e65d710225b"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0061/image.png",
+          "sha256": "227734b6314661766136191f951f4ee7b031c22c77335e6f23cf2e65d710225b"
+        },
+        {
+          "collection_identifier": "generated_images/exec-0553894b-834e-4881-aa1b-99b89056c46e.png",
+          "sha256": "227734b6314661766136191f951f4ee7b031c22c77335e6f23cf2e65d710225b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/062.png",
+      "sha256": "25f4156c4ae3fa28334829cb2bad9e55ffb366d1977f1b2d0e21ff5cd4a38e19",
+      "bytes": 2714601,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0062/image.png",
+          "sha256": "25f4156c4ae3fa28334829cb2bad9e55ffb366d1977f1b2d0e21ff5cd4a38e19"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0062/image.png",
+          "sha256": "25f4156c4ae3fa28334829cb2bad9e55ffb366d1977f1b2d0e21ff5cd4a38e19"
+        },
+        {
+          "collection_identifier": "generated_images/exec-dfe13370-3af3-433e-9062-9279ea05b14a.png",
+          "sha256": "25f4156c4ae3fa28334829cb2bad9e55ffb366d1977f1b2d0e21ff5cd4a38e19"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/063.png",
+      "sha256": "4c68cba87975c7094fdc6db626623b2e8612061a6079468e3d0122bd3510d08c",
+      "bytes": 2706139,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0063/image.png",
+          "sha256": "4c68cba87975c7094fdc6db626623b2e8612061a6079468e3d0122bd3510d08c"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0063/image.png",
+          "sha256": "4c68cba87975c7094fdc6db626623b2e8612061a6079468e3d0122bd3510d08c"
+        },
+        {
+          "collection_identifier": "generated_images/exec-13257b6f-ae6c-4869-a2c4-ff844795fb70.png",
+          "sha256": "4c68cba87975c7094fdc6db626623b2e8612061a6079468e3d0122bd3510d08c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/064.png",
+      "sha256": "0e257fc34ec7f6753ca4dbbdda07c021e664d18faf8a3438bc81e1a2ec3dfe1b",
+      "bytes": 2795546,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0064/image.png",
+          "sha256": "0e257fc34ec7f6753ca4dbbdda07c021e664d18faf8a3438bc81e1a2ec3dfe1b"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0064/image.png",
+          "sha256": "0e257fc34ec7f6753ca4dbbdda07c021e664d18faf8a3438bc81e1a2ec3dfe1b"
+        },
+        {
+          "collection_identifier": "generated_images/exec-2bc141c6-c548-4025-8cc6-27302cf8e513.png",
+          "sha256": "0e257fc34ec7f6753ca4dbbdda07c021e664d18faf8a3438bc81e1a2ec3dfe1b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/065.png",
+      "sha256": "3568a226e68901718d7054f546f4a491c4cb2d1b0ba7f359c55cd4fb0de57a81",
+      "bytes": 2698035,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0065/image.png",
+          "sha256": "3568a226e68901718d7054f546f4a491c4cb2d1b0ba7f359c55cd4fb0de57a81"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0065/image.png",
+          "sha256": "3568a226e68901718d7054f546f4a491c4cb2d1b0ba7f359c55cd4fb0de57a81"
+        },
+        {
+          "collection_identifier": "generated_images/exec-3f7ed780-9fd1-42ab-b616-36618b1c04be.png",
+          "sha256": "3568a226e68901718d7054f546f4a491c4cb2d1b0ba7f359c55cd4fb0de57a81"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/066.png",
+      "sha256": "aa632909f1fa39547083fff93dd77ce3343dd0b793c2ff784effa04a4d0a0dcc",
+      "bytes": 2674418,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0066/image.png",
+          "sha256": "aa632909f1fa39547083fff93dd77ce3343dd0b793c2ff784effa04a4d0a0dcc"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0066/image.png",
+          "sha256": "aa632909f1fa39547083fff93dd77ce3343dd0b793c2ff784effa04a4d0a0dcc"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f475fc81-3fe9-433e-9e4d-45476352eca6.png",
+          "sha256": "aa632909f1fa39547083fff93dd77ce3343dd0b793c2ff784effa04a4d0a0dcc"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/067.png",
+      "sha256": "cfd4181c70303b6b4aaa9f1f5ae1680c472bc1f52ed1094d8634c07865a5bb3f",
+      "bytes": 2729584,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0067/image.png",
+          "sha256": "cfd4181c70303b6b4aaa9f1f5ae1680c472bc1f52ed1094d8634c07865a5bb3f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0067/image.png",
+          "sha256": "cfd4181c70303b6b4aaa9f1f5ae1680c472bc1f52ed1094d8634c07865a5bb3f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c2ba6073-bdc6-447e-bc1a-6ed095d7d101.png",
+          "sha256": "cfd4181c70303b6b4aaa9f1f5ae1680c472bc1f52ed1094d8634c07865a5bb3f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/068.png",
+      "sha256": "797256dcdbcabae31864c399fb98daef7d2a2380a2a531a84d018422622c45e1",
+      "bytes": 2793550,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0068/image.png",
+          "sha256": "797256dcdbcabae31864c399fb98daef7d2a2380a2a531a84d018422622c45e1"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0068/image.png",
+          "sha256": "797256dcdbcabae31864c399fb98daef7d2a2380a2a531a84d018422622c45e1"
+        },
+        {
+          "collection_identifier": "generated_images/exec-c0dd9f93-f0e4-40ef-a1c2-e38f97aee465.png",
+          "sha256": "797256dcdbcabae31864c399fb98daef7d2a2380a2a531a84d018422622c45e1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/069.png",
+      "sha256": "1c25c1fc77bd1df7a64a53db0b3e49a5671c5f616fd976a1422e61c8f9b5479f",
+      "bytes": 1943241,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0069/image.png",
+          "sha256": "1c25c1fc77bd1df7a64a53db0b3e49a5671c5f616fd976a1422e61c8f9b5479f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0069/image.png",
+          "sha256": "1c25c1fc77bd1df7a64a53db0b3e49a5671c5f616fd976a1422e61c8f9b5479f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-52d1645e-50cb-42c6-bb4a-30db75732144.png",
+          "sha256": "1c25c1fc77bd1df7a64a53db0b3e49a5671c5f616fd976a1422e61c8f9b5479f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/070.png",
+      "sha256": "3df51162a130d30a7706f1e3f0bc1b651896ea9351142e37b2cac4f5921f67a1",
+      "bytes": 1946378,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0070/image.png",
+          "sha256": "3df51162a130d30a7706f1e3f0bc1b651896ea9351142e37b2cac4f5921f67a1"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0070/image.png",
+          "sha256": "3df51162a130d30a7706f1e3f0bc1b651896ea9351142e37b2cac4f5921f67a1"
+        },
+        {
+          "collection_identifier": "generated_images/exec-39b13887-16a8-4587-b181-9ba4c5cbe64f.png",
+          "sha256": "3df51162a130d30a7706f1e3f0bc1b651896ea9351142e37b2cac4f5921f67a1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/071.png",
+      "sha256": "b969895da3459ed8bbdab225f9843b21f3b5ff63068531d0600d729d23682109",
+      "bytes": 2624622,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0071/image.png",
+          "sha256": "b969895da3459ed8bbdab225f9843b21f3b5ff63068531d0600d729d23682109"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0071/image.png",
+          "sha256": "b969895da3459ed8bbdab225f9843b21f3b5ff63068531d0600d729d23682109"
+        },
+        {
+          "collection_identifier": "generated_images/exec-789940b3-a3f6-40a3-b456-4dd606f52d2f.png",
+          "sha256": "b969895da3459ed8bbdab225f9843b21f3b5ff63068531d0600d729d23682109"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/072.png",
+      "sha256": "61137f3bedbdfa4629304597308e0262ea0d0e3f9ba485d13e3dd01715d3cf2a",
+      "bytes": 2911111,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0072/image.png",
+          "sha256": "61137f3bedbdfa4629304597308e0262ea0d0e3f9ba485d13e3dd01715d3cf2a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0072/image.png",
+          "sha256": "61137f3bedbdfa4629304597308e0262ea0d0e3f9ba485d13e3dd01715d3cf2a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-fb095947-3052-40f3-8350-0f5a70597f03.png",
+          "sha256": "61137f3bedbdfa4629304597308e0262ea0d0e3f9ba485d13e3dd01715d3cf2a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/073.png",
+      "sha256": "3b1502b6fa0b00e8e00067a0817582dd045e8f84e4425fc1fc7197653ab96483",
+      "bytes": 2539706,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0073/image.png",
+          "sha256": "3b1502b6fa0b00e8e00067a0817582dd045e8f84e4425fc1fc7197653ab96483"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0073/image.png",
+          "sha256": "3b1502b6fa0b00e8e00067a0817582dd045e8f84e4425fc1fc7197653ab96483"
+        },
+        {
+          "collection_identifier": "generated_images/exec-8573f618-d411-4cef-a849-ea369fefe2e5.png",
+          "sha256": "3b1502b6fa0b00e8e00067a0817582dd045e8f84e4425fc1fc7197653ab96483"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/074.png",
+      "sha256": "d605512c8b83c80ab417324d3b05f7ed81ad18703040df332440f114381d4617",
+      "bytes": 2543998,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0074/image.png",
+          "sha256": "d605512c8b83c80ab417324d3b05f7ed81ad18703040df332440f114381d4617"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0074/image.png",
+          "sha256": "d605512c8b83c80ab417324d3b05f7ed81ad18703040df332440f114381d4617"
+        },
+        {
+          "collection_identifier": "generated_images/exec-ec897b26-d8be-4fa7-be40-8f5da14e70a3.png",
+          "sha256": "d605512c8b83c80ab417324d3b05f7ed81ad18703040df332440f114381d4617"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/075.png",
+      "sha256": "3dfa8e1ffb06d6ffd6057ccff8e5090b5253a746a47ce67cc1dc15ca3c77ea1d",
+      "bytes": 2760670,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0075/image.png",
+          "sha256": "3dfa8e1ffb06d6ffd6057ccff8e5090b5253a746a47ce67cc1dc15ca3c77ea1d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0075/image.png",
+          "sha256": "3dfa8e1ffb06d6ffd6057ccff8e5090b5253a746a47ce67cc1dc15ca3c77ea1d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f13c44ae-3ba6-4ea9-a962-fa78d0329e34.png",
+          "sha256": "3dfa8e1ffb06d6ffd6057ccff8e5090b5253a746a47ce67cc1dc15ca3c77ea1d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/076.png",
+      "sha256": "0af4bc3ac1984caa8cabd6cde925b1957bfd8c0a2489f23c5af6351216f404d5",
+      "bytes": 2519813,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0076/image.png",
+          "sha256": "0af4bc3ac1984caa8cabd6cde925b1957bfd8c0a2489f23c5af6351216f404d5"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0076/image.png",
+          "sha256": "0af4bc3ac1984caa8cabd6cde925b1957bfd8c0a2489f23c5af6351216f404d5"
+        },
+        {
+          "collection_identifier": "generated_images/exec-6ce36a3e-a247-4cfb-8e8e-3704a0999fd9.png",
+          "sha256": "0af4bc3ac1984caa8cabd6cde925b1957bfd8c0a2489f23c5af6351216f404d5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/077.png",
+      "sha256": "c76b48896037e88205bfd48e5119ef8c76b8ecca9a97585d359b2eb3dc1ba74f",
+      "bytes": 2670369,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0077/image.png",
+          "sha256": "c76b48896037e88205bfd48e5119ef8c76b8ecca9a97585d359b2eb3dc1ba74f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0077/image.png",
+          "sha256": "c76b48896037e88205bfd48e5119ef8c76b8ecca9a97585d359b2eb3dc1ba74f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f29d770a-4414-4bc9-9690-91ed7a932ad3.png",
+          "sha256": "c76b48896037e88205bfd48e5119ef8c76b8ecca9a97585d359b2eb3dc1ba74f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/078.png",
+      "sha256": "cfb424001c51e55f81979571e6e0b60ee2ae335c31d7a8d78ea9dd3acff8ed38",
+      "bytes": 2703697,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0078/image.png",
+          "sha256": "cfb424001c51e55f81979571e6e0b60ee2ae335c31d7a8d78ea9dd3acff8ed38"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0078/image.png",
+          "sha256": "cfb424001c51e55f81979571e6e0b60ee2ae335c31d7a8d78ea9dd3acff8ed38"
+        },
+        {
+          "collection_identifier": "generated_images/exec-8bd1a173-914d-4c49-9b6f-f0f9aa69de12.png",
+          "sha256": "cfb424001c51e55f81979571e6e0b60ee2ae335c31d7a8d78ea9dd3acff8ed38"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/079.png",
+      "sha256": "5d4c63dd7ab47f381c574547e7220679e4b0b2f9b7fec0d3cf3fe0d14604270d",
+      "bytes": 2642550,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0079/image.png",
+          "sha256": "5d4c63dd7ab47f381c574547e7220679e4b0b2f9b7fec0d3cf3fe0d14604270d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0079/image.png",
+          "sha256": "5d4c63dd7ab47f381c574547e7220679e4b0b2f9b7fec0d3cf3fe0d14604270d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-b2a952f2-f359-4c75-8c2c-c2cdcc12910f.png",
+          "sha256": "5d4c63dd7ab47f381c574547e7220679e4b0b2f9b7fec0d3cf3fe0d14604270d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/080.png",
+      "sha256": "35e9b6f7b1a75a77fe883eaa61585d6c16e91b867b5bdf904a2fc60e45e3f38a",
+      "bytes": 2628915,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0080/image.png",
+          "sha256": "35e9b6f7b1a75a77fe883eaa61585d6c16e91b867b5bdf904a2fc60e45e3f38a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0080/image.png",
+          "sha256": "35e9b6f7b1a75a77fe883eaa61585d6c16e91b867b5bdf904a2fc60e45e3f38a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-2615010b-0fec-4ad3-8f8e-a2bc06500d63.png",
+          "sha256": "35e9b6f7b1a75a77fe883eaa61585d6c16e91b867b5bdf904a2fc60e45e3f38a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/081.png",
+      "sha256": "ece0020205141dfdd3c9e5abb8cc26f9a88b6d964144b9d9da7092451e7daa2a",
+      "bytes": 2716578,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0081/image.png",
+          "sha256": "ece0020205141dfdd3c9e5abb8cc26f9a88b6d964144b9d9da7092451e7daa2a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0081/image.png",
+          "sha256": "ece0020205141dfdd3c9e5abb8cc26f9a88b6d964144b9d9da7092451e7daa2a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-f32ef4bc-772e-4a48-a012-770591935bd1.png",
+          "sha256": "ece0020205141dfdd3c9e5abb8cc26f9a88b6d964144b9d9da7092451e7daa2a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/082.png",
+      "sha256": "041a9202233476da2739364c898ecb394bbec70e885df1f7dd69ddb6f425c33f",
+      "bytes": 2040998,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0082/image.png",
+          "sha256": "041a9202233476da2739364c898ecb394bbec70e885df1f7dd69ddb6f425c33f"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0082/image.png",
+          "sha256": "041a9202233476da2739364c898ecb394bbec70e885df1f7dd69ddb6f425c33f"
+        },
+        {
+          "collection_identifier": "generated_images/exec-8f4e9a61-fe64-4463-8f02-6dabd8715c40.png",
+          "sha256": "041a9202233476da2739364c898ecb394bbec70e885df1f7dd69ddb6f425c33f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/083.png",
+      "sha256": "30efa56fe650c1bd3be1d70c07ba67af226abdc60fb6c7fa040028d967085692",
+      "bytes": 2556555,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0083/image.png",
+          "sha256": "30efa56fe650c1bd3be1d70c07ba67af226abdc60fb6c7fa040028d967085692"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0083/image.png",
+          "sha256": "30efa56fe650c1bd3be1d70c07ba67af226abdc60fb6c7fa040028d967085692"
+        },
+        {
+          "collection_identifier": "generated_images/exec-232cc89c-a2c2-4be6-be8c-836bcccaea9d.png",
+          "sha256": "30efa56fe650c1bd3be1d70c07ba67af226abdc60fb6c7fa040028d967085692"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/084.png",
+      "sha256": "d79dad4ffba8639a5416ca5b3b2852dc0d0d59484d9a14c8f3940f0ab814e55a",
+      "bytes": 2597619,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0084/image.png",
+          "sha256": "d79dad4ffba8639a5416ca5b3b2852dc0d0d59484d9a14c8f3940f0ab814e55a"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0084/image.png",
+          "sha256": "d79dad4ffba8639a5416ca5b3b2852dc0d0d59484d9a14c8f3940f0ab814e55a"
+        },
+        {
+          "collection_identifier": "generated_images/exec-d5ac95be-5191-4100-8177-754cdcfa3117.png",
+          "sha256": "d79dad4ffba8639a5416ca5b3b2852dc0d0d59484d9a14c8f3940f0ab814e55a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/085.png",
+      "sha256": "ef8889fa8341161fd6f328de7624763ee4aa89a4e2c5ad99f1cce460a869500d",
+      "bytes": 2047962,
+      "kind": "selected_scene_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0085/image.png",
+          "sha256": "ef8889fa8341161fd6f328de7624763ee4aa89a4e2c5ad99f1cce460a869500d"
+        }
+      ],
+      "byte_identical_source_aliases": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0085/image.png",
+          "sha256": "ef8889fa8341161fd6f328de7624763ee4aa89a4e2c5ad99f1cce460a869500d"
+        },
+        {
+          "collection_identifier": "generated_images/exec-0d473a9f-e099-4865-a947-d06f5ea39a75.png",
+          "sha256": "ef8889fa8341161fd6f328de7624763ee4aa89a4e2c5ad99f1cce460a869500d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png",
+      "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+      "bytes": 2664691,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png",
+          "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/a3f6d3eb084d-exec-1856a825-4020-418f-9967-ab156741438c.png",
+      "sha256": "a3f6d3eb084d70915d12d26ff65441bf73a4265d161d8b74be2398dcec6aad91",
+      "bytes": 2648480,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-1856a825-4020-418f-9967-ab156741438c.png",
+          "sha256": "a3f6d3eb084d70915d12d26ff65441bf73a4265d161d8b74be2398dcec6aad91"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/1654de83828d-exec-1f9b9e66-c88c-4801-b9df-358fcafb4c34.png",
+      "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3",
+      "bytes": 1413013,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-1f9b9e66-c88c-4801-b9df-358fcafb4c34.png",
+          "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/53c05a1ab91b-exec-70f3fe8e-b655-4f6c-a87f-a3d3a0672475.png",
+      "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+      "bytes": 1215973,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-70f3fe8e-b655-4f6c-a87f-a3d3a0672475.png",
+          "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+      "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09",
+      "bytes": 2096605,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/84c604d68e69-exec-a809265a-ec19-45e9-98a8-f7f632f47da4.png",
+      "sha256": "84c604d68e69558e8bb2de4000a343ddd3004b9111fabfb800ddb47cf563d875",
+      "bytes": 2716152,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-a809265a-ec19-45e9-98a8-f7f632f47da4.png",
+          "sha256": "84c604d68e69558e8bb2de4000a343ddd3004b9111fabfb800ddb47cf563d875"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png",
+      "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+      "bytes": 3121306,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png",
+          "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/090cdf642f77-initial-image.png",
+      "sha256": "090cdf642f77c21d9c047a25378bd290896ecf708d25423e62a4ea2a6af80aae",
+      "bytes": 2718680,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0006/initial-image.png",
+          "sha256": "090cdf642f77c21d9c047a25378bd290896ecf708d25423e62a4ea2a6af80aae"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/74a391055bbf-attempt-1-image.png",
+      "sha256": "74a391055bbf10f53e21fe542f2a26b6fb19843e16ec40eeadc37e4b48fd5bf2",
+      "bytes": 2515313,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0022/attempt-1-image.png",
+          "sha256": "74a391055bbf10f53e21fe542f2a26b6fb19843e16ec40eeadc37e4b48fd5bf2"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e0b2dfb16662-attempt-1-image.png",
+      "sha256": "e0b2dfb166624e4713ad97b523e7d3dbf1f669e4ceb43bae34e763850a958b5c",
+      "bytes": 2390515,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0024/attempt-1-image.png",
+          "sha256": "e0b2dfb166624e4713ad97b523e7d3dbf1f669e4ceb43bae34e763850a958b5c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/eac6d0dd7032-attempt-1-image.png",
+      "sha256": "eac6d0dd7032a7ad4454d38b5299827de27df2e7c74b092f7c6c288bf9b4f6a8",
+      "bytes": 2363266,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0035/attempt-1-image.png",
+          "sha256": "eac6d0dd7032a7ad4454d38b5299827de27df2e7c74b092f7c6c288bf9b4f6a8"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e9b8e1760fdd-attempt-1-image.png",
+      "sha256": "e9b8e1760fdddab2ed1d98231361d18c1efc8a97b971f9bde02a3c4c5ac5ab5b",
+      "bytes": 2354732,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0036/attempt-1-image.png",
+          "sha256": "e9b8e1760fdddab2ed1d98231361d18c1efc8a97b971f9bde02a3c4c5ac5ab5b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e9b07c8c097e-attempt-1-image.png",
+      "sha256": "e9b07c8c097e80c0b9291a4b765dff41ca2120240e3cc010c9b9b91628c86033",
+      "bytes": 2356970,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0037/attempt-1-image.png",
+          "sha256": "e9b07c8c097e80c0b9291a4b765dff41ca2120240e3cc010c9b9b91628c86033"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/ba364530cfff-attempt-1-image.png",
+      "sha256": "ba364530cfff151707165a9aa47b53c5f519fde088eab5c4d0acef70dd7a6609",
+      "bytes": 2313143,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0040/attempt-1-image.png",
+          "sha256": "ba364530cfff151707165a9aa47b53c5f519fde088eab5c4d0acef70dd7a6609"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/d2fd19be849e-attempt-1-image.png",
+      "sha256": "d2fd19be849efcb53b482b338dbbab88851d1936e80fe14d74a83c0c5a63cafa",
+      "bytes": 2443114,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0041/attempt-1-image.png",
+          "sha256": "d2fd19be849efcb53b482b338dbbab88851d1936e80fe14d74a83c0c5a63cafa"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/ccdbac01ec56-original-v1.png",
+      "sha256": "ccdbac01ec564978f63846fb4d4b1aba7b732d3965381361684b87f4aa227c96",
+      "bytes": 2980498,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0045/original-v1.png",
+          "sha256": "ccdbac01ec564978f63846fb4d4b1aba7b732d3965381361684b87f4aa227c96"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/2cd2202c609f-original-v1.png",
+      "sha256": "2cd2202c609faddfc61c0af291a4cf554aba832b8394fdc770daea1c21c5a70f",
+      "bytes": 2839173,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0046/original-v1.png",
+          "sha256": "2cd2202c609faddfc61c0af291a4cf554aba832b8394fdc770daea1c21c5a70f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/c92bb8bc7ef0-original-v1.png",
+      "sha256": "c92bb8bc7ef078306d9789f841c55e4a4f70202f5e8c3c581e6550634f67a179",
+      "bytes": 2808235,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0047/original-v1.png",
+          "sha256": "c92bb8bc7ef078306d9789f841c55e4a4f70202f5e8c3c581e6550634f67a179"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/146f8fa8be11-original-v1.png",
+      "sha256": "146f8fa8be1160f3c7a23fc3080a6f22a15d99691fe4a0533812e957233b1bdd",
+      "bytes": 2702872,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0057/original-v1.png",
+          "sha256": "146f8fa8be1160f3c7a23fc3080a6f22a15d99691fe4a0533812e957233b1bdd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/69c5f56a1342-original-v1.png",
+      "sha256": "69c5f56a13421b9bb5f3bbd962b2b4bcd221d62f3d1d94d2f2dd109780c0a3e1",
+      "bytes": 2671936,
+      "kind": "reference_anchor",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/scene-0058/original-v1.png",
+          "sha256": "69c5f56a13421b9bb5f3bbd962b2b4bcd221d62f3d1d94d2f2dd109780c0a3e1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2c9dbb1cab55-details-045-047-v1.jpg",
+      "sha256": "2c9dbb1cab5547762f2b15aef462773d2f0a89f891b738fb5f2ae9e750975fbb",
+      "bytes": 430293,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-045-047-v1.jpg",
+          "sha256": "2c9dbb1cab5547762f2b15aef462773d2f0a89f891b738fb5f2ae9e750975fbb"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1d2144f2086a-details-048-050-v1.jpg",
+      "sha256": "1d2144f2086ab45d31636718258195167faf41b1293aa32bc7a0214a79d4c02e",
+      "bytes": 294524,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-048-050-v1.jpg",
+          "sha256": "1d2144f2086ab45d31636718258195167faf41b1293aa32bc7a0214a79d4c02e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/f38950ca6d3a-details-051-053-v1.jpg",
+      "sha256": "f38950ca6d3aaa8ca75bf84917a519d0de8d3510bd471407cf33858b75503b2c",
+      "bytes": 303335,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-051-053-v1.jpg",
+          "sha256": "f38950ca6d3aaa8ca75bf84917a519d0de8d3510bd471407cf33858b75503b2c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/9a5b656fcab7-details-054-056-v1.jpg",
+      "sha256": "9a5b656fcab7f864486b07f3c4e3b68d6e2a2429ab487da87edf3b44b39d989d",
+      "bytes": 349476,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-054-056-v1.jpg",
+          "sha256": "9a5b656fcab7f864486b07f3c4e3b68d6e2a2429ab487da87edf3b44b39d989d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/275bcc82b284-details-057-058-060-selected.jpg",
+      "sha256": "275bcc82b284f009070e345df04809861dcc2c623375d36862f8c49f87d299cd",
+      "bytes": 463324,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-057-058-060-selected.jpg",
+          "sha256": "275bcc82b284f009070e345df04809861dcc2c623375d36862f8c49f87d299cd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/708d3623a45a-details-057-059-v1.jpg",
+      "sha256": "708d3623a45a9e6d01ff1727f86b16e753c14de81a233386a801500cd945d3ef",
+      "bytes": 382831,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-057-059-v1.jpg",
+          "sha256": "708d3623a45a9e6d01ff1727f86b16e753c14de81a233386a801500cd945d3ef"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/9486b9307f51-details-061-063-v1.jpg",
+      "sha256": "9486b9307f5107c76ebc6c195094a00a925a12f1d1173fa2ab6e2ed0fb022718",
+      "bytes": 409856,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-061-063-v1.jpg",
+          "sha256": "9486b9307f5107c76ebc6c195094a00a925a12f1d1173fa2ab6e2ed0fb022718"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2e793df1da16-details-062-064-selected.jpg",
+      "sha256": "2e793df1da162c1054dd109c148e0d034ce80c96e2ba16d2b24bb90858660454",
+      "bytes": 425096,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/details-062-064-selected.jpg",
+          "sha256": "2e793df1da162c1054dd109c148e0d034ce80c96e2ba16d2b24bb90858660454"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/7bfe9d705bce-output-045-047-v2.jpg",
+      "sha256": "7bfe9d705bceb90946e8a41b162e4b9abc0ae396a73c68a8223a3b81c13e3fab",
+      "bytes": 375278,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-045-047-v2.jpg",
+          "sha256": "7bfe9d705bceb90946e8a41b162e4b9abc0ae396a73c68a8223a3b81c13e3fab"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/83598c7db6ee-output-045-050-selected.jpg",
+      "sha256": "83598c7db6ee6771da6e90cffdae6f58a219f5befe890841ccdc48f9dcf9d59f",
+      "bytes": 722252,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-045-050-selected.jpg",
+          "sha256": "83598c7db6ee6771da6e90cffdae6f58a219f5befe890841ccdc48f9dcf9d59f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/5224a90dd808-output-048-053-v1.jpg",
+      "sha256": "5224a90dd8088b440a34383f86bf5e4bb5d55a8183017fe24529f80e7391c3e3",
+      "bytes": 712253,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-048-053-v1.jpg",
+          "sha256": "5224a90dd8088b440a34383f86bf5e4bb5d55a8183017fe24529f80e7391c3e3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/f5669e1d6799-output-051-056-v1.jpg",
+      "sha256": "f5669e1d679923d7de9cd4e24d236bf6e356ca63e62072a2991fd3721eaf496e",
+      "bytes": 703387,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-051-056-v1.jpg",
+          "sha256": "f5669e1d679923d7de9cd4e24d236bf6e356ca63e62072a2991fd3721eaf496e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/b5b16da9a882-output-054-059-v1.jpg",
+      "sha256": "b5b16da9a88216e9dcb4812e32d54db1d720b1983d8a6182382a42bdb31d47c0",
+      "bytes": 725750,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-054-059-v1.jpg",
+          "sha256": "b5b16da9a88216e9dcb4812e32d54db1d720b1983d8a6182382a42bdb31d47c0"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4e9ffb9a2900-output-055-060-selected.jpg",
+      "sha256": "4e9ffb9a2900dc5f009d3fcc4e892cb462b14b2ca18fef0917fd57e326cbf34f",
+      "bytes": 717398,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-055-060-selected.jpg",
+          "sha256": "4e9ffb9a2900dc5f009d3fcc4e892cb462b14b2ca18fef0917fd57e326cbf34f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/d46b4c6ef9b4-output-058-063-selected.jpg",
+      "sha256": "d46b4c6ef9b44219e0f11c365e44c8176990f9ad7a23266948cea165d4533dcf",
+      "bytes": 794158,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-058-063-selected.jpg",
+          "sha256": "d46b4c6ef9b44219e0f11c365e44c8176990f9ad7a23266948cea165d4533dcf"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/94adb1d15f37-output-059-064-selected.jpg",
+      "sha256": "94adb1d15f37d183f6f3fc461ccd97b3eaa101d19fe965567b69d8ed07832e18",
+      "bytes": 788971,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/qa-045-064/output-059-064-selected.jpg",
+          "sha256": "94adb1d15f37d183f6f3fc461ccd97b3eaa101d19fe965567b69d8ed07832e18"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/b39c958eeb11-contact-021-025.jpg",
+      "sha256": "b39c958eeb1156b3d3e6f791415896e7e7c3aa3c2ec2746d3910e04b3bcadd83",
+      "bytes": 689319,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-021-025.jpg",
+          "sha256": "b39c958eeb1156b3d3e6f791415896e7e7c3aa3c2ec2746d3910e04b3bcadd83"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/ab8142c2be23-contact-024-028.jpg",
+      "sha256": "ab8142c2be23f20e297383144254d9e1f6fe80094eeff4576144442bb417b566",
+      "bytes": 692360,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-024-028.jpg",
+          "sha256": "ab8142c2be23f20e297383144254d9e1f6fe80094eeff4576144442bb417b566"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0a46170d9328-contact-024-030.jpg",
+      "sha256": "0a46170d9328a265dcd0a833ac69c8d8d2c22a29e54066e85e28042481b5a8bd",
+      "bytes": 693452,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-024-030.jpg",
+          "sha256": "0a46170d9328a265dcd0a833ac69c8d8d2c22a29e54066e85e28042481b5a8bd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/db831e94b62f-contact-029-033.jpg",
+      "sha256": "db831e94b62fce5ef20c8dfaff021d611ccb8314078e3fe0615d6604f550f40d",
+      "bytes": 700551,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-029-033.jpg",
+          "sha256": "db831e94b62fce5ef20c8dfaff021d611ccb8314078e3fe0615d6604f550f40d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1ba6b6deb662-contact-032-036-initial.jpg",
+      "sha256": "1ba6b6deb66249e44369c5457c83438caa852b59075a2bfdc024819741e85b8a",
+      "bytes": 599631,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-032-036-initial.jpg",
+          "sha256": "1ba6b6deb66249e44369c5457c83438caa852b59075a2bfdc024819741e85b8a"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/cba8db9ee3e1-contact-033-037.jpg",
+      "sha256": "cba8db9ee3e1d182fea4c2b9953356d080dc33dc78442b898f1925b2f71f2096",
+      "bytes": 553808,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-033-037.jpg",
+          "sha256": "cba8db9ee3e1d182fea4c2b9953356d080dc33dc78442b898f1925b2f71f2096"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2e4825fe982b-contact-035-039.jpg",
+      "sha256": "2e4825fe982ba91d37bf74f2c471212bc2a8d3598b46ea1ce093eea51f54ba63",
+      "bytes": 587366,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-035-039.jpg",
+          "sha256": "2e4825fe982ba91d37bf74f2c471212bc2a8d3598b46ea1ce093eea51f54ba63"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/888154e39a2b-contact-037-041-second.jpg",
+      "sha256": "888154e39a2bb681bcf9cc5760dfb8e5fed139aed9ff35ec7aa979cea0b86a2f",
+      "bytes": 599667,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-037-041-second.jpg",
+          "sha256": "888154e39a2bb681bcf9cc5760dfb8e5fed139aed9ff35ec7aa979cea0b86a2f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/ffc51307672f-contact-038-041-selected.jpg",
+      "sha256": "ffc51307672f3649fcd9152977569660ff78b98cc062aada6ee4e019e23e0187",
+      "bytes": 485402,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/contact-038-041-selected.jpg",
+          "sha256": "ffc51307672f3649fcd9152977569660ff78b98cc062aada6ee4e019e23e0187"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/80299dac5406-detail-040-three-attempts.jpg",
+      "sha256": "80299dac54065ab74291b2c0ce7a90e6d0b43c3b6e1783bd69cc45687db8be6b",
+      "bytes": 71819,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/scene-generation/review-021-044/detail-040-three-attempts.jpg",
+          "sha256": "80299dac54065ab74291b2c0ce7a90e6d0b43c3b6e1783bd69cc45687db8be6b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg",
+      "sha256": "0b46fe8e6512c741d1fcf9a69b733f6e474862822aef69efa5584157280d0dca",
+      "bytes": 320966,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/baseline-group-01-review-contact.jpg",
+          "sha256": "0b46fe8e6512c741d1fcf9a69b733f6e474862822aef69efa5584157280d0dca"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg",
+      "sha256": "4c328332dfa1f886ccef997b21a8c8dee1cf56b908ae2d15db87ea27b097f2a6",
+      "bytes": 475429,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/furled-evening-danger-review-contact.jpg",
+          "sha256": "4c328332dfa1f886ccef997b21a8c8dee1cf56b908ae2d15db87ea27b097f2a6"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg",
+      "sha256": "0842545d069e64e6daa16fdae7bcf6ef20566ac26c3d51bc471d6ed7a0d00f73",
+      "bytes": 441461,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/harbor-damage-night-review-contact.jpg",
+          "sha256": "0842545d069e64e6daa16fdae7bcf6ef20566ac26c3d51bc471d6ed7a0d00f73"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg",
+      "sha256": "89016b21869786e7c7a80160b5592314aae438e97704431802ac2ae24c72399c",
+      "bytes": 532274,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/merchant-repair-shore-review-contact.jpg",
+          "sha256": "89016b21869786e7c7a80160b5592314aae438e97704431802ac2ae24c72399c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg",
+      "sha256": "a194a8eb273b0a38b5180376fed5ca8d1d939d4d0e2b3bd51f8905cefc8c401e",
+      "bytes": 517297,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/patched-sunset-isolated-review-contact.jpg",
+          "sha256": "a194a8eb273b0a38b5180376fed5ca8d1d939d4d0e2b3bd51f8905cefc8c401e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg",
+      "sha256": "2346976cbae97db2b9bf7f23814eba6930274457a64fc8daeac1661ded3d5f72",
+      "bytes": 64020,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/prompt-director-first-six-contact.jpg",
+          "sha256": "2346976cbae97db2b9bf7f23814eba6930274457a64fc8daeac1661ded3d5f72"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg",
+      "sha256": "1389f36681c13814d928c3fbc4115f22becb0b7b2f00867ff25498604a38bb94",
+      "bytes": 516126,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/shore-moor-rain-review-contact.jpg",
+          "sha256": "1389f36681c13814d928c3fbc4115f22becb0b7b2f00867ff25498604a38bb94"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg",
+      "sha256": "316515ab40041bb7291096747d1557d50c74c7ec84de6e0881e5d86d3ad7508e",
+      "bytes": 325728,
+      "kind": "actual_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/supporting-and-market-review-contact.jpg",
+          "sha256": "316515ab40041bb7291096747d1557d50c74c7ec84de6e0881e5d86d3ad7508e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg",
+      "sha256": "dedc5197490bf19c6f8a80467ee62223dc8a179b62b8c137612850c5d61af15c",
+      "bytes": 945618,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-01.jpg",
+          "sha256": "dedc5197490bf19c6f8a80467ee62223dc8a179b62b8c137612850c5d61af15c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-02.jpg",
+      "sha256": "44305393c87933142953b1aa9f2b1f3ab4aaca2a13ef04f6d920a9ea16008b30",
+      "bytes": 979564,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-02.jpg",
+          "sha256": "44305393c87933142953b1aa9f2b1f3ab4aaca2a13ef04f6d920a9ea16008b30"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-03.jpg",
+      "sha256": "6d91609c54663424c02f6f0a9c8e7a670cf9a6d55827a2c0d50f8b6118adb71e",
+      "bytes": 957039,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-03.jpg",
+          "sha256": "6d91609c54663424c02f6f0a9c8e7a670cf9a6d55827a2c0d50f8b6118adb71e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-04.jpg",
+      "sha256": "838d9c76dfd0b48f0fc49a39bf702d846610885606a70cf8ee09b727ce786eff",
+      "bytes": 920868,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-04.jpg",
+          "sha256": "838d9c76dfd0b48f0fc49a39bf702d846610885606a70cf8ee09b727ce786eff"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-05.jpg",
+      "sha256": "d241ffb2656df0fc3d858343346ac13f12b34cd91b2a304fa369aef359b833f5",
+      "bytes": 836631,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-05.jpg",
+          "sha256": "d241ffb2656df0fc3d858343346ac13f12b34cd91b2a304fa369aef359b833f5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg",
+      "sha256": "3a443b6aac87d2b235e2740c080984d5101b3e8363d23cb870e4c34e6d43b2fb",
+      "bytes": 932777,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-06.jpg",
+          "sha256": "3a443b6aac87d2b235e2740c080984d5101b3e8363d23cb870e4c34e6d43b2fb"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-07.jpg",
+      "sha256": "a03ace3d2738f7a748b90041f1e6cfb831efa268600fb00ac5cb7359e2f88c6b",
+      "bytes": 961931,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-07.jpg",
+          "sha256": "a03ace3d2738f7a748b90041f1e6cfb831efa268600fb00ac5cb7359e2f88c6b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg",
+      "sha256": "e1b083e6933cc60f728a7432b07013973733d01cc4268824e63901708eed09ee",
+      "bytes": 972614,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-08.jpg",
+          "sha256": "e1b083e6933cc60f728a7432b07013973733d01cc4268824e63901708eed09ee"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-09.jpg",
+      "sha256": "7efcb612a5e0fc78562a51fdc0c8c071ceaad0529115434d3fb95eb1440e2968",
+      "bytes": 1040700,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-09.jpg",
+          "sha256": "7efcb612a5e0fc78562a51fdc0c8c071ceaad0529115434d3fb95eb1440e2968"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-10.jpg",
+      "sha256": "4f51494c32c42f54b48f2655e615969e65aace5bd957720de005cdda0b5ed0ac",
+      "bytes": 700832,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-10.jpg",
+          "sha256": "4f51494c32c42f54b48f2655e615969e65aace5bd957720de005cdda0b5ed0ac"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-11.jpg",
+      "sha256": "100784e9286fa835666dced6df0aa5ae3462a2180bb90bf349b7f0f014081889",
+      "bytes": 583169,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-11.jpg",
+          "sha256": "100784e9286fa835666dced6df0aa5ae3462a2180bb90bf349b7f0f014081889"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-12.jpg",
+      "sha256": "fd2df2fef8c0fd17ad3f6545dc87f0acc4229f37450f4dc888f648e7e8f47d80",
+      "bytes": 563803,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-12.jpg",
+          "sha256": "fd2df2fef8c0fd17ad3f6545dc87f0acc4229f37450f4dc888f648e7e8f47d80"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-13.jpg",
+      "sha256": "59c64ee98c064e479e733ca648535bf79f2b0592f057974a764261d9f2e4b5ec",
+      "bytes": 593178,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-13.jpg",
+          "sha256": "59c64ee98c064e479e733ca648535bf79f2b0592f057974a764261d9f2e4b5ec"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg",
+      "sha256": "a074ebaebe8355d0ba3f8c7f1ac287ec731c313a27b8b2d513738ba1999853ef",
+      "bytes": 493535,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-14.jpg",
+          "sha256": "a074ebaebe8355d0ba3f8c7f1ac287ec731c313a27b8b2d513738ba1999853ef"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-15.jpg",
+      "sha256": "ce597bcc1e4c6eb730c220ea83639cd22c2427a785c24295486318457ab0f490",
+      "bytes": 520250,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-15.jpg",
+          "sha256": "ce597bcc1e4c6eb730c220ea83639cd22c2427a785c24295486318457ab0f490"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-16.jpg",
+      "sha256": "13e1e48e505f1092ee783706c52323625cd8ef0c2408a08dffc15b3b4eb2cd74",
+      "bytes": 549934,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-16.jpg",
+          "sha256": "13e1e48e505f1092ee783706c52323625cd8ef0c2408a08dffc15b3b4eb2cd74"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-17.jpg",
+      "sha256": "7f1b950dbe4d10f9df2b2e96099047a10b8edc8e680b1a62907a005ff7157774",
+      "bytes": 593173,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-17.jpg",
+          "sha256": "7f1b950dbe4d10f9df2b2e96099047a10b8edc8e680b1a62907a005ff7157774"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-18.jpg",
+      "sha256": "bbf9d4a8b2e019e092394516bea20e493e19e1e575e87828385e7435205af9dd",
+      "bytes": 582322,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-18.jpg",
+          "sha256": "bbf9d4a8b2e019e092394516bea20e493e19e1e575e87828385e7435205af9dd"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg",
+      "sha256": "6fefe428e4ed289abd8c0336b30cc36fc845a8bb70f85251c5f8a70d9430e139",
+      "bytes": 595367,
+      "kind": "actual_encoded_review_sheet",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/sheet-19.jpg",
+          "sha256": "6fefe428e4ed289abd8c0336b30cc36fc845a8bb70f85251c5f8a70d9430e139"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/ABCD-review.jpg",
+      "sha256": "4b06c4a2abeda045803bfc574b69ef1286faa06c643f7f11131dc8076da8f842",
+      "bytes": 505120,
+      "kind": "actual_thumbnail_review_contact",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/ABCD-review.jpg",
+          "sha256": "4b06c4a2abeda045803bfc574b69ef1286faa06c643f7f11131dc8076da8f842"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-A.png",
+      "sha256": "189499c734020c0e9f402950110fd8fee68a4f29d1a0516c6a0c2a976c3e156c",
+      "bytes": 2082302,
+      "kind": "thumbnail_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-fc060677-3672-436f-aa2c-6af75012b6cd.png",
+          "sha256": "189499c734020c0e9f402950110fd8fee68a4f29d1a0516c6a0c2a976c3e156c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-A.jpg",
+      "sha256": "819d5b7a21325c1fc302b58b5d86d45443d477af91302842bad7f053436bdd69",
+      "bytes": 1716181,
+      "kind": "thumbnail_export",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/Thumbnail-A.jpg",
+          "sha256": "819d5b7a21325c1fc302b58b5d86d45443d477af91302842bad7f053436bdd69"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-B.png",
+      "sha256": "71e44db3c864ac05f24dfdd9b3ddc5765788e9fd5a56ac65b661e97d9947e992",
+      "bytes": 2352380,
+      "kind": "thumbnail_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-1ea4d133-4874-4cbd-82c6-b782f64d8498.png",
+          "sha256": "71e44db3c864ac05f24dfdd9b3ddc5765788e9fd5a56ac65b661e97d9947e992"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-B.jpg",
+      "sha256": "be972bde642dfead42fa3e99516bfc78ca821fd6b2907e4d33ad44a4f3a67e74",
+      "bytes": 1862113,
+      "kind": "thumbnail_export",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/Thumbnail-B.jpg",
+          "sha256": "be972bde642dfead42fa3e99516bfc78ca821fd6b2907e4d33ad44a4f3a67e74"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-C.png",
+      "sha256": "7dd8cf886c1c832aa102d3c617b631fd13ad0181191d7a6bd79fd4305194ee2f",
+      "bytes": 2444762,
+      "kind": "thumbnail_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-13f36bcd-7273-4a61-9a38-5e421418ce04.png",
+          "sha256": "7dd8cf886c1c832aa102d3c617b631fd13ad0181191d7a6bd79fd4305194ee2f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-C.jpg",
+      "sha256": "3650cfaececd73357abfb3de8302fcec070bf090adbf558ede3882199ceb7224",
+      "bytes": 1935425,
+      "kind": "thumbnail_export",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/Thumbnail-C.jpg",
+          "sha256": "3650cfaececd73357abfb3de8302fcec070bf090adbf558ede3882199ceb7224"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-D.png",
+      "sha256": "4cab5c13d044d62011bccfe1cb90c3c05bed353f8f360b8fe4b34a6550658cb7",
+      "bytes": 2017415,
+      "kind": "thumbnail_original",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "generated_images/exec-5ba74ce2-bba9-424a-84fa-8c869e25538f.png",
+          "sha256": "4cab5c13d044d62011bccfe1cb90c3c05bed353f8f360b8fe4b34a6550658cb7"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-D.jpg",
+      "sha256": "2eaa4175c322f467a3528c3a6a49be33f08442dc5180958eaa45167a59044656",
+      "bytes": 1678359,
+      "kind": "thumbnail_export",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/Thumbnail-D.jpg",
+          "sha256": "2eaa4175c322f467a3528c3a6a49be33f08442dc5180958eaa45167a59044656"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/script-en.txt",
+      "sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725",
+      "bytes": 17515,
+      "kind": "exact_authored_script",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/script.txt",
+          "sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/manual-scene-directions.py",
+      "sha256": "8fd331e9d82d060481c1832d1e63263a108347b14cf1fc759119edb4db3d98ad",
+      "bytes": 67472,
+      "kind": "original_literal_directions",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/manual-scene-direction-blocks.py",
+          "sha256": "8fd331e9d82d060481c1832d1e63263a108347b14cf1fc759119edb4db3d98ad"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/English-Captions.srt",
+      "sha256": "519c6395ba9e9079b487bcf36d768be769b9a166dbde008bdb6497233fad3bbe",
+      "bytes": 28347,
+      "kind": "actual_vps_clock_captions",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/English-Captions.srt",
+          "sha256": "519c6395ba9e9079b487bcf36d768be769b9a166dbde008bdb6497233fad3bbe"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/UPLOAD.txt",
+      "sha256": "63f83d3273389a5a1a31518b316a2d421c7dbcc9e575bf309dd1c6cf31948894",
+      "bytes": 2259,
+      "kind": "final_upload_text",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/UPLOAD.txt",
+          "sha256": "63f83d3273389a5a1a31518b316a2d421c7dbcc9e575bf309dd1c6cf31948894"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK-master.prompt.txt",
+      "sha256": "1200d45e3e9e01e49e4db4b10f19776b9618caa8ae1b7e31e405777fc883f08f",
+      "bytes": 2103,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/BELOWDECK-master.prompt.txt",
+          "sha256": "1200d45e3e9e01e49e4db4b10f19776b9618caa8ae1b7e31e405777fc883f08f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK_NIGHT-master.prompt.txt",
+      "sha256": "ba879737e387c7ed26648e479051dc2a78a1c7dec1b9a12326e167240cc60715",
+      "bytes": 1160,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/BELOWDECK_NIGHT-master.prompt.txt",
+          "sha256": "ba879737e387c7ed26648e479051dc2a78a1c7dec1b9a12326e167240cc60715"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTAIN-master.prompt.txt",
+      "sha256": "600842398f90f363b0594acd8d56600a1fe8159bf69ca0300bffc31f0b149a45",
+      "bytes": 1676,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CAPTAIN-master.prompt.txt",
+          "sha256": "600842398f90f363b0594acd8d56600a1fe8159bf69ca0300bffc31f0b149a45"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTURED_SAILORS-master.prompt.txt",
+      "sha256": "c41879083771ba746c91b6f45027a3e83ef95c1a692c7a27d718e61d27b3de18",
+      "bytes": 1703,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CAPTURED_SAILORS-master.prompt.txt",
+          "sha256": "c41879083771ba746c91b6f45027a3e83ef95c1a692c7a27d718e61d27b3de18"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CREWMATE-master.prompt.txt",
+      "sha256": "e228d33520f71587bdd2e016bacacda50d7606fdb14e65736a9d0784ad4c88f5",
+      "bytes": 1474,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/CREWMATE-master.prompt.txt",
+          "sha256": "e228d33520f71587bdd2e016bacacda50d7606fdb14e65736a9d0784ad4c88f5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DEALER-master.prompt.txt",
+      "sha256": "fe7f6fc5f703923e2ccba65f0d964656e7ba8661d44c8df4d2d3872985cd9b8c",
+      "bytes": 1453,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DEALER-master.prompt.txt",
+          "sha256": "fe7f6fc5f703923e2ccba65f0d964656e7ba8661d44c8df4d2d3872985cd9b8c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK-master.prompt.txt",
+      "sha256": "8522fddf511757083eac1b81661c101974d9c0ee901b082f8002c227487f363f",
+      "bytes": 2627,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK-master.prompt.txt",
+          "sha256": "8522fddf511757083eac1b81661c101974d9c0ee901b082f8002c227487f363f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_AFTER_RAIN-master.prompt.txt",
+      "sha256": "d5ae595e6e249002703d31682e1ab9ecb851684c95dd7ef4088329fcbcaa169b",
+      "bytes": 1322,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_AFTER_RAIN-master.prompt.txt",
+          "sha256": "d5ae595e6e249002703d31682e1ab9ecb851684c95dd7ef4088329fcbcaa169b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_EVENING-master.prompt.txt",
+      "sha256": "b0bb4241fc528e5f3758533900d86eacd8d48ec0a888c00bad2de2f7c607706f",
+      "bytes": 1149,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_EVENING-master.prompt.txt",
+          "sha256": "b0bb4241fc528e5f3758533900d86eacd8d48ec0a888c00bad2de2f7c607706f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR-master.prompt.txt",
+      "sha256": "18a043277ac439a792b970d135040301b366844d48eca2827db244ecb981e4d2",
+      "bytes": 1564,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_HARBOR-master.prompt.txt",
+          "sha256": "18a043277ac439a792b970d135040301b366844d48eca2827db244ecb981e4d2"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR_FURLED-master.prompt.txt",
+      "sha256": "47920b53e1e942edf7cb5ebf47937592c20dcb1e1cc2a0a1b08daec9133dbe64",
+      "bytes": 1217,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_HARBOR_FURLED-master.prompt.txt",
+          "sha256": "47920b53e1e942edf7cb5ebf47937592c20dcb1e1cc2a0a1b08daec9133dbe64"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_MERCHANT_ENCOUNTER-master.prompt.txt",
+      "sha256": "8dcafdaa7173d961693dd64196ba5ccc2d8fc45a10df56f3c447ca00192ca3dc",
+      "bytes": 1182,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_MERCHANT_ENCOUNTER-master.prompt.txt",
+          "sha256": "8dcafdaa7173d961693dd64196ba5ccc2d8fc45a10df56f3c447ca00192ca3dc"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_PATCHED-master.prompt.txt",
+      "sha256": "b666b6d61bae4513bd4ea1a3cc942912327b6faa52a33c8c85c518f2be7c7199",
+      "bytes": 1315,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_PATCHED-master.prompt.txt",
+          "sha256": "b666b6d61bae4513bd4ea1a3cc942912327b6faa52a33c8c85c518f2be7c7199"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_RAIN-master.prompt.txt",
+      "sha256": "6f1f75cdd910db71fdef3612ce14f13ab0ae8aaf7e320a315a4cc70a7d634dfe",
+      "bytes": 1439,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_RAIN-master.prompt.txt",
+          "sha256": "6f1f75cdd910db71fdef3612ce14f13ab0ae8aaf7e320a315a4cc70a7d634dfe"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_SAIL_REPAIR-master.prompt.txt",
+      "sha256": "5dff4f354d353fb4f6c081c19932889b1a13ff26a28279948abd3628ac43daf5",
+      "bytes": 1419,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_SAIL_REPAIR-master.prompt.txt",
+          "sha256": "5dff4f354d353fb4f6c081c19932889b1a13ff26a28279948abd3628ac43daf5"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/ENSLAVED_ASIDE-master.prompt.txt",
+      "sha256": "2846bd946dcfa5d5c4118b5fbe6094d8c80ebddcd22ebcf59868f04bc1657848",
+      "bytes": 1938,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/ENSLAVED_ASIDE-master.prompt.txt",
+          "sha256": "2846bd946dcfa5d5c4118b5fbe6094d8c80ebddcd22ebcf59868f04bc1657848"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/MARKET-master.prompt.txt",
+      "sha256": "7c545014bf7c64cfe4cfefed7a733c73a304a37ac7f4a6d806db1472a022d354",
+      "bytes": 1723,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/MARKET-master.prompt.txt",
+          "sha256": "7c545014bf7c64cfe4cfefed7a733c73a304a37ac7f4a6d806db1472a022d354"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT-master.prompt.txt",
+      "sha256": "4d17cd30b9e1a7e1ef9644c6b496e22b0621ba4d92215a6bd066d0ffdd04319e",
+      "bytes": 1692,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT-master.prompt.txt",
+          "sha256": "4d17cd30b9e1a7e1ef9644c6b496e22b0621ba4d92215a6bd066d0ffdd04319e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_MOORED_SLOOP-master.prompt.txt",
+      "sha256": "d862f80fbd0fd644f6fe08d20432108450c08a9fc9f042ed4a76cf7a496c0e4c",
+      "bytes": 2192,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_MOORED_SLOOP-master.prompt.txt",
+          "sha256": "d862f80fbd0fd644f6fe08d20432108450c08a9fc9f042ed4a76cf7a496c0e4c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SHIP_DANGER-master.prompt.txt",
+      "sha256": "7c8a198842d6dacd7950231c468cf3d85df8efa5bcfca78e941e4e35155f13c6",
+      "bytes": 1231,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_SHIP_DANGER-master.prompt.txt",
+          "sha256": "7c8a198842d6dacd7950231c468cf3d85df8efa5bcfca78e941e4e35155f13c6"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SUNSET-master.prompt.txt",
+      "sha256": "da037cc30a504ba60d75f2f34067addb5833e3a8b5c59ec3ed5d4ba6397f524e",
+      "bytes": 978,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/PORT_SUNSET-master.prompt.txt",
+          "sha256": "da037cc30a504ba60d75f2f34067addb5833e3a8b5c59ec3ed5d4ba6397f524e"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/QUARTERMASTER-master.prompt.txt",
+      "sha256": "f531dd3c51b2f078050af993cdc4e101b7f1a5187cf7ca09a6748f29b98e16c1",
+      "bytes": 1499,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/QUARTERMASTER-master.prompt.txt",
+          "sha256": "f531dd3c51b2f078050af993cdc4e101b7f1a5187cf7ca09a6748f29b98e16c1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE-master.prompt.txt",
+      "sha256": "d05a42837b213c1fcaf8eb1495ac0c3c06c15ea29268830351852e160c4f6ae4",
+      "bytes": 1424,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE-master.prompt.txt",
+          "sha256": "d05a42837b213c1fcaf8eb1495ac0c3c06c15ea29268830351852e160c4f6ae4"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_ISOLATED-master.prompt.txt",
+      "sha256": "236d780189e2b726cd4263b769950e75e9c1a7a8b3199f20c06a37655d02cda6",
+      "bytes": 900,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE_ISOLATED-master.prompt.txt",
+          "sha256": "236d780189e2b726cd4263b769950e75e9c1a7a8b3199f20c06a37655d02cda6"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_SLOOP_MAINTENANCE-master.prompt.txt",
+      "sha256": "0788846df2bf9162315e08cabfe597a358063e4e45e38f83fcc05ab3a12cb337",
+      "bytes": 1497,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/SHORE_SLOOP_MAINTENANCE-master.prompt.txt",
+          "sha256": "0788846df2bf9162315e08cabfe597a358063e4e45e38f83fcc05ab3a12cb337"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN-master.prompt.txt",
+      "sha256": "e6e3ccda7f2b86e6e5c76011ada53f5820efa37842a2e28928b540364841ff50",
+      "bytes": 1493,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TAVERN-master.prompt.txt",
+          "sha256": "e6e3ccda7f2b86e6e5c76011ada53f5820efa37842a2e28928b540364841ff50"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN_EVENING-master.prompt.txt",
+      "sha256": "d38f87fb08355e1a6b9eae30683ff2f1e72ce57dc26687f5426267dcde2ef4de",
+      "bytes": 895,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TAVERN_EVENING-master.prompt.txt",
+          "sha256": "d38f87fb08355e1a6b9eae30683ff2f1e72ce57dc26687f5426267dcde2ef4de"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TOM-master.prompt.txt",
+      "sha256": "de7c4062c0b1251a70f03aeb1c1d1b8d10cfe2b8db0f10c4256fa8870a0b5b00",
+      "bytes": 1756,
+      "kind": "literal_master_prompt",
+      "byte_identical_original": true,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/TOM-master.prompt.txt",
+          "sha256": "de7c4062c0b1251a70f03aeb1c1d1b8d10cfe2b8db0f10c4256fa8870a0b5b00"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/authored-storyboard-initial.json",
+      "sha256": "01342c9e112a80fba6907c066546ef32904cc29a715ed7ca264035749c8dac53",
+      "bytes": 98939,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/storyboard.json",
+          "sha256": "57109e3f9e3503c1052dfa18335df3eb39b91ecd97a64df930089b0024aeda46"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/selected-generation-plan.json",
+      "sha256": "9745d9c16158cbc57dfa80a82ded69b404d5d4f213c94bcec1050b28e6563dda",
+      "bytes": 1493391,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/vps-adoption/selected-generation-provenance-plan.json",
+          "sha256": "eda642fc77f76ad0212145dcf0f8e26791700e369a4d21ca0b29d9e57a824010"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/combined-actual-source-review.json",
+          "sha256": "66252c936a25404d5d14512933efded49117b125b8f15e2d40d10894acc78e81"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/manual-scene-direction-blocks.py",
+          "sha256": "8fd331e9d82d060481c1832d1e63263a108347b14cf1fc759119edb4db3d98ad"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/authored-final-vps-clock-plan.json",
+      "sha256": "23739a0a1927026d47fe0a4175590af1c5ef2e7bdb217db2256f58568fe8ab1d",
+      "bytes": 524501,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/vps-adoption/exact-authored-scenes-new-vps-clock.json",
+          "sha256": "cf284fc07bd17d78de048a14c7251a49c45502c6dca76008594937a8becfda0c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/vps-paragraph-timings.json",
+      "sha256": "a55b0fc3e31669fd01bcea568ed0a962ea4264a81bd9f99151433c1d89f8706f",
+      "bytes": 31199,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/vps-adoption/actual-paragraph-timings.json",
+          "sha256": "727d67be9e83d555a7f06c717df7eaf253a9760d794a88305e3b3a477a50e6f9"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/vps-word-clock.json",
+      "sha256": "420ca1767f4f5302daee237c536e90bc4cb31d1819de877a419919e1bbdde714",
+      "bytes": 300646,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/vps-adoption/native-aligned-words.json",
+          "sha256": "420ca1767f4f5302daee237c536e90bc4cb31d1819de877a419919e1bbdde714"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/caption-proof.json",
+      "sha256": "4f9bdca458c42e081c863d5ad50508b212ca0ee2499a49725183dafe83118059",
+      "bytes": 731,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/caption-proof.json",
+          "sha256": "da316c4f13a0bf29e9889cba5361b5e716b705abbe5579298dff138fb535fdd3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/upload-metadata.json",
+      "sha256": "0e0df26fe9e92dd73eae4158d50dea1c029c887fcc7136d28d7172be970151fb",
+      "bytes": 2672,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/upload-metadata.json",
+          "sha256": "a0bb66a2203cc0fc57f27557aa95ddce26aa2e2cbe73f868f3f905132e9f5746"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/root-script-release.json",
+      "sha256": "2633128d3cd99d5fa194d1cf39732f4ddc946303ec2b0be2bacadf404408e700",
+      "bytes": 827,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/root-script-release.json",
+          "sha256": "bf3306428d7d6677253f9e2b3c542b53e16273abe951a677a20c9fa29a2e2dfb"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/script-proof.json",
+      "sha256": "5a5730117952621f1f5fceae06b2183d6846ba11b2310c156f8a86873edcfbc0",
+      "bytes": 583,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/script-proof.json",
+          "sha256": "9f0d2b82d7e6455173beae4bb54b0614f4ccf1c0d3f4d89bda247d36e99429d7"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-registry.json",
+      "sha256": "59194f79c18a3884648c58db5d37707b02077e8902d19b94c6e9a28fb74bf449",
+      "bytes": 113602,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/registry.json",
+          "sha256": "42f1cd0ad2728157b2f2894484584f1b29eab8fae9694e8062aada5de41b8eb1"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/root-selected-assets-v1.json",
+          "sha256": "9104a06ef2793c1d4f95d271ed7dfec930ef5e2ce1431f5d6e76b36f444fbbf8"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/DECK_EVENING-root-request.json",
+          "sha256": "4f4d14a671823cb1378093be75ec0e0fc43da1933b55be5a869d6eea95744d7b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-review.json",
+      "sha256": "c7bf8a4e840ce8b13df76a7b6cae7627082687dc6378112e98336d14a2d02aee",
+      "bytes": 247916,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/combined-actual-source-review.json",
+          "sha256": "66252c936a25404d5d14512933efded49117b125b8f15e2d40d10894acc78e81"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/provenance-and-review.json",
+      "sha256": "6344d8a14512f00456bbec11f08e4d6e5ba03f2d8c6877a97a530658683317ab",
+      "bytes": 24356,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/generation-provenance.json",
+          "sha256": "e7acb73f530487e0de8af3ab3eb5d1c3262cf5ace04e81e05fa580316afaf59d"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/export-and-actual-review.json",
+          "sha256": "5a018e1736094af5c9249a5e19fb806d6821511ad860ca277e866e840eb666e3"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-technical-qa.json",
+      "sha256": "40525bbc11bbff2523927e283249daa2244d4de190c3b59296b9a27b3c315c20",
+      "bytes": 4708,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/final-technical-qa.json",
+          "sha256": "b962ae92bbf0fb2ba6800eb456695c2d99147d8f06da9e275d8211b7fc39201b"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-visual-qa.json",
+      "sha256": "3416fd7b96f7de1171201fd6d9938366f4a2866fb70738daaa373f438f21e698",
+      "bytes": 14370,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/final-visual-qa.json",
+          "sha256": "1d286ebd4b451c94b205da246161509d5ad2250a3424d492365c23740684186d"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-capture-index.json",
+      "sha256": "7d7af2de20873487af6b801c53c309a9bbbfe47d0f1a6ebe0b2bea35783f6fe3",
+      "bytes": 29113,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/final-vps-encoded-qa/3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7/capture-index.json",
+          "sha256": "94c101614063ceba76de3194470aca7a347d7784bfa962852f7a3f36e4443d3c"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/root-encoded-spot-check.json",
+      "sha256": "f17f5af2786de929dfec13816cb3953360e897903a9ed46f348156c3501ce316",
+      "bytes": 2538,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/root-encoded-spot-check.json",
+          "sha256": "4b8aa847a497156f73b56607594e9909eb15b7c3337d699b69d92c513cba8f2f"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-quality-review.json",
+      "sha256": "10a951a0d11e30f7c09cf0bc04da9b8e7560e5254b91a5a958c54d5f4e15bb33",
+      "bytes": 1002,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/final-quality-review.json",
+          "sha256": "5743059ae27c4815f96cb90b4734560f6d7fbf362c5ece71639845f57ee23561"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/root-film-release.json",
+      "sha256": "67a0170b702376df5d21ecf6a8e27f0affe9fbb205ffa7fcc9b69ec340a46e8d",
+      "bytes": 185,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/root-film-release.json",
+          "sha256": "d76451e0480d64157d75a3b853ed58d65c60b80246a1c0d3878f240641cbeee1"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-source-catalog.json",
+      "sha256": "13ef1115d106965c1d761327605473e2dd234696b73c2f28df9dc6f25bc778c3",
+      "bytes": 10144,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-background.json",
+          "sha256": "b6bb56cbe5b1235a1b33bf1c733a8f643f90abb8e61811d7ab0cb9f394427ce4"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-details.json",
+          "sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-focused-ship-search.json",
+          "sha256": "c36eeade41d8e2fbf3de65e6f11f44162711a3d7fa4b0aa04f21de589b865a60"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-gaff-period.json",
+          "sha256": "3c15779f55e44c8e87fea41a5fdd798b8b0e12a843e04deb89c0692ca61e26bf"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-primary-record.json",
+          "sha256": "7e8ed8eae01e7d8c777b935bd8f20ce1f6090084d353253c252ce769dccc8c19"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-primary-text.json",
+          "sha256": "544b33c7eb819144ea12720b451679bfd6dac7d66885fd048b96934c1ac839e1"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-objects.json",
+          "sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-results.json",
+          "sha256": "bf5d37e4bafc184b5428caea7098a1cf2b6cf6b9b3b5efe5db5296510d3ff5e5"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-search.json",
+          "sha256": "abced571ccac224b661306496af7556a0432475573f51836a794b0f48cadc9bf"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results.json",
+          "sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-supporting-excerpts.json",
+      "sha256": "04e1cacd6959838dac1a9b5e6333317b8a6d242c8195ac8882d0a2cee2077fca",
+      "bytes": 2871,
+      "kind": "public_metadata_derivative",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/rmg-golden.txt",
+          "sha256": "af49d483b68d49a2db991a37b3e4cfed423634ec984b5121916291fce508d585"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/rmg-factfiction.txt",
+          "sha256": "2ba0d2dff7172e0ead2bd914d62421413bae957eead941224e79a2d2543fc84e"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/rmg-scurvy.txt",
+          "sha256": "70145422b77aaa0b308aead4d781304849166939d6b2093beb3ddc43724cc217"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/rmg-articles.txt",
+          "sha256": "1a9ee8f93c991eea0c9dce8ab23cdd30e0a652fc36b4a907f7ed3f4a3d61173f"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/rmg-gaff-period.txt",
+          "sha256": "a8a343c6cd1e837da6e2ebf97517e2316d4364aa320b63b6529eabd9020efd72"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-constraints.md",
+      "sha256": "4898b7d4b66d8b1608f1a4570a204a8badef490470771ea0ac7721c9ef6ac68a",
+      "bytes": 2130,
+      "kind": "authored_handoff_research_summary",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/script.txt",
+          "sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/storyboard.json",
+          "sha256": "57109e3f9e3503c1052dfa18335df3eb39b91ecd97a64df930089b0024aeda46"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-background.json",
+          "sha256": "b6bb56cbe5b1235a1b33bf1c733a8f643f90abb8e61811d7ab0cb9f394427ce4"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-details.json",
+          "sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-focused-ship-search.json",
+          "sha256": "c36eeade41d8e2fbf3de65e6f11f44162711a3d7fa4b0aa04f21de589b865a60"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-gaff-period.json",
+          "sha256": "3c15779f55e44c8e87fea41a5fdd798b8b0e12a843e04deb89c0692ca61e26bf"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-primary-record.json",
+          "sha256": "7e8ed8eae01e7d8c777b935bd8f20ce1f6090084d353253c252ce769dccc8c19"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-primary-text.json",
+          "sha256": "544b33c7eb819144ea12720b451679bfd6dac7d66885fd048b96934c1ac839e1"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-objects.json",
+          "sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-results.json",
+          "sha256": "bf5d37e4bafc184b5428caea7098a1cf2b6cf6b9b3b5efe5db5296510d3ff5e5"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results-ship-search.json",
+          "sha256": "abced571ccac224b661306496af7556a0432475573f51836a794b0f48cadc9bf"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/research-pages/fetch-results.json",
+          "sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+        }
+      ]
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/README.md",
+      "sha256": "167b1a41ebaf749c22bc9ed60f616bd3a2329257d48b52b61589d6d4f896899f",
+      "bytes": 6900,
+      "kind": "authored_handoff_documentation",
+      "byte_identical_original": false,
+      "original_sources": [
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/vps-adoption/selected-generation-provenance-plan.json",
+          "sha256": "eda642fc77f76ad0212145dcf0f8e26791700e369a4d21ca0b29d9e57a824010"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/combined-actual-source-review.json",
+          "sha256": "66252c936a25404d5d14512933efded49117b125b8f15e2d40d10894acc78e81"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/final-quality-review.json",
+          "sha256": "5743059ae27c4815f96cb90b4734560f6d7fbf362c5ece71639845f57ee23561"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/delivery/upload-metadata.json",
+          "sha256": "a0bb66a2203cc0fc57f27557aa95ddce26aa2e2cbe73f868f3f905132e9f5746"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/visual-masters/registry.json",
+          "sha256": "42f1cd0ad2728157b2f2894484584f1b29eab8fae9694e8062aada5de41b8eb1"
+        },
+        {
+          "collection_identifier": "pirate-pages-production/episode-01/thumbnails/export-and-actual-review.json",
+          "sha256": "5a018e1736094af5c9249a5e19fb806d6821511ad860ca277e866e840eb666e3"
+        }
+      ]
+    }
+  ],
+  "source_scene_count": 85,
+  "source_scene_pass_count": 85,
+  "actual_generation_argument_associations": {
+    "confirmed_saved_receipt": 85
+  },
+  "all_declared_reference_paths_resolved": true,
+  "missing_reference_mappings": [],
+  "policy": {
+    "metadata": "Explicit top-level and typed record whitelist; prompt, referenced_image_paths and transparent_background only for generation arguments.",
+    "excluded": [
+      "raw requests/results",
+      "member sessions/access keys",
+      "SSH keys",
+      "private endpoints/signed output URLs",
+      "browser state",
+      "full movie binaries and alternate/intermediate audio; current official narration is managed separately by root handoff",
+      "provider/model configuration",
+      "full third-party museum article bodies",
+      "individual large encoded frame files"
+    ],
+    "portable_paths": "All emitted asset/document paths repository-relative. Original source collections identified by non-secret relative labels and original SHA256."
+  },
+  "counts": {
+    "packaged_files_excluding_manifest": 249,
+    "packaged_bytes_excluding_manifest": 384156718,
+    "unique_png_assets": 137
+  },
+  "validation": {
+    "byte_identical_copy_sha256s_verified": true,
+    "selected_image_sha256s_match_actual_source_ledgers": true,
+    "all85_actual_generation_ref_lists_preserve_order": true,
+    "selected_script_words": 2744,
+    "final_vps_word_clock_words": 2744
+  }
+}

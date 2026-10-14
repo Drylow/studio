@@ -1,0 +1,16 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "9ae750b6c88631bd06b93c7feac267b53745b8bf65e5fd6d7f25be2960e80d5a",
+  "original_document_path": "/workspace/samurai-thumbnail-revision/provenance/root-literal-b-final-edit.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-thumbnail-final-count-edit-v1",
+    "tool": "image_gen.imagegen",
+    "input_actual_full_png_viewed": true,
+    "request": {
+      "id": "B-final-sword-count",
+      "path": "assets/reference-inputs/c5130b455d99c4bd80e9ecca94fbcce4158799b8282ca85f643ea0fc6fba0f1f.png",
+      "prompt": "ONE SURGICAL CORRECTION ONLY to this finished 1672x941 thumbnail. There are THREE visible sword handles at the foreground samurai's belt. REMOVE ONLY THE LEFTMOST, LOWEST DIAGONAL sword: its black/cream diamond-pattern handle starts around x495,y790 and extends to x570,y884, with its sheath continuing downward from there. Erase that whole leftmost sword handle/guard/sheath and restore the underlying indigo kimono/grey obi fabric cleanly. KEEP the other TWO swords unchanged: the tall near-vertical hilt around x598,y780 and the rightmost diagonal hilt around x642,y816. Final foreground count MUST BE TWO sword handles, not three. Do NOT replace the removed sword with any other weapon or prop. Do NOT add another handle behind the cream paper. Preserve EXACTLY everything else: skeptical half-lidded face, main topknot, hands/papers, black outline style, blue robe, office, clerk, boss, all registers, colors and exact yellow text 'ALL HONOR, NO FREEDOM?'. Do not change expression, layout, crop or lettering. Keep 16:9 full canvas and same drawing quality."
+    }
+  }
+}

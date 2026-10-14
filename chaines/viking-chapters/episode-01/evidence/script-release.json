@@ -1,0 +1,19 @@
+{
+  "state": "pass",
+  "reviewer": "root",
+  "script_path": "chaines/viking-chapters/episode-01/script-en.txt",
+  "script_sha256": "88c9690aa11d0d0e46eca2d9cbe9408b9b98a93f5ba0a86ffee81d45c8c86a33",
+  "spoken_words": 2742,
+  "paragraph_scenes": 88,
+  "review_evidence": "Root read the complete 2733-word earlier version through exec output; the only subsequently reviewed change appends the literal final brand sentence. Historically bounded imagined household/expedition, sources identified, no false universal pay/fatality claims, raiding distinguished from Norse life.",
+  "voice": {
+    "provider": "algrow",
+    "voice_id": "rU18Fk3uSDhmg5Xh41o4",
+    "speed": 1
+  },
+  "title": "Why Being a Viking Was Worse Than You Think",
+  "desired_duration_seconds": [
+    900,
+    1200
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "viking-manual-exact-variant-arguments",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "FARM_DAWN_CORRECTED",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        1,
+        2,
+        3
+      ],
+      "prompt": "Make a LIGHT-ONLY edit of reference1 EXACT EMPTY FARM at LATE-SPRING PRE-SUNRISE DAWN, barely light but readable. Keep this SAME LATE-SPRING season: EVERY existing green leafy tree retains its full leafy crown, green grass, leafy kitchen garden and GREEN turf roof remain intact. No bare branches, frost, snow, dead garden, autumn colors or winter jump. Preserve identical building/roof ridge/rafter/plank door LEFT, small side-wall aperture, wall woodpile, fieldstone base, foreground-left stump, right small shed, wattle fences, path, distant fjord and low wooded hills. Reference2 previous trial supplies ONLY dim cool gray-blue dawn illumination with restrained pale warm sky strip at RIGHT; DO NOT copy its leafless trees/vegetation or any changed architecture. Dim original green late-spring world with damp dew-darkened soil and soft low dawn light from original upper-right direction. SAME flat matte illustrated2D graphic contours, broad cel shadows and restrained drawn detail; no photorealism, texture increase, anime or3D. Keep exactly same original camera, framing, door orientation and all ground layout. No people, animals, sheep, loose rail, added props, lamps, weapons, writing, rune, logo, watermark or panels. Full-bleed wide16:9. This is only pre-sunrise LIGHT, not early spring season.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png",
+        "chaines/viking-chapters/episode-01/assets/references/eb64a84a4eab631d.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "FARM_RAIN",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        18
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY FARM into ordinary LATE-SPRING DAYLIGHT LIGHT RAIN, SAME CAMERA and SAME physical place. Change only weather/light: cloudy gray sky, modest thin diagonal rain streaks, damp darker earth and timber, shallow small puddles on original path. Preserve green leafy trees, green turf roof, living garden and grass, no early-spring bare branches/frost/snow/autumn. Original LEFT longhouse roof/door/window/stonebase/woodpile, foreground-left stump, RIGHT low shed and wattle fence/garden remain at EXACT positions/proportions with same paths/fjord/hills and intact fence. Soft overcast gray daylight remains readable, no lightning, massive flood, hurricane or blue-black dramatic night. SAME restrained matte clean graphic2D drawing with dark outlines and broad simple shadows, no realism/3D/anime/painterly texture escalation. Absolutely EMPTY: no actors/animals/weapons/tools/newprops, text/runes/signs/logos/captions/panels. Full-bleed landscape16:9, never mirror/rotate/reframe the camera.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

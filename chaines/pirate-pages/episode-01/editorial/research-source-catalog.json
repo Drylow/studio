@@ -1,0 +1,219 @@
+{
+  "schema": "historical-research-fetch-provenance-v1",
+  "sources": [
+    {
+      "id": "worldhistory-pirates",
+      "url": "https://www.worldhistory.org/Piracy/",
+      "error": "HTTP Error 403: Forbidden",
+      "fetch_ledger_identifier": "fetch-results-background.json",
+      "fetch_ledger_sha256": "b6bb56cbe5b1235a1b33bf1c733a8f643f90abb8e61811d7ab0cb9f394427ce4"
+    },
+    {
+      "id": "britannica-piracy",
+      "url": "https://www.britannica.com/topic/piracy",
+      "error": "HTTP Error 403: Forbidden",
+      "fetch_ledger_identifier": "fetch-results-background.json",
+      "fetch_ledger_sha256": "b6bb56cbe5b1235a1b33bf1c733a8f643f90abb8e61811d7ab0cb9f394427ce4"
+    },
+    {
+      "id": "rmg-pirate-flags",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/pirate-flags-decoded",
+      "status": 200,
+      "bytes": 109287,
+      "fetch_ledger_identifier": "fetch-results-background.json",
+      "fetch_ledger_sha256": "b6bb56cbe5b1235a1b33bf1c733a8f643f90abb8e61811d7ab0cb9f394427ce4",
+      "retrieved_text_sha256": "d85f6193b106b600dce2df1b27d5d9d3099f4ac252e6ad8dfbe7d044cb2e26ca"
+    },
+    {
+      "id": "rmg-factfiction",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/pirates-fact-or-fiction",
+      "status": 200,
+      "bytes": 107818,
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef",
+      "retrieved_text_sha256": "2ba0d2dff7172e0ead2bd914d62421413bae957eead941224e79a2d2543fc84e"
+    },
+    {
+      "id": "rmg-blackbeard-real",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/who-was-blackbeard",
+      "status": 200,
+      "bytes": 121804,
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef",
+      "retrieved_text_sha256": "714ca9a8fd39792f9787ec8aa32b3e0ec6a72c097c0c33df7a52fd86cd6b5b2d"
+    },
+    {
+      "id": "rmg-articles",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/pirates-bartholomew-roberts-chaloner-ogle-cup",
+      "status": 200,
+      "bytes": 121147,
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef",
+      "retrieved_text_sha256": "1a9ee8f93c991eea0c9dce8ab23cdd30e0a652fc36b4a907f7ed3f4a3d61173f"
+    },
+    {
+      "id": "rmg-biscuits",
+      "url": "https://www.rmg.co.uk/stories/topics/what-ships-biscuit",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef"
+    },
+    {
+      "id": "rmg-sailorsfood",
+      "url": "https://www.rmg.co.uk/stories/topics/food-sea",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef"
+    },
+    {
+      "id": "nps-pirates",
+      "url": "https://www.nps.gov/articles/000/pirates.htm",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results-details.json",
+      "fetch_ledger_sha256": "4ef599b61cb065d77d9d5b905aa6a0e1ce02e8221fbe739956d2adfa44bac3ef"
+    },
+    {
+      "id": "rmg-search-Bermuda",
+      "url": "https://www.rmg.co.uk/collections/objects/search/Bermuda?date_from=1650&date_to=1730",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-focused-ship-search.json",
+      "fetch_ledger_sha256": "c36eeade41d8e2fbf3de65e6f11f44162711a3d7fa4b0aa04f21de589b865a60"
+    },
+    {
+      "id": "rmg-search-gaff",
+      "url": "https://www.rmg.co.uk/collections/objects/search/gaff?date_from=1650&date_to=1730",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-focused-ship-search.json",
+      "fetch_ledger_sha256": "c36eeade41d8e2fbf3de65e6f11f44162711a3d7fa4b0aa04f21de589b865a60"
+    },
+    {
+      "id": "rmg-gaff-period",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12464",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-gaff-period.json",
+      "fetch_ledger_sha256": "3c15779f55e44c8e87fea41a5fdd798b8b0e12a843e04deb89c0692ca61e26bf",
+      "retrieved_text_sha256": "a8a343c6cd1e837da6e2ebf97517e2316d4364aa320b63b6529eabd9020efd72"
+    },
+    {
+      "id": "gutenberg-record",
+      "url": "https://www.gutenberg.org/ebooks/40580",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-primary-record.json",
+      "fetch_ledger_sha256": "7e8ed8eae01e7d8c777b935bd8f20ce1f6090084d353253c252ce769dccc8c19",
+      "retrieved_text_sha256": "c0fe826f85a05e8158c583b23a173bb9acf095ae9362b2889e3d370971acfac5"
+    },
+    {
+      "id": "johnson-1724",
+      "url": "https://www.gutenberg.org/cache/epub/40580/pg40580-images.html",
+      "status": 200,
+      "bytes": 913627,
+      "fetch_ledger_identifier": "fetch-results-primary-text.json",
+      "fetch_ledger_sha256": "544b33c7eb819144ea12720b451679bfd6dac7d66885fd048b96934c1ac839e1"
+    },
+    {
+      "id": "rmg-ship-66355",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66355",
+      "status": 200,
+      "bytes": 86536,
+      "fetch_ledger_identifier": "fetch-results-ship-objects.json",
+      "fetch_ledger_sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b",
+      "retrieved_text_sha256": "97802cea90a87ffa9e337cba4a4938b1968c6d5871be991ec5d764beb434d3d2"
+    },
+    {
+      "id": "rmg-ship-66351",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66351",
+      "status": 200,
+      "bytes": 87658,
+      "fetch_ledger_identifier": "fetch-results-ship-objects.json",
+      "fetch_ledger_sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b",
+      "retrieved_text_sha256": "f7bd8d9654402df143ef0de70b25047403e94e36f27169ff64e7af89705930f4"
+    },
+    {
+      "id": "rmg-ship-381702",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-381702",
+      "status": 200,
+      "bytes": 77764,
+      "fetch_ledger_identifier": "fetch-results-ship-objects.json",
+      "fetch_ledger_sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b",
+      "retrieved_text_sha256": "b13b206f42befb4e1c1e77b6ca6b0ed1cbf7c74b7d894100ca7550a1228ed0fa"
+    },
+    {
+      "id": "rmg-ship-66359",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66359",
+      "status": 200,
+      "bytes": 82725,
+      "fetch_ledger_identifier": "fetch-results-ship-objects.json",
+      "fetch_ledger_sha256": "627d324b72ec0135cd5c235f528aa84337805865021317908d064bf8a7256e0b",
+      "retrieved_text_sha256": "79d85cef01504b6d560403e728103fe0392539e58d0b4d3649b67dff34b944a6"
+    },
+    {
+      "id": "rmg-sloop-results",
+      "url": "https://www.rmg.co.uk/collections/objects/search/sloop?date_from=1650&date_to=1730",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-ship-results.json",
+      "fetch_ledger_sha256": "bf5d37e4bafc184b5428caea7098a1cf2b6cf6b9b3b5efe5db5296510d3ff5e5"
+    },
+    {
+      "id": "rmg-sloop-search",
+      "url": "https://www.rmg.co.uk/collections/objects",
+      "status": 200,
+      "fetch_ledger_identifier": "fetch-results-ship-search.json",
+      "fetch_ledger_sha256": "abced571ccac224b661306496af7556a0432475573f51836a794b0f48cadc9bf",
+      "retrieved_text_sha256": "fdcdb1819305c3a3fd4eca91912df3fdcf0ee9fde5f75f7cd70e0db7c881eb32"
+    },
+    {
+      "id": "rmg-pirates",
+      "url": "https://www.rmg.co.uk/stories/topics/pirates-facts-history",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+    },
+    {
+      "id": "rmg-golden",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/pirates-history-golden-age-piracy",
+      "status": 200,
+      "bytes": 109507,
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94",
+      "retrieved_text_sha256": "af49d483b68d49a2db991a37b3e4cfed423634ec984b5121916291fce508d585"
+    },
+    {
+      "id": "rmg-code",
+      "url": "https://www.rmg.co.uk/stories/topics/pirate-code",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+    },
+    {
+      "id": "rmg-life",
+      "url": "https://www.rmg.co.uk/stories/topics/what-was-life-like-board-pirate-ship",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+    },
+    {
+      "id": "rmg-blackbeard",
+      "url": "https://www.rmg.co.uk/stories/topics/blackbeard",
+      "error": "HTTP Error 404: Not Found",
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+    },
+    {
+      "id": "rmg-scurvy",
+      "url": "https://www.rmg.co.uk/stories/maritime-history/what-scurvy",
+      "status": 200,
+      "bytes": 83133,
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94",
+      "retrieved_text_sha256": "70145422b77aaa0b308aead4d781304849166939d6b2093beb3ddc43724cc217"
+    },
+    {
+      "id": "colonial-piracy",
+      "url": "https://www.colonialwilliamsburg.org/learn/deep-dives/pirates/",
+      "error": "HTTP Error 403: Forbidden",
+      "fetch_ledger_identifier": "fetch-results.json",
+      "fetch_ledger_sha256": "831ff87e88c7819851fd9cb58b85c4e270e775f3104c54cc55c1ec401c9ddd94"
+    }
+  ],
+  "notice": "HTTP failures retained honestly. Successful fetched bodies are not wholesale republished; authored factual constraints and short supporting quotes are separate."
+}

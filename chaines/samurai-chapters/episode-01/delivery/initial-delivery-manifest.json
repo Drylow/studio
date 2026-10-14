@@ -1,0 +1,72 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "3fa307722e21c8bd112b63caab26592e20fc1bcae1a36c1861f8b2762fc45a36",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/gofile-final-delivery-manifest.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-gofile-delivery-v1",
+    "files": [
+      {
+        "role": "video",
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/Samurai-Chapters-Why-Being-a-Samurai-Was-Worse-Than-You-Think.mp4",
+        "sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163"
+      },
+      {
+        "role": "thumbnail_a",
+        "path": "thumbnails/archive-A.jpg",
+        "sha256": "855ff69f054f782a6967c493a6b5f33f7fcd5fb1b1efbacd9e5bae200c37ce21"
+      },
+      {
+        "role": "thumbnail_b",
+        "path": "thumbnails/archive-B.jpg",
+        "sha256": "54df7ddd27d46066f0e5c2df67080974fecfa78cad6b58026c7d55c97bc7b5bb"
+      },
+      {
+        "role": "upload_text",
+        "path": "delivery/UPLOAD-original.txt",
+        "sha256": "310b85bec254ec56cb91133f6092b58db75c4df1f18881382386eeb62f409c4c"
+      },
+      {
+        "role": "captions",
+        "path": "delivery/English-Captions.srt",
+        "sha256": "f6550a85b18f4050320376b8359ea402486140566c00424d0ac796bdddd1549b"
+      }
+    ],
+    "evidence": {
+      "source_review": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/source-shot-review.json",
+        "sha256": "07a91d7f721a831016fe603622e323fb7987c3805ed3d7d397f83f00115f7e14"
+      },
+      "native_clips": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/native-scene-clips/progress.json",
+        "sha256": "d82064b2ca8f278e550f0355d374fe01f051fb0d245520eb98f67b17d3385a2b"
+      },
+      "native_export": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/native-export-completion.json",
+        "sha256": "ae3cf71700e4d26bdf7c2a68c88b24879b6e7ca0cf5bc97b90991eb95d6b30f7"
+      },
+      "technical_qa": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/technical-proof.json",
+        "sha256": "d91dbb5406b6f6b00c5e458c7ab2c53eba2c76fe9bc20c66a5a20758ed4fba6a"
+      },
+      "visual_qa": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/final-visual-review.json",
+        "sha256": "8aa6302a16594a311f47c43c603243dbb4ef74c5a88cef7bf7b0e9ac8d63d788"
+      },
+      "thumbnail_review": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/thumbnail-review.json",
+        "sha256": "cd319328f52312e668d138a126dcf88257f40507c352db1cd81deb3c96d1279a"
+      },
+      "caption_proof": {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/caption-conversion-proof.json",
+        "sha256": "7feecf734b98acee4c65fc57e04fdcc3c09ea74cc26603f7fbfc8076658a5c41"
+      }
+    },
+    "root_final_release": {
+      "author": "root",
+      "approved": true,
+      "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+      "approved_at": "2026-10-13T18:42:14.231561+00:00"
+    }
+  }
+}

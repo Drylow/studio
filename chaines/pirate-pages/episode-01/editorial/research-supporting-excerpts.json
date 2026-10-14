@@ -1,0 +1,54 @@
+{
+  "schema": "literal-verified-research-excerpts-v1",
+  "excerpts": [
+    {
+      "source_text_identifier": "rmg-golden.txt",
+      "source_text_sha256": "af49d483b68d49a2db991a37b3e4cfed423634ec984b5121916291fce508d585",
+      "match": "The Golden Age of Piracy",
+      "supporting_excerpt": "in Johnson's A General History of the Pyrates When was the golden age of piracy? In the Western world, the period from the 1680s to the 1720s has come to be known as the ‘gol",
+      "character_start": 3820,
+      "character_end": 3994
+    },
+    {
+      "source_text_identifier": "rmg-golden.txt",
+      "source_text_sha256": "af49d483b68d49a2db991a37b3e4cfed423634ec984b5121916291fce508d585",
+      "match": "1720",
+      "supporting_excerpt": "In the Western world, the period from the 1680s to the 1720s has come to be known as the ‘golden age’ of piracy. This was a time of heightened pirate acti",
+      "character_start": 3901,
+      "character_end": 4055
+    },
+    {
+      "source_text_identifier": "rmg-factfiction.txt",
+      "source_text_sha256": "2ba0d2dff7172e0ead2bd914d62421413bae957eead941224e79a2d2543fc84e",
+      "match": "parrot",
+      "supporting_excerpt": "kull and crossbones? An eyepatch and prosthetic leg? A parrot on a shoulder and a bottle ‘o rum? This idea of how pirates looked, sounded and acted is firml",
+      "character_start": 3466,
+      "character_end": 3622
+    },
+    {
+      "source_text_identifier": "rmg-factfiction.txt",
+      "source_text_sha256": "2ba0d2dff7172e0ead2bd914d62421413bae957eead941224e79a2d2543fc84e",
+      "match": "eye patch",
+      "supporting_excerpt": "g amputated (PAD8484) Did pirates have wooden legs and eye patches? This classic pirate stereotype does actually have some historical basis. 'Since seafaring w",
+      "character_start": 5125,
+      "character_end": 5284
+    },
+    {
+      "source_text_identifier": "rmg-scurvy.txt",
+      "source_text_sha256": "70145422b77aaa0b308aead4d781304849166939d6b2093beb3ddc43724cc217",
+      "match": "vitamin C",
+      "supporting_excerpt": "her limited diet was missing one important component - Vitamin C. However, the importance of vitamin C - or any other vitamins for that matter - was not known ",
+      "character_start": 3917,
+      "character_end": 4076
+    },
+    {
+      "source_text_identifier": "rmg-gaff-period.txt",
+      "source_text_sha256": "a8a343c6cd1e837da6e2ebf97517e2316d4364aa320b63b6529eabd9020efd72",
+      "match": "gaff",
+      "supporting_excerpt": "om the mizzen, and two royal yachts follow astern, one gaff-rigged flying the Union at the stern and the other ketch-rigged flying a red ensign. These and",
+      "character_start": 4253,
+      "character_end": 4407
+    }
+  ],
+  "notice": "Short literal matches in fetched research snapshots; contextual authored constraints below take precedence over isolated snippets."
+}

@@ -1,0 +1,42 @@
+{
+  "movie_sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+  "state": "pass",
+  "scope": "Additional root spot check of five actual encoded sheets; separate assigned review genuinely covers all19 sheets/85 scenes/84 cuts. No root claim of personally viewing the other14 sheets.",
+  "records": [
+    {
+      "sha256": "dedc5197490bf19c6f8a80467ee62223dc8a179b62b8c137612850c5d61af15c",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual scenes1–9 viewed: Tom bucket/opening, maroon captain, port carrying/cargo and tavern. Main outfit/hair, port and vessel design coherent; no blank frame.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg"
+    },
+    {
+      "sha256": "3a443b6aac87d2b235e2740c080984d5101b3e8363d23cb870e4c34e6d43b2fb",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual scenes46–54 viewed: bailing, small sail tear, provisions, distant prize and supporting crew/captured merchant. Same deck/cabin, Tom/navy vest and captain/maroon coat distinct.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg"
+    },
+    {
+      "sha256": "e1b083e6933cc60f728a7432b07013973733d01cc4268824e63901708eed09ee",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual scenes64–72 viewed: merchant, small proceeds, folded replacement cloth, tavern, patching sail and repairs. Scripted return-port geography, wardrobe and cargo continuity readable.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg"
+    },
+    {
+      "sha256": "a074ebaebe8355d0ba3f8c7f1ac287ec731c313a27b8b2d513738ba1999853ef",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts33–41 viewed: food/water/health belowdeck and purposeful deck change. Same ladder/mast/hammocks; no malformed cut endpoint or missing central action.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg"
+    },
+    {
+      "sha256": "6fefe428e4ed289abd8c0336b30cc36fc845a8bb70f85251c5f8a70d9430e139",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts78–84 and first/last movie frames viewed: authorities discussion offscreen, sunset preparations and night ending. Port/cabin designs and Tom outfit retained; opening and closing bucket callback coherent.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg"
+    }
+  ]
+}

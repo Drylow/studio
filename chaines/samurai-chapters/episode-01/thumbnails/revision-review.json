@@ -1,0 +1,59 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "c59281e77576051d2ca67b10f094ee592872f3dba1c7d1ef9274d980b6961123",
+  "original_document_path": "/workspace/samurai-thumbnail-revision/delivery/thumbnail-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-three-thumbnail-revision-v1",
+    "reviewer": "root",
+    "reference": "User supplied Ottoman Days screenshot",
+    "records": [
+      {
+        "id": "A",
+        "source": "thumbnails/revision-A-original.png",
+        "source_sha256": "d08daeb1bc2d71316624dc0beccf2825867e9927d8dc0b499656c53b57f0504c",
+        "file": "thumbnails/revision-A.jpg",
+        "sha256": "59f8a1cb3e737828ecd569d8d898edf82783169b10e353e93492c5c85f93d99d",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 823558,
+        "source_review": "Actual root full final PNG viewed. Huge tearful cream round face, black expressive eyes and outlines, indigo Edo costume, empty purse, merchant/coins/retainer secondary narrative, vivid detailed timber rice shop. Exact large yellow black-stroked wording preserved. Precisely two sheathed sword hilts at viewer-right/anatomical-left belt. Distant invented castle removed; modest low roof/tree horizon.",
+        "export_review": "Actual root full final JPEG view. Exact selected composition, clean lines, strong yellow/black wording, legible face/props and all corrections retained; native 1672x941 without artificial 4K claim.",
+        "state": "pass"
+      },
+      {
+        "id": "B",
+        "source": "thumbnails/revision-B-original.png",
+        "source_sha256": "904246e710f7476a4537ec15d6c835940cdd54433aa5347f07bee5cee05f81a6",
+        "file": "thumbnails/revision-B.jpg",
+        "sha256": "ac40ad81e83ca8f17969435b51289d98cbd02e3b46f49f625f715a60ce5b762f",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 826499,
+        "source_review": "Actual root full final PNG viewed. Distinct skeptical half-lidded sideways eyes, raised brow, one sweat drop and ironic mouth, big round face/black lines, indigo robe/cream paperwork. Warm/teal detailed Japanese office, calm brown official and smaller overworked clerk. Exact yellow black-outline text. Third hilt eliminated in second local edit: exactly TWO hilts/scabbards at viewer-right belt, no sword in hands.",
+        "export_review": "Actual root full final JPEG view. Exact selected composition, clean lines, strong yellow/black wording, legible face/props and all corrections retained; native 1672x941 without artificial 4K claim.",
+        "state": "pass"
+      },
+      {
+        "id": "C",
+        "source": "thumbnails/revision-C-original.png",
+        "source_sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09",
+        "file": "thumbnails/revision-C.jpg",
+        "sha256": "174312795cabcbba86a5bb7dcd09a62802c36e4d2e3945d7a89969dfbbf9a97c",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 757652,
+        "source_review": "Actual root full final PNG viewed. Huge pleading glossy round eyes and tears, indigo samurai with modest rice bowl and two sheathed swords, detailed warm/blue rice shop and background coin transaction. Exact readable bright-yellow black-stroke headline. Modern fedora replaced by period side hair/shaved crown/topknot; distant invented castle removed. No UI/watermark.",
+        "export_review": "Actual root full final JPEG view. Exact selected composition, clean lines, strong yellow/black wording, legible face/props and all corrections retained; native 1672x941 without artificial 4K claim.",
+        "state": "pass"
+      }
+    ],
+    "reviewed_at": "2026-10-13T19:44:51.353095+00:00"
+  }
+}

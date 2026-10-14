@@ -1,0 +1,203 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "11efee4c29fb33952ed01be486eb0e886757b43871dcde52afee712d5171e045",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/wide-locations-actual-tool-provenance.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-wide-master-imagegen-source-v1",
+    "author": "root",
+    "provider": "image_gen__imagegen",
+    "actual_outputs": [
+      {
+        "id": "home-master-wide-v3",
+        "source": {
+          "id": "home-master-v2",
+          "image": "assets/reference-inputs/2d4166e85e887d85e99a8bec1cc0e2ede5f69a874da745ca2a5d377925b498f1.png",
+          "image_sha256": "2d4166e85e887d85e99a8bec1cc0e2ede5f69a874da745ca2a5d377925b498f1",
+          "image_bytes": 2084949,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/home-master-v2/180455798753090bbca4ac4924d183f58d8929b3af794372fc9073918c7fd192/receipt.json",
+          "receipt_sha256": "5bf062dcb413bb05b445962f05f1d82b1a9fefacc11b8c55d6472004da7bdae2",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/home-master-v2/180455798753090bbca4ac4924d183f58d8929b3af794372fc9073918c7fd192/request.json",
+          "request_sha256": "180455798753090bbca4ac4924d183f58d8929b3af794372fc9073918c7fd192",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve shoji across rear wall, clothes shelf LEFT, cabinet/vase LEFT, low desk/openledger/inkstone FOREGROUND-LEFT and open courtyard doorway RIGHT. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/2d4166e85e887d85e99a8bec1cc0e2ede5f69a874da745ca2a5d377925b498f1.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/HOME.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-20753e3e-adab-498d-b0f1-fd695e28609f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "market-master-wide-v3",
+        "source": {
+          "id": "market-master-v2",
+          "image": "assets/reference-inputs/386a3a8ca91743bba9a8d1caaaeac38d00ecc334844bd083699edb8859bc2ffb.png",
+          "image_sha256": "386a3a8ca91743bba9a8d1caaaeac38d00ecc334844bd083699edb8859bc2ffb",
+          "image_bytes": 2056714,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/market-master-v2/2adf70bb4165279f4df913b8031fde24b1d5b182cf87d4ac6e5dd2459112b054/receipt.json",
+          "receipt_sha256": "6a805645a9fb7e64fc484da5918536fbfa7d95f5dace21aad28e0fc0a64190e3",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/market-master-v2/2adf70bb4165279f4df913b8031fde24b1d5b182cf87d4ac6e5dd2459112b054/request.json",
+          "request_sha256": "2adf70bb4165279f4df913b8031fde24b1d5b182cf87d4ac6e5dd2459112b054",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve counter/noren/rice measures and straw sacks LEFT, street receding toward RIGHT, woodenhandcart RIGHTwall, lowrooftopskyline. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/386a3a8ca91743bba9a8d1caaaeac38d00ecc334844bd083699edb8859bc2ffb.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/MARKET.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c6b45879-b701-4bc5-bdd8-98d440b9a0ea.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "office-master-wide-v3",
+        "source": {
+          "id": "office-master-v2",
+          "image": "assets/reference-inputs/560afc9601cf368fb2f494f37b131409b377bb8144dd93a1e729b87a52b7f04b.png",
+          "image_sha256": "560afc9601cf368fb2f494f37b131409b377bb8144dd93a1e729b87a52b7f04b",
+          "image_bytes": 2064592,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/office-master-v2/fd8991e297031d0a94d762c83deae82a18c9b05f8a85260aad2e94c085bcba61/receipt.json",
+          "receipt_sha256": "84bd1be50c50cd8dbc7dd904aff655ab6f4486ddbd67622dfb0d59335a5cde2d",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/office-master-v2/fd8991e297031d0a94d762c83deae82a18c9b05f8a85260aad2e94c085bcba61/request.json",
+          "request_sha256": "fd8991e297031d0a94d762c83deae82a18c9b05f8a85260aad2e94c085bcba61",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve cubbies LEFT, lowwritingdesk CENTER-LEFT withONEinkstone/brushholder/register, shoji REAR-RIGHT, timberentry RIGHT andbothcushions. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/560afc9601cf368fb2f494f37b131409b377bb8144dd93a1e729b87a52b7f04b.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/OFFICE.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-76875a7d-f9ad-4480-a04f-4bc30375375f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "gate-master-wide-v3",
+        "source": {
+          "id": "gate-master-v2",
+          "image": "assets/reference-inputs/c714a41941951a40b73ef6847824f564a5575370c03c58020cd8db84b99f8d39.png",
+          "image_sha256": "c714a41941951a40b73ef6847824f564a5575370c03c58020cd8db84b99f8d39",
+          "image_bytes": 2470448,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/gate-master-v2/d46f2b193859f299d95c23a8529a6b6c061d29616ef71195b2113ebe1de1e3dd/receipt.json",
+          "receipt_sha256": "492427ab9ff4c5bb90c2ed20fcfe48e7d13615e217df200be805eeeac155220e",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/gate-master-v2/d46f2b193859f299d95c23a8529a6b6c061d29616ef71195b2113ebe1de1e3dd/request.json",
+          "request_sha256": "d46f2b193859f299d95c23a8529a6b6c061d29616ef71195b2113ebe1de1e3dd",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve gateopening CENTER-LEFT, pine LEFT, coveredbench/cabinet RIGHT, whiteplasterwall, lowroofandclearpackedearth. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/c714a41941951a40b73ef6847824f564a5575370c03c58020cd8db84b99f8d39.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/GATE.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-3ccc0250-3e17-4a52-a9aa-b90fe524dc4e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "training-master-wide-v3",
+        "source": {
+          "id": "training-master-v2",
+          "image": "assets/reference-inputs/2b227f34cccb48aec528bb951196465a8b604da408e251bddd2e076c9bd25208.png",
+          "image_sha256": "2b227f34cccb48aec528bb951196465a8b604da408e251bddd2e076c9bd25208",
+          "image_bytes": 1978967,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/training-master-v2/a1ebd4e7beece311be2c6dd717b2562079f0d717e3dec800e1d62363e96bce99/receipt.json",
+          "receipt_sha256": "fa8a18bbe41473bcaa882e13afa2db694899da1f72f524856a0713a29e152315",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/training-master-v2/a1ebd4e7beece311be2c6dd717b2562079f0d717e3dec800e1d62363e96bce99/request.json",
+          "request_sha256": "a1ebd4e7beece311be2c6dd717b2562079f0d717e3dec800e1d62363e96bce99",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve openveranda LEFT, rearwoodwall atRIGHT with EXACTLYTWO mounted horizontalWOODENpracticeweapons, tinyfoldedcloth NEAR-RIGHTfloor, noaddedwoodrods. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/2b227f34cccb48aec528bb951196465a8b604da408e251bddd2e076c9bd25208.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/TRAINING.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c1e676ce-3d20-4cf2-aa30-52da93dbd2a3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "road-master-wide-v3",
+        "source": {
+          "id": "road-master-v2",
+          "image": "assets/reference-inputs/efae04702fd6fa40f13fc852ae293fa5375c1416403bbc0dfec0c9528bc7562c.png",
+          "image_sha256": "efae04702fd6fa40f13fc852ae293fa5375c1416403bbc0dfec0c9528bc7562c",
+          "image_bytes": 2295187,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/road-master-v2/9115296ef1c3027683d8889a800d176b2e86dd6007d3b94ce89835dba7dc7964/receipt.json",
+          "receipt_sha256": "ba53a4cd692ab182b6999c7c39fc11d10572993900c8d6760ca8e089f7bc8f7b",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/road-master-v2/9115296ef1c3027683d8889a800d176b2e86dd6007d3b94ce89835dba7dc7964/request.json",
+          "request_sha256": "9115296ef1c3027683d8889a800d176b2e86dd6007d3b94ce89835dba7dc7964",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve inn/teahouseentrance LEFT, curvingearthpath, SMALLwoodbridge RIGHTmiddle-distance, lowgreenwoodslopes/fields andlowroofskyline; no castle. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/efae04702fd6fa40f13fc852ae293fa5375c1416403bbc0dfec0c9528bc7562c.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/ROAD.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-358bed5b-011e-4207-983e-dce9c96ace2c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      {
+        "id": "edo-lodge-master-wide-v3",
+        "source": {
+          "id": "edo-lodge-master-v2",
+          "image": "assets/reference-inputs/95d7e1b66532262ff19eee82b8c5047ec584e1994263b8fdfa1f514f332ec9c7.png",
+          "image_sha256": "95d7e1b66532262ff19eee82b8c5047ec584e1994263b8fdfa1f514f332ec9c7",
+          "image_bytes": 1745291,
+          "receipt": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/edo-lodge-master-v2/8e1cbd146753475baf59a18fbdb93a287f33ce9b23de05698f91368ac016d4d1/receipt.json",
+          "receipt_sha256": "271cc749746ab6307c46de601c95e82179a92d6f80edf06c2ba77916273cef91",
+          "request": "/workspace/samurai-chapters-regeneration/episode-01/master-generation/edo-lodge-master-v2/8e1cbd146753475baf59a18fbdb93a287f33ce9b23de05698f91368ac016d4d1/request.json",
+          "request_sha256": "8e1cbd146753475baf59a18fbdb93a287f33ce9b23de05698f91368ac016d4d1",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "visual_review": "not_reviewed"
+        },
+        "arguments": {
+          "prompt": "Edit and OUTPAINT this attached square original background into a genuinely WIDE LANDSCAPE 16:9 finished frame. Make the canvas wide by extending the scene coherently on BOTH HORIZONTAL SIDES, with new original artwork in the same style; keep the entire existing scene visible with normal proportions. Do NOT stretch, squash, crop away furniture, add borders, letterbox or output a square. The output must be a full-bleed horizontal landscape composition wider than it is tall, approximately 16:9. Preserve the original central architecture, camera direction, clean flat2D outlines, matte wood/cream/indigo palette and ordinary warm late-spring daylight. Preserve LEFTshoji, CENTERdesk/register/inkstone/brushholder, RIGHTshelf, BACK-RIGHTtimberentry, EXACTLYONE brownclothbundle NEAR-RIGHTfloor. Extend believable room or exterior edges only. No new people, faces, animals, swords, signs, readable writing, UI, watermark, modern objects or dramatic weather/time change. The result is an EMPTY stable location master for a historical educational film. Original detailed graphic2D cel-shadow architecture, no photorealism/anime/3D. IMPORTANT: WIDE 16:9 OUTPUT, not square.",
+          "referenced_image_paths": [
+            "assets/reference-inputs/95d7e1b66532262ff19eee82b8c5047ec584e1994263b8fdfa1f514f332ec9c7.png"
+          ],
+          "transparent_background": false
+        },
+        "actual_output": "assets/masters/EDO_LODGE.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-55f09421-3b04-411d-be5c-69c913ee3e68.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    ],
+    "human_approval_claimed": false
+  }
+}

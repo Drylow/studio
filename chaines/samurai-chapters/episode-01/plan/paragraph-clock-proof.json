@@ -1,0 +1,226 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "1d3902a7fa00f5ee1bab727bffb2a3eb87aedc86c06e760f67775bda90520a67",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/actual-108-paragraph-timings-proof.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-original-provider-native-alignment-proof-v1",
+    "source_spoken": {
+      "path": "narration/spoken.txt",
+      "sha256": "f2d0e1be63b96bb524de524b61f35623ae2618c25f09645afe619e76d1fde3a9"
+    },
+    "source_srt": {
+      "path": "narration/provider-original.srt",
+      "sha256": "6828d4f300d36801e6eed63f4a03351460ff4f3983b2c171a7b9becdd8f90be9"
+    },
+    "source_native_mp3": {
+      "path": "narration/voice-native-derived.mp3",
+      "sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671"
+    },
+    "native_alignment_code": {
+      "path": "/workspace/studio/services/tts.py",
+      "sha256": "eb30410ed1db0b76673b7c5618c6f8ecc523af3845d0f813f21fa63709544e5c"
+    },
+    "native_functions": [
+      "services.tts._srt_words",
+      "services.tts.align_to_text"
+    ],
+    "same_original_provider_words_exactly_reproduced": true,
+    "spoken_source_historical_checksum_match": true,
+    "provider_text_characters": 18107,
+    "original_provider_joined_text": {
+      "path": "narration/provider-original.txt",
+      "sha256": "9300d265649ec7928c618f5a6199fb8dc9882e716def6a64cbe317a79a313a54"
+    },
+    "provider_word_count": 2793,
+    "aligned_word_count": 2795,
+    "canonical_word_coverage_exact_once": true,
+    "matched_word_count": 2788,
+    "normalization_differences": [
+      {
+        "operation": "replace",
+        "source_word_indices": [
+          3,
+          5
+        ],
+        "source_words": [
+          "seventeen",
+          "twenty."
+        ],
+        "provider_word_indices": [
+          3,
+          4
+        ],
+        "provider_words": [
+          "1720."
+        ],
+        "native_alignment_times": [
+          {
+            "w": "seventeen",
+            "s": 1.875,
+            "e": 2.16,
+            "t": 3
+          },
+          {
+            "w": "twenty.",
+            "s": 2.185,
+            "e": 2.385,
+            "t": 4
+          }
+        ]
+      },
+      {
+        "operation": "replace",
+        "source_word_indices": [
+          12,
+          13
+        ],
+        "source_words": [
+          "two"
+        ],
+        "provider_word_indices": [
+          11,
+          12
+        ],
+        "provider_words": [
+          "2"
+        ],
+        "native_alignment_times": [
+          {
+            "w": "two",
+            "s": 5.732,
+            "e": 5.841,
+            "t": 12
+          }
+        ]
+      },
+      {
+        "operation": "replace",
+        "source_word_indices": [
+          1372,
+          1373
+        ],
+        "source_words": [
+          "two"
+        ],
+        "provider_word_indices": [
+          1371,
+          1372
+        ],
+        "provider_words": [
+          "2"
+        ],
+        "native_alignment_times": [
+          {
+            "w": "two",
+            "s": 567.73,
+            "e": 567.833,
+            "t": 1372
+          }
+        ]
+      },
+      {
+        "operation": "replace",
+        "source_word_indices": [
+          1376,
+          1377
+        ],
+        "source_words": [
+          "third."
+        ],
+        "provider_word_indices": [
+          1375,
+          1376
+        ],
+        "provider_words": [
+          "3rd."
+        ],
+        "native_alignment_times": [
+          {
+            "w": "third.",
+            "s": 568.68,
+            "e": 568.938,
+            "t": 1376
+          }
+        ]
+      },
+      {
+        "operation": "replace",
+        "source_word_indices": [
+          2365,
+          2367
+        ],
+        "source_words": [
+          "seventeen",
+          "twenty"
+        ],
+        "provider_word_indices": [
+          2364,
+          2365
+        ],
+        "provider_words": [
+          "1720"
+        ],
+        "native_alignment_times": [
+          {
+            "w": "seventeen",
+            "s": 994.714,
+            "e": 994.945,
+            "t": 2365
+          },
+          {
+            "w": "twenty",
+            "s": 994.965,
+            "e": 995.126,
+            "t": 2366
+          }
+        ]
+      }
+    ],
+    "numeric_alignment_note": "Native implementation shares the actual unmatched provider numeric interval between the corresponding canonical words; no estimated whole-shot timing.",
+    "timing_scope": "Provider SRT cue timing and native word parsing/alignment, not a new acoustic alignment analysis.",
+    "first_scene_start": 0.0,
+    "last_scene_end": 1179.0367346938776,
+    "contiguous_scene_clock": true,
+    "paragraph_boundary_rule": "Scene 1 starts at zero; each following scene starts at its first aligned word s; each scene ends at the following scene start; final scene ends at decoded PCM duration. This is the repository native paragraph timeline convention.",
+    "historical_whole_shot_timeline_file_recovered": false,
+    "shot_timing_claim": "Reconstructed reproducibly from original measured provider SRT and checksum-authenticated original script, not a claim that the old timeline JSON byte serialization was recovered.",
+    "all_narration_word_intervals_inside_assigned_scene": true,
+    "minimum_scene_duration": 8.00200000000001,
+    "maximum_scene_duration": 14.420999999999935,
+    "audio_source_actual_full_decode_evidence": {
+      "path": "/workspace/tubeforge-regeneration-runtime/voice-source-check.json",
+      "sha256": "73f4d1d43020a510f29a41b053ad0019a30ea1fc647d26d7dd9c1ccef445103d"
+    },
+    "decoded_samples": 51995520,
+    "sample_rate": 44100,
+    "decoded_duration": 1179.0367346938776,
+    "aligned_words_with_original_provider_script_offsets": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/native-aligned-words-2795.json",
+      "sha256": "ac5431b2ea9a4b88ee30c5b605eefd60515722e60471918d70f6f88caf50500d",
+      "bytes": 306686
+    },
+    "aligned_words_with_canonical_source_paragraph_offsets": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/native-aligned-canonical-source-words-2795.json",
+      "sha256": "45352e7ad9b65014e672c048b00cc963062db9a5704bb13a0337f296b8adb551",
+      "bytes": 306706
+    },
+    "canonical_source_word_clock_sorted_json_sha256": "a043d3253e636503613b77ac246806df344465e98025f2e5060fe4ba33a93f39",
+    "known_historical_canonical_clock_prefix": "a043",
+    "known_historical_canonical_clock_prefix_matches": true,
+    "historical_complete_word_clock_checksum_independently_available": false,
+    "native_store_words": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/native-store-words-2795.json",
+      "sha256": "7453760716bbd561f4e5857256ee12894082769305abd6f94b66f940ad06b74d",
+      "bytes": 215153
+    },
+    "timeline": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/actual-108-paragraph-timings.json",
+      "sha256": "024d828f2e410ebf1d41042d09f9e1d0d70c81696014d3cf8f0cfdef24d465b1",
+      "bytes": 50474
+    },
+    "new_tts_calls": 0,
+    "new_creative_content": false,
+    "historical_word_clock_full_checksum": "Unavailable; recomputed transparently from identical original script and provider SRT using native functions."
+  }
+}

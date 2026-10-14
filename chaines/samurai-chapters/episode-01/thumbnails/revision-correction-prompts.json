@@ -1,0 +1,29 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "685b4628f1b7ef5cda55f61ec85c13a46f5dd4c5c4e388f51b376e118932e865",
+  "original_document_path": "/workspace/samurai-thumbnail-revision/provenance/root-literal-correction-prompts.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-thumbnail-revision-corrections-v1",
+    "tool": "image_gen.imagegen",
+    "reason": "Actual root full PNG inspection found wrong-side/extra sword hilts, a modern hat, and unnecessary distant landmark towers. All supplied targets have been seen.",
+    "transparent_background": false,
+    "requests": [
+      {
+        "id": "A",
+        "path": "assets/reference-inputs/14aaa6ad321ec600d9f4e06fec82ac3224026e107b305c2e16c45c4c0c2afda6.png",
+        "prompt": "Apply ONLY these precise corrections to this finished 16:9 cartoon thumbnail; preserve the entire drawing quality, large teary face, empty purse, vivid merchant scene and exact yellow/black headline '2 SWORDS, NO CASH?'. 1) The foreground samurai must wear EXACTLY TWO sheathed swords at his anatomical LEFT hip, which is the viewer-RIGHT side of the grey belt. Move the existing two hilts together from viewer-left across to viewer-right hip, naturally emerging from beneath the purse/body edge and secured by the obi; eliminate the old wrong-side hilts completely, do not duplicate swords or place a sword in a hand. Both two black scabbards can disappear naturally off the lower frame. 2) Remove ONLY the tall multi-storey white castle at distant UPPER LEFT; replace it with modest low tiled Edo rooftops and treetops at the same distance against unchanged blue sky. No added landmark/giant tower. Keep foreground face/hair/robe/black mitten hands, two other actors, counter, cash, shop architecture/curtain and text pixel-composition closely unchanged. Maintain same clean expressive thick black-outline 2D thumbnail style. No cropping, border or new lettering."
+      },
+      {
+        "id": "B",
+        "path": "assets/reference-inputs/62078c55b266bc450485601ff9c634124f82e23b136f966adcdf0a101aa1a0bd.png",
+        "prompt": "Refine this finished 16:9 comic thumbnail with ONLY two directed changes. Preserve high quality detailed Japanese domain office, large main face placement/indigo outfit, cream papers in black hands, brown official, tiny overworked clerk, and exact yellow black-outline headline 'ALL HONOR, NO FREEDOM?'. 1) Foreground belt currently has THREE sword hilts. REMOVE the extra third small receding diagonal hilt directly behind the held cream papers (viewer-left of the other two hilts); keep EXACTLY TWO worn sheathed swords at the character's anatomical LEFT/viewer-RIGHT hip, attached together to the grey obi. No extra sheath or loose sword. 2) Give the main samurai a distinctly SKEPTICAL EXASPERATED expression instead of the same teary shocked face as the other variants: large half-lidded cartoon eyes looking sideways toward his boss, one brow sharply raised and the other knitted, an ironic unhappy small crooked mouth, a single little blue sweat drop. Preserve the huge round pale-cream cartoon face with black outlines and same topknot. Keep strong comic expressiveness, as the suspicious servant face in the reference style, not realism. No other change to scene, other actors, colors, layout or lettering. No extra text, UI, border."
+      },
+      {
+        "id": "C",
+        "path": "assets/reference-inputs/825fc02b5c9540a41d4b87f13360faf6d0f8d265d6486e690ea237948b15ea21.png",
+        "prompt": "Apply ONLY two historical corrections to this finished 16:9 clean comic thumbnail. Preserve large teary foreground samurai holding his rice bowl, exactly two correctly worn sheathed swords, indigo kimono, all faces/gestures, detailed rice shop, bronze coins, and exact yellow black-outline text 'PAID IN RICE?'. 1) REMOVE the BLACK FEDORA modern brimmed hat from the BROWN-ROBED OFFICIAL at lower CENTER-RIGHT who hands coins to the merchant. Replace ONLY that hat/headwear with natural Edo-period black side hair, shaved crown and a small plain tied chonmage topknot, fully visible; no modern Western hat, no huge headdress. Do not alter his adult comic face, body or hands. 2) Remove ONLY the distant tall multi-storey white castle at UPPER LEFT behind the foreground head; replace with modest low tiled Edo rooftops and treetops at the same scale/distance under the unchanged blue sky. Keep every other detail, all characters, rice bowl, blue curtains/merchant store, headline, drawing style and overall composition closely identical. No added text, border or modern props."
+      }
+    ]
+  }
+}

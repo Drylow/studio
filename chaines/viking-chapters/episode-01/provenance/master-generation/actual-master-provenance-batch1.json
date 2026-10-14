@@ -1,0 +1,49 @@
+{
+  "schema": "actual-image-gen-master-provenance-v1",
+  "tool": "image_gen__imagegen",
+  "association_policy": "saved actual master argument provenance; output selection remains separately recorded in registry",
+  "requests": [
+    {
+      "id": "cast-aslaug-v1",
+      "output_path": "chaines/viking-chapters/episode-01/assets/masters/cast/ASLAUG.png",
+      "source_pixels_viewed_before_call": true,
+      "returned_pixels_actually_viewed": true,
+      "actual_tool_arguments": {
+        "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. ASLAUG is an adult competent Norwegian household partner around950, distinct from EIRIK. Simple chestnut-brown hair in one LOW BUN with a plain PALE FLAX headcloth tied modestly over the back of the head, some brown hair visible by ears, no enormous turban, Viking helmet or crown. Small calm gentle line smile, no eyelashes/lipstick/makeup. Muted MAUVE plain ankle-length long-sleeved wool dress, small ivory neckline, dark TAUPE simple woven waist belt with no extravagant hanging keys/jewels. Narrow simple full covered lower garment, two small brown leather shoes. Sleeves end with the same very thin black line forearms and small black mitten hands, no realistic arms. No shield/sword or baby. Keep poised adult proportions and simple matte rendering.",
+        "referenced_image_paths": [
+          "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+          "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "cast-bjorn-v1",
+      "output_path": "chaines/viking-chapters/episode-01/assets/masters/cast/BJORN.png",
+      "source_pixels_viewed_before_call": true,
+      "returned_pixels_actually_viewed": true,
+      "actual_tool_arguments": {
+        "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. BJORN is an older NORWEGIAN crew skipper around950, distinct from red-bearded EIRIK: short GRAY-BROWN side hair, fuller SHORT GRAY beard tracing his simple round face, two subtle forehead lines and a small restrained serious line mouth. He is BAREHEADED, no helmet/crown/horns in this default master. Muted MAROON plain knee-length tunic with small pale neck slit, dark UMBER plain wool cloak pinned at one shoulder by small dull bronze disc, narrow DARK BROWN belt with modest buckle, charcoal trousers and tiny plain brown shoes. No metal armor, expensive sword or armed chief tableau. Do not copy EIRIK's teal or red beard; preserve the same thin black line forearms/black mittens and economical flat2D face/body. Entire cloak and shoes fit within margins.",
+        "referenced_image_paths": [
+          "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+          "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "cast-merchant-v1",
+      "output_path": "chaines/viking-chapters/episode-01/assets/masters/cast/MERCHANT.png",
+      "source_pixels_viewed_before_call": true,
+      "returned_pixels_actually_viewed": true,
+      "actual_tool_arguments": {
+        "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. MERCHANT is an adult ordinary ENGLISH North Sea local around950, distinct from EIRIK and BJORN. Short simple SANDY-BLOND hair neatly around ears, NO beard or moustache, no topknot or headgear, calm small line smile. Plain muted OCHRE/olive-brown knee-length wool tunic with simple cream neckline, narrow dark BROWN waist belt, charcoal simple trousers and tiny brown leather shoes. NO cape, jewelry, apron, scales, coins, weapons, helmet or trader hat. Same cream round face black dot eyes, thin black line forearms and small black mitten hands, not a realistic British portrait, no exaggerated peasant dirt or ethnic caricature. Neutral full body grounded stance, entire shoes/hair visible.",
+        "referenced_image_paths": [
+          "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+          "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ]
+}

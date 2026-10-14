@@ -1,0 +1,39 @@
+{
+  "schema": "viking-manual-group-hood-arguments-v1",
+  "author": "Codex viking_master_finish under root commission",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "CREW_EXTRAS",
+      "prompt": "Create ONE original WIDE LANDSCAPE16:9 neutral character reference with EXACTLY TWO DISTINCT full-body adult Norwegian ordinary boat crew around950, standing separated left/right on plain pale cream background, empty hands relaxed. Reference1 EIRIK supplies ONLY exact approved illustration style: large round cream/off-white face, tiny black-dot eyes, minimal small brows/nose/line mouth, thin confident dark contour, thin BLACK SINGLE-LINE forearms and small BLACK mitten hands, slender adult covered clothes, matte garment shapes and simple small cel shadows, brown leather ankle shoes. No white skin anatomy arms, white hands, realistic rendering, 3D, anime, chibi toddler, muscles or fancy historical portrait. Do not copy EIRIK identity/cape/beard/teal clothing. LEFT crewman: adult clean-shaven, short neat straight DARK BLOND hair, muted MEDIUM GRAY knee-length wool tunic with plain dark belt, dark taupe trousers and small brown shoes. RIGHT crewman: adult clean-shaven, short slightly wavy BLACK hair, muted OCHRE-BROWN knee-length wool tunic with plain dark belt, charcoal trousers and small brown shoes. Clearly different hair and tunics, exact same approved face/head proportion about one third full-body height. Both bareheaded, no cape, helmet, armor, shield, sword, axe, spear, bag, blanket or permanent hand prop. Two neutral upright complete figures only, generous spacing/head-and-foot margins. No labels, words, numbers, panels, collage, scenery, logos or watermark. These are supporting crew identities for explicit scenes, never EIRIK or BJORN clones.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "ENGLISH_LOCALS",
+      "prompt": "Create ONE original WIDE LANDSCAPE16:9 neutral reference with EXACTLY TWO DISTINCT full-body adult ordinary English coastal men around950, standing separated left/right on plain pale cream background, hands empty relaxed. Reference1 EIRIK supplies ONLY approved character drawing style: large round cream/off-white face, black-dot eyes, minimal small brows/nose/line mouth, thin dark contours, BLACK SINGLE-LINE forearms and tiny BLACK mitten hands, slender adult covered garment silhouette, matte flat colors/small cel shadows and plain brown leather shoes. Head about one third full-body height. No realistic anatomy skin/white arms, 3D, anime or chibi. Do not copy EIRIK/BJORN identities, Viking capes/teal/maroon clothes. LEFT local man/informant: short straight CHESTNUT BROWN hair, clean-shaven, muted SLATE-GRAY plain knee-length wool tunic with ivory neckline, narrow plain tan belt, brown trousers and plain brown leather shoes. RIGHT local man: short neat DARK BLACK hair, short close BLACK beard, muted EARTH-BROWN plain knee-length wool tunic, narrow plain gray belt, dark gray trousers, brown leather shoes. Sober neutral composed faces, neither angry villain caricature. Both bareheaded/unarmed reference poses, no cape, helmet, armor, shield, spear, sword, purse or permanent props. Later specified scene alone equips shield/spear; this image fixes only identity. Both heads/feet fully visible with generous margins, well separated. No text, name labels, panels, scenery, flags, logos or watermark.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "ENSLAVED_ASIDE",
+      "prompt": "Create ONE original WIDE LANDSCAPE16:9 neutral identity reference with EXACTLY TWO DISTINCT fully clothed adult people from an English North Sea community around950, shown standing separated left/right and partly three-quarter turned away, on plain pale cream background. Reference1 EIRIK supplies ONLY approved economical character style: large cream/off-white ROUND face, tiny black-dot eyes, small brows/nose/neutral line mouth, thin dark outline, very thin BLACK SINGLE-LINE forearms and small BLACK mitten hands, slender adult covered body, matte garment fills and minimal broad cel shadows, simple brown leather shoes. Same head about one third total height, no realistic anatomy, human skin arms, glossy3D, anime or chibi. LEFT person: adult clean-shaven man, short LIGHT BROWN hair, undyed LIGHT GRAY knee-length wool tunic, plain dark cloth belt, brown trousers. RIGHT person: adult woman, dark BROWN hair tucked into plain DULL GRAY flax headcloth, undyed DARK GRAY ankle-length dress, narrow simple dark woven belt. Both sober dignified mildly concerned faces, shoulders reserved, one empty black hand visible, no stereotyped theatrical misery. Both clearly ADULT, complete clothed bodies and feet in margins. No chains, ropes, shackles, wounds, blood, torture, collars, stripped clothes, sexualization, weapons or owners. Their legal status is explained by narration and restrained scene context, never sensational props or dehumanizing anatomy. No extra person, captions, symbols, words, labels, panels, logo, watermark or scenery.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "EIRIK_HOOD_UP",
+      "prompt": "Edit the attached EXACT full-body EIRIK identity reference into ONE explicit SAME-ADULT wardrobe state for a rain voyage: his modest plain BROWN cloth cape hood is RAISED over the top/back of his red-brown hair, loosely framing the SAME cream round face with SAME red-brown short rounded beard, tiny black dot eyes, tiny nose/mouth and brow proportions. Hood/cape must match original muted taupe-brown fabric and existing round dull brass throat clasp, no new blackcloak or medieval luxury trim. Some familiar red-brown fringe can remain visible at forehead; whole beard and full front face visible, do not mask/replace face or age. Keep EXACT teal knee-length tunic with beige edge, brown belt/brass rectangular buckle, charcoal-brown trousers, small brown leather ankle shoes, black single-line forearms and tiny black mitten hands relaxed empty. Normal slender ADULT body/head ratio about one third, matte2D outlines/cel shadows no realism/chibi/3D. Same original neutral full-body standing front camera on plain pale cream background, generous head/feet margins. Only clothing action hood UP, no rain background, boats, armor, weapons, bag, labels, panels, writing, logo or extra people. This is EIRIK, never a new crewman or monk.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

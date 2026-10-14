@@ -1,0 +1,70 @@
+{
+  "schema": "viking-manual-late-act-variant-arguments-v1",
+  "author": "Codex viking_master_finish under root commission",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "HOME_WINTER_DAY",
+      "source_master_id": "HOME",
+      "scene_ids": [
+        74,
+        76,
+        77
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY HOME into the SAME modest Norwegian longhouse interior around950 at WINTER DAY. Preserve every internal object/camera/geometric coordinate: rear-right open plank doorway, tiny rear-left unglazed aperture, existing roofvent, all rafters/posts/timber walls, left/right raised sleeping benches, foreground-left rough table with one wood bowl/one earthen cup, ONE basket under its edge, left middle loom/weights/chest and ONE central-right low stone hearth. Keep original wide stern-of-room camera/unmirrored framing, earthfloor/doorlight direction. Season/light derivative ONLY: cool pale winter DAY ambient light enters SAME openings, and outside through open doorway now show the SAME ground and wattle-fence glimpse with modest patchy ground FROST, straw/olive grass and sparse bare deciduous branches at appropriate distance, subdued conifers if visible. NO sunny lush spring green doorway, NO deep snow/drifts/blizzard/icecastle, no architectural change/new window/door. Warm restrained orange embers in same existing hearth, readability preserved and broad simple cel shadows. Same original clean matte drawn2D dark outlines/timber detail density, no realistic3D/anime/bloom. EMPTY no actors/animals/blankets/newbags/lamps/candles/weapons/secondfire/newfurniture/text/runes/logos/panels. Full-bleed landscape16:9 exact original geometry.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "HOME_NIGHT",
+      "source_master_id": "HOME",
+      "scene_ids": [
+        87
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY HOME into the SAME room at quiet WINTER NIGHT. Keep every original structural/prop coordinate: wood rafters/posts/walls, rear-right OPEN plank door, tiny rear-left unglazed aperture, roofvent, all raised benches, foreground-left table/bowl/earthen cup, basket under its edge, loom/weights/chest, same low central-right stone hearth. ONLY light/season outside changes: openings reveal dark muted navy-gray night with barely visible same ground/fence, NO spring sunshine/greenlit landscape or dawn glow. Restrained dull-orange SAME low hearth embers provide gentle nearby warmth/light while all structural contours stay readable in subdued night ambient light. No blazing fire, cinematic bloom, moonbeam spotlight, new light source. No lamp/torch/candle/modernbed/chimney/glass/newfurniture or extra bedding in empty master; later scene can introduce precisely specified temporary lamp. Same original matte educational2D thin dark outlines/drawn wood density/broad cel shadows, no photorealism/3D/anime. EMPTY no people/animals/weapons/text/runes/logos/caption/panels. Same full-bleed wide16:9 unmirrored camera and architecture.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "FARM_AUTUMN",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        70,
+        72
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY Norwegian FARM into SAME farm at ordinary EARLY AUTUMN HARVEST DAY around950. This is a subtle SEASON-ONLY derivative, same original pale clear daylight direction and EXACT camera: retain left longhouse/turf roof ridge/rafters/open plankdoor/small wallaperture/fieldstonebase, wall woodpile, foreground-left stump, right small shed/closed door/wattle fences/garden and all earth paths/fjord/low hills in identical places and proportions. Grass/turf moderately muted olive and straw patches, leafy deciduous trees still substantially green with only a FEW dull yellow leaves appropriate earlyautumn, garden slightly mature/strawgreen; no bare winter forest, broad orange sunset, frost/snow/deepautumnfall or fantasytrees. Foreground yard remains clear, no newly added giant grainfield/barn/architecture or fixed crops blocking actor space; later scene adds only specified sheaves/food props. Same original clean matte graphic2D contours/drawn timber and earth density/simple broad shadows; no photorealistic detail increase/3D/anime. Absolutely EMPTY no people/animals/weapons/newprops/lanterns/writing/runes/captions/logos/panels. Exact original unmirrored landscape16:9 full-bleed view.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "FARM_WINTER_RAIN",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        75
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY Norwegian FARM into SAME coastal farm at WINTER DAY with ordinary LIGHT RAIN. Keep exact original camera/building layout: left longhouse/low turf roof ridge/rafters/open plankdoor/tinywallopening/fieldstonebase/woodpile, left foreground stump, right small shed/CLOSED door/wattle fences/garden, all paths/fjord/low hills identical positions and proportions. Season/weather ONLY: cold pale cloudy daylight, grass/garden muted dormant straw/olive, naturally sparse/bare deciduous trees and subdued conifers, damp dark timber/roof/earth with modest thin rain streaks and shallow small path puddles. Rain has melted most ground frost, small traces can remain on sheltered edges. No spring lush trees, deep snow/blizzard/ice/fantasy mountain, lightning/flood/violentstorm, no new roof hole or changing actual roof silhouette. Original matte clean graphic2D lines and simple broad shadows/restraint, no photorealistic3D/anime. EMPTY no people/animals/tools/ladders/weapons/lanterns/newprops/writing/runes/logos/panels. Wide16:9 full-bleed exact unmirrored frame; later story action alone introduces repair equipment.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "FARM_WINTER_DAWN",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        88
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY Norwegian FARM into SAME place at WINTER PRE-SUNRISE DAWN with LIGHT PATCHY FROST. Preserve exact original camera/geometric coordinates: LEFT low longhouse/roof ridge/rafters/open plankdoor/tiny long-wall aperture/stonebase/woodpile, left foreground stump, RIGHT small shed/CLOSED door/wattle fences/garden, every path/fjord/low wooded hill and foregroundrock. Season/light ONLY: cold dim readable blue-gray predawn, very faint pale sky glow on original upper-right horizon, muted olive/strawgrass/dormantgarden, naturally sparse/bare deciduous trees and subdued green conifers, a thin restrained frost on some grass/stone/roof edges. No bright daytime, lush spring, theatrical orange sunset, deep snow/drifts/blizzard/giant ice/fantasy mountains. All buildings/working path remain readable through simple subdued broad cel shadows. Same clean matte drawn2D contours/wood/earth detail density as original, no photo/3D/anime. Absolutely EMPTY no Eirik/sheep/actors/livestock/weapons/tools/broken rail/newprops/lamps/words/runes/logos/panels; later callback alone loosens the same rail and places same sheep. Same full-bleed unmirrored landscape16:9 camera.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

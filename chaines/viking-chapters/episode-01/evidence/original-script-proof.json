@@ -1,0 +1,10 @@
+{
+  "words": 2742,
+  "paragraphs": 88,
+  "sha256": "88c9690aa11d0d0e46eca2d9cbe9408b9b98a93f5ba0a86ffee81d45c8c86a33",
+  "expected_minutes_at_142_2wpm": 19.28270042194093,
+  "actual_tts_duration_pending": true,
+  "historical_scenario": "Fictional western Norway free farming household, c.950 seasonal voyage to English North Sea coast, return before winter; invented individual incidents explicitly framed as illustration.",
+  "root_review_status": "passed_before_explicit_root_authorized_single_closing_sentence",
+  "immutable_for_generation": true
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "8e6b157f3d9ca48053abe252765feaa2bedea7a28fbd0d93e814dc513d8ae6ed",
+  "original_document_path": "/workspace/tubeforge-regeneration-runtime/voice-derived/normalization-proof.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-level-only-derived-voice-v1",
+    "source": "narration/voice-native-derived.mp3",
+    "source_sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671",
+    "derived_file": "/workspace/tubeforge-regeneration-runtime/voice-derived/samurai-original-level-normalized.flac",
+    "derived_sha256": "03f0dd5c6b0ea57d0dc3e1ee89614893926a462d833fcd73050af4287f307635",
+    "measured_original": {
+      "input_i": "-28.19",
+      "input_tp": "-2.52",
+      "input_lra": "4.40",
+      "input_thresh": "-38.74",
+      "output_i": "-18.06",
+      "output_tp": "-1.50",
+      "output_lra": "3.30",
+      "output_thresh": "-28.62",
+      "normalization_type": "dynamic",
+      "target_offset": "1.06"
+    },
+    "measured_final": {
+      "input_i": "-17.35",
+      "input_tp": "-1.46",
+      "input_lra": "3.20",
+      "input_thresh": "-27.90",
+      "output_i": "-17.11",
+      "output_tp": "-1.50",
+      "output_lra": "3.10",
+      "output_thresh": "-27.65",
+      "normalization_type": "dynamic",
+      "target_offset": "0.11"
+    },
+    "decoded_samples": 51995520,
+    "sample_rate": 44100,
+    "duration_seconds": 1179.0367346938776,
+    "drift_ms": 0,
+    "paid_tts_calls": 0,
+    "operation": "two-pass loudness correction only"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "7c98961a47f2c3c63a79801ad0661e230b75a9dbe53a374a2033b87c30bbfac3",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/master-regeneration-plan-v1.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-regeneration-literal-master-plan-v1",
+    "author": "root",
+    "purpose": "Regenerate lost originals in already approved SamuraiChapters2D direction, preserving actuallyrecoveredvoice; explicit newart generation, notrestoredbytes.",
+    "requests": [
+      {
+        "id": "cast-hana-v2",
+        "aspect": "1:1",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE original adult Japanese wife HANA full-body front-facing neutral on plain pale cream background, oversized cream round face black doteyes and soft smile. Black hair in small low bun. Subdued MAUVE overlapping long kosode, ivory collar, dark taupe sash, small white tabi feet. Thin black line forearms and tiny black mitten hands like Kenji, entirehead/bun/feet with margin. No swords, jewels, veil, crown, prop or secondperson. Mature adult, no frills.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "cast-senior-v2",
+        "aspect": "1:1",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE original older male Japanese SENIOR retainer/instructor, full-body frontal neutral on plain pale cream. Cream round head black doteyes, shortsternbrows, TWO subtle forehead wrinkles, GRAY narrow sidehair and small GRAY chonmage topknot, NO beard. Dark UMBER overlapping kosode, ivory collar, grayobi, charcoalhakama, thinblacklineforearms blackmittenhands, white tabi feet. EXACTLY TWO cream diamond-wrapped hilts andBLACKscabbards at anatomical LEFT hip/viewer RIGHT, tipsdown-right behindbody. No weaponviewerleft orheldprop. DistinctolderidentityfromKenji, wholehairfeetcontained.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "cast-merchant-v2",
+        "aspect": "1:1",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE original adult male Japanese MERCHANT rice seller/lender, full-body front-facing neutral on plain pale cream. Oversizedcreamhead doteyes shortsparsebrows smallnose slightline smile. BLACKhair invery SMALLLOWKNOT, no highchonmagefan, beardorhat. Plain muted OLIVE long Japanese overlapping robe, TANsash, white tabi feet, thinblacklineforearms andsmallblackmittenhands. No swords, jewelry, apron, coins orheldprop. Wholeheadfeetwithmargin; nosecondactor.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "cast-father-v2",
+        "aspect": "1:1",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE original older Japanese household FATHER full-body frontal onplainpalecream. Cream roundhead, broadGRAYsidehair andsmallgraytopknot, TWOsoftwrinkles, doteyes, sparsebrows, calmneutral smile, NObeard. Darkmuted BROWN kosode withBEIGE collar, mutedtan obi, charcoal lowerrobe; exactly TWOcream-hiltblackscabbards at anatomicalLEFT hip/viewerRIGHT. Thinblacklineforearms smallblackmittenhands white tabifeet. Distinct from SENIOR: lighterbrownrobe,broadergrayhair,softface. Fullbodycontained,noprop.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "cast-mother-v2",
+        "aspect": "1:1",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE original older Japanese household MOTHER full-body front-facing onplainpalecream. Oversizedcreamroundface doteyes sparsebrows tinyline nose/mouth, TWOsubtleagemarks, black-gray hair in LOWneatbun. FlatGRAY-BLUE longoverlappingkosode, creamcollar, mutedTAN sash, thinblacklineforearms tinyblackmittenhands whitetabifeet. No veil/crown/jewel/swords/props, clearlydifferentfromMAUVEyoungwife. Fullheadfeetshown,nootheractors.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "home-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY modest Japanese HOME tatami room master. Fixedgeometry: woodenposts; broadshojiwindowgrid acrossREARwall; leftwall lowclothingSHELFwithdarkfoldedclothes; smallLEFTsidecabinetwithsinglevase; LOWWOODdesk atLOWER-LEFTforegroundwithplainOPENledger anddarkinkstone; OPENrear-RIGHT doorway showsmodestwhitecourtyardwall,smallGRAYlowtiledroofandfoliage. Warm late-springdaylight,nofantasycastlesorhighpagoda. Rich readable graphicwoodgrain,joints,tatamiseams, restrainedtan/cream/indigopalette andsparsecelshadow. EntireROOMEMPTY,nopeople,silhouettes,weapons,floatingpropsorreadablewriting. Widecoherentperspective.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "market-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY modestJapanese RICE STOREFRONT andSTREETmaster around1720. Merchantcounter onLEFT, plainwoodenricemeasuresandstackedstrawsacks behindcounter, shortINDIGOnorenattopLEFT, narrowpacked-earth street extends intoRIGHTbackground, parkedWOODHANDCART alongRIGHTwall. Detailed readabletimberposts,shelving,graylowtiledroofs; NO highcastle/pagoda skyline. Samewarmlate-springdaylight,flatmattegraphicillustration tan/gray/indigo/olive andrestrainedcelshadow. Coherentfixedperspective. Nopeople,animals,swords, signs/readablekanji/text, logos,fantasyarchitecture ormodernitems. Emptymaster.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "office-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY originalmodest Japanese DOMAIN OFFICE around1720. LOWwoodwritingdesk CENTER-LEFT, shojiwindowgrid onREAR-RIGHTwall, plainopen scroll/bookCUBBIES onLEFTwall, closedslidingTIMBERentry FAR-RIGHT, tanTATAMI floor. DeskholdsONEdarkinkstone,ONEbrushholderwithbrushes,ONEboundpaperregister with tinyindistinctmarks. Twomodestcushions neardesk, simplepaperlampLEFT. Ordinarywarmspringdaylight fromrearRIGHT, richreadablewoodjoints/tatamiseams graphicflatcolor limitedshadow. Nopeople/floatinghands/swords; noemperorpalace/gold/throne/hugecastle/modernitems/visiblewriting.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "gate-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY modest Japanese DOMAIN TIMBER GATE/guardareacirca1720. Gateopening CENTER-LEFT, woodenframegraytiledroof; COVEREDBENCH atRIGHT, ONE storagecabinet againstrightwhite-plasterwall, lowwhiteplaster/timberenclosure behind, packed-earthpaving andsubtlegreenPINEleft. Warmmorninglate-springlight upperLEFT, mattewood/tan/gray/indigo flat2D detailedreadablegraphicperspective. Lowroofs only, nohugemonument/fantasywatchtower/Europeanstonecastle/damage. Nopeople/guardsilhouettes/weapons/signs/readablewriting/modernobjects. Emptylocationclearspace.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "training-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY restrained Japanese WOODEN TRAINING HALL around1720. OpenVERANDA atLEFT, smallgreenfoliageoutside, REARtimberwall atRIGHT holdsEXACTLYTWO plain WOODENpracticeweapons horizontallymounted on simplebrackets. PolishedbrownwoodFLOORboards convergebackward, twotimberposts, aSMALLFOLDED CLOTH onNEAR-RIGHTfloor. OrdinarywarmdaylightfromLEFT. Detailedreadable timberjoints andfloorwoodgraphicflatcolor restrainedtan/cream/darkwoodcelshadows. Wideemptyspacefortwofuturefigures. NOpeople/crowd/modernmatgrid/armor/metalblades/glowingweapons/texts/logos/trophystage.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "road-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY modestRURAL JAPANESE ROAD around1720. Tanpackedearthpath curvesfromFRONT-CENTER towardBACK-RIGHT, aSMALLWOODBRIDGE atRIGHTmiddle-distance, ONE modestTIMBER TEA-HOUSE/INN entrance atLEFTwithshortplainINDIGOfabric, lowgreenwoodedslopes andsmallfarmfields. OnlyLOW gray-tiledtimberroofsfaraway, nohighcastle/towers. Riverdoesnotcrossbuildings. Ordinarywarmlate-springdaylight, richcoherentgraphicflat2D matte tan/olive/gray/indigo, fairlythinoutlineddetails restrainedcelshadow. EMPTY,nopeople/animals/procession/floatingcarts/readableletters/numbers/fantasylandscape.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      },
+      {
+        "id": "edo-lodge-master-v2",
+        "aspect": "16:9",
+        "provider": "cli_proxy",
+        "prompt": "Use the attached KENJI image ONLY as the exact graphic drawing-style reference: cream oversized rounded heads, black dot eyes, minimal line noses and mouths, very thin black single-line forearms with small black mitten hands, matte flat colored robes with restrained cel shadow, clean fairly thin charcoal outline. Original historical flat2D educational story circa1720Japan, not anime, 3D, photorealistic, plush or painterly. No letters/logos/watermarks/modernobjects. For an EMPTY environment, do NOT draw the attached person, swords or cream portrait backdrop; create the fully illustrated scene described below. ONE EMPTY modestJapaneseDOMAINRESIDENCE SERVICE ROOM inEDO around1720, clearlydifferentgeometryfromHOME. REAR-LEFT shojiwindow; RIGHT-wallLOWshelfwithplainboundpaperregisters; LOWwooddesk atCENTER withONEopenregister/inkstone/brushholder; slidingTIMBERentry atBACK-RIGHT; tanTATAMIfloor. ONEfoldedBROWNtravelcloth/bundle sitsatNEAR-RIGHTfloor, onlyone. Ordinarywarmlate-springdaylightfromLEFT, restrainedcream/tan/darkwood/indigo flatgraphicillustration withrichreadablearchitectureandlimitedcelshadows. NOpeople/swords/swordracks/floatingweapons/palacethrone/fancypagoda/modernprops/readablewriting.",
+        "references": [
+          {
+            "path": "assets/masters/KENJI.png",
+            "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+            "role": "root-actually-reviewed-original-kenji-style-master"
+          }
+        ],
+        "timeout_seconds": 360
+      }
+    ]
+  }
+}

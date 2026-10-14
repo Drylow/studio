@@ -1,0 +1,29 @@
+{
+  "schema": "viking-first-two-actual-imagegen-arguments-v1",
+  "author": "samurai_regen_visual_a under explicit root commission",
+  "root_review_required_before_bulk_generation": true,
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "cast-eirik-v1",
+      "role": "identity",
+      "character": "EIRIK",
+      "prompt": "Create ONE original individual full-body adult VIKING character reference on plain pale cream background, no text, labels, props or other actors. Use reference image 1 ONLY for the exact economical Samurai-Chapters cartoon rendering: simple oversized round cream/off-white face, tiny black dot eyes, sparse short black eyebrows, tiny angular nose and small neutral line mouth, fairly thin black contour, flat matte fills, tiny black mitten hands connected by very thin single black line forearms. No anatomical arms, chibi muscular body, anime, realistic skin or 3D. Reference image 2 supplies ONLY the Viking identity and palette: EIRIK is a fictional adult Norwegian around year 950 with RED-BROWN hair around his ears and the same RED-BROWN short beard outline around his round face, TEAL knee-length plain wool tunic with subtle beige hem, narrow BROWN leather belt with modest bronze buckle, muted BROWN wool cape pinned at shoulder by a small plain bronze disc. For this VIDEO reference EIRIK is BAREHEADED: REMOVE the helmet completely and show simple flat red-brown hair, no topknot, no horned headgear, no braids added. He holds NOTHING, hands relaxed empty at sides; NO shield, sword, axe, weapon, armor, trophy, pouch, neck pendant or jewelry. Body slender adult filled garment silhouette, charcoal-brown simple narrow wool trousers, two small plain BROWN leather ankle shoes (not white tabi, no elaborate cuffs). Facing directly forward with neutral calm expression, no wave. Complete head, hair, cape, empty hands and both feet fully visible with generous margin, natural adult stance, head approximately one third of total body height, avoid excessive round toddler belly or short baby legs. Single figure only and preserve the exact thin line-arm flat 2D simplicity of reference 1.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png",
+        "chaines/viking-chapters/episode-01/assets/references/510830cc67458293.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "location-home-v1",
+      "role": "location",
+      "location_id": "HOME",
+      "prompt": "Create ONE finished EMPTY WIDE LANDSCAPE 16:9 original cartoon background master for a modest western NORWEGIAN VIKING FARM LONGHOUSE around year 950. Reference image 1 is ONLY a drawing-style and readable-interior-depth reference: equally clean thin dark outlines, detailed but restrained timber architecture, matte flat muted color fills and a few broad simple cel shadows. It is Japanese; NONE of its Japanese floor mats, shoji paper grids, Japanese cabinets, ledgers, inkstones, sliding screens or tiled walls should be copied. Build a NEW historically plausible Scandinavian interior, not a modified Japanese room. Static eye-level three-quarter camera near one short end looking down the length of a narrow timber longhouse. Wooden plank walls, heavy simple timber posts and exposed roof rafters under low thatch/turf roofing, packed-earth brown floor. One LOW RECTANGULAR STONE-LINED HEARTH lies slightly right of center on floor: gray river stones enclosing black ash and a few small dull orange embers, no high fireplace wall, no roaring flames, NO chimney. A small smoke vent in the roof above it. Long simple raised wooden sitting/sleeping benches stay along the LEFT wall and RIGHT wall, covered by plain brown/gray wool blankets. LEFT foreground: one modest rough wooden rectangular table with a plain wooden bowl, a small dark earthenware cup and ONE closed woven basket beside table on floor. LEFT midground: one small wooden chest beside wall bench and one simple vertical warp-weighted loom with plain pale wool textile leaning close to wall, stone weights near its base. At FAR REAR-RIGHT wall, exactly ONE low open timber plank door reveals only a patch of green grass and low fenced yard in ordinary late-spring daylight, with no giant distant castle or mountains inserted indoors. No large modern windows; a small unglazed rectangular wall aperture HIGH on rear-left wall provides soft pale daylight, no glass/grid. Coherent simple lived-in architecture, furniture grounded, background not cluttered. Palette warm matte wood brown, oat gray, cream, muted brown wool; roof braces anatomically plausible, daylight enters from rear-right and soft highlights on hearth side. This is an EMPTY LOCATION MASTER: absolutely NO people, faces, silhouettes, animals, weapons, shields, boats, modern objects, printed labels, readable runes, alphabetic text, captions, watermarks or logos. Full landscape image edge to edge, no frame/border/pillarbox/collage; wide empty walking/staging space around table and hearth for later named actors. Style is educational flat 2D cartoon drawn environment, not photoreal, painterly fantasy, 3D, pixel art or children's toy miniature.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/references/b3198a318d4fd535.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

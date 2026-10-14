@@ -1,0 +1,197 @@
+{
+  "schema": "portable-actual-thumbnail-provenance-v1",
+  "records": [
+    {
+      "id": "A",
+      "label": "THIS IS DINNER?",
+      "original_sha256": "189499c734020c0e9f402950110fd8fee68a4f29d1a0516c6a0c2a976c3e156c",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export_sha256": "819d5b7a21325c1fc302b58b5d86d45443d477af91302842bad7f053436bdd69",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1716181,
+      "jpeg_quality": 92,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail.",
+      "original": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-A.png",
+      "export": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-A.jpg",
+      "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is the exact belowdeck ship interior: hatch/ladder center-left, hammocks both sides, sacks/barrels, warm wood. TOM's large miserable eyes and face occupy LEFT 42%. He holds ONE hard brown ship's biscuit in his right black mitten at chest height, staring at it in disbelief; TWO tiny simple insects on the biscuit, mildly comic rather than disgusting. His left hand holds a plain brown wooden bowl with dull salted food, no feast. Warm soft golden light from hatch, rich detailed dark wood on RIGHT, one cask and foldedcloth form simple surroundings. On upper RIGHT HUGE text exactly 'THIS IS' first line and 'DINNER?' second line in yellow/black. Strong crisp contrast, no other actor and no invented shipwreck.",
+      "ordered_references": [
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+          "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75"
+        }
+      ],
+      "selected_generation_arguments": {
+        "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is the exact belowdeck ship interior: hatch/ladder center-left, hammocks both sides, sacks/barrels, warm wood. TOM's large miserable eyes and face occupy LEFT 42%. He holds ONE hard brown ship's biscuit in his right black mitten at chest height, staring at it in disbelief; TWO tiny simple insects on the biscuit, mildly comic rather than disgusting. His left hand holds a plain brown wooden bowl with dull salted food, no feast. Warm soft golden light from hatch, rich detailed dark wood on RIGHT, one cask and foldedcloth form simple surroundings. On upper RIGHT HUGE text exactly 'THIS IS' first line and 'DINNER?' second line in yellow/black. Strong crisp contrast, no other actor and no invented shipwreck.",
+        "referenced_image_paths": [
+          "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "B",
+      "label": "WHERE'S MY GOLD?",
+      "original_sha256": "71e44db3c864ac05f24dfdd9b3ddc5765788e9fd5a56ac65b661e97d9947e992",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export_sha256": "be972bde642dfead42fa3e99516bfc78ca821fd6b2907e4d33ad44a4f3a67e74",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1862113,
+      "jpeg_quality": 90,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail.",
+      "original": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-B.png",
+      "export": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-B.jpg",
+      "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact deck of small one-mast sloop, two modest guns, wooden hatch and rigging. IMAGE 4 is exact CAPTAIN, brown beard/tricorn/burgundy coat; never dress Tom as captain. TOM huge disappointed face on RIGHT 45%, brows raised, watery eyes, holding a tiny open plain leather purse with only TWO little silver coins in his right black mitten; left hand empty palm-up. Behind LEFT the Captain is a much smaller figure seated beside a simple wooden box, attending to modest supplies rather than gloating with treasure. Rich turquoise sea and warm wooden deck, plausible little ship. Upper LEFT bold yellow/black text exactly 'WHERE'S' first line and 'MY GOLD?' second. Story angle uncertain rewards, NOT literalclaim nobodyevergotloot. No giantgoldpiles, newcast, skullflags or extravagantnavalship.",
+      "ordered_references": [
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+          "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+          "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c"
+        }
+      ],
+      "selected_generation_arguments": {
+        "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact deck of small one-mast sloop, two modest guns, wooden hatch and rigging. IMAGE 4 is exact CAPTAIN, brown beard/tricorn/burgundy coat; never dress Tom as captain. TOM huge disappointed face on RIGHT 45%, brows raised, watery eyes, holding a tiny open plain leather purse with only TWO little silver coins in his right black mitten; left hand empty palm-up. Behind LEFT the Captain is a much smaller figure seated beside a simple wooden box, attending to modest supplies rather than gloating with treasure. Rich turquoise sea and warm wooden deck, plausible little ship. Upper LEFT bold yellow/black text exactly 'WHERE'S' first line and 'MY GOLD?' second. Story angle uncertain rewards, NOT literalclaim nobodyevergotloot. No giantgoldpiles, newcast, skullflags or extravagantnavalship.",
+        "referenced_image_paths": [
+          "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "C",
+      "label": "GOLD? KEEP SCRUBBING",
+      "original_sha256": "7dd8cf886c1c832aa102d3c617b631fd13ad0181191d7a6bd79fd4305194ee2f",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export_sha256": "3650cfaececd73357abfb3de8302fcec070bf090adbf558ede3882199ceb7224",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1935425,
+      "jpeg_quality": 90,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail.",
+      "original": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-C.png",
+      "export": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-C.jpg",
+      "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact belowdeck interior. Visibly DIFFERENT wider low three-quarter composition: TOM exhausted at RIGHT 43%, crouched/kneeling with both boots/knees supported by floor, pulling a small stiff brush across the near wood beside ONE ordinary dull-brown stave bucket with two dark bands. His tired large expression faces camera enough to read; one sweatdrop, black mitten on brush and other steadying rim. Opening hatch and center-left ladder create cinematic diagonal bright light on wet scrubbed boards, small shallowwater shine only, no sewage/slop/gore. Hammock, sacks and casks rich drawn background LEFT. Upper LEFT giant yellow/black text exactly 'GOLD?' first line and 'KEEP' second and 'SCRUBBING' third, mobile readable, marginclear. Noextraactor, noextrahand, notduplicating dinner/pursecomposition.",
+      "ordered_references": [
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+          "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75"
+        }
+      ],
+      "selected_generation_arguments": {
+        "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact belowdeck interior. Visibly DIFFERENT wider low three-quarter composition: TOM exhausted at RIGHT 43%, crouched/kneeling with both boots/knees supported by floor, pulling a small stiff brush across the near wood beside ONE ordinary dull-brown stave bucket with two dark bands. His tired large expression faces camera enough to read; one sweatdrop, black mitten on brush and other steadying rim. Opening hatch and center-left ladder create cinematic diagonal bright light on wet scrubbed boards, small shallowwater shine only, no sewage/slop/gore. Hammock, sacks and casks rich drawn background LEFT. Upper LEFT giant yellow/black text exactly 'GOLD?' first line and 'KEEP' second and 'SCRUBBING' third, mobile readable, marginclear. Noextraactor, noextrahand, notduplicating dinner/pursecomposition.",
+        "referenced_image_paths": [
+          "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "D",
+      "label": "FREEDOM? THINK AGAIN",
+      "original_sha256": "4cab5c13d044d62011bccfe1cb90c3c05bed353f8f360b8fe4b34a6550658cb7",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export_sha256": "2eaa4175c322f467a3528c3a6a49be33f08442dc5180958eaa45167a59044656",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1678359,
+      "jpeg_quality": 92,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail.",
+      "original": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-D.png",
+      "export": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-D.jpg",
+      "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact tavern interior: long table LEFT, rear wood door, shelves RIGHT, timber ceiling and quiet daytime window. IMAGE 4 is exact brown-bearded CAPTAIN in black tricorn/burgundy coat. TOM large sceptical half-lidded face and upper body LEFT 43%, staring at ONE blank weathered articles page on left table, one black mitten resting beside document and other lifted puzzled. Captain is a smaller neutral adult behind table on RIGHT, explaining articles calmly with a single open-hand gesture, NOT violenttyrant or executions. Small wooden mug, subdued amber/daylightgreen rustic details. Upper RIGHT giant yellow/black text exactly 'FREEDOM?' first line and 'THINK AGAIN' second. This represents crew obligations/agreements, not claimed universal laws or a historicalquote. Page blank/nolegiblewords, twoactors only, no modern signaturepen, no swords in hands.",
+      "ordered_references": [
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+          "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3"
+        },
+        {
+          "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+          "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c"
+        }
+      ],
+      "selected_generation_arguments": {
+        "prompt": "Create ONE original finished wide 16:9 YouTube educational-history thumbnail for Pirate Pages, c1715 Caribbean. IMAGE 1 is ONLY the exact visual style of the approved Samurai thumbnail: round pale cartoon heads with very expressive oversized eyes/brows, rich clean bold black ink outlines, detailed colorful period setting, HUGE rounded uppercase YELLOW text with thick BLACK stroke. Do not copy Japanese identities, clothing, architecture or lettering. IMAGE 2 is exact protagonist TOM: short warm brown hair, clean-shaven ivory round face, cream rolled-cuff shirt, plain navy waistcoat, charcoal breeches, brown boots. Preserve this identity, express eyes/brows in thumbnail style. Covered ordinary sailor body, thin black line forearms and little BLACK mitten hands with believable object contact. No photorealism/3D/anime, fancy captain costume for Tom, skull logos, gory imagery, giant fantasy buildings, modern objects, watermark or timestamp. One coherent original scene, no comparison panels. All key faces/letters comfortably inside edges and readable on mobile. The requested title text is the ONLY readable lettering. IMAGE 3 is exact tavern interior: long table LEFT, rear wood door, shelves RIGHT, timber ceiling and quiet daytime window. IMAGE 4 is exact brown-bearded CAPTAIN in black tricorn/burgundy coat. TOM large sceptical half-lidded face and upper body LEFT 43%, staring at ONE blank weathered articles page on left table, one black mitten resting beside document and other lifted puzzled. Captain is a smaller neutral adult behind table on RIGHT, explaining articles calmly with a single open-hand gesture, NOT violenttyrant or executions. Small wooden mug, subdued amber/daylightgreen rustic details. Upper RIGHT giant yellow/black text exactly 'FREEDOM?' first line and 'THINK AGAIN' second. This represents crew obligations/agreements, not claimed universal laws or a historicalquote. Page blank/nolegiblewords, twoactors only, no modern signaturepen, no swords in hands.",
+        "referenced_image_paths": [
+          "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+          "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+          "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ],
+  "originals_preserved": true,
+  "resolution_notice": "3840x2160 JPEG exports enlarged from actual1672/1671x941 generated originals; not native generated4K detail."
+}

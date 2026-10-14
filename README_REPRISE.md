@@ -1,5 +1,11 @@
 # Reprendre ce dossier sur un autre compte
 
+**Nouvelle passation du 14 octobre 2026 : [README_HANDOFF.md](README_HANDOFF.md).**
+Lire ce point d'entrée pour les derniers films historiques, leurs sources,
+le véritable Alien J1–J30, les outils VPS et la future publication. Le suivi
+Survivor/Patch/Alien Aftermath ci-dessous appartient à d'autres projets et
+ne remplace pas cette continuité.
+
 Etat au 12 octobre 2026. Ce fichier est le point d'entree du travail en cours. Les chemins ci-dessous sont relatifs a la racine du depot, donc restent utilisables si le dossier est deplace.
 
 Nouveau PC / collegue aliens : lire [README_SURVIVOR_TUBEFORGE.md](README_SURVIVOR_TUBEFORGE.md). La base TubeForge complete, son installation sans archive privee et les presets zombies/aliens editables sont maintenant conserves dans Git sous `production/`.

@@ -1,0 +1,26 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "122719845f0660bf93ad25306331e9b8f0fe90607ee4a79ce0d34b84ee10f7d3",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/native-clock-adoption.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "project_id": "why-being-a-samurai-was-worse-than-you-t-947aab",
+    "state": "voice_and_exact_clock_adopted",
+    "voice_file": "voiceover/narration.flac",
+    "duration": 1179.0367346938776,
+    "total_frames": 28297,
+    "scenes": 108,
+    "words": 2795,
+    "alignment_provenance": {
+      "timing_path": "/workspace/samurai-chapters-regeneration/episode-01/actual-108-paragraph-timings.json",
+      "timing_sha256": "024d828f2e410ebf1d41042d09f9e1d0d70c81696014d3cf8f0cfdef24d465b1",
+      "native_words_path": "/workspace/samurai-chapters-regeneration/episode-01/native-store-words-2795.json",
+      "native_words_sha256": "7453760716bbd561f4e5857256ee12894082769305abd6f94b66f940ad06b74d",
+      "aligned_word_count": 2795,
+      "scene_count": 108,
+      "source_spoken_sha256": "f2d0e1be63b96bb524de524b61f35623ae2618c25f09645afe619e76d1fde3a9"
+    },
+    "paid_calls": 0,
+    "render_started": false
+  }
+}

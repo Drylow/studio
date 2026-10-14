@@ -1,0 +1,16 @@
+{
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "request_definition": {
+    "id": "SHIP_NORWAY_COAST",
+    "source_master_id": "SHIP",
+    "scene_ids": [
+      66
+    ],
+    "prompt": "Edit reference1 EXACT EMPTY SHIP into the SAME vessel/camera returning to its familiar western NORWEGIAN landing cove around950. Reference1 is always the mandatory physical boat: preserve exact original low clinker hull, every wood thwart count/position, bow stem, centered mast, plain BROWN sail tightly FURLED on original slanted horizontal yard, rigging attachment points, RIGHT STARBOARD foreground stern steering oar/lashing, existing single rope coil/covered bundle and original stern-to-bow framing. Change ONLY geography BEYOND low gunwales: show distant familiar sheltered cove from reference2 SHORE, same low wooded rocky green hills, rounded gravel beach and LEFT modest low turf-roof timber BOAT SHED with short plain plank landing/dock next to it. Cove ahead left-middle, empty modest shore, grayblue gentle sea; no new giant cliffs or village. Reference2's externally moored vessel is the SAME ship that is now under our camera: DO NOT copy that boat into cove, NO second boat at dock, no SHORE rope/crates moved onto ship. Reference2 supplies only recognizable geography and shed/dock relations, not outside boat camera. Ordinary pale overcast late-summer DAY, original matte graphic2D dark outlines/drawn timber density and simple shadows. Absolutely EMPTY no crew/people/animals/weapons/shields/flags/newcargo/dragonprow/modernwheel/text/runes/captions/logos/panels. Same unmirrored full-bleed landscape16:9 exact SHIP camera, no interior geometry drift.",
+    "referenced_image_paths": [
+      "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png",
+      "chaines/viking-chapters/episode-01/assets/masters/locations/SHORE.png"
+    ],
+    "transparent_background": false
+  }
+}

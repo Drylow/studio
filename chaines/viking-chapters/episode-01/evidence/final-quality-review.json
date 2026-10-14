@@ -1,0 +1,24 @@
+{
+  "movie_sha256": "c684fbf2a4f72df556f9fb327705f642abbbaf0c1e03f338625b33db1b5dbb5a",
+  "state": "verified",
+  "source": "delegated_ai_inspection",
+  "reviewer": "root",
+  "notes": "Complete fatal decode of final audio/video, actual final AAC levels and seven narration alignment checks passed. Every encoded scene midpoint, cut pair, first and last frame genuinely reviewed in the bound visual ledger. Exact native video packets and timing retained during audio-only mastering.",
+  "evidence": {
+    "technical": {
+      "path": "chaines/viking-chapters/episode-01/evidence/final-technical-qa.json",
+      "original_recorded_sha256": "60157761cb2a25c4b76b5392320e4e13d94b2c67fd328947aec882cc59aa97fa",
+      "portable_derivative": true
+    },
+    "visual": {
+      "path": "chaines/viking-chapters/episode-01/evidence/final-visual-qa.json",
+      "original_recorded_sha256": "ca537cbb0e197cfb3611db2282f6a09d6a01798f87a14204ccb20217bc59d535",
+      "portable_derivative": true
+    },
+    "audio_mastering": {
+      "path": "chaines/viking-chapters/episode-01/evidence/audio-only-mastering.json",
+      "original_recorded_sha256": "883f3a347133e0ce403af1da8d13b3523227896601fad36c559a112cd1729511",
+      "portable_derivative": true
+    }
+  }
+}

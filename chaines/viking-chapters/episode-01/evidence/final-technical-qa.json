@@ -1,0 +1,115 @@
+{
+  "schema": "history-final-av-technical-review-v1",
+  "movie": "historical-artifact:viking-chapters-production/episode-01/delivery/Viking-Chapters-Episode-01.mp4",
+  "movie_sha256": "c684fbf2a4f72df556f9fb327705f642abbbaf0c1e03f338625b33db1b5dbb5a",
+  "state": "technical_pass_visual_review_pending",
+  "metadata": {
+    "video_frames": 27980,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_rate": 44100,
+    "video_duration": 1165.8333333333333,
+    "audio_duration": 1165.8450113378685
+  },
+  "actual_decoded_video_frames": 27980,
+  "full_av_fatal_decode_exit": 0,
+  "full_av_fatal_decode_method": "One complete PyAV decode of both streams, err_detect=explode; additional audio-only FFmpeg xerror pass measures final levels. No second full video decode.",
+  "actual_decoded_audio_frames": 50209,
+  "actual_decoded_audio_samples": 51413760,
+  "full_av_decode_elapsed_seconds": 222.15369033813477,
+  "audio_measured_levels": {
+    "input_i": "-17.43",
+    "input_tp": "-1.22",
+    "input_lra": "3.90",
+    "input_thresh": "-28.10",
+    "output_i": "-17.02",
+    "output_tp": "-1.50",
+    "output_lra": "3.70",
+    "output_thresh": "-27.68",
+    "normalization_type": "dynamic",
+    "target_offset": "0.02"
+  },
+  "voice_correlation_windows": [
+    {
+      "start_seconds": 2.0,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999670307406313,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 116.584,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999681872123866,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 291.46,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999386652066119,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 582.92,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999530217666487,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 874.3799999999999,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999514890629424,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 1049.2559999999999,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999635687265722,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 1159.84,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999687148413674,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    }
+  ],
+  "source_voice_sha256": "865da8fcc7d315f02cc7d59168e7f97c3e5f6edfae6a625c480eb95050b66028",
+  "derived_voice_sha256": "a6f794a5b89a63c2714fd0311911278aef673ad37babe76a81bc313b110de6fb",
+  "captured_frame_count": 264,
+  "capture_sheets": [
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-01.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-02.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-03.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-04.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-05.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-06.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-07.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-08.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-09.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-10.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-11.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-12.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-13.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-14.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-15.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-16.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-17.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-18.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-19.jpg",
+    "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-20.jpg"
+  ],
+  "visual_review_state": "pending_actual_view",
+  "elapsed_seconds": 276.03533697128296,
+  "paid_calls": 0,
+  "uploaded": false
+}

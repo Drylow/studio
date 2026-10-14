@@ -1,0 +1,9 @@
+PACK PIRATE PAGES
+
+Photo de profil : Pirate-Pages-avatar.png (master natif carré 1254 × 1254).
+Bannière YouTube : Pirate-Pages-banner-2560x1440.jpg (2560 × 1440, sous 6 Mo).
+Une version PNG sans perte de la bannière est également fournie.
+Description de chaîne anglaise : DESCRIPTION.txt.
+Nom et état de l’arrobase : NOM-ET-ARROBASE.txt.
+
+Même famille visuelle que Samurai Chapters et Viking Chapters : fond crème, mascotte simple 2D, nom noir sur une ligne et petit Subscribe. Mascotte et texte restent à l’intérieur de la zone mobile 1546 × 423. La bannière est un export aux dimensions YouTube du master natif 1672 × 941.

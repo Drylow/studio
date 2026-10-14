@@ -1,0 +1,99 @@
+{
+  "schema": "tubeforge-access-vault-verification-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Real CLI decrypt restores all five original uploaded files byte-identically, with 700/600 permissions",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Public ciphertext and all five original SHA-256 records match actual bytes",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Wrong 256-bit key rejected before creating plaintext destination",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Changed ciphertext rejected by AES-GCM before any plaintext write",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Changed nonce rejected before any plaintext write",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Existing private credentials are not replaced without explicit overwrite",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Explicit overwrite restores an existing regular file correctly",
+      "outcome": "PASS"
+    },
+    {
+      "check": "World-readable key file refused",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Symlinked key input refused",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Symlinked plaintext destination refused without writing target",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Symlinked destination ancestor refused",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Plaintext restoration inside a Git checkout refused",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Symlinked existing credential refused even with explicit overwrite",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Authenticated path traversal rejected before any plaintext write",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Authenticated symlink archive entry rejected before any plaintext write",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Authenticated payload with mismatched original-file hash rejected before any plaintext write",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Explicit base64 and hex key formats decode the same 256-bit key",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Private dotenv reads only HANDOFF_VAULT_KEY and executes nothing",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Environment-variable CLI path restores exact originals without key CLI argument",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Mocked cPanel fetch contract uses 700/600 temporary key and removes it; real network not exercised",
+      "outcome": "PASS"
+    }
+  ],
+  "check_count": 20,
+  "actual_original_roundtrip": true,
+  "all_original_files_byte_identical": true,
+  "real_aes_gcm_wrong_key_and_tamper_checks": true,
+  "network_requests_during_checks": 0,
+  "cpanel_network_restore_verified_here": false,
+  "ciphertext_sha256": "92109527c53ae3f01e91597f282e57806e04fb962a1e8a465d004e504b5744c9",
+  "runtime": {
+    "python": "3.12.14",
+    "cryptography": "50.0.0",
+    "platform": "linux"
+  },
+  "key_or_credential_values_in_report": false
+}

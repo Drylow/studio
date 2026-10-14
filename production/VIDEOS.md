@@ -1,4 +1,21 @@
-## État actuel — Silent Little Worlds, jardin des lanternes
+## Livraisons et reprise du 14 octobre 2026
+
+Lire [la passation complète](../README_HANDOFF.md) et
+[le registre des chaînes](handoff/CHANNELS.md) avant d'interpréter les anciens
+états ci-dessous. Le jardin sleep a depuis été abandonné par l'utilisateur ;
+ne pas reprendre son export long.
+
+| Chaîne | Film livré | Sources Git / publication |
+| --- | --- | --- |
+| Samurai Chapters | Why Being a Samurai Was Worse Than You Think — 19:39 | `chaines/samurai-chapters/` ; [GoFile](https://gofile.io/d/M9RLsD1P). Miniature C PAID IN RICE choisie. Publication rapportée par l'utilisateur. |
+| Viking Chapters | Why Being a Viking Was Worse Than You Think — 19:26 | `chaines/viking-chapters/` ; [GoFile](https://gofile.io/d/Zd5AhFJi), sept fichiers vérifiés. Aucun nouvel upload YouTube effectué par l'agent. |
+| Pirate Pages | Why Being a Pirate Was Worse Than You Think — 19:45 | `chaines/pirate-pages/` ; [GoFile](https://gofile.io/d/e2AjnCyr), sept fichiers vérifiés. Aucun nouvel upload YouTube effectué par l'agent. |
+| One Stick Left | Alien Outbreak Survival: Day 1 to Day 30 — 19:05 | `chaines/alien-outbreak-survival/` : récupération vérifiée du premier film et de sa narration pour la suite J31–J60 ; fichier auteur original non retrouvé. |
+
+Le push de cette passation sauvegarde les sources ; il ne déploie pas le site,
+ne lance pas d'autre génération et ne configure pas le posting automatique.
+
+## Historique — Silent Little Worlds, jardin des lanternes
 
 ## Pause demandée — validation de l’animation attendue
 

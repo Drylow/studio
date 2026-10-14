@@ -1,0 +1,38 @@
+{
+  "schema": "viking-prepared-actual-master-arguments-v1",
+  "author": "samurai_regen_visual_a under root commission",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "location-shore-v1",
+      "role": "location",
+      "location_id": "SHORE",
+      "prompt": "Match reference 1's SAME original graphic educational 2D drawn environment: fairly thin dark contours, detailed readable timber/earth/vegetation but restrained painted texture, matte flat muted colors and broad simple cel shadows. Do not increase realism or microtexture. Not photo, 3D, anime scenery or painterly fantasy. One full-bleed WIDE LANDSCAPE16:9 EMPTY location master with no actors/silhouettes/animals, weapons, modern objects, text/runes/signs/captions/logos/watermarks/panels/collage. NEW location: western NORWEGIAN coastal landing place around950, ordinary pale late-spring daylight. Reference1 HOME is ONLY drawing-style evidence, do not copy its hearth/walls/interior. Reference2 SHIP is our EXACT vessel reference: same modest brown clinker hull, plain unornamented narrow bow/stern, single mast and tightly furled plain brown sail on horizontal yard, no dragon, shields, coloredflag or modern wheel. Eye-level broad three-quarter shore camera looking diagonally across a small sheltered fjord cove. LEFT: one modest low timber boat shed with turf roof set back from water, simple low plank landing/dock protruding from rounded gravel beach into quiet water. Our ONE exact SHIP is moored next to that short dock in middle-left cove, seen externally from side/three-quarter, low gunwales, empty and no oars actively extended. Only ordinary plausible rigging. Foreground clear rounded gravel/earth beach staging area with ONE modest brown rope coil on dock and two small grounded wood crates at boat-shed edge. RIGHT: water fills open cove toward low distant green slopes and gray rocky shore, pale blue/gray sky; no mighty royal harbor, toweringcastle, fantasticalmountains, city skyline, glass windows, metal cranes or marina. Natural calm reflected daylight and gentle small water ripples, matte rendering same density asHOME/SHIP. No unexplained extra boat, decorations, skulls or weapon displays. Keep exact vessel recognizably same sail/mast/plain hull geometry, not gigantic longship.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png",
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "location-market-v1",
+      "role": "location",
+      "location_id": "MARKET",
+      "prompt": "Match reference 1's SAME original graphic educational 2D drawn environment: fairly thin dark contours, detailed readable timber/earth/vegetation but restrained painted texture, matte flat muted colors and broad simple cel shadows. Do not increase realism or microtexture. Not photo, 3D, anime scenery or painterly fantasy. One full-bleed WIDE LANDSCAPE16:9 EMPTY location master with no actors/silhouettes/animals, weapons, modern objects, text/runes/signs/captions/logos/watermarks/panels/collage. NEW location: a small ordinary ENGLISH NORTH SEA coastal trading hamlet around950, distinct from Norway FARM/SHORE, ordinary pale late-spring daytime. Reference1 is ONLY original drawing-style evidence, do not copy its Viking longhouse interior. Static eye-level broad three-quarter view across modest timber waterfront marketplace toward calm coastal water on RIGHT. FOREGROUND LEFT: ONE plain wooden MERCHANT COUNTER attached to a low timber/wattle-and-daub store hut, roof modest dark thatch, open plain doorway behind counter. On counter ONE small plain metal hand-balance with two shallow pans, two plain wooden bowls, ONE folded muted flax-gray textile bundle; no letters or merchandise signage. Two small plain grounded wooden crates beside counter. FRONT MIDDLE clear earth/gravel walkway wide enough for two named actors face to face. RIGHT middle ground simple LOW TIMBER QUAY and short modest dock near low water, some ordinary rope fittings, no ship by default. LEFT farther background low grass track branches inland along a modest wattle boundary fence, with a SMALL grassy empty CLEARING just outside the low hamlet at far-left edge; this helps later registered COUNTRYSIDE_APPROACH variant, NOT a separate Norwegian mountain coast. Only THREE simple LOW Anglo-Saxon timber/wattle-and-daub houses with modest thatch roofs farther behind; no decorative Tudor diagonal half-timber towers, castles, cathedralspire, Englishbigben, glass storefronts, cobbledroyalcity or Scandinavian turf farm copied. Low green coastal slope and distant tree fringe far horizon, restrained grey-blue calm sea, no fantastical skyline. Keep shop/counter/street/quay/clearing relations physically readable and stable, original dense but drawn2D timber detail no more intensive than HOME. Empty with no people/crowds/creatures, weapons, flags, runic/alphabeticwriting or modern props.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "location-assembly-v1",
+      "role": "location",
+      "location_id": "ASSEMBLY",
+      "prompt": "Match reference 1's SAME original graphic educational 2D drawn environment: fairly thin dark contours, detailed readable timber/earth/vegetation but restrained painted texture, matte flat muted colors and broad simple cel shadows. Do not increase realism or microtexture. Not photo, 3D, anime scenery or painterly fantasy. One full-bleed WIDE LANDSCAPE16:9 EMPTY location master with no actors/silhouettes/animals, weapons, modern objects, text/runes/signs/captions/logos/watermarks/panels/collage. NEW location: a modest local Norwegian outdoor public-law gathering place around950, SAME late-spring daytime world as our FARM but new actual place. Reference1 HOME is ONLY original drawing-style evidence, do not copy interior/hearth/loom. Static eye-level broad view across an ordinary open GRASSY FIELD next to a narrow packed-earth walking path. Clear flat front-middle speaking/staging space for later named adult neighbors. LEFT middle distance ONE modest LOW NATURAL STONE BOUNDARY WALL, imperfect roundedlocalrocks not alignedstandingmonoliths. RIGHT midground TWO simple short grounded WOODEN SITTING BENCHES beside a low wattle fence; a few SMALL irregular natural rocks near path. Low wooded green hillside in back, at far-left distance only a small low timber farm roof, modest scale, pale blue/graydaylight sky and natural lowsoftshadows. This is localNorway assembly, NOT IcelandAlthing canyon, monumentalThingvellirparliament, Stonehenge/ritual stonecircle, giant throne, Vikingtemple, colosseum, king'scrowndais, fantasycastle or rune-painted signposts. No formal citybuildings or giantcrowd implied. Not a duel arena. Detailed lowvegetation readablebutmatte and wood/earth contours match reference1 rendering density, no photo-real grass/no excessive texture, no visible digital UI. Absolutely EMPTY with no actors/silhouettes, livestock, weapons, helmets, flags, alphabetictext/runes or decorations. Full landscapeedge-to-edge and front space comfortably clear.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

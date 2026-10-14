@@ -1,0 +1,71 @@
+{
+  "schema": "viking-prepared-actual-master-arguments-v1",
+  "author": "samurai_regen_visual_a under root commission",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "cast-aslaug-v1",
+      "role": "identity",
+      "character": "ASLAUG",
+      "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. ASLAUG is an adult competent Norwegian household partner around950, distinct from EIRIK. Simple chestnut-brown hair in one LOW BUN with a plain PALE FLAX headcloth tied modestly over the back of the head, some brown hair visible by ears, no enormous turban, Viking helmet or crown. Small calm gentle line smile, no eyelashes/lipstick/makeup. Muted MAUVE plain ankle-length long-sleeved wool dress, small ivory neckline, dark TAUPE simple woven waist belt with no extravagant hanging keys/jewels. Narrow simple full covered lower garment, two small brown leather shoes. Sleeves end with the same very thin black line forearms and small black mitten hands, no realistic arms. No shield/sword or baby. Keep poised adult proportions and simple matte rendering.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+        "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "cast-bjorn-v1",
+      "role": "identity",
+      "character": "BJORN",
+      "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. BJORN is an older NORWEGIAN crew skipper around950, distinct from red-bearded EIRIK: short GRAY-BROWN side hair, fuller SHORT GRAY beard tracing his simple round face, two subtle forehead lines and a small restrained serious line mouth. He is BAREHEADED, no helmet/crown/horns in this default master. Muted MAROON plain knee-length tunic with small pale neck slit, dark UMBER plain wool cloak pinned at one shoulder by small dull bronze disc, narrow DARK BROWN belt with modest buckle, charcoal trousers and tiny plain brown shoes. No metal armor, expensive sword or armed chief tableau. Do not copy EIRIK's teal or red beard; preserve the same thin black line forearms/black mittens and economical flat2D face/body. Entire cloak and shoes fit within margins.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+        "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "cast-merchant-v1",
+      "role": "identity",
+      "character": "MERCHANT",
+      "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. MERCHANT is an adult ordinary ENGLISH North Sea local around950, distinct from EIRIK and BJORN. Short simple SANDY-BLOND hair neatly around ears, NO beard or moustache, no topknot or headgear, calm small line smile. Plain muted OCHRE/olive-brown knee-length wool tunic with simple cream neckline, narrow dark BROWN waist belt, charcoal simple trousers and tiny brown leather shoes. NO cape, jewelry, apron, scales, coins, weapons, helmet or trader hat. Same cream round face black dot eyes, thin black line forearms and small black mitten hands, not a realistic British portrait, no exaggerated peasant dirt or ethnic caricature. Neutral full body grounded stance, entire shoes/hair visible.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+        "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "cast-neighbor-v1",
+      "role": "identity",
+      "character": "NEIGHBOR",
+      "prompt": "Create ONE original individual full-body adult character reference, neutral frontal standing pose with empty hands relaxed at sides, on plain pale cream background. Reference 1 is the selected EIRIK film character: match the EXACT same large round cream/off-white face, tiny black dot eyes, minimal small brows/nose/line mouth, thin dark outline, flat matte garment shapes, very thin BLACK SINGLE-LINE forearms and small simple BLACK mitten hands. Slender adult clothing silhouette and normal covered body, head about one third of complete body height, tiny plain brown leather ankle shoes, no white tabi, no realistic anatomy/skin, glossy gradients, chibi toddler body, 3D or anime. Reference 2 is the actual Samurai economical rendering, do not copy Japanese clothes/hair/swords. Whole head/hair, hands and both feet within generous margins. No words, labels, panels, scenery, watermark, other people, weapons, shield, armor, helmet, crown, jewelry collection, bag or permanent hand prop. NEIGHBOR is an adult ordinary NORWEGIAN household farmer around950, distinct from EIRIK/BJORN. Plain DARK BROWN short hair around ears, short neat DARK BROWN beard, tiny neutral composed mouth. Muted DARK OLIVE-GREEN knee-length wool tunic, narrow plain TAN woven belt without metal buckles, dark GRAY trousers, small brown leather shoes. No cape, armor, helmet, shield or weapon. Same simple cream round face and exact thin black line forearms/black mitten hands. No turban/topknot, no realistic arms, no modern farmworker costume. Neutral full-body empty-handed stance, hair/feet inside generous margins.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+        "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "location-farm-v1",
+      "role": "location",
+      "location_id": "FARM",
+      "prompt": "Create ONE EMPTY full-bleed WIDE LANDSCAPE16:9 original illustrated 2D location master for western NORWEGIAN modest farmstead around950. Attached image is our EXACT selected HOME interior: use its same restrained clean dark drawing lines, dense readable drawn timber, matte broad wood/earth palette and simple cel shadows, not photos/3D. This is the exterior of that SAME simple wooden longhouse, not a Japanese building. Eye-level broad three-quarter view across a small grassy packed-earth yard: single LOW wood plank longhouse takes LEFT/MIDDLE background, pitched low TURF-over-thatch roof, ordinary timber rafters/corner posts, low fieldstone base, one OPEN plain plank doorway at near short gable showing a modest dark interior only, tiny UNGLAZED wall opening on long side, no large glass or paper grid. Consistent with the HOME long benches/hearth, modest family space, not lord mansion. RIGHT middle ground one small simple low timber STORAGE SHED with closed plank door, low woven-wattle fence and a narrow kitchen garden patch near shed. LEFT foreground practical low wood chopping stump and ONE short plain stacked firewood pile beside house wall; front-middle clear yard/path for named actors, not cluttered. Backdrop low green Norwegian hillside, sparse trees, distant small fjord glimpse to far right only, no castles, towers, monumental mountain silhouettes, snowy seasonal jump or modern farm equipment. Ordinary pale late-spring daylight, soft shadows from upper-right, stable gray-blue sky and green grass. Absolutely NO people, silhouettes, animals, weapons, shields, boats, text, runes, signs, labels, watermarks, fantasy architecture or collage. Beautiful readable 2D graphic environmental drawing, wood detail no more intensive than reference, no photoreal or painterly overtexture. Wide landscape canvas edge-to-edge and empty staging space foreground.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "location-ship-v1",
+      "role": "location",
+      "location_id": "SHIP",
+      "prompt": "Create ONE EMPTY full-bleed WIDE LANDSCAPE16:9 original educational 2D background master INSIDE a modest Norwegian clinker-built open wooden coastal vessel around950. Attached image is ONLY our drawing style/color reference: same clean dark contour lines, restrained drawn timber detail, matte flat brown/gray hues and simple cel shadows, not photo/3D. New location is a BOAT, do not copy longhouse walls/rafters/fire/hearth/loom/furniture. Static slightly raised eye-level camera at STERN looking toward narrow plain BOW, boat long centerline extends foreground-bottom to middle upper frame. A credible ordinary shallow-draft boat sized for roughly20 seasonal crew, not giant royal fantasy ship: low curved clinker-plank hull/gunwales, aroundTEN low PLAIN WOOD ROWING THWARTS across hull, open walking/rowing space, ONE modest central wood MAST with plain brown wool SQUARE SAIL FURLED/rolled tightly on horizontal YARD, a few restrained taut brown rigging ropes with real connections. No billowing giant colorful sail or ropes floating free. A modest long wooden STEERING OAR is fixed at STARBOARD stern, VIEWER RIGHT near foreground, physically tied/grounded to gunwale; no modern wheel/rudder. Oars are NOT actively extended, there is NO crew. One modest coil of brown rope and ONE covered plain gray-brown cargo bundle under a forward thwart, nothing else. Plain low stempost, NO dragon head, horns, shields hung along rails, flags, sail logos or ornamental carving. Calm gray-blue NorthSea stretches beyond LOW gunwales; low hazy distant green shore on far horizon only; pale overcast daytime with broad simple matte light. Camera stable, no impossible airborne outside aerial shot, no gigantic waves. Entire credible boat staging area framed in landscape with thin confident outlines and readable nautical construction. NO actors/silhouettes/animals, weapons, modern objects, readable text/runes/numbers, caption, watermark, logo or collage. Default empty ship with furled sail; all later sail/sea/cargo state changes will be explicit variants.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

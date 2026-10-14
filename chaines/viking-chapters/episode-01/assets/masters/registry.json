@@ -1,0 +1,249 @@
+{
+  "schema": "viking-root-selected-asset-register-v1",
+  "cast": {
+    "EIRIK": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+      "sha256": "827c761b3729f7fe262699ab347207814b0aa058bc8591c563aa870570c12492",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "ASLAUG": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ASLAUG.png",
+      "sha256": "37662975bd8aedd833c42ea74713cf0e799f3dd360c9c91d09396deb347c5595",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "BJORN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/BJORN.png",
+      "sha256": "cff3f361a2f9ded6d19ddaa2c6c5d0a0d00abaec35ffb2a6f610049bfe6c7faf",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "MERCHANT": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/MERCHANT.png",
+      "sha256": "cb23cdefefa5dac6948e7e99020e0f61b899c0bfb29092b8658dd9d21b3c0954",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "NEIGHBOR": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/NEIGHBOR.png",
+      "sha256": "3dc5637bb5bc1334ce48e527d40daf05728baccb1399273269f39c24f672b6ba",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "CREW_EXTRAS": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/CREW_EXTRAS.png",
+      "sha256": "cfffe57a6936cfb48db4d3c464861e74b62a1489ca81df69871e7df08ace65d3",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "group_count": 2,
+      "review_note": "Exactly two adults: left dark-blond/gray unarmed crew, right black-hair/ochre unarmed crew. Fixed identity only, do not copy both unless prompt explicitly calls both."
+    },
+    "ENGLISH_LOCALS": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ENGLISH_LOCALS.png",
+      "sha256": "ca13656dbe1656fce0c67dc8293722158f81f90c1b2d1d1b72f97614d40276ec",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "group_count": 2,
+      "review_note": "Exactly two adults: left clean-shaven chestnut/slate-gray informant or local, right black-hair/beard earth-brown local. Unarmed references; defenders equipped only by literal action."
+    },
+    "ENSLAVED_ASIDE": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+      "sha256": "bcc9b533c0f9a60fb133c75b7846e9447fd913883149e00242824205dfea0bf9",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "group_count": 2,
+      "review_note": "Exactly two dignified fully clothed gray adults partly turned away: left light-brown-haired man, right gray-headcloth dark-dress woman; no chains, wounds or sensational props."
+    }
+  },
+  "locations": {
+    "HOME": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png",
+      "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "FARM": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png",
+      "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "SHIP": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png",
+      "sha256": "9288e03355f158b1735c91e555fa8e7b029b8b21c09cf9258355dfa1600605b3",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "SHORE": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/SHORE.png",
+      "sha256": "5e1b332aa5727494e2b9e6794c484cdf60ca83dbe0793dd9a7fa23cabef1e701",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "MARKET": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/MARKET.png",
+      "sha256": "7843ec49902f9974989488edb5957d0d8ceb55b767b6ae9e4c6056ef20d121d7",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "ASSEMBLY": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/ASSEMBLY.png",
+      "sha256": "f1eb6f65ec338cefdf5dc15963ca1efc54492111c30c19fa521bcd684322158c",
+      "reviewer": "root actual pixel review; additionally viking_master_finish compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    }
+  },
+  "variants": {
+    "HOME_DAWN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_DAWN.png",
+      "sha256": "6f00c2d99e7e548c42255f57effe3956c5fa7593086d85b534fed20bddf7efda",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW"
+    },
+    "FARM_DAWN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_DAWN.png",
+      "sha256": "decc3cb2dd5575d7341b14a9f62c07415e01dfd8d6860c54bea8388a9c2366a8",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "review_note": "Pre-sunrise dawn corrected from original; green leafy vegetation/roof preserved, all farm geometry identical in actual compact comparison."
+    },
+    "FARM_RAIN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_RAIN.png",
+      "sha256": "9673cd6833b0b6d6ac1ccd08c2f8bf1e3f2a3337e5dc590d95b90253263aaec4",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "review_note": "Light spring rain/shallow puddles/damp timber, same green garden/tree season and every fixed building/stump/woodpile preserved."
+    },
+    "EIRIK_HOOD_UP": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/EIRIK_HOOD_UP.png",
+      "sha256": "9fc4fc277e9147469544e6d1a8ba38771cf16087fe2ec3995ccb0e7de4904288",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "asset_kind": "cast_wardrobe_variant",
+      "source_id": "EIRIK",
+      "review_note": "Same cream dot-eye face, red-brown beard/fringe, teal tunic, brown cape/clasp, shoes and belt; only brown hood raised; no weapon."
+    },
+    "SHIP_RAIN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_RAIN.png",
+      "sha256": "ab8a8302069ec69337a6eb4e942b23030710943e9f332e1c4ae2002eb42d86c8",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Original low hull/thwarts/mast/starboard steering oar preserved; explicit rain, wet planks/shallow deck puddles, overcast sky."
+    },
+    "MARKET_COUNTRY_EDGE": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/MARKET_COUNTRY_EDGE.png",
+      "sha256": "57f6103c1bbafffa357cc92af76f2b264ea90149287e1fade52909f5e088b3ea",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "MARKET",
+      "review_note": "New explicitly registered inland clearing camera; same English thatch/wattle houses/right quay/low sandy shore, left wattle edge and open grass encounter space."
+    },
+    "SHIP_SAIL_SET": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_SAIL_SET.png",
+      "sha256": "87a6df037cb8ed158482e321bad9758377c36136d148f1cf93b8604a74d02707",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Corrected local sail-only state: original slanted yard/mast/thwarts/starboard steering/low hull stay fixed; brown cloth naturally occludes far bow rather than moving camera."
+    },
+    "SHIP_ROUGH_RAIN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_ROUGH_RAIN.png",
+      "sha256": "80cb415389752a7f00307f860cb82fca3d2e5121397486d2106e91ecbcacd487",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Same original boat geometry; explicit moderately choppy rain, small crests and shallow deck water for bailing; no giant storm."
+    },
+    "SHIP_NIGHT": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_NIGHT.png",
+      "sha256": "0050e7440ee11da9eaf4d64a3ca4941c97f40180b543a7b7ec68a9768aa43378",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Cloudy dark blue night/sea with readable fixed hull/thwarts/mast/steering oar, damp deck, furled sail; no invented lamp/cabin/bed."
+    },
+    "SHIP_ENGLISH_COAST": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_ENGLISH_COAST.png",
+      "sha256": "f4c986caa2f8d217403e84fcd344ea7f904f98c8a572b6fa97a472cf660662a7",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Exact fixed vessel/mast/thwarts/starboard steering; low English thatch/wattle hamlet and modest quay ahead from MARKET geography, no Norway fjord or extra ship."
+    },
+    "SHIP_NORWAY_COAST": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_NORWAY_COAST.png",
+      "sha256": "d1dec8102842317aa077e8806e22bf8e4f049d75de6d269fd23e927a28ce7e2c",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "SHIP",
+      "review_note": "Exact fixed boat, original familiar Norway cove with left turf boatshed/landing/rounded beach and wooded rocky low slopes from SHORE; no duplicated moored boat."
+    },
+    "HOME_EVENING": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_EVENING.png",
+      "sha256": "6e97716984811d9811f03d038a40ebc85b4fe08f5dc912e32b56b36e14bcdcda",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "HOME",
+      "review_note": "Same home architecture/table/hearth/loom/basket/door geometry, warm restrained hearth light and dim blue dusk through existing openings; no bright spring outdoors."
+    },
+    "FARM_WINTER": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER.png",
+      "sha256": "7f396b7fc41eb48614b3a062dc1b928f21b9386c2e8971b55633a17eaf02deab",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "FARM",
+      "review_note": "Same original house/shed/stump/woodpile/fences/camera, cold winter vegetation and thin patchy ground/roof frost; no deep piled snow/blizzard."
+    },
+    "ASSEMBLY_WINTER": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/ASSEMBLY_WINTER.png",
+      "sha256": "e5c208f767479bbf647998979212f35be35ca23a7feddd57c0a2b62478bf8fa6",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "ASSEMBLY",
+      "review_note": "Left rounded-stone wall/right two benches/wattle fence/paths/rocks fixed, sparse deciduous woodland and muted conifers, restrained coastal frost."
+    },
+    "HOME_WINTER_DAY": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_WINTER_DAY.png",
+      "sha256": "0a1b1cb8974e357728891c136616322eef9fd749b0e988f9fa2fead210c68be0",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "HOME",
+      "review_note": "All interior coordinates/table/basket/loom/hearth/rafters/benches/door unchanged; cool winter daylight and genuinely frosted exterior glimpses through door/aperture, no spring landscape."
+    },
+    "FARM_AUTUMN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_AUTUMN.png",
+      "sha256": "9d3e240e7ae2a8369f2f15fec61916a2962600a899c5aaa4e5dc1e77e4159446",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "FARM",
+      "review_note": "Exact fixed farm camera/architecture, subtle harvest straw/olive grass and yellow-green leafy vegetation, no winterfrost/deepseason reset or newfield/building."
+    },
+    "FARM_WINTER_RAIN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER_RAIN.png",
+      "sha256": "09e425452ed00b2c44fa6fede4d8623cfe418b7eaa89c300ab74a89974c70c39",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "FARM",
+      "review_note": "Same original farm geometry, dormant vegetation/light cold rain/damp roof/timber/shallow puddles and only remaining patchy frost; no snowdrifts/flood/blizzard."
+    },
+    "HOME_NIGHT": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_NIGHT.png",
+      "sha256": "161d421f16d89d894a8ce4ddf59c77549712807254bbb9d74863df0b6c7589ac",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "HOME",
+      "review_note": "Same home rafters/benches/table/basket/loom/hearth/openings, dark navy outdoor night and subdued low hearth light; no bright spring outdoors or added lights/furniture."
+    },
+    "FARM_WINTER_DAWN": {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER_DAWN.png",
+      "sha256": "8b0a3105db6b576d26128bb56e8b59aa4243c45426146643b2f067fd702012d1",
+      "reviewer": "Codex /root/viking_master_finish actual compact pixel review",
+      "state": "PASS_ACTUAL_PIXEL_REVIEW",
+      "source_id": "FARM",
+      "review_note": "Original farm geometry/door/roof/stump/woodpile/right shed/fence/fjord stable; genuinely dim pre-sunrise winter light with restrained pale right sky glow and patchy frost, no added actors/sheep/rail or blizzard."
+    }
+  },
+  "group_reference_contract": "Each group image contains two distinct actors for identity reference only. Scene prompt names exactly the requested side/individuals and count; never copy both implicitly. Location physical master/approved derivative first, then named main cast, then explicitly needed group reference."
+}

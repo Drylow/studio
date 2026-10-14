@@ -1,0 +1,2395 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "6044fd7ab551a6e9139458d86cfc1e114af57296a4455234924921dfe157d3ce",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-review-a.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-final-encoded-visual-review-v1",
+    "reviewer": "samurai_regen_visual_a",
+    "reviewed_at": "2026-10-13T18:35:10.297361+00:00",
+    "movie": "/workspace/tubeforge-regeneration-runtime/app/data/projects/why-being-a-samurai-was-worse-than-you-t-947aab/render/final.mp4",
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "capture_index": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/capture-index.json",
+      "sha256": "407dc67a85e3d9bc1f4720639afd5a0e3ecf72f0c56d7297f780d5a49e8cd409"
+    },
+    "state": "sampled_encoded_visual_pass",
+    "source_images_used_instead_of_encoded_captures": false,
+    "actually_viewed_sheet_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "covered_midpoint_scene_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "covered_cut_pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        33,
+        34
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        35,
+        36
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        42,
+        43
+      ],
+      [
+        43,
+        44
+      ],
+      [
+        44,
+        45
+      ],
+      [
+        45,
+        46
+      ],
+      [
+        46,
+        47
+      ],
+      [
+        47,
+        48
+      ],
+      [
+        48,
+        49
+      ],
+      [
+        49,
+        50
+      ],
+      [
+        50,
+        51
+      ],
+      [
+        51,
+        52
+      ],
+      [
+        52,
+        53
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        54,
+        55
+      ]
+    ],
+    "actual_decoded_frame_ids_viewed": [
+      116,
+      233,
+      234,
+      342,
+      451,
+      452,
+      580,
+      709,
+      710,
+      811,
+      912,
+      913,
+      1035,
+      1158,
+      1159,
+      1278,
+      1398,
+      1399,
+      1536,
+      1674,
+      1675,
+      1802,
+      1929,
+      1930,
+      2052,
+      2175,
+      2176,
+      2291,
+      2407,
+      2408,
+      2522,
+      2637,
+      2638,
+      2764,
+      2890,
+      2891,
+      3039,
+      3187,
+      3188,
+      3335,
+      3482,
+      3483,
+      3607,
+      3731,
+      3732,
+      3865,
+      3999,
+      4000,
+      4131,
+      4263,
+      4264,
+      4379,
+      4495,
+      4496,
+      4615,
+      4735,
+      4736,
+      4862,
+      4988,
+      4989,
+      5122,
+      5255,
+      5256,
+      5384,
+      5513,
+      5514,
+      5647,
+      5781,
+      5782,
+      5922,
+      6063,
+      6064,
+      6189,
+      6315,
+      6316,
+      6440,
+      6564,
+      6565,
+      6660,
+      6756,
+      6757,
+      6909,
+      7061,
+      7062,
+      7177,
+      7293,
+      7294,
+      7400,
+      7507,
+      7508,
+      7631,
+      7754,
+      7755,
+      7876,
+      7998,
+      7999,
+      8121,
+      8244,
+      8245,
+      8368,
+      8491,
+      8492,
+      8609,
+      8727,
+      8728,
+      8848,
+      8968,
+      8969,
+      9115,
+      9261,
+      9262,
+      9394,
+      9527,
+      9528,
+      9662,
+      9796,
+      9797,
+      9910,
+      10024,
+      10025,
+      10154,
+      10284,
+      10285,
+      10416,
+      10548,
+      10549,
+      10676,
+      10803,
+      10804,
+      10946,
+      11088,
+      11089,
+      11215,
+      11341,
+      11342,
+      11468,
+      11594,
+      11595,
+      11716,
+      11838,
+      11839,
+      11965,
+      12091,
+      12092,
+      12227,
+      12362,
+      12363,
+      12492,
+      12621,
+      12622,
+      12746,
+      12870,
+      12871,
+      13018,
+      13165,
+      13166,
+      13278,
+      13391,
+      13392,
+      13532,
+      13672,
+      13673
+    ],
+    "limits": "Sampled still-frame visual review of 54 scene midpoints and adjacent frames around first54 cuts only. Does not claim full continuous playback, human audio listening, source equality to every movie frame, or technical tests rerun by this reviewer. Technical decode belongs to separate technical-proof.json.",
+    "observations": [
+      {
+        "scene": 40,
+        "severity": "non_blocking_framing_observation",
+        "notes": "Some shoe detail clips bottom of intentional close accounting framing; faces/hands/ledger/pouch intact, no continuity failure."
+      }
+    ],
+    "sheets": [
+      {
+        "sheet": 1,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-01.jpg",
+        "sha256": "1d0482bba2f59ae9aef539b0b517a41d5d86c37a7a4178817a8c23afb081d380",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 001–009 viewed. Gate/home/office/market establish distinct coherent locations, actor identities and props remain readable, corrected scene005 outdoor sandals present, plain brown pouches. No blank or corrupted panel and no cut faces.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 001 — encoded midpoint frame 116",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              116
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00116.jpg",
+                "sha256": "cb65281bf80440af0b0e9ee02604969851fcc6cd0946c0f2742cdb0616453d67"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 002 — encoded midpoint frame 342",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              342
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00342.jpg",
+                "sha256": "6975c0d8f11b87b9bc24ebb30c9ff4d488443fd596cc543d25d746600be019bb"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 003 — encoded midpoint frame 580",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              580
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00580.jpg",
+                "sha256": "80a8802ee8eaf6bafe443b9c9c46ed90c7a9b142104ac3a37d664bd049e1c729"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 004 — encoded midpoint frame 811",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              811
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00811.jpg",
+                "sha256": "f5279957adffc1ce726b96d2e5f4ffe7ec4911a6065c1f95d0a081527ed5227a"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 005 — encoded midpoint frame 1035",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1035
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01035.jpg",
+                "sha256": "73545272897063ec35fae02438e77474ccf46a0a175f4a5c28fa286171fa4455"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 006 — encoded midpoint frame 1278",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1278
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01278.jpg",
+                "sha256": "aad0a1e70395931fbe534046b7af917191cb558eef88fc5847755e2da0a87719"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 007 — encoded midpoint frame 1536",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1536
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01536.jpg",
+                "sha256": "e1f67eac5856e62f6c4ef3f379c53e929af49a337d5f532e7e73c26ff467cfa3"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 008 — encoded midpoint frame 1802",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1802
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01802.jpg",
+                "sha256": "7c847791252332acc82c5db6aad8c019b6bb07eb3603b82e9964f68b6f8337bf"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 009 — encoded midpoint frame 2052",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2052
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02052.jpg",
+                "sha256": "fd5673352d0e223a10e2aaf93f793b008e25cf3a1018b23ab4c1cfe8630a4834"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 2,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-02.jpg",
+        "sha256": "d789b52b1fb79f91decb2d45046e4f3195321c001daecd13f8119d1156aa85fd",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 010–018 viewed. Adult Kenji, gray-haired Father/Mother and Senior preserve identities; corrected scene017 is older brown-robed Father with two hilts and outdoor sandals, not prior youthful indigo extra. Fixed household/office/training/gate architecture and natural daylight retained.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 010 — encoded midpoint frame 2291",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2291
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02291.jpg",
+                "sha256": "2deeb479927c33ce6bc3db2b1a2d5477a807b8e09c7120be7566c8aae34224db"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 011 — encoded midpoint frame 2522",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2522
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02522.jpg",
+                "sha256": "7551576de96f05c206201b8c2d7307c4b2d649428ea54207eb1002f2a14e638c"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 012 — encoded midpoint frame 2764",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2764
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02764.jpg",
+                "sha256": "62c05cd633722cef44809425708e8fd176786c475eca75bd9d6e3f285a7c9883"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 013 — encoded midpoint frame 3039",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3039
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03039.jpg",
+                "sha256": "ab3d87bac21a72b60e19d8184d10518aac0f2863c0645d59e925adfe2738e882"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 014 — encoded midpoint frame 3335",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3335
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03335.jpg",
+                "sha256": "a6a83a5470f1869ecc1d8bd1514aa901470813bac8f6d2959dce0092c524a2d7"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 015 — encoded midpoint frame 3607",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3607
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03607.jpg",
+                "sha256": "ed24518f745f8bb4a67e55c25ea371ed825d661fadfa345970bbb6903a680fe3"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 016 — encoded midpoint frame 3865",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3865
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03865.jpg",
+                "sha256": "489e0b109ce3e028810d0d6448f6c276f0468623f09ed74bdeb5b5b49c690026"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 017 — encoded midpoint frame 4131",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4131
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04131.jpg",
+                "sha256": "bb6393e97346bc44606a0a84fb1e9fe14de53079a8ea1b91fab52ff5fffb2ab7"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 018 — encoded midpoint frame 4379",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4379
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04379.jpg",
+                "sha256": "862066aebc6a9f6ed2dcc37d5d4aef6d37e6f88d0b626a2daa323a3fc93de79a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 3,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-03.jpg",
+        "sha256": "09673849079f54b0de9d774d52583df4373af477553da99b8431b2714b670b20",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 019–027 viewed. Corrected scene021 pair at body-left under carried books, scene024 two distinct bowed Kenji hilts/scabbards with two wooden wall rods retained, scene026 actual cream tied PAPER ORDER, original cast/office/training/gate readable. No bad-source regression.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 019 — encoded midpoint frame 4615",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4615
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04615.jpg",
+                "sha256": "45fa1ba27e95bf3008bf04a0c169ebf8c2e1d2975e4c454f04466b6cb1e979b0"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 020 — encoded midpoint frame 4862",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4862
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04862.jpg",
+                "sha256": "eac05f3da9d1c5a9ff0457fb4dbbec216c857e70d093b287322a284974b51fb7"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 021 — encoded midpoint frame 5122",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5122
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05122.jpg",
+                "sha256": "125a01f6bfd29b55fa49004869700fb7bd118a8df2a157e234b391aeb45f433b"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 022 — encoded midpoint frame 5384",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5384
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05384.jpg",
+                "sha256": "a3138170d292991fd29ee98e7a538301e30c12a63cfe0541f907a8a26e27f47e"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 023 — encoded midpoint frame 5647",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5647
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05647.jpg",
+                "sha256": "60b205c51331fd989021a9c27349330039d2aeeb72a1b5a2cc592774fbe3c4ec"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 024 — encoded midpoint frame 5922",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5922
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05922.jpg",
+                "sha256": "063b707358d8ce632f266c30dd2d8943c19a600f087baf2fe3eeecd252aa48f7"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 025 — encoded midpoint frame 6189",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6189
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06189.jpg",
+                "sha256": "bf9654b70407209443215f4e4ef13bb8678bbe9a80deaad22f9af787ab267aff"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 026 — encoded midpoint frame 6440",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6440
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06440.jpg",
+                "sha256": "63b9520ffaaaeeca3b189c324ec2850e72caa92eeda84fa3edde4c2c9665baa0"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 027 — encoded midpoint frame 6660",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6660
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06660.jpg",
+                "sha256": "31e8c79d26e200f779c2151b295a66d3e562c435e6dfaa1e3fbc90a82e2f6a7a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 4,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-04.jpg",
+        "sha256": "8803a51a431912dcf5c13a7c8a1b55dc9a8c627e3745046dd967140468858b77",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 028–036 viewed. Hana separate indigo repair garment does not change worn outfit; corrected scene029 straw sandals, scene030 exactly two sheathed sword fittings (no third blade), physical footwear/household props and plain brown pouch retained. No blank/bad frame.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 028 — encoded midpoint frame 6909",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6909
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06909.jpg",
+                "sha256": "8da5fb1950317ec1274ad997dfa7888a30caf167a76a3897f9e7bf37e8be4974"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 029 — encoded midpoint frame 7177",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7177
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07177.jpg",
+                "sha256": "b49170c8d05eacb222afee72f30060d85adf189c9f650eaa380b65679bfc0b39"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 030 — encoded midpoint frame 7400",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7400
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07400.jpg",
+                "sha256": "090ef1743a27f26b000c0a66b7c1d59bf36cde60b382f9d4c73a81570c93088e"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 031 — encoded midpoint frame 7631",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7631
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07631.jpg",
+                "sha256": "d503c4a55e8056a152b7b7c6d404b6e2d74634ab36607f24b4b7995b2d1e3766"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 032 — encoded midpoint frame 7876",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7876
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07876.jpg",
+                "sha256": "554a7832c7cefbeb4f6c3c59c36dc7f1c226b9837fe2a5e7d8347e5c85c66b16"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 033 — encoded midpoint frame 8121",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8121
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08121.jpg",
+                "sha256": "4236a135fedb23e11b5c7f3a08c886fecf7c187b98915c1a0a17a4c1bbd61e94"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 034 — encoded midpoint frame 8368",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8368
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08368.jpg",
+                "sha256": "c6239c0364d49a479af19db0127d65f7214a566bcca04710cf73da9bc4a76818"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 035 — encoded midpoint frame 8609",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8609
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08609.jpg",
+                "sha256": "a5e36f83268c99bd40eaa27d47edfd1e6fe1c8c35c9dcde5b30b56aaf3322f74"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 036 — encoded midpoint frame 8848",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8848
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08848.jpg",
+                "sha256": "05458c5c8e8e33b404f0c3f97aec466203989af29be80ba5eea0d18ef2940698"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 5,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-05.jpg",
+        "sha256": "c2bcc28cccfddd54a65fede26af2f170b38de05d5092e5541ba073ddfc901ae9",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 037–045 viewed. Merchant unchanged olive outfit, Kenji correct indigo, rice/coin brown-pouch transaction and home budget staging coherent; corrected scenes040/043 sandals present. Observation: scene040 close framing clips some shoe detail at bottom while faces, hands, pouch and ledger remain fully readable; accepted as close accounting composition, no continuity defect.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 037 — encoded midpoint frame 9115",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9115
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09115.jpg",
+                "sha256": "0041049d680fbb19fbcc0ce05c7c5c3bf9730e160cf0f37bab797d5790da1b70"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 038 — encoded midpoint frame 9394",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9394
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09394.jpg",
+                "sha256": "df49f9b1bb5bc0bb2716f0bb2d9718ec8c5f847cb2b565633c87fadd5ae69e32"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 039 — encoded midpoint frame 9662",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9662
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09662.jpg",
+                "sha256": "50364d02d3a5f21fb0853125e5312fa04b56ad16f21f4a671995e3719192c449"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 040 — encoded midpoint frame 9910",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9910
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09910.jpg",
+                "sha256": "0049fa61b92cc422a4b9f3b80a88191108c10c1abb5f8fe7609367ee75313d20"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 041 — encoded midpoint frame 10154",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10154
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10154.jpg",
+                "sha256": "83eda8866ea5055034db3ada42e07f4350dd3ce3e4a8a3eeadef0ea7ff4fb2a1"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 042 — encoded midpoint frame 10416",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10416
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10416.jpg",
+                "sha256": "f0f44ae6eb29a46bc59db258c83083b5d79ba66cd2a04c84b5ddfb571b96e935"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 043 — encoded midpoint frame 10676",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10676
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10676.jpg",
+                "sha256": "7bdfad52b2adf7af1a1fd18f89c1f42b42e39762dcc5415486db7404e82a3103"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 044 — encoded midpoint frame 10946",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10946
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10946.jpg",
+                "sha256": "01c1e01d0ccca4af90f7d64ad937d72539c0a8d0910b4a5431023e5856f9e192"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 045 — encoded midpoint frame 11215",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11215
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11215.jpg",
+                "sha256": "7a5d81b92f125316f6eeab63e8c11a885ba55fe64344acbd7159114f4b6fab50"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 6,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-06.jpg",
+        "sha256": "575a5050f38b54cb27ffd33f9876100f09ca8d404dde962e9519b72bb18ebd5c",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual encoded midpoints 046–054 viewed. Corrected Senior sandals in046, empty lowered black hand and no extra cream-striped prop in049, cream tied paper order and sandals in054. Actors/pairs/architecture preserved; original administrative bundle in052 physically plausible. No corrupted panel or failed derivative.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Scene 046 — encoded midpoint frame 11468",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11468
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11468.jpg",
+                "sha256": "9e39d894a3095793c88821a5d8b2564c6ad0a7610ac404f8d22ac42dc25fc8c5"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Scene 047 — encoded midpoint frame 11716",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11716
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11716.jpg",
+                "sha256": "a51f5d9fbf1f075d57c98cff592ea5a9a05d1087f90794e3eb8aa5729ced9cdc"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Scene 048 — encoded midpoint frame 11965",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11965
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11965.jpg",
+                "sha256": "5250c711ef60a73b1414590e0468104bfe868115ad3c107520e9d789cec2bfca"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Scene 049 — encoded midpoint frame 12227",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12227
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12227.jpg",
+                "sha256": "cdd496c51deacfed1a2bf05e651525d60965e9c3dcd576171ff1f8cb99a9628b"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Scene 050 — encoded midpoint frame 12492",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12492
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12492.jpg",
+                "sha256": "1c93fbba631694a22cd9d4a480cb19a4191432d7b29c113b9df621d14e8dc566"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Scene 051 — encoded midpoint frame 12746",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12746
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12746.jpg",
+                "sha256": "4ff8dcf1253f85ae856ebf380b315f26f75e84aeeba2ca0552a6f13fe27826c4"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Scene 052 — encoded midpoint frame 13018",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13018
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13018.jpg",
+                "sha256": "365d9e65b06277eec92a5c507380f189fa822726041606c0842d7d47cae14934"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Scene 053 — encoded midpoint frame 13278",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13278
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13278.jpg",
+                "sha256": "37985b541dc48da361b62f228cec6b0e040d890ccd1c4a9d9f56ce4c9c016602"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Scene 054 — encoded midpoint frame 13532",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13532
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13532.jpg",
+                "sha256": "0bc5a7222d7ef88fa3be48064023aad1a9653fa8559902f40fcd2e79384fbc00"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 13,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-13.jpg",
+        "sha256": "b3ee31bd6aac94488f07dad931803044fc26f71cf8a778ce83b90782fb85f756",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts001→002 through009→010 viewed. Gate/home/office/market changes are intentional scene changes, retained cast colors and daylight, original scene005 sandals correction present. No black encoded edge, corrupt transition image, missing scene or unexplained weather/cast jump visible. Black sheet margins are layout padding, not encoded movie borders.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 001 → 002",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              233,
+              234
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00233.jpg",
+                "sha256": "762d870179609ca7a82375ac2e1c3d52aba51cb2077a84264a94f878e3c23db5"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00234.jpg",
+                "sha256": "da3d15f1a77c117e0629e88c09d81b55bfa164d1d58d15a6524b689131632122"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 002 → 003",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              451,
+              452
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00451.jpg",
+                "sha256": "c5f401de6f888644a22ced376009faad670b378feb4473816066a99bbdce23d5"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00452.jpg",
+                "sha256": "493e2ee4ddae6f4a24af286647d4da10c5628431588a3c8cdba891aa84a36461"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 003 → 004",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              709,
+              710
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00709.jpg",
+                "sha256": "3066f29769887c0127528afbc31f16e8fbe8d01a8ced57b6a4f111f440e20324"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00710.jpg",
+                "sha256": "fd659d09d165c60f8e5b71c3f2b3143dd6e4e2c7878a49a24c7e39141f6009e3"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 004 → 005",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              912,
+              913
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00912.jpg",
+                "sha256": "34c9c492eaa3371ebab6ad615e408d95ecbfda0e8c1a83231daeb24f997d0f90"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00913.jpg",
+                "sha256": "a751dd87f3402b9ab6122bfb26654e74b0b38f001d6f7ea92d68f49913977fb3"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 005 → 006",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1158,
+              1159
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01158.jpg",
+                "sha256": "64f0501bb8b1047f4fac2ce2a964560515e32235649bfd7a961265d925f9bce1"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01159.jpg",
+                "sha256": "ccbff0b30c648148163877cb639aca6d4f02702719512b3633f74ac78d5a0b2b"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 006 → 007",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1398,
+              1399
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01398.jpg",
+                "sha256": "b66400fc6545c52f541503a8d3b2de062c2d985bde7553cb8715cec4a8722990"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01399.jpg",
+                "sha256": "7c51900620a3d87deaa0f6ae6351061d1592c320d17a051059f3d5839e4aee7a"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 007 → 008",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1674,
+              1675
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01674.jpg",
+                "sha256": "1adaa0254f2a139c09f6821d826d25ff8e81a59488f30b689fee14af13b80ff1"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01675.jpg",
+                "sha256": "e41defe2ac367dbd3163131ec75c51ea35b9f9d9277cef52047f54e93982605a"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 008 → 009",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              1929,
+              1930
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01929.jpg",
+                "sha256": "260e94145c4da13d6742cc6596ac34f0644a518829bf8f321dec9466337964ed"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-01930.jpg",
+                "sha256": "e7ad4ba31f59676892c811c22b1375584a2fcc6e1c494c17d76ef5fcc53a15da"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 009 → 010",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2175,
+              2176
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02175.jpg",
+                "sha256": "7f2758cb755b1154c1d9b472c19dfcba5ad92ebf9b28fe68a8c767d0da5d8843"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02176.jpg",
+                "sha256": "97692ed5a9a044db9d5b585f982d0d43239d058e2da160c9efb38827978f7e6b"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 14,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-14.jpg",
+        "sha256": "82d7fe7e631dd1171b001a3c748d5a59cdeca80363d9a4eee70b9e08c4a2a601",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts010→011 through018→019 viewed. Family/office/training shots maintain identity and architecture. Correct older Father and all three sandals in017 present on both viewed boundary frames; no incorrect youthful-blue Father reappears.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 010 → 011",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2407,
+              2408
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02407.jpg",
+                "sha256": "0ebd3f32d288856e35a5e338c258715fe398ce8de206b4208691cd265269c59e"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02408.jpg",
+                "sha256": "03d17ca0487e6816bda3146a9d6f0a8ebdb2761d559c217334c37ee401915afe"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 011 → 012",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2637,
+              2638
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02637.jpg",
+                "sha256": "24df97c224277110cda9a3fcf3515a849a957dacdac48165ecbdeaea75d3aa1e"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02638.jpg",
+                "sha256": "b127f8400adce7d7c3c478e604a0319de3a456f61866c6b037a52beb17c65770"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 012 → 013",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              2890,
+              2891
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02890.jpg",
+                "sha256": "a5cc207f7c89bab35a4cfa53853335d8bc8949a9d7360c68cf65a374b444c41a"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-02891.jpg",
+                "sha256": "6b4e69c2531ac244574d03a6e1cca3368a348e72fecef6764fbee38fc5b4a04f"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 013 → 014",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3187,
+              3188
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03187.jpg",
+                "sha256": "0d8e48341e1971ee7187d9a44cd6b2699255c31d5c6b7782eab9ba9f667d5f96"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03188.jpg",
+                "sha256": "6b3704acbb533478c76e251c7c2b6dd850ea058d419839f3f869c8da119e2a14"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 014 → 015",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3482,
+              3483
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03482.jpg",
+                "sha256": "08ea9668500f257e87edea11bf59b5df8f6bd3a007c96b750c037ed7bf1d327e"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03483.jpg",
+                "sha256": "a3a8f343d6e5cb4603bbbe7ef4896c143e578f4fd9cc806094ef45fda5daa119"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 015 → 016",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3731,
+              3732
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03731.jpg",
+                "sha256": "a9d984751f4a47b72af3277e20950fa6adef3674f6ca879a14edd60c0b54c285"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03732.jpg",
+                "sha256": "32c2dfd4a2d6d0c367a320f4a98086979a9f658fd49113c1ff98f216f22c2cc9"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 016 → 017",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              3999,
+              4000
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-03999.jpg",
+                "sha256": "792ad184f6c3b80f6b7cdd304fddaf1a321784d1b5a2f219ffd42afbee474fcf"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04000.jpg",
+                "sha256": "a7e625a23a450d5a0d6cd98cf4d559daaafaa7b804273c6b70a186dea70543ab"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 017 → 018",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4263,
+              4264
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04263.jpg",
+                "sha256": "ddb6cbca342e23b926cc75e2f06142d37778e35af7d4fbd510bf4980f1a4939b"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04264.jpg",
+                "sha256": "2b3b03ba712731f5428452e54af80fe3afe28e2c73f079c8c35f936735518374"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 018 → 019",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4495,
+              4496
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04495.jpg",
+                "sha256": "5c7f1382fc56395acadd419c3aa4b12dde8a7d80ded560c68f79a33d007e6d8a"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04496.jpg",
+                "sha256": "babc78d60647a50c566f73c92bbefe094640238f7d5e0e9df1cedf6db734a9a1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 15,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-15.jpg",
+        "sha256": "bc2f4082a5f24fc27ad052e0e484a4e1802b69abbd577eb37d5a7632eb895cd0",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts019→020 through027→028 viewed. All three critical corrected 021/024/026 shots are used at start/end of cuts, without bad original returns. Bow/training wall rods, office orders and cast consistent; no unrequested extra actors or image glitches.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 019 → 020",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4735,
+              4736
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04735.jpg",
+                "sha256": "bf0f39ff1141f5e9fc7ff2616418852cfded67f5bcc99d28af59174d384e19a2"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04736.jpg",
+                "sha256": "6ccd6b54476762b1aa5c01f80b00f1ab5e45a70f53636ae804abeefc7875d74e"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 020 → 021",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              4988,
+              4989
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04988.jpg",
+                "sha256": "6aa9c5f0a65ce7fe8288f0da8fcaac9fdd962345ec898b91b4235b106e85f53f"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-04989.jpg",
+                "sha256": "2ba8ed026391a7b70df4371de67e56fb0ca2cbe56b73eed6b24f58d054b905ae"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 021 → 022",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5255,
+              5256
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05255.jpg",
+                "sha256": "fa19ceced3944474e1b74362612be001f332fc184878a64cf0032bb0a386893f"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05256.jpg",
+                "sha256": "063c1b10b62ceea8f4553f725990952fbe78be9b11b0a79255d4dd5b72bd9d8d"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 022 → 023",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5513,
+              5514
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05513.jpg",
+                "sha256": "657fbdbd2d177718fcac7de1cb6e07a0f2c2c3037a2ca5043be1d4357c768b86"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05514.jpg",
+                "sha256": "db488438270a28887dccc384ea1ccd35473d0038144860926d5d5959e24cc8dc"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 023 → 024",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              5781,
+              5782
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05781.jpg",
+                "sha256": "20b4c37d02c08d8ecdfc4033622b98a643e217cf82a78233454d9ea55696176d"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-05782.jpg",
+                "sha256": "990b98c4bd3cb6e1800b40fa81f52445cf3a05a167103c24b4fd49fa9a06fd21"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 024 → 025",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6063,
+              6064
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06063.jpg",
+                "sha256": "0081b65fb7d99a591aa53b9e98feb6cba4642eb236ba7574c5aee30f6bfe5278"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06064.jpg",
+                "sha256": "3e75032b186329a9b764481b3d904155968f4f3c01aea9e8518ed98018d079bb"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 025 → 026",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6315,
+              6316
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06315.jpg",
+                "sha256": "487867f512f53cfe4d0edfff0b5f38d8ad7aa25a471eb0e58f110b57878b59a9"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06316.jpg",
+                "sha256": "8c97fa0ff656f9931a411156690fc7b34f024f0fdba4eb52a29fcd901240d9cb"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 026 → 027",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6564,
+              6565
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06564.jpg",
+                "sha256": "88af9334f04b0ff43419af882a30b2d3340e6b183a3660f7d53d87a93f9f03fe"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06565.jpg",
+                "sha256": "27dff3b03c9c50ffd862584fa646b4edd1a8b3df0f933f044a827ba9d4758b75"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 027 → 028",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              6756,
+              6757
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06756.jpg",
+                "sha256": "aa9257599d58e21dad26a8abc1ede00133a5358634f3f6ea170edab3e9e90111"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-06757.jpg",
+                "sha256": "aca81174cfcaf80b001e4cecbde9595cc9b7b0e9197f071ba23b28eebf00537f"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 16,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-16.jpg",
+        "sha256": "a4018bf12b973ad03413775e5a4447217b8d4ea596529ad4ca9456e907b85a24",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts028→029 through036→037 viewed. Same repair garment, household account and separate cloth/sandal/equipment props retained; two sword count in030 and corrected sandals029 visible. No blank/bad source boundary. Whole-frame zoom/pan reframes foreground without changing location identity.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 028 → 029",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7061,
+              7062
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07061.jpg",
+                "sha256": "79642e563b588bb8250a6014803120e91fb9c20d06aa11d5d81c60472cff51d7"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07062.jpg",
+                "sha256": "3920274e9af46c4dc7ac6399af46a0ab58dd3d05ce31c406678b1c7319b0b692"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 029 → 030",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7293,
+              7294
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07293.jpg",
+                "sha256": "c84e906df5c14fb68ce64aa9a78a1b92d382f0375d44ff4181922e4589631ff3"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07294.jpg",
+                "sha256": "a040ac11fb9fea60d3901f73a814531bd12c30d71de2728e3d5d0f16ccf99c19"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 030 → 031",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7507,
+              7508
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07507.jpg",
+                "sha256": "ce49d55d5af45c2d3357406921e950a5e5fbcd12f262c5595f7a25598827f5b2"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07508.jpg",
+                "sha256": "86e1d806ee1a045313c7d78f8f7ab1ea2ce8c1e8017d4dd73088cfa30ce980d1"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 031 → 032",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7754,
+              7755
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07754.jpg",
+                "sha256": "1f4fdc68fc4c86d07b0b97fa14b866520589d0c5fc8874fc2bc7d81d81e8ca85"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07755.jpg",
+                "sha256": "5b402ded10cf1fef98b8cbec686bef9101e03c9fe9df3aa2f1fc471f5d1283d9"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 032 → 033",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              7998,
+              7999
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07998.jpg",
+                "sha256": "01e750e4cb17cd8e6a8d64c35252d17dc4be660779e2a614bd5da2389e31eab5"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-07999.jpg",
+                "sha256": "47be193fb3a76eead65cc8bd9ce06f06b4a9055ffe2d588921a84df02fe323a3"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 033 → 034",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8244,
+              8245
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08244.jpg",
+                "sha256": "5518fb30f4d2b53e759229ce5967b0b8d49b303fc52a8e52ea9f110d2db43fe9"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08245.jpg",
+                "sha256": "63e7eea719aacdbd39e9a263300851971d32d9cbadaac21439854f86cb2592d0"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 034 → 035",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8491,
+              8492
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08491.jpg",
+                "sha256": "b167bd679a7d15e7940ade9893830acc73ac6dc7cac9f7304a42bc571d5acbe9"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08492.jpg",
+                "sha256": "aff856b9ce72e4cbfffc347022a0b501a3e377c71e4851ac18eab51788a10a5a"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 035 → 036",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8727,
+              8728
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08727.jpg",
+                "sha256": "35614e61ae749b175a5d91201913e084bc662dcfb264b70978e5a4662bf33b8e"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08728.jpg",
+                "sha256": "1064e2bac7370fa4fffb8ec96e95a569244adc791d30f082069b996712d99ad4"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 036 → 037",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              8968,
+              8969
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08968.jpg",
+                "sha256": "76e316604154b73ad8459190f76594f3c263292234015220a9049b3e224ad9d7"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-08969.jpg",
+                "sha256": "dbdb9ee4aa951c47a628bd16c2d244e9b9b132aaf26c27b8c48478bc356052c1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 17,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-17.jpg",
+        "sha256": "4d5907220ffb8091705c114909ea8758f1292459feb3d59e8b0364c6c9fe41b1",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts037→038 through045→046 viewed. Market/home/teaching/guard transitions intentional, cast/coin pouch/ledger remain coherent, corrected040/043 foot styling visible to extent of close-frame crop. Scene040 shoe detail touches frame bottom; story-bearing face/hand/ledger/pouch information intact.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 037 → 038",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9261,
+              9262
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09261.jpg",
+                "sha256": "b6cfc0fec8e46a58f1f2bf1e022131dc0e96303e7878117a785187d52edaef31"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09262.jpg",
+                "sha256": "7add12ac41f2c843602e7d34de17e108fb28e0a042d0e1412148589355a0d694"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 038 → 039",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9527,
+              9528
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09527.jpg",
+                "sha256": "007fc74f057ef4d5ab4f2e93c9935f87c2010d570fea76974b31d64cc6c0a857"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09528.jpg",
+                "sha256": "97c85a88ca0c14a971c66fb86c6a1774cf0133e7cb63ae76336ec65b6a761dd8"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 039 → 040",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              9796,
+              9797
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09796.jpg",
+                "sha256": "0bc5ec1f1f0077c484acffe18755079a5ad0c3d0819ddaedc17c935480636053"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09797.jpg",
+                "sha256": "0ff011b0d94a37b223d794d190a77459c124b52db54174ef79633c636cc7253c"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 040 → 041",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10024,
+              10025
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10024.jpg",
+                "sha256": "e2dcb262ae5e8a4a2c77e6ba243e12cdcea18654bcb20650f4a57638fba446c0"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10025.jpg",
+                "sha256": "1b981b386f902d42197552e517a9b729778303fd2d609aa6714ba3a2219a56f2"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 041 → 042",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10284,
+              10285
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10284.jpg",
+                "sha256": "72e625b31c4ae28bda2b360746767dd63cbb9cf3a03023296dc18b0e167ebdd7"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10285.jpg",
+                "sha256": "2554950c9f75b0f188921ecd81d6348256718869a404dd7a8850761a01ee07c4"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 042 → 043",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10548,
+              10549
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10548.jpg",
+                "sha256": "0ae450ca3a99d8f5332a30ab42ecacda0f382d0c48ae31b2af75d267e2aaccdb"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10549.jpg",
+                "sha256": "28436bcc4476d0a80f214283f568e8d3fc5a160cbef4f808ba65a1adbe67c208"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 043 → 044",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              10803,
+              10804
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10803.jpg",
+                "sha256": "319e1ba51b6ed6572b107b4f25179f8c933d96afec3349093f3ab1126dff5915"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-10804.jpg",
+                "sha256": "e91c910d766020d6c3ebac124a7569c08bb40f53c091a96f6b6af0d68b398cb4"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 044 → 045",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11088,
+              11089
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11088.jpg",
+                "sha256": "931c8f50fa9df716c248b7d95c27bebbcde74781bce3da88c6258a050118522e"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11089.jpg",
+                "sha256": "d3abd114c810f4f12506c2da22721490b81c6af804f05a368c5ba9505cf94259"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 045 → 046",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11341,
+              11342
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11341.jpg",
+                "sha256": "2a3d1ece8ab151067c9c3772cecfa72c924f415d7ad3f2e5c69d92c2ec5b9df2"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11342.jpg",
+                "sha256": "3d6b007e45aa7a1ee67fa9b2c88090f37dabfb62934387f287b58ae8d1467ea2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sheet": 18,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-18.jpg",
+        "sha256": "c64768bff72a9322e734c57ee0e51b63c7fcedac44356dbe80264a9f31feaa9d",
+        "state": "pass",
+        "actual_image_viewed": true,
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected",
+        "notes": "Actual adjacent encoded frames of cuts046→047 through054→055 viewed. Corrected046 sandals, corrected049 no loose extra weapon/prop, corrected054 paper order+outdoor footwear persist at encoded boundaries. Last sampled cut enters training practice coherently with one wooden rod per man, no extra steel blade or corrupted image.",
+        "panels": [
+          {
+            "panel": 1,
+            "label": "Cut 046 → 047",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11594,
+              11595
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11594.jpg",
+                "sha256": "a593eefc53e0b9c0deff8a531f0fa74e0f8d1072ee9c928ab750182a2ba0fa53"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11595.jpg",
+                "sha256": "839dbb9800c10bf530e66fb85cdd1f083238d864e84cec40227919ab85060865"
+              }
+            ]
+          },
+          {
+            "panel": 2,
+            "label": "Cut 047 → 048",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              11838,
+              11839
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11838.jpg",
+                "sha256": "9dde87cf7b1c3ca88d00044d0e834d4fd3f057238384880835a20feb078a88c1"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-11839.jpg",
+                "sha256": "c02b9127204fad068895fdf5cc2a651e03707f5804effe9794f30ab941c97449"
+              }
+            ]
+          },
+          {
+            "panel": 3,
+            "label": "Cut 048 → 049",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12091,
+              12092
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12091.jpg",
+                "sha256": "3c650565edab24e819a7e96bf0b1d04e2e39ec5452b2c02946b8db01121ab0b6"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12092.jpg",
+                "sha256": "202d2e5d3ec51b018a3274e38cf31d5e66acb36c9ee934f992223ff17486faa9"
+              }
+            ]
+          },
+          {
+            "panel": 4,
+            "label": "Cut 049 → 050",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12362,
+              12363
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12362.jpg",
+                "sha256": "2f56c8af57e65541c714094a7b977e88403ca906791fab6cb3dc7d9ba062cd3d"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12363.jpg",
+                "sha256": "033e193b6801ddb975176f6f21c81fa3898236056488512a40ae2db0d83c3497"
+              }
+            ]
+          },
+          {
+            "panel": 5,
+            "label": "Cut 050 → 051",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12621,
+              12622
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12621.jpg",
+                "sha256": "2d03af9bb7a8747bc5bee807e04e7a0d7f65cf9e03a225275b0eaac117884e59"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12622.jpg",
+                "sha256": "7bc09738e41eec27b8f6089b87f62734a4a3298744891fd8733b7b8fc3d4448f"
+              }
+            ]
+          },
+          {
+            "panel": 6,
+            "label": "Cut 051 → 052",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              12870,
+              12871
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12870.jpg",
+                "sha256": "c802cdb0dd8a9d8f3d8862b22aa72b6cc7729abf6c383f4ccda44a3883bf018a"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-12871.jpg",
+                "sha256": "ff672aaf687780c80c06cfc857dc8ff2b123919560d9f9ffe99ed3f946358a40"
+              }
+            ]
+          },
+          {
+            "panel": 7,
+            "label": "Cut 052 → 053",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13165,
+              13166
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13165.jpg",
+                "sha256": "c74a6585ec75eb071253f0cea80cd0affe1ca04b98d24a8f0dda5b3ecac0291a"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13166.jpg",
+                "sha256": "119431bae45a180328830501c6019f8ea0eaf04c91b10c9dbdcb8481b585f26c"
+              }
+            ]
+          },
+          {
+            "panel": 8,
+            "label": "Cut 053 → 054",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13391,
+              13392
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13391.jpg",
+                "sha256": "4a6fd96a4d14cf69ec52d61a4eb49cdd36f2f2d05b2fbee23eff29a61f8697b5"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13392.jpg",
+                "sha256": "91539a25e6caf9f01e1ef5e18706a721f957ce677de5deed8de12469c8a0b0d5"
+              }
+            ]
+          },
+          {
+            "panel": 9,
+            "label": "Cut 054 → 055",
+            "state": "pass",
+            "actual_encoded_frame_ids": [
+              13672,
+              13673
+            ],
+            "actual_frame_files": [
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13672.jpg",
+                "sha256": "f42dab881a793d4c7e992a5d4812c3b14a5764e6caac6a7c3ca27628b159b7d0"
+              },
+              {
+                "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-13673.jpg",
+                "sha256": "731b3a60de25bc82a2c4c40849ce6416a066e39f6d3e86af85798b35d1ced88b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

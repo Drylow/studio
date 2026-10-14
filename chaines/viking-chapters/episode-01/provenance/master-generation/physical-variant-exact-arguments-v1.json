@@ -1,0 +1,34 @@
+{
+  "schema": "viking-literal-physical-variant-arguments-v1",
+  "author": "Codex viking_master_finish, root-authorized routine variants",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "FARM_DAWN",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        1,
+        2,
+        3
+      ],
+      "prompt": "Edit the attached EXACT EMPTY FARM master into the SAME camera and SAME physical Norwegian farm around950 at EARLY SPRING DAWN, barely light but all architecture and working space readable. This is only a light/weather derivative, never a new farm. Preserve every roof ridge/rafter, plank doorway LEFT, tiny long-wall aperture, fieldstone base, stacked wood against that wall, foreground-left stump, RIGHT low turf-roof shed, wattle fence and kitchen garden, ground paths, distant modest fjord and hills in EXACT places and proportions. Keep sky cool gray-blue with only a pale restrained warm dawn glow from the original upper-right light direction; soften/reduce daylight and shadows, damp dew-darkened soil and grass, no new mist hiding geography. Same clean drawn 2D thin dark lines, readable restrained timber detail, matte colors and simple cel shadows as original; no photorealistic texture escalation, glossy3D, anime, fantasy or saturated sunset. Retain existing intact fence: later narrative shots make ONE specified rail loose. Absolutely EMPTY with no actors, animals, sheep, weapons, new household props, lanterns, signs, letters, numbers, runes, logos, caption or collage. Wide full-bleed landscape16:9 and original camera orientation; no mirroring, crop, opposite angle, new building, mountains or castle.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "HOME_DAWN",
+      "source_master_id": "HOME",
+      "scene_ids": [
+        9,
+        10
+      ],
+      "prompt": "Edit the attached EXACT EMPTY HOME interior master into the SAME room and camera at EARLY SPRING DAWN. Light change only: dim cool gray-blue early light through existing REAR-RIGHT open plank door, tiny REAR-LEFT unglazed opening and existing roof vent; low dull orange warmth from the ONE existing central-right stone hearth. All walls, roof rafters, fixed posts, left/right raised sleeping benches, LEFT foreground rough table with ONE wood bowl and ONE earthenware cup, ONE woven basket under its near edge, LEFT middle chest and weighted vertical loom, earth floor and doorway MUST stay at identical positions and proportions. Do not brighten outside into broad daytime; dawn light barely rising but shapes stay comfortably readable. Ember fire same size, a very thin restrained smoke wisp toward the existing roof vent, no disaster cloud. Same original restrained matte graphic2D dark drawing lines, timber detail and simple broad shadows; no photorealism, painterly glow, glossy3D, anime or fantasy. No new chimney, fireplace, modern bed, glass, paper shoji, lamp, candles, second fire, blankets, people, animals, weapons, new props, writing, watermark, collage or panels. EMPTY wide landscape16:9 full bleed and exact original unmirrored camera.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

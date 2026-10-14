@@ -1,0 +1,108 @@
+{
+  "method": "sampled frames actually decoded from the original GoFile MP4",
+  "is_continuous_playback_review": false,
+  "captured_frames": [
+    {
+      "requested_seconds": 0,
+      "actual_seconds": 0.0,
+      "file": "0000.jpg"
+    },
+    {
+      "requested_seconds": 176,
+      "actual_seconds": 176.0,
+      "file": "0176.jpg"
+    },
+    {
+      "requested_seconds": 426,
+      "actual_seconds": 426.0,
+      "file": "0426.jpg"
+    },
+    {
+      "requested_seconds": 499,
+      "actual_seconds": 499.0,
+      "file": "0499.jpg"
+    },
+    {
+      "requested_seconds": 579,
+      "actual_seconds": 579.0,
+      "file": "0579.jpg"
+    },
+    {
+      "requested_seconds": 637,
+      "actual_seconds": 637.0,
+      "file": "0637.jpg"
+    },
+    {
+      "requested_seconds": 715,
+      "actual_seconds": 715.0,
+      "file": "0715.jpg"
+    },
+    {
+      "requested_seconds": 781,
+      "actual_seconds": 781.0,
+      "file": "0781.jpg"
+    },
+    {
+      "requested_seconds": 876,
+      "actual_seconds": 876.0,
+      "file": "0876.jpg"
+    },
+    {
+      "requested_seconds": 944,
+      "actual_seconds": 944.0,
+      "file": "0944.jpg"
+    },
+    {
+      "requested_seconds": 1012,
+      "actual_seconds": 1012.0,
+      "file": "1012.jpg"
+    },
+    {
+      "requested_seconds": 1061,
+      "actual_seconds": 1061.0,
+      "file": "1061.jpg"
+    },
+    {
+      "requested_seconds": 1080,
+      "actual_seconds": 1080.0,
+      "file": "1080.jpg"
+    },
+    {
+      "requested_seconds": 1095,
+      "actual_seconds": 1095.0,
+      "file": "1095.jpg"
+    },
+    {
+      "requested_seconds": 1110,
+      "actual_seconds": 1110.0,
+      "file": "1110.jpg"
+    },
+    {
+      "requested_seconds": 1125,
+      "actual_seconds": 1125.0,
+      "file": "1125.jpg"
+    },
+    {
+      "requested_seconds": 1140,
+      "actual_seconds": 1140.0,
+      "file": "1140.jpg"
+    },
+    {
+      "requested_seconds": 1145,
+      "actual_seconds": 1145.0,
+      "file": "1145.jpg"
+    }
+  ],
+  "contact_sheets": [
+    {
+      "file": "sheet-01.jpg",
+      "sha256": "af84d1e223ea79f7d19a4d5f063883e502e99d724548787bf6aed3349af11096",
+      "actual_review": "PASS: watched by continuity reviewer; record of what is shown, not an endorsement of every historical continuity decision"
+    },
+    {
+      "file": "sheet-02.jpg",
+      "sha256": "8790659679b5f2df0ba6c62ed75279b25d5cb046dea9f61b4622d505f7f24fe4",
+      "actual_review": "PASS: watched by continuity reviewer; record of what is shown, not an endorsement of every historical continuity decision"
+    }
+  ]
+}

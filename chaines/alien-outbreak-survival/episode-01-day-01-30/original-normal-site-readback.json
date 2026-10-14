@@ -1,0 +1,57 @@
+{
+  "method": "normal official website observed in Playwright; no synthesized/replayed auth",
+  "public_url": "https://gofile.io/d/rtK6vmpj",
+  "listing_observed": true,
+  "complete_listing_observed": true,
+  "listing": {
+    "http_status": 200,
+    "api_status": "ok",
+    "folder_id": "8674365d-809b-420f-a9f9-674da33e3fc7",
+    "folder_type": "folder",
+    "folder_public": true,
+    "metadata": {
+      "totalCount": 3,
+      "totalPages": 1,
+      "page": 1,
+      "pageSize": 100,
+      "hasNextPage": false
+    },
+    "files": [
+      {
+        "id": "971f9ea7-0da0-4d6e-9176-133111bccaf4",
+        "type": "file",
+        "name": "Alien-Outbreak-Survival-Day-1-to-Day-30.mp4",
+        "size": 254760018,
+        "md5": "8913db7a545414720583de25056857ee"
+      },
+      {
+        "id": "da28477c-e1c9-4074-a4f5-839fc0e25e04",
+        "type": "file",
+        "name": "One-Stick-Left-Day-30-corrected.png",
+        "size": 1536836,
+        "md5": "9c443187a02dffb81b727b566189d752"
+      },
+      {
+        "id": "b549ff09-6f4d-48f8-94ed-fe406d7673b9",
+        "type": "file",
+        "name": "publication-kit.txt",
+        "size": 1569,
+        "md5": "5d4b7d925578d8b8f16aef1e1a92d981"
+      }
+    ]
+  },
+  "expected_filenames": null,
+  "painted_expected_filenames": [],
+  "all_expected_filenames_painted": true,
+  "owner_private_file_present": true,
+  "normal_guest_creation_posts": 0,
+  "file_uploads": 0,
+  "blocked_mutations": [],
+  "blocked_authorization_requests": [],
+  "blocked_websockets": [],
+  "navigation_error_type": null,
+  "screenshot_created_this_run": true,
+  "screenshot": "/workspace/handoff-build/alien-outbreak-discovery/gofile-original-readback.png",
+  "screenshot_sha256": "f7bdb7b14d26d4177d1071fa01e686b391c7a560a32c9e8f7cc3b0c4e1994a38",
+  "proof_verified": true
+}

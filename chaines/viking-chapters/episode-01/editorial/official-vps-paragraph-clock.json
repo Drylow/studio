@@ -1,0 +1,716 @@
+{
+  "schema": "actual-vps-voice-paragraph-clock-v1",
+  "duration_seconds": 1165.84,
+  "fps": 24,
+  "total_frames": 27980,
+  "scenes": [
+    {
+      "id": 1,
+      "text": "You wanted to be a Viking. A ship, a sword, a terrifying reputation. Instead, it is barely light, your shoes are wet, and a sheep has escaped through the fence you repaired yesterday.",
+      "start": 0.0,
+      "end": 11.511,
+      "word_start_index": 0,
+      "word_end_exclusive": 33
+    },
+    {
+      "id": 2,
+      "text": "Your partner points at the broken fence, then the empty wood basket. Your first conquest of the morning will be firewood.",
+      "start": 11.511,
+      "end": 18.374,
+      "word_start_index": 33,
+      "word_end_exclusive": 54
+    },
+    {
+      "id": 3,
+      "text": "Imagine you are Eirik, a free farmer on Norway's western coast around the year nine hundred and fifty. This is an imagined household, built around what archaeology tells us about Viking Age life.",
+      "start": 18.374,
+      "end": 30.129,
+      "word_start_index": 54,
+      "word_end_exclusive": 87
+    },
+    {
+      "id": 4,
+      "text": "You have land to work, relatives to rely on, and the opportunity to join a voyage. That does not make your life comfortable.",
+      "start": 30.129,
+      "end": 39.161,
+      "word_start_index": 87,
+      "word_end_exclusive": 110
+    },
+    {
+      "id": 5,
+      "text": "And one distinction matters. Norse society was not an entire population of full-time raiders. Farming, fishing, crafts, and trade supported it. Going on a Viking expedition was something some people did.",
+      "start": 39.161,
+      "end": 52.933,
+      "word_start_index": 110,
+      "word_end_exclusive": 141
+    },
+    {
+      "id": 6,
+      "text": "You might spend a season overseas and the next repairing a roof. The rest involves keeping your household alive until the weather improves.",
+      "start": 52.933,
+      "end": 61.345,
+      "word_start_index": 141,
+      "word_end_exclusive": 164
+    },
+    {
+      "id": 7,
+      "text": "The National Museum of Denmark describes the typical Viking Age household as farming and raising animals, with food planned around the seasons. Your real enemy has an excellent annual schedule: winter.",
+      "start": 61.345,
+      "end": 75.381,
+      "word_start_index": 164,
+      "word_end_exclusive": 195
+    },
+    {
+      "id": 8,
+      "text": "Before we give you the ship, therefore, you get the farm. Because if you cannot feed yourself here, crossing the North Sea will not magically improve your qualifications as a living person.",
+      "start": 75.381,
+      "end": 87.102,
+      "word_start_index": 195,
+      "word_end_exclusive": 227
+    },
+    {
+      "id": 9,
+      "text": "You wake inside a timber house, with sleeping spaces along the sides and a hearth at its heart. Fire gives warmth and light. Smoke is the less charming member of the household.",
+      "start": 87.102,
+      "end": 99.626,
+      "word_start_index": 227,
+      "word_end_exclusive": 259
+    },
+    {
+      "id": 10,
+      "text": "There is no neat little chimney quietly removing every inconvenience. Roof openings and ventilation help, but the hearth still shapes your indoor air. You get close for warmth, then move away coughing.",
+      "start": 99.626,
+      "end": 113.841,
+      "word_start_index": 259,
+      "word_end_exclusive": 291
+    },
+    {
+      "id": 11,
+      "text": "Breakfast means something the household actually has: perhaps grain porridge, bread, or preserved fish. There can be dairy, meat, vegetables, and berries too. Viking food was varied; availability was the catch.",
+      "start": 113.841,
+      "end": 130.163,
+      "word_start_index": 291,
+      "word_end_exclusive": 322
+    },
+    {
+      "id": 12,
+      "text": "An impressive feast is possible. It is simply not guaranteed every time you sit down. Somebody grew, caught, processed, or exchanged everything in that bowl.",
+      "start": 130.163,
+      "end": 142.101,
+      "word_start_index": 322,
+      "word_end_exclusive": 347
+    },
+    {
+      "id": 13,
+      "text": "Your partner, Aslaug, checks the stored grain while you pull on a wool tunic. Clothing is valuable work. Spinning, weaving, cutting, and repairing take time that your fantasy outfit never mentioned.",
+      "start": 142.101,
+      "end": 157.459,
+      "word_start_index": 347,
+      "word_end_exclusive": 378
+    },
+    {
+      "id": 14,
+      "text": "Surviving clothing evidence shows wool and linen, with differences in wealth and display. Yours is patched. Replacing the wardrobe whenever a sleeve tears is not a reasonable household policy.",
+      "start": 157.459,
+      "end": 169.96,
+      "word_start_index": 378,
+      "word_end_exclusive": 407
+    },
+    {
+      "id": 15,
+      "text": "You wrap yourself against the cold, fasten your cloak, and discover another problem. Leather shoes protect your feet, but a muddy yard remains a muddy yard. You are already carrying it indoors.",
+      "start": 169.96,
+      "end": 182.994,
+      "word_start_index": 407,
+      "word_end_exclusive": 439
+    },
+    {
+      "id": 16,
+      "text": "Outside, your animals need attention before your ambitions do. A cow that produces milk is also a cow that eats. Keeping livestock means arranging food for creatures that have never contributed silver.",
+      "start": 182.994,
+      "end": 196.233,
+      "word_start_index": 439,
+      "word_end_exclusive": 471
+    },
+    {
+      "id": 17,
+      "text": "You turn the soil and work the small fields. In this household, grain, grazing, and fishing all matter. The balance varies across Scandinavia; this coastal farm is not every Norse person's identical experience.",
+      "start": 196.233,
+      "end": 212.031,
+      "word_start_index": 471,
+      "word_end_exclusive": 504
+    },
+    {
+      "id": 18,
+      "text": "The growing season is a deadline. Rain can help the crops, then ruin your plans. You cannot ask the weather to reconsider because your future voyage sounds important.",
+      "start": 212.031,
+      "end": 223.324,
+      "word_start_index": 504,
+      "word_end_exclusive": 532
+    },
+    {
+      "id": 19,
+      "text": "Hay must be cut and stored. During the colder months, animals cannot live on your inspirational speech. Every useful bundle you carry now is a small argument against disaster later.",
+      "start": 223.324,
+      "end": 235.558,
+      "word_start_index": 532,
+      "word_end_exclusive": 562
+    },
+    {
+      "id": 20,
+      "text": "Aslaug carries out work of her own, managing supplies and textiles, alongside the household's other tasks. Women contributed substantial labor and responsibility. That does not mean Viking society offered modern equality.",
+      "start": 235.558,
+      "end": 250.465,
+      "word_start_index": 562,
+      "word_end_exclusive": 593
+    },
+    {
+      "id": 21,
+      "text": "Everyone's place matters. The National Museum describes free people, powerful elites, and enslaved people. Those at the bottom could be bought and sold. Your freedom is an advantage, not the universal starting point.",
+      "start": 250.465,
+      "end": 265.002,
+      "word_start_index": 593,
+      "word_end_exclusive": 626
+    },
+    {
+      "id": 22,
+      "text": "There is a darker foundation beneath some famous voyages: people were captured and traded. That is not adventurous treasure hunting. For those taken, somebody else's profit meant the destruction of their own freedom.",
+      "start": 265.002,
+      "end": 279.779,
+      "word_start_index": 626,
+      "word_end_exclusive": 659
+    },
+    {
+      "id": 23,
+      "text": "You, meanwhile, have a more ordinary problem. A tool needs repair. Ironwork takes skill and resources, and the smith expects something in return. Your axe cannot be maintained by glaring at it.",
+      "start": 279.779,
+      "end": 292.558,
+      "word_start_index": 659,
+      "word_end_exclusive": 691
+    },
+    {
+      "id": 24,
+      "text": "You trade what you can spare, then bring the repaired tool home. It is a better investment than owning a shiny weapon while your fence collapses.",
+      "start": 292.558,
+      "end": 300.399,
+      "word_start_index": 691,
+      "word_end_exclusive": 717
+    },
+    {
+      "id": 25,
+      "text": "Then Bjorn arrives with news of a summer voyage. He has access to a boat and a crew, and enough standing to put the expedition together. You have enthusiasm and extremely modest savings.",
+      "start": 300.399,
+      "end": 312.233,
+      "word_start_index": 717,
+      "word_end_exclusive": 750
+    },
+    {
+      "id": 26,
+      "text": "He talks about opportunities overseas: trade, payment, perhaps plunder if circumstances favor it. Those activities existed together in the wider Viking world. A man carrying goods might also be carrying weapons.",
+      "start": 312.233,
+      "end": 327.34,
+      "word_start_index": 750,
+      "word_end_exclusive": 781
+    },
+    {
+      "id": 27,
+      "text": "Your decision is not simply courage versus cowardice. If you leave, someone must do your work here. Aslaug looks at the remaining tasks. Suddenly the voyage has an extra passenger: guilt.",
+      "start": 327.34,
+      "end": 340.37,
+      "word_start_index": 781,
+      "word_end_exclusive": 812
+    },
+    {
+      "id": 28,
+      "text": "You discuss household needs, crew expectations, and what you can contribute. This bargain is imagined. The underlying problem is real: boats, equipment, food, and labor require resources.",
+      "start": 340.37,
+      "end": 355.361,
+      "word_start_index": 812,
+      "word_end_exclusive": 839
+    },
+    {
+      "id": 29,
+      "text": "At the local assembly, free men gather to discuss matters and disputes. Norse law was not just everyone swinging an axe until agreement happened. Assemblies provided a place for negotiation and judgment.",
+      "start": 355.361,
+      "end": 369.719,
+      "word_start_index": 839,
+      "word_end_exclusive": 871
+    },
+    {
+      "id": 30,
+      "text": "Your neighbor raises a boundary complaint. You think his claim is ridiculous. He thinks your confidence is ridiculous. Other people listen, because land and reputation matter.",
+      "start": 369.719,
+      "end": 381.749,
+      "word_start_index": 871,
+      "word_end_exclusive": 897
+    },
+    {
+      "id": 31,
+      "text": "You cannot simply announce that you are the main character. Family connections and influential support affect your position. A free farmer has a voice; that does not make him equal to the wealthiest man.",
+      "start": 381.749,
+      "end": 395.389,
+      "word_start_index": 897,
+      "word_end_exclusive": 931
+    },
+    {
+      "id": 32,
+      "text": "The issue is left for further discussion, and you return to preparations. You would prefer to solve one crisis at a time. Viking Age life has rejected that feature request.",
+      "start": 395.389,
+      "end": 406.026,
+      "word_start_index": 931,
+      "word_end_exclusive": 961
+    },
+    {
+      "id": 33,
+      "text": "Down at the landing, the boat needs work. Planks, fastenings, and seams must hold. Ships were remarkable achievements of craftsmanship. Remarkable does not mean they maintained themselves while the crew practiced looking dangerous.",
+      "start": 406.026,
+      "end": 423.694,
+      "word_start_index": 961,
+      "word_end_exclusive": 994
+    },
+    {
+      "id": 34,
+      "text": "You check an oar and help with the sail. A large textile sail represents considerable labor. Aslaug's world of wool and careful hands has more to do with your expedition than the songs suggest.",
+      "start": 423.694,
+      "end": 437.624,
+      "word_start_index": 994,
+      "word_end_exclusive": 1028
+    },
+    {
+      "id": 35,
+      "text": "Food and water must come aboard, along with goods, tools, and personal belongings. Space is limited. You quickly learn the difference between packing for adventure and packing for a boat that must actually float.",
+      "start": 437.624,
+      "end": 451.712,
+      "word_start_index": 1028,
+      "word_end_exclusive": 1062
+    },
+    {
+      "id": 36,
+      "text": "Now the weapons. You have a spear and a round shield. Bjorn's sword is much more impressive. The National Museum notes that swords were expensive, while axes and spears were more accessible.",
+      "start": 451.712,
+      "end": 465.565,
+      "word_start_index": 1062,
+      "word_end_exclusive": 1094
+    },
+    {
+      "id": 37,
+      "text": "Your lack of a sword does not disqualify you from being Norse. It mainly disqualifies you from looking exactly like an expensive television character. Wealth has its own costume department.",
+      "start": 465.565,
+      "end": 478.359,
+      "word_start_index": 1094,
+      "word_end_exclusive": 1124
+    },
+    {
+      "id": 38,
+      "text": "And the helmet with horns? Remove it from the picture. The museum's helmet evidence does not support that familiar battle costume. You are traveling bareheaded, with a hood available when the weather turns.",
+      "start": 478.359,
+      "end": 491.823,
+      "word_start_index": 1124,
+      "word_end_exclusive": 1157
+    },
+    {
+      "id": 39,
+      "text": "Finally, you push off. Aslaug remains at the landing while your world narrows to wood, rope, water, and other men's elbows.",
+      "start": 491.823,
+      "end": 501.334,
+      "word_start_index": 1157,
+      "word_end_exclusive": 1178
+    },
+    {
+      "id": 40,
+      "text": "Then the wind changes. Oars become work instead of decoration. You pull, recover, and pull again. The man beside you is doing the same, so complaining does not make you particularly interesting.",
+      "start": 501.334,
+      "end": 514.448,
+      "word_start_index": 1178,
+      "word_end_exclusive": 1210
+    },
+    {
+      "id": 41,
+      "text": "When the sail takes over, you still have jobs. Handling the vessel, watching conditions, managing equipment, and keeping things in order demand attention. Nobody has employed you as a full-time horizon admirer.",
+      "start": 514.448,
+      "end": 528.829,
+      "word_start_index": 1210,
+      "word_end_exclusive": 1242
+    },
+    {
+      "id": 42,
+      "text": "The ship is open to the weather. Your blanket is not a private cabin. Rain lands on your clothes, your belongings, and your mood. Dry comfort becomes something you remember with surprising affection.",
+      "start": 528.829,
+      "end": 540.615,
+      "word_start_index": 1242,
+      "word_end_exclusive": 1275
+    },
+    {
+      "id": 43,
+      "text": "You follow coasts when practical, stop where conditions allow, and depend on experienced navigation. Crossing open water remains serious work. Our imagined crew is heading toward England, not visiting three continents before supper.",
+      "start": 540.615,
+      "end": 555.65,
+      "word_start_index": 1275,
+      "word_end_exclusive": 1308
+    },
+    {
+      "id": 44,
+      "text": "On a rougher stretch, water comes aboard and you help bail. The sea has no opinion about your courage. It only requires the boat to remain seaworthy, whether you feel heroic or not.",
+      "start": 555.65,
+      "end": 567.587,
+      "word_start_index": 1308,
+      "word_end_exclusive": 1341
+    },
+    {
+      "id": 45,
+      "text": "At night, you try to rest in cramped conditions. Someone snores. Someone shifts an elbow into your ribs. You have crossed a vast body of water to discover that roommates are universal.",
+      "start": 567.587,
+      "end": 580.857,
+      "word_start_index": 1341,
+      "word_end_exclusive": 1373
+    },
+    {
+      "id": 46,
+      "text": "You eat from the supplies and drink carefully. Every extra day draws on what you brought. Weather delays can turn patience into a practical problem, even without a dramatic storm swallowing the ship.",
+      "start": 580.857,
+      "end": 593.537,
+      "word_start_index": 1373,
+      "word_end_exclusive": 1406
+    },
+    {
+      "id": 47,
+      "text": "Eventually you approach the English coast. Here, too, people know about Scandinavian travelers and settlements. You are entering an inhabited, politically complicated world, not an empty map labeled free treasure.",
+      "start": 593.537,
+      "end": 607.118,
+      "word_start_index": 1406,
+      "word_end_exclusive": 1436
+    },
+    {
+      "id": 48,
+      "text": "Bjorn listens to local information before deciding where to go. A poorly defended target might offer wealth. It might also be less poorly defended than the person describing it would like you to believe.",
+      "start": 607.118,
+      "end": 618.962,
+      "word_start_index": 1436,
+      "word_end_exclusive": 1470
+    },
+    {
+      "id": 49,
+      "text": "You land quietly away from the trading place and carry your shield inland with the crew. This is the portion people imagine first. Your stomach has suddenly remembered the portion where you could die.",
+      "start": 618.962,
+      "end": 630.82,
+      "word_start_index": 1470,
+      "word_end_exclusive": 1504
+    },
+    {
+      "id": 50,
+      "text": "Across a small open space, armed men appear. They are not waiting politely to become an anecdote. They have homes, allies, and weapons, and very little enthusiasm for your proposed business model.",
+      "start": 630.82,
+      "end": 642.278,
+      "word_start_index": 1504,
+      "word_end_exclusive": 1536
+    },
+    {
+      "id": 51,
+      "text": "Bjorn considers the ground and the opposition. A retreat can preserve people and equipment. This crew chooses to withdraw rather than force an attack. There is no guaranteed victory hidden in your nationality.",
+      "start": 642.278,
+      "end": 655.572,
+      "word_start_index": 1536,
+      "word_end_exclusive": 1569
+    },
+    {
+      "id": 52,
+      "text": "Back at the boat, an argument starts. One man calls the decision cautious. Another calls it humiliating. You call it excellent while privately checking that all your important body parts are still present.",
+      "start": 655.572,
+      "end": 668.05,
+      "word_start_index": 1569,
+      "word_end_exclusive": 1602
+    },
+    {
+      "id": 53,
+      "text": "That encounter is fictional, but the choice illustrates something basic: overseas profit depended on conditions. Not every expedition achieved a dramatic conquest. Failed opportunities still consumed food, time, and effort.",
+      "start": 668.05,
+      "end": 684.705,
+      "word_start_index": 1602,
+      "word_end_exclusive": 1632
+    },
+    {
+      "id": 54,
+      "text": "The crew changes its plan and approaches a place where exchange is possible. Weapons stay present, but the goods come out. You are now hoping a merchant likes your cargo more than your expression.",
+      "start": 684.705,
+      "end": 697.307,
+      "word_start_index": 1632,
+      "word_end_exclusive": 1666
+    },
+    {
+      "id": 55,
+      "text": "The harbor has timber buildings, working people, and ordinary noise. Traders need information, contacts, and something others want. Being able to frighten a stranger is not the same as securing a good bargain.",
+      "start": 697.307,
+      "end": 711.827,
+      "word_start_index": 1666,
+      "word_end_exclusive": 1699
+    },
+    {
+      "id": 56,
+      "text": "You inspect cloth while the merchant inspects your goods. There are negotiations, misunderstandings, and the uncomfortable possibility that the other person understands the transaction considerably better than you do.",
+      "start": 711.827,
+      "end": 725.737,
+      "word_start_index": 1699,
+      "word_end_exclusive": 1728
+    },
+    {
+      "id": 57,
+      "text": "Silver is useful, but its form varies. Viking Age trade involved coins and silver valued by weight, including cut pieces. You watch a balance carefully. Confidence is not a substitute for the correct weight.",
+      "start": 725.737,
+      "end": 740.711,
+      "word_start_index": 1728,
+      "word_end_exclusive": 1762
+    },
+    {
+      "id": 58,
+      "text": "The merchant adds a weight; Bjorn answers; the bargaining continues. Your imagined sale brings some silver and supplies. It does not finance a magnificent hall, a second ship, and retirement before your next birthday.",
+      "start": 740.711,
+      "end": 757.325,
+      "word_start_index": 1762,
+      "word_end_exclusive": 1796
+    },
+    {
+      "id": 59,
+      "text": "Nearby, another traveler shows an object from far away. Viking networks reached extraordinary distances. That does not mean every farmer personally sailed the entire network. Goods could travel through many hands.",
+      "start": 757.325,
+      "end": 772.092,
+      "word_start_index": 1796,
+      "word_end_exclusive": 1827
+    },
+    {
+      "id": 60,
+      "text": "You buy a small useful item to bring home. Not a mountain of jeweled treasure: something Aslaug can use and recognize as evidence that your absence produced more than interesting stories.",
+      "start": 772.092,
+      "end": 785.535,
+      "word_start_index": 1827,
+      "word_end_exclusive": 1858
+    },
+    {
+      "id": 61,
+      "text": "Before leaving, the crew repairs worn gear. Staying ashore costs time, but ignoring damage could cost much more. Even adventure requires maintenance appointments.",
+      "start": 785.535,
+      "end": 796.832,
+      "word_start_index": 1858,
+      "word_end_exclusive": 1881
+    },
+    {
+      "id": 62,
+      "text": "Bjorn gathers everyone for the return. You check the water containers, secure the cargo, and look back at the harbor. You have earned something. Now you must keep it through another stretch of sea.",
+      "start": 796.832,
+      "end": 809.662,
+      "word_start_index": 1881,
+      "word_end_exclusive": 1915
+    },
+    {
+      "id": 63,
+      "text": "Home is not one uninterrupted victory lap away. There are winds to judge and stops to make. You are tired of being damp, which unfortunately is not a useful navigation method.",
+      "start": 809.662,
+      "end": 821.4,
+      "word_start_index": 1915,
+      "word_end_exclusive": 1946
+    },
+    {
+      "id": 64,
+      "text": "A cloak shifts in the wind and you pull it close. Sometimes discomfort is simply hours of being miserable while remaining very much alive.",
+      "start": 821.4,
+      "end": 829.385,
+      "word_start_index": 1946,
+      "word_end_exclusive": 1970
+    },
+    {
+      "id": 65,
+      "text": "You share work and supplies with the crew. The voyage depends on cooperation, including with people you would never voluntarily invite to dinner. Your survival has acquired a group project.",
+      "start": 829.385,
+      "end": 841.513,
+      "word_start_index": 1970,
+      "word_end_exclusive": 2000
+    },
+    {
+      "id": 66,
+      "text": "When Norway's coast comes into view, familiar land feels different. The fields did not suspend themselves during your adventure. Neither did the animals, the household, or the neighbor's deeply committed boundary complaint.",
+      "start": 841.513,
+      "end": 856.492,
+      "word_start_index": 2000,
+      "word_end_exclusive": 2032
+    },
+    {
+      "id": 67,
+      "text": "At the landing, Aslaug greets you, then looks at what you brought. You produce the useful gift. She produces a list of repairs. Both of you have been working; only one has sea stories.",
+      "start": 856.492,
+      "end": 869.036,
+      "word_start_index": 2032,
+      "word_end_exclusive": 2066
+    },
+    {
+      "id": 68,
+      "text": "The crew divides the proceeds according to its arrangement. We cannot supply a universal Viking pay table. Shares and relationships differed. In this household's imagined reckoning, your reward is welcome but modest.",
+      "start": 869.036,
+      "end": 884.024,
+      "word_start_index": 2066,
+      "word_end_exclusive": 2098
+    },
+    {
+      "id": 69,
+      "text": "You set silver beside the expenses waiting at home. The tool, the roof, the supplies, the help you relied upon. Your triumphant return begins looking suspiciously like money arriving just before the bills.",
+      "start": 884.024,
+      "end": 899.676,
+      "word_start_index": 2098,
+      "word_end_exclusive": 2131
+    },
+    {
+      "id": 70,
+      "text": "Then the harvest demands your attention. You work while the weather allows, gather what you can, and protect what must last. There is a deadline even if nobody writes it on a calendar.",
+      "start": 899.676,
+      "end": 913.365,
+      "word_start_index": 2131,
+      "word_end_exclusive": 2164
+    },
+    {
+      "id": 71,
+      "text": "Food is dried, smoked, or otherwise preserved as appropriate. Storage is part of survival, not merely housekeeping. A meal you cannot keep until later cannot help you through the part of the year with less food.",
+      "start": 913.365,
+      "end": 927.629,
+      "word_start_index": 2164,
+      "word_end_exclusive": 2200
+    },
+    {
+      "id": 72,
+      "text": "Aslaug checks containers while you stack firewood. The household prepares for shorter days. A good store is reassuring. It is also a reminder that nearly everything here can be used up.",
+      "start": 927.629,
+      "end": 940.569,
+      "word_start_index": 2200,
+      "word_end_exclusive": 2231
+    },
+    {
+      "id": 73,
+      "text": "Your animals must be fed and sheltered. Keeping them alive protects future milk, breeding, and work. Winter is not just you feeling cold; it is the whole household consuming its earlier decisions.",
+      "start": 940.569,
+      "end": 955.374,
+      "word_start_index": 2231,
+      "word_end_exclusive": 2263
+    },
+    {
+      "id": 74,
+      "text": "Indoors, a tear in your tunic gets repaired. Outside, wind finds another weak spot in the house. The season has a talent for testing every job you vaguely remember meaning to finish.",
+      "start": 955.374,
+      "end": 967.734,
+      "word_start_index": 2263,
+      "word_end_exclusive": 2295
+    },
+    {
+      "id": 75,
+      "text": "You mend the roof before the problem grows. Keeping rain out of the sleeping space will improve your life more than a beautiful nickname.",
+      "start": 967.734,
+      "end": 976.872,
+      "word_start_index": 2295,
+      "word_end_exclusive": 2319
+    },
+    {
+      "id": 76,
+      "text": "A sore tooth makes eating unpleasant. Archaeological remains show that Viking Age people faced dental problems and injuries. You have people who may help, but you do not have modern medicine waiting nearby.",
+      "start": 976.872,
+      "end": 991.414,
+      "word_start_index": 2319,
+      "word_end_exclusive": 2352
+    },
+    {
+      "id": 77,
+      "text": "You should not picture every Norse person filthy, sick, and indifferent to appearance. Combs and other grooming objects survive. Caring about your hair, however, does not give you antibiotics or emergency dentistry.",
+      "start": 991.414,
+      "end": 1007.553,
+      "word_start_index": 2352,
+      "word_end_exclusive": 2384
+    },
+    {
+      "id": 78,
+      "text": "You sit near the hearth while Aslaug works wool. The evening offers conversation, repairs, and perhaps a game. Life has pleasures. A difficult existence is not necessarily an existence without affection or laughter.",
+      "start": 1007.553,
+      "end": 1024.049,
+      "word_start_index": 2384,
+      "word_end_exclusive": 2417
+    },
+    {
+      "id": 79,
+      "text": "Then your neighbor returns to the dispute. He thinks you moved a boundary marker. You think he has developed a remarkably flexible memory. This time you bring someone who remembers the earlier arrangement.",
+      "start": 1024.049,
+      "end": 1036.325,
+      "word_start_index": 2417,
+      "word_end_exclusive": 2450
+    },
+    {
+      "id": 80,
+      "text": "The matter reaches the local assembly again. You speak, the neighbor speaks, and other men weigh the claims. Evidence, witnesses, negotiation, and standing matter more here than a dramatic battle pose.",
+      "start": 1036.325,
+      "end": 1049.96,
+      "word_start_index": 2450,
+      "word_end_exclusive": 2481
+    },
+    {
+      "id": 81,
+      "text": "A compromise settles this imagined dispute. You dislike giving ground, but an escalating feud would cost far more. The ability to swing a weapon is less useful than keeping tomorrow reasonably predictable.",
+      "start": 1049.96,
+      "end": 1064.167,
+      "word_start_index": 2481,
+      "word_end_exclusive": 2513
+    },
+    {
+      "id": 82,
+      "text": "Bjorn's influence helped bring people together, and you have obligations within that network. Leaders could cultivate followers through wealth and gifts. A generous patron is still someone whose wishes can matter a great deal.",
+      "start": 1064.167,
+      "end": 1078.996,
+      "word_start_index": 2513,
+      "word_end_exclusive": 2547
+    },
+    {
+      "id": 83,
+      "text": "You attend a gathering and listen while better-connected men speak. Power in this world is uneven. Being free gives you possibilities that an enslaved person lacks, but it does not make every door yours.",
+      "start": 1078.996,
+      "end": 1094.315,
+      "word_start_index": 2547,
+      "word_end_exclusive": 2581
+    },
+    {
+      "id": 84,
+      "text": "Back home, you look at the remaining grain. You are neither ruined nor rich. You survived a voyage, avoided a fight, made some trades, and returned to work that never actually ended.",
+      "start": 1094.315,
+      "end": 1108.44,
+      "word_start_index": 2581,
+      "word_end_exclusive": 2613
+    },
+    {
+      "id": 85,
+      "text": "That is the disappointment hidden inside the Viking fantasy. Adventure might change your fortunes. It does not erase seasons, responsibilities, weather, or people with more power than you.",
+      "start": 1108.44,
+      "end": 1122.077,
+      "word_start_index": 2613,
+      "word_end_exclusive": 2641
+    },
+    {
+      "id": 86,
+      "text": "The spectacular stories deserve attention, but so do the hands that made sails, raised animals, prepared food, and kept houses standing. Without those people, the famous ships would have gone nowhere.",
+      "start": 1122.077,
+      "end": 1137.553,
+      "word_start_index": 2641,
+      "word_end_exclusive": 2672
+    },
+    {
+      "id": 87,
+      "text": "You finally lie down beside the hearth. Tomorrow brings another fence, another chore, another calculation. Your terrifying reputation will have to wait until you have finished keeping the household alive.",
+      "start": 1137.553,
+      "end": 1150.311,
+      "word_start_index": 2672,
+      "word_end_exclusive": 2702
+    },
+    {
+      "id": 88,
+      "text": "So why was being a Viking worse than you think? Because the sword was optional, the glory was uncertain, and the work was unavoidable. Especially when that sheep has escaped again. This is Viking Chapters: the lives behind the legends.",
+      "start": 1150.311,
+      "end": 1165.84,
+      "word_start_index": 2702,
+      "word_end_exclusive": 2742
+    }
+  ],
+  "source_transcript": "historical-artifact:tubeforge-api-handoff/staging/viking-remote-clock/transcript.json",
+  "source_transcript_sha256": "627d05629a3ebb9d494a401ae387c86c525256e99e923715dd5f2afcf052f9f4",
+  "exact_canonical_word_identity": true,
+  "alignment_basis": "Actual service w/s/e/t/c0/c1 word clock, preserving exact narration; paragraph spans assigned by exact consecutive canonical word counts."
+}

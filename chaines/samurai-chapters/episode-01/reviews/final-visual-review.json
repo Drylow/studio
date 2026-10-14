@@ -1,0 +1,302 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "8aa6302a16594a311f47c43c603243dbb4ef74c5a88cef7bf7b0e9ac8d63d788",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/final-visual-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-final-encoded-root-release-v1",
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "movie": "/workspace/tubeforge-regeneration-runtime/app/data/projects/why-being-a-samurai-was-worse-than-you-t-947aab/render/final.mp4",
+    "state": "pass",
+    "finished_render_visual_reviewed": true,
+    "reviewed_encoded_scene_count": 108,
+    "reviewed_cut_count": 107,
+    "actual_captured_frames_reviewed": 324,
+    "capture_sheets": [
+      {
+        "sheet": 1,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-01.jpg",
+        "sha256": "1d0482bba2f59ae9aef539b0b517a41d5d86c37a7a4178817a8c23afb081d380",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 001–009 viewed. Gate/home/office/market establish distinct coherent locations, actor identities and props remain readable, corrected scene005 outdoor sandals present, plain brown pouches. No blank or corrupted panel and no cut faces.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 2,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-02.jpg",
+        "sha256": "d789b52b1fb79f91decb2d45046e4f3195321c001daecd13f8119d1156aa85fd",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 010–018 viewed. Adult Kenji, gray-haired Father/Mother and Senior preserve identities; corrected scene017 is older brown-robed Father with two hilts and outdoor sandals, not prior youthful indigo extra. Fixed household/office/training/gate architecture and natural daylight retained.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 3,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-03.jpg",
+        "sha256": "09673849079f54b0de9d774d52583df4373af477553da99b8431b2714b670b20",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 019–027 viewed. Corrected scene021 pair at body-left under carried books, scene024 two distinct bowed Kenji hilts/scabbards with two wooden wall rods retained, scene026 actual cream tied PAPER ORDER, original cast/office/training/gate readable. No bad-source regression.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 4,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-04.jpg",
+        "sha256": "8803a51a431912dcf5c13a7c8a1b55dc9a8c627e3745046dd967140468858b77",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 028–036 viewed. Hana separate indigo repair garment does not change worn outfit; corrected scene029 straw sandals, scene030 exactly two sheathed sword fittings (no third blade), physical footwear/household props and plain brown pouch retained. No blank/bad frame.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 5,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-05.jpg",
+        "sha256": "c2bcc28cccfddd54a65fede26af2f170b38de05d5092e5541ba073ddfc901ae9",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 037–045 viewed. Merchant unchanged olive outfit, Kenji correct indigo, rice/coin brown-pouch transaction and home budget staging coherent; corrected scenes040/043 sandals present. Observation: scene040 close framing clips some shoe detail at bottom while faces, hands, pouch and ledger remain fully readable; accepted as close accounting composition, no continuity defect.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 6,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-06.jpg",
+        "sha256": "575a5050f38b54cb27ffd33f9876100f09ca8d404dde962e9519b72bb18ebd5c",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual encoded midpoints 046–054 viewed. Corrected Senior sandals in046, empty lowered black hand and no extra cream-striped prop in049, cream tied paper order and sandals in054. Actors/pairs/architecture preserved; original administrative bundle in052 physically plausible. No corrupted panel or failed derivative.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 7,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-07.jpg",
+        "sha256": "e2a41dfdce2ff32fa432b626a50f52122619da9350bed4b3e77d63b144ac4876",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Scenes 55–58 preserve two held wood rods total with empty brackets, four worn steel swords and restrained practice actions; 59 corrected straw sandals present. Office/gate/market/HOME remain correctly ordered, identities and black hands retained. Scene 62 has minor lower-edge sandal-tip crop from native zoom; actual frame 15623 separately viewed at full 1920x1080 and root explicitly accepts framing. No head, gesture or story prop lost.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 8,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-08.jpg",
+        "sha256": "801595d4dcebd744721f1d2c8fc9cd99161b866e9eab76f6549997f00147c69f",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Correct six-cast identities in household scenes, HOME shelf/cabinet/rear shoji/right veranda preserved. Scene 65 corrected pair retained; scene 68 Hana weapon-free with correct Kenji pair. Brown pouch, ledger, folded garment and family-document actions remain; no extra adult/child, readable overlay or room mirroring.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 9,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-09.jpg",
+        "sha256": "0a6b13af962c37b44c6afeb8a25245a722e86ee79fa2f926050c138234f91ee1",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. ROAD inn/bridge/slopes/daylight consistent, one brown travel bundle moves between grounded and held states deliberately. Scene 75 Senior now holds closed cream cord-tied order; 76 coin-pouch preparation distinct and one large grounded bundle. 80–81 actual Edo room geometry and exactly one near-right brown bundle preserved; no large fantasy skyline or costume swap.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 10,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-10.jpg",
+        "sha256": "300d00f5a236cffd8bab777269e00a01aede05e45f5ccdd7cd3d2addda1044f0",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Scene 82 corrected modest cream closed duty file beside ledger replaces oversized bag; 88 has corrected sandals and no extra handheld weapon; 89 open ledger restored beside ink tray in front of held order. Office/market/gate/HOME actions and identities correctly sequenced. Scenes 84 and 90 have minor foot-tip lower-edge crop from native zoom, explicitly accepted by root after their full captured-frame views; faces, hands, papers and swords stay readable.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 11,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-11.jpg",
+        "sha256": "c920dab7bb5beb4de712be13bdf21dd3bcc773fd8bcaf373de28ae9aaaf43c1a",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Office bound records, two compared documents and single correction brush match narration; no execution/gore imagery. Scene 95 black mitten hand and straw sandals corrections preserved. Gate and HOME remain distinct; cup, ledger and one brown pouch present at weary household scene. No black flash, wrong source or added labels in these midpoint samples.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 12,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-12.jpg",
+        "sha256": "d21c165dbf9bb712c3cd17c93e008aa62584d7693d6b7acbe2670593ed6bbc36",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Market rice-measure labor correctly distinguishes Kenji and Merchant; scene 102 retains exactly four worn steel swords, Senior empty pointing hand, two mounted wood rods. 103–107 brown coin pouch, register/tea/duty paper and family/costume/architecture consistent. Corrected sandals appear in final 108 gate shot. Minor lower-edge foot-tip crop in 102 accepted explicitly by root after full captured-frame inspection; no head/gesture/prop clipping.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 13,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-13.jpg",
+        "sha256": "b3ee31bd6aac94488f07dad931803044fc26f71cf8a778ce83b90782fb85f756",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts001→002 through009→010 viewed. Gate/home/office/market changes are intentional scene changes, retained cast colors and daylight, original scene005 sandals correction present. No black encoded edge, corrupt transition image, missing scene or unexplained weather/cast jump visible. Black sheet margins are layout padding, not encoded movie borders.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 14,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-14.jpg",
+        "sha256": "82d7fe7e631dd1171b001a3c748d5a59cdeca80363d9a4eee70b9e08c4a2a601",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts010→011 through018→019 viewed. Family/office/training shots maintain identity and architecture. Correct older Father and all three sandals in017 present on both viewed boundary frames; no incorrect youthful-blue Father reappears.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 15,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-15.jpg",
+        "sha256": "bc2f4082a5f24fc27ad052e0e484a4e1802b69abbd577eb37d5a7632eb895cd0",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts019→020 through027→028 viewed. All three critical corrected 021/024/026 shots are used at start/end of cuts, without bad original returns. Bow/training wall rods, office orders and cast consistent; no unrequested extra actors or image glitches.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 16,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-16.jpg",
+        "sha256": "a4018bf12b973ad03413775e5a4447217b8d4ea596529ad4ca9456e907b85a24",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts028→029 through036→037 viewed. Same repair garment, household account and separate cloth/sandal/equipment props retained; two sword count in030 and corrected sandals029 visible. No blank/bad source boundary. Whole-frame zoom/pan reframes foreground without changing location identity.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 17,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-17.jpg",
+        "sha256": "4d5907220ffb8091705c114909ea8758f1292459feb3d59e8b0364c6c9fe41b1",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts037→038 through045→046 viewed. Market/home/teaching/guard transitions intentional, cast/coin pouch/ledger remain coherent, corrected040/043 foot styling visible to extent of close-frame crop. Scene040 shoe detail touches frame bottom; story-bearing face/hand/ledger/pouch information intact.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 18,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-18.jpg",
+        "sha256": "c64768bff72a9322e734c57ee0e51b63c7fcedac44356dbe80264a9f31feaa9d",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual adjacent encoded frames of cuts046→047 through054→055 viewed. Corrected046 sandals, corrected049 no loose extra weapon/prop, corrected054 paper order+outdoor footwear persist at encoded boundaries. Last sampled cut enters training practice coherently with one wooden rod per man, no extra steel blade or corrupted image.",
+        "review_method": "tools.view_image of actual encoded capture contact sheet; every labeled panel visually inspected"
+      },
+      {
+        "sheet": 19,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-19.jpg",
+        "sha256": "d7e75c9f6989bd3beba05d6fcca14fae14a89e2fcbe81994a9fc8d823b509080",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 55->56 through 63->64 viewed. Practice rod counts and empty mounts remain stable across 55–58, then practice props correctly disappear at gate after location change. Native framing changes remain intentional pan/zoom rather than actor/decor deformation. Cut transitions follow intended gate/office/market/HOME sequence, no black flash or wrong source. Review-sheet black padding is outside the movie frame panels.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 20,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-20.jpg",
+        "sha256": "31fd5786baffa8905e28cf9d343ff40b20424ad25da84235f844c20ce26a80a4",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 64->65 through 72->73 viewed. Household architecture and cast clothing/hair remain recognizable through varied document/repair/care actions. Corrected Kenji sword position in 65 and weapon-free Hana in 68 survive both cut-side frames. Family actors deliberately join/leave per shot plan; road transition for travel remains clear, no weather flip or new character.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 21,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-21.jpg",
+        "sha256": "1a585d569904c5e26c402f2ac97a571d31bbf5f03774527f634c5ea2b1f3af90",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 73->74 through 81->82 viewed. Explicit office inserts alternate with same road scene; corrected Senior order in 75 retains same pose, Kenji keeps one large bundle, bundle grounds again in 76. HOME family insert and Edo arrival distinct rooms, exactly one near-right Edo bundle. 82 corrected cream file rather than big bag visible on incoming frame; no source-regression flash.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 22,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-22.jpg",
+        "sha256": "b02a75fa7d2d1bc0cc8679dda157dc99011d368b3f8d8ffe7d4bc2add9d80f06",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 82->83 through 90->91 viewed. Employment notice/interview/household sequence correctly ordered, correct plain robes and hair. 88 sandals and empty lowered black hand, 89 added account ledger, and 82 modest closed file retained. Small native lower foot-edge crops in 84/90 are the accepted framing limitation; faces, hands and key props remain in frame, no blackout or mirrored architecture.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 23,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-23.jpg",
+        "sha256": "f10cc5e6af9fcd2349463304d102e3f40e11452d36f01b723396356dd0ba9df8",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 91->92 through 99->100 viewed. Different bound records and two comparison sheets follow authored office actions without modern readable title; 95 corrected black hand and sandals survive incoming/outgoing edges. Ordinary official correction, gate duty and quiet HOME recovery remain distinct; market transition begins expected rice-counter scene. No wrong-source insertion or black-flash panel.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 24,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-24.jpg",
+        "sha256": "fc9ac8b4aed9dbabfd412e804c20291441bb4bd0e0b67cbd906275ffb458a57b",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of 8 cuts 100->101 through 107->108 and the actual first film frame viewed. Merchant labor, training sword-maintenance, household accounts and final duty shots follow intended chronology and correct identities. 102 exactly four worn swords/two mounted rods, 108 corrected straw sandals and tucked cream order; first actual film frame is correct Kenji at gate with sandals. No flash, wrong source or external video footage. Minor foot-tip crop on 102 is explicitly accepted by root.",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute."
+      },
+      {
+        "sheet": 25,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-25.jpg",
+        "sha256": "ec98af8d9d2beb3d74f9e55750491564df3c164dd91e94de16f29b23fd3d8317",
+        "state": "pass",
+        "reviewer": "root",
+        "notes": "Actual sheet25 viewed. Last encoded frame28296 shows full Kenji with sandals, two worn swords and tucked order at the stable courtyard gate. No empty frame, cut-off face or rendering border.",
+        "review_method": "Actual final encoded capture sheet viewed with view_image"
+      }
+    ],
+    "actual_first_frame_reviewed": true,
+    "actual_last_frame_reviewed": true,
+    "technical_qa": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/technical-proof.json",
+      "sha256": "d91dbb5406b6f6b00c5e458c7ab2c53eba2c76fe9bc20c66a5a20758ed4fba6a"
+    },
+    "review_reports": [
+      {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-review-a.json",
+        "sha256": "6044fd7ab551a6e9139458d86cfc1e114af57296a4455234924921dfe157d3ce"
+      },
+      {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-review-b.json",
+        "sha256": "a90bef47b8cc68835756ea69af1e01e65e946b56bd342e03f97c4a5988cc7ec5"
+      },
+      {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/final-encoded-review-root.json",
+        "sha256": "0730163de691bfc0a27cb596fbb216ca553bd2e72eb4035bc9712019564741a5"
+      },
+      {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/root-detail-encoded-sample-review.json",
+        "sha256": "add0e119149ed9a7d98ca3e2166c74f59b71d4a73156607e6f6f214902feb02e"
+      }
+    ],
+    "framing_observations": [
+      {
+        "scene_id": 40,
+        "severity": "non_blocking_composition",
+        "root_actual_full_frame_viewed": true,
+        "notes": "Native closer composition slightly crops sandal/white tabi tips at lower edge; faces, hands, story objects and sword count remain clear. Accepted as montage framing."
+      },
+      {
+        "scene_id": 62,
+        "severity": "non_blocking_composition",
+        "root_actual_full_frame_viewed": true,
+        "notes": "Native closer composition slightly crops sandal/white tabi tips at lower edge; faces, hands, story objects and sword count remain clear. Accepted as montage framing."
+      },
+      {
+        "scene_id": 84,
+        "severity": "non_blocking_composition",
+        "root_actual_full_frame_viewed": true,
+        "notes": "Native closer composition slightly crops sandal/white tabi tips at lower edge; faces, hands, story objects and sword count remain clear. Accepted as montage framing."
+      },
+      {
+        "scene_id": 90,
+        "severity": "non_blocking_composition",
+        "root_actual_full_frame_viewed": true,
+        "notes": "Native closer composition slightly crops sandal/white tabi tips at lower edge; faces, hands, story objects and sword count remain clear. Accepted as montage framing."
+      },
+      {
+        "scene_id": 102,
+        "severity": "non_blocking_composition",
+        "root_actual_full_frame_viewed": true,
+        "notes": "Native closer composition slightly crops sandal/white tabi tips at lower edge; faces, hands, story objects and sword count remain clear. Accepted as montage framing."
+      }
+    ],
+    "limits": "Visual inspection samples every scene midpoint and both sides of every cut, plus first/last frames. No continuous human playback or human listening claimed. Full technical audio/video decode and actual audio correlation separately passed.",
+    "root_author": "root",
+    "approved_at": "2026-10-13T18:42:12.620882+00:00"
+  }
+}

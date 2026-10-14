@@ -1,0 +1,15 @@
+{
+  "duration_seconds": 1165.84,
+  "aligned_words": 2742,
+  "total_frames": 27980,
+  "decoded_samples": 51413760,
+  "sample_rate": 44100,
+  "original_voice_sha256": "865da8fcc7d315f02cc7d59168e7f97c3e5f6edfae6a625c480eb95050b66028",
+  "derived_voice_sha256": "a6f794a5b89a63c2714fd0311911278aef673ad37babe76a81bc313b110de6fb",
+  "audio_source_mode": "Official VPS MP3 plus sample-identical level-only finishing; original preserved",
+  "project_id": "why-being-a-viking-was-worse-than-you-th-cca49f",
+  "normalization_proof": "chaines/viking-chapters/episode-01/evidence/level-only-normalization-proof.json",
+  "word_clock": "chaines/viking-chapters/episode-01/editorial/official-vps-aligned-words.json",
+  "paragraph_clock": "chaines/viking-chapters/episode-01/editorial/official-vps-paragraph-clock.json",
+  "audio_media_not_in_git": true
+}

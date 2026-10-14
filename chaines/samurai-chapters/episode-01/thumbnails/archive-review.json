@@ -1,0 +1,40 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "cd319328f52312e668d138a126dcf88257f40507c352db1cd81deb3c96d1279a",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/thumbnail-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "records": [
+      {
+        "id": "A",
+        "source": "/workspace/generated_images/exec-570bf412-f013-4faa-82df-667d52144632.png",
+        "source_sha256": "322aa5b84d5f2856cd97fddb4d3ab02ee082b45422190e289f7750ce825e8b12",
+        "file": "thumbnails/archive-A.jpg",
+        "sha256": "855ff69f054f782a6967c493a6b5f33f7fcd5fb1b1efbacd9e5bae200c37ce21",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 600086,
+        "source_review": "Actual root full PNG view. Identity, coherent historical room, readable exact text, natural facial expression and complete hands passed.",
+        "export_review": "Actual root full final JPEG view. Same composition and legible lettering retained, no cropped head/hand/text, no introduced artifacts.",
+        "state": "pass"
+      },
+      {
+        "id": "B",
+        "source": "/workspace/generated_images/exec-0eaeb634-89bd-414a-b389-815fda9029ea.png",
+        "source_sha256": "cd79074ec8de394d41e1946d0edc746b8a27230397ec26d532872caf4aa7d07a",
+        "file": "thumbnails/archive-B.jpg",
+        "sha256": "54df7ddd27d46066f0e5c2df67080974fecfa78cad6b58026c7d55c97bc7b5bb",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "bytes": 635756,
+        "source_review": "Actual root full PNG view. Identity, coherent historical room, readable exact text, natural facial expression and complete hands passed.",
+        "export_review": "Actual root full final JPEG view. Same composition and legible lettering retained, no cropped head/hand/text, no introduced artifacts.",
+        "state": "pass"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "0730163de691bfc0a27cb596fbb216ca553bd2e72eb4035bc9712019564741a5",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/final-encoded-review-root.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "reviewer": "root",
+    "state": "pass",
+    "scope": "Only sheet25 actual last movie frame plus five full-resolution actual movie detail/endpoints; this is not a release for all movie frames.",
+    "capture_sheets": [
+      {
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-25.jpg",
+        "sha256": "ec98af8d9d2beb3d74f9e55750491564df3c164dd91e94de16f29b23fd3d8317",
+        "state": "pass",
+        "reviewer": "root",
+        "notes": "Actual sheet25 viewed. Last encoded frame28296 shows full Kenji with sandals, two worn swords and tucked order at the stable courtyard gate. No empty frame, cut-off face or rendering border."
+      }
+    ],
+    "detail_frames": [
+      {
+        "frame": 0,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-00000.jpg",
+        "sha256": "b5faf75f00717b64df6d7acf3a6af13764df0b038b9c21b2f5b7a533ad0dcf5b",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full-resolution encoded frame viewed",
+        "notes": "Full opening courtyard and Kenji with two sheathed swords, sandals, correct indigo/charcoal costume; image fills frame."
+      },
+      {
+        "frame": 28296,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-28296.jpg",
+        "sha256": "e262f0ac24b74b940f939ece8d5e46474cb740152f7a0e26c323e4021563241e",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full-resolution encoded frame viewed",
+        "notes": "Full closing Kenji and stable gate/pine/cabinet, two swords, sandals; no blank tail."
+      },
+      {
+        "frame": 9910,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-09910.jpg",
+        "sha256": "0049fa61b92cc422a4b9f3b80a88191108c10c1abb5f8fe7609367ee75313d20",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full-resolution encoded frame viewed",
+        "notes": "Intentional close transaction framing preserves faces, hands, pouch and ledger; sandal tips cross lower edge without obscuring the action, accepted by root."
+      },
+      {
+        "scene_id": 89,
+        "frame": 22813,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-22813.jpg",
+        "sha256": "fc32adc6060d8419119dcc56067f64b5194581172d6add0c0030c8231f60873d",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full-resolution encoded frame viewed",
+        "notes": "Actual corrected ledger visible in foreground left, held folded order and small pouch intact; HOME cast/furniture consistent, black hands and two swords only on Kenji."
+      },
+      {
+        "scene_id": 95,
+        "frame": 24524,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-24524.jpg",
+        "sha256": "db0b35f27e388cf9fe88c3cfd604e22480c597170d2fb9454855aa7ff329a454",
+        "state": "pass",
+        "reviewer": "root",
+        "method": "Actual full-resolution encoded frame viewed",
+        "notes": "Actual outdoor sandals and black hand correction present, order and two swords retained, stable courtyard roof/pine/cabinet, image fills screen."
+      }
+    ]
+  }
+}

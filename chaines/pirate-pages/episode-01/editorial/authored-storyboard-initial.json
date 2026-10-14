@@ -1,0 +1,1719 @@
+{
+  "schema": "pirate-pages-authored-storyboard-v1",
+  "title": "Why Being a Pirate Was Worse Than You Think",
+  "script_sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725",
+  "scene_count": 85,
+  "narration_coverage": "exact_whole_script_one_paragraph_per_scene_in_order",
+  "cast_ids": [
+    "TOM",
+    "CAPTAIN",
+    "QUARTERMASTER",
+    "CREWMATE",
+    "DEALER"
+  ],
+  "secondary_collectives": {
+    "ORDINARY_MARINERS": "Adult commercial workers in plaincoats/shirts, pale roundheads, dot eyes andblackinkoutlines, individuallydistinct subduedgarments; notclonesofTom.",
+    "CAPTURED_SAILORS": "Two adult frightened merchant seamen, restrainedpostures, plainundydedbrown/grayclothing anddifferenthairfrommaincast; nobattleinjuries, no glorificationofcoercion.",
+    "ENSLAVED_HISTORICAL_ASIDE": "Adultpeople deprivedoffreedom, seriousdignifiedpostures, noauctionprices/nakedness/gore orTomheroicrescue; contextualillustration notactualfictionalcrewbiography.",
+    "PORT_AUTHORITY": "Small distant plainperiodcoated figures, not18thcenturylaterformaluniformcopied fromNapoleonicperiod; norealroyallogo."
+  },
+  "master_location_ids": [
+    "PORT",
+    "TAVERN",
+    "DECK",
+    "BELOWDECK",
+    "SHORE",
+    "MARKET"
+  ],
+  "variant_gate": "Day/night/weather/opposedviews must be explicit derivativesofreviewedphysicalplace master thenviewed/frozenbeforeuse. SHOREboat maintenance geometry linksDECK hull; notVikinglongship.",
+  "visual_contract": "Original2Dadults: pale roundheads, blackdoteyes, simple expressive mouths, cleancoloredmatteoutlines, mittenhands, modestcredibleearly18thCaribbeanport/vessel. No logos/parasitictext/fantasycastles/modernmachinery/piratecaptaincostumeonordinaryTom/graphicviolence.",
+  "vessel_contract": "Onefictionalmodestwoodensloop, singlemastfore-and-aftgaffmainandjib perapprovedvesselreference. Tiller aft, same centralhatch/mast/cannons. Historicalsloopsplausible; donotclaimallsloops/piratesusedoneuniversalrig ornamedship.",
+  "narrative_time_policy": "Opening2scenesflash-forwardworkhook thenstorystartsashore003. Generaldays/weeksillustrationnotfixedactualvoyageduration. Scurvyrisk039–041isconditionalprolongeddietcontextnotinstantepidemic. Futurepardons079explicitlynotcurrent1715event. Marooning075contextualasideNOTactualTomfate.",
+  "script_release_status": "awaiting_root_review; do_not_generate_TTS_before_root_release",
+  "historical_snapshot_notice": "Original pre-generation authored storyboard; pending release/master/timing markers describe that snapshot only. Current released selected scenes and VPS timings are in provenance/selected-generation-plan.json.",
+  "scenes": [
+    {
+      "scene_id": "PIR-001",
+      "paragraph_index": 1,
+      "narration_excerpt": "You wanted to be a pirate. Gold, freedom, a magnificent coat. Instead, you are holding a bucket below deck while somebody above you asks whether you have finished cleaning the ship's most disgusting corner.",
+      "location_id": "BELOWDECK",
+      "location_variant": "OPENING_DAY",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom kneels beside the shallow bilge with the plain wooden bucket and grimaces upward at a voice through the hatch.",
+      "continuity_requirements": "Opening flash-forward to routine, not whole voyage chronology. Same bucket persists033/085; no sewage gore.",
+      "daytime_weather_rationale": "OPENING_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-002",
+      "paragraph_index": 2,
+      "narration_excerpt": "The magnificent coat belongs to someone else. Your shirt has a patch, your breakfast could damage a tooth, and the bucket is yours. Congratulations: you have successfully escaped ordinary employment into unusually dangerous employment.",
+      "location_id": "DECK",
+      "location_variant": "OPENING_DAY",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tom holds bucket by a deck corner while captain in modestly better coat passes; close patched sleeve and ordinary food bowl visible.",
+      "continuity_requirements": "Tom retains navy waistcoat, cream patched shirt, dark trousers; never becomes ornate captain.",
+      "daytime_weather_rationale": "OPENING_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-003",
+      "paragraph_index": 3,
+      "narration_excerpt": "Imagine you are Tom, an adult sailor in the Caribbean around seventeen fifteen. Your crew and personal journey are fictional, but the problems come from the history of seafaring during piracy's so-called golden age.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_MORNING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom stands by the Caribbean quay with his small cloth bundle, wooden vessels and low colonial houses behind.",
+      "continuity_requirements": "Explicit new story start ashore before enlistment; no giant fort/castle fantasy or modern ship.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-004",
+      "paragraph_index": 4,
+      "narration_excerpt": "That age was golden mainly for later storytellers. Royal Museums Greenwich places the familiar Atlantic boom between the sixteen eighties and seventeen twenties. It was not a comfortable retirement program with optional sword fights.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_MORNING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom watches a wealthy shipowner's cargo pass him while staying beside his humble belongings.",
+      "continuity_requirements": "Atlantic c1715 context; no time-travel famous-pirate portraits or generated date text.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-005",
+      "paragraph_index": 5,
+      "narration_excerpt": "You begin ashore, carrying your belongings in a small bundle. You know ships, hard work, and disappointing wages.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_MORNING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom shoulders the single bundle and approaches waterfront work.",
+      "continuity_requirements": "Same fixed harbor buildings; bundle exact cloth/color aftercarry.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-006",
+      "paragraph_index": 6,
+      "narration_excerpt": "Work at sea could be harsh. The museum describes poor pay and heavy labor in merchant shipping, alongside severe naval discipline. Piracy promised some sailors another way out. A promise is not a guarantee.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_DAY",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom pauses beside exhausted seamen hauling normal commercial goods; crewmate gestures to the difficult work.",
+      "continuity_requirements": "Merchant-work illustrative group distinct from protagonist; no flogging scene or branded company insignia.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-007",
+      "paragraph_index": 7,
+      "narration_excerpt": "Nor did every person aboard a pirate vessel join enthusiastically. Captured crews might supply recruits, and coercion complicated the picture. Your imagined choice is voluntary. That does not make everybody else's experience the same.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_DAY",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom watches a worried captured-sailor illustrative aside near a working vessel while he remains free to choose.",
+      "continuity_requirements": "Contextual historical aside, not implication Tom personally freed/coercedsomeone; restrained adult extras.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-008",
+      "paragraph_index": 8,
+      "narration_excerpt": "And these were criminals taking other people's property, sometimes their freedom or lives. Understanding the appeal does not turn the victims into scenery. The adventure you are considering has someone else's fear inside it.",
+      "location_id": "PORT",
+      "location_variant": "STORY_START_CLEAR_DAY",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom notices a civilian clutching a partly emptied cargo container, concern rather than heroic cheering.",
+      "continuity_requirements": "Victim perspective, no crime instructions, no violent theft contact; not identical face clone of main Tom.",
+      "daytime_weather_rationale": "STORY_START_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-009",
+      "paragraph_index": 9,
+      "narration_excerpt": "At a waterfront tavern, an experienced sailor describes a crew preparing to sail. There could be a share of captured wealth, he says. You notice he describes the wealth more carefully than the work.",
+      "location_id": "TAVERN",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate leans across a rough tavern table while Tom listens to promises of a share.",
+      "continuity_requirements": "Plain mugs not modern bottles/labels; same tavern chairs/windows fixed for laterreturn069–070.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-010",
+      "paragraph_index": 10,
+      "narration_excerpt": "You ask about the vessel. It is a modest wooden sloop, not a floating palace with five decks of cannons. Pirates used different ships. Your fictional crew's boat is small enough to feel everybody's elbows.",
+      "location_id": "PORT",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom looks closely at the modest single-mast sloop moored at the known quay.",
+      "continuity_requirements": "Same DECK vessel anchored; no multideck galleon, ornatecaptainluxury or Norwegianlongship.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-011",
+      "paragraph_index": 11,
+      "narration_excerpt": "Down at the quay, the quartermaster meets you. In some pirate crews, this officer helped manage supplies and represent crew interests. The title did not mean you were about to receive hotel service.",
+      "location_id": "PORT",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster meets Tom at the gangway, stores bundle at his feet.",
+      "continuity_requirements": "Quartermaster distinct muted attire, not modern naval officer; maincastrole consistent.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-012",
+      "paragraph_index": 12,
+      "narration_excerpt": "He asks what you can do. You know the basic work of a sailor and can help keep a vessel running.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom demonstrates working knowledge by coiling an existing rope while quartermaster observes.",
+      "continuity_requirements": "Ordinary competence not piracy technique; fixedmast/hatch/tiller/cannons geometry.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-013",
+      "paragraph_index": 13,
+      "narration_excerpt": "The captain stands nearby, looking considerably more important than you. Nobody hands you a feathered hat and instantly promotes your opinions into policy.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Captain looks over work near aft tiller while Tom waits with plain bundle.",
+      "continuity_requirements": "Captaindifferentwardrobe, Tom no hat/epaulets; no fantasy crown or modernwheel.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-014",
+      "paragraph_index": 14,
+      "narration_excerpt": "You inspect the deck, mast, sail, and rigging. The ropes are not decorative lines surrounding an adventure. They are equipment that somebody must understand, handle, maintain, and replace before trouble makes the lesson memorable.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom checks existing line and turns to the main mast while crewmate points to sail seam.",
+      "continuity_requirements": "Rig fixed to approved master, all lines physically connected; no generic square-riggedfrigate substitution.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-015",
+      "paragraph_index": 15,
+      "narration_excerpt": "Below deck, the space is cramped. There are supplies, personal belongings, and the unmistakable smell of a working ship.",
+      "location_id": "BELOWDECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom stoops through the hatch and looks at cramped stores and sleeping spaces.",
+      "continuity_requirements": "Hatch/headroom/mast supports mirror approved DECK; hull cannot enlarge between shots.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-016",
+      "paragraph_index": 16,
+      "narration_excerpt": "You place your bundle beside the sleeping area. Another sailor moves it slightly because it is in his way. Your first territorial conflict involves approximately enough space to put down one tired human.",
+      "location_id": "BELOWDECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom places bundle beside a sleeping spot; crewmate shifts it slightly away from his own blanket.",
+      "continuity_requirements": "One bundle, one explainable relocation; no luxurious bunks or duplicateToms.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-017",
+      "paragraph_index": 17,
+      "narration_excerpt": "Then the crew's rules are explained. Many pirate companies had agreements, often called articles, covering conduct and the division of proceeds. They were practical arrangements, not the identical universal code from every movie.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER",
+        "CAPTAIN"
+      ],
+      "authored_action": "Quartermaster explains plain crew articles on a sheet as Tom listens, captain nearby.",
+      "continuity_requirements": "Articles no readable generatedtext/fakefixedrates; document plausibleashore/crewmeetingnotmodernlegalcontract.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-018",
+      "paragraph_index": 18,
+      "narration_excerpt": "Some surviving accounts include compensation for injury and rules about disputes or gambling. The details differed. Your imagined crew has its own bargain; we are not going to invent a standard pirate benefits package.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_AFTERNOON",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER",
+        "CREWMATE"
+      ],
+      "authored_action": "Quartermaster gestures to a simple bandaged hand of crewmate while discussing rules; Tom listens thoughtfully.",
+      "continuity_requirements": "No amputation/gore, no numeric universal compensation; existingpaperstayssameobject.",
+      "daytime_weather_rationale": "FIRST_DAY_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-019",
+      "paragraph_index": 19,
+      "narration_excerpt": "The promise of a share can sound better than a poor wage. But a share of disappointing proceeds remains disappointing. If the expedition earns little, arithmetic will not create a magnificent fortune out of enthusiasm.",
+      "location_id": "BELOWDECK",
+      "location_variant": "FIRST_DAY_LATE_AFTERNOON",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom holds an almost empty personal purse beside humble belongings and looks toward stored goods.",
+      "continuity_requirements": "No invented exact earnings or payment table; money expectations conceptual.",
+      "daytime_weather_rationale": "FIRST_DAY_LATE_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-020",
+      "paragraph_index": 20,
+      "narration_excerpt": "Captains could be chosen by crews, and some could be removed. It does not mean every vessel was equally democratic, gentle, or welcoming to everybody.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_LATE_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CAPTAIN",
+        "QUARTERMASTER",
+        "CREWMATE"
+      ],
+      "authored_action": "Small crew gathering: Tom and crewmate raise a hand while captain stands listening.",
+      "continuity_requirements": "Illustrates some crew decisionpractices, not guaranteedallpiratedemocracy; no modern ballotboxes.",
+      "daytime_weather_rationale": "FIRST_DAY_LATE_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-021",
+      "paragraph_index": 21,
+      "narration_excerpt": "Authority still mattered, especially during dangerous encounters. You might have a voice in a decision without being free to wander away from your assigned work. Freedom apparently comes with a rope that needs handling.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_LATE_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Captain gestures toward necessary work and Tom picks up the waiting line.",
+      "continuity_requirements": "Voice in decision doesnoterasejobs; same rope fixed orientation.",
+      "daytime_weather_rationale": "FIRST_DAY_LATE_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-022",
+      "paragraph_index": 22,
+      "narration_excerpt": "And an agreement cannot remove prejudice, violence, or unequal power. Pirates included people from different backgrounds, but the romantic idea of universal equality does not survive a close look at the wider history.",
+      "location_id": "DECK",
+      "location_variant": "FIRST_DAY_LATE_AFTERNOON",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom notices quartermaster giving an order while an excluded adult captive stands separately under concern.",
+      "continuity_requirements": "Humanrightsquestion, no implicationtotalequality or mainactor clone captives.",
+      "daytime_weather_rationale": "FIRST_DAY_LATE_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-023",
+      "paragraph_index": 23,
+      "narration_excerpt": "The quartermaster checks provisions while you carry a water container aboard. Water matters before treasure does. A ship can go surprisingly far on ambition, provided somebody has remembered the food and drink as well.",
+      "location_id": "PORT",
+      "location_variant": "DEPARTURE_CLEAR_MORNING",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom carries a filled wooden water container to gangway as quartermaster checks supplies.",
+      "continuity_requirements": "Container needs practicalsize/dryhandledgrip, no modernwaterbottle; fixedpropsstow nextscene.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-024",
+      "paragraph_index": 24,
+      "narration_excerpt": "You help stow sacks and barrels securely. There is only so much room. Extra supplies compete with equipment, crew, and any cargo you hope to take later.",
+      "location_id": "BELOWDECK",
+      "location_variant": "DEPARTURE_CLEAR_MORNING",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom and crewmate stow a sack and secure wooden containers beside the centralmast support.",
+      "continuity_requirements": "Leaveaccess passage free, barrelpositiontrackedafterloading; no cannonobstruction of hatch.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-025",
+      "paragraph_index": 25,
+      "narration_excerpt": "A sailor shows you the tools used for ordinary repairs. Wood, rope, cloth, and iron fittings all wear. You have joined an armed crew, but much of your success will depend on maintenance.",
+      "location_id": "DECK",
+      "location_variant": "DEPARTURE_CLEAR_MORNING",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate shows Tom a needle, spare rope and simple woodworking tool laid on a cloth.",
+      "continuity_requirements": "Maintenanceobjectsnotweaponconstruction; toolsplain17th–18thcentury notelectricdrill.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-026",
+      "paragraph_index": 26,
+      "narration_excerpt": "Weapons are present too. They are dangerous objects in crowded hands, not a guarantee that their owner will win. You would prefer every confrontation to end before anybody discovers how vulnerable you actually are.",
+      "location_id": "DECK",
+      "location_variant": "DEPARTURE_CLEAR_MORNING",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tom checks the safely stowed small ship guns and sheathed arms while captain watches calm.",
+      "continuity_requirements": "Exactlyapproved2smallcannons, noaiming/loading/firingtutorial or extraweaponsin hands.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-027",
+      "paragraph_index": 27,
+      "narration_excerpt": "You have simple working clothes and practical gear. A successful captain might display expensive finery. The new sailor hauling a sack does not suddenly own that captain's wardrobe, reputation, or much better-looking boots.",
+      "location_id": "DECK",
+      "location_variant": "DEPARTURE_CLEAR_MORNING",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tom shoulders a supply sack past captain's better coat and practical boots.",
+      "continuity_requirements": "Poornewrecruitcostumeconsistent; captain notluxuryaristocrat fromlatercentury.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-028",
+      "paragraph_index": 28,
+      "narration_excerpt": "Finally, you leave the harbor. Houses shrink behind you, the shore slips away, and for a moment the horizon looks wonderfully open.",
+      "location_id": "DECK",
+      "location_variant": "DEPARTURE_CLEAR_DAY",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "From aft, Tom watches lowharborhouses recede as captain holds tiller.",
+      "continuity_requirements": "Main harborgeography linksPORT; fore/aft rigset from approvedvesselmaster.",
+      "daytime_weather_rationale": "DEPARTURE_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-029",
+      "paragraph_index": 29,
+      "narration_excerpt": "The first instruction is not to admire the horizon. You handle a line while another sailor works beside you. The vessel needs coordination. It is not impressed by your private discovery that the ocean is large.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom tends a working line while crewmate assists near the mast.",
+      "continuity_requirements": "Mainmast/hatch/cannons unchanged; not merelynewzoom but activeequipmenthandling.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-030",
+      "paragraph_index": 30,
+      "narration_excerpt": "When the wind shifts, the work changes with it. Sail handling, steering, lookout duties, and repairs remain necessary. A pirate ship is still a ship, which is a detail the recruitment speech underemphasized.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_WIND_SHIFT",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Captain adjusts tiller while Tom changes his grip on a taut sail line.",
+      "continuity_requirements": "Sail state shifts appropriately withwind, no billowingsailagainstimpossibleline setup.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_WIND_SHIFT",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-031",
+      "paragraph_index": 31,
+      "narration_excerpt": "You climb carefully to work where you are needed. The deck moves below, rope presses into your hands, and the height becomes much more interesting now that there is no modern safety briefing.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom cautiously ascends a short section of rigging while crewmate remains below at line.",
+      "continuity_requirements": "Avoid giant unrealisticsafe-freeheight or modernharness; new verticalPOVmaster variant mustbecoherent.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-032",
+      "paragraph_index": 32,
+      "narration_excerpt": "Back down, you scrub the deck. Cleanliness cannot eliminate every danger, but neglecting the living space will not improve it.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom scrubs a damp deck section with simple brush and water bucket.",
+      "continuity_requirements": "Same opening bucket, cannons/hatchlockedpositions, wetdecknotunrelatedmodernboat.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-033",
+      "paragraph_index": 33,
+      "narration_excerpt": "Then it is your turn at less pleasant work below. Water collects, stores need attention, and the ship has smells nobody wants to describe poetically. The bucket has returned to the center of your professional life.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_CLEAR_DAY",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom uses the plain bucket and attends shallowwater near stores belowdeck.",
+      "continuity_requirements": "Realmaintenancechores, nographicslime/sewage or comedicliteral poop.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-034",
+      "paragraph_index": 34,
+      "narration_excerpt": "Breakfast brings ship's biscuit and preserved food. On longer voyages, sailors carried provisions that could keep, including salted meat. This solved part of the storage problem while creating a fairly repetitive dining experience.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_NEXT_MORNING",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom takes hard biscuit and a small preserved-food portion from a plain container.",
+      "continuity_requirements": "Foodwoodenorpewterbowls notplastic; no crustyhugepastries or elaborate feast.",
+      "daytime_weather_rationale": "SEA_NEXT_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-035",
+      "paragraph_index": 35,
+      "narration_excerpt": "You inspect the biscuit before eating it. Dry provisions are useful, but stored food can deteriorate or acquire unwanted residents. Your meal has an unsettling possibility of containing something that considers the biscuit its house.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_NEXT_MORNING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Closeview Tom breaks and inspects one biscuit, wary eyebrows with tinyordinaryinsect onlyifclear.",
+      "continuity_requirements": "No oversized disgusting insects or rottinggore; possibilityofspoiledfood, notallbiscuitsguaranteedweevilinfested.",
+      "daytime_weather_rationale": "SEA_NEXT_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-036",
+      "paragraph_index": 36,
+      "narration_excerpt": "The salted meat is not a fresh dinner straight from a cheerful kitchen. You eat what is available, remembering that the crew cannot order replacements from the nearest invisible supermarket in the middle of the sea.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_NEXT_MORNING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom eats a plain small portion of saltedmeat, uncomfortable but practical.",
+      "continuity_requirements": "No freshbanquet or modernfood packaging; meal remains same sitting space.",
+      "daytime_weather_rationale": "SEA_NEXT_MORNING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-037",
+      "paragraph_index": 37,
+      "narration_excerpt": "Water must last and remain usable. Heat and storage can make provisions less pleasant. The quartermaster checking supplies is therefore doing something more important than standing beside barrels with an official expression.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_DAY_WARM",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster checks water container seal and Tom listens beside diminishing supplies.",
+      "continuity_requirements": "Watercontainersameas023–024, no invented expirationdatewriting or exactrationinfographic.",
+      "daytime_weather_rationale": "SEA_DAY_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-038",
+      "paragraph_index": 38,
+      "narration_excerpt": "You start dreaming about fresh fruit, then about a quiet bed. After a while, the fantasy of gold has acquired several extremely ordinary conditions.",
+      "location_id": "DECK",
+      "location_variant": "SEA_DAY_WARM",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom gazes towarddistantemptywater with a last driedfoodportion inhand, wistful.",
+      "continuity_requirements": "Freshfruithunger throughbodylanguage, no thoughtbubbleor metaphoricfloatingbed required.",
+      "daytime_weather_rationale": "SEA_DAY_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-039",
+      "paragraph_index": 39,
+      "narration_excerpt": "Over prolonged periods without enough fresh, suitable food, another danger could appear: scurvy. Royal Museums Greenwich explains that it results from a sustained lack of vitamin C. It was a serious threat to sailors.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_LATER_DAYS_WARM",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate sits fatigued near depleted provisions while Tom notices concern.",
+      "continuity_requirements": "Scurvyis risk conceptualaside, not definitiveinstantdiagnosis of Tom; days/weeksillustrativetimeadvance.",
+      "daytime_weather_rationale": "SEA_LATER_DAYS_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-040",
+      "paragraph_index": 40,
+      "narration_excerpt": "Weakness and painful symptoms could make work harder before the illness became fatal. This was not something every pirate developed after missing one orange. Diet and time mattered, and supplies differed between voyages.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_LATER_DAYS_WARM",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom offers crewmate a small foodportion as the latter looks tired and holds an achy hand.",
+      "continuity_requirements": "No bleedinggums/fallingteeth/amputation; balancedscurvy framing, no inventeduniversalillness.",
+      "daytime_weather_rationale": "SEA_LATER_DAYS_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-041",
+      "paragraph_index": 41,
+      "narration_excerpt": "Your crew does not understand vitamins in the modern sense. Fresh food can help, but a reliable scientific solution is not sitting in your medical cupboard. A beautifully brave attitude does not replace missing nutrition.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_LATER_DAYS_WARM",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom examines a simple medicinebox while quartermaster checks scarce freshsupplies nearby.",
+      "continuity_requirements": "Empty/no modernvitaminpills/antibiotics; no fraudulentbottlelabels or pseudo cure recipe.",
+      "daytime_weather_rationale": "SEA_LATER_DAYS_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-042",
+      "paragraph_index": 42,
+      "narration_excerpt": "Nor does rum. Pirates were not permanently drunk, whatever the costume suggests. Drink might offer pleasure, but handling equipment on a moving vessel while helplessly intoxicated introduces a very practical disagreement with gravity.",
+      "location_id": "DECK",
+      "location_variant": "SEA_LATER_DAYS_WARM",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom sets a plain drinkingcup aside and steadies himself near workingrope while crewmate continues duty.",
+      "continuity_requirements": "Rum notshownasmedicalcure; no intoxicatedweaponuse, nocostumeparrot.",
+      "daytime_weather_rationale": "SEA_LATER_DAYS_WARM",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-043",
+      "paragraph_index": 43,
+      "narration_excerpt": "At night, you settle into your sleeping space. Someone nearby snores; another man shifts; the ship creaks. You have paid for your escape from ordinary life with exceptionally close access to other people's noises.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_NIGHT",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom lies in established sleeping space while crewmate shifts nearby, dim lantern light.",
+      "continuity_requirements": "Samehatch/stores, secureperiodlamp not electriclight; no cabinfurniture magicallyadded.",
+      "daytime_weather_rationale": "SEA_NIGHT",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-044",
+      "paragraph_index": 44,
+      "narration_excerpt": "You are woken for your next duty. Rest depends on the needs of the ship, not simply on when you feel finished. The sea has never agreed to respect your preferred working hours.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_PREDawn",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate wakes Tom with a lightshouldertap; Tom reaches for his foldedclothing.",
+      "continuity_requirements": "Night→predawn explicit, sameplainclothes; no suddenmainactor costume change.",
+      "daytime_weather_rationale": "SEA_PREDawn",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-045",
+      "paragraph_index": 45,
+      "narration_excerpt": "A darker sky brings more work. The crew adjusts sail and secures what must stay in place. You watch rain sweep across the deck and understand that threatening strangers is irrelevant to controlling weather.",
+      "location_id": "DECK",
+      "location_variant": "SEA_DAY_DARK_CLOUDS_RAIN",
+      "cast": [
+        "TOM",
+        "CAPTAIN",
+        "CREWMATE"
+      ],
+      "authored_action": "Crew adjusts approvedsail and secures one loosebundle as darkclouds gather.",
+      "continuity_requirements": "Reviewedstormvariantofsamevessel; modest roughweather not monsterwave.",
+      "daytime_weather_rationale": "SEA_DAY_DARK_CLOUDS_RAIN",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-046",
+      "paragraph_index": 46,
+      "narration_excerpt": "Water comes aboard, a loose object slides, and you help keep things under control. This is not automatically a spectacular shipwreck. Sometimes danger means an exhausting afternoon preventing the much worse version from happening.",
+      "location_id": "DECK",
+      "location_variant": "SEA_DAY_ROUGH_RAIN",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom retrieves the slidingsmallobject and helps keepwater/gear controlled.",
+      "continuity_requirements": "Objectlogicalfromprecedingsecuredtools, noextracannonshooting or spectacularwreck.",
+      "daytime_weather_rationale": "SEA_DAY_ROUGH_RAIN",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-047",
+      "paragraph_index": 47,
+      "narration_excerpt": "When the weather eases, you inspect damage. A torn piece of cloth and strained gear are enough to demand attention. Surviving trouble rarely means you are now entitled to a completely restful afternoon.",
+      "location_id": "DECK",
+      "location_variant": "SEA_DAY_AFTER_RAIN_OVERCAST",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom and crewmate inspect one tornsectionofsail and strainedline afterweathercalms.",
+      "continuity_requirements": "Visiblelimiteddamagecarriedtolaterrepair071; maststilloneandstable.",
+      "daytime_weather_rationale": "SEA_DAY_AFTER_RAIN_OVERCAST",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-048",
+      "paragraph_index": 48,
+      "narration_excerpt": "Days pass without a valuable prize appearing. You still eat, drink, work, and use supplies. The sea does not owe you a profitable encounter.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_MORE_DAYS_OVERCAST",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom checks shrinkingfoodcontainer as quartermaster looks toward thehatch.",
+      "continuity_requirements": "No magicalrestockedbarrels beforeprize; showconsumptioncostwithoutinventednumerals.",
+      "daytime_weather_rationale": "SEA_MORE_DAYS_OVERCAST",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-049",
+      "paragraph_index": 49,
+      "narration_excerpt": "Eventually, another sail appears. The captain and crew must judge an uncertain situation. You are looking at another working vessel, with people aboard who have their own reasons for wanting to arrive safely.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_PRIZE_SIGHTING",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Captain and Tom look toward a modest merchantvessel at distance, onlyitscrediblehull/rigprofilevisible.",
+      "continuity_requirements": "Backgroundshipdistinctfrommain sloop; notnewmassivegalleon or techniquemapforpiracy.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_PRIZE_SIGHTING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-050",
+      "paragraph_index": 50,
+      "narration_excerpt": "The popular image focuses on spectacular battles. Intimidation could sometimes produce surrender without one. That did not make piracy harmless: the threat itself could take property and control away from people facing it.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_PRIZE_ENCOUNTER",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tom stands alert whilecaptain observes distantothercrew; black flag onlyifalreadyreviewedapprovedsimpledesign.",
+      "continuity_requirements": "Broadhistoricalthreat, no step-by-stepfalsecolors/aiming/firinginstructions or reusedfamousflagmisattribution.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_PRIZE_ENCOUNTER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-051",
+      "paragraph_index": 51,
+      "narration_excerpt": "In our imagined encounter, the other crew surrenders. We do not need a dramatic sword duel to understand the stakes. The people standing nearby are frightened, and they have excellent reasons to be.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Two captured adult sailors stand concerned near rail on main ship, Tom keepingdistance.",
+      "continuity_requirements": "Encounterexplicitfiction. Noungroundedfightinjury, no swordduelorgore; captivatedadultsnotpropsclones.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-052",
+      "paragraph_index": 52,
+      "narration_excerpt": "You see a merchant sailor watching his belongings being taken. Until recently, your working life looked closer to his than to the captain's fantasy. An improved career prospect feels less charming from this distance.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom looks sympathetically toward a plainclothedmerchant sailor clutching a smallpersonalbundle.",
+      "continuity_requirements": "Victimbodylanguagenottriumphantmeme, distinctsimpleadultsecondarydesign notDEALERclone.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-053",
+      "paragraph_index": 53,
+      "narration_excerpt": "The cargo is inspected. Trade goods were often more important than heaps of gold: cloth, drink, supplies, and other things that had buyers ashore. Wealth can be valuable while remaining awkward to carry.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster examines capturedcloth/drink/supplygoods as Tom holds a bulkytradebundle.",
+      "continuity_requirements": "Cargo ordinarycommercialgoods, no automaticgoldchest; directvoyageafterloadingexplicitnewgoods.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-054",
+      "paragraph_index": 54,
+      "narration_excerpt": "You help move a bulky bundle. Nothing about its shape resembles treasure from an adventure film. It resembles extra lifting. Even when piracy produces a result, somebody still has to do the loading.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom and crewmate laboriouslycarry a clothbale across the existingdeck.",
+      "continuity_requirements": "Bundleweight plausible, exactly2arms2hands, no floatingobjects or humaninsidecontainer.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-055",
+      "paragraph_index": 55,
+      "narration_excerpt": "A damaged container proves less useful than everyone hoped. Captured goods are not necessarily intact, convenient, or easy to sell. The crew has not discovered an unlimited supply of portable money.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster points to a damagedcontainer while Tom inspects itspoorcontents.",
+      "continuity_requirements": "No inventedexactvalueorprice label; damagedwoodcontainer notcontradictingearlier undamagedpersonalwaterbarrel.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-056",
+      "paragraph_index": 56,
+      "narration_excerpt": "The quartermaster compares supplies and looks after the division that will follow. Your imagined crew's arrangements matter now. The share you expected must come from what is actually there, not what sounded attractive ashore.",
+      "location_id": "BELOWDECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster separates practicalsuppliesfrombulkycloth while Tom steadies theload.",
+      "continuity_requirements": "No detailedrobberyprocess or exactsharetable; goodsorganizedfordivision later.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-057",
+      "paragraph_index": 57,
+      "narration_excerpt": "Captured people face uncertainty as well. Some sailors were invited or pressured to join pirate crews. Their choices could happen under fear, which is very different from freely comparing interesting employment opportunities.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Concerned adult captive stands atchoice'sedge while quartermaster addresses him and Tom watches.",
+      "continuity_requirements": "No forcedsignatureviolence or framing coercionasfunjobinterview; othermainactorsunchanged.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-058",
+      "paragraph_index": 58,
+      "narration_excerpt": "And enslaved people were not automatically rescued by a pirate flag. The museum warns that pirates often continued their exploitation or sold them for profit. The myth of universal liberation hides deeply ugly realities.",
+      "location_id": "PORT",
+      "location_variant": "HISTORICAL_ASIDE_DAY",
+      "cast": [],
+      "authored_action": "Restrainedillustrativeview enslavedadultpeople standingunderothers'control nearordinarycargo, posturesserious.",
+      "continuity_requirements": "Contextualaside notactualTomcrew claimingdirectenslavementonunshownslavevessel. No auctionprice, chainsfetish, violence or sexualmaterial.",
+      "daytime_weather_rationale": "HISTORICAL_ASIDE_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-059",
+      "paragraph_index": 59,
+      "narration_excerpt": "Our story does not make Tom a heroic savior to excuse that history. Your discomfort cannot undo the harm. A crew's rules for sharing spoils say little about the rights of people outside that crew.",
+      "location_id": "DECK",
+      "location_variant": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom lowers his gaze beside capturedgoods and worriedadults inbackground.",
+      "continuity_requirements": "Reflectsunequalrights, no heroicrescue/cheerfulvictimsthumbsup.",
+      "daytime_weather_rationale": "SEA_CLEAR_DAY_AFTER_SURRENDER",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-060",
+      "paragraph_index": 60,
+      "narration_excerpt": "Once the encounter ends, you still have a ship to manage and stores to ration. One prize has not cancelled weather, hunger, sickness, or the possibility of meeting somebody far better armed.",
+      "location_id": "DECK",
+      "location_variant": "SEA_NEXT_DAY_OVERCAST",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom returnsto ordinaryshipwork and passes foodportion fromcaptured/restockedsupplies.",
+      "continuity_requirements": "Afterencounter crewremainsatwork; no instantfinery/wealthtransformation.",
+      "daytime_weather_rationale": "SEA_NEXT_DAY_OVERCAST",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-061",
+      "paragraph_index": 61,
+      "narration_excerpt": "The captain decides to return toward shore. You have something that may be valuable, but value needs buyers and practical arrangements. A bundle of expensive cloth cannot itself repair the vessel or feed everybody.",
+      "location_id": "DECK",
+      "location_variant": "SEA_RETURN_DAY_OVERCAST",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Captain turns towardhomewardcoast whileTom secures valuablebutbulkyclothbundle.",
+      "continuity_requirements": "Same shiprig; returncargo fixedthrougharrival061–065, no goldpyramid.",
+      "daytime_weather_rationale": "SEA_RETURN_DAY_OVERCAST",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-062",
+      "paragraph_index": 62,
+      "narration_excerpt": "Approaching a harbor is not the same as arriving at a welcoming resort. Local authorities, merchants, and powerful interests vary. A place willing to deal with pirates today may become a much less comfortable place later.",
+      "location_id": "PORT",
+      "location_variant": "RETURN_APPROACH_DAY_CLEAR",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Ship approaches established low harborhouses as a fewformalportfiguresobservequietlyfromafar.",
+      "continuity_requirements": "Same firstharbor/sufficientlydefinedreturnportmaster, nogiantpalace or officialsuniformc19th.",
+      "daytime_weather_rationale": "RETURN_APPROACH_DAY_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-063",
+      "paragraph_index": 63,
+      "narration_excerpt": "You go ashore with the crew. The ground feels strange after so much movement. For a moment, your ambitions become wonderfully small: fresh food, dry clothes, and a place to sit that stays still.",
+      "location_id": "PORT",
+      "location_variant": "RETURN_DAY_CLEAR",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom steps carefully ashore with crewmate, shoulders relaxing on firmground.",
+      "continuity_requirements": "Dryquay, same clothing weatherworn, nobarefloatinglegornewcape.",
+      "daytime_weather_rationale": "RETURN_DAY_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-064",
+      "paragraph_index": 64,
+      "narration_excerpt": "At a waterfront stall, a dealer examines the goods. You watch the negotiation while mentally spending money that does not yet belong to you.",
+      "location_id": "MARKET",
+      "location_variant": "RETURN_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER",
+        "DEALER"
+      ],
+      "authored_action": "Dealer unrolls captured cloth onknownstalltable whilequartermaster negotiatesandTomwatches.",
+      "continuity_requirements": "Marketlinkedportstreet; lowcolonialbuildings, no moderncashregisterorcurrencywriting.",
+      "daytime_weather_rationale": "RETURN_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-065",
+      "paragraph_index": 65,
+      "narration_excerpt": "There are practical costs before personal luxury. The vessel needs supplies and repairs, and the agreed division must be respected. Your fictional reckoning leaves you with a modest share, not instant ownership of a mansion.",
+      "location_id": "PORT",
+      "location_variant": "RETURN_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Quartermaster hands Tom a modestpurseportion as supplies/repaircloth wait besidequay.",
+      "continuity_requirements": "Imagineddivision only, notuniversalinjuryinsuranceor numericrates. Tools/goods remainphysicalnecessities.",
+      "daytime_weather_rationale": "RETURN_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-066",
+      "paragraph_index": 66,
+      "narration_excerpt": "No single payout table describes every pirate crew. Different articles and circumstances produced different arrangements. A later famous captain's recorded agreement cannot automatically tell us exactly what this imagined sailor earns in seventeen fifteen.",
+      "location_id": "PORT",
+      "location_variant": "RETURN_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tom compares his smallportionto othercrew's differing bundles whilequartermasterchecksagreementpaper.",
+      "continuity_requirements": "Narrationnuance notinstantpaychart, no textinscene, fixedsimple articlespaperfrom017.",
+      "daytime_weather_rationale": "RETURN_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-067",
+      "paragraph_index": 67,
+      "narration_excerpt": "You count what you have, then look at what ordinary necessities will cost. Now your complaint concerns the difficulty of keeping newly earned money.",
+      "location_id": "MARKET",
+      "location_variant": "RETURN_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "DEALER"
+      ],
+      "authored_action": "Tom examines his coinsthenlooks at plain shirtandfreshfoodatdealerstall.",
+      "continuity_requirements": "No preciseunspokenprices, no moderncoinsorreceipts; avoidgoldgianttreasurepurse.",
+      "daytime_weather_rationale": "RETURN_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-068",
+      "paragraph_index": 68,
+      "narration_excerpt": "You buy a plain replacement shirt and fresh food. The shirt fits reasonably well; the food tastes astonishingly good. If adventure had advertised these rewards accurately, its poster would have looked rather less dramatic.",
+      "location_id": "MARKET",
+      "location_variant": "RETURN_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "DEALER"
+      ],
+      "authored_action": "Tombuys plaincream replacementshirt foldedunderarm andtakesfreshfoodportion.",
+      "continuity_requirements": "Newshirt remainsFOLDED inbundle; do notautomaticallychangeapprovedpatchedwornmaincostume!",
+      "daytime_weather_rationale": "RETURN_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-069",
+      "paragraph_index": 69,
+      "narration_excerpt": "Back in the tavern, someone wants to celebrate. Royal Museums Greenwich notes that pirates commonly spent their proceeds rather than burying elaborate treasure hoards. Your purse does not become safer just because the evening becomes louder.",
+      "location_id": "TAVERN",
+      "location_variant": "RETURN_EVENING",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate lifts acup tocelebrate;Tom keepshis purseclosebesideordinarymeal.",
+      "continuity_requirements": "Same tavernfrom009, woodstools/windowsstable, no burriedtreasuremap or modernbottles.",
+      "daytime_weather_rationale": "RETURN_EVENING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-070",
+      "paragraph_index": 70,
+      "narration_excerpt": "You pay for a meal and stop before your small fortune becomes a story about how generous you were last night. Other men make different decisions. Tomorrow's regret is already waiting outside the door.",
+      "location_id": "TAVERN",
+      "location_variant": "RETURN_EVENING",
+      "cast": [
+        "TOM",
+        "DEALER"
+      ],
+      "authored_action": "Tom pays for meal andputs smallremainingpursebackwhileotherscontinuecelebrating.",
+      "continuity_requirements": "DEALER maybeinnkeeperonlyifexplicitroledualuseapproved; otherwisecroppedserverhands notnewmainface. Tomnotdrunk withweapons.",
+      "daytime_weather_rationale": "RETURN_EVENING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-071",
+      "paragraph_index": 71,
+      "narration_excerpt": "The next morning, there is work on the ship. Repairs do not become unnecessary because everyone enjoyed being ashore. You hold a piece of worn sail while another crew member helps patch it.",
+      "location_id": "DECK",
+      "location_variant": "REPAIR_NEXT_MORNING_CLEAR",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom holds theknown tornsailsection whilecrewmate patches itsseam.",
+      "continuity_requirements": "Saildamagematches047, exactapprovedrig sailsfurledforrepair; noautomaticallyreplacemast.",
+      "daytime_weather_rationale": "REPAIR_NEXT_MORNING_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-072",
+      "paragraph_index": 72,
+      "narration_excerpt": "The hull also needs attention. A wooden vessel lives in water and carries the consequences of every hard passage. The captain cannot order the material to become permanently indestructible.",
+      "location_id": "SHORE",
+      "location_variant": "REPAIR_NEXT_DAY_CLEAR",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tom andcrewmate inspect a woodenhullseam by simplequietbeachlanding,partlyvisiblemainboat.",
+      "continuity_requirements": "Establish shoremaintenancevariantofactualsloop. No detailedcareeninghow-toor structurallyimpossibleboatgrounding.",
+      "daytime_weather_rationale": "REPAIR_NEXT_DAY_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-073",
+      "paragraph_index": 73,
+      "narration_excerpt": "An argument starts over the previous division. The quartermaster listens while two men make increasingly confident claims. Articles are useful partly because human memory becomes remarkably creative whenever money enters the room.",
+      "location_id": "DECK",
+      "location_variant": "REPAIR_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER",
+        "CREWMATE"
+      ],
+      "authored_action": "Quartermaster hears crewmate's complaintoverdivision whileTom waits withsmallpurse.",
+      "continuity_requirements": "Physicalpaperandshares from065persist, no accusingnewstrangerwithoutroledefinition.",
+      "daytime_weather_rationale": "REPAIR_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-074",
+      "paragraph_index": 74,
+      "narration_excerpt": "You get a chance to speak, but agreement is not automatic. Some crews limited captains' power and settled disputes collectively. That is not proof that this ship, or any other, lacked threats and punishment.",
+      "location_id": "DECK",
+      "location_variant": "REPAIR_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tomraises anopenhand tospeak whilequartermasterandcaptainlisten atgathering.",
+      "continuity_requirements": "Crewdecision discussednotautomaticuniversalparliament; no dicewar ormutinyviolence.",
+      "daytime_weather_rationale": "REPAIR_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-075",
+      "paragraph_index": 75,
+      "narration_excerpt": "Nor was discipline confined to a theatrical walk along a plank. The familiar plank scene belongs chiefly to later storytelling. Real punishments could be harsh; abandoning a person ashore was one documented possibility.",
+      "location_id": "SHORE",
+      "location_variant": "DISCIPLINE_HISTORICAL_ASIDE_DAY",
+      "cast": [],
+      "authored_action": "Lonely adultfigure stands at smallisolatedbeachwithshipsail distant, restrained wideview.",
+      "continuity_requirements": "Illustrativemarooning possibility, notTomactualfate; noactualwalkplank, corpse, execution, survivalcrimehowto.",
+      "daytime_weather_rationale": "DISCIPLINE_HISTORICAL_ASIDE_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-076",
+      "paragraph_index": 76,
+      "narration_excerpt": "You decide that being left alone on an uninhabited island would make your earlier accommodation complaints seem optimistic. The rules you disliked deserve attention. This is not a club you can treat casually.",
+      "location_id": "DECK",
+      "location_variant": "REPAIR_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM",
+        "QUARTERMASTER"
+      ],
+      "authored_action": "Tomlooks attentively at quartermasterandfoldedarticles, relieved toremainwithcrew.",
+      "continuity_requirements": "Returnsfromconceptualaside notteleportactualTomfrommarooning. Mainactorsunharmed.",
+      "daytime_weather_rationale": "REPAIR_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-077",
+      "paragraph_index": 77,
+      "narration_excerpt": "Meanwhile, news reaches the waterfront about authorities pursuing pirates. Governments had strong reasons to protect trade. You may feel small and unimportant, but participating in piracy gives those governments an interest in your future.",
+      "location_id": "PORT",
+      "location_variant": "LATER_DAY_CLEAR",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmatepoints to two distantformalportguards whileTom listens withconcern.",
+      "continuity_requirements": "News ofauthority generic, no piratewantedtextbillboard/realdates/governmentlogo.",
+      "daytime_weather_rationale": "LATER_DAY_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-078",
+      "paragraph_index": 78,
+      "narration_excerpt": "Capture can mean trial and severe punishment, including hanging. You do not need to witness an execution to understand the consequence. The possibility follows you into ordinary moments, even while buying breakfast.",
+      "location_id": "PORT",
+      "location_variant": "LATER_DAY_CLEAR",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom pauses over a breakfastportion withconcern as formalfigurespass quietlydistant.",
+      "continuity_requirements": "Captureandhanging conveyedthroughreflectiononly; NO gallows, nooses, executedbodies orgraphicpunishment.",
+      "daytime_weather_rationale": "LATER_DAY_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-079",
+      "paragraph_index": 79,
+      "narration_excerpt": "In the next few years, campaigns and pardons would intensify the pressure on Atlantic piracy. Some pirates accepted offers to stop; others continued. We should not insert a later pardon into your current day as guaranteed protection.",
+      "location_id": "PORT",
+      "location_variant": "CONTEXT_FUTURE_PRESSURE_DAY",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tomandcrewmategaze toward formalportauthority atdistance as narrator explainslaterpressure.",
+      "continuity_requirements": "Explicitfuturecontext, notassert1715guaranteedpardon; no written royalproclamationor fakepastdate.",
+      "daytime_weather_rationale": "CONTEXT_FUTURE_PRESSURE_DAY",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-080",
+      "paragraph_index": 80,
+      "narration_excerpt": "A formidable armed vessel appears offshore, and your crew postpones its next departure. In this fictional moment, caution wins. You are relieved. The decision also means more waiting, uncertainty, and supplies consumed without a return.",
+      "location_id": "PORT",
+      "location_variant": "LATER_DAY_CLEAR_OFFSHORE",
+      "cast": [
+        "TOM",
+        "CAPTAIN"
+      ],
+      "authored_action": "Tom andcaptain stand atquay andwatch a sturdierarmedvesseldistantsilhouette, loadingpaused.",
+      "continuity_requirements": "Owncrewpostponesdeparture fictionalcaution, no navalbattle tacticalevasionsor specifichistoricshipfakeidentification.",
+      "daytime_weather_rationale": "LATER_DAY_CLEAR_OFFSHORE",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-081",
+      "paragraph_index": 81,
+      "narration_excerpt": "You look at the ship from the quay. It promised freedom, and parts of that promise appealed to you. Yet freedom from one employer has not delivered freedom from other people, material needs, or consequences.",
+      "location_id": "PORT",
+      "location_variant": "LATER_AFTERNOON_CLEAR",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom looks from hissmallpurseand bundle to familiar sloop,waryuncertainty.",
+      "continuity_requirements": "No definitivehappyretirement/richhouse invented; boatandwardrobe remainordinary.",
+      "daytime_weather_rationale": "LATER_AFTERNOON_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-082",
+      "paragraph_index": 82,
+      "narration_excerpt": "Another sailor mentions legitimate work. It might pay poorly and involve a captain you dislike. It would also avoid some dangers created specifically by belonging to this crew. Neither option arrives wearing a perfect future.",
+      "location_id": "TAVERN",
+      "location_variant": "LATER_AFTERNOON",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Crewwmate points towardordinarymerchantworkatwindow whileTomconsiders choice.",
+      "continuity_requirements": "Samesailor/tavernidentity, no employerlogo orpromisedbetterpayunsupported.",
+      "daytime_weather_rationale": "LATER_AFTERNOON",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-083",
+      "paragraph_index": 83,
+      "narration_excerpt": "Your individual fate remains imagined. What matters is the bargain you finally understand: uncertain rewards, constant labor, serious risks, and opportunities built partly on the suffering of people you were encouraged not to think about.",
+      "location_id": "PORT",
+      "location_variant": "LATER_SUNSET",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tomopens hisworn handsand looks backat suppliesandharbor withquietunderstanding.",
+      "continuity_requirements": "Illustrativeconclusion ofcosts/consequences, nohistorychart/headlineposter ordramaticmedal.",
+      "daytime_weather_rationale": "LATER_SUNSET",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-084",
+      "paragraph_index": 84,
+      "narration_excerpt": "The famous names survive because they make remarkable stories. The ordinary sailor with sore hands, damp clothes, and a modest share is easier to overlook. He still did most of the uncomfortable living.",
+      "location_id": "DECK",
+      "location_variant": "LATER_EVENING_CLEAR",
+      "cast": [
+        "TOM",
+        "CREWMATE"
+      ],
+      "authored_action": "Tomcoils a wornrope besidecrewmate andplainpatchedcloth,ordinaryworkers closingday.",
+      "continuity_requirements": "Highlights overlookedlabor, distinctfromearlier handlingline; nomainactorclone inbackground.",
+      "daytime_weather_rationale": "LATER_EVENING_CLEAR",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    },
+    {
+      "scene_id": "PIR-085",
+      "paragraph_index": 85,
+      "narration_excerpt": "So why was being a pirate worse than you think? Because treasure was uncertain, freedom had limits, and even your dangerous new life needed somebody to clean below deck. That bucket is waiting. This is Pirate Pages: the lives behind the legends.",
+      "location_id": "BELOWDECK",
+      "location_variant": "CLOSING_LAMP_LIT_EVENING",
+      "cast": [
+        "TOM"
+      ],
+      "authored_action": "Tom picks up the samewoodenbucket at theknownbilgecornerandlooks upward with resignedhumor.",
+      "continuity_requirements": "Openingcallback samephysicalgeometry/object, no TTSbrandinggeneratedtextoverlay. Endtagline audibleexactly.",
+      "daytime_weather_rationale": "CLOSING_LAMP_LIT_EVENING",
+      "aligned_start_seconds": null,
+      "aligned_end_seconds": null,
+      "timing_status": "must_derive_from_actual_final_voice_alignment",
+      "master_reference_status": "awaiting_root_visual_master_review_and_binding",
+      "literal_generation_prompt": null,
+      "prompt_status": "root_or_visual_agent_must_author_literal_prompt_after_master_review; no_automatic_prompt_writer"
+    }
+  ]
+}

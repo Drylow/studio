@@ -1,0 +1,12 @@
+{
+  "source": "actual native TubeForge VPS voice used for delivered film",
+  "file": "narration-api.mp3",
+  "bytes": 28443628,
+  "sha256": "4105fd0a53e1089fbc62db5ca0d7a6402b81fa314e54e1745326904a90d24538",
+  "project_id": "why-being-a-pirate-was-worse-than-you-th-eb4a6e",
+  "duration_seconds": 1185.09,
+  "decoded_samples": 52262784,
+  "sample_rate": 44100,
+  "final_native_frame_count": 28442,
+  "notice": "Original official API narration. The final film used separately measured level-only normalization; normalization does not change this original MP3 or its timing."
+}

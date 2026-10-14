@@ -1,0 +1,22 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "fbd2c83d683ddfbc0c5c7124db474ab7179b3cdbb7a6c74dde0ad8c30bdb72f1",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/all-108-actual-source-review-release.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "author": "root",
+    "state": "all_108_actual_source_pass",
+    "source_review_path": "/workspace/samurai-chapters-regeneration/episode-01/source-shot-review.json",
+    "source_review_sha256": "07a91d7f721a831016fe603622e323fb7987c3805ed3d7d397f83f00115f7e14",
+    "actual_original_source_reviewers": [
+      "root",
+      "samurai_regen_visual_a",
+      "samurai_regen_visual_b"
+    ],
+    "corrected_sources": 20,
+    "corrections_actually_viewed": true,
+    "total_sources": 108,
+    "final_movie_reviewed": false,
+    "created_at": "2026-10-13T18:25:05.072805+00:00"
+  }
+}

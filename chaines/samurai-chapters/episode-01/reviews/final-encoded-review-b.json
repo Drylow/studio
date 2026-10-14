@@ -1,0 +1,1679 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "a90bef47b8cc68835756ea69af1e01e65e946b56bd342e03f97c4a5988cc7ec5",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-review-b.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-final-encoded-actual-visual-review-v1",
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "movie_path_from_technical_proof": "/workspace/tubeforge-regeneration-runtime/app/data/projects/why-being-a-samurai-was-worse-than-you-t-947aab/render/final.mp4",
+    "state": "pass_for_assigned_sampled_visual_scope",
+    "reviewer": "samurai_regen_visual_b",
+    "reviewed_at": "2026-10-13T18:39:24.829562+00:00",
+    "capture_index": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/capture-index.json",
+      "sha256": "407dc67a85e3d9bc1f4720639afd5a0e3ecf72f0c56d7297f780d5a49e8cd409"
+    },
+    "technical_proof": {
+      "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/technical-proof.json",
+      "sha256": "d91dbb5406b6f6b00c5e458c7ab2c53eba2c76fe9bc20c66a5a20758ed4fba6a",
+      "relationship": "Read existing technical proof to bind these images to final MP4; did not rerun technical tests or imply human audio listening."
+    },
+    "root_framing_decision": "Root message: Root actually viewed four midpoints 62/84/90/102 at full 1920x1080 and accepts slightly closer framing: small foot tips at lower edge, faces/gestures/records/order/swords fully readable. Preserve this framing limitation; do not claim integral full-body views. No generation or rerender required.",
+    "scope": {
+      "sheets_actual_viewed": 12,
+      "midpoint_scene_ids": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "midpoint_frames_count": 54,
+      "cut_pairs": [
+        [
+          55,
+          56
+        ],
+        [
+          56,
+          57
+        ],
+        [
+          57,
+          58
+        ],
+        [
+          58,
+          59
+        ],
+        [
+          59,
+          60
+        ],
+        [
+          60,
+          61
+        ],
+        [
+          61,
+          62
+        ],
+        [
+          62,
+          63
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          65,
+          66
+        ],
+        [
+          66,
+          67
+        ],
+        [
+          67,
+          68
+        ],
+        [
+          68,
+          69
+        ],
+        [
+          69,
+          70
+        ],
+        [
+          70,
+          71
+        ],
+        [
+          71,
+          72
+        ],
+        [
+          72,
+          73
+        ],
+        [
+          73,
+          74
+        ],
+        [
+          74,
+          75
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          76,
+          77
+        ],
+        [
+          77,
+          78
+        ],
+        [
+          78,
+          79
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          80,
+          81
+        ],
+        [
+          81,
+          82
+        ],
+        [
+          82,
+          83
+        ],
+        [
+          83,
+          84
+        ],
+        [
+          84,
+          85
+        ],
+        [
+          85,
+          86
+        ],
+        [
+          86,
+          87
+        ],
+        [
+          87,
+          88
+        ],
+        [
+          88,
+          89
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          91,
+          92
+        ],
+        [
+          92,
+          93
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          94,
+          95
+        ],
+        [
+          95,
+          96
+        ],
+        [
+          96,
+          97
+        ],
+        [
+          97,
+          98
+        ],
+        [
+          98,
+          99
+        ],
+        [
+          99,
+          100
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          101,
+          102
+        ],
+        [
+          102,
+          103
+        ],
+        [
+          103,
+          104
+        ],
+        [
+          104,
+          105
+        ],
+        [
+          105,
+          106
+        ],
+        [
+          106,
+          107
+        ],
+        [
+          107,
+          108
+        ]
+      ],
+      "cut_pairs_count": 53,
+      "includes_actual_first_movie_frame": true,
+      "continuous_all_frame_playback_performed": false,
+      "audio_listening_performed": false,
+      "not_reviewed_by_this_agent": "Sheets 1–6, 13–18, 25 and other detailed samples belong to agent A/root; not claimed here."
+    },
+    "records": [
+      {
+        "sheet": 7,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-07.jpg",
+        "sha256": "e2a41dfdce2ff32fa432b626a50f52122619da9350bed4b3e77d63b144ac4876",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 7,
+            "panel": 1,
+            "label": "Scene 055 — encoded midpoint frame 13802",
+            "frames": [
+              13802
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 2,
+            "label": "Scene 056 — encoded midpoint frame 14081",
+            "frames": [
+              14081
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 3,
+            "label": "Scene 057 — encoded midpoint frame 14348",
+            "frames": [
+              14348
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 4,
+            "label": "Scene 058 — encoded midpoint frame 14588",
+            "frames": [
+              14588
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 5,
+            "label": "Scene 059 — encoded midpoint frame 14839",
+            "frames": [
+              14839
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 6,
+            "label": "Scene 060 — encoded midpoint frame 15120",
+            "frames": [
+              15120
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 7,
+            "label": "Scene 061 — encoded midpoint frame 15391",
+            "frames": [
+              15391
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 8,
+            "label": "Scene 062 — encoded midpoint frame 15623",
+            "frames": [
+              15623
+            ]
+          },
+          {
+            "sheet": 7,
+            "panel": 9,
+            "label": "Scene 063 — encoded midpoint frame 15869",
+            "frames": [
+              15869
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Scenes 55–58 preserve two held wood rods total with empty brackets, four worn steel swords and restrained practice actions; 59 corrected straw sandals present. Office/gate/market/HOME remain correctly ordered, identities and black hands retained. Scene 62 has minor lower-edge sandal-tip crop from native zoom; actual frame 15623 separately viewed at full 1920x1080 and root explicitly accepts framing. No head, gesture or story prop lost."
+      },
+      {
+        "sheet": 8,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-08.jpg",
+        "sha256": "801595d4dcebd744721f1d2c8fc9cd99161b866e9eab76f6549997f00147c69f",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 8,
+            "panel": 1,
+            "label": "Scene 064 — encoded midpoint frame 16136",
+            "frames": [
+              16136
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 2,
+            "label": "Scene 065 — encoded midpoint frame 16408",
+            "frames": [
+              16408
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 3,
+            "label": "Scene 066 — encoded midpoint frame 16686",
+            "frames": [
+              16686
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 4,
+            "label": "Scene 067 — encoded midpoint frame 16986",
+            "frames": [
+              16986
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 5,
+            "label": "Scene 068 — encoded midpoint frame 17268",
+            "frames": [
+              17268
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 6,
+            "label": "Scene 069 — encoded midpoint frame 17532",
+            "frames": [
+              17532
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 7,
+            "label": "Scene 070 — encoded midpoint frame 17814",
+            "frames": [
+              17814
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 8,
+            "label": "Scene 071 — encoded midpoint frame 18090",
+            "frames": [
+              18090
+            ]
+          },
+          {
+            "sheet": 8,
+            "panel": 9,
+            "label": "Scene 072 — encoded midpoint frame 18354",
+            "frames": [
+              18354
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Correct six-cast identities in household scenes, HOME shelf/cabinet/rear shoji/right veranda preserved. Scene 65 corrected pair retained; scene 68 Hana weapon-free with correct Kenji pair. Brown pouch, ledger, folded garment and family-document actions remain; no extra adult/child, readable overlay or room mirroring."
+      },
+      {
+        "sheet": 9,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-09.jpg",
+        "sha256": "0a6b13af962c37b44c6afeb8a25245a722e86ee79fa2f926050c138234f91ee1",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 9,
+            "panel": 1,
+            "label": "Scene 073 — encoded midpoint frame 18608",
+            "frames": [
+              18608
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 2,
+            "label": "Scene 074 — encoded midpoint frame 18858",
+            "frames": [
+              18858
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 3,
+            "label": "Scene 075 — encoded midpoint frame 19119",
+            "frames": [
+              19119
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 4,
+            "label": "Scene 076 — encoded midpoint frame 19405",
+            "frames": [
+              19405
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 5,
+            "label": "Scene 077 — encoded midpoint frame 19684",
+            "frames": [
+              19684
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 6,
+            "label": "Scene 078 — encoded midpoint frame 19945",
+            "frames": [
+              19945
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 7,
+            "label": "Scene 079 — encoded midpoint frame 20198",
+            "frames": [
+              20198
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 8,
+            "label": "Scene 080 — encoded midpoint frame 20437",
+            "frames": [
+              20437
+            ]
+          },
+          {
+            "sheet": 9,
+            "panel": 9,
+            "label": "Scene 081 — encoded midpoint frame 20667",
+            "frames": [
+              20667
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. ROAD inn/bridge/slopes/daylight consistent, one brown travel bundle moves between grounded and held states deliberately. Scene 75 Senior now holds closed cream cord-tied order; 76 coin-pouch preparation distinct and one large grounded bundle. 80–81 actual Edo room geometry and exactly one near-right brown bundle preserved; no large fantasy skyline or costume swap."
+      },
+      {
+        "sheet": 10,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-10.jpg",
+        "sha256": "300d00f5a236cffd8bab777269e00a01aede05e45f5ccdd7cd3d2addda1044f0",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 10,
+            "panel": 1,
+            "label": "Scene 082 — encoded midpoint frame 20892",
+            "frames": [
+              20892
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 2,
+            "label": "Scene 083 — encoded midpoint frame 21136",
+            "frames": [
+              21136
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 3,
+            "label": "Scene 084 — encoded midpoint frame 21410",
+            "frames": [
+              21410
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 4,
+            "label": "Scene 085 — encoded midpoint frame 21723",
+            "frames": [
+              21723
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 5,
+            "label": "Scene 086 — encoded midpoint frame 22026",
+            "frames": [
+              22026
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 6,
+            "label": "Scene 087 — encoded midpoint frame 22290",
+            "frames": [
+              22290
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 7,
+            "label": "Scene 088 — encoded midpoint frame 22553",
+            "frames": [
+              22553
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 8,
+            "label": "Scene 089 — encoded midpoint frame 22813",
+            "frames": [
+              22813
+            ]
+          },
+          {
+            "sheet": 10,
+            "panel": 9,
+            "label": "Scene 090 — encoded midpoint frame 23088",
+            "frames": [
+              23088
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Scene 82 corrected modest cream closed duty file beside ledger replaces oversized bag; 88 has corrected sandals and no extra handheld weapon; 89 open ledger restored beside ink tray in front of held order. Office/market/gate/HOME actions and identities correctly sequenced. Scenes 84 and 90 have minor foot-tip lower-edge crop from native zoom, explicitly accepted by root after their full captured-frame views; faces, hands, papers and swords stay readable."
+      },
+      {
+        "sheet": 11,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-11.jpg",
+        "sha256": "c920dab7bb5beb4de712be13bdf21dd3bcc773fd8bcaf373de28ae9aaaf43c1a",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 11,
+            "panel": 1,
+            "label": "Scene 091 — encoded midpoint frame 23370",
+            "frames": [
+              23370
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 2,
+            "label": "Scene 092 — encoded midpoint frame 23681",
+            "frames": [
+              23681
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 3,
+            "label": "Scene 093 — encoded midpoint frame 23983",
+            "frames": [
+              23983
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 4,
+            "label": "Scene 094 — encoded midpoint frame 24253",
+            "frames": [
+              24253
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 5,
+            "label": "Scene 095 — encoded midpoint frame 24524",
+            "frames": [
+              24524
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 6,
+            "label": "Scene 096 — encoded midpoint frame 24796",
+            "frames": [
+              24796
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 7,
+            "label": "Scene 097 — encoded midpoint frame 25092",
+            "frames": [
+              25092
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 8,
+            "label": "Scene 098 — encoded midpoint frame 25390",
+            "frames": [
+              25390
+            ]
+          },
+          {
+            "sheet": 11,
+            "panel": 9,
+            "label": "Scene 099 — encoded midpoint frame 25655",
+            "frames": [
+              25655
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Office bound records, two compared documents and single correction brush match narration; no execution/gore imagery. Scene 95 black mitten hand and straw sandals corrections preserved. Gate and HOME remain distinct; cup, ledger and one brown pouch present at weary household scene. No black flash, wrong source or added labels in these midpoint samples."
+      },
+      {
+        "sheet": 12,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-12.jpg",
+        "sha256": "d21c165dbf9bb712c3cd17c93e008aa62584d7693d6b7acbe2670593ed6bbc36",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108
+        ],
+        "encoded_cut_scene_pairs": [],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 12,
+            "panel": 1,
+            "label": "Scene 100 — encoded midpoint frame 25915",
+            "frames": [
+              25915
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 2,
+            "label": "Scene 101 — encoded midpoint frame 26212",
+            "frames": [
+              26212
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 3,
+            "label": "Scene 102 — encoded midpoint frame 26518",
+            "frames": [
+              26518
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 4,
+            "label": "Scene 103 — encoded midpoint frame 26837",
+            "frames": [
+              26837
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 5,
+            "label": "Scene 104 — encoded midpoint frame 27124",
+            "frames": [
+              27124
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 6,
+            "label": "Scene 105 — encoded midpoint frame 27368",
+            "frames": [
+              27368
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 7,
+            "label": "Scene 106 — encoded midpoint frame 27620",
+            "frames": [
+              27620
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 8,
+            "label": "Scene 107 — encoded midpoint frame 27898",
+            "frames": [
+              27898
+            ]
+          },
+          {
+            "sheet": 12,
+            "panel": 9,
+            "label": "Scene 108 — encoded midpoint frame 28174",
+            "frames": [
+              28174
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution and all 9 encoded midpoints viewed. Market rice-measure labor correctly distinguishes Kenji and Merchant; scene 102 retains exactly four worn steel swords, Senior empty pointing hand, two mounted wood rods. 103–107 brown coin pouch, register/tea/duty paper and family/costume/architecture consistent. Corrected sandals appear in final 108 gate shot. Minor lower-edge foot-tip crop in 102 accepted explicitly by root after full captured-frame inspection; no head/gesture/prop clipping."
+      },
+      {
+        "sheet": 19,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-19.jpg",
+        "sha256": "d7e75c9f6989bd3beba05d6fcca14fae14a89e2fcbe81994a9fc8d823b509080",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            55,
+            56
+          ],
+          [
+            56,
+            57
+          ],
+          [
+            57,
+            58
+          ],
+          [
+            58,
+            59
+          ],
+          [
+            59,
+            60
+          ],
+          [
+            60,
+            61
+          ],
+          [
+            61,
+            62
+          ],
+          [
+            62,
+            63
+          ],
+          [
+            63,
+            64
+          ]
+        ],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 19,
+            "panel": 1,
+            "label": "Cut 055 → 056",
+            "frames": [
+              13932,
+              13933
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 2,
+            "label": "Cut 056 → 057",
+            "frames": [
+              14229,
+              14230
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 3,
+            "label": "Cut 057 → 058",
+            "frames": [
+              14466,
+              14467
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 4,
+            "label": "Cut 058 → 059",
+            "frames": [
+              14710,
+              14711
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 5,
+            "label": "Cut 059 → 060",
+            "frames": [
+              14968,
+              14969
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 6,
+            "label": "Cut 060 → 061",
+            "frames": [
+              15272,
+              15273
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 7,
+            "label": "Cut 061 → 062",
+            "frames": [
+              15509,
+              15510
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 8,
+            "label": "Cut 062 → 063",
+            "frames": [
+              15736,
+              15737
+            ]
+          },
+          {
+            "sheet": 19,
+            "panel": 9,
+            "label": "Cut 063 → 064",
+            "frames": [
+              16001,
+              16002
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 55->56 through 63->64 viewed. Practice rod counts and empty mounts remain stable across 55–58, then practice props correctly disappear at gate after location change. Native framing changes remain intentional pan/zoom rather than actor/decor deformation. Cut transitions follow intended gate/office/market/HOME sequence, no black flash or wrong source. Review-sheet black padding is outside the movie frame panels."
+      },
+      {
+        "sheet": 20,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-20.jpg",
+        "sha256": "31fd5786baffa8905e28cf9d343ff40b20424ad25da84235f844c20ce26a80a4",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            64,
+            65
+          ],
+          [
+            65,
+            66
+          ],
+          [
+            66,
+            67
+          ],
+          [
+            67,
+            68
+          ],
+          [
+            68,
+            69
+          ],
+          [
+            69,
+            70
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            71,
+            72
+          ],
+          [
+            72,
+            73
+          ]
+        ],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 20,
+            "panel": 1,
+            "label": "Cut 064 → 065",
+            "frames": [
+              16270,
+              16271
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 2,
+            "label": "Cut 065 → 066",
+            "frames": [
+              16546,
+              16547
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 3,
+            "label": "Cut 066 → 067",
+            "frames": [
+              16825,
+              16826
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 4,
+            "label": "Cut 067 → 068",
+            "frames": [
+              17147,
+              17148
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 5,
+            "label": "Cut 068 → 069",
+            "frames": [
+              17389,
+              17390
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 6,
+            "label": "Cut 069 → 070",
+            "frames": [
+              17675,
+              17676
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 7,
+            "label": "Cut 070 → 071",
+            "frames": [
+              17952,
+              17953
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 8,
+            "label": "Cut 071 → 072",
+            "frames": [
+              18227,
+              18228
+            ]
+          },
+          {
+            "sheet": 20,
+            "panel": 9,
+            "label": "Cut 072 → 073",
+            "frames": [
+              18481,
+              18482
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 64->65 through 72->73 viewed. Household architecture and cast clothing/hair remain recognizable through varied document/repair/care actions. Corrected Kenji sword position in 65 and weapon-free Hana in 68 survive both cut-side frames. Family actors deliberately join/leave per shot plan; road transition for travel remains clear, no weather flip or new character."
+      },
+      {
+        "sheet": 21,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-21.jpg",
+        "sha256": "1a585d569904c5e26c402f2ac97a571d31bbf5f03774527f634c5ea2b1f3af90",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            73,
+            74
+          ],
+          [
+            74,
+            75
+          ],
+          [
+            75,
+            76
+          ],
+          [
+            76,
+            77
+          ],
+          [
+            77,
+            78
+          ],
+          [
+            78,
+            79
+          ],
+          [
+            79,
+            80
+          ],
+          [
+            80,
+            81
+          ],
+          [
+            81,
+            82
+          ]
+        ],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 21,
+            "panel": 1,
+            "label": "Cut 073 → 074",
+            "frames": [
+              18734,
+              18735
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 2,
+            "label": "Cut 074 → 075",
+            "frames": [
+              18981,
+              18982
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 3,
+            "label": "Cut 075 → 076",
+            "frames": [
+              19257,
+              19258
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 4,
+            "label": "Cut 076 → 077",
+            "frames": [
+              19552,
+              19553
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 5,
+            "label": "Cut 077 → 078",
+            "frames": [
+              19815,
+              19816
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 6,
+            "label": "Cut 078 → 079",
+            "frames": [
+              20075,
+              20076
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 7,
+            "label": "Cut 079 → 080",
+            "frames": [
+              20321,
+              20322
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 8,
+            "label": "Cut 080 → 081",
+            "frames": [
+              20552,
+              20553
+            ]
+          },
+          {
+            "sheet": 21,
+            "panel": 9,
+            "label": "Cut 081 → 082",
+            "frames": [
+              20781,
+              20782
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 73->74 through 81->82 viewed. Explicit office inserts alternate with same road scene; corrected Senior order in 75 retains same pose, Kenji keeps one large bundle, bundle grounds again in 76. HOME family insert and Edo arrival distinct rooms, exactly one near-right Edo bundle. 82 corrected cream file rather than big bag visible on incoming frame; no source-regression flash."
+      },
+      {
+        "sheet": 22,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-22.jpg",
+        "sha256": "b02a75fa7d2d1bc0cc8679dda157dc99011d368b3f8d8ffe7d4bc2add9d80f06",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            82,
+            83
+          ],
+          [
+            83,
+            84
+          ],
+          [
+            84,
+            85
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            86,
+            87
+          ],
+          [
+            87,
+            88
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            89,
+            90
+          ],
+          [
+            90,
+            91
+          ]
+        ],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 22,
+            "panel": 1,
+            "label": "Cut 082 → 083",
+            "frames": [
+              21003,
+              21004
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 2,
+            "label": "Cut 083 → 084",
+            "frames": [
+              21269,
+              21270
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 3,
+            "label": "Cut 084 → 085",
+            "frames": [
+              21550,
+              21551
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 4,
+            "label": "Cut 085 → 086",
+            "frames": [
+              21896,
+              21897
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 5,
+            "label": "Cut 086 → 087",
+            "frames": [
+              22156,
+              22157
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 6,
+            "label": "Cut 087 → 088",
+            "frames": [
+              22424,
+              22425
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 7,
+            "label": "Cut 088 → 089",
+            "frames": [
+              22681,
+              22682
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 8,
+            "label": "Cut 089 → 090",
+            "frames": [
+              22944,
+              22945
+            ]
+          },
+          {
+            "sheet": 22,
+            "panel": 9,
+            "label": "Cut 090 → 091",
+            "frames": [
+              23232,
+              23233
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 82->83 through 90->91 viewed. Employment notice/interview/household sequence correctly ordered, correct plain robes and hair. 88 sandals and empty lowered black hand, 89 added account ledger, and 82 modest closed file retained. Small native lower foot-edge crops in 84/90 are the accepted framing limitation; faces, hands and key props remain in frame, no blackout or mirrored architecture."
+      },
+      {
+        "sheet": 23,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-23.jpg",
+        "sha256": "f10cc5e6af9fcd2349463304d102e3f40e11452d36f01b723396356dd0ba9df8",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            91,
+            92
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            93,
+            94
+          ],
+          [
+            94,
+            95
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            96,
+            97
+          ],
+          [
+            97,
+            98
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            99,
+            100
+          ]
+        ],
+        "includes_actual_first_frame": false,
+        "panels": [
+          {
+            "sheet": 23,
+            "panel": 1,
+            "label": "Cut 091 → 092",
+            "frames": [
+              23508,
+              23509
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 2,
+            "label": "Cut 092 → 093",
+            "frames": [
+              23854,
+              23855
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 3,
+            "label": "Cut 093 → 094",
+            "frames": [
+              24112,
+              24113
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 4,
+            "label": "Cut 094 → 095",
+            "frames": [
+              24394,
+              24395
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 5,
+            "label": "Cut 095 → 096",
+            "frames": [
+              24653,
+              24654
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 6,
+            "label": "Cut 096 → 097",
+            "frames": [
+              24939,
+              24940
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 7,
+            "label": "Cut 097 → 098",
+            "frames": [
+              25244,
+              25245
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 8,
+            "label": "Cut 098 → 099",
+            "frames": [
+              25535,
+              25536
+            ]
+          },
+          {
+            "sheet": 23,
+            "panel": 9,
+            "label": "Cut 099 → 100",
+            "frames": [
+              25775,
+              25776
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of all 9 cuts 91->92 through 99->100 viewed. Different bound records and two comparison sheets follow authored office actions without modern readable title; 95 corrected black hand and sandals survive incoming/outgoing edges. Ordinary official correction, gate duty and quiet HOME recovery remain distinct; market transition begins expected rice-counter scene. No wrong-source insertion or black-flash panel."
+      },
+      {
+        "sheet": 24,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-24.jpg",
+        "sha256": "fc9ac8b4aed9dbabfd412e804c20291441bb4bd0e0b67cbd906275ffb458a57b",
+        "state": "pass",
+        "reviewer": "samurai_regen_visual_b",
+        "review_method": "Actual sheet JPEG produced from final encoded MP4 displayed with view_image at original resolution; each of its 9 panels actually inspected. No source PNG used as substitute.",
+        "encoded_midpoint_scene_ids": [],
+        "encoded_cut_scene_pairs": [
+          [
+            100,
+            101
+          ],
+          [
+            101,
+            102
+          ],
+          [
+            102,
+            103
+          ],
+          [
+            103,
+            104
+          ],
+          [
+            104,
+            105
+          ],
+          [
+            105,
+            106
+          ],
+          [
+            106,
+            107
+          ],
+          [
+            107,
+            108
+          ]
+        ],
+        "includes_actual_first_frame": true,
+        "panels": [
+          {
+            "sheet": 24,
+            "panel": 1,
+            "label": "Cut 100 → 101",
+            "frames": [
+              26054,
+              26055
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 2,
+            "label": "Cut 101 → 102",
+            "frames": [
+              26370,
+              26371
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 3,
+            "label": "Cut 102 → 103",
+            "frames": [
+              26666,
+              26667
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 4,
+            "label": "Cut 103 → 104",
+            "frames": [
+              27007,
+              27008
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 5,
+            "label": "Cut 104 → 105",
+            "frames": [
+              27240,
+              27241
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 6,
+            "label": "Cut 105 → 106",
+            "frames": [
+              27495,
+              27496
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 7,
+            "label": "Cut 106 → 107",
+            "frames": [
+              27744,
+              27745
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 8,
+            "label": "Cut 107 → 108",
+            "frames": [
+              28052,
+              28053
+            ]
+          },
+          {
+            "sheet": 24,
+            "panel": 9,
+            "label": "Actual first movie frame",
+            "frames": [
+              0
+            ]
+          }
+        ],
+        "notes": "Actual sheet displayed at original resolution; both real encoded frames of 8 cuts 100->101 through 107->108 and the actual first film frame viewed. Merchant labor, training sword-maintenance, household accounts and final duty shots follow intended chronology and correct identities. 102 exactly four worn swords/two mounted rods, 108 corrected straw sandals and tucked cream order; first actual film frame is correct Kenji at gate with sandals. No flash, wrong source or external video footage. Minor foot-tip crop on 102 is explicitly accepted by root."
+      }
+    ],
+    "additional_actual_full_encoded_frame_views": [
+      {
+        "scene_id": 62,
+        "frame": 15623,
+        "path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/frames/frame-15623.jpg",
+        "sha256": "813f072c7dc5e46b4c6a09a39c1e4a3f92bbfb9a6e2a7ae8b451d4f4fe308ddc",
+        "state": "pass_with_root_accepted_framing_limit",
+        "notes": "Actual full 1920x1080 final-encoded JPEG viewed; front of right sandal touches/is slightly cropped at bottom edge. Faces, open hands, ledger/counter, two worn swords and architecture are fully readable. Root accepts this montage framing."
+      }
+    ],
+    "blocking_visual_failures_on_assigned_scope": []
+  }
+}

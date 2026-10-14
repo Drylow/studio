@@ -1,0 +1,20 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "840424416a735c43b57e7b10f1f13cde0167509711e621c0846e3a7526372ffd",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/kenji-actual-tool-provenance.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-regeneration-imagegen-source-v1",
+    "tool": "image_gen__imagegen",
+    "arguments": {
+      "prompt": "Create ONE clean original full-body character reference for a flat 2D historical educational cartoon. This is KENJI, an adult Japanese low-ranking samurai retainer around 1720, not a real person. He has an oversized perfectly rounded pale CREAM head, tiny solid black dot eyes, sparse short eyebrows, a tiny simple angular nose and small neutral line mouth. Black chonmage topknot with two broad black side hair patches; no beard, helmet, modern cap, anime eyes or realistic skin detail. He stands completely FRONT FACING in a relaxed straight neutral pose. Matte indigo overlapping Japanese kosode with ivory collar, gray obi, flat charcoal hakama, small white tabi feet. Body/clothing is a simple flat filled shape; BOTH forearms are extremely thin SINGLE BLACK LINES with SMALL BLACK MITTEN hands, not fleshy thick anatomical arms. Exactly TWO cream diamond-wrapped-hilt swords in plain BLACK scabbards at his ANATOMICAL LEFT HIP, which is VIEWER RIGHT of the frontal body. Both sheath tips descend behind the viewer-right leg, NO weapon on viewer-left, no drawn blade, no held prop. Modern minimal educational cartoon with fairly thin confident black outlines, muted flat cel colors and only one restrained shadow tone; oversized head contrasted with very simple body. No 3D, plush, painterly realism or anime. Plain pale cream background, no environment, no letters, labels, logos, watermark, frames or other figures. Show ENTIRE head, topknot, both hands and both feet with generous margin. High-quality crisp original mascot model reference matching the Samurai Chapters economical 2D visual direction. Portrait or square composition.",
+      "transparent_background": false
+    },
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-70f3fe8e-b655-4f6c-a87f-a3d3a0672475.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "actual_output": "assets/masters/KENJI.png",
+    "reviewed_by": "root",
+    "actual_full_png_viewed": true,
+    "inspection_notes": "FullPNGactuallyviewed: cream roundhead blackdoteyes blacksidehair/chonmage, indigoivoryrobe greyobi charcoalhakama, thinblackforearms SMALLblackhands, TWOblackscabbardsviewerRIGHT, bothfeetwhiteindoor tabi, fullhairfeetcontained; noletters/scenery/otheractors.",
+    "human_approval_claimed": false
+  }
+}

@@ -1,0 +1,2019 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "07a91d7f721a831016fe603622e323fb7987c3805ed3d7d397f83f00115f7e14",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/source-shot-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-regenerated-source-actual-review-v1",
+    "records": [
+      {
+        "id": 1,
+        "state": "pass",
+        "image": "assets/scenes/scene-0001.png",
+        "image_sha256": "fab900b802983dcad66f1abc9c0417f85d7607aa2887f87a874b1d523df55eaf",
+        "request_sha256": "6c03b1738a6cc344cf13a9c663f643e82e0cb8ae310c59ef5a3a538e737e55ad",
+        "reviewer": "root",
+        "review_method": "ActualfullPNGviewedat1672x941",
+        "notes": "Kenji fullbodycreamroundhead indigorobegreyobicharcoalhakama blacklinearms/hands;TWOblackscabbardsviewerRIGHT;white tabi withstrawsandals groundedshadowright. SameGATEmasterroof/pine/cabinet/benchsky withoutmirror/timechange. Noanonymouspeople/text/modernprops."
+      },
+      {
+        "id": 2,
+        "state": "pass",
+        "image": "assets/scenes/scene-0002.png",
+        "image_sha256": "125b9c744923067fc8b75d245160d28c9734d4d27015b07302dcd7940cc3a75b",
+        "request_sha256": "3e188243d1e641d505322cae25c8c4b883ca4619a74e6626f4cfde07bba45639",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Gate geometry preserved, Kenji one identity, two sheathed swords at left hip, obi contact and outdoor straw-sandal straps visible.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+      },
+      {
+        "id": 3,
+        "state": "pass",
+        "image": "assets/scenes/scene-0003.png",
+        "image_sha256": "e9a2e7de4e89a2d918d7b3e3c47eef47cc6572831c5c11ced54469f8d2b1b778",
+        "request_sha256": "449f882c4bc5633a1a3c01724e384df0b2b1edaaea02ff03588aa94758f291c8",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME geometry, Kenji/Hana identities, existing desk ledger and bronze coins, two worn swords, grounded hands.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+      },
+      {
+        "id": 4,
+        "state": "pass",
+        "image": "assets/scenes/scene-0004.png",
+        "image_sha256": "5eeb0b756ac7b620c9e7a5f7ebc96f590bc37a940b5e20bfd7341d87a14de430",
+        "request_sha256": "f7e1eac1e06d9438aaaeedad3a755cd81ca3220bf4d924b2e9cec85a0f33a79f",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "OFFICE geometry and two identities; tied order handoff, indoor tabi; Kenji back three-quarter worn pair remains at body-left.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+      },
+      {
+        "id": 5,
+        "state": "pass",
+        "image": "assets/scenes/scene-0005.png",
+        "image_sha256": "6328e0ac3e839ce512480318f33c839ba3715d1e7b50e977164210ecebc0d8ca",
+        "request_sha256": "d241a85e25894026b7215a0ceb2ea94e83528d2ec4fc5adaf5760c4efac38eed",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: tan crossed straw straps and woven soles over both actors existing white tabi; original gate, exact cast, paper order and four worn swords retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd.png",
+            "sha256": "49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd"
+          },
+          "original_request_sha256": "d241a85e25894026b7215a0ceb2ea94e83528d2ec4fc5adaf5760c4efac38eed",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0005/d241a85e25894026b7215a0ceb2ea94e83528d2ec4fc5adaf5760c4efac38eed/receipt.json",
+            "sha256": "caf92c4a7f22251800a07a996ceeed0183417b23d1817e517569ebfb7421ed32"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0005.txt",
+            "sha256": "21bb8a59c8095b3af8f28932aefebb6def5327699e450b11fb5b2d027aec2cc2"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0005.png",
+            "sha256": "6328e0ac3e839ce512480318f33c839ba3715d1e7b50e977164210ecebc0d8ca"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch1.json",
+            "sha256": "3a944cb0ee08340e15dc716e81063e623d76f80bd66ac20cdfc4af3e385caab5"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 5,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd.png",
+          "image_sha256": "49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd",
+          "request_sha256": "d241a85e25894026b7215a0ceb2ea94e83528d2ec4fc5adaf5760c4efac38eed",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full-resolution actual view: both men at outdoor GATE wear white tabi ONLY with no straw sandals; required outdoor sandal straps/soles missing. Clothing, identity, two sheathed swords each and gate otherwise correct.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+        }
+      },
+      {
+        "id": 6,
+        "state": "pass",
+        "image": "assets/scenes/scene-0006.png",
+        "image_sha256": "489589ad5203fc1fd693061fee18f6e60bb7b832d0ab92305e6ba14cfead19b3",
+        "request_sha256": "57e95162daad2359ce57e166daa04261a70adf75a32eede43ad6879080caf681",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME garment repair with folded indigo object distinct from worn outfit; Hana/ Kenji correct, indoor tabi, brown pouch, fixed opening/shelf.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+      },
+      {
+        "id": 7,
+        "state": "pass",
+        "image": "assets/scenes/scene-0007.png",
+        "image_sha256": "524930f07d174dafbc14556525c12f6e69dc4e580cc71d0f5e4fdf606dceaf37",
+        "request_sha256": "4c56dc5de5ad14c6e8042d94f66238102bd46067da0243e61333e7e57e2e67c0",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "MARKET unchanged left stall/rice and cart; exact two identities, wooden rice measure, few bronze coins, two worn swords and outdoor sandal straps confirmed at full resolution.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-002-007.jpg"
+      },
+      {
+        "id": 8,
+        "state": "pass",
+        "image": "assets/scenes/scene-0008.png",
+        "image_sha256": "1c17742f68f5ebbb37373c4ee78cbe68d157983270fc637ccb61193af0b2c78c",
+        "request_sha256": "b8539c8acf5c0bc47b588353194b3af5dac24d3ea1b9c0dafcfd440f1ce52605",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME actors correct, almost empty plain brown open pouch and ledger; worn swords at Kenji left, indoor seating.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 9,
+        "state": "pass",
+        "image": "assets/scenes/scene-0009.png",
+        "image_sha256": "5efb1cd15ac4c38eb5df1765790ab8f347ddec587301932fbb959d9d4edd6a18",
+        "request_sha256": "ee5d20f1be2983c617845b3a11da79e32f8ac9072f6f3402e3a18eb0daf1d7a6",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME brown closed pouch beside ledger, Kenji looks toward both worn swords, correct feet and architecture.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 10,
+        "state": "pass",
+        "image": "assets/scenes/scene-0010.png",
+        "image_sha256": "b7ff9291822c5320668cc7a0db53a105a85bdf7a1b8d73610564128d198b031e",
+        "request_sha256": "7e60a83912a087ee39355a961b47121b5d471680cc415add58d7faf1363e4349",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Father gray side hair/brown robe and adult Kenji maintained; bound register, indoor white tabi, no added actors.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 11,
+        "state": "pass",
+        "image": "assets/scenes/scene-0011.png",
+        "image_sha256": "bbc7d427ff7f1d78205d083f5fe800f22fb4533cc20de80cd99204fa15f84a54",
+        "request_sha256": "15b20848699c0f9f1b0ce98257e2d2479560d029c7058c986cf9d99298336552",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Three adult identities preserved, lineage scroll diagram/indistinct marks rather than caption, stable HOME architecture, paired worn swords.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 12,
+        "state": "pass",
+        "image": "assets/scenes/scene-0012.png",
+        "image_sha256": "4811b9ea9548c628b61ed57b07ec40ef80c1d60b6916179d9ab6c1ec1ffb04a3",
+        "request_sha256": "4b7de37569929fed6968ea0e93f5a74816b01bde246c72cd8d8ee875263c8c59",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "OFFICE same orientation and stored papers; Senior seated at desk, Kenji standing with worn pair and white tabi; no throne.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 13,
+        "state": "pass",
+        "image": "assets/scenes/scene-0013.png",
+        "image_sha256": "18d300b78ec74811e54c9fb62525ceb708704f8561974407caad4e845c057a0c",
+        "request_sha256": "467c2dcd271edb33b88ffe67c1fcc72de7dfb840517acb46c0f1d758ce1a3049",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Senior seated selecting paper at desk, empty-handed Kenji standing; cast/room/cubby/sword and indoor tabi continuity.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-008-013.jpg"
+      },
+      {
+        "id": 14,
+        "state": "pass",
+        "image": "assets/scenes/scene-0014.png",
+        "image_sha256": "873c314dcd20d04cbc576a3385d9b0885cfb53258ac87d00314add7b5a5e86ea",
+        "request_sha256": "7873ab10889b1ec1b534ff5ec8e733ed0a3244b22736817fc973b99476b0d73e",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "TRAINING fixed left veranda, two rear-wall wooden weapons; scroll held by Senior, exact cast and both worn pairs, no steel drawing.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+      },
+      {
+        "id": 15,
+        "state": "pass",
+        "image": "assets/scenes/scene-0015.png",
+        "image_sha256": "c2d0d2ce15e8c09a1b1af2ffbf2038be3713d90ce53ca4b595530fc74353e67d",
+        "request_sha256": "002f69b98b9726fa8371c9c539ed7da07f813996523790d5065c80635b82f316",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Three correct adults and Father bow; same HOME opening/shelf, clear indoor tabi and worn pairs.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+      },
+      {
+        "id": 16,
+        "state": "pass",
+        "image": "assets/scenes/scene-0016.png",
+        "image_sha256": "128f9a91aff566de5f3e56e91b2bf1f4094e68938408db4ab5e715f1a019603f",
+        "request_sha256": "4107d5f3bb40204eb952dc0573226d26010ad886969ffe6ad24c4f2427810f4e",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Three correct adults, Mother hand on grounded household sheet, original room orientation and daylight; no new heir.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+      },
+      {
+        "id": 17,
+        "state": "pass",
+        "image": "assets/scenes/scene-0017.png",
+        "image_sha256": "7fc818664e78e23d82f90c7bc63113f0a7ca8a7cf1a02be4719dfba9159d9d3e",
+        "request_sha256": "cd85edf847823d687cd5ff6d35f3d066f116dcbe7afd59248999841d8c06fc1e",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed against FATHER master: viewer-left older gray-haired brown-robed Father restored with exactly two cream hilts, original center Kenji/right Senior retained; all three now wear straw sandals over white tabi; gate/document intact.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9.png",
+            "sha256": "c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9"
+          },
+          "original_request_sha256": "cd85edf847823d687cd5ff6d35f3d066f116dcbe7afd59248999841d8c06fc1e",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0017/cd85edf847823d687cd5ff6d35f3d066f116dcbe7afd59248999841d8c06fc1e/receipt.json",
+            "sha256": "df80f61b1227bbf7e9a1b3f56470766bbf7927a6f37bc3ed6f4bef3598f3f9d5"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0017.txt",
+            "sha256": "7b0b2de7e69569d68de124c4c30f25606c285dc2851f8a310524a6a62015daa3"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0017.png",
+            "sha256": "7fc818664e78e23d82f90c7bc63113f0a7ca8a7cf1a02be4719dfba9159d9d3e"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch1.json",
+            "sha256": "3a944cb0ee08340e15dc716e81063e623d76f80bd66ac20cdfc4af3e385caab5"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 17,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9.png",
+          "image_sha256": "c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9",
+          "request_sha256": "cd85edf847823d687cd5ff6d35f3d066f116dcbe7afd59248999841d8c06fc1e",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full-resolution actual view: viewer-left FATHER is replaced by a tall young black-haired INDIGO-robed Kenji lookalike, instead of gray-haired brown-robed Father. That left figure also has THREE cream-wrapped sword hilts instead of two. All three men lack outdoor straw sandals (white tabi only). Center Kenji and right Senior otherwise identifiable; gate retained.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+        }
+      },
+      {
+        "id": 18,
+        "state": "pass",
+        "image": "assets/scenes/scene-0018.png",
+        "image_sha256": "e79bbc612d5da2ee18bdd71ff24bb5ba533adbc04a6b9dbddf3698cd6b9037df",
+        "request_sha256": "64ad3340e2cb4555b7164e9f04a2c83f59e3515a827a11b62c09b3bb0b075ea2",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Three correct adults at household scroll, Kenji between elders; HOME geometry/daylight and identities consistent.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+      },
+      {
+        "id": 19,
+        "state": "pass",
+        "image": "assets/scenes/scene-0019.png",
+        "image_sha256": "eab90a7cfccfde0eb456c0c16e40a4759e6d83cec595dcf26cc349afc544d559",
+        "request_sha256": "9dff81c743f004191d06e9a1c9383596a3ab03a81ca6878bea8bd315fb9254e6",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Two exact actors doing clerical task with two distinct papers, inkstone/brush holder grounded; OFFICE geometry and worn pairs retained.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for scenes 5,7,17",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-014-019.jpg"
+      },
+      {
+        "id": 20,
+        "state": "pass",
+        "image": "assets/scenes/scene-0020.png",
+        "image_sha256": "c7dd9fd2fc77f9693bb098986e0aac782dab3a13a5ce504364c07b8d0e2d7630",
+        "request_sha256": "a579482f354522dd6d1d1cc4a43abe49e930314aae222c442d9189862b63b070",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "TRAINING preserved veranda/wall with exactly two mounted wooden rods; Senior points, Kenji listens, each worn sword pair and white tabi.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+      },
+      {
+        "id": 21,
+        "state": "pass",
+        "image": "assets/scenes/scene-0021.png",
+        "image_sha256": "0006b01d5396db90e8d3d99659dbfe994398a84736e4a7220e63766e7d20d5d5",
+        "request_sha256": "43d7535b14faa7ae9cdf28207386a80156abcbb0f436db8653f6c17cd18cc64d",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: wrong viewer-left/back pair removed, two distinct black scabbards now attach on front three-quarter Kenji anatomical-left/viewer-right obi side beneath carried books. Wrapped hilts partly occluded by books naturally; no extra swords. Senior/office/papers/cast/t abi unchanged.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af.png",
+            "sha256": "fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af"
+          },
+          "original_request_sha256": "43d7535b14faa7ae9cdf28207386a80156abcbb0f436db8653f6c17cd18cc64d",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0021/43d7535b14faa7ae9cdf28207386a80156abcbb0f436db8653f6c17cd18cc64d/receipt.json",
+            "sha256": "428fb45c945150fb4450878327b4cdccb9479804dc0cd758b75ba08a33ed5d8a"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0021.txt",
+            "sha256": "054ddb75d98448dc298a1495775a2daacf7fc1aff7f3d1508206373922f3267a"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0021.png",
+            "sha256": "0006b01d5396db90e8d3d99659dbfe994398a84736e4a7220e63766e7d20d5d5"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch1.json",
+            "sha256": "3a944cb0ee08340e15dc716e81063e623d76f80bd66ac20cdfc4af3e385caab5"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 21,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af.png",
+          "image_sha256": "fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af",
+          "request_sha256": "43d7535b14faa7ae9cdf28207386a80156abcbb0f436db8653f6c17cd18cc64d",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: Kenji front three-quarter torso faces viewer/right; pair of sword hilts and scabbards sit at viewer LEFT/back side of his gray obi, unlike fixed anatomical-left/viewer-right attachment. Senior pair correct. Please root adjudicate pose orientation before any paid edit.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+        }
+      },
+      {
+        "id": 22,
+        "state": "pass",
+        "image": "assets/scenes/scene-0022.png",
+        "image_sha256": "1889d5a279201ab66993c46694b072d69f8b0cb2ac0e424e15cabe0ae45d7422",
+        "request_sha256": "8e0ddff735f7a26bf64b17f4fffd5b14abb4df041369744403442cb12567db48",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Gate register held by Kenji, alert outward gaze; gate/bench/daylight remain stable, two sheathed swords and straw sandals visible.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+      },
+      {
+        "id": 23,
+        "state": "pass",
+        "image": "assets/scenes/scene-0023.png",
+        "image_sha256": "2d94ba95cdb848882ae38476c6bdad7ee3c20a454fd2973214cb354d1096e70b",
+        "request_sha256": "9215fbffd4be8ad3250de881bb80da6e5c5dcf91506936d4555967e19a3449d8",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME correct gray-haired Father/brown robe instructs adult Kenji on brush; desk inkstone/brush holder grounded, no new actor.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+      },
+      {
+        "id": 24,
+        "state": "pass",
+        "image": "assets/scenes/scene-0024.png",
+        "image_sha256": "aa81a72d1330eb680ed921fcdb1ae82ba949f82e5ba04bb71314fc9456ddffea",
+        "request_sha256": "8f221812b81f7afae5bf69279b10ca97c966db0045f0289c2579c875e0043254",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: bowed Kenji now has TWO distinctly separated cream-wrapped hilts and TWO black scabbards at same left hip, following his bowed profile; Senior correct pair and two wooden wall rods retained, white tabi/empty hands/room unchanged.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81.png",
+            "sha256": "623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81"
+          },
+          "original_request_sha256": "8f221812b81f7afae5bf69279b10ca97c966db0045f0289c2579c875e0043254",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0024/8f221812b81f7afae5bf69279b10ca97c966db0045f0289c2579c875e0043254/receipt.json",
+            "sha256": "2480cc883c428adeb6af74378d8c66166e54afd5d600a0fd795a39bdde32d90c"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0024.txt",
+            "sha256": "cdd8eda66bf785dc4b1c0d8d690c60065c95d4fa949fb55c73b5602a6c192d46"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0024.png",
+            "sha256": "aa81a72d1330eb680ed921fcdb1ae82ba949f82e5ba04bb71314fc9456ddffea"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch1.json",
+            "sha256": "3a944cb0ee08340e15dc716e81063e623d76f80bd66ac20cdfc4af3e385caab5"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 24,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81.png",
+          "image_sha256": "623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81",
+          "request_sha256": "8f221812b81f7afae5bf69279b10ca97c966db0045f0289c2579c875e0043254",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: Senior has two clearly distinct sheathed swords, but bowed Kenji shows only ONE cream-wrapped hilt and ONE narrow black sheath along viewer-right hip; second sword is not visibly distinguishable. Please root adjudicate whether legitimate occlusion or missing pair member before paid edit.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+        }
+      },
+      {
+        "id": 25,
+        "state": "pass",
+        "image": "assets/scenes/scene-0025.png",
+        "image_sha256": "0b441231bf353230929f6b612f8bfa1588a5d939032377c4a9384b471d0cfdf5",
+        "request_sha256": "c998cb19dd0be9febd7c998b12ec8c4347205e5f2ba39813ffaa30db1934b507",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "At GATE Senior checks Kenji clothing/fittings with black hand contact; exact cast, two pairs, straw sandal straps clearly visible.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-020-025.jpg"
+      },
+      {
+        "id": 26,
+        "state": "pass",
+        "image": "assets/scenes/scene-0026.png",
+        "image_sha256": "4e747bdf2d44275a56fb88c05998988fa8f05a586a0c3fe3dc8cda104c6b7168",
+        "request_sha256": "69c87873a67149a466a8a8da1c6badcda7697edc2166d0e37720b104893b75b4",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: one closed flat CREAM PAPER ORDER tied with brown cord replaces brown pouch, all four hands contact it properly. Both cast identities/kneeling poses/four worn swords/indoor tabi/office and desk retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725.png",
+            "sha256": "a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725"
+          },
+          "original_request_sha256": "69c87873a67149a466a8a8da1c6badcda7697edc2166d0e37720b104893b75b4",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0026/69c87873a67149a466a8a8da1c6badcda7697edc2166d0e37720b104893b75b4/receipt.json",
+            "sha256": "02ead289bb54185a47d9bd4f0d9a35fc0825364a7d4940fefd51aa0194551204"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0026.txt",
+            "sha256": "10d2f11eb752309b924a9b4aa17e2fb03c7c9e1d4f8371f43a28d3e4158025fe"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0026.png",
+            "sha256": "4e747bdf2d44275a56fb88c05998988fa8f05a586a0c3fe3dc8cda104c6b7168"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch2.json",
+            "sha256": "9468692bc062fbc8432fc1ee821dfbc8a8036f5115b77703333b465804ffe2ae"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 26,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725.png",
+          "image_sha256": "a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725",
+          "request_sha256": "69c87873a67149a466a8a8da1c6badcda7697edc2166d0e37720b104893b75b4",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: Kenji hands Senior a BROWN CLOTH COIN POUCH instead of the CLOSED CREAM PAPER ORDER TIED BY BROWN CORD required by this action, breaking order continuity. Cast, indoor shoes and OFFICE otherwise good.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+        }
+      },
+      {
+        "id": 27,
+        "state": "pass",
+        "image": "assets/scenes/scene-0027.png",
+        "image_sha256": "3f7a157aa8aac04b595a38cad410d1fdc5c530c336a4b5eec585355cfd38902e",
+        "request_sha256": "650e4876cc11ded31abc0558f1f2b2e038bd15f3069a47428ce86e14d11e9685",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Both actors study open register opposite sides of same OFFICE desk, correct cast and grounded hands; indoor tabi and worn pair orientation evaluated against posed torso, not sleeve edge.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+      },
+      {
+        "id": 28,
+        "state": "pass",
+        "image": "assets/scenes/scene-0028.png",
+        "image_sha256": "ebf17747dd743169b178de356b49e6dd8624f760bd1f31da4ac38ce6b30b1273",
+        "request_sha256": "6924ce88f5453df4e232a23480d5f2d2ec115a42190d01c0c5f8b1540e4c027d",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Hana holds same indigo repair garment separately, Kenji intact worn kosode; limited coins/ledger/plain brown pouch and HOME architecture retained.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+      },
+      {
+        "id": 29,
+        "state": "pass",
+        "image": "assets/scenes/scene-0029.png",
+        "image_sha256": "ddf37c7ce8db046d1e7c3dc319d9d125c3cb58da7ea85ce964f903d7a7763e55",
+        "request_sha256": "681f6c4519d3239985dfdbc234923936502a01ba1a7c51c78f819a044a0343cf",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: both outdoor men now have tan crossed straw straps and woven soles over same white tabi, original cream held document/pairs/cast/gate unchanged.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668.png",
+            "sha256": "a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668"
+          },
+          "original_request_sha256": "681f6c4519d3239985dfdbc234923936502a01ba1a7c51c78f819a044a0343cf",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0029/681f6c4519d3239985dfdbc234923936502a01ba1a7c51c78f819a044a0343cf/receipt.json",
+            "sha256": "d8f1d6033e878684a083ce8d58c54dfe6f51d0fa79c9dced7ab54513a19ef575"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0029.txt",
+            "sha256": "bf92deaddecd1ef6064f4eec697eaf695594590cecd370fa282bb41c497e80cb"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0029.png",
+            "sha256": "ddf37c7ce8db046d1e7c3dc319d9d125c3cb58da7ea85ce964f903d7a7763e55"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch2.json",
+            "sha256": "9468692bc062fbc8432fc1ee821dfbc8a8036f5115b77703333b465804ffe2ae"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 29,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668.png",
+          "image_sha256": "a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668",
+          "request_sha256": "681f6c4519d3239985dfdbc234923936502a01ba1a7c51c78f819a044a0343cf",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: both outdoor GATE actors have white tabi ONLY, missing straw-sandal straps and soles. Paper/cast/two sheathed pairs and architecture otherwise correct.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+        }
+      },
+      {
+        "id": 30,
+        "state": "pass",
+        "image": "assets/scenes/scene-0030.png",
+        "image_sha256": "6bef8f5a3a443cf4b35591d5477f51f6d6f644f9e238e111a2b4af9c3c01f869",
+        "request_sha256": "417448339754ebd4d7bdc5b2368ba1521cc08d50574373c73aacdb4460f5e041",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Full PNG inspected: exactly TWO hilts and TWO black scabbards are visible; one held fitting is wiped with plain cloth while both worn scabbards converge at his anatomical-left hip/obi. No third or loose sheath/blade.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+      },
+      {
+        "id": 31,
+        "state": "pass",
+        "image": "assets/scenes/scene-0031.png",
+        "image_sha256": "f59839907ba535fe89037613eb8f4e29d32c80802372028c5ac7c13a750efbcc",
+        "request_sha256": "aa073f93a886a9e35d3ae34ac10d19bbb657a90e184957a46f0ff2330ab074b1",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Hana folded dark garment and Kenji comparisons remain HOME with same cast/outfit, two worn swords and indoor tabi.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-026-031.jpg"
+      },
+      {
+        "id": 32,
+        "state": "pass",
+        "image": "assets/scenes/scene-0032.png",
+        "image_sha256": "360d3e7fbad598924f12d2d68c4354b5e36c5dd8f715c39bf31c6f1359781552",
+        "request_sha256": "7b79e7ef1ca10afc454042673dd709a528f73e240a02ea9f6df94e1306e79ec9",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Full PNG inspected: Hana traces worn seam of separate indigo cloth while Kenji stands looking doorway; two worn swords at viewer right, tabi only indoors, same HOME.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 33,
+        "state": "pass",
+        "image": "assets/scenes/scene-0033.png",
+        "image_sha256": "e4d26cb00523ed8f5cd6752946cbf9be35396047120951c350657b5aa79e5915",
+        "request_sha256": "8150cb9743a7c2628a2efbaf525772db620fbfe4ccd76c7c3bf4ddb234224bce",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Kenji holds straw sandal at HOME desk with repair cloth/ledger; Hana points accounts, original actors/architecture and brown pouch; extra meal tray does not conflict with ordinary-expenses narration.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 34,
+        "state": "pass",
+        "image": "assets/scenes/scene-0034.png",
+        "image_sha256": "afc3eb86cb9f50d3be3611d3cd95e0f71583c4decd981b6b3308a74e563176c3",
+        "request_sha256": "3a59d8fcf12b1a82aca158396688a1c0f959f28e865902d96d428717191e36f2",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Original MARKET facade/stock/cart/daylight; Merchant plain modest cloth roll and Kenji considers, two worn swords/ outdoor sandals.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 35,
+        "state": "pass",
+        "image": "assets/scenes/scene-0035.png",
+        "image_sha256": "5b7745d939a8c608e56acfe3c75001037f9a8aa49457c539b7116a0eae58f747",
+        "request_sha256": "8e62fb35350b1573d523d5cf90be8fec0bfdf2171d8dd74ed453a92f36dbc015",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME Kenji checks wooden equipment box with lid open during inspection, Hana tidies garment on original shelf; no worn armor or changed identity.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 36,
+        "state": "pass",
+        "image": "assets/scenes/scene-0036.png",
+        "image_sha256": "88b0f8a252409d8a5edf34419133914c4c9f3eb1123c056f3ee40ce31f3e8ee1",
+        "request_sha256": "bc7b4d04636b39609813f42e1ada99f737c26894be1a6947f13439be3e1d2a4c",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME exact cast, plain brown pouch in Hana hands and repaired sandal physically placed by Kenji; worn pair/indoor tabi, ledger and equipment box retained.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 37,
+        "state": "pass",
+        "image": "assets/scenes/scene-0037.png",
+        "image_sha256": "9e6a27173b98fb56ddeda2b47f4dd69bdc7a6e346ab0ed57734cfab66b3f7872",
+        "request_sha256": "9bf93966c2a286b5bdf8d7471ce6865cdc7faa1b6c2e7da29212c9d6d1ba2a5e",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "MARKET Merchant weighs rice on modest portable balance atop fixed counter, Kenji watches with brown pouch; stock/cart/identities/sandals/worn pair remain.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 21,24,26,27,29,30,32",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-032-037.jpg"
+      },
+      {
+        "id": 38,
+        "state": "pass",
+        "image": "assets/scenes/scene-0038.png",
+        "image_sha256": "ee1199d940d6c8c0bd0646d6c9afaaa4549afbf77e5519a015e39d7b0d3e51a0",
+        "request_sha256": "7ed5c27e76b25d5559d4ecd42cec00656720ebe448a4036ef4fb6b8396f8ec40",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME Hana repairs sandal beside household papers; Kenji opens plain brown pouch by ledger; correct identities/worn pair and room/daylight.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+      },
+      {
+        "id": 39,
+        "state": "pass",
+        "image": "assets/scenes/scene-0039.png",
+        "image_sha256": "595134ace5473b2477f4f543dff2f13d508060f542f3c74f46fd0a3a5bc7f1f9",
+        "request_sha256": "580b482367a44918d537033348b9c8365acf1e9beb901d2c4d77232ffe294d18",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "MARKET rice-to-cash handoff: both named actors contact ONE plain brown pouch; Kenji two worn swords and outdoor sandals; unchanged counter/rice stock/cart.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+      },
+      {
+        "id": 40,
+        "state": "pass",
+        "image": "assets/scenes/scene-0040.png",
+        "image_sha256": "8d2247a7f9821879490367126103ed4a215ad9921b4a163a04de4f5c2711ca0e",
+        "request_sha256": "9d7678ff90cf866cca588dc055b83c611d0ae7be143218fe331d7e838567886b",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: Kenji now wears plain straw sandals over same white tabi; plain brown pouch, anxious face, two worn swords, merchant/ledger/counter/cart/street retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150.png",
+            "sha256": "38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150"
+          },
+          "original_request_sha256": "9d7678ff90cf866cca588dc055b83c611d0ae7be143218fe331d7e838567886b",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0040/9d7678ff90cf866cca588dc055b83c611d0ae7be143218fe331d7e838567886b/receipt.json",
+            "sha256": "1bbe8ab473ffc3f0ed5ab7b77465e9f5dac1770f66ecad48e7d8e944b43d2dee"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0040.txt",
+            "sha256": "f9d57fad2d0a3fd4c2c5283fbbfd39730e9fa5e1afcab7f1ea6b1a2c6b3a46fe"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0040.png",
+            "sha256": "8d2247a7f9821879490367126103ed4a215ad9921b4a163a04de4f5c2711ca0e"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch2.json",
+            "sha256": "9468692bc062fbc8432fc1ee821dfbc8a8036f5115b77703333b465804ffe2ae"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 40,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150.png",
+          "image_sha256": "38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150",
+          "request_sha256": "9d7678ff90cf866cca588dc055b83c611d0ae7be143218fe331d7e838567886b",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: outdoor MARKET Kenji wears white tabi ONLY, no straw-sandal straps/soles. Brown pouch, two worn swords, ledger and stock otherwise consistent.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+        }
+      },
+      {
+        "id": 41,
+        "state": "pass",
+        "image": "assets/scenes/scene-0041.png",
+        "image_sha256": "d25797e8bd84b46c0c60c8329ce1ec9912a381681e13fafa5466d1efe833832e",
+        "request_sha256": "2bbf576e103d27d9008566ab9cd146f99923e7d99e18ce9f0755defdba15e5fa",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME only few bronze coins poured from plain brown pouch; Hana measures rice physically with scoop/bowl, original actors and correct indoor feet/sword pair.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+      },
+      {
+        "id": 42,
+        "state": "pass",
+        "image": "assets/scenes/scene-0042.png",
+        "image_sha256": "dd094f3696b6c780b40e97a0cdb813fb5e5ab70c248427c59f0cfeacc149a64f",
+        "request_sha256": "2ccda0fd9b20c4604a160da61aedca66e204c4472748d8d429d18b095e803384",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "MARKET Kenji bends requesting assistance with cream paper pledge to Merchant; hands grounded to paper, stock/counter/cart/identities retained, sandals visible.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+      },
+      {
+        "id": 43,
+        "state": "pass",
+        "image": "assets/scenes/scene-0043.png",
+        "image_sha256": "ff6c3eb2b0296fae97784f26ea9efb588400347c7ed53ec17813d5e58717132a",
+        "request_sha256": "468e8ee3a589251c46c0bf180404a1d09434415f9fc803e19bfe1df13d616465",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: Kenji now wears plain straw sandals over same white tabi; anxious face/folded black hands/two worn swords, merchant holding brown pouch/ledger, original stock/cart/street retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632.png",
+            "sha256": "5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632"
+          },
+          "original_request_sha256": "468e8ee3a589251c46c0bf180404a1d09434415f9fc803e19bfe1df13d616465",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0043/468e8ee3a589251c46c0bf180404a1d09434415f9fc803e19bfe1df13d616465/receipt.json",
+            "sha256": "3341a1535728b59abf3bb3b6094d36b358865fcd41f84919878da73fa69ccdb5"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0043.txt",
+            "sha256": "69f2f16a00ef88f4d695f269bfb74c2b748ced1283d46d13cc7565772cbc5025"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0043.png",
+            "sha256": "ff6c3eb2b0296fae97784f26ea9efb588400347c7ed53ec17813d5e58717132a"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch2.json",
+            "sha256": "9468692bc062fbc8432fc1ee821dfbc8a8036f5115b77703333b465804ffe2ae"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 43,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632.png",
+          "image_sha256": "5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632",
+          "request_sha256": "468e8ee3a589251c46c0bf180404a1d09434415f9fc803e19bfe1df13d616465",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: outdoor MARKET Kenji wears white tabi ONLY, no straw-sandal straps/soles. Correct brown pouch/ledger/cast and two sheathed swords.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-038-043.jpg"
+        }
+      },
+      {
+        "id": 44,
+        "state": "pass",
+        "image": "assets/scenes/scene-0044.png",
+        "image_sha256": "eea46737684c6838e3dc91b7dcda304d16f07a1fd50ce093c8f4af99b3ffd150",
+        "request_sha256": "d4c3443acddda5c66e0d779d7e8248cdfc0cff07fd8e9832429380888876b02d",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME adult Kenji teaches plain learning scroll with empty gesturing hand toward off-screen pupil; no added actor/classroom/signs, correct outfit and worn pair.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+      },
+      {
+        "id": 45,
+        "state": "pass",
+        "image": "assets/scenes/scene-0045.png",
+        "image_sha256": "d122df8a77ccadd354acc924eb00e1eb12d3eac0fe9fa6672f5cb944a5540293",
+        "request_sha256": "f099ed8802a505943123344f96c5a367d01c286441dd0d08418c844868dcd789",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "MARKET Merchant closes grounded ledger, Kenji one modest brown pouch; two sheathed swords and outdoor sandals, unchanged cast/stock/cart.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+      },
+      {
+        "id": 46,
+        "state": "pass",
+        "image": "assets/scenes/scene-0046.png",
+        "image_sha256": "aedcf85e2780d9d38831508e7a852b0d0a622ee4c6b447c93ef21c475c187b9d",
+        "request_sha256": "42bf420d94f7f1349981b32b81397fac10059e1ab7a93bd2b82065dcbb34ad5c",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: only Senior missing outdoor sandals corrected with tan crossed straw straps and woven soles over existing white tabi; Kenji already-correct sandals, both identities/paper order/four swords/gate retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921.png",
+            "sha256": "3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921"
+          },
+          "original_request_sha256": "42bf420d94f7f1349981b32b81397fac10059e1ab7a93bd2b82065dcbb34ad5c",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0046/42bf420d94f7f1349981b32b81397fac10059e1ab7a93bd2b82065dcbb34ad5c/receipt.json",
+            "sha256": "973eec0cfb7628635fc86e2ff300080d1ea641223dff5159521a47d0e7472687"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0046.txt",
+            "sha256": "a867c4ae53adb3fa5210f8a4625112a4e282765beb51725491edc50ebfb2c619"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0046.png",
+            "sha256": "aedcf85e2780d9d38831508e7a852b0d0a622ee4c6b447c93ef21c475c187b9d"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch3.json",
+            "sha256": "f6a79ac27dd6dd11af2188057dd03594b08d5520edae0d2989e3ae82e37e8a5b"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 46,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921.png",
+          "image_sha256": "3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921",
+          "request_sha256": "42bf420d94f7f1349981b32b81397fac10059e1ab7a93bd2b82065dcbb34ad5c",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: outdoor GATE Kenji has straw sandals, but SENIOR on viewer right wears white tabi ONLY without straw sandals. Both pairs and cream tied order are correct.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+        }
+      },
+      {
+        "id": 47,
+        "state": "pass",
+        "image": "assets/scenes/scene-0047.png",
+        "image_sha256": "c6df68b49010a5dd2ee305df705ee795c2e3ee0ee3963879f062644f54b1fded",
+        "request_sha256": "0983ac3117892ce6413622b9d1b63df7941548467185223c2fecd035fbf66c1b",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "OFFICE Senior checks register/paper work while Kenji stands supervised with lowered hands; original architecture/cubby/window and two exact cast/worn pairs/t abi retained.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+      },
+      {
+        "id": 48,
+        "state": "pass",
+        "image": "assets/scenes/scene-0048.png",
+        "image_sha256": "8405a02749597c1ab46af73524da0e46ad900102cf1c31f7ed8e894f4ebf9258",
+        "request_sha256": "a786afd3edd4f84027499419ac7f6a7f8e280cff423a404dc4ba67dccfd76ee3",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME Senior at original rear-right open doorway extends tied cream order; Kenji turns from ledger, Hana pauses repair; three exact identities and indoor white tabi, unchanged shelf/opening/daylight.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+      },
+      {
+        "id": 49,
+        "state": "pass",
+        "image": "assets/scenes/scene-0049.png",
+        "image_sha256": "d4c079217f649fde8b5753496f7ab8f3666106e596a1e31507b498ed204b5a49",
+        "request_sha256": "d867bca10ff0a6091671416f271dd425869f2a3ad98bdb3293b0f9a4ea028cad",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: extra cream-striped lowered-hand prop removed, BLACK MITTEN hand relaxed and empty, register retained in other hand, TWO original cream-wrapped hilts with worn black scabbards retained. Straw sandals added over existing white tabi, exact cast/bench/gate preserved.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1.png",
+            "sha256": "d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1"
+          },
+          "original_request_sha256": "d867bca10ff0a6091671416f271dd425869f2a3ad98bdb3293b0f9a4ea028cad",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0049/d867bca10ff0a6091671416f271dd425869f2a3ad98bdb3293b0f9a4ea028cad/receipt.json",
+            "sha256": "6c0bf75ab3e6f693a218b369538490c027d8bb0016f16e7f1d947a77c8eac4f5"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0049.txt",
+            "sha256": "90aa5a22576c9c923b87a8138280d664b5eba03bc20c6dbdf7587b4d90827248"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0049.png",
+            "sha256": "d4c079217f649fde8b5753496f7ab8f3666106e596a1e31507b498ed204b5a49"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch3.json",
+            "sha256": "f6a79ac27dd6dd11af2188057dd03594b08d5520edae0d2989e3ae82e37e8a5b"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 49,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1.png",
+          "image_sha256": "d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1",
+          "request_sha256": "d867bca10ff0a6091671416f271dd425869f2a3ad98bdb3293b0f9a4ea028cad",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: outdoor GATE Kenji wears white tabi ONLY without straw sandals. Also an unrequested long cream-wrapped wood/weapon-like prop appears diagonally at lowered viewer-right hand behind his TWO regular worn swords. Remove that additional held object and retain only register plus worn pair.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-044-049.jpg"
+        }
+      },
+      {
+        "id": 50,
+        "state": "pass",
+        "image": "assets/scenes/scene-0050.png",
+        "image_sha256": "e64bf232238cec3a048dffc0e6bc0c5aa70c65480755121e814129069eaee32b",
+        "request_sha256": "78348afe793b2e466d0e24df5680108355f956d5a766f45edfbdad6ffd5a6a10",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Full PNG: task pile grounded on original OFFICE desk, Senior indicates another register and Kenji pending papers. Each TWO hilts and scabbards are worn correctly relative to front three-quarter torso; black scabbards extending behind robe is not evidence of wrong hip.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-050-054.jpg"
+      },
+      {
+        "id": 51,
+        "state": "pass",
+        "image": "assets/scenes/scene-0051.png",
+        "image_sha256": "8ae18c58a65ad33455753cd1e3760616a4325715aeb5df65dbc8f2ee1c4ab28b",
+        "request_sha256": "7709fcbd930efa4de9eaecf36d3a700130251fa90cb0d76c38c37c34a44cdd29",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "OFFICE Kenji empty plain folder, questioning Senior; exact identities/grounded desk props and two worn pairs, no text/extra limbs.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-050-054.jpg"
+      },
+      {
+        "id": 52,
+        "state": "pass",
+        "image": "assets/scenes/scene-0052.png",
+        "image_sha256": "ac3d54b1dcf4b7bdb28e6ca7c30e4ca05d83c595848ca87790f1dcc7ec7e3fc9",
+        "request_sha256": "1dd6a171f95a6a25b845c8c1beb347193ce035185b0d86d9a820c1da7c07c456",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Full PNG: Senior hands tied cream paper ORDER BUNDLE rather than single sheet, Kenji holds task papers and register remains open on desk; paper-bundle presentation remains consistent clerical-task narration, two worn sword pairs and fixed OFFICE.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-050-054.jpg"
+      },
+      {
+        "id": 53,
+        "state": "pass",
+        "image": "assets/scenes/scene-0053.png",
+        "image_sha256": "930963c2516508dfa7738269bc5730c7fa645baa6509f5c7bd46dfb4cf8c5603",
+        "request_sha256": "5c34bdec0fdc214b5cd6d1dbf5dffeb467d062196dfe1aa0d51151cac37b22e4",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "HOME Kenji puts sealed cream tied order physically separate from household ledger while Hana sits beside him; correct cast/room/desk and indoor tabi.",
+        "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+        "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-050-054.jpg"
+      },
+      {
+        "id": 54,
+        "state": "pass",
+        "image": "assets/scenes/scene-0054.png",
+        "image_sha256": "a6e11fc96a6830c4fb32b71615381f431bc94c8581a01199c0b591c2bc3dc231",
+        "request_sha256": "b83cb7f861d6750bfc12e64524ae1f4c3de9b355e4ded398902d3e49fb72b86a",
+        "reviewer": "samurai_regen_visual_a",
+        "notes": "Actual full edited PNG viewed: brown pouch replaced by ONE closed rectangular CREAM PAPER ORDER tied by brown cord, both men hands contact it properly; straw sandals over existing white tabi on both men, same bow/standing poses/cast/gate and two worn swords per man retained (Kenji profile occlusion remains natural).",
+        "review_method": "actual original and edited PNG full-resolution visual inspection, cast and location references checked",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020.png",
+            "sha256": "631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020"
+          },
+          "original_request_sha256": "b83cb7f861d6750bfc12e64524ae1f4c3de9b355e4ded398902d3e49fb72b86a",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0054/b83cb7f861d6750bfc12e64524ae1f4c3de9b355e4ded398902d3e49fb72b86a/receipt.json",
+            "sha256": "076e88087dd2a34c9656fd42dcb7576b6a0b22eb7e8df64c98f1dfd0b4fc6ca7"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0054.txt",
+            "sha256": "df88692d80fbae61ce1e3e4dde557d15f763878cbaa55901e62026bc0216933c"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0054.png",
+            "sha256": "a6e11fc96a6830c4fb32b71615381f431bc94c8581a01199c0b591c2bc3dc231"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-completed-tool-provenance-batch3.json",
+            "sha256": "f6a79ac27dd6dd11af2188057dd03594b08d5520edae0d2989e3ae82e37e8a5b"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/targeted-edits-a/actual-tool-arguments-v1.json",
+            "sha256": "5f815c916a2e3e1daea703b5d929e3e053b82116a904b4596ed742ddf1abe4d6"
+          }
+        },
+        "previous_source_review": {
+          "id": 54,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020.png",
+          "image_sha256": "631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020",
+          "request_sha256": "b83cb7f861d6750bfc12e64524ae1f4c3de9b355e4ded398902d3e49fb72b86a",
+          "reviewer": "samurai_regen_visual_a",
+          "notes": "Full PNG: Senior hands Kenji a BROWN CLOTH COIN POUCH instead of regular CLOSED CREAM PAPER ORDER TIED WITH BROWN CORD; both men also wear indoor white tabi only at outdoor GATE. Kenji partly-occluded worn pair requires retention during correction; original cast and gate otherwise correct.",
+          "review_method": "actual source PNG in readable labeled contact sheet; full-resolution source additionally viewed for 40,43,46,49,50,52,54",
+          "actual_contact_sheet": "/workspace/samurai-chapters-regeneration/episode-01/visual-review-a/scenes-050-054.jpg"
+        }
+      },
+      {
+        "id": 55,
+        "state": "pass",
+        "image": "assets/scenes/scene-0055.png",
+        "image_sha256": "4d66502f482a1294aa6e6179b7d47a8a8823584bec05885fa8a190d7be5b0575",
+        "request_sha256": "22d292e730dcdf6feb9f902a5fece628ff7467122df8724cd855913bd6a6341b",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Two held wooden rods, empty wall brackets and retained worn sword pairs. Kenji sword pair partly occluded by natural grip, not missing. Hall geometry, white indoor tabi, black hands and controlled stance match. Cream forearm fill accepted explicitly by root.",
+        "review_method": "actual full PNG and detail view",
+        "reviewed_at": "2026-10-13T18:01:48.553321+00:00",
+        "prior_assessment": {
+          "id": 55,
+          "state": "needs_correction",
+          "image": "assets/scenes/scene-0055.png",
+          "image_sha256": "4d66502f482a1294aa6e6179b7d47a8a8823584bec05885fa8a190d7be5b0575",
+          "request_sha256": "22d292e730dcdf6feb9f902a5fece628ff7467122df8724cd855913bd6a6341b",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Actual full source and enlarged Kenji hip inspected. Correct held wooden practice rods and empty wall brackets; identity, room and white indoor tabi match. Both characters have thick cream forearms instead of fixed thin black line forearms; requires root style decision or targeted correction. Kenji hilt/scabbard partly naturally occluded by grip, not asserted as missing.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T17:53:46.917943+00:00"
+        },
+        "root_style_decision": "Root message: Small cream cel-drawn exposed forearms when arms are raised are acceptable 2D pose/style variation (black hands remain), not a costume identity change; do not hold PASS solely on cream arm fill. Prohibit extra or thick realistic anatomical members."
+      },
+      {
+        "id": 56,
+        "state": "pass",
+        "image": "assets/scenes/scene-0056.png",
+        "image_sha256": "5c4d14256293218c77c355dbe279df9b124521e0710ed9cc165c2c4c6321323c",
+        "request_sha256": "32ce022dacbd8446f9a795db9dc0f3320bf5c66e5ca3dc47635f104b64e0b4f2",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior demonstrates wooden grip while Kenji holds own rod. Exactly two held wood rods, empty brackets, four worn steel swords and white indoor tabi. Same hall, black hands and identities. Cream forearm fill accepted explicitly by root.",
+        "review_method": "actual full PNG and detail view",
+        "reviewed_at": "2026-10-13T18:01:48.560243+00:00",
+        "prior_assessment": {
+          "id": 56,
+          "state": "needs_correction",
+          "image": "assets/scenes/scene-0056.png",
+          "image_sha256": "5c4d14256293218c77c355dbe279df9b124521e0710ed9cc165c2c4c6321323c",
+          "request_sha256": "32ce022dacbd8446f9a795db9dc0f3320bf5c66e5ca3dc47635f104b64e0b4f2",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Actual full PNG viewed. Correct two held wood rods and empty wall brackets; two worn sword hilts and two black scabbards per man are visible. Both actors have cream forearms rather than fixed black line arms; no other physical defect found.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T17:53:46.927799+00:00"
+        },
+        "root_style_decision": "Root message: Small cream cel-drawn exposed forearms when arms are raised are acceptable 2D pose/style variation (black hands remain), not a costume identity change; do not hold PASS solely on cream arm fill. Prohibit extra or thick realistic anatomical members."
+      },
+      {
+        "id": 57,
+        "state": "pass",
+        "image": "assets/scenes/scene-0057.png",
+        "image_sha256": "f0617bf06d25fea1eebbae2b92b81fd3b9f918e319581210815e79a676dc12a2",
+        "request_sha256": "660f0154e89671de4ed08adcdde7296ff74af6bf5fb6dece98278e0c7dc1ebfb",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji performs controlled practice while Senior holds his own rod at safe distance. Exactly two wood rods in hands, empty brackets, four worn steel swords, no fight contact or drawn blade. Same hall and indoor tabi; cream forearm fill allowed by root.",
+        "review_method": "actual full PNG and detail view",
+        "reviewed_at": "2026-10-13T18:01:48.562685+00:00",
+        "prior_assessment": {
+          "id": 57,
+          "state": "needs_correction",
+          "image": "assets/scenes/scene-0057.png",
+          "image_sha256": "f0617bf06d25fea1eebbae2b92b81fd3b9f918e319581210815e79a676dc12a2",
+          "request_sha256": "660f0154e89671de4ed08adcdde7296ff74af6bf5fb6dece98278e0c7dc1ebfb",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Actual full PNG viewed. Kenji controlled practice and Senior holds own rod; empty wall brackets and four worn swords are correct. Kenji cream forearms violate thin black arm style; Senior lower forearm also cream. Indoor white tabi and hall geometry match.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T17:53:46.930410+00:00"
+        },
+        "root_style_decision": "Root message: Small cream cel-drawn exposed forearms when arms are raised are acceptable 2D pose/style variation (black hands remain), not a costume identity change; do not hold PASS solely on cream arm fill. Prohibit extra or thick realistic anatomical members."
+      },
+      {
+        "id": 58,
+        "state": "pass",
+        "image": "assets/scenes/scene-0058.png",
+        "image_sha256": "9d43b2a3cd7f70a990ed02e22ca8e5549448ec1b542908c7daa1d66cfcbb8be7",
+        "request_sha256": "1163aaa0be5d43c34458ce5c402f418411c09427be4d558fbf898c1d04e1eb81",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior empty hand points at elbow and other hand holds one wood rod; Kenji holds one wood rod. Empty brackets, four worn steel swords, no extra arm. Fixed floor cloth, hall, white tabi and character identities match; cream forearm fill allowed by root.",
+        "review_method": "actual full PNG and detail view",
+        "reviewed_at": "2026-10-13T18:01:48.568922+00:00",
+        "prior_assessment": {
+          "id": 58,
+          "state": "needs_correction",
+          "image": "assets/scenes/scene-0058.png",
+          "image_sha256": "9d43b2a3cd7f70a990ed02e22ca8e5549448ec1b542908c7daa1d66cfcbb8be7",
+          "request_sha256": "1163aaa0be5d43c34458ce5c402f418411c09427be4d558fbf898c1d04e1eb81",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Actual full PNG viewed. Senior points to elbow with empty hand and holds one wood rod, Kenji holds one wood rod, rear brackets empty. Four worn steel swords correct. Cream forearms replace cast black line arms; hall and floor cloth maintained.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T17:53:46.932985+00:00"
+        },
+        "root_style_decision": "Root message: Small cream cel-drawn exposed forearms when arms are raised are acceptable 2D pose/style variation (black hands remain), not a costume identity change; do not hold PASS solely on cream arm fill. Prohibit extra or thick realistic anatomical members."
+      },
+      {
+        "id": 59,
+        "state": "pass",
+        "image": "assets/scenes/scene-0059.png",
+        "image_sha256": "98355ac131c413fbea24fa66ab5f92d720e9c0e8cc51b0d24c8b4ae5f8cf6c3d",
+        "request_sha256": "720ff348aa97a854d363ab19db2f9720a75f1a84c528b03b95aebfe88bd7c28e",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: plain straw sandals fitted over white tabi on all four outdoor feet; correct Kenji and Senior four worn swords, black hands, faces, gestures and gate geometry retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:12:41.578654+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48.png",
+            "sha256": "caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48"
+          },
+          "original_request_sha256": "720ff348aa97a854d363ab19db2f9720a75f1a84c528b03b95aebfe88bd7c28e",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0059/720ff348aa97a854d363ab19db2f9720a75f1a84c528b03b95aebfe88bd7c28e/receipt.json",
+            "sha256": "2d0308511716940fbeb32ef0bb0a7333a24e9f74f075fb131217f3a808e96458"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0059.txt",
+            "sha256": "36d3ce85934e0776beefa7dbdc1183bf8782dbf9225dedab8fc72b642cae0917"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0059.png",
+            "sha256": "98355ac131c413fbea24fa66ab5f92d720e9c0e8cc51b0d24c8b4ae5f8cf6c3d"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch1.json",
+            "sha256": "25e0098a99b20caa0c7d90217d5530849fdcb682657281f7c99391ea888fb949"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 59,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48.png",
+          "image_sha256": "caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48",
+          "request_sha256": "720ff348aa97a854d363ab19db2f9720a75f1a84c528b03b95aebfe88bd7c28e",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Both actors wear white tabi ONLY outdoors with no straw sandal sole or straps. Gate geometry, calm conversation, four worn swords and absence of practice rods otherwise match. Requires sandal correction.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.576577+00:00"
+        }
+      },
+      {
+        "id": 60,
+        "state": "pass",
+        "image": "assets/scenes/scene-0060.png",
+        "image_sha256": "94cbe2db68c9d3a480edf6e476a14d0e0a07243440459cb1e9650cea40d91c76",
+        "request_sha256": "d6bc0cff0c4904a19a7fb977190c18e254a26cff5a25a81916e5595001978eae",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual source contact viewed at 836-pixel-wide cell against Office reference. Senior paper explanation and seated Kenji at existing low desk; same left cubbies, rear shoji, right door panels, blue cushions and stationery. Two worn sword pairs visible; no execution imagery, text or added actors.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T17:53:46.942181+00:00"
+      },
+      {
+        "id": 61,
+        "state": "pass",
+        "image": "assets/scenes/scene-0061.png",
+        "image_sha256": "fcddf72f5d3258dccb9ad6e44c9fe77a515119c4844afe25401358416d4c41fb",
+        "request_sha256": "b2a8d683bdd0ec09c3d46e9a6d8f9224411b8d80d5a7002562a5474b2165cffd",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual source contact viewed at 836-pixel-wide cell. Senior calming hand, Kenji relaxing; both two worn sword hilts, straw sandals over white tabi, same gate/pine/cabinet/bench and daylight. No held practice rods, blade or added person.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T17:53:46.946736+00:00"
+      },
+      {
+        "id": 62,
+        "state": "pass",
+        "image": "assets/scenes/scene-0062.png",
+        "image_sha256": "9d61f57ebcf23c93f5b3b04fd51b297cd9e4d29aaeda24b6645636bd80b9fde3",
+        "request_sha256": "ea5f609094ab793cd30919bb3319e6095110b20af67799536f913cf5424d7625",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Peaceful tense market exchange; Kenji open empty black hands, Merchant ledger at fixed left counter, rice sacks, indigo noren and right handcart preserved. Two worn swords, Kenji straw sandals, no weapon draw or bystander.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.579079+00:00"
+      },
+      {
+        "id": 63,
+        "state": "pass",
+        "image": "assets/scenes/scene-0063.png",
+        "image_sha256": "4813aa048397e2be3dbbe364569b637c432f799456a23a05cfe3e4e5a2f54847",
+        "request_sha256": "cfac5579c3bc82002c03d6b8dd0fab0ca5ddb66ea050608c0ea95c82750e780f",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Tired seated Kenji receives a plain cup from Hana. Fixed HOME shelf, cabinet, rear shoji, right veranda and low desk preserved. Two worn swords, black hands, white indoor tabi, no injury imagery.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.585173+00:00"
+      },
+      {
+        "id": 64,
+        "state": "pass",
+        "image": "assets/scenes/scene-0064.png",
+        "image_sha256": "cbfd89ecb6663253be1968e7ad79cbe88a5bc1dbbc9fd9f7797e52c4c02a809b",
+        "request_sha256": "35e8a04813035e596247bc13a0c78c1cb6b485a3bd26c50598be698b429cf615",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Hana cooperate over ledger, ONE plain cup, folded indigo repair garment and ONE brown cloth pouch. Same HOME architecture and identities; no patterned or purple pouch, extra actor or new room.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.591966+00:00"
+      },
+      {
+        "id": 65,
+        "state": "pass",
+        "image": "assets/scenes/scene-0065.png",
+        "image_sha256": "549e526138c3661117382235102b8a7c33eaa483aa349de213dc288688cefaf6",
+        "request_sha256": "1523342e9675c12480e09870bdb5873ab262454cb201be223e494678807c059a",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: Kenji two hilts now attach naturally at viewer-right of his grey obi; wrong protruding black shape behind viewer-left waist removed. No duplicate sword pair; Father correct pair, all four adult identities, hands, family record and HOME furniture retained. Scabbards partly occluded naturally by sleeve/desk.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:12:41.597552+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c.png",
+            "sha256": "abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c"
+          },
+          "original_request_sha256": "1523342e9675c12480e09870bdb5873ab262454cb201be223e494678807c059a",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0065/1523342e9675c12480e09870bdb5873ab262454cb201be223e494678807c059a/receipt.json",
+            "sha256": "228fec44f9138e2536a4a5cb59101aaed85abe20eda0797ded5681100c864e99"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0065.txt",
+            "sha256": "bb9f9e7db69f58887e79fe249a07f0a16d7a4e836734c0b1f737d1875441d972"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0065.png",
+            "sha256": "549e526138c3661117382235102b8a7c33eaa483aa349de213dc288688cefaf6"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch1.json",
+            "sha256": "25e0098a99b20caa0c7d90217d5530849fdcb682657281f7c99391ea888fb949"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 65,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c.png",
+          "image_sha256": "abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c",
+          "request_sha256": "1523342e9675c12480e09870bdb5873ab262454cb201be223e494678807c059a",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Potential wrong-hip issue held for root actual confirmation: Kenji two hilts sit viewer-left of waist despite mostly front-facing torso. Exactly four named adults, correct robes/buns, existing desk and one open family record; no new furniture or child.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.594106+00:00"
+        }
+      },
+      {
+        "id": 66,
+        "state": "pass",
+        "image": "assets/scenes/scene-0066.png",
+        "image_sha256": "443abdab401553c5b90b17145dac53c700f650dd7d84c4337290aa333b0ca8fc",
+        "request_sha256": "c45db07057a8b35c3cff5391cc480135b9d20ea409c2da06c5027d44c97f0d54",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana alone manages folded indigo repair clothing, open ledger and shelf. Fixed HOME cabinet/shoji/veranda retained; mauve robe, black low bun and black hands. Small sewing basket is task-related movable prop, no new furniture.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.598227+00:00"
+      },
+      {
+        "id": 67,
+        "state": "pass",
+        "image": "assets/scenes/scene-0067.png",
+        "image_sha256": "af47ed04ddb07154d1ad72a5b338228f7f0522db0e2153d6516ad78bb6a250c0",
+        "request_sha256": "a2e0ed8f48d444bd3ea272c248e354c26f304fcc3f81154a7a3c29d3d873e263",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana and Mother compare open record and folded clothing. Distinct mauve versus blue-gray robes and hair, black hands, same HOME geometry. Exactly two adults, no swords or unrelated props.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.606060+00:00"
+      },
+      {
+        "id": 68,
+        "state": "pass",
+        "image": "assets/scenes/scene-0068.png",
+        "image_sha256": "83b02a426f59c01adfaca9a69c12404a95a68508ee9f36bc96d4e85b21133b9d",
+        "request_sha256": "7abadbe4d1dd84679fdb623fc518748d32788f505de88b8ff2f64891873ad82a",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: both erroneous scabbard-like bars behind Hana right-side robe completely removed; clean mauve robe edge and tatami restored. Hana weapon-free, Kenji worn pair unchanged, black hands, pointing action, ledger, coins, brown pouch, order and HOME scene preserved.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:12:41.619865+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf.png",
+            "sha256": "9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf"
+          },
+          "original_request_sha256": "7abadbe4d1dd84679fdb623fc518748d32788f505de88b8ff2f64891873ad82a",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0068/7abadbe4d1dd84679fdb623fc518748d32788f505de88b8ff2f64891873ad82a/receipt.json",
+            "sha256": "06abf8bda6dcc96122da2436d2413bbc64d23c87f770559a7395a68da7edb175"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0068.txt",
+            "sha256": "80e6ee221cf774768ee2036dd60fc97887622ed594a0d95d38d3b8c7b7bd8e68"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0068.png",
+            "sha256": "83b02a426f59c01adfaca9a69c12404a95a68508ee9f36bc96d4e85b21133b9d"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch1.json",
+            "sha256": "25e0098a99b20caa0c7d90217d5530849fdcb682657281f7c99391ea888fb949"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 68,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf.png",
+          "image_sha256": "9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf",
+          "request_sha256": "7abadbe4d1dd84679fdb623fc518748d32788f505de88b8ff2f64891873ad82a",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Hana incorrectly has TWO black scabbard-like bars protruding behind her right hip; she has no weapons in selected identity. Kenji still has correct two worn swords. Coins, brown pouch, open ledger and duty paper otherwise match. Remove only Hana bars.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.613363+00:00"
+        }
+      },
+      {
+        "id": 69,
+        "state": "pass",
+        "image": "assets/scenes/scene-0069.png",
+        "image_sha256": "fbd75817fac69e26371cb036a24243622bef8db93b5129e825192e2119db955d",
+        "request_sha256": "82770cf777a2d587f0ffcc111600b2e66d0de2e303a0d69f2380c97b69e3b243",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji checks ledger while Hana offers a plain cup to Mother. Three correct named adult identities, no added child or medical object. Brown pouch and household papers on fixed desk; same HOME geometry and indoor tabi.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.619048+00:00"
+      },
+      {
+        "id": 70,
+        "state": "pass",
+        "image": "assets/scenes/scene-0070.png",
+        "image_sha256": "1dabeb97ccd3ba20ad8ad42dbaaec7f9511ce06f9057ff9015fcffafb3eb9614",
+        "request_sha256": "f6d62a5e9c7e8657118efc6f9155f8ec7fa20d4f32bb909449c43c161378486a",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Father passes a plain bound register to Kenji while Hana examines a learning scroll. Three correct adult identities and robes, no adoption baby or costume change. HOME shelf, cabinet, shoji and right veranda maintained.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.622288+00:00"
+      },
+      {
+        "id": 71,
+        "state": "pass",
+        "image": "assets/scenes/scene-0071.png",
+        "image_sha256": "7a6106478d0881a88f14b7e5043b5a84b98b79fa704e1716af2c53a89d375e05",
+        "request_sha256": "f1aa6ce6341ae900bcc0b33d3881c9e67307b721da5be69acd7423017747f23c",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Four adults deliberate over household record presented by Mother. Correct Kenji/Hana/Father/Mother distinction, no invented relative or child. Same HOME architecture and low desk, only appropriate papers.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.631311+00:00"
+      },
+      {
+        "id": 72,
+        "state": "pass",
+        "image": "assets/scenes/scene-0072.png",
+        "image_sha256": "1ac6e1573853ffa9f5d76b7158173271c923d33b841d410d364aeb0ffcce1053",
+        "request_sha256": "362a2aa8f0c77e74351c295c809c722cedea6b03447ef1e4d36e4bb562731bde",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Concerned Kenji sets closed service file beside household ledger while Hana listens. Same HOME geography, adult identities and worn sword pair. No day/night change or extra person; brown closed document is a plain file rather than a magical object.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.634566+00:00"
+      },
+      {
+        "id": 73,
+        "state": "pass",
+        "image": "assets/scenes/scene-0073.png",
+        "image_sha256": "54087dd4d72698896fe758697ee20478ae551ebe504b9872a81b6befbce6e90b",
+        "request_sha256": "c066281e8d894741637ecce2efffde8fc0e71f863027dfde95138df7664a56df",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Senior each read closed duty orders on same road. ONE brown cloth travel bundle grounded at Kenji feet. Inn left, bridge right, slopes/weather stable, four worn steel swords and straw sandals.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.655126+00:00"
+      },
+      {
+        "id": 74,
+        "state": "pass",
+        "image": "assets/scenes/scene-0074.png",
+        "image_sha256": "18cceeff423ca1c29ff9606fb6f5c337b346814e589c2912d6f4952266951704",
+        "request_sha256": "fb2c9bdeda0ff77eaf8d7a2a5e3287ece50ee8f633a6bf526097953f31655a80",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Administrative insert: Senior points to route scroll and Kenji listens at fixed office desk. Left cubbies, rear shoji, right doors, cushions and books maintained. No invented readable map labels or marching crowd; two worn sword pairs.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.663791+00:00"
+      },
+      {
+        "id": 75,
+        "state": "pass",
+        "image": "assets/scenes/scene-0075.png",
+        "image_sha256": "280a53f388d2d154ac5098be734acd4908e3bb50c46a83ea4e21a0bc55a58e26",
+        "request_sha256": "b1f5e6c153071ba4e0a785a85c680983289f634d60d962d43580f756af19c1f6",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: Senior now holds ONE closed cream folded paper order tied with brown cord in the same black hands; wrong small brown pouch removed. Kenji SINGLE large brown travel bundle, four worn swords, straw sandals, road/inn/bridge/daylight and all actors preserved.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:16:26.567178+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1.png",
+            "sha256": "26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1"
+          },
+          "original_request_sha256": "b1f5e6c153071ba4e0a785a85c680983289f634d60d962d43580f756af19c1f6",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0075/b1f5e6c153071ba4e0a785a85c680983289f634d60d962d43580f756af19c1f6/receipt.json",
+            "sha256": "5432ed9340c66f0cd851437c4bca2d080ee92f535e5fcb4b92eae21238ca118e"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0075.txt",
+            "sha256": "e09332ddf8d7f891f28fbb612ad32738c4670f2a60670c6c136f57b781e29e81"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0075.png",
+            "sha256": "280a53f388d2d154ac5098be734acd4908e3bb50c46a83ea4e21a0bc55a58e26"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch2.json",
+            "sha256": "1ccf2d0dd18ac11040e75ad19e8572361f525db2219b3cf846e301914bc62028"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 75,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1.png",
+          "image_sha256": "26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1",
+          "request_sha256": "b1f5e6c153071ba4e0a785a85c680983289f634d60d962d43580f756af19c1f6",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Senior holds small brown coin pouch instead of requested closed cream travel order. Kenji correctly carries ONE larger brown travel bundle by tied handle; no ground duplicate. Road and straw sandals otherwise correct. Replace only Senior pouch with duty order.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.675814+00:00"
+        }
+      },
+      {
+        "id": 76,
+        "state": "pass",
+        "image": "assets/scenes/scene-0076.png",
+        "image_sha256": "d87b3b916201b2be9a318e2f2d2ae5119f9993d0af6bcad26ed9f2cd1278a2a8",
+        "request_sha256": "ea1c9340966fda01874f5414bc4ba40af5ae8758575a56e8903acc06046f21d9",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "At same left inn Kenji examines ONE small brown coin pouch, Senior checks closed paper order, ONE larger brown travel bundle grounded beside Kenji. Correct road/bridge/slopes, four worn swords and straw sandals; no innkeeper.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.679289+00:00"
+      },
+      {
+        "id": 77,
+        "state": "pass",
+        "image": "assets/scenes/scene-0077.png",
+        "image_sha256": "3aa958c71e82b5717ddf6c711454ff6837469ce59c9cd8d31802d2bcbd206c1c",
+        "request_sha256": "d8aa7cce387cd859bb620e4caa467166e687700e75e2cc1ec2c726128c8a6ab2",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior alone studies plain route scroll and small open travel account on fixed office desk. Same cubbies, shoji, doors, blue cushions, brush and ink tray. No added actor or claim that every retainer rotates.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.682304+00:00"
+      },
+      {
+        "id": 78,
+        "state": "pass",
+        "image": "assets/scenes/scene-0078.png",
+        "image_sha256": "4e8b96ab050f99491a053b8ec5974ad810e4a38e6b1350e0243b9b300cb7add3",
+        "request_sha256": "0f78e9e483b3b7be5e169d10380532b3286a25a3c05f4c50297a4684b109ce17",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana and Mother manage ledger and household papers with ONE brown coin pouch and small coin stacks. Correct HOME room and distinct robes/hair; no Edo prison or hostage setting.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.691836+00:00"
+      },
+      {
+        "id": 79,
+        "state": "pass",
+        "image": "assets/scenes/scene-0079.png",
+        "image_sha256": "92cb37a32044ca5e31d1f7a1b246022505ff7bf4fa08df366fa8dc3adb7d20df",
+        "request_sha256": "c0b50ea15a993f1b7567b00c23b14665c7dc17615edfb97c256fe23443c50f9b",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana alone tends folded indigo repair garment beside open ledger. Same intact HOME room and spring daylight, no unattended flame, absent Kenji correctly omitted.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.694132+00:00"
+      },
+      {
+        "id": 80,
+        "state": "pass",
+        "image": "assets/scenes/scene-0080.png",
+        "image_sha256": "d757b727bdc216da3edaf24128ac854f22b0b8acbf0d88c1dfaa56c1d4a055b1",
+        "request_sha256": "2ad62eb038f01fff5a2c198277a6a1d313df9f56d8643d07045bdd2cb96b0d42",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji arrives and reaches toward desk register beside Senior in distinct Edo room. ONE brown tied travel bundle grounded NEAR-RIGHT floor. Correct left window bank, rear doorway, right shelf, white indoor tabi, no sightseeing skyline.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.697063+00:00"
+      },
+      {
+        "id": 81,
+        "state": "pass",
+        "image": "assets/scenes/scene-0081.png",
+        "image_sha256": "15a9e5676beb8f2147e99eb76bb63ccad9c4b7a4758967a8fd894aaefe0c48a3",
+        "request_sha256": "7eb07c2cf49dec46865246d6f3bcdffc0379b71f0ddc2bfc42ae4f7900c20a75",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji writes at Edo service desk while standing Senior holds closed duty order. EXACTLY ONE brown cloth travel bundle stays grounded on NEAR-RIGHT floor. Left windows, rear doorway and right shelf unchanged; correct worn swords and indoor tabi.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.705184+00:00"
+      },
+      {
+        "id": 82,
+        "state": "pass",
+        "image": "assets/scenes/scene-0082.png",
+        "image_sha256": "aa0ac1eb47188bbba1dd02503c01ae88c49f319f8e3b14dd85354b31ca7678c2",
+        "request_sha256": "e0b26c14b2889e4f3c39885cabe489370d3cc1bc153dc157621a748affe2dc0d",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: oversized brown bag removed and replaced by ONE modest closed cream folded duty file flat beside the unchanged open ledger. No separate ordinary coin pouch existed to preserve. Kenji/Hana worried faces, black hands, clothing, worn sword pair, ink tray and HOME geometry unchanged.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:16:26.591390+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83.png",
+            "sha256": "630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83"
+          },
+          "original_request_sha256": "e0b26c14b2889e4f3c39885cabe489370d3cc1bc153dc157621a748affe2dc0d",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0082/e0b26c14b2889e4f3c39885cabe489370d3cc1bc153dc157621a748affe2dc0d/receipt.json",
+            "sha256": "372f3a8c8bef5101ceee8a36b285a6b275429d6ae8845a8ae94f1f917e0fe212"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0082.txt",
+            "sha256": "abadc1a2d4fc1c72e7c9c9e96bb2428aedd0fb0945192071eeb5d5096cb9f3bb"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0082.png",
+            "sha256": "aa0ac1eb47188bbba1dd02503c01ae88c49f319f8e3b14dd85354b31ca7678c2"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch2.json",
+            "sha256": "1ccf2d0dd18ac11040e75ad19e8572361f525db2219b3cf846e301914bc62028"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 82,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83.png",
+          "image_sha256": "630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83",
+          "request_sha256": "e0b26c14b2889e4f3c39885cabe489370d3cc1bc153dc157621a748affe2dc0d",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Requested closed duty order is absent; an oversized brown bag sits on household desk instead of the usual small coin pouch. Ledger and worried Kenji/Hana, HOME geometry otherwise match. Needs order restored and bag reduced to normal coin pouch.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.707129+00:00"
+        }
+      },
+      {
+        "id": 83,
+        "state": "pass",
+        "image": "assets/scenes/scene-0083.png",
+        "image_sha256": "2b96133077549f57398b89241491400db4a9d29b147cb38fb92951746edbfc22",
+        "request_sha256": "ff279a4eb78452c90003fbb9fb8a91d0cf36fc71f99928f950ddc4773b3c4ade",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior presents closed sealed notice and Kenji listens seriously in fixed Office. Correct two worn swords each, cubbies/shoji/doors/desk maintained. No burning castle, gore, text or identifiable real domain.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.714912+00:00"
+      },
+      {
+        "id": 84,
+        "state": "pass",
+        "image": "assets/scenes/scene-0084.png",
+        "image_sha256": "785b10d0f488d63b53e8bbc2374899e10ccde8d985d363c0501a3a178d3217a9",
+        "request_sha256": "06613bd681e845949fb2ce700c21de7ed99ad9012c2f1a79a0b0e1734e2e7cda",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji alone reads notice outside same gate. Straw sandals present, two worn swords, unchanged indigo costume and topknot. Worried brows and intact spring setting, no ragged ronin outfit or seasonal jump.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.718124+00:00"
+      },
+      {
+        "id": 85,
+        "state": "pass",
+        "image": "assets/scenes/scene-0085.png",
+        "image_sha256": "3d38bcf58789018a2568f1b9363f6ddab5eba6a32ff167d0a52b95496882096a",
+        "request_sha256": "d3f69eec1f1e1334fb50174ee5f7c3d5d778b90db3bebae28906fd913f38f8d1",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji asks olive Merchant about work while holding small learning scroll across fixed rice counter. Same indigo noren, sacks and parked right cart; straw sandals and two worn swords, no drawn weapon or new vendor.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.724246+00:00"
+      },
+      {
+        "id": 86,
+        "state": "pass",
+        "image": "assets/scenes/scene-0086.png",
+        "image_sha256": "07c2b541777d77e2fc9cc39c7263b1edd3029f95a008b5f33f03a5f189a84b0f",
+        "request_sha256": "08d08d21415641e9b430dc995d9770736809267e0666a680ca77be2933454713",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana shows ONE deflated brown cloth pouch while worried Kenji remains beside household ledger. Same costume, swords and intact HOME; no sudden hairstyle or status deterioration.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.730482+00:00"
+      },
+      {
+        "id": 87,
+        "state": "pass",
+        "image": "assets/scenes/scene-0087.png",
+        "image_sha256": "d4aaf751e4bc6ff28966ee1b36cac327754ddda0afeedad9b09d8969d80cff91",
+        "request_sha256": "e6559bb5ac2a60636775c5e7a744a6df5f787e8c5c8ad0ebca31725958ce840d",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji offers folded plain introduction letter across existing Office desk while Senior considers it. Distinct identities, two worn swords each, no promotion insignia. Same cubbies, shoji, doors and blue cushions.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.754628+00:00"
+      },
+      {
+        "id": 88,
+        "state": "pass",
+        "image": "assets/scenes/scene-0088.png",
+        "image_sha256": "5e31a1d195e4e25fb518fa097d102276da1e922250dde7718203b1f7adeedd7e",
+        "request_sha256": "1da21975d4c04beac90ec7e3df12f87fe256d172aff71c8bb1bace99cdcdea48",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: plain straw sandals fitted over both outdoor white tabi feet. Extra cream-wrapped handheld prop removed; lowered black hand empty, exactly TWO worn sheathed swords with correct hilts retained. Folded letter, worried face, topknot, indigo robe, gate/pine/covered bench/cabinet preserved.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:16:26.656114+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d.png",
+            "sha256": "86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d"
+          },
+          "original_request_sha256": "1da21975d4c04beac90ec7e3df12f87fe256d172aff71c8bb1bace99cdcdea48",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0088/1da21975d4c04beac90ec7e3df12f87fe256d172aff71c8bb1bace99cdcdea48/receipt.json",
+            "sha256": "5f1d450dd9cc6e68db647bdc6e3d46e97a84476a6044d81d5b00ea4a2b66d366"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0088.txt",
+            "sha256": "c9a7aaa8565386ff8b5d08c5dfd3a69da9484e7827d4f9818b004ed7bbbb159c"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0088.png",
+            "sha256": "5e31a1d195e4e25fb518fa097d102276da1e922250dde7718203b1f7adeedd7e"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/actual-completed-tool-provenance-batch2.json",
+            "sha256": "1ccf2d0dd18ac11040e75ad19e8572361f525db2219b3cf846e301914bc62028"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 88,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d.png",
+          "image_sha256": "86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d",
+          "request_sha256": "1da21975d4c04beac90ec7e3df12f87fe256d172aff71c8bb1bace99cdcdea48",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Kenji outdoors by covered gate bench wears white tabi ONLY, missing straw sandals. Folded letter, worried expression, unchanged costume/sword pair and intact gate scene otherwise match. Requires footwear correction.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.757222+00:00"
+        }
+      },
+      {
+        "id": 89,
+        "state": "pass",
+        "image": "assets/scenes/scene-0089.png",
+        "image_sha256": "417908490b88109e46357d4ddb842ee8141052f30b53227c5c01b5fd1edf0fb8",
+        "request_sha256": "bb6a55600a9516de47b1d999555583b2ab2d32de70d62d054b262f44fbb6062e",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: ONE ordinary open cream-paged account ledger now lies on foreground-left desk beside ink tray, in front of the unchanged held folded order. Tiny indistinct account marks only, no readable title. Small brown pouch, Kenji/Hana worried faces, clothes, worn sword pair and entire HOME geometry retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:21:07.879285+00:00",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657.png",
+            "sha256": "e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657"
+          },
+          "original_request_sha256": "bb6a55600a9516de47b1d999555583b2ab2d32de70d62d054b262f44fbb6062e",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0089/bb6a55600a9516de47b1d999555583b2ab2d32de70d62d054b262f44fbb6062e/receipt.json",
+            "sha256": "21efe03c1e4ab55866bdb542a05250ec61d8116b7b00fcb68d29fc3813410042"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0089.txt",
+            "sha256": "7c7ea0f2f8c0b6e87b2e82d9eceaf28b79831bab173ae3763090d7b139f7705d"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0089.png",
+            "sha256": "417908490b88109e46357d4ddb842ee8141052f30b53227c5c01b5fd1edf0fb8"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/scene-0089-actual-completed-tool-provenance.json",
+            "sha256": "4a8d00d06041d4dbbd2f7a82677ddd73a1fe87a55683c3e9a904d59bbc0e7c12"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 89,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657.png",
+          "image_sha256": "e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657",
+          "request_sha256": "bb6a55600a9516de47b1d999555583b2ab2d32de70d62d054b262f44fbb6062e",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "The fixed household ledger is absent from desk despite authored action explicitly retaining it. ONE folded duty paper and ONE brown pouch are present; correct worried Kenji/Hana and HOME room. Needs ledger restored, not a redesign.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.759293+00:00"
+        }
+      },
+      {
+        "id": 90,
+        "state": "pass",
+        "image": "assets/scenes/scene-0090.png",
+        "image_sha256": "14f954f4c30ab8890825e9e3f6daafff2a3e53011cd9d87116ef076e7a6b51e7",
+        "request_sha256": "2e9812323366d59c12e8dccc203f2de6f94fa53f7fc66a3f388bec565be6e776",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji reads one folded duty document while applying plain brown cloth to fitting of ONE STILL-WORN sheathed sword. Both black scabbards remain worn, no loose blade or third sword. Desk ledger and HOME geometry retained.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.761842+00:00"
+      },
+      {
+        "id": 91,
+        "state": "pass",
+        "image": "assets/scenes/scene-0091.png",
+        "image_sha256": "ce19dee635c69cbfc2f8d3e15f626f6b1bc85d95d10b14bd2bb9136ca373de70",
+        "request_sha256": "d23c92ffa9b1c82528933f2c3ff559370021c247897ef0e80cdb626cf2dbf6cf",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior alone studies open plain bound record at fixed Office desk. Four wall cubby rows, rear shoji, right doors and blue cushions preserved. Two worn sword hilts, no modern cover/title or glowing universal-code imagery.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.769515+00:00"
+      },
+      {
+        "id": 92,
+        "state": "pass",
+        "image": "assets/scenes/scene-0092.png",
+        "image_sha256": "4e84cd68fba5e99397846d2bd8164ef1bb4967af384fe1850ecd69c2f04a4c0b",
+        "request_sha256": "b8357a7a5ef06c1266e7697003b7baf5bde09a43f3177836c1140f405fbd2a33",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Senior compare TWO separate papers, each indicating one. Fixed Office desk, stationery, cubbies, shoji and doors maintained; exactly two worn swords each, no readable labels or code overlay.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.781107+00:00"
+      },
+      {
+        "id": 93,
+        "state": "pass",
+        "image": "assets/scenes/scene-0093.png",
+        "image_sha256": "f070fe288466396c71a650761a0c3dfb75c7bbdf4f4a23588d675e15d4f8b89c",
+        "request_sha256": "357bd435cfc03d10c13b81591c4eb04fdb9424731b10d70d3583c1254a9c6c64",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji alone reads ONE thin plain bound record; separate blue-bound record remains on desk. Same Office scene and two worn sword hilts, no duplicated held book or modern title.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.796534+00:00"
+      },
+      {
+        "id": 94,
+        "state": "pass",
+        "image": "assets/scenes/scene-0094.png",
+        "image_sha256": "df8b8375ad3c3a43da02ac704830916744a7945b1acd92ea23495f31140881f0",
+        "request_sha256": "105ae9e061ddb0d95fb1a91dc579e845d32b5418ba4b17153f0f122272e2c42c",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana points at open ledger and ONE small brown pouch while Kenji holds folded cream duty order. Same HOME architecture, worried faces, black hands and worn sword pair; no duplicate pouch or new costume.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.806741+00:00"
+      },
+      {
+        "id": 95,
+        "state": "pass",
+        "image": "assets/scenes/scene-0095.png",
+        "image_sha256": "da91e0975e344e24dabcbb8f00e8b3afc051bf6e73f93b00063a895624e0c9a8",
+        "request_sha256": "e68d895d6da90a47c710dfcd4f2ae53437a07f35fbeee338d9043ffc10f24666",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: both outdoor white tabi feet now have plain straw soles and straps; hand by viewer-right sword hilt now black mitten, while cream forearm remains unchanged. Folded cream order, TWO worn sheathed swords, face/hair/indigo robe, gate/pine/covered bench/cabinet and other details retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:24:16.026596+00:00",
+        "prior_submission_uncertainty": "Previous parallel calls after scene89 input-read failure had no captured outcomes; potential duplicate submission is not excluded. Exactly one root-authorized repeat completed with direct output metadata.",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a.png",
+            "sha256": "59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a"
+          },
+          "original_request_sha256": "e68d895d6da90a47c710dfcd4f2ae53437a07f35fbeee338d9043ffc10f24666",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0095/e68d895d6da90a47c710dfcd4f2ae53437a07f35fbeee338d9043ffc10f24666/receipt.json",
+            "sha256": "1458b078a20497da0a59a01455db4f53c84b5488fa261386dc2ad67b48816331"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0095.txt",
+            "sha256": "1680e0313f613fc20032aebd7f1029969d002fe579ed489a7dd5cbceccfba4ea"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0095.png",
+            "sha256": "da91e0975e344e24dabcbb8f00e8b3afc051bf6e73f93b00063a895624e0c9a8"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/scene-0095-actual-completed-tool-provenance.json",
+            "sha256": "8728099f21668d519491a0d91c1db328774ee3fdef664f1b09bb170d6a3701a1"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 95,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a.png",
+          "image_sha256": "59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a",
+          "request_sha256": "e68d895d6da90a47c710dfcd4f2ae53437a07f35fbeee338d9043ffc10f24666",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Outdoors Kenji has white tabi ONLY without straw sandals. His hand resting by sword hilt is flesh-filled instead of black mitten, unlike other hand. Folded order, two worn swords and gate/bench geometry otherwise correct. Add sandals and restore black hand only.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:48.809075+00:00"
+        }
+      },
+      {
+        "id": 96,
+        "state": "pass",
+        "image": "assets/scenes/scene-0096.png",
+        "image_sha256": "410858ac749b1b876a9008f14f1d2fda7229b2afc244223015f56e1ee1b7bb2a",
+        "request_sha256": "e156563d3eada1339dc686a25993d22577965b8d0a8e0399a1c224dda2289e87",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Senior places ONE closed formal letter beside ordinary blue-bound register. Two worn sword hilts, empty other black hand, white indoor tabi and fixed Office. No death scene, prisoner, drawn blade or blood.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.854463+00:00"
+      },
+      {
+        "id": 97,
+        "state": "pass",
+        "image": "assets/scenes/scene-0097.png",
+        "image_sha256": "85fd1d38dd336913ef9dbe6f5c2557fd050eb508d43d1bc4b0acf8d29c1ba4f4",
+        "request_sha256": "42aa9d6d7bacfa8a19e56348f69296cc09d01a382e8a9d32c0d585ae0c6772a3",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji corrects open register with ONE writing brush while Senior points to an entry. Tiny unreadable book marks only; no readable warning. Correct two worn sword pairs, Office desk geometry, cushions and stationery.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:48.977900+00:00"
+      },
+      {
+        "id": 98,
+        "state": "pass",
+        "image": "assets/scenes/scene-0098.png",
+        "image_sha256": "74fa58a1e05c6737f8d2ca9d2e5d2b782c2be78e217661451527af62a40d4744",
+        "request_sha256": "9e39b39de3f2c00c40a8123a10c0357ab8d72046a8fe60bb11f0014b6ee4299a",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji stands formal at gate threshold, ONE folded cream order tucked at obi, two worn black sword scabbards. Straw sandals present over white tabi, intact cabinet/pine/bench and same daylight; no armor or crowd.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.001357+00:00"
+      },
+      {
+        "id": 99,
+        "state": "pass",
+        "image": "assets/scenes/scene-0099.png",
+        "image_sha256": "f8e748bd215ff0d3f5865df160e1b73d35807ff8859e077a41f516c2ecad40ee",
+        "request_sha256": "d08023bb75775b44b2f6b4b93876ad4b1b0bdd1345d1bb491d372537a3d3c40a",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Hana share subdued weary smiles at familiar desk. ONE plain tea cup, ledger and ONE brown coin pouch, no feast or sudden wealth. Same HOME, hair and muted clothing.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.013396+00:00"
+      },
+      {
+        "id": 100,
+        "state": "pass",
+        "image": "assets/scenes/scene-0100.png",
+        "image_sha256": "33167b4d1b0de8bfe2e8d45336fe1f66f0fd904336e763ba3700659a7305356c",
+        "request_sha256": "194577eeefa6f3ca216393a935551e79a52e867a2cc20bbbf71966e809c7ddba",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Olive Merchant weighs ONE wooden rice measure for Kenji at fixed left counter; small coins present. Indigo Kenji, two worn swords, straw sandals, noren/sacks/right cart maintained; no extra merchant.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.023090+00:00"
+      },
+      {
+        "id": 101,
+        "state": "pass",
+        "image": "assets/scenes/scene-0101.png",
+        "image_sha256": "661d00179accf6c66c4f8ae9b7e036c89fda6675ba538c7560e2fe5a62b810b2",
+        "request_sha256": "09be6ce651623f7c50e8c76ddfcbcd08e8288030556acd8008e3bb5ddee0b03d",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Merchant alone refills ONE wooden measure from nearby straw sack at fixed left rice counter. No swords, new vendor or advertising; stable sacks/noren/right cart and daylight.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.057431+00:00"
+      },
+      {
+        "id": 102,
+        "state": "pass",
+        "image": "assets/scenes/scene-0102.png",
+        "image_sha256": "978fdd2226709069a54789d443b1885362ce9eb458af4a5e0f9f68bf7ed4c32d",
+        "request_sha256": "54190a6cf7104f9224b70b12e6e87311869e8401384bf766a954736259649e15",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Exactly FOUR STEEL swords WORN total: two per actor, black scabbards at anatomical-left hips. Senior EMPTY pointing hand aims toward Kenji worn hilt; NO held fifth weapon. Exactly TWO WOOD rods mounted on rear-right wall, same hall, white indoor tabi and floor cloth.",
+        "review_method": "actual full PNG and detail view",
+        "reviewed_at": "2026-10-13T18:01:49.081318+00:00"
+      },
+      {
+        "id": 103,
+        "state": "pass",
+        "image": "assets/scenes/scene-0103.png",
+        "image_sha256": "e53fcb6fde5a6ede03e5b6d13630f0854cb6ff234c6d24b5073e7407601b9ff7",
+        "request_sha256": "8a89bdab03af908c5176fcf625377733c6f5933742cb93cc9aa17150b63576e0",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Hana together by ledger, ONE plain cup and ONE small brown coin pouch. Correct mild affectionate smiles, same HOME, muted robes/hair, no lavish meal or purple/duplicated pouch.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.101174+00:00"
+      },
+      {
+        "id": 104,
+        "state": "pass",
+        "image": "assets/scenes/scene-0104.png",
+        "image_sha256": "a15dfa089847fb465df22bb6ed3e58aab097e9f872176a974bc70ee4c2452c47",
+        "request_sha256": "65053492cd94cf49eb47d38ce66f3da666c4400461ccd8f1137ef50bf963bcff",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Hana alone draws ONE copper coin toward ONE brown pouch beside open ledger. Plain tea cup stays on desk; same HOME, mauve robe and black low bun. No shop insert or modern calculator.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.121146+00:00"
+      },
+      {
+        "id": 105,
+        "state": "pass",
+        "image": "assets/scenes/scene-0105.png",
+        "image_sha256": "86ebbd435cf8e16ef6d87e739d405c3c1fee38a06197abc5c8c0b9d14ef8b2e9",
+        "request_sha256": "b60cfd89752d2c5f182f98a9e4dbea07fa5968abadc16ab5c5565fcd7c382f31",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji checks ONE folded cream order outdoors at gate before duty. Exactly two worn scabbards, straw sandals over white tabi, unchanged pine/cabinet/bench and daylight.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.209463+00:00"
+      },
+      {
+        "id": 106,
+        "state": "pass",
+        "image": "assets/scenes/scene-0106.png",
+        "image_sha256": "c679bc1200ed4aa568edcb616cdcbf3abb423e4f8ee687c222862fef0a1618f7",
+        "request_sha256": "8953a0047aeba19804a8c54013c2f9b89010634c09fa3f04172f3873617ff8ca",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji steps through same gate with ONE folded order, composed tired face, two worn swords and straw sandals. No battle, armor, crowd or weather change.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.229928+00:00"
+      },
+      {
+        "id": 107,
+        "state": "pass",
+        "image": "assets/scenes/scene-0107.png",
+        "image_sha256": "faf9699212bd80365d865c2e4cc6001a5d0baff668f0a5aa387ddcd593680587",
+        "request_sha256": "ed20d1c65bf50c4bebed795327a7eda4729217e80b792cd876a02d6a4d8091fb",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Kenji and Hana face open ledger, ONE duty letter and ONE small brown pouch. Correct thoughtful faces, HOME shelf/cabinet/shoji/veranda and muted costumes; no closing luxury event.",
+        "review_method": "actual source contact sheet at 836 px cell width",
+        "reviewed_at": "2026-10-13T18:01:49.277232+00:00"
+      },
+      {
+        "id": 108,
+        "state": "pass",
+        "image": "assets/scenes/scene-0108.png",
+        "image_sha256": "29d7405b615be44b4864fd5b467bae6be924bcb7fed65d7e7f7659f6d8477db3",
+        "request_sha256": "25641d0ead3a6dd2899f4347be8aeb6bb153742636f18f0a25828140421e415c",
+        "reviewer": "samurai_regen_visual_b",
+        "notes": "Actual full edited PNG viewed: both outdoor white tabi feet now have plain straw sandals, fitted to existing feet and ground. Exact concluding pose, black hands, ONE folded order tucked at obi, TWO worn sheathed swords, face/topknot/robe and gate/pine/bench/cabinet/daylight retained.",
+        "review_method": "actual original and edited PNG full-resolution visual inspection against fixed cast and location references",
+        "reviewed_at": "2026-10-13T18:24:16.034781+00:00",
+        "prior_submission_uncertainty": "Previous parallel calls after scene89 input-read failure had no captured outcomes; potential duplicate submission is not excluded. Exactly one root-authorized repeat completed with direct output metadata.",
+        "derivative_source": {
+          "schema": "samurai-image-gen-edit-source-v1",
+          "original_image": {
+            "path": "assets/reference-inputs/99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70.png",
+            "sha256": "99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70"
+          },
+          "original_request_sha256": "25641d0ead3a6dd2899f4347be8aeb6bb153742636f18f0a25828140421e415c",
+          "original_sdk_receipt": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/scene-generation/scene-0108/25641d0ead3a6dd2899f4347be8aeb6bb153742636f18f0a25828140421e415c/receipt.json",
+            "sha256": "82bcd12e0c8641a34fb06f8375400602fd0dd62680a202c6a15d7c1df535af5c"
+          },
+          "edit_prompt": {
+            "path": "prompts/edits/scene-0108.txt",
+            "sha256": "071eddfde72610dc42287f658e5e26630027e038ffd487b9c05c6eafd600d300"
+          },
+          "image_gen_output": {
+            "path": "assets/scenes/scene-0108.png",
+            "sha256": "29d7405b615be44b4864fd5b467bae6be924bcb7fed65d7e7f7659f6d8477db3"
+          },
+          "tool_provenance": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/scene-0108-actual-completed-tool-provenance.json",
+            "sha256": "af663db0851b043249135e64794ebdee8ef185c09a2688c700a342ed705ee9ff"
+          },
+          "root_authorization": {
+            "path": "/workspace/samurai-chapters-regeneration/episode-01/visual-qa-b/root-directed-targeted-edit-b-exact-args.json",
+            "sha256": "1b2332625f706e49c1a58ffc56c558f61e2cdff171e0ff0183cdddcfdc6a1633"
+          }
+        },
+        "previous_source_review": {
+          "id": 108,
+          "state": "needs_correction",
+          "image": "assets/reference-inputs/99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70.png",
+          "image_sha256": "99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70",
+          "request_sha256": "25641d0ead3a6dd2899f4347be8aeb6bb153742636f18f0a25828140421e415c",
+          "reviewer": "samurai_regen_visual_b",
+          "notes": "Final outdoor gate view has white tabi ONLY, no straw sandals. ONE folded order tucked at obi and two worn scabbards; identity, gate/pine/bench/cabinet and clear composition otherwise correct. Requires sandals.",
+          "review_method": "actual full PNG and detail view",
+          "reviewed_at": "2026-10-13T18:01:49.281685+00:00"
+        }
+      }
+    ],
+    "physical_review_complete": true,
+    "source_review_completed_at": "2026-10-13T18:25:05.070507+00:00"
+  }
+}

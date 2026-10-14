@@ -1,0 +1,35 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "a369a36bfc87384299149849587e1a958d630aa5bac2d04844e836e6c9e0ddd5",
+  "original_document_path": "/workspace/tubeforge-regeneration-runtime/native-source-integrity.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "source_commit": "a3d23a2cdea09e044c24250f72e579f092086c84",
+    "render_implementation": [
+      {
+        "file": "render_worker.py",
+        "source_sha256": "4e0027a23dee43c870ea6bb63fe3ebaf2d0f29bb9e1863325ac0a6bbf6863531",
+        "installed_sha256": "4e0027a23dee43c870ea6bb63fe3ebaf2d0f29bb9e1863325ac0a6bbf6863531",
+        "unchanged": true
+      },
+      {
+        "file": "steps/render.py",
+        "source_sha256": "43e62761a98b1e8172f6b256a355b45bd3b9b9c9911beab029514d30930a0540",
+        "installed_sha256": "43e62761a98b1e8172f6b256a355b45bd3b9b9c9911beab029514d30930a0540",
+        "unchanged": true
+      }
+    ],
+    "installed_versions": {
+      "fastapi": "0.143.0",
+      "uvicorn": "0.54.0",
+      "httpx": "0.28.1",
+      "pillow": "12.3.0",
+      "numpy": "2.5.3",
+      "imageio-ffmpeg": "0.6.0",
+      "av": "19.0.1",
+      "pytest": "9.1.1"
+    },
+    "seeded_existing_profiles": false,
+    "paid_calls": 0
+  }
+}

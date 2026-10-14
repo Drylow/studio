@@ -1,0 +1,89 @@
+{
+  "records": [
+    {
+      "id": "A",
+      "label": "SWORD? TOO BROKE!",
+      "original": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-A.png",
+      "original_sha256": "ec19d0156389daf5b68a187871a869a4986e0fbb57b0869994c07e5af4cb617a",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-A.jpg",
+      "export_sha256": "96efe3332d6288cbefa401f9a64446fd7d8e6079a342ec72f92e97de82e6b1ab",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1990713,
+      "jpeg_quality": 92,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail."
+    },
+    {
+      "id": "B",
+      "label": "WHERE'S THE LOOT?",
+      "original": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-B.png",
+      "original_sha256": "1fe9c517e3adc9e7e0221a94b635276675ce8e1298b6d430a64e1a596047aa3c",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-B.jpg",
+      "export_sha256": "cfbdb9a1fb3be09f2bd1999c8897376863c064b161d4995414b45330bed373bc",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1792513,
+      "jpeg_quality": 92,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail."
+    },
+    {
+      "id": "C",
+      "label": "WINTER WINS",
+      "original": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-C.png",
+      "original_sha256": "454eb96acc4a8c15c3c406aa899dcda3b774005a39ff520a695678ae03a811dd",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-C.jpg",
+      "export_sha256": "537aa3a8d6b421fefab875b923113c7fbd3d1f0ba0ca6a5d55f8fd81ee9bbdb1",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1940285,
+      "jpeg_quality": 90,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail."
+    },
+    {
+      "id": "D",
+      "label": "ALL WORK, NO GLORY",
+      "original": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-D.png",
+      "original_sha256": "53751214a1d11211dec727292ef7eb9c9f6911da2ed2b6cb76a99a0f7377a3bf",
+      "original_dimensions": [
+        1672,
+        941
+      ],
+      "export": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-D.jpg",
+      "export_sha256": "e2dd243dd8b9987a3e6fc418fa3f067c7ce1100a1e9f1ef8e526004466244f2a",
+      "export_dimensions": [
+        3840,
+        2160
+      ],
+      "bytes": 1874001,
+      "jpeg_quality": 86,
+      "actual_reviewer": "Codex /root",
+      "review_state": "pass",
+      "findings": "Actual ABCD contact pixels viewed; clear distinct compositions, period identities, readable intended yellow/black labels and no visible stray anatomy/writing. 4K export enlarged from original; not native generated 4K detail."
+    }
+  ],
+  "originals_preserved": true
+}

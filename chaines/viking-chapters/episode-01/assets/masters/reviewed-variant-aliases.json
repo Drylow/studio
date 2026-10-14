@@ -1,0 +1,12 @@
+{
+  "schema": "viking-explicit-reviewed-physical-aliases-v1",
+  "reviewer": "Codex /root/viking_master_finish",
+  "aliases": {
+    "COUNTRY_EDGE": "MARKET_COUNTRY_EDGE",
+    "SHIP_COAST_OVERCAST": "SHIP"
+  },
+  "rationale": {
+    "COUNTRY_EDGE": "Exact reviewed new English coastal clearing image; name alias only.",
+    "SHIP_COAST_OVERCAST": "Actual baseline is furled-sail boat in overcast daylight with low Norwegian coast. Director explicitly confirmed43/46/63–65 keep this unchanged geography/light/sail. No material-weather alias."
+  }
+}

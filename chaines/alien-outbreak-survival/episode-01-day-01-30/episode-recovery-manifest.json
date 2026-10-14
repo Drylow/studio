@@ -1,0 +1,195 @@
+{
+  "schema": "recovered-final-episode-continuity-v1",
+  "title": "Alien Outbreak Survival: Day 1 to Day 30",
+  "channel_name_from_original_kit": "One Stick Left",
+  "channel_youtube_id": null,
+  "original_public_gofile": "https://gofile.io/d/rtK6vmpj",
+  "original_authored_script_recovered": false,
+  "complete_spoken_transcript_recovered": true,
+  "recovered_source_movie_sha256": "63136305b4bcc8fbc5f5e1d87b6fa11e27cfc9abcad8079b5b23cecc88b784ec",
+  "duration_seconds": 1145.605,
+  "files": [
+    {
+      "path": "CONTINUITY_DAY30.md",
+      "size": 9448,
+      "sha256": "fe98a644c83bc8283f0bbde0459734c62d6b0df46b4e41b632b73681bed355e5"
+    },
+    {
+      "path": "ORIGINAL_SCRIPT_STATUS.md",
+      "size": 1976,
+      "sha256": "8b9b38c440f3a76bc4093ffc53dbdb9775971e976c0a5278077cceb4bb007408"
+    },
+    {
+      "path": "actual-final-media-stills/0000.jpg",
+      "size": 254750,
+      "sha256": "924f67bc06298b58d37ae5d8d95408f097ecb881b3e3ce2e32a8fff6312aba26"
+    },
+    {
+      "path": "actual-final-media-stills/0176.jpg",
+      "size": 237501,
+      "sha256": "03a35443a7f12d6ab782f02494ea2903e41a727f1e48dabc21689d4d22c9579b"
+    },
+    {
+      "path": "actual-final-media-stills/0426.jpg",
+      "size": 222259,
+      "sha256": "529bf869b8666a427bf6cd1a31cc4d06767438218a743386ea4181cda550e455"
+    },
+    {
+      "path": "actual-final-media-stills/0499.jpg",
+      "size": 263148,
+      "sha256": "7edbb7d7d19e8dd3f24838b2fd1d24b02ea1a49671f047a1eab9ac09e5ec49a7"
+    },
+    {
+      "path": "actual-final-media-stills/0579.jpg",
+      "size": 251013,
+      "sha256": "dfe20be67108c41e92133f009bbce4d74c312e1d03637caec02bde10648e9bbf"
+    },
+    {
+      "path": "actual-final-media-stills/0637.jpg",
+      "size": 214325,
+      "sha256": "95b9c7193820961178e2c1f82f2a2a8d5cf8ce1d0fe5052e58039a58c1f853a0"
+    },
+    {
+      "path": "actual-final-media-stills/0715.jpg",
+      "size": 292124,
+      "sha256": "af70cf0dc25960e9304ec06a918f9114a76bb9ff7525dfff620b83ff2fe7dec9"
+    },
+    {
+      "path": "actual-final-media-stills/0781.jpg",
+      "size": 237294,
+      "sha256": "b6b16d610cdd41486b3ca460642a78486d74718e6ea8cb723153d3493b96f3cd"
+    },
+    {
+      "path": "actual-final-media-stills/0876.jpg",
+      "size": 358393,
+      "sha256": "4e1d00295362517fa00303a549e0bb0fa6f5007a89977b6562c549d2fd81d056"
+    },
+    {
+      "path": "actual-final-media-stills/0944.jpg",
+      "size": 393219,
+      "sha256": "c4cf048a63a57761435d311aa1ef01018704048e865d9cad31d60398879d0a4a"
+    },
+    {
+      "path": "actual-final-media-stills/1012.jpg",
+      "size": 208831,
+      "sha256": "c51dd04b898e5115a4c859a63fc9dbae83c2ceabe76085118b13632ab5df4aa4"
+    },
+    {
+      "path": "actual-final-media-stills/1061.jpg",
+      "size": 198085,
+      "sha256": "6ea6aa0511157f4c3bee9130ceb320c2b2d93871d44991096dc5fd96080a5b03"
+    },
+    {
+      "path": "actual-final-media-stills/1080.jpg",
+      "size": 241163,
+      "sha256": "5c2237b38182795d749fa35421e96a499bdd26018bca99ec4ef9c6b27125c13b"
+    },
+    {
+      "path": "actual-final-media-stills/1095.jpg",
+      "size": 266382,
+      "sha256": "07744ced51041a6ccb08f7490691e1d7323e34710c286b1484a0237d4be6dbe6"
+    },
+    {
+      "path": "actual-final-media-stills/1110.jpg",
+      "size": 278251,
+      "sha256": "9e039e4c7cd64c6c464409f477ca550425575d858b0728b4d4fea4c58ee2afd0"
+    },
+    {
+      "path": "actual-final-media-stills/1125.jpg",
+      "size": 228159,
+      "sha256": "652e25ba03787110d4ec6d4a0313b0af5f20600159ce01b68722dbed51564f5a"
+    },
+    {
+      "path": "actual-final-media-stills/1140.jpg",
+      "size": 266364,
+      "sha256": "345b4126984143645cdfb49c3eabcb5dc158c89afcb682dc800679ac627bbfc1"
+    },
+    {
+      "path": "actual-final-media-stills/1145.jpg",
+      "size": 254811,
+      "sha256": "d9053cf7db96db5ad02b25d5879402c5b91a80281719482e20bc8bd3f1e8873d"
+    },
+    {
+      "path": "actual-final-media-stills/sheet-01.jpg",
+      "size": 295223,
+      "sha256": "af84d1e223ea79f7d19a4d5f063883e502e99d724548787bf6aed3349af11096"
+    },
+    {
+      "path": "actual-final-media-stills/sheet-02.jpg",
+      "size": 301859,
+      "sha256": "8790659679b5f2df0ba6c62ed75279b25d5cb046dea9f61b4622d505f7f24fe4"
+    },
+    {
+      "path": "actual-still-index.json",
+      "size": 2552,
+      "sha256": "000fefd08ff518235c61ff50a6d1232b55bcbd2e9311f15241224dbd7dab13e9"
+    },
+    {
+      "path": "captions-recovered-from-final-media.srt",
+      "size": 30860,
+      "sha256": "5474572f8b4a495f29e62394fe482653335ac792217655a2fd1fa14e5ed211f1"
+    },
+    {
+      "path": "narration-recovered-edited.txt",
+      "size": 18224,
+      "sha256": "cb53847d5fd5ce56608df4b34c3da708bc734856f02f9ed2999a8e165f44b53d"
+    },
+    {
+      "path": "narration-recovery-proof.json",
+      "size": 2789,
+      "sha256": "62128ed1c280708f00e95db5e13d08e185e95ba12a26a91b78df2eef68fb3a20"
+    },
+    {
+      "path": "original-download-proof.json",
+      "size": 1166,
+      "sha256": "1ebf29b98bc45b4bc5bec2854157ed7ecb5f84d062d4dae0fce0086a23a4c3c7"
+    },
+    {
+      "path": "original-normal-site-readback.json",
+      "size": 1798,
+      "sha256": "b95f66b351f9e35016eba7e4a3251fe9c3b02163abd355aea9368c1249d3231a"
+    },
+    {
+      "path": "original-normal-site-readback.png",
+      "size": 219125,
+      "sha256": "f7bdb7b14d26d4177d1071fa01e686b391c7a560a32c9e8f7cc3b0c4e1994a38"
+    },
+    {
+      "path": "publication-kit.txt",
+      "size": 1569,
+      "sha256": "164b721d7b963a56cd4161a21f3dec8a1014cebabe3e520317cca9e668f2b541"
+    },
+    {
+      "path": "thumbnail-original-delivery.png",
+      "size": 1536836,
+      "sha256": "651ffbe779f42659485a18f661cc20de225544113d73569dbc22454835a41b02"
+    },
+    {
+      "path": "transcript-recovered-from-final-media.json",
+      "size": 487718,
+      "sha256": "4bfe7cbd4fb6ce3532775085633a0e6c2dfc594fc3381ec3cffe4489ab108704"
+    },
+    {
+      "path": "transcript-recovered-from-final-media.txt",
+      "size": 18218,
+      "sha256": "85490f1bdb1837b7bac1c63be680e387fa4d79229de9303a29d987d6d617290e"
+    }
+  ],
+  "source_search": {
+    "local_workspace_exact_title_and_gofile": "no original authorial script found",
+    "tracked_git_history": "no original authorial script found",
+    "historical_user_branch_commit": "6b5c3ae442f2bb9a9508716d9a7c859107ed11e4",
+    "historical_user_branch_exact_title_channel_gofile_search": "no match",
+    "tube_forge_active_team_project_count": 16,
+    "tube_forge_archived_team_project_count": 10,
+    "tube_forge_exact_original_episode_found": false,
+    "normal_gofile_listing_and_downloads": "three files found and each MD5 and size verified"
+  },
+  "validation_limits": [
+    "Speech recognition wording and timestamps are derived, not native authorial or speech synthesis sources.",
+    "The raw recognized wording remains alongside the minimally edited readable narration.",
+    "Only sampled final frames were visually reviewed; no continuous audiovisual playback is claimed.",
+    "Later B and D thumbnail variants and original generation receipts were not restored from this original folder.",
+    "Days 31\u201360 remains a future story; no script or publication for it created during this handoff."
+  ]
+}

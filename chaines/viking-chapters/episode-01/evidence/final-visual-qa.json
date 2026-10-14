@@ -1,0 +1,150 @@
+{
+  "movie_sha256": "c684fbf2a4f72df556f9fb327705f642abbbaf0c1e03f338625b33db1b5dbb5a",
+  "state": "pass",
+  "finished_render_visual_reviewed": true,
+  "reviewed_encoded_scene_count": 88,
+  "reviewed_cut_count": 87,
+  "review_scope": "Actual final encoded midpoints for all scenes, all before/after cuts, opening and final frame. This ledger does not claim continuous real-time visual watching of every video frame; complete both-stream decoding is separately evidenced.",
+  "capture_sheets": [
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-01.jpg",
+      "sha256": "04f16896afe1f8b122f6780b2af50d9c9c765d55456ccf6ce5c04ebb13920223",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes 1–9 actually viewed: farm sheep/purse/fence opening, work, shoreline net and indoor food are readable; Eirik, Aslaug and buildings retain identity. Sunset opening to daytime work is a deliberate story transition. No blank or clipped encoded panel."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-02.jpg",
+      "sha256": "829e2024951069817ceb4c69f81a82242554171af139f746df37be55ba61656c",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes 10–18 actually viewed: smoky hearth, meal, tailoring, doorstep, cow/fence, planting and rain remain coherent. Same teal-clad Eirik and plum-clad Aslaug; no unwanted duplicate actors or lost main props."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-03.jpg",
+      "sha256": "71fd8b83ce2c86324041fcaad604688a1edae1c9765f66baa390021b31389f2c",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes 19–27 actually viewed: cow/hay, Aslaug spindle, Bjorn conversation and household obligations remain clear. Scene22 is the separately scripted dependent-labourer illustration, distinct from Eirik. Yard and room layouts remain recognizable."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-04.jpg",
+      "sha256": "4d140a8e541a4485fc5afbfa1a8270bb14f10983636fe46fae1382e430af68e0",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes 28–36 actually viewed: packing/planning, shoreline loading, sail preparation and weapons. Eirik teal, Bjorn maroon and Ketil olive remain distinct; furled vessel and cargo preparations match this pre-departure block."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-05.jpg",
+      "sha256": "229f73c9276e31828a09c0c0266d509c575a56a6f5add1abbbb84ca1cd04e2d7",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes37–45 actually viewed: spear/shield, farewell, departure, raised sail, hooded rain, bailing and night watch. Boat structure/cast consistent; appropriate authored changes in sail/weather/time of day. Eirik and Bjorn remain readable at encoded framing."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-06.jpg",
+      "sha256": "f542ce6d5d686818fcde0f08a5a2d0d7af2908f960cf8efd5f8c979327ea179a",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes46–54 actually viewed: meal, approaching settlement, scripted supporting crew, armed shore encounter and retreat, cargo handling. English shore/vessel design and main cast consistent; extra supporting figures occur where planned, no graphic combat or blank frame."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-07.jpg",
+      "sha256": "a13fc29d47dd256cfcfb9bda00c5ff310f108ac6a5ed81a65b21c8545235cea1",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes55–63 actually viewed: market sacks, cloth, scales, bead, coin exchange, ropes and departure. Merchant remains distinct from Eirik/Bjorn; market background/counter continuity and cargo actions are preserved and readable."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-08.jpg",
+      "sha256": "08458811e540789dae563238d678b99e45db81c168e6e4533f80182564fe50c9",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes64–72 actually viewed: return voyage, supporting crew, home arrival/reunion, modest proceeds, harvest and winter provisioning. Same protagonists and home layouts; golden autumn is the planned seasonal transition after voyage."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-09.jpg",
+      "sha256": "f460f8fef3ee96f285f46e3e7ce47fd7ba324dd6e92b6f3b606751970f31f30d",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes73–81 actually viewed: winter fodder, household care, door repair, limited food, combing/game and local dispute. Winter frost/home geography and main clothing are consistent; three dispute actors remain distinct."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-10.jpg",
+      "sha256": "90bc7e718ed0fcae1b398c689b43a4d845b22817d6b5b63a3a628c9732c8764e",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Scenes82–88 and cuts1–2 actually viewed: settlement and stores, nightly tasks and final sheep callback show intact readable frames. First two paired cuts retain farm architecture/cast identities; no blank flashes or unintended close crop."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-11.jpg",
+      "sha256": "84a888549f819a8d9db4cec6d288b190549db7b8a1b9641c472626c204e5b1a3",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts3–11 viewed: farm/day-work/shore/interior changes correspond to authored story locations; each before/after image is intact. Household identities and architecture remain stable, without accidental black frames or destructive native crops."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-12.jpg",
+      "sha256": "3d9f24a808a61feb756421398d6cb9008fe72b73de1821d7d9c7bf8a258bd657",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts12–20 viewed: tailoring, doorway, livestock, planting, rain and meeting. Main outfits/home layout remain consistent. Lighting/weather changes separate the authored daily-life examples rather than adding an unplanned background swap."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-13.jpg",
+      "sha256": "d7a90719144f5ad290de95737c2989bef425f62566cd92e081d12e8ebada6cc6",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts21–29 viewed: dependent-labour aside is distinct, then return to Eirik/farm, obligation discussions and packing/planning. Every endpoint is a valid encoded frame; main cast colours and room/yard layout stay coherent."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-14.jpg",
+      "sha256": "deaa2592ae1aa5c4d94fdb95e9a6b8cda7413bc5cb000220d5aa82d3702c95b6",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts30–38 viewed: planning to dock preparation, sail cloth/loading, shield/spear and farewell. Furled mast/vessel/shore geography remain consistent, main actors remain inside frame and no native cut introduces a blank."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-15.jpg",
+      "sha256": "1c0ad7b7d87a7095a1afabd63349390e0e7ca582eafcbe4fb926e348b6d04b82",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts39–47 viewed: departure to deck, rigging/sail changes, rain, navigation, bailing, night/day watch and settlement approach. Each cut has valid full imagery; weather/night/raised sail changes belong to the authored voyage beats and do not alter vessel identity."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-16.jpg",
+      "sha256": "9e82e4fda9d7370be72dc9f788be75ccf140290129d778aee1bced6f3fc57258",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts48–56 viewed: shore encounter/retreat, return aboard, loading, market/merchant, scales. Eirik/Bjorn remain consistent and paired cut endpoints are readable; intentional location and supporting-role changes remain clear."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-17.jpg",
+      "sha256": "6ff6c3087c1909712804b359343a3a2c9a4b86e54b32a4d8cebcfab614612944",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts57–65 viewed: market scales/negotiation/payment, rigging/departure and return voyage. Trader and main crew stay recognizable; ship deck preserves mast/rail/bench design with planned cargo states and additional working crew."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-18.jpg",
+      "sha256": "7e2173997936d09eba3d8e5c4651dec4a2b3b811fc63f38c1d8e07e4e44cdd7a",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts66–74 viewed: reunion, returns, stores, harvest, drying food, wood, frost and household care. Autumn/winter transitions are intended. Cut68→69 starts with Eirik at the left edge of the close store composition; Aslaug/grain remain readable and the midpoint includes both. No blank or broken frame."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-19.jpg",
+      "sha256": "651f2d58c58a02e9c91d640f57167a206a7534529f4b11540aced7fdc7c0d3aa",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts75–83 viewed: repair, indoor food, hygiene/game and winter dispute/settlement/stores. Winter settings and Eirik/Bjorn/Ketil identities remain consistent; no missing main action or broken cut endpoints."
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-20.jpg",
+      "sha256": "8780712162d186576453ca5a83692a4ee8ed72519fa646c0768ecf41e365015b",
+      "state": "pass",
+      "reviewer": "Codex /root",
+      "notes": "Actual paired cuts84–87 plus actual first/last movie frames viewed: night work/candle and winter sheep callback are readable and coherent. Opening and final farm architecture match across the planned seasonal change; no empty opening or truncated final visual."
+    }
+  ]
+}

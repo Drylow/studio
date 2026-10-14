@@ -1,0 +1,10 @@
+{
+  "title": "Why Being a Pirate Was Worse Than You Think",
+  "words": 2744,
+  "paragraphs": 85,
+  "sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725",
+  "expected_minutes_at_142_2wpm": 19.29676511954993,
+  "actual_tts_duration_pending": true,
+  "historical_scenario": "Fictional adult sailor Tom joins a pirate sloop crew in c.1715 Caribbean; material/governance/social/legal pressures illustrated, no named historical biography.",
+  "historical_marker_notice": "Original pre-TTS script estimate. Actual final VPS duration is1185.09seconds, not pending."
+}

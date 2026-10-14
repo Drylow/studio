@@ -1,0 +1,14 @@
+{
+  "sha256": "519c6395ba9e9079b487bcf36d768be769b9a166dbde008bdb6497233fad3bbe",
+  "literal_word_identity": true,
+  "canonical_words": 2744,
+  "cues": 315,
+  "timing_source": "Actual provider audio clock adopted into exact canonical words; provider cue intervals subdivided by the native clock helper, not phoneme-perfect alignment.",
+  "file": "chaines/pirate-pages/episode-01/editorial/English-Captions.srt",
+  "original_source_clock_sha256": "420ca1767f4f5302daee237c536e90bc4cb31d1819de877a419919e1bbdde714",
+  "source_clock": {
+    "path": "chaines/pirate-pages/episode-01/editorial/vps-word-clock.json",
+    "sha256": "420ca1767f4f5302daee237c536e90bc4cb31d1819de877a419919e1bbdde714",
+    "portable_derivative": true
+  }
+}

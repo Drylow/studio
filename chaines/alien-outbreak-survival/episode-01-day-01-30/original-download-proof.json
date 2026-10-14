@@ -1,0 +1,31 @@
+{
+  "source": "https://gofile.io/d/rtK6vmpj",
+  "files": [
+    {
+      "file": "publication-kit.txt",
+      "size": 1569,
+      "sha256": "164b721d7b963a56cd4161a21f3dec8a1014cebabe3e520317cca9e668f2b541",
+      "md5": "5d4b7d925578d8b8f16aef1e1a92d981",
+      "md5_matches_official_listing": true,
+      "method": "normal official website Download button, GET-only network guard"
+    },
+    {
+      "file": "One-Stick-Left-Day-30-corrected.png",
+      "size": 1536836,
+      "sha256": "651ffbe779f42659485a18f661cc20de225544113d73569dbc22454835a41b02",
+      "md5": "9c443187a02dffb81b727b566189d752",
+      "md5_matches_official_listing": true,
+      "method": "normal official website Download button, GET-only network guard"
+    },
+    {
+      "file": "Alien-Outbreak-Survival-Day-1-to-Day-30.mp4",
+      "size": 254760018,
+      "sha256": "63136305b4bcc8fbc5f5e1d87b6fa11e27cfc9abcad8079b5b23cecc88b784ec",
+      "md5": "8913db7a545414720583de25056857ee",
+      "md5_matches_official_listing": true,
+      "method": "normal official website Download button, GET-only network guard"
+    }
+  ],
+  "blocked_mutations": [],
+  "blocked_authorization_requests": []
+}

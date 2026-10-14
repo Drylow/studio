@@ -9,6 +9,14 @@ venv/
 
 # Secrets
 .env
+.env.*
+!.env.example
+.venv-history/
+# Private production access must remain outside the public source archive.
+production/handoff/access/private/
+production/handoff/access/*key*.txt
+production/handoff/access/*.pem
+production/handoff/access/ssh.zip
 # Clés API des outils (ne JAMAIS committer en clair). À uploader via FTP en prod.
 tool_apps/config.js
 # Archive de deploy qui embarque .env + config.js

@@ -1,0 +1,60 @@
+{
+  "state": "approved-branding-preserved",
+  "channel": "viking-chapters",
+  "files": [
+    {
+      "path": "A-LIRE.txt",
+      "bytes": 693,
+      "sha256": "62f892e5d8e00febb62e1f6faabe5a06d1e7eca8ff972919f942fcf48edbf665",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "DESCRIPTION.txt",
+      "bytes": 449,
+      "sha256": "33b82d7e2a22921e5fc0acc7cd7e8259f2f2094724cf6fe3a77786038f2504b9",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "NOM-ET-ARROBASE.txt",
+      "bytes": 307,
+      "sha256": "5b21a22362a6a273a964656223799dc98764521e9aee9d24a3f0d32da8eb18b6",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Viking-Chapters-avatar.png",
+      "bytes": 1206033,
+      "sha256": "510830cc6745829346534971e59e8b02d580c91e934773e73b2d2efb35d6bfdf",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Viking-Chapters-banner-2560x1440.jpg",
+      "bytes": 386418,
+      "sha256": "17a18471d201955737e03205e8b95fc1d4633125fbc26656a5be3ea6fbb74d71",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Viking-Chapters-banner-2560x1440.png",
+      "bytes": 1224280,
+      "sha256": "038b84e1232b35583ab8b906cf76a126794e1087e90e41ac4cb86eac488217ff",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "mobile-preview.png",
+      "bytes": 426040,
+      "sha256": "cc890b5caca422287b9483b22901b31c0234a7becafef0055b8210f33c8fb809",
+      "copy_mode": "byte-identical-original-preview"
+    },
+    {
+      "path": "desktop-preview.jpg",
+      "bytes": 143099,
+      "sha256": "9f6680ba901be9075f63af7dc1dd9e0f81f24e2aa778690bfac969ff6e5a030c",
+      "copy_mode": "byte-identical-original-preview"
+    },
+    {
+      "path": "avatar-circular-preview.png",
+      "bytes": 1108531,
+      "sha256": "0ca8f6032afc0951d65538324c133da10691dbdbba7b056bce92cc3e2c643a0f",
+      "copy_mode": "byte-identical-original-preview"
+    }
+  ]
+}

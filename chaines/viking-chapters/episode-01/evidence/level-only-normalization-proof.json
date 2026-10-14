@@ -1,0 +1,43 @@
+{
+  "source": "historical-artifact:tubeforge-api-handoff/staging/viking-remote-clock/voice.mp3",
+  "source_sha256": "865da8fcc7d315f02cc7d59168e7f97c3e5f6edfae6a625c480eb95050b66028",
+  "derived": "historical-artifact:viking-chapters-production/episode-01/vps-adoption/narration-normalized.flac",
+  "derived_sha256": "a6f794a5b89a63c2714fd0311911278aef673ad37babe76a81bc313b110de6fb",
+  "original_levels": {
+    "input_i": "-27.89",
+    "input_tp": "-2.22",
+    "input_lra": "5.40",
+    "input_thresh": "-38.54",
+    "output_i": "-18.21",
+    "output_tp": "-1.50",
+    "output_lra": "4.00",
+    "output_thresh": "-28.90",
+    "normalization_type": "dynamic",
+    "target_offset": "1.21"
+  },
+  "final_levels": {
+    "input_i": "-17.42",
+    "input_tp": "-1.45",
+    "input_lra": "3.90",
+    "input_thresh": "-28.09",
+    "output_i": "-17.01",
+    "output_tp": "-1.50",
+    "output_lra": "3.70",
+    "output_thresh": "-27.67",
+    "normalization_type": "dynamic",
+    "target_offset": "0.01"
+  },
+  "source_decode": {
+    "samples": 51413760,
+    "rate": 44100,
+    "layout": "mono"
+  },
+  "derived_decode": {
+    "samples": 51413760,
+    "rate": 44100,
+    "layout": "mono"
+  },
+  "drift_samples": 0,
+  "drift_ms": 0,
+  "operation": "Two-pass level-only normalization; identical decoded sample count, 44100 Hz mono. No new speech, timing edit or visual rendering."
+}

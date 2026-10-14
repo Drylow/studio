@@ -1,5 +1,13 @@
 # Edgerunners Studio — guide pour Claude (à lire en entier avant de travailler)
 
+**Passation du 14 octobre 2026 : lire [README_HANDOFF.md](README_HANDOFF.md) en premier.**
+Il relie les scripts, images, voix, références et contrôles Samurai/Viking/Pirate,
+la narration du premier Alien de One Stick Left et sa continuité J30, le client
+TubeForge VPS maintenu et le coffre chiffré des accès fournis. La publication Fury
+des nouvelles chaînes reste à identifier/tester ; aucun nouveau posting n'est
+configuré par cette passation. Les projets des autres sessions restent distincts.
+Ce guide ne réactive pas la chaîne sleep abandonnée ni des travaux anciens.
+
 **Chaînes sleep — reprise du 12 octobre 2026 :** lire [Deep Void et Quiet Paradox](chaines/sleep-theories/README.md). Ce suivi est indépendant des productions historiques et sportives.
 
 **Pour la reprise Survivor/TubeForge du 12 octobre 2026 : lire aussi `README_REPRISE.md`.**

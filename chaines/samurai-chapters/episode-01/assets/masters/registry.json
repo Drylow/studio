@@ -1,0 +1,114 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "b1f9d8d697a80bf1123425df77570df8c1c93c442989a1c0d0e2ae6b36493048",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/root-selected-assets-v1.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "KENJI": {
+      "path": "assets/masters/KENJI.png",
+      "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d",
+      "role": "identity",
+      "character": "KENJI"
+    },
+    "HANA": {
+      "path": "assets/masters/HANA.png",
+      "sha256": "99021996615c56c5b62ed0bb0a7f231c2cc221af569417b1f850bd8087b83605",
+      "role": "identity",
+      "character": "HANA"
+    },
+    "SENIOR": {
+      "path": "assets/masters/SENIOR.png",
+      "sha256": "050281ba929c83c0e8589e7db7f1a8cde844013c20ccf79f6ec64e28f7fe1e80",
+      "role": "identity",
+      "character": "SENIOR"
+    },
+    "MERCHANT": {
+      "path": "assets/masters/MERCHANT.png",
+      "sha256": "51149deda1f5a8dca21c0b84659960e83ee77ec5f2dc29a461ae89b0bb27b46d",
+      "role": "identity",
+      "character": "MERCHANT"
+    },
+    "FATHER": {
+      "path": "assets/masters/FATHER.png",
+      "sha256": "a7b7e17b52bd6a8cbf45bc15896cd5a57247fec8abfe11fc574fe1ccf214ea39",
+      "role": "identity",
+      "character": "FATHER"
+    },
+    "MOTHER": {
+      "path": "assets/masters/MOTHER.png",
+      "sha256": "c8af751ba850776d17c0a35fb0a7cd0915152d4ed69257c48bf8f547e5480b6e",
+      "role": "identity",
+      "character": "MOTHER"
+    },
+    "HOME": {
+      "path": "assets/masters/HOME.png",
+      "sha256": "b3198a318d4fd5355d0d61ef1d966e1ee57ac72532fddf291da582e11e71b631",
+      "role": "location",
+      "location_id": "HOME",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "MARKET": {
+      "path": "assets/masters/MARKET.png",
+      "sha256": "4c413078f575c838f78f99704b96b7198f944adb7d0cdb86ce852c236c47bbf2",
+      "role": "location",
+      "location_id": "MARKET",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "OFFICE": {
+      "path": "assets/masters/OFFICE.png",
+      "sha256": "40886c4690087109c3dff438e4fd775ad1ec991972d30df5d3621594c3eaa057",
+      "role": "location",
+      "location_id": "OFFICE",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "GATE": {
+      "path": "assets/masters/GATE.png",
+      "sha256": "918b389c9aa6127b714082f13915fb74cbae82a3fb0c17a977aee1fc446066b3",
+      "role": "location",
+      "location_id": "GATE",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "TRAINING": {
+      "path": "assets/masters/TRAINING.png",
+      "sha256": "8109814700ce77504c4f30ca040907fab3753bb5ccbfb130fcc11811e77a2379",
+      "role": "location",
+      "location_id": "TRAINING",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "ROAD": {
+      "path": "assets/masters/ROAD.png",
+      "sha256": "52e4c459ef0481d5bffbe942357cdac999ebce89b78827e4c0ce85f37ef84197",
+      "role": "location",
+      "location_id": "ROAD",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    "EDO_LODGE": {
+      "path": "assets/masters/EDO_LODGE.png",
+      "sha256": "6262857f4a187a4252546d785fab5de6035d40ef6a03a03f2c3dc969117ff551",
+      "role": "location",
+      "location_id": "EDO_LODGE",
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  }
+}

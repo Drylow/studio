@@ -1,0 +1,126 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "d91dbb5406b6f6b00c5e458c7ab2c53eba2c76fe9bc20c66a5a20758ed4fba6a",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/technical-proof.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-final-av-technical-review-v1",
+    "movie": "/workspace/tubeforge-regeneration-runtime/app/data/projects/why-being-a-samurai-was-worse-than-you-t-947aab/render/final.mp4",
+    "movie_sha256": "02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163",
+    "state": "technical_pass_visual_review_pending",
+    "metadata": {
+      "video_frames": 28297,
+      "width": 1920,
+      "height": 1080,
+      "fps": 24.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_rate": 44100,
+      "video_duration": 1179.0416666666667,
+      "audio_duration": 1179.0360090702948
+    },
+    "actual_decoded_video_frames": 28297,
+    "full_av_fatal_decode_exit": 0,
+    "full_av_fatal_decode_method": "One complete PyAV decode of both streams, err_detect=explode; additional audio-only FFmpeg xerror pass measures final levels. No second full video decode.",
+    "actual_decoded_audio_frames": 50777,
+    "actual_decoded_audio_samples": 51995488,
+    "full_av_decode_elapsed_seconds": 200.73842215538025,
+    "audio_measured_levels": {
+      "input_i": "-17.36",
+      "input_tp": "-1.22",
+      "input_lra": "3.20",
+      "input_thresh": "-27.91",
+      "output_i": "-17.12",
+      "output_tp": "-1.50",
+      "output_lra": "3.10",
+      "output_thresh": "-27.65",
+      "normalization_type": "dynamic",
+      "target_offset": "0.12"
+    },
+    "voice_correlation_windows": [
+      {
+        "start_seconds": 2.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999650577319286,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 113.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999674490323195,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 295.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999443116837087,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 589.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.99995520264827,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 880.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999706732406336,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 1050.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999609328007234,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      },
+      {
+        "start_seconds": 1173.0,
+        "duration_seconds": 3.0,
+        "zero_lag_correlation": 0.9999657913524356,
+        "best_lag_samples": 0,
+        "best_lag_ms": 0.0
+      }
+    ],
+    "source_voice_sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671",
+    "derived_voice_sha256": "03f0dd5c6b0ea57d0dc3e1ee89614893926a462d833fcd73050af4287f307635",
+    "captured_frame_count": 324,
+    "capture_sheets": [
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-01.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-02.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-03.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-04.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-05.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-06.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-07.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-08.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-09.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-10.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-11.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-12.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-13.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-14.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-15.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-16.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-17.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-18.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-19.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-20.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-21.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-22.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-23.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-24.jpg",
+      "/workspace/samurai-chapters-regeneration/episode-01/final-encoded-qa/02a4c48d6682adcf8020a3338f02903c506b7590eeb721d250766ff0927d9163/sheet-25.jpg"
+    ],
+    "visual_review_state": "pending_actual_view",
+    "elapsed_seconds": 230.4576859474182,
+    "paid_calls": 0,
+    "uploaded": false
+  }
+}

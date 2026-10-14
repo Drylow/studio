@@ -1,0 +1,120 @@
+{
+  "schema": "history-final-av-technical-review-v1",
+  "movie_sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+  "state": "technical_pass_visual_review_pending",
+  "metadata": {
+    "video_frames": 28442,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_rate": 44100,
+    "video_duration": 1185.0833333333333,
+    "audio_duration": 1185.0970068027211
+  },
+  "actual_decoded_video_frames": 28442,
+  "full_av_fatal_decode_exit": 0,
+  "full_av_fatal_decode_method": "One complete PyAV decode of both streams, err_detect=explode; additional audio-only FFmpeg xerror pass measures final levels. No second full video decode.",
+  "actual_decoded_audio_frames": 51038,
+  "actual_decoded_audio_samples": 52262778,
+  "full_av_decode_elapsed_seconds": 199.82969427108765,
+  "audio_measured_levels": {
+    "input_i": "-17.44",
+    "input_tp": "-0.81",
+    "input_lra": "3.70",
+    "input_thresh": "-28.07",
+    "output_i": "-17.26",
+    "output_tp": "-1.50",
+    "output_lra": "3.60",
+    "output_thresh": "-27.89",
+    "normalization_type": "dynamic",
+    "target_offset": "0.26"
+  },
+  "voice_correlation_windows": [
+    {
+      "start_seconds": 2.0,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999748619039168,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 118.509,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999426044193072,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 296.2725,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999758800958798,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 592.545,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999549476278661,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 888.8174999999999,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999548685282686,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 1066.581,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.999949192486606,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    },
+    {
+      "start_seconds": 1179.09,
+      "duration_seconds": 3.0,
+      "zero_lag_correlation": 0.9999696311773676,
+      "best_lag_samples": 0,
+      "best_lag_ms": 0.0
+    }
+  ],
+  "source_voice_sha256": "4105fd0a53e1089fbc62db5ca0d7a6402b81fa314e54e1745326904a90d24538",
+  "derived_voice_sha256": "86adab69302182f0651d26c92e0b3611766b283085b98ee13f8aee6c16c47bea",
+  "captured_frame_count": 255,
+  "visual_review_state": "pending_actual_view",
+  "elapsed_seconds": 231.375506401062,
+  "paid_calls": 0,
+  "uploaded": false,
+  "capture_sheets": [
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-02.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-03.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-04.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-05.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-07.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-09.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-10.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-11.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-12.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-13.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-15.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-16.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-17.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-18.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg"
+  ],
+  "movie_external_artifact": {
+    "filename": "Pirate-Pages-Episode-01.mp4",
+    "sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+    "delivery_gofile": "https://gofile.io/d/e2AjnCyr",
+    "binary_not_in_git": true
+  },
+  "historical_marker_notice": "Technical ledger was written before visual review; its pending marker remains historical. Actual finished visual PASS is separate."
+}

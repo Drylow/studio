@@ -1,0 +1,70 @@
+{
+  "source_movie_file": "Alien-Outbreak-Survival-Day-1-to-Day-30.mp4",
+  "source_movie_sha256": "63136305b4bcc8fbc5f5e1d87b6fa11e27cfc9abcad8079b5b23cecc88b784ec",
+  "source_url": "https://gofile.io/d/rtK6vmpj",
+  "is_original_authored_script": false,
+  "is_original_tts_clock": false,
+  "method": "free local speech recognition from the actual final MP4; full output read by continuity reviewer",
+  "duration_seconds": 1145.605,
+  "first_segment_start_seconds": 0.0,
+  "last_segment_end_seconds": 1145.1,
+  "segments": 375,
+  "recognized_word_items": 3254,
+  "minimal_editorial_edits": [
+    {
+      "original": "Read you say.",
+      "replacement": "Reed, you say.",
+      "occurrences": 1,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    },
+    {
+      "original": "the plane figure",
+      "replacement": "the plain figure",
+      "occurrences": 4,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    },
+    {
+      "original": "the same joint circles",
+      "replacement": "the same joined circles",
+      "occurrences": 1,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    },
+    {
+      "original": "damage packaging",
+      "replacement": "damaged packaging",
+      "occurrences": 1,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    },
+    {
+      "original": "Your sorting food",
+      "replacement": "You're sorting food",
+      "occurrences": 1,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    },
+    {
+      "original": "the root out",
+      "replacement": "the route out",
+      "occurrences": 1,
+      "basis": "canonical name from original publication kit or minimal grammatical/contextual correction; not restored authorial wording"
+    }
+  ],
+  "all_timings_monotonic": true,
+  "files": [
+    {
+      "file": "transcript-recovered-from-final-media.txt",
+      "sha256": "85490f1bdb1837b7bac1c63be680e387fa4d79229de9303a29d987d6d617290e"
+    },
+    {
+      "file": "transcript-recovered-from-final-media.json",
+      "sha256": "4bfe7cbd4fb6ce3532775085633a0e6c2dfc594fc3381ec3cffe4489ab108704"
+    },
+    {
+      "file": "narration-recovered-edited.txt",
+      "sha256": "cb53847d5fd5ce56608df4b34c3da708bc734856f02f9ed2999a8e165f44b53d"
+    },
+    {
+      "file": "captions-recovered-from-final-media.srt",
+      "sha256": "5474572f8b4a495f29e62394fe482653335ac792217655a2fd1fa14e5ed211f1"
+    }
+  ]
+}

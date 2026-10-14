@@ -1,0 +1,1737 @@
+{
+  "movie_sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+  "visual_review_state": "pending_actual_view",
+  "panels": [
+    {
+      "sheet": 1,
+      "panel": 1,
+      "label": "Scene 001 — encoded midpoint frame 171",
+      "frames": [
+        171
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 2,
+      "label": "Scene 002 — encoded midpoint frame 537",
+      "frames": [
+        537
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 3,
+      "label": "Scene 003 — encoded midpoint frame 902",
+      "frames": [
+        902
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 4,
+      "label": "Scene 004 — encoded midpoint frame 1262",
+      "frames": [
+        1262
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 5,
+      "label": "Scene 005 — encoded midpoint frame 1546",
+      "frames": [
+        1546
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 6,
+      "label": "Scene 006 — encoded midpoint frame 1817",
+      "frames": [
+        1817
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 7,
+      "label": "Scene 007 — encoded midpoint frame 2191",
+      "frames": [
+        2191
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 8,
+      "label": "Scene 008 — encoded midpoint frame 2562",
+      "frames": [
+        2562
+      ]
+    },
+    {
+      "sheet": 1,
+      "panel": 9,
+      "label": "Scene 009 — encoded midpoint frame 2887",
+      "frames": [
+        2887
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 1,
+      "label": "Scene 010 — encoded midpoint frame 3191",
+      "frames": [
+        3191
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 2,
+      "label": "Scene 011 — encoded midpoint frame 3504",
+      "frames": [
+        3504
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 3,
+      "label": "Scene 012 — encoded midpoint frame 3732",
+      "frames": [
+        3732
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 4,
+      "label": "Scene 013 — encoded midpoint frame 3913",
+      "frames": [
+        3913
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 5,
+      "label": "Scene 014 — encoded midpoint frame 4236",
+      "frames": [
+        4236
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 6,
+      "label": "Scene 015 — encoded midpoint frame 4535",
+      "frames": [
+        4535
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 7,
+      "label": "Scene 016 — encoded midpoint frame 4784",
+      "frames": [
+        4784
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 8,
+      "label": "Scene 017 — encoded midpoint frame 5120",
+      "frames": [
+        5120
+      ]
+    },
+    {
+      "sheet": 2,
+      "panel": 9,
+      "label": "Scene 018 — encoded midpoint frame 5480",
+      "frames": [
+        5480
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 1,
+      "label": "Scene 019 — encoded midpoint frame 5842",
+      "frames": [
+        5842
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 2,
+      "label": "Scene 020 — encoded midpoint frame 6154",
+      "frames": [
+        6154
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 3,
+      "label": "Scene 021 — encoded midpoint frame 6452",
+      "frames": [
+        6452
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 4,
+      "label": "Scene 022 — encoded midpoint frame 6806",
+      "frames": [
+        6806
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 5,
+      "label": "Scene 023 — encoded midpoint frame 7156",
+      "frames": [
+        7156
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 6,
+      "label": "Scene 024 — encoded midpoint frame 7449",
+      "frames": [
+        7449
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 7,
+      "label": "Scene 025 — encoded midpoint frame 7745",
+      "frames": [
+        7745
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 8,
+      "label": "Scene 026 — encoded midpoint frame 8082",
+      "frames": [
+        8082
+      ]
+    },
+    {
+      "sheet": 3,
+      "panel": 9,
+      "label": "Scene 027 — encoded midpoint frame 8429",
+      "frames": [
+        8429
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 1,
+      "label": "Scene 028 — encoded midpoint frame 8717",
+      "frames": [
+        8717
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 2,
+      "label": "Scene 029 — encoded midpoint frame 8990",
+      "frames": [
+        8990
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 3,
+      "label": "Scene 030 — encoded midpoint frame 9319",
+      "frames": [
+        9319
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 4,
+      "label": "Scene 031 — encoded midpoint frame 9615",
+      "frames": [
+        9615
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 5,
+      "label": "Scene 032 — encoded midpoint frame 9852",
+      "frames": [
+        9852
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 6,
+      "label": "Scene 033 — encoded midpoint frame 10143",
+      "frames": [
+        10143
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 7,
+      "label": "Scene 034 — encoded midpoint frame 10499",
+      "frames": [
+        10499
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 8,
+      "label": "Scene 035 — encoded midpoint frame 10847",
+      "frames": [
+        10847
+      ]
+    },
+    {
+      "sheet": 4,
+      "panel": 9,
+      "label": "Scene 036 — encoded midpoint frame 11164",
+      "frames": [
+        11164
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 1,
+      "label": "Scene 037 — encoded midpoint frame 11465",
+      "frames": [
+        11465
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 2,
+      "label": "Scene 038 — encoded midpoint frame 11752",
+      "frames": [
+        11752
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 3,
+      "label": "Scene 039 — encoded midpoint frame 12080",
+      "frames": [
+        12080
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 4,
+      "label": "Scene 040 — encoded midpoint frame 12446",
+      "frames": [
+        12446
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 5,
+      "label": "Scene 041 — encoded midpoint frame 12789",
+      "frames": [
+        12789
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 6,
+      "label": "Scene 042 — encoded midpoint frame 13163",
+      "frames": [
+        13163
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 7,
+      "label": "Scene 043 — encoded midpoint frame 13538",
+      "frames": [
+        13538
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 8,
+      "label": "Scene 044 — encoded midpoint frame 13864",
+      "frames": [
+        13864
+      ]
+    },
+    {
+      "sheet": 5,
+      "panel": 9,
+      "label": "Scene 045 — encoded midpoint frame 14187",
+      "frames": [
+        14187
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 1,
+      "label": "Scene 046 — encoded midpoint frame 14554",
+      "frames": [
+        14554
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 2,
+      "label": "Scene 047 — encoded midpoint frame 14887",
+      "frames": [
+        14887
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 3,
+      "label": "Scene 048 — encoded midpoint frame 15154",
+      "frames": [
+        15154
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 4,
+      "label": "Scene 049 — encoded midpoint frame 15444",
+      "frames": [
+        15444
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 5,
+      "label": "Scene 050 — encoded midpoint frame 15779",
+      "frames": [
+        15779
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 6,
+      "label": "Scene 051 — encoded midpoint frame 16113",
+      "frames": [
+        16113
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 7,
+      "label": "Scene 052 — encoded midpoint frame 16453",
+      "frames": [
+        16453
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 8,
+      "label": "Scene 053 — encoded midpoint frame 16815",
+      "frames": [
+        16815
+      ]
+    },
+    {
+      "sheet": 6,
+      "panel": 9,
+      "label": "Scene 054 — encoded midpoint frame 17161",
+      "frames": [
+        17161
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 1,
+      "label": "Scene 055 — encoded midpoint frame 17487",
+      "frames": [
+        17487
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 2,
+      "label": "Scene 056 — encoded midpoint frame 17809",
+      "frames": [
+        17809
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 3,
+      "label": "Scene 057 — encoded midpoint frame 18132",
+      "frames": [
+        18132
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 4,
+      "label": "Scene 058 — encoded midpoint frame 18492",
+      "frames": [
+        18492
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 5,
+      "label": "Scene 059 — encoded midpoint frame 18852",
+      "frames": [
+        18852
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 6,
+      "label": "Scene 060 — encoded midpoint frame 19177",
+      "frames": [
+        19177
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 7,
+      "label": "Scene 061 — encoded midpoint frame 19518",
+      "frames": [
+        19518
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 8,
+      "label": "Scene 062 — encoded midpoint frame 19873",
+      "frames": [
+        19873
+      ]
+    },
+    {
+      "sheet": 7,
+      "panel": 9,
+      "label": "Scene 063 — encoded midpoint frame 20224",
+      "frames": [
+        20224
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 1,
+      "label": "Scene 064 — encoded midpoint frame 20518",
+      "frames": [
+        20518
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 2,
+      "label": "Scene 065 — encoded midpoint frame 20824",
+      "frames": [
+        20824
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 3,
+      "label": "Scene 066 — encoded midpoint frame 21235",
+      "frames": [
+        21235
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 4,
+      "label": "Scene 067 — encoded midpoint frame 21573",
+      "frames": [
+        21573
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 5,
+      "label": "Scene 068 — encoded midpoint frame 21863",
+      "frames": [
+        21863
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 6,
+      "label": "Scene 069 — encoded midpoint frame 22265",
+      "frames": [
+        22265
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 7,
+      "label": "Scene 070 — encoded midpoint frame 22655",
+      "frames": [
+        22655
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 8,
+      "label": "Scene 071 — encoded midpoint frame 22963",
+      "frames": [
+        22963
+      ]
+    },
+    {
+      "sheet": 8,
+      "panel": 9,
+      "label": "Scene 072 — encoded midpoint frame 23259",
+      "frames": [
+        23259
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 1,
+      "label": "Scene 073 — encoded midpoint frame 23583",
+      "frames": [
+        23583
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 2,
+      "label": "Scene 074 — encoded midpoint frame 23939",
+      "frames": [
+        23939
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 3,
+      "label": "Scene 075 — encoded midpoint frame 24308",
+      "frames": [
+        24308
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 4,
+      "label": "Scene 076 — encoded midpoint frame 24666",
+      "frames": [
+        24666
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 5,
+      "label": "Scene 077 — encoded midpoint frame 25022",
+      "frames": [
+        25022
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 6,
+      "label": "Scene 078 — encoded midpoint frame 25392",
+      "frames": [
+        25392
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 7,
+      "label": "Scene 079 — encoded midpoint frame 25777",
+      "frames": [
+        25777
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 8,
+      "label": "Scene 080 — encoded midpoint frame 26191",
+      "frames": [
+        26191
+      ]
+    },
+    {
+      "sheet": 9,
+      "panel": 9,
+      "label": "Scene 081 — encoded midpoint frame 26576",
+      "frames": [
+        26576
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 1,
+      "label": "Scene 082 — encoded midpoint frame 26929",
+      "frames": [
+        26929
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 2,
+      "label": "Scene 083 — encoded midpoint frame 27347",
+      "frames": [
+        27347
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 3,
+      "label": "Scene 084 — encoded midpoint frame 27770",
+      "frames": [
+        27770
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 4,
+      "label": "Scene 085 — encoded midpoint frame 28199",
+      "frames": [
+        28199
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 5,
+      "label": "Cut 001 → 002",
+      "frames": [
+        342,
+        343
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 6,
+      "label": "Cut 002 → 003",
+      "frames": [
+        731,
+        732
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 7,
+      "label": "Cut 003 → 004",
+      "frames": [
+        1072,
+        1073
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 8,
+      "label": "Cut 004 → 005",
+      "frames": [
+        1452,
+        1453
+      ]
+    },
+    {
+      "sheet": 10,
+      "panel": 9,
+      "label": "Cut 005 → 006",
+      "frames": [
+        1639,
+        1640
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 1,
+      "label": "Cut 006 → 007",
+      "frames": [
+        1994,
+        1995
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 2,
+      "label": "Cut 007 → 008",
+      "frames": [
+        2388,
+        2389
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 3,
+      "label": "Cut 008 → 009",
+      "frames": [
+        2735,
+        2736
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 4,
+      "label": "Cut 009 → 010",
+      "frames": [
+        3038,
+        3039
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 5,
+      "label": "Cut 010 → 011",
+      "frames": [
+        3343,
+        3344
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 6,
+      "label": "Cut 011 → 012",
+      "frames": [
+        3665,
+        3666
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 7,
+      "label": "Cut 012 → 013",
+      "frames": [
+        3799,
+        3800
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 8,
+      "label": "Cut 013 → 014",
+      "frames": [
+        4027,
+        4028
+      ]
+    },
+    {
+      "sheet": 11,
+      "panel": 9,
+      "label": "Cut 014 → 015",
+      "frames": [
+        4444,
+        4445
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 1,
+      "label": "Cut 015 → 016",
+      "frames": [
+        4625,
+        4626
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 2,
+      "label": "Cut 016 → 017",
+      "frames": [
+        4942,
+        4943
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 3,
+      "label": "Cut 017 → 018",
+      "frames": [
+        5297,
+        5298
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 4,
+      "label": "Cut 018 → 019",
+      "frames": [
+        5662,
+        5663
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 5,
+      "label": "Cut 019 → 020",
+      "frames": [
+        6022,
+        6023
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 6,
+      "label": "Cut 020 → 021",
+      "frames": [
+        6285,
+        6286
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 7,
+      "label": "Cut 021 → 022",
+      "frames": [
+        6619,
+        6620
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 8,
+      "label": "Cut 022 → 023",
+      "frames": [
+        6992,
+        6993
+      ]
+    },
+    {
+      "sheet": 12,
+      "panel": 9,
+      "label": "Cut 023 → 024",
+      "frames": [
+        7320,
+        7321
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 1,
+      "label": "Cut 024 → 025",
+      "frames": [
+        7577,
+        7578
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 2,
+      "label": "Cut 025 → 026",
+      "frames": [
+        7912,
+        7913
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 3,
+      "label": "Cut 026 → 027",
+      "frames": [
+        8251,
+        8252
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 4,
+      "label": "Cut 027 → 028",
+      "frames": [
+        8607,
+        8608
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 5,
+      "label": "Cut 028 → 029",
+      "frames": [
+        8827,
+        8828
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 6,
+      "label": "Cut 029 → 030",
+      "frames": [
+        9152,
+        9153
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 7,
+      "label": "Cut 030 → 031",
+      "frames": [
+        9486,
+        9487
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 8,
+      "label": "Cut 031 → 032",
+      "frames": [
+        9744,
+        9745
+      ]
+    },
+    {
+      "sheet": 13,
+      "panel": 9,
+      "label": "Cut 032 → 033",
+      "frames": [
+        9959,
+        9960
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 1,
+      "label": "Cut 033 → 034",
+      "frames": [
+        10326,
+        10327
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 2,
+      "label": "Cut 034 → 035",
+      "frames": [
+        10671,
+        10672
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 3,
+      "label": "Cut 035 → 036",
+      "frames": [
+        11023,
+        11024
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 4,
+      "label": "Cut 036 → 037",
+      "frames": [
+        11304,
+        11305
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 5,
+      "label": "Cut 037 → 038",
+      "frames": [
+        11625,
+        11626
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 6,
+      "label": "Cut 038 → 039",
+      "frames": [
+        11878,
+        11879
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 7,
+      "label": "Cut 039 → 040",
+      "frames": [
+        12282,
+        12283
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 8,
+      "label": "Cut 040 → 041",
+      "frames": [
+        12609,
+        12610
+      ]
+    },
+    {
+      "sheet": 14,
+      "panel": 9,
+      "label": "Cut 041 → 042",
+      "frames": [
+        12968,
+        12969
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 1,
+      "label": "Cut 042 → 043",
+      "frames": [
+        13358,
+        13359
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 2,
+      "label": "Cut 043 → 044",
+      "frames": [
+        13717,
+        13718
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 3,
+      "label": "Cut 044 → 045",
+      "frames": [
+        14011,
+        14012
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 4,
+      "label": "Cut 045 → 046",
+      "frames": [
+        14362,
+        14363
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 5,
+      "label": "Cut 046 → 047",
+      "frames": [
+        14745,
+        14746
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 6,
+      "label": "Cut 047 → 048",
+      "frames": [
+        15028,
+        15029
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 7,
+      "label": "Cut 048 → 049",
+      "frames": [
+        15280,
+        15281
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 8,
+      "label": "Cut 049 → 050",
+      "frames": [
+        15608,
+        15609
+      ]
+    },
+    {
+      "sheet": 15,
+      "panel": 9,
+      "label": "Cut 050 → 051",
+      "frames": [
+        15949,
+        15950
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 1,
+      "label": "Cut 051 → 052",
+      "frames": [
+        16277,
+        16278
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 2,
+      "label": "Cut 052 → 053",
+      "frames": [
+        16629,
+        16630
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 3,
+      "label": "Cut 053 → 054",
+      "frames": [
+        17000,
+        17001
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 4,
+      "label": "Cut 054 → 055",
+      "frames": [
+        17322,
+        17323
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 5,
+      "label": "Cut 055 → 056",
+      "frames": [
+        17651,
+        17652
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 6,
+      "label": "Cut 056 → 057",
+      "frames": [
+        17967,
+        17968
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 7,
+      "label": "Cut 057 → 058",
+      "frames": [
+        18297,
+        18298
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 8,
+      "label": "Cut 058 → 059",
+      "frames": [
+        18686,
+        18687
+      ]
+    },
+    {
+      "sheet": 16,
+      "panel": 9,
+      "label": "Cut 059 → 060",
+      "frames": [
+        19018,
+        19019
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 1,
+      "label": "Cut 060 → 061",
+      "frames": [
+        19336,
+        19337
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 2,
+      "label": "Cut 061 → 062",
+      "frames": [
+        19699,
+        19700
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 3,
+      "label": "Cut 062 → 063",
+      "frames": [
+        20046,
+        20047
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 4,
+      "label": "Cut 063 → 064",
+      "frames": [
+        20402,
+        20403
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 5,
+      "label": "Cut 064 → 065",
+      "frames": [
+        20633,
+        20634
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 6,
+      "label": "Cut 065 → 066",
+      "frames": [
+        21015,
+        21016
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 7,
+      "label": "Cut 066 → 067",
+      "frames": [
+        21455,
+        21456
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 8,
+      "label": "Cut 067 → 068",
+      "frames": [
+        21690,
+        21691
+      ]
+    },
+    {
+      "sheet": 17,
+      "panel": 9,
+      "label": "Cut 068 → 069",
+      "frames": [
+        22036,
+        22037
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 1,
+      "label": "Cut 069 → 070",
+      "frames": [
+        22493,
+        22494
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 2,
+      "label": "Cut 070 → 071",
+      "frames": [
+        22817,
+        22818
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 3,
+      "label": "Cut 071 → 072",
+      "frames": [
+        23109,
+        23110
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 4,
+      "label": "Cut 072 → 073",
+      "frames": [
+        23408,
+        23409
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 5,
+      "label": "Cut 073 → 074",
+      "frames": [
+        23758,
+        23759
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 6,
+      "label": "Cut 074 → 075",
+      "frames": [
+        24120,
+        24121
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 7,
+      "label": "Cut 075 → 076",
+      "frames": [
+        24495,
+        24496
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 8,
+      "label": "Cut 076 → 077",
+      "frames": [
+        24836,
+        24837
+      ]
+    },
+    {
+      "sheet": 18,
+      "panel": 9,
+      "label": "Cut 077 → 078",
+      "frames": [
+        25208,
+        25209
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 1,
+      "label": "Cut 078 → 079",
+      "frames": [
+        25576,
+        25577
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 2,
+      "label": "Cut 079 → 080",
+      "frames": [
+        25978,
+        25979
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 3,
+      "label": "Cut 080 → 081",
+      "frames": [
+        26404,
+        26405
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 4,
+      "label": "Cut 081 → 082",
+      "frames": [
+        26748,
+        26749
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 5,
+      "label": "Cut 082 → 083",
+      "frames": [
+        27110,
+        27111
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 6,
+      "label": "Cut 083 → 084",
+      "frames": [
+        27584,
+        27585
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 7,
+      "label": "Cut 084 → 085",
+      "frames": [
+        27956,
+        27957
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 8,
+      "label": "Actual first movie frame",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "sheet": 19,
+      "panel": 9,
+      "label": "Actual last movie frame",
+      "frames": [
+        28441
+      ]
+    }
+  ],
+  "sheets": [
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-02.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-03.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-04.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-05.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-07.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-09.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-10.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-11.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-12.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-13.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-15.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-16.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-17.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-18.jpg",
+    "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg"
+  ],
+  "actual_capture_frame_indexes": [
+    0,
+    171,
+    342,
+    343,
+    537,
+    731,
+    732,
+    902,
+    1072,
+    1073,
+    1262,
+    1452,
+    1453,
+    1546,
+    1639,
+    1640,
+    1817,
+    1994,
+    1995,
+    2191,
+    2388,
+    2389,
+    2562,
+    2735,
+    2736,
+    2887,
+    3038,
+    3039,
+    3191,
+    3343,
+    3344,
+    3504,
+    3665,
+    3666,
+    3732,
+    3799,
+    3800,
+    3913,
+    4027,
+    4028,
+    4236,
+    4444,
+    4445,
+    4535,
+    4625,
+    4626,
+    4784,
+    4942,
+    4943,
+    5120,
+    5297,
+    5298,
+    5480,
+    5662,
+    5663,
+    5842,
+    6022,
+    6023,
+    6154,
+    6285,
+    6286,
+    6452,
+    6619,
+    6620,
+    6806,
+    6992,
+    6993,
+    7156,
+    7320,
+    7321,
+    7449,
+    7577,
+    7578,
+    7745,
+    7912,
+    7913,
+    8082,
+    8251,
+    8252,
+    8429,
+    8607,
+    8608,
+    8717,
+    8827,
+    8828,
+    8990,
+    9152,
+    9153,
+    9319,
+    9486,
+    9487,
+    9615,
+    9744,
+    9745,
+    9852,
+    9959,
+    9960,
+    10143,
+    10326,
+    10327,
+    10499,
+    10671,
+    10672,
+    10847,
+    11023,
+    11024,
+    11164,
+    11304,
+    11305,
+    11465,
+    11625,
+    11626,
+    11752,
+    11878,
+    11879,
+    12080,
+    12282,
+    12283,
+    12446,
+    12609,
+    12610,
+    12789,
+    12968,
+    12969,
+    13163,
+    13358,
+    13359,
+    13538,
+    13717,
+    13718,
+    13864,
+    14011,
+    14012,
+    14187,
+    14362,
+    14363,
+    14554,
+    14745,
+    14746,
+    14887,
+    15028,
+    15029,
+    15154,
+    15280,
+    15281,
+    15444,
+    15608,
+    15609,
+    15779,
+    15949,
+    15950,
+    16113,
+    16277,
+    16278,
+    16453,
+    16629,
+    16630,
+    16815,
+    17000,
+    17001,
+    17161,
+    17322,
+    17323,
+    17487,
+    17651,
+    17652,
+    17809,
+    17967,
+    17968,
+    18132,
+    18297,
+    18298,
+    18492,
+    18686,
+    18687,
+    18852,
+    19018,
+    19019,
+    19177,
+    19336,
+    19337,
+    19518,
+    19699,
+    19700,
+    19873,
+    20046,
+    20047,
+    20224,
+    20402,
+    20403,
+    20518,
+    20633,
+    20634,
+    20824,
+    21015,
+    21016,
+    21235,
+    21455,
+    21456,
+    21573,
+    21690,
+    21691,
+    21863,
+    22036,
+    22037,
+    22265,
+    22493,
+    22494,
+    22655,
+    22817,
+    22818,
+    22963,
+    23109,
+    23110,
+    23259,
+    23408,
+    23409,
+    23583,
+    23758,
+    23759,
+    23939,
+    24120,
+    24121,
+    24308,
+    24495,
+    24496,
+    24666,
+    24836,
+    24837,
+    25022,
+    25208,
+    25209,
+    25392,
+    25576,
+    25577,
+    25777,
+    25978,
+    25979,
+    26191,
+    26404,
+    26405,
+    26576,
+    26748,
+    26749,
+    26929,
+    27110,
+    27111,
+    27347,
+    27584,
+    27585,
+    27770,
+    27956,
+    27957,
+    28199,
+    28441
+  ],
+  "notice": "All actual reviewed encoded contact sheets preserved byte-identically. Individual full-resolution frame files omitted; exact frame indexes retained and can be recaptured from the final MP4."
+}

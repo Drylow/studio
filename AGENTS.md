@@ -1,3 +1,14 @@
+# Passation actuelle — 14 octobre 2026
+
+Pour les vidéos de ce chat et leur future publication, lire d'abord
+[README_HANDOFF.md](README_HANDOFF.md), puis `production/handoff/`.
+Les scripts/images/voix disponibles Samurai, Viking, Pirate et la continuité du
+véritable Alien J1–J30 sont sauvegardés. Les sources des collègues restent intactes.
+Les cinq pièces d'accès VPS/API originales sont dans un coffre chiffré ; sa clé
+reste privée et son stockage externe doit être confirmé avant toute récupération.
+Ne pas relancer les films livrés, la chaîne sleep annulée ou les calendriers datés.
+Les consignes et états plus anciens ci-dessous restent de l'historique.
+
 # Reprise par Codex — 10 octobre 2026 (TikTok prolongés après Claude)
 
 L'utilisateur passe de Claude à Codex et veut que **tout continue exactement pareil**. Lire dans

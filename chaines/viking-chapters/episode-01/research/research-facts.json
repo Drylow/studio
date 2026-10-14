@@ -1,0 +1,641 @@
+{
+  "schema": "viking-chapters-researched-narrative-v1",
+  "title": "Why Being a Viking Was Worse Than You Think",
+  "created_utc": "2026-10-13T20:19:15.093541+00:00",
+  "script_sha256": "88c9690aa11d0d0e46eca2d9cbe9408b9b98a93f5ba0a86ffee81d45c8c86a33",
+  "method": "Original authored English second-person narrative. Museum pages fetched through the inherited normal proxy with TLS verification intact, archived, text read, conservative claims selected. No copyrighted film/game footage used.",
+  "scope": {
+    "setting": "Western Norway and English North Sea coast, around c.950",
+    "protagonist": "Eirik, fictional adult free farmer",
+    "arc": "Illustrative farm routine, late-spring preparations, summer ship voyage, fictional aborted hostile approach, trade, late-summer return, autumn harvest, winter legal and material pressures",
+    "places": "Six master places with explicit physical/time/weather variants; Norwegian landing never silently reused as English harbor."
+  },
+  "historical_fiction_disclosure": "Narration opens with Imagine and This is an imagined household, built around what archaeology tells us. Individual names, escaped sheep, boundary dispute, aborted raid, prices/profit arrangements, gift and personal injuries are illustrative fiction. Narration explicitly flags particular bargain, encounter, compromise and household reckoning as imagined.",
+  "constraints": [
+    "No claim all Norse people were raiders.",
+    "No horned fighting helmets.",
+    "No universal Viking wage/profit table.",
+    "No precise death rate or claim most never returned.",
+    "No invented documented battle, named historical witness or modern national legal code.",
+    "No portrayal that women had universal modern equality.",
+    "No precise supply, clothing production, voyage time or mortality numbers extrapolated from modern experiments.",
+    "No distant imaginary monumental towers or modern machinery.",
+    "No copyrighted source clips."
+  ],
+  "source_count": 18,
+  "sources": [
+    {
+      "source_id": "natmus-food",
+      "institution": "National Museum of Denmark",
+      "title": "Viking food",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-food.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-food.txt",
+      "html_sha256": "c589fb3de156ae89d84a1c80b9e0aaeaabe954eeaf23babe2159f9471460478e",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "the-people-viking-homes",
+      "institution": "National Museum of Denmark",
+      "title": "What were Viking homes like?",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/viking-homes/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/viking-homes/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-viking-homes.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-viking-homes.txt",
+      "html_sha256": "c47c4a4b3ded69e79fbea5fd940fc8ef1b9c162955f8c407b06a34a0306577ec",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "the-people-clothes-and-jewellery",
+      "institution": "National Museum of Denmark",
+      "title": "The clothes and jewellery of the Vikings",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/clothes-and-jewellery/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/clothes-and-jewellery/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-clothes-and-jewellery.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-clothes-and-jewellery.txt",
+      "html_sha256": "d2b58efedaf3d0def715a197b0dbb44b1a4d3001bc714784ce392d7ec0ad1a54",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "the-people-women",
+      "institution": "National Museum of Denmark",
+      "title": "Women in the Viking Age",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/women/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/women/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-women.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-women.txt",
+      "html_sha256": "2bc26b7011a1ca4dc1a114930163d067149ac3b74288ad5edcce4c0494721568",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "the-people-health",
+      "institution": "National Museum of Denmark",
+      "title": "Viking health",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/health/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-people/health/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-health.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/the-people-health.txt",
+      "html_sha256": "3a2d5d0c663bf223ada5b9f974bdad1227d73caebea39e2c0227f81212b6f05a",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "power-and-aristocracy-social-order-in-the-viking-age",
+      "institution": "National Museum of Denmark",
+      "title": "Social order in the Viking Age",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/social-order-in-the-viking-age/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/social-order-in-the-viking-age/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/power-and-aristocracy-social-order-in-the-viking-age.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/power-and-aristocracy-social-order-in-the-viking-age.txt",
+      "html_sha256": "4d298e1391b821198f583ba67b85747d86fc098a4b44382ec66ccd6ee2104277",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "power-and-aristocracy-slaves-and-thralls",
+      "institution": "National Museum of Denmark",
+      "title": "Slaves and thralls in the Viking Age",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/slaves-and-thralls/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/slaves-and-thralls/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/power-and-aristocracy-slaves-and-thralls.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/power-and-aristocracy-slaves-and-thralls.txt",
+      "html_sha256": "afeb0a9d99077fe0e392b73a39a9b4c2178b88f858518843ec8c12f4d161ba29",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "natmus-magnates",
+      "institution": "National Museum of Denmark",
+      "title": "Magnates and kings",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/magnates-and-kings/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/magnates-and-kings/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-magnates.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-magnates.txt",
+      "html_sha256": "fcd9f0df615392c3f82bae93f9c9a2dcb4432ea021aeb801953f88456284e9df",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "natmus-warfare",
+      "institution": "National Museum of Denmark",
+      "title": "Viking weapons",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/weapons/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/weapons/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-warfare.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/natmus-warfare.txt",
+      "html_sha256": "abb20907b0a542634cc7287391d3fe1a8cda82e53567ebc94027caa8255351c1",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "weapons-helmets",
+      "institution": "National Museum of Denmark",
+      "title": "Viking helmets",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/weapons/helmets/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/weapons/helmets/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/weapons-helmets.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/weapons-helmets.txt",
+      "html_sha256": "068a6e5522acee4982aa2a4cbd026eea1aa64e1792930acb9973540ffbba6bcb",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "food-bread-and-porridge",
+      "institution": "National Museum of Denmark",
+      "title": "Bread and porridge in the Viking Age",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/bread-and-porridge/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/bread-and-porridge/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/food-bread-and-porridge.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/food-bread-and-porridge.txt",
+      "html_sha256": "b99acf73b108604083608eb505f7a76b5b954152820ffd524a2d423bca61891a",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "food-meat-and-fish",
+      "institution": "National Museum of Denmark",
+      "title": "Meat and fish in the Viking Age",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/meat-and-fish/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/food/meat-and-fish/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/food-meat-and-fish.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/food-meat-and-fish.txt",
+      "html_sha256": "0a707c9eaa0106f3335da22e8294b8b2c957842005c3d9f14cf524379e0b7a83",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "expeditions-and-raids-different-types-of-expeditions",
+      "institution": "National Museum of Denmark",
+      "title": "Viking expeditions",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/expeditions-and-raids/different-types-of-expeditions/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/expeditions-and-raids/different-types-of-expeditions/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/expeditions-and-raids-different-types-of-expeditions.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/expeditions-and-raids-different-types-of-expeditions.txt",
+      "html_sha256": "ff0002c9dfd184cd6e3621f2cde3419d443efba763dcfe124466c301c625b28f",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "expeditions-and-raids-trade-in-the-viking-period",
+      "institution": "National Museum of Denmark",
+      "title": "Trade in the Viking period",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/expeditions-and-raids/trade-in-the-viking-period/",
+      "http_status": 200,
+      "final_url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/expeditions-and-raids/trade-in-the-viking-period/",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/expeditions-and-raids-trade-in-the-viking-period.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/expeditions-and-raids-trade-in-the-viking-period.txt",
+      "html_sha256": "723527fc6ada31ba2ccdcd1140ae79a4e133f0a20b7e464ba36c887c7818881f",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "ship5",
+      "institution": "Viking Ship Museum, Roskilde",
+      "title": "Skuldelev 5 - The small longship",
+      "url": "https://www.vikingeskibsmuseet.dk/en/visit-the-museum/exhibitions/the-five-viking-ships/skuldelev-5",
+      "http_status": 200,
+      "final_url": "https://www.vikingeskibsmuseet.dk/en/visit-the-museum/exhibitions/the-five-viking-ships/skuldelev-5",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/ship5.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/ship5.txt",
+      "html_sha256": "f0f0fad85f98576e75809a9a6947e0945d696198b382caa3ce692c1aff992f17",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "ship-crew",
+      "institution": "Viking Ship Museum, Roskilde",
+      "title": "The Ship's Crew",
+      "url": "https://www.vikingeskibsmuseet.dk/en/professions/education/knowledge-of-sailing/the-ships-crew",
+      "http_status": 200,
+      "final_url": "https://www.vikingeskibsmuseet.dk/en/professions/education/knowledge-of-sailing/the-ships-crew",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/ship-crew.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/ship-crew.txt",
+      "html_sha256": "1bca67f85242266e399428cc4b41840263c4458e670fcdc94fc0aa2ddf00e9ea",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "navigation",
+      "institution": "Viking Ship Museum, Roskilde",
+      "title": "Nature and sense navigation",
+      "url": "https://www.vikingeskibsmuseet.dk/en/professions/education/knowledge-of-sailing/nature-and-sense-navigation",
+      "http_status": 200,
+      "final_url": "https://www.vikingeskibsmuseet.dk/en/professions/education/knowledge-of-sailing/nature-and-sense-navigation",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/navigation.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/navigation.txt",
+      "html_sha256": "52399edb23ef2ff895fe04df6bd67855b8c299e17d03f84d71cf3e4d7be83cf5",
+      "actually_retrieved_and_read": true
+    },
+    {
+      "source_id": "sailcloth",
+      "institution": "Viking Ship Museum, Roskilde",
+      "title": "Wool sailcloth",
+      "url": "https://www.vikingeskibsmuseet.dk/en/professions/boatyard/experimental-archaeological-research/maritime-crafts/maritime-technology/wool-sailcloth",
+      "http_status": 200,
+      "final_url": "https://www.vikingeskibsmuseet.dk/en/professions/boatyard/experimental-archaeological-research/maritime-crafts/maritime-technology/wool-sailcloth",
+      "local_html": "historical-artifact:viking-chapters-production/episode-01/research-pages/sailcloth.html",
+      "local_readable_text": "historical-artifact:viking-chapters-production/episode-01/research-pages/sailcloth.txt",
+      "html_sha256": "957aecd5331dc1605beaa23486b4d84ff9bc1ab5fc6f84e6e8630a745b2a7310",
+      "actually_retrieved_and_read": true
+    }
+  ],
+  "claims": [
+    {
+      "fact_id": "F01",
+      "scene_paragraph_indices": [
+        5,
+        6,
+        7,
+        8,
+        16,
+        17,
+        18,
+        19
+      ],
+      "supported_claim": "The larger Norse/Viking Age population included farmers and craftspeople, rather than everyone living as a permanent raider. Seasonal food planning was fundamental.",
+      "source_ids": [
+        "natmus-food"
+      ],
+      "verbatim_source_quote": "The typical Viking was self-sufficient, a farmer with domestic animals and crops in the field.",
+      "qualification": "Museum uses Viking loosely for Viking Age people; narration expressly distinguishes Norse society from an expedition activity. Danish farming evidence supports wider basic context, not one universal Norwegian farm plan.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F02",
+      "scene_paragraph_indices": [
+        9,
+        10
+      ],
+      "supported_claim": "Timber dwellings had central hearths, side sitting/sleeping spaces and smoke ventilation without a modern chimney.",
+      "source_ids": [
+        "the-people-viking-homes"
+      ],
+      "verbatim_source_quote": "Along the walls there were plank beds, on which the Vikings could sit or sleep.",
+      "qualification": "Regional buildings varied. HOME is a plausible fictional western Norwegian household, not a measured reconstruction of one named site.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F03",
+      "scene_paragraph_indices": [
+        9,
+        10,
+        75
+      ],
+      "supported_claim": "Smoke and damp were practical problems; houses required repairs.",
+      "source_ids": [
+        "the-people-viking-homes"
+      ],
+      "verbatim_source_quote": "The Vikings constantly repaired their houses. Damp was the great enemy as it led to rotting.",
+      "qualification": "The protagonist cough and particular broken roof board are invented illustrative incidents; no diagnosis or specific exposure statistic is asserted.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F04",
+      "scene_paragraph_indices": [
+        11,
+        12
+      ],
+      "supported_claim": "Diet included grain, fish, dairy, meat, vegetables, fruit and berries; not every meal was an elite feast.",
+      "source_ids": [
+        "natmus-food"
+      ],
+      "verbatim_source_quote": "Meat, fish, vegetables, cereals and milk products were all an important part of their diet.",
+      "qualification": "Actual availability varied by place, wealth and season. Breakfast uses perhaps, not a universal mandatory menu.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F05",
+      "scene_paragraph_indices": [
+        11,
+        12,
+        17,
+        70
+      ],
+      "supported_claim": "Grain could be used in bread and porridge; agricultural work and harvest were part of household economy.",
+      "source_ids": [
+        "food-bread-and-porridge"
+      ],
+      "verbatim_source_quote": "Apart from bread, cereals were also used to make porridge and beer.",
+      "qualification": "No crop yield, precise universal recipe or plough technology chronology is claimed. Mature grain appears only at the explicitly later harvest scenes.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F06",
+      "scene_paragraph_indices": [
+        13,
+        14,
+        15,
+        20
+      ],
+      "supported_claim": "Wool and flax/linen garments, tunics, cloaks, leather footwear and textile production are documented.",
+      "source_ids": [
+        "the-people-clothes-and-jewellery"
+      ],
+      "verbatim_source_quote": "Ordinary Viking clothes were made of local materials, like wool and flax, woven by the women.",
+      "qualification": "Clothing finds are incomplete and written/iconographic evidence supplements archaeology. Wardrobe is plausible, not proof every Norwegian wore identical colors.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F07",
+      "scene_paragraph_indices": [
+        20,
+        27,
+        67,
+        78
+      ],
+      "supported_claim": "Women performed substantial household, food and textile work and could carry farm responsibility during an expedition.",
+      "source_ids": [
+        "the-people-women"
+      ],
+      "verbatim_source_quote": "From the moment the ship sailed out of the fjord it was her responsibility to secure the harvest and with this survival.",
+      "qualification": "The museum draws partly on later written sources. Narration avoids blanket modern equality, precise universal legal rights or assuming women never traveled.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F08",
+      "scene_paragraph_indices": [
+        21,
+        31,
+        82,
+        83
+      ],
+      "supported_claim": "Society had free/unfree and wealthy/poor differences, with elites, farmers and enslaved people.",
+      "source_ids": [
+        "power-and-aristocracy-social-order-in-the-viking-age"
+      ],
+      "verbatim_source_quote": "The great divisions in society were between the free and unfree, rich and poor, as well as between men and women.",
+      "qualification": "Eirik is fictional free farmer, not representative of every legal status. Elite gift/follower network is broadly inferred from the museum honor/generosity and power discussion.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F09",
+      "scene_paragraph_indices": [
+        21,
+        22
+      ],
+      "supported_claim": "Raids and long-distance trade included enslavement and buying/selling people.",
+      "source_ids": [
+        "power-and-aristocracy-slaves-and-thralls"
+      ],
+      "verbatim_source_quote": "Slaves or thralls were amongst the most important commodities traded by the Vikings.",
+      "qualification": "Presented soberly, not romantically; no invented price, count or specific captive biography, no graphic violence or sexual material.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F10",
+      "scene_paragraph_indices": [
+        25,
+        26,
+        48,
+        53,
+        54
+      ],
+      "supported_claim": "Expeditions could involve raiding, mercenary activity and trade; ships and trade goods do not imply exclusively warlike purposes.",
+      "source_ids": [
+        "expeditions-and-raids-different-types-of-expeditions"
+      ],
+      "verbatim_source_quote": "The Vikings did not always set out with war in mind.",
+      "qualification": "Crew choosing an aborted raid then trade is explicit fiction, not documented exact behavior of a named expedition or universal pattern.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F11",
+      "scene_paragraph_indices": [
+        29,
+        30,
+        31,
+        79,
+        80,
+        81
+      ],
+      "supported_claim": "Assemblies existed as places for public discussion; honor, family and standing mattered.",
+      "source_ids": [
+        "power-and-aristocracy-social-order-in-the-viking-age"
+      ],
+      "verbatim_source_quote": "There are verses about wisdom, friendship, how to act as a guest and how to behave at assemblies (“things”).",
+      "qualification": "Boundary marker, witness and compromise are imagined. Detailed legal texts survive later than the setting, so no precise c.950 courtroom procedure, national statute or modern equal legal system is asserted.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F12",
+      "scene_paragraph_indices": [
+        33,
+        34,
+        35,
+        40,
+        41
+      ],
+      "supported_claim": "Vessels required skilled construction, repair, sailcloth, oars and gear. Wooden ships used skilled maintenance.",
+      "source_ids": [
+        "ship5"
+      ],
+      "verbatim_source_quote": "Unlike the other Skuldelev ships, this ship is built using both new wood and recycled timber.",
+      "qualification": "Skuldelev 5 dates c.1030 and is a comparative example, NOT the c.950 protagonist boat. Narration does not identify that ship, quote its crew/length/speed or claim 1030 design as an exact 950 reconstruction.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F13",
+      "scene_paragraph_indices": [
+        34,
+        86
+      ],
+      "supported_claim": "Wool sail production involved spinning, weaving and careful textile craftsmanship.",
+      "source_ids": [
+        "sailcloth"
+      ],
+      "verbatim_source_quote": "Based on the experience gained in the parallel experiment five people could spin and weave the cloth for Ottar’s sail in a year.",
+      "qualification": "Quote records a modern reconstruction experiment; narration uses only considerable labor and does not treat five people/year as a universal Viking statistic.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F14",
+      "scene_paragraph_indices": [
+        36,
+        37
+      ],
+      "supported_claim": "Weapons reflected wealth: swords were expensive elite equipment, axes/spears more accessible; round shields are documented.",
+      "source_ids": [
+        "natmus-warfare"
+      ],
+      "verbatim_source_quote": "Whereas swords were the costly weapons of the elite, axes and lances were affordable to the warriors of the broader population.",
+      "qualification": "One spear and round shield for Eirik; richer Bjorn may carry one sword. No assumption every farmer owned a complete warrior kit.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F15",
+      "scene_paragraph_indices": [
+        38
+      ],
+      "supported_claim": "The familiar everyday battle horned helmet stereotype is unsupported by surviving helmet evidence.",
+      "source_ids": [
+        "weapons-helmets"
+      ],
+      "verbatim_source_quote": "In a battle situation, horns on a helmet would get in the way.",
+      "qualification": "The page’s preserved-helmet count is older/incomplete and deliberately NOT repeated. Depictions of horned ceremonial figures do not justify putting combat horns on the characters.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F16",
+      "scene_paragraph_indices": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        63,
+        64,
+        65
+      ],
+      "supported_claim": "Crew cooperation, ship handling and maintenance were necessary; voyages exposed participants to demanding conditions.",
+      "source_ids": [
+        "ship-crew"
+      ],
+      "verbatim_source_quote": "overall responsibility for the ship, crew and equipment",
+      "qualification": "Page clearly uses later Gulating legal texts and modern experimental voyages. Narration does not import fixed later watches, conscription, cook duties or exact shipboard ranks into c.950; individual discomfort episodes are plausible fictional illustration.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F17",
+      "scene_paragraph_indices": [
+        43,
+        47,
+        48,
+        63,
+        66
+      ],
+      "supported_claim": "Knowledge of coastlines, landmarks and learned navigation helped seafaring; Norse travelers reached English shores.",
+      "source_ids": [
+        "navigation"
+      ],
+      "verbatim_source_quote": "Most Vikings’ travels by water took place along coasts and on rivers and streams.",
+      "qualification": "Our route western Norway to English North Sea coast is fictional and seasonally plausible; no exact voyage duration, sunstone certainty, magnetic compass or map accuracy claim.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F18",
+      "scene_paragraph_indices": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "supported_claim": "Trade included direct exchanges and silver by weight, with scales, weights and cut silver objects.",
+      "source_ids": [
+        "expeditions-and-raids-trade-in-the-viking-period"
+      ],
+      "verbatim_source_quote": "Using a set of scales and weights, the amount of silver that was required to complete a deal could be precisely determined.",
+      "qualification": "Source’s specific town layouts concern Scandinavia. English coastal MARKET is invented small plausible harbor, not transplanted literal Ribe/Hedeby or proof of a particular named settlement.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F19",
+      "scene_paragraph_indices": [
+        59,
+        60
+      ],
+      "supported_claim": "Long-distance networks moved goods through contacts; inexpensive brooches may reflect purchase or exchange, rather than plunder.",
+      "source_ids": [
+        "expeditions-and-raids-different-types-of-expeditions"
+      ],
+      "verbatim_source_quote": "It is more likely that they bought them",
+      "qualification": "Specific bronze brooch gift bought by Eirik is fictional. Foreign glass bead is illustrative, no invented claim of personal Asia voyage or provenance.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F20",
+      "scene_paragraph_indices": [
+        16,
+        19,
+        70,
+        71,
+        72,
+        73
+      ],
+      "supported_claim": "Livestock, preserved meat/fish and dairy storage supported food resources across seasons.",
+      "source_ids": [
+        "food-meat-and-fish"
+      ],
+      "verbatim_source_quote": "Meat and fish were also dried and salted so that they could be preserved for a long time.",
+      "qualification": "Narration avoids a guaranteed exact stock, famine percentage, annual mortality or precise preservation recipe. Smoking is illustrated by the page’s smoked herring caption.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F21",
+      "scene_paragraph_indices": [
+        76
+      ],
+      "supported_claim": "Skeletal remains document dental problems and injuries.",
+      "source_ids": [
+        "the-people-health"
+      ],
+      "verbatim_source_quote": "Many Vikings also suffered from tooth problems.",
+      "qualification": "No unsupported medical diagnosis, survival percentage, or misleading low life-expectancy statistic; modern medicine comparison is qualitative.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F22",
+      "scene_paragraph_indices": [
+        77,
+        78
+      ],
+      "supported_claim": "Combs and gaming objects survive; appearance and amusement had a place in Norse life.",
+      "source_ids": [
+        "the-people-clothes-and-jewellery"
+      ],
+      "verbatim_source_quote": "The purse could contain various items, like a strike-a-light, comb, nail cleaner, gaming pieces and silver coins.",
+      "qualification": "Board used only if a reviewed historically plausible design; no Chess.com/chess overlay or modern playing cards.",
+      "source_quote_verified_in_retrieved_text": true
+    },
+    {
+      "fact_id": "F23",
+      "scene_paragraph_indices": [
+        31,
+        82,
+        83
+      ],
+      "supported_claim": "Elite influence and personal alliances could be maintained through gift-giving, wealth and support.",
+      "source_ids": [
+        "natmus-magnates"
+      ],
+      "verbatim_source_quote": "The gift giving was a means of creating and maintaining connections.",
+      "qualification": "Source discusses kings/magnates broadly; Bjorn is an invented locally wealthier organizer, not a documented ruler. Narration does not assert universal conscription or identical loyalty contracts for ordinary c.950 farmers.",
+      "source_quote_verified_in_retrieved_text": true
+    }
+  ],
+  "unavailable_sources_not_used": [
+    {
+      "url": "https://www.vikingeskibsmuseet.dk/en/professions/education/viking-knowledge/viking-age-people-and-society",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.britishmuseum.org/blog/vikings-life-and-legend",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.jorvikvikingcentre.co.uk/about/jorvik-viking-centre/",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.vikingeskibsmuseet.dk/en/viking-ships/the-five-viking-ships",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.vikingeskibsmuseet.dk/en/viking-ships/the-five-viking-ships/skuldelev-5",
+      "result": "HTTP Error 404: Not Found"
+    }
+  ],
+  "source_criticism": [
+    "National Museum Denmark pages are authoritative public summaries but primarily use Danish archaeology and sometimes later sagas/legal texts. Broad food/material/social points are used cautiously; specific Danish settlement plans are not presented as all Norway.",
+    "Viking Ship Museum crew page acknowledges 1100–1200 Gulating law and experimental reconstruction evidence. Such sources cannot directly prove exact private c.950 crew contracts.",
+    "Skuldelev 5 is dated c.1030; referenced only as comparative woodworking/repair evidence, not as the actual fictional boat.",
+    "Museum helmet page old preserved-helmet-count statement is not repeated. Battle horns absent while ceremonial/iconographic nuance remains.",
+    "Source poverty/disease and lifespan claims can overgeneralize archaeological samples. Narration avoids these statistics.",
+    "Eirik’s individual events are fictional reconstruction, explicitly disclosed, and cannot be used as a primary historical testimony."
+  ]
+}

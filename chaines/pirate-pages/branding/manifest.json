@@ -1,0 +1,60 @@
+{
+  "state": "approved-branding-preserved",
+  "channel": "pirate-pages",
+  "files": [
+    {
+      "path": "A-LIRE.txt",
+      "bytes": 644,
+      "sha256": "545c2e8890b09609f75584a78131320a58c1a4d46f8169c29af2630eea10acdf",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "DESCRIPTION.txt",
+      "bytes": 426,
+      "sha256": "016278bd09e69e34be81b305fb4a33c1f090dd4fd270b55e991a8983c94956ed",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "NOM-ET-ARROBASE.txt",
+      "bytes": 297,
+      "sha256": "dabaa9b931594cabcaa120e18e18368c533606453a6b359ed0789b5edbeebf5c",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Pirate-Pages-avatar.png",
+      "bytes": 1413013,
+      "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Pirate-Pages-banner-2560x1440.jpg",
+      "bytes": 400333,
+      "sha256": "5227e029c88401a542c15663eee1ffa76a91831739b22dc028af2f6fb7905062",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "Pirate-Pages-banner-2560x1440.png",
+      "bytes": 1593701,
+      "sha256": "9d8ab48bd77a5d445d740fa669be373ad9b527eeffe5cdadc76c454c19e2627e",
+      "copy_mode": "byte-identical-approved-original"
+    },
+    {
+      "path": "mobile-preview.png",
+      "bytes": 417287,
+      "sha256": "fba88e48b8da789bee8e064a3115f91d5d80e11f337898439b769c799c34b80e",
+      "copy_mode": "byte-identical-original-preview"
+    },
+    {
+      "path": "desktop-preview.jpg",
+      "bytes": 134682,
+      "sha256": "82a1cde1a1e5271674b0c19ac723e5a0045fff0d1240c6c286ba1d6c46fbc05a",
+      "copy_mode": "byte-identical-original-preview"
+    },
+    {
+      "path": "avatar-circular-preview.png",
+      "bytes": 1348617,
+      "sha256": "880f297fc0badae69b1619c0705a215b41b6e7fe16e09f30ee5c048e0151e658",
+      "copy_mode": "byte-identical-original-preview"
+    }
+  ]
+}

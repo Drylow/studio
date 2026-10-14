@@ -1,0 +1,105 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "a122c9d06bc0ed770001a69cc7b5ad0fd090be85f2df401e90ba6b97f41cb4c6",
+  "original_document_path": "/workspace/recovery/voice-history/samurai-recovered-voice-evidence.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "job_id": "ca33e834-9fe9-496f-aa83-f10fd24b9141",
+    "status": "completed",
+    "created_at": 1791899597.9418292,
+    "completed_at": 1791899761.0930161,
+    "new_tts_calls": 0,
+    "expected_mp3_sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671",
+    "identification": "Exact byte identity of native locally derived MP3 to the prior recorded SHA-256, plus restored provider SRT.",
+    "audio": {
+      "path": "narration/voice-provider-original.mp3",
+      "bytes": 18864587,
+      "sha256": "409839ba19234c22eb2b139116b93f8a92d952eb7b26e0827c8b0a34951ba90c",
+      "source_hostname": "audio.algrow.online"
+    },
+    "exact_original_match": true,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mp3",
+          "sample_rate": "44100",
+          "channels": 1
+        }
+      ],
+      "format": {
+        "duration": "1179.036688"
+      }
+    },
+    "transcript": {
+      "path": "narration/provider-original.srt",
+      "bytes": 28473,
+      "sha256": "6828d4f300d36801e6eed63f4a03351460ff4f3983b2c171a7b9becdd8f90be9",
+      "source_hostname": "audio.algrow.online"
+    },
+    "raw_provider_duration_delta_seconds": -4.7e-05,
+    "prior_local_mp3_sha_match": true,
+    "native_client_note": "services.tts.synthesize calls media.concat_audio, which transcodes the raw provider audio to mono 44100 Hz MP3 at 192k even with a single part.",
+    "native_derivation": {
+      "input": "narration/voice-provider-original.mp3",
+      "output": "narration/voice-native-derived.mp3",
+      "ffmpeg_options": [
+        "-ar",
+        "44100",
+        "-ac",
+        "1",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "192k"
+      ],
+      "sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671",
+      "bytes": 28298178,
+      "exact_original_match": true,
+      "command_exit_code": 0
+    },
+    "decoded_audio": {
+      "decode_exit_code": 0,
+      "error_output_empty": true,
+      "sample_rate": 44100,
+      "channels": 1,
+      "pcm_s16le_bytes": 103991040,
+      "sample_count": 51995520,
+      "duration_seconds": 1179.0367346938776,
+      "pcm_sha256": "d20b60bba9dbce3d0cd213c4f54bda3dda1fcf6a479b57da7e58b4b19ab3be36",
+      "prior_recorded_duration_seconds": 1179.036735,
+      "duration_delta_seconds": -3.0612227419624105e-07,
+      "ffprobe_container_padding_note": "MP3 container duration includes encoder padding; decoded PCM sample count gives the narration clock."
+    },
+    "provider_alignment": {
+      "source": "narration/provider-original.srt",
+      "source_sha256": "6828d4f300d36801e6eed63f4a03351460ff4f3983b2c171a7b9becdd8f90be9",
+      "word_json": "/workspace/recovery/voice-history/samurai-provider-words.json",
+      "provider_word_count": 2793,
+      "first_word": {
+        "w": "Imagine",
+        "s": 0.032,
+        "e": 0.734
+      },
+      "last_word": {
+        "w": "uncover.",
+        "s": 1178.149,
+        "e": 1178.587
+      },
+      "native_function": "services.tts._srt_words",
+      "script_alignment_pending": "Parent will align provider numeric spellings to recovered exact 2795-word root script via native align_to_text."
+    },
+    "documented_api": {
+      "documentation": "https://algrow.online/docs/api/text-to-speech",
+      "used_routes": [
+        "GET https://api.algrow.online/api/jobs",
+        "GET https://api.algrow.online/api/job-status/ca33e834-9fe9-496f-aa83-f10fd24b9141"
+      ],
+      "no_new_generation": true,
+      "new_tts_calls": 0,
+      "authenticated_requests": "Existing ALGROW_API_KEY binding only to same HTTPS api.algrow.online host; proxy and TLS trust preserved."
+    },
+    "raw_provider_matches_prior_local_mp3_sha": false
+  }
+}

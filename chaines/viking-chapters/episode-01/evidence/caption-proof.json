@@ -1,0 +1,10 @@
+{
+  "file": "chaines/viking-chapters/episode-01/delivery/English-Captions.srt",
+  "sha256": "3eebdba8d094d69126ef1f22d7fdc2422536b64ae38228146f38264bf47d20ad",
+  "source_clock": "chaines/viking-chapters/episode-01/editorial/official-vps-aligned-words.json",
+  "source_clock_sha256": "9b9e65a000fcf3c3221732a91ff2823ebb7e9a0fc71598fb1a816af56d17ed0f",
+  "literal_word_identity": true,
+  "canonical_words": 2742,
+  "cues": 315,
+  "timing_source": "Actual provider audio clock adopted into exact canonical words; provider cue intervals subdivided by the native clock helper, not phoneme-perfect alignment."
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "15d36cd5112c0c25d5f28d900e5baf8ec732223c21b904a97f034a90fc3c807a",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/final-script-metadata-history-review.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-final-script-metadata-history-review-v1",
+    "reviewer": "samurai_text_history_recovery",
+    "state": "no_material_factual_issue_identified",
+    "files_reviewed": {
+      "/workspace/recovery/text-history/narration-spoken.txt": {
+        "sha256": "f2d0e1be63b96bb524de524b61f35623ae2618c25f09645afe619e76d1fde3a9",
+        "bytes": 18215
+      },
+      "/workspace/recovery/text-history/narration-draft.md": {
+        "sha256": "89cdfabbf51b55a1cdf85981b44c9ad4a6923554b0f82ab0f45a8cbc3a4ff31b",
+        "bytes": 18794
+      },
+      "/workspace/samurai-chapters-regeneration/episode-01/delivery/UPLOAD.txt": {
+        "sha256": "310b85bec254ec56cb91133f6092b58db75c4df1f18881382386eeb62f409c4c",
+        "bytes": 1659
+      },
+      "/workspace/samurai-chapters-regeneration/episode-01/bound-full-plan-v1.json": {
+        "sha256": "7191ece2dd4a8ef8627773ece22e8a4d0eaabf9c9cf56de630444f20ace49cd1",
+        "bytes": 431380
+      }
+    },
+    "actual_method": [
+      "Read all 108 unchanged narration paragraphs in full, along with all 12 draft chapter sections and full upload metadata.",
+      "Compared the 108 bound-plan scene text blocks with the checksum-authenticated spoken script.",
+      "Parsed all 12 upload chapter timestamps and titles; compared them with each chapter first scene actual bound start and original chapter heading.",
+      "Checked material historical statements using existing historical knowledge and internal scope/qualification, without new external source retrieval."
+    ],
+    "source_script_historical_sha_match": true,
+    "bound_108_text_blocks_exact_match": true,
+    "canonical_word_count": 2795,
+    "description_identifies_kenji_as_fictional": true,
+    "description_explicitly_states_variation": true,
+    "historical_topic_checks": [
+      {
+        "topic": "1720 and Tokugawa peace",
+        "finding": "Consistent period; relative peace is qualified, with administrative and guard duties rather than a universal absence of martial obligations."
+      },
+      {
+        "topic": "Rank, privilege, income, heredity and adoption",
+        "finding": "Presented as variable by rank/domain/resources, with fictional lower-ranking household; no assertion that every samurai was equally rich, poor, or absolutely immobile."
+      },
+      {
+        "topic": "Rice stipends and cash/debt",
+        "finding": "Payment and commutation arrangements explicitly vary; avoids implying every stipend was literal identical bags of rice, while cash needs and borrowing are historically credible."
+      },
+      {
+        "topic": "Military training and violence",
+        "finding": "Continued training and conditional legal privileges are compatible with Edo order; no unlimited right to kill for any insult is claimed."
+      },
+      {
+        "topic": "Household and women",
+        "finding": "Marriage, succession, financial management and adoption are treated with explicit variation, without a universal powerless-wife or military-wife assertion."
+      },
+      {
+        "topic": "Alternate attendance",
+        "finding": "Correctly identifies lords rather than every retainer as the obliged party, admits exceptions, and distinguishes lords wives/heirs in Edo from every lower-ranking retainers wife."
+      },
+      {
+        "topic": "Ronin",
+        "finding": "Masterless status is distinguished from a universal romantic wanderer, criminal, or heroic rebel stereotype."
+      },
+      {
+        "topic": "Bushido and seppuku",
+        "finding": "Avoids a timeless uniform code, universal automatic ritual death for mistakes, and an unsupported single martial curriculum."
+      }
+    ],
+    "material_factual_flags": [],
+    "chapter_count": 12,
+    "chapter_time_convention": "Floor actual bound scene start to whole seconds for YouTube chapters, so each chapter link lands no more than 0.993 seconds before its narration start.",
+    "chapter_checks": [
+      {
+        "chapter": 1,
+        "scene_id": 1,
+        "actual_bound_start_seconds": 0.0,
+        "upload_timestamp": "00:00",
+        "label": "The job behind the sword",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 2,
+        "scene_id": 10,
+        "actual_bound_start_seconds": 90.672,
+        "upload_timestamp": "01:30",
+        "label": "Born into somebody else's plan",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 3,
+        "scene_id": 19,
+        "actual_bound_start_seconds": 187.338,
+        "upload_timestamp": "03:07",
+        "label": "A warrior during a long peace",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 4,
+        "scene_id": 28,
+        "actual_bound_start_seconds": 281.536,
+        "upload_timestamp": "04:41",
+        "label": "Status has maintenance costs",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 5,
+        "scene_id": 37,
+        "actual_bound_start_seconds": 373.695,
+        "upload_timestamp": "06:13",
+        "label": "Paid in rice, billed in money",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 6,
+        "scene_id": 46,
+        "actual_bound_start_seconds": 472.571,
+        "upload_timestamp": "07:52",
+        "label": "Serving a lord is a daily activity",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 7,
+        "scene_id": 55,
+        "actual_bound_start_seconds": 569.715,
+        "upload_timestamp": "09:29",
+        "label": "Training without becoming a legend",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 8,
+        "scene_id": 64,
+        "actual_bound_start_seconds": 666.739,
+        "upload_timestamp": "11:06",
+        "label": "The household carries the burden",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 9,
+        "scene_id": 73,
+        "actual_bound_start_seconds": 770.084,
+        "upload_timestamp": "12:50",
+        "label": "Your lord's journey becomes your problem",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 10,
+        "scene_id": 82,
+        "actual_bound_start_seconds": 865.923,
+        "upload_timestamp": "14:25",
+        "label": "What happens when the position disappears",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 11,
+        "scene_id": 91,
+        "actual_bound_start_seconds": 968.033,
+        "upload_timestamp": "16:08",
+        "label": "Honor is not a simple instruction manual",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      },
+      {
+        "chapter": 12,
+        "scene_id": 100,
+        "actual_bound_start_seconds": 1073.993,
+        "upload_timestamp": "17:53",
+        "label": "The world behind the armor",
+        "labels_match_draft_and_plan": true,
+        "floor_seconds_match": true
+      }
+    ],
+    "upload_metadata_checks": {
+      "title_matches_bound_plan": true,
+      "language": "English matches narration",
+      "category": "Education appropriate for illustrated historical narrative",
+      "audience": "Not made for kids is consistent with intended general historical adult/teen audience; animation alone does not establish child-directed content",
+      "music_credit_statement": "Narration-only export stated; actual final audio/render verification belongs to render QA, not this script review"
+    },
+    "limitations": [
+      "No new external scholarly research or source retrieval was performed in this review; this is a focused material-claim check, not an independent citation audit.",
+      "No script, TTS, image prompt, cast, location or upload metadata was changed.",
+      "Chapter timestamps were checked against the current actual bound plan, not independently measured from a final encoded movie.",
+      "No final video or audio visual inspection, copyright clearance, or monetization assessment is claimed."
+    ]
+  }
+}

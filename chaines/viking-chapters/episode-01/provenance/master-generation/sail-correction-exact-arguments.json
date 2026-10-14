@@ -1,0 +1,16 @@
+{
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "request_definition": {
+    "id": "SHIP_SAIL_SET_CORRECTED",
+    "source_master_id": "SHIP",
+    "scene_ids": [
+      41
+    ],
+    "prompt": "Make a VERY LOCAL SAIL-ONLY edit of reference1 EXACT EMPTY SHIP. DO NOT move or redraw the vessel/camera to fit the sail. EXACT original coordinates/framing of every wood rowing thwart, bow stem, low clinker hull/gunwale/deck, mast bottom, rope coil, covered bundle and RIGHT STARBOARD stern steering oar/lashing MUST remain unchanged. Keep the ORIGINAL horizontal yard at its same original height/slope, which rises a little toward viewer-right; do not raise yard toward top edge. The only change is unrolling its plain BROWN WOOL SQUARE SAIL DOWN from this SAME original yard: modest plain brown rectangular cloth in the upper-middle frame, allowed to OCCLUDE the upper bow/horizon naturally, NEVER lower the bow/thwarts/camera to reveal them. Sail lower edge can sit just above forward thwarts; working rigging connects to same existing mast/gunwale points. Reference2 failed trial gives ONLY simple unmarked brown sail fabric/color; its shifted boat/yard/camera is WRONG and must NOT be copied. This stays the SAME stern-to-bow photograph-free graphic2D camera and exact baseline vessel positions, no zoom-out/reframe/extra hull room. Preserve original pale overcast grayblue sea and low green shoreline, all original detail/line density/matte broad shadows. No sail markings/stripes, crew/people/animals/weapons/shields/newcargo/cabin/dragonprow/modernwheel/text/runes/logos/panels. Full-bleed landscape16:9 SAME frame. If sail overlaps farthest boat part, accept overlap; no geometric displacement.",
+    "referenced_image_paths": [
+      "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png",
+      "chaines/viking-chapters/episode-01/assets/references/f5d2397ad85fe577.png"
+    ],
+    "transparent_background": false
+  }
+}

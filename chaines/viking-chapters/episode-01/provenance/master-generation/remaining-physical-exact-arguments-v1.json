@@ -1,0 +1,126 @@
+{
+  "schema": "viking-manual-physical-arguments-v1",
+  "author": "Codex viking_master_finish under root commission",
+  "association_policy": "authored literal master request definition; not proof of a completed call",
+  "requests": [
+    {
+      "id": "HOME_EVENING",
+      "source_master_id": "HOME",
+      "scene_ids": [
+        69,
+        78,
+        84,
+        85,
+        86
+      ],
+      "prompt": "Edit the attached EXACT EMPTY HOME into the SAME room at subdued EVENING after sunset. Preserve exact unmirrored camera, all wood rafters/posts/walls, rear-right open door, rear-left small unglazed aperture, roof vent, raised sleeping benches both sides, left table with one bowl/one earthen cup, single basket under its edge, loom/weights/chest and central-right stone hearth at same places. Only illumination changes: exterior through door/roof/aperture dim muted blue-gray dusk, original door light very weak, warm matte dull-orange light from SAME existing ONE low hearth gently reaches nearby earth floor and benches, whole architecture still readable. No visible sunny green landscape outdoors, no golden bright daylight, no giant blazingfire; simple broad shadows, original drawn2D timber/earth detail and clean dark contours unchanged, no glossy cinematic bloom or rendered realism. Empty interior no people/animals, extra bedding, lamp/candle/torch, new furniture, weapons, glass, chimney, paperwindow, text/runes/logo/caption/panels. Wide full-bleed16:9 SAME architecture, no rotated/mirrored/opposite angle or reframed layout.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "FARM_WINTER",
+      "source_master_id": "FARM",
+      "scene_ids": [
+        73,
+        79
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY FARM into SAME western NORWEGIAN farm around950 in modest coastal WINTER DAY with LIGHT FROST only. Preserve IDENTICAL camera/building geometry: LEFT low longhouse/turf roof/ridge/rafters/open plank door/small wallopening/woodpile/fieldstonebase, foreground-left stump, RIGHT small shed with same CLOSED door and wattle fences/garden patch, earth paths, modest fjord, low hills and sky composition remain in place. Seasonal change only: cold pale overcast daylight, muted straw-brown/olive grass, thin patchy white frost along ground/stone/roof edges, deciduous trees naturally sparse/bare while distant conifers remain subdued green. Small garden quiet/dormant. Roof retains turf structure and readable timber, NEVER deep piled snow, giant ice, fantasy snowy mountains or blizzard. No heavy rain; shore water still open grayblue. Matte original clean graphic2D lines, broad simple shadows and restrained detail, no photo/3D/anime/painterly microtexture. Absolutely EMPTY, no livestock/people/weapons/tools/newprops/lights, no repaired/broken fence added, no text/runes/logos/panels. Same full-bleed landscape16:9 and exact original unmirrored framing.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "ASSEMBLY_WINTER",
+      "source_master_id": "ASSEMBLY",
+      "scene_ids": [
+        80,
+        81,
+        82,
+        83
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY Norwegian ASSEMBLY field around950 into SAME place at coastal WINTER DAY with only LIGHT FROST. Keep exact original camera and geography: LEFT low rounded-natural-stone boundary wall, RIGHT exactly TWO low wooden sitting benches alongside wattle fence, same modest foreground rocks/earth footpath and clear front-middle speaking space, low wooded hillside and tiny far-left farm roof. Season/light only: pale cool overcast daylight, grass muted straw/olive, thin patchy frost along grass/stone/bench edges, naturally sparse/bare deciduous trees and dark subdued green conifers. No deep snow, icepalace, blizzard, new mountains, monoliths, stonecircle, throne, parliamentarybuilding, giant amphitheater or castles. Original matte clean drawn2D with dark contours and simple broad shadows, same environmental detail density. Absolutely EMPTY no people/animals/props/weapons/signs/flags/runes/text/logos or panels. Preserve full-bleed landscape16:9, no crop/mirroring/rotation/new angle; keep ALL original benches/wall/path in places.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/ASSEMBLY.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "SHIP_SAIL_SET",
+      "source_master_id": "SHIP",
+      "scene_ids": [
+        41
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY SHIP master into SAME vessel and SAME stern-toward-bow camera with its ONE existing plain BROWN WOOL SQUARE SAIL now UNFURLED/SET from the SAME horizontal yard. Change ONLY sail working state: square brown cloth drops from existing yard, modest size, taut functional rigging attached to same mast/gunwale points, enough view of original bow/interior for actors. Preserve every thwart position/count, clinker planks, low hull/gunwale, center mast/yard height/orientation, exact STARBOARD steering oar VIEWER RIGHT FOREGROUND, single rope coil and covered bundle beneath forward thwart, all cabinless open layout. Same calm gray-blue sea, low distant green shore, ordinary pale overcast daylight as original; no weather jump. SAIL is plain matte unmarked brown, no stripes/red/flags/symbols; mast never moves sideways, thwarts never deleted or added, steering side never swapped. Same thin dark contours/clean original drawn timber and restrained matte2D broad cel shadows, no photo/3D/anime/glossy texture. Absolutely EMPTY no crew/people/animals/weapons/shields/newcargo/modernwheel/dragonfigurehead/readableletters/runes/captions/panels. Full-bleed wide16:9 exact camera; no aerial/opposite-angle/mirror/rotation.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "SHIP_RAIN",
+      "source_master_id": "SHIP",
+      "scene_ids": [
+        42
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY SHIP into SAME ship/camera at ordinary SUMMER DAY RAIN. Keep ONE plain BROWN square sail explicitly tightly FURLED around original horizontal yard for this rain state; retain same mast/yard/rigging attachment geometry. Preserve exact original low clinker hull, ALL wooden thwarts at identical positions/count, deck, STARBOARD steering oar VIEWER RIGHT foreground with its existing lashing, rope coil and covered forward bundle. Weather/light only: gray overcast sky, modest diagonal rain streaks, slightly choppy gray-blue sea with restrained small wavelets below gunwales, wet darker planks, a little shallow deck water without flood or extreme storm. Low green coastline distant in same place; no toweringwaves/lightning/night. Same flat matte original graphic2D lines and broad cel shadows, restrained timber detail, no rendered photo/3D/anime. Absolutely EMPTY no people/animals/weapons/shields/bailers/newbags/cabins/dragonprows/modernwheel/text/runes/logos/panels. Keep original stern-to-bow camera unmirrored, same full-bleed landscape16:9; thwarts/mast/steering side never change.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "SHIP_ROUGH_RAIN",
+      "source_master_id": "SHIP",
+      "scene_ids": [
+        44
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY SHIP into explicit SUMMER DAY moderately ROUGH RAIN on the SAME open boat. Same stern-to-bow camera and EXACT vessel geometry: all clinker planks/low gunwales/wood thwarts count and positions, central mast/yard, STARBOARD steering oar VIEWER RIGHT foreground and lashing, single rope coil and covered forward bundle stay fixed. Plain brown square sail remains tightly FURLED on its original yard, restrained connected rigging unchanged. Change only physical weather: cool gray overcast clouds, ordinary thin rain streaks, moderate choppy sea with SMALL white crests outside LOW gunwales, a restrained shallow water layer on lower central deck suitable for later bailing; not submerged hull, tidalwall, gigantic breakingwave, lightning, explodingboat or disaster sky. Leave actor staging and rowing benches fully readable and dry enough to occupy. Same distant low green coastline faint through ordinary rain, no new fantasy geography. Clean matte original graphic2D, thin dark contours, restrained timber detail/simple broad shadows, no photo/3D/anime. Empty no crew/actors/animals/props/weapons/shields/bailers/flags/modernwheel/cabins/text/runes/logos/panels. Exact original wide16:9 unmirrored camera/frame.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "SHIP_NIGHT",
+      "source_master_id": "SHIP",
+      "scene_ids": [
+        45
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY SHIP into SAME vessel on a cloudy SUMMER NIGHT after rain. Light/weather only: muted dark navy-gray clouded sky/sea, no visible sun or bright far shore; planks/deck stay slightly damp, calm to small ripples, no continuing heavy rain. Readable subdued blue-gray ambient night light from sky outlines SAME original thwarts/hull/mast; no new lamp/torch/fire/cabin or glowing trim. Sail tightly FURLED on same original yard. Preserve every wood thwart at exact count/position, center mast/yard/rigging points, clinker planks/low gunwales, STARBOARD steering oar VIEWER RIGHT foreground with same lashing, same coil and covered bundle under forward thwart. Same exact stern-to-bow camera/ship proportions, no swapped steering side, omitted benches, new bunks, larger hull or exterior camera. Original matte graphic2D with clean dark contours, restrained timber detail and broad shadows, no photo/3D/anime or theatrical moonrays. Absolutely EMPTY no people/animals/blankets/weapons/extra props/lanterns/text/runes/flags/captions/panels. Wide16:9 full bleed same unmirrored original frame.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "SHIP_ENGLISH_COAST",
+      "source_master_id": "SHIP",
+      "scene_ids": [
+        47
+      ],
+      "prompt": "Edit reference1 EXACT EMPTY SHIP for approach to the ENGLISH North Sea coast around950. Reference1 is the mandatory physical SHIP: preserve identical stern-toward-bow camera, EVERY wood thwart/count/position, low clinker hull/gunwale/deck, center mast, tightly FURLED plain brown sail on SAME yard/rigging, STARBOARD steering oar VIEWER RIGHT foreground, same single rope coil and covered forward bundle. Change ONLY distant geography outside low gunwales: replace Norwegian green hilly shore with modest LOW inhabited ENGLISH coastal strip derived from reference2 MARKET, with ordinary low sandy/earth bank, flat coastal grasses, SAME small hamlet of LOW Anglo-Saxon timber/wattle-and-daub thatched houses and simple low timber quay/dock visible toward shore. Reference2 supplies ONLY the fixed English coast/hamlet architecture, never transplant counter/crates onto boat or change vessel layout. Low English coast readable ahead, no Norwegian cliff/fjord, bigtower/castle/cathedral/Tudor metropolis/modern harbor. Ordinary pale cool overcast SUMMER DAY, gentle grayblue water and subtle small ripples; original clean matte2D outlines/restraint, no photo/3D/anime/textures. Absolutely EMPTY no crew/actors/animals/weapons/flags/newships/cargo/readablewriting/runes/logos/panels. Same unmirrored camera and full-bleed wide16:9.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png",
+        "chaines/viking-chapters/episode-01/assets/masters/locations/MARKET.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "MARKET_COUNTRY_EDGE",
+      "source_master_id": "MARKET",
+      "scene_ids": [
+        49,
+        50,
+        51
+      ],
+      "prompt": "Create ONE explicit registered EMPTY camera derivative from reference1 EXACT ENGLISH MARKET location around950. Move camera modestly inland to its already indicated grassy track/small clearing OUTSIDE the same low coastal hamlet: eye-level broad three-quarter shot across one small OPEN GRASS/earth CLEARING with a narrow coastal track leading from foreground-right toward distant RIGHT simple timber quay and calm sea, then returning past hamlet. Same low sandy English shore, flat grass slope/tree fringe and modest Anglo-Saxon timber/wattle-and-daub thatch-roof houses at RIGHT BACKGROUND, recognizable as exact MARKET settlement; a low wattle boundary fence runs along LEFT clearing edge, simple natural small rocks only. Foreground/midground speaking/encounter space open wide enough for later four named adults, NO counter or shop/crates moved into clearing. Reference1 fixes actual hamlet geography/drawing style, never convert into Norway turf farm/fjord, cathedral/castle/Tudorcity, battle arena or dense forest. Pale muted late-spring/summer DAY, same original natural light, gray-blue calm water, restrained clean graphic2D thin dark outlines and matte broad shadows, detailed modest timber/earth but no texture increase/photo/3D/anime. Absolutely EMPTY no locals/crew/actors/animals/weapons/shields/flags/corpses/newships/writing/runes/logos/captions/panels. Wide full-bleed landscape16:9. This is the SAME English coast MARKET countryside edge, not a new country or different village.",
+      "referenced_image_paths": [
+        "chaines/viking-chapters/episode-01/assets/masters/locations/MARKET.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

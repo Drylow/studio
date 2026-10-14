@@ -1,0 +1,164 @@
+{
+  "schema": "history-final-encoded-visual-review-v1",
+  "author": "/root/pirate_final_visual_review",
+  "reviewer": "/root/pirate_final_visual_review",
+  "movie_sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+  "state": "pass",
+  "finished_render_visual_reviewed": true,
+  "reviewed_encoded_scene_count": 85,
+  "reviewed_cut_count": 84,
+  "reviewed_first_and_last_frame": true,
+  "actual_capture_count": 255,
+  "review_method": "Actually viewed all 19 original-resolution encoded contact sheets through view_image: every scene midpoint, the frame immediately before and after every scene cut, and actual movie first/last frames. Full fatal audiovisual decode is documented separately in the bound technical proof. This is not a claim of subjective viewing of every movie frame or subjective audio listening.",
+  "findings": "PASS at all sampled encoded scenes and cuts. Recurring cast, costumes, principal sets, departure sail state, torn/repair sail story, storm/night/sunset changes and ending bucket callback remain coherent. No black/blank/corrupt sampled image or material framing defect observed.",
+  "minor_observations": [
+    "A minor edge crop of the supporting captain during the storm-shot zoom is visible at the cut sample; the face identity and central crew action remain readable and this is not a material defect."
+  ],
+  "material_issues": [],
+  "completed_utc": "2026-10-13T23:52:09.339462+00:00",
+  "paid_calls": 0,
+  "uploaded": false,
+  "technical_proof": {
+    "path": "chaines/pirate-pages/episode-01/evidence/final-technical-qa.json",
+    "original_source_sha256": "b962ae92bbf0fb2ba6800eb456695c2d99147d8f06da9e275d8211b7fc39201b"
+  },
+  "capture_index": {
+    "path": "chaines/pirate-pages/episode-01/evidence/encoded-capture-index.json",
+    "original_source_sha256": "94c101614063ceba76de3194470aca7a347d7784bfa962852f7a3f36e4443d3c"
+  },
+  "capture_sheets": [
+    {
+      "sha256": "dedc5197490bf19c6f8a80467ee62223dc8a179b62b8c137612850c5d61af15c",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 001–009. Tom retains brown hair, blue vest, cream patched shirt and brown boots; the captain is distinct in burgundy coat/black hat. The repeated sunny quay houses, ropes and palms match across scenes 003–008. Opening bucket work and later tavern scene are fully framed; no black, blank or broken encoded panel.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg"
+    },
+    {
+      "sha256": "44305393c87933142953b1aa9f2b1f3ab4aaca2a13ef04f6d920a9ea16008b30",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 010–018. The quay/gangway progresses into the same furled-sail deck and wooden hold with ladder, mast and hammocks. Brown-vest quartermaster, green-shirt crewmate and burgundy captain remain distinguishable. Rope work, bag stowage, articles and bandaged hand are readable, with no actor clipping or missing image.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-02.jpg"
+    },
+    {
+      "sha256": "6d91609c54663424c02f6f0a9c8e7a670cf9a6d55827a2c0d50f8b6118adb71e",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 019–027. Purse, crew meeting, line work, water/sack supplies, below-deck storage and ordinary tools preserve established cast and moored/furled deck. The main ship/harbor set remains consistent; all panels are readable and filled. Minor object detail differences do not change the action.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-03.jpg"
+    },
+    {
+      "sha256": "838d9c76dfd0b48f0fc49a39bf702d846610885606a70cf8ee09b727ce786eff",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 028–036. Sail state changes from departure hoist to raised sailing, harbor recedes and the deck/mast layout persists. Line work, rigging climb, scrubbing and bucket work are recognizable. Food scenes remain in the same hold, with ordinary biscuit/meat portions and matching Tom/crewmate costumes; no black or corrupt frame.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-04.jpg"
+    },
+    {
+      "sha256": "d241ffb2656df0fc3d858343346ac13f12b34cd91b2a304fa369aef359b833f5",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 037–045. The brown-vest quartermaster is separate from blue-vest Tom and green crewmate. Depleted food, offering a small portion, medicine box and cup/rope duty are readable. Night hold scenes have a deliberate moon/lantern lighting shift, followed by storm-gray sailing; all captured compositions retain faces and intended action.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-05.jpg"
+    },
+    {
+      "sha256": "3a443b6aac87d2b235e2740c080984d5101b3e8363d23cb870e4c34e6d43b2fb",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 046–054. Storm cleanup and a small torn sail section precede calmer deck views; the tear remains visible during later sea scenes. The distant merchant vessel stays distant. The same two worried captured adults appear on deck, and cargo handling preserves Tom/quartermaster/crewmate identities. No encoding blanks, broken framing or unexpected major set change.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg"
+    },
+    {
+      "sha256": "a03ace3d2738f7a748b90041f1e6cfb831efa268600fb00ac5cb7359e2f88c6b",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 055–063. The hold/cargo checks, worried captured sailor and separate restrained quay aside are clear. Tom's blue vest and the captain's burgundy coat persist. Rain/storm appearance has ended deliberately; the damaged sail is retained at sea before the return to the sunny established harbor and furled mooring state. No black/blank panel or garbled image.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-07.jpg"
+    },
+    {
+      "sha256": "e1b083e6933cc60f728a7432b07013973733d01cc4268824e63901708eed09ee",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 064–072. Blond dealer, brown-vest quartermaster, Tom and green crewmate keep their roles. Cloth sale and modest purse payment are readable; the replacement cream shirt remains a folded item rather than an unexplained costume change. Tavern lantern/night and beach careening are distinct intentional settings; sail patching is visible before later repaired state.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg"
+    },
+    {
+      "sha256": "7efcb612a5e0fc78562a51fdc0c8c071ceaad0529115434d3fb95eb1440e2968",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded midpoints for scenes 073–081. Articles/dispute, isolated beach aside, return to crew, worried quay discussion and captain scene are clear. The beach figure is the red-haired supporting sailor, not Tom. Returning quay houses/mast/furled sail stay stable, with Tom still in blue vest. Characters and hand gestures remain within frame; no encoded blank or severe clipping.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-09.jpg"
+    },
+    {
+      "sha256": "4f51494c32c42f54b48f2655e615969e65aace5bd957720de005cdda0b5ed0ac",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed encoded scenes 082–085 and exact cut endpoints 001→002 through 005→006. The tavern discussion leads deliberately to sunset quay/deck and night hold bucket callback. Tom's patched cream shirt/blue vest persists. Opening hard cuts and quay poses are fully filled, with no black flash or clipped primary face visible at these actual endpoints.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-10.jpg"
+    },
+    {
+      "sha256": "100784e9286fa835666dced6df0aa5ae3462a2180bb90bf349b7f0f014081889",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 006→007 through 014→015. The common sunny quay houses remain aligned within their respective shots; tavern and ship/hold cuts are deliberate location transitions. The brown-vest quartermaster enters separately from the green crewmate. All endpoint images are readable; zoom reset at scene change is bounded, with no missing image or black boundary frame.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-11.jpg"
+    },
+    {
+      "sha256": "fd2df2fef8c0fd17ad3f6545dc87f0acc4229f37450f4dc888f648e7e8f47d80",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 015→016 through 023→024. Same hold ladder/mast/hammocks recur, then moored deck articles/supplies scenes and the hold stowage view. Captain/quartermaster/crewmate identities stay stable across changed cast membership. Every sampled boundary is filled; there is no blank cut or severe subject crop.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-12.jpg"
+    },
+    {
+      "sha256": "59c64ee98c064e479e733ca648535bf79f2b0592f057974a764261d9f2e4b5ec",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 024→025 through 032→033. Furled moored sail changes to hoisted/raised sail only at the departure boundary 027→028; the shore disappears as the voyage begins. Deck layout, Tom's costume, captain coat and crewmate shirt persist. Climb-to-scrub and deck-to-hold cuts are deliberate action/location changes, with no black or missing boundary image.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-13.jpg"
+    },
+    {
+      "sha256": "a074ebaebe8355d0ba3f8c7f1ac287ec731c313a27b8b2d513738ba1999853ef",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 033→034 through 041→042. Food and illness scenes maintain the wooden hold arrangement and recurring blue/brown/green costume distinctions. The medicine box remains small and recognizable; deck duty resumes on a filled sea shot. All endpoint images are readable and there is no broken transition or unintended set replacement.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg"
+    },
+    {
+      "sha256": "ce597bcc1e4c6eb730c220ea83639cd22c2427a785c24295486318457ab0f490",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 042→043 through 050→051. Night/lantern rest, storm sailing, cleanup, damaged sail and merchant encounter follow intentional lighting/story shifts. The small tear is carried into later sea panels. Captain at the storm shot's left edge has a minor edge crop during the zoom, while his identity and the central crew action remain readable; no material framing defect, blank frame or cut corruption.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-15.jpg"
+    },
+    {
+      "sha256": "13e1e48e505f1092ee783706c52323625cd8ef0c2408a08dffc15b3b4eb2cd74",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 051→052 through 059→060. The worried captured adults keep their recurring appearances, cloth cargo moves between deck and hold, and the separate enslaved-person aside uses the established sunny quay intentionally. Tom and green crewmate resume ordinary work afterward. No blank boundary, garbled actor or material camera crop observed.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-16.jpg"
+    },
+    {
+      "sha256": "7f1b950dbe4d10f9df2b2e96099047a10b8edc8e680b1a62907a005ff7157774",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 060→061 through 068→069. Return from sea to established sunny mooring correctly changes the raised sail to furled. Dealer stall and modest purse/cloth distribution remain coherent; the folded replacement garment stays separate from Tom's unchanged clothes. The tavern/night entry is intentional and all endpoint images are filled.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-17.jpg"
+    },
+    {
+      "sha256": "bbf9d4a8b2e019e092394516bea20e493e19e1e575e87828385e7435205af9dd",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 069→070 through 077→078. Tavern meal, patching, beach hull inspection, deck dispute, isolated supporting-sailor aside and subsequent worried quay discussion are distinct deliberate scene changes. Repaired/furled sail state continues after repair, and captain/quartermaster identities stay stable. No black or failed transition observed.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-18.jpg"
+    },
+    {
+      "sha256": "6fefe428e4ed289abd8c0336b30cc36fc845a8bb70f85251c5f8a70d9430e139",
+      "state": "pass",
+      "reviewer": "/root/pirate_final_visual_review",
+      "notes": "Observed both encoded sides of cuts 078→079 through 084→085 plus the actual first and last movie frames. The sunny quay changes deliberately to sunset and then lantern-lit night. The final bucket callback preserves Tom's costume and the same hold ladder/mast/hammocks seen at the actual first frame. Both movie endpoints are fully formed images; no blank ending, black start or material subject clipping observed.",
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "samurai-portable-historical-document-v1",
+  "original_document_sha256": "7feecf734b98acee4c65fc57e04fdcc3c09ea74cc26603f7fbfc8076658a5c41",
+  "original_document_path": "/workspace/samurai-chapters-regeneration/episode-01/delivery/caption-conversion-proof.json",
+  "derivative_notice": "Paths to packaged artifacts have been rewritten; sensitive or model selection fields omitted. The original digest applies to the original document, not this derivative. Historical reviews are preserved findings, not new reviews. Other original paths are historical context, not portable execution paths.",
+  "document": {
+    "schema": "samurai-exact-canonical-caption-conversion-v1",
+    "file": "delivery/English-Captions.srt",
+    "sha256": "f6550a85b18f4050320376b8359ea402486140566c00424d0ac796bdddd1549b",
+    "cues": 346,
+    "canonical_words": 2795,
+    "literal_word_identity": true,
+    "source_clock": "/workspace/samurai-chapters-regeneration/episode-01/native-store-words-2795.json",
+    "source_clock_sha256": "7453760716bbd561f4e5857256ee12894082769305abd6f94b66f940ad06b74d",
+    "first_start": 0.032,
+    "last_end": 1178.587,
+    "generated_by": "deterministic chunking of exact canonical words and actual recovered voice timings",
+    "burned_into_video": false
+  }
+}

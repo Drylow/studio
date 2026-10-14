@@ -1,0 +1,3903 @@
+{
+  "schema": "production-handoff-source-inventory-v1",
+  "date": "2026-10-14",
+  "files": [
+    {
+      "path": "chaines/samurai-chapters/README.md",
+      "bytes": 3526,
+      "sha256": "663a8d2c125ae2c40d7db605f7da292fd62932a9ff9ec9dfc9cc4a4990f7e404"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/README.md",
+      "bytes": 8810,
+      "sha256": "a82ced3076278bb3d058ed9eae42a08c81146b0b9f7a81ad907e4dc407549b04"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/asset-manifest.json",
+      "bytes": 93252,
+      "sha256": "1ca6ff3ec2b056d70f0c0bb43ca1a3a5388f18923d2d536f4d00b50ef4fec496"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/EDO_LODGE.png",
+      "bytes": 1888242,
+      "sha256": "6262857f4a187a4252546d785fab5de6035d40ef6a03a03f2c3dc969117ff551"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/FATHER.png",
+      "bytes": 1332952,
+      "sha256": "a7b7e17b52bd6a8cbf45bc15896cd5a57247fec8abfe11fc574fe1ccf214ea39"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/GATE.png",
+      "bytes": 2416196,
+      "sha256": "918b389c9aa6127b714082f13915fb74cbae82a3fb0c17a977aee1fc446066b3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/HANA.png",
+      "bytes": 1355894,
+      "sha256": "99021996615c56c5b62ed0bb0a7f231c2cc221af569417b1f850bd8087b83605"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/HOME.png",
+      "bytes": 2138400,
+      "sha256": "b3198a318d4fd5355d0d61ef1d966e1ee57ac72532fddf291da582e11e71b631"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/KENJI.png",
+      "bytes": 1215973,
+      "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/MARKET.png",
+      "bytes": 2209902,
+      "sha256": "4c413078f575c838f78f99704b96b7198f944adb7d0cdb86ce852c236c47bbf2"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/MERCHANT.png",
+      "bytes": 1197420,
+      "sha256": "51149deda1f5a8dca21c0b84659960e83ee77ec5f2dc29a461ae89b0bb27b46d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/MOTHER.png",
+      "bytes": 1285077,
+      "sha256": "c8af751ba850776d17c0a35fb0a7cd0915152d4ed69257c48bf8f547e5480b6e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/OFFICE.png",
+      "bytes": 2082040,
+      "sha256": "40886c4690087109c3dff438e4fd775ad1ec991972d30df5d3621594c3eaa057"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/ROAD.png",
+      "bytes": 2640525,
+      "sha256": "52e4c459ef0481d5bffbe942357cdac999ebce89b78827e4c0ce85f37ef84197"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/SENIOR.png",
+      "bytes": 1268531,
+      "sha256": "050281ba929c83c0e8589e7db7f1a8cde844013c20ccf79f6ec64e28f7fe1e80"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/TRAINING.png",
+      "bytes": 1991624,
+      "sha256": "8109814700ce77504c4f30ca040907fab3753bb5ccbfb130fcc11811e77a2379"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/masters/registry.json",
+      "bytes": 3677,
+      "sha256": "27647c0600e6e13b41d24ee4b5b88eecb5c691757990458b85c0d5eca90f9894"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/14aaa6ad321ec600d9f4e06fec82ac3224026e107b305c2e16c45c4c0c2afda6.png",
+      "bytes": 2307005,
+      "sha256": "14aaa6ad321ec600d9f4e06fec82ac3224026e107b305c2e16c45c4c0c2afda6"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1.png",
+      "bytes": 2567445,
+      "sha256": "26faae0615c41412c15d0d1efe4eb7db8dd98089cd8bb69c72690524bbe0d9a1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/2b227f34cccb48aec528bb951196465a8b604da408e251bddd2e076c9bd25208.png",
+      "bytes": 1978967,
+      "sha256": "2b227f34cccb48aec528bb951196465a8b604da408e251bddd2e076c9bd25208"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/2d4166e85e887d85e99a8bec1cc0e2ede5f69a874da745ca2a5d377925b498f1.png",
+      "bytes": 2084949,
+      "sha256": "2d4166e85e887d85e99a8bec1cc0e2ede5f69a874da745ca2a5d377925b498f1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/386a3a8ca91743bba9a8d1caaaeac38d00ecc334844bd083699edb8859bc2ffb.png",
+      "bytes": 2056714,
+      "sha256": "386a3a8ca91743bba9a8d1caaaeac38d00ecc334844bd083699edb8859bc2ffb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150.png",
+      "bytes": 1980429,
+      "sha256": "38afbf68ce8dc79210d5294598c6f4abe2cdac02ba02f32bf2f8c40a2d241150"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921.png",
+      "bytes": 2309624,
+      "sha256": "3edfa9bcfaeee9ff49af2713b11cdfb3a9008e0816a74ea90b18539790dd9921"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd.png",
+      "bytes": 2314870,
+      "sha256": "49a3a59ccb9e5ceaa35459c59db36580765be841e72389bafcfbf411b6fb15cd"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/560afc9601cf368fb2f494f37b131409b377bb8144dd93a1e729b87a52b7f04b.png",
+      "bytes": 2064592,
+      "sha256": "560afc9601cf368fb2f494f37b131409b377bb8144dd93a1e729b87a52b7f04b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a.png",
+      "bytes": 2342923,
+      "sha256": "59edc290b4a84193fec874ce0d41a454fdda9c52daac65179dfb4bc02d4a5c2a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632.png",
+      "bytes": 2086330,
+      "sha256": "5f09e41f07d4987ba3dc6a8a69b040454dfac79e2cf9c91dddb8402fa3479632"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/62078c55b266bc450485601ff9c634124f82e23b136f966adcdf0a101aa1a0bd.png",
+      "bytes": 2405030,
+      "sha256": "62078c55b266bc450485601ff9c634124f82e23b136f966adcdf0a101aa1a0bd"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81.png",
+      "bytes": 1892445,
+      "sha256": "623ab851eb31882ff03883045024c769fd749e0dcd4701a32bfffadafa242f81"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83.png",
+      "bytes": 2091812,
+      "sha256": "630c12e24e5f4767c319a491f7f12ee0c10992ed9944a86a8ab455e2b3b1cd83"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020.png",
+      "bytes": 2387576,
+      "sha256": "631abdf2bd041a0b32332d24bb77904a469508e1f9f2a667f7da03f4808c2020"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/825fc02b5c9540a41d4b87f13360faf6d0f8d265d6486e690ea237948b15ea21.png",
+      "bytes": 2183271,
+      "sha256": "825fc02b5c9540a41d4b87f13360faf6d0f8d265d6486e690ea237948b15ea21"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d.png",
+      "bytes": 2406924,
+      "sha256": "86abdedfc2018371ea233f0f273c1dcf6f025210a4c79b009a8b81aef3cfce9d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/95d7e1b66532262ff19eee82b8c5047ec584e1994263b8fdfa1f514f332ec9c7.png",
+      "bytes": 1745291,
+      "sha256": "95d7e1b66532262ff19eee82b8c5047ec584e1994263b8fdfa1f514f332ec9c7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70.png",
+      "bytes": 2368353,
+      "sha256": "99f4849fc9d20c07e9744b39120cae868cb540b278783aac5f252abe5de22c70"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf.png",
+      "bytes": 2083094,
+      "sha256": "9fcbe10baa1d389a25ace90b4e42372c7a0a095b4d5cd707b0ea8a3e1c974ecf"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668.png",
+      "bytes": 2380776,
+      "sha256": "a033c7a550037f8c23a4af814a8bfba7d678a05217b47f41404f9f0b68567668"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725.png",
+      "bytes": 1999740,
+      "sha256": "a146f55c8a3b6976aa4a533d633702ebea8120d7c477f8b2929260f42c273725"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c.png",
+      "bytes": 2125224,
+      "sha256": "abee0367d03dca2161beb13b057622b0d62695d3c8ceeddfb92879352dde651c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/c5130b455d99c4bd80e9ecca94fbcce4158799b8282ca85f643ea0fc6fba0f1f.png",
+      "bytes": 2271024,
+      "sha256": "c5130b455d99c4bd80e9ecca94fbcce4158799b8282ca85f643ea0fc6fba0f1f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/c714a41941951a40b73ef6847824f564a5575370c03c58020cd8db84b99f8d39.png",
+      "bytes": 2470448,
+      "sha256": "c714a41941951a40b73ef6847824f564a5575370c03c58020cd8db84b99f8d39"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9.png",
+      "bytes": 2337617,
+      "sha256": "c72c108c1ab0e73f849275d3b0d0fc847567ab9a0ae8f42a84d920f9cae49dc9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48.png",
+      "bytes": 2272938,
+      "sha256": "caa784d242d76b36d5f07affff1bfa5c4694ae90444d3f3f512e7c162c23fa48"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1.png",
+      "bytes": 2310459,
+      "sha256": "d3424d908c37a60e44194276655c4fa4e41703919a8f026446981fe751cfa4a1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657.png",
+      "bytes": 2070488,
+      "sha256": "e035fe9da7d9583288ee5dc71e6a5c3b274b480eec735742c66c784686fb1657"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/efae04702fd6fa40f13fc852ae293fa5375c1416403bbc0dfec0c9528bc7562c.png",
+      "bytes": 2295187,
+      "sha256": "efae04702fd6fa40f13fc852ae293fa5375c1416403bbc0dfec0c9528bc7562c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/reference-inputs/fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af.png",
+      "bytes": 2011271,
+      "sha256": "fab250e64087f2766f478d9b77853f92b2c144691e28e5914ec2148e73c443af"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0001.png",
+      "bytes": 2319482,
+      "sha256": "fab900b802983dcad66f1abc9c0417f85d7607aa2887f87a874b1d523df55eaf"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0002.png",
+      "bytes": 2409113,
+      "sha256": "125b9c744923067fc8b75d245160d28c9734d4d27015b07302dcd7940cc3a75b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0003.png",
+      "bytes": 2119874,
+      "sha256": "e9a2e7de4e89a2d918d7b3e3c47eef47cc6572831c5c11ced54469f8d2b1b778"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0004.png",
+      "bytes": 2024076,
+      "sha256": "5eeb0b756ac7b620c9e7a5f7ebc96f590bc37a940b5e20bfd7341d87a14de430"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0005.png",
+      "bytes": 2248541,
+      "sha256": "6328e0ac3e839ce512480318f33c839ba3715d1e7b50e977164210ecebc0d8ca"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0006.png",
+      "bytes": 2140299,
+      "sha256": "489589ad5203fc1fd693061fee18f6e60bb7b832d0ab92305e6ba14cfead19b3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0007.png",
+      "bytes": 2149536,
+      "sha256": "524930f07d174dafbc14556525c12f6e69dc4e580cc71d0f5e4fdf606dceaf37"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0008.png",
+      "bytes": 2055741,
+      "sha256": "1c17742f68f5ebbb37373c4ee78cbe68d157983270fc637ccb61193af0b2c78c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0009.png",
+      "bytes": 2112350,
+      "sha256": "5efb1cd15ac4c38eb5df1765790ab8f347ddec587301932fbb959d9d4edd6a18"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0010.png",
+      "bytes": 2142018,
+      "sha256": "b7ff9291822c5320668cc7a0db53a105a85bdf7a1b8d73610564128d198b031e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0011.png",
+      "bytes": 2149101,
+      "sha256": "bbc7d427ff7f1d78205d083f5fe800f22fb4533cc20de80cd99204fa15f84a54"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0012.png",
+      "bytes": 2037844,
+      "sha256": "4811b9ea9548c628b61ed57b07ec40ef80c1d60b6916179d9ab6c1ec1ffb04a3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0013.png",
+      "bytes": 1976361,
+      "sha256": "18d300b78ec74811e54c9fb62525ceb708704f8561974407caad4e845c057a0c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0014.png",
+      "bytes": 1959104,
+      "sha256": "873c314dcd20d04cbc576a3385d9b0885cfb53258ac87d00314add7b5a5e86ea"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0015.png",
+      "bytes": 2102258,
+      "sha256": "c2d0d2ce15e8c09a1b1af2ffbf2038be3713d90ce53ca4b595530fc74353e67d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0016.png",
+      "bytes": 2140717,
+      "sha256": "128f9a91aff566de5f3e56e91b2bf1f4094e68938408db4ab5e715f1a019603f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0017.png",
+      "bytes": 2238202,
+      "sha256": "7fc818664e78e23d82f90c7bc63113f0a7ca8a7cf1a02be4719dfba9159d9d3e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0018.png",
+      "bytes": 2051496,
+      "sha256": "e79bbc612d5da2ee18bdd71ff24bb5ba533adbc04a6b9dbddf3698cd6b9037df"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0019.png",
+      "bytes": 2013929,
+      "sha256": "eab90a7cfccfde0eb456c0c16e40a4759e6d83cec595dcf26cc349afc544d559"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0020.png",
+      "bytes": 2016328,
+      "sha256": "c7dd9fd2fc77f9693bb098986e0aac782dab3a13a5ce504364c07b8d0e2d7630"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0021.png",
+      "bytes": 1928460,
+      "sha256": "0006b01d5396db90e8d3d99659dbfe994398a84736e4a7220e63766e7d20d5d5"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0022.png",
+      "bytes": 2313841,
+      "sha256": "1889d5a279201ab66993c46694b072d69f8b0cb2ac0e424e15cabe0ae45d7422"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0023.png",
+      "bytes": 2103964,
+      "sha256": "2d94ba95cdb848882ae38476c6bdad7ee3c20a454fd2973214cb354d1096e70b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0024.png",
+      "bytes": 1830953,
+      "sha256": "aa81a72d1330eb680ed921fcdb1ae82ba949f82e5ba04bb71314fc9456ddffea"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0025.png",
+      "bytes": 2406544,
+      "sha256": "0b441231bf353230929f6b612f8bfa1588a5d939032377c4a9384b471d0cfdf5"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0026.png",
+      "bytes": 1909334,
+      "sha256": "4e747bdf2d44275a56fb88c05998988fa8f05a586a0c3fe3dc8cda104c6b7168"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0027.png",
+      "bytes": 2009992,
+      "sha256": "3f7a157aa8aac04b595a38cad410d1fdc5c530c336a4b5eec585355cfd38902e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0028.png",
+      "bytes": 2087102,
+      "sha256": "ebf17747dd743169b178de356b49e6dd8624f760bd1f31da4ac38ce6b30b1273"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0029.png",
+      "bytes": 2268251,
+      "sha256": "ddf37c7ce8db046d1e7c3dc319d9d125c3cb58da7ea85ce964f903d7a7763e55"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0030.png",
+      "bytes": 2122446,
+      "sha256": "6bef8f5a3a443cf4b35591d5477f51f6d6f644f9e238e111a2b4af9c3c01f869"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0031.png",
+      "bytes": 2067765,
+      "sha256": "f59839907ba535fe89037613eb8f4e29d32c80802372028c5ac7c13a750efbcc"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0032.png",
+      "bytes": 2110294,
+      "sha256": "360d3e7fbad598924f12d2d68c4354b5e36c5dd8f715c39bf31c6f1359781552"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0033.png",
+      "bytes": 2152275,
+      "sha256": "e4d26cb00523ed8f5cd6752946cbf9be35396047120951c350657b5aa79e5915"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0034.png",
+      "bytes": 2146231,
+      "sha256": "afc3eb86cb9f50d3be3611d3cd95e0f71583c4decd981b6b3308a74e563176c3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0035.png",
+      "bytes": 2075218,
+      "sha256": "5b7745d939a8c608e56acfe3c75001037f9a8aa49457c539b7116a0eae58f747"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0036.png",
+      "bytes": 2185993,
+      "sha256": "88b0f8a252409d8a5edf34419133914c4c9f3eb1123c056f3ee40ce31f3e8ee1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0037.png",
+      "bytes": 2144260,
+      "sha256": "9e6a27173b98fb56ddeda2b47f4dd69bdc7a6e346ab0ed57734cfab66b3f7872"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0038.png",
+      "bytes": 2103729,
+      "sha256": "ee1199d940d6c8c0bd0646d6c9afaaa4549afbf77e5519a015e39d7b0d3e51a0"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0039.png",
+      "bytes": 2169758,
+      "sha256": "595134ace5473b2477f4f543dff2f13d508060f542f3c74f46fd0a3a5bc7f1f9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0040.png",
+      "bytes": 1970029,
+      "sha256": "8d2247a7f9821879490367126103ed4a215ad9921b4a163a04de4f5c2711ca0e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0041.png",
+      "bytes": 2150556,
+      "sha256": "d25797e8bd84b46c0c60c8329ce1ec9912a381681e13fafa5466d1efe833832e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0042.png",
+      "bytes": 2207697,
+      "sha256": "dd094f3696b6c780b40e97a0cdb813fb5e5ab70c248427c59f0cfeacc149a64f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0043.png",
+      "bytes": 2092423,
+      "sha256": "ff6c3eb2b0296fae97784f26ea9efb588400347c7ed53ec17813d5e58717132a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0044.png",
+      "bytes": 2083105,
+      "sha256": "eea46737684c6838e3dc91b7dcda304d16f07a1fd50ce093c8f4af99b3ffd150"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0045.png",
+      "bytes": 2047288,
+      "sha256": "d122df8a77ccadd354acc924eb00e1eb12d3eac0fe9fa6672f5cb944a5540293"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0046.png",
+      "bytes": 2225183,
+      "sha256": "aedcf85e2780d9d38831508e7a852b0d0a622ee4c6b447c93ef21c475c187b9d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0047.png",
+      "bytes": 2059739,
+      "sha256": "c6df68b49010a5dd2ee305df705ee795c2e3ee0ee3963879f062644f54b1fded"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0048.png",
+      "bytes": 2072921,
+      "sha256": "8405a02749597c1ab46af73524da0e46ad900102cf1c31f7ed8e894f4ebf9258"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0049.png",
+      "bytes": 2211255,
+      "sha256": "d4c079217f649fde8b5753496f7ab8f3666106e596a1e31507b498ed204b5a49"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0050.png",
+      "bytes": 2045259,
+      "sha256": "e64bf232238cec3a048dffc0e6bc0c5aa70c65480755121e814129069eaee32b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0051.png",
+      "bytes": 2042548,
+      "sha256": "8ae18c58a65ad33455753cd1e3760616a4325715aeb5df65dbc8f2ee1c4ab28b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0052.png",
+      "bytes": 2016455,
+      "sha256": "ac3d54b1dcf4b7bdb28e6ca7c30e4ca05d83c595848ca87790f1dcc7ec7e3fc9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0053.png",
+      "bytes": 2075425,
+      "sha256": "930963c2516508dfa7738269bc5730c7fa645baa6509f5c7bd46dfb4cf8c5603"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0054.png",
+      "bytes": 2275448,
+      "sha256": "a6e11fc96a6830c4fb32b71615381f431bc94c8581a01199c0b591c2bc3dc231"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0055.png",
+      "bytes": 2019588,
+      "sha256": "4d66502f482a1294aa6e6179b7d47a8a8823584bec05885fa8a190d7be5b0575"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0056.png",
+      "bytes": 1947269,
+      "sha256": "5c4d14256293218c77c355dbe279df9b124521e0710ed9cc165c2c4c6321323c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0057.png",
+      "bytes": 1940378,
+      "sha256": "f0617bf06d25fea1eebbae2b92b81fd3b9f918e319581210815e79a676dc12a2"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0058.png",
+      "bytes": 1946588,
+      "sha256": "9d43b2a3cd7f70a990ed02e22ca8e5549448ec1b542908c7daa1d66cfcbb8be7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0059.png",
+      "bytes": 2203941,
+      "sha256": "98355ac131c413fbea24fa66ab5f92d720e9c0e8cc51b0d24c8b4ae5f8cf6c3d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0060.png",
+      "bytes": 2034418,
+      "sha256": "94cbe2db68c9d3a480edf6e476a14d0e0a07243440459cb1e9650cea40d91c76"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0061.png",
+      "bytes": 2415780,
+      "sha256": "fcddf72f5d3258dccb9ad6e44c9fe77a515119c4844afe25401358416d4c41fb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0062.png",
+      "bytes": 2007949,
+      "sha256": "9d61f57ebcf23c93f5b3b04fd51b297cd9e4d29aaeda24b6645636bd80b9fde3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0063.png",
+      "bytes": 2101160,
+      "sha256": "4813aa048397e2be3dbbe364569b637c432f799456a23a05cfe3e4e5a2f54847"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0064.png",
+      "bytes": 2148681,
+      "sha256": "cbfd89ecb6663253be1968e7ad79cbe88a5bc1dbbc9fd9f7797e52c4c02a809b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0065.png",
+      "bytes": 1981829,
+      "sha256": "549e526138c3661117382235102b8a7c33eaa483aa349de213dc288688cefaf6"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0066.png",
+      "bytes": 2118952,
+      "sha256": "443abdab401553c5b90b17145dac53c700f650dd7d84c4337290aa333b0ca8fc"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0067.png",
+      "bytes": 2012261,
+      "sha256": "af47ed04ddb07154d1ad72a5b338228f7f0522db0e2153d6516ad78bb6a250c0"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0068.png",
+      "bytes": 1943024,
+      "sha256": "83b02a426f59c01adfaca9a69c12404a95a68508ee9f36bc96d4e85b21133b9d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0069.png",
+      "bytes": 2034256,
+      "sha256": "fbd75817fac69e26371cb036a24243622bef8db93b5129e825192e2119db955d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0070.png",
+      "bytes": 2051989,
+      "sha256": "1dabeb97ccd3ba20ad8ad42dbaaec7f9511ce06f9057ff9015fcffafb3eb9614"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0071.png",
+      "bytes": 2130492,
+      "sha256": "7a6106478d0881a88f14b7e5043b5a84b98b79fa704e1716af2c53a89d375e05"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0072.png",
+      "bytes": 2107938,
+      "sha256": "1ac6e1573853ffa9f5d76b7158173271c923d33b841d410d364aeb0ffcce1053"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0073.png",
+      "bytes": 2552542,
+      "sha256": "54087dd4d72698896fe758697ee20478ae551ebe504b9872a81b6befbce6e90b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0074.png",
+      "bytes": 1950976,
+      "sha256": "18cceeff423ca1c29ff9606fb6f5c337b346814e589c2912d6f4952266951704"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0075.png",
+      "bytes": 2461345,
+      "sha256": "280a53f388d2d154ac5098be734acd4908e3bb50c46a83ea4e21a0bc55a58e26"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0076.png",
+      "bytes": 2526593,
+      "sha256": "d87b3b916201b2be9a318e2f2d2ae5119f9993d0af6bcad26ed9f2cd1278a2a8"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0077.png",
+      "bytes": 2036121,
+      "sha256": "3aa958c71e82b5717ddf6c711454ff6837469ce59c9cd8d31802d2bcbd206c1c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0078.png",
+      "bytes": 2136318,
+      "sha256": "4e8b96ab050f99491a053b8ec5974ad810e4a38e6b1350e0243b9b300cb7add3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0079.png",
+      "bytes": 2109420,
+      "sha256": "92cb37a32044ca5e31d1f7a1b246022505ff7bf4fa08df366fa8dc3adb7d20df"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0080.png",
+      "bytes": 1876209,
+      "sha256": "d757b727bdc216da3edaf24128ac854f22b0b8acbf0d88c1dfaa56c1d4a055b1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0081.png",
+      "bytes": 1960683,
+      "sha256": "15a9e5676beb8f2147e99eb76bb63ccad9c4b7a4758967a8fd894aaefe0c48a3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0082.png",
+      "bytes": 1953495,
+      "sha256": "aa0ac1eb47188bbba1dd02503c01ae88c49f319f8e3b14dd85354b31ca7678c2"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0083.png",
+      "bytes": 2009833,
+      "sha256": "2b96133077549f57398b89241491400db4a9d29b147cb38fb92951746edbfc22"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0084.png",
+      "bytes": 2331492,
+      "sha256": "785b10d0f488d63b53e8bbc2374899e10ccde8d985d363c0501a3a178d3217a9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0085.png",
+      "bytes": 2063682,
+      "sha256": "3d38bcf58789018a2568f1b9363f6ddab5eba6a32ff167d0a52b95496882096a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0086.png",
+      "bytes": 2074143,
+      "sha256": "07c2b541777d77e2fc9cc39c7263b1edd3029f95a008b5f33f03a5f189a84b0f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0087.png",
+      "bytes": 2023405,
+      "sha256": "d4aaf751e4bc6ff28966ee1b36cac327754ddda0afeedad9b09d8969d80cff91"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0088.png",
+      "bytes": 2278557,
+      "sha256": "5e31a1d195e4e25fb518fa097d102276da1e922250dde7718203b1f7adeedd7e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0089.png",
+      "bytes": 1976792,
+      "sha256": "417908490b88109e46357d4ddb842ee8141052f30b53227c5c01b5fd1edf0fb8"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0090.png",
+      "bytes": 2093260,
+      "sha256": "14f954f4c30ab8890825e9e3f6daafff2a3e53011cd9d87116ef076e7a6b51e7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0091.png",
+      "bytes": 2064567,
+      "sha256": "ce19dee635c69cbfc2f8d3e15f626f6b1bc85d95d10b14bd2bb9136ca373de70"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0092.png",
+      "bytes": 2039486,
+      "sha256": "4e84cd68fba5e99397846d2bd8164ef1bb4967af384fe1850ecd69c2f04a4c0b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0093.png",
+      "bytes": 2023289,
+      "sha256": "f070fe288466396c71a650761a0c3dfb75c7bbdf4f4a23588d675e15d4f8b89c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0094.png",
+      "bytes": 2116793,
+      "sha256": "df8b8375ad3c3a43da02ac704830916744a7945b1acd92ea23495f31140881f0"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0095.png",
+      "bytes": 2248156,
+      "sha256": "da91e0975e344e24dabcbb8f00e8b3afc051bf6e73f93b00063a895624e0c9a8"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0096.png",
+      "bytes": 2004839,
+      "sha256": "410858ac749b1b876a9008f14f1d2fda7229b2afc244223015f56e1ee1b7bb2a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0097.png",
+      "bytes": 1991532,
+      "sha256": "85fd1d38dd336913ef9dbe6f5c2557fd050eb508d43d1bc4b0acf8d29c1ba4f4"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0098.png",
+      "bytes": 2312135,
+      "sha256": "74fa58a1e05c6737f8d2ca9d2e5d2b782c2be78e217661451527af62a40d4744"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0099.png",
+      "bytes": 2104900,
+      "sha256": "f8e748bd215ff0d3f5865df160e1b73d35807ff8859e077a41f516c2ecad40ee"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0100.png",
+      "bytes": 2112290,
+      "sha256": "33167b4d1b0de8bfe2e8d45336fe1f66f0fd904336e763ba3700659a7305356c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0101.png",
+      "bytes": 2116132,
+      "sha256": "661d00179accf6c66c4f8ae9b7e036c89fda6675ba538c7560e2fe5a62b810b2"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0102.png",
+      "bytes": 1936617,
+      "sha256": "978fdd2226709069a54789d443b1885362ce9eb458af4a5e0f9f68bf7ed4c32d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0103.png",
+      "bytes": 2099730,
+      "sha256": "e53fcb6fde5a6ede03e5b6d13630f0854cb6ff234c6d24b5073e7407601b9ff7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0104.png",
+      "bytes": 2092855,
+      "sha256": "a15dfa089847fb465df22bb6ed3e58aab097e9f872176a974bc70ee4c2452c47"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0105.png",
+      "bytes": 2347309,
+      "sha256": "86ebbd435cf8e16ef6d87e739d405c3c1fee38a06197abc5c8c0b9d14ef8b2e9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0106.png",
+      "bytes": 2310826,
+      "sha256": "c679bc1200ed4aa568edcb616cdcbf3abb423e4f8ee687c222862fef0a1618f7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0107.png",
+      "bytes": 2141410,
+      "sha256": "faf9699212bd80365d865c2e4cc6001a5d0baff668f0a5aa387ddcd593680587"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/assets/scenes/scene-0108.png",
+      "bytes": 2244330,
+      "sha256": "29d7405b615be44b4864fd5b467bae6be924bcb7fed65d7e7f7659f6d8477db3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/delivery/English-Captions.srt",
+      "bytes": 30109,
+      "sha256": "f6550a85b18f4050320376b8359ea402486140566c00424d0ac796bdddd1549b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/delivery/UPLOAD-original.txt",
+      "bytes": 1659,
+      "sha256": "310b85bec254ec56cb91133f6092b58db75c4df1f18881382386eeb62f409c4c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/delivery/caption-proof.json",
+      "bytes": 1288,
+      "sha256": "4aa4b83e7eaddc24a182e730b3ebea35b3f0e43c3de133d891f7437ae5a0fdb9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/delivery/historical-public-readback.json",
+      "bytes": 1276,
+      "sha256": "6a822ad18cd5113058636d6f782f8731e264f02a7b0afb7bffaf722b14199ef9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/delivery/initial-delivery-manifest.json",
+      "bytes": 3633,
+      "sha256": "28b622018885c042c7b39ec5534651d76a68f9569c8f2e16734e8914af5503cf"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/draft.md",
+      "bytes": 18794,
+      "sha256": "89cdfabbf51b55a1cdf85981b44c9ad4a6923554b0f82ab0f45a8cbc3a4ff31b"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/normalization-proof.json",
+      "bytes": 1884,
+      "sha256": "62de159ae1d95393a2b95e95d235568474f50877f10e990faac7dca641898ba4"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/provider-original.srt",
+      "bytes": 28473,
+      "sha256": "6828d4f300d36801e6eed63f4a03351460ff4f3983b2c171a7b9becdd8f90be9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/provider-original.txt",
+      "bytes": 18107,
+      "sha256": "9300d265649ec7928c618f5a6199fb8dc9882e716def6a64cbe317a79a313a54"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/spoken.txt",
+      "bytes": 18215,
+      "sha256": "f2d0e1be63b96bb524de524b61f35623ae2618c25f09645afe619e76d1fde3a9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/voice-native-derived.mp3",
+      "bytes": 28298178,
+      "sha256": "976f1493619e9266301dc772af362f5a7fe5602433f2a8b66cc728fd1e3a2671"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/voice-provider-original.mp3",
+      "bytes": 18864587,
+      "sha256": "409839ba19234c22eb2b139116b93f8a92d952eb7b26e0827c8b0a34951ba90c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/narration/voice-recovery-proof.json",
+      "bytes": 4353,
+      "sha256": "c56769152e5c2aab8263c291e81a9208fdaff97d20d7f91bd7030f5cf82f2beb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/plan/actual-paragraph-timings.json",
+      "bytes": 53924,
+      "sha256": "31bfc421419655725f8b9322a4655f2734ebb886cedfdbb750fbfd6d00b4735f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/plan/authored-actions.json",
+      "bytes": 79971,
+      "sha256": "f929e0da6b4b1e4f181f2a792434e7636127ae12504debcae681ab7e7a0679ce"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/plan/bound-plan.json",
+      "bytes": 417204,
+      "sha256": "18acaa4c380d50004312f1d42b489cf3e5a0a33c0ccfb7d7cf5e1bb7042fce47"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/plan/paragraph-clock-proof.json",
+      "bytes": 7636,
+      "sha256": "7f83590d2598b95115606fdf7f6495aeaa4bbcfabaf6df059473acc7b3bbf0be"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/plan/word-timings.json",
+      "bytes": 352060,
+      "sha256": "1b91f0752c2a171596172f339ddfedf1f557710bd80725e9b9688af2d7b5aeb5"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/actual-kenji-master.json",
+      "bytes": 3332,
+      "sha256": "a71e6d5c9c4d9f5c8d6f14f4d168b7fa3a631cd26db6abe41952e79cce9fd94a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/actual-wide-master-outpaint.json",
+      "bytes": 21758,
+      "sha256": "6f2ab1f6752d91b5fd9e821b75ef786f7669df5f4a88ff6ce0ad6a6ee67796f1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0005.txt",
+      "bytes": 841,
+      "sha256": "21bb8a59c8095b3af8f28932aefebb6def5327699e450b11fb5b2d027aec2cc2"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0017.txt",
+      "bytes": 1363,
+      "sha256": "7b0b2de7e69569d68de124c4c30f25606c285dc2851f8a310524a6a62015daa3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0021.txt",
+      "bytes": 1253,
+      "sha256": "054ddb75d98448dc298a1495775a2daacf7fc1aff7f3d1508206373922f3267a"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0024.txt",
+      "bytes": 1223,
+      "sha256": "cdd8eda66bf785dc4b1c0d8d690c60065c95d4fa949fb55c73b5602a6c192d46"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0026.txt",
+      "bytes": 982,
+      "sha256": "10d2f11eb752309b924a9b4aa17e2fb03c7c9e1d4f8371f43a28d3e4158025fe"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0029.txt",
+      "bytes": 859,
+      "sha256": "bf92deaddecd1ef6064f4eec697eaf695594590cecd370fa282bb41c497e80cb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0040.txt",
+      "bytes": 846,
+      "sha256": "f9d57fad2d0a3fd4c2c5283fbbfd39730e9fa5e1afcab7f1ea6b1a2c6b3a46fe"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0043.txt",
+      "bytes": 847,
+      "sha256": "69f2f16a00ef88f4d695f269bfb74c2b748ced1283d46d13cc7565772cbc5025"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0046.txt",
+      "bytes": 961,
+      "sha256": "a867c4ae53adb3fa5210f8a4625112a4e282765beb51725491edc50ebfb2c619"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0049.txt",
+      "bytes": 1092,
+      "sha256": "90aa5a22576c9c923b87a8138280d664b5eba03bc20c6dbdf7587b4d90827248"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0054.txt",
+      "bytes": 1054,
+      "sha256": "df88692d80fbae61ce1e3e4dde557d15f763878cbaa55901e62026bc0216933c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0059.txt",
+      "bytes": 848,
+      "sha256": "36d3ce85934e0776beefa7dbdc1183bf8782dbf9225dedab8fc72b642cae0917"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0065.txt",
+      "bytes": 1228,
+      "sha256": "bb9f9e7db69f58887e79fe249a07f0a16d7a4e836734c0b1f737d1875441d972"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0068.txt",
+      "bytes": 986,
+      "sha256": "80e6ee221cf774768ee2036dd60fc97887622ed594a0d95d38d3b8c7b7bd8e68"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0075.txt",
+      "bytes": 1024,
+      "sha256": "e09332ddf8d7f891f28fbb612ad32738c4670f2a60670c6c136f57b781e29e81"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0082.txt",
+      "bytes": 1016,
+      "sha256": "abadc1a2d4fc1c72e7c9c9e96bb2428aedd0fb0945192071eeb5d5096cb9f3bb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0088.txt",
+      "bytes": 1097,
+      "sha256": "c9a7aaa8565386ff8b5d08c5dfd3a69da9484e7827d4f9818b004ed7bbbb159c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0089.txt",
+      "bytes": 1055,
+      "sha256": "7c7ea0f2f8c0b6e87b2e82d9eceaf28b79831bab173ae3763090d7b139f7705d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0095.txt",
+      "bytes": 1028,
+      "sha256": "1680e0313f613fc20032aebd7f1029969d002fe579ed489a7dd5cbceccfba4ea"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/edits/scene-0108.txt",
+      "bytes": 907,
+      "sha256": "071eddfde72610dc42287f658e5e26630027e038ffd487b9c05c6eafd600d300"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/master-creative-plan.json",
+      "bytes": 19973,
+      "sha256": "b8759debe9403a5df64b119969c71fc6bf36f071518d9a2a6932c6633b28b740"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/scene-prefix.txt",
+      "bytes": 1809,
+      "sha256": "150a72c6a77f6d78206f166161e360bc061b80cb59c6e1db8b3d3bde1e36c381"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/prompts/selected-scenes-generation.json",
+      "bytes": 594392,
+      "sha256": "3f97c010b1003cc7abdf0cfa069d5a2aac72fb57476f116126209e60049480ad"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/historical-helpers/bootstrap-samurai-project.py",
+      "bytes": 4770,
+      "sha256": "f889cf52f13b8f019092916e550d09c75723e077721b2bbfabe8e81f0aee4d08"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/historical-helpers/check-final-samurai-av.py",
+      "bytes": 9942,
+      "sha256": "9bed3b9ec32b3dfbae3eb7f0feda08ba48794a1ea1e39e1a49cc6a426d2304c0"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/historical-helpers/normalize-original-voice.py",
+      "bytes": 2993,
+      "sha256": "1fb824b32ce2031742ed711d58e1831a11d2d8593022154ec5312708b0fc9a58"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/historical-helpers/render-reviewed-samurai.py",
+      "bytes": 12748,
+      "sha256": "f5b32b84093343fa32ad303eb0d38affcf7ca6a4c64c5f2700fcb7b74171cf40"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/native-clock-adoption.json",
+      "bytes": 1531,
+      "sha256": "77d30489a10b4f2bd60eb95c10405a2b5258be2084dd8192b66832b1f0100be1"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/native-export-completion.json",
+      "bytes": 9233,
+      "sha256": "a6dcffd5c5700d6a45ddefb90a604a95979fca6a7b3774e7c24fc07b88b455f9"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/render/native-source-integrity.json",
+      "bytes": 1549,
+      "sha256": "236631569b7ea7b29c9044eb5f2ca7139bee653d2517c9b599892ff3eebc6b6c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/correction-review-a.json",
+      "bytes": 27290,
+      "sha256": "1472613e6110c200e355468562ff9defeab7d8e5a94beda60edaa8ea64259b45"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/correction-review-b.json",
+      "bytes": 24325,
+      "sha256": "e6c52cda7075e086e8ae4f398379e761d8ac3d45edabd63781bc86b90bdbfb8e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/final-encoded-review-a.json",
+      "bytes": 96043,
+      "sha256": "340567d2d0ad551cb22e88cecb391cf5aa7ee23002c5ebc47545f702a8cb65f0"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/final-encoded-review-b.json",
+      "bytes": 46273,
+      "sha256": "2bd39b1cd17429060d18cff3bf6e32a31389085d823c54cabdba14735898dcd8"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/final-encoded-review-root.json",
+      "bytes": 4498,
+      "sha256": "e2d5bdf432ca91d98d77cedeb4a19610564cc00b4043efa7b49adb7ad5952bf3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/final-script-history-review.json",
+      "bytes": 9005,
+      "sha256": "e9e224ce3abca3a405e937e3d55c63e51024529a10fe031dd0e20dcedae2ce91"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/final-visual-review.json",
+      "bytes": 27868,
+      "sha256": "7865c36467cd64940e3b2416fdf114376364d189c7541840644b2e0c9fedaa76"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/master-review.json",
+      "bytes": 7641,
+      "sha256": "13ac2c6b45ac0ef2481d1aa6088cd5def1a6c46c4491b82bb37b0f574604a405"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/root-detail-encoded-sample-review.json",
+      "bytes": 2764,
+      "sha256": "79f3f6b739e692c03f1d31d95eb64b09b308ca68af7b402a9db8dfd68067084e"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/source-release.json",
+      "bytes": 1208,
+      "sha256": "41d40ff2fb8f605bff9216e4c0315a3d0acbad8837505c17ce94797a204c3aa4"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/source-review.json",
+      "bytes": 138271,
+      "sha256": "7c2dafedfe1d9c39625da658def87fd78f30fe0b0f7af23e3d9285845382bd89"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/reviews/technical-proof.json",
+      "bytes": 7742,
+      "sha256": "cedf25d9444acf0197f9cc4a80a1d5688d41718450d949658acd169cb9bad0e7"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/archive-A.jpg",
+      "bytes": 600086,
+      "sha256": "855ff69f054f782a6967c493a6b5f33f7fcd5fb1b1efbacd9e5bae200c37ce21"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/archive-B.jpg",
+      "bytes": 635756,
+      "sha256": "54df7ddd27d46066f0e5c2df67080974fecfa78cad6b58026c7d55c97bc7b5bb"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/archive-review.json",
+      "bytes": 2235,
+      "sha256": "d141ea761ce2b8afec0fc0b38dfcb0f756973a7bceddc62167f1a58c54396260"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-A-original.png",
+      "bytes": 2200292,
+      "sha256": "d08daeb1bc2d71316624dc0beccf2825867e9927d8dc0b499656c53b57f0504c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-A.jpg",
+      "bytes": 823558,
+      "sha256": "59f8a1cb3e737828ecd569d8d898edf82783169b10e353e93492c5c85f93d99d"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-B-original.png",
+      "bytes": 2175670,
+      "sha256": "904246e710f7476a4537ec15d6c835940cdd54433aa5347f07bee5cee05f81a6"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-B.jpg",
+      "bytes": 826499,
+      "sha256": "ac40ad81e83ca8f17969435b51289d98cbd02e3b46f49f625f715a60ce5b762f"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-C-original.png",
+      "bytes": 2096605,
+      "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-C.jpg",
+      "bytes": 757652,
+      "sha256": "174312795cabcbba86a5bb7dcd09a62802c36e4d2e3945d7a89969dfbbf9a97c"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-correction-prompts.json",
+      "bytes": 4944,
+      "sha256": "e0a1c0360a6d2fca88fe5520bdb6b2d36dd61f5ec2a6fca4d8f26f79551f54e3"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-final-edit.json",
+      "bytes": 1998,
+      "sha256": "9cb35e9f24e38934e2f5bf5f5f00c7074063d899edfe1fc317d6b110b2d0fb76"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-generation-prompts.json",
+      "bytes": 9442,
+      "sha256": "55a5927105db870fd36896e3243debcadae255a76dff4aeba998911a87e81596"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/thumbnails/revision-review.json",
+      "bytes": 4057,
+      "sha256": "b3bf69ef844865f77900ee24ff81d3df0b07f7ef63274e4de7cdef9e6cc97c12"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/validate_handoff.py",
+      "bytes": 1720,
+      "sha256": "385f655895b04d012978d7f87a6179c333e27fc901791ca56220c56bbb510113"
+    },
+    {
+      "path": "chaines/samurai-chapters/episode-01/visual-bible.txt",
+      "bytes": 7127,
+      "sha256": "e807423bf0b1fc79527efa9b7ee03abdeb4ef5e7937e75f25d862f110365bec6"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/A-LIRE.txt",
+      "bytes": 693,
+      "sha256": "62f892e5d8e00febb62e1f6faabe5a06d1e7eca8ff972919f942fcf48edbf665"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/DESCRIPTION.txt",
+      "bytes": 449,
+      "sha256": "33b82d7e2a22921e5fc0acc7cd7e8259f2f2094724cf6fe3a77786038f2504b9"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/NOM-ET-ARROBASE.txt",
+      "bytes": 307,
+      "sha256": "5b21a22362a6a273a964656223799dc98764521e9aee9d24a3f0d32da8eb18b6"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/Viking-Chapters-avatar.png",
+      "bytes": 1206033,
+      "sha256": "510830cc6745829346534971e59e8b02d580c91e934773e73b2d2efb35d6bfdf"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/Viking-Chapters-banner-2560x1440.jpg",
+      "bytes": 386418,
+      "sha256": "17a18471d201955737e03205e8b95fc1d4633125fbc26656a5be3ea6fbb74d71"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/Viking-Chapters-banner-2560x1440.png",
+      "bytes": 1224280,
+      "sha256": "038b84e1232b35583ab8b906cf76a126794e1087e90e41ac4cb86eac488217ff"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/avatar-circular-preview.png",
+      "bytes": 1108531,
+      "sha256": "0ca8f6032afc0951d65538324c133da10691dbdbba7b056bce92cc3e2c643a0f"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/desktop-preview.jpg",
+      "bytes": 143099,
+      "sha256": "9f6680ba901be9075f63af7dc1dd9e0f81f24e2aa778690bfac969ff6e5a030c"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/manifest.json",
+      "bytes": 2019,
+      "sha256": "38ad1eee88f9e13fe15a6be79f2d183db0a3dca9f1a770881017fb8bd1a264bd"
+    },
+    {
+      "path": "chaines/viking-chapters/branding/mobile-preview.png",
+      "bytes": 426040,
+      "sha256": "cc890b5caca422287b9483b22901b31c0234a7becafef0055b8210f33c8fb809"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/README.md",
+      "bytes": 5108,
+      "sha256": "482408650974b086fa4bb4ca33ece0cec259ea4f8d1d524fba25fec6f5202f30"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/asset-provenance-manifest.json",
+      "bytes": 213227,
+      "sha256": "f4589ab02f7cdce1c80d7b2c44a695663f433a19f8a94b9e9c1ec3cffdf6d356"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ASLAUG.png",
+      "bytes": 1260042,
+      "sha256": "37662975bd8aedd833c42ea74713cf0e799f3dd360c9c91d09396deb347c5595"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/BJORN.png",
+      "bytes": 1300687,
+      "sha256": "cff3f361a2f9ded6d19ddaa2c6c5d0a0d00abaec35ffb2a6f610049bfe6c7faf"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/CREW_EXTRAS.png",
+      "bytes": 1282118,
+      "sha256": "cfffe57a6936cfb48db4d3c464861e74b62a1489ca81df69871e7df08ace65d3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/EIRIK.png",
+      "bytes": 1263878,
+      "sha256": "827c761b3729f7fe262699ab347207814b0aa058bc8591c563aa870570c12492"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ENGLISH_LOCALS.png",
+      "bytes": 1296794,
+      "sha256": "ca13656dbe1656fce0c67dc8293722158f81f90c1b2d1d1b72f97614d40276ec"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+      "bytes": 1480712,
+      "sha256": "bcc9b533c0f9a60fb133c75b7846e9447fd913883149e00242824205dfea0bf9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/MERCHANT.png",
+      "bytes": 1240978,
+      "sha256": "cb23cdefefa5dac6948e7e99020e0f61b899c0bfb29092b8658dd9d21b3c0954"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/cast/NEIGHBOR.png",
+      "bytes": 1228351,
+      "sha256": "3dc5637bb5bc1334ce48e527d40daf05728baccb1399273269f39c24f672b6ba"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/ASSEMBLY.png",
+      "bytes": 3242699,
+      "sha256": "f1eb6f65ec338cefdf5dc15963ca1efc54492111c30c19fa521bcd684322158c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/FARM.png",
+      "bytes": 3121306,
+      "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/HOME.png",
+      "bytes": 2664691,
+      "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/MARKET.png",
+      "bytes": 2738171,
+      "sha256": "7843ec49902f9974989488edb5957d0d8ceb55b767b6ae9e4c6056ef20d121d7"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/SHIP.png",
+      "bytes": 2381030,
+      "sha256": "9288e03355f158b1735c91e555fa8e7b029b8b21c09cf9258355dfa1600605b3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/locations/SHORE.png",
+      "bytes": 2943824,
+      "sha256": "5e1b332aa5727494e2b9e6794c484cdf60ca83dbe0793dd9a7fa23cabef1e701"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/registry.json",
+      "bytes": 15787,
+      "sha256": "49431ddff4140fd518faf7d338c49b2306e48550b32fb6f1229f5925cfebe217"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/reviewed-variant-aliases.json",
+      "bytes": 547,
+      "sha256": "8dcf1f1d7b4bacff3fac05613fa8a07044de7bd34229f3e954a473ce1a46b034"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/ASSEMBLY_WINTER.png",
+      "bytes": 3590909,
+      "sha256": "e5c208f767479bbf647998979212f35be35ca23a7feddd57c0a2b62478bf8fa6"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/EIRIK_HOOD_UP.png",
+      "bytes": 1283747,
+      "sha256": "9fc4fc277e9147469544e6d1a8ba38771cf16087fe2ec3995ccb0e7de4904288"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_AUTUMN.png",
+      "bytes": 2963797,
+      "sha256": "9d3e240e7ae2a8369f2f15fec61916a2962600a899c5aaa4e5dc1e77e4159446"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_DAWN.png",
+      "bytes": 2648106,
+      "sha256": "decc3cb2dd5575d7341b14a9f62c07415e01dfd8d6860c54bea8388a9c2366a8"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_RAIN.png",
+      "bytes": 3066579,
+      "sha256": "9673cd6833b0b6d6ac1ccd08c2f8bf1e3f2a3337e5dc590d95b90253263aaec4"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER.png",
+      "bytes": 3260590,
+      "sha256": "7f396b7fc41eb48614b3a062dc1b928f21b9386c2e8971b55633a17eaf02deab"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER_DAWN.png",
+      "bytes": 3104275,
+      "sha256": "8b0a3105db6b576d26128bb56e8b59aa4243c45426146643b2f067fd702012d1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/FARM_WINTER_RAIN.png",
+      "bytes": 3304289,
+      "sha256": "09e425452ed00b2c44fa6fede4d8623cfe418b7eaa89c300ab74a89974c70c39"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_DAWN.png",
+      "bytes": 2209690,
+      "sha256": "6f00c2d99e7e548c42255f57effe3956c5fa7593086d85b534fed20bddf7efda"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_EVENING.png",
+      "bytes": 2194411,
+      "sha256": "6e97716984811d9811f03d038a40ebc85b4fe08f5dc912e32b56b36e14bcdcda"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_NIGHT.png",
+      "bytes": 2082780,
+      "sha256": "161d421f16d89d894a8ce4ddf59c77549712807254bbb9d74863df0b6c7589ac"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/HOME_WINTER_DAY.png",
+      "bytes": 2549608,
+      "sha256": "0a1b1cb8974e357728891c136616322eef9fd749b0e988f9fa2fead210c68be0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/MARKET_COUNTRY_EDGE.png",
+      "bytes": 3420005,
+      "sha256": "57f6103c1bbafffa357cc92af76f2b264ea90149287e1fade52909f5e088b3ea"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_ENGLISH_COAST.png",
+      "bytes": 2345450,
+      "sha256": "f4c986caa2f8d217403e84fcd344ea7f904f98c8a572b6fa97a472cf660662a7"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_NIGHT.png",
+      "bytes": 1939432,
+      "sha256": "0050e7440ee11da9eaf4d64a3ca4941c97f40180b543a7b7ec68a9768aa43378"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_NORWAY_COAST.png",
+      "bytes": 2533207,
+      "sha256": "d1dec8102842317aa077e8806e22bf8e4f049d75de6d269fd23e927a28ce7e2c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_RAIN.png",
+      "bytes": 2585440,
+      "sha256": "ab8a8302069ec69337a6eb4e942b23030710943e9f332e1c4ae2002eb42d86c8"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_ROUGH_RAIN.png",
+      "bytes": 2551319,
+      "sha256": "80cb415389752a7f00307f860cb82fca3d2e5121397486d2106e91ecbcacd487"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/masters/variants/SHIP_SAIL_SET.png",
+      "bytes": 2180814,
+      "sha256": "87a6df037cb8ed158482e321bad9758377c36136d148f1cf93b8604a74d02707"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/1932a3989eda3ec7.png",
+      "bytes": 2857505,
+      "sha256": "1932a3989eda3ec76d6f477ce0c59d6ec9f8c33321a80f534422177e7a94f0c7"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/3d23d4a223c77f24.png",
+      "bytes": 2289000,
+      "sha256": "3d23d4a223c77f247928293fb4b95f2437d29cc0f6472f3e137fbb59cc42bc47"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/510830cc67458293.png",
+      "bytes": 1206033,
+      "sha256": "510830cc6745829346534971e59e8b02d580c91e934773e73b2d2efb35d6bfdf"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/528ff87c4bb190a9.png",
+      "bytes": 2753020,
+      "sha256": "528ff87c4bb190a9e9840ace245d88a9d19a845695a75efbe15c32b2a7aed5dd"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/53c05a1ab91be247.png",
+      "bytes": 1215973,
+      "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/6de64c06b2a70ed7.png",
+      "bytes": 2898841,
+      "sha256": "6de64c06b2a70ed73b37ae4ad09e9b4696970a21d490964a3fb05da869a45162"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/afa4ccaaee6e0c0f.png",
+      "bytes": 2096605,
+      "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/b3198a318d4fd535.png",
+      "bytes": 2138400,
+      "sha256": "b3198a318d4fd5355d0d61ef1d966e1ee57ac72532fddf291da582e11e71b631"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/b98c1212600d1c70.png",
+      "bytes": 2827029,
+      "sha256": "b98c1212600d1c705f39a1c94c546481c9de9aad3fda693e1a267b302955eb0f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/d23cc148de2f5e85.png",
+      "bytes": 2190347,
+      "sha256": "d23cc148de2f5e858a6d5c4249a17ac3600e6626a777b49116c3f47a29b3f90e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/eb64a84a4eab631d.png",
+      "bytes": 3007971,
+      "sha256": "eb64a84a4eab631db63c2822b4a344ef0164f4b9e3cd5fe472f08971ea2b16d3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/references/f5d2397ad85fe577.png",
+      "bytes": 2295404,
+      "sha256": "f5d2397ad85fe577b7e24c8ab457cebf4e5edd5737ff258383e93428f8a0312c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/001.png",
+      "bytes": 2771624,
+      "sha256": "bec4ade70ad94f4aac258994421173db0305c85c44f0f0bbef83b904b4d1adbd"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/002.png",
+      "bytes": 2724696,
+      "sha256": "43a68c226ab2981df7f594127e3f717996446e8ec5ef20542e1bc8c7fafb85b3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/003.png",
+      "bytes": 2720500,
+      "sha256": "928d1a744bdd9dd2bca1426ddf384aa55a3f6eda48b605819491110f4553d8e2"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/004.png",
+      "bytes": 2921367,
+      "sha256": "ce6df61be2b7906f93444fcaf0e21103baa3ab641a6e4cecece2c6bf5dd95238"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/005.png",
+      "bytes": 2880452,
+      "sha256": "5f3f3956180097b6c97659c7bfc8e86ccfd88828996fb273a883a3c11e8ce0de"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/006.png",
+      "bytes": 2879723,
+      "sha256": "05f8f986e4ac03e21ff11e636685a6844a0d332fbe4e345bea1402edf0826410"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/007.png",
+      "bytes": 2484652,
+      "sha256": "fb2821b2b1fb3d4fe8afaf68c4cc5c1bf6a131e0fc8367b5f9e29feeaea49435"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/008.png",
+      "bytes": 2810071,
+      "sha256": "0cce76b78a64f78099689759de39d7639383bcdc6cb77826f6f4107b9d8d9b19"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/009.png",
+      "bytes": 2153619,
+      "sha256": "f6435d627ebb1f35e22264abb8709f0289e8891cea843726e6ecf5d1e0ec27cd"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/010.png",
+      "bytes": 2155458,
+      "sha256": "92085d41fc0faaf63c1b31312b54df5dd273dc980debe93836975c18f93323e8"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/011.png",
+      "bytes": 2458756,
+      "sha256": "e65500d5dfb7a3b12d72eb43ed3e4c3d4bb1341bf7b8aac7fffdc340ba2e0961"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/012.png",
+      "bytes": 2464679,
+      "sha256": "65fa11f463febe4f81ec8aa53ac4118928b3578a90aa746af45a5c3aabbf4e33"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/013.png",
+      "bytes": 2465149,
+      "sha256": "d5c8ade749346acee6958e9110d7b3e9928ba8409f45f62e7cba4ed003ce2f14"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/014.png",
+      "bytes": 2430343,
+      "sha256": "414da021a8ca955c56507ef6686f2f2e5ab2fdbca6c355ed1923a9533f3c2687"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/015.png",
+      "bytes": 2842183,
+      "sha256": "6f593a34074e58809dffa40a424beb3ed876c1459ffde60ca00ef07ae3991eea"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/016.png",
+      "bytes": 2883555,
+      "sha256": "92b9a02ebc42a1947d3aaf793748d97d03d199d43cbb0dcb88baac68dbc54ddc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/017.png",
+      "bytes": 3024963,
+      "sha256": "7a88d473a6016503a5417a730d8d329f851bd78d6c0577019266f0eb9976a131"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/018.png",
+      "bytes": 2885293,
+      "sha256": "f0f6428b5e92bd8f4a7414b1283757743b41c8244ef59e6972563e19612d2b2c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/019.png",
+      "bytes": 2822845,
+      "sha256": "3dfb684ca8fa545e30084516706903ee567c7acd44ade9c132227a6e4b895d20"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/020.png",
+      "bytes": 2474404,
+      "sha256": "8b10aaf84e1a970a16fa5f610d06ff622bec0ea4744f4ab527ad1a9a79e7f069"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/021.png",
+      "bytes": 3074501,
+      "sha256": "5781343ce1da3fc4c23f1c0d9145c5807529949512c0a5d794120621b904eec5"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/022.png",
+      "bytes": 2569491,
+      "sha256": "0c0c57369e9b8b7705d378d769a15be07e0999fa0e16c0bf5163378a14b9e55f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/023.png",
+      "bytes": 2863119,
+      "sha256": "dbecbfba7adfc823c59532e22b44f432cad0126a8fdb3b08350929faf6c714e1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/024.png",
+      "bytes": 2859749,
+      "sha256": "450b3a40138aa645726d516396ed22d1e43c49e10d195964688a424d49b26c52"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/025.png",
+      "bytes": 2778887,
+      "sha256": "f77d4ca08746042eec53adbe219b3f7dbad9ae2bc789cae0be83ed21c5788931"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/026.png",
+      "bytes": 2412527,
+      "sha256": "bff3e68d920f952ced4f1bb64185ea4961f11ac4c553ea22734670bf9f32d8e8"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/027.png",
+      "bytes": 2775234,
+      "sha256": "0e22f2119480560cfc528cb10401c84e0aa9410b5e128c56de3650c376ef8222"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/028.png",
+      "bytes": 2453481,
+      "sha256": "cc2352737ca68a68e957bbc01589d0a4ab338577fbbe8dc6bfbec414431569ad"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/029.png",
+      "bytes": 2865743,
+      "sha256": "ee56d4e2935063f30c33e567c65dcc2ba61eebd8dd8d33ad5b2e61e6de0476f2"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/030.png",
+      "bytes": 2878433,
+      "sha256": "b969016a623f79a4aea5c6ed836227de14d916065d6789113d213a79307857c5"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/031.png",
+      "bytes": 2879554,
+      "sha256": "65aa6564426782bdfaed50a5da2c53faef4ee69853be763deb84c166347313d3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/032.png",
+      "bytes": 2755214,
+      "sha256": "58699927df934f99389d2601a9d2e37286f8f04864c1f8c5bfdbef0e43f79092"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/033.png",
+      "bytes": 2800943,
+      "sha256": "eb80d4e7ecd4d0e87469134fb49fa88a4adb23bca651a19dc4a07ed75e52c5d4"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/034.png",
+      "bytes": 2712085,
+      "sha256": "c0d5c722ee09c1bea6a2d3f57342d5cd5d37b833e3b3de18fe00e84e2f9138f3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/035.png",
+      "bytes": 2875902,
+      "sha256": "e4502b6794f8bf5ebb11072e8bf6265d0004000d2e3eac4f7930199c8d9c05d9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/036.png",
+      "bytes": 2722888,
+      "sha256": "16e33ca5a3d34339715dad40f3b8ae48cea052bdcd5f9faed963d218d7d099c9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/037.png",
+      "bytes": 2631641,
+      "sha256": "3eb241d01961b1733853e986b99944f1a009a5481627d49a612c46a1d31b4d8e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/038.png",
+      "bytes": 2828670,
+      "sha256": "a7cb0e8a0b4aa977d307e60c5b9eb77cd3623f0b4a41a199d6606f597d2433be"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/039.png",
+      "bytes": 2775633,
+      "sha256": "662d9c7a8a05c372b061fadca0d47711210d616034048b9dfc10e2b5a4b18668"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/040.png",
+      "bytes": 2236638,
+      "sha256": "451418463067efd819dbdc256128df1e38424a38a2a8649cde27a98aad2d8873"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/041.png",
+      "bytes": 2330877,
+      "sha256": "b0dc8413a9d34ab2405a7c867a6228ea8eae58dab7fe05f6231ef830f9e774da"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/042.png",
+      "bytes": 2408461,
+      "sha256": "a4775c50b7f53c235d8c271f7fb88bd7b52c3d8e5829ec857dc559899b24c8e5"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/043.png",
+      "bytes": 2229353,
+      "sha256": "0a0ce14bf6d2f9336f63d807711f1947417fbd635f65c5a8a822c9f3ac179329"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/044.png",
+      "bytes": 2591591,
+      "sha256": "a19a4968912dee79c09708d2d3a8a41f0ec24cf4934d48da85f5ea341b4589d3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/045.png",
+      "bytes": 1896883,
+      "sha256": "d229de53775b33a19dcdfe8ad946128947ef9ad6fa41609aec30ed9dade2edfc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/046.png",
+      "bytes": 2157655,
+      "sha256": "c13b12583774d7f1c891c2f1a1e924cc92e7b26f7d434a4dc14e6893e4221a77"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/047.png",
+      "bytes": 2207424,
+      "sha256": "cb1edb3f69ec2bf67a91848f136b49e4c9220887a98cfd4df74dcab30baa8c34"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/048.png",
+      "bytes": 2266224,
+      "sha256": "7ccd39c7af8772f8d96d70956ece0e66dd788ed03dd73fe4cd95ee6a92039d67"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/049.png",
+      "bytes": 2946753,
+      "sha256": "e7c5536bac4110adf725d75b5714727d41378490fa03694a4e251d42925752dc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/050.png",
+      "bytes": 2963988,
+      "sha256": "2de56aefa3bd68824cef5dd7e2be91819c71bd11437a4b460bc3b1210c80f3c2"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/051.png",
+      "bytes": 2888972,
+      "sha256": "0563ee932e59ba66bd3375f62142cfa7d6ba69adaee507688cd29e9d681c9a4a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/052.png",
+      "bytes": 2183821,
+      "sha256": "edd28a76f8d18074869f736a01ec40fa7e312ca81dd8b9b180cf8f052297a694"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/053.png",
+      "bytes": 2266794,
+      "sha256": "849dfc4f868b5f56b10b145f1d160bad946c24c0e3ef12e56b6a3b9de81ad69a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/054.png",
+      "bytes": 2252867,
+      "sha256": "e9900d42e555a2adb1156cecf1ae1259534e7bf523509ce01a9858e983de4fed"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/055.png",
+      "bytes": 2549155,
+      "sha256": "da81efb1d3424f867d1ff9f9c37b8e9db882ca3697726b80df014567b010041f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/056.png",
+      "bytes": 2562516,
+      "sha256": "d5e564fe3c8427baef42089eb1c33eab8dfa4a40bb59cb866fe2802df759d6c0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/057.png",
+      "bytes": 2546976,
+      "sha256": "1bf636ec13797bab23501f5a947702cdcc6eab2e83c46ea109feaa606f16cc23"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/058.png",
+      "bytes": 2420240,
+      "sha256": "5cc08a0e2210005d3ad8e0047bf952d0f15bad33a3e2deebc2b2513485cfe82e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/059.png",
+      "bytes": 2496818,
+      "sha256": "eca7ea755c5bbb8e26cac0e871eb4b56e32fedb84c0e469eee52f5d908bf50f1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/060.png",
+      "bytes": 2503432,
+      "sha256": "864feb78dc367a90cb571a8fb31f55804cf266967f10c2543ed23cf386003b7f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/061.png",
+      "bytes": 2753005,
+      "sha256": "8d1c4d3f63a33cdf80ed6bddef01fc653ea882b6a69e8435ad94277671854b3b"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/062.png",
+      "bytes": 2273238,
+      "sha256": "0f7ed4f47dba352530ece7f477b88dc6ecce748aec2e5befde6b2a227bb5cf92"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/063.png",
+      "bytes": 2229660,
+      "sha256": "bbbe9cdd4d3315f0a16689fae35fe88ab08814e2f3fad6210dd72aca353aebd8"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/064.png",
+      "bytes": 2229417,
+      "sha256": "15d6cae26d8ff267b98d723de73ee6f5ac43b698a93f9a72b15166f8ce2a87a0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/065.png",
+      "bytes": 2246892,
+      "sha256": "d6e0dc7c3e22998c16172fc73849fff6e6b7567ef8017cd6c6571c1426fc4c8c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/066.png",
+      "bytes": 2391720,
+      "sha256": "5fc2b58792ea0b9ad468963448a0077484e21609dcc60bd7712503cd8f7ff6a6"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/067.png",
+      "bytes": 2673501,
+      "sha256": "f663b809c8a8d500bdccb694457870ef6c4288bf9df5903def55d8874f8df790"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/068.png",
+      "bytes": 2711976,
+      "sha256": "5eeb2568ec63eeb866aeee1243428343a046553f4e3414825bd09f3c8318631e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/069.png",
+      "bytes": 2213696,
+      "sha256": "9b388e4ecf3eaf069fc8c284454d4b3c59f1624498492ce7d0e66474d4d3456c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/070.png",
+      "bytes": 3063526,
+      "sha256": "35f46de6826629de9f65700e0290beee4c9ba74ae1ebea72251ecd8d6bed7eea"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/071.png",
+      "bytes": 2492074,
+      "sha256": "c029b328352da04ead51086a0f314b58f14da4245e32751b5d1e80b22b3d2b1c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/072.png",
+      "bytes": 2854283,
+      "sha256": "2e538324b34db47771fe5a468ff8f7aa5ecdb2d82298a3a4feb13c9d61066159"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/073.png",
+      "bytes": 3103833,
+      "sha256": "9d938ea09b23266ba19e52941fb16c4c84fdafca288c772f79fff51bf6c0a082"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/074.png",
+      "bytes": 2440832,
+      "sha256": "af122b033a03cc7764d14e464ea26d622ee4afc0d016979091eacccaae4194cf"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/075.png",
+      "bytes": 3143689,
+      "sha256": "105b76254719752a9870fb636e78f08feb22472362061ba4912ebacf205a286c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/076.png",
+      "bytes": 2470989,
+      "sha256": "ae05b895f13fc1527bfb5abe6a3330204b91aee1173fe1ad4c8eae139eb45ccd"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/077.png",
+      "bytes": 2445923,
+      "sha256": "98b56dbd29a0b31dedc7ff71aef3bd5ff96d2404f36f3ca4ca0cff6f85090393"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/078.png",
+      "bytes": 2153910,
+      "sha256": "ccab886e13d1b1bc3d6045ed3849dc273da8232717d4aef9d566f674465b3c49"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/079.png",
+      "bytes": 2994290,
+      "sha256": "2c68b4e734acc85530698251b9683a284c7a45ff5e39be4df54facd3dc8ac058"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/080.png",
+      "bytes": 3183869,
+      "sha256": "13c50ee07e5fef048963993b24b603836458c040f99bcd4aa3dd54b335ebed80"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/081.png",
+      "bytes": 3207231,
+      "sha256": "5d7bcf32f99578875fb435e15bfb060dcbf1e76c2cc30aebc7b93bc238112646"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/082.png",
+      "bytes": 3052571,
+      "sha256": "67e2c16fc2198e6fd21d93875caa1c651ca8891a733170556372484a991c35b9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/083.png",
+      "bytes": 3262531,
+      "sha256": "25e6f666c5a33425b0dfd76dd05d55f777f0b509f252a3bfde3f765c2cc20044"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/084.png",
+      "bytes": 2204541,
+      "sha256": "c5945ecc02ae6121712a2aac9eb725c4290bf05f425cdecdd00078f133bda792"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/085.png",
+      "bytes": 2130315,
+      "sha256": "7630d0338dd44a04ea0f55f8467b8d4d42818725d0c94ca35979b4dc915c8906"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/086.png",
+      "bytes": 2115884,
+      "sha256": "6110b6faad89355a6f16c25ab720c55519d5e875a99a53302b29f720d28f9c2b"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/087.png",
+      "bytes": 2061680,
+      "sha256": "7958b898bf027517a953c6f1c3dbf091e3c4a300d612ef5e7d31a86bc95117ee"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/assets/scenes/088.png",
+      "bytes": 3014872,
+      "sha256": "e801997197ce043908219399d247bcc2a08d99e48894019960185429fa35182a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/audio/narration-api.mp3",
+      "bytes": 27981574,
+      "sha256": "865da8fcc7d315f02cc7d59168e7f97c3e5f6edfae6a625c480eb95050b66028"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/audio/voice-source.json",
+      "bytes": 575,
+      "sha256": "b11c2d1b7aabab705e3977787c86d1258f82f312d461c42045a20adf88a7be0e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/delivery/English-Captions.srt",
+      "bytes": 28066,
+      "sha256": "3eebdba8d094d69126ef1f22d7fdc2422536b64ae38228146f38264bf47d20ad"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/delivery/UPLOAD.txt",
+      "bytes": 2455,
+      "sha256": "df5c2bfb6d43d7d7bb6c36606ef85b229d72dd41b7619779004729f126d834a4"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/delivery/upload-metadata.json",
+      "bytes": 2787,
+      "sha256": "8defc6988d11002e9a786e125cf399a9ef35776572c827beccbba6fa85cdfccf"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/authored-scene-prompts-original-clock.json",
+      "bytes": 566357,
+      "sha256": "97b1acc02e511da8ba60c56f2b0f2956a6de205e574b353d0c7b8b2b6fe051e3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/authored-scene-prompts-vps-clock.json",
+      "bytes": 566521,
+      "sha256": "ebec090a72f6ddbde83effa4066d43ba41e67b7f1b9289eee38a6d03f0dbcbc0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/final-voice-clock-binding.json",
+      "bytes": 842,
+      "sha256": "b2b4c230fa44645f585b90eeb7fae87d0417d604feeb75a2a7f241f579f82120"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/manual-scene-directions.py",
+      "bytes": 58032,
+      "sha256": "dc8e097fff53eb8878f859ea160ed3cd24824b75a2fe50e37b7c0cf05cc08d8a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/official-vps-aligned-words.json",
+      "bytes": 299979,
+      "sha256": "9b9e65a000fcf3c3221732a91ff2823ebb7e9a0fc71598fb1a816af56d17ed0f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/official-vps-paragraph-clock.json",
+      "bytes": 31416,
+      "sha256": "2ded8e87bbf3757045c9ac9c0274eb9b17c95c15c1c4935fd1f70205d91759e9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/storyboard.json",
+      "bytes": 103739,
+      "sha256": "b9771d39dca12a51cad703864373a2674c44a11fded30cac33ed52250042ecc0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/editorial/visual-bible-v1.md",
+      "bytes": 9326,
+      "sha256": "e8e03799e9171a0f72a24f7794ab1a1a82ff3fc6bf36b18d761abe8e9af5863c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/audio-only-mastering.json",
+      "bytes": 2904,
+      "sha256": "071f6830b9e1642f4d09792bf5d2afcd897e2fdf3821c3a8cca23d3ede3d2aef"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/caption-proof.json",
+      "bytes": 606,
+      "sha256": "ee1af0613b481c38dc74ec006c7d5395b1127df02e3efdad439e8907c0328615"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-01.jpg",
+      "bytes": 888807,
+      "sha256": "04f16896afe1f8b122f6780b2af50d9c9c765d55456ccf6ce5c04ebb13920223"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-02.jpg",
+      "bytes": 862285,
+      "sha256": "829e2024951069817ceb4c69f81a82242554171af139f746df37be55ba61656c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-03.jpg",
+      "bytes": 947719,
+      "sha256": "71fd8b83ce2c86324041fcaad604688a1edae1c9765f66baa390021b31389f2c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-04.jpg",
+      "bytes": 960583,
+      "sha256": "4d140a8e541a4485fc5afbfa1a8270bb14f10983636fe46fae1382e430af68e0"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-05.jpg",
+      "bytes": 829421,
+      "sha256": "229f73c9276e31828a09c0c0266d509c575a56a6f5add1abbbb84ca1cd04e2d7"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-06.jpg",
+      "bytes": 912166,
+      "sha256": "f542ce6d5d686818fcde0f08a5a2d0d7af2908f960cf8efd5f8c979327ea179a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-07.jpg",
+      "bytes": 891743,
+      "sha256": "a13fc29d47dd256cfcfb9bda00c5ff310f108ac6a5ed81a65b21c8545235cea1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-08.jpg",
+      "bytes": 879853,
+      "sha256": "08458811e540789dae563238d678b99e45db81c168e6e4533f80182564fe50c9"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-09.jpg",
+      "bytes": 903932,
+      "sha256": "f460f8fef3ee96f285f46e3e7ce47fd7ba324dd6e92b6f3b606751970f31f30d"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-10.jpg",
+      "bytes": 737369,
+      "sha256": "90bc7e718ed0fcae1b398c689b43a4d845b22817d6b5b63a3a628c9732c8764e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-11.jpg",
+      "bytes": 476177,
+      "sha256": "84a888549f819a8d9db4cec6d288b190549db7b8a1b9641c472626c204e5b1a3"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-12.jpg",
+      "bytes": 513697,
+      "sha256": "3d9f24a808a61feb756421398d6cb9008fe72b73de1821d7d9c7bf8a258bd657"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-13.jpg",
+      "bytes": 540376,
+      "sha256": "d7a90719144f5ad290de95737c2989bef425f62566cd92e081d12e8ebada6cc6"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-14.jpg",
+      "bytes": 540093,
+      "sha256": "deaa2592ae1aa5c4d94fdb95e9a6b8cda7413bc5cb000220d5aa82d3702c95b6"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-15.jpg",
+      "bytes": 471565,
+      "sha256": "1c0ad7b7d87a7095a1afabd63349390e0e7ca582eafcbe4fb926e348b6d04b82"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-16.jpg",
+      "bytes": 543794,
+      "sha256": "9e82e4fda9d7370be72dc9f788be75ccf140290129d778aee1bced6f3fc57258"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-17.jpg",
+      "bytes": 517738,
+      "sha256": "6ff6c3087c1909712804b359343a3a2c9a4b86e54b32a4d8cebcfab614612944"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-18.jpg",
+      "bytes": 507448,
+      "sha256": "7e2173997936d09eba3d8e5c4651dec4a2b3b811fc63f38c1d8e07e4e44cdd7a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-19.jpg",
+      "bytes": 516228,
+      "sha256": "651f2d58c58a02e9c91d640f57167a206a7534529f4b11540aced7fdc7c0d3aa"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/encoded-visual-review/sheet-20.jpg",
+      "bytes": 379733,
+      "sha256": "8780712162d186576453ca5a83692a4ee8ed72519fa646c0768ecf41e365015b"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/final-quality-review.json",
+      "bytes": 1247,
+      "sha256": "17e04e074a801ddb03810c96c286994055162b5c078c7ac65c21e6b7d1f9289a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/final-technical-qa.json",
+      "bytes": 4692,
+      "sha256": "0e1ef0eadf83b9b53343a76dd186be3324547f915818a35c6dc3fd48c9794b29"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/final-visual-qa.json",
+      "bytes": 10772,
+      "sha256": "b2cd983fec658ec5c4fb62e6398634b56f37ba91e9c4da5e0871ddc2b18a4ce1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/level-only-normalization-proof.json",
+      "bytes": 1367,
+      "sha256": "0b419773afb1860cded01ec0cd3fcbd51d2eb0d34c68b9d3e08f15575ca87e5d"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/original-script-proof.json",
+      "bytes": 552,
+      "sha256": "3077164cd4e264ceb9d4b280420c180a601fb4c34014bd8859481617a9af5bbc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/root-film-release.json",
+      "bytes": 185,
+      "sha256": "6e7579f1b49bde98056c913fff502174c34a9ad8c3d6547845e1224ab2f3e89f"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/script-release.json",
+      "bytes": 787,
+      "sha256": "87fb026fb197d6b53250f3929e38dd8626cb37ef903bbaf2ffc3d77187583716"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/evidence/source-review.json",
+      "bytes": 370184,
+      "sha256": "94e5c7d1e201bea36002393410587a7f19aefa93daa9c6ecd48fbb53d78eab30"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/actual-master-provenance-batch1.json",
+      "bytes": 7041,
+      "sha256": "c315c4f56680f4b17343e831405416a07ce09e69bfdbcd37cace7baf496e31cc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/actual-master-provenance-batch2.json",
+      "bytes": 7232,
+      "sha256": "5fbc42c597e57dd37947da088420d6fd948d06e0336545dbe0691e7e360ed8cb"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/farm-dawn-correction-rain-exact-arguments.json",
+      "bytes": 3198,
+      "sha256": "1c920e7ff7877feb6a6419502bad0e3ead5e597a8f1b2b60be02e18b9bd8450b"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/first-two-exact-master-arguments.json",
+      "bytes": 5437,
+      "sha256": "3f6a4054788a10d04e6179ffaf258980251d41857eb58aff133a6613b759e912"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/group-hood-exact-arguments-v1.json",
+      "bytes": 6979,
+      "sha256": "50d26b4b5df1b4e00edade16743dc3c95cddad9b6d734f66b599649cce24e63c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/last-three-exact-master-arguments.json",
+      "bytes": 7535,
+      "sha256": "25e11ab2ed5c09106e46edfc542d3afef84011917a6e7fb96989af1cf5a9a774"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/late-act-physical-exact-arguments-v1.json",
+      "bytes": 7830,
+      "sha256": "f849b5a9dc1193e89b686c88312cbfb44aa1d1c01b57603e9d53e20c1f042cdf"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/norway-return-exact-arguments.json",
+      "bytes": 1953,
+      "sha256": "ea33cb6edca91347f98f21de7a3cdf44d1b621e698f83ae57ebd955fa3bddd55"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/physical-variant-exact-arguments-v1.json",
+      "bytes": 3450,
+      "sha256": "e1317f0bb1160bd09d681f9532f245c49aa7e05ab10d30415837abd5683153a4"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/remaining-physical-exact-arguments-v1.json",
+      "bytes": 14037,
+      "sha256": "a7ab87ca844e67c252661c7bfec4a7074e54d465606175777633898b0ce1293e"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/remaining-seven-prepared-master-arguments.json",
+      "bytes": 12947,
+      "sha256": "199b368d750eb9014b70879a2d50e932cdd7c92595670ad008855732645d0d72"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/master-generation/sail-correction-exact-arguments.json",
+      "bytes": 1996,
+      "sha256": "72d5c9697e124cadd79836d4f1e7f5f7a3acd0397a4e8f383ef2e170b5abef42"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/provenance/selected-generation-plan.json",
+      "bytes": 1518707,
+      "sha256": "05c10ff6330e7a7a280c4524be365628d56d7667e9225bcce0babea8c68ebfeb"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/research/research-facts.json",
+      "bytes": 35204,
+      "sha256": "da22449ba8a75b2af4ed42239c1e49614088233db38164fd44fd846e9d0436de"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/script-en.txt",
+      "bytes": 17237,
+      "sha256": "88c9690aa11d0d0e46eca2d9cbe9408b9b98a93f5ba0a86ffee81d45c8c86a33"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/ABCD-review.jpg",
+      "bytes": 544602,
+      "sha256": "b90b00d6c8c95c2a5d4bdddcf8a693ac86f79ce0bc2108a59d175ed3de529c23"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-A.jpg",
+      "bytes": 1990713,
+      "sha256": "96efe3332d6288cbefa401f9a64446fd7d8e6079a342ec72f92e97de82e6b1ab"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-B.jpg",
+      "bytes": 1792513,
+      "sha256": "cfbdb9a1fb3be09f2bd1999c8897376863c064b161d4995414b45330bed373bc"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-C.jpg",
+      "bytes": 1940285,
+      "sha256": "537aa3a8d6b421fefab875b923113c7fbd3d1f0ba0ca6a5d55f8fd81ee9bbdb1"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/Thumbnail-D.jpg",
+      "bytes": 1874001,
+      "sha256": "e2dd243dd8b9987a3e6fc418fa3f067c7ce1100a1e9f1ef8e526004466244f2a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/export-and-actual-review.json",
+      "bytes": 3728,
+      "sha256": "c632e291ce286f51f76da5a1ccde6caef02b3762b1f59b918a071320ba4f99b6"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/generation-prompts.json",
+      "bytes": 21503,
+      "sha256": "4e7b357232da1c47cfeeeeb6312f4b8bbf08927937dc787ce8f18eba3c9f2202"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-A.png",
+      "bytes": 2349755,
+      "sha256": "ec19d0156389daf5b68a187871a869a4986e0fbb57b0869994c07e5af4cb617a"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-B.png",
+      "bytes": 2243634,
+      "sha256": "1fe9c517e3adc9e7e0221a94b635276675ce8e1298b6d430a64e1a596047aa3c"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-C.png",
+      "bytes": 2538260,
+      "sha256": "454eb96acc4a8c15c3c406aa899dcda3b774005a39ff520a695678ae03a811dd"
+    },
+    {
+      "path": "chaines/viking-chapters/episode-01/thumbnails/originals/Thumbnail-D.png",
+      "bytes": 2759274,
+      "sha256": "53751214a1d11211dec727292ef7eb9c9f6911da2ed2b6cb76a99a0f7377a3bf"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/A-LIRE.txt",
+      "bytes": 644,
+      "sha256": "545c2e8890b09609f75584a78131320a58c1a4d46f8169c29af2630eea10acdf"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/DESCRIPTION.txt",
+      "bytes": 426,
+      "sha256": "016278bd09e69e34be81b305fb4a33c1f090dd4fd270b55e991a8983c94956ed"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/NOM-ET-ARROBASE.txt",
+      "bytes": 297,
+      "sha256": "dabaa9b931594cabcaa120e18e18368c533606453a6b359ed0789b5edbeebf5c"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/Pirate-Pages-avatar.png",
+      "bytes": 1413013,
+      "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/Pirate-Pages-banner-2560x1440.jpg",
+      "bytes": 400333,
+      "sha256": "5227e029c88401a542c15663eee1ffa76a91831739b22dc028af2f6fb7905062"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/Pirate-Pages-banner-2560x1440.png",
+      "bytes": 1593701,
+      "sha256": "9d8ab48bd77a5d445d740fa669be373ad9b527eeffe5cdadc76c454c19e2627e"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/avatar-circular-preview.png",
+      "bytes": 1348617,
+      "sha256": "880f297fc0badae69b1619c0705a215b41b6e7fe16e09f30ee5c048e0151e658"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/desktop-preview.jpg",
+      "bytes": 134682,
+      "sha256": "82a1cde1a1e5271674b0c19ac723e5a0045fff0d1240c6c286ba1d6c46fbc05a"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/manifest.json",
+      "bytes": 2007,
+      "sha256": "e45caa544f6db351c266e6b507b4bf4499c308e30411a014d993f61fcb56515d"
+    },
+    {
+      "path": "chaines/pirate-pages/branding/mobile-preview.png",
+      "bytes": 417287,
+      "sha256": "fba88e48b8da789bee8e064a3115f91d5d80e11f337898439b769c799c34b80e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/README.md",
+      "bytes": 6900,
+      "sha256": "167b1a41ebaf749c22bc9ed60f616bd3a2329257d48b52b61589d6d4f896899f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/asset-provenance-manifest.json",
+      "bytes": 186594,
+      "sha256": "affaf09c95c6f858fcc25c16eb70f5743fb258b68d9d76e0272162a37134ec82"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTAIN.png",
+      "bytes": 1220651,
+      "sha256": "8d67a59c76710d3fbb0c7878934543082818338533d04d5582072ed5a8653b3c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CAPTURED_SAILORS.png",
+      "bytes": 1352307,
+      "sha256": "075a258250c6fe17d07b9fb9102e6a48fdb6c67af58deb4ef5a966e951f203b1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/CREWMATE.png",
+      "bytes": 1268145,
+      "sha256": "8de63d23cc453e731116629402470e662bc5741f2c346d82379014bd19086537"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/DEALER.png",
+      "bytes": 1315246,
+      "sha256": "a3022eac6d03149991c8e7cb2331807d627df61d01b417bd02429744025637e0"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/ENSLAVED_ASIDE.png",
+      "bytes": 1431185,
+      "sha256": "2c46432e8eb050f64c418c490b65416a02b1b36469759c0f81552a37d53ce553"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/QUARTERMASTER.png",
+      "bytes": 1288792,
+      "sha256": "cebe396a6342370faab76e4f7c93bc3d47bba9d006386d8f9534cffb7ca8ef36"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/cast/TOM.png",
+      "bytes": 1308393,
+      "sha256": "2b9b11230269529da7bfb630b9754e548b404bf72310af679cbcc2e9c4517368"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/BELOWDECK.png",
+      "bytes": 2595753,
+      "sha256": "1e16d8df44ee9db930208a1e83776bafc33ba3a0b388783a8894b5114649dd75"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/DECK.png",
+      "bytes": 3012567,
+      "sha256": "77031bdd77cc974bc5a2a4ece0cf3fcca05c6141075ee59ddd796575a0e3de76"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/MARKET.png",
+      "bytes": 3004524,
+      "sha256": "674d0a69d9ec423cc21bc377a78f494d02beac24b1655f93bee56adcbb521f58"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/PORT.png",
+      "bytes": 2869657,
+      "sha256": "4aa133ae9f5b7969b3495873fc7dcdf6a3cded419faa584fba340a69610edc86"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/SHORE.png",
+      "bytes": 3081202,
+      "sha256": "5327371a46629e11f37e67166ae07933f4463040ee77a9306e1e54103f29c5dc"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/locations/TAVERN.png",
+      "bytes": 2232763,
+      "sha256": "5598b8a0669ff4a56a430f27b3395050c3d10eb90328a16fd161d62225654da3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/BELOWDECK_NIGHT.png",
+      "bytes": 2120233,
+      "sha256": "fa6609000f4c7a091995e6825f83612ba3cfff335dbbdfbd997ea4d2d802665a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_AFTER_RAIN.png",
+      "bytes": 2895428,
+      "sha256": "4d6a0555d3fb76e112691a3e2bdac9d5d194d85a071732e8e6ea818207ad893a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_EVENING.png",
+      "bytes": 2678643,
+      "sha256": "8a3b9c8bac1cc528cc4f17d95962d71871015145a2972b186af49d1f573c2c32"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR.png",
+      "bytes": 2881940,
+      "sha256": "7a13ebbde708f199231d68274849936e377dcde46f4d028e16949444f370c5be"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_HARBOR_FURLED.png",
+      "bytes": 2678548,
+      "sha256": "3f985075de4ee30f24fcc2dea99819257cc2799285774e801706a72932470a0d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_MERCHANT_ENCOUNTER.png",
+      "bytes": 2758239,
+      "sha256": "d194d6059e9064f52d37cf0824dca60af36a99ce1e64908e4d634ab28d41c2d9"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_PATCHED.png",
+      "bytes": 2681629,
+      "sha256": "750507fb9ea7bd8781fa88166c23abb8b469a53b9435a009b41a8a1734b017b6"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_RAIN.png",
+      "bytes": 3095495,
+      "sha256": "c366f816ce7fba6ee184b37e3dcf87a45381343862016cea357f64f9fbb81cad"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/DECK_SAIL_REPAIR.png",
+      "bytes": 2755195,
+      "sha256": "d627a9e48d525347509cfc7217004680013143056e46701e2c9d7a5a5ab50f76"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_MOORED_SLOOP.png",
+      "bytes": 2817080,
+      "sha256": "78b4f9c70f10bbd5266bd5c569104829e70c9c7c3f67d102d5d50d750408dcd5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SHIP_DANGER.png",
+      "bytes": 2627039,
+      "sha256": "3db33965133011d2e0ed482ada608316291dbd667ab05f84932c12661d87588e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/PORT_SUNSET.png",
+      "bytes": 2657461,
+      "sha256": "7e38266db8df2d694e1c14507afa34a4e6ee86be86d38ba0393e8b82f5481529"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_ISOLATED.png",
+      "bytes": 2826790,
+      "sha256": "30e01c55f65d31cf6f1d7bbbe9d5d0145636c655e833fef8d107d9833e9de9bc"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/SHORE_SLOOP_MAINTENANCE.png",
+      "bytes": 3013571,
+      "sha256": "4dd323922bd8ef8423c07f097cc9151b7b423a2b0634e10c8d4faed1f5d5fff8"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/masters/variants/TAVERN_EVENING.png",
+      "bytes": 1956678,
+      "sha256": "1626483a1525371d769f91502bc77bb03b31fc3ae0dbc49a4d6f199b74efef0a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/090cdf642f77-initial-image.png",
+      "bytes": 2718680,
+      "sha256": "090cdf642f77c21d9c047a25378bd290896ecf708d25423e62a4ea2a6af80aae"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/146f8fa8be11-original-v1.png",
+      "bytes": 2702872,
+      "sha256": "146f8fa8be1160f3c7a23fc3080a6f22a15d99691fe4a0533812e957233b1bdd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/1654de83828d-exec-1f9b9e66-c88c-4801-b9df-358fcafb4c34.png",
+      "bytes": 1413013,
+      "sha256": "1654de83828d62605d2d809785a316fc5c76353cb12223f3cf902a07329b3ca3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/2cd2202c609f-original-v1.png",
+      "bytes": 2839173,
+      "sha256": "2cd2202c609faddfc61c0af291a4cf554aba832b8394fdc770daea1c21c5a70f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/53c05a1ab91b-exec-70f3fe8e-b655-4f6c-a87f-a3d3a0672475.png",
+      "bytes": 1215973,
+      "sha256": "53c05a1ab91be247847fdfbf94dfa704d3f9491523d23c12b793d088f26a441d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/69c5f56a1342-original-v1.png",
+      "bytes": 2671936,
+      "sha256": "69c5f56a13421b9bb5f3bbd962b2b4bcd221d62f3d1d94d2f2dd109780c0a3e1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/74a391055bbf-attempt-1-image.png",
+      "bytes": 2515313,
+      "sha256": "74a391055bbf10f53e21fe542f2a26b6fb19843e16ec40eeadc37e4b48fd5bf2"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/84c604d68e69-exec-a809265a-ec19-45e9-98a8-f7f632f47da4.png",
+      "bytes": 2716152,
+      "sha256": "84c604d68e69558e8bb2de4000a343ddd3004b9111fabfb800ddb47cf563d875"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/9f4a0e7ff0e4-exec-04f1d67a-fe1e-4107-926c-ab3eba3ee0a4.png",
+      "bytes": 2664691,
+      "sha256": "9f4a0e7ff0e4dfff5c8de519c3532d3dbe4637ec58b036651b2aab0d2284e6d5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/a27e7c697a57-exec-e6050f13-f6e3-4cb2-b1b1-95ee603c06b7.png",
+      "bytes": 3121306,
+      "sha256": "a27e7c697a57ffd1c9e85689e9720beb5073603fa9cbd4980e251ce1b67fbe87"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/a3f6d3eb084d-exec-1856a825-4020-418f-9967-ab156741438c.png",
+      "bytes": 2648480,
+      "sha256": "a3f6d3eb084d70915d12d26ff65441bf73a4265d161d8b74be2398dcec6aad91"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/afa4ccaaee6e-exec-7804d19d-8f09-4b18-8360-f5e7bdc81df7.png",
+      "bytes": 2096605,
+      "sha256": "afa4ccaaee6e0c0f62f43ca42e459adfeb7c1fceec90abcec3110eaa145d2c09"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/ba364530cfff-attempt-1-image.png",
+      "bytes": 2313143,
+      "sha256": "ba364530cfff151707165a9aa47b53c5f519fde088eab5c4d0acef70dd7a6609"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/c92bb8bc7ef0-original-v1.png",
+      "bytes": 2808235,
+      "sha256": "c92bb8bc7ef078306d9789f841c55e4a4f70202f5e8c3c581e6550634f67a179"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/ccdbac01ec56-original-v1.png",
+      "bytes": 2980498,
+      "sha256": "ccdbac01ec564978f63846fb4d4b1aba7b732d3965381361684b87f4aa227c96"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/d2fd19be849e-attempt-1-image.png",
+      "bytes": 2443114,
+      "sha256": "d2fd19be849efcb53b482b338dbbab88851d1936e80fe14d74a83c0c5a63cafa"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e0b2dfb16662-attempt-1-image.png",
+      "bytes": 2390515,
+      "sha256": "e0b2dfb166624e4713ad97b523e7d3dbf1f669e4ceb43bae34e763850a958b5c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e9b07c8c097e-attempt-1-image.png",
+      "bytes": 2356970,
+      "sha256": "e9b07c8c097e80c0b9291a4b765dff41ca2120240e3cc010c9b9b91628c86033"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/e9b8e1760fdd-attempt-1-image.png",
+      "bytes": 2354732,
+      "sha256": "e9b8e1760fdddab2ed1d98231361d18c1efc8a97b971f9bde02a3c4c5ac5ab5b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/references/eac6d0dd7032-attempt-1-image.png",
+      "bytes": 2363266,
+      "sha256": "eac6d0dd7032a7ad4454d38b5299827de27df2e7c74b092f7c6c288bf9b4f6a8"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/001.png",
+      "bytes": 2326625,
+      "sha256": "824a3fa5c9e86f827ed225f8e03bf4e7636bdaee9e9996eaa20bd4be65a26f44"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/002.png",
+      "bytes": 2718738,
+      "sha256": "5d804b008081d3e84ba527e4c00bb3585e721cf55954493e5fdd8a56929003e4"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/003.png",
+      "bytes": 2644052,
+      "sha256": "9fb338ed6cfc4c3efe0713321a99cb5b9d57e683023f677a44e8f2c8369fc7a6"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/004.png",
+      "bytes": 2635016,
+      "sha256": "e9a7151460d007ed4621a0ccb5bc3d4db0c01523f6700bca966fb0fe9e4724d3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/005.png",
+      "bytes": 2618788,
+      "sha256": "b4678fdbac2a8f41344c7d8f6cb03e89ccd4032da7618162eba1d3795d0ce352"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/006.png",
+      "bytes": 2620605,
+      "sha256": "3e5f86d7d58127e9f57f905b49aff4a04e10ad95824f081502cfa4940300fb15"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/007.png",
+      "bytes": 2588668,
+      "sha256": "aac6ce526a5cff6438a4a6b9d67a33cd66c285fbb1807baac2e0f07adb2dc7f3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/008.png",
+      "bytes": 2614492,
+      "sha256": "cfdaf86de5d92e604247d730c53e193887170b5809088e75a490e32d6f3411ab"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/009.png",
+      "bytes": 2121706,
+      "sha256": "97a7ea137b752c333f2c164672fe780e5e4044ce22bdfa71c333a2b54f38a883"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/010.png",
+      "bytes": 2711579,
+      "sha256": "4ec498432642a21a97f68aae8a72eeb1f8bba0c4d2d05c9ce5452af86be53b63"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/011.png",
+      "bytes": 2653474,
+      "sha256": "59986e98975e4a06f68cc7097823661581daf5c585826e7397a119cd93fbada4"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/012.png",
+      "bytes": 2640181,
+      "sha256": "6b2d70b127f62a037df68632aae86d80ace9d9f34f08903d16466ef6f1def934"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/013.png",
+      "bytes": 2527439,
+      "sha256": "e9d4296598124fc5168ef170e5e2a76f61ca8e5144183638144107b77a8c927d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/014.png",
+      "bytes": 2672261,
+      "sha256": "b9ccd1485b1f87fd1229e2a0540628b448da4fbcd87655cfac0af8348d9e9073"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/015.png",
+      "bytes": 2381071,
+      "sha256": "31118d7e851a675b0bc5a0a53b0d34dfffd692c6c1b8563c45fc1c7cd5db6336"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/016.png",
+      "bytes": 2428345,
+      "sha256": "0fc6179b17c84ae5501d616d71a6cf836b3128087de274b5486a70211ee1f9d3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/017.png",
+      "bytes": 2609766,
+      "sha256": "be3bf63ade8453049bf1cb6a8e05b9e0a36b2022269d8f1726f0744c120e8793"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/018.png",
+      "bytes": 2637789,
+      "sha256": "b5018cef164cb9f0d85e456093faabe5654e6a1eb7d7ae587a5264ad9b705559"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/019.png",
+      "bytes": 2353915,
+      "sha256": "0873030452fbd2505dbc07853e3ffcd3af1b34bbd8b95aa6f3b435a95fa0480e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/020.png",
+      "bytes": 2524247,
+      "sha256": "e5514507506ddeb711a99a1a5bfb4e01bd8d35e2257799a3cc38b98a0802ca89"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/021.png",
+      "bytes": 2629758,
+      "sha256": "28996d4f045f1297446a90edc71a3824593c6582ea140c320a780cea2709ecdd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/022.png",
+      "bytes": 2500044,
+      "sha256": "d925a360d42d643e5d9f5a0cf63be5aabe350b1f9cff40001f6b75b249a44d8d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/023.png",
+      "bytes": 2683547,
+      "sha256": "4d46e533d01adb8b453d06c11f29a09642782a5dc427da8343defb4436ff1c06"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/024.png",
+      "bytes": 2309576,
+      "sha256": "05fac459424f793c950f60ac04cf020c24cc7c6152b0b36e522fd4ef393f6023"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/025.png",
+      "bytes": 2567682,
+      "sha256": "35bdf3fbfb4355c820ad6deecbfb0d5b73324890f750200fcd69700040e75356"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/026.png",
+      "bytes": 2604871,
+      "sha256": "b0ca479f1b42aa6854ab73ec82bc7ec929c0c78c8ff5750089fa686cfb4807d0"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/027.png",
+      "bytes": 2557915,
+      "sha256": "06aafa1347721d32add0e38c46d432c5970ddd4f82f3b93f5c3593e09027b5c1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/028.png",
+      "bytes": 2757387,
+      "sha256": "55319337e014ed2bedfaf9cf861a5c4b5e5fb8d36fa4ac5fcdd94ca579a2cfd1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/029.png",
+      "bytes": 2835128,
+      "sha256": "864fc56b637c4e8c4f143275fd5eded0146b8a12e857faa1525ece576015720a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/030.png",
+      "bytes": 2707379,
+      "sha256": "cf4064448e1c357b2ce3b2e087bca823fb4e0166578d508c9f17a8f70652605a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/031.png",
+      "bytes": 2851292,
+      "sha256": "98e1c32a7c3ff2851f08b799dc4f29981722babf2a9c62c83d492f10cbe961b7"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/032.png",
+      "bytes": 2819205,
+      "sha256": "31b2c7c5121a061b3d3135d81a0619e6e63e781fb1c2cf17898eb180322abb9b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/033.png",
+      "bytes": 2348598,
+      "sha256": "64efcbde950df456fbdaed87cfe3aedc59fab18328cd3e0e0ebf8f0f58233b16"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/034.png",
+      "bytes": 2460546,
+      "sha256": "d3435bc878213d7476292bad90405bf84fe04a8e81c4e4e728476c3471678cbc"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/035.png",
+      "bytes": 2297799,
+      "sha256": "01c96d4d666d9cc4f89a6242bdb291854c4299d1dde8f92daaf724879e7e71c9"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/036.png",
+      "bytes": 2320896,
+      "sha256": "ce0a5fcdc17e7dc8e5a498a6288959ace6a81ce2e8ed0dace9fcabe24fe703d5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/037.png",
+      "bytes": 2326257,
+      "sha256": "ba87716745778c18be0359a9ddd5b7422ff0c676a87cfa6afc4eeaa20c45de8c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/038.png",
+      "bytes": 2795888,
+      "sha256": "da2ed20dfb431c8c65db5e667c32e3c979a3198a4bd10545016af812c457848c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/039.png",
+      "bytes": 2380804,
+      "sha256": "1e77bd325c9b044128afc9dc01d863017d85ff17e52ae0993156caf19a010b0f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/040.png",
+      "bytes": 2284442,
+      "sha256": "cbbf3c290862e074561b99ea9c1aab4ecf4f7caa86169bfdd0aa02b00a1e3bfe"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/041.png",
+      "bytes": 2370359,
+      "sha256": "1a58b0a1629519c1fb356b06a6e69bc18f2fcf0a4af9172dd9fac08c94f07c89"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/042.png",
+      "bytes": 2692610,
+      "sha256": "3c00ab31616b9f7583b6acd7373fb6b49023aec71c579ccd03d3dfb4cdf45e6f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/043.png",
+      "bytes": 2059312,
+      "sha256": "cd1279d003a395fc1e72d2cb53292e8e990d581edc0b58d4330c80ba9a33e1d9"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/044.png",
+      "bytes": 2064971,
+      "sha256": "a8580de7e263c71ad0aa5f6df80354597db723ec9c99b60fca2e9bdc60335c63"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/045.png",
+      "bytes": 2702396,
+      "sha256": "545e7b6f03063440b4cadaaa33ffc00214aef38f9e64ab6db3e1bd8a4049cd55"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/046.png",
+      "bytes": 2689895,
+      "sha256": "a96d94aa50ccec72e734ec637a372a8b97b9f1fadc42ac32b17a750c940773d7"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/047.png",
+      "bytes": 2615374,
+      "sha256": "98242f87a51316e8d4f5d1f6cdd5b6932613171fe5a1e0097f8f049d3dcd4ffd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/048.png",
+      "bytes": 2387020,
+      "sha256": "b596d10e3ed6b6bcd427bd5e50e1ba33bb6fff68ac950fcf3cca2cabc97cd805"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/049.png",
+      "bytes": 2652432,
+      "sha256": "fd66556cdd826cf2f49308817e9e0324a05e34f37b7b89099ba09493ed035f1b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/050.png",
+      "bytes": 2584197,
+      "sha256": "c5e3d6d7764d8ab6401eda864b6f03ee5aa397347b3c4717faceeca351420883"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/051.png",
+      "bytes": 2637877,
+      "sha256": "32d90c0469c6a089ffbd9f52f3f08f6e0d1d52d21c435ee0db694a7978845b98"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/052.png",
+      "bytes": 2621412,
+      "sha256": "08534e96d5484afe9cb623bf1f7d8e021abad0cac9a38a033465de0302326bd9"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/053.png",
+      "bytes": 2426859,
+      "sha256": "b391121895520c5b0d02825323a4bcf8d1ce744e0b65046bf19d7340bf954c8d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/054.png",
+      "bytes": 2735638,
+      "sha256": "3f49641713e36723829ec54a3d9a582f35cffff43ca20c6deecb2e2e5bb6f17d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/055.png",
+      "bytes": 2438921,
+      "sha256": "3a8e7477c2737895fc248418aa068009eac5376f6b6730e4c4d02f6880c6c036"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/056.png",
+      "bytes": 2377524,
+      "sha256": "d5c1dc2ee2ed18e0f6e45692799e1267d3e56392bdceed59fcc34cd2362886a1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/057.png",
+      "bytes": 2536651,
+      "sha256": "fab62cb58b69009d56d44363ae80f40f0ee4778d2bb213f729301cfd0e22e1b9"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/058.png",
+      "bytes": 2550031,
+      "sha256": "2dbf33bceaef77f75a80c80e0c504b9fe9a3d594e08134204e44d6973f380998"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/059.png",
+      "bytes": 2778505,
+      "sha256": "a48e5d0847adff58655e31fd70e7b59e17b7d681c206121fa57391c0132a3aa3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/060.png",
+      "bytes": 2748921,
+      "sha256": "44262ee5105408ee95da8bf9f1228cb23583c5439301255fa90fa1f298b4bbd3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/061.png",
+      "bytes": 2698408,
+      "sha256": "227734b6314661766136191f951f4ee7b031c22c77335e6f23cf2e65d710225b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/062.png",
+      "bytes": 2714601,
+      "sha256": "25f4156c4ae3fa28334829cb2bad9e55ffb366d1977f1b2d0e21ff5cd4a38e19"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/063.png",
+      "bytes": 2706139,
+      "sha256": "4c68cba87975c7094fdc6db626623b2e8612061a6079468e3d0122bd3510d08c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/064.png",
+      "bytes": 2795546,
+      "sha256": "0e257fc34ec7f6753ca4dbbdda07c021e664d18faf8a3438bc81e1a2ec3dfe1b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/065.png",
+      "bytes": 2698035,
+      "sha256": "3568a226e68901718d7054f546f4a491c4cb2d1b0ba7f359c55cd4fb0de57a81"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/066.png",
+      "bytes": 2674418,
+      "sha256": "aa632909f1fa39547083fff93dd77ce3343dd0b793c2ff784effa04a4d0a0dcc"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/067.png",
+      "bytes": 2729584,
+      "sha256": "cfd4181c70303b6b4aaa9f1f5ae1680c472bc1f52ed1094d8634c07865a5bb3f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/068.png",
+      "bytes": 2793550,
+      "sha256": "797256dcdbcabae31864c399fb98daef7d2a2380a2a531a84d018422622c45e1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/069.png",
+      "bytes": 1943241,
+      "sha256": "1c25c1fc77bd1df7a64a53db0b3e49a5671c5f616fd976a1422e61c8f9b5479f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/070.png",
+      "bytes": 1946378,
+      "sha256": "3df51162a130d30a7706f1e3f0bc1b651896ea9351142e37b2cac4f5921f67a1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/071.png",
+      "bytes": 2624622,
+      "sha256": "b969895da3459ed8bbdab225f9843b21f3b5ff63068531d0600d729d23682109"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/072.png",
+      "bytes": 2911111,
+      "sha256": "61137f3bedbdfa4629304597308e0262ea0d0e3f9ba485d13e3dd01715d3cf2a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/073.png",
+      "bytes": 2539706,
+      "sha256": "3b1502b6fa0b00e8e00067a0817582dd045e8f84e4425fc1fc7197653ab96483"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/074.png",
+      "bytes": 2543998,
+      "sha256": "d605512c8b83c80ab417324d3b05f7ed81ad18703040df332440f114381d4617"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/075.png",
+      "bytes": 2760670,
+      "sha256": "3dfa8e1ffb06d6ffd6057ccff8e5090b5253a746a47ce67cc1dc15ca3c77ea1d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/076.png",
+      "bytes": 2519813,
+      "sha256": "0af4bc3ac1984caa8cabd6cde925b1957bfd8c0a2489f23c5af6351216f404d5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/077.png",
+      "bytes": 2670369,
+      "sha256": "c76b48896037e88205bfd48e5119ef8c76b8ecca9a97585d359b2eb3dc1ba74f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/078.png",
+      "bytes": 2703697,
+      "sha256": "cfb424001c51e55f81979571e6e0b60ee2ae335c31d7a8d78ea9dd3acff8ed38"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/079.png",
+      "bytes": 2642550,
+      "sha256": "5d4c63dd7ab47f381c574547e7220679e4b0b2f9b7fec0d3cf3fe0d14604270d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/080.png",
+      "bytes": 2628915,
+      "sha256": "35e9b6f7b1a75a77fe883eaa61585d6c16e91b867b5bdf904a2fc60e45e3f38a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/081.png",
+      "bytes": 2716578,
+      "sha256": "ece0020205141dfdd3c9e5abb8cc26f9a88b6d964144b9d9da7092451e7daa2a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/082.png",
+      "bytes": 2040998,
+      "sha256": "041a9202233476da2739364c898ecb394bbec70e885df1f7dd69ddb6f425c33f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/083.png",
+      "bytes": 2556555,
+      "sha256": "30efa56fe650c1bd3be1d70c07ba67af226abdc60fb6c7fa040028d967085692"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/084.png",
+      "bytes": 2597619,
+      "sha256": "d79dad4ffba8639a5416ca5b3b2852dc0d0d59484d9a14c8f3940f0ab814e55a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/assets/scenes/085.png",
+      "bytes": 2047962,
+      "sha256": "ef8889fa8341161fd6f328de7624763ee4aa89a4e2c5ad99f1cce460a869500d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/audio/narration-api.mp3",
+      "bytes": 28443628,
+      "sha256": "4105fd0a53e1089fbc62db5ca0d7a6402b81fa314e54e1745326904a90d24538"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/audio/voice-source.json",
+      "bytes": 575,
+      "sha256": "b37055c810c55f0b02ce1ab0665e09b273f9ffa9b44d2b35ec385b720bb7975c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/English-Captions.srt",
+      "bytes": 28347,
+      "sha256": "519c6395ba9e9079b487bcf36d768be769b9a166dbde008bdb6497233fad3bbe"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/UPLOAD.txt",
+      "bytes": 2259,
+      "sha256": "63f83d3273389a5a1a31518b316a2d421c7dbcc9e575bf309dd1c6cf31948894"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/authored-final-vps-clock-plan.json",
+      "bytes": 524501,
+      "sha256": "23739a0a1927026d47fe0a4175590af1c5ef2e7bdb217db2256f58568fe8ab1d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/authored-storyboard-initial.json",
+      "bytes": 98939,
+      "sha256": "01342c9e112a80fba6907c066546ef32904cc29a715ed7ca264035749c8dac53"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/caption-proof.json",
+      "bytes": 731,
+      "sha256": "4f9bdca458c42e081c863d5ad50508b212ca0ee2499a49725183dafe83118059"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/manual-scene-directions.py",
+      "bytes": 67472,
+      "sha256": "8fd331e9d82d060481c1832d1e63263a108347b14cf1fc759119edb4db3d98ad"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-constraints.md",
+      "bytes": 2130,
+      "sha256": "4898b7d4b66d8b1608f1a4570a204a8badef490470771ea0ac7721c9ef6ac68a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-source-catalog.json",
+      "bytes": 10144,
+      "sha256": "13ef1115d106965c1d761327605473e2dd234696b73c2f28df9dc6f25bc778c3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/research-supporting-excerpts.json",
+      "bytes": 2871,
+      "sha256": "04e1cacd6959838dac1a9b5e6333317b8a6d242c8195ac8882d0a2cee2077fca"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/root-script-release.json",
+      "bytes": 827,
+      "sha256": "2633128d3cd99d5fa194d1cf39732f4ddc946303ec2b0be2bacadf404408e700"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/script-en.txt",
+      "bytes": 17515,
+      "sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/script-proof.json",
+      "bytes": 583,
+      "sha256": "5a5730117952621f1f5fceae06b2183d6846ba11b2310c156f8a86873edcfbc0"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/upload-metadata.json",
+      "bytes": 2672,
+      "sha256": "0e0df26fe9e92dd73eae4158d50dea1c029c887fcc7136d28d7172be970151fb"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/vps-paragraph-timings.json",
+      "bytes": 31199,
+      "sha256": "a55b0fc3e31669fd01bcea568ed0a962ea4264a81bd9f99151433c1d89f8706f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/editorial/vps-word-clock.json",
+      "bytes": 300646,
+      "sha256": "420ca1767f4f5302daee237c536e90bc4cb31d1819de877a419919e1bbdde714"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-capture-index.json",
+      "bytes": 29113,
+      "sha256": "7d7af2de20873487af6b801c53c309a9bbbfe47d0f1a6ebe0b2bea35783f6fe3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-01.jpg",
+      "bytes": 945618,
+      "sha256": "dedc5197490bf19c6f8a80467ee62223dc8a179b62b8c137612850c5d61af15c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-02.jpg",
+      "bytes": 979564,
+      "sha256": "44305393c87933142953b1aa9f2b1f3ab4aaca2a13ef04f6d920a9ea16008b30"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-03.jpg",
+      "bytes": 957039,
+      "sha256": "6d91609c54663424c02f6f0a9c8e7a670cf9a6d55827a2c0d50f8b6118adb71e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-04.jpg",
+      "bytes": 920868,
+      "sha256": "838d9c76dfd0b48f0fc49a39bf702d846610885606a70cf8ee09b727ce786eff"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-05.jpg",
+      "bytes": 836631,
+      "sha256": "d241ffb2656df0fc3d858343346ac13f12b34cd91b2a304fa369aef359b833f5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-06.jpg",
+      "bytes": 932777,
+      "sha256": "3a443b6aac87d2b235e2740c080984d5101b3e8363d23cb870e4c34e6d43b2fb"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-07.jpg",
+      "bytes": 961931,
+      "sha256": "a03ace3d2738f7a748b90041f1e6cfb831efa268600fb00ac5cb7359e2f88c6b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-08.jpg",
+      "bytes": 972614,
+      "sha256": "e1b083e6933cc60f728a7432b07013973733d01cc4268824e63901708eed09ee"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-09.jpg",
+      "bytes": 1040700,
+      "sha256": "7efcb612a5e0fc78562a51fdc0c8c071ceaad0529115434d3fb95eb1440e2968"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-10.jpg",
+      "bytes": 700832,
+      "sha256": "4f51494c32c42f54b48f2655e615969e65aace5bd957720de005cdda0b5ed0ac"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-11.jpg",
+      "bytes": 583169,
+      "sha256": "100784e9286fa835666dced6df0aa5ae3462a2180bb90bf349b7f0f014081889"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-12.jpg",
+      "bytes": 563803,
+      "sha256": "fd2df2fef8c0fd17ad3f6545dc87f0acc4229f37450f4dc888f648e7e8f47d80"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-13.jpg",
+      "bytes": 593178,
+      "sha256": "59c64ee98c064e479e733ca648535bf79f2b0592f057974a764261d9f2e4b5ec"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-14.jpg",
+      "bytes": 493535,
+      "sha256": "a074ebaebe8355d0ba3f8c7f1ac287ec731c313a27b8b2d513738ba1999853ef"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-15.jpg",
+      "bytes": 520250,
+      "sha256": "ce597bcc1e4c6eb730c220ea83639cd22c2427a785c24295486318457ab0f490"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-16.jpg",
+      "bytes": 549934,
+      "sha256": "13e1e48e505f1092ee783706c52323625cd8ef0c2408a08dffc15b3b4eb2cd74"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-17.jpg",
+      "bytes": 593173,
+      "sha256": "7f1b950dbe4d10f9df2b2e96099047a10b8edc8e680b1a62907a005ff7157774"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-18.jpg",
+      "bytes": 582322,
+      "sha256": "bbf9d4a8b2e019e092394516bea20e493e19e1e575e87828385e7435205af9dd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/encoded-sheets/sheet-19.jpg",
+      "bytes": 595367,
+      "sha256": "6fefe428e4ed289abd8c0336b30cc36fc845a8bb70f85251c5f8a70d9430e139"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-quality-review.json",
+      "bytes": 1002,
+      "sha256": "10a951a0d11e30f7c09cf0bc04da9b8e7560e5254b91a5a958c54d5f4e15bb33"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-technical-qa.json",
+      "bytes": 4708,
+      "sha256": "40525bbc11bbff2523927e283249daa2244d4de190c3b59296b9a27b3c315c20"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/final-visual-qa.json",
+      "bytes": 14370,
+      "sha256": "3416fd7b96f7de1171201fd6d9938366f4a2866fb70738daaa373f438f21e698"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/root-encoded-spot-check.json",
+      "bytes": 2538,
+      "sha256": "f17f5af2786de929dfec13816cb3953360e897903a9ed46f348156c3501ce316"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/root-film-release.json",
+      "bytes": 185,
+      "sha256": "67a0170b702376df5d21ecf6a8e27f0affe9fbb205ffa7fcc9b69ec340a46e8d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0842545d069e-harbor-damage-night-review-contact.jpg",
+      "bytes": 441461,
+      "sha256": "0842545d069e64e6daa16fdae7bcf6ef20566ac26c3d51bc471d6ed7a0d00f73"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0a46170d9328-contact-024-030.jpg",
+      "bytes": 693452,
+      "sha256": "0a46170d9328a265dcd0a833ac69c8d8d2c22a29e54066e85e28042481b5a8bd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/0b46fe8e6512-baseline-group-01-review-contact.jpg",
+      "bytes": 320966,
+      "sha256": "0b46fe8e6512c741d1fcf9a69b733f6e474862822aef69efa5584157280d0dca"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1389f36681c1-shore-moor-rain-review-contact.jpg",
+      "bytes": 516126,
+      "sha256": "1389f36681c13814d928c3fbc4115f22becb0b7b2f00867ff25498604a38bb94"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1ba6b6deb662-contact-032-036-initial.jpg",
+      "bytes": 599631,
+      "sha256": "1ba6b6deb66249e44369c5457c83438caa852b59075a2bfdc024819741e85b8a"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/1d2144f2086a-details-048-050-v1.jpg",
+      "bytes": 294524,
+      "sha256": "1d2144f2086ab45d31636718258195167faf41b1293aa32bc7a0214a79d4c02e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2346976cbae9-prompt-director-first-six-contact.jpg",
+      "bytes": 64020,
+      "sha256": "2346976cbae97db2b9bf7f23814eba6930274457a64fc8daeac1661ded3d5f72"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/275bcc82b284-details-057-058-060-selected.jpg",
+      "bytes": 463324,
+      "sha256": "275bcc82b284f009070e345df04809861dcc2c623375d36862f8c49f87d299cd"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2c9dbb1cab55-details-045-047-v1.jpg",
+      "bytes": 430293,
+      "sha256": "2c9dbb1cab5547762f2b15aef462773d2f0a89f891b738fb5f2ae9e750975fbb"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2e4825fe982b-contact-035-039.jpg",
+      "bytes": 587366,
+      "sha256": "2e4825fe982ba91d37bf74f2c471212bc2a8d3598b46ea1ce093eea51f54ba63"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/2e793df1da16-details-062-064-selected.jpg",
+      "bytes": 425096,
+      "sha256": "2e793df1da162c1054dd109c148e0d034ce80c96e2ba16d2b24bb90858660454"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/316515ab4004-supporting-and-market-review-contact.jpg",
+      "bytes": 325728,
+      "sha256": "316515ab40041bb7291096747d1557d50c74c7ec84de6e0881e5d86d3ad7508e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4c328332dfa1-furled-evening-danger-review-contact.jpg",
+      "bytes": 475429,
+      "sha256": "4c328332dfa1f886ccef997b21a8c8dee1cf56b908ae2d15db87ea27b097f2a6"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/4e9ffb9a2900-output-055-060-selected.jpg",
+      "bytes": 717398,
+      "sha256": "4e9ffb9a2900dc5f009d3fcc4e892cb462b14b2ca18fef0917fd57e326cbf34f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/5224a90dd808-output-048-053-v1.jpg",
+      "bytes": 712253,
+      "sha256": "5224a90dd8088b440a34383f86bf5e4bb5d55a8183017fe24529f80e7391c3e3"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/708d3623a45a-details-057-059-v1.jpg",
+      "bytes": 382831,
+      "sha256": "708d3623a45a9e6d01ff1727f86b16e753c14de81a233386a801500cd945d3ef"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/7bfe9d705bce-output-045-047-v2.jpg",
+      "bytes": 375278,
+      "sha256": "7bfe9d705bceb90946e8a41b162e4b9abc0ae396a73c68a8223a3b81c13e3fab"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/80299dac5406-detail-040-three-attempts.jpg",
+      "bytes": 71819,
+      "sha256": "80299dac54065ab74291b2c0ce7a90e6d0b43c3b6e1783bd69cc45687db8be6b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/83598c7db6ee-output-045-050-selected.jpg",
+      "bytes": 722252,
+      "sha256": "83598c7db6ee6771da6e90cffdae6f58a219f5befe890841ccdc48f9dcf9d59f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/888154e39a2b-contact-037-041-second.jpg",
+      "bytes": 599667,
+      "sha256": "888154e39a2bb681bcf9cc5760dfb8e5fed139aed9ff35ec7aa979cea0b86a2f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/89016b218697-merchant-repair-shore-review-contact.jpg",
+      "bytes": 532274,
+      "sha256": "89016b21869786e7c7a80160b5592314aae438e97704431802ac2ae24c72399c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/9486b9307f51-details-061-063-v1.jpg",
+      "bytes": 409856,
+      "sha256": "9486b9307f5107c76ebc6c195094a00a925a12f1d1173fa2ab6e2ed0fb022718"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/94adb1d15f37-output-059-064-selected.jpg",
+      "bytes": 788971,
+      "sha256": "94adb1d15f37d183f6f3fc461ccd97b3eaa101d19fe965567b69d8ed07832e18"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/9a5b656fcab7-details-054-056-v1.jpg",
+      "bytes": 349476,
+      "sha256": "9a5b656fcab7f864486b07f3c4e3b68d6e2a2429ab487da87edf3b44b39d989d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/a194a8eb273b-patched-sunset-isolated-review-contact.jpg",
+      "bytes": 517297,
+      "sha256": "a194a8eb273b0a38b5180376fed5ca8d1d939d4d0e2b3bd51f8905cefc8c401e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/ab8142c2be23-contact-024-028.jpg",
+      "bytes": 692360,
+      "sha256": "ab8142c2be23f20e297383144254d9e1f6fe80094eeff4576144442bb417b566"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/b39c958eeb11-contact-021-025.jpg",
+      "bytes": 689319,
+      "sha256": "b39c958eeb1156b3d3e6f791415896e7e7c3aa3c2ec2746d3910e04b3bcadd83"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/b5b16da9a882-output-054-059-v1.jpg",
+      "bytes": 725750,
+      "sha256": "b5b16da9a88216e9dcb4812e32d54db1d720b1983d8a6182382a42bdb31d47c0"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/cba8db9ee3e1-contact-033-037.jpg",
+      "bytes": 553808,
+      "sha256": "cba8db9ee3e1d182fea4c2b9953356d080dc33dc78442b898f1925b2f71f2096"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/d46b4c6ef9b4-output-058-063-selected.jpg",
+      "bytes": 794158,
+      "sha256": "d46b4c6ef9b44219e0f11c365e44c8176990f9ad7a23266948cea165d4533dcf"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/db831e94b62f-contact-029-033.jpg",
+      "bytes": 700551,
+      "sha256": "db831e94b62fce5ef20c8dfaff021d611ccb8314078e3fe0615d6604f550f40d"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/f38950ca6d3a-details-051-053-v1.jpg",
+      "bytes": 303335,
+      "sha256": "f38950ca6d3aaa8ca75bf84917a519d0de8d3510bd471407cf33858b75503b2c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/f5669e1d6799-output-051-056-v1.jpg",
+      "bytes": 703387,
+      "sha256": "f5669e1d679923d7de9cd4e24d236bf6e356ca63e62072a2991fd3721eaf496e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-contacts/ffc51307672f-contact-038-041-selected.jpg",
+      "bytes": 485402,
+      "sha256": "ffc51307672f3649fcd9152977569660ff78b98cc062aada6ee4e019e23e0187"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/evidence/source-review.json",
+      "bytes": 247916,
+      "sha256": "c7bf8a4e840ce8b13df76a7b6cae7627082687dc6378112e98336d14a2d02aee"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK-master.prompt.txt",
+      "bytes": 2103,
+      "sha256": "1200d45e3e9e01e49e4db4b10f19776b9618caa8ae1b7e31e405777fc883f08f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/BELOWDECK_NIGHT-master.prompt.txt",
+      "bytes": 1160,
+      "sha256": "ba879737e387c7ed26648e479051dc2a78a1c7dec1b9a12326e167240cc60715"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTAIN-master.prompt.txt",
+      "bytes": 1676,
+      "sha256": "600842398f90f363b0594acd8d56600a1fe8159bf69ca0300bffc31f0b149a45"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CAPTURED_SAILORS-master.prompt.txt",
+      "bytes": 1703,
+      "sha256": "c41879083771ba746c91b6f45027a3e83ef95c1a692c7a27d718e61d27b3de18"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/CREWMATE-master.prompt.txt",
+      "bytes": 1474,
+      "sha256": "e228d33520f71587bdd2e016bacacda50d7606fdb14e65736a9d0784ad4c88f5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DEALER-master.prompt.txt",
+      "bytes": 1453,
+      "sha256": "fe7f6fc5f703923e2ccba65f0d964656e7ba8661d44c8df4d2d3872985cd9b8c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK-master.prompt.txt",
+      "bytes": 2627,
+      "sha256": "8522fddf511757083eac1b81661c101974d9c0ee901b082f8002c227487f363f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_AFTER_RAIN-master.prompt.txt",
+      "bytes": 1322,
+      "sha256": "d5ae595e6e249002703d31682e1ab9ecb851684c95dd7ef4088329fcbcaa169b"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_EVENING-master.prompt.txt",
+      "bytes": 1149,
+      "sha256": "b0bb4241fc528e5f3758533900d86eacd8d48ec0a888c00bad2de2f7c607706f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR-master.prompt.txt",
+      "bytes": 1564,
+      "sha256": "18a043277ac439a792b970d135040301b366844d48eca2827db244ecb981e4d2"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_HARBOR_FURLED-master.prompt.txt",
+      "bytes": 1217,
+      "sha256": "47920b53e1e942edf7cb5ebf47937592c20dcb1e1cc2a0a1b08daec9133dbe64"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_MERCHANT_ENCOUNTER-master.prompt.txt",
+      "bytes": 1182,
+      "sha256": "8dcafdaa7173d961693dd64196ba5ccc2d8fc45a10df56f3c447ca00192ca3dc"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_PATCHED-master.prompt.txt",
+      "bytes": 1315,
+      "sha256": "b666b6d61bae4513bd4ea1a3cc942912327b6faa52a33c8c85c518f2be7c7199"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_RAIN-master.prompt.txt",
+      "bytes": 1439,
+      "sha256": "6f1f75cdd910db71fdef3612ce14f13ab0ae8aaf7e320a315a4cc70a7d634dfe"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/DECK_SAIL_REPAIR-master.prompt.txt",
+      "bytes": 1419,
+      "sha256": "5dff4f354d353fb4f6c081c19932889b1a13ff26a28279948abd3628ac43daf5"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/ENSLAVED_ASIDE-master.prompt.txt",
+      "bytes": 1938,
+      "sha256": "2846bd946dcfa5d5c4118b5fbe6094d8c80ebddcd22ebcf59868f04bc1657848"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/MARKET-master.prompt.txt",
+      "bytes": 1723,
+      "sha256": "7c545014bf7c64cfe4cfefed7a733c73a304a37ac7f4a6d806db1472a022d354"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT-master.prompt.txt",
+      "bytes": 1692,
+      "sha256": "4d17cd30b9e1a7e1ef9644c6b496e22b0621ba4d92215a6bd066d0ffdd04319e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_MOORED_SLOOP-master.prompt.txt",
+      "bytes": 2192,
+      "sha256": "d862f80fbd0fd644f6fe08d20432108450c08a9fc9f042ed4a76cf7a496c0e4c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SHIP_DANGER-master.prompt.txt",
+      "bytes": 1231,
+      "sha256": "7c8a198842d6dacd7950231c468cf3d85df8efa5bcfca78e941e4e35155f13c6"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/PORT_SUNSET-master.prompt.txt",
+      "bytes": 978,
+      "sha256": "da037cc30a504ba60d75f2f34067addb5833e3a8b5c59ec3ed5d4ba6397f524e"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/QUARTERMASTER-master.prompt.txt",
+      "bytes": 1499,
+      "sha256": "f531dd3c51b2f078050af993cdc4e101b7f1a5187cf7ca09a6748f29b98e16c1"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE-master.prompt.txt",
+      "bytes": 1424,
+      "sha256": "d05a42837b213c1fcaf8eb1495ac0c3c06c15ea29268830351852e160c4f6ae4"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_ISOLATED-master.prompt.txt",
+      "bytes": 900,
+      "sha256": "236d780189e2b726cd4263b769950e75e9c1a7a8b3199f20c06a37655d02cda6"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/SHORE_SLOOP_MAINTENANCE-master.prompt.txt",
+      "bytes": 1497,
+      "sha256": "0788846df2bf9162315e08cabfe597a358063e4e45e38f83fcc05ab3a12cb337"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN-master.prompt.txt",
+      "bytes": 1493,
+      "sha256": "e6e3ccda7f2b86e6e5c76011ada53f5820efa37842a2e28928b540364841ff50"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TAVERN_EVENING-master.prompt.txt",
+      "bytes": 895,
+      "sha256": "d38f87fb08355e1a6b9eae30683ff2f1e72ce57dc26687f5426267dcde2ef4de"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-prompts/TOM-master.prompt.txt",
+      "bytes": 1756,
+      "sha256": "de7c4062c0b1251a70f03aeb1c1d1b8d10cfe2b8db0f10c4256fa8870a0b5b00"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/master-registry.json",
+      "bytes": 113602,
+      "sha256": "59194f79c18a3884648c58db5d37707b02077e8902d19b94c6e9a28fb74bf449"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/provenance/selected-generation-plan.json",
+      "bytes": 1493391,
+      "sha256": "9745d9c16158cbc57dfa80a82ded69b404d5d4f213c94bcec1050b28e6563dda"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/ABCD-review.jpg",
+      "bytes": 505120,
+      "sha256": "4b06c4a2abeda045803bfc574b69ef1286faa06c643f7f11131dc8076da8f842"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-A.jpg",
+      "bytes": 1716181,
+      "sha256": "819d5b7a21325c1fc302b58b5d86d45443d477af91302842bad7f053436bdd69"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-B.jpg",
+      "bytes": 1862113,
+      "sha256": "be972bde642dfead42fa3e99516bfc78ca821fd6b2907e4d33ad44a4f3a67e74"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-C.jpg",
+      "bytes": 1935425,
+      "sha256": "3650cfaececd73357abfb3de8302fcec070bf090adbf558ede3882199ceb7224"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/Thumbnail-D.jpg",
+      "bytes": 1678359,
+      "sha256": "2eaa4175c322f467a3528c3a6a49be33f08442dc5180958eaa45167a59044656"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-A.png",
+      "bytes": 2082302,
+      "sha256": "189499c734020c0e9f402950110fd8fee68a4f29d1a0516c6a0c2a976c3e156c"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-B.png",
+      "bytes": 2352380,
+      "sha256": "71e44db3c864ac05f24dfdd9b3ddc5765788e9fd5a56ac65b661e97d9947e992"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-C.png",
+      "bytes": 2444762,
+      "sha256": "7dd8cf886c1c832aa102d3c617b631fd13ad0181191d7a6bd79fd4305194ee2f"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/originals/Thumbnail-D.png",
+      "bytes": 2017415,
+      "sha256": "4cab5c13d044d62011bccfe1cb90c3c05bed353f8f360b8fe4b34a6550658cb7"
+    },
+    {
+      "path": "chaines/pirate-pages/episode-01/thumbnails/provenance-and-review.json",
+      "bytes": 24356,
+      "sha256": "6344d8a14512f00456bbec11f08e4d6e5ba03f2d8c6877a97a530658683317ab"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/README.md",
+      "bytes": 4666,
+      "sha256": "87cc84fec60446ce4cd794566795651245d284deeb6835f87812cae940ff3ddd"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/CONTINUITY_DAY30.md",
+      "bytes": 9448,
+      "sha256": "fe98a644c83bc8283f0bbde0459734c62d6b0df46b4e41b632b73681bed355e5"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/ORIGINAL_SCRIPT_STATUS.md",
+      "bytes": 1976,
+      "sha256": "8b9b38c440f3a76bc4093ffc53dbdb9775971e976c0a5278077cceb4bb007408"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0000.jpg",
+      "bytes": 254750,
+      "sha256": "924f67bc06298b58d37ae5d8d95408f097ecb881b3e3ce2e32a8fff6312aba26"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0176.jpg",
+      "bytes": 237501,
+      "sha256": "03a35443a7f12d6ab782f02494ea2903e41a727f1e48dabc21689d4d22c9579b"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0426.jpg",
+      "bytes": 222259,
+      "sha256": "529bf869b8666a427bf6cd1a31cc4d06767438218a743386ea4181cda550e455"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0499.jpg",
+      "bytes": 263148,
+      "sha256": "7edbb7d7d19e8dd3f24838b2fd1d24b02ea1a49671f047a1eab9ac09e5ec49a7"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0579.jpg",
+      "bytes": 251013,
+      "sha256": "dfe20be67108c41e92133f009bbce4d74c312e1d03637caec02bde10648e9bbf"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0637.jpg",
+      "bytes": 214325,
+      "sha256": "95b9c7193820961178e2c1f82f2a2a8d5cf8ce1d0fe5052e58039a58c1f853a0"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0715.jpg",
+      "bytes": 292124,
+      "sha256": "af70cf0dc25960e9304ec06a918f9114a76bb9ff7525dfff620b83ff2fe7dec9"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0781.jpg",
+      "bytes": 237294,
+      "sha256": "b6b16d610cdd41486b3ca460642a78486d74718e6ea8cb723153d3493b96f3cd"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0876.jpg",
+      "bytes": 358393,
+      "sha256": "4e1d00295362517fa00303a549e0bb0fa6f5007a89977b6562c549d2fd81d056"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/0944.jpg",
+      "bytes": 393219,
+      "sha256": "c4cf048a63a57761435d311aa1ef01018704048e865d9cad31d60398879d0a4a"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1012.jpg",
+      "bytes": 208831,
+      "sha256": "c51dd04b898e5115a4c859a63fc9dbae83c2ceabe76085118b13632ab5df4aa4"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1061.jpg",
+      "bytes": 198085,
+      "sha256": "6ea6aa0511157f4c3bee9130ceb320c2b2d93871d44991096dc5fd96080a5b03"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1080.jpg",
+      "bytes": 241163,
+      "sha256": "5c2237b38182795d749fa35421e96a499bdd26018bca99ec4ef9c6b27125c13b"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1095.jpg",
+      "bytes": 266382,
+      "sha256": "07744ced51041a6ccb08f7490691e1d7323e34710c286b1484a0237d4be6dbe6"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1110.jpg",
+      "bytes": 278251,
+      "sha256": "9e039e4c7cd64c6c464409f477ca550425575d858b0728b4d4fea4c58ee2afd0"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1125.jpg",
+      "bytes": 228159,
+      "sha256": "652e25ba03787110d4ec6d4a0313b0af5f20600159ce01b68722dbed51564f5a"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1140.jpg",
+      "bytes": 266364,
+      "sha256": "345b4126984143645cdfb49c3eabcb5dc158c89afcb682dc800679ac627bbfc1"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/1145.jpg",
+      "bytes": 254811,
+      "sha256": "d9053cf7db96db5ad02b25d5879402c5b91a80281719482e20bc8bd3f1e8873d"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/sheet-01.jpg",
+      "bytes": 295223,
+      "sha256": "af84d1e223ea79f7d19a4d5f063883e502e99d724548787bf6aed3349af11096"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-final-media-stills/sheet-02.jpg",
+      "bytes": 301859,
+      "sha256": "8790659679b5f2df0ba6c62ed75279b25d5cb046dea9f61b4622d505f7f24fe4"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/actual-still-index.json",
+      "bytes": 2552,
+      "sha256": "000fefd08ff518235c61ff50a6d1232b55bcbd2e9311f15241224dbd7dab13e9"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/captions-recovered-from-final-media.srt",
+      "bytes": 30860,
+      "sha256": "5474572f8b4a495f29e62394fe482653335ac792217655a2fd1fa14e5ed211f1"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/episode-recovery-manifest.json",
+      "bytes": 7197,
+      "sha256": "23f28c513034c5be56573e70ffc8f21c4605ce61d21cbf71f13a732c550fd663"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/narration-recovered-edited.txt",
+      "bytes": 18224,
+      "sha256": "cb53847d5fd5ce56608df4b34c3da708bc734856f02f9ed2999a8e165f44b53d"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/narration-recovery-proof.json",
+      "bytes": 2789,
+      "sha256": "62128ed1c280708f00e95db5e13d08e185e95ba12a26a91b78df2eef68fb3a20"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/original-download-proof.json",
+      "bytes": 1166,
+      "sha256": "1ebf29b98bc45b4bc5bec2854157ed7ecb5f84d062d4dae0fce0086a23a4c3c7"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/original-normal-site-readback.json",
+      "bytes": 1798,
+      "sha256": "b95f66b351f9e35016eba7e4a3251fe9c3b02163abd355aea9368c1249d3231a"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/original-normal-site-readback.png",
+      "bytes": 219125,
+      "sha256": "f7bdb7b14d26d4177d1071fa01e686b391c7a560a32c9e8f7cc3b0c4e1994a38"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/publication-kit.txt",
+      "bytes": 1569,
+      "sha256": "164b721d7b963a56cd4161a21f3dec8a1014cebabe3e520317cca9e668f2b541"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/thumbnail-original-delivery.png",
+      "bytes": 1536836,
+      "sha256": "651ffbe779f42659485a18f661cc20de225544113d73569dbc22454835a41b02"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/transcript-recovered-from-final-media.json",
+      "bytes": 487718,
+      "sha256": "4bfe7cbd4fb6ce3532775085633a0e6c2dfc594fc3381ec3cffe4489ab108704"
+    },
+    {
+      "path": "chaines/alien-outbreak-survival/episode-01-day-01-30/transcript-recovered-from-final-media.txt",
+      "bytes": 18218,
+      "sha256": "85490f1bdb1837b7bac1c63be680e387fa4d79229de9303a29d987d6d617290e"
+    },
+    {
+      "path": "production/handoff/CHANNELS.md",
+      "bytes": 19820,
+      "sha256": "56190471afdfdb356b01df0d2e1ae7a5b5bd19ddfdaf2bb3fdc4e6efe8765ed5"
+    },
+    {
+      "path": "production/handoff/CONTINUITY.md",
+      "bytes": 11226,
+      "sha256": "428edc4eb8c1a49829989b6c77cdd17b606dbce8c8eca76ce836a3da128ee1d2"
+    },
+    {
+      "path": "production/handoff/POSTING_HANDOFF.md",
+      "bytes": 11378,
+      "sha256": "e00f2d3a66113697b291fd0af1e4a47fdf3cb752963a7ea77a5564e47f0bc6cd"
+    },
+    {
+      "path": "production/handoff/TOOLS.md",
+      "bytes": 6967,
+      "sha256": "f01e631fd004b12b7d224e855a51e936012abddff4935407feffe582aaeb41ec"
+    },
+    {
+      "path": "production/handoff/access/README.md",
+      "bytes": 4602,
+      "sha256": "bdab2c1e507ba6adabfbd266ec4e9258b8b532b3ffa01f5857b196826ad570a6"
+    },
+    {
+      "path": "production/handoff/access/decrypt_access.py",
+      "bytes": 10842,
+      "sha256": "fa233cc924c51e03f52149e26cc3b6369f552c129493b885d38a8465cc2f25f7"
+    },
+    {
+      "path": "production/handoff/access/manifest.json",
+      "bytes": 1303,
+      "sha256": "baac446fd2ea2ef1781f0e0a978303809cf32800779775633ebcc3d00daa0bce"
+    },
+    {
+      "path": "production/handoff/access/restore_access.py",
+      "bytes": 3552,
+      "sha256": "0c5853ffac78482c916cf9c0e02e149a4ab3989aa7dfd3e9e6dba8d50c5dfb89"
+    },
+    {
+      "path": "production/handoff/access/tubeforge-personal-access.aesgcm",
+      "bytes": 32134,
+      "sha256": "92109527c53ae3f01e91597f282e57806e04fb962a1e8a465d004e504b5744c9"
+    },
+    {
+      "path": "production/handoff/access/verification.json",
+      "bytes": 2988,
+      "sha256": "e3c483b2f445effbd334f6f32dfa3ebd149be436120b10fa1e9045b644a0fd1d"
+    },
+    {
+      "path": "production/history_delivery/README.md",
+      "bytes": 14349,
+      "sha256": "3f76cc7d66541e0e6f772853f06ae22f065f2f51e8f5ed8b68b17c9cac1f58b1"
+    },
+    {
+      "path": "production/history_delivery/__init__.py",
+      "bytes": 81,
+      "sha256": "156f1ca47480b088a4262a37ac30208dde863ce1595c6d04c9a6a7c92a7d622c"
+    },
+    {
+      "path": "production/history_delivery/audio_mastering_contract.py",
+      "bytes": 10159,
+      "sha256": "196b1177c8ea20cda2351e17ef2a1e39cdd33c1ba31645cd03e93f4b7e43f75c"
+    },
+    {
+      "path": "production/history_delivery/build_delivery_proof.py",
+      "bytes": 34162,
+      "sha256": "08d1a77b2c44f2913790e04be5528fef2fd71cd1e5338f3dbbf7fda6c271a60d"
+    },
+    {
+      "path": "production/history_delivery/build_native_export.py",
+      "bytes": 3664,
+      "sha256": "29393d52d56904a5482d16b97febd45e4bd470abe2b59eb3f557453e30d5529f"
+    },
+    {
+      "path": "production/history_delivery/check_vps_film.py",
+      "bytes": 10873,
+      "sha256": "e90d0aebddc0df1a350faae8d38d29e996f515e9fba44b15c8222ec1933c7485"
+    },
+    {
+      "path": "production/history_delivery/curl_transport.py",
+      "bytes": 1829,
+      "sha256": "5c8f80ce60ba95df4f30ab912e7768576b0afb072549ab3a30e5fc9963bdcc39"
+    },
+    {
+      "path": "production/history_delivery/download_native_base.py",
+      "bytes": 6198,
+      "sha256": "bd9ebc43c8db103912e967f495a0a0c43017a5b0e151590c7da1249b645fe176"
+    },
+    {
+      "path": "production/history_delivery/episode-profile.example.json",
+      "bytes": 461,
+      "sha256": "b48dc72e83f9ca17239b589f9ad7b125819cb5179a1307d14ab90712da136cb5"
+    },
+    {
+      "path": "production/history_delivery/gofile_delivery.py",
+      "bytes": 23312,
+      "sha256": "4f2744142599671bf74eab5b54d8e0e5e9ec82c4a5920fa89978e279381e37f9"
+    },
+    {
+      "path": "production/history_delivery/gofile_site_readback.py",
+      "bytes": 12503,
+      "sha256": "fe7e7cb13cc17db8bd71f71aa01f6d93ca553fd465bf10025ff644557a725854"
+    },
+    {
+      "path": "production/history_delivery/master_vps_movie.py",
+      "bytes": 5760,
+      "sha256": "07955f59caae27427d4549c9024bbe9c258fce6ac8414bf6ace05799887ab0dc"
+    },
+    {
+      "path": "production/history_delivery/media_identity.py",
+      "bytes": 2378,
+      "sha256": "a22f95d69e58c7ef40aff50ddcccf3fcbad9a59f3d7d23a8b0941a4ac535723b"
+    },
+    {
+      "path": "production/history_delivery/normalize_voice.py",
+      "bytes": 4208,
+      "sha256": "d7afdf1958dbfc049548244812d478d08fbf1df899f4a4ffff0510cdb8a53d50"
+    },
+    {
+      "path": "production/history_delivery/prepare_captions.py",
+      "bytes": 3230,
+      "sha256": "93597293c6dbf08081a03fef95c2b626ffc41239031edac355ca43cacb9bddd3"
+    },
+    {
+      "path": "production/history_delivery/release_history.py",
+      "bytes": 5462,
+      "sha256": "500ca2a32f720067842ecc1c3b78a153845d9a67374906506b0ae23231e6633d"
+    },
+    {
+      "path": "production/history_delivery/requirements.txt",
+      "bytes": 102,
+      "sha256": "29dd62d47b16e0072d05f56d2eb917748aecce1fcc92274fcd617def311282c5"
+    },
+    {
+      "path": "production/history_delivery/selected_source_provenance.py",
+      "bytes": 4151,
+      "sha256": "6f48bb01983c003157ca8f37626c8d66259bb8ccabedbc6d4e2ff98fddd0d8dc"
+    },
+    {
+      "path": "production/history_delivery/tests/check_offline_transport.py",
+      "bytes": 5596,
+      "sha256": "98b128b21eeecb5a45a9373b871af29938704475e5dd36b542d9fde3f0bb4654"
+    },
+    {
+      "path": "production/history_delivery/tests/test_portable_tools.py",
+      "bytes": 7917,
+      "sha256": "7672883ed6966f92cb686eb09ce8bbe0059952c1acb87b5355958d4dca99b786"
+    }
+  ],
+  "counts": {
+    "chaines/samurai-chapters": 233,
+    "chaines/viking-chapters": 216,
+    "chaines/pirate-pages": 262,
+    "chaines/alien-outbreak-survival": 35,
+    "production/handoff": 10,
+    "production/history_delivery": 20
+  },
+  "total_files": 776,
+  "total_bytes": 1207873559,
+  "files_are_source_archives_not_live_youtube_uploads": true,
+  "access_archive_encrypted": true,
+  "unlock_key_in_repository": false,
+  "cPanel_unlock_key_storage": "not_performed_auto_review_rejected_use_private_key_file",
+  "alien_original_authorial_script_recovered": false,
+  "alien_complete_narration_recovered_from_actual_delivered_movie": true,
+  "large_final_media_available_via_documented_gofile_links": true
+}

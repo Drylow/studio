@@ -1,0 +1,19 @@
+{
+  "title": "Why Being a Pirate Was Worse Than You Think",
+  "script_sha256": "b8545e1384cb6d97bb27d6b2aa5aac72867bfe6937afd4969636e18e6125d725",
+  "state": "pass",
+  "reviewer": "root",
+  "spoken_words": 2744,
+  "paragraph_scenes": 85,
+  "review_evidence": "Root actually read the complete text through exec output. Qualified c1715fictionalordinary sailor, credible original chronologicalvoyage/food/labor/prize uncertainty/power/risk narrative. No universal payout or crewconstitution, primarysources expressly qualified, victimsslavery treatedseriously and withoutgore, finalbrandtagexact.",
+  "desired_duration_seconds": [
+    900,
+    1200
+  ],
+  "script_path": "chaines/pirate-pages/episode-01/editorial/script-en.txt",
+  "voice": {
+    "provider": "algrow",
+    "voice_id": "rU18Fk3uSDhmg5Xh41o4",
+    "speed": 1
+  }
+}

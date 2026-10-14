@@ -1,0 +1,13 @@
+{
+  "movie_sha256": "3822680745ba50409ccccd3804985062c6e8d0052c9a6d8c01e2211855c1d8c7",
+  "state": "verified",
+  "source": "delegated_ai_inspection",
+  "reviewer": "root",
+  "notes": "Complete fatal decode of final audio/video, actual final AAC levels and seven narration alignment checks passed. Every encoded scene midpoint, cut pair, first and last frame genuinely reviewed in the bound visual ledger. Exact native video packets and timing retained during audio-only mastering.",
+  "evidence": {
+    "technical": "chaines/pirate-pages/episode-01/evidence/final-technical-qa.json",
+    "visual": "chaines/pirate-pages/episode-01/evidence/final-visual-qa.json",
+    "additional_root_encoded_spot_check": "chaines/pirate-pages/episode-01/evidence/root-encoded-spot-check.json"
+  },
+  "audio_mastering_evidence_notice": "Native VPS render/delivery provenance and audio-only mastering binding are maintained separately by the handoff API/delivery documentation; no audio/movie binaries included here."
+}
