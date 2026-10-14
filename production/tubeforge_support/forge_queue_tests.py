@@ -1,9 +1,36 @@
 """Resource fairness, durable holds and review gates; no generation providers."""
 import asyncio
+import ast
+import inspect
 from pathlib import Path
 from unittest.mock import AsyncMock
 import sys
 import pytest
+
+
+@pytest.mark.parametrize('fails', [False, True])
+def test_directed_image_never_launches_hidden_second_call(fails):
+    from app import llm
+    tree = ast.parse(inspect.getsource(llm.generate_image))
+    hedge = next(node for node in ast.walk(tree)
+                 if isinstance(node, ast.AsyncFunctionDef) and node.name == 'hedged')
+    calls = []
+    async def bounded():
+        calls.append('provider')
+        if fails:
+            raise RuntimeError('transport failure')
+        return b'image'
+    class NoExtraTasks:
+        def create_task(self, *args):
+            raise AssertionError('A one-attempt image launched a hidden second call')
+    scope = {'attempts': 1, 'once_bounded': bounded, 'asyncio': NoExtraTasks()}
+    exec(compile(ast.Module(body=[hedge], type_ignores=[]), '<image-budget>', 'exec'), scope)
+    if fails:
+        with pytest.raises(RuntimeError, match='transport failure'):
+            asyncio.run(scope['hedged']())
+    else:
+        assert asyncio.run(scope['hedged']()) == b'image'
+    assert calls == ['provider']
 
 ROOT = Path(__file__).resolve().parents[2]
 if Path(__file__).parent.name != 'tests':
