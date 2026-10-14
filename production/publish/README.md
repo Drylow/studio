@@ -35,3 +35,14 @@ avant 8 h.
 
 Le PC n'a pas encore d'accès GitHub, donc son journal reste sur le PC (`work/publish/log.jsonl`).
 Pour savoir si une vidéo est partie, il faut regarder la chaîne.
+
+## Miniatures
+
+Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature reprend **exactement** la miniature déjà
+publiée sur la chaîne (style, mise en page, police, couleur et place du texte), adaptée au nouveau
+titre. Les miniatures publiées sont dans `published-thumbnails/` (lues sur YouTube le 14 oct.) et
+`channels.json` les relie à chaque chaîne :
+
+```bash
+python production/daily/thumbs.py <dossier> idées.json --adapt --ref production/publish/published-thumbnails/<chaîne>.jpg --ref <personnage>.png
+```

@@ -1,11 +1,46 @@
 {
   "_note": "Chaînes YouTube de l'utilisateur publiées depuis son PC (choix du 14 oct. 2026). Le nom du profil = le nom de la chaîne. Les identifiants internes des profils restent dans work/publish/profiles.json (ignoré par git).",
   "channels": [
-    {"name": "Last Safe Door", "app": "fury", "profile": "Last Safe Door"},
-    {"name": "One Stick Left", "app": "fury", "profile": "One Stick Left"},
-    {"name": "Scene Analysis Guy", "app": "fury", "profile": "Scene Analysis Guy"},
-    {"name": "Samurai Chapters", "app": "fury", "profile": "Samurai Chapters"},
-    {"name": "Viking Chapters", "app": "adspower", "profile": "Viking Chapters"},
-    {"name": "Pirate Pages", "app": "adspower", "profile": "Pirate Pages"}
-  ]
+    {
+      "name": "Last Safe Door",
+      "app": "fury",
+      "profile": "Last Safe Door",
+      "youtube_channel_id": "UCsHoo9lHf44MwAeevHdoApw",
+      "published_thumbnail": "production/publish/published-thumbnails/lsd.jpg"
+    },
+    {
+      "name": "One Stick Left",
+      "app": "fury",
+      "profile": "One Stick Left",
+      "youtube_channel_id": "UCItgDwf_e3GIvqlH-OtxsbQ",
+      "published_thumbnail": "production/publish/published-thumbnails/osl.jpg"
+    },
+    {
+      "name": "Scene Analysis Guy",
+      "app": "fury",
+      "profile": "Scene Analysis Guy"
+    },
+    {
+      "name": "Samurai Chapters",
+      "app": "fury",
+      "profile": "Samurai Chapters",
+      "youtube_channel_id": "UCfGYsP9_Ci2E3eHBFw6RUPw",
+      "published_thumbnail": "production/publish/published-thumbnails/samurai.jpg"
+    },
+    {
+      "name": "Viking Chapters",
+      "app": "adspower",
+      "profile": "Viking Chapters",
+      "youtube_channel_id": "UCUqIXYHY6pdv3IO5J4_hr5w",
+      "published_thumbnail": "production/publish/published-thumbnails/viking.jpg"
+    },
+    {
+      "name": "Pirate Pages",
+      "app": "adspower",
+      "profile": "Pirate Pages",
+      "youtube_channel_id": "UCh_jI9tSDMZTD_GLM7XkGVA",
+      "published_thumbnail": "production/publish/published-thumbnails/pirate.jpg"
+    }
+  ],
+  "_thumbnails": "Règle de l'utilisateur (14 oct.) : chaque nouvelle miniature reprend EXACTEMENT la miniature déjà publiée de la chaîne (style, mise en page, police, couleur et place du texte) et l'adapte au nouveau titre. production/daily/thumbs.py --adapt --ref <published_thumbnail> ..."
 }

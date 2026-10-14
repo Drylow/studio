@@ -20,6 +20,12 @@ load_dotenv(ROOT / ".env")
 from services import ai  # noqa: E402
 from PIL import Image, ImageDraw  # noqa: E402
 
+ADAPT = ("Edit the FIRST reference image, which is a thumbnail already published on this YouTube channel. Keep "
+         "EXACTLY its art style, colours, camera, layout, character drawing, text font, text colour, outline and text "
+         "position, so both thumbnails clearly belong to the same channel. Replace the text with '{text}' (perfectly "
+         "spelled, nothing else written). Change only what the new episode needs: {picture} The other reference images "
+         "show the exact look of the characters. No logos, no watermark, no real people.")
+
 RULES = ("YouTube thumbnail, 16:9, in EXACTLY the same flat 2D cartoon style, character design and colours as the "
          "reference images: same round-headed characters, black outlines, matte colours. One clear dramatic "
          "situation, very expressive simple face, readable from far away, strong contrast, no clutter. "
@@ -32,6 +38,7 @@ def main():
     ap.add_argument("episode", type=Path)
     ap.add_argument("ideas", type=Path)
     ap.add_argument("--ref", action="append", default=[])
+    ap.add_argument("--adapt", action="store_true", help="la 1re référence est une miniature publiée à adapter")
     a = ap.parse_args()
     ideas = json.loads(a.ideas.read_text(encoding="utf-8"))
     out = a.episode / "thumbnails"
@@ -41,11 +48,13 @@ def main():
         letter = "ABCD"[i]
         path = out / f"proposal-{letter}.jpg"
         idea = {"text_style": "YELLOW rounded comic letters with a thick BLACK outline, top-left"} | idea
-        blob = ai.generate_image(RULES.format(**idea), width=1536, height=1024, refs=a.ref, quality="high",
+        blob = ai.generate_image((ADAPT if a.adapt else RULES).format(**idea), width=1536, height=1024, refs=a.ref, quality="high",
                                  model="gpt-image-2", timeout=400)
         ai.fit_cover(blob, 1280, 720, str(path), quality=90)
         return letter, path
 
+    if a.adapt:
+        ideas = ideas[:2]
     with ThreadPoolExecutor(4) as pool:
         done = list(pool.map(lambda x: one(*x), enumerate(ideas[:4])))
     big = Image.new("RGB", (1280, 760), "white")
