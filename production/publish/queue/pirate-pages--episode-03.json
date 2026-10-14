@@ -1,0 +1,16 @@
+{
+  "channel": "Pirate Pages",
+  "title": "Why Being a Pirate Quartermaster Was Worse Than You Think",
+  "description_file": "chaines/pirate-pages/episode-03/description.txt",
+  "video": {
+    "gofile": "https://gofile.io/d/LQ4BSP5c",
+    "file": "final.mp4",
+    "sha256": "2aa4838d91da2239ef14a41498e8480f4f7c014dc46202fa48c886ca8842981f"
+  },
+  "thumbnail": "chaines/pirate-pages/episode-03/thumbnail.jpg",
+  "captions": "chaines/pirate-pages/episode-03/English-Captions.srt",
+  "tags_file": "chaines/pirate-pages/episode-03/tags.txt",
+  "visibility": "scheduled",
+  "publish_at": "2026-10-16T10:00",
+  "tubeforge_video_id": "why-being-a-pirate-quartermaster-was-wor-70c7be"
+}
