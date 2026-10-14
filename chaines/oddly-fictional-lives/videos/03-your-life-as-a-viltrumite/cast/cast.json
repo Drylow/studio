@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Varen",
+    "main": true,
+    "file": "Varen.png",
+    "sha256": "f0205b5a2013db7789c0272bae393e3b6cb92446d6bb9fa860b0b09b66af9984",
+    "description": "Original adult Viltrumite protagonist. Compact strong simplified adult body, total height and compact body proportions exactly as the attached inspected identity. Smooth round PURE WHITE head, black dot eyes, tiny line mouth, no hair, moustache, beard, nose, ears, brows or face markings. Pale GREY fitted long-sleeve superhero bodysuit, dark RED high collar, RED waist belt and RED calf boots, dark grey wrist cuffs with exposed WHITE mitten hands. No cape, helmet, shoulder armour, weapon, face tattoo or borrowed Omni-Man/Mark design. Full-body neutral standing pose.",
+    "inspection": "Individually viewed by Codex, 14 October 2026. White round-head/dot-eye/white-mitten drawing, distinct compact clothed adult identity, new assigned costume, no earlier warrior tattoo or armour. Subtle edge shading inside Varek hood accepted.",
+    "generation_prompt": "Create a NEW single full-body character reference sheet on a neutral plain light-grey background, one continuous 16:9 image, one character only, no text, panels or duplicate views. Supplied image establishes ONLY compact body/head proportions and clean outlined matte cartoon technique. Replace ALL its clothing and appearance with the new identity below. REMOVE its red facial tattoo completely: new head is blank PURE WHITE except tiny dot eyes and line mouth. No old warrior, Greek armour, axe, scars, bandage, hair, nose, ears or human face. Face/neck/hands perfectly white and unshaded; long sleeves and long trousers, simple rounded mitten hands. Thick clean black contours and flat matte costume colours. No realistic muscular anatomy, photorealism, stick limbs or elongated bodies.\nNEW NAMED IDENTITY: Original adult Viltrumite protagonist. Compact strong simplified adult body, total height 3.3 head diameters. Smooth round PURE WHITE head, black dot eyes, tiny line mouth, no hair, moustache, beard, nose, ears, brows or face markings. Pale GREY fitted long-sleeve superhero bodysuit, dark RED high collar, RED waist belt and RED calf boots, dark grey wrist cuffs with exposed WHITE mitten hands. No cape, helmet, shoulder armour, weapon, face tattoo or borrowed Omni-Man/Mark design. Full-body neutral standing pose.",
+    "variant": "default"
+  },
+  {
+    "name": "Rusk",
+    "main": false,
+    "file": "Rusk.png",
+    "sha256": "de173ee2e3674de84cd6ae496af7c563254180ecf983a9dc5c7943288e418c4e",
+    "description": "Distinct adult imperial commander. Same compact white round-head cartoon, WHITE mitten hands, no hair/beard/nose/ears. CHARCOAL long-sleeve high-neck military tunic and matching long trousers, muted GOLD collar stripe and GOLD waist belt, BLACK boots. Broad simple shoulders. No red hero belt or cape, no helmet. Full-body neutral standing pose.",
+    "inspection": "Individually viewed by Codex, 14 October 2026. White round-head/dot-eye/white-mitten drawing, distinct compact clothed adult identity, new assigned costume, no earlier warrior tattoo or armour. Subtle edge shading inside Varek hood accepted.",
+    "generation_prompt": "Create a NEW single full-body character reference sheet on a neutral plain light-grey background, one continuous 16:9 image, one character only, no text, panels or duplicate views. Supplied image establishes ONLY compact body/head proportions and clean outlined matte cartoon technique. Replace ALL its clothing and appearance with the new identity below. REMOVE its red facial tattoo completely: new head is blank PURE WHITE except tiny dot eyes and line mouth. No old warrior, Greek armour, axe, scars, bandage, hair, nose, ears or human face. Face/neck/hands perfectly white and unshaded; long sleeves and long trousers, simple rounded mitten hands. Thick clean black contours and flat matte costume colours. No realistic muscular anatomy, photorealism, stick limbs or elongated bodies.\nNEW NAMED IDENTITY: Distinct adult imperial commander. Same compact white round-head cartoon, WHITE mitten hands, no hair/beard/nose/ears. CHARCOAL long-sleeve high-neck military tunic and matching long trousers, muted GOLD collar stripe and GOLD waist belt, BLACK boots. Broad simple shoulders. No red hero belt or cape, no helmet. Full-body neutral standing pose.",
+    "variant": "default"
+  },
+  {
+    "name": "Talen",
+    "main": false,
+    "file": "Talen.png",
+    "sha256": "ddd1495a6ed222503a5ea375f27a07ceb24a5e5a0403f1611ccf9b6f4a92a581",
+    "description": "Distinct adult Viltrumite peer. Same compact white circular head and white mitten hands, black dot eyes/tiny line mouth, no hair/ears/markings. Pale GREY long-sleeve fitted suit, a diagonal muted BLUE sash across the chest and BLUE waist belt, DARK GREY boots. No red hero trim, cape or weapons. Full-body neutral standing pose.",
+    "inspection": "Individually viewed by Codex, 14 October 2026. White round-head/dot-eye/white-mitten drawing, distinct compact clothed adult identity, new assigned costume, no earlier warrior tattoo or armour. Subtle edge shading inside Varek hood accepted.",
+    "generation_prompt": "Create a NEW single full-body character reference sheet on a neutral plain light-grey background, one continuous 16:9 image, one character only, no text, panels or duplicate views. Supplied image establishes ONLY compact body/head proportions and clean outlined matte cartoon technique. Replace ALL its clothing and appearance with the new identity below. REMOVE its red facial tattoo completely: new head is blank PURE WHITE except tiny dot eyes and line mouth. No old warrior, Greek armour, axe, scars, bandage, hair, nose, ears or human face. Face/neck/hands perfectly white and unshaded; long sleeves and long trousers, simple rounded mitten hands. Thick clean black contours and flat matte costume colours. No realistic muscular anatomy, photorealism, stick limbs or elongated bodies.\nNEW NAMED IDENTITY: Distinct adult Viltrumite peer. Same compact white circular head and white mitten hands, black dot eyes/tiny line mouth, no hair/ears/markings. Pale GREY long-sleeve fitted suit, a diagonal muted BLUE sash across the chest and BLUE waist belt, DARK GREY boots. No red hero trim, cape or weapons. Full-body neutral standing pose.",
+    "variant": "default"
+  },
+  {
+    "name": "Mira",
+    "main": false,
+    "file": "Mira.png",
+    "sha256": "b81fdbd9cec42333bb2baab4843648ebda7410dd0861c8285b032f49f284d8ba",
+    "description": "Distinct adult human engineer. Same compact white circular head, WHITE mitten hands, tiny black dot eyes/line mouth, no nose/hair/ears or brows. Mustard YELLOW long-sleeve work jacket, DARK NAVY trousers and BROWN ankle boots. Grey plain tool pouch secured at waist, no backpack, helmet or hero bodysuit. Full-body neutral standing pose.",
+    "inspection": "Individually viewed by Codex, 14 October 2026. White round-head/dot-eye/white-mitten drawing, distinct compact clothed adult identity, new assigned costume, no earlier warrior tattoo or armour. Subtle edge shading inside Varek hood accepted.",
+    "generation_prompt": "Create a NEW single full-body character reference sheet on a neutral plain light-grey background, one continuous 16:9 image, one character only, no text, panels or duplicate views. Supplied image establishes ONLY compact body/head proportions and clean outlined matte cartoon technique. Replace ALL its clothing and appearance with the new identity below. REMOVE its red facial tattoo completely: new head is blank PURE WHITE except tiny dot eyes and line mouth. No old warrior, Greek armour, axe, scars, bandage, hair, nose, ears or human face. Face/neck/hands perfectly white and unshaded; long sleeves and long trousers, simple rounded mitten hands. Thick clean black contours and flat matte costume colours. No realistic muscular anatomy, photorealism, stick limbs or elongated bodies.\nNEW NAMED IDENTITY: Distinct adult human engineer. Same compact white circular head, WHITE mitten hands, tiny black dot eyes/line mouth, no nose/hair/ears or brows. Mustard YELLOW long-sleeve work jacket, DARK NAVY trousers and BROWN ankle boots. Grey plain tool pouch secured at waist, no backpack, helmet or hero bodysuit. Full-body neutral standing pose.",
+    "variant": "default"
+  }
+]
