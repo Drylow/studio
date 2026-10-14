@@ -4,7 +4,8 @@
 
 fixes.json : {"41": {"replace": [["ancien texte", "nouveau texte"], ...], "append": "phrase ajoutée", "characters": [...],
                      "drop": ["Nom"]}, ...}   # drop : retire ce personnage et sa référence (corriger aussi le prompt)
-Les autres plans sont renvoyés tels quels (image et revue conservées).
+Les autres plans sont renvoyés tels quels (image et revue conservées). Les plans corrigés sont refaits ensemble
+par l'étape « images » (parallèle) ; `--one-by-one` les refait un par un.
 """
 import json
 import sys
@@ -41,7 +42,21 @@ def main():
             row.pop("image", None)
         rows.append(row)
     ff.api("PUT", ff.NATIVE + f"/api/workspace/projects/{video_id}/scenes", {"scenes": rows})
-    ff.regen(video_id, [int(k) for k in fixes])
+    if "--one-by-one" in sys.argv:
+        ff.regen(video_id, [int(k) for k in fixes])
+        return
+    # Les plans corrigés n'ont plus d'image : l'étape « images » les refait toutes en parallèle (quelques minutes
+    # au lieu d'une minute par plan). Elle s'arrête parfois sur un échec isolé : on la relance pour les restes.
+    for _ in range(6):
+        s = ff.status(video_id)
+        img = s.get("images") or {}
+        if img.get("done") == img.get("total"):
+            break
+        try:
+            ff.run(video_id, "images", {})
+        except SystemExit as e:   # échec isolé : le tour suivant reprend les plans restants
+            print(e, flush=True)
+    print("plans refaits :", ff.summary(ff.status(video_id)))
 
 
 if __name__ == "__main__":
