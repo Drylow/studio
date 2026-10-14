@@ -125,15 +125,11 @@ async def prepare(p):
             "Each prompt must show a distinct narrated action, consequence, object or interaction; "
             "alternate compositions and avoid repeated tableaux. Specify framing, visible action, "
             "outfits, props and environment. Keep recurring characters' identities and outfits consistent "
-            "within each story era. Every humanoid has a round white head and white simplified hands. "
+            "within each story era. Character anatomy, colour and proportions follow the approved style "
+            "and the selected identity variant, including distinct nonhuman colours. "
             "No realistic faces, no text, no watermarks. Use attached reference images as drawing-style "
             "guidance, not copied scenes. Only one instance of each character per scene. "
-            "For Kratos preserve the red facial stripe and simple face of the approved references; Greek-era chain blades versus "
-            "Norse-era axe and fur/leather attire must follow the narration. Atreus is a distinct smaller "
-            "round-white-headed boy with bow, not another Kratos. Depict family deaths as non-graphic "
-            "aftermath, avoid showing violence against children. No image generation, only prompts. "
-            + composition.RULES +
-            "Do not use the proper name Kratos in the image prompt; describe the reference avatar. "
+            "Depict deaths as non-graphic aftermath. No image generation, only prompts. "
             "When era-specific character references are supplied, return reference_era equal to one "
             "of their exact keys. The era follows this shot's narration, not the end of the story."
             "When a cast registry is supplied, use its EXACT character names in characters and select "
@@ -142,6 +138,14 @@ async def prepare(p):
             "Do not select or draw absent cast members. Copy the chosen variant's appearance into its "
             "character's scene description; never swap another character's costume or hero marking."
         )
+        warrior = composition.warrior_style(style) or bool(
+            {'greek', 'norse'} & set(style.get('workspace_character_references') or {}))
+        rules += (composition.RULES +
+            "For Kratos preserve the red facial stripe on the approved anatomical side. "
+            "Greek chain blades versus Norse axe and costume follow the shot's narration. "
+            "Atreus is a distinct smaller boy with bow, not another protagonist. "
+            "Do not use the proper name Kratos in the image prompt; describe the reference avatar. "
+            if warrior else composition.STYLE_RULES)
         try:
             rules += ('\nBACKGROUND MODE: CONSISTENT. Follow the location_camera_plan exactly. '
                 'Preserve world-space geometry while showing the planned physical camera position, '
@@ -183,7 +187,8 @@ async def prepare(p):
                         or any(not isinstance(c, str) or not c.strip() for c in row["characters"])
                         or len({c.strip().casefold() for c in row["characters"]}) != len(row["characters"])):
                     raise ValueError("Incomplete storyboard response")
-                prompt = composition.compose(row["prompt"], style.get("visuals", {}).get("art_style", ""), row["characters"])
+                prompt = composition.compose(row["prompt"], style.get("visuals", {}).get("art_style", ""), row["characters"],
+                    style_contract=not (warrior or any(c.casefold() == 'kratos' for c in row['characters'])))
                 if composition.contradictory(prompt):
                     raise ValueError("Contradictory image composition")
                 selected_refs = refs

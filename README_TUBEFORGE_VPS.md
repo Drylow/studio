@@ -35,6 +35,23 @@ Channels/styles are a shared TubeForge library, not a copy per member. They are
 not duplicated into the portal’s separate script/voice channel database. Each
 new video freezes its style and cast settings, preserving existing productions.
 
+### References belong to the episode
+
+Keep the shared drawing guide neutral: a character sheet describes rendering and
+proportions, never a station, supermarket, boat or other inherited setting. The
+shared cast retains identity files; each episode owns its location masters and
+explicit camera views. A hospital story needs hospital rooms and exits; a cruise
+needs ship spaces. Free backgrounds still preserve cast identity. Consistent
+backgrounds preserve a room within its scene, while allowing different places,
+camera positions and narrated damage. A pristine master must not reset a broken
+walkway, lost prop or injury later in the story.
+
+The storyboard authoring contract takes anatomy and colours from the chosen
+style and cast. The warrior-specific tattoo/body contract applies only to that
+style, rather than overriding survival stick figures, green infected or mint
+aliens. Generation sends the saved prompt and ordered references unchanged;
+current image inspection is still required before the queue renders an episode.
+
 ## Architecture and sources
 
 - VPS1 `185.249.225.176`: existing Node portal, `/opt/elevenlabs-studio`, container

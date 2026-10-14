@@ -63,8 +63,33 @@ def cast_rules(characters):
     return CAST_RULES + ("Allowed cast identities or groups: " + cast + ". " if cast else "")
 
 
-def compose(scene, style="", characters=None):
+STYLE_RULES = (
+    "ONE WIDE LANDSCAPE 16:9 illustration filling the entire canvas, one physical scene "
+    "from one viewpoint. No panels, letterboxing, blurred sidebars, inset portraits or watermarks. "
+    "Match the supplied drawing style and the explicitly assigned identity references. "
+    "Character proportions, clothing, markings and colours come from those references; "
+    "do not replace stick bodies with muscular bodies or recolour nonhuman characters as humans. "
+    "Each named individual appears exactly ONCE, with one head, one body and two arms unless "
+    "its assigned nonhuman reference explicitly differs. Never add absent cast from a reference. "
+    "Drawing-style and identity sheets do not establish scenery. Use the narrated location of "
+    "THIS episode, with separate references for its hospital, ship, airport or other spaces. "
+    "Damage, injuries, carried objects, weather and time follow the story; a pristine master "
+    "does not repair broken scenery or reset the story. No translucent memories or clones. "
+)
+
+
+def warrior_style(style):
+    return (style.get('id') == 'fictional-god-of-war'
+            or str(style.get('workspace_main_character', '')).casefold() == 'kratos'
+            or any(str(name).casefold() == 'kratos' for name in style.get('workspace_cast_registry', {})))
+
+
+def compose(scene, style="", characters=None, *, style_contract=False):
     # Authoring only: the image executor sends this already-saved prompt unchanged.
+    if style_contract:
+        cast = ('Allowed cast: ' + '; '.join(characters) + '. Each named identity once.'
+                if characters else 'EMPTY CAST: zero people or humanoids; no avatar from the drawing guide.')
+        return STYLE_RULES + "\nDrawing style: " + style + "\nScene: " + scene.strip() + "\n" + cast
     scene = re.sub(r"\bKratos\b", "the round-white-headed warrior protagonist", scene, flags=re.I)
     style = style.removeprefix(RULES)
     style = re.sub(r"Current universe:.*?(?:\.|$)", "", style)
