@@ -25,7 +25,7 @@ import forge  # noqa: E402
 
 V1 = forge.BASE
 NATIVE = forge.HOST + "/api/2d"
-STEP = {"voice": "voiceover", "render": "render"}
+TEXT_MODEL = "claude-sonnet-5-5-high"   # découpage en plans ; doit figurer dans GET /api/workspace/models
 
 
 def api(method, url, body=None):
@@ -146,10 +146,14 @@ def main():
     ap.add_argument("--instruction", default="")
     a = ap.parse_args()
     if a.cmd == "create":
+        # Passe par un lot natif d'une vidéo : la création simple (v1) refuse tant que le modèle de texte par
+        # défaut du serveur n'est plus au catalogue. Le lot permet de choisir un modèle qui y est.
         channel, title, script, key = a.args
-        r = api("POST", V1 + "/videos", {"channel_id": channel, "title": title, "idempotency_key": key,
-                                         "script": Path(script).read_text(encoding="utf-8-sig")})
-        print(r.get("id"), r.get("title"))
+        r = api("POST", NATIVE + "/api/workspace/batches", {
+            "name": key, "text_model": TEXT_MODEL,
+            "rows": [{"channel_id": channel, "title": title, "mode": "review",
+                      "custom_script": Path(script).read_text(encoding="utf-8-sig")}]})
+        print(r["projects"][0]["id"])
     elif a.cmd == "run":
         body = json.loads(a.json.read_text()) if a.json else {}
         s = run(a.args[0], a.args[1], body)
